@@ -1,6 +1,6 @@
 ---
 title: Transact-SQL (SSMS) を使用して SSIS プロジェクトを配置する | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,31 +12,36 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 975bf68b5d3255ff965e9092e84b2dabf982b90b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6bbcae0e5aea6521ad75401002d0a1488b5dbdf6
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455165"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Transact-SQL を使用して SSMS から SSIS プロジェクトを配置する
 
-このクイック スタートでは、SQL Server Management Studio (SSMS) を使用して、SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS プロジェクトを SSIS カタログに配置する方法を示します。 
-
-> [!NOTE]
-> この記事で説明されているメソッドは、SSMS を使用して Azure SQL Database サーバーに接続するときには使用できません。 `catalog.deploy_project` ストアド プロシージャでは、ローカル ファイル システム内 (オンプレミス) の `.ispac` ファイルへのパスが必要です。
+このクイックスタートでは、SQL Server Management Studio (SSMS) を使用して SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS プロジェクトを SSIS カタログに配置する方法を示します。 
 
 SQL Server Management Studio は、SQL Server から SQL Database まで、SQL インフラストラクチャを管理するための統合環境です。 SSMS については、「[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)」をご覧ください。
 
 ## <a name="prerequisites"></a>Prerequisites
 
-始める前に、最新バージョンの SQL Server Management Studio があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」をご覧ください。
+始める前に、最新バージョンの SQL Server Management Studio があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
+
+## <a name="supported-platforms"></a>サポートされているプラットフォーム
+
+このクイックスタートの情報を使用して、次のプラットフォームに SSIS プロジェクトを配置することができます。
+
+-   SQL Server on Windows。
+
+Azure SQL Database に SSIS パッケージを配置する場合は、このクイックスタートの情報を使用することはできません。 `catalog.deploy_project` ストアド プロシージャでは、ローカル ファイル システム内 (オンプレミス) の `.ispac` ファイルへのパスが必要です。 Azure でのパッケージの配置と実行の詳細については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
+
+SQL Server on Linux に SSIS パッケージを配置する場合は、このクイックスタートの情報を使用することはできません。 Linux でのパッケージの実行の詳細については、「[Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md)」 (SSIS で Linux 上のデータの抽出、変換、読み込みを行う) を参照してください。
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>SSIS カタログ データベースに接続する
 
 SQL Server Management Studio を使って、SSIS カタログへの接続を確立します。 
-
-> [!NOTE]
-> Azure SQL Database サーバーは、ポート 1433 でリッスンします。 企業のファイアウォール内から Azure SQL Database サーバーに接続しようとする場合、正常に接続するには、このポートを企業のファイアウォールで開ける必要があります。
 
 1. SQL Server Management Studio を開きます。
 
@@ -46,9 +51,9 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバーの種類** | データベース エンジン | この値は必須です。 |
    | **サーバー名** | 完全修飾サーバー名 |  |
-   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | このクイック スタートでは、SQL 認証を使います。 |
-   | **Login** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
-   | **Password** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
+   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | |
+   | **Login** | サーバー管理者アカウント | このアカウントは、サーバーを作成したときに指定したアカウントです。 |
+   | **Password** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーを作成したときに指定したパスワードです。 |
 
 3. **[接続]** をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。 
 
@@ -61,7 +66,7 @@ SSIS プロジェクトを配置するには、次の Transact-SQL コードを�
 
 2.  システムの `catalog.deploy_project` ストアド プロシージャ内のパラメーター値を更新します。
 
-3.  SSISDB が現在のデータベースであることを確認します。
+3.  **SSISDB** が現在のデータベースであることを確認します。
 
 4.  スクリプトを実行します。
 

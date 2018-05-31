@@ -1,6 +1,6 @@
 ---
 title: Transact-SQL (SSMS) を使用して SSIS パッケージを実行する | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,14 +12,15 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33dd58a47f445b46c3d373090b8e3a887f9959cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 07e3d841a04a632ac00a2e414b67c182e21c4557
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34454905"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Transact-SQL を使用して SSMS から SSIS パッケージを実行する
-このクイック スタートでは、SQL Server Management Studio (SSMS) を使用して、SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS カタログに格納されている SSIS パッケージを実行する方法を示します。
+このクイックスタートでは、SQL Server Management Studio (SSMS) を使用して SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS カタログに格納されている SSIS パッケージを実行する方法を示します。
 
 SQL Server Management Studio は、SQL Server から SQL Database まで、SQL インフラストラクチャを管理するための統合環境です。 SSMS については、「[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)」をご覧ください。
 
@@ -27,12 +28,30 @@ SQL Server Management Studio は、SQL Server から SQL Database まで、SQL �
 
 開始する前に、最新バージョンの SQL Server Management Studio (SSMS) があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
 
+Azure SQL Database サーバーは、ポート 1433 でリッスンします。 企業のファイアウォール内から Azure SQL Database サーバーに接続しようとする場合、正常に接続するには、このポートを企業のファイアウォールで開ける必要があります。
+
+## <a name="supported-platforms"></a>サポートされているプラットフォーム
+
+このクイックスタートの情報を使用して、次のプラットフォームで SSIS パッケージを実行することができます。
+
+-   SQL Server on Windows。
+
+-   Azure SQL Database。 Azure でのパッケージの配置と実行の詳細については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
+
+Linux で SSIS パッケージを実行する場合は、このクイックスタートの情報を使用することはできません。 Linux でのパッケージの実行の詳細については、「[Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md)」 (SSIS で Linux 上のデータの抽出、変換、読み込みを行う) を参照してください。
+
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database の場合の接続情報の取得
+
+Azure SQL Database でパッケージを実行するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
+
+1. [Azure ポータル](https://portal.azure.com/)にログインします。
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [SSISDB データベース] を選びます。 
+3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
+4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
+
 ## <a name="connect-to-the-ssisdb-database"></a>SSISDB データベースに接続する
 
 SQL Server Management Studio を使用して、Azure SQL Database サーバー上の SSIS カタログへの接続を確立します。 
-
-> [!NOTE]
-> Azure SQL Database サーバーは、ポート 1433 でリッスンします。 企業のファイアウォール内から Azure SQL Database サーバーに接続しようとする場合、正常に接続するには、このポートを企業のファイアウォールで開ける必要があります。
 
 1. SQL Server Management Studio を開きます。
 
@@ -42,9 +61,9 @@ SQL Server Management Studio を使用して、Azure SQL Database サーバー�
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバーの種類** | データベース エンジン | この値は必須です。 |
    | **サーバー名** | 完全修飾サーバー名 | Azure SQL Database サーバーに接続する場合、名前は次の形式になります。`<server_name>.database.windows.net` |
-   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | このクイック スタートでは、SQL 認証を使います。 |
-   | **Login** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
-   | **Password** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
+   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | SQL Server 認証では、SQL Server や Azure SQL Database に接続できます。 Azure SQL Database サーバーに接続している場合は、Windows 認証を使用することはできません。 |
+   | **Login** | サーバー管理者アカウント | このアカウントは、サーバーを作成したときに指定したアカウントです。 |
+   | **Password** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーを作成したときに指定したパスワードです。 |
 
 3.  **[接続]** をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。
 

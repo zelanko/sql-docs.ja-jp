@@ -33,11 +33,12 @@ caps.latest.revision: 87
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 70ac1b9a973aff7f15309d29a85e3fddd6f2954f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a771f30b82a81fa05ea65409bce9a132cbb42dad
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300340"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +78,8 @@ DBCC SHRINKFILE
 *target_size* を指定した場合、DBCC SHRINKFILE では、指定されたサイズまでファイルの圧縮が試行されます。 解放されたファイル内の使用ページは、保持されるファイル部分の空き領域に移されます。 たとえば、10 MB のデータ ファイルの場合、*target_size* を 8 にして DBCC SHRINKFILE 操作を実行すると、ファイルの末尾 2 MB にあるすべての使用ページがファイルの先頭 8 MB にある未割り当てのページに再割り当てされます。 DBCC SHRINKFILE では、ファイル内に格納されているデータのサイズ以下に、ファイルを圧縮することはできません。 たとえば、10 MB のデータ ファイルのうち 7 MB が使用されている場合、*target_size* を 6 にして DBCC SHRINKFILE ステートメントを実行しても、ファイルは 7 MB にまでしか圧縮できず、6 MB にはなりません。
   
 EMPTYFILE  
-指定したファイルから、**同じファイル グループ**内の他のファイルにすべてのデータを移動します。 つまり、EmptyFile は、指定したファイルから、同じファイル グループ内の他のファイルにデータを移動します。 Emptyfile により、ファイルに新しいデータが追加されなくなります。ファイルは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用して削除することができます。
+指定したファイルから、**同じファイル グループ**内の他のファイルにすべてのデータを移動します。 つまり、EmptyFile は、指定したファイルから、同じファイル グループ内の他のファイルにデータを移動します。 ファイルが読み取り専用としてマークされていなくても、Emptyfile により、このファイルには新しいデータが追加されなくなります。このファイルは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用して削除することができます。 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用してファイル サイズが変更されると、読み取り専用フラグがリセットされ、データを追加することができます。
+
 FILESTREAM ファイル グループ コンテナーでは、FILESTREAM ガベージ コレクターが実行され、EMPTYFILE によって他のコンテナーにコピーされた不要なすべてのファイル グループ コンテナー ファイルが削除された後でなければ、ALTER DATABASE を使用してファイルを削除できません。 詳細については、「[sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)」を参照してください。
   
 > [!NOTE]  
@@ -98,7 +100,7 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>結果セット  
 次の表では、結果セットの列について説明します。
   
-|列名|Description|  
+|列名|[説明]|  
 |---|---|
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]で圧縮が試行されたファイルのデータベース識別番号。|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]で圧縮が試行されたファイルのファイル識別番号。|  

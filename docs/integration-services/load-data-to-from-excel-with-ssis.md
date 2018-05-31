@@ -1,5 +1,5 @@
 ---
-title: SSIS を使用して Excel から、または Excel にデータを読み込む | Microsoft Docs
+title: SSIS を使用する Excel からのインポートまたは Excel へのエクスポート | Microsoft Docs
 ms.description: Describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). Also describes prerequisites, known issues, and limitations.
 ms.date: 04/10/2018
 ms.prod: sql
@@ -14,27 +14,28 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd5a4863f2f94a693ae7216f39fbe0472a94a68b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 075cb9c74fa551a6d6053c70ebfe77255b56a7a8
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236133"
 ---
-# <a name="load-data-from-or-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む
+# <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする
 
 この記事では、SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする方法について説明します。 また、前提条件、制限事項、および既知の問題についても説明します。
 
 Excel からデータをインポートする、または Excel にデータをエクスポートするには、SSIS パッケージを作成し、Excel 接続マネージャーと Excel ソースまたは Excel 変換先を使用することで行えます。 SSIS に組み込まれている SQL Server インポートおよびエクスポート ウィザードを使用することもできます。
 
 この記事には、SSIS から Excel を正常に使用するため、または一般的な問題を理解して解決するために必要な 3 つの情報セットが含まれています。
--   [必要なファイル](#files-you-need)。
--   Excel から、または Excel へのデータの読み込み時に指定する必要がある情報。
+1.  [必要なファイル](#files-you-need)。
+2.  Excel から、または Excel へのデータの読み込み時に指定する必要がある情報。
     -   データ ソースとして [Excel を指定](#specify-excel)します。
     -   [Excel ファイル名とパス](#excel-file)を指定します。
     -   [Excel のバージョン](#excel-version)を選択します。
     -   [最初の行に列名が含まれる](#first-row)かどうかを指定します。
     -   [データを含むワークシートまたは範囲](#sheets-ranges)を指定します。
--   既知の問題と制限事項。
+3.  既知の問題と制限事項。
     -   [データ型](#issues-types)に関する問題
     -   [インポート](#issues-importing)に関する問題。
     -   [エクスポート](#issues-exporting)に関する問題。
@@ -57,7 +58,7 @@ Office 365 サブスクリプションをお持ちの場合は、インストー
 
 2016 再頒布可能パッケージのインストールに問題がある場合は、代わりに [Microsoft Access データベース エンジン 2010 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=13255)から 2010 再頒布可能パッケージをインストールします  (Excel 2013 用の再頒布可能パッケージはありません)。
 
-## <a name="specify-excel"></a> はじめに
+## <a name="specify-excel"></a> Excel を指定する
 
 最初の手順は、Excel に接続することを指定することです。
 

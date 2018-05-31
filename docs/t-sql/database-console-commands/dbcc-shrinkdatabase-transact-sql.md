@@ -31,11 +31,12 @@ caps.latest.revision: 62
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: b6fe7fcf315849e6779b66087e8a87d2953d96d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6022b5609c2d4b4d362f90088bee4e84ad874c7
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236413"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ DBCC SHRINKDATABASE
 ## <a name="result-sets"></a>結果セット  
 次の表では、結果セットの列について説明します。
   
-|列名|Description|  
+|列名|[説明]|  
 |-----------------|-----------------|  
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]で圧縮が試行されたファイルのデータベース識別番号。|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]で圧縮が試行されたファイルのファイル識別番号。|  
@@ -93,6 +94,10 @@ DBCC SHRINKDATABASE
 > [!INCLUDE[ssDE](../../includes/ssde-md.md)]では圧縮されないファイルの行は表示されません。  
   
 ## <a name="remarks"></a>Remarks  
+
+>[!NOTE]
+> 現在、Azure SQL Data Warehouse では DBCC SHRINKDATABASE はサポートされません。 このコマンドを実行することはお勧めできません。これは大量の I/O が発生する操作であり、データ ウェアハウスがオフラインになる可能性があるためです。 また、このコマンドを実行すると、データ ウェアハウス スナップショットのコストに影響します。 
+
 特定のデータベースに関するすべてのデータとログ ファイルを圧縮するには、DBCC SHRINKDATABASE コマンドを実行します。 特定のデータベースで一度に 1 つのデータまたはログ ファイルを圧縮するには、[DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) コマンドを実行します。
   
 データベースの空き (未割り当て) 領域の現在の量を表示するには、[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) を実行します。
@@ -106,9 +111,6 @@ NOTRUNCATE オプションも TRUNCATEONLY オプションも指定しないで 
 圧縮されるデータベースは、シングル ユーザー モードになっていなくてもかまいません。データベースを圧縮している最中でも、他のユーザーがそのデータベースで作業することができます。 システム データベースの場合も同様です。
   
 データベースのバックアップ中、データベースを圧縮することはできません。 逆に、データベースの圧縮操作の進行中、データベースをバックアップすることはできません。
-
->[!NOTE]
-> 現在、Azure SQL Data Warehouse では TDE が有効になっている DBCC SHRINKDATABASE はサポートされません。
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>DBCC SHRINKDATABASE の動作  
 DBCC SHRINKDATABASE では、データ ファイルはファイルごとに圧縮されますが、ログ ファイルはすべてが 1 つの連続的なログ プールに存在するものとして圧縮されます。 ファイルは常に末尾から圧縮されます。

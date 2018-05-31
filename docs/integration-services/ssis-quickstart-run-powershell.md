@@ -1,6 +1,6 @@
 ---
 title: PowerShell を使用して SSIS パッケージを実行する | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,20 +12,46 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e5d364ce66d866980bc015a864e26b0861268ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8df4492c4fb0f05a2331da49d36726dff914148
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34454895"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>PowerShell を使用して SSIS パッケージを実行する
-このクイック スタート チュートリアルでは、データベース サーバーに接続し、SSIS パッケージを実行する PowerShell の使用方法を示します。
+このクイックスタートでは、PowerShell スクリプトを使用してデータベース サーバーに接続し、SSIS パッケージを実行する方法を示します。
+
+## <a name="prerequisites"></a>Prerequisites
+
+Azure SQL Database サーバーは、ポート 1433 でリッスンします。 企業のファイアウォール内から Azure SQL Database サーバーに接続しようとする場合、正常に接続するには、このポートを企業のファイアウォールで開ける必要があります。
+
+## <a name="supported-platforms"></a>サポートされているプラットフォーム
+
+このクイックスタートの情報を使用して、次のプラットフォームで SSIS パッケージを実行することができます。
+
+-   SQL Server on Windows。
+
+-   Azure SQL Database。 Azure でのパッケージの配置と実行の詳細については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
+
+Linux で SSIS パッケージを実行する場合は、このクイックスタートの情報を使用することはできません。 Linux でのパッケージの実行の詳細については、「[Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md)」 (SSIS で Linux 上のデータの抽出、変換、読み込みを行う) を参照してください。
+
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database の場合の接続情報の取得
+
+Azure SQL Database でパッケージを実行するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
+
+1. [Azure ポータル](https://portal.azure.com/)にログインします。
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [SSISDB データベース] を選びます。 
+3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
+4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
+5. **[データベース接続文字列の表示]** をクリックします。
+6. 完全な **ADO.NET** 接続文字列を確認します。
 
 ## <a name="powershell-script"></a>PowerShell スクリプト
 次のスクリプトの一番上で変数の適切な値を指定し、スクリプトを実行して SSIS パッケージを実行します。
 
 > [!NOTE]
-> 次の例では、Windows 認証を使用します。 SQL Server 認証を使用するには、`Integrated Security=SSPI;` 引数を `User ID=<user name>;Password=<password>;` に置き換えます。
+> 次の例では、Windows 認証を使用します。 SQL Server 認証を使用するには、`Integrated Security=SSPI;` 引数を `User ID=<user name>;Password=<password>;` に置き換えます。 Azure SQL Database サーバーに接続している場合は、Windows 認証を使用することはできません。 
 
 ```powershell
 # Variables

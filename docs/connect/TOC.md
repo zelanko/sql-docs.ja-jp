@@ -1,6 +1,7 @@
 # [SQL Server と対話するプログラミング](homepage-sql-connection-programming.md)
 # [SQL Server ドライバー](sql-connection-libraries.md)
 # [新規および更新のアーティクル](new-updated-connect.md)
+# [SQL Server のドライバーの履歴](connect-history.md)
 
 # [ADO.NET +](ado-net/microsoft-ado-net-for-sql-server.md)
 # [JDBC +](jdbc/microsoft-jdbc-driver-for-sql-server.md)

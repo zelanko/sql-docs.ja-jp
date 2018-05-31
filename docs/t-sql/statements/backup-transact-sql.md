@@ -51,11 +51,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 81267bd94920ba0398a9ed6e3ca8192eaa3cdaa4
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3c7d97d9c8ee56af89807f07cd335b16c50fbcc1
+ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225344"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -700,10 +701,11 @@ BACKUP ステートメントは、明示的または暗黙的なトランザク�
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、これにより、最初にページを暗号化解除し、圧縮してから再度暗号化する、TDE で暗号化されたデータベースの最適化された圧縮アルゴリズムが有効になります。 `MAXTRANSFERSIZE = 65536` (64 KB) を使用する場合、TDE で暗号化されたデータベースでのバックアップの圧縮では暗号化されたページが直接圧縮され、適切な圧縮比率が得られない可能性があります。 詳細については、「[Backup Compression for TDE-enabled Databases](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)」 (TDE が有効になっているデータベースのバックアップの圧縮) を参照してください。
 
 > [!NOTE]  
-> TDE で暗号化されたデータベースの最適化された圧縮アルゴリズムは、次の場合に自動的に使用されます。
-> * 
->  URL へのバックアップを使用する。この場合、既定の `MAXTRANSFERSIZE` は 1048576 (1 MB) に変更され、小さい値に強制されません。
-> * データベースに複数のデータ ファイルがある。この場合、既定の `MAXTRANSFERSIZE` は 65536 (64 KB) の倍数に変更され、小さい値 (`MAXTRANSFERSIZE = 65536` など) には変更されません。 
+> 次のように、既定の `MAXTRANSFERSIZE` が 64 K より大きくなる場合もあります。
+> * データベースに複数のデータ ファイルが作成されている場合、64 K より大きい `MAXTRANSFERSIZE` が使用されます。
+> * URL へのバックアップを実行する場合、既定値は `MAXTRANSFERSIZE = 1048576` (1 MB) になります。
+>   
+> これらの条件のいずれかが当てはまる場合は、バックアップ コマンドで明示的に 64 K より大きい `MAXTRANSFERSIZE` を設定して、新しいバックアップ圧縮アルゴリズムを取得する必要があります。
   
 既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。  
   

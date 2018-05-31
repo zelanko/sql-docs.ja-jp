@@ -24,6 +24,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34322463"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW アップロード タスク
 **Azure SQL DW アップロード タスク** を利用すると、SSIS パッケージで、Azure SQL Data Warehouse (DW) のテーブルにローカル データをアップロードできます。 現在サポートされているソース データ ファイル形式は、UTF8 エンコーディングの区切り記号付きテキストです。 アップロード プロセスは、効率的な PolyBase 手法で行われます。この手法に関する説明は、「[Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)」 (Azure SQL Data Warehouse の読み込みパターンと戦略) という記事にあります。 具体的には、データは最初に Azure Blob Storage にアップロードされ、それから Azure SQL DW にアップロードされます。 そのため、このタスクを利用するには Azure Blob Storage アカウントが必要になります。
@@ -40,7 +41,7 @@ LocalDirectory|アップロードするデータ ファイルを含むローカ�
 Recursively|サブディレクトリを再帰的に検索するかどうかを指定します。
 FileName|特定の名前のパターンを持つファイルを選択する名前フィルターを指定します。 例: MySheet*.xsl\* の場合、MySheet001.xsl や MySheetABC.xslx などのファイルが含まれます。
 [RowDelimiter]|各行の終わりに印を付ける文字を指定します。
-[列区切り記号]|各列の終わりに印を付ける 1 つ以上の文字を指定します。 例: &#124 (パイプ)、\t (タブ)、' (単一引用符)、" (二重引用符)、および 0x5c (バック スラッシュ)。
+[列区切り記号]|各列の終わりに印を付ける 1 つ以上の文字を指定します。 例: &#124; (パイプ)、\t (タブ)、' (単一引用符)、" (二重引用符)、および 0x5c (バック スラッシュ)。
 IsFirstRowHeader|各データ ファイルの最初の行に実際のデータの代わりに列名を含めるかどうかを指定します。
 AzureStorageConnection|Azure Storage 接続マネージャーを指定します。
 BlobContainer|ローカル データをアップロードし、PolyBase 経由で Azure DW にリレーする BLOB コンテナーの名前を指定します。 コンテナーが存在しない場合、新規作成されます。

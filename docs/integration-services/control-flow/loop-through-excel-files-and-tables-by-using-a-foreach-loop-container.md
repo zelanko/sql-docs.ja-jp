@@ -1,7 +1,7 @@
 ---
 title: Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: control-flow
@@ -20,11 +20,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d151fd801483bd39188ad3474f95ae9ce0036af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52daa47d99e6b9dab35f12280a7c89c710e1aa17
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235666"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する
   このトピックの手順では、Foreach ループ コンテナーと適切な列挙子を使用して、フォルダー内の Excel ブックまたは Excel ブック内のテーブルをループ処理する方法について説明します。  
@@ -36,13 +37,13 @@ ms.lasthandoff: 05/03/2018
   
 1.  ループの反復ごとに現在の Excel のパスとファイル名を受け取る文字列変数を作成します。 検証で問題が発生しないようにするには、変数の初期値として Excel の有効なパスとファイル名を割り当てます (この手順の後半で示すサンプル式では、 `ExcelFile`という変数名を使用します)。  
   
-2.  必要に応じて、Excel 接続文字列の Extended Properties 引数の値を保持する別の文字列変数を作成します。 この引数には、Excel のバージョンを指定したり、最初の行に列名が含まれているかどうか、およびインポート モードが使用されるかどうかを判断する一連の値が格納されます (この手順の後半で示すサンプル式では、初期値が " `ExtProperties`" である`Excel 8.0;HDR=Yes`という名前の変数を使用しています)。  
+2.  必要に応じて、Excel 接続文字列の Extended Properties 引数の値を保持する別の文字列変数を作成します。 この引数には、Excel のバージョンを指定したり、最初の行に列名が含まれているかどうか、およびインポート モードが使用されるかどうかを判断する一連の値が格納されます (この手順の後半で示すサンプル式では、初期値が " `ExtProperties`" である`Excel 12.0;HDR=Yes`という名前の変数を使用しています)。  
   
      Extended Properties 引数の値を格納している変数を使用しない場合は、接続文字列を含む式に引数の値を手動で追加する必要があります。  
   
 3.  Foreach ループ コンテナーを **[制御フロー]** タブに追加します。Foreach ループ コンテナーの構成方法については、「 [Foreach ループ コンテナーを構成する](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
   
-4.  **[Foreach ループ エディター]** の **[コレクション]** ページで [Foreach File 列挙子] を選択し、Excel ブックが存在するフォルダーを指定して、ファイル フィルター (通常は *.xls) を指定します。  
+4.  **[Foreach ループ エディター]** の **[コレクション]** ページで [Foreach File 列挙子] を選択し、Excel ブックが存在するフォルダーを指定して、ファイル フィルター (通常は *.xlsx) を指定します。  
   
 5.  **[変数のマッピング]** ページで、ループの反復ごとに現在の Excel のパスとファイル名を受け取るユーザー定義文字列変数に、インデックス 0 をマップします。 (この手順の後半で示すサンプル式では、 `ExcelFile`という変数名を使用します)。  
   
@@ -62,22 +63,22 @@ ms.lasthandoff: 05/03/2018
 10. 式ビルダーで、次の式を入力します。  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
     ```  
   
      拡張プロパティ引数の値の前後に必要な内側の引用符をエスケープするために、エスケープ文字 "\\" を使用していることに注意してください。  
   
-     Extended Properties 引数は省略できません。 引数の値を格納している変数を使用しない場合は、Excel 2003 ファイルの次の例に示すように、式に引数の値を手動で追加する必要があります。  
+     Extended Properties 引数は省略できません。 引数の値を格納している変数を使用しない場合は、次の例に示すように、式に引数の値を手動で追加する必要があります。  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 8.0"  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 12.0"  
     ```  
   
 11. Foreach ループ コンテナー内で、Excel 接続マネージャーを使用して、指定したファイルの場所とパターンに一致した各 Excel ブックに対して同じ操作を実行するタスクを作成します。  
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET Schema Rowset 列挙子を使用して Excel テーブルをループ処理するには  
   
-1.  Microsoft Jet OLE DB Provider を使用して Excel ブックに接続する ADO.NET 接続マネージャーを作成します。 **[接続マネージャー]** ダイアログ ボックスの [すべて] ページで、Extended Properties プロパティの値として「Excel 8.0」と入力します。 詳細については、「 [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」(パッケージでの接続マネージャーの追加、削除、または共有) を参照してください。  
+1.  Microsoft ACE OLE DB Provider を使用して Excel ブックに接続する ADO.NET 接続マネージャーを作成します。 **[接続マネージャー]** ダイアログ ボックスの [すべて] ページで、Extended Properties プロパティの値として Excel のバージョン (ここでは、Excel 12.0) を入力します。 詳細については、「 [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」(パッケージでの接続マネージャーの追加、削除、または共有) を参照してください。  
   
 2.  ループの反復ごとに現在のテーブルの名前を受け取る文字列変数を作成します。  
   

@@ -1,6 +1,6 @@
 ---
 title: .NET コード (C#) を使用して SSIS プロジェクトを配置する | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,14 +12,15 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0fc40c9db57dece328a8bcc205115c0570a167e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eaac43b601808460fad9714a98bb1f444df67546
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455406"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>.NET アプリで C# コードを使用して SSIS プロジェクトを配置する
-このクイック スタート チュートリアルでは、データベース サーバーに接続し、SSIS プロジェクトを配置する C# コードの記述方法を示します。
+このクイックスタートでは、データベース サーバーに接続し、SSIS プロジェクトをデプロイする C# コードを記述する方法について説明します。
 
 C# アプリを作成するには、Visual Studio、Visual Studio Code、または他の任意のツールを使用できます。
 
@@ -27,19 +28,28 @@ C# アプリを作成するには、Visual Studio、Visual Studio Code、また�
 
 開始する前に Visual Studio または Visual Studio Code がインストールされていることを確認します。 Visual Studio の無償の Community エディション、または無償の Visual Studio Code を「[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/)」からダウンロードします。
 
-> [!NOTE]
-> Azure SQL Database サーバーは、ポート 1433 でリッスンします。 企業のファイアウォール内から Azure SQL Database サーバーに接続しようとする場合、正常に接続するには、このポートを企業のファイアウォールで開ける必要があります。
+Azure SQL Database サーバーは、ポート 1433 でリッスンします。 企業のファイアウォール内から Azure SQL Database サーバーに接続しようとする場合、正常に接続するには、このポートを企業のファイアウォールで開ける必要があります。
 
-## <a name="get-the-connection-info-if-deployed-to-sql-database"></a>SQL Database に展開する場合は、接続情報を取得する 
+## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
-パッケージが Azure SQL Database に展開される場合は、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
+このクイックスタートの情報を利用し、次のプラットフォームに SSIS プロジェクトをデプロイできます。
+
+-   SQL Server on Windows。
+
+-   Azure SQL Database。 Azure でパッケージをデプロイし、実行する方法については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
+
+SQL Server on Linux に SSIS パッケージをデプロイする場合は、このクイックスタートの情報を使用できません。 Linux でパッケージを実行する方法については、[SSIS を使用し、Linux でデータの抽出、変換、読み込みを行う](../linux/sql-server-linux-migrate-ssis.md)方法に関するページを参照してください。
+
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database の場合の接続情報の取得
+
+プロジェクトを Azure SQL Database にデプロイするには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [SSISDB データベース] をクリックします。 
-3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを呼び出すには、サーバー名にマウス ポインターを移動します。 
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
+3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 5. **[データベース接続文字列の表示]** をクリックします。
-6. 完全な **ADO.NET** 接続文字列を確認します。 サンプル コードは、`SqlConnectionStringBuilder` を使用して、指定した個別のパラメーター値でこの接続文字列を再作成します。
+6. 完全な **ADO.NET** 接続文字列を確認します。 任意で、コードで `SqlConnectionStringBuilder` を使用し、入力した個々のパラメーター値でこの接続文字列を再作成できます。
 
 ## <a name="create-a-new-visual-studio-project"></a>新しい Visual Studio プロジェクトの作成
 
@@ -65,7 +75,7 @@ C# アプリを作成するには、Visual Studio、Visual Studio Code、また�
 2. **Program.cs** のコンテンツを次のコードに置き換えます。 サーバー、データベース、ユーザー、およびパスワードの適切な値を追加します。
 
 > [!NOTE]
-> 次の例では、Windows 認証を使用します。 SQL Server 認証を使用するには、`Integrated Security=SSPI;` 引数を `User ID=<user name>;Password=<password>;` に置き換えます。
+> 次の例では、Windows 認証を使用します。 SQL Server 認証を使用するには、`Integrated Security=SSPI;` 引数を `User ID=<user name>;Password=<password>;` に置き換えます。 Azure SQL Database サーバーに接続する場合、Windows 認証を使用できません。
 
 ```csharp
 using Microsoft.SqlServer.Management.IntegrationServices;

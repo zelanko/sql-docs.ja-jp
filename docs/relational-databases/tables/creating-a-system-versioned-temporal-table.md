@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7415cfbe4343f9f50de42c26db5444b6582a572
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03077d7ede10d42b4d4812ce6ef93a35dd295a22
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455555"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルの作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -184,7 +185,7 @@ ALTER TABLE InsurancePolicy
   
 -   期間を追加すると、現在のテーブルでデータ整合性チェックが実行されて、期間列の既定値が有効であることが確認されます。  
   
--   **SYSTEM_VERSIONING**を有効にするときに既存の履歴テーブルを指定すると、現在のテーブルと履歴テーブルの両方に対してデータの整合性チェックが行われます。 **DATA_CONISTENCY_CHECK = OFF** を追加パラメーターとして指定した場合は、スキップできます。  
+-   **SYSTEM_VERSIONING**を有効にするときに既存の履歴テーブルを指定すると、現在のテーブルと履歴テーブルの両方に対してデータの整合性チェックが行われます。 **DATA_CONSISTENCY_CHECK = OFF** を追加パラメーターとして指定した場合は、スキップできます。  
   
 ### <a name="migrate-existing-tables-to-built-in-support"></a>既存のテーブルを組み込みサポートに移行する  
  この例では、トリガーに基づく既存のソリューションを組み込みのテンポラル サポートに移行する方法を示します。 この例では、現在のカスタム ソリューションによって現在および過去のデータが 2 つの異なるユーザー テーブル (**ProjectTaskCurrent** と **ProjectTaskHistory**) に分割されるものとします。 既存のソリューションが 1 つのテーブルを使用して実際の行と過去の行を格納している場合は、この例に示す移行手順を実行する前に、データを 2 つのテーブルに分割する必要があります。  

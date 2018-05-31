@@ -1,7 +1,7 @@
 ---
 title: 分散トランザクション対応の可用性グループを構成する | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -20,11 +20,12 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 73563a02f1e51e91719a4831ac8b5dd34465aaa6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bde3ca6e1b9712e34a3e0b43f0a52687de25a40f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455535"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>分散トランザクション対応の可用性グループを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 分散トランザクションを保証するには、分散トランザクション リソース マネージャーとしてデータベースを登録するように、可用性グループを構成する必要があります。  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] も分散トランザクションをサポートしますが、[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] でのサポートには制限があります。 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] では、同じサーバーに複数のデータベースが存在する場合、可用性グループ内のデータベースを使う分散トランザクションはサポートされません。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] にはこのような制限はありません。 
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 より前のバージョンでは、可用性グループでのデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] にはこのような制限はありません。 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] での構成手順は [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] の場合と同じです。
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 
 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 以降では、分散トランザクション対応の可用性グループを作成できます。 分散トランザクション対応の可用性グループを作成するには、可用性グループの定義に `DTC_SUPPORT = PER_DB` を追加します。 次のスクリプトは、分散トランザクション対応の可用性グループを作成します。 
 
-```transact-sql
+```sql
 CREATE AVAILABILITY GROUP MyAG
    WITH (
       DTC_SUPPORT = PER_DB  
@@ -82,7 +83,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 以降では、分散トランザクション対応に可用性グループを変更できます。 分散トランザクション対応に可用性グループを変更するには、`ALTER AVAILABILITY GROUP` スクリプトに `DTC_SUPPORT = PER_DB` を追加します。 分散トランザクションをサポートするように可用性グループを変更するスクリプトの例を次に示します。 
 
-```transact-sql
+```sql
 ALTER AVAILABILITY GROUP MyaAG
    SET (
       DTC_SUPPORT = PER_DB  
@@ -167,19 +168,19 @@ following the guideline for Troubleshooting DTC Transactions.
 
    * トランザクションをコミットするには、次のスクリプトを更新して実行します。`yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` を以前のエラー メッセージに含まれる未確定トランザクションの UOW に置き換えて実行します。
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
-      ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
+   ```
 
    * トランザクションをロールバックするには、次のスクリプトを更新して実行します。`yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` を以前のエラー メッセージに含まれる未確定トランザクションの UOW に置き換えて実行します。
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
-     ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
+   ```
 
 トランザクションをコミットまたはロールバックした後は、`ALTER DATABASE` を使ってデータベースをオンラインに設定できます。 次のスクリプトを更新して実行します。データベース名には、問題のあるデータベースの名前を設定します。
 
-   ```transact-sql
+   ```sql
    ALTER DATABASE [DB1] SET ONLINE
    ```
 

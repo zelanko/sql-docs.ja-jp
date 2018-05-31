@@ -20,11 +20,12 @@ caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eeacfa947295ed049cb8ce7aa2af2db32a0c6e47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8bff088048ed6a547eae419a870d32da9ba8112
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300580"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,8 @@ ms.lasthandoff: 05/03/2018
   
  可用性グループは、可用性レプリカのレベルでフェールオーバーします。 データベースの問題 (たとえば、データ ファイルの損失、データベースの削除、トランザクション ログの破損による障害が疑われる場合など) が発生してもフェールオーバーは行われません。  
  
- >[注] Always On 可用性グループは、この可用性機能の完全な正式名称です。 省略形は、AOAG または AAG ではなく、AG です。 
+ >[!NOTE]
+ >Always On 可用性グループは、この可用性機能の完全な正式名称です。 省略形は、AOAG または AAG ではなく、AG です。 
   
 ##  <a name="Benefits"></a> 利点  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] には、データベースの可用性を向上し、リソースの使用を改善できる、豊富なオプションのセットが用意されています。 主なコンポーネントは次のとおりです。  

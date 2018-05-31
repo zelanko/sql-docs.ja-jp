@@ -34,11 +34,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e1ea30abed242b49684c685b55b05622b360159e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: f00d346a509c7a240b00ce287782001804126311
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236143"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -340,8 +341,8 @@ ON
 -   uniqueidentifier ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] に適用)  
 
 **非クラスター化列ストア インデックス**
--   1,024 より多い列を持つことはできません。  
--   非クラスター化列ストア インデックスを持つテーブルには一意の制約、主キー制約、または外部キー制約を含めることができますが、非クラスター化列ストア インデックスに制約を含めることはできません。  
+-   1,024 より多い列を持つことはできません。
+-   制約ベースのインデックスとして作成することはできません。 列ストア インデックスを持つテーブルには、一意の制約、主キー制約、外部キー制約を含めることができます。 制約は常に行ストア インデックスで適用されます。 列ストア (クラスター化または非クラスター化) インデックスで制約を適用することはできません。
 -   ビューまたはインデックス付きビュー上では作成できません。  
 -   スパース列を含めることはできません。  
 -   **ALTER INDEX** ステートメントを使用して変更することはできません。 非クラスター化インデックスを変更するには、列ストア インデックスを削除してから再作成する必要があります。 **ALTER INDEX** を使用し、列ストア インデックスを無効にし、再構築できます。  

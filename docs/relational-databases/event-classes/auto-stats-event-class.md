@@ -1,5 +1,4 @@
-title: "Auto Stats イベント クラス | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: sql ms.prod_service: "database-engine, sql-database" ms.component: "event-classes" ms.reviewer: "" ms.suite: "sql" ms.technology: 
-  - "database-engine" ms.tgt_pltfrm: "" ms.topic: conceptual helpviewer_keywords: 
+title: "Auto Stats イベント クラス | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: sql ms.reviewer: "" ms.suite: "sql" ms.technology: supportability ms.tgt_pltfrm: "" ms.topic: conceptual helpviewer_keywords: 
   - "Auto Stats event class" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "stevestein" ms.author: "sstein" manager: craigg
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats イベント クラス
@@ -8,7 +7,7 @@ title: "Auto Stats イベント クラス | Microsoft Docs" ms.custom: "" ms.dat
   
 ## <a name="auto-stats-event-class-data-columns"></a>Auto Stats イベント クラスのデータ列  
   
-|データ列名|データ型|Description|列 ID|フィルターの適用|  
+|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  

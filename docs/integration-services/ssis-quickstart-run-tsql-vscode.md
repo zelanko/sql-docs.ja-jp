@@ -1,6 +1,6 @@
 ---
 title: Transact-SQL (VS Code) を使用して SSIS パッケージを実行する | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,14 +12,15 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51905916c70b07b40aea5f8f025ac0b09527d468
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33c48b9438d141fac721d246ff2218cb0ccde542
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455155"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Transact-SQL を使用して Visual Studio Code から SSIS パッケージを実行する
-このクイック スタートでは、Visual Studio Code を使用して、SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS カタログに格納されている SSIS パッケージを実行する方法を示します。
+このクイックスタートでは、Visual Studio Code を使用して SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS カタログに格納されている SSIS パッケージを実行する方法を示します。
 
 Visual Studio Code は、拡張機能をサポートする Windows、macOS、および Linux のコード エディターです。拡張機能には、Microsoft SQL Server、Azure SQL Database、または Azure SQL Data Warehouse に接続するための `mssql` 拡張機能が含まれます。 VS Code の詳細については、「[Visual Studio Code](https://code.visualstudio.com/)」を参照してください。
 
@@ -28,6 +29,16 @@ Visual Studio Code は、拡張機能をサポートする Windows、macOS、お
 開始する前に、最新バージョンの Visual Studio Code がインストールされ、`mssql` 拡張機能が読み込まれていることを確認します。 これらのツールをダウンロードするには、次のページを参照してください。
 -   [Visual Studio Code のダウンロード](https://code.visualstudio.com/Download)
 -   [mssql 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+
+## <a name="supported-platforms"></a>サポートされているプラットフォーム
+
+このクイックスタートの情報を使用して、次のプラットフォームで SSIS パッケージを実行することができます。
+
+-   SQL Server on Windows。
+
+-   Azure SQL Database。 Azure でのパッケージの配置と実行の詳細については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
+
+Linux で SSIS パッケージを実行する場合は、このクイックスタートの情報を使用することはできません。 Linux でのパッケージの実行の詳細については、「[Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md)」 (SSIS で Linux 上のデータの抽出、変換、読み込みを行う) を参照してください。
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>VS Code で言語モードを SQL に設定する
 
@@ -38,6 +49,15 @@ Visual Studio Code は、拡張機能をサポートする Windows、macOS、お
 2. ステータス バーの右下隅にある **[プレーン テキスト]** をクリックします。
 
 3. 開いた **[言語モードの選択]** ドロップダウン メニューで、**[SQL]** を選択または入力して、**Enter** キーを押して言語モードを SQL に設定します。 
+
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database の場合の接続情報の取得
+
+Azure SQL Database でパッケージを実行するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
+
+1. [Azure ポータル](https://portal.azure.com/)にログインします。
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [SSISDB データベース] を選びます。 
+3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
+4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>SSIS カタログ データベースに接続する
 
@@ -58,9 +78,9 @@ Visual Studio Code を使用して、SSIS カタログへの接続を確立し�
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバー名** | 完全修飾サーバー名 | Azure SQL Database サーバーに接続する場合、名前は次の形式になります。`<server_name>.database.windows.net` |
    | **データベース名** | **SSISDB** | 接続先となるデータベースの名前。 |
-   | **[認証]** | SQL ログイン| このクイック スタートでは、SQL 認証を使います。 |
-   | **User name** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
-   | **パスワード (SQL ログイン)** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
+   | **[認証]** | SQL ログイン | SQL Server 認証では、SQL Server や Azure SQL Database に接続できます。 Azure SQL Database サーバーに接続している場合は、Windows 認証を使用することはできません。 |
+   | **User name** | サーバー管理者アカウント | このアカウントは、サーバーを作成したときに指定したアカウントです。 |
+   | **パスワード (SQL ログイン)** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーを作成したときに指定したパスワードです。 |
    | **パスワードを保存しますか?** | はい、いいえ | 毎回パスワードを入力したくない場合は、[はい] を選択します。 |
    | **このプロファイルの名前を入力してください** | **mySSISServer** などのプロファイル名 | プロファイル名が保存されていると、その後のログインの接続が高速化します。 | 
 

@@ -1,6 +1,6 @@
 ---
 title: コマンド プロンプトから SSIS パッケージを実行する | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,19 +12,30 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0dec4f11b797cc138f11f20a521e1c304efa0463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 018a1b6e8e75ce89a1c1679262d185381f432b39
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34454865"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>DTExec.exe を使用してコマンド プロンプトから SSIS パッケージを実行する
-このクイック スタート チュートリアルでは、コマンド プロンプトから適切なパラメーターを使用して `DTExec.exe` を実行し、SSIS パッケージを実行する方法を説明します。
+このクイックスタートでは、コマンド プロンプトから適切なパラメーターを使用して `DTExec.exe` を実行し、SSIS パッケージを実行する方法を説明します。
 
 > [!NOTE]
 > この記事で説明する方法は、Azure SQL Database サーバーに展開されているパッケージではテストされていません。
 
 `DTExec.exe` の詳細については、「[dtexec ユーティリティ](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility)」を参照してください。
+
+## <a name="supported-platforms"></a>サポートされているプラットフォーム
+
+このクイックスタートの情報を使用して、次のプラットフォームで SSIS パッケージを実行することができます。
+
+-   SQL Server on Windows。
+
+この記事で説明する方法は、Azure SQL Database サーバーに展開されているパッケージではテストされていません。 Azure でのパッケージの配置と実行の詳細については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
+
+Linux で SSIS パッケージを実行する場合は、このクイックスタートの情報を使用することはできません。 Linux でのパッケージの実行の詳細については、「[Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md)」 (SSIS で Linux 上のデータの抽出、変換、読み込みを行う) を参照してください。
 
 ## <a name="run-a-package-with-dtexec"></a>Dtexec でのパッケージの実行
 

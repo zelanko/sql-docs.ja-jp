@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Additional Tips and Tricks for using SSMS'
+Title: 'Tutorial: Additional tips and tricks for using SQL Server Management Studio'
 description: 'SSMS の使用に関するその他のヒントとテクニックについてのチュートリアルです。 '
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -18,36 +18,38 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 4f41aaa169e87a246b91304d24142195e7a21988
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 80d50132c4e2b38ecda9d24b3c0f4c09b93ca4e6
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455256"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>チュートリアル: SSMS を使用するためのヒントとテクニック
-この記事では、SQL Server Management Studio の使用に関する他のテクニックについて説明します。 以下の方法を示します。 
+このチュートリアルでは、SQL Server Management Studio (SSMS) の使用時に便利なその他のテクニックを紹介します。 この記事で取り上げるテクニック: 
 
 > [!div class="checklist"]
-> * Transact-SQL (T-SQL) のテキストをコメント化/コメント解除する
+> * Transact-SQL (T-SQL) のテキストをコメント化する/コメント解除する
 > * テキストをインデントする
-> * オブジェクト エクスプローラーでオブジェクトをフィルター処理する
+> * オブジェクト エクスプローラーでオブジェクトにフィルターを適用する
 > * SQL Server のエラー ログにアクセスする
 > * 使っている SQL Server インスタンスの名前を調べる
 
 ## <a name="prerequisites"></a>Prerequisites
-このチュートリアルを実行するには、SQL Server Management Studio、SQL Server へのアクセス、および AdventureWorks データベースが必要です。 
+このチュートリアルを実行するには、SQL Server Management Studio、SQL Server へのアクセス、AdventureWorks データベースが必要です。 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
-- [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) をインストールする。
-- [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。 SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
+- [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。 SSMS でデータベースを復元する方法については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
 
-## <a name="comment--uncomment-your-t-sql-code"></a>T-SQL コードをコメント化する/コメント解除する
-ツール バーのコメント ボタンを使って、テキストの一部をコメント化したり、コメント解除したりできます。 コメント化されたテキストは実行されません。 
+
+## <a name="commentuncomment-your-t-sql-code"></a>T-SQL コードをコメント化する/コメント解除する
+ツール バーの **[コメント]** ボタンを使用し、テキストの一部をコメント化したり、コメント化を解除したりできます。 コメント化されたテキストは実行されません。 
 
 1. SQL Server Management Studio を開きます。 
 2. SQL Server に接続します。
-3. **[新しいクエリ]** ウィンドウを開きます。 
-4. 次の T-SQL コード スニペットをテキスト ウィンドウに貼り付けます。 
+3. [新しいクエリ] ウィンドウを開きます。 
+4. 次の T-SQL コードをテキスト ウィンドウに貼り付けます。 
 
   ```sql
     USE master
@@ -71,25 +73,25 @@ ms.lasthandoff: 05/03/2018
  ``` 
 
 
-5. テキストの **Alter Database** の部分を強調表示にして、ツール バーの **[コメント]** をクリックします。 
+5. テキストの **Alter Database** 部分を強調表示し、ツール バーの **[コメント]** ボタンを選択します。 
 
-    ![解説](media/ssms-tricks/comment.png)
-6. **[実行]** をクリックして、テキストのコメント解除された部分を実行します。 
-7. **Alter Database** コマンド以外のすべての部分を強調表示にして、ツール バーの **[コメント]** をクリックします。
+    ![[コメント] ボタン](media/ssms-tricks/comment.png)
+6. **[実行]** を選択し、テキストのコメント解除された部分を実行します。 
+7. **Alter Database** コマンド以外をすべて強調表示し、**[コメント]** ボタンを選択します。
 
     ![すべてをコメント化する](media/ssms-tricks/commenteverything.png)
 
-8. **Alter Database** の部分を強調表示にして **[コメント解除]** をクリックし、コメントを解除します。
+8. テキストの **Alter Database** 部分を強調表示し、ツール バーの **[Uncomment]\(コメントを解除する\)** ボタンを選択してコメントを解除します。
 
-    ![コメントを解除する](media/ssms-tricks/uncomment.png)
+    ![テキストのコメントを解除する](media/ssms-tricks/uncomment.png)
     
-9. **[実行]** をクリックして、テキストのコメント解除された部分を実行します。 
+9. **[実行]** を選択し、テキストのコメント解除された部分を実行します。 
 
 ## <a name="indent-your-text"></a>テキストをインデントする
-インデント ボタンを使うと、テキストのインデントを増減することができます。 
+ツール バーのインデント ボタンを使用し、テキストのインデントを増減できます。 
 
-1. **[新しいクエリ]** ウィンドウを開きます。 
-2. 次の T-SQL コード スニペットをテキスト ウィンドウに貼り付けます。 
+1. [新しいクエリ] ウィンドウを開きます。 
+2. 次の T-SQL コードをテキスト ウィンドウに貼り付けます。 
 
   ```sql
     USE master
@@ -112,123 +114,133 @@ ms.lasthandoff: 05/03/2018
     GO
  ``` 
  
-3. テキストの **Alter Database** の部分を強調表示にし、ツール バーの **[インデント]** をクリックして、このテキストを右に移動します。
+3. テキストの **Alter Database** の部分を強調表示し、ツール バーの **[インデント]** を選択してこのテキストを右に移動します。
 
-    ![[インデント]](media/ssms-tricks/increaseindent.png)
+    ![インデントを増やす](media/ssms-tricks/increaseindent.png)
 
-4. テキストの **Alter Database** の部分を再び強調表示にし、今度は **[インデント解除]** をクリックして、このテキストを左に移動します。 
-    ![インデント解除](media/ssms-tricks/decreaseindent.png)
+4. テキストの **Alter Database** の部分を強調表示し、**[インデント解除]** ボタンを選択してこのテキストを左に移動します。
+
+    ![インデントを減らす](media/ssms-tricks/decreaseindent.png)
 
 
-## <a name="filter-objects-in-object-explorer"></a>オブジェクト エクスプローラーでオブジェクトをフィルター処理する
-データベースに多くのオブジェクトがある場合、特定のオブジェクトを見つけるのが難しい場合があります。 オブジェクトのフィルター処理機能を使って、簡単に見つけることができます。 このセクションではテーブルをフィルター処理する方法について説明しますが、**オブジェクト エクスプローラー**内の他のノードにも同じ手順を使用できます
+## <a name="filter-objects-in-object-explorer"></a>オブジェクト エクスプローラーでオブジェクトにフィルターを適用する
+データベースにオブジェクトがたくさんある場合、オブジェクトにフィルターを適用することで特定のオブジェクトが見つけやすくなります。 このセクションでは、テーブルにフィルターを適用する方法について説明しますが、次の手順はオブジェクト エクスプローラーの他のノードでも利用できます。
 
 1. SQL Server に接続します。
-2. **[データベース]** ノードを展開します。
-3. **AdventureWorks** データベースのノードを展開します。 
-4. **[テーブル]** ノードを展開します。 
-   - データベースに存在するすべてのテーブルが表示されます。
-5. **[テーブル]** ノードを右クリックして、**[フィルター]** > **[フィルターの設定]** の順に選択します。
+2. **[データベース]** > **[AdventureWorks]** > **[テーブル]** の順に展開します。 データベース内のすべてのテーブルが表示されます。
+5. **[テーブル]** を右クリックし、**[フィルター]** > **[フィルターの設定]** の順に選択します。
 
-    ![[フィルターの設定]](media/ssms-tricks/filtersettings.png)
+    ![フィルターの設定](media/ssms-tricks/filtersettings.png)
 
-6. [フィルターの設定] ウィンドウでは、フィルターの設定を変更できます。 いくつか例を示します。
-    - 名前によるフィルター処理: ![名前によるフィルター](media/ssms-tricks/filterbyname.png)
-    - スキーマによるフィルター処理: ![スキーマによるフィルター](media/ssms-tricks/filterbyschema.png)
+6. **[フィルターの設定]** ウィンドウで、次のフィルター設定の一部を変更できます。
+    - 名前でフィルター: 
+   
+      ![名前でフィルター](media/ssms-tricks/filterbyname.png)
 
-7. フィルターをクリアするには、**[テーブル]** を右クリックして、**[フィルターの削除]** を選択します
+    - スキーマでフィルター: 
+    
+      ![スキーマでフィルター](media/ssms-tricks/filterbyschema.png)
 
-    ![[フィルターの削除]](media/ssms-tricks/removefilter.png)
+7. フィルターを消去するには、**[テーブル]** を右クリックし、**[フィルターの削除]** を選択します。
+
+    ![フィルターの削除](media/ssms-tricks/removefilter.png)
     
 
 
 ## <a name="access-your-sql-server-error-log"></a>SQL Server のエラー ログにアクセスする
-エラー ログは、SQL Server 内で発生したことに関する詳細な情報を含むファイルです。 SSMS で参照してクエリを実行することができます。 ディスクで .log ファイルとして検索することもできます。
+エラー ログは、SQL Server インスタンス内で発生したことに関する詳細な情報を含むファイルです。 SSMS では、エラー ログを参照したり、クエリを実行したりできます。 エラー ログは、ディスクに置かれている .log ファイルです。
 
-### <a name="open-error-log-within-ssms"></a>SSMS でエラー ログを開く
-1. SQL Server に接続します。
-2. **[管理]** ノードを展開します。 
-3. **[SQL Server ログ]** ノードを展開します。 
-4. **[現在]** のエラー ログを右クリックして、**[SQL Server ログの表示]** を選択します。
+### <a name="open-the-error-log-in-ssms"></a>SSMS でエラー ログを開く
+1. SQL Server に接続します。  
+2. **[管理]** > **[SQL Server ログ]** の順に展開します。 
+4. **[現在]** のエラー ログを右クリックし、**[SQL Server ログの表示]** を選択します。
 
     ![SSMS でエラー ログを表示する](media/ssms-tricks/viewerrorloginssms.png)
 
-### <a name="query-error-log-within-ssms"></a>SSMS でエラー ログのクエリを行う
+### <a name="query-the-error-log-in-ssms"></a>SSMS でエラー ログにクエリを実行する
 1. SQL Server に接続します。
-2. **[新しいクエリ]** ウィンドウを開きます。
-3. クエリ ウィンドウに次の T-SQL コード スニペットを貼り付けます。
+2. [新しいクエリ] ウィンドウを開きます。
+3. 次の T-SQL コードをクエリ ウィンドウに貼り付けます。
 
  ```sql
    sp_readerrorlog 0,1,'Server process ID' 
   ``` 
+
 4. 単一引用符で囲まれたテキストを検索するテキストに変更します。
-5. クエリを実行して結果を確認します。
+5. クエリを実行し、結果を確認します。
    
-    ![エラー ログのクエリ](media/ssms-tricks/queryerrorlog.png)
+    ![エラー ログにクエリを実行する](media/ssms-tricks/queryerrorlog.png)
 
 
-### <a name="find-error-log-location-if-youre-connected-to-sql"></a>SQL に接続されている場合にエラー ログの場所を検索する
+### <a name="find-the-error-log-location-if-youre-connected-to-sql-server"></a>SQL Server に接続されている場合にエラー ログの場所を検索する
 1. SQL Server に接続します。
-2. **[新しいクエリ]** ウィンドウを開きます。
-3. クエリ ウィンドウに次の T-SQL コード スニペットを貼り付けて、**[実行]** をクリックします。
+2. [新しいクエリ] ウィンドウを開きます。
+3. クエリ ウィンドウに次の T-SQL コードを貼り付け、**[実行]** を選択します。
 
  ```sql
     SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
   ``` 
 
-4. 結果で、ファイル システム内のエラー ログの場所が示されます。 
+4. 結果に、ファイル システム内のエラー ログの場所が示されます。 
 
     ![クエリでエラー ログを見つける](media/ssms-tricks/finderrorlogquery.png)
 
-### <a name="find-error-log-location-if-you-cannot-connect-to-sql"></a>SQL に接続できない場合にエラー ログの場所を検索する
+### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>SQL Server に接続できない場合にエラー ログの場所を検索する
 1. SQL Server 構成マネージャーを開きます。 
-2. **[サービス]** ノードを展開します。
-3. SQL Server インスタンスを右クリックして、**[プロパティ]** を選択します。
+2. **[サービス]** を展開します。
+3. SQL Server インスタンスを右クリックし、**[プロパティ]** を選択します。
 
-    ![構成マネージャーのサーバーのプロパティ](media/ssms-tricks/serverproperties.PNG)
+    ![構成マネージャー サーバーのプロパティ](media/ssms-tricks/serverproperties.PNG)
 
 4. **[起動時のパラメーター]** タブを選択します。
-5. **[Existing Parameters]\(既存のパラメーター\)** 領域で、"-e" の後のパスがエラー ログの場所です。 
+5. **[既存のパラメーター]** 領域で、"-e" の後のパスがエラー ログの場所です。 
     
     ![エラー ログ](media/ssms-tricks/errorlog.png)
-    - この場所には複数の errorlog.* があることがわかります。 *.log で終わっているのが現在のものです。 数字で終わっているのは以前のログです。SQL Server が再起動するたびに、新しいログが作成されます。 
-6. このファイルをメモ帳で開きます。 
+    
+    この場所には複数の errorlog.* ファイルがあります。 *.log で終わるファイル名が現在のエラー ログ ファイルです。 数字で終わるファイル名は以前のログ ファイルです。 SQL Server が再起動するたびに新しいログが作成されます。
 
-## <a name="determine-sql-server-name"></a>SQL Server 名を確認する...
-SQL Server に接続する前と後では、SQL Server 名を確認する方法が異なります。  
+6. メモ帳で errorlog.log ファイルを開きます。 
 
-### <a name="when-you-dont-know-it"></a>...インスタンス名がわからないとき
-1. 手順に従って[ディスク上の SQL Server エラー ログ](#finding-your-error-log-if-you-cannot-connect-to-sql)を探します。 
-2. メモ帳で errorlog.log を開きます。 
-3. "サーバー名は" で始まるテキストを探します。
-  - 単一引用符で囲まれているのが、これから接続する SQL Server の名前です。![エラー ログでのサーバー名](media/ssms-tricks/servernameinlog.png) 名前の形式は 'HOSTNAME\INSTANCENAME' です。 ホスト名しか表示されないが、既定のインスタンスをインストールしている場合、インスタンス名は 'MSSQLSERVER' です。 既定のインスタンスに接続している場合、SQL Server に接続するにはホスト名のみを入力する必要があります。  
+## <a name="determine-sql-server-name"></a>SQL Server 名を見つける
+SQL Server に接続する前に、あるいは接続した後に、いくつかの方法で SQL server の名前を検索できます。  
 
-### <a name="once-youre-connected-to-sql"></a>...SQL に接続した後 
-接続している SQL Server は 3 つの場所で確認できます。 
+### <a name="before-you-connect-to-sql-server"></a>SQL Server に接続する前
+1. 次の手順で[ディスク上の SQL Server エラー ログ](#finding-your-error-log-if-you-cannot-connect-to-sql)を探します。 
+2. メモ帳で errorlog.log ファイルを開きます。  
+3. *Server name is* というテキストを探します。
+    
+    単一引用符で囲まれているのが、これから接続する SQL Server インスタンスの名前です。
 
-1. サーバーの名前は、**オブジェクト エクスプローラー**に表示されます。
+    ![エラー ログでサーバー名を見つける](media/ssms-tricks/servernameinlog.png)
+    
+    名前の形式は "ホスト名\インスタンス名" です。 ホスト名しか表示されない場合、既定のインスタンスをインストールしており、インスタンス名は MSSQLSERVER です。 既定のインスタンスに接続するとき、ホスト名だけを入力して SQL Server に接続できます。  
 
-    ![オブジェクト エクスプローラーでのインスタンス名](media/ssms-tricks/nameinobjectexplorer.png)
-2. サーバーの名前は、クエリ ウィンドウに表示されます。
+### <a name="when-youre-connected-to-sql-server"></a>SQL Server に接続しているとき 
+SQL Server に接続しているとき、3 か所でサーバー名が見つかります。 
 
-    ![クエリ ウィンドウでの名前](media/ssms-tricks/nameinquerywindow.png)
-3. サーバーの名前は、**プロパティ ウィンドウ**にも表示されます。
-    - アクセスするには、**[表示]** メニューを開き、**[プロパティ ウィンドウ]** を選択します。
+1. サーバーの名前はオブジェクト エクスプローラーに表示されます。
 
-    ![プロパティでの名前](media/ssms-tricks/nameinproperties.png)
+    ![オブジェクト エクスプローラーの SQL Server インスタンス名](media/ssms-tricks/nameinobjectexplorer.png)
+2. サーバーの名前はクエリ ウィンドウに表示されます。
 
-### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>...別名または可用性グループ リスナーに接続している場合 
-別名または可用性グループ リスナーに接続しているときは、**オブジェクト エクスプローラー**と**プロパティ**にはそれが表示されます。 その場合、SQL Server の名前はすぐにはわからないことがあり、クエリを行う必要があります。 
+    ![クエリ ウィンドウの SQL Server インスタンス名](media/ssms-tricks/nameinquerywindow.png)
+3. サーバーの名前は **[プロパティ]** に表示されます。
+    - **[表示]** メニューで、**[プロパティ ウィンドウ]** を選択します。
+
+      ![プロパティ ウィンドウの SQL Server インスタンス名](media/ssms-tricks/nameinproperties.png)
+
+### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>別名または可用性グループ リスナーに接続している場合 
+別名または可用性グループ リスナーに接続している場合、その情報がオブジェクト エクスプローラーとプロパティに表示されます。 その場合、SQL Server の名前はすぐにはわからないことがあり、クエリを行う必要があります。 
 
 1. SQL Server に接続します。
-2. **[新しいクエリ]** ウィンドウを開きます。
-3. ウィンドウに次の T-SQL コード スニペットを貼り付けます。 
+2. [新しいクエリ] ウィンドウを開きます。
+3. 次の T-SQL コードをウィンドウに貼り付けます。 
 
   ```sql
    select @@Servername 
  ``` 
-4. クエリの結果を見て、接続している SQL Server の名前を確認します。 
+4. クエリの結果を見て、接続している SQL Server インスタンスの名前を確認します。 
     
-    ![サーバー名のクエリ](media/ssms-tricks/queryservername.png)
+    ![SQL Server 名を問い合わせる](media/ssms-tricks/queryservername.png)
 
 

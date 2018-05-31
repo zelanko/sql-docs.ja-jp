@@ -89,11 +89,12 @@ caps.latest.revision: 255
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac7f9dc22f86f5da53efaa0b348362e582045683
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5842e2885aff9fa774ab98d4ededb1c18f7e9ac2
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455715"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 
@@ -192,11 +193,12 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="Install"></a> インストール パラメーター  
  次の表に示すパラメーターは、インストール用のコマンド ライン スクリプトを作成する場合に使用します。  
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値: **Install**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R セットアップ コントロール|/IACCEPTROPENLICENSETERMS <br /><br /> **R Services (In-Database) または Microsoft R Server のいずれかを含む自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R セットアップ コントロール|/IACCEPTPYTHONOPENLICENSETERMS <br /><br /> **Anaconda Python パッケージを含む自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R セットアップ コントロール|/IACCEPTROPENLICENSETERMS <br /><br /> **Microsoft R Open パッケージを含む自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可**|ローカライズされたオペレーティング システムに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/UpdateEnabled<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが製品の更新プログラムを検出し、それらを含める必要があるかどうかを指定します。 有効値は True および False または 1 および 0 です。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには検出された更新プログラムが含まれます。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/UpdateSource<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが製品の更新プログラムを取得する場所を指定します。 有効値は [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update を検索する "MU"、有効なフォルダー パス、相対パス (`.\MyUpdates` など)、または UNC 共有です。 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update、または Windows Server Update Services を介して Windows Update Service を検索します。|  
@@ -275,7 +277,8 @@ ms.lasthandoff: 05/03/2018
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の開始アカウントを指定します。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必須](#Accounts)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの開始アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **省略可**|[の](#Accounts) スタートアップ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]モードを指定します。|  
-|R Services (データベース内)|MRCACHEDIRECTORY|このパラメーターを使用し、Microsoft R Open コンポーネントと Microsoft R Server コンポーネントまたは Microsoft Machine Learning Server コンポーネントのキャッシュ ディレクトリを指定します。詳細は[この記事](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)にあります。 通常、この設定を使用するのは、インターネット アクセスのないコンピューターでコマンド ラインから SQL Server Machine Learning をインストールする場合です。|  
+|Python/Machine Learning Services (データベース内)|MPYCACHEDIRECTORY|このパラメーターを使用して、SQL Server 2017 Machine Learning Services または Machine Learning Server (スタンドアロン) で Python 機能をサポートするためのキャッシュ ディレクトリを指定します。 通常、この設定を使用するのは、[インターネット アクセスを使用していないコンピューターでコマンド ラインから](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access) Python コンポーネントをインストールする場合です。|  
+|R/Machine Learning Services (データベース内)|MRCACHEDIRECTORY|このパラメーターを使用して、SQL Server 2017 Machine Learning Services または Machine Learning Server (スタンドアロン) で Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (スタンドアロン)、または R の機能をサポートするためのキャッシュ ディレクトリを指定します。 通常、この設定を使用するのは、[インターネット アクセスを使用していないコンピューターでコマンド ラインから](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access) R コンポーネントをインストールする場合です。|  
   
 ###### <a name="sample-syntax"></a>サンプル構文:  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、レプリケーション、フルテキスト検索の各コンポーネントが配置された新しいスタンドアロン インスタンスをインストールし、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のファイルの瞬時初期化を有効にするには、次の構文を使用します。 
@@ -292,7 +295,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 #### <a name="prepare-image-parameters"></a>イメージの準備パラメーター  
  次の表に示すパラメーターは、SQL Server のインスタンスを準備する (構成は行わない) ためのコマンド ライン スクリプトを作成する場合に使用します。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値: **PrepareImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
@@ -325,7 +328,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 #### <a name="complete-image-parameters"></a>イメージの完了パラメーター  
  次の表に示すパラメーターは、準備された SQL Server のインスタンスを完了および構成するためのコマンド ライン スクリプトを作成する場合に使用します。 
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント|パラメーター|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント|パラメーター|[説明]|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値: **CompleteImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
@@ -390,7 +393,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 ##  <a name="Upgrade"></a> アップグレード パラメーター  
  次の表に示すパラメーターは、アップグレード用のコマンド ライン スクリプトを作成する場合に使用します。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。 サポートされる値:<br /><br /> **アップグレード**<br /><br /> **EditionUpgrade**<br /><br /> <br /><br /> 値 **EditionUpgrade** は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の既存のエディションを別のエディションにアップグレードするときに使用します。 サポートされるバージョンとエディションのアップグレードについては、「 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
@@ -428,7 +431,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 ##  <a name="Repair"></a> 修復パラメーター  
  次の表に示すパラメーターは、修復用のコマンド ライン スクリプトを作成する場合に使用します。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|修復ワークフローを示すために必要です。<br /><br /> サポートされる値: **Repair**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可**|ローカライズされたオペレーティング システムに [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
@@ -452,7 +455,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Rebuild"></a> 再構築システム データベース パラメーター  
  次の表に示すパラメーターは、master、model、msdb、および tempdb の各システム データベースを再構築するコマンド ライン スクリプトを作成する場合に使用します。 詳細については、「 [システム データベースの再構築](../../relational-databases/databases/rebuild-system-databases.md)」を参照してください。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|データベースの再構築に関するワークフローを示すのに必要です。<br /><br /> サポートされる値: **Rebuilddatabase**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/INSTANCENAME<br /><br /> **必須**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンス名を指定します。<br /><br /> 詳細については、「 [Instance Configuration](../../database-engine/install-windows/install-sql-server.md)」を参照してください。|  
@@ -471,7 +474,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Uninstall"></a> アンインストール パラメーター  
  次の表に示すパラメーターは、アンインストール用のコマンド ライン スクリプトを作成する場合に使用します。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|アンインストール ワークフローを示すために必要です。<br /><br /> サポートされる値: **Uninstall**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/CONFIGURATIONFILE<br /><br /> **省略可**|使用する [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) を指定します。|  
@@ -601,7 +604,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 #### <a name="prepare-failover-cluster-parameters"></a>フェールオーバー クラスターの準備パラメーター  
  次の表に示すパラメーターは、フェールオーバー クラスターを準備するコマンド ライン スクリプトを作成する場合に使用します。 ここでは、フェールオーバー クラスターのすべてのノードにフェールオーバー クラスター インスタンスを準備するのに必要な、クラスターの高度なインストールの最初の手順がわかります。 詳細については、「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|フェールオーバー クラスターの準備に関するワークフローを示すために必要です。<br /><br /> サポートされる値: **PrepareFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
@@ -666,7 +669,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 #### <a name="complete-failover-cluster-parameters"></a>フェールオーバー クラスターの完了パラメーター  
  次の表に示すパラメーターは、フェールオーバー クラスターを完了するコマンド ライン スクリプトを作成する場合に使用します。 ここでは、フェールオーバー クラスターの高度なインストール オプションについて、2 番目の手順がわかります。 すべてのフェールオーバー クラスター ノードで準備を実行した後、共有ディスクを所有するノードでこのコマンドを実行します。 詳細については、「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|フェールオーバー クラスターの完了に関するワークフローを示すために必要です。<br /><br /> サポートされる値: **CompleteFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可**|ローカライズされたオペレーティング システムに SQL Server の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
@@ -729,7 +732,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 #### <a name="upgrade-failover-cluster-parameters"></a>フェールオーバー クラスターのアップグレード パラメーター  
  次の表に示すパラメーターは、フェールオーバー クラスターのアップグレード用コマンド ライン スクリプトを作成する場合に使用します。 詳細については、[[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]フェールオーバー クラスター インスタンスのアップグレード &#40;セットアップ&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)に関するページと「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」をご覧ください。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値: **Upgrade**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
@@ -759,7 +762,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ####  <a name="AddNode"></a> ノード追加パラメーター  
  次の表に示すパラメーターは、ノード追加用のコマンド ライン スクリプトを作成する場合に使用します。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|AddNode ワークフローを示すために必要です。<br /><br /> サポートされる値: **AddNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
@@ -804,7 +807,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 #### <a name="remove-node-parameters"></a>ノード削除パラメーター  
  次の表に示すパラメーターは、ノード削除用のコマンド ライン スクリプトを作成する場合に使用します。 フェールオーバー クラスターをアンインストールするには、各フェールオーバー クラスター ノードで RemoveNode を実行する必要があります。 詳細については、「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|RemoveNode ワークフローを示すために必要です。<br /><br /> サポートされる値: **RemoveNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/CONFIGURATIONFILE<br /><br /> **省略可**|使用する [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) を指定します。|  
@@ -842,7 +845,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ##  <a name="Feature"></a> 機能パラメーター  
  特定の機能をインストールするには、/FEATURES パラメーターを使用して、以下の表の親機能の値または機能の値を指定します。 SQL Server の各エディションでサポートされる機能の一覧については、「[[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 
   
-|親機能パラメーター|機能パラメーター|Description|  
+|親機能パラメーター|機能パラメーター|[説明]|  
 |:---|:---|:---|  
 |SQL||[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、レプリケーション、フルテキスト、および [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]をインストールします。|  
 ||SQLEngine|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のみをインストールします。|  
@@ -850,7 +853,9 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||FullText|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]と共にフルテキスト コンポーネントをインストールします。|  
 ||DQ|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了するために必要なファイルをコピーします。 SQL Server のインストールが完了したら、DQSInstaller.exe ファイルを実行して、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了させる必要があります。 詳細については、「 [Data Quality Server のインストールを完了するための DQSInstaller.exe の実行](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)」をご覧ください。 このパラメーターでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]もインストールされます。|  
 ||PolyBase|PolyBase コンポーネントをインストールします。|  
-||AdvancedAnalytics|R Services (In-Database) をインストールします。|  
+||AdvancedAnalytics|[SQL Server 2017 Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install) または [SQL Server 2016 R Services (データベース内)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install) をインストールします。|  
+||SQL_INST_MR |[SQL Server 2017 Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install) に適用されます。 R Open と専用の R パッケージをインストールするには、**AdvancedAnalytics** と併用してください。|  
+||SQL_INST_MPY|[SQL Server 2017 Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install) に適用されます。 Anaconda と専用の Python パッケージをインストールするには、**AdvancedAnalytics** と併用してください。|  
 |AS||すべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コンポーネントをインストールします。|  
 |RS||すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをインストールします。|  
 |RS_SHP||SharePoint 用の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをインストールします。|  
@@ -858,7 +863,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |DQC||[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]をインストールします。|  
 |IS||すべての [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントをインストールします。|  
 |MDS||[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]をインストールします。|  
-|SQL_SHARED_MR||Microsoft R Server をインストールします。|  
+|SQL_SHARED_MPY||[SQL Server 2017 Machine Learning Server (スタンドアロン)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install) の Python パッケージをインストールします。 |  
+|SQL_SHARED_MR||[SQL Server 2016 R Server (スタンドアロン)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-standalone-windows-install) または SQL Server 2017 Machine Learning Server (スタンドアロン) の R パッケージをインストールします。 |  
 |Tools*||クライアント ツールおよび SQL Server オンライン ブック コンポーネントをインストールします。|  
 ||BC|旧バージョンとの互換性コンポーネントをインストールします。|  
 ||Conn|接続コンポーネントをインストールします。|
@@ -874,7 +880,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 ### <a name="feature-parameter-examples"></a>機能パラメーターの例:  
   
-|パラメーターおよび値|Description| 
+|パラメーターおよび値|[説明]| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|レプリケーションおよびフルテキストなしの [!INCLUDE[ssDE](../../includes/ssde-md.md)] をインストールします。|  
 |/FEATURES=SQLEngine, FullText|[!INCLUDE[ssDE](../../includes/ssde-md.md)] とフルテキストをインストールします。|  
@@ -887,7 +893,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  AllFeatures_WithDefaults ロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの既定の動作であり、このロールを指定した場合は、ユーザーに対して表示されるダイアログ ボックスの数が減少します。 このロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]以外の SQL Server エディションをインストールするときに、コマンド ラインから指定できます。 
   
-|ロール|Description|インストールされる機能|  
+|ロール|[説明]|インストールされる機能|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 名前付きインスタンスとして、既存の [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームまたはスタンドアロン サーバーにインストールします。|メモリ内のデータの格納と処理用にあらかじめ構成された、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算エンジン。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージ<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> SQL Server オンライン ブック|  
 |SPI_AS_NewFarm|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] および [!INCLUDE[ssDE](../../includes/ssde-md.md)] を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 名前付きインスタンスとして、新しい未構成の Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームまたはスタンドアロン サーバーにインストールします。 SQL Server セットアップは、機能ロールのインストール時にファームを構成します。|メモリ内のデータの格納と処理用にあらかじめ構成された、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算エンジン。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージ<br /><br /> SQL Server オンライン ブック<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 構成ツール (Configuration Tools)<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  

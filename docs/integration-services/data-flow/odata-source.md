@@ -21,11 +21,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdf20d18d4397b0d8ed2f0598b287a88d03caf0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20e98a86e61ba084073022eb515d436787f6a341
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455416"
 ---
 # <a name="odata-source"></a>OData ソース
 Open Data Protocol (OData) サービスからのデータを使用するには、SSIS パッケージの OData ソース コンポーネントを使用します。 このコンポーネントは、OData v3 プロトコルと v4 プロトコルをサポートします。  
@@ -37,7 +38,10 @@ Open Data Protocol (OData) サービスからのデータを使用するには�
 OData ソースには、次のデータ ソースのサポートが含まれます。
 -   Microsoft Dynamics AX Online および Microsoft Dynamics CRM Online
 -   SharePoint リスト。 SharePoint サーバーのすべてのリストを表示するには、http://\<server>/_vti_bin/ListData.svc という URL を使用します。 SharePoint の URL の規則に関する詳細については、「 [SharePoint Foundation REST インターフェイス](http://msdn.microsoft.com/library/ff521587.aspx)」を参照してください。
-  
+
+> [!NOTE]
+> SharePoint リストでは、複数選択項目など、複雑な種類を OData ソース コンポーネントで利用できません。
+
 ## <a name="odata-format-and-performance"></a>OData の形式とパフォーマンス
  ほとんどの OData サービスは、結果を複数の形式で返すことができます。 `$format` クエリ オプションを使用して、結果セットの形式を指定することができます。 JSON と JSON Light のような形式は、ATOM または XML より効率的であり、大量のデータを転送する場合により高いパフォーマンスを達成できる可能性があります。 次の表に、サンプル テストの結果を示します。 ここから理解できるように、ATOM から JSON に切り替えるとパフォーマンスが 30 ～ 53% 向上し、Atom から新しい JSON Light 形式 (WCF Data Services 5.1 で使用可能) に切り替えるとパフォーマンスが 67% 向上します。  
   
@@ -69,7 +73,7 @@ OData ソースには、次のデータ ソースのサポートが含まれま�
  **コレクションまたはリソースのパスを使用します。**  
  ソースからデータを選択する方法を指定します。  
   
-|オプション|Description|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |Collection|コレクション名を使用して、Odata ソースからデータを取得します。|  
 |リソースのパス|リソースのパスを使用して、Odata ソースからデータを取得します。|  

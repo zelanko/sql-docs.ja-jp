@@ -15,18 +15,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c39296fd2ea72e8107c9c1dc558e636810726848
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfdb035f176c2fcdb9e71b5621b76e4ecb72c2b4
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300170"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルのデータのクエリ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   テンポラル テーブルのデータの最新 (実際) の状態を取得するときは、テンポラル以外のテーブルをクエリするときとまったく同じ方法でクエリできます。 PERIOD 列が非表示ではない場合は、それらの値が SELECT \* クエリで表示されます。 **PERIOD** 列が非表示として指定されている場合は、それらの値は SELECT \* クエリでは表示されません。 **PERIOD** 列が非表示の場合は、SELECT 句で **PERIOD** 列を明示的に参照すると、これらの列の値が返されます。  
   
- 任意の種類の時間ベースの分析を実行するには、新しい  **FOR SYSTEM_TIME** 句を使用し、テンポラル固有の 4 つのサブ句を指定して、現在のテーブルと履歴テーブルのデータをクエリします。 これらの句の詳細については、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」と「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
+ 任意の種類の時間ベースの分析を実行するには、新しい **FOR SYSTEM_TIME** 句を使用し、テンポラル固有の 4 つのサブ句を指定して、現在のテーブルと履歴テーブルのデータをクエリします。 これらの句の詳細については、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」と「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
   
 -   AS OF <date_time>  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
  **FOR SYSTEM_TIME** は、クエリで各テーブルに対して個別に指定できます。 共通テーブル式、テーブル値関数、ストアド プロシージャの中で使用できます。  
   
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>AS OF サブ句を使用した特定時点のクエリ  
- 過去の特定時点におけるデータの状態を再構築する必要がある場合は、**AS OF** サブ句を使用します。  **PERIOD** 列の定義で指定されている datetime2 型の精度でデータを再構築できます。    
+ 過去の特定時点におけるデータの状態を再構築する必要がある場合は、**AS OF** サブ句を使用します。 **PERIOD** 列の定義で指定されている datetime2 型の精度でデータを再構築できます。    
 **AS OF** サブ句を定数リテラルまたは変数と共に使用して、時間条件を動的に指定できます。 指定した値は UTC 時刻として解釈されます。  
   
  この最初の例では、過去の特定の日時における dbo.Department テーブルの状態が返されます。  

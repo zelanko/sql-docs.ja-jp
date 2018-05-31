@@ -26,23 +26,20 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22b55997d2631001afe9e220f87056026c49b4aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5a985cffb4aa982e598cbaaeb5c8ddb57133fd7
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455675"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server データベースのバックアップと復元
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-
-  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップする利点、バックアップと復元に関する基本的な用語、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元の方法を紹介します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元のセキュリティに関する考慮事項についても取り上げます。 
-  
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップする利点、バックアップと復元に関する基本的な用語、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元の方法を紹介します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元のセキュリティに関する考慮事項についても取り上げます。 
 
 > **ステップ バイ ステップの指示が必要な場合** このトピックでは **バックアップを実行する具体的な手順は説明されていません**。 バックアップの具体的な手順については、このページの最後にあるバックアップ タスク別および SSMS/T-SQL 別のリンク セクションを参照してください。  
   
- SQL Server のバックアップと復元コンポーネントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納されている大切なデータを保護するうえで不可欠な保護対策を提供します。 致命的なデータ損失のリスクを最小限に抑えるには、データベースをバックアップして、データに対する変更内容を定期的に保存しておく必要があります。 バックアップと復元方法を十分に計画することで、さまざまな障害に起因するデータの損失からデータベースを保護できます。 バックアップを復元し、データベースを復旧するテストを実施することで、障害発生時に適切に対応できるようになります。  
+ SQL Server のバックアップと復元コンポーネントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納されている大切なデータを保護するうえで不可欠な保護対策を提供します。 致命的なデータ損失のリスクを最小限に抑えるには、データベースをバックアップして、データに対する変更内容を定期的に保存しておく必要があります。 バックアップと復元方法を十分に計画することで、さまざまな障害に起因するデータの損失からデータベースを保護できます。 バックアップを復元し、データベースを復旧するテストを実施することで、障害発生時に適切に対応できるようになります。
   
  バックアップを格納するローカル ストレージに加えて、SQL Server では、バックアップおよび Windows Azure BLOB ストレージ サービスからの復元がサポートされます。 詳細については、「 [Microsoft Azure Blob Storage サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 Microsoft Azure BLOB ストレージ サービスを使用して格納したデータベース ファイルの場合、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、Azure スナップショットを使用してほぼ瞬時にバックアップし、より迅速に復元するためのオプションが提供されます。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
   
@@ -51,12 +48,9 @@ ms.lasthandoff: 05/03/2018
 
      データベースの有効なバックアップがあれば、次に示したようなさまざまな障害からデータを復旧することができます。  
   
-    -   メディアの障害  
-  
-    -   ユーザー エラー (テーブルの誤削除など)  
-  
-    -   ハードウェア障害 (ディスク ドライブの損傷や、復旧の可能性のないサーバー障害など)  
-  
+    -   メディアの障害    
+    -   ユーザー エラー (テーブルの誤削除など)    
+    -   ハードウェア障害 (ディスク ドライブの損傷や、復旧の可能性のないサーバー障害など)    
     -   自然災害。 Windows Azure BLOB ストレージ サービスへの SQL Server バックアップを使用すると、内部設置環境に影響する自然災害が発生した場合に使用できるように、内部設置の場所とは異なる地域にオフサイト バックアップを作成できます。  
   
 -   また、データベースのバックアップは、サーバー間でのデータベースのコピー、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] やデータベース ミラーリングのセットアップ、およびアーカイブなど、日常的な管理作業を行ううえでも便利です。  
@@ -75,7 +69,7 @@ ms.lasthandoff: 05/03/2018
  バックアップの書き込み先となる 1 つまたは複数のテープまたはディスク ファイル。  
   
 **データ バックアップ (data backup)**  
- データのバックアップ。データベース全体 (データ バックアップ)、データベースの一部 (部分バックアップ)、または一連のデータ ファイルやファイル グループ (ファイル バックアップ) の形式で存在します。  
+ データのバックアップ。データベース全体 (データベース バックアップ)、データベースの一部 (部分バックアップ)、または一連のデータ ファイルやファイルグループ (ファイル バックアップ) の形式で存在します。  
   
 **データベース バックアップ (database backup)**  
  データベースのバックアップ。 データベースの完全バックアップは、バックアップが完了した時点のデータベース全体を表します。 差分データベース バックアップには、最新の完全バックアップ以降に行われたデータベースへの変更のみが含まれます。  
@@ -104,8 +98,8 @@ ms.lasthandoff: 05/03/2018
  ##  <a name="backup-and-restore-strategies"></a>バックアップと復元の方法  
  データのバックアップと復元は、特定の環境向けにカスタマイズし、使用可能なリソースと連動させる必要があります。 したがって、信頼性が確保された状態でバックアップと復元を使用して復旧するには、バックアップと復元のストラテジが必要です。 バックアップと復元のストラテジ設計が良ければ、特定のビジネス要件を考慮しながら、データの可用性を最大にし、データ損失を最小限に抑えることができます。  
   
-#### <a name="important"></a>重要: 
-**データベースとバックアップは異なるデバイスに置いてください。そうしないと、データベースを置いているデバイスに障害が発生した場合、バックアップも使用できなくなります。データとバックアップを異なるデバイスに置くと、バックアップの書き込みでもデータベースの運用でも I/O パフォーマンスが向上します。**  
+  > [!IMPORTANT] 
+  > データベースとバックアップは異なるデバイスに置いてください。 そうしないと、データベースを置いているデバイスに障害が発生した場合、バックアップも使用できなくなります。 データとバックアップを異なるデバイスに置くと、バックアップの書き込みでもデータベースの運用でも I/O パフォーマンスが向上します。**  
   
  バックアップと復元のストラテジには、バックアップに関する部分と復元に関する部分があります。 ストラテジで扱うバックアップ部分では、バックアップの種類と頻度、バックアップに必要なハードウェアの性質と速度、バックアップのテスト方法、およびバックアップ メディアの保管場所と保管方法 (セキュリティ上の考慮事項も含む) を定義します。 ストラテジで扱う復元部分では、復元の実行責任者と、データベースの可用性とデータ損失の最小化という目標を達成するためにどのように復元を実行するのかを定義します。 バックアップと復元の手順をドキュメント化し、そのドキュメントを運用手順書に含めて保管することをお勧めします。  
   
@@ -151,12 +145,46 @@ ms.lasthandoff: 05/03/2018
    
 >  バックアップ中の同時実行の制限については、「 [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  
   
- 必要なバックアップの種類、および各種類のバックアップを実行する必要のある頻度を決定した後、データベースに対するデータベース メンテナンス プランの一部として、定期的なバックアップをスケジュールすることをお勧めします。 メンテナンス プランと、データベース バックアップおよびログ バックアップ用のメンテナンス プランの作成方法については、「 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)」を参照してください。  
+ 必要なバックアップの種類、および各種類のバックアップを実行する必要のある頻度を決定した後、データベースに対するデータベース メンテナンス プランの一部として、定期的なバックアップをスケジュールすることをお勧めします。 メンテナンス プランと、データベース バックアップおよびログ バックアップ用のメンテナンス プランの作成方法については、「 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)」を参照してください。
   
 ### <a name="test-your-backups"></a>バックアップのテスト  
- バックアップをテストするまでは、復元ストラテジが完成したことにはなりません。 データベースのコピーをテスト システムに復元することで、各データベースに対するバックアップ ストラテジを十分にテストすることが重要です。 使用するすべての種類のバックアップの復元をテストする必要があります。  
+ バックアップをテストするまでは、復元ストラテジが完成したことにはなりません。 データベースのコピーをテスト システムに復元することで、各データベースに対するバックアップ ストラテジを十分にテストすることが重要です。 使用するすべての種類のバックアップの復元をテストする必要があります。
   
- データベースごとに操作マニュアルを用意しておくことをお勧めします。 この操作マニュアルには、バックアップの場所、バックアップ デバイス名 (ある場合)、およびテスト バックアップの復元に必要な時間を記載しておきます。  
+ データベースごとに操作マニュアルを用意しておくことをお勧めします。 この操作マニュアルには、バックアップの場所、バックアップ デバイス名 (ある場合)、およびテスト バックアップの復元に必要な時間を記載しておきます。
+
+## <a name="monitor-progress-with-xevent"></a>xEvent で進捗状況を監視する
+バックアップと復元の操作は、関連するデータベースのサイズと処理の複雑さによって、相当の時間がかかる場合があります。 いずれの処理で問題が発生した場合は、**backup_restore_progress_trace** 拡張イベントを使用して進捗状況をライブで監視できます。 拡張イベントの詳細については、「 [拡張イベント](../extended-events/extended-events.md)」を参照してください。
+
+  >[!WARNING]
+  > backup_restore_progress_trace 拡張イベントを使用すると、パフォーマンスの問題が発生し、大量のディスク領域を消費する場合があります。 使用するのは短時間にし、慎重に実行し、実稼働環境で実装する前には徹底的なテストを行ってください。
+
+
+```sql
+-- Create the backup_restore_progress_trace extended event esssion
+CREATE EVENT SESSION [BackupRestoreTrace] ON SERVER 
+ADD EVENT sqlserver.backup_restore_progress_trace
+ADD TARGET package0.event_file(SET filename=N'BackupRestoreTrace')
+WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=5 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
+GO
+
+-- Start the event session  
+ALTER EVENT SESSION [BackupRestoreTrace]  
+ON SERVER  
+STATE = start;  
+GO  
+
+-- Stop the event session  
+ALTER EVENT SESSION [BackupRestoreTrace]  
+ON SERVER  
+STATE = stop;  
+GO  
+```
+
+### <a name="sample-output-from-extended-event"></a>拡張イベントからの出力例 
+
+![xEvent の出力のバックアップ例](media/back-up-and-restore-of-sql-server-databases/backup-xevent-example.png)
+![xEvent の出力の復元例](media/back-up-and-restore-of-sql-server-databases/restore-xevent-example.png)
+ 
   
 ## <a name="more-about-backup-tasks"></a>バックアップ タスクの詳細  
 -   [メンテナンス プランの作成](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  

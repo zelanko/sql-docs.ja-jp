@@ -1,6 +1,6 @@
 ---
 title: Transact-SQL (VS Code) を使用して SSIS プロジェクトを配置する | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,17 +12,15 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c32302d499f1c8dc450d6e10451f080b30249d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4611b711b9f220af26a7f629480fa9f7b4c071c
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455445"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Transact-SQL を使用して Visual Studio Code から SSIS プロジェクトを配置する
-このクイック スタートでは、Visual Studio Code を使用して、SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS プロジェクトを SSIS カタログに配置する方法を示します。
-
-> [!NOTE]
-> この記事で説明されているメソッドは、VS Code を使用して Azure SQL Database サーバーに接続しているときには使用できません。 `catalog.deploy_project` ストアド プロシージャでは、ローカル ファイル システム内 (オンプレミス) の `.ispac` ファイルへのパスが必要です。
+このクイックスタートでは、Visual Studio Code を使用して、SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS プロジェクトを SSIS カタログに配置する方法を示します。
 
 Visual Studio Code は、拡張機能をサポートする Windows、macOS、および Linux のコード エディターです。拡張機能には、Microsoft SQL Server、Azure SQL Database、または Azure SQL Data Warehouse に接続するための `mssql` 拡張機能が含まれます。 VS Code の詳細については、「[Visual Studio Code](https://code.visualstudio.com/)」を参照してください。
 
@@ -31,6 +29,16 @@ Visual Studio Code は、拡張機能をサポートする Windows、macOS、お
 開始する前に、最新バージョンの Visual Studio Code がインストールされ、`mssql` 拡張機能が読み込まれていることを確認します。 これらのツールをダウンロードするには、次のページを参照してください。
 -   [Visual Studio Code のダウンロード](https://code.visualstudio.com/Download)
 -   [mssql 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+
+## <a name="supported-platforms"></a>サポートされているプラットフォーム
+
+このクイックスタートの情報を利用し、次のプラットフォームに SSIS プロジェクトをデプロイできます。
+
+-   SQL Server on Windows。
+
+Azure SQL Database に SSIS パッケージをデプロイする場合は、このクイックスタートの情報を使用できません。 `catalog.deploy_project` ストアド プロシージャでは、ローカル ファイル システム内 (オンプレミス) の `.ispac` ファイルへのパスが必要です。 Azure でパッケージをデプロイし、実行する方法については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
+
+SQL Server on Linux に SSIS パッケージをデプロイする場合は、このクイックスタートの情報を使用できません。 Linux でパッケージを実行する方法については、[SSIS を使用し、Linux でデータの抽出、変換、読み込みを行う](../linux/sql-server-linux-migrate-ssis.md)方法に関するページを参照してください。
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>VS Code で言語モードを SQL に設定する
 
@@ -46,9 +54,6 @@ Visual Studio Code は、拡張機能をサポートする Windows、macOS、お
 
 Visual Studio Code を使用して、SSIS カタログへの接続を確立します。
 
-> [!IMPORTANT]
-> 続行する前に、サーバー、データベース、およびログイン情報が準備されていることを確認します。 接続プロファイル情報の入力を開始した後、Visual Studio Code からフォーカスを変更した場合は、接続プロファイルを作り直す必要があります。
-
 1. VS Code で **Ctrl + Shift + P** (または **F1**) キーを押して、コマンド パレットを開きます。
 
 2. 「**sqlcon**」と入力し、**Enter** キーを押します。
@@ -61,9 +66,9 @@ Visual Studio Code を使用して、SSIS カタログへの接続を確立し�
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバー名** | 完全修飾サーバー名 |  |
    | **データベース名** | **SSISDB** | 接続先となるデータベースの名前。 |
-   | **[認証]** | SQL ログイン| このクイック スタートでは、SQL 認証を使います。 |
-   | **User name** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
-   | **パスワード (SQL ログイン)** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
+   | **[認証]** | SQL ログイン | |
+   | **User name** | サーバー管理者アカウント | このアカウントは、サーバーの作成時に指定したアカウントです。 |
+   | **パスワード (SQL ログイン)** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーの作成時に指定したパスワードです。 |
    | **パスワードを保存しますか?** | はい、いいえ | 毎回パスワードを入力したくない場合は、[はい] を選択します。 |
    | **このプロファイルの名前を入力してください** | **mySSISServer** などのプロファイル名 | プロファイル名が保存されていると、その後のログインの接続が高速化します。 | 
 
