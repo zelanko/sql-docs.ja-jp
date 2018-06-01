@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32545310"
 ---
 # <a name="new-and-recently-updated-master-data-services-for-sql-server"></a>新規または最近更新: SQL Server 用マスター データ サービス
 
