@@ -1,1 +1,0 @@
-<Token>**このトピックに適用されます**![はい](media/yes.png)Linux に SQL Server![ありません](media/no.png)Azure SQL Database![ありません](media/no.png)Azure SQL Data Warehouse![ありません](media/no.png)。並列データ ウェアハウス</Token>
