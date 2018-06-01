@@ -24,10 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: bef1fdf427c6bc510e77f8df55f3281d5b5db6cd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33263563"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  **最初**と**最後**トリガーは次の 2 つの異なるトリガーである必要があります。  
   
-|値|Description|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**First**|トリガーは最初に起動されます。|  
 |**Last**|トリガーは最後に起動されます。|  
@@ -77,7 +78,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="dml-triggers"></a>DML トリガー  
  1 つのみできます**最初**と 1 つ**最後**1 つのテーブルの各ステートメントをトリガーします。  
@@ -106,7 +107,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  場合は、同じトリガーを 1 つ以上のステートメントの種類に対する最初または最順序として指定する必要があります**sp_settriggerorder**ステートメントの種類ごとに実行する必要があります。 、トリガーする必要があります最初のも定義するステートメントの種類として指定できる前に、**最初**または**最後**トリガーをそのステートメントの種類を起動します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバー スコープ (ON ALL SERVER で作成) で定義されている DDL トリガーまたはログオン トリガーの順序を設定するには、CONTROL SERVER 権限が必要です。  
   
  データベース スコープ (ON DATABASE で作成) で DDL トリガーの順序を設定するには、ALTER ANY DATABASE DDL TRIGGER 権限が必要です。  

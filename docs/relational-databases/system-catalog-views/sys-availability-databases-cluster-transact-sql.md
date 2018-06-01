@@ -28,10 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b0c0cd91b58c4e59cba2440d8f02cd01a93c870
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33179188"
 ---
 # <a name="sysavailabilitydatabasescluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]  
 >  データベースを可用性グループに追加すると、プライマリ データベースは自動的にそのグループに参加します。 セカンダリ データベースを可用性グループに参加させるには、各セカンダリ レプリカでそのデータベースを準備する必要があります。   
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|データベースが参加している可用性グループ (存在する場合) の一意の識別子。<br /><br /> NULL = データベースは可用性グループの可用性レプリカの一部ではありません。|  
 |**group_database_id**|**uniqueidentifier**|データベースが参加している可用性グループ (存在する場合) 内のデータベースの一意の識別子。 **group_database_id**をデータベースが参加している可用性グループにすべてのセカンダリ レプリカとプライマリ レプリカでは、このデータベースに対して同じです。<br /><br /> NULL = データベースは、どの可用性グループの可用性レプリカの一部でもありません。|  
 |**database_name**|**sysname**|可用性グループに追加されたデータベースの名前。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  場合、呼び出し元の**sys.availability_databases_cluster**データベース、ALTER ANY DATABASE、対応する行を確認するために必要な最低限の権限または VIEW ANY DATABASE のサーバー レベルの権限、または作成の所有者ではありませんDATABASE の権限、**マスター**データベース。  
   
 ## <a name="see-also"></a>参照  

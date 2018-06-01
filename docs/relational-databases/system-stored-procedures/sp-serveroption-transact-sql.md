@@ -24,10 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 99f936f0a8d127dd33ebce8b86c0a958cafccf66
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33260948"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ sp_serveroption [@server = ] 'server'
  [  **@optname =** ] **'***option_name***'**  
  指定したサーバーに設定するオプションです。 *option_name*は**varchar (** 35 **)**、既定値はありません。 *option_name*値は次のいずれかを指定できます。  
   
-|値|Description|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**互換性のある照合順序**|リンク サーバーに対する分散クエリの実行に影響を与えます。 このオプションが設定されている場合**true**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リンク サーバー内のすべての文字に文字セットと照合順序 (並べ替え順) に関して、ローカル サーバーと互換性があることを前提としています。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からプロバイダーに文字を含む列の比較を送信できるようになります。 このオプションが設定されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では文字列を含む列の比較の評価は常にローカルで行われます。<br /><br /> このオプションは、リンク サーバーに対応するデータ ソースがローカル サーバーと同じ文字セットと並べ替え順を持っていることが確認できている場合のみ設定します。|  
 |**照合順序名**|場合に、リモート データ ソースによって使用される照合順序の名前を指定**リモート照合順序を使用して**は**true**データ ソースがないと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソース。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がサポートしている照合順序名のいずれかを指定する必要があります。<br /><br /> このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外の OLE DB データ ソースにアクセスし、その照合順序が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序のいずれかと一致する場合に使用します。<br /><br /> リンク サーバーは、そのサーバー内のすべての列で使用される単一の照合順序をサポートしている必要があります。 リンク サーバーが、単一のデータ ソース内で複数の照合順序をサポートしている、またはリンク サーバーの照合順序が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序のいずれかと一致するかどうかが判断できない場合は、このオプションを設定しないでください。|  
@@ -77,10 +78,10 @@ sp_serveroption [@server = ] 'server'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  場合、**照合順序互換**オプションが TRUE に設定されている**照合順序名**自動的に NULL に設定されます。 場合**照合順序名**null 以外の値に設定されている**照合順序互換**自動的に FALSE に設定されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER ANY LINKED SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -96,7 +97,7 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
  [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
- [sp_helpserver & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

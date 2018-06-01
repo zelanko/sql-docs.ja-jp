@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-catalog-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,18 +24,19 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 00f1d8a5c53ee40e7b3d51fe13a5d0a188c66720
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 90fbd2b92ccfcf01da2c2742a3b5a083f30f1e03
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221953"
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XML スキーマのコンポーネントごとに 1 行のデータを返します。 ペア (**collection_id**、 **namespace_id**) が含まれる名前空間に対する複合外部キーです。 名前付きコンポーネントの値は、 **symbol_space**、**名前**、 **scoping_xml_component_id**、 **is_qualified**、 **xml_namespace_id**、 **xml_collection_id**は一意です。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|データベース内の XML スキーマ コンポーネントの一意の ID。|  
 |**xml_collection_id**|**int**|コンポーネントの名前空間を含む XML スキーマ コレクションの ID。|  
@@ -53,8 +52,8 @@ ms.lasthandoff: 05/03/2018
 |**base_xml_component_id**|**int**|コンポーネントの派生元となるコンポーネントの ID。 存在しない場合は NULL です。|  
 |**scoping_xml_component_id**|**int**|スコープを決定するコンポーネントの一意の ID。 存在しない場合は NULL です (グローバル スコープ)。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

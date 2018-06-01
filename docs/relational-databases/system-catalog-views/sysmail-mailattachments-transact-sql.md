@@ -23,17 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36c5433f51191004a994b1afb3486db89a317acb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33220693"
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   データベース メールに送信された添付ファイルごとに 1 行のデータを格納します。 データベース メールの添付ファイルに関する情報を確認するには、このビューを使用します。 データベース メールを使用するによって処理されるすべての電子メールを確認する[sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)です。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|添付ファイルの識別子。|  
 |**mailitem_id**|**int**|添付ファイルが含まれていたメール アイテムの識別子。|  
@@ -43,12 +44,12 @@ ms.lasthandoff: 05/04/2018
 |**last_mod_date**|**datetime**|行が最後に変更された日時。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データベース メールのトラブルシューティングでは、このビューを使用して、添付ファイルのプロパティを確認できます。  
   
  添付ファイル、システム テーブルに格納されている可能性があります、 **msdb**データベースを拡張します。 使用して**sysmail_delete_mailitems_sp**メール アイテムとその関連する添付ファイルを削除します。 詳細については、次を参照してください。[アーカイブ データベース メール メッセージおよびイベント ログには、SQL Server エージェント ジョブを作成する](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)です。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  与え、 **sysadmin**固定サーバー ロールおよび**DatabaseMailUserRole**データベース ロール。 メンバーによって実行されると、 **sysadmin**固定サーバー ロール、このビューはすべての添付ファイルを表示します。 その他のユーザーの場合は、自分が送信したメッセージの添付ファイルだけを確認できます。  
   
 ## <a name="see-also"></a>参照  

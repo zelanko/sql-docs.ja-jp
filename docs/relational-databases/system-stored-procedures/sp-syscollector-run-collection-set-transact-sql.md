@@ -24,10 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 599cc4a9f8603b8248c7241cbb2ba68055e6fb55
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33260165"
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,14 +60,14 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  いずれか*collection_set_id*または*名前*必要があります値を持つ、どちらも NULL をすることはできません。  
   
  この手順は、コレクションを開始し、アップロード ジョブを指定されたコレクション セットおよびコレクション セットがある場合に、コレクション エージェント ジョブをすぐに開始されます、 **@collection_mode**非キャッシュ (1) に設定します。 詳細については、「 [sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)です。  
   
  sp_sycollector_run_collection_set は、スケジュールを持たないコレクション セットの実行にも使用できます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  メンバーシップが必要、 **dc_operator** (EXECUTE 権限) を持つ固定データベース ロールにこのプロシージャを実行します。  
   
 ## <a name="example"></a>例  
@@ -80,6 +81,6 @@ EXEC sp_syscollector_run_collection_set @collection_set_id = 1;
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データ コレクション](../../relational-databases/data-collection/data-collection.md)  
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fb74ca331e580ffa71111f987bf3a93450f2b56
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33178338"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>スキーマ カタログ ビュー - sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,16 +40,16 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]  
 >  データベース スキーマは、XML ドキュメントのコンテンツ モデルの定義に使用される XML スキーマとは異なります。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|スキーマの名前です。 データベース内で一意です。|  
 |**schema_id**|**int**|スキーマの ID です。 データベース内で一意です。|  
 |**principal_id**|**int**|このスキーマを所有するプリンシパルの ID です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データベース スキーマの名前空間または含まれているテーブル、ビュー、プロシージャ、関数などのオブジェクトのコンテナーとして機能しません、 **sys.objects**カタログ ビューです。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

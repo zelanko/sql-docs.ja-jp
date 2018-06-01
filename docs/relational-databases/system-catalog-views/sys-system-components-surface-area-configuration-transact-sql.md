@@ -25,28 +25,29 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 9612341074b70b688d7333c95ebce3acc0ea1706
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33220893"
 ---
 # <a name="syssystemcomponentssurfaceareaconfiguration-transact-sql"></a>sys.system_components_surface_area_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   セキュリティ構成コンポーネントによって有効または無効にできる、実行可能なシステム オブジェクトごとに 1 行のデータを返します。 詳細については、「 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)」を参照してください。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**component_name**|**sysname**|コンポーネントの名前。 キーワード照合順序 Latin1_General_CI_AS_KS_WS が使用されます。 NULL 値は許容されません。|  
 |**database_name**|**sysname**|オブジェクトを含むデータベース。 キーワード照合順序 Latin1_General_CI_AS_KS_WS が使用されます。 次のいずれかを指定する必要があります。<br /><br /> **master**<br /><br /> **msdb**<br /><br /> **mssqlsystemresource**|  
 |**schema_name**|**sysname**|オブジェクトを含むスキーマ。 キーワード照合順序 Latin1_General_CI_AS_KS_WS が使用されます。 NULL 値は許容されません。|  
 |**object_name**|**sysname**|オブジェクトの名前。 キーワード照合順序 Latin1_General_CI_AS_KS_WS が使用されます。 NULL 値は許容されません。|  
-|**状態**|**tinyint**|0 = 無効<br /><br /> 1 = 有効|  
+|**state**|**tinyint**|0 = 無効<br /><br /> 1 = 有効|  
 |**type**|**char(2)**|オブジェクトの種類です。 次のいずれかになります。<br /><br /> P = SQL_STORED_PROCEDURE<br /><br /> PC = CLR_STORED_PROCEDURE<br /><br /> FN = SQL_SCALAR_FUNCTION<br /><br /> FS = CLR_SCALAR_FUNCTION<br /><br /> FT = CLR_TABLE_VALUED_FUNCTION<br /><br /> IF = SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> TF = SQL_TABLE_VALUED_FUNCTION<br /><br /> X = EXTENDED_STORED_PROCEDURE|  
 |**type_desc**|**nvarchar(60)**|オブジェクトの種類の表示名の説明。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

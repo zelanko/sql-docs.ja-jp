@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d91ef10c7f1e98c4ad65d014f90fc42b0317ec5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33252461"
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +54,10 @@ sp_resync_targetserver
 ## <a name="result-sets"></a>結果セット  
  結果を報告**sp_post_msx_operation**アクション。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_resync_targetserver**については、対象サーバーの現在のセットを削除し、ダウンロードする対象サーバーの新しいセットが通知されます。 新しいセットは、すべてのマルチサーバー ジョブを削除する命令が 1 つと、サーバーで対象になっている各ジョブのエージェントで構成されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  

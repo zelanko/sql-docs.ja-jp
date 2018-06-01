@@ -19,17 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 06f71aedda72735652da9ee353dcd62e5c24b48c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33181318"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   現在のデータベース内の各外部テーブルの行が含まれています。  
   
-|列名|データ型|Description|範囲|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |\<継承された列 >||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)です。||  
 |max_column_id_used|**int**|列の最大の ID がこのテーブルを使用することです。||  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 |remote_schema_name|**sysname**|SHARD_MAP_MANAGER 外部データ ソース経由で外部テーブルの場合 (外部のテーブルが定義されているスキーマとは異なる) 場合は、リモート データベースでベース テーブルの場所のスキーマです。||  
 |remote_object_name|**sysname**|SHARD_MAP_MANAGER 外部データ ソース経由で外部テーブルは、これは (外部テーブルの名前と異なる) 場合は、リモート データベースでベース テーブルの名前です。||  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

@@ -30,19 +30,20 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221133"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   データベース内には、セキュリティ ポリシーごとに行を返します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|セキュリティ ポリシーの名前。データベース内で一意です。|  
+|NAME|**sysname**|セキュリティ ポリシーの名前。データベース内で一意です。|  
 |object_id|**int**|セキュリティ ポリシーの ID。|  
 |principal_id|**int**|データベースに登録したセキュリティ ポリシーの所有者の ID。 スキーマを使用して所有者が特定された場合は NULL です。|  
 |schema_id|**int**|オブジェクトが存在するスキーマの ID。|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/04/2018
 |uses_database_collation|**bit**|データベースと同じ照合順序を使用します。|  
 |is_schemabinding_enabled|**bit**|セキュリティ ポリシーの Schemabinding の状態:<br /><br /> 0 または NULL = 有効になっています。<br /><br /> 1 = 無効|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  持つプリンシパル、 **ALTER ANY SECURITY POLICY**権限は、このカタログ ビューだけでなくすべてのユーザーとすべてのオブジェクトにアクセス権を持つ**VIEW DEFINITION**オブジェクト。  
   
 ## <a name="see-also"></a>参照  

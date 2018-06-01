@@ -25,10 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 1c04be5f76337422601486d08ff41316c7c98192
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221293"
 ---
 # <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,14 +37,14 @@ ms.lasthandoff: 05/04/2018
   システム内の各 TCP エンドポイントごとに 1 行のデータを保持します。 によって記述されるエンドポイント**sys.tcp_endpoints**を許可して、接続権限を取り消すオブジェクトを提供します。 ポートおよび IP アドレスに関して表示される情報は、プロトコルの構成に使用されるものではなく、実際のプロトコルの構成と一致しない場合もあります。 表示をプロトコルの構成は、次のように使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager です。  
   
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**< 継承された列 >**||列を継承[sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)です。|  
-|**port**|int|エンドポイントがリッスンするポート番号です。 NULL 値は許可されません。|  
+|**port**|ssNoversion|エンドポイントがリッスンするポート番号です。 NULL 値は許可されません。|  
 |**is_dynamic_port**|bit|1 = ポート番号が動的に割り当てられました。<br /><br /> NULL 値は許可されません。|  
 |**ip_address**|**nvarchar(45)**|LISTENER_IP 句で指定されたリスナーの IP アドレスです。 NULL 値が許可されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  次のクエリを実行して、エンドポイントおよび接続に関する情報を収集します。 現在の接続または TCP 接続を使用しないエンドポイントは、NULL 値と共に表示されます。 追加、**場所**句`WHERE des.session_id = @@SPID`現在の接続に関する情報を返します。  
   
 ```  
@@ -59,8 +60,8 @@ LEFT JOIN sys.dm_exec_connections AS dec
    ON des.session_id = dec.session_id;  
 ```  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

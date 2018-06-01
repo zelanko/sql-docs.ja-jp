@@ -28,10 +28,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 090ec967e25fff1fac3761298214e0366c0f2478
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33180258"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,19 +41,19 @@ ms.lasthandoff: 05/04/2018
   
  `sys.firewall_rules`ビューには、次の列が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |id|**INT**|サーバー レベルのファイアウォール設定の識別子。|  
-|name|**NVARCHAR (128)**|サーバー レベルのファイアウォール設定を説明し、区別するために選択した名前。|  
+|NAME|**NVARCHAR (128)**|サーバー レベルのファイアウォール設定を説明し、区別するために選択した名前。|  
 |start_ip_address|**VARCHAR (50)**|サーバー レベルのファイアウォール設定の範囲において最も小さい IP アドレス。 IP アドレスと等しいかそれ以上を指定するとこれに接続しようとしてできます、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバー。 最下位の IP アドレスは`0.0.0.0`します。|  
 |end_ip_address|**VARCHAR (50)**|サーバー レベルのファイアウォール設定の範囲において最も大きい IP アドレス。 これ以下の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試みることができます。 最上位の IP アドレスは`255.255.255.255`します。<br /><br /> 注: Windows Azure の接続試行ときに許可されますこの両方のフィールドと**start_ip_address** equals をフィールド`0.0.0.0`です。|  
 |create_date|**DATETIME**|サーバー レベルのファイアウォール設定が作成された UTC 日時。<br /><br /> メモ: UTC は、世界協定時刻の頭字語です。|  
 |modify_date|**DATETIME**|サーバー レベルのファイアウォール設定が最後に変更された UTC 日時。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データベースのファイアウォール ルールを削除する使用[sp_delete_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)です。 1 つのデータベース用のファイアウォール ルールを設定するを参照してください。 [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)です。 既存のファイアウォール規則の情報を返すには、するには、sys.firewall_rules (Azure SQL データベース) をクエリします。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  このビューに読み取り専用のアクセスに接続する権限を持つすべてのユーザーには、**マスター**データベース。  
   
 ## <a name="see-also"></a>参照  

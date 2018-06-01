@@ -26,25 +26,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: be1c29322063c33797ff56451b55c619fd07db82
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33178248"
 ---
 # <a name="sysbackupdevices-transact-sql"></a>sys.backup_devices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   使用して登録されている各バックアップ デバイスの行を格納**sp_addumpdevice**またはで作成された[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|バックアップ デバイスの名前。 セット内で一意です。|  
 |**type**|**tinyint**|バックアップ デバイスの種類。<br /><br /> 2 = ディスク<br /><br /> 3 = フロッピー ディスク (廃止)<br /><br /> 5 = テープ<br /><br /> 6 = パイプ (廃止)<br /><br /> 7 = 仮想デバイス (サード パーティ バックアップ ベンダーがオプションで使用)<br /><br /> 通常は、ディスク (2) またはテープ (5) のみが使用されます。|  
 |**type_desc**|**nvarchar(60)**|バックアップ デバイスの種類の説明。<br /><br /> DISK<br /><br /> DISKETTE (廃止)<br /><br /> TAPE<br /><br /> PIPE (廃止)<br /><br /> VIRTUAL_DEVICE (サード パーティ バックアップ ベンダーがオプションで使用)<br /><br /> 通常は、DISK および TAPE のみが使用されます。|  
 |**physical_name**|**nvarchar(260)**|バックアップ デバイスの物理的なファイル名またはパス。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

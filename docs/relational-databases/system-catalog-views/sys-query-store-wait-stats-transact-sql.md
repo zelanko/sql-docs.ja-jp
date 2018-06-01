@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 04/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: system-catalog-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,18 +24,19 @@ author: AndrejsAnt
 ms.author: AndrejsAnt
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b7d4ecd866b841e71966f07c23f51ec6ff93c3a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: d4a7afdca88de97188577e726d203040e33c8c71
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33182018"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   クエリの待機情報についてを説明します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Plan_id、runtime_stats_interval_id、execution_type および wait_category の待機統計を表す行の識別子です。 これは、ランタイム統計情報の過去の時間間隔に対してのみ一意です。 現在アクティブな間隔の execution_type および wait_category によって表される待機のカテゴリによって表される実行の種類と plan_id、によって参照されるプランの待機統計を表す複数の行があります。 通常、1 つの行がフラッシュ待機の統計を表すその他の (s) がメモリ内状態を表すに対し、ディスクにします。 そのため、すべての間隔の実際の状態を取得する必要が集計されたメトリック、plan_id、runtime_stats_interval_id、execution_type および wait_category によるグループ化します。 |  
 |**plan_id**|**bigint**|外部キーです。 結合[sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)です。|  
@@ -86,7 +85,7 @@ ms.lasthandoff: 05/03/2018
 ***コンパイル**待機のカテゴリは現在サポートされていません。 
 
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  必要があります、 **VIEW DATABASE STATE**権限です。  
   
 ## <a name="see-also"></a>参照  

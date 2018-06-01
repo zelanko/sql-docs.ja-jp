@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b9615c833939c18b3653fa4035258b91bb5bdfc8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33253265"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,17 +56,17 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**リンク サーバー**|**sysname**|リンク サーバー名。|  
 |**ローカル ログイン**|**sysname**|マッピングが適用されているローカル ログイン。|  
 |**自己マッピング**|**smallint**|0 =**ローカル ログイン**にマップされて**リモート ログイン**への接続時**リンク サーバー**です。<br /><br /> 1 =**ローカル ログイン**に接続する場合は、同じログインとパスワードにマップ**リンク サーバー**です。|  
 |**リモート ログイン**|**sysname**|上のログイン名**LinkedServer**にマップされている**LocalLogin**とき**IsSelfMapping**は 0 です。 場合**IsSelfMapping** 1 に設定されて**RemoteLogin**は NULL です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ログインのマッピングを削除する前に使用して**sp_helplinkedsrvlogin**含まれているリンク サーバーを決定します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  権限は確認されません。  
   
 ## <a name="examples"></a>使用例  

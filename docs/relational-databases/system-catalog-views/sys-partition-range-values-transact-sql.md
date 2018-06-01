@@ -26,24 +26,25 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 35e2b56ec8338a45defd87b136db91712ef29e5d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33179568"
 ---
 # <a name="syspartitionrangevalues-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   タイプ R のパーティション関数の範囲境界値ごとに 1 行のデータを保持します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|この範囲境界値のパーティション関数の ID です。|  
 |**boundary_id**|**int**|左端の境界が ID 1 で始まる境界値の組の ID (1 から始まる序数) です。|  
 |**parameter_id**|**int**|この値が対応する関数のパラメーターの ID です。 この列の値でそれらに対応して、 **parameter_id**の列、 **sys.partition_parameters**カタログ ビューの特定の**function_id**です。|  
 |**value**|**sql_variant**|実際の境界値です。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

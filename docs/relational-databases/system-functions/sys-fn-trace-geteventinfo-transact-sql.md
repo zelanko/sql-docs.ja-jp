@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01f822b83a92812367e9e4dc481395c255f079a4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 3c67450da61537edbf8164e343be2f279aa6ac44
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33234508"
 ---
 # <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,15 +55,15 @@ fn_trace_geteventinfo ( trace_id )
   
 ## <a name="tables-returned"></a>返されたテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**eventid**|**int**|トレースされるイベントの ID です。|  
 |**columnid**|**int**|各イベントに対して収集されるすべての列の ID 番号です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  特定のトレースの ID が渡されたときに**fn_trace_geteventinfo**そのトレースに関する情報を返します。 無効な ID が渡された場合、空の行セットが返されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーの ALTER TRACE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
