@@ -38,9 +38,9 @@ ms.locfileid: "33181318"
 |data_source_id|**int**|外部データ ソースのオブジェクト ID。||  
 |file_format_id|**int**|HADOOP の外部データ ソース経由で外部テーブルは、これは、外部ファイル形式のオブジェクトの ID です。||  
 |location|**nvarchar (4000)**|HADOOP の外部データ ソース経由で外部テーブルは、これは、HDFS の外部データのパスです。||  
-|reject_type|**tinyint**|HADOOP の外部データ ソース経由で外部テーブルは、これは、外部データを照会するときに、拒否された行はカウント方法です。|値 – 拒否された行の数。<br /><br /> パーセント – 拒否された行の割合。|  
-|reject_value|**float**|HADOOP の外部データ ソース経由で外部テーブルの。<br /><br /> *Reject_type =* 値で、これは、クエリが失敗するまでに許可する行の拒否された回数。<br /><br /> *Reject_type* = 割合、これは、クエリが失敗するまでに許可する行の却下のパーセンテージです。||  
-|reject_sample_value|**int**|*Reject_type* = 割合、これは、読み込むには、成功と失敗、拒否された行の比率を計算する前に行の数。|場合は NULL reject_type = 値です。|  
+|reject_type|**tinyint**|HADOOP の外部データ ソース経由で外部テーブルは、これは、外部データを照会するときに、拒否された行はカウント方法です。|VALUE – 拒否された行の数。<br /><br /> PERCENTAGE – 拒否された行の割合。|  
+|reject_value|**float**|HADOOP の外部データ ソース経由で外部テーブルの。<br /><br /> *Reject_type =* valueで、これは、クエリが失敗するまでに許可する行の拒否された回数。<br /><br /> *Reject_type* = percentage、これは、クエリが失敗するまでに許可する行の却下のパーセンテージです。||  
+|reject_sample_value|**int**|*Reject_type* = percentage、これは、読み込むには、成功と失敗、拒否された行の比率を計算する前に行の数。|reject_type = value の場合は NULL です。|  
 |distribution_type|**int**|SHARD_MAP_MANAGER 外部データ ソース経由で外部テーブルは、これは、行のデータの分布、基になるベース テーブルの間でです。|0 – Sharded<br /><br /> 1 – レプリケート<br /><br /> 2 – ラウンド ロビン|  
 |distribution_desc|**nvarchar(120)**|SHARD_MAP_MANAGER 外部データ ソース経由で外部テーブルの場合は、この配布種類を文字列として表示されます。||  
 |sharding_column_id|**int**|SHARD_MAP_MANAGER 外部データ ソースと sharded ディストリビューション経由で外部テーブルは、これは、シャーディング キー値を含んでいる列の列の ID です。||  
