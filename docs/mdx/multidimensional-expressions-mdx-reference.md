@@ -1,35 +1,20 @@
 ---
 title: 多次元式 (MDX) リファレンス |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- sql13.asvs.sqlserverstudio.startpage.mdx.f1
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services]
-- MDX [Analysis Services], reference
-- data access [MDX]
-- MDX [Analysis Services]
-- Analysis Services Multidimensional Expressions
-ms.assetid: 7e1cb1fb-2a50-41c2-9c70-b853ad6b6c3f
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 67d9070f5a2aa758da526f40e3d969d206c380e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: cf65a3a743655e71dc2cb13d7dbc7038a7c596ad
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580094"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>多次元式 (MDX) リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,10 +22,10 @@ ms.lasthandoff: 05/03/2018
     
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[MDX 構文の要素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|MDX 式、ステートメント、およびスクリプトで使用可能な MDX 言語のさまざまな構文要素について説明します。|  
-|[MDX 言語リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-language-reference-mdx.md)|MDX 言語を定義するステートメント、演算子、および関数について説明します。|  
+|[MDX 言語リファレンス&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|MDX 言語を定義するステートメント、演算子、および関数について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [MDX による多次元データのクエリを実行します。](../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)   

@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: af8c03d33fe0e0b42fe09fbe1b900166d50e25cd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ccdccaf4a3624bef365cec85e452a88526b9fd6b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585934"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell (チュートリアル) を使用してデータを準備します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/16/2018
 
 ### <a name="install-required-packages-on-the-server"></a>必要なパッケージをサーバーにインストールする
 
-SQL Server にパッケージをインストールできるように、さまざまな方法があります。 たとえば、SQL Server の提供、[パッケージの管理](../r/installing-and-managing-r-packages.md)により、データベース管理者はパッケージ リポジトリを作成し、ユーザーが独自のパッケージをインストールする権限を割り当てる機能。 ただし、コンピューターの管理者がいる場合、適切なライブラリをインストールする場合に限り、R を使用して新しいパッケージをインストールできます。
+SQL Server にパッケージをインストールできるように、さまざまな方法があります。 たとえば、SQL Server が提供[R パッケージの管理](../r/install-additional-r-packages-on-sql-server.md)により、データベース管理者はパッケージ リポジトリを作成し、ユーザーが独自のパッケージをインストールする権限を割り当てる機能。 ただし、コンピューターの管理者がいる場合、適切なライブラリをインストールする場合に限り、R を使用して新しいパッケージをインストールできます。
 
 > [!NOTE]
 > サーバーで、**しない**要求される場合でも、ユーザー ライブラリをインストールします。 ユーザーのライブラリをインストールする場合、SQL Server インスタンスが見つからないか、パッケージの実行。 詳細については、「 [Installing New R Packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md)」(SQL Server に新しい R パッケージをインストールする) を参照してください。
@@ -162,7 +163,7 @@ Plug in the database server name, database name, user name and password into the
 This step (plugging in database information) takes 0.48 seconds.
 ```
 
-次のレッスンにジャンプするには、このリンクをクリックします[ビューおよび SQL を使用して、データの探索。](/walkthrough-view-and-explore-the-data.md)
+次のレッスンにジャンプするには、このリンクをクリックします[ビューおよび SQL を使用して、データの探索。](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="bkmk_Troubleshooting"></a>トラブルシューティング
 
@@ -170,7 +171,7 @@ PowerShell スクリプトで問題があれば、ことができますすべて
 
 ### <a name="powershell-script-didnt-download-the-data"></a>PowerShell スクリプトを実行してもデータをダウンロードできない
 
-手動でデータをダウンロードするには、次のリンクを右クリックし、 **[対象をファイルに保存]**を選択します。
+手動でデータをダウンロードするには、次のリンクを右クリックし、 **[対象をファイルに保存]** を選択します。
 
 [http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
 
@@ -280,7 +281,7 @@ GitHub リポジトリからファイルをダウンロードするときに、�
 
 PowerShell スクリプト実行複数[!INCLUDE[tsql](../../includes/tsql-md.md)]SQL Server インスタンス上でスクリプト。 次の表、[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトとどのように機能します。
 
-|SQL スクリプト ファイル名|Description|
+|SQL スクリプト ファイル名|説明|
 |------------------------|----------------|
 |create-db-tb-upload-data.sql|データベースと 2 つのテーブルを作成します。<br /><br /> *nyctaxi_sample*: トレーニング データ (ニューヨーク市のタクシーのデータ セットの 1% サンプル) を格納するテーブルです。 ストレージとクエリのパフォーマンスを向上させるために、クラスター化列ストア インデックスをテーブルに追加します。<br /><br /> *nyc_taxi_models*: バイナリ形式でトレーニング済みモデルを格納するために使用されるテーブル。|
 |PredictTipBatchMode.sql|トレーニングしたモデルを呼び出し、新しい監視のラベルを予測するストアド プロシージャを作成します。 入力パラメーターとしてクエリを指定できます。|
@@ -296,10 +297,10 @@ PowerShell スクリプト実行複数[!INCLUDE[tsql](../../includes/tsql-md.md)
 
 ## <a name="next-lesson"></a>次のレッスン
 
-[表示して、R と SQL を使用してデータの探索](/walkthrough-view-and-explore-the-data.md)
+[表示して、R と SQL を使用してデータの探索](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="previous-lesson"></a>前のレッスン
 
-[R と SQL Server のエンド ツー エンドのデータ サイエンスのチュートリアル](/walkthrough-data-science-end-to-end-walkthrough.md)
+[R と SQL Server のエンド ツー エンドのデータ サイエンスのチュートリアル](walkthrough-data-science-end-to-end-walkthrough.md)
 
 [データ サイエンスのチュートリアルの前提条件](walkthrough-prerequisites-for-data-science-walkthroughs.md)

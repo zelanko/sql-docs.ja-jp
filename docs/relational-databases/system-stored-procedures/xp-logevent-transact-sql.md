@@ -22,11 +22,12 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 40cc04dc425ac135953dff290df9bf7669cce70f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 251dfca05a27d78618a4f3dbff5cbecd02ee5813
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582034"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,17 +61,17 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
   
  `The command(s) completed successfully.`  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  メッセージを送信する場合[!INCLUDE[tsql](../../includes/tsql-md.md)]プロシージャ、トリガー、バッチ、および、xp_logevent ではなく RAISERROR ステートメントを使用します。 xp_logevent は、クライアントのメッセージ ハンドラーの呼び設定したりしないで@ERRORです。 Windows イベント ビューアーにされ、メッセージを書き込むため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス内のエラー ログ ファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、RAISERROR ステートメントを実行します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  master データベースの db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、メッセージおよびメッセージに渡された変数が、Windows イベント ビューアーに記録されます。  
   
 ```  
-DECLARE @@TABNAME varchar(30, @@USERNAME varchar(30),DECLARE @@MESSAGE varchar(255);  
+DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30),DECLARE @@MESSAGE varchar(255);  
 SET @@TABNAME = 'customers';  
 SET @@USERNAME = USER_NAME();  
 SELECT @@MESSAGE = 'The table ' + @@TABNAME + ' is not owned by the user   

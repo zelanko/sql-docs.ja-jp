@@ -1,31 +1,20 @@
 ---
 title: Order (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ORDER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Order function
-ms.assetid: 84acff52-2443-4424-a09e-694e6f14c109
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: bfb3e7e9aba3b60df80d599a8f7443b91c7b7b6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ff748fab21311bf7b881bcc4594e3a0dccb5d1b3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581044"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +45,7 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  有効な文字列式です。通常は、文字列として表された数値を返すセル座標の有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **順序**関数は階層型にするか、(を使用して指定されたとおり、 **ASC**または**DESC**フラグ) または非階層型 (を使用して指定されたとおり、 **BASC**または**BDESC**フラグ;、 **B** 「break 階層」の略)。 場合**ASC**または**DESC**を指定すると、**順序**関数、階層内の位置に基づいてメンバーが整列され、各レベル。 場合**BASC**または**BDESC**を指定すると、**順序**階層を無視してセット内のメンバーが整列します。 フラグが指定しない、 **ASC**既定値です。  
   
  場合、**順序**関数は 2 つ以上の階層が、クロス結合はセットで使用され、 **DESC**フラグを使用すると、セット内の最後の階層のメンバーのみの順序。 この点が Analysis Services 2000 とは異なります。Analysis Services 2000 では、セットのすべての階層が並べ替えられます。  
@@ -223,6 +212,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

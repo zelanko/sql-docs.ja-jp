@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6af1143891fff7bc5ddc8fd25d4908fae5246bba
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ba73a6ea5926de6f445c5ca5cec8142b3e196bd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576274"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Cell 要素 (MDDataSet) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,11 +50,11 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>属性  
   
-|属性|Description|  
+|属性|説明|  
 |---------------|-----------------|  
 |CellOrdinal|必要な**unsignedInt**属性。 多次元データセット内におけるセルの位置を表す序数です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  親の**ルート**要素、**軸**要素が続く、 **CellData**要素では、一連の**セル**を含む要素多次元データセットで返される各セルのプロパティ値。 **セル**要素が含まれています、 **CellOrdinal**属性は、多次元データセット、およびセル プロパティの値ごとに 1 つの要素内のセルの 0 から始まる序数位置を示しますセルに関連付けられています。 各セル プロパティの値を**セル**要素が、個別の XML 要素によって定義されています。 セル プロパティの値は、XML 要素、およびセル プロパティの名前に含まれるデータで定義されて、 **CellInfo**親ルート要素の要素は XML 要素の名前に対応します。  
   
  セル プロパティ値の構文は次のとおりです。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/10/2018
  セル プロパティ値のデータ型は、VALUE セル プロパティについてのみ指定できます。 その他のセル プロパティのデータ型に含まれるセル プロパティ定義で決まります、 **CellInfo**要素。 既定値が指定されている場合は、セル プロパティ値の要素を除外することができます (を含めることによって、**既定**要素に含まれるセル プロパティ定義を**CellInfo**要素) のセル プロパティ既定値が指定されていないと、セル プロパティの値が null 場合またはします。  
   
 ## <a name="cell-property-errors"></a>セル プロパティのエラー  
- インスタンス上で発生するエラーのためにセル プロパティを返すことはできない場合[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、値が指定されたセルの返されることを防止する計算エラーなど、**エラー**要素には、該当するセル プロパティの内容が置き換えられます。 次の XML の例は、セル プロパティのエラーを示しています。  
+ 場合は、値が指定されたセルの返されることを防止する計算エラーなど、Analysis Services のインスタンス上で発生するエラーのためにセル プロパティを返すことはできません、**エラー**要素の内容に置き換えられます、該当するセル プロパティです。 次の XML の例は、セル プロパティのエラーを示しています。  
   
 ```  
 <Cell CellOrdinal="0">  
@@ -125,8 +126,8 @@ ms.lasthandoff: 05/10/2018
 </CellData>  
 ```  
   
-## <a name="see-also"></a>参照  
- [MDDataSet データ型 & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [MDDataSet データ型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

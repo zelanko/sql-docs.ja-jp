@@ -1,31 +1,20 @@
 ---
 title: Intersect (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- INTERSECT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Intersect function
-ms.assetid: 0de8fbb4-e2db-480c-86f1-2abbbcfdb1d8
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 9e308a9b4a01b7f70562c9c69b4d353a4e4d9198
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7acc509891dd1c975ad819bd904e840e369f0d4b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578524"
 ---
 # <a name="intersect-mdx"></a>Intersect (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  *Set_Expression2*  
  セットを返す有効な多次元式 (MDX) です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Intersect**関数は、2 つのセットの積集合を返します。 既定では、両方のセットの重複部分を削除してから積集合を取得します。 指定された 2 つのセットの次元は同一である必要があります。  
   
  省略可能な**すべて**フラグは、重複部分を保持します。 場合**すべて**を指定すると、 **Intersect**関数が通常どおり、積の要素と交差して、2 番目のセットで一致する複製されている最初のセット内の重複は各交差しています。 指定された 2 つのセットの次元は同一である必要があります。  
@@ -85,6 +74,6 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  `[Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,31 +1,20 @@
 ---
 title: MDX の予約語 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- reserved words [MDX]
-- Multidimensional Expressions [Analysis Services], reserved words
-- MDX [Analysis Services], reserved words
-ms.assetid: 8d059a8c-d578-4713-a615-2404d94ce32d
-caps.latest.revision: 26
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6146638812b42553aceee2819d9ceb6d86cd898f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 18ca96f8788d8ecb9b8567af30ec67570e2b4dae
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579804"
 ---
 # <a name="mdx-reserved-words"></a>MDX の予約語
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 |BASC|DROP|MEMBERTOSTR|STRTOVAL|  
 |BDESC|EMPTY|[MIN]|STRTOVALUE|  
 |BEFORE|END|MTD|SUBSET|  
-|BEFORE_AND_AFTER|ERROR|NAME|[SUM]|  
+|BEFORE_AND_AFTER|[error]|NAME|[SUM]|  
 |BOTTOMCOUNT|EXCEPT|NAMETOSET|TAIL|  
 |BOTTOMPERCENT|EXCLUDEEMPTY|NEST|THIS|  
 |BOTTOMSUM|EXTRACT|NEXTMEMBER|TOGGLEDRILLSTATE|  
@@ -64,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 |CALCULATIONPASSVALUE|FREEZE|NULL|TRUE|  
 |CALCULATIONS|FROM|ON|TUPLETOSTR|  
 |CALL|GENERATE|OPENINGPERIOD|TYPE|  
-|CELL|GLOBAL|または|UNION|  
+|CELL|GLOBAL|スイッチまたは|UNION|  
 |CELLFORMULASETLIST|GROUP|PAGES|UNIQUE|  
 |CHAPTERS|GROUPING|PARALLELPERIOD|UNIQUENAME|  
 |CHILDREN|HEAD|PARENT|UPDATE|  
@@ -74,7 +63,7 @@ ms.lasthandoff: 05/03/2018
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|[COUNT]|INDEX|PROPERTY|VALUE|  
+|[COUNT]|INDEX|PROPERTY|Value|  
 |COUSIN|INTERSECT|QTD|[VAR]|  
 |COVARIANCE|IS|RANK|VARIANCE|  
 |COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
@@ -91,6 +80,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>参照  
  [予約済みキーワード&#40;MDX 構文&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [MDX 言語リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 言語リファレンス&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

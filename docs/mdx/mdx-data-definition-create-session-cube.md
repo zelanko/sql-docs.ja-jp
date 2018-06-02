@@ -1,38 +1,20 @@
 ---
 title: CREATE SESSION CUBE ステートメント (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_SESSION_CUBE
-- SESSION
-- CUBE
-- SESSION CUBE
-- CREATE SESSION CUBE
-- CREATE SESSION
-- CREATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CREATE SESSION CUBE
-- statements [MDX], CREATE SESSION CUBE
-ms.assetid: 06b90f44-d943-4a52-b0d8-4bcbc57ed6ec
-caps.latest.revision: 17
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 5f49f41f4a346d7a30bdfd8d95e1df5c0f2c0eb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 12a450b8184f7a1d6ef8b6068d73f99e17063c5d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579424"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX データ定義、セッション キューブの作成
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -129,7 +111,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  \<レベルの種類 >  
  派生ディメンションの定義でのみ指定できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  サーバー キューブやローカル キューブと異なり、セッション キューブは、それを作成したセッションの期間を超えて保持されません。 セッション キューブは、それを定義するメジャーおよび定義を使用して定義されます。 ディメンションには次の 2 種類があります。  
   
 -   ソース ディメンション - 1 つ以上のソース キューブの一部であったディメンションです。  

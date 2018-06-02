@@ -3,8 +3,6 @@ title: '方法: SQLSRV ドライバーを使用して出力パラメーターの
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8699d76ace19555c57ff3bcd8992f60a5cef526a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563890"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用して出力パラメーターを取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 SQLSRV_SQLTYPE_VARCHAR('max') などのストリーム型が出力パラメーターとして使用されている場合、データの切り捨てが発生することがあります。 ストリーム型は出力パラメーターとしてサポートされません。 非ストリーム型の場合、出力パラメーターの長さが指定されていないか、または指定された長さが出力パラメーターに十分な大きさでない場合に、データの切り捨てが発生することがあります。  
   
-## <a name="example"></a>例  
+## <a name="example-1"></a>例 1
 次の例では、指定された従業員による年度累計売上を返すストアド プロシージャを呼び出しています。 PHP 変数 *$lastName* は入力パラメーターで、 *$salesYTD* は出力パラメーターです。  
   
 > [!NOTE]  
@@ -125,9 +124,9 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 場合、値がの範囲外に bigint 値を出力パラメーターをバインドするときに、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)、SQLSRV_SQLTYPE_BIGINT として、SQL フィールドの種類を指定する必要があります。 それ以外の場合、「範囲外の値」例外可能性があります。
+> 場合は、値がの範囲外に至る可能性があります、bigint 型出力パラメーターをバインドするときに、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)、SQLSRV_SQLTYPE_BIGINT として、SQL フィールドの種類を指定する必要があります。 それ以外の場合、「範囲外の値」例外可能性があります。
 
-## <a name="example"></a>例  
+## <a name="example-2"></a>例 2
 このコード サンプルでは、出力パラメーターとして大きな bigint 値をバインドする方法を示します。  
 
 ```

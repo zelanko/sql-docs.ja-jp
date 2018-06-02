@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb1a181a73a6e6a2f4998fb12381c522afb4e510
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a795b4cf935f7eae8052c52a3527005f362b533c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573804"
 ---
 # <a name="enumstring-data-type-xmla"></a>EnumString データ型 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/10/2018
   
 |特性|説明|  
 |--------------------|-----------------|  
-|基本データ型|**文字列**|  
+|基本データ型|**string**|  
 |派生データ型|なし|  
   
 ## <a name="data-type-relationships"></a>データ型のリレーションシップ  
@@ -41,12 +42,12 @@ ms.lasthandoff: 05/10/2018
 |子要素|なし|  
 |派生要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  XML for Analysis (XMLA) では、検証可能な設定値のセットに関して文字列値を制限するために列挙を使用します。 **EnumString**標準 XML を使用して**文字列**データ型。 それぞれの名前付き定数の具体的な値は、列挙子定義によって指定されます。 追加することで列挙子が定義されている、 [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)スキーマ行セットを使用して取得できます、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) DISCOVER_ENUMERATORS を持つメソッド要求の種類。  
   
- 次の表のインスタンスでサポートされている列挙子[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+ 次の表では、Analysis Services のインスタンスでサポートされている列挙子について説明します。  
   
-|列挙子|Description|  
+|列挙子|説明|  
 |----------------|-----------------|  
 |ProviderType|内の ProviderType 列をサポートしている、 [DISCOVER_DATASOURCES](../../../analysis-services/schema-rowsets/xml/discover-datasources-rowset.md)スキーマ行セットによって返されるデータの種類を決定する、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。<br /><br /> この列挙体は、XMLA プロパティもサポートしています。 **ProviderType**、でサポートされているプロバイダーの種類を決定する、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。 この列挙は DISCOVER_DATASOURCES スキーマ行セット内でも使用されます。<br /><br /> 詳細については**ProviderType**を参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。|  
 |AuthenticationMode|DISCOVER_DATASOURCES スキーマ行セット内の AuthenticationMode 列をサポートします。これは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスへのアクセス時に渡される必要のあるセキュリティ資格情報を決定します。|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/10/2018
 |ResultsetContents|XMLA プロパティをサポートして**コンテンツ**でのメタデータやデータが返されるかどうかを決定する、**ルート**要素。<br /><br /> 詳細については**コンテンツ**を参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。|  
 |MDXSupportLevel|XMLA プロパティをサポートして**MDXSupport**で利用可能な多次元式 (MDX) サポートのレベルを示す、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。<br /><br /> 詳細については**MDXSupport**を参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
  [XML データ型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

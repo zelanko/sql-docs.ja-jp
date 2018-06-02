@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 598873b186106e39221b446492828f323642c438
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5ae4326e00ba98075a86079157484c5963d0147d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579104"
 ---
 # <a name="members-element-xmla"></a>Members 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,11 +49,11 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>属性  
   
-|属性|Description|  
+|属性|説明|  
 |---------------|-----------------|  
 |階層|必要な**文字列**属性。 格納されているメンバーの階層の名前、**メンバー**要素が属しています。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  クライアント アプリケーションを設定した場合、 **AxisFormat**プロパティを*ClusterFormat*、各軸上のメンバーはこれでは、各クラスターは順序付けされたセットの間のクロス積を表しますクラスターに分割。各階層のメンバーです。 各**軸**要素は、1 つ以上の**CrossProduct**要素。 各**CrossProduct**要素が含まれています、**メンバー**軸上の各階層の要素。 **メンバー**要素がさらに、1 つ**メンバー**クロス積に含まれる指定された階層の各メンバーの要素。  
   
 ## <a name="example"></a>例  
@@ -108,7 +109,7 @@ ms.lasthandoff: 05/10/2018
 </Axes>  
 ```  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

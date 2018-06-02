@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56a3bc495fa6541208a094f82ede9a43b4021c23
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586044"
 ---
 # <a name="r-libraries-and-r-data-types"></a>R ライブラリと R データ型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ SQL Server の特定のインスタンスに関連付けられた R のバージ
 
 Microsoft R Server の特定のバージョンに含まれている R のバージョンを検索するには、次を参照してください。 [R Server の新機能](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages)します。
 
-SQL server パッケージ管理システムでは、複数のユーザー、同じパッケージの共有または同じパッケージの別のバージョンを使用して、R パッケージの複数のバージョンが、同じコンピューターにインストールできますということに注意してください。 詳細については、次を参照してください。 [SQL Server で R パッケージの管理](../r/r-package-management-for-sql-server-r-services.md)です。
+SQL server パッケージ管理システムでは、複数のユーザー、同じパッケージの共有または同じパッケージの別のバージョンを使用して、R パッケージの複数のバージョンが、同じコンピューターにインストールできますということに注意してください。 詳細については、次を参照してください。 [SQL Server で R パッケージの管理](../r/install-additional-r-packages-on-sql-server.md)です。
 
 ## <a name="r-and-sql-data-types"></a>R と SQL データ型
 
@@ -147,8 +148,8 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|@shouldalert|@shouldalert|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|@shouldalert|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 R で `str` 関数を使用すると、出力データのスキーマが取得されます。 この関数からは、次の情報が返されます。
 
@@ -166,7 +167,7 @@ R で `str` 関数を使用すると、出力データのスキーマが取得�
   
 -   **列 C2**。 この列は **ssNoversion** では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R では `factor` 、出力結果セットでは **varchar(max)** と表現されます。  
   
-     出力の変化に注目してください。文字列の長さにかかわらず、R の文字列 (係数または通常の文字列) は **varchar(max)**と表現されます。  
+     出力の変化に注目してください。文字列の長さにかかわらず、R の文字列 (係数または通常の文字列) は **varchar(max)** と表現されます。  
   
 -   **列 C3**。  この列は **ssNoversion** では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R では `character` 、出力結果セットでは **varchar(max)** と表現されます。
   

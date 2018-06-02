@@ -1,31 +1,20 @@
 ---
 title: MDX 演算子リファレンス (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services], operators
-- operators [MDX]
-- MDX [Analysis Services], operators
-ms.assetid: 1cdb8c31-a5f6-4430-b509-f81344f4622a
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 05351149c5c4b7e5b639a1d3c6cb16e9894f181e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 0b0750732af43f1d19922b0259b35d472be57b47
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580604"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 演算子リファレンス (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,9 +23,9 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[--& #40 です。コメント & #41;& #40 です。MDX と #41 です。](../mdx/comment-mdx-operator-reference.md)|ユーザーが指定したコメントのテキストを示します。|  
+|[--&#40;コメント&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|ユーザーが指定したコメントのテキストを示します。|  
 |[-&#40;を除く&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)|2 つのセットの重複メンバーを削除して差集合を返すセット演算を実行します。|  
 |[-&#40;負&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|数値式の負の値を返す単項演算を実行します。|  
 |[-&#40;減算&#41; &#40;MDX&#41;](../mdx/subtract-mdx.md)|1 つの数から別の数を減算する算術演算を実行します。|  
@@ -44,8 +33,8 @@ ms.lasthandoff: 05/03/2018
 |[&#42;&#40;乗算&#41; &#40;MDX&#41;](../mdx/multiply-mdx.md)|2 つの数を乗算する算術演算を実行します。|  
 |[&#40;分割&#41; &#40;MDX&#41;](../mdx/divide-mdx-operator-reference.md)|1 つの数を別の数で除算する算術演算を実行します。|  
 |[^ &#40;Power&#41; &#40;MDX&#41;](../mdx/power-mdx.md)|1 つの数を別の数で累乗する算術演算を実行します。|  
-|[コメント & #40 です。MDX と #41 です。](../mdx/comment-mdx.md)|ユーザーが指定したコメントのテキストを示します。|  
-|[& #40 です。コメント & #41;& #40 です。MDX と #41 です。](../mdx/comment-mdx-double-slash.md)|ユーザーが入力したテキストを示します。|  
+|[コメント&#40;MDX&#41;](../mdx/comment-mdx.md)|ユーザーが指定したコメントのテキストを示します。|  
+|[&#40;コメント&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)|ユーザーが入力したテキストを示します。|  
 |[:&#40;範囲&#41; &#40;MDX&#41;](../mdx/range-mdx.md)|自然な順序で並べたセットを返すセット演算を実行します。指定された 2 つのメンバーが終端になり、その 2 つのメンバーの間にあるすべてのメンバーがセットのメンバーに含まれます。|  
 |[+&#40;追加&#41; &#40;MDX&#41;](../mdx/add-mdx.md)|2 つの数を加算する算術演算を実行します。|  
 |[+&#40;正&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|数値式の正の値を返す単項演算を実行します。|  
@@ -64,6 +53,6 @@ ms.lasthandoff: 05/03/2018
 |[XOR &AMP;#40;MDX&AMP;#41;](../mdx/xor-mdx.md)|2 つの数値式の排他的論理和演算を実行します。|  
   
 ## <a name="see-also"></a>参照  
- [MDX 言語リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 言語リファレンス&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

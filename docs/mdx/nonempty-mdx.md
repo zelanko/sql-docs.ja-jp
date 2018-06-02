@@ -1,29 +1,20 @@
 ---
 title: NonEmpty (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- NonEmpty function
-ms.assetid: dfbfa747-3175-405c-aa5b-15c187b06338
-caps.latest.revision: 17
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a568734c2e46b3653a5b2c38491dc5a362aeb252
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4a718a7e75a9b31b7d35cdc33883c97739aee68c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580284"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +35,7 @@ NONEMPTY(set_expression1 [,set_expression2])
  *set_expression2*  
  セットを返す有効な多次元式 (MDX) です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この関数は、指定されている 1 番目のセット内の組のうち、2 番目のセット内のすべての組に対して評価した際に空でなかった組を返します。 **NonEmpty**関数は計算を考慮し、重複する組を保持します。 2 番目のセットが指定されなかった場合、属性階層のメンバーとキューブ内のメジャーの現在の座標のコンテキストで式が評価されます。  
   
 > [!NOTE]  
@@ -98,9 +89,9 @@ NONEMPTY(set_expression1 [,set_expression2])
   
 ## <a name="see-also"></a>参照  
  [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
- [フィルターと #40 です。MDX と #41 です。](../mdx/filter-mdx.md)   
+ [フィルター &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

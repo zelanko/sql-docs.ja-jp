@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5c3a4d20c7799281f40fa6ae13e89010cebe1ec6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 11804b9b6ca9ac430bdb47c0b9050b8c6995cf7f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574564"
 ---
 # <a name="synchronize-element-xmla"></a>Synchronize 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  同期、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]別の既存のデータベースとデータベースです。  
+  別の既存のデータベースと Analysis Services データベースを同期します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,12 +49,12 @@ ms.lasthandoff: 05/10/2018
 |親要素|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
 |子要素|[ApplyCompression](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md)、[場所](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md)、[ソース](../../../analysis-services/xmla/xml-elements-properties/source-element-synchronize-xmla.md)、 [SynchronizeSecurity](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **同期**コマンド ソース インスタンスとターゲット データベースを同期して、データベースで指定されて、**ソース**要素。 必要に応じて、**同期**コマンドは、ソース データベースで定義されたリモート パーティションを同期します。  
   
  バックアップ ファイルに格納されているオブジェクトによって使用されるストレージ モードに応じて、**同期**コマンドは、次の表に示すように情報を同期します。  
   
-|[ストレージ モード]|情報|  
+|[ストレージ モード]|[情報]|  
 |------------------|-----------------|  
 |多次元 OLAP (MOLAP)|ソース データ、集計、およびメタデータ|  
 |ハイブリッド OLAP (HOLAP)|集計とメタデータ|  
@@ -63,11 +64,11 @@ ms.lasthandoff: 05/10/2018
   
  データベースの同期の詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)です。  
   
-## <a name="see-also"></a>参照  
- [バックアップの要素と &#40; です。XMLA と &#41; です。](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
- [バッチ要素 & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [Parallel 要素 & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)   
- [要素 & #40; を復元します。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [コマンドと #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>参照
+ [要素をバックアップ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
+ [要素をバッチ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [要素を並列&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)   
+ [Restore 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
+ [コマンド&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0b524e7e9fb24ff0296fc0e70c8bb8a462f3d199
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b24832c8debe12c11aaa337e9558d99e7fae5ae0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585504"
 ---
 # <a name="configure-and-manage-machine-learning-components-in-sql-server"></a>構成および SQL Server の machine learning コンポーネントを管理します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/16/2018
 
 これらの記事では、SQL Server インスタンスに新しい R パッケージをインストール、R パッケージのライブラリの管理、およびデータベースの復元後にパッケージのライブラリを復元する方法について説明します。
 
-+ [R パッケージのインストールと管理](installing-and-managing-r-packages.md)
++ [SQL Server で既定の R、Python のパッケージ](installing-and-managing-r-packages.md)
 + [新しい R パッケージをインストールします。](install-additional-r-packages-on-sql-server.md)
 + [データベース ロールを使用してインスタンスのパッケージの管理を有効にします。](r-package-how-to-enable-or-disable.md)
 + [MiniCRAN を使用して、ローカルのパッケージ リポジトリを作成します。](create-a-local-package-repository-using-minicran.md)

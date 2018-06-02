@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 577d5266c98211949db8d1992bf559161d8ee97d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 23fed22efe90a91905c4b36c967ad5fa72717b3f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585874"
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>Windows サービス (In-database) を学習の SQL Server 2017 マシンをインストールします。 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ SQL Server の Machine Learning サービス コンポーネントは、デー�
 
 + ドメイン コント ローラーでは、Machine Learning のサービスを取り付けないでください。 セットアップの Machine Learning サービス部分は失敗します。
 
-+ インストールしない**共有機能** > **Machine Learning Server (スタンドアロン)**同じコンピューターにデータベースのインスタンスを実行します。 スタンドアロン サーバーは、同じリソースを両方のインストールのパフォーマンスを弱体化の競合が発生します。
++ インストールしない**共有機能** > **Machine Learning Server (スタンドアロン)** 同じコンピューターにデータベースのインスタンスを実行します。 スタンドアロン サーバーは、同じリソースを両方のインストールのパフォーマンスを弱体化の競合が発生します。
 
 + R、Python の他のバージョンとサイド バイ サイド インストールはサポートが、推奨されません。 SQL Server インスタンスは、オープン ソース R および Anaconda ディストリビューションのコピーを使用するためサポートされます。 SQL Server の外部の SQL Server コンピューターの R、Python を使用するコードを実行しているがさまざまな問題につながるためにお勧めしません。
     
@@ -76,7 +77,7 @@ SQL Server の Machine Learning サービス コンポーネントは、デー�
 
         > [!NOTE]
         > 
-        > オプションを選択しない**Machine Learning Server (スタンドアロン)**です。 Machine Learning のサーバーをインストールするオプション**共有機能**は別のコンピューターに使用するものです。
+        > オプションを選択しない**Machine Learning Server (スタンドアロン)** です。 Machine Learning のサーバーをインストールするオプション**共有機能**は別のコンピューターに使用するものです。
 
 4. **R のインストールに同意する**] ページで、[ **Accept**です。 この使用許諾契約書は、オープン ソース R 基本パッケージとツール、拡張 R パッケージおよび接続プロバイダー、Microsoft 開発チームからのディストリビューションが含まれる Microsoft R Open、について説明します。
 
@@ -183,7 +184,7 @@ SQL Server の Machine Learning サービス コンポーネントは、デー�
 
     | hello |
     |----|
-    | 1|
+    | @shouldalert|
 
 
 > [!NOTE]
@@ -301,7 +302,7 @@ R ソリューションを SQL Server を作成するには、基本的な R 関
 
 SQL Server で使用するパッケージは、インスタンスによって使用される既定のライブラリにインストールする必要があります。 コンピューターで、R の別のインストールをした場合、あるいはユーザー ライブラリへのパッケージをインストールした場合は、T-SQL からこれらのパッケージを使用することはできません。
 
-インストールして、R パッケージを管理するためのプロセスは、SQL Server 2016 および SQL Server 2017 で異なります。 SQL Server 2016 では、データベース管理者は、ユーザーが必要な R パッケージをインストールする必要があります。 SQL Server の 2017 で、データベース レベルでは、上のパッケージを共有するユーザー グループを設定またはユーザーが独自のパッケージをインストールするデータベース ロールを構成できます。 詳細については、次を参照してください。[パッケージの管理](../r/r-package-management-for-sql-server-r-services.md)です。
+インストールして、R パッケージを管理するためのプロセスは、SQL Server 2016 および SQL Server 2017 で異なります。 SQL Server 2016 では、データベース管理者は、ユーザーが必要な R パッケージをインストールする必要があります。 SQL Server の 2017 で、データベース レベルでは、上のパッケージを共有するユーザー グループを設定またはユーザーが独自のパッケージをインストールするデータベース ロールを構成できます。 詳細については、次を参照してください。 [SQL サーバーに新しい R パッケージをインストールする](../r/install-additional-r-packages-on-sql-server.md)です。
 
 
 ## <a name="get-help"></a>ヘルプの参照
@@ -314,7 +315,7 @@ SQL Server で使用するパッケージは、インスタンスによって使
 
 * [SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 R の開発者は、単純な例についてで始めることができ、SQL Server での R の動作の基礎を学習します。 次の手順は、次のリンクを参照してください。
 
