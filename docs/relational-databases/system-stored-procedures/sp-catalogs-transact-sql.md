@@ -52,7 +52,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**catalog_name**|**nvarchar(** 128 **)**|カタログの名前。|  
-|**[説明]**|**nvarchar (** 4000 **)**|カタログの説明。|  
+|**description**|**nvarchar (** 4000 **)**|カタログの説明。|  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
