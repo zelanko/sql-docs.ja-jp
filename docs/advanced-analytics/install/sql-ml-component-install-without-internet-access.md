@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a0ec6834bf3aee8a7f8176bc5fd6d6d66d367b62
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 289f304cf445882981fb110e9c00a395cac90e5f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585614"
 ---
 # <a name="install-sql-server-machine-learning-components-without-internet-access"></a>SQL Server コンピューターがインターネットにアクセスできないコンポーネントの学習をインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,6 +72,12 @@ Microsoft R Open     |変更はありません。以前の使用|
 Microsoft R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
 Microsoft の Python のオープン     |変更はありません。以前の使用|
 Microsoft Python サーバー    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
+**SQL Server 2017 CU7** |
+Microsoft R Open     |変更はありません。以前の使用|
+Microsoft R Server      |o 変更です。以前の使用|
+Microsoft の Python のオープン     |変更はありません。以前の使用|
+Microsoft Python サーバー    |変更はありません。以前の使用|
+
 
 ### <a name="bkmk_2016Installers"></a>SQL Server 2016 のダウンロード
 
@@ -180,7 +187,7 @@ En_sql_server_2017.iso ファイルを任意のフォルダーに配置します
 この記事では、R Services のサポート チームが SQL Server 2016 では、無人インストールまたは R services のアップグレードを実行する方法を示します:[インターネットにアクセスできないコンピューターでの R Services の配置](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/)です。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 R の開発者は、単純な例についてで始めることができ、SQL Server での R の動作の基礎を学習します。 次の手順は、次のリンクを参照してください。
 

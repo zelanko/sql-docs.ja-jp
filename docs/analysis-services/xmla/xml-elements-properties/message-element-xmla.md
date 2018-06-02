@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71b2d2e3b387a39b4087e258083fcf67ba48f919
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 29780b5578c5e48c2ff8781719f9ebffe065e62c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575704"
 ---
 # <a name="message-element-xmla"></a>Message 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  インスタンスから返されたメッセージを含む[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]によって、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)または[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドの呼び出しです。  
+  Analysis Services のインスタンスから返されたメッセージが含まれています、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)または[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドの呼び出しです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,10 +50,10 @@ ms.lasthandoff: 05/10/2018
 |親要素|[メッセージ](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)|  
 |子要素|[エラー](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)、[警告](../../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この要素が使用されるのは、 **Discover** メソッド呼び出しあるいは **Execute** メソッド呼び出し内の単一の XMLA コマンドが、正常に完了したもののエラーまたは警告が発生した場合です。 このような場合、**メッセージ**要素が追加ルート要素に他のすべての要素の後に 1 つまたは複数を格納する**メッセージ**要素。 各**メッセージ**を表す 1 つの要素によって返されるメッセージ、エラーまたは警告のいずれか、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

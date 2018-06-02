@@ -24,16 +24,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 559aea789fd19fcbbe11fea0868f77c0fdd8b90c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: fb0db9ea7c4d58fdecf8ef4973e4d8f971ebb3d3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34553804"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  データベース内のテーブルまたはインデックスの各パーティションに対して、現在の下位レベルの I/O、ロック、ラッチ、およびアクセス メソッドの利用状況を返します。    
+  データベースの現在の低レベルの I/O、ロック、ラッチ、およびテーブルまたはインデックスの各パーティションに対してアクセス メソッドの利用状況を返します。    
     
  メモリ最適化インデックスは、この DMV には表示されません。    
     
@@ -83,7 +84,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>返されるテーブル    
     
-|列名|データ型|Description|    
+|列名|データ型|説明|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|データベース ID。|    
 |**object_id**|**int**|テーブルまたはビューの ID。|    
@@ -131,7 +132,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|テーブル、インデックス、またはインデックス付きビューの特定のパーティションで、ページ レベルの圧縮が評価されたページの数。 大幅な節減を実現できないため圧縮されなかったページも含まれます。 常に 0 を使用して、列ストア インデックスです。|    
 |**page_compression_success_count**|**bigint**|テーブル、インデックス、またはインデックス付きビューの特定のパーティションで、ページの圧縮を使用して圧縮されたデータ ページの数。 常に 0 を使用して、列ストア インデックスです。|    
     
-## <a name="remarks"></a>解説    
+## <a name="remarks"></a>コメント    
  この動的管理オブジェクトには、CROSS APPLY および OUTER APPLY からの相関パラメーターは受け入れられません。    
     
  使用することができます**sys.dm_db_index_operational_stats**をユーザーが閲覧、テーブル、インデックス、またはパーティションへの書き込みまたはテーブルまたはインデックス重大な I/O 動作が発生しているまたはホットを特定して待機する必要がありますを時間の長さを追跡するにはスポットが存在します。    
@@ -185,7 +186,7 @@ sys.dm_db_index_operational_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>システム関数によるパラメーター値の指定    
  使用することができます、[!INCLUDE[tsql](../../includes/tsql-md.md)]関数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)と[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)の値を指定する、 *database_id*と*object_id*パラメーター。 ただし、これらの関数に無効な値を渡すと、意図しない結果が生じる可能性があります。 DB_ID または OBJECT_ID を使用する場合は、必ず有効な ID が返されるようにしてください。 詳細については、「解説」セクションを参照してください。 [sys.dm_db_index_physical_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)です。    
     
-## <a name="permissions"></a>権限    
+## <a name="permissions"></a>アクセス許可    
  次の権限が必要です。    
     
 -   データベース内の指定したオブジェクトに対する CONTROL 権限。    

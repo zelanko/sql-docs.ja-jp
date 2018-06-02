@@ -1,31 +1,20 @@
 ---
 title: VisualTotals (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- VisualTotals
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- VisualTotals function
-ms.assetid: 8ec529c2-729a-4a5b-892e-750849ab4013
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: e36ac4403d8a3977969f71c8dc4c73a817eb11f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 2690807cc3438773c3c2de613dedf7c1419ba0f1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581814"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ VisualTotals(Set_Expression[,Pattern])
  *パターン*  
  親の名前を置き換える文字のアスタリスク (*) を格納した、セットの親メンバーを表す有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  指定するセット式では、1 つのディメンション内の任意のレベルにあるメンバー (通常は先祖と子孫のリレーションシップを持つメンバー) のセットを指定できます。 **VisualTotals**関数が、指定されたセット内の子メンバーの値を合計し、結果の合計を計算するセットに含まれていない子メンバーは無視されます。 階層の順序で並べられたセットの表示部分の合計が算出されます。 セット内のメンバーの順序と階層の順序が一致しない場合、結果は表示部分の合計になりません。 たとえば、VisualTotals (USA, WA, CA, Seattle) は WA を Seattle として返すのではなく、WA、CA、および Seattle の値を返してから、これらの値の合計を USA の表示部分の合計として算出します。このため、Seattle の売上は 2 回加算されることになります。  
   
 > [!NOTE]  
@@ -79,6 +68,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

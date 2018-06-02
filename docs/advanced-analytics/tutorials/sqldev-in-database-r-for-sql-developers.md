@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21bc5d6af2ad34a23bb56a589f7bcbacb6034ff3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585274"
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>データベース内 R analytics SQL 開発者 (チュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,13 +55,13 @@ ms.lasthandoff: 04/16/2018
 
     データベースにモデルが保存されたら、ストアド プロシージャを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] から予測モデルを呼び出します。
 
-### <a name="scenario"></a>Scenario
+### <a name="scenario"></a>シナリオ
 
 このチュートリアルでは、ニューヨーク タクシーでトリップに基づいて、よく知られているパブリック データセットを使用します。 サンプル コードをすばやく実行するためには、データの代表的な 1% のサンプリングを作成しました。 このデータを使用して、かどうか特定トリップもそうでない、ヒントを取得する可能性の高い、時刻、距離、および収集場所などの列に基づいて予測する二項分類モデルを作成します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-このチュートリアルは、既にデータベースとテーブルを作成、テーブルにデータをインポートする SQL クエリを作成するなどの基本的なデータベース操作を使い慣れているユーザー向けです。 すべての R コードが提供されるため、R の開発環境は必要ありません。 SQL プログラマは、このコード例全体を使用してできる必要があります[!INCLUDE[tsql](../../includes/tsql-md.md)]で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、および提供されている PowerShell スクリプトを実行しています。
+このチュートリアルでは、データベースとテーブルを作成し、テーブルにデータをインポートして、SQL クエリを記述などの基本的なデータベース操作に精通しているユーザーです。 すべての R コードが提供されるため、R の開発環境は必要ありません。 スキルを持つ SQL プログラマが使用できる [! INCLUDE [tsql] (../..含まれています//tsql md.md)] で [! INCLUDE [ssManStudioFull] (../..含まれています//ssmanstudiofull md.md) し、この例を完了する指定した PowerShell スクリプトを実行します。 ただし、このチュートリアルを開始する前に、次の準備を完了する必要があります。
 
 ただし、このチュートリアルを開始する前にこれらの準備を完了する必要があります。
 

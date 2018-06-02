@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 184ae189e07a76eaf4fa3d68914c209927f48ff7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 47919671460d83e4b7c470c110da8d002c6ba53f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575154"
 ---
 # <a name="folder-element-xmla"></a>Folder 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,13 +49,13 @@ ms.lasthandoff: 05/10/2018
 |親要素|[フォルダー](../../../analysis-services/xmla/xml-elements-properties/folders-element-xmla.md)|  
 |子要素|[新しい](../../../analysis-services/xmla/xml-elements-properties/new-element-xmla.md)、[元](../../../analysis-services/xmla/xml-elements-properties/original-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **フォルダー**要素を指定すると、変更、記憶域オブジェクトの場所に含まれるバックアップ ファイル (の**復元**コマンド) またはソース インスタンス上のデータベース (の**同期**コマンド) の値に一致する、**元**要素の値を**新規**要素。  
   
- バックアップと復元のオブジェクトの詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期 (&) #40 です。XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ バックアップと復元のオブジェクトの詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)です。  
   
-## <a name="see-also"></a>参照  
- [StorageLocation 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/storagelocation-element-assl.md)   
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [StorageLocation 要素&#40;ASSL&#41;](../../../analysis-services/scripting/properties/storagelocation-element-assl.md)   
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

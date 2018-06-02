@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5ce937518c243e5c9fa391892073cb324c8bc04f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4644b8775212eae0cb6d912df9bc415c5fc96ec7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573944"
 ---
 # <a name="batch-element-xmla"></a>Batch 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  1 つまたは複数の XML for Analysis (XMLA) コマンドとして実行バッチ操作では、順番またはのインスタンスに同時に[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+  順番、または Analysis Services のインスタンスに同時に、1 つまたは複数の XML をバッチ操作として Analysis (XMLA) コマンドを実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,19 +53,19 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>属性  
   
-|属性|Description|  
+|属性|説明|  
 |---------------|-----------------|  
 |ProcessAffectedObjects|(省略可能な**ブール**属性) を再処理を必要とするすべてのオブジェクトを処理するかどうかを示します。<br /><br /> 場合は true に設定する、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスに含まれるオブジェクトを処理した結果を再処理を必要とする任意のオブジェクトを処理する、**バッチ**コマンド。<br /><br /> 場合設定**false**、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスに含まれるオブジェクトだけを処理する、**バッチ**コマンド。|  
 |トランザクション|(省略可能な**ブール**属性) に、コマンドが含まれているかどうかを示す、**バッチ**コマンドは、単一のトランザクションまたは個々 のトランザクションとして扱われます。<br /><br /> 場合、true に、すべてに含まれるコマンドのセット、**バッチ**コマンドは、単一のトランザクションと見なされます。 いずれかのコマンドが失敗した、失敗したコマンドの前に実行されるコマンドはロールバック、および**バッチ**後続のコマンドを実行することがなくコマンドを停止します。<br /><br /> 場合に設定**false**、**バッチ**コマンドは、すべてのコマンドを実行しようとし、正常に完了した各コマンドの結果をコミットします。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 > [!WARNING]  
 >  バッチ操作内でのコマンド/実行/ステートメントは現在サポートされません。  
   
  XMLA におけるバッチ操作の実行の詳細については、次を参照してください。[バッチ操作の実行&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)です。  
   
-## <a name="see-also"></a>参照  
- [コマンドと #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>参照
+ [コマンド&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

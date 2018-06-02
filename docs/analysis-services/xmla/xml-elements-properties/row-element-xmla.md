@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 78539bfa16bfca56cbac10a4d1d9a793f685a333
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 84cf252303832ed157981103ffaede9718949e16
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576214"
 ---
 # <a name="row-element-xmla"></a>row 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/10/2018
 |親要素|[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)(を使用して、[行セット](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)データ型)|  
 |子要素|1 つ以上の列要素|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  によって返される各行、**ルート**を表形式のデータを含む要素には、対応する**行**要素。 内の各列、**ルート**要素は、個別の XML 要素によって表されます。 列の値、**行**要素は XML 要素に含まれるデータと列の名前は、XML 要素の名前に対応しています。  
   
  行の中の列に NULL 値を指定する方法は、次の 2 つです。  
@@ -81,9 +82,9 @@ ms.lasthandoff: 05/10/2018
 </row>  
 ```  
   
- 詳細とスキーマについては表形式のデータの列の名前付けに関する詳細については、次を参照してください。[行セットのデータ型 & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
+ 詳細とスキーマについては表形式のデータの列の名前付けに関する詳細については、次を参照してください。[行セットのデータ型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)です。  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

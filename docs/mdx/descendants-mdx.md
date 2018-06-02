@@ -1,31 +1,20 @@
 ---
 title: 子孫 (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DESCENDANTS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Descendants function
-ms.assetid: d103b0f5-e794-4828-aa57-43f6918a0749
-caps.latest.revision: 38
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f5f38c620972906ec17820ffa1bb4a7c865dba16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 047c9e0edc8120003cdd8a38953e33e779ab0994
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580414"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +55,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Desc_Flag*  
  子孫のセットを区別するための説明フラグを指定する有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  レベルが指定されている場合、**子孫**関数を指定されたメンバーまたはで指定されたフラグによって調整必要に応じて、指定したレベルにおいて、指定されたセットのメンバーの子孫を含むセットを返します*Desc_Flag*です。  
   
  場合*距離*を指定すると、**子孫**関数を指定されたメンバーまたは指定された数のレベルで指定されたフラグによって調整必要に応じて、指定されたメンバーの階層では、指定されたセットのメンバーの子孫を含むセットを返します*Desc_Flag*です。 この関数は、不規則階層を対象とする場合に Distance 引数と共に使用されるのが一般的です。 距離に 0 が指定された場合は、指定されたメンバーのみで構成されるセットまたは指定されたセットを返します。  
@@ -103,7 +92,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  説明フラグの値を変更することで、指定したレベルまたは距離にある子孫、指定したレベルまたは距離の前後の子 (リーフ ノードまで)、あるいは指定したレベルまたは距離に関係なくリーフ メンバーすべてについて、含めるか除外するかを制御できます。 次の表に指定できるフラグ、 *Desc_Flag*引数。  
   
-|フラグ|Description|  
+|フラグ|説明|  
 |----------|-----------------|  
 |SELF|指定されたレベルまたは指定された距離にある子孫メンバーのみを返します。 指定されたレベルが、指定されたメンバーのレベルである場合は、指定されたメンバーを含めます。|  
 |AFTER|指定されたレベルまたは距離のすべての下位レベルにある子孫メンバーを返します。|  
@@ -174,6 +163,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

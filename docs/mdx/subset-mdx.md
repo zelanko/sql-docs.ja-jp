@@ -1,31 +1,20 @@
 ---
 title: サブセット (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- subset
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Subset function
-ms.assetid: 49a7cd28-cd6f-4ae7-8c91-94a8652a97a5
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 1ccc015bad99081de8798f5991ac737282b50343
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e063d295480cff8e5db44f5ea30668a7a06ff74b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581394"
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,13 +32,13 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
- *コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇*  
+ *開始*  
  返す最初の組の位置を指定する有効な数値式です。  
   
- *Count*  
+ *カウント*  
  返す組の数を指定する有効な数値式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  指定したセットから、**サブセット**関数が指定された数の組を指定した開始位置を格納しているサブセットを返します。 開始位置は 0 を基点とするインデックスです。つまり、0 は指定したセットの最初の組に対応し、1 は次の組に対応します。  
   
  場合*カウント*が指定されていない、関数からのすべての組を返します*開始*セットの末尾にします。  
@@ -71,6 +60,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

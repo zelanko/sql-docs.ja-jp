@@ -1,7 +1,7 @@
 ---
 title: Pdostatement::bindparam |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.component: php
@@ -15,11 +15,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 082af7aa2e6bcac8c44af1660c4a797515938aef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 476030f5a5f08b2226036b5214ebc973a8a04b3a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563940"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +48,7 @@ $*指定する*: (混合の) ドライバー固有の省略可能なオプショ
 ## <a name="return-value"></a>戻り値  
 成功した場合は TRUE、それ以外の場合は FALSE です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 型 varbinary、binary、または varbinary (max) のサーバー列に null データをバインドするときは、バイナリ エンコード (pdo::sqlsrv_encoding_binary) を使用して $a を指定する必要があります*を指定する*です。 エンコード定数の詳細については、次を参照してください。[定数](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)です。  
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
@@ -125,7 +126,7 @@ echo $input1;
 ```  
 
 > [!NOTE]
-> 値をバインドするときに、入力として文字列を使用することをお勧め、 [decimal 型または numeric 列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)PHP での有効桁数が限られているために、有効桁数と精度を確保する[浮動小数点数](http://php.net/manual/en/language.types.float.php)です。
+> 値をバインドするときに、入力として文字列を使用することをお勧め、 [decimal 型または numeric 列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)PHP での有効桁数が限られているために、有効桁数と精度を確保する[浮動小数点数](http://php.net/manual/en/language.types.float.php)です。 当てはまります bigint 型の列値の範囲は次の場合は特に、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)です。
 
 ## <a name="example"></a>例  
 このコード サンプルでは、入力パラメーターとして 10 進値をバインドする方法を示します。  

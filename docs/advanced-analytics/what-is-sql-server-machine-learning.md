@@ -7,11 +7,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: ecd58ee9670724a2732ce8aabc5d9f2c62042995
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585454"
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>SQL Server マシン学習サービスとは
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +32,7 @@ SQL Server で machine learning の機能を使用するための 2 つのオプ
 
 独自のパッケージが構築されるためのオープン ソース R、Python ディストリビューション、スクリプトやコードが SQL Server で実行することができますも基本と関数を呼び出す SQL Server で提供される言語のバージョンと互換性のあるサード パーティのパッケージを使用して (Python 3.5 と最新バージョンの R、現在 3.3.3)。
 
-| R  | Python | Description |
+| R  | Python | 説明 |
 |-----------|----------------|-------------|
 | [RevoScaleR](r/revoscaler-overview.md) | [revoscalepy](python/what-is-revoscalepy.md)   | これらのライブラリ内の関数は、最も広く使用されている間です。 これらのライブラリでは、データ変換と操作、統計の要約、ビジュアル化、およびモデリングと分析の多くの形式が見つかりました。 さらに、これらのライブラリ内の関数に自動的にワークロードを分散並列調整および計算エンジンによって管理されるデータのチャンクで作業を行うことで、処理の使用可能なコアです。 |
 | [MicrosoftML](using-the-microsoftml-package.md) | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 業界をリードするマシンがイメージの特性付け、分類問題、およびその他のアルゴリズムを学習します。 |
@@ -88,7 +89,7 @@ SQL Server のドキュメントの最近のリリースは、バージョンに
 
 <a name="next-steps"></a>
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 **手順 1:** をインストールし、ソフトウェアを構成します。 
 
@@ -101,4 +102,4 @@ SQL Server のドキュメントの最近のリリースは、バージョンに
 
 **手順 3:** お気に入りの R、Python パッケージを追加し、Microsoft によって提供されたパッケージと共に使用します。
 
-+ [SQL Server の R パッケージの管理](r/r-package-management-for-sql-server-r-services.md)
++ [SQL Server の R パッケージの管理](r/install-additional-r-packages-on-sql-server.md)

@@ -1,32 +1,20 @@
 ---
 title: FREEZE ステートメント (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- FREEZE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- FREEZE statement
-- locking cell values [MDX]
-ms.assetid: 59f1e860-6f37-41af-97d6-7708bdaac933
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: bf02f73b4c1de617a0c66e34882cc63c32cd0517
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 9b7eb3a3939ce8525dc57d27a24ac005ecb2cf2d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579904"
 ---
 # <a name="mdx-scripting---freeze"></a>MDX スクリプティングの固定
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +32,7 @@ FREEZE Subcube_Expression
  *Subcube_Expression*  
  サブキューブを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **凍結**ステートメントで指定されているサブキューブのセルの値をロック、MDX での後続のステートメントをによる後続の計算で値が変更からスクリプト パスです。  
   
  以下の例では、A と B は MDX 計算スクリプト内のサブキューブを表しています。  
@@ -69,6 +57,6 @@ B = 3
  A は 2 に、B は 3 に等しくなりました。  
   
 ## <a name="see-also"></a>参照  
- [MDX スクリプト ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX スクリプト ステートメント&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

@@ -1,31 +1,20 @@
 ---
 title: 順位 (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- RANK
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Rank function [MDX]
-ms.assetid: 3cea35ed-57c4-4b47-a736-cee00275509b
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 64932503682e862140fc078157154e0e9f72677c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ac8b41545063caa123eb678e5b2b0bda3b3a1e09
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580994"
 ---
 # <a name="rank-mdx"></a>Rank (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +38,7 @@ Rank(Tuple_Expression, Set_Expression [ ,Numeric Expression ] )
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  数値式が指定されている場合、**ランク**関数が、組に対して指定された数値式を評価することによって、指定された組のランクを決定します。 数値式が指定されている場合、**ランク**関数は、セットで重複する値を持つタプルに同じランクを割り当てます。 このように重複する値に同じランクを割り当てる動作は、セット内の後続の組のランクに影響を与えます。 たとえば、次の組は、セット`{(a,b), (e,f), (c,d)}`です。 タプル`(a,b)`組と同じ値を持つ`(c,d)`します。 場合、組`(a,b)`ランクが 1 の場合は、両方の`(a,b)`と`(c,d)`ランクは 1 を必要があります。 ただし、`(e,f)` のランクは 3 になります。 ランクが 2 の組はこのセットには存在できません。  
   
  数値式が指定されていない場合、**ランク**関数は、指定された組の 1 から始まる序数位置を返します。  
@@ -94,6 +83,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [順序&#40;MDX&#41;](../mdx/order-mdx.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

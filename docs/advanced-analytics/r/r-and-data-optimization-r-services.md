@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98605a5eb5291444e0bd46d64bd3b84ab7c1b008
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5a30ff30651bacde42c60a1e0b265105e3c932e3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563760"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services - データの最適化のパフォーマンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ SQL Server 2016 および 2017 で、いずれかを使用できる、**ロー�
 
 ## <a name="factors"></a>因子
 
-R 言語には、「要素」は、カテゴリ データに対する特別な変数は、の概念があります。 データ サイエンティストは、多くの場合、式で係数変数を使用でデータを確実要因としてのカテゴリの変数を処理するためは、machine learning 関数によって正しく処理です。 詳細については、次を参照してください。 [ダミーの R: 係数変数] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)です。
+R 言語には、「要素」は、カテゴリ データに対する特別な変数は、の概念があります。 データ サイエンティストは、多くの場合、式で係数変数を使用でデータを確実要因としてのカテゴリの変数を処理するためは、machine learning 関数によって正しく処理です。 詳細については、次を参照してください。[ダミーの R: 係数変数](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)です。
 
 仕様では、整数とストレージや処理用にもう一度、文字列から、係数の変数を変換します。 R`data.frame`関数は、係数の変数とすべての文字列を処理しない限り、引数*stringsAsFactors*に設定されている**False**です。 これは意味は文字列が自動的には、処理に整数に変換され、その後、元の文字列にマップします。
 

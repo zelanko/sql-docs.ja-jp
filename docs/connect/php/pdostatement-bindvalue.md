@@ -1,7 +1,7 @@
 ---
 title: PDOStatement::bindValue |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.component: php
@@ -15,11 +15,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d46a027ff367cac199c7ec0b78cd1658ea0eac60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 293437aabacd65e16bc7312c080ac54fa4d70999
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563850"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +44,7 @@ $*data_type*: pdo::param _ * 定数によって表される省略可能な (整�
 ## <a name="return-value"></a>戻り値  
 成功した場合は TRUE、それ以外の場合は FALSE です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
@@ -80,7 +81,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ```
 
 > [!NOTE]
-> 値をバインドするときに、入力として文字列を使用することをお勧め、 [decimal 型または numeric 列](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)PHP での有効桁数が限られているために、有効桁数と精度を確保する[浮動小数点数](http://php.net/manual/en/language.types.float.php)です。
+> 値をバインドするときに、入力として文字列を使用することをお勧め、 [decimal 型または numeric 列](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)PHP での有効桁数が限られているために、有効桁数と精度を確保する[浮動小数点数](http://php.net/manual/en/language.types.float.php)です。 当てはまります bigint 型の列値の範囲は次の場合は特に、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)です。
 
 ## <a name="example"></a>例  
 このコード サンプルでは、入力パラメーターとして 10 進値をバインドする方法を示します。  

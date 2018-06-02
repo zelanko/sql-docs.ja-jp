@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29cef7dc0bef595d4c000c0756fa746907dc1ff1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 30149ab2eacae34f3f90de68772821e5d2f0232c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574944"
 ---
 # <a name="delete-element-xmla"></a>Delete 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  オブジェクトを削除、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
+  Analysis Services インスタンス上のオブジェクトを削除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,17 +44,17 @@ ms.lasthandoff: 05/10/2018
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
-|子要素|[オブジェクト](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
+|子要素|[Object](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="attributes"></a>属性  
   
-|属性|Description|  
+|属性|説明|  
 |---------------|-----------------|  
 |IgnoreFailures|省略可能で、 **Boolean** 型の属性。 これを True に設定すると、 **Execute** メソッドはネットワーク エラーまたはリモート パーティションに関連するエラーを無視します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
- [コマンドと #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>参照
+ [コマンド&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

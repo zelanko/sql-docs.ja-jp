@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1f390f6f8b33e9dbf316fa98eb35574a5daebeed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4806224a1606fff58f63f6083fa577aa4066c795
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585704"
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>管理と machine learning のソリューションの監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -20,7 +21,7 @@ ms.lasthandoff: 04/16/2018
 
 **適用されます:** SQL Server 2016 の R Services、SQL Server 2017 機械学習のサービス
 
-## <a name="security"></a>セキュリティ
+## <a name="security"></a>Security
 
 データベース管理者は、データ サイエンティストは、さまざまなレポート開発者、ビジネス アナリスト、およびビジネス データのユーザーにだけでなく、データ アクセスを提供する必要があります。 R (および Python ようになりました) の SQL Server に統合は、データ サイエンスの役割をサポートする、データベース管理者に多くのメリットを提供します。
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/16/2018
 
 + [Python のセキュリティの概要](../python/security-overview-sql-server-python-services.md)
 
-+ [R パッケージのインストールと管理](../../advanced-analytics/r-services/installing-and-managing-r-packages.md)
++ [SQL Server で既定の R、Python のパッケージ](installing-and-managing-r-packages.md)
 
 ## <a name="configuration-and-management"></a>構成と管理
 

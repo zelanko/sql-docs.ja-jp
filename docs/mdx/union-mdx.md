@@ -1,29 +1,20 @@
 ---
 title: 共用体 (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- functions [MDX], Union
-ms.assetid: cc083455-8b3b-46af-bb55-1e238376f162
-caps.latest.revision: 19
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 03daa8edf505d816435a3e10a71f687895574823
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7712e1f925aa514ec059a88d46db05d337f0c140
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582234"
 ---
 # <a name="union--mdx"></a>共用体 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +42,7 @@ Alternate syntax 2
  *セット式 2*  
  セットを返す有効な多次元式 (MDX) です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この関数は、2 つの和集合を返しますまたは、複数の指定されたセット*です。* 標準構文を使用して、代替構文 1、重複は既定では除外されます。 標準の構文を使用して、**すべて**フラグ、結合されたセット内の重複部分を保持します。 重複部分はセットの末尾から削除されます。 代替構文 2 では、重複部分が常に保持されます。  
   
 ## <a name="examples"></a>使用例  
@@ -106,6 +97,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [+&#40;共用体&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

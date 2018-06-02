@@ -7,16 +7,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d2b7aefa675bc4cfe8ea6fab463053395d5f45d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a0780d4f974761af563ff2ed6e20e444b2d85ef9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563680"
 ---
 # <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Azure の仮想マシンの機能を学習する SQL Server コンピューターをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-使用することをお勧め、[データ サイエンス仮想マシン](ttps://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm)が、SQL Server 2017 Machine Learning Services または SQL Server 2016 R サービスだけを持つ VM を実行する場合に、この記事の内容に従って、手順を実行します。
+使用することをお勧め、[データ サイエンス仮想マシン](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm)が、SQL Server 2017 Machine Learning Services または SQL Server 2016 R サービスだけを持つ VM を実行する場合に、この記事の内容に従って、手順を実行します。
 
 ## <a name="create-a-virtual-machine-on-azure"></a>Azure で仮想マシンを作成します。
 

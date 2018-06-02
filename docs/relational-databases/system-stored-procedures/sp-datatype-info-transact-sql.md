@@ -1,7 +1,7 @@
 ---
 title: sp_datatype_info (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/25/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -22,14 +22,15 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b5dd1eff2fb088fa96498334899631e2dd04a90f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 187b7969d46b6ab0a85779d108a66cbe8ae2d62b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34553752"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
   現在の環境でサポートされるデータ型に関する情報を返します。  
   
@@ -55,7 +56,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |TYPE_NAME|**sysname**|DBMS に依存するデータ型です。|  
 |DATA_TYPE|**smallint**|このデータ型のすべての列がマップされる ODBC 型のコードです。|  
@@ -78,10 +79,10 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|間隔の場合は、有効桁数を先頭の値*data_type*は**間隔**以外の場合は NULL それ以外の場合。|  
 |USERTYPE|**smallint**|**usertype** systypes テーブルからの値。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_datatype_info は、ODBC で SQLGetTypeInfo と同じです。 結果は、まず DATA_TYPE の順序で、次にデータ型が対応する ODBC SQL データ型にどれだけ正確にマップされているのかに基づいて返されます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
