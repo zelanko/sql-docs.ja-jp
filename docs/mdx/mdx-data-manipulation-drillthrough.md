@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/02/2018
 ms.locfileid: "34580064"
 ---
-# <a name="mdx-data-manipulation---drillthrough"></a>MDX データ操作のドリル スルー
+# <a name="mdx-data-manipulation---drillthrough"></a>MDX データ操作 - DRILLTHROUGH
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   キューブ内の指定されたセルの作成に使用されたテーブル行を取得します。  
@@ -36,7 +36,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Unsigned_Integer*  
  正の整数値です。  
   
- *MDX の SELECT ステートメント*  
+ *MDX SELECT statement*  
  任意の有効な多次元式 (MDX) 式の SELECT ステートメントです。  
   
  *Set_of_Attributes_and_Measures*  
@@ -52,7 +52,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
   
  既定では、返される最大行数は 10,000 行です。 つまり、このままにした場合**MAXROWS**指定しないと、表示される行数は 10,000 行以下です。 この値が小さすぎる、シナリオの場合は、設定**MAXROWS**数値は高いほどなど`MAXROWS 20000`です。 低すぎる全体的なである場合は、変更することで既定値を増やすことができます、 **olap \query\defaultdrillthroughmaxrows**サーバー プロパティです。 このプロパティの変更の詳細については、次を参照してください。 [Server Properties in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md)です。  
   
- 特に指定しない限り、返される列には、指定したメジャーのメジャー グループに関連するすべてのディメンション (多対多ディメンションを除く) に対応する粒度属性がすべて含められます。 ディメンションとメジャー グループを区別するために、キューブ ディメンションの先頭には $ が付いています。 **返す**句を使用して、ドリルスルー クエリで返される列を指定します。 次の関数が 1 つの属性に適用できるまたはによってメジャー、**返す**句。  
+ 特に指定しない限り、返される列には、指定したメジャーのメジャー グループに関連するすべてのディメンション (多対多ディメンションを除く) に対応する粒度属性がすべて含められます。 ディメンションとメジャー グループを区別するために、キューブ ディメンションの先頭には $ が付いています。 **RETURN** 句を使用して、ドリルスルー クエリで返される列を指定します。 次の関数が 1 つの属性に適用できるまたはによってメジャー、**RETURN** 句。  
   
  Name(attribute_name)  
  指定された属性メンバーの名前を返します。  
