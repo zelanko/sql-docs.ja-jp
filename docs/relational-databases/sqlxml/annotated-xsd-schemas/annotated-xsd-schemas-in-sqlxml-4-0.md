@@ -24,17 +24,18 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: edf8e4836693eb67e9e6c4c3816d46d2b9d6ccc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708760"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 における注釈付き XSD スキーマ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   ここでは、SQLXML 4.0 での注釈付き XSD スキーマの使用について、情報を提供します。 以前のバージョンの SQLXML では、同様の機能が XML-Data Reduced (XDR) スキーマで提供されていました。 ここではレガシ アプリケーション用の XDR に関する情報も提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [注釈付き XSD スキーマ & #40; の概要SQLXML 4.0 & #41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
+ [注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
  SQLXML 4.0 での注釈付き XSD スキーマの概要について説明します。  
   
  [XSD スキーマに注釈を使用して&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)  

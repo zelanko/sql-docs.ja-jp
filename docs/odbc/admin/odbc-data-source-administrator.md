@@ -17,16 +17,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61b31061c3a8c75e5d96d3ac6993ce8d90dd6199
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e529ab5d321625f8e6bf795a70d0e0143499df7
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34706950"
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC データ ソース アドミニストレーター
 Microsoft® ODBC データ ソース アドミニストレーターは、データベースのドライバーとデータ ソースを管理します。 Windows コントロール パネルの このアプリケーションがある**管理ツール**です。 アイコンの名前は Windows 8 以降、 **ODBC データ ソース**、64 ビット オペレーティング システムでは、32 ビットおよび 64 ビット バージョンとします。  
   
- Odbc データ ソース アドミニストレーターの詳細な手順については、開く、 [ODBC データ ソース アドミニストレーター](http://msdn.microsoft.com/en-us/eea94d94-f53b-4289-ae75-9ccccde15333)  ダイアログ ボックスをクリック**ヘルプ**です。  
+ Odbc データ ソース アドミニストレーターの詳細な手順については、開く、 [ODBC データ ソース アドミニストレーター](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333)  ダイアログ ボックスをクリック**ヘルプ**です。  
   
  PowerShell コマンドを使用すると、ドライバーとデータ ソースを管理します。 これらの PowerShell コマンドの詳細については、次を参照してください。 [Windows データ アクセス コンポーネントの PowerShell コマンド](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)です。  
   

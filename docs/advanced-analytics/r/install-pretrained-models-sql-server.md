@@ -2,23 +2,24 @@
 title: 事前トレーニング済みの機械学習モデルを SQL Server のインストール |Microsoft ドキュメント
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b21245bd74f59f4ad7fe2370ad3587053e756a03
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e3abc1b1581216bb0207fbba2d857993b947afae
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707580"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの機械学習の SQL Server 上のモデルをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、事前トレーニング済みモデル (In-database) SQL Server のインスタンスに追加済みの R Services または SQL Server の Machine Learning のサービスがインストールされている方法について説明します。 
+この記事では、事前トレーニング済みの機械学習のセンチメント分析とイメージの特性付け (In-database) SQL Server のインスタンスにモデルを追加済みの R Services または SQL Server マシン学習サービスがインストールされている方法について説明します。 
 
-センチメント分析またはイメージの特性付けなどのタスクを実行する必要があり、大規模なデータセットを取得するか、複雑なモデルをトレーニングするためのリソースは持っていないユーザーを支援する事前トレーニング済みのモデルが存在します。 Machine Learning サーバー チームが作成され、テキストおよびイメージの処理を効率的に作業を開始するため、これらのモデルをトレーニングします。 詳細については、次を参照してください。、[リソース](#bkmk_resources)この記事のセクションです。
+事前トレーニング済みモデルのために存在する顧客の特性付け、画像のまたはセンチメント分析を実行する必要がありますが、大規模なデータセットを取得するか、複雑なモデルをトレーニングするためのリソースはありません。 Machine Learning サーバー チームが作成され、テキストおよびイメージの処理を効率的に作業を開始するため、これらのモデルをトレーニングします。 詳細については、次を参照してください。、[リソース](#bkmk_resources)この記事のセクションです。
 
 SQL Server のデータを事前トレーニング済みモデルを使用する方法の例を参照してくださいこのブログでは、SQL Server の Machine Learning チーム: [SQL Server の Machine Learning のサービスでの Python のセンチメント分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
@@ -30,8 +31,8 @@ SQL Server のデータを事前トレーニング済みモデルを使用する
 
 + SQL Server 2016 R Services (In-database) にのみ、R と、 [MicrosoftML ライブラリ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + SQL Server 2016 R Server (スタンドアロン) にのみ、R と、 [MicrosoftML ライブラリ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
-+ SQL Server 2017 マシン ラーニング Services (In-database) - [MicrosoftML ライブラリ] で R (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)、Python と、 [microsoftml ライブラリ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
-+ SQL Server 2017 マシン ラーニング サーバー (スタンドアロン) - [MicrosoftML ライブラリ] で R (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)、Python と、 [microsoftml ライブラリ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 マシン ラーニング Services (In-database) の"R"、 [MicrosoftML ライブラリ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)、Python と、 [microsoftml ライブラリ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 マシン ラーニング サーバー (スタンドアロン) の"R"、 [MicrosoftML ライブラリ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)、Python と、 [microsoftml ライブラリ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
 
 インストール プロセスは、SQL Server のバージョンによって若干異なります。 各バージョンの詳細については、次のセクションを参照してください。
 
@@ -76,7 +77,7 @@ SQL Server 2016 では、SQL Server 2016 インスタンス ライブラリで�
 
 3. 実行`RSetup.exe`し、インストールするコンポーネント、バージョン、およびこの構文を使用して、モデルのソース ファイルを含むフォルダーを指定します。
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64"`」を参照してください。 
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64"`。 
 
     バージョン パラメーターは、次の値がサポートされています。
 
@@ -106,12 +107,30 @@ SQL Server 2016 では、SQL Server 2016 インスタンス ライブラリで�
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model
 
-## <a name="install-pre-trained-models-on-sql-server-machine-learning-services-in-database"></a>事前トレーニング済みモデルを SQL Server マシン ラーニング Services (In-database) のインストールします。
+## <a name="install-pre-trained-models-on-sql-server-2017-machine-learning-services-in-database"></a>事前トレーニング済みモデルを SQL Server 2017 Machine Learning Services (In-database) のインストールします。
 
 SQL Server 2017 をすでにインストールした場合は、2 つの方法で、事前トレーニング済みモデルを取得できます。
 
-+ バインドを使用して、Python と R コンポーネントをアップグレードし、事前トレーニング済みモデルを同時にインストール
 + 事前トレーニング済みモデルだけをインストールします。
++ バインドを使用して、Python と R コンポーネントをアップグレードし、事前トレーニング済みモデルを同時にインストール
+
+### <a name="add-pre-trained-models-only"></a>事前トレーニング済みモデルのみを追加します。
+
+事前トレーニング済みモデルを追加するには、コマンドラインから RSetup.exe を実行できます。
+
+バージョンについては、R モデルの R_SERVICES に MLM コンポーネントをインストールします。
+
+```
+RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES"
+```
+
+モデルの Python のバージョン、PYTHON_SERVICES に MLM コンポーネントをインストールします。
+
+```
+RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"
+```
+
+### <a name="bind-and-install-pre-trained-models"></a>バインドして、事前トレーニング済みモデルのインストール
 
 次の手順では、machine learning のコンポーネントをアップグレードして、同時に、事前トレーニング済みモデルを取得するためのプロセスについて説明します。
 
@@ -150,7 +169,7 @@ SQL Server 2016 セットアップを使用して R Server (スタンドアロ�
 
     モデルの場所の既定の設定をそのまま使用することをお勧めします。
 
-3. **[続行]**をクリックします。 
+3. **[続行]** をクリックします。 
 
 4. 使用許諾契約書を含む、他のすべてのメッセージをそのまま使用します。
 

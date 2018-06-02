@@ -32,10 +32,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b054765ab3fe626d1eb8360691a56da17b3174c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707400"
 ---
 # <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>SQLXML 4.0 の .NET Framework のサポート - Diffgram を使用してデータを変更するには
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,16 +46,16 @@ ms.lasthandoff: 05/03/2018
 >  ここでは、DiffGram の概要について説明し、使用例を紹介します。 .NET Framework での DiffGram の機能について理解していることを前提としています。 このドキュメントでは、SQLXML に固有の DiffGram に関する問題を中心に説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SQLXML 4.0 で Diffgram の概要](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/introduction-to-diffgrams-in-sqlxml-4-0.md)  
+ [SQLXML 4.0 の DiffGram の概要](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/introduction-to-diffgrams-in-sqlxml-4-0.md)  
  DiffGram についての基本的な情報を提供します。  
   
- [DiffGram の例 & #40 です。SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+ [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
  DiffGram の使用例を紹介します。  
   
- [ADO & #40; を使用して、DiffGram の実行SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
+ [ADO を使用して、DiffGram の実行&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
  ADO (ActiveX Data Objects) での DiffGram の実行例を紹介します。  
   
- [マネージ クラスの SQLXML を使用して、DiffGram の実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-sqlxml-managed-classes.md)  
+ [SQLXML マネージ クラスを使用した DiffGram の実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-sqlxml-managed-classes.md)  
  SQLXML マネージ クラスでの DiffGram の実行例を紹介します。  
   
   

@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7211eda2caaf579267e4c6089be13750022f0ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 814e0f8172e02d9b02be95888c8dab286429e533
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707960"
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>コマンドラインから machine learning の SQL Server コンポーネントをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/23/2018
 
 コマンド プロンプトを使用してインストールする場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、/Q パラメーターを使用した非表示モード、または /QS パラメーターを使用した簡易非表示モードがサポートされます。 /QS スイッチでは、進捗状況のみが表示され、入力はできません。また、該当する場合でもエラー メッセージは表示されません。 /QS パラメーターは、/Action=install を指定した場合にのみサポートされます。
 
-| 引数 | Description |
+| 引数 | 説明 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | データベースのバージョンがインストールされます。 SQL Server 2017 Machine Learning Services (In-database) または SQL Server 2016 R Services (In-database)。  |
 | /FEATURES = SQL_INST_MR | SQL Server 2017 のみに適用されます。 これは、AdvancedAnalytics とペアします。 Microsoft R オープンおよび独自の R パッケージを含む、(In-database) R の機能をインストールします。 SQL Server 2016 の R Services の機能は R 専用で、そのリリースのパラメーターがないようにします。|
@@ -159,7 +160,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 セットアップが完了したら、サーバー、Microsoft のパッケージでは、オープン ソース ディストリビューションの R、Python、ツール、サンプル、およびスクリプトは、配布の一部である必要があります。 
 
-ウィンドウを開き、R コンソール、\Program files\Microsoft SQL Server\140 (130) に移動して \R_SERVER\bin\x64 をダブルクリックして**RGui.exe**です。 R 初めてですか。 このチュートリアルを実行してください:[基本的な R コマンドと RevoScaleR 関数: 25 の一般的な例として](https://docs.microsoft.com/en-us/machine-learning-server/r/tutorial-r-to-revoscaler)です。
+ウィンドウを開き、R コンソール、\Program files\Microsoft SQL Server\140 (130) に移動して \R_SERVER\bin\x64 をダブルクリックして**RGui.exe**です。 R 初めてですか。 このチュートリアルを実行してください:[基本的な R コマンドと RevoScaleR 関数: 25 の一般的な例として](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)です。
 
 Python コマンドを開くに \Program files\Microsoft SQL Server\140\PYTHON_SERVER\bin\x64 に移動し、ダブルクリック**python.exe**です。
 
@@ -173,7 +174,7 @@ Python コマンドを開くに \Program files\Microsoft SQL Server\140\PYTHON_S
 
 * [SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 R の開発者は、単純な例についてで始めることができ、SQL Server での R の動作の基礎を学習します。 次の手順は、次のリンクを参照してください。
 

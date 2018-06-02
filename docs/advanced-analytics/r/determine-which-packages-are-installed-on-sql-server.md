@@ -4,27 +4,28 @@ description: R、Python のパッケージ バージョンを確認するのイ�
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/08/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21975b4a59cbfaf1e3a203bc732543144856633f
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 85ea4658ca8b60fc24d7e4f7849de1655eab6082
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707890"
 ---
-#  <a name="get-r-and-python-package-information-on-sql-server"></a>SQL Server で R、Python のパッケージ情報を取得します。
+#  <a name="get-r-and-python-package-information"></a>R、Python のパッケージ情報を取得します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-場合によって複数の環境または R または Python のインストールを扱う場合は、確認する必要を実行しているコードが使用している、予期される環境、Python または正しいワークスペースの r です。たとえば、機械学習のバインディングを使用してコンポーネントをアップグレードした場合、R ライブラリへのパス可能性があります、既定とは異なるフォルダー。 また、R クライアントまたはスタンドアロン サーバーのインスタンスをインストールする場合は、コンピューターに複数の R ライブラリがあります。
+場合によって複数の環境または R または Python のインストールを扱う場合は、確認する必要を実行しているコードが使用している、予期される環境の Python または正しいワークスペース R.例では、機械学習を介してコンポーネントをアップグレードした場合、[バインディング](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)、既定値とは異なるフォルダー内の R ライブラリへのパスがあります。 また、R クライアントまたはスタンドアロン サーバーのインスタンスをインストールする場合は、コンピューターに複数の R ライブラリがあります。
 
-この記事の例では、SQL Server で使用されているライブラリのバージョンとパスを取得する方法を示します。
+この記事で R と Python スクリプトの例では、SQL Server で使用されるパッケージのバージョンとパスを取得する方法を示します。
 
-## <a name="get-the-current-r-library"></a>現在の R ライブラリを取得します。
+## <a name="get-the-r-library-location"></a>R ライブラリの場所を取得します。
 
-**R**すべての SQL Server のバージョンでは、現在のインスタンスの既定のライブラリを確認する次のステートメントを実行します。
+すべての SQL Server のバージョンでは、ことを確認するには、次のステートメントを実行、[既定 R パッケージ ライブラリ](installing-and-managing-r-packages.md)現在のインスタンス。
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-新しいバージョンの SQL Server 2017 Machine Learning services RevoScaleR rxSqlLibPaths を使用する必要に応じて、または[でに R Services できます R 最低 RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。 このストアド プロシージャは、インスタンスのライブラリのパスと SQL Server で使用される RevoScaleR のバージョンを返します。
+必要に応じて、使用することができます[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)新しいバージョンの SQL Server 2017 Machine Learning services RevoScaleR または[でに R Services できます R 最低 RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。 このストアド プロシージャは、インスタンスのライブラリのパスと SQL Server で使用される RevoScaleR のバージョンを返します。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -57,7 +58,7 @@ STDOUT message(s) from external script:
 [1] '9.3.0'
 ```
 
-## <a name="get-the-current-python-library"></a>現在の Python ライブラリを取得します。
+## <a name="get-the-python-library-location"></a>Python ライブラリの場所を取得します。
 
 **Python** SQL Server の 2017 で現在のインスタンスの既定のライブラリを確認する次のステートメントを実行します。 この例には、Python に含まれるフォルダーの一覧が返されます`sys.path`変数。 一覧には、現在のディレクトリ、および標準ライブラリ パスが含まれています。
 
@@ -219,7 +220,7 @@ SQL Server セットアップでは、Pip またはパスから不要な実行�
 1. 同様を右クリックして**pip.exe** > **管理者として実行**、入力と`pip list`同じ情報を返します。 
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [新しい R パッケージのインストール](install-additional-r-packages-on-sql-server.md)
 + [新しい Python パッケージのインストール](../python/install-additional-python-packages-on-sql-server.md)

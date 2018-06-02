@@ -2,57 +2,45 @@
 title: SQL Server にパッケージ化 RevoScaleR 関数を使用して、見つからないか、R をインストールする方法 |Microsoft ドキュメント
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c872a945388696a75a07116c0a84a64d64d668d4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d92b3e993968ce48d7489b0c17d6bdba005809a3
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707530"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 関数を使用して、見つからないか、SQL Server で R パッケージをインストールする方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Microsoft R Server リリース 9.0.1 には、操作のサポートに、SQL Server のコンピューティング コンテキストでパッケージがインストールされている新しい RevoScaleR 関数が導入されました。 これらの新しい関数やすく、データ サイエンティストを R コードを実行し、サーバーに直接アクセスすることがなく、SQL Server にパッケージをインストールします。
+RevoScaleR 9.0.1 し、SQL Server のコンピューティング コンテキストに R パッケージの管理の機能を後で含まれます。 これらの関数は、サーバーへの直接アクセスせず、SQL Server にパッケージをインストールする管理者以外のリモートで使用できます。
 
-## <a name="how-does-it-work"></a>動作方法
+SQL Server 2017 Machine Learning サービスには、RevoScaleR の新しいバージョンが既に含まれています。 SQL Server 2016 の R Services のお客様が行う必要があります、[コンポーネントのアップグレード](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)RevoScaleR パッケージ管理機能を取得します。 バージョンとコンテンツのパッケージを取得する方法についてを参照してください。[パッケージ情報を取得](determine-which-packages-are-installed-on-sql-server.md)です。
 
-R Server 9.0.1 が場合や、使用することができます、 [rxInstallPackages](https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/rxinstallpackages) SQL Server のコンピューティング コンテキストでパッケージをインストールするリモート R クライアントからの関数。 このオプションを使用するには、サーバーおよびデータベースにパッケージの管理を有効にする必要があります。 この機能では、R Services の Machine Learning のサービスを対応するバージョンがサーバーにインストールすることも必要です。
+## <a name="revoscaler-functions-for-package-management"></a>パッケージの管理の RevoScaleR 関数
 
-RevoScaleR の新しいバージョンには、これらの関数も含まれます。 
+次の表では、R パッケージのインストールと管理に使用する関数について説明します。
 
-+ [RxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage)関数は、指定された計算コンテキストで 1 つまたは複数のパッケージのパスを取得します。
+| 機能 | 説明 |
+|----------|-------------|
+| [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | リモートの SQL Server のインスタンスのライブラリのパスを決定します。 |
+| [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | リモートの SQL Server で 1 つまたは複数のパッケージのパスを取得します。 |
+| [rxInstallPackages](https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | SQL Server のコンピューティング コンテキストでパッケージをインストールするリモート R クライアントからこの関数を呼び出し、zip 形式のパッケージをローカルに保存されたか、指定されたリポジトリから読み取ることでします。 この関数は、依存関係をチェックし、によってローカル コンピューティング コンテキストで R パッケージのインストールと同じように、SQL Server に関連するすべてのパッケージをインストールすることができます。 このオプションを使用するには、サーバーおよびデータベースにパッケージの管理を有効にする必要があります。 クライアントとサーバーの両方の環境では、同じバージョンの RevoScaleR が必要です。 |
+| [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | 指定された計算コンテキストでインストールされているパッケージの一覧を取得します。 |
+| [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | ファイル システムとデータベースの場合は、指定された計算コンテキストの間でパッケージ ライブラリに関する情報をコピーします。 |
+| [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | 指定された計算コンテキストからパッケージを削除します。 また、依存関係を計算し、SQL Server 上の他のパッケージで使用される不要になったパッケージを削除すること、リソースを解放することを確認します。 |
 
-    ユーザーとスコープの組み合わせを使用して、パッケージを検索または特定のデータベースにパッケージを追加することができます。
+## <a name="prerequisites"></a>前提条件
 
-+ [RxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages)関数は、指定された計算コンテキストでインストールされているパッケージの一覧を取得します。
++ [リモート SQL Server 上の R パッケージの管理を有効にします。](r-package-how-to-enable-or-disable.md)
 
-+ [RxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages)関数は、コンピューティング コンテキストにパッケージをインストール、パッケージを圧縮またはローカルに保存されたを読み取ることによって指定されたリポジトリからいずれか。
++ RevoScaleR バージョンは、クライアントとサーバーの両方の環境で同じである必要があります。 詳細については、次を参照してください。[パッケージ情報を取得](determine-which-packages-are-installed-on-sql-server.md)です。
 
-    この関数は、依存関係をチェックし、によってローカル コンピューティング コンテキストで R パッケージのインストールと同じように、SQL Server に関連するすべてのパッケージをインストールすることができます。
-
-+ [RxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages)関数は、指定された計算コンテキストからパッケージを削除します。
-
-    また、依存関係を計算し、SQL Server 上の他のパッケージで使用される不要になったパッケージを削除すること、リソースを解放することを確認します。
-
-+ 使用して、 [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages)ファイル システムとデータベースの場合は、指定された計算コンテキストの間でパッケージ ライブラリに関する情報をコピーする関数。
-
-+ 使用して、 [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)関数 SQL Server インスタンス ライブラリのパスを決定する計算コンテキスト。
-
-**適用されます:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]です。 サポートされても[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] R Server 9.0 以降にアップグレードします。 その他の制限が適用されます。
-
-## <a name="requirements"></a>必要条件
-
-+ これらの関数を実行するには、サーバーおよびデータベースに接続して、R コマンドを実行するアクセス許可が必要です。
-
-+ リモート R クライアントからこれらの関数を使用する場合必要があります最初に作成する計算コンテキストのオブジェクトを使用して、 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)関数。 その後、各パッケージの管理機能を使用するには、引数としてコンピューティング コンテキストを渡します。
-
-+ 指定しないと、ユーザー名とパスワード、計算コンテキストを作成するときに、R コードを実行しているユーザーの id が使用されます。
-
-+ 内のパッケージ管理機能を実行することも`sp_execute_external_script`します。 これを行うと、ストアド プロシージャの呼び出し元のセキュリティ コンテキストを使用して、関数が実行されます。
++ R コマンドを実行して、サーバーと、データベースに接続する権限です。 指定したインスタンスおよびデータベースにパッケージをインストールすることができますをデータベース ロールのメンバーがあります。
 
 + パッケージの**共有範囲**に属しているユーザーによってインストールされていることができます、`rpkgs-shared`指定データベース内のロール。 このロールのすべてのユーザーには、共有のパッケージをアンインストールできます。
 
@@ -60,14 +48,13 @@ RevoScaleR の新しいバージョンには、これらの関数も含まれま
 
 + データベース所有者は、共有またはプライベートのパッケージを操作できます。
 
-## <a name="package-installation-from-machine-learning-server-or-remote-r-client"></a>Machine Learning のサーバーまたはリモートの R クライアントからのパッケージのインストール
+## <a name="client-connections"></a>クライアント接続
 
-開始する前に、これらの条件を満たしていることを確認します。
+クライアント ワークステーションは、 [Microsoft R クライアント](https://docs.microsoft.com/machine-learning-server/r-client/install-on-windows)または[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) (このデータ サイエンティストは、多くの場合に無料の developer edition を使用するものです)、同じネットワーク上。
 
-+ クライアントに RevoScale 9.0.1 またはそれ以降。
-+ RevoScaleR の同等のバージョンが SQL Server インスタンスにインストールされました。
-+ [パッケージ管理機能は](..\r\r-package-how-to-enable-or-disable.md)がインスタンスで有効になっています。
-+ 指定したインスタンスおよびデータベースにパッケージをインストールすることができますをデータベース ロールのメンバーであります。 将来的にロールをサポートするか、インストールを実行するパッケージ共有またはプライベートの場所。 ここでは、データベース所有者である場合、パッケージをインストールすることができます。
+リモート R クライアントからパッケージの管理関数を呼び出すときにする必要があります最初に作成する計算コンテキストのオブジェクトを使用して、 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)関数。 その後、各パッケージの管理機能を使用するには、引数としてコンピューティング コンテキストを渡します。
+
+ユーザー id は、通常、計算コンテキストを設定するときに指定します。 指定しないと、ユーザー名とパスワード、計算コンテキストを作成するときに、R コードを実行しているユーザーの id が使用されます。
 
 1. R コマンドラインから、インスタンスとデータベースへの接続文字列を定義します。
 2. 使用して、 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)コンス トラクターを接続文字列を使用して、SQL Server のコンピューティング コンテキストを定義します。
@@ -91,6 +78,10 @@ RevoScaleR の新しいバージョンには、これらの関数も含まれま
     
     パッケージをインストールするには、そのユーザーの既定のスコープで、接続を行うユーザーの資格情報が使用されます。
 
+## <a name="call-package-management-functions-in-stored-procedures"></a>ストアド プロシージャ内でパッケージの管理関数を呼び出す
+
+内のパッケージ管理機能を実行するカム`sp_execute_external_script`です。 これを行うと、ストアド プロシージャの呼び出し元のセキュリティ コンテキストを使用して、関数が実行されます。
+
 ## <a name="examples"></a>使用例
 
 このセクションでは、SQL Server インスタンスまたは計算コンテキストとしてデータベースに接続するときに、リモート クライアントからこれらの関数を使用する方法の例を示します。
@@ -98,7 +89,7 @@ RevoScaleR の新しいバージョンには、これらの関数も含まれま
 すべての例については、接続文字列、または接続文字列を必要とする計算コンテキストのいずれかを指定する必要があります。 この例では、SQL Server のコンピューティング コンテキストを作成する 1 つの方法を提供します。
 
 ```R
-instance_name <- "Machine name/Instance name";
+instance_name <- "computer-name/instance-name";
 database_name <- "TestDB";
 sqlWait= TRUE;
 sqlConsoleOutput <- TRUE;
@@ -110,11 +101,11 @@ sqlcc <- RxInSqlServer(connectionString = connString, wait = sqlWait, consoleOut
 
 ```R
 connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Finance;Uid=RUser1;Pwd=RUserPassword"
+```
 
+### <a name="get-package-path-on-a-remote-sql-server-compute-context"></a>リモート SQL Server のコンピューティング コンテキストのパッケージ パスを取得します。
 
-### Get package path on a remote SQL Server compute context
-
-This example gets the path for the **RevoScaleR** package on the compute context, `sqlcc`.
+この例のパスを取得する、 **RevoScaleR**コンピューティング コンテキストでパッケージ`sqlcc`です。
 
 ```R
 sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlcc)
@@ -216,3 +207,9 @@ exec sp_execute_external_script
   @database_name = @database_name;
 ```
 
+## <a name="see-also"></a>参照
+
++ [リモートの R パッケージ管理を有効にする](r-package-how-to-enable-or-disable.md)
++ [R パッケージの同期](package-install-uninstall-and-sync.md)
++ [R パッケージをインストールするためのヒント](packages-installed-in-user-libraries.md)
++ [既定のパッケージ](installing-and-managing-r-packages.md)

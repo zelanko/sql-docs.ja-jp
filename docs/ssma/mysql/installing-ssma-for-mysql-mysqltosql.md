@@ -20,11 +20,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9f16a1eeccefbcf1299bf677f337c443d0e4004a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aeb915c231cdaef032259a83ae647a75db4e3db7
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708870"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>インストールを実行する SSMA for MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) for MySQL に MySQL からの移行の実行に使用するクライアント アプリケーションから成る[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 移行されたデータベースのデータの移行と MySQL システム関数の使用をサポートする拡張機能パックも含まれています。  
@@ -38,9 +39,9 @@ MySQL SSMA の以降のバージョンにアップグレードする場合は、
   
 |||  
 |-|-|  
-|**トピック**|**Description**|  
+|**トピック**|**[説明]**|  
 |[SSMA の MySQL クライアントのインストール&#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|SSMA クライアントをインストールするための手順と情報を提供します。|  
-|[SQL server (MySQL to SQL) SSMA コンポーネントのインストール](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|インスタンスで拡張機能パックをインストールするための手順と情報を提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
+|[SQL server (MySQL to SQL) SSMA コンポーネントのインストール](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|インスタンスで拡張機能パックをインストールするための手順と情報を提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
 |[MySQL コンポーネントに対して、SSMA を削除する&#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|クライアント プログラムをアンインストールする方法についてを説明します。|  
   
 ## <a name="see-also"></a>参照  

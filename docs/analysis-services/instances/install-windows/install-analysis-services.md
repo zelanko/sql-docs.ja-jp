@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3dfb750024706470f28a6c93ea93b5cb9fb4d9c1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0904dc53e17ed140310df38d1f63dc9fe3fc45cb
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708080"
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services をインストールします。
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -65,11 +66,11 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** では、大文字と小文字が区別されます。  値はすべて大文字で指定する必要があります。 次の表に、 **ASSERVERMODE**の有効な値を示します。  
   
-|値|Description|  
+|[値]|説明|  
 |-----------|-----------------|  
 |TABULAR|これが既定値です。 設定しない場合**ASSERVERMODE**、表形式モードでは、サーバーをインストールします。|
 |MULTIDIMENSIONAL|この値は省略可能です。|  
-|POWERPIVOT|この値は省略可能です。 実際には、 **ROLE** パラメーターを設定した場合、サーバー モードは自動的に 1 に設定され、SharePoint のインストール時に **の** ASSERVERMODE [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] が省略可能になります。 詳細については、「 [コマンド プロンプトからの Power Pivot のインストール](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)」を参照してください。|  
+|POWERPIVOT|この値は省略可能です。 実際には、 **ROLE** パラメーターを設定した場合、サーバー モードは自動的に 1 に設定され、SharePoint のインストール時に **の** ASSERVERMODE [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] が省略可能になります。 詳細については、「 [コマンド プロンプトからの Power Pivot のインストール](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)」を参照してください。|  
   
   
 ## <a name="see-also"></a>参照  

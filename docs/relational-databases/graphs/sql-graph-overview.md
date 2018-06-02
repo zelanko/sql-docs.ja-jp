@@ -21,10 +21,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 8c2ad7f5b31a97de5d0bfb22074b55bd61bb825b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707050"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database を使用した処理グラフ
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ AND Person1.Name = 'John';
 ### <a name="tooling-and-ecosystem"></a>ツールとエコシステム  
 ユーザーが既存のツールとエコシステムを利用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を提供します。 バックアップと復元などのツールのインポートし、エクスポート、すぐ BCP だけ作業します。 その他のツールまたは SSIS、SSRS PowerBI などのサービスでは動作グラフ テーブル リレーショナル テーブルで処理する方法だけです。
  
- ## <a name="next-steps"></a>次の手順  
+ ## <a name="next-steps"></a>次のステップ  
 読み取り、 [SQL グラフ データベース - アーキテクチャ](./sql-graph-architecture.md)
    
 

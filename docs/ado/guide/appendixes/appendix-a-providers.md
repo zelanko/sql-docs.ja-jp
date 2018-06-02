@@ -21,11 +21,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e26659de53d43f14863e0bf83d70f5f6d3dbcfd0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4cd609a06e0d30e28a451a4308cfec337d47f68
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707510"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>付録 a: データとサービス プロバイダー
 このセクションでは、3 種類のプロバイダー。 データ プロバイダー、サービス プロバイダー、およびサービス コンポーネントです。 プロバイダーは 2 つのカテゴリに分類されます。 データとサービスを提供するものを提供するものです。 A*データ プロバイダー*独自のデータを所有し、表形式で、アプリケーションに公開します。 A*サービス プロバイダー*生成して、ADO アプリケーションの機能の拡張データを使用してサービスをカプセル化します。 サービス プロバイダーはさらとしても定義する、*サービス コンポーネント*、他のコンポーネントまたはサービス プロバイダーと連携する必要があります。
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="provider-specific-dynamic-properties"></a>プロバイダー固有の動的プロパティ
  [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、および[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトに固有の動的なプロパティが含まれます、。プロバイダー。 これらのプロパティは、ADO では組み込みのプロパティを超えるプロバイダーに固有の機能に関する情報を提供します。
 
- 接続を確立すると、これらのオブジェクトを作成するを使用して、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを**プロパティ**プロバイダー固有のプロパティを取得するオブジェクトのコレクション。 プロバイダーのマニュアルを参照してください、 [OLE DB プログラマ ガイド](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)これらの動的プロパティについての詳細。
+ 接続を確立すると、これらのオブジェクトを作成するを使用して、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを**プロパティ**プロバイダー固有のプロパティを取得するオブジェクトのコレクション。 プロバイダーのマニュアルを参照してください、 [OLE DB プログラマ ガイド](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)これらの動的プロパティについての詳細。
 
 ## <a name="service-providers"></a>サービス プロバイダー
  サービス プロバイダーを使用するには、キーワードを指定してください。 各サービス プロバイダーに関連付けられているプロバイダーに固有の動的なプロパティの対応する必要があります。 プロバイダー固有の詳細については、現在、Microsoft から提供されている各サービス プロバイダーのとおりです。

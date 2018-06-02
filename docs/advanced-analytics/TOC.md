@@ -21,7 +21,7 @@
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
 <!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
-# Install 
+# インストール 
 
 ## [データベース内分析](install/sql-machine-learning-services-windows-install.md)
 ## [スタンドアロン サーバー](install/sql-machine-learning-standalone-windows-install.md)
@@ -94,18 +94,18 @@
 
 # [操作方法](r/sql-server-machine-learning-tasks.md)
 
-## [パッケージの管理](r/r-package-management-for-sql-server-r-services.md)
+## パッケージの管理
 ### [既定のパッケージ](r/installing-and-managing-r-packages.md)
 ### [パッケージ情報の取得](r/determine-which-packages-are-installed-on-sql-server.md)
 ### [新しい Python パッケージのインストール](python/install-additional-python-packages-on-sql-server.md)
 ### [新しい R パッケージのインストール](r/install-additional-r-packages-on-sql-server.md)
-#### [R パッケージ マネージャーの使用](r/install-additional-r-packages-on-sql-server.md)
-#### [RevoScaleR の使用](r/use-revoscaler-to-manage-r-packages.md)
+#### [R パッケージ マネージャーの使用](r/use-r-package-managers-on-sql-server.md)
 #### [T-SQL の使用](r/install-r-packages-tsql.md)
-#### [miniCRAN リポジトリの使用](r/create-a-local-package-repository-using-minicran.md)
-#### [リモートの R パッケージ管理を有効にする](r/r-package-how-to-enable-or-disable.md)
-#### [R パッケージの同期](r/package-install-uninstall-and-sync.md)
-#### [R "ユーザー ライブラリ" の回避策](r/packages-installed-in-user-libraries.md)
+#### [RevoScaleR の使用](r/use-revoscaler-to-manage-r-packages.md)
+##### [リモートの R パッケージ管理を有効にする](r/r-package-how-to-enable-or-disable.md)
+##### [R パッケージの同期](r/package-install-uninstall-and-sync.md)
+#### [MiniCRAN リポジトリを作成します。](r/create-a-local-package-repository-using-minicran.md)
+#### [R パッケージを使用するためのヒント](r/packages-installed-in-user-libraries.md)
 
 ## データ探索と予測モデリング
 ### [R ライブラリとデータ型](r/r-libraries-and-data-types.md)
@@ -156,19 +156,18 @@
 
 ## [既知の問題](known-issues-for-sql-server-machine-learning-services.md)
 ## [リリース ノート](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
-## [新規および更新のアーティクル](new-updated-advanced-analytics.md)
-
-## [セットアップとトラブルシューティングのヒント](machine-learning-troubleshooting-faq.md)
-### [仮想マシンをセットアップする](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [トラブルシューティングのためのデータの収集](data-collection-ml-troubleshooting-process.md)
-### [アップグレードとインストールに関する FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [外部スクリプト実行に関する一般的な問題](common-issues-external-script-execution.md)
+## [仮想マシンをセットアップする](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
+## [トラブルシューティング](machine-learning-troubleshooting-faq.md)
+### [データ コレクション](data-collection-ml-troubleshooting-process.md)
+### [インストールとアップグレードのエラー](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [スタート パッドや外部のスクリプトの実行エラー](common-issues-external-script-execution.md)
+### [R スクリプトのエラー](r-script-execution-errors.md)
 
 ## ブログ
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [R Server](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/)
 ### [Machine Learning](https://blogs.technet.microsoft.com/machinelearning/)
 
-## フィードバック フォーラム
+## フォーラム
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [機械学習のサーバー](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

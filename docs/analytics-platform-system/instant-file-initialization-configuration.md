@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 20498cc4e2c4ad959fce263984b58e3186630cea
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: f2c1e0e17e2cbfb5816632a25ecdebe5d92ee024
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34706750"
 ---
 # <a name="instant-file-initialization-configuration"></a>ファイルの瞬時初期化の構成
 ファイルの瞬時初期化は、データ ファイルの操作をより迅速に実行を許可する SQL Server 機能です。 チェック ボックスをファイルの瞬時初期化を有効にすると、SQL Server PDW のパフォーマンスが向上します。 ただし、ビジネスのセキュリティ上のリスクを伴いますこの場合、オフのままにします。  
@@ -28,13 +29,13 @@ ms.lasthandoff: 04/19/2018
   
 1.  サーバーのバックアップで開く、**ローカル セキュリティ ポリシー**アプリケーション (`secpol.msc`)。  
   
-2.  左側のペインで **[ローカル ポリシー]**を展開し、 **[ユーザー権利の割り当て]**をクリックします。  
+2.  左側のペインで **[ローカル ポリシー]** を展開し、 **[ユーザー権利の割り当て]** をクリックします。  
   
-3.  右側のペインで、 **[ボリュームの保守タスクを実行]**をダブルクリックします。  
+3.  右側のペインで、 **[ボリュームの保守タスクを実行]** をダブルクリックします。  
   
 4.  **[ユーザーまたはグループの追加]** をクリックし、バックアップに使用される任意のユーザー アカウントを追加します。  
   
-5.  **[適用]**をクリックし、 **[ローカル セキュリティ ポリシー]** ダイアログ ボックスをすべて閉じます。  
+5.  **[適用]** をクリックし、 **[ローカル セキュリティ ポリシー]** ダイアログ ボックスをすべて閉じます。  
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>ファイルの瞬時初期化を有効または無効にする  
   
@@ -47,11 +48,11 @@ ms.lasthandoff: 04/19/2018
     > [!WARNING]  
     > ファイルの瞬時初期化を無効にすると、機能の上で説明したセキュリティの考慮事項もファイルの瞬時初期化が有効化中に削除されたファイルに適用されます。  
   
-4.  **[適用]**をクリックします。 変更は、アプライアンスのサービスが再起動したときに、SQL Server PDW では、SQL Server インスタンスを介して反映されます。 アプライアンスのサービスを今すぐ再起動するには、次を参照してください。 [PDW サービス ステータス&#40;Analytics Platform System&#41;](pdw-services-status.md)です。  
+4.  **[適用]** をクリックします。 変更は、アプライアンスのサービスが再起動したときに、SQL Server PDW では、SQL Server インスタンスを介して反映されます。 アプライアンスのサービスを今すぐ再起動するには、次を参照してください。 [PDW サービス ステータス&#40;Analytics Platform System&#41;](pdw-services-status.md)です。  
   
 5.  上記の手順を繰り返すことができます**バックアップ アカウントのアクセス許可の追加**を削除する、**ボリュームの保守タスクを実行**権限です。  
   
 ![DWConfig アプライアンス PDW の瞬時ファイル初期化](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
-ファイルの瞬時初期化に関する詳細については、次を参照してください。[ファイルの瞬時初期化](http://technet.microsoft.com/en-us/library/ms175935(v=SQL.105).aspx)です。  
+ファイルの瞬時初期化に関する詳細については、次を参照してください。[ファイルの瞬時初期化](http://technet.microsoft.com/library/ms175935(v=SQL.105).aspx)です。  
   

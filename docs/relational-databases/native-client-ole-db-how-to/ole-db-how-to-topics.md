@@ -19,10 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 59beaa60325dbab18db0e0abedd63c098b0d6fb8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708110"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB の使用法に関するトピック
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,37 +33,37 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [処理結果の操作方法に関するトピック (&) #40";"OLE DB"&"#41;](../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+-   [結果を処理方法に関するトピック&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [大規模なデータ & #40; OLE DB & #41; を設定します。](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)  
+-   [大きなデータを設定&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)  
   
--   [OLE DB データ ソース (&) #40";"OLE DB"&"#41; を列挙します。](../../relational-databases/native-client-ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
+-   [OLE DB データ ソースを列挙&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
--   [一括データのコピーを使用して IRowsetFastLoad (&) #40 です。 OLE DB & #41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
+-   [データを一括コピー IRowsetFastLoad を使用した&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
   
--   [FAST_FORWARD カーソルを取得します。](../../relational-databases/native-client-ole-db-how-to/obtain-a-fast-forward-cursor.md)  
+-   [FAST_FORWARD カーソルの取得](../../relational-databases/native-client-ole-db-how-to/obtain-a-fast-forward-cursor.md)  
   
--   [ブックマーク (&) #40";"OLE DB"&"#41; を使用して行を取得します。](../../relational-databases/native-client-ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md)  
+-   [ブックマークを使用して行を取得&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md)  
   
--   [Irow::getcolumns & #40; または irow::open #41; を使用して列をフェッチします。ISequentialStream](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
+-   [Irow::getcolumns を使用して列をフェッチ&#40;または irow::open&#41;と ISequentialStream](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
   
--   [Irow::getcolumns (&) #40";"OLE DB"&"#41; を使用して列をフェッチします。](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
+-   [Irow::getcolumns を使用して列をフェッチ&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
   
--   [変更 SQL サーバー認証のユーザー パスワード (&) #40";"OLE DB"&"#41;](../../relational-databases/native-client-ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
+-   [SQL Server 認証のユーザー パスワードの変更&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
   
--   [強化された日付と時刻の機能 (&) #40";"OLE DB"&"#41; の使用](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
+-   [強化された日付と時刻の機能の使用&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
   
--   [Filestream と OLE DB](../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)  
+-   [FILESTREAM と OLE DB](../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)  
   
--   [IROWSETFASTLOAD と ISEQUENTIALSTREAM (&) #40";"OLE DB"&"#41; を使用して SQL SERVER に BLOB データを送信します。](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
+-   [IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用して SQL SERVER に BLOB データを送信&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [大きな CLR Udt & #40; OLE DB & #41; を使用します。](../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [大きな CLR Udt を使用して&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
--   [表示列およびカタログ メタデータをスパース列 (&) #40";"OLE DB"&"#41;](../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
+-   [表示列およびカタログ メタデータのスパース列の&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
--   [統合 Kerberos 認証 (&) #40 です。 OLE DB (&) #41;](../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
+-   [統合 Kerberos 認証&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
   
--   [使用してテーブル値パラメーター (&) #40 です。 OLE DB (&) #41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+-   [テーブル値パラメーターを使用して&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client プログラミング](../../relational-databases/native-client/sql-server-native-client-programming.md)  

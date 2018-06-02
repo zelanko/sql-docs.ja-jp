@@ -20,11 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: de3984b5005114a2b8644c99706dcce48ab873e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707770"
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]クエリのストアのシステム ビューを使用してプランの選択による後退を見つけることができます。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]を検出し、潜在的なプランの選択による後退と推奨される操作に適用されるを示しています、 [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)ビュー。 問題の重要性の問題と識別されたクエリ、後退したプランの ID、比較については、基準として使用されていたプランの ID などの詳細についての情報を表示し、[!INCLUDE[tsql_md](../../includes/tsql_md.md)]修正を実行できるステートメント、問題があります。
 
-| 型 | description | datetime | score | 詳細情報 | … |
+| 型 | description | DATETIME | score | 詳細情報 | … |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間が 4 ms から 14 ミリ秒に変更されました | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | 37 ms から 84 ミリ秒に変更された CPU 時間 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -165,7 +166,7 @@ FROM sys.dm_db_tuning_recommendations
 
 検出、に加えて[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]識別された推奨事項を自動的に適用できます。 許可する場合もあります組み込みの規則が、データベースのパフォーマンスを向上する場合は、[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]インデックスを自動的に管理します。
 
-Azure SQL データベースの自動調整を有効にし、自動調整機能が、ワークロードを完全に管理できるように、次を参照してください。 [Azure ポータルを使用して Azure SQL データベースの自動調整を有効に](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automatic-tuning-enable)です。
+Azure SQL データベースの自動調整を有効にし、自動調整機能が、ワークロードを完全に管理できるように、次を参照してください。 [Azure ポータルを使用して Azure SQL データベースの自動調整を有効に](https://docs.microsoft.com/azure/sql-database/sql-database-automatic-tuning-enable)です。
 
 ときに、 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] CREATE INDEX や DROP INDEX の推奨設定を適用したインデックスの影響を受けるクエリのパフォーマンスを自動的に監視します。 影響を受けるクエリのパフォーマンスが向上する場合にのみ、新しいインデックスが保持されます。 インデックスがないのために実行速度が低下するいくつかのクエリがある場合、ドロップされたインデックスは自動的に再作成されます。
 
@@ -177,7 +178,7 @@ Azure SQL データベースの自動調整を有効にし、自動調整機能�
 
 自動インデックス管理なしユーザーが 手動でクエリを実行する必要があります[sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)パフォーマンスを向上させることがあります、詳細を使用してインデックスを作成するインデックスを検索するビューこのビューを手動でクエリのパフォーマンスの監視で提供されます。 削除するインデックスを検索するには、するために、ユーザーはほとんど使用されない検索インデックスにインデックスの運用上の使用状況の統計を監視する必要があります。
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] このプロセスを簡略化します。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] ワークロードを分析して、新しいインデックスを高速実行するクエリを識別し、使用されていないか、重複するインデックスを特定します。 詳細に変更する必要がありますのあるインデックスの id について[Azure ポータルで推奨インデックスを検索](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal)です。
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] このプロセスを簡略化します。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] ワークロードを分析して、新しいインデックスを高速実行するクエリを識別し、使用されていないか、重複するインデックスを特定します。 詳細に変更する必要がありますのあるインデックスの id について[Azure ポータルで推奨インデックスを検索](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal)です。
 
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   

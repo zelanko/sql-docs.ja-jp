@@ -26,10 +26,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9c916741b1b08e2ad4067695ca5607e11d3f81f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707430"
 ---
 # <a name="tables-and-indexes"></a>テーブルとインデックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,27 +44,27 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、プロバイダー固有の DBPROPSET_SQLSERVERCOLUMN プロパティ セットで、次のプロパティを定義しています。  
   
-|プロパティ ID|Description|  
+|プロパティ ID|説明|  
 |-----------------|-----------------|  
 |SSPROP_COL_COLLATIONNAME|型 : VT_BSTR<br /><br /> R/W: 書き込み<br /><br /> 既定値 : NULL<br /><br /> 説明: このプロパティでのみ使用が**ITableDefinition**です。 作成するときに、このプロパティで指定した文字列が使用される、[テーブルの作成](../../t-sql/statements/create-table-transact-sql.md)<br /><br /> ステートメントの使用などがあります。|  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [SQL Server テーブルを作成します。](../../relational-databases/native-client-ole-db-tables-indexes/creating-sql-server-tables.md)  
+-   [SQL Server テーブルの作成](../../relational-databases/native-client-ole-db-tables-indexes/creating-sql-server-tables.md)  
   
--   [SQL Server テーブルに列を追加します。](../../relational-databases/native-client-ole-db-tables-indexes/adding-a-column-to-a-sql-server-table.md)  
+-   [SQL Server テーブルへの列の追加](../../relational-databases/native-client-ole-db-tables-indexes/adding-a-column-to-a-sql-server-table.md)  
   
--   [SQL Server テーブルから列を削除します。](../../relational-databases/native-client-ole-db-tables-indexes/removing-a-column-from-a-sql-server-table.md)  
+-   [SQL Server テーブルからの列の削除](../../relational-databases/native-client-ole-db-tables-indexes/removing-a-column-from-a-sql-server-table.md)  
   
--   [SQL Server テーブルを削除します。](../../relational-databases/native-client-ole-db-tables-indexes/dropping-a-sql-server-table.md)  
+-   [SQL Server テーブルの削除](../../relational-databases/native-client-ole-db-tables-indexes/dropping-a-sql-server-table.md)  
   
 -   [SQL Server インデックスの作成](../../relational-databases/native-client-ole-db-tables-indexes/creating-sql-server-indexes.md)  
   
 -   [SQL Server インデックスの削除](../../relational-databases/native-client-ole-db-tables-indexes/dropping-a-sql-server-index.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client (&) #40";"OLE DB"&"#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [DROP TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
+ [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
   

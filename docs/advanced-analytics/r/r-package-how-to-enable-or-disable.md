@@ -8,25 +8,26 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 88604b48f93a7ec322e5e7f9a9bdba6b9eb2cc3c
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 997db094cb5e69e0cbf82d9a7e247cb13ec1d452
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707660"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>有効にするにまたは SQL Server のリモート パッケージの管理を無効にします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、Machine Learning のサーバーのリモート インスタンスから R パッケージの管理を有効にする方法について説明します。 パッケージの管理機能が有効にすると、リモート クライアントからデータベースにパッケージをインストールするのに RevoScaleR コマンドを使用できます。
+この記事では、クライアント ワークステーションまたは別の Machine Learning サーバーからの R パッケージのリモート管理を有効にする方法について説明します。 SQL Server で、パッケージの管理機能を有効にすると、クライアントで RevoScaleR コマンドを使用して、SQL Server にパッケージをインストールことができます。
 
 > [!NOTE]
 > 現在、R ライブラリの管理がサポートされています。ロードマップでは、Python のサポートです。
 
-既定では、SQL Server の外部のパッケージ管理機能は無効、マシン学習機能がインストールされている場合でもです。 次のセクションで説明したように、機能を有効にする別のスクリプトを実行する必要があります。
+既定では、SQL Server の外部のパッケージ管理機能は無効です。 次のセクションで説明したように、機能を有効にする別のスクリプトを実行する必要があります。
 
 ## <a name="overview-of-process-and-tools"></a>プロセスとツールの概要
 
-を有効にするにまたはパッケージの管理を無効にするには、コマンド ライン ユーティリティを使用して**RegisterRExt.exe**、に含まれている、 **RevoScaleR**パッケージです。
+を有効にするにまたは SQL Server 上のパッケージの管理を無効にするには、コマンド ライン ユーティリティを使用して**RegisterRExt.exe**、に含まれている、 **RevoScaleR**パッケージです。
 
 [有効にする](#bkmk_enable)この機能は、データベース管理者を必要とする、2 段階のプロセス: (1 回 SQL Server インスタンスの場合)、SQL Server インスタンス上のパッケージの管理を有効にし、SQL データベース (1 回で 1 に SQL Server パッケージ管理を有効にします。データベースの場合)。
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="bkmk_enable"></a> パッケージの管理を有効にします。
 
-1. 管理者特権のコマンド プロンプトを開き、ユーティリティ、RegisterRExt.exe を含むフォルダーに移動します。 既定の場所は`<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`します。
+1. SQL Server で管理者特権でコマンド プロンプトを開きおよびユーティリティ、RegisterRExt.exe を含むフォルダーに移動します。 既定の場所は`<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`します。
 
 2. 環境内の適切な引数を指定して、次のコマンドを実行します。
 
@@ -93,3 +94,8 @@ ms.lasthandoff: 05/08/2018
 
     このコマンドは、インスタンスからパッケージの管理機能を削除します。 変更を確認するには、もう一度、スタート パッド サービスを手動で再起動する必要があります。
 
+## <a name="next-steps"></a>次のステップ
+
++ [RevoScaleR を使用して新しい R パッケージをインストールするには](use-revoscaler-to-manage-r-packages.md)
++ [R パッケージをインストールするためのヒント](packages-installed-in-user-libraries.md)
++ [既定のパッケージ](installing-and-managing-r-packages.md)

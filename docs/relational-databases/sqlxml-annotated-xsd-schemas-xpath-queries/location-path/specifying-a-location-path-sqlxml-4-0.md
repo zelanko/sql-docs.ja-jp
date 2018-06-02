@@ -23,10 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c2cad3730cd0948f94adc8ad5b877fd2e921bc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708740"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>ロケーション パスの指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="location-steps"></a>ロケーション ステップ  
  ロケーション パス (絶対または相対) は、次の 3 つの部分から成るロケーション ステップで構成されます。  
   
--   **軸**  
+-   **Axis**  
   
      軸によって、ロケーション ステップで選択されるノードと、コンテキスト ノードの間のツリー リレーションシップが指定されます。 **親**、**子**、**属性**、および**self**軸がサポートされます。 場合、**子**軸を指定する場所のパスに、クエリによって選択されたすべてのノードはコンテキスト ノードの子です。 場合、**親**軸を指定すると、選択したノードはコンテキスト ノードの親ノードです。 場合、**属性**軸を指定すると、選択したノードはコンテキスト ノードの属性です。  
   

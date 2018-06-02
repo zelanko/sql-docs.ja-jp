@@ -7,45 +7,35 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5a76258825b92a09ec957f8d6f19e996eed11dba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9b0fdd8d198675720188d6ab2417be97a9280c57
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708410"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>機械学習のデータ コレクションをトラブルシューティングします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、セットアップ、構成、または機械学習の SQL Server でのパフォーマンスの問題を解決しようとしたときに収集する必要がありますのデータの種類について説明します。 このようなデータには、ログ、エラー メッセージ、およびシステム情報が含まれています。
-
-最も役に立つ情報源についても説明セルフヘルプごとに診断を実行するとします。 この情報の収集は、machine learning の SQL Server の機能に関連する問題のテクニカル サポートを要求するときにも役立ちます。
+この記事では、データ収集方法に使用するしようとすると、自分で問題を解決したり、マイクロソフト カスタマーのヘルプとサポートについて説明します。 
 
 **適用されます:** SQL Server 2016 の R Services、SQL Server 2017 機械学習のサービス (R および Python)
 
-## <a name="sql-server-and-r-versions"></a>SQL Server と R のバージョン
 
-バージョンが新規インストールまたはアップグレードするかどうかを確認します。 アップグレードである場合は、実行された方法を決定します。
+## <a name="sql-server-version-and-edition"></a>SQL Server バージョンおよびエディション
 
-- どのバージョンからアップグレードするでしたか。 
-- 以前のコンポーネントを削除しましたまたはアップグレードした後で配置しますか。
-- アップグレード中に、機能の選択を変更するか。 
+SQL Server 2016 の R Services は、統合された R サポートするように SQL Server の最初のリリースです。 SQL Server 2016 Service Pack 1 (SP1) には、主要な改良がいくつか、外部のスクリプトを実行する機能などが含まれています。 SQL Server 2016 の製品使用している場合は、SP1 のインストールを検討してくださいまたはそれ以降。
 
-### <a name="which-edition-of-sql-server-is-installed-and-which-version"></a>SQL Server のエディションがインストールされているバージョンとしますか。 
+SQL Server 2017 Python 言語統合を追加します。 以前のリリースでは、Python 機能の統合を取得できません。
 
-SQL Server R Services は、SQL Server 2016 で導入されました。 以前のバージョンは、機械学習をサポートしていません。 さらに、2016年のリリースの後続のサービス パックには、多くのバグの修正プログラムと機能強化が含まれています。 最初の手順としては、Service Pack 1 またはそれ以降のインストールを検討してください。
+エディションとバージョンでは、取得するアシスタンスは、この記事では、それぞれのビルド番号の一覧を参照してください、[バージョンの SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions)です。
 
-SQL Server の 2017 のサポートは、Python 言語まで拡張されます。 Python のサポートは、以前のリリースでは指定されませんでした。
-
-ヘルプがどのエディションとバージョンを判断する場合は、この記事では、それぞれのビルド番号の一覧を参照してください。、[バージョンの SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions)です。
-
-使用している SQL Server のエディションによっては、使用不可能、または制限付き一部の機械学習の機能可能性があります。
-
-Enterprise、Developer、Standard、および Express エディションの machine learning 機能の一覧については、次の記事を参照してください。
+使用している SQL Server のエディションによっては、使用不可能、または制限付き一部の機械学習の機能可能性があります。 次の記事 Enterprise、Developer、Standard、および Express エディションで、マシン学習機能の一覧。
 
 * [エディションと SQL Server のサポートされる機能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
-* [SQL Server のエディション間で R の機能の相違点](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)
+* [SQL Server のエディションで R、Python の機能](r/differences-in-r-features-between-editions-of-sql-server.md)
 
-### <a name="which-version-of-microsoft-r-is-installed"></a>Microsoft R のバージョンがインストールされているか。
+## <a name="r-language-and-tool-versions"></a>R 言語とツール バージョン
 
 一般に、R Services の機能と Machine Learning サービス機能を選択するときにインストールされている Microsoft R のバージョンは、SQL Server のビルド番号によって決定されます。 アップグレードまたは SQL Server 修正プログラムを適用した場合もアップグレードまたはその R コンポーネントの修正プログラムを適用します。
 
@@ -53,7 +43,7 @@ Enterprise、Developer、Standard、および Express エディションの mach
 
 バインディングと呼ばれるプロセスで、SQL Server データベース エンジンから R サーバー コンポーネントを個別にアップグレードすることができます。 そのため、SQL Server で R コードを実行するときに使用する R のバージョンは、SQL Server のインストールされているバージョンと最新の R バージョンに、サーバーを移行したかどうかに応じて異なる場合があります。
 
-#### <a name="determine-the-r-version"></a>R のバージョンを調べる
+### <a name="determine-the-r-version"></a>R のバージョンを調べる
 
 R バージョンを確認する最も簡単な方法は、次のようなステートメントを実行して、ランタイム プロパティの取得には。
 
@@ -112,9 +102,7 @@ R コンソールには、スタートアップ時にバージョン情報が表
     *Loading Microsoft R Server packages, version 9.1.0.*
 
 
-### <a name="what-version-of-python-is-installed"></a>Python のバージョンがインストールされているか。
-
-Python のサポートは、SQL Server 2017 Community Technology Preview (CTP) 2.0 でのみ使用可能な以降です。
+## <a name="python-versions"></a>Python のバージョン
 
 Python のバージョンを取得するいくつかの方法はあります。 最も簡単な方法は、Management Studio またはその他の SQL クエリ ツールからこのステートメントの実行には。
 
@@ -143,7 +131,7 @@ Machine Learning のサービスが実行されていない場合は、pythonlau
 > [!NOTE]
 > SQL Server 2017 では、Python と R の両方をインストールした、作業ディレクトリとプールのワーカー アカウントは、R および Python 言語で共有されます。
 
-### <a name="are-multiple-instances-of-r-or-python-installed"></a>R の複数のインスタンスは、または Python をインストールしますか。
+## <a name="are-multiple-instances-of-r-or-python-installed"></a>R の複数のインスタンスは、または Python をインストールしますか。
 
 R ライブラリの 1 つ以上のコピーが、コンピューターにインストールされているかどうかを確認します。 この重複は、場合に発生することができます。
 
@@ -156,7 +144,7 @@ R ライブラリの 1 つ以上のコピーが、コンピューターにイン
 
 複数のライブラリまたはランタイムがインストールされていることを確認する場合は、SQL Server インスタンスによって使用されている Python や R ランタイムに関連付けられているエラーのみを取得することを確認します。
 
-## <a name="errors-and-messages"></a>エラーとメッセージ
+## <a name="origin-of-errors"></a>エラーの発生元
 
 R コードを実行しようとしたときに表示されるエラーは、次のソースのいずれかから取得できます。
 
@@ -171,7 +159,7 @@ R コードを実行しようとしたときに表示されるエラーは、次
 - Management Studio を使用しているか。 外部アプリケーションか。
 - 実行中の R コード、リモート クライアントで、またはストアド プロシージャ内で直接?
 
-### <a name="what-errors-has-sql-server-logged"></a>SQL Server ではどのようなエラーを記録するか。
+## <a name="sql-server-log-files"></a>SQL Server ログ ファイル
 
 最新の SQL Server エラー ログを取得します。 エラー ログの完全なセットは、次の既定のログ ディレクトリからファイルで構成されます。
 
@@ -187,7 +175,7 @@ R コードを実行しようとしたときに表示されるエラーは、次
 > 正確なフォルダー名は、インスタンス名によって異なります。
 
 
-### <a name="what-errors-were-returned-by-the-spexecuteexternalscript-command"></a>どのようなエラーは、sp_execute_external_script コマンドによって返されたか。
+## <a name="errors-returned-by-spexecuteexternalscript"></a>Sp_execute_external_script から返されるエラー
 
 Sp_execute_external_script コマンドを実行するときに存在する場合、返されたエラーの完全なテキストを取得します。 
 
@@ -213,7 +201,7 @@ with result sets (([hello] int not null));
 go
 ```
 
-### <a name="what-errors-are-generated-by-the-extensibility-framework"></a>拡張性フレームワークでは、どのようなエラーが発生しますか。
+## <a name="errors-generated-by-the-extensibility-framework"></a>拡張性フレームワークによって生成されるエラー
 
 SQL Server では、外部スクリプトの言語ランタイムに個別のログを生成します。 また、Python や R 言語では、これらのエラーは生成されません。 言語固有の起動ツールや、サテライト プロセスなど、SQL server 拡張機能コンポーネントから生成します。
 
@@ -244,7 +232,7 @@ SQL Server では、外部スクリプトの言語ランタイムに個別のロ
 
 * *サテライト セッション マネージャーの初期化に失敗しました*
 
-### <a name="are-there-any-related-system-events"></a>関連するシステム イベントではありますか。
+## <a name="system-events"></a>システム イベント
 
 1. Windows イベント ビューアーを開き、検索、**システム イベント**文字列が含まれるメッセージのログ*スタート パッド*です。 
 2. ExtLaunchErrorlog ファイルを開くし、文字列検索*ErrorCode*です。 ErrorCode に関連付けられているメッセージを確認します。
@@ -257,7 +245,7 @@ SQL Server では、外部スクリプトの言語ランタイムに個別のロ
 
 * *タイムアウトは、SQL Server スタート パッド (MSSQLSERVER) サービスを接続するを待っているときに (120000 ミリ秒) に到達しました。* 
 
-### <a name="did-any-components-start-and-then-crash"></a>でしたすべてのコンポーネントを起動し、クラッシュしますか。
+## <a name="dump-files"></a>ダンプ ファイル
 
 デバッグに関する知識を持つ場合は、スタート パッドの不具合を分析する、ダンプ ファイルを使用することができます。
 
@@ -268,7 +256,7 @@ SQL Server では、外部スクリプトの言語ランタイムに個別のロ
 正確な場所は、システムによって異なる可能性があり、C ドライブ以外のドライブにあります。 機械学習がインストールされているインスタンスのログを取得することを確認します。 
 
 
-## <a name="related-tools-and-configuration"></a>関連ツールと構成
+## <a name="configuration-settings"></a>構成設定
 
 このセクションには、その他のコンポーネントまたは R または Python スクリプトを実行すると、エラーの原因ができるプロバイダーが一覧表示します。
 
@@ -319,19 +307,6 @@ SQL Server のプロセスとその機能に必要なすべてのフォルダー
 
 2. SQL Server のファイアウォール規則が作成されているかどうかを決定します。 セキュリティ上の理由から、既定のインストールでは、その可能性があります可能でないインスタンスに接続するリモート R または Python クライアント。 詳細については、次を参照してください。 [SQL Server への接続のトラブルシューティング](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)です。
 
-### <a name="can-you-run-r-script-outside-t-sql"></a>T-SQL の外部 R スクリプトを実行できますか。
-
-その他の R ツールを使用して、SQL Server インスタンスに関連付けられている R ランタイムを実行しようとすることができます。 このように、必要なライブラリがインストールされているかどうかを確認できます。
-
-R の基本インストールには、スクリプトの実行を対話形式のコマンド ラインで、できるだけ RGui から R スクリプトを実行に使用できる複数のツールが含まれています。
-
-R ランタイムが機能している、スクリプトがエラーを返す場合は、R Tools for Visual Studio など、専用の R 開発環境でスクリプトをデバッグしようとすることをお勧めします。
-
-お勧め確認し、R とデータベース エンジンの間でデータを移動するときに発生する可能性がありますのあるデータ型に関する問題を修正するスクリプトを少し修正することです。 詳細については、次を参照してください。 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)です。
-
-さらに、ストアド プロシージャとしてより簡単に使用した形式で、R スクリプトをバンドルするのに sqlrutils パッケージを使用することができます。 詳細については、以下をご覧ください。
-* [Sqlrutils パッケージを使用して R コードをストアド プロシージャを生成します。](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
-* [Sqlrutils を使用してストアド プロシージャを作成します。](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## <a name="see-also"></a>参照
 
