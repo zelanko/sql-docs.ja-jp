@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfilee"
-ms.openlocfilehash: eb9cced037ab7fcf7072e6db56cb645333a02311
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 18b81434c2e863ef3fc4db6ce2458f236dafdd53
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573874"
 ---
 # <a name="unlock-element-xmla"></a>Unlock 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  上の指定されたロックを解除、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
+  Analysis Services インスタンスで指定されたロックのロックを解除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,13 +46,13 @@ ms.lasthandoff: 05/10/2018
 |親要素|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
 |子要素|[ID](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Unlock** コマンドは、現在アクティブなトランザクションのコンテキスト内で確立されたロックを解除します。 **Unlock** コマンドを明示的に発行できるのは、データベース管理者またはサーバー管理者だけです。  
   
  すべてのロックは、現在のトランザクションのコンテキスト内で保持されます。 現在のトランザクションがコミットまたはロールバックされると、そのトランザクション内で定義されたすべてのロックは自動的に解放されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
  [要素をロック&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)   
- [コマンドと #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+ [コマンド&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

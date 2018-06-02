@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe96b343afe9cdf5f8f2f301c9c0c8eade9dd67f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d3275114e1442634a462470487bc4c5f40d8dac6
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574794"
 ---
 # <a name="rowset-data-type-xmla"></a>Rowset データ型 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,9 +46,9 @@ ms.lasthandoff: 05/10/2018
 |------------------|-------------|  
 |親要素|なし|  
 |子要素|[行](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)|  
-|派生要素|[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|派生要素|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  XML には、要素名および属性名として使用できない文字があります。 この名前付けの制約を解決するには、XML for Analysis (XMLA) をサポートしていますで定義されたエンコード[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 XML 1.0 仕様に従った無効な XML 名の文字が含まれている列名、に対しては、XMLA は、無効な Unicode 文字のエンコードに対応する 16 進値を使用します。 16 進数の値は _x としてエスケープ*HHHH*\_ここで、 *HHHH*最上位ビットの最初の注文の文字の 4 桁の 16 進数 ucs-2 コードを表します。 たとえば、XMLA では "Order Details" という名前が Order_x0020_Details とエンコードされます。この場合、空白文字が対応する 16 進数コードに置換されています。  
   
  エンコードのために Extensible Stylesheet Language (XSL) 変換が難しくなる可能性があります。 実際、クイック検索をサポートするために、列名をエンコードされていない、追加、 **sql:field**次の例で示すように、行セットの XML スキーマの列ごとに属性します。  
@@ -212,7 +213,7 @@ ms.lasthandoff: 05/10/2018
 </root>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
  [XML データ型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

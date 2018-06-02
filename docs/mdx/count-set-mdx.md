@@ -1,31 +1,20 @@
 ---
 title: Count (セット) (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- COUNT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Count function [MDX]
-ms.assetid: 22f530e9-f8e1-4608-affa-9a2bc0821591
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 5c720fb81ef0e7fe9a2d79a4a7d04de68912533b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4da622ef883ed1fabba137b0d30adcbdd7e32ded
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577604"
 ---
 # <a name="count-set-mdx"></a>Count (セット) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +36,7 @@ Set_Expression.Count
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Count (セット)** 関数を追加または使用する構文に応じて、空のセルを除外します。 空のセルの除外またはを使用して含まれている標準の構文を使用する場合、 **EXCLUDEEMPTY**または**INCLUDEEMPTY**フラグにより、それぞれします。 代替構文を使用した場合、空白セルは常に対象に含められます。  
   
  空のセル セットの数に、除外する、標準の構文と省略可能なを使用して**EXCLUDEEMPTY**フラグ。  
@@ -106,13 +95,13 @@ WHERE ([Geography].[State-Province].x,
  [カウント&#40;ディメンション&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
  [カウント&#40;階層レベル&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
  [カウント&#40;組&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel & #40 です。MDX と #41 です。](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers & #40 です。MDX と #41 です。](../mdx/addcalculatedmembers-mdx.md)   
- [Hierarchize (& a) #40 です。MDX と #41 です。](../mdx/hierarchize-mdx.md)   
- [プロパティ & #40 です。MDX と #41 です。](../mdx/properties-mdx.md)   
- [集計 & #40 です。MDX と #41 です。](../mdx/aggregate-mdx.md)   
- [フィルターと #40 です。MDX と #41 です。](../mdx/filter-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
+ [プロパティ&#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [集計&#40;MDX&#41;](../mdx/aggregate-mdx.md)   
+ [フィルター &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

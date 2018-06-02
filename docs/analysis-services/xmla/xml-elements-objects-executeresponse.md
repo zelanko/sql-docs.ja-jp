@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 30e63e8275c018eeef7603b46170709770e5cb09
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a1ff44c8e2fb23e40aac30e70c73b4d260145bfd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576284"
 ---
 # <a name="xml-elements---objects---executeresponse"></a>XML 要素のオブジェクトの ExecuteResponse
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  インスタンスによって返される情報を含む[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]への応答、 [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドの呼び出しです。  
+  応答には、Analysis Services のインスタンスによって返される情報が含まれています、 [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドの呼び出しです。  
   
  **Namespace** urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql} の分析  
   
@@ -45,10 +46,10 @@ ms.lasthandoff: 05/10/2018
 |親要素|なし|  
 |子要素|[戻り値](../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **ExecuteResponse**要素は最上位の要素の SOAP 応答の本体、 **Execute**メソッドです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
  [DiscoverResponse 要素&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)   
  [オブジェクト&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects.md)  
   

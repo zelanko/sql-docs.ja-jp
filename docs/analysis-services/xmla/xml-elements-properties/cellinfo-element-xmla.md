@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 403074f1189bafc098f3fb9d76a19552407f0024
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3ada531d33baf7007d08ac8a719fca2bf8f1b2e4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574254"
 ---
 # <a name="cellinfo-element-xmla"></a>CellInfo 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 |親要素|[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)|  
 |子要素|1 つ以上のセル プロパティ定義|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **CellInfo**要素によって返される多次元データセット内に含まれるセルのセル プロパティのコレクションを格納、**ルート**要素を使用して、 **MDDataSet**データ型。 内の各セル プロパティ、 **CellInfo**要素がそれぞれに個別の XML 要素によって定義されている、**名前**属性および**型**属性。 **名前**セル プロパティの属性は、OLE DB の XML 要素によって表される OLAP セル プロパティの名前に対応し、**型**セルの XML データ型を表す属性プロパティ。 含まれるセルのセル プロパティの値を識別する XML 要素の名前が使用される、 **CellData**の要素、**ルート**要素。  
   
  セル プロパティ定義の構文は次のとおりです。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/10/2018
 </OlapInfo>  
 ```  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 48e2b36cd38e1f505ac6d788fdc1f88aec9f19df
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 18c0a9e1db03ef30b54b788d16223e70bc9e9059
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575504"
 ---
 # <a name="id-element-xmla"></a>ID 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 |特性|説明|  
 |--------------------|-----------------|  
-|データ型と長さ|文字列|  
+|データ型と長さ|String|  
 |既定値|なし|  
 |Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
   
@@ -45,12 +46,12 @@ ms.lasthandoff: 05/10/2018
 |親要素|[ロック](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)、[のロックを解除](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **ID**要素には、ロックを識別するために使用するグローバル一意識別子 (GUID) が含まれています。  
   
-## <a name="see-also"></a>参照  
- [Object 要素 & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
+## <a name="see-also"></a>参照
+ [オブジェクトの要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
  [Mode 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)   
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

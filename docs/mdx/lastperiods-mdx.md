@@ -1,31 +1,20 @@
 ---
 title: LastPeriods (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- LASTPERIODS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LastPeriods function
-ms.assetid: a15df7a1-b261-48ed-aacc-d2804db8dbf7
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 35d093cbb4fea7cf02aef5835afc300f8cf74698
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 102382bf2acc2300d5862b48c5341c218e785275
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578984"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ LastPeriods(Index [ ,Member_Expression ] )
  *メンバー式*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  場合は、指定した期間の数が正の値、 **LastPeriods**後退したメンバーで始まるメンバーのセットを返します*インデックス*-指定したメンバー式、および最後に、指定されたメンバーから 1 です。 関数によって返されるメンバーの数と等しい*インデックス*です。  
   
  指定した期間数が負の場合、 **LastPeriods**関数は、指定されたメンバーで始まるメンバーのセットが返され、潜在顧客をメンバーで終わる (-*インデックス*- 1) 指定されたメンバーからです。 関数によって返されるメンバーの数がの絶対値と等しい*インデックス*です。  
@@ -78,6 +67,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

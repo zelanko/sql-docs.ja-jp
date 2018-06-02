@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5f2519eb45be36526bbd5ac0450eb8a07b622aef
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3dd4d8f56d59eecc61c164e76fe76b776797af0f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577764"
 ---
 # <a name="attributes-element-xmla"></a>Attributes 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
 ```xml  
   
-<Insert > <!-- or one of the elements listed below in the Element Relationships table -->  
+<Insert > <!-- or one of the elements listed below in the Element relationships table -->  
    ...  
    <Attributes>  
       <Attribute>...</Attribute>  
@@ -47,9 +48,9 @@ ms.lasthandoff: 05/10/2018
 |親要素|[挿入](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)、[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)、[場所](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)|  
 |子要素|[属性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

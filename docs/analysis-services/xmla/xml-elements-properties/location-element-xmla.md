@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ea049b70ee2aa41a1e2fc1e7204be658f4f0bd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4953981e7657706a986e9a2407f6786ff676a854
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575604"
 ---
 # <a name="location-element-xmla"></a>Location 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
 ```xml  
   
-<Backup> <!-- or one of the elements listed below in the Element Relationships table -->  
+<Backup> <!-- or one of the elements listed below in the Element relationships table -->  
    ...  
    <Location>  
 ```  
@@ -65,8 +66,8 @@ ms.lasthandoff: 05/10/2018
 |[[復元]](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)|[ConnectionString](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md)、 [DataSourceID](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md)、 [%datasourcetype](../../../analysis-services/xmla/xml-elements-properties/datasourcetype-element-xmla.md)、[ファイル](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md)、[フォルダー](../../../analysis-services/xmla/xml-elements-properties/folders-element-xmla.md)|  
 |[同期](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)|[ConnectionString](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md)、 [DataSourceID](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md)、 [%datasourcetype](../../../analysis-services/xmla/xml-elements-properties/datasourcetype-element-xmla.md)、[フォルダー](../../../analysis-services/xmla/xml-elements-properties/folders-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
- **バックアップ**コマンド、**場所**要素のリモート インスタンスのリモート バックアップ ファイルの作成に関する情報を提供[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+## <a name="remarks"></a>コメント  
+ **バックアップ**コマンド、**場所**要素は、Analysis Services のリモート インスタンスのリモート バックアップ ファイルの作成についての情報を提供します。  
   
  **復元**コマンド、**場所**要素を識別して、リモートへの接続に関する情報を提供[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]リモート復元に使用するリモート バックアップ ファイルと同様に、インスタンスそのリモート インスタンス上のパーティションです。  
   
@@ -74,8 +75,8 @@ ms.lasthandoff: 05/10/2018
   
  バックアップと復元のリモート インスタンスの詳細については、次を参照してください。[をバックアップおよび復元するオブジェクト (XMLA)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)です。  
   
-## <a name="see-also"></a>参照  
- [BackupRemotePartitions 要素 & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md)   
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [BackupRemotePartitions 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md)   
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

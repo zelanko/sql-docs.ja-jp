@@ -9,21 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e65ba594cee3bf24679326a9d0cd75451034b9ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0edfa63feef9af48290e5fe845d9c0cf02f53e29
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574594"
 ---
 # <a name="xml-elements---commands"></a>コマンドの XML 要素
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   このリファレンス セクションには、Analysis (XMLA) 要素内で使用できる XML が含まれています、**コマンド**実行中に、 **Execute**メソッドの呼び出しです。  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
-|[Alter 要素 (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|によって使用される Analysis Services スクリプト言語 (ASSL) 要素が含まれています、 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドのインスタンス上のオブジェクトを変更する[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。|  
-|[Backup 要素](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データベースをバックアップ ファイルにバックアップします。|  
-|[バッチ要素](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|1 つまたは複数の XML for Analysis (XMLA) コマンドとして実行バッチ操作では、順番またはのインスタンスに同時に[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。|  
+|[Alter 要素 (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|によって使用される Analysis Services スクリプト言語 (ASSL) 要素が含まれています、 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Analysis Services のインスタンス上のオブジェクトを変更するメソッド。|  
+|[Backup 要素](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|バックアップ ファイルを Analysis Services データベースをバックアップします。|  
+|[バッチ要素](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|順番、または Analysis Services のインスタンスに同時に、1 つまたは複数の XML をバッチ操作として Analysis (XMLA) コマンドを実行します。|  
 |[BeginTransaction 要素](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)|Analysis Services インスタンスに対する現在のセッションで、トランザクションを開始します。|  
 |[Cancel 要素](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)|Analysis Services インスタンス上で現在実行中のコマンドを取り消します。|  
 |[ClearCache 要素](../../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md)|Analysis Services インスタンス上の指定されたオブジェクトのメモリ キャッシュを消去します。|  

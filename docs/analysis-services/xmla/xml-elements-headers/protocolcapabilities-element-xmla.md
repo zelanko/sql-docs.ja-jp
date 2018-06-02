@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29ad501e7a29e77c1f6b1ed04e497c2881b9a7d0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 85ddeb22fac03e5ae7f66521ac3ca8a46e210fe7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574784"
 ---
 # <a name="protocolcapabilities-element-xmla"></a>ProtocolCapabilities 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  インスタンス間のプロトコル機能を識別する、SOAP 要求メッセージの SOAP ヘッダーを使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]とクライアント アプリケーション。  
+  Analysis Services のインスタンスとクライアント アプリケーション間のプロトコル機能を識別するのに、SOAP 要求メッセージの SOAP ヘッダーを使用します。  
   
  **名前空間** `http://schemas.microsoft.com/analysisservices/2003/engine`  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/10/2018
 |親要素|なし|  
 |子要素|[機能](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **ProtocolCapabilities**要素により、クライアント アプリケーションでバイナリ XML や圧縮サポートなどのプロトコル機能をネゴシエートする、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]いつでもインスタンス。 プロトコルのネゴシエーションは以下の手順で行われます。  
   
 1.  クライアント アプリケーションは、SOAP ヘッダー内に **ProtocolCapabilities** 要素を含む SOAP 要求を送信することにより、自らのプロトコル機能を示します。  
@@ -71,8 +72,8 @@ ms.lasthandoff: 05/10/2018
   
  プロトコル機能を明示的にネゴシエートする必要はありません。 つまり、クライアント アプリケーションで **ProtocolCapabilities** 要素を SOAP 要求に含める必要はありません。 SOAP 要求が含まれていない場合、 **ProtocolCapabilities**要素、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスは SOAP 要求と同じ形式を使用して応答を行います。  
   
-## <a name="see-also"></a>参照  
- [管理接続およびセッション (&) #40 です。XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [ヘッダーと #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
+## <a name="see-also"></a>参照
+ [接続およびセッション管理&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [ヘッダー &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   

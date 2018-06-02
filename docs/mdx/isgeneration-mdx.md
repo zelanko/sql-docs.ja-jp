@@ -1,31 +1,20 @@
 ---
 title: IsGeneration (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ISGENERATION
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- IsGeneration function
-ms.assetid: fd11d2e0-d81d-45af-ac45-c98634d05550
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b40d895af5298cf3538280a3875363401819930d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 938ed8cbfab24643ceb1294a3831290c43e1bb5c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578644"
 ---
 # <a name="isgeneration-mdx"></a>IsGeneration (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ IsGeneration(Member_Expression, Generation_Number)
  *Generation_Number*  
  指定されたメンバーの評価対象となる世代を指定する有効な数値式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **IsGeneration**関数が返される**true**指定されたメンバーが指定された世代番号内にある場合。 関数を返しますそれ以外の場合、 **false**です。 また、指定されたメンバーは、空のメンバーに評価された場合、 **IsGeneration**関数が返される**false**です。  
   
  世代インデックスの作成上の目的から、リーフ メンバーの世代インデックスは 0 になっています。 非リーフ メンバーの世代インデックスを判別するには、まず指定されたメンバーのすべての子メンバーの和集合から最高の世代インデックスを取得し、そのインデックスに 1 を加算します。 非リーフ メンバーの世代インデックスはこのような方法で決定されるので、1 つの非リーフ メンバーが複数の世代に属することもあり得ます。  
@@ -65,6 +54,6 @@ IsGeneration(Member_Expression, Generation_Number)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

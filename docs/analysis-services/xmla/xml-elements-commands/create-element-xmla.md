@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eb6a4e848b35a31feeef31bb8e304ba43a8577f3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 78cdf8b38828e8b9f96a89ffc026ec39ae40366b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574574"
 ---
 # <a name="create-element-xmla"></a>Create 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  によって使用される Analysis Services スクリプト言語 (ASSL) 要素が含まれています、 **Execute**でオブジェクトを作成する方法、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
+  によって使用される Analysis Services スクリプト言語 (ASSL) 要素が含まれています、 **Execute**メソッドを Analysis Services インスタンス上のオブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,12 +49,12 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>属性  
   
-|属性|Description|  
+|属性|説明|  
 |---------------|-----------------|  
 |AllowOverwrite|省略可能で、 **Boolean** 型の属性。 かどうかは True に設定すると、オブジェクトで定義されている、 **ObjectDefinition**要素は、上の既存のオブジェクトを上書きすることができます、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。 この属性が省略されている場合、または False に設定されている場合は、オブジェクトが既に存在するとエラーが発生します。|  
 |スコープ|省略可能な**Enum**属性。 定義されているオブジェクトの存続期間を定義、 **ObjectDefinition**要素。 この属性を省略するで定義されたオブジェクト、 **ObjectDefinition**要素が上に保持されます、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。 次の値は、入手できます。<br /><br /> *セッション*: で定義されているオブジェクト、 **ObjectDefinition**要素は、XML for Analysis (XMLA) セッション中にのみ存在します。<br />                  使用すると、*セッション*を設定する、 **ObjectDefinition**要素を含めることができますのみ[ディメンション](../../../analysis-services/scripting/objects/dimension-element-assl.md)、[キューブ](../../../analysis-services/scripting/objects/cube-element-assl.md)、または[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL の要素。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  各**作成**操作で指定された親の下の 1 つの主要なオブジェクトの作成、 **ParentObject**要素。 親オブジェクトが省略された場合、作成先の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスと見なされます。 主要なオブジェクトの親が作成先のインスタンスでない場合には、これによってエラーが発生します。  
   
 ## <a name="example"></a>例  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/10/2018
 </Create>  
 ```  
   
-## <a name="see-also"></a>参照  
- [コマンドと #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>参照
+ [コマンド&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

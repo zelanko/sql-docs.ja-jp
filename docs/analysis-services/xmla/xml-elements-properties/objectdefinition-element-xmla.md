@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 339c926bf4c25eb4dd1f8c7b16fdcd9009b0f504
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 71a8b5fe9e5fe1778ca941a597f86fb13249d623
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575894"
 ---
 # <a name="objectdefinition-element-xmla"></a>ObjectDefinition 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  インスタンス上のオブジェクトを作成または変更に使用される 1 つまたは複数の Analysis Services スクリプト言語 (ASSL) 要素を含む[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+  Analysis Services のインスタンス上のオブジェクトを作成または変更に使用される 1 つまたは複数の Analysis Services スクリプト言語 (ASSL) 要素が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 |親要素|[Alter](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)、[作成](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
 |子要素|必須の ASSL 要素。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクトを定義するために使用される 1 つ以上の ASSL 要素です。 ASSL の詳細については、次を参照してください。[プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="example"></a>例  
  次の例は、という名前の空のデータベースを作成**テスト データベース**上、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/10/2018
 </Create>  
 ```  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

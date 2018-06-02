@@ -14,28 +14,21 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c73453f855dda07d082eac48328ec29e2631746
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 306c7bcd764ed70f23c51667580fb9f8e79f0e65
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563950"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC Driver のシステム要件
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  データにアクセスする、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]を使用して、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]、次のコンポーネントがコンピューターにインストールする必要があります。  
-  
--   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]  
-  
-     Microsoft JDBC Driver は、以下のリンクで Microsoft ダウンロード センターからダウンロードできます。 
-     * [SQL Server 用 Microsoft JDBC Driver 6.4](http://go.microsoft.com/fwlink/?linkid=868290)
-     * [SQL Server 用 Microsoft JDBC Driver 6.2](http://go.microsoft.com/fwlink/?linkid=852460)
-     * [Microsoft JDBC Driver 6.0 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841535)
-     * [Microsoft JDBC Driver 4.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841534) 
-     * [Microsoft JDBC Driver 4.1 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 
-  
--   Java ランタイム環境  
-  
+  データにアクセスする、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]を使用して、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]、次のコンポーネントがコンピューターにインストールする必要があります。
+
+- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([ダウンロード](download-microsoft-jdbc-driver-for-sql-server.md))
+- Java ランタイム環境
+
 ## <a name="java-runtime-environment-requirements"></a>Java ランタイム環境の要件  
  SQL Server 用 Microsoft JDBC Driver 6.4 から始めて、Sun Java SE Development Kit (JDK) 9.0 および Java ランタイム環境 (JRE) 9.0 サポートされます。
 
@@ -45,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  以降で、 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]、JDBC 4.0 API を包含する Java Database Connectivity (JDBC) Spec API に対する JDBC ドライバーのサポートが拡張されています。 JDBC 4.0 API は、Sun Java SE Development Kit (JDK) 6.0 および Java ランタイム環境 (JRE) 6.0 の一部として導入されました。 JDBC 4.0 は、JDBC 3.0 API のスーパーセットです。  
   
- 展開するときに、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Windows および UNIX のオペレーティング システム インストール パッケージを使用する必要があります*sqljdbc _\<バージョン > _enu.exe*と*sqljdbc _\<バージョン > _enu.tar.gz*、それぞれします。 JDBC Driver を展開する方法の詳細については、次を参照してください。 [JDBC Driver の展開](../../connect/jdbc/deploying-the-jdbc-driver.md)トピックです。  
+ 展開するときに、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Windows および UNIX のオペレーティング システム インストール パッケージを使用する必要があります*sqljdbc _\<バージョン > _enu.exe*、および*sqljdbc _\<バージョン > _enu.tar.gz*、それぞれします。 JDBC Driver を展開する方法の詳細については、次を参照してください。 [JDBC Driver の展開](../../connect/jdbc/deploying-the-jdbc-driver.md)トピックです。  
   
 **SQL Server 用 Microsoft JDBC Driver 6.4:**  
 
@@ -55,14 +48,14 @@ ms.lasthandoff: 05/03/2018
   
   SQL Server 用 Microsoft JDBC ドライバー 6.4 に含まれている 3 つの JAR ファイルによって提供されるサポートを以下に示します。  
   
-  |JAR|JDBC バージョン準拠|推奨される Java バージョン|Description|  
+  |JAR|JDBC バージョン準拠|推奨される Java バージョン|説明|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.4.0.jre7.jar|4.1|7|Java Runtime Environment (JRE) 7.0 が必要です。 JRE 6.0 または低い例外をスローを例外を使用します。<br /><br /> 6.4 の新機能が含まれます Linux、Kerberos、クロス ドメインの認証に Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウト、SPN に領域の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備された。ステートメント ハンドルの再利用します。 |  
-|mssql-jdbc-6.4.0.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低い例外をスローを例外を使用します。<br /><br /> 6.4 の新機能が含まれます Linux、Kerberos、クロス ドメインの認証に Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウト、SPN に領域の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備された。ステートメント ハンドルの再利用します。 |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Java Runtime Environment (JRE) 9.0 が必要です。 JRE 8.0 または低い例外をスローを例外を使用します。<br /><br /> 6.4 の新機能が含まれます Linux、Kerberos、クロス ドメインの認証に Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウト、SPN に領域の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備された。ステートメント ハンドルの再利用します。 |    
+|mssql-jdbc-6.4.0.jre7.jar|4.1|7|Java Runtime Environment (JRE) 7.0 が必要です。 JRE 6.0 または低い例外をスローを例外を使用します。<br /><br /> 6.4 の新機能が含まれます Linux、Kerberos、クロス ドメインの認証に Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウト、SPN に領域の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備された。ステートメント ハンドルを再利用します。 |  
+|mssql-jdbc-6.4.0.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低い例外をスローを例外を使用します。<br /><br /> 6.4 の新機能が含まれます Linux、Kerberos、クロス ドメインの認証に Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウト、SPN に領域の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備された。ステートメント ハンドルを再利用します。 |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Java Runtime Environment (JRE) 9.0 が必要です。 JRE 8.0 または低い例外をスローを例外を使用します。<br /><br /> 6.4 の新機能が含まれます Linux、Kerberos、クロス ドメインの認証に Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウト、SPN に領域の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備された。ステートメント ハンドルを再利用します。 |    
 
 
-  JDBC ドライバー 6.4 はプロジェクトに追加 Maven POM で次のコードを追加することでは、Maven の中央リポジトリもあります。XML 
+  JDBC ドライバー 6.4 も使用可能な Maven 中央リポジトリであり POM で次のコードを追加することによって、Maven プロジェクトに追加できます。XML 
   
  ```xml
 <dependency>
@@ -79,12 +72,12 @@ ms.lasthandoff: 05/03/2018
   
  SQL Server 用 Microsoft JDBC Drivers 6.0 と 4.2 に含まれている 2 つの JAR ファイルによって提供されるサポートを以下に示します。  
   
-|JAR|JDBC バージョン準拠|推奨される Java バージョン|Description|  
+|JAR|JDBC バージョン準拠|推奨される Java バージョン|説明|  
 |---------|-----------------------------|----------------------|-----------------|   
 |mssql-jdbc-6.2.1.jre7.jar|4.1|7|Java Runtime Environment (JRE) 7.0 が必要です。 JRE 6.0 または低い例外をスローを例外を使用します。<br /><br /> 6.2 で新機能: Linux、Kerberos、クロス ドメインの認証に Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウト、SPN に領域の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルを再利用します。 |  
 |mssql-jdbc-6.2.1.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低い例外をスローを例外を使用します。<br /><br /> 6.2 で新機能: Linux、Kerberos、クロス ドメインの認証に Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウト、SPN に領域の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルを再利用|    
 
-  JDBC ドライバー 6.2 はプロジェクトに追加 Maven POM で次のコードを追加することでは、Maven の中央リポジトリもあります。XML 
+  JDBC ドライバー 6.2 も使用可能な Maven 中央リポジトリであり POM で次のコードを追加することによって、Maven プロジェクトに追加できます。XML 
   
  ```xml
 <dependency>
@@ -102,7 +95,7 @@ ms.lasthandoff: 05/03/2018
   
  SQL Server 用 Microsoft JDBC Drivers 6.0 と 4.2 に含まれている 2 つの JAR ファイルによって提供されるサポートを以下に示します。  
   
-|JAR|JDBC バージョン準拠|推奨される Java バージョン|Description|  
+|JAR|JDBC バージョン準拠|推奨される Java バージョン|説明|  
 |---------|-----------------------------|----------------------|-----------------|   
 |sqljdbc41.jar|4.1|7|Java Runtime Environment (JRE) 7.0 が必要です。 JRE 6.0 または低い例外をスローを例外を使用します。<br /><br /> 6.0 と 4.2 のパッケージの新機能には、JDBC 4.1 準拠と一括コピーが含まれています。<br /><br /> さらに、6.0 のパッケージのみの新機能が含まれます: Always encrypted により、テーブル値パラメーターの場合は、Azure Active Directory 認証、Always On 可用性グループのパラメーター メタデータの取得の改善に透過的な接続の準備クエリと国際化ドメイン名 (IDN)|  
 |sqljdbc42.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低い例外をスローを例外を使用します。<br /><br /> 6.0 と 4.2 のパッケージの新機能には、JDBC 4.1 準拠、JDBC 4.2 準拠、一括コピーが含まれています。<br /><br /> さらに、6.0 のパッケージのみの新機能が含まれます: Always encrypted により、テーブル値パラメーターの場合は、Azure Active Directory 認証、Always On 可用性グループのパラメーター メタデータの取得の改善に透過的な接続の準備クエリと国際化ドメイン名 (IDN)|  
@@ -111,11 +104,11 @@ ms.lasthandoff: 05/03/2018
   
  JDBC Driver 4.1 には、インストール パッケージごとに 1 つの JAR クラス ライブラリが含まれています: **sqljdbc41.jar**です。  
     
-|JAR|Description|  
+|JAR|説明|  
 |---------|-----------------|  
 |sqljdbc41.jar|**sqljdbc41.jar**クラス ライブラリには、JDBC 4.0 API のサポートが用意されています。 すべての JDBC 4.0 API のメソッドと同様に、JDBC 4.0 driver の機能が含まれます。 JDBC 4.1 はサポートされていません ("SQLFeatureNotSupportedException"例外がスローされます)。<br /><br /> **sqljdbc41.jar**クラス ライブラリには、Java ランタイム環境 (JRE) 7.0 が必要です。 使用して**sqljdbc41.jar** JRE 6.0 と 5.0 では例外をスローします。<br /><br /> 
   
- この JDBC Driver は、Sun の Java 仮想マシンと同等の主要な仮想マシンをすべてサポートし、適切に動作するように設計されていますが、テストは Sun JRE 5.0、6.0、および 7.0 で行われています。  
+ JDBC ドライバーを操作したり、すべてメジャー Sun と同等、Java 仮想マシンでサポートするよう設計されていますが、Sun JRE 5.0、6.0 および 7.0 でテストします。  
   
  次に、Microsoft JDBC Driver 4.1 for SQL Server に付属の JAR ファイルによって提供されるサポートの概要を示します。  
   

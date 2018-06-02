@@ -9,17 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 982e589b7337297c84b8909499eba244638a7df3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 68366f03168b7c7c434f05e88f512401248c1124
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576064"
 ---
 # <a name="parameters-element-xmla"></a>Parameters 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   コレクションを格納[パラメーター](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)によって使用される要素、 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。  
   
- **Namespace:**`urn:schemas-microsoft-com:xml-analysis`  
+ **Namespace:** `urn:schemas-microsoft-com:xml-analysis`  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,15 +47,15 @@ ms.lasthandoff: 05/10/2018
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
+|親要素|[実行](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |子要素|[パラメーター](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  などのいくつかの XML for Analysis (XMLA) コマンド、[プロセス](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)コマンド、追加情報が必要になることができます。 **パラメーター**要素は、XMLA コマンドのチャンクされた情報を含む、追加の情報を提供するためのメカニズムを提供します。  
   
  XMLA コマンドを使用しない場合、**パラメーター**要素を呼び出すときに、要素を省略することができます、 **Execute**メソッドです。  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

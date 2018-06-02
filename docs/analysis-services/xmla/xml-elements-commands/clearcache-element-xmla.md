@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b51ada71b3460e43090cae6c833cb7fb24344199
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fecd3b679f69166d8a9946372ba58d95e79c9f3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575064"
 ---
 # <a name="clearcache-element-xmla"></a>ClearCache 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンス上の指定されたオブジェクトのメモリ キャッシュを消去します。  
+  Analysis Services インスタンス上の指定のオブジェクトのメモリ キャッシュをクリアします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,12 +44,12 @@ ms.lasthandoff: 05/10/2018
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
-|子要素|[オブジェクト](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
+|子要素|[Object](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **ClearCache**コマンドでは、指定されたデータベース、ディメンション、キューブ、メジャー グループ、またはパーティションのキャッシュをフラッシュ上、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。 データベース、ディメンション、キューブ、メジャー グループ、またはパーティション以外のオブジェクトが **Object** 要素で指定された場合、エラーが発生します。  
   
-## <a name="see-also"></a>参照  
- [コマンドと #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>参照
+ [コマンド&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 91350ba6e82e070707d17b58c82bf305c1e87660
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d3e542534b85d0f87b689b196001e9a00fe49b15
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578234"
 ---
 # <a name="exception-element-xmla"></a>Exception 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,14 +45,14 @@ ms.lasthandoff: 05/10/2018
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|親要素|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  実行中にエラーが発生した場合、 **Discover**メソッドの呼び出しまたは単一の XMLA コマンドは、 **Execute**メソッドまたはコマンドが完了すると、防止をメソッド呼び出し、**ルート**そのメソッドまたはコマンド要素が含まれています、**例外**要素、および**メッセージ**要素。 **例外**要素は、メソッドまたはコマンドが正常に実行されないようにするエラーが発生したことを示します、**メッセージ**要素には、エラーまたは警告メッセージの一覧が含まれています。エラーに関連しています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
  [要素をメッセージ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)   
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

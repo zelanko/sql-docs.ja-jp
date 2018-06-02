@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 431cbcb08cb6f69c90b82520fadf191ffc43df45
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d92dd753d63979f32fe9b8242d78202303f2bb60
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574314"
 ---
 # <a name="datasourceview-element-xmla"></a>DataSourceView 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,12 +49,12 @@ ms.lasthandoff: 05/10/2018
 |親要素|[バッチ](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)、[プロセス](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)|  
 |子要素|[DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md)、 [DataSourceViewID](../../../analysis-services/scripting/properties/datasourceviewid-element-assl.md)|  
   
-## <a name="remarks"></a>解説  
- **DataSourceView**要素によって使用されるデータ ソース ビューへの不一致のバインドを表す、**バッチ**または**プロセス**データ ソースを一時的にオーバーライドするコマンドバインドを表示[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]コマンドによって処理されたオブジェクト。  
+## <a name="remarks"></a>コメント  
+ **DataSourceView**要素によって使用されるデータ ソース ビューへの不一致のバインドを表す、**バッチ**または**プロセス**データ ソースを一時的にオーバーライドするコマンドコマンドによって処理された Analysis Services オブジェクトのバインドを表示します。  
   
- アウトオブ ライン バインドの詳細については、次を参照してください。[データ ソースとのバインド & #40 です。SSAS 多次元 & #41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ アウトオブ ライン バインドの詳細については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

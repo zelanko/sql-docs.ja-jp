@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 34ea88c2aee76684c3876195bda9b1f2633bab3a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 518c95efa36c6a234036a1c7f293c3df8283749a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575734"
 ---
 # <a name="movewithdescendants-element-xmla"></a>MoveWithDescendants 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/10/2018
 |親要素|[Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **MoveWithDescendants**要素を決定するかどうか、**更新**コマンドによって識別される属性メンバーをだけ更新する必要がありますいない、[属性](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md)要素が、同様に更新するそれらの属性メンバーの子孫であります。  
   
 > [!NOTE]  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/10/2018
   
  メンバーの更新の詳細については、次を参照してください。[挿入、更新、および削除するメンバー &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)です。  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

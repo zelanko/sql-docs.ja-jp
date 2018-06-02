@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f9ea766dc0ada056d85398e6ce2079df6b24b34a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563860"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning のサービスの既知の問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -96,7 +97,7 @@ R コードを実行するときは、SQL Server 2016 の計算コンテキス�
 + セットアップ ウィザードを使用してクライアント コンピューターで R Server (スタンドアロン) をインストールした[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]です。
 + 使用して Microsoft R Server をインストールする、 [Windows インストーラーを区切る](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)です。
 
-使用する必要があります、同じバージョンを使用すると、サーバーとクライアント_バインディング_、SQL Server 2016 インスタンスに R コンポーネントをアップグレードするには、Microsoft R Server 9.0 と以降のリリースでサポートされています。 かどうかをする R サービスのバージョンを参照して、アップグレードを使用できます[SqlBindR.exe を使用して R Services のインスタンスをアップグレード](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
+使用する必要があります、同じバージョンを使用すると、サーバーとクライアント_バインディング_、SQL Server 2016 インスタンスに R コンポーネントをアップグレードするには、Microsoft R Server 9.0 と以降のリリースでサポートされています。 かどうかをする R サービスのバージョンを参照して、アップグレードを使用できます[SqlBindR.exe を使用して R Services のインスタンスをアップグレード](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
 
 **適用されます:** SQL Server 2016 R Services、R Server バージョン 9.0.0 の以前のバージョン
 
@@ -212,7 +213,7 @@ SQL Server 2016 の最初のリリース ビルドでは、最初の k グルー
 
 この問題は SQL Server 2016 Service Pack 1 で修正されました。 最新のサービス リリースにアップグレードすることをお勧めします。
 
-**適用されます:**バージョンの SQL Server 2016 R Services RTM
+**適用されます:** バージョンの SQL Server 2016 R Services RTM
 
 ### <a name="changes-to-column-types-cannot-be-performed-when-reading-data-in-a-sql-server-compute-context"></a>SQL Server コンピューティング コンテキストでのデータの読み取り時に列の型を変更できない
 

@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 56a48ffaf6d290d99503d7c8e1018f17e8d99a33
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6c47a3c1a297bd636c64e52fcb83fda6a2b7bad5
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574934"
 ---
 # <a name="xml-elements---methods---execute"></a>XML 要素のメソッドを実行します。
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  For Analysis (XMLA) コマンドのインスタンスに XML を送信[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 これには、サーバー上のデータの取得や更新など、データ転送に関連した要求が含まれます。  
+  For Analysis (XMLA) コマンドの XML を Analysis Services のインスタンスに送信します。 これには、サーバー上のデータの取得や更新など、データ転送に関連した要求が含まれます。  
   
  **Namespace** urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql} の分析  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/10/2018
 |親要素|なし|  
 |子要素|[コマンド](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)、[パラメーター](../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md)、[プロパティ](../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Execute**メソッドで提供される XMLA コマンドの実行、**コマンド**要素を XMLA のいずれかを使用して結果データを返します[行セット](../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)(表形式の結果のデータ型設定します) または XMLA [MDDataSet](../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)データ型 (多次元結果を設定します)。  
   
 ## <a name="example"></a>例  
@@ -73,11 +74,11 @@ ms.lasthandoff: 05/10/2018
 </Execute>  
 ```  
   
-## <a name="see-also"></a>参照  
- [XML データ型 & #40 です。XMLA & #41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
+## <a name="see-also"></a>参照
+ [XML データ型&#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [Discover メソッド&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [メソッド&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods.md)   
- [XML 要素 & #40 です。XMLA & #41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
+ [XML 要素&#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [Analysis Services のスキーマ行セット](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
