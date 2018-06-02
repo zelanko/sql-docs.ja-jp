@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c4d970325ed5f5227c41e53dce4b5c3e9a701e9b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a646a910443055b3fbfb892743493d86e2ba370e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574804"
 ---
 # <a name="deletewithdescendants-element-xmla"></a>DeleteWithDescendants 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/10/2018
 |親要素|[ドロップ](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **DeleteWithDescendants**要素を決定するかどうか、**ドロップ**コマンドによって識別される属性メンバーを削除する必要があります、[場所](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)要素も、それらの属性メンバーの子孫も削除されます。  
   
 > [!NOTE]  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/10/2018
   
  属性メンバーの削除と更新の詳細については、「[メンバーの挿入、更新、および削除 &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

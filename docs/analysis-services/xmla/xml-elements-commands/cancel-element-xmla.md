@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8c4f015d5a606d67cb4c6b5f0519875db58b416
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7bc3cd9330261d0ec4e13a715612d73e6ecb44eb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574874"
 ---
 # <a name="cancel-element-xmla"></a>Cancel 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  現在実行中のコマンドを取り消します、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
+  現在実行中のコマンドを Analysis Services インスタンスを取り消します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
 |親要素|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
 |子要素|[CancelAssociated](../../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)、 [ConnectionID](../../../analysis-services/xmla/xml-elements-properties/connectionid-element-xmla.md)、 [SessionID](../../../analysis-services/xmla/xml-elements-properties/sessionid-element-xmla.md)、 [SPID](../../../analysis-services/xmla/xml-elements-properties/spid-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **キャンセル**コマンドを取り消しますが現在のセッションのコンテキスト内のコマンドを実行します。 クライアント アプリケーションがセッションをまだ要求していない場合は、コマンドをキャンセルできません。  
   
  場合、**キャンセル**の実行中にコマンドが実行される、**バッチ**コマンド、全体**バッチ**コマンドが取り消されました。 場合、**バッチ**コマンドがトランザクション、すべてのコマンドに含まれる、**バッチ**コマンドをロールバックします。 場合、**バッチ**コマンドがトランザクション型でないに含まれるコマンドのみ、**バッチ**時に実行されたコマンド、**キャンセル**コマンドの実行は、ロールバックされます。 非トランザクション内のコマンド**バッチ**実行済みのコマンドはロールバックされません。  
@@ -57,8 +58,8 @@ ms.lasthandoff: 05/10/2018
   
  現在の接続やセッションに関する情報を取得する、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、インスタンス、 **Discover** 、それぞれ DISCOVER_CONNECTIONS および DISCOVER_SESSIONS スキーマ行セットを要求するメソッドを実行できます。 特定のデータベースの管理者権限を持つロールのメンバーは、DISCOVER_SESSIONS スキーマ行セットの SESSION_CURRENT_DATABASE 制限列の中でそのデータベースを指定することにより、特定のデータベースに関連したセッションだけを返すことができます。 詳細については、 **Discover**メソッドを参照してください[検出メソッド&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md)です。  
   
-## <a name="see-also"></a>参照  
- [バッチ要素 & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [コマンドと #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>参照
+ [要素をバッチ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [コマンド&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

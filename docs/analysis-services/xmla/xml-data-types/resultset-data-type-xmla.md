@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 977b27b7d02aeadcc6c514f457fe472537561353
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 07fa34b2e65f607b847d16ee1f2d828122902cf1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574004"
 ---
 # <a name="resultset-data-type-xmla"></a>Resultset データ型 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -46,10 +47,10 @@ ms.lasthandoff: 05/10/2018
 |子要素|[例外](../../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md)、[メッセージ](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)|  
 |派生要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Resultset**データ型は自己記述型 XML 結果セットのスキーマと返される情報の種類に応じて、データの両方を含むことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
  [XML データ型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

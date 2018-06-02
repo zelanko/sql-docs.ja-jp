@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6e0fe3fa36a5a330e1b4fee926c0d2e4b10d809f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5aa19e54917a421567c5ede2013e019de609d8b6
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585228"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server の R パッケージの同期
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ SQL Server 2017 に含まれる RevoScaleR のバージョンには、ファイ�
 
 + 実行するために、ファイル システム上の R パッケージが破損するいると思われる`rxSyncPackages`SQL Server にします。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 パッケージの同期を使用することができます、前に、適切なバージョンの Microsoft R または Machine Learning のサーバーが必要です。 Microsoft R バージョン 9.1.0 またはそれ以降は、この機能が用意されています。 
 
@@ -57,7 +58,7 @@ Microsoft r です。 最新バージョンを使用するインスタンスを�
 
 パッケージの管理機能を使用して新しいパッケージを追加するたびに SQL Server およびファイル システムで、両方のレコードが更新されます。 この情報は、データベース全体の情報をパッケージ復元に使用できます。
 
-### <a name="permissions"></a>権限
+### <a name="permissions"></a>アクセス許可
 
 + パッケージの同期関数を実行したユーザーは、SQL Server インスタンスと、パッケージであるデータベース プリンシパルのセキュリティをする必要があります。
 
@@ -123,4 +124,4 @@ rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", 
 
 ## <a name="related-resources"></a>関連リソース
 
-[SQL Server の R パッケージの管理](r-package-management-for-sql-server-r-services.md)
+[SQL Server の R パッケージの管理](install-additional-r-packages-on-sql-server.md)

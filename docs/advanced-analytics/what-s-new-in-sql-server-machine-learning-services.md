@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 45cfb2f67cbd575913739b118e21626448b80866
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 092216f7bc1142125156b3658f035154d809c2e9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586074"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server の Machine Learning のサービスの新機能 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/08/2018
 | 最初のリリース |[**データベース内の分析の Python の統合**](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) <br/><br/>[Revoscalepy](python/what-is-revoscalepy.md)パッケージは、RevoScaleR の Python と同等です。 線形とロジスティック回帰、デシジョン ツリー、ブースト ツリー、およびランダム フォレスト、すべて並列処理、およびリモート計算コンテキストで実行中の対応の Python モデルを作成することができます。 このパッケージには、複数のデータ ソースとリモート計算コンテキストの使用がサポートしています。 データ科学者や開発者は、データを参照するか、データを移動せずにモデルを構築する、リモートの SQL Server での Python コードを実行できます。 <br/><br/>[Microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)パッケージが MicrosoftML R パッケージの Python と同等です。<br/><br/>T-SQL と Python の統合を通じて[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)です。 このストアド プロシージャを使用してすべての Python コードを呼び出すことができます。 このセキュリティで保護されたインフラストラクチャでは、Python モデルと単純なストアド プロシージャを使用して、アプリケーションから呼び出すことができるスクリプトのエンタープライズ レベルの展開できるようにします。 追加のパフォーマンスが向上によって SQL から Python プロセスと MPI リングの並列化にデータをストリーミングします。 <br/><br/>T-SQL ステートメントを使用することができます[PREDICT](../t-sql/queries/predict-transact-sql.md)を実行する関数[ネイティブ スコアリング](sql-native-scoring.md)以前指定したバイナリ形式で保存されている事前トレーニング済みモデルにします。|
 | 最初のリリース | [**MicrosoftML (R)** ](using-the-microsoftml-package.md)は最新の機械学習のスケールまたは実行のリモート計算コンテキストは、アルゴリズムとデータの変換が含まれています。 深層ニューラル ネットワークのカスタマイズ可能な高速なデシジョン ツリーとデシジョン フォレスト、線形回帰、およびロジスティック回帰アルゴリズムが含まれます。 |
 | 最初のリリース | [**事前トレーニング済みモデル**](r/install-pretrained-models-sql-server.md)画像認識と正、負のセンチメント分析のためです。 これらのモデルを使用すると、独自のデータでの予測を生成できます。 |
-| 最初のリリース | [**パッケージの管理**](r/r-package-management-for-sql-server-r-services.md)、次の点を含む: データベースの DBA は、パッケージの管理し、パッケージをインストールするアクセス許可を割り当てるためのロールを[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)する t-sql ステートメントヘルプの Dba は、R を知らなくてもパッケージを管理および R の豊富な一連の関数で[RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)のため、インストール、削除、またはパッケージ一覧は、ユーザーが所有します。 |
+| 最初のリリース | [**R パッケージの管理**](r/install-additional-r-packages-on-sql-server.md)、次の点を含む: データベースの DBA は、パッケージの管理し、パッケージをインストールするアクセス許可を割り当てるためのロールを[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)する t-sql ステートメントヘルプの Dba は、R を知らなくてもパッケージを管理および R の豊富な一連の関数で[RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)のため、インストール、削除、またはパッケージ一覧は、ユーザーが所有します。 |
 | 最初のリリース | [**Mrsdeploy を操作運用**](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)展開および web サービスとしての R スクリプトをホストしているのためです。 R スクリプトのみ (Python 該当するショートカットはありません) に適用されます。 他の SQL Server 操作とリソースの競合を回避する (スタンドアロン) のサーバー オプションの目的としています。 |
 
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/08/2018
 
 Azure SQL データベースでの R のサポートが制限されて: Premium 層で作成されたサービスで、西中央アメリカでのみ使用できます。 Python のサポートなど、展開されたカバレッジは、将来のリリースで従う可能性があります。 ただしは射影されたリリース日この時点で、  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [SQL Server 2017 Machine Learning Services (In-database) のインストールします。](install/sql-machine-learning-services-windows-install.md)
 + [Machine learning のチュートリアルおよびサンプル](tutorials/machine-learning-services-tutorials.md)

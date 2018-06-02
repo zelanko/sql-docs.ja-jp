@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fde6410ac0f6932fe11e5486342e1d836dcc8000
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0d528567e22c3ba19b49eefff10d886703a0d29a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576494"
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 要素
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -42,20 +43,20 @@ ms.lasthandoff: 05/10/2018
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[データベース](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
+|親要素|[[データベース]](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データベースを作成**ReadWrite**モードのみです。 データベースを作成することはできません**ReadOnly**モード。  
   
  値、 **ReadWriteMode**要素は次の表に示す文字列の 1 つに制限されます。  
   
-|値|Description|  
+|[値]|説明|  
 |-----------|-----------------|  
-|*読み取り専用*|変更または更新をデータベースに適用できません。|  
+|*ReadOnly*|変更または更新をデータベースに適用できません。|  
 |*読み取り/書き込み*|変更または更新をデータベースに適用できます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
  [Attach 要素](../../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [アタッチし、Analysis Services データベースのデタッチ](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Analysis Services データベースを移動します。](../../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   

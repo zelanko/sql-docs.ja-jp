@@ -1,35 +1,20 @@
 ---
 title: CREATE SET ステートメント (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SET
-- CREATE SET
-- CREATE_SET
-- CREATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- named sets [MDX]
-- CREATE SET statement
-ms.assetid: eff51eeb-5e7e-4706-b861-c57b6f3f89f0
-caps.latest.revision: 42
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4155067b6415ea8d2113bcf9f75cbb026dd117d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 999f62b3d43c48169eb0607c406bd7bdc12bee62
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579344"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX データ定義の設定の作成
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +47,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Property_Value*  
  セットのプロパティの値を定義する有効なスカラー式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  名前付きセットとは、再利用のために作成するディメンション メンバーのセット (またはセットを定義する式) です。 たとえば、売上高上位 10 ストアのセットで構成されるディメンション メンバーのセットを名前付きセットとして定義するとします。 静的には、やなどの関数によって、このセットを定義できます[TopCount](../mdx/topcount-mdx.md)です。 そのようにして作成した名前付きセットは、上位 10 ストアのセットが必要な場所で再利用できます。  
   
  CREATE SET ステートメントで作成する名前付きセットは、セッションが終了するまで使用できます。つまり、そのセッションの複数のクエリで再利用できるということです。 詳細については、次を参照してください。 [creating session-scoped 計算されるメンバー &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)です。  
@@ -110,7 +95,7 @@ SELECT [Core Products] ON 0
 ## <a name="standard-properties"></a>標準のプロパティ  
  セットには、それぞれ既定のプロパティのセットがあります。 クライアント アプリケーションが接続されているときに[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]既定のプロパティは、サポートされている、または、サポートされるために使用できるように、管理者の選択します。  
   
-|プロパティの識別子|意味|  
+|プロパティの識別子|説明|  
 |-------------------------|-------------|  
 |CAPTION|セットのキャプションとしてクライアント アプリケーションが使用する文字列。|  
 |DISPLAY_FOLDER|セットを表示するためにクライアント アプリケーションが使用する、表示フォルダーのパスを識別する文字列です。 フォルダー レベルの区切り記号は、クライアント アプリケーションによって定義されます。 ツールおよびクライアントによって提供される[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、円記号 (\\) は、レベルの区切り記号。 定義されたセットで複数の表示フォルダーを指定するには、セミコロン (;) を使用してフォルダーを区切ります。|  

@@ -1,31 +1,20 @@
 ---
 title: Aggregate (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- AGGREGATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Aggregate function
-ms.assetid: 9d5e0966-74d1-4cc8-b9f9-47e4dc65d165
-caps.latest.revision: 52
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2954ccb1ff3affbdd9471ec91629d31b80433faf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 31fc7fe749d8e14f0e18ea88128d984875cdaa31
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578424"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,14 +35,14 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  空の組のセットまたは空のセットを指定した場合、この関数は空の値を返します。  
   
  次の表方法、**集計**各種集計関数の関数の動作です。  
   
 |集計演算子|結果|  
 |--------------------------|------------|  
-|Sum|セット全体の値の合計を返します。|  
+|SUM|セット全体の値の合計を返します。|  
 |Count|セット全体の値の数を返します。|  
 |Max|セット全体の最大値を返します。|  
 |Min|セット全体の最小値を返します。|  
@@ -136,13 +125,13 @@ WHERE ([Geography].[State-Province].x,
 ## <a name="see-also"></a>参照  
  [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
  [子&#40;MDX&#41;](../mdx/children-mdx.md)   
- [Hierarchize (& a) #40 です。MDX と #41 です。](../mdx/hierarchize-mdx.md)   
- [カウント & #40 です。セット & #41;& #40 です。MDX と #41 です。](../mdx/count-set-mdx.md)   
- [フィルターと #40 です。MDX と #41 です。](../mdx/filter-mdx.md)   
- [AddCalculatedMembers & #40 です。MDX と #41 です。](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel & #40 です。MDX と #41 です。](../mdx/drilldownlevel-mdx.md)   
- [プロパティ & #40 です。MDX と #41 です。](../mdx/properties-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
+ [カウント&#40;設定&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [フィルター &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
+ [プロパティ&#40;MDX&#41;](../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

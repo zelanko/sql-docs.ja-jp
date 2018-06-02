@@ -1,33 +1,20 @@
 ---
 title: CREATE KPI ステートメント (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE KPI
-- KPI
-- CREATE_KPI
-- CREATE
-helpviewer_keywords:
-- CREATE KPI statement
-- key performance indicators [MDX]
-ms.assetid: 87618fef-95e5-4dd0-a650-aeb60ccbddcb
-caps.latest.revision: 18
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: de35f5ca3526440592d88db453e4406bc8feab40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7c2322d30e4e42bebbe4537f687c349c5179d9f9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579324"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX データ定義の KPI の作成
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,13 +42,13 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
  *Property_Value*  
  KPI のプロパティの値を定義する有効なスカラー式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  現在接続しているキューブ以外のキューブを指定すると、エラーになります。 したがって、キューブ名の代わりに CURRENTCUBE を使用して、現在のキューブを確実に指定してください。  
   
 ## <a name="kpi-properties"></a>KPI のプロパティ  
  次の表は、KPI のすべてのプロパティを示しています。 これらのプロパティに既定値はありません。 したがって、KPI のプロパティに特定の値が割り当てられるまで、そのプロパティに対してクエリを実行すると NULL 値が返されます。  
   
-|プロパティの識別子|意味|  
+|プロパティの識別子|説明|  
 |-------------------------|-------------|  
 |GOAL|数値を返す有効な MDX 式です。|  
 |STATUS|数値を返す有効な MDX 式です。|  
@@ -94,15 +81,15 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 |グラフィックの使用法|KPI グラフィックの名前|状態の数|  
 |--------------------|-------------------------|----------------------|  
-|[状態]|図形|3|  
-|[状態]|信号機|3|  
-|[状態]|道路標識|3|  
-|[状態]|ゲージ|3|  
-|[状態]|反転ゲージ|5|  
-|[状態]|温度計|3|  
-|[状態]|シリンダー|3|  
-|[状態]|外観|3|  
-|[状態]|変位の矢印|3|  
+|状態|図形|3|  
+|状態|信号機|3|  
+|状態|道路標識|3|  
+|状態|ゲージ|3|  
+|状態|反転ゲージ|5|  
+|状態|温度計|3|  
+|状態|シリンダー|3|  
+|状態|外観|3|  
+|状態|変位の矢印|3|  
 |傾向|標準の矢印|3|  
 |傾向|状態の矢印|3|  
 |傾向|反転した状態の矢印|5|  

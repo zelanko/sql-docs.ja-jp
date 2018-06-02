@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eb01fa78d1542cb2a791fe0ab00b839ab1a8e8bf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e8746fb9f8b397ef50b1a5c66a2132e5f0cf5c87
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576194"
 ---
 # <a name="return-element-xmla"></a>return 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,13 +50,13 @@ ms.lasthandoff: 05/10/2018
   
 |Ancestor|子要素|  
 |--------------|--------------------|  
-|[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)|[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)|[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)または[結果](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
- **返す**要素にはによって返されるデータが含まれています、 **Discover**と**Execute**メソッドです。 通常、**返す**要素には、1 つが含まれています**ルート**を正常に実行によって返されるデータを含む要素**Discover**または**Execute。**メソッドの呼び出しまたは XML for Analysis (XMLA) 例外されなかったメソッド呼び出しによって返されます。 場合、 **Execute**メソッドが含まれています、**バッチ**、複数の操作を実行するコマンド、**返す**要素が含まれています、**結果**要素、さらに、1 つを含む**ルート**成功と失敗によって実行された各コマンドの要素、**バッチ**コマンド。  
+## <a name="remarks"></a>コメント  
+ **返す**要素にはによって返されるデータが含まれています、 **Discover**と**Execute**メソッドです。 通常、**返す**要素には、1 つが含まれています**ルート**を正常に実行によって返されるデータを含む要素**Discover**または**Execute。** メソッドの呼び出しまたは XML for Analysis (XMLA) 例外されなかったメソッド呼び出しによって返されます。 場合、 **Execute**メソッドが含まれています、**バッチ**、複数の操作を実行するコマンド、**返す**要素が含まれています、**結果**要素、さらに、1 つを含む**ルート**成功と失敗によって実行された各コマンドの要素、**バッチ**コマンド。  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

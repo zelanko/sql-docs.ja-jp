@@ -1,30 +1,20 @@
 ---
 title: MDX 構文表記規則 (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services], syntax
-- MDX [Analysis Services], syntax
-ms.assetid: 50a6e723-91c4-407b-a0d5-87d0d4e4e0f6
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f916008b155c8fd8c70ed239d23fbca2753ff0f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4bcf7e11254db3219f8f39c9c4d9d6f00eddf9a5
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580904"
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>MDX 構文の表記規則 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 |\<label> ::=|構文のブロックの名前を示します。 この表記は、1 つのステートメント内の複数の箇所で使用できる長い構文の一部または構文の 1 単位をグループにまとめて、ラベルを付けるために使用します。 構文のブロックを使用できる箇所は山かっこで囲まれたラベル:\<ラベル >。|  
   
 ## <a name="see-also"></a>参照  
- [MDX 言語リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 言語リファレンス&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
 
