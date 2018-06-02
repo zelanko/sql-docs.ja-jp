@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/02/2018
 ms.locfileid: "34579784"
 ---
-# <a name="mdx-data-manipulation---clear-calculations"></a>CLEAR CALCULATIONS の MDX データ操作
+# <a name="mdx-data-manipulation---clear-calculations"></a>MDX データ操作 - CLEAR CALCULATIONS 
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   キューブからすべての計算を削除して、キューブの計算パスを 0 に戻します。  
