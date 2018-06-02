@@ -464,9 +464,9 @@ WHERE
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>参照  
- [MDX での概念をキー &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX データ操作ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [クエリ軸とスライサー軸とクエリを制限する&#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [MDX の主な概念 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX データ操作ステートメント &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [クエリ軸とスライサー軸によるクエリの制限 &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 
