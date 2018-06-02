@@ -58,7 +58,7 @@ ms.locfileid: "34580664"
   
 -   DISTINCT  
   
--   によってデコードされる文字を次に示します。  
+-   :  
   
 -   ^  
   
@@ -70,13 +70,13 @@ ms.locfileid: "34580664"
   
 -   <>, >=, =, \<=, >, <  
   
--   [NOT]  
+-   NOT  
   
--   [AND]  
+-   AND  
   
 -   XOR  
   
--   スイッチまたは  
+-   OR  
   
  MDX の演算子の詳細については、次を参照してください。 [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)です。  
   
@@ -92,11 +92,11 @@ ms.locfileid: "34580664"
   
 |元の型|必要な型|変換|  
 |-------------------|-----------------|----------------|  
-|レベル|オン|\<レベル > ですメンバー。|  
-|階層|メンバー|\<階層 > .defaultmember|  
-|メンバー|組|(\<メンバー >)|  
-|組|メンバー|\<タプル > .item(0)|  
-|組|スカラー|\<タプル > .value|  
+|Level|Set|\<Level>.members|  
+|Hierarchy|Member|\<hierarchy>.defaultmember|  
+|Member|Tuple|(\<Member>)|  
+|Tuple|Member|\<tuple>.item(0)|  
+|Tuple|Scalar|\<tuple>.value|  
   
 ## <a name="see-also"></a>参照  
  [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
