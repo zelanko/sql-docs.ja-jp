@@ -121,18 +121,18 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  下の表は、AND 演算子を 2 つのブール値オペランドに適用した結果を示します。  
   
-|[AND]|TRUE|EMPTY|FALSE|  
+|AND|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
 |**TRUE**|TRUE|FALSE|FALSE|  
-|**空**|FALSE|EMPTY|FALSE|  
+|**EMPTY**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
  下の表は、OR 演算子を 2 つのブール値オペランドに適用した結果を示します。  
   
-|スイッチまたは|TRUE|FALSE|  
+|OR|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
-|**空**|TRUE|TRUE|  
+|**EMPTY**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   
  下の表は、NOT 演算子が論理演算子の結果を否定または逆転するようすを示します。  
