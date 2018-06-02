@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 014f46219ece054c292ff3a3b7a11d98c07c1547
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 38d9954c50f13a78c0c0d13d0d83989a4e31224a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575094"
 ---
 # <a name="cell-element-xmla"></a>Cell 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,18 +46,18 @@ ms.lasthandoff: 05/10/2018
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|[UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)|  
-|子要素|[値](../../../analysis-services/xmla/xml-elements-properties/value-element-xmla.md)|  
+|子要素|[[値]](../../../analysis-services/xmla/xml-elements-properties/value-element-xmla.md)|  
   
 ## <a name="attributes"></a>属性  
   
-|属性|Description|  
+|属性|説明|  
 |---------------|-----------------|  
 |CellOrdinal|必須で、**Long** 型の属性。 更新するセルの位置を示す 0 から始まる序数を含みます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  セルの更新の詳細については、「[セルの更新 &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

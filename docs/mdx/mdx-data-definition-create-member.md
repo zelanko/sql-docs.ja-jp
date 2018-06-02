@@ -1,35 +1,20 @@
 ---
 title: CREATE MEMBER ステートメント (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_MEMBER
-- CREATE MEMBER
-- Member
-- CREATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CREATE MEMBER statement
-- calculated members [MDX]
-ms.assetid: 49379217-be2c-4139-a206-1168078b9b76
-caps.latest.revision: 55
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c5aa9107e834cfbd8dcdd4b5e0cd3c0828b8c4a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4458554d8b3aa6b0cb87d59629c70a18b609df44
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579364"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX データ定義のメンバーを作成します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +47,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  *Property_Value*  
  計算されるメンバー プロパティの値を定義する有効なスカラー式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  CREATE MEMBER ステートメントは、セッション全体で使用できる計算されるメンバーを定義します。作成した計算されるメンバーは、セッション内の複数のクエリで使用できます。 詳細については、次を参照してください。 [creating session-scoped 計算されるメンバー &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)です。  
   
  1 つのクエリだけで使用する計算されるメンバーを定義することも可能です。 1 つのクエリに限定される計算されるメンバーを定義するには、SELECT ステートメントで WITH 句を使用します。 詳細については、次を参照してください。 [Creating Query-Scoped 計算されるメンバー &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)です。  
@@ -125,7 +110,7 @@ WHERE ProfitRatio
   
  キューブの定義に応じて、追加のメンバー プロパティを使用できる場合があります。 以下のプロパティは、キューブ内のディメンション レベルに関係する情報を表します。  
   
-|プロパティの識別子|意味|  
+|プロパティの識別子|説明|  
 |-------------------------|-------------|  
 |SOLVE_ORDER|計算されるメンバーがもう 1 つの他の計算されるメンバーを参照する場合 (つまり、計算されるメンバーが互いに交差する場合) に、計算されるメンバーが解決される順序です。|  
 |FORMAT_STRING|A [!INCLUDE[msCoName](../includes/msconame-md.md)] Office スタイルの形式の文字列には、セルの値を表示するときにクライアント アプリケーションで使用できます。|  

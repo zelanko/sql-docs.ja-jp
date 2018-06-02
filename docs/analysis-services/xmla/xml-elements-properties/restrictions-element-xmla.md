@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 78c69d2e3a53e2e0ad3561e09feffdf9dfabdcfb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 902f3086b28d17b11d1c1c44b130e2dcf224eb30
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578744"
 ---
 # <a name="restrictions-element-xmla"></a>Restrictions 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 |親要素|[検出します。](../../../analysis-services/xmla/xml-elements-methods-discover.md)|  
 |子要素|[RestrictionList](../../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **制限**制限列とデータを使用して取得した情報を制限する要素が表す、 **Discover**メソッドです。  
   
 ## <a name="example"></a>例  
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/10/2018
 </Discover>  
 ```  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

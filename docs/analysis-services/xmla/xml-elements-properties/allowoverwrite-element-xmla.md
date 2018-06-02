@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1350d7fba1800f2ec0ea38a6ed57b776e163919a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 76ba7c6b3046e5298a346cb84472de3ba090e2bc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577524"
 ---
 # <a name="allowoverwrite-element-xmla"></a>AllowOverwrite 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,14 +46,14 @@ ms.lasthandoff: 05/10/2018
 |親要素|[バックアップ](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)、[復元](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **バックアップ**コマンド、 **AllowOverwrite**要素は、コマンドがで指定されたバックアップ ファイルを上書きできるかどうかを判断、**ファイル**要素。  
   
- **復元**、要素、 **AllowOverwrite**要素は、コマンドが上書きできるかどうかを判断、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] で指定されたデータベース**DatabaseName**要素。  
+ **復元**、要素、 **AllowOverwrite**要素は、コマンドがで指定された Analysis Services データベースを上書きできるかどうかを判断、 **DatabaseName**要素。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
  [DatabaseName 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/databasename-element-xmla.md)   
  [要素が&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md)   
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 02b9c91f30c45e59d0f5eba00a5b76262070d711
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3a8dfff1c8a551157661bcb1de5700bf51a7f914
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574914"
 ---
 # <a name="axes-element-xmla"></a>Axes 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,10 +45,10 @@ ms.lasthandoff: 05/10/2018
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
-|子要素|[軸](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|親要素|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|子要素|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  下にある、**軸**要素、**軸**要素は、0 から始まる、データセット内の出現順序で一覧表示されます。 **AxisFormat** XMLA プロパティの設定の決定方法**軸**要素が書式設定します。 詳細については、 **AxisFormat**プロパティを参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。  
   
  軸は、次元が同じである複数の組から成るセットを表します。 1 つのセットを表す方法はいくつかあり、それぞれの方法に利点があります。 たとえば、次のような 4 つの組から成るセットは、2 次元の組のコレクションとして表すことも、2 つの 1 次元セットのデカルト積として表すこともできます。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/10/2018
   
  次の表は、軸の構造とメンバーを定義して特徴付けるために使用できる操作の一覧です。  
   
-|操作|Description|  
+|演算|説明|  
 |---------------|-----------------|  
 |メンバー|ディメンション階層のメンバーを表す軸の最小単位です。|  
 |メンバー|コレクション**メンバー**オブジェクトから同じディメンション階層。|  
@@ -103,8 +104,8 @@ CrossProduct (
   
  クライアントが使用できる、 **AxisFormat**プロパティを特定の表現を要求します。  
   
-## <a name="see-also"></a>参照  
- [MDDataSet データ型 & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [MDDataSet データ型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
