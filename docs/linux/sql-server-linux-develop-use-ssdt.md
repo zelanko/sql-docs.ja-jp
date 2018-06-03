@@ -22,7 +22,7 @@ ms.lasthandoff: 05/19/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT) は、SQL Server on Linux の強力な開発およびデータベース ライフ サイクル管理 (DLM) 環境に Visual Studio をオンにします。 ことができますを開発、構築、テスト、およびアプリケーション コードを開発するのと同じように、ソース管理のプロジェクトからデータベースを発行します。
+SQL Server Data Tools (SSDT) は、Visual Studio を SQL Server on Linux の強力な開発およびデータベース ライフ サイクル管理 (DLM) 環境に変化させます。 アプリケーション コードを開発するのと同じように、ソース管理のプロジェクトから開発、構築、テストおよびデータベースの発行を行うことができます。
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Visual Studio および SQL Server Data Tools をインストールします。
 
