@@ -34,7 +34,7 @@ ms.locfileid: "33221953"
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XML スキーマのコンポーネントごとに 1 行のデータを返します。 ペア (**collection_id**、 **namespace_id**) が含まれる名前空間に対する複合外部キーです。 名前付きコンポーネントの値は、 **symbol_space**、**名前**、 **scoping_xml_component_id**、 **is_qualified**、 **xml_namespace_id**、 **xml_collection_id**は一意です。  
+  XML スキーマのコンポーネントごとに 1 行のデータを返します。 ペア (**collection_id**、 **namespace_id**) が含まれる名前空間に対する複合外部キーです。 名前付きコンポーネントの値は、 **symbol_space**、**name**、 **scoping_xml_component_id**、 **is_qualified**、 **xml_namespace_id**、 **xml_collection_id**は一意です。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -43,11 +43,11 @@ ms.locfileid: "33221953"
 |**xml_namespace_id**|**int**|コレクション内の XML 名前空間の ID。|  
 |**is_qualified**|**bit**|1 = このコンポーネントには明示的な名前空間の修飾子があります。<br /><br /> 0 = これはローカル スコープのコンポーネントです。 この場合は、ペア**namespace_id**、 **collection_id**は、「ない名前空間」を参照**targetNamespace**です。<br /><br /> ワイルドカード コンポーネントでは、この値は 1 になります。|  
 |**name**|**nvarchar**<br /><br /> **(4000)**|XML スキーマ コンポーネントの一意の名前。 コンポーネントに名前が付けられていない場合は NULL です。|  
-|**symbol_space**|**char(1)**|この記号名が一意にする領域がに基づいて**種類**:<br /><br /> N = なし<br /><br /> T = 種類<br /><br /> E = 要素<br /><br /> M = モデル - グループ<br /><br /> A = 属性<br /><br /> G = 属性 - グループ|  
-|**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|この記号名が一意にする空間の説明がに基づいて**種類**:<br /><br /> なし<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
+|**symbol_space**|**char(1)**|**kind**に基づいてこの記号名が一意にする領域:<br /><br /> N = なし<br /><br /> T = 種類<br /><br /> E = 要素<br /><br /> M = モデル - グループ<br /><br /> A = 属性<br /><br /> G = 属性 - グループ|  
+|**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|**kind**に基づいてこの記号名が一意にする空間の説明が<br /><br /> なし<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
 |**kind**|**char(1)**|XML スキーマ コンポーネントの種類。<br /><br /> N = 任意の型 (特殊な固有コンポーネント)<br /><br /> Z = 任意の単純型 (特殊な固有コンポーネント)<br /><br /> P = プリミティブ型 (固有の型)<br /><br /> S = 単純型<br /><br /> L = リスト型<br /><br /> U = union 型<br /><br /> C = 複合単純型 (単純型から派生)<br /><br /> K = 複合型<br /><br /> E = 要素<br /><br /> M = モデル - グループ<br /><br /> W = 要素 - ワイルドカード<br /><br /> A = 属性<br /><br /> G = 属性 - グループ<br /><br /> V = 属性 - ワイルドカード|  
 |**kind_desc**|**nvarchar**<br /><br /> **(60)**|XML スキーマ コンポーネントの種類の説明。<br /><br /> ANY_TYPE<br /><br /> ANY_SIMPLE_TYPE<br /><br /> PRIMITIVE_TYPE<br /><br /> SIMPLE_TYPE<br /><br /> LIST_TYPE<br /><br /> UNION_TYPE<br /><br /> COMPLEX_SIMPLE_TYPE<br /><br /> COMPLEX_TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ELEMENT_WILDCARD<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP<br /><br /> ATTRIBUTE_WILDCARD|  
-|**派生**|**char(1)**|派生型の派生メソッド。<br /><br /> N = なし (派生なし)<br /><br /> X = 拡張<br /><br /> R = 制約<br /><br /> S = 代替|  
+|**derivation**|**char(1)**|派生型の派生メソッド。<br /><br /> N = なし (派生なし)<br /><br /> X = 拡張<br /><br /> R = 制約<br /><br /> S = 代替|  
 |**derivation_desc**|**nvarchar**<br /><br /> **(60)**|派生型の派生メソッドの説明。<br /><br /> なし<br /><br /> EXTENSION<br /><br /> RESTRICTION<br /><br /> SUBSTITUTION|  
 |**base_xml_component_id**|**int**|コンポーネントの派生元となるコンポーネントの ID。 存在しない場合は NULL です。|  
 |**scoping_xml_component_id**|**int**|スコープを決定するコンポーネントの一意の ID。 存在しない場合は NULL です (グローバル スコープ)。|  

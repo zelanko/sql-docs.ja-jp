@@ -44,7 +44,7 @@ ms.locfileid: "33222747"
 |-----------------|---------------|-----------------|  
 |**remoteserverid**|**smallint**|リモート サーバーの ID。|  
 |**remoteusername**|**sysname**|リモート サーバー上のユーザーのログイン名。|  
-|**ステータス**|**smallint**|0 を返します。|  
+|**status**|**smallint**|0 を返します。|  
 |**sid**|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー セキュリティ id です。|  
 |**changedate**|**datetime**|リモート ユーザーが追加された日付と時刻。|  
   

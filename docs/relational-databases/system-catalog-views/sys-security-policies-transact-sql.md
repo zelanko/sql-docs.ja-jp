@@ -48,7 +48,7 @@ ms.locfileid: "33221133"
 |principal_id|**int**|データベースに登録したセキュリティ ポリシーの所有者の ID。 スキーマを使用して所有者が特定された場合は NULL です。|  
 |schema_id|**int**|オブジェクトが存在するスキーマの ID。|  
 |parent_object_id|**int**|ポリシーが所属するオブジェクトの ID。 0 を指定する必要があります。|  
-|型|**vachar(2)**|必要があります**SP**です。|  
+|type|**vachar(2)**|**SP** を指定する必要があります。|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**です。|  
 |create_date|**datetime**|セキュリティ ポリシーが作成された UTC 日付。|  
 |modify_date|**datetime**|セキュリティ ポリシーが最後に変更された UTC 日付。|  
