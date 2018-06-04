@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033819"
 ---
 # <a name="appendix---1-accesstosql"></a>付録 - 1 (AccessToSQL)
 SSMA コンソール コマンド ライン オプションの簡易表示:  
