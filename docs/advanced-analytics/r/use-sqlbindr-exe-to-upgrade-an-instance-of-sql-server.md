@@ -8,11 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 11b9e58c583712d8ee5ae70f4dbb98b6c175239c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707690"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server インスタンスでマシン ラーニング (R と Python) コンポーネントをアップグレードします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,30 +27,26 @@ SQL Server で R、Python の統合には、オープン ソースと Microsoft 
 > [!NOTE]
 > バインディングは、(In-database) のインスタンスのみに適用されます。 バインド (スタンドアロン) のインストールは無効です。
 
-**SQL Server 2017**
+**SQL Server 2017 バインドに関する考慮事項**
 
 SQL Server 2017 Machine Learning サービスでは、Microsoft Machine Learning のサーバーがその他のパッケージの提供を開始するか、内容を新しいバージョンが既にある場合にのみバインドを考慮するとします。
 
-**SQL Server 2016**
+**SQL Server 2016 バインドに関する考慮事項**
 
-新規および更新を取得するための 2 つのパスがある SQL Server 2016 の R Services のユーザーにとって、R パッケージです。 1 つは、SQL Server 2017; へのアップグレード2 番目の Microsoft Machine Learning のサーバーへのバインドします。
+お客様は、バインディングは、SQL Server 2016 R Services では、R パッケージ、新しいパッケージの事前トレーニング済みモデルでは、すべての Microsoft Machine Learning のサーバーの新しい各メジャーおよびマイナー リリースでさらに更新できます、元のインストールの一部ではないを更新します。 バインドを提供しませんは SQL Server 2017 機能である、Python をサポートします。 
 
-SQL Server 2017 へのアップグレードを取得する R パッケージそのリリースと Python 機能に含まれているバージョンにします。 または、バインディングを取得する更新 R パッケージは、Microsoft Machine Learning のサーバーの新しい各メジャーおよびマイナー リリースでさらに更新できます。 
+## <a name="version-map"></a>バージョンのマップ
 
-バインドを提供しませんは SQL Server 2017 機能である、Python をサポートします。 
+次の表は、Microsoft Machine Learning Server (以前の R サーバーとしての Python のサポートを追加する前にバインドすると potentional アップグレード パスを確認できるようにリリース媒体間でパッケージのバージョンを表示、バージョンのマップ以降で MLS 9.2.1)。 
 
-**Microsoft Machine Learning Server を介して使用可能なコンポーネントのアップグレード**
-
-次の表は、Microsoft Machine Learning サーバー (以前の R サーバーとして以降 MLS 9.2.1 で Python サポートを追加する前に) にバインドする場合の可能なアップグレードの SQL Server と共にインストールされるバージョンを示す、バージョン マップです。 
-
-バインディングには、R または Anaconda の最新バージョンは保証されませんに注意してください。 Microsoft Machine Learning のサーバーにバインドすると、web で利用可能な最新のバージョンではない可能性がありますセットアップによってインストールされた R または Python のバージョンを取得します。
+バインディングには、R または Anaconda の最新バージョンは保証されませんに注意してください。 Machine Learning サーバー (MLS) をバインドすると、web でご確認いただけますの最新バージョンではありませんが、セットアップによってインストールされた R または Python のバージョンを取得します。
 
 [**SQL Server 2016 R サービス**](../install/sql-r-services-windows-install.md)
 
-コンポーネント |最初のリリース | R Server 9.0.1 | R Server 9.1 | MLS 9.2.1 | MLS 9.3 |
+コンポーネント |最初のリリース | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
 R 経由で Microsoft R Open (MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [事前トレーニング済みモデル](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
@@ -266,7 +263,7 @@ R、Python の機能を持つ、データベース エンジンのインスタ�
 
 ### <a name="parameters"></a>パラメーター
 
-|名前|Description|
+|名前|説明|
 |------|------|
 |*list*| 現在のコンピューター上にあるすべての SQL データベース インスタンスの ID を一覧表示します|
 |*bind*| 指定された SQL データベース インスタンスを R Server の最新バージョンにアップグレードし、インスタンスが R Server の今後のアップグレードを自動的に取得するようにします|
@@ -301,7 +298,7 @@ MLS インストーラーと SqlBindR は、次のエラー コードとメッ�
 
 SqlBindR の以降のバージョンでは、復元元の R 機能は、R コンポーネントを再インストールする必要がなくなるか、サーバーを再度パッチです。 ただし、最初のインストール後に追加された R パッケージの更新をインストールする必要があります。
 
-このタスクがはるかに簡単にインストールし、パッケージの共有パッケージ管理の役割を使用している場合: R コマンドを使用するには、データベース内のレコードを使用して、ファイル システムにインストールされているパッケージを同期して、その逆です。 詳細については、次を参照してください。 [for SQL Server の R パッケージの管理](r-package-management-for-sql-server-r-services.md)です。
+このタスクがはるかに簡単にインストールし、パッケージの共有パッケージ管理の役割を使用している場合: R コマンドを使用するには、データベース内のレコードを使用して、ファイル システムにインストールされているパッケージを同期して、その逆です。 詳細については、次を参照してください。 [for SQL Server の R パッケージの管理](install-additional-r-packages-on-sql-server.md)です。
 
 ### <a name="problems-with-multiple-upgrades-from-sql-server"></a>SQL Server からの複数のアップグレードに関する問題
 

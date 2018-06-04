@@ -1,30 +1,25 @@
 ---
 title: MDX および DAX での VBA 関数 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 01/30/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6dce57c7a8043a8d25b31b389e47763df261baa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a9764d4e302a663800bd71a5c7083d985ea230bc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582524"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX および DAX での VBA 関数
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  このドキュメントには、交差で使用できるすべての VBA 関数の参照が含まれています[アプリケーション関数の Visual Basic](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) MDX でサポートされている; も、リストでは、DAX 言語で同等の機能がある場合に、ノートが含まれています.  
+  このドキュメントには、交差で使用できるすべての VBA 関数の参照が含まれています[アプリケーション関数の Visual Basic](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) MDX でサポートされている; も、リストでは、DAX 言語で同等の機能がある場合に、ノートが含まれています。  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 関数リファレンス  
   
@@ -56,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 |CurDir|サポートされていません||  
 |CVar|MDX のみ||  
 |CVErr|サポートされていません||  
-|日付|MDX のみ|**警告**DAX が同じで別の関数を実装する名前は、DATE (Year, Month, Day) 関数は、指定された引数から日付型の値を生成するために使用|  
+|date|MDX のみ|**警告**DAX が同じで別の関数を実装する名前は、DATE (Year, Month, Day) 関数は、指定された引数から日付型の値を生成するために使用|  
 |DateAdd|MDX のみ|**警告**DAX が同じで別の関数を実装する名前; DATEADD (\<日付 >、< number_of_intervals >\<間隔 >) の数で指定された日付をシフトするために使用されている関数の間隔を指定|  
 |DateDiff]|MDX のみ||  
 |DatePart|MDX のみ||  
@@ -73,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 |FileAttr|サポートされていません||  
 |FileDateTime|サポートされていません||  
 |FileLen|サポートされていません||  
-|[フィルター]|サポートされていません|**警告**MDX が同じ名前の別の関数を実装する以外の場合は、FILTER (Set_Expression, Logical_Expression) 関数には、指定された引数から、検索条件に基づいて、指定されたセットをフィルター処理を実行した結果セットが返されます。<br /><br /> **警告**DAX が同じで別の関数を実装する名前の FILTER (\<テーブル >、\<フィルター >) を別のテーブルまたは指定された引数から式のサブセットを表すテーブルを返す関数|  
+|Assert|サポートされていません|**警告**MDX が同じ名前の別の関数を実装する以外の場合は、FILTER (Set_Expression, Logical_Expression) 関数には、指定された引数から、検索条件に基づいて、指定されたセットをフィルター処理を実行した結果セットが返されます。<br /><br /> **警告**DAX が同じで別の関数を実装する名前の FILTER (\<テーブル >、\<フィルター >) を別のテーブルまたは指定された引数から式のサブセットを表すテーブルを返す関数|  
 |Fix|MDX のみ||  
 |Format (Visual Basic for Applications)|DAX、MDX||  
 |FormatCurrency|サポートされていません||  
