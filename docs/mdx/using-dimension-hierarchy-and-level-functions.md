@@ -21,7 +21,7 @@ ms.locfileid: "34581494"
 
   ディメンション関数、階層関数、およびレベル関数は、Analysis Services で検出された多次元階層をスキャンする際に役立ちます。 通常は、ディメンション、階層、またはレベルのメンバーに関する情報を得るために、これらの関数を他の関数と共に使用します。  
   
- 次の例を使用する方法を示しています、**です。ディメンション**、**です。階層**、および**です。レベル**関数。  
+ 次の例を使用する方法を示しています、 **[.Dimension](../mdx/dimension-mdx.md)** 、 **[.Hierarchy](../mdx/hierarchy-mdx.md)** 、および **[.Level](../mdx/level-mdx.md)** 関数。  
   
  `WITH`  
   
@@ -44,9 +44,9 @@ ms.locfileid: "34581494"
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [ディメンション&#40;MDX&#41;](../mdx/dimension-mdx.md)   
+ [Dimension&#40;MDX&#41;](../mdx/dimension-mdx.md)   
  [関数&#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)   
- [階層&#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
- [レベル&#40;MDX&#41;](../mdx/level-mdx.md)  
+ [Hierarchy&#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
+ [Lavel&#40;MDX&#41;](../mdx/level-mdx.md)  
   
   

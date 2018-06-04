@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/02/2018
 ms.locfileid: "34579754"
 ---
-# <a name="mdx-data-manipulation---update-cube"></a>MDX データ操作、UPDATE CUBE
+# <a name="mdx-data-manipulation---update-cube"></a>MDX データ操作 - UPDATE CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   UPDATE CUBE ステートメントは、SUM 集計によって親に対して集計を行うキューブ内の任意のセルにデータを書き戻すために使用します。 詳細な説明と例では、このブログ投稿の割り当てについて」を参照してください: [Analysis Services (ブログ) での書き戻しアプリケーションを構築](http://go.microsoft.com/fwlink/?LinkId=394977)です。  
@@ -54,7 +54,7 @@ UPDATE [ CUBE ] Cube_Name
  0 ～ 1 の範囲の 10 進値を返す有効な多次元式 (MDX) 数値式です。  
   
 ## <a name="remarks"></a>コメント  
- キューブ内の指定されたリーフ セルまたは非リーフ セルの値を更新できます。指定された非リーフ セルの値を、それに依存するすべてのリーフ セルに割り当てることもできます。 Tuple_Expression で指定するセルには、多次元領域内の任意の有効なセルを指定できます (リーフ セルでなくてもかまいません)。 ただしでのセルは集計する必要があります、[合計](../mdx/sum-mdx.md)集計関数と、セルの識別に使用される組の中の計算されるメンバーを含めないでください。  
+ キューブ内の指定されたリーフ セルまたは非リーフ セルの値を更新できます。指定された非リーフ セルの値を、それに依存するすべてのリーフ セルに割り当てることもできます。 Tuple_Expression で指定するセルには、多次元領域内の任意の有効なセルを指定できます (リーフ セルでなくてもかまいません)。 ただしでのセルは集計する必要があります、[Sum](../mdx/sum-mdx.md)集計関数と、セルの識別に使用される組の中の計算されるメンバーを含めないでください。  
   
  役に立つと考えると、 **UPDATE CUBE**ステートメントは、一連の指定された合計にロール アップされるリーフと非リーフ セルに個々 のセルの書き戻し操作は自動的に生成するサブルーチンです。  
   
