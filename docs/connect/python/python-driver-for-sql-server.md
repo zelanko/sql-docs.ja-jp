@@ -1,4 +1,4 @@
----
+﻿---
 title: Python Driver for SQL Server |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 08/08/2017
@@ -26,10 +26,10 @@ ms.locfileid: "32862807"
 
 ![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[for Python SQL ドライバーをインストールするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Windows、Linux、または Mac に Python を使用して SQL データベースに接続することができます。    
+Windows、Linux、または Mac に Python を使用して SQL データベースに接続することができます。   
   
 ## <a name="getting-started"></a>作業の開始  
-使用可能ないくつかの python SQL ドライバーはします。 ただし、Microsoft かかります、テスト工数およびで自信**pyodbc**ドライバー。 ドライバーを選択し、それに応じて、開発環境を構成します。
+使用可能な python SQL ドライバーにはいくつか種類があります。 ただし、Microsoft は **pyodbc** ドライバーにテストの労力と信頼を置いています。 選択したドライバーに応じて、開発環境を構成してください:
 * [Python SQL ドライバー - pyodbc](pyodbc/python-sql-driver-pyodbc.md)
 * [Python SQL ドライバー - pymssql](pymssql/python-sql-driver-pymssql.md)
   
