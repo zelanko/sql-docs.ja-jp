@@ -20,12 +20,13 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32862807"
 ---
 # <a name="python-sql-driver"></a>Python SQL ドライバー
 
 ![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[for Python SQL ドライバーをインストールするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Windows、Linux、またはファルダに Python を使用して SQL データベースに接続することができます。   
+Windows、Linux、または Mac に Python を使用して SQL データベースに接続することができます。    
   
 ## <a name="getting-started"></a>作業の開始  
 使用可能ないくつかの python SQL ドライバーはします。 ただし、Microsoft かかります、テスト工数およびで自信**pyodbc**ドライバー。 ドライバーを選択し、それに応じて、開発環境を構成します。
