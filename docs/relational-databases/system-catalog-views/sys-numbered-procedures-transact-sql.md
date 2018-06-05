@@ -44,7 +44,7 @@ ms.locfileid: "33178758"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ストアド プロシージャのオブジェクト ID です。|  
 |**procedure_number**|**smallint**|オブジェクト内のプロシージャの番号 (2 以降)。|  
-|**definition**|**nvarchar(max)**|このプロシージャを定義する SQL Server のテキストです。<br /><br /> NULL = 暗号化します。|  
+|**definition**|**nvarchar(max)**|このプロシージャを定義する SQL Server のテキストです。<br /><br />NULL は、暗号化されていることを示します。|  
   
 > [!NOTE]  
 >  XML および CLR パラメーターは、番号付きプロシージャではサポートされていません。  
