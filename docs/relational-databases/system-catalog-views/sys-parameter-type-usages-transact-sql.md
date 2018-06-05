@@ -43,7 +43,7 @@ ms.locfileid: "33179648"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|パラメーターが属しているオブジェクトの ID。|  
 |**parameter_id**|**int**|パラメーターの ID です。 オブジェクト内で一意です。|  
-|**user_type_id**|**int**|ユーザー定義データ型の ID。<br /><br /> 型の名前を取得するには、この列で [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) カタログ ビューに結合します。|  
+|**user_type_id**|**int**|ユーザー定義データ型の ID。<br /><br /> 型の名前を返すには、この列で [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) カタログ ビューに結合します。| 
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
