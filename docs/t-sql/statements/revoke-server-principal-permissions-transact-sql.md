@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33075589"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE (サーバー プリンシパルの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +118,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. ログインの IMPERSONATE 権限を取り消す  
- 次の例では、Windows ユーザー `AdvWorks\YoonM` を基に作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `WanidaBenshoof` のアクセス許可 `IMPERSONATE` を取り消します。
+ 次の例では、Windows ユーザー `AdvWorks\YoonM` を基に作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `WanidaBenshoof` のアクセス許可 `IMPERSONATE` を取り消します。  
   
 ```  
 USE master;  
@@ -136,7 +137,7 @@ GO
 ```  
   
 ### <a name="c-revoking-view-definition-permission-on-a-server-role"></a>C. サーバー ロールの VIEW DEFINITION 権限を取り消す  
- 次の例では、`Auditors` サーバー ロールに対する `Sales` サーバー ロールの `VIEW DEFINITION` を取り消します。
+ 次の例では、`Auditors` サーバー ロールに対する `Sales` サーバー ロールの `VIEW DEFINITION`` を取り消します。  
   
 ```  
 USE master;  

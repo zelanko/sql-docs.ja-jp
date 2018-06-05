@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33073169"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE (オブジェクトの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -153,8 +154,8 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-revoking-select-permission-on-a-table"></a>A. テーブルの SELECT 権限を取り消す  
- 次の例では、ユーザー `RosaQdM` から、データベース `AdventureWorks2012` のテーブル `Person.Address` に対する `SELECT` アクセス許可を取り消します。
-
+ 次の例では、ユーザー `RosaQdM` から、データベース `AdventureWorks2012` のテーブル `Person.Address` に対する `SELECT` アクセス許可を取り消します。  
+  
 ```  
 USE AdventureWorks2012;  
 REVOKE SELECT ON OBJECT::Person.Address FROM RosaQdM;  

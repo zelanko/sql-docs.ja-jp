@@ -53,7 +53,7 @@ sp_serveroption [@server = ] 'server'
  [  **@optname =** ] **'***option_name***'**  
  指定したサーバーに設定するオプションです。 *option_name*は**varchar (** 35 **)**、既定値はありません。 *option_name*値は次のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**互換性のある照合順序**|リンク サーバーに対する分散クエリの実行に影響を与えます。 このオプションが設定されている場合**true**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リンク サーバー内のすべての文字に文字セットと照合順序 (並べ替え順) に関して、ローカル サーバーと互換性があることを前提としています。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からプロバイダーに文字を含む列の比較を送信できるようになります。 このオプションが設定されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では文字列を含む列の比較の評価は常にローカルで行われます。<br /><br /> このオプションは、リンク サーバーに対応するデータ ソースがローカル サーバーと同じ文字セットと並べ替え順を持っていることが確認できている場合のみ設定します。|  
 |**照合順序名**|場合に、リモート データ ソースによって使用される照合順序の名前を指定**リモート照合順序を使用して**は**true**データ ソースがないと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソース。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がサポートしている照合順序名のいずれかを指定する必要があります。<br /><br /> このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外の OLE DB データ ソースにアクセスし、その照合順序が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序のいずれかと一致する場合に使用します。<br /><br /> リンク サーバーは、そのサーバー内のすべての列で使用される単一の照合順序をサポートしている必要があります。 リンク サーバーが、単一のデータ ソース内で複数の照合順序をサポートしている、またはリンク サーバーの照合順序が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序のいずれかと一致するかどうかが判断できない場合は、このオプションを設定しないでください。|  

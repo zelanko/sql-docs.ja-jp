@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33072469"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE (エンドポイントの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +109,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. エンドポイントの VIEW DEFINITION 権限を取り消す  
- 次の例では、エンドポイント `VIEW DEFINITION` での `Mirror7` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` から取り消します。  
+ 次の例では、エンドポイント `Mirror7` での `VIEW DEFINITION` アクセス許可を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` から取り消します。  
   
 ```  
 USE master;  
