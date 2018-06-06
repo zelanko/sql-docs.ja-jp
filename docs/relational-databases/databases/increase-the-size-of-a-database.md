@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32926217"
 ---
 # <a name="increase-the-size-of-a-database"></a>データベースのサイズを大きくする
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  既存のファイルのサイズを大きくするには、目的のファイルの **[初期サイズ (MB)]** 列の値を大きくします。 データベースのサイズは、少なくとも 1 MB ずつ大きくする必要があります。  
   
-5.  新しいファイルを追加してデータベースのサイズを大きくするには、 **[追加]** をクリックして、新しいファイルの値を入力します。 詳細については、「 [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)」をご覧ください。  
+5.  新しいファイルを追加してデータベースのサイズを大きくするには、 **[追加]** をクリックして、新しいファイルの値を入力します。 詳細については、「 [データベースに対するデータ ファイルまたはログ ファイルの追加](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)」をご覧ください。  
   
 6.  **[OK]** をクリックします。  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/03/2018
  その他の例については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)   
+ [データベースに対するデータ ファイルまたはログ ファイルの追加](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)   
  [データベースの圧縮](../../relational-databases/databases/shrink-a-database.md)  
   
   

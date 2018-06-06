@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32957527"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>マージ アーティクルのカスタム競合回避モジュールの実装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 2.  **@publication** と **@article** を指定し、**@property** に **resolver_info** の値を、**@value** に競合回避ロジックを実装するストアド プロシージャの名前を指定して、[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。  
   
 ##  <a name="COM"></a> COM ベースのカスタム競合回避モジュールの使用  
- <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 名前空間により実装されるインターフェイスを利用して、マージ レプリケーション同期処理で発生するイベントを処理し、競合を回避するための複雑なビジネス ロジックを作成できます。 詳細については、「 [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。 また、ネイティブ コード ベースのカスタム ビジネス ロジックを独自に作成して、競合を回避することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ などの製品を使用して、このロジックを COM コンポーネントとしてビルドし、ダイナミック リンク ライブラリ (DLL) にコンパイルします。 このような COM ベースのカスタム競合回避モジュールには、競合回避のために用意されている専用の **ICustomResolver** インターフェイスを実装する必要があります。  
+ <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 名前空間により実装されるインターフェイスを利用して、マージ レプリケーション同期処理で発生するイベントを処理し、競合を回避するための複雑なビジネス ロジックを作成できます。 詳細については、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。 また、ネイティブ コード ベースのカスタム ビジネス ロジックを独自に作成して、競合を回避することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ などの製品を使用して、このロジックを COM コンポーネントとしてビルドし、ダイナミック リンク ライブラリ (DLL) にコンパイルします。 このような COM ベースのカスタム競合回避モジュールには、競合回避のために用意されている専用の **ICustomResolver** インターフェイスを実装する必要があります。  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>COM ベース カスタム競合回避モジュールを作成して登録するには  
   
