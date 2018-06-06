@@ -18,10 +18,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6532283a3315ad60587ce6fd126f91859f42f29f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708380"
 ---
 # <a name="indexes"></a>インデックス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="available-index-types"></a>使用可能なインデックスの種類
 次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるインデックスの種類および追加情報へのリンクを示します。  
   
-|インデックスの種類|Description|関連情報|  
+|インデックスの種類|[説明]|関連情報|  
 |----------------|-----------------|----------------------------|  
 |ハッシュ インデックス|ハッシュ インデックスの場合は、インメモリ ハッシュ テーブルを通じてデータにアクセスします。 ハッシュ インデックスは、バケット数の関数である固定量のメモリを消費します。|[メモリ最適化テーブルでのインデックス使用のガイドライン](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [ハッシュ インデックスのデザイン ガイドライン](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
 |メモリ最適化された非クラスター化インデックス|メモリ最適化された非クラスター化インデックスの場合、メモリ消費量はインデックス キー列の行数とサイズによって決まります。|[メモリ最適化テーブルでのインデックス使用のガイドライン](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [メモリ最適化された非クラスター化インデックスのデザイン ガイドライン](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)|  

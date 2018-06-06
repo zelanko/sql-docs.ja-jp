@@ -1,7 +1,7 @@
 ---
 title: カスタム データ処理拡張機能の接続を指定する | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -26,11 +26,12 @@ caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f1bef72f7a07df727462e569c8b0971dcfa2f696
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c0b6fa4f93320e0648ffb1923aaf593ff708b53
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550503"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>カスタム データ処理拡張機能の接続を指定する
   サード パーティ製のカスタム データ処理拡張機能をレポート サーバー上で作成または使用して、サポートされているデータ ソースのデータ処理能力を向上したり、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定のインストールで使用できないその他の種類のデータ ソースをサポートしたりできます。 接続の処理方法は実装によって異なります。 データ処理拡張機能に使用できる実装は次のとおりです。  
@@ -85,8 +86,6 @@ ms.lasthandoff: 05/03/2018
  [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [データ処理拡張機能の実装](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [共有データ ソースを作成、削除、または変更する (レポート マネージャー)](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [レポートのデータ ソースのプロパティを構成する (レポート マネージャー)](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [レポートのデータ ソースのプロパティを構成する](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

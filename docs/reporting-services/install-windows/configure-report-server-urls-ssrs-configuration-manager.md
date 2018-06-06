@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Report Server Windows service, virtual directories
 - report servers [Reporting Services], virtual directories
 - virtual directories [Reporting Services]
-- Report Manager [Reporting Services], virtual directories
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4421895de0ba4bddc3d6905a142bee7907888033
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fadb6163b7ad9e52f02834a3982feb30cd9a3c8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550563"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>レポート サーバー URL の構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]へのアクセスに URL が使用されます。 どちらのアプリケーションを使用する場合も、事前に Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]それぞれに 1 つ以上の URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、両方のアプリケーションの URL に既定値が用意されています。この既定値は、他の Web サービスや Web アプリケーションとのサイド バイ サイドの配置をはじめとするほとんどの配置シナリオに有効です。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="defining-a-report-server-url"></a>レポート サーバーの URL の定義  
  URL は、ネットワーク上のレポート サーバー アプリケーション インスタンスの場所を厳密に特定します。 レポート サーバーの URL を作成するときは、次の要素を指定する必要があります。  
   
-|要素|Description|  
+|要素|[説明]|  
 |----------|-----------------|  
 |ホスト名|TCP/IP ネットワークでは、IP アドレスを使用してネットワーク上のデバイスを一意に識別します。 コンピューターにインストールされているネットワーク アダプター カードごとに、物理 IP アドレスが存在します。 IP アドレスがホスト ヘッダーに解決される場合、ホスト ヘッダーを指定できます。 レポート サーバーを企業ネットワークに配置している場合は、コンピューターのネットワーク名を使用できます。|  
 |Port|TCP ポートはデバイス上のエンドポイントです。 レポート サーバーは、指定されたポートで要求をリッスンします。|  

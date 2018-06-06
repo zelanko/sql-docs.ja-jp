@@ -23,11 +23,12 @@ caps.latest.revision: 32
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 2318c09d71c268e862035aa78a728599315ef294
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 100f05de2924ab00388e27b96a464625146b815b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585794"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -143,7 +144,7 @@ JSON の式のプロパティを持つパスの手順を照合に使用する比
   
 **OPENJSON** は既定では、列の名前を使用して、JSON テキストのプロパティと一致します。 たとえば、*name*の列をスキーマを指定する場合、OPENJSON は JSON テキストには、"name"プロパティを使用して、この列を作成しようとします。 使用して、この既定のマッピングをオーバーライドすることができます、  *column_path* 引数。  
   
-*型*  
+*type*  
 出力列のデータ型です。  
 
 > [!NOTE]
@@ -360,7 +361,7 @@ DECLARE @json NVARCHAR(max)  = N'{
   WITH (id int,  
         firstName nvarchar(50), lastName nvarchar(50),   
         isAlive bit, age int,  
-        dateOfBirth datetime2, spouse nvarchar(50)
+        dateOfBirth datetime2, spouse nvarchar(50))
 ```  
   
 ## <a name="see-also"></a>参照  

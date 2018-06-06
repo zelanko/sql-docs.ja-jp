@@ -23,11 +23,12 @@ caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 00aaeca626ac2e2c8982d972bd64b01cc5574a99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca2bbc7549a2616195061a5079918f236e963e28
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550033"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>レポート サーバーを構成および管理する (SSRS ネイティブ モード)
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を構成するための方法について説明します。 また、特定のコンポーネント、機能、サーバー機能の構成方法について説明しているトピックへのリストも記載されています。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]は次の方法で構成できます。  
@@ -60,7 +61,6 @@ ms.lasthandoff: 05/03/2018
  自動実行モードでレポートを処理するようにユーザー アカウントを構成する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビルダーへのアクセスの構成](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services のセキュリティと保護](../../reporting-services/security/reporting-services-security-and-protection.md)   

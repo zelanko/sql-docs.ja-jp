@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4454cfd34cf23c1fb22417acf275d7172c16063b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b8f6870e0e7881f9ce31a7b9d120b4fb4906a926
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563720"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 -   メモリ最適化されてシステム バージョン管理されたテーブルの履歴テーブルは、エンド ユーザーまたはシステムのどちらによって作成される場合でも、ディスク ベースでなければなりません。  
   
--   現在のテーブル (インメモリ) のみに影響するクエリは、 [ネイティブ コンパイル T-SQL モジュール](https://msdnstage.redmond.corp.microsoft.com/en-us/library/dn133184.aspx)で使用できます。 FOR SYSTEM TIME 句を使用したテンポラル クエリは、ネイティブ コンパイル モジュールではサポートされません。 アドホック クエリおよび非ネイティブ モジュールでの FOR SYSTEM TIME 句とメモリ最適化テーブルの使用はサポートされています。  
+-   現在のテーブル (インメモリ) のみに影響するクエリは、 [ネイティブ コンパイル T-SQL モジュール](https://msdn.microsoft.com/en-us/library/dn133184.aspx)で使用できます。 FOR SYSTEM TIME 句を使用したテンポラル クエリは、ネイティブ コンパイル モジュールではサポートされません。 アドホック クエリおよび非ネイティブ モジュールでの FOR SYSTEM TIME 句とメモリ最適化テーブルの使用はサポートされています。  
   
 -   **SYSTEM_VERSIONING = ON**のときは、現在のメモリ最適化テーブルでの更新および削除操作の結果である最新のシステム バージョン管理された変更を受け入れるため、内部的なメモリ最適化ステージング テーブルが自動的に作成されます。  
   

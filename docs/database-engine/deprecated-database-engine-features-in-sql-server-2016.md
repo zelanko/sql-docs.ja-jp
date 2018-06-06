@@ -20,11 +20,12 @@ caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35cbe4b19fc8cab0f28f879e6a65d6149bf6822a
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: 799f2b0df6a33d70006baf4b1389584cd7acf801
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34722322"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 データベース エンジンの非推奨の機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |リモート サーバー|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|リンク サーバーを使用してリモート サーバーを置き換えてください。 sp_addserver は、ローカル オプションでのみ使用できます。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |リモート サーバー|\@\@remserver|リンク サーバーを使用してリモート サーバーを置き換えてください。|なし|なし|  
 |リモート サーバー|SET REMOTE_PROC_TRANSACTIONS|リンク サーバーを使用してリモート サーバーを置き換えてください。|SET REMOTE_PROC_TRANSACTIONS|110|  
-|SET オプション|**SET ROWCOUNT** 、 **INSERT**、および **UPDATE**ステートメントの **DELETE**|TOP キーワード|SET ROWCOUNT|109|  
 |テーブル ヒント|HOLDLOCK table hint without parenthesis|かっこ付きの HOLDLOCK を使用します。|HOLDLOCK table hint without parenthesis|167|  
   
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>SQL Server の将来のバージョンで非推奨となっている機能  
@@ -170,7 +170,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |ツール|SQL Server Profiler for Trace Capture|SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。|SQL Server Profiler|なし|  
 |ツール|SQL Server Profiler for Trace Replay|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|なし|  
 |トレース管理オブジェクト|Microsoft.SqlServer.Management.Trace namespace (SQL Server の Trace および Replay オブジェクト用の API が含まれています)|トレース構成: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> トレース読み取り: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> トレース再生: なし|||  
-|SQL トレースのストアド プロシージャ、関数、およびカタログ ビュー|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[拡張イベント](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
+|SQL トレースのストアド プロシージャ、関数、およびカタログ ビュー|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[拡張イベント](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|
+|SET オプション|**SET ROWCOUNT** 、 **INSERT**、および **UPDATE**ステートメントの **DELETE**|TOP キーワード|SET ROWCOUNT|109|  
+
   
 > [!NOTE]  
 > **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 開発者が **varbinary(50)** を割り当てると、今後のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションの変更が必要になる可能性があります。 これは廃止の問題ではありませんが、アプリケーションの調整と似ているため、このトピックで説明されています。 詳細については、「[sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)」を参照してください。  

@@ -1,7 +1,7 @@
 ---
 title: 可用性グループの SQL Server ディストリビューション データベースの構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2018
+ms.date: 05/23/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -23,11 +23,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a7253c3cc263d653c9e2d86e03da49ead9731e31
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 11574b8454c425c3f022ed1daf415e71ea317535
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473886"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 可用性グループのレプリケーション ディストリビューション データベースを設定する
 
@@ -76,7 +77,6 @@ AG のディストリビューション データベースを下記の手順に�
 - ディストリビューション データベース AG に参加しているすべてのレプリカで、ディストリビューターまたはディストリビューション データベースのプロパティを変更します。
 - ディストリビューション データベース AG に参加しているすべてのレプリカで、msdb ストアド プロシージャまたは SQL Server Management Studio を介してレプリケーション ジョブに変更を加えます。
 - パブリッシャー上でディストリビューターを構成する場合は、スクリプトを使用する必要があります。 レプリケーション ウィザードを使用することはできません。 レプリケーション ウィザードおよびプロパティ シートは他の目的ではサポートされています。
-- レプリケーション モニターなど、AG リスナー名を使用して接続するレプリケーション UI は SQL Server 2017 CU 6 の時点ではサポートされていません。 AG のディストリビューション データベースに関連付けられているレプリケーション エージェントを管理するには、ジョブ プロパティとジョブ履歴を使用します。
 - ディストリビューション データベースに対して AG を構成するには、スクリプトしか使用できません。
 - AG のディストリビューション データベースの設定は、新しいレプリケーション構成として行う必要があります。 既存のディストリビューション データベースを AG に切り替えることはサポートされていません。 また、ディストリビューション データベースは AG から外されると、有効なディストリビューション データベースとして機能しなくなります。そのようなディストリビューション データベースは削除する必要があります。
 

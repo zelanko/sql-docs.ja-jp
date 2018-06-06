@@ -1,7 +1,7 @@
 ---
 title: 機能リファレンス (Reporting Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -20,11 +20,12 @@ caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7feb24933727c6d107404888f5c3fa5ca58a6a74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6eace09048fd6ba2399e5314d6868efd9e7baf7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550083"
 ---
 # <a name="feature-reference-reporting-services"></a>機能リファレンス (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポートを作成、管理、表示できるツールとアプリケーションが数種類用意されています。 ここでは、これらのツールとアプリケーションのダイアログ ボックス、Web ページ、およびウィザードに関する特有のトピックを紹介します。  
@@ -34,9 +35,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="in-this-section"></a>このセクションの内容  
  [レポート デザイナーの F1 ヘルプ](../reporting-services/tools/report-designer-f1-help.md)  
  レポート デザイナーと関連するダイアログ ボックス、レポート ウィザード、および画像ウィザードのヘルプについて説明します。  
-  
- [レポート マネージャー F1 ヘルプ](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
- 1 つのレポート サーバー インスタンスを管理するために使用される Web アプリケーションである、レポート マネージャーのヘルプについて説明します。  
   
  [Reporting Services 構成マネージャーのヘルプ トピック](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  レポート サーバー インスタンスの配置と管理に使用される [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成ツールのヘルプについて説明します。  

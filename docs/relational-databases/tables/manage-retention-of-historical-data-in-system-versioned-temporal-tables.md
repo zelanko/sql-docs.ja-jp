@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e612894249f42ef081f989eda29b3d2f8900cc80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 924fa0d289c7225587962c9551d445d348f73939
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563810"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 > **注:**  Stretch Database 手法の使用は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にのみ適用され、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]には適用されません。  
   
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md) の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、履歴データが Azure に透過的に移行されます。 セキュリティ強化のために、SQL Server の [Always Encrypted](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) 機能で移行中のデータを暗号化できます。 また、 [行レベルのセキュリティ](../../relational-databases/security/row-level-security.md) やその他の高度な SQL Server セキュリティ機能を Temporal/Stretch Database と共に使用し、データを保護できます。  
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md) の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、履歴データが Azure に透過的に移行されます。 セキュリティ強化のために、SQL Server の [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx) 機能で移行中のデータを暗号化できます。 また、 [行レベルのセキュリティ](../../relational-databases/security/row-level-security.md) やその他の高度な SQL Server セキュリティ機能を Temporal/Stretch Database と共に使用し、データを保護できます。  
   
  Stretch Database 手法の利用では、一時的な履歴テーブルの一部または全部を Azure にストレッチできます。SQL Server は履歴データを Azure に通知なしで移行します。 履歴テーブルのストレッチを有効にしても、データ変更や一時的なクエリ実行で、テンポラル テーブルの操作が変わることはありません。  
   

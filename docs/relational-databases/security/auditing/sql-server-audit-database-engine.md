@@ -23,10 +23,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 61ff78d987e173c875e68f992d4ef4a57fee28b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708250"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -158,7 +159,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="dynamic-views-and-functions"></a>動的ビューと関数  
  次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査に使用できる動的ビューと関数の一覧を示します。  
   
-|動的ビューと関数|Description|  
+|動的ビューと関数|[説明]|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|監査ログで報告される可能性のあるすべての監査アクション、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit の一部として構成できるすべての監査アクション グループに対して 1 つの行を返します。|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|監査の現在の状態に関する情報を提供します。|  
@@ -168,7 +169,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="catalog-views"></a>カタログ ビュー  
  次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査に使用できるカタログ ビューの一覧を示します。  
   
-|カタログ ビュー|Description|  
+|カタログ ビュー|[説明]|  
 |-------------------|-----------------|  
 |[sys.database_ audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|サーバー インスタンス上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査に含まれるデータベース監査仕様に関する情報を含みます。|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|すべてのデータベースについてサーバー インスタンス上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査に含まれる、データベース監査仕様に関する情報を含みます。|  

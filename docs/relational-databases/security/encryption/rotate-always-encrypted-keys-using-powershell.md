@@ -15,11 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0b16ad6c18bec1954d9c52ada5fd22202e3ff9da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fed2dac0cb435e906a3c880022f53fdc35880754
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34581984"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>PowerShell を使用した Always Encrypted キーの交換
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -312,7 +313,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 |手順 3. (列暗号化キーを保護する、交換される) 列マスター キーが Azure Key Vault に格納されている場合は、Azure に対して認証します。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | はい | いいえ
 |手順 4. 新しい列暗号化キーを生成し、それを列マスター キーで暗号化し、データベースで列の暗号化キー メタデータを作成します。  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**注:** 内部で列の暗号化キーを生成し、暗号化するコマンドレットのバリエーションを使用します。<br>このコマンドレットは背後で [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) ステートメントを発行し、キー メタデータを作成します。 | はい | はい
 |手順 5. 古い列暗号化キーで暗号化されたすべての列を検索します。 | [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | いいえ | はい
-|手順 6. 影響を受ける各列について *SqlColumnEncryptionSettings* オブジェクトを作成します。  SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 列のターゲット暗号化方式を指定します。 この場合、オブジェクトには、影響を受ける列を新しい列暗号化キーで暗号化することを指定します。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeysettings) | いいえ | いいえ
+|手順 6. 影響を受ける各列について *SqlColumnEncryptionSettings* オブジェクトを作成します。  SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 列のターゲット暗号化方式を指定します。 この場合、オブジェクトには、影響を受ける列を新しい列暗号化キーで暗号化することを指定します。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | いいえ | いいえ
 |手順 7. 新しい暗号化キーを使用して、手順 5 で指定した列を再暗号化します。 | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注:** この手順の実行には時間がかかる場合があります。 アプリケーションは、選択されたアプローチ (オンラインとオフライン) に応じて、操作全体または一部の操作でテーブルにアクセスできなくなります。 | はい | はい
 |手順 8. 古い列暗号化キーのメタデータを削除します。 | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | いいえ | はい
 

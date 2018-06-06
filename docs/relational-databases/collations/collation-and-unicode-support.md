@@ -35,10 +35,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 25b36b25efbb7c99d3595da26587007f784bfc25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708040"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
     
  照合順序に関連するオプションは、大文字と小文字の区別、アクセントの区別、かなの区別、および文字幅の区別、バリエーションの選択の区別です。 これらのオプションは、照合順序の名前に付加することによって指定されます。 たとえば、 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` という照合順序では、大文字と小文字、アクセント、かな、および文字幅が区別されます。 また、 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` という照合順序では、大文字小文字とアクセントが区別されず、かな、文字幅、バリエーションの選択が区別されます。  次の表は、これらの各オプションに関連付けられている動作を示しています。    
     
-|オプション|Description|    
+|オプション|[説明]|    
 |------------|-----------------|    
 |大文字と小文字を区別する (_CS)|大文字と小文字を区別します。 このオプションを選択すると、大文字より先に小文字が並べ替えられます。 このオプションを選択しないと、照合順序で大文字と小文字が区別されません。 つまり、大文字と小文字は、並べ替えを行う際に同じものと見なされます。 大文字と小文字を区別しないことを明示的に選択するには、_CI と指定します。|    
 |アクセントを区別する (_AS)|アクセントのある文字とアクセントのない文字を区別します。 たとえば、"a" と "&#xE1;" は等しくありません。 このオプションを選択しないと、照合順序でアクセントが区別されません。 つまり、アクセントのある文字とアクセントのない文字は、並べ替えを行う際に同じものと見なされます。 アクセントを区別しないことを明示的に選択するには、_AI と指定します。|    

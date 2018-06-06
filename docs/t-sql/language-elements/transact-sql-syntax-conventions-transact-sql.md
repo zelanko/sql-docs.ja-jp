@@ -33,11 +33,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a20affed4c50345d5b7d2d61a2f2666e456a5971
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3339a53c2569f6561caa4cefdb5e697610c71fdd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582114"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 構文表記規則 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 |大文字|[!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードを示します。|  
 |*斜体*|ユーザーが指定する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文のパラメーターを示します。|  
 |**太字**|記載されているとおりに入力する必要があるデータベース名、テーブル名、列名、インデックス名、ストアド プロシージャ、ユーティリティ、データ型名、テキストを示します。|  
-|**underline**|下線が引かれている値を含む句がステートメントから省略されているときに適用される既定値を示します。|  
+|_underline_|下線が引かれている値を含む句がステートメントから省略されているときに適用される既定値を示します。|  
 |(& a) #124 です。(縦棒)|角かっこ、または中かっこで囲まれた構文項目を区切ります。 使用できる項目は 1 つだけです。|  
 |`[ ]` (角かっこ)|省略可能な構文項目。 角かっこは入力しません。|  
 |{} (中かっこ)|必須の構文項目を示します。 中かっこは入力しません。|  
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
 中間のノードを省略するには、ピリオドを使用してそれらの位置を示します。 次の表に、オブジェクト名の有効な形式を示します。  
   
-|オブジェクト参照形式|Description|  
+|オブジェクト参照形式|[説明]|  
 |-----------------------------|-----------------|  
 |*server* **.** *database* **.** *schema* **.** *object*|4 部構成の名前です。|  
 |*server* **.** *database* **..** *object*|スキーマ名を省略しています。|  

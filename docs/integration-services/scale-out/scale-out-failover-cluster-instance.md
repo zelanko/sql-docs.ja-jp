@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: bd9c61743812b386d4bcf420debfce6e83fb0778
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d11bd76d4bc8f811cbaa4ea34258b56aaf6d6763
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470244"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>SQL Server フェールオーバー クラスター インスタンスを介した高可用性の Scale Out のサポート
 
@@ -62,7 +63,7 @@ Scale Out Master サービスをオンラインにします。
 ![オンラインにする](media/bring-online.PNG)
 
 > [!NOTE]
-> SSISDB と Scale Out Master サービスを個別にフェールオーバーする場合、「[7.Windows フェールオーバー クラスターの Scale Out Master サービス ロールを構成する](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster)」に従います。
+> SSISDB と Scale Out Master サービスを個別にフェールオーバーする場合、「[7.Windows フェールオーバー クラスターの Scale Out Master サービス ロールを構成する](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)」に従います。
 
 ## <a name="7-install-scale-out-workers"></a>7.Scale Out Worker をインストールする
 worker ノードに Scale Out Worker をインストールします。 インストール時に、マスター エンドポイントに https://[SQL Server ネットワーク名]:[マスター ポート] を指定します。 

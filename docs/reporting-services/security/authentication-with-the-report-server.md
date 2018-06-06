@@ -21,11 +21,12 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 44f4992239c15b7382ede007b5da47ef13b03566
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b417d30db2ed5ecd85ba154ab304be7181c2dc71
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550533"
 ---
 # <a name="authentication-with-the-report-server"></a>レポート サーバーでの認証
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="authentication-types"></a>認証の種類  
  レポート サーバーのコンテンツまたは操作へのアクセスを要求するすべてのユーザーとアプリケーションは、レポート サーバーで構成されている認証の種類を使用して事前に認証を受けないとアクセスを許可されません。 次の表では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]でサポートされている認証の種類について説明します。  
   
-|認証の種類の名前|HTTP 認証レイヤーの値|既定で使用|Description|  
+|認証の種類の名前|HTTP 認証レイヤーの値|既定で使用|[説明]|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|ネゴシエート|はい|Windows 統合認証に対して Kerberos が最初に試行されますが、レポート サーバーへのクライアント要求に対して Active Directory でチケットを付与できない場合は NTLM に戻ります。 ネゴシエートは、チケットが使用できない場合にのみ NTLM に戻ります。 チケットがないのではなく、最初の試行でエラーになった場合は、レポート サーバーで 2 回目の試行は行われません。|  
 |RSWindowsNTLM|NTLM|はい|Windows 統合認証に NTLM を使用します。<br /><br /> 資格情報は、他の要求で委任または権限借用されません。 後続の要求は、新しい要求/応答シーケンスに従います。 ネットワークのセキュリティ設定によっては、ユーザーは資格情報または認証要求を透過的に処理するように要求される場合があります。|  
@@ -89,7 +90,6 @@ ms.lasthandoff: 05/03/2018
 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
 [セキュリティ拡張機能の実装](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
-[レポート ビルダーへのアクセスの構成](../../reporting-services/report-server/configure-report-builder-access.md)   
 [セキュリティ拡張機能の概要](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Reporting Services での認証](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Reporting Services での承認](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  

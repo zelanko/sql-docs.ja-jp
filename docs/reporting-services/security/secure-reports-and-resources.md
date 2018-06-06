@@ -21,11 +21,12 @@ caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 82533018e021d38612b7cb73f5cfaa6788f23e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4a41d9238315719bc6e47fb3bc9c598222673a6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550773"
 ---
 # <a name="secure-reports-and-resources"></a>レポートとリソースの保護
   各レポートおよびリソースのセキュリティを設定して、これらのアイテムへのユーザーのアクセスのレベルを制御できます。 既定では、組み込みの **Administrators** グループのメンバーであるユーザーのみ、レポートの実行、リソースの表示、プロパティの変更、およびアイテムの削除を行うことができます。 他のすべてのユーザーについては、レポートまたはリソースへのアクセスを許可するロール割り当てを作成する必要があります。  
@@ -79,7 +80,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>参照  
  [ロールの割り当てを作成および管理する](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [レポート ビルダーへのアクセスの構成](../../reporting-services/report-server/configure-report-builder-access.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [共有データ ソース アイテムをセキュリティで保護する](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Reporting Services データ ソースに資格情報を保存する](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  

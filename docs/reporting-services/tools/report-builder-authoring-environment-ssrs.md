@@ -15,11 +15,12 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9a8daf190f0fbd77bc36e2be7d079a2c7176db6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 343372d210fa960ca85ca672e96b0e1aaedf6277
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550073"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>レポート ビルダーの作成環境 (SSRS)
   レポート ビルダー [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、Visual Studio 以外で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページネーションのあるレポートを作成するためのスタンドアロンの作成環境です。 レポートをデザインする際には、データの取得場所、取得するデータ、およびデータの表示方法を指定します。 レポートを実行すると、指定した情報がすべてレポート プロセッサに渡されます。レポート プロセッサは、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  
@@ -51,7 +52,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーをインストール](../../reporting-services/install-windows/install-report-builder.md)   
- [レポート ビルダーへのアクセスの構成](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)   
  [レポート デザイナーを使用してレポートをデザインする &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

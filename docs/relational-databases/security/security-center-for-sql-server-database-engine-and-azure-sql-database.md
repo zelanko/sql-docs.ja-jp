@@ -24,11 +24,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e07f44a6d09e0c5416f43c4a9113b633e2aa689
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ebdcbdde0a274df0240b6e7d182ce600bd62ed7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708100"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|**自動監査**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査 (サーバーと DB レベル)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 監査 (データベース レベル)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 脅威検出| <br /><br /> [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL データベースの監査](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [SQL データベース脅威検出を開始](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [SQL データベースの脆弱性評価](https://docs.microsoft.com/en-us/azure/sql-database/sql-vulnerability-assessment) |  
+|**自動監査**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査 (サーバーと DB レベル)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 監査 (データベース レベル)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 脅威検出| <br /><br /> [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL データベースの監査](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [SQL データベース脅威検出を開始](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [SQL データベースの脆弱性評価](https://docs.microsoft.com/azure/sql-database/sql-vulnerability-assessment) |  
 |**カスタム監査**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") トリガー|カスタム監査の実装: [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) と [DML Triggers](../../relational-databases/triggers/dml-triggers.md)の作成|  
 |**準拠**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") コンプライアンス|SQL Server:<br />                        [情報セキュリティ国際評価基準](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL データベース:<br />                        [Microsoft Azure セキュリティ センター: 機能による準拠](http://azure.microsoft.com/support/trust-center/services/)|  
   

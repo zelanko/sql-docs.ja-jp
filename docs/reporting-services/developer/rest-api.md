@@ -1,7 +1,7 @@
 ---
 title: Reporting Services の REST API による開発 | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-ms.date: 10/19/2017
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: developer
@@ -14,11 +14,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5a180e19628ad832b970026422e9b03e7373ecfb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f2f0959639736379bc28c6add71d09769352fed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34553833"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Reporting Services の REST API による開発
 
@@ -27,6 +28,8 @@ ms.lasthandoff: 05/03/2018
 Microsoft SQL Server 2017 Reporting Services では、Representational State Transfer (REST) API がサポートされます。 REST API は、一連の HTTP 操作 (メソッド) をサポートするサービス エンドポイントであり、レポート サーバー内のリソースに対する作成、取得、更新、削除アクセスを提供します。
 
 REST API を使用すると、SQL Server 2017 Reporting Services レポート サーバー カタログ内のオブジェクトにプログラムでアクセスできます。 オブジェクトの例としては、フォルダー、レポート、KPI、データ ソース、データセット、更新計画、サブスクリプションなどがあります。 REST API を使用すると、たとえば、フォルダー階層内の移動、フォルダーの内容の検出、レポート定義のダウンロードなどを行うことができます。 また、オブジェクトの作成、更新、および削除を行うこともできます。 オブジェクトの操作の例としては、レポートのアップロード、更新計画の実行、フォルダーの削除などがあります。
+
+[!INCLUDE [GDPR-related guidance](../../includes/gdpr-hybrid-note.md)]
 
 ## <a name="components-of-a-rest-api-requestresponse"></a>REST API の要求/応答のコンポーネント
 

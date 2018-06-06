@@ -29,11 +29,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b02629d9e51740907fdb1698e50bc9e8c241d26c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1dbc4b6f4cf3dcb464f8e402bfd9d2579e63078
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582024"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -148,7 +149,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. SAS トークンを使用して資格情報の作成  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで。  
   
- 次の例では、SAS トークンを使用して共有アクセス署名資格情報を作成します。  Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成してから、Shared Access Signature を使って資格情報を作成するチュートリアルについては、「[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases.md)」(チュートリアル: Microsoft Azure BLOB ストレージ サービスと SQL Server 2016 データベースの使用) をご覧ください。  
+ 次の例では、SAS トークンを使用して共有アクセス署名資格情報を作成します。  Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成してから、Shared Access Signature を使って資格情報を作成するチュートリアルについては、「[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」(チュートリアル: Microsoft Azure BLOB ストレージ サービスと SQL Server 2016 データベースの使用) をご覧ください。  
   
 > [!IMPORTANT]  
 >  **CREDENTIAL NAME** 引数では、名前がコンテナーのパス (https で始まり、末尾のスラッシュを含まないもの) と一致する必要があります。 **IDENTITY** 引数には、名前 *SHARED ACCESS SIGNATURE* が必要です。 **SECRET** 引数には、Shared Access Signature トークンが必要です。  

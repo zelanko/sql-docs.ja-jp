@@ -17,11 +17,12 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5aec79dad9d34b8cdd77938b312ca990665c29bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c070d081e622982bbead15826914b01a89179e7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585624"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>チュートリアル: Azure Blob Storage サービスへの SQL Server のバックアップと復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 [レッスン 2: SQL Server 資格情報の作成](http://msdn.microsoft.com/library/64f8805c-1ddc-4c96-a47c-22917d12e1ab)  
 このレッスンでは、Azure ストレージ アカウントへのアクセスに使用するセキュリティ情報を格納するための資格情報を作成します。  
   
-[レッスン 3: Azure Blob Storage サービスに対するデータベースの完全バックアップの書き込み](https://technet.microsoft.com/en-us/library/jj720552&#40;v=sql.110&#41;.aspx)  
+[レッスン 3: Azure Blob Storage サービスに対するデータベースの完全バックアップの書き込み](https://technet.microsoft.com/en-us/library/jj720552\(v=sql.110\).aspx)  
 このレッスンでは、T-SQL ステートメントを実行して、Azure Blob Storage サービスに AdventureWorks2012 データベースのバックアップを書き込みます。  
   
 [レッスン 4: データベースの完全バックアップからの復元](http://msdn.microsoft.com/library/580f76e6-9802-4abc-9043-db6de592c733)  

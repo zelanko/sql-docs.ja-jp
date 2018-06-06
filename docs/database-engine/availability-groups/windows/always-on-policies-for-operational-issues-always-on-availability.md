@@ -3,7 +3,6 @@ title: 運用上の問題のための AlwaysOn ポリシー - Always On 可用�
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: 19
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcc2a4f92bad4d12a8fd1b54601a53e3d801d23e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fe881c82173877dba98e99c1af5b197ce5fba20
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768988"
 ---
 # <a name="always-on-policies-for-operational-issues---always-on-availability"></a>運用上の問題のための AlwaysOn ポリシー - Always On 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,13 +104,13 @@ ms.lasthandoff: 05/03/2018
   
  ユーザー定義ポリシーでは、AlwaysOn の定義済みポリシーで使用されているものを含め、使用可能なすべての PBM ファセットを使用できます (このトピックの「 [定義済みのポリシーと問題点](#Always OnPBM)」を参照してください)。 サーバーのファセットは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性状態の監視用に、**IsHadrEnabled** プロパティおよび **HadrManagerStatus**プロパティを提供します。 サーバーのファセットは、WSFC クラスター構成の監視用に、 **ClusterQuorumType**プロパティおよび **ClusterQuorumState**プロパティも提供します。  
   
- 詳細については、「 [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx) 」を参照してください (SQL Server AlwaysOn チームのブログ)。  
+ 詳細については、「 [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) 」を参照してください (SQL Server AlwaysOn チームのブログ)。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
 -   [Always On ポリシーを使用した可用性グループの正常性の確認 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
--   [Always On ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
@@ -122,9 +122,9 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [AlwaysOn の正常性モデル: パート 1: 正常性モデルのアーキテクチャ](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx)  
+-   [AlwaysOn の正常性モデル: パート 1: 正常性モデルのアーキテクチャ](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
   
--   [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx)  
+-   [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
   
 -   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
   

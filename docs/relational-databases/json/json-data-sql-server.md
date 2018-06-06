@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 360e15e879672fd3fb0568cad22e29e36a0ac45c
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 86b80d4706adbbf298df34a74d6c923bb4f56161
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300570"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34586024"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server の JSON データ
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -72,6 +72,7 @@ SQL Server がその組み込みの JSON サポートで提供する主な機能
 -   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) は、JSON 文字列からオブジェクトまたは配列を抽出します。
 -   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) は、JSON 文字列の値を変更します。
 
+
 **例**
   
 次の例のクエリでは、テーブルからリレーショナル データと (`jsonCol` という名前の列に格納された) JSON データの両方を使用しています。  
@@ -98,8 +99,8 @@ JSON テキストの一部を修正する必要がある場合は、[JSON_MODIFY
   
 ```sql  
 DECLARE @json NVARCHAR(MAX);
-SET @json = '{"info":{"address":[{"town":"Belgrade"},{"town":"Paris"},{"town":"Madrid"}]}';
-SET @json = JSON_MODIFY(@jsonInfo,'$.info.address[1].town','London');
+SET @json = '{"info":{"address":[{"town":"Belgrade"},{"town":"Paris"},{"town":"Madrid"}]}}';
+SET @json = JSON_MODIFY(@json,'$.info.address[1].town','London');
 SELECT modifiedJson = @json;
 ```  
 **結果**  

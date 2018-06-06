@@ -3,7 +3,6 @@ title: '[結果] ページ (AlwaysOn 可用性グループ ウィザード) | Mi
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -16,14 +15,15 @@ f1_keywords:
 - sql13.swb.adddatabasewizard.results.f1
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 caps.latest.revision: 9
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a33de5f659afe7e81cdc5b04c7bcf792caa5deea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c2e9eafbd63a68d6b996494f51f0c757e1eae1ee
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768678"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>[結果] ページ (AlwaysOn 可用性グループ ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
  **結果**  
  完了した手順ごとに、次のハイパーリンク テキストのいずれかが表示されます。  
   
-|結果|Description|  
+|結果|[説明]|  
 |------------|-----------------|  
 |**[エラー]**|検証手順が失敗したことを示します。 エラー メッセージを表示するには、リンクをクリックします。|  
 |**成功**|検証手順が正常に完了したことを示します。|  
