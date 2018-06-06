@@ -3,7 +3,6 @@ title: データベース エンジンのアップグレード計画の策定お
 ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -12,15 +11,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bbe0ecaee2d03865f7e8f6700b6aa5a146c533f1
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 2b58c3b7a00b8ba886c189c5d4b4ff3678d57f4a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300210"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770668"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>データベース エンジンのアップグレード計画の策定およびテスト
 

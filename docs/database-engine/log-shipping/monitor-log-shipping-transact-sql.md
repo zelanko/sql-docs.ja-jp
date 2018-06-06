@@ -3,8 +3,6 @@ title: ログ配布の監視 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -20,14 +18,15 @@ helpviewer_keywords:
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 caps.latest.revision: 29
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04c9988606f8729ae0e49c825ed6b40a431889ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d805bc8bdb62f5aad87afa19fd12e4d134a6ed8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771698"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>ログ配布の監視 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  これらのテーブルでクエリを実行して、ログ配布セッションの状態を監視できます。 たとえば、ログ配布の状態を参照するには、バックアップ ジョブ、コピー ジョブ、および復元ジョブの状態と履歴を確認します。 以下の監視テーブルをクエリすることにより、特定のログ配布の履歴とエラーの詳細を参照できます。  
   
-|テーブル|Description|  
+|テーブル|[説明]|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|警告ジョブ ID を格納します。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|ログ配布ジョブのエラーの詳細を格納します。 このテーブルをクエリして、あるエージェント セッションのエラーを参照することができます。 必要に応じて、エラーが記録された日付と時刻でエラーを並べ替えることができます。 各エラーは一連の例外として記録されるので、1 つのエージェント セッションで複数のエラー (シーケンス) が記録されることがあります。|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>ログ配布を監視するためのストアド プロシージャ  
  監視情報と履歴情報は、 **msdb**のテーブルに格納されます。このテーブルには、ログ配布ストアド プロシージャを使用してアクセスできます。 次の表に示すサーバーで、これらのストアド プロシージャを実行します。  
   
-|ストアド プロシージャ|Description|プロシージャを実行するサーバー|  
+|ストアド プロシージャ|[説明]|プロシージャを実行するサーバー|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|**log_shipping_monitor_primary** テーブルから、指定したプライマリ データベースの監視レコードを返します。|監視サーバーまたはプライマリ サーバー|  
 |[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|**log_shipping_monitor_secondary** テーブルから、指定したセカンダリ データベースの監視レコードを返します。|監視サーバーまたはセカンダリ サーバー|  

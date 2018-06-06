@@ -3,7 +3,6 @@ title: 分散型可用性グループ (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,17 +13,18 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: allanhirt
-ms.author: mikeray
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ce87751cb0f279b74a19159ceb966d8cadaec52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b2f8ba15720726e177884aa4481fb43dae6084f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769338"
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-分散型可用性グループは、SQL Server 2016 で導入された新しい機能であり、既存の AlwaysOn 可用性グループ機能のバリエーションです。 この記事では、分散型可用性グループのいくつかの側面を明らかにし、既存の [SQL Server ドキュメント](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)を補完します。
+分散型可用性グループは、SQL Server 2016 で導入された新しい機能であり、既存の AlwaysOn 可用性グループ機能のバリエーションです。 この記事では、分散型可用性グループのいくつかの側面を明らかにし、既存の [SQL Server ドキュメント](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)を補完します。
 
 > [!NOTE]
 > "DAG" は、Exchange のデータベース可用性グループ機能で既に使われているため、"*分散型可用性グループ*" の正式な省略形ではありません。 Exchange のこの機能は、SQL Server の可用性グループまたは分散型可用性グループとは関係がありません。
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 
 ![分散型可用性グループとそのデータ移動][2]
 
-AG 2 のプライマリ レプリカが挿入、更新、削除を受け付けるようにする唯一の方法は、AG 1 から分散型可用性グループを手動でフェールオーバーすることです。 上の図で、AG 1 にはデータベースの書き込み可能なコピーが含まれるため、フェールオーバーを発行すると、AG 2 は挿入、更新、削除を処理できる可用性グループになります。 1 つの分散型可用性グループを別の分散型可用性グループにフェールオーバーする方法については、「[セカンダリ可用性グループにフェールオーバーする]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)」を参照してください。
+AG 2 のプライマリ レプリカが挿入、更新、削除を受け付けるようにする唯一の方法は、AG 1 から分散型可用性グループを手動でフェールオーバーすることです。 上の図で、AG 1 にはデータベースの書き込み可能なコピーが含まれるため、フェールオーバーを発行すると、AG 2 は挿入、更新、削除を処理できる可用性グループになります。 1 つの分散型可用性グループを別の分散型可用性グループにフェールオーバーする方法については、「[セカンダリ可用性グループにフェールオーバーする]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)」を参照してください。
 
 > [!NOTE]
 > SQL Server 2016 の分散型可用性グループは、FORCE_FAILOVER_ALLOW_DATA_LOSS オプションを使った可用性グループ間のフェールオーバーのみをサポートします。
@@ -90,7 +90,7 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 両方の WSFC クラスターが同じドメイン (信頼されていないドメイン) に参加している場合、分散型可用性グループを作成するときに特別なことを行う必要ありません。 可用性グループと WSFC クラスターが同じドメインに参加していない場合は、ドメインに依存しない可用性グループを作成する場合と同じように、証明書を使って分散型可用性グループを動作させる必要があります。 分散型可用性グループ用に証明書を構成する方法については、「[Create a domain-independent availability group](domain-independent-availability-groups.md#create-a-domain-independent-availability-group)」(ドメインに依存しない可用性グループを作成する) のステップ 3 ～ 13 に従ってください。
 
-分散型可用性グループでは、基になる各可用性グループのプライマリ レプリカが相互の証明書を持っている必要があります。 証明書を使わないエンドポイントが既にある場合は、[ALTER ENDPOINT](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-endpoint-transact-sql) を使って証明書を使うようにエンドポイントを再構成します。
+分散型可用性グループでは、基になる各可用性グループのプライマリ レプリカが相互の証明書を持っている必要があります。 証明書を使わないエンドポイントが既にある場合は、[ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) を使って証明書を使うようにエンドポイントを再構成します。
 
 ## <a name="distributed-availability-group-usage-scenarios"></a>分散型可用性グループの使用シナリオ
 
@@ -106,7 +106,7 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 ![従来のマルチサイト可用性グループ][4]
 
-分散型可用性グループでは、複数のデータ センターにまたがる可用性グループに対して、より柔軟な配置シナリオが提供されます。 [ログ配布]( https://docs.microsoft.com/en-us/sql/database-engine/log-shipping/about-log-shipping-sql-server)のような機能が過去に使われていた場合でも、分散型可用性グループを使うことができます。 ただし、従来の可用性グループとは異なり、分散型可用性グループではトランザクションの適用を遅延することはできません。 つまり、データが正しく更新または削除されないヒューマン エラーが発生した場合、可用性グループまたは分散型可用性グループでは役に立ちません。
+分散型可用性グループでは、複数のデータ センターにまたがる可用性グループに対して、より柔軟な配置シナリオが提供されます。 [ログ配布]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)のような機能が過去に使われていた場合でも、分散型可用性グループを使うことができます。 ただし、従来の可用性グループとは異なり、分散型可用性グループではトランザクションの適用を遅延することはできません。 つまり、データが正しく更新または削除されないヒューマン エラーが発生した場合、可用性グループまたは分散型可用性グループでは役に立ちません。
 
 分散型可用性グループは疎結合されていますが、この場合それは、分散型可用性グループは単一の WSFC クラスターを必要とせず、SQL Server によって保持されることを意味します。 WSFC クラスターは個別に保持され、同期は主に 2 つの可用性グループの間で非同期に行われるため、別のサイトにディザスター リカバリーを構成するのが簡単になります。 各可用性グループのプライマリ レプリカは、独自のセカンダリ レプリカを同期します。
 
@@ -149,7 +149,7 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 上のどちらの例でも、3 つの可用性グループ全体で最大 27 個のレプリカを持つことができ、そのすべてを読み取り専用クエリに使うことができます。 
 
-[読み取り専用ルーティング]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)は、分散型可用性グループでは正しく動作しません。 より詳細な情報:
+[読み取り専用ルーティング]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)は、分散型可用性グループでは正しく動作しません。 より詳細な情報:
 
 1. 読み取り専用ルーティングを構成することができ、分散型可用性グループのプライマリ可用性グループに対して動作します。 
 2. 読み取り専用ルーティングを構成できますが、分散型可用性グループのセカンダリ可用性グループには動作しません。 すべてのクエリがリスナーを使ってセカンダリ可用性グループに接続する場合は、セカンダリ可用性グループのプライマリ レプリカに移動します。 それ以外の場合は、各レプリカがすべての接続をセカンダリ レプリカとして許可し、それらに直接アクセスするように、構成する必要があります。 ただし、フェールオーバー後に、セカンダリ可用性グループがプライマリになっている場合は、読み取り専用ルーティングは動作します。 この動作は、SQL Server 2016 の更新プログラムまたは SQL Server の将来のバージョンで、変更される可能性があります。
@@ -157,7 +157,7 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>分散型可用性グループのセカンダリ可用性グループを初期化する
 
-分散型可用性グループは、第 2 の可用性グループのプライマリ レプリカを初期化するための主要な方法として[自動シード処理]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)を使うように設計されています。 第 2 の可用性グループのプライマリ レプリカでの完全なデータベース復元は、次のようにすることで可能です。
+分散型可用性グループは、第 2 の可用性グループのプライマリ レプリカを初期化するための主要な方法として[自動シード処理]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)を使うように設計されています。 第 2 の可用性グループのプライマリ レプリカでの完全なデータベース復元は、次のようにすることで可能です。
 
 1. WITH NORECOVERY を指定してデータベース バックアップを復元します。
 2. 必要な場合は、適切なトランザクション ログ バックアップを WITH NORECOVERY で復元します。
@@ -168,7 +168,7 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 * 第 2 の可用性グループのプライマリ レプリカの `sys.dm_hadr_automatic_seeding` で示される出力では、`current_state` が FAILED、理由が "Seeding Check Message Timeout" と表示されます。
 
-* 第 2 の可用性グループのプライマリ レプリカの現在の SQL Server ログでは、シード処理が行われて、[LSN]( https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) が同期されたと表示されます。
+* 第 2 の可用性グループのプライマリ レプリカの現在の SQL Server ログでは、シード処理が行われて、[LSN]( https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) が同期されたと表示されます。
 
 * 第 1 の可用性グループのプライマリ レプリカの `sys.dm_hadr_automatic_seeding` で示される出力では、current_state が COMPLETED と表示されます。 
 

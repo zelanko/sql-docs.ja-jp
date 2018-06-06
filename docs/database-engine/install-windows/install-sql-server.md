@@ -3,7 +3,6 @@ title: SQL Server をインストールする | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -15,14 +14,15 @@ helpviewer_keywords:
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 caps.latest.revision: 59
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a66992f974048b0fb24cfae124896c3f0ebc419e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ea964d0048b410dd5f555759c4a73f547837be9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771095"
 ---
 # <a name="install-sql-server"></a>SQL Server をインストールする
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="how-to-install-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のインストール方法
  
-|[タイトル]|Description|  
+|[タイトル]|[説明]|  
 |-----------|-----------------|  
 |[Server Core に [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] をインストールする](../../database-engine/install-windows/install-sql-server-on-server-core.md)|Windows Server Core への [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のインストールについては、この記事をご覧ください。|  
 |[システム構成チェッカーの検査パラメーター](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|システム構成チェッカー (SCC) の機能について説明します。|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="how-to-install-individual-components"></a>個々のコンポーネントをインストールする方法  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[SQL Server データベース エンジンのインストール](../../database-engine/install-windows/install-sql-server-database-engine.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]をインストールして構成する方法について説明します。|  
 |[SQL Server レプリケーションのインストール](../../database-engine/install-windows/install-sql-server-replication.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションをインストールして構成する方法について説明します。|  
@@ -80,7 +80,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="how-to-configure-sql-server"></a>SQL Server を構成する方法  
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|この記事では、ファイアウォール構成の概要を示し、Windows ファイアウォールを構成する方法について説明します。|  
 |[SQL Server アクセス用のマルチホーム コンピューターの構成](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|この記事では、マルチホーム環境内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのネットワーク接続用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とセキュリティが強化された Windows ファイアウォールを構成する方法について説明します。|  

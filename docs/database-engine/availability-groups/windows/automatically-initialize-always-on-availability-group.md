@@ -3,7 +3,6 @@ title: Always On 可用性グループを自動的に初期化する | Microsoft
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -11,14 +10,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 caps.latest.revision: 18
-author: MikeRayMSFT
+author: MashaMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: 5cb1573bc000783cd0f6ab9e1f928cfc34564c51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4856ae5b4feede296b0c51ccfe5abf58e9947eee
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768668"
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>AlwaysOn 可用性グループを自動的に初期化する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -219,7 +219,7 @@ GO
 
 次の表に、自動シード処理に関連する拡張イベントを示します。 
 
-| [オブジェクト名] | Description|
+| [オブジェクト名] | [説明]|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  シード処理要求メッセージ。
 |hadr_physical_seeding_backup_state_change |    物理シード処理のバックアップ側の状態変更。

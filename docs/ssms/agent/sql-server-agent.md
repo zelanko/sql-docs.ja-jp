@@ -19,11 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6eacddc4432560bcde519602dd26c2b472b37041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80b6776f555fd5bdaa8ed4c4977dc5193a27eba2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708940"
 ---
 # <a name="sql-server-agent"></a>SQL Server エージェント
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -119,7 +120,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 > 今後のバージョンの **では、** エージェントからポケットベル オプションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
-電子メールまたはポケットベルを使用してオペレーターに通知を送信するには、データベース メールを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを構成する必要があります。 詳細については、「 [Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)」を参照してください。  
+電子メールまたはポケットベルを使用してオペレーターに通知を送信するには、データベース メールを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを構成する必要があります。 詳細については、「 [Database Mail](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)」を参照してください。  
   
 オペレーターは、個人のグループを表す別名として定義できます。 その場合、その別名のすべてのメンバーが同時に通知を受け取ることになります。 詳細については、「 [オペレーター](../../ssms/agent/operators.md)」を参照してください。  
   
@@ -134,7 +135,7 @@ ms.lasthandoff: 05/03/2018
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] では、次の表に示すサブシステムを定義しています。  
   
-|サブシステム名|Description|  
+|サブシステム名|[説明]|  
 |--------------|-----------|  
 |Microsoft ActiveX スクリプト|ActiveX スクリプティング ジョブ ステップを実行します。<br /><br />**警告** ActiveX スクリプティング サブシステムは、[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の将来のバージョンで [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
 |オペレーティング システム (**CmdExec**)|実行可能なプログラムを実行します。|  
@@ -174,16 +175,16 @@ ms.lasthandoff: 05/03/2018
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントに関連したタスクを次に示します。  
   
-|Description|トピック|  
+|[説明]|トピック|  
 |-----------|-----|  
 |SQL Server エージェントを構成する方法について説明します。|[SQL Server エージェントの構成](../../ssms/agent/configure-sql-server-agent.md)|  
 |SQL Server エージェント サービスを開始、停止、および一時停止する方法について説明します。|[SQL Server エージェント サービスの開始、停止、または一時停止](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  
 |SQL Server エージェント サービスのアカウントを指定する際の考慮事項について説明します。|[SQL Server エージェント サービスのアカウントの選択](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
 |SQL Server エージェントのエラー ログを使用する方法について説明します。|[SQL Server エージェント エラー ログ](../../ssms/agent/sql-server-agent-error-log.md)|  
 |パフォーマンス オブジェクトを使用する方法について説明します。|[パフォーマンス オブジェクトの使用](../../ssms/agent/use-performance-objects.md)|  
-|メンテナンス プラン ウィザードについて説明します。メンテナンス プラン ウィザードは、SQL Server のインスタンスを自動管理するために、ジョブ、警告、およびオペレーターを作成するのに役立つユーティリティです。|[メンテナンス プラン ウィザードの使用](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
+|メンテナンス プラン ウィザードについて説明します。メンテナンス プラン ウィザードは、SQL Server のインスタンスを自動管理するために、ジョブ、警告、およびオペレーターを作成するのに役立つユーティリティです。|[メンテナンス プラン ウィザードの使用](http://msdn.microsoft.com/db65c726-9892-480c-873b-3af29afcee44)|  
 |SQL Server エージェントを使用して管理タスクを自動化する方法について説明します。|[管理タスクの自動化 &#40;SQL Server エージェント&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>参照  
-[セキュリティ構成](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
+[セキュリティ構成](http://msdn.microsoft.com/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

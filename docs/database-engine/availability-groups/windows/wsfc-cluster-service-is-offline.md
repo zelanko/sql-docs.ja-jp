@@ -3,7 +3,6 @@ title: WSFC クラスター サービスはオフライン | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,15 +14,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c7b39bf1359c58e79998285bfe9d9e9d71d803cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e410fbf3a2206aae8d378156123e3286ab216f51
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771318"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC クラスター サービスはオフライン
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 |**カテゴリ**|**重大**|  
 |**ファセット**|SQL Server のインスタンス|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>[説明]  
  このポリシーは、Windows Server フェールオーバー クラスター (WSFC) の状態をチェックします。 WSFC クラスターがオフラインであるか、強制されたクォーラムの状態である場合、ポリシーは異常な状態で、アラートが発生します。 このクラスター内でホストされているすべての可用性グループはオフラインであるか、またはディザスター リカバリー アクションが必要です。  
   
  クラスターの状態が標準のクォーラムである場合、ポリシーは正常な状態です。  
@@ -54,6 +54,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

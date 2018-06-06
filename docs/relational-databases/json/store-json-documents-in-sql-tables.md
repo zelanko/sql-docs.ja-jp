@@ -17,11 +17,12 @@ caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 7f17fe3754cae9be4e6701e237b380d43cceed7e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 330e4d3bf4bf0059fc713d0b8969505e00d775c3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689200"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>SQL Server または SQL Database に JSON ドキュメントを保存する
 SQL Server と Azure SQL Database には、ネイティブ JSON 機能があります。標準 SQL 言語を利用し、JSON ドキュメントを解析できます。 SQL Server または SQL Database に JSON ドキュメントを保存したり、NoSQL データベースの場合のように JSON データを問い合わせたりできます。 この記事では、SQL Server または SQL Database に JSON ドキュメントを保存するためのオプションについて説明します。
@@ -59,7 +60,7 @@ SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$
  WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
  GROUP BY JSON_VALUE(log, ‘$.severity’)
  HAVING AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) > 100
- ORDER BY CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
+ ORDER BY AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
 ```
 
 *あらゆる* T-SQL 関数とクエリ句を利用して JSON ドキュメントにクエリを実行できることは大きな利点です。 SQL Server と SQL Database のクエリには、JSON ドキュメントの分析に利用できる制約がありません。 `JSON_VALUE` 関数で JSON ドキュメントから値を抽出し、それを他の値と同様にクエリで利用できます。

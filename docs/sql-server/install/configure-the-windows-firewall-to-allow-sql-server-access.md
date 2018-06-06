@@ -3,12 +3,9 @@ title: SQL Server のアクセスを許可するための Windows ファイア�
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,14 +23,15 @@ helpviewer_keywords:
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 48
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa7b14005bacef0d094abd18bfe7e4d2e2e81665
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 100c84e221b7add9eab09cd7b2b0bf4c3ab0669b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772598"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -88,7 +86,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **netsh**  
   
-     **netsh.exe** ツールを使用して、管理者はコマンド プロンプトまたはバッチ ファイルで Windows ベースのコンピューターの構成および監視を行うことができます**。** **netsh** ツールを使用すれば、入力したコンテキスト コマンドを適切なヘルパーに渡し、ヘルパーによってコマンドを実行できます。 ヘルパーは、1 つ以上のサービス、ユーティリティ、またはプロトコルの構成、監視、サポートを行って **netsh** ツールの機能を拡張するダイナミック リンク ライブラリ (.dll) ファイルです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサポートしているすべてのオペレーティング システムには、ファイアウォール ヘルパーが組み込まれています。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] には、 **advfirewall**という高度なファイアウォール ヘルパーも組み込まれています。 **netsh** の使い方については、このトピックでは詳しく説明しません。 ただし、このトピックで説明する構成オプションの多くは、 **netsh**を使用して構成できます。 たとえば、コマンド プロンプトで次のスクリプトを実行すると、TCP ポート 1433 を開くことができます。  
+     **netsh.exe** ツールを使用して、管理者はコマンド プロンプトまたはバッチ ファイルで Windows ベースのコンピューターの構成および監視を行うことができます **。** **netsh** ツールを使用すれば、入力したコンテキスト コマンドを適切なヘルパーに渡し、ヘルパーによってコマンドを実行できます。 ヘルパーは、1 つ以上のサービス、ユーティリティ、またはプロトコルの構成、監視、サポートを行って **netsh** ツールの機能を拡張するダイナミック リンク ライブラリ (.dll) ファイルです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサポートしているすべてのオペレーティング システムには、ファイアウォール ヘルパーが組み込まれています。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] には、 **advfirewall**という高度なファイアウォール ヘルパーも組み込まれています。 **netsh** の使い方については、このトピックでは詳しく説明しません。 ただし、このトピックで説明する構成オプションの多くは、 **netsh**を使用して構成できます。 たとえば、コマンド プロンプトで次のスクリプトを実行すると、TCP ポート 1433 を開くことができます。  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  

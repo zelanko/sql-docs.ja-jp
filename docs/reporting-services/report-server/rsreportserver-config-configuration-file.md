@@ -15,11 +15,12 @@ caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1be44e3e1f30aab2be4c446e6efd23610b9ae68b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0bc8e10c310ed490ae64022a5c002b66e104a9c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550863"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RSReportServer Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** ファイルには、レポート サーバー Web サービスおよびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
@@ -65,7 +66,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 > [!NOTE]  
 >  このトピックの "最大値" は INT_MAX の値 (2147483647) を示します。  詳細については、「[整数の制限](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx)」(http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx) を参照してください。  
   
-|設定|Description|モード|  
+|設定|[説明]|モード|  
 |-------------|-----------------|----------|  
 |**Dsn**|レポート サーバー データベースをホストするデータベース サーバーへの接続文字列を指定します。 この値は、レポート サーバー データベースの作成時に、暗号化されて構成ファイルに追加されます。 SharePoint では、SharePoint 構成データベースからデータベース接続情報が取得されます。|N、S|  
 |**ConnectionType**|レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報のタイプを指定します。 有効な値は、 **Default** および **Impersonate**です。 **Default** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたはサービス アカウントを使用してレポート サーバー データベースに接続するようにレポート サーバーを構成する場合に指定します。 **Impersonate** は、レポート サーバーが Windows アカウントを使用してレポート サーバー データベースに接続する場合に指定します。|×|  
@@ -104,7 +105,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  表の最後の列は、設定がネイティブ モードのレポート サーバーに適用されるか (N)、SharePoint モードのレポート サーバーに適用されるか (S)、両方に適用されるかを示しています。  
   
-|設定|Description|モード|  
+|設定|[説明]|モード|  
 |-------------|-----------------|----------|  
 |**アプリケーション**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションの設定を格納します。|×|  
 |**名前**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションを指定します。 有効な値は ReportServerWebService または ReportManager です。|×|  
@@ -133,7 +134,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  次の表の最後の列は、設定がネイティブ モードのレポート サーバーに適用されるか (N)、SharePoint モードのレポート サーバーに適用されるか (S)、両方に適用されるかを示しています。  
   
-|設定|Description|モード|  
+|設定|[説明]|モード|  
 |-------------|-----------------|----------|  
 |**AuthenticationTypes**|1 つまたは複数の認証の種類を指定します。 有効な値は、 **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**、 **RSWindowsBasic**、および **Custom**です。<br /><br /> **RSWindows** タイプと **Custom** は、相互に排他的です。<br /><br /> **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**、および **RSWindowsBasic** は累積的に設定されるため、前述の既定値の例に示したように、組み合わせて指定することができます。<br /><br /> 認証の種類が異なる複数のクライアント アプリケーションまたはブラウザーから要求を受け取る場合は、認証の種類を複数指定する必要があります。<br /><br /> **RSWindowsNTLM**は削除しないでください。削除した場合、サポートされるブラウザーの種類が制限されます。 詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。|×|  
 |**RSWindowsNegotiate**|レポート サーバーは、Kerberos または NTLM のいずれかのセキュリティ トークンを受け付けます。 これは、レポート サーバーがネイティブ モードで実行され、サービス アカウントが Network Service である場合の既定の設定です。 レポート サーバーがネイティブ モードで実行され、サービス アカウントがドメイン ユーザー アカウントとして構成されている場合、この設定は省略されます。<br /><br /> レポート サーバー サービス アカウントに対してドメイン アカウントが構成されており、レポート サーバーに対してサービス プリンシパル名 (SPN) が構成されていない場合、この設定により、ユーザーがサーバーにログオンできないことがあります。|×|  
@@ -153,7 +154,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  次の表の最後の列は、設定がネイティブ モードのレポート サーバーに適用されるか (N)、SharePoint モードのレポート サーバーに適用されるか (S)、両方に適用されるかを示しています。  
   
-|設定|Description|モード|  
+|設定|[説明]|モード|  
 |-------------|-----------------|----------|  
 |**IsSchedulingService**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーによって作成されたスケジュールおよびサブスクリプションに対応する一連の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] エージェント ジョブをレポート サーバーが維持するかどうかを指定します。 有効な値は、 **True** (既定) および **False**です。<br /><br /> ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を有効または無効にすると、この設定に影響します。 詳細については、「 [レポート サーバー サービスの開始と停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)」を参照してください。|N、S|  
 |**IsNotificationService**|レポート サーバーが通知および配信を処理するかどうかを指定します。 有効な値は、 **True** (既定) および **False**です。 この値が **False**の場合、サブスクリプションは配信されません。<br /><br /> ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を有効または無効にすると、この設定に影響します。 詳細については、「 [レポート サーバー サービスの開始と停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)」を参照してください。|N、S|  
@@ -179,10 +180,10 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  次の表の最後の列は、設定がネイティブ モードのレポート サーバーに適用されるか (N)、SharePoint モードのレポート サーバーに適用されるか (S)、両方に適用されるかを示しています。  
   
-|設定|Description|モード|  
+|設定|[説明]|モード|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|Web ポータルの接続先となるレポート サーバーの URL を指定します。 この値は、Web ポータルを他のインスタンス上またはリモート コンピューター上のレポート サーバーに接続する場合にのみ変更します。|N、S|  
-|**ReportBuilderTrustLevel**|この値は変更しないでください。この値を構成することはできません。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンでは、レポート ビルダーは **FullTrust**でのみ実行されます。 詳細については、「 [レポート ビルダーへのアクセスの構成](../../reporting-services/report-server/configure-report-builder-access.md) 」を参照してください。 部分信頼モードの廃止の詳細については、「 [SQL Server 2016 で廃止された SQL Server Reporting Services の機能](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)」を参照してください。|N、S|  
+|**ReportBuilderTrustLevel**|この値は変更しないでください。この値を構成することはできません。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンでは、レポート ビルダーは **FullTrust**でのみ実行されます。 部分信頼モードの廃止の詳細については、「 [SQL Server 2016 で廃止された SQL Server Reporting Services の機能](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)」を参照してください。|N、S|  
 |**PageCountMode**|Web ポータルでのみ使用されます。この設定は、レポート サーバーでページ数の値をレポートの表示前に計算するか、表示中に計算するかを指定します。 有効な値は **Estimate** (既定値) および **Actual**です。 ユーザーがレポートを閲覧している間にページ数情報を計算する場合は、 **Estimate** を使用します。 ページ数の初期値は 2 (現在のページの他にもう 1 ページ) で、ユーザーがレポートを読み進める間にページ数が調整されます。 レポートが表示される前にページ数を計算する場合は、 **Actual** を使用します。 **Actual** は旧バージョンとの互換性を維持するために用意されています。 **PageCountMode** を **Actual**に設定した場合、有効なページ数を取得する関係上、レポート全体を処理する必要があるため、レポートが表示されるまでの待ち時間が長くなる点に注意してください。|N、S|  
   
 ##  <a name="bkmk_extensions"></a> Extensions (RSReportServer.config ファイル) (ネイティブ モード)  
@@ -227,7 +228,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  **Extension Name**、 **MaxRetries**、 **SecondsBeforeRetry**、 **Configuration**の各設定は、すべての配信拡張機能に存在します。 まず、これらの共通の設定について説明します。 それぞれの拡張機能に固有の設定については、2 つ目以降の表を参照してください。  
   
-|設定|Description|  
+|設定|[説明]|  
 |-------------|-----------------|  
 |**Extension Name**|配信拡張機能のフレンドリ名とアセンブリを指定します。 この値は変更しないでください。|  
 |**MaxRetries**|1 回で配信できなかった場合に、レポート サーバーが再試行を行う回数を指定します。 既定値は、3 です。|  
@@ -237,14 +238,14 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ####  <a name="bkmk_fileshare_extension"></a> ファイル共有配信拡張機能の構成設定  
  ファイル共有配信では、アプリケーション ファイル形式でエクスポートされたレポートが、ネットワーク上の共有フォルダーに送信されます。 詳細については、「 [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)」を参照してください。  
   
-|設定|Description|  
+|設定|[説明]|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats**、 **RenderingExtension**|ファイル共有配信でうまく使用できないエクスポート形式を意図的に除外する場合に使用します。 通常、これらの形式は、対話型のレポートやプレビューに使用されるほか、レポートを事前にキャッシュする場合に使用されます。 デスクトップ アプリケーションから簡単に閲覧できるアプリケーション ファイルは生成されません。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> [Null]|  
   
 ####  <a name="bkmk_email_extension"></a> レポート サーバーの電子メール拡張機能の構成設定  
  レポート サーバーの電子メールでは、SMTP ネットワーク デバイスを使用して、レポートを電子メール アドレスに送信します。 使用するには、この配信拡張機能があらかじめ構成されている必要があります。 詳細については、「 [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) 」および「 [Reporting Services 構成ファイル](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
-|設定|Description|  
+|設定|[説明]|  
 |-------------|-----------------|  
 |**SMTPServer**|リモート SMTP サーバーまたは転送サーバーのアドレスを示す文字列値を指定します。 この値は、リモート SMTP サービスに対して必要です。 IP アドレス、企業イントラネット上のコンピューターの UNC 名、または完全修飾ドメイン名を使用できます。|  
 |**SMTPServerPort**|メールを送信するために SMTP サービスで使用されるポートを示す整数値を指定します。 通常、ポート 25 が電子メールの送信に使用されます。|  
@@ -265,7 +266,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ####  <a name="bkmk_documentlibrary_extension"></a> レポート サーバー SharePoint ドキュメント ライブラリ拡張機能の構成  
  レポート サーバー ドキュメント ライブラリでは、アプリケーション ファイル形式にエクスポートされたレポートがドキュメント ライブラリに送信されます。 この配信拡張機能を使用できるのは、SharePoint 統合モードで実行するように構成されたレポート サーバーだけです。 詳細については、「 [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)」を参照してください。  
   
-|設定|Description|  
+|設定|[説明]|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats、RenderingExtension**|ドキュメント ライブラリ配信でうまく使用できないエクスポート形式を意図的に除外する場合に使用します。 HTMLOWC、RGDI、Null の各配信拡張機能が除外されます。 通常、これらの形式は、対話型のレポートやプレビューに使用されるほか、レポートを事前にキャッシュする場合に使用されます。 デスクトップ アプリケーションから簡単に閲覧できるアプリケーション ファイルは生成されません。|  
   
@@ -275,7 +276,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ###  <a name="bkmk_ui"></a> 配信 UI 拡張機能の全般構成  
  Web ポータルで個別のサブスクリプションを定義する際に使用されるサブスクリプション定義ページに表示されるユーザー インターフェイス コンポーネントを含んだ配信拡張機能を指定します。 ユーザー定義のオプションを持ったカスタム配信拡張機能を作成して配置する場合、Web ポータルを使用する必要がある場合は、その配信拡張機能をこのセクションに登録する必要があります。 既定では、レポート サーバーの電子メールおよびレポート サーバーのファイル共有の構成設定が存在します。 このセクションには、データ ドリブン サブスクリプションまたは SharePoint アプリケーション ページでのみ使用される配信拡張機能の設定は存在しません。  
   
-|設定|Description|  
+|設定|[説明]|  
 |-------------|-----------------|  
 |**DefaultDeliveryExtension**|サブスクリプション定義ページの配信の種類一覧で、どの配信拡張機能を先頭に表示するかを決定します。 この設定は 1 つの配信拡張機能だけが保持できます。 有効な値は **True** または **False**です。 この値を **True**に設定した場合、その拡張機能が既定で選択されます。|  
 |**Configuration**|配信拡張機能の構成オプションを指定します。 配信拡張機能ごとに、既定の表示形式を設定できます。 有効な値は、rsreportserver.config ファイルの表示セクションに記述されている表示拡張機能の名前です。|  
@@ -383,7 +384,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ##  <a name="bkmk_MapTileServer"></a> MapTileServerConfiguration (RSReportServer.config ファイル)  
  **MapTileServerConfiguration** は、レポート サーバーでパブリッシュされるレポート内のマップ レポート アイテムに対してタイル背景を提供する、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing Maps Web サービス用の構成の設定を定義します。 すべての子要素が必須です。  
   
-|設定|Description|  
+|設定|[説明]|  
 |-------------|-----------------|  
 |**MaxConnections**|Bing Maps Web サービスに対する接続の最大数を指定します。|  
 |**Timeout**|Bing Maps Web サービスからの応答を待つ時間のタイムアウトを秒数で指定します。|  
