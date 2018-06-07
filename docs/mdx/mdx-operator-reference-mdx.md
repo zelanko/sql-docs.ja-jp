@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b0750732af43f1d19922b0259b35d472be57b47
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/02/2018
 ms.locfileid: "34580604"
