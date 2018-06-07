@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: a042092cfcddb985b29e7b0c98612f07c68ac2d0
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/02/2018
 ms.locfileid: "34582284"
@@ -123,7 +123,7 @@ ms.locfileid: "34582284"
   
  このクエリでは、集合関数 Descendants から返されたセットをパラメーターとして別の集合関数 Order に渡す方法も示しています。  
   
- 特定の条件に従ってセットをフィルター選択非常に便利です、クエリを記述する場合は、この目的で使用することができます、[Filter &#40;MDX&#41; ](../mdx/filter-mdx.md)関数は、次の例で示すようにします。  
+ 特定の条件に従ってセットをフィルター選択非常に便利です、クエリを記述する場合は、この目的で使用することができます、[Filter ー &#40;MDX&#41; ](../mdx/filter-mdx.md)関数は、次の例で示すようにします。  
   
  `SELECT`  
   

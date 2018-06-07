@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1018c741ff545a88a90a6e27196cfc18d6f8177a
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/02/2018
 ms.locfileid: "34581954"
@@ -124,7 +124,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |AND|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
 |**TRUE**|TRUE|FALSE|FALSE|  
-|**EMPTY**|FALSE|EMPTY|FALSE|  
+|**EMMPTY**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
  下の表は、OR 演算子を 2 つのブール値オペランドに適用した結果を示します。  
@@ -132,7 +132,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |OR|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
-|**EMPTY**|TRUE|TRUE|  
+|**EMMPTY**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   
  下の表は、NOT 演算子が論理演算子の結果を否定または逆転するようすを示します。  
