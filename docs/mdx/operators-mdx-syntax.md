@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 309311bfcef0ada531e391e99091a788715c8e2d
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/02/2018
 ms.locfileid: "34580664"
@@ -70,7 +70,7 @@ ms.locfileid: "34580664"
   
 -   <>, >=, =, \<=, >, <  
   
--   NOT  
+-   orNOT  
   
 -   AND  
   
@@ -93,10 +93,10 @@ ms.locfileid: "34580664"
 |元の型|必要な型|変換|  
 |-------------------|-----------------|----------------|  
 |Level|Set|\<Level>.members|  
-|Hierarchy|Member|\<hierarchy>.defaultmember|  
-|Member|Tuple|(\<Member>)|  
-|Tuple|Member|\<tuple>.item(0)|  
-|Tuple|Scalar|\<tuple>.value|  
+|Hieararchy|Member|\<hierarchy > .defaultmember|  
+|Member|Tuple|(\<Member)|  
+|Tuple|Member|\<Tuple > .item(0)|  
+|Tuple|Scalar|\<tuple > .value|  
   
 ## <a name="see-also"></a>参照  
  [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
