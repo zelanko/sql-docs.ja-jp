@@ -89,7 +89,7 @@
 #### [AND](and-mdx.md)  
 #### [IS](is-mdx.md)  
 #### [NOT](not-mdx.md)  
-#### [OR ](or-mdx.md)  
+#### [OR](or-mdx.md)  
 #### [XOR](xor-mdx.md)  
 ### [MDX 関数リファレンス](mdx-function-reference-mdx.md)  
 #### [AddCalculatedMembers](addcalculatedmembers-mdx.md)  

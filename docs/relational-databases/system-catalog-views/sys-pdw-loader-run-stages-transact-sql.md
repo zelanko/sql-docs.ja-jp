@@ -34,7 +34,7 @@ ms.locfileid: "33180548"
 |-|-|-|-|  
 |列名|データ型|説明|範囲|  
 |run_id|**int**|実行のローダーの一意の識別子。||  
-|stage|**nvarchar(30)**|実行の現在のステージです。|'CREATE_STAGING'、 'DMS_LOAD'、 'LOAD_INSERT'、 'LOAD_CLEANUP'|  
+|stage|**nvarchar(30)**|実行の現在のステージです。|'CREATE_STAGING'、'DMS_LOAD'、'LOAD_INSERT'、'LOAD_CLEANUP'|  
 |request_id|**nvarchar(32)**|この段階を実行している要求の ID。||  
 |status|**nvarchar(16)**|このフェーズの状態です。||  
 |start_time|**datetime**|ステージの開始時刻。||  

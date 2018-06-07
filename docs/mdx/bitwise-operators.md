@@ -21,9 +21,10 @@ ms.author: owend
 manager: erikre
 ms.openlocfilehash: 2d28555db8a175cc7b131cab7ab75a0bca135f7a
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32893697"
 ---
 # <a name="bitwise-operators"></a>ビット演算子
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
