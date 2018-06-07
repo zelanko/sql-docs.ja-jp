@@ -3,8 +3,7 @@
 # [変換](data-type-conversion-database-engine.md)  
 # [優先順位](data-type-precedence-transact-sql.md)  
 # [シノニム](data-type-synonyms-transact-sql.md)  
-# [有効桁数、小数点以下桁数、および長さ](precision-scale-and-length-transact-sql.md)  
-# [bit](bit-transact-sql.md)  
+# [有効桁数、小数点以下桁数、および長さ](precision-scale-and-length-transact-sql.md)    
 # [カーソル (cursor)](cursor-transact-sql.md)  
 # [日付と時刻](date-and-time-types.md)  
 ## [date](date-transact-sql.md)  
@@ -27,6 +26,7 @@
 ## [Write (データベース エンジン)](write-database-engine.md)  
 
 # [数値](numeric-types.md)  
+## [bit](bit-transact-sql.md)
 ## [decimal と numeric](decimal-and-numeric-transact-sql.md)  
 ## [float と real](float-and-real-transact-sql.md)  
 ## [int、bigint、smallint、および tinyint](int-bigint-smallint-and-tinyint-transact-sql.md)  

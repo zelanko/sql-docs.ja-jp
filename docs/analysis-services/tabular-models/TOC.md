@@ -107,4 +107,3 @@
 
 ## [Power Pivot から復元](restore-from-power-pivot.md)  
 
-# [テーブル モデル データ アクセス](tabular-model-data-access.md)  

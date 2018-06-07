@@ -1,4 +1,4 @@
-# [XML 要素 - プロパティ](xml-elements-properties.md)
+# [XMLA 要素のプロパティ](xml-elements-properties.md)
 
 # [AllowOverwrite 要素 (XMLA)](allowoverwrite-element-xmla.md)
 # [ApplyCompression 要素 (XMLA)](applycompression-element-xmla.md)
