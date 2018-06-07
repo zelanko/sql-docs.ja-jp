@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/02/2018
 ms.locfileid: "34574934"
 ---
-# <a name="xml-elements---methods---execute"></a>XML 要素のメソッドを実行します。
+# <a name="xml-elements---methods---execute"></a>XML 要素 - メソッド - Execute
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   For Analysis (XMLA) コマンドの XML を Analysis Services のインスタンスに送信します。 これには、サーバー上のデータの取得や更新など、データ転送に関連した要求が含まれます。  
   
@@ -48,10 +48,10 @@ ms.locfileid: "34574934"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|なし|  
-|子要素|[コマンド](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)、[パラメーター](../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md)、[プロパティ](../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)|  
+|子要素|[Command](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)、[Parameters](../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md)、[Properties](../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
- **Execute**メソッドで提供される XMLA コマンドの実行、**コマンド**要素を XMLA のいずれかを使用して結果データを返します[行セット](../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)(表形式の結果のデータ型設定します) または XMLA [MDDataSet](../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)データ型 (多次元結果を設定します)。  
+ **Execute**メソッドで提供される XMLA コマンドの実行、**Command**要素を XMLA のいずれかを使用して結果データを返します[行セット](../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)(表形式の結果のデータ型設定します) または XMLA [MDDataSet](../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)データ型 (多次元結果を設定します)。  
   
 ## <a name="example"></a>例  
  次のサンプル コードの例に示します、 **Execute**多次元式 (MDX) の SELECT ステートメントを含むメソッドの呼び出しです。  
