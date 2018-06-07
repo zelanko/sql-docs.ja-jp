@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/02/2018
 ms.locfileid: "34574350"
 ---
-# <a name="xml-elements---objects---discoverresponse"></a>XML 要素のオブジェクトの DiscoverResponse
+# <a name="xml-elements---objects---discoverresponse"></a>XML 要素 - オブジェクト - DiscoverResponse
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   応答には、Analysis Services のインスタンスによって返される情報が含まれています、 [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md)メソッドの呼び出しです。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34574350"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|なし|  
-|子要素|[戻り値](../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
+|子要素|[return](../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
  **DiscoverResponse**要素は最上位の要素の SOAP 応答の本体、 **Discover**メソッドです。  
