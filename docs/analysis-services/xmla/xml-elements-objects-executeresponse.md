@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/02/2018
 ms.locfileid: "34576284"
 ---
-# <a name="xml-elements---objects---executeresponse"></a>XML 要素のオブジェクトの ExecuteResponse
+# <a name="xml-elements---objects---executeresponse"></a>XML 要素 - オブジェクト - ExecuteResponse
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   応答には、Analysis Services のインスタンスによって返される情報が含まれています、 [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドの呼び出しです。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34576284"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|なし|  
-|子要素|[戻り値](../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
+|子要素|[return](../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
  **ExecuteResponse**要素は最上位の要素の SOAP 応答の本体、 **Execute**メソッドです。  

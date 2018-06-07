@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/02/2018
 ms.locfileid: "34575014"
 ---
-# <a name="xml-elements---methods---discover"></a>XML 要素の方法 - 検出します。
+# <a name="xml-elements---methods---discover"></a>XML 要素 - メソッド - Discover
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Analysis Services のインスタンスから使用可能なデータベースまたは特定のオブジェクトに関する詳細情報の一覧などの情報を取得します。 使用して取得データ、 **Discover**メソッドは渡されたパラメーターの値によって異なります。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34575014"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|なし|  
-|子要素|[プロパティ](../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)、 [RequestType](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)、[制限](../../analysis-services/xmla/xml-elements-properties/restrictions-element-xmla.md)|  
+|子要素|[Properties](../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)、 [RequestType](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)、[Restrictions](../../analysis-services/xmla/xml-elements-properties/restrictions-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
  **Discover**メソッドはインスタンスおよびオブジェクトに関するメタデータを要求します。 XMLA を使用してメタデータが返される[行セット](../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)データ型。  
@@ -79,7 +79,7 @@ ms.locfileid: "34575014"
   
 ## <a name="see-also"></a>参照
  [XML データ型&#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [メソッドを実行する&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
+ [Execute メソッド&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
  [メソッド&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods.md)   
  [XML 要素&#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [Analysis Services のスキーマ行セット](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
