@@ -36,7 +36,7 @@ SQL 製品用のコード サンプルは、 [Microsoft SQL Server のサンプ�
 
 ## <a name="wideworldimporters-sample-database"></a>WideWorldImporters サンプル データベース
 
-WideWorldImporters (WWI) は、現在の機能、ツールおよび設計手法を使用してデータベースの設計を紹介するサンプル データベースです。 WideWorldImporters ダウンロードは、OLTP と OLAP データベースを SQL Server 2016 以降を実行するビルドが含まれます。 
+WideWorldImporters (WWI) は、現在の機能、ツールおよび設計手法を使用してデータベースの設計を紹介するサンプル データベースです。 WideWorldImporters ダウンロードには、SQL Server 2016 以降で実行するよう構築された OLTP と OLAP データベースが含まれます。 
 
 データベースをダウンロードし、サンプルは、 [SQL Server のサンプル](https://github.com/Microsoft/sql-server-samples)GitHub リポジトリです。
 
