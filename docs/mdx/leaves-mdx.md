@@ -1,34 +1,23 @@
 ---
 title: リーフ (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- LEAVES
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Leaves function
-ms.assetid: 09f908aa-1b2d-4af9-8c8d-c023915241b2
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2bdbf8b6c116efb305f27c048254c227918d1a26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b18f283dce1ed5d0d3099dbdc26e27e8aff39ffc
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741251"
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   すべての属性から構成されるセットを返します。必要に応じて特定のディメンションに属している属性のみを返すこともできます。 返すセット内の各属性 x について、x が粒度属性であるか、直接または間接的に粒度属性に関連付けられている属性である場合、粒度はスライスに影響することなく属性 x に対して設定されます。 **まま**関数が SCOPE ステートメント内または代入の左辺で使用するために設計されています。  
   
@@ -43,7 +32,7 @@ Leaves( [ Dimension_expression ] )
  *Dimension_Expression*  
  ディメンションを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  リーフ メンバーとは、すべての属性階層の最下位レベルのクロス結合によって形成される組です。 計算されるメンバーは除外されます。  
   
 -   ディメンション名が指定されている場合、**まま**関数を指定されたディメンションのキー属性のリーフ メンバーを含むセットを返します。  
@@ -59,6 +48,6 @@ Leaves( [ Dimension_expression ] )
     >  現在のスコープのメジャー グループに対する粒度が異なる属性が 1 つでもあると、エラーが生成されます。  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

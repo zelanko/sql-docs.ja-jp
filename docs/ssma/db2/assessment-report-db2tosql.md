@@ -1,8 +1,6 @@
 ---
 title: 評価レポート (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b599255141505f7d354863006f4ec2aa2e2fdea1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2340a2484fa11ade7aac4d4427fee9755cd3618e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774338"
 ---
 # <a name="assessment-report-db2tosql"></a>評価レポート (DB2ToSQL)
 評価 [レポート] ウィンドウは、データベース オブジェクトの変換結果を示しています。[!INCLUDE[tsql](../../includes/tsql_md.md)]構文、およびヘルプの複雑さと、移行プロジェクトの費用を見積もることができます。  
   
 ソース メタデータ エクスプ ローラーで、変換するオブジェクトの選択、評価レポートにアクセスを右クリックして**スキーマ**または**シノニム**、し、**レポートの作成**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
   
 |||  
 |-|-|  

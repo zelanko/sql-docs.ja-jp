@@ -13,7 +13,7 @@ ms.openlocfilehash: 4b2c49f32029078bbe67e70066845f5b8f7d4f3c
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573514"
 ---
 # <a name="contextualnamerule-element-xml"></a>ContextualNameRule 要素 (XML)
@@ -51,7 +51,7 @@ ms.locfileid: "34573514"
   
  値、 **ContextualNameRule**要素は次の表に示す文字列の 1 つに制限されます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |*なし*|属性の名前を使用します。|  
 |*コンテキスト*|入力リレーションシップの名前を使用します。|  

@@ -1,8 +1,6 @@
 ---
 title: MySQL (MySQLToSQL) への接続 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2290b67ac66a1fa06d62b88390a538a3e06621ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e4de2590221535410b5095494dd6f1801460f73
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775698"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL (MySQLToSQL) への接続します。
 使用して、 **MySQL への接続**を移行する MySQL データベースに接続する ダイアログ ボックス。  
   
 このダイアログ ボックスにアクセスする、**ファイル**メニューの  **MySQL への接続**です。 以前接続した場合、コマンドは**MySQL への再接続**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **プロバイダー**  
   
 使用可能な MySQL プロバイダーは、MySQL 5.1 Odbc (信頼関係) です。  
@@ -58,7 +57,7 @@ SSMA は、MySQL データベースへの接続に使用されるユーザー名
   
 MySQL に安全に接続する場合は、利用の Secure Socket Layer (SSL) をチェックして、 **SSL**チェック ボックスをオンします。  
   
-**構成します。**  
+**構成**  
   
 MySQL Secure Socket Layer (SSL) を介してへの接続を構成するオプションを提供します。  
   

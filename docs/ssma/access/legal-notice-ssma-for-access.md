@@ -1,8 +1,6 @@
 ---
 title: 免責事項 (SSMA for Access) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,11 +20,12 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5eab0688fbdc001bd1b5472fcf4e936e5c755922
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cc5fce6ed718365b2887ec284d4bbd57b6db9bd
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774148"
 ---
 # <a name="legal-notice-ssma-for-access"></a>免責事項 (SSMA for Access)
 このソフトウェアおよびマニュアルに記載されている参照用のアプリケーションを含んだ内容は、情報の提供のみを目的としており、明示または黙示にかかわらず、このマニュアルは保証なしで提供されます。 このソフトウェアの仕様およびマニュアルに記載されている事柄は、将来予告なしに変更することがあります。 お客様が本製品を運用した結果の影響については、お客様が負うものとします。  

@@ -1,8 +1,6 @@
 ---
 title: トラブルシューティング (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e6e268922297db9e01a7b77818090a78d2caa289
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e7e905e94be98c1a6f3dc6069170c5d51cab01f6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775518"
 ---
 # <a name="troubleshooting-db2tosql"></a>トラブルシューティング (DB2ToSQL)
 移行の問題中間にあるコンソール スクリプトまたはコマンドの実行に実行するは珍しいことはできません。  
   
 修正可能であるエラーの関連可能性があります。  
   
-1.  関数  
+1.  機能  
   
 2.  手順  
   

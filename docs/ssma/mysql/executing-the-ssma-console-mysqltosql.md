@@ -1,8 +1,6 @@
 ---
 title: SSMA コンソール (MySQLToSQL) を実行 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,11 +24,12 @@ caps.latest.revision: 25
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a3af52acedfa86cc969e8c2ced508e30a5ddd1f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8381ce25e64ef417483791b4e8f68c2e4a8f1845
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776038"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>SSMA コンソール (MySQLToSQL) を実行します。
 Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実行し、SSMA 動作を制御できます。  

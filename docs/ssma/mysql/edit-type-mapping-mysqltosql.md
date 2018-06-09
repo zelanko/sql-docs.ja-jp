@@ -1,8 +1,6 @@
 ---
 title: 型のマッピング (MySQLToSQL) は編集 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: cd02b4aa75298fbe5c70751dc9e7e7c101a67377
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 148080708068f364323f2b4daac0d96fa7950e6a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776028"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>型のマッピング (MySQLToSQL) の編集します。
 **型マッピングの編集** ダイアログ ボックスでは、ソースと変換先のデータベース オブジェクト間の種類をマップする方法を指定することができます。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 -   テーブルに固有の型マッピングは、データベースをオーバーライドし、プロジェクトの種類のマッピング。 データベース固有のマッピングは、project のマッピングをオーバーライドします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
   
 ##### <a name="source-type"></a>ソースの種類  
 SQL Server データ型にマップするソースのデータ型を選択します。  

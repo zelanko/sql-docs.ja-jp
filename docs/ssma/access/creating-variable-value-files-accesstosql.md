@@ -1,8 +1,6 @@
 ---
 title: 変数値ファイル (AccessToSQL) を作成する |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 44c317d773df9027f5c485f417941544ff17c6d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3865c268ef4da360b5e21cba96e88ddf6028ae6a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773808"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>変数値ファイル (AccessToSQL) を作成します。
 変数値ファイルは、サーバーの移行の間で頻繁に変更 (送信元または送信先のサーバー名) などのコマンドのパラメーター値で構成される XML ファイルです。 多数のデータベースの移行が発生すると、各送信元サーバーの値を格納するための複数の変数ファイルが作成されでマスター スクリプト ファイルで参照されている、 **– v**コマンド ライン スイッチです。 この動作は、複数の変数ファイルで変数の値を持ついくつかのスクリプト ファイルの静的な値を維持する上で役立ちます。  
@@ -32,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 > -  The escape character for **$** is **$$**. パラメーターの変数または静的な値の値が含まれている場合、 **$** し (ドル) シンボル**$$** 変数の代わりに文字として扱うことを示す指定する必要があります。  
 > -  保守容易性のために、変数内で宣言できます`‘variable-group’`ユーザー定義変数の論理的な分離の要素。  この要素の使用は必須ではありません。  
   
-**例 :**  
+**使用例:**  
   
 **例 1:**  
   
