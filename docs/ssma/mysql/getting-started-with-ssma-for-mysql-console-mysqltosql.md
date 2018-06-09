@@ -1,8 +1,6 @@
 ---
 title: MySQL コンソール (MySQLToSQL) for SSMA の概要 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 30fe5fba0bd0b9321c16c72642f29a515320cb63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75e189d89c9a1bbc7207521b8156d0f4b56ca759
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776238"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>MySQL コンソール (MySQLToSQL) for SSMA の概要
 このセクションを起動し、[MySQL] コンソール アプリケーションで作業を開始する手順について説明します。 一覧表示、ここで、規則ウィンドウで使用される、一般的な SSMA コンソール出力。  
@@ -63,7 +62,7 @@ SSMA スクリプトのコマンドとオプションを実行すると、コン
   
 次の表に、コンソール出力の色の解釈:  
   
-|色|Description|  
+|色|説明|  
 |---------|---------------|  
 |[赤]|実行中に致命的なエラー|  
 |灰色|日付と時刻スタンプをユーザーにメッセージ|  

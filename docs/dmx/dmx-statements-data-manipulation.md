@@ -1,38 +1,27 @@
 ---
 title: データ マイニング拡張機能 (DMX) データ操作ステートメント |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- statements [DMX], data manipulation statements
-- DML [DMX]
-- data manipulation statements [DMX]
-ms.assetid: 68fe9efd-487f-4aa5-952c-bd7d80a3dac0
-caps.latest.revision: 26
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6683906b0d9f48e4ffcc05531b828ec0e5266a68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7e1d6e375a43592faeceab8da6bccfc8902c63bd
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842015"
 ---
 # <a name="dmx-statements---data-manipulation"></a>DMX ステートメントのデータの操作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   次の表は、データ マイニング拡張機能 (DMX) でデータ マイニング データ操作言語 (DML) の一部であるステートメントについて示しています。  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[削除&AMP;#40;DMX&AMP;#41;](../dmx/delete-dmx.md)|学習済みの内容をマイニング モデルから削除します。|  
 |[挿入&AMP;#40;DMX&AMP;#41;](../dmx/insert-into-dmx.md)|マイニング モデルを学習します。|  
@@ -42,6 +31,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>参照  
  [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

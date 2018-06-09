@@ -3,8 +3,6 @@ title: 変換 (SybaseToSQL) 用の SAP ASE データベース オブジェクト
 ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7f28d8f35adacfa4443ed804e1233386f3794606
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e2115578b95ab5ca682d7d8c4f1c4a84907179e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778339"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>変換 (SybaseToSQL) のデータベース オブジェクトを SAP ASE を評価します。
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または決定する必要があります、Azure SQL 方法、移行の複雑さとどれだけ時間かかります。 SSMA は、オブジェクトおよびに正常に変換されるプロシージャの割合が表示される評価レポートを作成できます[!INCLUDE[tsql](../../includes/tsql_md.md)]です。 SSMA では、変換エラーを引き起こす可能性のある特定の問題を表示することもできます。  
@@ -81,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   
     -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL メタデータ エクスプ ローラーと Sybase メタデータ エクスプ ローラーにオブジェクトを読み込む前に、アイテムの横のチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL ASE からデータを移行します。
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 [SAP ASE データベース オブジェクトを変換する&#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  

@@ -1,33 +1,20 @@
 ---
 title: SELECT FROM&lt;モデル&gt;(DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- FROM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- empty prediction joins [DMX]
-- SELECT FROM <model> statement
-ms.assetid: dc5b9a01-e308-4ee8-84fc-ba4b991c60aa
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2e913f066149fd6949547fff32f06f027378e9d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: aac800e225eb5323b1bffeafda77d059f0a837e2
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842175"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM&lt;モデル&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,18 +35,18 @@ SELECT <expression list> [TOP <n>] FROM <model>
  式、予測、または列のみの予測のコンマ区切りのリストです。  
   
  *n*  
- 省略可。 返す行数を指定する整数値です。  
+ 任意。 返す行数を指定する整数値です。  
   
  *model*  
  モデル識別子です。  
   
  *条件の一覧*  
- 省略可。 列の一覧から返される値を制限する条件です。  
+ 任意。 列の一覧から返される値を制限する条件です。  
   
  *式 (expression)*  
- 省略可。 スカラー値を返す式。  
+ 任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  内の列、*式リスト*予測または予測のみとして定義されているか、予測可能列に関連する必要があります。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes の例  
@@ -81,6 +68,6 @@ FROM Forecasting
  [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

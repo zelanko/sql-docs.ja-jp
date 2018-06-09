@@ -1,8 +1,6 @@
 ---
 title: トラブルシューティング (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 685c2e9185bb2f2e1036f2ceaec32f8c04f5c8e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc44f2b2d8863c6c81e6848f9b0ac8a158769689
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776808"
 ---
 # <a name="troubleshooting-mysqltosql"></a>トラブルシューティング (MySQLToSQL)
 移行の問題中間にあるコンソール スクリプトまたはコマンドの実行に実行するは珍しいことはできません。  
   
 修正可能であるエラーの関連可能性があります。  
   
-1.  関数  
+1.  機能  
   
 2.  手順  
   

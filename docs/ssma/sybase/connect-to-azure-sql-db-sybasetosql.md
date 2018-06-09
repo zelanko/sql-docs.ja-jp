@@ -3,8 +3,6 @@ title: Azure SQL DB (SybaseToSQL) への接続 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,23 +16,24 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f73b6e88e457ef74a82512876715a333d0a52d71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb6a49072e16f00ba12dd32f1ccd4b6cab8a3620
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778838"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Azure SQL DB (SybaseToSQL) への接続します。
 Azure SQL DB ダイアログ ボックスに接続を使用すると、移行する Azure SQL DB データベースへの接続します。  
   
 このダイアログ ボックスにアクセスする、**ファイル**メニューの  **Azure SQL DB への接続**です。 以前接続した場合、コマンドは**Azure SQL DB に再接続します。**  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[サーバー名]**  
   
 選択するか、Azure SQL DB に接続するためのサーバー名を入力します。  
   
-**データベース**  
+**[データベース]**  
   
 選択し、入力または**参照**データベース名。  
   

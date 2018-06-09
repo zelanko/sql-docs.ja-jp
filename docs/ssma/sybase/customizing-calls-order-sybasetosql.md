@@ -3,8 +3,6 @@ title: 呼び出し順序 (SybaseToSQL) のカスタマイズ |Microsoft ドキ�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 24538be635245c31d6d4367d217516f56517e385
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a8eb95cd6f3cf385bd349e9cec5909ace286dd9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778406"
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>呼び出し順序 (SybaseToSQL) のカスタマイズ
 この手順では、テストするオブジェクトが呼び出され、順序を選択します。  

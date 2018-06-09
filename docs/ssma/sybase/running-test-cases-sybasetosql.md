@@ -3,8 +3,6 @@ title: テスト_ケース (SybaseToSQL) を実行している |Microsoft ドキ
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5a6f403bd7f4d3168ceeea447c541f311e5eab6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5751a704fdea6e7c87aa43e1b4fedc1107d89f8c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779358"
 ---
 # <a name="running-test-cases-sybasetosql"></a>テスト_ケース (SybaseToSQL) を実行します。
 SSMA テスト担当者がテスト_ケースを実行すると、テスト用に選択されたオブジェクトを実行し、検証結果に関するレポートを作成します。 結果が両方のプラットフォームで同一の場合、テストが成功しました。 Sybase 間のオブジェクトの対応付けと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA プロジェクトを現在のスキーマ マッピングの設定に従って決定されます。  
@@ -52,11 +51,11 @@ SSMA テスターは、テストの開始前にテストの実行のすべての
   
 SSMATESTER2005db または SSMATESTER2008db データベース中および、Sybase で、次のオブジェクトが作成された[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb_syb データベースにします。  
   
-|名前|型|Description|  
+|名前|型|説明|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|トリガー|検証済みのテーブルで変更の監査をトリガーします。|  
-|USER_TABLE$ Aud|Table|テーブルな行が削除され、上書きを保存します。|  
-|USER_TABLE$AudID|Table|追加または変更された行が保存されているテーブルです。|  
+|USER_TABLE$ Aud|テーブル|テーブルな行が削除され、上書きを保存します。|  
+|USER_TABLE$AudID|テーブル|追加または変更された行が保存されているテーブルです。|  
 |USER_TABLE|表示|テーブルの変更の簡略化された表現。|  
 |USER_TABLE$new|表示|挿入、および上書きされた行の簡略化された表現。|  
 |USER_TABLE$new_id|表示|挿入および変更された行の id です。|  
@@ -64,7 +63,7 @@ SSMATESTER2005db または SSMATESTER2008db データベース中および、Syb
   
 Sybase で検証済みのテーブルのデータベースで次のオブジェクトを作成し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
   
-|名前|型|Description|  
+|名前|型|説明|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|トリガー|検証済みのテーブルで変更の監査をトリガーします。|  
   

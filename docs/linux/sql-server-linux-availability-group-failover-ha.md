@@ -12,17 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 26868cfd136f3d06366a47ec7d52fa17e3c8fe39
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ddbe5f25cf3153b3354425fd426798e7061bdf36
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799812"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上の always On 可用性グループのフェールオーバー
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-可用性グループ (AG) のコンテキスト内でプライマリ ロールとセカンダリ ロールの可用性レプリカのフェールオーバーと呼ばれるプロセスで交換通常です。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および "*強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータが保持されます。 AG は、可用性レプリカのレベルでフェールオーバーします。 つまり、AG はそのセカンダリ レプリカ (現在のフェールオーバー ターゲット) のいずれかにフェールオーバーします。 
+可用性グループ (AG) のコンテキスト内でプライマリ ロールとセカンダリ ロールの可用性レプリカのフェールオーバーと呼ばれるプロセスで交換通常です。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および " *強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータが保持されます。 AG は、可用性レプリカのレベルでフェールオーバーします。 つまり、AG はそのセカンダリ レプリカ (現在のフェールオーバー ターゲット) のいずれかにフェールオーバーします。 
 
 フェールオーバーに関する背景情報については、次を参照してください。[フェールオーバーとフェールオーバー モード](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)です。
 
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/19/2018
 - **RHEL/Ubuntu 例**
 
    ```bash
-   sudo pcs constraint --full
+   sudo pcs constraint list --full
    ```
 
 - **SLES 例**
@@ -80,35 +81,17 @@ ms.lasthandoff: 05/19/2018
    crm config show
    ```
 
-(自動フェールオーバーを含む) の将来のフェールオーバーが成功するために、場所の制約を削除します。 
-
-制約を削除するには、次のコマンドを実行します。 
-
-- **RHEL/Ubuntu 例**
-
-   この例では`ag_cluster-master`中に失敗したリソースの名前を指定します。 
-
-   ```bash
-   sudo pcs resource clear ag_cluster-master 
-   ```
-
-- **SLES 例**
-
-   この例では`ag_cluster`中に失敗したリソースの名前を指定します。 
-
-   ```bash
-   crm resource clear ag_cluster
-   ```
-
-または、次のコマンドを実行して場所の制約を削除することもできます。  
+手動フェールオーバーのために作成される制約の例です。 
+ `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
 - **RHEL/Ubuntu 例**
 
-   次のコマンドで、`cli-prefer-ag_cluster-master` は削除が必要な制約の ID です。 `sudo pcs constraint --full` によってこの ID が返されます。 
-
+   次のコマンドで、`cli-prefer-ag_cluster-master` は削除が必要な制約の ID です。 `sudo pcs constraint list --full` によってこの ID が返されます。 
+   
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
+   
 - **SLES 例**
 
    次のコマンドで`cli-prefer-ms-ag_cluster`制約の id を指定します。 `crm config show` によってこの ID が返されます。 
@@ -186,7 +169,7 @@ ms.lasthandoff: 05/19/2018
 
 自動フェールオーバーには、少なくとも 1 つの同期レプリカが必要です。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server 可用性グループのクラスター リソースの Red Hat Enterprise Linux クラスターを構成します。](sql-server-linux-availability-group-cluster-rhel.md)
 

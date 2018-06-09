@@ -1,8 +1,6 @@
 ---
 title: グローバル設定 ([出力] ウィンドウ) (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0da4b9703ba3810222f9a860a426e3117f4883c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad3295ae82cec64e2c6432f8d984d4e2cace35db
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776308"
 ---
 # <a name="global-settings-output-window-mysqltosql"></a>グローバル設定 ([出力] ウィンドウ) (MySQLToSQL)
 使用して、**グローバル設定**SSMA の設定を指定 ダイアログ ボックス。  
   
 出力 ウィンドウの設定にアクセスする、**ツール**メニューの **グローバル設定**、 をクリックして**GUI**クリックし、左側のウィンドウの下部にある**出力ウィンドウ**します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **エラー一覧ウィンドウを表示します。**  
 選択**True** SSMA メッセージがあるときに、エラー一覧 ウィンドウを表示する場合に使用します。  
   

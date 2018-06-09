@@ -1,41 +1,20 @@
 ---
 title: SELECT FROM&lt;モデル&gt;PREDICTION JOIN (DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PREDICTION
-- PREDICTION_JOIN
-- SELECT
-- join
-- FROM
-- PREDICTION JOIN
-dev_langs:
-- DMX
-helpviewer_keywords:
-- prediction joins [DMX]
-- PREDICTION JOIN statement
-- natural prediction joins [DMX]
-- open query predictions
-- singleton query predictions [DMX]
-- SELECT FROM <model> PREDICTION JOIN statement
-ms.assetid: 7ca37fec-4a50-4d79-b1d6-1c7c12176946
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 7014d546d0484dcd5d741844a98c8060f925c96c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842165"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM&lt;モデル&gt;PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +34,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>引数  
  *n*  
- 省略可。 返す行数を指定する整数値です。  
+ 任意。 返す行数を指定する整数値です。  
   
  *select 式リスト*  
  マイニング モデルから派生する、列の識別子と式のコンマ区切りのリストです。  
@@ -70,15 +49,15 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  ソース クエリです。  
   
  *マッピングのリストを結合*  
- 省略可。 モデルの列とソース クエリの列を比較する論理演算子です。  
+ 任意。 モデルの列とソース クエリの列を比較する論理演算子です。  
   
  *条件式*  
- 省略可。 列のリストから返される値を制限する条件です。  
+ 任意。 列のリストから返される値を制限する条件です。  
   
  *式 (expression)*  
- 省略可。 スカラー値を返す式。  
+ 任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ON 句は、ソース クエリの列とマイニング モデルの列の間のマッピングを定義します。 このマッピングは、列は、予測を作成する入力として使用できるようにする、マイニング モデル内の列に、ソース クエリから列を直接に使用されます。 内の列、 \<*マッピングのリストを結合*> 次の例で示すように等号 (=) を使用して関連。  
   
 ```  
@@ -211,6 +190,6 @@ NATURAL PREDICTION JOIN
  [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

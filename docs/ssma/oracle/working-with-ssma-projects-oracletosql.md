@@ -1,8 +1,6 @@
 ---
 title: SSMA プロジェクト (OracleToSQL) の使用 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 854d604680082375bba1d7fe5cca77d264ea7c9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b1b28a2a9b6bf9210aa23d0f7914693f938bbf53
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778058"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>SSMA プロジェクト (OracleToSQL) での作業
 Oracle データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA プロジェクトを作成します。 プロジェクトは、次の情報を含むファイルです。  
@@ -104,7 +103,7 @@ Oracle データベースからデータを移行する[!INCLUDE[ssNoVersion](..
   
         メタデータの保存には数分かかる場合があります。 まだのメタデータを保存したくない場合は、チェック ボックスをオンされません。  
   
-    2.  クリックして、 **保存**  ボタンをクリックします。  
+    2.  クリックして、**保存**ボタンをクリックします。  
   
         SSMA は、Oracle スキーマが解析され、プロジェクト ファイルにメタデータを保存します。  
   

@@ -1,8 +1,6 @@
 ---
 title: SQL Server (OracleToSQL) にデータベース オブジェクトを読み込み、変換された |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a6e65bb6c795cb5216bf32889b6dfe7eb75c2a53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26ac7029947dcf826c19851b5988b5e898783f7c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777618"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>SQL Server (OracleToSQL) にデータベース オブジェクトを変換後の読み込み
 Oracle スキーマを SQL Server に変換すると、SQL Server に結果のデータベース オブジェクトを読み込むことができます。 SSMA は、オブジェクトを作成したか、またはオブジェクトのスクリプトを作成して、スクリプトを実行します。 また、SSMA には、SQL Server データベースの実際の内容で対象のメタデータを更新することができます。  

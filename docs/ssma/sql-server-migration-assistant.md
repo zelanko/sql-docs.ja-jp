@@ -3,8 +3,6 @@ title: SQL Server Migration Assistant |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1a49b3e1d9516d0276c689b7c61defc80bd2cb9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a76b6092cfc092c44b6ec023e97b4914520c4ed6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778108"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、MySQL、Oracle、および SAP ASE から SQL Server にデータベースの移行を自動化するためのツールです。  
@@ -49,7 +48,7 @@ Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、M
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Azure SQL Database
+- Azure SQL データベース
 - Windows および Linux (Preview) で SQL Server 2017
 - * * Azure SQL Data Warehouse
 
@@ -104,4 +103,3 @@ SQL Server のドキュメントに記載されている内容は、十分なテ
 お客様は、ドキュメントに記載されていない API、ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビュー、テーブル、列、プロパティ、メタデータなどを使用しないでください。 Microsoft カスタマー サポートでは、文書化されていないエントリ ポイントを使用または応用したデータベースやアプリケーションは使用できません。  
   
 ドキュメントに記載されていないエントリ ポイントを応用または使用するアプリケーションやデータベースについては、将来のバージョンの SQL Server に対応させるためのサーバーおよびデータベースのアップグレードは保証されません。 SQL Server 機能の使用は、Microsoft SQL Server のドキュメントに記載されている方法に限定されます。 機能が Microsoft SQL Server のドキュメントに記載されていない場合は、SQL Server のサポート対象から除外されます。  
-  
