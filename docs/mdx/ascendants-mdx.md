@@ -1,34 +1,23 @@
 ---
 title: 先祖 (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ASCENDANTS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Ascendants function
-ms.assetid: a2baf4a2-7d66-4766-b708-739a3c21b09e
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: df35665a82149bd133e4116d97cb739d70865ac7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1ef9cccb488cebb08c1b9721c40cb8037ea8687a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739621"
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   指定されたメンバー自体も含めたメンバーの先祖のセットを返します。  
   
@@ -43,7 +32,7 @@ Ascendants(Member_Expression)
  *メンバー式*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **先祖**関数では、すべてのメンバーの先祖を返しますメンバーの階層の最上位までメンバーから以外の場合は具体的には、指定されたメンバーの階層の逆順にたどってを実行しを返します。 すべての先祖メンバーに関連すると、メンバーをセット自体も含めたです。 これは、対照的に、[先祖](../mdx/ancestor-mdx.md)関数で、特定の先祖メンバー、または特定のレベルの先祖を返します。  
   
 ## <a name="examples"></a>使用例  
@@ -63,6 +52,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

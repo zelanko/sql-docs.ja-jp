@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71b480d896416350ec55317eea8a9cfc5db51a8c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8b6c50664cdce599128be9f0ad15a10e33b77ec6
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34576634"
 ---
 # <a name="translation-element-xmla"></a>Translation 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,10 +49,10 @@ ms.lasthandoff: 05/10/2018
 |親要素|[翻訳](../../../analysis-services/xmla/xml-elements-properties/translations-element-xmla.md)|  
 |子要素|[言語](../../../analysis-services/xmla/xml-elements-properties/language-element-xmla.md)、[名](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  A**翻訳**要素中に特定の属性に対して定義されている翻訳を属性メンバーを関連付けに必要な情報を定義する、[挿入](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)または[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)コマンド。  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

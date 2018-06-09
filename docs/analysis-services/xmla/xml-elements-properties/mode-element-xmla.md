@@ -13,7 +13,7 @@ ms.openlocfilehash: 12e792c51b2f6feb3edb4e01c12dcf4809e2d4d4
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575754"
 ---
 # <a name="mode-element-xmla"></a>Mode 要素 (XMLA)
@@ -49,7 +49,7 @@ ms.locfileid: "34575754"
 ## <a name="remarks"></a>コメント  
  親**ロック**要素を使用して、**モード**要素オブジェクトを作成するロックの種類を判断します。 この要素の値は、次の表の一覧に示す文字列のいずれかに限定されています。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |*CommitShared*|指定されたオブジェクトに対して共有ロックが設定されます。 同じオブジェクトに対して他の共有ロックを作成できます。<br /><br /> 共有ロックなどの書き込み操作を含むトランザクションを使用する、 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドの呼び出しを実行している、 [Alter](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)コマンドを共有ロックが解除されるまでにコミットしてから、指定されたオブジェクトでします。 共有ロックは、読み取り操作をなどを含むトランザクションを妨げません、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)メソッドの呼び出しまたは**Execute**メソッドの呼び出しを実行している、[ステートメント](../../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md)からのコマンドコミットしています。|  
 |*CommitExclusive*|指定されたオブジェクトに対して排他ロックが設定されます。 同じオブジェクトに対して、他の共有ロックまたは排他ロックを作成することはできません。<br /><br /> 排他ロックを使用すると、指定されたオブジェクトに対する読み取り操作または書き込み操作を伴うトランザクションは、排他ロックが解除されるまでコミットできません。|  

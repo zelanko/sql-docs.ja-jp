@@ -1,20 +1,21 @@
 ---
-title: データベース内 R analytics SQL 開発者 (チュートリアル) |Microsoft ドキュメント
+title: SQL Server の Machine Learning の開発者向けの埋め込みの R analytics チュートリアル |Microsoft ドキュメント
+description: SQL Server で R を埋め込む方法を示すチュートリアル ストアド プロシージャと T-SQL 関数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3d2b77d73bb1b8f5d4c507b884d0a09f4647012b
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34585274"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250025"
 ---
-# <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>データベース内 R analytics SQL 開発者 (チュートリアル)
+# <a name="tutorial-embedded-r-in-stored-procedures-and-t-sql-functions"></a>チュートリアル: ストアド プロシージャおよび T-SQL 関数で R を埋め込む
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このチュートリアルの目的は、SQL プログラマ環境に提供する実践的な機械学習で SQL Server ソリューションの構築です。 このチュートリアルでは、ストアド プロシージャで R コードをラップすることによって、アプリケーションまたは BI ソリューションに R を組み込む方法を学習します。
@@ -31,41 +32,30 @@ ms.locfileid: "34585274"
 
 このチュートリアルでは、ソリューション、およびフォーカスのビルドおよび SQL Server を使用してソリューションを展開するのに必要なすべての R コードが与えられている想定しています。
 
-- [レッスン 1: サンプル データをダウンロードします。](../tutorials/sqldev-download-the-sample-data.md)
+- [レッスン 1: サンプル データとスクリプトをダウンロードします。](../tutorials/sqldev-download-the-sample-data.md)
 
-    サンプル データセットとサンプル SQL スクリプト ファイルをローカル コンピューターにダウンロードします。
+- [レッスン 2: チュートリアルの環境を設定します。](../r/sqldev-import-data-to-sql-server-using-powershell.md)
 
-- [レッスン 2: PowerShell を使用して SQL server のデータをインポートします。](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [レッスン 3: 探索し、ストアド プロシージャで R 関数を呼び出すことによってデータの整形と分布を視覚化します。](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-    [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンス上でデータベースとテーブルを作成し、テーブルにサンプル データを読み込むための PowerShell スクリプトを実行します。
-
-- [レッスン 3: 探索し、データの視覚化](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-    R パッケージおよび関数を [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャから呼び出して、基本的なデータの探索および視覚化を実行します。
-
-- [レッスン 4: T-SQL を使用してデータ機能を作成します。](../tutorials/sqldev-create-data-features-using-t-sql.md)
-
-    カスタム SQL 関数を使用して新しいデータ機能を作成します。
+- [レッスン 4: T-SQL 関数で R を使用してデータ機能を作成します。](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
--   [レッスン 5: トレーニングおよび T-SQL を使用して R モデルを保存します。](../r/sqldev-train-and-save-a-model-using-t-sql.md)
-
-    ストアド プロシージャで R を使用して、機械学習モデルを構築します。 SQL Server テーブルに、モデルを保存します。
+- [レッスン 5: トレーニングおよび関数とストアド プロシージャを使用して R モデルを保存します。](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
--   [レッスン 6: 運用モデル](../tutorials/sqldev-operationalize-the-model.md)
+- [レッスン 6: ラップ R コード操作運用のストアド プロシージャで](../tutorials/sqldev-operationalize-the-model.md)です。 
+  データベースにモデルが保存されたら、ストアド プロシージャを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] から予測モデルを呼び出します。
 
-    データベースにモデルが保存されたら、ストアド プロシージャを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] から予測モデルを呼び出します。
-
-### <a name="scenario"></a>シナリオ
+## <a name="scenario"></a>シナリオ
 
 このチュートリアルでは、ニューヨーク タクシーでトリップに基づいて、よく知られているパブリック データセットを使用します。 サンプル コードをすばやく実行するためには、データの代表的な 1% のサンプリングを作成しました。 このデータを使用して、かどうか特定トリップもそうでない、ヒントを取得する可能性の高い、時刻、距離、および収集場所などの列に基づいて予測する二項分類モデルを作成します。
 
-### <a name="requirements"></a>要件
+## <a name="requirements"></a>要件
 
-このチュートリアルでは、データベースとテーブルを作成し、テーブルにデータをインポートして、SQL クエリを記述などの基本的なデータベース操作に精通しているユーザーです。 すべての R コードが提供されるため、R の開発環境は必要ありません。 スキルを持つ SQL プログラマが使用できる [! INCLUDE [tsql] (../..含まれています//tsql md.md)] で [! INCLUDE [ssManStudioFull] (../..含まれています//ssmanstudiofull md.md) し、この例を完了する指定した PowerShell スクリプトを実行します。 ただし、このチュートリアルを開始する前に、次の準備を完了する必要があります。
+このチュートリアルは、データベースとテーブルを作成し、データをインポートして、SQL クエリを記述などの基本的なデータベース操作に関する知識を前提とします。 R. を把握することを想定しませんそのため、すべての R コードを提供します。 スキルを持つ SQL プログラマが提供されている PowerShell スクリプトでは、github、サンプル データを使用し、[!INCLUDE[tsql](../../includes/tsql-md.md)]で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]をこの例を完了します。 
 
-ただし、このチュートリアルを開始する前にこれらの準備を完了する必要があります。
+このチュートリアルを開始: する前に
 
-- Machine Learning のサービスと有効になっている R と SQL Server 2017 R Services の SQL Server 2016 のインスタンスに接続します。
+- インスタンスを構成があることを確認[SQL Server 2016 の R Services](../install/sql-r-services-windows-install.md#verify-installation)または[有効になっている R で SQL Server 2017 マシン ラーニング サービス](../install/sql-machine-learning-services-windows-install.md#verify-installation)です。 さらに、 [R ライブラリを用意することを確認](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)です。
 - このチュートリアルで使用するログインがデータベースを作成するアクセス許可を持っていると、データをアップロードする他のオブジェクトが、データを選択し、ストアド プロシージャを実行します。
 
 > [!NOTE]

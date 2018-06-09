@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1b149356d30dc390c6779ef165c80c9b967f9044
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c0578c541c39bdaceede6bff8afdea3d642abcef
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34576864"
 ---
 # <a name="tuples-element-xmla"></a>Tuples 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,10 +45,10 @@ ms.lasthandoff: 05/10/2018
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[軸](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|親要素|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
 |子要素|[組](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  クライアント アプリケーションが **AxisFormat** プロパティを *TupleFormat* に設定した場合、軸は複数の組のセットとして表されます。 各 **Axis** 要素には、その軸上の組のセットを表す 1 つの **Tuples** 要素が含まれます。 それぞれの組は **Tuple** 要素を使って表され、そこには軸上の各階層に属する [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) 要素が含まれます。  
   
 ## <a name="example"></a>例  
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/10/2018
 </Axes>  
 ```  
   
-## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>参照
+ [プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
