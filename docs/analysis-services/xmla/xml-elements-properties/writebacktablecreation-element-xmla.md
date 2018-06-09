@@ -13,7 +13,7 @@ ms.openlocfilehash: e04f44d9caa3ae51ea141997e83de54524000fee
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576854"
 ---
 # <a name="writebacktablecreation-element-xmla"></a>WritebackTableCreation 要素 (XMLA)
@@ -51,7 +51,7 @@ ms.locfileid: "34576854"
   
  値、 **WritebackTableCreation**要素は次の表に示す文字列の 1 つに制限されます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |*作成*|既存の書き戻しテーブルが存在しない場合、新しい書き戻しテーブルを作成します。 書き戻しテーブルが既に存在する場合、エラーが発生します。|  
 |*[Createalways]*|既存の書き戻しテーブルを上書きして、新しい書き戻しテーブルを作成します。|  

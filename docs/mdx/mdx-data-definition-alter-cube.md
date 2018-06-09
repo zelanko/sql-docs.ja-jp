@@ -1,39 +1,23 @@
 ---
 title: ALTER CUBE ステートメント (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Cube
-- ALTER_CUBE
-- ALTER CUBE
-- ALTER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ALTER CUBE statement
-- cubes [Analysis Services], modifying
-- modifying cubes
-ms.assetid: 2f0af61b-f509-4e1a-990f-20a215d22994
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6a91092f5a62f1c21312ca585834795d678216ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 3b21466e1f8af33faa49a217038fee78ddf9fcc6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741571"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX データ定義に ALTER CUBE
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   指定されたキューブの構造を変更します。通常、ディメンションの書き戻しをサポートするために使用されます。 アプリケーションでの書き戻しの使用の詳細については、このブログの投稿を参照してください: [Analysis Services (ブログ) での書き戻しアプリケーションの構築](http://go.microsoft.com/fwlink/?LinkId=394977)  
   
@@ -130,7 +114,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  メンバー名またはメンバー キーを提供する有効な文字列式です。  
   
-### <a name="remarks"></a>解説  
+### <a name="remarks"></a>コメント  
  WITH DESCENDANTS 句を使用しなかった場合、削除したメンバーの子は、削除したメンバーの親の子になります。 WITH DESCENDANTS 句を使用した場合、ディメンション テーブル内にあるすべての子孫および対応する行が削除されます。  
   
 > [!NOTE]  
@@ -146,7 +130,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  メンバーを 1 つ返す有効な MDX 式です。  
   
-### <a name="remarks"></a>解説  
+### <a name="remarks"></a>コメント  
  指定する MDX 式は、静的であっても動的であってもかまいません。  
   
 ## <a name="moving-a-dimension-member"></a>ディメンション メンバーの移動  

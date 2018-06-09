@@ -1,6 +1,6 @@
 ---
 title: DrilldownLevelBottom (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6a87b014dc0491dbf19152bbd6abc75f73bd57e3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d691efc1b8e1758f5dbacd43b2886eed75fa6dd6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578034"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740781"
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   セットの最下位メンバーを、指定されたレベルから 1 レベル下にドリル ダウンします。  
   
@@ -38,10 +38,10 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  レベルを返す有効な多次元式 (MDX) 式です。  
   
  *Numeric_Expression*  
- 省略可。 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
+ 任意。 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
  *Include_Calc_Members*  
- 省略可。 ドリルダウン結果に計算されるメンバーを追加するキーワードです。  
+ 任意。 ドリルダウン結果に計算されるメンバーを追加するキーワードです。  
   
 ## <a name="remarks"></a>コメント  
  数値式が指定されている場合、 **DrilldownLevelBottom**関数、子メンバーのセットに対して評価された指定の値に基づいて、指定されたセット内の各メンバーの子の順序の昇順で並べ替えます。 数値式が指定されていない場合、指定されたセット内の各メンバーの子を、クエリ コンテキストから判別した子メンバーのセットが表すセルの値に基づいて、昇順で並べ替えます。この動作は、並べ替えを行わずに自然な順序でメンバーのセットを返す、BottomCount および Tail (MDX) 関数に似ています。  

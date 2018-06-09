@@ -1,24 +1,26 @@
 ---
-title: レッスン 5 のトレーニングと T-SQL を使用して、モデルを保存 |Microsoft ドキュメント
+title: レッスン 5 のトレーニングと R と T-SQL (SQL Server の Machine Learning) を使用して、モデルを保存 |Microsoft ドキュメント
+description: SQL Server で R を埋め込む方法を示すチュートリアル ストアド プロシージャと T-SQL 関数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4d8bedd65e150d94c6030ea6c9c9fc6483bdaafd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd5bdc7d256a22dbab6662a74dc39073892dbb4d
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250065"
 ---
 # <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>レッスン 5: トレーニングおよび T-SQL を使用してモデルを保存します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事は、SQL Server で R を使用する方法で SQL 開発者のためのチュートリアルの一部です。
 
-このレッスンでは r です。 を使用して、機械学習モデルをトレーニングする方法が学習します。作成したデータの機能を使用して、モデルのトレーニングをでトレーニング済みモデルを保存し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 この場合、R パッケージが既にインストールされてで[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]ので、SQL からすべて実行できます。
+このレッスンでは r です。 を使用して、機械学習モデルをトレーニングする方法が学習します。前のレッスンで作成したデータの機能を使用して、モデルのトレーニングをでトレーニング済みモデルを保存し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 この場合、R パッケージが既にインストールされてで[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]ので、SQL からすべて実行できます。
 
 ## <a name="create-the-stored-procedure"></a>ストアド プロシージャを作成します。
 
@@ -80,7 +82,7 @@ ms.lasthandoff: 04/16/2018
     EXEC TrainTipPredictionModel
     ```
 
-2. ウォッチ、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]r のパイプ、メッセージの**stdout**このが正しくありませんと同様に、ストリーム。 
+2. ウォッチ、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]r のパイプ、メッセージの**stdout**このメッセージのように、ストリーム。 
 
     "外部スクリプトからの STDOUT メッセージ: Rows Read: 1193025、合計行が処理: 1193025、チャンク時間の合計: 0.093 秒"
 
@@ -104,5 +106,5 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="previous-lesson"></a>前のレッスン
 
-[レッスン 4: T-SQL を使用してデータ機能を作成します。](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[レッスン 4: R と T-SQL で関数を使用してデータ機能を作成します。](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

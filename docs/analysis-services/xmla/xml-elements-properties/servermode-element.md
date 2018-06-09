@@ -13,7 +13,7 @@ ms.openlocfilehash: 21e9344ef945311b3af07398e6e927482718f5ff
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576264"
 ---
 # <a name="servermode-element"></a>ServerMode 要素
@@ -49,7 +49,7 @@ ms.locfileid: "34576264"
 ## <a name="remarks"></a>コメント  
  サーバーは、次のモードのいずれかで動作します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |*多次元*|多次元モードおよびデータ マイニング モード|  
 |*表形式*|テーブル モード|  

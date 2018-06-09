@@ -1,41 +1,30 @@
 ---
 title: 関数 (MDX 構文) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- MDX [Analysis Services], functions
-- Multidimensional Expressions [Analysis Services], functions
-- functions [MDX]
-ms.assetid: 74ca5e79-1f33-4795-9d68-98eff9c190c1
-caps.latest.revision: 25
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: cf28303c1ffedf36354fd0fb1489666ad68d519c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ed7e1770323a9691c2fe63c0df88df77198153ab
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740731"
 ---
 # <a name="functions-mdx-syntax"></a>関数 (MDX 構文)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   多次元式 (MDX) には、特定の操作を実行するための固有の関数の分類がいくつかあります。 MDX で使用できる関数の分類を以下の表に示します。  
   
 > [!NOTE]  
 >  個々 の関数の詳細については、次を参照してください。 [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)です。  
   
-|関数の分類|Description|  
+|関数の分類|説明|  
 |-----------------------|-----------------|  
 |配列関数|ストアド プロシージャで使用する配列を提供します。<br /><br /> 詳細については、次を参照してください。[ストアド プロシージャの使用&#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)です。|  
 |ディメンション関数|階層、レベル、またはメンバーから、ディメンションへの参照を返します。<br /><br /> 詳細については、次を参照してください。[を使用してディメンション、階層、およびレベル関数](../mdx/using-dimension-hierarchy-and-level-functions.md)です。|  

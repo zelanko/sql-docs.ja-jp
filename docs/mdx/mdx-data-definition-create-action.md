@@ -1,42 +1,23 @@
 ---
 title: CREATE ACTION ステートメント (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE ACTION
-- Action
-- CREATE
-- CREATE_ACTION
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- invocation types [MDX]
-- dimensions [Analysis Services], actions
-- CREATE ACTION statement
-- cubes [Analysis Services], actions
-- actions [MDX]
-- hierarchies [Analysis Services], actions
-ms.assetid: 0419f349-ece2-42ba-8552-a1023f268a41
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dbb6e815e1cc9c66706641c16a9e169bb217ad6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 762c2c1cc18d67ccafb05b0f61d213e5215de8b2
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741291"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX データ定義のアクションを作成します。
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   アクションを作成します。アクションは、キューブ、ディメンション、階層、下位オブジェクトに関連付けることができます。  
   
@@ -91,18 +72,18 @@ FOR
  *String_Expression*  
  有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  クライアント アプリケーションが安全でないアクションを作成して実行したり、安全でない関数を使用したりする可能性もあります。 このような状況を避けるためを使用して、 **Safety Options**プロパティです。 詳細については、「Safety Options プロパティ」を参照してください。  
   
 > [!NOTE]  
->  このステートメントは、旧バージョンとの互換性のために用意されています。 初めて使用するアクション[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ドリルスルーやレポートの操作などはサポートされていません。  
+>  このステートメントは、旧バージョンとの互換性のために用意されています。 初めて使用するアクション[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ドリルスルーやレポートの操作などはサポートされていません。  
   
 ## <a name="action-types"></a>アクションの種類  
- 次の表に、さまざまな種類で使用できるアクションの[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]です。  
+ 次の表に、さまざまな種類で使用できるアクションの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。  
   
-|アクションの種類|Description|  
+|アクションの種類|説明|  
 |-----------------|-----------------|  
-|**[URL]**|返されるアクション文字列は、インターネット ブラウザーで開く URL です。<br /><br /> 注: でこの操作が開始されない場合`http://`または`https://`、アクションをブラウザーに使用できる場合を除き、 **SafetyOptions**に設定されている**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**です。|  
+|**URL**|返されるアクション文字列は、インターネット ブラウザーで開く URL です。<br /><br /> 注: でこの操作が開始されない場合`http://`または`https://`、アクションをブラウザーに使用できる場合を除き、 **SafetyOptions**に設定されている**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**です。|  
 |**HTML**|返されるアクション文字列は、HTML スクリプトです。 その文字列をファイルに保存して、そのファイルをインターネット ブラウザーで処理します。 この場合は、生成された HTML の一部としてスクリプト全体を実行できます。|  
 |**ステートメント**|返されるアクション文字列は、設定によって実行される必要があるステートメント、 **:settext**文字列と呼び出し元にコマンド オブジェクトのメソッド、 **icommand::execute**メソッドです。 コマンドが成功しなかった場合は、エラーが返されます。|  
 |**データセット**|返されるアクション文字列は、MDX ステートメントを設定して実行する必要がある、 **:settext**文字列と呼び出し元にコマンド オブジェクトのメソッド、 **icommand::execute**メソッドです。 要求されたインターフェイス ID (IID) 必要があります**IDataset**です。 データセットが作成されれば、コマンドは成功したことになります。 クライアント アプリケーションでは、返されたデータセットをユーザーが表示できるようにする必要があります。|  
@@ -113,7 +94,7 @@ FOR
 ## <a name="invocation-types"></a>呼び出しの種類  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で使用できる呼び出しの種類は以下のとおりです。 クライアント アプリケーションでは、呼び出しの種類に基づいて、アクションを呼び出すタイミングを判別します。 呼び出しの種類によって、アクションの呼び出しの動作が実際に決まるわけではありません。  
   
-|呼び出しの種類|Description|  
+|呼び出しの種類|説明|  
 |---------------------|-----------------|  
 |**対話型**|クライアント アプリケーションは、ユーザーとの対話によってアクションを呼び出します。|  
 |**ON_OPEN**|クライアント アプリケーションは、対象のオブジェクトが開かれた時点でアクションを呼び出します。 この呼び出しの種類は、現在実装されていません。|  

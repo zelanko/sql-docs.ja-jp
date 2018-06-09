@@ -1,6 +1,6 @@
 ---
 title: DRILLTHROUGH ステートメント (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4f5b56c03ec6e575b647ed7eecaf26d35bfae047
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: HT
+ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580064"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742281"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX データ操作 - DRILLTHROUGH
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   キューブ内の指定されたセルの作成に使用されたテーブル行を取得します。  
   
@@ -43,7 +43,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  ディメンションの属性とメジャーのコンマ区切りのリストです。  
   
 ## <a name="remarks"></a>コメント  
- ドリルスルーとは、エンド ユーザーが詳細情報を取得するためにキューブから 1 つのセルを選択してそのセルのソース データから結果セットを取得する操作です。 既定では、ドリルスルーの結果セットは、選択したキューブ セルの値を計算するために評価されたテーブル行から導き出されます。 エンド ユーザーがドリルスルーを行う場合は、クライアント アプリケーションでこの機能がサポートされている必要があります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、ROLAP パーティションまたはディメンションは、クエリを実行しない限り、MOLAP ストレージから直接、結果が取得されます。  
+ ドリルスルーとは、エンド ユーザーが詳細情報を取得するためにキューブから 1 つのセルを選択してそのセルのソース データから結果セットを取得する操作です。 既定では、ドリルスルーの結果セットは、選択したキューブ セルの値を計算するために評価されたテーブル行から導き出されます。 エンド ユーザーがドリルスルーを行う場合は、クライアント アプリケーションでこの機能がサポートされている必要があります。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、ROLAP パーティションまたはディメンションは、クエリを実行しない限り、MOLAP ストレージから直接、結果が取得されます。  
   
 > [!IMPORTANT]  
 >  ドリルスルーのセキュリティは、キューブで定義された全般的なセキュリティ オプションに基づいています。 ユーザーが MDX を使用して一部のデータを取得できない場合、そのユーザーはドリルスルーでも同様の制限を受けます。  

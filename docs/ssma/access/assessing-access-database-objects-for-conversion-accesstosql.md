@@ -1,9 +1,6 @@
 ---
 title: 変換 (AccessToSQL) のデータベース オブジェクトへのアクセスを評価する |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -28,11 +25,12 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8de42a34bb6ae01d6315b141ce0afba66bc3c491
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: bf85577996a6dc1e4d3e4f3f1f353b0952aece54
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773258"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>変換 (AccessToSQL) のデータベース オブジェクトへのアクセスを評価します。
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure、する必要があります量を調べるか、移行の成功、し、どのくらいの時間、変換かかる場合があります。 SSMA を正常に変換されたオブジェクトの割合が表示される評価レポートを作成できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure の構文と時刻の評価、移行を実行します。 SSMA では、変換エラーの原因となった特定の問題を表示することもできます。  

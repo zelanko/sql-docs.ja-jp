@@ -1,6 +1,6 @@
 ---
 title: CREATE SUBCUBE ステートメント (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 730d6f3b1445017cc1b1988c49bda176c6ba4ced
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2b505de916ba274ebb69137aa3f61fe384386829
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580744"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742541"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX データ定義のサブキューブの作成
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   指定されたキューブまたはサブキューブのキューブ空間を指定されたサブキューブに再定義します。 このステートメントを実行すると、後続の操作で使用する見かけのキューブ空間が変わります。  
   
@@ -129,7 +129,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [All Products] および [All Resellers] の列と行それぞれに、表示されているメンバーだけでなく、すべてのメンバーの合計が含まれます。  
   
 ## <a name="see-also"></a>参照  
- [MDX での概念をキー &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX の主な概念 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX スクリプト ステートメント&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP SUBCUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
  [SELECT ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  

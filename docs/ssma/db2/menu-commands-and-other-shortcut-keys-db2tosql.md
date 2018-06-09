@@ -1,8 +1,6 @@
 ---
 title: メニュー コマンドやその他のショートカット キー (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 29b0f3e672aa3d98db3d70cfa260058c5eafeae9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd4dbdbdacfed33fd56cfacf6dfefb7748887124
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775178"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>メニュー コマンドやその他のショートカット キー (DB2ToSQL)
 次のセクションでは、メニュー コマンドと DB2 アプリケーションの SSMA のさまざまなダイアログ ボックスで使用されるその他のショートカット キーにアクセスするキーボード ショートカットについて説明します。  

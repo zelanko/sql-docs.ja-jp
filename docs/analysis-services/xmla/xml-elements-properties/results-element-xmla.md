@@ -13,7 +13,7 @@ ms.openlocfilehash: 7fc64d6b31f1b05d8bf5b4d1c80d75dff0583e86
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576164"
 ---
 # <a name="results-element-xmla"></a>results 要素 (XMLA)
@@ -45,7 +45,7 @@ ms.locfileid: "34576164"
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[戻り値](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
+|親要素|[return](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
 |子要素|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  

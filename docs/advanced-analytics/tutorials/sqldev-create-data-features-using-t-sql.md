@@ -1,19 +1,21 @@
 ---
-title: レッスン 4 のデータを機能 T-SQL を使用して |Microsoft ドキュメント
+title: レッスン 4 のデータを機能 T-SQL 関数 (SQL Server の Machine Learning) を使用して |Microsoft ドキュメント
+description: SQL Server で R を埋め込む方法を示すチュートリアル ストアド プロシージャと T-SQL 関数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7007d418b14e2c965252ca2a4f7bc3c529e63173
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 98182e8e602b8bba8ca7d7fd58cf23f3fcaaa435
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249545"
 ---
-# <a name="lesson-4-create-data-features-using-t-sql"></a>レッスン 4: T-SQL を使用してデータ機能を作成します。
+# <a name="lesson-4-create-data-features-using-r-and-t-sql"></a>レッスン 4: R と T-SQL を使用してデータ機能を作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事は、SQL Server で R を使用する方法で SQL 開発者のためのチュートリアルの一部です。
@@ -40,7 +42,7 @@ ms.lasthandoff: 04/16/2018
 
 関数は、 _fnCalculateDistance_必要がありますをダウンロードしてに登録されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このチュートリアルの準備の一環として。 コードを確認してみましょう。
   
-1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]**、 **[関数]** 、 **[スカラー値関数]**の順に展開します。   
+1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]**、 **[関数]** 、 **[スカラー値関数]** の順に展開します。   
 
 2. _fnCalculateDistance_を右クリックし、 **[変更]** を選択し、新しいクエリ ウィンドウで [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを開きます。
   
@@ -125,4 +127,4 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="previous-lesson"></a>前のレッスン
 
-[レッスン 3: 探索し、データの視覚化](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[レッスン 3: 探索し、R とストアド プロシージャを使用してデータの視覚化](../tutorials/sqldev-explore-and-visualize-the-data.md)

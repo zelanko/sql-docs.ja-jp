@@ -1,6 +1,6 @@
 ---
 title: CREATE SESSION CUBE ステートメント (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 12a450b8184f7a1d6ef8b6068d73f99e17063c5d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 09e093b46127090d232f023a7c7277c398ec349c
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579424"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742471"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX データ定義、セッション キューブの作成
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   既存のサーバー キューブから、セッション キューブを作成および設定します。 セッション キューブは現在のセッション内でのみ表示できます。他のセッションから参照したり、クエリを実行することはできません。 セッション キューブは、セッションが閉じられたときに暗黙的に削除されます。  
   

@@ -1,6 +1,6 @@
 ---
 title: コメント (MDX 構文) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c2a5c543ca5f611c671566dcbdac16f2248a59af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 17693d0dc76dd6cb8b3a4d0c3ead9f95c0599580
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578454"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740763"
 ---
 # <a name="comments-mdx-syntax"></a>コメント (MDX 構文)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   コメントは、プログラム コード内の実行されないテキスト文字列です  (コメントは "注釈" とも呼ばれます)。 コメントは、コードについて説明したり、診断中の多次元式 (MDX) ステートメントやスクリプトの特定部分を一時的に無効にしたりするために使用します。 コードを説明するコメントを使用すると、することができます後でプログラム コードの保守容易にします。 また、プログラム名、作成者名、およびコードの主要な変更日を記録するためにコメントを使用する場合も少なくありません。 コメントは、複雑な計算の解説やプログラミング方法の説明にも使用できます。  
   
  MDX のコメントは、以下のガイドラインに従います。  
   
--   コメント内ではすべてのアルファベット文字と記号を使用できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] コメント内のすべての文字を無視します。  
+-   コメント内ではすべてのアルファベット文字と記号を使用できます。  コメント内のすべての文字は無視されます。  
   
 -   ステートメント内またはスクリプト内のコメント長には制限がありません。 1 行または複数行のコメントを作成できます。  
   
