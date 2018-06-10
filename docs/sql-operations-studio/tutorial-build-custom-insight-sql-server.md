@@ -1,6 +1,6 @@
 ---
-title: 'チュートリアル: SQL 操作 Studio (プレビュー) でカスタム インサイト ウィジェットの構築 |Microsoft ドキュメント'
-description: このチュートリアルでは、カスタム インサイト ウィジェットを構築し、SQL 操作 Studio (プレビュー) でのデータベースとサーバーのダッシュ ボードに追加する方法を示します。
+title: 'チュートリアル: SQL Operations Studio (プレビュー) でカスタム インサイト ウィジェットの構築 |Microsoft ドキュメント'
+description: このチュートリアルでは、カスタム インサイト ウィジェットを構築し、SQL Operations Studio (プレビュー) でのデータベースとサーバーのダッシュ ボードに追加する方法を示します。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql

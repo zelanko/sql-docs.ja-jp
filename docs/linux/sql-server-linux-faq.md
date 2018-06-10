@@ -75,7 +75,7 @@ ms.lasthandoff: 05/19/2018
 
 1. **Linux 上で実行される SSMS のようなツールはありますか。**
 
-   新しい Microsoft SQL Operations Studio (preview) は、SQL Server を管理するためのクロスプラット フォーム ツールです。 詳細については、次を参照してください。 [Microsoft SQL 操作 Studio (プレビュー) は、どのような](../sql-operations-studio/what-is.md)します。
+   新しい Microsoft SQL Operations Studio (preview) は、SQL Server を管理するためのクロスプラット フォーム ツールです。 詳細については、次を参照してください。 [Microsoft SQL Operations Studio (プレビュー) は、どのような](../sql-operations-studio/what-is.md)します。
 
 1. **Sqlcmd および bcp のようなコマンドは、Linux で利用可能ですか。**
 
