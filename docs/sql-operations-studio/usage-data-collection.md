@@ -1,5 +1,5 @@
 ---
-title: 有効にするにまたは使用状況データ収集を無効にしてクラッシュ レポートの SQL 操作 Studio (プレビュー) |Microsoft ドキュメント
+title: 有効にするにまたは使用状況データ収集を無効にしてクラッシュ レポートの SQL Operations Studio (プレビュー) |Microsoft ドキュメント
 description: この記事では、使用状況とクラッシュ レポート データは収集されマイクロソフトに送信される場合を制御する方法について説明します。
 ms.custom: tools|sos
 ms.date: 11/15/2017

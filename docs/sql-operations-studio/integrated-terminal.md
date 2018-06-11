@@ -1,6 +1,6 @@
 ---
-title: SQL 操作 Studio (プレビュー) で統合ターミナル |Microsoft ドキュメント
-description: SQL 操作 Studio (プレビュー) で統合ターミナルについて説明します。
+title: SQL Operations Studio (プレビュー) で統合ターミナル |Microsoft ドキュメント
+description: SQL Operations Studio (プレビュー) で統合ターミナルについて説明します。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql

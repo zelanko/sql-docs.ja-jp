@@ -1,6 +1,6 @@
 ---
-title: サーバー グループの SQL 操作 Studio (プレビュー) |Microsoft ドキュメント
-description: SQL 操作 Studio (プレビュー) 内のサーバー グループについて説明します。
+title: サーバー グループの SQL Operations Studio (プレビュー) |Microsoft ドキュメント
+description: SQL Operations Studio (プレビュー) 内のサーバー グループについて説明します。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql

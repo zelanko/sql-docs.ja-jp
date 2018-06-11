@@ -96,7 +96,7 @@ ms.lasthandoff: 05/03/2018
 - [新しい + 更新 (3 + 3): &nbsp; &nbsp; **SQL の Linux** docs](../linux/new-updated-linux.md)
 - [新しい + 更新 (7 + 10): &nbsp; &nbsp;**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
 - [新しい + 更新 (0 + 2): &nbsp; &nbsp; **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [新しい + 更新 (1 + 3): &nbsp; &nbsp; **SQL 操作 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新しい + 更新 (1 + 3): &nbsp; &nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
 - [新しい + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
 - [新しい + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
 - [新しい + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)

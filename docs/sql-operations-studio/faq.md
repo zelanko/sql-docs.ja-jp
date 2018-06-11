@@ -1,6 +1,6 @@
 ---
-title: SQL 操作 Studio プレビューの FAQ |Microsoft ドキュメント
-description: よく寄せられる質問 (FAQ) for SQL 操作 Studio (プレビュー) です。
+title: SQL Operations Studio プレビューの FAQ |Microsoft ドキュメント
+description: よく寄せられる質問 (FAQ) for SQL Operations Studio (プレビュー) です。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql

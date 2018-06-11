@@ -1,6 +1,6 @@
 ---
-title: 'チュートリアル: SQL 操作 Studio (プレビュー) のテーブル領域使用状況のサンプル insight ウィジェットを有効にする |Microsoft ドキュメント'
-description: このチュートリアルでは、SQL 操作 Studio (プレビュー) の データベース ダッシュ ボードのテーブル領域使用状況のサンプル insight ウィジェットを有効にする方法について説明します。
+title: 'チュートリアル: SQL Operations Studio (プレビュー) のテーブル領域使用状況のサンプル insight ウィジェットを有効にする |Microsoft ドキュメント'
+description: このチュートリアルでは、SQL Operations Studio (プレビュー) の データベース ダッシュ ボードのテーブル領域使用状況のサンプル insight ウィジェットを有効にする方法について説明します。
 ms.custom: tools|sos
 ms.date: 03/19/2018
 ms.prod: sql

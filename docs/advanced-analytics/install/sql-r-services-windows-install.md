@@ -91,7 +91,7 @@ SQL Server の前提条件としてインストールされる特定のバージ
     > [!TIP]
     > ダウンロードして、このページから、適切なバージョンをインストールすることができます:[ダウンロード SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。
     > 
-    > プレビュー リリースのも試すことができます[SQL 操作 Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)、管理タスクと SQL Server に対してクエリをサポートします。
+    > プレビュー リリースのも試すことができます[SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)、管理タスクと SQL Server に対してクエリをサポートします。
   
 2. Machine Learning のサービスがインストールされているインスタンスに接続し、をクリックして**新しいクエリ**をクエリ ウィンドウを開き、次のコマンドを実行します。
 

@@ -1,6 +1,6 @@
 ---
-title: 更新済み - SQL 操作 Studio docs |Microsoft ドキュメント
-description: 最近変更したドキュメントについては、SQL 操作 Studio の更新されたコンテンツのスニペットを表示します。
+title: 更新済み - SQL Operations Studio docs |Microsoft ドキュメント
+description: 最近変更したドキュメントについては、SQL Operations Studio の更新されたコンテンツのスニペットを表示します。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>新規または最近の更新: SQL 操作 Studio docs
+# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>新規または最近の更新: SQL Operations Studio docs
 
 
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 
 
 - *更新プログラムの日付範囲:* &nbsp; **2018-02-03** &nbsp;対&nbsp; **2018-04-28**
-- *サブジェクト領域:* &nbsp; **SQL 操作 Studio**です。
+- *サブジェクト領域:* &nbsp; **SQL Operations Studio**です。
 
 
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-- [SQL 操作 Studio (プレビュー) の機能を拡張します。](extensions.md)
+- [SQL Operations Studio (プレビュー) の機能を拡張します。](extensions.md)
 
 <!-- GeneMi:  I MANUALLY replace the ugly !INCLUDE with the name from inside the includes file. -->
 
@@ -70,8 +70,8 @@ ms.lasthandoff: 05/03/2018
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [ダウンロードして SQL 操作 Studio (プレビュー) のインストール](#TitleNum_1)
-2. [SQL 操作 Studio (プレビュー) のリリース ノート](#TitleNum_2)
+1. [ダウンロードして SQL Operations Studio (プレビュー) のインストール](#TitleNum_1)
+2. [SQL Operations Studio (プレビュー) のリリース ノート](#TitleNum_2)
 3. [チュートリアル: 追加、 *5 速度が遅かったクエリ*データベース ダッシュ ボードにウィジェットをサンプル](#TitleNum_3)
 
 
@@ -83,7 +83,7 @@ ms.lasthandoff: 05/03/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1.&nbsp; [ダウンロードして SQL 操作 Studio (プレビュー) のインストール](download.md)
+### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1.&nbsp; [ダウンロードして SQL Operations Studio (プレビュー) のインストール](download.md)
 
 *最終更新日: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([次](#TitleNum_2))
 
@@ -124,7 +124,7 @@ ms.lasthandoff: 05/03/2018
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-sql-operations-studio-preview-release-notesrelease-notesmd"></a>2.&nbsp; [SQL 操作 Studio (プレビュー) のリリース ノート](release-notes.md)
+### <a name="2-nbsp-sql-operations-studio-preview-release-notesrelease-notesmd"></a>2.&nbsp; [SQL Operations Studio (プレビュー) のリリース ノート](release-notes.md)
 
 *最終更新日: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1) | [次](#TitleNum_3))
 
@@ -148,7 +148,7 @@ ms.lasthandoff: 05/03/2018
 *年 4 月のパブリック プレビュー*バグの修正プログラムと機能強化が含まれています。
 
 - SQL エージェント プレビュー拡張機能が改善されました。
-- 保護されている管理者を保存するための大規模で保護されたファイルのサポートの向上と > SQL 操作 Studio 内で 256 個のファイルです。
+- 保護されている管理者を保存するための大規模で保護されたファイルのサポートの向上と > SQL Operations Studio 内で 256 個のファイルです。
 - 一度に複数開いている終端要素を使用するターミナル分割を統合します。
 - 高速インストールが、スタートアップに時間の削減インストール ディスク上のファイル数フィートを印刷します。
 - GitHub の問題を修正し続けます。
@@ -226,7 +226,7 @@ ms.lasthandoff: 05/03/2018
 - [新しい + 更新 (3 + 3): &nbsp; &nbsp; **SQL の Linux** docs](../linux/new-updated-linux.md)
 - [新しい + 更新 (7 + 10): &nbsp; &nbsp;**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
 - [新しい + 更新 (0 + 2): &nbsp; &nbsp; **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [新しい + 更新 (1 + 3): &nbsp; &nbsp; **SQL 操作 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新しい + 更新 (1 + 3): &nbsp; &nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
 - [新しい + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
 - [新しい + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
 - [新しい + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
