@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576284"
 ---
-# <a name="xml-elements---objects---executeresponse"></a>XML 要素のオブジェクトの ExecuteResponse
+# <a name="xml-elements---objects---executeresponse"></a>XML 要素 - オブジェクト - ExecuteResponse
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   応答には、Analysis Services のインスタンスによって返される情報が含まれています、 [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドの呼び出しです。  
   
