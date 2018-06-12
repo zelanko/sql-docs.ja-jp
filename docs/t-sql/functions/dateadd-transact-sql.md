@@ -31,18 +31,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8dcbc7ccfc8c94c28f3c8ba0df32b915440d76e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: acd7f51a02b8e2d228d93badc2efc2d0fc2d685d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582344"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-指定した *date* の指定した *datepart* に、*number* に指定した間隔 (符号付き整数) を加算して、その *date* を返します。
+この関数は、入力 *date* 値の指定 *datepart* に指定 *number* 値 (符号付き整数として) を追加し、その変更後の値を返します。
   
-すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のあらゆるデータ型と関数に関する概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,7 +55,10 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>引数  
 *datepart*  
-**integer***number* が加算される *date* の部分です。 次の表に一覧のすべての有効な *datepart* 引数。 ユーザー定義変数に相当するものは無効です。
+`DATEADD` によって **integer** *number* が追加される *date* のパーツ。 この表には、有効な *datepart* 引数をすべて一覧表示しています。 
+
+> [!NOTE]
+> `DATEADD` は、*datepart* 引数に関して、ユーザー定義変数に相当するものは受け入れられません。 
   
 |*datepart*|省略形|  
 |---|---|
@@ -73,24 +77,37 @@ DATEADD (datepart , number , date )
 |**nanosecond**|**ns**|  
   
 *number*  
-*date* の *datepart* に加算される、[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) に解決できる式です。 ユーザー定義型の変数は有効です。  
-小数を含む値を指定した場合、小数部は丸められずに切り捨てられます。
+`DATEADD` によって追加される [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) を *date* の *datepart* に解決できる式。 `DATEADD` は、*number* に関してユーザー定義の変数値を受け取ります。 `DATEADD` は、小数を持つ指定 *number* 値に切り捨てを行います。 この状況で *number* 値が丸められることはありません。
   
 *date*  
-**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** 値に解決できる式です。 *date* には、式、列式、ユーザー定義変数、または文字列リテラルを使用できます。 式が文字列リテラルの場合は、**datetime** に解決できる必要があります。 こうしたあいまいさを排除するため、4 桁の西暦を使用してください。 については 2 桁の年を参照してください [構成 two digit year cutoff サーバー構成オプション](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)です。
+次のいずれかの値に解決できる式。 
+
++ **date**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **time**
+
+*date* の場合、`DATEADD` では、列式、式、文字列リテラル、ユーザー定義の変数が受け入れられます。 文字列リテラル値は **datetime** に解決する必要があります。 あいまいさの問題を排除するために、4 桁の西暦を使用してください。 2 桁の西暦については、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
-戻り値のデータ型は、文字列リテラルを除き、*date* 引数のデータ型です。
-文字列リテラルの戻り値のデータ型は **datetime** です。 文字列リテラルの秒の小数点以下桁数が 3 桁 (.nnn) を超えた場合またはタイム ゾーン オフセット部分を含んでいた場合、エラーが発生します。
+*date* 引数データ型は、文字列リテラル *date* 値を除き、`DATEADD` 戻り値データ型になります。 文字列リテラルの場合、`DATEADD` は **datetime** 値を返します。 `DATEADD` は、文字列リテラルの秒の小数点以下桁数 (.nnn) が 3 を超えるか、文字列リテラルにタイム ゾーン オフセット部分が含まれる場合、エラーを出します。
   
 ## <a name="return-value"></a>戻り値  
   
 ## <a name="datepart-argument"></a>datepart 引数  
 **dayofyear**、**day**、および **weekday** は同じ値を返します。
   
-各 *datepart* とその省略形は同じ値を返します。
+*-各日付構成要素とその省略形は、同じ値を返します。*
   
-*datepart* が **month** で、*date* の月が戻り値の月よりも日数が多く、*date* の日が戻り値の月に存在しない場合、戻り値の月の最終日が返されます。 たとえば、9 月の日数が 30 日である場合、次の 2 つのステートメントは、2006-09-30 00:00:00.000 を返します。
+次に当てはまる場合:
+
++ *datepart* が **month** である
++ *date* 月の日数が戻り値の月の日数より多い
++ *date* 日が戻り値の月に存在しない
+
+`DATEADD` は、戻り値の月の最後の日を返します。 たとえば、9 月の日数が 30 日である場合、次のステートメントは、2006-09-30 00:00:00.000 を返します。
   
 ```sql
 SELECT DATEADD(month, 1, '20060830');
@@ -98,7 +115,7 @@ SELECT DATEADD(month, 1, '20060831');
 ```
   
 ## <a name="number-argument"></a>number 引数  
-*number* 引数は、**int** の範囲を超えることはできません。次のステートメントでは、*number* の引数が **int** の範囲を 1 超えています。 "`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."` というエラー メッセージが返されます。
+*number* 引数は、**int** の範囲を超えることはできません。次のステートメントでは、*number* の引数が **int** の範囲を 1 超えています。 これらのステートメントはいずれも次のエラー メッセージを返します。 "`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
   
 ```sql
 SELECT DATEADD(year,2147483648, '20060731');  
@@ -106,7 +123,7 @@ SELECT DATEADD(year,-2147483649, '20060731');
 ```  
   
 ## <a name="date-argument"></a>date 引数  
-*date* 引数を、そのデータ型の範囲から外れる値に増やすことはできません。 次のステートメントでは、*date* 値に加算された *number* 値は *date* データ型の範囲を超えています。 "`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`" というエラー メッセージが返されます。
+`DATEADD` は、そのデータ型の範囲を超える値まで増える *date* 引数を受け取りません。 次のステートメントでは、*date* 値に加算された *number* 値は *date* データ型の範囲を超えています。 `DATEADD` は次のエラー メッセージを返します。 "`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`."
   
 ```sql
 SELECT DATEADD(year,2147483647, '20060731');  
@@ -114,19 +131,26 @@ SELECT DATEADD(year,-2147483647, '20060731');
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>smalldatetime に対する戻り値 (秒または 1 秒未満の秒)  
-[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 値の秒の部分は常に 00 です。 *date* が **smalldatetime** の場合、以下が適用されます。
--   *datepart* が **second** であり、*number* が -30 から +29 の場合、加算は実行されません。  
--   *datepart* が **second** で *number* が -30 未満か +29 を超える場合は、1 分で加算が開始されます。  
--   *datepart* が **millisecond** であり、*number* が -30001 から +29998 の場合、加算は実行されません。  
--   *datepart* が **millisecond** で *number* が -30001 未満か +29998 を超える場合は、1 分で加算が開始されます。  
+[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 値の秒の部分は常に 00 です。 **smalldatetime** *date* 値の場合、次が適用されます。 
+
+-   **second** の *datepart* と -30 から +29 の *number* 値の場合、`DATEADD` によって変更が行われることはありません。  
+-   **second** の *datepart* と、-30 未満、+29 超の *number* 値の場合、`DATEADD` は 1 分から始まる加算を実行します。  
+-   **millisecond** の *datepart* と -30001 から +29998 の *number* 値の場合、`DATEADD` によって変更が行われることはありません。  
+-   **second** の *datepart* と、-30001 未満、+29998 超の *number* 値の場合、`DATEADD` は 1 分から始まる加算を実行します。  
   
 ## <a name="remarks"></a>Remarks  
-DATEADD は、SELECT \<list>、WHERE、HAVING、GROUP BY、および ORDER BY 句で使用できます。
+次の句で `DATEADD` を使用します。
+
++ GROUP BY
++ HAVING
++ ORDER BY
++ SELECT \<list>
++ WHERE
   
-## <a name="fractional-seconds-precision"></a>1 秒未満の秒の有効桁数
-*date* データ型の **smalldatetime**、**date**、および **datetime** の場合、**microsecond** または **nanosecond** の *datepart* の加算は許可されていません。
+## <a name="fractional-seconds-precision"></a>秒の小数部の有効桁数
+`DATEADD` は、*date* データ型の **smalldatetime**、**date**、**datetime** について、**microsecond** または **nanosecond** の *datepart* に加算を許可しません。
   
-ミリ秒の小数点以下桁数は 3 (.123) です。マイクロ秒の小数点以下桁数は 6 (.123456) です。ナノ秒の小数点以下桁数は 9 (.123456789) です。 **time**、**datetime2**、および**datetimeoffset** データ型の小数点以下桁数は最大 7 (.1234567) です。 *datepart* が **nanosecond** の場合、*date* の 1 秒未満の秒を増やす前に、*number* を 100 にする必要があります。 *number* に 1 ～ 49 の値を指定した場合、値は 0 に切り捨てられ、50 ～ 99 の値を指定した場合、値は 100 に切り上げられます。
+ミリ秒の小数点以下桁数は 3 (.123) です。マイクロ秒の小数点以下桁数は 6 (.123456) です。ナノ秒の小数点以下桁数は 9 (.123456789) です。 **time**、**datetime2**、および**datetimeoffset** データ型の小数点以下桁数は最大 7 (.1234567) です。 **nanosecond** の *datepart* については、*date* の 1 秒未満の秒を増やす前に、*number* を 100 にする必要があります。 1 から 49 の *number* は 0 に切り捨てられ、50 から 99 は 100 に切り上げられます。
   
 次のステートメントは、**millisecond**、**microsecond**、または **nanosecond** の *datepart* を加算します。
   
@@ -160,7 +184,7 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
 ```  
   
 ## <a name="time-zone-offset"></a>タイム ゾーン オフセット
-タイム ゾーン オフセットの加算は許可されません。
+`DATEADD` は、タイム ゾーン オフセットの加算を許可しません。
   
 ## <a name="examples"></a>使用例  
 
@@ -215,27 +239,27 @@ nanosecond   2007-01-01 13:10:10.1111111
 ```  
   
 ### <a name="b-incrementing-more-than-one-level-of-datepart-in-one-statement"></a>B. 単一のステートメントで datepart を複数単位増やす  
-次の各ステートメントでは、*date* の上位の *datepart* への繰り上がりが生じる程度に *number* 単位で *datepart* を増やします。
+次の各ステートメントは、*date* の *datepart* を付加的に繰り上げる *number* だけ *datepart* を増やします。
   
 ```sql
 DECLARE @datetime2 datetime2;  
 SET @datetime2 = '2007-01-01 01:01:01.1111111';  
 --Statement                                 Result     
 -------------------------------------------------------------------   
-SELECT DATEADD(quarter,4,@datetime2);     --2008-01-01 01:01:01.110  
-SELECT DATEADD(month,13,@datetime2);      --2008-02-01 01:01:01.110  
-SELECT DATEADD(dayofyear,365,@datetime2); --2008-01-01 01:01:01.110  
-SELECT DATEADD(day,365,@datetime2);       --2008-01-01 01:01:01.110  
-SELECT DATEADD(week,5,@datetime2);        --2007-02-05 01:01:01.110  
-SELECT DATEADD(weekday,31,@datetime2);    --2007-02-01 01:01:01.110  
-SELECT DATEADD(hour,23,@datetime2);       --2007-01-02 00:01:01.110  
-SELECT DATEADD(minute,59,@datetime2);     --2007-01-01 02:00:01.110  
-SELECT DATEADD(second,59,@datetime2);     --2007-01-01 01:02:00.110  
-SELECT DATEADD(millisecond,1,@datetime2); --2007-01-01 01:01:01.110  
+SELECT DATEADD(quarter,4,@datetime2);     --2008-01-01 01:01:01.1111111  
+SELECT DATEADD(month,13,@datetime2);      --2008-02-01 01:01:01.1111111  
+SELECT DATEADD(dayofyear,365,@datetime2); --2008-01-01 01:01:01.1111111  
+SELECT DATEADD(day,365,@datetime2);       --2008-01-01 01:01:01.1111111  
+SELECT DATEADD(week,5,@datetime2);        --2007-02-05 01:01:01.1111111  
+SELECT DATEADD(weekday,31,@datetime2);    --2007-02-01 01:01:01.1111111  
+SELECT DATEADD(hour,23,@datetime2);       --2007-01-02 00:01:01.1111111  
+SELECT DATEADD(minute,59,@datetime2);     --2007-01-01 02:00:01.1111111  
+SELECT DATEADD(second,59,@datetime2);     --2007-01-01 01:02:00.1111111  
+SELECT DATEADD(millisecond,1,@datetime2); --2007-01-01 01:01:01.1121111  
 ```  
   
 ### <a name="c-using-expressions-as-arguments-for-the-number-and-date-parameters"></a>C. number パラメーターと date パラメーターの引数として式を使用する  
-次の例では、*number* および *date* パラメーターの引数として、さまざまな種類の式を使用しています。 使用例では、AdventureWorks データベースを使用します。
+次の例では、*number* パラメーターと *date* パラメーターの引数として、さまざまな種類の式を使用しています。 使用例では、AdventureWorks データベースを使用します。
   
 #### <a name="specifying-a-column-as-date"></a>列を date として指定する  
 次の例では、`OrderDate` 列の各値に `2` 日を加算し、`PromisedShipDate` という名前の新しい列を作成します。
@@ -289,7 +313,7 @@ SELECT DATEADD(day, @days, @datetime);
 ```  
   
 #### <a name="specifying-scalar-system-function-as-date"></a>スカラー システム関数を date として指定する  
-次の例では、*date* に対して `SYSDATETIME` を指定しています。
+この例では、*date* の `SYSDATETIME` を指定しています。 返される厳密な値は、ステートメント実行の日時によって変わります。
   
 ```sql
 SELECT DATEADD(month, 1, SYSDATETIME());  
@@ -305,7 +329,7 @@ SELECT DATEADD(month, 1, SYSDATETIME());
 ```  
   
 #### <a name="specifying-scalar-subqueries-and-scalar-functions-as-number-and-date"></a>number および date にスカラー サブクエリやスカラー関数を指定する  
-次の例では、*number* と *date* の引数として、スカラー サブクエリ (`MAX(ModifiedDate)`) を使用しています。 `(SELECT TOP 1 BusinessEntityID FROM Person.Person)` は、値リストから *number* 引数を選択する方法を紹介するために用意した架空の引数です。
+次の例では、*number* と *date* の引数として、スカラー サブクエリ (`MAX(ModifiedDate)`) を使用しています。 `(SELECT TOP 1 BusinessEntityID FROM Person.Person)` は、値リストから *number* 引数を選択する方法を紹介するために用意した、数値パラメーターの架空の引数です。
   
 ```sql
 SELECT DATEADD(month,(SELECT TOP 1 BusinessEntityID FROM Person.Person),  
@@ -313,7 +337,7 @@ SELECT DATEADD(month,(SELECT TOP 1 BusinessEntityID FROM Person.Person),
 ```  
   
 #### <a name="specifying-numeric-expressions-and-scalar-system-functions-as-number-and-date"></a>number および date として数値式やスカラー システム関数を指定する  
-次の例では、*number* および *date* の引数として、数値式 (-`(10/2))`、[単項演算子](../../mdx/unary-operators.md) (`-`)、[算術演算子](../../mdx/arithmetic-operators.md) (`/`)、およびスカラー システム関数 (`SYSDATETIME`) を使用しています。
+次の例では、*number* と *date* の引数として、数値式 (-`(10/2))`、[単項演算子](../../mdx/unary-operators.md) (`-`)、[算術演算子](../../mdx/arithmetic-operators.md) (`/`)、スカラー システム関数 (`SYSDATETIME`) を使用しています。
   
 ```sql
 SELECT DATEADD(month,-(10/2), SYSDATETIME());  

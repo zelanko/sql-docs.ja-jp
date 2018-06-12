@@ -1,7 +1,7 @@
 ---
 title: SQL Server Data Tools (SSDT) の変更ログ | Microsoft Docs
 ms.custom: ''
-ms.date: 04/10/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e2348aa63bce657c85ce0b9d6644be471e1f487
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32f97f60a4315f7a4adc0630b386ffb250a54a37
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773578"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +29,28 @@ ms.lasthandoff: 05/03/2018
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
 
+## <a name="ssdt-for-visual-studio-2017-1570"></a>SSDT for Visual Studio 2017 (15.7.0)
+ビルド番号: 14.0.16165.0  
+リリース日: 2018 年 6 月 4 日  
+  
+### <a name="whats-new"></a>新機能
+
+**SSIS:**
+
+- [オプション] ダイアログの *[Integration Services デザイナー]* ページが正しく表示されない問題を解決。  
+- *[並べ替え変換エディター]* エディターに表示されるテキストの輝度比率問題を解決。  
+- コンボボックスを編集しようとすると *[参照の解決]* ダイアログが消える問題を解決。  
+- *[Hadoop 接続マネージャー]* の F1 ヘルプ リンクが機能しない問題を解決。  
+- SQL Server 2016 が対象のとき、コンテナーに含まれていない場合、スクリプト タスク コードが失われる問題を解決。  
+
+
+**インストーラー:**
+
+- VS 15.7.2 で SSRS と SSIS をインストールする前に SSAS をインストールできない問題を解決。
+
+### <a name="known-issues"></a>既知の問題:
+
+- *ExecuteOutOfProcess* が *True* に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
 
 
 ## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT for Visual Studio 2017 (15.6.0)
@@ -38,24 +61,24 @@ ms.lasthandoff: 05/03/2018
 
 **SSIS:**
 
-1.  SQLServer2016 と SQLServer2017 を対象とする AS の処理タスクで処理手順のログが記録されない問題を修正しました
-2.  SSDT で英語以外の非常に長いタスク名の dtsx を開くとアクセス違反が発生する問題を修正しました
-3.  ScriptTask の変数一覧がタスク UI に時々表示されなくなる問題を修正しました
-4.  パッケージの場所が SQL Server である場合に既存のパッケージのコピーの追加が失敗する問題を修正しました
-5.  一部のエディターのダイアログ ボックスでコンボ ボックスにアクセスするとフォーカスがスタックする問題を修正しました。
-6.  VS のテーマの切り替え中に背景が変化しない問題を修正しました。
-7.  ダーク テーマで注釈と読み込み中のラベルが表示されない問題を修正しました。
-8.  SSIS ツールボックスが無効なアイテムで状態プロパティが正しく定義されない問題を修正しました。
-9.  WebServiceTask の実行が常に失敗する問題を修正しました。
-10. 接続文字列を式がプロジェクト パラメータに依存するように可変に設定すると、パッケージの展開が失敗する問題を修正しました。
+- SQLServer2016 と SQLServer2017 を対象とする AS の処理タスクで処理手順のログが記録されない問題を修正しました
+- SSDT で英語以外の非常に長いタスク名の dtsx を開くとアクセス違反が発生する問題を修正しました
+- ScriptTask の変数一覧がタスク UI に時々表示されなくなる問題を修正しました
+- パッケージの場所が SQL Server である場合に既存のパッケージのコピーの追加が失敗する問題を修正しました
+- 一部のエディターのダイアログ ボックスでコンボ ボックスにアクセスするとフォーカスがスタックする問題を修正しました。
+- VS のテーマの切り替え中に背景が変化しない問題を修正しました。
+- ダーク テーマで注釈と読み込み中のラベルが表示されない問題を修正しました。
+- SSIS ツールボックスが無効なアイテムで状態プロパティが正しく定義されない問題を修正しました。
+- WebServiceTask の実行が常に失敗する問題を修正しました。
+- 接続文字列を式がプロジェクト パラメータに依存するように可変に設定すると、パッケージの展開が失敗する問題を修正しました。
 
 **インストーラー:**
 
-1.  プライバシーに関する免責事項に “SQL Server Data Tools のカスタマー エクスペリエンス向上プログラム“ のリンクを追加します。
-2.  [Install new SQL Server Data Tools for Visual Studio 2017 instance]\(Visual Studio 2017 インスタンス用の新しい SQL Server Data Tools のインストール\) を選択すると VS インストーラー ウィンドウが開く問題を修正しました
+- プライバシーに関する免責事項に “SQL Server Data Tools のカスタマー エクスペリエンス向上プログラム“ のリンクを追加します。
+- [Install new SQL Server Data Tools for Visual Studio 2017 instance]\(Visual Studio 2017 インスタンス用の新しい SQL Server Data Tools のインストール\) を選択すると VS インストーラー ウィンドウが開く問題を修正しました
 
 ### <a name="known-issues"></a>既知の問題:
-1.  ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
+- ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
 
 
 
@@ -65,14 +88,14 @@ ms.lasthandoff: 05/03/2018
 ### <a name="whats-new"></a>新機能
 
 **SSIS**
-1.  SSAS と SSIS の両方が同じ VS 2017 インスタンスにインストールされているときに、SSIS 2008 プロジェクトの移行が失敗する問題を修正しました。
-2.  Rdlc レポート デザイナーと SSIS の両方が同じ VS 2017 インスタンスにインストールされているときに、Rdlc プロジェクトをビルドできない問題を修正しました。
-3.  注釈の色を更新できない問題を修正しました。
-4.  Hadoop 接続マネージャー エディターで一部の文字列が他の言語で切り捨てられる問題を修正しました。
-5.  OData 接続マネージャー エディターで一部の文字列が切り捨てられる問題を修正しました。
-6.  Integration Services のプロジェクトのインポート ウィザード ウィンドウで一部の文字列が切り捨てられる問題を修正しました。
-7.  SSIS ツール ボックス情報ウィンドウのタイトルの問題を修正しました。
-8.  Integration Services のプロジェクトの配置ウィザード ウィンドウで一部の文字列が切り捨てられる問題を修正しました。 
+- SSAS と SSIS の両方が同じ VS 2017 インスタンスにインストールされているときに、SSIS 2008 プロジェクトの移行が失敗する問題を修正しました。
+- Rdlc レポート デザイナーと SSIS の両方が同じ VS 2017 インスタンスにインストールされているときに、Rdlc プロジェクトをビルドできない問題を修正しました。
+- 注釈の色を更新できない問題を修正しました。
+- Hadoop 接続マネージャー エディターで一部の文字列が他の言語で切り捨てられる問題を修正しました。
+- OData 接続マネージャー エディターで一部の文字列が切り捨てられる問題を修正しました。
+- Integration Services のプロジェクトのインポート ウィザード ウィンドウで一部の文字列が切り捨てられる問題を修正しました。
+- SSIS ツール ボックス情報ウィンドウのタイトルの問題を修正しました。
+- Integration Services のプロジェクトの配置ウィザード ウィンドウで一部の文字列が切り捨てられる問題を修正しました。 
 
 **インストーラー**
 - ペイロードのダウンロードが "指定されたファイルが見つかりません (0x80070002)" というエラーで失敗することがある問題を修正しました。  

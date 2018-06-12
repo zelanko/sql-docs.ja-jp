@@ -25,24 +25,25 @@ caps.latest.revision: 79
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: a92f42a693c99c213815fdb1a14395becb3e9054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15a41989e5e846a8d4ca2c43b71c0d19210d8a21
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550883"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日付と時刻のデータ型および関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-このトピックの以下のセクションでは、日付と時刻に関連して [!INCLUDE[tsql](../../includes/tsql-md.md)] が備えているすべてのデータ型および関数について概要を紹介します。
+このトピックの次のセクションでは、すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数について説明します。
 -   [日付および時刻のデータ型](#DateandTimeDataTypes)  
 -   [日付と時刻の関数](#DateandTimeFunctions)  
-    -   [システムの日付と時刻値を取得する関数](#GetSystemDateandTimeValues)  
-    -   [日付と時刻の部分を取得する関数](#GetDateandTimeParts)  
-    -   [要素から日付と時刻の値を取得する関数](#fromParts)  
-    -   [日付や時刻の差を取得する関数](#GetDateandTimeDifference)  
+    -   [システムの日付と時刻値を返す関数](#GetSystemDateandTimeValues)  
+    -   [日付と時刻の要素を返す関数](#GetDateandTimeParts)  
+    -   [要素から日付と時刻の値を返す関数](#fromParts)  
+    -   [日付と時刻の差の値を返す関数](#GetDateandTimeDifference)  
     -   [日付と時刻の値を変更する関数](#ModifyDateandTimeValues)  
-    -   [セッションの形式を設定または取得する関数](#SetorGetSessionFormatFunctions)  
+    -   [セッションの形式の関数を設定または返す関数](#SetorGetSessionFormatFunctions)  
     -   [日付と時刻の値を検証する関数](#ValidateDateandTimeValues)  
 -   [日付と時刻に関連したトピック](#DateandTimeRelatedTopics)  
   
@@ -62,50 +63,50 @@ ms.lasthandoff: 05/03/2018
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) データ型は、日付または時刻のデータ型ではありません。 **timestamp** は、**rowversion** の非推奨のシノニムです。  
   
 ##  <a name="DateandTimeFunctions"></a> 日付と時刻の関数  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻の関数を次の表に示します。 決定性の詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻の関数を次の表に示します。 決定性の詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
   
-###  <a name="GetSystemDateandTimeValues"></a> システムの日付と時刻値を取得する関数 
-システムのすべての日付値と時刻値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムから取得されます。
+###  <a name="GetSystemDateandTimeValues"></a> システムの日付と時刻値を返す関数 
+[!INCLUDE[tsql](../../includes/tsql-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムから、システムのすべての日付値と時刻値を取得します。
   
 #### <a name="higher-precision-system-date-and-time-functions"></a>高精度のシステム日付/時刻関数  
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、GetSystemTimeAsFileTime() Windows API を使用して日付と時刻の値を取得します。 精度は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューター ハードウェアおよび Windows のバージョンによって異なります。 この API の精度は 100 ナノ秒で固定されます。 精度は、GetSystemTimeAdjustment() Windows API を使用して確認できます。
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、GetSystemTimeAsFileTime() Windows API を使用して日付と時刻の値を取得します。 精度は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューター ハードウェアおよび Windows のバージョンによって異なります。 この API の精度は 100 ナノ秒で固定されます。 精度を確認するには、GetSystemTimeAdjustment() Windows API を使用します。
   
 |機能|構文|戻り値|戻り値のデータ型|決定性|  
 |---|---|---|---|---|
-|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|返します、 **datetime2 (7)** いるコンピューターの日時を表す値のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されています。 タイム ゾーン オフセットは含まれません。|**datetime2(7)**|非決定的|  
-|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行しているコンピューターの日付と時刻を含む **datetimeoffset(7)** 値を返します。 タイム ゾーン オフセットが含まれます。|**datetimeoffset(7)**|非決定的|  
-|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|返します、 **datetime2 (7)** いるコンピューターの日時を表す値のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されています。 日付と時刻が UTC 時刻 (世界協定時刻) として返されます。|**datetime2(7)**|非決定的|  
+|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetime2(7)** 値を返します。 戻り値には、タイム ゾーン オフセットは含まれません。|**datetime2(7)**|非決定的|  
+|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetimeoffset(7)** 値を返します。 戻り値にはタイム ゾーン オフセットが含まれます。|**datetimeoffset(7)**|非決定的|  
+|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetime2(7)** 値を返します。 この関数は、日付と時刻を UTC 時刻 (世界協定時刻) として返します。|**datetime2(7)**|非決定的|  
   
-#### <a name="lower-precision--system-date-and-time-functions"></a>低精度のシステム日付/時刻関数
+#### <a name="lower-precision-system-date-and-time-functions"></a>低精度のシステム日付/時刻関数
   
 |機能|構文|戻り値|戻り値のデータ型|決定性|  
 |---|---|---|---|---|
-|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetime** 値を返します。 タイム ゾーン オフセットは含まれません。|**datetime**|非決定的|  
-|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetime** 値を返します。 タイム ゾーン オフセットは含まれません。|**datetime**|非決定的|  
-|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetime** 値を返します。 日付と時刻が UTC 時刻 (世界協定時刻) として返されます。|**datetime**|非決定的|  
+|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetime** 値を返します。 戻り値には、タイム ゾーン オフセットは含まれません。|**datetime**|非決定的|  
+|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetime** 値を返します。 戻り値には、タイム ゾーン オフセットは含まれません。|**datetime**|非決定的|  
+|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetime** 値を返します。 この関数は、日付と時刻を UTC 時刻 (世界協定時刻) として返します。|**datetime**|非決定的|  
   
-###  <a name="GetDateandTimeParts"></a> 日付と時刻の部分を取得する関数
+###  <a name="GetDateandTimeParts"></a> 日付と時刻の要素を返す関数
   
 |機能|構文|戻り値|戻り値のデータ型|決定性|  
 |--------------|------------|------------------|----------------------|-----------------|  
-|[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|指定された日付の指定された *datepart* を表す文字列を返します。|**nvarchar**|非決定的|  
-|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|指定された *date* の特定の *datepart* を表す整数を返します。|**int**|非決定的|  
-|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|指定された *date* の日付の部分を表す整数を返します。|**int**|決定的|  
+|[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|指定された日付の指定された *datepart* を表す文字列を返します。|**nvarchar**|非決定的|   
+|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|指定された *date* の指定された *datepart* を表す整数を返します。|**int**|非決定的|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|指定された *date* の日の部分を表す整数を返します。|**int**|決定的|  
 |[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|指定された *date* の月の部分を表す整数を返します。|**int**|決定的|  
 |[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|指定された *date* の年の部分を表す整数を返します。|**int**|決定的|  
   
-###  <a name="fromParts"></a> 要素から日付と時刻の値を取得する関数
+###  <a name="fromParts"></a> 要素から日付と時刻の値を返す関数
   
 |機能|構文|戻り値|戻り値のデータ型|決定性|  
 |---|---|---|---|---|
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|返します、 **日付** 指定された年、月、および日の値です。|**date**|決定的|  
-|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|返します、 **datetime2** 値で指定した日付と時刻の指定された有効桁数を使用します。|**datetime2(** *precision* **)**|決定的|  
+|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|指定された有効桁数を使用して、指定された日付と時刻を表す **datetime2** 値を返します。|**datetime2(** *precision* **)**|決定的|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds*)|返します、 **datetime** 指定した日付と時刻の値です。|**datetime**|決定的|  
-|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|返します、 **datetimeoffset** 指定されたオフセットおよび有効桁数と指定した日付と時刻の値です。|**datetimeoffset(** *precision* **)**|決定的|  
+|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|指定されたオフセットおよび有効桁数を使用して、指定された日付と時刻を表す **datetimeoffset** 値を返します。|**datetimeoffset(** *precision* **)**|決定的|  
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute* )|返します、 **smalldatetime** 指定した日付と時刻の値です。|**smalldatetime**|決定的|  
 |[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|指定された有効桁数を使用して、指定された時刻を表す **time** 値を返します。|**time(** *precision* **)**|決定的|  
   
-###  <a name="GetDateandTimeDifference"></a> 日付や時刻の差を取得する関数
+###  <a name="GetDateandTimeDifference"></a> 日付と時刻の差の値を返す関数
   
 |機能|構文|戻り値|戻り値のデータ型|決定性|  
 |---|---|---|---|---|
@@ -117,18 +118,18 @@ ms.lasthandoff: 05/03/2018
 |機能|構文|戻り値|戻り値のデータ型|決定性|  
 |---|---|---|---|---|
 |[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|DATEADD (*datepart* , *number* , *date* )|指定された *date* の指定された *datepart* に期間を加えた新しい **datetime** の値を返します。|*date* 引数のデータ型|決定的|  
-|[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH  ( *start_date* [, *month_to_add* ] )|オプションのオフセットを使用して、指定された日付を含んでいる月の最後の日付を返します。|戻り値の型の種類は *start_date* または **date** です。|決定的|  
-|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCH*OFFSET* (*DATETIMEOFFSET* , *time_zone*)|SWITCH*OFFSET* は、DATETIMEOFFSET の値のタイム ゾーン オフセットを変更し、UTC 値を保持します。|*DATETIMEOFFSET* の小数部の有効桁数を持つ **datetimeoffset**|決定的|  
-|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET は、datetime2 値を datetimeoffset 値に変換します。 datetime2 値は、指定された time_zone のローカル時刻で解釈されます。|*datetime* 引数の小数部の有効桁数を持つ **datetimeoffset**|決定的|  
+|[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH  ( *start_date* [, *month_to_add* ] )|オプションのオフセットを使用して、指定された日付を含んでいる月の最後の日付を返します。|戻り値の型は、*start_date* 引数型、または **date** データ型です。|決定的|  
+|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCHOFFSET (*DATETIMEOFFSET* , *time_zone*)|SWITCHOFFSET は、DATETIMEOFFSET 値のタイム ゾーン オフセットを変更し、UTC 値を保持します。|*DATETIMEOFFSET* の小数部の有効桁数を持つ **datetimeoffset**|決定的|  
+|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET は、datetime2 値を datetimeoffset 値に変換します。 *TODATETIMEOFFSET* は、datetime2 値を、指定された time_zone のローカル時刻で解釈します。|*datetime* 引数の小数部の有効桁数を持つ **datetimeoffset**|決定的|  
   
-###  <a name="SetorGetSessionFormatFunctions"></a> セッションの形式を取得または設定する関数
+###  <a name="SetorGetSessionFormatFunctions"></a> セッションの形式の関数を設定または返す関数
   
 |機能|構文|戻り値|戻り値のデータ型|決定性|  
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|現在のセッションにおける、SET DATEFIRST の現在の値を返します。|**tinyint**|非決定的|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **@***number_var* }|週の最初の曜日を 1 ～ 7 の数値で設定します。|適用なし|適用なし|  
 |[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@***format_var* }|**datetime** 型または **smalldatetime** 型のデータを入力する場合の日付要素 (月、日、年) の順番を設定します。|適用なし|適用なし|  
-|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|現在、使用されている言語の名前を返します。 @@LANGUAGE は、日付または時刻の関数ではありません。 ただし、言語設定は日付関数の出力に影響します。|適用なし|適用なし|  
+|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|現在使用している言語の名前を返します。 @@LANGUAGE は、日付または時刻の関数ではありません。 ただし、言語設定は日付関数の出力に影響します。|適用なし|適用なし|  
 |[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'***language***'** &#124; **@***language_var* }|セッションおよびシステム メッセージの言語環境を設定します。 SET LANGUAGE は日付または時刻の関数ではありません。 ただし、言語設定は日付関数の出力に影響します。|適用なし|適用なし|  
 |[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'***language***'** ]|サポートされている言語の日付形式に関する情報を返します。 **sp_helplanguage** は、日付または時刻のストアド プロシージャではありません。 ただし、言語設定は日付関数の出力に影響します。|適用なし|適用なし|  
   
@@ -136,13 +137,13 @@ ms.lasthandoff: 05/03/2018
   
 |機能|構文|戻り値|戻り値のデータ型|決定性|  
 |---|---|---|---|---|
-|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|**datetime** または **smalldatetime** の入力式が有効な日付値または時刻値であるかどうかを調べます。|**int**|ISDATE は、CONVERT 関数と共に使用され、CONVERT スタイル パラメーターが指定されており、スタイルが 0、100、9、または 109 と等しくない場合にのみ決定的関数になります。|  
+|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|**datetime** または **smalldatetime** の入力式の日付値または時刻値が有効であるかどうかを調べます。|**int**|ISDATE は、CONVERT 関数と共に使用され、CONVERT スタイル パラメーターが指定されており、スタイルが 0、100、9、または 109 と等しくない場合にのみ決定的関数になります。|  
   
 ##  <a name="DateandTimeRelatedTopics"></a> 日付と時刻に関連したトピック 
   
-|トピック|Description|  
+|トピック|[説明]|  
 |-----------|-----------------|  
-|[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|文字列リテラルとその他の日付/時刻形式間の変換に関する情報を提供します。|  
+|[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|文字列リテラルとその他の日時形式間の、日付と時刻の値の変換に関する情報を提供します。|  
 |[国際化に対応した Transact-SQL ステートメントの記述](../../relational-databases/collations/write-international-transact-sql-statements.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用するデータベースやデータベース アプリケーションをある言語から別の言語に移行する、または複数の言語をサポートするためのガイドラインを提供します。|  
 |[ODBC スカラー関数 &#40;Transact-SQL&#41;](../../t-sql/functions/odbc-scalar-functions-transact-sql.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで使用できる ODBC スカラー関数に関する情報を提供します。 これには、ODBC の日付および時刻の関数が含まれます。|  
 |[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|タイム ゾーンの変換を提供します。|  

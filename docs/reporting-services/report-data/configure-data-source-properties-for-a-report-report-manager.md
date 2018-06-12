@@ -1,7 +1,7 @@
 ---
-title: レポートのデータ ソースのプロパティを構成する (レポート マネージャー) | Microsoft Docs
+title: ページ分割されたレポートのデータ ソースのプロパティを構成する - SSRS | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -17,24 +17,23 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 07c218a9117b4c8a8adb9985299ac6d08992dd6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7016de178bce501982e9c5bfa1eff030834c5d03
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550003"
 ---
-# <a name="configure-data-source-properties-for-a-report--report-manager"></a>レポートのデータ ソースのプロパティを構成する (レポート マネージャー)
-  レポートを実行すると、レポート サーバーは、データ ソースへの接続方法を調べるためにプロパティ情報を取得します。 パブリッシュされたレポートの [データ ソース] プロパティ ページには、データ ソースの種類、接続文字列、および資格情報が指定されています。 これらのプロパティを設定することで、データ ソースの接続情報を、レポートの作成時に指定された元の値から変更することができます。  
+# <a name="configure-data-source-properties-for-a-paginated-report"></a>ページ分割されたレポートのデータ ソースのプロパティを構成する
+  ページ分割されたレポートを実行すると、レポート サーバーは、データ ソースへの接続方法を調べるためにプロパティ情報を取得します。 パブリッシュされたレポートの [データ ソース] プロパティ ページには、データ ソースの種類、接続文字列、および資格情報が指定されています。 これらのプロパティを設定することで、データ ソースの接続情報を、レポートの作成時に指定された元の値から変更することができます。  
   
  また、定義済みの共有データ ソースが存在し、そこで使用する接続情報が既に指定されている場合は、代わりにその共有データ ソースを指定することもできます。 共有データ ソースを使用するには、レポートの [データ ソース] プロパティ ページの **[共有データ ソース]** をクリックします。  
   
-### <a name="to-configure-an-embedded-data-source"></a>埋め込みデータ ソースを構成するには  
+## <a name="to-configure-an-embedded-data-source"></a>埋め込みデータ ソースを構成するには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  Web ポータルで、レポート固有のデータ ソースを構成するレポートに移動します。  
   
-2.  レポート マネージャーで **[コンテンツ]** ページに移動します。 レポート固有のデータ ソースを構成するレポートに移動し、そのレポートを開きます。  
-  
-3.  **[プロパティ]** タブをクリックします。**[全般]** プロパティ ページが開きます。  
+3.  右上隅の省略記号 (**[...]**)、**[管理]** の順に選択します。  
   
 4.  **[データ ソース]** タブをクリックします。レポートの [データ ソース] プロパティ ページが開きます。  
   
@@ -63,11 +62,6 @@ ms.lasthandoff: 05/03/2018
  資格情報の構成の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。 自動実行アカウントについては、「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [[コンテンツ] ページ (レポート マネージャー)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [[新しいデータ ソース] ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
- [共有データ ソースを作成、変更、および削除する (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [レポート データ ソースを管理する](../../reporting-services/report-data/manage-report-data-sources.md)   
- [共有データ ソースを作成、削除、または変更する (レポート マネージャー)](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [[データ ソース] プロパティ ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
-  
+[共有データ ソースを作成、変更、および削除する (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+[レポート データ ソースを管理する](../../reporting-services/report-data/manage-report-data-sources.md)
   

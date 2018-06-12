@@ -13,20 +13,20 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: 8900faccfda82e759ee6f31009682eb632df7509
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: a797824724677745d33936ef570abe12f5b15b8d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743971"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 データの検出と分類では、データベース内の機密データの**検出**、**分類**、**ラベル付け** & **レポート作成**を行うための新しいツールが導入されました。このツールは SQL Server Management Studio (SSMS) に組み込まれています。
-最も機密性の高いデータ (ビジネス、財務、医療、PII など) の検出と分類は、組織の情報保護の達成において極めて重要な役割を果たすことができます。 次のような場合にインフラストラクチャとして使用できます。
-* データのプライバシー基準と規制のコンプライアンス要件 (GDPR など) を満たせるようにする。
+最も機密性の高いデータ (ビジネス、財務、医療など) の検出と分類は、組織の情報保護の達成において極めて重要な役割を果たすことができます。 次のような場合にインフラストラクチャとして使用できます。
+* データのプライバシー基準を満たせるようにする。
 * 機密性の高いデータを含むデータベース/列へのアクセスを制御し、セキュリティを強化する。
-
 
 > [!NOTE]
 > データの検出と分類は、**SQL Server 2008 以降でサポート**されます。 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](https://go.microsoft.com/fwlink/?linkid=866265)」を参照してください。
@@ -94,7 +94,57 @@ ms.lasthandoff: 05/03/2018
     ![ナビゲーション ウィンドウ][10]
 
 
-## <a id="subheading-3"></a>次の手順
+## <a id="subheading-3"></a>分類メタデータへのアクセス
+
+*情報の種類*と*秘密度ラベル*の分類メタデータは、次の拡張プロパティに格納されています。 
+* sys_information_type_name
+* sys_sensitivity_label_name
+
+メタデータには、拡張プロパティ カタログ ビュー [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) を使用してアクセスすることができます。
+
+次のコード例では、対応する分類を使用して分類済みのすべての列が返されます。
+
+```sql
+SELECT
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    sensitivity_label 
+FROM
+    (
+        SELECT
+            IT.major_id,
+            IT.minor_id,
+            IT.information_type,
+            L.sensitivity_label 
+        FROM
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS information_type 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_information_type_name'
+        ) IT 
+        FULL OUTER JOIN
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS sensitivity_label 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_sensitivity_label_name'
+        ) L 
+        ON IT.major_id = L.major_id AND IT.minor_id = L.minor_id
+    ) EP
+    JOIN sys.objects O
+    ON  EP.major_id = O.object_id 
+    JOIN sys.columns C 
+    ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
+```
+
+## <a id="subheading-4"></a>次の手順
 
 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](https://go.microsoft.com/fwlink/?linkid=866265)」を参照してください。
 
@@ -106,7 +156,8 @@ Azure SQL Database については、「[Azure SQL Database のデータの検�
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Next Steps]: #subheading-3
+[Accessing the classification metadata]: #subheading-3
+[Next Steps]: #subheading-4
 
 <!--Image references-->
 [1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png

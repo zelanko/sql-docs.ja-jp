@@ -59,11 +59,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 63e1b86c52c6236d4b956f93910e9adb40abef10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b3e9f873046646b3c247cd2930c458da810d203
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582304"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -108,10 +109,10 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
-  
+
+### <a name="syntax-for-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database の構文
+
 ```  
--- Syntax for SQL Server and Azure SQL Database
-  
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column [ ASC | DESC ] [ ,...n ] )   
     [ INCLUDE ( column_name [ ,...n ] ) ]  
@@ -167,14 +168,14 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
 <range> ::=   
 <partition_number_expression> TO <partition_number_expression>  
-  
-Backward Compatible Relational Index
+```
+
+### <a name="backward-compatible-relational-index"></a>下位互換性のあるリレーショナル インデックス
 
 > [!IMPORTANT]
-> The backward compatible relational index syntax structure will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-> Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature. 
-> Use the syntax structure specified in <relational_index_option> instead.  
-  
+> 下位互換性のあるリレーショナル インデックスの構文構造は、今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業ではこの構文構造の使用を避け、現在この構造を使用しているアプリケーションの変更を検討してください。 代わりに <relational_index_option> に指定されている構文構造を使用します。  
+
+```  
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column_name [ ASC | DESC ] [ ,...n ] )   
     [ WITH <backward_compatible_index_option> [ ,...n ] ]  
@@ -196,10 +197,9 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | DROP_EXISTING   
 }  
 ```  
-
+### <a name="syntax-for-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Azure SQL Data Warehouse と Parallel Data Warehouse の構文  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON [ database_name . [ schema ] . | schema . ] table_name   
@@ -1032,4 +1032,3 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
  [sys.xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
  
-

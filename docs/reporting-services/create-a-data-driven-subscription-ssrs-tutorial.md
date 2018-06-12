@@ -21,11 +21,12 @@ caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da6c81701af24b495e84cb26dc3a6581d00ba1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76498c4abdc226194f71648cae49640bdae2dfcc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689220"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
 この [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] チュートリアルでは、データ ドリブン サブスクリプションを作成し、フィルター処理されたレポート出力を生成してファイル共有に保存する簡単な例の手順を示すことで、データ ドリブン サブスクリプションの概念を説明します。 
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 
  次の図は、チュートリアルの基本的なワークフローです。
 
-手順  |Description 
+手順  |[説明] 
 ---------|---------
 (1)     |  サブスクリプションの構成には、ソース レポート、スケジュール、およびサブスクライバー データベースへのフィールド マッピングが記述されています。        
 (2)     | OrderInfo テーブルには、フィルター処理に使用する 4 つの注文番号が含まれています (ファイルごとに 1 つ)。 テーブルには、生成されるレポートのファイル形式も含まれています。

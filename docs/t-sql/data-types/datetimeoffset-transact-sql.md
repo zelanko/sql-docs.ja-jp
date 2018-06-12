@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a86b7102b60c5485afe849f32d32cf8f369f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71483471c764f9af60208be2acd79bc77c89717b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550843"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>datetimeoffset でサポートされる文字列リテラル形式
 次の表は、**datetimeoffset** でサポートされている ISO 8601 文字列リテラル形式を一覧にしたものです。 **datetimeoffset** の日付部分と時刻部分に使用できるアルファベット、数値、区切りなし、時刻の各形式については、「[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)」および「[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)」をご覧ください。
   
-|ISO 8601|Description|  
+|ISO 8601|[説明]|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|この 2 つの形式は、セッションのロケール設定である SET LANGUAGE および SET DATEFORMAT の影響を受けません。 **datetimeoffset** 部分と **datetime** 部分の間にスペースを入れることはできません。|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|ISO 定義に基づくこの形式は、**datetime** 部分を協定世界時 (UTC) で指定する必要があることを示します。 たとえば、1999-12-12 12:30:30.12345 -07:00 は 1999-12-12 19:30:30.12345Z と表す必要があります。|  
@@ -117,7 +118,7 @@ data データ型と time データ型に変換する場合、[!INCLUDE[ssNoVers
 ### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>datetimeoffset データ型の他の日付/時刻データ型への変換
 ここでは、**datetimeoffset** データ型が他の日付/時刻データ型に変換される場合の処理について説明します。
   
-**date** への変換では、年、月、日がコピーされます。 次のコードでは、`datetimeoffset(4)` の値を `date` の値に変換した結果を示します。  
+**date** への変換では、年、月、日がコピーされます。 次のコードは、`datetimeoffset(4)` 値を `date` 値に変換した結果を示しています。  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10 +01:00';  

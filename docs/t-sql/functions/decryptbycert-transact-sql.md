@@ -24,16 +24,17 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 789afb1973a38b877c8fec60b1603d23166acaec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52dae929e6fc9d0b9d6895546a6b174ae7965abf
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779598"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  証明書の秘密キーを使ってデータの暗号化を解除します。  
+この関数は証明書の秘密キーを使用し、暗号化データを復号します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,32 +48,32 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>引数  
  *certificate_ID*  
- データベース内の証明書の ID を指定します。 *certificate*_ID は **int**です。  
+データベース内の証明書の ID。 *certificate_ID* には、**int** データ型が与えられます。  
   
  *ciphertext*  
- 証明書の公開キーで暗号化されているデータの文字列を指定します。  
+証明書の公開キーで暗号化されているデータの文字列。  
   
  @ciphertext  
- 証明書を使用して暗号化されているデータを含む **varbinary** 型の変数を指定します。  
+証明書で暗号化されたデータを含む、型 **varbinary** の変数。  
   
  *cert_password*  
- 証明書の秘密キーの暗号化に使用されたパスワードを指定します。 Unicode であることが必要です。  
+証明書の秘密キーの復号に使用されるパスワード。 *cert_password* のデータ形式は Unicode にする必要があります。  
   
  @cert_password  
- 証明書のプライベート キーを暗号化するために指定されたパスワードを含む **nchar** または **nvarchar** を指定します。 Unicode であることが必要です。  
-  
+証明書の秘密キーの復号に使用されるパスワードを含む、型 **nchar** または **nvarchar** の変数。 *@cert_password* のデータ形式は Unicode にする必要があります。  
+
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+最大サイズが 8,000 バイトの **varbinary**。  
   
 ## <a name="remarks"></a>Remarks  
- この関数では、証明書の秘密キーを使ってデータの暗号化を解除します。 非対称キーを使用する暗号化変換では、リソースが大幅に消費されます。 このため、ユーザー データを日常的に暗号化する場合、EncryptByCert および DecryptByCert は適切ではありません。  
-  
+この関数では、証明書の秘密キーを使ってデータの暗号化を解除します。 非対称キーを使用する暗号化変換では、リソースが大幅に消費されます。 そのため、日常的なユーザー データの暗号化/復号については、[ENCRYPTBYCERT](./encryptbycert-transact-sql.md) と DECRYPTBYCERT の使用を避けるように開発者に提案しています。  
+
 ## <a name="permissions"></a>アクセス許可  
- 証明書に対する CONTROL 権限が必要です。  
+`DECRYPTBYCERT` には、証明書に対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`[AdventureWorks2012].[ProtectedData04]` とマークされた `data encrypted by certificate JanainaCert02` から行を選択し、 証明書 `JanainaCert02` の秘密キーを使って暗号化を解除します。最初に証明書のパスワード `pGFD4bb925DGvbd2439587y` を使って証明書の暗号化を解除する必要があります。 復号化されたデータを変換 **varbinary** に **nvarchar**です。  
-  
+この例では、証明書 `JanainaCert02` によって最初に暗号化されたデータとしてマークされている、`[AdventureWorks2012].[ProtectedData04]` からの行が選択されます。 最初に、証明書 `pGFD4bb925DGvbd2439587y` のパスワードで証明書 `JanainaCert02` の秘密キーが復号されます。 次に、この秘密キーで暗号化テキストが復号されます。 暗号化データが **varbinary** から **nvarchar** に変換されます。  
+
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  
     ProtectedData, N'pGFD4bb925DGvbd2439587y'))  

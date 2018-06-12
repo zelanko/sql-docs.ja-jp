@@ -29,11 +29,12 @@ caps.latest.revision: 196
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a1a0f9120b777bde70a698a25602403690aab83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1642275d5d5429160d05c958cea1f8f65dd56846
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585824"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,70 +51,76 @@ ms.lasthandoff: 05/03/2018
 ```SQL  
   
 CREATE AVAILABILITY GROUP group_name  
-   WITH (<with_option_spec> [ ,...n ] )  
-   FOR [ DATABASE database_name [ ,...n ] ]  
-   REPLICA ON <add_replica_spec> [ ,...n ]  
-   AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
-   [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
+  { <availability_group_spec> | <distributed_availability_group_spec> }  
 [ ; ]  
-  
-<with_option_spec>::=   
-    AUTOMATED_BACKUP_PREFERENCE = { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
-  | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
-  | HEALTH_CHECK_TIMEOUT = milliseconds  
-  | DB_FAILOVER  = { ON | OFF }   
-  | DTC_SUPPORT  = { PER_DB | NONE }  
-  | BASIC  
-  | DISTRIBUTED
-  | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
-  | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
-  
-<add_replica_spec>::=  
-  <server_instance> WITH  
+
+<availability_group_spec>::=  
+  [ WITH (<with_option_spec> [ ,...n ] ) ]  
+  FOR [ DATABASE database_name [ ,...n ] ]  
+  REPLICA ON <add_replica_spec> [ ,...n ]  
+  [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
+
+  <with_option_spec>::=   
+      AUTOMATED_BACKUP_PREFERENCE = { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+    | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
+    | HEALTH_CHECK_TIMEOUT = milliseconds  
+    | DB_FAILOVER  = { ON | OFF }   
+    | DTC_SUPPORT  = { PER_DB | NONE }  
+    | BASIC  
+    | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
+    | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
+    
+  <add_replica_spec>::=  
+    <server_instance> WITH  
+      (  
+        ENDPOINT_URL = 'TCP://system-address:port',  
+        AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
+        FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
+        [ , <add_replica_option> [ ,...n ] ]  
+      )   
+    
+    <add_replica_option>::=  
+        SEEDING_MODE = { AUTOMATIC | MANUAL }  
+      | BACKUP_PRIORITY = n  
+      | SECONDARY_ROLE ( {   
+              [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
+          [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
+      } )  
+      | PRIMARY_ROLE ( {   
+              [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
+          [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
+      } )  
+      | SESSION_TIMEOUT = integer  
+
+  <listener_option> ::=  
+    {  
+        WITH DHCP [ ON ( <network_subnet_option> ) ]  
+      | WITH IP ( { ( <ip_address_option> ) } [ , ...n ] ) [ , PORT = listener_port ]  
+    }  
+    
+    <network_subnet_option> ::=  
+      ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+    
+    <ip_address_option> ::=  
+      {   
+          ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
+        | ‘ipv6_address’  
+      }  
+
+<distributed_availability_group_spec>::=  
+  WITH (DISTRIBUTED)  
+  AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
+
+  <add_availability_group_spec>::=  
+  <ag_name> WITH  
     (  
-       ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
-       FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
-       [ , <add_replica_option> [ ,...n ] ]  
-    )   
-  
-  <add_replica_option>::=  
-       SEEDING_MODE = { AUTOMATIC | MANUAL }  
-     | BACKUP_PRIORITY = n  
-     | SECONDARY_ROLE ( {   
-            [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
-     } )  
-     | PRIMARY_ROLE ( {   
-            [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-     } )  
-     | SESSION_TIMEOUT = integer  
-  
-<add_availability_group_spec>::=  
- <ag_name> WITH  
-    (  
-       LISTENER_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
-       FAILOVER_MODE = MANUAL,  
-       SEEDING_MODE = { AUTOMATIC | MANUAL }  
+      LISTENER_URL = 'TCP://system-address:port',  
+      AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
+      FAILOVER_MODE = MANUAL,  
+      SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
   
-<listener_option> ::=  
-   {  
-      WITH DHCP [ ON ( <network_subnet_option> ) ]  
-    | WITH IP ( { ( <ip_address_option> ) } [ , ...n ] ) [ , PORT = listener_port ]  
-   }  
-  
-  <network_subnet_option> ::=  
-     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
-  
-  <ip_address_option> ::=  
-     {   
-        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-      | ‘ipv6_address’  
-     }  
-  
+
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -184,7 +191,7 @@ CREATE AVAILABILITY GROUP group_name
  基本的な可用性グループを作成するために使用します。 基本的な可用性グループは、1 つのデータベースと 2 つのレプリカ (プライマリ レプリカとセカンダリ レプリカ) に制限されます。 このオプションは、SQL Server Standard Edition の非推奨のデータベース ミラーリング機能に代わるものです。 詳細については、「[基本的な可用性グループ &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。 基本的な可用性グループは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降でサポートされています。  
 
  DISTRIBUTED  
- 分散型可用性グループを作成するために使用します。 このオプションは、個別の Windows Server フェールオーバー クラスター内の 2 つの可用性グループを接続するために AVAILABILITY GROUP ON パラメーターと共に使用されます。  詳細については、「[Distributed Availability Groups &#40;Always On Availability Groups&#41; (分散型可用性グループ (Always On 可用性グループ))](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)」を参照してください。 分散型可用性グループは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降でサポートされています。 
+ 分散型可用性グループを作成するために使用します。 DISTRIBUTED オプションは、他のいかなるオプションや句とも組み合わせることができません。 このオプションは、個別の Windows Server フェールオーバー クラスター内の 2 つの可用性グループを接続するために AVAILABILITY GROUP ON パラメーターと共に使用されます。  詳細については、「[Distributed Availability Groups &#40;Always On Availability Groups&#41; (分散型可用性グループ (Always On 可用性グループ))](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)」を参照してください。 分散型可用性グループは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降でサポートされています。 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  SQL Server 2017 で導入されました。 コミットに必要な同期セカンダリ レプリカの最小数を設定するために使用します。この数を超えると、プライマリがトランザクションをコミットします。 セカンダリ レプリカの最小数についてトランザクション ログが更新されるまで、SQL Server トランザクションが確実に待機するようになります。 既定値は 0 であり、SQL Server 2016 と同じように動作します。 最小値は 0 です。 最大値はレプリカの数から 1 を引いた値になります。 このオプションは、同期コミット モードのレプリカに関連しています。 レプリカが同期コミット モードのとき、セカンダリ同期レプリカに対する書き込みがレプリカ データベース トランザクション ログにコミットされるまで、プライマリ レプリカへの書き込みは待機します。 セカンダリ同期レプリカをホストする SQL Server が応答を停止した場合、プライマリ レプリカをホストする SQL Server はそのセカンダリ レプリカを同期未実行としてマークし、続行します。 応答のないデータベースがオンラインに復帰すると、"未同期" 状態になります。プライマリが再度同期可能になるまで、レプリカに異常のマークが付きます。 この設定により、レプリカの最小数で各トランザクションがコミットされるまで、プライマリ レプリカは確実に待機するようになります。 レプリカの最小数が使用できない場合、プライマリのコミットは失敗します。 クラスター タイプ `EXTERNAL` の場合、可用性グループがクラスター リソースに追加されると、設定が変更されます。 「[可用性グループの構成の高可用性とデータの保護](../../linux/sql-server-linux-availability-group-ha.md)」を参照してください。
@@ -368,7 +375,7 @@ CREATE AVAILABILITY GROUP group_name
  セッション タイムアウト期間の詳細については、「[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
   
  AVAILABILITY GROUP ON  
- *分散型可用性グループ* を構成する 2 つの可用性グループを指定します。 各可用性グループは、独自の Windows Server フェールオーバー クラスター (WSFC) の一部です。 分散型可用性グループを作成すると、現在の SQL Server インスタンスの可用性グループがプライマリ可用性グループになります。 2 つ目の可用性グループはセカンダリ可用性グループになります。  
+ *分散型可用性グループ* を構成する 2 つの可用性グループを指定します。 各可用性グループは、独自の Windows Server フェールオーバー クラスター (WSFC) の一部です。 分散型可用性グループを作成すると、現在の SQL Server インスタンスの可用性グループがプライマリ可用性グループになり、リモート可用性グループがセカンダリ可用性グループになります。  
   
  セカンダリ可用性グループを分散型可用性グループに参加させる必要があります。 詳細については、「 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)、または PowerShell を使用して、既存の AlwaysOn 可用性グループにセカンダリ レプリカを追加する方法について説明します。  
   
@@ -486,7 +493,7 @@ CREATE AVAILABILITY GROUP group_name
 ### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>A. セカンダリ レプリカ上のバックアップ、柔軟なフェールオーバー ポリシー、および接続アクセスを構成する  
  次の例では、2 つのユーザー データベース (`ThisDatabase` および `ThatDatabase`) に対して、`MyAg` という名前の可用性グループを作成します。 次の表は、可用性グループ全体を対象に設定されるオプションの指定値をまとめたものです。  
   
-|グループ オプション|設定|Description|  
+|グループ オプション|設定|[説明]|  
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|バックアップをセカンダリ レプリカで実行することを指定します (プライマリ レプリカ以外にオンラインのレプリカがない場合は除く)。これが既定の動作です。 AUTOMATED_BACKUP_PREFERENCE 設定が作用するためには、その設定を考慮して動作するバックアップ ジョブ スクリプトを可用性データベースに作成する必要があります。|  
 |FAILURE_CONDITION_LEVEL|3|孤立したスピンロック、深刻な書き込みアクセス違反、ダンプが多すぎるなど、SQL Server 内部の深刻なエラーが発生した場合に自動フェールオーバーを開始する必要があることを指定します。|  
@@ -494,7 +501,7 @@ CREATE AVAILABILITY GROUP group_name
   
  3 つの可用性レプリカは、`COMPUTER01`、`COMPUTER02`、および `COMPUTER03` という名前のコンピューター上の既定のサーバー インスタンスによってホストされます。 次の表は、レプリカ オプションの指定値をレプリカごとにまとめたものです。  
   
-|レプリカ オプション|`COMPUTER01` 上の設定|`COMPUTER02` 上の設定|`COMPUTER03` 上の設定|Description|  
+|レプリカ オプション|`COMPUTER01` 上の設定|`COMPUTER02` 上の設定|`COMPUTER03` 上の設定|[説明]|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
 |ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|この例では、いずれのシステムも同じドメインに存在するため、エンドポイントの URL には、コンピューター システムの名前をシステム アドレスとして使用できます。|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|2 つのレプリカが同期コミット モードを使用できます。 同期されているレプリカは、データ損失のないフェールオーバーをサポートします。 3 番目のレプリカには、非同期コミットの可用性モードが使用されます。|  

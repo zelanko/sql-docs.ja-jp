@@ -1,7 +1,7 @@
 ---
 title: ドリルダウン アクション (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -45,14 +45,15 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: db793e5608aca874a98f6125136429244eb5ffff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1250e47366e8beab3cdee5f07e6d17e76827a597
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550713"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>ドリルダウン アクション (レポート ビルダーおよび SSRS)
-  テキスト ボックスに正符号と負符号のアイコンを組み込むことによって、アイテムの表示/非表示をユーザーが対話的に切り替えられるように設定できます。 これを *ドリルダウン* アクションと呼びます。 テーブルまたはマトリックスの場合、静的な行や列、またはグループに関連付けられている行や列の表示と非表示を切り替えることができます。  
+テキスト ボックスに正符号と負符号のアイコンを組み込むことによって、アイテムの表示/非表示をユーザーが対話的に切り替えられるように設定できます。 これを *ドリルダウン* アクションと呼びます。 テーブルまたはマトリックスの場合、静的な行や列、またはグループに関連付けられている行や列の表示と非表示を切り替えることができます。  
   
  ![rs_drilldown](../../reporting-services/report-design/media/rs-drilldown.gif "rs_drilldown")  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/03/2018
  ドリルダウン レポートでは、ユーザーが正符号または負符号のボタンをクリックすると、レポートのセクションが展開または折りたたまれ、詳細データがその場所に表示されます。 詳細レポートでは、ユーザーが集計値のリンクをクリックすると、別の関連レポートが開き、詳細データが表示されます。 詳細データは、詳細レポートの実行時にのみ取得されます。 通常詳細レポートには、ドリルダウン レポートほどリソースが必要ありません。 詳細については、「 [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)」を参照してください。  
   
 ## <a name="rendering-extension-support-for-hidden-report-items"></a>非表示レポート アイテムに対する表示拡張機能のサポート  
- レポート アイテムの表示と非表示の切り替えは、レポート ビルダーやレポート マネージャーでレポートを実行するときに使用する HTML 表示拡張機能など、ユーザー対話機能をサポートする表示拡張機能でのみサポートされます。 一部の表示拡張機能では非表示アイテムが表示されます。 条件に応じて表示/非表示を切り替えるレポート アイテムのサポートは、次のようになります。  
+ レポート アイテムの表示と非表示の切り替えは、レポート ビルダーや Web ポータルでレポートを実行するときに使用する HTML 表示拡張機能など、ユーザー対話機能をサポートする表示拡張機能でのみサポートされます。 一部の表示拡張機能では非表示アイテムが表示されます。 条件に応じて表示/非表示を切り替えるレポート アイテムのサポートは、次のようになります。  
   
 -   HTML では、非表示に設定されている場合、アイテムは HTML ソース内に表示されません。  
   

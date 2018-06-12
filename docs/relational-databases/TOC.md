@@ -14,6 +14,7 @@
 ## [スレッドおよびタスクのアーキテクチャ](thread-and-task-architecture-guide.md)
 ## [トランザクション ログのアーキテクチャと管理ガイド](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [トランザクションのロックおよび行のバージョン管理ガイド](sql-server-transaction-locking-and-row-versioning-guide.md)
+## [ゴースト レコードのクリーンアップ プロセス](ghost-record-cleanup-process-guide.md)
 
 # [バックアップと復元](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [BLOB](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)

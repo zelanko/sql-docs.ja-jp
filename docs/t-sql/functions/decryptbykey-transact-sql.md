@@ -25,16 +25,17 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 57a2175b3c4096ab9af7203d7f7d3733947f8e78
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f9e1e678fba7a2b2d24a85f4d57f1112b3d4cb8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779478"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  対称キーを使用してデータを暗号化解除します。  
+この関数は対称キーを使用してデータを復号します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,38 +48,36 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>引数  
- *ciphertext*  
- キーで暗号化されたデータを指定します。 *暗号化テキスト* は **varbinary**です。  
+*ciphertext*  
+キーで暗号化されたデータを含む、型 **varbinary** の変数。  
   
- **@ciphertext**  
- キーを使用して暗号化されているデータを含む **varbinary** 型の変数を指定します。  
+**@ciphertext**  
+キーで暗号化されたデータを含む、型 **varbinary** の変数。  
   
  *add_authenticator*  
- 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 この値は、データの暗号化時に EncryptByKey に渡された値と同じである必要があります。 *add_authenticator* は **int**です。  
+元の暗号化プロセスにプレーンテキストと共に認証子が含まれ、認証子が暗号化されたかどうかを示します。 データ暗号化プロセス中、[ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に渡された値に一致する必要があります。 *add_authenticator* には、**int** データ型が与えられます。  
   
  *authenticator*  
- 認証子を生成する基のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 *認証システム* は **sysname**です。  
-  
- **@authenticator**  
- 認証子の生成元のデータを含む変数を指定します。 EncryptByKey に渡された値と一致する必要があります。  
-  
+認証子の生成の基礎として使用されるデータ。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *authenticator* には、**sysname** データ型が与えられます。  
+
+**@authenticator**  
+認証子の生成元となるデータを含む変数。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *@authenticator* には、**sysname** データ型が与えられます。  
+
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。
- 
-データの暗号化に使用する対称キーが開いていない場合または、*ciphertext* が NULL の場合、NULL を返します。
+最大サイズが 8,000 バイトの **varbinary**。 `DECRYPTBYKEY` は、データの暗号化に使用する対称キーが開いていない場合か、*ciphertext* が NULL の場合、NULL を返します。  
   
 ## <a name="remarks"></a>Remarks  
- DecryptByKey では対称キーが使用されます。 この対称キーはデータベースで開かれている必要があります。 複数のキーを同時に開いておくことができます。 暗号化テキストの暗号化解除をする直前にキーを開く必要はありません。  
+`DECRYPTBYKEY` は対称キーを使用します。 データベースでは、この対称キーを既に開いている必要があります。 `DECRYPTBYKEY` では、複数のキーを同時に開いておくことができます。 暗号化テキストの復号する直前にキーを開く必要はありません。  
   
- 対称キーの暗号化と暗号化解除は比較的高速なので、データが大きい場合に適しています。  
+対称暗号化/復号は通常、比較的すぐに動作します。大量のデータが含まれる操作で効率的に動作します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 対称キーが現在のセッションで開かれている必要があります。 詳細については、を参照してください。 [OPEN SYMMETRIC KEY および #40 です。TRANSACT-SQL と #41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+対称キーは現在のセッションで開かれている必要があります。 詳細については、「[OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-decrypting-by-using-a-symmetric-key"></a>A. 対称キーを使用して暗号化解除する  
- 次の例では、対称キーを使用して暗号化テキストを暗号化解除します。  
+この例では、対称キーで暗号化テキストを復号します。  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data.  
@@ -98,7 +97,7 @@ GO
 ```  
   
 ### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>B. 対称キーと認証ハッシュを使用して暗号化解除する  
- 次の例では、認証子と共に暗号化されたデータを暗号化解除します。  
+この例では、認証子と共に、最初に暗号化されたデータを復号します。  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data  

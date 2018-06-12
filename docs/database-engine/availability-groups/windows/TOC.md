@@ -61,6 +61,7 @@
 ### [レプリカでバックアップを構成する](configure-backup-on-availability-replicas-sql-server.md)  
 ### [分散型可用性グループを構成する](configure-distributed-availability-groups.md)
 ### [分散トランザクション用に構成する](configure-availability-group-for-distributed-transactions.md)
+### [読み取りスケール可用性グループを構成する](configure-read-scale-availability-groups.md)
 ### [読み取り専用アクセスのレプリカを構成する](configure-read-only-access-on-an-availability-replica-sql-server.md)  
 ### [読み取り専用ルーティングを構成する](configure-read-only-routing-for-an-availability-group-sql-server.md)  
 ### [リスナーを削除する](remove-an-availability-group-listener-sql-server.md)  
@@ -81,7 +82,7 @@
 ### [可用性グループのプロパティを表示する](view-availability-group-properties-sql-server.md)  
 ### [レプリカのプロパティを表示する](view-availability-replica-properties-sql-server.md)  
 ### [リスナーのプロパティを表示する](view-availability-group-listener-properties-sql-server.md)  
-## 操作
+## 演算
 ### データベースを追加する
 #### [ダイアログ](availability-group-add-a-database.md)  
 #### [ウィザード](availability-group-add-database-to-group-wizard.md)  

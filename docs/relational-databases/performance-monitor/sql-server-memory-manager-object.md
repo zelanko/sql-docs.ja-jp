@@ -19,11 +19,12 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89b69f14e131453519bbaae77f16d629444eb169
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcd7a5a51aa9f7a3e4e2dfc84dd76e05a950e897
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473906"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server: Memory Manager オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +37,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="memory-manager-counters"></a>Memory Manager カウンター  
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** カウンターについて説明します。  
   
-|SQL Server Memory Manager カウンター|Description|  
+|SQL Server Memory Manager カウンター|[説明]|  
 |----------------------------------------|-----------------|  
 |**Connection Memory (KB)**|接続を維持するためにサーバーが使用している動的メモリの合計サイズを指定します。|  
 |**Database Cache Memory (KB)**|サーバーがデータベース ページ キャッシュに現在使用しているメモリの量を指定します。|  
-|**メモリの外部の利点**|メモリの外部の値 (ミリ秒/ページ/ミリ秒単位の値に 100 億を掛けて小数点以下を切り捨てたもの)。| 
+|**メモリの外部の利点**| 特定のキャッシュにメモリを追加することで得られるパフォーマンス上の利点の内部推定値です。 この値は、キャッシュ間のメモリ使用量を均衡化するためにエンジンによって使用されます。また、予期しないキャッシュの増大が発生したケースをトラブルシューティングする際のサポートにも有用です。 値は内部計算に基づき整数として表示されます。 | 
 |**Free Memory (KB)**|サーバーによって使用されていないコミット済みのメモリの量を指定します。|  
 |**Granted Workspace Memory (KB)**|ハッシュ、並べ替え、一括コピー、インデックス作成などの操作を実行しているプロセスに現在割り当てられているメモリの合計サイズを指定します。|  
 |**Lock Blocks**|サーバーで使用中のロック ブロックの現在数 (定期的に更新されます) を指定します。 ロック ブロックは、テーブル、ページ、行など、ロックされている個々のリソースを表します。|  

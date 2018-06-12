@@ -39,11 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1f9df0c2da8892d380635f8949f10625baf9fda3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fdc629623e8de28a0aaf18d384ba2e9db3a63269
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585954"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -367,7 +368,7 @@ ON (p.ProductID = v.ProductID);
  *table_alias*  
  出力テーブルの別名です。 *pivot_table_alias* を指定する必要があります。  
   
- UNPIVOT \< unpivot_clause >  
+ UNPIVOT \<unpivot_clause>  
  入力テーブルが *column_list* 内の複数の列から *pivot_column* と呼ばれる単一の列に絞り込まれることを指定します。 PIVOT および UNPIVOT の詳細については、「[PIVOT および UNPIVOT の使用](../../t-sql/queries/from-using-pivot-and-unpivot.md)」を参照してください。  
   
  AS OF \<date_time>  

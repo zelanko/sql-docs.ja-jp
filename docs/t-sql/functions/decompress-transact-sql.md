@@ -20,16 +20,17 @@ caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 2d2b965d3177be06b46bb51b8f5238f5a4b21dee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b6412856e373c3b1ad5ac838f9b15486d451a2b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779198"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  GZIP アルゴリズムを使用して、入力式の圧縮を解除します。 圧縮の結果は、バイト配列 (VARBINARY(MAX) 型) です。  
+この関数は GZIP アルゴリズムを使用して、入力式の値の圧縮を解除します。 `DECOMPRESS` はバイト配列 (VARBINARY(MAX) 型) を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +42,17 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- **varbinary(***n***)**、**varbinary(max)**、または **binary(***n***)** を指定します。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
+**varbinary(***n***)**、**varbinary(max)**、**binary(***n***)** 値。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary (max)** データ型を返します。 入力引数は、ZIP アルゴリズムを使用して圧縮が解除されます。 ユーザーは、必要な場合は、結果をターゲットの型に明示的にキャストする必要があります。  
+データ型 **varbinary(max)** の値。 `DECOMPRESS` は ZIP アルゴリズムを使用し、入力引数の圧縮を解除します。 ユーザーは、必要な場合、結果をターゲットの型に明示的にキャストする必要があります。  
   
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-decompress-data-at-query-time"></a>A. クエリ時にデータの圧縮を解除する  
- 次の例では、テーブルから圧縮されたデータを表示する方法を示します。  
+この例では、圧縮されたテーブル データを返す方法を示します。  
   
 ```  
 SELECT _id, name, surname, datemodified,  
@@ -60,10 +61,10 @@ FROM player;
 ```  
   
 ### <a name="b-display-compressed-data-using-computed-column"></a>B. 計算列を使用して圧縮されたデータを表示する  
- 次の例では、圧縮解除されたデータを格納するテーブルの作成方法を示しています。  
+この例では、圧縮解除されたデータを格納するテーブルの作成方法を示しています。  
   
 ```  
-CREATE TABLE (  
+CREATE TABLE example_table (  
     _id int primary key identity,  
     name nvarchar(max),  
     surname nvarchar(max),  

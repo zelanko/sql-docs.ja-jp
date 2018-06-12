@@ -1,7 +1,7 @@
 ---
 title: ネイティブ モード レポート サーバーのスケールアウト配置の構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: install-windows
@@ -19,17 +19,22 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5c832e283da1b853cf135e7f6d9dba8af042effb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a03b53bdb5a53574524a3cabce0adedbe23bac2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550573"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>ネイティブ モード レポート サーバーのスケールアウト配置の構成
 
-  Reporting Services ネイティブ モードでは、1 つのレポート サーバー データベースを共有する複数のレポート サーバー インスタンスを実行できる、スケールアウト配置モデルがサポートされています。 スケールアウト配置は、レポート サーバーのスケーラビリティを高めて、処理できる同時ユーザー数を増やしたり、より負荷の高いレポート実行に対応できるようにするために使用されます。 また、特定のサーバーを、対話型レポートまたはスケジュールされたレポートの処理専用にする場合にも使用できます。  
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+Reporting Services ネイティブ モードでは、1 つのレポート サーバー データベースを共有する複数のレポート サーバー インスタンスを実行できる、スケールアウト配置モデルがサポートされています。 スケールアウト配置は、レポート サーバーのスケーラビリティを高めて、処理できる同時ユーザー数を増やしたり、より負荷の高いレポート実行に対応できるようにするために使用されます。 また、特定のサーバーを、対話型レポートまたはスケジュールされたレポートの処理専用にする場合にも使用できます。
+
+Power BI Report Server の場合、任意のスケール アウト環境向けのロード バランサー上でクライアント アフィニティ (スティッキー セッションと呼ばれることもある) を構成することで、適切なパフォーマンスを保証する必要があります。  
   
- SharePoint モードのレポート サーバーは、SharePoint 製品のインフラストラクチャを利用してスケールアウトを行います。SharePoint モードのスケールアウトは、SharePoint モードのレポート サーバーを SharePoint ファームに追加することによって実行されます。 SharePoint モードでのスケールアウトについては、 「[ファームへのレポート サーバーの追加 &#40;SSRS スケールアウト&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)」を参照してください。  
+SQL Server 2016 Reporting Services の場合、SharePoint モードのレポート サーバーは、SharePoint 製品のインフラストラクチャを利用してスケールアウトを行います。SharePoint モードのスケールアウトは、SharePoint モードのレポート サーバーを SharePoint ファームに追加することによって実行されます。 SharePoint モードでのスケールアウトについては、 「[ファームへのレポート サーバーの追加 &#40;SSRS スケールアウト&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)」を参照してください。  
  
   *スケールアウト配置* は次のシナリオで使用します。  
   

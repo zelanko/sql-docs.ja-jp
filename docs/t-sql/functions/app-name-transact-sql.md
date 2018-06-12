@@ -26,19 +26,20 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 9d9652c25875fb1edb5d09e4e283fd7393b523a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7bace7aa0f07dd42230c7d626aa9b34adb5dfb1
+ms.sourcegitcommit: 6fe7b5e8818bd0d94fce693c560d63cc6883d76f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34758092"
 ---
 # <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-現在のセッションのアプリケーション名の値が設定されている場合、その名前を返す関数。
+この関数は、現在のセッションのアプリケーション名の値が設定されている場合、その名前を返します。
   
 > [!IMPORTANT]  
->  クライアントからアプリケーション名が提供されますが、アプリケーション名の値はまったく検証されません。 使用しない **APP_NAME** セキュリティ チェックの一部として。  
+>  クライアントからアプリケーション名が提供されますが、`APP_NAME` では、アプリケーション名の値はまったく検証されません。 `APP_NAME` をセキュリティ チェックの一部として使用しないでください。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,12 +54,12 @@ APP_NAME  ( )
 **nvarchar(128)**
   
 ## <a name="remarks"></a>Remarks  
-**APP_NAME** は、アプリケーションごとに異なるアクションを実行する手段として、異なるアプリケーションを区別するために使用します。 たとえば、アプリケーションごとに異なる日付形式を使用するために、**APP_NAME** で異なるアプリケーションを区別することができます。 また、特定のアプリケーションに対して情報メッセージを返すこともできます。
+`APP_NAME` は、アプリケーションごとに異なるアクションを実行する手段として、異なるアプリケーションを区別するために使用します。 たとえば、アプリケーションごとに異なる日付形式を使用するために、`APP_NAME` で異なるアプリケーションを区別することができます。 また、特定のアプリケーションに対して情報メッセージを返すこともできます。
   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でアプリケーション名を設定する場合、**[データベース エンジンへの接続]** ダイアログ ボックスで **[オプション]** をクリックします。 **[追加の接続パラメーター]** タブ上で、**app** 属性を `;app='application_name'` 形式で指定します。
   
 ## <a name="example"></a>例  
-この例では、このプロセスを開始したクライアント アプリケーションが `SQL Server Management Studio` セッションかどうかを確認し、日付を US または ANSI のいずれかの形式で指定します。
+この例では、このプロセスを開始したクライアント アプリケーションが `SQL Server Management Studio` セッションかどうかを確認します。 その後、US または ANSI 形式で日付の値を指定します。
   
 ```sql
 USE AdventureWorks2012;  

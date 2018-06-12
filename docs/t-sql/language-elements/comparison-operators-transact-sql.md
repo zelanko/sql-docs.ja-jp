@@ -25,11 +25,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e0e5538d69caf96e7eb8864de177d14e99ce642
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46cf351f2a85523737988b93a57fce51924c4ae7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563700"
 ---
 # <a name="comparison-operators-transact-sql"></a>比較演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
  **ブール** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のデータ型と異なり、テーブルの列や変数のデータ型として指定することはできず、結果セットで返すこともできません。  
   
- SET ANSI_NULLS が ON の場合、1 つまたは 2 つの NULL 式が含まれる演算子では UNKNOWN が返されます。 SET ANSI_NULLS が OFF の場合も同じ規則が適用されますが、両方の式が NULL の場合は、等号 (=) 演算子で TRUE が返されます。 たとえば、NULL = NULL は、SET ANSI_NULLS が OFF の場合 TRUE を返します。  
+ SET ANSI_NULLS が ON の場合、1 つまたは 2 つの NULL 式が含まれる演算子では UNKNOWN が返されます。 SET ANSI_NULLS が OFF の場合、等号 (=) 演算子と不等号 (<>) 演算子を除き、同じ規則が適用されます。 SET ANSI_NULLS が OFF の場合、これらの演算子では、他の NULL と同等の、既知の値として NULL を処理し、TRUE または FALSE のみを返します (UNKNOWN を返すことはありません)。  
   
  **ブール** データ型の式は、検索条件を満たす行をフィルター選択するための WHERE 句、または IF や WHILE などのフロー制御言語ステートメントで使用します。たとえば次のようになります。  
   

@@ -22,16 +22,17 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: f7378e62b4cf30697ca69868602dc7483649abcd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05ab6a324d1193c301539780b55bdbd5494c3524
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779548"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  非対称キーで自動的に暗号化解除される対称キーを使用して、暗号化を解除します。  
+この関数によって、暗号化データが復号されます。 これを行うために、最初に別個の非対称キーで対称キーが復号され、次に最初の "手順" で抽出された対称キーで暗号化データが復号されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,40 +48,40 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
   
 ## <a name="arguments"></a>引数  
  *akey_ID*  
- 対称キーの保護に使用されている非対称キーの ID を指定します。 *akey_ID* は **int**です。  
+対称キーの暗号化に使用されている非対称キーの ID。 *akey_ID* には、**int** データ型が与えられます。  
   
  *akey_password*  
- 非対称キーの秘密キーを保護するパスワードを指定します。 秘密キーがデータベースのマスター キーで保護されている場合は NULL を指定できます。 *akey_password* は **nvarchar**です。  
+非対称キーを保護するパスワード。 *akey_password* には、データベース マスター キーによって非対称プライベート キーが保護される場合、NULL 値を設定できます。 *akey_password* には、**nvarchar** データ型が与えられます。  
   
  '*ciphertext*'  
- キーで暗号化されたデータです。 *暗号化テキスト* は **varbinary**です。  
+キーによって暗号化されたデータ。 *ciphertext* には、**varbinary** データ型が与えられます。  
   
  @ciphertext  
- キーを使用して暗号化されたデータを含む **varbinary** 型の変数を指定します。  
+対称キーで暗号化されたデータを含む、型 **varbinary** の変数。  
   
  *add_authenticator*  
- 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 データを暗号化する際に EncryptByKey に渡された値と同じである必要があります。 認証子が使用されている場合は 1 です。 *add_authenticator* は **int**です。  
+元の暗号化プロセスにプレーンテキストと共に認証子が含まれ、認証子が暗号化されたかどうかを示します。 データ暗号化プロセス中、[ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に渡された値に一致する必要があります。 *add_authenticator* には、暗号化プロセスで認証子が使用された場合、値 1 が与えられます。 *add_authenticator* には、**int** データ型が与えられます。  
   
  @add_authenticator  
- 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 データを暗号化する際に EncryptByKey に渡された値と同じである必要があります。  
+元の暗号化プロセスにプレーンテキストと共に認証子が含まれ、認証子が暗号化されたかどうかを示す変数。 データ暗号化プロセス中、[ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に渡された値に一致する必要があります。 *@add_authenticator* には、**int** データ型が与えられます。
   
  *authenticator*  
- 認証子の生成元のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 *認証システム* は **sysname**です。  
+認証子の生成の基礎として使用されるデータ。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *authenticator* には、**sysname** データ型が与えられます。  
   
  @authenticator  
- 認証子の生成元のデータを含む変数を指定します。 EncryptByKey に渡された値と一致する必要があります。  
+認証子の生成元となるデータを含む変数。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *@authenticator* には、**sysname** データ型が与えられます。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+最大サイズが 8,000 バイトの **varbinary**。  
   
 ## <a name="remarks"></a>Remarks  
- DecryptByKeyAutoAsymKey は、OPEN SYMMETRIC KEY および DecryptByKey の機能を組み合わせたもので、 対称キーの暗号化解除と、そのキーを使用した暗号化テキストの暗号化解除を 1 回の操作で行います。  
+`DECRYPTBYKEYAUTOASYMKEY` は、OPEN SYMMETRIC KEY と DecryptByKey の機能を組み合わせたもので、 対称キーの復号と、そのキーを使用した暗号化テキストの復号を 1 回の操作で行います。  
   
 ## <a name="permissions"></a>アクセス許可  
- 対称キーに対する VIEW DEFINITION 権限と、非対称キーに対する CONTROL 権限が必要です。  
+対称キーに対する `VIEW DEFINITION` 権限と、非対称キーに対する `CONTROL` 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`DecryptByKeyAutoAsymKey` を使用して暗号化解除の実行コードを簡素化する方法を示します。 このコードは、データベース マスター キーが存在しない [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで実行する必要があります。  
+この例では、`DECRYPTBYKEYAUTOASYMKEY` を使用し、復号コードを簡略化しています。 このコードは、データベース マスター キーが存在しない [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで実行する必要があります。  
   
 ```  
 --Create the keys and certificate.  

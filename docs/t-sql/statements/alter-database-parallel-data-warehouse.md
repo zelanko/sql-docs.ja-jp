@@ -16,16 +16,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d199b9822d591c10f1f4d9af232b9f74d7e8a81
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: b17fcc15be4c8faf496c469bb1e46fe2c6d42012
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550493"
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (並列データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の複製テーブル、分散テーブル、トランザクション ログの最大データベース サイズ オプションを変更します。 このステートメントを使用すると、サイズの増加または減少に合わせてデータベースのディスク領域割り当てを管理できます。  
+  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の複製テーブル、分散テーブル、トランザクション ログの最大データベース サイズ オプションを変更します。 このステートメントを使用すると、サイズの増加または減少に合わせてデータベースのディスク領域割り当てを管理できます。 また、この記事では Parallel Data Warehouse のデータベース オプションの設定に関連する構文についても説明します。 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,10 @@ ALTER DATABASE database_name
     AUTOGROW = { ON | OFF }  
     | REPLICATED_SIZE = size [GB]  
     | DISTRIBUTED_SIZE = size [GB]  
-    | LOG_SIZE = size [GB]  
+    | LOG_SIZE = size [GB]
+    | SET AUTO_CREATE_STATISTICS { ON | OFF }
+    | SET AUTO_UPDATE_STATISTICS { ON | OFF } 
+    | SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
 }  
   
 <db_encryption_option> ::=  
@@ -67,10 +71,33 @@ ALTER DATABASE database_name
   
  ENCRYPTION { ON | OFF }  
  データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の暗号化は、[sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) が **1** に設定されているときにのみ構成できます。 Transparent Data Encryption を構成するには、先にデータベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
+
+ SET AUTO_CREATE_STATISTICS { ON | OFF } 統計の自動作成オプション AUTO_CREATE_STATISTICS がオンの場合、クエリ プランのカーディナリティの推定を向上させるために、クエリ オプティマイザーによってクエリ述語内の個々の列に関する統計が必要に応じて作成されます。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだヒストグラムがない列について作成されます。
+
+ AU7 へのアップグレード後に作成された新しいデータベースの場合、既定値は ON です。 アップグレードの前に作成されたデータベースの場合、既定値は OFF です。 
+
+ 統計の詳細については、「[統計](/sql/relational-databases/statistics/statistics)」を参照してください。
+
+ SET AUTO_UPDATE_STATISTICS { ON | OFF } 統計の自動更新オプション AUTO_UPDATE_STATISTICS がオンの場合、古くなっている可能性がある統計がクエリ オプティマイザーによって判断され、それらがクエリで使用されると更新されます。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
+
+ AU7 へのアップグレード後に作成された新しいデータベースの場合、既定値は ON です。 アップグレードの前に作成されたデータベースの場合、既定値は OFF です。 
+
+ 統計の詳細については、「[統計](/sql/relational-databases/statistics/statistics)」を参照してください。
+
+
+ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 統計の非同期更新オプション AUTO_UPDATE_STATISTICS_ASYNC によって、クエリ オプティマイザーで統計の同期更新と非同期更新のどちらを使用するかが決まります。 AUTO_UPDATE_STATISTICS_ASYNC オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。
+
+ AU7 へのアップグレード後に作成された新しいデータベースの場合、既定値は ON です。 アップグレードの前に作成されたデータベースの場合、既定値は OFF です。 
+
+ 統計の詳細については、「[統計](/sql/relational-databases/statistics/statistics)」を参照してください。
+
   
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER 権限が必要です。  
   
+## <a name="error-messages"></a>エラー メッセージ
+自動統計が無効になっている場合に、統計の設定を変更しようとすると、"このオプションは PDW でサポートされていません" というエラーが PDW から返されます。 システム管理者は、機能スイッチ [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) を有効にすることにより、自動統計を有効にすることができます。
+
 ## <a name="general-remarks"></a>全般的な解説  
  REPLICATED_SIZE、DISTRIBUTED_SIZE、LOG_SIZE は、データベースの現在の値と同じ値か、それより大きい値か、それより小さい値に設定できます。  
   
@@ -78,6 +105,8 @@ ALTER DATABASE database_name
  増加と縮小はおおよそで行われます。 結果的に与えられる実際のサイズはサイズ パラメーターとは異なる場合があります。  
   
  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は ALTER DATABASE ステートメントを不可分操作として実行しません。 実行中、ステートメントが中止された場合、既に発生している変更はそのまま残ります。  
+
+統計の設定は、管理者によって自動統計が有効にされた場合にのみ機能します。管理者である場合は、機能スイッチ [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) を使用して自動統計を有効または無効にします。 
   
 ## <a name="locking-behavior"></a>ロック動作  
  DATABASE オブジェクトを共有ロックします。 別のユーザーが読み取りまたは書き込みをしているデータベースを変更することはできません。 データベースで [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) ステートメントを発行しているセッションもこれに該当します。  
@@ -165,6 +194,29 @@ ALTER DATABASE CustomerSales
 ALTER DATABASE CustomerSales  
     SET ( LOG_SIZE = 10 GB );  
 ```  
+
+### <a name="e-check-for-current-statistics-values"></a>E. 現在の統計値を確認する
+
+次のクエリを実行すると、すべてのデータベースについて現在の統計値が返されます。 値が 1 の場合は機能がオンであることを意味し、値が 0 の場合は機能がオフであることを意味します。
+
+```sql
+SELECT NAME,
+    is_auto_create_stats_on,
+    is_auto_update_stats_on,
+    is_auto_update_stats_async_on
+FROM sys.databases;
+```
+### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. データベースに対して統計の自動作成および自動更新を有効にする
+次のステートメントを使用して、データベース CustomerSales について自動的かつ非同期的に統計を作成および更新する機能を有効にします。  これにより、高品質のクエリ プランを作成するために必要に応じて統計が作成および更新されます。
+
+```sql
+ALTER DATABASE CustomerSales
+    SET AUTO_CREATE_STATISTICS ON;
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS ON; 
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS_ASYNC ON;
+```
   
 ## <a name="see-also"></a>参照  
  [CREATE DATABASE &#40;並列データ ウェアハウス&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   

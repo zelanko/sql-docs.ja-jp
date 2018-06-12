@@ -19,11 +19,12 @@ caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a6bdd055cc32d6f01ec017f72c7caa8f503754f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fdedcbb66bbf9c62a7001750c1dc149c4427cbb
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799832"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>データベースをデータベース スナップショットに戻す
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  元に戻す操作は、次の状況ではサポートされません。  
   
--   現在、データベースに、復帰する対象としてデータベース スナップショットが 1 つしかない。  
+-   データベースのスナップショットが複数あります。 元に戻す場合、データベースのスナップショットは 1 つだけになります。そのスナップショットにデータベースを戻します。  
   
 -   読み取り専用のファイル グループまたは圧縮されたファイル グループがデータベースにある。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  データベースを復帰する前に、次の制限について検討してください。  
   
--   復帰は、メディアの復旧を目的としたものではありません。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 データベース スナップショットはデータベース ファイルの不完全なコピーであるため、データベースまたはデータベース スナップショットが壊れた場合、スナップショットから復帰することはほぼ不可能です。 復帰が可能であっても、データベースまたはデータベース スナップショットが壊れている場合は、問題が解決しない可能性が高くなります。 このため、データベースの保護には、定期的なバックアップと復元プランのテストが必要です。 詳細については、「 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」をご覧ください。  
+-   復帰は、メディアの復旧を目的としたものではありません。 データベース スナップショットはデータベース ファイルの不完全なコピーであるため、データベースまたはデータベース スナップショットが壊れた場合、スナップショットから復帰することはほぼ不可能です。 復帰が可能であっても、データベースまたはデータベース スナップショットが壊れている場合は、問題が解決しない可能性が高くなります。 このため、データベースの保護には、定期的なバックアップと復元プランのテストが必要です。 詳細については、「 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」をご覧ください。  
   
     > [!NOTE]  
     >  データベース スナップショットの作成時点の状態にソース データベースを復元できるようにする必要がある場合は、完全復旧モデルを使用し、そのためのバックアップ ポリシーを実装してください。  

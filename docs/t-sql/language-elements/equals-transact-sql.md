@@ -26,11 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 77947f8263b66f1b7f26e8ee5a5d52a4d019aeb2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97d24445d506a41675822f13d0a23d4e03edac3d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563750"
 ---
 # <a name="-equals-transact-sql"></a>= (等しい) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,15 +54,15 @@ expression = expression
  ブール値  
   
 ## <a name="remarks"></a>Remarks  
- 2 つの NULL 式を比較すると、結果は `ANSI_NULLS` の設定に応じて以下のように異なります。  
+ NULL 式を使用して比較した場合、結果は `ANSI_NULLS` の設定に応じて以下のように異なります。  
   
--   `ANSI_NULLS` が ON に設定されている場合、NULL (または不明) の値は別の NULL または不明の値と等しくないという ANSI 規則に従って、結果は NULL になります。  
+-   `ANSI_NULLS` が ON に設定されている場合、NULL は不明な値であり、別の NULL を含む、他の値と比較できないという ANSI 規則に従って、NULL との比較結果が UNKNOWN となります。  
   
--   `ANSI_NULLS` が OFF に設定されている場合、NULL と NULL を比較した結果は TRUE となります。  
+-   `ANSI_NULLS` が OFF に設定されている場合、NULL 同士の比較結果は TRUE となり、NULL と他の値の比較結果は FALSE となります。  
 
 詳細については、「[SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)」をご覧ください。
   
- NULL 値 (未知数) と NULL 以外の値の比較は、常に FALSE になります。  
+ 結果が UNKNOWN となるブール式は、ほとんどの場合、FALSE と同じように動作しますが、すべての場合ではありません。 詳細については、「[NULL と UNKNOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/null-and-unknown-transact-sql.md)」と「[NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)」を参照してください。  
   
   
 ## <a name="examples"></a>使用例  

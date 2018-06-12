@@ -1,7 +1,7 @@
 ---
 title: Integration Services (SSIS) パッケージの実行 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -27,18 +27,20 @@ caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe9d96b588130d1b4bab8e611dc2e0143ab457c9
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: bfe2420cace44b4bc83844ed61898008d4d8fffb
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455605"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771858"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージの実行
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行するには、それらのパッケージの格納場所に応じていくつかのツールのうちの 1 つを使用できます。 次の表にツールを示します。  
 
 > [!NOTE]
-> Linux 用 SQL Server のリリースでは、Linux で SSIS パッケージを実行できます。 詳しくは、「[Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md)」(SSIS で Linux 上のデータの抽出、変換、読み込みを行う) をご覧ください。
+> この記事では、SSIS パッケージを実行する方法 (全般) と、オンプレミスでパッケージを実行する方法について説明します。 次のプラットフォームで SSIS パッケージを実行することもできます。
+> - **Microsoft Azure クラウド**。 詳細については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」と [Azure で SSIS パッケージを実行する](../lift-shift/ssis-azure-run-packages.md)方法に関するページを参照してください。
+> - **Linux**。 詳しくは、「[Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md)」(SSIS で Linux 上のデータの抽出、変換、読み込みを行う) をご覧ください。
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにパッケージを格納するには、プロジェクト配置モデルを使用してプロジェクトをサーバーに配置します。 詳細については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
