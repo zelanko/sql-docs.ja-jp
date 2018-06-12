@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Server on Linux に関する FAQ |Microsoft ドキュメント
 description: この記事では、Linux で実行されている SQL Server に関するよく寄せられる質問に対する回答を提供します。
 author: rothja

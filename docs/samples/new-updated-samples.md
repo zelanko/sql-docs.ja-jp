@@ -1,4 +1,4 @@
----
+﻿---
 title: 更新済み - SQL Server ドキュメントのサンプル |Microsoft ドキュメント
 description: 最近変更したドキュメントについては、Microsoft SQL Server のサンプルの更新されたコンテンツのスニペットを表示します。
 manager: craigg

@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Server 2016 R Services (In-database) のインストール |Microsoft ドキュメント
 ms.prod: sql
 ms.technology: machine-learning

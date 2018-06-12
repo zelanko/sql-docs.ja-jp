@@ -1,6 +1,6 @@
 ---
-title: SQL 操作 Studio (プレビュー) に接続するときに、Active Directory 認証 (Kerberos) を使用して |Microsoft ドキュメント
-description: SQL 操作 Studio (プレビュー) に Active Directory 認証を使用する Kerberos を有効にする方法を学習します。
+title: SQL Operations Studio (プレビュー) に接続するときに、Active Directory 認証 (Kerberos) を使用して |Microsoft ドキュメント
+description: SQL Operations Studio (プレビュー) に Active Directory 認証を使用する Kerberos を有効にする方法を学習します。
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql

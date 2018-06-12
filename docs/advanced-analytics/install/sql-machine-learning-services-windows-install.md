@@ -1,4 +1,4 @@
----
+﻿---
 title: Windows サービス (In-database) を学習の SQL Server 2017 マシンのインストール |Microsoft ドキュメント
 ms.prod: sql
 ms.technology: machine-learning

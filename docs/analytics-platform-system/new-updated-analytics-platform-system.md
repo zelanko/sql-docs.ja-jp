@@ -1,4 +1,4 @@
----
+﻿---
 title: 更新済み - SQL Server ドキュメントの Analytics Platform System |Microsoft ドキュメント
 description: 最近変更したドキュメントについては、Microsoft SQL Server の Analytics Platform System の更新されたコンテンツのスニペットを表示します。
 manager: craigg

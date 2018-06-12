@@ -1,4 +1,4 @@
----
+﻿---
 title: 更新済み - SQL Server ドキュメントの ODBC |Microsoft ドキュメント
 description: 更新されたコンテンツで最近変更したドキュメントについては、Microsoft SQL Server 用 ODBC (Open Database Connectivity) 用のスニペットを表示します。
 manager: craigg

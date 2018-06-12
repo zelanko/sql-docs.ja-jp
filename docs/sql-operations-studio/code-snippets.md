@@ -1,6 +1,6 @@
 ---
-title: SQL 操作 Studio (プレビュー) でコード スニペットを作成 |Microsoft ドキュメント
-description: 作成して、SQL 操作 Studio (プレビュー) で SQL コード スニペットを使用する方法をについてください。
+title: SQL Operations Studio (プレビュー) でコード スニペットを作成 |Microsoft ドキュメント
+description: 作成して、SQL Operations Studio (プレビュー) で SQL コード スニペットを使用する方法をについてください。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; sstein

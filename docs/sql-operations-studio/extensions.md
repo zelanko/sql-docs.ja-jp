@@ -1,6 +1,6 @@
 ---
-title: SQL 操作 Studio (プレビュー) の機能を拡張 |Microsoft ドキュメント
-description: SQL 操作 Studio (プレビュー) に拡張機能を追加します。
+title: SQL Operations Studio (プレビュー) の機能を拡張 |Microsoft ドキュメント
+description: SQL Operations Studio (プレビュー) に拡張機能を追加します。
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.reviewer: alayu; sstein
