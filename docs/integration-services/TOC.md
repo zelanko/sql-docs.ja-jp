@@ -29,6 +29,7 @@
 ## [ファイルとファイル共有への接続](lift-shift/ssis-azure-files-file-shares.md)
 ## [Azure での SSISDB への接続](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Azure に配置されたパッケージの検証](lift-shift/ssis-azure-validate-packages.md)
+## [Azure でのパッケージの実行](lift-shift/ssis-azure-run-packages.md)
 ## [Azure でのパッケージのスケジュール設定](lift-shift/ssis-azure-schedule-packages.md)
 ## [SSMS を使用した Azure でのパッケージのスケジュール設定](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
@@ -72,6 +73,7 @@
 # [クエリ](integration-services-ssis-queries.md)
 # [トランザクション](integration-services-transactions.md)
 # [パッケージの配置](packages/deploy-integration-services-ssis-projects-and-packages.md)
+# [パッケージの実行](packages/run-integration-services-ssis-packages.md)
 # [スケール アウト](scale-out/integration-services-ssis-scale-out.md)
 
 # [カタログとサーバー](catalog/integration-services-ssis-server-and-catalog.md)

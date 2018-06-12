@@ -1,7 +1,7 @@
 ---
 title: ネイティブ モード レポート サーバー データベースの作成 (SSRS 構成マネージャー) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: install-windows
@@ -18,11 +18,12 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 20b53dc4af07f18f4bcb9161e786b3542b162e37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 507308300934270e9008f775b4da6221278c2d18
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550513"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>ネイティブ モードのレポート サーバー データベースの作成
 
@@ -118,7 +119,7 @@ ms.lasthandoff: 05/03/2018
   
 7.  [概要] ページの情報で設定が正しいことを確認し、 **[次へ]** を選択します。  
   
-8.  [レポート サーバー URL] ページまたは [レポート マネージャー URL] ページで URL を選択し、接続を確認します。 このテストが成功するように URL を定義する必要があります。 レポート サーバー データベースの接続が有効な場合は、ブラウザー ウィンドウにレポート サーバーのフォルダー階層またはレポート マネージャーが表示されます。 詳細については、 [オンライン ブックの「](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) Reporting Services のインストール状態の検証 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+8.  [レポート サーバー URL] ページで URL を選択することにより、接続を確認します。 このテストが成功するように URL を定義する必要があります。 レポート サーバー データベースの接続が有効な場合は、レポート サーバーのフォルダー階層が表示されます。 詳細については、 [オンライン ブックの「](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) Reporting Services のインストール状態の検証 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
 
 ## <a name="change-database-credentials"></a>データベース資格情報の変更
 

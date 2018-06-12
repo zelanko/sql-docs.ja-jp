@@ -1,5 +1,5 @@
 ---
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -8,18 +8,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0d6f3ef84c6df07abf30cef16102ef13277bff47
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238899"
 ---
 # <a name="log-properties"></a>ログのプロパティ
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すログ サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
+
+> [!NOTE]
+> すべてのプロパティは、Azure Analysis Services に適用されます。
   
 ## <a name="general"></a>全般  
- **ファイル**  
+ **[最近使ったファイル]**  
  サーバーのログ ファイルの名前を識別する文字列プロパティです。 このプロパティは、データベース テーブル (既定の動作) ではなく、ディスク ファイルがログ記録に使用される場合にのみ適用されます。  
   
  このプロパティの既定値は msmdsrv.log です。  
@@ -155,7 +160,7 @@ ms.lasthandoff: 05/10/2018
 > [!NOTE]  
 >  クエリ ログの構成の詳細については、「 [Analysis Services クエリ ログの構成](http://go.microsoft.com/fwlink/?LinkId=81890)」を参照してください。  
   
-## <a name="trace"></a>トレース  
+## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   

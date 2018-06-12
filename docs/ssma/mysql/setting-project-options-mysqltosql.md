@@ -1,8 +1,6 @@
 ---
 title: プロジェクトのオプション (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dbe36fd3276ae6a5de2f5f41a8694fa9331d75a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cbaeadbc97a178f3c90f43e26fc13cde416ecc5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776648"
 ---
 # <a name="setting-project-options-mysqltosql"></a>プロジェクト オプションの設定 (MySQLToSQL)
 SSMA プロジェクトごとに、プロジェクト レベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換方法、データの移行方法、および対象のデータ型へのソースのデータ型のマップ方法を指定します。  SQL Server または SQL Azure オブジェクトに変換したり、SQL Server または SQL Azure にデータを移行する前に、構成オプションには、プロジェクトの適切なことを確認します。  
@@ -46,11 +45,11 @@ SSMA では、プロジェクトの設定の 5 つのセットがあります。
   
 プロジェクトの設定は、次の 4 つの方法で構成できます。  
   
--   既定値  
+-   既定  
   
 -   オプティミスティック  
   
--   Full  
+-   [完全]  
   
 -   Custom  
   
@@ -85,7 +84,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     3.  カスタム設定を指定するを選択するか、新しい設定または値を入力します。  
   
-3.  クリックして **OK** 、設定を保存します。  
+3.  をクリックして**OK**設定を保存します。  
   
 現在のプロジェクトの設定をカスタマイズすることもできます。 設定は、現在のプロジェクト ファイルに保存されます。  
   
@@ -99,7 +98,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     2.  カスタム モードを指定するには、次のように選択します。**カスタム**から、**モード** ボックスの一覧です。 適切なプロジェクト設定を選択します。  
   
-3.  クリックして **OK** 、設定を保存します。  
+3.  をクリックして**OK**設定を保存します。  
   
 ## <a name="next-step"></a>次の手順  
 次の手順では、プロジェクトのニーズによって異なります。  

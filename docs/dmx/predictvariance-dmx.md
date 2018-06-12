@@ -1,31 +1,20 @@
 ---
 title: PredictVariance (DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictVariance
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictVariance function
-ms.assetid: 3c535237-083a-4102-bdfe-9f3c929e7b2c
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6f8aff8d02e787aa598290a040552a3d2e8e1af5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 876923763d6aad1319b0409143dd5fca6e23e92a
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841805"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ PredictVariance(<scalar column reference>)
 ## <a name="return-type"></a>戻り値の型  
  指定された型のスカラー値*\<スカラー列参照 >* です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  列参照が不連続で場合**PredictVariance**不連続の値から分散を計算することはできませんのでは 0 を返します。  
   
 ## <a name="examples"></a>使用例  
@@ -66,8 +55,8 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

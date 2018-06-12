@@ -1,4 +1,4 @@
----
+﻿---
 title: 更新済み - SQL Server ドキュメントの MDX |Microsoft ドキュメント
 description: 更新されたコンテンツで最近変更したドキュメントについては、多次元式 (MDX) の Microsoft SQL Server のスニペットを表示します。
 manager: craigg
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32555930"
 ---
 # <a name="new-and-recently-updated-multidimensional-expressions-mdx-for-sql-server"></a>新規または最近更新された: SQL Server の多次元式 (MDX)
 

@@ -5,24 +5,25 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/06/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 8e666a50f90a390307f00e8fd310f965fb7a50b7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 33f798fd3b7816cae61137292392cb9cca729ec7
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822205"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>制限事項と Linux の SSIS の既知の問題
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事の内容について説明します現在の制限事項と既知の問題 SQL Server Integration Services (SSIS) を Linux 上。
+この記事の内容について説明します制限事項と既知の問題 SQL Server Integration Services (SSIS) を Linux 上。
 
 ## <a name="general-limitations-and-known-issues"></a>一般的な制限事項と既知の問題
 
@@ -41,22 +42,20 @@ ms.lasthandoff: 05/19/2018
 
 ## <a name="components"></a> サポートされており、サポートされていないコンポーネント
 
-次の組み込みの Integration Services コンポーネントは、Linux でサポートされます。 Linux プラットフォーム上の制限は、次の表で説明したようにそれらの一部があります。
+次の組み込みの Integration Services コンポーネントは、Linux でサポートされます。 Linux プラットフォームでそれらの一部には制限があります。 ここに記載されていない組み込みのコンポーネントは、Linux ではサポートされていません。
 
-ここに記載されていない組み込みのコンポーネントは、Linux ではサポートされていません。
-
-### <a name="supported-control-flow-tasks"></a>制御フロー タスクのサポート
+## <a name="supported-control-flow-tasks"></a>制御フロー タスクのサポート
 - 一括挿入タスク
-- [データ フロー タスク]
+- データ フロー タスク
 - データ プロファイル タスク
 - SQL 実行タスク
 - T-SQL ステートメントの実行タスク
 - 式タスク
 - FTP タスク
 - Web サービス タスク
-- XML Task
+- XML タスク
 
-### <a name="control-flow-tasks-supported-with-limitations"></a>制御フロー タスクの制限付きでサポート
+## <a name="control-flow-tasks-supported-with-limitations"></a>制御フロー タスクの制限付きでサポート
 
 | タスク | 制限事項 |
 |------------|---|
@@ -67,16 +66,34 @@ ms.lasthandoff: 05/19/2018
 | データベース転送タスク | UNC パスはサポートされません。 |
 | | |
 
-### <a name="supported-control-flow-containers"></a>制御フロー コンテナーのサポート
+## <a name="supported-and-unsupported-maintenance-plan-tasks"></a>サポートされており、サポートされていないメンテナンス プランのタスク
+
+SQL Server メンテナンス プランには、通常のさまざまな SSIS のタスクを使用することができます。
+
+次のメンテナンス プランのタスクは、Linux ではサポートされません。
+- オペレーターに通知します。
+- SQL Server エージェント ジョブを実行します。
+
+Linux では、次のメンテナンス プランのタスクがサポートされています。
+- データベースの整合性を確認します。
+- データベースを圧縮します。
+- [インデックスの再構成]
+- インデックスを再構築します。
+- 統計の更新
+- 履歴をクリーンアップします。
+- データベースをバックアップします。
+- T-SQL ステートメント
+
+## <a name="supported-control-flow-containers"></a>制御フロー コンテナーのサポート
 - シーケンス コンテナー
 - For ループ コンテナー
 - Foreach ループ コンテナー
 
-### <a name="supported-data-flow-sources-and-destinations"></a>サポートされているデータ フローの変換元および変換先
+## <a name="supported-data-flow-sources-and-destinations"></a>サポートされているデータ フローの変換元および変換先
 - Raw ファイル ソースと変換先
 - XML ソース
 
-### <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>データ フローの変換元および変換先の制限付きでサポート
+## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>データ フローの変換元および変換先の制限付きでサポート
 
 | コンポーネント | 制限事項 |
 |------------|---|
@@ -87,7 +104,7 @@ ms.lasthandoff: 05/19/2018
 | OLE DB ソースと変換先 | のみ SQL Server の SQL Server Native Client 11.0 と Microsoft OLE DB プロバイダーをサポートします。 |
 | | |
 
-### <a name="supported-data-flow-transformations"></a>データ フロー変換をサポート
+## <a name="supported-data-flow-transformations"></a>データ フロー変換をサポート
 - Aggregate
 - 監査
 - Balanced Data Distributor
@@ -112,7 +129,7 @@ ms.lasthandoff: 05/19/2018
 - Union All
 - ピボット解除
 
-### <a name="data-flow-transformations-supported-with-limitations"></a>データ フローの変換が制限付きでサポート
+## <a name="data-flow-transformations-supported-with-limitations"></a>データ フローの変換が制限付きでサポート
 
 | コンポーネント | 制限事項 |
 |------------|---|
@@ -120,7 +137,7 @@ ms.lasthandoff: 05/19/2018
 | スクリプト コンポーネント | 標準の .NET Framework Api をのみサポートされます。 |
 | | |
 
-### <a name="supported-and-unsupported-log-providers"></a>サポートされており、サポートされていないログ プロバイダー
+## <a name="supported-and-unsupported-log-providers"></a>サポートされており、サポートされていないログ プロバイダー
 Windows イベント ログ プロバイダーを除く組み込みの SSIS ログ プロバイダーが Linux でサポートされているすべてとします。
 
 SQL Server ログ プロバイダーは、SQL 認証のみをサポートしています。Windows 認証をサポートしていません。

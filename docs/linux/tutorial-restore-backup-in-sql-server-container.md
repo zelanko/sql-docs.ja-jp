@@ -11,11 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 3aa4693e60e173e0dda4a3b7239d659d716867a7
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842815"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker コンテナーでの SQL Server データベースを復元します。
 
@@ -102,7 +103,7 @@ ms.lasthandoff: 05/23/2018
 
 このチュートリアルでは、 [Wide World Importers のサンプル データベース](../sample/world-wide-importers/wide-world-importers-documentation.md)です。 ダウンロードし、SQL Server のコンテナーに、Wide World importers 社のデータベースのバックアップ ファイルをコピーするには、次の手順を使用します。
 
-1. まず、使用して**docker exec**バックアップ フォルダーを作成します。 次のコマンドは、作成、 **/var/optmssql/** SQL Server のコンテナー内のディレクトリ。
+1. まず、使用して**docker exec**バックアップ フォルダーを作成します。 次のコマンドは、作成、 **/var/opt/mssql/backup** SQL Server のコンテナー内のディレクトリ。
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
@@ -390,7 +391,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    > [!NOTE]
    > SA パスワードが指定したパスワードではありません、 **sql2**コンテナー、`MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`です。 復元されたすべての SQL Server データ**sql1**チュートリアルの前にから変更されたパスワードを含みます。 実際には、次のようにいくつかのオプションは/var/opt/mssql 内のデータを復元するために無視されます。 このため、パスワードが`<YourNewStrong!Passw0rd>`次に示すようにします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このチュートリアルでは、Windows 上のデータベースをバックアップし、SQL Server 2017 RC2 を実行する Linux サーバーに移動する方法について学習しました。 方法を学習します。
 > [!div class="checklist"]

@@ -1,8 +1,6 @@
 ---
 title: SQL Server Migration Assistant for Oracle (OracleToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 08/09/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 3987db5b69d17e4e545702b347bd156fe945c457
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8a23651676ddacba59e66cd04c0e348a7d061ce
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777998"
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>SQL Server Migration Assistant for Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle は、ツールへの Oracle データベースの移行の[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 では、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 年 1 Windows と Linux (Preview) および Azure SQL DB にします。 SSMA for Oracle は Oracle のデータベース オブジェクトを変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース オブジェクトと、内のオブジェクトを作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、Oracle からデータを移行し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
@@ -28,7 +27,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="contents"></a>目次  
   
-|セクション|Description|  
+|セクション|説明|  
 |-----------|---------------|  
 |[SSMA for Oracle の新機能](http://msdn.microsoft.com/en-us/f305ebb6-7393-4a43-abb3-6332b739d690)|SSMA for Oracle のこのバージョンの新機能|  
 |[Oracle 用 SSMA をインストールする&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|前提条件と SSMA for Oracle クライアントと必須コンポーネントを実行しているコンピューターにインストールする方法を説明するトピックが含まれています[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  

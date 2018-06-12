@@ -1,7 +1,7 @@
 ---
 title: 標準 .NET Framework データ プロバイダーを登録する (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/18/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -22,11 +22,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 68c34c7ce77c3986d4df390c3512617e27de23b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cfd6cbea6bfefca9b695af4071727ba3d2550a1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550433"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>標準 .NET Framework データ プロバイダーを登録する (SSRS)
   サード パーティの [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート データセット用のデータを取得するには、レポート作成クライアントとレポート サーバーの 2 か所に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー アセンブリを配置し、登録する必要があります。 レポート作成クライアントでは、データ プロバイダーをデータ ソースの種類として登録し、それをクエリ デザイナーに関連付ける必要があります。 これにより、レポート データセットを作成する際に、データ ソースの種類としてこのデータ プロバイダーを選択できるようになります。 関連付けられているクエリ デザイナーが開き、それを利用してこのデータ ソースの種類に対するクエリを作成することができます。 レポート サーバーでは、データ プロバイダーをデータ ソースの種類として登録する必要があります。 そうすることで、このデータ プロバイダーを使用してデータ ソースからデータを取得するパブリッシュ済みレポートを処理することができます。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー用のエントリを追加します。  
   
-    |属性|Description|  
+    |属性|[説明]|  
     |---------------|-----------------|  
     |**名前**|データ プロバイダーの固有名を入力します (たとえば「 **MyNETDataProvider**」など)。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extension** 要素内にあるすべてのエントリの間で一意にする必要があります。 ここで指定した値は、新しいデータ ソースを作成する際にデータ ソースの種類を示すドロップダウン リストに表示されます。|  
     |**型**|<xref:System.Data.IDbConnection> インターフェイスを実装するクラスの完全修飾名前空間と、その後に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー アセンブリの名前 (.dll ファイル名拡張子を含まない) を指定する、コンマ区切りのリストを入力します。|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/03/2018
  URL メンバーシップは、多くのメンバーシップ条件の中からデータ プロバイダー用に選択した 1 つのみになります。  
   
 ### <a name="verifying-the-deployment-and-registration"></a>配置と登録の検証  
- レポート マネージャーを開き、データ プロバイダーが使用可能なデータ ソースの一覧に含まれていることを確認することで、データ プロバイダーがレポート サーバーに正常に配置されたかどうかを検証できます。 レポート マネージャーとデータ ソースの詳細については、「[共有データ ソースを作成、変更、および削除する &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」を参照してください。  
+ Web ポータルを開き、データ プロバイダーが使用可能なデータ ソースの一覧に含まれていることを確認することで、データ プロバイダーがレポート サーバーに正常に配置されたかどうかを検証できます。 Web ポータルとデータ ソースの詳細については、「[共有データ ソースを作成、変更、および削除する &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」を参照してください。  
   
 ## <a name="registering-a-net-framework-data-provider-on-the-report-designer-client"></a>レポート デザイナー クライアントへの .NET Framework データ プロバイダーの登録  
  この [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーをデータ ソースとして使用するレポートを作成するには、レポート デザイナーが実行されているクライアント コンピューターにアセンブリをインストールする必要があります。 それには 2 つの構成ファイルを変更します。 データ ソースとしてデータ プロバイダーを登録し、汎用クエリ デザイナーを使用できるようにするには、RSReportDesigner.config を変更します。 データ プロバイダー アセンブリにコード アクセス セキュリティ権限を許可するには、RSPreviewPolicy.config を変更します。  
@@ -135,7 +136,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  データ プロバイダーのエントリを追加します。  
   
-    |属性|Description|  
+    |属性|[説明]|  
     |---------------|-----------------|  
     |**名前**|データ プロバイダーの固有名を入力します (たとえば「 **MyNETDataProvider**」など)。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extension** 要素内にあるすべてのエントリの間で一意にする必要があります。 ここで指定した値は、新しいデータ ソースを作成する際にデータ ソースの種類を示すドロップダウン リストに表示されます。|  
     |**型**|<xref:System.Data.IDbConnection> インターフェイスを実装するクラスの完全修飾名前空間と、その後に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー アセンブリの名前 (.dll ファイル名拡張子を含まない) を指定する、コンマ区切りのリストを入力します。|  
@@ -198,7 +199,7 @@ ms.lasthandoff: 05/03/2018
  配置を検証するには、ローカル コンピューターの [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のインスタンスをすべて閉じておく必要があります。 現在のセッションをすべて終了した後、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]で新しいレポート プロジェクトを作成することで、データ プロバイダーがレポート デザイナーに正常に配置されたかどうかを検証できます。 レポートの新しいデータセットを作成するときに、使用可能なデータ ソースの種類にそのデータ プロバイダーが含まれている必要があります。  
   
 ## <a name="platform-considerations"></a>プラットフォームに関する注意点  
- 64 ビット (x64) プラットフォームでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は 32 ビット WOW モードで動作します。 x64 プラットフォームでレポートを作成する場合、レポートをプレビューするためには、レポート作成クライアントに 32 ビットのデータ プロバイダーをインストールする必要があります。 同じシステムでレポートをパブリッシュした場合、レポート マネージャーでレポートを表示するためには x64 データ プロバイダーが必要になります。  
+ 64 ビット (x64) プラットフォームでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は 32 ビット WOW モードで動作します。 x64 プラットフォームでレポートを作成する場合、レポートをプレビューするためには、レポート作成クライアントに 32 ビットのデータ プロバイダーをインストールする必要があります。 同じシステムでレポートをパブリッシュした場合、Web ポータルでレポートを表示するためには x64 データ プロバイダーが必要になります。  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]ベースのプラットフォームではサポートされません。  
   

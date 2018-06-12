@@ -1,8 +1,6 @@
 ---
 title: 新しいプロジェクト (OracleToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,17 +13,18 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 14228d43d5e0841a081fac70c9bbb105a46ff49b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4505c11d20c826b9c2b879d7b9c17bd690efaed9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777588"
 ---
 # <a name="new-project-oracletosql"></a>新しいプロジェクト (OracleToSQL)
 使用して、**新しいプロジェクト**新しい SSMA プロジェクトを作成する ダイアログ ボックス。 アクセスする、**新しいプロジェクト** ダイアログ ボックスで、**ファイル** メニューのをクリックして**新しいプロジェクト**です。  
   
-## <a name="options"></a>オプション  
-**名前**  
+## <a name="options"></a>および  
+**Name**  
 プロジェクトの名前を入力します。 SSMA では、ファイルの拡張子を追加します。  
   
 **場所**  

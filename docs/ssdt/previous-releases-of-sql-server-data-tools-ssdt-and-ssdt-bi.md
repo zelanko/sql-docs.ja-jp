@@ -1,7 +1,7 @@
 ---
 title: 以前のリリースの SQL Server Data Tools (SSDT と SSDT-BI) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/10/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,17 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2817c4ee9726e4b58f38568f94cbfde2e0c45915
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d5736a208d4eb0346c79008fc4e03c6bc26bbb9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773348"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>以前のリリースの SQL Server Data Tools (SSDT と SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 SQL Server Data Tools (SSDT) には、SQL Server のコンテンツ タイプ (リレーショナル データベース、Analysis Services モデル、Reporting Services レポート、および Integration Services パッケージ) を構築するためのプロジェクト テンプレートとデザイン サーフェイスが収録されています。  
-  
-このツールは Visual Studio シェルが基になっており、SQL Server と共にリリースされます。 SSDT の新しいバージョンは、SQL Server の最新の機能と連携します。 古いバージョンに含まれているテンプレートと設計環境は、そのリリースの時点で最新であったものです。  
   
 SSDT には後方互換性があるため、[最新の SSDT](download-sql-server-data-tools-ssdt.md) でも古いバージョンの SQL Server を実行するデータベース、モデル、レポート、パッケージの設計と配置を行うことができます。  
   
@@ -37,23 +36,20 @@ SSDT には後方互換性があるため、[最新の SSDT](download-sql-server
 
 [最新のリリース](download-sql-server-data-tools-ssdt.md)で問題が発生した万一の場合に備えて、最近のダウンロードがいくつか提供されています。 
 
-|リリース| Visual Studio 2017|
+|SSDT リリース| Visual Studio 2017|
 |:---|:---|
+|15.6.0|[SSDT for VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
 |15.5.2|[SSDT for VS2017 15.5.2](https://go.microsoft.com/fwlink/?LinkId=866452)|
-|15.5.1|[SSDT for VS2017 15.5.1](https://go.microsoft.com/fwlink/?LinkId=865748)|  
 <br>
 
 
-|リリース| Visual Studio 2015|
+|SSDT リリース| Visual Studio 2015|
 |:---|:---|
 |17.3|[SSDT for VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| 
-|17.2|[SSDT for VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| 
-|17.1|[SSDT for VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)|
-|17.0|[SSDT for VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| 
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
 <br>
 
-|リリース| Visual Studio 2013|
+|SSDT リリース| Visual Studio 2013|
 |:---|:---|
 |16.5|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|  
 <br>

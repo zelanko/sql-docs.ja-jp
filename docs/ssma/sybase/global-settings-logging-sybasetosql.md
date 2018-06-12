@@ -3,8 +3,6 @@ title: グローバル設定 (ログ) (SybaseToSQL) |Microsoft ドキュメン�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,22 +16,23 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d877237074380414a630aa4585415ddd8bffcad6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7f0e5bebca49dfb05d0815386fee7d85d71b80b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778908"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>グローバル設定 (ログ) (SybaseToSQL)
 使用して、**グローバル設定**ダイアログ ボックスを SSMA のログ設定を指定します。 通常、製品のサポートを使用する場合にのみこれらの設定を変更するは。  
   
 このダイアログ ボックスにアクセスする、**ツール**メニューの **グローバル設定**をクリックし、**ログ**左側のウィンドウの下部にあるボタンをクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **メッセージ レベル**  
 次のオプションが 利用可能な**メッセージ レベル**:  
   
-|オプション|Description|  
+|オプション|説明|  
 |----------|---------------|  
 |**[すべてのカテゴリ]**|次のオプションのすべてのログ記録レベルを設定するために使用します。|  
 |**コレクター**|送信元スキーマについてのメタデータを収集し、プロジェクトに保存します。|  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 |||  
 |-|-|  
 |**致命的なエラー**|致命的なエラー メッセージのみをログに書き込みます。|  
-|**[エラー]**|エラーと致命的なエラー メッセージをログに書き込みます。|  
+|**Error**|エラーと致命的なエラー メッセージをログに書き込みます。|  
 |**警告**|警告、エラー、および致命的なエラー メッセージをログに書き込みます。|  
 |**情報**|情報、警告、エラー、および致命的なエラー メッセージをログに書き込みます。|  
 |**デバッグ**|デバッグのログへのメッセージを含む、すべてのメッセージを記述します。|  

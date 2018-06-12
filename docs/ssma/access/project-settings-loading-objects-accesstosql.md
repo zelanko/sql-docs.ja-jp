@@ -1,8 +1,6 @@
 ---
 title: プロジェクトの設定 (オブジェクトの読み込み) (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a12bdcd556504eaed7e0472b6e20e70f876b4275
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc0517af077d0dcb6d7914eb7decffdc0ee7a198
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774128"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>プロジェクトの設定 (オブジェクトの読み込み) (AccessToSQL)
 オブジェクトの読み込みのプロジェクト設定では、SQL Server データベース オブジェクトとデータベース オブジェクトへのアクセスを同期する方法を構成できます。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 -   現在のプロジェクトの設定を指定する、**ツール** メニューのをクリックして**プロジェクト設定**、クリックして**オブジェクトの読み込み**左側のウィンドウの下部にあります。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
   
 ##### <a name="misc"></a>その他  
   

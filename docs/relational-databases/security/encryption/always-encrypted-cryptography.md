@@ -19,11 +19,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ead5689c2edb47f4ce2699e6b94bff53957ce9fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9471302da92abb2b4fef27a6d321a8ec41b01af
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550703"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted による暗号化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  列暗号化キー (CEK) は、CMK によって保護されているコンテンツ暗号化キー (つまり、データを保護するために使用されるキー) です。  
   
- すべての [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK ストア プロバイダーは、セクション A.2.1 の RFC 3447 で指定されている既定のパラメーターを指定し、RSA-OAEP (RSA with Optimal Asymmetric Encryption Padding) を使用して CEK を暗号化します。 これらの既定のパラメーターでは、SHA-1 のハッシュ関数と、SHA-1 を指定した MGF1 のマスク生成関数を使用します。  
+ すべての [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK ストア プロバイダーは、セクション A.2.1 の RFC 8017 で指定されている既定のパラメーターを指定し、RSA-OAEP (RSA with Optimal Asymmetric Encryption Padding) を使用して CEK を暗号化します。 これらの既定のパラメーターでは、SHA-1 のハッシュ関数と、SHA-1 を指定した MGF1 のマスク生成関数を使用します。  
   
 ## <a name="data-encryption-algorithm"></a>データ暗号化のアルゴリズム  
  Always Encrypted では **AEAD_AES_256_CBC_HMAC_SHA_256** アルゴリズムを使用して、データベース内のデータを暗号化します。  

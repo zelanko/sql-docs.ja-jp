@@ -1,6 +1,6 @@
 ---
 title: CREATE KPI ステートメント (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7c2322d30e4e42bebbe4537f687c349c5179d9f9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2a905c223418392ee9d3bd45dffbfe2ab821a298
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579324"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741531"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX データ定義の KPI の作成
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   主要業績評価指標 (KPI) を作成します。 KPI は、キューブ内のメジャー グループに関連付けられた計算のコレクションであり、ビジネスやシナリオの成功を評価するために使用します。  
   
@@ -81,15 +81,15 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 |グラフィックの使用法|KPI グラフィックの名前|状態の数|  
 |--------------------|-------------------------|----------------------|  
-|状態|図形|3|  
-|状態|信号機|3|  
-|状態|道路標識|3|  
-|状態|ゲージ|3|  
-|状態|反転ゲージ|5|  
-|状態|温度計|3|  
-|状態|シリンダー|3|  
-|状態|外観|3|  
-|状態|変位の矢印|3|  
+|Status|図形|3|  
+|Status|信号機|3|  
+|Status|道路標識|3|  
+|Status|ゲージ|3|  
+|Status|反転ゲージ|5|  
+|Status|温度計|3|  
+|Status|シリンダー|3|  
+|Status|外観|3|  
+|Status|変位の矢印|3|  
 |傾向|標準の矢印|3|  
 |傾向|状態の矢印|3|  
 |傾向|反転した状態の矢印|5|  

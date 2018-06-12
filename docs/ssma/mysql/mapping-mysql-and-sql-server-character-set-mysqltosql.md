@@ -1,8 +1,6 @@
 ---
 title: MySQL および SQL Server の文字のマッピング (MySQLToSQL) を設定 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5c31cdc9bab3881452c3a03cc0a97cc382481587
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94764ed6777b4310ebc38bbf8375089a0ac00c92
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776418"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>(MySQLToSQL) を設定する MySQL および SQL Server の文字のマッピング
 MySQL の文字データ型、式およびリテラルの文字セット (文字セット) を指定できます。  
@@ -124,7 +123,7 @@ MySQL の文字データ型、式およびリテラルの文字セット (文字
     |cp932|Windows 日本語の SJIS|NCHAR と NVARCHAR (既定値)|  
     |eucjpms|Windows 日本語の UJIS|NCHAR と NVARCHAR (既定値)|  
   
-2.  **データベース、カテゴリ、またはオブジェクト ノード レベルで:** データベース、カテゴリ、またはオブジェクトのノード レベルで、文字セットのマッピング グリッドに含まれるメタデータのルート ノード レベル、上の 1 つと同じ行 viz。:  
+2.  **データベース、カテゴリ、またはオブジェクト ノード レベルで:** データベース、カテゴリ、またはオブジェクトのノード レベルで、文字セットのマッピング グリッドに含まれるメタデータのルート ノード レベル、上の 1 つと同じ行 viz。  
   
     1.  タイトル、グリッドの最初の列**文字セット名**文字セットの名前が含まれています。  
   

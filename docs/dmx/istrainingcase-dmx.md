@@ -1,31 +1,20 @@
 ---
 title: IsTrainingCase (DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- IsTrainingCase
-dev_langs:
-- DMX
-helpviewer_keywords:
-- IsTrainingCase function
-ms.assetid: 63eab315-e743-470d-9c4c-edfc3f4058a3
-caps.latest.revision: 12
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 37a61a78e2706d0125e341819b8e829bd9602564
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 00344eeb38f3aae5cae7ac25c1b65b403cc85cb9
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842345"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +31,7 @@ IsTrainingCase()
 ## <a name="result-type"></a>結果の種類  
  返します**true**ケースがトレーニング データ セットの一部である場合それ以外の場合**false**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データ マイニング ウィザードを使用してマイニング構造および関連マイニング モデルを作成する場合、既定では全ケースの 30% がテスト データセットの使用のために確保されます。 指定したデータ ソース内の残りのケースはモデルのトレーニングに使用されます。 ただし、データ マイニング拡張機能 (DMX) を使用してマイニング モデルを作成する場合は、既定ですべてのデータがモデルのトレーニングに使用され、テスト セットは作成されません。 テスト データセットの作成を有効にするには、WITH HOLDOUT 句のパラメーターを設定する必要があります。  
   
  <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> プロパティと <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> プロパティの値を表示すると、特定のデータ マイニング構造のデータがテスト セットとトレーニング セットにパーティション分割されているかどうかを確認できます。  
@@ -66,7 +55,7 @@ AND [Age] <40
   
 ## <a name="see-also"></a>参照  
  [トレーニング セットとテスト データ セット](../analysis-services/data-mining/training-and-testing-data-sets.md)   
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [データ マイニング クエリ](../analysis-services/data-mining/data-mining-queries.md)  
   
   

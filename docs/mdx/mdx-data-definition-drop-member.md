@@ -1,6 +1,6 @@
 ---
 title: DROP MEMBER ステートメント (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5de7a54dd7b6b6ac35a44639c04cc1072117de7b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 78d5d27853922d7e7524d93ae2b8157e57166968
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579584"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741381"
 ---
 # <a name="mdx-data-definition---drop-member"></a>MDX データ定義にドロップ メンバー
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   計算されるメンバーを削除します。  
   

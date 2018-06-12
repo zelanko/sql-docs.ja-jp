@@ -1,4 +1,4 @@
----
+﻿---
 title: 更新済み - SQL Server ドキュメントの Analytics Platform System |Microsoft ドキュメント
 description: 最近変更したドキュメントについては、Microsoft SQL Server の Analytics Platform System の更新されたコンテンツのスニペットを表示します。
 manager: craigg
@@ -14,9 +14,10 @@ ms.component: aps-pdw
 ms.date: 04/28/2018
 ms.openlocfilehash: 7b312d0e09ba8771bb108cb3a1e35771a6981f64
 ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32480610"
 ---
 # <a name="new-and-recently-updated-analytics-platform-system-for-sql-server"></a>新規または最近更新された: SQL Server 用の分析プラットフォーム システム
 

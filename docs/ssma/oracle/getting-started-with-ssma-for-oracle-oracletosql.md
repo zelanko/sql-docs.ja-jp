@@ -1,8 +1,6 @@
 ---
 title: 入門 SSMA for Oracle (OracleToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 7979226878df0f30983d262c69b74dfc439eaab3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cb4d61015eb680c4841a88de174548d56ab8f4e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777265"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>入門 SSMA for Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) の Oracle できます迅速に変換する Oracle データベース スキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]スキーマへの結果として得られるスキーマのアップロード[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に Oracle からデータを移行し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
@@ -88,7 +87,7 @@ SSMA は 2 つのツールバー: プロジェクト ツールバー、および
 #### <a name="migration-toolbar"></a>移行のツールバー  
 次の表は、移行のツール バー コマンドを示しています。  
   
-|ボタン|関数|  
+|ボタン|機能|  
 |------|--------|  
 |**レポートを作成します。**|選択した Oracle オブジェクトに変換します[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文、し成功に変換されたを示すレポートを作成します。<br /><br />このコマンドは、オブジェクトが Oracle メタデータ エクスプ ローラーで選択されていない場合は無効です。|  
 |**スキーマを変換します。**|選択した Oracle オブジェクトに変換します[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト。<br /><br />このコマンドは、オブジェクトが Oracle メタデータ エクスプ ローラーで選択されていない場合は無効です。|  
@@ -98,9 +97,9 @@ SSMA は 2 つのツールバー: プロジェクト ツールバー、および
 ### <a name="menus"></a>メニュー  
 次の表は、SSMA メニューを表示します。  
   
-|メニュー|Description|  
+|メニュー|説明|  
 |----|-----------|  
-|**ファイル**|プロジェクトで作業し、Oracle に接続しに接続するためのコマンドを含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
+|**[最近使ったファイル]**|プロジェクトで作業し、Oracle に接続しに接続するためのコマンドを含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
 |**[編集]**|検索して、詳細ページで、コピーするなどのテキストの操作用のコマンドを含む[!INCLUDE[tsql](../../includes/tsql_md.md)]SQL の詳細ウィンドウ。 含まれています、**管理ブックマーク**オプション、いることができますを既存のブックマークの一覧を表示します。 ダイアログ ボックスの右側にあるボタンを使用するには、それらのブックマークを管理します。|  
 |**[表示]**|含まれています、**メタデータ エクスプ ローラーの同期**コマンド。 Oracle メタデータ エクスプ ローラーの間でオブジェクトを同期して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラー。 コマンドを表示/非表示を含む、**出力**と**エラー一覧**ペインおよびオプション**レイアウト**レイアウトを管理します。|  
 |**ツール**|レポートを作成し、オブジェクトとデータを移行するためのコマンドが含まれています。 アクセスする、**グローバル設定**と**プロジェクト設定** ダイアログ ボックス。|  

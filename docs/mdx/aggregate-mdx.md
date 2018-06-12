@@ -1,6 +1,6 @@
 ---
 title: Aggregate (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 31fc7fe749d8e14f0e18ea88128d984875cdaa31
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578424"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740571"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   セット式から返されたセルを集計することによって計算した数値を返します。 数値式が指定されていない場合は、メジャーごとに指定されている既定の集計演算子を使用して、現在のクエリ コンテキスト内で各メジャーを集計します。 数値式が指定されている場合は、指定されたセット内のセルごとに数値式を評価してから、合計を算出します。  
   
@@ -42,7 +42,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
   
 |集計演算子|結果|  
 |--------------------------|------------|  
-|SUM|セット全体の値の合計を返します。|  
+|Sum|セット全体の値の合計を返します。|  
 |Count|セット全体の値の数を返します。|  
 |Max|セット全体の最大値を返します。|  
 |Min|セット全体の最小値を返します。|  

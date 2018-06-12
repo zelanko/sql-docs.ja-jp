@@ -13,7 +13,7 @@ ms.openlocfilehash: 5ae4326e00ba98075a86079157484c5963d0147d
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34579104"
 ---
 # <a name="members-element-xmla"></a>Members 要素 (XMLA)
@@ -45,13 +45,13 @@ ms.locfileid: "34579104"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)|  
-|子要素|[メンバー](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
+|子要素|[Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
   
 ## <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|階層|必要な**文字列**属性。 格納されているメンバーの階層の名前、**メンバー**要素が属しています。|  
+|Hieararchy|必要な**文字列**属性。 格納されているメンバーの階層の名前、**メンバー**要素が属しています。|  
   
 ## <a name="remarks"></a>コメント  
  クライアント アプリケーションを設定した場合、 **AxisFormat**プロパティを*ClusterFormat*、各軸上のメンバーはこれでは、各クラスターは順序付けされたセットの間のクロス積を表しますクラスターに分割。各階層のメンバーです。 各**軸**要素は、1 つ以上の**CrossProduct**要素。 各**CrossProduct**要素が含まれています、**メンバー**軸上の各階層の要素。 **メンバー**要素がさらに、1 つ**メンバー**クロス積に含まれる指定された階層の各メンバーの要素。  

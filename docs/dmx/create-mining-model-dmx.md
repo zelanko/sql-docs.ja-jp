@@ -1,38 +1,20 @@
 ---
 title: マイニング モデル (DMX) を作成 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE MINING MODEL
-- CREATE
-- CREATE_MINING_MODEL
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RELATED TO column
-- mining models [Analysis Services], creating
-- column definition lists [DMX]
-- parameter lists [DMX]
-- SESSION clause
-- CREATE MINING MODEL statement
-ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: 57
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b496ad8ea528345fed110c388c1ffa632c6b0cb3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842635"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -69,7 +51,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  使用して現在のプロバイダーでサポートされているアルゴリズムの一覧を取得できる[DMSCHEMA_MINING_SERVICES 行セット](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)です。 現在のインスタンスでサポートされているアルゴリズムを表示する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を参照してください[データ マイニング プロパティ](../analysis-services/server-properties/data-mining-properties.md)です。  
   
  *パラメーター リスト*  
- 省略可。 アルゴリズムのプロバイダー定義パラメーターのコンマ区切りのリストです。  
+ 任意。 アルゴリズムのプロバイダー定義パラメーターのコンマ区切りのリストです。  
   
  *XML 文字列*  
  (詳しい知識のあるユーザーのみ。)XML でエンコードされたモデル (PMML) です。 文字列を示すには必ず単一引用符 (') を使用してください。  
@@ -113,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  構造列の定義に使用できる、データ型、コンテンツの種類、列分布、モデリング フラグのリストについては、次のトピックを参照してください。  
   
--   [データ型 (&) #40";"データ マイニング"&"#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [データ型&#40;データ マイニング&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [コンテンツの種類 (&) #40 です。 データ マイニング (&) #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [コンテンツの種類&#40;データ マイニング&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
 -   [列の分布&#40;データ マイニング&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [モデリング フラグ (&) #40 です。 データ マイニング & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [モデリング フラグ&#40;データ マイニング&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  ステートメントに句を追加して、2 つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 次の使用をサポートしている\<Column relationship > 句。  
   
@@ -128,7 +110,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  予測列の使用方法を説明するには、予測句を使用します。 次の表は、使用できる 2 つの句について示しています。  
   
-|\<予測 > 句|Description|  
+|\<予測 > 句|説明|  
 |---------------------------|-----------------|  
 |**PREDICT**|この列は、モデルによって予測が可能で、入力ケースで指定されることで、その他の予測可能列の値を予測することができます。|  
 |**PREDICT_ONLY**|この列は、モデルによって予測が可能ですが、その他の予測可能列の値を予測するためにこの列の値を入力ケースで使用することはできません。|  
@@ -142,7 +124,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  各アルゴリズムに関連付けられているパラメーターの一覧は、次を参照してください。[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  組み込みのテスト データセットを持つモデルを作成する場合は、CREATE MINING STRUCTURE ステートメントの後に ALTER MINING STRUCTURE ステートメントを使用します。 ただし、すべての種類のモデルで予約データセットがサポートされるわけではありません。 詳細については、「[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)」を参照してください。  
   
  CREATEMODEL ステートメントを使用して、マイニング モデルを作成する方法のチュートリアルは、次を参照してください。[時系列予測の DMX のチュートリアル](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)です。  
@@ -208,6 +190,6 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ## <a name="see-also"></a>参照  
  [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

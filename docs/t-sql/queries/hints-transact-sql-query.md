@@ -59,11 +59,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a5246b1d7d6a00e4500c95bae20fb2975bbebc9
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470293"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -276,12 +277,15 @@ ms.lasthandoff: 05/14/2018
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  カーディナリティ推定が必要なすべての先頭のインデックス列に対して、クイック統計情報 (ヒストグラム修正) を自動的に生成できるようにします。 カーディナリティを推定するために使用されるヒストグラムは、この列の実際の最大値または最小値を考慮するクエリのコンパイル時に調整されます。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 を指定した場合と同じです。 
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のクエリ オプティマイザーの[基数推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルで、結合に対して、既定の基本含有の推定の代わりに、単純な含有の推定を使用して、SQL Server にクエリ プランを生成させます。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 を指定した場合と同じです。 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のクエリ オプティマイザーの[基数推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルで、結合に対して、既定の基本含有の推定の代わりに、単純な含有の推定を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にクエリ プランを生成させます。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 を指定した場合と同じです。 
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  現在のデータベース互換性レベルに対応する[カーディナリティ推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルを使用するようにクエリ オプティマイザーを設定します。 このヒントを使用して、[データベース スコープ構成](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)の LEGACY_CARDINALITY_ESTIMATION=ON 設定または[トレース フラグ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 9481 を上書きします。
-* 'DISABLE_INTERLEAVED_EXECUTION_TVF' 複数ステートメントのテーブル値関数のインターリーブ実行を無効にします。
-* 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK' バッチ モード メモリ許可フィードバックを無効にします。
-* 'DISABLE_BATCH_MODE_ADAPTIVE_JOINS' バッチ モード適応型結合を無効にします。
+*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
+ 複数ステートメントのテーブル値関数のインターリーブ実行を無効にします。 詳細については、「[複数ステートメントのテーブル値関数のインターリーブ実行](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)」を参照してください。
+*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
+ バッチ モード メモリ許可フィードバックを無効にします。 詳細については、「[バッチ モード メモリ許可フィードバック](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)」を参照してください。
+*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
+ バッチ モード アダプティブ結合を無効にします。 詳細については、「[バッチ モード アダプティブ結合](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)」を参照してください。
  
 > [!TIP]
 > ヒント名では大文字と小文字が区別されません。
@@ -328,7 +332,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 -   動的管理ビュー  
 -   名前付きサブクエリ  
   
- INDEX、FORCESCAN、および FORCESEEK テーブル ヒントは、既存のテーブル ヒントを持たないクエリのクエリ ヒントとして指定できます。また、それぞれ、クエリ内の既存の INDEX、FORCESCAN、または FORCESEEK ヒントの代わりに使用することもできます。 INDEX、FORCESCAN、および FORCESEEK 以外のテーブル ヒントは、クエリで既に WITH 句を使用してテーブル ヒントが指定されていない限り、クエリ ヒントとして使用できません。 この場合に、そのクエリのセマンティックを維持するには、OPTION 句で TABLE HINT を使用して、対応するヒントもクエリ ヒントとして指定する必要があります。 たとえば、クエリにテーブル ヒント NOLOCK が含まれている場合、プラン ガイドの **@hints** パラメーターの OPTION 句にも NOLOCK ヒントが含まれている必要があります。 K. の例を参照してください。せず、対応するクエリ ヒントでは、OPTION 句で TABLE HINT を使用して、INDEX、FORCESCAN、または FORCESEEK 以外のテーブル ヒントが指定されている場合またはその逆の場合(OPTION 句を変更するクエリのセマンティックになることを示す) にエラー 8702 が発生し、クエリが失敗します。  
+INDEX、FORCESCAN、および FORCESEEK テーブル ヒントは、既存のテーブル ヒントを持たないクエリのクエリ ヒントとして指定できます。また、それぞれ、クエリ内の既存の INDEX、FORCESCAN、または FORCESEEK ヒントの代わりに使用することもできます。 INDEX、FORCESCAN、および FORCESEEK 以外のテーブル ヒントは、クエリで既に WITH 句を使用してテーブル ヒントが指定されていない限り、クエリ ヒントとして使用できません。 この場合に、そのクエリのセマンティックを維持するには、OPTION 句で TABLE HINT を使用して、対応するヒントもクエリ ヒントとして指定する必要があります。 たとえば、クエリにテーブル ヒント NOLOCK が含まれている場合、プラン ガイドの **@hints** パラメーターの OPTION 句にも NOLOCK ヒントが含まれている必要があります。 K. の例を参照してください。せず、対応するクエリ ヒントでは、OPTION 句で TABLE HINT を使用して、INDEX、FORCESCAN、または FORCESEEK 以外のテーブル ヒントが指定されている場合またはその逆の場合(OPTION 句を変更するクエリのセマンティックになることを示す) にエラー 8702 が発生し、クエリが失敗します。  
   
 ## <a name="examples"></a>使用例  
   

@@ -13,7 +13,7 @@ ms.openlocfilehash: 3f6c7b707dbf25bfae918cb13be4f1f73aa4d06d
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575144"
 ---
 # <a name="errorcode-element-xmla"></a>ErrorCode 要素 (XMLA)
@@ -43,7 +43,7 @@ ms.locfileid: "34575144"
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[[エラー]](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)|  
+|親要素|[Error](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  

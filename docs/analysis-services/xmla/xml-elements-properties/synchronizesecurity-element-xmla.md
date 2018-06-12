@@ -13,7 +13,7 @@ ms.openlocfilehash: 5f99f4c0ddf212d2fac33abd08c33ccf3dbe7998
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576484"
 ---
 # <a name="synchronizesecurity-element-xmla"></a>SynchronizeSecurity 要素 (XMLA)
@@ -51,7 +51,7 @@ ms.locfileid: "34576484"
   
  この要素の値は、次の表の一覧に示す文字列のいずれかに限定されています。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |*skipMembership*|セキュリティの定義が含まれますが、中に、メンバーシップ情報を除外する**同期**コマンド。|  
 |*CopyAll*|セキュリティの定義と中にメンバーシップ情報が含まれて、**同期**コマンド。|  

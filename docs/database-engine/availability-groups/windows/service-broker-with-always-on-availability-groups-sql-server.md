@@ -3,7 +3,6 @@ title: Service Broker と Always On 可用性グループ (SQL Server) | Microso
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1febefd8e60b0ff054f1e556f23665da14b29320
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 540ecf6bef4dc74d8052a58c96543c5c9b159b5b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770738"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker と Always On 可用性グループ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,11 @@ ms.lasthandoff: 05/03/2018
         FOR SERVICE_BROKER (AUTHENTICATION = WINDOWS)  
     ```  
   
-     詳細については、「 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)と共に使用できるように構成する方法について説明します。  
-  
+     詳細については、「[CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)」を参照してください。  
+
+    > [!NOTE]  
+    SQL Server Broker はマルチサブネット対応ではありません。 0 に設定されている "registerallprovidersip" を必ず使用してください。また、DNS で静的 IP を使用し、https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server で定義されているように、DNS のクラスターに必要な許可を与えていないことを確認してください。 無効になっている IP を使用しようとして Broker がメッセージを送らせることがあります。そのとき、ステータスは "CONVERSING" になります。
+
 3.  **エンドポイントに対する CONNECT 権限を許可する。**  
   
      Service Broker エンドポイントに対する CONNECT 権限を PUBLIC またはログインに許可します。  

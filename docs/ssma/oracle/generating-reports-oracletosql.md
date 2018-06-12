@@ -1,8 +1,6 @@
 ---
 title: レポート (OracleToSQL) の生成 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +17,12 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 61739e71974525a450313af85068e2f91a4dbb1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b14bed167e3023be984c8afeb836407f42180a8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777488"
 ---
 # <a name="generating-reports-oracletosql"></a>レポートの生成 (OracleToSQL)
 オブジェクト ツリーのレベルで SSMA コンソールで、コマンドを使用して実行される特定のアクティビティのレポートが生成されます。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl です。違います。**|**Command**|**レポートのタイトル**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;です。XML|  
+    |@shouldalert|generate-assessment-report|AssessmentReport&lt;n&gt;です。XML|  
     |2|変換とスキーマ|SchemaConversionReport&lt;n&gt;です。XML|  
     |3|データの移行|DataMigrationReport&lt;n&gt;です。XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;です。XML|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl です。違います。**|**コマンドとパラメーター**|**出力の説明**|  
-    |1|verbose=”false”|アクティビティの集計レポートを生成します。|  
+    |@shouldalert|verbose=”false”|アクティビティの集計レポートを生成します。|  
     |2|verbose=”true”|各アクティビティの概要と詳細の状態レポートを生成します。|  
   
     > [!NOTE]  
@@ -65,7 +64,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl です。違います。**|**コマンドとパラメーター**|**出力の説明**|  
-    |1|report-errors=”false”|エラーの詳細情報なし/警告/情報メッセージです。|  
+    |@shouldalert|report-errors=”false”|エラーの詳細情報なし/警告/情報メッセージです。|  
     |2|report-errors=”true”|詳細なエラー/警告/情報メッセージです。|  
   
     > [!NOTE]  

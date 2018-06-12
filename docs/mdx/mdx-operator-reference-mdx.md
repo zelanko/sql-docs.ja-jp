@@ -1,6 +1,6 @@
 ---
 title: MDX 演算子リファレンス (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b0750732af43f1d19922b0259b35d472be57b47
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: HT
+ms.openlocfilehash: aded187be089b3c1af004bd6f7e88d75780b9f22
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580604"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742481"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 演算子リファレンス (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   多次元式 (MDX) 言語は、算術演算子、論理演算子、比較演算子、セット演算子、文字列演算子、単項演算子をサポートしています。 次の表は、サポートされている演算子とその説明の一覧です。  
   

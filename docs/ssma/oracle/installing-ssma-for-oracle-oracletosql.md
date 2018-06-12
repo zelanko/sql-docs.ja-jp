@@ -1,8 +1,6 @@
 ---
 title: SSMA をインストールする for Oracle (OracleToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5798301524a04f761bbf204298b71e0a14f0f196
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6598903cd63ecf9b65613b36ca7425240d8d9b43
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777508"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>インストールを実行する SSMA for Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle に Oracle からの移行の実行に使用するクライアント アプリケーションから成る[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]と Azure SQL DB します。 移行されたデータベースのデータの移行と Oracle システム関数の使用をサポートする拡張機能パックも含まれています。  
@@ -31,7 +30,7 @@ SSMA for Oracle の以降のバージョンにアップグレードする場合�
   
 ## <a name="contents"></a>目次  
   
-|トピック|Description|  
+|トピック|説明|  
 |---------|---------------|  
 |[SSMA の Oracle クライアントのインストール&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)|SSMA クライアントをインストールするための手順と情報を提供します。|  
 |[SSMA コンポーネントを SQL Server インストール&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|インスタンスで拡張機能パックをインストールするための手順と情報を提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  

@@ -1,32 +1,20 @@
 ---
 title: データ マイニング拡張機能 (DMX) 構文要素 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Data Mining Extensions [Analysis Services], syntax elements
-- syntax elements [DMX]
-- statements [DMX], syntax elements
-- DMX [Analysis Services], syntax elements
-ms.assetid: 25e45fa4-6409-47e0-a888-4af26d1c69b0
-caps.latest.revision: 35
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b9aadbc43562ef6a550afa6ac4e2b3a8fd00a024
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a745449428a0a348dc60a5b47304612bb889556c
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842385"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>データ マイニング拡張機能 (DMX) 構文要素
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +31,7 @@ ms.lasthandoff: 05/03/2018
  [式&#40;DMX&#41;](../dmx/expressions-dmx.md)  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が単一値やスカラー値、オブジェクト、またはテーブル値を導くことができる構文の単位です。  
   
- [演算子 &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [演算子&#40;DMX&#41;](../dmx/operators-dmx.md)  
  より複雑な DMX 式を作るために、1 つ以上の簡単な DMX 式と共に使用されます。  
   
  [関数&#40;DMX&#41;](../dmx/functions-dmx.md)  
@@ -64,16 +52,16 @@ ms.lasthandoff: 05/03/2018
  [使用状況&#40;DMX&#41;](../dmx/usage-dmx.md)  
  マイニング モデルに含まれる列をマイニング モデルが使用する方法を定義します。  
   
- [モデリング フラグ (&) #40";"DMX"&"#41;](../dmx/modeling-flags-dmx.md)  
+ [モデリング フラグ&#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
  アルゴリズムでマイニング モデルの処理に使用できる別のヒントを定義します。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [データ マイニング拡張機能 &#40;DMX&#41; 演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
  [データ マイニング拡張機能&#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [一般的な予測関数 (&) #40";"DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
+ [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   

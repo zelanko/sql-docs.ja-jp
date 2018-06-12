@@ -1,8 +1,6 @@
 ---
 title: サンプルのコンソール スクリプト ファイル (DB2ToSQL) の操作 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a756a39a82a607eadd26601006f70dba36391c0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff200ae57ecbfe426b0ccdf7e9ed71af4cfc8bc2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775468"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>サンプルのコンソール スクリプト ファイル (DB2ToSQL) の操作
 いくつかのサンプル ファイルは、ユーザーの参照と使用法について、製品と共に用意されています。 このセクションでは、エンドユーザーのニーズに合わせてこれらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -60,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
     レポートを生成する方法の詳細については、次を参照してください。[を生成するレポート&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)です。  
   
-    **Notes:**  
+    **注**  
   
     コンソール アプリケーションに渡される変数の値ファイルのコマンドライン引数を使用すると、VariableValueFileSample.xml が指定したユーザーに更新されることを確認して値。  
   
@@ -77,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  **ConversionAndDataMigrationSample.xml:** このサンプルには、データの移行への変換から、エンド ツー エンドな移行を実行するユーザーができるようにします。 変更する必要が必須の属性値の一覧は次のとおりです。  
   
-    |コマンド名|Description|属性|  
+    |コマンド名|説明|属性|  
     |----------------|---------------|-------------|  
     |`map-schema`|ターゲット スキーマへのソース データベースのスキーマ マッピングです。|`source-schema:` 変換を必要とするソース データベースを指定します。<br /><br />`sql-server-schema`: に移行するのには、ターゲット データベースを指定します。|  
     |`convert-schema`|ソースからターゲット スキーマへのスキーマの変換を実行します。<br /><br />ユーザーが複数のオブジェクトを評価する/彼のデータベースの場合は複数指定できます`metabase-object`ノードに示すように、`convert-schema`サンプル コンソール スクリプト ファイルのコマンドの例 4 です。|`object-name`: 指定した転送元データベース/オブジェクト名を変換する必要があります。 対応することを確認`object-type`で指定されているオブジェクトの種類に基づいて変更します `object-name`|  

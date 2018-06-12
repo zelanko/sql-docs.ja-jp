@@ -27,11 +27,12 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 981391e55cc73844ee8c6f7c4975b38305e350fc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585924"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +59,8 @@ ALTER AVAILABILITY GROUP group_name
    | GRANT CREATE ANY DATABASE  
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
-   | FORCE_FAILOVER_ALLOW_DATA_LOSS   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
+   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
+   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
    | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
    | RESTART LISTENER ‘dns_name’  
    | REMOVE LISTENER ‘dns_name’  
@@ -129,7 +131,7 @@ ALTER AVAILABILITY GROUP group_name
 <modify_availability_group_spec>::=  
  <ag_name> WITH  
     (  
-       LISTENER = 'TCP://system-address:port'  
+       LISTENER_URL = 'TCP://system-address:port'  
        | AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
        | SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
@@ -473,15 +475,15 @@ ALTER AVAILABILITY GROUP group_name
 >  NetBIOS では、dns_name の最初の 15 文字のみが認識されます。 同じ Active Directory で制御されている 2 つの WSFC クラスターがあり、両方のクラスターで可用性グループ リスナーを作成しようとする場合、15 文字より長い名前を使用して、15 文字のプレフィックスが同一であると、仮想ネットワーク名リソースをオンラインにできなかったことを示すエラーが表示されます。 DNS 名のプレフィックスに対する名前付け規則の詳細については、「 [ドメイン名を割り当てる](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx)」を参照してください。  
   
  JOIN AVAILABILITY GROUP ON  
- *分散可用性グループ*に参加します。 分散可用性グループを作成すると、それが作成されたクラスターの可用性グループがプライマリの可用性グループになります。 分散可用性グループに参加する可用性グループがセカンダリ可用性グループになります。  
+ *分散可用性グループ*に参加します。 分散可用性グループを作成すると、それが作成されたクラスターの可用性グループがプライマリの可用性グループになります。 JOIN を実行するとき、ローカル サーバー インスタンスの可用性グループがセカンダリ可用性グループになります。  
   
  \<ag_name>  
  分散可用性グループの半分を占める可用性グループの名前を指定します。  
   
- LISTENER **='** TCP **://***system-address***:***port***'**  
+ LISTENER_URL **='** TCP **://***system-address***:***port***'**  
  可用性グループに関連付けられているリスナーの URL パスを指定します。  
   
- LISTENER 句は必須です。  
+ LISTENER_URL 句は必須です。  
   
  **'** TCP **://***system-address***:***port***'**  
  可用性グループに関連付けられているリスナーの URL を指定します。 URL のパラメーターは次のとおりです。  
@@ -490,7 +492,7 @@ ALTER AVAILABILITY GROUP group_name
  システム名、完全修飾ドメイン名、IP アドレスなど、リスナーを明確に識別する文字列です。  
   
  *port*  
- 可用性グループのミラーリング エンドポイントに関連付けられているポート番号です。 これはリスナーのポートではないことにご注意ください。  
+ 可用性グループのミラーリング エンドポイントに関連付けられているポート番号です。 これは、リスナーで構成されているクライアント接続用のポートではないことにご注意ください。  
   
  AVAILABILITY_MODE **=** { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
  プライマリ レプリカが特定のプライマリ データベースでトランザクションをコミットする前に、ディスクへのログ レコードの書き込みがセカンダリ可用性グループで確認されるのを待機する必要があるかどうかを指定します。  

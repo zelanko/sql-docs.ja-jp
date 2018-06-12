@@ -1,8 +1,6 @@
 ---
 title: パスワード (MySQLToSQL) を管理する |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d7e8e7cc64df1c5c8211e1d0ead7ef1642116dff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd1cec17f25598637f26642d2416b1b796c356b8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776488"
 ---
 # <a name="managing-passwords-mysqltosql"></a>パスワード (MySQLToSQL) を管理します。
 このセクションでは、データベースのパスワードとをインポートまたはサーバー間でそれらをエクスポートする手順のセキュリティ保護については。  
@@ -45,7 +44,7 @@ SSMA では、データベースのパスワードをセキュリティで保護
   
     パスワードがクリア テキストでは、安全ではありません。 そのため、コンソール出力には、次の警告メッセージが発生: *"サーバー&lt;サーバー id&gt;パスワード SSMA コンソール アプリケーションが保護する オプションを提供するクリア テキストのセキュリティ保護されていない形式で提供されるは、暗号化を使用してパスワードを参照してください SSMA で – securepassword オプションの詳細についてはヘルプ ファイルです。"*  
   
-    **暗号化されたパスワードは、**この場合、指定したパスワードが ProtectedStorage.ssma でローカル コンピューター上の暗号化された形式で保存はできます。  
+    **暗号化されたパスワードは、** この場合、指定したパスワードが ProtectedStorage.ssma でローカル コンピューター上の暗号化された形式で保存はできます。  
   
     -   **パスワードのセキュリティ保護**  
   

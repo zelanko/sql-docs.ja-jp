@@ -1,8 +1,6 @@
 ---
 title: グローバル設定 (ダイアログ ボックス) (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f7d514991dc7af4ef7c030b47ed471d0eb4cddeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f561631a965704f6c3eea05365db2249b42d5bf4
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774138"
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>グローバル設定 (ダイアログ ボックス) (AccessToSQL)
 ダイアログ ページを使用して、**グローバル設定**ダイアログ ボックスを既定のユーザー アクションと SSMA に対する警告の設定を指定します。  
   
 設定にアクセスする、ダイアログで、**ツール**メニューの [**グローバル設定**、] をクリックして**GUI**クリックし、左側のウィンドウの下部にある**ダイアログ**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **起動時に移行ウィザードを表示します。**  
 SSMA for Access で有効または無効にするオプションがある**移行ウィザード**SSMA アプリケーションの起動時にします。 このオプションは、既定では**True**です。  
   

@@ -1,8 +1,6 @@
 ---
 title: 変換と移行オプション (AccessToSQL) の設定 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -25,11 +23,12 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 61814a4d5f4b62c3f7262c7c249b165dd8a99571
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d727866a07be1f796eb81b9e26a755fd7991560
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774178"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>変換と移行オプション (AccessToSQL) の設定
 SSMA プロジェクトごとに、プロジェクト レベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換方法、データの移行方法、および対象のデータ型へのソースのデータ型のマップ方法を指定します。 オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure にデータを移行または[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure、設定オプションが、プロジェクトの適切なであることを確認します。  
@@ -67,7 +66,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタム モードを指定するには、次のように選択します。**カスタム**で、**モード**ボックス、左ペインでオプションを選択、設定または右側のウィンドウで値をクリックし、選択するか、新しい設定または値を入力してください。  
   
-3.  クリックして **OK** 、設定を保存します。  
+3.  をクリックして**OK**設定を保存します。  
   
 現在のプロジェクトの設定をカスタマイズすることもできます。 これらの設定は、現在のプロジェクト ファイルに保存されます。  
   
@@ -81,7 +80,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタム モードを指定するには、次のように選択します。**カスタム**で、**モード**ボックス、左ペインでオプションを選択、設定または右側のウィンドウで値をクリックし、選択するか、新しい設定または値を入力してください。  
   
-3.  クリックして **OK** 、設定を保存します。  
+3.  をクリックして**OK**設定を保存します。  
   
 ## <a name="next-steps"></a>次の手順  
 次の手順では、プロジェクトのニーズによって異なります。  

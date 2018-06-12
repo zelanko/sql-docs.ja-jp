@@ -1,35 +1,23 @@
 ---
 title: + (文字列連結)(MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- +
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- string concatenation operators
-- + (string concatenation)
-ms.assetid: d77636b1-2973-4587-af35-54aba5700d9a
-caps.latest.revision: 29
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c4c33dd723f16a350288f383d219257d336cd776
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 292d671fb3b971c30b6e261e3b851aba1ead9b36
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743131"
 ---
 # <a name="-string-concatenation-mdx"></a>+ (文字列連結) (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   2 つ以上の文字列、組、または文字列と組の組み合わせを連結する文字列演算を実行します。  
   
@@ -47,7 +35,7 @@ String_Expression + String_Expression
 ## <a name="return-value"></a>戻り値  
  パラメーターのデータ型のうち、優先順位が高い方のデータ型を持つ値です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 1 つの式が NULL 値に評価される場合、この演算子は、もう一方の式の結果を返します。  
   
 ## <a name="see-also"></a>参照  

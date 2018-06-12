@@ -1,31 +1,20 @@
 ---
 title: TopPercent (DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TOPPERCENT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- TopPercent function
-ms.assetid: 0b407ab2-2a69-4cbd-ae13-bdd29654fa86
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: bccca2b1a3411b8c5ee36d6dbf7a972fd67a9e83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 781b5c660826ff963497a5b89b7bc01a16eeb265
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842425"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="return-type"></a>戻り値の型  
  \<テーブル式 >  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **TopPercent**関数の評価値に基づいてランクの減少順に最上位の行が返されます、\<式をランク付け > 行ごとに、引数になるようの合計、\<式をランク付け > によって指定された割合の値は、少なくとも、 \<% > 引数。 **TopPercent**指定した割合の値を満たしながら可能な最も小さい要素数を返します。  
   
 ## <a name="examples"></a>使用例  
@@ -115,8 +104,8 @@ NATURAL PREDICTION JOIN
 >  TOPPERCENT および BOTTOMPERCENT の MDX 関数は、比率の計算に使用される値に負の数が含まれていた場合に、予期しない結果を生成する場合があります。 この動作は、DMX 関数には影響しません。 詳細については、次を参照してください。 [BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md)です。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

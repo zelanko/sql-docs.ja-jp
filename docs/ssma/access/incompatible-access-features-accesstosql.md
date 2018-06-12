@@ -1,8 +1,6 @@
 ---
 title: 互換性のないアクセス機能 (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -36,11 +34,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dbfcb395194371bf761f340cc74943791a649aaa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6056a2d58d83f1b43cd3d9f92c9abc702eb6f61c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774208"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>互換性のないアクセス機能 (AccessToSQL)
 アクセスするすべてのデータベース機能と互換性のある[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]アクセスは、予約済みキーワードの別のセットを持っているとします。 移行を正常に実行を防ぐこれらなどの問題[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 次の表を使用して、詳細については、考えられる移行の問題とそれらについて行うことができます。  

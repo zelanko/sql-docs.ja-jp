@@ -1,7 +1,7 @@
 ---
-title: レポートまたはモデルを共有データ ソースにバインドする (SSRS) | Microsoft Docs
+title: レポートを共有データ ソースにバインドする (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -18,39 +18,38 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 708cfa2d2a587ab9990f1b5a1c4a28691229fa88
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ded45a9be18b2e00c4b5fc497159ccb80e26bed0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550833"
 ---
-# <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>レポートまたはモデルを共有データ ソースにバインドする (SSRS)
-  レポートまたはモデルをテスト サーバーから実稼働サーバーに移動するときなど、ファイルをローカル コンピューターに保存した後で別のレポート サーバーにアップロードする操作が必要になる場合があります。 レポートまたはモデルを新しいサーバーにアップロードしたときは、新しいレポート サーバー上に格納されている共有データ ソースにレポートまたはモデルを再バインドする必要があります。 レポートまたはモデルの再バインドを行わないと、レポートまたはモデルが新しいレポート サーバーからアクセスされたときに正常に動作しない場合があります。  
+# <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>レポートを共有データ ソースにバインドする (SSRS)
+  レポートをテスト サーバーから実稼働サーバーに移動するときなど、ファイルをローカル コンピューターに保存した後で別のレポート サーバーにアップロードする操作が必要になる場合があります。 レポートを新しいサーバーにアップロードしたときは、新しいレポート サーバー上に格納されている共有データ ソースにレポートを再バインドする必要があります。 レポートの再バインドを行わないと、レポートが新しいレポート サーバーからアクセスされたときに正常に動作しません。  
   
 > [!IMPORTANT]  
->  レポートまたはモデルを共有データ ソースに再バインドする前に、データ ソースがレポート サーバーまたは SharePoint ライブラリに存在している必要があります。 データ ソースの詳細については、「[共有データ ソースを作成、変更、および削除する (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」を参照してください。  
+>  レポートを共有データ ソースに再バインドする前に、データ ソースがレポート サーバーまたは SharePoint ライブラリに既に存在している必要があります。 データ ソースの詳細については、「[共有データ ソースを作成、変更、および削除する (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」を参照してください。  
   
-### <a name="to-bind-a-report-or-model-to-a-shared-data-source-on-a-report-server-running-in-native-mode"></a>ネイティブ モードで実行されているレポート サーバー上の共有データ ソースにレポートまたはモデルをバインドするには  
+## <a name="to-bind-a-report-to-a-shared-data-source-on-a-report-server-running-in-native-mode"></a>ネイティブ モードで実行されているレポート サーバー上の共有データ ソースにレポートをバインドするには  
   
-1.  **レポート マネージャー**で、サーバーにアップロードしたレポートまたはモデルの名前をクリックします。  
-  
-     [プロパティ] タブが開きます。  
-  
+1.  Web ポータルで、レポート タイルの右上隅にある省略記号 (...)、**[管理]** の順にクリックします。  
+
 2.  **[データ ソース]** をクリックします。  
   
-3.  **[参照]** をクリックし、レポートまたはモデルをバインドするデータ ソースを参照します。  
+3.  **[共有データ ソース]** をクリックし、レポートをバインドするデータ ソースに移動します。  
   
-4.  データ ソースを選択し、 **[OK]** をクリックします。  
+4.  データ ソースを選択し、**[保存]** をクリックします。  
   
 5.  **[適用]** をクリックします。  
   
-     選択したデータ ソースにレポートまたはモデルがバインドされます。  
+     これで選択したデータ ソースにレポートがバインドされます。  
   
-### <a name="to-bind-a-report-or-model-to-a-shared-data-source-on-a-report-server-running-in-sharepoint-integrated-mode"></a>SharePoint 統合モードで実行されているレポート サーバー上の共有データ ソースにレポートまたはモデルをバインドするには  
+## <a name="to-bind-a-report-to-a-shared-data-source-on-a-report-server-running-in-sharepoint-integrated-mode"></a>SharePoint 統合モードで実行されているレポート サーバー上の共有データ ソースにレポートをバインドするには  
   
 1.  まだライブラリが開いていない場合は、クイック起動バーでライブラリの名前をクリックします。 ライブラリの名前が表示されていない場合は、 **[すべてのサイト コンテンツの表示]** をクリックし、ライブラリの名前をクリックします。  
   
-2.  レポートまたはモデルをポイントし、下矢印をクリックします。  
+2.  レポートをポイントして、下向きの矢印をクリックします。  
   
 3.  **[データ ソースの管理]** をクリックします。  
   
@@ -69,10 +68,8 @@ ms.lasthandoff: 05/03/2018
 10. **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ファイルまたはレポートをアップロードする (レポート マネージャー)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)   
  [SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード)](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
  [共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
- [共有データ ソースを作成、削除、または変更する (レポート マネージャー)](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   

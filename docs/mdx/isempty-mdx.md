@@ -1,6 +1,6 @@
 ---
 title: IsEmpty (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ab2f65bbc15aecec93294225435d3d2d38fff062
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: dbed0eba3fec73d7134b1ce21275c28dbd387fcd
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578714"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740171"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   評価した式が空のセル値かどうかを返します。  
   
@@ -38,7 +38,7 @@ IsEmpty(Value_Expression)
 > [!NOTE]  
 >  メンバーの既定のプロパティは、そのメンバーの値です。  
   
- **IsEmpty**関数は、空のセル値に特別な意味があるため、空のセルを確実にテストする唯一の方法[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]です。  
+ **IsEmpty**関数は、空のセル値に特別な意味があるため、空のセルを確実にテストする唯一の方法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]です。  
   
 > [!IMPORTANT]  
 >  値式の評価エラーが返されます、この関数を返します**false**です。 値式がエラーを返すのは、たとえば、プロパティ参照によって、無効なプロパティまたは存在しないプロパティが参照されているような場合です。  

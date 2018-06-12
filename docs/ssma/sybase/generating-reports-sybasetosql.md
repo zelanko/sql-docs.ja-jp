@@ -3,8 +3,6 @@ title: レポート (SybaseToSQL) の生成 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -22,11 +20,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6df36e0977d1eb73a840f39703959bdfa848dbe3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f5f64d418bd99b3403534db19c770f475d089ee
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778638"
 ---
 # <a name="generating-reports-sybasetosql"></a>レポートの生成 (SybaseToSQL)
 オブジェクト ツリーのレベルで SSMA コンソールで、コマンドを使用して実行される特定のアクティビティのレポートが生成されます。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl です。違います。**|**Command**|**レポートのタイトル**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;です。XML|  
+    |@shouldalert|generate-assessment-report|AssessmentReport&lt;n&gt;です。XML|  
     |2|変換とスキーマ|SchemaConversionReport&lt;n&gt;です。XML|  
     |3|データの移行|DataMigrationReport&lt;n&gt;です。XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;です。XML|  
@@ -57,7 +56,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl です。違います。**|**コマンドとパラメーター**|**出力の説明**|  
-    |1|verbose=”false”|アクティビティの集計レポートを生成します。|  
+    |@shouldalert|verbose=”false”|アクティビティの集計レポートを生成します。|  
     |2|verbose=”true”|各アクティビティの概要と詳細の状態レポートを生成します。|  
   
     > [!NOTE]  
@@ -68,7 +67,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl です。違います。**|**コマンドとパラメーター**|**出力の説明**|  
-    |1|report-errors=”false”|エラーの詳細情報なし/警告/情報メッセージです。|  
+    |@shouldalert|report-errors=”false”|エラーの詳細情報なし/警告/情報メッセージです。|  
     |2|report-errors=”true”|詳細なエラー/警告/情報メッセージです。|  
   
     > [!NOTE]  

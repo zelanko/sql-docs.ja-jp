@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32832177"
 ---
 # <a name="updating-large-data-sample"></a>大きなデータを更新するサンプル
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/03/2018
  \<*インストール ディレクトリ*> \sqljdbc_\<*バージョン*>\\<*言語*> \samples\adaptive  
   
 ## <a name="requirements"></a>必要条件  
- このサンプル アプリケーションを実行するには[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]サンプル データベース にアクセスできることが必要です。 また、クラスパスの設定で sqljdbc4.jar ファイルを追加する必要があります。 クラスパスに sqljdbc4.jar のエントリがない場合、サンプル アプリケーションで "Class not found" という一般的な例外がスローされます。 クラスパスを設定する方法の詳細については [JDBC ドライバーを使用する](../../../connect/jdbc/using-the-jdbc-driver.md) を参照してください。
+ このサンプル アプリケーションを実行するには[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]サンプル データベース にアクセスできることが必要です。 また、クラスパスの設定で sqljdbc4.jar ファイルを追加する必要があります。 クラスパスに sqljdbc4.jar のエントリがない場合、サンプル アプリケーションで "Class not found" という一般的な例外がスローされます。 クラスパスを設定する方法の詳細については [JDBC ドライバーを使用する](../../../connect/jdbc/using-the-jdbc-driver.md) を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] Sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar、または sqljdbc42.jar のクラス ライブラリ ファイルを必要な Java ランタイム環境 (JRE) 設定によって使い分けることが用意されています。 このサンプルでは、 [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)と[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)メソッドで、ドライバー固有の応答バッファリング メソッドにアクセスする、JDBC 4.0 API が導入されています。 このサンプルをコンパイルして実行するには、JDBC 4.0 をサポートする sqljdbc4.jar クラス ライブラリが必要となります。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)です。  

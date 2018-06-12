@@ -1,8 +1,6 @@
 ---
 title: テスト リポジトリ (OracleToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: aea9c873a139ed53b64098ef88c9e23aef39bef4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b17f0cf6eabbf1268b849e63c24233aefabc089c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778478"
 ---
 # <a name="using-test-repositories-oracletosql"></a>テスト リポジトリ (OracleToSQL) を使用します。
 SSMA テスト リポジトリ ストア SSMA Tester テスト_ケースとテスト結果を後で使用します。 リポジトリのデータは、SQL Server テーブルに保存されます**TestCaseRepository**と**RunTestCaseResultRepository**スキーマ**ssma_oracle_utilities**の**ssmatesterdb**データベース。  
@@ -67,7 +66,7 @@ SSMA テスト リポジトリ ストア SSMA Tester テスト_ケースとテ�
   
 テスト結果に関する次の情報がグリッドに表示されます。  
   
--   [名前]: テスト_ケースの名前。  
+-   名前: テスト_ケースの名前。  
   
 -   保存されます。 保存のケースの日付をテストします。  
   

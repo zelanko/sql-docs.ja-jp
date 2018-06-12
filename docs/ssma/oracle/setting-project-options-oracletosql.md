@@ -1,8 +1,6 @@
 ---
 title: プロジェクトのオプション (OracleToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 8b30a9a0127191c42213fc9b0a5d2e125e3ff764
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c606de3c03038f7e2fbb9f974ba96dd64bef779
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777978"
 ---
 # <a name="setting-project-options-oracletosql"></a>プロジェクト オプションの設定 (OracleToSQL)
 SSMA プロジェクトごとにプロジェクト レベルのオプションを設定することができます。 これらのオプションは、オブジェクトへの変換、オブジェクトの読み込み、ユーザー インターフェイスとデータの移行設定を指定します。 オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]にデータを移行または[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、構成オプションが、プロジェクトの適切なであることを確認します。  
@@ -33,7 +32,7 @@ SSMA では、プロジェクトの設定の 5 つのセットがあります。
   
 -   プロジェクト情報  
   
--   [全般]\(変換、オブジェクトの読み込みの移行)  
+-   [全般] (変換、オブジェクトの読み込みの移行)  
   
 -   Synchronization  
   
@@ -43,11 +42,11 @@ SSMA では、プロジェクトの設定の 5 つのセットがあります。
   
 これらの設定を構成するための 4 つのモードがあります。  
   
--   既定値  
+-   既定  
   
 -   オプティミスティック  
   
--   Full  
+-   [完全]  
   
 -   Custom  
   
@@ -80,7 +79,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタム設定を指定するを選択するか、新しい設定または値を入力します。  
   
-3.  クリックして **OK** 、設定を保存します。  
+3.  をクリックして**OK**設定を保存します。  
   
 現在のプロジェクトの設定をカスタマイズすることもできます。 これらの設定は、現在のプロジェクト ファイルに保存されます。  
   
@@ -94,7 +93,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタムのモードを指定する、**モード**ボックスで、**カスタム**、適切なプロジェクト設定を選択します。  
   
-3.  クリックして **OK** 、設定を保存します。  
+3.  をクリックして**OK**設定を保存します。  
   
 ## <a name="next-steps"></a>次の手順  
 次の手順では、プロジェクトのニーズによって異なります。  

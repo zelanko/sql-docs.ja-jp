@@ -1,32 +1,23 @@
 ---
 title: KPIValue (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- KPIValue function
-ms.assetid: c4f8532c-4c24-4ad5-8847-4522511e0039
-caps.latest.revision: 19
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b7d1abcf4d0e5c1ca7c02267a1eac7434b616f53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: baa1b95e9eda32bc20e08b61ddd38c130a373050
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740401"
 ---
 # <a name="kpivalue-mdx"></a>KPIValue (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   指定された主要業績評価指標 (KPI) の値を計算するメンバーを返します。  
   
@@ -41,7 +32,7 @@ KPIValue(KPI_Name)
  *Kpi 名*  
  KPI の名前を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="example"></a>例  
  次の例では、Fiscal Year 属性階層の 3 つのメンバーの子孫について、Channel Revenue メジャーの KPI の値、KPI の目標、KPI の状態、および KPI の傾向を返しています。  
@@ -63,6 +54,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,4 +1,4 @@
----
+﻿---
 title: 更新済み - SQL Server ドキュメントの ADO |Microsoft ドキュメント
 description: 更新されたコンテンツで最近変更したドキュメントについては、ActiveX データ オブジェクト (ADO) 用 Microsoft SQL Server のスニペットを表示します。
 manager: craigg
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32435483"
 ---
 # <a name="new-and-recently-updated-activex-data-objects-ado-for-sql-server"></a>新規または最近更新された: SQL Server 用の ActiveX Data Objects (ADO)
 

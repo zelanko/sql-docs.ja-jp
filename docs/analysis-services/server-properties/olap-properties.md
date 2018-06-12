@@ -1,6 +1,6 @@
 ---
 title: OLAP プロパティ |Microsoft ドキュメント
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5739c93f7a3c20960f5470c3fd2cdb24c72cf09d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239292"
 ---
 # <a name="olap-properties"></a>OLAP のプロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示す OLAP サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
  **適用対象:** 多次元サーバー モードのみ  
@@ -201,7 +203,7 @@ ms.lasthandoff: 05/10/2018
  **ROLAPDimensionProcessingEffort**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="query"></a>Query  
+## <a name="query"></a>[クエリ]  
  **AggregationsUseEnabled**  
  保存されている集計が実行時に使用されるかどうかを定義するブール型プロパティです。 このプロパティでは、情報提供およびベンチマークの目的で、集計のデザインを変更したり再処理したりせずに集計を無効にすることができます。  
   
@@ -243,12 +245,13 @@ ms.lasthandoff: 05/10/2018
   
 -   サーバー上のすべてのデータベースに影響します。 **DimensionPropertyCachesize** は、サーバー全体のプロパティです。 このプロパティを変更すると、現在のインスタンスで実行されているすべてのデータベースに影響を与えます。  
   
- ディメンション キャッシュの要件を推定する方法:  
+ディメンション キャッシュの要件を推定する方法:  
   
 1.  最初はサイズを大幅に増やして、ディメンション キャッシュのサイズを増やしたときに利点が得られるかどうかを判断します。 たとえば、最初のステップとして既定値を倍にすることが考えられます。  
   
 2.  パフォーマンスが向上することが明らかになった場合は、パフォーマンスとメモリ使用率の間で適切なバランスに達するまで、値を徐々に小さくします。  
-  
+
+
  **ExpressNonEmptyUseEnabled**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -345,7 +348,7 @@ ms.lasthandoff: 05/10/2018
  **DataCache\ MemoryModel\ Tax**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="jobs"></a>ジョブ  
+## <a name="jobs"></a>の  
  **ProcessAggregation\ MemoryModel\ Income**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   

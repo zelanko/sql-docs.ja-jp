@@ -24,16 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 98b08c914c0eb74e55d2d3c8a9e032432391a054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0ac0821494677a42766c340f4d1e75ff9661711
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779488"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  非対称キーを使ってデータの暗号化を解除します。  
+この関数は非対称キーを使用して暗号化データを復号します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,28 +48,28 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>引数  
  *Asym_Key_ID*  
- データベース内の非対称キーの ID を指定します。 *Asym_Key_ID* は **int**です。  
+データベース内の非対称キーの ID。 *Asym_Key_ID* には、**int** データ型が与えられます。  
   
  *ciphertext*  
- 非対称キーを使って暗号化されているデータの文字列を指定します。  
+非対称キーで暗号化するデータの文字列。  
   
  @ciphertext  
- 非対称キーを使用して暗号化されているデータを含む **varbinary** 型の変数を指定します。  
+非対称キーで暗号化されたデータを含む、型 **varbinary** の変数。  
   
  *Asym_Key_Password*  
- データベース内の非対称キーを暗号化するのに使用されたパスワードを指定します。  
+データベース内の非対称キーの暗号化に使用されたパスワード。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+最大サイズが 8,000 バイトの **varbinary**。  
   
 ## <a name="remarks"></a>Remarks  
- 非対称キーでの暗号化/暗号化解除は、対称キーを使用した暗号化/暗号化解除に比べて非常に時間がかかります。 テーブル内のユーザー データのような大きなデータセットを扱う場合、非対称キーの使用は推奨されません。  
+対称暗号化/復号と比べると、非対称キーの暗号化/復号はコストが高くなります。 テーブルに保存されているユーザー データなど、大量のデータセットを扱うとき、非対称キーの暗号化/復号は回避するように開発者には提案しています。  
   
 ## <a name="permissions"></a>アクセス許可  
- 非対称キーに対する CONTROL 権限が必要です。  
+`DECRYPTBYASYMKEY` には、非対称キーに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`JanainaAsymKey02` に格納されている、非対称キー `AdventureWorks2012.ProtectedData04` を使って暗号化された暗号文の暗号化を解除します。 返されるデータの暗号化は、非対称キー `JanainaAsymKey02` を使って解除されます。この非対称キーの暗号化は、パスワード `pGFD4bb925DGvbd2439587y` を使って解除されます。 プレーン テキストが型に変換されます **nvarchar**です。  
+この例では、非対称キー `JanainaAsymKey02` で最初に暗号化された暗号化テキストが復号されます。 `AdventureWorks2012.ProtectedData04` によって、この非対称キーが格納されました。 返されたデータが非対称キー `JanainaAsymKey02` で復号されました。 パスワード `pGFD4bb925DGvbd2439587y` を使用し、この非対称キーが復号されました。 返されたプレーンテキストが型 **nvarchar** に変換されました。  
   
 ```  
 SELECT CONVERT(nvarchar(max),  

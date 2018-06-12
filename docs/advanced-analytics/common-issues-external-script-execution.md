@@ -8,10 +8,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 08ab6e2db6d6cde5e41f7ddb88c8afd1da241df7
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34706840"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>スタート パッド サービスと SQL Server の外部スクリプト実行の一般的な問題
@@ -129,9 +129,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. Machine learning のスクリプトを実行できるように、問題を修正通常、サービスを再起動します。 再起動に問題が解決しない場合、パスおよび引数を注意してください。、**バイナリ パス**プロパティ、および、次の操作。
 
-    A. 起動の .config ファイルを確認し、作業ディレクトリが有効であることを確認します。
+    a. 起動の .config ファイルを確認し、作業ディレクトリが有効であることを確認します。
 
-    B. スタート パッドで使用される Windows グループが、SQL Server インスタンスに接続できることを確認してください」の説明に従って、[前のセクション](#bkmk_LaunchpadTS)です。
+    b. スタート パッドで使用される Windows グループが、SQL Server インスタンスに接続できることを確認してください」の説明に従って、[前のセクション](#bkmk_LaunchpadTS)です。
 
     c. サービスのプロパティを変更する場合は、スタート パッド サービスを再起動します。
 

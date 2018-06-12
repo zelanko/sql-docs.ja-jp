@@ -1,8 +1,6 @@
 ---
 title: レポート (MySQLToSQL) の生成 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: aaa0b1d90463f1e6b85a3423c13e4f785621c817
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12be453eebf7e5ac3539b235d5b35d2f9a0b52c3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776188"
 ---
 # <a name="generating-reports-mysqltosql"></a>レポートの生成 (MySQLToSQL)
 オブジェクト ツリーのレベルで SSMA コンソールで、コマンドを使用して実行される特定のアクティビティのレポートが生成されます。  
@@ -38,7 +37,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl です。違います。**|**Command**|**レポートのタイトル**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;です。XML|  
+    |@shouldalert|generate-assessment-report|AssessmentReport&lt;n&gt;です。XML|  
     |2|変換とスキーマ|SchemaConversionReport&lt;n&gt;です。XML|  
     |3|データの移行|DataMigrationReport&lt;n&gt;です。XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;です。XML|  
@@ -55,7 +54,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl です。違います。**|**コマンドとパラメーター**|**出力の説明**|  
-    |1|verbose=”false”|アクティビティの集計レポートを生成します。|  
+    |@shouldalert|verbose=”false”|アクティビティの集計レポートを生成します。|  
     |2|verbose=”true”|各アクティビティの概要と詳細の状態レポートを生成します。|  
   
     > [!NOTE]  
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl です。違います。**|**コマンドとパラメーター**|**出力の説明**|  
-    |1|report-errors=”false”|エラーの詳細情報なし/警告/情報メッセージです。|  
+    |@shouldalert|report-errors=”false”|エラーの詳細情報なし/警告/情報メッセージです。|  
     |2|report-errors=”true”|詳細なエラー/警告/情報メッセージです。|  
   
     > [!NOTE]  

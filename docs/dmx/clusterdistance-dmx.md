@@ -1,31 +1,20 @@
 ---
 title: ClusterDistance (DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ClusterDistance
-dev_langs:
-- DMX
-helpviewer_keywords:
-- ClusterDistance function
-ms.assetid: a13152b3-4cd1-4c79-8a3e-207624198330
-caps.latest.revision: 11
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 03e85862a5fc8a1a9daae56282294d9addad53f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 2d8eb879d23a344e5de6bad3c9fb6042fdadb3e7
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841515"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー値です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **ClusterDistance**関数が、入力したケースと入力したケースの確率の高いクラスター間の距離を返します。  
   
  K-Means クラスタリングの場合、どのケースも所属できるのは、メンバーシップの重みが 1.0 のクラスター 1 つだけなので、クラスターの距離は常に 0 になります。 ただし、K-Means では、各クラスターに重心があると想定されています。 マイニング モデル コンテンツ内の入れ子になったテーブル NODE_DISTRIBUTION をクエリしたり参照したりして、重心の値を取得できます。 詳細については、「[クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)」を参照してください。  
@@ -138,8 +127,8 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>参照  
  [クラスター &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
- [クラスタ リング モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [クラスタ リング モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

@@ -1,35 +1,20 @@
 ---
 title: SELECT DISTINCT FROM&lt;モデル&gt;(DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DISTINCT
-- SELECT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- discrete columns [DMX]
-- discretized columns [DMX]
-- SELECT DISTINCT FROM <model> statement
-- continuous columns
-ms.assetid: 0ab44ef6-1c3b-4809-a687-4d5d13f343af
-caps.latest.revision: 44
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 5754cbeb07789b0d5f7a3f51386f108633cda83e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842715"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;モデル&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +31,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>引数  
  *n*  
- 省略可。 返される行数を指定する整数。  
+ 任意。 返される行数を指定する整数。  
   
  *式の一覧*  
  関連する列識別子 (モデルより抽出) または式のコンマ区切りリストです。  
@@ -58,9 +43,9 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  列のリストから返される値を制限する条件です。  
   
  *式 (expression)*  
- 省略可。 スカラー値を返す式。  
+ 任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **SELECT DISTINCT FROM**ステートメントは 1 つの列または関連する列のセットでのみ機能します。 この句は、関連しない列のセットでは動作しません。  
   
  **SELECT DISTINCT FROM**ステートメントでは、入れ子になったテーブル内の列を直接参照することができます。 以下に例を示します。  
@@ -71,7 +56,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
  結果、 **SELECT DISTINCT FROM\<モデル >** 列のデータ型に応じて、ステートメントが異なります。 次の表は、サポートされている列の型およびステートメントからの出力について示しています。  
   
-|列の型|出力|  
+|列の型|[出力]|  
 |-----------------|------------|  
 |Discrete|列内の一意な値です。|  
 |Discretized|列内の各離散化バケットの中点です。|  
@@ -152,6 +137,6 @@ FROM [TM Decision Tree]
 ## <a name="see-also"></a>参照  
  [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

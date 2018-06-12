@@ -1,8 +1,6 @@
 ---
 title: データベース オブジェクト (AccessToSQL) に変換する |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -38,11 +36,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 09d88b62efad5e0aa3d67cc5788a8430f09024d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36d73e04296346bd0c44a8459ec157d437df8583
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773478"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>データベース オブジェクト (AccessToSQL) に変換します。
 Access データベースを追加してに接続した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure、SSMA は、アクセスするためのメタデータを表示および[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベースのオブジェクト。 今すぐアクセス データベースのオブジェクトを選択してへのスキーマを変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のスキーマです。  
@@ -112,7 +111,7 @@ Access データベースを追加してに接続した後[!INCLUDE[ssNoVersion]
   
 **テーブルまたはインデックスのプロパティを変更するには**  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure メタデータ エクスプ ローラーで、テーブルまたはインデックスを変更する を選択します。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure メタデータ エクスプ ローラーで、テーブルまたはインデックスを変更するを選択します。  
   
 2.  **テーブル** タブで、変更をし、入力するか、新しい設定を選択するプロパティをクリックします。 たとえば、nvarchar (20)、nvarchar (15) に変更したり、テーブル列を null 許容にする チェック ボックスをオンにします。  
   

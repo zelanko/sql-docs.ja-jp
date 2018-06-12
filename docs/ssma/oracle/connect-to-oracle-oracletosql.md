@@ -1,8 +1,6 @@
 ---
 title: Oracle (OracleToSQL) への接続 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,18 +13,19 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f682fd589ed585c84c7cb3a4f9efed5f2d185999
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d002682b0671bedbe15a3c790429b9a80452a35
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776998"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Oracle (OracleToSQL) への接続します。
 使用して、 **Connect to Oracle**を移行する Oracle データベースに接続する ダイアログ ボックス。  
   
 このダイアログ ボックスにアクセスする、**ファイル**メニューの  **Connect to Oracle**です。 以前接続した場合、コマンドは**Oracle への再接続**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **プロバイダー**  
 Oracle データベースへの接続用のデータ アクセス プロバイダーを選択します。 使用可能なプロバイダーは、Oracle Client プロバイダーと OLE DB プロバイダーです。 既定値は、Oracle クライアント プロバイダーです。  
   

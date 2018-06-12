@@ -1,8 +1,6 @@
 ---
 title: ユーザー インターフェイス リファレンス (OracleToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: bf07df733aad0657fa24791eb8b0ca4a01def782
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 981fd5efeda156774de298be5f45d5a9387279e1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778128"
 ---
 # <a name="user-interface-reference-oracletosql"></a>ユーザー インターフェイス リファレンス (OracleToSQL)
 このセクションには、ヘルプ トピックが含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle です。  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|トピック|Description|  
+|トピック|説明|  
 |[オブジェクトの選択を高度な&#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|使用して、**オブジェクトの選択の高度な** ダイアログ ボックスのフィルター条件を使用してデータベース オブジェクトを検索し、オンまたはオフにそれらのオブジェクト。|  
 |[評価レポート&#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|Oracle オブジェクトの変換の結果を表示する評価レポートを使用して[!INCLUDE[tsql](../../includes/tsql_md.md)]構文、および時間とへの移行の複雑さを評価する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
 |[Oracle への接続&#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)|使用して、 **Connect to Oracle**を移行する Oracle データベースに接続する ダイアログ ボックス。|  

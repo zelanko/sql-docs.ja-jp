@@ -3,8 +3,6 @@ title: テスト リポジトリ (SybaseToSQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b367c2e29949b0dcf6960eeacc501d308b131ff1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 880262cf0342c66a91a1f88e50477e0685e1d1e0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779538"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>テスト リポジトリ (SybaseToSQL) を使用します。
 SSMA テスト リポジトリ ストア SSMA Tester テスト_ケースとテスト結果を後で使用します。 リポジトリのデータは、SQL Server テーブルに保存されます**TestCaseRepository**と**RunTestCaseResultRepository**スキーマ**ssma_sybase_utilities**の**ssmatesterdb_syb**データベース。  
@@ -69,7 +68,7 @@ SSMA テスト リポジトリ ストア SSMA Tester テスト_ケースとテ�
   
 テスト結果に関する次の情報がグリッドに表示されます。  
   
--   [名前]: テスト_ケースの名前。  
+-   名前: テスト_ケースの名前。  
   
 -   作業の開始: 実行中のケースの日付をテストします。  
   

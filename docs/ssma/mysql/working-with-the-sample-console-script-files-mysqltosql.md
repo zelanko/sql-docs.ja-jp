@@ -1,8 +1,6 @@
 ---
 title: サンプルのコンソール スクリプト ファイル (MySQLToSQL) の操作 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f683e6a1be376b63c5cf95f1e7535b686bc8321a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68d24dd530c6e987c26d3fecca6c0fd732cb9df0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776838"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>サンプルのコンソール スクリプト ファイル (MySQLToSQL) の操作
 いくつかのサンプル ファイルは、ユーザーの参照と使用法について、製品と共に用意されています。 このセクションでは、エンドユーザーのニーズに合わせてこれらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -62,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
     レポートを生成する方法の詳細については、次を参照してください。[を生成するレポート&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)です。  
   
-    **Notes:**  
+    **注**  
   
     -   コンソール アプリケーションに渡される変数の値ファイルのコマンドライン引数を使用すると、VariableValueFileSample.xml が指定したユーザーに更新されることを確認して値。  
   

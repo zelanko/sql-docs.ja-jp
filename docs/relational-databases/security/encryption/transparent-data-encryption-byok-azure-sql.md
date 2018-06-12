@@ -18,11 +18,12 @@ ms.topic: conceptual
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2265778ca41dd82a1e55fe01749bd2d5057f5f1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bffd6ec43cb298c652e8154ec28064bd9c891799
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476084"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database および Data Warehouse 用の Bring Your Own Key サポートによる Transparent Data Encryption
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -140,7 +141,7 @@ geo レプリケーションされた Azure SQL データベースの場合、Az
 - 論理サーバー TDE ウィンドウを選択し、各論理 SQL Server に対して次のことを行います。  
    - 同じ領域内で AKV を選択します。 
    - TDE プロテクターとして使用するキーを選択します。各サーバーは TDE プロテクターのローカル コピーを使用します。 
-   - Portal でこれを行うと、論理 SQL Server の [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) が作成されます。この ID はキー コンテナーにアクセスするために論理 SQL Server のアクセス許可を割り当てるために使用されるため、削除しないでください。  代わりに Azure Key Vault でアクセス許可を削除することで、アクセス権を取り消すことができます。 論理 SQL サーバーの場合、論理 SQL サーバーのアクセス許可をキー コンテナーに割り当てるために使用されます。
+   - Portal でこれを行うと、論理 SQL Server の [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) が作成されます。この ID はキー コンテナーにアクセスするために論理 SQL Server のアクセス許可を割り当てるために使用されるため、削除しないでください。 アクセス権を取り消すには、代わりに論理 SQL Server の Azure Key Vault でアクセス許可を削除します。これは、キー コンテナーにアクセスするために論理 SQL Server のアクセス許可を割り当てるのに使用されます。
 - プライマリ データベースを作成します。 
 - [アクティブ geo レプリケーションのガイダンス](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview)に従ってシナリオを完了します。この手順によりセカンダリ データベースが作成されます。
 

@@ -3,8 +3,6 @@ title: Sybase コンポーネント (SybaseToSQL) に対して SSMA を削除す
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d59d3d18b4eb5b5ec81cb12422cc16cf64592731
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5a9434f0fbaab5188a275af279626832df528b6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779313"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>Sybase コンポーネント (SybaseToSQL) に対して SSMA を削除します。
 終了したらデータベースから Sybase Adaptive Server Enterprise (ASE) への移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA コンポーネントをアンインストールする場合があります。 いつでも、クライアント コンポーネントをアンインストールすることができますが、拡張機能パックからをアンインストールしないでください[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ない場合は、移行されたデータベースが不要になったで関数を使用していることを確認して、 **ssma_syb**のスキーマ、 **sysdb**データベース。  

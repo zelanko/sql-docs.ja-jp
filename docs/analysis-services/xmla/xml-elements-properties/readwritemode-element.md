@@ -13,7 +13,7 @@ ms.openlocfilehash: 0d528567e22c3ba19b49eefff10d886703a0d29a
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576494"
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 要素
@@ -51,7 +51,7 @@ ms.locfileid: "34576494"
   
  値、 **ReadWriteMode**要素は次の表に示す文字列の 1 つに制限されます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |*ReadOnly*|変更または更新をデータベースに適用できません。|  
 |*読み取り/書き込み*|変更または更新をデータベースに適用できます。|  

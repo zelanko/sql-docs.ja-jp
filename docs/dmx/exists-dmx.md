@@ -1,31 +1,20 @@
 ---
 title: (DMX) が存在する |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Exists
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Exists function
-ms.assetid: 3b54dd93-f0a8-4f9a-96ae-a38bf977dda1
-caps.latest.revision: 14
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c42102653cb2da9ec85e4714bba3bedb7a99cd52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 936612dba4f466c5bc78f20f5a3ea07954a20a1c
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843025"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ EXISTS(<subquery>)
 ## <a name="result-type"></a>結果の種類  
  返します**true** 、サブクエリによって返される結果セットに少なくとも 1 つの行が含まれている場合を返しますそれ以外の場合、 **false**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  EXISTS の前にキーワード NOT を使用することができます。 たとえば、`WHERE NOT EXISTS (<subquery>)`です。  
   
  EXISTS のサブクエリの引数に追加する列の一覧は関係ありません。関数は条件に一致する行が存在するかどうかのみをチェックします。  
@@ -68,7 +57,7 @@ WHERE [[Model] = 'Patch kit'
  このクエリによって返される同じデータを表示する別の方法は、アソシエーション ビューアーでモデルを開き、アイテム セットを右クリックする**Patch kit = Existing**を選択、**ドリル スルー**オプションをクリックし **モデルの場合のみ**です。  
   
 ## <a name="see-also"></a>参照  
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [モデル フィルターの構文と例&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   

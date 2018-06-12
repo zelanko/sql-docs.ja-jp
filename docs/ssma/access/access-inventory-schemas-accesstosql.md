@@ -1,8 +1,6 @@
 ---
 title: インベントリ スキーマ (AccessToSQL) にアクセス |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -41,15 +39,15 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: db3476f35a5388d127d34ebb183364e0f63184f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9614227b73058459fee7c902823bdb032ef2bc3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773308"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>アクセスのインベントリ スキーマ (AccessToSQL)
 次のセクションへのアクセスのスキーマをエクスポートするときに、SSMA によって作成されるテーブルを記述する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
@@ -57,12 +55,12 @@ ms.lasthandoff: 05/03/2018
 ## <a name="databases"></a>データベース  
 データベースのメタデータをエクスポート、 **SSMA_Access_InventoryDatabases**テーブル。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|各データベースを一意に識別する GUID です。 この列は、テーブルの主キーもです。|  
 |**DatabaseName**|**nvarchar (4000)**|Access データベースの名前。|  
 |**ExportTime**|**datetime**|このメタデータが SSMA によって作成された日付と時刻。|  
-|**ファイル パス**|**nvarchar (4000)**|Access データベースの完全パスとファイル名。|  
+|**filePath**|**nvarchar (4000)**|Access データベースの完全パスとファイル名。|  
 |**FileSize**|**bigint**|Access データベース (KB 単位) のサイズ。|  
 |**FileOwner**|**nvarchar (4000)**|Access データベースの所有者として指定されている Windows アカウント。|  
 |**DateCreated**|**datetime**|日付と Access データベースが作成された時刻。|  
@@ -82,7 +80,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="tables"></a>テーブル  
 テーブルのメタデータをエクスポート、 **SSMA_Access_InventoryTables**テーブル。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|このテーブルを含むデータベースを識別します。|  
 |**TableId**|**uniqueidentifier**|テーブルを一意に識別する GUID です。 この列は、テーブルの主キーもです。|  
@@ -92,10 +90,10 @@ ms.lasthandoff: 05/03/2018
 |**LinkedTable**|**nvarchar (4000)**|別のテーブル、存在する場合、テーブルにリンクされています。 このテーブルを使用して、追加、削除、およびその他のテーブルを更新するをテーブルをリンクできます。|  
 |**ExternalSource**|**nvarchar (4000)**|データ ソースに存在する場合に関連付けられているテーブル。 テーブルがリンクされている場合、このフィールドで指定された外部データ ソースがあります。|  
   
-## <a name="columns"></a>列  
+## <a name="columns"></a>[列]  
 列のメタデータをエクスポート、 **SSMA_Access_InventoryColumns**テーブル。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|この列を含むデータベースを識別します。|  
 |**TableId**|**uniqueidentifier**|この列を含むテーブルを識別します。|  
@@ -111,7 +109,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="indexes"></a>インデックス  
 インデックスのメタデータをエクスポート、 **SSMA_Access_InventoryIndexes**テーブル。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|このインデックスを含むデータベースを識別します。|  
 |**TableId**|**uniqueidentifier**|このインデックスを含むテーブルを識別します。|  
@@ -125,7 +123,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="foreign-keys"></a>外部キー  
 外部キーのメタデータをエクスポート、 **SSMA_Access_InventoryForeignKeys**テーブル。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|この外部キーを含むデータベースを識別します。|  
 |**TableId**|**uniqueidentifier**|この外部キーを含むテーブルを識別します。|  
@@ -141,7 +139,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="queries"></a>クエリ  
 クエリのメタデータをエクスポート、 **SSMA_Access_InventoryQueries**テーブル。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|このクエリを含むデータベースを識別します。|  
 |**QueryId**|**int**|クエリを識別する増分する整数。 この列は、テーブルの主キーです。|  
@@ -154,7 +152,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="forms"></a>フォーム  
 形式のメタデータをエクスポート、 **SSMA_Access_InventoryForms**テーブル。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|このフォームが含まれるデータベースを識別します。|  
 |**FormId**|**int**|フォームを識別する増分する整数。 この列は、テーブルの主キーです。|  
@@ -163,16 +161,16 @@ ms.lasthandoff: 05/03/2018
 ## <a name="macros"></a>マクロ  
 マクロのメタデータをエクスポート、 **SSMA_Access_InventoryMacros**テーブル。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|マクロが含まれるデータベースを識別します。|  
 |**MacroId**|**int**|マクロを識別する増分する整数。 この列は、テーブルの主キーです。|  
 |**マクロ名**|**nvarchar (4000)**|マクロの名前。|  
   
-## <a name="reports"></a>レポート  
+## <a name="reports"></a>[レポート]  
 レポートのメタデータをエクスポート、 **SSMA_Access_InventoryReports**テーブル。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|レポートを含むデータベースを識別します。|  
 |**ReportId**|**int**|レポートを識別する増分する整数。 この列は、テーブルの主キーです。|  
@@ -181,7 +179,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="modules"></a>モジュール  
 モジュールのメタデータをエクスポート、 **SSMA_Access_InventoryModules**テーブル。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|モジュールを含むデータベースを識別します。|  
 |**ModuleId**|**int**|モジュールを識別する増分する整数。 この列は、テーブルの主キーです。|  

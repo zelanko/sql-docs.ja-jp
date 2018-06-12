@@ -1,31 +1,20 @@
 ---
 title: BottomPercent (DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- BOTTOMPERCENT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- BottomPercent function
-ms.assetid: 984eb18a-c55c-49f3-81fa-918dfc983174
-caps.latest.revision: 41
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 84b87d2bea1431b6e33a47e09887f1ab0ff753ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 3bfc4f178752d77fe8eb6807c91ebdc4bd3bb890
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842305"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +41,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="result-type"></a>結果の種類  
  テーブルです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **BottomPercent**関数は、ランクの増加順に最下位行を返します。 ランクがの結果値に基づいて、\<式をランク付け > 行ごとに、引数になるようの合計、\<式をランク付け > によって指定された割合の値は、少なくとも、 \<% > 引数。 **BottomPercent**指定した割合の値を満たしながら可能な最も小さい要素数を返します。  
   
 ## <a name="examples"></a>使用例  
@@ -125,7 +114,7 @@ NATURAL PREDICTION JOIN
 >  TOPPERCENT および BOTTOMPERCENT の MDX 関数は、比率の計算に使用される値に負の数が含まれていた場合に、予期しない結果を生成する場合があります。 この動作は、DMX 関数には影響しません。 詳細については、次を参照してください。 [BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md)です。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [関数&#40;DMX&#41;](../dmx/functions-dmx.md)  
   
   

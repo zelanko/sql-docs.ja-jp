@@ -1,8 +1,6 @@
 ---
 title: 付録 - 1 (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +16,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c49cf487a92859e77c24835c3d0d05fb0b10dc65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c97b1f8c85b9d90d9e580f2b2cc4c517855e3abf
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033819"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773108"
 ---
 # <a name="appendix---1-accesstosql"></a>付録 - 1 (AccessToSQL)
 SSMA コンソール コマンド ライン オプションの簡易表示:  

@@ -13,7 +13,7 @@ ms.openlocfilehash: c4ea0e1f9bfab567c792bdd7b233bea038e87f54
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576245"
 ---
 # <a name="security-element-xmla"></a>Security 要素 (XMLA)
@@ -51,7 +51,7 @@ ms.locfileid: "34576245"
   
  この要素の値は、次の表の一覧に示す文字列のいずれかに限定されています。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |*skipMembership*|セキュリティの定義が含まれますが、中に、メンバーシップ情報を除外**バックアップ**または**復元**コマンド。|  
 |*CopyAll*|セキュリティ定義とメンバーシップ情報中に含めます**バックアップ**または**復元**コマンド。|  

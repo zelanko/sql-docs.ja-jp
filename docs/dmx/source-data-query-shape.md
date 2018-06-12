@@ -1,32 +1,20 @@
 ---
 title: 図形 (DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SHAPE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SHAPE statement
-- multiple data sources
-ms.assetid: b9526ec2-40bc-4bf5-b4e5-774f71075065
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 0c31d8d4725d90200f7f2811f974ffd9b98bcaa2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8e5c86484252d45c8c7edbd79690159e116d9b3a
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841675"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;ソース データ クエリ&gt;-図形
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +55,7 @@ APPEND ({ <child table query> }
  *テーブルの列名*  
  入れ子になったテーブルの親テーブルに、列名を新たに追加します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  親テーブルと子テーブルを関連付ける列ごとにクエリを発行する必要があります。  
   
 ## <a name="examples"></a>使用例  
@@ -87,6 +75,6 @@ SHAPE {
  [&#60;ソース データ クエリ&#62;](../dmx/source-data-query.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

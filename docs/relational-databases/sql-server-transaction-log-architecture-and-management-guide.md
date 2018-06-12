@@ -27,11 +27,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 23119e2fafd68797b15a9baf525d52906f311178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6cd03ce43fd2b0a2fd454681e64edbd49e5f87a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34467978"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server トランザクション ログのアーキテクチャと管理ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +139,7 @@ ms.lasthandoff: 05/03/2018
   
  先行書き込みログがどのように機能するのかを理解するには、変更されたデータがディスクに書き込まれるしくみを把握しておくことが重要です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はバッファー キャッシュを保持し、データを取得する必要がある場合は、そのキャッシュの中へデータ ページを読み取ります。 ページがバッファー キャッシュ内で変更されたとき、その変更が直ちにディスクに書き戻されるわけではありません。代わりに、そのページは *ダーティ*とマークされます。 データ ページが物理的にディスクに書き込まれる前には、複数回の論理書き込みが行われる可能性があります。 論理書き込みを行うたびに、トランザクション ログ レコードが、変更を記録するログ キャッシュに挿入されます。 ログ レコードは、関連付けられているダーティ ページがバッファー キャッシュから削除されディスクに書き込まれる前に、ディスクに書き込まれる必要があります。 チェックポイント プロセスでは、指定されたデータベースからのページを含むバッファーのバッファー キャッシュを定期的にスキャンし、ダーティ ページをすべてディスクに書き込みます。 チェックポイントは、すべてのダーティ ページがディスクに書き込まれたことを確認するために作成されるポイントで、その後の復旧の時間を短縮します。  
   
- 変更されたデータ ページをバッファー キャッシュからディスクに書き込むことを "ページのフラッシュ" といいます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、関連付けられているログ レコードの書き込み前にダーティ ページをフラッシュしないためのロジックが用意されています。 ログ レコードは、トランザクションがコミットされるときにディスクに書き込まれます。  
+ 変更されたデータ ページをバッファー キャッシュからディスクに書き込むことを "ページのフラッシュ" といいます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、関連付けられているログ レコードの書き込み前にダーティ ページをフラッシュしないためのロジックが用意されています。 ログ レコードは、ログ バッファーがフラッシュされるときにディスクに書き込まれます。  これは、トランザクションがコミットされたとき、またはログ バッファーがいっぱいになったときに必ず発生します。  
   
 ##  <a name="Backups"></a> トランザクション ログのバックアップ  
  このセクションでは、トランザクション ログのバックアップと復元 (適用) の方法について説明します。 完全復旧モデルと一括ログ復旧モデルでは、データを復旧するためにトランザクション ログを定期的にバックアップすること (*ログのバックアップ*) が必要不可欠です。 ログのバックアップは、完全バックアップの実行中でも行うことができます。 復旧モデルの詳細については、「 [SQL Server データベースのバックアップと復元](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」を参照してください。  

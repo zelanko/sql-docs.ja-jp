@@ -1,8 +1,6 @@
 ---
 title: Access データベース移行の準備 (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
@@ -29,11 +27,12 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 1862e57551ccbc4a41c14c58b1fb0f9de43998d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eca76e8b1a585c4d97528792cef161ef68771f7e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774198"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>移行 (AccessToSQL) を Access データベースを準備します。
 Access データベースを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、どのデータベースを移行し、これらのデータベースが移行の準備ができていることを確認するを指定する必要があります。  

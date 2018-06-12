@@ -1,6 +1,6 @@
 ---
 title: LinRegIntercept (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6b8368039e1c8cd373ff74d66ff4b3507e5802c1
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 74fabfff0677643d29a270a35a1052f98bb1299b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579044"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741361"
 ---
 # <a name="linregintercept-mdx"></a>LinRegIntercept (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   セットの線形回帰を計算し、回帰直線では、x 切片の値を返します y ax+b の a を = です。  
   

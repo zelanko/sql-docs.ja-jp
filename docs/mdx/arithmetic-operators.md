@@ -1,6 +1,6 @@
 ---
 title: 算術演算子 |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4bf4a182c73acb18d649de3888f735f8842964dc
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c422df08152eaf9266a6ca3408bfce12e023c2a3
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34576954"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739461"
 ---
 # <a name="arithmetic-operators"></a>算術演算子
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   多次元式 (MDX) 内では、算術演算子を使用して、加算、減算、乗算、除算を含む算術演算を行うことができます。  
   

@@ -1,8 +1,6 @@
 ---
 title: プロジェクトの設定 (型のマッピング) (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -25,11 +23,12 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 072d8aaf4582237cc60a3e3e6d76b02a86dc27c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd5bc6a0db71d2836c068a261681d813bc2011b3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774468"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>プロジェクトの設定 (型のマッピング) (AccessToSQL)
 プロジェクトの種類のマッピング設定では、SSMA プロジェクトの既定の型マッピングを設定できます。 個々 のデータベース オブジェクトの型マッピングを指定することもできます。 詳細については、次を参照してください。[マッピング ソースとターゲットのデータ型](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)です。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
 -   使用して、**プロジェクト設定の既定の**ダイアログ ボックスをすべてのプロジェクトの構成オプションを設定します。 型マッピングの設定にアクセスする、**ツール**メニューの **プロジェクト設定の既定の**、対象の設定が表示する/から変更を必要な移行プロジェクトの種類を選択**移行のターゲット バージョン**ドロップダウンをクリックして**型マッピング**左側のウィンドウでします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **変換元の型**  
 アクセス データ型にマップします。  
   
@@ -74,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 **[編集]**  
 マッピングのリスト内のデータ型を編集するのには、をクリックします。  
   
-**[削除]**  
+**削除**  
 マッピングのリストから選択したデータ型のマッピングを削除する をクリックします。  
   
 **既定値にリセット**  

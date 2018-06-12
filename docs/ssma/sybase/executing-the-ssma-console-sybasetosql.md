@@ -3,8 +3,6 @@ title: SSMA コンソール (SybaseToSQL) を実行 |Microsoft ドキュメン�
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -27,11 +25,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbad5207581a713327112b9d319c69f706ad2f61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c208784d3399b0ab37a046b1452320544f143163
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778568"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA コンソール (SybaseToSQL) を実行します。
 Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実行し、SSMA 動作を制御できます。 次のセクションでは、同じを詳しく説明します。  
@@ -668,7 +667,7 @@ fail-script>" (optional)
 />  
 ```  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 コマンド ライン オプションについては、次を参照してください。 [SSMA コンソール (AccessToSQL) でのコマンド ライン オプション](../access/command-line-options-in-ssma-console-accesstosql.md)です。  
   
 サンプルのコンソールのスクリプト ファイルについては、次を参照してください[サンプル コンソール スクリプト ファイルで作業&#40;SybaseToSQL。&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  

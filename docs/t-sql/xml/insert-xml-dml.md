@@ -22,11 +22,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c851283cd546038c11700ed111282a9aa1a039ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22bc1b365e04c5e06e6278974346b1626434a24b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744071"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +134,7 @@ GO
 ```  
   
 ### <a name="c-inserting-attributes-into-a-document"></a>C. ドキュメントへの属性の挿入  
- 次の例では、属性をドキュメントに挿入する方法について説明します。まず、**xml** 型の変数にドキュメントが代入されます。 次に、一連の **insert** XML DML ステートメントを使用して、ドキュメントに属性が挿入されます。 各属性の挿入後、SELECT ステートメントによって結果が表示されます。  
+ 次の例では、ドキュメントに属性を挿入する方法を示します。 まず、ドキュメントが **xml** 型の変数に代入されます。 次に、一連の **insert** XML DML ステートメントを使用して、ドキュメントに属性が挿入されます。 各属性の挿入後、SELECT ステートメントによって結果が表示されます。  
   
 ```  
 USE AdventureWorks;  

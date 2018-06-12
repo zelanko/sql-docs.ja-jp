@@ -1,8 +1,6 @@
 ---
 title: DB2 データベース (DB2ToSQL) への接続 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d9f3d4b687c86804cc2339d675333c3a7e73ff6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 802cb8a20152f32bc6edcd44e36252754e740426
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774608"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>DB2 データベース (DB2ToSQL) に接続します。
 DB2 データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、移行する DB2 データベースに接続する必要があります。 接続すると、SSMA は、すべての DB2 スキーマに関するメタデータを取得し、DB2 メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  

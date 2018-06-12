@@ -1,6 +1,6 @@
 ---
 title: BottomSum (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1c82286951f064bfd5a06c7ef5f2735484f73db2
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0f923761144389a97962f7269cc5164d0dbdbf51
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577194"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739611"
 ---
 # <a name="bottomsum-mdx"></a>BottomSum (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   指定されたセットを昇順で並べ替え、合計が指定された値以下になるように、値の小さい方から組のセットを作成して返します。  
   
@@ -32,7 +32,7 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
- *[値]*  
+ *Value*  
  各組の比較の基準値を指定する有効な数値式です。  
   
  *Numeric_Expression*  
