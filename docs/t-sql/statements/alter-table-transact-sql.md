@@ -400,7 +400,7 @@ UPDATE MyTable SET NullCol = N'some_value' WHERE NullCol IS NULL;
 ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;  
 ```  
   
- CREATE TABLE ステートメントまたは ALTER TABLE ステートメントでテーブルを作成または変更すると、データベースとセッションの設定によって、列定義で使われているデータ型の NULL 許容属性が影響を受けたり、場合によっては無効になることがあります。 計算列でない場合は、常に列を明示的に NULL または NOT NULL として定義することをお勧めします。  
+ CREATE TABLE ステートメントまたは ALTER TABLE ステートメントでテーブルを作成または変更すると、データベースとセッションの設定によって、列定義で使われているデータ型の NULL 許容属性が影響を受けたり、場合によってはオーバーライドされたりすることがあります。 計算列でない場合は、常に列を明示的に NULL または NOT NULL として定義することをお勧めします。  
   
  ユーザー定義データ型の列を追加する場合は、NULL 値を許容するかどうかの設定がユーザー定義データ型と同じになるように列を定義し、列の既定値を指定することをお勧めします。 詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。  
   
@@ -534,7 +534,7 @@ WITH CHECK | WITH NOCHECK
  MAXDOP = *max_degree_of_parallelism*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 操作中は、**max degree of parallelism** 構成オプションを無効にします。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
+ 操作中は、**max degree of parallelism** 構成オプションをオーバーライドします。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
   
  並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP オプションを使用します。 最大数は 64 プロセッサです。  
   

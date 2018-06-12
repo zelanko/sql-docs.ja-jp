@@ -353,7 +353,7 @@ ON *partition_scheme_name* **( *column_name* )**
  OFF または *fillfactor* の指定なし  
  中間レベルのページはほぼ全容量が使用されます。ただし、中間ページにあるキーのセットを考慮して、インデックスに割り当てることのできる、少なくとも 1 行の最大サイズが収まる分の領域は残されます。  
   
- PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用されるので、PAD_INDEX オプションは、FILLFACTOR が指定されている場合にのみ有効です。 FILLFACTOR で指定されるパーセンテージで 1 行分のデータを格納できない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では内部的に、最小サイズを格納できるパーセンテージが使用されます。 中間インデックス ページの行数は、*fillfactor* の値がどれだけ小さくなっても 2 未満にはなりません。  
+ PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用されるので、PAD_INDEX オプションは、FILLFACTOR が指定されている場合にのみ有効です。 FILLFACTOR で指定されるパーセンテージで 1 行分のデータを格納できない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では内部的に、最小サイズを格納できるパーセンテージにオーバーライドします。 中間インデックス ページの行数は、*fillfactor* の値がどれだけ小さくなっても 2 未満にはなりません。  
   
  旧バージョンと互換性のある構文では、WITH PAD_INDEX は WITH PAD_INDEX = ON と同じです。  
   
