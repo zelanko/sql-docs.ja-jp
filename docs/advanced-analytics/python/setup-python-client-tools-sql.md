@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203804"
 ---
 # <a name="set-up-python-client-tools-for-use-with-sql-server-machine-learning"></a>SQL Server の Machine Learning で使用するためのクライアント ツールの Python の設定します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -151,7 +152,7 @@ Python のどのインスタンスが呼び出されているを確認できる�
 
 ### <a name="verify-that-python-can-be-called-from-sql-server"></a>Python を SQL Server から呼び出せることを確認してください。
 
-Python は、SQL Server と通信していることを確認するには、SQL Server Management Studio を開きます。 (など、別のようなツールを使用することができます[SQL 操作 Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is))。新しく開きます**クエリ**任意の単純な Python は、ストアド プロシージャのコンテキストでコマンド ウィンドウと実行。
+Python は、SQL Server と通信していることを確認するには、SQL Server Management Studio を開きます。 (など、別のようなツールを使用することができます[SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is))。新しく開きます**クエリ**任意の単純な Python は、ストアド プロシージャのコンテキストでコマンド ウィンドウと実行。
 
 ```SQL
 EXEC sp_execute_external_script @language = N'Python', 
