@@ -23,7 +23,7 @@ ms.locfileid: "35239292"
   
  **適用対象:** 多次元サーバー モードのみ  
   
-## <a name="memory"></a>[メモリ]  
+## <a name="memory"></a>Memory  
  **DefaultPageSizeForData**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -45,8 +45,8 @@ ms.locfileid: "35239292"
  **DefaultPageSizeForProp**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="lazyprocessing"></a>レイジー処理  
- **有効**  
+## <a name="lazyprocessing"></a>LazyProcessing  
+ **Enabled**  
  レイジー集計処理が有効かどうかを示すブール型プロパティです。  
   
  **SleepIntervalSecs**  
@@ -63,7 +63,7 @@ ms.locfileid: "35239292"
  **MaxRetries**  
  レイジー処理が失敗した場合にエラーが発生する前にイベントでの再試行の回数を定義する、符号付き 32 ビット整数のプロパティです。  
   
-## <a name="processplan"></a>プロセス プラン  
+## <a name="processplan"></a>ProcessPlan  
  **CacheRowsetRows**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "35239292"
  **OptimizeSchema**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="proactivecaching"></a>プロアクティブ キャッシュ  
+## <a name="proactivecaching"></a>ProactiveCaching  
  **DefaultRefreshInterval**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "35239292"
  **PartitionLatencyAccuracy**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="process"></a>[処理]  
+## <a name="process"></a>Process  
  **AggregationMemoryLimitMax**  
  集計処理に充てることができるメモリの最大量を定義する、符号付き 64 ビット倍精度浮動小数点数のプロパティです。物理メモリの比率として表されます。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "35239292"
  **ROLAPDimensionProcessingEffort**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="query"></a>[クエリ]  
+## <a name="query"></a>Query  
  **AggregationsUseEnabled**  
  保存されている集計が実行時に使用されるかどうかを定義するブール型プロパティです。 このプロパティでは、情報提供およびベンチマークの目的で、集計のデザインを変更したり再処理したりせずに集計を無効にすることができます。  
   
@@ -348,7 +348,7 @@ ms.locfileid: "35239292"
  **DataCache\ MemoryModel\ Tax**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="jobs"></a>の  
+## <a name="jobs"></a>Jobs  
  **ProcessAggregation\ MemoryModel\ Income**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
