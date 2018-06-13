@@ -1,4 +1,4 @@
-﻿---
+---
 title: 更新済み - SSMA for SQL Server のドキュメント |Microsoft ドキュメント
 description: 更新されたコンテンツで最近変更したドキュメントについては、SQL Server Migration Assistant (SSMA) for Microsoft SQL Server のスニペットを表示します。
 manager: craigg

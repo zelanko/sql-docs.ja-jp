@@ -18,6 +18,7 @@ ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34306491"
 ---
 # <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>内のサーバー グループ [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/18/2018
 
 既存のサーバー グループを編集するには、グループを右クリックし、**サーバー グループの編集** を選択します。
 
-使用可能なサーバー グループの色を編集するには、[ユーザー設定](settings.md) の*サーバー グループ*の値を編集します。
+使用可能なサーバー グループの色を編集するには、編集、*サーバー グループ*値[ユーザー設定](settings.md)です。
 
 > [!TIP]
 > 異なるサーバー グループの間でサーバーをドラッグ & ドロップできます。

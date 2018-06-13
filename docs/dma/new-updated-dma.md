@@ -1,4 +1,4 @@
-﻿---
+---
 title: 更新済み - SQL Server ドキュメントの DMA |Microsoft ドキュメント
 description: 更新されたコンテンツで最近変更したドキュメントについては、データ移行アシスタント (DMA) 用 Microsoft SQL Server のスニペットを表示します。
 manager: craigg
@@ -14,7 +14,7 @@ ms.component: dma
 ms.date: 04/30/2018
 ms.openlocfilehash: d462c46dff9e2fd34983522f69e4f802d8861b35
 ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/05/2018
 ms.locfileid: "34773288"
