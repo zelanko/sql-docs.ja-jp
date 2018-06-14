@@ -89,7 +89,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 次の例は、AdventureWorks2012 データベースで記述されています。
   
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. テーブルの DML トリガーを無効にする  
- 次の例では、テーブル `uAddress` に作成されたトリガー `Address` を無効にします。  
+ 次の例では、テーブル `Address` に作成されたトリガー `uAddress` を無効にします。  
   
 ```  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
