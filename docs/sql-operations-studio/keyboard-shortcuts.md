@@ -1,6 +1,6 @@
 ---
-title: 作成し、SQL 操作 Studio (プレビュー) でのキーボード ショートカットをカスタマイズする |Microsoft ドキュメント
-description: 作成し、SQL 操作 Studio (プレビュー) でのキーボード ショートカットをカスタマイズする方法を説明します。
+title: 作成し、SQL Operations Studio (プレビュー) でのキーボード ショートカットをカスタマイズする |Microsoft ドキュメント
+description: 作成し、SQL Operations Studio (プレビュー) でのキーボード ショートカットをカスタマイズする方法を説明します。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql

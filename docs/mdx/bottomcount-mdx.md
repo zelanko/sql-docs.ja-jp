@@ -1,34 +1,23 @@
 ---
 title: BottomCount (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- BOTTOMCOUNT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- BottomCount function
-ms.assetid: 1441dab3-7885-4e92-9d48-21d832286677
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 38028508e955779419d8728094edee47bf8c0821
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 424c928f64b784070520f4cebe450dd5465fea41
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739781"
 ---
 # <a name="bottomcount-mdx"></a>BottomCount (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   セットを昇順に並べ替え、指定されたセット内の組を、値の小さい方から指定された数だけ返します。  
   
@@ -43,13 +32,13 @@ BottomCount(Set_Expression, Count [,Numeric_Expression])
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
- *Count*  
+ *カウント*  
  返す組の数を指定する有効な数値式です。  
   
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  数値式が指定されている場合、指定されたセットに対して評価した、指定された数値式の値に基づいて、セット内の組を昇順で並べ替えます。 **BottomCount**関数し、指定した数の最小値で組を返します。  
   
 > [!IMPORTANT]  
@@ -73,6 +62,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

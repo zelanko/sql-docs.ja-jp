@@ -1,34 +1,23 @@
 ---
 title: 生成 (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- GENERATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Generate function
-ms.assetid: 696a229d-c2f1-47b7-9dca-7b0a6b547d9b
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: be6b05c0738b2407d6d803bae471a73ead15e353
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740891"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   あるセットを別のセットの各メンバーに適用し、その結果セットを和集合で結合します。 または、セットに対して文字列式を評価し、作成された連結文字列を返します。  
   
@@ -56,10 +45,10 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *区切り記号*  
  文字列式として表された有効な区切り記号です。  
   
-## <a name="remarks"></a>解説  
- 2 番目のセットが指定されている場合、**生成**関数が 2 番目のセット内の組を 1 番目のセット内の各組に適用することによって生成されるセットを返します*、*し、和集合で設定し、その結果を結合します。 場合**すべて**を指定すると、関数は、結果セット内の重複部分を保持します。  
+## <a name="remarks"></a>コメント  
+ 2 番目のセットが指定されている場合、**生成**関数が 2 番目のセット内の組を 1 番目のセット内の各組に適用することによって生成されるセットを返します *、* し、和集合で設定し、その結果を結合します。 場合**すべて**を指定すると、関数は、結果セット内の重複部分を保持します。  
   
- 文字列式が指定されている場合、**生成**関数は、最初のセット内の各組に対して指定された文字列式を評価することによって生成される文字列を返します*、*し、結果を連結します。 必要に応じて、結果の連結文字列内の各文字列を区切ることもできます。  
+ 文字列式が指定されている場合、**生成**関数は、最初のセット内の各組に対して指定された文字列式を評価することによって生成される文字列を返します *、* し、結果を連結します。 必要に応じて、結果の連結文字列内の各文字列を区切ることもできます。  
   
 ## <a name="examples"></a>使用例  
   
@@ -116,7 +105,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>文字列  
+### <a name="string"></a>String  
  次の例は、の使用を示しています。**生成**文字列を返します。  
   
 ```  
@@ -139,6 +128,6 @@ FROM [Adventure Works]
 >  この形式の**生成**関数場合に利用でき、計算のデバッグように、セット内のすべてのメンバーの名前を表示する文字列を返すことができます。 一連の厳密な MDX 表記よりも読みやすくする可能性がある、 [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md)関数が返される。  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

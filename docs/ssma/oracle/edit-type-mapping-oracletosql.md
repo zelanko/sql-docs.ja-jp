@@ -1,8 +1,6 @@
 ---
 title: 型のマッピング (OracleToSQL) は編集 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 0a1a987c31d4b481cda2ee55adc9ba24806ec1b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1372af9e205bc3f9d9bc06978eb7227b4682cdb
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777118"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>型のマッピング (OracleToSQL) の編集します。
 **型マッピングの編集** ダイアログ ボックスでは、ソースと変換先のデータベース オブジェクト間の種類をマップする方法を指定することができます。  
@@ -32,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 テーブルに固有の型マッピングは、データベースをオーバーライドし、プロジェクトの種類のマッピング。 データベース固有のマッピングは、project のマッピングをオーバーライドします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **ソースの種類**  
 マップするソースのデータ型を選択して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
   

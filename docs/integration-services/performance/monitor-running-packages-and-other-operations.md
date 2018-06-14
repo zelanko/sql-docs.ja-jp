@@ -1,7 +1,7 @@
 ---
 title: パッケージとその他の操作を実行するモニター | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: performance
@@ -19,11 +19,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed3dff81ab07e210b9b239987fc2a7c9c2c52b2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2b5a991661e3aa53de611a0cf78e04b2a6d23b5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772150"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>パッケージとその他の操作を実行するモニター
   次の 1 つ以上のツールを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行、プロジェクトの検証、およびその他の操作を監視できます。 データ タップなどの特定のツールは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されたプロジェクトに対してのみ使用できます。  
@@ -45,7 +46,12 @@ ms.lasthandoff: 05/03/2018
      これらのパフォーマンス カウンターの詳細については、「 [パフォーマンス カウンター](../../integration-services/performance/performance-counters.md)」を参照してください。  
   
 -   データ タップ  
-  
+
+> [!NOTE]
+> この記事では、実行中の SSIS パッケージを監視する方法 (全般) と、オンプレミスで実行中のパッケージを監視する方法について説明します。 Azure SQL Database で SSIS を実行し、監視することもできます。 詳細については、「[Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」 (SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする) を参照してください。
+>
+> Linux でも SSIS パッケージを実行できますが、Linux では監視ツールが提供されません。 詳しくは、「[Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md)」(SSIS で Linux 上のデータの抽出、変換、読み込みを行う) をご覧ください。
+
 ## <a name="operation-types"></a>操作の種類  
  **サーバー上の** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログでは、さまざまな種類の操作が監視されます。 各操作には、複数のメッセージを関連付けることができます。 各メッセージは、複数の種類のうちの 1 つに分類できます。 たとえば、メッセージの種類は、情報、警告、またはエラーとなります。 メッセージの種類の一覧については、Transact-SQL の [catalog.operation_messages &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) ビューに関するドキュメントを参照してください。 操作の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。  
   
@@ -135,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
  このレポートには、次の情報のセクションが表示されます。  
   
-|セクション|Description|  
+|セクション|[説明]|  
 |-------------|-----------------|  
 |**実行情報**|過去 24 時間のさまざまな状態 (失敗、実行中、成功、その他) の実行の数を示します。|  
 |**Package Information**|過去 24 時間に実行されたパッケージの合計数を示します。|  
@@ -149,7 +155,7 @@ ms.lasthandoff: 05/03/2018
   
  このレポートには、次の情報のセクションが表示されます。  
   
-|セクション|Description|  
+|セクション|[説明]|  
 |-------------|-----------------|  
 |[フィルター]|レポートに適用される現在のフィルターを示します (開始時間範囲など)。|  
 |実行情報|各パッケージの実行の開始時刻、終了時刻、および持続時間を示します。パッケージの実行で使用されたパラメーター値 (パッケージ実行タスクで子パッケージに渡された値など) の一覧を表示できます。 パラメーターの一覧を表示するには、[概要] をクリックします。|  
@@ -163,7 +169,7 @@ ms.lasthandoff: 05/03/2018
   
  このレポートには、次の情報のセクションが表示されます。  
   
-|セクション|Description|  
+|セクション|[説明]|  
 |-------------|-----------------|  
 |Assert|レポートに適用される現在のフィルター (指定した文字列を使用し、 **[前回失敗した日時]** 範囲にある接続など) を示します。<br /><br /> 特定の日付範囲中に発生した接続エラーのみを表示するには、 **[前回失敗した日時]** を設定します。 範囲には、複数の日、月、または年を指定できます。|  
 |詳細|接続文字列、接続中に失敗した実行の回数、および最後に失敗した日付を示します。|  
@@ -183,7 +189,7 @@ ms.lasthandoff: 05/03/2018
  カスタム レポートの作成および追加方法については、「 [Add a Custom Report to Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f)」(Management Studio へのカスタム レポートの追加) を参照してください。  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートの表示
-  現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用できるようになりました。  レポートの詳細については、「 [Integration Services サーバーのレポート](#reports)」をご覧ください。  
+  現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用できるようになりました。  レポートの詳細については、「 [Integration Services サーバーのレポート](#reports)」を参照してください。  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートを表示するには  
   

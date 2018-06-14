@@ -1,8 +1,6 @@
 ---
 title: SQL Server (MySQLToSQL) にデータベース オブジェクトを読み込み、変換された |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3d96528033ab2f852be1e91e64efdda77eb3807a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ee7299f1e10ec6fa0382bf5d2dda9cd17d66417
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776448"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>SQL Server (MySQLToSQL) にデータベース オブジェクトを変換後の読み込み
 MySQL データベースを変換した後に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure に作成されたデータベース オブジェクトを読み込むことができますか[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 SSMA は、オブジェクトを作成したか、またはオブジェクトのスクリプトを作成して、スクリプトを実行します。 SSMA によりの実際の内容で対象のメタデータを更新する、また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベース。  

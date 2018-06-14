@@ -13,7 +13,7 @@ ms.openlocfilehash: 3a8dfff1c8a551157661bcb1de5700bf51a7f914
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574914"
 ---
 # <a name="axes-element-xmla"></a>Axes 要素 (XMLA)
@@ -75,9 +75,9 @@ ms.locfileid: "34574914"
   
 |演算|説明|  
 |---------------|-----------------|  
-|メンバー|ディメンション階層のメンバーを表す軸の最小単位です。|  
+|Member|ディメンション階層のメンバーを表す軸の最小単位です。|  
 |メンバー|コレクション**メンバー**オブジェクトから同じディメンション階層。|  
-|組|異なるディメンション階層に属するメンバーのコレクションです。|  
+|Tuple|異なるディメンション階層に属するメンバーのコレクションです。|  
 |組|コレクション**組**同じ次元を持つオブジェクト。|  
 |Union|複数のセットの和集合です。|  
 |CrossJoin|複数のセットのデカルト積です。|  

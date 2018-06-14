@@ -2,7 +2,7 @@
 title: ALTER DATABASE の SET オプション (Transact-SQL) | Microsoft Docs
 description: SQL Server および Azure SQL Database で、自動調整、暗号化、クエリ ストアなどのデータベースのオプションを設定する方法について説明します
 ms.custom: ''
-ms.date: 12/20/2017
+ms.date: 6/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -33,16 +33,17 @@ caps.latest.revision: 159
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: ea637d3853d3e63cbab6806022000c04d95e3e92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52ad590fd7efeddc9a7e086f1337b4e61a850fc1
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744141"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース オプションの設定に関連した ALTER DATABASE 構文について説明します。 その他の ALTER DATABASE 構文については、次のトピックを参照してください。  
+  この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース オプションの設定に関連した ALTER DATABASE 構文について説明します。 その他の ALTER DATABASE 構文については、次のトピックを参照してください。  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
@@ -274,7 +275,7 @@ SET
   
  `CURRENT` を指定すると、現在のデータベースでアクションが実行されます。 `CURRENT` は、すべてのコンテキスト内のすべてのオプションでサポートされるわけではありません。 `CURRENT` でエラーが発生した場合は、データベース名を指定してください。  
   
- **\<auto_option> ::=**  
+ **\<auto_option> ::=**
   
  自動オプションを制御します。  
  <a name="auto_close"></a> AUTO_CLOSE { ON | OFF }  

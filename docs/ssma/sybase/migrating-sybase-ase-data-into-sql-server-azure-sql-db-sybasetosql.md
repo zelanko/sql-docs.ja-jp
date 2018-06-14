@@ -3,8 +3,6 @@ title: SQL Server - Azure SQL DB に Sybase ASE データの移行 |Microsoft �
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -21,11 +19,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3491ebb2eab0933aad75dd234e3f1d6909e5571f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d942e0cbf5aed745d58541ef348647a7d727665
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779088"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>SQL Server - Azure SQL DB (SybaseToSQL) に Sybase ASE データの移行
 Sybase Adaptive Server Enterprise (ASE) データベース オブジェクトを正常に読み込んだ後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB に ASE からデータを移行することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。  
@@ -116,5 +115,5 @@ Sybase Adaptive Server Enterprise (ASE) データベース オブジェクトを
 > SQL Express エディションは、対象データベースとして使用される、クライアント側のデータの移行のみが許可されているし、サーバー側のデータの移行はサポートされていません。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB &#40;への Sybase ASE データベースの移行SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server - Azure SQL DB に ASE Sybase データベースを移行する&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

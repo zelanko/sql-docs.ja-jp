@@ -1,6 +1,6 @@
 ---
 title: MemberToStr (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac9998edcf11477a2a4aff1af951d2dc4a17cbbb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9bd0b59cca8560ae615e7044f13161a01f26835b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581574"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742101"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   指定されたメンバーに対応する多次元式 (MDX) 形式の文字列を返します。  
   

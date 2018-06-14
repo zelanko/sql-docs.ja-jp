@@ -1,8 +1,6 @@
 ---
 title: DB2 への接続 (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 09d4e69aefa89ed9930badc575be4fdc302d5f35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 050c3e5755b86fc1928e6d44292e7e2fb82f5c0e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775128"
 ---
 # <a name="connect-to-db2-db2tosql"></a>DB2 への接続 (DB2ToSQL)
 使用して、 **DB2 への接続**を移行する DB2 データベースに接続する ダイアログ ボックス。  
   
 このダイアログ ボックスにアクセスする、**ファイル**メニューの  **DB2 への接続**です。 以前接続した場合、コマンドは**DB2 への再接続**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **プロバイダー**  
 DB2 データベースへの接続用のデータ アクセス プロバイダーを選択します。 使用可能なプロバイダーは、DB2 クライアント プロバイダー、OLE DB プロバイダーです。 既定値は、DB2 クライアント プロバイダーです。  
   

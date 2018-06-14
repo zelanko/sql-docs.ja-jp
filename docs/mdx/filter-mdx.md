@@ -1,34 +1,23 @@
 ---
 title: フィルター (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- filter
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Filter function
-ms.assetid: f2df51c8-6acb-4300-b71c-2a480c9fbdf8
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 66f71d8fe604eb2002b6c1ed47afaf5ef09b1eb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: d740148052712a69a39e0de314496733b3b26a8b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740531"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   指定されたセットを検索条件に基づいて絞り込み、結果セットを返します。  
   
@@ -46,7 +35,7 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  true または false に評価される有効な多次元式 (MDX) 論理式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **フィルター**関数は、指定されたセット内の各組に対して指定された論理式を評価します。 論理式の評価が、指定されたセット内の各組で構成されるセットを返します**true**です。 評価される組がない場合**true**空のセットが返されます。  
   
  **フィルター**関数の動作と同様の方法で、 [IIf](../mdx/iif-mdx.md)関数。 **IIf**関数では、2 つのオプションの 1 つだけを返しますは MDX 論理式の評価に基づき、while、**フィルター**関数を指定した検索条件を満たす組のセットを返します。 実際には、**フィルター**関数が実行される`IIf(Logical_Expression, Set_Expression.Current, NULL)`セット、および返します内の組ごとに、その結果セットです。  
@@ -96,6 +85,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

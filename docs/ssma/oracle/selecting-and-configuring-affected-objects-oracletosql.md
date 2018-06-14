@@ -1,8 +1,6 @@
 ---
 title: 影響を受けたオブジェクト (OracleToSQL) の選択と構成 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4593830a2cc22b04977f117502bb14118b1b31a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0db1a6e426c7ca889b9805850ec81f5de120b0a5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777988"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>影響を受けたオブジェクト (OracleToSQL) の選択と構成
 このページでは、テーブルを選択して、SSMA、前の手順で選択されたオブジェクトの実行の結果を検証するときに、外部キーを変更とを比較する必要があります。 また、検証パラメーターをカスタマイズすることができます。  
@@ -32,7 +31,7 @@ Oracle オブジェクト ツリーで、ウィンドウの左側にある、テ
   
 SSMA テスターは、これらのオブジェクトのいずれかを確認できない場合、は、ラベルの付いたリンクが表示されます**によって選択したオブジェクトには、エラーが含まれている**[オブジェクト] ツリー。 なぜこれらのオブジェクトを比較することはできません、上の理由からや不適切なオブジェクトの選択を解除するは、このリンクをクリックします。  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>テーブル  
 あるテーブル タブには、選択されたテーブルのグリッド ビューが含まれています。 グリッドには、選択したテーブルについては、次の情報が含まれています。  
   
 -   列名  
@@ -45,7 +44,7 @@ SSMA テスターは、これらのオブジェクトのいずれかを確認で
   
 -   Rule  
   
--   既定値  
+-   既定  
   
 -   Identity  
   
@@ -54,10 +53,10 @@ SSMA テスターは、これらのオブジェクトのいずれかを確認で
 ## <a name="sql"></a>Sql  
 [SQL] タブには、"Create table"が含まれています。 選択されたテーブルの SQL です。  
   
-## <a name="data"></a>Data  
+## <a name="data"></a>data  
 [データ] タブでは、選択されたテーブル内のデータが表示されます。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
 [プロパティ] タブには、選択したテーブルのプロパティが表示されます。 次のフィールド、[プロパティ] タブの下。  
   
 -   作成または最後に変更されました。  

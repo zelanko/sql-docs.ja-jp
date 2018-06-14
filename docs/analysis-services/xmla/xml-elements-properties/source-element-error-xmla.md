@@ -13,7 +13,7 @@ ms.openlocfilehash: de8496fb688066830605fea99e74944be1193d6f
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576324"
 ---
 # <a name="source-element-error-xmla"></a>Source 要素 (Error) (XMLA)
@@ -43,7 +43,7 @@ ms.locfileid: "34576324"
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[[エラー]](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)|  
+|親要素|[Error](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  

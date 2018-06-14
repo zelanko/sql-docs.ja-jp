@@ -1,8 +1,6 @@
 ---
 title: SQL Server Migration Assistant for DB2 (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 08/09/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 12e96334e19d6991ad9d80d1b0af51797fefc6f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92f78365f4cc9d8363664b8296a36b23bfcdee81
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775568"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>SQL Server Migration Assistant for DB2 (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for DB2 を DB2 データベースを移行するためのツールは、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]で Windows と Linux (2017プレビュー)、または Azure SQL DB します。 SSMA for DB2 が DB2 データベース オブジェクトに変換します[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース オブジェクトと、内のオブジェクトを作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、DB2 からからデータを移行し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。  
@@ -31,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="contents"></a>目次  
   
-|セクション|Description|  
+|セクション|説明|  
 |-----------|---------------|  
 |[SSMA for DB2 の新機能](http://msdn.microsoft.com/en-us/1cc38f85-3caa-42d0-8c76-a380c1d15c67)|SSMA for DB2 のこのバージョンの新機能|  
 |[SSMA の DB2 クライアントのインストール&#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|前提条件と DB2 クライアントと必須コンポーネントの SSMA を実行しているコンピューターにインストールする方法を説明するトピックが含まれています[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  

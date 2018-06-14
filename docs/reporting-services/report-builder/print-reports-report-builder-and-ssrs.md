@@ -1,7 +1,7 @@
 ---
-title: レポートの印刷 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: レポートの印刷 (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-builder
@@ -15,14 +15,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f5e5e9cd47e550db2e4c68739832c6815d4ec660
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5973ae6180a138a56c6c130755c699a7b23c918
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709050"
 ---
-# <a name="print-reports-report-builder-and-ssrs"></a>レポートの印刷 (レポート ビルダーおよび SSRS)
-  レポートをレポート サーバーに保存した後は、ブラウザーやレポート マネージャーのほか、エクスポートされたレポートの表示に使用する任意のアプリケーションで、レポートを表示および印刷できます。 レポートを保存する前にプレビューする場合は、印刷することができます。  
+# <a name="print-reports---reporting-services-ssrs"></a>レポートの印刷 - Reporting Services (SSRS)
+  レポートをレポート サーバーに保存した後は、Web ポータル、またはエクスポートされたレポートの表示に使用する任意のアプリケーションで、レポートを表示および印刷できます。 レポートを保存する前にプレビューする場合は、印刷することができます。  
   
  すべての印刷処理は、要求時にクライアント コンピューター上で行われます。 Web サーバーに接続されているプリンターに直接レポート サーバーから印刷ジョブを送信できるようなサーバー側印刷機能はありません。 プリンターや印刷オプションは、個々のレポート ユーザーが標準の **[印刷]** ダイアログ ボックスを使用して選択します。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
- クライアント側印刷機能を使用して Web ブラウザーやレポート マネージャーからレポートを印刷する方法を説明します。  
+ クライアント側印刷機能を使用して、Web ポータルからレポートを印刷する方法を説明します。  
   
  [他のアプリケーションからのレポートの印刷 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md)  
  別のアプリケーションにエクスポートされたレポートを印刷する方法を説明します。  

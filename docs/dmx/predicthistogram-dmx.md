@@ -1,31 +1,20 @@
 ---
 title: PredictHistogram (DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictHistogram
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictHistogram function
-ms.assetid: 85ffc542-96e7-4f58-aaa3-34d76befcedf
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a7b6c9df43d66d69b9dea1e06bea646a6a31d4dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842145"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>戻り値の型  
  テーブルです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ヒストグラムは統計情報列を生成します。 返されたヒストグラムの列構造で使用される列参照の種類によって異なります、 **PredictHistogram**関数。  
   
 ## <a name="scalar-columns"></a>スカラー列  
@@ -103,9 +92,9 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

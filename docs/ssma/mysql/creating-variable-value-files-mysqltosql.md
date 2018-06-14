@@ -1,8 +1,6 @@
 ---
 title: 変数値ファイル (MySQLToSQL) を作成する |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 48b32cf3319c39b617586495f233ff706d72044d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d350957cb1590fa2aec5fcd31028849191d8f5d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775872"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>変数値ファイル (MySQLToSQL) を作成します。
 変数の値ファイルと同様に、送信元または送信先のサーバー名に 1 つのサーバーの移行を頻繁に変更するコマンドのパラメーター値で構成される XML ファイルです。 多数のデータベースの移行が発生すると、各送信元サーバーの値を格納するための複数の変数ファイルが作成されでマスター スクリプト ファイルで参照されている、 **– v**コマンド ライン スイッチです。 これは、複数の変数ファイルで変数の値を持ついくつかのスクリプト ファイルの静的な値を維持するために役立ちます。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 > 2.  The escape character for **$** is **$$**. パラメーターの変数または静的な値の値を含むかどうか**$** し (ドル) シンボル**$$** 変数の代わりに文字として扱うことを示す指定する必要があります。  
 > 3.  保守容易性のために、変数内で宣言できます`‘variable-group’`ユーザーの論理的な分離の要素は、変数を定義します。  この要素の使用は必須ではありません。  
   
-**例 :**  
+**使用例:**  
   
 **例 1:**  
   

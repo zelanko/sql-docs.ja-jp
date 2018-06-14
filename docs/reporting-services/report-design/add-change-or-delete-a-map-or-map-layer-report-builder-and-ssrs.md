@@ -1,7 +1,7 @@
 ---
 title: マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -32,11 +32,12 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8e627e570e310239c1973b8b24a44499b0bd47e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 459aa9dde1f5c148257323d80e9d26841ecb9a53
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550673"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS)
   マップは、レイヤーのコレクションです。 マップを [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートに追加する場合は、先にレイヤーを定義します。 追加のレイヤーを作成するには、マップ レイヤー ウィザードを実行します。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表では、 **マップ** ペインのツール バー アイコンについて説明します。  
   
-|記号|Description|使用する場合|  
+|記号|[説明]|使用する場合|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|マップ レイヤー ウィザード|ウィザードを使用してレイヤーを追加するには、 **[レイヤーの新規作成ウィザード]** をクリックします。|  
 |![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|レイヤーの追加|レイヤーを手動で追加するには、 **[レイヤーの追加]** をクリックし、追加するマップ レイヤーの種類をクリックします。|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 05/03/2018
 4.  **[ファイル名]** に ESRI シェープファイルの場所を入力するか、 **[参照]** をクリックし、ESRI シェープファイルを選択します。  
   
     > [!NOTE]  
-    >  シェープファイルがローカル コンピューター上に格納されている場合、空間データはレポート定義に埋め込まれます。 レポートの処理時にデータが動的に取得されるようにするには、ESRI .shp ファイルとその .dbf サポート ファイルをレポート サーバーにアップロードする必要があります。 詳細については、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「ファイルまたはレポートをアップロードする方法 (レポート マネージャー)」を参照してください。  
+    >  シェープファイルがローカル コンピューター上に格納されている場合、空間データはレポート定義に埋め込まれます。 レポートの処理時にデータが動的に取得されるようにするには、ESRI .shp ファイルとその .dbf サポート ファイルをレポート サーバーにアップロードする必要があります。 詳細については、[ファイルまたはレポートのアップロード](../reports/upload-a-file-or-report-report-manager.md)に関するページを参照してください。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -1,8 +1,6 @@
 ---
 title: SQL Server (MySQLToSQL) への接続 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d946b7c6d5fed230fab2daed139421c43d814566
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20c11888d58557fc340ad39dbeec293e15c555e0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775908"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>SQL Server (MySQLToSQL) に接続します。
 MySQL データベースを SQL Server に移行するには、SQL Server のターゲット インスタンスに接続する必要があります。 接続するときに、SSMA は SQL Server のインスタンス内のすべてのデータベースに関するメタデータを取得し、SQL Server メタデータ エクスプ ローラーでデータベースのメタデータを表示します。 SSMA は、パスワードは保存されませんに接続している SQL Server のインスタンスの情報を格納します。  
@@ -88,9 +87,9 @@ MySQL データベースのオブジェクトを SQL Server の構文に変換�
 ||||||||  
 |-|-|-|-|-|-|-|  
 |**プロジェクトの種類と対象サーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005<br /> (バージョン: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008<br /> (バージョン: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012<br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014<br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016<br />(Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||はい|[ユーザー アカウント制御]|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|はい|はい|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||はい|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||はい|はい|はい||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014||||はい|はい||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016|||||はい||  
 |SQL Azure||||||はい|  

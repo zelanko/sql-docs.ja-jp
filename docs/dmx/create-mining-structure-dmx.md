@@ -1,34 +1,20 @@
 ---
 title: マイニング構造 (DMX) を作成 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_MINING_STRUCTURE
-- CREATE MINING STRUCTURE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- CREATE MINING STRUCTURE statement
-- mining structures [DMX], creating
-- RELATED TO column
-ms.assetid: c0dec39c-e90f-4afd-aeaf-a9c3e1d1a5e0
-caps.latest.revision: 45
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: be83f470de9f72c74d5dc00403684a9ca6aa66f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842755"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +62,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  既定値 : REPEATABLE(0)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  マイニング構造を定義するには、列リストを指定し、必要に応じて列間の階層リレーションシップを指定して、さらに必要に応じてマイニング構造をトレーニング データセットとテスト データセットにパーティション分割します。  
   
  オプションの SESSION キーワードは、その構造が、現在のセッションの間しか使用できない一時的な構造であることを示します。 セッションが終了すると、構造およびその構造に基づくモデルはすべて削除されます。 一時的なマイニング構造およびモデルを作成するには、まず AllowSessionMiningModels、データベースのプロパティを設定する必要があります。 詳細については、「 [データ マイニング プロパティ](../analysis-services/server-properties/data-mining-properties.md)」を参照してください。  
@@ -110,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  データ型、コンテンツの種類、列の分布、および構造列の定義に使用できるモデリング フラグの一覧は、次のトピックを参照してください。  
   
--   [データ型 (&) #40";"データ マイニング"&"#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [データ型&#40;データ マイニング&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [コンテンツの種類 (&) #40 です。 データ マイニング (&) #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [コンテンツの種類&#40;データ マイニング&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
 -   [列の分布&#40;データ マイニング&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [モデリング フラグ (&) #40 です。 データ マイニング & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [モデリング フラグ&#40;データ マイニング&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  列には複数のモデリング フラグ値を定義できます。 ただし、1 つの列に定義できるコンテンツの種類とデータ型はそれぞれ 1 つだけです。  
   
@@ -195,6 +181,6 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ## <a name="see-also"></a>参照  
  [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

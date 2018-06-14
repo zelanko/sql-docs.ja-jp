@@ -1,8 +1,6 @@
 ---
 title: パスワード (DB2ToSQL) を管理する |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b45905d666e7ccd5c5379ea18cede72cd6941ae6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df108bc5fb4989c8e26de9be9926819af12e19a0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775088"
 ---
 # <a name="managing-passwords-db2tosql"></a>パスワード (DB2ToSQL) を管理します。
 このセクションでは、データベースのパスワードとをインポートまたはサーバー間でそれらをエクスポートする手順のセキュリティ保護については。  
@@ -42,7 +41,7 @@ SSMA では、データベースのパスワードをセキュリティで保護
   
     パスワードがクリア テキストでは、安全ではありません。 そのため、コンソール出力には、次の警告メッセージが発生: *"サーバー&lt;サーバー id&gt;パスワード SSMA コンソール アプリケーションが保護する オプションを提供するクリア テキストのセキュリティ保護されていない形式で提供されるは、暗号化を使用してパスワードを参照してください SSMA で – securepassword オプションの詳細についてはヘルプ ファイルです。"*  
   
-    **暗号化されたパスワードは、**この場合、指定したパスワードが ProtectedStorage.ssma でローカル コンピューター上の暗号化された形式で保存はできます。  
+    **暗号化されたパスワードは、** この場合、指定したパスワードが ProtectedStorage.ssma でローカル コンピューター上の暗号化された形式で保存はできます。  
   
     -   **パスワードのセキュリティ保護**  
   

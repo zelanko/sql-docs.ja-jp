@@ -2,16 +2,17 @@
 title: 手順 2 は、PowerShell を使用して SQL server のデータをインポート |Microsoft ドキュメント
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d85419c06915cc7d96c9713053239c27c70a9f0b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 14606b42d17acdd56527795d2d475a263d918d7d
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249995"
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>手順 2: PowerShell を使用して SQL server のデータをインポートします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,6 +35,16 @@ PowerShell スクリプトでは、表示、ダウンロードしたファイル
 
 問題に遭遇した場合は、手動で手順を実行する参照としてスクリプトを使用できます。
 
+### <a name="modify-the-script-to-use-a-trusted-windows-identity"></a>信頼された Windows id を使用するスクリプトを変更します。
+
+既定では、スクリプトには、SQL Server データベースのユーザーのログインとパスワードが想定しています。 Windows ユーザー アカウントの下にある db_owner 場合は、オブジェクトを作成する、Windows id を使用できます。 これを行うには、開く`RunSQL_SQL_Walkthrough.ps1`を追加するコード エディターで**`-T`** bcp 一括挿入コマンド。
+
+```text
+bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
+```
+
+### <a name="run-the-script"></a>スクリプトを実行します。
+
 1. 管理者として PowerShell コマンド プロンプトを開きます。 いない場合は既に、前の手順で作成したフォルダーで、フォルダーを移動し、次のコマンドを実行します。
   
     ```ps
@@ -44,8 +55,8 @@ PowerShell スクリプトでは、表示、ダウンロードしたファイル
 
     - 名前またはアドレスの[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Python の Machine Learning のサービスがインストールされているインスタンス。
     - インスタンス上のアカウントのユーザー名とパスワード。 データベースを作成し、テーブルおよびストアド プロシージャを作成してデータの一括読み込みのテーブルに機能を使用するアカウントが必要です。 
-    - ユーザー名とパスワードを指定しない場合は、SQL Server へのサインインに使用される、Windows id れ、パスワードの入力に昇格されます。
-    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 例を次に示します。 `C:\temp\pysql\nyctaxi1pct.csv`
+    - ユーザー名とパスワードを指定しない場合、Windows id は SQL Server へのサインインに使用されます。
+    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 たとえば、`C:\temp\pysql\nyctaxi1pct.csv` と指定します。
 
     > [!NOTE]
     > データを正常に読み込むには、ライブラリ xmlrw.dll は bcp.exe と同じフォルダーでなければなりません。

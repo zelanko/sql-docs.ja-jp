@@ -1,8 +1,6 @@
 ---
 title: SQL Server - Azure SQL DB への Access アプリケーションのリンク |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -31,11 +29,12 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: bcfaa4ffcaaf8a621062f0809831437647b894fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e64bd412bc26dd2ac3cae24211591caa11f12031
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774068"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server - Azure SQL DB (AccessToSQL) へのリンクの Access アプリケーション
 既存の Access アプリケーションを使用するかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、移行後に元の Access テーブルをリンクすることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のテーブルです。 Access データベースが変更のリンクのクエリ、フォーム、レポート、およびデータ アクセス ページ内のデータを使用するように、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Access データベース内のデータではなく SQL Azure データベース。  

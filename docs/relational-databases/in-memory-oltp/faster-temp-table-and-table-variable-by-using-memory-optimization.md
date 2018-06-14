@@ -1,7 +1,7 @@
 ---
 title: メモリ最適化を使用した一時テーブルとテーブル変数の高速化 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/18/2017
+ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
@@ -12,15 +12,16 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 caps.latest.revision: 20
-author: MightyPen
-ms.author: genemi
+author: Jodebrui
+ms.author: jodebrui
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bce01856dd7652b824e8ef38e06fb75c5cc63be4
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 1339dfbe173c656b1c0224f8f368d4f2a59ea2ba
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744001"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>メモリ最適化を使用した一時テーブルとテーブル変数の高速化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,14 +72,13 @@ ms.lasthandoff: 05/19/2018
 次のグローバル一時テーブルがあると想定します。  
   
   
-  
-  
-    CREATE TABLE ##tempGlobalB  
+```sql
+CREATE TABLE ##tempGlobalB  
     (  
         Column1   INT   NOT NULL ,  
         Column2   NVARCHAR(4000)  
     );  
-  
+```
   
   
   
@@ -86,16 +86,16 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
   
   
   
-  
-    CREATE TABLE dbo.soGlobalB  
-    (  
-        Column1   INT   NOT NULL   INDEX ix1 NONCLUSTERED,  
-        Column2   NVARCHAR(4000)  
-    )  
-        WITH  
-            (MEMORY_OPTIMIZED = ON,  
-            DURABILITY        = SCHEMA_ONLY);  
-  
+```sql
+CREATE TABLE dbo.soGlobalB  
+(  
+    Column1   INT   NOT NULL   INDEX ix1 NONCLUSTERED,  
+    Column2   NVARCHAR(4000)  
+)  
+    WITH  
+        (MEMORY_OPTIMIZED = ON,  
+        DURABILITY        = SCHEMA_ONLY);  
+```  
   
   
   
@@ -119,13 +119,13 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
   
   
   
-  
-    CREATE TABLE #tempSessionC  
-    (  
-        Column1   INT   NOT NULL ,  
-        Column2   NVARCHAR(4000)  
-    );  
-  
+```sql  
+CREATE TABLE #tempSessionC  
+(  
+    Column1   INT   NOT NULL ,  
+    Column2   NVARCHAR(4000)  
+);  
+```
   
   
   
@@ -133,15 +133,15 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
   
   
   
-  
-    CREATE FUNCTION dbo.fn_SpidFilter(@SpidFilter smallint)  
-        RETURNS TABLE  
-        WITH SCHEMABINDING , NATIVE_COMPILATION  
-    AS  
-        RETURN  
-            SELECT 1 AS fn_SpidFilter  
-                WHERE @SpidFilter = @@spid;  
-  
+```sql  
+CREATE FUNCTION dbo.fn_SpidFilter(@SpidFilter smallint)  
+    RETURNS TABLE  
+    WITH SCHEMABINDING , NATIVE_COMPILATION  
+AS  
+    RETURN  
+        SELECT 1 AS fn_SpidFilter  
+            WHERE @SpidFilter = @@spid;  
+```
   
   
   
@@ -154,33 +154,33 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
   
   
   
+```sql
+CREATE TABLE dbo.soSessionC  
+(  
+    Column1     INT         NOT NULL,  
+    Column2     NVARCHAR(4000)  NULL,  
+
+    SpidFilter  SMALLINT    NOT NULL   DEFAULT (@@spid),  
+
+    INDEX ix_SpidFiler NONCLUSTERED (SpidFilter),  
+    --INDEX ix_SpidFilter HASH  
+    --    (SpidFilter) WITH (BUCKET_COUNT = 64),  
+        
+    CONSTRAINT CHK_soSessionC_SpidFilter  
+        CHECK ( SpidFilter = @@spid ),  
+)  
+    WITH  
+        (MEMORY_OPTIMIZED = ON,  
+            DURABILITY = SCHEMA_ONLY);  
+go  
   
-    CREATE TABLE dbo.soSessionC  
-    (  
-        Column1     INT         NOT NULL,  
-        Column2     NVARCHAR(4000)  NULL,  
   
-        SpidFilter  SMALLINT    NOT NULL   DEFAULT (@@spid),  
-  
-        INDEX ix_SpidFiler NONCLUSTERED (SpidFilter),  
-        --INDEX ix_SpidFilter HASH  
-        --    (SpidFilter) WITH (BUCKET_COUNT = 64),  
-          
-        CONSTRAINT CHK_soSessionC_SpidFilter  
-            CHECK ( SpidFilter = @@spid ),  
-    )  
-        のすべてのメンションを  
-            (MEMORY_OPTIMIZED = ON,  
-             DURABILITY = SCHEMA_ONLY);  
-    GO  
-  
-  
-    CREATE SECURITY POLICY dbo.soSessionC_SpidFilter_Policy  
-        ADD FILTER PREDICATE dbo.fn_SpidFilter(SpidFilter)  
-        ON dbo.soSessionC  
-        WITH (STATE = ON);  
-    GO  
-  
+CREATE SECURITY POLICY dbo.soSessionC_SpidFilter_Policy  
+    ADD FILTER PREDICATE dbo.fn_SpidFilter(SpidFilter)  
+    ON dbo.soSessionC  
+    WITH (STATE = ON);  
+go  
+```  
   
   
   
@@ -204,11 +204,11 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
   
   
   
-  
-    DECLARE @tvTableD TABLE  
-        ( Column1   INT   NOT NULL ,  
-          Column2   CHAR(10) );  
-  
+```sql
+DECLARE @tvTableD TABLE  
+    ( Column1   INT   NOT NULL ,  
+      Column2   CHAR(10) );  
+```
   
   
   
@@ -220,23 +220,23 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
   
   
   
-  
-    CREATE TYPE dbo.typeTableD  
-        AS TABLE  
-        (  
-            Column1  INT   NOT NULL ,  
-            Column2  CHAR(10)  
-        );  
-    go  
-          
-    SET NoCount ON;  
-    DECLARE @tvTableD dbo.typeTableD  
-    ;  
-    INSERT INTO @tvTableD (Column1) values (1), (2)  
-    ;  
-    SELECT * from @tvTableD;  
-    go  
-  
+```sql  
+CREATE TYPE dbo.typeTableD  
+    AS TABLE  
+    (  
+        Column1  INT   NOT NULL ,  
+        Column2  CHAR(10)  
+    );  
+go  
+        
+SET NoCount ON;  
+DECLARE @tvTableD dbo.typeTableD  
+;  
+INSERT INTO @tvTableD (Column1) values (1), (2)  
+;  
+SELECT * from @tvTableD;  
+go  
+```
   
   
   
@@ -251,16 +251,16 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
   
   
   
-  
-    CREATE TYPE dbo.typeTableD  
-        AS TABLE  
-        (  
-            Column1  INT   NOT NULL   INDEX ix1,  
-            Column2  CHAR(10)  
-        )  
-        のすべてのメンションを  
-            (MEMORY_OPTIMIZED = ON);  
-  
+```sql
+CREATE TYPE dbo.typeTableD  
+    AS TABLE  
+    (  
+        Column1  INT   NOT NULL   INDEX ix1,  
+        Column2  CHAR(10)  
+    )  
+    WITH  
+        (MEMORY_OPTIMIZED = ON);  
+```  
   
   
   
@@ -286,22 +286,23 @@ Microsoft SQL Server では、メモリ最適化機能を使用するために�
   
   
  
-  
-    ALTER DATABASE InMemTest2  
-        ADD FILEGROUP FgMemOptim3  
-            CONTAINS MEMORY_OPTIMIZED_DATA;  
-    GO  
-    ALTER DATABASE InMemTest2  
-        ADD FILE  
-        (  
-            NAME = N'FileMemOptim3a',  
-            FILENAME = N'C:\DATA\FileMemOptim3a'  
-                     --  C:\DATA\    preexisted.  
-        )  
-        TO FILEGROUP FgMemOptim3;  
-    GO  
-  
-  
+```sql
+ALTER DATABASE InMemTest2  
+    ADD FILEGROUP FgMemOptim3  
+        CONTAINS MEMORY_OPTIMIZED_DATA;  
+go  
+ALTER DATABASE InMemTest2  
+    ADD FILE  
+    (  
+        NAME = N'FileMemOptim3a',  
+        FILENAME = N'C:\DATA\FileMemOptim3a'  
+                    --  C:\DATA\    preexisted.  
+    )  
+    TO FILEGROUP FgMemOptim3;  
+go  
+```  
+
+
 次のスクリプトでは、お客様のファイルグループを作成し、推奨されるデータベースの設定を構成します ( [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql))。
   
 FILE と FILEGROUP の `ALTER DATABASE ... ADD` の詳細については、次を参照してください。  
@@ -322,100 +323,100 @@ FILE と FILEGROUP の `ALTER DATABASE ... ADD` の詳細については、次�
   - 'GO 5001' ステートメントは、T-SQL を 5001 回再送信します。 この数字は調整して、再実行することができます。  
   
 Azure SQL Database でスクリプトを実行している場合、同じリージョン内の VM から実行することを確認します。
+
   
-  
-    PRINT ' ';  
-    PRINT '---- Next, memory-optimized, faster. ----';  
-  
-    DROP TYPE IF EXISTS dbo.typeTableC_mem;  
-    go  
-    CREATE TYPE dbo.typeTableC_mem  -- !!  Memory-optimized.  
-         AS TABLE  
-         (  
-              Column1  INT NOT NULL INDEX ix1,  
-              Column2  CHAR(10)  
-         )  
-         WITH  
-              (MEMORY_OPTIMIZED = ON);  
-    go  
-    DECLARE @dateString_Begin nvarchar(64) =  
-        Convert(nvarchar(64), GetUtcDate(), 121);  
-    PRINT Concat(@dateString_Begin, '  = Begin time, _mem.');  
-    go  
-    SET NoCount ON;  
-    DECLARE @tvTableC dbo.typeTableC_mem;  -- !!  
-  
-    INSERT INTO @tvTableC (Column1) values (1), (2);  
-    INSERT INTO @tvTableC (Column1) values (3), (4);  
-    DELETE @tvTableC;  
-  
-    GO 5001  
-  
-    DECLARE @dateString_End nvarchar(64) =  
-        Convert(nvarchar(64), GetUtcDate(), 121);  
-    PRINT Concat(@dateString_End, '  = End time, _mem.');  
-    go  
-    DROP TYPE IF EXISTS dbo.typeTableC_mem;  
-    go  
-  
-    ---- End memory-optimized.  
-    -------------------------------------------------  
-    ---- Start traditional on-disk.  
-  
-    PRINT ' ';  
-    PRINT '---- Next, tempdb based, slower. ----';  
-  
-    DROP TYPE IF EXISTS dbo.typeTableC_tempdb;  
-    go  
-    CREATE TYPE dbo.typeTableC_tempdb  -- !!  Traditional tempdb.  
+```sql
+PRINT ' ';  
+PRINT '---- Next, memory-optimized, faster. ----';  
+
+DROP TYPE IF EXISTS dbo.typeTableC_mem;  
+go  
+CREATE TYPE dbo.typeTableC_mem  -- !!  Memory-optimized.  
         AS TABLE  
         (  
-            Column1  INT NOT NULL ,  
+            Column1  INT NOT NULL INDEX ix1,  
             Column2  CHAR(10)  
-        );  
-    go  
-    DECLARE @dateString_Begin nvarchar(64) =  
-        Convert(nvarchar(64), GetUtcDate(), 121);  
-    PRINT Concat(@dateString_Begin, '  = Begin time, _tempdb.');  
-    go  
-    SET NoCount ON;  
-    DECLARE @tvTableC dbo.typeTableC_tempdb;  -- !!  
-  
-    INSERT INTO @tvTableC (Column1) values (1), (2);  
-    INSERT INTO @tvTableC (Column1) values (3), (4);  
-    DELETE @tvTableC;  
-  
-    GO 5001  
-  
-    DECLARE @dateString_End nvarchar(64) =  
-        Convert(nvarchar(64), GetUtcDate(), 121);  
-    PRINT Concat(@dateString_End, '  = End time, _tempdb.');  
-    go  
-    DROP TYPE IF EXISTS dbo.typeTableC_tempdb;  
-    go  
-    ----  
-  
-    PRINT '---- Tests done. ----';  
-  
-    go  
-  
-    /*** Actual output, SQL Server 2016:  
-  
-    ---- Next, memory-optimized, faster. ----  
-    2016-04-20 00:26:58.033  = Begin time, _mem.  
-    Beginning execution loop  
-    Batch execution completed 5001 times.  
-    2016-04-20 00:26:58.733  = End time, _mem.  
-  
-    ---- Next, tempdb based, slower. ----  
-    2016-04-20 00:26:58.750  = Begin time, _tempdb.  
-    Beginning execution loop  
-    Batch execution completed 5001 times.  
-    2016-04-20 00:27:05.440  = End time, _tempdb.  
-    ---- Tests done. ----  
-    ***/  
-  
+        )  
+        WITH  
+            (MEMORY_OPTIMIZED = ON);  
+go  
+DECLARE @dateString_Begin nvarchar(64) =  
+    Convert(nvarchar(64), GetUtcDate(), 121);  
+PRINT Concat(@dateString_Begin, '  = Begin time, _mem.');  
+go  
+SET NoCount ON;  
+DECLARE @tvTableC dbo.typeTableC_mem;  -- !!  
 
+INSERT INTO @tvTableC (Column1) values (1), (2);  
+INSERT INTO @tvTableC (Column1) values (3), (4);  
+DELETE @tvTableC;  
+
+GO 5001  
+
+DECLARE @dateString_End nvarchar(64) =  
+    Convert(nvarchar(64), GetUtcDate(), 121);  
+PRINT Concat(@dateString_End, '  = End time, _mem.');  
+go  
+DROP TYPE IF EXISTS dbo.typeTableC_mem;  
+go  
+
+---- End memory-optimized.  
+-------------------------------------------------  
+---- Start traditional on-disk.  
+
+PRINT ' ';  
+PRINT '---- Next, tempdb based, slower. ----';  
+
+DROP TYPE IF EXISTS dbo.typeTableC_tempdb;  
+go  
+CREATE TYPE dbo.typeTableC_tempdb  -- !!  Traditional tempdb.  
+    AS TABLE  
+    (  
+        Column1  INT NOT NULL ,  
+        Column2  CHAR(10)  
+    );  
+go  
+DECLARE @dateString_Begin nvarchar(64) =  
+    Convert(nvarchar(64), GetUtcDate(), 121);  
+PRINT Concat(@dateString_Begin, '  = Begin time, _tempdb.');  
+go  
+SET NoCount ON;  
+DECLARE @tvTableC dbo.typeTableC_tempdb;  -- !!  
+
+INSERT INTO @tvTableC (Column1) values (1), (2);  
+INSERT INTO @tvTableC (Column1) values (3), (4);  
+DELETE @tvTableC;  
+
+GO 5001  
+
+DECLARE @dateString_End nvarchar(64) =  
+    Convert(nvarchar(64), GetUtcDate(), 121);  
+PRINT Concat(@dateString_End, '  = End time, _tempdb.');  
+go  
+DROP TYPE IF EXISTS dbo.typeTableC_tempdb;  
+go  
+----  
+
+PRINT '---- Tests done. ----';  
+
+go  
+
+/*** Actual output, SQL Server 2016:  
+
+---- Next, memory-optimized, faster. ----  
+2016-04-20 00:26:58.033  = Begin time, _mem.  
+Beginning execution loop  
+Batch execution completed 5001 times.  
+2016-04-20 00:26:58.733  = End time, _mem.  
+
+---- Next, tempdb based, slower. ----  
+2016-04-20 00:26:58.750  = Begin time, _tempdb.  
+Beginning execution loop  
+Batch execution completed 5001 times.  
+2016-04-20 00:27:05.440  = End time, _tempdb.  
+---- Tests done. ----  
+***/
+```
   
   
   
@@ -432,6 +433,11 @@ Azure SQL Database でスクリプトを実行している場合、同じリー�
   
 ## <a name="h-see-also"></a>H. 参照  
   
-- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
-- [メモリ最適化オブジェクトの持続性の定義](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
-  
+- [メモリ最適化テーブル。](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+
+- [メモリ最適化オブジェクトの持続性の定義。](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)
+
+- [2017 年 9 月のブログで発表された、不適切なメモリ不足エラーの可能性を除去するための累積的な更新プログラム。](https://support.microsoft.com/help/4025208/fix-memory-leak-occurs-when-you-use-memory-optimized-tables-in-microso)
+    - 「[SQL Server 2016 のビルド バージョン](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions)」には、リリース、サービス パック、および累積的な更新プログラムの詳細が示されています。
+    - このような不定期の不適切なエラーは、SQL Server Enterprise Edition では発生しませんでした。
+

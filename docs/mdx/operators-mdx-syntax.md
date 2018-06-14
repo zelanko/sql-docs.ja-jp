@@ -1,6 +1,6 @@
 ---
 title: 演算子 (MDX 構文) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 309311bfcef0ada531e391e99091a788715c8e2d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: HT
+ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580664"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742751"
 ---
 # <a name="operators-mdx-syntax"></a>演算子 (MDX 構文)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   多次元式 (MDX) では、演算子を使用して以下の操作を実行できます。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34580664"
  複数の演算子を使用する場合、MDX によって演算子が評価される順序は重要です。 同様に重要な点として、演算子を評価する前に、あるデータ型を別のデータ型に変換しておかなければならない場合もあります。  
   
 ## <a name="evaluating-complex-expressions"></a>複雑な式の評価  
- 演算子を使用すると、複数の小さい式を結合して 1 つの式を作成できます。 これらの複雑な式に MDX 演算子によって使用される演算子の優先順位の定義に基づく順序で[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]です。 MDX は、優先順位の高い演算子を、優先順位の低い演算子より先に実行します。  
+ 演算子を使用すると、複数の小さい式を結合して 1 つの式を作成できます。 これらの複雑な式に MDX 演算子によって使用される演算子の優先順位の定義に基づく順序で[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]です。 MDX は、優先順位の高い演算子を、優先順位の低い演算子より先に実行します。  
   
 ### <a name="understanding-operator-precedence"></a>演算子の優先順位について  
  以下の一覧に、演算子を優先順位の高いものから順に示します。 同じ行に示されている演算子は優先順位が同じです。かっこによる強制的な優先がない限り、左から右の順に評価されます。  
@@ -70,7 +70,7 @@ ms.locfileid: "34580664"
   
 -   <>, >=, =, \<=, >, <  
   
--   orNOT  
+-   NOT  
   
 -   AND  
   

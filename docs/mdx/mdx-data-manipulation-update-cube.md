@@ -1,6 +1,6 @@
 ---
 title: UPDATE CUBE ステートメント (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1569d8024e23bab1841bf7757ffd828a3bc7dd4f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: HT
+ms.openlocfilehash: 6d6eb2f8ae6ec4898642cf014fbfe46768453983
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579754"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741881"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX データ操作 - UPDATE CUBE
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   UPDATE CUBE ステートメントは、SUM 集計によって親に対して集計を行うキューブ内の任意のセルにデータを書き戻すために使用します。 詳細な説明と例では、このブログ投稿の割り当てについて」を参照してください: [Analysis Services (ブログ) での書き戻しアプリケーションを構築](http://go.microsoft.com/fwlink/?LinkId=394977)です。  
   

@@ -1,6 +1,6 @@
 ---
-title: Insight ウィジェットを使用して、サーバーと SQL 操作 Studio (プレビュー) でデータベースを監視する |Microsoft ドキュメント
-description: SQL 操作 Studio (プレビュー) で洞察ウィジェットについて説明します。
+title: Insight ウィジェットを使用して、サーバーと SQL Operations Studio (プレビュー) でデータベースを監視する |Microsoft ドキュメント
+description: SQL Operations Studio (プレビュー) で洞察ウィジェットについて説明します。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql

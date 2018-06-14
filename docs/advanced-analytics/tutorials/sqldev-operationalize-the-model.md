@@ -1,24 +1,26 @@
 ---
-title: レッスン 6 R モデルを操作運用 |Microsoft ドキュメント
+title: レッスン 6 Predict 潜在的なを使用して結果 R モデル (SQL Server の Machine Learning) |Microsoft ドキュメント
+description: SQL Server で R を埋め込む方法を示すチュートリアル ストアド プロシージャと T-SQL 関数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/08/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1503467f1979e2e123f12227cc92ea975b6cd6a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32984626dfac11bd2465cb783c583f6b210f6b68
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249855"
 ---
-# <a name="lesson-6-operationalize-the-r-model"></a>レッスン 6: 運用 R モデル
+# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>レッスン 6: ストアド プロシージャで R モデルを使用して潜在的な結果を予測します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事は、SQL Server で R を使用する方法で SQL 開発者のためのチュートリアルの一部です。
 
-このステップでする方法を学習*運用*ストアド プロシージャを使用して、モデル。 このストアド プロシージャを他のアプリケーションから直接呼び出し、新しい観察を予測できます。 このチュートリアルでは、ストアド プロシージャで R モデルを使用してスコア付けを実行する 2 つの方法を示しています。
+この手順では、新しい観測に対してモデルを使用して潜在的な結果の予測を学習します。 モデルは、他のアプリケーションによって直接呼び出すことができるストアド プロシージャでラップされます。 このチュートリアルでは、スコア付けを実行するいくつかの方法を示しています。
 
 - **バッチ モードのスコアリング**: ストアド プロシージャへの入力として選択クエリを使用します。 このストアド プロシージャは、入力ケースに対応する観察のテーブルを返します。
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="basic-scoring"></a>基本スコア付け
 
-ストアド プロシージャ _PredictTip_ は、ストアド プロシージャで予測呼び出しをラップする基本構文を示します。
+ストアド プロシージャ **PredictTip** は、ストアド プロシージャで予測呼び出しをラップする基本構文を示します。
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
@@ -54,7 +56,7 @@ GO
 
 + SELECT ステートメントは、データベースからシリアル化されたモデルを取得し、R 変数に、モデルを格納`mod`R. を使用してさらに処理
 
-+ スコアリングのための新しいケースがから取得した、[!INCLUDE[tsql](../../includes/tsql-md.md)]で指定されたクエリ`@inquery`、ストアド プロシージャの最初のパラメーターです。 クエリ データが読み取られると、行が既定のデータ フレーム `InputDataSet`に保存されます。 このデータ フレームは R の `rxPredict` 関数に渡され、スコアが生成されます。
++ スコアリングのための新しいケースがから取得した、[!INCLUDE[tsql](../../includes/tsql-md.md)]で指定されたクエリ`@inquery`、ストアド プロシージャの最初のパラメーターです。 クエリ データが読み取られると、行が既定のデータ フレーム `InputDataSet`に保存されます。 このデータ フレームに渡される、 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)で機能[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)スコアが生成されます。
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -91,13 +93,13 @@ GO
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    このクエリは、ストアド プロシージャへの入力として使用できる_PredictTipBatchMode_ダウンロードの一部として指定します。
+    このクエリは、ストアド プロシージャへの入力として使用できる**PredictTipMode**ダウンロードの一部として指定します。
 
-2. ストアド プロシージャのコードをレビューする分ほどかかる_PredictTipBatchMode_で[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]です。
+2. ストアド プロシージャのコードをレビューする分ほどかかる**PredictTipMode**で[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]です。
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
+    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -141,7 +143,7 @@ GO
 
 このセクションでは、ストアド プロシージャを使用して 1 つの予測を作成する方法を学習します。
 
-1. 少しの時間を取り、(ダウンロードに含まれる) ストアド プロシージャ _PredictTipSingleMode_のコードを確認してください。
+1. ストアド プロシージャのコードをレビューする分ほどかかる**PredictTipSingleMode**ダウンロードの一部として含まれています。
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0

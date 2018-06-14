@@ -3,8 +3,6 @@ title: Sybase (SybaseToSQL) への接続 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,18 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2152c6a02a7c02d7aea5fb5ab01c2aa5b74dfad4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1302d7e57d7ef2559d107039648e813e1292efa
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778404"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Sybase (SybaseToSQL) への接続します。
 使用して、 **Sybase への接続**を移行する Sybase Adaptive Server Enterprise (ASE) インスタンスに接続する ダイアログ ボックス。  
   
 このダイアログ ボックスにアクセスする、**ファイル**メニューの  **Sybase への接続**です。 以前接続した場合、コマンドは**sybase 再接続**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **プロバイダー**  
 Sybase サーバーへの接続用のコンピューターにインストールされているプロバイダーのいずれかを選択します。  
   
@@ -60,9 +59,9 @@ ASE を接続の完全な接続文字列を入力します。
     |設定|Sybase 12.5 パラメーター|Sybase 15 パラメーター|  
     |-----------|-------------------------|-----------------------|  
     |サーバー名|[サーバー名]|[サーバー]|  
-    |ポート|サーバーのポート アドレス|ポート|  
-    |ユーザー名|[ユーザー ID]|[ユーザー ID]|  
-    |Password|Password|Password|  
+    |Port|サーバーのポート アドレス|Port|  
+    |[ユーザー名]|[ユーザー ID]|[ユーザー ID]|  
+    |パスワード|パスワード|パスワード|  
     |プロバイダー|プロバイダー|プロバイダー|  
   
     Sybase ASE 12.5 の接続文字列の例のとおりです。  
@@ -80,8 +79,8 @@ ASE を接続の完全な接続文字列を入力します。
     |ドライバー名|ドライバー●どらいば○|  
     |[サーバー名]|[サーバー]|  
     |[ユーザー名]|uid|  
-    |Password|Pwd|  
-    |[ポート番号]|ポート|  
+    |パスワード|Pwd|  
+    |[ポート番号]|Port|  
   
     Sybase ASE 12.5 または 15 では、接続文字列の例のとおりです。  
   
@@ -93,8 +92,8 @@ ASE を接続の完全な接続文字列を入力します。
     |-----------|-----------------------------|  
     |[サーバー名]|[サーバー]|  
     |[ユーザー名]|uid|  
-    |Password|Pwd|  
-    |[ポート番号]|ポート|  
+    |パスワード|Pwd|  
+    |[ポート番号]|Port|  
   
     ADO.NET プロバイダーの接続文字列の例は、次のとおりです。  
   

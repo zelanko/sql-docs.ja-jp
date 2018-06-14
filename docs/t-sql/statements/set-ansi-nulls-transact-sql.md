@@ -30,11 +30,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e1a05133d905e6211cded5afc46dba8db75757f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe1bbff7ae50d44885c061eee1550adc78f1df11
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582564"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -66,7 +67,22 @@ SET ANSI_NULLS ON
  SET ANSI_NULLS が OFF の場合は、= (等号) 比較演算および <> (不等号) 比較演算の実行結果に、ISO 標準が適用されません。 WHERE *column_name* = **NULL** を使用する SELECT ステートメントでは、*column_name* に NULL 値を持つ行が返されます。 WHERE *column_name* <> **NULL** を使用する SELECT ステートメントでは、列に NULL 以外の値を持つ行が返されます。 また、WHERE *column_name* <> *XYZ_value* を使用する SELECT ステートメントでは、*XYZ_value* 以外の非 NULL 値を持つすべての行が返されます。  
   
  SET ANSI_NULLS が ON に設定されていると、NULL 値に対するすべての比較は UNKNOWN に評価されます。 SET ANSI_NULLS が OFF に設定されていて、データ値が NULL の場合は、NULL 値に対するすべてのデータ比較は TRUE に評価されます。 SET ANSI_NULLS が指定されていない場合は、現在のデータベースの ANSI_NULLS オプションの設定が適用されます。 ANSI_NULLS データベース オプションについて詳しくは、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
+
+ 次の表は、ANSI_NULLS の設定が null 値と非 null 値を利用したさまざまなブール式の結果に影響を与えるしくみを示しています。  
   
+|ブール式|SET ANSI_NULLS ON|SET ANSI_NULLS OFF|  
+|---------------|---------------|------------|  
+|NULL = NULL|UNKNOWN|TRUE|  
+|1 = NULL|UNKNOWN|FALSE|  
+|NULL <> NULL|UNKNOWN|FALSE|  
+|1 <> NULL|UNKNOWN|TRUE|  
+|NULL > NULL|UNKNOWN|UNKNOWN|  
+|1 > NULL|UNKNOWN|UNKNOWN|  
+|NULL IS NULL|TRUE|TRUE|  
+|1 IS NULL|FALSE|FALSE|  
+|NULL IS NOT NULL|FALSE|FALSE|  
+|1 IS NOT NULL|TRUE|TRUE|  
+
  比較のオペランドの 1 つが NULL またはリテラル NULL のいずれかの変数であるとき、SET ANSI_NULLS が ON の場合のみ比較に影響します。 比較の両側が列または複合式の場合は、この設定は比較に影響しません。  
   
  スクリプトが意図どおりに動作するようにするには、ANSI_NULLS データベース オプションや SET ANSI_NULLS の設定とは無関係に、NULL 値を含む可能性のある比較で、IS NULL と IS NOT NULL を使用するようにしてください。  

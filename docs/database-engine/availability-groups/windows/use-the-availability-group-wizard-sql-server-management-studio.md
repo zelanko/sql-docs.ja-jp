@@ -3,7 +3,6 @@ title: 可用性グループ ウィザードの使用 (SQL Server Management Stu
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -18,14 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 caps.latest.revision: 46
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ea8ef37daa8d723fab8fdf60f8b980e23c5cd63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bd200483a8d778fd0f6f35d3ff12aea9f90fca7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770748"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>可用性グループ ウィザードの使用 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/03/2018
   
          **[完全]** を選択すると、可用性グループを作成後、ウィザードはすべてのプライマリ データベースとそのトランザクション ログをネットワーク共有にバックアップし、セカンダリ レプリカをホストするすべてのサーバー インスタンスでそのバックアップを復元します。 その後、ウィザードは、すべてのセカンダリ データベースを可用性グループに参加させます。  
   
-         **[すべてのレプリカからアクセス可能な共有ネットワーク場所を指定]** フィールドで、レプリカをホストするサーバー インスタンスが読み取り/書き込み権限を持つバックアップ共有を指定します。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。  
+         **[すべてのレプリカからアクセス可能な共有ネットワーク場所を指定]** フィールドで、レプリカをホストするサーバー インスタンスが読み取り/書き込み権限を持つバックアップ共有を指定します。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。  検証手順で、指定されたネットワークの場所が有効であることを確認するテストが行われます。このテストにより、プライマリ レプリカにデータベースが作成されますが、その名前は "BackupLocDb_" に GUID を続ける方式で付けられます。さらに、指定されたネットワークの場所にバックアップが実行され、セカンダリ レプリカでそれが復元されます。 このデータベースがウィザードで削除できなかった場合、そのバックアップ履歴とバックアップ ファイルと共に削除しておくことをお勧めします。
   
     -   **[参加のみ]**  
   

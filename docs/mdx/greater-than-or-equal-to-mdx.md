@@ -1,6 +1,6 @@
 ---
 title: '&gt;= (より大きいか等しい) (MDX) |Microsoft ドキュメント'
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: db81285593b04a2b82c5eed87c3747a1f9450e42
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 14babb777aa4c5de85c0a0324621aebf91cb5367
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579124"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740801"
 ---
 # <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (より大きいか等しい) (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   1 つの多次元式 (MDX) 式の値が、別の MDX 式の値以上であるかどうかを判別する比較演算を実行します。  
   

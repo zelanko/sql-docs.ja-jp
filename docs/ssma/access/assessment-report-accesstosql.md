@@ -1,8 +1,6 @@
 ---
 title: 評価レポート (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,18 +19,19 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d5d2d79c47dd1a819e602e55aad36844445e6c79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9a7cdcd7df17e17b61ec867da6ea02f9bb1c5c3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773268"
 ---
 # <a name="assessment-report-accesstosql"></a>評価レポート (AccessToSQL)
 評価 [レポート] ウィンドウは、データベース オブジェクトの変換結果を示しています。[!INCLUDE[tsql](../../includes/tsql_md.md)]構文、およびヘルプの複雑さと、移行プロジェクトの費用を見積もることができます。  
   
 ソース メタデータ エクスプ ローラーで、変換するオブジェクトの選択、評価レポートを作成するには**データベース**、し、**レポートの作成**です。 スキーマを変換した後、このレポートを自動的に表示もできます。 ただし、レポート名は、変換レポートになります。 詳細については、次を参照してください。[プロジェクトの設定 (GUI) (SSMA 共通)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **エクスプ ローラー ペイン**  
 評価レポート内のオブジェクトの階層が含まれています。 個々 のオブジェクトとこれらのサブコンポーネントを表示するフォルダーを展開します。 カテゴリまたはオブジェクトをクリックすると、詳細ウィンドウで、そのカテゴリまたはオブジェクトの変換の統計情報が表示されます。  
   

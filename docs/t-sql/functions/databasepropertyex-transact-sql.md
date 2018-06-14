@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cb0ea7d3443e338190e9bc63c7132aa554aa843
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aed0b8b2aa36b215f894ee4c032ff38e8a23f43f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550813"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +90,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]は、電源障害やその他のシステムの停止によって発生した不完全な I/O 操作を検出します。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力<br /><br /> 基本データ型: * * **int** * *| 
 |IsVerifiedClone|データベースは、DBCC CLONEDATABASE の WITH VERIFY_CLONEDB オプションで作成されたユーザー データベースをスキーマと統計のみで複製したものです。 詳細については、[Microsoft サポート技術情報](http://support.microsoft.com/help/3177838)をご覧ください。|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降。<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力<br /><br /> 基本データ型: * * **int** * *| 
 |IsXTPSupported|インメモリ OLTP、つまり、メモリ最適化テーブルとネイティブ コンパイル モジュールをデータベースで作成し、使用できるかどうかを示します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に固有:<br /><br /> IsXTPSupported は、インメモリ OLTP オブジェクトを作成するために必要な MEMORY_OPTIMIZED_DATA ファイル グループの存在に依存しません。|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: * * **int** * *|  
-|LastGoodCheckDbTime|指定されたデータベース上で実行され、最後に成功した DBCC CHECKDB の日時。|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降。<br /><br /> datetime 値<br /><br /> NULL: 無効な入力<br /><br /> 基本データ型: **datetime**| 
+|LastGoodCheckDbTime|指定されたデータベース上で実行され、最後に成功した DBCC CHECKDB の日時。<sup>1</sup> DBCC CHECKDB がデータベース上で実行されていない場合は、1900-01-01 00:00:00.000 が返されます。|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降。<br /><br /> datetime 値<br /><br /> NULL: 無効な入力<br /><br /> 基本データ型: **datetime**| 
 |LCID (LCID)|照合順序の Windows ロケール識別子 (LCID)。|LCID 値 (10 進数形式)。<br /><br /> 基本データ型: * * **int** * *|  
 |MaxSizeInBytes|最大データベース サイズ (バイト単位)。|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: データベースは開始していません<br /><br /> 基本データ型: * * * * **bigint** 型|  
 |復旧|データベース復旧モデル|FULL: 完全復旧モデル<br /><br /> BULK_LOGGED: 一括ログ復旧モデル<br /><br /> SIMPLE: 単純復旧モデル<br /><br /> 基本データ型: **nvarchar(128)**|  
@@ -99,8 +100,12 @@ DATABASEPROPERTYEX ( database , property )
 |状態|データベースの状態です。|ONLINE: データベースをクエリに使用できます。<br /><br /> **注意:** データベースが開いていてまだ復旧されていないとき、ONLINE ステータスが返されることがあります。 照合順序プロパティをクエリに、データベースが接続を受け入れるときを特定するには、* * * * **DATABASEPROPERTYEX** です。 データベースは、データベースの照合順序から NULL 以外の値が返されたときに接続を受け入れることができます。 AlwaysOn データベースの場合、`sys.dm_hadr_database_replica_states` の database_state または database_state_desc 列にクエリを実行します。<br /><br /> OFFLINE: データベースが明示的にオフラインになりました。<br /><br /> RESTORING: データベース復旧が開始しています。<br /><br /> RECOVERING: データベース復旧が開始したところで、データベースはまだクエリに対応していません。<br /><br /> SUSPECT: データベースは復旧されませんでした。<br /><br /> EMERGENCY: データベースは読み取り専用の緊急モードです。 sysadmin メンバーのみにアクセスが制限されます。<br /><br /> 基本データ型: **nvarchar(128)**|  
 |Updateability|データを変更できるかどうかを示します。|READ_ONLY: データベースでは、データを読み取れますが、修正できません。<br /><br /> READ_WRITE: データベースでは、データを読み取れ、修正できます。<br /><br /> 基本データ型: **nvarchar(128)**|  
 |UserAccess|データベースにアクセスできるユーザーを示します。|SINGLE_USER: db_owner、dbcreator、sysadmin ユーザーが一度に 1 人だけとなります。<br /><br /> RESTRICTED_USER: db_owner、dbcreator、または sysadmin ロールのメンバーのみ。<br /><br /> MULTI_USER: すべてのユーザー<br /><br /> 基本データ型: **nvarchar(128)**|  
-|[バージョンのオプション]|このデータベースが作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コードの内部バージョン番号です。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|バージョン番号: データベースが開いています。<br /><br /> NULL: データベースが開始していません。<br /><br /> 基本データ型: * * **int** * *|  
-  
+|[バージョンのオプション]|このデータベースが作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コードの内部バージョン番号です。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|バージョン番号: データベースが開いています。<br /><br /> NULL: データベースが開始していません。<br /><br /> 基本データ型: * * **int** * *| 
+<br/>   
+
+> [!NOTE]  
+> <sup>1</sup> 可用性グループの一部であるデータベースの場合、コマンドを実行するレプリカに関係なく、`LastGoodCheckDbTime` は、プライマリ レプリカ上で実行され、最後に成功した DBCC CHECKDB の日時を返します。 
+
 ## <a name="return-types"></a>戻り値の型
 **sql_variant**
   

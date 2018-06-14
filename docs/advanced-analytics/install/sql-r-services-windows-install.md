@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Server 2016 R Services (In-database) のインストール |Microsoft ドキュメント
 ms.prod: sql
 ms.technology: machine-learning
@@ -11,7 +11,7 @@ ms.openlocfilehash: 5d8cf1c6bb2ac59a2745aceb979c5f566917548a
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585594"
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>SQL Server 2016 R Services (In-Database) をインストールする 
@@ -91,7 +91,7 @@ SQL Server の前提条件としてインストールされる特定のバージ
     > [!TIP]
     > ダウンロードして、このページから、適切なバージョンをインストールすることができます:[ダウンロード SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。
     > 
-    > プレビュー リリースのも試すことができます[SQL 操作 Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)、管理タスクと SQL Server に対してクエリをサポートします。
+    > プレビュー リリースのも試すことができます[SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)、管理タスクと SQL Server に対してクエリをサポートします。
   
 2. Machine Learning のサービスがインストールされているインスタンスに接続し、をクリックして**新しいクエリ**をクエリ ウィンドウを開き、次のコマンドを実行します。
 

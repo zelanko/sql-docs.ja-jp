@@ -11,7 +11,7 @@ ms.openlocfilehash: 4f0e6130882ea5af6dd0827ed2d5e798d3c11c5f
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585494"
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>SQL Server と R のデータ サイエンスのチュートリアルの前提条件

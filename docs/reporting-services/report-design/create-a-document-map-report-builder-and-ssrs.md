@@ -1,7 +1,7 @@
 ---
 title: ドキュメント マップの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,11 +15,12 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 237c1aedf1400dfa7aaa5a380030d81ed93b2f85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d417f39deeb44e38eba83ca6a3f34c4dd6e822c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550413"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
 
@@ -83,7 +84,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="HideMapWhenViewRpt"></a>   
 #### <a name="to-hide-the-document-map-when-you-view-a-report"></a>レポートを表示する場合にドキュメント マップを非表示にするには  
   
-1.  レポート マネージャーで、ドキュメント マップのあるレポートを参照します。  
+1.  Web ポータルで、ドキュメント マップのあるレポートを参照します。  
   
      たとえば、 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] サンプル レポートの場合、次の URL は、"Product Catalog" というレポートを指定しています。  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
      この URL を使用するには、コピーし、すべての改行を削除します。  
   
-4.  レポート マネージャーで URL を貼り付け、&lt;localizedText&gt;Enter&lt;/localizedText&gt; キーを押します。 レポートが実行され、ドキュメント マップが非表示になります。  
+4.  Web ポータルで URL を貼り付けてから、Enter キーを押します。 レポートが実行され、ドキュメント マップが非表示になります。  
   
 > [!NOTE]  
 >  サンプル レポートをダウンロードする方法の詳細については、「 [レポート ビルダーおよびレポート デザイナーのサンプル レポート](http://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  

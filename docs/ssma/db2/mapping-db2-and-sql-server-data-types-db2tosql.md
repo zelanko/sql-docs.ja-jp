@@ -1,8 +1,6 @@
 ---
 title: マッピング DB2 と SQL Server データ型 (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e9f470aca25b8f42473ccb8a453edc0d3da911a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d354f1b9fb44e77dc840f74d5692c1149e70ab0e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775028"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>DB2 と SQL Server データ型 (DB2ToSQL) とのマッピング
 DB2 データベースの種類が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースの型。 DB2 データベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト、DB2 からのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 既定のデータ型マッピングを受け入れることができますか、マップをカスタマイズするには、次のセクションで示すようにします。  

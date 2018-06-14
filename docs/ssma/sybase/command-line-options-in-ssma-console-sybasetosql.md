@@ -3,8 +3,6 @@ title: SSMA コンソール (SybaseToSQL) でのコマンド ライン オプシ
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7ca88b6398fd6f46eb4fef7ee38a4d0da5eca85f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d55867d0563f5f805212806bc3710abaf7804f7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778308"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA コンソール (SybaseToSQL) でのコマンド ライン オプション
 Microsoft は、堅牢な一連の実行および SSMA アクティビティを制御するコマンド ライン オプションを提供します。 次のセクションでは、同じを詳しく説明します。  
@@ -92,7 +91,7 @@ Microsoft は、堅牢な一連の実行および SSMA アクティビティを�
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 出力のオプション: x/xmloutput [xmloutputfile]  
 このコマンドはコンソールにするか、xml ファイルを xml 形式でコマンドの出力メッセージを出力するために使用されます。  
   
-2 つのオプション使用できるが、xmloutput viz..,:  
+2 つのオプション使用できるが、xmloutput viz。  
   
 -   Xmloutput スイッチの後にファイル パスが指定した場合は、ファイルに出力がリダイレクトされます。  
   

@@ -1,8 +1,6 @@
 ---
 title: SSMA プロジェクト (MySQLToSQL) の使用 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,11 +21,12 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6f0cd5bf46696dc6acb928b7bfba4a3896f1503d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6aee06b09e4743f678779dc93746a97c580df787
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776748"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA プロジェクト (MySQLToSQL) での作業
 MySQL データベースを SQL Server または SQL Azure を移行するには、まず SSMA プロジェクトを作成する必要があります。 プロジェクトは、次の情報を含むファイルです。  

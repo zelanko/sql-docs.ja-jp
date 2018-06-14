@@ -1,34 +1,20 @@
 ---
 title: エクスポート (DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- EXPORT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- exporting mining models
-- exporting mining structures
-- mining structures [DMX], exporting
-- EXPORT statement
-ms.assetid: 97617071-e560-4080-81af-a80276fc0823
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2d3aa62213e15dbc7ca826a55e8b901fc5b9d038
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bb777a0de00596c99e22e514986cf3ec930ba0fd
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841965"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,12 +33,12 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  (マイニング モデルまたはマイニング構造) にエクスポートするオブジェクトの型を省略可能です。  
   
  *オブジェクト名*  
- 省略可。 エクスポートするオブジェクトの名前です。  
+ 任意。 エクスポートするオブジェクトの名前です。  
   
  *filename*  
  文字列としてエクスポートするファイルの名前と場所です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ステートメントがマイニング モデルを指定する場合、結果ファイルは関連するマイニング構造も含みます。 ステートメントを指定する場合**WITH DEPENDENCIES**、.abf ファイルに (たとえば、データ ソースおよびデータ ソース ビュー) のオブジェクトを処理するために必要なすべてのオブジェクトが含まれます。  
   
  データベースであるかからオブジェクトをエクスポートまたはインポートするサーバーの管理者、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベース。  
@@ -74,8 +60,8 @@ EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES
 ## <a name="see-also"></a>参照  
  [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
  [インポート&AMP;#40;DMX&AMP;#41;](../dmx/import-dmx.md)   
- [エクスポートし、インポートのデータ マイニング オブジェクト](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [データ マイニング オブジェクトのエクスポートおよびインポート](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   

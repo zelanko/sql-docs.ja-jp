@@ -1,8 +1,6 @@
 ---
 title: マッピングの MySQL および SQL Server データ型 (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d35530153b4e26f865b6fd8fefa102718752dafa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 248e908567dfa40f0a8f64596e3f9e9754e03e44
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776508"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>MySQL および SQL Server データ型 (MySQLToSQL) のマッピング
 MySQL データベースの種類が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベースの種類。 MySQL のデータベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure オブジェクトに MySQL からのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 既定のデータ型マッピングを受け入れることができますか、マップをカスタマイズするには、次の手順で示すようにします。  

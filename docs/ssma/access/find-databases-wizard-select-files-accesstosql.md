@@ -1,8 +1,6 @@
 ---
 title: データベースのウィザード (ファイル) を検索 (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8bd5b106fbd45311606e0802c51997ad576c8475
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da8c4f3dbdfb374defe0144ef3accb004ee70b77
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773518"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>データベースのウィザード (ファイル) を検索 (AccessToSQL)
 ファイルの選択 ウィザードのページ、検索データベースは、検索中に検出されたファイルを示します。 SSMA に追加するファイルを選択するには、ファイル名を含む行を選択します。 ファイルの選択が完了したらをクリックして**次**選択の確認 ページを表示します。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 SSMA に追加するファイルを選択するには、ファイル名の横にあるチェック ボックスを選択します。 ファイルの選択が完了したらをクリックして**次**完了 ページを表示します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[すべて選択] します。**  
 リスト内のすべてのデータベースを選択するには、このチェック ボックスを選択します。  
   
@@ -43,13 +42,13 @@ SSMA に追加するファイルを選択するには、ファイル名の横に
 **[ファイル名]**  
 SSMA に追加する Access データベース ファイルの名前を示します。  
   
-**所有者**  
+**[所有者]**  
 ファイルの所有者を表示します。  
   
 **[ファイル パス]**  
 Access データベース ファイルのパスを表示します。  
   
-**サイズ**  
+**[サイズ]**  
 (バイト単位)、データベースのサイズ。  
   
 **Created**  

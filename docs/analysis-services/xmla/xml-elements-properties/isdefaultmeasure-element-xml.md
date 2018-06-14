@@ -13,7 +13,7 @@ ms.openlocfilehash: 8bf91c689addd9aa08054c716c0ceb714769d759
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34578314"
 ---
 # <a name="isdefaultmeasure-element-xml"></a>IsDefaultMeasure 要素 (XML)
@@ -36,7 +36,7 @@ ms.locfileid: "34578314"
 |特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|ブール値|  
-|既定値|オプション|  
+|既定値|false|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけ出現します|  
   
 ## <a name="element-relationships"></a>要素の関係  

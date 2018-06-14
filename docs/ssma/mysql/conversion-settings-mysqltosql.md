@@ -1,8 +1,6 @@
 ---
 title: 変換の設定 (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 13a3bfc9f8fe001d31b1d231438cece9752e08df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70450580a3b473f7b549578924e7f965531ad30f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776018"
 ---
 # <a name="conversion-settings-mysqltosql"></a>変換の設定 (MySQLToSQL)
 **'設定'**  タブでは、ユーザーをノード レベルの設定を設定します。 タブは、次のメタベース ノードで使用可能なになります。  

@@ -1,8 +1,6 @@
 ---
 title: プロジェクトの設定 (Azure SQL DB) (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a01c8f7f7c8d58747d0d818140bed7593c82192a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aafaa73bcbbede50fc2aa274b0fca6b655b61dd
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776548"
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>プロジェクトの設定 (Azure SQL DB) (MySQLToSQL)
 SQL Azure のプロジェクト設定では、サフィックスを構成する、SQL Azure データベースに接続ダイアログで追加して、SQL Azure 接続でハートビート メカニズムを実装することもできます。  
@@ -33,7 +32,7 @@ SQL Azure ペインがで使用できる、**プロジェクト設定**と**プ�
   
 -   プロジェクトの既定の設定 ダイアログ ボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 SQL Azure の設定にアクセスする、**ツール**メニューの  **DefaultProject 設定**から SQL azure 移行プロジェクトの種類を選択**移行対象のバージョン**SQL Azure のウィンドウでの設定にアクセスするドロップダウン**全般**クリックし、左側のウィンドウの下部にある**SQL Azure**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
   
 ## <a name="connectivity"></a>接続  
 **ハートビートの間隔**  

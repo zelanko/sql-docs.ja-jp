@@ -1,8 +1,6 @@
 ---
 title: グローバル設定 (エディター) (OracleToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,18 +13,19 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4dd9bd9fea712535b0b474d35a498eb707c7cfbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ee592c9087f96d6ab4fb8e2e01bbd74947afc42
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777278"
 ---
 # <a name="global-settings-editor-oracletosql"></a>グローバル設定 (エディター) (OracleToSQL)
 エディター ページを使用して、**グローバル設定** ダイアログ ボックスのコード エディター ウィンドウの設定を指定します。  
   
 エディターの設定にアクセスする、**ツール**メニューの **グローバル設定**をクリックして**GUI**クリックし、左側のウィンドウの下部にある**エディター**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **行番号を表示します。**  
 コード エディター ウィンドウで、行番号を表示するには、選択**True**です。  
   

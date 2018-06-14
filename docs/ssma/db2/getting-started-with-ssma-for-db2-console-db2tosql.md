@@ -1,8 +1,6 @@
 ---
 title: DB2 コンソール (DB2ToSQL) for SSMA の概要 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fd7e0f118854a6ba07988065d02aea6a2e7f6f0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6990e771de81bbb3df4069f65104b8b41c308807
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774888"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>DB2 コンソール (DB2ToSQL) for SSMA の概要
 このセクションを起動し、DB2 のコンソール アプリケーションで作業を開始する手順について説明します。 一覧表示、ここで、規則ウィンドウで使用される、一般的な SSMA コンソール出力。  
@@ -60,7 +59,7 @@ SSMA スクリプトのコマンドとオプションを実行すると、コン
   
 次の表に、コンソール出力の色の解釈:  
   
-|色|Description|  
+|色|説明|  
 |---------|---------------|  
 |[赤]|実行中に致命的なエラー|  
 |灰色|日付と時刻スタンプをユーザーにメッセージ|  

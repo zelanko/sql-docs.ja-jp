@@ -2,7 +2,7 @@
 title: 高可用性を実現するための SQL Server Integration Services (SSIS) Scale Out のサポート | Microsoft Docs
 ms.description: This article describes how to configure SSIS Scale Out for high availability
 ms.custom: ''
-ms.date: 12/19/2017
+ms.date: 05/23/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: scale-out
@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 8cd79327b3733de9f7463f1d5f9d8f924b58a46b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25660b9e6b4edbdd8a2654d092990fef94313bed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476044"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
 
@@ -47,7 +48,7 @@ Scale Out Master のプライマリ ノードに SQL Server データベース �
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 Scale Out Master サービスの DNS ホスト名を Scale Out Master 証明書の CN に含める
 
-このホスト名は、Scale Out Master エンドポイントで使用されます。 
+このホスト名は、Scale Out Master エンドポイントで使用されます。 (サーバー名ではなく、DNS ホスト名を指定してください。)
 
 ![HA マスターの構成](media/ha-master-config.PNG)
 
@@ -61,9 +62,9 @@ Scale Out Master のセカンダリ ノードに SQL Server データベース �
 > [!NOTE]
 > 他のセカンダリ ノードで Scale Out Master のこれらの操作を繰り返すことで、複数の Scale Out Master のバックアップを設定できます。
 
-## <a name="4-set-up-ssisdb-always-on"></a>4.SSISDB Always On を設定する
+## <a name="4-set-up-and-configure-ssisdb-support-for-always-on"></a>4.Always On の SSISDB サポートを設定および構成する
 
-「[Always On for SSIS Catalog (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)」に記載されている SSISDB の Always On を設定する手順に従います。
+「[Always On for SSIS Catalog (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)」に記載されている Always On の SSISDB サポートを設定および構成する手順に従います。
 
 さらに、SSISDB を追加する可用性グループに対して可用性グループ リスナーを作成する必要があります。 「[可用性グループ リスナーの作成または構成](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)」を参照してください。
 
@@ -85,7 +86,7 @@ SSISDB でのログ記録は、ログイン **##MS_SSISLogDBWorkerAgentLogin##**
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster"></a>7.Windows フェールオーバー クラスターの Scale Out Master サービス ロールを構成する
+## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7. Windows Server フェールオーバー クラスターの Scale Out Master サービス ロールを構成する
 
 1.  フェールオーバー クラスター マネージャーで、Scale Out のクラスターに接続します。クラスターを選択します。 メニューで **[アクション]** を選択してから、**[役割の構成]** を選択します。
 
@@ -96,6 +97,12 @@ SSISDB でのログ記録は、ログイン **##MS_SSISLogDBWorkerAgentLogin##**
     ![HA ウィザード 1](media/ha-wizard1.PNG)
 
 4.  ウィザードを終了します。
+
+Azure の仮想マシンでは、この構成手順の他に追加の手順が必要です。 これらの概念および手順の詳しい説明については、この記事の範囲対象外です。
+
+1.  Azure ドメインを設定する必要があります。 Windows Server フェールオーバー クラスタリングでは、クラスター内のすべてのコンピューターが同じドメインのメンバーである必要があります。 詳細については、「[Azure Portal を使用して Azure Active Directory Domain Services を有効にする](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started)」を参照してください。
+
+2. Azure ロード バランサーを設定する必要があります。 これは可用性グループ リスナーの要件です。 詳細については、「[チュートリアル: 内部トラフィックを Basic Load Balancer によって、Azure Portal を使用する VM に負荷分散する](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)」を参照してください。
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8.SSISDB で Scale Out Master アドレスを更新する
 

@@ -1,6 +1,6 @@
 ---
 title: MDX 関数リファレンス (MDX) |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fd5b9ee4a70ac58ab44a056f0abfb1086d24b76
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9137655ce59efbfa13466fe50f8142987b0ec81a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580034"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742011"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 関数リファレンス (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多次元式 (MDX) 構文では関数の使用を提供します。 関数は有効な MDX ステートメントで使用でき、多くの場合、クエリ、カスタム ロールアップ定義、その他の計算などに使用されます。 このセクションに含まれている MDX 関数に関する情報が[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]です。  
+
+  Analysis Services は、多次元式 (MDX) 構文では関数の使用を提供します。 関数は有効な MDX ステートメントで使用でき、多くの場合、クエリ、カスタム ロールアップ定義、その他の計算などに使用されます。 このセクションでは、MDX 関数についての情報を提供します。  
   
  以下の表では、戻り値の種類ごとに関数がまとめられています。また、目次には、関数名がアルファベット順に一覧表示されます。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "34580034"
 |機能|説明|  
 |--------------|-----------------|  
 |[Hierarchy &#40;MDX&#41;](../mdx/hierarchy-mdx.md)|指定されたメンバーまたはレベルを含む階層を返します。|  
-|[Dimension &#40;MDX&#41;](../mdx/dimension-mdx.md)|指定されたメンバー、レベル、階層を含むディメンションを返します。|  
+|[Dimensions &#40;MDX&#41;](../mdx/dimension-mdx.md)|指定されたメンバー、レベル、階層を含むディメンションを返します。|  
 |[Dimensions &#40;MDX&#41;](../mdx/dimensions-mdx.md)|数値式や文字列式で指定された階層を返します。|  
   
 ## <a name="level-functions"></a>レベル関数  
@@ -42,7 +42,7 @@ ms.locfileid: "34580034"
 |機能|説明|  
 |--------------|-----------------|  
 |[Level &#40;MDX&#41;](../mdx/level-mdx.md)|メンバーのレベルを返します。|  
-|[Levels &#40;MDX&#41;](../mdx/levels-mdx.md)|数値式でディメンション内または階層内の位置を指定されたレベル、または文字列式で名前を指定されたレベルを返します。|  
+|[Level &#40;MDX&#41;](../mdx/levels-mdx.md)|数値式でディメンション内または階層内の位置を指定されたレベル、または文字列式で名前を指定されたレベルを返します。|  
   
 ## <a name="logical-functions"></a>論理関数  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34580034"
 |[DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)|ディメンションまたは階層の既定のメンバーを返します。|  
 |[FirstChild &#40;MDX&#41;](../mdx/firstchild-mdx.md)|メンバーの先頭の子メンバーを返します。|  
 |[FirstSibling &#40;MDX&#41;](../mdx/firstsibling-mdx.md)|メンバーの親の最初の子メンバーを返します。|  
-|[Item &#40;メンバー&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)|指定された組からメンバーを返します。|  
+|[Item &#40;Members &#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)|指定された組からメンバーを返します。|  
 |[Lag &#40;MDX&#41;](../mdx/lag-mdx.md)|ディメンション内の指定されたメンバーから指定された数だけ前にあるメンバーを返します。|  
 |[LastChild &#40;MDX&#41;](../mdx/lastchild-mdx.md)|指定されたメンバーの最後の子メンバーを返します。|  
 |[LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)|指定されたメンバーの親の最後の子を返します。|  
@@ -92,9 +92,9 @@ ms.locfileid: "34580034"
 |[CalculationPassValue (MDX)](../mdx/calculationpassvalue-mdx.md)|キューブに対して指定された計算パスを評価し、MDX 式の値を返します。|  
 |[CoalesceEmpty &#40;MDX&#41;](../mdx/coalesceempty-mdx.md)|空のセル値を数値または文字列に連結し、連結後の値を返します。|  
 |[Correlation &#40;MDX&#41;](../mdx/correlation-mdx.md)|セットに対して評価される 2 つの系列の相関係数を返します。|  
-|[Count &#40;ディメンション&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)|キューブ内のディメンション数を返します。|  
+|[Count &#40;Dimension &#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)|キューブ内のディメンション数を返します。|  
 |[Count &#40;階層レベル&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)|ディメンション内または階層内のレベル数を返します。|  
-|[Count &#40;セット&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)|セット内のセル数を返します。|  
+|[Count &#40;設定&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)|セット内のセル数を返します。|  
 |[Count &#40;組&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)|組内のディメンション数を返します。|  
 |[Covariance &#40;MDX&#41;](../mdx/covariance-mdx.md)|バイアスをかけた母集団の公式を使用して、セットに対して評価される 2 つの系列の母共分散を返します。|  
 |[CovarianceN &#40;MDX&#41;](../mdx/covariancen-mdx.md)|バイアスをかけない母集団の公式を使用して、セットに対して評価される 2 つの系列のサンプル共分散を返します。|  
@@ -131,8 +131,8 @@ ms.locfileid: "34580034"
 |--------------|-----------------|  
 |[AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)|計算されるメンバーを指定されたセットに追加して生成したセットを返します。|  
 |[AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md)|指定されたディメンション、階層、レベルのすべてのメンバー (計算されるメンバーも含む) を含むセットを返します。|  
-|[Ancestors &#40;MDX&#41;](../mdx/ancestors-mdx.md)|メンバーの先祖のうち、指定されたレベルまたは距離にあるすべての先祖のセットを返します。|  
-|[Ascendants &#40;MDX&#41;](../mdx/ascendants-mdx.md)|指定されたメンバー自体も含めたメンバーの先祖のセットを返します。|  
+|[Ancestor &#40;MDX&#41;](../mdx/ancestors-mdx.md)|メンバーの先祖のうち、指定されたレベルまたは距離にあるすべての先祖のセットを返します。|  
+|[Ancestor &#40;MDX&#41;](../mdx/ascendants-mdx.md)|指定されたメンバー自体も含めたメンバーの先祖のセットを返します。|  
 |[Axis &#40;MDX&#41;](../mdx/axis-mdx.md)|軸で定義されるセットを返します。|  
 |[BottomCount &#40;MDX&#41;](../mdx/bottomcount-mdx.md)|セットを昇順に並べ替え、値の小さい方から指定された数の組を返します。|  
 |[BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md)|セットを昇順で並べ替え、累積合計が指定された割合以下になるように、値の小さい方から組のセットを作成して返します。|  
@@ -159,7 +159,7 @@ ms.locfileid: "34580034"
 |[Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)|セットのメンバーを階層化します。|  
 |[Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md)|指定された 2 つのセットの積集合を返します。重複部分を保持することも可能です。|  
 |[LastPeriods &#40;MDX&#41;](../mdx/lastperiods-mdx.md)|指定されたメンバーを含む、指定されたメンバーまでのメンバーのセットを返します。|  
-|[Members &#40;セット&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)|ディメンション、レベル、階層のメンバーのセットを返します。|  
+|[Members &#40;設定&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)|ディメンション、レベル、階層のメンバーのセットを返します。|  
 |[Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)|時間ディメンションの年 (Year) レベルという制約の中で、指定されたメンバーと同じレベルにある兄弟メンバーのセットを返します。先頭は最初の兄弟、末尾は指定されたメンバーになります。|  
 |[NameToSet &#40;MDX&#41;](../mdx/nametoset-mdx.md)|MDX 形式の文字列によって指定されているメンバーを含むセットを返します。|  
 |[NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)|1 つ以上のセットのクロス積を 1 つのセットとして返します。ただし、空の組と、ファクト テーブル データに関連付けられていない組は含まれません。|  

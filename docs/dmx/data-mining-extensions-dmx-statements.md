@@ -1,35 +1,20 @@
 ---
 title: データ マイニング拡張機能 (DMX) ステートメント リファレンス |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Data Mining Extensions [Analysis Services], statements
-- DMX [Analysis Services], statements
-- statements [DMX], reference
-- mining models [Analysis Services], training
-- mining structures [DMX]
-- mining models [Analysis Services], options
-- mining structures [DMX], options
-ms.assetid: 9cfa1db4-0f21-4fa3-8158-f94c48987e1b
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a3c9f5d7331077520bab68c951b792f744f927db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1baab80455cc5267686bf26251629a1d47065344
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841495"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>データ マイニング拡張機能 (DMX) ステートメント
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -74,14 +59,14 @@ ms.lasthandoff: 05/03/2018
   
  これらのタスクは、次の表に示す、データ定義ステートメントとデータ操作ステートメントの 2 つのカテゴリに分類されます。  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)|データ定義言語 (DDL) の一部です。 新しいマイニング モデルの定義 (学習を含む)、またはデータベースからの既存のマイニング モデルのドロップに使用されます。|  
 |[データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)|データ操作言語 (DML) の一部です。 モデルの参照または予測の作成を含む、既存のマイニング モデルでの作業に使用されます。|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [データ マイニング拡張機能 &#40;DMX&#41; 演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [データ マイニング拡張機能&#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   

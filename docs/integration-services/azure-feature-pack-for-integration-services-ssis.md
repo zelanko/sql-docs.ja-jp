@@ -1,7 +1,7 @@
 ---
 title: Integration Services (SSIS) 用の Azure Feature Pack | Microsoft Docs
 ms.custom: ''
-ms.date: 08/22/2017
+ms.date: 05/24/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: non-specific
@@ -19,11 +19,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ce10711bd2ce6872928b320e86d65369bbbd011
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 798d65d65b9e51c10b41a036cf51f60fa15072b3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550553"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services (SSIS) 用の Azure Feature Pack
 SQL Server Integration Services (SSIS) Feature Pack for Azure は、このページにリストされている SSIS のコンポーネントを提供して、Azure サービスへの接続、Azure とオンプレミスのデータ ソース間でのデータ転送、および Azure に格納されたデータの処理を行うための拡張機能です。
@@ -34,6 +35,8 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
 - SQL Server 2016 の場合 - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)
 - SQL Server 2014 の場合 - [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)
 - SQL Server 2012 の場合 - [Microsoft SQL Server 2012 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47367)
+
+ダウンロード ページには、前提条件に関する情報も含まれます。 必ず SQL Server をインストールしてから Azure Feature Pack をサーバーにインストールします。そうしないと、サーバー上の SSIS カタログ データベース (SSISDB) にパッケージを展開するときに Feature Pack 内のコンポーネントを利用できない場合があります。
 
 ## <a name="components-in-the-feature-pack"></a>Feature Pack のコンポーネント
 -   接続マネージャー
@@ -78,18 +81,6 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
 
 -   Azure BLOB および ADLS ファイル列挙子。 「[Foreach ループ コンテナー](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)」を参照してください。
 
-## <a name="download-the-feature-pack"></a>Feature Pack のダウンロード
- SQL Server Integration Services (SSIS) Feature Pack for Azure をダウンロードします。
- 
-- SQL Server 2016 の [SSIS Feature Pack for Azure](http://go.microsoft.com/fwlink/?LinkID=626967)
-- [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] の [SSIS Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
-
-## <a name="prerequisites"></a>Prerequisites
- この機能パックをインストールする前に、次の前提条件をインストールする必要があります。
-
--   SQL Server Integration Services
--   .NET Framework 4.5
-
 ## <a name="scenario-processing-big-data"></a>シナリオ: ビッグ データの処理
  Azure コネクタを使用して、次のビッグ データの処理を完了します。
 
@@ -106,7 +97,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
 ![SSIS-AzureConnector-BigDataScenario](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
  
 ## <a name="scenario-managing-data-in-the-cloud"></a>シナリオ: クラウド内のデータ管理
- SSIS パッケージ内の Azure Blob Destination を使用して、出力データを Azure Blob ストレージに書き込みむか、または Azure Blob Source を使用して、Azure Blob ストレージからデータを読み取ります。
+ SSIS パッケージ内の Azure Blob Destination を使用して、出力データを Azure Blob ストレージに書き込むか、または Azure Blob Source を使用して、Azure Blob ストレージからデータを読み取ります。
 
 ![SSIS-AzureConnector-CloudArchive-1](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
  

@@ -1,4 +1,4 @@
----
+﻿---
 title: Windows サービス (In-database) を学習の SQL Server 2017 マシンのインストール |Microsoft ドキュメント
 ms.prod: sql
 ms.technology: machine-learning
@@ -11,7 +11,7 @@ ms.openlocfilehash: 23fed22efe90a91905c4b36c967ad5fa72717b3f
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585874"
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>Windows サービス (In-database) を学習の SQL Server 2017 マシンをインストールします。 
@@ -113,7 +113,7 @@ SQL Server の Machine Learning サービス コンポーネントは、デー�
     > [!TIP]
     > ダウンロードして、このページから、適切なバージョンをインストールすることができます:[ダウンロード SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。
     > 
-    > プレビュー リリースのも試すことができます[SQL 操作 Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)、管理タスクと SQL Server に対してクエリをサポートします。
+    > プレビュー リリースのも試すことができます[SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)、管理タスクと SQL Server に対してクエリをサポートします。
   
 2. Machine Learning のサービスがインストールされているインスタンスに接続し、をクリックして**新しいクエリ**をクエリ ウィンドウを開き、次のコマンドを実行します。
 

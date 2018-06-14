@@ -11,7 +11,7 @@ ms.openlocfilehash: ecd58ee9670724a2732ce8aabc5d9f2c62042995
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585454"
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>SQL Server マシン学習サービスとは

@@ -3,8 +3,6 @@ title: Sybase ASE (SybaseToSQL) への接続 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ac144d636536bac66f7330825f536f01200738b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2fb1bb6047dca0965d71e80b1042d9fe1d8bca97
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778458"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Sybase ASE (SybaseToSQL) に接続します。
 Sybase Adaptive Server Enterprise (ASE) データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure に移行するデータベースを含むアダプティブ サーバーに接続する必要があります。 接続するときに、SSMA は、アダプティブ サーバー上のすべてのデータベースに関するメタデータを取得し、Sybase メタデータ エクスプ ローラー ペインでデータベースのメタデータを表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  
@@ -127,5 +126,5 @@ ASE データベースについてのメタデータは、自動的に更新さ�
 -   移行プロセスの次の手順が、 [SQL Server のインスタンスへの接続](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [SQL Azure のインスタンスに接続します。](http://msdn.microsoft.com/en-us/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB &#40;への Sybase ASE データベースの移行SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server - Azure SQL DB に ASE Sybase データベースを移行する&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

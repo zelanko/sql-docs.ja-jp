@@ -1,6 +1,6 @@
 ---
 title: OLAP プロパティ |Microsoft ドキュメント
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5739c93f7a3c20960f5470c3fd2cdb24c72cf09d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239292"
 ---
 # <a name="olap-properties"></a>OLAP のプロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示す OLAP サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
  **適用対象:** 多次元サーバー モードのみ  
   
-## <a name="memory"></a>[メモリ]  
+## <a name="memory"></a>Memory  
  **DefaultPageSizeForData**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -43,8 +45,8 @@ ms.lasthandoff: 05/10/2018
  **DefaultPageSizeForProp**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="lazyprocessing"></a>レイジー処理  
- **有効**  
+## <a name="lazyprocessing"></a>LazyProcessing  
+ **Enabled**  
  レイジー集計処理が有効かどうかを示すブール型プロパティです。  
   
  **SleepIntervalSecs**  
@@ -61,7 +63,7 @@ ms.lasthandoff: 05/10/2018
  **MaxRetries**  
  レイジー処理が失敗した場合にエラーが発生する前にイベントでの再試行の回数を定義する、符号付き 32 ビット整数のプロパティです。  
   
-## <a name="processplan"></a>プロセス プラン  
+## <a name="processplan"></a>ProcessPlan  
  **CacheRowsetRows**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 05/10/2018
  **OptimizeSchema**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="proactivecaching"></a>プロアクティブ キャッシュ  
+## <a name="proactivecaching"></a>ProactiveCaching  
  **DefaultRefreshInterval**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -110,7 +112,7 @@ ms.lasthandoff: 05/10/2018
  **PartitionLatencyAccuracy**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="process"></a>[処理]  
+## <a name="process"></a>Process  
  **AggregationMemoryLimitMax**  
  集計処理に充てることができるメモリの最大量を定義する、符号付き 64 ビット倍精度浮動小数点数のプロパティです。物理メモリの比率として表されます。  
   
@@ -243,12 +245,13 @@ ms.lasthandoff: 05/10/2018
   
 -   サーバー上のすべてのデータベースに影響します。 **DimensionPropertyCachesize** は、サーバー全体のプロパティです。 このプロパティを変更すると、現在のインスタンスで実行されているすべてのデータベースに影響を与えます。  
   
- ディメンション キャッシュの要件を推定する方法:  
+ディメンション キャッシュの要件を推定する方法:  
   
 1.  最初はサイズを大幅に増やして、ディメンション キャッシュのサイズを増やしたときに利点が得られるかどうかを判断します。 たとえば、最初のステップとして既定値を倍にすることが考えられます。  
   
 2.  パフォーマンスが向上することが明らかになった場合は、パフォーマンスとメモリ使用率の間で適切なバランスに達するまで、値を徐々に小さくします。  
-  
+
+
  **ExpressNonEmptyUseEnabled**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -345,7 +348,7 @@ ms.lasthandoff: 05/10/2018
  **DataCache\ MemoryModel\ Tax**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="jobs"></a>ジョブ  
+## <a name="jobs"></a>Jobs  
  **ProcessAggregation\ MemoryModel\ Income**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   

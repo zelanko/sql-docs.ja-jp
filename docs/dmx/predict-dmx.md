@@ -1,31 +1,20 @@
 ---
 title: 予測 (DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PREDICT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Predict function
-ms.assetid: f02ff4b3-9bd7-409d-ad14-ead67b3206c4
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6f2aa8ba77b19aab0821777d669866409dbf01df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 733e3272bf67347f1e3459a0df5f13225488f677
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842835"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +44,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  INCLUSIVE、EXCLUSIVE、INPUT_ONLY、および INCLUDE_STATISTICS はテーブル列の参照にのみ適用され、EXCLUDE_NULL および INCLUDE_NULL はスカラー列の参照にのみ適用されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  オプションには、EXCLUDE_NULL (既定)、INCLUDE_NULL、INCLUSIVE、EXCLUSIVE (既定)、INPUT_ONLY、および INCLUDE_STATISTICS が含まれています。  
   
 > [!NOTE]  
@@ -99,8 +88,8 @@ FROM     [Association]
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

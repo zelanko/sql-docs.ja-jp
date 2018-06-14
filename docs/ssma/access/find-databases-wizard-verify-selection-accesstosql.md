@@ -1,8 +1,6 @@
 ---
 title: データベースのウィザード (選択を確認する) (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,25 +18,26 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 05baf274638892040fe8ddf5d81d4c153c61ed0c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b68d96abdb7ed64cfa12fc51b70386729212cb6a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774188"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>データベースのウィザード (選択を確認する) (AccessToSQL)
 検索データベース ウィザードの [確認の選択] ページでは、SSMA に追加するファイルを示します。 ファイルの一覧が正しくない場合は、クリックして**戻る**一覧を変更します。 それ以外の場合、をクリックして**完了**ファイルを追加します。  
   
 データベースの検出ウィザードを開くには、**ファイル** メニューのをクリックして**検索データベース**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[ファイル名]**  
 SSMA に追加する Access データベース ファイルの名前を示します。  
   
 **[ファイル パス]**  
 Access データベース ファイルのパスを示します。  
   
-**所有者**  
+**[所有者]**  
 ファイルの所有者を示しています。  
   
 ## <a name="see-also"></a>参照  

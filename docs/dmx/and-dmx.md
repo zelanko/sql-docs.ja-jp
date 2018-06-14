@@ -1,31 +1,20 @@
 ---
 title: (DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- AND
-dev_langs:
-- DMX
-helpviewer_keywords:
-- AND, DMX
-ms.assetid: d337b20c-f80e-48be-9354-371367e53735
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a1655d992e0b09001f353f028b72f29ff98d6c9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a53a2e309d427ee3868478a17186cad1070d4f81
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841225"
 ---
 # <a name="and-dmx"></a>AND (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +38,7 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>戻り値  
  両方のパラメーターの結果が TRUE の場合は TRUE を返し、そうでない場合は FALSE を返すブール値です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  両方のパラメーターは、演算子が論理積を実行する前に、ブール値 (FALSE の場合は 0、そうでない場合は TRUE) として処理されます。 次の表は、パラメーター値のさまざまな組み合わせに基づいて返される値を示します。  
   
 |Expression1|Expression2|戻り値します。|  
@@ -60,8 +49,8 @@ Expression1 AND Expression2
 |FALSE|FALSE|FALSE|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41; 演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [論理演算子 &#40;DMX&#41;](../dmx/operators-logical.md)   
- [演算子 &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [論理演算子&#40;DMX&#41;](../dmx/operators-logical.md)   
+ [演算子&#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

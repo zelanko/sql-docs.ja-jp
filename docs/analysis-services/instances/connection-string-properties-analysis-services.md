@@ -9,15 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bca184686c34d204958cf44cb53289b7c07a4a9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 24f7302b94477b76b161be184cd27839f8516564
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239103"
 ---
 # <a name="connection-string-properties-analysis-services"></a>接続文字列プロパティ (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  このトピックでは、接続文字列プロパティについて説明します。接続文字列プロパティは、いずれかのデザイナー ツールまたは管理ツールで設定できます。また、Analysis Services データに接続および照会するクライアント アプリケーションによって作成された接続文字に表示されることもあります。 そのため、使用できるプロパティのサブセットについてのみ説明します。 完全な一覧には、多くのサーバー プロパティおよびデータベース プロパティが含まれます。それらを使用すると、サーバーでインスタンスまたはデータベースを構成している方法に関係なく、特定のアプリケーションの接続をカスタマイズできます。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  このトピックでは、デザイナーまたは管理ツール のいずれかで設定したりに接続するクライアント アプリケーションと Analysis Services データのクエリにより作成された接続文字列を参照して、接続文字列プロパティについて説明します。 そのため、使用できるプロパティのサブセットについてのみ説明します。 完全な一覧には、多くのサーバー プロパティおよびデータベース プロパティが含まれます。それらを使用すると、サーバーでインスタンスまたはデータベースを構成している方法に関係なく、特定のアプリケーションの接続をカスタマイズできます。  
   
  アプリケーション コードでカスタム接続文字列を作成する開発者は、ADOMD.NET クライアントの API ドキュメントを参照して、詳しい一覧「 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
@@ -31,9 +33,9 @@ ms.lasthandoff: 05/10/2018
 ##  <a name="bkmk_common"></a> よく使用される接続パラメーター  
  次の表では、接続文字列を作成する際に最もよく使用されるプロパティについて説明します。  
   
-|プロパティ|Description|例|  
+|プロパティ|説明|例|  
 |--------------|-----------------|-------------|  
-|**Data Source** または **DataSource**|サーバー インスタンスを指定します。 このプロパティは、すべての接続に必要です。 有効な値には、サーバーのネットワーク名または IP アドレス、ローカル接続の local または localhost、URL (サーバーが HTTP または HTTPS アクセス用に構成されている場合)、またはローカル キューブ (.cub) ファイルの名前があります。|`Data source=AW-SRV01` : 既定のインスタンスとポート (TCP 2383) の場合。<br /><br /> `Data source=AW-SRV01$Finance:8081` : 名前付きインスタンス ($Finance) と固定ポートの場合。<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` : 完全修飾ドメイン名の場合。既定のインスタンスとポートを想定しています。<br /><br /> `Data source=172.16.254.1` : サーバーの IP アドレスの場合。DNS サーバーの参照をバイパスします。接続の問題をトラブルシューティングする場合に便利です。|  
+|**Data Source** または **DataSource**|サーバー インスタンスを指定します。 このプロパティは、すべての接続に必要です。 有効な値には、サーバーのネットワーク名または IP アドレス、ローカル接続の local または localhost、URL (サーバーが HTTP または HTTPS アクセス用に構成されている場合)、またはローカル キューブ (.cub) ファイルの名前があります。 <br /><br /> Azure Analysis Services の有効な値`<protocol>://<region>/<servername>`プロトコル文字列 asazure ですが、領域は、サーバーの作成元の Uri (たとえば、westus.asazure.windows.net)、サーバー名が、領域内で一意で、サーバーの名前。 |`Data source=asazure://westus.asazure.windows.net/myasserver`<br /><br />`Data source=AW-SRV01`: 既定のインスタンスとポート (TCP 2383) の場合。<br /><br /> `Data source=AW-SRV01$Finance:8081` : 名前付きインスタンス ($Finance) と固定ポートの場合。<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` : 完全修飾ドメイン名の場合。既定のインスタンスとポートを想定しています。<br /><br /> `Data source=172.16.254.1` : サーバーの IP アドレスの場合。DNS サーバーの参照をバイパスします。接続の問題をトラブルシューティングする場合に便利です。|  
 |**Initial Catalog** または **Catalog**|接続先の Analysis Services データベースの名前を指定します。 データベースが Analysis Services に配置されており、データベースに接続するための権限を持っている必要があります。 このプロパティは、AMO 接続では省略できますが、ADOMD.NET では必須です。|`Initial catalog=AdventureWorks2016`|  
 |**プロバイダー**|有効な値には、MSOLAP が含まれます。\<バージョン > ここで、\<バージョン > は、4、5、6 または 7 です。<br /><br /> -   MSOLAP.4 は、SQL Server 2008 でリリースされ、SQL Server 2008 R2 で再度リリースされました (ファイル名は SQL Server 2008 および 2008 R2 では msolap100.dll です)。<br />-   MSOLAP.5 は、SQL Server 2012 でリリースされました (ファイル名は msolap110.dll です)。<br />-   MSOLAP.6 は、SQL Server 2014 でリリースされました (ファイル名は msolap1200.dll です)。<br />-   MSOLAP.7 は、SQL Server 2016 でリリースされました (ファイル名は msolap130.dll です)。<br /><br /> このプロパティは省略可能です。 既定では、クライアント ライブラリは、レジストリから現在のバージョンの OLE DB プロバイダーを読み取ります。 SQL Server 2012 インスタンスに接続するなど、特定のバージョンのデータ プロバイダーが必要な場合のみ、このプロパティを設定する必要があります。<br /><br /> MSOLAP.4 は、SQL Server 2008 と SQL Server 2008 R2 の両方でリリースされました。 2008 R2 バージョンは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックをサポートしており、SharePoint サーバーに手動でインストールすることが必要な場合があります。 これらのバージョンを区別するには、プロバイダーのファイル プロパティでビルド番号を確認する必要があります。それには、Program files\Microsoft Analysis Services\AS OLEDB\10 に移動します。 msolap110.dll を右クリックし、 **[プロパティ]** をクリックします。 **[詳細]** をクリックします。 ファイルのバージョン情報が表示されます。 バージョンは 10.50 を含める必要があります。\<buildnumber > SQL Server 2008 R2 用です。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 」および「 [Analysis Services 接続に使用するデータ プロバイダー](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)」を参照してください。|`Provider=MSOLAP.7` は、SQL Server 2016 バージョンの OLE DB Provider for Analysis Services を必要とする接続に使用します。|  
 |**Cube**|キューブ名またはパースペクティブ名。 データベースには、複数のキューブおよびパースペクティブを含めることができます。 複数の対象が考えられる場合は、接続文字列にキューブ名またはパースペクティブ名を含めます。|`Cube=SalesPerspective` は、Cube 接続文字列プロパティを使用して、キューブの名前またはパースペクティブの名前を指定できることを示しています。|  
@@ -43,7 +45,7 @@ ms.lasthandoff: 05/10/2018
   
  プロパティは、アルファベット順に示しています。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**EffectiveUserName**|サーバーでエンド ユーザー ID の権限を借用する必要がある場合に使用します。 アカウントを domain\user という形式で指定します。 このプロパティを使用するには、呼び出し元に Analysis Services に対する管理権限が必要です。 SharePoint から Excel ブックのこのプロパティを使用する方法の詳細については、「 [SharePoint Server 2013 で Analysis Services の EffectiveUserName を使用する](http://go.microsoft.com/fwlink/?LinkId=311905)」をご覧ください。 Reporting Services でこのプロパティを使用する方法の詳細については、「 [SSAS での EffectiveUserName を使用した権限の借用](http://go.microsoft.com/fwlink/?LinkId=301385)」をご覧ください。<br /><br /> **EffectiveUserName** は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールで使用情報を取得する場合に使用します。 ユーザー ID を含むイベントまたはエラーをログ ファイルに記録できるように、ユーザー ID がサーバーに渡されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]の場合、承認には使用されません。|  
 |**Encrypt Password**|ローカル キューブを暗号化するためにローカル パスワードを使用するかどうかを指定します。 有効な値は True または False です。 既定値は False です。|  
@@ -63,7 +65,7 @@ ms.lasthandoff: 05/10/2018
   
  プロパティは、アルファベット順に示しています。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**Application Name**|接続に関連付けられたアプリケーションの名前を設定します。 この値は、トレース イベントを監視する場合 (特に、同じデータベースにアクセスするアプリケーションが複数ある場合) に役立ちます。 たとえば、接続文字列に Application Name='test' を追加すると、次のスクリーン ショットに示すように、SQL Server Profiler トレースに 'test' が表示されます。<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> このプロパティの別名には、 **sspropinitAppName**および **AppName**があります。 詳細については、「 [SQL Server に接続する場合の Application Name パラメーターの使用](http://go.microsoft.com/fwlink/?LinkId=301699)」をご覧ください。|  
 |**AutoSyncPeriod**|クライアントとサーバーのキャッシュを同期する頻度 (ミリ秒単位) を設定します。 ADOMD.NET には、最小限のメモリ オーバーヘッドが発生する、よく使用されるオブジェクトのために、クライアント キャッシュが用意されています。 これは、サーバーへのラウンド トリップを減らすのに役立ちます。 既定値は 10,000 ミリ秒 (10 秒) です。 null または 0 に設定した場合、自動同期は無効になります。|  
@@ -72,6 +74,7 @@ ms.lasthandoff: 05/10/2018
 |**CompareCaseSensitiveStringFlags**|指定されたロケールの大文字と小文字を区別する文字列の比較を調整します。 このプロパティの設定の詳細については、「 [CompareCaseSensitiveStringFlags プロパティ](http://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx)」をご覧ください。|  
 |**Compression Level**|**TransportCompression** が XPRESS の場合、圧縮レベルを設定して、圧縮率を制御できます。 有効値は 0 ～ 9 です。0 の場合に圧縮率が最も低く、9 の場合に圧縮率が最も高くなります。 圧縮率を上げると、パフォーマンスが低下します。 既定値は 0 です。|  
 |**Connect Timeout**|クライアントの接続試行がタイムアウトするまでの最長時間 (秒単位) を指定します。接続がこの期間内に成功しなかった場合、クライアントは接続試行を終了し、エラーが発生します。|  
+|**DbpropMsmdRequestMemoryLimit**|このプロパティのオーバーライド、 [Memory\QueryMemoryLimit](../server-properties/memory-properties.md)接続のサーバー プロパティの値。 キロバイト単位で指定します。 |
 |**MDX Compatibility**|このプロパティの目的は、MDX クエリを発行するアプリケーションの MDX 動作の一貫性を確保することです。 Excel で MDX クエリを使用して、Analysis Services に接続されたピボットテーブルを設定および計算する場合は、このプロパティを 1 に設定し、不規則階層のプレースホルダー メンバーがピボットテーブルに表示されるようにします。 有効な値は、0、1、および 2 です。<br /><br /> 0 および 1 では、プレースホルダー メンバーが公開されます。2 では、公開されません。 このプロパティが空の場合は、0 と見なされます。|  
 |**MDX Missing Member Mode=Error**|欠落したメンバーを MDX ステートメントで無視するかどうかを示します。 有効な値は、Default、Error、および Ignore です。 既定では、サーバーで定義されている値を使用します。 Error では、メンバーが存在しない場合、エラーが発生します。 Ignore では、欠落した値を無視するように指定します。|  
 |**Optimize Response**|次のどのクエリ応答の最適化を有効にするかを示すビットマスク。<br /><br /> -   0x01 NormalTupleSet を使用します (これが既定値です)<br />-   0x02 スライサーが空の場合に使用します|  
@@ -104,7 +107,7 @@ ms.lasthandoff: 05/10/2018
   
 -   デバッグ モード  
   
--   [モード]  
+-   モード  
   
 -   SQLCompatibility  
   
@@ -150,11 +153,11 @@ ms.lasthandoff: 05/10/2018
   
  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック (.xlsx、.xlsb、または .xlsm ファイル) への Http(s) 接続**  
   
- `Data Source=<URL>`。URL には、SharePoint ライブラリにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックへの SharePoint パスを指定します。 たとえば、 `Data Source=http://localhost/Shared Documents/Sales.xlsx`のようにします。  
+ `Data Source=<URL>`。URL には、SharePoint ライブラリにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックへの SharePoint パスを指定します。 たとえば、`Data Source=http://localhost/Shared Documents/Sales.xlsx` のようにします。  
   
  **BI Semantic Model 接続ファイルへの Http(s) 接続**  
   
- `Data Source=<URL>` 。URL には、.bism ファイルへの SharePoint パスを指定します。 たとえば、 `Data Source=http://localhost/Shared Documents/Sales.bism`のようにします。  
+ `Data Source=<URL>`。URL には、.bism ファイルへの SharePoint パスを指定します。 たとえば、`Data Source=http://localhost/Shared Documents/Sales.bism` のようにします。  
   
  **埋め込み [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 接続**  
   

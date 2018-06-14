@@ -1,8 +1,6 @@
 ---
 title: 変換する DB2 スキーマ (DB2ToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3553064a4af95e29a3ed0f7f58e1e2b03215cad1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7d16e10ec2dfb3474679f63aff9941bd2ef84a8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774498"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 スキーマ (DB2ToSQL) の変換
 接続されている DB2 に接続すると後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、DB2 データベース オブジェクトに変換するにはプロジェクトの設定とデータのマッピング オプションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース オブジェクトです。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 |CREATE TABLE|**SSMA は、次の例外が CREATE TABLE を割り当てます。**<br /><br />多次元のクラスタ リング (MDC) テーブル<br /><br />範囲-クラスター化テーブル (RCT)<br /><br />パーティション テーブル<br /><br />デタッチされたテーブル<br /><br />データのキャプチャ句<br /><br />非表示に IMPLICITLY オプション<br /><br />揮発性のオプション|  
 |CREATE VIEW|SSMA は、' WITH ローカル CHECK OPTION' をビューの作成をマップしますが、その他のオプションは、SQL server のセマンティクスにマップされていません|  
 |CREATE INDEX|**SSMA は、次の例外がインデックスの作成を割り当てます。**<br /><br />XML インデックス<br /><br />オーバー ラップせず BUSINESS_TIME オプション<br /><br />パーティション分割された句<br /><br />オプションの指定のみ<br /><br />オプションの拡張を使用します。<br /><br />MINPCTUSED オプション<br /><br />ページ分割オプション|  
-|トリガー|**SSMA は、次のトリガーのセマンティクスを割り当てます。**<br /><br />AFTER/各の行のトリガーを<br /><br />各ステートメントがトリガー/FOR 後<br /><br />前に/FOR EACH ROW との代わりに各の行のトリガーの場合は/|  
+|トリガーの|**SSMA は、次のトリガーのセマンティクスを割り当てます。**<br /><br />AFTER/各の行のトリガーを<br /><br />各ステートメントがトリガー/FOR 後<br /><br />前に/FOR EACH ROW との代わりに各の行のトリガーの場合は/|  
 |シーケンス|マップされます。|  
 |SELECT ステートメント|**SSMA マップは、次の例外を選択します。**<br /><br />部分的にマップされると、– データの変更テーブル参照句が最終的なテーブルはサポートされていません<br /><br />テーブル参照の句-部分的にマップされている、専用のテーブルの参照、外部テーブル参照、analyze_table 式が、コレクション派生テーブル、xmltable 式は、SQL server のセマンティクスにマップされていません<br /><br />期間仕様句: マップされていません。<br /><br />続行ハンドラー句: マップされていません。<br /><br />型指定された関連付け句: マップされていません。<br /><br />同時実行のアクセスの解像度句: マップされていません。|  
 |VALUES ステートメント|マップされます。|  
@@ -157,5 +156,5 @@ DB2 データベース オブジェクトに変換するには、最初に、変
 移行プロセスの次の手順が、[変換後のオブジェクトを SQL Server に読み込む](http://msdn.microsoft.com/en-us/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)します。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;DB2ToSQL&#41; への DB2 データの移行](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[SQL Server に DB2 データを移行する&#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

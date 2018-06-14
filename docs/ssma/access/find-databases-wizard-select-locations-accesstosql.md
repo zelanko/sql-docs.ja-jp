@@ -1,8 +1,6 @@
 ---
 title: データベースのウィザード (場所) を検索 (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,19 +18,20 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 22ebef73d62b315ebdbdc2a7fd4bb5755454d12e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 146979dbbd54d0d79c357dc02e432ba535d6accc
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773658"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>データベースのウィザード (場所) を検索 (AccessToSQL)
 検索データベース ウィザードの [場所の選択] ページでは、Access データベースを検索するための検索パラメーターを入力します。  
   
 検索データベースのウィザードを開くには、**ファイル** メニューのをクリックして**検索データベース**です。 このダイアログ ボックスを使用する方法の詳細については、次を参照してください[の追加および Access データベース ファイルの削除。](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   
-## <a name="options"></a>オプション  
-**参照**  
+## <a name="options"></a>および  
+**[参照]**  
 コンピューターまたはネットワークを [参照] をクリックします。 フォルダーまたはをクリックし、検索する場所を選択して**OK**です。 をクリックして**追加**一覧にこの場所を追加します。  
   
 **パス ボックス**  
@@ -47,7 +46,7 @@ SSMA はスキャンを実行する場所の一覧を示します。 クリッ�
 **[置換]**  
 場所の一覧の項目が選択されている場合、パスのテキスト ボックス内の項目には、選択した項目が置き換えられます。  
   
-**[削除]**  
+**削除**  
 検索する場所の一覧から選択した項目を削除します。  
   
 **ファイル名の全部または一部**  
@@ -59,10 +58,10 @@ SSMA はスキャンを実行する場所の一覧を示します。 クリッ�
 **最終更新日**  
 特定の日付範囲内で最後に更新されたデータベースを検索するには、入力の開始日、**から**ボックスと最後の日付、**に**ボックス。  
   
-**サイズ**  
+**[サイズ]**  
 サイズの条件に一致するデータベースを検索するには、最初のボックスで、比較の文字を選択、サイズの番号を入力し、バイト、または選択してキロバイト、メガバイト単位 3 番目のボックスからです。  
   
-**所有者**  
+**[所有者]**  
 所有者のすべての Windows ユーザー名を入力します。 これにフォーマットされたとして*ドメイン*\\*ユーザー*です。  
   
 ## <a name="see-also"></a>参照  

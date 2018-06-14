@@ -1,8 +1,6 @@
 ---
 title: SQL Server Migration Assistant for MySQL (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 08/09/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 37dad40566af3492be7ab288711a6aeb22bed0ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd4995fcab20957e0766008aaa9ae3effc819a95
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776518"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>SQL Server Migration Assistant for MySQL (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for MySQL への MySQL データベースを移行するツールは、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014/ [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows および Linux (Preview) で 2017/Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB します。 SSMA for MySQL、SQL Server データベース オブジェクトへの MySQL データベースのオブジェクトの変換はでこれらのオブジェクトが作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に MySQL からデータを移行し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|**セクション**|**Description**|  
+|**セクション**|**description**|  
 |[SSMA for MySQL の新機能](http://msdn.microsoft.com/en-us/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|SSMA for MySQL のこのバージョンの新機能|  
 |[SSMA の mysql インストール&#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|前提条件と SSMA for MySQL クライアントと必須コンポーネントを SQL Server を実行しているコンピューターにインストールする方法を説明するトピックが含まれています。|  
 |[入門 SSMA for MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)|ユーザー インターフェイス、プロジェクト、および構成オプションをについて説明します。|  

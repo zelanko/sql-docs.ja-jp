@@ -36,18 +36,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c597985b34d078dbd640e680b5e9cf904d81567d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c989b3d9d2f35f4270f997b2ac169c72c402a68
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744041"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-*startdate* と *enddate* で指定された 2 つの日付間の差を、指定された *datepart* 境界の数 (符号付き整数) で返します。
+この関数は、*startdate* と *enddate* で指定された 2 つの日付間の差を、指定された datepart 境界の数で (符号付き整数値として) で返します。
   
-さらに大きな差異については、「[DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)」をご覧ください。 すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+*startdate* 値と *enddate* 値の間のより大きな差を処理する関数については、「[DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)」を参照してください。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のあらゆるデータ型と関数に関する概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -59,7 +60,7 @@ DATEDIFF ( datepart , startdate , enddate )
   
 ## <a name="arguments"></a>引数  
 *datepart*  
-*startdate* と *enddate* の差を求めるときの単位に使用する要素を指定します。 次の表に一覧のすべての有効な *datepart* 引数。 ユーザー定義変数に相当するものは無効です。
+*startdate* と *enddate* の差を求めるときの単位に使用する要素を指定します。 `DATEDIFF` では、ユーザー定義変数に相当するものは受け入れられません。 この表には、有効な *datepart* 引数をすべて一覧表示しています。
   
 |*datepart*|省略形|  
 |---|---|
@@ -77,9 +78,16 @@ DATEDIFF ( datepart , startdate , enddate )
 |**nanosecond**|**ns**|  
   
 *startdate*  
-**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** 値に解決できる式です。 *date* には、式、列式、ユーザー定義変数、または文字列リテラルを指定できます。 *startdate* が *enddate* から減算されます。
+次のいずれかの値に解決できる式。
+
++ **date**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **time**
   
-こうしたあいまいさを排除するため、4 桁の西暦を使用してください。 2 桁の年については、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」をご覧ください。
+4 桁の西暦を使用して、あいまいさを排除します。 2 桁の西暦値については、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」を参照してください。
   
 *enddate*  
 「*startdate*」をご覧ください。
@@ -89,22 +97,22 @@ DATEDIFF ( datepart , startdate , enddate )
   
 ## <a name="return-value"></a>戻り値  
   
--   *-各日付構成要素とその省略形は、同じ値を返します。*  
+-   特定の各 *datepart* と、その *datepart* の省略形では、同じ値が返されます。  
   
-戻り値が **int** の範囲 (-2,147,483,648 ～ +2,147,483,647) を超えた場合は、エラーが返されます。 **millisecond** の場合、*startdate* と *enddate* の差の最大値は 24 日 20 時間 31 分 23.647 秒です。 **second** の場合、差の最大値は 68 年です。
+**int** の範囲 (-2,147,483,648 から +2,147,483,647) を超える戻り値の場合、`DATEDIFF` はエラーを返します。  **millisecond** の場合、*startdate* と *enddate* の差の最大値は 24 日 20 時間 31 分 23.647 秒です。 **second** の場合、差の最大値は 68 年です。
   
-*startdate* と *enddate* の両方に時刻値を指定したにもかかわらず、*datepart* に時刻以外の *datepart* を指定した場合、0 が返されます。
+*startdate* と *enddate* の両方に時刻値のみが割り当てられており、*datepart* が時刻の *datepart* でない場合、`DATEDIFF` は 0 を返します。
   
-*startdate* または *enddate* のタイム ゾーン オフセット要素は、戻り値の計算には使用されません。
+`DATEDIFF` では、戻り値を計算する際に、*startdate* または *enddate* のタイム ゾーン オフセット要素を使用しません。
   
-[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) の精度は分単位までなので、*startdate* または *enddate* に **smalldatetime** 値を使用した場合、戻り値では、秒とミリ秒が常に 0 に設定されます。
+[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) の精度は分単位までなので、*startdate* または **enddate** に *smalldatetime* 値を使用した場合、戻り値では秒とミリ秒が常に 0 に設定されます。
   
-日付データ型の変数に時刻値だけが割り当てられた場合、欠落している日付要素の値は既定値である 1900-01-01 に設定されます。 時刻データ型または日付データ型の変数に日付値だけが割り当てられた場合、欠落している時刻要素の値は既定値である 00:00:00 に設定されます。 *startdate* または *enddate* のいずれか一方が時刻要素のみで、もう一方が日付要素のみであった場合、欠落している時刻要素と日付要素はそれぞれの既定値に設定されます。
+日付データ型の変数に時刻値のみが割り当てられている場合、`DATEDIFF` では、欠落している日付要素の値が既定値である 1900-01-01 に設定されます。 時刻データ型または日付データ型の変数に日付値のみが割り当てられている場合、`DATEDIFF` では、欠落している時刻要素の値が既定値である 00:00:00 に設定されます。 *startdate* または *enddate* のいずれか一方が時刻要素のみで、もう一方が日付要素のみであった場合、`DATEDIFF` では、欠落している時刻要素と日付要素がそれぞれの既定値に設定されます。
   
-*startdate* と *enddate* に対して異なる日付データ型が使用されているとき、一方の時刻要素の数または 1 秒未満の秒の有効桁数が、もう一方のデータ型を超えている場合、欠落している要素は 0 に設定されます。
+*startdate* と *enddate* で異なる日付データ型が使用されており、一方の時刻要素の数または秒の小数部の有効桁数が、もう一方のデータ型を超えている場合、`DATEDIFF` では、欠落している要素が 0 に設定されます。
   
 ## <a name="datepart-boundaries"></a>datepart の差  
-次の各ステートメントには、すべて同じ *startdate* と *enddate* が指定されています。 2 つの日付は隣接しており、時間的な差は .0000001 秒です。 各ステートメントにおける *startdate* と *enddate* の差は、どの要素をとっても、*datepart* の 1 単位分となるように配慮されています。 いずれのステートメントも戻り値は 1 です。 この例で異なる年を使用し、*startdate* と *enddate* の両方がカレンダー上の同じ週に存在した場合、**week** の戻り値は 0 になります。
+次の各ステートメントには、すべて同じ *startdate* と *enddate* の値が指定されています。 これらの日付は隣接しており、時間的な差は .0000001 秒です。 各ステートメントにおける *startdate* と *enddate* の差は、どの要素をとっても、*datepart* の 1 単位分となるように配慮されています。 いずれのステートメントも戻り値は 1 です。 *startdate* と *enddate* の年の値は異なるが、カレンダー週の値が同じである場合、`DATEDIFF` では、*datepart* **week** に対して 0 を返します。
   
 ```sql
 SELECT DATEDIFF(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -120,17 +128,17 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 ```
   
 ## <a name="remarks"></a>Remarks  
-DATEDIFF は、選択リストのほか、WHERE 句、HAVING 句、GROUP BY 句、および ORDER BY 句で使用できます。
+`DATEDIFF` は、SELECT <list>、WHERE、HAVING、GROUP BY、および ORDER BY 句で使用します。
   
-DATEDIFF は、文字列リテラルを **datetime2** 型として暗黙的にキャストします。 つまり、DATEDIFF では、日付が文字列として渡される場合、YDM 形式をサポートしません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
+`DATEDIFF` は、文字列リテラルを **datetime2** 型として暗黙的にキャストします。 つまり、`DATEDIFF` では、日付が文字列として渡される場合、YDM 形式がサポートされません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
   
-SET DATEFIRST を指定しても DATEDIFF に影響はありません。 DATEDIFF では、週の最初の曜日として常に日曜日を使用し、関数が決定的であることを確認します。
+SET DATEFIRST を指定しても `DATEDIFF` に影響はありません。 `DATEDIFF` では、週の最初の曜日として常に日曜日を使用し、関数が決定的な方法で動作するようにします。
   
 ## <a name="examples"></a>使用例  
-次の例では、*startdate* パラメーターと *enddate* パラメーターの引数として各種の式を使用しています。
+次の例では、*startdate* パラメーターと *enddate* パラメーターの引数として、各種の式を使用しています。
   
 ### <a name="a-specifying-columns-for-startdate-and-enddate"></a>A. startdate と enddate に列を指定する  
-次の例では、テーブルの 2 つの列に日付を格納し、両者の差を日単位で計算しています。
+この例では、テーブルの 2 つの列に日付を格納し、両者の差を日単位で計算しています。
   
 ```sql
 CREATE TABLE dbo.Duration  
@@ -146,7 +154,7 @@ FROM dbo.Duration;
 ```  
   
 ### <a name="b-specifying-user-defined-variables-for-startdate-and-enddate"></a>B. startdate と enddate にユーザー定義変数を指定する  
-次の例では、*startdate* と *enddate* の引数としてユーザー定義変数を使用しています。
+この例では、ユーザー定義変数が *startdate* と *enddate* の引数として機能します。
   
 ```sql
 DECLARE @startdate datetime2 = '2007-05-05 12:10:09.3312722';  
@@ -155,14 +163,14 @@ SELECT DATEDIFF(day, @startdate, @enddate);
 ```  
   
 ### <a name="c-specifying-scalar-system-functions-for-startdate-and-enddate"></a>C. startdate と enddate にスカラー システム関数を指定する  
-次の例では、*startdate* と *enddate* の引数としてスカラー システム関数を使用しています。
+この例では、*startdate* と *enddate* の引数としてスカラー システム関数を使用しています。
   
 ```sql
 SELECT DATEDIFF(millisecond, GETDATE(), SYSDATETIME());  
 ```  
   
 ### <a name="d-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>D. startdate と enddate にスカラー サブクエリおよびスカラー関数を指定する  
-次の例では、*startdate* と *enddate* の引数として、サブクエリとスカラー関数を使用しています。
+この例では、*startdate* と *enddate* の引数として、サブクエリとスカラー関数を使用しています。
   
 ```sql
 USE AdventureWorks2012;  
@@ -172,7 +180,7 @@ SELECT DATEDIFF(day,(SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader),
 ```  
   
 ### <a name="e-specifying-constants-for-startdate-and-enddate"></a>E. startdate と enddate に定数を指定する  
-次の例では、*startdate* と *enddate* の引数として文字定数を使用しています。
+この例では、*startdate* と *enddate* の引数として文字定数を使用しています。
   
 ```sql
 SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635'  
@@ -180,7 +188,7 @@ SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635'
 ```  
   
 ### <a name="f-specifying-numeric-expressions-and-scalar-system-functions-for-enddate"></a>F. enddate に数値式およびスカラー システム関数を指定する  
-次の例では、*enddate* の引数として、数値式 `(GETDATE ()+ 1)` のほか、スカラー システム関数 `GETDATE` および `SYSDATETIME` を使用しています。
+この例では、*enddate* の引数として、数値式 `(GETDATE ()+ 1)` のほか、スカラー システム関数 `GETDATE` および `SYSDATETIME` を使用しています。
   
 ```sql
 USE AdventureWorks2012;  
@@ -197,7 +205,7 @@ GO
 ```  
   
 ### <a name="g-specifying-ranking-functions-for-startdate"></a>G. startdate に順位付け関数を指定する  
-次の例では、*startdate* の引数として順位付け関数を使用しています。
+この例では、*startdate* の引数として順位付け関数を使用しています。
   
 ```sql
 USE AdventureWorks2012;  
@@ -215,7 +223,7 @@ WHERE TerritoryID IS NOT NULL
 ```  
   
 ### <a name="h-specifying-an-aggregate-window-function-for-startdate"></a>H. startdate に集計関数を指定する  
-次の例では、*startdate* の引数として集計関数を使用しています。
+この例では、*startdate* の引数として集計関数を使用しています。
   
 ```sql
 USE AdventureWorks2012;  
@@ -231,10 +239,10 @@ GO
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-次の例では、*startdate* パラメーターと *enddate* パラメーターの引数として各種の式を使用しています。
+次の例では、*startdate* パラメーターと *enddate* パラメーターの引数として、各種の式を使用しています。
   
 ### <a name="i-specifying-columns-for-startdate-and-enddate"></a>I. startdate と enddate に列を指定する  
-次の例では、テーブルの 2 つの列に日付を格納し、両者の差を日単位で計算しています。
+この例では、テーブルの 2 つの列に日付を格納し、両者の差を日単位で計算しています。
   
 ```sql
 CREATE TABLE dbo.Duration (  
@@ -249,7 +257,7 @@ FROM dbo.Duration;
 ```  
   
 ### <a name="j-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>J. startdate と enddate にスカラー サブクエリおよびスカラー関数を指定する  
-次の例では、*startdate* と *enddate* の引数として、サブクエリとスカラー関数を使用しています。
+この例では、*startdate* と *enddate* の引数として、サブクエリとスカラー関数を使用しています。
   
 ```sql
 -- Uses AdventureWorks  
@@ -261,7 +269,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="k-specifying-constants-for-startdate-and-enddate"></a>K. startdate と enddate に定数を指定する  
-次の例では、*startdate* と *enddate* の引数として文字定数を使用しています。
+この例では、*startdate* と *enddate* の引数として文字定数を使用しています。
   
 ```sql
 -- Uses AdventureWorks  
@@ -271,7 +279,7 @@ SELECT TOP(1) DATEDIFF(day, '2007-05-07 09:53:01.0376635'
 ```  
   
 ### <a name="l-specifying-ranking-functions-for-startdate"></a>L. startdate に順位付け関数を指定する  
-次の例では、*startdate* の引数として順位付け関数を使用しています。
+この例では、*startdate* の引数として順位付け関数を使用しています。
   
 ```sql
 -- Uses AdventureWorks  
@@ -283,7 +291,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="m-specifying-an-aggregate-window-function-for-startdate"></a>M. startdate に集計関数を指定する  
-次の例では、*startdate* の引数として集計関数を使用しています。
+この例では、*startdate* の引数として集計関数を使用しています。
   
 ```sql
 -- Uses AdventureWorks  

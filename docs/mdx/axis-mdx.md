@@ -1,34 +1,23 @@
 ---
 title: 軸 (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- AXIS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Axis function
-ms.assetid: a3a60a1e-e266-4fa1-ae13-bae73544de33
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2503dcaa13db79acd5cff94c78ad365ee41b0b9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 2802422f7d50c0a504a0c42eec940d81e89e66b8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739631"
 ---
 # <a name="axis-mdx"></a>Axis (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   指定された軸上の組のセットを返します。  
   
@@ -43,7 +32,7 @@ Axis(Axis_Number)
  *Axis_Number*  
  軸番号を指定する有効な数値式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **軸**関数では、軸の 0 から始まる位置を使用して、軸の組のセットを返します。 たとえば、 `Axis(0)` 、COLUMNS 軸を返します`Axis(1)`と ROWS 軸で返されます。 **軸**フィルター軸に対して関数を使用することはできません。 この関数を使用すると、計算されるメンバーに、実行中のクエリのコンテキストを認識させることができます。 たとえば、ROWS 軸上で選択されたメンバーのみの合計を提供する、計算されるメンバーが必要になる場合があります。 また、この関数を使用すると、一方の軸の定義をもう一方の軸の定義に依存させることもできます。 たとえば、COLUMNS 軸の最初の項目の値に応じて ROWS 軸の内容を並べ替えます。  
   
 > [!NOTE]  
@@ -75,6 +64,6 @@ Axis(Axis_Number)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

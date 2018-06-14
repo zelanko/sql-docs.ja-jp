@@ -13,7 +13,7 @@ ms.openlocfilehash: cf053ce660091fa9b47048e9dccb9b7f470acaad
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575354"
 ---
 # <a name="isdefaultimage-element-xml"></a>IsDefaultImage 要素 (XML)
@@ -36,7 +36,7 @@ ms.locfileid: "34575354"
 |特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|ブール値|  
-|既定値|オプション|  
+|既定値|false|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけ出現します|  
   
 ## <a name="element-relationships"></a>要素の関係  

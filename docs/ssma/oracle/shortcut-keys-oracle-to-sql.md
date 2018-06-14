@@ -1,8 +1,6 @@
 ---
 title: ショートカット キー (Oracle To SQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 397b70d50882ed80714a1385cbd5d2e47d4a3966
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24d343beeb390cf12d4a09d7d8bef3fe556c4a23
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778138"
 ---
 # <a name="shortcut-keysoracle-to-sql"></a>ショートカット キー (Oracle To SQL)
 SSMA アプリケーション間を移動するキーボード ショートカットを使用することができます。 詳細については、次の各トピックを参照してください。  

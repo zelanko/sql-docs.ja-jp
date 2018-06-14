@@ -1,34 +1,20 @@
 ---
 title: SELECT FROM&lt;モデル&gt;です。コンテンツ (DMX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- FROM
-- Content
-dev_langs:
-- DMX
-helpviewer_keywords:
-- schema rowsets [Analysis Services], data mining
-- SELECT FROM <model>.CONTENT statement
-ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c68fe4831c0fcbae281eae4ca3ed823d737267cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842665"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;モデル&gt;です。コンテンツ (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>引数  
  *n*  
- 省略可。 返す行数を指定する整数値です。  
+ 任意。 返す行数を指定する整数値です。  
   
  *式の一覧*  
  Content スキーマ行セットから派生する、列のコンマ区切りのリストです。  
@@ -55,12 +41,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  モデル識別子です。  
   
  *条件式*  
- 省略可。 列のリストから返される値を制限する条件です。  
+ 任意。 列のリストから返される値を制限する条件です。  
   
  *式 (expression)*  
- 省略可。 スカラー値を返す式。  
+ 任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **SELECT FROM** *\<モデル > * * *。コンテンツ** ステートメントには、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタム アプリケーション内のアソシエーション ルール モデルに関するすべてのルールの記述を使用する場合があります。 使用することができます、 **SELECT FROM\<モデル >。コンテンツ**ステートメントをモデルの NODE_RULE 列の値を返します。  
   
  次の表に、マイニング モデル コンテンツに含まれる列を示します。  
@@ -68,7 +54,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 > [!NOTE]  
 >  アルゴリズムでは、コンテンツを適切に表すため、列の解釈が異なる場合があります。 詳細については、マイニング モデル アルゴリズム、および解釈および各種類のモデル コンテンツのマイニング モデルをクエリする方法のヒントごとにコンテンツの次を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)です。  
   
-|CONTENT 行セット列|Description|  
+|CONTENT 行セット列|説明|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|カタログ名です。 プロバイダーがカタログをサポートしない場合は NULL です。|  
 |MODEL_SCHEMA|修飾されていないスキーマ名です。 プロバイダーがスキーマをサポートしない場合は NULL です。|  
@@ -76,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|ノードに対応する属性の名前です。|  
 |NODE_NAME|ノードの名前。|  
 |NODE_UNIQUE_NAME|モデル内のノードの一意な名前です。|  
-|NODE_TYPE|ノードの種類を表す整数です。 」をご覧ください。|  
+|NODE_TYPE|ノードの種類を表す整数です。 .|  
 |NODE_GUID|ノードの GUID です。 GUID がない場合は NULL です。|  
 |NODE_CAPTION|ノードに関連付けられているラベルまはたキャプションです。 主に表示のために使用されます。 キャプションが存在しない場合は、NODE_NAME を返します。|  
 |CHILDREN_CARDINALITY|ノードが持つ子の数です。|  
@@ -135,7 +121,7 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1|  
+|TM_NaiveBayes|Bike Buyer|欠落|0|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
 |TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
   
@@ -153,13 +139,13 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|  
+|TM_NaiveBayes|Bike Buyer|欠落|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>参照  
  [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

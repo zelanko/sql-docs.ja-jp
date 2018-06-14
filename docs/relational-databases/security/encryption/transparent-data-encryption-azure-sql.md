@@ -16,11 +16,12 @@ ms.topic: conceptual
 ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: c6d5134ac7760ce9156124ad8c7efd864da81878
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34462370"
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Azure SQL Database と Data Warehouse の透過的なデータ暗号化
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -66,7 +67,7 @@ Azure 内での操作用にデータベースの暗号化を解除する必要�
 
 たとえば、BACPAC ファイルをオンプレミスの SQL Server インスタンスからエクスポートする場合、新しいデータベースのインポートされるコンテンツは自動的に暗号化されません。 同様に、BACPAC ファイルをオンプレミスの SQL Server インスタンスにエクスポートする場合も、新しいデータベースは自動的に暗号化されません。
 
-例外は、SQL Database へのエクスポートと SQL Database からのエクスポートのみです。 透過的なデータ暗号化は新しいデータベースでは有効になりますが、それでも PACPAC ファイル自体は暗号化されません。
+例外は、SQL Database へのエクスポートと SQL Database からのエクスポートのみです。 透過的なデータ暗号化は新しいデータベースでは有効になりますが、それでも BACPAC ファイル自体は暗号化されません。
 
 ## <a name="manage-transparent-data-encryption-in-the-azure-portal"></a>Azure Portal で透過的なデータ暗号化を管理する
 

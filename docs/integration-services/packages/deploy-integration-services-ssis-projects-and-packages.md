@@ -1,7 +1,7 @@
 ---
 title: Integration Services (SSIS) プロジェクトとパッケージの配置 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -24,11 +24,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a9dda229e7f5c99dbc97fa7d827df74d79649f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9cdefcfcec0c273cfb662966895fc49b09c4460e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772146"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services (SSIS) プロジェクトとパッケージの配置
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、プロジェクト配置モデルと従来のパッケージ配置モデルの 2 つの配置モデルがサポートされています。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。  
@@ -36,8 +37,13 @@ ms.lasthandoff: 05/03/2018
 従来のパッケージ配置モデルの詳細については、「[レガシー パッケージの配置 &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
 > [!NOTE]  
->  プロジェクト配置モデルは、 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]で導入されました。 このモデルを使用した場合、プロジェクト全体を配置することなく 1 つまたは複数のパッケージを配置することができませんでした。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] で導入された増分パッケージ配置機能によって、プロジェクト全体を配置することなく、プロジェクトに 1 つ以上のパッケージを配置できます。  
-  
+>  プロジェクト配置モデルは、 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]で導入されました。 このデプロイ モデルを使用した場合、プロジェクト全体をデプロイすることなく 1 つまたは複数のパッケージをデプロイすることができませんでした。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] ではパッケージ デプロイ モデルが導入されました。プロジェクト全体をデプロイすることなく 1 つまたは複数のパッケージをデプロイできます。  
+
+> [!NOTE]
+> この記事では、SSIS パッケージをデプロイする方法 (全般) と、オンプレミスでパッケージをデプロイする方法について説明します。 次のプラットフォームで SSIS パッケージをデプロイすることもできます。
+> - **Microsoft Azure クラウド**。 詳細については、「[Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」 (SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする) を参照してください。
+> - **Linux**。 詳しくは、「[Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md)」(SSIS で Linux 上のデータの抽出、変換、読み込みを行う) をご覧ください。
+
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>プロジェクト配置モデルと従来のパッケージ配置モデルの比較  
  プロジェクトに対して選択する配置モデルの種類によって、そのプロジェクトに使用できる開発オプションと管理オプションが決まります。 次の表に、プロジェクト配置モデルを使用した場合とパッケージ配置モデルを使用した場合の相違点と共通点を示します。  
   
@@ -60,7 +66,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="features-of-project-deployment-model"></a>プロジェクト配置モデルの機能  
  次の表に、プロジェクト配置モデル専用に開発されたプロジェクトで使用できる機能を示します。  
   
-|機能|Description|  
+|機能|[説明]|  
 |-------------|-----------------|  
 |パラメーター|パラメーターは、パッケージで使用されるデータを指定します。 パラメーターは、パッケージ パラメーターとプロジェクト パラメーターを使用して、パッケージ レベルとプロジェクト レベルそれぞれにスコープを設定できます。 パラメーターは、式またはタスクで使用できます。 プロジェクトをカタログに配置すると、パラメーターごとにリテラル値を割り当てることも、設計時に割り当てられた既定値を使用することもできます。 リテラル値の代わりに、環境変数を参照することもできます。 環境変数値は、パッケージ実行時に解決されます。|  
 |環境|環境とは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトが参照できる変数のコンテナーです。 各プロジェクトには複数の環境参照を含めることができますが、1 回のパッケージ実行で参照できるのは、1 つの環境の変数のみです。 環境を使用すると、パッケージに割り当てる値をまとめることができます。 たとえば、"Dev"、"test"、"Production" という名前の環境を使用できます。|  

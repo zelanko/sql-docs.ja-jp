@@ -3,8 +3,6 @@ title: SQL Server (SybaseToSQL) へ SSMA コンポーネントのインストー
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a8d198ba1ae8fed6c48bb55db45618b36944e7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 17d9068497072660fd48888a2b4652dcb46815cf
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779258"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL server (SybaseToSQL) SSMA コンポーネントのインストール
 サーバー側のデータ移行を使用するためには、SSMA をインストール、に加えて必要がありますもコンポーネントをインストールするを実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントには、SSMA 拡張機能パックには、データの移行、および Sybase のプロバイダーをサーバーからサーバーへの接続を有効にするサポートが含まれます。  
@@ -116,5 +115,5 @@ ASE からデータを移行する場合[!INCLUDE[ssNoVersion](../../includes/ss
   
 ## <a name="see-also"></a>参照  
 [SSMA の Sybase クライアントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
-[SQL Server - Azure SQL DB &#40;への Sybase ASE データベースの移行SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server - Azure SQL DB に ASE Sybase データベースを移行する&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

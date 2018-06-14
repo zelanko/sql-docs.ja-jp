@@ -1,6 +1,6 @@
 ---
 title: 論理関数の使用 |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6bd427ebfca1fbf2f546603853b2352d6dcf4c90
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: a63d8cb22a8533cf352acb690f87916e2e9d568d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582464"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743521"
 ---
 # <a name="using-logical-functions"></a>論理関数の使用
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   論理関数は、オブジェクトや式に対して論理操作または比較を実行し、ブール値を返します。 論理関数は、メンバーの位置を判別するために、多次元式 (MDX) において不可欠なものです。  
   

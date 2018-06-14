@@ -1,6 +1,6 @@
 ---
 title: MDX および DAX での VBA 関数 |Microsoft ドキュメント
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a9764d4e302a663800bd71a5c7083d985ea230bc
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582524"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743891"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX および DAX での VBA 関数
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  このドキュメントには、交差で使用できるすべての VBA 関数の参照が含まれています[アプリケーション関数の Visual Basic](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) MDX でサポートされている; も、リストでは、DAX 言語で同等の機能がある場合に、ノートが含まれています。  
+
+  このドキュメントには、交差で使用できるすべての VBA 関数の参照が含まれています[アプリケーション関数の Visual Basic](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) MDX でサポートされている; も、リストでは、DAX 言語で同等の機能がある場合に、ノートが含まれています.  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 関数リファレンス  
   

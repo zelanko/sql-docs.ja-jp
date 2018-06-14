@@ -1,7 +1,7 @@
 ---
 title: SSIS カタログ | Microsoft Docs
 ms.custom: ''
-ms.date: 04/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: service
@@ -20,15 +20,21 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 711bc7d70060cc3e5b1ac9f6fa38187bc82a48de
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772668"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   **SSISDB** カタログは、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバーに配置した [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) プロジェクトを操作するための中核となります。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
-  
+ 
+> [!NOTE]
+> この記事では、SSIS カタログ全般とオンプレミスで実行されている SSIS カタログについて説明します。 Azure SQL Database で SSIS カタログを作成し、Azure で SSIS パッケージをデプロイし、実行することもできます。 詳細については、「[Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」 (SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする) を参照してください。
+>
+> Linux で SSIS パッケージを実行することもできますが、SSIS カタログは Linux ではサポートされていません。 詳しくは、「[Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md)」(SSIS で Linux 上のデータの抽出、変換、読み込みを行う) をご覧ください。
+ 
  **SSISDB** カタログに格納されているオブジェクトには、プロジェクト、パッケージ、パラメーター、環境、および操作履歴があります。  
   
  **SSISDB** カタログに格納されているオブジェクト、設定、および業務データを検査するには、 **SSISDB** データベースのビューに対してクエリを実行します。 オブジェクトを管理するには、 **SSISDB** データベースのストアド プロシージャを呼び出すか、 **SSISDB** カタログの UI を使用します。 多くの場合、UI でもストアド プロシージャの呼び出しでも同じタスクを実行できます。  
@@ -47,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSISDB **データベースがアタッチされている** インスタンスが停止したか、応答しない場合、ISServerExec.exe プロセスは終了します。 メッセージが Windows イベント ログに書き込まれます。  
 >   
->  クラスター フェールオーバーの一環として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがフェールオーバーした場合、実行中のパッケージは再開されません。 チェックポイントを使用してパッケージを再開できます。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+>  クラスター フェールオーバーの一環として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがフェールオーバーした場合、実行中のパッケージは再開されません。 チェックポイントを使用してパッケージを再開できます。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ## <a name="features-and-capabilities"></a>機能および能力  
   
@@ -355,7 +361,7 @@ ms.lasthandoff: 05/03/2018
   
     ```  
   
-     Windows PowerShell と <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の使用方法を紹介したその他の例については、blogs.msdn.com のブログ エントリ「[SQL Server 2012 での SSIS と PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)」を参照してください。名前空間とコード例の概要については、blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージ オブジェクト モデルの概要](http://go.microsoft.com/fwlink/?LinkId=254267)」を参照してください。  
+     Windows PowerShell と <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の使用方法を紹介したその他の例については、blogs.msdn.com のブログ エントリ「[SQL Server 2012 での SSIS と PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)」を参照してください。 名前空間とコード例の概要については、blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージ オブジェクト モデルの概要](http://go.microsoft.com/fwlink/?LinkId=254267)」を参照してください。  
 
 ## <a name="catalog-properties-dialog-box"></a>[カタログのプロパティ] ダイアログ ボックス
   [カタログのプロパティ] ダイアログ ボックスを使用すると、SSISDB カタログを構成できます。 カタログ プロパティは、機微なデータを暗号化する方法、操作およびプロジェクトのバージョン管理データを保持する方法、および検証操作がタイムアウトするタイミングを定義します。SSISDB カタログは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクト、パッケージ、パラメーター、および環境のための中央のストレージと管理ポイントです。  
@@ -381,7 +387,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="options"></a>および  
  次の表では、ダイアログ ボックスに示される特定のプロパティと、catalog.catalog_property ビュー内の対応するプロパティについて説明します。  
   
-|プロパティ名 ([カタログのプロパティ] ダイアログ ボックス)|プロパティ名 (catalog.catalog_property ビュー)|Description|  
+|プロパティ名 ([カタログのプロパティ] ダイアログ ボックス)|プロパティ名 (catalog.catalog_property ビュー)|[説明]|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |暗号化アルゴリズムの名前|ENCRYPTION_CLEANUP_ENABLED|カタログ内の機密性の高いパラメーター値を暗号化するために使用される暗号化の種類を指定します。 使用できる値を次に示します。<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (既定値)|  
 |検証のタイムアウト (秒)|VALIDATION_TIMEOUT|プロジェクトの検証またはパッケージの検証を停止するまで実行できる最大秒数を指定します。 既定値は 300 秒です。<br /><br /> 検証の実行は、非同期操作です。 プロジェクトまたはパッケージのサイズが大きくなるほど、検証に要する時間も長くなります。<br /><br /> プロジェクトとパッケージの検証方法の詳細については、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」を参照してください。|  

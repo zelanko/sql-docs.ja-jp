@@ -1,6 +1,6 @@
 ---
-title: SQL 操作 Studio (プレビュー) のユーザーとワークスペースの設定 |Microsoft ドキュメント
-description: SQL 操作 Studio (プレビュー) のユーザーとワークスペースの設定を変更する方法。
+title: SQL Operations Studio (プレビュー) のユーザーとワークスペースの設定 |Microsoft ドキュメント
+description: SQL Operations Studio (プレビュー) のユーザーとワークスペースの設定を変更する方法。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql

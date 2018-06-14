@@ -1,8 +1,6 @@
 ---
 title: ユーザー インターフェイス リファレンス (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -21,18 +19,19 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 42a81d87eb391621f837a04025ec093fac6f3b73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd67eb89a9efb22c38d7b9318e8ac562fa6d7264
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774218"
 ---
 # <a name="user-interface-reference-accesstosql"></a>ユーザー インターフェイス リファレンス (AccessToSQL)
 このセクションには、ヘルプ トピックが含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for アクセスします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|説明|  
 |---------|---------------|  
 |[オブジェクトの選択を高度な&#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|使用して、**オブジェクトの選択の高度な** ダイアログ ボックスのフィルター条件を使用してデータベース オブジェクトを検索し、オンまたはオフにそれらのオブジェクト。|  
 |[評価レポート&#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|使用して、**評価レポート**データベース オブジェクトの変換を分析し、移行にかかる推定 ダイアログ ボックス。|  

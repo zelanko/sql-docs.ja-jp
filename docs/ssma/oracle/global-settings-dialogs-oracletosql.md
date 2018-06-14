@@ -1,8 +1,6 @@
 ---
 title: グローバル設定 (ダイアログ ボックス) (OracleToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,18 +13,19 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
-ms.openlocfilehash: 0c59a7e8fc766af0a68a1130e9422797396f151b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: daa82b7fb919edcc171d530cc18c2be49476ab4a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777248"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>グローバル設定 (ダイアログ ボックス) (OracleToSQL)
 ダイアログ ページを使用して、**グローバル設定**ダイアログ ボックスを既定のユーザー アクションと SSMA に対する警告の設定を指定します。  
   
 設定にアクセスする、ダイアログで、**ツール**メニューの [**グローバル設定**、] をクリックして**GUI**クリックし、左側のウィンドウの下部にある**ダイアログ**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **オブジェクトを上書きする前に警告する します。**  
 SSMA では、オブジェクトを SQL Server に変換して、ときに一部のオブジェクトが、プロジェクトの SQL Server のメタデータに存在既に可能性があります。 これらのオブジェクトは既に変換されている可能性があります、か、オブジェクトは、オブジェクトに変換しようとすると、ターゲット スキーマ内に同じ名前を持つ単純に可能性があります。  
   

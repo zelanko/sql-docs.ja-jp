@@ -1,8 +1,6 @@
 ---
 title: SQL Server (MySQLToSql) へ SSMA コンポーネントのインストール |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c9bdf41c278fe5660c645eab72498cbbee540508
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc0a4555d41d4848fdbbe8a3b3244275dae1aaa2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776328"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>SQL server (MySQLToSql) SSMA コンポーネントのインストール
 SSMA をインストールするだけでなくする必要がありますコンポーネントもインストールを実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントには、データの移行、およびサーバーからサーバーへの接続を有効にする MySQL プロバイダーをサポートする、SSMA 拡張機能パックが含まれます。  

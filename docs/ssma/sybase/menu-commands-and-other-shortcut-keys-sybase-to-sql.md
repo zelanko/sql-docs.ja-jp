@@ -3,8 +3,6 @@ title: メニュー コマンドやその他のショートカット キー (Syb
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b02ec727dabf9db7ce614ee804ca6df619bd01b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab3cf6f49004144b325d051ce308fd53215c1760
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779348"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>メニュー コマンドやその他のショートカット キー (Sybase SQL)
 次のセクションでは、メニュー コマンド、および Sybase のアプリケーションの SSMA のさまざまなダイアログ ボックスで使用されるその他のショートカット キーにアクセスするキーボード ショートカットについて説明します。  

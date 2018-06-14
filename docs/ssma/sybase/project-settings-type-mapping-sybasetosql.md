@@ -3,8 +3,6 @@ title: プロジェクトの設定 (型のマッピング) (SybaseToSQL) |Micros
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 93d23239f4dc60dc419dde62ab0a4923f286669d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0a2f1d6883afc093162e97fc30d39881655544e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779448"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>プロジェクトの設定 (型のマッピング) (SybaseToSQL)
 [型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に Sybase Adaptive Server Enterprise (ASE) データ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 -   現在のプロジェクトの設定を指定する、**ツール**メニューの **プロジェクト設定**、し、**型マッピング**左側のウィンドウの下部にあります。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **変換元の型**  
 マップされた ASE データ型。  
   
@@ -48,7 +47,7 @@ Sybase 型マッピングの既定 SSMA の次のセクションの表を参照�
 **[編集]**  
 マッピングの一覧で選択したデータ型を編集する をクリックします。  
   
-**[削除]**  
+**削除**  
 マッピングのリストから選択したデータ型のマッピングを削除する をクリックします。  
   
 **既定値にリセット**  

@@ -1,8 +1,6 @@
 ---
 title: テスト_ケース (OracleToSQL) を実行している |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a0affe85a5c823fdeecf530cd2c661011076c18f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 283dac366a8cfdf7e6fba39037a7c728945e0f67
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777908"
 ---
 # <a name="running-test-cases-oracletosql"></a>テスト_ケース (OracleToSQL) を実行します。
 SSMA テスト担当者がテスト_ケースを実行すると、テスト用に選択されたオブジェクトを実行し、検証結果に関するレポートを作成します。 結果が両方のプラットフォームで同一の場合、テストが成功しました。 Oracle 間のオブジェクトの対応付けと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA プロジェクトを現在のスキーマ マッピングの設定に従って決定されます。  
@@ -47,7 +46,7 @@ SSMA テスターは、テストの開始前にテストの実行のすべての
   
 ||||  
 |-|-|-|  
-|名前|型|Description|  
+|名前|型|説明|  
 |USER_TABLE$ Trg|トリガー (trigger)|検証済みのテーブルで変更の監査をトリガーします。|  
 |USER_TABLE$ AUD|テーブル|テーブルな行が削除され、上書きを保存します。|  
 |USER_TABLE$ AUDID|テーブル|追加または変更された行が保存されているテーブルです。|  
@@ -60,14 +59,14 @@ SSMA テスターは、テストの開始前にテストの実行のすべての
   
 ||||  
 |-|-|-|  
-|名前|型|Description|  
+|名前|型|説明|  
 |USER_TABLE$ Trg|トリガー (trigger)|検証済みのテーブルで変更の監査をトリガーします。|  
   
 次のオブジェクトを作成および[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb データベースにします。  
   
 ||||  
 |-|-|-|  
-|名前|型|Description|  
+|名前|型|説明|  
 |USER_TABLE$ Aud|テーブル|テーブルな行が削除され、上書きを保存します。|  
 |USER_TABLE$AudID|テーブル|追加または変更された行が保存されているテーブルです。|  
 |USER_TABLE|view|テーブルの変更の簡略化された表現。|  

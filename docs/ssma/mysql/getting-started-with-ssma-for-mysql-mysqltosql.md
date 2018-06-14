@@ -1,8 +1,6 @@
 ---
 title: 入門 SSMA for MySQL (MySQLToSQL) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,11 +20,12 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 191ff0505de357b4a76579e2797ceaeb636faf1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3192db5033a9d20ca21d21d7b0d2c8f3d1550b6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776538"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>入門 SSMA for MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL を迅速に MySQL データベース スキーマを SQL Server または Azure SQL DB のスキーマに変換、SQL Server または Azure SQL DB に結果のスキーマをアップロードおよび MySQL から SQL Server または Azure SQL DB にデータを移行することができます。  
@@ -115,8 +114,8 @@ SSMA は 2 つのツールバー: プロジェクト ツールバー、および
   
 |||  
 |-|-|  
-|**メニュー**|**Description**|  
-|**ファイル**|プロジェクトで作業し、MySQL に接続し、SQL Server または Azure SQL DB に接続するためのコマンドが含まれています。|  
+|**メニュー**|**description**|  
+|**[最近使ったファイル]**|プロジェクトで作業し、MySQL に接続し、SQL Server または Azure SQL DB に接続するためのコマンドが含まれています。|  
 |**[編集]**|検索して、詳細ページにテキストを含む作業用のコマンドが含まれています。 開くには**管理ブックマーク** ダイアログの 編集 メニューの ブックマークの管理 をクリックします。 ダイアログ ボックスでは、既存のブックマークの一覧が表示されます。 ダイアログ ボックスの右側にあるボタンを使用するには、それらのブックマークを管理します。|  
 |**[表示]**|含まれています、**メタデータ エクスプ ローラーの同期**コマンド。 MySQL メタデータ エクスプ ローラーと SQL Server または Azure SQL DB メタデータ エクスプ ローラーの間でオブジェクトを同期するとします。 コマンドを表示/非表示を含む、**出力**と**エラー一覧**ペインおよびオプション**レイアウト**レイアウトを管理します。|  
 |**ツール**|レポートを作成、スキーマの変換、データベースから更新、オブジェクトとデータの移行、およびスクリプトとして保存するためのコマンドが含まれています。 アクセスする、**グローバル設定、プロジェクト設定の既定の**と**プロジェクト設定** ダイアログ ボックス。|  

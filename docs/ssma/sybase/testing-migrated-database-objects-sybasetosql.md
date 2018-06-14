@@ -3,8 +3,6 @@ title: テストに移行したデータベース オブジェクト (SybaseToSQ
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 02cc2deb2721759f938ba8e0244f46b4464b86fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f95ab1a14679d919a11fcc5a0c26554ac6120f2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779408"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>移行されたデータベース オブジェクト (SybaseToSQL) のテスト
 Microsoft SQL Server Migration Assistant for Sybase Tester (SSMA テスター) が自動的にテスト データベース オブジェクトへの変換と SSMA によって行われたデータの移行。 SSMA のすべての移行手順が完了したら後、は、SSMA Tester を使用して、変換したオブジェクトが同じように動作し、すべてのデータが正常に転送されることを確認してください。  
@@ -69,5 +68,5 @@ SSMA テスターの現在のバージョンによって、同じソースまた
   
 ## <a name="see-also"></a>参照  
 [SSMA コンポーネントを SQL Server インストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
-[プロジェクトの設定 &#40です。変換&#41; &#40です。SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
+[プロジェクト設定&#40;変換&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   
