@@ -36,8 +36,8 @@ ms.locfileid: "34776188"
   
     ||||  
     |-|-|-|  
-    |**Sl です。違います。**|**Command**|**レポートのタイトル**|  
-    |@shouldalert|generate-assessment-report|AssessmentReport&lt;n&gt;です。XML|  
+    |**Sl. No.**|**Command**|**レポートのタイトル**|  
+    |1|generate-assessment-report|AssessmentReport&lt;n&gt;です。XML|  
     |2|変換とスキーマ|SchemaConversionReport&lt;n&gt;です。XML|  
     |3|データの移行|DataMigrationReport&lt;n&gt;です。XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;です。XML|  
@@ -47,14 +47,14 @@ ms.locfileid: "34776188"
     > [!IMPORTANT]  
     > レポートの出力、評価レポートと異なります。 前者は、コマンドの実行中のパフォーマンスに関するレポート、後者は、プログラムによる使用量の XML レポートします。  
   
-    コマンド オプションの出力からのレポート (Sl です。 不可。 上記の 2 ~ 4) を参照してください、 [SSMA コンソールを実行する&#40;MySQLToSQL&#41; ](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)セクションです。  
+    コマンド オプションの出力からのレポート (上記の Sl. No. 2 ~ 4) を参照してください、 [SSMA コンソールを実行する&#40;MySQLToSQL&#41; ](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)セクションです。  
   
 2.  詳細レポートの詳細設定を使用して、出力レポートに目的の範囲を指定します。  
   
     ||||  
     |-|-|-|  
-    |**Sl です。違います。**|**コマンドとパラメーター**|**出力の説明**|  
-    |@shouldalert|verbose=”false”|アクティビティの集計レポートを生成します。|  
+    |**Sl. No.**|**コマンドとパラメーター**|**出力の説明**|  
+    |1|verbose=”false”|アクティビティの集計レポートを生成します。|  
     |2|verbose=”true”|各アクティビティの概要と詳細の状態レポートを生成します。|  
   
     > [!NOTE]  
@@ -64,8 +64,8 @@ ms.locfileid: "34776188"
   
     ||||  
     |-|-|-|  
-    |**Sl です。違います。**|**コマンドとパラメーター**|**出力の説明**|  
-    |@shouldalert|report-errors=”false”|エラーの詳細情報なし/警告/情報メッセージです。|  
+    |**Sl. No.**|**コマンドとパラメーター**|**出力の説明**|  
+    |1|report-errors=”false”|エラーの詳細情報なし/警告/情報メッセージです。|  
     |2|report-errors=”true”|詳細なエラー/警告/情報メッセージです。|  
   
     > [!NOTE]  
