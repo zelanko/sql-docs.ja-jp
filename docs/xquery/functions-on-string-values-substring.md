@@ -28,11 +28,12 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33077269"
 ---
 # <a name="functions-on-string-values---substring"></a>文字列値の部分文字列に関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  値の一部を返します *$sourceString*の値で示される位置から *$startingLoc、*しの値で示される文字数の続行 *$長さ*です。  
+  値の一部を返します *$sourceString*の値で示される位置から *$startingLoc、* しの値で示される文字数の続行 *$長さ*です。  
   
 ## <a name="syntax"></a>構文  
   

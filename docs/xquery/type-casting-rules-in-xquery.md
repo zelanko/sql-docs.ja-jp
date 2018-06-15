@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33077909"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery での型キャストの規則
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +154,7 @@ min(xs:integer("1"), xs:double("1.1"))
   
 -   組み込み派生数値型は、その基本型に上位変換できます。 たとえば、**整数**に昇格される可能性があります**decimal**です。  
   
--   A **decimal**に昇格される可能性があります**float、**と**float**に昇格される可能性があります**二重**です。  
+-   A **decimal**に昇格される可能性があります**float、** と**float**に昇格される可能性があります**二重**です。  
   
  暗黙のキャストを使用できるのは数値型だけなので、次のキャストは許可されません。  
   
