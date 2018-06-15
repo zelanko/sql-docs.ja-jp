@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907267"
 ---
 # <a name="numeric-literal-syntax"></a>数値リテラルの構文
 次の構文は、ODBC での数値リテラルに使用します。  

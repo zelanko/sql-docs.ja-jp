@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909557"
 ---
 # <a name="connection-handles"></a>接続ハンドル
 A*接続*ドライバーと、データ ソースで構成されます。 接続ハンドルでは、各接続を識別します。 接続ハンドルは、使用するドライバーだけでなくそのドライバーを使用するデータ ソースを定義します。 ODBC ドライバー マネージャー (ドライバー) を実装するコードのセグメント内では、接続ハンドルは、次のような接続情報を格納する構造体を識別します。  

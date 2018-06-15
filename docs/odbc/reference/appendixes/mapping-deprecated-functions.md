@@ -3,13 +3,10 @@ title: マッピング関数の廃止 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,11 +21,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ddde5411238efb7104931e05f34752ab6f52e014
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 3b61a53eed35919f3ecd0422b376e029ee7ab232
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914107"
 ---
 # <a name="mapping-deprecated-functions"></a>使用されなくなった関数のマッピング
 このセクションの内容がどのように使用されなくなった関数について説明します、ODBC 3 でマッピングされます *.x* ODBC 3 の下位互換性を保証するためにドライバー マネージャー *.x* ODBC 2 で使用されるドライバー *。x*アプリケーションです。 ドライバー マネージャーでは、アプリケーションのバージョンに関係なく、このマッピングを実行します。 ODBC 2 の各します。*x*次の一覧内の関数は、対応する ODBC 3 にマップされて *.x*関数、ODBC 3 で呼び出されると *.x*ドライバー、ODBC 3 *.x*ドライバーは、ODBC 2 を実装する必要はありません。*x*関数。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906417"
 ---
 # <a name="default-c-data-types"></a>既定の C データ型
 アプリケーションで SQL_C_DEFAULT を指定する場合**SQLBindCol**、 **SQLGetData**、または**SQLBindParameter**ドライバーは、その出力、入力バッファーの C データ型が前提としています。列またはパラメーターのバッファーのバインド先の SQL データ型に対応します。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905797"
 ---
 # <a name="guidelines-for-interval-and-numeric-data-types"></a>間隔の数値データ型のガイドライン
 次のセクションでは、間隔と数値データ型を説明します。  

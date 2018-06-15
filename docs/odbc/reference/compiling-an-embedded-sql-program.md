@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908937"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>埋め込み SQL プログラムのコンパイル
 埋め込み SQL プログラムには、SQL とホスト言語のステートメントの組み合わせが含まれている、ために、ホスト言語のコンパイラに直接送信することはできません。 代わりに、複数の手順の手順は、コンパイルします。 このプロセスには、製品が異なる場合は、操作は、ほぼすべての製品と同じです。  

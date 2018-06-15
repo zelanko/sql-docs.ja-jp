@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906447"
 ---
 # <a name="numeric-literals"></a>数値リテラル
 数値リテラルは、文字の文字列に数値データの値が格納されている場合に使用されます。 SQL_C_CHAR の文字列を数値の SQL データの変換または C の数値データの文字列への変換、SQL_CHAR または SQL_VARCHAR、数値リテラルの構文を使用をターゲットに格納されている情報を指定します。 SQL の数値データを SQL_C_CHAR 文字列として格納された数値または数値の C データを SQL_CHAR 文字列として格納されている数値の変換に、この構文はソースに格納されている情報の検証に使用されます。  

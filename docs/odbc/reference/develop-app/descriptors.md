@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908817"
 ---
 # <a name="descriptors"></a>記述子
 記述子ハンドルは、列または動的パラメーターのいずれかに関する情報を保持するデータ構造体を指します。  

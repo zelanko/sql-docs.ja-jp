@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916667"
 ---
 # <a name="using-length-and-indicator-values"></a>長さとインジケーターの値を使用してください。
 長さ/インジケーター バッファーを使用して、データ バッファーやデータが NULL であることを示す SQL_NULL_DATA などの特殊なインジケーター内のデータのバイトの長さを渡します。 使用されている、関数によっては、長さ/インジケーター バッファーは、SQLINTEGER または、SQLSMALLINT に定義されます。 そのため、それを記述する 1 つの引数が必要です。 データ バッファーが使用中として入力バッファーの場合は、この引数には、データ自体のバイトの長さまたはインジケーターの値が含まれます。 という名前が多くの場合、 *StrLen_or_Ind*または類似した名前です。 たとえば、次のコード呼び出し**SQLPutData**にバッファーを渡すデータの完全; バイトの長さ (*ValueLen*) あるために、直接渡すはデータ バッファー (*ValuePtr*) は入力バッファー。  
@@ -73,4 +74,4 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
 -   SQL_DEFAULT_PARAM です。 プロシージャでは、対応するデータ バッファー内の値ではなくプロシージャの入力パラメーターの既定値を使用します。  
   
--   SQL_COLUMN_IGNORE です。 **SQLBulkOperations**または**SQLSetPos**が、データ バッファーに値を無視します。 呼び出しによってデータの行を更新するときに**SQLBulkOperations**または**SQLSetPos、**列の値は変更されません。 呼び出しによって新しいデータの行を挿入するときに**SQLBulkOperations**列の値が既定の設定にまたは、列には、null、既定値はありません。
+-   SQL_COLUMN_IGNORE です。 **SQLBulkOperations**または**SQLSetPos**が、データ バッファーに値を無視します。 呼び出しによってデータの行を更新するときに**SQLBulkOperations**または**SQLSetPos、** 列の値は変更されません。 呼び出しによって新しいデータの行を挿入するときに**SQLBulkOperations**列の値が既定の設定にまたは、列には、null、既定値はありません。

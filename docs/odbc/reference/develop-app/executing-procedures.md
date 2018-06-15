@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910777"
 ---
 # <a name="executing-procedures"></a>プロシージャの実行
 ODBC では、プロシージャを実行するための標準のエスケープ シーケンスを定義します。 このシーケンスおよびそれを使用するコード例の構文を参照してください。[プロシージャ呼び出し](../../../odbc/reference/develop-app/procedure-calls.md)です。  

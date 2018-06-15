@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915483"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations とブックマークによる行の更新
 ブックマークで行を更新するときに**SQLBulkOperations**ようにデータ ソース テーブルの 1 つまたは複数の行を更新します。 行は、バインドされたブックマーク列内のブックマークで識別されます。 アプリケーションのバッファーで列の長さ/インジケーター バッファー内の値がの場合を除き SQL_COLUMN_IGNORE) バインドされた各列のデータを使用して、行が更新されます。 バインドされていない列は更新されません。  

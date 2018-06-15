@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906587"
 ---
 # <a name="interval-data-type-precision"></a>Interval データ型の精度
 Interval データ型の有効桁数には、有効桁数、間隔の有効桁数、および秒の有効桁数を先頭の間隔が含まれています。  

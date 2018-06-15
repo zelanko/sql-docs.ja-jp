@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912637"
 ---
 # <a name="level-2-interface-conformance"></a>レベル 2 インターフェイスへの準拠
 インターフェイスへの準拠レベル 2 にはでは、レベル 1 インターフェイスへの準拠レベルの機能と、次の機能が含まれます。  

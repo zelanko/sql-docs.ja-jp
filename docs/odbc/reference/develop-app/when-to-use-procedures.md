@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917377"
 ---
 # <a name="when-to-use-procedures"></a>プロシージャを使用する場合
 プロシージャを使用する利点を次の数と、すべて、という事実に基づいてプロシージャを使用して SQL ステートメントから移動、アプリケーション、データ ソースをします。 新機能はのまま、アプリケーションには、相互運用可能なプロシージャ呼び出しです。 これらの利点は次のとおりです。  

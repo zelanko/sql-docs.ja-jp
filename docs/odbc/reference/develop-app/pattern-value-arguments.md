@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912987"
 ---
 # <a name="pattern-value-arguments"></a>パターン値の引数
 などのいくつかの引数で、カタログ関数、 *TableName*引数**SQLTables**、検索パターンをそのまま使用します。 これらの引数は、検索パターンをそのまま使用 SQL_ATTR_METADATA_ID ステートメント属性が SQL_FALSE; に設定されている場合これらは、この属性が SQL_TRUE に設定されている場合、検索パターンを受け入れない識別子引数です。  

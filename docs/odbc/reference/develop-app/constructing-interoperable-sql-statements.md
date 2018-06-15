@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909957"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>相互運用可能な SQL ステートメントの作成
 前述の前のセクションで、相互運用可能アプリケーションは、ODBC SQL 文法を使用してください。 ただし、この文法を使用して、以外は他の問題の数が相互運用可能なアプリケーションが直面しています。 たとえば、アプリケーションのはたらきすべてのデータ ソースによってサポートされていない機能、外部結合などを使用する必要がある場合。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909909"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>SQLBrowseConnect による接続
 **SQLBrowseConnect**と同様、 **SQLDriverConnect**、接続文字列を使用します。 使用して、ただし、 **SQLBrowseConnect**アプリケーションは実行時に完全な接続文字列を構築することができます。 この方法を使用すると、アプリケーションで次の 2 つのことを行えます。  

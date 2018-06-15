@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912826"
 ---
 # <a name="reserved-keywords"></a>予約済みキーワード
 次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語は、SQL 文法を制約はありません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保する、アプリケーションはこれらのキーワードのいずれかの方法を避ける必要があります。 #**定義**SQL_ODBC_KEYWORDS の値には、これらのキーワードのコンマ区切りの一覧が含まれています。  

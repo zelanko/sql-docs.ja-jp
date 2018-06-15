@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916897"
 ---
 # <a name="dynamic-sql"></a>動的 SQL
 静的 SQL さまざまな状況でも適切に動作しますが、アプリケーションをデータ アクセスを事前に決定することはできませんのクラスがあります。 たとえば、スプレッドシートにより、ユーザーは、スプレッドシートに送信 DBMS データを取得するクエリを入力します。 このクエリの内容明らかに知ることができない、プログラマ、スプレッドシート プログラムが書き込まれるときにします。  

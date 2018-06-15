@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910847"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>DBMS に基づいたドライバーの診断例
 DBMS に基づいたドライバーでは、DBMS に要求を送信し、アプリケーション、ドライバー マネージャーを使用する情報を返します。 書式化して、引数を返しますが、ドライバーは、インターフェイスと、ドライバー マネージャーで、コンポーネントであるため**SQLGetDiagRec**です。  

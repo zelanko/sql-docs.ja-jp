@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911857"
 ---
 # <a name="concurrency-types"></a>同時実行の種類
 カーソルの削減の同時実行の問題を解決するには、ODBC は、次の 4 つのさまざまな種類のカーソルの同時実行を公開します。  

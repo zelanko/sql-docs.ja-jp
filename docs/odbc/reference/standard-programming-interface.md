@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916107"
 ---
 # <a name="standard-programming-interface"></a>標準的なプログラミング インターフェイス
 プログラミング インターフェイスが標準化のための最も明白な候補ではおそらくです。 実際には、ODBC の開発中、時に ANSI および ISO 既に提供されている標準 embedded SQL および SQL モジュール。 CLI は、SQL アクセス グループのデータベースの標準は存在しないが、業界 consortium データベース ベンダーの —; を作成するかどうかを考えていたODBC の後の部分では、その作業の基礎になりました。  

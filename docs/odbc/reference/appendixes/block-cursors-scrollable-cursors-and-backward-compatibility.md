@@ -25,9 +25,10 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913637"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>ブロック カーソル、スクロール可能なカーソル、および旧バージョンとの互換性
-両方の存在**SQLFetchScroll**と**SQLExtendedFetch** ODBC の間で、アプリケーション プログラミング インターフェイス (API)、これは、一連の関数の最初のクリアが分割を表します、アプリケーションの呼び出し、およびサービス プロバイダー インターフェイス (SPI) の関数のセットからなるドライバーを実装します。 この分割が必要なように ODBC 3 です。*x*が使用される**SQLFetchScroll**、標準に bealigned も ODBC 2 と互換性があるとします*。x*が使用される**SQLExtendedFetch**です。  
+両方の存在**SQLFetchScroll**と**SQLExtendedFetch** ODBC の間で、アプリケーション プログラミング インターフェイス (API)、これは、一連の関数の最初のクリアが分割を表します、アプリケーションの呼び出し、およびサービス プロバイダー インターフェイス (SPI) の関数のセットからなるドライバーを実装します。 この分割が必要なように ODBC 3 です。*x*が使用される**SQLFetchScroll**、標準に bealigned も ODBC 2 と互換性があるとします *。x*が使用される**SQLExtendedFetch**です。  
   
  ODBC 3 *.x*は API のセットがアプリケーションの呼び出しの機能にも含まれます**SQLFetchScroll**に関連するステートメント属性とします。 ODBC 3 *.x*セットからなる SPI 関数のドライバーを実装して、含まれています**SQLFetchScroll**、 **SQLExtendedFetch**、関連するステートメント属性とします。 ODBC は、API と SPI がこのような単位に分割を正式には適用しません、ため、ODBC 3 可能性が *.x*アプリケーションを呼び出す**SQLExtendedFetch**に関連するステートメント属性とします。 ただし、ODBC 3 の理由はありません *.x*これを行うアプリケーション。 Api および Spi の詳細については、の紹介」を参照してください。 [ODBC アーキテクチャ](../../../odbc/reference/odbc-architecture.md)です。  
   

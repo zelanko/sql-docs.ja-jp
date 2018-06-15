@@ -22,9 +22,10 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907227"
 ---
 # <a name="sqlsetparam-mapping"></a>SQLSetParam マッピング
-**SQLSetParam**の上にマップする引き続き**SQLBindParameter** ODBC 2. と同様*。x*です。 概念的に似ていますなっても**SQLBindParam**、ドライバー マネージャーがマップされていない**SQLSetParam**に**SQLBindParam**です。 これは、ため特定既存の ODBC 2 です。*x*ドライバーの特殊な値を使用して*BufferLength* (SQL_SETPARAM_VALUE_MAX) に割り当てるときに、ドライバー マネージャーが生成する**SQLSetParam**の上に**SQLBindParameter**を 1 で呼び出されたときを判断します*。x* ODBC アプリケーションです。  
+**SQLSetParam**の上にマップする引き続き**SQLBindParameter** ODBC 2. と同様 *。x*です。 概念的に似ていますなっても**SQLBindParam**、ドライバー マネージャーがマップされていない**SQLSetParam**に**SQLBindParam**です。 これは、ため特定既存の ODBC 2 です。*x*ドライバーの特殊な値を使用して*BufferLength* (SQL_SETPARAM_VALUE_MAX) に割り当てるときに、ドライバー マネージャーが生成する**SQLSetParam**の上に**SQLBindParameter**を 1 で呼び出されたときを判断します *。x* ODBC アプリケーションです。  
   
  呼び出し  
   

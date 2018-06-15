@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905527"
 ---
 # <a name="literals-in-odbc"></a>ODBC でのリテラル
 間隔と ODBC の数値リテラルでは、次のセクションでは、構文が使用されます。 この構文の提供を数値型または interval 型では、文字列型とは、文字の文字列型に型の数値型または interval 型から変換を実行すると、ドライバーの作成者を支援するため、ここです。 詳細については、次を参照してください。[間隔のリテラル](../../../odbc/reference/appendixes/interval-literals.md)と[数値リテラル](../../../odbc/reference/appendixes/numeric-literals.md)付録 d: データ型にします。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913007"
 ---
 # <a name="retrieving-results-basic"></a>結果 (基本) を取得します。
 A*結果セット*特定の条件に一致するデータ ソース上の行のセットです。 これは、クエリの実行結果し、するアプリケーションが使用できる、表形式で概念テーブルです。 **選択**ステートメント、カタログ関数、およびいくつかの手順は、結果セットを作成します。 次の例では、最初の SQL ステートメントは、すべての行と Orders テーブル内のすべての列を含む結果セットを作成し、2 番目の SQL ステートメントの Orders テーブル内の行の OrderID、販売員、およびステータスの列を含む結果セットを作成します。状態の開く。  

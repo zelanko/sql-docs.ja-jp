@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913077"
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server の参照の例
 例を次にどのように**SQLBrowseConnect** for SQL Server ドライバーで利用可能な接続を閲覧するために使用する場合があります。 最初に、アプリケーションは、接続ハンドルを要求します。  
