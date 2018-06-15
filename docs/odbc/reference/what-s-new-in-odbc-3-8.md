@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32920877"
 ---
 # <a name="what39s-new-in-odbc-38"></a>どのような&#39;ODBC 3.8 の
 Windows 8 には、ODBC 3.8 の更新バージョンが含まれています。 Windows 8 で ODBC 3.8 には、次の機能が含まれています。  

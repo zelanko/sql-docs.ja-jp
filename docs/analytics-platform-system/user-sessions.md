@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544714"
 ---
 # <a name="user-sessions-in-analytics-platform-system"></a>Analytics Platform System のユーザー セッション
 適切な権限を持つログインは、これらのアクションの実行を含む、SQL Server PDW アプライアンス上のすべてのログインのセッションを管理できます。  

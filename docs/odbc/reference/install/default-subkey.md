@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917515"
 ---
 # <a name="default-subkey"></a>既定のサブキー
 レジストリでは、既定のサブキーの既定のデータ ソースを指定できます。 このサブキーは、データ ソースの仕様のサブキーの特殊なケースは、し、その他のデータ ソースの仕様サブキーと同じ値を持ちます。 唯一の違いは、ODBC データ ソースのサブキーの下の値として表示されていないことです。

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538382"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>ディレクトリ サービス内の AD のノードにログオン復元モード (DSRM) - Analytics Platform System の管理者パスワードを設定します。
 ディレクトリ サービス復元モード (DSRM) は、修復、または Active Directory ドメイン サービス (AD DS) の復元のブート モードです。 AD DS が失敗した後、または AD DS は、復元する必要がある場合、AD アプライアンスのノードにログオンに使用されます。 DSRM のパスワードは、ハードウェア ベンダー サイトのアプライアンス セットアップ時に初期化されており、アプライアンスの管理者によって変更する必要があります。 Analytics Platform System が 2 つの AD DS (ドメイン コント ローラー)***appliance_domain *-AD01**と ***appliance_domain *-AD02**です。 アプライアンス AD ノードごとに、次の手順を使用して、DSRM パスワードを変更します。  

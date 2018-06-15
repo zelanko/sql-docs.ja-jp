@@ -21,11 +21,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: e812b2dcdc7293a51f1c014681d04674c9995d37
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 961c9f7e093f61db909360f0dd7f8ac30f2d13e1
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
+ms.locfileid: "33988810"
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>チュートリアル: SQL Server Management Studio でオブジェクトのスクリプトを作成する
 このチュートリアルでは、SQL Server Management Studio (SSMS) で見つかるさまざまなオブジェクトの Transact-SQL (T-SQL) スクリプトを生成する方法を説明します。 次のオブジェクトのスクリプトを作成する方法の例を示します。
@@ -43,11 +44,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>Prerequisites
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
 
-- [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
-- [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
 - [AdventureWorks2016 サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。
 
-SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
+SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
 
 
 ## <a name="script-queries-from-the-gui"></a>GUI からクエリのスクリプトを作成する
@@ -134,7 +135,7 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
    ![オブジェクトをスクリプト化する](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > **[スクリプトを作成するデータの種類]** オプションに *[スキーマとデータ]* を選択すると、データベースのデータをスクリプト化することができます。 ただし、この設定は大規模なデータベースには適していません。 SSMS で割り当て可能なメモリよりも多くのメモリが割り当てられる可能性があります。 小さなデータベースの場合、この制限は問題ありません。 大規模なデータベースのデータを移動する場合は、[インポートとエクスポート ウィザード](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)を使用します。
+   > **[スクリプトを作成するデータの種類]** オプションに *[スキーマとデータ]* を選択すると、データベースのデータをスクリプト化することができます。 ただし、この設定は大規模なデータベースには適していません。 SSMS で割り当て可能なメモリよりも多くのメモリが割り当てられる可能性があります。 小さなデータベースの場合、この制限は問題ありません。 大規模なデータベースのデータを移動する場合は、[インポートとエクスポート ウィザード](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)を使用します。
 
 
 1. **[OK]** を選択し、 **[次へ]** を選択します。
@@ -173,7 +174,7 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
     ![ストアド プロシージャのスクリプトを作成する](media/scripting-ssms/scriptstoredprocedure.PNG)
 
 ## <a name="script-extended-events"></a>拡張イベントのスクリプトを作成する
-このセクションでは、[拡張イベント](https://docs.microsoft.com/en-us/sql/relational-databases/extended-events/extended-events)のスクリプトを作成する方法について説明します。
+このセクションでは、[拡張イベント](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)のスクリプトを作成する方法について説明します。
 
 1. SQL Server を実行しているサーバーに接続します。
 2. **[管理]** ノードを展開します。

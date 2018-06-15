@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025639"
 ---
 # <a name="mdx-cell-properties---forecolor-and-backcolor-contents"></a>MDX のセルのプロパティ - FORE_COLOR および BACK_COLOR の内容
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

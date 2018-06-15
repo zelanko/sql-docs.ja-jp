@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024179"
 ---
 # <a name="performing-batch-operations-xmla"></a>バッチ操作の実行 (XMLA)
   使用することができます、[バッチ](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)XML for Analysis (XMLA) を単一の XMLA を使用して複数の XMLA コマンドを実行するコマンド[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。 含まれる複数のコマンドを実行することができます、**バッチ**コマンドを単一のトランザクションとしてまたはコマンドごとに個別のトランザクションで、直列または並列でします。 アウトオブ ライン バインドおよびその他のプロパティを指定することも、**バッチ**の複数の処理コマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクト。  

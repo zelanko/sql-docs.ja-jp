@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021599"
 ---
 # <a name="amo-data-mining-classes"></a>AMO データ マイニング クラス
   データ マイニング クラスは、データ マイニング オブジェクトの作成、変更、削除、および処理を行うのに役立ちます。 データ マイニング オブジェクトでの作業には、データ マイニング構造の作成、データ マイニング モデルの作成、およびモデルの処理が含まれます。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024359"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>高度な AMO OLAP オブジェクトのプログラミング
   このトピックでは、高度な OLAP オブジェクトの分析管理オブジェクト (AMO) プログラミングの詳細について説明します。 このトピックには、次のセクションが含まれます。  

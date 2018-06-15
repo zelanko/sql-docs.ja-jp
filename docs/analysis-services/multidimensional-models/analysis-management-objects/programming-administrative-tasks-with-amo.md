@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020819"
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>AMO による管理タスクのプログラミング
   分析管理オブジェクト (AMO) は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] を管理するためにクライアント アプリケーションから使用されるプログラミング ライブラリです。 ここでは、AMO オブジェクトを使用したプログラミング方法について説明します。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020229"
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET クライアント プログラミング
   ADOMD.NET クライアント コンポーネントが内に存在、 **Microsoft.AnalysisServices.AdomdClient**名前空間 (microsoft.analysisservices.adomdclient.dll)。 これらのクライアント コンポーネントによりクライアントの機能と分析データ ストアから簡単にクエリ データおよびメタデータへの中間層アプリケーションなど[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。  

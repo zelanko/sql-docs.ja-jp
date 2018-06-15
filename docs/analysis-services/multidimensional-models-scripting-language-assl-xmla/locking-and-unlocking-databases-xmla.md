@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024779"
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>データベースのロックおよびロック解除 (XMLA)
   ロックして、それぞれを使用して、データベースをロック解除することができます、[ロック](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)と[Unlock](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) xml for Analysis (XMLA) コマンド。 通常、他の XMLA コマンドは、実行時にコマンドを完了させる必要に応じて、自動的にオブジェクトをロック/ロック解除します。 明示的にロックしたりなど、単一のトランザクション内で複数のコマンドを実行するデータベースのロックを解除、[バッチ](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)他のアプリケーション データベースへの書き込みトランザクションをコミットするを防止しながら、コマンド。  

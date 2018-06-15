@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921847"
 ---
 # <a name="odbc-function-summary"></a>ODBC 関数の概要
 次の表は、ODBC 関数をタスクの種類別にグループ化し、の適合性表記と各関数の目的の簡単な説明が含まれています。 準拠の詳細については、次を参照してください。 [ODBC と標準の CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)です。 各関数のセマンティクスと構文に関する詳細については、次を参照してください。 [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)です。  

@@ -14,10 +14,11 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34017159"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Analysis Services インスタンスの監視
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] またはパフォーマンス モニター ( [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **とも呼ばれるアプリケーション) を使用して、**のパフォーマンスを監視できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]作成し管理トレースと分析、およびトレース結果を再生できます。 パフォーマンス モニターでは、特定のカウンターでインデックスを付けたサーバーの状態が報告されます。これについては、次のセクションで説明します。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] またはパフォーマンス モニター ( [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **とも呼ばれるアプリケーション) を使用して、** のパフォーマンスを監視できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]作成し管理トレースと分析、およびトレース結果を再生できます。 パフォーマンス モニターでは、特定のカウンターでインデックスを付けたサーバーの状態が報告されます。これについては、次のセクションで説明します。  
   
 > [!NOTE]  
 >  操作の監視の詳細については、「 [SQL Server 2008 R2 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
