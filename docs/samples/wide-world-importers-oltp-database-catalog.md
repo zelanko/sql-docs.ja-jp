@@ -1,4 +1,4 @@
----
+﻿---
 title: WideWorldImporters OLTP データベース カタログ - SQL |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: sql
@@ -134,7 +134,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 可能な限り、データベースは、一般的にたずねますまとめて結合の複雑さを最小限に抑える同じスキーマにテーブルを collocates です。
 
-データベース スキーマが、別のデータベース WWI_Preparation 内の一連のメタデータ テーブルに基づいて、コード生成されました。 これにより、WideWorldImporters は非常に高度なデザインの整合性、名前付け一貫性、および完全性を実現します。 スキーマの生成方法の詳細については、ソース コードを参照してください: [wide-world-importers/wwi-database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
+データベース スキーマが、別のデータベース WWI_Preparation 内の一連のメタデータ テーブルに基づいて、コード生成されました。これにより、WideWorldImporters は非常に高度なデザインの整合性、名前付け一貫性、および完全性を実現します。スキーマの生成方法の詳細については、ソース コードを参照してください: [wide-world-importers/wwi-database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ### <a name="table-design"></a>テーブルのデザイン
 
@@ -149,7 +149,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 セキュリティ、WideWorldImporters を外部アプリケーション データのスキーマに直接アクセスをすることはできません。 でのアクセスを特定するのには、WideWorldImporters は、データを保持しませんが、ビュー、ストアド プロシージャが含まれているセキュリティ アクセス スキーマを使用します。 外部アプリケーションでは、セキュリティ スキーマを使用して、表示が許可されているデータを取得します。  これにより、ユーザーのみで実行できますビューおよびストアド プロシージャ、セキュリティで保護されたアクセス スキーマ
 
-たとえば、このサンプルには、Power BI ダッシュ ボードが含まれます。 外部アプリケーションは、PowerBI スキーマに対する読み取り専用のアクセス許可を持つユーザーとして、Power BI Gateway からこれらの Power BI ダッシュ ボードにアクセスします。  読み取り専用のアクセス許可については、ユーザーには PowerBI スキーマに対する SELECT および EXECUTE のアクセス許可のみが必要です。 WWI でのデータベース管理者は、必要に応じて、これらのアクセス許可を割り当てます。
+たとえば、このサンプルには、Power BI ダッシュ ボードが含まれます。 外部アプリケーションは、PowerBI スキーマに対する読み取り専用のアクセス許可を持つユーザーとして、Power BI Gateway からこれらの Power BI ダッシュ ボードにアクセスします。 読み取り専用のアクセス許可については、ユーザーには PowerBI スキーマに対する SELECT および EXECUTE のアクセス許可のみが必要です。WWI でのデータベース管理者は、必要に応じて、これらのアクセス許可を割り当てます。
 
 ## <a name="stored-procedures"></a>ストアド プロシージャ
 
