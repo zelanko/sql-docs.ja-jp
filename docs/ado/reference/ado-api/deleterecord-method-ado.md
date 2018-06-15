@@ -2,7 +2,6 @@
 title: 関係するメソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca7b2a425e24a115b8572f26ec7b2efb103ba9ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 168b53d0ad68f55656e005f7523a0c09ba599004
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277641"
 ---
 # <a name="deleterecord-method-ado"></a>関係するメソッド (ADO)
 によって表されるエンティティを削除、[レコード](../../../ado/reference/ado-api/record-object-ado.md)です。  
@@ -39,12 +39,12 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 省略可。 A**文字列**を削除する (たとえば、ファイルまたはディレクトリ) のエンティティを識別する URL を含む値です。 場合*ソース*を省略するか、空の文字列は、現在で表されるエンティティを示す[レコード](../../../ado/reference/ado-api/record-object-ado.md)を削除します。 場合は、レコードは、コレクション ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)の**adCollectionRecord**、ディレクトリなど) (たとえば、サブディレクトリ) のすべての子も削除されます。  
+ 任意。 A**文字列**を削除する (たとえば、ファイルまたはディレクトリ) のエンティティを識別する URL を含む値です。 場合*ソース*を省略するか、空の文字列は、現在で表されるエンティティを示す[レコード](../../../ado/reference/ado-api/record-object-ado.md)を削除します。 場合は、レコードは、コレクション ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)の**adCollectionRecord**、ディレクトリなど) (たとえば、サブディレクトリ) のすべての子も削除されます。  
   
  *非同期*  
- 省略可。 A**ブール**値と**True**、削除操作を非同期に指定します。  
+ 任意。 A**ブール**値と**True**、削除操作を非同期に指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  これによって表されるオブジェクトで操作**レコード**メソッドの完了後に失敗する可能性があります。 呼び出した後**関係する**、**レコード**ために閉じる必要がありますの動作、**レコード**予測に応じて、プロバイダーを更新したときになる可能性があります、**レコード**データ ソースとします。  
   
  この場合**レコード**から取得された、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、この操作の結果はすぐに反映されず、**レコード セット**です。 更新、 **Recordset**閉じ、再度開いたとき、またはを実行して、**レコード セット** [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを[更新](../../../ado/reference/ado-api/update-method.md)メソッド、または[再同期](../../../ado/reference/ado-api/resync-method.md)メソッドです。  

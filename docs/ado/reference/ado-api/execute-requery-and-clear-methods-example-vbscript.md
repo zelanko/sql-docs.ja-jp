@@ -2,7 +2,6 @@
 title: 実行、クエリを再実行、およびメソッドの例 (VBScript) をオフ |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 714c07e87c5f373279c4ae30d5b72cd4b0d55957
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 900bacb5c71a5a3ba7d55fa6d3e2d84d6e1c0e60
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278081"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>実行、クエリを再実行、およびメソッドの例 (VBScript) をオフに
 この例で、 **Execute**メソッドの両方から実行する場合、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトおよび[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 でも使用、 [Requery](../../../ado/reference/ado-api/requery-method.md)の現在のデータを取得する方法を[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、および[オフ](../../../ado/reference/ado-api/clear-method-ado.md)の内容を消去するメソッドを[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。 ExecuteCommand と PrintOutput の手順は、この手順を実行する必要があります。  

@@ -2,7 +2,6 @@
 title: Item プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -50,11 +49,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94826364231c295986d762361d6b946cba7e0b8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81c6ebc6b7dc0346a2d703c2969f1b114dd72039
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279251"
 ---
 # <a name="item-property-ado"></a>Item プロパティ (ADO)
 名前または序数で、コレクションの特定のメンバーを示します。  
@@ -72,7 +72,7 @@ Set object = collection.Item ( Index )
  *Index*  
  A**バリアント**名前またはコレクション内のオブジェクトの序数のいずれかに評価される式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**項目**プロパティをコレクションから特定のオブジェクトを取得します。 場合**項目**に対応するコレクションでオブジェクトを検索することはできません、*インデックス*引数、エラーが発生します。 また、一部のコレクションが名前付きオブジェクトをサポートしません。これらのコレクションの序数参照を使用する必要があります。  
   
  **項目**プロパティは、すべてのコレクションの既定のプロパティです。 したがって、次の構文形式を相互交換。  

@@ -2,7 +2,6 @@
 title: AbsolutePosition と CursorLocation プロパティの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 043b3d527ebf7d9dc81cb3ac43915b523789fcfe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dafee71e3b5fd70116260ad542a80085aaa845b7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275131"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>AbsolutePosition と CursorLocation プロパティの例 (vc++)
 次の例でどのように[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティは、のすべてのレコードを列挙するループの進行状況を追跡できます、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)です。 使用して、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)を有効にするプロパティ、 **AbsolutePosition**プロパティをクライアント カーソルにカーソルを設定します。  

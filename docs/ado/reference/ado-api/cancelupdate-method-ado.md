@@ -2,7 +2,6 @@
 title: ただしメソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51a5b570920e0a9b44263c0ae8783da1eee99040
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14557cb420d3a878ae6fa6e7cd70cce45fa6bd71
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276321"
 ---
 # <a name="cancelupdate-method-ado"></a>ただしメソッド (ADO)
 現在のまたは新しい行に加えられた変更を取り消します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、または[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)のコレクション、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトを呼び出す前に、[更新](../../../ado/reference/ado-api/update-method.md)メソッドです。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 recordset.CancelUpdaterecord.Fields.CancelUpdate  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="recordset"></a>レコードセット  
  使用して、**ただし**メソッドを現在の行に加えられた変更を取り消すまたは新しく追加した行を破棄します。 呼び出した後は、現在の行、または新しい行への変更を取り消すことはできません、**更新**メソッドを変更することができますをロールバックすると、トランザクションの一部である場合を除き、 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッド、またはその一部バッチ更新します。 バッチ更新をキャンセルできます、**更新**で、**ただし**または[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッドです。  

@@ -2,10 +2,10 @@
 title: LINKEDSERVERS 行セット (OLE DB) |Microsoft ドキュメント
 description: LINKEDSERVERS 行セット (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,20 +17,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ae01fd305fe420dd15634e5bb49b30be6b287e90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff4c35178b5cc047fb711821b332f43cf0094fc8
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611727"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>スキーマ行セットの LINKEDSERVERS 行セット
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **LINKEDSERVERS**行セットに含めることが組織のデータ ソースを列挙する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分散クエリ。  
   
  **LINKEDSERVERS**行セットには、次の列が含まれています。  
   
-|列名|型を表すインジケーター|Description|  
+|列名|型を表すインジケーター|説明|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|リンク サーバーの名前です。|  
 |SVR_PRODUCT|DBTYPE_WSTR|メーカーなどの名前。リンク サーバーの名前で表されるデータ ストアの種類を識別します。|  

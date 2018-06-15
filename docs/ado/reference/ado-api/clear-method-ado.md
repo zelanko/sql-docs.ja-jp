@@ -2,7 +2,6 @@
 title: Clear メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 238a936bb0bf0abe518b8a6268ace23406aac114
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4f02311140a82d869f38d3b64f025a69357c5d2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276341"
 ---
 # <a name="clear-method-ado"></a>Clear メソッド (ADO)
 すべてを削除、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトから、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 Errors.Clear  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**クリア**メソッドを[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)既存のすべてを削除するコレクション[エラー](../../../ado/reference/ado-api/error-object.md)コレクションからオブジェクト。 エラーが発生すると、ADO は自動的にオフ、**エラー**コレクションを格納および**エラー**オブジェクトは新しいエラーをベースにします。  
   
  プロパティとメソッドの一部として表示される警告を返します**エラー**内のオブジェクト、**エラー**コレクションが、プログラムの実行を停止しないでください。 呼び出す前に、[再同期](../../../ado/reference/ado-api/resync-method.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、または[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッドを[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト;、 [を開く](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドを[接続](../../../ado/reference/ado-api/connection-object-ado.md); オブジェクトまたは設定、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを**Recordset**オブジェクトを呼び出す、 **をオフに**メソッドを**エラー**コレクション。 読み取ることができるように、[カウント](../../../ado/reference/ado-api/count-property-ado.md)のプロパティ、**エラー**コレクションをテストするには、警告が返されました。  

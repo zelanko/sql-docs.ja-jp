@@ -2,7 +2,6 @@
 title: CommandStream プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff08261349b73b7aef5c8b9fe1375b288941d41e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8696706c0a785c77d7ca6a811811e1aba5fe133
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276701"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream プロパティ (ADO)
 入力として使用されるストリームを示す、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  入力として使用されるストリームを取得または設定、**コマンド**オブジェクト。 このストリームの形式は、プロバイダー固有です。詳細については、プロバイダーのマニュアルを参照してください。 このプロパティがに似ていますが、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)の入力の文字列を指定するために使用するプロパティ、**コマンド**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **CommandStream**と**CommandText**は相互に排他的です。 ユーザーが設定した場合、 **CommandStream** 、プロパティ、 **CommandText**プロパティは、空の文字列に設定されます ("") です。 ユーザーを設定する場合、 **CommandText**プロパティ、 **CommandStream**プロパティ設定されます**Nothing**です。  
   
  動作、 **Command.Parameters.Refresh**と**Command.Prepare**メソッドは、プロバイダーによって定義されます。 ストリーム内のパラメーターの値を更新できません。  

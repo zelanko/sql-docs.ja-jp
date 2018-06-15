@@ -2,7 +2,6 @@
 title: スレッドのプロパティの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c74cce11aa7aef2e5907ea41a0b2bb6952b5593c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: efb7b9e10c1cf89d95c066986ae29f7edd9e7f97
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279301"
 ---
 # <a name="marshaloptions-property-example-vc"></a>スレッドのプロパティの例 (vc++)
 この例では、[スレッド](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティをどのような行がサーバーに送信されますを指定する、すべての行または変更された行のみです。  

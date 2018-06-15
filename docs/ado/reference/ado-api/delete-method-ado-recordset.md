@@ -2,7 +2,6 @@
 title: Delete メソッド (ADO レコード セット) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afb1071d48cb6c4c1652cc5caab96de97beefae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46ffdefd753d10067c2c120690fd900ddd114abd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277571"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete メソッド (ADO レコード セット)
 現在のレコードまたはレコードのグループを削除します。  
@@ -44,7 +44,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **adAffectAll**と**呼び出します**に有効な引数ではなく**削除**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**削除**メソッドは、現在のレコードまたはレコードのグループを示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを削除します。 場合、 **Recordset**オブジェクトはレコードの削除を許可しないエラーが発生します。 即時更新モードの場合は、削除はすぐに、データベースで発生します。 呼び出し後に、レコードが編集モードのままは場合 (たとえば、データベース整合性違反) のため、レコードが正常に削除できません、[更新](../../../ado/reference/ado-api/update-method.md)です。 つまりの更新をキャンセルする必要があります[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)現在のレコードから移動する前に (たとえば、[閉じる](../../../ado/reference/ado-api/close-method-ado.md)、[移動](../../../ado/reference/ado-api/move-method-ado.md)、または[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md))。  
   
  バッチ更新モードの場合は、レコードがキャッシュからの削除とマークされてし、実際の削除の動作を呼び出すとき、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドです。 使用して、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを削除したレコードを表示します。  

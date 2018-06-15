@@ -2,7 +2,6 @@
 title: コマンド (ADO - WFC 構文) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5e5b50a3e7b05d77c582a3b02c1f9b366dbc066
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c57cd9a65cdbf3662f7ed7499d979753d9ecd0b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276611"
 ---
 # <a name="command-ado---wfc-syntax"></a>コマンド (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
@@ -50,7 +50,7 @@ public int executeUpdate()
   
  **ExecuteUpdate**メソッドは、特殊なケース メソッドを呼び出す、基になる ADO**実行**特定のパラメーターを持つメソッドです。 **ExecuteUpdate**メソッドの戻り値をサポートしていません、 **Recordset**オブジェクト、ため、**実行**メソッドの*オプション*パラメーターは、使用して変更**AdoEnums.ExecuteOptions.NORECORDS**です。 後に、**実行**メソッド完了すると、その更新された*RecordsAffected*にパラメーターが渡される、 **executeUpdate** として最後に返されるメソッド**int**です。  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>[プロパティ]  
   
 ```  
 public com.ms.wfc.data.Connection getActiveConnection()  

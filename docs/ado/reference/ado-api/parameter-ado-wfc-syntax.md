@@ -2,7 +2,6 @@
 title: パラメーター (ADO - WFC 構文) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed007c9dfea10578a642fbb01469eeb6ad2a56da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb5ee000ca00031f35f27ec23dec3e284656f56a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280591"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>パラメーター (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
@@ -46,7 +46,7 @@ public void appendChunk(char[] chars)
 public void appendChunk(String chars)  
 ```  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>[プロパティ]  
   
 ```  
 public int getAttributes()  

@@ -2,7 +2,6 @@
 title: ExecuteComplete イベント (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab8c0b33fe31499999cc73d2ebc03ef0d32ace70
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0af3666e4f5aecf897bdd6b93f756c2d251fa40
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278171"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete イベント (ADO)
 **ExecuteComplete**コマンドの実行が完了した後にイベントが呼び出されます。  
@@ -58,7 +58,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pConnection*  
  A[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 操作の実行対象で接続します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **ExecuteComplete**ためにイベントが発生する、**接続**。[実行](../../../ado/reference/ado-api/execute-method-ado-connection.md)、**コマンド**。[実行](../../../ado/reference/ado-api/execute-method-ado-command.md)、**レコード セット**。[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)、**レコード セット**。[Requery](../../../ado/reference/ado-api/requery-method.md)、または**レコード セット**。[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)メソッドです。  
   
 ## <a name="see-also"></a>参照  

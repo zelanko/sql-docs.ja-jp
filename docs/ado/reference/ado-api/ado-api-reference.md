@@ -2,7 +2,6 @@
 title: ADO の API リファレンス |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12e206c96b9a4e8fedc61fac55fcc99089b952f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2270fec7766396ea846726fc8098e06bbef81809
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275311"
 ---
 # <a name="ado-api-reference"></a>ADO の API リファレンス
 ADO のドキュメントのこのセクションには、各 ADO オブジェクト、コレクション、プロパティ、動的なプロパティ、メソッド、イベント、および列挙体についてのトピックが含まれています。 さらに、Microsoft Visual C と Windows Foundation クラス (WFC) と共に使用する ADO 構文のインデックスの一覧が含まれています。  

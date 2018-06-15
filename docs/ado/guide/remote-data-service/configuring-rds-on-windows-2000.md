@@ -2,7 +2,6 @@
 title: Windows 2000 で RDS の構成 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1efc5f21b829e85e063dbbd3dbb3d72131d43149
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 774309f4b120f3c475645574429d1b08af627f8b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273771"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Windows 2000 で RDS を構成します。
 を Windows 2000 にアップグレードした後に正常に機能する rds 問題が発生した場合は、問題のトラブルシューティングをこれらの手順に従います。  

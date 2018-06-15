@@ -2,7 +2,6 @@
 title: プロパティ オブジェクトのプロパティ、メソッド、およびイベント |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,14 +16,15 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 758f278ce323d36a662150d2933b7fc3abbc70d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abf83d2b2099a88c006891bb04ea5913abd12c4d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280745"
 ---
 # <a name="property-object-properties-methods-and-events"></a>プロパティ オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
  [属性プロパティ](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [Name プロパティ](../../../ado/reference/ado-api/name-property-ado.md)  

@@ -2,7 +2,6 @@
 title: ReadText メソッド |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26221c32339aab70311a6ca9254bb5d514724070
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7c3e2dcf695e9c6748881656d87e02404209dbf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280781"
 ---
 # <a name="readtext-method"></a>ReadText メソッド
 指定されたテキストの文字数を読み取ります[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -39,12 +39,12 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>パラメーター  
  *NumChars*  
- 省略可。 A**長い**ファイルから読み取る文字の数を指定する値または[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)値。 既定値は**adReadAll**です。  
+ 任意。 A**長い**ファイルから読み取る文字の数を指定する値または[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)値。 既定値は**adReadAll**です。  
   
 ## <a name="return-value"></a>戻り値  
  **ReadText**メソッドは、指定された文字数、行全体、またはからストリーム全体を読み取ります、**ストリーム**オブジェクトし、結果の文字列を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  場合*NumChar*ストリームに残りますが、文字数よりも多い、残りの文字のみが返されます。 指定された長さに一致する文字列の読み取りが埋め込まれていません*NumChar*です。 読み取る文字がない場合は、バリアント型を持つ値は null が返されます。 **ReadText**旧バージョンと読み取りに使用することはできません。  
   
 > [!NOTE]

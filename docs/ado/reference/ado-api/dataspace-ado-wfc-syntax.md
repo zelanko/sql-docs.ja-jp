@@ -2,7 +2,6 @@
 title: DataSpace (ADO - WFC 構文) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 160fe6068b86edc5d10f277dbd298954dc37838f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6213c4f5246395911cc562a64246007500d0059e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277521"
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO - WFC 構文)
 **CreateObject**のメソッド、 **DataSpace**クラスがクライアント アプリケーションの要求を処理する、両方のビジネス オブジェクトを指定します (*progid*) との通信プロトコルサーバー (*接続*)。 **createObject**を返します、 [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)サーバーを表すオブジェクト。  
@@ -42,7 +42,7 @@ public static ObjectProxy DataSpace.createObject(String
     progid, String connection)  
 ```  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>[プロパティ]  
   
 ```  
 public static int getInternetTimeout()  

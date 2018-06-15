@@ -2,7 +2,6 @@
 title: EventStatusEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1fa1f613008c12d684c0af7f65e13988c8baf16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20a5582eb8c8744e5d8a065c5fa8ce29c0d4b793
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278061"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 イベントの実行の現在の状態を指定します。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|イベントが発生する原因となった操作の取り消しを要求します。|  
 |**adStatusCantDeny**|3|操作が保留中の操作の取り消しを要求できないことを示します。|  

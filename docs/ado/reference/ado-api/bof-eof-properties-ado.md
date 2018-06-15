@@ -2,7 +2,6 @@
 title: BOF、EOF プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 369d6a3b4d069ed67ccc4c4d217aa257c20c79b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36399bf938371a464426b3092dcc95b0ceaa9e09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276151"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF プロパティ (ADO)
 -   **BOF**の最初のレコードの前に、現在のレコードの位置があることを示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>戻り値  
  **BOF**と**EOF**プロパティの戻り値**ブール**値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **BOF**と**EOF**プロパティを確認するかどうか、**レコード セット**オブジェクトには、レコードまたはかどうかを越えているの制限が含まれています、**レコード セット**オブジェクトのレコード間を移動するとします。  
   
  **BOF**プロパティから返される**True** (-1) 場合は、最初のレコードの前に、現在のレコードの位置と**False** (0)、現在のレコードの位置は 1 つ目以降の場合レコードです。  

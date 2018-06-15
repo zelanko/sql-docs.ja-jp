@@ -2,7 +2,6 @@
 title: BOF、EOF、およびブックマークのプロパティの例 (VB) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d79be2676d2679fff103cfe9201e379e2d67033
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 439bba8dd4eae06a388060c905cbff45539f8b69
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276001"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、EOF、およびブックマークのプロパティの例 (VB)
 この例では、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)と[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)ユーザーは、最初と最後のレコードのを越えて移動しようとした場合にメッセージを表示するプロパティ、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。 使用して、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティをユーザーが内のレコードにフラグを設定できるように、 **Recordset**後でそれに戻る。  

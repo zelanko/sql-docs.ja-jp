@@ -2,7 +2,6 @@
 title: レコード セットのベース テーブル (ADO) にコントロールが変更された |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76bf7ee2916e6fa4277154d7261f40b9b5959ea9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8351eb10101219b09450055526f0cb6a47a95b5f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282701"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>一意テーブル、一意なスキーマ、一意なカタログ プロパティ動的 (ADO)
 特定のベース テーブルに密接にコントロール変更に使用すると、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を複数のベース テーブルに対して結合操作によって形式がありません。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**文字列**テーブル、スキーマ、またはカタログの名前を指定する値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  目的の基底のテーブルは、カタログ、スキーマ、およびテーブル名によって一意に識別します。 ときに、**一意テーブル**プロパティは、の値を設定、**一意なスキーマ**または**固有のカタログ**プロパティを使用して、ベース テーブルを検索します。 これはためのもので、必須ではありませんがそのいずれかまたは両方、**一意なスキーマ**と**固有のカタログ**プロパティを設定する前に、**一意テーブル**プロパティを設定します。  
   
  主キー、**一意テーブル**全体の主キーとして扱われます**Recordset**です。 これは、主キーを必要とするすべてのメソッドで使用されるキーです。  

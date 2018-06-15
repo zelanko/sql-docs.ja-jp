@@ -2,7 +2,6 @@
 title: ADO のメソッド |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,17 +17,18 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a774f4be083e87b81f2200305faaa1802c84c52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c07679210b359517815a245069db95eb6e15b84e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275562"
 ---
 # <a name="ado-methods"></a>ADO メソッド
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|作成、更新可能なに対して新しいレコード**Recordset**オブジェクト。|  
-|[追加](../../../ado/reference/ado-api/append-method-ado.md)|オブジェクトをコレクションに追加します。 コレクションが場合**フィールド**、新しい**フィールド**をコレクションに追加する前に、オブジェクトを作成することがあります。|  
+|[追加します。](../../../ado/reference/ado-api/append-method-ado.md)|オブジェクトをコレクションに追加します。 コレクションが場合**フィールド**、新しい**フィールド**をコレクションに追加する前に、オブジェクトを作成することがあります。|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|大きなテキストまたはバイナリ データへのデータの追加**フィールド**、または、**パラメーター**オブジェクト。|  
 |[BeginTrans、CommitTrans、および RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|内のトランザクション処理の管理、**接続**オブジェクトの次のようにします。<br /><br /> **BeginTrans** -新しいトランザクションを開始します。<br /><br /> **CommitTrans** : 変更を保存し、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。<br /><br /> **RollbackTrans** — すべての変更をキャンセルし、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。|  
 |[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|実行をキャンセルする保留中、非同期メソッドの呼び出しです。|  
@@ -71,13 +71,13 @@ ms.lasthandoff: 05/03/2018
 |[[更新]](../../../ado/reference/ado-api/refresh-method-ado.md)|プロバイダーをコレクションから、使用可能なオブジェクトを反映するように、固有の仕様内のオブジェクトを更新します。|  
 |[クエリを再実行します。](../../../ado/reference/ado-api/requery-method.md)|データが更新、 **Recordset**オブジェクトの基になるクエリを再実行してオブジェクト。|  
 |[再同期](../../../ado/reference/ado-api/resync-method.md)|現在のデータを更新**Recordset**オブジェクト、または**フィールド**のコレクション、**レコード**基になるデータベースからのオブジェクト。|  
-|[[保存]](../../../ado/reference/ado-api/save-method.md)|保存、 **Recordset**ファイルまたは**ストリーム**オブジェクト。|  
+|[および](../../../ado/reference/ado-api/save-method.md)|保存、 **Recordset**ファイルまたは**ストリーム**オブジェクト。|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|バイナリの内容を保存、**ストリーム**をファイルにします。|  
 |[シーク](../../../ado/reference/ado-api/seek-method.md)|インデックスを検索、 **Recordset**に指定した値に一致する行に現在の行位置を変更した行をすばやく検索します。|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|ストリームの末尾の位置を設定します。|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|テキスト ストリームを読み取るときに、1 つの行全体をスキップします。|  
 |[stat](../../../ado/reference/ado-api/stat-method.md)|開いているストリームに関する統計情報を取得します。|  
-|[サポート](../../../ado/reference/ado-api/supports-method.md)|指定したかどうかを決定**Recordset**オブジェクトは、特定の種類の機能をサポートしています。|  
+|[サポートしています](../../../ado/reference/ado-api/supports-method.md)|指定したかどうかを決定**Recordset**オブジェクトは、特定の種類の機能をサポートしています。|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|現在の行に加えたあらゆる変更を保存、 **Recordset**オブジェクト、または**フィールド**のコレクション、**レコード**オブジェクト。|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|すべての保留中のバッチ更新プログラムをディスクに書き込みます。|  
 |[書き込み](../../../ado/reference/ado-api/write-method.md)|バイナリ データを書き込む、**ストリーム**オブジェクト。|  

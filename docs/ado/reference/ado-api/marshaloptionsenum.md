@@ -2,7 +2,6 @@
 title: MarshalOptionsEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25cfe307e51d7ac00016ac53c3b02bdf5cfe9a89
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e635e6f5d12886a7b8aab290a2a7607e0a3d8ea
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279381"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 サーバーにどのレコードを返す必要がありますを指定します。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adMarshalAll**|0|既定値です。 サーバーにすべての行を返します。|  
 |**adMarshalModifiedOnly**|1|返しますでは、行をサーバーにのみ変更できます。|  

@@ -2,7 +2,6 @@
 title: アドレス帳のデータ バインディング オブジェクト |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8efa72c893f0b2ddd07c834a07976babfbb46233
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7002d3755d213eebd61efab40aa51d8988f311a3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273641"
 ---
 # <a name="address-book-data-binding-object"></a>アドレス帳のデータ バインディング オブジェクト
 アドレス帳を使用して、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)クライアント HTML ページで、アプリケーションの SQL Server データベースからデータを (この場合は、DHTML テーブル) 内のビジュアル オブジェクトにバインドするオブジェクト。 VBScript プログラム イベント ドリブン ロジックを使用して、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)に。  
@@ -54,7 +54,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="generic-object-tag-parameters"></a>汎用オブジェクト タグ パラメーター  
  次の表では、OBJECT タグに関連付けられているパラメーターについて説明します。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |***CLASSID***|システムに埋め込まれたオブジェクトの種類を識別する一意な 128 ビットの数。 この識別子は、ローカル コンピューターのシステム レジストリに保持されます。 (のクラス id、 **.rds ですDataControl**オブジェクトを参照してください[.rds ですDataControl オブジェクト](../../../ado/reference/rds-api/datacontrol-object-rds.md))。|  
 |***ID***|コードでの識別に使用される埋め込みオブジェクトのドキュメント全体にわたる識別子を定義します。|  
@@ -62,7 +62,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDS.DataControl タグのパラメーター  
  次の表に固有のパラメーター、 **.rds ですDataControl**オブジェクト。 (の完全な一覧については、 **.rds ですDataControl**オブジェクト パラメーターとすると、それらを実装しを参照してください[.rds ですDataControl オブジェクト](../../../ado/reference/rds-api/datacontrol-object-rds.md))。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |[サーバー](../../../ado/reference/rds-api/server-property-rds.md)|HTTP を使用している場合、値が続く、サーバー コンピューターの名前は`http://`します。|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|接続に必要な情報を提供、 **.rds ですDataControl** SQL Server に接続します。|  

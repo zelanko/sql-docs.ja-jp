@@ -2,7 +2,6 @@
 title: 接続オブジェクト (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba405d7993c5f9c327d5789cfa3bf3c9ccfba2b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08a8c8fd224d2405674b30969cf44f672831f1c5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276991"
 ---
 # <a name="connection-object-ado"></a>接続オブジェクト (ADO)
 データ ソースへの接続を開くを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  A**接続**オブジェクトは、データ ソースとの一意のセッションを表します。 クライアント/サーバー データベース システムでは、サーバーへの実際のネットワーク接続と同じ場合があります。 プロバイダー、いくつかのコレクション、メソッド、またはのプロパティがサポートする機能によって、**接続**オブジェクトを使用できない可能性があります。  
   
  コレクション、メソッド、およびプロパティの使用、**接続**オブジェクトを次を行うことができます。  

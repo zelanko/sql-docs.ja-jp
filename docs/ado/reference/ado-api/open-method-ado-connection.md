@@ -2,7 +2,6 @@
 title: Open メソッド (ADO 接続) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 252afc6de9b6cf405fba7ae21a191beef2c198e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8035a40949e269fd8d8b039eb1931e8ed17c73c7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280011"
 ---
 # <a name="open-method-ado-connection"></a>Open メソッド (ADO 接続)
 データ ソースへの接続を開きます。  
@@ -40,18 +40,18 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>パラメーター  
  *ConnectionString*  
- 省略可。 A**文字列**接続情報を含む値です。 参照してください、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)有効な設定の詳細プロパティです。  
+ 任意。 A**文字列**接続情報を含む値です。 参照してください、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)有効な設定の詳細プロパティです。  
   
  *UserID*  
- 省略可。 A**文字列**接続を確立するときに使用するユーザー名を含む値です。  
+ 任意。 A**文字列**接続を確立するときに使用するユーザー名を含む値です。  
   
  *Password*  
- 省略可。 A**文字列**接続を確立するときに使用するパスワードを含む値です。  
+ 任意。 A**文字列**接続を確立するときに使用するパスワードを含む値です。  
   
- *Options*  
- 省略可。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)後に、このメソッドを返すかどうかを決定する値 (同期的に)、または (非同期)、接続が確立される前にします。  
+ *[オプション]*  
+ 任意。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)後に、このメソッドを返すかどうかを決定する値 (同期的に)、または (非同期)、接続が確立される前にします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**開く**メソッドを[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトは、データ ソースへの物理接続を確立します。 このメソッドが正常に完了すると後の接続はライブおよびに対してコマンドを発行し、結果を処理することができます。  
   
  省略可能なを使用して*ConnectionString*の系列を含む接続文字列を指定する引数*引数**値 =* セミコロンで区切られたステートメントまたはURL で識別されるリソース ファイルまたはディレクトリ。 **ConnectionString**プロパティで使用される値を自動的に継承する、 *ConnectionString*引数。 そのため、設定するか、 **ConnectionString**のプロパティ、**接続**、開く前にオブジェクト、またはを使用して、 *ConnectionString*設定またはオーバーライドへの引数中に現在の接続パラメーター、**開く**メソッドの呼び出しです。  

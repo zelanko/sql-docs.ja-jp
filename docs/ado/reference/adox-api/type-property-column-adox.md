@@ -2,7 +2,6 @@
 title: Type プロパティ (列) (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 250185c7ea52e560f7a5888e0eae748fdc2b7ec3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d826a41564313816fe0c23b00d10eaa2e83efddb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287241"
 ---
 # <a name="type-property-column-adox"></a>Type プロパティ (列) (ADOX)
 列のデータ型を示します。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**長い**のいずれかの値、[格納](../../../ado/reference/ado-api/datatypeenum.md)定数。 既定値は**adVarWChar**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロパティは読み取り/書き込みするまで、[列](../../../ado/reference/adox-api/column-object-adox.md)コレクションまたは別のオブジェクトは読み取り専用にオブジェクトが追加されます。  
   
 ## <a name="applies-to"></a>適用対象  

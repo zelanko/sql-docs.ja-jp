@@ -2,7 +2,6 @@
 title: RecordCreateOptionsEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3109e7e7116fac22e007c65167bb718edf2b29b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb2c6a46518a64989bd59fc5106dde52e93b6dd5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281171"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 指定します、既存かどうか**レコード**開くか、新しいにする必要があります**レコード**用に作成された、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト[開く](../../../ado/reference/ado-api/open-method-ado-record.md)メソッドです。 値は、AND 演算子と組み合わせることができます。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|新たに作成**レコード**によって指定されたノードに*ソース*既存を開く代わりに、パラメーター**レコード**です。 ソースを指している場合、既存のノードでは、実行時エラーが発生し、しない限り、 **adCreateCollection**と組み合わせる**adOpenIfExists**または**adCreateOverwrite**です。|  
 |**adCreateNonCollection**|0|新たに作成**レコード**型の[adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)です。|  

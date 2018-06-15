@@ -2,7 +2,6 @@
 title: ConnectionString プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b34a524380439dba07d12aa74ef24a870ab8ccc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a7804257f705e05b1ac5cfdcdb034de4fd20cec
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277041"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString プロパティ (ADO)
 データ ソースへの接続を確立するために使用される情報を示します。  
@@ -32,12 +32,12 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**文字列**値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **ConnectionString**プロパティを含む、一連の詳細な接続文字列を渡すことによって、データ ソースを指定する*引数**値 =* で区切られたステートメントセミコロン入力します。  
   
  ADO の 5 つの引数をサポートする、 **ConnectionString**プロパティ; ADO で処理されず、プロバイダーに直接その他の引数のパス。 引数の ADO サポートは次のとおりです。  
   
-|引数|Description|  
+|引数|説明|  
 |--------------|-----------------|  
 |*Provider=*|接続に使用するプロバイダーの名前を指定します。|  
 |*ファイル名 =*|事前設定された接続情報を含むプロバイダー固有のファイル (たとえば、永続化されたデータ ソース オブジェクト) の名前を指定します。|  

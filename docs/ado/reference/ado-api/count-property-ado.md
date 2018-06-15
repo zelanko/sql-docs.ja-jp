@@ -2,7 +2,6 @@
 title: Count プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edda8415ad83ee3aa874ec1e3e6dd6f8e20b41b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bccb2760b124040973baa7ba889d2110ec5efe95
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277231"
 ---
 # <a name="count-property-ado"></a>Count プロパティ (ADO)
 コレクション内のオブジェクトの数を示します。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>戻り値  
  返します、**長い**値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**カウント**プロパティを指定したコレクション内のオブジェクトの数を調べる。  
   
  コレクションのメンバーの番号付けは 0 から始まるため、する必要がありますループ常に 0 から始まるの値で終わる、**カウント**から 1 を引いたプロパティです。 Microsoft Visual Basic を使用しているし、確認せずにコレクションのメンバーをループ処理する場合、**カウント**プロパティを使用して、**ごとにしています.[次へ]** コマンド。  

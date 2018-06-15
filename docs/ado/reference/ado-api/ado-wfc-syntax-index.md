@@ -6,8 +6,7 @@ ms.date: 02/15/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 128e34bad797477fdeadbb18e241fc4d5981e3a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 355a32f2e37aca0202c803cde7c527a47bfe1905
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275641"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 構文のインデックス
 ADO 言語リファレンスでは、ADO メソッドおよびプロパティの構文を説明するために Microsoft Visual Basic プログラミング言語を使用します。 このインデックスは、ADO の Windows Foundation Class (ADO/WFC) に基づいて、ADO 言語のリファレンス トピックへの相互参照します。 構文の違いが発生した場合は、構文の一覧は、言語のリファレンス トピックではなく、このインデックスに関数のシグネチャを使用します。  

@@ -2,7 +2,6 @@
 title: CommandTimeout プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bbd07b516902db0dc952761e7cc1e38fa6958ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1addc5de70e53087cdcbaa77fea87211958cbcdc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276871"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout プロパティ (ADO)
 試行を終了し、エラーが発生する前に、コマンドを実行中に待機する時間を示します。  
@@ -32,10 +32,10 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**長い**を示す値を秒単位でどのくらいの期間コマンドの実行を待機します。 既定値は 30 です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **CommandTimeout**プロパティを[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトまたは[コマンド](../../../ado/reference/ado-api/command-object-ado.md)の取り消しを許可するオブジェクト、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッド呼び出すと、ネットワーク トラフィックやサーバーの使用による遅延が原因です。 間隔設定されている場合、 **CommandTimeout**プロパティまでのコマンドは、実行が完了した、エラーが発生して、コマンドが取り消されます。 プロパティを 0 に設定すると、ADO は、実行が完了するまで無期限に待機します。 コードのサポートを記述するプロバイダーとデータ ソースを確認してください、 **CommandTimeout**機能します。  
   
- **CommandTimeout**の設定、**接続**オブジェクトも何も起こりません、 **CommandTimeout**の設定、**コマンド**オブジェクト上、同じ**接続**ですつまり、**コマンド**オブジェクトの**CommandTimeout**プロパティがの値を継承していない、**接続。**オブジェクトの**CommandTimeout**値。  
+ **CommandTimeout**の設定、**接続**オブジェクトも何も起こりません、 **CommandTimeout**の設定、**コマンド**オブジェクト上、同じ**接続**ですつまり、**コマンド**オブジェクトの**CommandTimeout**プロパティがの値を継承していない、**接続。** オブジェクトの**CommandTimeout**値。  
   
  **接続**オブジェクト、 **CommandTimeout**プロパティは読み取り/書き込みの後に、**接続**が開かれています。  
   

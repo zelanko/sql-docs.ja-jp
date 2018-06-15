@@ -2,7 +2,6 @@
 title: Find メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 953398f5ed01cc3e0f7c0da1fee769d5e64209af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6569d6c65698738025267de0d97001eb041573e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278721"
 ---
 # <a name="find-method-ado"></a>Find メソッド (ADO)
 検索、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)を指定した条件を満たす行にします。 必要に応じて、検索、開始行、および開始行からのオフセットの方向を指定することがあります。 検出されたレコード; で現在の行位置を設定、条件が満たされる場合それ以外の場合、位置に設定されている (先頭または末尾) の**Recordset**です。  
@@ -47,10 +47,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *SearchDirection*  
  省略可能な*します。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)検索の方向で使用可能な次の行または現在の行に検索を開始するかどうかを指定する値。 検索が失敗したが、最後の停止、**レコード セット**値が場合**adSearchForward**です。 開始位置を検索が失敗した、 **Recordset**値が場合**adSearchBackward**です。  
   
- *コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇*  
- 省略可。 A**バリアント**ブックマーク、検索の開始位置として機能します。  
+ *開始*  
+ 任意。 A**バリアント**ブックマーク、検索の開始位置として機能します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  単一の列名のみを指定することがあります*条件*です。 このメソッドは、複数列の検索をサポートしていません。  
   
  比較演算子で*条件*可能性があります"**>**「(より大きい)、」**\<**"(より小さい)、「=」(等しい)、"> ="(より大きいまたは等しい)"< ="(以下)、"<>"(等しくない)、または「のように」(パターン一致)。  

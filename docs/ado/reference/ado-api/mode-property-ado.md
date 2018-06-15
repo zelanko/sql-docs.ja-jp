@@ -2,7 +2,6 @@
 title: Mode プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1aa3910a07fd1e24aeab7429234c1d7211eb6f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5122d4587674e643090b4291fb3487322d9f71c0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279351"
 ---
 # <a name="mode-property-ado"></a>Mode プロパティ (ADO)
 データの変更の利用可能なアクセス許可を示す、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコード](../../../ado/reference/ado-api/record-object-ado.md)、または[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、 [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)値。 既定値、**接続**は**adModeUnknown**です。 既定値、**レコード**オブジェクトが**adModeRead**です。 既定値、**ストリーム**基になるソースに関連付けられている (または既定値として、ソースとして URL を使用して開いた**ストリーム**の**レコード**) は**adModeRead**です。 既定値、**ストリーム**、基になると関連付けられていません (メモリ内インスタンス化された) ソースは**adModeUnknown**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**モード**プロパティを設定または現在の接続で使用中で、プロバイダーによってアクセス許可を取得します。 設定することができます、**モード**プロパティされる場合にのみ、**接続**オブジェクトが閉じられています。  
   
  **ストリーム**オブジェクトを開くために使用するソースから継承されている、アクセス モードが指定されていない場合、**ストリーム**オブジェクト。 たとえば場合、**ストリーム**から開かれた、**レコード**として同じモードで開かれている既定のオブジェクト、**レコード**です。  

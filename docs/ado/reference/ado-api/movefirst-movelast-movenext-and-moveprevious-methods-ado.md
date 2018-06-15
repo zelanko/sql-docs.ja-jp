@@ -2,7 +2,6 @@
 title: MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -30,11 +29,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b127303e4b74a60e6ef839922bc911c31b360914
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cd50b23dbe8fb73b327db7f75ee25b062ee447c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279611"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)
 First、last に移動次、または前のレコードを指定した[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトと現在のレコードを記録できるようにします。  
@@ -46,7 +46,7 @@ First、last に移動次、または前のレコードを指定した[Recordset
 recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **MoveFirst**メソッドの最初のレコードを現在のレコードの位置を移動する、 **Recordset**です。  
   
  使用して、 **MoveLast**に最後のレコードの現在位置に移動する方法を記録、 **Recordset**です。 **Recordset**オブジェクトには、ブックマークまたは旧バージョンとカーソルの移動をサポートする必要があります。 それ以外の場合、メソッドの呼び出しでエラーが発生します。  

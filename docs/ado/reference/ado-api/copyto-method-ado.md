@@ -2,7 +2,6 @@
 title: CopyTo メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32e889ea84c02a544ccad53cd9c274c360994bfe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15537df53441d0204a62d19ae38b9105c456cddb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277171"
 ---
 # <a name="copyto-method-ado"></a>CopyTo メソッド (ADO)
 指定した数の文字またはバイトのコピー (に応じて[型](../../../ado/reference/ado-api/type-property-ado-stream.md)) で、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)別**ストリーム**オブジェクト。  
@@ -45,9 +45,9 @@ Stream.CopyTo DestStream, NumChars
 >  *DestStream*パラメーターでのプロキシができない可能性があります**ストリーム**オブジェクトのプライベート インターフェイスへのアクセスに要求されるため、**ストリーム**オブジェクトをリモート処理は実行することはできません、クライアントです。  
   
  *NumChars*  
- 省略可。 **整数**バイトか、ソース内の現在位置からコピーする文字の数を指定する値**ストリーム**変換先に**ストリーム**です。 既定値は-1 で、すべての文字またはバイトが現在の位置からコピーされるように指定[EOS](../../../ado/reference/ado-api/eos-property.md)です。  
+ 任意。 **整数**バイトか、ソース内の現在位置からコピーする文字の数を指定する値**ストリーム**変換先に**ストリーム**です。 既定値は-1 で、すべての文字またはバイトが現在の位置からコピーされるように指定[EOS](../../../ado/reference/ado-api/eos-property.md)です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このメソッドは、指定された文字数またはバイト単位で指定された現在の位置から始まる、コピー、[位置](../../../ado/reference/ado-api/position-property-ado.md)プロパティです。 指定した数値が利用できるまでのバイト数よりも多い場合**EOS**、し、文字またはバイトのみを現在の位置から**EOS**コピーされます。 場合の値*NumChars* -1 で、または省略すると、すべての文字または現在の位置から始まるバイトをコピーします。  
   
  既に存在する場合の文字またはコピー先のストリームにバイトをコピーの終了ポイント以降のすべての内容が残っていると、切り捨ては行われません。 **位置**コピーされる最後のバイトをすぐに続くバイトになります。 これらのバイトを切り捨てる場合は、呼び出す[SetEOS](../../../ado/reference/ado-api/seteos-method.md)です。  

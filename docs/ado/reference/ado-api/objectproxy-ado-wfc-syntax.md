@@ -2,7 +2,6 @@
 title: ObjectProxy (ADO - WFC 構文) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd42478c8da0cc0eba4471ac46a66ec4a08d5bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ce52d661b5fffe6f0263baa81808dc7d1e9fd3b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279661"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO - WFC 構文)
 **ObjectProxy**オブジェクトは、サーバーを表し、によって返される、 **createObject**のメソッド、 [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクト。 ObjectProxy クラスが 1 つのメソッド、**呼び出す**サーバー上のメソッドを呼び出すし、呼び出しの結果オブジェクトを返すことができます。  
@@ -41,7 +41,7 @@ public Object ObjectProxy.( String method )
 public Object ObjectProxy.( String method, Object[] args)  
 ```  
   
-#### <a name="returns"></a>返します。  
+#### <a name="returns"></a>戻り値  
  オブジェクト  
  メソッドを呼び出し、結果のオブジェクト。  
   
@@ -53,4 +53,4 @@ public Object ObjectProxy.( String method, Object[] args)
  サーバーで呼び出すメソッドの名前を含む文字列。  
   
  *args*  
- 省略可。 サーバー上のメソッドの引数であるオブジェクトの配列。 Java データ型は、サーバー上の使用に適したデータ型に自動的に変換されます。
+ 任意。 サーバー上のメソッドの引数であるオブジェクトの配列。 Java データ型は、サーバー上の使用に適したデータ型に自動的に変換されます。

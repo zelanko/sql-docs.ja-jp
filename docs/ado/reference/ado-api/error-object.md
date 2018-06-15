@@ -2,7 +2,6 @@
 title: オブジェクトのエラー |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6911493ab691b2c5e40ff4fa7331261070d981be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77851eaeabd460db12938f6386708057e7faee0c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278421"
 ---
 # <a name="error-object"></a>Error オブジェクト
 プロバイダーを含む 1 つの操作に関連するデータ アクセス エラーの詳細が含まれています。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ADO オブジェクトに関連するすべての操作は、1 つまたは複数のプロバイダー エラーを生成できます。 各エラーが発生すると、1 つまたは複数**エラー**でオブジェクトを配置している、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 ADO の別の操作が、エラーを生成するときに、**エラー**コレクションをクリアすると、および一連の新しい**エラー**でオブジェクトを配置、**エラー**コレクション。  
   
 > [!NOTE]

@@ -2,7 +2,6 @@
 title: CursorLocation プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c169441ffc1cc455e0474f54fe923c3e4cd0f4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a720586cc2ee6f866565fe9e43382395bcb44e65
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277281"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation プロパティ (ADO)
 カーソル サービスの場所を示します。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**長い**値のいずれかに設定できる、 [CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロパティでは、プロバイダーにアクセス可能な各種のカーソル ライブラリを選択することができます。 通常、間、サーバーでクライアント側カーソル ライブラリまたは配置されているいずれかを使用することができます。  
   
  このプロパティの設定では、プロパティが設定された後にのみ確立された接続に影響します。 変更、 **CursorLocation**プロパティが既存の接続に影響を与えません。  

@@ -2,7 +2,6 @@
 title: 追加と CreateParameter メソッドの例 (JScript) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5b7a1e196dd452b5bf6dd407c6dc7e10d237497
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d93d5b956576a9e2b66359ae4aef0b4d8b1e5223
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275811"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>追加と CreateParameter メソッドの例 (JScript)
 この例では、 [Append](../../../ado/reference/ado-api/append-method-ado.md)と[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドが入力パラメーターを持つストアド プロシージャを実行します。 切り取りをメモ帳または別のテキスト エディターでは、次のコードを貼り付けとして保存して**AppendJS.asp**です。  

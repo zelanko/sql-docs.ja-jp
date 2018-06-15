@@ -2,7 +2,6 @@
 title: Errors コレクション (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7c259dda6c491c1992c19ed0ebe3decdc4a42d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 17e21c1d807ba537544a1578cb9ef2b8ea83ad21
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278161"
 ---
 # <a name="errors-collection-ado"></a>Errors コレクション (ADO)
 すべてが含まれています、[エラー](../../../ado/reference/ado-api/error-object.md) 1 つのプロバイダーに関連する障害への応答で作成されたオブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ADO オブジェクトに関連するすべての操作は、1 つまたは複数のプロバイダー エラーを生成できます。 各エラーが発生すると、1 つまたは複数**エラー**にオブジェクトを配置することができます、**エラー**のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 ADO の別の操作が、エラーを生成するときに、**エラー** 、コレクションをクリアし、一連の新しい**エラー**にオブジェクトを配置することができます、**エラー**コレクション。  
   
  各**エラー**オブジェクトは ADO エラーではなく、特定のプロバイダー エラーを表します。 ADO エラーは、実行時の例外処理機構に公開されます。 たとえば、Microsoft Visual Basic では、ADO 固有エラーの発生がトリガー、 [onError](../../../ado/reference/rds-api/onerror-event-rds.md)イベントに表示されると、 **Err**オブジェクト。  

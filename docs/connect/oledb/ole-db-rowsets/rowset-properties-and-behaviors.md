@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,18 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 35a330703d6664422bf4de80a6ac13e309a83549
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2526d6279d9ef4c38249b5fd841a0336e418b6df
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306401"
 ---
 # <a name="rowset-properties-and-behaviors"></a>行セットのプロパティと動作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   これらは、OLE DB Driver for SQL Server 行セットのプロパティです。  
   
-|プロパティ ID|Description|  
+|プロパティ ID|説明|  
 |-----------------|-----------------|  
 |DBPROP_ABORTPRESERVE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : このプロパティで中止操作後の行セットの動作が決まります。<br /><br /> VARIANT_FALSE: 中止操作後は、行セットが、OLE DB Driver for SQL Server に無効にします。 行セット オブジェクトの機能は、ほぼ失われます。 のみをサポート**IUnknown**操作と、保留状態の行とアクセサー ハンドルのリリースです。<br /><br /> VARIANT_TRUE: SQL Server の OLE DB Driver は、有効な行セットを保持します。|  
 |DBPROP_ACCESSORDER|R/W 読み取り/書き込み<br /><br /> 既定値 : DBPROPVAL_AO_RANDOM <br /><br /> 説明 : アクセスの順序です。 行セット内の列にアクセスする順序を指定します。<br /><br /> DBPROPVAL_AO_RANDOM: 任意の順序で列にアクセスできます。<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS: ストレージ オブジェクトとしてバインドされている列は、列序数で決まるシーケンシャルな順序でしかアクセスできません。<br /><br /> DBPROPVAL_AO_SEQUENTIAL: すべての列には、列序数で決まるシーケンシャルな順序でアクセスする必要があります。|  
@@ -77,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: 設定の可視性プロパティを変更すると、使用する SQL Server の OLE DB Driver[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]行セットをサポートするカーソル。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)です。|  
 |DBPROP_QUICKRESTART|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: が VARIANT_TRUE に設定すると、SQL Server の OLE DB Driver しようと、行セットのサーバー カーソルを使用します。|  
 |DBPROP_REENTRANTEVENTS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: 行セットの SQL Server の OLE DB Driver 再入可能なコンシューマーが通知コールバックにより入可能でない行セットのメソッドにアクセスしようとする場合、DB_E_NOTREENTRANT を返すことができます。|  
-|DBPROP_REMOVEDELETED|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: への変更の可視性に基づくプロパティの値を変更する、OLE DB Driver for SQL Server、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]行セットによって公開されるデータ。<br /><br /> VARIANT_TRUE: コンシューマーまたは他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ユーザーが削除した行は、行セットを最新状態に更新すると行セットから削除されます。 DBPROP_OTHERINSERT は VARIANT_TRUE です。<br /><br /> VARIANT_FALSE: コンシューマーまたは他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ユーザーが削除した行は、行セットを最新状態に更新しても行セットから削除されません。 削除された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 行の行セット内の状態値は DBROWSTATUS_E_DELETED です。 DBPROP_OTHERINSERT は VARIANT_TRUE です。<br /><br /> このプロパティに含まれる値は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルがサポートする行セットに関する値のみです。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)です。<br /><br /> DBPROP_REMOVEDELETED プロパティがキーセット カーソルの行セットとして実装された場合、削除された行はフェッチ時に削除およびの可能性がメソッドの行をフェッチなど**GetNextRows**と**GetRowsAt、**S_OK および要求よりも少ない行の両方を返します。 この動作は、DB_S_ENDOFROWSET の状態を示すものではないこと、また、返される行数は、残りの行がある場合は決して 0 にならないことに注意してください。|  
+|DBPROP_REMOVEDELETED|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: への変更の可視性に基づくプロパティの値を変更する、OLE DB Driver for SQL Server、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]行セットによって公開されるデータ。<br /><br /> VARIANT_TRUE: コンシューマーまたは他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ユーザーが削除した行は、行セットを最新状態に更新すると行セットから削除されます。 DBPROP_OTHERINSERT は VARIANT_TRUE です。<br /><br /> VARIANT_FALSE: コンシューマーまたは他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ユーザーが削除した行は、行セットを最新状態に更新しても行セットから削除されません。 削除された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 行の行セット内の状態値は DBROWSTATUS_E_DELETED です。 DBPROP_OTHERINSERT は VARIANT_TRUE です。<br /><br /> このプロパティに含まれる値は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルがサポートする行セットに関する値のみです。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)です。<br /><br /> DBPROP_REMOVEDELETED プロパティがキーセット カーソルの行セットとして実装された場合、削除された行はフェッチ時に削除およびの可能性がメソッドの行をフェッチなど**GetNextRows**と**GetRowsAt、** S_OK および要求よりも少ない行の両方を返します。 この動作は、DB_S_ENDOFROWSET の状態を示すものではないこと、また、返される行数は、残りの行がある場合は決して 0 にならないことに注意してください。|  
 |DBPROP_REPORTMULTIPLECHANGES|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_RETURNPENDINGINSERTS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: 行をフェッチするメソッドが呼び出されると、SQL Server の OLE DB Driver は返しません保留中の挿入行。|  
 |DBPROP_ROWRESTRICT|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: 行セットの SQL Server の OLE DB Driver は、行に基づくアクセス権をサポートしていません。 場合、 **IRowsetChange**インターフェイスが、行セットで公開されている、 **SetData**コンシューマーでメソッドを呼び出すことができます。|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 05/03/2018
   
  SQL Server の OLE DB Driver は、次の表に示すように、プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERROWSET を定義します。  
   
-|プロパティ ID|Description|  
+|プロパティ ID|説明|  
 |-----------------|-----------------|  
 |SSPROP_COLUMN_ID|列 : ColumnID <br /><br /> R/w 読み取り専用<br /><br /> 型: VT_U12 &#124; VT_ARRAY<br /><br /> 既定値 : VT_EMPTY<br /><br /> 説明 :  現在の [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT ステートメント内にある COMPUTE 句の結果列の序数位置 (1 から始まります) を表す整数値の配列。 これは、ODBC SQL_CA_SS_COLUMN_ID 属性の該当するショートカットは SQL Server の OLE DB ドライバーです。|  
 |SSPROP_DEFERPREPARE|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: VARIANT_TRUE: 準備実行でコマンドの準備がまで延期**icommand::execute**が呼び出されたまたはメタプロパティ操作が実行されます。 プロパティが次の値に設定されている場合は、ステートメントの準備が行われます。<br /><br /> VARIANT_FALSE: ステートメントが準備**icommandprepare::prepare**を実行します。|  

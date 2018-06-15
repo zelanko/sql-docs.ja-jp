@@ -2,7 +2,6 @@
 title: CacheSize プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36930b020c120a58c41579056397a3b5a3ea085c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3e27d5ce3302ea6c356ee84b9cc767bbde76c72
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276161"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize プロパティ (ADO)
 レコードの数を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)メモリにローカルにキャッシュされたオブジェクト。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**長い**値は 0 より大きい値で使用する必要があります。 既定値は 1 です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **CacheSize**プロパティは、プロバイダーからローカル メモリに一度に取得するレコードの数を制御します。 たとえば場合、 **CacheSize**は 10 ですが最初に開く後、**レコード セット**オブジェクト、プロバイダーがローカル メモリに最初の 10 個のレコードを取得します。 間を移動すると、 **Recordset**オブジェクト、プロバイダーがローカル メモリ バッファーからデータを返します。 過去のキャッシュの最後のレコードを移動するとすぐに、プロバイダーは、キャッシュにデータ ソースから、次の 10 個のレコードを取得します。  
   
 > [!NOTE]

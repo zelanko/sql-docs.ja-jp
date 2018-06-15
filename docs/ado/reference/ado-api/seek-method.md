@@ -2,7 +2,6 @@
 title: Seek メソッド |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59dcdd3426c39449b3d2348218aa7794a75c0474
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcac398a9c45a43fd59dd29c7a41aeeb9545214c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281621"
 ---
 # <a name="seek-method"></a>Seek メソッド
 インデックスを検索、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)に指定した値に一致する行に現在の行位置を変更した行をすばやく検索します。  
@@ -44,7 +44,7 @@ recordset.Seek KeyValues, SeekOption
  *SeekOption*  
  A [SeekEnum](../../../ado/reference/ado-api/seekenum.md)できるは、インデックスの列と、対応するための比較の種類を指定する値*keyvalues とも*します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**シーク**メソッドと組み合わせて、[インデックス](../../../ado/reference/ado-api/index-property.md)基になるプロバイダーのインデックスをサポートする場合は、プロパティ、 **Recordset**オブジェクト。 使用して、[サポート](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** 基になるプロバイダーがサポートしているかどうかを判断するメソッド**シーク**、および**Supports(adIndex)** プロバイダーはインデックスをサポートするかどうかを判断するメソッドです。 (たとえば、 [OLE DB Provider for Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)をサポートしている**シーク**と**インデックス**)。  
   
  場合**シーク**は検索対象の行では、エラーはありませんが発生すると、およびその行がの末尾に配置されている、 **Recordset**です。 設定、**インデックス**にこのメソッドを実行する前に目的のインデックスのプロパティです。  

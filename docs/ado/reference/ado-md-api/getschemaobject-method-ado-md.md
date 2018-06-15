@@ -2,7 +2,6 @@
 title: GetSchemaObject メソッド (ADO MD) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f91e7c068e5e058934e416b9c17ffd3d47a3db4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3068635d252b4c79f08bc88102796f0fc85a1315
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283871"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject メソッド (ADO MD)
 ADO MD スキーマ オブジェクトを取得します ([ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)、または[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)) によってその[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md).  
@@ -44,7 +44,7 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
  *UniqueName*  
  A**文字列**を指定する、 **UniqueName**取得するオブジェクトのプロパティの値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **GetSchemaObject**で指定したとおり、一意の名前を使用してオブジェクトを取得、 **UniqueName**プロパティです。 親オブジェクトの名前は、既知である必要はありませんし、親のコレクションは、スキーマ オブジェクトを取得する事前設定する必要はありません。  
   
 ## <a name="applies-to"></a>適用対象  

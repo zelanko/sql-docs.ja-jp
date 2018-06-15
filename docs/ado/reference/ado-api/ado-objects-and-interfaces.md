@@ -2,7 +2,6 @@
 title: ADO オブジェクトとインターフェイス |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 047e1a7a0cafee0b562edc5b3ec47f9f4dd3989d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4251e50ad3f31ccf79b66e4ae4d302723fd6e840
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275611"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO オブジェクトとインターフェイス
 これらのオブジェクト間のリレーションシップがで表される、 [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)です。  
@@ -36,9 +36,9 @@ ms.lasthandoff: 05/03/2018
 |[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|ADO を構築**Recordset**オブジェクトを OLE DB から**行セット**C/C++ アプリケーション内のオブジェクト。|  
 |[ADOStreamConstruction インターフェイス](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|ADO を構築**ストリーム**オブジェクトを OLE DB から**IStream** C/C++ アプリケーション内のオブジェクト。|  
 |[Command](../../../ado/reference/ado-api/command-object-ado.md)|データ ソースに対して実行しようとする特定のコマンドを定義します。<br /><br /> **コマンド**オブジェクトはスクリプトを実行しても安全ではありません。|  
-|[接続](../../../ado/reference/ado-api/connection-object-ado.md)|データ ソースへの接続を開くを表します。<br /><br /> **接続**オブジェクトにスクリプトを実行しても安全です。|  
+|[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|データ ソースへの接続を開くを表します。<br /><br /> **接続**オブジェクトにスクリプトを実行しても安全です。|  
 |[IDSOShapeExtensions インターフェイス](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|SHAPE プロバイダーの基になる ole DB データ ソース オブジェクトを取得します。|  
-|[[エラー]](../../../ado/reference/ado-api/error-object.md)|プロバイダーを含む 1 つの操作に関連するデータ アクセス エラーの詳細が含まれています。<br /><br /> **エラー**オブジェクトはスクリプトを実行しても安全ではありません。|  
+|[Error](../../../ado/reference/ado-api/error-object.md)|プロバイダーを含む 1 つの操作に関連するデータ アクセス エラーの詳細が含まれています。<br /><br /> **エラー**オブジェクトはスクリプトを実行しても安全ではありません。|  
 |[フィールド](../../../ado/reference/ado-api/field-object.md)|一般的なデータ型のデータの列を表します。|  
 |[パラメーター](../../../ado/reference/ado-api/parameter-object.md)|パラメーターまたはに関連付けられている引数を表します、**コマンド**オブジェクトがパラメーター化されたクエリまたはストアド プロシージャに基づいています。<br /><br /> **パラメーター**オブジェクトはスクリプトを実行しても安全ではありません。|  
 |[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)|プロバイダーによって定義されている ADO オブジェクトの動的な特性を表します。|  

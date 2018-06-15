@@ -2,7 +2,6 @@
 title: ErrorValueEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ce91ab8f23db46f82bbcbbe2c39210d47f597f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 842c452e9289a9197f93009167943b92e0143012
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278544"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO の実行時エラーの種類を指定します。  
@@ -40,7 +40,7 @@ ADO の実行時エラーの種類を指定します。
 > [!NOTE]
 >  OLE DB エラーは、ADO アプリケーションに渡すことができます。 通常、これらを特定するのには Windows 機能のコードの*4*です。 たとえば、0x800***4***です。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|変更することはできません、 **ActiveConnection**のプロパティ、**レコード セット**を持つオブジェクト、**コマンド**オブジェクトのソースとして。|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|サーバーは、操作を完了できません。|  

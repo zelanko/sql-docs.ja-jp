@@ -2,7 +2,6 @@
 title: Cancel メソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9538bfe7e0c98cf89c052ba3244482def661ef3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ec9158cc318b8c89ce0ea64a73190cb6f48de46
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276311"
 ---
 # <a name="cancel-method-ado"></a>Cancel メソッド (ADO)
 保留中の非同期メソッド呼び出しの実行をキャンセルします。  
@@ -40,18 +40,18 @@ ms.lasthandoff: 05/03/2018
 object.Cancel  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**キャンセル**非同期メソッド呼び出しの実行を終了する方法: には、メソッドが呼び出された、 **adAsyncConnect**、 **adAsyncExecute**、または**adAsyncFetch**オプション。  
   
  次の表を使用するときにどのようなタスクが終了した、**キャンセル**オブジェクトの特定の型のメソッドです。  
   
 |場合*オブジェクト*は、|このメソッドの最後の非同期呼び出しが終了しました|  
 |----------------------|-------------------------------------------------------------|  
-|[Command](../../../ado/reference/ado-api/command-object-ado.md)|[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[接続](../../../ado/reference/ado-api/connection-object-ado.md)|[実行](../../../ado/reference/ado-api/execute-method-ado-connection.md)または[開く](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
+|[Command](../../../ado/reference/ado-api/command-object-ado.md)|[実行](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|[実行](../../../ado/reference/ado-api/execute-method-ado-connection.md)または[開く](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[レコード](../../../ado/reference/ado-api/record-object-ado.md)|[つまり](../../../ado/reference/ado-api/copyrecord-method-ado.md)、[関係する](../../../ado/reference/ado-api/deleterecord-method-ado.md)、[後続](../../../ado/reference/ado-api/moverecord-method-ado.md)、または[開く](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)|[[ファイル]](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)|[[ファイル]](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)|[開く](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>適用対象  
   

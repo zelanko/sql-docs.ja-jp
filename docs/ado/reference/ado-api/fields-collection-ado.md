@@ -2,7 +2,6 @@
 title: フィールドのコレクション (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4eebfb3b3e401585829446872545063448ec87d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2641f21c0726d010990964d84f89148814e866c9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278491"
 ---
 # <a name="fields-collection-ado"></a>Fields コレクション (ADO)
 すべてが含まれています、[フィールド](../../../ado/reference/ado-api/field-object.md)のオブジェクト、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  A **Recordset**オブジェクトには、**フィールド**コレクションから成る**フィールド**オブジェクト。 各**フィールド**オブジェクト内の列に対応して、 **Recordset**です。 設定できます、**フィールド**開く前にコレクション、**レコード セット**を呼び出して、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)コレクション メソッド。  
   
 > [!NOTE]

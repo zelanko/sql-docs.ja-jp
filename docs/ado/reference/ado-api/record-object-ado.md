@@ -2,7 +2,6 @@
 title: Record オブジェクト (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0bd0c6e6e5ad0e9d5ff059e0e9f4125137fb08fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1be0a2d0f3124f4f0718fd9f8063f23eb46c9deb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280881"
 ---
 # <a name="record-object-ado"></a>Record オブジェクト (ADO)
 行を表し、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)またはデータ プロバイダーまたはファイルやディレクトリなどの半構造化データ プロバイダーによって返されるオブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  A**レコード**オブジェクトは、データの 1 つの行を表し、1 行をいくつかの概念的な類似点を持つ**Recordset**です。 プロバイダーの機能に応じて**レコード**オブジェクトは、1 行の代わりに、プロバイダーから直接返される可能性が**レコード セット**ときに 1 行のみを選択する SQL クエリの例は、実行されます。 または、**レコード**から直接オブジェクトを取得できる、 **Recordset**オブジェクト。 または、**レコード**半構造化データは、Microsoft Exchange の OLE DB プロバイダーなどに、プロバイダーから直接返されることができます。  
   
  関連付けられているフィールドを表示することができます、**レコード**オブジェクトによって、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに、**レコード**オブジェクト。 ADO ではオブジェクトの値を持つ列を含む**Recordset**、 **SafeArray**とでスカラー値、**フィールド**のコレクション**レコード**オブジェクト。  

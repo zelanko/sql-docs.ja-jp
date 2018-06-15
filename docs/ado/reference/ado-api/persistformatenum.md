@@ -2,7 +2,6 @@
 title: PersistFormatEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 141590f2755323422f44aacb4617905191d3a154
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aa6ce5a4341c85f7763d407b0d39599b24d9441
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280611"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 保存する形式を指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|Microsoft 高度なデータ TableGram (adtg 形式) の形式を示します。|  
 |**adPersistADO**|1|ADO の拡張マークアップ言語 (XML) 形式を使用することを示します。 この値は adPersistXML と同じとは下位互換のためです。|  

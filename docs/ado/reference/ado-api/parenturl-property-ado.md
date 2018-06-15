@@ -2,7 +2,6 @@
 title: ParentURL プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51a7a476352519f4756e4e8f19166aac3c84d7da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4a0217d4f2e79dc5876af9518a06d73d2ac924d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280681"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL プロパティ (ADO)
 親を指す絶対 URL 文字列を示す[レコード](../../../ado/reference/ado-api/record-object-ado.md)、現在の**レコード**オブジェクト。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>戻り値  
  返します、**文字列**を親の URL を示す値**レコード**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **ParentURL**プロパティを開くには使用されているソースに依存、**レコード**オブジェクト。 たとえば、**レコード**によって参照されるディレクトリの相対パス名を含むソースで開くことが、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティです。  
   
  たとえば、"first"の下のフォルダーは「秒」含まれています。 開く、**レコード**次の構文を使用してオブジェクト。  

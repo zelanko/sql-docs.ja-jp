@@ -2,7 +2,6 @@
 title: ADO のコード例では、Microsoft JScript |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef0f2f2e7238fde0655de5df584492e22afecb0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c65e6242525e0c3615e7b00d9067897a9ac898c0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275351"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript では ADO コードの例
 次のコード例を使用して、ADO メソッド、プロパティ、および JScript で記述するときにイベントを使用する方法について説明します。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [GetRows メソッドの例](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
   
 -   [AbsolutePage、PageCount、および PageSize のプロパティの例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
   

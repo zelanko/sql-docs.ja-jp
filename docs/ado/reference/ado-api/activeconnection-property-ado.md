@@ -2,7 +2,6 @@
 title: ActiveConnection プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b37e3e062bcc8239b2231db66052e9cdaf9e812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6988f743abe5a6a0bf875da0b7e52bed23f7500
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275161"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection プロパティ (ADO)
 示す[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの指定した[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトが現在属しています。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**文字列**接続が閉じられたか、接続の定義を含む値**バリアント**現在を含む**接続**オブジェクトの場合、接続は開いています。 既定値は、null オブジェクト参照です。 参照してください、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **ActiveConnection**を決定するプロパティ、**接続**オブジェクトを指定した**コマンド**オブジェクトは実行または指定した**レコード セット**は開かれます。  
   
 ## <a name="command"></a>コマンド  

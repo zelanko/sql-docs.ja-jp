@@ -2,7 +2,6 @@
 title: Bookmark プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e8b73c3d31886877702cadfca0194fd628bf6172
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e645300f604e1880f98fd8d99cea8599062f72f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276201"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark プロパティ (ADO)
 ブックマークの現在のレコードを一意に識別することを示します、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトまたは現在のレコードを設定、**レコード セット**レコードの有効なブックマークによって識別されるオブジェクト。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**バリアント**有効なブックマークに評価される式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、**ブックマーク**プロパティを現在のレコードの位置を保存し、いつでもそのレコードに戻ります。 のみ使用可能なブックマークは**Recordset**ブックマーク機能をサポートするオブジェクト。  
   
  開くと、 **Recordset**オブジェクトの一意のブックマークが各レコード。 現在のレコードのブックマークを保存するには、値を割り当てる、**ブックマーク**変数へのプロパティです。 戻るにはすぐにそのレコードにいつでも別のレコードに移動した後、次のように設定します。、 **Recordset**オブジェクトの**ブックマーク**プロパティをその変数の値にします。  

@@ -2,7 +2,6 @@
 title: EventReasonEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b9645e05ce3387ea5948cca07b91ecdc80cd4b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b173fb6838b082b0600714f3756858dcc1615ba2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278441"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 イベントを発生の原因となった理由を指定します。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|操作は、新しいレコードを追加します。|  
 |**adRsnClose**|9|操作の終了、 **Recordset**です。|  
