@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913418"
 ---
 # <a name="programming-considerations"></a>プログラミングの考慮事項
 このセクションでは、ODBC アプリケーションおよびドライバーの書き込みに関連するトピックの数について簡単に説明します。  

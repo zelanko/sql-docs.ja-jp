@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915897"
 ---
 # <a name="updating-data-overview"></a>データの更新の概要
 SQL ステートメントを実行することによって、または呼び出すことによって、アプリケーションでデータを更新できる**SQLSetPos**または**SQLBulkOperations**です。 **更新**、**削除**、および**挿入**ステートメントは、データ ソース上で直接実行し、は、通常、ドライバーでサポートします。 更新プログラムを検索し、delete ステートメントには変更する行の仕様が含まれています。 更新プログラムの配置、および delete ステートメントと**SQLSetPos**カーソルによる、データ ソースで動作し、小さい広くサポートされています。  

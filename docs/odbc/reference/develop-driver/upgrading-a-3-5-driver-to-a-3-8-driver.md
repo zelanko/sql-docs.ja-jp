@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919129"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>3.8 ドライバーに 3.5 ドライバーをアップグレードします。
 このトピックでは、ガイドラインと ODBC 3.8 ドライバーに、ODBC 3.5 ドライバーをアップグレードするための考慮事項を示します。  

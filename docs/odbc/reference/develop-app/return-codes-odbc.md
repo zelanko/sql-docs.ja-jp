@@ -22,9 +22,10 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913217"
 ---
 # <a name="return-codes-odbc"></a>ODBC のリターン コード
-ODBC の各関数と呼ばれる、コードが返されますその*リターン コード、*全体的な成功または関数の失敗を示します。 一般的に、プログラミング ロジックはリターン コードを基に組み立てます。  
+ODBC の各関数と呼ばれる、コードが返されますその*リターン コード、* 全体的な成功または関数の失敗を示します。 一般的に、プログラミング ロジックはリターン コードを基に組み立てます。  
   
  たとえば、次のコード呼び出し**SQLFetch**を結果セット内の行を取得します。 警告情報には、(SQL_SUCCESS_WITH_INFO) が返された場合、結果セットの末尾は (SQL_NO_DATA) に達した場合、またはエラーが発生しました (SQL_ERROR) を決定する関数のリターン コードを確認します。  
   

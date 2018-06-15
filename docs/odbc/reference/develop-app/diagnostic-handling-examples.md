@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908197"
 ---
 # <a name="diagnostic-handling-examples"></a>診断の処理の例
 次の例は、ODBC 接続でのさまざまなコンポーネントが診断メッセージを生成し、さまざまなドライバーが使用してアプリケーションに診断を返すことが**SQLGetDiagRec**です。  

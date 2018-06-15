@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914277"
 ---
 # <a name="interval-literals"></a>間隔のリテラル
 ODBC では、すべてのドライバーが、SQL_CHAR 型または SQL_VARCHAR データ型のすべての C interval データ型への変換をサポートする必要があります。 基になるデータ ソースが interval データ型をサポートしていない場合はただし、ドライバーをこれらの変換をサポートするために、正しい形式の SQL_CHAR フィールドの値を知る必要があります。 同様に、ODBC では、ドライバーは、どのような形式の文字のフィールドに格納されている間隔を知る必要があるために、型が SQL_CHAR、SQL_VARCHAR、またはに変換できる任意の ODBC C を使用する必要があります。 このセクションでは、ドライバーの作成者を使用するか、C interval データ型からの変換中に、SQL_CHAR フィールドを検証する必要がある間隔リテラルの構文について説明します。  

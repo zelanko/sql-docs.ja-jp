@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923227"
 ---
 # <a name="sqlgetstmtattr-function"></a>SQLGetStmtAttr 関数
 **準拠**  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
  **SQLGetStmtAttr**ステートメント属性の現在の設定を返します。  
   
 > [!NOTE]  
->  どのようなドライバー マネージャーの詳細と ODBC 3 には、この関数にマップします。*x* ODBC 2 を利用するアプリケーション*。x*ドライバーを参照してください[アプリケーションの旧バージョンと互換性を保つのための置換関数のマッピング](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)です。  
+>  どのようなドライバー マネージャーの詳細と ODBC 3 には、この関数にマップします。*x* ODBC 2 を利用するアプリケーション *。x*ドライバーを参照してください[アプリケーションの旧バージョンと互換性を保つのための置換関数のマッピング](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -107,7 +108,7 @@ SQLRETURN SQLGetStmtAttr(
   
  呼び出し**SQLGetStmtAttr**で返します *\*ValuePtr*で指定されたステートメント属性の値*属性*です。 SQLULEN 値または null で終わる文字の文字列、その値を指定するか、できます。 SQLULEN 値の場合、一部のドライバーのみ書き込むことが、下位 32 ビットまたは 16 ビットのバッファーとのままにして、上位ビットがそのままです。 そのため、アプリケーションは SQLULEN のバッファーを使用し、この関数を呼び出す前に、値を 0 を初期化する必要があります。 また、 *BufferLength*と*StringLengthPtr*引数は使用されません。 アプリケーションがその文字列内で最大長を指定する値が null で終わる文字列の場合は、 *BufferLength*引数、およびドライバーでは、その文字列の長さを返します、  *\*StringLengthPtr*バッファー。  
   
- 呼び出すアプリケーションを許可する**SQLGetStmtAttr** ODBC 2 を使用する*。x*ドライバーへの呼び出し**SQLGetStmtAttr**をドライバー マネージャーではマップ**SQLGetStmtOption**です。  
+ 呼び出すアプリケーションを許可する**SQLGetStmtAttr** ODBC 2 を使用する *。x*ドライバーへの呼び出し**SQLGetStmtAttr**をドライバー マネージャーではマップ**SQLGetStmtOption**です。  
   
  次のステートメント属性は読み取り専用を取得できるように**SQLGetStmtAttr**では設定されませんが、 **SQLSetStmtAttr**:  
   

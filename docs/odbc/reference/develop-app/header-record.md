@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908957"
 ---
 # <a name="header-record"></a>ヘッダー レコード
 ヘッダー レコード内のフィールドには、リターン コード、行の数、実行されるステートメントの状態レコードの数と種類など、関数の実行に関する一般的な情報が含まれています。 ヘッダー レコードは、関数 SQL_INVALID_HANDLE が返されない限り、常に作成します。 ヘッダー レコード内のフィールドの完全な一覧については、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明。

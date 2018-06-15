@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916728"
 ---
 # <a name="translation-dll-function-summary"></a>翻訳 DLL 関数の概要
 次の表では、翻訳 DLL の関数について説明します。 各関数のセマンティクスと構文に関する詳細については、次を参照してください。 [DLL 関数の参照を翻訳](../../../odbc/reference/syntax/translation-dll-api-reference.md)です。  

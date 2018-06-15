@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902237"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>デスクトップ データベース ドライバーの履歴
 次の表は、デスクトップ データベース ドライバーのバージョン履歴を表示します。  

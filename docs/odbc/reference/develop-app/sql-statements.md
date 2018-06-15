@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910527"
 ---
 # <a name="sql-statements"></a>SQL ステートメント
 ODBC アプリケーションでは、SQL ステートメントを実行することによってほとんどすべてのデータベースへのアクセスを実行します。 これらのステートメントの形式:、ハードコーディングまたは実行時に、相互運用可能なデータやデータ ソースの特定などに構築された、アプリケーションのニーズによって異なります。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915484"
 ---
 # <a name="transactions-in-odbc-odbc"></a>ODBC ODBC でのトランザクション
 ODBC でのトランザクションが完了、接続レベルです。つまり、アプリケーションには、トランザクションが完了すると、コミットされたかはその接続ですべてのステートメント ハンドルで行ったすべての作業をロールバックします。  

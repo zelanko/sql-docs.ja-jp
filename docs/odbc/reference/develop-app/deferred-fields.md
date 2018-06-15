@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910267"
 ---
 # <a name="deferred-fields"></a>遅延のフィールド
 値*フィールドを遅延*設定されているが、ドライバーは、遅延の影響用の変数のアドレスを保存する場合は使用しません。 ドライバー、アプリケーション パラメーター記述子への呼び出し時に、変数の内容を使用して**SQLExecDirect**または**SQLExecute**です。 アプリケーション行記述子では、ドライバーは、フェッチ時に、変数の内容を使用します。  

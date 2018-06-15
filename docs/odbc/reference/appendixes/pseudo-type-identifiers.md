@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906797"
 ---
 # <a name="pseudo-type-identifiers"></a>疑似型識別子
 アプリケーション プログラミングの利便性は、ODBC 疑似型識別子の数を定義します。 これらの識別子実際のデータ型の場合は、実際に対応していませんが、代わりに、状況に応じてに解決される既存のデータ型。  

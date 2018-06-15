@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912397"
 ---
 # <a name="header-files"></a>ヘッダー ファイル
 Sql.h ヘッダー ファイルには、主要な ODBC インターフェイスへの準拠レベルの機能と関数のプロトタイプが含まれています。 Sqlext.h ヘッダー ファイルには、レベル 1 およびレベル 2 の API への準拠レベルで機能と関数のプロトタイプが含まれています。 Sqltypes.h ヘッダー ファイルには、型の定義と SQL データ型のインジケーターが含まれています。  

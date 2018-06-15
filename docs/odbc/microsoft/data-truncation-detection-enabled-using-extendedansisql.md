@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898347"
 ---
 # <a name="data-truncation-detection-enabled-using-extendedansisql"></a>ExtendedAnsiSQL を使用して有効になっているデータの切り捨ての検出
 ExtendedAnsiSQL フラグがオンになっていると、アプリケーションが char 型または binary 型の列にデータを挿入するデータは切り捨てられます、ときに、切り捨てが検出されます。 ExtendedAnsiSQL フラグがオフの場合は、デスクトップの ODBC データベース ドライバーの以前のバージョンが、警告なしデータが切り捨てられます。

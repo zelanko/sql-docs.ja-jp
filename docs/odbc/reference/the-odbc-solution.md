@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918927"
 ---
 # <a name="the-odbc-solution"></a>ODBC ソリューション
 次に、質問は、ODBC がデータベースへのアクセス標準化する方法ですか。 2 つのアーキテクチャの要件があります。  

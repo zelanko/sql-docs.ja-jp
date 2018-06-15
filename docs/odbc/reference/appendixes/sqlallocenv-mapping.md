@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907067"
 ---
 # <a name="sqlallocenv-mapping"></a>SQLAllocEnv マッピング
 アプリケーションを呼び出すと**SQLAllocEnv**から ODBC 3 *.x*ドライバーへの呼び出し**SQLAllocEnv**(*phenv*)にマップされて**SQLAllocHandle**次のようにします。  

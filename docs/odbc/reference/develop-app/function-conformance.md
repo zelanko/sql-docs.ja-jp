@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914257"
 ---
 # <a name="function-conformance"></a>関数への準拠
 次の表では、これは適切に定義された ODBC の各関数の準拠レベルを示します。  

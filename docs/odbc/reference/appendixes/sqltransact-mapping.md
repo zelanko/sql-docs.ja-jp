@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907877"
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact マッピング
 **SQLTransact**置き換わっています**SQLEndTran**です。 2 つの関数の主な違いを**SQLEndTran**引数を含む*HandleType*を実行する作業のスコープを指定します。 *HandleType*引数は、環境または接続ハンドルを指定できます。 次の呼び出しに**SQLTransact**:  

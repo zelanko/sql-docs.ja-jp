@@ -26,11 +26,12 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914367"
 ---
 # <a name="datetime-data-type-changes"></a>Datetime データ型の変更
 ODBC 3 です。*x*、識別子、日付、時刻、および timestamp SQL データ型は SQL_DATE、SQL_TIME、および SQL_TIMESTAMP から変更された (のインスタンスと **#define** 9、10、および 11 のヘッダー ファイルで)、SQL_TYPE_DATE にSQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP (のインスタンスと **#define** 91、92、および 93 のヘッダー ファイルで)、それぞれします。 対応する C 型識別子から変更された SQL_C_DATE、SQL_C_TIME、および SQL_C_TIMESTAMP SQL_C_TYPE_DATE、SQL_C_TYPE_TIME、SQL_C_TYPE_TIMESTAMP、それぞれします。  
   
- 列のサイズと ODBC 3 での SQL の datetime データ型に対して返される小数点以下桁数です。*x* ODBC 2 でそれらに対して返される有効桁数と小数点以下桁数と同じです*。x*です。 これらの値は、SQL_DESC_PRECISION および SQL_DESC_SCALE 記述子フィールドの値と異なります。 (詳細については、次を参照してください[列のサイズ、小数点以下桁数、転送オクテット長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。)。  
+ 列のサイズと ODBC 3 での SQL の datetime データ型に対して返される小数点以下桁数です。*x* ODBC 2 でそれらに対して返される有効桁数と小数点以下桁数と同じです *。x*です。 これらの値は、SQL_DESC_PRECISION および SQL_DESC_SCALE 記述子フィールドの値と異なります。 (詳細については、次を参照してください[列のサイズ、小数点以下桁数、転送オクテット長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。)。  
   
  これらの変更に影響を与える**SQLDescribeCol**、 **SQLDescribeParam**、および**SQLColAttribute**です。**SQLBindCol**、 **SQLBindParameter**、および**SQLGetData**; と**SQLColumns**、 **SQLGetTypeInfo**、 **SQLProcedureColumns**、 **SQLStatistics**、および**SQLSpecialColumns**です。  
   
@@ -45,9 +46,9 @@ ODBC 3 です。*x*、識別子、日付、時刻、および timestamp SQL デ�
 |SQL_C_TIMESTAMP (11)|マッピングなし|SQL_C_TYPE_TIMESTAMP (93)|マッピングなし [1]|SQL_C_TYPE_TIMESTAMP (93)|  
 |SQL_C_TYPE_TIMESTAMP (93)|(DM) からのエラー|(DM) からのエラー|SQL_C_TIMESTAMP (11)|[2] をマッピングなし|  
   
- [1] の結果としてこの、ODBC 3。*x* ODBC 2 を使用するアプリケーション*。x*ドライバーは、カタログ関数によって返される結果セットに返される日付、時刻、またはタイムスタンプのコードを使用できます。  
+ [1] の結果としてこの、ODBC 3。*x* ODBC 2 を使用するアプリケーション *。x*ドライバーは、カタログ関数によって返される結果セットに返される日付、時刻、またはタイムスタンプのコードを使用できます。  
   
- [2] の結果としてこの、ODBC 3。*x* ODBC 3 を使用するアプリケーション*。x*ドライバーは、カタログ関数によって返される結果セットに返される日付、時刻、またはタイムスタンプのコードを使用できます。  
+ [2] の結果としてこの、ODBC 3。*x* ODBC 3 を使用するアプリケーション *。x*ドライバーは、カタログ関数によって返される結果セットに返される日付、時刻、またはタイムスタンプのコードを使用できます。  
   
  次の表にどのように ODBC 3 *.x*ドライバー マネージャーに入力された日付、時刻、およびタイムスタンプ SQL データの型のマッピングを実行する、 *ParameterType*の引数**SQLBindParameter**または、 *DataType*の引数**SQLGetTypeInfo**です。  
   
@@ -60,6 +61,6 @@ ODBC 3 です。*x*、識別子、日付、時刻、および timestamp SQL デ�
 |SQL_TIMESTAMP (11)|マッピングなし|SQL_TYPE_TIMESTAMP (93)|マッピングなし [1]|SQL_TYPE_TIMESTAMP (93)|  
 |SQL_TYPE_TIMESTAMP (93)|(DM) からのエラー|(DM) からのエラー|SQL_TIMESTAMP (11)|[2] をマッピングなし|  
   
- [1] の結果としてこの、ODBC 3。*x* ODBC 2 を使用するアプリケーション*。x*ドライバーは、カタログ関数によって返される結果セットに返される日付、時刻、またはタイムスタンプのコードを使用できます。  
+ [1] の結果としてこの、ODBC 3。*x* ODBC 2 を使用するアプリケーション *。x*ドライバーは、カタログ関数によって返される結果セットに返される日付、時刻、またはタイムスタンプのコードを使用できます。  
   
- [2] の結果としてこの、ODBC 3。*x* ODBC 3 を使用するアプリケーション*。x*ドライバーは、カタログ関数によって返される結果セットに返される日付、時刻、またはタイムスタンプのコードを使用できます。
+ [2] の結果としてこの、ODBC 3。*x* ODBC 3 を使用するアプリケーション *。x*ドライバーは、カタログ関数によって返される結果セットに返される日付、時刻、またはタイムスタンプのコードを使用できます。

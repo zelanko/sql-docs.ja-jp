@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915747"
 ---
 # <a name="step-4a-fetch-the-results"></a>手順 4 a: 結果のフェッチ
 次の手順は、次の図に示すように、結果を取得するは。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914117"
 ---
 # <a name="sql-to-c-numeric"></a>SQL には、c: 数値
 数値の ODBC SQL データ型の識別子は次のとおりです。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912357"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL から c: Timestamp へ
 ODBC SQL データ型 timestamp の識別子です。  

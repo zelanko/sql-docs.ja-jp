@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908997"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>影響を受けた行の数を決定します。
 アプリケーションでは、更新、削除、または、行を挿入、後に呼び出すことができます**SQLRowCount**を影響を受けた行の数を決定します。 **SQLRowCount**更新、削除、または実行することによって挿入された行かどうかは、この値を返す、**更新**、**削除**、または**挿入**ステートメントでは、位置指定を実行して更新または delete ステートメントを呼び出した**SQLSetPos**です。  

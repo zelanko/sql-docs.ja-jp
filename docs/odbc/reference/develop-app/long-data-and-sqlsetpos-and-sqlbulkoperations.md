@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913937"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>長い形式のデータおよび SQLSetPos SQLBulkOperations
 行の更新時に長いデータを送信できるように SQL ステートメントのパラメーターを持つ場合は、 **SQLBulkOperations**または**SQLSetPos**を持つ行を挿入するときに、または**SQLBulkOperations**. 複数回呼び出すと、部分にデータが送信される**SQLPutData**です。 実行時にデータを送信する列と呼ばれる*実行時データ列*です。  

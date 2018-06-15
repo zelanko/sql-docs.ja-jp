@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899157"
 ---
 # <a name="date-arithmetic"></a>日付の算術演算子
 ドライバーは、加算と減算の日付、時刻、またはタイムスタンプ列から integer をサポートします。 日付の列は、整数は、加算または減算する日数を指定します。 時間またはタイムスタンプ列の場合は、整数は、加算または減算する秒数を指定します。

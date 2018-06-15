@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911957"
 ---
 # <a name="obtaining-descriptor-handles"></a>処理記述子を取得します。
 アプリケーションへの呼び出しの出力引数としての明示的に割り当てられた記述子ハンドルを取得する**SQLAllocHandle**です。 呼び出すことによって暗黙的に割り当てられた記述子ハンドルを取得**SQLGetStmtAttr**です。

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915427"
 ---
 # <a name="step-2-initialize-the-application"></a>手順 2: アプリケーションを初期化します。
 2 番目の手順は、次の図に示すように、アプリケーションを初期化するためにです。 完全に新機能はここで、アプリケーションによって異なります。  

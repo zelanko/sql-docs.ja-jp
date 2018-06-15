@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910907"
 ---
 # <a name="odbc-static-cursors"></a>ODBC の静的カーソル
 静的カーソルは静的に結果セットが表示されます。 メンバーシップ、順序、または、カーソルが開かれた後に結果セットの値に加えられた変更が通常検出されません。 たとえば、静的カーソルが別のアプリケーションと行をフェッチし、行を更新します。 静的カーソルは、行を変わりません場合に、表示される値は変更されず、他のアプリケーションによって行われた変更に関係なく。  

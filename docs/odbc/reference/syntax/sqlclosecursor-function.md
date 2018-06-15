@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918507"
 ---
 # <a name="sqlclosecursor-function"></a>SQLCloseCursor 関数
 **準拠**  
@@ -70,7 +71,7 @@ SQLRETURN SQLCloseCursor(
  **SQLCloseCursor**カーソルが開いていない場合は、SQLSTATE 24000 (無効なカーソルの状態) を返します。 呼び出す**SQLCloseCursor**を呼び出すことと同じです**SQLFreeStmt** SQL_CLOSE オプションを使用して例外を使用する**SQLFreeStmt** SQL_CLOSE に影響を与えません、アプリケーションのステートメントで開いているカーソルがない場合は、while **SQLCloseCursor** SQLSTATE 24000 (無効なカーソルの状態) を返します。  
   
 > [!NOTE]  
->  ODBC 3 場合。*x* ODBC 2 を使用するアプリケーション*。x*ドライバー呼び出し**SQLCloseCursor**カーソルが開いていないときに、ドライバー マネージャーがマップされるので、SQLSTATE 24000 (無効なカーソルの状態) は返されませんが**SQLCloseCursor** に**SQLFreeStmt** SQL_CLOSE とします。  
+>  ODBC 3 場合。*x* ODBC 2 を使用するアプリケーション *。x*ドライバー呼び出し**SQLCloseCursor**カーソルが開いていないときに、ドライバー マネージャーがマップされるので、SQLSTATE 24000 (無効なカーソルの状態) は返されませんが**SQLCloseCursor** に**SQLFreeStmt** SQL_CLOSE とします。  
   
  詳細については、次を参照してください。[カーソルを閉じる](../../../odbc/reference/develop-app/closing-the-cursor.md)です。  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911487"
 ---
 # <a name="choosing-an-sql-grammar"></a>SQL 文法を選択します。
 使用するには、どの文法は、SQL ステートメントを構築するときに最初に決定します。 Open Group、ANSI、ISO など、さまざまな標準機関から使用可能な文法に加えては、ほぼすべて DBMS ベンダーは、それぞれが多少異なります、標準の独自の文法を定義します。  

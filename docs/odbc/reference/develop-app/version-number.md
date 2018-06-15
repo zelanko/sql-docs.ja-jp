@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917307"
 ---
 # <a name="version-number"></a>バージョン番号
 ODBC では、それぞれさまざまな機能のいくつかのバージョンがあります。 ODBC ドライバー マネージャーのバージョンと特定のドライバーをサポートして呼び出すことによって判断**SQLGetInfo** SQL_ODBC_VER と SQL_DRIVER_ODBC_VER オプションを使用します。

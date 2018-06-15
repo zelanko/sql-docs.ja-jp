@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915157"
 ---
 # <a name="network-example"></a>ネットワークの例
 この図は、1 つのネットワークで表示でしたの前の構成方法を示しています。  

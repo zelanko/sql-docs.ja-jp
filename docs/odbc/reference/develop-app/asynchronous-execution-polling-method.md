@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913827"
 ---
 # <a name="asynchronous-execution-polling-method"></a>非同期実行 (ポーリング メソッド)
 ODBC 3.8 および Windows 7 SDK より前の非同期操作は、ステートメントの関数でのみ可能でした。 詳細については、次を参照してください。、**ステートメントの操作を非同期に実行する**、このトピックで後述します。  

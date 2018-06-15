@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908697"
 ---
 # <a name="general-error-checks"></a>一般的なエラー チェック
 ドライバー マネージャーでは、1 つの一般的なエラーを確認します。 次のエラーが発生したときに常に SQL_ERROR を返します、: 関数は、ドライバーでサポートする必要があります。

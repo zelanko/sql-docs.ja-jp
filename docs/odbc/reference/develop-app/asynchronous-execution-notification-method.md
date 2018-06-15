@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914247"
 ---
 # <a name="asynchronous-execution-notification-method"></a>非同期実行 (通知方法)
 ODBC では、接続とステートメントの操作の非同期実行を許可します。 アプリケーション スレッドは、非同期モードで ODBC 関数を呼び出すことができ、操作が完了すると、その他のタスクを実行するアプリケーション スレッドを許可する前に、関数が返すことができます。 非同期ステートメントまたは接続操作で、Windows 7 SDK では、アプリケーションは、非同期操作がポーリング メソッドを使用して完了したことを決定します。 詳細については、次を参照してください。[非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)です。 以降、Windows 8 SDK では、非同期操作が、通知方法を使用して完了したことを確認できます。  

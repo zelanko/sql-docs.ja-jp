@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912427"
 ---
 # <a name="statement-attributes"></a>ステートメント属性
 ステートメント属性は、ステートメントの特性です。 たとえば、ステートメントの結果で使用するカーソルの設定の種類、ブックマークと新機能を使用するかどうかは、ステートメント属性です。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
  ステートメント属性を設定する場合は、属性自体によって異なります。 ステートメントが実行される前に、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_CONCURRENCY、SQL_ATTR_SIMULATE_CURSOR、および SQL_ATTR_USE_BOOKMARKS ステートメント属性を設定する必要があります。 SQL_ATTR_ASYNC_ENABLE と SQL_ATTR_NOSCAN ステートメント属性は、いつでも設定できますが、ステートメントをもう一度使用まで適用されません。 SQL_ATTR_MAX_LENGTH と SQL_ATTR_MAX_ROWS、SQL_ATTR_QUERY_TIMEOUT のステートメント属性をいつでも設定できますが、ドライバー固有かどうか、ステートメントをもう一度使用する前に適用されます。 残りのステートメント属性は、いつでも設定できます。  
   
 > [!NOTE]  
->  呼び出して、接続レベルでのステートメント属性を設定する機能**SQLSetConnectAttr** ODBC 3 では廃止されています*。x*です。 ODBC 3 です。*x*アプリケーションは、接続レベルでステートメント属性を設定しない必要があります。 ODBC 3 です。*x* ODBC 2 で機能する場合、ドライバーはこの機能をサポートのみが必要です*。x*アプリケーションです。 詳細については、次を参照してください。 [SQLSetConnectOption マッピング](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
+>  呼び出して、接続レベルでのステートメント属性を設定する機能**SQLSetConnectAttr** ODBC 3 では廃止されています *。x*です。 ODBC 3 です。*x*アプリケーションは、接続レベルでステートメント属性を設定しない必要があります。 ODBC 3 です。*x* ODBC 2 で機能する場合、ドライバーはこの機能をサポートのみが必要です *。x*アプリケーションです。 詳細については、次を参照してください。 [SQLSetConnectOption マッピング](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
 >   
 >  この例外は、接続属性とステートメント属性の両方と接続レベルまたはステートメント レベルで設定できます SQL_ATTR_METADATA_ID と SQL_ATTR_ASYNC_ENABLE 属性です。  
 >   

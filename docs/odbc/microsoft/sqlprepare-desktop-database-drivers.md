@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904197"
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare (デスクトップ データベース ドライバー)
 列の数が不適切で準備されたステートメントには、ステートメントの準備にいない、実行時にエラーが返されます。

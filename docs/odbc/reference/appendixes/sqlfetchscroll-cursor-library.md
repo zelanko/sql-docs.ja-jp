@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914077"
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
  カーソル ライブラリを使用する場合を呼び出す**SQLFetchScroll**いずれかへの呼び出しを混在させることはできません**SQLFetch**または**SQLExtendedFetch**です。  
   
- カーソル ライブラリを使用する場合を呼び出す**SQLFetchScroll**は ODBC 2 の両方をサポートします*。x* 、ODBC 3 *。x*ドライバー。  
+ カーソル ライブラリを使用する場合を呼び出す**SQLFetchScroll**は ODBC 2 の両方をサポートします *。x* 、ODBC 3 *。x*ドライバー。  
   
 ## <a name="rowset-buffers"></a>バッファーの行セット  
  カーソル ライブラリは、ドライバーから場合に、アプリケーションによって提供される行セット バッファーへのデータの転送を最適化します。  

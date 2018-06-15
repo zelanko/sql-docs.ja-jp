@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904967"
 ---
 # <a name="about-drivers-and-data-sources"></a>ドライバーとデータ ソースについて
 *ドライバー* ODBC 要求を処理し、アプリケーションにデータを返すコンポーネントはインストールされています。 必要に応じて、ドライバーは、データ ソースで認識できる形式にアプリケーションの要求を変更します。 ドライバーのセットアップ プログラムを使用して、追加またはドライバーをコンピューターから削除する必要があります。  

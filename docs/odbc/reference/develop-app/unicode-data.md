@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915817"
 ---
 # <a name="unicode-data"></a>Unicode データ
 SQL の Unicode データ型は、Unicode、DBMS にネイティブで存在するデータを記述する提供されます。 C の Unicode データ型は、Unicode のバッファーにデータをバインドするアプリケーションを許可するものです。 ドライバー マネージャーは、Unicode C 型にするには、(SQL_C_WCHAR) からデータを変換できる関数、ANSI ドライバーを使用します。  

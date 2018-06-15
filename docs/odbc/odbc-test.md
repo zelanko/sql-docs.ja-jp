@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914507"
 ---
 # <a name="odbc-test"></a>ODBC のテスト
 ODBC ドライバーと ODBC ドライバー マネージャーをテストに使用できる ODBC 対応のアプリケーションは、Microsoft® ODBC をテストします。 ODBC 3.51 には、ANSI と Unicode 対応のバージョンの ODBC のテストの両方が含まれています。 対応するファイルは次のとおりです。  

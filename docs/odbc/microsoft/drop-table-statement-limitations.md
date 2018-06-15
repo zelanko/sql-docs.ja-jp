@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902324"
 ---
 # <a name="drop-table-statement-limitations"></a>ドロップ テーブル ステートメントの制限事項
 5.0、7.0、または 97 Microsoft Excel ドライバーを使用する場合、DROP TABLE ステートメントは、ワークシートをクリアが、ワークシート名は削除されません。 ワークシート名は、ブックにまだ存在する、ために、同じ名前の別のワークシートを作成できません。

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914707"
 ---
 # <a name="configuring-data-sources"></a>データ ソースの構成
 データ ソースに関する情報は、システム レジストリに格納されます。 ユーザーは、管理プログラムを通じてデータ ソース情報を変更します。 ODBC アドミニストレーター、コントロール パネルの ODBC デバイス、または、アプリケーションまたはドライバーの開発者によって書かれた管理プログラムを指定できます。  

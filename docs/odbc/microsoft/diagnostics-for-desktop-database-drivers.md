@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904227"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>デスクトップ データベース ドライバーの診断
 すべてのエラーと警告いないチェックインまたはドライバー マネージャーによってを部分的にチェックは、ドライバーによって処理されます。 ドライバーもマップ ネイティブ エラー、またはデータ ソースによって SQLSTATEs に返されたエラー。 各関数に一覧表示、 *ODBC プログラマ リファレンス*条件とメッセージを指定する「診断」セクションが含まれています。  

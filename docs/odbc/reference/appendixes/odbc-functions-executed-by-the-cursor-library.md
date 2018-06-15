@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907757"
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>カーソル ライブラリによって実行された ODBC 関数
 > [!IMPORTANT]  

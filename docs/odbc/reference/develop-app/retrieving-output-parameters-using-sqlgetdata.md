@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913867"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData を使用して出力パラメーターを取得します。
 ODBC 3.8 する前に、アプリケーションは、バインドされた出力バッファーを持つクエリの出力パラメーターを取得のみでした。 ただし、パラメーター値のサイズが (たとえば、大きな画像) 非常に大きい場合に非常に大きなバッファーを割り当てるにくくなっています。 ODBC 3.8 には、部分の出力パラメーターを取得する新しい方法が導入されています。 アプリケーションを呼び出せるようになりました**SQLGetData**小さなバッファーを伴うに複数回、大きなパラメーター値を取得します。 これは、大きな列データの取得に似ています。  

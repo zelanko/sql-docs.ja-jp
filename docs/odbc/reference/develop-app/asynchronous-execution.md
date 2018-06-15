@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907457"
 ---
 # <a name="asynchronous-execution"></a>非同期の実行
 ODBC では、ステートメントと接続の両方の操作の非同期操作をサポートします。 非同期操作が完了したかを決定する 2 つの方法があります。  

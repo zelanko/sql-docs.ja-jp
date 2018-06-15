@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912267"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>SQLBulkOperations を持つ行のフェッチ
 呼び出しによってブックマークを使用して行セットにデータを再フェッチ**SQLBulkOperations です。** フェッチする行は、バインドされたブックマーク列内のブックマークで識別されます。 SQL_COLUMN_IGNORE の値を持つ列はフェッチされません。  

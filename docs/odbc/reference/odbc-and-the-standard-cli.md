@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916867"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC と標準の CLI
 ODBC は、次の仕様および標準呼び出しレベル インターフェイス (CLI) での処理を整列させます。 (ODBC の機能は、これらの標準の各のスーパー セットです)。  
@@ -35,7 +36,7 @@ ODBC は、次の仕様および標準呼び出しレベル インターフェ�
   
  この配置では、結果として、次に該当します。  
   
--   ODBC 3 では、Open Group と ISO CLI 仕様に記述されたアプリケーションは動作します。*x*ドライバーまたは ODBC 3 では、コンパイル時の標準に準拠したドライバー *。x*ヘッダー ファイルし、ODBC 3 とリンクします*。x*ライブラリ、ドライバーは ODBC 3 へのアクセスを得る場合および*。x*ドライバー マネージャー。  
+-   ODBC 3 では、Open Group と ISO CLI 仕様に記述されたアプリケーションは動作します。*x*ドライバーまたは ODBC 3 では、コンパイル時の標準に準拠したドライバー *。x*ヘッダー ファイルし、ODBC 3 とリンクします *。x*ライブラリ、ドライバーは ODBC 3 へのアクセスを得る場合および *。x*ドライバー マネージャー。  
   
 -   Open Group および ISO CLI 仕様に記述されたドライバーは ODBC 3 では機能 *.x*アプリケーションまたは ODBC 3 では、コンパイル時の標準に準拠したアプリケーション *.x*ヘッダー ファイルし、リンクODBC 3 *.x*ライブラリ、ODBC 3 を使用してドライバー、アプリケーションがアクセスおよび *.x*ドライバー マネージャー。 (詳細については、次を参照してください。[標準に準拠したアプリケーションやドライバー](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)です。  
   

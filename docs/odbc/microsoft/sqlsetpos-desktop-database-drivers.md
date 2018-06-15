@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904907"
 ---
 # <a name="sqlsetpos-desktop-database-drivers"></a>SQLSetPos (デスクトップ データベース ドライバー)
 一括モデル セマンティクス**SQLSetPos**を指定した呼び出し、 *irow* 0 以上の引数がサポートされています。  

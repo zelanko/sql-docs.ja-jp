@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903867"
 ---
 # <a name="sqlprocedures-desktop-database-drivers"></a>SQLProcedures (デスクトップ データベース ドライバー)
 **SQLProcedures**はそれらの手順には、少なくとも 1 つの引数を持つことの行だけを返します。 引数がプロシージャは、ビューとして扱われません。  

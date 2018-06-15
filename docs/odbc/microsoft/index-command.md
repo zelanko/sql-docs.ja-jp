@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904417"
 ---
 # <a name="index-command"></a>INDEX コマンド
 インデックス ファイルを表示し、論理的な順序でテーブルのレコードへのアクセスを作成します。  

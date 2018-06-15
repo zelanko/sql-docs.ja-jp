@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910837"
 ---
 # <a name="initialization-of-descriptor-fields"></a>記述子フィールドの初期化
 アプリケーション行記述子が割り当てられると、そのフィールドが表示される初期値で指定されている[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)です。 SQL_DESC_TYPE フィールドの初期値は、SQL_DEFAULT です。 これは、アプリケーションに提示するためのデータベース データの標準的な処理方法を提供します。 アプリケーションは、記述子レコードのフィールドを設定して、データのさまざまな処理方法を指定することがあります。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911937"
 ---
 # <a name="data-type-conversions"></a>データ型変換
 データに変換できる 1 つの型から別に 4 回のいずれかの: 転送するときにデータが 1 つのアプリケーションの変数から間 (C に C)、ステートメントのパラメーター (C から SQL へ) をアプリケーション変数にデータを送信するときに結果セット列のデータが返される場合アプリケーション変数 (SQL から C へ) とときにデータを転送 1 つのデータ ソースの列から (SQL to SQL) のもう 1 つです。  

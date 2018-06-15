@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912557"
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>SQLGetTypeInfo とデータ型情報の取得中
 ODBC が関数を提供する ODBC 型識別子を基になる SQL データ型マッピングは概数であるため (**SQLGetTypeInfo**) を介して、ドライバーは完全にデータ ソース内の各 SQL データ型について説明します。 この関数は、各行が名、型識別子、有効桁数、小数点以下桁数、null 値許容属性などの単一のデータ型の特性を記述、結果セットを返します。  

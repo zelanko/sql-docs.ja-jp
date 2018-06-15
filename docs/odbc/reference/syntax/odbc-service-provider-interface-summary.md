@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916677"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>ODBC のサービス プロバイダー インターフェイスの概要
 次の表では、ODBC サービス プロバイダー インターフェイスの機能について説明します。 各関数のセマンティクスと構文に関する詳細については、次を参照してください。 [ODBC サービス プロバイダー インターフェイス (SPI) 参照](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)です。  

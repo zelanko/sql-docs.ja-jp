@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916917"
 ---
 # <a name="installer-dll-api-reference-function"></a>インストーラー DLL の API リファレンス関数
 このセクションでは、インストーラーの DLL の API 内の関数の構文について説明します。 インストーラーの DLL の API は、20 の機能で構成されます。 これらの関数のうち 3 つ**SQLGetTranslator**、 **SQLRemoveDSNFromIni**、および**SQLWriteDSNToIni**Dll のセットアップによってのみ呼び出されます。 セットアップおよび管理プログラムによっては、他の関数が呼び出されます。  
