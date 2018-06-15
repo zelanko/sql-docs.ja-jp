@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027349"
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>サーバーの全体管理での Power Pivot サイト用の信頼できる場所の作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

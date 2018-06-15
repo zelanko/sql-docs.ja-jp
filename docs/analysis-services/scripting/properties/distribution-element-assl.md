@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34030933"
 ---
 # <a name="distribution-element-assl"></a>Distribution 要素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/10/2018
 |子要素|なし|  
   
 ## <a name="remarks"></a>解説  
- 使用可能な値、**配布**要素など*標準*または*Uniform、*マイニング アルゴリズム プロバイダーごとに固有です。 詳細については、有効な**配布**値では、マイニング アルゴリズム プロバイダーのドキュメントを参照してください。  
+ 使用可能な値、**配布**要素など*標準*または*Uniform、* マイニング アルゴリズム プロバイダーごとに固有です。 詳細については、有効な**配布**値では、マイニング アルゴリズム プロバイダーのドキュメントを参照してください。  
   
  親に対応する要素**配布**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>します。  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020259"
 ---
 # <a name="canceling-commands-xmla"></a>コマンドのキャンセル (XMLA)
   コマンドを実行しているユーザーの管理権限に応じて、[キャンセル](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)Analysis (XMLA) は、セッション、セッション、接続、サーバー プロセス、または関連付けられているセッションでコマンドを取り消すことができますの XML でコマンドまたは接続です。  
