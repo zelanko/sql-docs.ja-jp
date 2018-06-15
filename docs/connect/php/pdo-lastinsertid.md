@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a84db386be38765d27565f461fadc39badc3ca2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a04c7db3b146f3b4ee936ff2b98947222f5e471b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308551"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ $*名前*: シーケンスの名前を指定できる省略可能な文字列。
 シーケンス名が指定した場合、シーケンスの識別子の文字列が最も最近追加されました。
 メソッドの呼び出しが失敗した場合、空の文字列が返されます。
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
 バージョン 2.0 との 4.3、省略可能なパラメーターは、テーブル名、および戻り値が指定されたテーブルに最後に追加された行の ID。
 5.0 以降では、省略可能なパラメーターが、名前のシーケンスと見なされ、戻り値は、シーケンスの最後に指定されたシーケンス名を追加します。

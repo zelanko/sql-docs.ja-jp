@@ -2,9 +2,10 @@
 title: RPC でストアド プロシージャを実行し、出力の処理 |Microsoft ドキュメント
 description: RPC でストアド プロシージャを実行して出力の処理
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,15 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 41f5c77c29bc91d3d0522a2b8e51bc020d39d7a1
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 74ff0256020e67a40a5da5809f83615e0e8114e3
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306071"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666152"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>RPC でストアド プロシージャを実行し、出力の処理
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドでは、複数の結果を返します、出力パラメーターのデータが使用可能な場合に**imultipleresults::getresult** 、DB_S_NORESULT を返す場合や、 **IMultipleResults**インターフェイスが完全には先に生じた方を公開しました。  
   

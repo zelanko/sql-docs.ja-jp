@@ -2,7 +2,7 @@
 title: クライアント接続でのサービス プリンシパル名 (SPN) のサポート |Microsoft ドキュメント
 description: クライアント接続でのサービス プリンシパル名 (SPN) のサポート
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,14 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c119c14cbd0441d22b8e97f8d168d10d652e86d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 802d8593c671ecef58f5a0eea8439e2f16898de1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612327"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>クライアント接続でのサービス プリンシパル名 (SPN) のサポート
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   以降で[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]、あらゆるプロトコルで相互認証を有効にするサービス プリンシパル名 (Spn) のサポートが拡張されています。 以前のバージョンの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Spn が kerberos over TCP サポートのみときに、既定の SPN、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスは、Active Directory に登録されました。  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="usage"></a>使用方法  
  次の表では、セキュリティで保護された認証をクライアント アプリケーションで使用するための、最も一般的なシナリオについて説明します。  
   
-|Scenario|Description|  
+|シナリオ|説明|  
 |--------------|-----------------|  
 |レガシ アプリケーションで SPN が指定されない。|この互換性のシナリオでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で作成されたアプリケーションの動作が変更されないことが保証されます。 SPN が指定されていない場合、アプリケーションは生成された SPN を使用し、どの認証方法が使用されるかは認識しません。|  
 |SQL Server の現在のバージョンの OLE DB Driver を使用してクライアント アプリケーションでは、ドメイン ユーザーまたはコンピューター アカウント、インスタンス固有の SPN、またはユーザー定義の文字列に、接続文字列で SPN を指定します。|プロバイダー文字列、初期化文字列、または接続文字列で **ServerSPN** キーワードを使用することで、次の操作が可能になります。<br /><br /> -によって使用されるアカウントを指定する、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスが接続します。 これにより、Kerberos 認証へのアクセスが簡単になります。 Kerberos キー配布センター (KDC) が存在し、かつ正しいアカウントが指定された場合は、NTLM よりも Kerberos 認証が使用される可能性が高くなります。 KDC は通常、ドメイン コントローラーと同じコンピューターに存在します。<br /><br /> -検索のサービス アカウントに SPN を指定します、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス。 各[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスをこの目的で使用できる 2 つの既定の Spn が生成されます。 ただし、これらのキーが Active Directory に存在することは保証されないため、この状況では Kerberos 認証は保証されません。<br /><br /> -指定のサービス アカウントの検索に使用される SPN、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス。 これは、サービス アカウントにマップされる任意のユーザー定義文字列でかまいません。 この場合は、キーを手動で KDC に登録する必要があり、キーがユーザー定義 SPN の規則を満たしていることも必要です。<br /><br /> **FailoverPartnerSPN** キーワードを使用すると、フェールオーバー パートナー サーバーの SPN を指定できます。 アカウントおよび Active Directory キーの値の範囲は、プリンシパル サーバーに指定できる値と同じです。|  
@@ -64,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
  アプリケーションでは、接続文字列キーワードを指定する代わりに、プログラムによって SPN を接続属性として指定できます。 こうすると、接続プールの断片化を管理するうえで役立ちます。  
   
- 接続文字列内の SPN は対応する接続属性を設定することで上書きできますが、接続のプールで使用される接続文字列は、プールの目的で接続文字列値を使用するので、アプリケーションでは注意が必要です。  
+ 接続文字列内の SPN は対応する接続属性を設定することでオーバーライドできますが、接続のプールで使用される接続文字列は、プールの目的で接続文字列値を使用するので、アプリケーションでは注意が必要です。  
   
 ## <a name="down-level-server-behavior"></a>下位サーバーの動作  
  新しい接続動作はクライアントで実装されるため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のバージョンに固有ではありません。  
@@ -90,7 +93,7 @@ ms.lasthandoff: 05/03/2018
   
  接続文字列または接続属性で SPN に使用される構文は次のとおりです。  
   
-|構文|Description|  
+|構文|説明|  
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|TCP 以外のプロトコルが使用される場合に、既定のインスタンスに対してプロバイダーが生成する既定の SPN。<br /><br /> *fqdn* は、完全修飾ドメイン名です。|  
 |MSSQLSvc/*fqdn*:*port*|TCP が使用される場合にプロバイダーが生成する既定の SPN。<br /><br /> *port* は、TCP ポート番号です。|  

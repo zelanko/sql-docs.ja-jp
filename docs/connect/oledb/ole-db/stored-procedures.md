@@ -2,10 +2,10 @@
 title: ストアド プロシージャ |Microsoft ドキュメント
 description: ストアド プロシージャ
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,16 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 65a78fddd455df4b04c06086beca808658879aed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 248132d4afca731bb3715da83286a85dc6edc8ee
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611547"
 ---
 # <a name="stored-procedures"></a>ストアド プロシージャ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-  ストアド プロシージャ ([ストアド プロシージャ (&) #40";"データベース エンジン"&"#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) は、データベースに格納されている実行可能なオブジェクトです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では次に示すオブジェクトをサポートしています。  
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+  ストアド プロシージャ ([Stored Procedures&#40;データベース エンジン&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) は、データベースに格納されている実行可能なオブジェクトです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では次に示すオブジェクトをサポートしています。  
   
 -   ストアド プロシージャ  
   
@@ -40,9 +43,9 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [実行されているストアド プロシージャ (&) #40";"OLE DB"&"#41;](../../oledb/ole-db/stored-procedures-running.md)  
+-   [ストアド プロシージャを実行している&#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-running.md)  
   
--   [呼び出すストアド プロシージャ (&) #40";"OLE DB"&"#41;](../../oledb/ole-db/stored-procedures-calling.md)  
+-   [ストアド プロシージャを呼び出す&#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server のプログラミング](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

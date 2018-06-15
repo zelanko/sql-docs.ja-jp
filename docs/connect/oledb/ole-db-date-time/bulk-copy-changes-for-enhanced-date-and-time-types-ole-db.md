@@ -2,9 +2,10 @@
 title: 強化された日付と時刻型 (OLE DB) のコピーの変更を一括 |Microsoft ドキュメント
 description: 強化された日付と時刻型 (OLE DB) の一括コピーの変更
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7a5194651991ea9ae5f3e57afd38c5d43323566e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 7f4ead57eb84257a4c57b345bd3a4857a85ded2e
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306161"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666402"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>強化された日付と時刻型 (OLE DB) の一括コピーの変更
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   この記事では、SQL Server の OLE DB ドライバーの一括コピー機能をサポートするために日付/時刻の機能強化について説明します。  
   

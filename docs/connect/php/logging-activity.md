@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a36683429987afff72c3ee9aa98124c4ee0f613
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 146365e4a4a0a287992bb1873a104f62cc79fc0b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307891"
 ---
 # <a name="logging-activity"></a>アクティビティのログ記録
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** は次のいずれかの値をとります。場所は次の値のいずれかです。  
   
-|値|説明|  
+|値|Description|  
 |---------|---------------|  
 |0|ログ記録は無効です (何も定義されていない場合は、これが既定です)。|  
 |-1|エラー、警告、および通知が記録するように指定します。|  
@@ -65,10 +65,10 @@ PHP では、初期化時に構成ファイルを読み取り、データをキ�
   
 次の表では、 **LogSubsystems** 設定の値として使用できる定数について説明します。  
   
-|値 (かっこ内と同等の整数)|Description|  
+|値 (かっこ内と同等の整数)|説明|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|すべてのサブシステムのログ記録をオンにします。|  
-|SQLSRV_LOG_SYSTEM_OFF (0)|ログ記録をオフにします。 これは既定値です。|  
+|SQLSRV_LOG_SYSTEM_OFF (0)|ログ記録をオフにします。 既定値です。|  
 |SQLSRV_LOG_SYSTEM_INIT (1)|初期化アクティビティのログ記録をオンにします。|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|接続アクティビティのログ記録をオンにします。|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|ステートメント アクティビティのログ記録をオンにします。|  
@@ -96,10 +96,10 @@ PHP では、初期化時に構成ファイルを読み取り、データをキ�
   
 次の表では、 **LogSeverity** 設定の値として使用できる定数について説明します。  
   
-|値 (かっこ内と同等の整数)|Description|  
+|値 (かっこ内と同等の整数)|説明|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|エラー、警告、および通知が記録するように指定します。|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|エラーを記録することを指定します。 これは既定値です。|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|エラーを記録することを指定します。 既定値です。|  
 |SQLSRV_LOG_SEVERITY_WARNING (2)|警告を記録することを指定します。|  
 |SQLSRV_LOG_SEVERITY_NOTICE (4)|通知を記録することを指定します。|  
   

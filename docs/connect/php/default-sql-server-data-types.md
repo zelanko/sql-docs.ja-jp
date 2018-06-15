@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3aea23b8a3fcf3632b164846a3addaba7a501e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307230"
 ---
 # <a name="default-sql-server-data-types"></a>既定の SQL Server のデータ型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,8 +33,8 @@ ms.lasthandoff: 05/03/2018
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
 |NULL|varchar (1)|サポートされていません|  
 |ブール値|bit|bit|  
-|Integer|int|int|  
-|Float|float(24)|サポートされていません|  
+|Integer|ssNoversion|ssNoversion|  
+|float|float(24)|サポートされていません|  
 |文字列 (長さ 8000 バイト未満)|varchar(<string length>)|varchar(<string length>)|  
 |文字列 (8000 バイトを超える長さ)|varchar(max)|varchar(max)|  
 |リソース|サポートされていません。|サポートされていません。|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 |ストリーム (エンコード: バイナリ)|varbinary|varbinary|  
 |Array|サポートされていません。|サポートされていません。|  
 |オブジェクト|サポートされていません。|サポートされていません。|  
-|DateTime (1)|datetime|サポートされていません。|  
+|DateTime (1)|DATETIME|サポートされていません。|  
   
 ## <a name="see-also"></a>参照  
 [定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

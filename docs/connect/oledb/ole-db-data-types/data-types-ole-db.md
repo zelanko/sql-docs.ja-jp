@@ -2,9 +2,10 @@
 title: データ型 (OLE DB) |Microsoft ドキュメント
 description: データ型 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,15 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: edcefb1e3d8ec5bfa5d36ab74282d019f83aa4ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 717e9da58a28daccb6fdfab18f1c3423d9d310df
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35304881"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665162"
 ---
 # <a name="data-types-ole-db"></a>データ型 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   実行するために[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントとプロセス、結果を SQL Server の OLE DB Driver を使用しておく必要があります、OLE DB Driver for SQL Server のマップ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]とデータ型が OLE DB データ型をパラメーターまたは列を行セットにバインドするときと、uses、 **ITableDefinition**内のテーブルを作成するインターフェイス[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
   

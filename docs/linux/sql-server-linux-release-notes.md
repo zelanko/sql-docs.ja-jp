@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 07782a5b8290b41a5a11557c503fcbfd0736790b
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: f853cb623bee0fcd27d5cc7e6203610ed1603335
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611977"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -215,17 +216,18 @@ sudo systemctl start mssql-server
 | &nbsp; | Stretch DB |
 | &nbsp; | PolyBase |
 | &nbsp; | サード パーティ製の接続で分散クエリ |
+| &nbsp; | SQL Server 以外のデータ ソースへのリンク サーバー |
 | &nbsp; | システム拡張ストアド プロシージャ (XP_CMDSHELL など) |
 | &nbsp; | Filetable は、FILESTREAM |
 | &nbsp; | CLR アセンブリと EXTERNAL_ACCESS または UNSAFE 権限の設定します。 |
 | &nbsp; | バッファー プール拡張 |
 | **SQL Server エージェント** |  サブシステム: CmdExec、PowerShell、キュー リーダーは、SSIS、SSAS、SSRS |
-| &nbsp; | 警告 |
+| &nbsp; | オブジェクト エクスプローラーには |
 | &nbsp; | ログ リーダー エージェント (Log Reader Agent) |
 | &nbsp; | 変更データ キャプチャ |
 | &nbsp; | 管理対象のバックアップ |
 | **高可用性** | データベース ミラーリング  |
-| **セキュリティ** | 拡張キー管理 |
+| **Security** | 拡張キー管理 |
 | &nbsp; | リンク サーバーの AD の認証 | 
 | &nbsp; | 可用性グループ (Ag) に対して AD の認証 | 
 | &nbsp; | サード パーティ AD ツール (Centrify、いる Vintela、Powerbroker) | 
@@ -379,7 +381,7 @@ Linux 上の SSIS の詳細については、次の記事を参照してくだ�
 
 - 保持するログ ファイルの数を変更できません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 開始するには、次のクイック スタートを参照してください。
 

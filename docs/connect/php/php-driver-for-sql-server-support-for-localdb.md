@@ -5,8 +5,6 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.prod_service: drivers
-ms.component: php
 ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
@@ -15,11 +13,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92be589df4038d152f07445d7cd5fa4ffafc935b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 438802c4645ff3acdc1bed42af22e4e32786e1d0
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308751"
 ---
 # <a name="support-for-localdb"></a>LocalDB のサポート
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 05/03/2018
 
 LocalDB は、軽量バージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]これは以来、使用可能な[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]します。 ここでは、LocalDB インスタンス内のデータベースに接続する方法について説明します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 LocalDB をインストールして、LocalDB インスタンスを構成する方法を含む LocalDB の詳細については、次を参照してください。、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]でオンライン ブックの「 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB です。
 

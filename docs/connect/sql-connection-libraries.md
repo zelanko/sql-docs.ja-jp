@@ -2,7 +2,6 @@
 title: Microsoft SQL データベースに対する接続ライブラリ |Microsoft ドキュメント
 description: さまざまなプログラミング言語のクライアントから Microsoft SQL Server と Azure SQL データベースへの接続を有効にするモジュールのダウンロードのリンクを提供します。
 author: MightyPen
-ms.component: connect
 ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,11 +10,12 @@ ms.custom: ''
 ms.topic: article
 ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: 212558cc1a9715e971e19fd4e637dcd6c089e1bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bb62d323ce3675a49dbd8abd11a19df2c82dcf9
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310101"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL データベースを接続するモジュール
 
@@ -49,7 +49,7 @@ PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/
 although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
-| 言語 | SQL driver をダウンロードします。 |
+| [言語] | SQL driver をダウンロードします。 |
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Ubuntu Linux 用の .NET core](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core、MacOS 用](https://www.microsoft.com/net/core#macos)<br />[Windows 用の .NET core](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
@@ -68,7 +68,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 次の表は、Microsoft SQL データベースに接続するクライアント アプリケーションを使用するオブジェクト リレーショナル マッピング (ORM) フレームワークの例を示します。
 
 
-| 言語 | ORM ドライバーのダウンロード |
+| [言語] | ORM ドライバーのダウンロード |
 | :------- | :------------------ |
 | C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x またはそれ以降)](http://docs.microsoft.com/ef/) |
 | Java | [ORM を休止状態します。](http://hibernate.org/orm)|

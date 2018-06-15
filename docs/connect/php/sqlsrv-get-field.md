@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8aea71596e1a977839fb7294df7324f48324e0c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1396662cc17d54899eb697694c452e663eaf533
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309271"
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +50,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
 ## <a name="return-value"></a>戻り値  
 フィールドのデータ。 *$getAsType* パラメーターを指定して、返されるデータの PHP データ型を指定できます。 戻り値のデータ型が指定されていない場合、既定の PHP データ型が返されます。 既定の PHP 型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。 PHP データ型の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 組み合わせ**sqlsrv_fetch**と**sqlsrv_get_field**データへの前方参照専用のアクセスを提供します。  
   
 組み合わせ**sqlsrv_fetch**/**sqlsrv_get_field**結果のフィールドを 1 つだけがスクリプト メモリに行を設定し、php の負荷が型の仕様を返します。 (PHP 戻り値の型を指定する方法については、次を参照してください[する方法: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。)。また、この関数の組み合わせで、データをストリームとして取得することもできます (データをストリームとして取得する方法の詳細については、次を参照してください[SQLSRV ドライバーを使用して、ストリームとしてデータの取得](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)。)。  

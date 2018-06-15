@@ -2,9 +2,10 @@
 title: OLE DB の日付と時刻の強化のデータ型のサポート |Microsoft ドキュメント
 description: OLE DB の日付と時刻の強化のためのデータ型のサポート
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,15 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0c72810314212a3b5b566d131977c65e8cac118c
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: ce5d32efa04e3402e9e454f2ab4c89cb6e1e5b69
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305941"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666392"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付と時刻の強化に対するデータ型のサポート
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   この記事は、OLE DB (OLE DB Driver for SQL Server) の概要情報の種類をサポートする[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]日付/時刻データ型。  
   
@@ -72,7 +75,7 @@ ms.locfileid: "35305941"
   
 -   分の範囲は 0 ～ 59 です。  
   
--   秒の範囲は 0 ～ 59 です。 この範囲では、恒星時との同期を維持するために最大 2 秒のうるう秒が許可されています。  
+-   秒の範囲は 0 ～ 59 です。 これにより、sidereal 時間との同期を維持するために最大 2 秒のうるう秒です。  
   
  次の既存の OLE DB 構造体の実装は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい日付と時刻のデータ型をサポートするように変更されました。 ただし、定義は変更されていません。  
   

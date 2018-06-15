@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a902d1768d53940f56f1b2460969c7f0105ba7d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5cbb702a20f0c5b6f28be67e9277ef74620f1f7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305781"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,14 +40,14 @@ HRESULT BCPControl(
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **BCPControl**メソッドは、一括コピーでは、コピー元のデータ ファイルとバッチ サイズは、最初と最後の行の番号をキャンセルする前に許容されるエラーの数などの一括コピー操作のさまざまな制御パラメーターを設定します。  
   
  また、このメソッドを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からデータを一括コピーするときに使用される SELECT ステートメントを指定することもできます。 設定することができます、 **eOption** BCP_OPTION_HINTS への引数と**iValue** SELECT ステートメントを含むワイド文字の文字列へのポインターを保持する引数。  
   
  指定できる値*eOption*は。  
   
-|オプション|Description|  
+|オプション|説明|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|既に実行中の一括コピー操作を停止します。 呼び出すことができます、 **BCPControl**メソッドを*eOption*引数に BCP_OPTION_ABORT から別のスレッドで実行されている一括コピー操作を停止します。 *IValue*引数は無視されます。|  
 |BCP_OPTION_BATCH|バッチごとの行数を指定します。 既定値は 0 で、データが抽出されている場合は、テーブル内のすべての行を示す、またはユーザー データのすべての行はファイルにデータがコピーされているときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 BCP_OPTION_BATCH に 1 未満の値を指定すると、既定値にリセットされます。|  
@@ -62,7 +62,7 @@ HRESULT BCPControl(
 |BCP_OPTION_KEEPNULLS|ファイル内の空のデータ値を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルで NULL 値に変換するかどうかを指定します。 ときに、 *iValue*引数が TRUE に設定されている空の値は NULL に変換されます、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。 既定では、空の値は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブル内の列の既定値 (存在する場合) に変換されます。|  
 |BCP_OPTION_LAST|コピーする最終行を指定します。 既定では、すべての行をコピーします。 1 未満の値を指定すると、このオプションは既定値にリセットされます。|  
 |BCP_OPTION_LASTEX|BCP out 操作の場合は、データ ファイルにコピーするための、データベース テーブルの最後の行を指定します。<br /><br /> BCP in 操作の場合は、データベース テーブルにコピーするための、データ ファイルの最後の行を指定します。<br /><br /> *IValue*値を含む符号付き 64 ビット整数のアドレスを指定するパラメーターが必要です。 BCPLASTEX に渡すことができる最大値は 2^63-1 です。|  
-|BCP_OPTION_MAXERRS|一括コピー操作が失敗するまでに発生してもかまわないエラーの数を指定します。 既定値は、10 です。 1 未満の値を指定すると、このオプションは既定値にリセットされます。 一括コピーでは、最大 65,535 個のエラーが許容されます。 このオプションに 65,535 を超える値を設定しようとすると、65,535 が設定されます。|  
+|BCP_OPTION_MAXERRS|一括コピー操作が失敗するまでに発生してもかまわないエラーの数を指定します。 既定値は 10 です。 1 未満の値を指定すると、このオプションは既定値にリセットされます。 一括コピーでは、最大 65,535 個のエラーが許容されます。 このオプションに 65,535 を超える値を設定しようとすると、65,535 が設定されます。|  
 |BCP_OPTION_ROWCOUNT|現在 (または最後) の BCP 操作で処理された行数を返します。|  
 |BCP_OPTION_TEXTFILE|データ ファイルは、バイナリ ファイルではなく、テキスト ファイルです。 BCP では、データ ファイルの先頭 2 バイトに含まれる Unicode バイト マーカーをチェックして、テキスト ファイルが Unicode 形式かどうかを検出します。|  
 |BCP_OPTION_UNICODEFILE|このオプションに TRUE を設定して、入力ファイルが Unicode ファイル形式であることを指定します。|  

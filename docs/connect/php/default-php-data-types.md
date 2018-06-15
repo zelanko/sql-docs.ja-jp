@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8ae48b672aa4817f8451eeee788985b4b90694f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 432b09a03f9f0d7704ed50de92db64417b624ba8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307701"
 ---
 # <a name="default-php-data-types"></a>既定の PHP データ型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,40 +37,40 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
   
 |SQL Server の型|PHP の既定の型|既定のエンコード|  
 |-------------------|--------------------|--------------------|  
-|bigint|文字列|8 ビット文字<sup>1</sup>|  
+|BIGINT|String|8 ビット文字<sup>1</sup>|  
 |binary|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
 |bit|Integer|8 ビット文字<sup>1</sup>|  
-|char|文字列|8 ビット文字<sup>1</sup>|  
-|date<sup>4</sup>|DateTime|適用なし|  
-|datetime<sup>4</sup>|DateTime|適用なし|  
-|datetime2<sup>4</sup>|DateTime|適用なし|  
-|datetimeoffset<sup>4</sup>|DateTime|適用なし|  
-|decimal|文字列|8 ビット文字<sup>1</sup>|  
-|float|Float|8 ビット文字<sup>1</sup>|  
+|char|String|8 ビット文字<sup>1</sup>|  
+|date<sup>4</sup>|DATETIME|適用なし|  
+|datetime<sup>4</sup>|DATETIME|適用なし|  
+|datetime2<sup>4</sup>|DATETIME|適用なし|  
+|datetimeoffset<sup>4</sup>|DATETIME|適用なし|  
+|Decimal|String|8 ビット文字<sup>1</sup>|  
+|FLOAT|float|8 ビット文字<sup>1</sup>|  
 |geography|Stream|バイナリ<sup>3</sup>|  
 |geometry|Stream|バイナリ<sup>3</sup>|  
 |イメージ<sup>5</sup>|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
-|int|Integer|8 ビット文字<sup>1</sup>|  
-|money|文字列|8 ビット文字<sup>1</sup>|  
-|NCHAR|文字列|8 ビット文字<sup>1</sup>|  
-|numeric|文字列|8 ビット文字<sup>1</sup>|  
-|nvarchar|文字列|8 ビット文字<sup>1</sup>|  
+|ssNoversion|Integer|8 ビット文字<sup>1</sup>|  
+|money|String|8 ビット文字<sup>1</sup>|  
+|NCHAR|String|8 ビット文字<sup>1</sup>|  
+|NUMERIC|String|8 ビット文字<sup>1</sup>|  
+|NVARCHAR|String|8 ビット文字<sup>1</sup>|  
 |nvarchar(MAX)|Stream<sup>2</sup>|8 ビット文字<sup>1</sup>|  
 |ntext<sup>6</sup>|Stream<sup>2</sup>|8 ビット文字<sup>1</sup>|  
-|real|Float|8 ビット文字<sup>1</sup>|  
-|smalldatetime|DateTime|8 ビット文字<sup>1</sup>|  
-|smallint|Integer|8 ビット文字<sup>1</sup>|  
-|smallmoney|文字列|8 ビット文字<sup>1</sup>|  
-|sql_variant<sup>7</sup>|文字列|8 ビット文字<sup>1</sup>|  
+|REAL|float|8 ビット文字<sup>1</sup>|  
+|smalldatetime|DATETIME|8 ビット文字<sup>1</sup>|  
+|SMALLINT|Integer|8 ビット文字<sup>1</sup>|  
+|SMALLMONEY|String|8 ビット文字<sup>1</sup>|  
+|sql_variant<sup>7</sup>|String|8 ビット文字<sup>1</sup>|  
 |テキスト<sup>8</sup>|Stream<sup>2</sup>|8 ビット文字<sup>1</sup>|  
-|time<sup>4</sup>|DateTime|適用なし|  
-|timestamp|文字列|8 ビット文字<sup>1</sup>|  
-|tinyint|Integer|8 ビット文字<sup>1</sup>|  
+|time<sup>4</sup>|DATETIME|適用なし|  
+|TIMESTAMP|String|8 ビット文字<sup>1</sup>|  
+|TINYINT|Integer|8 ビット文字<sup>1</sup>|  
 |UDT (UDT)|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
-|uniqueidentifier|文字列<sup>9</sup>|8 ビット文字<sup>1</sup>|  
+|UNIQUEIDENTIFIER|文字列<sup>9</sup>|8 ビット文字<sup>1</sup>|  
 |varbinary|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
 |varbinary (max)|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
-|varchar|文字列|8 ビット文字<sup>1</sup>|  
+|varchar|String|8 ビット文字<sup>1</sup>|  
 |varchar(MAX)|Stream<sup>2</sup>|8 ビット文字<sup>1</sup>|
 |xml|Stream<sup>2</sup>|8 ビット文字<sup>1</sup>|  
   

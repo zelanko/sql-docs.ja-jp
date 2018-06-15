@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe11037ad2b7a5ae0f927a0880537adf67594899
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307661"
 ---
 # <a name="how-to-perform-transactions"></a>方法: トランザクションを実行する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ PDO_SQLSRV ドライバーには、トランザクションを実行する 3 つ
   
 このトピックの後半では、SQLSRV ドライバーを使用してトランザクションを実行する方法を説明し、例を示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 トランザクションを実行する手順の概要は次のとおりです。  
   
 1.  使用してトランザクションを開始**sqlsrv_begin_transaction**です。  
@@ -65,7 +65,7 @@ PDO_SQLSRV ドライバーには、トランザクションを実行する 3 つ
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>説明  
 次の例では、トランザクションの一部としていくつかのクエリを実行します。 すべてのクエリが成功すると、トランザクションはコミットされます。 いずれかのクエリが失敗すると、トランザクションはロールバックされます。  
   
 この例では、 *Sales.SalesOrderDetail* テーブルから販売注文を削除し、販売注文の各製品について *Product.ProductInventory* テーブルの製品インベントリ レベルを調整します。 データベースに注文および製品の入手の状態を正確に反映するには、これらのクエリすべてが成功する必要があるため、トランザクションに含まれています。  

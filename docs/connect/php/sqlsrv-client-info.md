@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ea94ad6f635a438fc9df0546039137261f3c77e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 145249dc452cd7aeabb9b9667c337a4e17e39637
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309241"
 ---
 # <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ sqlsrv_client_info( resource $conn)
   
 **PHP for SQL Server バージョン 3.2 および 3.1 用**:  
   
-|Key|Description|  
+|Key|説明|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (SQL Server 用 ODBC Driver 11)|  
 |DriverODBCVer|ODBC version (xx.yy)|  
@@ -56,7 +56,7 @@ sqlsrv_client_info( resource $conn)
   
 **PHP for SQL Server バージョン 3.0 および 2.0 用**:  
   
-|Key|Description|  
+|Key|説明|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10 です。DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]バージョン 2.0)|  
 |DriverODBCVer|ODBC version (xx.yy)|  

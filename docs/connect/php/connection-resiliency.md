@@ -3,7 +3,6 @@ title: アイドル接続の回復
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: b2ffbf3ef57db31fcfd3a714fe9e2f6e0565237f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 250e4e6334a31d760c8fcb3e1e571ec1a726d020
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307261"
 ---
 # <a name="idle-connection-resiliency"></a>アイドル接続の回復
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,14 +24,14 @@ ms.lasthandoff: 05/03/2018
 
 接続の回復は接続文字列に追加できる 2 つの接続キーワードと実装: **ConnectRetryCount**と**ConnectRetryInterval**です。
 
-|Keyword|値|既定値|Description|
+|Keyword|値|既定|説明|
 |-|-|-|-|
 |**ConnectRetryCount**| 0 ~ 255 (包括) の整数|1|渡す前に切断された接続を再確立を試みるの最大数。 既定では、1 回の試行が壊れている場合、接続を再確立しようとするは。 値の 0 の場合は、再接続は試行されません。|
 |**ConnectRetryInterval**| 1 ~ 60 (包括) の整数|1| 時間 (秒)、間には、接続が再確立を試みます。 アプリケーションで、途切れた接続を検出するとすぐに再接続を試みますあり待機し、 **ConnectRetryInterval**してから再試行するまでの秒。 場合、このキーワードは無視されます**ConnectRetryCount**が 0 です。
 
 場合、製品の**ConnectRetryCount**を掛けた**ConnectRetryInterval**よりも大きい**LoginTimeout**クライアントは、1 回の接続を試行しなくなりますし、 **LoginTimeout**に達するまで再接続しようとしています。 引き続きそれ以外の場合、その**ConnectRetryCount**に達した。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>コメント
 
 接続の回復は、接続がアイドル状態のときに適用されます。 たとえば、トランザクションを実行する – の再接続試行をトリガーしません中に発生するエラーが失敗が予想とします。 不可能のセッションの状態と呼ばれる、次の状況では、再接続の試行はトリガーされません。
 

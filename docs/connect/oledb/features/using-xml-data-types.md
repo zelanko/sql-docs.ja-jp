@@ -2,7 +2,7 @@
 title: XML データ型の使用 |Microsoft ドキュメント
 description: OLE DB ドライバーで SQL Server の XML データ型の使用
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -34,16 +34,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f36165da3be9c540166486059cdc0ee150532657
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6ec0009a986e2abd56ac00c1e01826f3ed001f7
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612177"
 ---
 # <a name="using-xml-data-types"></a>XML データ型の使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]導入された、 **xml**データ型を XML ドキュメントを保存することができ、フラグメント、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース。 **Xml**データ型は、組み込みのデータ型で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]などの他の組み込み型のようないくつかの方法であると**int**と**varchar**です。 他の組み込み型にも使用できるように、 **xml**データ型のテーブルの作成時に列型として以外の場合は、変数の型、パラメーターの型、または関数の戻り値型であるとして、または CAST や CONVERT 関数でします。  
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入された、 **xml**データ型を XML ドキュメントを保存することができ、フラグメント、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース。 **Xml**データ型は、組み込みのデータ型で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]などの他の組み込み型のようないくつかの方法であると**int**と**varchar**です。 他の組み込み型にも使用できるように、 **xml**データ型のテーブルの作成時に列型として以外の場合は、変数の型、パラメーターの型、または関数の戻り値型であるとして、または CAST や CONVERT 関数でします。  
   
 ## <a name="programming-considerations"></a>プログラミングの考慮事項  
  XML は自己記述型で、必要に応じて、次のようにドキュメントのエンコードを指定する XML ヘッダーを含めることができます。  
@@ -87,15 +90,15 @@ ms.lasthandoff: 05/03/2018
 |データ型|SQL Server の<br /><br /> **XML**|SQL Server の<br /><br /> **非 XML**|サーバーから<br /><br /> **XML**|サーバーから<br /><br /> **非 XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|パススルー<sup>6、7</sup>|エラー<sup>1</sup>|[OK]<sup>11、6</sup>|エラー<sup>8</sup>|  
-|DBTYPE_BYTES|パススルー<sup>6、7</sup>|N/A<sup>2</sup>|[OK] <sup>11、6</sup>|N/A <sup>2</sup>|  
-|DBTYPE_WSTR|パススルー<sup>6、10</sup>|N/A <sup>2</sup>|[OK]<sup>4、6、12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_BSTR|パススルー<sup>6、10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
-|DBTYPE_STR|[OK]<sup>6、9、10</sup>|N/A <sup>2</sup>|[OK]<sup>5、6、12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|経由のバイト ストリーム**ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|経由のバイト ストリーム**ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|パススルー<sup>6、7</sup>|N/A <sup>2</sup>|なし|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|パススルー<sup>6、10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BYTES|パススルー<sup>6、7</sup>|該当なし<sup>2</sup>|[OK] <sup>11、6</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_WSTR|パススルー<sup>6、10</sup>|該当なし<sup>2</sup>|[OK]<sup>4、6、12</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_BSTR|パススルー<sup>6、10</sup>|該当なし<sup>2</sup>|[OK] <sup>3</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_STR|[OK]<sup>6、9、10</sup>|該当なし<sup>2</sup>|[OK]<sup>5、6、12</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|経由のバイト ストリーム**ISequentialStream**<sup>7</sup>|該当なし<sup>2</sup>|経由のバイト ストリーム**ISequentialStream**<sup>11</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|パススルー<sup>6、7</sup>|該当なし<sup>2</sup>|なし|該当なし<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|パススルー<sup>6、10</sup>|該当なし<sup>2</sup>|[OK]<sup>3</sup>|該当なし<sup>2</sup>|  
   
- <sup>1</sup>サーバー以外の型に dbtype_xml 型が指定された場合**icommandwithparameters::setparameterinfo**アクセサーの型が dbtype_xml 型、およびステートメントが実行されたときにエラーが発生した (DB_E_ERRORSOCCURRED、パラメーターの状態は dbstatus_e_badaccessor になります)。 データを、サーバーに送信するそれ以外の場合は、サーバーには、XML からパラメーターのデータ型への暗黙的な変換がないことを示すエラーが返されます。  
+ <sup>1</sup>サーバー以外の型に dbtype_xml 型が指定された場合**icommandwithparameters::setparameterinfo**アクセサーの型が dbtype_xml 型、およびステートメントが実行されたときにエラーが発生した (DB_E_ERRORSOCCURRED、パラメーターの状態は dbstatus_e_badaccessor になります) です。サーバーにデータを送信するそれ以外の場合がサーバーには、XML からパラメーターのデータ型への暗黙的な変換がないことを示すエラーが返されます。  
   
  <sup>2</sup>この記事の範囲を超えています。  
   
@@ -140,7 +143,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS スキーマ行セットと PARAMETERS スキーマ行セット  
  列と PROCEDURE_PARAMETERS スキーマ行セットへの追加は、次の列を含めます。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML スキーマ コレクションを定義しているカタログの名前。 XML 以外の列または型指定されていない XML 列の場合は NULL です。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML スキーマ コレクションを定義しているスキーマの名前。 XML 以外の列または型指定されていない XML 列の場合は NULL です。|  
@@ -152,7 +155,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-ssxmlschema-schema-rowset"></a>SS_XMLSCHEMA スキーマ行セット  
  クライアントで XML スキーマ情報を取得できるように、新しいスキーマ行セット SS_XMLSCHEMA が導入されました。 SS_XMLSCHEMA 行セットには、次の列が含まれています。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML コレクションが属するカタログ。|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML コレクションが属するスキーマ。|  
@@ -172,7 +175,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER プロパティ セット  
  サポートするために、 **xml** OLE DB Driver for SQL Server データ型の OLE DB で、次の値を含む新しい DBPROPSET_SQLSERVERPARAMETER プロパティ セットを実装します。  
   
-|名前|型|Description|  
+|名前|型|説明|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML スキーマ コレクションを定義しているカタログ (データベース) の名前。 SQL の 3 部構成の名前識別子の一部です。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|スキーマ コレクションに含まれている XML スキーマの名前。 SQL の 3 部構成による名前の識別子の一部になります。|  
@@ -181,7 +184,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN プロパティ セット  
  内のテーブルの作成をサポートする、 **ITableDefinition**インターフェイスの場合は、SQL Server は、DBPROPSET_SQLSERVERCOLUMN プロパティ セットに次の 3 つの新しい列を追加の OLE DB ドライバー。  
   
-|名前|型|Description|  
+|名前|型|説明|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|型指定された XML 列の場合、このプロパティは XML スキーマが格納されているカタログ名を指定する文字列です。 その他の列の型は、このプロパティは、空の文字列を返します。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|型指定された XML 列の場合、このプロパティはこの列を定義している XML スキーマ名を指定する文字列です。|  
@@ -201,7 +204,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset インターフェイス  
  OLE DB Driver for SQL Server は、以下を追加します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定の列によって返される行セットに、 **IColumnRowset::GetColumnsRowset**メソッドです。 これらの列には、XML スキーマ コレクションの 3 部構成の名前が含まれます。 XML 以外の列または型指定されていない XML 列の場合、これら 3 列の既定値はすべて NULL になります。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML スキーマ コレクションが属するカタログ。<br /><br /> それ以外の場合は、NULL です。|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML スキーマ コレクションが属するスキーマ。 それ以外の場合は、NULL です。|  
@@ -232,6 +235,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>参照  
  [SQL Server 機能の OLE DB ドライバー](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [ISSCommandWithParameters (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

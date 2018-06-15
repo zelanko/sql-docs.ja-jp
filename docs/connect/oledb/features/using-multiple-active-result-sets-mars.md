@@ -2,7 +2,7 @@
 title: 複数のアクティブな結果セット (MARS) の使用 |Microsoft ドキュメント
 description: 複数のアクティブな結果セット (MARS) の使用
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c086df79bff70013540b8b3c0c31a1a6216972df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd0254bfd632c9ae0d3145e745c932757fd6d808
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612087"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>複数のアクティブな結果セット (MARS) の使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] アクセスするアプリケーションで複数のアクティブな結果セット (MARS) のサポートが導入された、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]です。 以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、データベース アプリケーションは 1 つの接続で複数のアクティブなステートメントを保持できませんでした。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定の結果セットを使用しているときは、アプリケーションはその接続で他のバッチを実行する前に、1 つのバッチのすべての結果セットを処理するか、取り消す必要がありました。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では新しい接続属性が導入され、アプリケーションは接続ごとに複数の要求を保留中にできるだけでなく、接続ごとに複数のアクティブな既定の結果セットを保持できるようになりました。  
   
@@ -55,11 +58,11 @@ ms.lasthandoff: 05/03/2018
   
  OLE DB Driver for SQL Server では、接続でアクティブなステートメントの数は制限されません。  
   
- 複数のステートメントで構成される単一のバッチやストアド プロシージャを複数同時実行する必要のない一般的なアプリケーションでは、MARS の実装方法を理解しなくても、MARS の利点を得ることができます。 ただし、より複雑な要件のアプリケーションでは、MARS の実装方法を考慮する必要があります。  
+ 複数ステートメントの 1 つのバッチまたはストアド プロシージャを同時に実行する利点を活用 MARS MARS の実装方法を理解しなくてもよりも大きくする必要がない一般的なアプリケーションです。 ただし、より複雑な要件のアプリケーションでは、MARS の実装方法を考慮する必要があります。  
   
  MARS では、1 つの接続内で複数の要求の実行をインターリーブできます。 つまり、1 つのバッチを実行し、その実行内で他の要求を実行できます。 ただし、MARS では並列実行が行われるのではなく、複数の実行がインターリーブされることに注意してください。  
   
- MARS のインフラストラクチャでは、複数のバッチがインターリーブ方式で実行されますが、実行の切り替えは明確に定義された時点でしか行われません。 また、ほとんどのステートメントはバッチ内で自動的に実行される必要があります。 ステートメントと呼ばクライアントに行を返す*呼び出しポイント*行に送信される、クライアントでは、たとえば中に完了する前に実行をインターリーブする許可。  
+ MARS のインフラストラクチャには、実行を切り替えられる場合は適切に定義された時点で、インターリーブの形式で実行する複数のバッチことができます。 また、ほとんどのステートメントはバッチ内で自動的に実行される必要があります。 呼ばれるとしてクライアントに行を返すステートメント*呼び出しポイント*行に送信される、クライアントでは、たとえば中に完了する前に実行をインターリーブする許可。  
   
 -   SELECT  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 05/03/2018
  ADO から MARS を使用しての例は、次を参照してください。 [ADO を使用して OLE DB Driver for SQL Server と](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)です。  
   
 ## <a name="in-memory-oltp"></a>インメモリ OLTP  
- インメモリ OLTP では、クエリを使用して MARS をサポートし、ネイティブ コンパイル ストアド プロシージャ。 MARS は、完全に各結果を新しい結果セットから行をフェッチする要求を送信する前にセットを取得することがなく複数のクエリからデータを要求するを使用できます。 正常に開いている複数の結果から読み取ることは、セット、MARS を使用する必要がありますには、接続が有効になります。  
+ インメモリ OLTP では、クエリを使用して MARS をサポートし、ネイティブ コンパイル ストアド プロシージャ。 MARS は、完全に各結果を新しい結果セットから行をフェッチする要求を送信する前にセットを取得することがなく複数のクエリからデータを要求するを使用できます。 複数開いている結果セットから読み取られた、MARS が有効になっている接続を使用する必要があります。  
   
  MARS は既定で無効に追加することで明示的に有効にする必要がありますので`MultipleActiveResultSets=True`接続文字列にします。 次の例では、SQL Server のインスタンスに接続し、MARS が有効になっていることを指定する方法を示します。  
   
@@ -107,7 +110,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  ステートメントおよびはインターリーブされます。 atomic ブロックによって行われた変更は、互いに分離されます。 たとえば、1 つのステートメントまたは atomic ブロックは、いくつかの変更を行い、別のステートメントの実行を譲歩する場合、新しいステートメントは、最初のステートメントによって行われた変更は表示されません。 さらに、最初のステートメントが実行を再開するときは、確認されません他のどのステートメントによって行われた変更します。 ステートメントは、終了され、ステートメントが開始される前にコミットされる変更にのみ表示されます。  
   
- BEGIN TRANSACTION ステートメントを使用して、現在のユーザー トランザクション内で新しいユーザー トランザクションを開始できます: これは、BEGIN TRANSACTION は、T-SQL ステートメントからのみ呼び出すことができますので、相互運用モードでのみサポートされてからネイティブ コンパイルで保存されていません。プロシージャです。セーブポイントを作成することができますで SAVE TRANSACTION またはトランザクションへの API 呼び出しを使用してトランザクションにします。セーブポイントにロールバックする Save(save_point_name) です。 この機能は、T-SQL ステートメントからのみ有効になりますからではなく内でネイティブ コンパイル ストアド プロシージャ。  
+ BEGIN TRANSACTION ステートメントを使用して、現在のユーザー トランザクション内で新しいユーザー トランザクションを開始できます: これは、BEGIN TRANSACTION は、T-SQL ステートメントからのみ呼び出すことができますので、相互運用モードでのみサポートされてからネイティブ コンパイルで保存されていません。プロシージャです。 セーブポイントを作成することができますで SAVE TRANSACTION またはトランザクションへの API 呼び出しを使用してトランザクションにします。セーブポイントにロールバックする Save(save_point_name) です。 この機能は、T-SQL ステートメントからのみ有効になりますからではなく内でネイティブ コンパイル ストアド プロシージャ。  
   
  **MARS および列ストア インデックス**  
   

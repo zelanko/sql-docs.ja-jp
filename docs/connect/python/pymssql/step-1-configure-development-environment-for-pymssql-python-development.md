@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: python
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91b941785a6fe7788c9590efd9f9c42ac6c60b10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a4a573ce609bfb5364a1dabac784eb760915b8a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309521"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>手順 1: pymssql Python 開発用の開発環境を構成します。
 SQL Server 用 Python ドライバーを使用してアプリケーションを開発するために、前提条件と開発環境を構成する必要があります。    
@@ -29,8 +29,8 @@ Python SQL ドライバーが既定では SQL Server と Azure SQL データベ�
 ## <a name="windows"></a>Windows  
   
 1. **Python ランタイムをインストールおよびパッケージ マネージャーの pip**  
-a. 移動して[python.org](https://www.python.org/downloads/)  
-b. Windows インストーラー msi の適切なリンクをクリックします。   
+A. 移動して[python.org](https://www.python.org/downloads/)  
+B. Windows インストーラー msi の適切なリンクをクリックします。   
 c. 1 回ダウンロードした実行 Python ランタイムをインストールする msi  
   
 2. **Pymssql モジュールをダウンロード**から[ここ](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
@@ -66,8 +66,8 @@ c. 1 回ダウンロードした実行 Python ランタイムをインストー�
 ## <a name="mac"></a>Mac  
   
 1. **Python ランタイムをインストールおよびパッケージ マネージャーの pip**  
-a. 移動して[python.org](https://www.python.org/downloads/)  
-b. Mac インストーラー パッケージの適切なリンクをクリックします。   
+A. 移動して[python.org](https://www.python.org/downloads/)  
+B. Mac インストーラー パッケージの適切なリンクをクリックします。   
 c. 1 回ダウンロードした実行 Python ランタイムをインストールするパッケージ  
   
 2.  **開いているターミナル**  

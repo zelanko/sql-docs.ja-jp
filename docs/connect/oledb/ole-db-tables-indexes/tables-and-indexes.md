@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -23,11 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1bd6c32f7a0eaa0937c937abac3f135fd19f143c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f6b4f1bde4b123ba2a8a807a5bd91abe12cdad2
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307721"
 ---
 # <a name="tables-and-indexes"></a>テーブルとインデックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,19 +40,19 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、プロバイダー固有の DBPROPSET_SQLSERVERCOLUMN プロパティ セットで、次のプロパティを定義しています。  
   
-|プロパティ ID|Description|  
+|プロパティ ID|説明|  
 |-----------------|-----------------|  
 |SSPROP_COL_COLLATIONNAME|型 : VT_BSTR<br /><br /> R/W: 書き込み<br /><br /> 既定値 : NULL<br /><br /> 説明: このプロパティでのみ使用が**ITableDefinition**です。 作成するときに、このプロパティで指定した文字列が使用される、[テーブルの作成](../../../t-sql/statements/create-table-transact-sql.md)<br /><br /> ステートメントの使用などがあります。|  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [SQL Server テーブルを作成します。](../../oledb/ole-db-tables-indexes/creating-sql-server-tables.md)  
+-   [SQL Server テーブルの作成](../../oledb/ole-db-tables-indexes/creating-sql-server-tables.md)  
   
--   [SQL Server テーブルに列を追加します。](../../oledb/ole-db-tables-indexes/adding-a-column-to-a-sql-server-table.md)  
+-   [SQL Server テーブルへの列の追加](../../oledb/ole-db-tables-indexes/adding-a-column-to-a-sql-server-table.md)  
   
--   [SQL Server テーブルから列を削除します。](../../oledb/ole-db-tables-indexes/removing-a-column-from-a-sql-server-table.md)  
+-   [SQL Server テーブルからの列の削除](../../oledb/ole-db-tables-indexes/removing-a-column-from-a-sql-server-table.md)  
   
--   [SQL Server テーブルを削除します。](../../oledb/ole-db-tables-indexes/dropping-a-sql-server-table.md)  
+-   [SQL Server テーブルの削除](../../oledb/ole-db-tables-indexes/dropping-a-sql-server-table.md)  
   
 -   [SQL Server インデックスの作成](../../oledb/ole-db-tables-indexes/creating-sql-server-indexes.md)  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>参照  
  [SQL Server プログラミング用の OLE DB ドライバー](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
- [DROP TABLE & #40 です。TRANSACT-SQL と #41 です。](../../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../../t-sql/statements/create-index-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-index-transact-sql.md)  
   

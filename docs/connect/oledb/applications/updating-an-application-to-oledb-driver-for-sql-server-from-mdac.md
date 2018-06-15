@@ -2,7 +2,7 @@
 title: MDAC から SQL Server の OLE DB ドライバーへのアプリケーションの更新 |Microsoft ドキュメント
 description: MDAC から SQL Server の OLE DB Driver をアプリケーションの更新
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -20,32 +20,33 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 907e1c08f422809a04d3e3c8846d91f7982bb7ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11597ed3b7cd80cae8604291bd8b662bf6a9ed80
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612107"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>MDAC から SQL Server の OLE DB ドライバーへのアプリケーションの更新
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  さまざまな OLE DB Driver for SQL Server と Microsoft Data Access Components (MDAC); の違いがあります。Windows Vista 以降、Windows Data Access Components (Windows DAC) に、データ アクセス コンポーネントが呼び出さようになりました。 ネイティブ データ アクセスを提供します両方[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベースの場合は、SQL Server は、の新機能を公開に特に設計されていますの OLE DB Driver[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中では、以前のバージョンとの下位互換性を維持しながら、します。   
+  さまざまな OLE DB Driver for SQL Server と Microsoft Data Access Components (MDAC); の違いがあります。Windows Vista 以降、Windows Data Access Components (Windows DAC) に、データ アクセス コンポーネントが呼び出さようになりました。 ネイティブ データ アクセスを提供します両方[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベースの場合は、SQL Server がの新機能を公開するように設計されたの OLE DB Driver[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中では、以前のバージョンとの下位互換性を維持しながら、します。   
 
  さらに、MDAC には、OLE DB、ODBC、および ActiveX データ オブジェクト (ADO) を使用するためのコンポーネントが含まれている、OLE DB Driver for SQL Server しか実装されていない OLE DB (ただし、ADO は、SQL Server の OLE DB ドライバーの機能にアクセスできます)。  
 
  OLE DB Driver for SQL Server および MDAC は、次の領域で異なります。  
 
--   ADO を使用して、SQL Server の OLE DB ドライバーにアクセスするユーザーには、SQL OLE DB プロバイダーにアクセスする場合よりもフィルター処理機能が少ないことがあります。  
+-   ADO を使用して、SQL Server の OLE DB ドライバーにアクセスするユーザーには、SQL OLE DB プロバイダーにアクセスするときよりもフィルター処理機能が少ないことがあります。  
 
--   ADO アプリケーションで SQL Server の OLE DB Driver を使用して、計算列を更新しようとすると、エラーが報告されます。 MDAC では、更新が受け付けられたうえで、無視されていました。  
+-   ADO アプリケーションで SQL Server の OLE DB Driver を使用して、計算列を更新しようとすると、エラーが報告されます。 MDAC で更新プログラムが受理されましたが、無視されます。  
 
 -   OLE DB Driver for SQL Server は、自己完結型の単一のダイナミック リンク ライブラリ (DLL) ファイルです。 配布を容易にすることと、セキュリティの危険にさらされるのを防ぐことの両面から、最小限のインターフェイスしか公開されません。  
 
 -   OLE DB インターフェイスだけがサポートされます。  
 
--   OLE DB Driver for SQL Server の名前は、MDAC で使用するものと異なります。  
+-   SQL Server の名前の OLE DB Driver は、MDAC で使用されている名前と異なります。  
 
 -   MDAC コンポーネントによって提供されるユーザーがアクセスできる機能は、SQL Server の OLE DB Driver を使用するときに使用できます。 この機能には、接続プーリング、ADO サポート、クライアント カーソルのサポートなどがあります。 これらの機能を使用する場合、OLE DB Driver for SQL Server は、データベースとの接続のみを提供します。 MDAC は、トレース、管理制御、およびパフォーマンス カウンターなどの機能を提供します。  
 
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/03/2018
 
 -   OLE DB Driver for SQL Server より厳密なエラーが OLE DB 仕様に厳密に準拠していない一部のアプリケーションの動作が異なりますをつまり MDAC よりもチェックします。 たとえば、SQLOLEDB プロバイダーがパラメーター名の先頭は、ルールを実行しなかった ' @' 結果パラメーターが SQL Server の OLE DB Driver はします。  
 
--   OLE DB Driver for SQL Server の動作が異なる MDAC から接続が失敗しました。 たとえば、OLE DB Driver for SQL Server では、エラーを報告、呼び出し元アプリケーションに対し、MDAC は、障害が発生した接続のキャッシュされたプロパティ値を返します。  
+-   失敗した接続に関する、OLE DB Driver for SQL Server が MDAC からは異なる方法で動作します。 たとえば、OLE DB Driver for SQL Server では、エラーを報告、呼び出し元アプリケーションに対し、MDAC は、障害が発生した接続のキャッシュされたプロパティ値を返します。  
 
 -   OLE DB Driver for SQL Server では、Visual Studio Analyzer イベントを生成しませんが、代わりに Windows トレース イベントを生成します。  
 
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/03/2018
 
 -   SQL Server の OLE DB Driver シノニムを返しますのテーブルと TABLE_INFO スキーマ行セット、TABLE_TYPE を SYNONYM に設定します。  
 
--   データ型の値を返す**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml**、 **udt**、クライアントのバージョンにその他のラージ オブジェクト型を返すことはできませんまたはよりも前[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。 戻り値としてこれらの型を使用する場合は、SQL Server の OLE DB Driver を使用する必要があります。  
+-   データ型の値を返す**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml**、 **udt**、またはその他のラージ オブジェクト型がクライアントのバージョンに返されることはできませんよりも前[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。 戻り値としてこれらの型を使用する場合は、SQL Server の OLE DB Driver を使用する必要があります。  
 
 -   手動および暗黙のトランザクションの開始時に実行される次のステートメントにより、MDAC が OLE DB Driver for SQL Server は使用できません。 これらは、自動コミット モードで実行する必要があります。  
 
@@ -107,7 +108,7 @@ ms.lasthandoff: 05/03/2018
 
 -   OLE DB Driver for SQL Server および MDAC; 間の動作に違いがあるトランザクションを開始する OLE DB の呼び出しを使用する場合トランザクションがすぐに開始 OLE DB Driver for SQL Server が、MDAC を使用して最初のデータベースにアクセスした後にトランザクションが開始されます。 ストアド プロシージャとバッチの動作に影響するためできますこの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]@ 必要があります@TRANCOUNTバッチまたはストアド プロシージャが終了すると、バッチやストアド プロシージャの開始時と同じであります。  
 
--   OLE DB Driver for SQL Server で ITransactionLocal::BeginTransaction に即座に開始するトランザクションが発生します。 MDAC では、暗黙のトランザクション モードを必要とするステートメントをアプリケーションが実行するまで、トランザクションの開始が遅延されました。 詳細については、「[SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)」を参照してください。  
+-   OLE DB Driver for SQL Server で ITransactionLocal::BeginTransaction に即座に開始するトランザクションが発生します。 MDAC では、トランザクションの開始が、アプリケーションは、暗黙のトランザクション モードでのトランザクションを必要とするステートメントを実行するまでに遅延されます。 詳細については、「[SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)」を参照してください。  
 
 
  両方 OLE DB Driver for SQL Server と MDAC のサポートは read committed トランザクション分離の行のバージョン管理が OLE DB ドライバーのみを使用して、SQL Server サポート スナップショット トランザクション分離のためです。 (プログラミング用語では、「行のバージョン管理機能を使用した Read Committed トランザクション分離」は「Read Committed トランザクション」と同義語です)。  
