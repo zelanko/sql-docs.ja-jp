@@ -2,7 +2,6 @@
 title: レコード セットの操作 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b83fb8d5ad4e2e063ca840b7e8fb31bbf15fde14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6bcc69980dfc4e3be72221964d339bd37754207
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273491"
 ---
 # <a name="working-with-recordsets"></a>レコード セットの操作
 **Recordset**オブジェクトが組み込みの機能を指定する条件に基づいて特定のレコードを検索して、インデックスを使用してこれらの検索操作を最適化するためにも、結果セット内のデータの順序を変更することができます。 これらの機能を使用できるかどうかは、プロバイダーによって異なります: などの[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティ — データ ソース自体の構造。  
@@ -115,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="filtering-with-a-constant"></a>定数でフィルター処理  
  次の定数はフィルター処理に使用できる**レコード セット**です。  
   
-|定数|Description|  
+|定数|説明|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|最後に影響を受けるレコードのみを表示するためのフィルター**削除**、**再同期**、 **UpdateBatch**、または**CancelBatch**呼び出します。|  
 |**adFilterConflictingRecords**|最後のバッチ更新が失敗したレコードを表示するためのフィルター。|  

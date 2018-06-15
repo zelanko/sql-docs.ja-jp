@@ -2,7 +2,6 @@
 title: ADO エラー リファレンス |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf0631384cf390752d60e6465372558748880278
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef03fa5fe9a3f7de71fea7ecdc14a315cb6b31c9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271491"
 ---
 # <a name="ado-errors"></a>ADO エラー
 **ErrorValueEnum**定数は、ADO のエラー値を表します。 これらの列挙定数、値を含む完全な一覧については、次を参照してください。[付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)です。 このセクションではさらに興味深いもののエラーのいくつかを確認し、いくつか特定の状況させることができる、または問題の解決策について説明します。 両方の**ErrorValueEnum**定数および短いの正の 10 進数が表示されます。

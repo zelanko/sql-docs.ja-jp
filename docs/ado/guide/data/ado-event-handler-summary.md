@@ -2,7 +2,6 @@
 title: ADO イベント ハンドラーの概要 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3e52fe70e497ab8c5b715861e16f3f67266f9f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcb37f418a053abbd67cae435b674e187956a7a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271261"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 接続とレコード セットのイベント
 2 つの ADO オブジェクトは、イベントを発生させることができます。[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトおよび[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 **ConnectionEvent**ファミリで操作に関連する、**接続**オブジェクト、および**RecordsetEvent**ファミリで操作に関連する、 **レコード セット**オブジェクト。
@@ -33,14 +33,14 @@ ms.lasthandoff: 05/03/2018
 
  次の表は、イベントとその説明を要約します。
 
-|ConnectionEvent|Description|
+|ConnectionEvent|説明|
 |---------------------|-----------------|
 |[BeginTransComplete、CommitTransComplete、RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**トランザクションの管理**: 接続で現在のトランザクションが開始すると、通知をコミットまたはロールバックします。|
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)、 [ConnectComplete、切断](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**接続の管理**: 現在の接続が開始すると、通知が開始または終了しました。|
 |[アクティビ ティー](../../../ado/reference/ado-api/willexecute-event-ado.md)、 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**コマンドの実行管理**: 接続で現在のコマンドの実行が開始または終了したことを通知します。|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**情報**-現在の操作に関する追加情報があることを通知します。|
 
-|RecordsetEvent|Description|
+|RecordsetEvent|説明|
 |--------------------|-----------------|
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)、 [FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**取得状況**-データ取得操作の進行状況の通知または取得操作が完了したことです。 これらのイベントは使用可能な場合、**レコード セット**クライアント側カーソルを使用します。|
 |[WillChangeField、FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**フィールドの変更管理**: 現在のフィールドの値は変更または変更されたことを通知します。|

@@ -2,7 +2,6 @@
 title: 名前空間 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,19 +16,20 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93a3aca2aee11ed1f78fb33ca286b171a28f62d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 419d11660d88f102cfa92628f4ee16fb89d8c422
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272091"
 ---
 # <a name="namespaces"></a>名前空間
 ADO での XML 永続形式では、次の 4 つの名前空間を使用します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ADO での XML 永続形式では、次の 4 つの名前空間を使用します。  
   
-|Prefix|Description|  
+|Prefix|説明|  
 |------------|-----------------|  
 |s|要素と現在のレコード セットのスキーマを定義する属性を含む「XML データ」の名前空間を参照します。|  
 |dt|データ型の定義の仕様を参照します。|  

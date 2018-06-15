@@ -2,7 +2,6 @@
 title: データ シェイプに必要なプロバイダー |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 049f635c9566a72bb84a7cef18aa62b80746c21b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d53ea24bdd91950754de626683f013d1cb7301a2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272901"
 ---
 # <a name="required-providers-for-data-shaping"></a>データ シェイプに必要なプロバイダー
 データ シェイプと、2 つのプロバイダー通常必要があります。 サービス プロバイダー [for OLE DB Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)、整形を行う機能、および、OLE DB Provider for SQL Server などのデータ プロバイダーのデータを提供、形状に表示するデータの行を渡します[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md).  

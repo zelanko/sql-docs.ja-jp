@@ -2,7 +2,6 @@
 title: RDS を使用して、ODBC 接続プーリング |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d38a0d41ae5cdf0c1f40db21420fd39edca72237
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 416cbadf4d77ab9c7325c5f874f9818c4e05d8e5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274651"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>RDS を使用して、ODBC 接続プール
 ODBC データ ソースを使用している場合は、クライアントの負荷の処理は高パフォーマンスを実現するために、接続オプションでは、インターネット インフォメーション サービス (IIS) のプールを使用できます。 接続プールは、頻繁に使用される接続を開いた状態を維持する接続は、リソース マネージャーです。  

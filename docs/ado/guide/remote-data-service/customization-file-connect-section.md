@@ -2,7 +2,6 @@
 title: カスタマイズ ファイルのセクションの接続 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12d1560220a9c281425a1d75c43f0ef95845d611
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6774d32587a2c6d5c969be4d56640d137972ddc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273851"
 ---
 # <a name="customization-file-connect-section"></a>カスタマイズ ファイルのセクションを接続します。
 ハンドラーの既定の動作は、すべての接続を拒否するのにです。 **接続**セクションでは、その動作に例外を指定します。 たとえば、すべての場合、**接続**セクションがないか、空で、既定で接続を確立できませんでした。  
@@ -55,11 +55,11 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
-|要素|Description|  
+|要素|説明|  
 |----------|-----------------|  
-|**Connect**|このことを示すリテラル文字列は、接続文字列エントリです。|  
+|**のインスタンスに接続するときには、**|このことを示すリテラル文字列は、接続文字列エントリです。|  
 |***connectionString***|全体のクライアントの接続文字列を置換する文字列。|  
 |**アクセス**|このことを示すリテラル文字列は、アクセス エントリです。|  
 |***accessRight***|次のアクセス権のいずれか。<br /><br /> -   **NoAccess** -ユーザーがデータ ソースにアクセスできません。<br />-   **読み取り専用**-ユーザーは、データ ソースを読み取ることができます。<br />-   **ReadWrite** : ユーザーの読み取りまたはデータ ソースに書き込むことができます。|  

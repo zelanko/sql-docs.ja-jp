@@ -2,7 +2,6 @@
 title: Visual C の拡張機能の使用 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1c832cff45ad5998918c6f5f67927e49bc9d4e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06e2d13c589d4dc88f3a148122322f483c49d2fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271591"
 ---
 # <a name="visual-c-extensions"></a>Visual C の拡張機能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding インターフェイス
@@ -114,25 +114,25 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>バインディング エントリの終了
  **END_ADO_BINDING**()
 
-|パラメーター|Description|
+|パラメーター|説明|
 |---------------|-----------------|
 |*クラス*|バインディング エントリおよび C と C++ の変数が定義されているクラスです。|
 |*Ordinal*|序数のいずれかでカウント、 **Recordset** C と C++ の変数に対応するフィールドです。|
-|*DataType*|C と C++ の変数の同等の ADO データ型 (を参照してください[格納](../../../ado/reference/ado-api/datatypeenum.md)有効なデータ型の一覧については)。 値、 **Recordset**フィールドは、必要な場合はこのデータ型に変換されます。|
+|*データ型*|C と C++ の変数の同等の ADO データ型 (を参照してください[格納](../../../ado/reference/ado-api/datatypeenum.md)有効なデータ型の一覧については)。 値、 **Recordset**フィールドは、必要な場合はこのデータ型に変換されます。|
 |*バッファー*|C と C++ の変数の名前を**レコード セット**フィールドが格納されます。|
-|*サイズ*|最大サイズ (バイト) の*バッファー*です。 場合*バッファー*可変長の文字列には末尾のゼロの領域を確保できるようにします。|
-|*[状態]*|示す変数の名前かどうかの内容*バッファー*が有効でとかどうか、変換するフィールドの*DataType*が成功しました。<br /><br /> この変数の 2 つの最も重要な値は**adFldOK**、つまり、変換が成功したと**adFldNull**、つまり、フィールドの値となる型 VT_ のバリアントだけでなく、空です。<br /><br /> 指定できる値*ステータス*次の表では、「状態の値です」に。|
+|*[サイズ]*|最大サイズ (バイト) の*バッファー*です。 場合*バッファー*可変長の文字列には末尾のゼロの領域を確保できるようにします。|
+|*ステータス*|示す変数の名前かどうかの内容*バッファー*が有効でとかどうか、変換するフィールドの*DataType*が成功しました。<br /><br /> この変数の 2 つの最も重要な値は**adFldOK**、つまり、変換が成功したと**adFldNull**、つまり、フィールドの値となる型 VT_ のバリアントだけでなく、空です。<br /><br /> 指定できる値*ステータス*次の表では、「状態の値です」に。|
 |*変更*|ブール型のフラグです。TRUE の場合は、ADO の対応する、更新が許可されたことを示します**Recordset**フィールドに含まれる値に*バッファー*です。<br /><br /> ブール値を設定*変更*ADO では、バインドされたフィールドが更新を有効にする場合は TRUE と FALSE の変更ではなく、フィールドを確認する場合のパラメーターです。|
 |*有効桁数*|数値型の変数で表すことができる数字の数。|
 |*Scale*|数値型の変数の小数点以下桁数です。|
-|*長さ*|内のデータの実際の長さを格納する 4 バイトの変数の名前*バッファー*です。|
+|*[データ型]*|内のデータの実際の長さを格納する 4 バイトの変数の名前*バッファー*です。|
 
 ## <a name="status-values"></a>状態の値
  値、*ステータス*変数は、フィールドが変数に正常にコピーされたかどうかを示します。
 
  データを設定するときに*ステータス*に設定することがあります**adFldNull**を示すために、 **Recordset**フィールドを設定する必要がありますを null にします。
 
-|定数|値|Description|
+|定数|値|説明|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Null 以外のフィールドの値が返されました。|
 |**adFldBadAccessor**|1|バインドが無効でした。|

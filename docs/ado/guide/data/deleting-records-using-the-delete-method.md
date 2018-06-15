@@ -2,7 +2,6 @@
 title: Delete メソッドを使用してレコードを削除する |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36a6a7e7f2ecd6deb3b25a2d2ed6dc65c8b6f98d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a708b3ed5d709be7a05e50a0511f29e3f1430e89
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270341"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Delete メソッドを使用してレコードを削除します。
 使用して、**削除**メソッドは、現在のレコードまたはレコードのグループを示します、 **Recordset**オブジェクトを削除します。 場合、 **Recordset**オブジェクトは、他のレコードの削除を許可しないため、エラーが発生します。 即時更新モードの場合は、削除はすぐに、データベースで発生します。 呼び出し後に、レコードが編集モードのままは場合 (たとえば、データベース整合性違反) のため、レコードが正常に削除できません、**更新します。** つまりを使用して、更新をキャンセルする必要があります[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)現在のレコードから移動する前に (たとえばを使用して[閉じる](../../../ado/reference/ado-api/close-method-ado.md)、[移動](../../../ado/reference/ado-api/move-method-ado.md)、または[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md))。  

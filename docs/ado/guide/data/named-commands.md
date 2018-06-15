@@ -2,7 +2,6 @@
 title: Commands という |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 823ee61431555d978fb33aa0f9a58264af1ce2c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aababf292a838f801e48a9649b9efac12b04f88f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272003"
 ---
 # <a name="named-commands"></a>名前付きコマンド
 [作成して、簡単なコマンドを実行する](../../../ado/guide/data/creating-and-executing-a-simple-command.md)コマンドを実行する方法を示しています。 別の方法がある: 名前付きのコマンドを作成し、この名前付き上で直接コマンドを呼び出すことができます、**接続**オブジェクト (に割り当てられている、 **ActiveConnection**のプロパティ、**コマンド**オブジェクト)。 コマンドの名前を付けることを意味に名前が割り当てられて、**名前**のプロパティ、**コマンド**オブジェクト。 例を次に示します。  

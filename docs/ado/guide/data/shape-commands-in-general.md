@@ -2,7 +2,6 @@
 title: 図形は一般にコマンド |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,18 +17,19 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6af36fbf7a3b60067c94f0d21aa6e7514df1a098
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c56148f0c94455ac96b926de050518d412098bab
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272591"
 ---
 # <a name="shape-commands-in-general"></a>一般的な図形コマンド
 形の列を定義するデータの整形**Recordset**、列、および方法によって表されるエンティティ間のリレーションシップ、**レコード セット**データが格納されます。  
   
  形状**Recordset**次の種類の列で構成できます。  
   
-|列の型|Description|  
+|列の型|説明|  
 |-----------------|-----------------|  
 |data|フィールド、 **Recordset**データ プロバイダーには、クエリ コマンドによって返される、テーブル、または以前の形**Recordset**です。|  
 |章|相互に参照**Recordset**という、*章*です。 チャプター列を作成することを定義すること、*親子*リレーションシップ場所、*親*は、 **Recordset**チャプター列と、を含む*子*は、 **Recordset**章によって表されます。|  

@@ -2,7 +2,6 @@
 title: Microsoft データ シェイプ OLE DB (ADO サービス プロバイダー) 用サービス |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3020789835820519e07ac3e465899c3ac93b0ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b661ac56f26ffa1a467c65f332ec4b506b2e09e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271351"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft データ シェイプ OLE DB の概要のサービス
 > [!IMPORTANT]
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="dynamic-properties"></a>動的プロパティ
  このサービス プロバイダーが呼び出されると、次の動的プロパティに追加、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。
 
-|動的なプロパティ名|Description|
+|動的なプロパティ名|説明|
 |---------------------------|-----------------|
 |**一意の変形名**|示すかどうか**レコード セット**の重複する値を持つオブジェクト、**変形名前**プロパティは使用できません。 この動的プロパティは、する場合**True**され、新しい**レコード セット**は、同じユーザー指定の変形と名前で作成、既存**レコード セット**、し、新しい**レコード セット**オブジェクトのパス名は一意になるように変更します。 場合は、このプロパティは**False**され、新しい**レコード セット**は、ユーザー指定の変形と同じ名前で、既存作成**Recordset**の両方を**レコード セット**オブジェクトは同じ変形名前になります。 したがって、どちらも**Recordset**両方のレコード セットが存在する限り形状変更できます。<br /><br /> プロパティの既定値は**False**です。|
 |**データ プロバイダー**|形状になる行を提供するプロバイダーの名前を示します。 プロバイダーは行を提供する使用しない場合は、この値は [なし] で指定できます。|

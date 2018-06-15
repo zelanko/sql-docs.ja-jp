@@ -2,7 +2,6 @@
 title: カスタマイズ ファイルの SQL セクション |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 792168588c13af5007ff35b7af9004f3cc78d385
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f6cc8d75883f06acf449aba74341f86a8ae017b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274171"
 ---
 # <a name="customization-file-sql-section"></a>カスタマイズ ファイル SQL
 **Sql**セクションでは、クライアントのコマンド文字列を置換する新しい SQL 文字列を含めることができます。 セクションでは、SQL 文字列がない、セクションは無視されます。  
@@ -49,7 +49,7 @@ SQL = " "
  **SQL=**   
  ***sqlString***  
   
-|要素|Description|  
+|要素|説明|  
 |----------|-----------------|  
 |**SQL**|このことを示すリテラル文字列は、SQL セクション エントリです。|  
 |***sqlString***|クライアントの文字列を置換する SQL 文字列です。|  

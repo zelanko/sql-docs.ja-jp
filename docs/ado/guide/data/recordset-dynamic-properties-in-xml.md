@@ -2,7 +2,6 @@
 title: XML 内のレコード セットの動的プロパティ |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56ce4985fddc55b6f3e3d204623c950a13953a86
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd874d0db6d026b82ddbc8055a17a073194c6e07
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272331"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML 内のレコード セットの動的プロパティ
 (クライアント カーソル エンジン) から次のレコード セット プロバイダーに固有のプロパティは、現在を XML 形式に永続化されます。  

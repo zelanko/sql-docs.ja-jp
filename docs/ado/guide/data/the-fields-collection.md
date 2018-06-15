@@ -2,7 +2,6 @@
 title: Fields コレクション |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35be5189e20c9f028c5d73a68aab90ac502b4dfc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb5d538f9c8cf8ae28f1397aac32555da1b33ecc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272871"
 ---
 # <a name="the-fields-collection"></a>Fields コレクション
 **フィールド**コレクションは、ADO の組み込みコレクションの 1 つです。 コレクションは、単位としてに参照できる項目の順序付けされたセットです。 ADO コレクションの詳細については、次を参照してください。 [ADO オブジェクト モデル](../../../ado/guide/data/ado-objects-and-collections.md)です。  

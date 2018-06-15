@@ -2,7 +2,6 @@
 title: 永続化するフィルター選択された階層レコード セットは、|Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d995e0d35f355f1d1b41fd0c6bcacd93da5b1b22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da1d0d1538d86738e576b01aa176ffde206a9cdb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272191"
 ---
 # <a name="persisting-filtered-and-hierarchical-recordsets"></a>レコード セットは、フィルター選択された階層を保持します。
 場合、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティは、有効で、 **Recordset**フィルターでアクセス可能な行のみが保存されます。 場合、**レコード セット**は階層構造、現在の子**レコード セット**とその子を保存する親を含む**レコード セット**です。 場合、**保存**メソッドが子**レコード セット**が呼び出されると、子とその子をすべて保存されますが、親はありません。 階層の詳細については**レコード セット**を参照してください[データ シェイプ](../../../ado/guide/data/data-shaping.md)です。  

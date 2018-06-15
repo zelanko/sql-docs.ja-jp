@@ -2,7 +2,6 @@
 title: ADO 用の visual C 拡張機能 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d27cc7776c59364ebc0b69c4872dc8b78ee51116
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c9200939a34f3d1a2af936388acaa6740387416
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270551"
 ---
 # <a name="visual-c-extensions"></a>Visual C の拡張機能
 Visual C で ADO のプログラミングの推奨される方法を使用して、 **#import**で説明したように、ディレクティブ[C++ ADO プログラミングのビジュアル Microsoft](../../../ado/guide/appendixes/visual-c-ado-programming.md)です。 ただし、以前のバージョンの ADO 付属の Visual C を使用したプログラミングの別の方法: Visual C 拡張します。 このセクションでは、この機能を説明の Visual C の拡張機能のコードを保守する必要がありますが、# を使用して新しい ADO コードを記述する必要があります**インポート**です。

@@ -2,7 +2,6 @@
 title: インターネットへの発行の Microsoft OLE DB Provider |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3dbcc73d88669a6787151770d97b3921ae43f2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8d3caac3bd857b790372bd6b41fc818090210a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271221"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet パブリッシングの概要
 Microsoft OLE DB Provider for Internet Publishing は、Microsoft や Microsoft Internet Information Server によって提供されたリソースにアクセスする ADO を使用します。 リソースには、HTML ファイル、または Windows 2000 web フォルダーなどの web ソース ファイルが含まれます。
@@ -44,7 +44,7 @@ MSDAIPP.DSO
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- -または-
+ - または -
 
 ```
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
@@ -52,7 +52,7 @@ MSDAIPP.DSO
 
  文字列は、これらのキーワードで構成されます。
 
-|Keyword|Description|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|インターネットへの発行用の OLE DB プロバイダーを指定します。|
 |**データ ソース**- または - **URL**|ファイルまたは Web フォルダーに発行されるディレクトリの URL を指定します。|

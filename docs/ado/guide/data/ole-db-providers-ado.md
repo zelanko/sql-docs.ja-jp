@@ -2,7 +2,6 @@
 title: OLE DB プロバイダー (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa8bcda85b1b149da9dcc66bed92e044de800f66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae1cb60ac963b71814cfc225e42799c375081e5b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272161"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB プロバイダー (ADO)
 OLE DB では、多様な情報源に格納されているデータに一貫したアクセス権を持つアプリケーションを提供する COM インターフェイスのセットを定義します。 これにより、データ ソース、データ ソースに適した DBMS 機能の量をサポートするインターフェイスを介してそのデータを共有することができます。 仕様では、OLE DB の高性能なアーキテクチャを柔軟で、コンポーネント ベースのサービス モデルの使用に基づきます。 アプリケーションとデータ間に中間層の数を指定するのではなく OLE DB だけを必要とするために必要な数のコンポーネントが特定のタスクを実行します。  

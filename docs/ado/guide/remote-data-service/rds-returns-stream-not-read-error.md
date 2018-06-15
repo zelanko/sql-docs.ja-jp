@@ -2,7 +2,6 @@
 title: RDS を返します&quot;ストリームを読み取れません&quot;エラー |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05b6c571c96f2e5322e1dcfe8e57b8f12c29a7bf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3c1c5b3bdb64b61d6a8b8483069701c89c53252
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274051"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS を返します&quot;ストリームを読み取れません&quot;エラー
 "ストリーム オブジェクト読み取れなかったため、現在の位置がストリームの末尾か、空です。 空でないストリームの位置プロパティを使用して現在の位置を設定します。 調べるには、ストリームが空のかどうか、Size プロパティを確認します。"  

@@ -2,7 +2,6 @@
 title: '手順 3: サーバーの取得レコード セット (RDS チュートリアル) |Microsoft ドキュメント'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdefc86152b1a91ab20099e31a748940c5fe57ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d973dc8e4d4a85ddc1c3654a1deeed79d78ee34
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274551"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>手順 3: サーバーの取得レコード セット (RDS チュートリアル)
 サーバー プログラムでは、接続文字列とコマンドのテキストを使用して、目的の行のデータ ソースをクエリします。 ADO では、これを取得するために使用が通常**レコード セット**、その他の Microsoft データ アクセス インターフェイス, など、OLE DB を使用する可能性があります。  

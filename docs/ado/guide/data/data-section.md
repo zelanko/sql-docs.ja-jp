@@ -2,7 +2,6 @@
 title: データ セクション |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc7a8e66765d35d4c8a8a7f74f63720dec4d9429
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b861ce91ec8b7007e168cbdb7d0dae3f0ce48e9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270101"
 ---
 # <a name="data-section"></a>データ セクション
 データ セクションでは、更新、挿入、または削除保留中のいずれかと共に、行セットのデータを定義します。 データ セクションには、0 個以上の行を含めることができます。 行が、スキーマで定義されている 1 つの行セットからのデータだけを含めることができます。 また、前述したとおり、データを含まない列は省略できます。 データ セクションの属性またはサブ要素が使用され、スキーマ」セクションでその構造体が定義されていない場合は、サイレント モードで無視されます。  
   
-## <a name="string"></a>文字列  
+## <a name="string"></a>String  
  予約済みの XML 文字テキスト データでは、適切な文字エン ティティに置き換える必要があります。 たとえば、会社名「Joe ガレージ」では、単一引用符置き換える必要がありますのエンティティによってです。 実際の行は、次のようにします。  
   
 ```  
