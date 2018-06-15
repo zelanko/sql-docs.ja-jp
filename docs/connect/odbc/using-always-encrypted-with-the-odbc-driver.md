@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32853133"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーで Always Encrypted を使用します。
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -504,7 +505,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 #### <a name="reading-data-from-a-provider"></a>プロバイダーからデータを読み込む
 
-呼び出し`SQLGetConnectAttr`を使用して、`SQL_COPT_SS_CEKEYSTOREDATA`属性が「パケット」からのデータを読み取ります*、最後の書き込み先*プロバイダー。 [なし] が、関数のシーケンス エラーが発生します。 キー ストア プロバイダーの実装側は、これを行うが合理的である場合、他の副作用を発生させることがなく読み取り操作のため、プロバイダーを選択した場合の方法として 0 バイトの「ダミー書き込みます」をサポートすることをお勧めします。
+呼び出し`SQLGetConnectAttr`を使用して、`SQL_COPT_SS_CEKEYSTOREDATA`属性が「パケット」からのデータを読み取ります *、最後の書き込み先*プロバイダー。 [なし] が、関数のシーケンス エラーが発生します。 キー ストア プロバイダーの実装側は、これを行うが合理的である場合、他の副作用を発生させることがなく読み取り操作のため、プロバイダーを選択した場合の方法として 0 バイトの「ダミー書き込みます」をサポートすることをお勧めします。
 
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);

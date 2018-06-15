@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899397"
 ---
 # <a name="encryption-access-driver"></a>暗号化 (Access ドライバー)
 (このコントロールは、使用可能な場合にのみ Version 4。*x*形式を選択します)。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897677"
 ---
 # <a name="correlation-names"></a>相関名
 相関名は完全にサポートされて、テーブルの一覧内を含むです。 たとえば、次の文字列では、E1 では、Emp という名前のテーブルの相関名には。  

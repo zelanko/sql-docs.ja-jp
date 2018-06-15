@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32852234"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>透過ネットワーク IP 解決を使用してください。
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
