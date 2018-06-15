@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023549"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>数値と日付の書式設定 (レポート ビルダーおよび SSRS)
   データ領域の数値と日付の書式を設定するには、対応するデータ領域の **[プロパティ]** ダイアログ ボックスの **[数値]** ページを使用します。  
