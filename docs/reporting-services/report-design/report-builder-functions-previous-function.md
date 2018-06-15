@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025519"
 ---
 # <a name="report-builder-functions---previous-function"></a>レポート ビルダー関数 - Previous 関数
   アイテムの、指定されたスコープ内の直前のインスタンスに対応する値または指定された集計値を返します。  

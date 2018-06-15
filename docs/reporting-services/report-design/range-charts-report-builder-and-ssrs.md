@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023719"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>範囲グラフ (レポート ビルダーおよび SSRS)
   範囲グラフでは、同じカテゴリの複数の値によってそれぞれ定義された、一連のデータ ポイントが表示されます。 値は、マーカーの高さ (値軸) で表されます。 カテゴリのラベルは、カテゴリ軸に表示されます。 一般的な範囲グラフでは、各データ ポイントの最高値と最低値の間の領域が設定されます。  
