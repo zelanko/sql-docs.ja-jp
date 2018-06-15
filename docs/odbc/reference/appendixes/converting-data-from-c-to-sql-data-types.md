@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912507"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>データを C から SQL データ型に変換します。
 アプリケーションを呼び出すと**SQLExecute**または**SQLExecDirect**のすべてのパラメーターがバインドされたデータを取り出します**SQLBindParameter**記憶域の場所からアプリケーションです。 アプリケーションを呼び出すと**SQLSetPos**、ドライバーの更新プログラムのデータを取得または追加操作を使用してバインドされた列から**SQLBindCol**です。 実行時データ パラメーターの場合、アプリケーション データを送信、パラメーターと**SQLPutData**です。 かどうか、必要に応じて、ドライバーのデータを変換で指定されたデータ型、 *ValueType*引数**SQLBindParameter**で指定されたデータ型を*ParameterType*引数**SQLBindParameter**、し、データ ソースにデータを送信します。  

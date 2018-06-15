@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914267"
 ---
 # <a name="time-date-and-interval-functions"></a>時刻、日付、および間隔を扱う関数
 次の表には、ODBC スカラー関数のセットに含まれている日付と時刻の関数が一覧表示します。 アプリケーションでは、どの日付と時刻の関数が呼び出すことによって、ドライバーでサポートされるを判断できます**SQLGetInfo**で、*情報の種類*SQL_TIMEDATE_FUNCTIONS のです。  

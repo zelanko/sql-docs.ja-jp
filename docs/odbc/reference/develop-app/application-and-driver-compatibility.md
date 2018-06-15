@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906857"
 ---
 # <a name="application-and-driver-compatibility"></a>アプリケーションおよびドライバーの互換性
 ODBC アプリケーションおよびドライバーのバージョンだけでなくカテゴリの数に分類されます。 これらのアプリケーションの一部のドライバーによって; と互換性がありません。それ以外の場合、アプリケーションまたはドライバーの種類は、それらの間の旧バージョンと互換性の問題に関係があります。  

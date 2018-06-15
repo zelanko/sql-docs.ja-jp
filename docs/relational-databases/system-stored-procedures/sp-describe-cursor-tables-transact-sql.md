@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33261871"
 ---
 # <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ sp_describe_cursor_tables
  カーソルの名前または作成された DECLARE CURSOR ステートメントによって、ローカルのキーワードを既定値であるローカルです。 *local_cursor_name*は**nvarchar (128)** です。  
   
  [ @cursor_identity=] N'*global_cursor_name*'  
- カーソルの名前または作成された DECLARE CURSOR ステートメントによって、グローバルのキーワードをグローバルを既定値です。 *global_cursor_name* SQLSetCursorName を呼び出すことによってカーソルが指定する ODBC アプリケーションによってオープンされた API サーバー カーソルの名前をすることもできます*。global_cursor_name*は**nvarchar (128)** です。  
+ カーソルの名前または作成された DECLARE CURSOR ステートメントによって、グローバルのキーワードをグローバルを既定値です。 *global_cursor_name* SQLSetCursorName を呼び出すことによってカーソルが指定する ODBC アプリケーションによってオープンされた API サーバー カーソルの名前をすることもできます *。global_cursor_name*は**nvarchar (128)** です。  
   
  [ @cursor_identity=] N'*input_cursor_variable*'  
  開いているカーソルに関連付けられたカーソル変数の名前です。 *input_cursor_variable*は**nvarchar (128)** です。  

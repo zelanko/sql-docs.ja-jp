@@ -30,11 +30,12 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908207"
 ---
 # <a name="datetime-data-types"></a>Datetime データ型
 ODBC 3 *.x*、識別子、日付、時刻、および timestamp SQL データ型は SQL_DATE、SQL_TIME、および SQL_TIMESTAMP から変更された (のインスタンスと **#define** 9、10、および 11 のヘッダー ファイルで) に sql _TYPE_DATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP (のインスタンスと **#define** 91、92、および 93 のヘッダー ファイルで)、それぞれします。 識別子から変更された SQL_C_DATE、SQL_C_TIME、および SQL_C_TIMESTAMP SQL_C_TYPE_DATE、SQL_C_TYPE_TIME、SQL_C_TYPE_TIMESTAMP、それぞれ、対応する C 型のインスタンスとインスタンス **#define**が変更されましたそれに従っています。  
   
- ODBC 3 での SQL の datetime データ型に対して返される列のサイズおよび小数点以下桁数 *.x* ODBC 2 でそれらに対して返される有効桁数と小数点以下桁数と同じです*。x*です。 これらの値は、SQL_DESC_PRECISION および SQL_DESC_SCALE 記述子フィールドの値と異なります。 (詳細については、次を参照してください[列のサイズ、小数点以下桁数、転送オクテット長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型にします。)。  
+ ODBC 3 での SQL の datetime データ型に対して返される列のサイズおよび小数点以下桁数 *.x* ODBC 2 でそれらに対して返される有効桁数と小数点以下桁数と同じです *。x*です。 これらの値は、SQL_DESC_PRECISION および SQL_DESC_SCALE 記述子フィールドの値と異なります。 (詳細については、次を参照してください[列のサイズ、小数点以下桁数、転送オクテット長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型にします。)。  
   
  これらの変更に影響を与える**SQLDescribeCol**、 **SQLDescribeParam**、および**SQLColAttributes**です。**SQLBindCol**、 **SQLBindParameter**、および**SQLGetData**; と**SQLColumns**、 **SQLGetTypeInfo**、 **SQLProcedureColumns**、 **SQLStatistics**、および**SQLSpecialColumns**です。  
   

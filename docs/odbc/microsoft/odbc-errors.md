@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899887"
 ---
 # <a name="odbc-errors"></a>ODBC エラー
 エラーが発生するときに、Microsoft ODBC のデスクトップ データベース ドライバーは、ネイティブ エラー番号、SQLSTATE (ODBC エラー コード)、およびエラー メッセージを返します。  

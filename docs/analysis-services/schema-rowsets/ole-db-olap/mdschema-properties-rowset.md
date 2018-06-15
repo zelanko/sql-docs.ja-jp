@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34036823"
 ---
 # <a name="mdschemaproperties-rowset"></a>MDSCHEMA_PROPERTIES 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/10/2018
 |**PROPERTY_TYPE**|**DBTYPE_I2**|省略可|  
 |**PROPERTY_NAME**|**DBTYPE_WSTR**|省略可|  
 |**PROPERTY_CONTENT_TYPE**|**DBTYPE_I2**|(省略可能)既定の制限されている**MDPROP_MEMBER**または**MDPROP_CELL**です。|  
-|**PROPERTY_ORIGIN**|**DBTYPE_UI2**|(省略可能)既定の制限されている**、MD_USER_DEFINED**または**MD_SYSTEM_ENABLED**です。|  
+|**PROPERTY_ORIGIN**|**DBTYPE_UI2**|(省略可能)既定の制限されている **、MD_USER_DEFINED**または**MD_SYSTEM_ENABLED**です。|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(省略可能)既定の制限は、1 の値です。  有効な値は次のいずれかのビットマップ。<br /><br /> 1 キューブ<br /><br /> 2 ディメンション|  
 |**PROPERTY_VISIBILITY**|**DBTYPE_UI2**|(省略可能)既定の制限は、1 の値です。 有効な値は次のいずれかのビットマップ。<br /><br /> 1 表示<br /><br /> 2 not 表示|  
   

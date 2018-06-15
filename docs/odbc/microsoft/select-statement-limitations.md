@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900667"
 ---
 # <a name="select-statement-limitations"></a>SELECT ステートメントの制限事項
 SELECT ステートメントで非集計列を含む、集計関数の列を混在させることはできません。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912497"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>トランザクション分離レベルに設定します。
 トランザクション分離レベルを設定するには、アプリケーションは、SQL_ATTR_TXN_ISOLATION 接続属性を使用します。 データ ソースが、要求された分離レベルをサポートしていない場合、ドライバーまたはデータ ソースより高いレベルを設定できます。 どのようなトランザクション分離レベルでデータ ソースを決定するをサポートし、既定の分離レベルは、アプリケーションが呼び出す**SQLGetInfo** SQL_TXN_ISOLATION_OPTION と SQL_DEFAULT_TXN_ISOLATION オプションで、それぞれします。  

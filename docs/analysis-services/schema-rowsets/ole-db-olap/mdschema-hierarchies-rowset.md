@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34036533"
 ---
 # <a name="mdschemahierarchies-rowset"></a>MDSCHEMA_HIERARCHIES 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/10/2018
 |**HIERARCHY_ORDINAL**|**DBTYPE_UI4**|キューブの全階層にわたる階層の序数。|  
 |**DIMENSION_IS_SHARED**|**DBTYPE_BOOL**|常に返します**TRUE**です。|  
 |**HIERARCHY_IS_VISIBLE**|**DBTYPE_BOOL**|階層が表示されるかどうかを示すブール値。<br /><br /> 返します**TRUE**階層が表示されている、それ以外の場合**FALSE**です。|  
-|**HIERARCHY_ORIGIN**|**DBTYPE_UI2**|階層のソースを決定するビット マスク。<br /><br /> **MD_USER_DEFINED**ユーザー定義階層を示しの値を持つ**0x0000001**です。<br /><br /> **MD_SYSTEM_ENABLED**属性階層を示しの値を持つ**0x0000002**です。<br /><br /> **MD_SYSTEM_INTERNAL**属性階層のないと属性を識別し、値を持つ**0x0000004**です。<br /><br /> <br /><br /> 親/子の属性階層は、両方とも**、MD_USER_DEFINED**と**MD_SYSTEM_ENABLED**です。|  
+|**HIERARCHY_ORIGIN**|**DBTYPE_UI2**|階層のソースを決定するビット マスク。<br /><br /> **MD_USER_DEFINED**ユーザー定義階層を示しの値を持つ**0x0000001**です。<br /><br /> **MD_SYSTEM_ENABLED**属性階層を示しの値を持つ**0x0000002**です。<br /><br /> **MD_SYSTEM_INTERNAL**属性階層のないと属性を識別し、値を持つ**0x0000004**です。<br /><br /> <br /><br /> 親/子の属性階層は、両方とも **、MD_USER_DEFINED**と**MD_SYSTEM_ENABLED**です。|  
 |**HIERARCHY_DISPLAY_FOLDER**|**DBTYPE_WSTR**|ユーザー インターフェイスでの階層の表示に使用するパス。 フォルダー名はセミコロン (;) で区切られます。 入れ子になったフォルダーは円記号で示されます (\\)。|  
 |**INSTANCE_SELECTION**|**DBTYPE_UI2**|階層の表示方法に関するクライアント アプリケーションへのヒント。 有効な値には、次の値があります。<br /><br /> **MD_INSTANCE_SELECTION_NONE**<br /><br /> **MD_INSTANCE_SELECTION_DROPDOWN**<br /><br /> **MD_INSTANCE_SELECTION_LIST**<br /><br /> **MD_INSTANCE_SELECTION_FILTEREDLIST**<br /><br /> **MD_INSTANCE_SELECTION_MANDATORYFILTER**|  
 |**GROUPING_BEHAVIOR**|**DBTYPE_I2**|この階層のクライアントに期待されるグループ化の動作を指定する列挙。 次の値を指定できます。<br /><br /> **EncourageGrouping** (1)<br /><br /> **DiscourageGrouping** (2)|  
