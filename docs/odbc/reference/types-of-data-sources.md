@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917227"
 ---
 # <a name="types-of-data-sources"></a>データ ソースの種類
 データ ソースの 2 種類があります。 コンピューターのデータ ソースとファイル データ ソース。 両方には、データのソースに関する同様の情報がれていますが、この情報が格納されている方法が異なります。 これらの相違のために少し異なる方法で使用されます。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023189"
 ---
 # <a name="programming-amo-security-objects"></a>AMO セキュリティ オブジェクトのプログラミング
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、セキュリティ オブジェクトをプログラミングまたは AMO セキュリティ オブジェクトを使用するアプリケーションを実行しているサーバーの管理者グループまたは Database Administrator グループのメンバーであることが必要です。 サーバー管理者およびデータベース管理者は、アクセス レベルがによって提供される[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  

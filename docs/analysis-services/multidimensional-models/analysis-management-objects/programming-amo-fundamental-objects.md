@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026219"
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 基本オブジェクトのプログラミング
   基本オブジェクトは、一般に、単純で簡単なオブジェクトです。 これらのオブジェクトは、通常、作成およびインスタンス化され、その後、必要がなくなると、ユーザーによって切断されます。 基礎クラスには、<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource>、<xref:Microsoft.AnalysisServices.DataSourceView> などのオブジェクトが含まれます。 AMO 基本オブジェクトの中で唯一の複雑なオブジェクトは、<xref:Microsoft.AnalysisServices.DataSourceView> です。これは、データ ソース ビューを表す抽象モデルを構築するために詳細を必要とします。  
