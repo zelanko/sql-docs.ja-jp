@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909317"
 ---
 # <a name="diagnostic-records"></a>診断レコード
 各環境に関連付けられた、接続、ステートメント、および記述子ハンドルは*診断レコード*です。 これらのレコードと呼ばれる特定のハンドルを使用する最後の関数に関する診断情報が含まれています。 ハンドルを使用して別の関数が呼び出されたときにのみ、レコードが置き換えられます。 任意の時点で格納できる診断レコードの数に制限はありません。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911195"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec および SQLGetDiagField を実装します。
 **SQLGetDiagRec**と**SQLGetDiagField**と各ドライバーのドライバー マネージャーによって実装されます。 ドライバー マネージャーと各ドライバーは、各環境、接続、ステートメント、および記述子ハンドルに対する診断レコードを維持してハンドルまたはハンドルが解放されていることを別の関数が呼び出されたときにのみ、これらのレコードを解放します。  

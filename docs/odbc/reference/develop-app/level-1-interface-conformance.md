@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913087"
 ---
 # <a name="level-1-interface-conformance"></a>レベル 1 インターフェイスへの準拠
 レベル 1 のインターフェイスへの準拠レベルには、コア インターフェイスへの準拠の機能レベルと、OLTP リレーショナル DBMS で通常利用できるトランザクションなどの追加機能が含まれています。 レベル 1 – インターフェイスに準拠するドライバーは、コア インターフェイスへの準拠レベルの機能に加えて、次の操作をアプリケーションを使用できます。  

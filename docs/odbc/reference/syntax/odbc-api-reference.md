@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921947"
 ---
 # <a name="odbc-api-reference"></a>ODBC API リファレンス
 このセクションのトピックでは、アルファベット順に各 ODBC 関数について説明します。 各関数は、C のプログラミング言語の関数として定義されます。 説明を以下に示します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911787"
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL には、C データ変換の例
 次の表に示す例については、ドライバーが SQL データを C データに変換する方法を示しています。  

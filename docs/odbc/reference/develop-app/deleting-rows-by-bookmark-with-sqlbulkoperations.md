@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909137"
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations とブックマークによる行の削除
 ブックマークで行を削除するときに**SQLBulkOperations**ようにデータ ソース テーブルの 1 つまたは複数の選択した行を削除します。 行は、バインドされたブックマーク列内のブックマークで識別されます。  

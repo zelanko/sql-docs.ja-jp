@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914137"
 ---
 # <a name="connection-transitions"></a>接続の切り替え
 ODBC 接続では、次の状態があります。  

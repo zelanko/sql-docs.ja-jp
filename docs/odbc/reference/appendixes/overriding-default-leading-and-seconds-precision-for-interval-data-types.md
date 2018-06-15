@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907847"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Interval データ型のトップ レベルの既定値と秒の有効桁数を上書きします。
 ARD の SQL_DESC_TYPE フィールド設定されている場合に、datetime 型または interval C 型を呼び出して、 **SQLBindCol**または**SQLSetDescField**、SQL_DESC_PRECISION フィールド (が間隔 (秒) が含まれています有効桁数) は、次の既定値に設定されます。  

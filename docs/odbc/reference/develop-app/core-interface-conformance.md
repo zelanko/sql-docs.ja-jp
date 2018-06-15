@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913987"
 ---
 # <a name="core-interface-conformance"></a>コア インターフェイスへの準拠
 すべての ODBC ドライバーは、少なくともコア レベルを示す必要がありますインターフェイスへの準拠です。 最も一般的な相互運用可能なアプリケーションで必要なものでは、コア レベルの機能、ために、ドライバーは、このようなアプリケーションで操作できます。 コア レベルの機能は、ISO CLI 仕様で定義されている機能と、開いているグループ CLI 仕様で定義されている nonoptional 機能にも対応しています。 コア レベル – インターフェイスに準拠する ODBC ドライバーは、以下のすべてを実行するようにアプリケーションを使用できます。  

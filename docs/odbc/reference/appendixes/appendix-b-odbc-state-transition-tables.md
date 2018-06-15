@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913897"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>付録 b: ODBC 状態遷移のテーブル
 この付録の内容の表では、ODBC 関数による環境、接続、ステートメント、および記述子の状態の遷移の発生を示しています。 通常、環境、接続、ステートメント、または記述子の状態は、ハンドル (環境、接続、ステートメント、または記述子) の対応する型を使用する関数を呼び出すことができる場合は決定します。 環境、接続、ステートメント、および記述子の状態は次の図に示すようにほぼと重複します。 たとえば、接続の正確な重複の状態の C5 と C6、S1 S12 からはデータ ソースに依存する、さまざまなデータ ソースに異なる時刻でトランザクションを開始し、記述子の状態 (暗黙的に割り当てられた記述子) D1i 依存ステートメントの状態記述子が関連付けられているステートメントの状態、状態 (明示的に割り当てられた記述子) D1e 中には任意のステートメントの状態に依存しないです。 各状態の説明は、次を参照してください[環境遷移](../../../odbc/reference/appendixes/environment-transitions.md)、[接続遷移](../../../odbc/reference/appendixes/connection-transitions.md)、[ステートメント遷移](../../../odbc/reference/appendixes/statement-transitions.md)、および[記述子遷移。](../../../odbc/reference/appendixes/descriptor-transitions.md)、後の「します。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 -   ***XXXXX***または **(*XXXXX*)** — 移行テーブルに関連付けられている、SQLSTATESQLSTATEs ドライバー マネージャーによって検出されたは、かっこで囲まれます。 関数から SQL_ERROR と指定の SQLSTATE 返されましたが、状態は変更されません。 たとえば場合、 **SQLExecute**前に呼び出されます**SQLPrepare**、SQLSTATE HY010 が返されます (関数のシーケンス エラーです)。  
   
 > [!NOTE]  
->  テーブルでは、状態を変更しない移行テーブルに関係のないエラーは表示されません。 たとえば、 **SQLAllocHandle** E1 環境の状態で呼び出され、SQLSTATE HY001 を返します (メモリ割り当てエラー) は、環境の状態のまま E1 ですこれは、用の環境移行テーブルに表示されません**。SQLAllocHandle**です。  
+>  テーブルでは、状態を変更しない移行テーブルに関係のないエラーは表示されません。 たとえば、 **SQLAllocHandle** E1 環境の状態で呼び出され、SQLSTATE HY001 を返します (メモリ割り当てエラー) は、環境の状態のまま E1 ですこれは、用の環境移行テーブルに表示されません **。SQLAllocHandle**です。  
   
  環境、接続、ステートメント、または記述子は、1 つ以上の状態に移動できる場合、考えられる各状態を示すし、1 つまたは複数の脚注が、条件を各遷移が行わを説明します。 次の脚注任意のテーブルで表示されます。  
   

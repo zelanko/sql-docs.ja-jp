@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914807"
 ---
 # <a name="transaction-support-in-dbmss"></a>Dbms でのトランザクションのサポート
 特にデスクトップ データベース dBASE、Paradox、市販など、一部のデータベースは、トランザクションをサポートしていません。 トランザクションをサポートするデータベースの間でも、トランザクションにすることが SQL ステートメントの種類のバリエーションがあります。 詳細についてで SQL_TXN_CAPABLE オプションを参照して、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)関数の説明。

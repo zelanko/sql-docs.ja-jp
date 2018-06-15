@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909967"
 ---
 # <a name="sql-minimum-grammar"></a>SQL の文法
 このセクションでは、ODBC ドライバーのサポートが必要な最低限の SQL 構文について説明します。 このセクションで説明する構文は、SQL 92 のエントリ レベルの構文のサブセットです。  

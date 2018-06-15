@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914957"
 ---
 # <a name="odbc-drivers-subkey"></a>ODBC ドライバーのサブキー
 ODBC ドライバーのサブキーの下の値では、インストールされたドライバーが一覧表示します。 これらの値の形式は次の表に示します。  

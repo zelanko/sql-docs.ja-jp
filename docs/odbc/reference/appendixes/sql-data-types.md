@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914187"
 ---
 # <a name="sql-data-types"></a>SQL データ型
 各 DBMS では、独自の SQL 型を定義します。 各 ODBC ドライバーでは、関連付けられた DBMS 定義 SQL データ型のみを公開します。 ODBC で定義された SQL 型識別子をドライバーがどのようにマップについて DBMS SQL 型し、を呼び出すことによって、ドライバーがドライバー固有の SQL 型識別子には独自に DBMS SQL 型をマップする方法が返されます**SQLGetTypeInfo**です。 ドライバーは、列とを呼び出すことでパラメーターのデータ型を記述するときにも、SQL データ型を返します**SQLColAttribute**、 **SQLColumns**、 **SQLDescribeCol**、**SQLDescribeParam**、 **SQLProcedureColumns**、および**SQLSpecialColumns**です。  

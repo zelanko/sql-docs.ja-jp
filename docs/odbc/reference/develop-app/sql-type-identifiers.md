@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912527"
 ---
 # <a name="sql-type-identifiers"></a>SQL 型の識別子
 各データ ソースでは、独自の SQL データ型を定義します。 ODBC では、型識別子を定義し、各型の識別子にマップする可能性があります SQL データの種類の一般的な特性について説明します。 これは、ドライバー固有の ODBC SQL 型の識別子に、基になるデータ ソースの各データ型をマップする方法です。  

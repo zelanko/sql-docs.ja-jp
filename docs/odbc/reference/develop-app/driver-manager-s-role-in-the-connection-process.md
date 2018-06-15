@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911777"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>ドライバー マネージャー&#39;接続プロセスでの役割
 あるアプリケーション直接呼び出さないでくださいドライバー関数に注意してください。 同じ名前のドライバー マネージャーの関数を呼び出すし、ドライバー マネージャーがドライバー関数を呼び出します。 通常、これはほぼ即座にです。 たとえば、アプリケーションを呼び出す**SQLExecute**ドライバー マネージャーで、いくつかのエラー チェックした後、ドライバー マネージャーは、呼び出し**SQLExecute**ドライバーにします。  

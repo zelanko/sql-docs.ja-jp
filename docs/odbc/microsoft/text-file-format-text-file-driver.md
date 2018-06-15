@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911077"
 ---
 # <a name="text-file-format-text-file-driver"></a>テキスト ファイルの形式 (テキスト ファイル ドライバー)
 テキストの ODBC ドライバーでは、両方の区切り記号付き固定幅テキスト ファイルをサポートします。 省略可能なヘッダー行と 0 個以上のテキスト行のテキスト ファイルで構成されます。  

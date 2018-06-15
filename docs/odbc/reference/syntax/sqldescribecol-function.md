@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32922157"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 関数
 **準拠**  
@@ -73,9 +74,9 @@ SQLRETURN SQLDescribeCol(
  *DataTypePtr*  
  [出力]列の SQL データ型を返すバッファーへのポインター。 この値は、IRD の SQL_DESC_CONCISE_TYPE フィールドから読み取られます。 内の値の 1 つ[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)、または個々 のドライバーの SQL データ型。 データ型を特定できない場合、ドライバーは SQL_UNKNOWN_TYPE を返します。  
   
- ODBC 3 です。*x*、SQL_TYPE_DATE、SQL_TYPE_TIME、または SQL_TYPE_TIMESTAMP で返される *\*DataTypePtr*の日付、時刻、またはタイムスタンプ データ、ODBC 2 にそれぞれ;.*x*SQL_DATE、SQL_TIME、または SQL_TIMESTAMP が返されます。 ドライバー マネージャーでは、ODBC 2 時に、必須のマッピングを実行します。*x* ODBC 3 を利用するアプリケーション*。x*ドライバーまたは ODBC 3 *。x* ODBC 2 を利用するアプリケーション*。x*ドライバー。  
+ ODBC 3 です。*x*、SQL_TYPE_DATE、SQL_TYPE_TIME、または SQL_TYPE_TIMESTAMP で返される *\*DataTypePtr*の日付、時刻、またはタイムスタンプ データ、ODBC 2 にそれぞれ;.*x*SQL_DATE、SQL_TIME、または SQL_TIMESTAMP が返されます。 ドライバー マネージャーでは、ODBC 2 時に、必須のマッピングを実行します。*x* ODBC 3 を利用するアプリケーション *。x*ドライバーまたは ODBC 3 *。x* ODBC 2 を利用するアプリケーション *。x*ドライバー。  
   
- ときに*ColumnNumber*と等しいで 0 (ブックマーク列)、sql_binary 型が返されます *\*DataTypePtr*の可変長のブックマークです。 (SQL_INTEGER は ODBC 3 でブックマークが使用されている場合に返されます。*x* ODBC 2 を使用するアプリケーション*。x*ドライバーまたは ODBC 2 *。x* ODBC 3 を使用するアプリケーション*。x*ドライバーです)。  
+ ときに*ColumnNumber*と等しいで 0 (ブックマーク列)、sql_binary 型が返されます *\*DataTypePtr*の可変長のブックマークです。 (SQL_INTEGER は ODBC 3 でブックマークが使用されている場合に返されます。*x* ODBC 2 を使用するアプリケーション *。x*ドライバーまたは ODBC 2 *。x* ODBC 3 を使用するアプリケーション *。x*ドライバーです)。  
   
  これらのデータ型の詳細については、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型にします。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。  
   

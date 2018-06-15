@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914287"
 ---
 # <a name="driver-manager-connection-pooling"></a>ドライバー マネージャーの接続プール
 接続プールを使用するたびに再確立する必要がない接続プールからの接続を使用するアプリケーションを有効にします。 接続が作成され、プールに格納されて、アプリケーションは、完全な接続プロセスを実行しないで、その接続を再利用できます。  

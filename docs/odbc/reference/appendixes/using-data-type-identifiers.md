@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907677"
 ---
 # <a name="using-data-type-identifiers"></a>データ型識別子の使用
 アプリケーションでは、2 つの方法でのデータ型識別子を使用します。 ドライバーにバッファーを記述すると結果を使用してデータを格納するバッファーの C の種類を判別できるように、ドライバーからセットに関するメタデータを取得します。 アプリケーションでは、これらのタスクを実行するには、次の関数を呼び出します。  

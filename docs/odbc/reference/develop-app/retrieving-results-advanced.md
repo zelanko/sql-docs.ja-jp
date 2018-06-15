@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912197"
 ---
 # <a name="retrieving-results-advanced"></a>(詳細) 結果を取得します。
 アプリケーションでは、バインドされたデータ バッファーのアドレスおよび対応する長さ/インジケーターにオフセットを追加することを指定できるときにバッファー アドレス**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLSetPos**と呼びます。 これらの追加の結果は、これらの操作で使用されるアドレスを決定します。  

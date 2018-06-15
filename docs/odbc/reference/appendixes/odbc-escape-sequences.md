@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906877"
 ---
 # <a name="odbc-escape-sequences"></a>ODBC エスケープ シーケンス
 次のエスケープ シーケンスは、ODBC で使用されます。 このセクションの文法で定義されているいくつかの要素を使用して[要素は、SQL ステートメントで使用される](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)です。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915212"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>SQL と ODBC の概要
 ODBC は、異なる、または、異種データベース管理システム (Dbms) へのアクセスの統一された方法を提供する作成されました。 この概要では、ODBC の開発に関連する概念について説明します。  

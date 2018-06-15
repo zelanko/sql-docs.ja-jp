@@ -3,13 +3,10 @@ title: ODBC ドライバーのアーキテクチャ |Microsoft ドキュメン�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c620cbaefa987a722f86ed11bca4e88382ec0ee
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 9566599b68ac931604ab68c06da2f6cd624673fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917327"
 ---
 # <a name="odbc-driver-architecture"></a>ODBC ドライバーのアーキテクチャ
 ドライバーの作成者は、ドライバーのアーキテクチャはことができます、アプリケーションは、DBMS に固有の SQL を使用しているかどうかに影響を及ぼすにする必要があります。  

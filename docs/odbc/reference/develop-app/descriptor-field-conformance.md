@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911847"
 ---
 # <a name="descriptor-field-conformance"></a>記述子フィールドへの準拠
 次の表では、各 ODBC 記述子のヘッダー フィールド、これは、定義済みの準拠レベルを示します。  

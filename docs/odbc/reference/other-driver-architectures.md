@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916877"
 ---
 # <a name="other-driver-architectures"></a>他のドライバーのアーキテクチャ
 一部の ODBC ドライバーは、厳密には前に説明したアーキテクチャに準拠しません。 ドライバーが、従来の ODBC ドライバーのもの以外の職務を遂行または通常の意味でのドライバーではない可能性があります。  

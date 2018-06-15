@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915186"
 ---
 # <a name="using-scrollable-cursors"></a>スクロール可能なカーソルを使用します。
 スクロール可能なカーソルを使用するには、これら 3 つの手順が必要です。  

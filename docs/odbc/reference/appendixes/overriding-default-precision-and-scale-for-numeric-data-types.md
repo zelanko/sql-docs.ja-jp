@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907007"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>数値データ型の既定の有効桁数と小数点以下桁数を上書きします。
 ARD の SQL_DESC_TYPE フィールド設定されている場合、SQL_C_NUMERIC を呼び出して、 **SQLBindCol**または**SQLSetDescField**ARD SQL_DESC_SCALE フィールドが 0 に設定されている、および SQL_DESC_PRECISION フィールドが設定されています。ドライバーの定義済みの既定の有効桁数です。 これは true にも、APD の SQL_DESC_TYPE フィールドを呼び出して、SQL_C_NUMERIC に設定されている**SQLBindParameter**または**SQLSetDescField**です。 これは、入力、入力/出力、または出力パラメーターの場合は true です。  
