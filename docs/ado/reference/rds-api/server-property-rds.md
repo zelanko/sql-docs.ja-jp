@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6015f19a003148dbe12d6489b23a33848aa0ca29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: efe8323ac57dda7d1405777e3be0dc997f955556
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288461"
 ---
 # <a name="server-property-rds"></a>サーバー プロパティ (RDS)
 インターネット インフォメーション サービス (IIS) の名前との通信プロトコルを示します。  
@@ -115,12 +115,12 @@ DataControl.Server=""
  A**文字列**サーバーが、ローカル コンピューター上にある場合に、サーバーがリモート コンピューターです。 または、空の文字列がある場合は、インターネットまたはイントラネット パス、またはコンピューター名を含む値です。  
   
  *port*  
- 省略可。 IIS を実行しているサーバーに接続するために使用するポートです。 Internet Explorer で、ポート番号を設定 (上、**ビュー**  メニューのをクリックして**オプション**、し、選択、**接続** タブ) または IIS でします。  
+ 任意。 IIS を実行しているサーバーに接続するために使用するポートです。 Internet Explorer で、ポート番号を設定 (上、**ビュー**  メニューのをクリックして**オプション**、し、選択、**接続** タブ) または IIS でします。  
   
  *DataControl*  
  オブジェクト変数を表す、 **.rds ですDataControl**オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  サーバーの場所は、ここで、 **.rds ですDataControl** (つまり、クエリまたは更新) の要求を処理します。 によって既定では、すべての要求の処理、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクト、 [MSDFMAP です。ハンドラー](../../../ado/guide/remote-data-service/datafactory-customization.md)コンポーネント、および[MSDFMAP です。INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)指定されたサーバー上のファイルです。 古いマスター_キーと新しい設定を調整するためにサーバーを変更する場合の点に注意**MSDFMAP です。INI**ファイル。 非互換性が別の失敗の 1 つのサーバーで成功した要求があります。 サーバー プロパティが空の文字列に設定されている場合""、これらのオブジェクトがローカル コンピューターに適用されます。  
   
 ## <a name="applies-to"></a>適用対象  

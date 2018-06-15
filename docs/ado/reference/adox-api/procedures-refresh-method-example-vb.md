@@ -2,7 +2,6 @@
 title: プロシージャの更新メソッドの例 (VB) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ad5229cc50c58b49e22d6a88808fc14c23703d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb1e831fafeeadd47e87928fe7d829ea83d93e58
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286781"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>プロシージャは、メソッドの例 (VB) の更新します。
 次のコードを更新する方法を示しています、[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)のコレクション、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)です。 これは、前に必要[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトから、**カタログ**アクセスできます。  

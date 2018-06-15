@@ -2,7 +2,6 @@
 title: Append メソッド (ADOX プロシージャ) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83e3973bccfd0466ed7d912b4fc4d1c63b6da7a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc5721f8806481de872d0c3e1de7d47a3720dfa9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284861"
 ---
 # <a name="append-method-adox-procedures"></a>Append メソッド (ADOX プロシージャ)
 新しく追加[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトを[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)コレクション。  
@@ -38,13 +38,13 @@ Procedures.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *名前*  
+ *Name*  
  A**文字列**プロシージャを作成し、追加の名前を指定する値。  
   
  *Command*  
  ADO[コマンド](../../../ado/reference/ado-api/command-object-ado.md)を作成し、追加の手順を表すオブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  指定した属性と名前を持つデータ ソースに新しいプロシージャを作成、**コマンド**オブジェクト。  
   
  ユーザーが指定したコマンド テキストを表す場合、プロシージャではなく、ビュー、動作は、使用されているプロバイダーによって異なります。 **追加**プロバイダーは永続的なコマンドをサポートしていない場合は失敗します。  

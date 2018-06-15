@@ -2,7 +2,6 @@
 title: 作成日時と最終更新日時プロパティの例 (VB) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c11dda38d56782937a1f286d5fe8e05555cd8f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cbaf7c7384a015bb98213ad25fc2125de808e08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285551"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>作成日時と最終更新日時プロパティの例 (VB)
 この例で、 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)と[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)プロパティを追加して[列](../../../ado/reference/adox-api/column-object-adox.md)既存[テーブル](../../../ado/reference/adox-api/table-object-adox.md)および新たに作成する**テーブル**です。 DateOutput プロシージャは、この例を実行する必要があります。  

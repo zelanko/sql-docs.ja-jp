@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 504f68bea78f34d2a40ced0453a251105bc5275c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8528794ecf2d52ec62225085c4de03d250ebf16
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288561"
 ---
 # <a name="reset-method-rds"></a>Reset メソッド (RDS)
 並べ替えまたはフィルターをクライアント側で実行**Recordset**指定の並べ替えとフィルター処理のプロパティを基にします。  
@@ -42,9 +42,9 @@ DataControl.Reset(value)
  オブジェクト変数を表す、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
  *value*  
- 省略可。 A**ブール**値が**True** 「フィルター」現在の行セットのフィルターを適用する場合 (既定)。 **False**をフィルター処理、元の行セットで、以前のフィルター オプションを削除することを示します。  
+ 任意。 A**ブール**値が**True** 「フィルター」現在の行セットのフィルターを適用する場合 (既定)。 **False**をフィルター処理、元の行セットで、以前のフィルター オプションを削除することを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)、および[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)プロパティは、並べ替えおよびフィルター処理でクライアント側のキャッシュ機能を提供します。 並べ替えの機能は、1 つの列の値によって、レコードを並べ替えます。 フィルターの機能には、完全中に、検索条件に基づくレコードのサブセットが表示されます。 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)はキャッシュに保持されます。 **リセット**メソッドは条件を実行し、現在の置換**Recordset** 、更新可能で**レコード セット**です。  
   
  送信されていない元のデータへの変更がある場合、**リセット**メソッドは失敗します。 まず、使用して、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)読み取り/書き込みに変更を保存するメソッド**レコード セット**、しを使用して、**リセット**並べ替えまたはレコードをフィルター処理するメソッド。  

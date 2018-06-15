@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5e90064c340e36df27bccd4a8122d6d40a27ff8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08f5d4a9efdbc04690c9f30a6b3507b038278630
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288451"
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection プロパティ (RDS)
 並べ替え順序が昇順または降順かどうかを示します。  
@@ -41,10 +41,10 @@ DataControl.SortDirection = value
  *DataControl*  
  オブジェクト変数を表す、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
- *値*  
+ *Value*  
  A**ブール**値に設定すると**True**並べ替えの方向は昇順を示します。 **False**降順の順序を示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 **SortDirection**、 [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)、および[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)プロパティは、並べ替えおよびフィルター処理でクライアント側のキャッシュ機能を提供します。 並べ替えの機能は、1 つの列から値を使用してレコードを並べ替えます。 フィルターの機能は、完全な検索条件に基づくレコードのサブセットを表示[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)はキャッシュに保持されます。 [リセット](../../../ado/reference/rds-api/reset-method-rds.md)メソッドは条件を実行し、現在の置換**Recordset** 、更新可能で**レコード セット**です。  
   
 ## <a name="applies-to"></a>適用対象  

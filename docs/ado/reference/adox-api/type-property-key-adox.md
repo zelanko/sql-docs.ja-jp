@@ -2,7 +2,6 @@
 title: Type プロパティ (キー) (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 667aee2917a0cdc0fa9a385ef376c1709b226b71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0016b9c1d0980abc3be745629ff0155f9d265b2d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287431"
 ---
 # <a name="type-property-key-adox"></a>Type プロパティ (キー) (ADOX)
 キーの種類を示します。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**長い**のいずれかの値、 [KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md)定数。 既定値は**adKeyPrimary**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロパティは読み取り専用で[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクトをコレクションに既に追加されています。  
   
 ## <a name="applies-to"></a>適用対象  

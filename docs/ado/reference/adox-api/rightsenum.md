@@ -2,7 +2,6 @@
 title: RightsEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e6e0e4d3b3a0148b92febfa4e5474774cfcbec79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32cd777bad44e0784943aab1c0a4c9ba665f7247
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286854"
 ---
 # <a name="rightsenum"></a>RightsEnum
 オブジェクトの権限またはグループまたはユーザーのアクセス許可を指定します。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 (&AMP; H4000)|ユーザーまたはグループは、この型の新しいオブジェクトを作成する権限を持っています。|  
 |**adRightDelete**|65536 (&AMP; H10000)|ユーザーまたはグループは、オブジェクトからデータを削除するアクセス許可を持っています。 などのオブジェクト**テーブル**ユーザーがレコードからのデータ値を削除する権限を持っています。|  

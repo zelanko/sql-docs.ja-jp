@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fae3b712f32ad2b3b5c9f478a600af611379e798
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5253e7ad569413fc22e4a8d0ab04c8b7c403410
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288491"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn プロパティ (RDS)
 レコードの並べ替えにする列を示します。  
@@ -43,7 +43,7 @@ DataControl.SortColumn = String
  *文字列*  
  A**文字列**名前またはレコードの並べ替えに使用する列の別名を表す値です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **SortColumn**、 [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)、および[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)プロパティは、並べ替えおよびフィルター処理でクライアント側のキャッシュ機能を提供します。 並べ替えの機能は、1 つの列の値によって、レコードを並べ替えます。 フィルターの機能は、完全な検索条件に基づくレコードのサブセットを表示[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)はキャッシュに保持されます。 [リセット](../../../ado/reference/rds-api/reset-method-rds.md)メソッドは条件を実行し、現在の置換**Recordset** 、更新可能で**レコード セット**です。  
   
  並べ替えに使用する、 **Recordset**、保留中の変更を最初に保存する必要があります。 使用している場合、 **.rds ですDataControl**、使用することができます、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)メソッドです。 たとえば場合、 **.rds ですDataControl**は ADC1 をという名前には、コードになります`ADC1.SubmitChanges`です。 ADO を使用している場合**Recordset**、使用することができます、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドです。 使用して**UpdateBatch**の方法はお勧め**Recordset**で作成されるオブジェクト、 [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)メソッドです。 たとえば、コードがある可能性があります`myRS.UpdateBatch`または`ADC1.Recordset.UpdateBatch`です。  

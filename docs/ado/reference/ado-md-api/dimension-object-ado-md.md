@@ -2,7 +2,6 @@
 title: ディメンションのオブジェクト (ADO MD) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95fa6ce43c85ae474a9482e9fb76277960fe1a74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10378c62ec05008529e1d271208f3e5657d6a140
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283911"
 ---
 # <a name="dimension-object-ado-md"></a>ディメンション オブジェクト (ADO MD)
 1 つまたは複数のメンバーの階層を含む、多次元キューブのディメンションの 1 つを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  コレクションのプロパティと、**ディメンション**オブジェクトを次を行うことができます。  
   
 -   識別、**ディメンション**で、[名前](../../../ado/reference/ado-md-api/name-property-ado-md.md)と[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティです。  
@@ -42,12 +42,12 @@ ms.lasthandoff: 05/03/2018
   
  **プロパティ**コレクションには、プロバイダーが指定したプロパティが含まれています。 次の表は、利用可能なプロパティを一覧表示します。 実際のプロパティの一覧は、プロバイダーの実装によって異なる場合があります。 使用可能なプロパティの完全な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|Description|  
+|名前|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブに所属するカタログの名前。|  
 |CubeName|キューブの名前。|  
 |DefaultHierarchy|既定の階層の一意の名前。|  
-|Description|キューブのわかりやすい説明。|  
+|説明|キューブのわかりやすい説明。|  
 |DimensionCaption|ラベルまたはキャプションをディメンションに関連付けられています。|  
 |DimensionCardinality|ディメンションのメンバーの数。|  
 |DimensionGUID|ディメンションの GUID です。|  

@@ -2,7 +2,6 @@
 title: 列コレクションのプロパティ、メソッド、およびイベント |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,14 +16,15 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a48bc762fbacbd15e218125944794dcef36af29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37d5558366c452987b36d94617b035166aea56cc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285301"
 ---
 # <a name="columns-collection-properties-methods-and-events"></a>列コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: node-js
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 313adb458786f009cd2cbd4fa86c09d7d5302b29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f918eead7fb0af9d28cd85b173e3e076c5ba9416
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288961"
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>手順 1: Node.js 開発のための開発環境を構成します。
 SQL Server の Node.js のドライバーを使用してアプリケーションを開発するために、前提条件と開発環境を構成する必要があります。  面倒のモジュールをインストールするノードのパッケージ マネージャー (npm) を使用する最も一般的な方法ですが、直接に面倒なモジュールをダウンロードする[Github](https://github.com/pekim/tedious)したい場合。  
@@ -29,8 +29,8 @@ Node.js ドライバーが SQL Server と Azure SQL データベースで既定�
 ## <a name="windows"></a>Windows  
   
 1. **Node.js のランタイムと npm パッケージ マネージャーをインストールします。**  
-a. 移動して[Node.js](https://nodejs.org/en/download/)  
-b. Windows インストーラー msi の適切なリンクをクリックします。   
+A. 移動して[Node.js](https://nodejs.org/en/download/)  
+B. Windows インストーラー msi の適切なリンクをクリックします。   
 c. ダウンロードされると、Node.js をインストールする msi を実行します。  
   
 2. **Cmd.exe を開きます**  
@@ -81,8 +81,8 @@ c. ダウンロードされると、Node.js をインストールする msi を�
 ## <a name="mac"></a>Mac  
   
 1. **Node.js のランタイムと npm パッケージ マネージャーをインストールします。**  
-a. 移動して[Node.js](https://nodejs.org/en/download/)  
-b. Mac OS インストーラーの適切なリンクをクリックします。  
+A. 移動して[Node.js](https://nodejs.org/en/download/)  
+B. Mac OS インストーラーの適切なリンクをクリックします。  
 c. ダウンロードされると、実行、dmg Node.js をインストールするには  
   
 2. **開いているターミナル**  

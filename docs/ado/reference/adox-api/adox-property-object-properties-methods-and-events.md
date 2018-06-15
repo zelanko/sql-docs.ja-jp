@@ -2,7 +2,6 @@
 title: ADOX プロパティ オブジェクトのプロパティ、メソッド、およびイベント |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,14 +16,15 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f39cdeb89e1f50f70748a88693a27310f38bf4fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97a4152f689e59d2d6387a48bfbb1f2fae38328e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284851"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>ADOX プロパティ オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
  [Attributes プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)  
   
  [Name プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  

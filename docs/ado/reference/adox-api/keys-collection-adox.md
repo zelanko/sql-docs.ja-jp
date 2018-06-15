@@ -2,7 +2,6 @@
 title: キーのコレクション (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f85bb15e6a8949299f0340530de6ffeb335389f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 613c1579c2aacd99ff1f7dabf92d11bd6585c9eb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286561"
 ---
 # <a name="keys-collection-adox"></a>キーのコレクション (ADOX)
 すべてを含む[キー](../../../ado/reference/adox-api/key-object-adox.md)のオブジェクト、[テーブル](../../../ado/reference/adox-api/table-object-adox.md)です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [Append](../../../ado/reference/adox-api/append-method-adox-keys.md)のメソッド、 [Keys コレクション](../../../ado/reference/adox-api/keys-collection-adox.md)ADOX に対して一意では、します。 可能な代替手段としては以下の方法があります。  
   
 -   新しいキーを使用して、コレクションに追加、 [Append](../../../ado/reference/adox-api/append-method-adox-keys.md)メソッドです。  

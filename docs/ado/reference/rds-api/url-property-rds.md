@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e798b7e4afd6ddf0e2238acff56adcff0a3cfb5c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb07f83de6f08202b80da6a56bcf781510eb237f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288811"
 ---
 # <a name="url-property-rds"></a>URL プロパティ (RDS)
 相対パスまたは絶対 URL を含む文字列を示します。  
@@ -47,7 +47,7 @@ Run time: DataControl.URL="Server"
  *DataControl*  
  オブジェクト変数を表す、 **DataControl**オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  通常、URL は特定生成したり、返すできる Active Server Page (.asp) ファイル、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。 このため、ユーザーを取得できます、**レコード セット**をサーバー側を呼び出すことがなく[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクト、またはカスタムのビジネス オブジェクトをプログラミングします。  
   
  場合、 **URL**プロパティが設定されている、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) URL で指定された場所への変更を送信します。  

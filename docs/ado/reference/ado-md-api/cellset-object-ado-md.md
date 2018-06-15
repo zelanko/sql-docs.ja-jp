@@ -2,7 +2,6 @@
 title: Cellset オブジェクト (ADO MD) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,23 +19,24 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f32af1f621f3470dc0a9175708719965eef5fc71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6437c17c80c85e535f6b1807f68c2755e1362d3c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283391"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset オブジェクト (ADO MD)
 多次元クエリの結果を表します。 これは、キューブまたはその他のセルセットから選択したセルのコレクションです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  内のデータ、**セルセット**、直接の配列に似たアクセスを使用して取得されます。 ドリル ダウンできます。 特定のメンバーで、そのメンバーに関するデータを取得します。 たとえば、次のコードを返します最初のメンバーのキャプション最初の位置で名前付きセル セットの最初の軸で`cst`:  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  セル セット内の現在のセルの概念はありません。 代わりに、[項目](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティは、固有の仕様を取得[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)セルセットからのオブジェクト。 引数、**項目**プロパティを決定するセルを取得します。 セルの序数に基づく一意の値を指定することができます。 セルセットの各軸の位置番号を使用してセルを取得することもできます。 セルの取得の詳細については、次を参照してください。、[項目](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティです。  
   
  コレクション、メソッド、およびプロパティの使用、**セルセット**オブジェクトを次を行うことができます。  

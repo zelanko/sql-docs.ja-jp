@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdb021c9d036a3daab6b0e5c3f4912c0da4059eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d38ec14d124bcf45c4eb22188f86849d95f0275
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283411"
 ---
 # <a name="ado-glossary"></a>ADO の用語集
 このトピックでは、ADO に関連する用語を定義します。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
  ビジネス ルール  
  検証用の編集、ログオン検証、データベースの検索、ポリシー、および企業のビジネスを行う方法を構成するアルゴリズムの変換の組み合わせ。 呼ばれる*ビジネス ロジック*です。  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
  計算式  
  式は、定数ではありませんが、その他の値によって値が決まります。 評価するには、計算式を取得して通常は他のフィールドまたは行で、その他のソースから値を計算します。  
   

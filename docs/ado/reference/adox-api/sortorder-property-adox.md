@@ -2,7 +2,6 @@
 title: SortOrder プロパティ (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60d4cbf5e3412a17e849313930992a2f3d8f30dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 896224841e3825c3713273122099855e3210f383
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286791"
 ---
 # <a name="sortorder-property-adox"></a>SortOrder プロパティ (ADOX)
 列 (インデックス列のみ) の並べ替え順序を示します。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  設定を返します、**長い**のいずれかの値、 [SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)定数。 既定値は**adSortAscending**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロパティにのみ適用されます[列](../../../ado/reference/adox-api/column-object-adox.md)内のオブジェクト、[列](../../../ado/reference/adox-api/columns-collection-adox.md)のコレクション、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)です。  
   
 ## <a name="applies-to"></a>適用対象  

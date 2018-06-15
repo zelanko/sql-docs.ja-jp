@@ -2,7 +2,6 @@
 title: 主キーと一意のプロパティの例 (VB) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ee188dfe7c5b40484580aa6c50f9ed99bda4ec2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fdb442faab89d88577449c136ba4ffb1cf2781f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286701"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>主キーと一意のプロパティの例 (VB)
 この例で、 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)と[Unique](../../../ado/reference/adox-api/unique-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)です。 コードは、2 つの列を新しいテーブルを作成します。 **PrimaryKey**と**Unique**プロパティを使用して、1 つの列に重複する値が許可されていません、主キーを作成します。  

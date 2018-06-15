@@ -2,7 +2,6 @@
 title: ビューのコレクション (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5f72f87ad913e1c423c99a917fc601a67028bb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6feb1cf590598724a4464d6cbcb2a6d555fb088a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287291"
 ---
 # <a name="views-collection-adox"></a>ビューのコレクション (ADOX)
 すべてを含む[ビュー](../../../ado/reference/adox-api/view-object-adox.md)カタログのオブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [Append](../../../ado/reference/adox-api/append-method-adox-views.md)のメソッド、**ビュー**コレクションは ADOX に一意です。 可能な代替手段としては以下の方法があります。  
   
 -   新しいビューを使用して、コレクションに追加、 **Append**メソッドです。  

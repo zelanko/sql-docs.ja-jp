@@ -2,7 +2,6 @@
 title: コレクション (ADO MD) の位置 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25d2a2fd7cf48d408ccfd43637eea07da52130bf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1a5d4d611487e74c94fda416fad2cd3aca7b300
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284521"
 ---
 # <a name="positions-collection-ado-md"></a>位置コレクション (ADO MD)
 含まれています、[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)軸上のポイントを定義するオブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **位置**標準 ADO コレクションです。 プロパティとメソッドのコレクションでは、次の操作を実行できます。  
   
 -   使用して、コレクション内のオブジェクトの数を取得、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティです。  

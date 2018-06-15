@@ -2,7 +2,6 @@
 title: Indexes コレクション (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79954616537a9a58b053bb4ee6fec4de50d3033a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e7bddbeacadb3bac0b2f408502e6aacb30184dfe
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286081"
 ---
 # <a name="indexes-collection-adox"></a>Indexes コレクション (ADOX)
 すべてを含む[インデックス](../../../ado/reference/adox-api/index-object-adox.md)テーブルのオブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md)のメソッド、**インデックス**コレクションは ADOX に一意です。 可能な代替手段としては以下の方法があります。  
   
 -   新しいインデックスを使用して、コレクションに追加、 **Append**メソッドです。  

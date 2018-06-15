@@ -2,7 +2,6 @@
 title: CreateObject メソッド (RDS) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5759c1b1b9faaaa9262879a614913a5fcf16c42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0307edbf2e9b5a6495dd84c45c8dc647fe5bdefd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287571"
 ---
 # <a name="createobject-method-rds"></a>CreateObject メソッド (RDS)
 対象のビジネス オブジェクトのプロキシを作成し、ポインターを返します。 インターネット経由で要求とデータを送信するビジネス オブジェクトとの通信のサーバー側のスタブをプロキシ パッケージとマーシャ リング データ。 インプロセス コンポーネント オブジェクトのプロキシは使用されず、オブジェクトへのポインターのみが提供されます。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 |インプロセス|Set オブジェクト = DataSpace.CreateObject ("ProgId"、"")|  
   
 ## <a name="parameters"></a>パラメーター  
- *オブジェクト*  
+ *Object*  
  オブジェクト変数で指定された型であるオブジェクトに評価される*ProgID*です。  
   
  *DataSpace*  
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
  *awebsrvr*または*computername*  
  A**文字列**サーバー ビジネス オブジェクトのインスタンスが作成されたインターネット インフォメーション サービス (IIS) Web サーバーを識別する URL を表す値です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  *HTTP プロトコル*標準的な Web プロトコルです。*HTTPS*は安全な Web プロトコルです。 使用して、 *DCOM プロトコル*HTTP を使用しないローカル エリア ネットワークを実行する場合。 *インプロセス*プロトコルは、ローカルのダイナミック リンク ライブラリ (DLL) ですが、ネットワークは使用されません。  
   
 ## <a name="applies-to"></a>適用対象  

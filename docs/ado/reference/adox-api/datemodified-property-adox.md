@@ -2,7 +2,6 @@
 title: DateModified プロパティ (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e9b10f7241f568b38b07e41c8343780ae4379b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 755697fa07c0b1dd57c3fba658613e9c6cfe30a4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285621"
 ---
 # <a name="datemodified-property-adox"></a>DateModified プロパティ (ADOX)
 オブジェクトが最後に変更された日付を示します。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-values"></a>戻り値  
  返します、**バリアント**変更された日付を指定する値。 値が null の場合は**DateModified**プロバイダーでサポートされていません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **DateModified**プロパティが null のオブジェクトを新たに追加します。 新しく追加した後[ビュー](../../../ado/reference/adox-api/view-object-adox.md)または[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)、呼び出す必要があります、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)のメソッド、[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)または[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)の値を取得するコレクション、 **DateModified**プロパティです。  
   
 ## <a name="applies-to"></a>適用対象  

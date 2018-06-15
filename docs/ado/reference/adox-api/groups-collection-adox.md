@@ -2,7 +2,6 @@
 title: コレクション (ADOX) をグループ化 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c98bb6f455878df0605d1e7f7c9fc1d9554a1cb8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 253cf76adf8f32734b4bd878cb2f623e79489ccb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285971"
 ---
 # <a name="groups-collection-adox"></a>グループのコレクション (ADOX)
 すべてを含むストアド[グループ](../../../ado/reference/adox-api/group-object-adox.md)カタログまたはユーザーのオブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **グループ**のコレクション、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)のすべてのカタログのグループ アカウントを表します。 **グループ**のコレクション、[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)ユーザーが所属するグループのみを表します。  
   
  [Append](../../../ado/reference/adox-api/append-method-adox-groups.md)のメソッド、**グループ**コレクションは ADOX に一意です。 可能な代替手段としては以下の方法があります。  

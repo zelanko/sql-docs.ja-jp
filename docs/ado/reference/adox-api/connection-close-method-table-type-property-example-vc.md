@@ -2,7 +2,6 @@
 title: 接続を閉じる方法、テーブル型のプロパティの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63760975712c15318331db4b4ad0a001a3232da2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cc1899b0d8772d27f3c505787469913a9e24150
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285281"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Close メソッドの接続、テーブル型のプロパティの例 (vc++)
 設定、 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを**Nothing**閉じる必要があります""カタログ。 関連付けられたコレクションは空になります。 カタログ内のスキーマ オブジェクトから作成されたすべてのオブジェクトは孤立します。 任意のプロパティがキャッシュされているこれらのオブジェクトで使用可能なは引き続きプロバイダーへの呼び出しを必要とするプロパティを読み取ることはできません。  

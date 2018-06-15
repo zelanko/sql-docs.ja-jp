@@ -2,7 +2,6 @@
 title: ActiveConnection プロパティ (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 420b6b26c38582c20bbc224ebcc53551967f1c4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5afb815a3e4701dc769f600d3a8d014d5a5cd25
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284581"
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection プロパティ (ADOX)
 ADO を示す[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)が属しています。  
@@ -38,7 +38,7 @@ ADO を示す[接続](../../../ado/reference/ado-api/connection-object-ado.md)�
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  セット、**接続**オブジェクトまたは**文字列**接続の定義を含むです。 返します、アクティブな**接続**オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  既定値は、null オブジェクト参照です。  
   
 ## <a name="applies-to"></a>適用対象  

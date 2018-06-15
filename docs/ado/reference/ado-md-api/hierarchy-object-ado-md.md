@@ -2,7 +2,6 @@
 title: Hierarchy オブジェクト (ADO MD) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee43d975b4f173d7cfb8fa819d6cd7e3635aab97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6853d2a3fcc0540f23a914e3e39c8720ce3a317
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284061"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy オブジェクト (ADO MD)
 1 つの方法を表すのメンバー、[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)集約または「ロール アップされます」。 ディメンションは、1 つまたは複数の階層に従って集計できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  コレクションのプロパティと、**階層**オブジェクトを次を行うことができます。  
   
 -   識別、**階層**で、[名前](../../../ado/reference/ado-md-api/name-property-ado-md.md)と[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティです。  
@@ -42,13 +42,13 @@ ms.lasthandoff: 05/03/2018
   
  **プロパティ**コレクションには、プロバイダーが指定したプロパティが含まれています。 次の表は、利用可能なプロパティを一覧表示します。 実際のプロパティの一覧は、プロバイダーの実装によって異なる場合があります。 使用可能なプロパティの完全な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|Description|  
+|名前|説明|  
 |----------|-----------------|  
 |AllMember|階層でプログラムのロールアップの最高レベルにあるメンバー。|  
 |CatalogName|このキューブに所属するカタログの名前。|  
 |CubeName|キューブの名前。|  
 |DefaultMember|この階層の既定のメンバーの一意の名前。|  
-|Description|階層のわかりやすい説明。|  
+|説明|階層のわかりやすい説明。|  
 |DimensionType|この階層が所属するディメンションの種類。|  
 |DimensionUniqueName|ディメンションの明確な名前。|  
 |HierarchyCaption|階層に関連付けられたラベルまたはキャプション。|  

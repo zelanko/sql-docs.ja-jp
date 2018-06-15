@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 763c75a0b098dd76fe650dce2628ee5450be0be7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 705b1ef1cad19886848cd383fecb20e46074f5d1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288841"
 ---
 # <a name="synchronize-method-rds"></a>同期メソッド (RDS)
 ADO 2.5 以降で使用する接続文字列で指定されたデータベースと特定のレコード セットを同期します。  
@@ -67,7 +67,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *pInformation*  
  によって返される情報エラーへのポインター **Execute**です。 NULL の場合、エラー情報は返されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  *HandlerString*パラメーターを null にすることがあります。 この場合の動作は、RDS サーバーを構成する方法によって異なります。 "MSDFMAP.handler"のハンドラーの文字列では、Microsoft から提供されたハンドラー (Msdfmap.dll) を使用することを示します。 "MASDFMAP.handler,sample.ini"のハンドラー文字列は、Msdfmap.dll ハンドラーを使用することと、"sample.ini"の引数をハンドラーに渡される必要があることを示します。 Msdfmap.dll は、sample.ini を使用して、接続およびクエリ文字列を確認する方向として、引数を解釈します。  
   
 ## <a name="applies-to"></a>適用対象  

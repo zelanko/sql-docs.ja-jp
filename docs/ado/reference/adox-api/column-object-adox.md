@@ -2,7 +2,6 @@
 title: Column オブジェクト (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d688a64630fbf22ad8efbe987e02d13bfdb07a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8dc7319f20e50ccbdbc14d60f15c96af11b6188a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285293"
 ---
 # <a name="column-object-adox"></a>Column オブジェクト (ADOX)
 テーブル、インデックス、またはキーから列を表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  次のコードが新たに作成**列**:  
   
  `Dim obj As New Column`  

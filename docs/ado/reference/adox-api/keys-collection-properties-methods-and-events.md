@@ -2,7 +2,6 @@
 title: コレクションのプロパティ、メソッド、およびイベントのキー |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,14 +16,15 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41770aad205b9c1a6fe245de1f1b8e8b76649fe9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8e95e41d13770e464c5cecf3922d784a75d968e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286571"
 ---
 # <a name="keys-collection-properties-methods-and-events"></a>キー コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  

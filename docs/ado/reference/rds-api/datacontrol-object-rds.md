@@ -2,7 +2,6 @@
 title: DataControl オブジェクト (RDS) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8784dcbaa65a755a6469edaceb58288ab1e9c25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 587557a35fc80966151602eb965ab0a756596415
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287591"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl オブジェクト (RDS)
 データ クエリ バインド[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)1 つまたは複数のコントロール (たとえば、テキスト ボックス、取引先グリッド コントロールまたはコンボ ボックス) を表示する、 **Recordset** Web ページ上のデータ。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  クラス ID、 **.rds ですDataControl**オブジェクトが BD96C556 65A3-11-d 0 983A 00C04FC29E33 です。  
   
 > [!NOTE]

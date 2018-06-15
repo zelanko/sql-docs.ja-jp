@@ -2,7 +2,6 @@
 title: レベルのオブジェクト (ADO MD) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f515c5bc8eaac8e674bcf82bd3a5e47eeefc0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 35263c640b1446397776a4365349afdd522d78f4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283991"
 ---
 # <a name="level-object-ado-md"></a>レベル オブジェクト (ADO MD)
 それぞれが、階層内で同じランクを持つメンバーのセットが含まれています。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  コレクションのプロパティと、**レベル**オブジェクトを次を行うことができます。  
   
 -   識別、**レベル**で、[名前](../../../ado/reference/ado-md-api/name-property-ado-md.md)と[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティです。  
@@ -46,11 +46,11 @@ ms.lasthandoff: 05/03/2018
   
  **プロパティ**コレクションには、プロバイダーが指定したプロパティが含まれています。 次の表は、利用可能なプロパティを一覧表示します。 実際のプロパティの一覧は、プロバイダーの実装によって異なる場合があります。 使用可能なプロパティの完全な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|Description|  
+|名前|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブに所属するカタログの名前。|  
 |CubeName|キューブの名前。|  
-|Description|レベルのわかりやすい説明。|  
+|説明|レベルのわかりやすい説明。|  
 |DimensionUniqueName|明確な名前、[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)です。|  
 |HierarchyUniqueName|階層の明確な名前。|  
 |LevelCaption|ラベルまたはキャプション、レベルに関連付けられています。|  

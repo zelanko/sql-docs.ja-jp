@@ -2,7 +2,6 @@
 title: FilterCriterion プロパティ (RDS) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: adc1d9d22b94ab3b6e03bddf37fa6058f4ccaca3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 015cf292a4b9cd0720e379b83d5fcf254c841c8f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288258"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion プロパティ (RDS)
 フィルター選択値を使用する評価演算子を示します。  
@@ -44,7 +44,7 @@ DataControl.FilterCriterion = String
  *文字列*  
  A**文字列**の評価の演算子を指定する値、 [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)レコードにします。 次のいずれかを指定できます: <、 \<=、>、> =、=、または <> です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 **FilterCriterion**、および[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)プロパティは、並べ替えおよびフィルター処理でクライアント側のキャッシュ機能を提供します。 並べ替えの機能は、1 つの列の値によって、レコードを並べ替えます。 フィルターの機能は、完全な検索条件に基づくレコードのサブセットを表示[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)はキャッシュに保持されます。 [リセット](../../../ado/reference/rds-api/reset-method-rds.md)メソッドは条件を実行し、現在の置換**Recordset** 、更新可能で**レコード セット**です。  
   
  "! ="演算子が無効の**FilterCriterion**。 代わりに、"<>"を使用します。  

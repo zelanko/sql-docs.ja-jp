@@ -2,7 +2,6 @@
 title: 表示オブジェクト (ADOX) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a55d77b7bb7f79ee5871445d5169a4dfd2de5f5d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2980c92b7980fe2fa6ec16f82bc4d8f7d3aff585
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287441"
 ---
 # <a name="view-object-adox"></a>ビュー オブジェクト (ADOX)
 フィルター選択された一連のレコードまたは仮想テーブルを表します。 ADO と組み合わせて使用すると[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト、**ビュー**オブジェクトは追加、削除、または変更、ビューを使用できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ビューは、他のデータベース テーブルまたはビューから作成された、仮想テーブルです。 **ビュー**オブジェクトでは、理解、またはプロバイダーの"CREATE VIEW"構文を使用することがなく、ビューを作成することができます。  
   
  プロパティを持つ、**ビュー**オブジェクトをすることができます。  

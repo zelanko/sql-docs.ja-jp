@@ -2,7 +2,6 @@
 title: InvokeService (RDS) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78c815f75b5e30713e0b7f9e5b7ec83c4c3eb6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92927a240c0501196c1b9bf0c1643f6cb0f708d4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288291"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 オブジェクトのより高機能なバージョンで要求されたインターフェイスへのポインターを返します。  
@@ -53,7 +53,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 ## <a name="return-value"></a>戻り値  
  どうかを示す HRESULT 値への呼び出し、 **InvokeService**メソッドが正常に完了しました。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  RDS カーソル エンジンの実装の**InvokeService**入力行セット (または複数の結果オブジェクト) を受け取り、入力行セットからカーソル エンジンを追加およびそれ自体でポインターを返します。  
   
 ## <a name="applies-to"></a>適用対象  

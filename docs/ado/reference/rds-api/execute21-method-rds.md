@@ -2,7 +2,6 @@
 title: Execute21 メソッド (RDS) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1136e547d464f511aff92f4a6805da0262c7ed35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bfe6de22f60ff43ab41144f0ee2e6e0fbb667766
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288331"
 ---
 # <a name="execute21-method-rds"></a>Execute21 メソッド (RDS)
 要求を実行し、ADO 2.1 で使用する ADO レコード セットを作成します。  
@@ -73,7 +73,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  パラメーターの定義のセーフ配列を含むバリアント型。 場合、 *GetInfo*オプションに指定されました*lExecuteOptions*、このパラメーターは、OLE DB プロバイダーから取得したパラメーターの定義を返すに使用します。 それ以外の場合、このパラメーターを空にすることがあります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  *HandlerString*パラメーターを null にすることがあります。 この場合の処理は、RDS サーバーを構成する方法によって異なります。 "MSDFMAP.handler"のハンドラーの文字列では、Microsoft から提供されたハンドラー (Msdfmap.dll) を使用することを示します。 "MASDFMAP.handler,sample.ini"のハンドラー文字列は、Msdfmap.dll ハンドラーを使用することと、"sample.ini"の引数をハンドラーに渡される必要があることを示します。 MSDFMAP.dll は、方向、sample.ini を使用して、接続およびクエリ文字列を確認すると、引数を解釈します。  
   
 > [!NOTE]
