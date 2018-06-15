@@ -28,14 +28,14 @@ Python SQL ドライバーが既定では SQL Server と Azure SQL データベ�
   
 ## <a name="windows"></a>Windows  
   
-1. **Python ランタイムおよびパッケージ マネージャー pip をインストール**  
+1. **Python ランタイムおよび pip パッケージ マネージャーをインストール**
 a. [python.org](https://www.python.org/downloads/) へ移動します。
 b. Windows インストーラー msi の適切なリンクをクリックします。   
 c. ダウンロードしたら msi を実行して Python ランタイムをインストールします。
   
 2. [こちら](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql) から **Pymssql モジュールをダウンロード**
   
-    正しい whl ファイルを選択していることを確認してください。  例: 64 ビット コンピューターで Python 2.7 を使用している場合は選択: pymssql‑2.1.1‑cp27‑none‑win_amd64.whl です。 ダウンロードしたら、.whl ファイルの配置、c:/Python27 フォルダーです。  
+    正しい whl ファイルを選択していることを確認してください。 例: 64 ビット コンピューターで Python 2.7 を使用している場合は、pymssql‑2.1.1‑cp27‑none‑win_amd64.whl を選択します。.whl ファイルをダウンロードしたら、の配置、C:/Python27 フォルダーに配置します。
       
 3. **Cmd.exe を開きます**  
   
