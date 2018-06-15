@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018699"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>[レポート セクション] ダイアログ ボックス (レポート ビルダー)
   レポートを開くと、レポート ビルダーにより、レポートにレポート定義言語 (RDL) の **\<Section>** 要素が 1 つだけ含まれていることが確認されます。 複数の **\<Section>** 要素を含むレポートを開くことはサポートされていません。  

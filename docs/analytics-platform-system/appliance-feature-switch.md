@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550903"
 ---
 #<a name="appliance-feature-switch"></a>アプライアンス機能のスイッチ
 **機能スイッチ**ページには、分析プラットフォーム システム AU7 で導入された 2 つの機能のスイッチに関する情報が表示されます。 このページを使用して、更新または Analytics Platform System の機能と設定の有効/無効にします。 機能スイッチの値を変更するには、サービスの再起動が必要です。

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022009"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>レポート ページでの Tablix データ領域の表示の制御
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでテーブル、マトリックス、または一覧のデータ領域に設定して、レポートを表示するときのそれらの外観を変更できるプロパティについて説明します。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
  次の方法で、レポートにおける Tablix データ領域の表示方法を制御できます。  
   
--   **複数ページで行および列のヘッダーを繰り返して表示する。**Tablix データ領域にまたがる各ページに、行および列ヘッダーを表示できます。 詳細については、「[複数のページへの行および列ヘッダーの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)」を参照してください。  
+-   **複数ページで行および列のヘッダーを繰り返して表示する。** Tablix データ領域にまたがる各ページに、行および列ヘッダーを表示できます。 詳細については、「[複数のページへの行および列ヘッダーの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)」を参照してください。  
   
 -   **スクロール時に行および列ヘッダーを固定する。** ブラウザーを使用してレポートをスクロールする際に、ビューの行および列ヘッダーを固定するかどうかを制御できます。 詳細については、「[レポートのスクロール時にヘッダーを表示したままにする &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)」を参照してください。  
   

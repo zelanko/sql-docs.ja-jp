@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022435"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   レポート ビルダーと [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーにはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート データセットの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] からレポート データセットに取得するデータを指定するクエリの作成に使用できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -151,7 +152,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **フィールドの編集** : テーブル間のリレーションシップの追加や変更を行う **[関連フィールドの編集]** ダイアログ ボックスが開きます。 結合する左右のテーブルのフィールドを選択します。 左テーブルおよび右テーブルの複数のフィールドを結合すると、リレーションシップ内で複数の結合条件を指定できます。 左右のテーブルを結合する 2 つのフィールドは同じ名前でなくてもかまいません。 結合されるフィールドのデータ型は、互換性のあるデータ型である必要があります。  
   
--   **リレーションシップの削除** : 選択したリレーションシップを削除します**。**  
+-   **リレーションシップの削除** : 選択したリレーションシップを削除します **。**  
   
 -   **[上へ移動]** および **[下へ移動]** : **[リレーションシップ]** ボックスの一覧内のリレーションシップを上下に移動します。 クエリ内のリレーションシップの配置順によっては、クエリ結果に影響が出る場合があります。 リレーションシップがクエリに追加される順序は、 **[リレーションシップ]** ボックスの一覧内でリレーションシップが表示される順序と同じです。  
   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018979"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>モバイル レポートにデータ グリッドを追加する | Reporting Services
 最善の視覚化がデータ自体である場合があります。 ここでは、 *に使用できる次種類*データ グリッド [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]つまりテーブルについて説明します。
