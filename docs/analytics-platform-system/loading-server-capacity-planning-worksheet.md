@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539442"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Analytics Platform System のサーバー容量の計画ワークシートの読み込み
 この容量の計画ワークシートでは、SQL Server PDW にデータを読み込むためのサーバーを読み込んでの要件を決定するのに役立ちます。 購入または既存のサーバーに負荷をプロビジョニングするために、プランを作成するのにには、これを使用します。  

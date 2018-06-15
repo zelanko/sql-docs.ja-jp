@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203134"
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>SQLRUserGroup をデータベース ユーザーとして追加します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="add-sqlrusergroup-as-a-sql-server-login"></a>SQL Server ログインとして SQLRUserGroup を追加します。
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 **[セキュリティ]**を展開し、 **[ログイン]**を右クリックして、 **[新しいログイン]**を選択します。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 **[セキュリティ]** を展開し、 **[ログイン]** を右クリックして、 **[新しいログイン]** を選択します。
 
 2. **ログイン - 新規**ダイアログ ボックスで、**検索**です。 (何も入力しないでボックスで、まだ。)
     

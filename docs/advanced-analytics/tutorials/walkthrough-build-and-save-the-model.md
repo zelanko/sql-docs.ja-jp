@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31204154"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>R モデルを構築して、SQL Server に保存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -156,7 +157,7 @@ ms.lasthandoff: 04/16/2018
 
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]を使用して R モデルを呼び出すことができます、[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャを簡単に、クライアント アプリケーションで R を使用します。
 
-ただし、外部アプリからモデルを呼び出すには、運用に使用するデータベースにモデルを保存する必要があります。 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]で、トレーニングしたモデルは、 **varbinary(max)**型の 1 列にバイナリ形式で保存されます。
+ただし、外部アプリからモデルを呼び出すには、運用に使用するデータベースにモデルを保存する必要があります。 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]で、トレーニングしたモデルは、 **varbinary(max)** 型の 1 列にバイナリ形式で保存されます。
 
 そのため、R から SQL Server にトレーニングしたモデルを移動するには、次の手順を行う必要があります。
 

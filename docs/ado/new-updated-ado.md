@@ -1,4 +1,4 @@
-﻿---
+---
 title: 更新済み - SQL Server ドキュメントの ADO |Microsoft ドキュメント
 description: 更新されたコンテンツで最近変更したドキュメントについては、ActiveX データ オブジェクト (ADO) 用 Microsoft SQL Server のスニペットを表示します。
 manager: craigg

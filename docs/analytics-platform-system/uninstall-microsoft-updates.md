@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538552"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Analytics Platform System の Microsoft 更新プログラムをアンインストールします。
 この記事では、Analytics Platform System アプライアンス上の以前にインストールされた Microsoft 更新プログラムをアンインストールする方法について説明します。  

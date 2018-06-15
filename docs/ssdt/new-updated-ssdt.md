@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32699713"
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>新規および最近の更新: SQL Server Data Tools (SSDT)
 

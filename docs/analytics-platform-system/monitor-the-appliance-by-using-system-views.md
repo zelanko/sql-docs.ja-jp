@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539062"
 ---
 # <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>Analytics Platform System のシステム ビューとアプライアンスを監視します。
 この記事は、SQL Server PDW を監視するために使用できるシステム ビューを一覧表示します。  

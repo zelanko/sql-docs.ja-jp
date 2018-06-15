@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538352"
 ---
 # <a name="system-databases-in-parallel-data-warehouse-pdw"></a>システム データベースで並列データ ウェアハウス (PDW)
 システム データベースは SQL Server PDW は、ユーザー、データベース、および一時データの管理に使用するデータベースです。 SQL Server PDW には、次のシステム データベースが含まれています。 マスター、および tempdb です。  

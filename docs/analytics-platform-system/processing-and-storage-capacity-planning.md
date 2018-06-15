@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539602"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Analytics Platform System での処理と記憶域の容量
 お客様のビジネス要件では、データのスケール ユニットの数と、Analytics Platform System (APS) アプライアンスで必要なコンピューティング ノードのディスクのサイズを決定します。 これらの処理およびストレージの計算を使用して、容量を購入し、計画に関する決定事項を進めます。  

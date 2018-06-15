@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544784"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Analytics Platform System での Configuration Manager を起動します。
 このトピックでは起動するための説明、 **Configuration Manager** Analytics Platform System アプライアンスです。  

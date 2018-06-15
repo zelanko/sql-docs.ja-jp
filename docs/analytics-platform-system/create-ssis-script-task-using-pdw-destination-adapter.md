@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538972"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>SSIS Parallel Data Warehouse 変換先アダプターを使用するスクリプト タスクを作成します。
 この SSIS パッケージのスクリプト コードでは、SSIS PDW 変換先アダプターを使用するためのコード例を示します。  Integration Services のスクリプト タスクでは、SSIS 制御フローのコンテキスト内で .Net アプリケーションで実行できるあらゆる操作を実行することができます。 

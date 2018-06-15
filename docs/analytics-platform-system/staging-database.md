@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544660"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>並列データ ウェアハウス (PDW) で、ステージング データベースを使用します。
 SQL Server 並列データ ウェアハウス (PDW) では、ステージング データベースを使用して、読み込みプロセス中に一時的にデータを格納します。 既定では、SQL Server PDW はテーブルの断片化が発生することができますが、ステージング データベースと転送先データベースを使用します。 テーブルの断片化を解消するには、ユーザー定義のステージング データベースを作成できます。 または、読み込みエラーからのロールバックが問題ではないときに、一時テーブルをスキップし、変換先テーブルに直接読み込むでパフォーマンスを改善する、fastappend 読み込みモードを使用することができます。  

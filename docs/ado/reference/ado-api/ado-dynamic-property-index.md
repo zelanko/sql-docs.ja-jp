@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32796515"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 動的プロパティのインデックス
 データ プロバイダー、サービス プロバイダー、およびサービスのコンポーネントが動的なプロパティを追加できます、**プロパティ**、開かれていないのコレクション[接続](../../../ado/reference/ado-api/connection-object-ado.md)と[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 特定のプロバイダーは、これらのオブジェクトが開かれたときに、追加のプロパティを挿入も可能性があります。 これらのプロパティの一部は、「、 [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)セクションです。 内の特定のプロバイダーの詳細に表示される、[付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)セクションです。  

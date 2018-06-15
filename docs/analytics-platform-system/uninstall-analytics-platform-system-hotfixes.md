@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538782"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Analytics Platform System の修正プログラムをアンインストールします。 
 次の手順では、以前にインストールされた Analytics Platform System 修正プログラムをアンインストールする方法について説明します。  

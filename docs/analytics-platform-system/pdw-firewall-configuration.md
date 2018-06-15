@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539382"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Analytics Platform System での並列データ ウェアハウス ファイアウォール構成
 **ファイアウォール**ページの SQL Server PDW 構成マネージャーでは、有効にするにまたは許可するか、Analytics Platform System アプライアンス上の特定のポートにアクセスできないようにするファイアウォール規則を無効にすることができます。  

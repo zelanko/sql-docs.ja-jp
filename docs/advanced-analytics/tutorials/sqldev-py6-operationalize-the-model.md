@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203474"
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>手順 6: 運用 SQL Server を使用して、Python モデル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,8 +25,8 @@ ms.lasthandoff: 04/16/2018
 
 このレッスンは、Python モデルに基づいて予測を作成するための 2 つの方法を示します。 バッチ スコアリング、と、1 行ずつをスコア付けします。
 
-- **バッチ スコアリング:**複数行の入力データを提供する SELECT クエリを引数として、ストアド プロシージャに渡します。 結果は、観測値が、入力ケースに対応するテーブルです。
-- **個々 のスコア付け:**一連の個別のパラメーター値を入力として渡します。  このストアド プロシージャは、1 つの行または値を返します。
+- **バッチ スコアリング:** 複数行の入力データを提供する SELECT クエリを引数として、ストアド プロシージャに渡します。 結果は、観測値が、入力ケースに対応するテーブルです。
+- **個々 のスコア付け:** 一連の個別のパラメーター値を入力として渡します。  このストアド プロシージャは、1 つの行または値を返します。
 
 スコアリングのために必要なすべての Python コードは、ストアド プロシージャの一部として提供されます。
 

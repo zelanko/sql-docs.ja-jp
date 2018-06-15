@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539532"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>リモート テーブルのコピーの並列データ ウェアハウスを構成します。
 SQL Server PDW アプライアンス以外のサーバー上の SMP SQL Server データベースにテーブルをコピーするリモート テーブルのコピー機能を使用するを構成する方法について説明します。  

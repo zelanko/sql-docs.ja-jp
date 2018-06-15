@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539592"
 ---
 # <a name="analytics-platform-system-high-availability"></a>Analytics Platform System の高可用性
 高可用性の Analytics Platform System (APS) を構築する方法について説明します。  

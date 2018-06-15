@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539582"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>取得して、並列データ ウェアハウスのサーバーのバックアップを構成します。
 この記事では、Analytics Platform System (APS) と並列データ ウェアハウス (PDW) のバックアップと復元の機能を使用するサーバーのバックアップとしてアプライアンス非 Windows システムを構成する方法について説明します。  

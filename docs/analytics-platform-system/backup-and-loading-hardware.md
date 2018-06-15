@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544734"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>バックアップとハードウェアの概要 - 並列データ ウェアハウスの読み込み
 ウェアハウス ソリューション Analytics Platform System (APS) で並列データ ウェアハウス (PDW) と、エンド ツー エンド データを展開するには、データ ウェアハウスをバックアップして、データの読み込みの計画を作成する必要があります。 取得して、ビジネス要件を満たすサーバーをバックアップおよび読み込みを構成するには、このガイドを使用します。  

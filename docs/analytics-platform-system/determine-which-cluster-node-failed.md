@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544744"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>どのクラスター決定 Analytics Platform System のノードに失敗しました
 このトピックでは、クラスターのフェールオーバーが発生し、クラスター フェールオーバーの警告が発生しました後に失敗しました Analytics Platform System (APS) ノードの名前を確認する方法について説明します。 クラスターのフェイル オーバーのトラブルシューティングの一環として、問題を解決するためにマイクロソフトに連絡する前に失敗したノードの名前を決定する必要があります。  

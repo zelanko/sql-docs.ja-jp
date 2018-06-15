@@ -1,4 +1,4 @@
-﻿---
+---
 title: 更新済み - SQL Server ドキュメントの MDX |Microsoft ドキュメント
 description: 更新されたコンテンツで最近変更したドキュメントについては、多次元式 (MDX) の Microsoft SQL Server のスニペットを表示します。
 manager: craigg

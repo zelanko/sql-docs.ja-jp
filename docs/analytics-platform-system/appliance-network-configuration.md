@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539312"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Analytics Platform System のアプライアンス ネットワークの構成
 Analytics Platform System (APS) アプライアンスを構築およびすべてのサーバーと IHV の工場から、該当するデバイス全体での IP アドレスの修正プログラムのセットで構成します。 アプライアンスの配信、ごとには、特定の顧客のデータ センターの要件に一致する (イーサネット) の外部 IP アドレスを再構成する必要があります。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31202995"
 ---
 # <a name="work-with-sql-server-data-using-r-sql-and-r-deep-dive"></a>R (SQL と R deep dive) を使用する SQL Server データの操作します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,14 +44,14 @@ ms.lasthandoff: 04/16/2018
 > 
 > さらに、データベースの所有者でない場合は、アクセス許可、EXECUTE ANY EXTERNAL SCRIPT、R スクリプトを実行するために必要があります。
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] を有効にするインスタンスを選択し、 **[データベース]**を右クリックして、 **[新しいデータベース]**を選択します。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] を有効にするインスタンスを選択し、 **[データベース]** を右クリックして、 **[新しいデータベース]** を選択します。
   
 2. 新しいデータベースの名前を入力します。 任意の名前を使用できます。すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトと R スクリプトをそれに合わせて編集してください。
   
     > [!TIP]
     > 更新されたデータベース名を表示するには、 **[データベース]** を右クリックして **[更新]** を選択します。
   
-3. **[新しいクエリ]**をクリックして、データベース コンテキストを master データベースに変更します。
+3. **[新しいクエリ]** をクリックして、データベース コンテキストを master データベースに変更します。
   
 4. 新しい **[クエリ]** ウィンドウで、次のコマンドを実行してユーザー アカウントを作成し、このチュートリアルで使用するデータベースに割り当てます。 必要に応じてデータベースの名前を変更します。
   
@@ -82,7 +83,7 @@ GO
 CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
-5. ユーザーが作成されたことを確認するには、新しいデータベースを選択し、 **[セキュリティ]**、 **[ユーザー]**の順に展開します。
+5. ユーザーが作成されたことを確認するには、新しいデータベースを選択し、 **[セキュリティ]**、 **[ユーザー]** の順に展開します。
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 

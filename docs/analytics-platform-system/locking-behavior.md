@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539462"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Parallel Data Warehouse でのロック動作
 Parallel Data Warehouse との使用方法のロックのトランザクションの整合性を確保する複数のユーザーが同時にデータにアクセスするときに、データベースの一貫性を維持するについて説明します。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539082"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>並列データ ウェアハウスにデータを読み込む
 読み込みまたは Integration Services を使用してデータに SQL Server 並列データ ウェアハウス (PDW) を挿入[bcp ユーティリティ](../tools/bcp-utility.md)、 **dwloader**コマンド ライン ローダー、または SQL の INSERT ステートメントです。  

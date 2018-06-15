@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539752"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader Parallel Data Warehouse 用のコマンド ライン ローダー
 **dwloader**を既存のテーブルに一括でテーブルの行を読み込む並列データ ウェアハウス (PDW) コマンド ライン ツールです。 行を読み込むときに、テーブルの末尾にすべての行を追加することができます (*追加モード*または*fastappend モード*)、新しい行を追加および既存の行を更新 (*upsert モード*)、またはすべてを削除します。既存の読み込みの前に行とし、空のテーブルにすべての行を挿入 (*モードを再読み込み*)。  

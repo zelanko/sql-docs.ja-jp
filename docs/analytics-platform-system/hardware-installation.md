@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539092"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Analytics Platform System アプライアンスのハードウェアのインストール
 この記事では、移動をアンパックして、SQL Server PDW アプライアンス用のハードウェアをインストールする方法について説明します。 この記事は、情報提供だけあり、プロセスを理解するためです。 アプライアンスの開梱済みのインストール、およびに経由で有効にする前に検証する必要があります。 顧客への参加は、データなどのアイテムに必要なアクセス、電力、およびイーサネット接続を中央揃えされます。  

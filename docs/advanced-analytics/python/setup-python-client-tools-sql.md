@@ -1,4 +1,4 @@
-﻿---
+---
 title: SQL Server の Machine Learning で使用する Python クライアント ツールのセットアップ |Microsoft ドキュメント
 ms.prod: sql
 ms.technology: machine-learning

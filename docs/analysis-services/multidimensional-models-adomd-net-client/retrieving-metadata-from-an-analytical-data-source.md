@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021169"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>分析データ ソースからのメタデータの取得
   分析データを取得して操作するアプリケーションにとって、メタデータは重要です。 リレーショナル データ ソースからデータを取得する場合、データセットが入れ子になっていても、それらのデータの次元を予測することができます。 通常、リレーショナル データベースから取得する結果セットは 2 次元またはスカラー構造です。 一方、分析データ ソースから取得したデータは次元がさまざまであり、多層構造になっている場合もあります。  

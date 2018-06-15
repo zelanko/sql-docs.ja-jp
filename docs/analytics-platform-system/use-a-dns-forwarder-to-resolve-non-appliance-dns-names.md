@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544944"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Analytics Platform System のアプライアンス以外の DNS 名を解決するのには、DNS フォワーダーを使用します。
 Active Directory ドメイン サービスのノードで、DNS フォワーダーを構成することができます (***appliance_domain *-AD01**と ***appliance_domain *-AD02**) の使用できるように、Analytics Platform System アプライアンススクリプトおよび外部のサーバーにアクセスするソフトウェア アプリケーションです。  

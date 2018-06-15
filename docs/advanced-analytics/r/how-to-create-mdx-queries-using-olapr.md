@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203594"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>OlapR を使用して R で MDX クエリを作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -180,7 +181,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>指定したディメンションと階層のすべてのメンバーを取得するには
 
-ソースを定義してハンドルを作成した後、取得するキューブ、ディメンション、および階層を指定します。 戻り値の結果が付いている項目に**->**前のメンバーの子を表します。
+ソースを定義してハンドルを作成した後、取得するキューブ、ディメンション、および階層を指定します。 戻り値の結果が付いている項目に**->** 前のメンバーの子を表します。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"

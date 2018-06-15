@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539142"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>バックアップ サーバー容量計画ワークシートの Parallel Data Warehouse
 この容量の計画ワークシートでは SQL Server PDW のデータベース バックアップを実行するサーバーのバックアップの要件を決定し、復元操作を行うことができます。 購入新規またはプロビジョニング既存バックアップ サーバーの計画を作成するのにには、これを使用します。  

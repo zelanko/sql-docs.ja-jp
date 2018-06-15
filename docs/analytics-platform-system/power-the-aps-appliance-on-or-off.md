@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538762"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Analytics Platform System の電源をオンまたはオフ、アプライアンス
 このトピックでは、電源をオンまたは電源オフ、Analytics Platform Systemappliance で並列データ ウェアハウスを実行する HDInsight 領域を必要に応じて実行する方法について説明します。 使用してこのトピック Analytics Platform System アプライアンスを移動すると、または電源にアプライアンスで壊滅的な停電後です。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33988756"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>チュートリアル: SQL Server Management Studio を使用して SQL Server インスタンスに接続し、クエリを行う
 このチュートリアルでは、SQL Server Management Studio (SSMS) を使って SQL Server インスタンスに接続し、いくつかの基本的な Transact-SQL (T-SQL) コマンドを実行する方法を説明します。 この記事では、以下のことを行う方法を示します。
