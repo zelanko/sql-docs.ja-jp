@@ -2,7 +2,6 @@
 title: DCOM のストリームのマーシャ リング形式を設定 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eed72f16fa58e4dc47486967e615de746e27a2a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c63b304e6ee2c2060be1b0233e10197adc955427
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274441"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>DCOM のストリームのマーシャ リング形式を設定
 RDS 1.5 以前のコンポーネントを使用してクライアント コンピューターは、RDS 2.0 またはそれ以降のコンポーネントを使用するサーバーと互換性がありません。 RDS 2.0 またはそれ以降のサポートが効率的に転送する、基になるプロトコルとして DCOM を使用して、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 場合は、クライアントには、RDS 1.5 以前のコンポーネントが実行されて、(RDS 1.0 と呼ばれます) 前の RDS サポートまたは新しい RDS サポート (RDS 2.0 またはそれ以降) を使用するようにサーバーを設定できます。 次のレジストリ エントリのいずれかを設定します。  
@@ -34,7 +34,7 @@ RDS 1.5 以前のコンポーネントを使用してクライアント コン�
 \CLSID\[58ECEE30-E715-11CF-B0E3-00AA003F000F}\ADTGOptions]"MarshalFormat"="RDS10"  
 ```  
   
- -または-  
+ - または -  
   
 ```  
 [HKEY_CLASSES_ROOT]  

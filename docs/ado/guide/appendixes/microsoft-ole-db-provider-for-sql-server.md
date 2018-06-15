@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for SQL Server |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbe50621dc248a3f11368717bbe9423b5a8b59e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca737ed49349cc87e378fbd891ec224155147acc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271641"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server の概要
 Microsoft OLE DB Provider for SQL Server、SQLOLEDB では、ADO では Microsoft SQL Server にアクセスできます。
@@ -50,7 +50,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  文字列は、これらのキーワードで構成されます。
 
-|Keyword|Description|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|OLE DB Provider for SQL Server を指定します。|
 |**データ ソース**または**サーバー**|サーバーの名前を指定します。|
@@ -64,9 +64,9 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>プロバイダー固有の接続パラメーター
  プロバイダーは、ADO で定義されているだけでなく、いくつかのプロバイダーに固有の接続パラメーターをサポートします。 ADO 接続のプロパティを持つこれらのプロバイダーに固有のプロパティを設定してを使用して、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)の一部として設定できますまたは、 **ConnectionString**。
 
-|パラメーター|Description|
+|パラメーター|説明|
 |---------------|-----------------|
-|Trusted_Connection|ユーザーの認証モードを示します。 これに設定できます**はい**または**いいえ**です。 既定値は **いいえ**します。 このプロパティ設定されている場合**はい**、SQLOLEDB では、Microsoft Windows NT の認証モードを使用して、ユーザーによって指定された SQL Server データベースへのアクセスを承認します、**場所**と[データソース](../../../ado/reference/ado-api/datasource-property-ado.md)プロパティの値。 このプロパティ設定されている場合**いいえ**SQLOLEDB では、混在モードを使用して、SQL Server データベースへのユーザー アクセスを承認します。 SQL Server ログインとパスワードが指定されて、**ユーザー Id**と**パスワード**プロパティです。|
+|Trusted_Connection|ユーザーの認証モードを示します。 これに設定できます**はい**または**いいえ**です。 既定値は**いいえ**です。 このプロパティ設定されている場合**はい**、SQLOLEDB では、Microsoft Windows NT の認証モードを使用して、ユーザーによって指定された SQL Server データベースへのアクセスを承認します、**場所**と[データソース](../../../ado/reference/ado-api/datasource-property-ado.md)プロパティの値。 このプロパティ設定されている場合**いいえ**SQLOLEDB では、混在モードを使用して、SQL Server データベースへのユーザー アクセスを承認します。 SQL Server ログインとパスワードが指定されて、**ユーザー Id**と**パスワード**プロパティです。|
 |[現在の言語]|SQL Server 言語名を示します。 システム メッセージの選択や書式設定に使われる言語を示します。 SQL Server の言語をインストールする必要がそれ以外の場合の開始が、接続は失敗します。|
 |[ネットワーク アドレス]|指定された SQL Server のネットワーク アドレスを示す、**場所**プロパティです。|
 |ネットワーク ライブラリ|SQL Server と通信するために使用されるネットワーク ライブラリ (DLL) の名前を示します。 この名前には、パスやファイル拡張子 (.dll) は含めません。 既定値は、SQL Server client の構成によって提供されます。|
@@ -118,7 +118,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   MDAC 2.7、MDAC 2.8、Windows Data Access Components (Windows DAC) 6.0 では、OLE DB Provider for SQL Server をサポート、 **sql_variant**型です。 OLE DB Provider for ODBC されていません。
 
--   **Sql_variant**型は完全に一致しない、 **DBTYPE_VARIANT**データ型。  **Sql_variant**型でサポートされていないいくつかの新しいサブタイプをサポートしている**DBTYPE_VARIANT、**など**GUID**、 **ANSI** (UNICODE 以外の)文字列、および**BIGINT**です。 サブタイプを以外を使用して以前に一覧表示、正しく機能します。
+-   **Sql_variant**型は完全に一致しない、 **DBTYPE_VARIANT**データ型。  **Sql_variant**型でサポートされていないいくつかの新しいサブタイプをサポートしている**DBTYPE_VARIANT、** など**GUID**、 **ANSI** (UNICODE 以外の)文字列、および**BIGINT**です。 サブタイプを以外を使用して以前に一覧表示、正しく機能します。
 
 -   **Sql_variant**サブタイプ**数値**と一致しません、 **DBTYPE_DECIMAL**サイズ。
 
@@ -183,7 +183,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |選択リストの ORDER BY 列|DBPROP_ORDERBYCOLUMNSINSELECT|
 |出力パラメーターの使用状況|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Ref アクセサーを使って渡す|DBPROP_BYREFACCESSORS|
-|Password|DBPROP_AUTH_PASSWORD|
+|パスワード|DBPROP_AUTH_PASSWORD|
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |永続的な ID 型|DBPROP_PERSISTENTIDTYPE|
 |中止の動作を準備します。|DBPROP_PREPAREABORTBEHAVIOR|
