@@ -2,7 +2,6 @@
 title: メソッドとインデックスのプロパティの例 (VB) をシーク |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0fb30723fb55c7e33de4f841eb64b0be5dcafef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f9b13fa707cd1b44621b3c3dd74b7649f25b5f7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281551"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>メソッドとインデックスのプロパティの例 (VB) にシークします。
 この例では、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[シーク](../../../ado/reference/ado-api/seek-method.md)メソッドおよび[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティと組み合わせて、指定された***従業員 ID***、検索するには従業員の名、***従業員***Nwind.mdb データベースのテーブルです。  

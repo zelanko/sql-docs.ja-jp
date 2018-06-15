@@ -2,7 +2,6 @@
 title: PageCount プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31eecabefdc56da6f4a252e974cc8ff97f9190c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 51e970138985ae28bcad6ff9340bad40a886932c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280051"
 ---
 # <a name="pagecount-property-ado"></a>PageCount プロパティ (ADO)
 データのページ数を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトが含まれます。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>戻り値  
  返します、**長い**内のページの数を示す値、 **Recordset**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **PageCount**プロパティ内のデータのページ数を調べること、 **Recordset**オブジェクト。 *ページ*レコードと同じサイズのグループ、 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)プロパティの設定。 も少ないレコードがあるため、最後のページが完了していない場合でも、 **PageSize**値で追加のページとして数えられます、 **PageCount**値。 場合、 **Recordset**オブジェクトでは、このプロパティはサポートされません、値があることを示す-1 になります、 **PageCount**決められていません。  
   
  参照してください、 **PageSize**と[と、AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)詳細のページの機能のプロパティです。  

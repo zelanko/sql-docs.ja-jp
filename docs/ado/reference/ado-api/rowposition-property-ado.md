@@ -2,7 +2,6 @@
 title: RowPosition プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2566a5965b0170fddf5dfd08744db1bb141a0d14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b852ff5fab54e11f3fd39c2ca92266c95587987
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281341"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition プロパティ (ADO)
 OLE DB の設定を取得または**RowPosition**オブジェクトから/上、 **ADORecordsetConstruction**オブジェクト。 使用すると**put_RowPosition**を設定する、 **RowPosition** 、結果として得られるオブジェクト**Recordset**オブジェクトが使用、 **RowPosition**オブジェクトを現在の行を決定します。  
@@ -52,7 +52,7 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
 ## <a name="return-values"></a>戻り値  
  このプロパティのメソッドでは、S_OK および E_FAIL を含む、標準の HRESULT 値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロパティ設定されている場合場合、**行セット**上のオブジェクト、 **RowPosition**オブジェクトは異なる、**行セット**上のオブジェクト、 **Recordset**オブジェクト、後者前者をオーバーライドします。 現在、同じ動作が適用されます**章**の**RowPosition**もします。  
   
 ## <a name="applies-to"></a>適用対象  

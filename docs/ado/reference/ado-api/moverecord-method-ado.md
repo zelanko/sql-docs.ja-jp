@@ -2,7 +2,6 @@
 title: 後続のメソッド (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 103206f4f4fe731da23a194cf89a54a404545f0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5171b0399614e266ff5ecfa974921f7bdef7646
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279621"
 ---
 # <a name="moverecord-method-ado"></a>後続のメソッド (ADO)
 表されるエンティティに移動、[レコード](../../../ado/reference/ado-api/record-object-ado.md)別の場所にします。  
@@ -39,27 +39,27 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 省略可。 A**文字列**を識別する URL を含む値、**レコード**を移動します。 場合*ソース*を省略するか、空の文字列、これによって表されるオブジェクトを示す**レコード**が移動します。 たとえば場合、**レコード**ファイル、ファイルの内容を表しますが指定された場所に移動されます*先*です。  
+ 任意。 A**文字列**を識別する URL を含む値、**レコード**を移動します。 場合*ソース*を省略するか、空の文字列、これによって表されるオブジェクトを示す**レコード**が移動します。 たとえば場合、**レコード**ファイル、ファイルの内容を表しますが指定された場所に移動されます*先*です。  
   
  *変換先*  
- 省略可。 A**文字列**場所を指定する URL を含む値で*ソース*移動されます。  
+ 任意。 A**文字列**場所を指定する URL を含む値で*ソース*移動されます。  
   
  *UserName*  
- 省略可。 A**文字列**が必要な場合へのアクセスを許可するユーザー ID を表す値*先*です。  
+ 任意。 A**文字列**が必要な場合へのアクセスを許可するユーザー ID を表す値*先*です。  
   
  *Password*  
- 省略可。 A**文字列**必要な場合は、以下のことを確認するためのパスワードを格納している*UserName*です。  
+ 任意。 A**文字列**必要な場合は、以下のことを確認するためのパスワードを格納している*UserName*です。  
   
- *Options*  
- 省略可。 A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)値が既定値は**adMoveUnspecified**です。 このメソッドの動作を指定します。  
+ *[オプション]*  
+ 任意。 A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)値が既定値は**adMoveUnspecified**です。 このメソッドの動作を指定します。  
   
  *非同期*  
- 省略可。 A**ブール**値と**True**、この操作を非同期にする必要がありますを指定します。  
+ 任意。 A**ブール**値と**True**、この操作を非同期にする必要がありますを指定します。  
   
 ## <a name="return-value"></a>戻り値  
  A**文字列**値。 値では通常、*先*が返されます。 ただし、返される正確な値は、プロバイダーによって異なります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  値*ソース*と*先*することはできませんと同じです。 それ以外の場合、実行時エラーが発生します。 少なくともサーバー、パス、およびリソースの名前が異なる必要があります。  
   
  インターネット、パブリッシング用プロバイダーを使用して、ファイルに対しては、このメソッドはそれ以外の場合指定しない限り、移動対象のファイルにすべてのハイパー テキスト リンクを更新*オプション*です。 このメソッドは失敗*先*しない限り (たとえば、ファイルまたはディレクトリ)、既存のオブジェクトを識別**adMoveOverWrite**が指定されています。  

@@ -2,7 +2,6 @@
 title: Open メソッド (ADO レコード セット) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e562f329f6f95a36777fc4db9131091003be37e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9689d9068af961c5935c9447acb07bea4dc38b0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280621"
 ---
 # <a name="open-method-ado-recordset"></a>Open メソッド (ADO レコード セット)
 カーソルをオープン、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -39,19 +39,19 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 省略可。 A**バリアント**として評価された、有効な[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト、SQL ステートメント、テーブル名、ストアド プロシージャの呼び出し、URL、またはファイルの名前または[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトを含む、永続的に格納されている[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
+ 任意。 A**バリアント**として評価された、有効な[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト、SQL ステートメント、テーブル名、ストアド プロシージャの呼び出し、URL、またはファイルの名前または[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトを含む、永続的に格納されている[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
   
  *ActiveConnection*  
- 省略可。 いずれか、**バリアント**として評価された、有効な[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト変数名、または**文字列**を格納している[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)パラメーター。  
+ 任意。 いずれか、**バリアント**として評価された、有効な[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト変数名、または**文字列**を格納している[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)パラメーター。  
   
  *CursorType*  
- 省略可。 A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)を開くときに、プロバイダーが使用するカーソルの種類を決定する値、 **Recordset**です。 既定値は**adOpenForwardOnly**です。  
+ 任意。 A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)を開くときに、プロバイダーが使用するカーソルの種類を決定する値、 **Recordset**です。 既定値は**adOpenForwardOnly**です。  
   
  *LockType*  
- 省略可。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)ロック (同時実行) の種類を開くときに、プロバイダーを使用する必要がありますを決定する値、 **Recordset**です。 既定値は**adLockReadOnly**です。  
+ 任意。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)ロック (同時実行) の種類を開くときに、プロバイダーを使用する必要がありますを決定する値、 **Recordset**です。 既定値は**adLockReadOnly**です。  
   
- *Options*  
- 省略可。 A**長い**プロバイダーを評価する方法を示す値、*ソース*引数を表している場合のもの以外の場合、**コマンド**オブジェクト、または、 **Recordset**以前保存されているファイルから復元する必要があります。 1 つまたは複数指定できます[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)または[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)値で、ビットごとの OR 演算子と組み合わせて使用できます。  
+ *[オプション]*  
+ 任意。 A**長い**プロバイダーを評価する方法を示す値、*ソース*引数を表している場合のもの以外の場合、**コマンド**オブジェクト、または、 **Recordset**以前保存されているファイルから復元する必要があります。 1 つまたは複数指定できます[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)または[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)値で、ビットごとの OR 演算子と組み合わせて使用できます。  
   
 > [!NOTE]
 >  開いた場合、 **Recordset**から、**ストリーム**、永続化を含む**Recordset**を使用して、 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) の値**adAsyncFetchNonBlocking**効果はありません。 フェッチは同期的およびブロックしています。  
@@ -59,7 +59,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 > [!NOTE]
 >  **ExecuteOpenEnum**値**adExecuteNoRecords**または**adExecuteStream**では使用できません**開く**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ADO の既定のカーソル**Recordset**サーバー上にある順方向専用、読み取り専用カーソルします。  
   
  使用して、**開く**メソッドを**Recordset**オブジェクトをベース テーブルのクエリ、または以前に保存した結果からレコードを表すカーソルを開き、**レコード セット**です。  

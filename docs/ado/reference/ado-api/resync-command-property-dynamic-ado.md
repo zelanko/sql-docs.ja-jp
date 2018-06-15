@@ -2,7 +2,6 @@
 title: コマンドのプロパティ-動的 (ADO) を再同期 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 240c4d6ce4aa392f01ebb27a4a52fd73c684b981
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37896464c8c9387cb0d68da8bf9bc561e29602d0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281377"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>コマンドのプロパティ-動的 (ADO) を再同期します。
 文字列をユーザーが指定したコマンドを指定します、[再同期](../../../ado/reference/ado-api/resync-method.md)でという名前のテーブル内のデータを更新するメソッドの問題、[一意テーブル](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動的なプロパティです。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**文字列**コマンド文字列である値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトが複数のベース テーブルで実行される結合操作の結果を示します。 影響を受ける行によって異なります、 *AffectRecords*のパラメーター、[再同期](../../../ado/reference/ado-api/resync-method.md)メソッドです。 標準**再同期**メソッドが実行される場合、[一意テーブル](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)と**コマンドを再同期**プロパティが設定されていません。  
   
  コマンド文字列、**コマンドを再同期**プロパティは、パラメーター化コマンドまたは更新される行を一意に識別するストアド プロシージャでありするのには行として、同じ数と列の順序を含む 1 つの行を返します更新されます。 コマンド文字列には各主キー列のパラメーターが含まれています、**一意テーブル**以外の場合、実行時エラーが返されます。 パラメーターには、更新する行の主キーの値が自動的に入力します。  

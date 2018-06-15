@@ -2,7 +2,6 @@
 title: SchemaEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5cdc032d770f587e8c78c4df0f195d9535688888
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f10586341f780615c3955c32a9b02f9913ff2e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281561"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 スキーマの種類を指定**Recordset**を[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)メソッドを取得します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  各 ADO 定数は含まれてのトピックでの関数と列に関する追加情報が返された[付録 B スキーマ行セット](http://msdn.microsoft.com/en-us/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)の OLE DB プログラマーズ リファレンスです。 各トピックの名前は、次の表の説明 セクションでは、かっこに表示されます。  
   
  各 ADO MD 定数は含まれてのトピックでの関数と列に関する追加情報が返された[OLE DB for OLAP オブジェクトおよびスキーマ行セット](http://msdn.microsoft.com/en-us/d20bb2a6-68bd-423f-9ec8-eb930cd0c144)OLE DB for Online Analytical Processing (OLAP) のドキュメントにします。 各トピックの名前は、次の表の説明の列内のかっこに表示されます。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  ADO には、定数、スキーマのような結果が生成されます。 **adSchemaDBInfoKeywords**と**adSchemaDBInfoLiterals**です。 ADO を作成、 **Recordset**、し、それぞれによって返される値を使用して各行を格納、 **IDBInfo::GetKeywords**と**IDBInfo::GetLiteralInfo**メソッドです。 これらのメソッドに関する追加情報は含まれて、 [IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3)の OLE DB プログラマーズ リファレンスのセクションです。  
   
-|定数|値|Description|制約列|  
+|定数|値|説明|制約列|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|特定のユーザーによって所有されているカタログで定義されているアサーションを返します。<br /><br /> (アサーションの行セット)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|DBMS からアクセス可能なカタログに関連付けられている物理属性を返します。<br /><br /> (行セットのカタログ)|CATALOG_NAME|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
 |**adSchemaTablePrivileges**|14|カタログで定義されているユーザーが利用できる、または特定のユーザーによって付与されるテーブルの特権を返します。<br /><br /> (TABLE_PRIVILEGES 行セット)|TABLE_CATALOG、TABLE_SCHEMA、TABLE_NAME、GRANTOR、GRANTEE|  
 |**adSchemaTables**|20|テーブル (ビューを含む)、カタログで定義されている特定のユーザーにアクセスできるを返します。<br /><br /> (テーブル行セット)|TABLE_CATALOG、TABLE_SCHEMA、TABLE_NAME、TABLE_TYPE|  
 |**adSchemaTranslations**|21|カタログで定義されている、指定されたユーザーがアクセスできる文字変換を返します。<br /><br /> (翻訳行セット)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
-|**adSchemaTrustees**|39|将来の使用のために予約されています。||  
+|**adSchemaTrustees**|39|将来使用するために予約されています。||  
 |**adSchemaUsagePrivileges**|15|カタログで定義されているユーザーが利用できる、または特定のユーザーによって付与されるオブジェクトの使用権限を返します。<br /><br /> (USAGE_PRIVILEGES 行セット)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE、GRANTOR、GRANTEE|  
 |**adSchemaViewColumnUsage**|24|返し、列がテーブルの表示、カタログで定義されている特定のユーザーによって所有されているは、依存します。<br /><br /> (VIEW_COLUMN_USAGE 行セット)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|特定のユーザーにアクセス可能である、カタログで定義されているビューを返します。<br /><br /> (ビューの行セット)|TABLE_CATALOG、TABLE_SCHEMA、TABLE_NAME|  
