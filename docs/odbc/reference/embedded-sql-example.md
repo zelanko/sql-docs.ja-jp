@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916357"
 ---
 # <a name="embedded-sql-example"></a>Embedded SQL の使用例
 次のコードは c 言語で記述された単純な埋め込み SQL プログラムです。プログラムは、埋め込みのすべてではありませんが、ほとんどの SQL 方法を示しています。 プログラムは、注文番号の入力を求めます、顧客番号、販売員、および、注文ステータスを取得し、画面で取得した情報を表示します。  

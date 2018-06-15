@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907967"
 ---
 # <a name="allocating-and-freeing-buffers"></a>割り当てと解放バッファー
 すべてのバッファーでは、割り当てられ、アプリケーションによって解放することができます。 バッファーを遅延しませんが場合は、必要がある関数への呼び出しの間のみ存在します。 たとえば、 **SQLGetInfo**が指すバッファー内の特定のオプションに関連付けられている値を返します、 *InfoValuePtr*引数。 このバッファーへの呼び出し後すぐに解放できる**SQLGetInfo**次のコード例のように。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911047"
 ---
 # <a name="mixed-cursors"></a>混合カーソル
 混合カーソル、キーセット ドリブン カーソルと動的カーソルの組み合わせです。 結果セットが大きすぎるをある程度結果セット全体のキーを保存するときに使用されます。 混合カーソルを実装するは、結果セット全体よりも小さくなりますが、行セットよりも大きいキーセットを作成します。  

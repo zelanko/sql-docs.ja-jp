@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912577"
 ---
 # <a name="descriptor-fields"></a>記述子フィールド
 記述子が含まれて*ヘッダー*と*レコード*列またはパラメーターを完全に記述されるフィールドです。  
