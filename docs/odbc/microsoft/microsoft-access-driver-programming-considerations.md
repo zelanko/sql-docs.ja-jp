@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899516"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Microsoft Access ドライバーのプログラミングに関する考慮事項
 このセクションでは、次のトピックを扱います。  

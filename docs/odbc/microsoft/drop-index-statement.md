@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900248"
 ---
 # <a name="drop-index-statement"></a>DROP INDEX ステートメント
 Microsoft Access、dBASE、または Paradox ドライバーを使用する場合、DROP INDEX ステートメントの構文は、"DROP INDEX on a b"、"a"、インデックスの名前は、"b"は、テーブルの名前 (DROP INDEX いない*インデックス名*)。  

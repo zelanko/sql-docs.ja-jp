@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898987"
 ---
 # <a name="read-only-status-text-file-driver"></a>読み取り専用の状態 (テキスト ファイル ドライバー)
 テキストのドライバーを使用する場合のデータ ソース テーブルは読み取り専用です。 ただし、アプリケーションでは、テーブルのテキストの挿入を実行できます。

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899767"
 ---
 # <a name="desktop-database-driver-compatibility"></a>デスクトップ データベース ドライバーの互換性
 Unicode は、ソフトウェア文字エン コードのメソッドのすべての文字を 2 バイトの固定幅を持つものとして扱われます。 このメソッドは、Windows の ANSI 文字エン コード、1 バイトの文字を表すためでは、256 文字に制限の代わりとして使用されます。 文字から成るは表されない多くの言語に対応 Unicode が 65,000 以上の文字を表すことのできるために、ANSI エンコーディングします。  

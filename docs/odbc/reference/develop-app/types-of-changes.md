@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916554"
 ---
 # <a name="types-of-changes"></a>変更の種類
 ODBC 3 では、3 種類の変更が行われます。*x* (および ODBC の任意のバージョン)。 これらの各は異なる方法で旧バージョンとの互換性に影響され、別の方法で処理されます。 これらの変更は、次の表で説明します。  

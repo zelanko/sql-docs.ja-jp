@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909760"
 ---
 # <a name="transfer-octet-length"></a>転送のオクテットの長さ
 転送オクテット長の列は、既定の C データ型にデータが転送されるときに、アプリケーションに返されるバイトの最大数です。 文字データの転送オクテット長に null 終端文字のための領域は含まれません。 列の転送のオクテットの長さは、データ ソースのデータの格納に必要なバイト数よりも異なる可能性があります。  

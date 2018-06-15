@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915147"
 ---
 # <a name="supported-data-types"></a>サポートされるデータ型
 Dbms によってサポートされるデータ型はかなり異なります。 アプリケーションを確認できます、名前とサポートされるデータ型の特性を呼び出して**SQLGetTypeInfo**です。 データ型の名前で、広範のため、アプリケーションがによって返されるデータ型の名前を使用する必要があります**SQLGetTypeInfo**で**CREATE TABLE**ステートメントです。 詳細については、次を参照してください。 [ODBC でのデータ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)です。

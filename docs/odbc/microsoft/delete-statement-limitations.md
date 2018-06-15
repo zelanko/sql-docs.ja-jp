@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898857"
 ---
 # <a name="delete-statement-limitations"></a>ステートメントの制限を削除します。
 DELETE ステートメントは、Microsoft Excel またはテキストのドライバーのサポートされていません。 INSERT ステートメントがテキスト ドライバーのサポートされていることに注意してください。  

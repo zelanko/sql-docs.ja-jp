@@ -22,9 +22,10 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32866527"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>コマンドラインからのデータ移行アシスタントを実行します。
-データ移行のアシスタントをインストールするバージョン 2.1 以降と、ときで dmacmd.exe もインストールされます *%programfiles%\\Microsoft データ Migration Assistant\\* です。 Dmacmd.exe を使用して、無人モードでデータベースを評価し、JSON または CSV ファイルに結果を出力します。 これは、いくつかのデータベースまたは巨大なデータベースを評価するときに特に便利です。 
+データ移行のアシスタントをインストールするバージョン 2.1 以降と、ときで dmacmd.exe もインストールされます *%programfiles%\\Microsoft データ Migration Assistant\\*です。 Dmacmd.exe を使用して、無人モードでデータベースを評価し、JSON または CSV ファイルに結果を出力します。 これは、いくつかのデータベースまたは巨大なデータベースを評価するときに特に便利です。 
 
 > [!NOTE]
 > 評価のみを実行している Dmacmd.exe をサポートします。 この時点では、移行はサポートされていません。

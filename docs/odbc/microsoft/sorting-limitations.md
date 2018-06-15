@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901277"
 ---
 # <a name="sorting-limitations"></a>制限事項を並べ替え
 GROUP BY 句、ORDER BY 句、SELECT DISTINCT ステートメントでは、または外部結合、並べ替えキーの最大長は 255 バイトを表します。並べ替え行内のすべての並べ替えキーの最大長は 65,500 バイトです。

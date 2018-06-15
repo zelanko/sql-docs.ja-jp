@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917037"
 ---
 # <a name="function-summary"></a>関数の概要
 次のセクションでは、集計に使用する関数によって、ODBC 対応アプリケーションと関連するソフトウェアです。  

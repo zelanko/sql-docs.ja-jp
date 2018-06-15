@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903807"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>記述子およびデスクトップ データベース ドライバー
 記述子は、列のデータまたは動的パラメーターのいずれかに関する情報を保持するデータ構造です。 **Sqlgetdescfield による**以下に示すサポートされる記述子を取得するために使用できます。 実装パラメーター記述子 (IPD) が自動的に作成されないため**SQLDescribeParam**はサポートされていません。 Jet (SQL_DESC_BASE_TABLE_NAME) などで使用できない記述子フィールドもサポートされません。  

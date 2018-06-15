@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900830"
 ---
 # <a name="parameterized-query-limitations"></a>パラメーター化クエリの制限事項
 次の構文を使用してパラメーター化クエリを呼び出すことができる、Microsoft Access ドライバーを使用する場合: 呼び出す*クエリ名*[(*パラメーター*[、*パラメーター*]...)] です。

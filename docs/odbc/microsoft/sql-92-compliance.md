@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901957"
 ---
 # <a name="sql-92-compliance"></a>Sql-92 準拠
 デスクトップの ODBC データベース ドライバーと、基になる Microsoft Jet エンジンは、sql-92 準拠ではありません。 Sql-92 で定義されている多くの機能をサポートしています。 ドライバーでサポートされている一部の機能は、sql-92 ではサポートされていません。 詳細については、次を参照してください。、 *Microsoft Jet データベース エンジン プログラマ ガイド*です。 2 つの主な違いを次に示します。  

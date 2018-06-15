@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899107"
 ---
 # <a name="create-table-statement-limitations"></a>テーブル ステートメントの制限事項を作成します。
 Microsoft Access、Microsoft Excel または Paradoxdriver 使用すると、列の長さは 255 に設定して、テキストやバイナリ列の長さが指定されていない (または 0 を指定)。  

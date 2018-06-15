@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900955"
 ---
 # <a name="set-unique-command"></a>セットの一意のコマンド
 インデックス ファイルに重複するインデックス キー値を持つレコードが保持されるかどうかを指定します。  

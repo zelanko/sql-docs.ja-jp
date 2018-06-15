@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897827"
 ---
 # <a name="creating-and-dropping-views-and-procedures-using-extendedansisql"></a>作成して、ビューおよび ExtendedAnsiSQL を使用してプロシージャの削除
 ExtendedAnsiSQL フラグがオンになっている場合、Jet 4.0 は、作成して、ビュー、および SQL を介してプロシージャを削除する機能をサポートします。 これらのビューとプロシージャをアクセスで表示されません。

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900457"
 ---
 # <a name="functions-accepting-string-parameters"></a>文字列パラメーターを受け入れる関数
 文字列パラメーターを受け取るすべての関数は、Unicode に変換されます。 ("W"形式の関数がエクスポートされます。)バイト数は、これらの該当する ODBC api の文字の数に変換されます。 これは、次の関数に適用されます。  

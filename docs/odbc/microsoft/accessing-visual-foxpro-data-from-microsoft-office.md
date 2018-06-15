@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898917"
 ---
 # <a name="accessing-visual-foxpro-data-from-microsoft-office"></a>Microsoft Office から Visual FoxPro データにアクセスします。
 Microsoft Visual FoxPro ODBC ドライバーを使用するには、Microsoft Office アプリケーションの Windows 95 または Windows 98 から Visual FoxPro データにアクセスします。  

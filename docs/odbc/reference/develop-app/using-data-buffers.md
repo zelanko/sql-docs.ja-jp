@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914867"
 ---
 # <a name="using-data-buffers"></a>データ バッファーを使用します。
 データ バッファーが 3 つの情報が記載されている: その種類、アドレス、およびバイトの長さ。 関数は、これらの種類の情報のうち 1 つしは理解していないこと、ときに使用するアプリケーションに渡すこと引数を持ちます。  

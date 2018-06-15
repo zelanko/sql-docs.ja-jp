@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901467"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel のデータ型
 次の表では、Microsoft Excel ドライバーのデータ型を ODBC SQL データ型にマップする方法を示します。 Microsoft Excel ドライバーでは、列のデータに基づく Microsoft Excel のテーブル内の列にこれらのデータ型が割り当てられます。  
