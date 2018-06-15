@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c969100441cfc901ded13e7d1cdc7c551db23d42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a8e0d02ab4aef8d9550e0ea25b6166ccbf03da5
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305611"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ HRESULT GetParameterProperties(
 ## <a name="return-code-values"></a>リターン コードの値  
  **GetParameterProperties**メソッドは、主要な OLE DB と同じエラー コードを返します**icommandproperties::getproperties**その DB_S_ERRORSOCCURRED と db_e_errorsoccured は返す以外のメソッドにすることはできません発生します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Isscommandwithparameters::getparameterproperties**に関連するメソッドが、一貫した動作**GetParameterInfo**です。 場合[isscommandwithparameters::setparameterproperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)または**SetParameterInfo**呼び出されていないか、cParams に 0 を使用して呼び出されましたが**GetParameterInfo**パラメーター情報を派生し、それを取得します。 場合**isscommandwithparameters::setparameterproperties**または**SetParameterInfo**が少なくとも 1 つのパラメーター、呼び出された**isscommandwithparameters::getparameterproperties**メソッドでは、これらのパラメーターに対してのみプロパティを返しますを**isscommandwithparameters::setparameterproperties**が呼び出されています。 場合**isscommandwithparameters::setparameterproperties**後に呼び出されます**isscommandwithparameters::getparameterproperties**または**GetParameterInfo**、後続の呼び出し**isscommandwithparameters::getparameterproperties**をこれらのパラメーターの値が上書きを返す**isscommandwithparameters::setparameterproperties**メソッドが呼び出されました。  
   
  SSPARAMPROPS 構造体は、次のように定義されています。  
@@ -65,13 +65,13 @@ HRESULT GetParameterProperties(
   
  `};`  
   
-|メンバー|Description|  
+|Member|説明|  
 |------------|-----------------|  
 |*iOrdinal*|渡されるパラメーターの序数|  
 |*cPropertySets*|DBPROPSET の数が構造体に*rgPropertySets*です。|  
 |*rgPropertySets*|DBPROPSET 構造体の配列を返すメモリへのポインター|  
   
 ## <a name="see-also"></a>参照  
- [ISSCommandWithParameters (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

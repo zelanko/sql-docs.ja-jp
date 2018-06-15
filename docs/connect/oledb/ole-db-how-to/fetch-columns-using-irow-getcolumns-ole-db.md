@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,11 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 373d0f6577b921ce4461832ab9ba237aa790f410
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3fc6c407ace10f0785f86684d7ffdc8a013fde3f
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306091"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns を使用した列のフェッチ (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -522,6 +522,6 @@ go
 ```  
   
 ## <a name="see-also"></a>参照  
- [OLE DB の操作方法に関するトピック](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB の使用法に関するトピック](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

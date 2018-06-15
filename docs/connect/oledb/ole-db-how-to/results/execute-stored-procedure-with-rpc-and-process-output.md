@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b6b4612bbbf5b1b4b530a4edadbed0879f77a1d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 41f5c77c29bc91d3d0522a2b8e51bc020d39d7a1
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306071"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>RPC でストアド プロシージャを実行し、出力の処理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -399,6 +399,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [処理結果の操作方法に関するトピック (&) #40";"OLE DB"&"#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [結果を処理方法に関するトピック&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

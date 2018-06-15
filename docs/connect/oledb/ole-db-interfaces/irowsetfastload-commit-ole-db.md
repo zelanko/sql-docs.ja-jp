@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d93c7a83880e81331f6322386fa3ccbc983fc4ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad752273420523a9f8a72db01b8c3053a5b05bfb
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306131"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ HRESULT Commit(
  E_UNEXPECTED  
  によって以前に無効に一括コピー行セットに対してメソッドが呼び出された、 **irowsetfastload::commit**メソッドです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  OLE DB Driver for SQL Server 一括コピー行セットは、遅延更新モードの行セットとして動作します。 保留中の挿入、行セットをサポートするのに挿入された行が同じ方法で扱われるように、行セットから行のデータを挿入すると、 **IRowsetUpdate**です。  
   
  コンシューマーは、呼び出す必要があります、**コミット**書き込む挿入された行を一括コピー行セットのメソッド、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]と同じ方法でテーブル、 **irowsetupdate::update**メソッドを使用して、保留中の行を送信、SQL Server のインスタンス。  

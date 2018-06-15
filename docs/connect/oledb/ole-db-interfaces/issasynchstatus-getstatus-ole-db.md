@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3f302aaf87ebe80a778a91fffa6058f2e6751004
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fbb44ddf380b0f40ffd0a2fdb8619df275fbac7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305791"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,7 +111,7 @@ HRESULT GetStatus(
  E_FAIL  
  プロバイダー固有のエラーが発生しました。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Issasynchstatus::getstatus**メソッドは、 **idbasynchstatus::getstatus**点を除いてメソッド場合、ソース オブジェクトのデータの初期化が中止された、E_UNEXPECTED が返されるではなくDB_E_CANCELED より (が[issasynchstatus::waitforasynchcompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) DB_E_CANCELED が返されます)。 これは、追加の初期化操作が試行されるように、次の中断、通常のゾンビ状態に、データ ソース オブジェクトが残っていないためです。  
   
  行セットを初期化またはデータ設定する非同期操作では、このメソッドをサポートする必要があります。  
@@ -128,6 +128,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>参照  
  [非同期操作を実行します。](../../oledb/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

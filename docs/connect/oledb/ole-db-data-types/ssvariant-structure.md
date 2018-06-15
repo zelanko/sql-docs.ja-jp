@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: eb977dbe9ef7bed4e6c98ef612bd6e2bb67bf159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 74091c744382bb4c467e12c62ee9c8c58ab1d2bb
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305741"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 構造体
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
  **SSVARIANT**識別共用体は、します。 Vt メンバーの値は、コンシューマーは読み取るメンバーを確認できます。 vt の値に対応して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。 したがって、 **SSVARIANT**構造体は、SQL Server の種類を格納できます。 標準の OLE DB 型のデータ構造の詳細については、次を参照してください。[型インジケーター](http://go.microsoft.com/fwlink/?LinkId=122171)です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ときに DataTypeCompat = = 80、いくつか**SSVARIANT**サブタイプが文字列になります。 たとえば、次の vt 値に表示されます**SSVARIANT** VT_SS_WVARSTRING として表されます。  
   
 -   VT_SS_DATETIMEOFFSET  
@@ -58,7 +58,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  次の表のメンバー、 **SSVARIANT**構造体。  
   
-|メンバー|OLE DB 型インジケーター|OLE DB C データ型|vt の値|コメント|  
+|Member|OLE DB 型インジケーター|OLE DB C データ型|vt の値|コメント|  
 |------------|---------------------------|------------------------|--------------|--------------|  
 |vt|SSVARTYPE|||含まれる値の型を指定します、 **SSVARIANT**構造体。|  
 |bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|では、 **tinyint** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。|  
@@ -83,6 +83,6 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |BLOBType|未使用|未使用|未使用|未使用|  
   
 ## <a name="see-also"></a>参照  
- [データ型 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [データ型&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

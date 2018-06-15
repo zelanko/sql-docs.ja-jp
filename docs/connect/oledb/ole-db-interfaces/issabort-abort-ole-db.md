@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 444d51aeae49e9e626b0666904584bae8e2de6b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c7d30e8132d245958e7ef6f7f09e642a2da960c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305381"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 HRESULT Abort(void);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  中止中のコマンドは、ストアド プロシージャでは、コマンドのバッチ、ストアド プロシージャ呼び出しを含むだけでなく、ストアド プロシージャ (およびそのプロシージャでは、そのプロシージャを呼び出す必要がある) の実行が終了されます。 サーバーがクライアントに結果セットを転送中の場合は、転送が停止されます。 クライアントがいない場合、結果セットを使用する、呼び出し**issabort::abort**行セットの解放を高速化は、行セットを解放する前に、トランザクションはロールバックされます、開いているトランザクションが存在しないと、XACT_ABORT が ON、ときにコールバック**issabort::abort**は呼び出されます  
   
  後に**issabort::abort** 、関連付けられている S_OK を返す**IMultipleResults**インターフェイスが使用できない状態になるし、すべてのメソッド呼び出しに DB_E_CANCELED が返されます (、によって定義されたメソッドを除く**IUnknown**インターフェイス) が解放されるまでです。 場合、 **IRowset**から取得されていた**IMultipleResults**呼び出しの前に**中止**、また使用不可の状態を入力し、すべてのメソッド呼び出しに DB_E_CANCELED が返されます (によって定義されたメソッドを除く、 **IUnknown**インターフェイスと**irowset::releaserows**) に正常な呼び出しの後に解放されるまで**issabort::abort**です。  

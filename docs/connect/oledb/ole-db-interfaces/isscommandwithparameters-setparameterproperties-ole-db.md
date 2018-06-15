@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d10258b631c5ed6852d940682815793497ffb7a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4153cfc2aacf881d6996472ceaec6e387a4d6caa
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305391"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ HRESULT SetParameterProperties(
 ## <a name="return-code-values"></a>リターン コードの値  
  **Isscommandwithparameters::setparameterproperties**メソッドは、主要な OLE DB と同じエラー コードを返します**icommandproperties::setproperties**メソッドです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このメソッドを使用してパラメーター プロパティを設定または許可されて、各パラメーターごとに、序数を 1 つの**isscommandwithparameters::setparameterproperties**プロパティ配列から SSPARAMPROPS が構築された 1 回呼び出します。  
   
  **SetParameterInfo**メソッドを呼び出す前に呼び出す必要があります、 **isscommandwithparameters::setparameterproperties**メソッドです。 `SetParameterProperties(0, NULL)` を呼び出すと、指定したパラメーター プロパティがすべて消去されます。また、`SetParameterInfo(0,NULL,NULL)` を呼び出すと、パラメーターに関連付けられているすべてのプロパティを含めて、パラメーターに関するすべての情報が消去されます。  
@@ -77,13 +77,13 @@ HRESULT SetParameterProperties(
   
  以降で、データベース エンジンの機能強化[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]isscommandwithparameters::setparameterproperties を期待する結果のより正確な記述を取得できるようにします。 以前のバージョンの isscommandwithparameters::setparameterproperties によって返される値からこれらのより正確な結果が異なる場合があります[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 詳細については、次を参照してください。[メタデータ検出](../../oledb/features/metadata-discovery.md)です。  
   
-|メンバー|Description|  
+|Member|説明|  
 |------------|-----------------|  
 |*iOrdinal*|渡されるパラメーターの序数|  
 |*cPropertySets*|DBPROPSET の数が構造体に*rgPropertySets*です。|  
 |*rgPropertySets*|DBPROPSET 構造体の配列を返すメモリへのポインター|  
   
 ## <a name="see-also"></a>参照  
- [ISSCommandWithParameters (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

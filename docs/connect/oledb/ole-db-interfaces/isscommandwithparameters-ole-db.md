@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3df5ab4476cdc41568c4bd2ee0fdac28c52b11cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a33a2af2a89a151ae0aeed96a31956037aa036e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305361"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,13 +34,13 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  **ISSCommandWithParameters**サービス コンポーネントを使用すると、サービス コンポーネントは、このインターフェイスを使用しない場合は、インターフェイスを使用することができます。  
   
-|方法|Description|  
+|方法|説明|  
 |------------|-----------------|  
-|[Isscommandwithparameters::getparameterproperties (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)|1 つを返します**SSPARAMPROPS**プロパティ セット構造体には、コマンドに渡された各 UDT または XML パラメーターの配列が、他の種類のパラメーターに対して none が返されます。|  
-|[Isscommandwithparameters::setparameterproperties (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|序数の順に各パラメーターをパラメーターのプロパティを設定またはの配列を指定して一括でパラメーター プロパティを設定**SSPARAMPROPS**構造体。|  
+|[Isscommandwithparameters::getparameterproperties &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)|1 つを返します**SSPARAMPROPS**プロパティ セット構造体には、コマンドに渡された各 UDT または XML パラメーターの配列が、他の種類のパラメーターに対して none が返されます。|  
+|[Isscommandwithparameters::setparameterproperties &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|序数の順に各パラメーターをパラメーターのプロパティを設定またはの配列を指定して一括でパラメーター プロパティを設定**SSPARAMPROPS**構造体。|  
   
 ## <a name="see-also"></a>参照  
- [インターフェイス (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
+ [インターフェイス&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
  [XML データ型の使用](../../oledb/features/using-xml-data-types.md)   
  [ユーザー定義型の使用](../../oledb/features/using-user-defined-types.md)  
   

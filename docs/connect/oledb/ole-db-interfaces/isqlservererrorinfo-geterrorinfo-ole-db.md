@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 057e677242ad12cb9df8a669c129b75c3cb67f2c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 085b171b9987e8546560550fbf9a71eadbf8de31
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305751"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ HRESULT GetErrorInfo(
  E_OUTOFMEMORY  
  SQL Server の OLE DB Driver は、要求を完了するための十分なメモリを割り当てられませんでした。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  SQL Server の OLE DB Driver は、SSERRORINFO 文字列と OLECHAR 文字列、コンシューマーが渡したポインターを通じて返されるのメモリを割り当てます。 コンシューマーを使用してこのメモリを解放する必要があります、 **imalloc::free**メソッド エラー データにアクセスする必要がなくなったときにします。  
   
  SSERRORINFO 構造体は、次のように定義されています。  
@@ -79,7 +79,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|メンバー|Description|  
+|Member|説明|  
 |------------|-----------------|  
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエラー メッセージ。 を介して、メッセージが返されます、 **ierrorinfo::getdescription**メソッドです。|  
 |*pwszServer*|エラーが発生した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前。|  
