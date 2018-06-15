@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022489"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   データセットは、データ接続から使用するデータを指定します。 データセットは、埋め込みデータ ソースまたはレポート サーバーの共有データ ソースへの参照としてレポートに保存されているデータ接続に基づいています。 データセットには、一連のフィールドを指定するクエリが含まれています。 これらのフィールドをデザイン画面にドラッグすると、レポートの実行時に実際のデータを評価する式を作成できます。  

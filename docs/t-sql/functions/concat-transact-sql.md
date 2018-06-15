@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33053409"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -44,7 +45,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
   
 ## <a name="arguments"></a>引数  
 *string_value*  
-他の値に連結する文字列値です。 `CONCAT` 関数では、2 個以上、254 個未満の *string_value*引数が必要です*。*
+他の値に連結する文字列値です。 `CONCAT` 関数では、2 個以上、254 個未満の *string_value*引数が必要です *。*
   
 ## <a name="return-types"></a>戻り値の型  
 *string_value*  

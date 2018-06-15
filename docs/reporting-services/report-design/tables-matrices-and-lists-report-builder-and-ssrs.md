@@ -45,6 +45,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028929"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]のテーブル、マトリックス、および一覧は、行と列で構成されたセルにページ分割されたレポート データを表示する *データ領域* です。 セルには通常、テキスト、日付、数字などのテキスト データが含まれていますが、ゲージ、グラフ、または画像などのレポート アイテムも含めることができます。 テーブル、マトリックス、および一覧をまとめて *Tablix* データ領域と呼ぶことがあります。  

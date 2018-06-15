@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33034499"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig ユーティリティ (SSRS)
   **rsconfig.exe** ユーティリティは、接続値とアカウント値を RSReportServer.config ファイルへ暗号化して格納します。 暗号化される値は、自動レポート処理に使用される、レポート サーバー データベースの接続情報とアカウント値です。  

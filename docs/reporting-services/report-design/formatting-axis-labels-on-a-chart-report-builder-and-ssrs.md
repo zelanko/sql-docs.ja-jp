@@ -37,6 +37,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027979"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)
   座標ベースのグラフ (縦棒グラフ、横棒グラフ、面グラフ、散布図、線グラフ、および範囲グラフ) では、2 本の軸を使用してデータ間の関係を分類および表示します。 それぞれの軸には、異なる書式が適用されます。  

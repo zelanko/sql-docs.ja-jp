@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022799"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>グラフ (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートを読むユーザーが、大量の集計データを一目で理解できるよう、グラフ データ領域の使用について説明します。  

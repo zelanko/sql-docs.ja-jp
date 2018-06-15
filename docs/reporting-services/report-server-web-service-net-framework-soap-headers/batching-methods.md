@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024989"
 ---
 # <a name="batching-methods"></a>メソッドのバッチ処理
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SOAP ヘッダーを使用することによって、1 つの操作に複数の Web サービス メソッドを含めることができます。 メソッドは、1 つのデータベース トランザクションのスコープ内で、呼び出された順序で実行されます。  
