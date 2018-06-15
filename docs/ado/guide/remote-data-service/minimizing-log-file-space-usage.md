@@ -2,7 +2,6 @@
 title: ログ ファイル領域使用量を最小限に抑える |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b0a0b3ba5bdaba5f334bce70acf87e52656c13b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75091ba881fde2c464ae6e184bd747cc70b42790
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274181"
 ---
 # <a name="minimizing-log-file-space-usage"></a>ログ ファイル領域使用量を最小限に抑える
 ログ ファイルがすぐにいっぱい (したがって、サーバーを停止する) が SQL Server データベースでのアクティビティの量が多い場合。 ログ ファイルを設定することができます**チェックポイントに Truncate**データベースのログ ファイルの有効期間を大幅に拡張します。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904067"
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>クエリを実行して、Microsoft Access から Visual FoxPro データの更新
 クエリを実行し、[リンク テーブル] オプションを使用して Microsoft Access データベースから Visual FoxPro データベースに格納されたデータを更新できます。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033319"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services のレポート レンダリングの問題のトラブルシューティング
 レポートのデータとレイアウトの情報が結合されると、コンパイルされたレポートがレポート レンダラーに送信されます。 たとえば、レポートをローカルでプレビューする場合、HTML レンダラーを使用してコンパイル済みのレポートが表示されます。 このトピックでは、レポートの表示に固有の問題のトラブルシューティングを行います。   

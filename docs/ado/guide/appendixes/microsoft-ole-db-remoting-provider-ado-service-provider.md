@@ -2,7 +2,6 @@
 title: Microsoft OLE DB リモート プロバイダー (ADO サービス プロバイダー) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b69c6f64de019aadf71476958c26f99a46dabac2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d168716351a8c3adda7b5ff10e6ef825e19cf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271291"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB のリモート処理のプロバイダーの概要
 Microsoft OLE DB リモート プロバイダーをクライアント コンピューターでリモート コンピューター上のデータ プロバイダーを呼び出すためのローカル ユーザーを有効にします。 リモート コンピューター上のローカル ユーザーをした場合と同様、リモート コンピューターのデータ プロバイダーのパラメーターを指定します。 次に、リモート コンピューターにアクセスするリモート プロバイダーによって使用されるパラメーターを指定します。 ローカル ユーザーをした場合とするリモート コンピューターにアクセスできます。
@@ -41,19 +41,19 @@ Microsoft OLE DB リモート プロバイダーをクライアント コンピ�
 ## <a name="additional-keywords"></a>その他のキーワード
  このサービス プロバイダーが呼び出されると、次の他のキーワードが関連します。
 
-|Keyword|Description|
+|Keyword|説明|
 |-------------|-----------------|
 |**[データ ソース]**|リモート データ ソースの名前を指定します。 処理のため、OLE DB リモート プロバイダーに渡されます。<br /><br /> このキーワードは、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトの[接続](../../../ado/reference/rds-api/connect-property-rds.md)プロパティです。|
 
 ## <a name="dynamic-properties"></a>動的プロパティ
  このサービス プロバイダーが呼び出されると、次の動的プロパティに追加、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション。
 
-|動的なプロパティ名|Description|
+|動的なプロパティ名|説明|
 |---------------------------|-----------------|
 |**DFMode**|DataFactory モードを示します。 目的のバージョンを指定する文字列、 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)サーバー上のオブジェクト。 要求の特定のバージョンへの接続を開く前に、このプロパティを設定、 **DataFactory**です。 要求されたバージョンが使用できない場合、試行されます前のバージョンを使用します。 前のバージョンが存在しない場合、エラーが発生します。 場合**DFMode**が、使用可能なバージョンよりも小さい、エラーが発生します。 このプロパティは、接続の確立後は読み取り専用です。<br /><br /> 有効な文字列値は次のいずれかを指定できます。<br /><br /> -「25」、バージョン 2.5 (既定値)<br />-「21」、バージョン 2.1<br />-「20」-version 2.0<br />-「15」、バージョン 1.5|
 |**コマンドのプロパティ**|MS リモート プロバイダーによって、サーバーに送信されるコマンド (行セット) のプロパティの文字列に追加される値を示します。 この文字列の既定値は、vt_empty です。|
 |**現在 DFMode**|実際のバージョン番号を示す、 **DataFactory**サーバーにします。 バージョンが要求されたかどうかに表示するには、このプロパティを調べ、 **DFMode**プロパティが受け入れられます。<br /><br /> 長整数型の有効な値は次のいずれかを指定できます。<br /><br /> -25-バージョン 2.5 (既定値)<br />-21-バージョン 2.1<br />-20-version 2.0<br />-15: バージョン 1.5<br /><br /> 追加する"DFMode = 20 です。"を接続文字列を使用する場合、 **MSRemote**データを更新するときに、プロバイダーが、サーバーのパフォーマンスを向上させることができます。 この設定で、 **RDSServer.DataFactory**サーバー上のオブジェクトで少ないリソースを消費するモードを使用します。 ただし、次の機能では、この構成では利用できません。<br /><br /> パラメーター化クエリを使用します。<br />呼び出しの前に、パラメーターまたは列の情報を取得する、 **Execute**メソッドです。<br />-設定**更新プログラムを Transact**に**True**です。<br />行のステータスを取得します。<br />呼び出し、**再同期**メソッドです。<br />更新 (明示的にまたは自動的に) を使用して、**更新プログラムが再同期**プロパティです。<br />-設定**コマンド**または**Recordset**プロパティです。<br />使用する**adCmdTableDirect**です。|
-|**ハンドラー**|機能を拡張するサーバー側のカスタマイズのプログラム (またはハンドラー) の名前を示す、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)、およびハンドラーによって使用されるパラメーター*、* (をコンマで区切って","). A**文字列**値。|
+|**ハンドラー**|機能を拡張するサーバー側のカスタマイズのプログラム (またはハンドラー) の名前を示す、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)、およびハンドラーによって使用されるパラメーター *、* (をコンマで区切って","). A**文字列**値。|
 |**インターネット タイムアウト。**|サーバーとの間を移動する要求を待機するミリ秒単位の最大数を示します。 (既定値は 5 分です)。|
 |**リモート プロバイダー**|リモート サーバーで使用するデータ プロバイダーの名前を示します。|
 |**リモート サーバー**|この接続で使用するサーバー名および通信プロトコルを示します。 このプロパティは、 [.rds ですDataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト[サーバー](../../../ado/reference/rds-api/server-property-rds.md)プロパティです。|
@@ -73,7 +73,7 @@ Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
  ADO では 2.0、OLE DB リモート プロバイダーのみで指定、 *ActiveConnection*のパラメーター、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト**開く**メソッドです。 ADO 2.1 以降では、プロバイダーも指定する場合に、 *ConnectionString*のパラメーター、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト**開く**メソッドです。
 
  該当するショートカットは、 **.rds ですDataControl**オブジェクト[SQL](../../../ado/reference/rds-api/sql-property.md)プロパティは使用できません。 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト**開く**メソッド*ソース*引数は代わりに使用されます。

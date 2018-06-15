@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900467"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Microsoft 提供の ODBC ドライバー
 *ドライバー*ライブラリには、ODBC API の関数を実装します。 各ドライバーは、特定のデータベース管理システム (DBMS) に固有です。 ドライバーが、基になる DBMS 以外の機能を公開するほとんどの場合、データベース管理システムでサポートされていない機能を実装する必要はありません。 ドライバーが特定のタスクを実行し、2 つのカテゴリに分類できます: ファイルおよび DBMS ベースです。 ドライバーとドライバーのアーキテクチャの詳細については、次を参照してください。[ドライバー](../../odbc/reference/drivers.md)です。  

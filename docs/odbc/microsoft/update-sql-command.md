@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908677"
 ---
 # <a name="update---sql-command"></a>更新プログラム - SQL コマンドします。
 新しい値では、テーブル内のレコードを更新します。  

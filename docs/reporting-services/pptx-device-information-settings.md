@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019886"
 ---
 # <a name="pptx-device-information-settings"></a>PPTX デバイス情報設定
   次の表は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートを PPTX 形式で表示するデバイス情報の設定を示しています。  

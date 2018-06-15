@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900527"
 ---
 # <a name="read-only-status-excel-driver"></a>読み取り専用の状態 (Excel ドライバー)
 Microsoft Excel ドライバーを使用すると、データ ソース テーブルは既定では、読み取り専用で開かれ、一度に 1 つだけのユーザーが開くことができます。 テーブルでは、読み取り専用の状態がある、でもただし、アプリケーションを実行できます挿入と更新プログラム Microsoft Excel のテーブル。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911387"
 ---
 # <a name="retrieving-the-values-in-descriptor-fields"></a>記述子フィールドの値を取得します。
 アプリケーションが呼び出すことができます**SQLGetDescField**を記述子レコードの 1 つのフィールドを取得します。 **Sqlgetdescfield による**ODBC では、定義されたすべての記述子フィールドとドライバーの定義済みのフィールドも、アプリケーションにアクセスします。  

@@ -2,7 +2,6 @@
 title: HelloData に関するコメント |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e50dae422b42c365d6f72a9ee1b694c4ac9a4cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5156c6faacb9714faa40073d2a0f78102663b4b0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271441"
 ---
 # <a name="comments-on-hellodata"></a>HelloData に関するコメント
 通常、ADO アプリケーションの基本的な操作手順を HelloData アプリケーション: を取得する、検査、編集、およびデータを更新します。 アプリケーションを起動するときに、最初のボタンをクリックして**データの取得**です。 これは、実行、 **GetData**サブルーチンです。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
  Visual Basic を使用して、エラー ハンドラーを割り当てる**OnError**ステートメントです。 ADO のエラー処理の詳細については、次を参照してください。 [Error Handling](../../../ado/guide/data/error-handling.md)です。 新しい**接続**オブジェクトを作成すると、および**CursorLocation**プロパティに設定されている**adUseClient** HelloData 例では、作成されるため、 *切断されたレコード セット*です。 つまり、データ ソースからデータをフェッチしたが、データ ソースとの物理的な接続が切断がまだ、ローカルにキャッシュされているデータを使用することができ、すぐに、 **Recordset**オブジェクト。  
   
- 接続が開かれた後は、SQL 文字列を変数 (sSQL) に割り当てます。 新しいインスタンスを作成し、 **Recordset**オブジェクト、`m_oRecordset1`です。 次のコード行で開く、 **Recordset**既存**接続**を渡して、`sSQL`のソースとして、**レコード セット**です。 SQL の文字列をことを決定する際に ADO をヘルプのソースとして渡されますが、**レコード セット**を渡すことによって、コマンドのテキストの定義は、 **adCmdText** への最終的な引数で**レコード セットを開いて**メソッドです。 この行にも設定、 **LockType**と**カーソル。**に関連付けられている、 **Recordset**です。  
+ 接続が開かれた後は、SQL 文字列を変数 (sSQL) に割り当てます。 新しいインスタンスを作成し、 **Recordset**オブジェクト、`m_oRecordset1`です。 次のコード行で開く、 **Recordset**既存**接続**を渡して、`sSQL`のソースとして、**レコード セット**です。 SQL の文字列をことを決定する際に ADO をヘルプのソースとして渡されますが、**レコード セット**を渡すことによって、コマンドのテキストの定義は、 **adCmdText** への最終的な引数で**レコード セットを開いて**メソッドです。 この行にも設定、 **LockType**と**カーソル。** に関連付けられている、 **Recordset**です。  
   
  次のコード セットの行、**スレッド**プロパティを等しく**adMarshalModifiedOnly**です。 **スレッド**どのレコードを中間層 (または Web サーバー) にマーシャ リングすることを示します。 マーシャ リングの詳細については、COM のマニュアルを参照してください。 使用すると**adMarshalModifiedOnly**クライアント側カーソル ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**)、変更されているレコードだけ、クライアントは、中間層に書き戻されます。 設定**スレッド**に**adMarshalModifiedOnly**マーシャ リングする行数が少ないために、パフォーマンスを向上させることができます。  
   

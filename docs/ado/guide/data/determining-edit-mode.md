@@ -2,7 +2,6 @@
 title: 編集モードを決定する |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,18 +17,19 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4532f65823d4aed88c4db05e03571497f8eac6b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5971234a7e758318acaac80b830d312327e14e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270351"
 ---
 # <a name="determining-edit-mode"></a>編集モードの決定
 ADO では、現在のレコードに関連付けられている編集バッファーを保持します。 **EditMode**プロパティは、このバッファーの変更が加えられたかどうかや、新しいレコードが作成されたかどうかを示します。 使用して**EditMode**現在のレコードの編集状態を確認します。 編集のプロセスが中断された場合は、保留中の変更をテストして使用する必要があるかどうかを判断、**更新**または**ただし**メソッドです。  
   
  **EditMode**のいずれかを返します、 **EditModeEnum**定数は、次の表に記載されています。  
   
-|定数|Description|  
+|定数|説明|  
 |--------------|-----------------|  
 |**adEditNone**|進行中の編集操作がないことを示します。|  
 |**adEditInProgress**|現在のレコード内のデータが変更されたが保存されませんを示します。|  

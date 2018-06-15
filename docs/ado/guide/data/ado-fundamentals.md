@@ -2,7 +2,6 @@
 title: ADO 基礎 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,11 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da11650be6a1188933909fc49a1c06c8b4d61fb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6dcb26ea77284b4d9b279b13a7f8f1dca778eb68
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270491"
 ---
 # <a name="ado-fundamentals"></a>ADO の基礎
 ADO では、プログラムへのアクセス、編集、およびさまざまなシステムの OLE DB インターフェイス経由でデータ ソースからデータの更新の開発者強力で論理オブジェクト モデルを使用します。 ADO の最も一般的な使用法が、テーブルやリレーショナル データベース内のテーブルをクエリを取得し、アプリケーションでは、結果を表示し、おそらくユーザー データへの変更を保存します。 その他のタスクを以下に示します。  

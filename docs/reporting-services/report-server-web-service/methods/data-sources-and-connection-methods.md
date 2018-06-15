@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025739"
 ---
 # <a name="data-sources-and-connection-methods"></a>データ ソースと接続のメソッド
   これらのメソッドを使用して、データ ソースの接続と資格情報を設定および管理できます。  

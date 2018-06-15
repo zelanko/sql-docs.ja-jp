@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32942427"
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>レッスン 2: Shared Access Signature を使用して SQL Server 資格情報を作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

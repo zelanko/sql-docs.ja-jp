@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907167"
 ---
 # <a name="cstring-class"></a>CString クラス
 のオブジェクト、 **CString** Microsoft® Visual C++ のクラスは署名され、ODBC 関数の文字列引数の符号がないを渡すアプリケーション**CString**せず ODBC 関数をオブジェクトキャストすると、コンパイラの警告が表示されます。

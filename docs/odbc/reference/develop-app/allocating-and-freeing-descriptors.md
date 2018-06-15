@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908854"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>割り当てと解放記述子
 記述子は暗黙的または明示的に割り当てられている、次のセクションで説明します。  

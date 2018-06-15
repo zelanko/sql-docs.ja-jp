@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899447"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Visual FoxPro データ ソースから Microsoft Excel へのアクセス
 Query をインストールした場合は、Visual FoxPro データに接続する Microsoft Excel でデータ ソースを作成できます。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31202985"
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>SQL Server の Machine Learning のサービスのアーキテクチャの概要 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,7 +62,7 @@ SQL Server によって管理されているセキュリティで保護された
 
   SQL Server との統合は、企業内の R、Python の有用性を向上させるためにキーです。 ストアド プロシージャの呼び出しで任意の R または Python スクリプトを実行できるし、結果の表形式の結果として、SQL Server に直接生成または SQL クエリを送信し、結果を処理できるすべてのアプリケーションからの機械学習を使用するは容易になります。
 
-  パフォーマンスの最適化は、プラットフォームの 2 つの均等に強力な側面に依存していますリソース ガバナンスおよび並列実行する SQL Server を使用して処理および分散コンピューティング アルゴリズムによって提供される**RevoScaleR**と**。revoscalepy**です。
+  パフォーマンスの最適化は、プラットフォームの 2 つの均等に強力な側面に依存していますリソース ガバナンスおよび並列実行する SQL Server を使用して処理および分散コンピューティング アルゴリズムによって提供される**RevoScaleR**と **。revoscalepy**です。
 
 ## <a name="solution-development-and-deployment"></a>ソリューションの開発と展開
 

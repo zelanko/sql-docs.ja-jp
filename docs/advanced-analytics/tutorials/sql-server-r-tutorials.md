@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31202094"
 ---
 # <a name="sql-server-r-tutorials"></a>SQL Server R チュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,9 +37,9 @@ ms.lasthandoff: 04/16/2018
 
   RevoScaleR パッケージで関数を使用する方法を説明します。 R と SQL Server、およびスイッチとの間のデータの移動は、特定のタスクに合わせてコンテキストを計算します。 モデルおよびプロットを作成し、開発環境と、データベース サーバーの間で移動します。
 
-  **対象:**データ科学者や開発者は、R 言語に慣れているユーザーおよび強化された R パッケージと Revolution Analytics によって Microsoft R 内の関数について説明したいのです。
+  **対象:** データ科学者や開発者は、R 言語に慣れているユーザーおよび強化された R パッケージと Revolution Analytics によって Microsoft R 内の関数について説明したいのです。
 
-  **要件:**基本的な R の知識。 SQL Server R Services または R と Machine Learning のサービスにサーバーへのアクセスセットアップのヘルプを参照してください。[の前提条件](#bkmk_Prerequisites)です。
+  **要件:** 基本的な R の知識。 SQL Server R Services または R と Machine Learning のサービスにサーバーへのアクセスセットアップのヘルプを参照してください。[の前提条件](#bkmk_Prerequisites)です。
 
 + [SQL 開発者のためのデータベース内 R の分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/16/2018
 
   T-SQL から R ランタイムを呼び出し、SQL コードに R 関数をラップし、R の出力と R モデルを SQL テーブルに保存するストアド プロシージャを実行する方法を説明します。
 
-  **対象:**を初めて使用する機能、およびストアド プロシージャから R を呼び出すための基本事項を説明する方のためです。
+  **対象:** を初めて使用する機能、およびストアド プロシージャから R を呼び出すための基本事項を説明する方のためです。
 
   **要件:** R または必要な SQL を認識していません。 ただし、SQL Server Management Studio またはデータベースに接続して、T-SQL を実行する別のクライアントのいずれかが必要です。 お勧め、無料[Visual Studio Code の MSSQL 拡張子](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)T-SQL クエリに慣れていない場合。
 

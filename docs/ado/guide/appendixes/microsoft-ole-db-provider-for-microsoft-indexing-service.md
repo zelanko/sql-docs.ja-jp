@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for Microsoft インテックス サービス |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc341794d419559b3683c06d51766d2e7b6287a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b789802f6a8d565119450183889d238d2e3f498e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271311"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft インデックス作成サービスの概要
 Microsoft OLE DB Provider for Microsoft インテックス サービスは、ファイル システムと Microsoft Indexing Service でインデックス付けされた Web データにプログラムでの読み取り専用アクセスを提供します。 ADO アプリケーションでは、コンテンツとファイルのプロパティ情報を取得する SQL クエリを発行できます。
@@ -48,7 +48,7 @@ MSIDXS
 
  文字列は、これらのキーワードで構成されます。
 
-|Keyword|Description|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|Microsoft インテックス サービス用の OLE DB プロバイダーを指定します。 通常これは、接続文字列で指定された唯一のキーワードです。|
 |**[データ ソース]**|インデックス サービス カタログ名を指定します。 このキーワードが指定されていない場合は、既定のシステム カタログが使用されます。|
@@ -82,7 +82,7 @@ MSIDXS
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|
-|[フィルター](../../../ado/reference/ado-api/filter-property.md)|読み取り/書き込み|
+|[Assert](../../../ado/reference/ado-api/filter-property.md)|読み取り/書き込み|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|読み取り/書き込み|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|使用不可|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|読み取り/書き込み|
@@ -91,7 +91,7 @@ MSIDXS
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|読み取り専用|
 |[ソース](../../../ado/reference/ado-api/source-property-ado-recordset.md)|読み取り/書き込み|
 |[状態](../../../ado/reference/ado-api/state-property-ado.md)|読み取り専用|
-|[[状態]](../../../ado/reference/ado-api/status-property-ado-recordset.md)|読み取り専用|
+|[ステータス](../../../ado/reference/ado-api/status-property-ado-recordset.md)|読み取り専用|
 
  \*この機能の順序で上に存在するプロバイダーのブックマークを有効にする必要があります、 **Recordset**です。
 
@@ -105,15 +105,15 @@ MSIDXS
 |[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|いいえ|
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|はい|
 |[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|はい|
-|[Del](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|いいえ|
+|[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|いいえ|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|
 |[[移動]](../../../ado/reference/ado-api/move-method-ado.md)|はい|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|はい|
-|[[ファイル]](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|
+|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|
 |[クエリを再実行します。](../../../ado/reference/ado-api/requery-method.md)|はい|
 |[再同期](../../../ado/reference/ado-api/resync-method.md)|はい|
-|[サポート](../../../ado/reference/ado-api/supports-method.md)|はい|
+|[サポートしています](../../../ado/reference/ado-api/supports-method.md)|はい|
 |[Update](../../../ado/reference/ado-api/update-method.md)|いいえ|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|いいえ|
 

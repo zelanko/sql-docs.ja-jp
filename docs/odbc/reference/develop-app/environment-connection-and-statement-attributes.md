@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911087"
 ---
 # <a name="environment-connection-and-statement-attributes"></a>環境、接続、およびステートメント属性
 ODBC では、環境、接続、またはステートメントに関連付けられている属性の数を定義します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910577"
 ---
 # <a name="data-returned-by-catalog-functions"></a>カタログ関数によって返されるデータ
 各カタログ関数では、データがその結果セットを返します。 この結果セットは、その他の結果セットから変わりません。 生成される通常、定義済みでパラメーター化された**選択**ドライバーで、ハードコーディングまたはストアド プロシージャは、データ ソース内にあるステートメントです。 結果セットからデータを取得する方法については、次を参照してください。[が、結果セットを作成しますか?](../../../odbc/reference/develop-app/was-a-result-set-created.md)です。  

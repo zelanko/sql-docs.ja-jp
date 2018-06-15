@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910117"
 ---
 # <a name="enabling-tracing"></a>トレースを有効にします。
 トレースは、3 つの方法では、次に有効ことができます。  

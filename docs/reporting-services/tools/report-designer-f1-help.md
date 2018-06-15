@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029269"
 ---
 # <a name="report-designer-f1-help"></a>レポート デザイナーの F1 ヘルプ
   このセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]レポート デザイナー ウィザード、ビュー、およびダイアログ ボックスの F1 ヘルプについて説明します。 ダイアログ ボックスの使用中は、F1 キーを押すか、ダイアログ ボックスに表示される [ヘルプ] をクリックすることで、F1 ヘルプを開くことができます。  

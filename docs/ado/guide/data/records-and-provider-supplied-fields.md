@@ -2,7 +2,6 @@
 title: レコードおよびフィールドのプロバイダーが指定した |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d929238274b5b92e9bdf7b89a369e7988c06b3fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8b27e7f5ed6f4bc658c590ab8ea05bcd4c46d7a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272571"
 ---
 # <a name="records-and-provider-supplied-fields"></a>レコードとプロバイダーが指定したフィールド
 ときに、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトを開くと、そのソースは、開いているは、現在の行を指定できます[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)、絶対 URL または相対 URL、開いていると組み合わせて[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="resource-recordset-columns"></a>リソース レコード セットの列  
  A*リソース レコード セット*次の列で構成されています。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|読み取り専用です。 リソースの URL を示します。|  
 |RESOURCE_PARENTNAME|AdVarWChar|読み取り専用です。 親レコードの絶対 URL を示します。|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
 |RESOURCE_ISCOLLECTION|adBoolean|読み取り専用です。 リソースがディレクトリなど、コレクションの場合は true。 リソースが単純なファイルである場合は false です。|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|リソースが構造化ドキュメントの場合は true。 False の場合は、リソースは、構造化ドキュメントではありません。 コレクションまたは単純なファイルがある可能性があります。|  
 |DEFAULT_DOCUMENT|AdVarWChar|読み取り専用です。 このリソースに、フォルダーの既定の単純なドキュメントまたは構造化ドキュメントの URL が含まれていることを示します。 既定のストリームが、そのリソースから要求されたときに使用されます。 このプロパティは、単純なファイルの場合は空白です。|  
-|CHAPTERED_CHILDREN|AdChapter|読み取り専用です。 省略可。 リソースの子を含む行セットのチャプターを示します。 (、 *OLE DB Provider for Internet Publishing*この列は使用しません)。|  
+|CHAPTERED_CHILDREN|AdChapter|読み取り専用です。 任意。 リソースの子を含む行セットのチャプターを示します。 (、 *OLE DB Provider for Internet Publishing*この列は使用しません)。|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|読み取り専用です。 リソースの表示名を示します。|  
 |RESOURCE_ISROOT|adBoolean|読み取り専用です。 リソースがコレクションまたは構造化ドキュメントのルートである場合は true。|  
   

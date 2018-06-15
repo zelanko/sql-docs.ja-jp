@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910478"
 ---
 # <a name="data-buffer-type"></a>データ バッファーの種類
 バッファーの C データ型は、アプリケーションで指定します。 1 つの変数では、アプリケーションにより、変数を割り当てるとこれに発生します。 汎用的なメモリと、メモリが void 型のポインターが指すは、— このアプリケーションは、特定の種類にメモリをキャストする場合に発生します。 ドライバーには、この型には 2 つの方法が検出されます。  

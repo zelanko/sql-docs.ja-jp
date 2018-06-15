@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904327"
 ---
 # <a name="set-ansi-command"></a>SET ANSI コマンド
 異なる長さの文字列間の比較を実行する方法を決定する、Visual FoxPro SQL コマンド内の演算子を = です。  

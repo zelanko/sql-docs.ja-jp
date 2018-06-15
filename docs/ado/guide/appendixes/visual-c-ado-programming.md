@@ -2,7 +2,6 @@
 title: Visual C ADO プログラミング |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ce5a300ec2dd17109f888c9023b934c686289504
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77edd4c89e8e70bf888b6244d9cb6475d4fe9550
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271561"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C ADO プログラミング
 ADO の API リファレンスでは、ADO アプリケーション プログラミング インターフェイス (API)、Microsoft Visual Basic に似た構文を使用するの機能について説明します。 ADO プログラマが Visual Basic、Visual C などのさまざまな言語を使用する対象とするユーザーには、すべてのユーザーが、(とそうでない、 **#import**ディレクティブ)、および Visual j (ADO/WFC クラス パッケージ) にします。  
@@ -225,7 +225,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```  
   
- -または-  
+ - または -  
   
 ```  
 Dim rst As ADODB.Recordset  
@@ -244,14 +244,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```  
   
- -または-  
+ - または -  
   
 ```  
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```  
   
- -または-  
+ - または -  
   
 ```  
 _RecordsetPtr  rs;  

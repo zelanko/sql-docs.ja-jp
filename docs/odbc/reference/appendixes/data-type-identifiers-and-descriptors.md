@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908397"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>データ型識別子と記述子
 データの種類の一覧を[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)と[C データ型](../../../odbc/reference/appendixes/c-data-types.md)前述のセクションでは、「簡潔な」のデータ型: 各識別子は、1 つのデータ型を参照します。 識別子と、データ型の間で一対一で対応します。 記述子、ただし、処理を行うされていないすべての場合は、データ型を識別する単一の値を使用します。 場合によっては、"verbose"のデータ型と型サブコード使用します。 Datetime および間隔のデータ型を除くすべてのデータ型の詳細な型識別子は、簡潔なタイプ識別子と同じと SQL_DESC_DATETIME_INTERVAL_CODE の値が 0 にします。 Datetime および間隔のデータ型のただし、(SQL_DATETIME または SQL_INTERVAL) の詳細な型に格納 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE に簡潔な型が格納されているされ SQL_DESC_DATETIME_INTERVAL_CODE に簡潔な各種のサブコードが格納されています。 これらのフィールドのいずれかを設定すると、その他に影響します。 これらのフィールドの詳細については、次を参照してください。、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)関数の説明。  

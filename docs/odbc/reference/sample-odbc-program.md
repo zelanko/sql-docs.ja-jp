@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914917"
 ---
 # <a name="sample-odbc-program"></a>ODBC のサンプル プログラム
 [ODBC サンプル コード](http://go.microsoft.com/fwlink/?LinkId=244831)メッセージ ODBC データ ソース名を表示します。  クエリを入力するように求め、およびサンプル クエリの結果が表示されます。

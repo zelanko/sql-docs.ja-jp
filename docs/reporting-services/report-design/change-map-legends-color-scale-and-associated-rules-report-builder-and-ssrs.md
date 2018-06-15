@@ -43,6 +43,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021891"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>マップの凡例、カラー スケール、および関連付けられているルールの変更 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、マップにはマップの凡例、カラー スケール、および距離スケールを含めることができます。 これらのマップ要素は、マップに表示されているデータをユーザーが解釈する際に役に立ちます。  

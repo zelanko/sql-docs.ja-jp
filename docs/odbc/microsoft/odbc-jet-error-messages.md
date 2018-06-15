@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901417"
 ---
 # <a name="odbc-jet-error-messages"></a>ODBC Jet エラー メッセージ
 データ ソースで発生したエラーの場合は、ODBC ドライバーは、ODBC ファイル ライブラリによって返されたエラー メッセージを返します。 ODBC ドライバーまたはドライバー マネージャーで発生したエラー、SQLSTATE と関連付けられたエラー メッセージがテキストに基づくドライバーを返します。  

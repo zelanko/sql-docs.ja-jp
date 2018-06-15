@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911867"
 ---
 # <a name="like-predicate-escape-character"></a>述語のエスケープ文字のように
 **など**述語、パーセント記号 (%) と一致する 0 個以上の任意の文字と一致する任意の 1 文字をアンダー スコア (_)。 実際のパーセント記号に一致またはでアンダー スコア、**など**述語、エスケープ文字は、パーセント記号またはアンダー スコアの前にする必要があります。 エスケープ シーケンスを定義する、**など**述語のエスケープ文字とは。  

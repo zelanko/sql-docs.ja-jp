@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911647"
 ---
 # <a name="ordinary-arguments"></a>通常の引数
 カタログ関数の文字列引数に通常の引数がある場合は、リテラル文字列として扱われます。 通常の引数は、文字列検索パターンにも値の一覧を受け入れます。 通常の引数の場合は、重要でし、文字列の引用符文字がどおりです。 SQL_ATTR_METADATA_ID ステートメント属性が SQL_FALSE; に設定されている場合、これらの引数は通常の引数として扱われますとして扱われます識別子引数代わりにこの属性が SQL_TRUE に設定されている場合。  

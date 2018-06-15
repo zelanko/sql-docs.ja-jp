@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538722"
 ---
 # <a name="remote-table-copy"></a>リモート テーブルのコピー
 リモート テーブルのコピー機能を使用して、SQL Server PDW のデータベースからテーブルをリモートの (非アプライアンス) SMP SQL Server データベースにコピーする方法について説明します。 SQL Server PDW のハブとスポークのシナリオを有効にするリモート テーブルのコピーを使用します。  

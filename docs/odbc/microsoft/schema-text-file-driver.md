@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899637"
 ---
 # <a name="schema-text-file-driver"></a>スキーマ (テキスト ファイル ドライバー)
 スキーマには、テーブルの形式、oem メーカーを使用して、ソース ファイルが書き込まれるかどうか、テーブルの最初の行が列名を格納するかどうかを決定列の種類、スキャンする行の数を含む、データ ソースの各テーブル (テキスト ファイル) に関する情報が含まれていますかANSI コードページと各列の名前、データ型、および幅。

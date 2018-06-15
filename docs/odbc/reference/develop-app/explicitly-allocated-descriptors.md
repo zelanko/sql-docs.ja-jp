@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909413"
 ---
 # <a name="explicitly-allocated-descriptors"></a>明示的に割り当てられた記述子
 アプリケーションでは、いつでも、データベースに接続されている接続でのアプリケーションの記述子を明示的に割り当てることができます。 ステートメントの属性の処理を使用して、その記述子ハンドルを指定することによって**SQLSetStmtAttr**アプリケーションは、アプリケーションを暗黙的に割り当てを対応する代わりにその記述子を使用するドライバーに指示記述子。 アプリケーションでは、記述子の代替実装を指定できません。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909717"
 ---
 # <a name="diagnostic-tools"></a>診断ツール
 2 つの機能は、ODBC アプリケーションで問題の診断に役立ちます。 両方は、ODBC アドミニストレーターから使用可能なドライバー マネージャーによって実装されています。 *トレース*関数呼び出しのシーケンスをログ ファイルに記録する手段を提供します。 Visual Studio Analyzer は、分散環境でコンポーネントの相互作用に関する情報の分析を使用します。  

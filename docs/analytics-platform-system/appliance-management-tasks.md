@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538832"
 ---
 # <a name="appliance-management-tasks-for-analytics-platform-system"></a>Analytics Platform System のアプライアンスの管理タスク
 このガイドでは、Analytics Platform System (APS) のアプライアンスの管理タスクを実行する方法について説明します。  

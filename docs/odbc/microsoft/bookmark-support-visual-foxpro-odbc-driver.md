@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902007"
 ---
 # <a name="bookmark-support-visual-foxpro-odbc-driver"></a>ブックマーク サポート (Visual FoxPro ODBC ドライバー)
 Visual FoxPro ODBC ドライバーには、単純なブックマークがサポートしています。 呼び出すと[SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md) 、SQL_BOOKMARK_PERSISTENCE で*情報の種類*、戻り値は、SQL_BP_SCROLL です。  

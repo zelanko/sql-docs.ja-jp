@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899827"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 Microsoft ODBC Open Database Connectivity () インターフェイスが、C プログラミング言語インターフェイス アプリケーションのさまざまなデータベース管理システム (Dbms) からデータにアクセスするためにできるようにします。 ODBC は、リレーショナル データ ストア向けに設計されていますが、低レベルの高パフォーマンスのインターフェイスです。  

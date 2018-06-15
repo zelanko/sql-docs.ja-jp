@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909887"
 ---
 # <a name="dynamic-tracing"></a>動的トレース
 トレースを有効になっているまたは実行するアプリケーションのどの時点でも無効になっていることができます。 これにより、関数呼び出しの任意の数を追跡するアプリケーション。  

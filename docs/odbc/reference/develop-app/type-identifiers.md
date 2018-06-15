@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914677"
 ---
 # <a name="type-identifiers"></a>型識別子
 ODBC SQL と C データ型を記述するには 2 つのセットを定義します*タイプ id*です。 型識別子では、SQL 列、または C バッファーの種類について説明します。 **#Define**値しは一般に関数の引数として渡されるまたはメタデータに返されます。  

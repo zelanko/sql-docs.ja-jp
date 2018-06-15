@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915007"
 ---
 # <a name="step-6-disconnect-from-the-data-source"></a>手順 6: がデータ ソースから切断します。
 最後の手順は、次の図に示すように、データ ソースから切断するのにです。 アプリケーションが呼び出すことによって、ステートメント ハンドルを解放する最初に、 **SQLFreeHandle**です。 詳細については、次を参照してください。[ステートメント ハンドルの解放](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)です。  

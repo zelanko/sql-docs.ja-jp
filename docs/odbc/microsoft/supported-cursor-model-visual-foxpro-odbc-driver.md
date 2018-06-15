@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903627"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>サポートされるカーソル モデル (Visual FoxPro ODBC ドライバー)
 Visual FoxPro ODBC ドライバーでは、両方がサポート*ブロック*(*行セット*) および*静的*カーソル。 レベル 1 の ODBC コンプライアンスに準拠しているすべてのドライバーでは、静的カーソルはサポートされます。 ドライバーが動的、キーセット ドリブンまたは混合 (キーセット カーソルおよび動的) をサポートしていないカーソル。  

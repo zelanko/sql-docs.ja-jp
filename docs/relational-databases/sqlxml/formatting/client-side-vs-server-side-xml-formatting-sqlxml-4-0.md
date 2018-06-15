@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32971817"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>クライアント側とサーバー側の XML 書式設定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -216,7 +217,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
   
 -   指定すると**クライアント側の xml =「0」** (false)、テンプレートで、要求しているサーバー側の XML 書式設定します。 したがって、サーバーでは NESTED オプションが認識されないので、FOR XML NESTED は指定できません。 これにより、エラーが発生します。 この場合、サーバーで認識される AUTO、RAW、または EXPLICIT モードを使用する必要があります。  
   
--   指定すると**クライアント側の xml =「1」** (true)、テンプレートで、要求しているクライアント側の XML 書式設定します。 この場合、FOR XML NESTED を指定できます。 FOR XML AUTO を指定すると、XML 書式設定場合は、サーバー側では**クライアント側の xml =「1」**テンプレートで指定します。  
+-   指定すると**クライアント側の xml =「1」** (true)、テンプレートで、要求しているクライアント側の XML 書式設定します。 この場合、FOR XML NESTED を指定できます。 FOR XML AUTO を指定すると、XML 書式設定場合は、サーバー側では**クライアント側の xml =「1」** テンプレートで指定します。  
   
 ## <a name="see-also"></a>参照  
  [XML のセキュリティに関する考慮事項の&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   

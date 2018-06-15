@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030275"
 ---
 # <a name="troubleshoot-reporting-services"></a>Reporting Services のトラブルシューティング
   このセクションのトピックは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に関する問題を特定し、トラブルシューティングを行うのに役立ちます。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908147"
 ---
 # <a name="explicit-data-type-conversion-function"></a>明示的なデータ型変換関数
 明示的なデータ型の変換は、SQL データ型の定義を使用して指定します。  

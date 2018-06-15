@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913337"
 ---
 # <a name="supported-odbc-api-functions"></a>サポートされている ODBC API 関数
 平準化の目的は、どのような機能を利用して、ドライバーからアプリケーションに通知を開始します。 Microsoft ODBC のデスクトップ データベース ドライバーでは、すべてのコアと第 1 レベルの関数をサポートします。  

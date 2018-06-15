@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538592"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Analytics Platform System、SCOM 管理パックをインポートします。
 Analytics Platform System (APS) 用 System Center Operations Manager (SCOM) 管理パックをインポートする手順に従います。 SCOM から並列データ ウェアハウスを監視するには、管理パックが必要です。 
@@ -47,7 +48,7 @@ System Center Operations Manager 2007 R2 は、インストールして実行す
   
     ![両方の管理パックを選択して](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP4.png "SCOM_IMP4")  
   
-7.  **[インストール]**をクリックします。  
+7.  **[インストール]** をクリックします。  
   
     ![[インストール] をクリックして](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
@@ -67,11 +68,11 @@ System Center Operations Manager 2007 R2 は、インストールして実行す
   
     ![管理パックの選択](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW2.png "SCOM_PDW2")  
   
-4.  **[インストール]**をクリックします。  
+4.  **[インストール]** をクリックします。  
   
     ![[インストール] をクリックして](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
-5.  **[閉じる]**をクリックします。  
+5.  **[閉じる]** をクリックします。  
   
     ![[閉じる] をクリックして](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   

@@ -2,7 +2,6 @@
 title: 'ADO イベントのインスタンス化: ADO および WFC |Microsoft ドキュメント'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -15,11 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89fefc8d733f515ef6f085e39b69268a808cefd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6aa227f5ca6b6246d61e183c03d6217ebaa70bac
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270811"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO イベントのインスタンス化: ADO および WFC
 ADO の Windows Foundation Class (ADO/WFC) は、ADO イベント モデルでビルドし、簡略化されたアプリケーション プログラミング インターフェイスを提供します。 一般に、ADO/WFC ADO イベントを取得、イベント パラメーターに 1 つのイベント クラスでは、統合し、イベント ハンドラーを呼び出します。  

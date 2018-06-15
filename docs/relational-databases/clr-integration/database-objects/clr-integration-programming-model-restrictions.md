@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32924547"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 統合プログラミング モデルの制限事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +43,9 @@ ms.lasthandoff: 05/03/2018
   
 -   サポートされているアセンブリの 1 つであること。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)です。  
   
--   使用している **FROM * * * の CREATE ASSEMBLY\<場所 >、*すべての参照先アセンブリとその依存関係がで利用できる*\<場所 >* です。  
+-   使用している **FROM * * * の CREATE ASSEMBLY\<場所 >、* すべての参照先アセンブリとその依存関係がで利用できる*\<場所 >* です。  
   
--   使用している **FROM * * * の CREATE ASSEMBLY\<バイト... >、*参照が領域を使用して指定されたすべての区切りのバイトとします。  
+-   使用している **FROM * * * の CREATE ASSEMBLY\<バイト... >、* 参照が領域を使用して指定されたすべての区切りのバイトとします。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  すべて**EXTERNAL_ACCESS**アセンブリは、次の条件を満たす必要があります。  

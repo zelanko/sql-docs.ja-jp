@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913297"
 ---
 # <a name="sql-conformance-levels"></a>SQL への準拠レベル
 ドライバーでサポートされている SQL 92 文法のレベルがへの呼び出しによって返される値で示される**SQLGetInfo** SQL_SQL_CONFORMANCE 情報の種類とします。 これは、ドライバーは、sql-92 で定義されているエントリ、FIPS 移行中、中間、またはフル レベルに準拠しているかどうかを示します。  

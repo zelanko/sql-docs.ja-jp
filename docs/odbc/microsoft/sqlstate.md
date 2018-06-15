@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900541"
 ---
 # <a name="sqlstate"></a>SQLSTATE
 データ ソースで発生したエラーの場合は、ODBC ドライバーは、返されたネイティブ エラーを適切な SQLSTATE にマップされます。 ドライバーまたは ODBC ドライバー、ドライバー マネージャーによって検出されたエラーまたはドライバー マネージャーが適切な SQLSTATE を生成します。

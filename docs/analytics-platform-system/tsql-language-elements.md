@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539572"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>並列データ ウェアハウスの T-SQL 言語要素
 T-SQL 言語要素の分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915257"
 ---
 # <a name="step-4b-fetch-the-row-count"></a>手順 4 b: 行の数を取得
 次の手順は、次の図に示すように、行の数をフェッチするは。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916337"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos で行セット内の行を更新
 更新操作**SQLSetPos**により、データ ソースのデータを使用してアプリケーションのバッファーでバインドされた各列 (長さ/インジケーター バッファー内の値が SQL_COLUMN_IGNORE の場合)、テーブルの 1 つまたは複数の選択した行を更新します。 バインドされていない列は更新されません。  

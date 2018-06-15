@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899937"
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースの変更
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースを変更するには  

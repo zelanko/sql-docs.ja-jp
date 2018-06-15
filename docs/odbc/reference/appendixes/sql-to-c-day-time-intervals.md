@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910617"
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL から c: 1 日間隔でへ
 1 日の時間間隔の ODBC SQL データ型の識別子は次のとおりです。  

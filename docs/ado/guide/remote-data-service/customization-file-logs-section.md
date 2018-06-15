@@ -2,7 +2,6 @@
 title: カスタマイズ ファイルのセクションをログに記録 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37bcfdea2c98295d2869cd4bc5766e89758e2773
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b80034b1d2668960aa918b1c66df878eb75ca86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274011"
 ---
 # <a name="customization-file-logs-section"></a>カスタマイズ ファイル ログ
 **ログ**セクションには操作中にエラーを記録するファイルの名前を指定するログ ファイルのエントリが含まれています、 **DataFactory**です。  
@@ -40,9 +40,9 @@ FileName
   
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
-|要素|Description|  
+|要素|説明|  
 |----------|-----------------|  
 |**err**|このことを示すリテラル文字列は、ログ ファイル エントリです。|  
 |*FileName*|完全なパスとファイル名。 一般的なファイル名が**c:\msdfmap.log**です。|  

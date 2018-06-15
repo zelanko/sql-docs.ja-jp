@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911327"
 ---
 # <a name="connecting-using-file-data-sources"></a>ファイルのデータ ソースを使用して接続します。
 ファイル データ ソースの接続情報は、.dsn ファイルに格納されます。 その結果、接続文字列を 1 人のユーザーによって繰り返し使用または適切なドライバーがインストールされている場合に、いくつかのユーザー間で共有を設定します。 ファイルには、ドライバー名 (または別のデータ ソース名、共有不能なファイルのデータ ソースの場合) が含まれていると、必要に応じて、接続文字列をで使用できる**SQLDriverConnect**です。 ドライバー マネージャーへの呼び出しの接続文字列を構築する**SQLDriverConnect** .dsn ファイル内のキーワードからです。  

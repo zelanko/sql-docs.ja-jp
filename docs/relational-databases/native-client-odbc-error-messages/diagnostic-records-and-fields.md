@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32946987"
 ---
 # <a name="diagnostic-records-and-fields"></a>診断レコードと診断フィールド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
  **SQLGetDiagRec** ODBC SQLSTATE、ネイティブ エラー番号、診断メッセージ フィールドと 1 つの診断レコードを取得します。 この機能は、ODBC 2 に似ています。*x * * * SQLError** 関数。 ODBC 3 で最も簡単なエラー処理関数です。*x*を繰り返し呼び出すは**SQLGetDiagRec**以降で、 *RecNumber*パラメーター 1 とインクリメントに設定*RecNumber*まで 1**SQLGetDiagRec** SQL_NO_DATA が返されます。 これは、ODBC 2 と同じです。*x*呼び出すアプリケーション**SQLError** SQL_NO_DATA_FOUND が返されるまでです。  
   
- ODBC 3 です。*x* ODBC 2 よりもはるかに診断情報をサポートしています*。x*です。 この情報が追加フィールドを使用して取得する診断レコードに格納されている**SQLGetDiagField**です。  
+ ODBC 3 です。*x* ODBC 2 よりもはるかに診断情報をサポートしています *。x*です。 この情報が追加フィールドを使用して取得する診断レコードに格納されている**SQLGetDiagField**です。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーで取得できるドライバー固有の診断フィールドが含まれている**SQLGetDiagField**です。 これらのドライバー固有のフィールドのラベルは、sqlncli.h で定義されています。 これらのラベルを使用して、各診断レコードに関連付けられた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の状態、重大度レベル、サーバー名、プロシージャ名、および行番号を取得します。 また、sqlncli.h には、ドライバーを使用してアプリケーションを呼び出す場合は、TRANSACT-SQL ステートメントを識別するコードの定義が含まれて**SQLGetDiagField**で*DiagIdentifier* SQL_DIAG_DYNAMIC_ に設定FUNCTION_CODE です。  
   

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908357"
 ---
 # <a name="automatic-population-of-the-ipd"></a>IPD の自動設定
 一部のドライバーでは、パラメーター化クエリを準備した後、IPD のフィールドを設定できます。 記述子フィールドには、データ型、有効桁数、小数点以下桁数、およびその他の特性を含め、パラメーターに関する情報が自動的に設定されます。 これはサポートに相当**SQLDescribeParam**です。 この情報は、アプリケーションが認識していないパラメーターを使用してアドホック クエリが行われる場合など、検出するには、他の方法があるないときをアプリケーションに特に有用です。  

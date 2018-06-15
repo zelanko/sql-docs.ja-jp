@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914897"
 ---
 # <a name="tables-and-views"></a>[テーブルとビュー]
 ODBC 関数、テーブルとビューを交換できます。 用語*テーブル*テーブルとビューの場合を除きの両方に使用という用語は、*ビュー*が明示的に使用します。

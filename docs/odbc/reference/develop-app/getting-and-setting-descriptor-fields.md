@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910357"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>取得および記述子フィールドを設定します。
 このセクションでは、アプリケーションで使用できる記述子フィールドに値を設定または取得する方法について説明します。  

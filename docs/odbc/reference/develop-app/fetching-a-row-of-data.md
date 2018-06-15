@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913317"
 ---
 # <a name="fetching-a-row-of-data"></a>データの行のフェッチ
 アプリケーションを呼び出すデータの行をフェッチする**SQLFetch**です。 **SQLFetch**をカーソルの種類と呼ばれることができますが、順方向専用の方向に行セットのカーソルだけ移動します。 **SQLFetch**次の行にカーソルを移動し、データへの呼び出しにバインドされていたすべての列を返します**SQLBindCol**です。 設定すると、カーソルが結果の末尾に達したとき、 **SQLFetch** SQL_NO_DATA が返されます。 例については、呼び出し元の**SQLFetch**を参照してください[を使用して SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)です。  

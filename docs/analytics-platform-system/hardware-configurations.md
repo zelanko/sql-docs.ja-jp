@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544724"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Analytics Platform System のハードウェア構成
 Analytics Platform System (APS) ハードウェアは、設計拡張性の高いユニット ビジネス ニーズに合わせて適切な処理と記憶域容量を購入するようにします。 アプライアンスは、記憶域の SQL Server 並列データ Wareouse (PDW) 数テラバイトからを超える 6 ペタバイト級のデータをスケーリングします。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906207"
 ---
 # <a name="appendix-d-data-types"></a>付録 d: データ型
 ODBC データ型の 2 つのセットを定義します。 SQL データ型と C データ型。 SQL データ型では、データ ソースに格納されているデータのデータ型を示します。 C データ型では、アプリケーションのバッファーに格納されたデータのデータ型を示します。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916237"
 ---
 # <a name="odbc-subkey"></a>ODBC のサブキー
 ODBC のサブキーの下の値は、ODBC トレース オプションを指定します。 によって表示される ODBC データ ソース アドミニストレーター ダイアログ ボックスの トレース タブでこれらのオプションを設定**SQLManageDataSources**です。 ODBC サブキー自体はオプションです。 これらの値の形式は、次の表に示すようにします。  

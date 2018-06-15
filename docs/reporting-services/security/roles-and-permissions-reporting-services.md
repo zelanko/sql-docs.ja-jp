@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029019"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>ロールと権限 (Reporting Services)
   Reporting Services では、認証サブシステムとロールベースの承認モデルを提供しています。 認証モデルと承認モデルは、レポート サーバーがネイティブ モードで実行されているか、SharePoint モードで実行されているかで異なります。 レポート サーバーが SharePoint 配置の一部として存在している場合、SharePoint の権限によってレポート サーバーへのアクセス権を持つユーザーが決定されます。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918527"
 ---
 # <a name="the-driver-manager"></a>ドライバー マネージャー
 *ドライバー マネージャー*ライブラリで、アプリケーションおよびドライバーとの間の通信を管理します。 たとえば、Microsoft® Windows® プラットフォームでは、ドライバー マネージャーは、ダイナミック リンク ライブラリ (DLL) は Microsoft によって作成され、再頒布可能パッケージの MDAC 2.8 SP1 SDK のユーザーによって再配布できます。  

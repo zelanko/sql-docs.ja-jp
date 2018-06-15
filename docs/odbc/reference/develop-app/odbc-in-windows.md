@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911277"
 ---
 # <a name="odbc-in-windows"></a>Windows で ODBC
 次の項目は、Microsoft® Windows NT または Windows 2000 と Microsoft Windows® 95/98 のオペレーティング システムで実行されている ODBC にのみ適用されます。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909107"
 ---
 # <a name="fetching-data"></a>データのフェッチ
 結果セットから行を取得して、それらをアプリケーションに返すのプロセスが呼び出されると*フェッチ*です。 このセクションでは、データをフェッチする方法について説明します。  

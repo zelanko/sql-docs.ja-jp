@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909657"
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>ODBC ステートメント ハンドルを解放します。
 前述のようよりにドロップし、新しいものを割り当てるステートメントを再利用する方が効率的です。 ステートメントで新しい SQL ステートメントを実行する前に、アプリケーションは、現在のステートメント設定が適切であることを確認する必要があります。 確認する設定には、ステートメント属性、パラメーター バインド、結果セットのバインドがあります。 一般に、パラメーターと、古い SQL ステートメントの結果セットする必要がありますバインドを解除する (呼び出すことによって**SQLFreeStmt** SQL_RESET_PARAMS と SQL_UNBIND オプションを使用) と、新しい SQL ステートメントの再バインドします。  

@@ -2,7 +2,6 @@
 title: 接続文字列の作成 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc700bdc0006a4591e61e15f2796b73c194dc5a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 106aacb0fbdda6e00d32b42a8bae49564ee1adbc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270561"
 ---
 # <a name="creating-a-connection-string"></a>接続文字列の作成
 接続文字列は、セミコロンで区切られた引数と値のペア (つまり、パラメーター) の一覧で構成されます。 以下に例を示します。  
@@ -35,11 +35,11 @@ ms.lasthandoff: 05/03/2018
   
  ADO では、接続文字列に次の 5 つの引数を認識します。  
   
-|引数|Description|  
+|引数|説明|  
 |--------------|-----------------|  
 |*プロバイダー*|接続に使用するプロバイダーの名前を指定します。|  
 |*[ファイル名]*|事前設定された接続情報を含むプロバイダー固有のファイル (たとえば、永続化されたデータ ソース オブジェクト) の名前を指定します。|  
-|*[URL]*|ファイルまたはディレクトリなどのリソースを識別する絶対 URL として接続文字列を指定します。|  
+|*URL*|ファイルまたはディレクトリなどのリソースを識別する絶対 URL として接続文字列を指定します。|  
 |*リモート プロバイダー*|クライアント側の接続を開くときに使用するプロバイダーの名前を指定します。 (リモート データのサービスのみ。)|  
 |*リモート サーバー*|クライアント側の接続を開くときに使用するサーバーのパス名を指定します。 (リモート データのサービスのみ。)|  
   

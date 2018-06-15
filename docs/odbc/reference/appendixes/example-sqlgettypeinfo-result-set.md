@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914457"
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>Sqlgettypeinfo による結果セットの例
 アプリケーションが呼び出す**SQLGetTypeInfo**を決定するデータ型は、データ ソースとそれらのデータ型の特性でサポートされています。 次の表は、によって返される結果セットの例を示して**SQLGetTypeInfo** SQL_CHAR、SQL_LONGVARCHAR、SQL_DECIMAL、SQL_REAL、SQL_DATETIME、SQL_INTERVAL_YEAR、および SQL_INTERVAL_DAY_TO_SECOND をサポートするデータ ソースにします。  

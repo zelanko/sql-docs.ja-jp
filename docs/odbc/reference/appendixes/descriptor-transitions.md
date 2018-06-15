@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907697"
 ---
 # <a name="descriptor-transitions"></a>記述子の遷移
 ODBC 記述子では、次の 3 つの状態があります。  

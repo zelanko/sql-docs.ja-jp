@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915183"
 ---
 # <a name="static-sql"></a>静的 SQL
 表示される埋め込み SQL [Embedded SQL 例](../../odbc/reference/embedded-sql-example.md)静的 SQL と呼ばれます。 プログラムでの SQL ステートメントは静的にするために、静的 SQL を呼び出されますつまり、プログラムを実行するたびに、変更しないでください。 前のセクションで説明した、プログラムの残りの部分はコンパイル時にこれらのステートメントがコンパイルされます。  

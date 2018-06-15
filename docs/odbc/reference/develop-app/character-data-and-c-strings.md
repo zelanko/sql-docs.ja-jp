@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912387"
 ---
 # <a name="character-data-and-c-strings"></a>文字データと C 文字列
 (列名、動的パラメーターは、文字列の属性値など) の可変長文字データを参照する入力パラメーターでは、関連付けられた長さパラメーターがあります。 アプリケーション終了した場合は c 言語で一般的な null 文字を含む文字列、長さの文字列 (null 終端文字を除く) のバイト数または SQL_NTS (Null-Terminated 文字列) のいずれかを引数としては提供します。 負でない長の引数は、関連付けられている文字列の実際の長さを指定します。 Length 引数には、NULL 値とは異なりますが、長さ 0 の文字列を指定する可能性があります。 SQL_NTS 負の値は、null 終端文字を検索する文字列の長さを判別するのには、ドライバーに指示します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917389"
 ---
 # <a name="installer-dll-function-summary"></a>インストーラー DLL 関数の概要
 次の表では、インストーラー DLL 内の関数について説明します。 各関数のセマンティクスと構文に関する詳細については、次を参照してください。[インストーラー DLL の API リファレンス](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)です。  

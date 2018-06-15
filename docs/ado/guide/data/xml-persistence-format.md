@@ -2,7 +2,6 @@
 title: 永続化形式の XML |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,18 +16,19 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 449353a8a7d8e5109d65e6f4f06ac646946e54a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd0085f4fb632d4e5be4c4e64e1934b154108488
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273301"
 ---
 # <a name="xml-persistence-format"></a>XML の永続化の形式
 ADO では、utf-8 が解決されない XML ストリームのエンコーディングを使用します。  
   
  ADO XML 形式は、2 つのセクションでは、データのセクションで後にスキーマ セクションに分割されます。 Northwind データベースから Shippers テーブルの XML ファイルの例を次に示します。 次の例では、XML のさまざまな部分を説明します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   

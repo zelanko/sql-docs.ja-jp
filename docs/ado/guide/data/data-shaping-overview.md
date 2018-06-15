@@ -2,7 +2,6 @@
 title: データ シェイプの概要 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba1b8acd52c86c0bffa19ec22658008a3b8f5601
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68044aa5ef5eb6364157aa3251b8cc39da73ac78
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271541"
 ---
 # <a name="data-shaping-overview"></a>データ シェイプの概要
 *データ シェイプ*クエリ内の 2 つ以上の論理エンティティ間の階層関係を構築することを意味します。 階層が 1 つのレコード間の親子関係でわかるように[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、および別の 1 つまたは複数のレコード (章とも呼ばれます)**レコード セット**です。 親子関係で、親**Recordset**子を含む**レコード セット**です。 このような階層リレーションシップの例は、顧客と注文です。 データベース内のすべての顧客の 0 個以上の注文があります。 階層リレーションシップには、再帰的孫レコードが子レコード内に入れ子にすることがあります。 原則として、階層レコードを任意の深さに入れ子にできます。 実際には、ADO は 512 の最大再帰を制限**Recordset**s。  

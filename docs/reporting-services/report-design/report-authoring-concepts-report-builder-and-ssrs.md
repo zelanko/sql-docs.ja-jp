@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023609"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>レポート作成の概念 (レポート ビルダーおよび SSRS)
   ここでは、ページ分割されたレポートを記述するためにレポート ビルダーとレポート デザイナーのドキュメントで使用する主要な概念について簡単に説明します。 特定の用語の定義については、「[用語集 &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/glossary-report-builder.md)」を参照してください。  

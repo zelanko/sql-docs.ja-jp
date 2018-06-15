@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32939817"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/03/2018
  ** UDT はユーザー定義型を示します。  
   
 ## <a name="exporting-using-v-80"></a>–V 80 を使用したエクスポート  
- **–V80** スイッチを使用してデータを一括エクスポートする場合、 **nvarchar(max)**、 **varchar(max)**、 **varbinary(max)**、 型のデータ、XML データ、およびネイティブ モードの UDT データは、 **以降のバージョンの既定である 8 バイトのプレフィックスではなく、**text **、**image **、および** ntext [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 型のデータと同様に、4 バイトのプレフィックス付きで格納されます。  
+ **–V80** スイッチを使用してデータを一括エクスポートする場合、 **nvarchar(max)**、 **varchar(max)**、 **varbinary(max)**、 型のデータ、XML データ、およびネイティブ モードの UDT データは、 **以降のバージョンの既定である 8 バイトのプレフィックスではなく、** text **、** image **、および** ntext [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 型のデータと同様に、4 バイトのプレフィックス付きで格納されます。  
   
 ## <a name="copying-date-values"></a>日付値のコピー  
  **bcp** は ODBC 一括コピー API を使用します。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **bcp** に日付値をインポートするには、ODBC の日付形式 (*yyyy-mm-dd hh:mm:ss*[*.f...*]) を使用します。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905287"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>データを挿入する SQLSetPos を呼び出す
 ODBC 2 時にします。*x* ODBC 3 作業アプリケーション *.x*ドライバー呼び出し**SQLSetPos**で、*操作*SQL_ADD、ドライバー マネージャーの引数この呼び出しにマップされていない**SQLBulkOperations**です。 場合、ODBC 3 *.x*ドライバーを呼び出すアプリケーションでは動作する必要があります**SQLSetPos**ドライバーは、SQL_ADD でその操作をサポートする必要があります。  

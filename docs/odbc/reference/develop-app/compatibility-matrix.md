@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912437"
 ---
 # <a name="compatibility-matrix"></a>互換性マトリックス
 次の表では、アプリケーションやドライバーのこのセクションで以前定義の型の互換性について説明します。  

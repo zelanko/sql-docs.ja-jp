@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916587"
 ---
 # <a name="setup-program"></a>セットアップ プログラム
 > **注:** 以降では、Windows XP および Windows Server 2003、 **ODBC は、Windows オペレーティング システムに含まれる**です。 以前のバージョンの Windows で ODBC を明示的にのみインストールしてください。  

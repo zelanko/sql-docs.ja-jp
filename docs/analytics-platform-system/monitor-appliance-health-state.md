@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539052"
 ---
 # <a name="monitor-appliance-health-state"></a>アプライアンス正常性状態の監視
 この記事では、管理コンソールを使用するか、並列データ ウェアハウスの動的管理ビューを直接照会して、Analytics Platform System アプライアンスの状態を監視する方法について説明します。 
@@ -84,7 +85,7 @@ Status プロパティを返される値は次のとおりです。
   
 すべてのコンポーネントのすべてのプロパティを表示するには、削除、`WHERE  p.property_name = 'Status'`句。  
   
-**[Update_time]**列コンポーネントが SQL Server PDW の正常性エージェントがポーリングされた最終時刻を示しています。  
+**[Update_time]** 列コンポーネントが SQL Server PDW の正常性エージェントがポーリングされた最終時刻を示しています。  
   
 > [!CAUTION]  
 > コンポーネントは 5 分以上; ポーリングされていないときに、問題を調査してください。ソフトウェアのハートビートの問題を示すアラートがあります。  

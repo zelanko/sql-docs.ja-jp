@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912307"
 ---
 # <a name="executing-a-statement"></a>ステートメントを実行します。
 4 つの方法で、データベース エンジンとそれを定義するには、(準備)、コンパイル時にに応じて、ステートメントを実行するにがあります。  

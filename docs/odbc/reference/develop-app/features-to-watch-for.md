@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911367"
 ---
 # <a name="features-to-watch-for"></a>監視する機能
 このセクションでは、さまざまな機能を付与の多くの場合、アプリケーション開発者が受け取るについて説明します。 実際には、これらの機能が大きく異なっていますサポートと Dbms; の間でのサポート方法それらのコードに障害が相互運用可能なアプリケーションで問題が発生する可能性があります。  

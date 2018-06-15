@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914197"
 ---
 # <a name="odbc-glossary"></a>ODBC の用語集
 ## <a name="a"></a>A  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="b"></a>B  
  **動作の変更**  
- ODBC 3 から特定の機能変更 *.x* ODBC 2 に動作します*。x*動作、またはその逆です。 また環境属性を変更することによって発生します。  
+ ODBC 3 から特定の機能変更 *.x* ODBC 2 に動作します *。x*動作、またはその逆です。 また環境属性を変更することによって発生します。  
   
  **バイナリ ラージ オブジェクト (BLOB)**  
  255 などのバイト数にわたってバイナリ データ。 通常かなり長くします。 このようなデータは一般に送信され、部分のデータ ソースから取得します。 呼ばれる*長いデータ*です。  

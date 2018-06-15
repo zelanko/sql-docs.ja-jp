@@ -2,7 +2,6 @@
 title: カスタマイズ ファイルの概要 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99a565fe6ee25f1fb8d0911b80c0b629c02b3cdf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a80667371709c4035a4a45fa4e322d59f03f5bc7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274581"
 ---
 # <a name="understanding-the-customization-file"></a>カスタマイズ ファイルの概要
 カスタマイズ ファイルの各セクション ヘッダーは、角かっこで構成されます (**:operator[]**) 型とパラメーターを格納します。 次の 4 つのセクションの種類は、リテラル文字列で示されます。**接続**、 **sql**、 **userlist**、または**ログ**です。 パラメーターでは、リテラル文字列、既定値、ユーザー指定の識別子では、または何も行われません。  
@@ -45,7 +45,7 @@ identifier
   
  セクション ヘッダーには、次の一部が含まれています。  
   
-|要素|Description|  
+|要素|説明|  
 |----------|-----------------|  
 |**接続**|接続文字列を変更するリテラル文字列。|  
 |**sql**|コマンド文字列を変更するリテラル文字列。|  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544924"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>並列データ ウェアハウス コンポーネントの分析プラットフォーム システム
 この記事では、アプライアンス ソフトウェアおよび Analytics Platform System のアプライアンス以外のソフトウェア コンポーネントについて説明します。  

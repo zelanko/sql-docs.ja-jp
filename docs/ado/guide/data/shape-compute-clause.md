@@ -2,7 +2,6 @@
 title: 図形の COMPUTE 句 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 183d6536d5202c9795837a4e35f740753b77703f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272831"
 ---
 # <a name="shape-compute-clause"></a>図形の COMPUTE 句
 図形の COMPUTE 句には、親が生成されます**レコード セット**、子への参照で構成されている列を持つ**レコード セット**以外の場合は省略可能な列の内容が章では、新しい、または計算列、または子で集計関数の実行結果**レコード セット**以前形または**レコード セット**; 子からの列と**レコード セット**に一覧表示オプションの BY 句。  
@@ -36,7 +36,7 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
  この句の各部分は次のとおりです。  
   
  *child-command*  
@@ -73,7 +73,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
   
  どのような方法に関係なく、親**レコード セット**の形式が子に関連するために使用チャプター列が含まれます (COMPUTE を使用または追加を使用)、**レコード セット**です。 場合は、親**Recordset**子の行を集計 (SUM、MIN、MAX、およびなど) を含む列があります。 親と子の両方**レコード セット**内の行に式を含む列を含めることは、**レコード セット**と、新しいと、最初にある列を空にします。  
   
-## <a name="operation"></a>操作  
+## <a name="operation"></a>演算  
  *子コマンド*、プロバイダーは、子を返しますに発行された**Recordset**です。  
   
  COMPUTE 句は、親の列を指定**レコード セット**、子への参照である**Recordset**、1 つまたは複数の集計、集計式、または新しい列です。 BY 句がある場合を定義する列が、親にも追加**Recordset**です。 BY 句を指定方法、子の行**レコード セット**はグループ化します。  
@@ -83,12 +83,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
 |状態|City|[母集団]|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|または|Medford|200,000|  
-|または|Portland|400,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|サンディエゴ|600,000|  
 |WA|Tacoma|500,000|  
-|または|Corvallis|300,000|  
+|OR|Corvallis|300,000|  
   
  ここで、この図形コマンドを発行します。  
   
@@ -112,7 +112,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Child1 への参照|CA|  
 |1,200,000|Child2 への参照|WA|  
-|1,100,000|子 3 への参照|または|  
+|1,100,000|子 3 への参照|OR|  
   
 ## <a name="child1"></a>Child1  
   
@@ -132,9 +132,9 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |状態|City|[母集団]|  
 |-----------|----------|----------------|  
-|または|Medford|200,000|  
-|または|Portland|400,000|  
-|または|Corvallis|300,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
+|OR|Corvallis|300,000|  
   
 ## <a name="see-also"></a>参照  
  [階層のレコード セット内の行にアクセスします。](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

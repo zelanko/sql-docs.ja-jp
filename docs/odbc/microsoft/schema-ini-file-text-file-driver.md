@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904587"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini ファイル (テキスト ファイル ドライバー)
 テキストのドライバーを使用すると、スキーマ情報ファイルを使用してテキスト ファイルの形式が決まります。 スキーマ情報ファイルが常に Schema.ini という名前し、常にテキスト データ ソースと同じディレクトリ内に保持します。 スキーマ情報ファイルでは、ファイル、列の名前とデータ型情報、およびその他のいくつかのデータの特性の一般的な形式に関する情報を IISAM を提供します。 Schema.ini ファイルは、固定長データにアクセスするために必要では常にします。 文字列テーブルには、DateTime、通貨、または 10 進数データ、またはいつでも、テーブル内のデータの処理より詳細に制御することが含まれている場合、Schema.ini ファイルを使用する必要があります。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909647"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>ブロック カーソルで使用するための列のバインド
 ブロック カーソルは、複数の行を返す、ために、それらを使用するアプリケーションは、1 つの変数の代わりに、各列に変数の配列をバインドする必要があります。 これらの配列と総称されます、*行セット バッファー*です。 バインディングの 2 つのスタイルを次に示します。  

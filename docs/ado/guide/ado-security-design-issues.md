@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6b8cf26515276ce4dd9338d64746a2b7a017d99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ff74ef654200dda43a951d768a505b1300bb8f4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271151"
 ---
 # <a name="ado-security-design-features"></a>ADO セキュリティ デザイン機能
 以下のセクションで ActiveX データ オブジェクト (ADO) 2.8 およびそれ以降のセキュリティ関連のデザイン機能について説明します。 これらの変更に対する ado 2.8 セキュリティを強化します。 ADO 6.0 では、Windows Vista の Windows DAC 6.0 に含めると、これは、します機能的には、Windows XP および Windows Server 2003 で MDAC 2.8 に含まれていた ADO 2.8。 このトピックでは、最適な ADO 2.8 またはそれ以降では、アプリケーションを保護する方法に関する情報を提供します。

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917957"
 ---
 # <a name="unicode-function-arguments"></a>Unicode 関数の引数
 ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、ANSI と Unicode の両方の引数の文字列や文字の SQLPOINTER へのポインターをそのまま使用するすべての関数のバージョンをサポートします。 Unicode 関数は、関数として実装されます (のサフィックスを持つ*W*) マクロではなく、します。 ANSI 関数 (のサフィックスの有無を呼び出すことができる*A*) 現在の ODBC API 関数と同じです。  
@@ -68,7 +69,7 @@ ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、ANSI
 |**SQLInstallDriver**||  
   
 > [!NOTE]  
->  使用されなくなった関数には Unicode から ANSI へのマッピングのサポートがあるため、ODBC 3 *.x*ドライバー マネージャーは、ODBC 2 を再コンパイルをサポートしています*。x* 、UNICODE を使用アプリケーション **#define**です。  
+>  使用されなくなった関数には Unicode から ANSI へのマッピングのサポートがあるため、ODBC 3 *.x*ドライバー マネージャーは、ODBC 2 を再コンパイルをサポートしています *。x* 、UNICODE を使用アプリケーション **#define**です。  
   
  このセクションでは、次のトピックを扱います。  
   

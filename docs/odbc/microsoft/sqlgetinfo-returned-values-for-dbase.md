@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904947"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>DBASE の SQLGetInfo 返される値
 次の表に、C 言語 # を defines、 *fInfoType*引数と、対応する値によって返される**SQLGetInfo**です。 この情報は、表示されている C 言語を渡すことによって取得できます #defines **SQLGetInfo**で、 *fInfoType*引数。 によって返される値の詳細については**SQLGetInfo**を参照してください、 *ODBC プログラマ リファレンス*です。  

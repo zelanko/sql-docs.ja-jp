@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908417"
 ---
 # <a name="commit-mode"></a>コミット モード
 ODBC でのトランザクションが 2 つのモードのいずれかになります。 自動コミット モードまたは手動コミット モードです。  

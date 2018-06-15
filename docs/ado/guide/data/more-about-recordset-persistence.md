@@ -2,7 +2,6 @@
 title: レコード セットの永続化の詳細 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4a5c0d8bda0d3d881dfcb1dfd99706b28e5fb733
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4bf42cb3b915f66cd3c9249ada5fffa7f5da6d7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272151"
 ---
 # <a name="more-about-recordset-persistence"></a>レコード セットの保存に関する詳細情報
 ADO レコード セット オブジェクトのサポートの内容を格納する、**レコード セット**を使用してファイル内のオブジェクトの[保存](../../../ado/reference/ado-api/save-method.md)メソッドです。 永続的に格納されているファイルがローカルに存在がドライブ、サーバー、または Web 上の URL としてサイトです。 ファイルを復元して、いずれかで、後で、[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)のメソッド、 **Recordset**オブジェクトまたは[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31204214"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server の Machine Learning の R Server のアップグレードとインストールに関する FAQ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -107,7 +108,7 @@ SQL Server 2016 の以前のバージョンでも同時に R Server (スタン�
 
 3. 実行の SQL Server セットアップの詳細を 1 回、この時間を選択**を既存の SQL Server の機能の追加**です。
 
-4. インスタンスを選択してから、 **R Services (In-database)**を追加するオプションです。
+4. インスタンスを選択してから、 **R Services (In-database)** を追加するオプションです。
 
 この手順は、問題を解決するのには失敗すると、次の回避策を試してください。
 
@@ -117,7 +118,7 @@ SQL Server 2016 の以前のバージョンでも同時に R Server (スタン�
 
 3. サーバーを再起動します。
 
-4. SQL Server セットアップを実行し、R Services (In-database) の機能のみを追加します。 選択しない**R Server (スタンドアロン)**です。
+4. SQL Server セットアップを実行し、R Services (In-database) の機能のみを追加します。 選択しない**R Server (スタンドアロン)** です。
 
 一般に、同じコンピューターに R Services (In-database) と R Server (スタンドアロン) の両方をインストールしないようにお勧めします。 ただし、サーバーを持っていれば、十分な容量、あります R Server のスタンドアロンの開発ツールとして役立ちます可能性。 もう 1 つの可能なシナリオに、R サーバーの操作運用の機能を使用するものデータ移動なしの SQL Server データにアクセスする必要があります。
 

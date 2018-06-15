@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021829"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>横棒グラフ (レポート ビルダーおよび SSRS)
   横棒グラフでは、横棒のセットとして系列が表示されます。 一般的な横棒グラフは、縦棒グラフおよび範囲横棒グラフと密接な関係にあります。縦棒グラフでは、縦棒のセットとして系列が表示され、範囲横棒グラフでは、始点と終点が異なる横棒のセットとして系列が表示されます。  

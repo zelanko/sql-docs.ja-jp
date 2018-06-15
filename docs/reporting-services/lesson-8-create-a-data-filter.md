@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016989"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>レッスン 8: データ フィルターを作成する
 親レポートにドリルスルー アクションを追加した後は、子レポート用に定義したデータ テーブル用のデータ フィルターを作成します。  
@@ -61,9 +62,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  新しい関数を作成します。この関数は、Integer 型の **productid**パラメーターを受け取った後、 **datatable** オブジェクトを返し、次の操作を行います。  
   
-    1.  **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」**の手順 2 で作成したデータセット [DataSet2](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)のインスタンスを作成します。  
+    1.  **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」** の手順 2 で作成したデータセット [DataSet2](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)のインスタンスを作成します。  
   
-    2.  SqlServer データベースへの接続を作成し、 **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」**で定義されたクエリを実行します。  
+    2.  SqlServer データベースへの接続を作成し、 **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」** で定義されたクエリを実行します。  
   
     3.  クエリにより、フィルター選択されていないデータが返されます。  
   
@@ -171,9 +172,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  新しい関数を作成します。この関数は、Integer 型の **productid**パラメーターを受け取った後、 **datatable** オブジェクトを返し、次の操作を行います。  
   
-    1.  **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」**の手順 2 で作成したデータセット [DataSet2](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)のインスタンスを作成します。  
+    1.  **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」** の手順 2 で作成したデータセット [DataSet2](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)のインスタンスを作成します。  
   
-    2.  SqlServer データベースへの接続を作成し、 **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」**で定義したクエリを実行します。  
+    2.  SqlServer データベースへの接続を作成し、 **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」** で定義したクエリを実行します。  
   
     3.  このクエリには、返されるデータを親レポートで選択された **ProductID**に基づいてフィルター選択するための **productid** パラメーターが含まれます。  
   

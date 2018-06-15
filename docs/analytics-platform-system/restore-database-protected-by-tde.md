@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538612"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Parallel Data Warehouse での TDE で保護されたデータベースを復元します。
 透過的なデータ暗号化を使用して暗号化されたデータベースを復元するのにには、次の手順を使用します。  

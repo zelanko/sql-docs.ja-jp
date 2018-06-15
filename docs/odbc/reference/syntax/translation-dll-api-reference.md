@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917337"
 ---
 # <a name="translation-dll-api-reference"></a>翻訳 DLL の API リファレンス
 このセクションでは、翻訳 DLL の API は、2 つの関数で構成の構文を説明します。 **SQLDriverToDataSource**と**SQLDataSourceToDriver**です。 これらの関数は、ドライバーの変換を実行する DLL に含める必要があります。  

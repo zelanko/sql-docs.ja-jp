@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923487"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 関数
 **準拠**  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
  **SQLAllocHandle**環境、接続、ステートメント、または記述子ハンドルを割り当てます。  
   
 > [!NOTE]  
->  この関数は、ODBC 2.0 関数を置換するハンドルを割り当てるための汎用関数**SQLAllocConnect**、 **SQLAllocEnv**、および**SQLAllocStmt**です。 呼び出すアプリケーションを許可する**SQLAllocHandle** ODBC 2 を使用する*。x*ドライバーへの呼び出し**SQLAllocHandle**をドライバー マネージャーではマップ**SQLAllocConnect**、 **SQLAllocEnv**、または**SQLAllocStmt** をクリックします。 詳細については、「コメント」を参照してください。 どのようなドライバー マネージャーの詳細と ODBC 3 には、この関数にマップします。*x* ODBC 2 を利用するアプリケーション*。x*ドライバーを参照してください[アプリケーションの旧バージョンと互換性を保つのための置換関数のマッピング](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)です。  
+>  この関数は、ODBC 2.0 関数を置換するハンドルを割り当てるための汎用関数**SQLAllocConnect**、 **SQLAllocEnv**、および**SQLAllocStmt**です。 呼び出すアプリケーションを許可する**SQLAllocHandle** ODBC 2 を使用する *。x*ドライバーへの呼び出し**SQLAllocHandle**をドライバー マネージャーではマップ**SQLAllocConnect**、 **SQLAllocEnv**、または**SQLAllocStmt** をクリックします。 詳細については、「コメント」を参照してください。 どのようなドライバー マネージャーの詳細と ODBC 3 には、この関数にマップします。*x* ODBC 2 を利用するアプリケーション *。x*ドライバーを参照してください[アプリケーションの旧バージョンと互換性を保つのための置換関数のマッピング](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -100,7 +101,7 @@ SQLRETURN SQLAllocHandle(
 |HY014|ハンドルを超えた数を制限します。|によって示されるハンドルの型を割り当てることができるハンドルの数のドライバーで定義された制限、 *HandleType*引数に達しています。|  
 |HY092|無効な属性またはオプション識別子|(DM)、 *HandleType*引数がありませんでした: SQL_HANDLE_ENV、sql_handle_dbc として、sql_handle_stmt として、または SQL_HANDLE_DESC です。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  
-|HYC00|省略可能な機能が実装されていません|*HandleType*引数 SQL_HANDLE_DESC、ドライバーは ODBC 2 をでした*。x*ドライバー。|  
+|HYC00|省略可能な機能が実装されていません|*HandleType*引数 SQL_HANDLE_DESC、ドライバーは ODBC 2 をでした *。x*ドライバー。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続タイムアウト期間が期限切れです。 によって、接続タイムアウト期間が設定されている**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT です。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM)、 *HandleType*引数 SQL_HANDLE_STMT、れ、ドライバーは無効な ODBC ドライバー、でした。<br /><br /> (DM)、 *HandleType*引数 SQL_HANDLE_DESC、れ、ドライバーが記述子ハンドルの割り当てをサポートしていません。|  
   

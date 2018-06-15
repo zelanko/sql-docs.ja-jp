@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921517"
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr 関数
 **準拠**  
@@ -83,7 +84,7 @@ SQLRETURN SQLGetConnectAttr(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLGetConnectAttr** SQL_ERROR または SQL_SUCCESS_WITH_INFO、関連付けられた SQLSTATE 値を返しますは、呼び出すことにより、診断データの構造から取得できます**SQLGetDiagRec** 、で*。HandleType* sql_handle_dbc としての*処理*の*ConnectionHandle*です。 次の表に、によって通常返される SQLSTATE 値**SQLGetConnectAttr**ですこの関数のコンテキストでは、各フォルダーについて説明しますと表記"(DM)"の前に、ドライバー マネージャーによって返される SQLSTATEs の説明. SQLSTATE 値ごとに関連付けられている戻り値のコードは、特に明記しない限り、SQL_ERROR です。  
+ ときに**SQLGetConnectAttr** SQL_ERROR または SQL_SUCCESS_WITH_INFO、関連付けられた SQLSTATE 値を返しますは、呼び出すことにより、診断データの構造から取得できます**SQLGetDiagRec** 、で *。HandleType* sql_handle_dbc としての*処理*の*ConnectionHandle*です。 次の表に、によって通常返される SQLSTATE 値**SQLGetConnectAttr**ですこの関数のコンテキストでは、各フォルダーについて説明しますと表記"(DM)"の前に、ドライバー マネージャーによって返される SQLSTATEs の説明. SQLSTATE 値ごとに関連付けられている戻り値のコードは、特に明記しない限り、SQL_ERROR です。  
   
 |SQLSTATE|[エラー]|Description|  
 |--------------|-----------|-----------------|  
@@ -112,7 +113,7 @@ SQLRETURN SQLGetConnectAttr(
   
  場合*属性*SQL_ATTR トレースまたは SQL_ATTR TRACEFILE *ConnectionHandle*が無効になると**SQLGetConnectAttr** SQL_ERROR または sql _ は返されませんINVALID_HANDLE 場合*ConnectionHandle*が無効です。 これらの属性は、すべての接続に適用されます。 **SQLGetConnectAttr**別の引数が有効でない場合、SQL_ERROR または SQL_INVALID_HANDLE を返します。  
   
- 使用してステートメント属性を設定できますが、アプリケーション**SQLSetConnectAttr**、アプリケーションで使用できない**SQLGetConnectAttr**ステートメント属性を取得する値ですこれを呼び出す必要があります**。SQLGetStmtAttr**ステートメント属性の設定を取得します。  
+ 使用してステートメント属性を設定できますが、アプリケーション**SQLSetConnectAttr**、アプリケーションで使用できない**SQLGetConnectAttr**ステートメント属性を取得する値ですこれを呼び出す必要があります **。SQLGetStmtAttr**ステートメント属性の設定を取得します。  
   
  呼び出しによって返される SQL_ATTR_AUTO_IPD と SQL_ATTR_CONNECTION_DEAD の両方の接続属性**SQLGetConnectAttr**への呼び出しで設定することはできませんが、 **SQLSetConnectAttr**です。  
   

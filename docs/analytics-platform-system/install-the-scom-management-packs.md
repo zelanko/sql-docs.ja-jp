@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544684"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Analytics Platform System の SQL Server Operations Manager (SCOM) 管理パックをインストールします。
 次の手順をダウンロードして SQL Server PDW の System Center Operations Manager (SCOM) 管理パックをインストールします。 管理パックは、SCOM から SQL Server PDW の監視に必要なです。  
@@ -46,11 +47,11 @@ HDInsight のワークロード、ダウンロード、 [HDInsight 用 System Ce
   
     ![インストール フォルダーの選択](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
-4.  **[インストール]**をクリックします。  
+4.  **[インストール]** をクリックします。  
   
     ![インストールの確認](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  **[閉じる]**をクリックします。  
+5.  **[閉じる]** をクリックします。  
   
     ![[閉じる] をクリックして](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -66,11 +67,11 @@ HDInsight のワークロード、ダウンロード、 [HDInsight 用 System Ce
   
     ![インストール フォルダーの選択](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
-4.  **[インストール]**をクリックします。  
+4.  **[インストール]** をクリックします。  
   
     ![インストールの確認](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  **[閉じる]**をクリックします。  
+5.  **[閉じる]** をクリックします。  
   
     ![インストールの完了](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

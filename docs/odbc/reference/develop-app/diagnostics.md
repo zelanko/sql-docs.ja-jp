@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910167"
 ---
 # <a name="diagnostics"></a>診断
 Odbc 関数では、2 つの方法で診断情報を返します。 リターン コードでは、診断レコードが、関数に関する詳細情報を提供中に、全体の成功または失敗、関数を示します。 少なくとも 1 つの診断レコード — ヘッダー レコード: 関数が成功した場合でも返されます。  

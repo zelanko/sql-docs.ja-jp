@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911517"
 ---
 # <a name="identifier-arguments"></a>識別子の引数
 識別子の引数の文字列が引用符で囲まれた場合、ドライバーは先頭と末尾の空白を削除しは引用符で囲まれた文字列をそのまま処理します。 文字列が引用符で囲まれていない場合、ドライバーを削除末尾の空白およびフォールド文字列を大文字にします。 SQL_ERROR と SQLSTATE HY009 識別子の引数を null ポインターに設定を返します (null ポインターの無効な使用)、ない場合は、引数は、カタログ名のカタログがサポートされていません。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921687"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC プログラマ&#39;リファレンス
 *ODBC プログラマ リファレンス*次のセクションが含まれています。  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919047"
 ---
 # <a name="transaction-isolation-levels"></a>トランザクション分離レベル
 *トランザクション分離レベル*分離が成功するトランザクションにエクステントの指標です。 具体的には、トランザクション分離レベルは、次の現象の有無によって定義されます。  

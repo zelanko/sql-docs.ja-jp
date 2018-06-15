@@ -12,11 +12,12 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31202574"
 ---
 # <a name="python-interoperability-with-sql-server"></a>SQL Server での Python の相互運用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-機能を有効にした場合にインストールされている Python コンポーネントを説明**Machine Learning Services (In-database)**言語としての Python を選択します。
+機能を有効にした場合にインストールされている Python コンポーネントを説明**Machine Learning Services (In-database)** 言語としての Python を選択します。
 
 ## <a name="python-components"></a>Python コンポーネント
 

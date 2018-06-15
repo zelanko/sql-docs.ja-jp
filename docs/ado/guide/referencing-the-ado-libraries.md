@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f5bd59675d24810ddef02a790cb3464ede168ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4966f9446f87ea25cc5fdab5e658fd5a30c80fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273621"
 ---
 # <a name="referencing-the-ado-libraries"></a>ADO ライブラリを参照します。
 ADO の最新バージョンとしてパッケージ化*msado15.dll*です。 ADO MD と ADOX の最新バージョンとしてパッケージ化*msadom.dll*と*msadox.dll*、それぞれします。 既定でこれらのライブラリがインストールされている *$installDir*ここで、 *$installDir* ADO ライブラリがコンピューターにインストールされてされているディレクトリのパスを意味します。 ライブラリを使用するには、ADO アプリケーションで、する必要がありますに明示的に参照アプリケーション プロジェクトでします。  

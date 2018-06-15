@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026295"
 ---
 # <a name="publishing-data-sources-and-reports"></a>データ ソースとレポートのパブリッシュ
   レポートをパブリッシュする前に、レポートをプレビューしてレポート実行時の表示を確認する必要があります。 プレビュー後も、表示結果に満足できるまでデザインを調整できます。  

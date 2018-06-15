@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024259"
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO の概念とオブジェクト モデル
   このトピックは、分析管理オブジェクト (AMO) の定義を提供 AMO が他のツールとのアーキテクチャで提供されるライブラリに関連するどの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]AMO 内のすべての主要なオブジェクトの概念について説明します。  

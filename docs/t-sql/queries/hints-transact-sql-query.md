@@ -198,7 +198,7 @@ ms.locfileid: "34470293"
  MAXDOP *number*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- このオプションを指定しているクエリに対して、**sp_configure** およびリソース ガバナーの **max degree of parallelism** 構成オプションを上書きします。 MAXDOP クエリ ヒントは、sp_configure で構成されている値を超えて指定できます。 MAXDOP の値がリソース ガバナーで構成されている値を超える場合は、「[ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)」で説明されているように、[!INCLUDE[ssDE](../../includes/ssde-md.md)]でリソース ガバナーの MAXDOP 値が使用されます。 MAXDOP クエリ ヒントを使用している場合は、**max degree of parallelism** 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
+ このオプションを指定しているクエリに対して、**sp_configure** およびリソース ガバナーの **max degree of parallelism** 構成オプションをオーバーライドします。 MAXDOP クエリ ヒントは、sp_configure で構成されている値を超えて指定できます。 MAXDOP の値がリソース ガバナーで構成されている値を超える場合は、「[ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)」で説明されているように、[!INCLUDE[ssDE](../../includes/ssde-md.md)]でリソース ガバナーの MAXDOP 値が使用されます。 MAXDOP クエリ ヒントを使用している場合は、**max degree of parallelism** 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
   
 > [!WARNING]     
 > MAXDOP が 0 に設定されている場合、サーバーでは最大限の並列処理が実行されます。  
@@ -240,7 +240,7 @@ ms.locfileid: "34470293"
  クエリのコンパイル時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーがそのクエリに適用するパラメーター化のルールを指定します。  
   
 > [!IMPORTANT]  
-> PARAMETERIZATION クエリ ヒントは、PARAMETERIZATION データベース SET オプションの現在の設定を上書きするため、プラン ガイドの内部でのみ指定できます。 クエリの中で直接指定することはできません。    
+> PARAMETERIZATION クエリ ヒントは、PARAMETERIZATION データベース SET オプションの現在の設定をオーバーライドするため、プラン ガイドの内部でのみ指定できます。 クエリの中で直接指定することはできません。    
 > 詳細については、「[プラン ガイドを使用したクエリのパラメーター化動作の指定](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)」を参照してください。
   
  SIMPLE は、クエリ オプティマイザーに対して簡易パラメーター化を試行するように指示します。 FORCED は、クエリ オプティマイザーに対して強制パラメーター化を試行するように指示します。 詳細については、「クエリ処理アーキテクチャ ガイド」の「[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)」および「クエリ処理アーキテクチャ ガイド」の「[簡易パラメーター化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)」を参照してください。  
@@ -279,7 +279,7 @@ ms.locfileid: "34470293"
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のクエリ オプティマイザーの[基数推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルで、結合に対して、既定の基本含有の推定の代わりに、単純な含有の推定を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にクエリ プランを生成させます。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 を指定した場合と同じです。 
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
- 現在のデータベース互換性レベルに対応する[カーディナリティ推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルを使用するようにクエリ オプティマイザーを設定します。 このヒントを使用して、[データベース スコープ構成](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)の LEGACY_CARDINALITY_ESTIMATION=ON 設定または[トレース フラグ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 9481 を上書きします。
+ 現在のデータベース互換性レベルに対応する[カーディナリティ推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルを使用するようにクエリ オプティマイザーを設定します。 このヒントを使用して、[データベース スコープ構成](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)の LEGACY_CARDINALITY_ESTIMATION=ON 設定または[トレース フラグ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 9481 をオーバーライドします。
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
  複数ステートメントのテーブル値関数のインターリーブ実行を無効にします。 詳細については、「[複数ステートメントのテーブル値関数のインターリーブ実行](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)」を参照してください。
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     

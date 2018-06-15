@@ -2,7 +2,6 @@
 title: データを更新し、永続化 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40e92067564f56eb7bc30739c0abd0d758a3b9c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2c4d7fd046631814e263c8bd6a413fb9ef2f00c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273161"
 ---
 # <a name="updating-and-persisting-data"></a>更新およびデータを保持します。
 前のチャプターは、ADO を使用して、データ ソース内のデータを取得する方法、データ内を移動する方法、およびデータを編集する方法も説明してきました。 もちろん場合は、アプリケーションの目的は、データを変更するユーザーを許可するのには、これらの変更を保存する方法を理解する必要があります。 永続化することができますか、 **Recordset**を使用してファイルを変更、**保存**メソッド、または、その変更を使用してストレージのデータ ソースに戻すを送信できます、**更新**または**UpdateBatch**メソッドです。  

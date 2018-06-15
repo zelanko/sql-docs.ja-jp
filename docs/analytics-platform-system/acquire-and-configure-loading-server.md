@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538992"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>取得して、並列データ ウェアハウスの読み込みサーバーを構成します。
 この記事では、取得、および読み込みサーバー データが読み込まれた並列データ ウェアハウス (PDW) を送信するためのアプライアンス非 Windows システムとして構成する方法について説明します。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028289"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>レポート パラメーター (レポート ビルダーおよびレポート デザイナー)
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート パラメーターの一般的な使用方法、設定できるプロパティ、その他について説明します。 レポート パラメーターを使用すると、レポート データの制御、他のレポートとの関連付け、およびレポートの表示方法の変更が可能になります。 レポート パラメーターは、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] やレポート デザイナーで作成する改ページ調整されたレポートのほか、 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]で作成するモバイル レポートで使用できます。 詳細については、「 [レポート パラメーターの概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)」を参照してください。  

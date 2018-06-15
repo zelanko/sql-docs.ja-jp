@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024669"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 基本オブジェクトのプログラミング
   複雑な [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクトの作成は簡単でわかりやすいものですが、詳細については注意が必要です。 このトピックでは、OLAP 基本オブジェクトのプログラミングについて詳しく説明します。 このトピックには、次のセクションが含まれます。  

@@ -2,7 +2,6 @@
 title: イベント パラメーター |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9946b424f5ed885ad432610c7c053dddc6332954
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cfc652cc0cb59e426d2f2655684705deb20c20f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270431"
 ---
 # <a name="event-parameters"></a>イベントのパラメーター
 すべてのイベント ハンドラーには、イベント ハンドラーを制御する状態パラメーターがあります。 完全なイベントは、このパラメーターは、イベントを生成する操作の成否を示すためにも使用します。 最も包括的なイベントには、発生したエラーと、操作を実行するために使用する ADO オブジェクトを参照する 1 つまたは複数のオブジェクトのパラメーターに関する情報を提供するエラー パラメーターもがあります。 たとえば、 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)イベントにはオブジェクトのパラメーターが含まれています、**コマンド**、 **Recordset**、および**接続**オブジェクトイベントに関連付けられています。 Microsoft® Visual Basic® の次の例では、pCommand、pRecordset、およびを表す pConnection オブジェクトを参照できます、**コマンド**、 **Recordset**、および**接続**オブジェクトによって使用されている、 **Execute**メソッドです。  
@@ -47,7 +47,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>状態パラメーター  
  イベント ハンドラー ルーチンを呼び出したときに、*ステータス*パラメーターは、次の値のいずれかに設定します。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**adStatusOK**|完了イベントの両方に渡されます。 この値は、正常に完了したイベントの原因となった操作を意味します。|  
 |**adStatusErrorsOccurred**|完全なイベントのみに渡されます。 この値は、イベントの原因となった操作が成功すると、できなかったかはイベントには、操作が取り消されましたことを示します。 チェック、*エラー*詳細パラメーター。|  
@@ -57,7 +57,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  不要になったイベントを処理する場合は、設定*ステータス*に**adStatusUnwantedEvent**アプリケーションでは、そのイベントの通知を受け取る不要になったとします。 ただし、理由の 1 つ以上のいくつかのイベントが発生することに注意してください。 その場合は、指定する必要があります**adStatusUnwantedEvent**の考えられる各理由。 たとえば、保留中の通知の受信を停止する**RecordChange**設定する必要があります、イベント、*ステータス*パラメーターを**adStatusUnwantedEvent**の**adRsnAddNew**、 **adRsnDelete**、 **adRsnUpdate**、 **adRsnUndoUpdate**、 **adRsnUndoAddNew**、**adRsnUndoDelete**、および**adRsnFirstChange**発生するとします。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|このイベント ハンドラーにさらに通知が発生しないことを要求します。|  
 |**adStatusCancel**|実行する操作のキャンセルを要求します。|  

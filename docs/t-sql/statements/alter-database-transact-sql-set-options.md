@@ -56,7 +56,7 @@ ms.locfileid: "34744141"
 データベース ミラーリング、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、および互換性レベルは `SET` オプションですが、長くなるため別のトピックで説明します。 詳細については、「[ALTER DATABASE データベース ミラーリング &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)」、「[ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)」、および「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
 > [!NOTE]  
-> データベースの SET オプションの多くは [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) を使用して現在のセッション用に構成できます。これらは多くの場合、接続する際にアプリケーションによって構成されます。 セッション レベルの SET オプションは、**ALTER DATABASE SET** の値を上書きします。 次のデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。  
+> データベースの SET オプションの多くは [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) を使用して現在のセッション用に構成できます。これらは多くの場合、接続する際にアプリケーションによって構成されます。 セッション レベルの SET オプションは、**ALTER DATABASE SET** の値をオーバーライドします。 次のデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -439,7 +439,7 @@ SET
  OFF  
  トランザクションがコミットされても、カーソルは開いたままになります。トランザクションをロールバックすると、INSENSITIVE または STATIC として定義されているカーソルを除き、すべてのカーソルが閉じます。  
   
- SET ステートメントを使用した接続レベルの設定は、CURSOR_CLOSE_ON_COMMIT の既定のデータベース設定よりも優先されます。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、セッションの CURSOR_CLOSE_ON_COMMIT を OFF に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)」をご覧ください。  
+ SET ステートメントを使用した接続レベルの設定は、CURSOR_CLOSE_ON_COMMIT の既定のデータベース設定をオーバーライドします。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、セッションの CURSOR_CLOSE_ON_COMMIT を OFF に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)」をご覧ください。  
   
  このオプションの状態を確認するには、sys.databases カタログ ビューの is_cursor_close_on_commit_on 列、または DATABASEPROPERTYEX 関数の IsCloseCursorsOnCommitEnabled プロパティを調べてください。  
   
@@ -539,7 +539,7 @@ SET
  SINGLE_USER  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では使用できません。  
   
- 一度に 1 人のユーザーだけがデータベースにアクセスできます。 SINGLE_USER が指定されており、他のユーザーがデータベースに接続している場合には、指定したデータベースからすべてのユーザーが接続解除するまで、ALTER DATABASE ステートメントはブロックされます。 この動作を無効にする場合は、WITH \<termination> 句を確認します。  
+ 一度に 1 人のユーザーだけがデータベースにアクセスできます。 SINGLE_USER が指定されており、他のユーザーがデータベースに接続している場合には、指定したデータベースからすべてのユーザーが接続解除するまで、ALTER DATABASE ステートメントはブロックされます。 この動作をオーバーライドする場合は、WITH \<termination&gt; 句を確認します。  
   
  このオプションを設定したユーザーがログオフしても、データベースは SINGLE_USER モードのままです。 そのユーザーがログオフした時点で、他のユーザーが 1 人だけデータベースに接続できます。  
   
@@ -952,7 +952,7 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
  OFF  
  既定値は NOT NULL になります。  
   
- SET ステートメントを使用した接続レベルの設定は、ANSI_NULL_DEFAULT に関するデータベースレベルの既定の設定よりも優先されます。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、セッションの ANSI_NULL_DEFAULT を ON に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)」を参照してください。  
+ SET ステートメントを使用した接続レベルの設定は、ANSI_NULL_DEFAULT に関するデータベースレベルの既定の設定をオーバーライドします。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、セッションの ANSI_NULL_DEFAULT を ON に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)」を参照してください。  
   
  ANSI 互換性を確保するために、データベース オプション ANSI_NULL_DEFAULT を ON に設定すると、データベースの既定値が NULL に変更されます。  
   
@@ -968,7 +968,7 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
 > [!IMPORTANT]  
 >  今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ANSI_NULLS が常に ON になり、このオプションを明示的に OFF に設定するすべてのアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
   
- SET ステートメントを使用した接続レベルの設定は、ANSI_NULLS の既定のデータベース設定よりも優先されます。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、セッションの ANSI_NULLS を ON に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)」をご覧ください。  
+ SET ステートメントを使用した接続レベルの設定は、ANSI_NULLS の既定のデータベース設定よりもオーバーライドされます。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、セッションの ANSI_NULLS を ON に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)」をご覧ください。  
   
  SET ANSI_NULLS は、計算列やインデックス付きビューのインデックスを作成または変更する場合にも、ON に設定する必要があります。  
   
@@ -990,7 +990,7 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
   
  **char(*n*)** および **binary(*n*)** 列が NULL を許容する場合は、ANSI_PADDING を ON に設定すると、列の長さに合うようにパディングが行われますが、ANSI_PADDING を OFF に設定すると、末尾の空白および 0 は切り捨てられます。 **char(*n*)** および **binary(*n*)** 列が NULL を許容しない場合は、常に列の長さに合うようにパディングが行われます。  
   
- SET ステートメントを使用した接続レベルの設定は、ANSI_PADDING に関するデータベースレベルの既定の設定よりも優先されます。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、そのセッションの ANSI_PADDING を ON に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)」を参照してください。  
+ SET ステートメントを使用した接続レベルの設定は、ANSI_PADDING に関するデータベースレベルの既定の設定よりもオーバーライドされます。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、そのセッションの ANSI_PADDING を ON に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)」を参照してください。  
   
  このオプションの状態を確認するには、sys.databases カタログ ビューの is_ansi_padding_on 列、または DATABASEPROPERTYEX 関数の IsAnsiPaddingEnabled プロパティを調べてください。  
   
@@ -1003,7 +1003,7 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
   
  SET ANSI_WARNINGS は、計算列やインデックス付きビューのインデックスを作成または変更する場合には、ON に設定する必要があります。  
   
- SET ステートメントを使用した接続レベルの設定は、ANSI_WARNINGS の既定のデータベース設定よりも優先されます。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、セッションの ANSI_WARNINGS を ON に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)」をご覧ください。  
+ SET ステートメントを使用した接続レベルの設定は、ANSI_WARNINGS の既定のデータベース設定をオーバーライドします。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、セッションの ANSI_WARNINGS を ON に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)」をご覧ください。  
   
  このオプションの状態を確認するには、sys.databases カタログ ビューの is_ansi_warnings_on 列、または DATABASEPROPERTYEX 関数の IsAnsiWarningsEnabled プロパティを調べてください。  
   
@@ -1033,7 +1033,7 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
 > [!IMPORTANT]  
 >  今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CONCAT_NULL_YIELDS_NULL が常に ON になり、このオプションを明示的に OFF に設定するすべてのアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
   
- SET ステートメントを使用した接続レベルの設定は、CONCAT_NULL_YIELDS_NULL の既定のデータベース設定よりも優先されます。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、セッションの CONCAT_NULL_YIELDS_NULL を ON に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)」をご覧ください。  
+ SET ステートメントを使用した接続レベルの設定は、CONCAT_NULL_YIELDS_NULL の既定のデータベース設定をオーバーライドします。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、セッションの CONCAT_NULL_YIELDS_NULL を ON に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)」をご覧ください。  
   
  このオプションの状態を確認するには、sys.databases カタログ ビューの is_concat_null_yields_null_on 列か、または DATABASEPROPERTYEX 関数の IsNullConcat プロパティを調べてください。  
   
@@ -1050,7 +1050,7 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
   
  テーブルを作成するときに QUOTED IDENTIFIER オプションが OFF に設定されている場合でも、作成されるテーブルのメタデータでは、このオプションは常に ON として格納されます。  
   
- SET ステートメントを使用した接続レベルの設定は、QUOTED_IDENTIFIER の既定のデータベース設定よりも優先されます。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、QUOTED_IDENTIFIER を ON に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+ SET ステートメントを使用した接続レベルの設定は、QUOTED_IDENTIFIER の既定のデータベース設定よりもオーバーライドされます。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、QUOTED_IDENTIFIER を ON に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
  このオプションの状態を確認するには、sys.databases カタログ ビューの is_quoted_identifier_on 列、または DATABASEPROPERTYEX 関数の IsQuotedIdentifiersEnabled プロパティを調べてください。  
   

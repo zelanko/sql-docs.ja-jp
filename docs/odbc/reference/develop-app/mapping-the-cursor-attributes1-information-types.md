@@ -25,9 +25,10 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910547"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>カーソル Attributes1 情報の種類のマッピング
-ODBC 3 時にします。*x*アプリケーション呼び出し**SQLGetInfo** ODBC 2 で *.x* SQL_XXXX_CURSOR_ATTRIBUTES1 情報の種類のドライバー (、順方向専用の動的なキーセットのドライバー、または静的カーソル)、ドライバー マネージャーによって返されるビットの設定は、どのような ODBC 2 によって異なります。*x*ドライバーは対応する ODBC 2 を返します*。x*情報の種類。 ビットは、次の表に示すように設定されます。  
+ODBC 3 時にします。*x*アプリケーション呼び出し**SQLGetInfo** ODBC 2 で *.x* SQL_XXXX_CURSOR_ATTRIBUTES1 情報の種類のドライバー (、順方向専用の動的なキーセットのドライバー、または静的カーソル)、ドライバー マネージャーによって返されるビットの設定は、どのような ODBC 2 によって異なります。*x*ドライバーは対応する ODBC 2 を返します *。x*情報の種類。 ビットは、次の表に示すように設定されます。  
   
 |内のビットします。<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|カーソルの種類|ODBC 2 です。*x*情報<br /><br /> 型|  
 |-----------------------------------------------|-----------------|-------------------------------------|  

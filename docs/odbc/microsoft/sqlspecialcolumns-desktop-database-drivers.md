@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902887"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns (デスクトップ データベース ドライバー)
 一意のインデックスが返されます (ある場合) 内で SQL_BEST_ROWID フラグを*fColType*です。 SQL_ROWVER フラグの結果セットは返されません。  

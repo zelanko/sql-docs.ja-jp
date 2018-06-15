@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539002"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Analytics Platform System の並列データ ウェアハウス サービスの状態
 Parallel Data Warehouse **Services ステータス** ページで、Microsoft Analytics Platform System Configuration Manager は、すべての SQL Server PDW サービスの状態を表示し、PDW サービスの開始し、停止に機能を提供します。 これは、のみサポートされているメソッドの開始と PDW サービスを停止します。 ある個々 のコンポーネントまたはサービスを開始できませんとは別に注意してください。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018089"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer コントロールの使用
   レポート サーバーに配置されたレポートまたはローカル ファイル システムにあるレポートを表示するには、WinForms ReportViewer コントロールを使用して Windows アプリケーションでレポートを表示します。  

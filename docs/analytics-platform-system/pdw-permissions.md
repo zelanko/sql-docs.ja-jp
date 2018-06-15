@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544884"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Parallel Data Warehouse でのアクセス許可の管理
 この記事では、要件と SQL Server PDW のデータベース アクセス許可を管理するためのオプションについて説明します。  

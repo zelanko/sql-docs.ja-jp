@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538882"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>アプライアンスの物理的なコンポーネントの分析プラットフォーム システム
 名前と説明の PDW アプライアンスとファブリックの物理コンポーネント。 

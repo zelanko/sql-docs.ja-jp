@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907787"
 ---
 # <a name="decimal-digits"></a>小数点以下桁数
 *小数点以下桁数*またはデータの小数点以下桁数、小数点の右側にある数字の最大数として decimal および numeric のデータの種類が定義されています。 浮動小数点概数の数値列またはパラメーターでは、小数点の右側にある数字の数が一定ではないので、小数点以下桁数は定義されません。 Datetime または期間、データの秒の部分を含む 10 進数字は、データの秒の部分の中で小数点の右側にある数字の数として定義されます。  

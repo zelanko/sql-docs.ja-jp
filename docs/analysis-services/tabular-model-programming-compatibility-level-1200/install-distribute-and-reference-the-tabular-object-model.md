@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34044456"
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>インストール、配布、および表形式オブジェクト モデルを参照
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -79,7 +80,7 @@ Microsoft.AnalysisServices.Tabular.dll、せず Microsoft.AnalysisServices.dll �
   
 2. **[ダウンロード]** をクリックします。  
   
-3. いずれかを選択 **\X64\SQL_AS_AMO.msi**または **\X86\SQL_AS_AMO.msi**です。 いずれか 1 つを選択することができます: TOM と AMO のアセンブリは、プラットフォームに依存しません。
+3. いずれかを選択**\X64\SQL_AS_AMO.msi**または**\X86\SQL_AS_AMO.msi**です。 いずれか 1 つを選択することができます: TOM と AMO のアセンブリは、プラットフォームに依存しません。
   
 4. をクリックして**次**ダウンロードを続行します。 .Msi ファイルが表示されます、**ダウンロード**フォルダーです。  
   

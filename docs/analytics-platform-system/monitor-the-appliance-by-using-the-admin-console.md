@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544984"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>管理コンソール - Analytics Platform System とアプライアンスを監視します。
 管理者コンソールは、アプライアンスの状態、ヘルス、およびパフォーマンス情報を表示する SQL Server PDW の web アプリケーションです。 ユーザーは、Internet Explorer で、管理コンソールに接続します。  

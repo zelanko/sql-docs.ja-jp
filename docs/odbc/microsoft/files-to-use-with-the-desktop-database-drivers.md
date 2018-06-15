@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901219"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>デスクトップ データベース ドライバーで使用するファイル
 デスクトップの ODBC データベース ドライバーは、Microsoft Jet データベース エンジン、インストール可能な ISAM ファイル、および Microsoft ODBC ファイルで使用されます。 製品の再配布に必要なすべてとコア コンポーネントは、すべてではありません。  

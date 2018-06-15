@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539452"
 ---
 # <a name="reserved-database-names-in-parallel-data-warehouse"></a>Parallel Data Warehouse で予約されているデータベースの名前
 予約済みのデータベース名は、SQL Server PDW のユーザー データベースに割り当てることができない名前です。  

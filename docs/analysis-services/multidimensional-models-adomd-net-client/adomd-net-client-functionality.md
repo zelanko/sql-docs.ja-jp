@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024789"
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET のクライアント機能
   ADOMD.NET は、他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework データ プロバイダーと同様、アプリケーションとデータ ソースの間の仲介役となります。 ただし、分析データを扱うという点で、他の .NET Framework データ プロバイダーとは異なります。 分析データを操作する ADOMD.NET では、サポートされている機能が他の .NET Framework データ プロバイダーとは大きく違っています。 データを取得するだけでなく、メタデータを取得したり、分析データ ストアの構造を変更したりすることができます。  

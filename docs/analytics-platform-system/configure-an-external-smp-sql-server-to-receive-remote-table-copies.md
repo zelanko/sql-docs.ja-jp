@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538952"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>外部の SMP SQL Server を受け取りますが、リモート テーブルの並列データ ウェアハウスを構成します。
 並列データ ウェアハウスからリモート テーブルのコピーを受信する外部の SQL Server インスタンスを構成する方法について説明します。  

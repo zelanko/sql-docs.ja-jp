@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898497"
 ---
 # <a name="group-by-expression-list"></a>GROUP BY 式リスト
 GROUP BY 式のリストだけでなく、列名をサポートします。 GROUP BY 句が SELECT ステートメントの選択リストは、GROUP BY 句の式に含まれるのみまたは関数を設定します。

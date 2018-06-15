@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911337"
 ---
 # <a name="record-count"></a>レコード カウント
 記述子の SQL_DESC_COUNT ヘッダー フィールドは、データが含まれる番号が最大レコードの 1 から始まるインデックスです。 このフィールドは、すべての列またはバインドされているパラメーターの数ではありません。 記述子が割り当てられる SQL_DESC_COUNT の初期値は 0 です。  

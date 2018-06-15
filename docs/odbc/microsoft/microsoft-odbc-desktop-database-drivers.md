@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903317"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>デスクトップのデータベースの Microsoft ODBC ドライバー
 ODBC は、データベース アクセスの言語として構造化照会言語 (SQL) を使用する API です。 アプリケーションのソース コードに直接組み込まれている同じ ODBC ソース コードにさまざまなデータベース管理システム (Dbms) にアクセスできます。 Microsoft ODBC のデスクトップ データベース ドライバーと ODBC 対応アプリケーションのユーザーが開くには、クエリ、および ODBC インターフェイスを使用してデスクトップ データベースを更新します。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539022"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System の InfiniBand ネットワーク アダプターを構成します。
 [管理] ノードで並列データ ウェアハウス (PDW) に接続する非アプライアンス クライアント サーバーの InfiniBand ネットワーク アダプターを構成する方法について説明します。 読み込み、バックアップ、およびその他のプロセスが自動的にアクティブな InfiniBand ネットワークに接続するようは基本的な接続と高可用性のための次の手順を使用します。  

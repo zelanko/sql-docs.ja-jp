@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912447"
 ---
 # <a name="keyset-driven-cursors"></a>キーセット ドリブン カーソル
 キーセット ドリブン カーソルは、静的および動的カーソルの間で変更を検出する機能にあります。 静的カーソルと同様に常に検出されない、メンバーシップと、結果セットの順序を変更します。 動的カーソルの場合と同様には、行の値が変更を検出、結果セット (SQL_ATTR_TXN_ISOLATION 接続属性によって設定された、トランザクションの分離レベル) に従います。  

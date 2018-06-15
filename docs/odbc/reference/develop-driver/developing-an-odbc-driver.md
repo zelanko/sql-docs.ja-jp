@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915877"
 ---
 # <a name="developing-an-odbc-driver"></a>ODBC ドライバーの開発
 このセクションには、ODBC ドライバーを開発する方法を説明するトピックが含まれています。  

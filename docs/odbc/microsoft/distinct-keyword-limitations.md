@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897577"
 ---
 # <a name="distinct-keyword-limitations"></a>DISTINCT キーワードの制限事項
 長いテキスト フィールド (Microsoft Access) またはメモ フィールド (dBASE) のサポートされていません。

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018679"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>[データ ソースの資格情報の入力] ダイアログ ボックス (レポート ビルダー)
   **[データ ソースの資格情報の入力]** ダイアログ ボックスを使用すると、データ ソースからデータを取得するための資格情報を指定できます。  

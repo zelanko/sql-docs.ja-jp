@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899327"
 ---
 # <a name="setup-dll"></a>DLL のセットアップ
 Odbc データ ソース アドミニストレーターは、関数を呼び出して**ConfigDSN**ユーザーがデータ ソースを構成する場合。

@@ -2,7 +2,6 @@
 title: レコード セットを返す JScript コード例 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72710505bbe435ab7ddc52eef45b51c3dea886fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b59cfb19d1d3ee3e8b603cbb897a8e55c2b74128
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271981"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>JScript コード例をレコード セットを返す
 ## <a name="jscript-code-rsjs"></a>JScript コード (rs.js)  

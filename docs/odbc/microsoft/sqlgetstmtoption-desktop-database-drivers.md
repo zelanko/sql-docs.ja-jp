@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902437"
 ---
 # <a name="sqlgetstmtoption-desktop-database-drivers"></a>SQLGetStmtOption (デスクトップ データベース ドライバー)
 によって返されるブックマーク、 *fOption*の SQL_GETBOOKMARK のみ有効なクエリが開いている状態とは、クエリを再発行するとき、検証します。 永続的なブックマークがサポートされていません。

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900237"
 ---
 # <a name="api-conformance-level-odbc-driver-for-oracle"></a>API への準拠レベル (ODBC Driver for Oracle)
 > [!IMPORTANT]  

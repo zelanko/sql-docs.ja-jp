@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909467"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>相互運用性のレベルを選択します。
 次の手順は、相互運用性のレベルが必要かを判断は、アプリケーションで ODBC を使用した場合、します。 基本的なレベルの相互運用性は、通常、アプリケーションの種類の関数: カスタム アプリケーションしない傾向にある、相互運用できるように垂直方向のアプリケーションは、限られた数、Dbms の間で相互運用できるようにする傾向があり、汎用的なアプリケーションは、相互運用できるようにする傾向がありますすべての Dbms 間。  

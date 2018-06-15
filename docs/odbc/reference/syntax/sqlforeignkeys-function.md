@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923407"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 関数
 **準拠**  
@@ -160,7 +161,7 @@ SQLRETURN SQLForeignKeys(
   
  Varchar 型の列の長さは、テーブルには表示されません。実際の長さは、データ ソースに依存します。 PKTABLE_CAT または FKTABLE_CAT、PKTABLE_SCHEM または FKTABLE_SCHEM の実際の長さを確認するのに PKTABLE_NAME または FKTABLE_NAME、および PKCOLUMN_NAME FKCOLUMN_NAME 列では、アプリケーションが呼び出して**SQLGetInfo** SQL_MAX_ とCATALOG_NAME_LEN、SQL_MAX_SCHEMA_NAME_LEN、SQL_MAX_TABLE_NAME_LEN、および SQL_MAX_COLUMN_NAME_LEN オプションです。  
   
- ODBC 3 の名前を変更した次の列*。 x。* 列名の変更では、列番号により、アプリケーション バインドのための下位互換性は影響しません。  
+ ODBC 3 の名前を変更した次の列 *。 x。* 列名の変更では、列番号により、アプリケーション バインドのための下位互換性は影響しません。  
   
 |ODBC 2.0 列|ODBC 3 *.x*列|  
 |---------------------|-----------------------|  

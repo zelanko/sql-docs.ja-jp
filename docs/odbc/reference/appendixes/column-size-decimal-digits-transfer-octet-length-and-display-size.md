@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907767"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>列のサイズ、10 進数字は、オクテットの長さを転送し、ODBC のサイズを表示
 データ型は、その列 (またはパラメーター) のサイズ、小数点以下桁数、長さ、によって特徴付けられ、サイズを表示します。 次の ODBC 関数では、データ ソースでこれらの属性は、SQL ステートメント内のパラメーターや、SQL データ型を返します。 各 ODBC 関数では、次のように、これらの属性の別のセットを返します。  

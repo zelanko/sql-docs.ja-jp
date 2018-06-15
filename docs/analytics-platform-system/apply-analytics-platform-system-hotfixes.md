@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544874"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Analytics Platform System の修正プログラムを適用します。
 この記事では、分析プラットフォーム システム ソフトウェアの修正プログラムを適用する方法について説明します。  

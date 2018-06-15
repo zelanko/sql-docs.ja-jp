@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020689"
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connections in ADOMD.NET のセキュリティで保護された接続を確立します。
   接続に使用されるセキュリティ手段がの値に依存 ADOMD.NET で接続を使用するときに、 **ProtectionLevel**を呼び出すときに使用する接続文字列のプロパティ、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A>メソッド、の<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  

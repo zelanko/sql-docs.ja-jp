@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912047"
 ---
 # <a name="interface-conformance-levels"></a>インターフェイスへの準拠レベル
 平準化の目的は、どのような機能を利用して、ドライバーからアプリケーションに通知を開始します。 関数に基づく平準化方式は十分にこの目標を達成できません。 ODBC 3 です。*x*ドライバーは、所有する機能に基づいて分類されます。 関数をサポートする含めることができます、この機能をサポートします。によって返される情報の種類の記述子フィールド、ステートメント属性、"Y"の値をサポートするを含めることができますも**SQLGetInfo**のようにします。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024759"
 ---
 # <a name="amo-olap-classes"></a>AMO OLAP クラス
   分析管理オブジェクト (AMO) OLAP クラスは、キューブやディメンションに加えて、主要業績評価指標 (KPI)、アクション、プロアクティブ キャッシュなどの関連オブジェクトを作成、変更、削除、および処理する際に役立ちます。  

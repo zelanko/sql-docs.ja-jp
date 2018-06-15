@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34018799"
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>ユーザー定義階層内の属性リレーションシップの 4、6 を指定します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

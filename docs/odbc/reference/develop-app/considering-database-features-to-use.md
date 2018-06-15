@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911907"
 ---
 # <a name="considering-database-features-to-use"></a>使用するデータベース機能の検討
 基本レベルの相互運用性がわかったら、アプリケーションで使用されるデータベースの機能を考慮する必要があります。 たとえば、どのような SQL ステートメントは、アプリケーションを実行しますか。 アプリケーションは、スクロール可能なカーソルを使用しますか。 トランザクションしますか。 プロシージャしますか。 長い形式のデータですか。 どのような機能に関する考慮事項は、Dbms のすべてでサポートされていない可能性がありますを参照してください、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)、および[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)関数の説明、および[付録 c: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)です。 アプリケーションに必要な機能は、ターゲットの Dbms の一覧から一部の Dbms を除外できます。 アプリケーションの場合、多くの dbms で簡単に対象も示します可能性があります。  

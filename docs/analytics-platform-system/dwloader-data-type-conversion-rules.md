@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539712"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>データ型の dwloader - 並列データ ウェアハウスの変換規則
 このトピックは、入力データの形式と暗黙的なデータ型変換について説明する[dwloader のコマンド ライン ローダー](dwloader.md) PDW にデータの読み込み時にサポートしています。 暗黙的なデータ変換は、入力データが SQL Server PDW の対象のテーブルでのデータ型と一致しない場合に発生します。 SQL Server PDW に正常に読み込まれます、データの読み込みプロセスの設計時に、この情報を使用します。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912537"
 ---
 # <a name="row-status-array"></a>行の状態配列
 データに加え**SQLFetch**と**SQLFetchScroll**行セット内の行ごとの状態を配列を返すことができます。 この配列は、SQL_ATTR_ROW_STATUS_PTR ステートメント属性によって指定されます。 この配列は、アプリケーションによって割り当てられているし、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性で指定された数の要素があります。 、配列内の値が設定**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**、および**SQLSetPos です。** 値では、行と最後にフェッチした後にその状態が変更するかどうかの状態について説明します。  

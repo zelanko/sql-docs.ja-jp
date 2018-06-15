@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908587"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>ODBC 接続ハンドルの割り当てください。
 アプリケーションは、データ ソースまたはドライバーに接続できるように、ように、接続ハンドルを割り当てますする必要があります。  

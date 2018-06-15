@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for Microsoft Jet |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0046abe221607ff85b237c1b15ad331ba09c4e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd81c1c5efcb2ca8ebedac756d569ca947aac051
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271621"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Jet の概要
 OLE DB Provider for Jet は、Microsoft Jet データベースにアクセスする ADO できます。
@@ -46,7 +46,7 @@ Microsoft.Jet.OLEDB.4.0
 
  文字列は、これらのキーワードで構成されます。
 
-|Keyword|Description|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|Microsoft Jet 用の OLE DB プロバイダーを指定します。|
 |**[データ ソース]**|データベースのパスとファイル名を指定します (たとえば、 `c:\Northwind.mdb`)。|
@@ -61,7 +61,7 @@ Microsoft.Jet.OLEDB.4.0
 
  次の表は、かっこ内の対応する OLE DB プロパティ名と共にこれらのプロパティを一覧表示します。
 
-|パラメーター|Description|
+|パラメーター|説明|
 |---------------|-----------------|
 |Jet OLEDB:Compact 回収された領域の量 (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|データベースを圧縮することで再利用できるが、バイト単位での領域の量の推定値を示します。 この値は、データベース接続が確立された後にのみ有効です。|
 |Jet OLEDB:Connection コントロール (DBPROP_JETOLEDB_CONNECTIONCONTROL)|ユーザーがデータベースに接続できるかどうかを示します。|
@@ -95,7 +95,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>プロバイダー固有のレコード セットとコマンドのプロパティ
  Jet プロバイダーは、プロバイダーに固有のいくつかもサポートしています。 **Recordset**と**コマンド**プロパティです。 これらのプロパティにアクセスしてを使用して設定、**プロパティ**のコレクション、 **Recordset**または**コマンド**オブジェクト。 テーブルには、ADO プロパティ名とかっこ内に対応する OLE DB プロパティ名が一覧表示します。
 
-|プロパティ名|Description|
+|プロパティ名|説明|
 |-------------------|-----------------|
 |Jet OLEDB:Bulk トランザクション (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|SQL 一括操作が処理されるかどうかを示します。 リソースの遅延のため、トランザクション、大量の一括操作が失敗します。|
 |Jet OLEDB:Enable Fat カーソル (DBPROP_JETOLEDB_ENABLEFATCURSOR)|リモート行ソースのレコード セットを作成するときに、複数の行をキャッシュするかどうかを示します。|
@@ -115,7 +115,7 @@ Microsoft.Jet.OLEDB.4.0
  コマンドのテキスト、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトでの Microsoft Jet SQL 構文を使用します。 コマンド テキストで行を返すクエリ、処理クエリ、およびテーブル名を指定できます。ただし、ストアド プロシージャはサポートされていません、指定することはできません。
 
 ## <a name="recordset-behavior"></a>レコード セットの動作
- Microsoft Jet データベース エンジンは、動的カーソルをサポートしていません。 したがって、OLE DB Provider for Jet はできません、 **adLockDynamic**カーソルの種類。 動的カーソルが要求されたときに、プロバイダーは、キーセット カーソルを返すし、リセット、[カーソル。](../../../ado/reference/ado-api/cursortype-property-ado.md)プロパティの型を示す[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)が返されます。 さらに場合、更新可能な**Recordset**が要求された (**LockType**は**adLockOptimistic**、 **adLockBatchOptimistic**、または**adLockPessimistic**) プロバイダーによっても、キーセット カーソルを返すされをリセット、**カーソル。**プロパティです。
+ Microsoft Jet データベース エンジンは、動的カーソルをサポートしていません。 したがって、OLE DB Provider for Jet はできません、 **adLockDynamic**カーソルの種類。 動的カーソルが要求されたときに、プロバイダーは、キーセット カーソルを返すし、リセット、[カーソル。](../../../ado/reference/ado-api/cursortype-property-ado.md)プロパティの型を示す[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)が返されます。 さらに場合、更新可能な**Recordset**が要求された (**LockType**は**adLockOptimistic**、 **adLockBatchOptimistic**、または**adLockPessimistic**) プロバイダーによっても、キーセット カーソルを返すされをリセット、**カーソル。** プロパティです。
 
 ## <a name="dynamic-properties"></a>動的プロパティ
  OLE DB Provider for Jet にいくつかの動的なプロパティの挿入、**プロパティ**、開かれていないのコレクション[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、および[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。
@@ -150,7 +150,7 @@ Microsoft.Jet.OLEDB.4.0
 |行の最大サイズ|DBPROP_MAXROWSIZE|
 |最大行サイズには、BLOB が含まれています。|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT の最大のテーブル|DBPROP_MAXTABLESINSELECT|
-|[モード]|DBPROP_INIT_MODE|
+|モード|DBPROP_INIT_MODE|
 |複数のパラメーター セット|DBPROP_MULTIPLEPARAMSETS|
 |複数の結果|DBPROP_MULTIPLERESULTS|
 |複数のストレージ オブジェクト|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -163,7 +163,7 @@ Microsoft.Jet.OLEDB.4.0
 |選択リストの ORDER BY 列|DBPROP_ORDERBYCOLUMNSINSELECT|
 |出力パラメーターの使用状況|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Ref アクセサーを使って渡す|DBPROP_BYREFACCESSORS|
-|Password|DBPROP_AUTH_PASSWORD|
+|パスワード|DBPROP_AUTH_PASSWORD|
 |永続的な ID 型|DBPROP_PERSISTENTIDTYPE|
 |中止の動作を準備します。|DBPROP_PREPAREABORTBEHAVIOR|
 |コミット動作を準備します。|DBPROP_PREPARECOMMITBEHAVIOR|

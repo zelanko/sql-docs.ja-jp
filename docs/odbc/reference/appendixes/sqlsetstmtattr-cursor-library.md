@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910187"
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -48,6 +49,6 @@ ms.lasthandoff: 05/03/2018
   
  アプリケーションが呼び出すことができます**SQLSetStmtAttr**で、**属性**カーソルが開いている間、行セットのサイズを変更する sql_attr_row_array_size を指定します。 新しい行セットのサイズを反映次回**SQLFetchScroll**または**SQLFetch**と呼びます。  
   
- カーソル ライブラリでは、バインディングのオフセットを有効にする SQL_ATTR_PARAM_BIND_OFFSET_PTR または SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性の設定をサポートします。 バインディングのオフセットは、呼び出しのためには使用されません**SQLFetch** ODBC 2 で、カーソル ライブラリを使用した場合*。x*ドライバー。  
+ カーソル ライブラリでは、バインディングのオフセットを有効にする SQL_ATTR_PARAM_BIND_OFFSET_PTR または SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性の設定をサポートします。 バインディングのオフセットは、呼び出しのためには使用されません**SQLFetch** ODBC 2 で、カーソル ライブラリを使用した場合 *。x*ドライバー。  
   
  カーソル ライブラリでは、SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARKS ステートメント属性に設定をサポートします。

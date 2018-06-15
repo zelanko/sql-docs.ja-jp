@@ -34,6 +34,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909567"
 ---
 # <a name="interval-data-types"></a>Interval データ型
 間隔は 2 つの日付と時刻の差として定義されます。 間隔は 2 つの方法のいずれかで表されます。 1 つは、*年-月*年と月の整数単位の間隔を表す間隔。 もう 1 つは、*日時間*日間、分、および秒単位の間隔を表す間隔。 これら 2 種類の間隔は、distinct か月間で異なる数の日数があるため、混在させることはできません。  

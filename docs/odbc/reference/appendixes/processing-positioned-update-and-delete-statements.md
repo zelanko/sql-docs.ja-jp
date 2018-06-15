@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908247"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>処理には、Update および Delete ステートメントが配置されています。
 > [!IMPORTANT]  

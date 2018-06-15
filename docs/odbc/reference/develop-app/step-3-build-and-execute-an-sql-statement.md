@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915507"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>手順 3: ビルドし、SQL ステートメントを実行
 3 番目の手順は、次の図に示すようにビルドし、SQL ステートメントを実行するです。 この手順を実行するために使用するメソッドは、大幅に異なる可能性があります。 アプリケーションは、SQL ステートメントを入力して、ユーザー入力に基づいて SQL ステートメントを作成するように求めるか、ハード コーディングされた SQL ステートメントを使用する可能性があります。 詳細については、次を参照してください。 [SQL ステートメントを構築する](../../../odbc/reference/develop-app/constructing-sql-statements.md)です。  

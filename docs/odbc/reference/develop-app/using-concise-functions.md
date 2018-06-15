@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915577"
 ---
 # <a name="using-concise-functions"></a>簡潔な関数の使用
 一部の ODBC 関数へのアクセス暗黙の型記述子。 アプリケーション ライターがありますに呼び出し元より便利**SQLSetDescField**または**SQLGetDescField**です。 これらの関数を呼び出す*簡潔な*のさまざまな機能、設定、記述子フィールドの取得などを実行するために機能します。 いくつかの簡潔な関数は、1 つの関数の呼び出しで複数の関連する記述子フィールドを取得または設定アプリケーションを使用できます。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901257"
 ---
 # <a name="setting-the-date-format-on-connection"></a>接続で、日付の書式を設定します。
 > [!IMPORTANT]  

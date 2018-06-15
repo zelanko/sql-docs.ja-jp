@@ -2,7 +2,6 @@
 title: スクリプト言語と ADO の併用 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 070cfacfad680fbf0664ad5dc6bc3a01aed99520
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa90243680a59676f64f00cc4fd2b0c182c3d674
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271211"
 ---
 # <a name="using-ado-with-scripting-languages"></a>スクリプト言語と ADO の併用
 ADO では、スクリプト環境では、サーバー側のスクリプトを使用してデータを公開できます。 この場合は、ADO では、基になる OLE DB プロバイダーを使用して、特定のデータ ストアを参照するために必要なその他のコンポーネントは、インターネット インフォメーション サービス (IIS) を実行しているサーバーにインストールされています。 Active Server Pages (ASP) を使用して、ADO は、たとえば、HTML を生成するスクリプトで参照されるコンポーネントです。 この HTML コンテンツは、クライアントの Web ブラウザーに HTTP 経由で渡すことができます。 スクリプトを使用して Web ページは、サーバー側のスクリプトは、更新、移動、および特定のデータを表示することができますに戻す操作を送信できます。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908367"
 ---
 # <a name="basic-odbc-application-steps"></a>基本的な ODBC アプリケーションのステップ
 このセクションでは、ODBC アプリケーションの全体的な流れについて説明します。 可能性はほとんどありませんが、任意のアプリケーションを呼び出すすべてこれらの関数のこの順序で。 ただし、ほとんどのアプリケーションは、次の手順のいくつかのバリエーションを使用します。 アプリケーションの基本手順は、次の図に表示されます。  

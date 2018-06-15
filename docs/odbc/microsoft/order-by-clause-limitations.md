@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899540"
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY 句の制限事項
 GROUP BY 句と ORDER BY 句が SELECT ステートメントが含まれる場合、ORDER BY 句は結果セット内の列のみまたは GROUP BY 句の式を含めることができます。

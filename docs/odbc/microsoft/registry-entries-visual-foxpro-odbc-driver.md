@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903527"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>レジストリ エントリ (Visual FoxPro ODBC ドライバー)
 Visual FoxPro ODBC ドライバーをインストールするときに、インストール プログラムは Microsoft Visual FoxPro ドライバーと呼ばれる新しいキーを追加する、HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini のレジストリ キーに、システムのレジストリを更新します。 そのキーの下では、次の表で説明する値が追加されます。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915737"
 ---
 # <a name="default-driver-subkey"></a>既定のドライバーのサブキー
 既定のサブキーには、既定のデータ ソースで使用するドライバーを説明する 1 つの値が含まれています。 この値の形式は次の表に示します。  

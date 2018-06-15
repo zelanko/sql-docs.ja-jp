@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903117"
 ---
 # <a name="paradox-data-types"></a>Paradox データ型
 ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型にマップします。 次の表では、Paradox のすべてのデータ型を一覧表示して、ODBC SQL データ型にマップされますを表示します。  

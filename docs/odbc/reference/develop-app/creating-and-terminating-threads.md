@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909257"
 ---
 # <a name="creating-and-terminating-threads"></a>作成して、スレッドの終了
 ODBC を使用するマルチ スレッド アプリケーションは、Microsoft® Visual C++® ランタイム ライブラリ関数を呼び出す必要があります **_beginthread**と **_endthread** (または **_beginthreadex**と **_endthreadex**) を作成し、ODBC ドライバー マネージャーを呼び出してスレッドを終了します。 アプリケーションが Microsoft Windows NT® 関数を呼び出す場合**CreateThread**と**EndThread**代わりに、メモリ リークは、ドライバー マネージャーと一部の ODBC ドライバーは、C ランタイムを呼び出すために発生する可能性は関数呼び出しによって作成されたスレッド上で動作しません**CreateThread**です。 詳細については、Microsoft Windows® ドキュメントを参照してください。

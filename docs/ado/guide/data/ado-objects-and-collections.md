@@ -2,7 +2,6 @@
 title: ADO オブジェクトおよびコレクション |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03671824ef02a7316398f1d9b8d51d57845be736
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d8b1967071b5dc420577ecbee3f1b124d917057
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271381"
 ---
 # <a name="ado-objects-and-collections"></a>ADO オブジェクトとコレクション
 ADO は、次の 9 つのオブジェクトと 4 つのコレクションで構成されます。  
   
-|オブジェクトまたはコレクション|Description|  
+|オブジェクトまたはコレクション|説明|  
 |--------------------------|-----------------|  
 |**接続**オブジェクト|データソースとの一意のセッションを表します。 クライアント/サーバー データベース システムでは、場合は、サーバーへの実際のネットワーク接続と同じ場合があります。 プロバイダー、いくつかのコレクション、メソッド、またはのプロパティがサポートする機能によって、**接続**オブジェクトを使用できない可能性があります。|  
 |**Command** オブジェクト|データ ソースに対して実行するためのもので、SQL クエリなどの特定のコマンドを定義するために使用します。|  

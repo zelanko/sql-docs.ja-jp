@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907147"
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
 SQL_ARD_TYPE 型識別子は、バッファー内のデータが、ARD の SQL_DESC_CONCISE_TYPE フィールドに指定された型になることを示すために使用されます。 SQL_ARD_TYPE が入力されて、 *TargetType*への呼び出しの引数**SQLGetData**特定のデータ型と記述子を変更することによって、データを変更するアプリケーションが入力バッファーの有効ではなくフィールドです。 この値のデータ型を結び付ける、  *\*TargetValuePtr*記述子フィールドをバッファーします。 (SQL_ARD_TYPE がへの呼び出しで入力されていない**SQLBindCol**または**SQLBindParameter**バインドされたバッファーの種類が既に SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE フィールドに関連付けられている変更できますいつでもこれらのフィールドのいずれかを変更することによってです。)  

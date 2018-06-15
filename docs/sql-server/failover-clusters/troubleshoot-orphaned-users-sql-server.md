@@ -28,11 +28,12 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035649"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立ユーザーのトラブルシューティング (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  データベース ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マスター **データベースのログインに基づくが、ログインが** マスター **に存在しなくなったとき、**の孤立ユーザーが発生します。 これはログインが削除されたか、データベースが別のサーバーに移され、ログインがなくなったときに発生します。 このトピックでは、孤立ユーザーを見つけ、ログインに再マッピングする方法について説明します。  
+  データベース ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マスター **データベースのログインに基づくが、ログインが** マスター **に存在しなくなったとき、** の孤立ユーザーが発生します。 これはログインが削除されたか、データベースが別のサーバーに移され、ログインがなくなったときに発生します。 このトピックでは、孤立ユーザーを見つけ、ログインに再マッピングする方法について説明します。  
   
 > [!NOTE]  
 >  移動される可能性のあるデータベースには包含データベース ユーザーを利用し、孤立ユーザーの可能性を減らします。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  

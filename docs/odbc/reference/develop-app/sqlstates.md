@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913067"
 ---
 # <a name="sqlstates"></a>SQLSTATEs
 SQLSTATEs では、警告またはエラーの原因に関する詳細情報を提供します。 このマニュアルで SQLSTATEs は、IM で始まるそれら SQLSTATEs ODBC に固有のですが、ISO/IEF CLI 仕様に含まれる場合に基づいています。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31201964"
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Management Studio でのカスタム レポートを使用して、マシン学習サービスの監視します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,9 +65,9 @@ Management Studio でのレポートを一般的な概要については、次�
 ### <a name="step-3-run-the-reports"></a>手順 3. レポートの実行
 
 5. Management Studio で、レポートを実行するインスタンスの **[データベース]** ノードを右クリックします。
-6. **[レポート]**、 **[カスタム レポート]**の順にクリックします。
+6. **[レポート]**、 **[カスタム レポート]** の順にクリックします。
 7. **[ファイルを開く]** ダイアログ ボックスで、カスタム レポート フォルダーを見つけます。
-8. ダウンロードした RDL ファイルを選択し、 **[開く]**をクリックします。
+8. ダウンロードした RDL ファイルを選択し、 **[開く]** をクリックします。
 
 > [!IMPORTANT]
 > 高 DPI または 1080 p を超える解像度のディスプレイ デバイスを持つ一部のコンピューターや、一部のリモート デスクトップ セッションでは、これらのレポートは使用できません。 SSMS のレポート ビューアー コントロールには、レポートのクラッシュの原因となるバグがあります。

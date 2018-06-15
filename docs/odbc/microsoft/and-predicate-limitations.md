@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897144"
 ---
 # <a name="and-predicate-limitations"></a>述語の制限事項
 最大 40 はサポートされています。

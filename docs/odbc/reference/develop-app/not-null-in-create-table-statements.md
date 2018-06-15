@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910447"
 ---
 # <a name="not-null-in-create-table-statements"></a>CREATE TABLE ステートメントで NOT NULL します。
 いくつかのデータベース、および特にデスクトップ データベースをサポートしていない、 **NOT NULL**内の列制約**CREATE TABLE**ステートメントです。 詳細についてで SQL_NON_NULLABLE_COLUMNS オプションを参照して、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)関数の説明。

@@ -6,7 +6,6 @@ ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6da3515ceafb7540cbcb2b538c1951a9b4c0bc2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a38e5df65def060668e60ee470dc379b873ab35
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273611"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Visual C アプリケーションで ADO ライブラリを参照します。
 Visual C アプリケーションで ADO の最新バージョンを使用するには、次を使用`#import`ディレクティブ。  
@@ -37,7 +37,7 @@ Visual C アプリケーションで ADO の最新バージョンを使用する
   
  インポートする必要がありますまたはを使用する ADO MD ADOX、 *msadomd.dll*または*msadox.dll*、上記の構文を使用しています。  
   
-## <a name="backward-compatibility"></a>旧バージョンとの互換性  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  ADO の以前のバージョンを使用するのには、置換*msado15.dll*上で次のタイプ ライブラリのいずれか。  
   
 -   *msado27.tlb*、ADO 2.7 タイプ ライブラリ  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911527"
 ---
 # <a name="quoted-identifiers"></a>引用符で囲まれた識別子
 SQL ステートメントで特殊文字または一致するキーワードを含む識別子を囲む必要があります*識別子引用符文字*; このような文字で囲まれた識別子と呼ばれる*の識別子を引用符で囲まれた*(とも呼ばれる*区切られた識別子*sql-92 で)。 次の Accounts Payable の識別子が引用符で囲まれたなど**選択**ステートメント。  

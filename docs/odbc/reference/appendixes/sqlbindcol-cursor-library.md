@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907187"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
  アプリケーションが呼び出すことができます**SQLBindCol**結果を再バインドするには列を呼び出した後設定**SQLExtendedFetch**、 **SQLFetch**、または**SQLFetchScroll**C データ型、列のサイズとバインドされた列の 10 進数字は同じまま限り、します。 アプリケーションでは、異なるアドレスに列を再バインドする、カーソルは閉じられません必要があります。  
   
- カーソル ライブラリでは、バインドのオフセットを使用する SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性の設定をサポートします。 (**SQLBindCol**この再バインドが発生するに呼び出せる必要はありません)。ODBC 3 のかどうか、カーソル ライブラリを使用 *.x*ドライバー、バインドのオフセットがない場合に使用**SQLFetch**と呼びます。 場合、バインドのオフセットが使用される**SQLFetch**は、ODBC 2、カーソル ライブラリを使用する場合に呼び出されます*。x*ドライバーのため**SQLFetch**にマップされます**SQLExtendedFetch**です。  
+ カーソル ライブラリでは、バインドのオフセットを使用する SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性の設定をサポートします。 (**SQLBindCol**この再バインドが発生するに呼び出せる必要はありません)。ODBC 3 のかどうか、カーソル ライブラリを使用 *.x*ドライバー、バインドのオフセットがない場合に使用**SQLFetch**と呼びます。 場合、バインドのオフセットが使用される**SQLFetch**は、ODBC 2、カーソル ライブラリを使用する場合に呼び出されます *。x*ドライバーのため**SQLFetch**にマップされます**SQLExtendedFetch**です。  
   
  カーソル ライブラリ呼び出しをサポートする**SQLBindCol**ブックマーク列をバインドします。  
   

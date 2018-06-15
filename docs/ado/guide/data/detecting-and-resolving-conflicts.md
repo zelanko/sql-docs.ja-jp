@@ -2,7 +2,6 @@
 title: 検出して、競合を解決する |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,18 +17,19 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05e79fec4c5ddf9d33c9cfaa17581b6d50e0e42b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bca0eb3d528c1f7572745e1b6f8d8e59e9749f36
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270611"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>競合の検出および解決
 イミディ エイト モードで、レコード セットを処理する場合は、同時実行の問題が発生する可能性は大幅に小さくします。 その一方で、アプリケーションでは、バッチ モードの更新を使用する場合は、ある可能性があります良い機会同じレコードを編集する別のユーザーによって行われた変更が保存される前にあるユーザーが、レコードを変更します。 競合を適切に処理するアプリケーションは、このような場合でします。 最後に更新プログラムをサーバーに送信した人物「優先します」の方がある可能性があります。 または、更新プログラムの優先順位が 2 つの競合する値のいずれかで彼を提供することで決定する、最新のユーザーを許可することができます。  
   
  どのような場合は、ADO では、これらの種類の競合を処理するフィールド オブジェクトの UnderlyingValue および OriginalValue プロパティを提供します。 組み合わせでこれらのプロパティを使用して、再同期メソッドと、レコード セットのフィルター プロパティを使用します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ADO では、バッチ更新中に競合が検出されると、警告をエラー コレクションに追加されます。 そのため、常に確認してくださいエラー BatchUpdate を呼び出すし、それらが見つかった場合は、競合が発生していることを前提をテストを開始した後にすぐに。 最初の手順では、競合するレコード セット等しいかどうかのフィルター プロパティを設定します。 これは制限が競合するレコードだけをレコード セットに表示されます。 RecordCount プロパティがこの手順の後に 0 に等しい場合は、競合以外のものによってエラーが発生しましたがわかります。  
   
  BatchUpdate を呼び出すと、ADO とプロバイダーは、データ ソースで更新プログラムを実行する SQL ステートメントを生成します。 特定のデータ ソースに制限する WHERE 句で列の型を使用できますがあることに注意してください。  

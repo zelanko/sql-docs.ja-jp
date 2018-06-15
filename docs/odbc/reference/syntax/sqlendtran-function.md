@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32922517"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 関数
 **準拠**  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
  **SQLEndTran**接続に関連付けられているすべてのステートメントにアクティブなすべての操作をコミットまたはロールバック操作を要求します。 **SQLEndTran**環境に関連付けられているすべての接続のコミットまたはロールバック操作を実行することが要求もできます。  
   
 > [!NOTE]  
->  どのようなドライバー マネージャーの詳細と ODBC 3 には、この関数にマップします。*x* ODBC 2 を利用するアプリケーション*。x*ドライバーを参照してください[アプリケーションの旧バージョンと互換性を保つのための置換関数のマッピング](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)です。  
+>  どのようなドライバー マネージャーの詳細と ODBC 3 には、この関数にマップします。*x* ODBC 2 を利用するアプリケーション *。x*ドライバーを参照してください[アプリケーションの旧バージョンと互換性を保つのための置換関数のマッピング](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)です。  
   
 ## <a name="syntax"></a>構文  
   

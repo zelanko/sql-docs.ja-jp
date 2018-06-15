@@ -18,6 +18,7 @@ ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34306461"
 ---
 # <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>有効にするにまたはの使用状況データ収集を無効にします。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

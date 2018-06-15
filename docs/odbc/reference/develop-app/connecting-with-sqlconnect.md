@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909607"
 ---
 # <a name="connecting-with-sqlconnect"></a>SQLConnect による接続
 **SQLConnect**最も簡単な接続関数です。 データ ソース名が必要ですし、省略可能なユーザー ID とパスワードを受け取ります。 ハード コード、データ ソース名、ユーザー ID またはパスワードが不要のアプリケーションに対して適切に機能します。 でも使用アプリケーション制御独自「ルック アンド フィール」またはそのユーザー インターフェイスのないにもできます。 このようなアプリケーションを使用してデータ ソースの一覧を作成できる**SQLDataSources**、ユーザーにデータ ソース、ユーザー ID とパスワードを要求し、呼び出す**SQLConnect**です。  

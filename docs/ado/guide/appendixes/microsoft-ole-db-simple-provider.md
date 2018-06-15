@@ -2,7 +2,6 @@
 title: Microsoft OLE DB の単純なプロバイダー |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e757ad77f0312d682027d2363944db552217eba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d3abb4d2d34220800a1d8c71b6227cc8de0fd88
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271521"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB プロバイダーの簡単な概要
 Microsoft OLE DB 単純なプロバイダー (OSP) により、対象のプロバイダーが書き込まれたを使用して任意のデータにアクセスする ADO、 [OLE DB 単純なプロバイダー (OSP) Toolkit](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6)です。 単純なプロバイダーは、インメモリ配列、または XML ドキュメントなどの基本的な OLE DB のサポートを必要とするデータ ソースにアクセスするものです。
@@ -48,7 +48,7 @@ MSDAOSP
 
  文字列は、これらのキーワードで構成されます。
 
-|Keyword|Description|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|SQL Server の OLE DB プロバイダーを指定します。|
 |**[データ ソース]**|サーバーの名前を指定します。|

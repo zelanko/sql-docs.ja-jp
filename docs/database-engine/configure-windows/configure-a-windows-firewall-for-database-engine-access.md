@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32869527"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access"></a>TCP アクセス用に Windows ファイアウォールのポートを開くには  
   
-1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして**「WF.msc」**と入力し、 **[OK]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして **「WF.msc」** と入力し、 **[OK]** をクリックします。  
   
 2.  **[セキュリティが強化された Windows ファイアウォール]** の左ペインの **[受信の規則]** をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>動的ポートの使用時に SQL Server にアクセスするには  
   
-1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして**「WF.msc」**と入力し、 **[OK]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして **「WF.msc」** と入力し、 **[OK]** をクリックします。  
   
 2.  **[セキュリティが強化された Windows ファイアウォール]** の左ペインの **[受信の規則]** をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
   

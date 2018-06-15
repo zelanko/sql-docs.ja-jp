@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908907"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>ODBC ステートメント ハンドルを割り当てください。
 アプリケーションがステートメントを実行する前に、必要があります、ステートメント ハンドルに割り当てます。  

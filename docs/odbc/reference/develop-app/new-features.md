@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913347"
 ---
 # <a name="new-features"></a>新機能
 ODBC 3 以下の新機能が導入されました。*x*です。 ODBC 3 です。*x* ODBC 2 作業アプリケーション *.x*ドライバーでは、この機能を使用できません。 ODBC 3 です。*x* ODBC 2 を使用する場合に、ドライバー マネージャーでこれらの機能がマップされていない *.x*ドライバー。  
@@ -83,7 +84,7 @@ ODBC 3 以下の新機能が導入されました。*x*です。 ODBC 3 です�
   
 -   名前付きパラメーターです。  
   
--   ODBC 3 のいずれか。*x*– 特定**SQLGetInfo**オプション。 (ODBC 3 場合。*x* ODBC 2 を使用するアプリケーション*。x*ドライバーは、いくつかの ODBC 2 は置き換え SQL_XXX_CURSOR_ATTRIBUTES1 の情報の種類を呼び出します*。x*情報の種類は信頼性が高く、情報のいくつか必要がありますが、信頼性の高いものがあります。 詳細については、次を参照してください[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)。)。  
+-   ODBC 3 のいずれか。*x*– 特定**SQLGetInfo**オプション。 (ODBC 3 場合。*x* ODBC 2 を使用するアプリケーション *。x*ドライバーは、いくつかの ODBC 2 は置き換え SQL_XXX_CURSOR_ATTRIBUTES1 の情報の種類を呼び出します *。x*情報の種類は信頼性が高く、情報のいくつか必要がありますが、信頼性の高いものがあります。 詳細については、次を参照してください[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)。)。  
   
 -   オフセットをバインドします。  
   

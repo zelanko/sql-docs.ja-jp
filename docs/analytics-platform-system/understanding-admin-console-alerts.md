@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539762"
 ---
 # <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>Analytics Platform System の管理者コンソールのアラートをについてください。
 アプライアンスに表示されるアラート**管理コンソール**し、 **System Center Operations Manager** (SCOM)。 このアラートの一覧を使用して、どのアラートには、追加の調査が必要です。 識別できるようにします。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904047"
 ---
 # <a name="set-collate-command"></a>SET COLLATE コマンド
 後続のインデックス作成と並べ替え操作では、文字列フィールドの照合順序を指定します。  

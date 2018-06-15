@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020069"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>テキスト ボックスの拡大または縮小 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートのテキスト ボックスは、レポート デザイン画面上のスタンドアロン ボックスだけではありません。 テーブルまたはマトリックス (Tablix データ領域) の各セルにもテキスト ボックスがあり、スタンドアロン テキスト ボックスと同じ方法で書式設定できます。既定では、テキスト ボックスのサイズは固定されています。 内容に応じてテキスト ボックスを拡大または縮小するためのオプションを選択できます。 これらのオプションは、それぞれプロパティ ペインの **CanGrow** プロパティまたは **CanShrink** プロパティに対応します。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024049"
 ---
 # <a name="report-history-methods"></a>レポート履歴メソッド
   以下のメソッドを使用してアイテム履歴スナップショットを作成し、管理できます。  

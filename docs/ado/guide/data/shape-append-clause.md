@@ -2,7 +2,6 @@
 title: 図形の APPEND 句 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78a1b524d54f77fc5bdcc894c4948ca3139cf334
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7c54daeed05260bd7e6abd804830ce8dac1807d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272581"
 ---
 # <a name="shape-append-clause"></a>図形の APPEND 句
 列または列を図形コマンドの APPEND 句が追加され、 **Recordset**です。 多くの場合、これらの列は、チャプター列は、子を参照してください**Recordset**です。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
  この句の各部分は次のとおりです。  
   
  *parent-command*  
@@ -68,7 +68,7 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  *child-recordset*  
  -   中かっこで囲まれたプロバイダー コマンド ("{}") を返す、 **Recordset**オブジェクト。 基になるデータ プロバイダーにコマンドが発行され、その構文は、そのプロバイダーの要件によって異なります。 これは通常なります SQL 言語では、ADO では、特定のクエリ言語は必要はありません。  
   
@@ -99,7 +99,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  APPEND キーワードが実際には、一覧、それぞれの句はコンマで区切るし、親に追加する別の列を定義した後の句。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  SHAPE コマンドの一部としてユーザー入力からプロバイダーのコマンドを構築するときに図形ユーザーが指定したプロバイダー コマンドととして処理不透明な文字列にプロバイダーに渡します。 たとえば、以下の図形コマンド、  
   
 ```  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903487"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC ドライバーの設定
 ダウンロードして、Visual FoxPro ODBC ドライバーのインストールについては、次を参照してください。 [Visual FoxPro ODBC ドライバー](http://go.microsoft.com/fwlink/?LinkId=121318) MSDN のダウンロードをします。  

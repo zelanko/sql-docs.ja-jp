@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907587"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam マッピング
 **SQLBindParam**は本当に呼び出せません推奨されなくなったために存在していたしない odbc; ただし、まだは重複している機能-ドライバー マネージャーは、ISO 準拠しているオープン グループ – アプリケーションが使用されていることをエクスポートする必要があります。 **SQLBindParameter**のすべての機能を含む**SQLBindParam**、 **SQLBindParam**の上にマップされます**SQLBindParameter**(ときに、基になるドライバーは、ODBC 3 *.x*ドライバー)。 ODBC 3 *.x*ドライバーを実装する必要はありません**SQLBindParam**です。  

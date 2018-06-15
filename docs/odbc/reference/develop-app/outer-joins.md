@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914357"
 ---
 # <a name="outer-joins"></a>外部結合
 ODBC には、sql-92 左、右、および完全外部結合の構文がサポートされています。 外部結合のエスケープ シーケンスは、します。  

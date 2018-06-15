@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911507"
 ---
 # <a name="hard-coded-sql-statements"></a>ハード コーディングされた SQL ステートメント
 通常、固定のタスクを実行するアプリケーションでは、ハード コーディングされた SQL ステートメントを含んでいます。 たとえば、注文入力システムがオープンの販売注文の一覧を次の呼び出しを使用する可能性があります。  

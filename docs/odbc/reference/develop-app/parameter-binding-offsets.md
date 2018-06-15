@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913517"
 ---
 # <a name="parameter-binding-offsets"></a>パラメーターのバインドのオフセット
 アプリケーションでは、バインドされたパラメーター バッファーのアドレスおよび対応する長さ/インジケーターにオフセットを追加することを指定できるときにバッファー アドレス**SQLExecDirect**または**SQLExecute**と呼びます。 これらの追加の結果では、これらの操作で使用されるアドレスを決定します。  

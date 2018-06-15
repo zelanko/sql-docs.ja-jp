@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908117"
 ---
 # <a name="database-access-architecture"></a>データベース アクセスのアーキテクチャ
 ODBC の開発の質問の 1 つは、標準化するためにデータベース アクセスのアーキテクチャのどの部分をでした。 プログラミング インターフェイスの前のセクションで説明されている SQL: SQL、SQL が埋め込まれているモジュール、および Cli — このアーキテクチャの 1 つだけの一部であります。 実際には、ODBC がミニとメインフレームの Dbms にパーソナル コンピューター ベースのアプリケーションを接続するためのもので、主に、ためにありましたも多数のネットワーク コンポーネント、その一部を標準化する可能性があります。  

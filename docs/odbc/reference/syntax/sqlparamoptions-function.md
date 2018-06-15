@@ -28,16 +28,17 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917003"
 ---
 # <a name="sqlparamoptions-function"></a>SQLParamOptions 関数
 **準拠**  
  バージョンで導入された: ODBC 1.0 標準準拠: 非推奨  
   
  **概要**  
- ODBC 2.0 関数**SQLParamOptions** ODBC 3 で置き換えられました*。x*への呼び出しによって[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)です。  
+ ODBC 2.0 関数**SQLParamOptions** ODBC 3 で置き換えられました *。x*への呼び出しによって[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)です。  
   
 > [!NOTE]  
->  どのようなドライバー マネージャーの詳細と ODBC 2 には、この関数にマップします。*x* ODBC 3 を利用するアプリケーション*。x*ドライバーを参照してください[非推奨機能のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
+>  どのようなドライバー マネージャーの詳細と ODBC 2 には、この関数にマップします。*x* ODBC 3 を利用するアプリケーション *。x*ドライバーを参照してください[非推奨機能のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
   
 ## <a name="remarks"></a>解説  
  参照してください[ODBC 64 ビット情報](../../../odbc/reference/odbc-64-bit-information.md)、64 ビット オペレーティング システム、アプリケーションが実行される場合。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914127"
 ---
 # <a name="relative-and-absolute-scrolling"></a>相対パスと絶対スクロール
 スクロール オプションのほとんど**SQLFetchScroll**相対的な現在の位置または絶対位置にカーソルを置きます。 **SQLFetchScroll** 、次のフェッチをサポートしています前に、最初と最後の行セット、相対パスとしてもフェッチとして (行セットをフェッチ*n*現在の行セットの先頭からの行) と絶対フェッチ (fetch、行セットの開始。行の*n*)。 場合*n*は行が結果セットの最後から数えられます絶対フェッチで負の値。 したがって、– 1 の行の絶対フェッチは結果セットの最後の行で始まる行セットをフェッチすることです。  

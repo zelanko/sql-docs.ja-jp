@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908347"
 ---
 # <a name="argument-value-checks"></a>引数値のチェック
 ドライバー マネージャーでは、次の種類の引数を確認します。 特に記載のない限り、ドライバー マネージャーは、引数の値にエラー SQL_ERROR を返します。  

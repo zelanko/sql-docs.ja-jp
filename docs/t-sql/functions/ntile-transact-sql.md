@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33054389"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +48,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## <a name="arguments"></a>引数  
  *integer_expression*  
- 各パーティションを分割するグループの数を表す正の整数定数式を指定します。 *であれば、*任意 の型に**int**, 、または **bigint**です。  
+ 各パーティションを分割するグループの数を表す正の整数定数式を指定します。 *であれば、* 任意 の型に**int**, 、または **bigint**です。  
   
  \<partition_by_clause>  
  [ は、FROM](../../t-sql/queries/from-transact-sql.md) 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 PARTITION BY の構文で、を参照してください。[ 経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  

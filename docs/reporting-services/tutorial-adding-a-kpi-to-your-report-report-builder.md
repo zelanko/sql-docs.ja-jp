@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036389"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>チュートリアル: レポートへの KPI の追加 (レポート ビルダー)
 この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] チュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに主要業績評価指標 (KPI) を追加します。  

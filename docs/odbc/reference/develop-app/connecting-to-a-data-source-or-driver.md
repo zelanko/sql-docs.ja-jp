@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908567"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>データに接続するソースまたはドライバー
 アプリケーションは、任意の数のドライバーとデータ ソースに接続できます。 さまざまなドライバーとデータ ソース、同じドライバーと、さまざまなデータ ソース、または同じドライバーやデータ ソースへの複数の接続でもかまいません。  

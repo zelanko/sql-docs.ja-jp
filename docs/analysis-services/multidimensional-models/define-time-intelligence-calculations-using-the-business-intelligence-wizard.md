@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026919"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>ビジネス インテリジェンス ウィザードを使用したタイム インテリジェンス計算の定義
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

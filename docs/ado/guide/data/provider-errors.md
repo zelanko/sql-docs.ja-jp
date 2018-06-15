@@ -2,7 +2,6 @@
 title: プロバイダー エラー |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 551c3a7e7f90f69601ff84449d60fc79c1375ece
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a4f551876f97f04f99bd8f2e722cd9e8a89f264
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272341"
 ---
 # <a name="provider-errors"></a>プロバイダー エラー
 プロバイダー エラーが発生したときに-2147467259 の実行時エラーが返されます。 このエラーが表示されたら、確認、**エラー**のアクティブなコレクション**接続**問題の概要を説明する 1 つ以上のエラーを含むオブジェクト。  
@@ -68,9 +68,9 @@ End Function
 ## <a name="the-error-object"></a>Error オブジェクト  
  確認するには、**エラー**オブジェクトのどのようなエラーが発生したかを判断できより重要なアプリケーションまたはオブジェクト エラーが発生します。 **エラー**オブジェクトには、次のプロパティ。  
   
-|プロパティ名|Description|  
+|プロパティ名|説明|  
 |-------------------|-----------------|  
-|**Description**|発生したエラーの説明文です。|  
+|**description**|発生したエラーの説明文です。|  
 |**HelpContext、ヘルプ ファイル**|発生したエラーの説明が含まれているヘルプ トピックとヘルプ ファイルを参照します。|  
 |**NativeError**|プロバイダー固有のエラー番号。|  
 |**数**|数を表す長整数 (に一覧表示、 **ErrorValueEnum**) のエラーが発生します。|  

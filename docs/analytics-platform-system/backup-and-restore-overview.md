@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544814"
 ---
 # <a name="backup-and-restore"></a>バックアップと復元
 データのバックアップし、復元は並列データ ウェアハウス (PDW) について説明します。 バックアップと復元操作は、災害復旧のために使用されます。 バックアップと復元は、1 つのアプライアンスから別のアプライアンスにデータベースをコピーするも使用できます。  

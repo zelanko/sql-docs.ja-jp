@@ -2,7 +2,6 @@
 title: ストリームへの結果セットの取得 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc99c234d810aef48f4c01bdc83229e55d9c5886
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eff683085882bd56b60ed7eee2a14cd2efbc8b86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272551"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>ストリームへの結果セットの取得
 従来の結果を受信するのではなく**Recordset**オブジェクト、ADO がストリームにクエリの結果を代わりに取得できます。 ADO**ストリーム**オブジェクト (またはその他のオブジェクト、COM をサポートする**IStream** ASP などのインターフェイス**要求**と**応答**オブジェクト) これらの結果を含めるために使用できます。 この機能の 1 つの用途は、XML 形式で結果を取得です。 SQL server などの XML 結果は返されません SQL SELECT クエリを使用した FOR XML 句を使用して、XPath クエリを使用するなど、複数の方法でします。  
@@ -182,5 +182,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>解説  
+### <a name="remarks"></a>コメント  
  この時点では、クライアントのブラウザーにストリーミングされた XML とを表示する準備ができた。 これは、XML ドキュメントを html 形式での製品の一覧を作成する DOM とそれぞれの子ノードのループのインスタンスにバインドするクライアント側の VBScript を使用して行います。

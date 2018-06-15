@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908967"
 ---
 # <a name="determining-cursor-capabilities"></a>カーソル機能を判断します。
 次の 4 つのオプション**SQLGetInfo**カーソルの種類がサポートされており、機能について説明します。  

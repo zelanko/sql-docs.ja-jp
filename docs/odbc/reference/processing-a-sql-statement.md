@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916537"
 ---
 # <a name="processing-a-sql-statement"></a>SQL ステートメントの処理
 プログラムによる SQL を使用する方法を説明する前に、SQL ステートメントを処理する方法について説明する必要があります。 必要な手順は、各方法に異なるタイミングで実行が次の 3 つの方法がすべてに必要な場合に共通です。 次の図では、このセクションの残りの部分で説明する SQL ステートメントの処理に関連した手順を示します。  

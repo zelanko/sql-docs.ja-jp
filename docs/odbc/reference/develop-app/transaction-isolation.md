@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914777"
 ---
 # <a name="transaction-isolation"></a>トランザクションの分離
 *トランザクションの分離*複数の同時実行トランザクション間の相互作用の度合いを示します。 これが重要な理由を表示するには、まずシリアル化可能性の概念を確認する必要があります。  

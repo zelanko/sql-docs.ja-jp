@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538982"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>System Center Operations Manager の Analytics Platform System とモニター
 System Center Operations Manager (SCOM) を使用すると、Analytics Platform System (APS) アプライアンスを監視できます。

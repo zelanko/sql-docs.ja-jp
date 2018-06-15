@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33261048"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ sp_help_notification
   
 ## <a name="arguments"></a>引数  
  [ **@object_type =**] **'***object_type***'**  
- 返される情報の種類を指定します。 *object_type*は**char (9)**、既定値はありません。 *object_type*指定されたオペレーター名に割り当てられている警告の一覧を表示するアラートを指定できます*、*または演算子では、指定された警告名を担当する演算子の一覧を表示する*です。*  
+ 返される情報の種類を指定します。 *object_type*は**char (9)**、既定値はありません。 *object_type*指定されたオペレーター名に割り当てられている警告の一覧を表示するアラートを指定できます *、* または演算子では、指定された警告名を担当する演算子の一覧を表示する*です。*  
   
  [  **@name =**] **'***名前***'**  
  演算子名 (場合*object_type* is 演算子) または警告の名前 (場合*object_type*アラートは、)。 *名前*は**sysname**、既定値はありません。  

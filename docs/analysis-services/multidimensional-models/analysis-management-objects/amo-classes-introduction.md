@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020589"
 ---
 # <a name="amo-classes---introduction"></a>AMO クラスの概要
   分析管理オブジェクト (AMO) のインスタンスを管理するためのクラスのライブラリは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]クライアント アプリケーションからです。 AMO クラスは、データベース、ディメンション、キューブ、マイニング構造およびマイニング モデル、ロールおよび権限、例外などの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクトを管理するために使用されるクラスです。  

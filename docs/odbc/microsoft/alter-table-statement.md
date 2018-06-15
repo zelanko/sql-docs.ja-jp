@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903147"
 ---
 # <a name="alter-table-statement"></a>ALTER TABLE ステートメント
 Microsoft Access、dBASE、または Paradoxdriver を使用する場合は、add および drop のテーブルの制約定義句を持つ、ALTER TABLE ステートメントがサポートされています。 (ALTER TABLE ステートメントはサポートされていません、Microsoft Excel またはテキストのドライバー用です。)  

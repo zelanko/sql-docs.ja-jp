@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908497"
 ---
 # <a name="data-buffer-address"></a>データ バッファーのアドレス
 アプリケーションでは、データ バッファーのアドレスを行い、多くの場合、という名前の引数でドライバーに*ValuePtr*または類似した名前です。 たとえば、呼び出しでは、次に**SQLBindCol**、アプリケーションのアドレスを指定する、*日付*変数。  

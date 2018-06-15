@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916407"
 ---
 # <a name="network-database-access"></a>データベースのネットワーク アクセス
 ネットワーク経由でデータベースにアクセスするには、コンポーネント、それぞれから独立しておりの下にある、プログラミング インターフェイスの数が必要です。 次の図は、これらのコンポーネントについて示しています。  

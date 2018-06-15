@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905690"
 ---
 # <a name="using-connection-strings"></a>接続文字列の使用
 Visual FoxPro データ ソースに接続する接続文字列を使用することができます。  

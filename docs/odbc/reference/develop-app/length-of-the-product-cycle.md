@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910067"
 ---
 # <a name="length-of-the-product-cycle"></a>製品サイクルの長さ
 相互運用性に関する最終的な質問は、時間です。 Noninteroperable の 1 つの開発よりも時間がかかります通常相互運用可能なアプリケーションを開発します。 理由は、アプリケーションする必要があります DBMS の機能を確認、さまざまな Dbms の異なる方法で、同じ操作を実行、Dbms によってのみでサポートされる機能を回避するなどです。  

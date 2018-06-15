@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904457"
 ---
 # <a name="insert-statement-limitations"></a>INSERT ステートメントの制限事項
 長すぎる場合、列に収まるように、右側の警告なしで挿入されたデータが切り捨てられます。  

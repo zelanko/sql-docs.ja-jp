@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912627"
 ---
 # <a name="descriptor-handles"></a>記述子ハンドル
 A*記述子*SQL ステートメントのパラメーターまたは結果セットの列を説明するメタデータのコレクションは、アプリケーションまたはドライバーが表示される (とも呼ばれる、*実装*)。 このため、記述子では 4 つのロールのいずれかを入力できます。  

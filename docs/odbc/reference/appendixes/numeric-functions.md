@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914377"
 ---
 # <a name="numeric-functions"></a>数値関数
 次の表では、ODBC スカラー関数のセットに含まれている数値の関数について説明します。 呼び出して**SQLGetInfo**で、*情報の種類*する数値関数は、ドライバーでサポートされる SQL_NUMERIC_FUNCTIONS のアプリケーションを決定できます。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901304"
 ---
 # <a name="index-name-limitations"></a>インデックス名の制限
 Paradox ドライバーを使用する場合、プライマリ インデックスは基になることが定義されているテーブルと同じ名前が必要です。 他の一意のつまり一意でないインデックス定義されている、基になるテーブルと同じ名前が必要です。

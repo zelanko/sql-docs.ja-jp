@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34022209"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>XmlReader を使用したデータの取得
   **XmlReader**クラスの一部、 **System.Xml** Microsoft .NET Framework クラス ライブラリの名前空間がに似ていますが、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>を内のクラス、 **XmlReader**クラスもにより高速かつ非キャッシュ、前方参照専用データにアクセスします。 メモリ内分析のビューを使用して、データの必要性が存在しない場合、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>オブジェクト、 **XmlReader**オブジェクトでは、特に大量のデータ用の XML データを取得するために最適です。 **XmlReader** 、データをストリーム**XmlReader**を取得し、場合と同様に、呼び出し元にデータを公開する前にすべてのデータをキャッシュする必要はありません、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>オブジェクトは、変換に使用された、XML for Analysis 応答を分析オブジェクト モデル表現です。  

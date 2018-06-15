@@ -25,6 +25,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34327183"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>デッドロック ファイルを開く、表示、および印刷する方法 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

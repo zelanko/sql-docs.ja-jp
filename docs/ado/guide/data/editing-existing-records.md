@@ -2,7 +2,6 @@
 title: 既存のレコードを編集 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64c3514b47a6fed7435967b48e9c2141eb9b61a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08c6fbd16d40f0fa78cbb94f7f33094e839733d8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270481"
 ---
 # <a name="editing-existing-records"></a>既存のレコードの編集
 既存のレコードを編集するには、編集し、変更する行に移動、**値**を変更するフィールドのプロパティです。 詳細については、**フィールド**オブジェクトの**値**プロパティを参照してください[データを調べる](../../../ado/guide/data/examining-data.md)です。 使用する、カーソルの種類に応じて、**更新**または**UpdateBatch**変更をデータ ソースに送信します。 詳細については、次を参照してください。[更新およびデータの永続化](../../../ado/guide/data/updating-and-persisting-data.md)です。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539408"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>System Center Operations Manager (SCOM) を分析プラットフォーム システムの監視を構成します。
 Analytics Platform System の System Center Operations Manager (SCOM) 管理パックを構成するこれらの手順に従います。 SCOM から分析プラットフォーム システムを監視する管理パックが必要です。  

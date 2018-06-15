@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539682"
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>外部データへの接続を PolyBase を構成します。
 外部 Hadoop または Microsoft Azure ストレージ blob のデータ ソースに接続する並列データ ウェアハウスに PolyBase を構成する方法について説明します。 PolyBase を使用して、Hadoop や Azure blob ストレージ、並列データ ウェアハウスなど、複数のソースからデータを統合するクエリを実行します。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/19/2018
   
     外部の Hadoop 1.3 に接続している場合は、この手順をスキップします。  
   
-    Hadoop 2.0 から始まり、yarn-site.xml ファイルには、Hadoop YARN フレームワークの構成設定が含まれています。 このファイルは、[管理] ノードの下にあるは**C:\program files \microsoft SQL Server 並列データ Warehouse\100\Hadoop\conf\\** です。  
+    Hadoop 2.0 から始まり、yarn-site.xml ファイルには、Hadoop YARN フレームワークの構成設定が含まれています。 このファイルは、[管理] ノードの下にあるは**C:\program files \microsoft SQL Server 並列データ Warehouse\100\Hadoop\conf\\**です。  
   
     Windows または Linux で、外部の Hadoop 2.0 クラスターに対して PolyBase クエリを実行するには、yarn.application.classpath プロパティと、外部の Hadoop クラスター上の yarn-site.xml 設定と一致するように値を構成する必要があります。 外部の Hadoop クラスターは、既定の設定を使用する場合でも、この構成は必要があります。  
   

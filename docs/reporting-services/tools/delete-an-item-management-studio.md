@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029169"
 ---
 # <a name="delete-an-item-management-studio"></a>アイテムの削除 (Management Studio)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のレポート サーバー インスタンスに接続している場合は、ロールの定義や共有スケジュールを削除できます。 レポートやモデルなどのアイテムをレポート サーバーから削除することはできません。 レポート サーバーのコンテンツを削除するには、代わりにレポート マネージャーを使用します。 また、レポート サーバーが SharePoint 統合モード用に構成されている場合は、コンテンツが格納されている SharePoint ライブラリのアイテム管理機能を使用します。  

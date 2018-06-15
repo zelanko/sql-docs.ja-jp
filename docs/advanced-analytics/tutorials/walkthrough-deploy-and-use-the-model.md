@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31204184"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>SQL で使用して、R モデルの配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/16/2018
 
     + SELECT ステートメントを使用して、SQL テーブルから保存されたモデルを呼び出します。 モデルとしてテーブルから取得された**varbinary (max)** SQL 変数に格納されているデータ_@lmodel2_、およびパラメーターとして渡された*mod*格納されているシステムにプロシージャ[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)です。
 
-    + スコアリングは SQL クエリとして定義され、SQL 変数内の文字列として格納されているために、入力として使用されるデータ _@input_です。 データは、データベースから取得したと呼ばれるデータ フレームで保存され*InputDataSet*への入力データの既定の名前だけである、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)プロシージャを定義できます別の変数名、パラメーターを使用して必要な場合は *_@input_data_1_name_*です。
+    + スコアリングは SQL クエリとして定義され、SQL 変数内の文字列として格納されているために、入力として使用されるデータ _@input_です。 データは、データベースから取得したと呼ばれるデータ フレームで保存され*InputDataSet*への入力データの既定の名前だけである、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)プロシージャを定義できます別の変数名、パラメーターを使用して必要な場合は *_@input_data_1_name_* です。
 
     + スコアを生成するために、ストアド プロシージャは `rxPredict` RevoScaleR **ライブラリの** 関数を呼び出します。
 

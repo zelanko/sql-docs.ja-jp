@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539502"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Analytics Platform System の遠隔測定のフィードバックをマイクロソフトに送信します。
 Analytics Platform System が、管理コンソールのデータを Microsoft に送信する省略可能な製品利用統計情報の機能です。 

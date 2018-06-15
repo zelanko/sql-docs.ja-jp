@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030129"
 ---
 # <a name="configurationsetting-property---machineaccountidentity"></a>ConfigurationSetting プロパティ - MachineAccountIdentity
   レポート サーバーがインストールされているコンピューターのコンピューター アカウント ID を取得します。  

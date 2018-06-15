@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915997"
 ---
 # <a name="translator-specification-subkeys"></a>変換プログラムの仕様のサブキー
 ODBC 変換器サブキーに表示されている各翻訳には、独自のサブキーがあります。 このサブキーは、ODBC 変換器のサブキーの下の対応する値として同じ名前を持ちます。 このサブキーの下の値は、変換、変換プログラムのセットアップ Dll と使用率カウントの完全パスを一覧表示します。 値の形式は、次の表に示すようにします。  

@@ -2,7 +2,6 @@
 title: 十分な TempDB 領域を確保する |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c86196fdf0320b5f3cb5028cb7d5db484c4da846
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09db3f588a5631b02c3ce112dd1b10935537c311
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274131"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>十分な TempDB 領域を確保します。
 処理中にエラーが発生した場合[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を Microsoft SQL Server 6.5 の領域の処理を必要とするオブジェクト、TempDB のサイズを大きく必要があります。 (一部のクエリ処理の一時領域が必要ですたとえば、ORDER BY 句を使用してクエリには、並べ替えが必要です。 の、 **Recordset**、いくつかの一時ディスク領域を作成する必要があります。)。  

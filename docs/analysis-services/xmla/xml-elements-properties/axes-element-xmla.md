@@ -1,4 +1,4 @@
----
+﻿---
 title: 軸の要素 (XMLA) |Microsoft ドキュメント
 ms.date: 05/08/2018
 ms.prod: sql
@@ -18,7 +18,7 @@ ms.locfileid: "34574914"
 ---
 # <a name="axes-element-xmla"></a>Axes 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  コレクションを格納 [Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) 要素に含まれる軸データを表す、[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) を使用する要素、 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) データ型。  
+  コレクションを格納 [Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) 要素に含まれる軸データを表す、[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) を使用する要素、[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) データ型。  
   
 ## <a name="syntax"></a>構文  
   

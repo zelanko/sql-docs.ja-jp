@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910407"
 ---
 # <a name="batch-processing"></a>バッチ処理
 相互運用可能なアプリケーションを使用して条件付きで、またはまったくないように、SQL ステートメントのバッチのサポートは、広範囲にわたるではありません。 詳細については、次を参照してください。[を実行するバッチ](../../../odbc/reference/develop-app/executing-batches.md)です。

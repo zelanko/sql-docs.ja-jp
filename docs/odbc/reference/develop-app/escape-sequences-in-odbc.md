@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911357"
 ---
 # <a name="escape-sequences-in-odbc"></a>Odbc エスケープ シーケンス
 外部結合およびスカラー関数の呼び出しなどの言語機能の数は、一般的な Dbms によって実装されます。 ただし、これらの機能の構文は、さまざまな標準機関で標準的な構文が定義されている場合でも DBMS に固有である傾向があります。 このため、ODBC では、標準の構文では、次の言語機能を含むエスケープ シーケンスが定義されています。  

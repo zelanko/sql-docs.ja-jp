@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913197"
 ---
 # <a name="role-of-the-driver-manager"></a>ドライバー マネージャーの役割
 ドライバー マネージャーでは、生成された状態レコードを返す最終的な順序を決定します。 具体的には、どのレコードが最高のランクがありが最初に返されるを決定します。 ドライバーは、生成された状態レコードを順序付けします。 状態レコードは、ドライバー マネージャーとドライバーの両方によって送信されたが場合、は、ドライバー マネージャーを順序付ける担当します。 詳細については、次を参照してください。[状態レコードのシーケンス](../../../odbc/reference/develop-app/sequence-of-status-records.md)です。  

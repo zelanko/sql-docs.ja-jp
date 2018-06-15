@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019159"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>モバイル レポートで Analysis Services の日付の書式設定を保持する
 レポート ビルダー内の共有データセットにメジャーを追加して、 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] データ ソースの日付のデータ型が [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]で保持されるようにします。

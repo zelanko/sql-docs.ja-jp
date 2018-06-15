@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911497"
 ---
 # <a name="arguments-in-catalog-functions"></a>カタログ関数の引数
 すべてのカタログ関数では、引数として使用するアプリケーションが返されるデータのスコープを制限できますを受け取ります。 たとえば、最初と 2 番目の呼び出し**SQLTables**次のコードには、3 番目の呼び出しを Orders テーブルに関する情報を返すときに、すべてのテーブルに関する情報を含む結果セットを返します。  

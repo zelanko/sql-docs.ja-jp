@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021109"
 ---
 # <a name="retrieving-data-from-an-analytical-data-source"></a>分析データ ソースからのデータの取得
   接続を確立し、クエリを作成すると、任意のデータを取得できます。 ADOMD.NET では、次の 3 つの異なるオブジェクトを使用してデータを取得することができます (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>、 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>、および<xref:System.Xml.XmlReader>) のいずれかを呼び出すことによって、 **Execute**のメソッド、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>オブジェクト。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538602"
 ---
 # <a name="appliance-topology---analytics-platform-system"></a>アプライアンス トポロジ - 分析プラットフォーム システム
 分析プラットフォーム システム全体の概要情報を表示します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910867"
 ---
 # <a name="appendix-c-sql-grammar"></a>付録 c: SQL の文法
 この付録の内容には、次のトピックが含まれています。  

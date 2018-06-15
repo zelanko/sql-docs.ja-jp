@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022929"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 のレポート ビルダー
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、Visual Studio のレポート デザイナーよりもスタンドアロン環境での作業を好むビジネス ユーザー向けの、改ページ調整されたレポートを作成するためのツールです。  改ページ調整されたレポートをデザインすることは、データの取得場所、取得するデータ、およびデータの表示方法を指定するレポート定義を作成することです。 レポートを実行するとき、レポート プロセッサは、指定されたレポート定義を受け取り、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] でレポートをプレビューすることも、ネイティブ モードまたは SharePoint 統合モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーにレポートをパブリッシュして、他のユーザーがそこからレポートを実行できるようにすることもできます。  

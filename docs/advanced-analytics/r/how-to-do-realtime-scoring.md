@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203564"
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>リアルタイムのスコアリングまたは SQL Server のネイティブのスコア付けを実行する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 04/16/2018
 
 **SQL を使用します。**
 
-コード SQL コードからを使用してモデルをトレーニングできます`sp_execute_external_script`、型の列では、テーブルにトレーニング済みモデルを直接挿入**varbinary (max)**です。
+コード SQL コードからを使用してモデルをトレーニングできます`sp_execute_external_script`、型の列では、テーブルにトレーニング済みモデルを直接挿入**varbinary (max)** です。
 
 単純な例を参照してください[このチュートリアル。](../tutorials/rtsql-create-a-predictive-model-r.md)
 

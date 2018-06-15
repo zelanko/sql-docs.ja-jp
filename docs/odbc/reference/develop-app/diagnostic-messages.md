@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911307"
 ---
 # <a name="diagnostic-messages"></a>診断メッセージ
 診断メッセージには、各 SQLSTATE が返されます。 同じ SQLSTATE の種類のメッセージの数が多くの場合、返されます。 たとえば、SQL 構文ではほとんどのエラーの SQLSTATE 42000 (構文エラーまたはアクセス違反) が返されます。 ただし、各構文エラーは、別のメッセージで説明する可能性があります。  

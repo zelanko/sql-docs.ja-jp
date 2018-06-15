@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016865"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface"></a>ISubscriptionBaseUIUserControl インターフェイスの実装
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の配信拡張機能には、レポート マネージャーで拡張機能固有の情報を収集するためのサブスクリプション ユーザー インターフェイス (UI) の実装を含めることができます。 ユーザーが新しいサブスクリプションを作成するか既存のサブスクリプションを変更するとき、UI が呼び出されます。 新しいサブスクリプションの作成時には、UI に適切な既定値が表示され、ユーザーは配信プロバイダーと対話できます。 サブスクリプションの変更時には、現在のサブスクリプションの情報が UI にあらかじめ表示されます。  

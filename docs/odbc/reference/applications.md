@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909577"
 ---
 # <a name="applications"></a>[アプリケーション]
 *アプリケーション*データにアクセスする、ODBC API を呼び出すプログラムです。 可能なさまざま種類のアプリケーションが、ほとんどは、このガイドで説明する例として使用されている 3 つのカテゴリに分類されます。  

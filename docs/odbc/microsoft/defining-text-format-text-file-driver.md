@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904877"
 ---
 # <a name="defining-text-format-text-file-driver"></a>テキスト形式 (テキスト ファイル ドライバー) を定義します。
 使用することができます、テキストのドライバーを使用する場合、**テキスト形式の定義**ダイアログ ボックスを選択したファイル内の列の形式を定義します。 このダイアログ ボックスでは、各データ テーブルのスキーマを指定することができます。 この情報は、データのソース ディレクトリにある Schema.ini ファイルに書き込まれます。 別の Schema.ini ファイルでは、各テキスト データのソース ディレクトリが作成されます。  

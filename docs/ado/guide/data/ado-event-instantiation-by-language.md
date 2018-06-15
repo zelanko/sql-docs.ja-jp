@@ -2,7 +2,6 @@
 title: 言語によって、ADO イベントのインスタンス化 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9d4930294b4024d5c3dfa7dd17ffee3c8f0b11b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3312f51964d5311bcf10ef217bef761c21fca06d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270947"
 ---
 # <a name="ado-event-instantiation-by-language"></a>言語によって、ADO イベントのインスタンス化
 それぞれのプログラミング言語では、ADO イベントのインスタンスを異なる方法で作成します。 次の例のすべてを作成、 **ConnectComplete**イベント ハンドラー。  

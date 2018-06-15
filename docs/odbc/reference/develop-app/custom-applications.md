@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908387"
 ---
 # <a name="custom-applications"></a>カスタム アプリケーション
 通常、カスタム アプリケーションは、いくつかの Dbms の特定のタスクを実行します。 アプリケーション可能性があります単一 DBMS からデータを取得し、レポートを生成など、いくつかの Dbms の間でデータを転送可能性があります。 どのようなこれらのアプリケーションが共通では、これらの Dbms が、アプリケーションが書き込まれる前に呼ばれ、アプリケーションの有効期間の経過と共に変化する可能性が低いことです。  

@@ -41,6 +41,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32957437"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server オブジェクトの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ ms.lasthandoff: 05/03/2018
 |[SQLServer:Access Methods](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの割り当てを検索して計測します。たとえば、インデックスとデータに割り当てられているインデックス検索の数またはページ数を計測します。|  
 |[SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|バックアップ デバイスのスループットなど、バックアップ操作と復元操作で使用するバックアップ デバイスについての情報を提供します。|  
 |[SQLServer:Batch Resp Statistics](../../relational-databases/performance-monitor/sql-server-batch-resp-statistics-object.md)|SQL バッチ応答時間を追跡するカウンターです。| 
-|[SQLServer: Buffer Manager](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]freememory **や** buffer cache hit ratio **など、**で使用するメモリ バッファーについての情報を提供します。|  
+|[SQLServer: Buffer Manager](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]freememory **や** buffer cache hit ratio **など、** で使用するメモリ バッファーについての情報を提供します。|  
 |[SQL Server: Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるフリー ページの要求頻度とアクセスの頻度についての情報を提供します。|  
 |[SQLServer:Catalog Metadata](../../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md)|SQL Server のカタログ メタデータ マネージャー オブジェクトを定義します。| 
 |[SQLServer:CLR](../../relational-databases/performance-monitor/sql-server-clr-object.md)|共通言語ランタイム (CLR: Common Language Runtime) に関する情報を提供します。|  

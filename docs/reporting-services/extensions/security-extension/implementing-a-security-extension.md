@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015579"
 ---
 # <a name="implementing-a-security-extension"></a>セキュリティ拡張機能の実装
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 認証は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] でレポートのセキュリティを確保するための主要なシステムです。 ただし、企業のカスタム セキュリティに対処するために、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のセキュリティ システムを拡張する必要が生じることもあります。 このような場合には、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] API に備えられた開発プラットフォームを使用します。 ここでは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のセキュリティ拡張機能の概要について説明します。  

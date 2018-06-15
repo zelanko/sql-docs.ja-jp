@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32945127"
 ---
 # <a name="information-in-error-interfaces"></a>エラー インターフェイス内の情報
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 |メンバー関数|説明|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|エラーに関する基本情報を ERRORINFO 構造体に設定します。 ERRORINFO 構造体には、エラーの HRESULT 戻り値およびエラーが適用されるプロバイダーとインターフェイスを特定するメンバーが含まれます。|  
-|**GetCustomErrorObject**|インターフェイスの参照を返します**ISQLErrorInfo、**と[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)です。|  
+|**GetCustomErrorObject**|インターフェイスの参照を返します**ISQLErrorInfo、** と[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)です。|  
 |**GetErrorInfo**|参照を返します、 **IErrorInfo**インターフェイスです。|  
 |**GetErrorParameters**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー経由でコンシューマーにパラメーターを返さない**GetErrorParameters**です。|  
 |**GetRecordCount**|使用できるエラー レコードの数を返します。|  

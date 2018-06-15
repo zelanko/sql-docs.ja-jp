@@ -2,7 +2,6 @@
 title: レコードにジャンプ |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4364db29f8d4476c6f4238b970f0e56240ef0f06
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4da5573ef2f96947f9d8660d8d3461df879398e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272031"
 ---
 # <a name="jumping-to-a-record"></a>レコードにジャンプします。
 [移動](../../../ado/reference/ado-api/move-method-ado.md)メソッドでは、前方または後方に移動することができます、**レコード セット**次の構文を使用して、レコード数を指定します。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 oRs.Move NumRecords, Start  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **移動**メソッドがすべてでサポートされている**Recordset**オブジェクト。  
   
  場合、 *NumRecords*引数は、0 より大きい値は、現在のレコードの位置を前方に移動 (の終了に向けて、 **Recordset**)。 場合*NumRecords*が現在のレコードの位置は後方に移動、0 より小さい (の先頭に向かって、 **Recordset**)。  

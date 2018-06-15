@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027459"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
   マップ レイヤー上の多角形、線、およびポイントの表示オプションを制御する方法として、レイヤーのオプションを設定する方法、レイヤー上のマップ要素ルールを設定する方法、およびレイヤー上の特定の埋め込みマップ要素のオプションをオーバーライドする方法があります。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911707"
 ---
 # <a name="result-set-metadata"></a>結果セットのメタデータ
 *メタデータ*は、その他のデータを説明するデータ。 たとえば、結果セットのメタデータには、結果セット内の列の数、それらの列、名前、有効桁数、null 値許容属性、およびなどのデータ型など、結果セットがについて説明します。  

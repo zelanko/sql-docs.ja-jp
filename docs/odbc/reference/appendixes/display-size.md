@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907037"
 ---
 # <a name="display-size"></a>表示サイズ
 列の表示サイズは、文字形式でデータを表示するために必要な文字の最大数です。 次の表では、各 ODBC SQL データ型の表示サイズを定義します。  

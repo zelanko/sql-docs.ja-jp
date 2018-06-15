@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903937"
 ---
 # <a name="limitations"></a>制限事項
 このセクションでは、に関して、次のトピックには、ODBC デスクトップ データベース ドライバーの制限事項について説明します。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34473826"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio (プレビュー) のリリース ノート
 
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/24/2018
 
 - [新しい通知 UI](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) - 簡単に管理および SQL Operations Studio の通知を確認します。
 - [ターミナル分割を統合](https://code.visualstudio.com/updates/v1_21#_split-terminals)-複数開いている端末と同時に作業します。
-- [大規模で保護されたファイルを保存](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges)- 保護されている管理者を保存および > SQL Operations Studio 内で 256 個のファイルです。
+- [大規模で保護されたファイルを保存](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges) - 保護されている管理者を保存および > SQL Operations Studio 内で 256 個のファイルです。
 - [大きなファイルのサポートが向上](https://code.visualstudio.com/updates/v1_21#_text-buffer-improvements)-サイズの大きなファイルのテキスト バッファーに最適化します。
 - [設定の検索機能の向上](https://code.visualstudio.com/updates/v1_20#_settings-search)- 簡単に自然言語検索を使用して正しい設定を検索します。
 - [グローバル スニペット](https://code.visualstudio.com/updates/v1_20#_global-snippets)-すべてのファイルの種類を使用することができますのスニペットを作成します。

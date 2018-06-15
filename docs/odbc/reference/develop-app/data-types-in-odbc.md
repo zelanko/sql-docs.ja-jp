@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910727"
 ---
 # <a name="data-types-in-odbc"></a>ODBC でのデータ型
 ODBC データ型の 2 つのセットを使用します。 SQL データ型と C データ型。 SQL データ型が、データ ソースで使用され、C データ型は、アプリケーションでの C コードで使用されます。  

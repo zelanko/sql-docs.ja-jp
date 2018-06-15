@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910737"
 ---
 # <a name="developing-applications"></a>アプリケーションの開発
 このセクションには、ODBC インターフェイスとそれを実装するドライバーを使用するアプリケーションの開発に関する情報が含まれています。  

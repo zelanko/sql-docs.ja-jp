@@ -2,7 +2,6 @@
 title: スキーマ セクション |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf1d4edb2e7a79b7db8c7e0ab9c8767e603ec1f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae6bf8cf6fed293864ccebc6a9e7c80e48d23184
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272501"
 ---
 # <a name="schema-section"></a>スキーマ セクション
 スキーマのセクションが必要です。 前の例に示すように、ADO は更新可能な限り、データ値のセマンティクスを保持するために各列に関する詳細なメタデータを書き込みます。 ただし、XML に読み込むには、ADO のみが必要ですが所属する行セットおよび列の名前。 最小限のスキーマの例を次に示します。  

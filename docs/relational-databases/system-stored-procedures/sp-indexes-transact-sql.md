@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33259998"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ sp_indexes [ @table_server = ] 'table_server'
  インデックス情報を提供する対象のリモート テーブルの名前です。 *table_name*は**sysname**、既定値は NULL です。 NULL の場合、指定したデータベースのすべてのテーブルが返されます。  
   
  [ @table_schema=] '*、table_schema、*'  
- テーブルのスキーマを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境では、これはテーブル所有者に相当します。 *table_schema、*は**sysname**、既定値は NULL です。  
+ テーブルのスキーマを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境では、これはテーブル所有者に相当します。 *table_schema、* は**sysname**、既定値は NULL です。  
   
  [ @table_catalog=] '*table_db*'  
  対象となるデータベースの名前を指定*table_name*が存在します。 *table_db*は**sysname**、既定値は NULL です。 NULL の場合、 *table_db*の既定値は**マスター**です。  

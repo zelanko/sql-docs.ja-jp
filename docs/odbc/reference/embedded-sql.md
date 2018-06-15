@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915963"
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 DBMS に SQL ステートメントを送信するための最初の手法が埋め込まれた SQL です。 SQL は、変数および流れ制御ステートメントは使用しないので、多くの場合、C または COBOL などの従来のプログラミング言語で書かれたプログラムを追加できるデータベース サブ言語として使用されます。 これは、embedded SQL の中心: ホスト プログラミング言語で書かれたプログラムで SQL ステートメントを配置することです。 簡単に、ホスト言語で SQL ステートメントを埋め込むには、次の手法が使用されます。  

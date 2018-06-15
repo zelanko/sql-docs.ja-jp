@@ -2,7 +2,6 @@
 title: ADO の用語集 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6ba068234cbede37eeb97f77da6305ae950b673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c5a423a72b173020a4e711cd2f6d1d2a7ba62fc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271601"
 ---
 # <a name="ado-glossary-terms"></a>ADO 用語集の用語
 このトピックでは、ADO に関連する用語を定義します。
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 
  ビジネス ルール検証用の編集、ログオン検証、データベースの検索、ポリシー、および企業のビジネスを行う方法を構成するアルゴリズムの変換の組み合わせ。 呼ばれる*ビジネス ロジック*です。
 
-## <a name="c"></a>C
+## <a name="c"></a>c
  定数ではなく、式を式に計算されますが、その他の値によって値が決まります。 評価するには、計算式を取得して通常は他のフィールドまたは行で、その他のソースから値を計算します。
 
  データ ソースから行の範囲への参照を章 A。 ADO では、チャプターは、通常参照別**Recordset**です。

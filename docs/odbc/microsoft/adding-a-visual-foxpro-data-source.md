@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899049"
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースを追加します。
 Visual FoxPro データ、アプリケーションからにアクセスするには、データ ソースが必要です。 次のように、データ ソースを作成できます。  

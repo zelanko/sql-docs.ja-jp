@@ -2,7 +2,6 @@
 title: AbsolutePage プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd1b4230423661a51102293ae04ff1b773b92c47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4bd0696e18e7719038a1b87448477b1b7f4d5bdf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274851"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage プロパティ (ADO)
 現在のレコードがどのページが存在することを示します。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  64 ビット コードでは、64 ビット値の記憶域を提供するデータ型を使用します。 いずれかを使用するなど、**長い**または別の値は 64 ビット長 DBORDINAL などを使用できます。 使用しないでください**PositionEnum**値は 32 ビットの長さに制限されるためです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロパティは、現在のレコードが配置されているページ数を指定を使用できます。 使用して、 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)の行セットの合計数を論理的に分割するプロパティ、 **Recordset**オブジェクトを一連のページ、それぞれと等しいレコードの数を持つ**PageSize**(を除く、最後のページ、少数のレコードを持つ場合もあります)。 プロバイダーは、このプロパティを使用するための適切な機能をサポートする必要があります。  
   
 -   取得または設定するときに、**と、AbsolutePage**プロパティ、ADO の使用、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティおよび[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)次のようにまとめてプロパティ。  

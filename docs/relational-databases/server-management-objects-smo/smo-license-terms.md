@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235099"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共有管理オブジェクト (SMO) のライセンス条項
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

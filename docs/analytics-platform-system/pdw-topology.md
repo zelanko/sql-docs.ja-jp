@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538712"
 ---
 # <a name="pdw-topology"></a>PDW のトポロジ
 SQL Server PDW のコンポーネントに関する名とネットワークの情報を表示します。 使用して、**アプライアンス トポロジのネットワーク構成**ネットワーク IP アドレスを変更するページ。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024999"
 ---
 # <a name="connections-in-adomdnet---performing-transactions"></a>ADOMD.NET でのトランザクションの実行での接続
   ADOMD.NET では、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> オブジェクトを使用して、特定の <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトのトランザクション コンテキストを管理できます。 この機能を使用すると、同じコンテキスト内で複数のコマンドを実行できます。 各コマンドは同じデータを読み込みます。各コマンドの実行間で読み込まれるデータは変更されません。  

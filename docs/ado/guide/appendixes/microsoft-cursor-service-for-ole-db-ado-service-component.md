@@ -2,7 +2,6 @@
 title: OLE DB (ADO サービス コンポーネント) 用 Microsoft カーソル サービス |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a829fa8510054489bdc8f310941d9526f25b82a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d119e537cd400f2bfd69720f17485366c23b4582
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271331"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB の概要の Microsoft カーソル サービス
 OLE DB 用の Microsoft カーソル サービスは、データ プロバイダーのカーソル サポート機能を補完します。 その結果、ユーザーは、すべてのデータ プロバイダーで比較的一定な機能を認識します。
@@ -60,7 +60,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  基になるデータ プロバイダーによってサポートされている場合でも、DBPROP_SERVERDATAONINSERT 動的プロパティは、カーソル サービスによってサポートされていません。
 
-|プロパティ名|Description|
+|プロパティ名|説明|
 |-------------------|-----------------|
 |自動再計算 (DBPROP_ADC_AUTORECALC)|この値がどのくらいの頻度を示します Data Shaping Service で作成されたレコード セットの集計と計算列が計算されます。 既定値 (値 = 1) を Data Shaping Service では、値が変更されたことを決定するたびに再計算されます。 値が 0 の場合、階層の最初にビルド時に、計算列または集計列はのみ計算されます。|
 |バッチ サイズ (DBPROP_ADC_BATCHSIZE)|データ ストアに送信される前にバッチ処理できる update ステートメントの数を示します。 バッチ内の複数のステートメント、データを少ないラウンド トリップを格納します。|
@@ -86,7 +86,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>組み込みのプロパティの動作
  OLE DB のカーソル サービスは、特定の組み込みのプロパティの動作にも影響します。
 
-|プロパティ名|Description|
+|プロパティ名|説明|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|利用可能なカーソルの種類を補足するもの、 **Recordset**です。|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|使用可能なロックの種類を補足するもの、 **Recordset**です。 一括更新を可能にします。|

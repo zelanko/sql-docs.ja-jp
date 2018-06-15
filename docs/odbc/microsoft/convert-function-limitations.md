@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898457"
 ---
 # <a name="convert-function-limitations"></a>変換関数の制限事項
 NULL に設定されている影響を受ける列に変換エラーの結果を入力します。  

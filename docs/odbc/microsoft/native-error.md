@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901057"
 ---
 # <a name="native-error"></a>ネイティブ エラー
 正のネイティブ エラー コードは、デスクトップ データベース ドライバーによって生成されます。 負のエラー コードは、Microsoft Jet によって生成されます。 詳細については、次を参照してください。、 *Microsoft Jet データベース エンジン プログラマ ガイド*です。

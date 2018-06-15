@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902572"
 ---
 # <a name="supported-concurrency-model-visual-foxpro-odbc-driver"></a>サポートされている同時実行モデル (Visual FoxPro ODBC ドライバー)
 Visual FoxPro ODBC ドライバーをサポートしている*読み取り専用の同時実行*です。 アプリケーションが呼び出すことができます[SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) SQL_CONCUR_READ_ONLY の SQL_CONCURRENCY オプションを使用します。  

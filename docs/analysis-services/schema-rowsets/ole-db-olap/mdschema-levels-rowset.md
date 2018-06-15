@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34036886"
 ---
 # <a name="mdschemalevels-rowset"></a>MDSCHEMA_LEVELS 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/10/2018
 |**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|省略可。|  
 |**LEVEL_NAME**|**DBTYPE_WSTR**|省略可。|  
 |**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|省略可。|  
-|**LEVEL_ORIGIN**|**DBTYPE_UI2**|(省略可能)既定の制限はでは有効に**、MD_USER_DEFINED**と**MD_SYSTEM_ENABLED**|  
+|**LEVEL_ORIGIN**|**DBTYPE_UI2**|(省略可能)既定の制限はでは有効に **、MD_USER_DEFINED**と**MD_SYSTEM_ENABLED**|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(省略可能)既定の制限は、1 の値です。 有効な値は次のいずれかのビットマップ。<br /><br /> 1 キューブ<br /><br /> 2 ディメンション|  
 |**LEVEL_VISIBILITY**|**DBTYPE_UI2**|(省略可能)既定の制限は、1 の値です。 次の値のいずれかのビットマップ。<br /><br /> 1 表示<br /><br /> 2 not 表示|  
   

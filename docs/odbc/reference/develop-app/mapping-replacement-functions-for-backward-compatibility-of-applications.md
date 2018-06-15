@@ -27,9 +27,10 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913977"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>アプリケーションの旧バージョンとの互換性のための置換関数のマップ
-ODBC 3 *.x* ODBC 3 での作業アプリケーション *.x*ドライバー マネージャーは、ODBC 2 に対して動作します*。x*ドライバー限り、新しい機能は使用されません。 重複している両方の機能および動作の変更を行う方法に影響するただしを ODBC 3 です。*x* ODBC 2 にアプリケーションが動作します*。x*ドライバー。 ODBC 2 を使用場合します。*x*ドライバー、ドライバー マネージャーは、次の ODBC 3 にマップします*。x*関数で、1 つまたは複数の ODBC 2 が置き換えられます*。x*関数は、対応する ODBC 2 にします*。x*関数。  
+ODBC 3 *.x* ODBC 3 での作業アプリケーション *.x*ドライバー マネージャーは、ODBC 2 に対して動作します *。x*ドライバー限り、新しい機能は使用されません。 重複している両方の機能および動作の変更を行う方法に影響するただしを ODBC 3 です。*x* ODBC 2 にアプリケーションが動作します *。x*ドライバー。 ODBC 2 を使用場合します。*x*ドライバー、ドライバー マネージャーは、次の ODBC 3 にマップします *。x*関数で、1 つまたは複数の ODBC 2 が置き換えられます *。x*関数は、対応する ODBC 2 にします *。x*関数。  
   
 |ODBC 3 です。*x*関数|ODBC 2 です。*x*関数|  
 |-------------------------|-------------------------|  
@@ -221,7 +222,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
   
  次の一連の手順で決定されます。  
   
-1.  場合*属性*ドライバーの定義済みの接続やステートメント属性ではないと、ODBC 2 で定義されている属性ではありません*。x*、ドライバー マネージャーで SQLSTATE HY092 の SQL_ERROR が返されます (無効な属性またはオプション識別子)。 ここでそれ以降のルールは適用されません。  
+1.  場合*属性*ドライバーの定義済みの接続やステートメント属性ではないと、ODBC 2 で定義されている属性ではありません *。x*、ドライバー マネージャーで SQLSTATE HY092 の SQL_ERROR が返されます (無効な属性またはオプション識別子)。 ここでそれ以降のルールは適用されません。  
   
 2.  場合*属性*SQL_ATTR_AUTO_IPD または SQL_ATTR_METADATA_ID、SQLSTATE HY092 の SQL_ERROR ドライバー マネージャーを返します (無効な属性またはオプション識別子)。  
   
@@ -247,7 +248,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
   
  次の一連の手順で決定されます。  
   
-1.  場合*属性*ドライバーの定義済みの接続やステートメント属性ではないと、ODBC 2 で定義されている属性ではありません*。x*、ドライバー マネージャーで SQLSTATE HY092 の SQL_ERROR が返されます (無効な属性またはオプション識別子)。 ここでそれ以降のルールは適用されません。  
+1.  場合*属性*ドライバーの定義済みの接続やステートメント属性ではないと、ODBC 2 で定義されている属性ではありません *。x*、ドライバー マネージャーで SQLSTATE HY092 の SQL_ERROR が返されます (無効な属性またはオプション識別子)。 ここでそれ以降のルールは適用されません。  
   
 2.  場合*属性*は、次のいずれか。  
   
@@ -306,7 +307,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
   
  次の一連の手順で決定されます。  
   
-1.  場合*属性*ドライバーの定義済みの接続やステートメント属性ではないと、ODBC 2 で定義されている属性ではありません*。x*、ドライバー マネージャーで SQLSTATE HY092 の SQL_ERROR が返されます (無効な属性またはオプション識別子)。 ここでそれ以降のルールは適用されません。  
+1.  場合*属性*ドライバーの定義済みの接続やステートメント属性ではないと、ODBC 2 で定義されている属性ではありません *。x*、ドライバー マネージャーで SQLSTATE HY092 の SQL_ERROR が返されます (無効な属性またはオプション識別子)。 ここでそれ以降のルールは適用されません。  
   
 2.  場合*属性*SQL_ATTR_AUTO_IPD、ドライバー マネージャーを返しますで SQLSTATE HY092 の SQL_ERROR が (無効な属性またはオプション識別子)。  
   
@@ -332,7 +333,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
  次の一連の手順で決定されます。  
   
-1.  場合*属性*ドライバーの定義済みの接続やステートメント属性ではないと、ODBC 2 で定義されている属性ではありません*。x*、ドライバー マネージャーで SQLSTATE HY092 の SQL_ERROR が返されます (無効な属性またはオプション識別子)。 ここでそれ以降のルールは適用されません。  
+1.  場合*属性*ドライバーの定義済みの接続やステートメント属性ではないと、ODBC 2 で定義されている属性ではありません *。x*、ドライバー マネージャーで SQLSTATE HY092 の SQL_ERROR が返されます (無効な属性またはオプション識別子)。 ここでそれ以降のルールは適用されません。  
   
 2.  場合*属性*は、次のいずれか。  
   
@@ -384,7 +385,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
      ここで*hstmt*、 *fOption*、および*vParam*の値に設定されます*StatementHandle*、*属性*、および*ValuePtr*、それぞれします。 *StringLength*引数は無視されます。  
   
-     ODBC 2 場合。*x*ドライバーは、ODBC 3 文字の文字列、ドライバー固有のステートメントのオプションをサポートしています*。x*アプリケーションを呼び出す必要があります**SQLSetStmtOption**をこれらのオプションを設定します。  
+     ODBC 2 場合。*x*ドライバーは、ODBC 3 文字の文字列、ドライバー固有のステートメントのオプションをサポートしています *。x*アプリケーションを呼び出す必要があります**SQLSetStmtOption**をこれらのオプションを設定します。  
   
 ## <a name="mappings-for-handling-parameter-arrays"></a>パラメーター配列を処理するためのマッピング  
  アプリケーションを呼び出すとします。  
@@ -406,18 +407,18 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ## <a name="error-handling"></a>エラー処理  
  ODBC 3 です。*x*、呼び出し元**SQLFetch**または**SQLFetchScroll** SQL_DESC_ARRAY_STATUS_PTR、IRD と特定の診断レコードの SQL_DIAG_ROW_NUMBER フィールドの追加このレコードに関連する行セットの行の数が含まれています。 これを使用して、アプリケーションは特定の行の位置と、エラー メッセージを関連付けることができます。  
   
- ODBC 2 です。*x*ドライバーをこの機能を提供することはできません。 ただし、SQLSTATE 01S01 でエラー境界を提供する (行でエラー)。 ODBC 3 です。*x*を使用しているアプリケーション**SQLFetch**または**SQLFetchScroll** ODBC 2 を通過するときにします*。x*ドライバーは、この事実に注意する必要があります。 このようなアプリケーションが呼び出すことができるなることにも注意してください**SQLGetDiagField**を実際にはこのまま SQL_DIAG_ROW_NUMBER フィールドを取得します。 ODBC 3 です。*x* ODBC 2 を使用するアプリケーション*。x*ドライバーが呼び出すできる**SQLGetDiagField**でのみ、 *DiagIdentifier* SQL_DIAG_MESSAGE_TEXT、SQL_DIAG_NATIVE、SQL_DIAG_RETURNCODE、または SQL_DIAG_ の引数SQLSTATE。 ODBC 3 *.x*ドライバー マネージャーは、ODBC 2 を使用する場合に、診断データの構造を保持します*。x*ドライバーが、ODBC 2 *。x*ドライバーが 4 つのフィールドのみを返します。  
+ ODBC 2 です。*x*ドライバーをこの機能を提供することはできません。 ただし、SQLSTATE 01S01 でエラー境界を提供する (行でエラー)。 ODBC 3 です。*x*を使用しているアプリケーション**SQLFetch**または**SQLFetchScroll** ODBC 2 を通過するときにします *。x*ドライバーは、この事実に注意する必要があります。 このようなアプリケーションが呼び出すことができるなることにも注意してください**SQLGetDiagField**を実際にはこのまま SQL_DIAG_ROW_NUMBER フィールドを取得します。 ODBC 3 です。*x* ODBC 2 を使用するアプリケーション *。x*ドライバーが呼び出すできる**SQLGetDiagField**でのみ、 *DiagIdentifier* SQL_DIAG_MESSAGE_TEXT、SQL_DIAG_NATIVE、SQL_DIAG_RETURNCODE、または SQL_DIAG_ の引数SQLSTATE。 ODBC 3 *.x*ドライバー マネージャーは、ODBC 2 を使用する場合に、診断データの構造を保持します *。x*ドライバーが、ODBC 2 *。x*ドライバーが 4 つのフィールドのみを返します。  
   
- ODBC 2 時にします。*x* ODBC 2 を利用するアプリケーション*。x*ドライバー、ドライバー マネージャーによって返される複数のエラーが発生することができます、操作の場合さまざまなエラーで返される可能性 ODBC 3 *.x*よりも ODBC 2 でのドライバー マネージャー *。x*ドライバー マネージャー。  
+ ODBC 2 時にします。*x* ODBC 2 を利用するアプリケーション *。x*ドライバー、ドライバー マネージャーによって返される複数のエラーが発生することができます、操作の場合さまざまなエラーで返される可能性 ODBC 3 *.x*よりも ODBC 2 でのドライバー マネージャー *。x*ドライバー マネージャー。  
   
 ## <a name="mappings-for-bookmark-operations"></a>ブックマークの操作のマッピング  
- ODBC 3 *.x*ドライバー マネージャーは、ODBC 3 時に、次のマッピングを実行します*。x* ODBC 2 を使用するアプリケーション*。x*ドライバーは、ブックマークの操作を実行します。  
+ ODBC 3 *.x*ドライバー マネージャーは、ODBC 3 時に、次のマッピングを実行します *。x* ODBC 2 を使用するアプリケーション *。x*ドライバーは、ブックマークの操作を実行します。  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- ODBC 3 時にします。*x* ODBC 2 を使用するアプリケーション*。x*ドライバー呼び出し**SQLBindCol**列 0 にバインドする*fCType* SQL_C_VARBOOKMARK、ODBC 3 に等しい *.x*ドライバー マネージャーが確認するにはかどうか、 *BufferLength*引数が 4 より小さいか、4 よりも大きいと、場合は、SQLSTATE HY090 が返されます (無効な文字列長またはバッファー長)。 場合、 *BufferLength*引数が 4 に等しい場合、ドライバー マネージャーを呼び出す**SQLBindCol**に置き換えた後に、ドライバーで*fCType* SQL_C_BOOKMARK とします。  
+ ODBC 3 時にします。*x* ODBC 2 を使用するアプリケーション *。x*ドライバー呼び出し**SQLBindCol**列 0 にバインドする*fCType* SQL_C_VARBOOKMARK、ODBC 3 に等しい *.x*ドライバー マネージャーが確認するにはかどうか、 *BufferLength*引数が 4 より小さいか、4 よりも大きいと、場合は、SQLSTATE HY090 が返されます (無効な文字列長またはバッファー長)。 場合、 *BufferLength*引数が 4 に等しい場合、ドライバー マネージャーを呼び出す**SQLBindCol**に置き換えた後に、ドライバーで*fCType* SQL_C_BOOKMARK とします。  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
- ODBC 3 時にします。*x* ODBC 2 を使用するアプリケーション*。x*ドライバー呼び出し**SQLColAttribute**で、 *ColumnNumber*引数は、0 に設定されて、ドライバー マネージャーを返します、 *FieldIdentifier*値次の表に一覧表示されます。  
+ ODBC 3 時にします。*x* ODBC 2 を使用するアプリケーション *。x*ドライバー呼び出し**SQLColAttribute**で、 *ColumnNumber*引数は、0 に設定されて、ドライバー マネージャーを返します、 *FieldIdentifier*値次の表に一覧表示されます。  
   
 |*FieldIdentifier*|値|  
 |-----------------------|-----------|  
@@ -449,7 +450,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |SQL_DESC_UPDATEABLE|SQL_ATTR_READ_ONLY|  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
- ODBC 3 時にします。*x* ODBC 2 を使用するアプリケーション*。x*ドライバー呼び出し**SQLDescribeCol**で、 *ColumnNumber*引数を 0 に設定、ドライバー マネージャーが次の表に示された値を返します。  
+ ODBC 3 時にします。*x* ODBC 2 を使用するアプリケーション *。x*ドライバー呼び出し**SQLDescribeCol**で、 *ColumnNumber*引数を 0 に設定、ドライバー マネージャーが次の表に示された値を返します。  
   
 |バッファー|値|  
 |------------|-----------|  
@@ -461,7 +462,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |* NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- ODBC 3 時にします。*x* ODBC 2 を使用するアプリケーション*。x*ドライバーにより、次の呼び出しに**SQLGetData**ブックマークを取得します。  
+ ODBC 3 時にします。*x* ODBC 2 を使用するアプリケーション *。x*ドライバーにより、次の呼び出しに**SQLGetData**ブックマークを取得します。  
   
 ```  
 SQLGetData(StatementHandle, 0, SQL_C_VARBOOKMARK, TargetValuePtr, BufferLength, StrLen_or_IndPtr)  
@@ -475,9 +476,9 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
  ここで*hstmt*と*pvParam*内の値に設定されて*StatementHandle*と*TargetValuePtr*、それぞれします。 ブックマークが指すバッファーに返されます、 *pvParam* (*TargetValuePtr*) 引数。 バッファー内の値を指す、 *StrLen_or_IndPtr*への呼び出しで引数**SQLGetData**が 4 に設定します。  
   
- このマッピングは、ケースのアカウントに必要な**SQLFetch**を呼び出す前に呼び出された**SQLGetData**と ODBC 2 *。x*ドライバーがサポートされていませんでした**SQLExtendedFetch**です。 この場合、 **SQLFetch**を通じて、ODBC 2 に渡される*。x*ドライバー、ケースのブックマークの取得はサポートされていません。  
+ このマッピングは、ケースのアカウントに必要な**SQLFetch**を呼び出す前に呼び出された**SQLGetData**と ODBC 2 *。x*ドライバーがサポートされていませんでした**SQLExtendedFetch**です。 この場合、 **SQLFetch**を通じて、ODBC 2 に渡される *。x*ドライバー、ケースのブックマークの取得はサポートされていません。  
   
- **SQLGetData** ODBC 2 で複数回を呼び出すことができません*。x*呼び出すので、部分内のブックマークを取得するドライバー **SQLGetData**で、 *BufferLength*引数が 4 未満の値に設定され、 *ColumnNumber*引数を 0 に設定するには、SQLSTATE HY090 が返されます (無効な文字列長またはバッファー長)。 **SQLGetData**ただし、同じブックマークを取得する複数回呼び出します。  
+ **SQLGetData** ODBC 2 で複数回を呼び出すことができません *。x*呼び出すので、部分内のブックマークを取得するドライバー **SQLGetData**で、 *BufferLength*引数が 4 未満の値に設定され、 *ColumnNumber*引数を 0 に設定するには、SQLSTATE HY090 が返されます (無効な文字列長またはバッファー長)。 **SQLGetData**ただし、同じブックマークを取得する複数回呼び出します。  
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
- ODBC 3 時にします。*x* ODBC 2 を使用するアプリケーション*。x*ドライバー呼び出し**SQLSetStmtAttr** SQL_UB_VARIABLE に SQL_ATTR_USE_BOOKMARKS 属性を設定するにドライバー マネージャーが、基になる ODBC 2 で SQL_UB_ON に属性を設定します*。x*ドライバー。
+ ODBC 3 時にします。*x* ODBC 2 を使用するアプリケーション *。x*ドライバー呼び出し**SQLSetStmtAttr** SQL_UB_VARIABLE に SQL_ATTR_USE_BOOKMARKS 属性を設定するにドライバー マネージャーが、基になる ODBC 2 で SQL_UB_ON に属性を設定します *。x*ドライバー。

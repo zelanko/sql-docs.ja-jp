@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910047"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>コミットして、トランザクションをロールバックしています
 アプリケーションが呼び出すをコミットまたは手動コミット モードでのトランザクションをロールバック、 **SQLEndTran**です。 通常のトランザクションをサポートする Dbms 用のドライバーを実行してこの関数を実装する、**コミット**または**ロールバック**ステートメントです。 ドライバー マネージャーは呼び出しません**SQLEndTran**場合でも、アプリケーションが、トランザクションをロールバックしようとしています。 SQL_SUCCESS、単純に返します接続が自動コミット モードであるとします。 いずれかを実装できるため、トランザクションをサポートしない Dbms 用のドライバーは、自動コミット モードでは常に、 **SQLEndTran**を何もせずに関係なく SQL_SUCCESS を返しますまたは、まったく実装しません。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911637"
 ---
 # <a name="diagnostic-handling-rules"></a>診断の処理ルール
 次の規則は、処理、診断**SQLGetDiagRec**と**SQLGetDiagField**です。  

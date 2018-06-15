@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539472"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>並列データ ウェアハウスのアクセス許可を付与 T-SQL
 Grant T-SQL Parallel Data Warehouse でのデータベース操作のアクセス許可。

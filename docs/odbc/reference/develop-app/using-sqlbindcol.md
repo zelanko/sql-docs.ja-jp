@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917477"
 ---
 # <a name="using-sqlbindcol"></a>SQLBindCol の使用
 アプリケーションが呼び出すことによって列をバインド**SQLBindCol**です。 この関数は、一度に 1 つの列をバインドします。 アプリケーションには、次を指定します。  

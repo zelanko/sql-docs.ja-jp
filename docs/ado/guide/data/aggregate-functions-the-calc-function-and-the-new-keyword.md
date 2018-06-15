@@ -2,7 +2,6 @@
 title: 集計関数、CALC 関数と NEW キーワード |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e3af3e37caacae09f4ee57bc251f7ebcabfb04e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba6aae19a559dd1e475809339281c8b65c282517
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271551"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>集計関数、CALC 関数と NEW キーワード
 データ シェイプには、次の関数がサポートされています。 処理される列を含む章に割り当てられた名前が、*章エイリアス*です。  
   
- チャプター エイリアスを完全修飾である章に先行するそれぞれの章列名から成るにあることができます、*列名、*ピリオドで区切っています。 たとえば、親章、chap1、子の章では、chap2 に含まれる場合 amt、amount 列を含む、修飾名 chap1.chap2.amt です。  
+ チャプター エイリアスを完全修飾である章に先行するそれぞれの章列名から成るにあることができます、*列名、* ピリオドで区切っています。 たとえば、親章、chap1、子の章では、chap2 に含まれる場合 amt、amount 列を含む、修飾名 chap1.chap2.amt です。  
   
-|集計関数|Description|  
+|集計関数|説明|  
 |-------------------------|-----------------|  
 |SUM (*章エイリアス*.*列名*)|指定された列のすべての値の合計を計算します。|  
 |AVG (*章エイリアス*.*列名*)|指定された列のすべての値の平均を計算します。|  
@@ -41,11 +41,11 @@ ms.lasthandoff: 05/03/2018
 |STDEV (*章エイリアス*.*列名*)|指定された列の標準偏差を計算します。|  
 |任意 (*章エイリアス*.*列名*)|指定された列の値です。 予測可能な値は、列の値はチャプター内のすべての行の同じ場合にのみいずれかが存在します。<br /><br /> **注**列にチャプター内の行のすべてに対して同じ値が含まれていない場合、図形コマンド任意を返します、関数の値を指定する値のいずれか。|  
   
-|計算式|Description|  
+|計算式|説明|  
 |---------------------------|-----------------|  
 |CALC(*expression*)|ただし、に対してのみの行の任意の式を計算、**レコード セット**CALC 関数を含むです。 これらを使用して任意の式[の Visual Basic for Applications (VBA) 関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)は許可されています。|  
   
-|NEW キーワード|Description|  
+|NEW キーワード|説明|  
 |-----------------|-----------------|  
 |新しい*フィールド型*[(*幅*&#124;です。*スケール*&#124;です。*精度*&#124;です。*エラー* [、*スケール*&#124;です。*エラー*])]|指定した型の空の列を追加、 **Recordset**です。|  
   

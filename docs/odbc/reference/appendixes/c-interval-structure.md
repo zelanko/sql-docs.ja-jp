@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906715"
 ---
 # <a name="c-interval-structure"></a>C の間隔の構造体
 表示される C interval データ型の[C データ型](../../../odbc/reference/appendixes/c-data-types.md)セクションでは、同じ構造を使用して、間隔のデータが含まれています。 ときに**SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**が呼び出されると、ドライバー SQL_INTERVAL_STRUCT 構造にデータを返します、指定された値を使用して、C データ型のアプリケーション (への呼び出しで**SQLBindCol**、 **SQLGetData**、または**SQLBindParameter**) SQL_INTERVAL_STRUCT の内容を解釈するには、し、追加、 *interval_type*を構造体のフィールド、 *enum* C 型に対応する値。 ドライバーの読み取りを行わないことに注意してください、 *interval_type*間隔の種類を決定するフィールドです。 SQL_DESC_CONCISE_TYPE 記述子フィールドの値を取得します。 パラメーターのデータで構造体を使用すると、ドライバーを使用して APD の SQL_DESC_CONCISE_TYPE フィールドに、アプリケーションによって指定された値 SQL_INTERVAL_STRUCT の内容を解釈するアプリケーションの値を設定する場合でも、 *interval_type*を別の値フィールド。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913787"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>標準に準拠したアプリケーションやドライバー
 標準に準拠したアプリケーションやドライバーは、オープンなグループ CAE 仕様"データ管理:: SQL 呼び出しレベル インターフェイス (CLI)"と ISO/IEC 9075 に準拠している 1 つの 3:1995 (E) 呼び出しレベルのインターフェイス (SQL/CLI)。  

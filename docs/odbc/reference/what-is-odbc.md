@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917419"
 ---
 # <a name="what-is-odbc"></a>ODBC とは何ですか。
 コンピューティングの世界で ODBC に関する多くの誤解が存在します。 エンド ユーザーには、Microsoft® Windows® のコントロール パネルのアイコンです。 アプリケーション プログラマは、データ アクセスのルーチンを含むライブラリを勧めします。 他の多くには、想像れたすべてのデータベース アクセスの問題に対する回答を勧めします。  

@@ -2,7 +2,6 @@
 title: ADO MD 基礎 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d15a76c1a7109c6c08d95610278ba4ac9d5c37a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf6cf507d47527e2ca6a72985b6f5bc817ba88e7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273511"
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD の基礎
 Microsoft® ActiveX® Data Objects (Multidimensional) (ADO MD) 提供の簡単なアクセス多次元データへ Microsoft Visual Basic® などの言語から Microsoft Visual C++® します。 ADO MD 拡張などの多次元データに固有のオブジェクトを含める Microsoft ActiveX® Data オブジェクト (ADO)、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)と[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクト。 ADO md マルチ ディメンション スキーマの参照、キューブを照会でき、結果を取得できます。  

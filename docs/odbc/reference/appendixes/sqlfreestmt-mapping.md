@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906397"
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt マッピング
 アプリケーションを呼び出すと**SQLFreeStmt**で、*オプション*SQL_DROP から ODBC 3 の引数 *.x*ドライバーへの呼び出し  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33259492"
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ sp_fulltext_service [ [@action=] 'action'
   
 ## <a name="arguments"></a>引数  
  [  **@action=**] **'***アクション***'**  
- 変更またはリセットするプロパティです。 *アクション*は**nvarchar(100)、**既定値はありません。 一覧については、*c*アクション プロパティ、その説明、および設定できる値は、下にある表を参照して、*値*引数。 この引数によって返されるプロパティには、データ型、現在の実行値、最小値または最大値、非推奨のステータスなどがあります。  
+ 変更またはリセットするプロパティです。 *アクション*は**nvarchar(100)、** 既定値はありません。 一覧については、*c*アクション プロパティ、その説明、および設定できる値は、下にある表を参照して、*値*引数。 この引数によって返されるプロパティには、データ型、現在の実行値、最小値または最大値、非推奨のステータスなどがあります。  
   
  [ **@value=**] *value*  
  指定したプロパティの値です。 *値*は**sql_variant**既定値は NULL です。 場合@valueが null、 **sp_fulltext_service**現在の設定値を返します。 次の表は、アクション プロパティとその説明、および設定できる値の一覧です。  
