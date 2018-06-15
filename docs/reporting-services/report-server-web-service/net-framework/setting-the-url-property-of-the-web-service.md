@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024979"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Web サービスの Url プロパティの設定
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アプリケーションでは、アプリケーションのダイレクト先であるレポート サーバー Web サービスの基本 URL をいつでも変更できます。 そのためには、サービス オブジェクトの **Url** プロパティを設定します。 例 :  

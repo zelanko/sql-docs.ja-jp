@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34045486"
 ---
 # <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>1103 を通じてレベル 1050 に表形式オブジェクト モデルを理解します。
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

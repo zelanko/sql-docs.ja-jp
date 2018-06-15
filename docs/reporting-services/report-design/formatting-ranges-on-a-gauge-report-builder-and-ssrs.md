@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023399"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>ゲージの範囲の書式設定 (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、ゲージ範囲は、ゲージ上の値の重要なサブセクションを示す、ゲージ スケール上のゾーンまたは領域です。 ゲージ範囲を使用すると、ポインター値が特定の値範囲に入る時期を視覚的に示すことができます。 範囲は、開始値と終了値で定義されます。  

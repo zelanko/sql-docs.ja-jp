@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016079"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>分析用とレポート用の Microsoft Business Intelligence (BI) ツールの選択
 適切なビジネス インテリジェンス ツールを選択することは困難な場合があります。 さまざまな Microsoft 製品を確認し、ニーズに最も合う製品を見つけてください。
