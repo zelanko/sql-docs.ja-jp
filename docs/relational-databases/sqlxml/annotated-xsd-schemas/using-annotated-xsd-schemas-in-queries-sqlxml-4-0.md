@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32974157"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>クエリでの注釈付き XSD スキーマの使用 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,7 +123,7 @@ ms.lasthandoff: 05/03/2018
   
  このテンプレートでは 2 つの XPath クエリも指定しています。 各、  **\<xpath クエリ >** 要素を指定することにより、マッピング スキーマを一意に識別、**マッピング スキーマ**属性。  
   
- テンプレートでインライン スキーマを指定すると、 **sql: はマッピング スキーマ**注釈にも指定する必要があります、  **\<xsd:schema >** 要素。 **Sql: はマッピング スキーマ**ブール値を受け取る (0 = false、1 = true)。 インライン スキーマ**sql: はマッピング スキーマ =「1」**はインライン注釈付きスキーマとして扱われ、XML ドキュメントでは返されません。  
+ テンプレートでインライン スキーマを指定すると、 **sql: はマッピング スキーマ**注釈にも指定する必要があります、  **\<xsd:schema >** 要素。 **Sql: はマッピング スキーマ**ブール値を受け取る (0 = false、1 = true)。 インライン スキーマ**sql: はマッピング スキーマ =「1」** はインライン注釈付きスキーマとして扱われ、XML ドキュメントでは返されません。  
   
  **Sql: はマッピング スキーマ**注釈がテンプレートの名前空間に属する**urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql}-sql**です。  
   

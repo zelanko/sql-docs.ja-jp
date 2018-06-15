@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914047"
 ---
 # <a name="string-functions"></a>文字列関数
 次の表は、文字列操作関数を一覧表示します。 文字列関数が呼び出すことによって、ドライバーでサポートされる、アプリケーションを判別**SQLGetInfo**で、*情報の種類*SQL_STRING_FUNCTIONS のです。  

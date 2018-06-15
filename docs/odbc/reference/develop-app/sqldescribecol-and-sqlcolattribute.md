@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914017"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol と SQLColAttribute
 **SQLDescribeCol**と**SQLColAttribute**結果セットのメタデータの取得に使用されます。 これら 2 つの関数の違いを**SQLDescribeCol**中に情報 (列の名前、データ型、有効桁数、スケール、および null 値許容属性) の同じ 5 つの部分は常に返します**SQLColAttribute** 、1 つのアプリケーションによって要求された情報を返します。 ただし、 **SQLColAttribute**列の大文字小文字の区別を含む、メタデータのはるかに充実した選択範囲を返す、サイズ、更新、および検索機能を表示できます。  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33006769"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 |**password**|**nvarchar (524)**|(暗号化) パスワード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**アクティブ**|**bit**|ローカル ディストリビューターがリモート パブリッシャーによって使用されているかどうかを示します。|  
 |**信頼されています。**|**bit**|リモート パブリッシャーがローカル ディストリビューターと同じパスワードを使用するかどうかを示します。<br /><br /> **0** A を = ディストリビューターに接続するリモート パブリッシャーでパスワードが必要です。<br /><br /> **1** = No パスワードが必要です。|  
-|**third_party**|**bit**|パブリッシャーがのインストールであるかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストール**。1** = 異種データ ソース。|  
+|**third_party**|**bit**|パブリッシャーがのインストールであるかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストール **。1** = 異種データ ソース。|  
 |**publisher_type**|**sysname**|パブリッシャーの種類:<br /><br /> **MSSQLSERVER**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。<br /><br /> **ORACLE**標準の Oracle パブリッシャーを = です。<br /><br /> **ORACLE GATEWAY** = Oracle ゲートウェイ パブリッシャーです。|  
   
 ## <a name="see-also"></a>参照  

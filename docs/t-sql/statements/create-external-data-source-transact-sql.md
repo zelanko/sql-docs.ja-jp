@@ -28,6 +28,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34047013"
 ---
 # <a name="create-external-data-source-transact-sql"></a>外部データ ソース (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

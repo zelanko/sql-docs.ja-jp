@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913477"
 ---
 # <a name="procedure-parameters"></a>プロシージャのパラメーター
 プロシージャ呼び出しのパラメーター入力として使用できる、入力/出力、または出力パラメーターです。 これは、すべての他の SQL ステートメントで、入力パラメーターでは常にパラメーターと異なります。  

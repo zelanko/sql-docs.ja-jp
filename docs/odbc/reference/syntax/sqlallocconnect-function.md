@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916317"
 ---
 # <a name="sqlallocconnect-function"></a>SQLAllocConnect 関数
 **準拠**  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
  ODBC 3 です。*x*、ODBC 2 *。x*関数**SQLAllocConnect**代わりました**SQLAllocHandle**です。 詳細については、次を参照してください。 [SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)です。  
   
 > [!NOTE]  
->  どのようなドライバー マネージャーの詳細と ODBC 2 には、この関数にマップします。*x* ODBC 3 を利用するアプリケーション*。x*ドライバーを参照してください[非推奨機能のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
+>  どのようなドライバー マネージャーの詳細と ODBC 2 には、この関数にマップします。*x* ODBC 3 を利用するアプリケーション *。x*ドライバーを参照してください[非推奨機能のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

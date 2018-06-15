@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923387"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 関数
 **準拠**  
@@ -198,7 +199,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD: 未使用 APD: 未使用 IRD: R IPD: R|ARD: �
  [2] で、SQL_DESC_DATA_PTR フィールド、IPD では、整合性チェックを強制的に設定できます。 後続の呼び出しで**SQLGetDescField**または**SQLGetDescRec**ドライバーは、SQL_DESC_DATA_PTR に設定された値を返す必要はありません。  
   
 ## <a name="fieldidentifier-argument"></a>FieldIdentifier 引数  
- *FieldIdentifier*記述子フィールドを設定するかを指定します。 記述子が含まれています、*記述子のヘッダー、*次のセクションで、「ヘッダー フィールド」と 0 個以上で説明するヘッダー フィールドから成る*記述子レコード*レコード フィールドから成る「ヘッダー フィールド」セクションの次のセクションで説明します。  
+ *FieldIdentifier*記述子フィールドを設定するかを指定します。 記述子が含まれています、*記述子のヘッダー、* 次のセクションで、「ヘッダー フィールド」と 0 個以上で説明するヘッダー フィールドから成る*記述子レコード*レコード フィールドから成る「ヘッダー フィールド」セクションの次のセクションで説明します。  
   
 ## <a name="header-fields"></a>ヘッダー フィールド  
  各記述子には、次のフィールドから成るヘッダーがあります。  

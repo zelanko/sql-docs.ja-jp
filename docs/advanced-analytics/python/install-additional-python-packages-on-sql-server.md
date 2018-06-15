@@ -13,6 +13,7 @@ ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34074236"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server に新しい Python パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
