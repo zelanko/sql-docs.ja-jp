@@ -2,7 +2,6 @@
 title: 永続化階層レコード セット |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1506bd80eee82c2b93a3f3f543825efef394ef07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef907391ad15cb5dd4d58efb6268a0b1688274fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272521"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>永続化階層レコード セット
 階層を保存することができます**Recordset** adtg 形式または XML 形式で呼び出すことによってファイルに、[保存](../../../ado/reference/ado-api/save-method.md)メソッドです。 階層を保存するときに、2 つの制限を適用するただし、**レコード セット**XML 形式で s: 場合は、XML で保存することはできません、階層的な**レコード セット**保留中の更新プログラムが含まれていて、パラメーター化されたを保存することはできません階層**Recordset**です。  

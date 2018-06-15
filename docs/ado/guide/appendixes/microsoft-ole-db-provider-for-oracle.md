@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for Oracle |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de312ff17a7d66bf58a5b8f1fb7a6c33aa27acec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 241a3ac024ef2a15bfe403e49ea9778939d22bc8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271101"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle の概要
 > [!IMPORTANT]
@@ -51,7 +51,7 @@ MSDAORA
 
  文字列は、これらのキーワードで構成されます。
 
-|Keyword|Description|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|OLE DB Provider for Oracle を指定します。|
 |**[データ ソース]**|サーバーの名前を指定します。|
@@ -66,7 +66,7 @@ MSDAORA
 
  これらのパラメーターは完全に記載されている、 [OLE DB プログラマーズ リファレンス](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)です。 [ADO の動的プロパティ インデックス](../../../ado/reference/ado-api/ado-dynamic-property-index.md)これらのパラメーター名と対応する OLE DB プロパティの間の相互参照を提供します。
 
-|パラメーター|Description|
+|パラメーター|説明|
 |---------------|-----------------|
 |**ウィンドウ ハンドル**|ウィンドウ ハンドルを使用して追加の情報を要求することを示します。|
 |**[Locale Identifier]**|32 ビットの一意の番号 (1033 など)、ユーザーの言語に関連する設定を指定することを示します。 これらの設定を示す日付と時刻を書式設定方法、項目はアルファベット順に並べ替えられます、文字列を比較してなります。|

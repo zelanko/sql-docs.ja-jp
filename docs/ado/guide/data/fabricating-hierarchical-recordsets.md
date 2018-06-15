@@ -2,7 +2,6 @@
 title: 階層レコード セットを製造 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e9301ec9204b5d2d6768f7487f279dd5f1eb0f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37e2ffd58c7dbf9e142c2525b7348cbc88cc6823
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271531"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>製造階層レコード セット
 次の例は、親、子、および孫の列の定義に文法を整形するデータを使用して、基になるデータ ソースが存在しない階層のレコード セットを作成する方法を示しています。**レコード セット**です。  
