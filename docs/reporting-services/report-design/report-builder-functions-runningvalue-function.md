@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025389"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>レポート ビルダー関数 - RunningValue 関数
   式で指定された NULL 以外のすべての数値の実行中の集計を、指定されたスコープに対して評価して返します。  
