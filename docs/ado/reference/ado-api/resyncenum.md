@@ -2,7 +2,6 @@
 title: ResyncEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79752a7733450fc1e6761f39cd49fb6f808a334b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b974d00ecb1fb4d0d9d7e431f28df16f945d778
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281361"
 ---
 # <a name="resyncenum"></a>ResyncEnum
 呼び出しによって基になる値を上書きするかどうかを示す[再同期](../../../ado/reference/ado-api/resync-method.md)です。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adResyncAllValues**|2|既定値です。 データは上書きされ、保留中の更新が取り消されます。|  
 |**adResyncUnderlyingValues**|1|データは上書きされず、保留中の更新は取り消されません。|  

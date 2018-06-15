@@ -2,7 +2,6 @@
 title: プロパティを並べ替える |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 692a6a3e9ca2e65b031aebd8ed99c2719f0f0a69
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a42a5160c1e9e86f25c4547aef0e0ead5babe250
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281911"
 ---
 # <a name="sort-property"></a>並べ替えのプロパティ
 1 つまたは複数のフィールド名を示す、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)が並べ替えられて、各フィールドが昇順または降順で並べ替えられたかどうかとします。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**文字列**内のフィールドを示す値名、 **Recordset**並べ替えを行う。 それぞれの名前をコンマで区切られ、空白と、キーワードを順に必要に応じて**ASC**、フィールド、昇順の並べ替えまたは**DESC**、降順でフィールドの並べ替え。 既定では、キーワードが指定されていない場合、フィールドが昇順で並べ替えられます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロパティが必要、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)設定するプロパティを**adUseClient**です。 指定された各フィールドに一時インデックスが作成されます、**並べ替え**プロパティ、インデックスが既に存在しない場合。  
   
  並べ替え操作が効率的なデータが物理的に並べ替えられるされませんが、インデックスによって指定された順序でアクセスされるだけです。  

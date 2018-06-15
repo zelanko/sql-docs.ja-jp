@@ -2,7 +2,6 @@
 title: WillMove および MoveComplete イベント (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ab75264b6cbd3fe8e3ef99b5339763ea469a4f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30394da01328ad1f533834081cd33f6620c54dd4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282891"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove および MoveComplete イベント (ADO)
 **WillMove**イベントが保留中の操作が現在の位置を変更する前に呼び出されます、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。 **MoveComplete**イベントは、現在の位置の後に呼び出されます、 **Recordset**変更します。  
@@ -62,7 +62,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  A [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 **Recordset**のこのイベントが発生しました。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  A **WillMove**または**MoveComplete**イベントは、以下の理由により発生する可能性があります**Recordset**操作:[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)、 [を移動](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、および[Requery](../../../ado/reference/ado-api/requery-method.md)です。 次のプロパティによりこれらのイベントが発生する:[フィルター](../../../ado/reference/ado-api/filter-property.md)、[インデックス](../../../ado/reference/ado-api/index-property.md)、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)、[と、AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、および[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)です。 これらのイベントは、子の場合にも発生する**Recordset**が**レコード セット**接続されているイベントと、親**レコード セット**が移動します。  
   
  設定する必要があります、 *adStatus*パラメーターを**adStatusUnwantedEvent**可能性のある各の*adReason*の任意のイベントのイベント通知を完全に停止するのには値を含まれています、 *adReason*パラメーター。  

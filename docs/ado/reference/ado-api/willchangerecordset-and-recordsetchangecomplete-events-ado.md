@@ -2,7 +2,6 @@
 title: WillChangeRecordset および RecordsetChangeComplete イベント (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56c6c85597af2724d3f00e2bb5096508f52471d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63962d0ce3c8c4a5bf5aa0274a4084a9f8d84a5f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282801"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset および RecordsetChangeComplete イベント (ADO)
 **WillChangeRecordset**イベントが保留中の操作を変更する前に呼び出されます、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。 **RecordsetChangeComplete**イベントが呼び出された後、**レコード セット**が変更されました。  
@@ -62,7 +62,7 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  A **Recordset**オブジェクト。 **Recordset**のこのイベントが発生しました。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  A **WillChangeRecordset**または**RecordsetChangeComplete**ので、イベントが発生する、 **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md)または[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドです。  
   
  プロバイダーは、ブックマークをサポートしていない場合、 **RecordsetChange**イベント通知がプロバイダーから新しい行が取得されるたびに発生します。 このイベントの頻度によって異なります、 **RecordsetCacheSize**プロパティです。  

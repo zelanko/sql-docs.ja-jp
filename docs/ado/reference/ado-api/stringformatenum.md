@@ -2,7 +2,6 @@
 title: StringFormatEnum |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13c4f80064a06299a6049330fcf85c8e0827e619
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac774393a914c13171dfa13150ee708b316fbd03
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282591"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 取得するときに、形式を指定、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を文字列として。  
   
-|定数|値|Description|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adClipString**|2|行を取り出すため*RowDelimiter*、列、 *ColumnDelimiter*、および null 値によって*NullExpr*です。 3 つのパラメーター、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッドがでのみ有効ですが、 *StringFormat*の**adClipString**です。|  
   

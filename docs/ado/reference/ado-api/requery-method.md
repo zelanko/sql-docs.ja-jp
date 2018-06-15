@@ -2,7 +2,6 @@
 title: Requery メソッド |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63c63ce0a4fd42b5cfe784793d76c68a5f23d083
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0473cd2c2e8faae5f5ca5805a4cf4e141225f9f9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281311"
 ---
 # <a name="requery-method"></a>Requery メソッド
 データが更新、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの基になるクエリを再実行してオブジェクト。  
@@ -38,13 +38,13 @@ recordset.Requery Options
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Options*  
- 省略可。 含むビットマスク[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)と[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)値がこの操作に影響します。  
+ *[オプション]*  
+ 任意。 含むビットマスク[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)と[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)値がこの操作に影響します。  
   
 > [!NOTE]
 >  場合*オプション*に設定されている**adAsyncExecute**、この操作は非同期的に実行し、 [RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)断定ときにイベントが発行されます。 **ExecuteOpenEnum**値**adExecuteNoRecords**または**adExecuteStream**では使用できません**Requery**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **Requery**の内容全体を更新する方法、 **Recordset**によって元のコマンドと、2 回目のデータを取得するデータ ソースからのオブジェクト。 呼び出すことと同じではこのメソッドを呼び出す、[閉じる](../../../ado/reference/ado-api/close-method-ado.md)と[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)続けてメソッドです。 現在のレコードを編集して、新しいレコードを追加すると、エラーが発生した場合。  
   
  中に、 **Recordset**オブジェクトが開いている場合、カーソルの特性を定義するプロパティ ([カーソル](../../../ado/reference/ado-api/cursortype-property-ado.md)、 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md)、 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 。、など) は読み取り専用です。 したがって、 **Requery**メソッド、現在のカーソルの更新のみ可能です。 カーソルのプロパティを変更し、結果を表示、使用する必要があります、[閉じる](../../../ado/reference/ado-api/close-method-ado.md)メソッド、プロパティが読み取り/書き込みをもう一度にならないようにします。 プロパティの設定と呼び出しを変更することができますし、[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドにカーソルを閉じて再度開きます。  

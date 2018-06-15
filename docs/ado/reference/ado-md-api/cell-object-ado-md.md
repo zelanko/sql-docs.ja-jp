@@ -2,7 +2,6 @@
 title: セルのオブジェクト (ADO MD) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22227f22f42e5848b0826028a855b31b4b82443a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f82bfdf0e1b61d3b6fdab096af77f8b843178384
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283431"
 ---
 # <a name="cell-object-ado-md"></a>セルのオブジェクト (ADO MD)
 セル セットに含まれる軸座標の交差部分にデータを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  A**セル**によってオブジェクトが返される、[項目](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)のプロパティ、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクト。  
   
  コレクションのプロパティと、**セル**オブジェクトを次を行うことができます。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  **プロパティ**コレクションには、プロバイダーが指定したプロパティが含まれています。 次の表は、利用可能なプロパティを一覧表示します。 実際のプロパティの一覧は、プロバイダーの実装によって異なる場合があります。 使用可能なプロパティの完全な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|Description|  
+|名前|説明|  
 |----------|-----------------|  
 |背景色|セルを表示するときに使用する背景色です。|  
 |FontFlags|フォントの効果を指定するビットマスク。|  

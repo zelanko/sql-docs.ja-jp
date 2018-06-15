@@ -2,7 +2,6 @@
 title: レコード セット オブジェクト (ADO) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4667e510edb12f0c916c6b2da7afd6cc73204c8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b150dc9d60620cc50a5560415e72f0197ae78d5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281247"
 ---
 # <a name="recordset-object-ado"></a>レコード セット オブジェクト (ADO)
 ベース テーブル、または実行されたコマンドの結果から、レコードのセット全体を表します。 いつでも、 **Recordset**オブジェクトとして現在のレコード セット内で 1 つのレコードのみを参照します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用する**Recordset**プロバイダーからデータを操作するオブジェクト。 ほぼすべてを使用してデータを操作する ADO を使用して、 **Recordset**オブジェクト。 すべて**Recordset**オブジェクトは、レコード (行) とフィールド (列)。 プロバイダーによってサポートされている機能に応じていくつか**レコード セット**メソッドまたはプロパティを使用できない可能性があります。  
   
  ADODB です。レコード セットが作成するために使用する必要があります、ProgID、 **Recordset**オブジェクト。 古い ADOR を参照する既存のアプリケーションです。レコード セットの ProgID を再コンパイルせずに作業が続行されますが、新規の開発が ADODB を参照する必要があります。レコード セットです。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **順方向専用カーソル**だけスクロールすることができます、 **Recordset**です。 追加、変更、または他のユーザーによって削除は表示されません。 これを単一のパスのみを作成する必要がある状況でパフォーマンスが向上、 **Recordset**です。  
   
- 設定、[カーソル](../../../ado/reference/ado-api/cursortype-property-ado.md)開始する前にプロパティ、 **Recordset** 、カーソルの種類を選択するかを渡す、*カーソル。*引数と、 [を開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)。メソッドです。 一部のプロバイダーは、すべてのカーソルの種類をサポートしません。 プロバイダーのマニュアルを確認してください。 カーソルの種類を指定しない場合、ADO は既定では、順方向専用カーソルを開きます。  
+ 設定、[カーソル](../../../ado/reference/ado-api/cursortype-property-ado.md)開始する前にプロパティ、 **Recordset** 、カーソルの種類を選択するかを渡す、*カーソル。* 引数と、 [を開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)。メソッドです。 一部のプロバイダーは、すべてのカーソルの種類をサポートしません。 プロバイダーのマニュアルを確認してください。 カーソルの種類を指定しない場合、ADO は既定では、順方向専用カーソルを開きます。  
   
  場合、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティに設定されている**adUseClient**を開くには、 **Recordset**、 **UnderlyingValue** プロパティ[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトでは使用できません、返された**Recordset**オブジェクト。 作成することができます (OLE DB と共にで Microsoft SQL Server 用 Microsoft ODBC プロバイダー) などの一部のプロバイダーを併用すると、 **Recordset**以前に定義されたとは別にオブジェクト[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを接続文字列を渡すことによって、**開く**メソッドです。 ADO が作成されますが、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを割り当てることはありませんそのオブジェクトをオブジェクト変数にします。 ただし、複数開いている場合**Recordset** 、同じ接続でオブジェクトを明示的に作成し、開く必要があります、**接続**オブジェクトですこの割り当て、**接続**。オブジェクト変数オブジェクト。 開くときに、このオブジェクト変数を使用しないかどうか、 **Recordset**オブジェクト、ADO が新たに作成**接続**ごとに新しいオブジェクト**Recordset**渡した同じ場合でも、接続文字列です。  
   

@@ -2,7 +2,6 @@
 title: UnderlyingValue プロパティ |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72962e5ba9b99f93c21547370e110706bdf0ee0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f0548dd9c42e18b988cc848ebd214dd191f8489
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282791"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue プロパティ
 現在の値を示す、[フィールド](../../../ado/reference/ado-api/field-object.md)データベース内のオブジェクト。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>戻り値  
  返します、**バリアント**の値を示す値、**フィールド**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **UnderlyingValue**プロパティをデータベースから現在のフィールド値を返します。 フィールドの値で、 **UnderlyingValue**プロパティは、値は、トランザクションを表示し、別のトランザクションによって新しい更新プログラムの結果である可能性があります。 これが異なる場合があります、 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)プロパティで、最初に返された値を反映して、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
   
  これを使用すると同様、[再同期](../../../ado/reference/ado-api/resync-method.md)メソッドですが、 **UnderlyingValue**プロパティは、現在のレコードから特定のフィールドの値のみを返します。 これは、同じ値を[再同期](../../../ado/reference/ado-api/resync-method.md)置換するメソッドを使用して、[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティです。  

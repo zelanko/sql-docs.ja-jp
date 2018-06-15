@@ -2,7 +2,6 @@
 title: Update メソッド |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c0a5cd4e12848ecdec7c3c5168b6106dd95215c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ae65fa263d672c80fb886c5e1f212a8a189bf38
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282761"
 ---
 # <a name="update-method"></a>Update メソッド
 現在の行に加えたあらゆる変更を保存、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、または[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)のコレクション、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト。  
@@ -39,12 +39,12 @@ record.Fields.Update
   
 #### <a name="parameters"></a>パラメーター  
  *Fields*  
- 省略可。 A**バリアント**、単一の名前を表す、または**バリアント**名または変更するフィールドの序数位置を表す配列。  
+ 任意。 A**バリアント**、単一の名前を表す、または**バリアント**名または変更するフィールドの序数位置を表す配列。  
   
  *値*  
- 省略可。 A**バリアント**、単一の値を表す、または**バリアント**フィールドまたは新しいレコードのフィールドの値を表す配列。  
+ 任意。 A**バリアント**、単一の値を表す、または**バリアント**フィールドまたは新しいレコードのフィールドの値を表す配列。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="recordset"></a>レコードセット  
  使用して、**更新**の現在のレコードに加えた変更を保存する方法、 **Recordset**呼び出し元からのオブジェクト、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドまたは内の任意のフィールド値を変更した後、既存のレコードです。 **Recordset**オブジェクトが更新をサポートする必要があります。  

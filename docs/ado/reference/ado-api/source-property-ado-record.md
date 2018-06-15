@@ -2,7 +2,6 @@
 title: Source プロパティ (ADO レコード) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,11 +24,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bff992c2c2406c7ea6df95ca92f67da3bf52e3fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d7ac5eb7a467109af4b1a8d3665436159f3f609
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281981"
 ---
 # <a name="source-property-ado-record"></a>Source プロパティ (ADO レコード)
 データ ソースまたはによって表されるオブジェクトを示す、[レコード](../../../ado/reference/ado-api/record-object-ado.md)です。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  取得または設定、**バリアント**で表されるエンティティを示す値、**レコード**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **ソース**プロパティから返される、*ソース*の引数、**レコード**オブジェクト[開く](../../../ado/reference/ado-api/open-method-ado-record.md)メソッドです。 絶対または相対 URL 文字列である含めることができます。 絶対 URL を設定しないで使用できる、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティを開くには直接、**レコード**オブジェクト。 暗黙的な**接続**オブジェクトはここで作成します。  
   
  **ソース**プロパティが既に開かれているへの参照を含めることができますも**Recordset**を開きます、**レコード**の現在の行を表すオブジェクトを**レコード セット**です。  

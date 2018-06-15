@@ -2,7 +2,6 @@
 title: UpdateBatch メソッド |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75fa802b85b1bdb9f2dcd97af8c244a41f7ec37b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c7b25df0679596485586393993ba718f08542bf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282811"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch メソッド
 すべての保留中のバッチ更新プログラムをディスクに書き込みます。  
@@ -39,12 +39,12 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
 #### <a name="parameters"></a>パラメーター  
  *AffectRecords*  
- 省略可。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)レコードの数を示す値、 **UpdateBatch**メソッドに影響します。  
+ 任意。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)レコードの数を示す値、 **UpdateBatch**メソッドに影響します。  
   
  *PreserveStatus*  
- 省略可。 A**ブール**によって示されるローカルが変更されたかどうかを指定する値、[ステータス](../../../ado/reference/ado-api/status-property-ado-recordset.md)プロパティをコミットする必要があります。 この値が設定されている場合**True**、**ステータス**更新が完了したら、各レコードのプロパティは変更されません。  
+ 任意。 A**ブール**によって示されるローカルが変更されたかどうかを指定する値、[ステータス](../../../ado/reference/ado-api/status-property-ado-recordset.md)プロパティをコミットする必要があります。 この値が設定されている場合**True**、**ステータス**更新が完了したら、各レコードのプロパティは変更されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  使用して、 **UpdateBatch**メソッドを変更する場合、**レコード セット**で行われたすべての変更を送信するバッチ更新モードでのオブジェクト、**レコード セット**を基になるデータベース オブジェクトです。  
   
  場合、 **Recordset**オブジェクトは、バッチ更新をサポートしている、1 つまたは複数のレコードを複数の変更をキャッシュするには、ローカルで呼び出されるまで、 **UpdateBatch**メソッドです。 現在のレコードを編集または呼び出すときに、新しいレコードを追加する場合、 **UpdateBatch**メソッド、ADO の呼び出しは自動的に、[更新](../../../ado/reference/ado-api/update-method.md)する前に現在のレコードに保留中の変更を保存する方法プロバイダーにバッチ処理された変更を送信します。 バッチ更新を keyset または static カーソルのみを使用する必要があります。  

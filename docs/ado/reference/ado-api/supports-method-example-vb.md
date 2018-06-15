@@ -2,7 +2,6 @@
 title: メソッドの例 (VB) をサポートしています |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 837ad3dbeb993e85650e874d98e59f2d921ae930
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0424b37399e3abb2c2333e8bc6928d2cfde9156
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282511"
 ---
 # <a name="supports-method-example-vb"></a>メソッドの例 (VB) をサポートしています
 この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)別のカーソルの種類を使用して開いたレコード セットでサポートされるオプションを表示するメソッド。 DisplaySupport プロシージャは、この手順を実行する必要があります。  

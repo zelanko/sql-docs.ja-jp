@@ -2,7 +2,6 @@
 title: メソッドを再同期 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 187f1397cbdb4e6ccdfc39b573f301fce1a957ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96853ed76d4fa94092ecedd54978ee9cfbd25497
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281421"
 ---
 # <a name="resync-method"></a>メソッドを再同期します。
 現在のデータを更新[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、または[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)のコレクション、[レコード](../../../ado/reference/ado-api/record-object-ado.md)基になるデータベースからのオブジェクト。  
@@ -41,12 +41,12 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>パラメーター  
  *AffectRecords*  
- 省略可。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)レコードの数を決定する値、**再同期**メソッドに影響します。 既定値は**adAffectAll**です。 この値では使用できない、**再同期**のメソッド、**フィールド**のコレクション、**レコード**オブジェクト。  
+ 任意。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)レコードの数を決定する値、**再同期**メソッドに影響します。 既定値は**adAffectAll**です。 この値では使用できない、**再同期**のメソッド、**フィールド**のコレクション、**レコード**オブジェクト。  
   
  *ResyncValues*  
- 省略可。 A [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)基になる値が上書きされるかどうかを指定する値。 既定値は**adResyncAllValues**です。  
+ 任意。 A [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)基になる値が上書きされるかどうかを指定する値。 既定値は**adResyncAllValues**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="recordset"></a>レコードセット  
  使用して、**再同期**メソッド、現在のレコードを再同期を**レコード セット**基になるデータベースとします。 これは、機能は、基になるデータベースの変更を表示するか、静的または順方向専用カーソルを使用している場合に便利です。  

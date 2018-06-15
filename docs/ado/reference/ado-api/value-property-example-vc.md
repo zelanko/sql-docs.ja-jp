@@ -2,7 +2,6 @@
 title: 値のプロパティの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc0d24719a6f781e587a63d676760cd07cc3c19c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c2f818240cac81bfad9dfc26a59ed4f11935ce2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282631"
 ---
 # <a name="value-property-example-vc"></a>値プロパティの例 (vc++)
 この例で、[値](../../../ado/reference/ado-api/value-property-ado.md)を持つプロパティ[フィールド](../../../ado/reference/ado-api/field-object.md)と[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトのフィールドとプロパティの値を表示することによって、***従業員***テーブル。  

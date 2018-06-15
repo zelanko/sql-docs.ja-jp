@@ -2,7 +2,6 @@
 title: Save メソッド |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a24e0be39417235e86a86e239b8f6918fadda5dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a92e053443dbb32aae83756a98facdc53fa74725
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281441"
 ---
 # <a name="save-method"></a>Save メソッド
 保存、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)ファイルまたは[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -39,12 +39,12 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>パラメーター  
  *変換先*  
- 省略可。 A**バリアント**ファイルの完全なパス名を表す場所、 **Recordset**を保存するまたはへの参照、**ストリーム**オブジェクト。  
+ 任意。 A**バリアント**ファイルの完全なパス名を表す場所、 **Recordset**を保存するまたはへの参照、**ストリーム**オブジェクト。  
   
  *PersistFormat*  
- 省略可。 A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)する形式を指定する値、 **Recordset** (XML または adtg 形式) に保存します。 既定値は**adPersistADTG**です。  
+ 任意。 A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)する形式を指定する値、 **Recordset** (XML または adtg 形式) に保存します。 既定値は**adPersistADTG**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)メソッドは、開いているでのみ呼び出すこと**Recordset**です。 使用して、 [Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)後で復元する方法、**レコード セット**から*先*です。  
   
  場合、[フィルター プロパティ](../../../ado/reference/ado-api/filter-property.md)プロパティは、有効で、 **Recordset**フィルターでアクセス可能な行のみを保存し、します。 場合、**レコード セット**は階層構造、現在の子では、**レコード セット**とその子を保存する親を含む**レコード セット**です。 場合、子の Save メソッド**レコード セット**が呼び出されると、子とその子をすべて保存されますが、親はありません。  
