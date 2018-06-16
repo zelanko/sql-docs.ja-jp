@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Provider for Microsoft インテックス サービス |Microsoft ドキュメント
+title: Microsoft OLE DB Provider for Microsoft インデックス サービス |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -26,7 +26,7 @@ ms.lasthandoff: 06/11/2018
 ms.locfileid: "35271311"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft インデックス作成サービスの概要
-Microsoft OLE DB Provider for Microsoft インテックス サービスは、ファイル システムと Microsoft Indexing Service でインデックス付けされた Web データにプログラムでの読み取り専用アクセスを提供します。 ADO アプリケーションでは、コンテンツとファイルのプロパティ情報を取得する SQL クエリを発行できます。
+Microsoft OLE DB Provider for Microsoft インデックス サービスは、ファイル システムと Microsoft Indexing Service でインデックス付けされた Web データにプログラムでの読み取り専用アクセスを提供します。 ADO アプリケーションでは、コンテンツとファイルのプロパティ情報を取得する SQL クエリを発行できます。
 
  プロバイダーは、フリー スレッドは、UNICODE に対応します。
 
@@ -117,7 +117,7 @@ MSIDXS
 |[Update](../../../ado/reference/ado-api/update-method.md)|いいえ|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|いいえ|
 
- 特定の実装の詳細と Microsoft インテックス サービスの機能について、Microsoft OLE DB プロバイダーを参照してください、 [OLE DB プログラマ ガイド](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)、または Windows NT Server Web のサービスの Web ページを参照してくださいサイトです。
+ 特定の実装の詳細と Microsoft インデックス サービスの機能について、Microsoft OLE DB プロバイダーを参照してください、 [OLE DB プログラマ ガイド](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)、または Windows NT Server Web のサービスの Web ページを参照してくださいサイトです。
 
 ## <a name="see-also"></a>参照
  [CommandType プロパティ (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [ConnectionString プロパティ (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Provider プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)
