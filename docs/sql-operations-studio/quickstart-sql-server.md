@@ -38,12 +38,12 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
 ## <a name="connect-to-a-sql-server"></a>SQL Server に接続する
 
    
-1. 開始 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** です。
-1. 初めて実行する*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 、**接続**ダイアログ ボックスが開きます。 場合、**接続**ダイアログが開き、、**新しい接続**のアイコン、**サーバー**ページ。
+1. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** を実行します。
+1. 初めて*[!INCLUDE[name-sos](../includes/name-sos-short.md)]*を実行する場合、**接続**ダイアログ ボックスが開きます。 **接続**ダイアログが開かない場合、**サーバー**ページの**新しい接続**のアイコンをクリックしてください。
    
    ![新しい接続のアイコン](media/quickstart-sql-server/new-connection-icon.png)
 
-1. この記事では*SQL ログイン*が*Windows 認証*はサポートされています。 次のように、フィールドに入力します。
+1. この記事では*SQL ログイン*を使用しますが、*Windows 認証*はサポートされています。 次のように、フィールドに入力します。
  
     - **サーバー名:** localhost
     - **認証の種類:** SQL ログイン  
@@ -58,7 +58,7 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
 
 ## <a name="create-a-database"></a>データベースの作成
 
-次の手順がという名前のデータベースを作成する**TutorialDB**:
+次の手順で**TutorialDB**:という名前のデータベースを作成します。
 
 1. サーバーを右クリックして**localhost**を選択して**新しいクエリ。**
 1. クエリ ウィンドウに次のスニペットを貼り付けます。 
