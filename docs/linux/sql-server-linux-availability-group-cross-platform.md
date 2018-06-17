@@ -1,5 +1,5 @@
 ---
-title: Windows と Linux 上の可用性グループで常に SQL Server の構成 |Microsoft ドキュメント
+title: Windows と Linux に SQL Server Always On 可用性グループを構成する (クロス プラットフォーム) |Microsoft ドキュメント
 description: Windows と Linux 上のレプリカでは、SQL Server の可用性グループ構成します。
 author: MikeRayMSFT
 ms.author: mikeray
@@ -19,35 +19,35 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/19/2018
 ---
-# <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>構成する SQL Server Always On 可用性グループを Windows および Linux (プラットフォーム) 間に
+# <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Windows と Linux に SQL Server Always On 可用性グループを構成する (クロス プラットフォーム)
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-この記事では、Windows server 上の 1 つのレプリカと Linux サーバー上の他のレプリカで常に 可用性グループ (AG) を作成する手順について説明します。 この構成は、レプリカが異なるオペレーティング システム上にあるために、プラットフォーム間です。 この構成を使用して、もう一方の 1 つのプラットフォームまたは災害復旧 (DR) からの移行。 クロス プラットフォームの構成を管理するクラスター ソリューションがないために、この構成は高可用性をサポートしません。 
+この記事では、Windows server 上の 1 つのレプリカと Linux サーバー上の他のレプリカで Always On 可用性グループ (AG) を作成する手順について説明します。 この構成は、レプリカが異なるオペレーティング システム上にあるために、クロス プラットフォームです。 あるプラットフォームから他のプラットフォームへの移行、または災害復旧 (DR) にこの構成を使用してください。 クロス プラットフォームの構成を管理するクラスター ソリューションがないために、この構成は高可用性をサポートしません。 
 
 ![ハイブリッドなし](./media/sql-server-linux-availability-group-overview/image1.png)
 
-前に、Windows および Linux での SQL Server インスタンスのインストールと構成について熟知してください。 
+続ける前に、Windows および Linux での SQL Server インスタンスのインストールと構成について熟知してください。 
 
 ## <a name="scenario"></a>Scenario
 
-このシナリオでは、2 台のサーバーは、さまざまなオペレーティング システムではします。 という名前の Windows Server 2016`WinSQLInstance`プライマリ レプリカをホストします。 という名前の Linux サーバー`LinuxSQLInstance`セカンダリ レプリカをホストします。
+このシナリオでは、2 台のサーバーは、別々のオペレーティング システムにあります。 `WinSQLInstance` という名前の Windows Server 2016 がプライマリ レプリカをホストします。 `LinuxSQLInstance` という名前の Linux サーバーがセカンダリ レプリカをホストします。
 
 ## <a name="configure-the-ag"></a>可用性グループを構成します。 
 
 可用性グループを作成する手順は、読み取りスケール ワークロードの可用性グループを作成する手順と同じです。 AG クラスター型は、クラスター マネージャーが存在しないため、[なし] です。 
 
    >[!NOTE]
-   >この記事でスクリプトには、角かっこを山`<`と`>`環境に置き換える必要がある値を識別します。 山かっこ自体は、スクリプトの必要はありません。 
+   >この記事のスクリプトでは、環境によって置き換える必要がある値を山かっこ `<` と `>` で識別します。 山かっこ自体は、スクリプトには必要ありません。 
 
-1. Windows Server 2016 での SQL Server 2017 のインストール、Always On 可用性グループから SQL Server 構成マネージャーを有効にし、混合モード認証を設定します。 
+1. Windows Server 2016 で SQL Server 2017 のインストールし、 SQL Server 構成マネージャーから Always On 可用性グループを有効にし、混合モード認証を設定します。 
 
    >[!TIP]
-   >Azure では、このソリューションを検証している場合は、同じ可用性セットのデータ センターで分離されていることを確認するに両方のサーバーを配置します。 
+   >Azure でこのソリューションを検証している場合は、データ センターで分離されていることを確認するために両方のサーバーを同じ可用性セットに配置します。 
 
    **可用性グループを有効にします。**
 
-   手順については、次を参照してください。[を有効にすると、Always On 可用性グループ (SQL Server) を無効にする](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)です。
+   手順については、「[Always On 可用性グループを有効にする/無効にする (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)」を参照してください。
 
    ![可用性グループを有効にします。](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
 
@@ -57,17 +57,17 @@ ms.lasthandoff: 05/19/2018
 
    **混合モード認証を設定**
 
-   手順については、次を参照してください。[サーバー認証モードの変更](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure)です。
+   手順については、「[サーバー認証モードの変更](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure)」を参照してください。
 
-1. Linux 上の SQL Server 2017 年 1 をインストールします。 手順については、次を参照してください。[インストール SQL Sever](sql-server-linux-setup.md)です。 有効にする`hadr`mssql 構成を使用して
+1. Linux で SQL Server 2017 をインストールします。 手順については、「[SQL Sever のインストール](sql-server-linux-setup.md)」を参照してください。 mssql-conf を使用して `hadr` を有効にします。
 
-   有効にする`hadr`mssql conf シェル プロンプトを使用して、次のコマンドを発行します。
+   シェル プロンプトから mssql-conf を使用して `hadr` を有効にするには、次のコマンドを発行します。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
    ```
 
-   有効にした後`hadr`、SQL Server インスタンスを再起動します。  
+   `hadr` を有効にした後は、SQL Server インスタンスを再起動します。  
 
    次の図は、この手順を示します。
 
@@ -75,9 +75,9 @@ ms.lasthandoff: 05/19/2018
 
 1. 両方のサーバー上の hosts ファイルを構成するか、サーバー名を DNS に登録します。
 
-1. 開くファイアウォール ポートを TPC の 1433 and 5022 Windows と Linux の両方でします。
+1. Windows と Linux の両方で TPC 1433 と 5022 のファイアウォール ポートを開きます。
 
-1. プライマリ レプリカ上でデータベース ログインおよびパスワードを作成します。
+1. プライマリ レプリカで、データベース ログインおよびパスワードを作成します。
 
    ```sql
    CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/19/2018
    GO
    ```
 
-1. プライマリ レプリカでのマスター _ キーと証明書を作成し、秘密キーを持つ証明書をバックアップします。
+1. プライマリ レプリカで、マスター キーと証明書を作成し、秘密キーを持つ証明書をバックアップします。
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -99,23 +99,23 @@ ms.lasthandoff: 05/19/2018
    GO
    ```
 
-1. Linux サーバー (セカンダリ レプリカ) で、証明書と秘密キーをコピー`/var/opt/mssql/data`です。 使用することができます`pscp`Linux サーバーにファイルをコピーします。 
+1. 証明書と秘密キーを Linux サーバー (セカンダリ レプリカ) の `/var/opt/mssql/data` にコピーします。 Linux サーバーにファイルをコピーするには `pscp` を使用することができます。 
 
-1. グループと、秘密キーと証明書の所有権を設定`mssql:mssql`です。
+1. 秘密キーと証明書グループと所有権を `mssql:mssql` に設定します。
 
-   次のスクリプトは、グループとファイルの所有権を設定します。 
+   次のスクリプトは、ファイルのグループと所有権を設定します。 
 
    ```bash
    sudo chown mssql:mssql /var/opt/mssql/data/dbm_certificate.pvk
    sudo chown mssql:mssql /var/opt/mssql/data/dbm_certificate.cer
    ```
 
-   次の図で所有権とグループが正しく設定の証明書とキー。
+   次の図では所有権とグループが証明書とキーに正しく設定されています。
 
    ![可用性グループの Linux を有効にします。](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
-1. セカンダリ レプリカ上でデータベース ログインとパスワードを作成し、マスター _ キーを作成します。
+1. セカンダリ レプリカで、データベース ログインとパスワードを作成し、マスター キーを作成します。
 
    ```sql
    CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -125,7 +125,7 @@ ms.lasthandoff: 05/19/2018
    GO
    ```
 
-1. セカンダリ レプリカにコピーした証明書を復元`/var/opt/mssql/data`です。 
+1. セカンダリ レプリカで、`/var/opt/mssql/data` にコピーした証明書を復元します。 
 
    ```sql
    CREATE CERTIFICATE dbm_certificate   
@@ -138,7 +138,7 @@ ms.lasthandoff: 05/19/2018
    GO
    ```
 
-1. プライマリ レプリカでは、エンドポイントを作成します。
+1. プライマリ レプリカで、エンドポイントを作成します。
 
    ```sql
    CREATE ENDPOINT [Hadr_endpoint]
@@ -156,22 +156,22 @@ ms.lasthandoff: 05/19/2018
    >[!IMPORTANT]
    >ファイアウォールは、リスナーの TCP ポートを開く必要があります。 前のスクリプトでは、ポートは 5022 です。 使用可能な TCP ポートを使用します。 
 
-1. セカンダリ レプリカの場合、エンドポイントを作成します。 エンドポイントの作成にセカンダリ レプリカでは、前述のスクリプトを繰り返します。 
+1. セカンダリ レプリカで、エンドポイントを作成します。 エンドポイントの作成にセカンダリ レプリカでは、前述のスクリプトを繰り返します。 
 
-1. プライマリ レプリカの場合で、可用性グループを作成`CLUSTER_TYPE = NONE`です。 スクリプトの例を使用して`SEEDING_MODE = AUTOMATIC`を可用性グループを作成します。 
+1. プライマリ レプリカで、`CLUSTER_TYPE = NONE` で可用性グループを作成します。 スクリプトの例では `SEEDING_MODE = AUTOMATIC` を使用して可用性グループを作成します。 
 
    >[!NOTE]
-   >SQL Server の Windows インスタンスがデータ ファイルとログ ファイル、自動、セカンダリ レプリカでこれらのパスが存在しないために、SQL Server の Linux インスタンスには失敗をシード処理のさまざまなパスを使用する場合。 クロス プラットフォームの可用性グループの次のスクリプトを使用するには、データベース、Windows server 上のデータとログ ファイルの同じパスする必要があります。 設定するスクリプトを更新するまたは`SEEDING_MODE = MANUAL`とし、バックアップし、復元を使用してデータベース`NORECOVERY`データベースのシードにします。 
+   >SQL Server の Windows インスタンスがデータ ファイルとログ ファイルとで別々のパスを使用する場合、自動シード処理は、セカンダリ レプリカでこれらのパスが存在しないために、SQL Server の Linux インスタンスで失敗します。 クロス プラットフォームの可用性グループで次のスクリプトを使用するには、データベースは、Windows server 上のデータとログ ファイルが同じパスである必要があります。 または、スクリプトを更新して、 `SEEDING_MODE = MANUAL` と設定し、 `NORECOVERY` を使用してデータベースバックアップし、復元して、データベースをシードすることもできます。 
    >
    >この動作は、Azure Marketplace イメージに適用されます。 
    >
-   >自動シード処理の詳細については、次を参照してください。[自動シードの処理 - ディスク レイアウト](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout)です。 
+   >自動シード処理の詳細については、「[自動シードの処理 - ディスク レイアウト](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout)」を参照してください。 
 
-   スクリプトを実行する前に、Ag の値を更新します。
+   スクリプトを実行する前に、可用性グループ (AG) の値を更新します。
 
-      * 置き換える`<WinSQLInstance>`プライマリ レプリカの SQL Server インスタンスのサーバーの名前に置き換えます。
+      * `<WinSQLInstance>` をプライマリ レプリカの SQL Server インスタンスのサーバーの名前に置き換えます。
 
-      * 置き換える`<LinuxSQLInstance>`セカンダリ レプリカの SQL Server インスタンスのサーバーの名前に置き換えます。 
+      * `<LinuxSQLInstance>` をセカンダリ レプリカの SQL Server インスタンスのサーバーの名前に置き換えます。 
 
    可用性グループを作成するには、値を更新し、プライマリ レプリカでスクリプトを実行します。  
 
@@ -198,9 +198,9 @@ ms.lasthandoff: 05/19/2018
    GO
    ```
    
-   詳細については、次を参照してください。 [CREATE AVAILABILITY GROUP (TRANSACT-SQL)](../t-sql/statements/create-availability-group-transact-sql.md)です。
+   詳細については、「[CREATE AVAILABILITY GROUP (TRANSACT-SQL)](../t-sql/statements/create-availability-group-transact-sql.md)」を参照してください。 
 
-1. セカンダリ レプリカの場合、可用性グループに参加します。
+1. セカンダリ レプリカで、可用性グループに参加します。
 
    ```sql
    ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE)
@@ -208,13 +208,13 @@ ms.lasthandoff: 05/19/2018
    GO
    ```
 
-1. 可用性グループのデータベースを作成します。 手順の例は、という名前のデータベースを使用して`<TestDB>`です。 自動シード処理を使用している場合は、データとログ ファイルの両方に同じパスを設定します。 
+1. 可用性グループのデータベースを作成します。 手順の例では、 `<TestDB>` という名前のデータベースを使用しています。 自動シード処理を使用している場合は、データとログ ファイルの両方に同じパスを設定します。 
 
    スクリプトを実行する前に、データベースの値を更新します。
 
-      * 置き換える`<TestDB>`データベースの名前に置き換えます。
+      * `<TestDB>` をデータベースの名前に置き換えます。
 
-      * 置き換える`<F:\Path>`データベースおよびログ ファイルのパスでします。 データベースとログ ファイルの同一のパスを使用します。 
+      * `<F:\Path>` をデータベースおよびログ ファイルのパスに置き換えます。 データベースとログ ファイルには同一のパスを使用します。 
 
       既定のパスを使用することもできます。 
 
@@ -228,11 +228,11 @@ ms.lasthandoff: 05/19/2018
    GO
    ```
 
-1. 完全なは、データベースのバックアップを作成します。 
+1. データベースの完全なバックアップを作成します。 
 
-1. 自動シード処理を使用しない場合は、セカンダリ レプリカ (Linux) サーバー上のデータベースを復元します。 [Windows からのバックアップと復元を使用して Linux に SQL Server データベースを移行](sql-server-linux-migrate-restore-database.md)です。 データベースを復元`WITH NORECOVERY`セカンダリ レプリカにします。 
+1. 自動シード処理を使用しない場合は、セカンダリ レプリカ (Linux) サーバー上のデータベースを復元します。 「[Windows からのバックアップと復元を使用して Linux に SQL Server データベースを移行](sql-server-linux-migrate-restore-database.md)」を参照してください。 セカンダリ レプリカで `WITH NORECOVERY` でデータベースを復元します。 
 
-1. データベースを可用性グループに追加します。 スクリプトの例を更新します。 置き換える`<TestDB>`データベースの名前に置き換えます。 プライマリ レプリカの場合、データベースを可用性グループに追加する SQL クエリを実行します。
+1. データベースを可用性グループに追加します。 スクリプトの例を更新します。 `<TestDB>` をデータベースの名前に置き換えます。 プライマリ レプリカで、データベースを可用性グループに追加する SQL クエリを実行します。
 
    ```sql
    ALTER AG [ag1] ADD DATABASE <TestDB>
@@ -245,7 +245,7 @@ ms.lasthandoff: 05/19/2018
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
-この記事では、移行または読み取り小数点以下桁数のワークロードをサポートするプラットフォーム間の可用性グループを作成する手順を確認します。 手動による災害復旧のために使用できます。 可用性グループをフェールオーバーする方法についても説明します。 クロス プラットフォームの可用性グループがクラスターの種類を使用して`NONE`クラスター ツール - プラットフォーム間ではないため、高可用性をサポートしません。 
+この記事では、移行または読み取り小数点以下桁数のワークロードをサポートするプラットフォーム間の可用性グループを作成する手順を確認しました。 手動による災害復旧のために使用できます。 可用性グループをフェールオーバーする方法についても説明します。 クロス プラットフォームのクラスター ツールが無いため、クロス プラットフォームの可用性グループはクラスターの種類 `NONE` を使用し、高可用性をサポートしません。 
 
 ## <a name="next-steps"></a>次の手順
 
