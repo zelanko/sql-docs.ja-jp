@@ -5,18 +5,18 @@ author: MightyPen
 ms.date: 04/16/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: connect
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.openlocfilehash: f281fff6085048bb5918901a9e12af702b71b3e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfb1ac82894ef8fed001077d54665c9f89239787
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306221"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>クライアントの Microsoft SQL Server へのプログラミングのホームページ
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 - 適切な場所、領域と特定の言語で階層的なドキュメントのサブエリアを表示します。
 
 
-#### <a name="azure-sql-database"></a>Azure SQL Database
+#### <a name="azure-sql-database"></a>Azure SQL データベース
 
 、任意の言語では、SQL Server に接続するコードは Azure SQL Database に接続するためのコードとほぼ同じです。
 
@@ -199,7 +199,7 @@ SQL Server 用の Node.js 接続ドライバーは、JavaScript で実装され�
 このセクションで、ODBC のコンテンツは、C++ から SQL Server または Azure SQL Database のいずれかへのアクセスについて説明します。 次の表には、ODBC 用の主要なドキュメントのおおよそのアウトラインが一覧表示します。
 
 
-| 領域 | サブエリア | Description |
+| 領域 | サブエリア | 説明 |
 | :--- | :------ | :---------- |
 | [C++ 用の ODBC](./odbc/index.md) | こちらのドキュメントのルートです。 |
 | [Linux Mac](./odbc/linux-mac/index.md) | &nbsp; | Linux または MacOS オペレーティング システム上の ODBC の使用に関する情報。 |
@@ -252,7 +252,7 @@ Python を使用して、SQL Server と対話することができます。
 
 #### <a name="documentation"></a>ドキュメント
 
-| 領域 | Description |
+| 領域 | 説明 |
 | :--- | :---------- |
 | [SQL Server への Python](./python/index.md) | こちらのドキュメントのルートです。 |
 | [pymssql ドライバー](./python/pymssql/index.md) | Microsoft の管理やしません pymssql ドライバーをテストします。<br /><br />Pymssql 接続ドライバーは、Python のプログラムで使用するための SQL データベースに単純なインターフェイスです。 Pymssql は、Microsoft SQL Server に Python DB API (PEP 249) インターフェイスを提供する、FreeTDS 上に構築します。 |
