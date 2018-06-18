@@ -34,7 +34,7 @@ ms.locfileid: "33053149"
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  型の一意の値を作成 **uniqueidentifier**です。  
+  **uniqueidentifier** 型の一意の値を作成します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -124,13 +124,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [NEWSEQUENTIALID (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/newsequentialid-transact-sql.md)   
+ [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [一意識別子 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
+ [一意識別子 &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
  [シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   
