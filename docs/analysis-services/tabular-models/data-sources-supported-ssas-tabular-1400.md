@@ -64,7 +64,7 @@ Azure Analysis Services では、次を参照してください。 [Azure Analys
 |データベース  |
 |---------|---------|---------|
 |Access データベース     | 
-|SQL Server Analysis Services (SQL Server Analysis Services)     | 
+|SQL Server Analysis Services     | 
 |IBM Informix (ベータ版) | 
 |JSON ドキュメント     | 
 |バイナリからの行     | 
@@ -87,7 +87,7 @@ Azure Analysis Services では、次を参照してください。 [Azure Analys
 |オンライン サービス  |  
 |---------|---------|
 |Dynamics 365      |
-|オンラインのやり取り     |
+|Exchange Online     |
 |Saleforce オブジェクト    | 
 |Salesforce レポート     |
 |SharePoint Online リスト     |
@@ -96,7 +96,7 @@ Azure Analysis Services では、次を参照してください。 [Azure Analys
 |その他  |  
 |---------|---------|
 |Active Directory      | 
-|やり取り     |  
+|Exchange     |  
 |OData フィード     | 
 |ODBC クエリ     | 
 |OLE DB (OLE DB)  | 
