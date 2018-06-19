@@ -28,19 +28,19 @@ Python SQL ドライバーが既定では SQL Server と Azure SQL データベ�
   
 ## <a name="windows"></a>Windows  
   
-1. **Python ランタイムをインストールおよびパッケージ マネージャーの pip**  
-A. 移動して[python.org](https://www.python.org/downloads/)  
+1. **Python ランタイムおよび pip パッケージ マネージャーをインストール**  
+A. [python.org](https://www.python.org/downloads/) へ移動します。  
 B. Windows インストーラー msi の適切なリンクをクリックします。   
-c. 1 回ダウンロードした実行 Python ランタイムをインストールする msi  
+c. ダウンロードしたら msi を実行して Python ランタイムをインストールします。  
   
-2. **Pymssql モジュールをダウンロード**から[ここ](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
+2. [こちら](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql) から **Pymssql モジュールをダウンロード**  
   
-    正しい whl ファイルを選択することを確認してください。  例: 64 ビット コンピューターで Python 2.7 を使用している場合は選択: pymssql‑2.1.1‑cp27‑none‑win_amd64.whl です。 ダウンロードしたら、.whl ファイルの配置、c:/Python27 フォルダーです。  
+    正しい whl ファイルを選択していることを確認してください。  例: 64 ビット コンピューターで Python 2.7 を使用している場合は、pymssql‑2.1.1‑cp27‑none‑win_amd64.whl を選択します。 .whl ファイルをダウンロードしたら、の配置、C:/Python27 フォルダーに配置します。  
       
 3. **Cmd.exe を開きます**  
   
 4. **Pymssql モジュールをインストールします。**     
-    たとえば、64 ビット コンピューターで Python 2.7 を使用するいるとします。  
+    たとえば、64 ビット コンピューターで Python 2.7 を使用しているとします。  
 ```  
 > cd c:\Python27  
 > pip install pymssql‑2.1.1‑cp27‑none‑win_amd64.whl  
@@ -65,8 +65,8 @@ c. 1 回ダウンロードした実行 Python ランタイムをインストー�
   
 ## <a name="mac"></a>Mac  
   
-1. **Python ランタイムをインストールおよびパッケージ マネージャーの pip**  
-A. 移動して[python.org](https://www.python.org/downloads/)  
+1. **Python ランタイムおよび pip パッケージ マネージャーをインストール**  
+A. [python.org](https://www.python.org/downloads/) へ移動します。  
 B. Mac インストーラー パッケージの適切なリンクをクリックします。   
 c. 1 回ダウンロードした実行 Python ランタイムをインストールするパッケージ  
   
