@@ -57,7 +57,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|統計の部分的なプラン表示 XML です。 Null 値を許容します。|
 
 ## <a name="remarks"></a>解説
-このシステム関数では、以降で利用可能な[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1。
+このシステム関数は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降で利用可能です。
 
 このシステム関数が両方動作**標準**と**軽量**インフラストラクチャをプロファイリング実行の統計をクエリします。  
   
@@ -68,7 +68,7 @@ sys.dm_exec_query_statistics_xml(session_id)
   
 **ライトウェイト**インフラストラクチャをプロファイル統計情報がで使用できる[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2 および[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]有効にすることができます。
   -  グローバル トレースを使用して、7412 フラグを設定します。
-  -  使用して、 [ *query_thread_profile* ](http://support.microsoft.com/kb/3170113)拡張イベント。
+  -  [ *query_thread_profile* ](http://support.microsoft.com/kb/3170113)拡張イベント を使用します。
   
 > [!NOTE]
 > トレース フラグ 7412 で有効にすると、軽量なプロファイルが有効になります、DMV などの標準的なプロファイルではなくインフラストラクチャのプロファイルのクエリ実行統計の任意のコンシューマー [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)です。
@@ -83,14 +83,14 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. 実行中のバッチのライブ クエリ プランと実行の統計情報を見る  
- 次の例のクエリ**sys.dm_exec_requests**興味深いクエリとコピーを検索するその`session_id`出力からします。  
+ 次の例では、**sys.dm_exec_requests** を照会して興味深いクエリを検索し、出力からその `session_id` をコピーします。
   
 ```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- 次に、ライブ クエリ プランと実行の統計情報を取得するを使用して、先ほどコピーした`session_id`をシステム関数**sys.dm_exec_query_statistics_xml**です。  
+ 次に、システム関数 **sys.dm_exec_query_statistics_xml** でコピーした`session_id` を使って、ライブ クエリ プランと実行の統計情報を取得します。
   
 ```sql  
 --Run this in a different session than the session in which your query is running.
