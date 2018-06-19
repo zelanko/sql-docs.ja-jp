@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -29,11 +28,12 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f83f7de764d9f939b06611a38140941ca6c47e8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c58e7f7d60e0e49422abc8192f7d90a33a394c6
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35313141"
 ---
 # <a name="working-with-variables-programmatically"></a>プログラムでの変数の使用
   変数を使用すると、値を動的に設定し、パッケージ、コンテナー、タスク、およびイベント ハンドラーの処理を制御できます。 また、優先順位制約で変数を使用して、別のタスクへのデータ フローの方向を制御することもできます。 変数には、以下のようにさまざまな使用方法があります。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
  これに対し、タスクに含まれる変数のスコープおよび可視性は制限されているため、そのタスクのみで使用できます。  
   
- パッケージが他のパッケージを実行する場合、呼び出し元のスコープで定義された変数は、呼び出し先のパッケージで使用できます。 ただし、呼び出し先のパッケージに同じ名前の変数が存在する場合だけは例外です。 この衝突が発生すると、呼び出し先の変数値が呼び出し元のパッケージの値より優先されます。 呼び出し先のパッケージのスコープで定義された変数は、呼び出し元のパッケージでは使用できません。  
+ パッケージが他のパッケージを実行する場合、呼び出し元のスコープで定義された変数は、呼び出し先のパッケージで使用できます。 ただし、呼び出し先のパッケージに同じ名前の変数が存在する場合だけは例外です。 この衝突が発生すると、呼び出し先の変数値が呼び出し元のパッケージの値をオーバーライドします。 呼び出し先のパッケージのスコープで定義された変数は、呼び出し元のパッケージでは使用できません。  
   
  次のコード例では、プログラムによって、変数 `myCustomVar` をパッケージのスコープで作成し、パッケージで使用できるすべての変数を反復処理し、変数の名前、データ型、および値を出力します。  
   

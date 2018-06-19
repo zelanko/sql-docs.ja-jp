@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -17,11 +16,12 @@ caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 969c505870bf0354f9b183d940643c641453946f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 39057237b4b62248cb3af260d0b4bb2cee1dff15
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322711"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 予約の構文 (SSRS 構成マネージャー)
   このトピックでは、レポート サーバー Web サービスとレポート マネージャーの URL 文字列の各部分について説明します。 内部的に格納される URL 文字列の構造は、ブラウザー ウィンドウのアドレス バーに入力する URL の構造とは異なります。 URL 予約文字列は、URL の構成時の Reporting Services 構成ツールの [結果] ウィンドウおよび RSReportServer.config ファイルに示されます。 URL 文字列の定義方法を理解しておくと、URL 予約の問題のトラブルシューティングや、サーバーで定義されている内部 URL 予約を表示するための HTTP.SYS に対するクエリを実行する場合に役立ちます。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表では、各プロパティについて説明し、各プロパティで有効な値を示します。  
   
-|プロパティ|有効な値|Description|  
+|プロパティ|有効な値|[説明]|  
 |--------------|------------------|-----------------|  
 |scheme|http または https|非 SSL 接続と SSL 接続のプレフィックスです。|  
 |hostname|(+) 強いワイルドカード。IP アドレスの **[(すべて割り当て)]** 値に相当します。<br /><br /> (\*) 弱いワイルドカード。 **[(すべて未割り当て)]** の IP アドレスに相当します。<br /><br /> 完全修飾ドメイン名<br /><br /> コンピューター名<br /><br /> IP アドレス (IPv4)<br /><br /> IP アドレス (IPv6)|ネットワーク上のサーバーを識別します。<br /><br /> (+) 強いワイルドカードが既定値です。 HTTP.SYS は、指定されたポートと仮想ディレクトリの組み合わせのすべてのネットワーク アダプターに対するすべての要求を受け入れます。 レポート サーバーは、ポートに対するすべての要求を受け入れます。<br /><br /> (\*) 弱いワイルドカードです。 HTTP.SYS は、指定されたポートと仮想ディレクトリの組み合わせのすべてのネットワーク アダプターに対する要求のうち、他の URL 予約によって処理されないすべての要求を受け入れます。<br /><br /> コンピューター名は、ネットワーク上のコンピューターの NetBIOS 名です。<br /><br /> 完全修飾ドメイン名には、ドメイン コントローラーまたはパブリック ドメイン ネーム サーバーに登録されているドメイン アドレスとサーバー名が含まれます。<br /><br /> IP アドレス (IPv4) は、コンピューターのネットワーク アダプターの *nnn.nnn.nnn.nnn*という IPv4 形式の IP アドレスです。<br /><br /> IP アドレス (IPv6) は、コンピューターのネットワーク アダプターの \<header>:\<header>:*nnn.nnn.nnn.nnn* という IPv6 形式の IP アドレスです。|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81566c11122cd67e37e1304f1d56760fcae1ce29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f63cd49b5a78a42bdff0ef25f69ca9f55217c48
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328336"
 ---
 # <a name="ado-net-source"></a>ADO NET ソース
   ADO NET ソースは .NET プロバイダーのデータを呼び出し、そのデータをデータ フローで使用できるようにします。  
@@ -116,7 +115,7 @@ ms.lasthandoff: 05/03/2018
  **[データ アクセス モード]**  
  ソースからデータを選択する方法を指定します。  
   
-|オプション|Description|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |[テーブルまたはビュー]|[!INCLUDE[vstecado](../../includes/vstecado-md.md)] データ ソースのテーブルまたはビューからデータを取得します。|  
 |[SQL コマンド]|SQL クエリを使用して、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] データ ソースからデータを取得します。|  
@@ -186,7 +185,7 @@ ms.lasthandoff: 05/03/2018
  **列**  
  **[ADO NET 変換元エディター]** ダイアログ ボックスの **[接続マネージャー]** ページで選択した外部 (変換元) 列を表示します。  
   
- **[エラー]**  
+ **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
  **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  

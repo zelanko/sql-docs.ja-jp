@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -19,11 +18,12 @@ caps.latest.revision: 68
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6f5209c2e5017e208110886521f74cfa37ab388e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e41f40025a7ccf883f2643baf538f4f045f5b65
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322131"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Reporting Services 2016 ネイティブ モード レポート サーバーをインストールする
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="bkmk_defaultURLreservations"></a> 既定の URL 予約  
  URL 予約は、プレフィックス、ホスト名、ポート、および仮想ディレクトリで構成されます。  
   
-|要素|Description|  
+|要素|[説明]|  
 |----------|-----------------|  
 |Prefix|既定のプレフィックスは HTTP です。 以前に SSL (Secure Sockets Layer) 証明書をインストールした場合は、HTTPS プレフィックスを使用する URL 予約がセットアップで作成されます。|  
 |ホスト名|既定のホスト名は、強いワイルドカード (+) です。 これにより、コンピューターに対して解決されるあらゆるホスト名 (`http://<computername>/reportserver`、`http://localhost/reportserver`、`http://<IPAddress>/reportserver`) の指定のポートで、レポート サーバーが HTTP 要求を受け付けるように指定されます。|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -24,11 +23,12 @@ caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 88bbb9d536694df7e33ea0190c91319e4c2bbe37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29f7f6b3e0537c1c13f11389adf95c3d35736d8e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312611"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>トランスポート セキュリティ - データベース ミラーリング - AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが (同じドメインまたは信頼関係のあるドメインの) 異なるドメイン アカウントでサービスとして実行される場合、他の各サーバー インスタンス上の **master** に各アカウントのログインを作成する必要があります。また、そのログインには、エンドポイントに対する CONNECT 権限を与える必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがネットワーク サービス アカウントとして実行される場合、他の各サーバー上の **master** に各ホスト コンピューター アカウント (*DomainName***\\*** ComputerName$*) のログインを作成する必要があります。また、そのログインには、エンドポイントに対する CONNECT アクセス許可を与える必要があります。 これは、ネットワーク サービス アカウントで実行されているサーバー インスタンスではホスト コンピューターのドメイン アカウントを使用して認証を行うためです。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがネットワーク サービス アカウントとして実行される場合、他の各サーバー上の **master** に各ホスト コンピューター アカウント (*DomainName***\\***ComputerName$*) のログインを作成する必要があります。また、そのログインには、エンドポイントに対する CONNECT アクセス許可を与える必要があります。 これは、ネットワーク サービス アカウントで実行されているサーバー インスタンスではホスト コンピューターのドメイン アカウントを使用して認証を行うためです。  
   
 > [!NOTE]  
 >  Windows 認証を使用したデータベース ミラーリング セッションの設定例については、「[Windows 認証を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)」を参照してください。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
  必要に応じて、エンドポイントで使用可能な暗号化アルゴリズムを管理できます。それには、CREATE ENDPOINT ステートメントまたは ALTER ENDPOINT ステートメントの ALGORITHM オプションに、次のいずれかの値を指定します。  
   
-|ALGORITHM の値|Description|  
+|ALGORITHM の値|[説明]|  
 |---------------------|-----------------|  
 |RC4|エンドポイントで RC4 アルゴリズムを使用する必要があることを指定します。 これは既定値です。<br /><br /> **\*\* 警告 \*\*** RC4 アルゴリズムは推奨されません。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。|  
 |AES|エンドポイントで AES アルゴリズムを使用する必要があることを指定します。|  

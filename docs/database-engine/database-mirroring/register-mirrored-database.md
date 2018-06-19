@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5191250a1113be8bd5a613325aaceb31b176abce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b61c469ddf764ab2db6d7c56a23d0d87ef7a563
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312241"
 ---
 # <a name="register-mirrored-database"></a>[ミラー化されたデータベースの登録]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  このグリッドには次の列が含まれています。  
   
-|列名|Description|  
+|列名|[説明]|  
 |-----------------|-----------------|  
 |**[登録]**|登録する各データベースのチェック ボックスをオンにします。 現在監視されているデータベースのチェック ボックスはオンに設定され、変更することはできません。<br /><br /> 注: データベースの登録を解除するには、 **[ミラー化されたデータベースの登録]** ダイアログ ボックスを閉じ、ナビゲーション ツリーでデータベースを選択して、 **[アクション]** メニューから **[登録解除]** を選択します。|  
 |**[データベース]**|選択されたサーバー インスタンスでミラー化されたデータベースの名前です。|  

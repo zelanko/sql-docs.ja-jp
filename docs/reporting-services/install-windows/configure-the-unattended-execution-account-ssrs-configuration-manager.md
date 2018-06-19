@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -23,11 +22,12 @@ caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bd14da5773cc565f0e239bda39a487762304061e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ef1a8333438f6f3cec913841ef551d68c05e52a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322251"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>自動実行アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、自動レポート処理とネットワークを介した接続要求の送信に使用される特別なアカウントが用意されています。 アカウントは次の場合に使用します。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  レポート サーバーにデータまたはサービスを提供するコンピューターおよびサーバーに対してアクセス権を持つ、ドメイン アカウントを作成または選択します。 少ない権限を持つアカウントを使用することをお勧めします (たとえば、読み取り専用権限)。  
   
-2.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックし、 **「cmd」**と入力して **[OK]** をクリックして、コマンド プロンプトを開きます。  
+2.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックし、 **「cmd」** と入力して **[OK]** をクリックして、コマンド プロンプトを開きます。  
   
 3.  次のコマンドを入力して、ローカル レポート サーバー インスタンス上でアカウントを構成します。  
   

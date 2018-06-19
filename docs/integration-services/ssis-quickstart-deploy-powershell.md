@@ -1,23 +1,21 @@
 ---
 title: PowerShell を使用して SSIS プロジェクトを配置する | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f245553e318ccdba4f8f5d212e5c4c92ec5564ca
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: eaa4be65ce76caaf8a772ff15805a1b8976068fc
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455125"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329196"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>PowerShell を使用して SSIS プロジェクトを配置する
 このクイックスタートでは、PowerShell スクリプトを使用してデータベース サーバーに接続し、SSIS プロジェクトを SSIS カタログに配置する方法を示します。
@@ -28,20 +26,20 @@ Azure SQL Database サーバーは、ポート 1433 でリッスンします。 
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
-このクイックスタートの情報を使用して、次のプラットフォームに SSIS プロジェクトを配置することができます。
+このクイックスタートの情報を利用し、次のプラットフォームに SSIS プロジェクトをデプロイできます。
 
 -   SQL Server on Windows。
 
--   Azure SQL Database。 Azure でのパッケージの配置と実行の詳細については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
+-   Azure SQL Database。 Azure でパッケージをデプロイし、実行する方法については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
 
-SQL Server on Linux に SSIS パッケージを配置する場合は、このクイックスタートの情報を使用することはできません。 Linux でのパッケージの実行の詳細については、「[Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md)」 (SSIS で Linux 上のデータの抽出、変換、読み込みを行う) を参照してください。
+SQL Server on Linux に SSIS パッケージをデプロイする場合は、このクイックスタートの情報を使用できません。 Linux でパッケージを実行する方法については、[SSIS を使用し、Linux でデータの抽出、変換、読み込みを行う](../linux/sql-server-linux-migrate-ssis.md)方法に関するページを参照してください。
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database の場合の接続情報の取得
 
-プロジェクトを Azure SQL Database に配置するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
+プロジェクトを Azure SQL Database にデプロイするには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [SSISDB データベース] を選びます。 
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 5. **[データベース接続文字列の表示]** をクリックします。
@@ -51,7 +49,7 @@ SQL Server on Linux に SSIS パッケージを配置する場合は、このク
 次のスクリプトの一番上で変数の適切な値を指定し、スクリプトを実行して SSIS プロジェクトを配置します。
 
 > [!NOTE]
-> 次の例では、Windows 認証を使用してオンプレミスの SQL Server に配置します。 SQL Server 認証を使用するには、`Integrated Security=SSPI;` 引数を `User ID=<user name>;Password=<password>;` に置き換えます。 Azure SQL Database サーバーに接続している場合は、Windows 認証を使用することはできません。
+> 次の例では、Windows 認証を使用してオンプレミスの SQL Server に配置します。 SQL Server 認証を使用するには、`Integrated Security=SSPI;` 引数を `User ID=<user name>;Password=<password>;` に置き換えます。 Azure SQL Database サーバーに接続する場合、Windows 認証を使用できません。
 
 ```powershell
 # Variables

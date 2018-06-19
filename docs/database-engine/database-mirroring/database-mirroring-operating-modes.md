@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11b084df985c6a81e2f5171c4bf79d34b5b27726
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26507d69e601d09b60ef8b794f755d24efceebcb
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312111"
 ---
 # <a name="database-mirroring-operating-modes"></a>データベース ミラーリングの動作モード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -251,7 +251,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="ViewWitness"></a> 安全性設定とミラーリング監視サーバーの状態の表示  
  安全性設定やデータベースのミラーリング監視サーバーの状態を表示するには、 **sys.database_mirroring** カタログ ビューを使用します。 関連する列は次のとおりです。  
   
-|要素|[列]|Description|  
+|要素|[列]|[説明]|  
 |------------|-------------|-----------------|  
 |トランザクションの安全性|**mirroring_safety_level** または **mirroring_safety_level_desc**|ミラー データベース上での更新に関するトランザクションの安全性設定。次のいずれかになります。<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= データベースがオンラインではありません。|  
 |ミラーリング監視サーバーの有無|**mirroring_witness_name**|データベース ミラーリングのミラーリング監視サーバー名または NULL。NULL はミラーリング監視サーバーが存在しないことを示します。|  

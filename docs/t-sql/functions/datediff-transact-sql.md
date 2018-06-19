@@ -36,12 +36,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5c989b3d9d2f35f4270f997b2ac169c72c402a68
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 7dfad584cfbdbf130053557edcace42579cb8470
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744041"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249935"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,15 +115,15 @@ DATEDIFF ( datepart , startdate , enddate )
 次の各ステートメントには、すべて同じ *startdate* と *enddate* の値が指定されています。 これらの日付は隣接しており、時間的な差は .0000001 秒です。 各ステートメントにおける *startdate* と *enddate* の差は、どの要素をとっても、*datepart* の 1 単位分となるように配慮されています。 いずれのステートメントも戻り値は 1 です。 *startdate* と *enddate* の年の値は異なるが、カレンダー週の値が同じである場合、`DATEDIFF` では、*datepart* **week** に対して 0 を返します。
   
 ```sql
-SELECT DATEDIFF(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(quarter, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(month, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(dayofyear, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(day, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(week, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(hour, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(minute, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(second, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(quarter,     '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(month,       '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(dayofyear,   '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(day,         '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(week,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(hour,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(minute,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
@@ -142,14 +142,13 @@ SET DATEFIRST を指定しても `DATEDIFF` に影響はありません。 `DATE
   
 ```sql
 CREATE TABLE dbo.Duration  
-    (  
-    startDate datetime2  
-    ,endDate datetime2  
-    );  
-INSERT INTO dbo.Duration(startDate,endDate)  
-    VALUES('2007-05-06 12:10:09','2007-05-07 12:10:09');  
-SELECT DATEDIFF(day,startDate,endDate) AS 'Duration'  
-FROM dbo.Duration;  
+    (startDate datetime2, endDate datetime2);  
+    
+INSERT INTO dbo.Duration(startDate, endDate)  
+    VALUES ('2007-05-06 12:10:09', '2007-05-07 12:10:09');  
+    
+SELECT DATEDIFF(day, startDate, endDate) AS 'Duration'  
+    FROM dbo.Duration;  
 -- Returns: 1  
 ```  
   
@@ -158,7 +157,7 @@ FROM dbo.Duration;
   
 ```sql
 DECLARE @startdate datetime2 = '2007-05-05 12:10:09.3312722';  
-DECLARE @enddate datetime2 = '2007-05-04 12:10:09.3312722';   
+DECLARE @enddate   datetime2 = '2007-05-04 12:10:09.3312722';   
 SELECT DATEDIFF(day, @startdate, @enddate);  
 ```  
   
@@ -175,7 +174,8 @@ SELECT DATEDIFF(millisecond, GETDATE(), SYSDATETIME());
 ```sql
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day,(SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader),  
+SELECT DATEDIFF(day,
+    (SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader),  
     (SELECT MAX(OrderDate) FROM Sales.SalesOrderHeader));  
 ```  
   
@@ -183,24 +183,25 @@ SELECT DATEDIFF(day,(SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader),
 この例では、*startdate* と *enddate* の引数として文字定数を使用しています。
   
 ```sql
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635'  
-    , '2007-05-08 09:53:01.0376635');  
+SELECT DATEDIFF(day,
+   '2007-05-07 09:53:01.0376635',
+   '2007-05-08 09:53:01.0376635');  
 ```  
   
 ### <a name="f-specifying-numeric-expressions-and-scalar-system-functions-for-enddate"></a>F. enddate に数値式およびスカラー システム関数を指定する  
-この例では、*enddate* の引数として、数値式 `(GETDATE ()+ 1)` のほか、スカラー システム関数 `GETDATE` および `SYSDATETIME` を使用しています。
+この例では、*enddate* の引数として、数値式 `(GETDATE() + 1)` のほか、スカラー システム関数 `GETDATE` および `SYSDATETIME` を使用しています。
   
 ```sql
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE()+ 1)   
+SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)   
     AS NumberOfDays  
-FROM Sales.SalesOrderHeader;  
+    FROM Sales.SalesOrderHeader;  
 GO  
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', DATEADD(day,1,SYSDATETIME())) AS NumberOfDays  
-FROM Sales.SalesOrderHeader;  
+SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', DATEADD(day, 1, SYSDATETIME())) AS NumberOfDays  
+    FROM Sales.SalesOrderHeader;  
 GO  
 ```  
   
@@ -211,8 +212,8 @@ GO
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
-    ,DATEDIFF(day,ROW_NUMBER() OVER (ORDER BY   
-        a.PostalCode),SYSDATETIME()) AS 'Row Number'  
+    ,DATEDIFF(day, ROW_NUMBER() OVER (ORDER BY   
+        a.PostalCode), SYSDATETIME()) AS 'Row Number'  
 FROM Sales.SalesPerson s   
     INNER JOIN Person.Person p   
         ON s.BusinessEntityID = p.BusinessEntityID  
@@ -228,13 +229,13 @@ WHERE TerritoryID IS NOT NULL
 ```sql
 USE AdventureWorks2012;  
 GO  
-SELECT soh.SalesOrderID, sod.ProductID, sod.OrderQty,soh.OrderDate  
-    ,DATEDIFF(day,MIN(soh.OrderDate)   
-        OVER(PARTITION BY soh.SalesOrderID),SYSDATETIME() ) AS 'Total'  
+SELECT soh.SalesOrderID, sod.ProductID, sod.OrderQty, soh.OrderDate,
+    DATEDIFF(day, MIN(soh.OrderDate)   
+        OVER(PARTITION BY soh.SalesOrderID), SYSDATETIME()) AS 'Total'  
 FROM Sales.SalesOrderDetail sod  
     INNER JOIN Sales.SalesOrderHeader soh  
         ON sod.SalesOrderID = soh.SalesOrderID  
-WHERE soh.SalesOrderID IN(43659,58918);  
+WHERE soh.SalesOrderID IN(43659, 58918);  
 GO  
 ```  
   
@@ -245,14 +246,14 @@ GO
 この例では、テーブルの 2 つの列に日付を格納し、両者の差を日単位で計算しています。
   
 ```sql
-CREATE TABLE dbo.Duration (  
-    startDate datetime2  
-    ,endDate datetime2  
-    );  
-INSERT INTO dbo.Duration(startDate,endDate)  
-    VALUES('2007-05-06 12:10:09','2007-05-07 12:10:09');  
-SELECT TOP(1) DATEDIFF(day,startDate,endDate) AS Duration  
-FROM dbo.Duration;  
+CREATE TABLE dbo.Duration 
+    (startDate datetime2, endDate datetime2);
+    
+INSERT INTO dbo.Duration (startDate, endDate)  
+    VALUES ('2007-05-06 12:10:09', '2007-05-07 12:10:09');  
+    
+SELECT TOP(1) DATEDIFF(day, startDate, endDate) AS Duration  
+    FROM dbo.Duration;  
 -- Returns: 1  
 ```  
   
@@ -262,7 +263,7 @@ FROM dbo.Duration;
 ```sql
 -- Uses AdventureWorks  
   
-SELECT TOP(1) DATEDIFF(day,(SELECT MIN(HireDate) FROM dbo.DimEmployee),  
+SELECT TOP(1) DATEDIFF(day, (SELECT MIN(HireDate) FROM dbo.DimEmployee),  
     (SELECT MAX(HireDate) FROM dbo.DimEmployee))   
 FROM dbo.DimEmployee;  
   
@@ -274,8 +275,9 @@ FROM dbo.DimEmployee;
 ```sql
 -- Uses AdventureWorks  
   
-SELECT TOP(1) DATEDIFF(day, '2007-05-07 09:53:01.0376635'  
-    , '2007-05-08 09:53:01.0376635') FROM DimCustomer;  
+SELECT TOP(1) DATEDIFF(day,
+    '2007-05-07 09:53:01.0376635',
+    '2007-05-08 09:53:01.0376635') FROM DimCustomer;  
 ```  
   
 ### <a name="l-specifying-ranking-functions-for-startdate"></a>L. startdate に順位付け関数を指定する  
@@ -284,9 +286,9 @@ SELECT TOP(1) DATEDIFF(day, '2007-05-07 09:53:01.0376635'
 ```sql
 -- Uses AdventureWorks  
   
-SELECT FirstName, LastName  
-,DATEDIFF(day,ROW_NUMBER() OVER (ORDER BY   
-        DepartmentName),SYSDATETIME()) AS RowNumber  
+SELECT FirstName, LastName,
+    DATEDIFF(day, ROW_NUMBER() OVER (ORDER BY   
+        DepartmentName), SYSDATETIME()) AS RowNumber  
 FROM dbo.DimEmployee;  
 ```  
   
@@ -296,9 +298,9 @@ FROM dbo.DimEmployee;
 ```sql
 -- Uses AdventureWorks  
   
-SELECT FirstName, LastName, DepartmentName  
-    ,DATEDIFF(year,MAX(HireDate)  
-             OVER (PARTITION BY DepartmentName),SYSDATETIME()) AS SomeValue  
+SELECT FirstName, LastName, DepartmentName,
+    DATEDIFF(year, MAX(HireDate)  
+        OVER (PARTITION BY DepartmentName), SYSDATETIME()) AS SomeValue  
 FROM dbo.DimEmployee  
 ```  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20e28e6b02aeacb4404f8d060137b1ed8d66e234
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e691d352507bddb75ba6db0986cc05a75eb6d858
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329076"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>[ウィザードの完了] (SQL Server インポートおよびエクスポート ウィザード)
 コピー操作をすぐに実行するかどうかを指定し、ウィザードによって作成されたパッケージを必要に応じて保存した後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードで **[ウィザードの完了]** が表示されます。 このページでは、ウィザードで選択した内容を確認し、 **[完了]** をクリックしてコピー操作を開始します。
