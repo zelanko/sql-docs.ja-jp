@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -22,11 +21,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cac7056cb11a4d501effb0336496e63e25969292
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0ae7336f2b957d5cd846c0b5546bdaf2e3945ce
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400816"
 ---
 # <a name="leaf-permissions-master-data-services"></a>リーフ権限 (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **Name** 属性および **Code** 属性に割り当てられる権限は適用されません。  
   
-|権限|Description|  
+|権限|[説明]|  
 |----------------|-----------------|  
 |**読み取り**|ユーザーはリーフ メンバーと属性を読み取ることができます。|  
 |**作成**|ユーザーはリーフ メンバーを作成し、作成時に属性値を割り当てることができます。|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="attribute-permissions"></a>属性の権限  
  属性の権限は、特定のエンティティの属性の値に適用されます。 属性の権限のみを持つユーザーは、メンバーを追加または削除できません。  
   
-|権限|Description|  
+|権限|[説明]|  
 |----------------|-----------------|  
 |**読み取り**|ユーザーは属性の読み取ることができます。|  
 |**作成**|ユーザーはメンバーを作成するときに値を割り当てることができます。|  

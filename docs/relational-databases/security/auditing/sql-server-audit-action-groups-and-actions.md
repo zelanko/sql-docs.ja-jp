@@ -3,12 +3,10 @@ title: SQL Server 監査のアクション グループとアクション | Micr
 ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: deef1b6db596acc7462fbd67eaae827fec759640
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11b8b1a668c5e071dbec3291337b9ef9174010f8
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698813"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 監査のアクション グループとアクション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
  サーバー レベルの監査アクション グループと、同等の SQL Server イベント クラス (存在する場合) を次の表に示します。  
   
-|アクション グループ名|Description|  
+|アクション グループ名|[説明]|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|このイベントは、アプリケーション ロールのパスワードが変更されるたびに発生します。 [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)と同じです。|  
 |AUDIT_CHANGE_GROUP|このイベントは、任意の監査が作成、変更、または削除されるたびに発生します。 このイベントは、任意の監査の仕様が作成、変更、または削除されるたびに発生します。 監査に対する変更はすべてその監査内で監査されます。 [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)と同じです。|  
@@ -132,7 +131,7 @@ ms.lasthandoff: 05/03/2018
   
  データベース レベルの監査アクション グループと、同等の SQL Server イベント クラス (存在する場合) を次の表に示します。  
   
-|アクション グループ名|Description|  
+|アクション グループ名|[説明]|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|このイベントは、アプリケーション ロールのパスワードが変更されるたびに発生します。 [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)と同じです。|  
 |AUDIT_CHANGE_GROUP|このイベントは、任意の監査が作成、変更、または削除されるたびに発生します。 このイベントは、任意の監査の仕様が作成、変更、または削除されるたびに発生します。 監査に対する変更はすべてその監査内で監査されます。 [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)と同じです。|  
@@ -162,7 +161,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="database-level-audit-actions"></a>データベース レベルの監査アクション  
  データベース レベルのアクションを使用すると、データベース、スキーマ、およびスキーマ オブジェクト (テーブル、ビュー、ストアド プロシージャ、関数、拡張ストアド プロシージャ、キュー、シノニムなど) で特定のアクションを直接監査することができます。 型、XML スキーマ コレクション、データベース、およびスキーマは監査されません。 スキーマ オブジェクトの監査をスキーマおよびデータベースに構成できます。これは、指定したスキーマまたはデータベースに含まれるすべてのスキーマ オブジェクトのイベントが監査されることを意味します。 データベース レベルの監査アクションを次の表に示します。  
   
-|操作|Description|  
+|操作|[説明]|  
 |------------|-----------------|  
 |SELECT|このイベントは、SELECT が実行されるたびに発生します。|  
 |UPDATE|このイベントは、UPDATE が実行されるたびに発生します。|  
@@ -182,7 +181,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="audit-level-audit-action-groups"></a>監査レベルの監査アクション グループ  
  監査プロセス内のアクションを監査することもできます。 この監査は、サーバー スコープで行うことも、データベース スコープで行うこともできます。 データベース スコープでは、データベース監査の仕様についてのみ監査が行われます。 監査レベルの監査アクション グループを次の表に示します。  
   
-|アクション グループ名|Description|  
+|アクション グループ名|[説明]|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|このイベントは、次のいずれかのコマンドが実行されるたびに発生します。<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   

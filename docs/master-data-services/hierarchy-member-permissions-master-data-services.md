@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e14a87d5398f3d47274708e5c411b5259314d883
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 122409bc6f4f03dff871a72f7a70aca83e557308
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402024"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限 (マスター データ サービス)
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  階層メンバーの権限は、それらを割り当てたモデル バージョンと、そのバージョンの以降のコピーに適用されます。 割り当てたバージョンよりも前のバージョンには適用されません。  
   
-|権限|Description|  
+|権限|[説明]|  
 |----------------|-----------------|  
 |**Read**|メンバーが表示されます。<br /><br /> <br /><br /> 注: **読み取り** 権限を **ルート**に割り当てた場合、 **ルート** の下のメンバーは読み取り専用になります。ただし、明示的階層およびコレクションでは、ユーザーはメンバーを **ルート** に移動したり、新しいメンバーを **ルート**に追加したりできます。|  
 |**作成**|作成権限は、階層メンバー権限では使用できません。|  

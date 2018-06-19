@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 328aa233b750404e28984dec5d93bb7070a0bcc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc7113fefba29b709ab9c0488ca6643ff6c85c28
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333856"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>ビジネス ルール条件 (マスター データ サービス)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="business-rule-conditions"></a>ビジネス ルール条件  
   
-|条件名|Description|  
+|条件名|[説明]|  
 |--------------------|-----------------|  
 |**が次の値に等しい**|選択した属性が特定の属性または属性**値に等しいか**、空白であることを示します。<br /><br /> この条件は、文字列値、数値、データ値、およびリンク値に有効です。|  
 |**が次の値に等しくない**|選択した属性が特定の属性または属性**値に等しくないか**、空白であることを示します。<br /><br /> この条件は、文字列値、数値、データ値、およびリンク値に有効です。|  

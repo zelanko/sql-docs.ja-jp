@@ -1,23 +1,21 @@
 ---
 title: SSMS で SSIS プロジェクトを配置する | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d93e2d18fa2d13106ae0add8c9be5bfe269602e3
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 5ba8568b89863edcc5cf246c1ee09efb956d6a4a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455351"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332086"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する
 このクイックスタートでは、SQL Server Management Studio (SSMS) を使用して SSIS Catalog データベースに接続し、Integration Services Deployment Wizard を実行して SSIS プロジェクトを SSIS Catalog にデプロイする方法について説明します。 
@@ -44,10 +42,10 @@ SQL Server on Linux に SSIS パッケージをデプロイする場合は、こ
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database の場合の接続情報の取得
 
-プロジェクトを Azure SQL Database に配置するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
+プロジェクトを Azure SQL Database にデプロイするには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [SSISDB データベース] を選びます。 
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
@@ -102,7 +100,7 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
     -   選択内容を変更するには、 **[戻る]** をクリックするか、左ペインでいずれかの手順をクリックします。
     -   **[配置]** をクリックして、配置プロセスを開始します。
 
-5.  Azure SQL Database にデプロイしている場合、**[検証]** ページが開き、Azure SSIS Integration Runtime で予定されているパッケージ実行を妨げる既知の問題がないか、プロジェクトのパッケージが調べられます。 詳細については、「[Azure にデプロイされた SSIS パッケージの検証](lift-shift/ssis-azure-validate-packages.md)」を参照してください。
+5.  Azure SQL Database サーバーにデプロイしている場合、**[検証]** ページが開き、Azure SSIS Integration Runtime で予定されているパッケージ実行を妨げる既知の問題がないか、プロジェクトのパッケージが調べられます。 詳細については、「[Azure にデプロイされた SSIS パッケージの検証](lift-shift/ssis-azure-validate-packages.md)」を参照してください。
 
 6.  配置プロセスが完了すると、**[結果]** ページが開きます。 このページでは、各アクションが成功したか、失敗したかを表示します。
     -   アクションが失敗した場合は、**[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。

@@ -4,20 +4,18 @@ ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f1bd8e0279da97974a4a1b420c7eea592931c6a
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: f1179443d8b86e23a51fdf2250f007914e27cf0b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455307"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335866"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>ISDeploymentWizard.exe を使用して、コマンド プロンプトから SSIS プロジェクトを配置する
 このクイック スタートでは、Integration Services 配置ウィザード `ISDeploymentWizard.exe` を実行して、コマンド プロンプトから、SSIS プロジェクトを配置する方法を示します。
@@ -45,7 +43,7 @@ SQL Server on Linux に SSIS パッケージをデプロイする場合は、こ
 プロジェクトを Azure SQL Database にデプロイするには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [SSISDB データベース] を選びます。 
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
@@ -74,7 +72,7 @@ Azure SQL Database サーバーにデプロイする場合、SQL Server 認証�
     -   完全修飾サーバー名を入力します。 対象サーバーが Azure SQL Database サーバーの場合、名前は `<server_name>.database.windows.net` 形式になります。
     -   認証情報を入力し、**[接続]** を選択します。 この記事の「[デプロイ ウィザードでの認証方法](#wizard_auth)」を参照してください。
     -   次に、**[参照]** を選択し、SSISDB でターゲット フォルダーを選択します。
-    -   **[次へ]** を選択して **[レビュー]** ページを開きます。 (**[次へ]** ボタンは **[接続]** を選択しないと有効になりません。)
+    -   **[次へ]** を選択し、**[レビュー]** ページを開きます。 (**[次へ]** ボタンは、**[接続]** を選択した後でないと有効になりません。)
 
 4.  **[レビュー]** ページで、選択した設定を確認します。
     -   選択内容を変更するには、 **[戻る]** をクリックするか、左ペインでいずれかの手順をクリックします。

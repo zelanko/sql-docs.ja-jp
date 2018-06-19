@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1a89debd1efbcb21e75e89c8d2624cd528a24dc2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2711bfe4568255d50d9438653bacb0ae7807e2c1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402064"
 ---
 # <a name="create-an-index-master-data-services"></a>インデックスを作成する (マスター データ サービス)
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  作成されたインデックスごとに、4 列の行がグリッドに追加されます。 次の表で各列について説明します。  
   
-|列名|Description|  
+|列名|[説明]|  
 |-----------------|-----------------|  
 |状態|インデックスの状態。<br /><br /> **[保存]** をクリックしたときに表示される ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン") 画像は、インデックスが更新中であることを示します。<br /><br /> インデックスの作成中または編集中にエラーが発生すると、![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") 画像が表示されます。<br /><br /> それ以外の場合は適切な状態であり、![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン") 画像が表示されます。|  
 |[オブジェクト名]|インデックス名。|  

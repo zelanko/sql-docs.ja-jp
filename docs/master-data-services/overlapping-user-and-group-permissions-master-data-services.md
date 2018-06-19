@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfb8936a923995ce9f0461b4cf3b9ff23ccdbc7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad17ce91af214b5882438dedb625a8384b7f5d94
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335016"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>ユーザー権限とグループ権限の重複 (Master Data Services)
 
@@ -38,7 +38,8 @@ ms.lasthandoff: 05/03/2018
   
  ユーザーが複数のグループのメンバーであり、それらのグループが [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]へのアクセス権を持っている場合、次の規則が適用されます。  
   
--   **拒否** が他のどの権限よりも優先されます。 あるグループでのオブジェクト権限が **拒否** の場合、適用される権限は "拒否" です。  
+-   
+  **拒否** が他のどの権限をオーバーライドします。 あるグループでのオブジェクト権限が **拒否** の場合、適用される権限は "拒否" です。  
   
 -   アクセス権限は、グループに適用されるすべての権限の組み合わせになります。 あるグループのオブジェクト権限が **作成** であり、別のグループでは **更新** である場合、適用される権限は **作成** および **更新**になります。  
   

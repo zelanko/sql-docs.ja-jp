@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e2e9851921d808339681080d5df0c9439212a3db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26ecc54177da5a224e1c26c5dcac58d4e4d4cf3e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410464"
 ---
 # <a name="create-an-entity-master-data-services"></a>エンティティを作成する (マスター データ サービス)
 
@@ -72,11 +72,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="grid-columns"></a>グリッド列  
  作成されたエンティティごとに、13 列の行がグリッドに追加されます。 その列を次に示します。  
   
-|[オブジェクト名]|Description|  
+|[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |状態|エンティティの状態。 **[保存]** をクリックすると、エンティティが更新中であることを示す次のイメージが表示されます。<br /><br /> ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン")<br /><br /> エンティティの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン")|  
 |[オブジェクト名]|エンティティ名。|  
-|Description|エンティティの説明。|  
+|[説明]|エンティティの説明。|  
 |ステージング テーブル|データを格納するために使用されるテーブルのプレフィックス名。|  
 |[トランザクション ログの種類]|エンティティのトランザクション ログの種類。|  
 |コードの自動作成|コードの自動作成が有効かどうかを示します。|  

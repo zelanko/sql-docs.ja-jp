@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a39dde8a14012d76281f83ed6e43df89b518d4fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 070e364b45ca7dceaf5fff6cff1b29189ef26ab8
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334756"
 ---
 # <a name="select-variables-page"></a>[変数の選択] ページ
   **[変数の選択]** ダイアログ ボックスを使用すると、スクリプト タスクまたはスクリプト コンポーネントを構成するときに、 **ReadOnlyVariables** プロパティおよび **ReadWriteVariables** プロパティで 1 つ以上の変数を選択できます。  

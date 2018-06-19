@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 688dd10c3aa1ad8b985aa3b140bc81115310cb5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6d60fcbff7a6878b757997b2ddec8ae16066b92
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403234"
 ---
 # <a name="character-map-transformation"></a>文字マップ変換
   文字マップ変換は、小文字から大文字への変換関数などの文字列関数を、文字データに適用します。 この変換は、文字列データ型の列データにのみ実行されます。  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="mapping-operations"></a>マップ操作  
  次の表では、文字マップ変換がサポートするマップ操作について説明します。  
   
-|操作|Description|  
+|演算|[説明]|  
 |---------------|-----------------|  
 |バイトの反転|バイト順を反転します。|  
 |全角|半角文字を全角文字にマップします。|  
@@ -101,7 +100,7 @@ ms.lasthandoff: 05/03/2018
  **変換先**  
  文字列処理の結果を、既定の列を使用して所定の場所に保存するか、変更されたデータを新しい列として保存するかを指定します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |[新しい列]|データを新しい列に保存します。 **[出力の別名]** で、列名を割り当てます。|  
 |[埋め込み先変更]|変更されたデータを既存の列に保存します。|  
@@ -109,7 +108,7 @@ ms.lasthandoff: 05/03/2018
  **操作**  
  列のデータに適用する文字列関数を一覧から選択します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |小文字|小文字に変換します。|  
 |大文字|大文字に変換します。|  

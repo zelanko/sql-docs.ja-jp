@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02790fb579d3b899444834eee526da8fc852d569
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca90530dbce46d98f3fbaa9faeaa744426e4843f
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333436"
 ---
 # <a name="precedence-constraints"></a>優先順位制約
   優先順位制約は、パッケージ内の実行可能ファイル、コンテナー、およびタスクをリンクして制御フローを作成し、実行可能ファイルを実行するかどうかを決定する条件を指定します。 実行可能ファイルには、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナー、タスク、またはイベント ハンドラーを設定できます。 また、イベント ハンドラーは優先順位制約を使用して実行可能ファイルをリンクし、制御フローを作成します。  
@@ -117,7 +116,7 @@ ms.lasthandoff: 05/03/2018
  **[評価操作]**  
  優先順位制約で使用する評価操作を指定します。 操作として、 **[制約]**、 **[式]**、 **[式と制約]**、および **[式または制約]** を指定できます。  
   
- **[値]**  
+ **Value**  
  制約値として、 **[成功]**、 **[失敗]**、または **[完了]** を指定します。  
   
 > [!NOTE]  
@@ -153,7 +152,7 @@ ms.lasthandoff: 05/03/2018
   
     |読み取り/書き込みプロパティ|構成アクション|  
     |--------------------------|--------------------------|  
-    |Description|説明を指定します。|  
+    |[説明]|説明を指定します。|  
     |EvalOp|評価操作を選択します。 **Expression**、 **ExpressionAndConstant**、 **ExpressionOrConstant** のいずれかの操作を選択した場合は、式を指定することができます。|  
     |[式]|評価操作に and 式が含まれる場合は、式を指定します。 式はブール値に評価される必要があります。 式言語の詳細については、「[Integration Services &#40;SSIS&#41; 式](../../integration-services/expressions/integration-services-ssis-expressions.md)」をご覧ください。|  
     |LogicalAnd|**[論理 AND]** を設定し、複数の実行可能ファイルを先に実行して制約付き実行可能ファイルにリンクする場合、優先順位制約を他の優先順位制約と組み合わせて評価するかどうかを指定します。|  
