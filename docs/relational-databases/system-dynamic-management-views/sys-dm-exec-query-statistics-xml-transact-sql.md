@@ -83,7 +83,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. 実行中のバッチのライブ クエリ プランと実行の統計情報を見る  
- 次の例のクエリ **sys.dm_exec_requests** は興味深いクエリを検索し、出力からその `session_id` をコピーします。
+ 次の例では、**sys.dm_exec_requests** を照会して興味深いクエリを検索し、出力からその `session_id` をコピーします。
   
 ```sql  
 SELECT * FROM sys.dm_exec_requests;  
