@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f9272ce373bbd59b76104b4437f55a98ec89d429
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbf2fd8e1f09e2cab3284b9348971cf6d99cfef4
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402094"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する
   よく使用される制御フロー タスクまたはコンテナーをスタンドアロン パーツ ファイル (".dtsxp"ファイル) に保存し、それを、制御フロー パッケージ パーツを使用して 1 つまたは複数のパッケージで複数回、再利用します。 この再利用性により SSIS パッケージの設計および管理が容易になります。  
@@ -81,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   
  ![既存テンプレートのコピーの追加ダイアログ ボックス](../integration-services/media/control-flow-templates-add-copy-dialog.png "既存テンプレートのコピーの追加ダイアログ ボックス")  
   
- **および**  
+ **[オプション]**  
   
  **パッケージ パーツのパス**  
  パーツ ファイルのパスを入力するか、参照ボタン (…) をクリックして、コピーまたは参照するパーツ ファイル指定します。  
@@ -109,7 +108,7 @@ ms.lasthandoff: 05/03/2018
   
 -   オフにすると、パーツ インスタンスのプロパティは構成されません。 パーツ インスタンスではプロパティの既定値を使用します。既定値は制御フロー パッケージ パーツで定義されています。  
   
--   オンにすると、入力または選択した値が既定値より優先されます。  
+-   オンにすると、入力または選択した値が既定値をオーバーライドします。  
   
  右側のウィンドウのテーブルに構成対象のプロパティが一覧表示されます。  
   
@@ -117,7 +116,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **[プロパティの型]**。 プロパティのデータ型。  
   
--   **値**。 構成された値です。 この値は既定値より優先されます。  
+-   **値**。 構成された値です。 この値は既定値をオーバーライドします。  
   
 ### <a name="connection-managers-tab"></a>[接続マネージャー] タブ  
  パーツ インスタンス用の接続マネージャーのプロパティを指定するには、 **[パッケージ パーツの構成]** ダイアログ ボックスの **[接続マネージャー]**  タブを使用します。  
@@ -132,7 +131,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **[プロパティ名]** プロパティの名前。  
   
--   **値**。 構成された値です。 この値は既定値より優先されます。  
+-   **値**。 構成された値です。 この値は既定値をオーバーライドします。  
   
 ## <a name="delete-a-control-flow-part"></a>制御フロー パーツを削除する  
  パーツを削除するには、ソリューション エクスプローラーで、対象のパーツを右クリックし、 **[削除]** をクリックします。 削除を確認するには **[OK]** を、パーツを削除しないで残すには **[キャンセル]** を選択します。  

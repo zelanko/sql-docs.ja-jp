@@ -21,7 +21,7 @@
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
 <!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
-# インストール 
+# Install 
 
 ## [データベース内分析](install/sql-machine-learning-services-windows-install.md)
 ## [スタンドアロン サーバー](install/sql-machine-learning-standalone-windows-install.md)
@@ -69,13 +69,13 @@
 #### [ローカル計算コンテキストでデータを分析する](tutorials/deepdive-analyze-data-in-local-compute-context.md)
 #### [SQL Server と XDF ファイル間のデータの移動](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 #### [簡単なシミュレーションを作成する](tutorials/deepdive-create-a-simple-simulation.md)
-### [ストアド プロシージャおよび関数に埋め込まれた R](tutorials/sqldev-in-database-r-for-sql-developers.md)
-#### [1 - データとスクリプトを取得します。](tutorials/sqldev-download-the-sample-data.md)
-#### [2 - 環境を設定します。](r/sqldev-import-data-to-sql-server-using-powershell.md)
-#### [3 - ストアド プロシージャで R を使用してデータを視覚化します。](tutorials/sqldev-explore-and-visualize-the-data.md)
-#### [4-T-SQL 関数で R を使用してデータの機能を作成します。](tutorials/sqldev-create-data-features-using-t-sql.md)
-#### [5-トレーニングおよび SQL への保存](r/sqldev-train-and-save-a-model-using-t-sql.md)
-#### [6 - 結果を予測します。](tutorials/sqldev-operationalize-the-model.md)
+### [ストアド プロシージャと関数の埋め込み R](tutorials/sqldev-in-database-r-for-sql-developers.md)
+#### [1 - データとスクリプトの取得](tutorials/sqldev-download-the-sample-data.md)
+#### [2 - 環境の設定](r/sqldev-import-data-to-sql-server-using-powershell.md)
+#### [3 - ストアド プロシージャで R を使用したデータの視覚化](tutorials/sqldev-explore-and-visualize-the-data.md)
+#### [4 - T-SQL 関数で R を使用したデータ機能の作成](tutorials/sqldev-create-data-features-using-t-sql.md)
+#### [5 - トレーニングと SQL への保存](r/sqldev-train-and-save-a-model-using-t-sql.md)
+#### [6 - 結果の予測](tutorials/sqldev-operationalize-the-model.md)
 
 ## [Python](tutorials/sql-server-python-tutorials.md)
 ### [Python: T-SQL を使用して Python を実行する](tutorials/run-python-using-t-sql.md)
@@ -104,7 +104,7 @@
 #### [RevoScaleR の使用](r/use-revoscaler-to-manage-r-packages.md)
 ##### [リモートの R パッケージ管理を有効にする](r/r-package-how-to-enable-or-disable.md)
 ##### [R パッケージの同期](r/package-install-uninstall-and-sync.md)
-#### [MiniCRAN リポジトリを作成します。](r/create-a-local-package-repository-using-minicran.md)
+#### [miniCRAN リポジトリの作成](r/create-a-local-package-repository-using-minicran.md)
 #### [R パッケージを使用するためのヒント](r/packages-installed-in-user-libraries.md)
 
 ## データ探索と予測モデリング
@@ -134,7 +134,7 @@
 ### [SQL Server Machine Learning Services のユーザー アカウント プールを変更する](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 ### [データベース ユーザーとしての SQLRUserGroup の追加](r/add-sqlrusergroup-to-database.md)
 ### [Web サービスを使用したモデルのデプロイと使用](operationalization-with-mrsdeploy.md)
-### [管理と監視ソリューション](r/managing-and-monitoring-r-solutions.md
+### [ソリューションの管理および監視](r/managing-and-monitoring-r-solutions.md)
 ### [Machine Learning Services のリソース管理](r/resource-governance-for-r-services.md)
 ### [Machine Learning 用のリソース プールの作成](r/how-to-create-a-resource-pool-for-r.md)
 ### [Machine Learning Services の拡張イベント](r/extended-events-for-sql-server-r-services.md)
@@ -160,7 +160,7 @@
 ## [トラブルシューティング](machine-learning-troubleshooting-faq.md)
 ### [データ コレクション](data-collection-ml-troubleshooting-process.md)
 ### [インストールとアップグレードのエラー](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [スタート パッドや外部のスクリプトの実行エラー](common-issues-external-script-execution.md)
+### [スタート パッドや外部スクリプトの実行エラー](common-issues-external-script-execution.md)
 ### [R スクリプトのエラー](r-script-execution-errors.md)
 
 ## ブログ
@@ -170,4 +170,4 @@
 
 ## フォーラム
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [機械学習のサーバー](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
@@ -16,11 +14,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd409daab0e317cff3ad474bda2963115caa1c60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f39b2ff34a821b00e8dd9cc2d003ad3b354df7d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405374"
 ---
 # <a name="error-handling"></a>エラー処理
   Oracle CDC インスタンスでは、単一の Oracle ソース データベース (Oracle RAC クラスターは単一のデータベースと見なされます) から変更を検出し、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれる CDC データベースの変更テーブルにコミット済みの変更を書き込みます。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  次の表に、Oracle CDC インスタンスの状態テーブルで報告されるさまざまな状態コードを示します。  
   
-|状態|Active 状態コード|Error 状態コード|Description|副状態|  
+|状態|Active 状態コード|Error 状態コード|[説明]|副状態|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
 |ABORTED|0|@shouldalert|Oracle CDC インスタンスが実行されていません。 ABORTED 副状態は、ACTIVE だった Oracle CDC インスタンスが予期せず停止したことを示します。|ABORTED 副状態になるのは、実行されていない Oracle CDC インスタンスの状態が ACTIVE になっていることが Oracle CDC Service のメイン インスタンスで検出された場合です。|  
 |[error]|0|@shouldalert|Oracle CDC インスタンスが実行されていません。 ERROR 状態は、回復できないエラーが発生したために ACTIVE だった CDC インスタンスが無効になったことを示します。|MISCONFIGURED: 回復できない構成エラーが検出されました。<br /><br /> PASSWORD-REQUIRED: Change Data Capture Designer for Oracle by Attunity のパスワードが設定されていないか、構成されているパスワードが無効です。 サービスの非対称キーのパスワードが変更されたことが原因として考えられます。|  

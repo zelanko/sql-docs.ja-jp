@@ -19,11 +19,12 @@ caps.latest.revision: 9
 author: jeannt
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: a84fc90e8ec1f18c97d5ba6d56a7c515a5f4efb6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0dcd3474939b1f2b533651b159b81cd978dd383
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404824"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>external scripts enabled サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ RECONFIGURE WITH OVERRIDE;
 
 この変更を有効にするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があります。
 
-詳しくは、「[Set up SQL Server Machine Learning](/../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)」(SQL Server Machine Learning をセットアップする) をご覧ください。
+詳しくは、「[Set up SQL Server Machine Learning](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)」(SQL Server Machine Learning をセットアップする) をご覧ください。
 
 ## <a name="see-also"></a>参照
 

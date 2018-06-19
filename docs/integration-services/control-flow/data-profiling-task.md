@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a59e91ef39974021474d90bb65885b80831307da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3bd2f1d9050d0b83a918914246ecc2d51cbd997
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409164"
 ---
 # <a name="data-profiling-task"></a>データ プロファイル タスク
   データ プロファイル タスクでは、データ ソースについて詳細に理解し、解決する必要があるデータの問題を特定するために役立つさまざまなプロファイルが計算されます。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  次の 5 つのプロファイルで、個々の列を分析できます。  
   
-|個々の列を分析するプロファイル|Description|  
+|個々の列を分析するプロファイル|[説明]|  
 |----------------------------------------------|-----------------|  
 |列長分布プロファイル|選択された列に含まれる文字列値の長さごとに、その長さと、テーブル内におけるその長さの行の比率を報告します。<br /><br /> このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、2 文字の米国州コードの列をプロファイルし、3 文字以上の値を検出できます。|  
 |列の NULL 比プロファイル|選択した列の NULL 値の比率を報告します。<br /><br /> このプロファイルを使用すると、列の NULL 値の比率が予想外に高いなどのデータの問題を特定できます。 たとえば、郵便番号列をプロファイルすると、許容範囲を超える欠落した郵便番号の比率を検出できます。|  
@@ -64,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
  次の 3 つのプロファイルで、複数の列または列とテーブル間のリレーションシップを分析できます。  
   
-|複数の列を分析するプロファイル|Description|  
+|複数の列を分析するプロファイル|[説明]|  
 |--------------------------------------------|-----------------|  
 |候補キー プロファイル|列または列のセットが、選択したテーブルのキーまたは近似キーであるかどうかを報告します。<br /><br /> このプロファイルを使用すると、キーとなる可能性がある列の重複値などのデータの問題を特定できます。|  
 |機能依存プロファイル|ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているかを報告します。<br /><br /> このプロファイルを使用すると、無効な値などのデータの問題を特定することもできます。 たとえば、米国郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 郵便番号によって州が一意に決定されますが、このプロファイルでは、この依存関係の違反を検出できます。|  
@@ -116,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>データ プロファイル タスクで使用できるカスタム ログ メッセージ  
  次の表は、データ プロファイル タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-|ログ エントリ|Description|  
+|ログ エントリ|[説明]|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|タスクの状態に関する説明情報を提供します。 メッセージには次の情報が含まれます。<br /><br /> 処理要求の開始<br /><br /> クエリの開始<br /><br /> クエリの終了<br /><br /> 計算要求の完了|  
   

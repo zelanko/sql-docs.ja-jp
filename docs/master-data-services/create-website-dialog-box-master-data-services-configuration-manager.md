@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 940d6c966eb92ab9070f654298e7471fad2af791
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a18d54250582490506bfe5222f8b4fab17563c5
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410034"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>[Web サイトの作成] ダイアログ ボックス (マスター データ サービス構成マネージャー)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="web-site"></a>Web サイト  
   
-|コントロール名|Description|  
+|コントロール名|[説明]|  
 |------------------|-----------------|  
 |**Web サイト名**|Web サイトの名前を入力するか、既定の名前を使用します。 これは、IIS でサイトを識別するためだけに使用される表示名です。 Web ブラウザーからサイトにアクセスするためには使用されません。<br /><br /> この名前は、ローカル コンピューター上の IIS にあるすべてのサイトで一意である必要があります。|  
 |**[プロトコル]**|**http**が表示されます。 クライアントとサーバーとの間の通信を暗号化されたチャネルで行う必要がない場合には、ハイパーテキスト転送プロトコル (HTTP) を使用します。<br /><br /> **注**: [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]で HTTPS サイトを作成することはできません。 HTTPS は、SSL (Secure Sockets Layer) を使用する HTTP プロトコルで、機密情報や個人データをやり取りする場合や個人情報を送信する前にサーバーの ID を確認するようユーザーに要求する場合に役立ちます。 暗号化されたチャネルを介してサーバーとクライアントとの間で情報を転送する必要がある場合は、IIS マネージャーなどの IIS ツールを使用してサイトを HTTPS バインドで構成し、Web サイト バインドをサーバー証明書に関連付ける必要があります。これを行うと、Web サイトを Web ブラウザーで開くことができるようになります。 サーバー証明書の詳細については、 [TechNet の「](http://go.microsoft.com/fwlink/?LinkId=163220) Configuring Server Certificates in IIS 7 [!INCLUDE[msCoName](../includes/msconame-md.md)] 」 (IIS 7 でサーバー証明書を構成する) を参照してください。|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="application-pool"></a>アプリケーション プール  
   
-|コントロール名|Description|  
+|コントロール名|[説明]|  
 |------------------|-----------------|  
 |**名前**|新しいアプリケーション プールの一意な表示名を入力するか、表示されている既定の名前を使用します。 この Web サイトのルート Web アプリケーションは、このアプリケーション プールで実行されます。<br /><br /> アプリケーション プールには、あるアプリケーション プール内のアプリケーションが別のアプリケーション プール内のアプリケーションに影響しないように境界が設けられています。|  
 |**User name**|Active Directory のドメインおよびユーザー名を入力します。 このアカウントは、Web アプリケーションを実行するアプリケーション プールの ID です。<br /><br /> このアカウントは、データベースにアクセスするために [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの mds_exec データベース ロールに追加されます。 詳細については、「[データベース ログイン、ユーザー、およびロール &#40;マスター データ サービス&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)」を参照してください。 また、このアカウントは、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Windows グループ **MDS_ServiceAccounts** にも追加されます。このグループには、ファイル システムの一時コンパイル ディレクトリ **MDSTempDir** に対する権限が与えられています。 詳細については、「[フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md)」を参照してください。|  

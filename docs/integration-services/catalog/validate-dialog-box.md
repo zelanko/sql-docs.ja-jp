@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: service
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9582fe2456ac515e5da5ba4e54b5799702fc86e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1675e75e3078700086198dd6a194cd711a0dc50d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400114"
 ---
 # <a name="validate-dialog-box"></a>[検証] ダイアログ ボックス
   **のプロジェクトまたはパッケージの一般的な問題を確認するには、** [検証] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。  
@@ -65,7 +64,7 @@ ms.lasthandoff: 05/03/2018
  **パラメーター**  
  パラメーターの名前を一覧表示します。  
   
- **[値]**  
+ **Value**  
  パラメーター値を一覧表示します。  
   
  **[接続マネージャー]** タブには、プロジェクトまたはパッケージの検証に使用する接続マネージャーのプロパティ値が表示されます。  
@@ -81,7 +80,7 @@ ms.lasthandoff: 05/03/2018
  **プロパティ名**  
  接続マネージャーのプロパティの名前を一覧表示します。  
   
- **[値]**  
+ **Value**  
  接続マネージャーのプロパティに割り当てられた値を一覧表示します。  
   
   

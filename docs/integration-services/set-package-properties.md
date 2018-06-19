@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,11 +29,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 841f4d7bf5b77ccc91731276510b1b3186c1bb90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f3b42dd7df892f2e6c281ae5fec651823e99d4c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406004"
 ---
 # <a name="set-package-properties"></a>パッケージのプロパティを設定する
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のグラフィカル インターフェイスを使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のパッケージを作成する場合、パッケージ オブジェクトのプロパティは [プロパティ] ウィンドウで設定します。  
@@ -70,9 +69,9 @@ ms.lasthandoff: 05/03/2018
  次の表は、パッケージのプロパティをカテゴリ別に一覧表示しています。  
   
 ###  <a name="Checkpoints"></a> チェックポイント  
- このカテゴリのプロパティを使用すると、パッケージ制御フローで障害が発生した時点からパッケージを再開できます。制御フローの最初からパッケージを再実行する必要はありません。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+ このカテゴリのプロパティを使用すると、パッケージ制御フローで障害が発生した時点からパッケージを再開できます。制御フローの最初からパッケージを再実行する必要はありません。 詳細については、「 [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |**CheckpointFileName**|パッケージを再開するチェックポイントに関する情報をキャプチャする、ファイルの名前です。 パッケージが正常に完了すると、このファイルは削除されます。|  
 |**CheckpointUsage**|パッケージが再開できる時点を指定します。 値は、 **Never**、 **IfExists**、および **Always**です。 このプロパティの既定値は、パッケージを再起動できないことを示す **Never**です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage>」を参照してください。|  
@@ -84,7 +83,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Execution"></a> 実行  
  このカテゴリのプロパティは、パッケージ オブジェクトの実行時の動作を構成します。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |**DelayValidation**|パッケージの実行時までパッケージの検証を遅らせるかどうかを示します。 このプロパティの既定値は、 **False**です。|  
 |**Disable**|パッケージを無効にするかどうかを示します。 このプロパティの既定値は **False**です。|  
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="ForcedExecutionValue"></a> 強制実行値  
  このカテゴリのプロパティは、パッケージのオプションの実行値を構成します。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |**ForcedExecutionValue**|ForceExecutionValue を **True**に設定すると、値は、パッケージが返すオプションの実行値を示します。 このプロパティの既定値は **0**です。|  
 |**ForcedExecutionValueType**|ForcedExecutionValue のデータ型。 このプロパティの既定値は **Int32**です。|  
@@ -107,7 +106,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Identification"></a> [識別]  
  このカテゴリのプロパティは、パッケージの一意識別子や名前などの情報を提供します。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |**CreationDate**|パッケージが作成された日付です。|  
 |**CreatorComputerName**|パッケージが作成されたコンピューターの名前です。|  
@@ -120,7 +119,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Misc"></a> その他  
  このカテゴリのプロパティは、パッケージで使用する構成と式にアクセスし、パッケージのロケールとログ モードに関する情報を提供するために使用されます。 詳細については、「 [パッケージでプロパティ式を使用する](../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |**構成**|パッケージで使用する構成のコレクションです。 パッケージ構成を表示して構成するには、参照ボタン ( **[...]** ) をクリックします。|  
 |**式**|パッケージのプロパティの式を作成するには、参照ボタン ( **[...]** ) をクリックします。<br /><br /> [プロパティ] ウィンドウに一覧表示されるプロパティだけでなく、オブジェクト モデルに含まれるすべてのパッケージのプロパティの式が作成できます。<br /><br /> 詳細については、「[パッケージでプロパティ式を使用する](../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。<br /><br /> 既存のプロパティの式を表示するには、 **Expressions**を展開します。 式を変更したり評価するには、式テキスト ボックスの参照ボタン ( **[...]** ) をクリックします。|  
@@ -134,7 +133,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Security"></a> セキュリティ  
  このカテゴリのプロパティを使用すると、パッケージの保護レベルが設定されます。 詳しくは、「 [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md)」をご覧ください。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |**PackagePassword**|パスワードを必要とするパッケージ保護レベル (**EncryptSensitiveWithPassword** と **EncryptAllWithPassword**) のパスワード。|  
 |**ProtectionLevel**|パッケージの保護レベルです。 値は、 **DontSaveSensitive**、 **EncryptSensitiveWithUserKey**、 **EncryptSensitiveWithPassword**、 **EncryptAllWithPassword**、および **ServerStorage**です。 このプロパティの既定値は **EncryptSensitiveWithUserKey**です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>」を参照してください。|  
@@ -142,7 +141,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Transactions"></a> トランザクション  
  このカテゴリのプロパティは、パッケージの分離レベルとトランザクション オプションを構成します。 詳細については、「 [Integration Services のトランザクション](../integration-services/integration-services-transactions.md)」を参照してください。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |**IsolationLevel**|パッケージ トランザクションの分離レベルです。 値は、 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**、および **Snapshot**です。 このプロパティの既定値は **Serializable**です。<br /><br /> 注: **IsolationLevel** プロパティの値 **Snapshot** は、パッケージ トランザクションと互換性がありません。 したがって、 **IsolationLevel** プロパティを使用して、パッケージ トランザクションの分離レベルを **Shapshot**に設定することはできません。 SQL クエリを使用して、パッケージ トランザクションを **Snapshot**に設定してください。 詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。<br /><br /> **IsolationLevel** プロパティは、 **TransactionOption** プロパティの値が **Required**の場合にのみ、パッケージ トランザクションに適用されます。<br /><br /> 子コンテナーによって要求された **IsolationLevel** プロパティの値は、以下の場合には無視されます。<br />子コンテナーの **TransactionOption** プロパティの値が **Supported**である場合。<br />子コンテナーが親コンテナーのトランザクションに参加する場合。<br /><br /> コンテナーによって要求された **IsolationLevel** プロパティの値は、コンテナーが新しいトランザクションを開始する場合にのみ利用されます。 コンテナーは、次の場合に新しいトランザクションを開始します。<br />コンテナーの **TransactionOption** プロパティの値が **Required**である場合。<br />親がまだトランザクションを開始していない場合。<br /><br /> <br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>」を参照してください。|  
 |**TransactionOption**|パッケージに対するトランザクションの関与を示します。 値は、 **NotSupported**、 **Supported**、および **Required**です。 このプロパティの既定値は **Supported**です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>」を参照してください。|  
@@ -150,7 +149,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Version"></a> バージョン  
  このカテゴリのプロパティは、パッケージ オブジェクトのバージョンに関する情報を提供します。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |**VersionBuild**|パッケージのビルドのバージョン番号です。|  
 |**VersionComments**|パッケージのバージョンに関するコメントです。|  

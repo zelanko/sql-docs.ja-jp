@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2047ee106142d707f8747e15bcabffe537b2d7a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd8a6563e72e53d9fcc01e7a687c411b3d86dce5
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335846"
 ---
 # <a name="manage-a-cdc-instance"></a>CDC インスタンスの管理
   CDC デザイナー コンソールを使用して、作成したインスタンスに関する情報を表示し、インスタンスの操作を管理することができます。  
@@ -60,7 +59,7 @@ ms.lasthandoff: 05/03/2018
  **[CDC インスタンス配置スクリプト]**  
  このリンクをクリックすると、CDC インスタンス配置スクリプトを表示する [CDC インスタンス配置スクリプト] ダイアログ ボックスが表示されます。 このダイアログ ボックスの詳細については、「 [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)」を参照してください。  
   
- **[プロパティ]**  
+ **Properties**  
  このリンクをクリックすると、プロパティ エディターが表示されます。 CDC インスタンスの構成はプロパティ エディターを使用して編集します。 CDC インスタンスのプロパティの編集の詳細については、「 [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)」を参照してください。  
   
  **ビューアーのタブ**  

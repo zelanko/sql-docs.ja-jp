@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -37,11 +35,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 778901dae6c0504d84eb7cb93667d0ac4024e9ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e9296e97e882aa752287197469cf479c7cf29fd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408504"
 ---
 # <a name="legacy-package-deployment-ssis"></a>レガシー パッケージの配置 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、開発コンピューターから実稼働サーバーまたは他のコンピューターへのパッケージの配置を簡素化するツールとウィザードが含まれています。  
@@ -102,7 +101,8 @@ ms.lasthandoff: 05/03/2018
   
  ただし、これらのコマンド ライン オプションには制限事項がいくつかあります。  
   
--   **/Set** または **/Connection** オプションを使用して、構成で設定されている単一の値を上書きすることはできません。  
+-   
+  **/Set** または **/Connection** オプションを使用して、構成で設定されている単一の値をオーバーライドすることはできません。  
   
 -   **/ConfigFile** オプションを使用して、デザイン時に指定した構成を置き換える構成を読み込むことはできません。  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="package-configuration-types"></a>パッケージの構成の種類  
  パッケージの構成の種類を次の表に示します。  
   
-|型|Description|  
+|型|[説明]|  
 |----------|-----------------|  
 |XML 構成ファイル|XML ファイルに構成を格納します。 XML ファイルは、複数の構成を格納できます。|  
 |環境変数|環境変数に構成を格納します。|  
@@ -220,7 +220,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  次の表に、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスの構成の一覧の列を示します。  
   
-|[列]|Description|  
+|[列]|[説明]|  
 |------------|-----------------|  
 |**[構成名]**|構成の名前です。|  
 |**[構成の種類]**|構成の種類です。|  
@@ -322,7 +322,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **構成の種類**  
  次のオプションを使用して、構成を格納するソースの種類を選択します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**XML 構成ファイル**|構成を XML ファイルとして格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
 |**環境変数**|構成を環境変数の 1 つに格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
@@ -339,7 +339,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[構成設定を直接指定する]**  
  設定を直接指定する場合に使用します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[構成ファイル名]**|ウィザードで生成する構成ファイルのパスを入力します。|  
 |**[参照]**|**[構成ファイルの場所の選択]** ダイアログ ボックスを使用して、ウィザードで生成する構成ファイルのパスを指定します。 指定したファイルが存在しない場合、ウィザードによってファイルが新しく作成されます。|  
@@ -347,7 +347,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[構成の場所を環境変数に格納する]**  
  構成を格納する環境変数を指定する場合に使用します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**環境変数**|一覧から環境変数を選択します。|  
   
@@ -359,14 +359,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[構成設定を直接指定する]**  
  設定を直接指定する場合に使用します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**レジストリ エントリ**|構成情報を格納するレジストリ キーを入力します。 形式は \<registry key> です。<br /><br /> Value という名前の値を持つレジストリ キーが、あらかじめ HKEY_CURRENT_USER に存在していることが必要です。 この値には、DWORD または文字列を指定できます。<br /><br /> HKEY_CURRENT_USER のルートにないレジストリ キーを使用する場合は、\<Registry key\registry key\\...> の形式を使用してキーを識別します。|  
   
  **[構成の場所を環境変数に格納する]**  
  構成を格納する環境変数を指定する場合に使用します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**環境変数**|一覧から環境変数を選択します。|  
   
@@ -374,14 +374,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[構成設定を直接指定する]**  
  設定を直接指定する場合に使用します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[親変数]**|構成情報を格納する親パッケージ内の変数を指定します。|  
   
  **[構成の場所を環境変数に格納する]**  
  構成を格納する環境変数を指定する場合に使用します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**環境変数**|一覧から環境変数を選択します。|  
   
@@ -389,7 +389,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[構成設定を直接指定する]**  
  設定を直接指定する場合に使用します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**[接続]**|一覧から接続を選択するか、 **[新規作成]** をクリックし、新しい接続を作成します。|  
 |**[構成テーブル]**|既存のテーブルを選択するか、 **[新規作成]** をクリックし、新しいテーブルを作成する SQL ステートメントを記述します。|  
@@ -398,7 +398,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[構成の場所を環境変数に格納する]**  
  構成を格納する環境変数を指定する場合に使用します。  
   
-|ReplTest1|Description|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
 |**環境変数**|一覧から環境変数を選択します。|  
   
@@ -483,7 +483,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  次の表に、配置ユーティリティのプロパティの一覧を示します。  
   
-|プロパティ|Description|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |AllowConfigurationChange|配置の際に構成を更新するかどうかを指定する値。|  
 |CreateDeploymentUtility|プロジェクトのビルド時にパッケージ配置ユーティリティを作成するかどうかを指定する値。 配置ユーティリティを作成するには、このプロパティが **True** である必要があります。|  
@@ -599,7 +599,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **型**  
  プロパティのデータ型が表示されます。  
   
- **[値]**  
+ **Value**  
  構成の値を指定します。  
   
  **Next**  

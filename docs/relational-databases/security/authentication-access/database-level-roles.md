@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -44,12 +42,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b1a99af7b5758f77883da3f2a755aaa4bdfdd1a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2a6b17efe0fd6cc836af208f3d53d4252d3c1ce
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973377"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700984"
 ---
 # <a name="database-level-roles"></a>データベース レベルのロール
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +73,7 @@ ms.locfileid: "32973377"
   
  次の表に、固定データベース ロールとその機能を示します。 これらのロールは、すべてのデータベースに存在します。 **public** データベース ロールを除き、固定データベース ロールに割り当てられている権限を変更することはできません。   
   
-|固定データベース ロールの名前|Description|  
+|固定データベース ロールの名前|[説明]|  
 |-------------------------------|-----------------|  
 |**db_owner**|**db_owner** 固定データベース ロールのメンバーは、データベースでのすべての構成作業とメンテナンス作業を実行でき、 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]でデータベースを削除することもできます。 ( [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]では、一部のメンテナンス作業にサーバー レベルの権限が必要であり、 **db_owners**では実行できません。)|  
 |**db_securityadmin**|**db_securityadmin** 固定データベース ロールのメンバーは、ロールのメンバーシップを変更し、権限を管理できます。 このロールにプリンシパルを追加すると、特権が意図せず昇格されることがあります。|  
@@ -95,7 +93,7 @@ ms.locfileid: "32973377"
 
 以下のデータベース ロールは、仮想 master データベース内にのみ存在します。 その権限は master で実行されるアクションに制限されます。 これらのロールに追加できるのは、master のデータベース ユーザーのみです。 これらのロールにログインを追加することはできませんが、ログインに基づいてユーザーを作成してから、そのユーザーをロールに追加することはできます。 これらのロールに、master の包含データベース ユーザーを追加することもできます。
 
-|ロール名|Description|  
+|ロール名|[説明]|  
 |--------------------|-----------------|
 **dbmanager** | データベースの作成と削除を行うことができます。 データベースを作成する dbmanager ロールのメンバーは、そのデータベースの所有者になります。これにより、ユーザーは dbo ユーザーとしてそのデータベースに接続できるようになります。 dbo ユーザーには、データベースでのすべてのデータベース権限があります。 dbmanager ロールのメンバーには、所有していないデータベースへのアクセス権が必ずしもあるとは限りません。
 **loginmanager** | 仮想 master データベースのログインを作成および削除できます。  
@@ -106,7 +104,7 @@ ms.locfileid: "32973377"
 ## <a name="msdb-roles"></a>msdb ロール  
  msdb データベースには、次の表に示す特別な用途のロールが含まれています。  
   
-|msdb ロール名|Description|  
+|msdb ロール名|[説明]|  
 |--------------------|-----------------|  
 |**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|これらのデータベース ロールのメンバーは、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]を管理および使用できます。 以前のバージョンからアップグレードされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスには、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] ではなくデータ変換サービス (DTS) を使用して名前が付けられた古いバージョンのロールが含まれている場合があります。 詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md)」を参照してください。|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|これらのデータベース ロールのメンバーは、データ コレクターを管理および使用できます。 詳細については、「 [Data Collection](../../../relational-databases/data-collection/data-collection.md)」を参照してください。|  
@@ -123,7 +121,7 @@ ms.locfileid: "32973377"
 
 R Services がインストールされている場合は、パッケージの管理で追加のデータベース ロールを使用できます。 詳細については、 [SQL Server の R パッケージ管理](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)に関するページを参照してください。
 
-|ロール名 |Description|  
+|ロール名 |[説明]|  
 |-------------|-----------------|
 |**rpkgs-users** |ユーザーは、rpkgs-shared ロールのメンバーによってインストールされた共有パッケージを使用することができます。|
 |**rpkgs-private** |rpkgs-users ロールと同じアクセス許可で共有パッケージにアクセスできます。 このロールのメンバーは、プライベート スコープのパッケージをインストール、削除および使用することもできます。|
@@ -132,7 +130,7 @@ R Services がインストールされている場合は、パッケージの管
 ## <a name="working-with-database-level-roles"></a>データベース レベルのロールの操作  
  次の表では、データベース レベルのロールを操作するためのコマンド、ビュー、および関数について説明します。  
   
-|機能|型|Description|  
+|機能|型|[説明]|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|メタデータ|固定データベース ロールの一覧を返します。|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|メタデータ|固定データベース ロールの権限を表示します。|  
