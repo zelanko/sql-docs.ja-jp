@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86a4674fff0795918fe89a26b62b5b15524d543e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ee22fa57e381b8f7daa681427c31842745ead1b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333476"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 処理タスク
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理タスクは、テーブル モデル、キューブ、ディメンション、マイニング モデルなどの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを処理します。  
@@ -120,7 +119,7 @@ ms.lasthandoff: 05/03/2018
  **関連トピック:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)、 [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **[オブジェクト一覧]**  
- |プロパティ|Description|  
+ |プロパティ|[説明]|  
 |--------------|-----------------|  
 |**Object Name**|指定されたオブジェクト名を表示します。|  
 |**型**|指定されたオブジェクトの種類を表示します。|  
@@ -139,7 +138,7 @@ ms.lasthandoff: 05/03/2018
  **関連トピック:** [[影響分析] ダイアログ ボックス (Analysis Services - 多次元データ)](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **[バッチ設定の概要]**  
- |プロパティ|Description|  
+ |プロパティ|[説明]|  
 |--------------|-----------------|  
 |**[処理順序]**|オブジェクトを順番に処理するか、一括して処理するかを指定します。並行処理を行う場合は、同時に処理するオブジェクトの数を指定します。|  
 |**[トランザクション モード]**|順次処理のトランザクション モードを指定します。|  

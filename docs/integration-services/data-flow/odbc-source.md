@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c67cbfeb3797c2e0d9fb5758078dad96f290d4e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 796c0f5e2d0cb2d689921d75b9e2005a49a35106
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332576"
 ---
 # <a name="odbc-source"></a>ODBC 入力元
   ODBC 入力元は、データベース テーブル、ビュー、または SQL ステートメントを使用して、ODBC でサポートされているデータベースからデータを抽出します。  
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="data-access-mode"></a>[データ アクセス モード]  
  入力元のデータを選択する方法を選択します。 次の表に示すオプションがあります。  
   
-|オプション|Description|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |テーブル名|ODBC データ ソースのテーブルまたはビューからデータを取得します。 このオプションを選択する場合は、以下の一覧から値を選択します。|  
 ||**[テーブル名またはビュー名]**: 使用できるテーブルまたはビューを一覧から選択するか、正規表現を入力してテーブルを特定します。|  
@@ -175,7 +174,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="truncation"></a>切り捨て  
  ODBC 入力元でフローの切り捨てを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>[説明]  
  使用されていません。  
   
 #### <a name="set-this-value-to-selected-cells"></a>[選択したセルに設定する値]  

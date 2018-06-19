@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dcf6e290bf12600dee4b6483ca305507a5888973
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eacef877fe8cd803a06d3cce2b75f7eb445f8b3c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333216"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>[履歴属性オプション] (緩やかに変化するディメンション ウィザード)
   **[履歴属性オプション]** ダイアログ ボックスを使用すると、開始日や終了日によって履歴属性を表示したり、専用に作成された列に履歴属性を記録したりできます。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
  **[現在のレコードと有効期限が切れたレコードを 1 列で表示する]**  
  1 列を使用して履歴属性のステータスを記録する場合は、次のオプションを使用できます。  
   
-|オプション|Description|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |**[現在のレコードを示す列]**|現在のレコードを示す列を選択します。|  
 |**[現時点での値]**|**[True]** または **[Current]** を使用してレコードが現在のレコードであるかどうかを示します。|  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
  **[開始日と終了日を使用して現在のレコードと有効期限が切れたレコードを識別する]**  
  このオプションのディメンション テーブルには、日付列を含める必要があります。 履歴属性を開始日および終了日を使用して示す場合は、次のオプションを使用できます。  
   
-|オプション|Description|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |**[開始日の列]**|ディメンション テーブルで開始日を含む列を選択します。|  
 |**[終了日の列]**|ディメンション テーブルで終了日を含む列を選択します。|  

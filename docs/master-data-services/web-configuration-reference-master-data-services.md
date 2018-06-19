@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0debbd16d8f250d5ee59ef0120a19485d2d5e289
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cdc430e3e74043896df8b25993dc78cf8d8ed70e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330096"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 設定リファレンス (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="webconfig-elements"></a>Web.Config 要素  
  Web.config ファイルには、標準 IIS、.NET Framework、ASP.NET、および Windows Communication Foundation (WCF) の構成の要素以外に、カスタム [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 要素 **\<masterDataServices>** が含まれています。 次の表では、Web.config ファイルに含まれている要素について説明します。  
   
-|Configuration 要素|Description|  
+|Configuration 要素|[説明]|  
 |---------------------------|-----------------|  
 |**masterDataServices**|Custom 要素。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サービスを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに接続します。|  
 |**connectionStrings**|ASP.NET 要素。 詳細については、MSDN ライブラリの「 [connectionStrings 要素 (ASP.NET 設定スキーマ)](http://go.microsoft.com/fwlink/?LinkId=178347) 」を参照してください。|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="elements-and-attributes"></a>要素と属性  
   
-|アイテム|Description|  
+|アイテム|[説明]|  
 |----------|-----------------|  
 |**インスタンス (instance)**|子要素。 Web サービスとデータベース接続文字列の情報を指定する属性を含みます。|  
 |**virtualPath**|Attribute。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスの仮想パスを指定します。 これは、IIS ApplicationHost.config ファイルの **\<site>** 要素にある **\<application>** 要素の **path** 属性に対応します。|  
