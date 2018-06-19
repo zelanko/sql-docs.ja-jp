@@ -33,11 +33,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 96ade458ea294f3f2cfe051449578acd97ff2fe5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MTE
+ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582134"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -185,7 +186,7 @@ sqlcmd
  アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
  **-M** *multisubnet_failover*  
- SQL Server 可用性グループまたは SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については [!含める[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[の作成と構成の可用性グループの&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[フェールオーバー クラスタ リングと Always On 可用性グループ (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx、および [アクティブなセカンダリ: 読み取り可能なのセカンダリ レプリカ (Always On 可用性グループ)] (https://msdn.microsoft.com/library/ff878253.aspxです。  
+ SQL Server 可用性グループまたは SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については [!含める[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[の作成と構成の可用性グループの&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[フェールオーバー クラスタ リングと Always On 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)、および[アクティブなセカンダリ: 読み取り可能なのセカンダリ レプリカ (Always On 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx)です。  
   
  **-N**  
  クライアントでこのスイッチを使用して、暗号化された接続を要求できます。  
