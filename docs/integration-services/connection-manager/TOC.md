@@ -1,8 +1,5 @@
 # [概要](integration-services-ssis-connections.md)  
 # [データ ソース](data-sources.md)  
-# [Access データベースに接続する](connect-to-an-access-database.md)  
-# [dBASE ファイルまたはその他の DBF ファイルに接続する](connect-to-a-dbase-or-other-dbf-file.md)  
-# [Excel ブックに接続する](connect-to-an-excel-workbook.md)  
 # [ADO 接続マネージャー](ado-connection-manager.md)  
 # [ADO.NET 接続マネージャー](ado-net-connection-manager.md)  
 # [Analysis Services 接続マネージャー](analysis-services-connection-manager.md)  

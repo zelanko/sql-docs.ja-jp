@@ -15,11 +15,12 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5190c4bbd8e0ade4f32831f5d696cc6f26296e5
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 84073aa122fbb4654e183fefa3c6b7977b751b1e
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619539"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,9 +106,10 @@ SSMS ユーザー設定:
 
 **SSMS 全般**
 
-SQL Database マネージ インスタンス:
+SQL Database Managed Instance:
 
-- [Azure SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)のサポートが追加されました。 Azure SQL Database マネージ インスタンス (プレビュー) は Azure SQL Database の新しい種類であり、SQL Server オンプレミスとのほぼ 100% の互換性、セキュリティに関する一般的な問題に対応するネイティブな[仮想ネットワーク (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) の実装、およびオンプレミスの SQL Server ユーザーに適した[ビジネス モデル](https://azure.microsoft.com/pricing/details/sql-database/)を提供します。
+- 
+  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) のサポートが追加されました。 Azure SQL Database Managed Instance (プレビュー) は Azure SQL Database の新しい種類であり、SQL Server オンプレミスとのほぼ 100% の互換性、セキュリティに関する一般的な問題に対応するネイティブな[仮想ネットワーク (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) の実装、およびオンプレミスの SQL Server ユーザーに適した[ビジネス モデル](https://azure.microsoft.com/pricing/details/sql-database/)を提供します。
 - 次のような一般的な管理シナリオをサポートします。
    - データベースの作成と変更。
    - データベースのバックアップと復元。
@@ -117,7 +119,7 @@ SQL Database マネージ インスタンス:
    - データベース オブジェクトのスクリプト作成。
    - SQL エージェント ジョブのサポート。
    - リンク サーバーのサポート。
-- マネージ インスタンスの詳細については、[こちら](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/)を参照してください。
+- マネージド インスタンスの詳細については、[こちら](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/)を参照してください。
 
 オブジェクト エクスプローラー:
 - オブジェクト エクスプローラーからクエリ ウィンドウにドラッグ アンド ドロップするときに、名前を角かっこで囲むことを強制しない設定が追加されました。 (ユーザー提案 [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) および [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051))
@@ -127,7 +129,8 @@ SQL Database マネージ インスタンス:
 
 **Integration Services (IS)**
 
-- [SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)にパッケージを展開するサポートが追加されました。
+- 
+  [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) にパッケージを展開するサポートが追加されました。
 
 ### <a name="bug-fixes"></a>バグの修正
 
@@ -170,7 +173,7 @@ SMO:
 
 **Integration Services (IS)**
 
-- SQL Database マネージ インスタンスに接続すると SSMS で SSIS カタログ ノードとレポートが表示されない問題を修正しました
+- SQL Database Managed Instance に接続すると SSMS で SSIS カタログ ノードとレポートが表示されない問題を修正しました
 
 ### <a name="known-issues"></a>既知の問題
 
@@ -226,7 +229,7 @@ SMO:
 
 - サーバーの照合順序で大文字と小文字が区別される場合に SMO が AvailabilityReplica プロパティをフェッチできない (その結果、SSMS で "マルチパート識別子 "a.delimited" をバインドできませんでした" というようなエラー メッセージが表示される場合がある) という問題が修正されました。
 - 照合順序が処理されない (その結果、照合順序の大文字と小文字が区別されるサーバーで実行されているデータベースで右クリックしたときに、トルコ語のロケールの ma マシン上で実行されている SSMS で "レガシカーディナリティ推定が有効なスコープ構成ではありません" というようなエラーが表示される場合がある) という、DatabaseScopedConfigurationCollection クラスの問題が修正されました。
-- SMO が SQL 2005 サーバーで SQL エージェント プロパティをフェッチできない (その結果、SSMS が "ローカル変数に既定値を代入できません。 スカラー変数 "@ServiceStartMode" を宣言してください" というようなエラーをスローし、最終的にオブジェクト エクスプローラーで SQL エージェント ノードが表示されない) という、JobServer クラスの問題が修正されました。
+- SMO が SQL 2005 サーバーで SQL エージェント プロパティをフェッチできない (その結果、SSMS が "ローカル変数に既定値を代入できません。 スカラー変数 "\@ServiceStartMode を宣言してください" というようなエラーをスローし、最終的にオブジェクト エクスプローラーで SQL エージェント ノードが表示されない) という、JobServer クラスの問題が修正されました。
 
 テンプレート: 
 
