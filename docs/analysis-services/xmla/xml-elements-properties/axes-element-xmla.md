@@ -1,4 +1,4 @@
-﻿---
+---
 title: 軸の要素 (XMLA) |Microsoft ドキュメント
 ms.date: 05/08/2018
 ms.prod: sql
