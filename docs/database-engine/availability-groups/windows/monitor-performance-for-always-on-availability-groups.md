@@ -48,7 +48,7 @@ ms.locfileid: "32870057"
 |||||  
 |-|-|-|-|  
 |**Sequence**|**ステップの説明**|**コメント**|**有用なメトリック**|  
-|@shouldalert|ログの生成|ログ データがディスクにフラッシュされます。 このログはセカンダリ レプリカにレプリケートする必要があります。 ログ レコードによって送信キューが入力されます。|[SQL Server: データベース > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
+|1|ログの生成|ログ データがディスクにフラッシュされます。 このログはセカンダリ レプリカにレプリケートする必要があります。 ログ レコードによって送信キューが入力されます。|[SQL Server: データベース > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|キャプチャ|各データベースに関するログがキャプチャされ、対応するパートナー キュー (データベース レプリカ ペアごとに 1 つ) に送信されます。 このキャプチャ プロセスは、可用性レプリカが接続されていて何らかの理由でデータ移動が中断されていない限り、継続されます。データベース レプリカのペアは同期中または同期済みのいずれかであると表示されます。 キャプチャ プロセスによるメッセージのスキャンおよびエンキューに時間がかかる場合は、ログ送信キューがビルドされます。|[SQL Server: 可用性レプリカ > レプリカに送信されたバイト数\秒](~/relational-databases/performance-monitor/sql-server-availability-replica.md)。可用性レプリカのキューに配置されたすべてのデータベース メッセージの合計を集計したものです。<br /><br /> プライマリ レプリカの [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) と[log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/秒)。|  
 |3|Send|各データベース レプリカ キュー内のメッセージがデキューされ、それぞれのセカンダリ レプリカにネットワーク経由で送信されます。|[SQL Server: 可用性レプリカ > トランスポートに送信されたバイト数\秒](~/relational-databases/performance-monitor/sql-server-availability-replica.md) および [SQL Server: 可用性レプリカ > メッセージ確認応答時間](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (ms)|  
 |4|受信とキャッシュ|各セカンダリ レプリカがメッセージを受信しキャッシュします。|パフォーマンス カウンター [SQL Server: 可用性レプリカ > Log Bytes Received/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
