@@ -69,7 +69,8 @@
 ## [SQL Server 管理オブジェクト (SMO) プログラミング ガイド +](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)
 ## [Windows Management Instrumentation](../database-engine/dev-guide/windows-management-instrumentation.md)
 ## [構成管理用の WMI プロバイダーの概念 +](wmi-provider-configuration/wmi-provider-for-configuration-management.md)
-
+## [SqlToolsVSNativeHelpers](sqltoolsvsnativehelpers.md)
+### [FrameWindowVisible](sqltoolsvsnativehelpers-framewindowvisible.md)
 # [データベース エンジンのチュートリアル](database-engine-tutorials.md)
 ## [チュートリアル : データベース エンジンの概要](tutorial-getting-started-with-the-database-engine.md)
 ### [レッスン 1: データベース エンジンへの接続](lesson-1-connecting-to-the-database-engine.md)

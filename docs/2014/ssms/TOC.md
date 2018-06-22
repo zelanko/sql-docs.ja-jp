@@ -6,6 +6,7 @@
 ### [SQL Server Management Studio の Web ブラウザー](sql-server-management-studio-web-browser.md)
 ### [[外部ツール] ダイアログ ボックス](external-tools-dialog-box.md)
 ### [[引数] ダイアログ ボックス](arguments-dialog-box.md)
+### [外部ツールの引数](use-of-sql-server-features-and-capabilities-wwi-oltp.md)
 ### [[プロパティ] ウィンドウ (Management Studio)](properties-window-management-studio.md)
 ### [ツールボックスの使用](use-the-toolbox.md)
 ## [SQL Server Management Studio の機能](../database-engine/features-in-sql-server-management-studio.md)

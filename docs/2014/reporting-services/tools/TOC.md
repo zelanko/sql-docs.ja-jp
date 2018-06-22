@@ -53,6 +53,7 @@
 ### [[サーバーのプロパティ] ([履歴] ページ)](server-properties-history-page.md)
 ### [[サーバーのプロパティ] ([ログ記録] ページ)](server-properties-logging-page.md)
 ### [[サーバーのプロパティ] ([セキュリティ] ページ)](server-properties-security-page-reporting-services.md)
+### [[サーバーのプロパティ] ([詳細設定] ページ)](server-properties-advanced-page-reporting-services.md)
 ### [[システム ロールのプロパティ]](system-role-properties-management-studio.md)
 ### [[ユーザー ロールのプロパティ]](user-role-properties-management-studio.md)
 # [レポート ビルダー](report-builder-authoring-environment-ssrs.md)
