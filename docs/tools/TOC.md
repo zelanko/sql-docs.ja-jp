@@ -2,7 +2,7 @@
 # [SQL Server のツールとユーティリティの概要](../tools/overview-sql-tools.md)
 # [新規および更新のアーティクル](new-updated-tools.md)
 
-# [SQL Operations Studio (プレビュー)](../sql-operations-studio/what-is.md)
+# [SQL Operations Studio (preview)](../sql-operations-studio/what-is.md)
 
 # [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
@@ -30,3 +30,7 @@
 ## [sqlps ユーティリティ](sqlps-utility.md)  
 ## [sqlservr アプリケーション](sqlservr-application.md)  
 ## [tablediff ユーティリティ](tablediff-utility.md)
+
+# sqlpackage
+## [sqlpackage のインストール](sqlpackage-download.md)
+## [sqlpackage ref](sqlpackage.md)

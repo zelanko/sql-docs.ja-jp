@@ -33,23 +33,24 @@ ms.locfileid: "34236433"
 
 ## <a name="open-an-existing-git-repository"></a>既存の Git リポジトリを開く
 
-1. 下にある、**ファイル**メニューの **フォルダーを開く.**
-2. Git、によって追跡ファイルを含むフォルダーを参照してクリックして**フォルダーの選択**です。 ローカル リポジトリ内のサブフォルダーは、ここで選択を使用できます。
+1. **ファイル**メニューの下にある、**フォルダーを開く.** を選択します。
+2. Gitによって追跡されるファイルを含むフォルダーを参照し、**フォルダーの選択**をクリックします。 ローカル リポジトリ内のサブフォルダーは、ここで選択することができます。
 
 
 ## <a name="initialize-a-new-git-repository"></a>新しい git リポジトリを初期化します。
 
-1. 選択**ソース管理**、git アイコンを選択します。
+1. **ソース管理**を選択し、gitアイコンを選択します。
+
 
    ![ソース管理の git アイコン](media/source-control/source-control.png)
 
-1. Git リポジトリおよびキーを押してとして初期化するフォルダーへのパスを入力**Enter**です。
+1. Gitリポジトリとして初期化したいフォルダへのパスを入力し、**Enter**を押します。
 
    ![Git リポジトリを初期化します。](media/source-control/initialize-git-repository.png)
 
 ## <a name="working-with-git-repositories"></a>Git リポジトリの操作
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] VS Code からその Git 実装を継承しますが、現在 SCM プロバイダーの追加をサポートしていません。 開くまたはリポジトリを初期化した後、Git の操作に関する詳細については、次を参照してください。 [VS コードでの Git サポート](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)です。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] VS Code からその Git 実装を継承しますが、現在 SCM プロバイダーの追加をサポートしていません。 リポジトリを開く、または初期化した後のGitの操作に関する詳細については、次を参照してください。 [VS コードでの Git サポート](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)
 
 
 ## <a name="additional-resources"></a>その他のリソース

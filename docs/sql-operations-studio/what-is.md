@@ -20,7 +20,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
 ms.locfileid: "34235846"
 ---
-# <a name="what-is-includename-sosincludesname-sosmd"></a>新機能[!INCLUDE[name-sos](../includes/name-sos.md)]しますか?
+# <a name="what-is-includename-sosincludesname-sosmd"></a>新機能[!INCLUDE[name-sos](../includes/name-sos.md)]とは?
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]は SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse を管理するための Windows、macOS そして Linux で動作可能な無料ツールです。
 

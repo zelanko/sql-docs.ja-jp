@@ -26,17 +26,17 @@ ms.locfileid: "34235686"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] はデスクトップで動作し、Windows、macOS、および Linux で利用できるフリーで軽量なデータベース開発および運用ツールです。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] はオンプレミスまたはあらゆるクラウドで動作する Azure SQL Database、Azure SQL Data Warehouse、および SQL Server のサポートが組み込まれています。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]はお気に入りのオペレーティング システムの任意のデータベースの間で一貫した使用環境を提供します。
 
-## <a name="where-can-i-get-includename-sosincludesname-sos-shortmd"></a>どこで入手できます[!INCLUDE[name-sos](../includes/name-sos-short.md)]しますか?
+## <a name="where-can-i-get-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]はどこで入手できますか？
 
-ダウンロード[!INCLUDE[name-sos](../includes/name-sos-short.md)]Windows、macOS、および Linux [http://aka.ms/sqlopsstudio](download.md)
+Windows、macOS、および Linux 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] は [http://aka.ms/sqlopsstudio](download.md) からダウンロードできます。
 
-## <a name="how-much-does-includename-sosincludesname-sos-shortmd-cost"></a>どれくらい[!INCLUDE[name-sos](../includes/name-sos-short.md)]コストしますか?
+## <a name="how-much-does-includename-sosincludesname-sos-shortmd-cost"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]の料金はどれくらいですか?
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] private または商用の使用は無料です。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] の個人利用、または商用目的の利用は無料です。
 
-## <a name="who-should-use-includename-sosincludesname-sos-shortmd"></a>使用する必要があります[!INCLUDE[name-sos](../includes/name-sos-short.md)]しますか?
+## <a name="who-should-use-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]は誰が使用すべきですか?
 
-すべてのユーザーが使用できる[!INCLUDE[name-sos](../includes/name-sos-short.md)]です。 ただし、データベース開発者、データベース管理者、システム管理者、および独立系ソフトウェア ベンダーによって実行されるタスクを簡略化しています。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] は誰でも使用できます。 ただし、データベース開発者、データベース管理者、システム管理者、および独立系ソフトウェア ベンダーによって実行されるタスクを簡略化するために設計されています。
 
 
 ## <a name="what-can-i-do-with-includename-sosincludesname-sos-shortmd"></a>何を行うと[!INCLUDE[name-sos](../includes/name-sos-short.md)]しますか? 

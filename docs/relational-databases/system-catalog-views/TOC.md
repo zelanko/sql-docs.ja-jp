@@ -24,7 +24,7 @@
 ## [sys.availability_read_only_routing_lists](sys-availability-read-only-routing-lists-transact-sql.md)  
 ## [sys.availability_replicas](sys-availability-replicas-transact-sql.md)  
 
-# [Azure SQL データベース](azure-sql-database-catalog-views.md)  
+# [Azure SQL Database](azure-sql-database-catalog-views.md)  
 ## [sys.bandwidth_usage](sys-bandwidth-usage-azure-sql-database.md)  
 ## [sys.database_connection_stats](sys-database-connection-stats-azure-sql-database.md)  
 ## [sys.database_firewall_rules](sys-database-firewall-rules-azure-sql-database.md)  
@@ -221,7 +221,7 @@
 ## [sys.query_store_query](sys-query-store-query-transact-sql.md)  
 ## [sys.query_store_query_text](sys-query-store-query-text-transact-sql.md)  
 ## [sys.query_store_runtime_stats](sys-query-store-runtime-stats-transact-sql.md)  
-## [sys.query_store_wait_stats](sys-query-store-wait-stats-transact-sql.md) 
+## [sys.query_store_wait_stats](sys-query-store-wait-stats-transact-sql.md)
 ## [sys.query_store_runtime_stats_interval](sys-query-store-runtime-stats-interval-transact-sql.md)  
 
 # [スカラー型](scalar-types-catalog-views-transact-sql.md)  
@@ -254,6 +254,7 @@
 ## [sys.securable_classes](sys-securable-classes-transact-sql.md)  
 ## [sys.security_policies](sys-security-policies-transact-sql.md)  
 ## [sys.security_predicates](sys-security-predicates-transact-sql.md)  
+## [sys.sensitivity_classifications](sys-sensitivity-classifications-transact-sql.md)
 ## [sys.server_audits](sys-server-audits-transact-sql.md)  
 ## [sys.server_audit_specifications](sys-server-audit-specifications-transact-sql.md)  
 ## [sys.server_audit_specification_details](sys-server-audit-specification-details-transact-sql.md)  
