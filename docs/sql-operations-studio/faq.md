@@ -53,8 +53,7 @@ Windows、macOS、および Linux用の[!INCLUDE[name-sos](../includes/name-sos-
 
 ## <a name="is-includename-sosincludesname-sos-shortmd-open-source"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]はオープン ソースですか? 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]のソース コードと、データ プロバイダーは GitHub で利用可能です。 (Visual Studio Codeに基づいた)[!INCLUDE[name-sos](../includes/name-sos-short.md)]のフロントエンドのソースコードは、ソフトウェアを変更して使用するための権利を提供するソースコードEULAの下で使用できますが、再配布したりクラウドサービスでホストすることはできません。
-データ プロバイダーのソース コードについては、MIT ライセンス[ https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice)です。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]のソース コードと、データ プロバイダーは GitHub で利用可能です。 (Visual Studio Codeに基づいた)[!INCLUDE[name-sos](../includes/name-sos-short.md)]のフロントエンドのソースコードは、ソフトウェアを変更して使用するための権利を提供するソースコードEULAの下で使用できますが、再配布したりクラウドサービスでホストすることはできません。データ プロバイダーのソース コードについては、MIT ライセンス[ https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice)です。
 
 ## <a name="do-you-plan-to-open-source-ssms"></a>SSMSをオープンソースにする計画はありますか？
 
