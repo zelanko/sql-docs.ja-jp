@@ -1,0 +1,59 @@
+---
+title: アップグレード アドバイザーの進行状況 |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- Upgrade Advisor [SQL Server], analysis progress status
+- analyzing system [Upgrade Advisor], progress information
+- SQL Server Upgrade Advisor, analysis progress status
+- monitoring analysis progress
+- progress information [Upgrade Advisor]
+- status information [Upgrade Advisor]
+ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
+caps.latest.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e1b867360b773253ae22d24a76ce00b35c589d96
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36085135"
+---
+# <a name="upgrade-advisor-progress"></a>アップグレード アドバイザーの進行状況
+  アップグレード アドバイザー分析では、選択した各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントの分析を実行する専用アナライザーから開始します。 進捗状況が報告されるようにコンポーネントを分析し、**進行** ダイアログ ボックス。  
+  
+## <a name="options"></a>および  
+ **操作**  
+ 分析対象として選択された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントを指定します。  
+  
+ **Status**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントの進行状況インターフェイスから返された状態値が表示されます。  
+  
+ **メッセージ**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つのアナライザーから返されたエラー、失敗、または成功のメッセージが表示されます。  
+  
+> [!NOTE]  
+>  分析所要時間が非常に長い場合、その分析を停止してアップグレード アドバイザー分析ウィザードを終了してから、そのウィザードを再実行できます。 分析時間を短縮するには、スキャンするコンポーネントを少なくします。  
+  
+ 分析が完了すると、そのレポートがファイルに書き込まれます。 クリックしてレポートを表示する**レポートの起動**をこのページからレポート ビューアを起動します。 後で、レポートを表示する場合は、開くことができます、**アップグレード アドバイザー レポート ビューアー**アップグレード アドバイザー開始ページからです。  
+  
+> [!NOTE]  
+>  以前のレポートはサーバーを分析するたびに保存されています。 保存されるレポートのファイル名には、タイムスタンプが使用されます。 レポート ビューアーでは、保存されている最近 5 件のレポートを表示できます。  
+  
+## <a name="see-also"></a>参照  
+ [方法: アップグレード アドバイザーを起動](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [方法: アップグレード アドバイザー分析ウィザードを実行](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [SQL Server コンポーネント](../../../2014/sql-server/install/sql-server-components.md)   
+ [アップグレード アドバイザーのユーザー インターフェイス リファレンス](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
+ [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+  
+  

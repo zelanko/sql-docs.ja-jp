@@ -2,9 +2,10 @@
 title: Isscommandwithparameters::getparameterproperties (OLE DB) |Microsoft ドキュメント
 description: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2a8e0d02ab4aef8d9550e0ea25b6166ccbf03da5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 9c0f35cd59a670e35db6400f681187c52e4b97ef
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305611"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689995"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SSPARAMPROPS プロパティ セット構造体の配列を返します。各 UDT または XML パラメーターごとに 1 つの SSPARAMPROPS プロパティ セットが返されます。  
   
@@ -45,7 +48,7 @@ HRESULT GetParameterProperties(
  返された SSPARAMPROPS 構造体の番号が含まれるメモリへのポインター *prgParamProperties*です。  
   
  *prgParamProperties*[out]  
- SSPARAMPROPS 構造体の配列が返されるメモリへのポインター。 コンシューマーでこのメモリを解放する、プロバイダーを選択して、構造体のメモリを割り当てますこのメモリをアドレスを返します**imalloc::free**が不要になった必要がある場合、構造体。 呼び出しの前に**imalloc::free**の*prgParamProperties*、コンシューマーは、呼び出す必要がありますも**VariantClear**の*vValue*プロパティバリアントにはでの参照が含まれている場合に、メモリ リークを防ぐために各 DBPROP 構造体の BSTR などを入力します。 場合*pcParams*がゼロで出力または DB_E_ERRORSOCCURRED 以外のエラーが発生するプロバイダーは、メモリの割り当てはにより*prgParamProperties*出力に null ポインターです。  
+ SSPARAMPROPS 構造体の配列が返されるメモリへのポインター。 コンシューマーでこのメモリを解放する、プロバイダーを選択して、構造体のメモリを割り当てますこのメモリをアドレスを返します**imalloc::free**が不要になった必要がある場合、構造体。 呼び出しの前に**imalloc::free**の*prgParamProperties*、コンシューマーは、呼び出す必要がありますも**VariantClear**の*vValue*プロパティバリアントにはでの参照が含まれている場合に、メモリ リークを防ぐために各 DBPROP 構造体の BSTR などを入力します。 場合*pcParams*ゼロで出力されるか DB_E_ERRORSOCCURRED 以外のエラーが発生する、プロバイダーを選択し、メモリの割り当てはように*prgParamProperties*が出力に null ポインターです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **GetParameterProperties**メソッドは、主要な OLE DB と同じエラー コードを返します**icommandproperties::getproperties**その DB_S_ERRORSOCCURRED と db_e_errorsoccured は返す以外のメソッドにすることはできません発生します。  

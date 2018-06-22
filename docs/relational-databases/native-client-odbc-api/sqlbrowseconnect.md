@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 400097362ec6364d7a7b0d6f13cd3e62bb4d6b87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a61a74fc85bd13e442694dde91f279704d9a12d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948127"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701293"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,14 +33,14 @@ ms.locfileid: "32948127"
   
 ## <a name="level-1"></a>[レベル 1]  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|Description|  
+|Keyword|一覧が返されるかどうか|省略できるかどうか|説明|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN (DSN)|なし|いいえ|によって返されるデータ ソースの名前**SQLDataSources**です。 DSN キーワードは、DRIVER キーワードと同時に使用できません。|  
+|DSN|なし|いいえ|によって返されるデータ ソースの名前**SQLDataSources**です。 DSN キーワードは、DRIVER キーワードと同時に使用できません。|  
 |DRIVER|なし|いいえ|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー名は {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11} です。 DRIVER キーワードは、DSN キーワードと同時に使用できません。|  
   
 ## <a name="level-2"></a>[レベル 2]  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|Description|  
+|Keyword|一覧が返されるかどうか|省略できるかどうか|説明|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|はい|いいえ|データ ソースがあるネットワーク上のサーバー名。 サーバー名には「(local)」と入力することもできます。これは、ネットワークに接続されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル コピーも使用できることを意味します。|  
 |UID|いいえ|はい|ユーザー ログイン ID。|  
@@ -51,7 +50,7 @@ ms.locfileid: "32948127"
   
 ## <a name="level-3"></a>[レベル 3]  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|Description|  
+|Keyword|一覧が返されるかどうか|省略できるかどうか|説明|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|はい|はい|名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。|  
 |LANGUAGE|はい|はい|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される言語。|  
@@ -60,7 +59,7 @@ ms.locfileid: "32948127"
   
  次の属性は、呼び出すことによって設定[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)、によって返される結果セットを決定する**SQLBrowseConnect**です。  
   
-|属性|Description|  
+|属性|説明|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|を SQL_MORE_INFO_YES に設定されている場合**SQLBrowseConnect**サーバー プロパティの拡張文字列を返します。<br /><br /> によって返される拡張文字列の例を次に示します**SQLBrowseConnect**:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> この文字列では、サーバーに関するさまざまな情報がセミコロンで区切られます。 コンマは、異なるサーバー インスタンスを区切るために使用します。|  
 |SQL_COPT_SS_BROWSE_SERVER|サーバー名を指定すると場合、 **SQLBrowseConnect**は指定されたサーバーの情報を返します。 SQL_COPT_SS_BROWSE_SERVER に NULL が設定されている場合**SQLBrowseConnect**ドメイン内のすべてのサーバーの情報を返します。<br /><br /> <br /><br /> ネットワークの問題によりなお**SQLBrowseConnect**すべてのサーバーからタイムリーな応答を受信できない可能性があります。 したがって、要求ごとに返されるサーバーの一覧が異なる可能性があります。|  
@@ -72,7 +71,7 @@ ms.locfileid: "32948127"
 ## <a name="sqlbrowseconnect-support-for-service-principal-names-spns"></a>SQLBrowseConnect によるサービス プリンシパル名 (SPN) のサポート  
  接続が開いている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、SQL_COPT_SS_MUTUALLY_AUTHENTICATED および SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD が、接続を開くときに使用された認証方式に設定されます。  
   
- Spn の詳細については、次を参照してください。[サービス プリンシパル名 & #40 です。Spn & #41;でクライアント接続 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)です。  
   
 ## <a name="change-history"></a>変更履歴  
   

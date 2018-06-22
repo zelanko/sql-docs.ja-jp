@@ -2,9 +2,10 @@
 title: ICommandWithParameters |Microsoft ドキュメント
 description: ICommandWithParameters インターフェイス
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -14,15 +15,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 647c161b2a12ae530edfe610b7d3cbac3b745e50
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: c41a3885293493299f6234f3dcc0ef5edc4040be
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305099"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689115"
 ---
 # <a name="icommandwithparameters"></a>ICommandWithParameters
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   データベース エンジンが始まるの機能強化[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]期待される結果のより正確な記述を取得するには、icommandwithparameters::getparameterinfo を許可します。 以前のバージョンの CommandWithParameters::GetParameterInfo によって返される値からこれらのより正確な結果が異なる場合があります[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 詳細については、次を参照してください。[メタデータ検出](../../oledb/features/metadata-discovery.md)です。  
   
