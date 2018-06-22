@@ -20,18 +20,18 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
 ms.locfileid: "34235846"
 ---
-# <a name="what-is-includename-sosincludesname-sosmd"></a>新機能[!INCLUDE[name-sos](../includes/name-sos.md)]しますか?
+# <a name="what-is-includename-sosincludesname-sosmd"></a>新機能[!INCLUDE[name-sos](../includes/name-sos.md)]とは?
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]は SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse を管理するための Windows、macOS そして Linux で動作可能な無料ツールです。
 
 **[ダウンロードとインストール [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
 
-## <a name="transact-sql-t-sql-code-editor-with-intellisense"></a>IntelliSense を備えたコード エディターの TRANSACT-SQL (T-SQL)
+## <a name="transact-sql-t-sql-code-editor-with-intellisense"></a>IntelliSense を備えた TRANSACT-SQL (T-SQL) のコード エディター
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] エクスペリエンスを提供、キーボード フォーカスの最新の T-SQL でコーディングによって、日常的なタスクを複数のタブ ウィンドウ、豊富な T-SQL エディター、IntelliSense、キーワードの入力候補、コード スニペット、コード ナビゲーション、およびソース管理などの組み込み機能を簡単にします。(Git) との統合。 オンデマンドで T-SQL クエリを実行して、表示および text、JSON、または Excel として結果を保存します。 データの編集、整理、お気に入りのデータベース接続、および閲覧できる使い慣れたオブジェクト内のデータベース オブジェクトを参照します。 T-SQL エディターを使用する方法については、次を参照してください。[データベース オブジェクトを作成する T-SQL エディターを使用して](tutorial-sql-editor.md)です。
 
-## <a name="smart-t-sql-code-snippets"></a>スマートの T-SQL コード スニペット
+## <a name="smart-t-sql-code-snippets"></a>スマートな T-SQL のコード スニペット
 
 T-SQL コード スニペットは、データベース、テーブル、ビュー、ストアド プロシージャ、ユーザー、ログイン、ロールなどを作成し、既存のデータベース オブジェクトを更新する適切な T-SQL 構文を生成します。 開発またはテストの目的で、データベースのコピーを簡単に作成および生成し、実行するスマート スニペットを使用して作成し、スクリプトを挿入します。
 
