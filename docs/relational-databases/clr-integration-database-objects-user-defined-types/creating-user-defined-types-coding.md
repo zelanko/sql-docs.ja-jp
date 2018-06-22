@@ -3,11 +3,9 @@ title: ユーザー定義型のコーディング |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -36,12 +34,12 @@ caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 69a07f7537b1b5e35e1ff576ba47993ada7a4ce7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3a698c63fa5fc7e5a0802716b3112df31cf241f
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923367"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697903"
 ---
 # <a name="creating-user-defined-types---coding"></a>ユーザー定義型のコーディングを作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -753,6 +751,6 @@ public void Read(System.IO.BinaryReader r)
  完全なコードの一覧を**通貨**UDT を参照してください[SQL Server データベース エンジン サンプル](http://msftengprodsamples.codeplex.com/)です。  
   
 ## <a name="see-also"></a>参照  
- [ユーザー定義型を作成します。](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
+ [ユーザー定義型を作成する](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   
