@@ -34,19 +34,19 @@ ms.locfileid: "34235552"
 
 ## <a name="prerequisites"></a>前提条件
 
-このチュートリアルは、SQL Server または Azure SQL データベースに*TutorialDB*が必要です。*TutorialDB*データベースを作成するには、次のクイック スタートのいずれかを行います。
+このチュートリアルでは、SQL Server または Azure SQL Database に *TutorialDB* が必要です。*TutorialDB* データベースを作成するには、次のクイック スタートのいずれかを行います。
 
-- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]を使用して、SQL サーバーに接続し、クエリを実行する ](quickstart-sql-server.md)
-- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]を使用して、Azure SQL データベースに接続し、クエリを実行する ](quickstart-sql-database.md)
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して、SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して、Azure SQL Database に接続し、クエリを実行する](quickstart-sql-database.md)
 
 
 ## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>すぐにデータベース オブジェクトを見つけて、一般的なタスクを実行
 
-[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] はデータベース オブジェクトをすばやく検索する検索ウィジェットを提供します。結果一覧には、選択したオブジェクトに関連する、例えばテーブルのデータ編集のような一般的なタスクのためのコンテキストメニューが提供されます。
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] はデータベース オブジェクトをすばやく検索する検索ウィジェットを提供します。結果一覧には、選択したオブジェクトに関連する、例えばテーブルのデータ編集のような一般的なタスクのためのコンテキスト メニューが提供されます。
 
-1. サーバー サイド バーを開き(**Ctrl + G**)、**Databases**を展開して、**TutorialDB**選択します。 
+1. [サーバー] サイド バーを開き (**Ctrl + G**)、**[データベース]** を展開して、**[TutorialDB]** を選択します。
 
-1. **TutorialDB**を右クリックして、コンテキスト メニューの**管理**をを選択し、*TutorialDB ダッシュボード*を開きます。
+1. **[TutorialDB]** を右クリックして、コンテキスト メニューの **[管理]** を選択し、*TutorialDB ダッシュボード*を開きます。
 
    ![コンテキスト メニュー - 管理](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
