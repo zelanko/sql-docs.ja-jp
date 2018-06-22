@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ca5a14408a64c595ddbb32b8d57a636c2d8255e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 245c795097125574b56b7c70bd883db66ae24c29
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946457"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695573"
 ---
 # <a name="bcpexec"></a>bcp_exec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,10 +51,10 @@ RETCODE bcp_exec (
  *pnRowsProcessed*  
  DBINT へのポインターです。 **Bcp_exec**関数が正常にコピーされた行の数でこの DBINT を塗りつぶします。 場合*pnRowsProcessed* null では無視されます**bcp_exec**です。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SUCCEED、SUCCEED_ASYNC、または FAIL のいずれかを返します。 **Bcp_exec**すべての行がコピーされた場合、関数は SUCCEED を返します。 **bcp_exec**非同期の一括コピー操作がまだ保留中の場合は SUCCEED_ASYNC を返します。 **bcp_exec**全体の障害が発生した場合、またはエラーを生成する行の数が使用して BCPMAXERRS に指定された値に達した場合は FAIL を返します[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)です。 BCPMAXERRS の既定値は 10 です。 BCPMAXERRS オプションの影響を受けるのは、データ ファイルの行 (サーバーに送信される行以外) を読み取る間にプロバイダーで検出される構文エラーのみです。 ある行でエラーが検出されると、サーバーはバッチを中止します。 チェック、 *pnRowsProcessed*行の数のパラメーターが正常にコピーします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この関数では、データベース テーブルまたはその逆の場合、ユーザー ファイルからデータをコピーの値に応じて、 *eDirection*パラメーター [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)です。  
   
  呼び出しの前に**bcp_exec**、呼び出す**bcp_init**有効なユーザー ファイル名を持つ。 この操作を行わないと、エラーが発生します。  

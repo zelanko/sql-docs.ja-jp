@@ -2,7 +2,7 @@
 title: SQL Server の OLE DB Driver のシステム要件 |Microsoft ドキュメント
 description: SQL Server の OLE DB ドライバーの要件
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb
@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e109f228d8b902e5c34b4ed5731b80e315fffe3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 485693e8f350370a293696a09f11ba036397b15e
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32859337"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689465"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>SQL Server の OLE DB Driver のシステム要件
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -73,11 +73,11 @@ ms.locfileid: "32859337"
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<8 Kb 以下)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
-|varchar(max)|varchar|varchar|varchar|テキスト|  
-|nvarchar(max)|nvarchar|nvarchar|nvarchar|Ntext|  
+|varchar(max)|varchar|varchar|varchar|Text|  
+|nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|xml|Ntext|  
 |CLR UDT (8 KB を超える)|varbinary|udt|udt|image|  
-|date|varchar|date|date|Varchar|  
+|日付|varchar|日付|日付|Varchar|  
 |datetime2|varchar|datetime2|datetime2|Varchar|  
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
 |time|varchar|time|time|Varchar|  

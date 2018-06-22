@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 42a8ca545116bda764ed96a3093683d6e7d52bf9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7edffcdf1009199a2c2024adf7621a53e7109796
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919267"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698293"
 ---
 # <a name="altering-an-assembly"></a>アセンブリを変更します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +60,6 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
  [CLR 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [アセンブリを作成します。](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [アセンブリを削除します。](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
- [アセンブリの変更と &#40; です。Transact SQL と &#41; です。](../../../t-sql/statements/alter-assembly-transact-sql.md)  
+ [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-assembly-transact-sql.md)  
   
   
