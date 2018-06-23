@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -27,11 +26,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 902180da98af11feeccc65295d0f4c1dbdd28727
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9274c4cb2b6f4381a0d4fe89ec518a9f73dcd768
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695943"
 ---
 # <a name="using-user-defined-types"></a>ユーザー定義型の使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -53,13 +53,13 @@ ms.lasthandoff: 05/19/2018
 |データ型|SQL Server の<br /><br /> **UDT**|SQL Server の<br /><br /> **UDT 以外**|サーバーから<br /><br /> **UDT**|サーバーから<br /><br /> **UDT 以外**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|サポートされている<sup>6</sup>|エラー<sup>1</sup>|サポートされている<sup>6</sup>|エラー<sup>5</sup>|  
-|DBTYPE_BYTES|サポートされている<sup>6</sup>|N/A<sup>2</sup>|サポートされている<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|サポートされている<sup>3、6</sup>|N/A<sup>2</sup>|サポートされている<sup>4、6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|サポートされている<sup>3、6</sup>|N/A<sup>2</sup>|サポートされている<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|サポートされている<sup>3、6</sup>|N/A<sup>2</sup>|サポートされている<sup>4、6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|サポートされていません|N/A<sup>2</sup>|サポートされていません|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|サポートされている<sup>6</sup>|N/A<sup>2</sup>|サポートされている<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|サポートされている<sup>3、6</sup>|N/A<sup>2</sup>|なし|N/A<sup>2</sup>|  
+|DBTYPE_BYTES|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_WSTR|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4、6</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_BSTR|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_STR|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4、6</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|サポートされていません|該当なし<sup>2</sup>|サポートされていません|該当なし<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4</sup>|該当なし<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|なし|該当なし<sup>2</sup>|  
   
  <sup>1</sup>サーバー以外の型で dbtype_udt 型が指定された場合**icommandwithparameters::setparameterinfo**アクセサーの型が DBTYPE_UDT と、ステートメントが実行されるときにエラーが発生した (DB_E_ERRORSOCCURRED 以外の場合は、パラメーターの状態は dbstatus_e_badaccessor になります) です。 それ以外の場合、データはサーバーに送信されますが、サーバーからは、UDT がパラメーターのデータ型に暗黙的に変換されないことを示すエラーが返されます。  
   
@@ -85,12 +85,12 @@ ms.lasthandoff: 05/19/2018
  OLE DB core services で提供されるデータ変換 (**IDataConvert**) は、dbtype_udt 型に適用できません。 また、その他のバインドもサポートされません。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 行セットに関する追加事項と変更事項  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、新しい値が追加または多くの主要な OLE DB スキーマ行セットを変更します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、新しい値が追加または多くの主要な OLE DB スキーマ行セットを変更します。  
   
 #### <a name="the-procedureparameters-schema-rowset"></a>PROCEDURE_PARAMETERS スキーマ行セット  
  PROCEDURE_PARAMETERS スキーマ行セットには、次の列が追加されました。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|3 部構成の名前の識別子。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|3 部構成の名前の識別子。|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/19/2018
 #### <a name="the-sqlassemblies-schema-rowset"></a>SQL_ASSEMBLIES スキーマ行セット  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、新しいプロバイダー固有のスキーマ行セット登録済み Udt を説明するを公開します。 ASSEMBLY_SERVER を DBTYPE_WSTR 型として指定することはできますが、行セットには格納されません。 指定しない場合、行セットでは既定で現在のサーバーが使用されます。 次の表に、SQL_ASSEMBLIES スキーマ行セットの定義を示します。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|このデータ型を含むアセンブリのカタログ名。|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|このデータ型を含むアセンブリのスキーマ名 (所有者の名前)。 アセンブリのスコープはスキーマではなくデータベースによって決まりますが、アセンブリには依然として所有者が存在します。|  
@@ -112,7 +112,7 @@ ms.lasthandoff: 05/19/2018
 #### <a name="the-sqlassemblies-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES スキーマ行セット  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、指定されたサーバーのアセンブリの依存関係を説明する新しいプロバイダー固有のスキーマ行セットを公開します。 ASSEMBLY_SERVER は呼び出し元により DBTYPE_WSTR 型として指定することができますが、行セットには格納されません。 指定しない場合、行セットでは既定で現在のサーバーが使用されます。 次の表に、SQL_ASSEMBLY_DEPENDENCIES スキーマ行セットの定義を示します。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|このデータ型を含むアセンブリのカタログ名。|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|このデータ型を含むアセンブリのスキーマ名 (所有者の名前)。 アセンブリのスコープはデータベースによって、スキーマではなく、所有者は、ここに反映されますがまだがあります。|  
@@ -122,7 +122,7 @@ ms.lasthandoff: 05/19/2018
 #### <a name="the-sqlusertypes-schema-rowset"></a>SQL_USER_TYPES スキーマ行セット  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが新しいスキーマ行セット、どのような場合、SQL_USER_TYPES を公開する、指定したサーバーの登録済み Udt が追加されます。 UDT_SERVER は、呼び出し元により DBTYPE_WSTR 型として指定される必要がありますが、行セットには格納されません。 次の表に、SQL_USER_TYPES スキーマ行セットの定義を示します。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合、このプロパティは、UDT が定義されているカタログ名を指定する文字列です。|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合、このプロパティは、UDT が定義されているスキーマ名を指定する文字列です。|  
@@ -132,7 +132,7 @@ ms.lasthandoff: 05/19/2018
 #### <a name="the-columns-schema-rowset"></a>COLUMNS スキーマ行セット  
  COLUMNS スキーマ行セットには、次の列が追加されました。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合、このプロパティは、UDT が定義されているカタログ名を指定する文字列です。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合、このプロパティは、UDT が定義されているスキーマ名を指定する文字列です。|  
@@ -140,12 +140,12 @@ ms.lasthandoff: 05/19/2018
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|型名の前に名前空間を付けた完全な型名 (AQN) (該当する場合)。|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB プロパティ セットに関する追加事項と変更事項  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client は、新しい値を追加またはに多くの主要な OLE DB プロパティのセットを変更します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、新しい値を追加またはに多くの主要な OLE DB プロパティのセットを変更します。  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER プロパティ セット  
  OLE DB で Udt をサポートするために[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client は、次の値を含む新しい DBPROPSET_SQLSERVERPARAMETER プロパティ セットを実装します。  
   
-|名前|型|Description|  
+|名前|型|説明|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|3 部構成の名前の識別子。<br /><br /> UDT パラメーターの場合、このプロパティは、ユーザー定義型が定義されているカタログ名を指定する文字列です。|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|3 部構成の名前の識別子。<br /><br /> UDT パラメーターの場合、このプロパティは、ユーザー定義型が定義されているスキーマ名を指定する文字列です。|  
@@ -156,7 +156,7 @@ ms.lasthandoff: 05/19/2018
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN プロパティ セット  
  内のテーブルの作成をサポートする、 **ITableDefinition**インターフェイス、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、DBPROPSET_SQLSERVERCOLUMN プロパティ セットに次の 3 つの新しい列を追加します。  
   
-|名前|Description|型|Description|  
+|名前|説明|型|説明|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT が定義されているカタログ名を指定する文字列です。|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|DBTYPE_UDT 型の列の場合、このプロパティは、UDT が定義されているスキーマ名を指定する文字列です。|  
@@ -176,10 +176,10 @@ ms.lasthandoff: 05/19/2018
  UDT の定義がテーブルと異なるデータベースにある場合、SSPROP_COL_UDT_CATALOGNAME プロパティと SSPROP_COL_UDT_SCHEMANAME プロパティの両方を指定する必要があります。  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB インターフェイスに関する追加事項と変更事項  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、新しい値が追加または多くの主要な OLE DB インターフェイスを変更します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、新しい値が追加または多くの主要な OLE DB インターフェイスを変更します。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters インターフェイス  
- OLE DB で Udt をサポートするために[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client などの追加、変更の数を実装して、 **ISSCommandWithParameters**インターフェイスです。 この新しいインターフェイスが、主要な OLE DB インターフェイスから継承**ICommandWithParameters**です。 継承される 3 つのメソッドだけでなく**ICommandWithParameters**です。**GetParameterInfo**、 **MapParameterNames**、および**SetParameterInfo**です。**ISSCommandWithParameters**提供、 **GetParameterProperties**と**SetParameterProperties**サーバー固有のデータ型の処理に使用されるメソッド。  
+ OLE DB で Udt をサポートするために[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client などの追加、変更の数を実装して、 **ISSCommandWithParameters**インターフェイスです。 この新しいインターフェイスが、主要な OLE DB インターフェイスから継承**ICommandWithParameters**です。 継承される 3 つのメソッドだけでなく**ICommandWithParameters**です。**GetParameterInfo**、 **MapParameterNames**、および**SetParameterInfo**です。**ISSCommandWithParameters**提供、 **GetParameterProperties**と**SetParameterProperties**サーバー固有の処理に使用する方法データ型。  
   
 > [!NOTE]  
 >  **ISSCommandWithParameters**インターフェイスもを使用する、新しい SSPARAMPROPS 構造体。  
@@ -187,7 +187,7 @@ ms.lasthandoff: 05/19/2018
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset インターフェイス  
  加え、 **ISSCommandWithParameters**インターフェイス、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、呼び出し元から返される行セットに新しい値を追加するも、 **icolumnsrowset::getcolumnrowset**メソッド次のようにします。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT カタログ名の識別子。|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT スキーマ名の識別子。|  
@@ -214,6 +214,6 @@ ms.lasthandoff: 05/19/2018
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [ISSCommandWithParameters (&) #40";"OLE DB"&"#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

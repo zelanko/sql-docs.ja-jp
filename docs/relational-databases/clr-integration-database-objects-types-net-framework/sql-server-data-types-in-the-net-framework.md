@@ -3,11 +3,9 @@ title: .NET Framework での SQL Server データ型 |Microsoft ドキュメン�
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,12 +22,12 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 58efbce895ad0e06521c59941dc49826629343b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe3a5c99e2c1e9bf569ecdbb1ab31d683d340206
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917854"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702053"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework での SQL Server データ型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +35,13 @@ ms.locfileid: "32917854"
   
  このセクションのトピックでは、次の内容について説明します。  
   
- [Null 値許容と 3 値論理比較](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
+ [NULL 値の許容と 3 値論理比較](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
  CLR (共通言語ランタイム) 統合データ型での NULL 値の扱い方について説明します。  
   
  [照合順序と CLR 統合データ型](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  CLR 統合での照合順序の扱い方について説明します。  
   
- [ラージ オブジェクト & #40; の処理LOB & #41;CLR でのパラメーター](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [ラージ オブジェクトを処理&#40;LOB&#41; 、CLR でのパラメーター](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と CLR の間で LOB 型を渡す方法について説明します。  
   
  [CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  

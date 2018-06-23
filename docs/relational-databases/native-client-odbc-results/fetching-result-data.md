@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2909c4472a4ab8dee56c37da3cdf23db1ee3e512
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cb4046f669a3d35de7c99b0d1d754bd85f067f6
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946817"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695874"
 ---
 # <a name="fetching-result-data"></a>結果データのフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "32946817"
   
  SQL_C_DEFAULT を使用して C 変数のデータ型を指定する場合は注意が必要です。 SQL_C_DEFAULT は、C 変数のデータ型と、列やパラメーターの SQL データ型を一致させることを指定します。 SQL_C_DEFAULT が指定されている場合、 **ntext**、 **nchar**、または**nvarchar**列で、Unicode データは、アプリケーションに返されます。 そのため、アプリケーションが Unicode データを処理するようにコーディングされていないと、さまざまな問題が発生する可能性があります。 同じ種類の問題が発生する可能性、 **uniqueidentifier** (SQL_GUID) データ型。  
   
- **テキスト**、 **ntext**、および**イメージ**データが大きすぎて、単一のプログラム変数には、通常と処理では通常**SQLGetData**の代わりに**SQLBindCol**です。 サーバー カーソルを使用するときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーはバインドされていないため、データを転送しないように最適化されて**テキスト**、 **ntext**、または**イメージ**に列を行をフェッチした時刻。 **テキスト**、 **ntext**、または**イメージ**データが実際には取得されません、サーバーからアプリケーションの問題まで**SQLGetData**列にします。  
+ **テキスト**、 **ntext**、および**イメージ**データが大きすぎて、単一のプログラム変数には、通常と処理では通常**SQLGetData**の代わりに**SQLBindCol**です。 サーバー カーソルを使用するときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーはバインドされていないため、データを転送しないように最適化されて**テキスト**、 **ntext**、または**イメージ**に列を行をフェッチした時刻。 **テキスト**、 **ntext**、または**イメージ**データが実際には取得されません、サーバーからアプリケーションの問題まで**SQLGetData**用、列です。  
   
  この最適化は、アプリケーションに適用することができますようにありません**テキスト**、 **ntext**、または**イメージ**ユーザーは、カーソルを上下スクロール中にデータが表示されます。 アプリケーションが呼び出すことができます、ユーザーは、行を選択し、 **SQLGetData**を取得する、**テキスト**、 **ntext**、または**イメージ**データ。 これにより、送信、**テキスト**、 **ntext**、または**イメージ**の任意の行のデータ、ユーザーが選択されていないと非常に大量のデータの転送を保存することができます。  
   

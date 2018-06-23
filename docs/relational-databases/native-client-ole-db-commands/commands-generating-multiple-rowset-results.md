@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - commands [OLE DB]
 - multiple-rowset results
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d3284c932bd57be64bfb3a6d43eafc43f442859f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a62bc78f4c9d75ff0c4b179f7998f5d0cf23773
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32944677"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696993"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>複数行セットの結果を生成するコマンド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +53,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [IMultipleResults を使用して、複数の結果セットを処理するには](../../relational-databases/native-client-ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
+-   [IMultipleResults を使用した複数の結果セットの処理](../../relational-databases/native-client-ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
 ## <a name="see-also"></a>参照  
  [[コマンド]](../../relational-databases/native-client-ole-db-commands/commands.md)  

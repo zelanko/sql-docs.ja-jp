@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - information properties [OLE DB]
 - OLE DB data source properties [SQL Server Native Client]
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da0ace245849432543b922f6c39aa2b4f40867d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c473799ec85cd886e4331fdef20a185db7cee81
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948697"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694863"
 ---
 # <a name="data-source-information-properties"></a>データ ソース情報のプロパティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +33,7 @@ ms.locfileid: "32948697"
 
   プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERDATASOURCEINFO には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにより、次のデータ ソース情報プロパティが定義されます。  
   
-|プロパティ ID|Description|  
+|プロパティ ID|説明|  
 |-----------------|-----------------|  
 |SSPROP_COLUMNLEVELCOLLATION|型 : VT_BOOL<br /><br /> R/W: 読み取り<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明 : 列の照合順序がサポートされるかどうかの判断に使用されます。<br /><br /> VARIANT_TRUE: 列レベルの照合順序がサポートされます。<br /><br /> VARIANT_FALSE: 列レベルの照合順序はサポートされません。|  
 |SSPROP_UNICODELCID|型 : VT_I4 R/W: 読み取り<br /><br /> 説明 : Unicode ロケール ID です。<br /><br /> これは、Unicode データの並べ替えに使われるロケールです。|  
@@ -43,11 +41,11 @@ ms.locfileid: "32948697"
   
  プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERSTREAM には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにより、次の追加プロパティが定義されます。  
   
-|プロパティ ID|Description|  
+|プロパティ ID|説明|  
 |-----------------|-----------------|  
 |SSPROP_STREAM_XMLROOT|型 : VT_BSTR R/W: 読み取り/書き込み<br /><br /> 説明: FOR XML クエリの結果に、整形式でないドキュメントを許可します。 このプロパティが指定されている場合の結果、' を選択しています. for XML' クエリは、整形式 XML ドキュメントを取得するには、このプロパティによって提供される、ルート タグにラップします。 クエリがブラウザーから実行されている場合、結果の読み込み時にブラウザーがパーサー エラーを表示する場合があります。 このエラーを回避するために、SQL ISAPI はキーワード ROOT をサポートしています。 このキーワードは SSPROP_STREAM_XMLROOT プロパティにマップされます。|  
   
 ## <a name="see-also"></a>参照  
- [データ ソース オブジェクト &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [データ ソース オブジェクト&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

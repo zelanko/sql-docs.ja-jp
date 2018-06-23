@@ -3,11 +3,9 @@ title: ホスト保護属性と CLR 統合プログラミング |Microsoft ド�
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +20,12 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8c844f2f5a3491c7eea71b6d3ffab7efff254a97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4230a545122968a6b87005f4d10ad8f72ce03df2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921254"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699243"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>ホスト保護属性と CLR 統合プログラミング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +50,7 @@ ms.locfileid: "32921254"
   
 -   サーバー プロセス自体の不安定化につながる脅威  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型またはメンバーを持つの使用は許可されていません、 **HostProtectionAttribute**を指定する、 **System.Security.Permissions.HostProtectionResource**列挙の値が**ExternalProcessMgmt**、 **ExternalThreading**、 **MayLeakOnAbort**、 **SecurityInfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **SharedState**、**同期**、または**UI**. これにより、状態の共有を可能にしたり、同期を実行するメンバーをアセンブリから呼び出すことができなくなります。さらに、終了時にリソース リークを発生させたり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性に影響を与える可能性があるメンバーの呼び出しも禁止されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disallows the use of a type or member that has a **HostProtectionAttribute** that specifies a **System.Security.Permissions.HostProtectionResource** enumeration with a value of **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**, or **UI**. これにより、状態の共有を可能にしたり、同期を実行するメンバーをアセンブリから呼び出すことができなくなります。さらに、終了時にリソース リークを発生させたり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性に影響を与える可能性があるメンバーの呼び出しも禁止されます。  
   
 ### <a name="disallowed-types-and-members"></a>許可されない型およびメンバー  
  次のトピックでは、特定の型とメンバーが**HostProtectionResource**によって値が許可されない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
@@ -64,7 +62,7 @@ ms.locfileid: "32921254"
  [Microsoft.VisualBasic.dll の許可されない型およびメンバー](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  
  HPA の値が許可されない Microsoft.VisualBasic.dll の型およびメンバーの一覧を示します。  
   
- [Mscorlib.dll の許可されない型およびメンバー](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)  
+ [mscorlib.dll の許可されない型およびメンバー](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)  
  HPA の値が許可されない mscorlib.dll の型およびメンバーの一覧を示します。  
   
  [System.dll の許可されない型およびメンバー](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)  
@@ -79,6 +77,6 @@ ms.locfileid: "32921254"
 ## <a name="see-also"></a>参照  
  [CLR 統合のコード アクセス セキュリティ](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [CLR 統合プログラミング モデルの制限](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
- [アセンブリを作成します。](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [アセンブリの作成](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
   
   

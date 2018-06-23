@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - SQLExecDirect function
 - statements [ODBC], direct execution
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
-caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 11dc0781c0d2bf8f0f69e6b848eee4f60c0a56ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32435131c175644146fc87b6746d805b8650104f
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945397"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699023"
 ---
 # <a name="direct-execution"></a>直接実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,6 +49,6 @@ ms.locfileid: "32945397"
  すべてのステートメントが実行される場合**SQLExecDirect**はこれらの規則を使用してコード化された[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]営業案件が発生したときに、実行プランを再利用することができます。  
   
 ## <a name="see-also"></a>参照  
- [実行中のステートメント (&) #40; ODBC & #41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [ステートメントを実行する&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -22,12 +20,12 @@ caps.latest.revision: 48
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 597645c52f37034ba4f294784cbde2a7489516d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2be82adf07487e66bed43a16af289e30d751a414
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923937"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699623"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>共通言語ランタイム (CLR) 統合を使用したデータベース オブジェクトの構築
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,6 +76,6 @@ ms.locfileid: "32923937"
  CLR トリガーの実装方法と使用方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [共通言語ランタイム & #40 です。CLR & #41;統合の概要](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [共通言語ランタイム&#40;CLR&#41;の統合の概要](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

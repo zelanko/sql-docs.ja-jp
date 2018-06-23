@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -21,12 +19,12 @@ caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c4883867e93c1f8a9e782f1e0a70d8ca6f53160
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 83dbc743bc6c11e0ab6e197426f5012573b8badf
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918797"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694193"
 ---
 # <a name="managing-clr-integration-assemblies"></a>CLR 統合アセンブリの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,15 +32,15 @@ ms.locfileid: "32918797"
   
  アセンブリ情報が格納されている、 **sys.assembly_files**アセンブリがインストールされているデータベースのテーブルにします。 **Sys.assembly_files**テーブルには、次の列が含まれています。  
   
-|列|Description|  
+|[列]|説明|  
 |------------|-----------------|  
 |assembly_id|アセンブリに定義される ID。 この番号は、同じアセンブリに関連するすべてのオブジェクトに割り当てられます。|  
-|name|オブジェクトの名前。|  
+|NAME|オブジェクトの名前。|  
 |file_id|最初のオブジェクトに関連付けられている各オブジェクトを識別する番号を指定した**assembly_id** 1 の値が指定されています。 複数のオブジェクトが同じ関連付けられている場合**assembly_id**、その後各**file_id**値が 1 増えます。|  
 |content|アセンブリまたはファイルの 16 進数表記。|  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [アセンブリを作成します。](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [アセンブリの作成](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] における SAFE、EXTERNAL_ACCESS、および UNSAFE CLR アセンブリの作成について説明します。  
   
  [アセンブリの変更](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)  

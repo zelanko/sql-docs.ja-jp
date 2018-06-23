@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4979bd919a8083c200464a444f4223d4bad103f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74a37a2aa5be3d437cfdbe286c6176ac2d8f6007
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947267"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696183"
 ---
 # <a name="process-odbc-errors-odbc"></a>ODBC エラーの処理 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +33,7 @@ ms.locfileid: "32947267"
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>説明  
  このサンプルでは、[SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) を呼び出して標準的な ODBC 情報を取得する簡単なエラー ハンドラーを示します。 このサンプルでは有効な接続を調べ、存在する場合は、**SQLGetDiagField** を呼び出し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバー固有の診断フィールドを取得します。 このサンプルは IA64 ではサポートされていません。  
   
  このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
@@ -245,6 +243,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ODBC の操作方法に関するトピック](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+ [ODBC の使用法に関するトピック](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

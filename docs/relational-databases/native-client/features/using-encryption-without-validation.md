@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -22,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8ae3205cf4a530b958582f9efdd4644930950a76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8be993a5f06a5d76021755e6dca8b2544616d4b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951527"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696773"
 ---
 # <a name="using-encryption-without-validation"></a>検証を伴わない暗号化の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,8 +51,8 @@ ms.locfileid: "32951527"
 |いいえ|なし|はい|はい|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
 |はい|いいえ|無視|無視|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
 |はい|はい|いいえ (既定値)|無視|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
-|はい|[ユーザー アカウント制御]|はい|いいえ (既定値)|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
-|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|暗号化は常に発生するが自己署名サーバー証明書を使用する場合があります。|  
+|はい|はい|はい|いいえ (既定値)|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
+|はい|はい|はい|はい|暗号化は常に発生するが自己署名サーバー証明書を使用する場合があります。|  
 ||||||
 
 > [!CAUTION]

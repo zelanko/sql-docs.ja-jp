@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -32,12 +30,12 @@ caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 603b0d66a4a8b7f406708442f18e9c98c4414b26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6292f8fd453b0031b36e1c9a244c442e94d323f1
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922477"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697513"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 統合アーキテクチャの CLR ホスト環境
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +68,10 @@ ms.locfileid: "32922477"
   
  このようにスレッド処理、スケジュール設定、およびメモリ管理のモデルが異なるため、数千の同時実行ユーザー セッションをサポートするまで規模が拡大された RDBMS (リレーショナル データベース管理システム) では統合が課題になります。 アーキテクチャでは、スレッド処理、メモリ、および同期プリミティブの API (アプリケーション プログラミング インターフェイス) を直接呼び出すユーザー コードによってシステムのスケーラビリティが損なわれないことを保証する必要があります。  
   
-###### <a name="security"></a>セキュリティ  
+###### <a name="security"></a>Security  
  データベースで実行されるユーザー コードがテーブルや列などのデータベース オブジェクトにアクセスする際には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の認証規則と承認規則に従う必要があります。 また、データベース管理者は、データベースで実行しているユーザー コードからファイルやネットワーク アクセスなどのオペレーティング システム リソースへのアクセスを制御できる必要があります。 (Transact-SQL などの非マネージ言語とは異なり) このようなリソースにアクセスする API が用意されているマネージ プログラミング言語ではこのことが重要になります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] プロセス外のコンピューター リソースにアクセスするユーザー コードには、システムによりセキュリティで保護された方法が提供される必要があります。 詳細については、「 [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)」を参照してください。  
   
-###### <a name="performance"></a>パフォーマンス  
+###### <a name="performance"></a>[パフォーマンス]  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]で実行されるマネージ ユーザー コードと、サーバーの外部で実行されるマネージ ユーザー コードのコンピューター処理パフォーマンスは同程度になる必要があります。 マネージ ユーザー コードからのデータ アクセスは、ネイティブ [!INCLUDE[tsql](../../includes/tsql-md.md)] ほど高速ではありません。 詳細については、次を参照してください。 [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)です。  
   
 ## <a name="clr-services"></a>CLR サービス  
@@ -132,7 +130,7 @@ ms.locfileid: "32922477"
 |権限セット|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |コード アクセス セキュリティ|実行のみ|実行および外部リソースへのアクセス|[無制限]|  
 |プログラミング モデルの制限事項|はい|はい|制限はありません。|  
-|検証可能性の要件|はい|[ユーザー アカウント制御]|いいえ|  
+|検証可能性の要件|はい|はい|いいえ|  
 |ネイティブ コードを呼び出す機能|いいえ|いいえ|はい|  
   
  SAFE は、許可されているプログラミング モデルの中でも多くの制限事項が関連付けられており、最も信頼性が高く、セキュリティで保護されたモードです。 SAFE アセンブリには、実行、計算の実行、およびローカル データベースへのアクセスを行うには十分な権限が許可されます。 SAFE アセンブリは検証可能なタイプ セーフである必要があり、アンマネージ コードを呼び出すことはできません。  

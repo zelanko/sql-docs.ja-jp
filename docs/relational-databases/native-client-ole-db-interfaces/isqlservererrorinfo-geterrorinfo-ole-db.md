@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 564ce1ad8361e2eddbc858ce78fc17e3cf3cac75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4749733e83180f4d2f49a6c18bfade0cdbdacc2e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949107"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699593"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +62,7 @@ HRESULT GetErrorInfo(
  E_OUTOFMEMORY  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、要求を完了するための十分なメモリを割り当てられませんでした。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの SSERRORINFO 文字列と OLECHAR 文字列、コンシューマーが渡したポインターを通じて返されるメモリを割り当てます。 コンシューマーを使用してこのメモリを解放する必要があります、 **imalloc::free**メソッド エラー データにアクセスする必要がなくなったときにします。  
   
  SSERRORINFO 構造体は、次のように定義されています。  
@@ -83,7 +81,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|メンバー|Description|  
+|Member|説明|  
 |------------|-----------------|  
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー メッセージ。 を介して、メッセージが返されます、 **ierrorinfo::getdescription**メソッドです。|  
 |*pwszServer*|エラーが発生した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
@@ -96,7 +94,7 @@ SSERRORINFO;
  構造のポインターで返される文字列内のアドレスを参照する、*割り当てません*引数。  
   
 ## <a name="see-also"></a>参照  
- [ISQLServerErrorInfo (&) #40";"OLE DB"&"#41;](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
- [RAISERROR と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

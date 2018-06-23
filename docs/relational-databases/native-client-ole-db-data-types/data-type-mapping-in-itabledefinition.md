@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,23 +18,22 @@ helpviewer_keywords:
 - CreateTable function
 - OLE DB, data types
 ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f87118e72b1ab36a72c8ee28369551792e37d677
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a264690f4915e19f8a3d3eefae39377704f2b5e0
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946867"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701503"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition でのデータ型のマッピング
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  使用してテーブルを作成するときに、 **itabledefinition::createtable** 、関数、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコンシューマーが指定できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型、 *pwszTypeName*渡される DBCOLUMNDESC 配列のメンバーです。 OLE DB データ型で表されるマッピングのコンシューマーは、名前によって列のデータ型を指定する場合、 *wType* DBCOLUMNDESC 構造体のメンバーは無視されます。  
+  使用してテーブルを作成するときに、 **itabledefinition::createtable** 、関数、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコンシューマーが指定できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型、 *pwszTypeName*渡される DBCOLUMNDESC 配列のメンバーです。 OLE DB データ型で表されるマッピングのコンシューマーは、名前によって列のデータ型を指定する場合、 *wType* DBCOLUMNDESC 構造体のメンバーは無視されます。  
   
  DBCOLUMNDESC 構造体を使用して OLE DB データ型を持つ新しい列のデータ型を指定するときに*wType* 、メンバー、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが OLE DB データ型を次のようにマップします。  
   
@@ -61,6 +59,6 @@ ms.locfileid: "32946867"
 >  新しいテーブルの作成時には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって上記の表に示した OLE DB データ型の列挙値のみがマップされます。 それ以外の OLE DB データ型の列が含まれたテーブルを作成すると、エラーが発生します。  
   
 ## <a name="see-also"></a>参照  
- [データ型 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
+ [データ型&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
   

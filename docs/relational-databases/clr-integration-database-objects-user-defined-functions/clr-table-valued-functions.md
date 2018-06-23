@@ -3,11 +3,9 @@ title: CLR テーブル値関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -23,12 +21,12 @@ caps.latest.revision: 88
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6f1881b43a716c8c6d6573338a27d7e93d919ada
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f6d19c3647cb38c7174f87c685fb3abb1d4f709
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921617"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696103"
 ---
 # <a name="clr-table-valued-functions"></a>CLR テーブル値関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +48,7 @@ ms.locfileid: "32921617"
  テーブル値関数は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework アセンブリのクラスのメソッドとして実装します。 テーブル値関数コードを実装する必要があります、 **IEnumerable**インターフェイスです。 **IEnumerable**インターフェイスは .NET Framework で定義されています。 表す型の配列と .NET Framework のコレクションで既に実装、 **IEnumerable**インターフェイスです。 このため、コレクションまたは配列を結果セットに変換するテーブル値関数を簡単に記述できます。  
   
 ## <a name="table-valued-parameters"></a>テーブル値パラメーター  
- テーブル値パラメーターとは、プロシージャや関数に渡されるユーザー定義のテーブル型です。テーブル値パラメーターを使用すると、複数行のデータを効率的にサーバーに渡すことができます。 テーブル値パラメーターの機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 さらに、サーバーへのラウンド トリップの回数を減らすのにも有用です。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データをテーブル値パラメーターとしてサーバーに送信できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスで実行されているマネージ ストアド プロシージャやマネージ関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター (&) #40";"データベース エンジン"&"#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)です。  
+ テーブル値パラメーターとは、プロシージャや関数に渡されるユーザー定義のテーブル型です。テーブル値パラメーターを使用すると、複数行のデータを効率的にサーバーに渡すことができます。 テーブル値パラメーターの機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 さらに、サーバーへのラウンド トリップの回数を減らすのにも有用です。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データをテーブル値パラメーターとしてサーバーに送信できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスで実行されているマネージ ストアド プロシージャやマネージ関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 テーブル値パラメーターの詳細については、「[テーブル値パラメーターの使用 &#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)」を参照してください。  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>出力パラメーターとテーブル値関数  
  出力パラメーターを使用すると、テーブル値関数から情報を返すことができます。 実装コードのテーブル値関数の対応するパラメーターは、引数として参照渡しのパラメーターを使用する必要があります。 Visual Basic は出力パラメーターを Visual C# と同様にはサポートしていません。 参照渡しでパラメーターを指定する必要がありますを適用する、 \<Out() > 属性を次のように、出力パラメーターを表します。  

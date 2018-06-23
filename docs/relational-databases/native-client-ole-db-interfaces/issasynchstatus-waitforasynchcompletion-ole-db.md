@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0ab8eec0f1eabc796a4acac57abd0af86d8c1982
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 510e3fdfe1922016e7491f34b23f1f7d67f0d311
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949037"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697833"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,9 +59,9 @@ HRESULT WaitForAsynchCompletion(
  指定したタイムアウトに達しても、操作が完了していません。  
   
 > [!NOTE]  
->  上記のリターン コード値に加えて、 **issasynchstatus::waitforasynchcompletion**メソッドには、主要な OLEDB によって返されるリターン コード値もサポートしています**icommand::execute**と**idbinitialize::initialize**メソッドです。  
+>  上記のリターン コード値に加えて、 **issasynchstatus::waitforasynchcompletion**メソッドには、主要な OLEDB によって返されるリターン コード値もサポートしています**icommand::execute**と**Idbinitialize::initialize**メソッドです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Issasynchstatus::waitforasynchcompletion**メソッドは、タイムアウト値 (ミリ秒単位) が経過するか、保留中の操作が完了するまでは返されません。 **コマンド**オブジェクトには、 **CommandTimeout**秒数を制御するプロパティ、クエリは、タイムアウト前に実行されます。**CommandTimeout**と組み合わせて使用する場合、プロパティは無視されます**issasynchstatus::waitforasynchcompletion**メソッドです。  
   
  非同期操作では、タイムアウト プロパティが無視されます。 タイムアウト パラメーター **issasynchstatus::waitforasynchcompletion**制御は、呼び出し元に返されるまでの経過時間の最大サイズを指定します。 タイムアウトが発生すると、DB_S_ASYNCHRONOUS が返されます。 タイムアウトによって非同期操作が取り消されることはありません。 タイムアウト期間内に完了しない非同期操作をアプリケーションで取り消す必要がある場合、タイムアウトを待機後、DB_S_ASYNCHRONOUS が返されたときに明示的に操作を取り消す必要があります。  
@@ -79,6 +77,6 @@ HRESULT WaitForAsynchCompletion(
   
 ## <a name="see-also"></a>参照  
  [非同期操作を実行します。](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus (&) #40";"OLE DB"&"#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

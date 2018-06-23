@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 174c487c16f9e76fec6493dac0c77db15394df8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4411473684e4882e9b3f83f72443567045343646
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948237"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703753"
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,10 +67,10 @@ RETCODE bcp_init (
  *eDirection*  
  コピーの方向です。この値は DB_IN または DB_OUT になります。 DB_IN は、プログラム変数またはユーザー ファイルからテーブルへのコピーを示します。 DB_OUT は、データベース テーブルからユーザー ファイルへのコピーを示します。 DB_OUT を指定する場合は、ユーザー ファイル名を指定する必要があります。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  呼び出す**bcp_init**他の一括コピー関数を呼び出す前にします。 **bcp_init**ワークステーション間でデータの一括コピーに必要な初期化を実行し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
  **Bcp_init**関数は、一括コピー関数で使用できる ODBC 接続ハンドルと共に指定する必要があります。 ハンドルを有効にするには、 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_BCP を SQL_BCP_ON に設定する、割り当て済みですが、接続されていない接続ハンドルの使用。 接続済みのハンドルの属性を割り当てようとすると、エラーが発生します。  

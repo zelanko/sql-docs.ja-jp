@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -16,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b0d537e3762c9eb295cdd4d7dccf508beed8e59e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 402730cba419ad49c5be791fefd7a5b2a7971e98
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949857"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700303"
 ---
 # <a name="metadata-discovery"></a>メタデータの検出
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "32949857"
   
  使用して、アプリケーションを開発する場合は[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client に[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]サーバー バージョンへの接続がよりも前[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]、メタデータ検出機能は、サーバーのバージョンに対応します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では次の bcp 関数が機能強化され、メタデータ検出機能が向上しています。  
   
 -   [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  

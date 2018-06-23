@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 21308fe760cab1975261de33722a0a29186bcb82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75acfcf2d519db920b7fa7f9b4b3115ea4f8c981
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946048"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700703"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "32946048"
   
  次の表に、によって返される結果セットとどのように処理する拡張されている列、 **udt**と**xml**データ型を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー。  
   
-|列名|Description|  
+|列名|説明|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|UDT (ユーザー定義型) を含むカタログの名前を返します。|  
 |SS_UDT_SCHEMA_NAME|UDT を含むスキーマの名前を返します。|  
@@ -72,7 +71,7 @@ ms.locfileid: "32946048"
   
  SS_TYPE_CATALOG_NAME および SS_TYPE_SCHEMA_NAME は、ODBC 仕様に準拠して、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で追加されたドライバー固有のすべての列の前、かつ ODBC 自体によって指定されるすべての列の後に作成されます。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)です。  
+ テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)です。  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>SQLProcedureColumns による機能強化された日付と時刻のサポート  
  日付/時刻型に対して返される値は、次を参照してください。[カタログ メタデータ](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)です。  
@@ -80,7 +79,7 @@ ms.locfileid: "32946048"
  一般的な情報について、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)です。  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>SQLProcedureColumns による大きな CLR UDT のサポート  
- **SQLProcedureColumns**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)です。  
+ **SQLProcedureColumns**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)です。  
   
 ## <a name="see-also"></a>参照  
  [SQLProcedureColumns 関数](http://go.microsoft.com/fwlink/?LinkId=59363)   

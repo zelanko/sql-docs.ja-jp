@@ -2,9 +2,10 @@
 title: SQL Server テーブルを作成 |Microsoft ドキュメント
 description: SQL Server の OLE DB Driver を使用して SQL Server テーブルを作成します。
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6b26077abc7d714ffebdf36068a2f3d5fc081d7e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: d9c2e60b177a38e684eb92c1b406e091b575d675
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306781"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689595"
 ---
 # <a name="creating-sql-server-tables"></a>SQL Server テーブルの作成
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server を公開、 **itabledefinition::createtable**関数を作成するコンシューマー[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。 コンシューマーを使用して**CreateTable**を SQL Server の OLE DB ドライバーによって生成される一意の名前を持つコンシューマーという名前のパーマネント テーブル、および永続的なまたは一時テーブルを作成します。  
   
@@ -62,7 +65,7 @@ ms.locfileid: "35306781"
 |DBPROP_COL_DESCRIPTION|R/W 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: DBPROP_COL_DESCRIPTION 列プロパティは実装されていません、OLE DB Driver for SQL Server。<br /><br /> *DwStatus*コンシューマーが、プロパティ値を作成しようとすると、DBPROP 構造体のメンバーは DBPROPSTATUS_NOTSUPPORTED を返します。<br /><br /> プロパティの設定要件を満たしません致命的なエラーの OLE DB Driver for SQL Server。 他のすべてのパラメーター値が有効であれば、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のテーブルが作成されます。|  
 |DBPROP_COL_FIXEDLENGTH|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: SQL Server の OLE DB Driver を使用して DBPROP_COL_FIXEDLENGTH を使用して、コンシューマーが列のデータ型を定義する場合は、データ型のマッピングを決定する、 *wType* DBCOLUMNDESC のメンバーです。 詳細については、次を参照してください。 [ITableDefinition でのデータ型マッピング](../../oledb/ole-db-data-types/data-type-mapping-in-itabledefinition.md)です。|  
 |DBPROP_COL_NULLABLE|R/W 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: テーブルを作成するときに、OLE DB Driver for SQL Server を示すプロパティが設定されている場合に、列が null 値を受け入れるかどうか。 このプロパティが設定されていないときは、列が値として NULL を許容するかどうかは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のデータベース オプション ANSI_NULLS によって決まります。<br /><br /> SQL Server の OLE DB Driver は、ISO 準拠のプロバイダーです。 接続されたセッションでは、ISO 準拠の動作が行われます。 DBPROP_COL_NULLABLE を設定しないと、列は NULL 値を許容します。|  
-|DBPROP_COL_PRIMARYKEY|R/W 読み取り/書き込み<br /><br /> 既定値: VARIANT_FALSE 明: VARIANT_TRUE のときに、SQL Server の OLE DB Driver 列を作成、PRIMARY KEY 制約。<br /><br /> 列プロパティとして定義するときは、1 つの列だけが制約を判断できます。 プロパティを VARIANT_TRUE に設定を超える場合、OLE DB Driver for SQL Server が作成しようとすると、1 つの列でエラーが返されます、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。<br /><br /> 注: コンシューマーが使用できる**iindexdefinition::createindex**を 2 つ以上の列に PRIMARY KEY 制約を作成します。<br /><br /> DBPROP_COL_PRIMARYKEY と DBPROP_COL_UNIQUE 両方が VARIANT_TRUE のときに、OLE DB Driver for SQL Server は DB_S_ERRORSOCCURRED を返しますと*dwOption* DBPROP_COL_UNIQUE を利用する DBPROPOPTIONS_REQUIRED はありません。<br /><br /> DBPROP_COL_PRIMARYKEY と DBPROP_COL_UNIQUE 両方が VARIANT_TRUE の場合、DB_E_ERRORSOCCURRED が返されると、 *dwOption* DBPROP_COL_UNIQUE の dbpropoptions_required します。 列が定義されている、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identity プロパティと、DBPROP_COL_PRIMARYKEY *dwStatus*メンバーが DBPROPSTATUS_CONFLICTING に設定します。<br /><br /> DBPROP_COL_PRIMARYKEY と DBPROP_COL_NULLABLE 両方が VARIANT_TRUE のときに、SQL Server の OLE DB Driver は、エラーを返します。<br /><br /> SQL Server の OLE DB Driver はからエラーを返します[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コンシューマーが無効の列に PRIMARY KEY 制約を作成しようとしたときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。 作成される列に PRIMARY KEY 制約を定義することはできません、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型**ビット**、**テキスト**、 **ntext**、および**イメージ**です。|  
+|DBPROP_COL_PRIMARYKEY|R/W 読み取り/書き込み<br /><br /> 既定値: VARIANT_FALSE 明: VARIANT_TRUE のときに、SQL Server の OLE DB Driver 列を作成、PRIMARY KEY 制約。<br /><br /> 列プロパティとして定義するときは、1 つの列だけが制約を判断できます。 プロパティを VARIANT_TRUE に設定を超える場合、OLE DB Driver for SQL Server が作成しようとすると、1 つの列でエラーが返されます、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。<br /><br /> 注: コンシューマーが使用できる**iindexdefinition::createindex**を 2 つ以上の列に PRIMARY KEY 制約を作成します。<br /><br /> DBPROP_COL_PRIMARYKEY と DBPROP_COL_UNIQUE 両方が VARIANT_TRUE のときに、OLE DB Driver for SQL Server は DB_S_ERRORSOCCURRED を返しますと*dwOption* DBPROP_COL_UNIQUE を利用する DBPROPOPTIONS_REQUIRED はありません。<br /><br /> DBPROP_COL_PRIMARYKEY と DBPROP_COL_UNIQUE 両方が VARIANT_TRUE の場合、DB_E_ERRORSOCCURRED が返されると、 *dwOption* DBPROP_COL_UNIQUE の dbpropoptions_required します。 列が定義されている、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identity プロパティと、DBPROP_COL_PRIMARYKEY *dwStatus*メンバーが DBPROPSTATUS_CONFLICTING に設定します。<br /><br /> DBPROP_COL_PRIMARYKEY と DBPROP_COL_NULLABLE 両方が VARIANT_TRUE のときに、SQL Server の OLE DB Driver は、エラーを返します。<br /><br /> SQL Server の OLE DB Driver はからエラーを返します[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コンシューマーが無効の列に PRIMARY KEY 制約を作成しようとしたときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。 作成される列に PRIMARY KEY 制約を定義することはできません、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型**ビット**、**テキスト**、 **ntext**、および**イメージ**.|  
 |DBPROP_COL_UNIQUE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE&lt;br&gt;&lt;/br&gt;説明 : 列に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の UNIQUE 制約を適用します。<br /><br /> 列プロパティとして定義するときは、1 つの列だけに制約が適用されます。 コンシューマーが使用できる**iindexdefinition::createindex**を 2 つ以上の列の値の組み合わせに一意の制約を適用します。<br /><br /> SQL Server の OLE DB Driver は DB_S_ERRORSOCCURRED を返します DBPROP_COL_PRIMARYKEY と DBPROP_COL_UNIQUE 両方が VARIANT_TRUE と*dwOption* DBPROPOPTIONS_REQUIRED ではありません。<br /><br /> DBPROP_COL_PRIMARYKEY と DBPROP_COL_UNIQUE 両方が VARIANT_TRUE の場合、DB_E_ERRORSOCCURRED が返されると*dwOption* dbpropoptions_required です。 列が定義されている、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identity プロパティと、DBPROP_COL_PRIMARYKEY *dwStatus*メンバーが DBPROPSTATUS_CONFLICTING に設定します。<br /><br /> SQL Server の OLE DB Driver は DB_S_ERRORSOCCURRED を返します DBPROP_COL_NULLABLE と DBPROP_COL_UNIQUE 両方が VARIANT_TRUE と*dwOption* DBPROPOPTIONS_REQUIRED ではありません。<br /><br /> DBPROP_COL_NULLABLE と DBPROP_COL_UNIQUE 両方が VARIANT_TRUE の場合、DB_E_ERRORSOCCURRED が返されると*dwOption* dbpropoptions_required です。 列が定義されている、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identity プロパティと、DBPROP_COL_NULLABLE *dwStatus*メンバーが DBPROPSTATUS_CONFLICTING に設定します。<br /><br /> SQL Server の OLE DB Driver はからエラーを返します[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コンシューマーが無効の列に UNIQUE 制約を作成しようとしたときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。 作成される列に UNIQUE 制約を定義することはできません、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ビット**データ型。|  
   
  コンシューマーを呼び出すと**itabledefinition::createtable**、SQL Server の OLE DB Driver はテーブルのプロパティを次のように解釈します。  

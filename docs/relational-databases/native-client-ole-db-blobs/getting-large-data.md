@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 313fdc999b80c8c1797f6be376836b41adc710e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f04fb06f29ed9a9e46f749804d92cb4c2fc931eb
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946367"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699513"
 ---
 # <a name="getting-large-data"></a>大きなデータの取得
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -156,6 +154,6 @@ HRESULT GetUnboundData
   
 ## <a name="see-also"></a>参照  
  [Blob と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [大きな値の型を使用します。](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [大きな値の型の使用](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

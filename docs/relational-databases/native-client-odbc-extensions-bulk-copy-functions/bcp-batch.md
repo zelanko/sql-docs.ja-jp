@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bd2711173b90cfab033b6f9064e5f8c9a66492c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 16fef0f057d25ce050bfd33ffe72eb63ee5cb54d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943137"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698883"
 ---
 # <a name="bcpbatch"></a>bcp_batch
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,10 +47,10 @@ DBINT bcp_batch (HDBC
  *hdbc*  
  一括コピーが有効な ODBC 接続ハンドルです。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  最後の呼び出し後に保存されている行の数**bcp_batch**、またはエラーが発生した場合は-1。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  一括コピーのバッチではトランザクションを定義します。 アプリケーションを使用する場合[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)と**bcp_sendrow**行を一括コピー プログラム変数から SQL Server テーブルに、行はコミットされた場合にのみ、プログラムを呼び出す**bcp_batch**または[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)です。  
   
  呼び出すことができます**bcp_batch**したらすべて*n*行 (アプリケーションと同様、製品利用統計情報) の受信データの転送が中断がある場合またはします。 アプリケーションが要求されていない場合**bcp_batch**一括コピーされた行がコミットされる場合にのみ**bcp_done**と呼びます。  

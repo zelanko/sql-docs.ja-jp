@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-cursors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -24,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6393902a8b9a24ecac4df3ffbfff95fdac2ea686
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d09736a888a124442f69f672ebdf0c5dfd44ad2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947007"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695513"
 ---
 # <a name="positioned-updates-odbc"></a>位置指定更新 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -88,6 +87,6 @@ ms.locfileid: "32947007"
  **SQLSetPos**をお勧め WHERE CURRENT OF 経由でサーバー カーソルを使用しているときにします。 ODBC カーソル ライブラリで静的で更新可能なカーソルを使用している場合、カーソル ライブラリは、基になるテーブルのキー値を指定した WHERE 句を追加することで、WHERE CURRENT OF 更新を実装します。 テーブル内のキーが一意でない場合、意図しない更新が行われることがあります。  
   
 ## <a name="see-also"></a>参照  
- [使用してカーソル (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [カーソルを使用して&#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

@@ -2,9 +2,10 @@
 title: Issasynchstatus::waitforasynchcompletion (OLE DB) |Microsoft ドキュメント
 description: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,15 +20,18 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e8d862ab9bde6a57a7f63deb46af7688d94b2586
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 7279c4ca68ddf57824a68cb803cbc5d566ad14b4
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305821"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689205"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
   非同期で実行している操作が完了するまで、またはタイムアウトが発生するまで待機します。  
   
 ## <a name="syntax"></a>構文  
@@ -56,7 +60,7 @@ HRESULT WaitForAsynchCompletion(
  指定したタイムアウトに達しても、操作が完了していません。  
   
 > [!NOTE]  
->  上記のリターン コード値に加えて、 **issasynchstatus::waitforasynchcompletion**メソッドには、主要な OLEDB によって返されるリターン コード値もサポートしています**icommand::execute**と**idbinitialize::initialize**メソッドです。  
+>  上記のリターン コード値に加えて、 **issasynchstatus::waitforasynchcompletion**メソッドには、主要な OLEDB によって返されるリターン コード値もサポートしています**icommand::execute**と**Idbinitialize::initialize**メソッドです。  
   
 ## <a name="remarks"></a>コメント  
  **Issasynchstatus::waitforasynchcompletion**メソッドは、タイムアウト値 (ミリ秒単位) が経過するか、保留中の操作が完了するまでは返されません。 **コマンド**オブジェクトには、 **CommandTimeout**秒数を制御するプロパティ、クエリは、タイムアウト前に実行されます。**CommandTimeout**と組み合わせて使用する場合、プロパティは無視されます**issasynchstatus::waitforasynchcompletion**メソッドです。  

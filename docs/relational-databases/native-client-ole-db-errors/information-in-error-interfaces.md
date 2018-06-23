@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ISQLErrorInfo interface
 - errors [OLE DB], error interfaces
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6687b4dbc8dd0a47c3e2116b27e814240463cc90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6259d21a8b538742509b6f17efedc6530d5e60c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945127"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699133"
 ---
 # <a name="information-in-error-interfaces"></a>エラー インターフェイス内の情報
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +56,7 @@ ms.locfileid: "32945127"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのサポート**isqlerrorinfo::getsqlinfo**パラメーターは次のようにします。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |*pbstrSQLState*|エラーの SQLSTATE 値を返します。 SQLSTATE 値は、SQL-92、ODBC と ISO SQL、および API の各仕様で定義されています。 どちらも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]も[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーが実装に固有の SQLSTATE 値を定義します。|  
 |*plNativeError*|返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエラー番号**master.dbo.sysmessages**使用可能な場合です。 ネイティブ エラーは、初期化が成功するの後に利用可能な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーのデータ ソース。 試行する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、常に 0 を返します。|  

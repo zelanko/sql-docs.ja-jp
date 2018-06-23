@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQLExecute function
 - statements [ODBC], prepared execution
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea7feff8896d3fc8e29ff385e69b2ef021f6f2c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ae1bfdadd360b41f451d7b0e7840af9e3f6ff94
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946797"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696903"
 ---
 # <a name="prepared-execution"></a>準備実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +36,11 @@ ms.locfileid: "32946797"
   
  ほとんどのデータベースでは、直接実行されるステートメントが実行のたびにコンパイルされるのに対し、準備実行されるステートメントは 1 回だけコンパイルされるので、準備実行は主に 4、5 回以上実行されるステートメントの場合は直接実行よりも高速になります。 準備実行では、SQL ステートメントが実行されるたびに、ドライバーはステートメント全体ではなく、実行プランの識別子とパラメーター値だけをデータ ソースに送信できるので、ネットワーク トラフィックも削減できます。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]検出の実行プランを再利用するためのアルゴリズムが強化されたを通して直接的および準備された実行のパフォーマンスの差を減少**SQLExecDirect**です。 そのため、直接実行されるステートメントでも、準備実行のパフォーマンス上の利点の一部を利用できるようになります。 詳細については、次を参照してください。[直接実行](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md)です。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 検出の実行プランを再利用するためのアルゴリズムが強化されたを通して直接的および準備された実行のパフォーマンスの差を減少**SQLExecDirect**です。 そのため、直接実行されるステートメントでも、準備実行のパフォーマンス上の利点の一部を利用できるようになります。 詳細については、次を参照してください。[直接実行](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md)です。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、準備実行がネイティブにサポートされます。 実行プランが上に構築された**SQLPrepare**し、後で実行すると実行に**SQLExecute**と呼びます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一時ストアド プロシージャを構築する必要はありません**SQLPrepare**、内のシステム テーブルに余分なオーバーヘッドがない**tempdb**です。  
   
- まで、ステートメントの準備は遅延パフォーマンス上の理由から、 **SQLExecute**が呼び出されたか、メタプロパティ操作 (など[SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md)または[SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) ODBC で) が使用されます。 これは既定の動作です。 準備されているステートメントのエラーは、ステートメントまたはメタプロパティ操作が実行されるまでわかりません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有のステートメント属性の SQL_SOPT_SS_DEFER_PREPARE を SQL_DP_OFF に設定することで、この既定の動作を無効にできます。  
+ パフォーマンス上の理由から、ステートメントの準備は遅延まで**SQLExecute**が呼び出されたか、メタプロパティ操作 (など[SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md)または[SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)ODBC の) を実行します。 これは既定の動作です。 準備されているステートメントのエラーは、ステートメントまたはメタプロパティ操作が実行されるまでわかりません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有のステートメント属性の SQL_SOPT_SS_DEFER_PREPARE を SQL_DP_OFF に設定することで、この既定の動作を無効にできます。  
   
  場合に遅延を準備する、いずれかを呼び出す**SQLDescribeCol**または**SQLDescribeParam**呼び出す前に**SQLExecute**サーバーに余分なラウンド トリップが生成されます。 **SQLDescribeCol**ドライバーはクエリから WHERE 句を削除し、クエリによって返される最初の結果セット内の列の説明を取得する SET FMTONLY ON を使用してサーバーに送信します。 **SQLDescribeParam**ドライバーは、式またはクエリ内のすべてのパラメーター マーカーによって参照される列の説明を取得するサーバーを呼び出します。 この方法には、サブクエリのパラメーターを解決することができないなど、いくつか制限事項もあります。  
   
@@ -53,6 +51,6 @@ ms.locfileid: "32946797"
  使用する以前の ODBC アプリケーション**SQLPrepare**いつでも[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)が使用されました。 **SQLBindParameter**の使用は不要**SQLPrepare**で使用できます**SQLExecDirect**です。 たとえば、使用して**SQLExecDirect**で**SQLBindParameter**リターン コードを取得または実行された 1 回のみであるストアド プロシージャからパラメーターを出力します。 使用しないでください**SQLPrepare**で**SQLBindParameter**同じステートメントは複数回実行される場合を除き、します。  
   
 ## <a name="see-also"></a>参照  
- [実行中のステートメント (&) #40; ODBC & #41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [ステートメントを実行する&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

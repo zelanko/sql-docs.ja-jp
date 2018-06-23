@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e8ab05b56a1f6f96211d3505fde583e7448d4492
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13bc065e3b6c8373f5e0eeac70977195587cd721
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943917"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703719"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,10 +59,10 @@ RETCODE bcp_colptr (
  *idxServerCol*  
  データベース テーブル内にある、データのコピー先となる列の序数位置です。 テーブル内の最初の列は列 1 です。 列の序数位置がによって報告された[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)です。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Bcp_colptr**関数では、データを使用した SQL Server にコピーするときに特定の列のソース データのアドレスを変更できます。 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)です。  
   
  呼び出しによってユーザー データへのポインターを設定する最初に、 **bcp_bind**です。 呼び出しの間、プログラム変数のデータのアドレスが変更された場合は**bcp_sendrow**、呼び出すことができます**bcp_colptr**データへのポインターをリセットします。 次に呼び出した**bcp_sendrow**への呼び出しによってアドレス指定されるデータを送信**bcp_colptr**です。  

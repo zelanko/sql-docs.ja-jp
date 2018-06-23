@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL_SS_TABLE
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cbf2b434d29033961608494478bc775946226ced
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e24b0995071b81b6ad8ca6a3c627449a22c1a9ca
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694493"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>テーブル値パラメーター用の ODBC SQL 型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 
   テーブル値パラメーターは、新しい ODBC SQL 型である SQL_SS_TABLE でサポートされます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  SQL_SS_TABLE は、他の ODBC データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に変換できません。  
   
  SQL_SS_TABLE はから C データ型として使用されているかどうか、 *ValueType* SQLBindParameter、またはしようとしてのパラメーターが SQL_SS_TABLE にアプリケーション パラメーター記述子 (APD) レコードで SQL_DESC_TYPE を設定しようとして、SQL_ERROR が返されると、sqlstate の診断レコードが生成 = HY003、「無効なアプリケーション バッファー型」です。  

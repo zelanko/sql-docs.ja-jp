@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -19,12 +17,12 @@ caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ad749572b54e76c751002db3516fdf46ce31f729
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 937a8ad81b3c2b03291c8032ece6af71cb82f360
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921966"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703003"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 統合アーキテクチャのパフォーマンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +66,7 @@ ms.locfileid: "32921966"
  マネージ コードを使用すると、実行環境の保持およびセキュリティ チェックの実施に必要なオーバーヘッドが発生することがあります。 たとえば、([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はネイティブ コードと行き来する際にスレッド固有の設定を保つ必要があるので、) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内でコードを実行し、マネージ コードとネイティブ コードの切り替えを何度も行う必要がある場合などにオーバーヘッドが生じます。 つまり、マネージ コードとネイティブ コードの切り替えが頻発する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で実行されるマネージ コードに比べて、拡張ストアド プロシージャの方が高いパフォーマンスを発揮できます。  
   
 > [!NOTE]  
->  この機能の使用は推奨されないため、拡張ストアド プロシージャを新規作成しないことをお勧めします。  
+>  この機能の使用は非推奨とされるため、拡張ストアド プロシージャを新規作成しないことをお勧めします。  
   
 ### <a name="native-serialization-for-user-defined-types"></a>ユーザー定義型のネイティブ シリアル化  
  UDT (ユーザー定義型) は、スカラー型システムの拡張方式として設計されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という Udt のシリアル化形式が実装されて**Format.Native**です。 コンパイルのとき、型の定義に合わせてカスタマイズされた MSIL を生成するために型の構造を検査します。  

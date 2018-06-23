@@ -3,11 +3,9 @@ title: SQL Server のユーザー定義型の登録 |Microsoft ドキュメン�
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -38,12 +36,12 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c008844b49d907eb03e2358327f0f71959495675
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 942f6c1fa0b6888aa936bfd4b557c570529e9894
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922847"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697823"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server でのユーザー定義型の登録
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +70,7 @@ ms.locfileid: "32922847"
   
  指定された 1 つのデータベースに複数のバージョンの同じアセンブリを作成することはできません。 ただし、特定の 1 つのデータベースに、カルチャに基づいて、複数のバージョンの同じアセンブリを作成することはできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに登録されているとおりに、異なる名前で、アセンブリの複数のカルチャ バージョンが区別されます。 詳細については、.NET Framework SDK の「厳密な名前付きアセンブリの作成と使用」を参照してください。  
   
- SAFE 権限セットまたは EXTERNAL_ACCESS 権限セットを指定して CREATE ASSEMBLY を実行すると、アセンブリが検証可能でタイプ セーフであることを確認するためのチェックが行われます。 権限セットを指定しないと、SAFE が指定されていると想定されます。 UNSAFE 権限セットを指定したコードはチェックされません。 アセンブリの権限セットの詳細については、次を参照してください。[アセンブリの設計](../../relational-databases/clr-integration/assemblies-designing.md)です。  
+ SAFE 権限セットまたは EXTERNAL_ACCESS 権限セットを指定して CREATE ASSEMBLY を実行すると、アセンブリが検証可能でタイプ セーフであることを確認するためのチェックが行われます。 権限セットを指定しないと、SAFE が指定されていると想定されます。 UNSAFE 権限セットを指定したコードはチェックされません。 アセンブリの権限セットの詳細については、「[アセンブリのデザイン](../../relational-databases/clr-integration/assemblies-designing.md)」をご覧ください。  
   
 #### <a name="example"></a>例  
  次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントに Point アセンブリを登録する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で、 **AdventureWorks** SAFE 権限セットでのデータベースです。 WITH PERMISSION_SET 句を省略すると、SAFE 権限セットでアセンブリが登録されます。  

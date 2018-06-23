@@ -3,11 +3,9 @@ title: Microsoft.VisualBasic.dll の型およびメンバーを使用できな�
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,16 +16,16 @@ caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7d9229d6bed647b7cb20e76b035e9393f49d74e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bafaf9b768e1ffab0bda9f2b86b5cd64c93b4d72
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921447"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699293"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll の許可されない型およびメンバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共通言語統合 (CLR) プログラミングには、型またはメンバーを持つの使用が許可されていません、 **HostProtectionAttribute**を指定する、 **System.Security.Permissions.HostProtectionResource**列挙の値が**ExternalProcessMgmt**、 **ExternalThreading**、 **MayLeakOnAbort**、 **SecurityInfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **SharedState**、**同期**、または**UI**です。 次の表はのメンバーよぶ型、 **Microsoft.VisualBasic.dll**ホスト保護属性 (HPA) 値が許可されないアセンブリ。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language integration (CLR) programming disallows the use of a type or member that has a **HostProtectionAttribute** that specifies a **System.Security.Permissions.HostProtectionResource** enumeration with a value of **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**, or **UI**. 次の表はのメンバーよぶ型、 **Microsoft.VisualBasic.dll**ホスト保護属性 (HPA) 値が許可されないアセンブリ。  
   
 > [!NOTE]  
 >  この一覧は、サポートされているアセンブリから作成されたものです。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)です。  
