@@ -1,0 +1,46 @@
+---
+title: データベース エンジンの構成 - Filestream |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 06/14/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], about FILESTREAM
+ms.assetid: 641a10a1-ae52-4d26-8f1c-a032a4aeff02
+caps.latest.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 99fb929a9a3fdbdb643edeaf041d4cd74d64c75c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36072032"
+---
+# <a name="database-engine-configuration---filestream"></a>データベース エンジンの構成 - Filestream
+  このページを使用すると、このインストールの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に対して FILESTREAM を有効にすることができます。 FILESTREAM の統合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]と NTFS ファイル システムを格納する、`varbinary(max)`ファイル システム上のファイルとしてバイナリ ラージ オブジェクト (BLOB) データ。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、FILESTREAM データの挿入、更新、クエリ、検索、およびバックアップを行うことができます。 Win32 ファイル システム インターフェイスによるデータへのストリーミング アクセスが可能になります。  
+  
+## <a name="uielement-list"></a>UI 要素の一覧  
+ **[Transact-SQL アクセスに対して FILESTREAM を有効にする]**  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする場合にオンにします。 他のコントロール オプションを使用できるようにするには、先にこのコントロールをオンにする必要があります。  
+  
+ **[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]**  
+ FILESTREAM の Win32 ストリーム アクセスを有効にする場合にオンにします。  
+  
+ **[Windows 共有名]**  
+ このコントロールは、FILESTREAM データを格納する Windows 共有の名前を入力する場合に使用します。  
+  
+ **[リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]**  
+ このコントロールは、リモート クライアントにこのサーバー上のこの FILESTREAM データへのアクセスを許可する場合にオンにします。  
+  
+## <a name="see-also"></a>参照  
+ [FILESTREAM の有効化と構成](../../relational-databases/blob/enable-and-configure-filestream.md)   
+ [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+  
+  

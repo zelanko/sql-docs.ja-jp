@@ -1,0 +1,69 @@
+---
+title: ビジネス ルールを削除する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- deleting business rules [Master Data Services]
+- business rules [Master Data Services], deleting
+ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
+caps.latest.revision: 4
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.openlocfilehash: ab0f248a06e1a67ac119528774d98bb79d3dc9ec
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36164331"
+---
+# <a name="delete-a-business-rule-master-data-services"></a>ビジネス ルールを削除する (マスター データ サービス)
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、不要になったビジネス ルールを削除します。  
+  
+> [!NOTE]  
+>  ビジネス ルールに対するデータの検証が行われないようにするには、ビジネス ルールを削除する代わりに除外することができます。 詳細については、「[ビジネス ルールを除外する (マスター データ サービス)](exclude-a-business-rule-master-data-services.md)」を参照してください。  
+  
+## <a name="prerequisites"></a>前提条件  
+ この手順を実行するには  
+  
+-   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../../2014/master-data-services/administrators-master-data-services.md)」を参照してください。  
+  
+### <a name="to-delete-a-business-rule"></a>ビジネス ルールを削除するには  
+  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
+  
+2.  メニュー バーから **[管理]** をポイントして **[ビジネス ルール]** をクリックします。  
+  
+3.  **[ビジネス ルールのメンテナンス]** ページの **[モデル]** の一覧からモデルを選択します。  
+  
+4.  **[エンティティ]** の一覧からエンティティを選択します。  
+  
+5.  **[メンバーの種類]** の一覧から、適用するビジネス ルールのメンバーの種類を選択します。  
+  
+6.  **[属性]** の一覧で、属性を選択するか、 **[すべて]** の既定値のままにします。  
+  
+7.  グリッドで、削除するビジネス ルールの行をクリックします。  
+  
+8.  をクリックして**選択したビジネス ルールの削除**です。  
+  
+9. 確認のダイアログ ボックスで **[OK]** をクリックします。 値、**ステータス**列は**削除の保留中**です。  
+  
+10. **[ビジネス ルールのパブリッシュ]** をクリックします。  
+  
+11. 確認のダイアログ ボックスで **[OK]** をクリックします。  
+  
+## <a name="see-also"></a>参照  
+ [ビジネス ルールを除外する&#40;マスター データ サービス&#41;](exclude-a-business-rule-master-data-services.md)   
+ [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
+ [ビジネス ルール (マスター データ サービス)](../../2014/master-data-services/business-rules-master-data-services.md)  
+  
+  

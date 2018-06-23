@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], implementing
@@ -17,12 +15,12 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9ba5a73921a2690c10f1b2610c6fb071824baf89
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd0f474a0d71f0cb760f12a0c743696fddeac191
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921287"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695173"
 ---
 # <a name="assemblies---implementing"></a>アセンブリの実装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ ms.locfileid: "32921287"
   
  **TRANSACT-SQL を使用してアセンブリを作成するには**  
   
--   [アセンブリ &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/create-assembly-transact-sql.md)  
+-   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
   
  **SQL Server Management Studio を使用してアセンブリを作成するには**  
   
@@ -60,7 +58,7 @@ ms.locfileid: "32921287"
   
  **TRANSACT-SQL を使用してアセンブリを変更するには**  
   
--   [アセンブリの変更と &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/alter-assembly-transact-sql.md)  
+-   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
  **SQL Server Management Studio を使用してアセンブリを変更するには**  
   
@@ -71,7 +69,7 @@ ms.locfileid: "32921287"
   
  **Transact SQL を使用してアセンブリを削除するには**  
   
--   [アセンブリと &#40; を削除します。Transact SQL と &#41; です。](../../t-sql/statements/drop-assembly-transact-sql.md)  
+-   [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   
  **SQL Server Management Studio を使用してアセンブリを削除するには**  
   
@@ -116,10 +114,10 @@ ms.locfileid: "32921287"
   
  **アセンブリのバージョンを更新するには**  
   
--   [アセンブリの変更と &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/alter-assembly-transact-sql.md)  
+-   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
- [アセンブリ (&) #40";"データベース エンジン"&"#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [アセンブリ&#40;データベース エンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [アセンブリに関する情報の取得](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

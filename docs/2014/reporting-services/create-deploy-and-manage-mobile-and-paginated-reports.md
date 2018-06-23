@@ -1,0 +1,75 @@
+---
+title: Reporting Services (SSRS) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- reports [Reporting Services]
+- SSRS
+- reports [Reporting Services], about reports
+- Reporting Services
+- SQL Server Reporting Services
+ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
+caps.latest.revision: 51
+author: markingmyname
+ms.author: maghan
+manager: mblythe
+ms.openlocfilehash: c7abb24cf0b0a636f2e9ebed1c61b97dca93a8de
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36084035"
+---
+# <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 作成、展開、および組織のレポートを管理するためにすぐに使用できるツールやサービスの全範囲を提供します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、プログラミング機能を使用し、レポート作成機能を拡張したりカスタマイズしたりすることも可能です。  
+  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サーバー ベースのレポート プラットフォームで、さまざまなデータ ソースの包括的なレポート機能を提供します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 作成、管理、およびレポート、および開発者がデータおよびカスタム アプリケーションでのレポート処理を統合および拡張できるように Api を提供するためのツールの完全なセットが含まれます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 内でツールの作業、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]環境と完全に統合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ツールとコンポーネント。  
+  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、リレーショナル データ ソース、多次元データ ソース、または XML ベースのデータ ソースから、対話形式、表形式、グラフィカル形式、または自由形式のレポートを作成できます。 レポートには、グラフ、地図、スパークラインなどの豊富なデータの可視化を含めることができます。 レポートを発行し、レポート処理のスケジュールを設定し、レポートにオン デマンドでアクセスできます。 さまざまな表示形式から選択でき、[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] などの他のアプリケーションにレポートをエクスポートしたり、パブリッシュしたレポートをサブスクライブすることができます。 作成したレポートは、Web ベースの接続によって表示することも、[!INCLUDE[msCoName](../includes/msconame-md.md)] Windows アプリケーションや SharePoint サイトの一部として表示することも可能です。 また、SharePoint サイトに発行されるレポートでデータ警告を作成したり、レポートのデータが変化したときに電子メール メッセージを受信したりすることもできます。  
+  
+ 新機能の詳細については[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を参照してください[新&#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)です。  
+  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコンポーネント、ツール、およびリソースについては、 [SQL Server オンライン ブック](../2014-toc/books-online-for-sql-server-2014.md)を参照してください。  
+  
+ **領域ごとのコンテンツの参照**  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン") [Reporting Services レポート サーバー](../../2014/reporting-services/reporting-services-report-server.md)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン") [Reporting Services レポート&#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン")[レポート データ&#40;SSRS&#41;](report-data/report-data-ssrs.md)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン")[レポート パラメーター&#40;レポート ビルダーおよびレポート デザイナー&#41;](report-design/report-parameters-report-builder-and-report-designer.md)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン")[レポート デザイナーでのレポート パーツ&#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン")[スケジュール](subscriptions/schedules.md)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン")[サブスクリプションと配信&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン") [Reporting Services のデータの警告](../ssms/agent/alerts.md)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン") [Power View](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン") [Reporting Services のセキュリティと保護](security/reporting-services-security-and-protection.md)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン") [URL アクセス&#40;SSRS&#41;](url-access-ssrs.md)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン")[拡張&#40;SSRS&#41;](extensions-ssrs.md)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン") [Reporting Services ツール](tools/reporting-services-tools.md)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン")[エラーおよびイベント リファレンス&#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)  
+  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン")[機能リファレンス&#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
+  
+## <a name="see-also"></a>参照  
+ [SQL Server リソース センター](http://go.microsoft.com/fwlink/?linkID=219676)  
+  
+  

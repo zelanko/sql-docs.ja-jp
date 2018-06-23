@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ad3993a22e0b2ec2091b0d37598f9cd6546d34aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69183e2c4b9343a822727dd2f56baf978a4d7de1
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947787"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701483"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,10 +58,10 @@ RETCODE bcp_setcolfmt (
  *field*  
  プロパティを設定する列の序数です。  
   
- *プロパティ*  
+ *property*  
  プロパティ定数のいずれかを指定します。 次の表に、プロパティ定数を示します。  
   
-|プロパティ|値|Description|  
+|プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|ユーザー ファイル内にある列のデータ型です。 データベース テーブル内の対応する列のデータ型と異なる場合は、一括コピーでは可能な限りデータを変換します。<br /><br /> BCP_FMT_TYPE パラメーターは、ODBC C データ型の列挙子ではなく、sqlncli.h 内の SQL Server データ型トークンで列挙されます。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の SQLCHARACTER 型を使用して、ODBC の SQL_C_CHAR 型の文字列を指定できます。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型に対して既定のデータ表現を指定するには、このパラメーターに 0 を設定します。<br /><br /> SQL Server からが BCP_FMT_TYPE SQLDECIMAL または SQLNUMERIC を基になる列がない場合、ファイルへの一括コピーの**10 進**または**数値**、既定の有効桁数と小数点以下桁数が使用されます。 それ以外の場合、ソース列が**decimal**または**数値**、有効桁数と基になる列の小数点以下桁数を使用します。|  
 |BCP_FMT_INDICATOR_LEN|INT|インジケーター (プレフィックス) のバイト単位の長さです。<br /><br /> これは、列データ内にある長さのインジケーターや NULL インジケーターのバイト単位の長さです。 インジケーターの長さの有効値は、0 (インジケーターを使用しない)、1、2、または 4 です。<br /><br /> 一括コピーのインジケーターの既定の使用方法を指定するには、このパラメーターに SQL_VARLEN_DATA を設定します。<br /><br /> インジケーターは、メモリ内ではすべてのデータの直前に、データ ファイル内ではインジケーターを適用するデータの直前に配置します。<br /><br /> 複数の方法 (インジケーターと列の最大長、インジケーターとターミネータ シーケンスなど) を使用してデータ ファイルの列長を指定すると、一括コピーではコピーするデータの量が最も少なくなる方法が使用されます。<br /><br /> ユーザーの操作でデータの形式が調整されずに一括コピーで生成されたデータ ファイルには、列データの長さが異なる場合や、列の値に NULL が許容される場合にインジケーターが含まれます。|  
@@ -78,10 +76,10 @@ RETCODE bcp_setcolfmt (
  *cbvalue*  
  プロパティ バッファーのバイト単位の長さです。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この関数は、 **bcp_colfmt**関数。 すべての機能**bcp_colfmt**で提供される**bcp_setcolfmt**関数。 さらに、列の照合順序もサポートされます。 列形式属性は、次に示した順番で設定することをお勧めします。  
   
  BCP_FMT_SERVER_COL  
@@ -117,7 +115,7 @@ RETCODE bcp_setcolfmt (
 ## <a name="bcpsetcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_setcolfmt による機能強化された日付と時刻のサポート  
  日付/時刻型の BCP_FMT_TYPE プロパティと共に使用する型は、としての指定した[強化された日付と時刻型の変更の一括コピー &#40;OLE DB および ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)です。  
   
- 詳細については、次を参照してください。[日付と時刻の強化 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)です。  
+ 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)です。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

@@ -26,11 +26,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 148c1d6573b0731b0b3dc4361dfafb8d98de7048
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ff9639268b4b7db33cd36f0cb6dc9d0407379ade
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702233"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_チューニング\_(TRANSACT-SQL) の推奨事項
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -39,14 +40,14 @@ ms.lasthandoff: 05/23/2018
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、動的管理ビューは、データベースの包含に影響を与えるまたはユーザーがアクセスを他のデータベースに関する情報が公開される情報を公開できません。 この情報が公開されないように、接続されたテナントに属していないデータを含む行はすべてフィルターで除外されます。
 
-| **列名** | **データ型** | **Description** |
+| **列名** | **データ型** | **description** |
 | --- | --- | --- |
 | **name** | **nvarchar (4000)** | 推奨設定の一意の名前。 |
 | **type** | **nvarchar (4000)** | たとえば、推奨を生成する自動チューニング オプションの名前 `FORCE_LAST_GOOD_PLAN` |
 | **reason** | **nvarchar (4000)** | なぜこの推奨設定が指定された理由。 |
 | **valid\_since** | **datetime2** | 初めてこの推奨設定が生成されました。 |
 | **last\_refresh** | **datetime2** | この推奨設定が生成された最終時刻。 |
-| **状態** | **nvarchar (4000)** | 推奨設定の状態を記述する JSON ドキュメントです。 次のフィールドを使用できます。<br />-   `currentValue` 推奨設定の現在の状態。<br />-   `reason` – 現在の状態で、推奨事項の理由を表現する定数。|
+| **state** | **nvarchar (4000)** | 推奨設定の状態を記述する JSON ドキュメントです。 次のフィールドを使用できます。<br />-   `currentValue` 推奨設定の現在の状態。<br />-   `reason` – 現在の状態で、推奨事項の理由を表現する定数。|
 | **is\_executable\_action** | **bit** | 1 = を使用してデータベースに対して実行できる、推奨事項[!INCLUDE[tsql_md](../../includes/tsql_md.md)]スクリプト。<br />0 = データベースに対して、推奨事項を実行することはできません (例: についてのみ、または元に戻された推奨) |
 | **\_revertable\_アクション** | **bit** | 1 = 推奨設定を自動的に監視およびデータベース エンジンによって元に戻します。<br />0 = 推奨設定を自動的に監視および元に戻すできることはできません。 ほとんど&quot;実行可能&quot;されるアクションが&quot;revertable&quot;です。 |
 | **execute\_action\_start\_time** | **datetime2** | 推奨設定が適用された日付。 |
@@ -60,11 +61,11 @@ ms.lasthandoff: 05/23/2018
 | **score** | **int** | 0 ~ 100 でこの推奨事項に与える影響の値を推定スケール (が大きいほどパフォーマンスは向上) |
 | **details** | **nvarchar(max)** | 詳細については、推奨設定を含む JSON ドキュメントです。 次のフィールドを使用できます。<br /><br />`planForceDetails`<br />-    `queryId` -クエリ\_後退したクエリの id。<br />-    `regressedPlanId` 機能低下したプランの plan_id します。<br />-   `regressedPlanExecutionCount` -、回帰の前に低下したプランとクエリの実行の数が検出されました。<br />-    `regressedPlanAbortedCount` 機能低下したプランの実行中に検出されたエラーの番号。<br />-    `regressedPlanCpuTimeAverage` -平均 CPU 時間が、回帰が検出される前に、後退したクエリで使用します。<br />-    `regressedPlanCpuTimeStddev` 標準偏差、回帰の前に低下したクエリで使用された CPU 時間が検出されました。<br />-    `recommendedPlanId` -plan_id プランを強制する必要があります。<br />-   `recommendedPlanExecutionCount`-、回帰が検出される前に強制するか、プランとクエリの実行回数。<br />-    `recommendedPlanAbortedCount` -強制するか、プランの実行中に検出されたエラーの数。<br />-    `recommendedPlanCpuTimeAverage` -平均 CPU 時間が、プランを強制する必要があります (、回帰が検出される前に計算) で実行されるクエリによって消費されています。<br />-    `recommendedPlanCpuTimeStddev` 回帰直線の前に低下したクエリで使用された CPU 時間の標準偏差が検出されました。<br /><br />`implementationDetails`<br />-  `method` メソッドを回帰の修正に使用する必要があります。 値は常に`TSql`です。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 推奨されるプランを強制的に実行されるスクリプトです。 |
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  によって返される情報`sys.dm_db_tuning_recommendations`データベース エンジンは、潜在的なクエリ パフォーマンスの低下を識別し、永続化されていないときに更新されます。 推奨設定が保持されますのみ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。 データベース管理者は、サーバーの再利用後も保持する場合は、チューニングの推奨設定のバックアップ コピーを定期的に作成する必要があります。 
 
  `currentValue` フィールドに、`state`列は、次の値を持つ可能性があります。
- | [状態] | Description |
+ | 状態 | 説明 |
  |--------|-------------|
  | `Active` | アクティブで、まだ適用されていないをお勧めします。 ユーザーは、推奨設定スクリプトを実行し、それを手動で実行できます。 |
  | `Verifying` | 推奨設定が適用される[!INCLUDE[ssde_md](../../includes/ssde_md.md)]と内部の検証プロセスが低下したプランのプランのパフォーマンスを比較します。 |
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/23/2018
 
 JSON ドキュメントで`state`列が理由は、現在の状態で、推奨事項を説明する理由が含まれています。 [理由] フィールドの値があります。 
 
-| Reason | Description |
+| Reason | 説明 |
 |--------|-------------|
 | `SchemaChanged` | 参照先のテーブルのスキーマが変更されたために、推奨設定が期限切れです。 |
 | `StatisticsChanged`| 参照先のテーブルの統計情報の変更により、推奨設定が期限切れです。 |
@@ -91,9 +92,9 @@ JSON ドキュメントで`state`列が理由は、現在の状態で、推奨�
  [詳細] 列の統計では、プランのランタイム統計情報 (たとえば、現在の CPU 時間) は表示されません。 推奨事項の詳細が回帰の検出時に実行され、理由を説明[!INCLUDE[ssde_md](../../includes/ssde_md.md)]パフォーマンスの低下を識別します。 使用して`regressedPlanId`と`recommendedPlanId`クエリに[クエリ ストアのカタログ ビュー](../../relational-databases/performance/how-query-store-collects-data.md)計画の正確なランタイム統計情報が見つかりません。
 
 ## <a name="using-tuning-recommendations-information"></a>チューニング推奨設定の情報を使用します。  
- 次のクエリを使用すると、問題を修正する T-SQL スクリプトを取得します。  
+次のクエリを使用するを取得、[!INCLUDE[tsql](../../includes/tsql-md.md)]問題を修正するスクリプト。  
  
-```
+```sql
 SELECT name, reason, score,
         JSON_VALUE(details, '$.implementationDetails.script') as script,
         details.* 
@@ -107,7 +108,7 @@ WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
   
  推奨設定のビューでクエリの値に使用できる JSON 関数の詳細については、次を参照してください。[の JSON サポート](../../relational-databases/json/index.md)で[!INCLUDE[ssde_md](../../includes/ssde_md.md)]です。
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   

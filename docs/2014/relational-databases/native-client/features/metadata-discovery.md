@@ -1,0 +1,78 @@
+---
+title: メタデータの検出 |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
+caps.latest.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1d367bf34e57cd20e91a7adee5f186be95be8423
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36085865"
+---
+# <a name="metadata-discovery"></a>メタデータの検出
+  メタデータ検出機能が強化[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]により[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]書式を設定する前に指定したネイティブ クライアント アプリケーションが、クエリの実行から返された列またはパラメーター メタデータが同一でも、メタデータと互換性のあることを確認するにはクエリを実行しました。 クエリの実行後に返されたメタデータにクエリの実行前に指定したメタデータ形式との互換性がない場合は、エラーが発生します。  
+  
+ bcp 関数と ODBC 関数、および IBCPSession インターフェイスと IBCPSession2 インターフェイスでは、遅延読み取り (遅延メタデータ検出) を指定して、クエリ出力操作でメタデータ検出を回避できます。 その結果、パフォーマンスが向上し、メタデータ検出のエラーを回避できます。  
+  
+ 使用して、アプリケーションを開発する場合は[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client に[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]サーバー バージョンへの接続がよりも前[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]、メタデータ検出機能は、サーバーのバージョンに対応します。  
+  
+## <a name="remarks"></a>コメント  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では次の bcp 関数が機能強化され、メタデータ検出機能が向上しています。  
+  
+-   [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
+  
+-   [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)  
+  
+-   [bcp_getcolfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-getcolfmt.md)  
+  
+-   [bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)  
+  
+-   [bcp_setcolfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
+  
+ 使用してメタデータ形式を指定する場合にも、パフォーマンスを改善表示されます[bcp_setbulkmode](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)です。  
+  
+ [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)が新しい*eOption* bcp_readfmt の動作を制御する:`BCPDELAYREADFMT`です。  
+  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では次の ODBC 関数が機能強化され、メタデータ検出機能が向上しています。  
+  
+-   [SQLNumResultCols](../../native-client-odbc-api/sqlnumresultcols.md)  
+  
+-   [SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md)  
+  
+-   [SQLNumParams](../../native-client-odbc-api/sqlnumparams.md)  
+  
+-   [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)  
+  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では次の OLE DB メンバー関数が機能強化され、メタデータ検出機能が向上しています。  
+  
+-   IColumnsInfo::GetColumnInfo  
+  
+-   IColumnsRowset::GetColumnsRowset  
+  
+-   Icommandwithparameters::getparameterinfo (を参照してください[ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md)詳細)  
+  
+ IBCPSession::BCPSetBulkMode を使用してメタデータ形式を指定する場合にも、パフォーマンスを改善を表示されます。  
+  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client でのメタデータ検出機能の強化は、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] への次の 2 つのストアド プロシージャの追加により実現されました。  
+  
+-   sp_describe_first_result_set  
+  
+-   sp_describe_undeclared_parameters  
+  
+## <a name="see-also"></a>参照  
+ [SQL Server Native Client の機能](sql-server-native-client-features.md)  
+  
+  
