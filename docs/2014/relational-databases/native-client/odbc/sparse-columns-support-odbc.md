@@ -1,0 +1,52 @@
+---
+title: スパース列のサポート (ODBC) |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
+caps.latest.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 2b294c0b1226722f98a14f1f49aeb077216a18d2
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36175672"
+---
+# <a name="sparse-columns-support-odbc"></a>スパース列のサポート (ODBC)
+  このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC でのスパース列のサポートについて説明します。 スパース列に対する ODBC サポートを示すサンプルについては、次を参照してください。[スパース列とテーブルに対する SQLColumns を呼び出す](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md)です。 スパース列の詳細については、次を参照してください。 [SQL Server Native Client におけるスパース列のサポート](../features/sparse-columns-support-in-sql-server-native-client.md)です。  
+  
+## <a name="statement-metadata"></a>ステートメント メタデータ  
+ アプリケーション パラメーター記述子 (APD) の記述子フィールドと SQL_SOPT_SS_NAME_SCOPE ステートメント属性は、追加の値 SQL_SS_NAME_SCOPE_EXTENDED および SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET を受け入れます。 これらの値がによって返される結果セットに含まれる列を指定[SQLColumns](../../native-client-odbc-api/sqlcolumns.md)です。 SQL_SOPT_SS_NAME_SCOPE の詳細については、次を参照してください。 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)です。  
+  
+ 新しい実装行記述子 (IRD) の、SQL_CA_SS_IS_COLUMN_SET という名前の読み取り専用 SQLSMALLINT フィールドを使用して、列が XML `column_set` 値かどうかを確認できます。 SQL_CA_SS_IS_COLUMN_SET は、値 SQL_TRUE および SQL_FALSE を受け取ります。  
+  
+## <a name="catalog-metadata"></a>カタログ メタデータ  
+ 2 つ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の結果セットに特定の列 (SS_IS_SPARSE と SS_IS_COLUMN_SET) が追加された[SQLColumns](../../native-client-odbc-api/sqlcolumns.md)です。  
+  
+## <a name="odbc-function-support-for-sparse-columns"></a>ODBC 関数によるスパース列のサポート  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client でスパース列をサポートするために、次の ODBC 関数が更新されました。  
+  
+-   [SQLColAttribute](../../native-client-odbc-api/sqlcolattribute.md)  
+  
+-   [SQLColumns](../../native-client-odbc-api/sqlcolumns.md)  
+  
+-   [SQLGetDescField](../../native-client-odbc-api/sqlgetdescfield.md)  
+  
+-   [SQLSetDescField](../../native-client-odbc-api/sqlsetdescfield.md)  
+  
+-   [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)  
+  
+## <a name="see-also"></a>参照  
+ [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)  
+  
+  

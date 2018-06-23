@@ -1,0 +1,40 @@
+---
+title: マージ アーティクル (レプリケーション TRANSACT-SQL プログラミング) のダミー更新の実行 |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_mergedummyupdate
+- dummy updates [SQL Server replication]
+ms.assetid: 2f339210-4d85-4843-bd94-e86f7100d3ef
+caps.latest.revision: 30
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 3b65f3c61c93b057145999be9450d5422080160a
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36177714"
+---
+# <a name="perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming"></a>マージ アーティクルのダミー更新の実行 (レプリケーション Transact-SQL プログラミング)
+  マージ レプリケーションではレプリケーション処理の中でトリガーを使用します。パブリッシュ済みのテーブルに更新が加えられると、更新トリガーが起動します。 WRITETEXT 操作や UPDATETEXT 操作の際など、トリガーを起動せずにデータを更新できる場合もあります。 このような場合、ダミーの UPDATE ステートメントを明示的に追加して、変更をレプリケートする必要があります。 ダミーの UPDATE ステートメントは、レプリケーション ストアド プロシージャを使用して追加できます。  
+  
+### <a name="to-add-a-dummy-update-statement"></a>ダミーの UPDATE ステートメントを追加するには  
+  
+1.  ダミーの更新を必要とするマージ パブリッシュ済みテーブルの行に対して、操作 (たとえば UPDATETEXT など) を実行します。  
+  
+2.  サーバー (パブリッシャーまたはサブスクライバー) 上の変更が加えられたデータベースに対して、[sp_mergedummyupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql) を実行します。 変更が加えられたテーブルを **@source_object**に指定し、変更された行の一意な識別子を **@rowguid**を実行します。  
+  
+3.  サブスクリプションを同期して、変更された行をレプリケートします。  
+  
+  
