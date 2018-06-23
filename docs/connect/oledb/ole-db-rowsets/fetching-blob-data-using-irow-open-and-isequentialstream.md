@@ -2,9 +2,10 @@
 title: Irow::open および ISequentialStream を使用して BLOB データのフェッチ |Microsoft ドキュメント
 description: Irow::open および ISequentialStream を使用して BLOB データのフェッチ
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,15 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 715b416792f99ef61d48ccc00d04c35ee6d5e76b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 25482d58c4cac6e6d396171c4a76ccbf30e74f74
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307561"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690085"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>IRow::Open と ISequentialStream を使用した BLOB データのフェッチ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **Irow::open**のみ DBGUID_STREAM 型と DBGUID_ 型のオブジェクトに開かれるをサポートしています。  
   
@@ -84,6 +87,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  大規模なデータのバインドまたはを使用して取得できる、 **ISequentialStream**インターフェイスです。 バインドされた列の場合、DBSTATUS_S_TRUNCATED を設定してデータが切り捨てられるかどうかが状態フラグで示されます。  
   
 ## <a name="see-also"></a>参照  
- [IRow を使用して BLOB データのフェッチ](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+ [IRow を使用した BLOB データのフェッチ](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

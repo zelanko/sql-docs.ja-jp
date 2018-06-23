@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 59755ef9ebb3813ea78c354234dc5df3be8ea1ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d05f258ab240c6a9f4d3ecd34aa41755d6ba81c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953857"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695113"
 ---
 # <a name="supporting-local-transactions"></a>ローカル トランザクションのサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "32953857"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのサポート**itransactionlocal::starttransaction**パラメーターは次のようにします。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |*isoLevel*[in]|このトランザクションで使用する分離レベルを指定します。 ローカル トランザクションの場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、次をサポートしています。<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注: が始まる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、ISOLATIONLEVEL_SNAPSHOT は有効、 *isoLevel*データベースのバージョン管理が有効になっているかどうかの引数。 ただし、ユーザーがステートメントを実行する際に、バージョン管理が有効か、データベースが読み取り専用の場合は、エラーが発生します。 として ISOLATIONLEVEL_SNAPSHOT を指定する場合に XACT_E_ISOLATIONLEVEL エラーが発生するさらに、 *isoLevel*のバージョンに接続しているときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも前[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。|  
 |*アイソレーション*[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーには、0 以外の値のエラーが返されます。|  
@@ -51,7 +50,7 @@ ms.locfileid: "32953857"
   
  ローカル トランザクションの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを実装して**itransaction::abort**パラメーターは次のようにします。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |*pboidReason*[in]|設定しても無視されます。 NULL を指定しても問題ありません。|  
 |*:commit*[in]|TRUE のときは、セッションの新しいトランザクションが暗黙的に開始されます。 このトランザクションは、コンシューマーがコミットまたは終了する必要があります。 FALSE の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがセッションの自動コミット モードに戻ります。|  
@@ -59,7 +58,7 @@ ms.locfileid: "32953857"
   
  ローカル トランザクションの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを実装して**itransaction::commit**パラメーターは次のようにします。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |*:commit*[in]|TRUE のときは、セッションの新しいトランザクションが暗黙的に開始されます。 このトランザクションは、コンシューマーがコミットまたは終了する必要があります。 FALSE の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがセッションの自動コミット モードに戻ります。|  
 |*grfTC*[in]|非同期応答と 1 フェーズでサポートされていない、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは XACT_E_NOTSUPPORTED を XACTTC_SYN 以外の値を返します。|  
@@ -136,6 +135,6 @@ if (FAILED(hr))
   
 ## <a name="see-also"></a>参照  
  [トランザクション](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
- [スナップショット分離の使用](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
+ [スナップショット分離を使用した作業](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
   
   
