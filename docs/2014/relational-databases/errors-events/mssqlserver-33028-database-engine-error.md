@@ -1,0 +1,55 @@
+---
+title: MSSQLSERVER_33028 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- 33028 (Database Engine error)
+ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
+caps.latest.revision: 10
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: ccf8eeb5d9c91e1f8ec8cec3c46edf66409bbc5a
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36072543"
+---
+# <a name="mssqlserver33028"></a>MSSQLSERVER_33028
+    
+## <a name="details"></a>詳細  
+  
+|||  
+|-|-|  
+|製品名|SQL Server|  
+|イベント ID|33028|  
+|イベント ソース|MSSQLSERVER|  
+|コンポーネント|SQLEngine|  
+|シンボル名|SEC_CRYPTOPROV_CANTOPENSESSION|  
+|メッセージ テキスト|%S_MSG '%.*ls' のセッションを開くことができません。 プロバイダー エラー コード: %d。|  
+  
+## <a name="explanation"></a>説明  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、エラー メッセージに表示されている暗号化サービス プロバイダーを開くことができませんでした。 暗号化サービス プロバイダーは、表示されているエラー コードを返しました。 エラーの詳細については、暗号化サービス プロバイダーに問い合わせる必要があります。  
+  
+|エラー コード|説明|  
+|----------------|-----------------|  
+|0|正常終了しました。 エラーなし。|  
+|1|失敗しました。 未定義のエラーまたは予期しないエラーが発生しました。 追加情報は入手できません。|  
+|2|バッファーが不足しています。 暗号化サービス プロバイダー用の領域を割り当てることができませんでした。|  
+|3|サポートされていません。 問題となる暗号化サービス プロバイダーが、このリリースではサポートされていません。 別の暗号化サービス プロバイダーを選択してください。|  
+|4|検出されませんでした。 指定した暗号化サービス プロバイダーが存在しないか、ファイルにアクセスする承認を得ていません。|  
+|5|承認エラーです。 資格情報の作成時に指定したパスワードまたはユーザー名が正しくないか、 資格情報が存在しない可能性があります。|  
+|6|引数が無効です。 暗号化サービス プロバイダーに無効な引数が渡されました。|  
+  
+## <a name="user-action"></a>ユーザーの操作  
+ エラーを解決するか、暗号化サービス プロバイダーに詳細を問い合わせてください。  
+  
+  

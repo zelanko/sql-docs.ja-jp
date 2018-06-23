@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 36e0a367dfbdacb16dbd37ddbae68789f82b8781
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4d71d73a5abe3b36764df7e973add335a42978a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948567"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698983"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "32948567"
 > [!NOTE]  
 >  標準の ODBC 接続属性 SQL_ATTR_CONNECTION_DEAD は、接続の最新の状態を返します。 これは現在の接続状態と異なる場合があります。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|サーバーへの接続が失われました。|  
 |SQL_CD_FALSE|接続が開かれており、ステートメントの処理に使用できます。|  
@@ -56,7 +55,7 @@ ms.locfileid: "32948567"
   
  詳細については、次を参照してください。[へのアクセス ログの診断情報、拡張イベント](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)です。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |SQL_ERROR|接続に失敗しました。|  
 |SQL_SUCCESS|接続に成功しました。 クライアント接続 ID は出力バッファーで見つかります。|  
@@ -64,7 +63,7 @@ ms.locfileid: "32948567"
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA 属性は、現在のドライバーのパフォーマンス統計情報を保持する SQLPERF 構造体へのポインターを返します。 **SQLGetConnectAttr**パフォーマンスのログ記録が有効でない場合は NULL を返します。 SQLPERF 構造体内の統計情報がドライバーで動的に更新されることはありません。 呼び出す**SQLGetConnectAttr**たびにパフォーマンス統計を更新する必要があります。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |NULL|パフォーマンスのログ記録が無効です。|  
 |その他の値|SQLPERF 構造体へのポインター。|  
@@ -75,7 +74,7 @@ ms.locfileid: "32948567"
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 属性は、ユーザー データ ポインターを取得します。 ユーザー データはクライアントのメモリに格納され、接続ごとに記録されます。 ユーザー データ ポインターが設定されていない場合、SQL_UD_NOTSET という NULL ポインターが返されます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|ユーザー データ ポインターが設定されていません。|  
 |その他の値|ユーザー データへのポインターです。|  
@@ -87,12 +86,12 @@ ms.locfileid: "32948567"
   
  SQL_COPT_SS_SERVER_SPN または SQL_COPT_SS_FAILOVER_PARTNER が設定されていない場合は、既定値 (空の文字列) が返されます。  
   
- Spn の詳細については、次を参照してください。[サービス プリンシパル名 & #40 です。Spn & #41;でクライアント接続 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)です。  
   
 ## <a name="see-also"></a>参照  
  [SQLGetConnectAttr 関数](http://go.microsoft.com/fwlink/?LinkId=59347)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SET QUOTED_IDENTIFIER と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;TRANSACT-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  

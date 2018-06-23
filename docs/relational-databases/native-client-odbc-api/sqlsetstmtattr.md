@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7074fcf6c6616c878b0cd4021aabb4359c2a40dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bf9b7e907bbc00febe4ef86b17bf266408b131e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947447"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702813"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "32947447"
   
  詳細については、次を参照してください。[準備されたステートメントのテーブル値パラメーターのメタデータ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)です。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)です。  
+ テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)です。  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>SQLSetStmtAttr によるスパース列のサポート  
  SQLSetStmtAttr は、SQL_SOPT_SS_NAME_SCOPE を設定するために使用します。 詳細については、このトピックの「、SQL_SOPT_SS_NAME_SCOPE」のセクションを参照してください。スパース列の詳細については、次を参照してください。[スパース列のサポート&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)です。  
@@ -56,7 +55,7 @@ ms.locfileid: "32947447"
 ### <a name="sqlsoptsscursoroptions"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  カーソルでのドライバー固有のパフォーマンス オプションを使用するかどうかを指定します。 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)はこれらのオプションが設定されている場合は使用できません。 既定の設定は SQL_CO_OFF です。 *ValuePtr*値型は SQLLEN です。  
   
-|*ValuePtr*値|Description|  
+|*ValuePtr*値|説明|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|既定値です。 高速順方向専用、読み取り専用カーソルと autofetch を無効になり、によって**SQLGetData**順方向専用、読み取り専用のカーソルにします。 SQL_SOPT_SS_CURSOR_OPTIONS を SQL_CO_OFF に設定すると、カーソルの種類は変更されません。 つまり、高速順方向専用カーソルは高速順方向専用カーソルのままです。 カーソルの種類を変更するには、アプリケーションする必要がありますを設定別のカーソルの種類を使用して、 **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE です。|  
 |SQL_CO_FFO|高速順方向専用、読み取り専用カーソルの場合、無効にできるように**SQLGetData**順方向専用、読み取り専用のカーソルにします。|  
@@ -70,7 +69,7 @@ ms.locfileid: "32947447"
 ### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  SQL_SOPT_SS_DEFER_PREPARE 属性は、ステートメントがすぐに準備ができているか、まで延期されるかどうかを判断**SQLExecute**、 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)または[SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)を実行します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 以前のバージョンでは、このプロパティは無視されます (準備は遅延されません)。 *ValuePtr*値型は SQLLEN です。  
   
-|*ValuePtr*値|Description|  
+|*ValuePtr*値|説明|  
 |----------------------|-----------------|  
 |SQL_DP_ON|既定値です。 呼び出した後[SQLPrepare 関数](http://go.microsoft.com/fwlink/?LinkId=59360)、まで、ステートメントの準備は遅延**SQLExecute**が呼び出されたか、メタプロパティ操作 (**SQLDescribeCol**または**SQLDescribeParam**) を実行します。|  
 |SQL_DP_OFF|ステートメントが準備されたとすぐに**SQLPrepare**を実行します。|  
@@ -80,7 +79,7 @@ ms.locfileid: "32947447"
   
  *ValuePtr*値型は SQLLEN です。  
   
-|*ValuePtr*値|Description|  
+|*ValuePtr*値|説明|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|既定値です。 ドライバーは、日付、時刻、通貨の値を文字列データに変換する際に、クライアントのロケール設定を使用しません。|  
 |SQL_RE_ON|ドライバーは、日付、時刻、通貨の値を文字列データに変換する際に、クライアントのロケール設定を使用します。|  
@@ -95,7 +94,7 @@ ms.locfileid: "32947447"
 ### <a name="sqlsoptsstextptrlogging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  型の属性を含む列に対する操作のログ記録を切り替えます**テキスト**または**イメージ**データ。 *ValuePtr*値型は SQLLEN です。  
   
-|*ValuePtr*値|Description|  
+|*ValuePtr*値|説明|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|実行される操作のログ記録を無効に**テキスト**と**イメージ**データ。|  
 |SQL_TL_ON|既定値です。 実行される操作のログ記録を有効に**テキスト**と**イメージ**データ。|  
@@ -103,7 +102,7 @@ ms.locfileid: "32947447"
 ### <a name="sqlsoptsshiddencolumns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SELECT FOR BROWSE ステートメントで非表示にされた列を結果セットに公開します。 既定では、ドライバーはこのような列を公開しません。 *ValuePtr*値型は SQLLEN です。  
   
-|*ValuePtr*値|Description|  
+|*ValuePtr*値|説明|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|既定値です。 FOR BROWSE 列が結果セットで非表示になります。|  
 |SQL_HC_ON|FOR BROWSE 列を公開します。|  
@@ -137,7 +136,7 @@ ms.locfileid: "32947447"
   
  SQL_SOPT_SS_NAME_SCOPE の型は SQLULEN です。  
   
-|*ValuePtr*値|Description|  
+|*ValuePtr*値|説明|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|既定値です。<br /><br /> テーブル値パラメーターを使用する場合は、実際のテーブルのメタデータが返される必要があることを示します。<br /><br /> SQLColumns が、スパースのメンバーではない列のみを返す、スパース列機能を使用する場合**column_set**です。|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|アプリケーションが実際のテーブルではなくテーブル型のメタデータを必要としていること (テーブル型のメタデータが返される必要があること) を示します。 その後、アプリケーションとして、テーブル値パラメーターの TYPE_NAME を渡します、 *TableName*パラメーター。|  

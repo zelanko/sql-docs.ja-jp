@@ -1,0 +1,81 @@
+---
+title: 変更の追跡グループに属性を追加する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- change tracking groups [Master Data Services]
+- attributes [Master Data Services], change tracking groups
+- change tracking groups [Master Data Services], adding attributes
+ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
+caps.latest.revision: 4
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.openlocfilehash: 77a151fe4238c7ed99282436a9668a94d85e2b35
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36072116"
+---
+# <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>変更の追跡グループに属性を追加する (マスター データ サービス)
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で属性の値に対する変更を追跡する場合、変更の追跡グループに属性を追加します。  
+  
+> [!NOTE]  
+>  変更の追跡グループに属性を追加した後に属性の値が変更されると、属性は [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースで変更済みとしてフラグが付けられます。 変更に基づいてアクションを実行するビジネス ルールを作成します。  
+  
+## <a name="prerequisites"></a>前提条件  
+ この手順を実行するには  
+  
+-   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+  
+-   変更の追跡グループに追加する属性が存在する必要があります。 詳細については、「[テキスト属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)」を参照してください。  
+  
+### <a name="to-add-attributes-to-a-change-tracking-group"></a>属性を変更の追跡グループに追加するには  
+  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
+  
+2.  **モデル エクスプ ローラー**  ページで、メニュー バーのをポイント**管理** をクリック**エンティティ**です。  
+  
+3.  **[エンティティのメンテナンス]** ページの **[モデル]** ボックスの一覧からモデルを選択します。  
+  
+4.  属性値を追跡するエンティティの行を選択します。  
+  
+5.  **[選択したエンティティの編集]** をクリックします。  
+  
+6.  **[エンティティの編集]** ページで、次の手順を実行します。  
+  
+    -   内のリーフ メンバーの属性の場合、**属性には、リーフ** ウィンドウで、属性を選択し、をクリックして**リーフ属性の編集**です。  
+  
+    -   属性が、統合メンバーの場合、**属性を統合** ウィンドウで、属性を選択し、をクリックして**統合属性の編集**です。  
+  
+    -   属性が、コレクションの場合、**コレクション属性** ウィンドウで、属性を選択し、をクリックして**コレクション属性の編集**です。  
+  
+7.  **[変更の追跡の有効化]** チェック ボックスをオンにします。  
+  
+8.  **[変更の追跡グループ]** ボックスにグループの番号を入力します。  
+  
+9. **[属性の保存]** をクリックします。  
+  
+10. **[エンティティのメンテナンス]** ページで **[エンティティの保存]** をクリックします。  
+  
+11. グループに含めるすべての属性に対して、この手順を繰り返します。 グループ内の各属性に対して同じ変更の追跡グループの番号を使用します。  
+  
+## <a name="next-steps"></a>次の手順  
+  
+-   [属性値の変更に基づいてアクションを開始する&#40;マスター データ サービス&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
+  
+## <a name="see-also"></a>参照  
+ [テキスト属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
+ [ドメイン ベースの属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+  
+  
