@@ -4,7 +4,7 @@ description: この記事では、mssql conf ツールを使用して Linux 上�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 06/22/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 6369c3144a9ce641765358621027729ce235f69d
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9506096746c0f93b147f8040bbd7066e99d69bad
+ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36329487"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf ツールを使用して Linux 上の SQL Server を構成します。
 
@@ -97,7 +98,10 @@ ms.lasthandoff: 05/19/2018
 
 ## <a id="customerfeedback"></a> お客様のフィードバックを構成します。
 
-**Telemetry.customerfeedback**設定か、SQL Server が Microsoft にフィードバックを送信するかどうかを変更します。 既定では、この値に設定**true**です。 値を変更するには、次のコマンドを実行します。
+**Telemetry.customerfeedback**設定か、SQL Server が Microsoft にフィードバックを送信するかどうかを変更します。 既定では、この値に設定**true**すべてのエディション。 値を変更するには、次のコマンドを実行します。
+
+> [!IMPORTANT]
+> できますされませんオフにするお客様のフィードバックを無料の SQL Server、Express、および Developer エディション。
 
 1. ルートととして mssql conf スクリプトを実行、**設定**コマンドを**telemetry.customerfeedback**です。 指定して、次の例がお客様のフィードバックをオフに**false**です。
 
@@ -111,7 +115,7 @@ ms.lasthandoff: 05/19/2018
    sudo systemctl restart mssql-server
    ```
 
-詳細については、次を参照してください。 [for Linux に SQL Server カスタマー フィードバック](sql-server-linux-customer-feedback.md)です。
+詳細については、次を参照してください。 [for Linux に SQL Server カスタマー フィードバック](sql-server-linux-customer-feedback.md)と[SQL Server のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=868444)です。
 
 ## <a id="datadir"></a> 既定のデータまたはログ ディレクトリの場所を変更します。
 
@@ -352,7 +356,7 @@ SQL Server では収集するメモリの種類を制御するダンプの 2 つ
 
     次の表に、考えられる**coredump.coredumptype**値。
 
-    | 型 | Description |
+    | 型 | 説明 |
     |-----|-----|
     | **mini** | ミニは、最小のダンプ ファイルの種類です。 スレッドとプロセスのモジュールを確認するのに、Linux システム情報を使用します。 ダンプには、ホスト環境のスレッドのスタックとモジュールのみが含まれています。 これは、メモリの間接参照またはグローバル変数には含まれません。 |
     | **miniplus** | MiniPlus がミニに似ていますが、追加のメモリが含まれています。 SQLPAL とダンプを次のメモリ領域を追加するホスト環境の内部構造を認識します。</br></br> さまざまなグローバル変数</br> -64 TB を超えるすべてのメモリ</br> -すべてのという名前で地域が見つかりません **/proc/$pid/マップ**</br> スレッド ウィンドウとスタックから間接メモリ</br> のスレッド情報</br> 関連付けられている Teb のおよび Peb</br> モジュール情報</br> VMM と VAD ツリー |
@@ -469,7 +473,7 @@ sudo systemctl restart mssql-server
 
 次のオプションは、Linux で実行されている SQL Server のインスタンスの TLS を構成します。
 
-|オプション |Description |
+|オプション |説明 |
 |--- |--- |
 |**network.forceencryption** |1 の場合、し[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]強制的にすべての接続を暗号化します。 既定では、このオプションは 0 です。 |
 |**network.tlscert** |証明書への絶対パスがファイルを[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は TLS を使用します。 例:`/etc/ssl/certs/mssql.pem`証明書ファイルは mssql アカウントでアクセスする必要があります。 使用してファイルのアクセスを制限することをお勧めします。`chown mssql:mssql <file>; chmod 400 <file>`です。 |
@@ -586,7 +590,7 @@ traceflag1 = 2345
 traceflag = 3456
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 環境変数を使用してこれらの構成変更の一部を代わりに、次を参照してください。[環境変数と SQL Server の構成設定](sql-server-linux-configure-environment-variables.md)です。
 

@@ -1,0 +1,42 @@
+---
+title: 'ケース スタディ: Microsoft Dynamics ERP と SQL Server 2014 レプリケーションのスケーラビリティとパフォーマンスのためのエンタープライズ エコシステムの構築 |Microsoft ドキュメント'
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
+caps.latest.revision: 16
+author: jhubbard
+ms.author: v-ambake
+manager: jhubbard
+ms.openlocfilehash: f76e99597af52391dd265100f61b62fe092a6b8b
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36073141"
+---
+# ケース スタディ: Microsoft Dynamics ERP と SQL Server 2014 レプリケーションを活用した、スケーラビリティとパフォーマンスの向上のためのエンタープライズ エコシステムの構築
+  **概要:** この記事は、次のシナリオをご紹介します。  
+SQL Server 2014 でトランザクション レプリケーションを使用して、Dynamics AX クライアントからのトランザクションを複数のノードに分散する方法です。 トランザクション レプリケーションでは、データが複数のノードでリアルタイムに保持されるため、データの冗長性が実現し、データの可用性が向上します。これには、パフォーマンス分析をより効率的に行うために使用できるデータも含まれます。  
+Microsoft Dynamics ERP で拡張性の高いエンタープライズ エコシステムを構築するためにトランザクション レプリケーションを活用する際に関係する詳細事項を理解する方法。 AX の既定の機能をカスタマイズすることなく、高いパフォーマンスとスケーラビリティを提供します。  
+  
+ トランザクション レプリケーションは、高いスループットが必要とされるサーバー間のワークフローで使われるのが一般的です。 たとえば、スケーラビリティと可用性の向上、データ ウェアハウジングとレポート、複数サイトからのデータの統合、異種データの統合、バッチ処理のオフロードなどのシナリオがあります。 このホワイト ペーパーでは、Microsoft Dynamics ERP でトランザクション レプリケーションを活用する個々のシナリオと、それに関連するパターンについて説明します。 また、Enterprise Resource Planning (ERP) 固有のエンタープライズ ソリューションの構築のためにトランザクション レプリケーションを検討する際の課題とベスト プラクティスや、各段階でのパフォーマンス分析についても解説しています。  
+  
+ このコンテンツは、開発者、アーキテクト、データベース管理者を対象としています。 このホワイト ペーパーの読者の皆様には、SQL Server 2008、2012、2014 に関する基礎知識と、SQL Server の管理の経験があることを想定しています。  
+  
+ **ライター:** Prabhakaran Sethuraman (PRAB)、Microsoft  
+  
+ **技術レビューアー:** Prabhakaran Sethuraman (PRAB)、Microsoft;Santosh Padhy、Microsoft;Pavel Majstrov、Microsoft;Karthik Sankaranarayanan、Microsoft;Jon Acone、Microsoft;David Stahlkopf、Microsoft;Kent Oldenburger、Microsoft;Mandi Ohlinger、Microsoft;Jason Roth、Microsoft  
+  
+ **公開:** 2015 年 10 月  
+  
+ **適用対象:** SQL Server 2008、SQL Server 2012、SQL Server 2014  
+  
+ ダウンロード ドキュメントを参照してください、  
+        [ケース スタディ: スケーラビリティとパフォーマンスのための Microsoft Dynamics ERP と SQL Server 2014 レプリケーションのエンタープライズ エコシステムの構築](http://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/A%20Case%20Study%20Using%20Replication%20to%20Build%20an%20Enterprise%20Ecosystem%20in%20Microsoft%20Dynamics%20ERP%20for%20Scalability%20and%20Performance.docx)Word 文書です。  
+  
+  

@@ -1,0 +1,83 @@
+---
+title: DataSource データ型 (ASSL) |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+api_name:
+- DataSource Data Type
+api_location:
+- http://schemas.microsoft.com/analysisservices/2003/engine
+topic_type:
+- apiref
+helpviewer_keywords:
+- DataSource data type
+ms.assetid: 05e8de8d-452d-4128-98a6-4437df227fec
+caps.latest.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: 4b30438e709f6762ae194174ae9ab2be06bfd32d
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36177184"
+---
+# <a name="datasource-data-type-assl"></a>DataSource データ型 (ASSL)
+  内のデータ ソースを表す抽象プリミティブ データ型を定義、[データベース](../objects/database-element-assl.md)要素。  
+  
+## <a name="syntax"></a>構文  
+  
+```xml  
+  
+<DataSource>  
+   <Name>...</Name>  
+   <ID>...</ID>  
+   <CreatedTimestamp>...</CreateTimestamp>  
+   <LastSchemaUpdate>...</LastSchemaUpdate>  
+   <ManagedProvider>...</ManagedProvider>  
+   <ConnectionString>...</ConnectionString>  
+   <ConnectionStringSecurity>...</ConnectionStringSecurity>  
+   <ImpersonationInfo>...</ImpersonationInfo>  
+   <Isolation>...</Isolation>  
+   <MaxActiveConnections>...</MaxActiveConnections>  
+   <Description>...</Description>  
+   <Timeout>...</Timeout>  
+   <Annotations>...</Annotations>  
+   <DataSourcePermission>...</DataSourcePermission>  
+</DataSource>  
+```  
+  
+## <a name="data-type-characteristics"></a>データ型の特性  
+  
+|特性|説明|  
+|--------------------|-----------------|  
+|基本データ型|なし|  
+|派生データ型|[RelationalDataSource](datasource-data-type-assl.md)、 [OlapDataSource](olapdatasource-data-type-assl.md)、 [PushedDataSource](pusheddatasource-data-type-assl.md)|  
+  
+## <a name="data-type-relationships"></a>データ型のリレーションシップ  
+  
+|リレーションシップ|要素|  
+|------------------|-------------|  
+|親要素|なし|  
+|子要素|[Annotations](../collections/annotations-element-assl.md), [ConnectionString](../properties/connectionstring-element-assl.md), [ConnectionStringSecurity](../properties/connectionstringsecurity-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [DataSourcePermission](../collections/datasourcepermissions-element-assl.md), [Description](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [ImpersonationInfo](../properties/impersonationinfo-element-assl.md), [Isolation](../properties/isolation-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [ManagedProvider](../properties/managedprovider-element-assl.md), [MaxActiveConnections](../properties/maxactiveconnections-element-assl.md), [Name](../properties/name-element-assl.md), [Timeout](../properties/timeout-element-assl.md)|  
+|派生要素|なし|  
+  
+## <a name="remarks"></a>コメント  
+ 不一致バインドを定義する場合、`Name` 要素はオプションです。 `Name` 要素を指定する必要がない場合は、キューブやパーティションなどのバインド内にデータ ソースを定義できます。 `Database` 要素に含まれているデータ ソースの場合、`Name` は必須要素です。  
+  
+ 使用できるデータ ソースの詳細については、「 [多次元モデルのデータ ソース](../../multidimensional-models/data-sources-in-multidimensional-models.md)」を参照してください。  
+  
+ 分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.DataSource>します。  
+  
+## <a name="see-also"></a>参照  
+ [Analysis Services スクリプト言語の XML データ型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+  
+  

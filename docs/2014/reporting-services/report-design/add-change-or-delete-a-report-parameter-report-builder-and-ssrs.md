@@ -1,0 +1,77 @@
+---
+title: レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
+caps.latest.revision: 7
+author: douglaslM
+ms.author: douglasl
+manager: mblythe
+ms.openlocfilehash: 0a0deaffca9298b29ceb3d22c85bd199fcfc55ee
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36174078"
+---
+# <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)
+  レポート パラメーターは、レポート データの選択、他のレポートとの関連付け、レポートの表示方法の変更などの用途に使用されます。 既定値や使用可能な値のリストを指定できるほか、ユーザーに選択内容を変更させることもできます。  
+  
+ レポートをパブリッシュした後、レポート サーバーから、レポート パラメーターの各種プロパティ (既定値や使用可能な値など) を変更できます。 リンク レポートを作成して、既定のパラメーター値の複数のセットを指定できます。 詳細については、「設定パラメーターのパブリッシュ済みレポート プロパティ」を参照してください、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ドキュメント[SQL Server オンライン ブック](http://go.microsoft.com/fwlink/?linkid=120955)です。  
+  
+> [!NOTE]  
+>  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+  
+### <a name="to-add-or-edit-a-report-parameter"></a>レポート パラメーターを追加または編集するには  
+  
+1.  **レポート データ** ペインで、 **[パラメーター]** ノードを右クリックし、 **[パラメーターの追加]** をクリックします。 **[レポート パラメーターのプロパティ]** ダイアログ ボックスが表示されます。  
+  
+2.  **[名前]** にパラメーターの名前を入力するか、既定の名前をそのまま使用します。  
+  
+3.  **[表示名]** に、レポートの実行時にパラメーター テキスト ボックスの隣に表示する文字列を入力します。  
+  
+4.  **[データ型]** で、パラメーター値のデータ型を選択します。  
+  
+5.  空白の値を含めることができる場合は、 **[空白の値を許可]** をオンにします。  
+  
+6.  パラメーターに NULL 値を含めることができる場合は、 **[NULL 値を許可]** をオンにします。  
+  
+7.  パラメーターに複数の値を選択できるようにする場合は、 **[複数の値を許可]** を選択します。  
+  
+8.  表示オプションを設定します。  
+  
+    -   パラメーターをレポート上部のツール バーに表示する場合は、 **[表示]** を選択します。  
+  
+    -   パラメーターがツール バーに表示されないようにする場合は、 **[非表示]** を選択します。  
+  
+    -   レポートのパブリッシュ後はパラメーターを非表示にし、レポート サーバーで変更できないよう保護する場合は、 **[内部]** を選択します。 レポート パラメーターは、レポート定義でのみ参照できます。 このオプションを選択した場合は、既定値を設定するか、パラメーターで Null 値を許可するように設定する必要があります。  
+  
+9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+  
+### <a name="to-delete-a-report-parameter"></a>レポート パラメーターを削除するには  
+  
+1.  **レポート データ** ペインで **[パラメーター]** ノードを展開します。  
+  
+2.  レポート パラメーターを右クリックし、 **[削除]** をクリックします。  
+  
+## <a name="see-also"></a>参照  
+ [追加、変更、またはレポート パラメーターの使用可能な値を削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
+ [レポート パラメーターの既定値の追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
+ [レポート パラメーターの順序を変更&#40;レポート ビルダーおよび SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-parameters-report-builder-and-report-designer.md)   
+ [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [カスケード型パラメーターをレポートに追加&#40;レポート ビルダーおよび SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [チュートリアル&#40;レポート ビルダー&#41;](../report-builder-tutorials.md)   
+ [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
+ [複数の値を持つパラメーターのレポートへの追加](add-a-multi-value-parameter-to-a-report.md)  
+  
+  
