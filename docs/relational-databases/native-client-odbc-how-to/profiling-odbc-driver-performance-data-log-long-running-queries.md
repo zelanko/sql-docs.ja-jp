@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 93ddcef7631a18528ada3a0dda1eedec52e9a15f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9dab917b4adbbb186b916f68f74481b4a3ccbf8b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946697"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701023"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>プロファイリング ODBC ドライバーのパフォーマンス データのログの実行時間の長いクエリ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "32946697"
   
 3.  実行時間の長いクエリのログを記録するデータ ソースをクリックします。  
   
-4.  クリックして **構成**します。  
+4.  をクリックして**構成**です。  
   
 5.  Microsoft SQL Server を構成する DSN ウィザードを使用してページに移動**実行時間の長いクエリをログ ファイルに保存**です。  
   
@@ -225,6 +224,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [プロファイリング ODBC ドライバーのパフォーマンスに関するトピック & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [ODBC ドライバーのパフォーマンスに関するトピックをプロファイリング&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   
