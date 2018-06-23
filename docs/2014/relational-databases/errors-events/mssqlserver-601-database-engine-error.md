@@ -1,0 +1,55 @@
+---
+title: MSSQLSERVER_601 | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- "601"
+helpviewer_keywords:
+- 601 (Database Engine error)
+ms.assetid: 2039cc0a-9a43-4369-a04a-935e384388b6
+caps.latest.revision: 10
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 0cb9c16487408f5be8598a7fee3c748efd8591e8
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36175163"
+---
+# <a name="mssqlserver601"></a>MSSQLSERVER_601
+    
+## <a name="details"></a>詳細  
+  
+|||  
+|-|-|  
+|製品名|SQL Server|  
+|イベント ID|601|  
+|イベント ソース|MSSQLSERVER|  
+|コンポーネント|SQLEngine|  
+|シンボル名||  
+|メッセージ テキスト|データが移動されたので NOLOCK を使用したスキャンは続行できませんでした。|  
+  
+## <a name="explanation"></a>説明  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]が別のトランザクションによって更新または削除されたデータを読み取ろうとしているため、クエリの実行を続行できません。 このクエリでは、NOLOCK ロック ヒントまたは READ UNCOMMITTED トランザクション分離レベルのいずれかが使用されています。  
+  
+ 通常、別のトランザクションによって変更されているデータへのアクセスは、データがロックされているために拒否されます。 しかし、NOLOCK ロック ヒントや READ UNCOMMITTED トランザクション分離レベルを使用すると、別のトランザクションによってロックされているデータをクエリで読み取ることができます。 まだコミットされておらず変更される可能性がある値を読み取ることができるため、この操作はダーティ リードと呼ばれます。  
+  
+## <a name="user-action"></a>ユーザーの操作  
+ このエラーが発生するとクエリは取り消されます。 クエリを再送信するか、NOLOCK ロック ヒントを削除します。  
+  
+## <a name="see-also"></a>参照  
+ [MSSQLSERVER_605](mssqlserver-605-database-engine-error.md)   
+ [テーブル ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)   
+ [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
+ [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)  
+  
+  

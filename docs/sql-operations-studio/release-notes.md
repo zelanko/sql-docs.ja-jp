@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (プレビュー) のリリース ノート |Microsoft ドキュメント
 description: Microsoft SQL Operations Studio (プレビュー) のリリース ノート
 ms.custom: tools|sos
-ms.date: 05/08/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,16 +13,43 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: 29ae09022c18e5c96ffe4db25f59e6bfd619f432
+ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34473826"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271013"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio (プレビュー) のリリース ノート
 
-**[月のパブリック プレビューをダウンロードします。](download.md)**
+**[年 6 月のパブリック プレビューをダウンロードします。](download.md)**
+
+
+## <a name="june-2018-june-public-preview"></a>年 6 月 2018 (年 6 月のパブリック プレビュー)
+
+リリース日: 2018 年 6 月 20日  
+バージョン: 0.30.6
+
+*年 6 月のパブリック プレビュー*次の点が含まれています。  
+
+- **SQL Server Profiler for SQL 操作 Studio*プレビュー*** 拡張機能の初期リリースします。
+- 新しい**SQL Data Warehouse**拡張機能には、豊富なダッシュ ボード ウィジェット提示、データ ウェアハウスへの洞察にはが含まれています。 これには、主要なシナリオを管理すると、一貫したパフォーマンス用に最適化を確実にデータ ウェアハウスのチューニングがロック解除します。
+- **「フィルターと並べ替え」のデータを編集**をサポートします。
+- **SQL 操作 Studio の SQL Server エージェント*プレビュー*** ジョブとジョブ履歴の拡張機能の拡張機能のビューです。
+- 向上**ウィザードとダイアログ UI ビルダー フレームワーク**機能拡張 Api です。
+- VS プラットフォーム コードのソース コードの統合を更新[年 2018年 3 月 (1.22)](https://code.visualstudio.com/updates/v1_22)と[年 2018年 4 月 (1.23)](https://code.visualstudio.com/updates/v1_23)を解放します。
+- GitHub の問題を修正します。
+  - 機能の要求 ([発行 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)): くださいする結果グリッド [自動調整] 列の幅、データや、同じクエリが再実行の場合、手動で変更を注意してください。
+  - 修正[発行 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): 表示メッセージおよび追加リンクされているアカウントが空の場合は、アカウントのアカウント ボタンを追加します。
+  - 修正[発行 1399](https://github.com/Microsoft/sqlopsstudio/issues/1399): ビューが折りたたまれているときに、リンクされているアカウント タブが壊れています。
+  - 修正[発行 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): ディスクから .sql ファイルを開くときに、SQL ツール サービスがクラッシュします。
+  - 修正[発行 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): 見つからない SQL キーワード"BETWEEN"です。
+  - 修正[発行 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): 'MATCH' キーワードが SQL ツール サービスがクラッシュします。
+  - 修正[発行 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): オブジェクト エクスプ ローラーで、「新しいプロファイラー」コンテキスト メニュー オプションは、何も行われません。
+  - 修正[発行 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): クエリ エディターの「説明」クエリ プランが壊れています。
+
+
+詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/sqlopsstudio/releases)です。
 
 
 ## <a name="may-2018-may-public-preview"></a>月 2018年 (パブリック プレビューの場合があります)
@@ -47,8 +74,6 @@ ms.locfileid: "34473826"
    - 修正[発行 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL エージェントの拡張機能とステータス バー
    - 修正[発行 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): ウィンドウ サイズの変更後に SQL エージェントの今後のサイズを変更
 
-
-詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/sqlopsstudio/releases)です。
 
 
 
