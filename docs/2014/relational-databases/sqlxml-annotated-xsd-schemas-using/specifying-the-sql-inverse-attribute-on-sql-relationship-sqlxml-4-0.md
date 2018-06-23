@@ -1,0 +1,47 @@
+---
+title: Sql:relationship (SQLXML 4.0) での sql:inverse 属性の指定 |Microsoft ドキュメント
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- sql:relationship
+- bulk load [SQLXML]
+- inverse attribute
+- relationships [SQLXML], inverse orders
+- relationship annotation
+- XSD schemas [SQLXML], relationships
+- annotated XSD schemas, relationships
+- updategrams [SQLXML], relationships
+- sql:inverse
+ms.assetid: 08904cbd-9c86-493d-90c3-f5e1d13ce59d
+caps.latest.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 66cbeee228a5f186317eb69d4b0dad899c9c1252
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36174113"
+---
+# <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>sql:relationship での sql:inverse 属性の指定 (SQLXML 4.0)
+  `sql:inverse` 属性は、一括読み込みまたはアップデートグラムで XSD スキーマが使用される場合にのみ便利です。 `sql:inverse`で属性を指定することができます、  **\<sql:relationship >** 要素。 アップデートグラムでは、アップデートグラム ロジックによってスキーマが解釈され、アップデートグラム操作で更新されるテーブルと列が決定されます。 また、スキーマで指定される親子リレーションシップによって、レコードが変更、挿入、または削除される順序が決定されます。  
+  
+ XSD スキーマを使用しており、そこで指定されている親子リレーションシップが、対応するデータベース列間の主キー/外部キー リレーションシップの逆順である場合は、アップデートグラムで挿入または削除操作を実行すると、主キー/外部キー違反で失敗します。 このような場合、`sql:inverse`属性を指定する (`sql:inverse="true"`) で、  **\<sql:relationship >** 要素、およびアップデート グラム ロジックによって逆に指定された親/子リレーションシップ解釈スキーマ。  
+  
+ `sql:inverse` 属性はブール値 (0 = false、1=true) をとります。 指定できる値は 0、1、true、false です。  
+  
+ 作業用サンプルを使用して、`sql:inverse`注釈を参照してください[注釈付きマッピング スキーマを指定するアップデート グラムで](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)です。  
+  
+## <a name="see-also"></a>参照  
+ [リレーションシップを使用して sql:relationship を指定する&#40;SQLXML 4.0&#41;](specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
+  
+  
