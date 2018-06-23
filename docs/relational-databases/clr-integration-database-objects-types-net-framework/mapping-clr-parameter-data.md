@@ -3,11 +3,9 @@ title: CLR パラメーター データのマッピング |Microsoft ドキュ�
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -31,12 +29,12 @@ caps.latest.revision: 71
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 23e4350f5bc8f639ccb529bc28927ca93261ce09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b1965107b1215a1a03817c7fc048ddc50ab8346
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923507"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696573"
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR パラメーター データのマッピング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +69,7 @@ ms.locfileid: "32923507"
 |**rowversion**|なし|**Byte[]**|  
 |**smallint**|**SqlInt16**|**Int16 型、null 許容\<Int16 >**|  
 |**smallmoney**|**SqlMoney**|**Null 値は 10 進\<Decimal >**|  
-|**sql_variant**|なし|**オブジェクト**|  
+|**sql_variant**|なし|**Object**|  
 |**テーブル**|なし|なし|  
 |**text**|なし|なし|  
 |**time**|なし|**TimeSpan、null 許容\<TimeSpan >**|  
@@ -116,8 +114,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR データ型 (SQL Server)**|**SQL Server データ型**|  
-|**10 進数**|smallmoney|  
-|**SqlMoney**|smallmoney|  
+|**10 進数**|SMALLMONEY|  
+|**SqlMoney**|SMALLMONEY|  
 |**10 進数**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  

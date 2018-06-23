@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e23fa666cda37c573d55071739ecfe3df7c7c6d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac496025b9131e026d29920450d9ad2b45cc52be
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947017"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701463"
 ---
 # <a name="setting-large-data"></a>大きなデータの設定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +58,7 @@ ms.locfileid: "32947017"
   
 5.  呼び出す**GetNextRows**行セットを次の行をフェッチします。 呼び出す**GetData**行セットからデータを読み取れません。  
   
-6.  含むデータ (および長さのインジケーター)、ストレージ オブジェクトを作成し、呼び出す**irowsetchange::setdata** (または**irowsetchange::insertrow**) データを設定する BLOB 列をバインドするアクセサーを使用します。  
+6.  含むデータ (および長さのインジケーター)、ストレージ オブジェクトを作成し、呼び出す**irowsetchange::setdata** (または**irowsetchange::insertrow**) を設定する BLOB 列をバインドするアクセサーを持つデータ。  
   
 ## <a name="example"></a>例  
  次の例は、BLOB データを設定する方法を示しています。 この例では、テーブルを作成し、サンプル レコードを追加して、行セット内のそのレコードをフェッチし、BLOB フィールドの値を設定しています。  
@@ -728,6 +726,6 @@ Exit:
   
 ## <a name="see-also"></a>参照  
  [Blob と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [大きな値の型を使用します。](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [大きな値の型の使用](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

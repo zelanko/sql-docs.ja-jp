@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee119689f7bf66cde7f2276372185cb42907274e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 43afb9ba50d67d35eb9dabb5542a20f0b847ae88
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947087"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703803"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "32947087"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーの次の追加の診断フィールドを指定する**SQLGetDiagField**です。 これらのフィールドでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに関する各種エラー報告がサポートされます。また、これらのフィールドは、接続されている ODBC 接続ハンドルや ODBC ステートメント ハンドルで生成されるすべての診断レコードで使用できます。 これらのフィールドは、sqlncli.h で定義されています。  
   
-|診断レコードのフィールド|Description|  
+|診断レコードのフィールド|説明|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|ストアド プロシージャのエラーが発生した行番号を報告します。 SQL_DIAG_SS_LINE の値は、SQL_DIAG_SS_PROCNAME に値が返される場合にのみ意味があります。 この値は、16 ビットの符号なし整数で返されます。|  
 |SQL_DIAG_SS_MSGSTATE|エラー メッセージの状態。 エラー メッセージの状態については、次を参照してください。 [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)です。 この値は、32 ビットの符号付き整数で返されます。|  
@@ -44,7 +43,7 @@ ms.locfileid: "32947087"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の補足の動的機能コードが報告されます。この動的機能コードでは、最後に試行された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントが特定されます。 動的機能コードは、診断レコード セットのヘッダー (レコード 0) に返されるので、各実行が成功しても失敗しても参照できます。  
   
-|動的機能コード|ソース|  
+|動的機能コード|Source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE ステートメント|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT ステートメント|  
@@ -105,7 +104,7 @@ ms.locfileid: "32947087"
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField とテーブル値パラメーター  
  SQLGetDiagField は、2 つの診断フィールドを取得するために使用できます: SQL_DIAG_SS_TABLE_COLUMN_NUMBER および SQL_DIAG_SS_TABLE_ROW_NUMBER です。 これらのフィールドは、診断レコードに関連するエラーまたは警告の原因となった値を特定するのに役立ちます。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)です。  
+ テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)です。  
   
 ## <a name="see-also"></a>参照  
  [SQLGetDiagField 関数](http://go.microsoft.com/fwlink/?LinkId=59352)   
