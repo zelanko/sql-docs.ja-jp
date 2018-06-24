@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - UNSAFE assemblies
@@ -22,12 +20,12 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8b71c017161b2f696872c6d2dd2ba7843a474bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc9d9c90e260fe3da8640189a8a16af15b984769
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931247"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702933"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 統合のコード アクセス セキュリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,9 +112,9 @@ ms.locfileid: "32931247"
 ||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
 |**コード アクセス セキュリティのアクセス許可**|実行のみ|実行および外部リソースへのアクセス|無制限 (P/Invoke を含む)|  
 |**プログラミング モデルの制限**|はい|はい|制限はありません。|  
-|**検証の必要性**|はい|[ユーザー アカウント制御]|いいえ|  
-|**ローカル データ アクセス**|はい|[ユーザー アカウント制御]|はい|  
-|**ネイティブ コードを呼び出すための機能**|いいえ|いいえ|可|  
+|**検証の必要性**|はい|はい|いいえ|  
+|**ローカル データ アクセス**|はい|はい|はい|  
+|**ネイティブ コードを呼び出すための機能**|いいえ|いいえ|はい|  
   
 ## <a name="see-also"></a>参照  
  [CLR 統合のセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

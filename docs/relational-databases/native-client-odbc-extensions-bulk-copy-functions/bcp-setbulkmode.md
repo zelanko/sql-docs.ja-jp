@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e0b8bdab13a6a937c6e97cec3ece700a685deb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc5e54ef357214a3121c1a7ed964c9ee9bf5955b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946067"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703583"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +48,7 @@ RETCODE bcp_setbulkmode (
  *hdbc*  
  一括コピーが有効な ODBC 接続ハンドルです。  
   
- *プロパティ*  
+ *property*  
  BYTE 型の定数です。 定数の一覧については、「解説」の表を参照してください。  
   
  *pField*  
@@ -65,17 +63,17 @@ RETCODE bcp_setbulkmode (
  *cbRow*  
  行ターミネータ値の長さです (バイト単位)。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SUCCEED または FAIL を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  bcp_setbulkmode は、クエリまたはテーブルの一括コピー出力を使用できます。 Bcp_setbulkmode 使用すると、クエリ ステートメントの一括コピーには、BCP_HINT を bcp_control を呼び出す前に呼び出す必要があります。  
   
  bcp_setbulkmode が使用する代わりに[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)と[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)、のみ関数呼び出しごとに 1 列の形式を指定することができます。  
   
  次の表に、定数を*プロパティ*パラメーター。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP で – c オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLCHARACTER**です。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の – w オプションに対応します。EXE およびで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**です。|  

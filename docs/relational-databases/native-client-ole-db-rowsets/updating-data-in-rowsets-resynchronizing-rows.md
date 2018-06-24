@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 53beb76346d74fdb4e2eb8bf80e8462860d28155
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3760ea9594f1e8d3f3729dd5a02927c91bffb15c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949187"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702333"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows"></a>行セットの行の再同期のデータの更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,6 +34,6 @@ ms.locfileid: "32949187"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのサポート**IRowsetResynch**で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カーソルでサポートされている行セットのみです。 **IRowsetResynch**は要求時に使用できません。 コンシューマーは、行セットを開く前にインターフェイスを要求する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [行セットのデータの更新](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  
+ [行セット内のデータの更新](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  
   
   

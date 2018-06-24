@@ -3,11 +3,9 @@ title: CLR ユーザー定義集計関数の呼び出し |Microsoft ドキュメ
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -23,12 +21,12 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 967475fc3c9781a999fe3d4dabc2f79d6324a492
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7731be96b2cf9eaccdad14274250346c04b67a75
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921417"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700343"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR のユーザー定義の集計の関数の呼び出し
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
