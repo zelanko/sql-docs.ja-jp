@@ -11,8 +11,7 @@
 # [正常性ポリシーの構成 (SQL Server ユーティリティ)](configure-health-policies-sql-server-utility.md)
 # [CPU 使用率のポリシーにおけるノイズの軽減 (SQL Server ユーティリティ)](reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)
 # [SQL Server ユーティリティからの SQL Server のインスタンスの削除](remove-an-instance-of-sql-server-from-the-sql-server-utility.md)
-# 
-  [SQL Server のマネージド インスタンスにおけるユーティリティ コレクション セットのプロキシ アカウントの変更 (SQL Server ユーティリティ)](change-proxy-account-for-utility-collection-on-managed-sql-server.md)
+# [SQL Server のマネージド インスタンスにおけるユーティリティ コレクション セットのプロキシ アカウントの変更 (SQL Server ユーティリティ)](change-proxy-account-for-utility-collection-on-managed-sql-server.md)
 # [SQL Server のインスタンス間での UCP の移動 (SQL Server ユーティリティ)](move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)
 # [ユーティリティ コントロール ポイントの削除 (SQL Server ユーティリティ)](remove-a-utility-control-point-sql-server-utility.md)
 # [SQL Server ユーティリティのトラブルシューティング](../../database-engine/troubleshoot-the-sql-server-utility.md)

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - managed code [SQL Server]
@@ -23,12 +21,12 @@ caps.latest.revision: 64
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5462a7407a06364ddc4a1587271d6987c233acf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ebc2a886b525d356dadaa665e0d1815fb6e97d91
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920737"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701703"
 ---
 # <a name="common-language-runtime-integration-overview"></a>共通言語ランタイム統合の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +53,7 @@ ms.locfileid: "32920737"
  [CLR 統合の概要](../../relational-databases/clr-integration/clr-integration-overview.md)  
  CLR 統合を使用してビルドできるオブジェクトの種類について説明します。また、CLR 統合を使用してデータベース オブジェクトをビルドする場合の要件を確認します。  
   
- [CLR 統合における新機能します。](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
+ [CLR 統合における新機能](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  このリリースの新機能について説明します。  
   
  [CLR 統合のアーキテクチャ](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  

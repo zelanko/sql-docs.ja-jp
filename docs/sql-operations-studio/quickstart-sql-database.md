@@ -1,5 +1,5 @@
 ---
-title: 'クイック スタート: 接続し、SQL Operations Studio (プレビュー) を使用して Azure SQL データベースを照会 |Microsoft ドキュメント'
+title: 'クイック スタート: SQL Operations Studio (プレビュー) を使用して Azure SQL Database に接続して照会する |Microsoft ドキュメント'
 description: このクイック スタートは、SQL Operations Studio (プレビュー) を使用して SQL データベースに接続し、クエリを実行する方法を示しています。
 ms.custom: tools|sos
 ms.date: 03/08/2018
@@ -20,7 +20,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
 ms.locfileid: "34235776"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>クイック スタート: を使用して[!INCLUDE[name-sos](../includes/name-sos-short.md)]接続し、Azure SQL データベースを照会するには
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して Azure SQL Database に接続して照会する
 
 このクイック スタートでは、*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* を使用して Azure SQL database に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して [!INCLUDE[name-sos](../includes/name-sos-short.md)] チュートリアルで使用される *TutorialDB* を作成する方法について説明します。
 
@@ -37,15 +37,15 @@ ms.locfileid: "34235776"
 - [DB の作成 - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
 
 
-## <a name="connect-to-your-azure-sql-database-server"></a>Azure SQL データベース サーバーへの接続します。
+## <a name="connect-to-your-azure-sql-database-server"></a>Azure SQL Database サーバーに接続する
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]を使用して Azure SQL データベース サーバーへの接続を確立します。
 
-1. 初めて実行する[!INCLUDE[name-sos](../includes/name-sos-short.md)]、**接続**ページを開く必要があります。 表示されない場合、**接続**] ページで [**接続の追加**、または**新しい接続**のアイコン、**サーバー**サイドバー。
+1. [!INCLUDE[name-sos](../includes/name-sos-short.md)] の初回実行時には **[接続]** ページが開きます。 **[接続]** ページが表示されない場合は、**[接続の追加]**、または **[サーバー]** サイドバーの **[新しい接続]** アイコンをクリックします。
    
    ![新しい接続のアイコン](media/quickstart-sql-database/new-connection-icon.png)
 
-2. この記事では*SQL ログイン*が*Windows 認証*もサポートされています。 次のようにサーバー名、ユーザー名およびパスワードを使用して、フィールドに入力 *、* Azure SQL server:
+2. この記事では*SQL ログイン*を使用しますが、*Windows 認証*もサポートされています。 Azure SQL サーバーのサーバー名、ユーザー名およびパスワードを使用して *、* 次のようにフィールドに入力します。
 
    | 設定       | 提案される値 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -59,7 +59,7 @@ ms.locfileid: "34235776"
 
    ![新しい接続のアイコン](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. サーバーに接続する、SQL Operations Studio を許可するファイアウォール規則を持っていない場合、**新しいファイアウォール ルールを作成**フォームが開きます。 新しいファイアウォール ルールを作成するフォームを完了します。 詳細については、「[のファイアウォール ルール](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)です。
+3. サーバーに SQL Operations Studio の接続を許可するファイアウォール規則が設定されていない場合、**[新しいファイアウォール規則の作成]** フォームが開きます。 フォームを完成させて新しいファイアウォール規則を作成します。 詳細については、[ファイアウォール規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)を参照してください。
 
    ![新しいファイアウォール規則](media/quickstart-sql-database/firewall.png)  
 

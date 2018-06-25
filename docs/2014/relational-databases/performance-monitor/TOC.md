@@ -25,8 +25,7 @@
 ## [SQL Server の Database Mirroring オブジェクト](sql-server-database-mirroring-object.md)
 ## [SQL Server のデータベース レプリカ](sql-server-database-replica.md)
 ## [SQL Server の Databases オブジェクト](sql-server-databases-object.md)
-## 
-  [SQL Server の Deprecated Features オブジェクト](sql-server-deprecated-features-object.md)
+## [SQL Server の Deprecated Features オブジェクト](sql-server-deprecated-features-object.md)
 ## [SQL Server の ExecStatistics オブジェクト](sql-server-execstatistics-object.md)
 ## [SQL Server の General Statistics オブジェクト](sql-server-general-statistics-object.md)
 ## [SQL Server の HTTP_STORAGE_OBJECT](sql-server-http-storage-object.md)
