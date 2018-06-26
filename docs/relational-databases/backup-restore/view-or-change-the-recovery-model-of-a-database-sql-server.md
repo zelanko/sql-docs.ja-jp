@@ -39,7 +39,7 @@ ms.locfileid: "32921384"
   [復旧モデル](recovery-models-sql-server.md)についての詳細な説明は、 [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) の提供する「 [SQL Server Recovery Models](https://www.mssqltips.com/)」 (SQL Server 復旧モデル) を参照してください。
   
   
-##  <a name="BeforeYouBegin"></a> アンインストールの準備  
+##  <a name="BeforeYouBegin"></a> はじめる前に  
   
 
 -   [完全復旧モデルまたは一括ログ復旧モデル](recovery-models-sql-server.md)から切り替える**前**に、[トランザクション ログをバックアップ](back-up-a-transaction-log-sql-server.md)してください。  
