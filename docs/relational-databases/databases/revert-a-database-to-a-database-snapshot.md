@@ -96,7 +96,7 @@ ms.locfileid: "34799832"
 > [!NOTE]  
 >  この手順の例については、このセクションの後半の「 [例 (Transact-SQL)](#TsqlExample)」を参照してください。  
   
-1.  データベースを戻す対象になるデータベース スナップショットを特定します。 データベース内のスナップショットは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で参照できます (詳細については、「 [データベース スナップショットの表示 &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)」を参照してください)。 また、 **sys.databases &#40;Transact-SQL&#41;** カタログ ビューの [sys.databases &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列から、ビューのソース データベースを特定することもできます。  
+1.  データベースを戻す対象になるデータベース スナップショットを特定します。 データベース内のスナップショットは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で参照できます (詳細については、「 [データベース スナップショットの表示 &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)」を参照してください)。 また、 **sys.databases &#40;Transact-SQL&#41;** カタログ ビューの [source_database_id](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列から、ビューのソース データベースを特定することもできます。  
   
 2.  他のデータベース スナップショットを削除します。  
   
