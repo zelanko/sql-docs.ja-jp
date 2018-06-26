@@ -18,7 +18,7 @@ ms.author: sstein
 manager: jhubbard
 ms.openlocfilehash: ea27e4ceb186e05acd8c16af56de2a30ed6f1e0f
 ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/19/2018
 ms.locfileid: "36165237"
@@ -42,7 +42,7 @@ ms.locfileid: "36165237"
   
 -   インメモリ OLTP をインストールするには、次のように選択します。**データベース エンジン サービス**インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。  
   
-     レポートの生成をインストールする ([決める場合は、テーブルまたはストアド プロシージャに移植する、インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) および[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)](を使用して、インメモリ OLTP を管理する[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]オブジェクト エクスプ ローラー) を選択**管理ツール-基本**または**管理ツール-[詳細設定]** インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。  
+     レポートの生成をインストールする ([決める場合は、テーブルまたはストアド プロシージャに移植する、インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) および[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (を使用して、インメモリ OLTP を管理する[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]オブジェクト エクスプ ローラー) を選択**管理ツール-基本**または**管理ツール-[詳細設定]** インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。  
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] の使用に関する重要な注意事項  
   
