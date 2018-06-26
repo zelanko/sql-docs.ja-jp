@@ -328,7 +328,7 @@ function FormatErrors( $errors )
 }
 ?>
 ```
-ブラウザーのポイントhttp://localhost/testsql.php(http://localhost:8080/testsql.php macos)。 SQL Server と Azure SQL データベースに接続できるようになりましたに。
+ブラウザーのポイント http://localhost/testsql.php (http://localhost:8080/testsql.php macos)。 SQL Server と Azure SQL データベースに接続できるようになりましたに。
 
 ## <a name="see-also"></a>参照  
 [入門 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

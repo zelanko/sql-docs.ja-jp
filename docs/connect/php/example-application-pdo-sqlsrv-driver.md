@@ -31,7 +31,7 @@ AdventureWorks Product Reviews サンプル アプリケーションの PDO_SQLS
 1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]をインストールします。 詳細については、次を参照してください[Microsoft Drivers for PHP for SQL Server の概要。](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  後で示すコードを、2 つのファイル adventureworks_demo.php と photo.php にコピーします。  
 3.  adventureworks_demo.php および photo.php ファイルを Web サーバーのルート ディレクトリに置きます。  
-4.  アプリケーションを起動して実行http://localhost/adventureworks_demo.phpお使いのブラウザーからです。  
+4.  アプリケーションを起動して実行 http://localhost/adventureworks_demo.php お使いのブラウザーからです。  
   
 ## <a name="requirements"></a>要件  
 AdventureWorks Product Reviews サンプル アプリケーションを実行するには、コンピューターが次のようになっている必要があります。  
