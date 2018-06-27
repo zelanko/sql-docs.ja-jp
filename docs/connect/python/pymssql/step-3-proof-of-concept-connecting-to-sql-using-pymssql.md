@@ -24,8 +24,8 @@ ms.lasthandoff: 05/03/2018
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>手順 3: 概念実証の pymssql を使用して SQL に接続します。
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-この例は、概念実証ののみを考慮してください。  サンプル コードでは、わかりやすくするため、簡略化し、Microsoft によって推奨されるベスト プラクティスを必ずしもは表しません。  
-  
+この例は、概念実証としてのみ考慮してください。 サンプル コードは、わかり易いよう簡略化されており、必ずしも Microsoft が推奨するベスト プラクティスを表しているとは限りません。
+
 ## <a name="step-1--connect"></a>手順 1: 接続  
   
 [Pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html)関数は SQL データベースへの接続に使用します。  
