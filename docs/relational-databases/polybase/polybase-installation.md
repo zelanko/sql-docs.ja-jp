@@ -24,9 +24,9 @@ ms.lasthandoff: 05/19/2018
 # <a name="polybase-installation"></a>PolyBase のインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server の試用版をインストールするには、「 [SQL Server 評価版ソフトウェア](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 
-  
-## <a name="prerequisites"></a>Prerequisites  
+  SQL Server の試用版は [SQL Server 評価版ソフトウェア](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) からインストールすることができます。
+
+## <a name="prerequisites"></a>前提条件
   
 - 64 ビット SQL Server 評価版。  
   
