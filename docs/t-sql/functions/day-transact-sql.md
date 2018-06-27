@@ -28,18 +28,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c248e735b25dbdbc2f7bd263698007acfc8600e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50e6d900b90d777514859601c4b211e4e0e3b5d0
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238982"
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-指定した日 (月の日) を表す整数を返します *日付*です。
+この関数は、指定された *date* の日 (月の日にち) を表す整数を返します。
   
-すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のあらゆるデータ型と関数に関する概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,7 +52,16 @@ DAY ( date )
   
 ## <a name="arguments"></a>引数  
 *date*  
-**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** 値に解決できる式です。 *date* 引数には、式、列式、ユーザー定義変数、または文字列リテラルを指定できます。
+次のいずれかのデータ型に解決される式。
+
++ **date**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **time**
+
+*date* の場合、`DAY` では、列式、式、文字列リテラル、ユーザー定義の変数が受け入れられます。
   
 ## <a name="return-type"></a>戻り値の型  
 **int**
@@ -59,16 +69,16 @@ DAY ( date )
 ## <a name="return-value"></a>戻り値  
 * * 1 日には、同じの値が返されます [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**日**、*日付*など)。 * *。
   
-*日付*に時刻部分のみが含まれている場合、戻り値は 1、基本の日です。
+*date* に時刻部分のみが含まれる場合、`DAY` は基本の日である 1 を返します。
   
 ## <a name="examples"></a>使用例  
-次のステートメントでは、`30` が返されます。 これは、日を表す値です。
+このステートメントは、日にち自体の数である `30` を返します。
   
 ```sql
 SELECT DAY('2015-04-30 01:01:01.1234567');  
 ```  
   
-次のステートメントでは、`1900, 1, 1` が返されます。 引数 *日付* 番号 0です`0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、`0` を 1900 年 1 月 1 日と解釈します。
+このステートメントは `1900, 1, 1` を返します。 *date* 引数の数値は `0` になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、`0` を 1900 年 1 月 1 日と解釈します。
   
 ```sql
 SELECT YEAR(0), MONTH(0), DAY(0);  

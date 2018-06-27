@@ -22,12 +22,12 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d8c3441f219017125b755b498a534317a1fca01
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e8b3b6eccf11b959ae04a4d0888bd1bf76bfe869
+ms.sourcegitcommit: 73ca0313b185e730579f09f9bc32a852c9dd2ef4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550483"
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35452182"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>チュートリアル: 2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +142,8 @@ ms.locfileid: "34550483"
 
 ![[開始] ボタンと、スナップショット エージェントが実行されたことを示す状態の変更メッセージ](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-ここでエラーが発生する場合は、[スナップショット エージェント エラーのトラブルシューティング](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent)に関するページを参照してください。 
+ここでエラーが発生する場合は、[スナップショット エージェント エラーのトラブルシューティング](troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent)に関するページを参照してください。
+
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>ディストリビューション エージェントのログインを PAL に追加する  
@@ -239,7 +240,7 @@ ms.locfileid: "34550483"
 
 詳細については、以下をご覧ください。 
 - [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-- [トランザクション レプリケーションの同期エラーのトラブルシューティング](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+- [トランザクション レプリケーション エージェントでエラーを見つける](troubleshoot-tran-repl-errors.md)
 
 
 ## <a name="next-steps"></a>次の手順
@@ -249,5 +250,3 @@ ms.locfileid: "34550483"
 
 > [!div class="nextstepaction"]
 > [チュートリアル: サーバーとモバイル クライアントの間のレプリケーション (マージ) を構成する](tutorial-replicating-data-with-mobile-clients.md)
-
-  

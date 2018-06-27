@@ -1,32 +1,32 @@
 ---
-title: Azure の SSIS カタログ データベース (SSISDB) に接続する | Microsoft Docs
+title: Azure の SSIS カタログ (SSISDB) に接続する | Microsoft Docs
+description: Azure SQL Database サーバーでホストされている SSIS カタログ (SSISDB) に接続するために必要な接続情報を確認します。
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 639f02809a003bc5418ecb5ec33930f89205701f
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405674"
 ---
-# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Azure の SSIS カタログ データベース (SSISDB) に接続する
+# <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Azure の SSIS カタログ (SSISDB) に接続する
 
-Azure SQL Database でホストされている SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 接続するには、次の項目が必要です。
+Azure SQL Database サーバーでホストされている SSIS カタログ (SSISDB) に接続するために必要な接続情報を確認します。 接続するには、次の項目が必要です。
 - 完全修飾サーバー名
 - データベース名
 - ログイン情報 
 
 > [!IMPORTANT]
-> この時点では、Azure Data Factory バージョン 2 での Azure SSIS Integration Runtime の作成とは切り離して、Azure SQL Database に SSISDB カタログ データベースを作成することはできません。 Azure SSIS IR は、Azure 上で SSIS パッケージを実行するからです。 詳細については、「[Azure Data Factory UI を使用した Azure SSIS 統合ランタイムのプロビジョニング](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)」を参照してください。 
+> この時点では、Azure Data Factory バージョン 2 での Azure SSIS Integration Runtime の作成とは切り離して、Azure SQL Database に SSISDB カタログ データベースを作成することはできません。 Azure SSIS IR は、Azure 上で SSIS パッケージを実行するランタイム環境です。 プロセスのチュートリアルについては、「[Azure で SSIS パッケージをデプロイし、実行する](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)」を参照してください。 
 
 ## <a name="prerequisites"></a>Prerequisites
 始める前に、バージョン 17.2 以降の SQL Server Management Studio (SSMS) があることを確認します。 SSISDB カタログ データベースが SQL Database Managed Instance (プレビュー) でホストされている場合は、SSMS のバージョンが 17.6 以降であることを確認します。 最新バージョンの SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
@@ -49,7 +49,7 @@ Azure SQL Database でホストされている SSIS カタログ データベー
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバーの種類** | データベース エンジン | この値は必須です。 |
    | **サーバー名** | 完全修飾サーバー名 | 名前は **mysqldbserver.database.windows.net** の形式である必要があります。 |
-   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | このクイック スタートでは、SQL 認証を使います。 |
+   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | |
    | **Login** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
    | **Password** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
 
@@ -71,4 +71,4 @@ Azure SQL Database でホストされている SSIS カタログ データベー
 ## <a name="next-steps"></a>次の手順
 - パッケージを配置します。 詳細については、「[SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する](../ssis-quickstart-deploy-ssms.md)」を参照してください。
 - パッケージを実行します。 詳細については、「[SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する](../ssis-quickstart-run-ssms.md)」を参照してください。
-- パッケージのスケジュールを設定します。 詳細については、「[Azure で SSIS パッケージの実行をスケジュールする](ssis-azure-schedule-packages.md)」を参照してください。
+- パッケージのスケジュールを設定します。 詳細については、「[Azure で SSIS パッケージのスケジュールを設定する](ssis-azure-schedule-packages.md)」を参照してください。

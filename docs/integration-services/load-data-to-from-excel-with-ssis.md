@@ -1,10 +1,9 @@
 ---
 title: SSIS を使用する Excel からのインポートまたは Excel へのエクスポート | Microsoft Docs
-ms.description: Describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). Also describes prerequisites, known issues, and limitations.
+description: 前提条件、既知の問題、制限事項と共に、SQL Server Integration Services (SSIS) を使用して Excel データをインポートまたはエクスポートする方法について説明します。
 ms.date: 04/10/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -14,12 +13,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 075cb9c74fa551a6d6053c70ebfe77255b56a7a8
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 0230dd81a704ce0d9ada34eecea205e153ebb78b
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34236133"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403394"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする
 

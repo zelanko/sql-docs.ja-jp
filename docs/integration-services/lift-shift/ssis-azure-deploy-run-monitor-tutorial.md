@@ -1,26 +1,25 @@
 ---
 title: Azure で SSIS パッケージをデプロイし、実行する | Microsoft Docs
+description: SQL Server Integration Services (SSIS) プロジェクトを Azure SQL Database 上の SSIS カタログにデプロイして、パッケージを実行する方法について説明します
 ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d482a7e8c3cf75be0cb87b35323c5fbc472a3f7b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ac3ee68b47e3ae70c3b6d149d75b68d50b093309
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585634"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335836"
 ---
-# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Azure で SSIS パッケージをデプロイし、実行する
-このチュートリアルでは、Azure SQL Database の SSISDB カタログ データベースに SQL Server Integration Services プロジェクトを配置する方法、Azure-SSIS Integration Runtime でのパッケージの実行方法、および実行中のパッケージの監視方法を示します。
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>チュートリアル: Azure で SQL Server Integration Services (SSIS) パッケージをデプロイし、実行する
+このチュートリアルでは、Azure SQL Database の SSIS カタログに SQL Server Integration Services (SSIS) プロジェクトをデプロイする方法、Azure-SSIS Integration Runtime でのパッケージの実行方法、および実行中のパッケージの監視方法を示します。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -200,7 +199,7 @@ SSIS パッケージの実行アクティビティを使用して Azure Data Fac
 
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime の監視
 
-パッケージが実行されている Azure SSIS 統合ランタイムに関する状態情報を取得するには、次の PowerShell コマンドを使用します。 コマンドごとに、データ ファクトリ、Azure SSIS IR、およびリソース グループの名前を入力します。
+パッケージが実行されている Azure SSIS 統合ランタイムに関する状態情報を取得するには、次の PowerShell コマンドを使用します。 コマンドごとに、Data Factory、Azure SSIS IR、およびリソース グループの名前を入力します。
 
 詳細については、[Azure SSIS 統合ランタイムの監視](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)に関するページを参照してください。
 

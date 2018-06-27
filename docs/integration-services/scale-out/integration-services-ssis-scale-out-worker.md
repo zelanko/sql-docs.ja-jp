@@ -1,26 +1,25 @@
 ---
 title: SQL Server Integration Services (SSIS) Scale Out Worker | Microsoft Docs
-ms.description: This article describes the Scale Out Master component of SSIS Scale Out
-ms.custom: ''
+description: この記事では、SSIS Scale Out の Scale Out Master コンポーネントについて説明します
+ms.custom: performance
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 5b19aee11489551b3f06fb58cb0242b495929213
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2949f0aabaf4f59d6d2fc6635991f8eb0a921ca6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408124"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
 
@@ -29,10 +28,10 @@ Scale Out Worker は Scale Out Worker サービスを実行し、Scale Out Maste
 ## <a name="configure-the-scale-out-worker-service"></a>Scale Out Worker サービスを構成する
 ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` ファイルを使用して Scale Out Worker サービスを構成できます。 構成ファイルの更新後に、サービスを再起動する必要があります。
 
-構成  |Description  |既定値  
+構成  |[説明]  |既定値  
 ---------|---------|---------
 DisplayName|Scale Out Worker の表示名。 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 では使用しません。**|コンピューター名         
-Description|Scale Out Worker の説明。 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 では使用しません。**|空         
+[説明]|Scale Out Worker の説明。 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 では使用しません。**|空         
 MasterEndpoint|Scale Out Master に接続するエンドポイント。|Scale Out Worker のインストール時に設定されるエンドポイント         
 MasterHttpsCertThumbprint|Scale Out Master の認証に使用されるクライアント SSL 証明書のサムプリント|Scale Out Worker のインストール時に指定されるクライアント証明書のサムプリント。          
 WorkerHttpsCertThumbprint|Scale Out Master の認証に使用される Scale Out Master 証明書のサムプリント。|Scale Out Worker のインストール時に自動的に作成され、インストールされる証明書のサムプリント          

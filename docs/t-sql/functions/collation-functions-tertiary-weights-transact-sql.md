@@ -25,16 +25,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4a96e71ae1222951914743ad88d229d5a1ee9b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c3504238274c2aac2e9fd043068b822150f91ca
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239322"
 ---
 # <a name="collation-functions---tertiaryweights-transact-sql"></a>照合順序関数 - TERTIARY_WEIGHTS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-SQL の第 3 の照合順序で定義された Unicode 以外の文字列式での各文字の重みを示すバイナリ文字列を返します。
+この関数は、第 3 の SQL 照合順序で定義された、Unicode 以外の文字列式内の文字ごとに、バイナリ文字列の重みを返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,13 +47,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>引数  
 *non_Unicode_character_string_expression*  
-第 3 の SQL 照合順序で定義される **char**、**varchar**、または **varchar(max)** 型の[式](../../t-sql/language-elements/expressions-transact-sql.md) を指定します。 これらの照合順序の一覧については、「解説」を参照してください。
+第 3 の SQL 照合順序で定義される **char**、**varchar**、または **varchar(max)** 型の文字列[式](../../t-sql/language-elements/expressions-transact-sql.md) です。 これらの照合順序の一覧については、「解説」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
-TERTIARY_WEIGHTS を返します **varbinary** ときに *non_Unicode_character_string_expression* は **char** または **varchar**, 、し、返します **varbinary (max)** ときに *non_Unicode_character_string_expression* は **varchar (max)** です。
+`TERTIARY_WEIGHTS` は、*non_Unicode_character_string_expression* が **char** または **varchar** であるときに **varbinary** を返し、*non_Unicode_character_string_expression* に **varchar(max)** データ型が含まれるときには **varbinary(max)** を返します。
   
 ## <a name="remarks"></a>Remarks  
-TERTIARY_WEIGHTS returns NULL when *non_Unicode_character_string_expression* is not defined with an SQL tertiary collation. 次の表に、SQL の第 3 の照合順序を示します。
+第 3 の SQL 照合順序で *non_Unicode_character_string_expression* が定義されていない場合、`TERTIARY_WEIGHTS` は NULL を返します。 次の表に、第 3 の SQL 照合順序を示します。
   
 |並べ替え順 ID|SQL 照合順序|  
 |---|---|
@@ -89,10 +90,10 @@ TERTIARY_WEIGHTS returns NULL when *non_Unicode_character_string_expression* is 
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-TERTIARY_WEIGHTS の値で定義されている計算列の定義で使用するためのもの、 **char,** 、**varchar**, 、または **varchar (max)** 列です。 計算の両方の列にインデックスを定義して、 **char**, 、**varchar**, 、または **varchar (max)** 列は、パフォーマンスを向上させることができるときに、 **char,** 、**varchar**, 、または v**archar (max)** 列は、クエリの ORDER BY 句で指定します。
+**char**、**varchar**、または **varchar (max)** 列の値で定義されている計算列の定義に対して `TERTIARY_WEIGHTS` を使用します。 クエリの ORDER BY 句で **char**、**varchar**、または **varchar(max)** 列を指定する場合は、計算列と、**char**、**varchar**、または **varchar(max)** 列の両方に対するインデックス定義によって、パフォーマンスを向上させることができます。
   
 ## <a name="examples"></a>使用例  
-次の例では、`TERTIARY_WEIGHTS` 関数を `char` 列の値に適用するテーブルに計算列を作成します。
+この例では、`TERTIARY_WEIGHTS` 関数を `char` 列の値に適用するテーブルに計算列を作成します。
   
 ```sql
 CREATE TABLE TertColTable  

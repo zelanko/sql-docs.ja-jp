@@ -1,15 +1,13 @@
 ---
 title: SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs
-ms.description: This article provides an overview of the SQL Server Integration Services (SSIS) Scale Out feature, which provides high-performance execution of SSIS packages
-ms.custom: ''
+description: この記事では、SQL Server Integration Services (SSIS) Scale Out 機能の概要を提供します。この機能は、SSIS パッケージの実行パフォーマンスを高めます
+ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
@@ -17,11 +15,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 14f02912f300cfa6b45d38aa95c0d66235aea324
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fc57db9bc8a305450aa2619d9b7c222fda91763
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334086"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out
 SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out では、パッケージの実行を複数のコンピューターに分散することにより、SSIS パッケージの実行パフォーマンスを高めます。 Scale Out をセットアップしたら、SQL Server Management Studio (SSMS) から、複数のパッケージ実行を並列にスケールアウト モードで実行することができます。

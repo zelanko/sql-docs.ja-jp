@@ -63,7 +63,7 @@ ms.locfileid: "33990488"
   
 -   データベースに、データベース スナップショットが存在する。  
   
-     データベースをデタッチするには、すべてのデータベース スナップショットを削除する必要があります。 詳細については、「 [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)の同一または別のインスタンスに再度アタッチすることができます。  
+     データベースをデタッチするには、すべてのデータベース スナップショットを削除する必要があります。 詳細については、「 [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)」を参照してください。  
   
     > [!NOTE]  
     >  データベース スナップショットのデタッチおよびアタッチは行うことができません。  

@@ -1,14 +1,11 @@
 ---
-title: Azure Key Vault を使用した拡張キー管理のセットアップ手順 | Microsoft Docs
+title: Azure Key Vault を使用する SQL Server TDE 拡張キー管理 - 設定手順 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 06/11/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,16 +14,17 @@ helpviewer_keywords:
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1d49310aa2c1d178dfb47f05a72ccac73cd0882f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702983"
 ---
-# <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Azure Key Vault を使用した拡張キー管理のセットアップ手順
+# <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault を使用する SQL Server TDE 拡張キー管理 - 設定手順
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   以下の手順では、Azure Key Vault 用の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのインストールと構成について説明します。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Azure サブスクリプションを所有していること。  
   
--   最新の [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) (1.0.1 以降) がインストールされていること。  
+-   最新の [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) (5.2.0 以降) がインストールされていること。  
 
 -   Azure Active Directory を作成する。  
 
@@ -53,7 +51,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
 ## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>パート I: Azure Active Directory サービス プリンシパルをセットアップする  
  SQL Server のアクセス権を Azure Key Vault に付与するためには、Azure Active Directory (AAD) にサービス プリンシパル アカウントが必要です。  
   
-1.  [Azure クラシック ポータル](https://manage.windowsazure.com)に移動してサインインします。  
+1.  [Azure Portal](https://ms.portal.azure.com/) に移動してサインインします。  
   
 2.  アプリケーションを Azure Active Directory に登録します。 アプリケーションを登録する詳しい手順については、 **Azure Key Vault のブログ記事** の「 [Get an identity for the application (アプリケーションの ID を取得する)](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)」セクションを参照してください。  
   
@@ -71,7 +69,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
 1.  **PowerShell を開いてサインインする**  
   
-     [最新の Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (1.0.1 以降) をインストールして起動します。 次のコマンドを使用して Azure アカウントにサインインします。  
+     [最新の Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 以降) をインストールして起動します。 次のコマンドを使用して Azure アカウントにサインインします。  
   
     ```powershell  
     Login-AzureRmAccount  
@@ -171,12 +169,15 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
 5.  **Key Vault に非対称キーを生成する**  
   
      Azure Key Vault には、2 とおりの方法でキーを生成できます。1) 既存のキーをインポートする方法と、2) 新しいキーを作成する方法です。  
-
+                  
+      > [!NOTE]
+        >  SQL Server は、2048 ビットの RSA キーのみをサポートします。
+        
     ### <a name="best-practice"></a>ベスト プラクティス:
     
     すばやいキー復旧を確保し、Azure 以外のデータにアクセスできるようにするには、次のベスト プラクティスをお勧めします。
  
-    1. ローカル HSM デバイスのローカルに暗号化キーを作成します (Azure Key Vault に格納できるように、必ず非対称の RSA 2048 キーを作成してください)。
+    1. ローカル HSM デバイスのローカルに暗号化キーを作成します (SQL Server によってサポートされるように、必ず非対称の RSA 2048 キーを作成してください)。
     2. 暗号化キーを Azure Key Vault にインポートします。 その方法については、以下の手順を参照してください。
     3. 初めて Azure Key Vault でキーを使用する前に、Azure Key Vault キーのバックアップを作成します。 詳細については、 [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) コマンドを参照してください。
     4. キーに何らかの変更を加える場合 (ACL の追加、タグの追加、キー属性の追加など) は常に、新しい Azure Key Vault キーのバックアップを作成してください。
@@ -185,7 +186,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
         >  キーのバックアップは、任意の場所に保存できるファイルを返す Azure Key Vault キー操作です。
 
     ### <a name="types-of-keys"></a>キーの種類:
-    Azure Key Vault に生成できるキーは 2 種類あります。 どちらも非対称の 2048 ビット RSA キーです。  
+    Azure Key Vault で生成できて SQL Server で動作するキーは 2 種類あります。 どちらも非対称の 2048 ビット RSA キーです。  
   
     -   **ソフトウェアによる保護:** ソフトウェアで処理され、保存状態で暗号化されます。 ソフトウェアによって保護されたキーに対する操作は、Azure Virtual Machines 上で行われます。 運用環境で使用されるキーには推奨されません。  
   
@@ -213,12 +214,11 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
     ```  
  
     > [!IMPORTANT]  
-    > 実稼働のシナリオでは、非対称キーをインポートする方法を強くお勧めします。管理者は、キーをキー エスクロー システムに預託できるからです。 資格情報コンテナー内で非対称キーを作成する方法の場合、秘密キーは資格情報コンテナーの外に出ることがないため、エスクローに預託することができません。 重要なデータの保護に使用するキーはエスクローに預託してください。 非対称キーを紛失すると、データが永久的に復元不能になります。  
+    > 実稼働のシナリオでは、非対称キーをインポートする方法を強くお勧めします。管理者は、キーをキー エスクロー システムに預託できるからです。 資格情報コンテナー内で非対称キーを作成する方法の場合、秘密キーは資格情報コンテナーの外に出ることがないため、エスクローに預託することができません。 重要なデータの保護に使用するキーはエスクローに預託してください。 非対称キーを紛失すると、データが永久的に失われます。  
 
     ### <a name="create-a-new-key"></a>新しいキーを作成する
-
-    ##### <a name="example"></a>例:  
-    新しい暗号化キーを Azure Key Vault に直接作成し、ソフトウェアまたは HSM で保護することもできます。 この例では、ソフトウェアによって保護されるキーを `Add-AzureKeyVaultKey cmdlet`で作成します。  
+    #### <a name="example"></a>例:  
+    または、新しい暗号化キーを Azure Key Vault に直接作成し、ソフトウェアまたは HSM で保護することもできます。  この例では、ソフトウェアによって保護されるキーを `Add-AzureKeyVaultKey cmdlet`で作成します。  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -237,8 +237,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
     Id         : https://contosodevkeyvault.vault.azure.net:443/  
                  keys/ContosoRSAKey0/<guid>  
     ```  
-
-    > [!IMPORTANT]  
+ > [!IMPORTANT]  
     >  Key Vault は、同じ名前を持った複数バージョンのキーをサポートしていますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタで使用するキーについては、複数のバージョンを使用したりロールオーバーしたりすることは避けてください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化に使用するキーをロールしたいと管理者が考える場合は、コンテナー内に別の名前で新しいキーを作成し、DEK を暗号化するために使用してください。  
    
   
@@ -264,7 +263,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
   
 ## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>パート IV: 構成する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- このセクションの各操作に最低限必要な権限レベルについては、「 [B. よく寄せられる質問](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) 」を参照してください。  
+ このセクションの各操作に最低限必要な権限レベルについては、「[B. よく寄せられる質問](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) 」を参照してください。  
   
 1.  **sqlcmd.exe または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio を起動する**  
   
@@ -316,7 +315,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
      [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを以下のように変更します。  
   
     -   `IDENTITY` 引数 (`ContosoDevKeyVault`) を編集し、Azure Key Vault を参照するようにします。
-        - **パブリック Azure**を使用している場合は、 `IDENTITY` 引数をパート II で使用した実際の Azure Key Vault の名前に置き換えます。
+        - **グローバル Azure** を使用している場合は、`IDENTITY` 引数をパート II で使用した実際の Azure Key Vault の名前に置き換えます。
         - **プライベート Azure クラウド** ( Azure Government、Azure China、Azure Germany など) を使用している場合は、 `IDENTITY` 引数をパート II のステップ 3 で返された Vault URI に置き換えます。 Vault URI に "https://" は含めないでください。   
     -   `SECRET` 引数の最初の部分を、パート I で使用した Azure Active Directory の **クライアント ID** に置き換えます。この例の **クライアント ID** は `EF5C8E094D2A4A769998D93440D8115D`です。  
   
@@ -362,6 +361,4 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
 ## <a name="see-also"></a>参照  
  [Azure Key Vault を使用する拡張キー管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
-[SQL Server コネクタのメンテナンスとトラブルシューティング](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
-  
-  
+[SQL Server コネクタのメンテナンスとトラブルシューティング](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)

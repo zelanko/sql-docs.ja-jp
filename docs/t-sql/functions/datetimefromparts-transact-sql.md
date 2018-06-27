@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8afd19d73538ca459d14c9964a4067619c52b84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70b225db949dec01343c56a24299d882d553e44e
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239052"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-返します、 **datetime** 指定した日付と時刻の値です。
+この関数は、指定された日付引数と時刻引数に対して **datetime** 値を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,7 +54,7 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 日を指定する整数式。
   
 *hour*  
-時間を指定する整数式。
+時を指定する整数式。
   
 *minute*  
 分を指定する整数式。
@@ -68,9 +69,9 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-**DATETIMEFROMPARTS** 返しますが、完全に初期化された **datetime** 値。 引数が有効でない場合は、エラーが発生します。 必要な引数が null の場合は、null が返されます。
+`DATETIMEFROMPARTS` は、完全に初期化された **datetime** 値を返します。 `DATETIMEFROMPARTS` は、必須引数に 1 つでも無効な値が含まれている場合、エラーを生成します。 `DATETIMEFROMPARTS` は、必須引数に 1 つでも NULL 値が含まれている場合、NULL を返します。
   
-この関数は、リモート処理は実行することのできる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー上とします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のバージョンをインストールしているサーバーには、リモート処理が行われません。
+この関数は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー以降のリモート処理に対応しています。 バージョンが [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前の場合、サーバーのリモート処理には対応していません。
   
 ## <a name="examples"></a>使用例  
   

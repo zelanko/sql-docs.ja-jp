@@ -15,17 +15,18 @@ caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2c81e169faf3a9f1e85fc6fa85648ae1faa97e62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3f64622d7b0a2a8a2679624e0662f33804650c3d
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238862"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>レポート サーバーのサービス プリンシパル名 (SPN) の登録
   相互認証に Kerberos プロトコルを使用するネットワークに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を配置する場合に、レポート サーバー サービスをドメイン ユーザー アカウントとして実行するように構成するには、レポート サーバー サービスのサービス プリンシパル名 (SPN) を作成する必要があります。  
   
 ## <a name="about-spns"></a>SPN について  
- SPN は、Kerberos 認証を使用するネットワークでのサービスの一意識別子です。 SPN は、サービス クラス、ホスト名、およびポートで構成されます。 Kerberos 認証を使用するネットワークでは、ビルトイン コンピューター アカウント (NetworkService や LocalSystem など) またはユーザー アカウントにサーバーの SPN を登録する必要があります。 ビルトイン アカウントには、自動的に SPN が登録されます。 一方、ドメイン ユーザー アカウントでサービスを実行する場合は、使用するアカウントに手動で SPN を登録する必要があります。  
+ SPN は、Kerberos 認証を使用するネットワークでのサービスの一意識別子です。 サービス クラスとホスト名で構成されますが、ポートが含まれることもあります。 HTTP SPN の場合、ポートは不要です。 Kerberos 認証を使用するネットワークでは、ビルトイン コンピューター アカウント (NetworkService や LocalSystem など) またはユーザー アカウントにサーバーの SPN を登録する必要があります。 ビルトイン アカウントには、自動的に SPN が登録されます。 一方、ドメイン ユーザー アカウントでサービスを実行する場合は、使用するアカウントに手動で SPN を登録する必要があります。  
   
  SPN を作成するには、 **SetSPN** コマンド ライン ユーティリティを使用します。 詳細については、以下を参照してください。  
   
@@ -39,14 +40,14 @@ ms.lasthandoff: 05/03/2018
  SetSPN ユーティリティを使用してレポート サーバーの SPN を作成する場合は、次のようなコマンド構文を使用します。  
   
 ```  
-Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>  
+Setspn -s http/<computername>.<domainname> <domain-user-account>  
 ```  
   
  **SetSPN** は、Windows Server で使用できます。 **-s** 引数は、重複する SPN がないことを検証してから、SPN を追加します。 **注: -s** は Windows Server 2008 以降の Windows Server で使用できます。  
   
  **HTTP** はサービス クラスです。 レポート サーバー Web サービスは、HTTP.SYS で実行されます。 HTTP 用に SPN を作成すると、副次的に、HTTP.SYS で実行される同じコンピューター上のすべての Web アプリケーション (IIS でホストされるアプリケーションを含む) に対して、ドメイン ユーザー アカウントに基づいてチケットが付与されます。 これらのサービスを別のアカウントで実行すると、認証要求が失敗します。 この問題を回避するには、すべての HTTP アプリケーションが同じアカウントで実行されるように構成するか、またはアプリケーションごとにホスト ヘッダーを作成し、作成したホスト ヘッダーごとに個別の SPN を作成することを検討してください。 ホスト ヘッダーを構成する場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成にかかわらず DNS を変更する必要があります。  
   
- \<*computername*>、\<*domainname*>、\<*port*> に指定した値で、レポート サーバーをホストするコンピューターのネットワーク アドレスが一意に識別されます。 これは、ローカル ホスト名にすることも、完全修飾ドメイン名 (FQDN) にすることもできます。 ドメインが 1 つしかなく、かつポート 80 を使用している場合は、コマンド ラインで \<*domainname*> と \<*port*> を省略できます。 \<*domain-user-account*> は、レポート サーバー サービスが実行され、SPN を登録する必要があるユーザー アカウントです。  
+ \<*computername*> と \<*domainname*> に指定した値で、レポート サーバーをホストするコンピューターのネットワーク アドレスが一意に識別されます。 これは、ローカル ホスト名にすることも、完全修飾ドメイン名 (FQDN) にすることもできます。 ドメインが 1 つしかない場合、コマンド ラインから \<*domainname*> を省略できます。 \<*domain-user-account*> は、レポート サーバー サービスが実行され、SPN を登録する必要があるユーザー アカウントです。  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>ドメイン ユーザー アカウントに対する SPN の登録  
   
@@ -61,16 +62,16 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
 4.  次のコマンドをコピーし、プレースホルダーの値を実際のネットワークで有効な値で置き換えます。  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-     例: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
+     例: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  コマンドを実行します。  
   
 6.  **RsReportServer.config** ファイルを開き、 `<AuthenticationTypes>` セクションを探します。  
   
-7.  このセクションの最初のエントリとして `<RSWindowsNegotiate/>` を追加して、NTLM を有効にします。  
+7.  このセクションの最初のエントリとして `<RSWindowsNegotiate/>` を追加し、Kerberos を有効にします。  
   
 ## <a name="see-also"></a>参照  
  [サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   

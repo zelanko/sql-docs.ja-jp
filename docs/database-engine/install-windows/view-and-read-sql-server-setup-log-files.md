@@ -21,18 +21,30 @@ caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d3b40219a412b498e891d0550a10a99e23b7adf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c25b54f30a9e8c0ce66c1a833aef4c5daf35e6b8
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771458"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612257"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server セットアップ ログ ファイルの表示と読み取り
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server セットアップでは既定で、%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log 内にあるタイムスタンプ付きのログ フォルダーにログ ファイルが作成されます。 タイムスタンプ付きのログ フォルダーの名前形式は YYYYMMDD_hhmmss です。 セットアップを自動モードで実行した場合は、%temp%\sqlsetup*.log 内にログが作成されます。 ログ フォルダー内のログ ファイルはすべて、それぞれのログ フォルダー内で Log\*.cab ファイルにアーカイブされます。  
+SQL Server のセットアップでは、既定で、**\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** 内の日付と時刻を名前に含むフォルダーに、ログ ファイルが作成されます。*nnn* は、インストールされている SQL Server のバージョンに対応する番号です。 タイムスタンプ付きのログ フォルダーの名前形式は YYYYMMDD_hhmmss です。 セットアップを自動モードで実行した場合は、%temp%\sqlsetup*.log 内にログが作成されます。 ログ フォルダー内のログ ファイルはすべて、それぞれのログ フォルダー内で Log\*.cab ファイルにアーカイブされます。  
+
+   | ファイル           | [パス] |
+   | :------        | :----------------------------- |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
+   | **Summary_\<コンピューター名>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
+   | **データストア** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
+   | **MSI ログ ファイル** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<名前>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **無人インストールの場合** | %temp%\sqlsetup*.log |
+
 
  ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
@@ -46,9 +58,9 @@ SQL Server セットアップでは既定で、%programfiles%\Microsoft SQL Serv
 3.  ユーザーが要求した操作: ユーザーは機能を選択し、カスタマイズできます
   
 
-このワークフローによって概要ログが 1 つ生成され、RTM インストールの場合、詳細ログが 1 つ生成され、メディアのスリップストリームの場合、詳細ログが 2 つ生成されます。
+このワークフローでは、1 つの概要ログと、SQL Server の基本インストールの 1 つの詳細ログ、または基本インストールと共に更新プログラム (サービス パックなど) がインストールされたときは 2 つの詳細ログが生成されます。 
   
-データストア ファイルには、セットアップ プロセスによって追跡記録されるすべての構成オブジェクトの状態を示すスナップショットが含まれており、構成エラーのトラブルシューティングに便利です。 XML ダンプ ファイルが実行段階ごとに作成され、タイムスタンプ付きのログ フォルダー内の Datastore ログ サブフォルダーに保存されます。 
+さらに、データストア ファイルには、セットアップ プロセスによって追跡記録されるすべての構成オブジェクトの状態を示すスナップショットが含まれており、構成エラーのトラブルシューティングに便利です。 XML ダンプ ファイルが実行段階ごとに作成され、タイムスタンプ付きのログ フォルダー内の Datastore ログ サブフォルダーに保存されます。 
 
 次のセクションでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップのログ ファイルを説明します。  
   
@@ -130,6 +142,8 @@ SQL Server セットアップでは既定で、%programfiles%\Microsoft SQL Serv
   
 ### <a name="location"></a>場所  
 SystemConfigurationCheck_Report.htm は %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\ にあります。
+
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2017 のインストール](../../database-engine/install-windows/install-sql-server.md)

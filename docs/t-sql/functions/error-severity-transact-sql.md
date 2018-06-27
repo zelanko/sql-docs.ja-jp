@@ -27,17 +27,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d17356f6730db14e85b9ab3c8186f4b474525608
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87e80452c46d74c819affb9e9dd2695ec2789115
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249525"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  TRY...CATCH 構造の CATCH ブロックの実行を引き起こしたエラーの重大度を返します。  
-  
+この関数は、エラーが発生し、そのエラーによって TRY…CATCH 構文の CATCH ブロックが実行された場合に、エラーの重大度を返します。  
+
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
@@ -50,22 +51,21 @@ ERROR_SEVERITY ( )
  **int**  
   
 ## <a name="return-value"></a>戻り値  
- CATCH ブロックの中で呼び出されると、CATCH ブロックの実行を引き起こしたエラー メッセージの重大度を返します。  
-  
- CATCH ブロックの範囲外で呼び出された場合は NULL を返します。  
+エラーが発生した CATCH ブロックの中で呼び出されると、`ERROR_SEVERITY` は `CATCH` ブロックの実行を引き起こしたエラーの重大度を返します。  
+
+`ERROR_SEVERITY` は、CATCH ブロックの範囲外で呼び出された場合に NULL を返します。  
   
 ## <a name="remarks"></a>Remarks  
- ERROR_SEVERITY は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
+`ERROR_SEVERITY` は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
- ERROR_SEVERITY は、その実行回数、または実行される CATCH ブロックのスコープ内の場所に関係なく、エラーの重大度を返します。 これは、@@ERROR などの関数とは対照的です。これらの関数がエラー番号を返すのは、エラーが発生したステートメントの直後のステートメントか、CATCH ブロックの最初のステートメントだけです。  
+`ERROR_SEVERITY` は、実行回数に関係なく、あるいは `CATCH` ブロックのスコープ内の実行場所に関係なく、エラーのエラー重大度を返します。 エラーが発生したステートメントの直後のステートメントのエラー番号のみを返す、@@ERROR などの関数とは対照的となります。  
   
- 入れ子になった CATCH ブロックでは、ERROR_SEVERITY は、参照されている CATCH ブロックのスコープに固有のエラーの重大度を返します。 たとえば、外側の TRY...CATCH 構造の CATCH ブロックには、TRY...CATCH 構造が入れ子にされている場合があります。 この場合、入れ子になった CATCH ブロック内では、ERROR_SEVERITY は、入れ子になった CATCH ブロックを呼び出したエラーの重大度を返します。 ERROR_SEVERITY が外部の CATCH ブロックで実行された場合は、その CATCH ブロックを呼び出したエラーの重大度が返されます。  
+通常、`ERROR_SEVERITY` は入れ子になった `CATCH` ブロック内で動作します。 `ERROR_SEVERITY` は、`CATCH` ブロックを参照した `CATCH` ブロックのスコープに固有のエラー重大度を返します。 たとえば、外側の TRY...CATCH 構造の `CATCH` ブロックの中に `TRY...CATCH` 構造が含まれることがあります。 その内側の `CATCH` ブロック内では、`ERROR_SEVERITY` は内側の `CATCH` ブロックを呼び出したエラーの重大度を返します。 `ERROR_SEVERITY` が外側の `CATCH` ブロック内で実行される場合、外側の `CATCH` ブロックを呼び出したエラーの重大度を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-errorseverity-in-a-catch-block"></a>A. CATCH ブロックで ERROR_SEVERITY を使用する  
- 次の例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 エラーの重大度が返されます。  
-  
+この例では、0 除算エラーを生成したストアド プロシージャを示します。 `ERROR_SEVERITY` はそのエラーの重大度を返します。  
 ```  
   
 BEGIN TRY  
@@ -76,11 +76,22 @@ BEGIN CATCH
     SELECT ERROR_SEVERITY() AS ErrorSeverity;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorSeverity
+-------------
+16
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで ERROR_SEVERITY を他のエラー処理ツールと一緒に使用する  
- 次の例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 重大度と共にエラーに関する情報が返されます。  
-  
+この例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 ストアド プロシージャは、エラーに関する情報を返します。  
+
 ```  
   
 BEGIN TRY  
@@ -97,28 +108,17 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH ブロックで ERROR_SEVERITY を他のエラー処理ツールと一緒に使用する  
- 次の例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 重大度と共にエラーに関する情報が返されます。  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine   ErrorMessage
+----------- ------------- ----------- --------------- ----------- ----------------------------------
+8134        16            1           NULL            4           Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>参照  

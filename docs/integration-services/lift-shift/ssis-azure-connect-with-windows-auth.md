@@ -1,25 +1,26 @@
 ---
-title: Windows 認証でデータ ソースとファイル共有に接続する | Microsoft Docs
+title: Windows 認証でデータとファイル共有に接続する | Microsoft Docs
+description: この記事では、Azure SQL Database で SSIS カタログを構成して、Windows 認証を使用するパッケージを実行し、データ ソースとファイル共有に接続する方法について説明します。
 ms.date: 02/05/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a0f1b6936644f2cae9cee469cb763696786a628
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: cca5deecf90fbbe28399d33ac2038bc2264b1ae6
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332686"
 ---
-# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication-in-ssis"></a>SSIS で Windows 認証を使用し、オンプレミス データ ソースと Azure ファイル共有に接続する
-この記事では、Azure SQL Database で SSIS カタログを構成して、Windows 認証を使用するパッケージを実行し、オンプレミスのデータ ソースと Azure ファイル共有に接続する方法について説明します。 Windows 認証を使用して、オンプレミスと Azure の仮想マシンの両方、さらに Azure Files で Azure SSIS Integration Runtime と同じ仮想ネットワーク内のデータ ソースに接続できます。
+# <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-in-ssis-packages-in-azure"></a>Azure の SSIS パッケージで Windows 認証を使用し、データ ソースとファイル共有に接続する
+
+この記事では、Azure SQL Database で SSIS カタログを構成して、Windows 認証を使用するパッケージを実行し、データ ソースとファイル共有に接続する方法について説明します。 Windows 認証を使用して、オンプレミスと Azure の仮想マシンの両方、さらに Azure Files で Azure SSIS Integration Runtime と同じ仮想ネットワーク内のデータ ソースに接続できます。
 
 > [!WARNING]
 > この記事で説明されているように、`catalog`.`set_execution_credential` を実行して、Windows 認証に有効なドメイン資格情報を指定しない場合、 Windows 認証に依存するパッケージはデータ ソースに接続することができず、実行時に失敗します。
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/15/2018
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Windows 認証のドメイン資格情報を提供する
 パッケージが Windows 認証を使用して、オンプレミスのデータ ソースに接続できるようにするドメイン資格情報を提供するには、次のことを行います。
 
-1.  SQL Server Management Studio (SSMS) または別のツールを使用して、SSIS カタログ データベース (SSISDB) をホストする SQL Database に接続します。 詳細については、「[Azure 上の SSISDB カタログ データベースへの接続](ssis-azure-connect-to-catalog-database.md)」を参照してください。
+1.  SQL Server Management Studio (SSMS) または別のツールを使用して、SSIS カタログ データベース (SSISDB) をホストする SQL Database に接続します。 詳細については、「[Azure の SSIS カタログ (SSISDB) に接続する](ssis-azure-connect-to-catalog-database.md)」を参照してください。
 
 2.  SSISDB を現在のデータベースとして使用し、クエリ ウィンドウを開きます。
 
@@ -91,7 +92,7 @@ Azure で実行されるパッケージからオンプレミスの SQL Server �
 
 1.  SQL Server 構成マネージャーで、TCP/IP プロトコルを有効にします。
 2.  Windows ファイアウォールからのアクセスを許可します。 詳細については、「[SQL Server のアクセスを許可するための Windows ファイアウォールの構成](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access)」を参照してください。
-3.  Windows 認証で接続するには、Azure-SSIS Integration Runtime がオンプレミスの SQL Server も含む仮想ネットワーク (VNet) に属していることを確認します。  詳しくは、「[Azure-SSIS 統合ランタイムを仮想ネットワークに参加させる](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)」をご覧ください。 次に、この記事で説明されているように `catalog.set_execution_credential` を使用して資格情報を提供します。
+3.  Windows 認証で接続するには、Azure-SSIS Integration Runtime がオンプレミスの SQL Server も含む仮想ネットワークに属していることを確認します。  詳しくは、「[Azure-SSIS 統合ランタイムを仮想ネットワークに参加させる](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)」をご覧ください。 次に、この記事で説明されているように `catalog.set_execution_credential` を使用して資格情報を提供します。
 
 ## <a name="connect-to-an-on-premises-file-share"></a>オンプレミスのファイル共有への接続
 オンプレミスのファイル共有に接続できるかどうかを確認するには、次のことを行います。
@@ -138,4 +139,4 @@ Azure ファイル共有上のファイル共有に接続するには、次の�
 ## <a name="next-steps"></a>次の手順
 - パッケージを配置します。 詳細については、「[SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する](../ssis-quickstart-deploy-ssms.md)」を参照してください。
 - パッケージを実行します。 詳細については、「[SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する](../ssis-quickstart-run-ssms.md)」を参照してください。
-- パッケージのスケジュールを設定します。 詳細については、「[Azure で SSIS パッケージの実行をスケジュールする](ssis-azure-schedule-packages.md)」を参照してください。
+- パッケージのスケジュールを設定します。 詳細については、「[Azure で SSIS パッケージのスケジュールを設定する](ssis-azure-schedule-packages.md)」を参照してください。

@@ -24,11 +24,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db924e662687ab79d207fe3e1e33ccc75aecd059
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d99bf84a2b27f9d7042b28a7c8c1c99fd54f99bd
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619469"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>XML データ内部のリレーショナル データのバインド
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  **xml** 型の列や変数、CLR ユーザー定義型、datetime、smalldatetime、**text**、**ntext**、**sql_variant**、および **image** の各型のデータを参照する場合は、これらの関数は使用できません。  
   
- また、このバインドは読み取り専用です。 つまり、これらの関数を使用する列には、データを書き込めません。 たとえば、sql:variable("@x")="*some expression"* は許可されません。  
+ また、このバインドは読み取り専用です。 つまり、これらの関数を使用する列には、データを書き込めません。 たとえば、sql:variable("\@x")="*some expression*" は使用できません。  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>例 : sql:variable() を使用した複数の領域にまたがるクエリ  
  次の例では、**sql:variable()** を使用してアプリケーションでクエリをパラメーター化できるようにする方法を示します。 ISBN は、SQL 変数 @isbn を使用して渡されます。 定数を **sql:variable()** に置き換えたことにより、ISBN が 0-7356-1588-2 の書籍だけでなく、どの ISBN でも検索できます。  

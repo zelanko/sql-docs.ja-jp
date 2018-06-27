@@ -22,11 +22,12 @@ caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 185096f5e4d9a2722d720fe37549f22cd5e608e7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 29c01064646de4f80bd11f6a7536d895368b6e52
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34811966"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>パフォーマンス監視およびチューニング ツール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +42,8 @@ ms.lasthandoff: 05/19/2018
 |[リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|システム モニターでは、使用中のバッファー マネージャー ページ要求の数などのリソース使用量が主に追跡され、イベントを監視するための定義済みオブジェクトおよびカウンターやユーザー定義カウンターを使用して、サーバーのパフォーマンスおよび利用状況を監視できます。 システム モニター (Microsoft Windows NT 4.0 の場合はパフォーマンス モニター) は、イベントに関するデータではなく、メモリの使用量、アクティブなトランザクションの数、ブロックされたロックの数、CPU の利用状況など、イベントの数と比率を収集します。 特定のカウンターにしきい値を設定して、オペレーターに通知する警告を生成できます。<br /><br /> システム モニターは Microsoft Windows Server および Windows オペレーティング システムで機能します。 システム モニターでは、Windows NT 4.0 以降で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをリモートまたはローカルで監視できます。<br /><br /> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] とシステム モニターの重要な違いは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ではデータベース エンジンのイベントが監視されるのに対し、システム モニターではサーバー プロセスに関連したリソース使用量が監視されることです。|  
 |[利用状況モニターを開く方法 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の利用状況モニターは、現在のアクティビティのカスタム ビューの場合に便利であり、次の情報をグラフィカルに表示します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで実行中のプロセス<br /><br /> ブロックされているプロセス<br /><br /> ロック<br /><br /> ユーザーの利用状況|  
 |[ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)|クエリ実行ステップに関するリアルタイムの統計情報を表示します。 このデータはクエリの実行中に利用できるため、これらの実行統計はクエリ パフォーマンス問題のデバッグで非常に役立ちます。|  
+|[拡張イベント](../../relational-databases/extended-events/extended-events.md)|拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースはごくわずかです。 拡張イベントには、セッション データを容易かつ迅速に作成、変更、表示、分析するためのグラフィカル ユーザー インターフェイスが 2 つ用意されています (新規セッション ウィザードと [新しいセッション])。|  
+|[実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)|実行関連の DMV によって、実行関連情報を確認できます。|
 |[SQL トレース (SQL Trace)](../../relational-databases/sql-trace/sql-trace.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャは次のとおりです。<br /><br /> [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)<br /><br /> [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)<br /><br /> [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)<br /><br /> [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)<br /><br /> [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)|  
 |エラー ログ|Windows アプリケーション イベント ログでは、Windows Server と Windows オペレーティング システム全体で発生しているイベントと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、およびフルテキスト検索で発生しているイベントの全般的な概要が示されます。 他のツールでは提供されない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントに関する情報が含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に関連する問題のトラブルシューティングでエラー ログの情報を使用できます。|  
 |[システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)|次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム ストアド プロシージャでは、多くの監視タスクの強力な代替方法が提供されています。<br /><br /> [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md):<br />                    このシステム ストアド プロシージャは、現在実行中のステートメントとそのステートメントがブロックされているかどうかなど、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーおよびプロセスに関するスナップショット情報を報告します。<br /><br /> [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md):<br />                    このシステム ストアド プロシージャは、オブジェクト ID、インデックス ID、ロックの種類、ロックを適用する種類またはリソースなど、ロックに関するスナップショット情報を報告します。<br /><br /> [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md): <br />                    このシステム ストアド プロシージャは、テーブルまたはデータベース全体が使用している現在のディスク容量の推定値を表示します。<br /><br /> [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md):<br />                    CPU 使用量、I/O 使用量、 **sp_monitor** を最後に実行してからのアイドル時間などの統計データを表示します。|  
@@ -52,14 +55,14 @@ ms.lasthandoff: 05/19/2018
 ## <a name="choosing-a-monitoring-tool"></a>監視ツールの選択  
  どの監視ツールを使用するかは、監視対象のイベントまたは利用状況によって決まります。  
   
-|イベントまたは利用状況|SQL Server Profiler|Distributed Replay|システム モニター|利用状況モニター|Transact-SQL|エラー ログ|  
-|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
-|傾向分析|はい||はい||||  
-|キャプチャしたイベントの再生|可 (1 台のコンピューターから)|可 (複数のコンピューターから)|||||  
-|アドホック監視|はい|||はい|はい|はい|  
-|警告の生成|||はい||||  
-|グラフィック インターフェイス|はい||はい|はい||はい|  
-|カスタム アプリケーション内での使用|可*||||はい||  
+|イベントまたは利用状況|拡張イベント|SQL Server Profiler|Distributed Replay|システム モニター|利用状況モニター|Transact-SQL|エラー ログ|  
+|-----------------------|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
+|傾向分析|はい|はい||はい||||  
+|キャプチャしたイベントの再生||可 (1 台のコンピューターから)|可 (複数のコンピューターから)|||||  
+|アドホック監視||はい|||はい|はい|はい|  
+|警告の生成||||はい||||  
+|グラフィック インターフェイス|はい|はい||はい|はい||はい|  
+|カスタム アプリケーション内での使用|はい|可*||||はい||  
   
  * [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] システム ストアド プロシージャを使用する。  
   

@@ -88,12 +88,12 @@ caps.latest.revision: 255
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f0416cb5e49cb04da00d7f816d3e888e221a78
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8a2fee1a2a0c4f52138cdbeb1580926b21eae89c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771508"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999878"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 
@@ -196,7 +196,7 @@ ms.locfileid: "34771508"
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値: **Install**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R セットアップ コントロール|/IACCEPTPYTHONOPENLICENSETERMS <br /><br /> **Anaconda Python パッケージを含む自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python セットアップ コントロール|/IACCEPTPYTHONLICENSETERMS <br /><br /> **Anaconda Python パッケージを含む自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R セットアップ コントロール|/IACCEPTROPENLICENSETERMS <br /><br /> **Microsoft R Open パッケージを含む自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可**|ローカライズされたオペレーティング システムに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/UpdateEnabled<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが製品の更新プログラムを検出し、それらを含める必要があるかどうかを指定します。 有効値は True および False または 1 および 0 です。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには検出された更新プログラムが含まれます。|  

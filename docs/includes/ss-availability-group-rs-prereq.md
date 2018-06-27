@@ -5,12 +5,12 @@
 - 可用性レプリカをホストするすべてのサーバーが通信できるように環境を設定します。
 - SQL Server をインストールします。 詳細については、「[SQL Server をインストールする](../database-engine/install-windows/install-sql-server.md)」を参照してください。
 
-## <a name="enable-alwayson-availability-groups-and-restart-mssql-server"></a>AlwaysOn 可用性グループを有効にして mssql-server を再起動する
+## <a name="enable-always-on-availability-groups-and-restart-mssql-server"></a>Always On 可用性グループを有効にして mssql-server を再起動する
 
 >[!NOTE]
->使用されている以下のコマンドでは、PowerShell ギャラリーで公開されている sqlserver モジュールのコマンドレットを利用しています。 このモジュールは、Install-Module コマンドを使用してインストールすることができます。
+>次のコマンドでは、PowerShell ギャラリーで公開されている sqlserver モジュールのコマンドレットを利用しています。 Install-Module コマンドを使用して、このモジュールをインストールすることができます。
 
-SQL Server インスタンスをホストする各レプリカで AlwaysOn 可用性グループを有効にします。 次に、SQL Server サービスを再起動します。 次のコマンドを実行し、SQL Server サービスを有効にして再起動します。
+SQL Server インスタンスをホストする各レプリカで Always On 可用性グループを有効にします。 次に、SQL Server サービスを再起動します。 次のコマンドを実行し、SQL Server サービスを有効にして再起動します。
 
 ```powershell
 Enable-SqlAlwaysOn -ServerInstance <server\instance> -Force
@@ -18,22 +18,22 @@ Enable-SqlAlwaysOn -ServerInstance <server\instance> -Force
 
 ## <a name="enable-an-alwaysonhealth-event-session"></a>AlwaysOn_health イベント セッションを有効にする
 
-必要に応じて、AlwaysOn 可用性グループの拡張イベント (XE) セッションを有効にすると、可用性グループのトラブルシューティング時に根本原因を診断するのに役立ちます。 SQL Server の各インスタンスで次のコマンドを実行します。
+ 可用性グループのトラブルシューティング時に根本原因を診断できるように、オプションで Always On 可用性グループの拡張イベント (XEvents) セッションを有効にすることができます。 この操作を行うには、SQL Server の各インスタンスで次のコマンドを実行します。
 
 ```sql
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-この XE セッションの詳細については、「[AlwaysOn 可用性グループの拡張イベント](../database-engine/availability-groups/windows/always-on-extended-events.md)」を参照してください。
+この XEvents セッションの詳細については、「[Always On 可用性グループの拡張イベント](../database-engine/availability-groups/windows/always-on-extended-events.md)」を参照してください。
 
 ## <a name="database-mirroring-endpoint-authentication"></a>データベース ミラーリング エンドポイントの認証
 
-読み取りスケール可用性グループに関連するレプリカでは、同期が正常に機能するようにエンドポイントを介して認証する必要があります。 このような認証で使用できる 2 つの主なシナリオについて以下で説明します。
+同期が正常に機能するように、読み取りスケール可用性グループに関連するレプリカでは、エンドポイントを介して認証する必要があります。 このような認証に使用できる 2 つの主なシナリオを、次のセクションで説明します。
 
-### <a name="service-account"></a>[サービス アカウント]
+### <a name="service-account"></a>サービス アカウント
 
-すべてのセカンダリ レプリカが同じドメインに参加している Active Directory 環境では、SQL Server はサービス アカウントを利用して認証することができます。 すべての SQL Server インスタンスでそれぞれ明示的に、サービス アカウントのログインを作成する必要があります。
+すべてのセカンダリ レプリカが同じドメインに参加している Active Directory 環境では、SQL Server はサービス アカウントを利用して認証することができます。 SQL Server インスタンスでそれぞれ明示的に、サービス アカウントのログインを作成する必要があります。
 
 ```sql
 CREATE LOGIN [<domain>\service account] FROM WINDOWS;
@@ -67,11 +67,11 @@ BACKUP CERTIFICATE dbm_certificate
 
 この時点で、プライマリ SQL Server レプリカの `c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.cer` には証明書が、`c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk` には秘密キーが作成されています。 これら 2 つのファイルを、可用性レプリカをホストするすべてのサーバー上の同じ場所にコピーします。
 
-各セカンダリ レプリカで、SQL Server のサービス アカウントに証明書へのアクセス権限があることを確認してください。
+各セカンダリ レプリカで、SQL Server インスタンスのサービス アカウントに証明書へのアクセス権限があることを確認します。
 
 #### <a name="create-the-certificate-on-secondary-servers"></a>セカンダリ サーバーで証明書を作成する
 
-次の Transact-SQL スクリプトでは、プライマリ SQL Server レプリカで作成したバックアップからマスター キーと証明書を作成します。 また、ユーザーに証明書へのアクセスを承認します。 強力なパスワードでスクリプトを更新してください。 暗号化解除パスワードは、前の手順で `.pvk` ファイルの作成に使ったものと同じパスワードです。 証明書を作成するには、すべてのセカンダリ サーバーで次のスクリプトを実行します。
+次の Transact-SQL スクリプトでは、プライマリ SQL Server レプリカで作成したバックアップからマスター キーと証明書を作成します。 コマンドではユーザーが証明書にアクセスすることも承認します。 強力なパスワードでスクリプトを更新してください。 暗号化解除パスワードは、前の手順で *.pvk* ファイルの作成に使ったものと同じパスワードです。 証明書を作成するには、すべてのセカンダリ サーバーで次のスクリプトを実行します。
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -84,9 +84,9 @@ CREATE CERTIFICATE dbm_certificate
             );
 ```
 
-## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>すべてのレプリカにデータベース ミラーリング エンドポイントを作成する
+## <a name="create-database-mirroring-endpoints-on-all-replicas"></a>すべてのレプリカにデータベース ミラーリング エンドポイントを作成する
 
-データベース ミラーリング エンドポイントでは、伝送制御プロトコル (TCP) を使用して、データベース ミラーリング セッションに参加するサーバー インスタンス間、または可用性レプリカをホストするサーバー インスタンス間でメッセージを送受信します。 データベース ミラーリング エンドポイントでは、一意な TCP ポート番号でリッスンします。
+データベース ミラーリング エンドポイントでは、伝送制御プロトコル (TCP) を使用して、データベース ミラーリング セッションに参加するサーバー インスタンス間、または可用性レプリカをホストするサーバー インスタンス間でメッセージを送受信します。 データベース ミラーリング エンドポイントでは、一意の TCP ポート番号でリッスンします。
 
 次の Transact-SQL スクリプトでは、可用性グループに対して `Hadr_endpoint` という名前のリスニング エンドポイントを作成します。 これで、エンドポイントが開始され、前の手順で作成した SQL ログインまたはサービス アカウントへの接続権限が与えられます。 スクリプトを実行する前に、`**< ... >**` の間の値を置き換えます。 必要に応じて、IP アドレス `LISTENER_IP = (0.0.0.0)` を含めることができます。 リスナー IP アドレスは、IPv4 アドレスである必要があります。 `0.0.0.0` を使用することもできます。
 
@@ -106,4 +106,4 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [<service account or user>];
 
 ファイアウォールの TCP ポートをリスナー ポート用に開く必要があります。
 
-詳細については、「[データベース ミラーリング エンドポイント (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)」を参照してください。
+詳細については、「[データベース ミラーリング エンドポイント (SQL Server)](https://docs.microsoft.com/en-us/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server?view=sql-server-2017)」を参照してください。

@@ -19,11 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 197e68e1aaaacbcb99410698551bc94352ad6df0
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d3cbbe30e7ed4ec6f273a68b6e7af67b9a768c80
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812036"
 ---
 # <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -274,6 +275,7 @@ WHERE s.ticket = r.ticket AND
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  
   [SQL Server 2014 のカーディナリティ推定機能によるクエリプランの最適化](http://msdn.microsoft.com/library/dn673537.aspx)  
- [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)[USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)     
+ [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)     
+ [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)   

@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a6cee0f40ba7cd92024fd11b82a32c3de99d0e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e6f5d64408bc74b069ba4fbd7f39b98ed2f278d
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239232"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-返します、 **datetime2** 値で指定した日付と時刻の指定された有効桁数を使用します。
+この関数は、指定された日付引数と時刻引数に対して **datetime2** 値を返します。 返された値には、有効桁数引数で有効桁数が指定されます。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,7 +45,7 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
   
 ## <a name="arguments"></a>引数  
 *year*  
-年を指定する整数式。
+年度を指定する整数式。
   
 *month*  
 月を指定する整数式。
@@ -52,33 +53,34 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 *day*  
 日を指定する整数式。
   
- *hour*  
+*hour*  
 時間を指定する整数式。
   
-*minute* 分を指定する整数式。
+*minute*  
+分を指定する整数式。
   
 *seconds*  
 秒を指定する整数式。
   
 *fractions*  
-小数部分を指定する整数式。
+秒の小数部を指定する整数式。
   
 *有効桁数 (precision)*  
-返される **datetime2** 値の精度を指定する整数リテラル。
+`DATETIME2FROMPARTS` が返す **datetime2** 値の有効桁数を指定する整数式。
   
 ## <a name="return-types"></a>戻り値の型
 **datetime2(** *precision* **)**
   
 ## <a name="remarks"></a>Remarks  
-**DATETIME2FROMPARTS** 返しますが、完全に初期化された **datetime2** 値。 引数が有効でない場合は、エラーが発生します。 必要な引数が NULL の場合は、NULL が返されます。 ただし場合、 *有効桁数* 引数が null の場合、エラーが発生します。
+`DATETIME2FROMPARTS` は、完全に初期化された **datetime2** 値を返します。 `DATETIME2FROMPARTS` は、必須引数に 1 つでも無効な値が含まれている場合、エラーを生成します。 `DATETIME2FROMPARTS` は、必須引数に 1 つでも NULL 値が含まれている場合、NULL を返します。 ただし、*precision* 引数に NULL 値が含まれる場合、`DATETIME2FROMPARTS` はエラーを生成します。
+
+*分数* 引数によって異なります、 *有効桁数* 引数。 たとえば、*precision* の値が 7 の場合、小数部分はそれぞれ 100 ナノ秒を表します。*precision* の値が 3 の場合、小数部分はそれぞれ 1 ミリ秒を表します。 *precision* 値がゼロの場合、*fractions* の値もゼロでなければなりません。それ以外の場合、`DATETIME2FROMPARTS` はエラーを生成します。
   
-*分数* 引数によって異なります、 *有効桁数* 引数。 たとえば、*precision* が 7 の場合、小数部分はそれぞれ 100 ナノ秒を表します。*precision* が 3 の場合、小数部分はそれぞれ 1 ミリ秒を表します。 場合の値 *有効桁数* が 0 の場合、値の *分数* もする必要があります。 0 にするそれ以外の場合、エラーが発生します。
-  
-この関数は、リモート処理は実行することのできる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー上とします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のバージョンをインストールしているサーバーには、リモート処理が行われません。
+この関数は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー以降のリモート処理に対応しています。 バージョンが [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前の場合、サーバーのリモート処理には対応していません。
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-simple-example-without-fractions-of-a-second"></a>A. 秒の小数部を使用しない場合の簡単な例  
+### <a name="a-an-example-without-fractions-of-a-second"></a>A. 秒の小数部を使用しない場合の例  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;  
@@ -95,13 +97,13 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. 秒の小数部を使用する場合の例  
-以下の例は、*fractions* パラメーターと *precision* パラメーターの使用方法を示しています。
+この例は、*fractions* パラメーターと *precision* パラメーターの使用方法を示しています。
   
-1.  ときに *分数* 5 の値を持つと *有効桁数* しの値の 1 の値を持つ *分数* 5/10 秒を表します。  
+1.  *fractions* の値が 5 のとき、*precision* の値が 1 であれば、*fractions* の値は 1 秒の 5/10 になります。  
   
-2.  ときに *分数* 5 の値を持つと *有効桁数* しの値の 1 の値を持つ *分数* 5/10 秒を表します。  
+2.  *fractions* の値が 50 のとき、*precision* の値が 2 であれば、*fractions* の値は 1 秒の 50/100 になります。  
   
-3.  ときに *分数* 5 の値を持つと *有効桁数* しの値の 1 の値を持つ *分数* 5/10 秒を表します。  
+3.  *fractions* の値が 500 のとき、*precision* の値が 3 であれば、*fractions* の値は 1 秒の 500/1000 になります。  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  
