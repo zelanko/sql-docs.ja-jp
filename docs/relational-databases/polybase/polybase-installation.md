@@ -26,7 +26,7 @@ ms.lasthandoff: 05/19/2018
 
   SQL Server の試用版は [SQL Server 評価版ソフトウェア](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) からインストールすることができます。
 
-## <a name="prerequisites"></a>システム要件
+## <a name="prerequisites"></a>前提条件
   
 - 64 ビット SQL Server 評価版。  
   
