@@ -25,7 +25,7 @@ ms.locfileid: "33032229"
 WideWorldImportersDW データベースのインストールと構成の手順です。
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (またはそれ以降) または[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)です。 サンプルの完全バージョンを使用するのには、SQL Server Evaluation/Developer または Enterprise Edition を使用します。
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 最良の結果のためには、2016 年 6 月リリース以降を使用してください。
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 最善の結果を得るには、2016 年 6 月リリース以降を使用してください。
 
 ## <a name="download"></a>ダウンロード
 
@@ -35,7 +35,7 @@ WideWorldImportersDW データベースのインストールと構成の手順�
 
 SQL Server または Azure SQL データベースのエディションに対応するサンプル WideWorldImportersDW データベースのバックアップ/bacpac をダウンロードしてください。
 
-サンプル データベースを再作成するソース コードは、次の場所から使用可能です。 データ カタログの作成は、OLTP データベース (WideWorldImporters) から ETL に基づいていることに注意してください。
+サンプル データベースを再作成するソース コードは、以下の場所から使用可能です。 データ カタログの作成は、OLTP データベース (WideWorldImporters) から ETL に基づいていることに注意してください。
 
 [wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
