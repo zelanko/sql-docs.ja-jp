@@ -60,7 +60,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |ALTER LOGIN WITH SET CREDENTIAL|非推奨の機能の構文 ALTER LOGIN WITH SET CREDENTIAL または ALTER LOGIN WITH NO CREDENTIAL が見つかりました。 代わりに、ADD または DROP CREDENTIAL 構文を使用してください。 コンパイルごとに 1 回発生します。|  
 |Azeri_Cyrilllic_90|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。|  
 |Azeri_Latin_90|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。|  
-|BACKUP DATABASE または LOG TO TAPE|非推奨の機能 BACKUP { DATABASE &amp;#124; LOG } TO TAPE または BACKUP { DATABASE &amp;#124; LOG } TO *device_that_is_a_tape* が見つかりました。<br /><br /> 代わりに、BACKUP { DATABASE &#124; LOG } TO DISK または BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk* を使用してください。 使用するごとに 1 回発生します。|  
+|BACKUP DATABASE または LOG TO TAPE|非推奨の機能 BACKUP { DATABASE &#124; LOG } TO TAPE または BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape* が見つかりました。<br /><br /> 代わりに、BACKUP { DATABASE &#124; LOG } TO DISK または BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk* を使用してください。 使用するごとに 1 回発生します。|  
 |BACKUP DATABASE または LOG WITH MEDIAPASSWORD|非推奨の機能 BACKUP DATABASE WITH MEDIAPASSWORD または BACKUP LOG WITH MEDIAPASSWORD が見つかりました。 WITH MEDIAPASSWORD は使用しないでください。|  
 |BACKUP DATABASE または LOG WITH PASSWORD|非推奨の機能 BACKUP DATABASE WITH PASSWORD または BACKUP LOG WITH PASSWORD が見つかりました。 WITH PASSWORD は使用しないでください。|  
 |COMPUTE [BY]|COMPUTE または COMPUTE BY 構文が見つかりました。 ROLLUP を指定した GROUP BY を使用してクエリを書き直してください。 コンパイルごとに 1 回発生します。|  
