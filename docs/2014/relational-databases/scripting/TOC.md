@@ -37,6 +37,7 @@
 ### [[オプション] ([クエリ結果]/[SQL Server]/[結果をグリッドに表示] ページ)](../../database-engine/options-query-results-sql-server-results-to-grid-page.md)
 ### [[オプション] ([クエリ結果]/[SQL Server]/[結果をテキストで表示] ページ)](../../database-engine/options-query-results-sql-server-results-to-text-page.md)
 ### [[オプション] ([クエリ結果] - [SQL Server] - [マルチサーバー])](../../database-engine/options-query-results-sql-server-multi-server.md)
+### [[オプション] ([クエリ実行]/[分析サーバー]/[全般] ページ)](../../database-engine/options-query-execution-analysis-server-general-page.md)
 ### [[オプション] ([クエリ結果]/[分析サーバー]/[全般] ページ)](../../database-engine/options-query-results-analysis-server-general-page.md)
 ### [[オプション] ([クエリ結果] および [依存サービス] ページ)](../../database-engine/options-query-results-and-dependency-services-page.md)
 ## [エディターの表示 (SQL Server Management Studio)](open-an-editor-sql-server-management-studio.md)

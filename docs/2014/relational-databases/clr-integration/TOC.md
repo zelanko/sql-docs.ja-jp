@@ -58,6 +58,7 @@
 ## [現在のトランザクションへのアクセス](../clr-integration-data-access-transactions/accessing-the-current-transaction.md)
 ## [System.Transactions の使用](../clr-integration-data-access-transactions/using-system-transactions.md)
 ## [トランザクションの有効期間](../clr-integration-data-access-transactions/transaction-lifetimes.md)
+# [CLR データベース オブジェクトからの XML シリアル化](../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)
 # [CLR 統合のセキュリティ](security/clr-integration-security.md)
 ## [CLR 統合のコード アクセス セキュリティ](security/clr-integration-code-access-security.md)
 ## [CLR 統合のセキュリティのリンク](../../database-engine/dev-guide/links-in-clr-integration-security.md)

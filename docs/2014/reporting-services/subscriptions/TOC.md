@@ -6,6 +6,7 @@
 ## [データ ドリブン サブスクリプションを作成、変更、および削除する](create-modify-and-delete-data-driven-subscriptions.md)
 ## [サブスクライバー データに対して外部データ ソースを使用する](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)
 # [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](create-and-manage-subscriptions-for-native-mode-report-servers.md)
+## [標準サブスクリプションを作成、変更、および削除する](../create-manage-subscriptions-native-mode-report-servers.md)
 ## [個人用サブスクリプションを使用する](use-my-subscriptions-native-mode-report-server.md)
 ## [レポートとサブスクリプションの処理を一時停止する](disable-or-pause-report-and-subscription-processing.md)
 ## [レポートの配信を制御する](../control-report-distribution.md)
