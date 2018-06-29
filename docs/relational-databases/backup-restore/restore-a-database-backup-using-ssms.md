@@ -36,7 +36,7 @@ ms.locfileid: "32923347"
   このトピックでは、SQL Server Management Studio を使用して、データベースの完全バックアップを復元する方法について説明します。    
        
 ### <a name="important"></a>重要:    
-完全復旧モデルまたは一括ログ復旧モデルでデータベースを復旧する前に、アクティブ トランザクション ログ ( [ログの末尾](tail-log-backups-sql-server.md)と呼ばれる) をバックアップする必要がある場合があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)と呼ばれる) をバックアップする必要がある場合があります。  
+完全復旧モデルまたは一括ログ復旧モデルでデータベースを復旧する前に、アクティブ トランザクション ログ ( [ログの末尾](tail-log-backups-sql-server.md)と呼ばれる) をバックアップする必要がある場合があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください。  
 
 別のインスタンスからデータベースを復元するときは、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」の情報を考慮してください。   
     
@@ -80,7 +80,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
 
             |メディアの種類|ダイアログ ボックス|Description|    
             |----------------|----------------|-----------------|    
-            |**[最近使ったファイル]**|**[バックアップ ファイルの検索]**|このダイアログ ボックスでは、ツリーからローカル ファイルを選択するか、完全修飾の汎用名前付け規則 (UNC) 名を使用したリモート ファイルを指定できます。 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。|    
+            |**[最近使ったファイル]**|**[バックアップ ファイルの検索]**|このダイアログ ボックスでは、ツリーからローカル ファイルを選択するか、完全修飾の汎用名前付け規則 (UNC) 名を使用したリモート ファイルを指定できます。 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください|    
             |**[デバイス]**|**[バックアップ デバイスの選択]**|このダイアログ ボックスでは、サーバー インスタンスで定義された論理バックアップ デバイスの一覧から選択できます。|    
             |**[テープ]**|**[バックアップ テープの選択]**|このダイアログ ボックスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスが動作しているコンピューターに物理的に接続されているテープ ドライブの一覧から選択できます。|    
             |**[URL]**|**[バックアップ ファイルの場所を選択]**|このダイアログ ボックスで、既存の SQL Server 資格情報/Azure ストレージ コンテナーを選択し、共有アクセス署名で新しい Azure ストレージ コンテナーを追加するか、共有アクセス署名と既存のストレージ コンテナーの SQL Server 資格情報を生成します。  「 [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)」 (Microsoft Azure サブスクリプションへの接続) もご覧ください。|  
@@ -132,7 +132,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
     
     5.  復元操作と復元操作の間に、その都度、確認のメッセージを表示するには、 **[各バックアップを復元する前に確認する]** をオンにします。 通常は、その必要はありません。データベースが大きく、復元操作のステータスを監視する必要がある場合にのみ使用します。    
     
-     これらの復元オプションの詳細については、「 [[データベースの復元] &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)と呼ばれる) をバックアップする必要がある場合があります。    
+     これらの復元オプションの詳細については、「 [[データベースの復元] &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)」を参照してください。    
     
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 

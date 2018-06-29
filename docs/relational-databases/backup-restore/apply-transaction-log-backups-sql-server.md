@@ -84,7 +84,7 @@ ms.locfileid: "32921047"
   
      この代替手順は、一連のデータベースの完全バックアップにまたがるトランザクション ログ バックアップのチェーンを保持することにより、冗長性を伴うセキュリティが提供されることになります。  
   
-> **注:** 場合によっては、トランザクション ログを使用して特定の時点までデータベースを復元することもできます。 詳細については、「 [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)と呼びます。  
+> **注:** 場合によっては、トランザクション ログを使用して特定の時点までデータベースを復元することもできます。 詳細については、「 [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **トランザクション ログのバックアップを適用するには**  
