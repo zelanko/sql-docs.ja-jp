@@ -80,7 +80,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="remarks"></a>コメント  
 **Sqlsrv_query**関数が 1 回限りのクエリに最適し、特殊な状況を除き、クエリを実行する既定の選択肢をする必要があります。 この関数は、最小限のコードでクエリを実行するための簡素化されたメソッドを提供します。 **Sqlsrv_query**関数はステートメントの準備とステートメントの実行の両方を行うし、パラメーター化クエリを実行するために使用できます。  
   
-詳細については、「 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
+詳細については、「 [方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 次の例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルに 1 つの行を挿入します。 例では、SQL Server および[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)データベースがローカル コンピューターにインストールされています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
