@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="step-2--execute-query"></a>手順 2: クエリを実行します。  
   
-[Cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute)関数を使用して SQL データベースに対するクエリからセットの結果を取得することができます。 この関数は、本質的に任意のクエリを受け入れ、[cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone) を使用して反復処理できる結果セットを返します。
+[Cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) 関数を使用して SQL データベースに対するクエリから結果セットを取得することができます。この関数は、本質的に任意のクエリを受け入れ、[cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone) を使用して反復処理できる結果セットを返します。
   
   
 ```python
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入します。  
   
-この例では、[SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) を防ぐようにパラメーターを渡しながら、安全に [INSERT](../../../t-sql/statements/insert-transact-sql.md) ステートメントを実行する方法を示しています。
+この例では、安全に [INSERT](../../../t-sql/statements/insert-transact-sql.md) ステートメントを実行し、[SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) の値からアプリケーションを守るパラメーターを渡す方法を示しています。
 
   
 ```python
@@ -90,4 +90,4 @@ ms.lasthandoff: 05/03/2018
     
   ## <a name="next-steps"></a>次の手順  
   
-詳細については [Python デベロッパー センター](https://azure.microsoft.com/en-us/develop/python/) を参照してください。
+詳細については [Python デベロッパー センター](https://azure.microsoft.com/en-us/develop/python/)を参照してください。
