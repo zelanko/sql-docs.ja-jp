@@ -25,7 +25,7 @@ ms.lasthandoff: 05/03/2018
  
 ## <a name="introduction"></a>概要
 
-この資料は、[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) と [SQL Server 用 PHP ドライバー](../../connect/php/Microsoft-php-driver-for-sql-server.md) を使用して PHP アプリケーションを開発する方法について情報を提供します。
+この資料は、[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) と [SQL Server 用 PHP ドライバー](../../connect/php/Microsoft-php-driver-for-sql-server.md)を使用して PHP アプリケーションを開発する方法について情報を提供します。
 
 Always Encrypted を使用すると、クライアント アプリケーションは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 Always Encrypted が有効になっているドライバーなど、SQL Server 用 ODBC ドライバーは透過的に暗号化し、クライアント アプリケーション内の機密データを復号化します。 ドライバーは、どのクエリ パラメーターが機密データベース列 (Always Encrypted を使用して保護される) に対応するかを自動的に決定し、SQL Server または Azure SQL データベースにデータを渡す前にこれらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 詳細については、「 [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。 SQL Server 用 PHP ドライバーでは、機密データを暗号化する SQL Server 用 ODBC ドライバーを利用します。
 
