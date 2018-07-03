@@ -1,4 +1,4 @@
----
+﻿---
 title: Linux 上の SQL Server の active Directory 認証 |Microsoft ドキュメント
 description: この記事では、Linux 上の SQL Server の Active Directory 認証の概要を示します。
 author: rothja
@@ -23,7 +23,7 @@ ms.lasthandoff: 05/19/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事は、Active Directory (AD) の認証の概要を説明[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux にします。 AD の認証とも呼ばれますで統合認証[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。 
+この記事は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux における Active Directory (AD) 認証の概要を説明します。AD 認証は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で統合認証とも呼ばれています。
 
 ## <a name="ad-authentication-overview"></a>AD 認証の概要
 
