@@ -33,7 +33,7 @@ A. [python.org](https://www.python.org/downloads/) へ移動します。
 B. Windows インストーラー msi の適切なリンクをクリックします。   
 c. ダウンロードしたら msi を実行して Python ランタイムをインストールします。  
   
-2. **Pymssql モジュールをダウンロード**から[ここ](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
+2. [こちら](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql) から **Pymssql モジュールをダウンロード**  
   
     正しい whl ファイルを選択していることを確認してください。  例: 64 ビット コンピューターで Python 2.7 を使用している場合は、pymssql‑2.1.1‑cp27‑none‑win_amd64.whl を選択します。 .whl ファイルをダウンロードしたら、の配置、C:/Python27 フォルダーに配置します。  
       
