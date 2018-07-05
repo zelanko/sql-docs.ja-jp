@@ -1,5 +1,5 @@
 ---
-title: Windows と Linux 上の可用性グループで常に SQL Server の構成 |Microsoft ドキュメント
+title: Windows と Linux に SQL Server Always On 可用性グループを構成する (クロス プラットフォーム) |Microsoft ドキュメント
 description: Windows と Linux 上のレプリカでは、SQL Server の可用性グループ構成します。
 author: MikeRayMSFT
 ms.author: mikeray
@@ -18,12 +18,13 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34322763"
 ---
-# <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>構成する SQL Server Always On 可用性グループを Windows および Linux (プラットフォーム) 間に
+# <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Windows と Linux に SQL Server Always On 可用性グループを構成する (クロス プラットフォーム)
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-この記事では、Windows server 上の 1 つのレプリカと Linux サーバー上の他のレプリカで常に 可用性グループ (AG) を作成する手順について説明します。 この構成は、レプリカが異なるオペレーティング システム上にあるために、プラットフォーム間です。 この構成を使用して、もう一方の 1 つのプラットフォームまたは災害復旧 (DR) からの移行。 クロス プラットフォームの構成を管理するクラスター ソリューションがないために、この構成は高可用性をサポートしません。 
+この記事では、Windows サーバー上の 1 つのレプリカと Linux サーバー上の他のレプリカで Always On 可用性グループ (AG) を作成する手順について説明します。 この構成は、レプリカが異なるオペレーティング システム上にあるために、クロス プラットフォームです。 あるプラットフォームから他のプラットフォームへの移行、または災害復旧 (DR) にこの構成を使用してください。 クロス プラットフォームの構成を管理するクラスター ソリューションがないために、この構成は高可用性をサポートしません。 
 
 ![ハイブリッドなし](./media/sql-server-linux-availability-group-overview/image1.png)
 
