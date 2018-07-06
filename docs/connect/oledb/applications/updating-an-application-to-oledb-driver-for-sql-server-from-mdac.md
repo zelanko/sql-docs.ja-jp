@@ -22,7 +22,7 @@ ms.author: Pedro.Lopes
 manager: craigg
 ms.openlocfilehash: 11597ed3b7cd80cae8604291bd8b662bf6a9ed80
 ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/14/2018
 ms.locfileid: "35612107"
@@ -62,7 +62,7 @@ ms.locfileid: "35612107"
 
 -   警告とエラーが一部変更されています。 警告およびこれで、サーバーにより返されたエラーは、重大度は、SQL Server の OLE DB ドライバーに渡される場合を保持します。 特定の警告やエラーのトラッピングに依存しているアプリケーションは、十分にテストする必要があります。  
 
--   OLE DB Driver for SQL Server より厳密なエラーが OLE DB 仕様に厳密に準拠していない一部のアプリケーションの動作が異なりますをつまり MDAC よりもチェックします。 たとえば、SQLOLEDB プロバイダーがパラメーター名の先頭は、ルールを実行しなかった ' @' 結果パラメーターが SQL Server の OLE DB Driver はします。  
+-   OLE DB Driver for SQL Server より厳密なエラーが OLE DB 仕様に厳密に準拠していない一部のアプリケーションの動作が異なりますをつまり MDAC よりもチェックします。 たとえば、SQLOLEDB プロバイダーがパラメーター名の先頭は、ルールを実行しなかった '\@' 結果パラメーターが SQL Server の OLE DB Driver はします。  
 
 -   失敗した接続に関する、OLE DB Driver for SQL Server が MDAC からは異なる方法で動作します。 たとえば、OLE DB Driver for SQL Server では、エラーを報告、呼び出し元アプリケーションに対し、MDAC は、障害が発生した接続のキャッシュされたプロパティ値を返します。  
 
@@ -106,7 +106,7 @@ ms.locfileid: "35612107"
 
 -   OLE DB Driver for SQL Server 接続文字列内のあいまいさを許可 (たとえば、いくつかのキーワードを複数回指定することがあり、位置 or の優先順位に基づいた解決と競合するキーワードを許可することがあります) の旧バージョンと互換性の理由からです。 OLE DB Driver for SQL Server の今後のリリースは、接続文字列のあいまいさを許可しない場合があります。 接続文字列のあいまいさの依存を排除する OLE DB Driver for SQL Server を使用するアプリケーションを変更する場合は、ことをお勧めを勧めします。  
 
--   OLE DB Driver for SQL Server および MDAC; 間の動作に違いがあるトランザクションを開始する OLE DB の呼び出しを使用する場合トランザクションがすぐに開始 OLE DB Driver for SQL Server が、MDAC を使用して最初のデータベースにアクセスした後にトランザクションが開始されます。 ストアド プロシージャとバッチの動作に影響するためできますこの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]@ 必要があります@TRANCOUNTバッチまたはストアド プロシージャが終了すると、バッチやストアド プロシージャの開始時と同じであります。  
+-   OLE DB Driver for SQL Server および MDAC; 間の動作に違いがあるトランザクションを開始する OLE DB の呼び出しを使用する場合トランザクションがすぐに開始 OLE DB Driver for SQL Server が、MDAC を使用して最初のデータベースにアクセスした後にトランザクションが開始されます。 ストアド プロシージャとバッチの動作に影響するためできますこの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\@ 必要があります@TRANCOUNTバッチまたはストアド プロシージャが終了すると、バッチやストアド プロシージャの開始時と同じであります。  
 
 -   OLE DB Driver for SQL Server で ITransactionLocal::BeginTransaction に即座に開始するトランザクションが発生します。 MDAC では、トランザクションの開始が、アプリケーションは、暗黙のトランザクション モードでのトランザクションを必要とするステートメントを実行するまでに遅延されます。 詳細については、「[SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)」を参照してください。  
 
