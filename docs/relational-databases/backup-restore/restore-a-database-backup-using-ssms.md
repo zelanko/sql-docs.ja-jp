@@ -36,7 +36,7 @@ ms.locfileid: "32923347"
   このトピックでは、SQL Server Management Studio を使用して、データベースの完全バックアップを復元する方法について説明します。    
        
 ### <a name="important"></a>重要:    
-完全復旧モデルまたは一括ログ復旧モデルでデータベースを復旧する前に、アクティブ トランザクション ログ ( [ログの末尾](tail-log-backups-sql-server.md)と呼ばれる) をバックアップする必要がある場合があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)と呼ばれる) をバックアップする必要がある場合があります。  
+完全復旧モデルまたは一括ログ復旧モデルでデータベースを復旧する前に、アクティブ トランザクション ログ ( [ログの末尾](tail-log-backups-sql-server.md)と呼ばれる) をバックアップする必要がある場合があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください。  
 
 別のインスタンスからデータベースを復元するときは、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」の情報を考慮してください。   
     

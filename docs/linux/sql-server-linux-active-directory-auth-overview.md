@@ -24,7 +24,7 @@ ms.locfileid: "34320933"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事は、Active Directory (AD) の認証の概要を説明[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux にします。 AD の認証とも呼ばれますで統合認証[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。 
+この記事は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux における Active Directory (AD) 認証の概要を説明します。 AD 認証は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で統合認証とも呼ばれています。 
 
 ## <a name="ad-authentication-overview"></a>AD 認証の概要
 

@@ -79,7 +79,7 @@ ms.locfileid: "32919447"
   
 6.  新しいデバイスを定義するには、 **[OK]** をクリックします。  
   
- この新しいデバイスをバックアップするには、このデバイスを **[データベースのバックアップ]** ダイアログ ボックス (**[全般]** ページ) の **[バックアップ先]** フィールドに追加します。 詳細については、データベースの完全バックアップの作成 [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)を使用してデータベースの差分バックアップを作成します。  
+ この新しいデバイスにバックアップするには、このデバイスを **[データベースのバックアップ]** ダイアログ ボックス (**[全般]**) の **[バックアップ先]** フィールドに追加します。 詳細については、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」を参照してください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

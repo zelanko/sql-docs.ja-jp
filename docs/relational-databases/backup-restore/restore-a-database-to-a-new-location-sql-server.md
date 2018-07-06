@@ -42,7 +42,7 @@ ms.locfileid: "32922838"
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
--   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、データベースを復元する前に、アクティブ トランザクション ログをバックアップする必要があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)データベースを新しい場所に復元し、必要に応じてデータベースの名前を変更する方法について説明します。  
+-   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、データベースを復元する前に、アクティブ トランザクション ログをバックアップする必要があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください。  
 
 -   暗号化されたデータベースを復元するには、 **データベースを暗号化するために使用した証明書や非対称キーにアクセスする必要があります**。 証明書または非対称キーがないと、データベースを復元することはできません。 バックアップが必要な間は、データベースの暗号化キーの暗号化に使用した証明書を保持する必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
   
