@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b82d956905d55afb597a0dc4e31d299eebdc4309
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ce1a74a47839174705f6910b0e0366b4098ae767
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160243"
 ---
 # <a name="add-transact-sql-snippets"></a>Transact-SQL スニペットの追加
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、定義済みの Transact-SQL コード スニペット一式が同梱されていますが、それ以外にも、独自のスニペットを追加することができます。  
@@ -55,7 +55,7 @@ ms.locfileid: "36070497"
 4.  スニペットがあるフォルダーに移動し、.snippet ファイルをクリックして、 **[開く]** をクリックします。  
   
 ## <a name="examples"></a>使用例  
- 次の例を作成、`TRY-CATCH`ブロックの挿入スニペットをインポートおよび[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
+ 次の例では、作成、`TRY-CATCH`ブロックの挿入スニペットをインポートおよび[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 1.  次のコードをメモ帳に貼り付け、TryCatch.snippet というファイル名で保存します。  
   

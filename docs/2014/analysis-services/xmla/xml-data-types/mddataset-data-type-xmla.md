@@ -1,5 +1,5 @@
 ---
-title: MDDataSet データ型 (XMLA) |Microsoft ドキュメント
+title: MDDataSet データ型 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - MDDataSet data type
 ms.assetid: 1a7e0092-f9f0-4ae5-ba27-ad1d8ebe8cb9
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 098a123c28e4a449ad6425d1a74ff8355d074e08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c1580365cc6c7949c552333728b5083b96f7ef9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165323"
 ---
 # <a name="mddataset-data-type-xmla"></a>MDDataSet データ型 (XMLA)
-  によって返される多次元データを表す派生データ型を定義、 [Execute](../xml-elements-methods-execute.md)メソッドです。  
+  によって返される多次元データを表す派生データ型を定義、 [Execute](../xml-elements-methods-execute.md)メソッド。  
   
- **Namespace** urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql}-分析: mddataset  
+ **Namespace** urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-分析: mddataset  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36072605"
 |派生要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `MDDataSet` データ型は、OLAP データを XML で表すために必要な OLAP 指向の行セット (またはデータセット) を提供します。 この行セットの内容は、の値によって異なることができます、`Content`と`Format`で提供されるプロパティ、[プロパティ](../xml-elements-properties/properties-element-xmla.md)のコレクション、`Execute`メソッドです。 詳細については、`Content`と`Format`プロパティを参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](../xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。  
+ `MDDataSet` データ型は、OLAP データを XML で表すために必要な OLAP 指向の行セット (またはデータセット) を提供します。 この行セットの内容がの値に応じて異なることができます、`Content`と`Format`で提供されるプロパティ、[プロパティ](../xml-elements-properties/properties-element-xmla.md)のコレクション、`Execute`メソッド。 詳細については、`Content`と`Format`プロパティを参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](../xml-elements-properties/propertylist-element-supported-xmla-properties.md)します。  
   
  OLE DB for OLAP データセットの構造に関する基本的な情報については、XML for Analysis 1.1 仕様の「OLE DB への MDDataSet データ型のマッピング」を参照してください。 `MDDataSet` データ型の XML スキーマ定義言語 (XSD) による詳しいサンプルについては、XML for Analysis 1.1 仕様の「Appendix D: MDDataSet Example」を参照してください。  
   

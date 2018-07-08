@@ -1,5 +1,5 @@
 ---
-title: 使用状況データ収集の構成 (PowerPivot for SharePoint |Microsoft ドキュメント
+title: 使用状況データ収集の構成 (PowerPivot for SharePoint |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5ac4920baf8143a575e5697896542eae817c90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06dfd95c82aab8e3fed336863c75112728150247
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149763"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>使用状況データ収集の構成 (対象は PowerPivot for SharePoint)
   使用状況データ収集は、ファーム レベルの SharePoint 機能です。 PowerPivot for SharePoint では、このシステムを使用および拡張して、PowerPivot のデータやサービスがどのように使用されているかを示すレポートが PowerPivot 管理ダッシュボードに用意されています。 SharePoint のインストール方法によっては、使用状況データ収集がファームに対して無効になっていることがあります。 ファーム管理者は、使用状況のログ記録を有効にして、PowerPivot 管理ダッシュボードに表示される使用状況データを作成する必要があります。  
   
- PowerPivot 管理ダッシュ ボードの使用状況データについては、次を参照してください。 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)です。  
+ PowerPivot 管理ダッシュ ボードの使用状況データについては、次を参照してください。 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)します。  
   
  **このトピックの内容:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36072638"
   
  [クエリ統計を使用状況データ収集システムに報告する頻度の指定](#ttr)  
   
- [アクセスの構成設定を PowerPivot サービス アプリケーション ページを開く](#openconfig)  
+ [アクセスの構成設定を PowerPivot サービス アプリケーションのページを開く](#openconfig)  
   
  [PowerPivot 使用状況データ収集の既定の構成](#defaultconfig)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36072638"
     |**PowerPivot 接続**|PowerPivot 接続イベントは、ユーザーに代わって実行される PowerPivot サーバー接続を監視するために使用します。|  
     |**PowerPivot 読み込みデータ使用状況**|PowerPivot 読み込みデータ使用状況は、PowerPivot データをサーバーのメモリに読み込む要求を監視するために使用します。 読み込みイベントは、コンテンツ データベースまたはキャッシュから読み込まれた PowerPivot データ ファイルに対して生成されます。|  
     |**PowerPivot アンロード データ使用状況**|PowerPivot アンロード データ使用状況は、PowerPivot データ ソースを非アクティブ期間の後にアンロードする要求を監視するために使用します。 PowerPivot データ ソースのディスクへのキャッシュは、アンロード イベントとして報告されます。|  
-    |**PowerPivot クエリの使用状況**|PowerPivot クエリの使用状況に読み込まれているデータのクエリ処理時間を監視するために使用する[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]インスタンス。|  
+    |**PowerPivot クエリの使用状況**|PowerPivot クエリの使用状況に読み込まれるデータのクエリ処理時間を監視するために使用する[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]インスタンス。|  
   
     > [!NOTE]  
     >  サーバー状態操作とデータ更新操作でも使用状況データが生成されますが、これらの処理に関連するイベントはありません。  
@@ -72,7 +72,7 @@ ms.locfileid: "36072638"
   
 6.  **[OK]** をクリックして変更を保存します。  
   
-7.  必要に応じて、すべてのメッセージをログに記録するか、エラーのみをログに記録するかを指定できます。 イベント メッセージの調整方法の詳細については、次を参照してください。[構成し、SharePoint ログ ファイルの表示と診断ログ&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)です。  
+7.  必要に応じて、すべてのメッセージをログに記録するか、エラーのみをログに記録するかを指定できます。 イベント メッセージのスロットルする方法の詳細については、次を参照してください。[構成し、SharePoint ログ ファイルの表示、および診断ログ&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)します。  
   
 ##  <a name="configdb"></a> ログ ファイルの場所の設定  
  PowerPivot 使用状況データは、まずローカル サーバー上の使用状況ログ ファイルに格納され、その後 PowerPivot サービス アプリケーション データベースに定期的に移動されます。 ログ ファイルの場所は、サーバーの全体管理で設定します。 既定の場所は次のとおりです。  
@@ -108,7 +108,7 @@ ms.locfileid: "36072638"
   
 6.  **[今すぐ実行]** をクリックします。  
   
-7.  レポートをチェックして、更新データを確認します。 詳細については、次を参照してください。 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)です。  
+7.  レポートをチェックして、更新データを確認します。 詳細については、次を参照してください。 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)します。  
   
 ##  <a name="confighist"></a> 使用状況データ履歴の格納期間の制限  
  イベント (接続、読み込み、アンロード、およびオンデマンド クエリ処理) およびデータ更新 (スケジュールされたデータ処理) に対して、使用状況データ履歴が格納されます。 使用状況データは SharePoint 使用状況データ収集システムを通じて収集されますが、レポート データは長期的な保存のために PowerPivot アプリケーション データベースとレポート データベースに移動されます。 使用状況データ履歴の設定によって、PowerPivot アプリケーション データベースで使用状況データを維持する期間が制御されます。 同じ PowerPivot サービス アプリケーション データベースに格納されたすべての種類の使用状況データに、同じ制限が同様に適用されます。  
@@ -129,7 +129,7 @@ ms.locfileid: "36072638"
   
 3.  **[OK]** をクリックします。  
   
- 使用状況データの収集し、格納方法の詳細については、次を参照してください。 [PowerPivot 使用状況データ収集](power-pivot-usage-data-collection.md)です。  
+ 使用状況データの収集および保存する方法の詳細については、次を参照してください。 [PowerPivot 使用状況データ収集](power-pivot-usage-data-collection.md)します。  
   
 ##  <a name="qrh"></a> レポート用の高速、中速、および低速のクエリ応答カテゴリの定義  
  クエリ応答のパフォーマンスは、定義済みのカテゴリに基づいて計測されます。このカテゴリでは、完了に要する時間に応じた要求と応答のサイクルが定義されています。 この定義済みのカテゴリの種類には、簡易応答、迅速な応答、想定される応答、長い応答、および超過応答があります。 PowerPivot サーバーへのすべての要求は、完了に要する時間に基づいて、いずれかのカテゴリに分類されます。  
@@ -167,7 +167,7 @@ ms.locfileid: "36072638"
   
 3.  **[OK]** をクリックします。  
   
-##  <a name="openconfig"></a> アクセスの構成設定を PowerPivot サービス アプリケーション ページを開く  
+##  <a name="openconfig"></a> アクセスの構成設定を PowerPivot サービス アプリケーションのページを開く  
  サービス アプリケーションの設定を変更するには、ファームまたはサービスの管理者であることが必要です。 ファームで複数の PowerPivot サービス アプリケーションを定義した場合は、それぞれを個別に変更する必要があります。  
   
 1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** の **[サービス アプリケーションの管理]** をクリックします。  

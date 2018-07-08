@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, deleting
 - deleting explicit hierarchies [Master Data Services]
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 08770818215b1055f2f5a015a696979bcea74f69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f2080fedb589f5155dd6885949b5980c04b7c288
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155123"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>明示的階層を削除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、不要になった明示的階層を削除します。  
@@ -49,9 +49,9 @@ ms.locfileid: "36070733"
   
 5.  **[選択したエンティティの編集]** をクリックします。  
   
-6.  **エンティティの編集** ページの 、**明示的階層** ウィンドウで、削除する明示的階層をクリックします。  
+6.  **エンティティの編集**] ページの [、**明示的階層**ウィンドウで、削除する明示的階層をクリックします。  
   
-7.  をクリックして**選択した階層を削除**です。  
+7.  クリックして**選択した階層を削除**します。  
   
 8.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   

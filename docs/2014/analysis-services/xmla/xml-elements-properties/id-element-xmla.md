@@ -1,5 +1,5 @@
 ---
-title: ID 要素 (XMLA) |Microsoft ドキュメント
+title: ID 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ID element
 ms.assetid: f7d67599-6a70-4455-bfdb-1d127e5eff4e
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 78cfec49d1af81336d8cfadcb9f502294f1326da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 42dc60e24d29399426eabc5d0bb76166c31d1423
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151343"
 ---
 # <a name="id-element-xmla"></a>ID 要素 (XMLA)
-  親の実行に使用するロックを識別[ロック](../xml-elements-commands/lock-element-xmla.md)または[Unlock](../xml-elements-commands/unlock-element-xmla.md)要素。  
+  親を実行するためのロックを識別する[ロック](../xml-elements-commands/lock-element-xmla.md)または[Unlock](../xml-elements-commands/unlock-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36072603"
  `ID` 要素は、ロックを識別するためのグローバル一意識別子 (GUID) を含みます。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクトの要素&#40;XMLA&#41;](object-element-xmla.md)   
+ [要素をオブジェクト&#40;XMLA&#41;](object-element-xmla.md)   
  [Mode 要素&#40;XMLA&#41;](mode-element-xmla.md)   
  [プロパティ&#40;XMLA&#41;](xml-elements-properties.md)  
   

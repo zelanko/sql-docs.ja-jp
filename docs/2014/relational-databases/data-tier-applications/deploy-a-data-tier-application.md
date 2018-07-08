@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploydacwizard.updateconfiguration.f1
 - sql12.swb.deploydacwizard.selectdac.f1
@@ -23,22 +23,22 @@ helpviewer_keywords:
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ede9c252977dbd5044fe4c8a7c154d425341490
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7041a4e15314f7efa8ea626e41ed705b69faa18c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154533"
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
   ウィザードまたは PowerShell スクリプトを使用して、データ層アプリケーション (DAC) パッケージから[!INCLUDE[ssDE](../../includes/ssde-md.md)]または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の既存のインスタンスに DAC を配置できます。 配置プロセスでは、 **msdb** システム データベース (**では** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース) に DAC 定義を格納することで DAC インスタンスを登録し、データベースを作成して、DAC で定義されたすべてのデータベース オブジェクトをそのデータベースに設定します。  
   
 -   **作業を開始する準備:**  [SQL Server ユーティリティ](#SQLUtility)、 [データベースのオプションと設定](#DBOptSettings)、 [制限事項と制約事項](#LimitationsRestrictions)、 [前提条件](#Prerequisites)、 [セキュリティ](#Security)、 [権限](#Permissions)  
   
--   **DAC の配置を使用して:**[データ層アプリケーションの配置ウィザード](#UsingDeployDACWizard)、 [PowerShell  ](#DeployDACPowerShell)  
+-   **DAC の配置に使用する:**[データ層アプリケーションの配置ウィザード](#UsingDeployDACWizard)、 [PowerShell  ](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> はじめに  
  同じ DAC パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] の単一のインスタンスに複数回配置することはできますが、配置は一度に 1 つずつ実行する必要があります。 各配置に指定される DAC インスタンス名は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンス内で一意である必要があります。  
@@ -122,7 +122,7 @@ ms.locfileid: "36071701"
   
  **[DAC パッケージの内容を検証しています]** : 検証プロセスの現在の状態を示す進捗状況バーです。  
   
- **\< 以前**-の初期状態に戻ります、**パッケージの選択**ページ。  
+ **\< 以前**-の初期状態に戻り、**パッケージの選択**ページ。  
   
  **[次へ >]**: **[パッケージの選択]** ページの最終状態に進みます。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36071701"
   
  **[次の設定を使用して DAC を配置します。]** : 表示された情報を確認し、実行されるアクションが正しいかどうかを確認します。 このウィンドウには、選択した DAC パッケージと、配置される DAC インスタンス用に選択した名前が表示されます。 また、DAC に関連付けられたデータベースを作成する際に使用される設定も表示されます。  
   
- **\< 以前**-に戻り、**更新の構成**ページ選択内容を変更します。  
+ **\< 以前**-に戻り、**更新の構成**ページの選択を変更します。  
   
  **[次へ >]**: DAC を配置し、**[DAC の配置]** ページに結果を表示します。  
   
@@ -195,11 +195,11 @@ ms.locfileid: "36071701"
   
 2.  開く、`ServerConnection`オブジェクトし、同じインスタンスに接続します。  
   
-3.  使用して`System.IO.File`DAC パッケージ ファイルを読み込めません。  
+3.  使用`System.IO.File`DAC パッケージ ファイルを読み込めません。  
   
 4.  `add_DacActionStarted` および `add_DacActionFinished` を使用して、DAC 配置イベントをサブスクライブします。  
   
-5.  設定、`DatabaseDeploymentProperties`です。  
+5.  設定、`DatabaseDeploymentProperties`します。  
   
 6.  `DacStore.Install` メソッドを使用して DAC を配置します。  
   

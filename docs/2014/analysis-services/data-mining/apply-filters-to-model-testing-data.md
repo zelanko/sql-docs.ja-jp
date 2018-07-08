@@ -1,5 +1,5 @@
 ---
-title: テスト データをモデルへのフィルターを適用 |Microsoft ドキュメント
+title: テスト データのモデルへのフィルターの適用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input row filtering [SQL Server]
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35fdc19ffca67cf82f2f4b2dfa468131dd97d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f81b15b5fa36913a54e6529602d903ede426addf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153283"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>モデルのテスト データへのフィルターの適用
   モデルのテストに使用する外部データ ソースを指定する場合に、入力データを制限するフィルターを必要に応じて適用できます。 たとえば、特定の所得範囲の顧客に関する予測についてのみモデルをテストできます。  
   
- たとえば、AdventureWorks の絞り込みメール配信シナリオで、テスト データを含むテーブルでは、ProspectiveBuyer で次のいずれかのようにフィルター式を作成して所得範囲によってテスト_ケースを制限します。  
+ たとえば、AdventureWorks の対象となる絞り込みメール配信シナリオでするテスト データを含むテーブルでは、ProspectiveBuyer で次のいずれかのようなフィルター式の作成し、所得範囲によってテスト_ケースを制限します。  
   
  `[YearlyIncome] = '50000'`  
   
@@ -94,8 +94,8 @@ ms.locfileid: "36072646"
      フィルター条件は、精度チャートの作成時にデータ ソースに適用されます。  
   
 ## <a name="see-also"></a>参照  
- [選択し、モデルのテスト データのマップ](choose-and-map-model-testing-data.md)   
- [使用して入れ子になったテーブル データの入力として 精度チャート](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [テスト データのモデル選択およびマップ](choose-and-map-model-testing-data.md)   
+ [使用して入れ子になったテーブルのデータの入力としての精度チャート](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [精度チャートの種類の選択とグラフのオプションの設定](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

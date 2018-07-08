@@ -1,5 +1,5 @@
 ---
-title: Collations and Code Pages |Microsoft ドキュメント
+title: Collations and Code Pages |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: da33b883499f9119c7c23f3c203aca6add6c4d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0632bb70a18930e71319554bba99b0660e986483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182901"
 ---
 # <a name="collations-and-code-pages"></a>照合順序とコード ページ
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] には、メモリ最適化テーブルの (var)char 型の列のサポートされているコード ページと、インデックスおよびネイティブ コンパイル ストアド プロシージャで使用されるサポートされている照合順序に関して制限事項があります。  
@@ -86,7 +86,7 @@ GO
   
 -   ネイティブ コンパイル ストアド プロシージャ内のすべての式および並べ替え操作で BIN2 照合順序を使用する必要があります。 これは、すべての比較および並べ替え操作が文字の Unicode コード ポイント (バイナリ表現) に基づいていることを表します。 たとえば、すべての並べ替えで大文字と小文字が区別されます ("Z" が "a" より前に来ます)。 必要に応じて、解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] を使用して、大文字と小文字が区別されない並べ替えと比較を行います。  
   
--   ネイティブ コンパイル ストアド プロシージャ内では、UTF-16 データの切り捨てはサポートされません。 つまり、n (var) char (*n*) の値は n (var) char 型を型に変換することはできません (*すれば*) 場合は、*すれば* < *n*場合は、照合順序は、_SC プロパティを持ちます。 たとえば、次の操作はサポートされません。  
+-   ネイティブ コンパイル ストアド プロシージャ内では、UTF-16 データの切り捨てはサポートされません。 つまり、n (var) char (*n*) 値は n (var) char 型に変換することはできません (*は*) 場合は、*は* < *n*場合、照合順序では、_SC プロパティがあります。 たとえば、次の操作はサポートされません。  
   
     ```tsql  
     -- column definition using an _SC collation  
@@ -100,7 +100,7 @@ GO
   
      切り捨てを回避するのに十分な大きさの型を使用して、変数を宣言します。  
   
- 次の例に、インメモリ OLTP での照合順序の制限の影響と回避策を示します。 この例では、前の例で指定した Employees テーブルを使用しています。 このサンプルでは、すべての従業員が一覧表示します。 LastName については、バイナリ照合順序に基づいて、大文字の名前が小文字の名前の前に並べ替えられます。 したがって、"Thomas" は "nolan" の前に来ます。これは、大文字のコード ポイントの方が小さいためです。 FirstName には、大文字と小文字が区別されない照合順序が設定されています。 したがって、並べ替えは、文字のコード ポイントではなくアルファベット順に基づいて行われます。  
+ 次の例に、インメモリ OLTP での照合順序の制限の影響と回避策を示します。 この例では、前の例で指定した Employees テーブルを使用しています。 このサンプルは、すべての従業員を一覧表示します。 LastName については、バイナリ照合順序に基づいて、大文字の名前が小文字の名前の前に並べ替えられます。 したがって、"Thomas" は "nolan" の前に来ます。これは、大文字のコード ポイントの方が小さいためです。 FirstName には、大文字と小文字が区別されない照合順序が設定されています。 したがって、並べ替えは、文字のコード ポイントではなくアルファベット順に基づいて行われます。  
   
 ```tsql  
 -- insert a number of values  

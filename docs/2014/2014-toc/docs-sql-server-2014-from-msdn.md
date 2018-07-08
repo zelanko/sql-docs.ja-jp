@@ -1,29 +1,29 @@
 ---
-title: SQL Server 2014 のドキュメントが移動 |Microsoft ドキュメント
-description: SQL Server 2014 用 Microsoft のドキュメントは、MSDN のドキュメントでここまでの年 2018年 7 月する前に移動します。
-author: MightyPen
+title: SQL Server 2014 のドキュメントが移動 |Microsoft Docs
+description: SQL Server 2014 用 Microsoft のドキュメントは、MSDN を docs にここから、2018 年 7 月の前に移動します。
+author: mightypen
 manager: craigg
-ms.prod-service: sql-database
+ms.prod: sql-server-2014
 ms.custom: ''
 ms.topic: article
 ms.workload: On Demand
 ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
-ms.openlocfilehash: c0d3cc7ef6236bb3f41b5e03123be0e0146d452d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.openlocfilehash: 490ff7a8fb55e0ad9c0fd5b3606a9747e8f7b70f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159593"
 ---
-# SQL Server 2014 のドキュメントがドキュメントに移動します。
+# SQL Server 2014 のドキュメントが Docs に移動します。
 
-この記事では、Microsoft の SQL Server 2014 のドキュメントのアーティクルの今後の移動について説明します。 この記事は遅延の年 2018年 4 月で記述されていると、年 2018年 7 月前に、移動が発生します。
+この記事では、マイクロソフトの SQL Server 2014 のドキュメント記事の今後の移行について説明します。 この記事では、2018 年 4 月の遅延、書き込まれていて、2018 年 7 月の前に、移動が発生します。
 
 ## MSDN の SQL Server 2014 のドキュメントへのリンク
 
-Microsoft が格納されている SQL Server 2014 のドキュメントを次のリンクは、その*MSDN* web サイトです。 年 2018年 7 月する前に Microsoft のドキュメントの次の記事に移動その新しい*Docs* web サイト。
+次のリンクは、Microsoft に格納されている SQL Server 2014 のドキュメントにはその*MSDN* web サイト。 2018 年 7 月、する前に Microsoft は、その新しいこれらのドキュメント記事を移動は*Docs* web サイト。
 
 - *SQL Server 2014*
     - [https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx](https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx)
@@ -31,25 +31,25 @@ Microsoft が格納されている SQL Server 2014 のドキュメントを次�
 - *SQL Server 2014 オンライン ブック*
     - [https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 
-MSDN は、の initialism *Microsoft Developer Network*です。
+MSDN は、initialism の*Microsoft Developer Network*します。
 
 
 ## リダイレクター
 
-不使用の MSDN HTTP アドレスは、移動した後に、少なくとも 2 つの年の機能し続けます。 リダイレクターが要求を受け取り、MSDN のドキュメントに対応する新しいアドレスに転送されます。ただし、移動した後、次の項目を true になります。
+古い形式の MSDN の HTTP アドレスは、移動後に、少なくとも 2 年間機能し続けます。 リダイレクターは、MSDN の要求をインターセプトし、Docs に対応する新しいアドレスに転送されます。ただし、移動後に、次の項目を true になります。
 
-- ドキュメントに直接移動する新しい HTTP アドレスを使用することが推奨されます。
-- Bing と Google クローラーが起動 delist し、古い MSDN アドレスをバイパスします。
+- Docs に直接移動する新しい HTTP アドレスを使用する方が適切になります。
+- Bing や Google クローラーが開始されますまま、以前の MSDN のアドレスをバイパスします。
 
 
 ## 移動した後
 
-移動後*Docs*、ルート SQL Server 2014 のドキュメントの記事のアドレスになります。
+移行後に*Docs*、SQL Server 2014 のルート ドキュメント記事のアドレスになります。
 
 - [https://docs.microsoft.com/sql/?view=sql-server-2014](https://docs.microsoft.com/sql/?view=sql-server-2014)
 
 
 ## 関連リンク
 
-- [SQL Server 2016 およびそれ以降のバージョンのルート ドキュメントの記事](https://docs.microsoft.com/sql/?view=sql-server-2016)
+- [SQL Server 2016 およびそれ以降のバージョンのルート ドキュメント記事](https://docs.microsoft.com/sql/?view=sql-server-2016)
 

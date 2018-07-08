@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 51
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 417c2a44536a4f7a1c9ed9ade7d789e20e024874
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8599cb6c4390b0e204bde2b02a36729cf3b48dcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148723"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>レッスン 1 : レポート サーバー プロジェクトの作成 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でレポートを作成するには、まずレポート サーバー プロジェクトを作成して、レポート定義ファイル (.rdl) やその他レポートに必要なリソース ファイルを格納できるようにする必要があります。 次に、実際のレポート定義ファイルを作成し、レポートのデータ ソース、データセット、レイアウトを定義します。 作成したレポートを実行すると、実際のデータが取得され、レイアウト定義に従って画面上に表示されるので、その状態からエクスポート、印刷、保存を行うことができます。  
@@ -28,13 +28,13 @@ ms.locfileid: "36072736"
   
 ### <a name="to-create-a-report-server-project"></a>レポート サーバー プロジェクトを作成するには  
   
-1.  をクリックして**開始**、 をポイント**すべてのプログラム**、 をポイント[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]、順にクリック**SQL Server Data Tools**です。 開いている場合は、初めて[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]をクリックして**ビジネス インテリジェンスの設定**既定の環境設定します。  
+1.  クリックして**開始**、 をポイント**すべてのプログラム**、 をポイント[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]、順にクリックします**SQL Server Data Tools**します。 これが初めてである場合を開く[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]、 をクリックして**ビジネス インテリジェンスの設定**の既定の環境設定します。  
   
 2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
 3.  **[インストールされているテンプレート]** ボックスの一覧で、 **[ビジネス インテリジェンス プロジェクト]** をクリックします。  
   
-4.  をクリックして**レポート サーバー プロジェクト**です。  
+4.  クリックして**レポート サーバー プロジェクト**します。  
   
 5.  **[名前]** に「 **utorial**」と入力します。  
   
@@ -44,12 +44,12 @@ ms.locfileid: "36072736"
   
 ### <a name="to-create-a-new-report-definition-file"></a>新しいレポート定義ファイルを作成するには  
   
-1.  ソリューション エクスプ ローラーで右クリック**レポート**、 をポイント**追加**、 をクリック**新しい項目の**します。  
+1.  ソリューション エクスプ ローラーで右クリックして**レポート**、 をポイント**追加**、 をクリック**新しい項目の**します。  
   
     > [!NOTE]  
     >  **[ソリューション エクスプローラー]** ウィンドウが表示されない場合は、 **[表示]** メニューの **[ソリューション エクスプローラー]** をクリックします。  
   
-2.  **新しい項目の追加**ダイアログ ボックスで、**テンプレート**をクリックして**レポート**です。  
+2.  **新しい項目の追加**ダイアログ ボックスで、**テンプレート**、 をクリックして**レポート**します。  
   
 3.  **[名前]** に「 **Sales Orders.rdl** 」と入力して、 **[追加]** をクリックします。  
   

@@ -1,5 +1,5 @@
 ---
-title: メモリ最適化テーブルのトランザクション |Microsoft ドキュメント
+title: メモリ最適化テーブルでのトランザクション |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
 caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7a1674d843f9701cf9eb2b2c41dad3dd4cbf7a0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4f3f8fcac44dc238440006eddaf44681f8cbaee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158873"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクション
   ディスク ベース テーブルでの行のバージョン管理 (SNAPSHOT 分離または READ_COMMITTED_SNAPSHOT を使用) では、オプティミスティック同時実行制御の形式を使用します。 リーダーとライターは相互にブロックしません。 メモリ最適化テーブルでは、ライターはライターをブロックしません。 ディスク ベース テーブルの行のバージョン管理では、あるトランザクションが行をロックすると、この行を更新しようとする同時実行トランザクションがブロックされます。 メモリ最適化テーブルの場合は、ロックは生じません。 その代わり、2 つのトランザクションで同じ行を更新しようとすると、書き込みと書き込みの競合 (エラー 41302) が発生することになります。  
   
- ディスク ベース テーブルとは異なり、メモリ最適化テーブルより高い分離レベル、REPEATABLE READ および SERIALIZABLE でオプティミスティック同時実行制御を許可します。 分離レベルを強制するためにロックが使用されることはありません。 その代わり、トランザクションの終了時に、REPEATABLE READ または SERIALIZABLE の仮定を確認する検証が適用されます。 仮定に違反している場合、トランザクションは終了します。 詳細については、「 [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md)」をご覧ください。  
+ ディスク ベースのテーブルとは異なりは、メモリ最適化テーブルより高い分離レベル、REPEATABLE READ および SERIALIZABLE でオプティミスティック同時実行制御を許可します。 分離レベルを強制するためにロックが使用されることはありません。 その代わり、トランザクションの終了時に、REPEATABLE READ または SERIALIZABLE の仮定を確認する検証が適用されます。 仮定に違反している場合、トランザクションは終了します。 詳細については、「 [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md)」をご覧ください。  
   
- メモリ最適化テーブルの重要なトランザクション セマンティクスは次のとおりです。  
+ メモリ最適化テーブルでの重要なトランザクション セマンティクスは次のとおりです。  
   
 -   複数バージョン管理  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36075339"
  これに加えて、トランザクション (TxA) がコミット処理中の他のトランザクション (TxB) で挿入または変更された行を読み取る場合、コミットの発生を待機する代わりに他のトランザクションがコミットされると仮定します。 この場合、トランザクション TxA は、トランザクション TxB に対するコミット依存関係を適用します。  
   
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>競合検出、検証、コミットの依存関係の確認  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、分離レベルの違反を検出すると共に、同時実行トランザクション間の競合を検出し、競合状態のトランザクションの一方を終了します。 このトランザクションは再試行する必要があります。 (詳細については、次を参照してください[メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。)。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、分離レベルの違反を検出すると共に、同時実行トランザクション間の競合を検出し、競合状態のトランザクションの一方を終了します。 このトランザクションは再試行する必要があります。 (詳細については、次を参照してください[Retry Logic for Transactions on Memory-Optimized Tables に関するガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。)。  
   
  システムでは、競合もトランザクション分離の違反もないとオプティミスティックに仮定します。 データベースの一貫性が損なわれる可能性がある競合や、トランザクション分離に違反する可能性がある競合が発生した場合は、それらの競合が検出されて、そのトランザクションは終了します。  
   
@@ -100,10 +100,10 @@ ms.locfileid: "36075339"
 #### <a name="validation-phase"></a>検証フェーズ  
  検証フェーズでは、トランザクションの論理的開始から論理的終了までの期間について、システムは要求されたトランザクション分離レベルに必要な仮定が true であったことを検証します。  
   
- 検証フェーズの開始時に、トランザクションには論理的終了時刻が割り当てられます。 データベースに書き込まれた行バージョンは、論理的終了時刻の時点で他のトランザクションから確認できるようになります。 詳細については、次を参照してください。[コミットの依存関係](#cd)です。  
+ 検証フェーズの開始時に、トランザクションには論理的終了時刻が割り当てられます。 データベースに書き込まれた行バージョンは、論理的終了時刻の時点で他のトランザクションから確認できるようになります。 詳細については、次を参照してください。[コミット依存関係](#cd)します。  
   
 ##### <a name="repeatable-read-validation"></a>REPEATABLE READ の検証  
- トランザクションの分離レベルが REPEATABLE READ または SERIALIZABLE である場合、またはテーブルが REPEATABLE READ または SERIALIZABLE 分離でアクセスする場合 (詳細については、分離の個々 の操作でのセクションを参照してください[トランザクション。分離レベル](../../2014/database-engine/transaction-isolation-levels.md))、システムは、読み取りが反復可能なことを検証します。 つまり、トランザクションによって読み取られる行バージョンが、トランザクションの論理的終了時刻の時点で依然として有効な行バージョンであることを検証します。  
+ トランザクションの分離レベルが REPEATABLE READ または SERIALIZABLE の場合、またはテーブルが REPEATABLE READ または SERIALIZABLE 分離でアクセスされる場合 (詳細については、分離の個々 の操作でのセクションをご覧ください[トランザクション。分離レベル](../../2014/database-engine/transaction-isolation-levels.md))、システムは、読み取りが反復可能なことを検証します。 つまり、トランザクションによって読み取られる行バージョンが、トランザクションの論理的終了時刻の時点で依然として有効な行バージョンであることを検証します。  
   
  更新または変更された行がある場合、トランザクションはエラー 41305 ("現在のトランザクションは、REPEATABLE READ の検証の失敗が原因でコミットされませんでした。") によりコミットされません。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36075339"
   
 ## <a name="limitations"></a>制限事項  
   
--   データベースにまたがるトランザクションはメモリ最適化テーブルではサポートされていません。 メモリ最適化テーブルにアクセスする各トランザクションは、複数のデータベースにアクセスできません。ただし、tempdb への読み取り/書き込みアクセスとシステム データベース マスターへの読み取り専用アクセスは例外です。  
+-   メモリ最適化テーブルでは、データベースにまたがるトランザクションはサポートされていません。 メモリ最適化テーブルにアクセスする各トランザクションは、複数のデータベースにアクセスできません。ただし、tempdb への読み取り/書き込みアクセスとシステム データベース マスターへの読み取り専用アクセスは例外です。  
   
 -   分散トランザクションは、メモリ最適化テーブルではサポートされません。 BEGIN DISTRIBUTED TRANSACTION で開始される分散トランザクションは、メモリ最適化テーブルにアクセスできません。  
   

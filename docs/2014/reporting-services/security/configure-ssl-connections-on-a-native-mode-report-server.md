@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 95056bd4c6902f8f727af2cd77958e461bdbcb75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd49900daf397575c90be86d0370f47824cc4d8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150523"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーでの SSL 接続の構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、HTTP SSL (Secure Sockets Layer) サービスを使用してレポート サーバーへの暗号化接続を確立します。 レポート サーバー コンピューター上のローカルの証明書ストアに証明書 (.cer) ファイルがインストールされている場合、その証明書を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約にバインドして、暗号化チャネルでのレポート サーバー接続をサポートできます。  
@@ -81,7 +81,7 @@ ms.locfileid: "36072730"
 5.  URL をクリックして機能するかどうかを検証します。  
   
 ## <a name="how-certificate-bindings-are-stored"></a>証明書のバインドの格納方法  
- 証明書のバインドは HTTP.SYS に格納されます。 また、定義したバインドの表現に格納されます、 `URLReservations` RSReportServer.config ファイルのセクションです。 構成ファイル内の設定は、他の場所で指定された実際の値を記述しただけのものです。 値を構成ファイル内で直接変更することは避けてください。 構成設定は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツール、またはレポート サーバーの Windows Management Instrumentation (WMI) プロバイダーを使用して証明書をバインドするまで、ファイルには表示されません。  
+ 証明書のバインドは HTTP.SYS に格納されます。 定義したバインドの表現を格納もされます、 `URLReservations` RSReportServer.config ファイルのセクション。 構成ファイル内の設定は、他の場所で指定された実際の値を記述しただけのものです。 値を構成ファイル内で直接変更することは避けてください。 構成設定は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツール、またはレポート サーバーの Windows Management Instrumentation (WMI) プロバイダーを使用して証明書をバインドするまで、ファイルには表示されません。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で SSL 証明書とのバインドを構成し、後でコンピューターから証明書を削除する場合は、コンピューターから証明書を削除する前に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] からバインドを削除してください。 このようにしないと、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは WMI を使用してバインドを削除できなくなり、"無効なパラメーター" エラーが発生します。 コンピューターから証明書を既に削除している場合は、Httpcfg.exe ツールを使用して HTTP.SYS からバインドを削除できます。 Httpcfg.exe の詳細については、Windows の製品マニュアルを参照してください。  
