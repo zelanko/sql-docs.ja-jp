@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -18,13 +18,13 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5142c52b2a6a698e379957113d9540537282d80f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c106d3d086366146c0ed32dca78533238e81ed2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183849"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>SharePoint サイトのレポート サーバー アイテムに対する権限の付与
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] は、SharePoint のサイトおよびライブラリにあるレポート サーバー アイテムへのアクセス許可に使用できる、組み込みのセキュリティ機能を提供します。 既にユーザーに権限を割り当てている場合、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] とレポート サーバーの統合設定を構成すると、直ちにそのユーザーがレポート サーバーのアイテムおよび操作にアクセスできるようになります。 既存の権限を使用して、レポート定義などのドキュメントのアップロード、レポートの表示、サブスクリプションの作成、アイテムの管理を実行できます。  
@@ -33,7 +33,7 @@ ms.locfileid: "36071360"
   
 1.  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]の製品マニュアルで、標準的な SharePoint グループの既定のセキュリティ設定に関する説明に目を通し、権限とユーザー アクセスの管理方法を理解します。  
   
-2.  レポート サーバーのアイテムと操作に対するアクセスに特に影響する権限を確認します。 詳細については、次を参照してください。[レポート サーバー アイテムに対して Windows SharePoint Services で使用する組み込みのセキュリティ](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)です。  
+2.  レポート サーバーのアイテムと操作に対するアクセスに特に影響する権限を確認します。 詳細については、次を参照してください。[組み込みのセキュリティをレポート サーバー アイテムに対して Windows SharePoint Services を使用して](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)します。  
   
 3.  定義済みの SharePoint グループに、ユーザー アカウントとグループ アカウントを割り当てます。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36071360"
   
  SharePoint グループには、多数のレポート サーバー操作にすぐにアクセスできるようにするための権限レベルが用意されています。 必要なアクセス レベルを提供する組み込みセキュリティ設定がない場合には、カスタム グループまたはカスタム権限レベルを作成できます。  
   
- 詳細については、既定のセキュリティ機能によってレポートに関するサーバーの操作がサポートされている、次を参照してください。[レポート サーバー アイテムに対して Windows SharePoint Services で使用する組み込みのセキュリティ](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)です。  
+ 詳細については既定のセキュリティ機能によってレポート サーバーの操作がサポートされている、次を参照してください。[組み込みのセキュリティをレポート サーバー アイテムに対して Windows SharePoint Services を使用して](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)します。  
   
  組み込みセキュリティ機能を使用するには、SharePoint グループに Windows ユーザー アカウントまたはグループ アカウントを割り当てる必要があります。 ソフトウェアのインストール時に [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] へのアクセスが自動的に与えられるサーバー管理者およびポータル サイト所有者を除いて、すべてのユーザーにこのサーバーへのアクセスを許可する必要があります。  
   
@@ -91,11 +91,11 @@ ms.locfileid: "36071360"
  [Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  SharePoint グループを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の定義済みロール定義と比較する方法の概要を説明します。  
   
- [SharePoint サイトでレポート サーバー アイテムに対する権限を設定&#40;Reporting Services の SharePoint 統合モード&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [SharePoint サイトにレポート サーバー アイテムに対する権限を設定&#40;Reporting Services の SharePoint 統合モード&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  レポート ビルダーを起動してモデル アイテム セキュリティを設定するための権限を持つ、新しい SharePoint グループを作成する方法を示します。 このトピックでは、レポート サーバーの任意のアイテムまたは操作にカスタム権限を設定する際の一般的ガイドラインも示します。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint サイトでレポート サーバー アイテムに対する権限を設定&#40;Reporting Services の SharePoint 統合モード&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Reporting Services のセキュリティと保護](reporting-services-security-and-protection.md)  
+ [SharePoint サイトにレポート サーバー アイテムに対する権限を設定&#40;Reporting Services の SharePoint 統合モード&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Reporting Services セキュリティと保護](reporting-services-security-and-protection.md)  
   
   

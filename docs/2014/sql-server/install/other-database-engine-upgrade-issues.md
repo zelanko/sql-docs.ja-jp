@@ -1,5 +1,5 @@
 ---
-title: その他のデータベース エンジンのアップグレード問題 |Microsoft ドキュメント
+title: その他のデータベース エンジンのアップグレード問題 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], upgrading
 ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1c74bf4ffd8cf0eba5cb853cccda80cc0b5d662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1fda230ed04ddcac6d4c7c8bb52b73762c23b90f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150003"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>データベース エンジンのアップグレードに関するその他の問題
   アップグレードに関する次の問題は、現在のバージョンのアップグレード アドバイザーでは検出されません。 一覧表示されている問題を確認し、使用するシステムへの影響を判断してください。  
@@ -76,9 +76,9 @@ ms.locfileid: "36071107"
  MERGE は完全に予約されたキーワードになりました。 アプリケーションでは、MERGE という名前のオブジェクト (テーブルや列など) を使用できなくなりました。  
   
 ## <a name="rename-cdc-schema"></a>CDC スキーマの名前の変更  
- CDC というスキーマ名が存在します。 このスキーマ名が使用されている場合にすることはできません**Change Data Capture**データベースが有効にします。  
+ CDC というスキーマ名が存在します。 このスキーマ名が使用されている場合にすることはできません**Change Data Capture**データベースが有効になっています。  
   
- 有効にする前に、CDC スキーマを削除する必要があります**Change Data Capture**データベース用です。 この手順は、アップグレードの前でも後でも実行できます。 スキーマを削除するには、次の手順を実行します。  
+ 有効にする前に、CDC スキーマを削除する必要があります**Change Data Capture**データベース。 この手順は、アップグレードの前でも後でも実行できます。 スキーマを削除するには、次の手順を実行します。  
   
 1.  ALTER SCHEMA を使用して、CDC スキーマから新しいスキーマ名にオブジェクトを転送します。  
   

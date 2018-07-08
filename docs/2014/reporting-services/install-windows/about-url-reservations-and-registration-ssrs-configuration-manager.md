@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 - URL registration
@@ -17,13 +17,13 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 9bffc090c98e1adc507ba55fc856fb166ebd2187
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b042690b6cf4a9d2335a2c91f8f6a618f9261caf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183979"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL の予約と登録について (SSRS 構成マネージャー)
   Reporting Services アプリケーションの URL は、HTTP.SYS の URL 予約として定義されます。 URL 予約は、Web アプリケーションへの URL エンドポイントの構文を定義します。 レポート サーバーでアプリケーションを構成する際には、レポート サーバー Web サービスとレポート マネージャーの両方に対して URL 予約を定義します。 セットアップまたは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで URL を構成すると、自動的に URL 予約が作成されます。  
@@ -54,7 +54,7 @@ ms.locfileid: "36070477"
 >  レポート ビルダーへの URL アクセスや、レポート サーバーに保存されている特定のレポートへの URL アクセスについては説明しません。 これらのアイテムへの URL アクセスの詳細については、 [オンライン ブックの「](../access-report-server-items-using-url-access.md) URL アクセスを使用したレポート サーバー アイテムへのアクセス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   
 ##  <a name="URLreservation"></a> URL の予約と登録  
- URL 予約は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションへのアクセスに使用できる URL を定義します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー Web サービスおよび HTTP でのレポート マネージャーの 1 つまたは複数の Url が予約されます。SYS、し、サービスの起動時に登録します。 レポート ビルダーとレポートの URL は、レポート サーバー Web サービスの URL 予約に基づいています。 URL にパラメーターを追加することにより、Web サービスを通じてそれらを開くことができます。 予約と登録は、HTTP.SYS によって行われます。 詳細については、MSDN の「 [名前空間の予約、登録、およびルーティング](http://go.microsoft.com/fwlink/?LinkId=92653) 」を参照してください。  
+ URL 予約は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションへのアクセスに使用できる URL を定義します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー Web サービスおよび HTTP でレポート マネージャーの 1 つまたは複数の Url を予約します。SYS、し、サービスの起動時に登録します。 レポート ビルダーとレポートの URL は、レポート サーバー Web サービスの URL 予約に基づいています。 URL にパラメーターを追加することにより、Web サービスを通じてそれらを開くことができます。 予約と登録は、HTTP.SYS によって行われます。 詳細については、MSDN の「 [名前空間の予約、登録、およびルーティング](http://go.microsoft.com/fwlink/?LinkId=92653) 」を参照してください。  
   
  *URL 予約* とは、Web アプリケーションへの URL エンドポイントを作成して HTTP.SYS に格納するプロセスです。 HTTP.SYS は、コンピューターで定義されているすべての URL 予約の共通リポジトリであり、URL 予約が一意であることを保証する一連の共通規則を定義します。  
   
@@ -66,8 +66,8 @@ ms.locfileid: "36070477"
   
 |HTTP.SYS の URL 予約|[URL]|説明|  
 |---------------------------------|---------|-----------------|  
-|http://+:80/reportserver|http://\<コンピューター名 >/reportserver<br /><br /> http://\<ip アドレス >/reportserver<br /><br /> http://localhost/reportserver|この URL 予約では、ポート 80 でワイルドカード (+) を指定しています。 これにより、ポート 80 のレポート サーバー コンピューターに解決されるホストが指定されているすべての受信要求がレポート サーバー キューに送られます。 この URL 予約を使用すると、任意の数の URL を使用してレポート サーバーにアクセスできます。<br /><br /> ほとんどのオペレーティング システムでは、これが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーの既定の URL 予約です。|  
-|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|この URL 予約では IP アドレスを指定しています。これは、ワイルドカードの URL 予約よりはるかに制限の厳しい URL 予約です。 レポート サーバーへの接続に使用できるのは、この IP アドレスを含む URL だけです。 この URL の予約 http:// 時にレポート サーバーに要求\<コンピューター名 >/reportserver またはhttp://localhost/reportserverは失敗します。|  
+|http://+:80/reportserver|http://\<computername >/reportserver<br /><br /> http://\<IPAddress >/reportserver<br /><br /> http://localhost/reportserver|この URL 予約では、ポート 80 でワイルドカード (+) を指定しています。 これにより、ポート 80 のレポート サーバー コンピューターに解決されるホストが指定されているすべての受信要求がレポート サーバー キューに送られます。 この URL 予約を使用すると、任意の数の URL を使用してレポート サーバーにアクセスできます。<br /><br /> ほとんどのオペレーティング システムでは、これが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーの既定の URL 予約です。|  
+|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|この URL 予約では IP アドレスを指定しています。これは、ワイルドカードの URL 予約よりはるかに制限の厳しい URL 予約です。 レポート サーバーへの接続に使用できるのは、この IP アドレスを含む URL だけです。 この URL の予約 http:// でレポート サーバーへの要求\<computername >/reportserver またはhttp://localhost/reportserverは失敗します。|  
   
 ##  <a name="DefaultURLs"></a> 既定の URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールすると、レポート サーバー Web サービスとレポート マネージャーの URL が自動的に予約されます。 これらの既定値は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで URL 予約を定義するときにも使用できます。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] をインストールした場合や、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を名前付きインスタンスとしてインストールした場合は、既定の URL にインスタンス名が含まれます。  
@@ -101,14 +101,14 @@ ms.locfileid: "36070477"
   
  サービス アカウントには既定値はありません。 ただし、セットアップ時には (ファイルのみのモードでサーバーをインストールする場合でも) サービス アカウントを指定する必要があります。サービス アカウントは、RSReportServer.config の `URLReservation` に指定されます。 サービス アカウントの有効な値は、ドメイン ユーザー アカウント、`LocalSystem`、および `NetworkService` です。  
   
- 既定のセキュリティがあるために、匿名アクセスが無効になっている`RSWindowsNegotiate`です。 イントラネット アクセスの場合、レポート サーバーの URL ではネットワーク コンピューターの名前が使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインターネット接続用に構成する場合は、別の設定を使用する必要があります。 認証の詳細については、 [オンライン ブックで「](../security/authentication-with-the-report-server.md) レポート サーバーでの認証 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+ 既定のセキュリティがあるために、匿名アクセスが無効になっている`RSWindowsNegotiate`します。 イントラネット アクセスの場合、レポート サーバーの URL ではネットワーク コンピューターの名前が使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインターネット接続用に構成する場合は、別の設定を使用する必要があります。 認証の詳細については、 [オンライン ブックで「](../security/authentication-with-the-report-server.md) レポート サーバーでの認証 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   
 ##  <a name="URLlocalAdmin"></a> ローカル管理用の URL  
  URL 予約に強いワイルドカードまたは弱いワイルドカードを指定した場合、http://localhost/reportserver または http://localhost/reports を使用できます。  
   
  http://localhost URL は、http://127.0.0.1 として解釈されます。 URL 予約をコンピューター名や 1 つの IP アドレスに設定した場合は、ローカル コンピューターの 127.0.0.1 に対して追加の予約を作成しないと localhost を使用できません。 同様に、localhost や 127.0.0.1 がコンピューターで無効になっている場合も、その URL を使用できません。  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] および[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]を昇格した特権でのプログラムを実行してしまうリスクを最小限に抑える新しいセキュリティ機能が含まれています。 これらのオペレーティング システムでローカル管理を有効にするには、追加の手順が必要です。 詳細については、「[ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」をご覧ください。  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]に昇格した特権でプログラムを実行してしまうリスクを最小限に抑える新しいセキュリティ機能が含まれます。 これらのオペレーティング システムでローカル管理を有効にするには、追加の手順が必要です。 詳細については、「[ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」をご覧ください。  
   
 ##  <a name="URLSharePoint"></a> SharePoint 統合モードでレポート サーバーの Url  
  スタンドアロンのレポート サーバーを、大規模に配置された SharePoint 製品またはテクノロジの内部で実行するように構成すると、URL と仮想ディレクトリの構成が次のような影響を受けます。  
@@ -119,7 +119,7 @@ ms.locfileid: "36070477"
   
 -   SharePoint 製品およびテクノロジでも URL 予約が定義されていますが、サーバーへのパブリッシュの際にはそれらを無視できます。 SharePoint Web アプリケーションの URL 予約は内部操作です。  
   
--   統合レポート サーバーと SharePoint テクノロジのインスタンスが同じコンピューターにインストールされている単一サーバー展開で使用することはできませんhttp://localhost/reportserverです。 場合http://localhostはこれを使用すると、SharePoint Web アプリケーションへのアクセスを行う必要があります既定以外の Web サイトまたは一意のポート割り当てレポート サーバーにアクセスします。 さらに、レポート サーバーが SharePoint ファームと統合されている場合は、リモート コンピューターにインストールされている配置内のノードではレポート サーバーへの localhost アクセスは解決されません。  
+-   使用することはできません、統合レポート サーバーと SharePoint テクノロジのインスタンスが同じコンピューターにインストールされている 1 台のサーバー展開の場合、http://localhost/reportserverします。 場合http://localhostは、SharePoint Web アプリケーションにアクセスするために使用する必要がありますまたは使用する既定以外の Web サイトの一意のポートの割り当てをレポート サーバーにアクセスします。 さらに、レポート サーバーが SharePoint ファームと統合されている場合は、リモート コンピューターにインストールされている配置内のノードではレポート サーバーへの localhost アクセスは解決されません。  
   
 -   レポート マネージャーの URL 予約と URL エンドポイントは、SharePoint 統合モードで実行されているレポート サーバーに対しては構成できません。 構成した場合、SharePoint 統合モードでレポート サーバーを配置した後で機能しなくなります。 レポート マネージャーは SharePoint 統合モードではサポートされません。  
   
@@ -127,6 +127,6 @@ ms.locfileid: "36070477"
   
 ## <a name="see-also"></a>参照  
  [URL の構成&#40;SSRS 構成マネージャー&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [URL 予約構文&#40;SSRS 構成マネージャー&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
+ [URL 予約の構文&#40;SSRS 構成マネージャー&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
   
   

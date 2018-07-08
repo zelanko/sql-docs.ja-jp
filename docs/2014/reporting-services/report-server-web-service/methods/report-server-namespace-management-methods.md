@@ -17,15 +17,15 @@ helpviewer_keywords:
 - methods [Reporting Services]
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7b88c3693de9a0d2318094cd01d3e27044a697eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 982dabf5a880459e785033411ead754f81dbce4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155623"
 ---
 # <a name="report-server-namespace-management-methods"></a>レポート サーバー名前空間管理メソッド
   レポート サーバー管理 Web サービスには、レポート サーバー データベースのレポート、フォルダー、およびリソースの管理に使用できるメソッドが含まれています。  
@@ -34,7 +34,7 @@ ms.locfileid: "36071361"
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|ジョブの実行を取り消します。|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|レポート サーバー データベースまたは SharePoint ライブラリにフォルダーを追加します。|  
-|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|レポート サーバー データベースまたは SharePoint ライブラリに新しいアイテムを追加します。 このメソッドに適用、 `Report`、 `Model`、 `Dataset`、 `Component`、 `Resource`、および`DataSource`項目の種類。|  
+|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|レポート サーバー データベースまたは SharePoint ライブラリに新しいアイテムを追加します。 このメソッドに適用されます、 `Report`、 `Model`、 `Dataset`、 `Component`、 `Resource`、および`DataSource`アイテムの種類。|  
 |M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[],ReportService2010.Warning[]@)|新しいレポート編集セッションを作成します。|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|レポート サーバー データベースまたは SharePoint ライブラリからアイテムを削除します。|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|指定した検索条件に一致する、レポート サーバー データベースまたは SharePoint ライブラリのアイテムを返します。|  
@@ -42,7 +42,7 @@ ms.locfileid: "36071361"
 |<xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>|指定した拡張機能の設定の一覧を返します。|  
 |<xref:ReportService2010.ReportingService2010.GetItemType%2A>|レポート サーバー データベースまたは SharePoint ライブラリにアイテムが存在する場合に、アイテムの種類を取得します。|  
 |<xref:ReportService2010.ReportingService2010.GetProperties%2A>|レポート サーバー データベースまたは SharePoint ライブラリのアイテムに関する 1 つ以上のプロパティ値を返します。|  
-|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|アイテムの定義またはコンテンツを取得します。 このメソッドに適用、 `Report`、 `Model`、 `Dataset`、 `Component`、 `Resource`、および`DataSource`項目の種類。|  
+|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|アイテムの定義またはコンテンツを取得します。 このメソッドに適用されます、 `Report`、 `Model`、 `Dataset`、 `Component`、 `Resource`、および`DataSource`アイテムの種類。|  
 |<xref:ReportService2010.ReportingService2010.GetItemReferences%2A>|アイテムに関連付けられたカタログ アイテム参照の一覧を返します。|  
 |<xref:ReportService2010.ReportingService2010.GetReportServerConfigInfo%2A>|接続しているレポート サーバー インスタンス、またはスケールアウト配置内のすべてのレポート サーバー インスタンスに関する情報を返します。|  
 |<xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>|1 つ以上のシステム プロパティを返します。|  
@@ -63,7 +63,7 @@ ms.locfileid: "36071361"
 |<xref:ReportService2010.ReportingService2010.SetItemReferences%2A>|アイテムに関連付けられたカタログ アイテムを設定します。|  
 |<xref:ReportService2010.ReportingService2010.MoveItem%2A>|アイテムの移動や名前の変更を行います。|  
 |<xref:ReportService2010.ReportingService2010.SetProperties%2A>|アイテムの 1 つ以上のプロパティを設定します。|  
-|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|指定したアイテムの定義またはコンテンツを設定します。 このメソッドに適用、 `Report`、 `Model`、 `Dataset`、 `Component`、 `Resource`、および`DataSource`項目の種類。|  
+|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|指定したアイテムの定義またはコンテンツを設定します。 このメソッドに適用されます、 `Report`、 `Model`、 `Dataset`、 `Component`、 `Resource`、および`DataSource`アイテムの種類。|  
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|レポート サーバーまたは SharePoint ファームの 1 つ以上のシステム プロパティを設定します。|  
 |<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 拡張機能の設定を検証します。|  
   

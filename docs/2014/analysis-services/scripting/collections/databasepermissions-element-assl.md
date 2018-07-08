@@ -1,5 +1,5 @@
 ---
-title: DatabasePermissions 要素 (ASSL) |Microsoft ドキュメント
+title: DatabasePermissions 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DatabasePermissions element
 ms.assetid: c4ce0da3-f7ba-4f11-8cd8-236c32992aaf
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a9c77244d652aa80b74f9dc007d2b44bba9174e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad3ab49b481a7411d2dd818e5acfa019e7ea9382
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157293"
 ---
 # <a name="databasepermissions-element-assl"></a>DatabasePermissions 要素 (ASSL)
   コレクションを格納[DatabasePermission](../objects/databasepermission-element-assl.md)要素に関連付けられた、[データベース](../objects/database-element-assl.md)要素。  

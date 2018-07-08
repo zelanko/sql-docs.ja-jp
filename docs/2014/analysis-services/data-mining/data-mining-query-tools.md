@@ -1,5 +1,5 @@
 ---
-title: データ マイニング クエリ インターフェイス |Microsoft ドキュメント
+title: データ マイニング クエリ インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
 - predictions [DMX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee9db3934e1f9f89a4bbbb292a4dcea4bc7b7bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07641be25c1e7828238ea4a6dd897240651735ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159653"
 ---
 # <a name="data-mining-query-interfaces"></a>データ マイニング クエリ インターフェイス
   データ マイニング クエリは、データ マイニング拡張機能 (DMX) の言語に基づいています。 DMX は、分類、リスク分析、推奨設定の生成、線形回帰などのすべての予測およびモデリングのタスクに使用できます。 またモデル処理時に生成されたパターンおよび統計を取得することもできます。  
@@ -62,10 +62,10 @@ ms.locfileid: "36071078"
 ###  <a name="bkmk_Builder"></a> 予測クエリ ビルダー  
  予測クエリ ビルダーは、データ マイニング デザイナーの **[マイニング モデル予測]** タブに含まれ、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で入手できます。  
   
- クエリ ビルダーでは、グラフィカルなツールを使用して、マイニング モデルの選択、新しいケース データの追加、予測関数の追加などの操作を実行できます。 予測クエリ ビルダーには、クエリを手動で変更に使用できるテキスト エディターと、単純な**結果**クエリの結果を表示するウィンドウです。  
+ クエリ ビルダーでは、グラフィカルなツールを使用して、マイニング モデルの選択、新しいケース データの追加、予測関数の追加などの操作を実行できます。 テキスト エディター、クエリを手動で変更するために使用できると、単純な予測クエリ ビルダーが含まれます**結果**クエリの結果を表示するウィンドウ。  
   
 ###  <a name="bkmk_QueryEditor"></a> クエリ エディター  
- クエリ エディターで[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]をビルドして DMX クエリの実行に使用できるツールを提供します。 SQL Server Analysis Services のインスタンスに接続して、データベース、マイニング構造列、およびマイニング モデルを選択できます。 **メタデータ エクスプ ローラー** には、参照できる予測関数の一覧が含まれています。  
+ クエリ エディターでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]をビルドして DMX クエリの実行に使用できるツールを提供します。 SQL Server Analysis Services のインスタンスに接続して、データベース、マイニング構造列、およびマイニング モデルを選択できます。 **メタデータ エクスプ ローラー** には、参照できる予測関数の一覧が含まれています。  
   
 ###  <a name="bkmk_Templates"></a> [DMX テンプレート]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、DMX クエリの作成に使用できる対話型の DMX クエリ テンプレートが提供されます。 テンプレートの一覧を表示するには、ツール バーの **[表示]** をクリックし、 **[テンプレート エクスプローラー]** を選択します。 DMX、MDX、および XMLA のテンプレートを含むすべての Analysis Services テンプレートを表示するには、キューブ アイコンをクリックします。  
@@ -95,10 +95,10 @@ ms.locfileid: "36071078"
 -   クラスター数、デシジョン ツリーで使用される属性、モデルの最終処理日、モデル作成時に使用されるアルゴリズム パラメーターなどの**モデル コンテンツ**および**モデル メタデータ**を取得するには、[Discover (XMLA)](../xmla/xml-elements-methods-discover.md) メソッドを使用し、[RequestType (XMLA)](../xmla/xml-elements-properties/type-element-xmla.md) ヘッダーでデータ マイニング スキーマ行セットの 1 つを指定します。 クエリの範囲を絞り込むには、基準を [RestrictionList (XMLA)](../xmla/xml-elements-properties/restrictionlist-element-xmla.md) 要素の制限として入力します。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能&#40;DMX&#41;参照](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [データ マイニング拡張機能&#40;DMX&#41;リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)   
  [データ マイニング ソリューション](data-mining-solutions.md)   
- [DMX の Select ステートメントを理解します](/sql/dmx/understanding-the-dmx-select-statement)   
- [構造と DMX 予測クエリの使用状況](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
+ [DMX 選択ステートメントをについてください。](/sql/dmx/understanding-the-dmx-select-statement)   
+ [構造と DMX 予測クエリの使用](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
  [予測クエリ ビルダーを使用して予測クエリを作成します。](create-a-prediction-query-using-the-prediction-query-builder.md)   
  [SQL Server Management Studio で DMX クエリを作成する](create-a-dmx-query-in-sql-server-management-studio.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: SSIS ツールボックス アイテムを移動 |Microsoft ドキュメント
+title: SSIS ツールボックス アイテムの移動 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3e3ef600-9331-453b-80ad-b2d18e6082be
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd0cad20d1c25fc987462875b5cf8e6334c1d7a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d20ba1d0ce155e22f6bd927dfde64aaccc633a4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164723"
 ---
 # <a name="move-ssis-toolbox-items"></a>SSIS ツールボックス アイテムを移動する
   新しい SSIS ツールボックスには、新しいカテゴリ、およびユーザーの設定に応じてアイテムを整理する機能が用意されています。 ツールボックスの下部にある情報ウィンドウに、選択したツールボックス アイテムの説明と、オンライン ブックのトピックへのリンクが表示されます。  
