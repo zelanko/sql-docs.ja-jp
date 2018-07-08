@@ -1,12 +1,12 @@
 ---
-title: ログ実行時間の長いクエリ (ODBC) |Microsoft ドキュメント
+title: 実行時間の長いクエリ (ODBC) のログイン |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dab917b4adbbb186b916f68f74481b4a3ccbf8b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 79bfcc0eb68dd60752078e001c805083d111181f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701023"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431811"
 ---
-# <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>プロファイリング ODBC ドライバーのパフォーマンス データのログの実行時間の長いクエリ
+# <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>プロファイリング ODBC ドライバー パフォーマンス データのログの実行時間の長いクエリ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,31 +35,31 @@ ms.locfileid: "35701023"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>ODBC アドミニストレーターを使用して実行時間の長いクエリをログに記録するには  
   
-1.  **コントロール パネルの **をダブルクリックして**管理ツール**順にダブルクリック**データ ソース (ODBC)** です。 (または、することができます odbcad32.exe、コマンド プロンプトから実行します。)  
+1.  **コントロール パネルの [**、] をダブルクリックします**管理ツール**し、ダブルクリック**データ ソース (ODBC)** します。 (または、することができます odbcad32.exe、コマンド プロンプトから実行します。)  
   
-2.  クリックして、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**タブです。  
+2.  をクリックして、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**タブ。  
   
 3.  実行時間の長いクエリのログを記録するデータ ソースをクリックします。  
   
-4.  をクリックして**構成**です。  
+4.  クリックして**構成**します。  
   
-5.  Microsoft SQL Server を構成する DSN ウィザードを使用してページに移動**実行時間の長いクエリをログ ファイルに保存**です。  
+5.  Microsoft SQL Server を構成する DSN ウィザードで、ページに移動します。**実行時間の長いクエリをログ ファイルに保存**します。  
   
-6.  選択**実行時間の長いクエリをログ ファイルに保存**です。 ボックスに、実行時間の長いクエリのログを記録するファイルの名前を入力します。 必要に応じて、をクリックして**参照**をファイル システムでクエリ ログを参照します。  
+6.  選択**実行時間の長いクエリをログ ファイルに保存**します。 ボックスに、実行時間の長いクエリのログを記録するファイルの名前を入力します。 必要に応じてクリックして**参照**クエリ ログのファイル システムから参照します。  
   
-7.  (ミリ秒単位) でクエリのタイムアウト間隔を設定、**時間 (ミリ秒) の長いクエリ**ボックス。  
+7.  (ミリ秒単位) でクエリのタイムアウト間隔を設定、**長いクエリ時間 (ミリ秒)** ボックス。  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>実行時間の長いクエリをプログラムでログに記録するには  
   
-1.  呼び出す[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG および実行時間の長いクエリのログ ファイルの完全パスとファイル名にします。 以下に例を示します。  
+1.  呼び出す[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG および実行時間の長いクエリのログ ファイルの完全なパスとファイル名にします。 以下に例を示します。  
   
     ```  
     C:\\Odbcqry.log  
     ```  
   
-2.  呼び出す[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) sql_copt_ss_perf_query_interval 属性とタイムアウトの間隔をミリ秒に設定します。  
+2.  呼び出す[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) sql_copt_ss_perf_query_interval 属性とタイムアウト間隔 (ミリ秒単位) に設定します。  
   
-3.  呼び出す[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY および SQL_PERF_START 実行時間の長いクエリのログ記録を開始するとします。  
+3.  呼び出す[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)実行時間の長いクエリのログ記録を開始するには、SQL_COPT_SS_PERF_QUERY および SQL_PERF_START を使用します。  
   
 4.  呼び出す[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY および SQL_PERF_STOP 実行時間の長いクエリのログ記録を停止するとします。  
   

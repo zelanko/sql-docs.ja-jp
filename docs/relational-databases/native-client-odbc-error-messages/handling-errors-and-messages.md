@@ -1,12 +1,12 @@
 ---
-title: エラーとメッセージの処理 |Microsoft ドキュメント
+title: エラーとメッセージの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 63c2e6afa4b182a8cce65a119193c0d8580a9292
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c70fab6988fd095df645bfc467f4d66941a9839d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695213"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431311"
 ---
 # <a name="handling-errors-and-messages"></a>エラーとメッセージの処理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "35695213"
   
  診断情報を開発時に使用すると、ハードコードした SQL ステートメントに存在する、無効なハンドルや構文エラーなどのプログラミング エラーを把握できます。 実行時に使用すると、ユーザーが入力した SQL ステートメントのデータの切り捨て、規則違反、構文エラーなどの実行時エラーや警告を確認できます。 一般的に、プログラミング ロジックはリターン コードを基に組み立てます。  
   
- たとえば、アプリケーションが呼び出す後**SQLFetch**を結果セット内の行を取得するには、リターン コードを示すかどうか、結果セットの末尾に達しました (SQL_NO_DATA)、情報メッセージには、(SQL_SUCCESS_ が返された場合WITH_INFO)、またはエラー (SQL_ERROR) が発生しました。  
+ たとえば、アプリケーションから**SQLFetch**結果セット内の行を取得するリターン コードを示すかどうか、結果セットの末尾に達した (SQL_NO_DATA)、情報メッセージには、(SQL_SUCCESS_ が返された場合WITH_INFO)、またはエラー (SQL_ERROR) が発生しました。  
   
- 場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが SQL_SUCCESS 以外を返します、アプリケーションが呼び出すことができます**SQLGetDiagRec**取得情報メッセージまたはエラー メッセージにします。 使用して**SQLGetDiagRec** 1 つ以上のメッセージがある場合は、設定、メッセージを上下にスクロールします。  
+ 場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが SQL_SUCCESS 以外、アプリケーションを呼び出して**SQLGetDiagRec**またはエラー メッセージが情報を取得します。 使用**SQLGetDiagRec**を 1 つ以上のメッセージが表示される場合は、設定、メッセージを上下にスクロールします。  
   
  リターン コード SQL_INVALID_HANDLE は常にプログラミング エラーを示します。実行時にはこのコードが返されないようにしてください。 それ以外のリターン コードは実行時の情報を含んでいます。ただし、SQL_ERROR はプログラミング エラーを示す場合もあります。  
   
- 元の[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ API、c、Db-library により、コールバックのエラー処理をインストールするアプリケーションとメッセージ処理関数の戻り値のエラーまたはメッセージです。 PRINT、RAISERROR、DBCC、SET など、一部の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、結果セットではなく DB-Library メッセージ ハンドラー関数に結果を返します。 しかし、ODBC API にはそのようなコールバック機能がありません。 ときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを検出から戻ってきたメッセージ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ODBC リターン コードを SQL_SUCCESS_WITH_INFO または SQL_ERROR に設定し、メッセージ、1 つ以上の診断レコードが返されます。 したがって、ODBC アプリケーションを入念にテスト リターン コードと呼び出し**SQLGetDiagRec**メッセージ データを取得します。  
+ 元の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] c には、Db-library のネイティブ API により、アプリケーションはエラー処理のコールバックをインストールして、メッセージ処理関数の戻り値のエラーやメッセージ。 PRINT、RAISERROR、DBCC、SET など、一部の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、結果セットではなく DB-Library メッセージ ハンドラー関数に結果を返します。 しかし、ODBC API にはそのようなコールバック機能がありません。 ときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーから返されるメッセージを検出した[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ODBC リターン コードを SQL_SUCCESS_WITH_INFO または SQL_ERROR に設定し、メッセージ、1 つ以上の診断レコードが返されます。 そのため、ODBC アプリケーションする必要があります慎重にテストするにはこれらのリターン コードと呼び出し**SQLGetDiagRec**メッセージ データを取得します。  
   
- トレースのエラーについては、次を参照してください。[データ アクセスのトレース](http://go.microsoft.com/fwlink/?LinkId=125805)です。 エラーのトレースで追加された機能強化については[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を参照してください[へのアクセス ログの診断情報、拡張イベント](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)です。  
+ エラーのトレースについては、次を参照してください。[データ アクセスのトレース](http://go.microsoft.com/fwlink/?LinkId=125805)します。 エラーのトレースで追加の機能強化については[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を参照してください[診断の情報を拡張イベント ログにアクセスする](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

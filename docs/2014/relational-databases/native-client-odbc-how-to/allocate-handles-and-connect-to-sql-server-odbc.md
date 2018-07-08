@@ -1,13 +1,11 @@
 ---
-title: ハンドルの割り当てを SQL Server (ODBC) 接続および |Microsoft ドキュメント
+title: ハンドルの割り当て (ODBC) の SQL Server に接続および |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - handles [ODBC], about handles
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: adf51bdb9181030079d8b3f94628a1280299c856
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ccb7b63b1098e9e6d5dba6ee0a299d2d30ce6f09
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072768"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407563"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>ハンドルの割り当てと SQL Server への接続 (ODBC)
     
@@ -34,21 +32,21 @@ ms.locfileid: "36072768"
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ドライバー固有のヘッダー ファイル Odbcss.h を含めます。  
   
-3.  呼び出す[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)で、`HandleType`の ODBC を初期化し、環境ハンドルの割り当てを sql_handle_env として。  
+3.  呼び出す[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)で、`HandleType`を ODBC を初期化して環境ハンドルを割り当てる sql_handle_env としての。  
   
-4.  呼び出す[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)で`Attribute`またに設定し、 `ValuePtr` SQL_OV_ODBC3 に設定をアプリケーションで ODBC 3.x 形式の関数呼び出しが使用されていることを示します。  
+4.  呼び出す[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)で`Attribute`SQL_ATTR_ODBC_VERSION に設定し、`ValuePtr`を ODBC 3.x 形式の関数呼び出しで使用するアプリケーションを示す SQL_OV_ODBC3 に設定します。  
   
-5.  必要に応じて、呼び出し[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)他の環境を設定するオプション、または呼び出し[SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403)環境オプションを取得します。  
+5.  必要に応じて、呼び出す[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)他の環境を設定するオプション、または呼び出し[SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403)環境オプションを取得します。  
   
-6.  呼び出す[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)で、`HandleType`接続ハンドルの割り当てを sql_handle_dbc としてのです。  
+6.  呼び出す[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)で、`HandleType`接続ハンドルの割り当てを sql_handle_dbc としての。  
   
-7.  必要に応じて、呼び出す[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)接続オプションの設定、または呼び出しを[SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md)接続オプションを取得します。  
+7.  必要に応じて、呼び出す[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)接続オプションの設定、または呼び出し[SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md)接続オプションを取得します。  
   
-8.  接続する既存のデータ ソースを使用する SQLConnect を呼び出す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+8.  接続する既存のデータ ソースを使用する SQLConnect を呼び出す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
      スイッチまたは  
   
-     呼び出す[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)に接続する接続文字列を使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+     呼び出す[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)に接続する接続文字列を使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
      最小の完全な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続文字列は、次の 2 つの形式のいずれかになります。  
   
@@ -61,15 +59,15 @@ ms.locfileid: "36072768"
   
      \- または -  
   
-     呼び出す[SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md)反復的な接続文字列を作成しに接続する方法で複数回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+     呼び出す[SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md)接続文字列を作成しに接続する、反復的な方法で複数回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
-9. 必要に応じて、呼び出す[SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md)ドライバー属性と動作を取得する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソース。  
+9. 必要に応じて、呼び出す[SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md)ドライバーの属性と動作を取得する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソース。  
   
 10. ステートメントを割り当てて使用します。  
   
-11. 切断する SQLDisconnect を呼び出す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]し、接続ハンドルを新しい接続を使用できるようにします。  
+11. 呼び出しから切断する SQLDisconnect[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続ハンドルを新しい接続で使用できるようにします。  
   
-12. 呼び出す[SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md)で、 `HandleType` sql_handle_dbc として接続ハンドルを解放するのです。  
+12. 呼び出す[SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md)で、`HandleType`の sql_handle_dbc として接続ハンドルを解放します。  
   
 13. `SQLFreeHandle` を SQL_HANDLE_ENV として `HandleType` を呼び出し、環境ハンドルを解放します。  
   

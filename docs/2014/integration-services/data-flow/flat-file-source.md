@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesource.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1651289fc00fecceb5a1e5a6bdc2bfd992be166e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 040069e373761d6d3ad78ea26bea5f8e538c33ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229362"
 ---
 # <a name="flat-file-source"></a>フラット ファイル ソース
   フラット ファイル ソースは、テキスト ファイルからデータを読み取ります。 テキスト ファイルには、Delimited 形式、FixedWidth 形式、または Mixed 形式を使用できます。  
@@ -48,7 +48,7 @@ ms.locfileid: "36074920"
   
  フラット ファイル ソースの出力にある出力列には、FastParse プロパティが含まれています。 FastParse は、列が、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されているロケール非依存型の高速な解析ルーチンを使用するか、ロケール依存型の標準的な解析ルーチンを使用するかを示します。 詳細については、「 [Fast Parse](../fast-parse.md) 」および「 [Standard Parse](../standard-parse.md)」を参照してください。  
   
- 出力列には、UseBinaryFormat プロパティも含まれます。 このプロパティを使用して、パック 10 進形式を使用するデータなど、バイナリ データのサポートをファイルに実装します。 既定では UseBinaryFormat éý ' è`false`です。 バイナリ形式を使用する場合は、' éý ' UseBinaryFormat`true`する出力列で、データ型と`DT_BYTES`です。 この設定を行った場合、フラット ファイル ソースはデータ変換をスキップし、データを出力列にそのまま渡します。 この場合は、派生列変換またはデータ変換などの変換を使用して `DT_BYTES` データを別のデータ型にキャストするか、スクリプト変換でカスタム スクリプトを記述してデータを解釈できます。 また、カスタム データ フロー コンポーネントを記述してデータを解釈することもできます。 詳細についてはどのデータ型にキャストできますの`DT_BYTES`を参照してください[キャスト&#40;SSIS 式&#41;](../expressions/cast-ssis-expression.md)です。  
+ 出力列には、UseBinaryFormat プロパティも含まれます。 このプロパティを使用して、パック 10 進形式を使用するデータなど、バイナリ データのサポートをファイルに実装します。 既定に設定は、UseBinaryFormat`false`します。 バイナリ形式を使用する場合は、UseBinaryFormat を設定`true`に出力列のデータ型と`DT_BYTES`します。 この設定を行った場合、フラット ファイル ソースはデータ変換をスキップし、データを出力列にそのまま渡します。 この場合は、派生列変換またはデータ変換などの変換を使用して `DT_BYTES` データを別のデータ型にキャストするか、スクリプト変換でカスタム スクリプトを記述してデータを解釈できます。 また、カスタム データ フロー コンポーネントを記述してデータを解釈することもできます。 詳細についてはどのデータ型にキャストできる`DT_BYTES`を参照してください[キャスト&#40;Ssis&#41;](../expressions/cast-ssis-expression.md)します。  
   
  フラット ファイル ソースは、フラット ファイル接続マネージャーを使用してテキスト ファイルにアクセスします。 フラット ファイル接続マネージャーでプロパティを設定することにより、ファイルおよびファイルの各列に関する情報を提供して、フラット ファイル ソースで、テキスト ファイルのデータをどのように処理するかを指定できます。 たとえば、ファイルの列と行を区切る文字や、各列のデータ型や長さを指定できます。 詳しくは「 [フラット ファイル接続マネージャー](../connection-manager/file-connection-manager.md)」をご覧ください。  
   

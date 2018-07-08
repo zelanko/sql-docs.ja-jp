@@ -1,5 +1,5 @@
 ---
-title: テーブルの種類 (データ マイニング ウィザード) を指定 |Microsoft ドキュメント
+title: 指定のテーブル型 (データ マイニング ウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytabletypes.f1
 ms.assetid: 8209a707-faef-4ffc-8991-6c13bb350753
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74fdca1f619b063e32e37b29f1ce721666d752d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c753554dcab61c10bacaf4c118d1781ba3d157b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159073"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>[テーブルの種類の指定] (データ マイニング ウィザード)
   **[テーブルの種類の指定]** ページを使用すると、マイニング構造を定義するために使用するテーブルを識別できます。 テーブルが選択されていない場合、マイニング構造の定義にテーブルは使用されません。  
@@ -46,7 +46,7 @@ ms.locfileid: "36074683"
   
 ## <a name="see-also"></a>参照  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [データ ソース ビューを選択&#40;データ マイニング ウィザード&#41;](select-data-source-view-data-mining-wizard.md)   
+ [データ ソース ビューを選択します&#40;データ マイニング ウィザード。&#41;](select-data-source-view-data-mining-wizard.md)   
  [トレーニング データの指定&#40;データ マイニング ウィザード&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

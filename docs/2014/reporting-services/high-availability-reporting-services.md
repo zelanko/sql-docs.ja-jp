@@ -1,5 +1,5 @@
 ---
-title: 高可用性 (Reporting Services) |Microsoft ドキュメント
+title: 高可用性 (Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], Reporting Services
 - high availability [Reporting Services]
@@ -17,18 +17,18 @@ ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1d11b2b53499b12a6a8a7dca262bc26ae777825
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0884a284e6d9169ce978d3c47330a683e2bb6b52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150223"
 ---
 # <a name="high-availability-reporting-services"></a>高可用性 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーは、アプリケーションのデータ、コンテンツ、プロパティ、およびセッション情報を 2 つの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] リレーショナル データベースに格納するステートレス サーバーです。 などの可用性を確保する最善の方法として[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]機能は、次の操作には。  
   
--   高可用性機能を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]レポート サーバー データベースのアップタイムを最大にします。 構成する場合、[!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスのフェールオーバー クラスターで実行する、レポート サーバー データベースを作成するときに、そのインスタンスを選択することができます。  
+-   高可用性機能を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]レポート サーバー データベースのアップタイムを最大にします。 構成する場合、[!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンス、フェールオーバー クラスターで実行する、レポート サーバー データベースを作成するときに、そのインスタンスを選択できます。  
   
 -   できるだけ、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../includes/sshadr-md.md)]を、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データベースと共に、またデータ ソース用に使用する。 詳細については、「[Reporting Services with AlwaysOn Availability Groups (SQL Server)](../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)」(Reporting Services と AlwaysOn 可用性グループ (SQL Server)) を参照してください。  
   
@@ -42,6 +42,6 @@ ms.locfileid: "36075195"
   
 ## <a name="see-also"></a>参照  
  [高可用性ソリューション &#40;SQL Server&#41;](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [ネイティブ モード レポート サーバー スケール アウト配置の構成&#40;SSRS 構成マネージャー&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [ネイティブ モード レポート サーバーのスケール アウト配置構成&#40;SSRS 構成マネージャー&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

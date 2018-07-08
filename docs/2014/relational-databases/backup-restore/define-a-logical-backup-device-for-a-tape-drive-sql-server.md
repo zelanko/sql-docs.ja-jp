@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup devices [SQL Server], defining
 - backup devices [SQL Server], tapes
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - tape backup devices, creating
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 53a80e9690a8731efcd1e747a237871f19d93e10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 72651488293d52f0702d7c368ab0a704f74f8d5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229262"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>テープ ドライブの論理バックアップ デバイスの定義 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でテープ ドライブの論理バックアップ デバイスを定義する方法について説明します。 論理バックアップ デバイスとは、特定の物理バックアップ デバイス (ディスク ファイルまたはテープ ドライブ) を示すユーザー定義名です。  物理デバイスは、後で、つまりバックアップがバックアップ デバイスに書き込まれたときに初期化されます。  

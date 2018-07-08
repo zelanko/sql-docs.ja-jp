@@ -1,5 +1,5 @@
 ---
-title: OLE DB スキーマ行セット |Microsoft ドキュメント
+title: OLE DB スキーマ行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 313efc520f63240d3e9fa19584fc7f3e620fdeee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a1d03d6fd8d527d48a9a4051f201368ff870882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161193"
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB スキーマ行セット
-  次の OLE DB スキーマ行セットは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーによってサポートされています。 使用して、`DISCOVER_ENUMERATORS`を含む行セット、 [Discover](../../xmla/xml-elements-methods-discover.md)特定のデータ ソース プロバイダーが行セットをサポートしているかどうかを確認します。  
+  次の OLE DB スキーマ行セットは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーによってサポートされています。 使用して、`DISCOVER_ENUMERATORS`を含む行セット、 [Discover](../../xmla/xml-elements-methods-discover.md)特定のデータ ソース プロバイダーが行セットをサポートしているかどうかを確認する方法。  
   
  これらの行セットの詳細情報は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Web サイトの MSDN® ライブラリの OLE DB プログラマ向けリファレンスで「スキーマ行セット」のトピックを検索することによっても参照できます。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36074946"
 |`DBSCHEMA_TABLE_CONSTRAINTS`|カタログで定義され、特定のユーザーによって所有されているテーブル制約を識別します。|  
 |`DBSCHEMA_TABLE_PRIVILEGES`|カタログで定義され、特定のユーザーによって使用または付与されるテーブルの権限を識別します。|  
 |`DBSCHEMA_TABLE_STATISTICS`|プロバイダーのテーブルで使用できる統計のセットについて記述します。<br /><br /> この行セットは、`STATISTICS` 行セットとは関係ありません。|  
-|[DBSCHEMA_TABLES 行セット](dbschema-tables-rowset.md) <sup>1</sup>|メジャー グループおよび内のテーブルとして公開されているディメンションを識別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。|  
+|[DBSCHEMA_TABLES 行セット](dbschema-tables-rowset.md) <sup>1</sup>|メジャー グループおよびディメンション内のテーブルとして公開される識別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。|  
 |`DBSCHEMA_TABLES_INFO` <sup>1</sup>|カタログで定義され、特定のユーザーがアクセスできるテーブル (ビューも含む) を識別します。|  
 |`DBSCHEMA_TRANSLATIONS`|カタログで定義され、特定のユーザーがアクセスできる文字変換を識別します。|  
 |`DBSCHEMA_TRUSTEE`|データ ソースのトラスティを列挙します。|  
@@ -74,7 +74,7 @@ ms.locfileid: "36074946"
 |`DBSCHEMA_VIEW_TABLE_USAGE`|カタログで定義され、特定のユーザーによって所有されている表示済みテーブルが依存するテーブルを識別します。|  
 |`DBSCHEMA_VIEWS`|カタログで定義され、特定のユーザーがアクセスできるビューを識別します。|  
   
- <sup>1</sup>の MSOLAP データ ソース プロバイダーによってサポートされるスキーマ行セットを示す、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA プロバイダー。  
+ <sup>1</sup>の MSOLAP データ ソース プロバイダーでサポートされているスキーマ行セットを示す、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA プロバイダー。  
   
 ## <a name="see-also"></a>参照  
  [DISCOVER_ENUMERATORS 行セット](../xml/discover-enumerators-rowset.md)   

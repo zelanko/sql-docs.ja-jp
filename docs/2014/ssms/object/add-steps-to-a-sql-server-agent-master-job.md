@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 11bdac71a79b345d6f1c922d79092d357302ae84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 283b8406a4ee5b962e015c66c7b87569db755401
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149313"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で SQL Server エージェントのマスター ジョブにステップを追加する方法について説明します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36075165"
   
 4.  ステップを追加するジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  *[ジョブのプロパティ - <ジョブ名>]* ダイアログ ボックスで、**[ページの選択]** の **[ステップ]** を選択します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ: 新しいジョブ&#40;手順ページ&#41;](../agent/job-properties-new-job-steps-page.md)です。  
+5.  *[ジョブのプロパティ - <ジョブ名>]* ダイアログ ボックスで、**[ページの選択]** の **[ステップ]** を選択します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ: 新しいジョブ&#40;手順ページ&#41;](../agent/job-properties-new-job-steps-page.md)します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   
@@ -90,6 +90,6 @@ ms.locfileid: "36075165"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)します。  
   
   

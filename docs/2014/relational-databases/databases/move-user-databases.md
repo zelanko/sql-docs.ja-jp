@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - disaster recovery [SQL Server], moving database files
 - database files [SQL Server], moving
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - databases [SQL Server], moving
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ccc7d850ef20c0e50105528717dcffa95fa94545
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a52c954bf92cdf83965181923b876feb0fe3b795
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156535"
 ---
 # <a name="move-user-databases"></a>ユーザー データベースの移動
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) ステートメントの FILENAME 句で新しいファイルの場所を指定することで、ユーザー データベースのデータ ファイル、ログ ファイル、およびフルテキスト カタログ ファイルを新しい場所に移動することができます。 この方法は、同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内でデータベース ファイルを移動する場合に使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスや、別のサーバーにデータベースを移動する場合は、 [バックアップと復元](../backup-restore/back-up-and-restore-of-sql-server-databases.md) 操作か [デタッチ操作とアタッチ操作](move-a-database-using-detach-and-attach-transact-sql.md)を使用します。  

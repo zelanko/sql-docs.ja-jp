@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルの処理 |Microsoft ドキュメント
+title: マイニング モデルの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], processing
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45a7d57376025425946998410e5966ffa382cef9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 649aa722e67e8cfaf9986c003a965c5aaf564684
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163473"
 ---
 # <a name="process-a-mining-model"></a>マイニング モデルの処理
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーにある [マイニング モデル] タブを使用すると、特定のマイニング モデル構造に関連するマイニング モデルを処理したり、その構造に関連するすべてのモデルを処理したりできます。  
@@ -42,13 +42,13 @@ ms.locfileid: "36074502"
   
      マイニング構造に変更を加えた場合は、モデルを処理する前に構造を再配置するように求められます。 **[はい]** をクリックします。  
   
-3.  **マイニング モデルの処理 -\<モデル >** ダイアログ ボックスで、をクリックして**実行**です。  
+3.  **マイニング モデルの処理 -\<モデル >** ダイアログ ボックスで、をクリックして**実行**します。  
   
      **[処理の進行状況]** ダイアログ ボックスが開き、モデル処理の詳細が表示されます。  
   
 4.  モデルの処理が問題なく終了したら、 **[処理の進行状況]** ダイアログ ボックスで **[閉じる]** をクリックします。  
   
-5.  をクリックして**閉じる**で、**マイニング モデルの処理 -\<モデル >**  ダイアログ ボックス。  
+5.  クリックして**閉じる**で、**マイニング モデルの処理 -\<モデル >**  ダイアログ ボックス。  
   
  そのマイニング構造と選択したマイニング モデルのみが処理されます。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "36074502"
   
 2.  マイニング構造に変更を加えた場合は、モデルを処理する前に構造を再配置するように求められます。 **[はい]** をクリックします。  
   
-3.  **マイニング構造の処理 -\<構造 >** ダイアログ ボックスで、をクリックして**実行**です。  
+3.  **マイニング構造の処理 -\<構造 >** ダイアログ ボックスで、をクリックして**実行**します。  
   
 4.  **[処理の進行状況]** ダイアログ ボックスが開き、モデル処理の詳細が表示されます。  
   
 5.  モデルの処理が問題なく終了したら、 **[処理の進行状況]** ダイアログ ボックスで **[閉じる]** をクリックします。  
   
-6.  をクリックして**閉じる**で、**処理\<モデル >**  ダイアログ ボックス。  
+6.  クリックして**閉じる**で、**処理\<モデル >**  ダイアログ ボックス。  
   
  マイニング構造および関連するすべてのマイニング モデルが処理されます。  
   

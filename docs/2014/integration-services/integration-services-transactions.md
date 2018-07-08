@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], transactions
 - transactions [Integration Services], about transactions in packages
@@ -18,13 +18,13 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 880fd7d655b572f264f5120849cb5a927cdaaa59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4002487af9dba5e4466b75e3fce19ce0c9b8d531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165013"
 ---
 # <a name="integration-services-transactions"></a>Integration Services のトランザクション
   パッケージではトランザクションを使用して、タスクがアトミック単位で実行するデータベース処理をバインドし、この処理によってデータの整合性を保ちます。 すべての種類の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンテナー (パッケージ、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナー、タスクをカプセル化するタスク ホスト) でトランザクションを使用するように設定できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、トランザクションを設定するオプションとして、 **NotSupported**、 **Supported**、および **Required**の 3 つが用意されています。  
@@ -38,7 +38,7 @@ ms.locfileid: "36074622"
  トランザクションの設定は、コンテナーの TransactionOption プロパティで設定します。 このプロパティは、 **の [** プロパティ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]] ウィンドウを使用して、またはプログラムによって設定できます。  
   
 > [!NOTE]  
->  `TransactionOption` プロパティは、コンテナーによって要求された `IsolationLevel` プロパティの値が適用されるかどうかに影響します。 詳細については、の説明を参照して、 `IsolationLevel` 、トピック「プロパティ[パッケージのプロパティの設定](set-package-properties.md)です。  
+>  `TransactionOption` プロパティは、コンテナーによって要求された `IsolationLevel` プロパティの値が適用されるかどうかに影響します。 詳細については、の説明を参照して、`IsolationLevel`プロパティのトピック「[パッケージ プロパティの設定](set-package-properties.md)します。  
   
 ### <a name="to-configure-a-package-to-use-transactions"></a>パッケージでトランザクションを使用するように設定するには  
   

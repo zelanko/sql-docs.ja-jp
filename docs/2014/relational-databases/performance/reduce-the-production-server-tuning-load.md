@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
 - tuning overhead [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02259f25802f9e2084e06460d1b05c672b4b796a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e6dee0ca1def1283bb74597076873187f7fde23c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150743"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>実稼動サーバーのチューニング負荷の軽減
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] チューニング アドバイザーは、ワークロードの分析とチューニング推奨設定の生成をクエリ オプティマイザーに依存します。 実稼働サーバー上でこの分析を実行すると、サーバーの負荷が増し、チューニング セッション中のサーバーのパフォーマンスが低下することがあります。 実稼働サーバーに加えてテスト サーバーを使用することで、チューニング セッション中のサーバーの負荷への影響を小さくすることができます。  

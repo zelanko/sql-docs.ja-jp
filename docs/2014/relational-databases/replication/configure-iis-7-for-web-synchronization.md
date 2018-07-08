@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ecd40b90af7ecff8e3b249957cce6b90589acefd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b4766702bb0e9dd82c5e74bc1018894ab90b63a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158283"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Web 同期用の IIS 7 の構成
   ここでは、マージ レプリケーションの Web 同期で使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) バージョン 7 以降を手動で構成する手順について説明します。 
@@ -58,7 +58,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
 4.  次の手順に従って replisapi.dll を登録します。  
   
-    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **開いている**ボックスに、入力`cmd`、順にクリック**OK**です。  
+    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **オープン**ボックスに、入力`cmd`、順にクリックします**OK**します。  
   
     2.  手順 1. で作成したディレクトリで、次のコマンドを実行します。  
   
@@ -70,7 +70,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     1.  **インターネット インフォメーション サービス (IIS) マネージャー**の **[接続]** ペインで **[既定の Web サイト]** を右クリックし、 **[仮想ディレクトリの追加]** を選択します。  
   
-    2.  **エイリアス**、入力`SQLReplication`です。  
+    2.  **エイリアス**、入力`SQLReplication`します。  
   
     3.  **[物理パス]** に「**\<drive>:\Inetpub\SQLReplication\\**」と入力し、**[OK]** をクリックします。  
   
@@ -82,13 +82,13 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     3.  **[アクション]** ペインで、 **[モジュール マップの追加]** をクリックします。  
   
-    4.  **要求**パスを入力`replisapi.dll`です。  
+    4.  **要求**、パスを入力`replisapi.dll`します。  
   
     5.  **[モジュール]** ボックスの一覧から **[IsapiModule]** を選択します。  
   
     6.  **[実行可能ファイル]** に「**\<drive>:\Inetpub\SQLReplication\replisapi.dll**」と入力します。  
   
-    7.  **名前**、入力`Replisapi`です。  
+    7.  **名前**、入力`Replisapi`します。  
   
     8.  **[要求の制限]** をクリックし、 **[アクセス]** タブをクリックして、 **[実行]** をクリックします。  
   
@@ -284,7 +284,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     4.  プロキシ サーバーを使用している場合は、 **[LAN にプロキシ サーバーを使用する]** と **[ローカル アドレスにはプロキシ サーバーを使用しない]** チェック ボックスをオンにして、 **[OK]** をクリックします。  
   
-2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 例:  **https://server.domain.com/directory/replisapi.dll?diag**です。  
+2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 例:  **https://server.domain.com/directory/replisapi.dll?diag**します。  
   
     > [!NOTE]  
     >  上の例の **server.domain.com** は、IIS マネージャーの **[サーバー証明書]** セクションに表示される **[発行先]** の正確な名前に置き換える必要があります。  

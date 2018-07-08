@@ -1,5 +1,5 @@
 ---
-title: 凡例のプロパティ ダイアログ ボックスの 全般 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント
+title: 凡例のプロパティ ダイアログ ボックスの全般 (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.legendproperties.general.f1
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8614201ccb9c4fa496602a1ea8f6ea5e984b4d39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 172fc72cd09356281ddf10f2e048a2a81684c29a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230679"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([凡例のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
-  **[凡例のプロパティ]** ダイアログ ボックスを使用すると、グラフ内の凡例の外観およびレイアウトを定義できます。 詳細については、次を参照してください。 [、グラフの凡例の書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)です。  
+  **[凡例のプロパティ]** ダイアログ ボックスを使用すると、グラフ内の凡例の外観およびレイアウトを定義できます。 詳細については、次を参照してください。[グラフの凡例の書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)します。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  凡例の名前を入力します。  
   
  **レイアウト**  
@@ -44,7 +44,7 @@ ms.locfileid: "36071601"
   
 -   **[表 (自動)]** 凡例の内容を表で表示します。 凡例エントリが追加されると、グラフ内で使用できるスペースに応じて、凡例は水平方向または垂直方向に拡張します。  
   
- **グラフ領域にドッキング**  
+ **グラフ領域にドッキングします。**  
  凡例をグラフ領域と関連付けます。  
   
  **グラフ領域の外に凡例を表示します。**  

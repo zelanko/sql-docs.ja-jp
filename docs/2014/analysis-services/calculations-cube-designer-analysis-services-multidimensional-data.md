@@ -1,5 +1,5 @@
 ---
-title: '[計算] (キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント'
+title: 計算 (キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.f1
 ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4f44529300b0152ef6f89ff2021d8827049e203
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f26be233fc8a3e9b4bcc1aa5267619b839a02ae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239942"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>[計算] (キューブ デザイナー) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[計算]** タブを使用すると、選択されているキューブの、計算されるメンバー、名前付きセット、および多次元式 (MDX) スクリプト コマンドなどの計算を表示したり編集したりできます。  
@@ -44,7 +44,7 @@ ms.locfileid: "36072235"
  **スクリプト オーガナイザー**  
  フォーム ビューの **[スクリプト オーガナイザー]** ペインでは、キューブ スクリプトの内容を一定の順に並べ替えて表示できます。 このペインの詳細については、「[[スクリプト オーガナイザー] (キューブ デザイナーの [計算] タブ) (Analysis Services - 多次元データ)](script-organizer-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
- **[計算ツール]**  
+ **計算ツール**  
  フォーム ビューとスクリプト ビューのどちらにも用意されている **[計算ツール]** ペインには、キューブで使用できるメタデータ、関数、およびツールが表示されます。 このペインの詳細については、「[計算ツール (キューブ デザイナーの [計算] タブ) (Analysis Services - 多次元データ)](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
  **スクリプト エディター**  

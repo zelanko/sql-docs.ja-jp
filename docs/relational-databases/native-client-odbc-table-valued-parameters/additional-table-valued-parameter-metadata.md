@@ -1,12 +1,12 @@
 ---
-title: その他のテーブル値パラメーターのメタデータ |Microsoft ドキュメント
+title: テーブル値パラメーターの追加メタデータ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 345ed575f770a83d6c56de86b1782847767ae92a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c730f1d2f23de4ce0b29cf6f98d3251e9516f7b1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701313"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420091"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>テーブル値パラメーターの追加メタデータ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  テーブル値パラメーターのメタデータを取得するには、は、アプリケーションは、SQLProcedureColumns を呼び出します。 テーブル値パラメーターの場合は、SQLProcedureColumns は、1 つの行を返します。 2 つ追加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-テーブル値パラメーターに関連付けられたテーブル型のスキーマとカタログ情報を提供する、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME の特定の列が追加されています。 SS_TYPE_CATALOG_NAME および SS_TYPE_SCHEMA_NAME での以前のバージョンで追加されたすべてのドライバー固有の列の前に表示、ODBC 仕様に準拠して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、および ODBC 自体によって指定すべての列の後にします。  
+  テーブル値パラメーターのメタデータを取得するには、は、アプリケーションは、SQLProcedureColumns を呼び出します。 テーブル値パラメーターの場合は、SQLProcedureColumns は、1 つの行を返します。 2 つ追加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-テーブル値パラメーターに関連付けられたテーブル型のスキーマとカタログ情報を提供する、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME、特定の列が追加されました。 SS_TYPE_CATALOG_NAME および SS_TYPE_SCHEMA_NAME でドライバー固有のすべての列の以前のバージョンで追加する前に表示は、ODBC 仕様に準拠[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と後、すべての列が ODBC 自体によって指定します。  
   
  テーブル値パラメーターにとって重要な列を次の表に示します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "35701313"
   
  WVarchar 列は、ODBC 仕様では Varchar として定義されていますが、実際には、最近のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーでは、WVarchar として返されます。 この変更は、ODBC 3.5 仕様に Unicode のサポートが追加されたときに行われましたが、明示されていませんでした。  
   
- テーブル値パラメーターの追加のメタデータを取得するには、は、アプリケーションは、SQLColumns および SQLPrimaryKeys カタログ関数を使用します。 これらの関数がテーブル値パラメーターのために呼び出される前に、アプリケーションでは、ステートメント属性 SQL_SOPT_SS_NAME_SCOPE を SQL_SS_NAME_SCOPE_TABLE_TYPE に設定する必要があります。 この値は、アプリケーションが実際のテーブルではなくテーブル型のメタデータを必要としていることを示します。 その後、アプリケーションとして、テーブル値パラメーターの TYPE_NAME を渡します、 *TableName*パラメーター。 SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は併用、 *CatalogName*と*SchemaName*パラメーターをそれぞれカタログおよびテーブル値パラメーターのスキーマを識別します。 テーブル値パラメーターのメタデータの取得が完了すると、アプリケーションによって、SQL_SOPT_SS_NAME_SCOPE は既定値 SQL_SS_NAME_SCOPE_TABLE に設定し直す必要があります。  
+ テーブル値パラメーターの追加のメタデータを取得するには、アプリケーションは SQLColumns および SQLPrimaryKeys カタログ関数を使用します。 これらの関数がテーブル値パラメーターのために呼び出される前に、アプリケーションでは、ステートメント属性 SQL_SOPT_SS_NAME_SCOPE を SQL_SS_NAME_SCOPE_TABLE_TYPE に設定する必要があります。 この値は、アプリケーションが実際のテーブルではなくテーブル型のメタデータを必要としていることを示します。 次に、アプリケーションがテーブル値パラメーターの TYPE_NAME を渡します、 *TableName*パラメーター。 SS_TYPE_CATALOG_NAME および SS_TYPE_SCHEMA_NAME は併用、 *CatalogName*と*SchemaName*パラメーターをそれぞれ、カタログとテーブル値パラメーターのスキーマを識別するためにします。 テーブル値パラメーターのメタデータの取得が完了すると、アプリケーションによって、SQL_SOPT_SS_NAME_SCOPE は既定値 SQL_SS_NAME_SCOPE_TABLE に設定し直す必要があります。  
   
  SQL_SOPT_SS_NAME_SCOPE が SQL_SS_NAME_SCOPE_TABLE に設定されると、リンク サーバーへのクエリは失敗します。 SQLColumns または SQLPrimaryKeys とサーバー コンポーネントを含むカタログの呼び出しは失敗します。  
   

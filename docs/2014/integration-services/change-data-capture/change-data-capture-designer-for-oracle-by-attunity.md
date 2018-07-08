@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: acd78f2c8f785c1ed336c5ec0471dbd8ec58c20d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd3111f268d4d44a506254e01557b430fdf970e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156793"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity の Change Data Capture Designer for Oracle
   CDC デザイナー コンソールは、Oracle CDC インスタンスを開発および管理するために使用されます。 CDC デザイナー コンソールは、次の要素を含む Microsoft 管理コンソール スナップインです。  

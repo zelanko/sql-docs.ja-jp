@@ -1,5 +1,5 @@
 ---
-title: 関数の挿入 ダイアログ ボックス (SSAS) |Microsoft ドキュメント
+title: 関数の挿入 ダイアログ ボックス (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf09d97be59c09e4ca727762c9be04d54fcd3cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77045c8ec5b542f8a01829adaa8074724a693092
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159673"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>[関数の挿入] ダイアログ ボックス (SSAS)
   **[関数の挿入]** ダイアログ ボックスを使用すると、数式の作成時に使用できる関数の一覧から関数を選択できます。 モデル デザイナーからこのダイアログ ボックスにアクセスするには、各テーブルの上にある数式バーで、関数 (**[fx]**) ボタンをクリックします。 数式で使用する関数の選択の詳細については、「DAX の概要」と「数式の作成」を参照してください。  
@@ -29,9 +29,9 @@ ms.locfileid: "36074494"
 |||  
 |-|-|  
 |アイテム|説明|  
-|**カテゴリを選択します。**|必要な関数の種類がわかっている場合は、一覧からカテゴリを選択します。わからない場合は、 **[すべて]** をクリックしてアルファベット順の関数の一覧を表示します。|  
+|**カテゴリを選択します**|必要な関数の種類がわかっている場合は、一覧からカテゴリを選択します。わからない場合は、 **[すべて]** をクリックしてアルファベット順の関数の一覧を表示します。|  
 |**関数を選択します。**|選択したカテゴリの関数の一覧を表示します。|  
-|**description**|関数の処理内容と、必須またはオプションの引数 (列名、式など) についての説明を表示します。|  
+|**[説明]**|関数の処理内容と、必須またはオプションの引数 (列名、式など) についての説明を表示します。|  
   
 ## <a name="function-categories"></a>関数のカテゴリ  
  Data Analysis Expressions (DAX) には、 **[関数の挿入]** ダイアログ ボックスに表示される次の種類の関数のカテゴリが用意されています。  

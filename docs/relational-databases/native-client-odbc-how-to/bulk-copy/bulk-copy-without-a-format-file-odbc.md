@@ -1,12 +1,12 @@
 ---
-title: 一括コピー フォーマット ファイル (ODBC) なし |Microsoft ドキュメント
+title: 一括コピー フォーマット ファイル (ODBC) なし |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 35bbdd3905166d3814e418149de7cc7c43237721
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d718ca9e4bdc8e7ba9b04dc72653325985d9841b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697643"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424311"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>フォーマット ファイルを使用しない一括コピー (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "35697643"
   
 3.  SQL Server に接続します。  
   
-4.  呼び出す[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を次の情報を設定します。  
+4.  呼び出す[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)次の情報を設定します。  
   
     -   一括コピー操作の対象になるテーブルまたはビューの名前  
   
@@ -53,7 +53,7 @@ ms.locfileid: "35697643"
   
     -   コピーの方向 (ファイルからビューまたはテーブルへのコピーの場合は DB_IN、テーブルまたはビューからファイルへのコピーの場合は DB_OUT)  
   
-5.  呼び出す[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)を一括コピー操作を実行します。  
+5.  呼び出す[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)一括コピー操作を実行します。  
   
  これらの手順で DB_OUT を設定すると、ファイルはネイティブ形式で作成されます。 その後、以下の同様の手順を使用して、このファイルをサーバーに一括コピーできます。ただし、DB_IN ではなく DB_OUT が設定されます。 この操作は、コピー元のテーブルとコピー先のテーブルの構造が厳密に同じ場合にのみ機能します。  
   

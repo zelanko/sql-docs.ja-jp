@@ -5,25 +5,24 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - primary databases [SQL Server], in availability group
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 caps.latest.revision: 31
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: bc2983b39dab96a1c2fe05f16b3e43bf6a0ae950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a7a3462cb59bd895433d5ea6b66f0b14099446ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161053"
 ---
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>可用性グループへのデータベースの追加 (SQL Server)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループにデータベースを追加する方法について説明します。  
@@ -115,7 +114,7 @@ ms.locfileid: "36074665"
     ```  
   
     > [!NOTE]  
-    >  表示するには、コマンドレットの構文を使用して、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
 3.  可用性グループにデータベースを追加した後、セカンダリ データベースをホストする各サーバー インスタンスで、対応するセカンダリ データベースを構成する必要があります。 詳細については、「[AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
@@ -150,7 +149,7 @@ Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの作成と構成 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [AlwaysOn ダッシュ ボードを使用して&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [AlwaysOn ダッシュ ボードを使用して、 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 多次元モデル内のメジャーおよびメジャー グループの作成 |Microsoft ドキュメント
+title: 多次元モデル内のメジャーおよびメジャー グループの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 767f85b5fb777dbb7c64301b79041cda3654f000
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a60cfaaf58e3ea3815955caefd33475803abf637
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153493"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>多次元モデル内のメジャーおよびメジャー グループの作成
   *メジャー* は、合計値、度数、最小値、最大値、平均値、または自ら作成したカスタム MDX 式のように、数値のデータ値を集計したものです。 *メジャー グループ* は、1 つ以上のメジャーに対応するコンテナーです。 すべてのメジャーは、メジャーが 1 つしかない場合を含め、1 つのメジャー グループ内に存在します。 キューブには、少なくとも 1 つのメジャーとメジャー グループが必要です。  
@@ -64,7 +64,7 @@ ms.locfileid: "36075144"
   
  次の図は、 **FactSalesQuota** ファクト テーブルと、このテーブルに関連する **DimTime** および **DimEmployee**という 2 つのディメンション テーブルを表しています。 Adventure Works のサンプル キューブにおいて、これらのテーブルは Sales Quotas メジャー グループの基礎として、および時間と従業員のディメンションの基礎として使用されます。  
   
- ![2 つのディメンション テーブルを持つ FactSalesQuota テーブル](../media/factsalesquota.gif "2 つのディメンション テーブルを持つ FactSalesQuota テーブル")  
+ ![2 つのディメンション テーブルを持つ FactSalesQuota テーブル](../media/factsalesquota.gif "FactSalesQuota テーブルと 2 つのディメンション テーブル")  
   
  ファクト テーブルには、属性列とメジャー列という 2 つの種類の列が含まれています。  
   
@@ -72,7 +72,8 @@ ms.locfileid: "36075144"
   
 -   メジャー列によって、メジャー グループに含まれるメジャーが定義されます。  
   
- キューブ ウィザードを実行すると、外部キーはフィルターで除外されます。選択する残りの列の一覧に、メジャー列と、外部キーとして識別されないメジャー列および属性列が表示されます。 **FactSalesQuote** の例では、 **CalendarYear** 、 **CalendarQuarter** 、および **SalesAmountQuota**がウィザードにより表示されます。 多次元モデルの場合、実行可能なメジャーは **SalesAmountQuota** メジャー列だけとなります。 日付に基づくその他の列は、各クォータの金額を修飾するために存在します。 キューブ ウィザードのメジャーの一覧から他の列、つまり **CalendarYear** と **CalendarQuarter**を除外する (または後ほど、デザイナーでメジャー グループから削除する) 必要があります。  
+ キューブ ウィザードを実行すると、外部キーはフィルターで除外されます。選択する残りの列の一覧に、メジャー列と、外部キーとして識別されないメジャー列および属性列が表示されます。 
+  **FactSalesQuote** の例では、 **CalendarYear** 、 **CalendarQuarter** 、および **SalesAmountQuota**がウィザードにより表示されます。 多次元モデルの場合、実行可能なメジャーは **SalesAmountQuota** メジャー列だけとなります。 日付に基づくその他の列は、各クォータの金額を修飾するために存在します。 キューブ ウィザードのメジャーの一覧から他の列、つまり **CalendarYear** と **CalendarQuarter**を除外する (または後ほど、デザイナーでメジャー グループから削除する) 必要があります。  
   
  この説明から除外すべき点は、ウィザードによって提供されるすべての列がメジャーとして役立つわけではないということです。 どの列をメジャーとして使用するかを決定する際は、データの理解とデータの使用方法を信頼して決定してください。 データを調べるには、データ ソース ビュー内のテーブルを右クリックしてください。メジャーとして使用する列を特定するのに役立ちます。 詳細については、「[Explore Data in a Data Source View (Analysis Services)](explore-data-in-a-data-source-view-analysis-services.md)」 (データ ソース ビューでのデータの検索 (Analysis Services)) を参照してください。  
   

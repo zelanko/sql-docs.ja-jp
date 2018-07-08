@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sequence.general.f1
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c71b31282ac1ed242c6b8f35adeff24cbc9ddf9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9fc9a711c16c0c7e9b5ed3a66f93013b5f2031bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157983"
 ---
 # <a name="sequence-properties-general-page"></a>[順序のプロパティ]\([全般] ページ)
   シーケンス オブジェクトを作成し、そのプロパティを指定します。 シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて再起動 (繰り返し) するように構成できます。 ID 列とは異なり、シーケンスは、特定のテーブルに関連付けられていません。 アプリケーションは、シーケンス オブジェクトを参照して、次の値を受け取ります。 シーケンスとテーブルの関係は、アプリケーションによって制御されます。 ユーザー アプリケーションは、シーケンス オブジェクトを参照し、複数の行とテーブル間で値を調整できます。  

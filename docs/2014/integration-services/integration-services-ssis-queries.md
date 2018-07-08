@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Builder [Integration Services]
 - queries [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4188992529956ca06b22389dc4aadf1cc6ff6b7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de0a8c6ab744f668d65c3bc5b1a1775fedfef80c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239172"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) のクエリ
   SQL 実行タスク、OLE DB ソース、OLE DB 変換先、および参照変換では、SQL クエリを使用できます。 SQL 実行タスクでは、SQL ステートメントによってデータベース オブジェクトとデータを作成、更新、および削除したり、ストアド プロシージャを実行したり、SELECT ステートメントを実行したりすることができます。 OLE DB ソースと参照変換の場合、通常 SQL ステートメントは SELECT ステートメントまたは EXEC ステートメントです。 EXEC ステートメントで最もよく実行するのは、結果セットを返すストアド プロシージャです。  

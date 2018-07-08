@@ -1,5 +1,5 @@
 ---
-title: あいまいグループ化変換エディター (接続マネージャー タブ) |Microsoft ドキュメント
+title: あいまいグループ化変換エディター ([接続マネージャー] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.connection.f1
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 47b1446d-5331-473c-9cb5-a98b1f55bf5f
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b3327aa60445bf3cb75d43d04652566cb886e331
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05c4af52fa196fe0c779ab3cef3be67d769b9616
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164813"
 ---
 # <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>[あいまいグループ化変換エディター] ([接続マネージャー] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[接続マネージャー]** タブを使用すると、既存の接続を選択したり新しい接続を作成したりできます。  

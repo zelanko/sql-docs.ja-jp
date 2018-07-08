@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.maintenancecleanuptask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3ecc07ac348eadb720663307c8ff97aa6da23aa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3ffc1a2d858525c9247ad06e4bbbe0887afeb9b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153163"
 ---
 # <a name="maintenance-cleanup-task"></a>メンテナンス クリーンアップ タスク
   メンテナンス クリーンアップ タスクでは、データベース バックアップ ファイルや、メンテナンス プランによって作成されたレポートなど、メンテナンス プランに関連するファイルを削除します。 詳細については、「 [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md) 」および「 [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」を参照してください。  

@@ -1,13 +1,11 @@
 ---
-title: 実行 (RPC 構文を使用して) ストアド プロシージャとプロセスのリターン コードと出力パラメーター (OLE DB) |Microsoft ドキュメント
+title: ストアド プロシージャ (RPC 構文を使用) とプロセスのリターン コードと出力パラメーター (OLE DB) の実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,21 +13,21 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4c0419c0b3f0ceab2756e97c473a2d51c7ade5f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3bffe276292dc64731e6114df52b6dd0317fb04a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072767"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408201"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>RPC 構文を使用したストアド プロシージャの実行と、リターン コードおよび出力パラメーターの処理 (OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドが複数の結果を返す場合は、`IMultipleResults::GetResult` が DB_S_NORESULT を返すとき、または `IMultipleResults` インターフェイスが完全に解放されるとき、いずれか早いほうの時点で、出力パラメーター データを使用できるようになります。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合、それらを暗号化する必要があります、 [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)です。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合、それらを暗号化する必要があります、 [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)します。  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>リターン コードと出力パラメーターを処理するには  
   
@@ -37,7 +35,7 @@ ms.locfileid: "36072767"
   
 2.  `ICommandWithParameters::SetParameterInfo` メソッドを呼び出し、パラメーターをプロバイダーに示します。 PARAMBINDINFO 構造体の配列にパラメーター情報を格納します。  
   
-3.  セットを作成する DBBINDING 構造体の配列を使用して、バインド (各パラメーター マーカーに 1 つ)。  
+3.  セットを作成 DBBINDING 構造体の配列を使用して、バインド (各パラメーター マーカーに 1 つ)。  
   
 4.  `IAccessor::CreateAccessor` メソッドを使用して、定義済みパラメーターのアクセサーを作成します。 アクセサーは、一連のバインドから `CreateAccessor` によって作成されます。  
   
@@ -52,11 +50,11 @@ ms.locfileid: "36072767"
 ## <a name="example"></a>例  
  次の例は、行セット、リターン コード、および出力パラメーターの処理を示しています。 結果セットは処理されません。 このサンプルは IA64 ではサポートされていません。  
   
- このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページです。  
+ このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページ。  
   
  1 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するストアド プロシージャを作成します。  
   
- ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムをする必要があります変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス。 名前付きインスタンスに接続する場合から、接続文字列を変更する"かに\\\name"という名前付きインスタンス。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。  
+ ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 Windows オペレーティング システムによっては、必要がありますを変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス。 を名前付きインスタンスに接続するから、接続文字列を変更"するか\\\name"名は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用したストアド プロシージャを削除します。  
   
@@ -399,6 +397,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [結果を処理方法に関するトピック&#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [結果の操作方法に関するトピックを処理&#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

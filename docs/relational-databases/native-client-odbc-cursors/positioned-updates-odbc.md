@@ -1,12 +1,12 @@
 ---
-title: 位置指定更新 (ODBC) |Microsoft ドキュメント
+title: 位置指定更新 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d09736a888a124442f69f672ebdf0c5dfd44ad2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 763f63a7b5da1e962cf5edf36abd905ca69c33a9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695513"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412650"
 ---
 # <a name="positioned-updates-odbc"></a>位置指定更新 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "35695513"
   
 -   WHERE CURRENT OF 句  
   
- 一般的な方法は、使用する**SQLSetPos**です。 次のオプションがあります。  
+ 一般的な方法は、使用する**SQLSetPos**します。 次のオプションがあります。  
   
  SQL_POSITION  
  現在の行セットの特定行にカーソルを位置付けます。  
@@ -54,35 +54,35 @@ ms.locfileid: "35695513"
  SQL_DELETE  
  カーソルの現在行を削除します。  
   
- **SQLSetPos**設定サーバー カーソルを使用して、ステートメント ハンドル カーソル属性が設定されている任意のステートメントの結果で使用できます。 結果セットの列を、プログラム変数にバインドする必要があります。 アプリケーションは行のフェッチとすぐに呼び出して**SQLSetPos**(SQL_POSTION) に、行にカーソルを移動します。 その後、アプリケーションは SQLSetPos(SQL_DELETE) を呼び出して現在行を削除するか、新しいデータ値をバインドされているプログラム変数に移動し、SQLSetPos(SQL_UPDATE) を呼び出して現在行を更新します。  
+ **SQLSetPos**設定、サーバー カーソルを使用して、ステートメント ハンドル カーソル属性が設定されている場合、ステートメントの結果で使用できます。 結果セットの列を、プログラム変数にバインドする必要があります。 アプリケーションは行のフェッチとすぐに呼び出して**SQLSetPos**(SQL_POSTION) を行にカーソルを位置付けます。 その後、アプリケーションは SQLSetPos(SQL_DELETE) を呼び出して現在行を削除するか、新しいデータ値をバインドされているプログラム変数に移動し、SQLSetPos(SQL_UPDATE) を呼び出して現在行を更新します。  
   
- アプリケーションの更新または削除を含む行セットの任意の行**SQLSetPos**です。 呼び出す**SQLSetPos**便利な代替手段を作成して SQL ステートメントを実行します。 **SQLSetPos**現在の行セットに対して演算を行いへの呼び出し後にのみ使用できます[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)です。  
+ アプリケーションの更新または削除を含む行セットの任意の行**SQLSetPos**します。 呼び出す**SQLSetPos**を構築して、SQL ステートメントの実行に代わる便利な方法です。 **SQLSetPos**は現在の行セットを操作しへの呼び出し後にのみ使用することができます[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)します。  
   
- 行セットのサイズの設定への呼び出しによって[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)属性引数 sql_attr_row_array_size を指定します。 **SQLSetPos**しか呼び出しの後に、新しい行セットのサイズを使用して**SQLFetch**または**SQLFetchScroll**です。 たとえば、行セットのサイズを変更すると、 **SQLSetPos**が呼び出されたし、 **SQLFetch**または**SQLFetchScroll**と呼びます。 呼び出し**SQLSetPos**前の行セット サイズを使用してが**SQLFetch**または**SQLFetchScroll**で新しい行セット サイズを使用します。  
+ 呼び出して行セットのサイズが設定されて[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)属性引数 sql_attr_row_array_size を指定します。 **SQLSetPos**への呼び出し後にのみ、新しい行セットのサイズを使用して**SQLFetch**または**SQLFetchScroll**します。 たとえば、次の行セットのサイズを変更すると、 **SQLSetPos**が呼び出され、 **SQLFetch**または**SQLFetchScroll**が呼び出されます。 呼び出し**SQLSetPos**古いの行セット サイズが使用されますが、 **SQLFetch**または**SQLFetchScroll**新しい行セット サイズが使用されます。  
   
- 行セット内の先頭行の行番号は 1 です。 RowNumber 引数**SQLSetPos** ; 行セット内の行を識別する必要がありますは、その値は、1 から最後にフェッチした行の数までの間でなければなりません。 この値には、行セット サイズよりも小さい値を指定できます。 RowNumber が 0 の場合、操作は行セット内のすべての行に適用されます。  
+ 行セット内の先頭行の行番号は 1 です。 引数には、RowNumber **SQLSetPos**行セット内の行を識別する必要がありますは、その値が 1 から最後にフェッチされた行の数の範囲である必要があります。 この値には、行セット サイズよりも小さい値を指定できます。 RowNumber が 0 の場合、操作は行セット内のすべての行に適用されます。  
   
- 削除操作**SQLSetPos**ようにデータ ソース テーブルの 1 つまたは複数の選択した行を削除します。 行を削除する**SQLSetPos**、アプリケーション呼び出し**SQLSetPos** Operation に SQL_DELETE、RowNumber、行の数を設定を削除するとします。 RowNumber が 0 の場合は、行セット内のすべての行が削除されます。  
+ 削除操作の**SQLSetPos**データ ソースのテーブルの 1 つまたは複数の選択した行を削除します。 行を削除する**SQLSetPos**、アプリケーション呼び出し**SQLSetPos** Operation に SQL_DELETE、RowNumber は、行の数を設定を削除するとします。 RowNumber が 0 の場合は、行セット内のすべての行が削除されます。  
   
- 後に**SQLSetPos**削除された行は、現在の行とその状態は SQL_ROW_DELETED を返します。 呼び出しなど、追加の位置指定操作で、行は使用できません[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)または**SQLSetPos**です。  
+ 後**SQLSetPos**削除された行は、現在の行とその状態は SQL_ROW_DELETED を返します。 呼び出しなど、追加の位置指定操作で、行は使用できません[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)または**SQLSetPos**します。  
   
- (RowNumber が 0 に等しい)、行セットのすべての行を削除すると、アプリケーションが使用できなくドライバーの更新操作のと同じように、行操作配列を使用して、特定の行を削除する**SQLSetPos**です。  
+ アプリケーションがからの更新操作と同じように、行操作配列を使用して、特定の行を削除するドライバーを防ぐことができます (RowNumber が 0 に等しい)、行セットのすべての行を削除すると**SQLSetPos**します。  
   
  削除対象の各行は、行セット内に存在する行でなければなりません。 フェッチによってアプリケーション バッファーが設定され、行の状態配列が維持されている場合は、これら各行位置の行の状態値が SQL_ROW_DELETED、SQL_ROW_ERROR、または SQL_ROW_NOROW であってはなりません。  
   
- 位置指定更新は、UPDATE、DELETE、および INSERT の各ステートメントに WHERE CURRENT OF 句を使用することによっても実行できます。 ときに生成されますで現在のカーソル名 ODBC が必要な[SQLGetCursorName](../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)関数が呼び出されると、または呼び出すことで指定できる**SQLSetCursorName**です。 次に、ODBC アプリケーションで WHERE CURRENT OF 更新の実行に使用する一般的な手順を示します。  
+ 位置指定更新は、UPDATE、DELETE、および INSERT の各ステートメントに WHERE CURRENT OF 句を使用することによっても実行できます。 ときに生成、現在のカーソル名 ODBC が必要です、 [SQLGetCursorName](../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)関数が呼び出されると、または呼び出すことで指定できる**SQLSetCursorName**します。 次に、ODBC アプリケーションで WHERE CURRENT OF 更新の実行に使用する一般的な手順を示します。  
   
 -   呼び出す**SQLSetCursorName**ステートメント ハンドルのカーソル名を確立するためにします。  
   
 -   FOR UPDATE OF 句を指定した SELECT ステートメントを作成し、実行します。  
   
--   呼び出す**SQLFetchScroll**を行セットを取得または**SQLFetch**行を取得します。  
+-   呼び出す**SQLFetchScroll**行セットを取得するまたは**SQLFetch**行を取得します。  
   
--   呼び出す**SQLSetPos** (SQL_POSITION) に、行にカーソルを移動します。  
+-   呼び出す**SQLSetPos** (sql_position) を呼び出して、行にカーソルを位置付けます。  
   
--   ビルドおよび設定カーソル名を使用して WHERE CURRENT OF 句を使用して、UPDATE ステートメントを実行**SQLSetCursorName**です。  
+-   ビルドおよび設定でカーソル名を使用して WHERE CURRENT OF 句を使用した UPDATE ステートメントを実行**SQLSetCursorName**します。  
   
- 呼び出すことも、 **SQLGetCursorName**呼び出す代わりに、SELECT ステートメントを実行した後**SQLSetCursorName** SELECT ステートメントを実行する前にします。 **SQLGetCursorName**を使用してカーソル名を設定しない場合は、ODBC によって割り当てられた既定のカーソル名を返します**SQLSetCursorName**です。  
+ 代わりに、呼び出すことができます**SQLGetCursorName**呼び出す代わりに、SELECT ステートメントの実行後**SQLSetCursorName** SELECT ステートメントを実行する前にします。 **SQLGetCursorName**を使用してカーソル名を設定しない場合は、ODBC によって割り当てられた既定のカーソル名を返します**SQLSetCursorName**します。  
   
  **SQLSetPos**をお勧め WHERE CURRENT OF 経由でサーバー カーソルを使用しているときにします。 ODBC カーソル ライブラリで静的で更新可能なカーソルを使用している場合、カーソル ライブラリは、基になるテーブルのキー値を指定した WHERE 句を追加することで、WHERE CURRENT OF 更新を実装します。 テーブル内のキーが一意でない場合、意図しない更新が行われることがあります。  
   

@@ -1,5 +1,5 @@
 ---
-title: Source 要素 (XMLA) |Microsoft ドキュメント
+title: Source 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 4d4665ae-e20f-4baf-ab0f-848660caf500
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481b5c755b24c6bb8ae03e58b43759b4dce4e39a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 55123ac3a84cc42780550876f407e8eed11e4f18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182959"
 ---
 # <a name="source-element-xmla"></a>Source 要素 (XMLA)
-  実行時のマージ元のパーティションを表す、 [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)コマンド。  
+  中にマージする基になるパーティションを表す、 [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)コマンド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36074932"
 ```  
   
 ## <a name="see-also"></a>参照  
- [要素をターゲット&#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)   
+ [Target 要素&#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)   
  [プロパティ&#40;XMLA&#41;](xml-elements-properties.md)  
   
   

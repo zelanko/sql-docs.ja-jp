@@ -1,5 +1,5 @@
 ---
-title: プロジェクトのプロパティ (SSAS テーブル) |Microsoft ドキュメント
+title: プロジェクトのプロパティ (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.depservconfig.f1
 - sql12.asvs.bidtoolset.semmodelprojprop.f1
 ms.assetid: 333c1fc0-361c-415a-bd68-4e057f67bcb7
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d1e60f7a649b15fbcfd91300b05465d314a6fba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d8d8371d2dedf54b82475c2cc6ed5adcfd9b1891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278018"
 ---
 # <a name="project-properties-ssas-tabular"></a>Project Properties (SSAS Tabular)
   このトピックでは、モデル プロジェクト プロパティについて説明します。 各テーブル モデル プロジェクトには、プロジェクトとモデルの配置方法を指定する配置オプションおよび配置サーバーのプロパティがあります。 たとえば、モデルの配置先のサーバーや配置されるモデル データベースの名前です。 これらの設定は、モデル プロパティとは異なります。モデル プロパティは、モデル ワークスペース データベースに対する設定です。 ここで説明するプロジェクト プロパティは、他の種類のプロパティを表示するために使用されるプロパティ ウィンドウとは異なり、モーダル プロパティ ダイアログ ボックスに表示されます。 モーダル プロジェクト プロパティを表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の **ソリューション エクスプローラー**で、プロジェクトを右クリックして、 **[プロパティ]** をクリックします。  
