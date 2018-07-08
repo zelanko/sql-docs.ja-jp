@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
 - SQL10.REP.CONFIGWEBSYNCWIZARD.CLIENTAUTH.F1
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 caps.latest.revision: 73
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3d2baa3c79d4d3915ad3cae1032c7c7df94a7ccd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0f1e6f26bd99827a79140cfb0a14ed9049b82ab7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184159"
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マージ レプリケーションの Web 同期オプションを使用すると、インターネット経由で HTTPS プロトコルを使用してデータをレプリケートできます。 Web 同期を使用するには、最初に次の構成操作を実行する必要があります。  
@@ -128,7 +128,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
 -   大量のデータをレプリケートする場合に、マージ エージェントのバッチ サイズの調整が必要になることがあります。  
   
- マージ レプリケーションのバッチ サイズは、アーティクルごとの変更のコレクションである *生成結果*で示されます。 使用して、バッチ内の生成結果の数が指定されて、–`DownloadGenerationsPerBatch`と –`UploadGenerationsPerBatch`マージ エージェントのパラメーターです。 詳細については、「 [Replication Merge Agent](agents/replication-merge-agent.md)」を参照してください。  
+ マージ レプリケーションのバッチ サイズは、アーティクルごとの変更のコレクションである *生成結果*で示されます。 使用して、バッチ内の生成結果の数が指定されて –`DownloadGenerationsPerBatch`と –`UploadGenerationsPerBatch`マージ エージェントのパラメーター。 詳細については、「 [Replication Merge Agent](agents/replication-merge-agent.md)」を参照してください。  
   
  大量のデータを扱う場合は、バッチ処理の各パラメーターに小さい数を指定します。 最初は値を 10 にして、アプリケーションのニーズとパフォーマンスに応じて調整することをお勧めします。 通常、これらのパラメーターは、エージェント プロファイルで指定します。 プロファイルの詳細については、「 [Replication Agent Profiles](agents/replication-agent-profiles.md)」を参照してください。  
   

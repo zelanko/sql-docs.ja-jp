@@ -5,24 +5,23 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 80edfc2a5a5d480b6d7acbc88d030881fb0e2e82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a57ba4393c23920b98a407176de51034715a54c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229602"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループ用のレプリケーションの構成 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でのレプリケーションおよび AlwaysOn 可用性グループの構成には、7 つのステップが必要です。 各ステップの詳細については、以下のセクションで説明します。  
@@ -74,7 +73,7 @@ ms.locfileid: "36073310"
   
  **元のパブリッシャーでのパブリッシャーの構成**  
   
-1.  リモート ディストリビューションを構成します。 パブリッシャーを構成するには、ストアド プロシージャを使用している場合、実行`sp_adddistributor`です。 同じ値を指定して*@password*ときに使用するよう`sp_adddistrbutor`が実行された、ディストリビューターのディストリビューションを設定します。  
+1.  リモート ディストリビューションを構成します。 実行の場合は、パブリッシャーを構成するストアド プロシージャを使用、`sp_adddistributor`します。 同じ値を指定*@password*とき`sp_adddistrbutor`が実行された、ディストリビューターでディストリビューションを設定します。  
   
     ```  
     exec sys.sp_adddistributor  
@@ -82,7 +81,7 @@ ms.locfileid: "36073310"
         @password = 'MyDistPass'  
     ```  
   
-2.  データベースでレプリケーションを有効にします。 パブリッシャーを構成するには、ストアド プロシージャを使用している場合、実行`sp_replicationdboption`です。 データベースに対してトランザクション レプリケーションとマージ レプリケーションの両方を構成する場合は、それぞれを有効にする必要があります。  
+2.  データベースでレプリケーションを有効にします。 実行の場合は、パブリッシャーを構成するストアド プロシージャを使用、`sp_replicationdboption`します。 データベースに対してトランザクション レプリケーションとマージ レプリケーションの両方を構成する場合は、それぞれを有効にする必要があります。  
   
     ```  
     USE master;  
@@ -137,7 +136,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- セカンダリ レプリカの各ホストで、ディストリビューションを構成します。 リモート ディストリビューターには、元のパブリッシャーのディストリビューターを指定します。 ときに使用するように同じパスワードを使用して`sp_adddistributor`ディストリビューターで最初に実行されました。 ストアド プロシージャは、ディストリビューションの構成を使用している場合、 *@password*のパラメーター`sp_adddistributor`パスワードを指定するために使用します。  
+ セカンダリ レプリカの各ホストで、ディストリビューションを構成します。 リモート ディストリビューターには、元のパブリッシャーのディストリビューターを指定します。 同じパスワードを使用するときと`sp_adddistributor`ディストリビューターで最初に実行されました。 ディストリビューションの構成ストアド プロシージャを使用する場合、 *@password*パラメーターの`sp_adddistributor`パスワードを指定するために使用します。  
   
 ```  
 EXEC sp_adddistributor   
@@ -145,7 +144,7 @@ EXEC sp_adddistributor
     @password = '**Strong password for distributor**';  
 ```  
   
- セカンダリ レプリカの各ホストで、データベースのパブリケーションのプッシュ サブスクライバーがリンク サーバーとして表示されることを確認します。 使用してリモート パブリッシャーを構成するには、ストアド プロシージャを使用している場合、`sp_addlinkedserver`サブスクライバーを追加 (まだ存在しない場合)、パブリッシャーにリンク サーバーとしてにします。  
+ セカンダリ レプリカの各ホストで、データベースのパブリケーションのプッシュ サブスクライバーがリンク サーバーとして表示されることを確認します。 使用してリモート パブリッシャーを構成するには、ストアド プロシージャを使用されているが場合、`sp_addlinkedserver`にサブスクライバーを追加 (まだ存在しない場合)、パブリッシャーにリンク サーバーとして。  
   
 ```  
 EXEC sys.sp_addlinkedserver   
@@ -177,14 +176,14 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
     @redirected_publisher = @redirected_publisher output;  
 ```  
   
- ストアド プロシージャ `sp_validate_replica_hosts_as_publishers` は、可用性グループ レプリカの各ホストで、可用性グループに関する情報をクエリするための十分な権限を持つログインから実行する必要があります。 異なり`sp_validate_redirected_publisher`、呼び出し元の資格情報を使用し、可用性グループ レプリカへの接続に msdb.dbo.MSdistpublishers に保持されているログインを使用しません。  
+ ストアド プロシージャ `sp_validate_replica_hosts_as_publishers` は、可用性グループ レプリカの各ホストで、可用性グループに関する情報をクエリするための十分な権限を持つログインから実行する必要があります。 異なり`sp_validate_redirected_publisher`、呼び出し元の資格情報を使用し、可用性グループ レプリカに接続する msdb.dbo.MSdistpublishers に保持されているログインを使用しません。  
   
 > [!NOTE]  
->  `sp_validate_replica_hosts_as_publishers` 読み取り、読み取りアクセスを許可または必要としない、セカンダリ レプリカのホストの検証を指定する目的とした、次のエラーで失敗します。  
+>  `sp_validate_replica_hosts_as_publishers` 読み取りを読み取りアクセスを許可または必要としない、セカンダリ レプリカのホストの検証を指定する目的は、次のエラーで失敗します。  
 >   
 >  メッセージ 21899、レベル 11、状態 1、プロシージャ `sp_hadr_verify_subscribers_at_publisher`、行 109  
 >   
->  元のパブリッシャー 'MyOriginalPublisher' のサブスクライバーの sysserver エントリがあるかどうかを判断するために、リダイレクトされたパブリッシャー 'MyReplicaHostName' で実行したクエリが、エラー '976'、エラー メッセージ 'エラー 976、レベル 14、状態 1、メッセージ: 対象になるデータベース 'MyPublishedDB' は可用性グループに参加しているため、現在クエリでアクセスできません。 データ移動が中断されているか、可用性レプリカの読み取りアクセスが有効になっていません。 このデータベースや可用性グループの他のデータベースへの読み取り専用アクセスを許可するには、グループの 1 つ以上のセカンダリ可用性レプリカへの読み取りアクセスを有効にします。  詳細については、次を参照してください。、`ALTER AVAILABILITY GROUP`ステートメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オンライン ブック。 ' です。  
+>  元のパブリッシャー 'MyOriginalPublisher' のサブスクライバーの sysserver エントリがあるかどうかを判断するために、リダイレクトされたパブリッシャー 'MyReplicaHostName' で実行したクエリが、エラー '976'、エラー メッセージ 'エラー 976、レベル 14、状態 1、メッセージ: 対象になるデータベース 'MyPublishedDB' は可用性グループに参加しているため、現在クエリでアクセスできません。 データ移動が中断されているか、可用性レプリカの読み取りアクセスが有効になっていません。 このデータベースや可用性グループの他のデータベースへの読み取り専用アクセスを許可するには、グループの 1 つ以上のセカンダリ可用性レプリカへの読み取りアクセスを有効にします。  詳細については、次を参照してください。、`ALTER AVAILABILITY GROUP`ステートメント[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オンライン ブックの「します。 '。  
 >   
 >  レプリカ ホスト 'MyReplicaHostName' について、1 つまたは複数のパブリッシャー検証エラーが発生しました。  
   
@@ -225,7 +224,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 -   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [前提条件、制限事項、および AlwaysOn 可用性グループに関する推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループ: 相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server のレプリケーション](../../../relational-databases/replication/sql-server-replication.md)  

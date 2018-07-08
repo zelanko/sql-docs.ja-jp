@@ -1,12 +1,12 @@
 ---
-title: FILESTREAM の ICommandText にバインドされた ISequentialStream にデータを送信 |Microsoft ドキュメント
+title: FILESTREAM - ICommandText にバインドされた ISequentialStream へのデータの送信 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
@@ -15,25 +15,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ca97db5a6e2c4b425cde61375f641082b582d4d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e15ea6d968aef52c41c325bebfc6898f28050050
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698433"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407623"
 ---
-# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>FILESTREAM の ICommandText にバインドされた ISequentialStream にデータを送信します。
+# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>FILESTREAM - ICommandText にバインドされた ISequentialStream にデータを送信します。
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   このサンプルでは、ICommandText パラメーターにバインドされた ISequentialStream インターフェイスを使用して、4 MB ～ 4 GB のデータを filestream 列に送ります。  
   
- Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)です。  
+ Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)します。  
   
 ## <a name="example"></a>例  
  コンパイルして、このサンプルを実行する前に、FILESTREAM のサポートを有効にする ([Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
- INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。  
+ INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
  サーバーには、データベースの作成場所として、C:\DBFsa という名前のディレクトリが存在している必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスには、この場所への書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "35698433"
   
  Compile ICommandUpload.cpp、ISSHelper.cpp、ole32.lib、および oleaut32.lib をコンパイルします。  
   
- 渡す際にこのサンプルを実行する必要があります、サーバーまたはに加えて、値の名前を 4 MB (0x400001) の間と 4 GB (0 xffffffff) データの量を示す記述にします。  
+ このサンプルを実行すると、する必要がありますに合格すると、サーバー、またはの server \instance_name 値の名前を 4 MB (0x400001) 間と 4 GB (0 xffffffff) データの量を示す記述にします。  
   
  4 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストは、このサンプルで作成したデータベースを削除します。  
   

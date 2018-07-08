@@ -1,12 +1,12 @@
 ---
-title: '方法: Geography 列 (ODBC) に行を挿入 |Microsoft ドキュメント'
+title: '方法: 行を挿入 Geography 列 (ODBC) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85f5f086ba32b3056017d0559bb1d5b164f63510
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: cb2de1b6b4b44fd80f50cacd2431f56fc6e1033e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697619"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416851"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Geography 列に行を挿入する方法 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "35697619"
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 空間ストレージの詳細については、次を参照してください。[空間データ&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)です。  
+ 空間ストレージの詳細については、次を参照してください。[空間データ&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)します。  
   
 ## <a name="example"></a>例  
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用するテーブルを作成します。  
   
- odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。  
+ odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   

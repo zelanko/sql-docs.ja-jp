@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - relationships staging table [Master Data Services]
 - database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c5d37385494fc4853f47ec8e1fe883d3ff00f0e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 38b92d05a119af10a3c6c2e464b745b8fb26b197
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229332"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>リレーションシップ ステージング テーブル (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのリレーションシップ ステージング テーブル (stg.name_Relationship) を使用して、メンバーが相互に保持するリレーションシップに基づいて、明示的階層におけるメンバーの位置を変更します。  
@@ -44,9 +44,9 @@ ms.locfileid: "36070515"
 |**ErrorCode**|エラー コードを表示します。 **ImportStatus_ID** が **2** のすべてのレコードについては、「[ステージング処理のエラー (マスター データ サービス)](staging-process-errors-master-data-services.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [ステージング処理を使用した明示的階層メンバーの移動&#40;マスター データ サービス&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [ステージング処理を使用して明示的階層メンバーの移動&#40;マスター データ サービス&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
  [データのインポート&#40;マスター データ サービス&#41;](overview-importing-data-from-tables-master-data-services.md)   
- [ステージング処理中に発生したエラーを表示する&#40;マスター データ サービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
- [ステージング プロセス エラー&#40;マスター データ サービス&#41;](staging-process-errors-master-data-services.md)  
+ [ステージング処理中に発生するエラーを表示する&#40;マスター データ サービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
+ [ステージング処理のエラー&#40;マスター データ サービス&#41;](staging-process-errors-master-data-services.md)  
   
   

@@ -1,12 +1,12 @@
 ---
-title: ステートメントのパラメーターを使用して |Microsoft ドキュメント
+title: ステートメント パラメーターの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7741fc9a8b4de583055a5afccb0bc31d54b50406
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b2533a645d18fbcfc14408c1a22b14f32641bd4b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698503"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418821"
 ---
 # <a name="using-statement-parameters"></a>ステートメント パラメーターの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "35698503"
   
 -   管理**テキスト**、 **ntext**、および**イメージ**データと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定の C データ型。  
   
- たとえば、**パーツ**という名前の列がテーブルに**PartID**、**説明**、および**価格**です。 パラメーターを使用しないで部品を追加するには、次のような SQL ステートメントを構築する必要があります。  
+ たとえば、**パーツ**という名前の列がテーブルに**PartID**、**説明**と**価格**します。 パラメーターを使用しないで部品を追加するには、次のような SQL ステートメントを構築する必要があります。  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -62,6 +62,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [パラメーターのバインド](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>参照  
- [クエリを実行する&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [クエリの実行&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

@@ -1,12 +1,12 @@
 ---
-title: ODBC API による機能強化された日付と時刻のサポート |Microsoft ドキュメント
+title: ODBC API のサポート強化された日付と時刻の機能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 07ef0cb40b22cbe7074bdb019a94f7fdd3c24043
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8d0af32dfed87da7c0c1e23044a5031a26b979fe
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696363"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429671"
 ---
-# <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>ODBC API による機能強化された日付と時刻のサポート
+# <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>ODBC API のサポート強化された日付と時刻の機能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

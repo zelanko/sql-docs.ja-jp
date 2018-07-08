@@ -1,12 +1,12 @@
 ---
-title: Blob と OLE オブジェクト |Microsoft ドキュメント
+title: Blob と OLE オブジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,26 +20,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f04ce9d13aa9587521b7a1bb38da6cee8e1674a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 80629d81a9212801e65e272f5790b0cc57a11103
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697153"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428741"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB と OLE オブジェクト
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを公開、 **ISequentialStream**コンシューマーへのアクセスをサポートするインターフェイス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**、**テキスト**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、および xml データ型とバイナリ ラージ オブジェクト (Blob). **読み取り**メソッド**ISequentialStream**コンシューマーが扱いやすい単位で多くのデータを取得することができます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **ISequentialStream**コンシューマーへのアクセスをサポートするインターフェイス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**、**テキスト**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、し、xml データ型とバイナリ ラージ オブジェクト (Blob). **読み取り**メソッド**ISequentialStream**コンシューマーを管理しやすいチャンクで大量のデータを取得することができます。  
   
- この機能を示すサンプルについては、次を参照してください。[大量のデータを設定&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)です。  
+ この機能を示すサンプルについては、次を参照してください。[大量のデータを設定&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンシューマーに実装された Native Client OLE DB プロバイダーを使用して**IStorage**データ変更のため、コンシューマーはアクセサーのインターフェイス ポインターを提供するときのインターフェイスがバインドされています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用してコンシューマーに実装された**IStorage**データ変更のため、コンシューマーはアクセサーにインターフェイス ポインターを提供するときのインターフェイスにバインドされています。  
   
- 大きな値データ型、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーで型の想定サイズをチェック**IRowset**や DDL インターフェイスです。 持つ列**varchar**、 **nvarchar**、および**varbinary**最大サイズが無制限に設定したデータ型がスキーマ行セットおよびインターフェイスを通じて ISLONG として表されます列のデータ型を取得します。  
+ 大きな値のデータ型、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが型での想定サイズのチェック**IRowset**や DDL インターフェイス。 持つ列**varchar**、 **nvarchar**、および**varbinary**最大サイズが無制限に設定を持つデータ型は、スキーマ行セットとのインターフェイスを通じて ISLONG と表されます列のデータ型を返します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを公開、 **varchar (max)**、 **varbinary (max)** と**nvarchar (max)** 型 DBTYPE_STR、DBTYPE_BYTES と dbtype _ としてWSTR それぞれします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **varchar (max)**、 **varbinary (max)** と**nvarchar (max)** 型 DBTYPE_STR、DBTYPE_BYTES、および DBTYPE_ としてWSTR それぞれします。  
   
  アプリケーションではこれらの型を使用するには、次のオプションがあります。  
   
@@ -49,17 +49,17 @@ ms.locfileid: "35697153"
   
 -   DBTYPE_IUNKNOWN としてバインドし、ストリーミングを使用します。  
   
- DBTYPE_IUNKNOWN にバインドすると、ISequentialStream ストリーム機能が使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、DBTYPE_IUNKNOWN をストアド プロシージャがこれらのデータを返すシナリオを容易にする大きな値データ型は、DBTYPE_IUNKNOWN として戻り値として公開されるを型としてバインドの出力パラメーターをサポートしていますクライアントです。  
+ DBTYPE_IUNKNOWN にバインドすると、ISequentialStream ストリーム機能が使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、DBTYPE_IUNKNOWN をストアド プロシージャがこれらのデータを返すシナリオを容易にする大きな値データ型の DBTYPE_IUNKNOWN として公開される戻り値の型として、出力パラメーターのバインドをサポートしていますクライアント。  
   
 ## <a name="storage-object-limitations"></a>ストレージ オブジェクトの制限事項  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、単一の開いているストレージ オブジェクトのみをサポートできます。 1 つ以上のストレージ オブジェクトを開こうとすると (1 つ以上の参照を取得する**ISequentialStream**インターフェイス ポインター) DBSTATUS_E_CANTCREATE が返されます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、1 つ開いているストレージ オブジェクトのみをサポートできます。 1 つ以上のストレージ オブジェクトを開こうとすると (1 つ以上の参照を取得する**ISequentialStream**インターフェイス ポインター) DBSTATUS_E_CANTCREATE が返されます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー、DBPROP_BLOCKINGSTORAGEOBJECTS の読み取り専用プロパティの既定値は VARIANT_TRUE です。 この値は、ストレージ オブジェクトがアクティブである場合に、(ストレージ オブジェクト以外の) 一部のメソッドが失敗して E_UNEXPECTED が返されることを示します。  
   
--   コンシューマーに実装されたストレージ オブジェクトによって提示されるデータの長さが正常に行う必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのストレージ オブジェクトを参照する行アクセサーの作成時にします。 コンシューマー側では、アクセサーの作成に使用する DBBINDING 構造体に長さのインジケーターをバインドする必要があります。  
+-   記憶域のコンシューマーに実装されたオブジェクトによって表示されるデータの長さが正常に行う必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのストレージ オブジェクトを参照する行アクセサーの作成時にします。 コンシューマー側では、アクセサーの作成に使用する DBBINDING 構造体に長さのインジケーターをバインドする必要があります。  
   
--   コンシューマーを 1 つの大きなデータ値を超える行が含まれています、DBPROP_ACCESSORDER が DBPROPVAL_AO_RANDOM ではない場合は、いずれかを使用する必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー カーソルでサポートされている行セットを行のデータを取得またはすべての大量のデータを処理する前に値をその他の行の値を取得しています。 DBPROP_ACCESSORDER が DBPROPVAL_AO_RANDOM の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、任意の順序でアクセスできるように、バイナリ ラージ オブジェクト (Blob) としてすべての xml データ型をキャッシュします。  
+-   コンシューマーを 1 つの大きなデータ値を超える行が含まれています、DBPROP_ACCESSORDER が DBPROPVAL_AO_RANDOM ではない場合は、いずれかを使用する必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー カーソルでサポートされている行セットを行のデータを取得またはすべての大きなデータを処理する前に値をその他の行の値を取得しています。 DBPROP_ACCESSORDER が DBPROPVAL_AO_RANDOM の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、任意の順序でアクセスできるようにバイナリ ラージ オブジェクト (Blob) として、すべての xml データ型をキャッシュします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

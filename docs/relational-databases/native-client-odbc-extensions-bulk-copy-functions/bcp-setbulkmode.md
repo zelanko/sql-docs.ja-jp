@@ -1,12 +1,12 @@
 ---
-title: bcp_setbulkmode |Microsoft ドキュメント
+title: bcp_setbulkmode |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc5e54ef357214a3121c1a7ed964c9ee9bf5955b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: f60428506e4581cbb04bee8522748aba38d2716b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703583"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432711"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,26 +67,26 @@ RETCODE bcp_setbulkmode (
  SUCCEED または FAIL を返します。  
   
 ## <a name="remarks"></a>コメント  
- bcp_setbulkmode は、クエリまたはテーブルの一括コピー出力を使用できます。 Bcp_setbulkmode 使用すると、クエリ ステートメントの一括コピーには、BCP_HINT を bcp_control を呼び出す前に呼び出す必要があります。  
+ bcp_setbulkmode は、一括コピー出力、クエリまたはテーブルのいずれかを使用できます。 Bcp_setbulkmode はクエリ ステートメントの一括コピーに使用する場合は、BCP_HINT を bcp_control を呼び出す前に呼び出す必要があります。  
   
- bcp_setbulkmode が使用する代わりに[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)と[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)、のみ関数呼び出しごとに 1 列の形式を指定することができます。  
+ bcp_setbulkmode が使用する代わりに[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)と[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)、のみ関数呼び出しごとに 1 つの列の形式を指定できます。  
   
  次の表に、定数を*プロパティ*パラメーター。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP で – c オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLCHARACTER**です。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の – w オプションに対応します。EXE およびで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**です。|  
-|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP の – N オプションに対応します。EXE およびで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**列のデータ型が文字列 (既定値文字列でない場合)。|  
-|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP の – n オプションに対応します。EXE およびで bcp_setcolfmt **BCP_FMT_TYPE**プロパティを既定値に設定します。|  
+|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP で – c オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLCHARACTER**します。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の – w オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**します。|  
+|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP の – N オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティに設定**SQLNCHAR**列の型が文字列 (既定文字列でない場合) の場合。|  
+|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP の – n オプションに対応します。EXE とで bcp_setcolfmt **BCP_FMT_TYPE**プロパティが既定値に設定します。|  
   
- Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスでは、bcp_setbulkmode を使用する必要があります。 たとえば、bcp_control(BCPTEXTFILE) と bcp_setbulkmode をいない呼び出す必要があります。  
+ Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスでは、bcp_setbulkmode を使用しないでください。 たとえば、bcp_control(BCPTEXTFILE) と bcp_setbulkmode をしない呼び出す必要があります。  
   
  Bcp_setbulkmode と競合しない bcp_control オプションについては、bcp_control と bcp_setbulkmode を呼び出すことができます。 たとえば、bcp_control(BCPFIRST) と bcp_setbulkmode を呼び出すことができます。  
   
- Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスを持つ bcp_setbulkmode を呼び出すしようとする場合は、シーケンス エラーが関数呼び出しのいずれかが戻ります。 エラーを解決することを選択する場合は、すべての設定をリセットして最初からやり直す bcp_init を呼び出します。  
+ Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスを持つ bcp_setbulkmode を呼び出すしようとした場合、シーケンス エラーが関数呼び出しの 1 つ戻ります。 エラーを修正する場合は、すべての設定をリセットし、最初からやり直す bcp_init を呼び出します。  
   
- 関数のシーケンス エラーが発生する関数呼び出しの例をいくつか次に示します。  
+ 関数シーケンス エラーが発生する関数呼び出しの例を次に示します。  
   
 ```  
 bcp_init(“table”, DB_IN);  

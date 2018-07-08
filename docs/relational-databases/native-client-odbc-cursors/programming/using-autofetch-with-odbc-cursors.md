@@ -1,12 +1,12 @@
 ---
-title: ODBC カーソルと autofetch オプションを使用して |Microsoft ドキュメント
+title: Autofetch と ODBC カーソル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dc86d77ef2904ab1ff511b911d37593f79a4c4e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 2399076c3e67cf44b8fb86ad183bd9a332ff1e38
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699413"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420112"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>autofetch と ODBC カーソルの併用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  インスタンスに接続しているときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、どの種類のサーバー カーソルを使用する場合、autofetch オプションをサポートしています。 Autofetch で、 **SQLExecute**または**SQLExecDirect** 、カーソルをオープンする関数も暗黙的な[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)(SQL_FIRST) 関数です。 バインドされたアプリケーション変数に、最初の行セットを構成する行がステートメント実行の一環として返されるので、ネットワーク経由でのサーバーとのやり取りが減少します。 [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)ときはサポートされていません、autofetch オプションが有効です。 結果セットの列をプログラム変数にバインドする必要があります。  
+  インスタンスに接続されているときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、任意のサーバー カーソルの種類を使用する場合、autofetch オプションをサポートしています。 Autofetch では、 **SQLExecute**または**SQLExecDirect**カーソルを開く関数にも、暗黙の型は、 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)(SQL_FIRST) 関数。 バインドされたアプリケーション変数に、最初の行セットを構成する行がステートメント実行の一環として返されるので、ネットワーク経由でのサーバーとのやり取りが減少します。 [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)ときはサポートされていません、autofetch オプションが有効になります。 結果セットの列をプログラム変数にバインドする必要があります。  
   
  アプリケーションでは、ドライバー固有の SQL_SOPT_SS_CURSOR_OPTIONS ステートメント属性を SQL_CO_AF に設定することにより autofetch を要求します。  
   

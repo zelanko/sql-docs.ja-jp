@@ -1,12 +1,12 @@
 ---
-title: 実行時のデータと Text、ntext、または Image 列 |Microsoft ドキュメント
+title: 実行時のデータと Text、ntext、または Image 列 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -26,18 +26,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 56cf9e564eb21d0036b61be0fde1404ed1dee486
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1fc35060f1584f03d75ababe76e17a030ddd8ee1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694633"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428591"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>実行時データと text 型、ntext 型、または image 型の列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ODBC 実行時データは、バインドされた列やパラメーターに対して、アプリケーションが大量のデータを操作できるようにする機能です。 非常に大きなを取得するときに**テキスト**、 **ntext**、または**イメージ**列アプリケーションできないことがありますを単純に巨大なバッファーを割り当て、バッファーに列をバインドおよびフェッチ行。 非常に大きな更新するときに**テキスト**、 **ntext**、または**イメージ**列アプリケーションできないことがあります単純に巨大なバッファーを割り当て、SQL ではパラメーター マーカーにバインドするにはステートメントではのステートメントを実行します。 このような場合は、アプリケーションを使用する必要があります[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)または[SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)実行時データ オプションを使用します。  
+  ODBC 実行時データは、バインドされた列やパラメーターに対して、アプリケーションが大量のデータを操作できるようにする機能です。 非常に大きなを取得するときに**テキスト**、 **ntext**、または**イメージ**列アプリケーションできないことがありますを単純に巨大なバッファーを割り当てる、バッファーに列をバインドおよびフェッチ行。 非常に大きな更新するときに**テキスト**、 **ntext**、または**イメージ**列アプリケーションできない単純に巨大なバッファーを割り当てる、SQL ではパラメーター マーカーにバインドするにはステートメントでは、し、ステートメントを実行します。 このような場合は、アプリケーションを使用する必要があります[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)または[SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)その実行時データ オプションを使用します。  
   
 ## <a name="see-also"></a>参照  
  [text 列と image 列の管理](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  

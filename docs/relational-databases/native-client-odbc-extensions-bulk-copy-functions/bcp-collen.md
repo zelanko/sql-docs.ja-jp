@@ -1,12 +1,12 @@
 ---
-title: bcp_collen |Microsoft ドキュメント
+title: bcp_collen |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5561e62386bbfdf370c16281b095db8c498613cc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 71ca1b085bdf218fee6c6d7bfa81d31cf193fac7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701953"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426171"
 ---
 # <a name="bcpcollen"></a>bcp_collen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,17 +53,17 @@ RETCODE bcp_collen (
  プログラム変数内のデータ長です。長さのインジケーターやターミネータの長さは含まれません。 設定*cbData* SQL_NULL_DATA するには、サーバーにコピーされるすべての行が列の NULL 値を含むを示します。 また、SQL_VARLEN_DATA に設定すると、文字列ターミネータや他の方法を使用してコピーするデータ長が決定されます。 長さのインジケーターとターミネータの両方を指定した場合、システムはコピーするデータ量が少なくなる方法を使用します。  
   
  *idxServerCol*  
- テーブル内にある、データのコピー先となる列の序数位置です。 最初の列は 1 です。 列の序数位置がによって報告された[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)です。  
+ テーブル内にある、データのコピー先となる列の序数位置です。 最初の列は 1 です。 列の序数位置がによって報告された[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)します。  
   
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>コメント  
- **Bcp_collen**関数では、データをコピーするときに、特定の列をプログラム変数内のデータ長を変更できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)です。  
+ **Bcp_collen**関数では、データをコピーするときに、特定の列をプログラム変数内のデータ長を変更できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)します。  
   
- 最初に、データの長さを決定とき[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)と呼びます。 呼び出しの間でデータの長さが変更された場合は**bcp_sendrow**プレフィックス長もターミネータが使用されていないと、呼び出すことができます**bcp_collen**長さをリセットします。 次に呼び出した**bcp_sendrow**への呼び出しで設定される長さを使用して**bcp_collen**です。  
+ 最初に、データの長さを決定と[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)が呼び出されます。 呼び出しの間でデータの長さが変更された場合**bcp_sendrow**プレフィックス長もターミネータが使用されていないを呼び出して、 **bcp_collen**長さをリセットします。 次回の呼び出し**bcp_sendrow**への呼び出しで設定される長さを使用して**bcp_collen**します。  
   
- 呼び出す必要があります**bcp_collen**のデータの長さを変更するテーブルの各列に対して 1 回です。  
+ 呼び出す必要があります**bcp_collen**がデータの長さを変更するテーブルの各列に対して 1 回です。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

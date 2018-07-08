@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 5: パッケージ配置モデルのパッケージ構成の追加 |Microsoft ドキュメント'
+title: 'レッスン 5: パッケージ配置モデルのパッケージ構成の追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 caps.latest.revision: 28
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21be0ea0bde6d625ff28fdc5d5f6ea898c41074f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2eb0defb5b0e2321932424ef7bf5396a213b1f3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209742"
 ---
 # <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>レッスン 5: パッケージ配置モデルのパッケージ構成の追加
-  パッケージ構成を使用すれば、開発環境の外部からランタイムのプロパティと変数を設定できます。 この構成により、配置と配信が容易で柔軟なパッケージを開発できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、次の種類の構成が用意されています。  
+  パッケージ構成を使用すれば、開発環境の外部からランタイムのプロパティと変数を設定できます。 この構成により、配置と配信が容易で柔軟なパッケージを開発できます。 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)]
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、次の種類の構成が用意されています。  
   
 -   XML 構成ファイル  
   
@@ -34,7 +36,7 @@ ms.locfileid: "36072124"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブル  
   
- このレッスンでは、「 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 」で作成した単純な [ssISnoversion](lesson-4-add-error-flow-redirection-with-ssis.md) パッケージを変更し、パッケージ配置モデルを使用してパッケージの構成を利用します。 またチュートリアルに含まれている、レッスン 4 を完了した状態のパッケージをコピーすることもできます。 パッケージ構成ウィザードを使用し、Foreach ループ コンテナーの `Directory` プロパティを更新する XML 構成を作成します。具体的には、Directory プロパティにマップされているパッケージ レベル変数を使用します。 構成ファイルを作成したら、開発環境の外部から変数の値を修正し、修正したプロパティに新しいサンプル データ フォルダーを参照させます。 パッケージを再度実行して、構成ファイルは、変数の値を設定およびさらに、変数を更新時に、`Directory`プロパティです。 結果として、パッケージにハードコーディングされた元のフォルダーのファイルではなく、新しいデータ フォルダーのファイルに対してパッケージが繰り返し実行されます。  
+ このレッスンでは、「 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 」で作成した単純な [ssISnoversion](lesson-4-add-error-flow-redirection-with-ssis.md) パッケージを変更し、パッケージ配置モデルを使用してパッケージの構成を利用します。 またチュートリアルに含まれている、レッスン 4 を完了した状態のパッケージをコピーすることもできます。 パッケージ構成ウィザードを使用し、Foreach ループ コンテナーの `Directory` プロパティを更新する XML 構成を作成します。具体的には、Directory プロパティにマップされているパッケージ レベル変数を使用します。 構成ファイルを作成したら、開発環境の外部から変数の値を修正し、修正したプロパティに新しいサンプル データ フォルダーを参照させます。 パッケージをもう一度実行すると、構成ファイルは、変数の値を設定します、さらに、変数を更新、`Directory`プロパティ。 結果として、パッケージにハードコーディングされた元のフォルダーのファイルではなく、新しいデータ フォルダーのファイルに対してパッケージが繰り返し実行されます。  
   
 > [!IMPORTANT]  
 >  このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 **AdventureWorksDW2012**をインストールしてデプロイする方法の詳細については、「 [Reporting Services Product Samples Project on CodePlex (CodePlex でのサービス製品サンプルのレポート)](http://go.microsoft.com/fwlink/?LinkID=526910)」をご覧ください。  

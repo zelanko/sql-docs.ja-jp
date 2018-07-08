@@ -1,12 +1,12 @@
 ---
-title: テーブル値パラメーター (ODBC) |Microsoft ドキュメント
+title: テーブル値パラメーター (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8344d1cbe163aefdb0ac42873a442e2a4fffc8e6
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: aace2d320b23110b286ee4f3d06124f830d3bede
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694873"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430771"
 ---
 # <a name="table-valued-parameters-odbc"></a>テーブル値パラメーター (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "35694873"
 
   ODBC のテーブル値パラメーターのサポートにより、クライアント アプリケーションは、1 回の呼び出しで複数の行をサーバーに送信することで、パラメーター化されたデータをサーバーに効率的に送信できます。  
   
- サーバーのテーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーターの&#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)です。  
+ サーバー上のテーブル値パラメーターについては、次を参照してください。[テーブル値パラメーターの&#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)します。  
   
  ODBC でテーブル値パラメーターをサーバーに送信するには、次の 2 つの方法があります。  
   
--   すべてのテーブル値パラメーターのデータを SQLExecDirect または SQLExecute が呼び出されたときにメモリにできます。 テーブル値に複数の行がある場合、このデータを配列に格納します。  
+-   テーブル値パラメーターのすべてのデータを SQLExecDirect または SQLExecute の呼び出し時にメモリにできます。 テーブル値に複数の行がある場合、このデータを配列に格納します。  
   
--   SQLExecDirect または SQLExecute が呼び出されたときに、アプリケーションは、テーブル値パラメーターのデータは実行時に指定できます。 この場合、テーブル値のデータの行をバッチ内で指定するか、必要なメモリ量を減らすために 1 つずつ指定することができます。  
+-   SQLExecDirect または SQLExecute が呼び出されたときに、アプリケーションは、テーブル値パラメーターの実行時データを指定できます。 この場合、テーブル値のデータの行をバッチ内で指定するか、必要なメモリ量を減らすために 1 つずつ指定することができます。  
   
  1 つ目の方法では、より多くのビジネス ロジックをストアド プロシージャにカプセル化できます。 たとえば、発注品目をテーブル値パラメーターとして渡す場合、注文入力のトランザクション全体を 1 つのストアド プロシージャにカプセル化することができます。 サーバーとのやり取りが 1 回で済むため、この方法は非常に効率的です。 また、異なるプロシージャを使用して、注文ヘッダーと発注品目を個別に処理することもできます。この場合、必要なコードが多くなり、クライアントとサーバー間のコントラクトが複雑になります。  
   

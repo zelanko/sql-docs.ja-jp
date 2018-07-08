@@ -1,5 +1,5 @@
 ---
-title: データベースの処理、テーブル、またはパーティション |Microsoft ドキュメント
+title: データベースの処理、テーブル、またはパーティション |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8d0300249983334f0510fe94807f1dcfcb62865f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8e6bb8c09154c7136d53dbf948c0baa199077f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229712"
 ---
 # <a name="process-database-table-or-partition"></a>データベース、テーブル、またはパーティションの処理
-  このトピックのタスクを使用してテーブル モデル データベース、テーブル、またはパーティションを手動で処理する方法について説明、**プロセス\<オブジェクト >**  ダイアログ ボックスで[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
+  このトピックのタスクを使用してテーブル モデル データベース、テーブル、またはパーティションを手動で処理する方法を説明する、**プロセス\<オブジェクト >**  ダイアログ ボックスで[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
  テーブル モデルの処理の詳細については、[「データの処理 (SSAS テーブル)」](../process-data-ssas-tabular.md) を参照してください。  
   
@@ -81,6 +81,6 @@ ms.locfileid: "36072409"
   
 ## <a name="see-also"></a>参照  
  [テーブル モデル パーティション&#40;SSAS 表形式&#41;](tabular-model-partitions-ssas-tabular.md)   
- [表形式モデルのパーティション作成し、管理&#40;SSAS 表形式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [テーブル モデル パーティション作成し、管理&#40;SSAS 表形式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

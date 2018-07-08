@@ -1,5 +1,5 @@
 ---
-title: Microsoft クラスター ビューアーを使用してモデルを参照 |Microsoft ドキュメント
+title: Microsoft クラスター ビューアーを使用してモデルの参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
 - discrimination [Analysis Services]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], clusters
 ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c513ddd212c8f5ab0f2b344008d36c1a2e352b57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ebba3499c092ab89bacb4011671b0f90df67eb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183569"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>「Microsoft クラスター ビューアーを使用したモデルの参照」
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] クラスター ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムは、データの異常を特定したり予測を作成したりするときにデータを調べるための分割アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft クラスタリング アルゴリズム](microsoft-clustering-algorithm.md)」を参照してください。  

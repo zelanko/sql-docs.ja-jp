@@ -1,12 +1,12 @@
 ---
-title: スクロールとフェッチ行 |Microsoft ドキュメント
+title: スクロールとフェッチ行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0e1cf65e3fa8a145f48046bc8eb920509b152781
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: a5377e0bd603d6233ba99ddacb53c8113e580fa8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702643"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421551"
 ---
 # <a name="scrolling-and-fetching-rows"></a>行のスクロールとフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,25 +38,25 @@ ms.locfileid: "35702643"
 
   スクロール可能なカーソルを使用するには、ODBC アプリケーションでは次の操作を行う必要があります。  
   
--   使用してカーソル機能を設定[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)です。  
+-   設定を使用してカーソル機能[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)します。  
   
--   使用して、カーソルを開く**SQLExecute**または**SQLExecDirect**です。  
+-   使用して、カーソルを開く**SQLExecute**または**SQLExecDirect**します。  
   
--   使用して行をスクロールおよびフェッチ**SQLFetch**または[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)です。  
+-   使用して行のスクロールとフェッチ**SQLFetch**または[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)します。  
   
- 両方**SQLFetch**と**SQLFetchSroll**一度に行のブロックをフェッチすることができます。 使用して指定された行の数が返される**SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE パラメーターを設定します。  
+ 両方**SQLFetch**と**SQLFetchSroll**行のブロックを一度にフェッチできます。 指定された行の数が返される**SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE パラメーターを設定します。  
   
- ODBC アプリケーションを使用できる**SQLFetch**順方向専用カーソルを介してフェッチを実行します。  
+ ODBC アプリケーションで使用できる**SQLFetch**順方向専用カーソルを介してフェッチを実行します。  
   
- **SQLFetchScroll**カーソルの周囲をスクロールするために使用します。 **SQLFetchScroll** 、次のフェッチをサポートしているだけでなく相対フェッチ前に、最初と最後の行セット (行セットをフェッチ*n*現在の行セットの先頭からの行) と絶対フェッチ (fetch、行セット行で始まる*n*)。 場合*n*は行が結果セットの最後から数えられます絶対フェッチで負の値。 たとえば、行 -1 の絶対フェッチは、結果セット内にある最後の行を起点とした行セットをフェッチします。  
+ **SQLFetchScroll**カーソルの周囲をスクロールするために使用します。 **SQLFetchScroll** 、次のフェッチをサポートしているだけでなく相対フェッチ前に、最初と最後の行セット (行セットをフェッチ*n*現在の行セットの先頭からの行) と絶対フェッチ (行セットのフェッチ行から始まる*n*)。 場合*n*は行が結果セットの最後から数えられます絶対フェッチで負の値。 たとえば、行 -1 の絶対フェッチは、結果セット内にある最後の行を起点とした行セットをフェッチします。  
   
- 使用するアプリケーション**SQLFetchScroll**そのブロックにのみレポートなどのカーソル機能は、1 回、結果セットを通過する可能性がありますオプションのみを使用して、次の行セットをフェッチします。 スクリーン ベースのアプリケーションでは、その一方で、活用することのすべての機能**SQLFetchScroll**です。 スクロール バー操作を直接の呼び出しを変換できる場合は、アプリケーションでは、画面に表示される行数を行セットのサイズに設定しを結果セットに、画面バッファーをバインド、 **SQLFetchScroll**です。  
+ 使用するアプリケーション**SQLFetchScroll**ブロックに対してのみ、レポートなどのカーソル機能は、一度に 1 つを結果セットを通過する可能性がありますオプションのみを使用して、次の行セットをフェッチします。 スクリーン ベースのアプリケーションでは、その一方で、活用することのすべての機能**SQLFetchScroll**します。 スクロール バーの操作への呼び出しを直接変換できる場合は、アプリケーションでは、行セットのサイズを画面に表示される行の数に設定し、結果セットに、画面バッファーをバインドする、 **SQLFetchScroll**します。  
   
 |スクロール バーの操作|SQLFetchScroll のスクロール操作|  
 |--------------------------|-------------------------------------|  
 |1 画面分上へ移動 (PageUp)|SQL_FETCH_PRIOR|  
 |1 画面分下へ移動 (PageDown)|SQL_FETCH_NEXT|  
-|1 行上へ移動|指定した FetchOffset-1 に等しく SQL_FETCH_RELATIVE|  
+|1 行上へ移動|指定したを-1 に FetchOffset SQL_FETCH_RELATIVE|  
 |1 行下へ移動|FetchOffset に 1 を指定した SQL_FETCH_RELATIVE |  
 |スクロール ボックスを先頭に移動|SQL_FETCH_FIRST|  
 |スクロール ボックスを末尾に移動|SQL_FETCH_LAST|  

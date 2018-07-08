@@ -1,5 +1,6 @@
 ---
-title: (SQL Server データ Migration Assistant) コマンドラインから実行 |Microsoft ドキュメント
+title: コマンドライン (SQL Server) から Data Migration Assistant を実行 |Microsoft Docs
+description: SQL Server データベースの移行を評価するためのコマンドラインから Data Migration Assistant を実行する方法について説明します
 ms.custom: ''
 ms.date: 09/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: df58c273c67868e894b7cba38344dc43628962ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b364dc03d48cbc1c0487362712e10f7ab0b782e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32866527"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785463"
 ---
-# <a name="run-data-migration-assistant-from-the-command-line"></a>コマンドラインからのデータ移行アシスタントを実行します。
-データ移行のアシスタントをインストールするバージョン 2.1 以降と、ときで dmacmd.exe もインストールされます *%programfiles%\\Microsoft データ Migration Assistant\\*です。 Dmacmd.exe を使用して、無人モードでデータベースを評価し、JSON または CSV ファイルに結果を出力します。 これは、いくつかのデータベースまたは巨大なデータベースを評価するときに特に便利です。 
+# <a name="run-data-migration-assistant-from-the-command-line"></a>コマンドラインから Data Migration Assistant を実行します。
+Data Migration Assistant をインストールするバージョン 2.1 以降で、ときで dmacmd.exe もインストールされます *%programfiles%\\Microsoft Data Migration Assistant\\*します。 Dmacmd.exe を使用して、無人モードでデータベースを評価し、JSON または CSV ファイルに結果を出力します。 このメソッドは、いくつかのデータベースや巨大なデータベースを評価するときに便利です。 
 
 > [!NOTE]
 > 評価のみを実行している Dmacmd.exe をサポートします。 この時点では、移行はサポートされていません。
@@ -43,16 +44,16 @@ DmaCmd.exe /AssessmentName="string"
 ```
 
 
-|引数  |Description  | 必須 (はい/いいえ)
+|引数  |説明  | 必須 (はい/いいえ)
 |---------|---------|---------------|
 | `/help or /?`     | Dmacmd.exe ヘルプ テキストを使用する方法        | ×
-|`/AssessmentName`     |   評価のプロジェクトの名前   | Y
-|`/AssessmentDatabases`     | 接続文字列のスペースで区切られたリスト。 データベース名 (Initial Catalog) は、大文字小文字を区別します。 | Y
-|`/AssessmentTargetPlatform`     | ターゲット プラットフォームに対する評価、サポートされる値: SqlServer2012、SqlServer2014、SqlServer2016 および AzureSqlDatabaseV12 です。 既定値は SqlServer2016   | ×
+|`/AssessmentName`     |   評価プロジェクトの名前   | Y
+|`/AssessmentDatabases`     | 接続文字列のスペースで区切られた一覧。 データベース名 (初期カタログ) と小文字は区別されます。 | Y
+|`/AssessmentTargetPlatform`     | 評価では、サポートされている値のターゲット プラットフォーム: SqlServer2012、SqlServer2014、SqlServer2016、および AzureSqlDatabaseV12 します。 既定値は SqlServer2016   | ×
 |`/AssessmentEvaluateFeatureParity`  | 機能パリティ ルールを実行します。  | ×
-|`/AssessmentEvaluateCompatibilityIssues`     | 互換性規則を実行します。  | Y <br> (AssessmentEvaluateCompatibilityIssues または AssessmentEvaluateRecommendations のいずれかが必要です)
-|`/AssessmentEvaluateRecommendations`     | 機能の推奨事項を実行します。        | Y <br> (AssessmentEvaluateCompatibilityIssues または AssessmentEvaluateRecommendationsis 必要)
-|`/AssessmentOverwriteResult`     | 結果ファイルを上書き    | ×
+|`/AssessmentEvaluateCompatibilityIssues`     | 互換性規則を実行します。  | Y <br> (AssessmentEvaluateCompatibilityIssues または AssessmentEvaluateRecommendations が必要です)。
+|`/AssessmentEvaluateRecommendations`     | 機能のお勧めを実行します。        | Y <br> (AssessmentEvaluateCompatibilityIssues または必要な AssessmentEvaluateRecommendationsis)
+|`/AssessmentOverwriteResult`     | 結果ファイルを上書きします    | ×
 |`/AssessmentResultJson`     | JSON の結果ファイルへの完全パス     | Y <br> (AssessmentResultJson または AssessmentResultCsv のいずれかが必要)
 |`/AssessmentResultCsv`    | CSV 結果ファイルへの完全パス   | Y <br>(AssessmentResultJson または AssessmentResultCsv のいずれかが必要)
 
@@ -65,7 +66,7 @@ DmaCmd.exe /AssessmentName="string"
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Windows 認証と実行の互換性の規則を使用してデータベースに 1 つの評価**
+**Windows 認証と実行の互換性規則を使用して単一データベースの評価**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -77,7 +78,7 @@ Catalog=DatabaseName;***Integrated Security=true*"**
 
 
 
-**SQL Server 認証され実行されている機能の推奨事項を使用してデータベースに 1 つの評価**
+**SQL Server 認証と実行機能の推奨事項を使用して単一データベースの評価**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -88,7 +89,7 @@ Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 ```
 
 
-**単一データベースの評価対象プラットフォームで SQL Server 2012 と結果を .json と .csv ファイルに保存**
+**ターゲット プラットフォームの SQL Server 2012 では、単一データベースの評価結果を .json および .csv のファイルに保存します。**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -101,7 +102,7 @@ Catalog=DatabaseName;Integrated Security=true"
 ```
 
 
-**ターゲット プラットフォーム SQL Azure データベースのデータベースに 1 つの評価結果を .json と .csv ファイルに保存します。**
+**ターゲット プラットフォームは、SQL Azure データベースの単一データベースの評価結果を .json および .csv のファイルに保存します。**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 

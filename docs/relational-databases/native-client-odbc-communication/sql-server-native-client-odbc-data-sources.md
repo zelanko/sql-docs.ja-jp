@@ -1,12 +1,12 @@
 ---
-title: SQL Server Native Client ODBC データ ソース |Microsoft ドキュメント
+title: SQL Server Native Client ODBC データ ソース |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4553908f106528ce87dfdea268e0257959551da4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 6b5b67bf92da265c0a6aca4b4170b462f1f51099
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702513"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430341"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>SQL Server Native Client ODBC データ ソース
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "35702513"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソース名 (DSN) によって ODBC データ ソースが特定されます。ODBC データ ソースには、特定のサーバー上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続するために ODBC アプリケーションで必要となるすべての情報が含まれています。 ODBC データ ソース名を定義するには次の 2 つの方法があります。  
   
--   クライアント コンピューターで コントロール パネルの 管理ツールを開きをダブルクリックして**データ ソース (ODBC)** です。 ODBC データ ソース アドミニストレーターが起動します。これを使用して DSN を作成できます。  
+-   クライアント コンピューターの コントロール パネルの 管理ツールを開きをダブルクリック**データ ソース (ODBC)** します。 ODBC データ ソース アドミニストレーターが起動します。これを使用して DSN を作成できます。  
   
--   ODBC アプリケーションで呼び出す[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)です。  
+-   ODBC アプリケーションで呼び出す[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースには次の情報が含まれます。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "35702513"
  データ ソース経由で接続する場合、ODBC アプリケーションは必要ありません。 ただしアプリケーションでは、ドライバーが DSN から検出する接続情報と同じ情報を、ODBC 接続関数に対して指定する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server との通信&#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+ [SQL Server と通信する&#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

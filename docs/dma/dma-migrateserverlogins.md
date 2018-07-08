@@ -1,5 +1,6 @@
 ---
-title: SQL Server ログイン (データ Migration Assistant) の移行 |Microsoft ドキュメント
+title: Data Migration Assistant で SQL Server ログインの移行 |Microsoft Docs
+description: Data Migration Assistant で SQL Server ログインを移行する方法について説明します
 ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
@@ -17,42 +18,43 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 23da8fe364ffad914013719f54871e85213befc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb5dec6babc17ad8be5d0531b463f230e719c73d
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865457"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783163"
 ---
-# <a name="migrating-sql-server-logins-using-data-migration-assistant"></a>データ Migration Assistant を使用して SQL Server ログインを移行します。
+# <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Data Migration Assistant で SQL Server ログインを移行します。
 
-この記事では、データ Migration Assistant を使用して移行の SQL Server ログインの概要を示します。 
+この記事では、Data Migration Assistant を使用して SQL Server ログインの移行の概要を示します。 
 
-## <a name="key-concepts"></a>主要な概念
-主要な概念を次に示します。
+## <a name="which-logins-are-migrated"></a>ログインを移行します。
 
-- (ドメイン ユーザーまたは Windows ドメイン グループ) などの Windows プリンシパル上に基づいてログインを移行することができます。 SQL Server ログインとも呼ばれる SQL 認証を基に作成されたログインを移行することもできます。
+- (ドメイン ユーザーまたは Windows ドメイン グループ) などの Windows プリンシパル上に基づいてログインを移行することができます。 SQL Server ログインとも呼ばれる、SQL 認証に基づいて作成されたログインを移行することもできます。
 
-- データ Migration Assistant 現在サポートされていません (証明書にマップされているログイン) スタンドアロン セキュリティ証明書、スタンドアロン非対称キー (非対称キーにマップされたログイン) および資格情報にマップされているログインに関連付けられているログイン。
+- Data Migration Assistant 現在サポートしていません (証明書にマップされたログイン) のスタンドアロン セキュリティ証明書、スタンドアロン非対称キー (非対称キーにマップされるログイン) および資格情報にマップされたログインに関連付けられているログインします。
 
-- データ Migration Assistant は移動せず、 **sa**ダブル ハッシュ記号で囲まれた名前を持つログインとサーバーの原則 (\#\#)、これは内部使用のみ。
+- Data Migration Assistant が動かない、 **sa**ダブル ハッシュ記号で囲まれた名前を持つログインとサーバーの原則 (\#\#)、内部使用のみであります。
 
-- 既定では、データ移行 Assistatn は移行する修飾すべてのログインを選択します。 必要に応じて、移行する特定のログインを選択できます。 移行する場合のデータ Migration Assistant 修飾のすべてのログインは、移行されるデータベースでログイン ユーザーのマッピングが残ります。 
+- 既定では、Data Migration Assistant は、移行するすべての修飾ログインを選択します。 必要に応じて、移行する特定のログインを選択できます。 Data Migration Assistant は、修飾のすべてのログインを移行、する場合は、移行されるデータベースでユーザーのログイン マッピングが残ります。 
 
-  特定のログインを移行する場合は、移行用に選択されたデータベースの 1 つまたは複数のユーザーにマップされるログインを選択することを確認してください。
+  特定のログインを移行する場合は、必ずを移行用に選択されたデータベース内の 1 つまたは複数のユーザーにマップされるログインを選択します。
 
-- ログインの移行の一環として、データ Migration Assistant もユーザー定義サーバー ロールに移動し、サーバー レベルの権限をユーザー定義サーバー ロールに追加します。 ロールの所有者に設定されます**sa**プリンシパル。
+- ログインの移行の一環として、Data Migration Assistant もユーザー定義サーバー ロールに移動し、サーバー レベルのアクセス許可をユーザー定義サーバー ロールに追加します。 ロールの所有者に設定する**sa**プリンシパル。
 
-- ログインの移行の一環として、データ Migration Assistant に権限を割り当てます、ターゲット SQL Server でセキュリティ保護可能なソース SQL Server 上に存在するとします。 
+## <a name="during-and-after-migration"></a>移行の前後に
 
-  対象の SQL Server にログインが既に存在する場合データ Migration Assistant 保護可能なリソースに割り当てられた権限のみを移行し、全体のログインを再作成することはできません。
+- ログインの移行の一環として、Data Migration Assistant、アクセス許可に割り当てます、ターゲット SQL Server でセキュリティ保護可能なソース SQL Server 上に存在します。 
 
-- データ移行アシスタントは、対象サーバーにログインが既に存在する場合は、データベース ユーザーにログインをマップする最善の努力を使用します。
+  ターゲット SQL Server で、ログインが既に存在する場合は、Data Migration Assistant セキュリティ保護可能リソースに割り当てられた権限のみを移行および全体のログインを再作成することはできません。
 
-- ログインの移行と推奨される移行後アクションの全体的な状態を理解する移行の結果を確認することをお勧めします。
+- Data Migration Assistant は、対象サーバーで、ログインが既に存在する場合は、データベース ユーザーにログインをマップするベスト エフォートです。
+
+- ログインの移行と推奨される移行後のアクションの全体的な状態を把握する移行の結果を確認することをお勧めします。
 
 ## <a name="resources"></a>リソース
 
-[データ Migration Assistant (DMA)](../dma/dma-overview.md)
+[Data Migration Assistant (DMA)](../dma/dma-overview.md)
 
-[データ移行のアシスタント: 構成の設定](../dma/dma-configurationsettings.md)
+[Data Migration Assistant: 構成の設定](../dma/dma-configurationsettings.md)

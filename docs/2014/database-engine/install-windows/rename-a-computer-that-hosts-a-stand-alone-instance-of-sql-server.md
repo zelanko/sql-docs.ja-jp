@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote login errors [SQL Server]
 - standalone computer names [SQL Server]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - dropping remote logins
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be2e580931a7932e560240aefae659e01f3015d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 66c8ddd5a5ab207f9e9f29367ace2c73b8d2811b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209662"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するコンピューターの名前を変更した場合、変更後の名前は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に認識されます。 コンピューター名を再設定するためにセットアップを再度実行する必要はありません。 代わりに次の手順を実行して、sys.servers に格納され、システム関数 @@SERVERNAME でレポートされるシステム メタデータを更新します。 @@SERVERNAME を使用するか、sys.servers からサーバー名のクエリを実行するリモート接続およびリモート アプリケーションのコンピューター名の変更を反映するには、システム メタデータを更新します。  
