@@ -1,5 +1,5 @@
 ---
-title: アクティブな操作 ダイアログ ボックス |Microsoft ドキュメント
+title: アクティブな操作 ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: adf25cd2194e1a02877c38a15d81d8697427ad76
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b3c9105d6649443d8ec2d3425f86d609dfe6a2b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151123"
 ---
 # <a name="active-operations-dialog-box"></a>[アクティブな操作] ダイアログ ボックス
   配置、検証、パッケージの実行など、 **サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 操作の状態を表示するには、**[アクティブな操作][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
@@ -37,7 +37,7 @@ ms.locfileid: "36072373"
   
 ##  <a name="open_dialog"></a> [アクティブな操作] ダイアログ ボックスを開く  
   
-1.  開いている[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]です。  
+1.  開いている[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]します。  
   
 2.  Microsoft SQL Server データベース エンジンに接続します。  
   
@@ -46,8 +46,8 @@ ms.locfileid: "36072373"
 ##  <a name="options"></a> オプションの構成  
   
 ### <a name="options"></a>および  
- **Type**  
- 操作の種類を指定します。 可能な値は、次のとおり、**型**フィールドと、TRANSACT-SQL の含まれる operations_type 列に対応する値`catalog.operations`ビュー。  
+ **型**  
+ 操作の種類を指定します。 可能な値を次に、**型**フィールドと、TRANSACT-SQL の operations_type 列に対応する値`catalog.operations`ビュー。  
   
 |||  
 |-|-|  

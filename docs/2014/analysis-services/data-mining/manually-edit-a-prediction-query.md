@@ -1,5 +1,5 @@
 ---
-title: 予測クエリを手動で編集 |Microsoft ドキュメント
+title: 予測クエリを手動で編集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying prediction queries
 - Mining Model Prediction [Analysis Services], modifying prediction queries
 - manual prediction query modification [Analysis Services]
 ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd7b2457b291aa7002c6de7ed00dda2be78b865b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9813aba9914a58d6a64266be2708d7e3d72ad543
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210442"
 ---
 # <a name="manually-edit-a-prediction-query"></a>手動での予測クエリの編集
   予測クエリ ビルダーでクエリのデザインを終えたら、データ マイニング デザイナーの **[マイニング モデル予測]** タブにあるクエリ テキスト ビューに切り替えて、クエリを変更できます。 画面の下部に、クエリ ビルダーによって作成されたクエリを含んでいるテキスト エディターが表示されます。  
@@ -49,6 +49,6 @@ ms.locfileid: "36073142"
 ## <a name="see-also"></a>参照  
  [データ マイニング クエリ](data-mining-queries.md)   
  [予測クエリ ビルダー&#40;データ マイニング&#41;](../prediction-query-builder-data-mining.md)   
- [レッスン 6: の作成と操作の予測&#40;基本的なデータ マイニングのチュートリアル&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [レッスン 6: を作成して、予測の操作&#40;基本的なデータ マイニング チュートリアル&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

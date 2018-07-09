@@ -1,5 +1,5 @@
 ---
-title: マルチ スレッド アプリケーション |Microsoft ドキュメント
+title: マルチ スレッド アプリケーション |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +22,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f141ac21aaf1f1a1ce6c242c5fcfdc03331621ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d557b9195e14f4546d8b003f52bebdb7f0c2065b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419501"
 ---
-# <a name="creating-a-driver-application---multithreaded-applications"></a>ドライバー アプリケーションのマルチ スレッド アプリケーションを作成します。
+# <a name="creating-a-driver-application---multithreaded-applications"></a>ドライバー アプリケーションのマルチ スレッド アプリケーションの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -37,6 +38,6 @@ ms.lasthandoff: 05/03/2018
  それでも、非同期モードは、依然として効果的な処理方法です。 マルチスレッド モデルによるパフォーマンスの向上は、非同期アプリケーションを書き直すほどのものではありません。 ユーザーが DB-Library 非同期モデルを使用する DB-Library アプリケーションを ODBC アプリケーションに変換する場合は、ODBC 非同期モデルに変換する方が容易です。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client ODBC ドライバー アプリケーションを作成します。](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
+ [SQL Server Native Client ODBC ドライバー アプリケーションの作成](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
   

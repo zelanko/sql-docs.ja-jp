@@ -1,12 +1,12 @@
 ---
-title: SQLProcedures |Microsoft ドキュメント
+title: SQLProcedures |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,24 +18,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 95eced372cab2e6eb0807958f4fa871feaa4bf19
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: f55960bd47f57e34c65234e7513fb5c2f5e30243
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697493"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412181"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャは値を返します。 **SQLProcedures**はのレポートは、結果セット列 PROCEDURE_TYPE です。  
+  すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャは値を返します。 **SQLProcedures**に結果セット列 PROCEDURE_TYPE を報告します。  
   
  **SQLProcedures**値が存在するかどうかに関係なく SQL_SUCCESS を返します*CatalogName、SchemaName,* または*ProcName*パラメーター。 **SQLFetch** SQL_NO_DATA が返されるこれらのパラメーターに無効な値を使用する場合。  
   
- **SQLProcedures**は静的サーバー カーソルで実行できます。 実行すると**SQLProcedures**更新可能な (動的カーソルまたはキーセット カーソル) では、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO を返します。  
+ **SQLProcedures**静的サーバー カーソルで実行できます。 実行しようとすると、 **SQLProcedures**更新可能な (動的またはキーセット) カーソルでは、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO を返します。  
   
- **SQLProcedures**名前に一致するすべてのプロシージャに関する情報を返します*ProcName*現在のユーザーがまたはが現在のユーザーに付与されて VIEW DEFINITION 権限を実行することができます。  
+ **SQLProcedures**名前に一致するすべてのプロシージャに関する情報を返します*ProcName*され、現在のユーザーによってまたは現在のユーザーが付与されている VIEW DEFINITION 権限で実行できます。  
   
 ## <a name="see-also"></a>参照  
  [SQLProcedures 関数](http://go.microsoft.com/fwlink/?LinkId=59364)   

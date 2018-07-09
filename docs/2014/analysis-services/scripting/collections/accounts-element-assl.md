@@ -1,5 +1,5 @@
 ---
-title: アカウントの要素 (ASSL) |Microsoft ドキュメント
+title: 要素 (ASSL) のアカウント |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Accounts element
 ms.assetid: 3ec62f58-c19b-4b15-b040-8941521a389b
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 30fcd1815ac785ab71c90a935b9392ab5e85e98b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94e167c6eb804f3372fab6974403f0303f21a13a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277968"
 ---
 # <a name="accounts-element-assl"></a>Accounts 要素 (ASSL)
-  定義されている勘定科目の種類のコレクションを格納、[データベース](../objects/database-element-assl.md)要素。  
+  定義されている勘定科目の種類のコレクションを格納する[データベース](../objects/database-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36070815"
 |子要素|[アカウント](../objects/account-element-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
- ディメンションが[型](../properties/type-element-dimension-assl.md)要素に設定されている*アカウント*できます収益や費用などのアカウントの種類を指定する属性を持つに表示され、ディメンションのメンバーによって表される。 勘定科目の種類を使用して[メジャー](../objects/measure-element-assl.md)要素が[AggregationFunction](../properties/aggregatefunction-element-assl.md)要素に設定されている*ByAccount*、ときに使用する集計関数が決定そのディメンションのメンバーを集計します。 `Accounts` 要素は、勘定科目の種類と各種類で使用される集計関数を表す `Account` 要素のコレクションを保持します。  
+ ディメンションが[型](../properties/type-element-dimension-assl.md)要素に設定されて*アカウント*できます収益、経費などのアカウントの種類を指定する属性をしていて、そのディメンションのメンバーによって表されます。 は、アカウントの種類を使用して[メジャー](../objects/measure-element-assl.md)要素が[AggregationFunction](../properties/aggregatefunction-element-assl.md)要素に設定されて*ByAccount*、ときに使用する集計関数が決定するにはそのディメンションのメンバーを集計します。 `Accounts` 要素は、勘定科目の種類と各種類で使用される集計関数を表す `Account` 要素のコレクションを保持します。  
   
- 集計関数がによって使用される既定値と異なる場合は、勘定科目の種類を表示されている必要があります[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]各アカウントの種類。  
+ 集計関数がで使用される既定値と異なる場合は、勘定科目の種類を表示する必要があります[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]各アカウントの種類。  
   
  有効な勘定科目の種類のセットは固定されています。  
   

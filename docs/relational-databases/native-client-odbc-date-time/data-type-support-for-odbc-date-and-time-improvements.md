@@ -1,12 +1,12 @@
 ---
-title: ODBC 日付と時刻の強化のデータ型のサポート |Microsoft ドキュメント
+title: ODBC の日付と時刻の強化機能のデータ型のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 970e40843b11679df67de56995606d077b583d1e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0c7ff2ba90e04165649bf30087cf1d4e8e9aae0f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702633"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431291"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 日付と時刻の強化に対するデータ型のサポート
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC の日付と時刻の強化に対するデータ型のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -37,7 +37,7 @@ ms.locfileid: "35702633"
   
 -   SQL_SS_TIMESTAMPOFFSET  
   
- 次の表は、サーバーの完全な種類のマッピングを示します。 表の一部のセルには、2 つの項目が記載されています。このような場合、1 つ目は ODBC 3.0 の値、2 つ目は ODBC 2.0 の値です。  
+ 次の表では、サーバーの完全な種類のマッピングを示します。 表の一部のセルには、2 つの項目が記載されています。このような場合、1 つ目は ODBC 3.0 の値、2 つ目は ODBC 2.0 の値です。  
   
 |SQL Server データ型|SQL データ型|値|  
 |--------------------------|-------------------|-----------|  
@@ -75,7 +75,7 @@ ms.locfileid: "35702633"
   
  結果に含まれる秒の小数部には、常に、コロン (:) ではなくドット (.) を使用します。  
   
- アプリケーションに返される文字列値は、常に特定の列の長さは同じです。 年、月、日、時、分、秒の各部分は、最大幅に合わせて先頭にゼロが埋め込まれます。また、datetime 値の日付と時刻の間には空白が 1 つ入ります。 datetimeoffset 値では、時間とタイム ゾーン オフセットの間にも空白が 1 つ入ります。 タイム ゾーン オフセットの前には常に符号を指定します。オフセットが 0 の場合は、正符号 (+) を指定します。 秒の小数部では、必要に応じて、列に定義されている有効桁数になるまで後ろにゼロが埋め込まれます。 datetime 列の場合、秒の小数部は 3 桁になります。 smalldatetime 列の場合、秒の小数部はなく、秒は常にゼロになります。  
+ アプリケーションに返される文字列値は、常に、特定の列の長さが同じです。 年、月、日、時、分、秒の各部分は、最大幅に合わせて先頭にゼロが埋め込まれます。また、datetime 値の日付と時刻の間には空白が 1 つ入ります。 datetimeoffset 値では、時間とタイム ゾーン オフセットの間にも空白が 1 つ入ります。 タイム ゾーン オフセットの前には常に符号を指定します。オフセットが 0 の場合は、正符号 (+) を指定します。 秒の小数部では、必要に応じて、列に定義されている有効桁数になるまで後ろにゼロが埋め込まれます。 datetime 列の場合、秒の小数部は 3 桁になります。 smalldatetime 列の場合、秒の小数部はなく、秒は常にゼロになります。  
   
  空の文字列は、有効な日付リテラルまたは時間リテラルではありません。また、NULL 値を表すものでもありません。 空の文字列を日付または時刻の値に変換しようとすると、SQLState 22018 のエラーが発生し、"キャストした文字コードが正しくありません" というメッセージが表示されます。  
   
@@ -140,7 +140,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- 場合、 **timezone_hour**は負の値、 **timezone_minute**負の値である必要がありますまたはゼロです。 場合、 **timezone_hour**が正の値、 **timezone_minute**正である必要がありますまたはゼロです。 場合、 **timezone_hour**ゼロ、s**timezone_minute** -59 ~ +59 の範囲内で任意の値があります。  
+ 場合、 **timezone_hour**は負の値、 **timezone_minute**負の値である必要がありますまたは 0。 場合、 **timezone_hour**が正の値、 **timezone_minute**正である必要がありますまたは 0。 場合、 **timezone_hour**ゼロ、s**timezone_minute** -59 ~ +59 の範囲の任意の値があります。  
   
 ## <a name="see-also"></a>参照  
  [日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

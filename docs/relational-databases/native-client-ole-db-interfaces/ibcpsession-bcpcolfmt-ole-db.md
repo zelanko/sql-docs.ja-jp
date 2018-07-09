@@ -1,12 +1,12 @@
 ---
-title: Ibcpsession::bcpcolfmt (OLE DB) |Microsoft ドキュメント
+title: Ibcpsession::bcpcolfmt (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 78d7776291a3043c18d30b694839a09f96915e33
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e11dc5983421ce89cf29131212c2d193fda20326
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703663"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432541"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,13 +48,13 @@ HRESULT BCPColFmt(
 ```  
   
 ## <a name="remarks"></a>コメント  
- **BCPColFmt** BCP データ ファイル フィールドの間のバインドを作成するメソッドを使用し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列です。 このメソッドは、列の長さ、型、ターミネータ、およびプレフィックス長をパラメーターとして受け取り、個々のフィールドの対応するプロパティに設定します。  
+ **BCPColFmt** BCP データ ファイルのフィールド間のバインディングを作成するメソッドを使用し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列。 このメソッドは、列の長さ、型、ターミネータ、およびプレフィックス長をパラメーターとして受け取り、個々のフィールドの対応するプロパティに設定します。  
   
  ユーザーが対話モードを選択すると、このメソッドが 2 回呼び出されます。1 回は既定値 (サーバーの列の型によって異なります) に応じて列形式を設定するために呼び出され、もう 1 回はクライアントが対話モードで選択した列の型に応じて各列の形式を設定するために呼び出されます。  
   
  対話モード以外の場合、このメソッドは列ごとに 1 回だけ呼び出され、各列の型を文字型またはネイティブ型に設定し、列ターミネータと行ターミネータを設定します。  
   
- **BCPColFmt**メソッドでは、一括コピーのユーザー ファイルの形式を指定することができます。 次に、一括コピーに使用するフォーマットの内容を示します。  
+ **BCPColFmt**メソッドでは、一括コピーのユーザー ファイル形式を指定できます。 次に、一括コピーに使用するフォーマットの内容を示します。  
   
 -   ユーザー ファイルのフィールドからデータベース列へのマッピング  
   
@@ -68,21 +68,21 @@ HRESULT BCPColFmt(
   
 -   省略可能なターミネータ バイト シーケンスの長さ  
   
- 各呼び出し**BCPColFmt**ユーザー ファイルの 1 つのフィールドの形式を指定します。 たとえば、5 つのフィールドのユーザー データ ファイル内の 3 つのフィールドの既定の設定を変更するに最初に呼び出す`BCPColumns(5)`、およびを呼び出す**BCPColFmt**に 5 回、3 つのそれらの呼び出しが独自の形式を設定します。 残りの 2 つの呼び出しでは、設定*eUserDataType*を設定し、BCP_TYPE_DEFAULT *cbIndicator*、 *cbUserData*、および*cbUserDataTerm*0、BCP_VARIABLE_LENGTH、0、それぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
+ 呼び出しごとに**BCPColFmt**ユーザー ファイルの 1 つのフィールドの形式を指定します。 たとえば、5 つのフィールドのユーザーのデータ ファイル内の 3 つのフィールドの既定の設定を変更するに最初に呼び出す`BCPColumns(5)`を呼び出して**BCPColFmt**の 5 回の呼び出しで独自の形式の 3 つです。 残りの 2 つの呼び出しでは、設定*eUserDataType*を設定し、BCP_TYPE_DEFAULT *cbIndicator*、 *cbUserData*、および*cbUserDataTerm*0、BCP_VARIABLE_LENGTH、0、それぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
   
 > [!NOTE]  
->  [Ibcpsession::bcpcolumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)呼び出しの前にメソッドを呼び出す必要があります**BCPColFmt**です。 呼び出す必要があります**BCPColFmt**ユーザー ファイル内の各列に対して 1 回です。 呼び出す**BCPColFmt** 1 回以上のユーザー ファイルの任意の列、エラーが発生します。  
+>  [Ibcpsession::bcpcolumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)呼び出しの前にメソッドを呼び出す必要があります**BCPColFmt**します。 呼び出す必要があります**BCPColFmt**ユーザー ファイル内の各列に対して 1 回です。 呼び出す**BCPColFmt** 1 回以上のユーザー ファイルの任意の列、エラーが発生します。  
   
  ユーザー ファイル内のすべてのデータをコピーする必要はありません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 列をスキップするには、列のデータの形式を指定する際に idxServerCol パラメーターを 0 に設定します。 一方、フィールドをスキップする場合は、メソッドを正しく機能させるためにすべての情報が必要になります。  
   
- **注**、 [ibcpsession::bcpwritefmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)を介して提供された書式指定を永続化する関数を使用できます**BCPColFmt**です。  
+ **注**、 [ibcpsession::bcpwritefmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)によって提供される形式指定を保存する関数を使用できます**BCPColFmt**します。  
   
 ## <a name="arguments"></a>引数  
  *idxUserDataCol*[in]  
  ユーザー データ ファイル内のフィールドのインデックス。  
   
  *eUserDataType*[in]  
- ユーザー データ ファイル内のフィールドのデータ型。 使用できるデータ型が記載されて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイル (sqlncli.h) bcp_type_xxx という形式、たとえば、BCP_TYPE_SQLINT4 です。 BCP_TYPE_DEFAULT 値を指定すると、プロバイダーはテーブルやビューの列と同じ型を使用します。 一括コピー操作のうち[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルにときに、 **eUserDataType**引数に BCP_TYPE_SQLDECIMAL または BCP_TYPE_SQLNUMERIC されて。  
+ ユーザー データ ファイル内のフィールドのデータ型。 使用できるデータ型が記載されて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bcp_type_xxx というで Native Client ヘッダー ファイル (sqlncli.h) 形式、たとえば、BCP_TYPE_SQLINT4 します。 BCP_TYPE_DEFAULT 値を指定すると、プロバイダーはテーブルやビューの列と同じ型を使用します。 一括コピー操作の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルにときに、 **eUserDataType**引数に BCP_TYPE_SQLDECIMAL または BCP_TYPE_SQLNUMERIC:  
   
 -   コピー元の列が decimal 型または numeric 型以外の場合は、既定の有効桁数と小数点以下桁数が使用されます。  
   
@@ -94,13 +94,13 @@ HRESULT BCPColFmt(
  *cbUserData*[in]  
  ユーザー ファイル内にあるフィールド データの最大長 (バイト単位)。長さのインジケーターやターミネータの長さは含まれません。  
   
- 設定**cbUserData** BCP_LENGTH_ に示すファイルのフィールドをデータ内のすべての値、または NULL に設定する必要があります。 設定**cbUserData** bcp_length_variable の場合を示す、システムが各フィールドのデータの長さを決定する必要があります。 これは、フィールドによっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーされるデータの前に長さのインジケーターや NULL インジケーターを生成したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするデータにインジケーターが必要になる場合があることを意味します。  
+ 設定**cbUserData** BCP_LENGTH_ には、ファイルのフィールドをデータ内のすべての値を示しますが、または NULL に設定する必要があります。 設定**cbUserData** BCP_LENGTH_VARIABLE を示しますが、各フィールドのデータの長さがシステムによって決定されます。 これは、フィールドによっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーされるデータの前に長さのインジケーターや NULL インジケーターを生成したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするデータにインジケーターが必要になる場合があることを意味します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字やバイナリ データ型、 **cbUserData** BCP_LENGTH_VARIABLE、BCP_LENGTH_、0 または正の値を指定できます。 場合**cbUserData**が bcp_length_variable の場合、システムは存在する場合は、長さのインジケーターやターミネータ シーケンスのいずれかを使用して、データの長さを決定します。 長さのインジケーターとターミネータ シーケンスの両方を指定した場合、一括コピーはコピーするデータ量が少なくなる方法を使用します。 場合**cbUserData**が bcp_length_variable の場合、データ型は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字またはバイナリ型でもない長さのインジケーターとターミネータ シーケンスを指定すると、システムは、エラー メッセージを返しますとします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字やバイナリ データ型、 **cbUserData** BCP_LENGTH_VARIABLE、BCP_LENGTH_、0 または正の値を指定できます。 場合**cbUserData** BCP_LENGTH_VARIABLE は、システムは存在する場合は、長さのインジケーターやターミネータ シーケンスのいずれかを使用して、データの長さを決定します。 長さのインジケーターとターミネータ シーケンスの両方を指定した場合、一括コピーはコピーするデータ量が少なくなる方法を使用します。 場合**cbUserData** BCP_LENGTH_VARIABLE、データは、型が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字またはバイナリの型と長さのインジケーターとターミネータ シーケンスのどちらが指定されている場合、システムがエラー メッセージを返します。  
   
- 場合**cbUserData**が 0 または正の値は、システムが使用**cbUserData**最大データ長として。 ただし、正の値にいる場合、 **cbUserData**長さのインジケーターとターミネータ シーケンスの提供、コピーするデータの量が最も少なくなる方法を使用して、データの長さを決定します。  
+ 場合**cbUserData**が 0 または正の値をシステムを使用して**cbUserData**最大データ長として。 ただし、正の値の場合、 **cbUserData**長さのインジケーターとターミネータ シーケンスの提供、コピーするデータ量が少なくなる方法を使用してデータの長さを決定します。  
   
- **CbUserData**値は、データのバイト数を表します。 文字データが Unicode ワイド文字、正の値で表されている場合**cbUserData**パラメーターの値は、各文字のバイト単位のサイズを乗算する文字の数を表します。  
+ **CbUserData**値は、データのバイト数を表します。 文字データが Unicode ワイド文字では、正の値で表されている場合**cbUserData**パラメーターの値は、各文字のバイト単位でサイズを乗算する文字数を表します。  
   
  *pbUserDataTerm*[size_is] [in]  
  フィールドに使用するターミネータ シーケンス。 このパラメーターは主に文字データ型に対して有効です。これは、他のすべての型は固定長であったり、バイト数を正確に記録するために長さのインジケーターが必要になる (バイナリ データの場合) ためです。  
@@ -115,20 +115,20 @@ HRESULT BCPColFmt(
  列に使用するターミネータ シーケンスの長さ、(バイト単位)。 データ内にターミネータが存在しないか不要な場合は、この値を 0 に設定します。  
   
  *idxServerCol*[in]  
- データベース テーブル内での列の序数位置。 最初の列の序数は 1 です。 列の序数位置がによって報告された**icolumnsinfo::getcolumninfo**または類似のメソッドです。 この値が 0 の場合、一括コピーではデータ ファイル内のこのフィールドは無視されます。  
+ データベース テーブル内での列の序数位置。 最初の列の序数は 1 です。 列の序数位置がによって報告された**icolumnsinfo::getcolumninfo**または同様の方法です。 この値が 0 の場合、一括コピーではデータ ファイル内のこのフィールドは無視されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
  メソッドが成功しました。  
   
  E_FAIL  
- 詳細な情報を使用するためのプロバイダー固有のエラーが発生しました、 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)インターフェイスです。  
+ 詳細な情報を使用するためのプロバイダー固有のエラーが発生しました、 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)インターフェイス。  
   
  E_UNEXPECTED  
  メソッドの呼び出しが予期されませんでした。 たとえば、 [ibcpsession::bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)メソッドは、このメソッドを呼び出す前に呼び出されませんでした。  
   
  E_INVALIDARG  
- 引数が無効でした。  
+ 引数が無効です。  
   
  E_OUTOFMEMORY  
  メモリ不足エラー。  

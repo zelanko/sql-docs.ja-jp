@@ -1,5 +1,5 @@
 ---
-title: レポート パーツ (レポート ビルダーおよび SSRS) のトラブルシューティング |Microsoft ドキュメント
+title: レポート パーツ (レポート ビルダーおよび SSRS) のトラブルシューティング |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d3f8e675ff62ec000b3b9dd3c7c692c63f7fc8b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce472be61a85aa1adfad529c38cd74c8dcd9d17a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148573"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>レポート パーツのトラブルシューティング (レポート ビルダーおよび SSRS)
   レポート パーツを使用するために役立つヒントを以下に示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "36075443"
  自分の権限と同僚の権限を確認するには、レポート サーバー管理者に問い合わせてください。  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>SharePoint サーバーにアップロードしたレポート パーツを検索しても、 表示されない  
- レポート ビルダーを使用してパブリッシュする代わりに、SharePoint ドキュメント ライブラリに手動でアップロードしたレポート パーツは、レポート パーツ ギャラリーに表示されない場合があります。 ギャラリー検索に使用されるレポート サーバーは、SharePoint ドキュメント ライブラリのコンテンツと同期することが必要な場合があります。 詳細については、次を参照してください。 [SharePoint サーバーの全体管理でレポート サーバー ファイル同期機能をアクティブ化](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=154888)msdn.microsoft.com の「します。  
+ レポート ビルダーを使用してパブリッシュする代わりに、SharePoint ドキュメント ライブラリに手動でアップロードしたレポート パーツは、レポート パーツ ギャラリーに表示されない場合があります。 ギャラリー検索に使用されるレポート サーバーは、SharePoint ドキュメント ライブラリのコンテンツと同期することが必要な場合があります。 詳細については、次を参照してください。 [SharePoint サーバーの全体管理でレポート サーバー ファイル同期機能をアクティブ化](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com します。  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>他の人のレポートに画像が表示されない  
  画像ファイルのリンクとなるレポート パーツをパブリッシュした場合、このレポート パーツは単なるリンクになります。 他の人がレポートに画像レポート パーツを作成したときに画像が表示されない場合は、リンク先の画像に対する権限を持っていないことが考えられます。  

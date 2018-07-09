@@ -1,5 +1,5 @@
 ---
-title: (SSAS テーブル) を Excel で分析 |Microsoft ドキュメント
+title: Excel (SSAS テーブル) での分析 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 145b3d1fef33361317635676a79302b58e2eca04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 25e4c20034408acf9413eeb24c4b74dbe5447345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163423"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Excel で分析 (SSAS テーブル)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の "Excel で分析" 機能を使用すると、テーブル モデルの作成者は、開発時にモデル プロジェクトを迅速に分析できます。 "Excel で分析" 機能によって Microsoft Excel が開き、モデル ワークスペース データベースへのデータ ソース接続が作成され、自動的にピボットテーブルがワークシートに追加されます。 ワークスペース データベース オブジェクト (テーブル、列、およびメジャー) は、ピボットテーブルのフィールドの一覧にフィールドとして含まれます。 これによりオブジェクトとデータは、有効なユーザーまたはロールおよびパースペクティブのコンテキスト内で表示できるようになります。  
@@ -55,12 +55,12 @@ ms.locfileid: "36071751"
   
 ##  <a name="bkmk_rt"></a> 関連タスク  
   
-|**トピック**|**description**|  
+|**トピック**|**[説明]**|  
 |---------------|---------------------|  
-|[Excel でテーブル モデルの分析&#40;SSAS 表形式&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|このトピックでは、モデル デザイナーで "Excel で分析" 機能を使用する方法、モデル ワークスペース データベースへのデータ ソース接続を作成する方法、およびワークシートにピボットテーブルを追加する方法について説明します。|  
+|[Excel で表形式モデルの分析&#40;SSAS 表形式&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|このトピックでは、モデル デザイナーで "Excel で分析" 機能を使用する方法、モデル ワークスペース データベースへのデータ ソース接続を作成する方法、およびワークシートにピボットテーブルを追加する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [Excel でテーブル モデルの分析&#40;SSAS 表形式&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
+ [Excel で表形式モデルの分析&#40;SSAS 表形式&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
  [ロール&#40;SSAS 表形式&#41;](roles-ssas-tabular.md)   
  [パースペクティブ&#40;SSAS 表形式&#41;](perspectives-ssas-tabular.md)  
   

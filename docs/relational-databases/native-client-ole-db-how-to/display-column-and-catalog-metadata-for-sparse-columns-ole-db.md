@@ -1,12 +1,12 @@
 ---
-title: 表示列およびカタログ メタデータをスパース列 (OLE DB) |Microsoft ドキュメント
+title: 表示列およびカタログ メタデータをスパース列 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b5cb466a90443a4cccb5403b12f4944f82da3531
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: da3bc80c8b8b0303cbfe760c66c215a3559cbb99
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697573"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421101"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>スパース列に対する列およびカタログ メタデータの表示 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,10 +28,10 @@ ms.locfileid: "35697573"
 
   このサンプルでは、スパース列、非スパース列、columnset 列の 3 つの列を持ったテーブルを作成します。 その後、非スパース列および columnset 列に対する列およびカタログ メタデータを示す OLE DB フラグを表示します。  
   
- このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。 スパース列の詳細については、次を参照してください。 [SQL Server Native Client におけるスパース列のサポート](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)です。  
+ このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。 スパース列の詳細については、次を参照してください。 [SQL Server Native Client におけるスパース列のサポート](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)します。  
   
 ## <a name="example"></a>例  
- INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。  
+ INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
 ```  
 #include <stddef.h>  

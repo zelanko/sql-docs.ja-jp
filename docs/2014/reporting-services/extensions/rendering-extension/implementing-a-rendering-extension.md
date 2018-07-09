@@ -18,15 +18,15 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], implementing
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 191fa7acc00ba4117dbe8eed6a506fbf39905cf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 531880091bfd540fb42a84d63099d2e5006b2e36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210872"
 ---
 # <a name="implementing-a-rendering-extension"></a>表示拡張機能の実装
   表示拡張機能は、レポート サーバーのコンポーネントまたはモジュールで、レポートのデータとレイアウト情報をデバイス固有の形式に変換します。 SQL Server Reporting Services には 6 種類の表示拡張機能 (HTML、Excel、Word、CSV (Text)、XML、Image、PDF) があります。 追加の表示拡張機能を作成して、他の形式でレポートを生成できます。  

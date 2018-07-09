@@ -1,5 +1,5 @@
 ---
-title: クライアント側およびサーバー側の書式設定 (SQLXML 4.0) |Microsoft ドキュメント
+title: クライアント側とサーバー側の書式設定 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQLXML, formats
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f94ae31987bac5194be721b6894c093b69c00d4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8e0fd037296160e16c1b92c44688e7ecc612eb6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164313"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>クライアント側とサーバー側の書式設定 (SQLXML 4.0)
   SQLXML では、次の 2 つの方法で XML ドキュメントの書式設定を行えます。  
@@ -34,10 +34,10 @@ ms.locfileid: "36071832"
   
 -   クライアント側の書式設定  
   
- このセクションには、クライアント側またはサーバー側でのデータベースに対して実行されるクエリによって生成される行セットからのいずれかの XML ドキュメントを書式設定に関する情報が含まれています。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ このセクションには、クライアント側またはサーバー側でのデータベースに対して実行されるクエリによって生成される行セットからのいずれかの XML ドキュメントの書式設定に関する情報が含まれています。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [クライアント側およびサーバー側の XML 書式設定のアーキテクチャ&#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  
+ [クライアント側とサーバー側の XML 書式設定のアーキテクチャ&#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  
  SQLXML でのクライアント側とサーバー側の書式設定の基本を、アーキテクチャの図と共に説明します。  
   
  [サーバー側の XML 書式設定&#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  

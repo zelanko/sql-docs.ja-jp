@@ -1,5 +1,5 @@
 ---
-title: EntityType 要素 (CSDLBI) |Microsoft ドキュメント
+title: EntityType 要素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,32 +12,32 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 530608169372a06a50bdf613668f5650a5caecc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f4f2697b3616e2a47e32b87913c49f76e009153a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277598"
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 要素 (CSDLBI)
-  `EntityType` 要素は、データ モデルで顧客や注文などの高レベル エンティティの構造を表す複合型です。 `bi:EntityType`要素の定義を拡張する[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)で使用される、 [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx)です。  
+  `EntityType` 要素は、データ モデルで顧客や注文などの高レベル エンティティの構造を表す複合型です。 `bi:EntityType`要素の定義を拡張する[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)で使用される、 [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx)します。  
   
  EntityType 要素は、データ モデルに含まれる各エンティティに対して指定される必要があります。 EntityType のサブ要素では、テーブルの列とメジャーが記述されます。 テーブル間のリレーションシップは `EntityContainer` に含まれます。  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
- 次の表に、`EntityType` 要素を定義する要素と属性を示します。 適用される属性を参照しても、 [EntityType](http://msdn.microsoft.com/library/bb399206.aspx)要素。  
+ 次の表に、`EntityType` 要素を定義する要素と属性を示します。 関連項目に適用される属性、 [EntityType](http://msdn.microsoft.com/library/bb399206.aspx)要素。  
   
 |名前|必須かどうか|説明|  
 |----------|-----------------|-----------------|  
 |目次|いいえ|列内のデータの種類を含む文字列です。 値は、データ モデルの DimensionAttributeTypeEnumType の値から取得されます。<br /><br /> DimensionAttributeTypeEnumType の値が ExtendedType の場合は、Contents の値は DimensionAttribute の ExtendedType 要素から取得されます。 クライアントはこれらの値に対応する必要はありません。|  
-|DefaultDetails|いいえ|プロパティ参照のリスト。テーブル内の列のセットを表します。<br /><br /> 参照してください[DefaultDetails 要素&#40;CSDLBI&#41;](defaultdetails-element-csdlbi.md)です。|  
-|DefaultImage|いいえ|エンティティを示すイメージを含む列への参照。<br /><br /> 多次元モデルでは、この要素は、ディメンション属性のバイナリ属性に対応します。 この属性が存在する場合、要素にはただ 1 つの MemberRef 要素が必ず含まれます。<br /><br /> 参照してください[MemberRef 要素&#40;CSDLBI&#41;](memberref-element-csdlbi.md)です。|  
-|DefaultMeasure|いいえ|エンティティ上での計算時に既定として使用されるエンティティのメジャーへの参照です。 指定しない場合は、SUM が既定値です。<br /><br /> 参照してください[MemberRef 要素&#40;CSDLBI&#41;](memberref-element-csdlbi.md)です。|  
-|DisplayKey|いいえ|列またはロール エンドに対する参照のリスト。エンティティ インスタンスを一意に識別する強い識別子を構成します。<br /><br /> 参照してください[DisplayKey 要素&#40;CSDLBI&#41;](displaykey-element-csdlbi.md)です。|  
-|Hieararchy|いいえ|モデルの階層のリスト。<br /><br /> 参照してください[Hierarchy 要素&#40;CSDLBI&#41;](hierarchy-element-csdlbi.md)です。|  
+|DefaultDetails|いいえ|プロパティ参照のリスト。テーブル内の列のセットを表します。<br /><br /> 参照してください[DefaultDetails 要素&#40;CSDLBI&#41;](defaultdetails-element-csdlbi.md)します。|  
+|DefaultImage|いいえ|エンティティを示すイメージを含む列への参照。<br /><br /> 多次元モデルでは、この要素は、ディメンション属性のバイナリ属性に対応します。 この属性が存在する場合、要素にはただ 1 つの MemberRef 要素が必ず含まれます。<br /><br /> 参照してください[MemberRef 要素&#40;CSDLBI&#41;](memberref-element-csdlbi.md)します。|  
+|DefaultMeasure|いいえ|エンティティ上での計算時に既定として使用されるエンティティのメジャーへの参照です。 指定しない場合は、SUM が既定値です。<br /><br /> 参照してください[MemberRef 要素&#40;CSDLBI&#41;](memberref-element-csdlbi.md)します。|  
+|DisplayKey|いいえ|列またはロール エンドに対する参照のリスト。エンティティ インスタンスを一意に識別する強い識別子を構成します。<br /><br /> 参照してください[DisplayKey 要素&#40;CSDLBI&#41;](displaykey-element-csdlbi.md)します。|  
+|Hieararchy|いいえ|モデルの階層のリスト。<br /><br /> 参照してください[Hierarchy 要素&#40;CSDLBI&#41;](hierarchy-element-csdlbi.md)します。|  
 |ReferenceName|はい|Data Analysis Expressions (DAX) クエリでこのエンティティを参照するために使用できる識別子。<br /><br /> この属性が存在しない場合は、エンティティの完全修飾されたフィールド名が使用されます。|  
 |SortMembers|いいえ|並べ替えるの基準となるプロパティの一覧です。 SortDirection 属性が昇順または降順を示します。|  
   

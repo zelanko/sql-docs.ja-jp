@@ -1,12 +1,12 @@
 ---
-title: パラメーターと結果のメタデータ |Microsoft ドキュメント
+title: パラメーターと結果のメタデータ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cb3dfe34259e73bddf1fae44fe831ea4cefdadec
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: de1c9e3a1f0969cfe3e17f08c3e5242f73e27909
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695923"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423421"
 ---
 # <a name="metadata---parameter-and-result"></a>メタデータ - パラメーターと結果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,18 +44,18 @@ ms.locfileid: "35695923"
 |SQL_DESC_PRECISION|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_SCALE|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_TYPE|SQL_TYPE_DATE|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_DESC_TYPE_NAME|**date**|**time**|**smalldatetime** IRD で**datetime2** IPD の|**datetime** IRD で**datetime2** IPD の|**datetime2**|datetimeoffset|  
+|SQL_DESC_TYPE_NAME|**date**|**time**|**smalldatetime** ird、 **datetime2** IPD の|**datetime** ird、 **datetime2** IPD の|**datetime2**|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |SQL_CA_SS_SERVER_TYPE|なし|なし|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|なし|  
   
  値の範囲が連続しない場合があります。 たとえば、"8,10..16" には 9 がありません。 有効桁数が 0 より大きい場合は、小数点が追加されるためです。  
   
- **datetime2**の typename として返される**smalldatetime**と**datetime**ドライバーを使用するためこの共通の型としてすべての送信**SQL_TYPE_TIMESTAMP**サーバーへの値。  
+ **datetime2**の typename として返される**smalldatetime**と**datetime**ドライバーとして使用するためこの共通の型すべてを転送するため**SQL_TYPE_TIMESTAMP**値をサーバーにします。  
   
- SQL_CA_SS_VARIANT_SQL_TYPE は新しい記述子フィールドです。 このフィールドは、アプリケーションに関連付けられている値の型の指定を有効にするには、IRD と IPD に追加された**sqlvariant** (SQL_SSVARIANT) 列およびパラメーター  
+ SQL_CA_SS_VARIANT_SQL_TYPE は新しい記述子フィールドです。 このフィールドは、アプリケーションに関連付けられている値の型を指定するを有効にするには、IRD と IPD に追加された**sqlvariant** (SQL_SSVARIANT) 列およびパラメーター  
   
- SQL_CA_SS_SERVER_TYPE は新しい IPD 専用フィールドです。このフィールドによって、アプリケーションは SQL_TYPE_TYPETIMESTAMP (または C 型の SQL_C_TYPE_TIMESTAMP を持つ SQL_SS_VARIANT) としてバインドされるパラメーターの値がサーバーに送信される方法を制御できます。 ときに SQL_DESC_CONCISE_TYPE が SQL_TYPE_TIMESTAMP 場合 (または sql_ss_variant および C 型が SQL_C_TYPE_TIMESTAMP) SQL_CA_SS_SERVER_TYPE の値では、表形式データ ストリーム (TDS) の型パラメーターの値の決定 SQLExecute または SQLExecDirect が呼び出されると、、次のようにします。  
+ SQL_CA_SS_SERVER_TYPE は新しい IPD 専用フィールドです。このフィールドによって、アプリケーションは SQL_TYPE_TYPETIMESTAMP (または C 型の SQL_C_TYPE_TIMESTAMP を持つ SQL_SS_VARIANT) としてバインドされるパラメーターの値がサーバーに送信される方法を制御できます。 ときに SQL_DESC_CONCISE_TYPE が SQL_TYPE_TIMESTAMP 場合 (または sql_ss_variant および C 型が SQL_C_TYPE_TIMESTAMP) SQLExecute または SQLExecDirect が呼び出されると、SQL_CA_SS_SERVER_TYPE の値が表形式データ ストリーム (TDS) の型のパラメーター値を決定します、次のようにします。  
   
 |SQL_CA_SS_SERVER_TYPE の値|SQL_DESC_PRECISION の有効な値|SQL_DESC_LENGTH の有効な値|TDS 型|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -69,11 +69,11 @@ ms.locfileid: "35695923"
   
 -   準備時または実行時 (SQLExecute、SQLExecDirect、SQLSetPos、または SQLBulkOperations が呼び出されたとき)  
   
--   SQLPrepare でを呼び出すことによって準備で遅延なしアプリケーション強制的遅延時に無効な場合を準備するか、SQLNumResultCols を呼び出すことによって SQLDescribeCol、または SQLDescribeParam しない場合は準備されたステートメントが実行します。  
+-   遅延なしで SQLPrepare を呼び出すことによって準備アプリケーション力、遅延時に無効な場合、準備または SQLNumResultCols を呼び出して SQLDescribeCol、または SQLDescribeParam が準備されたステートメントが実行します。  
   
- Sqlsetdescfield によるへの呼び出しによって SQL_CA_SS_SERVER_TYPE を設定すると、ときに、その値は、SQL_SS_TYPE_DEFAULT、SQL_SS_TYPE_SMALLDATETIME、または SQL_SS_TYPE_DATETIME にする必要があります。 これらの値ではない場合、SQL_ERROR が返され、"無効な属性またはオプションの ID" というメッセージで SQLState HY092 の診断レコードが記録されます。  
+ Sqlsetdescfield による呼び出しによって SQL_CA_SS_SERVER_TYPE を設定すると、その値は、SQL_SS_TYPE_DEFAULT、SQL_SS_TYPE_SMALLDATETIME、または SQL_SS_TYPE_DATETIME になければなりません。 これらの値ではない場合、SQL_ERROR が返され、"無効な属性またはオプションの ID" というメッセージで SQLState HY092 の診断レコードが記録されます。  
   
- SQL_CA_SS_SERVER_TYPE 属性でサポートされる機能に依存するアプリケーションで使用できる**datetime**と**smalldatetime**、ではなく**datetime2**です。 たとえば、 **datetime2**の使用を要求、 **dateadd**と**datediif**関数、一方**datetime**と**smalldatetime**算術演算子を許可することもできます。 ほとんどのアプリケーションではこの属性を使用する必要はないので、使用しないでください。  
+ サポートされる機能に依存するアプリケーションは、SQL_CA_SS_SERVER_TYPE 属性を使用できます**datetime**と**smalldatetime**、なく**datetime2**します。 たとえば、 **datetime2**の使用が必要です、 **dateadd**と**datediif**関数、一方**datetime**と**smalldatetime**算術演算子を許可することもできます。 ほとんどのアプリケーションではこの属性を使用する必要はないので、使用しないでください。  
   
 ## <a name="information-returned-in-ird-fields"></a>IRD フィールドに返される情報  
  IRD フィールドには次の情報が返されます。  

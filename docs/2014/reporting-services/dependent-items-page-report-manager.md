@@ -1,5 +1,5 @@
 ---
-title: 依存アイテム ページ (レポート マネージャー) |Microsoft ドキュメント
+title: 依存アイテム ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0496334695c72a78afe3fedb87763cfaacd66e35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e483d24a2b7e9463c5fb43b9bc2f00fd41a3a070
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164113"
 ---
 # <a name="dependent-items-page-report-manager"></a>[依存アイテム] ページ (レポート マネージャー)
   [依存アイテム] ページには、共有データ ソースを参照するレポートおよびモデルの一覧を表示できます。 各アイテムの種類のアイコンはそのアイテムがレポートであるか、またはモデルであるかを示します。 このページはリスト ビューまたは詳細ビューで表示できます。 アイテムごとの詳細な情報を表示するには詳細ビューを使用します。 詳細ビューでは、より多くのページ オプションを利用できます。 共有データ ソースを管理しやすくするために、このページには、データ ソースを使用するレポートおよびモデルへのリンク、レポートやモデルを最後に実行または変更した時点の基準、使用しないレポートやモデルを簡単に削除できる [削除] ボタン、レポートやモデルが必要かどうかを判断する間それらを別の場所に移動できる [移動] ボタンがあります。  
@@ -38,13 +38,13 @@ ms.locfileid: "36075682"
 4.  **[依存アイテム]** タブをクリックします。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  レポートまたはモデルの名前が表示されます。 レポート名をクリックして、レポートを開きます。 モデルの名前をクリックすると、対応するプロパティ ページが開きます。  
   
- **description**  
+ **[説明]**  
  レポートまたはモデルの説明が表示されます。  
   
- **Delete**  
+ **削除**  
  レポート サーバー データベースからレポートまたはモデルを削除する場合にクリックします。 削除する各アイテムの横のチェック ボックスをオンにしてから、 **[削除]** をクリックします。  
   
  **Move**  
@@ -53,20 +53,20 @@ ms.locfileid: "36075682"
  **[編集]**  
  [プロパティ] アイコンをクリックすると、レポートまたはモデルのプロパティ ページにアクセスできます。  
   
- **Type**  
+ **型**  
  アイテムの種類を示すアイコンが表示されます。  
   
  **変更された日付**  
  前回レポートまたはモデルを変更した日時が表示されます。  
   
- **によって変更**  
+ **によって変更されました。**  
  前回アイテムのプロパティを変更したユーザーの名前が表示されます。  
   
  **実行時に**  
  レポート実行スナップショットとして実行するレポートの場合、前回レポートを更新した日時が表示されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート マネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
+ [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  

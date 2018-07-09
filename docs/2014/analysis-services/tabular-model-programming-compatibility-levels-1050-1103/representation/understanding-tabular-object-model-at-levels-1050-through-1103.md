@@ -1,5 +1,5 @@
 ---
-title: 表形式オブジェクト モデルについて |Microsoft ドキュメント
+title: 表形式オブジェクト モデルについて |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e426dd1deca106c5dd8da239d67f025d1dd6e95b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86fc068d0ff8278b3004c585b3d3d4bcf10facdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152983"
 ---
 # <a name="understanding-the-tabular-object-model"></a>テーブル オブジェクト モデルについて
   テーブル モデルは、テーブル、リレーションシップ、階層、パースペクティブ、メジャー、および主要業績に関する論理的表現です。 ここでは、AMO を使用した内部実装について説明します。 参照してください[Analysis Management Objects を使用した開発&#40;AMO&#41; ](../../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)までに AMO を使用していない場合。  
   
- ここで使用するアプローチはトップダウンであり、テーブル モデルに関連するすべてのオブジェクトを論理的に AMO オブジェクトにマップし、必須の対話型操作やワークフローについて説明します。 AMO、AMO to Tabular を使用して表形式モデルを作成するソース コード サンプルは、Codeplex から入手できます。 サンプル内のコードに関する重要な注意: コードはここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。 サンプルは、サポートや保証なしで提供されます。  
+ ここで使用するアプローチはトップダウンであり、テーブル モデルに関連するすべてのオブジェクトを論理的に AMO オブジェクトにマップし、必須の対話型操作やワークフローについて説明します。 AMO、AMO to Tabular を使用して表形式モデルを作成するソース コード サンプルは Codeplex から入手できます。 サンプル内のコードに関する重要な注意: コードはここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。 サンプルは、サポートや保証なしで提供されます。  
   
 ## <a name="database-representation"></a>データベース表現  
  データベースは、テーブル モデルに対応するコンテナー オブジェクトを提供します。 テーブル モデル内のすべてのオブジェクトは、データベースに格納されます。 AMO オブジェクトの場合、データベース表現は <xref:Microsoft.AnalysisServices.Database> と一対一マッピングのリレーションシップにあり、その他の主要 AMO オブジェクトを必要としません。 これは AMO データベース オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
@@ -35,7 +35,7 @@ ms.locfileid: "36075820"
 ## <a name="connection-representation"></a>接続表現  
  接続によって、テーブル モデル ソリューションに含めるデータとモデル自体の間のリレーションシップが確立されます。 AMO オブジェクトの場合、接続は <xref:Microsoft.AnalysisServices.DataSource> と一対一マッピングのリレーションシップにあり、その他の主要 AMO オブジェクトを必要としません。 これは AMO データソース オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
   
- 参照してください[接続表現&#40;Tabular&#41; ](connection-representation-tabular.md)作成し、データ ソースの表現を操作する方法の詳細についてはします。  
+ 参照してください[接続表現&#40;Tabular&#41; ](connection-representation-tabular.md)作成し、データ ソース表現を操作する方法の詳細についてはします。  
   
 ## <a name="table-representation"></a>テーブル表現  
  テーブルは、データベースのデータを格納するデータベース オブジェクトです。 AMO オブジェクトでは、テーブルは一対多マッピングのリレーションシップを持ちます。 テーブルは必要な主要オブジェクトである次の AMO オブジェクトを使用して表現されます。<xref:Microsoft.AnalysisServices.DataSourceView>、<xref:Microsoft.AnalysisServices.Dimension>、<xref:Microsoft.AnalysisServices.Cube>、<xref:Microsoft.AnalysisServices.CubeDimension>、<xref:Microsoft.AnalysisServices.MeasureGroup>、および <xref:Microsoft.AnalysisServices.Partition>。ただし、これは上記の AMO オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
@@ -69,7 +69,7 @@ ms.locfileid: "36075820"
  参照してください[キー業績評価指標表現&#40;Tabular&#41; ](tables-key-performance-indicator-representation.md)を作成して、KPI 表現を操作する方法の詳細についてはします。  
   
 ### <a name="partition-representation"></a>パーティション表現  
- 運用上の目的のために、結合させるとテーブルを形成する異なる行のサブセットにテーブルを分割することができます。 それぞれのサブセットがテーブルのパーティションです。 AMO オブジェクトでは、パーティション表現は一対一のマッピングのリレーションシップに<xref:Microsoft.AnalysisServices.Partition>とその他の主要 AMO オブジェクトは必要ありません。 これは AMO データベース オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
+ 運用上の目的のために、結合させるとテーブルを形成する異なる行のサブセットにテーブルを分割することができます。 それぞれのサブセットがテーブルのパーティションです。 AMO オブジェクトでは、パーティション表現は、一対一マッピングのリレーションシップ<xref:Microsoft.AnalysisServices.Partition>とその他の主要 AMO オブジェクトは必要ありません。 これは AMO データベース オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
   
  参照してください[パーティション表現&#40;Tabular&#41; ](tables-partition-representation.md)作成し、パーティション表現を操作する方法の詳細についてはします。  
   

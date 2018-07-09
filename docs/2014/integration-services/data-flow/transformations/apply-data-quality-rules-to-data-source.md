@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a965e8f2-004d-4ccc-8523-a185b35b26e2
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 48ed6d35bb9955579041ce6e4b1f1c4d35617ace
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 232ea4b3c3d8c54d0d4fa3938ccab5cb91664b03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160853"
 ---
 # <a name="apply-data-quality-rules-to-data-source"></a>データ ソースにデータ品質ルールを適用する
   Data Quality Services (DQS) を使用して、DQS クレンジング変換をデータ ソースに接続することで、パッケージ データ フロー内のデータを修正できます。 DQS の詳細については、「 [Data Quality Services の概念](../../../data-quality-services/data-quality-services-concepts.md)」を参照してください。 変換の詳細については、「[DQS クレンジング変換](dqs-cleansing-transformation.md)」を参照してください。  

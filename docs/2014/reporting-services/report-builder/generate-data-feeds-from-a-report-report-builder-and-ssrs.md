@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 62e0dead34079abbceda90dabca6f44c7dbd5126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4ee1402202e08ab4ba718238b454f5eb4e548118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210832"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
-  レポートから Atom 準拠のデータ フィードを生成してなどのアプリケーションで、データ フィードを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]クライアントは、データ フィードを使用することができます。  
+  レポートから Atom 準拠のデータ フィードを生成してなどのアプリケーションでデータ フィードを使用し、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]クライアントは、データ フィードを使用することができます。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 表示拡張機能では、レポートで使用可能なデータ フィードを一覧表示する Atom サービス ドキュメントが生成されます。 このドキュメントには、レポート内の各データ領域について 1 つ以上のデータ フィードが一覧表示されます。 データ領域の種類およびデータ領域に表示されるデータによっては、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、1 つのデータ領域から複数のデータ フィードを生成することがあります。  
   

@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 行セット (OLE DB) |Microsoft ドキュメント
+title: LINKEDSERVERS 行セット (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,22 +19,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 08dabc873c9d80b3759f6a425f9e963064773350
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 975008ce3de833315ea9319e85880d7789517028
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949827"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421041"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>スキーマ行セットの LINKEDSERVERS 行セット
+# <a name="schema-rowsets---linkedservers-rowset"></a>スキーマ行セット - LINKEDSERVERS 行セット
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  **LINKEDSERVERS**行セットに含めることが組織のデータ ソースを列挙する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分散クエリ。  
+  **LINKEDSERVERS**行セットに参加できる組織のデータ ソースを列挙する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分散クエリ。  
   
  **LINKEDSERVERS**行セットには、次の列が含まれています。  
   
-|列名|型を表すインジケーター|Description|  
+|列名|型を表すインジケーター|説明|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|リンク サーバーの名前です。|  
 |SVR_PRODUCT|DBTYPE_WSTR|メーカーなどの名前。リンク サーバーの名前で表されるデータ ストアの種類を識別します。|  

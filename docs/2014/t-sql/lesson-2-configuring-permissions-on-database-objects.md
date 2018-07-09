@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database permissions
 ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 18ce494260efee75d681c2786b221545c79aa33d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: eaa016c0ab656ada2ddd29a55a1f9bb29bc7c10b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210372"
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>レッスン 2: データベース オブジェクトに対する権限の構成
   データベースへのアクセス権をユーザーに付与するには、次の 3 つの手順があります。 まず、ログインを作成します。 ユーザーはこのログインを使用して、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]に接続できます。 次に、指定したデータベースでユーザーとしてログインを構成します。 最後に、データベース オブジェクトに対する権限をユーザーに付与します。 このレッスンではこれらの 3 つの手順を紹介し、ビューとストアド プロシージャをオブジェクトとして作成する方法について説明します。  

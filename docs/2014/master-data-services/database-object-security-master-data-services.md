@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 162d60e3a526c70a1624bfdd754076fb08566285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5195df44c591f4c605cfd33aa6bb9934c7d54908
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163503"
 ---
 # <a name="database-object-security-master-data-services"></a>データベース オブジェクト セキュリティ (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでは、データは複数のデータベース テーブルに格納されており、ビューで表示できます。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで保護されている可能性がある情報は、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースにアクセスできるユーザーであれば参照できます。  
@@ -92,7 +92,7 @@ ms.locfileid: "36075311"
 |新しい管理者の SID を決定する|mdm.tblUser|SELECT|  
 |システム管理者アカウントを変更します。|mdm.udpSecuritySetAdministrator|EXECUTE|  
   
- 詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)です。  
+ 詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
   
 ##  <a name="SysSettings"></a> システム設定を構成する  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]での動作を制御するために構成可能なシステム設定が用意されています。 これらの設定は [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] で調整できます。または、UPDATE アクセス権を持つ場合は、mdm.tblSystemSetting データベース テーブルで直接調整できます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../../2014/master-data-services/system-settings-master-data-services.md)」を参照してください。  

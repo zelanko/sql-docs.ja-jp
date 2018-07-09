@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 12: ロールの作成 |Microsoft ドキュメント'
+title: 'レッスン 12: ロールの作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7c3b98fbbcbedca2a8bcdbefcd8e41e5d3d5c60b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 598491865120b2d401b0ca2447701cbebc12ce8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278508"
 ---
 # <a name="lesson-12-create-roles"></a>レッスン 12: ロールの作成
   このレッスンでは、ロールを作成します。 ロールを使用すると、ロール メンバーである Windows ユーザーのみにアクセスを制限することで、モデル データベース オブジェクトとデータにセキュリティを提供できます。 各ロールは、1 つの権限 (なし、読み取り、読み取りと実行、実行、または管理者) を使用して定義されます。 モデルのロールは、モデルの作成時に [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]の [ロール マネージャー] ダイアログ ボックスを使用して定義できます。 モデルを配置した後は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用してロールを管理できます。 詳細については、「[ロール (SSAS テーブル)](tabular-models/roles-ssas-tabular.md)」 を参照してください。  
@@ -52,7 +52,7 @@ ms.locfileid: "36072450"
   
      "なし" 権限を設定された新しいロールがリストに追加されます。  
   
-3.  [でをクリックし、新しいロールを**名前**] 列にロールの名前`Internet Sales Manager`です。  
+3.  [でをクリックし、新しいロールを**名前**] 列にロールの名前を変更`Internet Sales Manager`。  
   
 4.  **[権限]** 列で、ドロップダウン リストをクリックし、 **[読み取り]** 権限を選択します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36072450"
   
      "なし" 権限を設定された新しいロールがリストに追加されます。  
   
-3.  [でをクリックし、新しいロールを**名前**] 列にロールの名前`Internet Sales US`です。  
+3.  [でをクリックし、新しいロールを**名前**] 列にロールの名前を変更`Internet Sales US`。  
   
 4.  **[権限]** 列で、ドロップダウン リストをクリックし、 **[読み取り]** 権限を選択します。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36072450"
   
 1.  **[ロール マネージャー]** ダイアログ ボックスで **[新規]** をクリックします。  
   
-2.  [でをクリックし、新しいロールを**名前**] 列にロールの名前`Internet Sales Administrator`です。  
+2.  [でをクリックし、新しいロールを**名前**] 列にロールの名前を変更`Internet Sales Administrator`。  
   
 3.  **[権限]** 列で、ドロップダウン リストをクリックし、 **[管理者]** 権限を選択します。  
   

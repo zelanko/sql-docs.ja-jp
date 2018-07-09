@@ -1,5 +1,5 @@
 ---
-title: CrossProduct 要素 (XMLA) |Microsoft ドキュメント
+title: CrossProduct 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1324a3c9449383301242ab6d0e76f94c636d9b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0d76cc463d39a3b33de41f1c342f5d9f8f800bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278241"
 ---
 # <a name="crossproduct-element-xmla"></a>CrossProduct 要素 (XMLA)
-  各階層のメンバーの順序付けされたセットの間のクロス積を含む、[軸](axis-element-xmla.md)を使用する要素、 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)によって返されるデータ型、 [Execute](../xml-elements-methods-execute.md)メソッドです。  
+  各階層のメンバーの順序付けされたセット間のクロス積を含む、[軸](axis-element-xmla.md)を使用する要素、 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)によって返されるデータ型、 [Execute](../xml-elements-methods-execute.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -72,10 +72,10 @@ ms.locfileid: "36073117"
 |サイズ|必要な`Integer`属性。 `CrossProduct` 要素によって表されるクロス積に含まれる組の数を示します。|  
   
 ## <a name="remarks"></a>コメント  
- クライアント アプリケーションを設定した場合、`AxisFormat`プロパティを*ClusterFormat*、各軸上のメンバーはこれでは、各クラスターは各階層のメンバーの順序付けされたセットの間のクロス積を表します。 クラスターに分割します。 それぞれのクラスターは `CrossProduct` 要素によって表されます。 それぞれの `CrossProduct` 要素には、軸上の各階層に対する 1 つの `Members` 要素が含まれます。 1 つの `CrossProduct` 要素は、1 つの階層のメンバーを含むことができます。  
+ クライアント アプリケーションを設定した場合、`AxisFormat`プロパティを*ClusterFormat*、各軸のメンバーは、各クラスターは各階層のメンバーの順序付けされたセット間のクロス積を表します。 クラスターに分けられます。 それぞれのクラスターは `CrossProduct` 要素によって表されます。 それぞれの `CrossProduct` 要素には、軸上の各階層に対する 1 つの `Members` 要素が含まれます。 1 つの `CrossProduct` 要素は、1 つの階層のメンバーを含むことができます。  
   
 ## <a name="example"></a>例  
- 次の例の構造を示しています、`CrossProduct`クライアントを指定すると要素*ClusterFormat*の`AxisFormat`軸の次のメンバーを指定された、XMLA プロパティ。  
+ 次の例の構造を示しています、`CrossProduct`要素をクライアントが指定したときに*ClusterFormat*の`AxisFormat`軸の次のメンバーが指定の XMLA プロパティ。  
   
 ||||||  
 |-|-|-|-|-|  

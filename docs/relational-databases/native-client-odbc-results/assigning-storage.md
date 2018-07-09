@@ -1,12 +1,12 @@
 ---
-title: 記憶域を割り当てる |Microsoft ドキュメント
+title: ストレージの割り当て |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a1c9a317e57367b43a59219b830acfd8f0276e8a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: da602e1613a6fafa86f1f6a701731c232aadfceb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695783"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417841"
 ---
 # <a name="assigning-storage"></a>ストレージの割り当て
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "35695783"
 
   アプリケーションでは、SQL ステートメントの実行前後に、結果用のストレージを割り当てることができます。 アプリケーションで最初に SQL ステートメントを準備または実行すると、結果のストレージを割り当てる前に、結果セットに関する情報を取得できます。 たとえば、結果セットが不明であれば、アプリケーションでは、列にストレージを割り当てる前に、列数を取得する必要があります。  
   
- アプリケーションが呼び出す関連付けるにはデータの列に対する記憶域、 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)渡します。  
+ ストレージ データの列に関連付けるにアプリケーションを呼び出す[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)を渡します。  
   
 -   データの変換先のデータ型。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "35695783"
   
 -   列方向のバインドは、各列を変数の独自の配列にバインドすると終了します。  
   
-     呼び出して、列方向のバインドが指定されて[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)で*属性*sql_attr_row_bind_type と*ValuePtr*を SQL_BIND_BY_COLUMN に設定します。 すべての配列には、同じ数の要素を保持する必要があります。  
+     呼び出すことによって、列方向のバインドが指定されて[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)で*属性*SQL_ATTR_ROW_BIND_TYPE に、 *ValuePtr* SQL_BIND_BY_COLUMN に設定します。 すべての配列には、同じ数の要素を保持する必要があります。  
   
 -   行方向のバインドは、SQL ステートメント内のすべてのパラメーターを 1 単位として、パラメーターの各変数を保持する構造体の配列にバインドすると終了します。  
   
-     呼び出して、行方向のバインドが指定されて**SQLSetStmtAttr**で*属性*sql_attr_row_bind_type と*ValuePtr*保留されている構造体のサイズに設定、結果を受け取る変数は、列を設定します。  
+     呼び出すことによって、行方向のバインドが指定されて**SQLSetStmtAttr**で*属性*SQL_ATTR_ROW_BIND_TYPE に、 *ValuePtr*いる構造体のサイズに設定、列の結果を受け取る変数に設定します。  
   
  また、アプリケーションでは、SQL_ATTR_ROW_ARRAY_SIZE を列または行の配列内の要素数に設定し、SQL_ATTR_ROW_STATUS_PTR と SQL_ATTR_ROWS_FETCHED_PTR も設定します。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
 - administering replication, validating data
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - validating replicated data
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 678d5865b379ac1151f4cf85f63b77720ef4005a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0fad815b99f6daf9ba14e765f394cfe1e416aaa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211222"
 ---
 # <a name="validate-replicated-data"></a>レプリケートされたデータの検証
   トランザクション レプリケーションとマージ レプリケーションを使用すると、サブスクライバーのデータがパブリッシャーのデータと一致するかどうかを検証できます。 検証は、1 つのパブリケーションの特定のサブスクリプション、またはすべてのサブスクリプションに対して行うことができます。 次のいずれかの種類の検証を指定すると、ディストリビューション エージェントまたはマージ エージェントは次回の実行時にデータを検証します。  
@@ -48,7 +48,7 @@ ms.locfileid: "36073704"
   
  データ検証の問題に対処するために、次の点を検討してください。  
   
--   失敗が通知されるように、 **[レプリケーション: サブスクライバーでデータ検証で問題が見つかりました]** というレプリケーション警告を設定します。 詳細については、次を参照してください。 [構成の定義済みのレプリケーションの警告&#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) です。  
+-   失敗が通知されるように、 **[レプリケーション: サブスクライバーでデータ検証で問題が見つかりました]** というレプリケーション警告を設定します。 詳細については、次を参照してください。 [構成の定義済みのレプリケーションの警告&#40;SQL Server Management Studio & #41 41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) します。  
   
 -   検証の失敗はアプリケーションにとって問題となりますか? 検証の失敗が問題となる場合、データを手動で更新して同期するか、サブスクリプションを再初期化してください。  
   

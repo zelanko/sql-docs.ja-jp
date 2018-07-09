@@ -1,12 +1,12 @@
 ---
-title: カーソル用の SQL ステートメントの作成 |Microsoft ドキュメント
+title: カーソル用の SQL ステートメントの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7a8e1465528a72ee8a6cbacccc6d5186ff3d7af9
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 3fc247de8bfc69a1851f8c1bf820a9076cf562ad
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696333"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416951"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>カーソル用の SQL ステートメントの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、サーバー カーソルを使用して、ODBC 仕様で定義されたカーソル機能を実装します。 ODBC アプリケーションを使用してカーソル動作を制御する[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)別のステートメント属性を設定します。 次に、属性とその既定値を示します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、サーバー カーソルを使用して、ODBC 仕様で定義されているカーソル機能を実装します。 ODBC アプリケーションを使用してカーソルの動作を制御する[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)別のステートメント属性を設定します。 次に、属性とその既定値を示します。  
   
 |属性|既定|  
 |---------------|-------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "35696333"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- これらのオプションが設定されている既定値には、SQL ステートメントの実行時に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーには、結果セットを実装する、サーバー カーソルは使用しません。 代わりに、既定の結果セットを使用します。 これらのオプションのいずれかが、SQL ステートメントの実行時に、既定値から変更された場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは結果セットを実装する、サーバー カーソルを使用しようとしています。  
+ SQL ステートメントの実行時にこれらのオプションが既定値に設定されて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、結果セットを実装するために、サーバー カーソルを使用しません。 代わりに、既定の結果セットを使用します。 これらのオプションは、SQL ステートメントの実行時にその既定値から変更された場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは結果セットを実装するために、サーバー カーソルを使用しようとしています。  
   
  既定の結果セットは、すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをサポートします。 既定の結果セットを使用するときに実行できる SQL ステートメントの種類に制限はありません。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "35696333"
   
      キーワード FOR BROWSE または INTO を伴う SELECT ステートメント。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、上記の条件のいずれかに該当する SQL ステートメントをサーバー カーソルを使用して実行した場合、サーバー カーソルは暗黙的に既定の結果セットに変換されます。 後に**SQLExecDirect**または**SQLExecute**属性の既定の設定に戻す設定は、カーソル、sql_success_with_info が返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、上記の条件のいずれかに該当する SQL ステートメントをサーバー カーソルを使用して実行した場合、サーバー カーソルは暗黙的に既定の結果セットに変換されます。 後**SQLExecDirect**または**SQLExecute**属性は既定の設定に戻して、カーソル、SQL_SUCCESS_WITH_INFO が返されます。  
   
  上記の分類に該当しない SQL ステートメントは、ステートメント属性の設定がどのようであっても実行できます。既定の結果セット、サーバー カーソルを問わず、どちらも正常に機能します。  
   
@@ -80,7 +80,7 @@ szErrorMsgString: "[Microsoft][SQL Server Native Client][SQL Server]
                Cursor type changed."  
 ```  
   
- このメッセージを受信する ODBC アプリケーションから呼び出せる[SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)に現在のカーソル設定を確認します。  
+ このメッセージを受信する ODBC アプリケーションで呼び出すことができます[SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)現在のカーソル設定を決定します。  
   
  サーバー カーソルを使用しているときに、複数の SELECT ステートメントから構成されるプロシージャを実行すると、次のエラーが発生します。  
   
@@ -107,6 +107,6 @@ szErrorMsgString: [Microsoft][SQL Server Native Client][SQL Server]
  ODBC アプリケーションで上記のエラーが発生した場合、カーソルのすべてのステートメント属性を既定値に戻してからステートメントを実行する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [クエリを実行する&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [クエリの実行&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

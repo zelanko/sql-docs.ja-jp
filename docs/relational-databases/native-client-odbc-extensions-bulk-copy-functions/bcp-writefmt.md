@@ -1,12 +1,12 @@
 ---
-title: bcp_writefmt |Microsoft ドキュメント
+title: bcp_writefmt |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6486dcf5d77ae1543c85947e2f62efed625979fc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 79061d9b12fa21e015c74fd35804efbf097f4db3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697763"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412121"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,14 +55,14 @@ RETCODE bcp_writefmt (
  SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>コメント  
- フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 呼び出す[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)と[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)データ ファイルの形式を定義します。 **bcp_writefmt**によって参照されるファイルのこの定義を保存します。 *szFormatFile*です。 詳細については、次を参照してください。 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)です。  
+ フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 呼び出す[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)と[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)データ ファイルの形式を定義します。 **bcp_writefmt**によって参照されるファイルのこの定義を保存します。 *szFormatFile*します。 詳細については、次を参照してください。 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)します。  
   
- 構造の詳細については**bcp**データ フォーマット ファイルを参照してください[bcp ユーティリティを使用しての一括データのエクスポートとインポート&#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)です。  
+ 構造の詳細については**bcp**データ形式のファイルを参照してください[インポートおよび bcp ユーティリティを使用した一括データのエクスポート&#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)します。  
   
- 保存されたフォーマット ファイルを読み込むには、次のように使用します。 [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)です。  
+ 保存されたフォーマット ファイルを読み込むには、次のように使用します。 [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)します。  
   
 > [!NOTE]  
->  によって生成されるフォーマット ファイル**bcp_writefmt**のバージョンでのみサポートされて、 **bcp**ユーティリティが付属[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]version 7.0 以降。  
+>  によって生成されたフォーマット ファイル**bcp_writefmt**のバージョンでのみサポートされて、 **bcp**ユーティリティが付属[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]version 7.0 以降。  
   
 ## <a name="example"></a>例  
   

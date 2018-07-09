@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9d65de341b650966bb137bc347b9f4e03d872b46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 865a135e144dd93a60a8f74da6559637b2c566d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154243"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>検索で使用するワード ブレーカーを以前のバージョンに戻す
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、フルテキスト検索でサポートされているすべての言語 (韓国語を除く) 用のワード ブレーカーおよびステマーのバージョンがインストールされ、有効になります。 このトピックでは、これらのコンポーネントのこのバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。  

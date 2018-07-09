@@ -1,12 +1,12 @@
 ---
-title: SQLTablePrivileges |Microsoft ドキュメント
+title: SQLTablePrivileges |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,20 +18,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9f83d78eaeca69e532a10638851dd613a7da8a64
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8b820cd83ecc5cb5196afb80c6942fee477d8731
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694403"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429591"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLTablePrivileges**は静的カーソルで実行することができます。 実行すると**SQLTablePrivileges**更新可能な (キーセット ドリブンまたは動的) の結果に対して、カーソルの種類を示す SQL_SUCCESS_WITH_INFO が変更されました。  
+  **SQLTablePrivileges**静的カーソルで実行できます。 実行しようとすると、 **SQLTablePrivileges**で更新可能な (キーセット ドリブンまたは動的) 返しますが、カーソルの種類を示す SQL_SUCCESS_WITH_INFO が変更されました。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーをサポートしているレポート情報のリンク サーバー上のテーブルの 2 部構成の名前を受け入れることにより、 *CatalogName*パラメーター: *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、リンク サーバー上のテーブルに関する情報のレポートをサポートの 2 つの部分名をそのまま使用して、 *CatalogName*パラメーター: *Linked_Server_Name.Catalog_Name*.  
   
 ## <a name="see-also"></a>参照  
  [SQLTablePrivileges 関数](http://go.microsoft.com/fwlink/?LinkId=59373\)   

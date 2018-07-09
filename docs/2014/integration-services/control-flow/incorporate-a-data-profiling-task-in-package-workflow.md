@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 31c3d3bdcfc2a986fc62ba32e2df443d74d7a8fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c35cc475af0b083ce8f4a0f6afcb0c654b9bc266
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165003"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>パッケージ ワークフローでデータ プロファイル タスクを使用する
   データ プロファイルとクリーンアップは、初期段階で自動化されるプロセスの対象にはなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、データ プロファイル タスクを出力する場合、通常、視覚的な分析とユーザーの判断によって、報告された違反が意味のあるものか過剰であるかを判断する必要があります。 データ品質の問題を認識した後でも、クリーンアップに最適な方法に取り組む綿密な計画が必要です。  
@@ -106,9 +106,9 @@ ms.locfileid: "36071726"
   
 -   **[変数]** ウィンドウで、次の 2 つのパッケージ変数を追加して構成します。  
   
-    -   名を入力`ProfileConnectionName`、変数のいずれかの設定には、この変数の型と**文字列**です。  
+    -   名前を入力します`ProfileConnectionName`、変数のいずれかの設定には、この変数の型と**文字列**。  
   
-    -   名前を入力`AddressLine2NullRatio`、他の変数とセットには、この変数の型**二重**です。  
+    -   名前を入力します`AddressLine2NullRatio`、その他の変数および設定するには、この変数の型**二重**。  
   
 ### <a name="configure-the-data-profiling-task"></a>データ プロファイル タスクの構成  
  データ プロファイル タスクは、次のように構成する必要があります。  
@@ -146,9 +146,9 @@ ms.locfileid: "36071726"
   
 4.  **[スクリプト]** ページで、使用するプログラミング言語を選択します。 次に、2 つのパッケージ変数をスクリプトで使用できるようにします。  
   
-    1.  `ReadOnlyVariables``ProfileConnectionName`です。  
+    1.  `ReadOnlyVariables`、`ProfileConnectionName`します。  
   
-    2.  **ReadWriteVariables**`AddressLine2NullRatio`です。  
+    2.  **ReadWriteVariables**、`AddressLine2NullRatio`します。  
   
 5.  **[スクリプトの編集]** を選択して、スクリプト開発環境を開きます。  
   
@@ -270,9 +270,9 @@ ms.locfileid: "36071726"
 #### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>変数からプロファイル出力を読み込むコード  
  上記の手順は、データ プロファイル タスクの出力をファイルから読み込む方法を示していますが、 この出力をパッケージ変数から読み込む方法もあります。 出力を変数から読み込むには、サンプル コードを次のように変更する必要があります。  
   
--   呼び出す、`LoadXml`のメソッド、`XmlDocument`クラスの代わりに、`Load`メソッドです。  
+-   呼び出す、`LoadXml`のメソッド、`XmlDocument`クラスの代わりに、`Load`メソッド。  
   
--   スクリプト タスク エディターで、タスクのプロファイル出力を格納するパッケージ変数の名前を追加する`ReadOnlyVariables` ボックスの一覧です。  
+-   スクリプト タスク エディターで、タスクのプロファイル出力を格納するパッケージ変数の名前を追加する`ReadOnlyVariables`一覧。  
   
 -   変数の文字列値を渡す、`LoadXML`メソッドを次のコード例に示すようにします。 (この例では、プロファイル出力を格納するパッケージ変数の名前として "ProfileOutput" を使用しています)。  
   

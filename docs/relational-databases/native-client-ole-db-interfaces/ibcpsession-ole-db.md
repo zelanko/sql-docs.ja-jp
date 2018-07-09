@@ -1,12 +1,12 @@
 ---
-title: IBCPSession (OLE DB) |Microsoft ドキュメント
+title: IBCPSession (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: COM
@@ -18,27 +18,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1dc7fc224a08750c6deb4a26dc016a43c1f24fe4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 25c27a948a183ac1a06f3516ef05041ef3eefdae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697193"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419221"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **IBCPSession**インターフェイスのサポートが公開[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルベースの一括コピー操作します。 **IBCPSession**でインターフェイスが公開されている、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セッションと同じレベルでの Native Client OLE DB プロバイダーです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがデータ ソース オブジェクトは Session オブジェクトのファクトリと、一括コピー操作は、接続プロパティ SSPROP_ENABLEBULKCOPY で指定します。 また、SSPROP_ENABLEFASTLOAD プロパティは true に設定する必要があります。  
+  **IBCPSession**インターフェイスのサポートを公開する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルベースの一括コピー操作。 **IBCPSession**でインターフェイスが公開されている、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セッションとして同じレベルでの Native Client OLE DB プロバイダー。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、データ ソース オブジェクトは、セッション オブジェクトのファクトリと、一括コピー操作は、接続プロパティ SSPROP_ENABLEBULKCOPY で指定されます。 また、SSPROP_ENABLEFASTLOAD プロパティは true に設定する必要があります。  
   
- 呼び出す、 **idbcreatesession::createsession**メソッドは、その結果の作成、 **BulkCopySession**オブジェクト。 を通じて公開されるすべてのファイル ベースの一括コピー メソッド、 **IBCPSession**オブジェクトがこれによく似たシグネチャを持つ呼び出し可能な**IBCPSession**オブジェクトの**IBCPSession**インターフェイスです。  
+ 呼び出す、 **idbcreatesession::createsession**メソッドは、その結果、作成、 **BulkCopySession**オブジェクト。 を介して公開されるすべてのファイル ベースの一括コピー メソッド、 **IBCPSession**オブジェクトは、これとほぼ同じシグネチャを持つ呼び出し可能**IBCPSession**オブジェクトの**IBCPSession**インターフェイス。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー経由のメモリベースの一括コピー操作をサポートしている、 [IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)インターフェイスです。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー経由のメモリベースの一括コピー操作をサポートしている、 [IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)インターフェイス。  
   
- 使用しての詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの一括コピー操作を参照してください[一括コピー操作の実行](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)です。  
+ 使用しての詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの一括コピー操作を参照してください[一括コピー操作を実行する](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)します。  
   
- 使用する方法を示すサンプルについては、 **IBCPSession**インターフェイスを参照してください[IBCPSession::BCPDone &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpdone-ole-db.md)です。  
+ 使用する方法を示すサンプルについては、 **IBCPSession**インターフェイスは、「 [IBCPSession::BCPDone &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpdone-ole-db.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

@@ -1,12 +1,12 @@
 ---
-title: Ibcpsession::bcpwritefmt (OLE DB) |Microsoft ドキュメント
+title: Ibcpsession::bcpwritefmt (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 517ee0611a613d7a450f29e66eeb4d9d431a3056
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 15ff67f43bf08c6fc56f3667899f7d3a4bd5ffc7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694515"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420471"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,9 +44,9 @@ HRESULT BCPWriteFmt(
 ## <a name="remarks"></a>コメント  
  フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 呼び出し、 [ibcpsession::bcpcolumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)と[ibcpsession::bcpcolfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)メソッドは、データ ファイルの形式を定義します。 **BCPWriteFmt**メソッドは、この定義を pwszFormatFile 引数で参照されているファイルに保存します。  
   
- **BCPWriteFmt**メソッドは、xml またはテキストのいずれかの形式でフォーマット ファイルを保存できます。 これは、BCP_OPTION_XML 制御オプションを使用して示す必要があります、 [ibcpsession::bcpcontrol](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)メソッドです。  
+ **BCPWriteFmt**メソッドは xml またはテキスト形式でフォーマット ファイルを保存することができます。 これで、BCP_OPTION_XML 制御オプションを使用して示す必要があります、 [ibcpsession::bcpcontrol](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)メソッド。  
   
- 保存されたフォーマット ファイルを読み込むを使用して、 [ibcpsession::bcpreadfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md)メソッドです。  
+ 保存されたフォーマット ファイルを読み込むには、使用、 [ibcpsession::bcpreadfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md)メソッド。  
   
 ## <a name="arguments"></a>引数  
  *pwszFormatFile*[in]  
@@ -57,7 +57,7 @@ HRESULT BCPWriteFmt(
  メソッドが成功しました。  
   
  E_FAIL  
- プロバイダー固有のエラーが発生しました。詳細についてを使用して、 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)インターフェイスです。  
+ プロバイダー固有のエラーが発生しました。詳細については、使用、 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)インターフェイス。  
   
  E_OUTOFMEMORY  
  メモリ不足エラーです。  

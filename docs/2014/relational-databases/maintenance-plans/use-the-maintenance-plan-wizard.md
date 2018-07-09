@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.maintwiz.planprop.f1
 - sql12.ag.maintwiz.task.f1
@@ -35,18 +35,18 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 11706f4fb3761e20fea4c70feb431144efed0fc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6ee9a3c08fc00b5e7c6b340d3963e2003cfb0343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154493"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>メンテナンス プラン ウィザードの使用
-  このトピックを単一サーバーまたはでメンテナンス プラン ウィザードを使用してマルチ サーバー メンテナンス プランを作成する方法について説明[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。 メンテナンス プラン ウィザードを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって定期的に実行されるメンテナンス プランを作成できます。 これにより、バックアップ、データベースの整合性のチェック、データベース統計の更新など、さまざまなデータベース管理タスクを指定した間隔で実行できます。  
+  このトピックでは、1 台のサーバーまたはでメンテナンス プラン ウィザードを使用してマルチ サーバー メンテナンス プランを作成する方法を説明します[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。 メンテナンス プラン ウィザードを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって定期的に実行されるメンテナンス プランを作成できます。 これにより、バックアップ、データベースの整合性のチェック、データベース統計の更新など、さまざまなデータベース管理タスクを指定した間隔で実行できます。  
   
  **このトピックの内容**  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36075304"
 ####  <a name="Permissions"></a> Permissions  
  メンテナンス プランを作成または管理するには、 **sysadmin** 固定サーバー ロールのメンバーである必要があります。 ユーザーが **sysadmin** 固定サーバー ロールのメンバーである場合のみ、オブジェクト エクスプローラーに **[メンテナンス プラン]** ノードが表示されます。  
   
-##  <a name="SSMSProcedure"></a> メンテナンス プラン ウィザードの使用  
+##  <a name="SSMSProcedure"></a> メンテナンス プラン ウィザードを使用します。  
   
 #### <a name="to-start-the-maintenance-plan-wizard"></a>メンテナンス プラン ウィザードを起動するには  
   
@@ -371,7 +371,7 @@ ms.locfileid: "36075304"
      Windows Azure ストレージへの認証に使用する SQL 資格情報を選択します。 使用できる既存の SQL 資格情報がない場合は、 **[作成]** ボタンをクリックして新しい SQL 資格情報を作成します。  
   
     > [!IMPORTANT]  
-    >  **[作成]** をクリックすると開くダイアログでは、サブスクリプションの管理証明書または公開プロファイルが求められます。 管理証明書または公開プロファイルにアクセスできない場合は、Transact-SQL または SQL Server Management Studio を使用してストレージ アカウント名とアクセス キーの情報を指定し、SQL 資格情報を作成することができます。 サンプル コードを参照してください、[資格情報を作成する](../security/authentication-access/create-a-credential.md#Credential)トピック Transact SQL を使用して資格情報を作成します。 または SQL Server Management Studio を使用して、データベース エンジン インスタンスから、 **[セキュリティ]** を右クリックし、 **[新規作成]**、 **[資格情報]** の順にクリックします。 **[ID]** にストレージ アカウント名、 **[パスワード]** にアクセス キーを指定します。  
+    >  **[作成]** をクリックすると開くダイアログでは、サブスクリプションの管理証明書または公開プロファイルが求められます。 管理証明書または公開プロファイルにアクセスできない場合は、Transact-SQL または SQL Server Management Studio を使用してストレージ アカウント名とアクセス キーの情報を指定し、SQL 資格情報を作成することができます。 サンプル コードを参照してください、[資格情報を作成する](../security/authentication-access/create-a-credential.md#Credential)Transact SQL を使用して資格情報を作成するトピック。 または SQL Server Management Studio を使用して、データベース エンジン インスタンスから、 **[セキュリティ]** を右クリックし、 **[新規作成]**、 **[資格情報]** の順にクリックします。 **[ID]** にストレージ アカウント名、 **[パスワード]** にアクセス キーを指定します。  
   
      **[Azure ストレージ コンテナー]**  
      Windows Azure ストレージ コンテナーの名前を指定します。  
@@ -408,7 +408,7 @@ ms.locfileid: "36075304"
     |||  
     |-|-|  
     |**[既定のサーバー設定を使用する]**|オンにすると、サーバー レベルの既定値が使用されます。 この既定値は、 **backup compression default** サーバー構成オプションで設定されます。 このオプションの現在の設定を表示する方法については、「 [backup compression default サーバー構成オプションの表示または構成](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)」を参照してください。|  
-    |**[バックアップを圧縮する]**|オンにすると、サーバー レベルの既定値に関係なく、バックアップが圧縮されます。<br /><br /> **\*\* 重要 \*\*** 既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、リソース ガバナーによって CPU 使用率が制限されるセッションで、優先度の低い圧縮バックアップを作成することができます。 詳細については、[「リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;」](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)を参照してください。|  
+    |**[バックアップを圧縮する]**|オンにすると、サーバー レベルの既定値に関係なく、バックアップが圧縮されます。<br /><br /> **\*\* 重要 \*\*** 既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、リソース ガバナーによって CPU 使用率が制限されるセッションで、優先度の低い圧縮バックアップを作成することができます。 詳細については、「 [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)」を参照してください。|  
     |**[バックアップを圧縮しない]**|オンにすると、サーバー レベルの既定値に関係なく、圧縮されていないバックアップが作成されます。|  
   
 2.  **[データベースのバックアップ (差分) タスクの定義]** ページで、部分バックアップを実行する 1 つまたは複数のデータベースを選択します。 このページで利用可能なオプションの詳細については、上の手順 16. の定義リストを参照してください。 このタスクでは `BACKUP DATABASE … WITH DIFFERENTIAL` ステートメントを使用します。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)」を参照してください。  完了したら、 **[次へ]** をクリックします。  
@@ -492,7 +492,7 @@ ms.locfileid: "36075304"
      **操作**  
      各アクションの種類と名前を指定します。  
   
-     **Status**  
+     **ステータス**  
      全体としてウィザードのアクションが **[成功]** または **[失敗]** のいずれの値を返したかを示します。  
   
      **メッセージ**  

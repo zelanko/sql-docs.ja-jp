@@ -1,5 +1,5 @@
 ---
-title: データベース メンテナンス プランの置き換え |Microsoft ドキュメント
+title: データベース メンテナンス プランが新しくなった |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - suspended database maintenance plans
 - database maintenance plans [SQL Server Agent]
 - maintenance plans [SQL Server Agent]
 ms.assetid: efac127c-6c81-4c7a-a6c4-9aae5d15545d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f71e0cb8cb94cba893403f31cb2ffb9ee229c4ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 246c273e92a3779f74db225e5532756b475429b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151773"
 ---
 # <a name="database-maintenance-plans-superseded"></a>データベース メンテナンス プランが新しくなった
     
@@ -31,7 +31,7 @@ ms.locfileid: "36075664"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント  
   
 ## <a name="description"></a>説明  
- 既存のデータベース メンテナンス プランはアップグレードされ、引き続き機能します。 ただし、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して新しいデータベース メンテナンス プランを作成することはできません。 オブジェクト エクスプローラーでメンテナンス プランを表示するには、[管理]、[レガシ] の順に展開します。 既存のデータベース メンテナンス プランを新しい形式に移行するには を選択して**移行**データベース メンテナンス プランのコンテキスト メニューからです。 新しいメンテナンス プランの機能がデータベース メンテナンス プランとそのまま置き換わるわけではないため、移行後に機能の一部が失われる可能性があります。 データベース メンテナンス プランを移行しても古いプランは削除されません。このため、古いプランを削除する前にメンテナンス プランとしての機能をテストできます。  
+ 既存のデータベース メンテナンス プランはアップグレードされ、引き続き機能します。 ただし、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して新しいデータベース メンテナンス プランを作成することはできません。 オブジェクト エクスプローラーでメンテナンス プランを表示するには、[管理]、[レガシ] の順に展開します。 既存のデータベース メンテナンス プランを新しい形式に移行するには選択して**移行**データベース メンテナンス プランのコンテキスト メニューから。 新しいメンテナンス プランの機能がデータベース メンテナンス プランとそのまま置き換わるわけではないため、移行後に機能の一部が失われる可能性があります。 データベース メンテナンス プランを移行しても古いプランは削除されません。このため、古いプランを削除する前にメンテナンス プランとしての機能をテストできます。  
   
  次の機能は、データベース メンテナンス プラン内ではサポートされなくなります。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler による Analysis Services の監視の概要 |Microsoft ドキュメント
+title: SQL Server Profiler による Analysis Services の監視の概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17aafb1d81085cd01159b5ac85a588d733dc0fe3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1097e4558e336dd10bbd5750f9e1331a8a1016d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161503"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>SQL Server Profiler による Analysis Services の監視の概要
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスによって生成されたイベントを監視できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用すると、次の操作を実行できます。  
@@ -64,6 +64,6 @@ ms.locfileid: "36075625"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services トレース イベント](../trace-events/analysis-services-trace-events.md)   
- [再生のプロファイラー トレースを作成する&#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
+ [再生用の Profiler トレースの作成&#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
   
   

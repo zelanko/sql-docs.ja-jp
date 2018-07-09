@@ -1,12 +1,12 @@
 ---
-title: SQL から C への変換 |Microsoft ドキュメント
+title: SQL から C への変換 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a97f77780d9c376a121373ea5890949eb48091c4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0eb7cf6d146324ac5e472ea58fca5743683479e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696833"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425641"
 ---
-# <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime SQL から C へのデータ型変換
+# <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime の SQL から C へのデータ型変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -70,7 +70,7 @@ ms.locfileid: "35696833"
 |21|SQL_SS_TIMESTAMPOFFSET_STRUCT を格納するのにバッファーの大きさが十分である場合、値は SQL_SS_TIMESTAMPOFFSET_STRUCT として返されます。 それ以外の場合は、"数値が範囲を超えています" というメッセージで SQLSTATE 22003 の診断レコードが生成されます。|  
 |22|値がクライアントのタイム ゾーンに変換されてから、日付が抽出されます。 これにより、タイムスタンプ オフセットの種類によるその他の変換との一貫性が提供されます。 この変換中にエラーが発生すると、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。 これにより、単純な切り捨てによって取得された値とは異なる日付になることもあります。|  
   
- このトピックの表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターの場合でサーバーの種類が指定されている場合 SQLBindParameter がサーバー上の実際の型と一致しません、暗黙的な変換は、サーバーで実行するクライアントに返される型は型と一致して、SQLBindParameter を使用して指定します。 これにより、サーバー側の変換規則が上記の表の内容と異なると、予期しない変換結果が発生する場合があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在の日付ではなく 1900-1-1 が使用されます。  
+ このトピックの表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターでサーバーの種類が指定されている場合 SQLBindParameter がサーバー上の実際の型と一致せず、暗黙的な変換は、サーバーで実行するクライアントに返される型は SQLBindParameter を通じて指定された型に一致します。 これにより、サーバー側の変換規則が上記の表の内容と異なると、予期しない変換結果が発生する場合があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在の日付ではなく 1900-1-1 が使用されます。  
   
 ## <a name="see-also"></a>参照  
  [日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

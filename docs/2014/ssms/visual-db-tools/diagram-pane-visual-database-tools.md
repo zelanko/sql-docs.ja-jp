@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Diagram pane
 - View Designer, Diagram pane
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Diagram pane [Visual Database Tools]
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4132550e0248e5f3c5db505783f4bbadf0a544e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3243b5fbf5fda0afea9fdbfa3fc26fbfbeee1bae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210382"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>ダイアグラム ペイン (Visual Database Tools)
   ダイアグラム ペインには、データ接続で選択したテーブルまたはテーブル値オブジェクトが、グラフィカルに表示されます。 また、テーブル間の結合リレーションシップも示されます。  
@@ -100,7 +100,7 @@ ms.locfileid: "36072677"
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbio.gif "Visual Database Tools のアイコン")|クエリおよびビュー デザイナーが種類を特定できない結合|  
   
 ## <a name="see-also"></a>参照  
- [クエリおよびビューの操作方法に関するトピックをデザイン&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [抽出条件ペイン&#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [クエリ結果の並べ替えおよびグループ化 (Visual Database Tools)](sort-and-group-query-results-visual-database-tools.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: レポート サーバーからレポート定義の読み込み |Microsoft ドキュメント'
+title: 'レッスン 3: レポート サーバーからレポート定義の読み込み |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
 caps.latest.revision: 16
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 912a149542133a4c2bbdf4dfecde2ac0313defd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2963895811f8567f5142ed9b49137123390ec8d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149433"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>レッスン 3 : レポート サーバーからのレポート定義の読み込み
   プロジェクトを作成し、RDL スキーマからクラスを生成すると、レポート定義をレポート サーバーから読み込めるようになります。  
   
 ### <a name="to-load-a-report-definition"></a>レポート定義を読み込むには  
   
-1.  上部にあるプライベート フィールドを追加、`ReportUpdater`クラス (を使用している場合はモジュール[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) の`Report`クラスです。 このフィールドは、アプリケーションの動作中、レポート サーバーから読み込んだレポートへの参照を保持するために使用されます。  
+1.  上部にあるプライベート フィールドを追加、`ReportUpdater`クラス (モジュールを使用する場合[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) の`Report`クラス。 このフィールドは、アプリケーションの動作中、レポート サーバーから読み込んだレポートへの参照を保持するために使用されます。  
   
     ```csharp  
     private Report _report;  
@@ -101,10 +101,10 @@ ms.locfileid: "36075862"
     ```  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、レポート サーバーから読み込んだレポート定義を更新するコードを記述します。 参照してください[レッスン 4: レポート定義をプログラムで更新](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)です。  
+ 次のレッスンでは、レポート サーバーから読み込んだレポート定義を更新するコードを記述します。 参照してください[レッスン 4: レポート定義をプログラムで更新](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)します。  
   
 ## <a name="see-also"></a>参照  
- [RDL スキーマから生成されたクラスを使用してレポートの更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [レポート定義言語 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

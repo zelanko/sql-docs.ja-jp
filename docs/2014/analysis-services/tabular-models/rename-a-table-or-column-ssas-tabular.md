@@ -1,5 +1,5 @@
 ---
-title: テーブルまたは列 (SSAS テーブル) の名前を変更 |Microsoft ドキュメント
+title: テーブルまたは列 (SSAS テーブル) の名前を変更する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5edfa6b7fc59ed1a417abe22a34ae22e317538d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e58496d1a1fc4bc712ba2d5157f004def162c94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211522"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>テーブルまたは列名の変更 (SSAS テーブル)
   **テーブルのインポート ウィザード**の **[テーブルとビューの選択]** ページで**表示名**を入力することにより、インポート処理中にテーブルの名前を変更できます。 **テーブルのインポート ウィザード** の **[SQL クエリの指定]** ページでクエリを指定してデータをインポートした場合は、テーブルおよび列の名前を変更することもできます。  
@@ -50,7 +50,7 @@ ms.locfileid: "36073095"
   
 -   制御文字。  
   
--   (これは、Analysis Services オブジェクトの名前で無効)、次の文字:.、;':/\\*|?& % $! + = (){}<>  
+-   (これは、Analysis Services オブジェクトの名前に無効な) 次の文字:.、;'/。\\*|?& % $! + = (){}<>  
   
 -   Analysis Services の予約済みキーワード。多次元式 (MDX) とデータ マイニング拡張機能 (DMX) の関数名と演算子を含みます。  
   
@@ -60,8 +60,8 @@ ms.locfileid: "36073095"
  さらに名前を変更したテーブルを使用する計算、および名前を変更したテーブルの列を使用する計算を更新し、これらの計算から派生したデータも更新して再計算する必要があります。 影響を受けるテーブルと計算の数によっては、完了までに時間がかかることがあります。 このため、テーブル名を変更するタイミングとしては、インポート処理時か、複雑なリレーションシップや計算を構築する前が最適です。  
   
 ## <a name="see-also"></a>参照  
- [テーブルおよび列&#40;SSAS 表形式&#41;](tables-and-columns-ssas-tabular.md)   
- [PowerPivot からのインポート&#40;SSAS 表形式&#41;](import-from-power-pivot-ssas-tabular.md)   
+ [テーブルと列&#40;SSAS 表形式&#41;](tables-and-columns-ssas-tabular.md)   
+ [PowerPivot からインポート&#40;SSAS 表形式&#41;](import-from-power-pivot-ssas-tabular.md)   
  [Analysis Services からのインポート&#40;SSAS 表形式&#41;](import-from-analysis-services-ssas-tabular.md)  
   
   

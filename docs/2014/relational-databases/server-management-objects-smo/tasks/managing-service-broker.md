@@ -1,5 +1,5 @@
 ---
-title: Service Broker の管理 |Microsoft ドキュメント
+title: Service Broker の管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Service Broker [SMO]
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e3817dd285accefacf9341567fd834c134a4e27f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5aac2ad5d164757a330bb5a5784bb6c99fb48fb1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210862"
 ---
 # <a name="managing-service-broker"></a>Service Broker の管理
   SMO では、[!INCLUDE[ssSB](../../../includes/sssb-md.md)] オブジェクトは `Microsoft.SqlServer.Management.Smo.Broker` 名前空間にあり、この名前空間は Microsoft.SqlServer.Smo.dll への参照を必要とします。 クラス情報のサポートには、Microsoft.SqlServer.ServiceBrokerEnum.dll への参照も必要です。  
@@ -41,7 +41,7 @@ ms.locfileid: "36075477"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.BrokerService> オブジェクトは、アドレス指定が可能なメッセージ交換エンドポイントである [!INCLUDE[ssSB](../../../includes/sssb-md.md)] サービスを表します。 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] メッセージは、あるサービスから別のサービスに送信されます。 サービスによってメッセージを保持するキューが指定され、このサービスの対象とするコントラクトを指定します。  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding> 設定を表すオブジェクトを[!INCLUDE[ssSB](../../../includes/sssb-md.md)]リモート サービスと通信するときに、セキュリティと認証を使用します。  
+-   <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding> 設定を表すオブジェクトを[!INCLUDE[ssSB](../../../includes/sssb-md.md)]リモート サービスと通信するときにセキュリティと認証を使用します。  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> オブジェクトは、サービスおよびサービスが定義されているデータベースの位置情報を格納した [!INCLUDE[ssSB](../../../includes/sssb-md.md)] ルートを表します。 メッセージの配信にはルートが必要です。 既定では、各データベースに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の現在のインスタンスとして場所を示すルートが含まれます。  
   

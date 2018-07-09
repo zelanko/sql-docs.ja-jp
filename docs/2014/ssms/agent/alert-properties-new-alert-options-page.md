@@ -1,5 +1,5 @@
 ---
-title: 'アラートのプロパティ: 新しい警告 (オプション ページ) |Microsoft ドキュメント'
+title: 'アラートのプロパティ: 新しいアラート ([オプション] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.options.f1
 ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b5e65400a2b7f82316ecdae3f92d34e40ac0715e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b6e9cc28520099d9e3e3fad059a58e487b35859f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151793"
 ---
-# <a name="alert-properties-new-alert-options-page"></a>アラートのプロパティ: 新しい警告 (オプション ページ)
+# <a name="alert-properties-new-alert-options-page"></a>アラートのプロパティ: 新しいアラート ([オプション] ページ)
   このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告のオプションを表示および変更できます。  
   
 ## <a name="options"></a>および  

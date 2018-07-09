@@ -1,5 +1,5 @@
 ---
-title: ソース管理からソリューションやプロジェクトを開く |Microsoft ドキュメント
+title: ソース管理からソリューションとプロジェクトを開く |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], solutions
 - source controls [SQL Server Management Studio], projects
 ms.assetid: 1c8d27f2-1741-485f-b56a-cadcb8b5493d
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 918b0f0084beae3644097fa795b1a0c9bc61471b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2f034cadd18ea0cf448a2044debe6b081c2a7e2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239412"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>ソース管理からソリューションやプロジェクトを開く方法
   使用することができます[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]をソース管理から直接ソリューションまたはプロジェクトを開きます。 ソース管理からソリューションを開くと、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境によって自動的に最新バージョンのソリューションが取得され、指定した場所にそれがコピーされます。  
   
- ソリューションのローカル コピーを持っていない場合は、ソース管理操作を実行する前に、ソース管理からそのソリューションを開く必要があります。 ソリューションのローカル コピーを取得した後は再度; ソース管理から開く必要はありません。ローカル コピーを開くし、など、標準のソース管理コマンドを使用できる**最新バージョンの取得**または**チェック アウト**を目的の操作を実行します。  
+ ソリューションのローカル コピーを持っていない場合は、ソース管理操作を実行する前に、ソース管理からそのソリューションを開く必要があります。 ソリューションのローカル コピーを取得した後は再度; ソース管理から開く必要はありません。ローカル コピーを開くし、など、標準的なソース管理コマンドを使用することができます**最新バージョンの取得**または**チェック アウト**を目的の操作を実行します。  
   
  このトピックでは、次の内容について紹介します。  
   

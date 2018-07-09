@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, encryption
 - target servers [SQL Server], encryption
 - multiserver environments [SQL Server], setting encryption options on target servers
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 62267528b320f13c9dd35adc43761bf9a3f66f89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6197eca840830134135ddcc1e07bf8e1f280ee4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153573"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>対象サーバーでの暗号化オプションの設定
   マスター サーバーと一部またはすべての対象サーバーの間で SSL (Secure Sockets Layer) 暗号通信の証明書を使用できない場合、これらの間のチャネルを暗号化するには、必要なセキュリティ レベルを使用するように対象サーバーを構成します。  

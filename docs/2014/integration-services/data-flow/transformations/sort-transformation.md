@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sorttrans.f1
 helpviewer_keywords:
@@ -22,13 +22,13 @@ ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5dedec0b22dabe6ecb41c25e0b6fbc4c9c8ea7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5155e1bc61e5a02d29420d20b1e2970693dda1da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150723"
 ---
 # <a name="sort-transformation"></a>並べ替え変換
   並べ替え変換は、入力データを昇順または降順で並べ替え、並べ替えたデータを変換出力にコピーします。 入力には複数の並べ替えを適用できます。各並べ替えは、並べ替えの順序を決定する数値によって識別されます。 順序の数値が最も小さい列が最初に並べ替えられ、順序の数値の大きさの順に列が並べ替えられます。 たとえば、 **CountryRegion** という名前の列の並べ替え順序が 1 で、 **City** という名前の列の並べ替え順序が 2 の場合、出力は、国または地域、次に都市の順に並べ替えられます。 正の値は昇順の並べ替えを表し、負の値は降順の並べ替えを表します。 並べ替えを行わない列の並べ替え順序は 0 です。 並べ替えを選択されていない列は、並べ替えられた列と共に、自動的に変換出力にコピーされます。  
@@ -40,7 +40,7 @@ ms.locfileid: "36073777"
   
  また、並べ替え変換では、並べ替えの実行時に重複する行を削除できます。 重複する行とは、並べ替えキーの値が同じ行のことです。 並べ替えキーの値は、使用する文字列比較オプションに基づいて生成されます。したがって、リテラル文字列が異なっていても、並べ替えキーの値は同じとなる場合があります。 並べ替え変換は、値は異なるが並べ替えキーが同じ入力列の行を、重複していると識別します。  
   
- 並べ替え変換には、`MaximumThreads`パッケージが読み込まれるときに、プロパティ式で更新可能なカスタム プロパティです。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../../expressions/use-property-expressions-in-packages.md)」、および「[変換のカスタム プロパティ](transformation-custom-properties.md)」を参照してください。  
+ 並べ替え変換には、`MaximumThreads`パッケージが読み込まれるときに、プロパティ式で更新可能なカスタム プロパティ。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../../expressions/use-property-expressions-in-packages.md)」、および「[変換のカスタム プロパティ](transformation-custom-properties.md)」を参照してください。  
   
  この変換は 1 つの入力と 1 つの出力をとります。 エラー出力はサポートされていません。  
   

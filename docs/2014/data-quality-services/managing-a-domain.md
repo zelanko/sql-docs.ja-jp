@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72b2400e8a953490d1650a8e435c6b353c660445
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb61470789fb7474216b1a4da1364305c4cd9f8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153003"
 ---
 # <a name="managing-a-domain"></a>ドメインの管理
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でのドメインの使用について説明します。 ドメインは、分析対象のデータ ソースの特定のフィールドに含まれているデータのセマンティック表現です。 ドメインは、データ ソースに対して作成するナレッジ ベースの一部で、サンプル データ ソースを分析するか、データをインポートして構築するナレッジは、ナレッジ ベースで定義されたドメインに追加されます。 これらのドメインのナレッジは、データ品質プロジェクトでクレンジングおよび照合を実行するために後で使用されます。 ドメインは、Data Quality Services のすべてのアクティビティの中核になります。  

@@ -1,5 +1,5 @@
 ---
-title: Assembly 要素 (ASSL) |Microsoft ドキュメント
+title: Assembly 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Assembly element [ASSL]
 ms.assetid: 1910ccb0-7da0-4ee1-9548-ad6e0068d23d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02bc362fd633a7c3cf9fcd4936d2a0580753c01b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38c14744eaebba8e618c7c200341c447393ce773
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151443"
 ---
 # <a name="assembly-element-assl"></a>Assembly 要素 (ASSL)
-  表す、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]アセンブリまたは COM ダイナミック リンク ライブラリ (DLL) に関連付けられている、[サーバー](server-element-assl.md)要素または[データベース](database-element-assl.md)要素。  
+  表す、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]アセンブリまたは COM ダイナミック リンク ライブラリ (DLL) に関連付けられている、 [Server](server-element-assl.md)要素または[データベース](database-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36073115"
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.Assembly>します。  
   
 ## <a name="see-also"></a>参照  
- [サーバー要素&#40;ASSL&#41;](server-element-assl.md)   
+ [Server 要素&#40;ASSL&#41;](server-element-assl.md)   
  [Database 要素&#40;ASSL&#41;](database-element-assl.md)   
  [オブジェクト&#40;ASSL&#41;](objects-assl.md)  
   

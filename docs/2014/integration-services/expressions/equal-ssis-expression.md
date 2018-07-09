@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
@@ -16,13 +16,13 @@ ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0e87c5f2a718bca918b6e05e60a46ff364b7931c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a14ebea2cea05b050b2a8bca4a51d75784b05190
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158623"
 ---
 # <a name="-equal-ssis-expression"></a>== (等しい) (SSIS 式)
   2 つの式が等しいかどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。 詳しくは、「 [式における Integration Services データ型](integration-services-data-types-in-expressions.md)」をご覧ください。  

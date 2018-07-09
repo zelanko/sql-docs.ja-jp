@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10226"
 - "10264"
@@ -159,15 +159,15 @@ f1_keywords:
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bf2cca5f2d87f6404555f170272cc18e244d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ae0eda9c82e610289c6fad858578aaac440bbb7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150283"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>ゲージ (レポート ビルダーおよび SSRS)
   ゲージ データ領域は、データセット内の 1 つの値を表示する 1 次元データ領域です。 各ゲージは常に、ゲージ パネル内に配置されます。ゲージ パネルでは、子ゲージまたは隣接ゲージを追加できます。 ゲージ パネルを使用すると、フィルター選択、グループ化、並べ替えなどの共通機能を使用する 1 つのゲージ パネル内に複数のゲージを作成できます。  
@@ -244,10 +244,10 @@ ms.locfileid: "36075911"
     > [!NOTE]  
     >  ゲージにポインターが存在しない場合、またはレポートに複数のデータセットが含まれていてゲージ パネルがデータセットに関連付けられていない場合は、この方法を使用できません。  
   
--   ゲージ ポインターを右クリックし、 **[ポインターのプロパティ]** を選択します。 `Value`をドロップダウン リストからフィールドを選択するかをクリックして、フィールド式を定義、**式**(*fx*) ボタンをクリックします。  
+-   ゲージ ポインターを右クリックし、 **[ポインターのプロパティ]** を選択します。 `Value`、ドロップダウン リストからフィールドを選択または をクリックしてフィールド式を定義、**式**(*fx*) ボタンをクリックします。  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>単一の値へのフィールドの集計  
- ゲージにフィールドが追加されたときに[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]既定では、フィールドの集計が計算されます。 数値データ型は、SUM 関数を使用して集計します。 非数値データ型は COUNT 関数を使用して集計され、データセットまたはグループ内の特定の値またはフィールドのインスタンス数がカウントされます。 値フィールドのデータ型が String の場合、フィールドに数字が入っていても、ゲージでは数値を表示できません。 代わりに、ゲージでは COUNT 関数を使用して文字列フィールドを集計します。 この動作を回避するには、使用するフィールドに、書式設定された数値を格納した文字列ではなく、数値データ型を設定してください。 Visual Basic の式で CDbl または CInt 定数を使用して、文字列値を数値データ型に変換できます。 たとえば、[MyField] という名前の文字列フィールドを数値に変換するには、次の式を作成します。  
+ ゲージにフィールドが追加されたときに[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]既定では、フィールドの集計を計算します。 数値データ型は、SUM 関数を使用して集計します。 非数値データ型は COUNT 関数を使用して集計され、データセットまたはグループ内の特定の値またはフィールドのインスタンス数がカウントされます。 値フィールドのデータ型が String の場合、フィールドに数字が入っていても、ゲージでは数値を表示できません。 代わりに、ゲージでは COUNT 関数を使用して文字列フィールドを集計します。 この動作を回避するには、使用するフィールドに、書式設定された数値を格納した文字列ではなく、数値データ型を設定してください。 Visual Basic の式で CDbl または CInt 定数を使用して、文字列値を数値データ型に変換できます。 たとえば、[MyField] という名前の文字列フィールドを数値に変換するには、次の式を作成します。  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -296,7 +296,7 @@ ms.locfileid: "36075911"
   
 -   [ゲージにスナップ間隔を設定&#40;レポート ビルダーおよび SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [画像をゲージのポインターとして指定&#40;レポート ビルダーおよび SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
+-   [画像をゲージのポインターとして指定する&#40;レポート ビルダーおよび SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
   
   
 ##  <a name="InThisSection"></a> トピックの内容  

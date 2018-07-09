@@ -1,5 +1,5 @@
 ---
-title: AggregationUsage 要素 (ASSL) |Microsoft ドキュメント
+title: AggregationUsage 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationUsage element
 ms.assetid: af0c2e7f-b659-4fbf-9b1a-66128db669a2
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0cc9d13ed663b92224584ab57f6f467e3a472d8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a073ca27168bec785d9098d9e6b3ad4974b7018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259468"
 ---
 # <a name="aggregationusage-element-assl"></a>AggregationUsage 要素 (ASSL)
-  コントロール方法で、集計デザイナー [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]集計をデザインします。  
+  コントロール方法で集計デザイナー [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]集計をデザインします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,10 +68,10 @@ ms.locfileid: "36072859"
 |-----------|-----------------|  
 |*Full*|キューブのすべての集計にこの属性が含まれている必要があります。|  
 |*なし*|キューブの集計にはこの属性を含めないでください。|  
-|*制限なし*|集計デザイナーに対して制約を課しません。|  
-|*[Default]*|集計デザイナーは、属性の型に基づいて既定のルールを適用 (*完全*キーについては、 *Unrestricted*他のユーザー)。|  
+|*無制限*|集計デザイナーに対して制約を課しません。|  
+|*[Default]*|集計デザイナーは、属性の型に基づいて既定のルールを適用 (*完全*キー、 *Unrestricted*他のユーザー)。|  
   
- 許可される値に対応する列挙`AggregationUsage`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AggregationUsage>します。  
+ 許容された値に対応する列挙体`AggregationUsage`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AggregationUsage>します。  
   
 ## <a name="see-also"></a>参照  
  [キューブ要素&#40;ASSL&#41;](../objects/cube-element-assl.md)   

@@ -1,12 +1,12 @@
 ---
-title: SQLExecute |Microsoft ドキュメント
+title: SQLExecute |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,21 +17,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ab65b2485df96a04b6e87ccc1beb161e6f1dd0c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 2dbe99703098f8be26e58a44871dbed3a5cc29a3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696613"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413681"
 ---
 # <a name="sqlexecute"></a>SQLExecute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  場合は、ステートメント属性 SQL_SOPT_SS_PARAM_FOCUS が 0、SQLExecute に設定されていない、sql_error が返され、sqlstate 診断レコードが生成 = HY024 メッセージ「無効な属性値 SQL_SOPT_SS_PARAM_FOCUS (実行時に 0 にする必要があります)」です。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、次を参照してください。 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)です。  
+  ステートメント属性 SQL_SOPT_SS_PARAM_FOCUS が 0、SQLExecute に設定されていないは sql_error が返さ sqlstate 診断レコードを生成する場合は、HY024 と「無効な属性値 SQL_SOPT_SS_PARAM_FOCUS が (実行時に 0 にする必要があります)」メッセージを = します。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、次を参照してください。 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)します。  
   
 ## <a name="remarks"></a>コメント  
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)です。  
+ テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=80708)   

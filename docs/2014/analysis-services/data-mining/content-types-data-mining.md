@@ -1,5 +1,5 @@
 ---
-title: コンテンツの種類 (データ マイニング) |Microsoft ドキュメント
+title: コンテンツの種類 (データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], content types
 - KEY SEQUENCE column
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f283ff19a1947cfda208979b80482432ec6c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 817de3b9232a755d94fe2790a0ab2e08a835c9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163513"
 ---
 # <a name="content-types-data-mining"></a>コンテンツの種類 (データ マイニング)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、マイニング構造の列に対して物理データ型を定義することも、モデルに使用されている列に対して論理的なコンテンツの種類を定義することもできます。  
@@ -53,14 +53,14 @@ ms.locfileid: "36074960"
   
  不連続の属性列の値には、値が数値であっても順序の意味は含まれません。 さらに、不連続列に対して使用された値は、数値であっても小数部を計算することはできません。 市外局番コードは、不連続の数値データの好例です。  
   
- `Discrete`コンテンツの種類はすべてのデータ マイニング データ型でサポートされています。  
+ `Discrete`コンテンツの種類がすべてのデータ マイニング データ型によってサポートされています。  
   
 ## <a name="continuous"></a>Continuous  
  *Continuous* は、この列に中間値が許可されるスケールの数値データを表す値が格納されることを表します。 有限の数えられるデータを表す不連続列とは異なり、連続列は無限の小数部が含まれる可能性のある計測可能な測定値を表します。 連続した属性列の例としては気温の列があります。  
   
  連続する数値データが列に含まれ、そのデータがどのように分布するかがわかっている場合は、期待される値の分布を指定することで、分析の精度を高めることができます。 列の分布は、マイニング構造レベルで指定します。 このため、設定はその構造に基づくすべてのモデルに適用されます。詳細については、「[列の分布 (データ マイニング)](column-distributions-data-mining.md)」を参照してください。  
   
- `Continuous`コンテンツの種類は次のデータ型でサポートされて: `Date`、 `Double`、および`Long`です。  
+ `Continuous`コンテンツの種類は、次のデータ型でサポートされて: `Date`、 `Double`、および`Long`します。  
   
 ## <a name="discretized"></a>Discretized  
  *分離* とは、連続した一連のデータの値をバケットに分割して、限定された数の可能な値を生成するプロセスです。 数値データだけを分離できます。  
@@ -72,21 +72,21 @@ ms.locfileid: "36074960"
  コンテンツの種類 `Discretized` は、`Date`、`Double`、`Long`、および `Text` の各データ型によってサポートされています。  
   
 ## <a name="key"></a>Key  
- コンテンツの種類 *key* は、この列が行を一意に識別することを表します。 ケース テーブルの場合、通常、キー列は数値またはテキストの識別子です。 コンテンツ タイプを設定した`key`レコードを追跡するためだけの分析のため、列を使用しないことを示すためにします。  
+ コンテンツの種類 *key* は、この列が行を一意に識別することを表します。 ケース テーブルの場合、通常、キー列は数値またはテキストの識別子です。 コンテンツ タイプを設定した`key`追跡レコードには、分析するため、列を使用しないことを示します。  
   
- 入れ子になったテーブルにもキーはありますが、入れ子になったテーブルのキーは使い方が多少異なります。 コンテンツ タイプを設定した`key`入れ子になったテーブル列が属性を分析する場合。 入れ子になったテーブルのキーの値は各ケースで一意である必要がありますが、ケースのセット全体では重複していてもかまいません。  
+ 入れ子になったテーブルにもキーはありますが、入れ子になったテーブルのキーは使い方が多少異なります。 コンテンツ タイプを設定した`key`で入れ子になったテーブル列の属性を分析したい場合。 入れ子になったテーブルのキーの値は各ケースで一意である必要がありますが、ケースのセット全体では重複していてもかまいません。  
   
  たとえば、顧客が購入する製品を分析する場合は、ケース テーブルの **CustomerID** 列のコンテンツの種類を key に設定し、入れ子になったテーブルの **PurchasedProducts** 列のコンテンツの種類も key に設定します。  
   
 > [!NOTE]  
 >  入れ子になったテーブルを使用できるのは、Analysis Services のデータ ソース ビューとして定義されている外部データ ソースのデータを使用する場合だけです。  
   
- このコンテンツの種類が次のデータ型でサポートされる: `Date`、 `Double`、 `Long`、および`Text`です。  
+ このコンテンツの種類は、次のデータ型でサポートされて: `Date`、 `Double`、 `Long`、および`Text`します。  
   
 ## <a name="key-sequence"></a>Key Sequence  
  コンテンツの種類 *key sequence* は、シーケンス クラスター モデルでのみ使用できます。 コンテンツの種類を `key sequence` に設定すると、一連のイベントを表す値を格納する列であることが示されます。 値は順序付けされていますが、互いに等間隔である必要はありません。  
   
- このコンテンツの種類が次のデータ型でサポートされる: `Double`、 `Long`、 `Text`、および`Date`です。  
+ このコンテンツの種類は、次のデータ型でサポートされて: `Double`、 `Long`、 `Text`、および`Date`します。  
   
 ## <a name="key-time"></a>[キー時刻]  
  コンテンツの種類 *key time* は、時系列モデルでのみ使用できます。 コンテンツの種類を `key time` に設定すると、値が順序付きであり時系列を表す値であることが示されます。  

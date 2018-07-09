@@ -1,12 +1,12 @@
 ---
-title: フォーマット ファイル (ODBC) を使用して一括コピー |Microsoft ドキュメント
+title: フォーマット ファイル (ODBC) を使用して一括コピー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ffb61c13b64b086a383b08d5903f0644310b37b3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: aaca3a02e03a5ec73a0b37c7c8bebc1c1f850c09
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701373"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416941"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>フォーマット ファイルを使用した一括コピー (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "35701373"
   
 3.  Microsoft® SQL Server™ に接続します。  
   
-4.  呼び出す[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を次の情報を設定します。  
+4.  呼び出す[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)次の情報を設定します。  
   
     -   一括コピー操作の対象になるテーブルまたはビューの名前  
   
@@ -48,9 +48,9 @@ ms.locfileid: "35701373"
   
     -   コピーの方向 (ファイルからテーブルまたはビューへのコピーの場合は DB_IN)  
   
-5.  呼び出す[bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)一括コピー操作で使用するデータ ファイルを記述したフォーマット ファイルを読み取れません。  
+5.  呼び出す[bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)を一括コピー操作で使用されるデータ ファイルを記述したフォーマット ファイルを読み取る。  
   
-6.  呼び出す[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)を一括コピー操作を実行します。  
+6.  呼び出す[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)一括コピー操作を実行します。  
   
 ## <a name="example"></a>例  
  このサンプルは IA64 ではサポートされていません。  
@@ -59,7 +59,7 @@ ms.locfileid: "35701373"
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 最初の実行 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード サンプルを使用するテーブルを作成するリスト。  
+ 最初の実行 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストをサンプルを使用するテーブルを作成します。  
   
  2 つ目のコード リストをコピーし、Bcpfmt.fmt という名前のファイルに貼り付けます。 テーブルの各列はタブ文字で区切られています。  
   

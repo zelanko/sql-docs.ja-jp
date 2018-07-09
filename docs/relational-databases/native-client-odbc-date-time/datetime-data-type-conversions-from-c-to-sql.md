@@ -1,12 +1,12 @@
 ---
-title: C から SQL への変換 |Microsoft ドキュメント
+title: C から SQL への変換 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +17,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a44722f571f8cd0a9ac0cecdd0dd9a0a1254bd5b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c222ed8aedbb4e84014119c896d59786a1db866a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702863"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431771"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime C から SQL へのデータ型変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  このトピックは C 型から変換する際に考慮する問題を示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付/時刻型。  
+  このトピックでは、C 型から変換する際に考慮する問題を示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付/時刻型です。  
   
- 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 クライアントのサーバーで定義されているパラメーターとは異なる小数秒の有効桁数が指定されている場合、クライアントの変換が成功する可能性がありますが、サーバーには、エラーが返されます場合**SQLExecute**または**SQLExecuteDirect**と呼びます。 一方、ODBC で秒の小数部の切り捨てをエラーとして扱う具体的には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]動作に丸めるたとえば、丸め処理を行うときに発生から移動した**datetime2(6)** に**datetime2(2)**. datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
+ 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 クライアントがサーバーで定義されているパラメーターとは異なる小数秒の有効桁数を指定する場合、クライアントの変換が成功可能性がありますが、サーバーはエラーを返しますと**SQLExecute**または**SQLExecuteDirect**が呼び出されます。 一方、ODBC で秒の小数部の切り捨てがエラーとして処理する具体的には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に丸める動作は、たとえば、丸め処理を行うときに発生しますから移動する**datetime2(6)** に**datetime2(2)**. datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -54,48 +54,48 @@ ms.locfileid: "35702863"
   
 -   **-**: 変換がサポートされてありません。 "データ型の属性に関する制限に違反しました" というメッセージで SQLSTATE 07006 の診断レコードが生成されます。  
   
--   **1**: 指定されたデータが有効でない場合、診断レコードが生成 SQLSTATE 22007 と「無効な datetime 形式」のメッセージを使用します。  
+-   **1**: SQLSTATE 22007、メッセージ「無効な datetime 形式」診断レコードが生成される指定したデータが有効でない場合。  
   
--   **2**: 時刻フィールドを 0 にする必要がありますか、SQLSTATE 22008「分数が切り捨てられました」というメッセージと診断レコードが生成されます。  
+-   **2**: 時刻フィールドは 0 である必要がありますか、診断レコードで SQLSTATE 22008 し、「分数が切り捨てられました」というメッセージが生成されます。  
   
--   **3**: 秒の小数部が 0 にする必要がありますか、SQLSTATE 22008「分数が切り捨てられました」というメッセージと診断レコードが生成されます。  
+-   **3**: 秒の小数部は 0 である必要がありますか、診断レコードで SQLSTATE 22008 し、「分数が切り捨てられました」というメッセージが生成されます。  
   
 -   **4**: 日付部分は無視されます。  
   
--   **5**: タイム ゾーンは、クライアントのタイム ゾーン設定を設定します。  
+-   **5**: タイム ゾーンは、クライアントのタイム ゾーンの設定に設定されます。  
   
--   **6**: 時間は 0 に設定します。  
+-   **6**: 時間が 0 に設定されます。  
   
--   **7**: 日付は現在の日付に設定します。  
+-   **7**: 現在の日付に日付を設定します。  
   
--   **8**: 時間は、クライアントのタイム ゾーンから UTC に変換します。 この変換中にエラーが発生すると、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。  
+-   **8**: 時間は、クライアントのタイム ゾーンから UTC に変換されます。 この変換中にエラーが発生すると、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。  
   
--   **9**: 文字列が解析され、date、datetime、datetimeoffset、または、見つかった最初の区切り文字が存在している残りの部分に応じて、時刻の値に変換します。 次に、上の表に示した規則のうち、この処理で検出された変換元の型についての規則に従って、文字列は変換先の型に変換されます。 データの解析中にエラーが検出された場合、"キャストした文字コードが正しくありません" というメッセージで SQLSTATE 22018 の診断レコードが生成されます。 datetime 型および smalldatetime 型のパラメーターでは、年がこれらの型でサポートされる範囲外の場合、"datetime 形式が無効です" というメッセージで SQLSTATE 22007 の診断レコードが生成されます。  
+-   **9**: 文字列が解析され、date、datetime、datetimeoffset、または最初に検出された句読点と残りのコンポーネントの存在によって、時刻の値に変換します。 次に、上の表に示した規則のうち、この処理で検出された変換元の型についての規則に従って、文字列は変換先の型に変換されます。 データの解析中にエラーが検出された場合、"キャストした文字コードが正しくありません" というメッセージで SQLSTATE 22018 の診断レコードが生成されます。 datetime 型および smalldatetime 型のパラメーターでは、年がこれらの型でサポートされる範囲外の場合、"datetime 形式が無効です" というメッセージで SQLSTATE 22007 の診断レコードが生成されます。  
   
      datetimeoffset では、UTC への変換が必要なくても、値は UTC への変換後の範囲内に収まっている必要があります。 TDS とサーバーは datetimeoffset 値の時刻を常に UTC 用に正規化するので、クライアントは、時刻部分が、UTC への変換後にサポートされる範囲内に収まっていることを確認する必要があるためです。 値が、サポートされている UTC の範囲内に収まっていない場合、"datetime 形式が無効です" というメッセージで SQLSTATE 22007 の診断レコードが生成されます。  
   
--   **10**: データ損失の切り捨てが発生した場合、診断レコードが生成で SQLSTATE 22008 と「無効な時刻形式」のメッセージを使用します。 サーバーが使用する UTC の範囲で表すことができる範囲の外に値がある場合にも、このエラーが発生します。  
+-   **10**: SQLSTATE 22008、メッセージ「形式の時刻が無効です」診断レコードが生成されたデータの損失を伴う切り捨てが発生した場合。 サーバーが使用する UTC の範囲で表すことができる範囲の外に値がある場合にも、このエラーが発生します。  
   
--   **11**: データのバイトの長さで、SQL 型が必要な構造体のサイズが等しくない場合、診断レコードが生成 SQLSTATE 22003 とメッセージ「数値が範囲外」を使用します。  
+-   **11**: SQLSTATE 22003、メッセージ「数値が範囲外」診断レコードが生成されたデータのバイト長が、SQL 型が必要な構造体のサイズを等しくない場合。  
   
--   **12**: 生 TDS smalldatetime 形式または datetime 形式でサーバーにデータが送信されるデータのバイト長が 4 または 8 の場合は、します。 データのバイト長が SQL_TIMESTAMP_STRUCT のサイズと完全に一致する場合、データは、datetime2 用の TDS 形式に変換されます。  
+-   **12**: 生の TDS smalldatetime または datetime 形式でサーバーにデータが送信されるデータのバイトの長さが 4 または 8 の場合は、します。 データのバイト長が SQL_TIMESTAMP_STRUCT のサイズと完全に一致する場合、データは、datetime2 用の TDS 形式に変換されます。  
   
--   **13**: データ損失の切り捨てが発生した場合、診断レコードが生成 SQLSTATE 22001 とメッセージ「文字列データの右側が切り捨てられました」を使用します。  
+-   **13**: SQLSTATE 22001「文字列データの右側が切り捨てられました」というメッセージと診断レコードが生成されたデータの損失を伴う切り捨てが発生した場合。  
   
-     秒の小数部桁数 (小数点以下桁数) は、次の表に従って、変換先列のサイズから決定されます。  
+     秒の小数部桁数 (スケール) は、次の表に従って、変換先列のサイズから決定されます。  
   
     ||||  
     |-|-|-|  
-    |型|暗黙の小数点以下桁数<br /><br /> 0|暗黙の小数点以下桁数<br /><br /> 1.9|  
-    |SQL_C_TYPE_TIMESTAMP|19|21.29|  
+    |型|暗黙の小数点以下桁数<br /><br /> 0|暗黙の小数点以下桁数<br /><br /> 1..9|  
+    |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      ただし、SQL_C_TYPE_TIMESTAMP では、データを損失することなく秒の小数部を 3 桁で表すことができる場合で、かつ、列のサイズが 23 以上である場合、ちょうど 3 桁になるように秒の小数部が生成されます。 この動作により、以前の ODBC ドライバーを使用して開発されたアプリケーションの下位互換性が保証されます。  
   
-     列のサイズが、テーブル内の範囲より大きい、小数点以下桁数は 9 桁と見なされます。 この変換では、秒の小数点以下桁数が 9 桁まで許容されます。これは、ODBC で許容される最大桁数です。  
+     列のサイズは、テーブルの範囲を超えるの桁数は 9 が暗黙的に指定します。 この変換では、秒の小数点以下桁数が 9 桁まで許容されます。これは、ODBC で許容される最大桁数です。  
   
      列サイズ 0 は、ODBC では可変長文字型のサイズが無制限であることを意味します (SQL_C_TYPE_TIMESTAMP の 3 桁ルールが適用されなければ 9 桁)。 固定長文字型の列サイズ 0 を指定すると、エラーになります。  
   
--   **該当なし**: 既存[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]おり、以前の動作が維持されます。  
+-   **該当なし**: 既存[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と以前の動作が維持されます。  
   
 ## <a name="see-also"></a>参照  
  [日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

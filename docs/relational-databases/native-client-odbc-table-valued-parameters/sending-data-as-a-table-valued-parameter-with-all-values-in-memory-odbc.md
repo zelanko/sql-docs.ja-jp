@@ -1,12 +1,12 @@
 ---
-title: メモリ (ODBC) 内のすべての値を持つテーブル値パラメーターとしてデータを送信する |Microsoft ドキュメント
+title: すべての値 (ODBC) のメモリ内のテーブル値パラメーターとしてデータを送信する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 56b23a290944994fba861f02e78cddbb3488cbab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 038a507b3a5fc67c80903fce3691755ad4aac1e2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703283"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411051"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>すべての値がメモリ内にある場合にテーブル値パラメーターとしてデータを送信 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  このトピックでは、すべての値がメモリ内にある場合に、データをテーブル値パラメーターとしてストアド プロシージャに送信する方法について説明します。 テーブル値パラメーターを示す別のサンプルでは、次を参照してください。[テーブル値パラメーターの&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)です。  
+  このトピックでは、すべての値がメモリ内にある場合に、データをテーブル値パラメーターとしてストアド プロシージャに送信する方法について説明します。 テーブル値パラメーターを示す別のサンプルでは、次を参照してください。[テーブル値パラメーターの&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)します。  
   
 ## <a name="prerequisite"></a>前提条件  
  この手順では、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] がサーバーで実行されていることを前提としています。  
@@ -93,7 +93,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  第 2 段階として、テーブル値パラメーターの列をバインドします。 最初、テーブル値パラメーターの序数にフォーカスが設定されます。 テーブルの値の列は、ParameterNumber の列の序数ですが、ストアド プロシージャのパラメーターがいる場合と同じ方法で SQLBindParameter を使用してバインドされます。 テーブル値パラメーターがまだある場合は、順番にフォーカスを設定し、その列をバインドします。 最後に、パラメーターのフォーカスが 0 にリセットされます。  
+3.  第 2 段階として、テーブル値パラメーターの列をバインドします。 最初、テーブル値パラメーターの序数にフォーカスが設定されます。 テーブルの値の列は、両者が ParameterNumber の列序数で、ストアド プロシージャのパラメーターと同じ方法で SQLBindParameter を使用してバインドされます。 テーブル値パラメーターがまだある場合は、順番にフォーカスを設定し、その列をバインドします。 最後に、パラメーターのフォーカスが 0 にリセットされます。  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  

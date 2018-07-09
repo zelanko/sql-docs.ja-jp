@@ -1,12 +1,12 @@
 ---
-title: スパース列を含むテーブルに対して SQLColumns を呼び出す |Microsoft ドキュメント
+title: スパース列を持つテーブルに対する SQLColumns の呼び出し |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivit
+ms.technology: native-client
 yms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5bf36d7e67e3e116800038f03c3a1d98cd46460e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 58a71205c92d6994943afa703d544d046450ba22
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694773"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414471"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>スパース列を持つテーブルに対する SQLColumns の呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "35694773"
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- スパース列機能の詳細については、次を参照してください。 [SQL Server Native Client におけるスパース列のサポート](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)です。  
+ スパース列の機能の詳細については、次を参照してください。 [SQL Server Native Client におけるスパース列のサポート](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)します。  
   
 ## <a name="example"></a>例  
- 最初のリストは、C++ ソース コードです。 "MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ 最初のリストは、C++ ソース コードです。 "MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   

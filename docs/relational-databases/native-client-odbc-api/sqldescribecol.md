@@ -1,12 +1,12 @@
 ---
-title: SQLDescribeCol |Microsoft ドキュメント
+title: SQLDescribeCol |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,26 +18,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 49ccb4e8366e7162e3c081e6605acb85393cfee3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: eb4e96e2e540c4441a2e1c9eef0dfac4e2ba0641
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699783"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428871"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ステートメントの実行、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは結果セット内の列を記述するサーバーを照会する必要はありません。 この場合、 **SQLDescribeCol**サーバーとのやり取りは行われません。 同様に[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)と[SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)、呼び出し元**SQLDescribeCol**準備されてが実行されていないステートメントには、サーバーとのやり取りが生成されます。  
+  実行されるステートメントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーは結果セット内の列を示すサーバー クエリを実行する必要はありません。 この場合、 **SQLDescribeCol**サーバーとのやり取りは行われません。 ような[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)と[SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)を呼び出すと、 **SQLDescribeCol**準備されていても実行されていないステートメントには、サーバーとのやり取りが生成されます。  
   
- 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはステートメント バッチから複数の結果行セットが返される場合、別のテーブルの列を序数で参照したり、結果セット内の別の列を参照することができます。 **SQLDescribeCol**セットごとに呼び出す必要があります。 結果セットが変更されると、アプリケーションでは、行の結果をフェッチする前に、データ値を再バインドする必要があります。 セットを返す複数の結果を処理の詳細についてを参照してください[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)です。  
+ 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはステートメント バッチから複数の結果行セットが返される場合、別のテーブルの列を序数で参照したり、結果セット内の別の列を参照することができます。 **SQLDescribeCol**セットごとに呼び出す必要があります。 結果セットが変更されると、アプリケーションでは、行の結果をフェッチする前に、データ値を再バインドする必要があります。 セットを返す複数の結果の処理の詳細についてを参照してください[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)します。  
   
  準備された SQL ステートメントのバッチによって複数の結果セットが生成されるときは、最初の結果セットの列属性のみが報告されます。  
   
- 大きな値データ型で返される値*DataTypePtr*は、SQL_VARCHAR、SQL_VARBINARY、SQL_NVARCHAR のいずれか。 値で SQL_SS_LENGTH_UNLIMITED *ColumnSizePtr*サイズが「無制限」であることを示します。  
+ 大きな値のデータ型で返される値*DataTypePtr* SQL_VARCHAR、SQL_VARBINARY、SQL_NVARCHAR のいずれかです。 値で SQL_SS_LENGTH_UNLIMITED *ColumnSizePtr*サイズが「無制限」であることを示します。  
   
- 以降で、データベース エンジンの機能強化[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SQLDescribeCol を期待する結果のより正確な記述を取得できるようにします。 以前のバージョンの SQLDescribeCol によって返される値からこれらのより正確な結果が異なる場合があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 詳細については、次を参照してください。[メタデータ検出](../../relational-databases/native-client/features/metadata-discovery.md)です。  
+ 以降では、データベース エンジンの機能強化[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]期待どおりの結果のより正確な記述を取得する SQLDescribeCol を許可します。 これらのより正確な結果の以前のバージョンの SQLDescribeCol によって返される値が異なる場合があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。[メタデータ検出](../../relational-databases/native-client/features/metadata-discovery.md)します。  
   
 ## <a name="sqldescribecol-support-for-enhanced-date-and-time-features"></a>SQLDescribeCol による機能強化された日付と時刻のサポート  
  日付型または時刻型に対して返される値を次に示します。  
@@ -51,10 +51,10 @@ ms.locfileid: "35699783"
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
   
- 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)です。  
+ 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
   
 ## <a name="sqldescribecol-support-for-large-clr-udts"></a>SQLDescribeCol による大きな CLR UDT のサポート  
- **SQLDescribeCol**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)です。  
+ **SQLDescribeCol**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLDescribeCol 関数](http://go.microsoft.com/fwlink/?LinkID=59338)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5d8659792dd9d816ce4310b7caa377c2374fdedb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c66e586e94dd1b86dbd079e692b0f7a8b72b1c55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230742"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>データバインド画像の追加 (レポート ビルダーおよび SSRS)
   レポートには、データベースに保存されている画像への参照を含めることができます。 このような画像を *データバインド画像*と呼びます。 たとえば、製品一覧で製品名と合わせて表示される画像はデータバインド画像です。  
@@ -54,7 +54,7 @@ ms.locfileid: "36073101"
 ## <a name="see-also"></a>参照  
  [イメージ&#40;レポート ビルダーおよび SSRS&#41;](images-report-builder-and-ssrs.md)   
  [レポートに画像を埋め込む&#40;レポート ビルダーおよび SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [外部の画像を追加&#40;レポート ビルダーおよび SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [外部の画像の追加&#40;レポート ビルダーおよび SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
  [[全般] ([画像のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

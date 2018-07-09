@@ -1,5 +1,5 @@
 ---
-title: GenerateDatabaseCreationScript メソッド (WMI MSReportServer_ConfigurationSetting) |Microsoft ドキュメント
+title: GenerateDatabaseCreationScript メソッド (WMI MSReportServer_ConfigurationSetting) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - GenerateDatabaseCreationScript method
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 05560854358e95ce4beae1727e8c1aeb7be131d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 42898aba8f621688ba229fcf01d367b4da1a4f71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149033"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseCreationScript メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースの作成で使用する SQL スクリプトを生成します。  
@@ -56,7 +56,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  ネイティブ モードと SharePoint 統合モードのどちらでデータベースを作成するかを示します。  
   
 > [!IMPORTANT]  
->  以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 *IsSharePointMode* = `True`ためにはサポートされません SharePoint モードで[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]は SharePoint 共有サービスは WMI プロバイダーで管理されません。 常にこのパラメーターに設定する必要があります`False`です。  
+>  以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 *IsSharePointMode* = `True`はサポートされていません、SharePoint モードで[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]は SharePoint 共有サービスで、WMI プロバイダーによって制御されていません。 常にこのパラメーターに設定する必要があります`False`します。  
   
  *[スクリプト]*  
  [out] 生成された SQL スクリプトを含む文字列。  

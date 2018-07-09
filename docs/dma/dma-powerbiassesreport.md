@@ -1,5 +1,6 @@
 ---
-title: Power BI (SQL Server データ Migration Assistant) を使用して、統合の評価をレポート |Microsoft ドキュメント
+title: Data Migration Assistant 評価レポートを Power BI (SQL Server) の統合の分析 |Microsoft Docs
+description: Power BI を使用して、インポートして、SQL Server に統合したデータ移行の評価レポートを分析する方法について説明します
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
@@ -17,48 +18,48 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 0c7479a1e55d90d59fbcc289978b943a8cd3c195
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd2280fbc15ffe515cc8fc6b020a6ec3e2cf1647
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869007"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787633"
 ---
-# <a name="report-on-your-consolidated-assessments-by-using-power-bi-data-migration-assistant"></a>Power BI (データ Migration Assistant) を使用して、統合の評価をレポートします。
+# <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Data Migration Assistant を Power BI で作成された統合評価レポートを分析します。
 
-この記事では、統合移行評価用の Power BI レポートを作成する方法について説明します。
+この記事では、統合された移行評価を分析する Power BI レポートを作成する方法について説明します。
 
-データ Migration Assistant を使用して移行の評価を統合する方法の詳細については、次を参照してください。[評価レポートの統合](../dma/dma-consolidatereports.md)です。
+Data Migration Assistant によって作成された移行評価を統合する方法の詳細については、次を参照してください。[評価レポートの統合](../dma/dma-consolidatereports.md)します。
 
 ## <a name="sample-power-bi-reports"></a>Power BI のサンプル レポート
 
-統合移行評価用の Power BI レポートの例をダウンロードするにはこれから[Github リポジトリ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant)です。
+これから統合移行評価のための Power BI レポートの例をダウンロードする[Github リポジトリ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant)します。
 
-レポートを次のとおりです。 
+次のレポートが含まれます。 
 
 - [ダッシュ ボード](#dashboard--details)
 
-  スナップショットの統計、およびドリル ダウン レポートが含まれます。
+  スナップショットの統計情報とドリル ダウン レポートが含まれています。
 
-- [内部設置型のアップグレードの準備完了](#on-premises-upgrade-readiness--details)
+- [オンプレミスでアップグレードの準備完了](#on-premises-upgrade-readiness--details)
 
-  データ ソースは、DMAReporting データベースで UpgradeSuccessRanking ビューです。  このレポートは、評価、データベースの割合のアップグレードの成功を示します。
+  データ ソースは UpgradeSuccessRanking 表示 DMAReporting データベースです。  このレポートは、評価した、データベースの割合のアップグレードの成功を示します。
 
-- [内部設置型の機能の類似性](#on-premise-feature-parity--details)
+- [オンプレミスで機能パリティ](#on-premise-feature-parity--details)
 
-  ターゲット SQL Server のバージョンの機能の推奨事項を示します。
+  ターゲット SQL Server のバージョンの機能の推奨事項を示しています。
 
 - [Azure SQL DB アップグレードの準備完了](#azure-sql-db-upgrade-readiness--details)
 
-  データ ソースは、DMAReporting データベースで UpgradeSuccessRanking ビューです。  このレポートは、データベースの Azure SQL データベース移行の評価の割合のアップグレードの成功を示します。
+  データ ソースは UpgradeSuccessRanking 表示 DMAReporting データベースです。  このレポートは、データベースを Azure SQL DB の移行の評価の割合のアップグレードの成功を示します。
 
 - [Azure SQL DB がサポートされていない機能](#azure-sql-db-unsupported-features--details)
 
-  Azure SQL DB (V12) でサポートされていない、既存のデータベースの機能を示します。
+  Azure SQL DB (V12) でサポートされていない、既存のデータベース機能を示します。
 
 これらのレポートを Power BI でデータ ソースを変更することで、環境で作業を変更することができます。 
 
-1. 下矢印を選択 の横に**クエリを編集**を選択して**データ ソース設定**です。
+1. 横の下矢印をオン**クエリを編集**、選択および**データ ソース設定**します。
 
    ![クエリ メニューの データ ソースの設定を編集します。](../dma/media/DataSourceSettings.png)
 
@@ -66,7 +67,7 @@ ms.locfileid: "32869007"
 
    ![ソースの変更、サーバーおよびデータベース](../dma/media/ChangeSource.png)
 
-1. 選択**OK**、し、**閉じる**です。
+1. 選択**OK**、し、**閉じる**します。
 
 1. レポートを更新します。
 
@@ -76,37 +77,37 @@ ms.locfileid: "32869007"
 
 ![ダッシュ ボードのレポート](../dma/media/DashboardReport.png)
 
-詳細については、評価のすべてのダッシュ ボードに表示します。 左側のスライサーを使用すると、インスタンスまたはデータベースでフィルター処理します。 横棒グラフを使用すると、問題がある箇所を表示する特定のカテゴリにドリル ダウンします。
+ダッシュ ボードには、すべての評価を詳細が示されます。 左側にある、スライサーを使用して、インスタンスまたはデータベースでフィルター処理することができます。 横棒グラフを使用するには、問題の箇所を表示する特定のカテゴリにドリル ダウンします。
 
-ドリル ダウンをするには、横棒グラフの右上隅にある下向きの矢印の付いた円を選択します。
+ドリルダウンすると、横棒グラフの右上隅にある下向きの矢印の付いた円を選択します。
 
-![カテゴリのドリル ダウン](../dma/media/CategoryDrillDown.png)
+![カテゴリのドリルダウン](../dma/media/CategoryDrillDown.png)
 
-次の図のように、ドリル ダウン シーケンスが設定されている (**軸**)。 シーケンスを変更するには、目的の順序に列をドラッグします。
+次の図のようにドリル ダウン シーケンスが設定されている (**軸**)。 シーケンスを変更するには、目的の順序に列をドラッグします。
 
-![視覚エフェクトを横棒グラフ軸](../dma/media/VisualizationsAxis.png)
+![横棒グラフの軸の視覚化](../dma/media/VisualizationsAxis.png)
 
-このビューは、まず特定のデータベースでフィルター処理し、特定のカテゴリの問題をドリルダウンするとより強力な手段になります。 次の例では、HR データベースが選択されているインスタンスの**SQL01** (重大な変更) の移行を妨げているすべてのオブジェクトを表示します。
+このビューは、最初に、特定のデータベースでフィルター処理し、特定のカテゴリの問題をドリルダウンするより強力なになります。 次の例では、HR データベースがインスタンスの選択**SQL01** (重大な変更) の移行を妨げているすべてのオブジェクトを表示します。
 
-![最新の HR データベースの変更](../dma/media/BreakingChanges.png)
+![HR データベースの重大な変更](../dma/media/BreakingChanges.png)
 
-### <a name="on-premises-upgrade-readiness-report"></a>内部設置型のアップグレード準備レポート
+### <a name="on-premises-upgrade-readiness-report"></a>オンプレミスで準備レポートをアップグレードします。
 
-![内部設置型のアップグレード準備レポート](../dma/media/OnPremisesUpgradeReadinessReport.png)
+![オンプレミスで準備レポートをアップグレードします。](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
-このレポートには、以降のバージョンの SQL Server に移行する準備がどのように、そのデータベースがのスナップショットが示されます。 このレポートのデータを dbo に由来します。UpgradeSuccessFactor\_と内部設置型データベース内のビュー DMAReporting です。
+このレポートには、以降のバージョンの SQL Server への移行には、データベースが準備できているかのスナップショットが表示されます。 このレポートのデータは dbo です。UpgradeSuccessFactor\_DMAReporting のデータベース内のオンプレミスのビュー。
 
-インスタンスとデータベース名でフィルター処理し、上部にあるスコアのカードを使用して参照しているバージョンは、データベースが移行すぎます。 たとえば、AdventureWorks 2012 データベースでフィルター処理する場合に、データベースが、レポートに表示されたすべての SQL Server バージョンに移行する準備が参照してください。 これは、そのデータベースとの互換性レベルの互換性に影響する変更がないようにすることで決定されます。
+インスタンスとデータベースの名前でフィルター処理し、上部にあるスコア カードを使用して、確認できるバージョンすぎる、データベースを移行する可能性があります。 たとえば、AdventureWorks 2012 データベースをフィルター処理する場合に、データベースがレポートに表示されているすべての SQL Server バージョンに移動する準備が参照してください。 これは、そのデータベースとの互換性レベルの重大な変更がないようにすることで決定されます。
 
 ![AdventureWorks データベースのアップグレードの成功率](../dma/media/UpgradeSuccessFactor.png)
 
-### <a name="on-premises-feature-parity-report"></a>内部設置型機能パリティ レポート
+### <a name="on-premises-feature-parity-report"></a>オンプレミスで機能パリティ レポート
 
-![内部設置型機能パリティ レポート](../dma/media/OnPremisesFeatureParityReport.png)
+![オンプレミスで機能パリティ レポート](../dma/media/OnPremisesFeatureParityReport.png)
 
-このレポートを使用すると、ターゲット SQL Server のバージョンでデータベースを使用できる新機能を強調表示します。
+このレポートを使用すると、ターゲット SQL Server のバージョンでデータベースを使用できる新しい機能を強調表示します。
 
-じょうごグラフで、機能を選択すると、どのオブジェクトが、機能によって影響を受ける下部にあるデータが強調表示されます。 次の例で、**記憶域を節約するための Stretch database**機能が選択されているし、テーブルが表示されているこの機能を活用できます。
+下部にあるデータでは、じょうごグラフで、機能を選択すると、オブジェクトが、機能によって影響を受ける強調表示されます。 次の例では、**記憶域の節約に Stretch database を**機能が選択されているし、テーブルが表示されているこの機能を活用できます。
 
 ![Stretch Database の機能の推奨事項](../dma/media/FeatureRecommend_StretchDatabase.png)
 
@@ -114,35 +115,35 @@ ms.locfileid: "32869007"
 
 ![Azure SQL DB のアップグレードの準備完了レポート](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
-このレポートには、Azure SQL Database V12 に移行するデータベースの準備が表示されます。 このレポートからのデータ ソース、dbo します。DMAReporting データベース UpgradeSuccessRanking ビュー。
+このレポートには、Azure SQL Database V12 に移行するデータベースの準備状態が表示されます。 このレポートからのデータは dbo です。DMAReporting データベース UpgradeSuccessRanking ビュー。
 
 ### <a name="azure-features-parity-report"></a>Azure の機能パリティ レポート
 
 ![Azure の機能パリティ レポート](../dma/media/AzureFeaturesParityReport.png)
 
-このレポートを強調表示を使用して、*インスタンス レベルの機能*Azure SQL Database V12 ではサポートされていません。
+このレポートを使用して、強調表示、*インスタンス レベルの機能*Azure SQL Database V12 ではサポートされていません。
 
-じょうごグラフで、機能を選択すると、インスタンスとデータベースがサポートされない機能を下部にあるデータが一覧表示します。 次の例では、この機能が選択されている: **Always on 可用性グループの構成は Azure SQL データベースでサポートされていません**です。  
+じょうごグラフで、機能を選択すると、下部にあるデータには、インスタンスとサポートされていないデータベース機能が一覧表示します。 次の例では、この機能が選択されている: **Azure SQL Database で Always on 可用性グループの構成はサポートされていません**します。  
 
-![常に可用性グループ機能](../dma/media/Feature_AlwaysOnAvailability.png)
+![Alwayson の可用性グループ機能](../dma/media/Feature_AlwaysOnAvailability.png)
 
  
 ### <a name="azure-sql-db-unsupported-features-report"></a>Azure SQL DB には、機能のレポートがサポートされていません
 
 ![Azure SQL DB には、機能のレポートがサポートされていません](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
 
-このレポートでは、どの機能はサポートされていませんが強調表示されます、特定**データベース**ターゲットが Azure SQL Database (V12) の場合。
+このレポートの機能はサポートされていませんが強調表示を指定した**データベース**ターゲットが Azure SQL Database (V12) の場合。
 
-じょうごグラフでデータベースの名前と機能の値によってフィルター処理でサポートされていない機能の詳細を表示できます。 詳細についてには、どのオブジェクトが影響を受けると、問題に対処するための推奨事項が含まれます。
+じょうごグラフでデータベースの名前と機能の値によってフィルター処理でサポートされていない機能の詳細を確認できます。 詳細についてには、どのオブジェクトが影響を受けると、問題に対処するための推奨事項が含まれます。
 
-たとえば、DTC データベースによるフィルター処理と**読み取り専用データベースをアップグレードすることはできません**、影響を受けるオブジェクトの一覧を表示することができます。
+DTC データベースでフィルター処理など、**読み取り専用データベースをアップグレードできません**、影響を受けるオブジェクトの一覧を確認できます。
 
-![読み取り専用データベースできないアップグレード問題](../dma/media/ReadOnlyDatabases.png)
+![読み取り専用データベースにすることはできませんアップグレードの問題](../dma/media/ReadOnlyDatabases.png)
 
 ## <a name="see-also"></a>参照
 
-[Migration Assistant のデータの概要](../dma/dma-overview.md)
+[Data Migration Assistant の概要](../dma/dma-overview.md)
 
-[データ移行のアシスタントをダウンロード](https://www.microsoft.com/download/details.aspx?id=53595)
+[Data Migration Assistant のダウンロード](https://www.microsoft.com/download/details.aspx?id=53595)
 
 [Power BI のダウンロード](https://powerbi.microsoft.com/)

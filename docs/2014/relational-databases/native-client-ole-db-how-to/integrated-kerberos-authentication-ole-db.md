@@ -1,38 +1,36 @@
 ---
-title: 統合 Kerberos 認証 (OLE DB) |Microsoft ドキュメント
+title: 統合 Kerberos 認証 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd1ccb608aec68f96671ea52cdb17c5ff66c7182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f2ad40a930192dcaf91afeb14f2d54a7c08db0b7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073244"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410301"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>統合 Kerberos 認証 (OLE DB)
   このサンプルでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client で、OLE DB を使用して、Kerberos 相互認証を行う方法を紹介しています。 このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。  
   
- Spn および Kerberos 認証の詳細については、次を参照してください。[サービス プリンシパル名&#40;SPN&#41;クライアント接続でサポート](../native-client/features/service-principal-name-spn-support-in-client-connections.md)です。  
+ Spn および Kerberos 認証の詳細については、次を参照してください。[サービス プリンシパル名&#40;SPN&#41;クライアント接続でサポート](../native-client/features/service-principal-name-spn-support-in-client-connections.md)します。  
   
 ## <a name="example"></a>例  
  サーバーを指定する必要があります。 .cpp ファイルで、"MyServer" の部分を [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のインスタンスが実行されているコンピューター名に変更してください。  
   
  また、顧客から提供された SPN を指定する必要があります。 .cpp ファイルで、"CPSPN" の部分を顧客から提供された SPN に変更してください。  
   
- INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。 ole32.lib と oleaut32.lib を使用してコンパイルします。  
+ INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。 ole32.lib と oleaut32.lib を使用してコンパイルします。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

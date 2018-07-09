@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
 - queries [full-text search], predicates
@@ -18,24 +17,24 @@ helpviewer_keywords:
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2edf2a5fbafb99287503d4b7ebe5475bd5604985
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 78351b4f710d84d6d8cb7f29d1de89d05ee763b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229012"
 ---
 # <a name="query-with-full-text-search"></a>フルテキスト検索でのクエリ
   フルテキスト検索を定義するため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト クエリでは、フルテキスト述語 (CONTAINS と FREETEXT) およびフルテキスト関数 (CONTAINSTABLE と FREETEXTTABLE) が使用されます。 この述語と関数は、さまざまな形式のクエリ用語に対応する豊富な [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文をサポートします。 フルテキスト クエリを記述するには、これらの述語と関数をいつどのように使用するかを理解する必要があります。  
   
-##  <a name="OV_ft_predicates"></a> 述語 (CONTAINS と FREETEXT) のフルテキストの概要  
+##  <a name="OV_ft_predicates"></a> 概要、フルテキストの述語 (CONTAINS と FREETEXT)  
  CONTAINS 述語と FREETEXT 述語は、TRUE 値または FALSE 値を返します。 これらの述語は、特定の行がフルテキスト クエリと一致するかどうかを判断する選択基準としてのみ使用します。 一致する行は結果セットで返されます。 CONTAINS と FREETEXT は、SELECT ステートメントの WHERE 句または HAVING 句で指定します。 これらの述語は、LIKE や BETWEEN など他の [!INCLUDE[tsql](../../includes/tsql-md.md)] 述語と組み合わせて使用できます。  
   
 > [!NOTE]  
->  これらの述語の引数と構文については、次を参照してください。 [CONTAINS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/contains-transact-sql)と[FREETEXT &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)です。  
+>  これらの述語の引数と構文については、次を参照してください。 [CONTAINS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/contains-transact-sql)と[FREETEXT &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)します。  
   
  CONTAINS または FREETEXT を使用する場合は、検索するテーブルの単一の列、一連の列、すべての列のいずれかを指定できます。 また、フルテキスト クエリで単語区切りとステミング、類義語辞典の検索、およびノイズ ワードの削除を行うために使用される言語リソースの言語を指定することもできます。  
   
@@ -89,7 +88,7 @@ GO
  CONTAINSTABLE 関数と FREETEXTTABLE 関数は、SELECT ステートメントの FROM 句で通常のテーブル名と同じように指定できます。 この関数では、フルテキスト クエリと一致する 0 行、1 行、または 2 行以上で構成されるテーブルが返されます。 返されたテーブルには、ベース テーブルの行のうち、関数のフルテキスト検索条件に指定した選択基準に一致する行のみが含まれます。  
   
 > [!NOTE]  
->  これらの関数の引数と構文については、次を参照してください。 [CONTAINSTABLE &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-functions/containstable-transact-sql)と[FREETEXTTABLE &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)です。  
+>  これらの関数の引数と構文については、次を参照してください。 [CONTAINSTABLE &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-functions/containstable-transact-sql)と[FREETEXTTABLE &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)します。  
   
  このいずれかの関数を使用するクエリでは、次のように、各行の関連順位値 (RANK) とフルテキスト キー (KEY) が取得されます。  
   
@@ -134,7 +133,7 @@ GO
 ```  
   
 #### <a name="b-using-freetexttable"></a>B. FREETEXTTABLE を使用する  
- 次の例では、FREETEXTTABLE クエリを拡張して、順位の高いものから順に行を返し、各行の順位を選択リストに追加します。 クエリを指定する必要がありますがわかっている**ProductDescriptionID**の一意のキー列には、`ProductDescription`テーブル。  
+ 次の例では、FREETEXTTABLE クエリを拡張して、順位の高いものから順に行を返し、各行の順位を選択リストに追加します。 を、クエリを指定するを確認する必要があります**ProductDescriptionID**の一意のキー列には、`ProductDescription`テーブル。  
   
 ```  
 USE AdventureWorks2012  
@@ -193,7 +192,7 @@ GO
   
  
   
-##  <a name="Additional_Considerations"></a> フルテキスト クエリに関する追加の考慮事項  
+##  <a name="Additional_Considerations"></a> フルテキスト クエリの追加の考慮事項  
  フルテキスト クエリを記述する場合は、次の点も考慮してください。  
   
 -   LANGUAGE オプション  
@@ -218,7 +217,7 @@ GO
  `varbinary(max)` 列、`varbinary` 列、または `xml` 列にフルテキスト インデックスが設定されている場合は、他のフルテキスト インデックス列と同様に、フルテキスト述語 (CONTAINS および FREETEXT) とフルテキスト関数 (CONTAINSTABLE および FREETEXTTABLE) を使用して、これらの列に対するクエリを実行できます。  
   
 > [!IMPORTANT]  
->  フルテキスト検索は image 列に対しても実行できます。 ただし、`image`データ型は、の将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 新規の開発作業ではこのデータ型を使用せず、現在このデータ型を使用しているアプリケーションの変更を検討してください。 使用して、`varbinary(max)`データ型の代わりにします。  
+>  フルテキスト検索は image 列に対しても実行できます。 ただし、`image`データ型は、の将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新規の開発作業ではこのデータ型を使用せず、現在このデータ型を使用しているアプリケーションの変更を検討してください。 使用して、`varbinary(max)`代わりにデータを入力します。  
   
 ### <a name="varbinarymax-or-varbinary-data"></a>varbinary(max) データまたは varbinary データ  
  1 つ`varbinary(max)`または`varbinary`列は、さまざまな種類のドキュメントを格納できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、専用のフィルターがオペレーティング システムにインストールされ、使用できるようになっている任意のドキュメント型がサポートされます。 各ドキュメントのドキュメント型は、ドキュメントのファイル拡張子によって識別されます。 たとえば、ファイル拡張子が .doc である場合、フルテキスト検索では、Microsoft Word ドキュメントをサポートするフィルターが使用されます。 使用可能なドキュメント型の一覧を確認するには、 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) カタログ ビューに対してクエリを実行してください。  
@@ -234,9 +233,9 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
  
   
 ### <a name="xml-data"></a>xml データ  
- `xml`データ型の列のみの XML ドキュメントとフラグメントを格納し、ドキュメントは XML フィルターのみを使用します。 型列は必要ありません。 `xml`列、フルテキスト インデックスが XML 要素のコンテンツにインデックスが、XML マークアップは無視されます。 属性値には、数値でない限り、フルテキスト インデックスが設定されます。 要素タグはトークンの境界として使用されます。 複数言語を含む整形式の XML または HTML ドキュメントやフラグメントはサポートされます。  
+ `xml`データ型の列のみの XML ドキュメントとフラグメントを格納して、ドキュメントの XML フィルターのみを使用します。 型列は必要ありません。 `xml`列では、フルテキスト インデックスが XML 要素のコンテンツにインデックスが XML マークアップは無視されます。 属性値には、数値でない限り、フルテキスト インデックスが設定されます。 要素タグはトークンの境界として使用されます。 複数言語を含む整形式の XML または HTML ドキュメントやフラグメントはサポートされます。  
   
- に対するクエリの実行の詳細については、`xml`列を参照してください[XML 列でフルテキスト検索を使用して](../xml/use-full-text-search-with-xml-columns.md)です。  
+ に対するクエリの実行の詳細については、`xml`列を参照してください[XML 列でフルテキスト検索の使用](../xml/use-full-text-search-with-xml-columns.md)します。  
   
  
   
@@ -257,8 +256,8 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 
   
-###  <a name="Simple_Term"></a> 特定の単語または句 (単純語句) の検索  
- [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)、または [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) を使用すると、テーブルで特定の句を検索できます。 たとえば、検索する場合、`ProductReview`テーブルに、[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]データベースからすべてのコメント、語句"learning curve"、製品に関する次のように CONTAINS 述語を使用する可能性がありますを検索します。  
+###  <a name="Simple_Term"></a> 特定の語または句 (単純語句) の検索  
+ [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)、または [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) を使用すると、テーブルで特定の句を検索できます。 検索する場合など、`ProductReview`テーブルに、[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]次のように CONTAINS 述語を使用することで、"learning curve"という句を使用して、製品に関するすべてコメントを検索するデータベース。  
   
 ```  
 USE AdventureWorks2012  
@@ -313,7 +312,7 @@ GO
   
 
   
-###  <a name="Weighted_Term"></a> 重み付け値 (重み付け語句) を使用しての語句の検索  
+###  <a name="Weighted_Term"></a> 重み付け値 (重み付け語句) の語または句を使用して検索  
  [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) を使用すると、重み付け値を指定して語または句を検索することができます。 重みは 0.0 ～ 1.0 の数値で指定し、一連の語句内における各語句の重要度を示します。 重み 0.0 は最低値であり、重み 1.0 は最高値です。  
   
  次の例のクエリは、重みを使用して、文字列 "Bay" で始まるテキストに "Street" または "View" が含まれる顧客住所をすべて検索します。 結果では、指定した語が多く含まれている行ほど高い順位が付けられます。  

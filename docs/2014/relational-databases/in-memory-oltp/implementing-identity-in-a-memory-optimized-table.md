@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3e2eac0fd58bccad20094af9eb5956cb14cef54c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cdc1b44fda79d5b8ea8f940e18fc3b00240a6752
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229242"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの IDENTITY の実装
-  メモリ最適化テーブルでは、IDENTITY(1, 1) がサポートされています。 ただし、IDENTITY(x, y) という定義を持つ ID 列で、x != 1 または y != 1 の場合は、メモリ最適化テーブルでサポートされません。 ID 値の回避策は、シーケンス オブジェクトを使用して ([シーケンス番号](../sequence-numbers/sequence-numbers.md))。  
+  メモリ最適化テーブルでは、IDENTITY(1, 1) がサポートされています。 ただし、IDENTITY(x, y) という定義を持つ ID 列で、x != 1 または y != 1 の場合は、メモリ最適化テーブルでサポートされません。 シーケンス オブジェクトを使用する ID 値の回避策 ([シーケンス番号](../sequence-numbers/sequence-numbers.md))。  
   
  最初に、インメモリ OLTP に変換しているテーブルから IDENTITY プロパティを削除します。 次に、テーブルの列に新しい SEQUENCE オブジェクトを定義します。 SEQUENCE オブジェクトは IDENTITY 列として、新しい IDENTITY 値を取得する NEXT VALUE FOR 構文を使用する列の DEFAULT 値を作成する機能に依存します。 インメモリ OLTP では DEFAULT がサポートされていないため、新しく生成される SEQUENCE 値を INSERT 構文または挿入しないネイティブ コンパイル ストアド プロシージャに渡す必要があります。 次の例でそのパターンを示します。  
   

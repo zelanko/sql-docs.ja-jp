@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Registered Servers [SQL Server], connections
 - connections [SQL Server], registered servers
 ms.assetid: e13f242e-33f4-4d8d-9b10-0652ef4d0156
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f4e08d279c85c1b5f261c3db81e0c56b5df8a25e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7fda0c063ebc1d2de309d0395a27717942b8f104
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163824"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>登録済みサーバーへの接続 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、登録済みサーバーに接続する方法について説明します。 サーバーが実行されていない場合、またはネットワーク上に見つからない場合、登録済みサーバーではエラーが表示されます。  

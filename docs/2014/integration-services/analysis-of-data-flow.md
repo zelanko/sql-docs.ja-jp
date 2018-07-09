@@ -1,5 +1,5 @@
 ---
-title: データ フローの分析 |Microsoft ドキュメント
+title: データ フローの分析 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 caps.latest.revision: 10
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cb8a2a6df2e3b43486329c023a1aaf948064b425
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa09e2c86581214a1ae001c90dba640276920aba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209842"
 ---
 # <a name="analysis-of-data-flow"></a>データ フローの分析
-  使用することができます、 [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`データベース ビューをパッケージのデータ フローを分析します。 このビューは、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行表示します。 この情報を使用して、各コンポーネントに送信される行をより詳しく理解できます。  
+  使用することができます、 [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`データベース パッケージのデータ フローを分析するビュー。 このビューは、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行表示します。 この情報を使用して、各コンポーネントに送信される行をより詳しく理解できます。  
   
 > [!NOTE]  
 >  catalog.execution_data_statistics ビューに関する情報を取得するために、ログ レベルは **詳細** に設定する必要があります。  
@@ -46,7 +46,7 @@ order by source_component_name, destination_component_name
   
 -   **num_rows_per_millisecond** – 各コンポーネントによって送信された 1 ミリ秒あたりの行数  
   
- `HAVING`句は、計算で 0 除算エラーを防ぐために使用します。  
+ `HAVING`句の計算で 0 除算エラーを防ぐために使用されます。  
   
 ```  
 use SSISDB  

@@ -1,12 +1,12 @@
 ---
-title: ストアド プロシージャ (ODBC) を呼び出して |Microsoft ドキュメント
+title: ストアド プロシージャ (ODBC) を呼び出す |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 02db0bdc13402d91006cbecdb5cfb50f817ee9dd
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1b6f189ce8e2a118178c2da6c40a63cf5a8d1834
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701803"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431661"
 ---
-# <a name="running-stored-procedures---call-stored-procedures"></a>ストアド プロシージャの実行にストアド プロシージャを呼び出し
+# <a name="running-stored-procedures---call-stored-procedures"></a>ストアド プロシージャの実行 - ストアド プロシージャを呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "35701803"
   
   SQL ステートメントで ODBC CALL エスケープ句を使用してストアド プロシージャを呼び出すと、Microsoft® SQL Server™ ドライバーは、リモート ストアド プロシージャ コール (RPC) メカニズムを使用して、プロシージャを SQL Server に送信します。 RPC 要求は、SQL Server でのステートメント解析やパラメーター処理の多くを省略するため、Transact-SQL の EXECUTE ステートメントを使用するよりも高速です。  
   
- この機能を示すサンプル アプリケーションを参照してください。[プロセスのリターン コードと出力パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)です。  
+ この機能を示すサンプル アプリケーションを参照してください。[プロセスのリターン コードと出力パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)します。  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>プロシージャを RPC として実行するには  
   
@@ -42,15 +42,15 @@ ms.locfileid: "35701803"
     {? = CALL procname (?,?)}  
     ```  
   
-2.  呼び出す[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)各入力には、入出力、出力パラメーター、およびプロシージャの戻り値 (存在する場合)。  
+2.  呼び出す[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 、それぞれの入力入出力、出力パラメーター、およびプロシージャの戻り値 (ある場合)。  
   
-3.  使用してステートメントを実行[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)です。  
+3.  使用してステートメントを実行[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)します。  
   
 > [!NOTE]  
 >  アプリケーションでプロシージャの送信に (ODBC CALL エスケープ シーケンスではなく) Transact-SQL の EXECUTE 構文を使用した場合、プロシージャ コールは、SQL Server ODBC ドライバーから SQL Server に、RPC ではなく SQL ステートメントとして渡されます。 また、Transact-SQL の EXECUTE ステートメントを使用した場合、出力パラメーターは返されません。  
   
 ## <a name="see-also"></a>参照  
-  [ストアド プロシージャの呼び出しをバッチ処理](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
+  [ストアド プロシージャ呼び出しのバッチ化](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [ストアド プロシージャの実行](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [ストアド プロシージャを呼び出す](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [手順](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  

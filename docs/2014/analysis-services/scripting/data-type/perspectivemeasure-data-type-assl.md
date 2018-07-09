@@ -1,5 +1,5 @@
 ---
-title: PerspectiveMeasure データ型 (ASSL) |Microsoft ドキュメント
+title: PerspectiveMeasure データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveMeasure data type
 ms.assetid: 8622ad67-3dcf-48e2-ad4a-c5f0a086eec3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc66a5fd1e0e8b553bc0b27a384f97a8c0c483e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47d8578d2d41d5362b43a514dcb6d20df0999828
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210012"
 ---
 # <a name="perspectivemeasure-data-type-assl"></a>PerspectiveMeasure データ型 (ASSL)
-  内のメジャーに関する情報を表すプリミティブ データ型を定義、 [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md)要素。  
+  メジャーに関する情報を表すプリミティブ データ型を定義、 [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

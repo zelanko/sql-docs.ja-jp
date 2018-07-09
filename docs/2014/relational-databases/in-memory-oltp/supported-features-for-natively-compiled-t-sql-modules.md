@@ -1,5 +1,5 @@
 ---
-title: 構造をネイティブ コンパイル ストアド プロシージャでサポートされる |Microsoft ドキュメント
+title: ネイティブ コンパイル ストアド プロシージャでのコンストラクトのサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 34
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ab0ce49a3f135d59dba89abc756bf9ee4d7fa198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 91434af003bdf783ee4f2bd2c946e4a871eac44d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240854"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ内でサポートされる構造
-  このトピックには、ネイティブ コンパイル ストアド プロシージャでサポートされる機能の一覧が含まれています ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql))。  
+  このトピックの「にはネイティブ コンパイル ストアド プロシージャのサポートされている機能の一覧にはが含まれています ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql))。  
   
--   [ネイティブ コンパイル ストアド プロシージャでのプログラミング機能](#pncsp)  
+-   [ネイティブ コンパイル ストアド プロシージャでのプログラミング](#pncsp)  
   
 -   [サポートされている演算子](#so)  
   
--   [ネイティブ コンパイル ストアド プロシージャでの組み込み関数](#bfncsp)  
+-   [ネイティブ コンパイル ストアド プロシージャの組み込み関数](#bfncsp)  
   
 -   [ネイティブ コンパイル ストアド プロシージャのクエリ領域](#qsancsp)  
   
@@ -38,11 +38,11 @@ ms.locfileid: "36070506"
   
 -   [並べ替えに関する制限事項](#los)  
   
- ストアド プロシージャをコンパイルするネイティブでサポートされるデータ型についてを参照してください。 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)です。  
+ ネイティブでサポートされるデータ型については、ストアド プロシージャをコンパイルを参照してください。 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)します。  
   
- 詳細については、サポートされていないコンス トラクターおよびネイティブ コンパイル ストアド プロシージャでサポートされていない機能の一部を回避する方法についてを参照して[Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). サポートされていない機能の詳細については、「 [インメモリ OLTP でサポートされていない Transact-SQL の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)」をご覧ください。  
+ サポートされない構造の詳細については、およびネイティブ コンパイル ストアド プロシージャでサポートされていない機能の一部を回避する方法については、「 [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). サポートされていない機能の詳細については、「 [インメモリ OLTP でサポートされていない Transact-SQL の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)」をご覧ください。  
   
-##  <a name="pncsp"></a> ネイティブ コンパイル ストアド プロシージャでのプログラミング機能  
+##  <a name="pncsp"></a> ネイティブ コンパイル ストアド プロシージャでのプログラミング  
  サポート対象は次のとおりです。  
   
 -   BEGIN ATOMIC (ストアド プロシージャの外部レベル)、LANGUAGE、ISOLATION LEVEL、DATEFORMAT、および DATEFIRST。  
@@ -70,7 +70,7 @@ ms.locfileid: "36070506"
 ##  <a name="so"></a> サポートされている演算子  
  サポートされている演算子は次のとおりです。  
   
--   [比較演算子&#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (たとえば、>、 \<、> =、および < =) 条件ではサポートされて (いる場合、中に)。  
+-   [比較演算子&#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (たとえば、>、 \<、> =、および < =) 条件文ではサポートされて (の場合、中に)。  
   
 -   単項演算子 (+、-)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36070506"
   
 -   ビット演算子 ~、&、|、および ^  
   
-##  <a name="bfncsp"></a> ネイティブ コンパイル ストアド プロシージャでの組み込み関数  
+##  <a name="bfncsp"></a> ネイティブ コンパイル ストアド プロシージャの組み込み関数  
  メモリ最適化テーブルの既定構造とネイティブ コンパイル ストアド プロシージャでは、次の関数がサポートされます。  
   
 -   数学関数: ACOS、ASIN、ATAN、ATN2、COS、COT、DEGREES、EXP、LOG、LOG10、PI、POWER、RADIANS、RAND、SIN、SQRT、SQUARE、および TAN  
@@ -112,13 +112,13 @@ ms.locfileid: "36070506"
   
 -   CROSS JOIN と INNER JOIN は、SELECT クエリでのみサポート。  
   
--   式は選択リストでサポートおよび[場所&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/where-transact-sql)句はサポートされている演算子を使用している場合。 現在サポートされている演算子の一覧については、「 [Supported Operators](#so) 」を参照してください。  
+-   選択リスト内の式がサポートされていると[場所&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/where-transact-sql)句がサポートされている演算子を使用している場合。 現在サポートされている演算子の一覧については、「 [Supported Operators](#so) 」を参照してください。  
   
 -   フィルター述語 IS [NOT] NULL  
   
 -   \<メモリ最適化テーブル >  
   
--   [GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)集計関数 AVG、COUNT、COUNT_BIG、MIN、MAX、および SUM と共に、サポートされています。 MIN および MAX は、nvarchar、char、varchar、varchar、varbinary、および binary 型ではサポートされていません。 [ORDER BY 句&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql)ではサポートされて[GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) ORDER BY リスト内の式が表示されます、GROUP BY リストにそのまま指定します。 たとえば、GROUP BY a + b ORDER BY a + b はサポートされますが、GROUP BY a, b ORDER BY a + b はサポートされません。  
+-   [GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)集計関数 AVG、COUNT、COUNT_BIG、MIN、MAX、および SUM と共に、サポートされています。 MIN および MAX は、nvarchar、char、varchar、varchar、varbinary、および binary 型ではサポートされていません。 [ORDER BY 句&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql)ではサポートされて[GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)かどうか、ORDER BY リストの式が GROUP BY リストにそのまま指定で表示されます。 たとえば、GROUP BY a + b ORDER BY a + b はサポートされますが、GROUP BY a, b ORDER BY a + b はサポートされません。  
   
 -   HAVING (WHERE 句と同じ式の制限が適用されます)。  
   
@@ -136,13 +136,13 @@ ms.locfileid: "36070506"
   
 -   WHERE … AND  
   
- <sup>1</sup> ORDER BY および TOP はネイティブ コンパイル ストアド プロシージャで、いくつかの制限でサポートされています。  
+ <sup>1</sup> ORDER BY および TOP がいくつかの制限と、ネイティブ コンパイル ストアド プロシージャでサポートされています。  
   
 -   サポートされていません`DISTINCT`で、`SELECT`または`ORDER BY`句。  
   
 -   `WITH TIES` 句での `PERCENT` または `TOP` のサポートはありません。  
   
--   `TOP` 組み合わせて`ORDER BY`で定数を使用するときに 8,192 を超える値はサポートされません、`TOP`句。 クエリに結合または集計関数が含まれている場合は、この制限値がさらに小さくなる場合があります (たとえば、1 回の結合 (2 つのテーブル) では、制限値は 4,096 行です。 2 回の結合 (3 つのテーブル) では、制限値は 2,730 行です)。  
+-   `TOP` 組み合わせて`ORDER BY`で定数を使用する場合は、8,192 を超える値をサポートしません、`TOP`句。 クエリに結合または集計関数が含まれている場合は、この制限値がさらに小さくなる場合があります (たとえば、1 回の結合 (2 つのテーブル) では、制限値は 4,096 行です。 2 回の結合 (3 つのテーブル) では、制限値は 2,730 行です)。  
   
      変数内に行の数を格納すると、8,192 より多くの結果を取得できます。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36070506"
   
 -   OPTIMIZE FOR  
   
- 詳細については、次を参照してください。[ヒント&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql)です。  
+ 詳細については、次を参照してください。[ヒント&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql)します。  
   
 ##  <a name="los"></a> 並べ替えに関する制限事項  
  [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) および [ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用するクエリでは、8,000 を超える行の並べ替えを行うことができます。 ただし、[ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用しない場合、[TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) で並べ替えができる行数は最大で 8,000 です (結合がある場合は、より少ない行数になります)。  

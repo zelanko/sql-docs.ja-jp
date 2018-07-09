@@ -1,5 +1,5 @@
 ---
-title: ディメンションのストレージ |Microsoft ドキュメント
+title: ディメンションのストレージ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - ROLAP
 ms.assetid: 8d74b932-2174-4e1f-8414-636455880b6a
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ce315f747a9b125052ead591f5c42cca3b811ca0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6462ebf90b7783260f7027d82b26be117ea0b5ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153113"
 ---
 # <a name="dimension-storage"></a>ディメンションのストレージ
   ディメンションの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2 つのストレージ モードをサポートします。  
@@ -47,7 +47,7 @@ ms.locfileid: "36072214"
  ROLAP を使用するディメンションのデータは、実際には、ディメンションを定義するために使用されるテーブルに格納されます。 ROLAP ストレージ モードを使用すると、クエリ パフォーマンスの点で譲歩すれば、大量のデータを複製しなくても大きなディメンションをサポートできます。 ディメンションはそのディメンションを定義するために使用されるデータ ソース ビューのテーブルに直接依存しているので、ROLAP ストレージ モードは、リアルタイム OLAP もサポートします。  
   
 > [!IMPORTANT]  
->  ディメンションで ROLAP ストレージ モードが使用され、ディメンションが MOLAP ストレージを使用するキューブに含まれている場合は、元のテーブルのスキーマを変更したら、直ちにキューブを処理する必要があります。 直ちに処理しないと、キューブをクエリしたときに返される結果に一貫性がなくなることがあります。 **関連トピック:**[自動化 Analysis Services 管理タスクと SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md)です。  
+>  ディメンションで ROLAP ストレージ モードが使用され、ディメンションが MOLAP ストレージを使用するキューブに含まれている場合は、元のテーブルのスキーマを変更したら、直ちにキューブを処理する必要があります。 直ちに処理しないと、キューブをクエリしたときに返される結果に一貫性がなくなることがあります。 **関連トピック:**[自動化による Analysis Services 管理タスク SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md)します。  
   
 ## <a name="see-also"></a>参照  
  [パーティションのストレージ モードおよび処理](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  

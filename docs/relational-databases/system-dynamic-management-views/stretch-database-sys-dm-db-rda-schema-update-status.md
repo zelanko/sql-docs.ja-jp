@@ -1,12 +1,11 @@
 ---
-title: sys.dm_db_rda_schema_update_status (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_rda_schema_update_status (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -17,16 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_db_rda_schema_update_status dynamic management view
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddbabbfd19d95412e07a4fd1fb56f73661f37581
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: cbd99f97902dbbd3c097b76b1f119f400f97c6f6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468178"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420061"
 ---
 # <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database - sys.dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.locfileid: "34468178"
   
  **dm_db_rda_schema_update_status**スコープは現在のデータベース コンテキストに設定します。 Stretch が有効なテーブルのスキーマの更新プログラムの状態を参照してください。 対象となるは、データベース コンテキストを使用していることを確認します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|リモートのデータが含まれるスキーマをアーカイブするローカルの拡張が有効なテーブルの ID を更新しています。|  
 |**database_id**|**int**|ローカルの拡張が有効なテーブルが含まれているデータベースの ID。|  

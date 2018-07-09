@@ -1,12 +1,12 @@
 ---
-title: 大きな Udt のサポート |Microsoft ドキュメント
+title: 大きな Udt のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90c7d2ea4f200a581861c459f681d6d5d99146db
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e7001a2186cac67f4209cca8bd3339cdbd86a45f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699843"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429732"
 ---
 # <a name="support-for-large-udts"></a>大きな UDT のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,14 +30,14 @@ ms.locfileid: "35699843"
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 大きな Udt のサポートの詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)です。  
+ 大きな Udt のサポートの詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="example"></a>例  
  1 つ目のコード リストは C# ソース コードです。 LargeStringUDT.cs という名前のファイルに貼り付けて、DLL にコンパイルします。 LargeStringUDT.dll を C ドライブのルート ディレクトリにコピーします。  
   
  2 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは master データベースにアセンブリを作成します。  
   
- odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。  
+ odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   

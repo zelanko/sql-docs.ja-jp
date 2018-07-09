@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 771ae5285f38b89336fa1f62b71ab033a54b3e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b750ea3f8586b874a78251790bd0d46e18680a2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158973"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>パッケージ実行用のダンプ ファイルを生成する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、パッケージの実行に関する情報を提供するデバッグ ダンプ ファイルを作成できます。 このファイル内の情報は、パッケージの実行に関する問題のトラブルシューティングに役立ちます。  
@@ -37,7 +37,7 @@ ms.locfileid: "36074420"
   
      実行中のパッケージを一時停止してダンプ ファイルを作成する場合に、このストアド プロシージャを呼び出します。  
   
- パッケージ配置モデルを使用してパッケージを配置する場合は、**dtexec** ユーティリティまたは **dtutil** ユーティリティを使用して、コマンド ラインでデバッグ ダンプ オプションを指定することによって、デバッグ ダンプ ファイルを作成します。 詳細については、「[dtexec ユーティリティ](../packages/dtexec-utility.md)」と「[dtutil ユーティリティ](../dtutil-utility.md)」を参照してください。 パッケージ配置モデルの詳細については、次を参照してください。 [Deployment of Projects とパッケージ](../packages/deploy-integration-services-ssis-projects-and-packages.md)と[パッケージの配置&#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md)です。  
+ パッケージ配置モデルを使用してパッケージを配置する場合は、**dtexec** ユーティリティまたは **dtutil** ユーティリティを使用して、コマンド ラインでデバッグ ダンプ オプションを指定することによって、デバッグ ダンプ ファイルを作成します。 詳細については、「[dtexec ユーティリティ](../packages/dtexec-utility.md)」と「[dtutil ユーティリティ](../dtutil-utility.md)」を参照してください。 パッケージ配置モデルの詳細については、次を参照してください。 [Deployment の Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)と[パッケージの配置&#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md)します。  
   
 ## <a name="debug-dump-file-format"></a>デバッグ ダンプ ファイルの形式  
  デバッグ ダンプ オプションを指定した場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって作成されるデバッグ ダンプ ファイルを次に示します。  

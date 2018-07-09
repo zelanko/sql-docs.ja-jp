@@ -1,5 +1,5 @@
 ---
-title: MDX の基本的なクエリ (MDX) |Microsoft ドキュメント
+title: MDX の基本的なクエリ (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], SELECT statement
 - queries [MDX], about queries
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], SELECT statement
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ff060a0f570626052cf8577be60850e689566fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4bf03ddd4bfbc75a24f68bd4c046ea3eb9d58dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155193"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>MDX の基本的なクエリ (MDX)
   多次元式 (MDX) の基本的なクエリは SELECT ステートメントであり、これは MDX で最も頻繁に使用するクエリでもあります。 MDX の SELECT ステートメントで結果セットを指定する方法や、SELECT ステートメントの構文と、SELECT ステートメントによる簡単なクエリ作成を学習すれば、MDX を使用して多次元データに対するクエリを実行する方法を理解できます。  

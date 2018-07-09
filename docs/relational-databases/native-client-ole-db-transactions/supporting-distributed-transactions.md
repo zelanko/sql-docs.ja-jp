@@ -1,12 +1,12 @@
 ---
-title: 分散トランザクションのサポート |Microsoft ドキュメント
+title: 分散トランザクションのサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d73e9d31027d2678f25b7bcf2224cc2fa652d612
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: bc63d3a8f7f7caf5317956a6cc007570a1291367
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700693"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409771"
 ---
 # <a name="supporting-distributed-transactions"></a>分散トランザクションのサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,18 +36,18 @@ ms.locfileid: "35700693"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコンシューマーが使用できる、 **itransactionjoin::jointransaction** Microsoft 分散トランザクション コーディネーター (MS DTC) によってコーディネートされる分散トランザクションに参加するメソッド。  
   
- MS DTC が公開する COM オブジェクトを使用すると、クライアントは、さまざまなデータ ストアに対する複数の接続にまたがってコーディネートされるトランザクションを起動したり、このトランザクションに参加することができます。 トランザクションを開始する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコンシューマーが MS DTC を使用して**ITransactionDispenser**インターフェイスです。 **BeginTransaction**のメンバー **ITransactionDispenser**分散トランザクション オブジェクトの参照を返します。 この参照に渡される、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用して**JoinTransaction**です。  
+ MS DTC が公開する COM オブジェクトを使用すると、クライアントは、さまざまなデータ ストアに対する複数の接続にまたがってコーディネートされるトランザクションを起動したり、このトランザクションに参加することができます。 トランザクションを開始する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコンシューマーが MS DTC を使用して**ITransactionDispenser**インターフェイス。 **BeginTransaction**のメンバー **ITransactionDispenser**分散トランザクション オブジェクトの参照を返します。 この参照を渡した、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用して**JoinTransaction**します。  
   
- MS DTC は、分散トランザクションでの非同期のコミットとアボートをサポートします。 非同期トランザクションの状態の通知の場合、コンシューマーを実装する、 **ITransactionOutcomeEvents**インターフェイスし、インターフェイスを MS DTC トランザクション オブジェクトに接続します。  
+ MS DTC は、分散トランザクションでの非同期のコミットとアボートをサポートします。 非同期トランザクションの状態の通知の場合、コンシューマーの実装、 **ITransactionOutcomeEvents**インターフェイスを MS DTC トランザクション オブジェクトに、インターフェイスを接続します。  
   
- 分散トランザクションで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを実装して**itransactionjoin::jointransaction**パラメーターは次のようにします。  
+ 分散トランザクションの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの実装**itransactionjoin::jointransaction**パラメーターとして次のとおりです。  
   
 |パラメーター|説明|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC トランザクション オブジェクトへのポインター。|  
-|*IsoLevel*|は無視されます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーです。 MS DTC によりコーディネートされるトランザクションの分離レベルは、コンシューマーが MS DTC からトランザクション オブジェクトを取得するときに決まります。|  
-|*IsoFlags*|0 を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンシューマーでその他の値が指定された場合は、Native Client OLE DB プロバイダーは XACT_E_NOISORETAIN を返します。|  
-|*POtherOptions*|NULL 以外の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、インターフェイスからのオプション オブジェクトを要求します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合は、Native Client OLE DB プロバイダーは XACT_E_NOTIMEOUT を返しますのオプション オブジェクトの*ulTimeout*メンバーが 0 ではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの値を無視する、 *szDescription*メンバー。|  
+|*IsoLevel*|によって無視されます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー。 MS DTC によりコーディネートされるトランザクションの分離レベルは、コンシューマーが MS DTC からトランザクション オブジェクトを取得するときに決まります。|  
+|*IsoFlags*|0 を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンシューマーがその他の値が指定されている場合、Native Client OLE DB プロバイダーは XACT_E_NOISORETAIN を返します。|  
+|*POtherOptions*|NULL 以外の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーはインターフェイスからオプションのオブジェクトを要求します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合は、Native Client OLE DB プロバイダーは XACT_E_NOTIMEOUT を返しますのオプション オブジェクトの*ulTimeout*メンバーは 0 ではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの値は無視されます、 *szDescription*メンバー。|  
   
  次の例では、MS DTC を使用してトランザクションをコーディネートします。  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 caps.latest.revision: 10
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1ab4d483a41c64a97d320711c6f46bf6831ea078
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 99c28e2346494f737a6ee73b37cb458d7448e40b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160603"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>ステージング ストアド プロシージャ (マスター データ サービス)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]からステージング処理を開始する場合、次の 3 つのストアド プロシージャのいずれかを使用します。  
@@ -61,6 +61,6 @@ GO
 ## <a name="see-also"></a>参照  
  [検証ストアド プロシージャ&#40;マスター データ サービス&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)   
  [読み込むか、ステージング処理を使用してマスター データ サービス内のメンバーを更新します。](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
- [ステージング処理中に発生したエラーを表示する&#40;マスター データ サービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
+ [ステージング処理中に発生するエラーを表示する&#40;マスター データ サービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
   

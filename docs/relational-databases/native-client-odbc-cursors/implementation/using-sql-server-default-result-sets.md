@@ -1,12 +1,12 @@
 ---
-title: SQL Server の既定の結果セットを使用して |Microsoft ドキュメント
+title: SQL Server の既定の結果セットを使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7ffeb98b693c178ee654b0cc592f16ae4a8e39d6
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9f5c1a93a64d3a087de4e07db62e1240c5c179cb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694584"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425981"
 ---
 # <a name="using-sql-server-default-result-sets"></a>SQL Server の既定の結果セットの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,11 +41,11 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_CONCURRENCY, SQL_CONCUR_READ_ONLY, SQL_IS_INTEGER
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_ARRAY_SIZE, 1, SQL_IS_INTEGER);  
 ```  
   
- これらの属性は、既定値に設定されるたびに、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]既定の結果セットです。 既定の結果セットは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされるすべての SQL ステートメントに使用でき、結果セット全体をクライアントに転送する際の最も効率的な方法です。  
+ これらの属性は、既定値に設定されるたびに、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]既定の結果セット。 既定の結果セットは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされるすべての SQL ステートメントに使用でき、結果セット全体をクライアントに転送する際の最も効率的な方法です。  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 複数のアクティブな結果セット (MARS); サポートが追加されましたアプリケーションでは、1 つ以上のアクティブな既定の結果を 1 つの接続設定ができますようになりました。 MARS は既定では有効になっていません。  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 複数のアクティブな結果セット (MARS); のサポートを導入アプリケーションでは、1 つ以上のアクティブな既定の結果セットの 1 つの接続ができますようになりました。 MARS は既定では有効になっていません。  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、既定の結果セットは 1 つの接続における複数のアクティブなステートメントをサポートしていません。 SQL ステートメントが 1 つの接続で実行された後、サーバーは結果セットのすべての行が処理されるまで、その接続に対するクライアントからのコマンドを受け付けません (結果セットの残りの行の処理を取り消す要求は除きます)。 部分的に処理された結果セットの残りの部分をキャンセルする[SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)または[SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md)で、 *fOption*パラメーターに SQL_CLOSE を設定します。 完了するには、部分的に処理された結果セットと別の結果セットの存在テストを呼び出す[SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)です。 呼び出しを呼び出すと、SQL_ERROR が生成されます、ODBC アプリケーションは、既定の結果セットが完全に処理される前に、接続ハンドルでコマンドを試みると、 **SQLGetDiagRec**を返します。  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、既定の結果セットは 1 つの接続における複数のアクティブなステートメントをサポートしていません。 SQL ステートメントが 1 つの接続で実行された後、サーバーは結果セットのすべての行が処理されるまで、その接続に対するクライアントからのコマンドを受け付けません (結果セットの残りの行の処理を取り消す要求は除きます)。 部分的に処理された結果セットの残りの部分をキャンセルする[SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)または[SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md)で、 *fOption*パラメーターに SQL_CLOSE を設定します。 部分的に処理された結果セットと別の結果セットの有無のテストを完了するには、呼び出す[SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)します。 呼び出しが SQL_ERROR とへの呼び出しを生成、ODBC アプリケーションは、既定の結果セットが完全に処理される前に、接続ハンドルでのコマンドを試みると、 **SQLGetDiagRec**を返します。  
   
 ```  
 szSqlState: "HY000", pfNativeError: 0  

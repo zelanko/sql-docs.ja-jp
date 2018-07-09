@@ -1,12 +1,12 @@
 ---
-title: コマンドの実行 |Microsoft ドキュメント
+title: コマンドの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,24 +20,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dfae23f1f7493172790b026e411c99b1dd63fcd1
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 266cf6733c2a73f64dc6561e0cb0b13c6929a8b8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694463"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423951"
 ---
-# <a name="executing-a-command"></a>コマンドの実行
+# <a name="executing-a-command"></a>コマンドを実行します。
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  データ ソースへの接続を確立すると、コンシューマーは呼び出し、 **idbcreatesession::createsession**セッションを作成するメソッド。 セッションは、コマンド、行セット、またはトランザクションのファクトリとして動作します。  
+  データ ソースへの接続を確立するには、コンシューマーは呼び出し、 **idbcreatesession::createsession**セッションを作成するメソッド。 セッションは、コマンド、行セット、またはトランザクションのファクトリとして動作します。  
   
- コンシューマーが要求する個々 のテーブルまたはインデックスを直接操作する、 **IOpenRowset**インターフェイスです。 **Iopenrowset::openrowset**メソッドを開き、単一のベース テーブルまたはインデックスからすべての行を含む行セットを返します。  
+ コンシューマーが要求する個々 のテーブルまたはインデックスを直接操作する、 **IOpenRowset**インターフェイス。 **Iopenrowset::openrowset**メソッドを開き、1 つのベース テーブルまたはインデックスからすべての行が含まれる行セットを返します。  
   
- コマンドを実行する (SELECT など\*FROM Authors)、コンシューマーの要求、 **IDBCreateCommand**インターフェイスです。 コンシューマーが実行できる、 **idbcreatecommand::createcommand**コマンド オブジェクトを作成し、要求をメソッド、 **ICommandText**インターフェイスです。 **Icommandtext::setcommandtext**メソッドを使用して、コマンドを実行するを指定します。  
+ コマンドを実行する (SELECT など\*FROM Authors)、コンシューマーの要求、 **IDBCreateCommand**インターフェイス。 コンシューマーが実行できる、 **idbcreatecommand::createcommand**コマンド オブジェクトを作成し、要求のメソッドを**ICommandText**インターフェイス。 **Icommandtext::setcommandtext**メソッドを使用して、コマンドを実行するを指定します。  
   
- **Execute**コマンドを実行するコマンドを使用します。 コマンドには、任意の SQL ステートメントやプロシージャ名を指定できます。 コマンドを実行しても、必ず結果セット (行セット) オブジェクトが得られるわけではありません。 SELECT * FROM Authors などのコマンドでは、結果セットが得られます。  
+ **Execute**コマンドを使用して、コマンドを実行します。 コマンドには、任意の SQL ステートメントやプロシージャ名を指定できます。 コマンドを実行しても、必ず結果セット (行セット) オブジェクトが得られるわけではありません。 SELECT * FROM Authors などのコマンドでは、結果セットが得られます。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client OLE DB プロバイダー アプリケーションの作成](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  

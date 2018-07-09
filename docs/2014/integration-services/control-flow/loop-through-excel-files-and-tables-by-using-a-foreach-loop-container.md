@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
 - Excel [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9e0c80441798259750c9c24bc8062d7f8637cc37
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: df6de3a81b8ebd1f9ca23ffa1b004c4180c26e81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158993"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する
   このトピックの手順では、Foreach ループ コンテナーと適切な列挙子を使用して、フォルダー内の Excel ブックまたは Excel ブック内のテーブルをループ処理する方法について説明します。  
@@ -49,7 +49,7 @@ ms.locfileid: "36324656"
     > [!IMPORTANT]  
     >  この Excel 接続マネージャーを使用するデータ フロー コンポーネントとタスクを構成する際、検証エラーが発生しないようにするには、 **[Excel 接続マネージャー]** で既存の Excel ブックを選択します。 以下の手順に従って `ConnectionString` プロパティ用の式を構成した後は、接続マネージャーは実行時にこのブックを使用しなくなります。 パッケージを作成して構成したら、[プロパティ] ウィンドウで `ConnectionString` プロパティの値を削除することができます。 ただし、この値を削除すると、Excel 接続マネージャーの接続文字列プロパティは Foreach ループが実行されるまで無効になります。 したがって、接続マネージャーを使用するタスクまたはパッケージでは、検証エラーが発生しないように、`DelayValidation` プロパティを `True` に設定してください。  
     >   
-    >  既定値を使用することも必要があります。`False`の、 `RetainSameConnection` Excel 接続マネージャーのプロパティです。 この値を `True` に変更すると、ループの各反復処理で最初の Excel ブックが繰り返し開かれるようになります。  
+    >  既定値を使用することも必要があります。`False`の、 `RetainSameConnection` 、Excel 接続マネージャーのプロパティ。 この値を `True` に変更すると、ループの各反復処理で最初の Excel ブックが繰り返し開かれるようになります。  
   
 8.  新しい Excel 接続マネージャーを選択し、[プロパティ] ウィンドウで **[式]** プロパティをクリックして、参照ボタンをクリックします。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36324656"
 9. Foreach ループ コンテナー内で、Excel 接続マネージャーを使用して、指定したブック内の各 Excel テーブルに対して同じ操作を実行するタスクを作成します。 スクリプト タスクを使用して、列挙されるテーブル名を調べたり各テーブルを操作したりする場合、スクリプト タスクの ReadOnlyVariables プロパティに文字列変数を追加することを忘れないでください。  
   
 ## <a name="see-also"></a>参照  
- [Excel からデータをインポートしたり、Excel と SQL Server Integration Services (SSIS) にデータをエクスポート](../load-data-to-from-excel-with-ssis.md) [Foreach ループ コンテナーの構成](foreach-loop-container.md)   
+ [Excel からデータをインポートまたはデータを SQL Server Integration Services (SSIS) での Excel エクスポート](../load-data-to-from-excel-with-ssis.md) [Foreach ループ コンテナーを構成します。](foreach-loop-container.md)   
  [プロパティ式を追加または変更する](../expressions/add-or-change-a-property-expression.md)   
  [Excel 接続マネージャー](../connection-manager/excel-connection-manager.md)   
  [Excel ソース](../data-flow/excel-source.md)   
