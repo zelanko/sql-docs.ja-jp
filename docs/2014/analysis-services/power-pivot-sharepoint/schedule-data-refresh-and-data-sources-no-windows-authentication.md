@@ -1,5 +1,5 @@
 ---
-title: 定期データ更新と Windows 認証 (PowerPivot for SharePoint) をサポートしないデータ ソース |Microsoft ドキュメント
+title: 定期データ更新と Windows 認証 (PowerPivot for SharePoint) をサポートしないデータ ソース |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28ab8ddcc8ef6a866992cdf7a2fabe75a5a30878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 474308339c112899787a4b6344bbe53622f4fff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230102"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>定期データ更新と Windows 認証をサポートしないデータ ソース (PowerPivot for SharePoint)
   このトピックでは、Windows 認証を**サポートしない**データ ソースを使用できる PowerPivot for SharePoint 定期データ更新のワークフローについて説明します。 たとえば、Oracle データ ソースまたは IDM DB2 データ ソースが該当します。 このトピックにある図と手順では、Oracle データ ソースを参照していますが、他のデータ ソースにも同じワークフローが当てはまります。  
@@ -78,7 +78,7 @@ ms.locfileid: "36074271"
   
 9. **[OK]** をクリックします。  
   
-10. 新しいターゲット アプリケーション ID が一覧に追加されます。 ターゲット アプリケーション ID を選択し、クリックして**資格情報の設定**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")です。  
+10. 新しいターゲット アプリケーション ID が一覧に追加されます。 ターゲット アプリケーション ID を選択し、クリックして**資格情報の設定**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")します。  
   
 11. Windows ユーザー名と Windows パスワードを入力して、 **[OK]** をクリックします。  
   
@@ -104,9 +104,9 @@ ms.locfileid: "36074271"
   
 5.  **[次へ]** をクリックします。  
   
-6.  **資格情報** ページで、最初のフィールド名を変更`Oracle User ID`を変更して、**フィールド型**に`User Name`です。  
+6.  **資格情報** ページで、最初のフィールド名を変更して`Oracle User ID`を変更して、**フィールド型**に`User Name`します。  
   
-     2 番目のフィールド名に変更`Oracle Password`と**フィールド型**に`Password`です。  
+     2 番目のフィールド名を変更して`Oracle Password`と**フィールド型**に`Password`します。  
   
 7.  **[次へ]** をクリックします。  
   
@@ -114,11 +114,11 @@ ms.locfileid: "36074271"
   
 9. **[OK]** をクリックします。  
   
-10. 新しいターゲット アプリケーション ID が一覧に追加されます。 ターゲット アプリケーション ID を選択し、クリックして**資格情報の設定**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")です。  
+10. 新しいターゲット アプリケーション ID が一覧に追加されます。 ターゲット アプリケーション ID を選択し、クリックして**資格情報の設定**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")します。  
   
 11. Oracle ユーザー ID と Oracle パスワードを入力して、 **[OK]** をクリックします。  
   
- 詳細については、SQL Server 認証のターゲット アプリケーションの作成"するには」セクションを参照してください[SQL サーバー認証 (SharePoint Server 2013) でセキュリティで保護されたストアを使用して](http://technet.microsoft.com/library/gg298949.aspx)(http://technet.microsoft.com/library/gg298949.aspx)です。  
+ 詳細については、「SQL Server 認証の対象アプリケーションを作成するには」セクションを参照してください[SQL Server 認証 (SharePoint Server 2013) で Secure Store を使用する](http://technet.microsoft.com/library/gg298949.aspx)(http://technet.microsoft.com/library/gg298949.aspx)します。  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>PowerPivot サービス アプリケーションを構成するには  
   
@@ -128,13 +128,13 @@ ms.locfileid: "36074271"
   
 3.  [アクション] で **[サービス アプリケーションの設定の構成]** をクリックします。  
   
-4.  **データ更新**セクションで、設定、 **PowerPivot 自動データ更新アカウント**に`PowerPivotDataRefresh` をクリックし、 **ok**です。  
+4.  **データ更新**セクションで、設定、 **PowerPivot 自動データ更新アカウント**に`PowerPivotDataRefresh`順にクリックします**OK**します。  
   
      ![as_powerpivot_refresh_new_refresh_acount](../media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   
 ## <a name="to-configure-the-workbook"></a>ブックを構成するには  
   
-1.  PowerPivot ギャラリーでブックを参照してクリックして**データ更新の管理**![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")です。  
+1.  PowerPivot ギャラリーでブックを参照してクリックして**データ更新の管理**![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")します。  
   
 2.  **[データ更新の履歴]** ページが表示されたら、 **[スケジュールの構成]** をクリックします。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36074271"
   
 9. **[Secure Store Service (SSS) に保存された資格情報を使用してデータ ソースにログオンします。資格情報を参照するための ID を SSS ID ボックスに入力してください]** を選択します。  
   
-10. **ID:** ボックスに、入力`OracleAuthentication`です。  
+10. **ID:** ボックスに「`OracleAuthentication`します。  
   
 11. **[OK]** をクリックします。  
   

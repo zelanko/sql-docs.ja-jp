@@ -1,12 +1,12 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) |Microsoft ドキュメント
+title: IBCPSession::BCPDone (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da9cd1408c12e055a10a208021de1e16dac9d9eb
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d57e507beb03a28f9e0f7e0b676b8393ace4a125
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694553"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421501"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>コメント  
- その他の操作を呼び出せません、 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)呼び出した後のインターフェイス、 **BCPDone**メソッドです。 呼び出すだけのことが、 [ibcpsession::bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)新しいバルク コピー操作を開始するメソッド。 これは、呼び出しに似ています、 [irowsetfastload::commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)メソッドです。  
+ その他の操作を呼び出すことはできません、 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)インターフェイスを呼び出した後、 **BCPDone**メソッド。 唯一の可能性を呼び出すことです、 [ibcpsession::bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)新しい一括コピー操作を開始する方法。 これは、呼び出しに似ています、 [irowsetfastload::commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)メソッド。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
@@ -51,7 +51,7 @@ HRESULT BCPDone(void);
  メソッドの呼び出しが予期されませんでした。 たとえば、 **BCPInit**メソッドは、このメソッドを呼び出す前に呼び出されませんでした。  
   
 ## <a name="example"></a>例  
- このサンプルを使用する方法を示します、 **IBCPSession**インターフェイスです。  
+ このサンプルは、使用する方法を示します、 **IBCPSession**インターフェイス。  
   
  このサンプルを実行する前に、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] を実行する必要があります。  
   

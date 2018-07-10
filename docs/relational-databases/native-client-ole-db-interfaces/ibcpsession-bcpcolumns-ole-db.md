@@ -1,12 +1,12 @@
 ---
-title: Ibcpsession::bcpcolumns (OLE DB) |Microsoft ドキュメント
+title: Ibcpsession::bcpcolumns (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fb68a61f5aca057eea4ec16334745e6e2e6e427b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e81e12fd880bdde5cbc28b932e340e9dbe1e6d33
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700733"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423891"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,25 +42,25 @@ HRESULT BCPColumns(
 ```  
   
 ## <a name="remarks"></a>コメント  
- 内部的に呼び出す[ibcpsession::bcpcolfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)フィールド データの既定値を設定します。 これらの既定値はを通じて、テーブル名が指定されている場合、プロバイダーが内部的に取得された SQL Server 列情報から取得されます[ibcpsession::bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)です。  
+ 内部的に呼び出します[ibcpsession::bcpcolfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)フィールド データの既定値を設定します。 これらの既定値をテーブル名を指定した場合、プロバイダーが内部的に取得された SQL Server 列情報から取得[ibcpsession::bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)します。  
   
 > [!NOTE]  
->  このメソッドは、後にのみ呼び出すことができる**BCPInit**有効なファイル名で呼び出されました。  
+>  このメソッドは、後でのみ呼び出すことが**BCPInit**は有効なファイル名で呼び出されました。  
   
- 既定とは異なる形式のユーザー ファイルを使用する場合にのみ、このメソッドを呼び出す必要があります。 既定のユーザー ファイル形式の説明の詳細については、次を参照してください。、 **BCPInit**メソッドです。  
+ 既定とは異なる形式のユーザー ファイルを使用する場合にのみ、このメソッドを呼び出す必要があります。 既定のユーザー ファイル形式の説明の詳細については、次を参照してください。、 **BCPInit**メソッド。  
   
- 呼び出した後、 **BCPColumns**メソッドを呼び出す必要があります、 **BCPColFmt**独自のファイル形式を完全に定義するユーザー ファイル内の各列のメソッドです。  
+ 呼び出した後、 **BCPColumns**メソッドを呼び出す必要があります、 **BCPColFmt**カスタム ファイル形式を完全に定義するユーザー ファイル内の各列のメソッド。  
   
 ## <a name="arguments"></a>引数  
  *nColumns*[in]  
- ユーザー ファイル内のフィールドの総数です。 設定する必要がある準備を行う場合でも、データの一括コピーのユーザー ファイルから SQL Server にテーブルが表示され、ユーザー ファイル内のすべてのフィールドをコピーする予定がない、 *nColumns*ユーザー ファイルのフィールドの合計数に渡す引数。 スキップしたフィールドを指定できます**BCPColFmt**です。  
+ ユーザー ファイル内のフィールドの総数です。 設定する必要がある準備を行う場合でも、SQL Server にユーザー ファイルから一括コピー データ テーブルが表示され、ユーザー ファイル内のすべてのフィールドをコピーする予定がない、 *nColumns*ユーザー ファイルのフィールドの合計数の引数。 スキップしたフィールドを指定できます**BCPColFmt**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
  メソッドが成功しました。  
   
  E_FAIL  
- プロバイダー固有のエラーが発生しました。詳細についてを使用して、 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)インターフェイスです。  
+ プロバイダー固有のエラーが発生しました。詳細については、使用、 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)インターフェイス。  
   
  E_UNEXPECTED  
  メソッドの呼び出しが予期されませんでした。 たとえば、 **BCPInit**メソッドは、このメソッドを呼び出す前に呼び出されませんでした。 また、1 回の一括コピー操作でこのメソッドが複数回呼び出されたときもこのリターン コードが返されます。  

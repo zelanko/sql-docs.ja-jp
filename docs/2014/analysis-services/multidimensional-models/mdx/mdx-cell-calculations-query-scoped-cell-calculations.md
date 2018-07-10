@@ -1,5 +1,5 @@
 ---
-title: クエリ スコープのセル計算 (MDX) を作成する |Microsoft ドキュメント
+title: クエリ スコープのセル計算 (MDX) を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34a26daaf3e1fc55eef72e9382cfe5586a00fb7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5431862cd1a446a045d910841adc4d78d62d42be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159393"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>クエリ スコープのセル計算の作成 (MDX)
-  計算されるセルをクエリのコンテキストの中で記述するには、多次元式 (MDX) の `WITH` キーワードを使用します。 `WITH`キーワードは、次の構文。  
+  計算されるセルをクエリのコンテキストの中で記述するには、多次元式 (MDX) の `WITH` キーワードを使用します。 `WITH`キーワードには、次の構文。  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -37,7 +37,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
 |--------------|-----------------|  
 |空セット|空セットに解決される MDX セット式。 この場合、計算されるセルのスコープはキューブ全体です。|  
 |単一メンバー セット|1 つのメンバーに解決される MDX セット式。|  
-|レベル メンバーのセット|単一レベルのメンバーに解決される MDX セット式。 このようなセット式の例は、 *Level_Expression*です。`Members` MDX 関数です。 計算されるメンバーを含めるを使用して、 *Level_Expression*です。`AllMembers` MDX 関数です。 詳細については、「[AllMembers (MDX)](/sql/mdx/allmembers-mdx)」を参照してください。|  
+|レベル メンバーのセット|単一レベルのメンバーに解決される MDX セット式。 このようなセット式の例は、 *Level_Expression*します。`Members` MDX 関数です。 計算されるメンバーを含めるには使用、 *Level_Expression*します。`AllMembers` MDX 関数です。 詳細については、「[AllMembers (MDX)](/sql/mdx/allmembers-mdx)」を参照してください。|  
 |子孫のセット|指定したメンバーの子孫に解決される MDX セット式。 このようなセット式の例は、 `Descendants`(*メンバー式*、 *Level_Expresion*、 *Desc_Flag*) MDX 関数です。 詳細については、「[Descendants (MDX)](/sql/mdx/descendants-mdx)」を参照してください。|  
   
  `String_Expression` 引数でディメンションが記述されていない場合、MDX は計算サブキューブの構築のためにすべてのメンバーが含まれていると想定します。 したがって、 `String_Expression` 引数が NULL の場合、計算されるセルの定義はキューブ全体に適用されます。  

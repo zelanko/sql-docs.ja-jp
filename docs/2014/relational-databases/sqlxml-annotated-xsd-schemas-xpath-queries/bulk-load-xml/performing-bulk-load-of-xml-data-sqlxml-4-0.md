@@ -1,5 +1,5 @@
 ---
-title: XML データ (SQLXML 4.0) の一括読み込みを実行する |Microsoft ドキュメント
+title: XML データ (SQLXML 4.0) の一括読み込みを実行する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4c4c6980c32028858b70d9fd59d80448a692206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7669d5342ecfff26a81808b9a1969e1b367e60e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230638"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>XML データの一括読み込みの実行 (SQLXML 4.0)
   XML 一括読み込みはスタンドアロン COM オブジェクトであり、これを使用すると、半構造化された XML データを Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルに読み込むことができます。  
@@ -52,7 +52,7 @@ ms.locfileid: "36072070"
  [データ型と XML 一括読み込み動作&#40;SQLXML 4.0&#41;](data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
  XSD と XDR での、さまざまな XML 一括読み込み動作について説明します。  
   
- [XML のガイドラインと制限、一括読み込み&#40;SQLXML 4.0&#41;](guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
+ [ガイドラインと制限事項の XML 一括読み込み&#40;SQLXML 4.0&#41;](guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
  XML 一括読み込みを扱うときに注意すべき問題をいくつか示します。  
   
   

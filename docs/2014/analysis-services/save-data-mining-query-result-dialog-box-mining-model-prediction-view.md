@@ -1,5 +1,5 @@
 ---
-title: データ マイニング クエリの結果 ダイアログ ボックス (マイニング モデル予測 ビュー) を保存 |Microsoft ドキュメント
+title: 保存データ マイニングのクエリ結果 ダイアログ ボックス (マイニング モデル予測 ビュー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dm.savedataminingqueryresult.f1
 helpviewer_keywords:
 - Save Data Mining Query Result dialog box
 ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 709c3364ac5b4d6bc159af4ec6db40663d21fcbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4ab445225182566db8e4733904a3e66340549a70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151623"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>[データ マイニングのクエリ結果を保存] ダイアログ ボックス ([マイニング モデル予測] ビュー)
   **[データ マイニングのクエリ結果を保存]** ダイアログ ボックスを使用すると、新しいテーブルに、データ マイニング クエリの結果を保存できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "36073588"
  **テーブル名**  
  新しいテーブルの名前を入力します。  
   
- **上書きが存在します。**  
+ **場合は上書きが存在します。**  
  同じ名前を持つ既存のテーブルを上書きする場合は、このオプションをオンにします。  
   
  次のいずれかに該当する場合は、既存のテーブルを上書きする必要があります。  

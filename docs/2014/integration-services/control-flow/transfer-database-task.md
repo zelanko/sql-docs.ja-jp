@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cb5a9f08218a2533b4d1bcbcec2572b0b929dc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 931978bdad7e2e82d232af85ee253ca8cae7de91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239262"
 ---
 # <a name="transfer-database-task"></a>データベース転送タスク
   データベース転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 2 つのインスタンスの間で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを転送します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトをコピーして転送するだけの他のタスクに対し、データベース転送タスクでは、データベースをコピーまたは移動できます。 このタスクを使用して、同じサーバー内でデータベースをコピーすることもできます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36070993"
 ## <a name="execution-value"></a>実行値  
  タスクの `ExecutionValue` プロパティで定義される実行値は、値 1 を返します。これは、他の転送タスクとは異なり、データベース転送タスクでは 1 つのデータベースしか転送できないためです。  
   
- ユーザー定義変数を割り当てることによって、`ExecValueVariable`について、エラー メッセージ転送は、データベース転送タスクのプロパティが利用できるその他のオブジェクトをパッケージにします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../use-variables-in-packages.md)」をご覧ください。  
+ ユーザー定義変数を割り当てることで、`ExecValueVariable`データベース転送タスク、エラー メッセージの転送に関する情報のプロパティが利用できるその他のオブジェクトをパッケージにします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../use-variables-in-packages.md)」をご覧ください。  
   
 ## <a name="log-entries"></a>ログ エントリ  
  データベース転送タスクには、次のカスタム ログ エントリが含まれています。  
@@ -53,7 +53,7 @@ ms.locfileid: "36070993"
   
 -   SourceDB: このログ エントリは、転送されたデータベースの名前を一覧表示します。  
   
- さらのログ エントリ、`OnInformation`転送先データベースが上書きされた場合、イベントが書き込まれます。  
+ さらに、ログ エントリ、`OnInformation`転送先データベースが上書きされると、イベントが書き込まれます。  
   
 ## <a name="security-and-permissions"></a>セキュリティおよび権限  
  オフライン モードを使用してデータベースを転送するには、パッケージを実行するユーザーが sysadmin サーバー ロールのメンバーである必要があります。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7dd0170481a3894334dc01b2974a27ace6b736b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7ca9a22a2f6f4732a97387778484aae261fc0848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183489"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 入力ファイル リファレンス (データベース エンジン チューニング アドバイザー)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーでは、XML 入力ファイルを使用してデータベースをチューニングできます。 この XML ファイルでは、チューニング セッションで使用するデータベース、テーブル、ワークロード ファイルまたはワークロード テーブル、およびチューニング オプションを指定します。 このファイルを使用して、ユーザー指定の構成を指定し、"what-if" 分析を実行することもできます。  
@@ -48,7 +48,7 @@ ms.locfileid: "36073876"
   
 -   [DTAInput 要素&#40;DTA&#41;](dtainput-element-dta.md)  
   
--   [サーバー要素&#40;DTA&#41;](server-element-dta.md)  
+-   [Server 要素&#40;DTA&#41;](server-element-dta.md)  
   
 -   [Workload 要素&#40;DTA&#41;](workload-element-dta.md)  
   
@@ -98,29 +98,29 @@ ms.locfileid: "36073876"
   
 -   [Recommendation 要素&#40;DTA&#41;](recommendation-element-dta.md)  
   
--   [要素を作成する&#40;DTA&#41;](create-element-dta.md)  
+-   [要素作成&#40;DTA&#41;](create-element-dta.md)  
   
 -   [要素のインデックス&#40;DTA&#41;](index-element-dta.md)  
   
--   [インデックスの要素の名前を付けます&#40;DTA&#41;](name-element-for-index-dta.md)  
+-   [インデックスの要素を名前&#40;DTA&#41;](name-element-for-index-dta.md)  
   
 -   [Index の column 要素&#40;DTA&#41;](column-element-for-index-dta.md)  
   
--   [列の要素の名前を付けます&#40;DTA&#41;](name-element-for-column-dta.md)  
+-   [列の要素を名前&#40;DTA&#41;](name-element-for-column-dta.md)  
   
 -   [Index の Filegroup 要素&#40;DTA&#41;](filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>データベースの要素  
   
--   [データベースの要素の名前を付けます&#40;DTA&#41;](name-element-for-database-dta.md)  
+-   [データベースの名前を要素&#40;DTA&#41;](name-element-for-database-dta.md)  
   
 -   [Database の schema 要素&#40;DTA&#41;](schema-element-for-database-dta.md)  
   
--   [スキーマの要素の名前を付けます&#40;DTA&#41;](name-element-for-schema-dta.md)  
+-   [スキーマの要素を名前&#40;DTA&#41;](name-element-for-schema-dta.md)  
   
--   [スキーマの要素をテーブル&#40;DTA&#41;](table-element-for-schema-dta.md)  
+-   [テーブル スキーマの要素&#40;DTA&#41;](table-element-for-schema-dta.md)  
   
--   [テーブルの要素の名前を付けます&#40;DTA&#41;](name-element-for-table-dta.md)  
+-   [テーブルの名前を要素&#40;DTA&#41;](name-element-for-table-dta.md)  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)  

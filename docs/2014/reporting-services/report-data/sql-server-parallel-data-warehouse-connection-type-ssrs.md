@@ -8,40 +8,40 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7a8ce540cb3ecf555e5abc22a1927482409bc582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6b1b12938e2043ee126c81313fc955454742bcde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149413"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 並列データ ウェアハウスの接続の種類 (SSRS)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 膨大な並列処理によってパフォーマンスとスケーラビリティを実現するスケーラブルなデータ ウェアハウス アプライアンスです。 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 使用して[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]分散処理とデータ ストレージ用のデータベースです。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 超並列処理によってパフォーマンスとスケーラビリティを提供するスケーラブルなデータ ウェアハウス アプライアンスです。 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 使用して[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]分散処理とデータ ストレージ用のデータベース。  
   
  このアプライアンスでは、複数の物理ノードにわたる大規模なデータベース テーブルを分割し、各ノードが独自の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を実行するようにします。 レポートが [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] に接続してレポート データを取得するときには、クエリの処理を管理する、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] アプライアンス内の管理ノードに接続します。 接続が確立すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 環境内にある [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] のインスタンスに対する操作と、この環境外にある  のインスタンスに対する操作の区別が付かなくなります。  
   
- データを含めるに[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]レポートでは、型のレポート データ ソースに基づいているデータセットが必要[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]並列データ ウェアハウスです。 このビルトイン データ ソースの種類がに基づいて、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]並列データ ウェアハウスのデータ拡張機能です。 このデータ ソースの種類を使用して、[!INCLUDE[ssDW](../../../includes/ssdw-md.md)] からのデータに接続し、そのデータを取得します。  
+ データを含めるに[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]レポートでは、型のレポート データ ソースに基づいているデータセットが必要[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse。 このビルトイン データ ソースの種類がに基づいて、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse のデータ拡張機能。 このデータ ソースの種類を使用して、[!INCLUDE[ssDW](../../../includes/ssdw-md.md)] からのデータに接続し、そのデータを取得します。  
   
  このデータ拡張機能は、接続文字列とは個別に管理される、複数の値を持つパラメーター、サーバー集計、および資格情報をサポートしています。  
   
  詳細については、「 [SQL Server 2008 R2 並列データ ウェアハウス](http://go.microsoft.com/fwlink/?LinkId=150895)」の Web サイトを参照してください。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[を追加して、データ接続またはデータ ソースを確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)です。  
+ このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)します。  
   
 ##  <a name="Connection"></a> 接続文字列  
- [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]に接続する場合、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] アプライアンス内のデータベース オブジェクトに接続します。 クエリ デザイナーで、使用するデータベース オブジェクトを指定します。 接続文字列でデータベースを指定しない場合は、管理者によって割り当てられた既定のデータベースに接続されます。 データ ソースへの接続に使用する接続情報および資格情報については、データベース管理者に問い合わせてください。 次の接続文字列の例は、サンプル データベースを指定**CustomerSales**で、[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]アプライアンス。  
+ [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]に接続する場合、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] アプライアンス内のデータベース オブジェクトに接続します。 クエリ デザイナーで、使用するデータベース オブジェクトを指定します。 接続文字列でデータベースを指定しない場合は、管理者によって割り当てられた既定のデータベースに接続されます。 データ ソースへの接続に使用する接続情報および資格情報については、データベース管理者に問い合わせてください。 次の接続文字列の例は、サンプル データベースを指定**CustomerSales**の[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]アプライアンス。  
   
 ```  
 HOST=<IP address>; database= CustomerSales; port=<port>  
 ```  
   
- また、 **[データ ソースのプロパティ]** ダイアログ ボックスを使用して、ユーザー名やパスワードなどの資格情報を入力します。 `User Id` オプションと `Password` オプションは、接続文字列に自動的に付加されます。これらを接続文字列の一部として入力する必要はありません。 ユーザー インターフェイスには、コントロール内のノードの IP アドレスを指定するオプションも用意されています、[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]アプライアンスとポート番号。 既定のポート番号は 17000 です。 ポートは管理者が変更できるので、接続文字列で別のポート番号を使用することもあります。  
+ また、 **[データ ソースのプロパティ]** ダイアログ ボックスを使用して、ユーザー名やパスワードなどの資格情報を入力します。 `User Id` オプションと `Password` オプションは、接続文字列に自動的に付加されます。これらを接続文字列の一部として入力する必要はありません。 ユーザー インターフェイスは、内の管理ノードの IP アドレスを指定するオプションも用意されています。、[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]アプライアンスとポート番号。 既定のポート番号は 17000 です。 ポートは管理者が変更できるので、接続文字列で別のポート番号を使用することもあります。  
   
  接続文字列の例の詳細については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)」を参照してください。  
   
@@ -56,7 +56,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   資格情報を必要としない。 このオプションを使用するには、レポート サーバーで自動実行アカウントを構成しておく必要があります。 詳細については、msdn.microsoft.com で [Reporting Services に関するドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)の「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
- 詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services に接続文字列が](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)または[レポート ビルダーでの資格情報を指定](../specify-credentials-in-report-builder.md)です。  
+ 詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)または[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)します。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
@@ -67,7 +67,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   クエリを対話形式で作成します。 データベース スキーマ別に編成された、テーブル、ビュー、およびその他のデータベース アイテムの階層ビューが表示されるリレーショナル クエリ デザイナーを使用します。 テーブルまたはビューから列を選択します。 フィルター条件、グループ化、および集計を指定して、取得するデータの行数を制限します。 パラメーター オプションを設定してレポートの実行時にフィルターをカスタマイズします。  
   
--   クエリを入力するか、貼り付けます。 テキスト ベースのクエリ デザイナーを使用して入力[!INCLUDE[DWsql](../../../includes/dwsql-md.md)]テキストを直接、リレーショナル クエリ デザイナーを使用して作成できない複雑なクエリを入力するか、クエリ ベースの式を入力する別のソースからクエリ テキストを貼り付けます。  
+-   クエリを入力するか、貼り付けます。 テキスト ベースのクエリ デザイナーを使用して入力[!INCLUDE[DWsql](../../../includes/dwsql-md.md)]を貼り付ける、リレーショナル クエリ デザイナーを使用して作成できない複雑なクエリを入力するか、クエリ ベースの式を入力する別のソースからクエリ テキストを直接テキスト。  
   
 -   ファイルまたはレポートから既存のクエリをインポートします。 クエリ デザイナーの **[クエリのインポート]** ボタンを使用して、.sql ファイルまたは .rdl ファイルを参照し、クエリをインポートします。  
   
@@ -83,12 +83,12 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] データを集計するクエリ デザイナーを提供する句、キーワード、および集計をサポートします。  
   
- [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] で使用されるグラフィカル クエリ デザイナーには、要約データのみを取得するクエリの作成に役立つグループ化と集計のサポートが組み込まれています。 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)]言語機能は、: GROUP BY 句、DISTINCT キーワード、および SUM や COUNT などの集計です。 テキスト ベースのクエリ デザイナーには、完全にサポートが用意されています、[!INCLUDE[DWsql](../../../includes/dwsql-md.md)]グループ化と集計を含む言語。  
+ [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] で使用されるグラフィカル クエリ デザイナーには、要約データのみを取得するクエリの作成に役立つグループ化と集計のサポートが組み込まれています。 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)]言語機能は、: GROUP BY 句、DISTINCT キーワード、および SUM や COUNT などの集計。 テキスト ベースのクエリ デザイナーには、完全にサポートが用意されています、 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 、グループ化と集計を含む言語。  
   
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=141687)にある「[Transact-SQL リファレンス (データベース エンジン)](/sql/t-sql/language-reference)」を参照してください。  
   
 ###  <a name="QueryText"></a> Text の種類のクエリの使用  
- テキスト ベースのクエリ デザイナーでは、 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] コマンドを入力して、データセット内のデータを定義します。 クエリからデータを取得するために使用[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]はのインスタンスからのデータの取得に使用するものと同じ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]内で実行していない、[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]アプリケーションです。 たとえば、次[!INCLUDE[DWsql](../../../includes/dwsql-md.md)]クエリは、マーケティング アシスタントであるすべての従業員の名前を選択します。  
+ テキスト ベースのクエリ デザイナーでは、 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] コマンドを入力して、データセット内のデータを定義します。 クエリからデータを取得するために使用[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]はのインスタンスからデータを取得するを使用するものと同じ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]内で実行されていない、[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]アプリケーション。 たとえば、次[!INCLUDE[DWsql](../../../includes/dwsql-md.md)]クエリは、マーケティング アシスタントであるすべての従業員の名前を選択します。  
   
 ```  
 SELECT  

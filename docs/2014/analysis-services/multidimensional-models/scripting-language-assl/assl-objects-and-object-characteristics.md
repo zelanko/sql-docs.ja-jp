@@ -1,5 +1,5 @@
 ---
-title: ASSL オブジェクトとオブジェクトの特性 |Microsoft ドキュメント
+title: ASSL オブジェクトとオブジェクトの特性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - expansion [Analysis Services Scripting Language]
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e5f98511df4b952f6598909d1cea2c373ff7476
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95e2277f9d618dfc13c4fe93ea6a565550ec1e87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277898"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL オブジェクトとオブジェクトの特性
   Analysis Services スクリプト言語 (ASSL) のオブジェクトは、オブジェクト グループ、継承、名前付け、展開、および処理に関して特定のガイドラインに従います。  
   
 ## <a name="object-groups"></a>オブジェクト グループ  
- すべて[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]オブジェクトが、XML 表現を作成します。 オブジェクトは 2 つのグループに分けられます。  
+ すべて[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]オブジェクトがある XML 表現。 オブジェクトは 2 つのグループに分けられます。  
   
  **主要なオブジェクト**  
  主要なオブジェクトは、個別に作成、変更、削除することができます。 主要なオブジェクトは次のとおりです。  
@@ -91,14 +91,14 @@ ms.locfileid: "36070575"
 ## <a name="object-expansion"></a>オブジェクトの展開  
  `ObjectExpansion` 制限は、サーバーから返される ASSL XML をどの程度展開するかを制御するために使用できます。 次の表には、この制限のオプションを示します。  
   
-|列挙値|許可\<Alter >|説明|  
+|列挙値|許可されている\<Alter >|説明|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|いいえ|要求されたオブジェクトおよび含まれているすべての主要なオブジェクトの名前、ID、およびタイムスタンプだけを再帰的に返します。|  
 |*ObjectProperties*|はい|要求されたオブジェクトと含まれいているマイナー オブジェクトを展開し、含まれている主要なオブジェクトは返しません。|  
-|*ExpandObject*|いいえ|同じ*ObjectProperties*名前、ID、および含まれる主要なオブジェクトのタイムスタンプも返されます。|  
+|*ExpandObject*|いいえ|同じ*objectproperties です*名前、ID、および含まれる主要なオブジェクトのタイムスタンプにも返されます。|  
 |*ExpandFull*|はい|要求されたオブジェクトと含まれているすべてのオブジェクトを再帰的に完全に展開します。|  
   
- この ASSL 参照セクションについて説明、 *ExpandFull*表現します。 他のすべての `ObjectExpansion` レベルがこのレベルから派生します。  
+ この ASSL 参照セクションについて説明します、 *ExpandFull*表現。 他のすべての `ObjectExpansion` レベルがこのレベルから派生します。  
   
 ## <a name="object-processing"></a>オブジェクト処理  
  ASSL には、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスから読み取ることはできても、そのインスタンスにコマンド スクリプトが送信されるときに省略される読み取り専用の要素またはプロパティ (`LastProcessed` など) があります。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]  では、読み取り専用の要素の変更された値を無視し、警告やエラーを返しません。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef6d05975ae639f467f793f61a3e367da44efd8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 690897612e73c1f1a9d9cfc8f4a2ed7d8ee84bd9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229272"
 ---
 # <a name="edit-a-model-deployment-package"></a>モデルの配置パッケージの編集
   このトピックでは、モデル全体ではなく、モデルの選択した部分を MDS に配置する方法について説明します。 これを行うには、モデル パッケージ エディターを使用して MDS モデル パッケージを編集します。  
@@ -37,7 +37,7 @@ ms.locfileid: "36073516"
   
 ### <a name="to-edit-a-model-deployment-package"></a>モデルの配置パッケージを編集するには  
   
-1.  Windows エクスプ ローラーで、MDS サーバーに移動*ドライブ*: \Program Files\Microsoft SQL server \120\master Data services \configuration です。  
+1.  Windows エクスプ ローラーの MDS サーバーで、移動*ドライブ*: \Program Files\Microsoft SQL server \120\master Data services \configuration にあります。  
   
 2.  ModelPackageEditor.exe を実行します。  
   

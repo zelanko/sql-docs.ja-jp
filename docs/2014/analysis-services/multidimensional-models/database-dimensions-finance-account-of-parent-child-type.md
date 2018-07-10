@@ -1,5 +1,5 @@
 ---
-title: 親子型ディメンションの財務アカウントを作成 |Microsoft ドキュメント
+title: 親子型ディメンションの財務アカウントの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], account
 - account dimensions [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - account intelligence [Analysis Services]
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 209184ce52888c65dc24c044517ccaf95d1a1a24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39c5c676cd0a07c76a06fd559b7f40f8cee4cfcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259598"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>親子型ディメンションの財務アカウントの作成
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] での勘定科目ディメンションとは、財務報告用の勘定科目一覧表を表す属性を持つディメンションを指します。  
   
  勘定科目ディメンションを使用すると、勘定科目における集計動作の推移を選択的に管理できます。 また、財務データを取り扱うビジネス インテリジェンス ソリューションで一般的に発生する標準外の集計上の問題を、標準メカニズムを使用して解決できるようにもなります。 標準メカニズムがない場合、このような標準外の集計上の問題は、カスタム ロールアップ数式、計算されたメンバー、多次元式 (MDX) スクリプトなどがなければ解決できません。  
   
- 勘定科目ディメンションとしてディメンションを識別するのには、設定、`Type`にディメンションのプロパティ`Accounts`です。  
+ 勘定科目ディメンションとしてディメンションを識別するためには、設定、`Type`ディメンションのプロパティ`Accounts`します。  
   
 ## <a name="dimension-structure"></a>[ディメンション構造]  
  勘定科目ディメンションには、少なくとも次の 2 つの属性が含まれています。  
@@ -40,7 +40,7 @@ ms.locfileid: "36070565"
   
 -   勘定科目属性 - 勘定科目ディメンションにおける勘定科目の階層構造を記述した親属性です。  
   
-     勘定科目属性として属性を識別するのには、設定、`Type`する属性のプロパティ`Account`と`Usage`プロパティを`Parent`です。  
+     勘定科目属性として属性を識別するためには、設定、`Type`する属性のプロパティ`Account`と`Usage`プロパティを`Parent`します。  
   
  勘定科目ディメンションには、次の属性をオプションで含めることもできます。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36070565"
   
 -   勘定科目名属性 - レポートのために使用される属性です。 勘定科目名属性を指定するには、属性の `Type` プロパティを `AccountName` に設定します。  
   
--   勘定科目番号属性 - レポートのために使用される属性です。 設定して勘定科目番号属性を識別する、`Type`する属性のプロパティ`AccountNumber`です。  
+-   勘定科目番号属性 - レポートのために使用される属性です。 設定で勘定科目番号属性を識別する、`Type`する属性のプロパティ`AccountNumber`します。  
   
  属性の種類の詳細については、「 [属性の種類の構成](attribute-properties-configure-attribute-types.md)」を参照してください。  
   

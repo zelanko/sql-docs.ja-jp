@@ -1,14 +1,11 @@
 ---
-title: sys.sp_rda_reauthorize_db (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sp_rda_reauthorize_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b387bbd432eb01df84661a61b1f9528857cd74c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9991ad7e43ffa367387392b40a22a1bea9aed37c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998539"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407511"
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,28 +42,28 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
   
 ## <a name="arguments"></a>引数  
  @credential = *@credential*  
- ローカルの Stretch 対応データベースに関連付けられたデータベース スコープ資格情報がします。  
+ ローカルの Stretch 対応データベースに関連付けられたデータベース スコープ資格情報。  
   
  @with_copy = *@with_copy*  
  リモート データのコピーを作成し、コピー (推奨) に接続するかどうかを指定します。 *@with_copy* bit です。  
   
  @azure_servername = *@azure_servername*  
- リモート データを格納している Azure サーバーの名前を指定します。 *@azure_servername* 型は sysname です。  
+ リモート データを格納している Azure サーバーの名前を指定します。 *@azure_servername* sysname です。  
   
  @azure_databasename = *@azure_databasename*  
- リモート データを格納している Azure のデータベースの名前を指定します。 *@azure_databasename* 型は sysname です。  
+ リモート データを含む Azure のデータベースの名前を指定します。 *@azure_databasename* sysname です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または >0 (失敗)  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  Db_owner アクセス許可が必要です。  
   
-## <a name="remarks"></a>解説  
- 実行すると[sys.sp_rda_reauthorize_db (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)再接続するには、リモート Azure データベースにこの操作が自動的にリセット クエリ モード LOCAL_AND_REMOTE に Stretch Database の既定の動作です。 つまり、クエリは、ローカルおよびリモートの両方のデータから結果を返します。  
+## <a name="remarks"></a>コメント  
+ 実行すると[sys.sp_rda_reauthorize_db (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)リモート Azure データベースに再接続すると、この操作が自動的にリセット クエリ モード LOCAL_AND_REMOTE に Stretch Database の既定の動作です。 つまり、クエリは、ローカルとリモートの両方のデータから結果を返します。  
   
 ## <a name="example"></a>例  
- 次の例とリモート データベースのストレッチの有効なローカル データベースの間で認証された接続を復元します。 (推奨)、リモート データのコピーを作成し、新しいコピーに接続します。  
+ 次の例では、Stretch とリモートのデータベースが有効なローカル データベースの間で認証された接続を復元します。 (推奨)、リモート データのコピーを作成し、新しいコピーに接続します。  
   
 ```sql  
 DECLARE @credentialName nvarchar(128);   

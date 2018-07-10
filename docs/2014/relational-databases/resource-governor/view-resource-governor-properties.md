@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties.f1
 helpviewer_keywords:
 - Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a737671ca1bab075df174ce0e6e67152c78e775
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: da438bf2b53b6bbc9897b3719087fd54a152f641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230784"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [リソース ガバナーのプロパティ] ページを使用して、リソース プールやワークロード グループなどのリソース ガバナー エンティティを作成または構成できます。  
@@ -79,7 +79,7 @@ ms.locfileid: "36070915"
  **[リソース プール]**  
  提供されるグリッドを使用して、リソース プール構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部プールおよび既定プールの情報が設定されています。 プールの行の最初の列をクリックして、使用するプールを選択します。 新しいリソース プールを作成するには、先頭にアスタリスク (**\***) が付いている行をクリックします。  
   
- **Name**  
+ **名前**  
  リソース プールの名前を指定します。  
   
  **[最小 CPU %]**  
@@ -94,12 +94,12 @@ ms.locfileid: "36070915"
  **[最大メモリ %]**  
  このリソース プールの要求で使用できる合計サーバー メモリを指定します。 範囲は 0 から 100 です。 既定の設定は 100 です。  
   
- 詳細については、次を参照してください。 [CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)です。  
+ 詳細については、次を参照してください。 [CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)します。  
   
  **[リソース プールのワークロード グループ]**  
  提供されるグリッドを使用して、ワークロード グループ構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部グループおよび既定グループの情報が設定されています。 グループの行の最初の列をクリックして、使用するグループを選択します。 新しいワークロード グループを作成するには、先頭にアスタリスク (**\***) が付いている行をクリックします。  
   
- **Name**  
+ **名前**  
  ワークロード グループの名前を指定します。  
   
  **重要度**  
@@ -122,7 +122,7 @@ ms.locfileid: "36070915"
   
  詳細については、「[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)」を参照してください。  
   
-## <a name="view-resource-governor-properties-by-using-transact-sql"></a>Transact SQL を使用してビューのリソース ガバナーのプロパティ  
+## <a name="view-resource-governor-properties-by-using-transact-sql"></a>TRANSACT-SQL を使用してビューのリソース ガバナーのプロパティ  
  **Transact-SQL を使用してリソース ガバナーのプロパティを表示する**  
   
 1.  リソース ガバナー エンティティの定義を表示するには、「[リソース ガバナーのカタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql)」を使用します。  
