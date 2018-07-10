@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server], creating
 - SQL Server Agent, alerts
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - alerts [SQL Server], severity levels
 ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e6cfd404c08f47fd1724eeac2793ba00c63befa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aa914bec1c74a96d4574765fb2c504e76623fa63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155633"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、特定の重大度レベルのイベントが発生したときに生成される [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告を作成する方法について説明します。  
@@ -105,6 +105,6 @@ ms.locfileid: "36075654"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_add_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)します。  
   
   

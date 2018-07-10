@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code [Reporting Services]
 - custom code [Reporting Services]
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - reports [Reporting Services], code
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 caps.latest.revision: 41
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3b4861234af092f5acd9dc500e52737a446d5dad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 75f7f2490adbf85d9d4796a8492d00b9685de423
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183949"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>レポートにコードを追加する (SSRS)
   どの式でも独自のカスタム コードを呼び出すことができます。 次の 2 つの方法でコードを提供できます。  
   
 -   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で記述されたコードをレポートに直接埋め込みます。 コードが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] または <xref:System.Math> ではない <xref:System.Convert>を参照する場合は、レポートへの参照を追加する必要があります。 詳細については、「[レポートにアセンブリへの参照を追加する (SSRS)](add-an-assembly-reference-to-a-report-ssrs.md)」を参照してください。 コードから行うことのできる参照については、「[レポート デザイナーでカスタム コードやアセンブリを式から参照する &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)」を参照してください。  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]を使用して、カスタム コード アセンブリを指定します。 カスタム アセンブリを指定する場合、レポートの作成場所のコンピューターとレポートを表示するレポート サーバーの両方にそれをインストールする必要があります。 詳細については、次を参照してください。[レポートでカスタム アセンブリを使用して](../custom-assemblies/using-custom-assemblies-with-reports.md)です。  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]を使用して、カスタム コード アセンブリを指定します。 カスタム アセンブリを指定する場合、レポートの作成場所のコンピューターとレポートを表示するレポート サーバーの両方にそれをインストールする必要があります。 詳細については、次を参照してください。[レポートでカスタム アセンブリを使用して](../custom-assemblies/using-custom-assemblies-with-reports.md)します。  
   
 ### <a name="to-add-embedded-code-to-a-report"></a>レポートに埋め込みコードを追加するには  
   

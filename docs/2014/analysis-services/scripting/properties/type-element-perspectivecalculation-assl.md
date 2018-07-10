@@ -1,5 +1,5 @@
 ---
-title: Type 要素 (PerspectiveCalculation) (ASSL) |Microsoft ドキュメント
+title: Type 要素 (PerspectiveCalculation) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: d7b87aea-3265-4f3c-a7ee-4f3e90f9a0b7
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 242d4d779da87c155371047fd2bb21128da51abf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d95f248e6991b8386ce9f6b4a2c012057c42ef4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229572"
 ---
 # <a name="type-element-perspectivecalculation-assl"></a>Type 要素 (PerspectiveCalculation) (ASSL)
   型を示す、 [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)要素。  
@@ -69,7 +69,7 @@ ms.locfileid: "36075818"
 |*Member*|計算されるメンバー|  
 |*設定*|名前付きセット|  
   
- 許可される値に対応する列挙`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.PerspectiveCalculationType>します。  
+ 許容された値に対応する列挙体`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.PerspectiveCalculationType>します。  
   
  親に対応する要素`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.PerspectiveCalculation>します。  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheRemove event class
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db6b0933af52271698622b86b848de16ecbd7cb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7c5e1a05ce2007c4c99a1336c997e69bbdf047dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158423"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove イベント クラス
   SP:CacheRemove イベント クラスは、ストアド プロシージャがプラン キャッシュから削除されていることを示します。  
@@ -38,7 +38,7 @@ ms.locfileid: "36074819"
 |DatabaseName|`nvarchar`|ストアド プロシージャが実行されているデータベースの名前。|35|はい|  
 |EventClass|`int`|イベントの種類 = 36。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
-|EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 1 = コンパイル済みプランを削除します。 コンパイル済みのクエリ プランがキャッシュから削除されています。<br /><br /> 2 = プロシージャ キャッシュのフラッシュします。 プロシージャ キャッシュからすべてのエントリが削除されています。|21|はい|  
+|EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 1 = コンパイル済みプランの削除。 コンパイル済みのクエリ プランがキャッシュから削除されています。<br /><br /> 2 = プロシージャ キャッシュのフラッシュします。 プロシージャ キャッシュからすべてのエントリが削除されています。|21|はい|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  

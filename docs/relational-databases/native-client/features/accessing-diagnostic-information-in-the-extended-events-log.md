@@ -1,26 +1,23 @@
 ---
-title: 拡張イベント ログの診断情報にアクセスする |Microsoft ドキュメント
+title: 拡張イベント ログの診断情報へのアクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f24908688882e78f49a4b1b205a296988a6a610b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d72f09a351186d4f694308808237d6bfaa2e0d7c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697539"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412071"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>拡張イベント ログの診断情報へのアクセス」を参照してください。
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,17 +25,17 @@ ms.locfileid: "35697539"
 
   以降で[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client とデータ アクセスのトレース ([データ アクセスのトレース](http://go.microsoft.com/fwlink/?LinkId=125805))、接続リングからの接続エラーに関する診断情報を取得するが簡単に更新されました拡張イベント ログからバッファーやアプリケーションのパフォーマンス情報。  
   
- 拡張イベント ログの読み取り方法の詳細については、次を参照してください。[イベント セッション データの表示](http://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49)です。  
+ 拡張イベント ログの読み取り方法の詳細については、次を参照してください。[イベント セッション データの表示](http://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49)します。  
   
 > [!NOTE]  
 >  この機能は、トラブルシューティングおよび診断用であるため、監査やセキュリティの用途には適さない場合があります。  
   
 ## <a name="remarks"></a>コメント  
- 接続操作では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はクライアント接続 ID を送信します。 接続が失敗した場合、接続リング バッファーにアクセスできます ([、接続リング バッファーによる SQL Server 2008 の接続のトラブルシューティング](http://go.microsoft.com/fwlink/?LinkId=207752)) を見つけて、 **ClientConnectionID**フィールドと接続エラーに関する診断情報を取得します。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます  (ログイン前のパケットを送信する前に接続に失敗した場合、クライアント接続 ID は生成されません)。クライアント接続 ID は 16 バイトの GUID です。 クライアントを見つけることもできる場合、拡張イベントの接続 ID は、ターゲットを出力、 **client_connection_id**アクションが拡張イベント セッションのイベントに追加します。 データ アクセスのトレースを有効にして、接続コマンドを再実行し、観察、 **ClientConnectionID** 、失敗した操作のデータ アクセスのトレースでフィールドにはさらに診断サポートが必要な場合です。  
+ 接続操作では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はクライアント接続 ID を送信します。 接続に失敗した場合、接続リング バッファーを表示できます ([接続リング バッファーによる SQL Server 2008 のトラブルシューティング](http://go.microsoft.com/fwlink/?LinkId=207752)) を見つけて、 **ClientConnectionID**フィールドと接続エラーに関する診断情報を取得します。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます  (ログイン前のパケットを送信する前に接続に失敗した場合、クライアント接続 ID は生成されません)。クライアント接続 ID は 16 バイトの GUID です。 クライアントを検索することもできます。 場合、拡張イベント内で接続 ID は、ターゲットを出力、 **client_connection_id**アクションは、拡張イベント セッションのイベントに追加されます。 データ アクセスのトレースを有効にして、接続コマンドを再実行を確認できます、 **ClientConnectionID**操作が失敗したデータ アクセスのトレースでフィールドにはさらに診断サポートが必要な場合。  
   
- ODBC を使用している場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client との接続が成功すると、クライアントを取得する接続 ID を使用して、 **SQL_COPT_SS_CLIENT_CONNECTION_ID**属性が[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md).  
+ ODBC を使用している場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client との接続が成功すると、クライアントを取得する接続 ID を使用して、 **SQL_COPT_SS_CLIENT_CONNECTION_ID**属性[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、スレッド固有のアクティビティ ID も送信します。 アクティビティ ID は、TRACK_CAUSAILITY オプションを有効にしてセッションを開始した場合、拡張イベント セッションでキャプチャされます。 アクティブな接続のパフォーマンス問題については、クライアントのデータ アクセスのトレースからアクティビティ ID を取得することができます (**ActivityID**フィールド) し、拡張イベント出力でアクティビティ ID を見つけます。 拡張イベントのアクティビティ ID は、16 バイトの GUID (クライアント接続 ID の GUID とは異なります) に 4 バイトのシーケンス番号が付加されたものです。 シーケンス番号は、スレッド内の要求の順序を表し、スレッドのバッチ ステートメントと RPC ステートメントの相対順序を示します。 **ActivityID**のデータ アクセスのトレースが有効になり、データ アクセス トレース構成ワードの 18 番目のビットがオンになっているときに必要に応じて SQL バッチ ステートメントと RPC 要求の送信。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、スレッド固有のアクティビティ ID も送信します。 アクティビティ ID は、TRACK_CAUSAILITY オプションを有効にしてセッションを開始した場合、拡張イベント セッションでキャプチャされます。 アクティブな接続パフォーマンス問題については、クライアントのデータ アクセスのトレースからアクティビティ ID を取得できます (**ActivityID**フィールド) し、拡張イベントの出力でアクティビティ ID を見つけます。 拡張イベントのアクティビティ ID は、16 バイトの GUID (クライアント接続 ID の GUID とは異なります) に 4 バイトのシーケンス番号が付加されたものです。 シーケンス番号は、スレッド内の要求の順序を表し、スレッドのバッチ ステートメントと RPC ステートメントの相対順序を示します。 **ActivityID**データ アクセスのトレースが有効になり、データ アクセス トレース構成ワードの 18 番目のビットがオンになっているときに、SQL バッチ ステートメントと RPC 要求を必要に応じて送信します。  
   
  次のサンプルでは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して拡張イベント セッションを開始します。このセッションは、リング バッファーに保存され、RPC およびバッチ操作でクライアントから送信されたアクティビティ ID を記録します。  
   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f769ede65a47bbe3500b67ec02247ac5e3dc6f96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4f5821043d7ea8c482c1aff13c52d5e12e023da9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183839"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   PDF 表示拡張機能を使用すると、Adobe Acrobat および PDF 1.3 をサポートするその他のサードパーティ製 PDF ビューアーで開くことのできるファイルとしてレポートが表示されます。 PDF 1.3 は Adobe Acrobat 4 以降のバージョンと互換性がありますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では Adobe Acrobat 6 以降がサポートされています。 この表示拡張機能では、レポートの表示処理に Adobe 製のソフトウェアは必要ありません。 ただし、レポートを PDF 形式で表示または印刷するには、Adobe Acrobat などの PDF ビューアーが必要です。  
   
- PDF 表示拡張機能では ANSI 文字がサポートされ、日本語、韓国語、繁体字中国語、簡体字中国語、キリル文字、ヘブライ語、アラビア語の Unicode 文字を変換できます (一部制限事項があります)。 制限事項の詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](export-reports-report-builder-and-ssrs.md)です。  
+ PDF 表示拡張機能では ANSI 文字がサポートされ、日本語、韓国語、繁体字中国語、簡体字中国語、キリル文字、ヘブライ語、アラビア語の Unicode 文字を変換できます (一部制限事項があります)。 制限事項の詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](export-reports-report-builder-and-ssrs.md)します。  
   
  PDF レンダラーは物理的なページ レンダラーなので、HTML や Excel などの他のレンダラーとは異なり、改ページ機能があります。 ここでは、PDF レンダラー固有の情報を提供し、規則の例外について説明します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36074762"
 |`Subject`|`Description` RDL 要素です。|  
 |`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 製品の名前およびバージョンです。|  
 |`Producer`|表示拡張機能の名前とバージョンです。|  
-|`CreationDate`|レポートの PDF での実行時間`datetime`形式です。|  
+|`CreationDate`|レポートの PDF の実行時間`datetime`形式。|  
   
   
   

@@ -1,5 +1,5 @@
 ---
-title: モデル タブ (マイニング モデル ビューアー) |Microsoft ドキュメント
+title: モデル タブ (マイニング モデル ビューアー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.decisiontree.f1
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 932874065a56b98f8eb532f62206430152c794ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ffed64e129b7c3a94e337ab7a749b6950cdae4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278468"
 ---
 # <a name="model-tab-mining-model-viewers"></a>[モデル] タブ (マイニング モデル ビューアー)
   Microsoft タイム シリーズ ビューアーの **[モデル]** タブは、タイム シリーズの表現をグラフのノードとして表示します。これは、デシジョン ツリー モデルで使用されるものに似ています。  
@@ -43,13 +43,13 @@ ms.locfileid: "36073339"
  **ズーム イン**  
  ダイアグラムを拡大します。  
   
- **ズーム アウトします。**  
+ **ズーム アウト**  
  グラフを縮小します。  
   
  **グラフ ビューのコピー**  
  ダイアグラムで表示されている部分をクリップボードにコピーします。  
   
- **グラフ全体のコピーします。**  
+ **グラフ全体のコピー**  
  ダイアグラム全体をクリップボードにコピーします。  
   
  **ウィンドウに合わせてダイアグラムの倍率**  
@@ -70,7 +70,7 @@ ms.locfileid: "36073339"
  **既定の展開**  
  モデル内のすべてのツリーに対して表示される、レベルの既定の数を調整します。  
   
- **[表示レベル]**  
+ **レベルを表示します。**  
  ツリーに表示されるレベルの数を変更します。  
   
 ## <a name="see-also"></a>参照  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.quickwatch
 helpviewer_keywords:
 - QuickWatch Dialog [Transact-SQL]
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b9809cd60703058c994af441145d0668cd7f76b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7810c99c06ed78131a70135f48056c1eeb8b2a6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156023"
 ---
 # <a name="quickwatch-dialog-box"></a>[クイック ウォッチ] ダイアログ ボックス
   [!INCLUDE[tsql](../../includes/tsql-md.md)] コードのデバッグ時に **[クイック ウォッチ]** ダイアログ ボックスを使用すると、変数やパラメーターなど、1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] 式のデータ型や値をすばやく表示できます。 複数の式を確認するために、 **[ウォッチ]** ウィンドウに式を追加することもできます。  
@@ -64,17 +64,17 @@ ms.locfileid: "36076192"
  **[値グリッド]**  
  現在監視されている式のプロパティを表示します。  
   
- **Name**  
+ **名前**  
  監視対象の [!INCLUDE[tsql](../../includes/tsql-md.md)] 式です。  
   
- **Value**  
+ **[値]**  
  式に現在割り当てられている値を表示します。 式に現在値がない場合は、空白になります。  
   
  式の長さが **[値]** 列の幅よりも長い場合は、その式の **[値]** セルにポインターを移動するとツールヒントに完全な値が表示されます。  
   
  **[値]** セルの虫眼鏡アイコンは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガー ビジュアライザーが使用可能であることを示します。 一覧では、 **[テキスト ビジュアライザー]**、 **[XML ビジュアライザー]**、または **[HTML ビジュアライザー]** を指定できます。 デバッガー ビジュアライザーを開始するには、虫眼鏡アイコンをクリックします。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーによりダイアログ ボックスが開き、データがそのデータ型に適した形式で表示されます。  
   
- **Type**  
+ **型**  
  式のデータ型を表示します。  
   
 ## <a name="see-also"></a>参照  
