@@ -1,12 +1,11 @@
 ---
-title: sys.dm_db_rda_migration_status (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_rda_migration_status (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,26 +18,26 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_rda_migration_status dynamic management view
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a8778c09acc143bc6384f9b82ff03fa25603334
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: e0ee1d106a9f52dd30518f9ead02847dc879ff2c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422471"
 ---
 # <a name="stretch-database---sysdmdbrdamigrationstatus"></a>Stretch Database - sys.dm_db_rda_migration_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  移行したテーブルからデータを各 Stretch 対応のローカル インスタンス上の各バッチの 1 つの行を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 バッチは、開始時刻と終了時刻によって識別されます。  
+  ローカル インスタンス上のそれぞれの Stretch 対応テーブルから移行されたデータのバッチごとの 1 つの行を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 バッチは、開始時刻と終了時刻によって識別されます。  
   
  **sys.dm_db_rda_migration_status**スコープは現在のデータベース コンテキストに設定します。 移行の状態を表示する拡張を有効にするテーブルのデータベースのコンテキストであることを確認してください。  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]の出力**sys.dm_db_rda_migration_status** 200 の行に制限されます。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]の出力**sys.dm_db_rda_migration_status** 200 行に制限されます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|テーブルの行が移行された元の ID です。|  
 |**database_id**|**int**|行が移行されたデータベースの ID です。|  

@@ -1,5 +1,5 @@
 ---
-title: Caption 要素 (XMLA) |Microsoft ドキュメント
+title: Caption 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Caption element
 ms.assetid: 3d10ee68-98ab-4da0-a409-800dea2f1c32
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 9a67a57b29bf014326848b49e40bdbe5bc283dd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 42a979937e087a1404393fe3bf4f6c6566ca5678
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239612"
 ---
 # <a name="caption-element-xmla"></a>Caption 要素 (XMLA)
-  親のキャプションに関する情報を含む[HierarchyInfo](hierarchyinfo-element-xmla.md)または[メンバー](member-element-xmla.md)要素。  
+  親のキャプションに関する情報を格納[HierarchyInfo](hierarchyinfo-element-xmla.md)または[メンバー](member-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

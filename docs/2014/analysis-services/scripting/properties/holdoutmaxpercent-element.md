@@ -1,5 +1,5 @@
 ---
-title: HoldoutMaxPercent 要素 |Microsoft ドキュメント
+title: HoldoutMaxPercent 要素 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - HoldoutMaxPercent element
 ms.assetid: e375cc51-5f9d-4252-98a1-326ca0dbbf83
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 089ed35d7c900e48da2ba283f8bcf9ee4a29fa7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 53689f28351a4a5505f1c1bc1d4c8a9586074704
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278148"
 ---
 # <a name="holdoutmaxpercent-element"></a>HoldoutMaxPercent 要素
   テスト セットを含む、提示されたパーティションに使用されるデータ ソース内のケースの最大割合を指定します、 [MiningStructure](../objects/miningstructure-element-assl.md)要素。 残りのケースは、トレーニングに使用されます。 値が 0 の場合、テスト セットとして提示できるケースの数は制限されません。  

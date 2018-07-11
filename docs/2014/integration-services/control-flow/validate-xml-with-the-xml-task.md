@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML validation
 - XML, validating
@@ -16,27 +16,27 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b66fe56d1309f3ebe0e16177ff1372ea0fa1692f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ea74ad195b97541147c3d1b19dc01c5033b962c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182830"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
-  XML ドキュメントを検証し、有効にすると詳細なエラー出力を取得、 `ValidationDetails` XML タスクのプロパティです。  
+  XML ドキュメントを検証し、有効にすると詳細なエラー出力を取得、 `ValidationDetails` XML タスクのプロパティ。  
   
  次のスクリーン ショットは、 **XML タスク エディター** と、XML 検証で詳細なエラー出力を取得するのに必要な設定を示しています。  
   
  ![XML タスク エディターの XML タスク　プロパティ](../media/xmltaskproperties.jpg "XML タスク エディターの XML タスク プロパティ")  
   
- 前に、`ValidationDetails`プロパティが使用可能な XML タスクによる XML 検証にのみ、true または false の結果、エラーやその場所に関する情報が返されます。 これで、設定`ValidationDetails`を true に、出力ファイルに行番号と位置を含むすべてのエラーに関する詳細情報が含まれています。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。  
+ 前に、`ValidationDetails`プロパティが使用可能な XML タスクによる XML 検証にのみ、true または false の結果、エラーやその場所に関する情報が返されます。 次に、設定`ValidationDetails`を true に、出力ファイルに行番号と位置を含むすべてのエラーに関する詳細情報が含まれています。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。  
   
  この XML 検証機能は、大きなサイズの XML ドキュメントや大量のエラーにも、簡単に規模を変更して対応できます。 出力ファイル自体が XML 形式なので、出力に対するクエリの実行と分析が可能です。 たとえば、出力に大量のエラーが含まれている場合、このトピックで説明する方法で [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用して、エラーをグループ化することができます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 導入された、`ValidationDetails`プロパティ[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Service Pack 2 です。 使用できるプロパティも[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]と SQL Server 2016 でします。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 導入された、`ValidationDetails`プロパティ[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Service Pack 2。 使用可能なプロパティも[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]と SQL Server 2016 でします。  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>有効な XML のサンプル出力  
  有効な XML ファイルの検証結果が記載されたサンプル出力ファイルを次に示します。  

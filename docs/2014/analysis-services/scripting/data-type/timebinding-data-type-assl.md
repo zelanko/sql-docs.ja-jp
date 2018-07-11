@@ -1,5 +1,5 @@
 ---
-title: TimeBinding データ型 (ASSL) |Microsoft ドキュメント
+title: TimeBinding データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TimeBinding data type
 ms.assetid: f3c06978-c181-4a73-9b57-8fc30358faab
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 80fe87cf9bc54fa97f0ffe56d8f2105bb6381e28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7102bbea8eb516b93eb2e539a74b2110f22c6694
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183339"
 ---
 # <a name="timebinding-data-type-assl"></a>TimeBinding データ型 (ASSL)
   期間へのバインドを表す派生データ型を定義します。  
@@ -69,13 +69,13 @@ ms.locfileid: "36076917"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|なし|  
-|子要素|[CalendarEndDate](../properties/calendarenddate-element-assl.md), [CalendarLanguage](../properties/language-element-assl.md), [CalendarStartDate](../properties/calendarstartdate-element-assl.md), [FirstDayOfWeek](../properties/firstdayofweek-element-assl.md), [FiscalFirstDayOfMonth](../properties/fiscalfirstdayofmonth-element-assl.md), [FiscalFirstMonth](../properties/fiscalfirstmonth-element-assl.md), [FiscalYearName](../properties/name-element-assl.md), [ManufacturingExtraMonthQuarter](../properties/manufacturingextramonthquarter-element-assl.md), [ManufacturingFirstMonth](../properties/manufacturingfirstmonth-element-assl.md), [ManufacturingFirstWeekOfMonth](../properties/manufacturingfirstweekofmonth-element-assl.md), [ReportingFirstMonth](../properties/reportingfirstmonth-element-assl.md), [ReportingFirstWeekOfMonth](../properties/reportingfirstweekofmonth-element-assl.md), [ReportingWeekToMonthPattern](../properties/reportingweektomonthpattern-element-assl.md)|  
+|子要素|[CalendarEndDate](../properties/calendarenddate-element-assl.md)、 [CalendarLanguage](../properties/language-element-assl.md)、 [CalendarStartDate](../properties/calendarstartdate-element-assl.md)、 [FirstDayOfWeek](../properties/firstdayofweek-element-assl.md)、 [FiscalFirstDayOfMonth](../properties/fiscalfirstdayofmonth-element-assl.md)、 [FiscalFirstMonth](../properties/fiscalfirstmonth-element-assl.md)、 [FiscalYearName](../properties/name-element-assl.md)、 [ManufacturingExtraMonthQuarter](../properties/manufacturingextramonthquarter-element-assl.md)、 [ManufacturingFirstMonth](../properties/manufacturingfirstmonth-element-assl.md)、[ManufacturingFirstWeekOfMonth](../properties/manufacturingfirstweekofmonth-element-assl.md)、 [ReportingFirstMonth](../properties/reportingfirstmonth-element-assl.md)、 [ReportingFirstWeekOfMonth](../properties/reportingfirstweekofmonth-element-assl.md)、 [ReportingWeekToMonthPattern](../properties/reportingweektomonthpattern-element-assl.md)|  
 |派生要素|参照してください[バインド](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
  詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、`Binding`型との継承階層`Binding`型を参照してください[データ型のバインド&#40;ASSL&#41;](binding-data-type-assl.md).  
   
- ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.TimeBinding>します。  
   

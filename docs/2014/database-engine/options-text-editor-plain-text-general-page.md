@@ -1,5 +1,5 @@
 ---
-title: オプション (テキスト エディター - プレーン テキストの [全般] ページ) |Microsoft ドキュメント
+title: オプション ([テキスト エディターのテキスト形式]/[全般] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e46857d3ea3078847e2c540999f37cef79d05091
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: b66c8286d3ae062307175e689f222f33ea3be6a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150993"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>[オプション] ([テキスト エディター]/[テキスト形式]/[全般] ページ)
   特定の開発言語に関連付けられていないドキュメントを編集するときには、テキスト エディターが使用されます。このダイアログ ボックスを使用すると、テキスト エディターの全般的な編集の動作を変更できます。 この設定を表示するには、 **[ツール]** メニューの **[オプション]** をクリックして、 **[テキスト エディター]** フォルダーを展開し、さらに **[テキスト形式]** を展開して、 **[全般]** をクリックします。  
@@ -33,7 +33,7 @@ ms.locfileid: "36077382"
  **自動メンバー表示**  
  テキスト形式エディターはこの機能をサポートしていません。  
   
- **高度なメンバーを非表示します。**  
+ **高度なメンバーを非表示にします。**  
  テキスト形式エディターはこの機能をサポートしていません。  
   
  **パラメーター情報**  
@@ -52,7 +52,7 @@ ms.locfileid: "36077382"
 > [!NOTE]  
 >  改行インジケーターはコードに追加されているわけではないので、印刷されません。 これは単に表示用です。  
   
- **選択されていない場合は、切り取り/コピー コマンドを空白行に適用します。**  
+ **選択されていない場合は、空白行に切り取り/コピー コマンドを適用します。**  
  空白行にカーソルを置き、何も選択していない状態で **[コピー]** または **[切り取り]** をクリックしたときのエディターの動作を設定します。  
   
  このチェック ボックスがオンの場合、空白行がコピーまたは切り取られます。 その後で **[貼り付け]** をクリックすると、新しい空白行が挿入されます。  

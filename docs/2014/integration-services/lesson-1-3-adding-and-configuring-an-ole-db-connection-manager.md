@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 caps.latest.revision: 19
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4246a4ae586ad6fc526ef618e0a249706d0baa3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ee2567823ff401df3d1b0b9c64af88d8d5435da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240922"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>手順 3: OLE DB 接続マネージャーの追加と構成
   前の実習では、データ ソースに接続するためのフラット ファイル接続マネージャーを追加しました。次は、データの変換先に接続するための OLE DB 接続マネージャーを追加します。 パッケージに OLE DB 接続マネージャーを追加すれば、OLE DB 対応のデータ ソースからデータを抽出したり、OLE DB 対応のデータ ソースへデータを読み込んだりできるようになります。 OLE DB 接続マネージャーでは、接続に必要なサーバー、認証方法、既定のデータベースを指定できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "36074210"
   
 4.  **[サーバーにログオンする]** で、 **[Windows 認証を使用する]** が選択されていることを確認します。  
   
-5.  **データベースへの接続**グループにおいて、**を選択するか、データベースの名前を入力**ボックスに入力または選択`AdventureWorksDW2012`です。  
+5.  **データベースへの接続**グループに、**を選択するか、データベース名を入力**ボックスで入力または選択`AdventureWorksDW2012`します。  
   
 6.  **[接続テスト]** をクリックし、指定した接続設定が有効であることを確認します。  
   

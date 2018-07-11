@@ -1,5 +1,5 @@
 ---
-title: テクニカル リファレンス (アドイン Excel 用データ マイニング) |Microsoft ドキュメント
+title: テクニカル リファレンス (データ マイニング Excel 用アドイン) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1a435875-cbee-49d1-914c-4aa15fad7628
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08b615b3566a7144e25615bc1fbeb6b57857e439
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa3b2b235e654178e5d374f4fa427141478850bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165313"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>テクニカル リファレンス (Excel 用データ マイニング アドイン)
   Office 用データ マイニング アドインには、プログラマおよび高度なデータ マイニング担当者に役立つ機能があります。  
@@ -40,12 +40,12 @@ ms.locfileid: "36076057"
   
  アドインを最初に開くときに構成ウィザードが実行され、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーへの接続に関する支援を受けることができます。 いずれかの手順で問題が発生した場合は、このトピックを参照し、追加のヘルプを活用できます。  
   
--   [サーバー構成ユーティリティ&#40;アドイン Excel 用データ マイニング&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+-   [サーバー構成ユーティリティ&#40;データ マイニング Excel 用アドイン&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [データ マイニング アルゴリズム&#40;SQL Server データ マイニング アドイン&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
   
- [サーバー構成ユーティリティ&#40;アドイン Excel 用データ マイニング&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+ [サーバー構成ユーティリティ&#40;データ マイニング Excel 用アドイン&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
 ## <a name="related-sections"></a>関連項目  
   

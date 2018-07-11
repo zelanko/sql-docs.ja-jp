@@ -1,14 +1,11 @@
 ---
-title: sys.remote_data_archive_databases (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.remote_data_archive_databases (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,22 +18,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.remote_data_archive_databases catalog view
 ms.assetid: 25bffb0c-9821-40b4-88cf-75f854891a09
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 599621bb64cb11ee70646204689a4b1d0bf43574
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84234467e626e8168b0d0a9b2a29f5c9cb5ad70f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428231"
 ---
-# <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>データベースのカタログ ビューでの stretch sys.remote_data_archive_databases
+# <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>カタログ ビューでの Stretch Database sys.remote_data_archive_databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Stretch が有効なローカルのデータベースからデータを格納するリモートのデータベースごとに 1 つの行が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**remote_database_id**|**int**|自動生成されたローカルの識別子、リモート データベース。|  
 |**remote_database_name**|**sysname**|リモートのデータベースの名前。|  

@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0a7ffd71c2d54d22156bb5af1d4bfbe14640349f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 839d6ca721129dc94c51b998ecbf2fec02ee6fcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277728"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill イベント クラス
   **Exchange Spill** イベント クラスは、並列クエリ プランの通信バッファーが一時的に **tempdb** データベースに書き込まれたことを示します。 これは、クエリ プランに複数の範囲スキャンがある場合に限り、まれに発生します。  
   
- 通常、そのような範囲スキャンを生成する [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリには、多くの BETWEEN 操作が含まれています。各 BETWEEN 操作では、テーブルまたはインデックスから行の範囲を選択します。 などの式を使用して複数の範囲を取得する代わりに、(T.a > 10 AND T.a \< 20) または (T.a > 100 AND T.a \< 120)。 さらに、クエリ プランでは、このような範囲を順番にスキャンする必要があります。これは T.a に ORDER BY 句があり、プラン内の反復子で並べ替え順に組を使用することが必要なためです。  
+ 通常、そのような範囲スキャンを生成する [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリには、多くの BETWEEN 操作が含まれています。各 BETWEEN 操作では、テーブルまたはインデックスから行の範囲を選択します。 または、式を使用して複数の範囲を取得できます (T.a > 10 AND T.a \< 20) または (T.a > 100 AND T.a \< 120)。 さらに、クエリ プランでは、このような範囲を順番にスキャンする必要があります。これは T.a に ORDER BY 句があり、プラン内の反復子で並べ替え順に組を使用することが必要なためです。  
   
  このようなクエリのクエリ プランに複数の **Parallelism** 操作が含まれているときは、 **Parallelism** 操作によって使用されるメモリ通信バッファーがいっぱいになり、その結果クエリの実行の進行が停止するという状況が起こります。 このような状況では、 **Parallelism** 操作のいずれかにより、入力バッファーの行を使用できるように、出力バッファーが **tempdb** に書き込まれます (この操作を *Exchange Spill*と呼びます)。 最終的には、書き込まれた行は、コンシューマーでその行を使用する準備が整ったときにコンシューマーに返されます。  
   

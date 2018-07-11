@@ -1,5 +1,5 @@
 ---
-title: テストと検証 (データ マイニング) |Microsoft ドキュメント
+title: テストと検証 (データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - comparing mining models
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e83f8e0ad6227444f4dbc0962a83e1aedd8a5f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3fb68f21136da8236c653aaae71c9a9e461b432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230158"
 ---
 # <a name="testing-and-validation-data-mining"></a>テストおよび検証 (データ マイニング)
   検証とは、実際のデータに対するマイニング モデルの性能を評価するプロセスです。 運用環境に配置する前に品質や特性を理解してマイニング モデルを検証しておくことが重要です。  
@@ -97,6 +97,6 @@ ms.locfileid: "36082880"
 ## <a name="see-also"></a>参照  
  [データ マイニング ツール](data-mining-tools.md)   
  [データ マイニング ソリューション](data-mining-solutions.md)   
- [テストと検証タスク、および操作方法&#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

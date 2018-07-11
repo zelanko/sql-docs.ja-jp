@@ -1,13 +1,11 @@
 ---
-title: bcp_exec |Microsoft ドキュメント
+title: bcp_exec |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_exec function
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7f7fabbf20276bca314d5c98847ef9a850be7738
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a470efbed24dd15b4ebf45f2b5db8000f2e7e947
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074587"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407761"
 ---
 # <a name="bcpexec"></a>bcp_exec
   データベース テーブルとユーザー ファイル間でデータの完全な一括コピーを実行します。  
@@ -52,22 +50,22 @@ pnRowsProcessed
  一括コピーが有効な ODBC 接続ハンドルです。  
   
  *pnRowsProcessed*  
- DBINT へのポインターです。 **Bcp_exec**関数が正常にコピーされた行の数でこの DBINT を塗りつぶします。 場合*pnRowsProcessed* null では無視されます**bcp_exec**です。  
+ DBINT へのポインターです。 **Bcp_exec**関数、この dbint に正常にコピーされる行の数。 場合*pnRowsProcessed* null では無視されます**bcp_exec**します。  
   
 ## <a name="returns"></a>戻り値  
- SUCCEED、SUCCEED_ASYNC、または FAIL のいずれかを返します。 **Bcp_exec**すべての行がコピーされた場合、関数は SUCCEED を返します。 **bcp_exec**非同期の一括コピー操作がまだ保留中の場合は SUCCEED_ASYNC を返します。 **bcp_exec**全体の障害が発生した場合、またはエラーを生成する行の数が使用して BCPMAXERRS に指定された値に達した場合は FAIL を返します[bcp_control](bcp-control.md)です。 BCPMAXERRS の既定値は 10 です。 BCPMAXERRS オプションの影響を受けるのは、データ ファイルの行 (サーバーに送信される行以外) を読み取る間にプロバイダーで検出される構文エラーのみです。 ある行でエラーが検出されると、サーバーはバッチを中止します。 チェック、 *pnRowsProcessed*行の数のパラメーターが正常にコピーします。  
+ SUCCEED、SUCCEED_ASYNC、または FAIL のいずれかを返します。 **Bcp_exec**すべての行がコピーされた場合、関数は SUCCEED を返します。 **bcp_exec**非同期の一括コピー操作がまだ保留中の場合は SUCCEED_ASYNC を返します。 **bcp_exec**完全な障害が発生した場合、またはエラーを生成する行の数が使用して BCPMAXERRS に指定された値に達した場合は FAIL を返します[bcp_control](bcp-control.md)します。 BCPMAXERRS の既定値は 10 です。 BCPMAXERRS オプションの影響を受けるのは、データ ファイルの行 (サーバーに送信される行以外) を読み取る間にプロバイダーで検出される構文エラーのみです。 ある行でエラーが検出されると、サーバーはバッチを中止します。 チェック、 *pnRowsProcessed*行の数のパラメーターが正常にコピーします。  
   
 ## <a name="remarks"></a>コメント  
- この関数では、データベース テーブルまたはその逆の場合、ユーザー ファイルからデータをコピーの値に応じて、 *eDirection*パラメーター [bcp_init](bcp-init.md)です。  
+ この関数では、データベース テーブルまたはその逆に、ユーザー ファイルからデータをコピーの値に応じて、 *eDirection*パラメーター [bcp_init](bcp-init.md)します。  
   
- 呼び出しの前に**bcp_exec**、呼び出す**bcp_init**有効なユーザー ファイル名を持つ。 この操作を行わないと、エラーが発生します。  
+ 呼び出す前に**bcp_exec**、呼び出す**bcp_init**有効なユーザーのファイル名を使用します。 この操作を行わないと、エラーが発生します。  
   
- **bcp_exec**されている唯一の一括コピー関数を任意の長さの時間の未処理する可能性があります。 そのため、非同期モードをサポートする唯一の一括コピー関数でもあります。 非同期モードを設定するには、使用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)を呼び出す前に SQL_ATTR_ASYNC_ENABLE を SQL_ASYNC_ENABLE_ON に設定する**bcp_exec**です。 完了をテストするには、呼び出す**bcp_exec**同じパラメーターを使用します。 一括コピーがまだ完了していない場合、 **bcp_exec** SUCCEED_ASYNC を返します。 も返します*pnRowsProcessed*がサーバーに送信された行の数の状態カウントします。 サーバーに送信された行は、バッチの終わりに到達するまではコミットされません。  
+ **bcp_exec**されている唯一の一括コピー関数を任意の長さの時間の未処理になる可能性があります。 そのため、非同期モードをサポートする唯一の一括コピー関数でもあります。 非同期モードを設定する[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)呼び出す前に、SQL_ATTR_ASYNC_ENABLE を SQL_ASYNC_ENABLE_ON に設定する**bcp_exec**します。 完了をテストするには、呼び出す**bcp_exec**同じパラメーターを使用します。 一括コピーが完了していない場合、 **bcp_exec** SUCCEED_ASYNC を返します。 返されます*pnRowsProcessed*状態数は、サーバーに送信された行の数。 サーバーに送信された行は、バッチの終わりに到達するまではコミットされません。  
   
- 以降では、一括コピーでの変更については、互換性に影響する[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]を参照してください[一括コピー操作の実行&#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)です。  
+ 以降では一括コピーでの変更については、互換性に影響する[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]を参照してください[一括コピー操作を実行する&#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)します。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示しています**bcp_exec**:。  
+ 次の例は、使用する方法を示します**bcp_exec**:  
   
 ```  
 // Variables like henv not specified.  

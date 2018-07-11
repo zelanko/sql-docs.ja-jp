@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - designing DACs
 - How to [DAC]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3fb074e97422942dfe9cac25a84c47ff65bac9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 74e9a61fb053a1d861a6be732ae9a0ac0eb3060a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152503"
 ---
 # <a name="data-tier-applications"></a>の
   データ層アプリケーション (DAC) は、テーブル、ビュー、インスタンス オブジェクト (ログインを含む) など、ユーザーのデータベースに関連付けられたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを定義する論理的なデータベース管理エンティティです。 DAC は、データ層の開発者とデータベース管理者が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを DAC パッケージ (DACPAC とも呼ばれます) という移植可能なアーティファクトにパッケージ化できるようにする自己完結型の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース配置単位です。  
@@ -115,7 +115,7 @@ ms.locfileid: "36083211"
  この両方の機能が、データベース管理ツール (Server Management Studio、Management Portal for SQL Azure、および DACFx API) でサポートされます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーである必要がある必要があります、`dbmanager`ロール割り当てまたは`CREATE DATABASE`を DAC パッケージを配置することによるデータベースの作成を含む、データベースを作成するアクセス許可。 メンバーである必要がある必要があります、`dbmanager`ロールが割り当てられているまたは`DROP DATABASE`データベースを削除するアクセス許可。  
+ メンバーである必要がありますが、`dbmanager`ロール割り当てまたは`CREATE DATABASE`を含む DAC パッケージを配置してデータベースを作成、データベースを作成するアクセス許可。 メンバーである必要がありますが、`dbmanager`ロール、または割り当てられている`DROP DATABASE`データベースを削除するアクセス許可。  
   
 ## <a name="data-tier-application-tasks"></a>データ層アプリケーションのタスク  
   

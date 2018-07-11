@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 caps.latest.revision: 72
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1705586884d09aa847a6ba308ffb821faa1d6cac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6edc4c9ce7f19a6b9771966e9547d0bf1fd5bffc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230812"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server に含まれている OLE DB プロバイダーを経由した IBM DB2/AS 400、DB2/MVS、および DB2/Universal Database へのプッシュ サブスクリプションをサポートします。  
@@ -35,11 +35,11 @@ ms.locfileid: "36075028"
   
 1.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 の最新バージョンをディストリビューターにインストールします。  
   
-    -   使用している場合[!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]の[SQL Server 2008 ダウンロード](http://go.microsoft.com/fwlink/?LinkId=149256)Web ページの**関連ダウンロード**セクションで、Microsoft SQL Server 2008 Feature Pack の最新バージョンへのリンクをクリックします。 **Microsoft SQL Server 2008 用 Feature Pack** の Web ページで、 **Microsoft OLE DB Provider for DB2**を検索します。  
+    -   使用する場合[!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]の[SQL Server 2008 ダウンロード](http://go.microsoft.com/fwlink/?LinkId=149256)Web ページの**関連ダウンロード**セクションで、Microsoft SQL Server 2008 Feature Pack の最新バージョンへのリンクをクリックします。 **Microsoft SQL Server 2008 用 Feature Pack** の Web ページで、 **Microsoft OLE DB Provider for DB2**を検索します。  
   
     -   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard を使用している場合は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) サーバーの最新バージョンをインストールしてください。この製品にプロバイダーが含まれています。  
   
-     プロバイダーをインストールするだけでなくをお勧め、次の手順で使用されている、データ アクセス ツールをインストールすること (のダウンロードに既定でインストールされます。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise)。 データ アクセス ツールのインストールと使用に関する詳細については、プロバイダーのドキュメントまたは HIS のドキュメントを参照してください。  
+     プロバイダーをインストールするだけでなくお勧めしますが、次の手順で使用される、データ アクセス ツールをインストールすること (既定のダウンロードでインストールされて[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Enterprise)。 データ アクセス ツールのインストールと使用に関する詳細については、プロバイダーのドキュメントまたは HIS のドキュメントを参照してください。  
   
 2.  サブスクライバーの接続文字列を作成します。 この接続文字列は任意のテキスト エディターで作成できますが、データ アクセス ツールを使用することをお勧めします。 データ アクセス ツールで接続文字列を作成するには、次の手順を実行します。  
   
@@ -165,9 +165,9 @@ ms.locfileid: "36075028"
   
      LOB 列が適切にマップされていない場合は、アーティクルに列フィルターを使用して、列がレプリケートされないようにすることを検討してください。 詳細については、「[パブリッシュされたデータのフィルター選択](../publish/filter-published-data.md)」を参照してください。  
   
--   レプリケートするときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`nchar`と`nvarchar`DB2 の CHAR、VARCHAR、レプリケーションは、DB2 の種類として同じ長さ指定子を使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]型です。 ただし、データ型の長さが、生成された DB2 テーブルには小さくなりすぎる可能性があります。  
+-   レプリケートするときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`nchar`と`nvarchar`を DB2 の CHAR と VARCHAR、レプリケーションとしての DB2 のデータ型を同じ長さ指定子を使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]型。 ただし、データ型の長さが、生成された DB2 テーブルには小さくなりすぎる可能性があります。  
   
-     一部の DB2 の環境で、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`データ項目は 1 バイト文字に制限されません。 CHAR または VARCHAR 項目の長さのことに注意する必要があります。 また、必要に応じて、 *シフト イン* 文字と *シフト アウト* 文字についても考慮する必要があります。 含むテーブルをレプリケートしている場合`nchar`と`nvarchar`列、カスタム作成スクリプトでデータ型の場合より大きな最大長を指定する必要があります。 カスタム作成スクリプトの指定の詳細については、このトピックの「IBM DB2 サブスクライバーの構成」の手順 5. を参照してください。  
+     一部の DB2 の環境で、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`データ項目は 1 バイト文字に制限されません。 CHAR または VARCHAR 項目の長さはアカウントにこれを考慮する必要があります。 また、必要に応じて、 *シフト イン* 文字と *シフト アウト* 文字についても考慮する必要があります。 テーブルをレプリケートする場合`nchar`と`nvarchar`列、カスタム作成スクリプトでデータ型の場合より大きな最大長を指定する必要があります。 カスタム作成スクリプトの指定の詳細については、このトピックの「IBM DB2 サブスクライバーの構成」の手順 5. を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   

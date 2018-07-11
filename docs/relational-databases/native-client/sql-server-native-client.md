@@ -1,27 +1,24 @@
 ---
-title: SQL Server Native Client |Microsoft ドキュメント
+title: SQL Server Native Client |Microsoft Docs
 ms.date: 04/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d4694e013ce65fb1fb3c66b352b8e583a608899
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d9567790e45c6bd14a9245cac0ac7b5c81ecea5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952777"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428791"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,14 +26,14 @@ ms.locfileid: "32952777"
 
 SNAC、または SQL Server Native Client では、SQL Server 用 ODBC および OLE DB ドライバーを参照する同じ意味で使用されている用語です。
 
-**注:** このドライバーを使用して、新規の開発をお勧めできません。 新しい OLE DB プロバイダーが呼び出されて、 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 今後、最新のサーバー機能が更新されます。
+**注:** このドライバーを使用して、新規の開発をお勧めできません。 新しい OLE DB プロバイダーが呼び出される、 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 今後、最新のサーバー機能と更新されます。
 
 
-**詳細についてと SNAC または ODBC ドライバーをダウンロードするを参照してください。[説明 SNAC ライフ サイクル](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)です。**
+**詳細については、および SNAC または ODBC ドライバーをダウンロードするを参照してください。 [SNAC ライフ サイクルを説明した](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)します。**
 
-SQL Server 用 ODBC ドライバーの詳細については、次を参照してください。 [Microsoft ODBC Driver for SQL Server on Windows](https://msdn.microsoft.com/library/jj730314(v=sql.110).aspx)です。  またを参照してください[新しい Microsoft ODBC Drivers for SQL Server の概要](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/)、および[リリースの SQL Server 用 ODBC Driver 13.1](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/)です。  
+SQL Server 用 ODBC ドライバーの詳細については、次を参照してください。 [Microsoft ODBC Driver for SQL Server on Windows](https://msdn.microsoft.com/library/jj730314(v=sql.110).aspx)します。  またを参照してください[SQL Server の新しい Microsoft ODBC Drivers の概要](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/)、および[ODBC Driver 13.1 for SQL Server がリリースされた](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/)します。  
 
- については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と共に Native Client の機能がリリースされた[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、SQL Server native Client の最終使用可能なバージョン。
+ については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と共に Native Client の機能がリリースされた[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、SQL Server native Client の最後の使用可能なバージョン。
 
 -   [SQL Server Native Client における LocalDB のサポート](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
 
@@ -44,25 +41,25 @@ SQL Server 用 ODBC ドライバーの詳細については、次を参照して
 
 -   [SQL Server Native Client 11.0 での UTF-16 のサポート](../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
 
--   [SQL Server Native Client の高可用性、災害復旧のサポート](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
+-   [SQL Server Native Client の HADR サポート](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
 
 -   [拡張イベント ログの診断情報へのアクセス](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
 
-ODBC で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、Windows 7 SDK の標準 ODBC に追加された 3 つの機能をサポートしています。  
+ODBC を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、Windows 7 SDK の標準の ODBC に追加された 3 つの機能をサポートしています。  
 
--   接続関連の操作での非同期実行。 詳細については、次を参照してください。[非同期実行](http://go.microsoft.com/fwlink/?LinkID=191493)です。  
+-   接続関連の操作での非同期実行。 詳細については、次を参照してください。[非同期実行](http://go.microsoft.com/fwlink/?LinkID=191493)します。  
 
--   C データ型の機能拡張。 詳細については、次を参照してください。 [ODBC における C データ型](http://go.microsoft.com/fwlink/?LinkID=191495)です。  
+-   C データ型の機能拡張。 詳細については、次を参照してください。 [ODBC における C データ型](http://go.microsoft.com/fwlink/?LinkID=191495)します。  
 
-     この機能をサポートするために[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、SQLGetDescField が返すことができる**SQL_C_SS_TIME2** (の**時間**型) または**SQL_C_SS_TIMESTAMPOFFSET** (**datetimeoffset**) の代わりに**SQL_C_BINARY**アプリケーションには、ODBC 3.8 が使用している場合、します。 詳細については、次を参照してください。 [ODBC の日付と時刻の強化に対するデータ型のサポート](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)です。  
+     この機能をサポートする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、SQLGetDescField を返せる**SQL_C_SS_TIME2** (の**時間**型) または**SQL_C_SS_TIMESTAMPOFFSET** (**datetimeoffset**) の代わりに**SQL_C_BINARY**場合、アプリケーションで ODBC 3.8 が使用されます。 詳細については、次を参照してください。 [ODBC の日付と時刻の強化に対するデータ型のサポート](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)します。  
 
--   呼び出す**SQLGetData**小さなバッファーを伴うに複数回、大きなパラメーター値を取得します。 詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](http://go.microsoft.com/fwlink/?LinkID=191494)です。  
+-   呼び出す**SQLGetData**小さなバッファーを複数回に大きなパラメーター値を取得します。 詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](http://go.microsoft.com/fwlink/?LinkID=191494)します。  
 
  次のトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client の動作の変更点について説明します。  
 
--   呼び出すときに**icommandwithparameters::setparameterinfo**に渡された値、 *pwszName*パラメーターは、有効な識別子である必要があります。 詳細については、次を参照してください。 [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)です。  
+-   呼び出すときに**icommandwithparameters::setparameterinfo**に渡される値、 *pwszName*パラメーターは、有効な識別子である必要があります。 詳細については、次を参照してください。 [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)します。  
 
--   **SQLDescribeParam** ODBC 仕様準拠した値は一貫して返します。 詳細については、次を参照してください。 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)です。  
+-   **SQLDescribeParam** ODBC 仕様準拠した値は一貫して返します。 詳細については、次を参照してください。 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)します。  
 
 -   [文字変換処理での ODBC ドライバーの動作の変更](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
 

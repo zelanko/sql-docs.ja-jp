@@ -1,14 +1,11 @@
 ---
-title: sys.remote_data_archive_tables (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.remote_data_archive_tables (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,32 +18,31 @@ dev_langs:
 helpviewer_keywords:
 - sys.remote_data_archive_tables catalog view
 ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d71c317ef36f254f83af70b3b4a2b2428fcbfa4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d94d4788c071a9c5acc006afad9fe119bc0e9c77
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974648"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425561"
 ---
-# <a name="stretch-database-catalog-views---sysremotedataarchivetables"></a>データベースのカタログ ビューでの stretch sys.remote_data_archive_tables
+# <a name="stretch-database-catalog-views---sysremotedataarchivetables"></a>カタログ ビューでの Stretch Database sys.remote_data_archive_tables
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Stretch が有効なローカル テーブルからデータを格納する各リモート テーブルの 1 つの行が含まれています。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Stretch が有効なローカル テーブルのオブジェクトの ID。|  
 |**remote_database_id**|**int**|自動生成されたローカルの識別子、リモート データベース。|  
 |**remote_table_name**|**sysname**|Stretch が有効なローカル テーブルに対応するリモートのデータベース内のテーブルの名前です。|  
-|**filter_predicate**|**nvarchar(max)**|フィルター述語では、存在する場合、移行するテーブル内の行を識別します。 値が null の場合、テーブル全体が移行の対象になります。<br /><br /> 詳細については、次を参照してください。[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)と[フィルター述語を使用して、移行する行を選択](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)です。|  
-|**migration_direction**|**tinyint**|データが移行されている方向です。 使用可能な値は次のです。<br/>1 (送信)<br/>2 (受信)|  
-|**migration_direction_desc**|**nvarchar(60)**|データが移行されている方向の説明です。 使用可能な値は次のです。<br/>送信 (1)<br/>受信 (2)|  
-|**is_migration_paused**|**bit**|移行が一時停止されているかどうかを示します。|  
-|**is_reconciled**|**bit**| リモート SQL Server のテーブルと同期されているかどうかを示します。<br/><br/>ときに、値の**is_reconciled**が 1 (true)、リモート SQL Server のテーブルとの同期され、リモート データを含むクエリを実行することができます。<br/><br/>ときに、値の**is_reconciled**は 0 (false)、リモート SQL Server のテーブルと同期がとれていません。最近移行済みの行は、もう一度移行する必要があります。 これは、リモート Azure データベースを復元するとき、またはリモート テーブルから行を手動で削除するときに発生します。 テーブルを調整するまでは、リモート データを含むクエリを実行できません。 テーブルを調整するために実行[sys.sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md)です。 |  
+|**filter_predicate**|**nvarchar(max)**|フィルター述語では、存在する場合、移行するテーブル内の行を識別します。 値が null の場合、テーブル全体が移行の対象になります。<br /><br /> 詳細については、次を参照してください。[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)と[フィルター述語を使用して移行する行を選択します。](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)します。|  
+|**migration_direction**|**tinyint**|これでデータが現在移行中の方向。 使用可能な値、次に示します。<br/>1 (送信)<br/>2 (受信)|  
+|**migration_direction_desc**|**nvarchar(60)**|これでデータが現在移行中の方向の説明です。 使用可能な値、次に示します。<br/>送信 (1)<br/>受信 (2)|  
+|**is_migration_paused**|**bit**|移行が現在一時停止しているかどうかを示します。|  
+|**is_reconciled**|**bit**| リモート SQL Server のテーブルとが同期するかどうかを示します。<br/><br/>ときに、値の**is_reconciled** 1 (true) には、リモート SQL Server のテーブルとは同期、およびリモートのデータを含むクエリを実行することができます。<br/><br/>ときに、値の**is_reconciled**は 0 (false)、リモート SQL Server のテーブルと同期されていません。最近移行済みの行は、もう一度移行する必要があります。 これは、リモート Azure データベースを復元するとき、またはリモート テーブルから行を手動で削除するときに発生します。 テーブルを調整するまで、リモート データを含むクエリを実行することはできません。 テーブルを調整するために実行[sys.sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md)します。 |  
   
 ## <a name="see-also"></a>参照  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  

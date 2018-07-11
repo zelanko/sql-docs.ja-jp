@@ -1,5 +1,5 @@
 ---
-title: カスタム メンバー式の定義 |Microsoft ドキュメント
+title: カスタム メンバー式の定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - members [Analysis Services], custom
 - custom rollup formulas [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - custom member formulas [Analysis Services]
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2983c826b96f681971a6c1fc5be56084a8213453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09f50cbfab0b4d5554d33e0a8526d14a22909381
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183439"
 ---
 # <a name="define-custom-member-formulas"></a>カスタム メンバー式の定義
   カスタム メンバー式と呼ばれる多次元式 (MDX) を定義すると、指定した属性のメンバーに値を指定できます。 データ ソース ビューからのテーブルの列は、属性のメンバーごとに、そのメンバーの値の指定に使用される式を提供します。  
@@ -33,7 +33,7 @@ ms.locfileid: "36083294"
   
  属性の `CustomRollupColumn` プロパティは、属性のメンバーのカスタム メンバー式が含まれている列を指定します。 列の行が空の場合は、メンバーのセル値は通常どおり返されます。 列の式が有効でない場合は、メンバーを使用するセル値が取得されるたびに実行時エラーが発生します。  
   
- 属性のカスタム メンバー式を指定する前に、属性が含まれているディメンション テーブル、つまり直接関連するテーブルに、カスタム メンバー式を保存するための文字列型の列があることを確認してください。 大文字と小文字の場合は、設定するか、`CustomRollupColumn`プロパティ属性を手動でまたは属性にカスタム メンバー式を有効にする、ビジネス インテリジェンス ウィザードのカスタム メンバー式の設定の拡張機能を使用します。 この拡張機能の使用方法については、「 [ディメンションの属性に対するカスタム メンバー式の設定](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)」を参照してください。  
+ 属性のカスタム メンバー式を指定する前に、属性が含まれているディメンション テーブル、つまり直接関連するテーブルに、カスタム メンバー式を保存するための文字列型の列があることを確認してください。 大文字と小文字の場合は、設定ができます、`CustomRollupColumn`プロパティ属性を手動でまたはビジネス インテリジェンス ウィザードのカスタム メンバー式の設定の拡張機能を使用して、属性にカスタム メンバー式を有効にします。 この拡張機能の使用方法については、「 [ディメンションの属性に対するカスタム メンバー式の設定](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)」を参照してください。  
   
 ## <a name="evaluating-custom-member-formulas"></a>カスタム メンバー式の評価  
  カスタム メンバー式は、計算されるメンバーとは異なります。 カスタム メンバー式は、ディメンション テーブルに存在しているメンバーに適用され、メンバーの値のみを提供します。 これに対して、計算されるメンバーはディメンション テーブルに格納されず、ディメンションまたは階層に含まれている他のメンバーのデータとメタデータの両方を定義します。  
@@ -66,7 +66,7 @@ ms.locfileid: "36083294"
 Time.[Quarter 3] * 1.5  
 ```  
   
- カスタム メンバー式は、ディメンション テーブルの列に格納されます。 カスタム ロールアップ式を有効に設定して、`CustomRollupColumn`属性のプロパティです。  
+ カスタム メンバー式は、ディメンション テーブルの列に格納されます。 カスタム ロールアップ式を有効に設定して、`CustomRollupColumn`属性のプロパティ。  
   
  1 つの MDX 式を属性のすべてのメンバーに適用するには、MDX 式をリテラル文字列として返すディメンション テーブルで名前付き計算を作成します。 次に、名前付き計算を、構成する属性の `CustomRollupColumn` プロパティ設定で指定します。 名前付き計算は、SQL 式によって定義される行の値を返す、データ ソース ビュー テーブルの列です。 名前付き計算の構築方法については、「[データ ソース ビューでの名前付き計算の定義 (Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)」を参照してください。  
   

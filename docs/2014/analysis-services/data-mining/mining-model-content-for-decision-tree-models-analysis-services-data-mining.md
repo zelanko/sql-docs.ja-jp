@@ -1,5 +1,5 @@
 ---
-title: デシジョン ツリー モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: デシジョン ツリー モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7ced4dd7c81ab5c3851b180394d75d80d35c502f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae76bbfc4e85e0f01e384849bf6b67e52f4c574f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161663"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
-  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの全般について、次を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)です。 Microsoft デシジョン ツリー アルゴリズムは、まったく機能の異なる多様なモデルを作成できる複合アルゴリズムであることに注意してください。デシジョン ツリーでは、アソシエーションやルールのほか、線形回帰も表すことができます。 ツリーの構造は本質的には同じですが、モデルを作成した目的によって情報を解釈する方法が異なります。  
+  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)します。 Microsoft デシジョン ツリー アルゴリズムは、まったく機能の異なる多様なモデルを作成できる複合アルゴリズムであることに注意してください。デシジョン ツリーでは、アソシエーションやルールのほか、線形回帰も表すことができます。 ツリーの構造は本質的には同じですが、モデルを作成した目的によって情報を解釈する方法が異なります。  
   
 ##  <a name="bkmk_Top"></a> デシジョン ツリー モデルの構造について  
  デシジョン ツリー モデルには、モデルとそのメタデータを表す 1 つの親ノードがあります。 その親ノードの下には、選択した予測可能な属性を表す独立したツリーがあります。 たとえば、顧客が購入を行うかどうかを予測するためのデシジョン ツリー モデルを設定し、性別と収入の入力を指定した場合、モデルでは購入の属性に対して 1 つのツリーが作成され、その中に性別と収入に関連する条件で分割される多数の分岐が含まれます。  
@@ -52,7 +52,7 @@ ms.locfileid: "36076105"
 >  連続属性のバケット方法は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で自動的に選択されますが、入力に含まれる連続値の分離方法は制御することができます。これを行うには、マイニング構造列のコンテンツの種類を `Discretized` に設定し、<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> プロパティまたは <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> プロパティを設定します。  
   
 ##  <a name="bkmk_ModelContent"></a> デシジョン ツリー モデルのモデル コンテンツ  
- ここでは、マイニング モデル コンテンツの列のうち、デシジョン ツリー モデルに関連する列についてのみ詳細と例を紹介します。 マイニング モデルの用語の説明とスキーマ行セットの汎用の列については、次を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)です。  
+ ここでは、マイニング モデル コンテンツの列のうち、デシジョン ツリー モデルに関連する列についてのみ詳細と例を紹介します。 汎用の列のマイニング モデルの用語の説明とスキーマ行セットについては、次を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)します。  
   
  MODEL_CATALOG  
  モデルが格納されているデータベースの名前。  
@@ -180,7 +180,7 @@ ms.locfileid: "36076105"
 |Age >= 30|Age >= 30 かつ Gender = Male|  
 ||Age >= 30 かつ Gender = Female|  
 |Age < 30|Age < 30 かつ Gender = Male|  
-||Age \< 30 かつ Gender = Female|  
+||年齢\<30 かつ Gender = Female|  
   
  デシジョン ツリー モデルを使用して予測を行う場合、モデルでは、引数として指定された属性を受け取り、ツリーの下位方向にその属性のパスをたどります。 一般に、すべての予測はリーフまで進み、内部ノードは分類のためだけに使用されます。  
   
@@ -193,7 +193,7 @@ ms.locfileid: "36076105"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|親ノードを基準に特定のノードを区別する属性が表示されます。 ノードのキャプションでは、分割条件の基になる設定のサブセグメントが定義されます。 たとえば、[Age] 分割されていた場合と、3 方向の分割、3 つの子ノードがある可能性がありますのノードのキャプションは"[Age] < 40"、"40 < = [Age] \< 50"、"[Age] > = 50" です。|  
+|**NODE_CAPTION**|親ノードを基準に特定のノードを区別する属性が表示されます。 ノードのキャプションでは、分割条件の基になる設定のサブセグメントが定義されます。 [Age] での分割した場合の例では 3 方向の分割、ノードがある 3 つの子ノードのキャプションは"[Age] < 40"、"40 < = [Age] \< 50"、"[Age] > = 50"。|  
 |**NODE_DESCRIPTION**|ノードを他のノードと区別するすべての属性を示す、モデルの親ノードから始まる一覧が含まれます。 たとえば、Product name = Apple かつ Color = Red のようになります。|  
   
 ###  <a name="NodeRule"></a> ノード ルールとマージナル ルール  
@@ -229,7 +229,7 @@ ms.locfileid: "36076105"
 |Age < 30|40|Age < 30 かつ Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 かつ Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- すべてのモデルで、考えられる不足値を計算に含めるためにわずかな調整が行われます。 連続属性の場合は、それぞれの値または値の範囲が状態として表される (たとえば、Age \<30、Age = 30 と Age > 30) と確率は次のように計算されます: 状態が存在する (値 = 1)、他のいくつかの状態が存在する (値 = 0)、状態が`Missing`. 不足値を反映するように確率を調整する方法の詳細については、「[Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md)」 (不足値 (Analysis Services - データ マイニング)) を参照してください。  
+ すべてのモデルで、考えられる不足値を計算に含めるためにわずかな調整が行われます。 連続属性は、それぞれの値または値の範囲が状態として表される (たとえば、Age \<30、Age = 30、age > 30)、次のように確率が計算: 状態が存在する (値 = 1)、他のいくつかの状態が存在する (値 = 0)、状態が`Missing`. 不足値を反映するように確率を調整する方法の詳細については、「[Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md)」 (不足値 (Analysis Services - データ マイニング)) を参照してください。  
   
  各ノードの確率は、次のように分布からほぼ直接的に計算されます。  
   

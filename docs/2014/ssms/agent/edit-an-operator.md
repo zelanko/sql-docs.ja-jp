@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
 - modifying operators
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - operators (users) [Database Engine], modifying with Management Studio
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8aa1fbe6495aa7fc4ee81d6a8f93775f311b9e87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6ec4ffcad8d88a14ee9fdaeed9fd286195a16a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149813"
 ---
 # <a name="edit-an-operator"></a>Edit an Operator
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、通知の受信や通知用の電子メール アドレス、ポケットベル アドレス、Net SEND アドレスなど、オペレーターの可用性を編集する方法について説明します。  
@@ -72,9 +72,9 @@ ms.locfileid: "36083571"
   
      *[<オペレーター名> のプロパティ]* ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
   
-    -   [オペレーターのプロパティと New 演算子&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [オペレーターのプロパティと演算子の新しい&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [オペレーターのプロパティ: New 演算子&#40;通知 ページ&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [オペレーターのプロパティ: 新しい演算子&#40;[通知] ページ&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [[オペレーターのプロパティ] ([履歴] ページ)](operator-properties-history-page.md)  
   
@@ -107,6 +107,6 @@ ms.locfileid: "36083571"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_update_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)します。  
   
   

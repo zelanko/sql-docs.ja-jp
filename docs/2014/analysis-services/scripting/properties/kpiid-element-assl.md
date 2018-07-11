@@ -1,5 +1,5 @@
 ---
-title: KpiID 要素 (ASSL) |Microsoft ドキュメント
+title: KpiID 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KpiID element
 ms.assetid: a76395bc-bc84-40f8-9770-6275842f93b5
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 03bbebbf255b5f42934d4fe1e28c78cc1bb54caf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1f363564a74e9f64ed126ceda98ca387561c852
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151273"
 ---
 # <a name="kpiid-element-assl"></a>KpiID 要素 (ASSL)
   関連付ける識別子 (ID) が含まれています、 [Kpi](../objects/kpi-element-assl.md)を持つ要素を[パースペクティブ](../objects/perspective-element-assl.md)要素。  
