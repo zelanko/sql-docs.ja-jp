@@ -1,5 +1,5 @@
 ---
-title: ウィザードの完了 (データ マイニング ウィザード) |Microsoft ドキュメント
+title: ウィザードの完了 (データ マイニング ウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.finish.f1
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d013993f9a8e99898b78cfa520c474c788ac294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 729d594d2ab714770ec168a347e044aa968d9865
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278428"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>[ウィザードの完了] (データ マイニング ウィザード)
   **[ウィザードの完了]** ページを使用すると、ウィザードの完了時に作成されるマイニング構造を確認できます。 マイニング構造の名前を設定することもできます。  
@@ -37,7 +37,7 @@ ms.locfileid: "36074106"
  **マイニング構造名**  
  **データ マイニング ウィザード**によって定義されるマイニング構造の名前を入力します。  
   
- **マイニング モデルの名前**  
+ **マイニング モデル名**  
  **データ マイニング ウィザード**によって定義されるマイニング モデルの名前を入力します。  
   
  **ドリルスルーを許可します。**  
@@ -65,7 +65,7 @@ ms.locfileid: "36074106"
   
 ## <a name="see-also"></a>参照  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [データ ソース ビューを選択&#40;データ マイニング ウィザード&#41;](select-data-source-view-data-mining-wizard.md)   
+ [データ ソース ビューを選択します&#40;データ マイニング ウィザード。&#41;](select-data-source-view-data-mining-wizard.md)   
  [トレーニング データの指定&#40;データ マイニング ウィザード&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

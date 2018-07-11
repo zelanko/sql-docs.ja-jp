@@ -1,5 +1,5 @@
 ---
-title: 結果の要素 (XMLA) |Microsoft ドキュメント
+title: 結果の要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - results element
 ms.assetid: 3249a17a-7bfa-4753-b605-8f611ba7ae2b
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 203ad5a79938c80e2bfccc798ff5f9551ac66d8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1e42f6aa620b57630df690ee92bdbbd849ab100b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165233"
 ---
 # <a name="results-element-xmla"></a>results 要素 (XMLA)
-  コレクションを格納[ルート](root-element-xmla.md)要素によって返される、 [Execute](../xml-elements-methods-execute.md)メソッドを使用して、[バッチ](../xml-elements-commands/batch-element-xmla.md)コマンド。  
+  コレクションを含む[ルート](root-element-xmla.md)要素によって返される、 [Execute](../xml-elements-methods-execute.md)メソッドを使用して、[バッチ](../xml-elements-commands/batch-element-xmla.md)コマンド。  
   
  **Namespace** http://schemas.microsoft.com/analysisservices/2003/xmla-multipleresults  
   

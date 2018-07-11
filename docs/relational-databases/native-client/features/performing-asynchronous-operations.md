@@ -1,12 +1,11 @@
 ---
-title: 非同期操作を実行する |Microsoft ドキュメント
+title: 非同期操作を実行する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQLNCLI, asynchronous operations
 - SQL Server Native Client, asynchronous operations
 ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
-caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e3880ec512f04adca7b84ec362b99d13e071cfd
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d3bd1ee2baf56a92068d58fffd783cd492609c71
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702693"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420491"
 ---
 # <a name="performing-asynchronous-operations"></a>非同期操作の実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,40 +36,40 @@ ms.locfileid: "35702693"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、アプリケーションは非同期のデータベース操作を実行できます。 非同期処理により、呼び出し側のスレッドをブロックしないで直ちに制御を返すことができるようになります。 これは、マルチスレッドの持つ能力と柔軟性を大きく引き出し、開発者が明示的にスレッドを作成したり、同期を処理する手間を省くことができる機能です。 アプリケーションは、データベース接続を初期化するときや、コマンドの実行結果を初期化するときに、非同期処理を要求します。  
   
 ## <a name="opening-and-closing-a-database-connection"></a>データベース接続の開閉  
- 使用する場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、データ ソース オブジェクトを非同期的に初期化するために設計されたアプリケーションは呼び出しの前に DBPROP_INIT_ASYNCH プロパティに DBPROPVAL_ASYNCH_INITIALIZE ビットを設定できます**Idbinitialize::initialize**です。 プロバイダーを返しますへの呼び出しからすぐにこのプロパティを設定すると、**初期化**での操作が直ちに、完了した場合は S_OK、または初期化が非同期に続行される場合は DB_S_ASYNCHRONOUS します。 アプリケーションを照会できます、 **IDBAsynchStatus**または[ISSAsynchStatus](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)データ ソース オブジェクトのインターフェイスを呼び出す**idbasynchstatus::getstatus**または[Issasynchstatus::waitforasynchcompletion](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)初期化のステータスを取得します。  
+ 使用する場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、データ ソース オブジェクトを非同期的に初期化するために設計されたアプリケーションを呼び出す前に DBPROP_INIT_ASYNCH プロパティに DBPROPVAL_ASYNCH_INITIALIZE ビットを設定できます**Idbinitialize::initialize**します。 プロバイダーを返しますへの呼び出しからすぐにこのプロパティを設定すると、**初期化**操作が、すぐに完了した場合は S_OK または DB_S_ASYNCHRONOUS、初期化が非同期に続行する場合のいずれかでします。 アプリケーションを照会できます、 **IDBAsynchStatus**または[ISSAsynchStatus](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)、データ ソース オブジェクトのインターフェイスを呼び出して**idbasynchstatus::getstatus**または[Issasynchstatus::waitforasynchcompletion](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)初期化の状態を取得します。  
   
- また、DBPROPSET_SQLSERVERROWSET プロパティ セットに SSPROP_ISSAsynchStatus プロパティが追加されています。 サポートするプロバイダー、 **ISSAsynchStatus**インターフェイスが VARIANT_TRUE の値は、このプロパティを実装する必要があります。  
+ また、DBPROPSET_SQLSERVERROWSET プロパティ セットに SSPROP_ISSAsynchStatus プロパティが追加されています。 サポートするプロバイダー、 **ISSAsynchStatus**インターフェイスは、このプロパティを VARIANT_TRUE の値を実装する必要があります。  
   
- **Idbasynchstatus::abort**または[issasynchstatus::abort](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md)非同期のキャンセルを呼び出すことができる**初期化**呼び出します。 コンシューマーは、明示的にデータ ソースの非同期の初期化を要求できます。 それ以外の場合、 **idbinitialize::initialize**データ ソース オブジェクトが完全に初期化されるまで返されません。  
+ **Idbasynchstatus::abort**または[issasynchstatus:](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md)非同期のキャンセルを呼び出すことができます**初期化**呼び出します。 コンシューマーは、明示的にデータ ソースの非同期の初期化を要求できます。 それ以外の場合、 **idbinitialize::initialize**データ ソース オブジェクトが完全に初期化されるまでは返されません。  
   
 > [!NOTE]  
->  接続プールを使用するデータ ソース オブジェクトを呼び出すことはできません、 **ISSAsynchStatus**インターフェイスで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーです。 **ISSAsynchStatus**プールされているデータ ソース オブジェクトのインターフェイスは公開されません。  
+>  接続プールの使用されるデータ ソース オブジェクトを呼び出すことはできません、 **ISSAsynchStatus**インターフェイスで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー。 **ISSAsynchStatus**インターフェイスは、プールされたデータ ソース オブジェクトは公開されません。  
 >   
->  場合は、アプリケーションが明示的にカーソル エンジンの使用を強制**iopenrowset::openrowset**と**imultipleresults::getresult**は非同期処理をサポートしていません。  
+>  アプリケーションが、カーソル エンジンの使用を明示的に強制する場合**iopenrowset::openrowset**と**imultipleresults::getresult**非同期処理ではサポートされません。  
 >   
->  さらのリモート処理プロキシ/スタブの dll (MDAC 2.8) を呼び出すことはできません、 **ISSAsynchStatus**インターフェイスで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client です。 **ISSAsynchStatus**インターフェイスは、リモート処理は公開されません。  
+>  また、MDAC 2.8) の「リモート処理プロキシ/スタブの dll を呼び出すことはできません、 **ISSAsynchStatus**インターフェイスで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client。 **ISSAsynchStatus**インターフェイスは、リモート処理は公開されません。  
 >   
->  サービス コンポーネントをサポートしていない**ISSAsynchStatus**です。  
+>  サービス コンポーネントをサポートしていない**ISSAsynchStatus**します。  
   
 ## <a name="execution-and-rowset-initialization"></a>実行と行セットの初期化  
  コマンドの実行結果を非同期に開くようデザインされているアプリケーションは、DBPROP_ROWSET_ASYNCH プロパティに DBPROPVAL_ASYNCH_INITIALIZE ビットを設定できます。 呼び出しの前にこのビットを設定するときに**idbinitialize::initialize**、 **icommand::execute**、 **iopenrowset::openrowset**または**IMultipleResults:。GetResult**、 *riid*引数を IID_IDBAsynchStatus、IID_ISSAsynchStatus、または IID_IUnknown に設定する必要があります。  
   
- メソッドは S_OK をすぐに返します行セットの初期化が完了した場合、すぐにまたは db_s_asynchronous を返して、行セットは、非同期的に初期化が解決しない場合に*ppRowset*で要求されたインターフェイスへの設定、行セット。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、このインターフェイスは、必ず**IDBAsynchStatus**または**ISSAsynchStatus**です。 このインターフェイスが一時停止状態と呼び出し元にした場合と同じ動作は、行セットが完全に初期化されるまで**QueryInterface**以外のインターフェイスに対して**IID_IDBAsynchStatus**または**iid _ISSAsynchStatus** E_NOINTERFACE を返す可能性があります。 コンシューマーが明示的に非同期処理を要求しない限り、行セットは同期的に初期化されます。 要求されたすべてのインターフェイスは、使用可能な場合に**idbasynchstaus:** または**issasynchstatus::waitforasynchcompletion**非同期操作が完了したことを示す値を返します。 これは、必ずしも行セットに完全にデータが格納されたことを意味するものではありませんが、行セットは完成し、完全に機能します。  
+ メソッドを直ちに返しますは S_OK、行セットの初期化が完了するとすぐに、または DB_S_ASYNCHRONOUS を行セットは、非同期的に初期化が解決しない場合と*ppRowset*で要求されたインターフェイスに設定します行セット。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、このインターフェイスは、必ず**IDBAsynchStatus**または**ISSAsynchStatus**します。 一時停止状態と呼び出しを使用した場合、このインターフェイスの動作、行セットが完全に初期化されるまで**QueryInterface**以外のインターフェイスに対して**IID_IDBAsynchStatus**または**iid _ISSAsynchStatus** E_NOINTERFACE を返す可能性があります。 コンシューマーが明示的に非同期処理を要求しない限り、行セットは同期的に初期化されます。 要求されたすべてのインターフェイスには**idbasynchstaus:** または**issasynchstatus::waitforasynchcompletion**し非同期操作が完了したことを示すを返します。 これは、必ずしも行セットに完全にデータが格納されたことを意味するものではありませんが、行セットは完成し、完全に機能します。  
   
- 実行されたコマンドが行セットを返さない場合も直ちにを返したをサポートするオブジェクト**IDBAsynchStatus**です。  
+ 実行されたコマンドが行セットを返さない場合、まだを直ちに返しますをサポートするオブジェクト**IDBAsynchStatus**します。  
   
  非同期コマンドの実行により複数の結果を取得する必要がある場合は、次の操作を行います。  
   
 -   コマンドを実行する前に、DBPROP_ROWSET_ASYNCH プロパティに DBPROPVAL_ASYNCH_INITIALIZE ビットを設定します。  
   
--   呼び出す**icommand::execute**、および要求**IMultipleResults**です。  
+-   呼び出す**icommand::execute**、および要求**IMultipleResults**します。  
   
- **IDBAsynchStatus**と**ISSAsynchStatus**インターフェイス、複数の結果を使用してインターフェイスを照会して取得できます**QueryInterface**です。  
+ **IDBAsynchStatus**と**ISSAsynchStatus**インターフェイス複数結果インターフェイスを使用して、クエリを実行して取得できます**QueryInterface**します。  
   
- コマンドの実行が完了時に**IMultipleResults**通常、同期のケースから 1 つの例外として使用できます: DB_S_ASYNCHRONOUS が返されます、後者**IDBAsynchStatus**または**ISSAsynchStatus**操作が完了するために使用できます。  
+ コマンドの実行が完了時に**IMultipleResults** 、同期操作のケースから 1 つの例外は、通常どおり使用できます: DB_S_ASYNCHRONOUS が返される、後者**IDBAsynchStatus**または**ISSAsynchStatus**操作が完了したかを判断するために使用できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、アプリケーションが非ブロッキング メソッドを呼び出し、いくつか他の処理を実行し、制御を戻して結果を処理します。 **Issasynchstatus::waitforasynchcompletion** 、非同期実行操作が完了するまで、内部イベント オブジェクトまたはで指定された時間を待機*dwMilisecTimeOut*が渡されます。  
+ 次の例では、アプリケーションが非ブロッキング メソッドを呼び出し、いくつか他の処理を実行し、制御を戻して結果を処理します。 **Issasynchstatus::waitforasynchcompletion** 、非同期実行操作が完了するまで、内部イベント オブジェクト上で指定された時間待機*dwMilisecTimeOut*が渡されます。  
   
 ```  
 // Set the DBPROPVAL_ASYNCH_INITIALIZE bit in the   
@@ -112,7 +110,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
- **Issasynchstatus::waitforasynchcompletion** 、非同期実行操作が完了するまで、内部イベント オブジェクトのハンドルを待機または*dwMilisecTimeOut*値が渡されます。  
+ **Issasynchstatus::waitforasynchcompletion** 、非同期実行操作が完了するまで、内部イベント オブジェクトを待機または*dwMilisecTimeOut*値が渡されます。  
   
  次の例は、複数の結果セットを返す非同期処理のコードです。  
   

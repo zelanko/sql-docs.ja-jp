@@ -1,5 +1,5 @@
 ---
-title: シーケンス クラスターのクラスターの状態遷移 タブ (マイニング モデル ビューアー) |Microsoft ドキュメント
+title: シーケンス クラスターのクラスターの状態遷移 タブ (マイニング モデル ビューアー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.transition.f1
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d9895e00405c4ebe6bc684c3c2b3acc4e2704478
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 307f14f06354195147f32cbcf338d4b04e852b9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156883"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>シーケンス クラスターの [状態遷移] タブ (マイニング モデル ビューアー)
   **Microsoft シーケンス クラスター ビューアー**の **[状態遷移]** タブでは、選択したクラスターにおける属性と値のペア間または状態間の遷移を詳細に調べることができます。  
@@ -43,13 +43,13 @@ ms.locfileid: "36076661"
  **ズーム イン**  
  ダイアグラムをズーム アウトして、状態を詳しく表示します。  
   
- **ズーム アウトします。**  
+ **ズーム アウト**  
  ダイアグラムを縮小して、クラスター内の状態の全体的なビューを取得します。  
   
  **グラフ ビューのコピー**  
  ダイアグラムで表示されている部分をクリップボードにコピーします。  
   
- **グラフ全体のコピーします。**  
+ **グラフ全体のコピー**  
  ダイアグラム全体をクリップボードにコピーします。  
   
  **Cluster**  
@@ -57,7 +57,7 @@ ms.locfileid: "36076661"
   
  **ヒント:** **[クラスター ダイアグラム]** タブを使用してクラスターの名前を変更できます。操作は、クラスターを選択して右クリックし、 **[名前の変更]** をクリックするだけです。 クラスターをわかりやすい名前に変更すると、 **[状態遷移]** タブでクラスターを簡単に比較できます。  
   
- **線のラベルを表示します。**  
+ **Edge ラベルを表示します。**  
  遷移の確率を示すグラフに各エッジの番号を表示するには、このオプションを選択します。  
   
  **リンク**  

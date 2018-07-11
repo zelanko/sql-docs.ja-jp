@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6ae7c26bce8b52e58124b04c435af6be7d6dc84f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9c72123024fff48604919df0804694e0cd6ec480
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152103"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel 表示拡張機能は、レポートを [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010 のネイティブ形式で表示します。 Excel 表示拡張機能を使用すると、レポートの列の幅は、より正確に Excel の列の幅に反映されます。  
@@ -36,7 +36,7 @@ ms.locfileid: "36076854"
 >  最新サービス パックを入手する[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]を参照してください[SQL Server 2012 の最新サービス パックを入手する方法](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
   
 > [!IMPORTANT]  
->  型のパラメーターを定義するときに`String`、任意の値が実行できるテキスト ボックスに、ユーザーが表示されます。 クエリ パラメーターと関連付けられていないレポート パラメーターがあり、このパラメーター値がレポートに含まれていると、レポート ユーザーが、式の構文、スクリプト、または URL をパラメーター値に入力して、このレポートを Excel に変換することも可能になります。 別のユーザーがこのレポートを表示して、表示されたパラメーター コンテンツをクリックすると、悪意のあるスクリプトまたはリンクが意図せず実行されてしまう可能性があります。  
+>  型のパラメーターを定義するとき`String`、任意の値を使用できるテキスト ボックスで、ユーザーが表示されます。 クエリ パラメーターと関連付けられていないレポート パラメーターがあり、このパラメーター値がレポートに含まれていると、レポート ユーザーが、式の構文、スクリプト、または URL をパラメーター値に入力して、このレポートを Excel に変換することも可能になります。 別のユーザーがこのレポートを表示して、表示されたパラメーター コンテンツをクリックすると、悪意のあるスクリプトまたはリンクが意図せず実行されてしまう可能性があります。  
 >   
 >  悪意のあるスクリプトを誤って実行するリスクを軽減するためには、信頼されたソースのレポートしか開かないようにする必要があります。 レポートのセキュリティ保護の詳細については、「 [レポートとリソースの保護](../security/secure-reports-and-resources.md)」を参照してください。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36076854"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でレポートをプレビューする場合。  
   
--   レポート ビルダーがレポート サーバーに接続されている場合。 これは、[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]またはレポート ビルダーのスタンドアロン バージョンです。  
+-   レポート ビルダーがレポート サーバーに接続されている場合。 これを[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]またはレポート ビルダーのスタンドアロン バージョンです。  
   
 -   リモート モードのレポート ビューアー Web パーツ。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36076854"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- EXCELOPENXML 拡張機能は Excel 2007-2010 用の Excel レンダラーを定義します。 EXCEL 拡張機能は、Excel 2003 バージョンを定義します。 `Visible = “false”` は、Excel 2003 レンダラーが非表示であることを示します。 詳細については、次を参照してください。 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)と[RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)です。  
+ EXCELOPENXML 拡張機能は Excel 2007-2010 用の Excel レンダラーを定義します。 EXCEL 拡張機能は、Excel 2003 バージョンを定義します。 `Visible = “false”` は、Excel 2003 レンダラーが非表示であることを示します。 詳細については、次を参照してください。 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)と[RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)します。  
   
 ### <a name="differences-between-the-excel-2007-2010-and-excel-2003-renderers"></a>Excel 2007-2010 レンダラーと Excel 2003 レンダラーの違い  
  Excel レンダラーまたは Excel 2003 レンダラーを使用して表示されるレポートは通常は同じですが、まれに 2 つの形式が異なる場合があります。 Excel レンダラーと Excel 2003 レンダラーの比較を次の表に示します。  
@@ -229,7 +229,7 @@ ms.locfileid: "36076854"
  Excel のヘッダー セクションとフッター セクションでサポートされる最大文字数は 256 文字 (マークアップを含む) です。 この制限を超えた場合、Excel レンダラーは、文字数の合計を減らすために、ヘッダー文字列またはフッター文字列の終端位置を起点として、マークアップ文字を削除します。 マークアップ文字をすべて削除しても最大文字数を超えていた場合、文字列が右側から切り詰められます。  
   
 ### <a name="simplepageheader-settings"></a>SimplePageHeader の設定  
- 既定では、デバイス情報の SimplePageHeaders 設定に設定`False`です。 そのため、ページのヘッダーが Excel ワークシート領域にレポート内の行として表示されます。 ヘッダーが格納されるワークシートの行はロックされます。 Excel のウィンドウ枠は固定することも、固定を解除することもできます。  
+ 既定では、デバイス情報の SimplePageHeaders 設定に設定`False`。 したがって、ページ ヘッダーは、Excel ワークシート領域にレポート内の行として表示されます。 ヘッダーが格納されるワークシートの行はロックされます。 Excel のウィンドウ枠は固定することも、固定を解除することもできます。  
   
 > [!NOTE]  
 >  Excel の **[印刷タイトル]** オプションが選択されている場合、すべてのワークシート ページについて、これらのヘッダーが印刷されるように自動的に設定されます。  
