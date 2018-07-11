@@ -1,5 +1,5 @@
 ---
-title: ブロック要素 (ASSL) |Microsoft ドキュメント
+title: ブロック要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Blocks element
 ms.assetid: d6fd4e6b-b5bd-43cd-9c28-48af57cf977c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf944cc053e7a8c32efec50d10f6cc176942cce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2776ea261c26bd8c53d3f78ba29231823bb659d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161323"
 ---
 # <a name="blocks-element-assl"></a>Blocks 要素 (ASSL)
-  ブロックのバイナリの内容を表すバイナリ データのコレクションを格納、 [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)要素。  
+  バイナリ コンテンツを表すバイナリ データのブロックのコレクションを格納する[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

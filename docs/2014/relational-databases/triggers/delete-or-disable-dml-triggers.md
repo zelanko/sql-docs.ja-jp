@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DML triggers, disabling
 - removing DML triggers
@@ -17,16 +16,15 @@ helpviewer_keywords:
 - deleting DML triggers
 - DML triggers, removing
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
-caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cdf4448c8286e8b461d9e83a45fd96c15fe94ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c1e925f64b3240b4399800a3bbadb054e9f8712d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073921"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408293"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>DML トリガーの削除または無効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、DML トリガーを削除または無効にする方法について説明します。  

@@ -1,12 +1,12 @@
 ---
-title: テーブル値パラメーターを含むコマンドを実行する |Microsoft ドキュメント
+title: テーブル値パラメーターを含むコマンドの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e6e5687c05230b0235da106dab6fa7e9c5319751
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 943dba9ff3fbd04e8344ac4d325114ee9f05a2e2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699923"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428353"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>テーブル値パラメーターを含むコマンドの実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "35699923"
 ## <a name="table-valued-parameter-specification"></a>テーブル値パラメーターの指定  
  コンシューマーは、テーブル値パラメーターの型を指定できます。 この情報には、テーブル値パラメーターの型名が含まれます。 また、テーブル値パラメーターのユーザー定義テーブル型が接続の現在の既定のスキーマにない場合は、スキーマ名も含まれます。 サーバーでサポートされているかどうかに応じて、コンシューマーでは、省略可能なメタデータ情報 (列の順序など) を指定したり、特定の列のすべての行に既定値が設定されるよう指定したりすることもできます。  
   
- テーブル値パラメーターを指定するには、コンシューマーは ISSCommandWithParamter::SetParameterInfo、して必要に応じて isscommandwithparameters::setparameterproperties です。 テーブル値パラメーターの場合、*して*DBPARAMBINDINFO 構造体のフィールドには DBTYPE_TABLE の値。 *UlParamSize*にフィールドが設定されている ~ 0 その長さを示すためには不明です。 Isscommandwithparameters::setparameterproperties を通じて、スキーマ名、型名、列の順序、および既定の列などのテーブル値パラメーターの特定のプロパティを設定できます。  
+ テーブル値パラメーターを指定するには、コンシューマーは ISSCommandWithParamter::SetParameterInfo を呼び出すし、isscommandwithparameters::setparameterproperties を必要に応じて呼び出します。 テーブル値パラメーターの場合、*して*DBPARAMBINDINFO 構造体のフィールドは、dbtype_table から DBTYPE_TABLE の値を持ちます。 *UlParamSize*にフィールドが設定されている ~ 0 その長さを示すためには不明です。 Isscommandwithparameters::setparameterproperties を通じて、スキーマ名、型名、列の順序、および既定の列などのテーブル値パラメーターの特定のプロパティを設定できます。  
   
 ## <a name="table-valued-parameter-binding"></a>テーブル値パラメーターのバインド  
  テーブル値パラメーターには、任意の行セット オブジェクトを指定できます。 プロバイダーは、実行中、このオブジェクトからテーブル値パラメーターを読み取って、サーバーに送信します。  
   
- テーブル値パラメーターをバインドするには、コンシューマーは、iaccessor::createaccessor を呼び出します。 *WType*テーブル値パラメーターの DBBINDING 構造体のフィールドは DBTYPE_TABLE に設定します。 *PObject* DBBINDING 構造体のメンバーは、NULL 以外の場合、および*pObject*の*iid*メンバーは IID_IRowset、またはその他のテーブル値パラメーター行セット オブジェクトに設定インターフェイス。 DBBINDING 構造体の残りのフィールドは、ストリームされた BLOB の場合と同じように設定する必要があります。  
+ テーブル値パラメーターをバインドするには、コンシューマーは、iaccessor::createaccessor を呼び出します。 *WType*テーブル値パラメーターの DBBINDING 構造体のフィールドは、dbtype_table から DBTYPE_TABLE に設定されます。 *PObject* DBBINDING 構造体のメンバーが NULL 以外の場合、および*pObject*の*iid*メンバーは IID_IRowset、またはその他のテーブル値パラメーター行セット オブジェクトに設定インターフェイス。 DBBINDING 構造体の残りのフィールドは、ストリームされた BLOB の場合と同じように設定する必要があります。  
   
  テーブル値パラメーターと、テーブル値パラメーターに関連付けられる行セット オブジェクトのバインドでは、次の制限が適用されます。  
   
@@ -56,6 +56,6 @@ ms.locfileid: "35699923"
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [テーブル値パラメーターを使用して&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [テーブル値パラメーターを使用して、 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   
