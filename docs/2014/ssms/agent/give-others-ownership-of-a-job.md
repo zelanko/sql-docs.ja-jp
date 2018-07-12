@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], owners
 - owners [SQL Server], jobs
 - SQL Server Agent jobs, owners
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e2190d04d8a03a2f6c46ca8fbd193555cee221f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3115950e8218809f23fb123bc92e6ad56d7ad2a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157603"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブの所有権を他のユーザーに割り当てる方法を説明します。  
@@ -74,7 +74,7 @@ ms.locfileid: "36175074"
   
 2.  ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  使用して、次のステートメントを入力してクエリ ウィンドウで、 [sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)システム ストアド プロシージャです。 次の例では、 `danw` からのすべてのジョブを `françoisa`に再割り当てします。  
+3.  クエリ ウィンドウで入力を使用して、次のステートメント、 [sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)システム ストアド プロシージャ。 次の例では、 `danw` からのすべてのジョブを `françoisa`に再割り当てします。  
   
     ```  
     USE msdb ;  
@@ -87,10 +87,10 @@ ms.locfileid: "36175074"
     GO  
     ```  
   
-##  <a name="SMOProc2"></a> SQL Server 管理オブジェクトを使用します。  
+##  <a name="SMOProc2"></a> SQL Server 管理オブジェクトの使用  
  **ジョブの所有権を他のユーザーに割り当てるには**  
   
-1.  呼び出す、 `Job` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラスです。 コード例については、「 [SQL Server エージェントでの自動管理タスクのスケジュール設定](sql-server-agent.md)」を参照してください。  
+1.  呼び出す、 `Job` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。 コード例については、「 [SQL Server エージェントでの自動管理タスクのスケジュール設定](sql-server-agent.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ジョブの実装](implement-jobs.md)   

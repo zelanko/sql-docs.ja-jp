@@ -1,5 +1,5 @@
 ---
-title: 属性メンバーを自動的にグループ化 |Microsoft ドキュメント
+title: 属性メンバーを自動的にグループ化 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: eef5ca79172be96af5ded2c01a8c3f01e633caa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10a6ae9dee61d211c178a42e38087ad104344343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183429"
 ---
 # <a name="automatically-grouping-attribute-members"></a>属性メンバーの自動的なグループ化
   キューブを表示するとき、通常は、ある属性階層のメンバーと別の属性階層のメンバーとを多次元化します。 たとえば、都市別、製品別、または性別ごとに顧客の売上をグループ化して表示します。 このとき、属性の種類によっては、属性階層内のメンバー分布に基づいて、属性が自動的にグループ化されるように [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定しておくと便利です。 たとえば、顧客の年収に基づいてグループが作成されるように [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定できます。 このようにグループ化した場合、属性階層を表示したときには、メンバーそのものではなく、グループの名前と値が表示されます。 ユーザーに提示されるレベル数が限定されるので、分析が容易になります。  
@@ -48,11 +48,11 @@ ms.locfileid: "36174829"
   
 4.  **[属性]** ペインで、 **[Yearly Income]** を選択します。  
   
-5.  [プロパティ] ウィンドウ内の値を変更、 **DiscretizationMethod**プロパティを**自動**の値を変更し、 **DiscretizationBucketCount**プロパティ`5`です。  
+5.  [プロパティ] ウィンドウでの値を変更、 **DiscretizationMethod**プロパティを**自動**の値を変更し、 **DiscretizationBucketCount**プロパティ`5`します。  
   
      次の図は、変更後の **Yearly Income**プロパティを示しています。  
   
-     ![変更されたプロパティの Yearly Income の](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Yearly Income のプロパティを変更しました。")  
+     ![変更されたプロパティの Yearly income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Yearly Income のプロパティを変更")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Employee ディメンションにおける属性階層メンバーのグループ化  
   
@@ -66,11 +66,11 @@ ms.locfileid: "36174829"
   
 4.  **[属性]** ペインで、 **[Sick Leave Hours]** を選択します。  
   
-5.  [プロパティ] ウィンドウ内の値を変更、 **DiscretizationMethod**プロパティを**クラスター**の値を変更し、 **DiscretizationBucketCount**プロパティ`5`.  
+5.  [プロパティ] ウィンドウでの値を変更、 **DiscretizationMethod**プロパティを**クラスター**の値を変更し、 **DiscretizationBucketCount**プロパティを`5`.  
   
 6.  **[属性]** ペインで、 **[Vacation Hours]** を選択します。  
   
-7.  [プロパティ] ウィンドウ内の値を変更、 **DiscretizationMethod**プロパティを**Equal Areas**の値を変更し、 **DiscretizationBucketCount**プロパティ`5`です。  
+7.  [プロパティ] ウィンドウでの値を変更、 **DiscretizationMethod**プロパティを**Equal Areas**の値を変更し、 **DiscretizationBucketCount**プロパティ`5`します。  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>変更した属性階層の表示  
   

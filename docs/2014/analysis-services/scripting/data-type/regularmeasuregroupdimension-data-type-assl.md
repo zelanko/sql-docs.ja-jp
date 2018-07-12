@@ -1,5 +1,5 @@
 ---
-title: RegularMeasureGroupDimension データ型 (ASSL) |Microsoft ドキュメント
+title: RegularMeasureGroupDimension データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RegularMeasureGroupDimension data type
 ms.assetid: 5c4ce400-6d7c-40fc-9bcb-392718b77182
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b035f52890dc31783c4093d834ee949e8c3806ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20ac4c8ddf1d9acba769b0e6931d15b1c8a94647
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163483"
 ---
 # <a name="regularmeasuregroupdimension-data-type-assl"></a>RegularMeasureGroupDimension データ型 (ASSL)
   ディメンションとメジャー グループの間の標準のリレーションシップを表す派生データ型を定義します。  
@@ -58,7 +58,7 @@ ms.locfileid: "36173806"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|なし|  
-|子要素|[属性](../collections/attributes-element-assl.md)、[基数](../properties/cardinality-element-assl.md)|  
+|子要素|[属性](../collections/attributes-element-assl.md)、[カーディナリティ](../properties/cardinality-element-assl.md)|  
 |派生要素|[ディメンション](../objects/dimension-element-assl.md)([ディメンション](../collections/dimensions-element-assl.md)コレクション)|  
   
 ## <a name="remarks"></a>コメント  

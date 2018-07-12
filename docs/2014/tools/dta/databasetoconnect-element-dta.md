@@ -1,5 +1,5 @@
 ---
-title: DatabaseToConnect 要素 (DTA) |Microsoft ドキュメント
+title: DatabaseToConnect 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DatabaseToConnect element
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb0a5e8b6f20a53f8675e1740ffe57b7227437de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9a29e28782207d5da0e3166669c6c38a7119f597
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161593"
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect 要素 (DTA)
   データベース エンジン チューニング アドバイザーがワークロードのチューニング時に最初に接続するデータベースを指定します。  
@@ -41,7 +41,7 @@ ms.locfileid: "36173586"
   
 |特性|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|`string`、長さは無制限です。|  
+|**データ型と長さ**|`string`、長さの制限はありません。|  
 |**既定値**|[なし] :|  
 |**個数**|任意。 ごとに 1 回使用できます`TuningOptions`要素。|  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36173586"
 |**子要素**|なし|  
   
 ## <a name="remarks"></a>コメント  
- 使用して`DatabaseToConnect`データベース エンジン チューニング アドバイザーがチューニング セッションの開始時の接続にする最初のデータベースの名前を指定します。 この要素では、データベースを 1 つだけ指定できます。 複数のデータベース名が指定されていると、データベース エンジン チューニング アドバイザーはエラーを返します。  
+ 使用`DatabaseToConnect`データベース エンジン チューニング アドバイザーがチューニング セッションの開始時に接続する最初のデータベースの名前を指定します。 この要素では、データベースを 1 つだけ指定できます。 複数のデータベース名が指定されていると、データベース エンジン チューニング アドバイザーはエラーを返します。  
   
 ## <a name="example"></a>例  
  使用例については、「[インライン ワークロードを指定した XML 入力ファイルのサンプル &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md)」を参照してください。  

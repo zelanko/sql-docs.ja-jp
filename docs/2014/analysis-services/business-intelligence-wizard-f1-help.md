@@ -1,5 +1,5 @@
 ---
-title: ビジネス インテリジェンス ウィザードの F1 ヘルプ |Microsoft ドキュメント
+title: ビジネス インテリジェンス ウィザードの F1 ヘルプ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1fbdaa3573d77306993a024513895426e91d1ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9fa73095aa52b5c5c5f1ec53dcce18884731b4b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163593"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>ビジネス インテリジェンス ウィザードの F1 ヘルプ
   ビジネス インテリジェンス ウィザードを使用すると、ビジネス インテリジェンス機能を定義し、キューブとディメンションの詳細なオプションを設定できます。 このウィザードでは、既存のオブジェクトのプロパティの設定、新しいオブジェクトの作成、さらにディメンション インテリジェンスや通貨換算などの機能を実現する多次元式 (MDX) スクリプトの生成を行えます。  
@@ -52,13 +52,13 @@ ms.locfileid: "36174040"
   
 -   [拡張機能の選択&#40;ビジネス インテリジェンス ウィザード&#41;](choose-enhancement-business-intelligence-wizard.md)  
   
--   [時間の計算を選択して&#40;ビジネス インテリジェンス ウィザード&#41;](choose-time-calculations-business-intelligence-wizard.md)  
+-   [時間の計算の選択&#40;ビジネス インテリジェンス ウィザード&#41;](choose-time-calculations-business-intelligence-wizard.md)  
   
--   [計算のスコープを定義&#40;ビジネス インテリジェンス ウィザード&#41;](define-scope-of-calculations-business-intelligence-wizard.md)  
+-   [計算範囲の定義&#40;ビジネス インテリジェンス ウィザード&#41;](define-scope-of-calculations-business-intelligence-wizard.md)  
   
 -   [勘定科目インテリジェンスの定義&#40;ディメンション&#41;&#40;ビジネス インテリジェンス ウィザード&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
   
--   [ディメンション属性を構成する&#40;ビジネス インテリジェンス ウィザード&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
+-   [ディメンションの属性を構成する&#40;ビジネス インテリジェンス ウィザード&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
   
 -   [勘定科目インテリジェンスの定義&#40;ビジネス インテリジェンス ウィザード&#41;](define-account-intelligence-business-intelligence-wizard.md)  
   
@@ -74,9 +74,9 @@ ms.locfileid: "36174040"
   
 -   [カスタム メンバー式の作成&#40;ビジネス インテリジェンス ウィザード&#41;](create-a-custom-member-formula-business-intelligence-wizard.md)  
   
--   [属性の順序を指定して&#40;ディメンション&#41;&#40;ビジネス インテリジェンス ウィザード&#41;](specify-attribute-ordering-dimension-business-intelligence-wizard.md)  
+-   [属性の順序の指定&#40;ディメンション&#41;&#40;ビジネス インテリジェンス ウィザード&#41;](specify-attribute-ordering-dimension-business-intelligence-wizard.md)  
   
--   [属性の順序を指定して&#40;ビジネス インテリジェンス ウィザード&#41;](specify-attribute-ordering-business-intelligence-wizard.md)  
+-   [属性の順序の指定&#40;ビジネス インテリジェンス ウィザード&#41;](specify-attribute-ordering-business-intelligence-wizard.md)  
   
 -   [ディメンションの書き戻しを有効にする&#40;ディメンション&#41;&#40;ビジネス インテリジェンス ウィザード&#41;](enable-dimension-writeback-dimension-business-intelligence-wizard.md)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36174040"
   
 -   [メンバーの選択&#40;ビジネス インテリジェンス ウィザード&#41;](select-members-business-intelligence-wizard.md)  
   
--   [変換の種類を選択して&#40;ビジネス インテリジェンス ウィザード&#41;](select-conversion-type-business-intelligence-wizard.md)  
+-   [換算の種類を選択します&#40;ビジネス インテリジェンス ウィザード。&#41;](select-conversion-type-business-intelligence-wizard.md)  
   
 -   [現地の通貨参照の定義&#40;ビジネス インテリジェンス ウィザード&#41;](define-local-currency-reference-business-intelligence-wizard.md)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36174040"
   
 -   [通貨換算の定義&#40;ビジネス インテリジェンス ウィザード&#41;](define-currency-conversion-business-intelligence-wizard.md)  
   
--   [[列] ダイアログ ボックスをオン&#40;ビジネス インテリジェンス ウィザード&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
+-   [列のダイアログ ボックスをオンに&#40;ビジネス インテリジェンス ウィザード&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
   
 -   [ウィザードの完了&#40;ビジネス インテリジェンス ウィザード&#41;](completing-the-wizard-business-intelligence-wizard.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: モデリング フラグ (データ マイニング) |Microsoft ドキュメント
+title: モデリング フラグ (データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - data types [data mining]
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7d8ee5cc87c6d5a197240f59641095f8bc1c693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85abe1acb2fa12208ebf83541bd030646c67ddbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155413"
 ---
 # <a name="modeling-flags-data-mining"></a>モデリング フラグ (データ マイニング)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のモデリング フラグを使用すると、ケース テーブルで定義されているデータに関する追加情報をデータ マイニング アルゴリズムに提供できます。 アルゴリズムは、この情報を使用して、より正確なデータ マイニング モデルを作成することができます。  
   
- マイニング構造のレベルで定義されるモデリング フラグもあれば、マイニング モデル列のレベルで定義されるモデリング フラグもあります。 たとえば、`NOT NULL`モデリング フラグはマイニング構造列を使用します。 モデルの作成に使用するアルゴリズムに応じて、追加的なモデリング フラグをマイニング モデル列に定義することができます。  
+ マイニング構造のレベルで定義されるモデリング フラグもあれば、マイニング モデル列のレベルで定義されるモデリング フラグもあります。 たとえば、`NOT NULL`モデリング フラグはマイニング構造列で使用します。 モデルの作成に使用するアルゴリズムに応じて、追加的なモデリング フラグをマイニング モデル列に定義することができます。  
   
 > [!NOTE]  
 >  サードパーティ プラグインには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]であらかじめ定義されているフラグに加えて他のモデリング フラグがある場合もあります。  
@@ -50,9 +50,9 @@ ms.locfileid: "36174595"
  **MODEL_EXISTENCE_ONLY**  
  列が、`Missing` および `Existing` の 2 つの状態を持つ列として扱われることを示します。 値が場合`NULL`、Missing として扱われます。 MODEL_EXISTENCE_ONLY フラグは、予測可能な属性に適用され、ほとんどのアルゴリズムでサポートされます。  
   
- 実際には、MODEL_EXISTENCE_ONLY フラグを設定`True`値の形式が変更され、2 つの状態がある:`Missing`と`Existing`です。 すべての非欠損状態は、1 つに結合されます`Existing`値。  
+ 実際には、MODEL_EXISTENCE_ONLY フラグを設定`True`が 2 つの状態が存在するよう、値の形式が変わります。`Missing`と`Existing`します。 すべての非欠損状態は、1 つに結合されます`Existing`値。  
   
- このモデリング フラグは、`NULL` 状態が暗黙的な意味を持ち、`NOT NULL` 状態の明示的な値はその列に値があるという事実ほど重要ではないような属性に使用されるのが一般的です。 たとえば、[DateContractSigned] 列があります`NULL`コントラクトが署名されなかった場合と`NOT NULL`契約に署名した場合。 したがって、コントラクトが署名されるかどうかを予測するモデルの目的の場合は、使用できます、MODEL_EXISTENCE_ONLY フラグで正確な日付値を無視する、`NOT NULL`ケースし、コントラクトがある場合にのみ区別`Missing`または`Existing`.  
+ このモデリング フラグは、`NULL` 状態が暗黙的な意味を持ち、`NOT NULL` 状態の明示的な値はその列に値があるという事実ほど重要ではないような属性に使用されるのが一般的です。 たとえば、[DateContractSigned] 列があります`NULL`コントラクトが署名されなかった場合と`NOT NULL`コントラクトが署名されている場合。 そのため、モデルの目的が契約に署名するかどうかを予測する場合は、することができます、MODEL_EXISTENCE_ONLY フラグを使用して正確な日付の値は無視、`NOT NULL`ケースし、コントラクトがである場合にのみ区別`Missing`または`Existing`.  
   
 > [!NOTE]  
 >  Missing はアルゴリズムによって使用される特殊な状態であり、列のテキスト値の "Missing" とは異なります。 詳細については、「[Missing 値 (Analysis Services - データ マイニング)](missing-values-analysis-services-data-mining.md)」を参照してください。  
@@ -108,7 +108,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |タスク|トピック|  
 |----------|-----------|  
-|データ マイニング デザイナーを使用してモデリング フラグを編集する|[表示または変更するモデリング フラグ&#40;データ マイニング&#41;](modeling-flags-data-mining.md)|  
+|データ マイニング デザイナーを使用してモデリング フラグを編集する|[モデリング フラグの変更を表示または&#40;データ マイニング&#41;](modeling-flags-data-mining.md)|  
 |適切なリグレッサーを推奨するためのヒントをアルゴリズムに対して指定する|[モデルでリグレッサーとして使用する列の指定](specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |特定のアルゴリズムでサポートされているモデリング フラグを確認する (各アルゴリズムのリファレンス トピックの「モデリング フラグ」セクション)|[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |マイニング構造列とそこに設定できるプロパティについて詳しく知る|[マイニング構造列](mining-structure-columns.md)|  

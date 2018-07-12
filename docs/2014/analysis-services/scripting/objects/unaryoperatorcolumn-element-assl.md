@@ -1,5 +1,5 @@
 ---
-title: UnaryOperatorColumn 要素 (ASSL) |Microsoft ドキュメント
+title: UnaryOperatorColumn 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnaryOperatorColumn element
 ms.assetid: 10889e51-69e5-4f50-9749-ecbc66c247d3
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d52b742916c6e5876d76fbeb1ba112672ea5b225
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2e4bd33bc95b1322e5a3125e6222dc9cdfb1b05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161163"
 ---
 # <a name="unaryoperatorcolumn-element-assl"></a>UnaryOperatorColumn 要素 (ASSL)
   単項演算子を指定する列の詳細を定義します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36173556"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 詳細については、`DataItem`の Analysis Services スクリプト言語 (ASSL) オブジェクトおよびプロパティのテーブルを含む、型、`DataItem`を入力しを参照してください[DataItem データ型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)です。  
+ 詳細については、`DataItem`の Analysis Services スクリプト言語 (ASSL) オブジェクトおよびプロパティのテーブルを含む、型、`DataItem`入力を参照してください[DataItem データ型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)します。  
   
  親に対応する要素`UnaryOperatorColumn`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DimensionAttribute>します。  
   

@@ -1,5 +1,5 @@
 ---
-title: ラベルの変更 (SQL Server データ マイニング アドイン) |Microsoft ドキュメント
+title: ラベルの変更 (SQL Server データ マイニング アドイン) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data preparation
 - relabel
 - data cleaning
 ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 50dd1a2c4cd425243c55ef9181387a08c5d935ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46a05e8f54a6c307dba5b82572ad8158b305f4bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157173"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>ラベルの変更 (SQL Server データ マイニング アドイン)
   ![ラベルの変更ツールの office 13 アイコン](media/dm13-relabel.gif "ラベルの変更ツールの Office 13 アイコン")  
@@ -40,25 +40,25 @@ ms.locfileid: "36174806"
   
 ## <a name="using-the-relabel-wizard"></a>ラベルの変更ウィザードの使用  
   
-1.  **データ マイニング**リボンで、をクリックして**クリーン**し、**ラベルの変更**です。  
+1.  **データ マイニング**リボンで、をクリックして**クリーン**選び**ラベルの変更**します。  
   
 2.  Select the table or data range that has the data you want to fix.修正するデータが含まれているテーブルまたはデータ範囲を選択します。  
   
-3.  **ラベルの変更**ページ、ウィザードの 1 つの列が選択にドロップダウン リストから列を選択するか、列をクリックして、**データ サンプル**ウィンドウです。  
+3.  **ラベルの変更**ページ、ウィザードの 1 つの列が選択に、ドロップダウン リストから列を選択するかで列をクリックして、**データ サンプル**ウィンドウ。  
   
-     **データ サンプル**ペインでは、約 50 行のデータにのみ示していますが、これらをサンプリングする値の適切な分散が表示されることを確認してください。  
+     **データ サンプル**ウィンドウでは、約 50 行のデータにのみ表示されますが、これらをサンプリングする値の適切な分散が表示されることを確認します。  
   
-     列のヘッダーをクリックして**カウント**各値のカウントで並べ替えを行う。  
+     列のヘッダーをクリックします。**カウント**各値の数で並べ替える。  
   
-     によって並べ替えることもできます**元のラベル**、再度すべての最大股は最小値を最初にラベルを付ける場合に便利です。  
+     並べ替えることもできます**元のラベル**、まずラベル最大股は最小値を変更する場合に便利です。  
   
-4.  **ラベルの変更**データ ページ、ウィザードの 確認、**元のラベル**列で、グループ化または編集する方法を決定します。  
+4.  **ラベルの変更**の値を確認すると、ウィザードのデータ ページ、**元のラベル**列で、グループまたはそれらを編集する方法を決定します。  
   
-5.  下の行に新しい値を入力**新しいラベル**です。 値は、既存の値の一覧から選択できます。 新しい値は、入力した直後から再利用に使用できるようになります。  
+5.  下の行に新しい値を入力**新しいラベル**します。 値は、既存の値の一覧から選択できます。 新しい値は、入力した直後から再利用に使用できるようになります。  
   
-6.  十分な行を入力したら、をクリックして**次**、し、、**先の選択**ページで、ラベルが変更されたデータの保存先を選択します。  
+6.  十分な行を入力すると、クリックして **[次へ]**、し、**先の選択**ページで、選択、ラベルが変更されたデータを保存します。  
   
-    -   **新しい列として、現在のワークシートに追加します。**  
+    -   **現在のワークシートに新しい列として追加します。**  
   
          新しい値が格納されている列をテーブルに追加する場合に選択します。  
   

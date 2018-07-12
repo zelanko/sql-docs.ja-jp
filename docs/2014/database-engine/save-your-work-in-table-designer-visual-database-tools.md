@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], saving
 - Table Designer, saving work
 - saving tables
 ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b6abded31c6effcf12c9c3f4aeb3295c67d43506
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f663776ebfee8d03b9659ba21d607fca7b8a63a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182896"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>テーブル デザイナーでの作業を保存する (Visual Database Tools)
   テーブル デザイナーで開いているテーブルへの変更を保存できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "36173997"
   
 1.  テーブル デザイナー内の任意の場所をクリックします。  
   
-2.  **ファイル**] メニューの [選択 **保存 * * * tablename*です。  
+2.  **ファイル**] メニューの [選択 **保存 * * * tablename*します。  
   
 3.  **[上書き保存]** ダイアログ ボックスの **[はい]** をクリックし、データベースを更新します。  
   

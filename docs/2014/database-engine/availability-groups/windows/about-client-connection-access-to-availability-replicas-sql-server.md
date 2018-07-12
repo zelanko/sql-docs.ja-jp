@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], readable secondary replicas
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: 14
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: ec36639f591beaa3094855d8f42d2bcca3d3073e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f0582293082f6c1ec5b2333575431d2887929afe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228512"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>可用性レプリカに対するクライアント接続アクセスについて (SQL Server)
   AlwaysOn 可用性グループでは、1 つまたは複数の可用性レプリカを構成して、セカンダリ ロールで実行しているとき (つまり、セカンダリ レプリカとして実行しているとき) に読み取り専用接続を許可することができます。 各可用性レプリカをプライマリ ロールで実行しているとき (つまり、プライマリ レプリカとして実行しているとき) に、読み取り専用接続を許可または除外するように構成することもできます。  
@@ -57,7 +56,7 @@ ms.locfileid: "36174567"
  ユーザーの接続は許可されません。 セカンダリ データベースは読み取りアクセスでは利用できません。 これは、セカンダリ ロールの既定の動作です。  
   
  読み取りを目的とした接続のみ  
- セカンダリ データベースは、対象の接続に対してのみ使用可能な`Application Intent`接続プロパティに設定`ReadOnly`(*読み取りを目的とした接続*)。  
+ セカンダリ データベースは対象の接続に対してのみ使用可能な`Application Intent`接続プロパティに設定されて`ReadOnly`(*読み取りを目的とした接続*)。  
   
  この接続プロパティの詳細については、「 [SQL Server Native Client の HADR サポート](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
   
@@ -73,7 +72,7 @@ ms.locfileid: "36174567"
  プライマリ データベースに対する読み取り/書き込み接続と読み取り専用接続の両方が許可されます。 これは、プライマリ ロールの既定の動作です。  
   
  読み取り/書き込接続のみを許可する  
- ときに、`Application Intent`接続プロパティに設定**ReadWrite**が設定された場合、接続が許可されていないか。 対象の接続、`Application Intent`接続文字列キーワードに設定されている`ReadOnly`は許可されていません。 読み取り/書き込み接続のみを許可することにより、読み取りを目的としたワークロードが誤ってプライマリ レプリカに接続されるのを防ぐことができます。  
+ ときに、`Application Intent`接続プロパティに設定されて**ReadWrite**設定、接続が許可されているか。 接続、`Application Intent`に設定されている接続文字列キーワード`ReadOnly`は許可されていません。 読み取り/書き込み接続のみを許可することにより、読み取りを目的としたワークロードが誤ってプライマリ レプリカに接続されるのを防ぐことができます。  
   
  この接続プロパティの詳細については、「 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
@@ -122,9 +121,9 @@ ms.locfileid: "36174567"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性と災害復旧の Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn チームのブログ: 公式 SQL Server AlwaysOn チーム ブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ: 正式な SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

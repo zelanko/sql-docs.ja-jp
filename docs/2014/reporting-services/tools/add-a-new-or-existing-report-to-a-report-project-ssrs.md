@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af7fe1fceeacc7b49daff9514f5ba1e10fc20518
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8d1d96273c21f2b22b3482a74b5b55370b09589e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230182"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>新規または既存のレポートをレポート プロジェクトに追加する (SSRS)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、レポート ウィザードを使用して、またはプロジェクトに新しい空のレポートを追加することで、新しいレポートを追加することができます。 既存のレポートを追加することもできます。 レポートを追加すると、そのレポートの名前が、プロジェクトの **[レポート]** フォルダーに表示されます。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、レポート ウィザードを使用して、またはプロジェクトに新しい空のレポートを追加することで、新しいレポートを追加できます。 既存のレポートを追加することもできます。 レポートを追加すると、そのレポートの名前が、プロジェクトの **[レポート]** フォルダーに表示されます。  
   
 > [!NOTE]  
->  既存のデータ ソースを使ったレポートをプレビューするには、レポート作成クライアントから、そのデータ ソースにアクセスするための権限が必要です。 詳細については、次を参照してください。[埋め込みや共有データ ソースの作成&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)です。  
+>  既存のデータ ソースを使ったレポートをプレビューするには、レポート作成クライアントから、そのデータ ソースにアクセスするための権限が必要です。 詳細については、次を参照してください。[埋め込みまたは共有データ ソースを作成&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)します。  
   
  レポートを追加した後、データ ソースやデータセットを定義したり、レポート レイアウトをデザインしたりできます。 開始するには、「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../create-a-basic-table-report-ssrs-tutorial.md)」または「[テーブル &#40;レポート ビルダーおよび SSRS&#41;](../report-design/tables-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36165729"
     -   **スタイルを選択します。** 次の手順は、スタイル テンプレートを使用してスタイルをレポートに適用することです。 テンプレートを選択して、フォントや色、罫線のスタイルなどのスタイルをレポートに適用します。 レポート デザイナーには、[スレート]、[フォレスト]、[フォーマル]、[太字]、[オーシャン]、[汎用] の 6 つのスタイル テンプレートが用意されています。 また、新しいスタイル テンプレートを追加することもできます。  
   
         > [!NOTE]  
-        >  既存のテンプレートを変更または \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business インテリジェンス Wizards\Reports\Styles に格納されている StyleTemplates.xml ファイルを編集して新しいものを追加することができます\\< lang\>フォルダー、場所\<lang > を使用している言語は、(たとえば、英語版を使用している場合[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]フォルダー名は"EN") です。 このフォルダーは、レポート デザイナーがインストールされているコンピューターにあります。 StyleTemplates.xml ファイルは 2 つあります。 レポート ウィザードを使って適用されたスタイルを修正するには、使用言語に対応するフォルダー内のファイルを編集します。  
+        >  既存のテンプレートを変更または \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business インテリジェンス \reports\styles で格納されている StyleTemplates.xml ファイルを編集して新しいものを追加することができます\\< lang\>フォルダー場所\<lang > を使用する言語は、(英語版を使用している場合など、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]フォルダー名が"EN")。 このフォルダーは、レポート デザイナーがインストールされているコンピューターにあります。 StyleTemplates.xml ファイルは 2 つあります。 レポート ウィザードを使って適用されたスタイルを修正するには、使用言語に対応するフォルダー内のファイルを編集します。  
   
     -   **レポートの名前付け**  最後の手順は、レポートに名前を付け、レポートに含まれるフィールドを確認することです。 すべての手順が完了したら、レポート デザイナーはレポートを作成し、それをレポート サーバー プロジェクトに追加します。  
   

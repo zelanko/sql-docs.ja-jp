@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 71
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6d46d44f2071d473fbe62a6f15cce3a250751576
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9b2ab20a31fb36c7ca648a2363861e75e25c9179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153811"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]環境では、ビジネス インテリジェンス ソリューションに固有の機能強化。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に付属しています。  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]が強化されたビジネス インテリジェンス ソリューションに固有の環境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に付属しています。  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のレポートおよびレポート関連アイテムのソリューションやプロジェクトを作成および管理するには、[!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] を使用します。 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] レポート デザイナー作成環境を提供します。 レポート デザイナーでは、レポート定義、共有データ ソース、共有データセット、およびレポート パーツを開き、それらを変更、プレビュー、保存、および配置できます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36174885"
 ##  <a name="bkmk_ReportServerProjects"></a> レポート サーバープロジェクト  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]をインストールすると、 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]で次のプロジェクト テンプレートを使用できるようになります。  
   
--   **レポート サーバー プロジェクト。** レポート サーバー プロジェクトを選択すると、レポート デザイナーが開きます。 レポート サーバー プロジェクトはインストールされているビジネス インテリジェンス プロジェクト テンプレート[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]はから入手できる、**新しいプロジェクト** ダイアログ ボックス。 詳細については、「[新規または既存のレポートをレポート プロジェクトに追加する (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md)」を参照してください。レポート サーバー プロジェクトのプロパティは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] プロジェクト内のすべてのレポートとすべての共有データ ソースに適用されます。 これらのプロパティには、レポート サーバーの URL、およびレポートと共有データ ソースのフォルダー名が含まれます。 現在のプロパティ値を確認するには、 **[プロジェクト プロパティ ページ]** ダイアログ ボックスを使用します。 このダイアログ ボックスを開くには、**プロジェクト** メニューをクリックして*\<プロジェクト名 >* **プロパティ**です。  
+-   **レポート サーバー プロジェクト。** レポート サーバー プロジェクトを選択すると、レポート デザイナーが開きます。 レポート サーバー プロジェクトでインストールされているビジネス インテリジェンス プロジェクト テンプレートは、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]から提供される、**新しいプロジェクト** ダイアログ ボックス。 詳細については、「[新規または既存のレポートをレポート プロジェクトに追加する (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md)」を参照してください。レポート サーバー プロジェクトのプロパティは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] プロジェクト内のすべてのレポートとすべての共有データ ソースに適用されます。 これらのプロパティには、レポート サーバーの URL、およびレポートと共有データ ソースのフォルダー名が含まれます。 現在のプロパティ値を確認するには、 **[プロジェクト プロパティ ページ]** ダイアログ ボックスを使用します。 このダイアログ ボックスを開く、**プロジェクト** メニューのをクリックして*\<プロジェクト名 >* **プロパティ**します。  
   
 -   **レポート サーバー プロジェクト ウィザード。** レポート サーバー プロジェクト ウィザードを選択すると、レポート サーバー プロジェクトが自動的に作成され、レポート ウィザードが開きます。 このウィザードでは、各ページの手順に従ってレポートを作成し、データ ソースへの接続文字列の作成、データ ソースの資格情報の設定、クエリのデザイン、テーブルまたはマトリックス データ領域の追加、レポート データやグループの指定、フォントや色のスタイルの選択、レポート サーバーへのレポートのパブリッシュ、およびローカルでのレポートのプレビューを行うことができます。 ウィザードを使用してレポートを作成した後で、レポート サーバー プロジェクトでレポート デザイナーを使用して、レポート データおよびレポート デザイナーを変更できます。  
   
@@ -71,10 +71,10 @@ ms.locfileid: "36174885"
   
 -   **画像** レポートに画像レポート アイテムとして含めることができる画像の一覧です。  
   
- [レポート データ] ペインのデータ ソースおよびデータセットは、レポート定義内の要素を表します。 [レポート データ] ペインは、複数のレポート作成環境でサポートされている機能です。 レポート ビルダーでは、データ ソースとデータセットの管理に使用できる唯一のペインです。 レポート デザイナーでは、[レポート データ] ペインはソリューション エクスプローラーと連携して動作します。ソリューション エクスプローラーでは、共有データ ソースと共有データセットがファイルとして表示されます。 [レポート データ] ペインの共有データ ソースと共有データセットは、ソリューション エクスプローラーの対応する共有データ ソースと共有データセットを参照する必要があります。 そのため、[レポート データ] ペインの要素には、ソリューション エクスプローラーのデータ ファイルへの参照が含まれます。 プロジェクト プロパティによって、共有データ ソースと共有データセットがレポート サーバーに配置されるか、SharePoint サイトに配置されるかが決まります。 詳細については、次を参照してください。[埋め込みから共有にデータ ソースを変換する&#40;レポート ビルダーおよび SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md)です。  
+ [レポート データ] ペインのデータ ソースおよびデータセットは、レポート定義内の要素を表します。 [レポート データ] ペインは、複数のレポート作成環境でサポートされている機能です。 レポート ビルダーでは、データ ソースとデータセットの管理に使用できる唯一のペインです。 レポート デザイナーでは、[レポート データ] ペインはソリューション エクスプローラーと連携して動作します。ソリューション エクスプローラーでは、共有データ ソースと共有データセットがファイルとして表示されます。 [レポート データ] ペインの共有データ ソースと共有データセットは、ソリューション エクスプローラーの対応する共有データ ソースと共有データセットを参照する必要があります。 そのため、[レポート データ] ペインの要素には、ソリューション エクスプローラーのデータ ファイルへの参照が含まれます。 プロジェクト プロパティによって、共有データ ソースと共有データセットがレポート サーバーに配置されるか、SharePoint サイトに配置されるかが決まります。 詳細については、次を参照してください。[埋め込みから共有にデータ ソースを変換する&#40;レポート ビルダーおよび SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
->  レポート データ ペインを表示されないかどうか、**ビュー**  メニューのをクリックして**レポート データ**です。 [レポート データ] ペインが固定されていない場合は、固定することができます。 詳細については、「[レポート デザイナーのレポート データ ペインをドッキングする (SSRS)](dock-the-report-data-pane-in-report-designer-ssrs.md)」を参照してください。  
+>  レポート データ ペインを表示されないかどうか、**ビュー**  メニューのをクリックして**レポート データ**します。 [レポート データ] ペインが固定されていない場合は、固定することができます。 詳細については、「[レポート デザイナーのレポート データ ペインをドッキングする (SSRS)](dock-the-report-data-pane-in-report-designer-ssrs.md)」を参照してください。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#bkmk_Top)  
   
@@ -265,13 +265,13 @@ ms.locfileid: "36174885"
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#bkmk_Top)  
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server データ ツールのコマンド ライン サポート  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 基づく[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 および基になる devenv.exe アプリケーションです。 これらのオプションを使用するには、次の 2 つの項目に対して有効な値を設定しておく必要があります。  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] に基づいて[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 および基になる devenv.exe アプリケーション。 これらのオプションを使用するには、次の 2 つの項目に対して有効な値を設定しておく必要があります。  
   
 -   OverwriteDataSources、TargetDataSourceFolder、TargetReportFolder、および TargetServerURL のプロジェクト プロパティ。  
   
 -   少なくとも 1 セットの構成プロパティ (デバッグやリリースなど)。  
   
- 詳細については、次を参照してください。[発行のデータ ソースおよびレポート](../reports/publishing-data-sources-and-reports.md)です。  
+ 詳細については、次を参照してください。[発行のデータ ソースおよびレポート](../reports/publishing-data-sources-and-reports.md)します。  
   
  レポート サーバー プロジェクトの場合は、コマンド ラインから次のオプションを指定できます。  
   

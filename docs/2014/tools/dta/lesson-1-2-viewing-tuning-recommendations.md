@@ -1,5 +1,5 @@
 ---
-title: チューニング推奨設定の表示 |Microsoft ドキュメント
+title: チューニング推奨設定の表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3152ba823577308d846bfe5862af16681008f64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f21cb4a4e5142cd0410153daf37b05ef181be9d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157713"
 ---
 # <a name="viewing-tuning-recommendations"></a>チューニング推奨設定の表示
   ここでは、「[チューニング ワークロードの作成](lesson-1-1-tuning-a-workload.md)」で作成したチューニング セッションを使用します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] スクリプト MyScript.sql を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースをチューニングすると、その結果が [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの **[推奨設定]** タブに表示されます。次の作業では、 **チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) の** [推奨設定] [!INCLUDE[ssDE](../../includes/ssde-md.md)] タブについて学習し、このタブに表示されるチューニング セッションの結果について検証します。  
@@ -38,7 +38,7 @@ ms.locfileid: "36174061"
   
 4.  **[推奨インデックス]** ペインのグリッドを右クリックします。 このとき表示されるメニューでは、推奨設定を選択または選択解除できます。 また、グリッド テキストのフォントも変更できます。  
   
-5.  **[アクション]** メニューの **[推奨設定の保存]** をクリックし、すべての推奨設定を 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトに保存します。 このスクリプトの名前`MySessionRecommendations.sql`です。  
+5.  **[アクション]** メニューの **[推奨設定の保存]** をクリックし、すべての推奨設定を 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトに保存します。 スクリプトの名前`MySessionRecommendations.sql`します。  
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで MySessionRecommendations.sql を開き、スクリプトを表示します。 クエリ エディターでこのスクリプトを実行すれば、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースに推奨設定を適用することができますが、ここでは実行しません。 クエリ エディターのスクリプトを実行せずに閉じます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36174061"
   
 7.  **[アクション]** メニューの **[推奨設定の評価]** をクリックします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 新しいチューニング セッションが作成されます。ここで、MySession の元の推奨設定の一部を評価することができます。  
   
-8.  型`EvaluateMySession`の新しい**セッション名**、 をクリックし、**分析の開始**ツールバーのボタンをクリックします。 この新しいセッションに対して手順 2. ～ 3. を繰り返し、推奨設定を表示します。  
+8.  型`EvaluateMySession`、新しい**セッション名**、 をクリックし、**分析の開始**ツールバーのボタンをクリックします。 この新しいセッションに対して手順 2. ～ 3. を繰り返し、推奨設定を表示します。  
   
 ## <a name="summary"></a>まとめ  
  MySession チューニング セッションの内容を **[推奨設定]** タブに表示し、新しい EvaluateMySession チューニング セッションでその推奨設定の一部を評価しました。  

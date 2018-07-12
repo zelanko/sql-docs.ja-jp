@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
 - QUIT command
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ebfb7cbe8a000a751243d1117d904056295d294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd66af98effae023f2a1436b6eb88e76c78a2e44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240002"
 ---
 # <a name="osql-utility"></a>osql ユーティリティ
   **osql** ユーティリティを使用すると、 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルを入力できます。 また、このユーティリティは ODBC を使用してサーバーと通信します。  
@@ -116,7 +116,7 @@ C:\>osql
  列ヘッダーの間に出力する行数を指定します。 既定では、各クエリの結果に対して、ヘッダーは 1 つだけ表示されます。 ヘッダーを出力しない場合は、-1 を指定します。 -1 を使用する場合、パラメーターと設定値の間には空白を入れないでください (**-h -1**ではなく、 **-h-1**を使用)。  
   
  **-s** *col_separator*  
- 列の区切り文字を指定します。既定値は空白文字です。 オペレーティング システムの特別な意味を持つ文字を使用する (たとえば、|; & \< >)、文字を二重引用符 (") で囲みます。  
+ 列の区切り文字を指定します。既定値は空白文字です。 オペレーティング システムの特別な意味を持つ文字を使用する (たとえば、|; (& a) \< >)、文字を二重引用符 (") で囲みます。  
   
  **-w** *column_width*  
  出力用の画面幅を設定できます。 既定値は 80 文字です。 出力行が画面幅の最大値を超えると、複数の行に分けて出力されます。  
@@ -198,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>コメント  
  **osql** ユーティリティは、ここに記載された、大文字と小文字では異なる機能を持つオプションを使用して、オペレーティング システムから直接起動されます。 起動されると、 **osql**は SQL ステートメントを受け取り、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に対話的に送ります。 結果はフォーマットされ、画面に表示されます (**stdout**)。 **osql**を終了するには、QUIT または EXIT を使用します。  
   
- 起動するときに、ユーザー名を指定しないかどうかは**osql**、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]環境変数をチェックし、たとえば、使用**osqluser = (*`user`*)** または**osqlserver = (*`server`*)** です。 環境変数が設定されていない場合は、ワークステーションのユーザー名が使用されます。 サーバーを指定していない場合は、ワークステーション名が使用されます。  
+ 起動するときに、ユーザー名を指定しないかどうか**osql**、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]環境変数をチェックし、たとえば、使用**osqluser = (*`user`*)** または**osqlserver = (*`server`*)** します。 環境変数が設定されていない場合は、ワークステーションのユーザー名が使用されます。 サーバーを指定していない場合は、ワークステーション名が使用されます。  
   
  **-U** と **-P** のどちらのオプションも使用しない場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では接続時に [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 認証モードが使用されます。 認証は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **を実行しているユーザーの**Windows アカウントに基づいて行われます。  
   
@@ -329,7 +329,7 @@ RAISERROR(50001, 10, 127)
      戻り値を選択するときに、変換エラーが発生した。  
   
 ## <a name="displaying-money-and-smallmoney-data-types"></a>money (金額) と smallmoney (短精度金額) のデータ型の表示  
- **osql**が表示されます、`money`と`smallmoney`ですが、小数点以下 2 桁データ型[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]内部的に小数点以下 4 桁の値を格納します。 次の例の結果を参照してください。  
+ **osql**が表示されます、`money`と`smallmoney`ですが、小数点以下 2 データ型[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]内部的に小数点以下 4 桁の値を格納します。 次の例の結果を参照してください。  
   
 ```  
 SELECT CAST(CAST(10.3496 AS money) AS decimal(6, 4))  

@@ -1,5 +1,5 @@
 ---
-title: 表形式モードで Analysis Services のインストール |Microsoft ドキュメント
+title: 表形式モードで Analysis Services のインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f6fabd9129e3f3e1e07e813935f36e7c70c48072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b6ee555e975e89da584c0efab3fab8bb9f9429a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183452"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>表形式モードでの Analysis Services のインストール
   新しい表形式のモデリング機能を使用して Analysis Services をインストールする場合、この種類のモデルを使用できるサーバー モードで Analysis Services をインストールする必要があります。 そのサーバー モードは "表形式" であり、インストール時に構成されます。  
@@ -33,11 +33,11 @@ ms.locfileid: "36084890"
   
 1.  セットアップの機能ツリーで **[Analysis Services]** をクリックします。  
   
-     ![セットアップの機能ツリーを示す Analsyis Services](../../../sql-server/install/media/ssas-setupas.gif "Analsyis Services を示すセットアップの機能ツリー")  
+     ![セットアップの機能ツリー Analsyis サービスを示す](../../../sql-server/install/media/ssas-setupas.gif "Analsyis サービスを示すセットアップの機能ツリー")  
   
-2.  Analysis Services の構成 ページでオンにしてください**表形式モード**です。  
+2.  Analysis Services の構成 ページで、選択することを確認する**表形式モード**します。  
   
-     ![Analysis Services 構成オプションのセットアップ ページ](../../../sql-server/install/media/ssas-setupasconfig.gif "Analysis Services 構成オプションのセットアップ ページ")  
+     ![Analysis Services の構成オプションを使用してセットアップ ページ](../../../sql-server/install/media/ssas-setupasconfig.gif "Analysis Services の構成オプションを使用してセットアップ ページ")  
   
  表形式モードでは xVelocity メモリ内分析エンジン (VertiPaq) を使用します。このエンジンは Analysis Services に配置するテーブル モデルの既定のストレージです。 サーバーにテーブル モデル ソリューションを配置すると、表形式ソリューションを構成する際に、メモリ負荷の高いストレージの代わりに DirectQuery ディスク ストレージを使用することもできます。  
   
@@ -53,19 +53,19 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  プレースホルダー アカウント値はすべて、有効なアカウントおよびパスワードに置き換える必要があります。  
   
- SQL Server Management Studio や [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] などのツールは、提供されているコマンド ライン構文の例ではインストールされません。 機能の追加に関する詳細については、次を参照してください。[コマンド プロンプトから SQL Server 2014 のインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)です。  
+ SQL Server Management Studio や [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] などのツールは、提供されているコマンド ライン構文の例ではインストールされません。 機能の追加に関する詳細については、次を参照してください。[コマンド プロンプトから SQL Server 2014 のインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)します。  
   
- `ASSERVERMODE` 大文字小文字を区別します。  値はすべて大文字で指定する必要があります。 次の表に、`ASSERVERMODE` の有効な値を示します。  
+ `ASSERVERMODE` 大文字小文字が区別されます。  値はすべて大文字で指定する必要があります。 次の表に、`ASSERVERMODE` の有効な値を示します。  
   
 |値|説明|  
 |-----------|-----------------|  
 |MULTIDIMENSIONAL|これが既定値です。 設定しない場合`ASSERVERMODE`サーバーは多次元サーバー モードでインストールします。|  
-|POWERPIVOT|この値は省略可能です。 実際には、`ROLE` パラメーターを設定した場合、サーバー モードは自動的に 1 に設定され、SharePoint のインストール時に PowerPivot の `ASSERVERMODE` が省略可能になります。 詳細については、次を参照してください。[コマンド プロンプトからの PowerPivot のインストール](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)です。|  
+|POWERPIVOT|この値は省略可能です。 実際には、`ROLE` パラメーターを設定した場合、サーバー モードは自動的に 1 に設定され、SharePoint のインストール時に PowerPivot の `ASSERVERMODE` が省略可能になります。 詳細については、次を参照してください。[コマンド プロンプトから PowerPivot をインストール](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)します。|  
 |TABULAR|コマンド ライン セットアップを使用して Analysis Services を表形式モードでインストールする場合、この値は必須です。|  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services インスタンスのサーバー モードを決定します。](../determine-the-server-mode-of-an-analysis-services-instance.md)   
- [メモリ内またはテーブル モデル データベースの DirectQuery アクセスを構成します。](../../tabular-models/enable-directquery-mode-in-ssms.md)   
+ [メモリ内またはテーブル モデル データベース用 DirectQuery アクセスを構成します。](../../tabular-models/enable-directquery-mode-in-ssms.md)   
  [テーブル モデリング&#40;SSAS 表形式&#41;](../../tabular-models/tabular-models-ssas.md)  
   
   

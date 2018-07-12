@@ -1,5 +1,5 @@
 ---
-title: '[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ) |Microsoft ドキュメント'
+title: '[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.preview.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1e5853aa5d63967597ce54d56e43864f4e57c312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4e257676ff8a20cbc29e80cde49998c67a07aee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182788"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[プレビュー]** ノードを使用すると、ソース ファイルの内容を表形式で表示できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36173758"
  **接続マネージャー名**  
  ワークフローにおけるフラット ファイル接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **description**  
+ **[説明]**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的について記述することをお勧めします。  
   
  **[スキップするデータ行数]**  

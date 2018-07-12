@@ -1,5 +1,5 @@
 ---
-title: 時系列予測の DMX のチュートリアルの時間 |Microsoft ドキュメント
+title: タイム シリーズ予測の DMX のチュートリアル |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 38ea7c03-4754-4e71-896a-f68cc2c98ce2
 caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2a9e3e5db1e0f21bfe3822d73fd0e3c0b456e250
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 550d038f917af8d191c078716161a8fdb0a99868
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230118"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>時系列予測の DMX のチュートリアル
   このチュートリアルでは、時系列マイニング構造を作成し、3 つのカスタム時系列マイニング モデルを作成し、それらのモデルを使用して予測を行う方法を学習します。  
@@ -27,7 +27,7 @@ ms.locfileid: "36312200"
  マイニング モデルの作成は、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] サンプル データベース内のデータに基づいて行います。このサンプル データベースには、架空の企業である [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のデータが格納されています。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、多国籍の大規模な製造企業です。  
   
 ## <a name="tutorial-scenario"></a>チュートリアルのシナリオ  
- [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、データ マイニングを使用して売上予測を生成することにしました。 一部地域の予測モデルが既に作成されています。詳細については、次を参照してください。[レッスン 2: Building a Forecasting Scenario&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)です。 営業部門で、そのデータ マイニング モデルを新しい売上データで定期的に更新できるようにする必要があります。 また、さまざまな予測が得られるようにモデルをカスタマイズしたいとも考えています。  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、データ マイニングを使用して売上予測を生成することにしました。 一部地域の予測モデルが既に作成されています。詳細については、次を参照してください。[レッスン 2: Building a Forecasting Scenario&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)します。 営業部門で、そのデータ マイニング モデルを新しい売上データで定期的に更新できるようにする必要があります。 また、さまざまな予測が得られるようにモデルをカスタマイズしたいとも考えています。  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] このタスクの実行に使用できるいくつかのツールを提供します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36312200"
  [!INCLUDE[msCoName](../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、時間に関するデータの予測に使用できるモデルが作成されます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で提供されるデータ マイニング拡張機能 (DMX) は、マイニング モデルと予測クエリの作成に使用できるクエリ言語です。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
- このチュートリアルでは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でマイニング モデルを作成するために使用するオブジェクトについて理解していることを前提にしています。 既に作成されていない場合、マイニング構造またはマイニング モデル DMX を使用してを参照してください。 [Bike Buyer DMX のチュートリアル](../../2014/tutorials/bike-buyer-dmx-tutorial.md)です。  
+ このチュートリアルでは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でマイニング モデルを作成するために使用するオブジェクトについて理解していることを前提にしています。 既に作成していないマイニング構造またはマイニング モデルを DMX を使用して場合を参照してください。 [Bike Buyer DMX のチュートリアル](../../2014/tutorials/bike-buyer-dmx-tutorial.md)します。  
   
  このチュートリアルは次のレッスンで構成されています。  
   
@@ -68,13 +68,13 @@ ms.locfileid: "36312200"
   
 -   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データベース  
   
- セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 公式サンプル データベースをインストールする[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に進み、 [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417)または Microsoft SQL Server の製品サンプル セクションに Microsoft SQL Server のサンプルとコミュニティのプロジェクトのホーム ページです。 をクリックして**データベース**、をクリックして、**リリース**タブし、データベースを選択します。  
+ セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 公式サンプル データベースをインストールする[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に移動して、 [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417)または Microsoft SQL Server の製品サンプルのセクションでは Microsoft SQL Server のサンプルとコミュニティのプロジェクトのホーム ページ。 をクリックして**データベース**、 をクリックし、**リリース**タブし、データベースを選択します。  
   
 > [!NOTE]  
->  追加することをお勧めのチュートリアルを確認するときに**次のトピック「** と**前のトピック**ドキュメント ビューアーのツールバーのボタンです。  
+>  追加することをお勧めのチュートリアルを確認するとき**次のトピック**と**前のトピック**ドキュメント ビューアーのツールバーのボタン。  
   
 ## <a name="see-also"></a>参照  
- [基本的なデータ マイニングのチュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [データ マイニング チュートリアルを中間&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+ [基本的なデータ マイニング チュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
   

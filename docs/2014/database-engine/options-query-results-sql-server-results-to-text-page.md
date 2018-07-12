@@ -1,5 +1,5 @@
 ---
-title: オプション (クエリ結果-SQL Server の結果をテキスト ページ) |Microsoft ドキュメント
+title: オプション (クエリ結果-SQL Server の結果をテキスト ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToText
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 190d508cc4e1e637d95516a8c9daf148692aa2df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72bcaf98c2a7089aa101379001559ee12b8f9b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165333"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>オプション (クエリ結果-SQL Server の結果をテキスト ページ)
   このページを使用すると、クエリ結果セットをテキスト形式で表示するオプションを指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、**[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ ウィンドウを右クリックして **[クエリ オプション]** をクリックします。 **[クエリ オプション]** ダイアログ ボックスの **[結果]** で、**[テキスト]** をクリックします。  
@@ -39,19 +39,19 @@ ms.locfileid: "36085506"
  **結果セットにクエリを含める**  
  結果ペインでクエリの結果の前に実行中のクエリのテキストを含める場合は、このチェック ボックスをオンにします。  
   
- **受け取った順に結果をスクロールする します。**  
+ **結果を受信するとスクロールします。**  
  常に、結果セットの最後で最新の取得レコードに表示フォーカスを置く場合は、このチェック ボックスをオンにします。 常に、取得した最初の行に表示フォーカスを置く場合は、このチェック ボックスをオフにします。  
   
  **数値を右揃え**  
  数値を列の右揃えにする場合は、このチェック ボックスをオンにします。 これにより、固定小数点数の数値を簡単に調べることができます。  
   
- **クエリの実行後に、結果を破棄します。**  
+ **クエリの実行後に結果を破棄します。**  
  クエリ結果がクエリ ウィンドウの結果ペインに表示された後、クエリ結果を破棄する場合は、このチェック ボックスをオンにします。  
   
- **結果を別のタブに表示します。**  
+ **別のタブで結果を表示します。**  
  クエリ ドキュメント ウィンドウの下部ではなく、新しいドキュメント ウィンドウに結果セットを表示する場合は、このチェック ボックスをオンにします。  
   
- **クエリ実行後に 結果 タブに切り替える**  
+ **クエリ実行後に [結果] タブに切り替えます**  
  表示フォーカスを自動的に結果セットに設定する場合は、このチェック ボックスをオンにします。  
   
  **各列に表示される文字の最大数**  

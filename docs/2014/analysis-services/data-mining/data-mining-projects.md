@@ -1,5 +1,5 @@
 ---
-title: データ マイニング プロジェクト |Microsoft ドキュメント
+title: データ マイニング プロジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 035a8a822ffa49502ec93978b2ce8b619fff9630
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e0c9df62ccc0c76dead70001e4ae253ff51cc9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259718"
 ---
 # <a name="data-mining-projects"></a>データ マイニング プロジェクト
   データ マイニング プロジェクトは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションの一部です。 デザイン プロセス時に、このプロジェクトで作成したオブジェクトをワークスペース データベースの一部としてテストおよびクエリに使用できます。 ユーザーがプロジェクト内のオブジェクトをクエリまたは参照できるようにするには、多次元モードで実行している [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにプロジェクトを配置する必要があります。  
@@ -33,7 +33,7 @@ ms.locfileid: "36165507"
  既存のソリューション内にデータ マイニング オブジェクトを作成する場合、既定では、データ マイニング オブジェクトはソリューション ファイルと同じ名前の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに配置されます。 この名前および対象サーバーは、**[プロジェクトのプロパティ]** ダイアログ ボックスを使用して変更できます。 詳細については、「[Configure Analysis Services Project Properties (SSDT)](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)」(Analysis Services プロジェクトのプロパティの構成 (SSDT)) を参照してください。  
   
 > [!WARNING]  
->  プロジェクトを正常に作成して配置するには、OLAP/データ マイニング モードで実行されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにアクセスできる必要があります。 開発またはのインスタンスについて、データ マイニング ソリューションを配置することはできません[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表形式モデルをサポートすることも、PowerPivot ブックから直接、またはメモリ内データ ストアを使用する表形式モデルからデータを使用することができます。 使用する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスがデータ マイニングをサポートできるかどうかを判断するには、「 [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)」(Analysis Services インスタンスのサーバー モードの決定) を参照してください。  
+>  プロジェクトを正常に作成して配置するには、OLAP/データ マイニング モードで実行されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにアクセスできる必要があります。 開発またはインスタンス上のデータ マイニング ソリューションを配置することはできません[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表形式モデルをサポートすると、メモリ内データ ストアを使用する表形式モデルまたは PowerPivot ブックから直接データを使用することができます。 使用する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスがデータ マイニングをサポートできるかどうかを判断するには、「 [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)」(Analysis Services インスタンスのサーバー モードの決定) を参照してください。  
   
  作成する各データ マイニング プロジェクト内で、次の手順を実行します。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36165507"
   
  たとえば、1 つのデータ マイニング プロジェクトに、それぞれが複数のデータ ソース ビューをサポートしている複数のデータ ソースへの参照を含めることができます。 さらに、各データ ソース ビューは、それぞれが多数のマイニング モデルに関連付けられている複数のマイニング構造をサポートできます。  
   
- また、プロジェクトには、プラグイン アルゴリズム、カスタム アセンブリ、またはカスタム ストアド プロシージャを含めることもできます。ただし、ここでは、これらのオブジェクトについて説明しません。 詳細については、次を参照してください。[開発者ガイド 』 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)です。  
+ また、プロジェクトには、プラグイン アルゴリズム、カスタム アセンブリ、またはカスタム ストアド プロシージャを含めることもできます。ただし、ここでは、これらのオブジェクトについて説明しません。 詳細については、次を参照してください。 [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)します。  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
@@ -201,7 +201,7 @@ ms.locfileid: "36165507"
 |処理手順|トピック|  
 |-----------|------------|  
 |マイニング構造列を操作する方法について説明します。|[リレーショナル マイニング構造の作成](create-a-relational-mining-structure.md)|  
-|新しいマイニング モデルを追加し、構造とモデルを処理する方法について詳しく説明します。|[構造にマイニング モデルを追加&#40;Analysis Services - データ マイニング&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|新しいマイニング モデルを追加し、構造とモデルを処理する方法について詳しく説明します。|[マイニング モデルを構造体に追加&#40;Analysis Services - データ マイニング&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |マイニング モデルを作成するアルゴリズムのカスタマイズに役立つリソースへのリンクを提供します。|[マイニング モデルとマイニング構造のカスタマイズ](customize-mining-models-and-structure.md)|  
 |各マイニング モデル ビューアーに関する情報へのリンクを提供します。|[データ マイニング モデル ビューアー](data-mining-model-viewers.md)|  
 |リフト チャート、利益チャート、または分類マトリックスを作成する方法、またはマイニング構造をテストする方法について説明します。|[テストと検証&#40;データ マイニング&#41;](testing-and-validation-data-mining.md)|  

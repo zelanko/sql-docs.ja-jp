@@ -1,5 +1,5 @@
 ---
-title: データ マイニング (SSAS) |Microsoft ドキュメント
+title: データ マイニング (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b118f03580aeb0053203cd2535bafecd1649ccb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff1d223cee1ce86851b3021bad15582db156639
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163433"
 ---
 # <a name="data-mining-ssas"></a>データ マイニング (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、データ マイニングを取り入れたソリューションのための統合プラットフォームを提供します。 リレーショナル データまたはキューブ データを使用して、予測分析を含むビジネス インテリジェンス ソリューションを作成できます。  
@@ -46,7 +46,7 @@ ms.locfileid: "36173829"
   
 -   クライアント ツール: SQL Server で提供される開発および設計スタジオに加え、Excel 用データ マイニング アドインを使用して、モデルの作成、照会、および参照を行うことができます。 Web サービスなど、カスタムのクライアントを作成することもできます。  
   
--   スクリプト言語サポートとマネージ API: データ マイニング オブジェクトはすべて、プログラム可能です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用の MDX 拡張機能、XMLA 拡張機能、または、PowerShell 拡張機能により、スクリプトの作成が可能です。 データ マイニング拡張機能 (DMX) 言語を使用すると、クエリとスクリプト作成を迅速に行うことができます。  
+-   スクリプト言語サポートとマネージド API: データ マイニング オブジェクトはすべて、プログラム可能です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用の MDX 拡張機能、XMLA 拡張機能、または、PowerShell 拡張機能により、スクリプトの作成が可能です。 データ マイニング拡張機能 (DMX) 言語を使用すると、クエリとスクリプト作成を迅速に行うことができます。  
   
 -   セキュリティおよび配置: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]により、ロール ベースのセキュリティが提供されます (モデルと構造データへのドリルスルーに、別々の権限を使用できるなど)。 他のサーバーへのモデルの配置が容易であるため、ユーザーがパターンにアクセスし、予測を実行することが可能になります。  
   

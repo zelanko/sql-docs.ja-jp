@@ -1,5 +1,5 @@
 ---
-title: KeyUniquenessGuarantee 要素 (ASSL) |Microsoft ドキュメント
+title: KeyUniquenessGuarantee 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyUniquenessGuarantee element
 ms.assetid: 6e0cf107-dd02-4bbd-94f5-c26d96438d4b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d95c6c4479a0ce6b496dec934206ad893df6ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3038ab6fe49f3791d62ae171171783e46207365
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153273"
 ---
 # <a name="keyuniquenessguarantee-element-assl"></a>KeyUniquenessGuarantee 要素 (ASSL)
   属性のキーと名前の間のリレーションシップ、および関連属性へのリレーションシップが有効であることが保証されるかどうかを示します。  

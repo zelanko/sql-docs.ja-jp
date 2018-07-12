@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - InitializeReportServer method
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5c3ace1e9e4cb25fde4d836bc15ad9f30eee3e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e534aea75ef51802db343765ad0ab00b98007336
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210682"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>InitializeReportServer メソッド (WMI MSReportServer_ConfigurationSetting)
   指定されたレポート サービス インスタンスを初期化します。  
@@ -64,7 +64,7 @@ public void InitializeReportServer(string InstallationID,
   
  セキュリティで保護された情報に既にアクセスしたレポート サーバーに対して、 *InitializeReportServer* メソッドを呼び出して、暗号化キーの暗号を解除する必要があります。 次に、暗号化された暗号化キーがレポート サーバー データベースに格納されます。  
   
- 場合、レポート サーバーの[IsInitialized](configurationsetting-property-isinitialized.md)プロパティに設定されている`true`InitializeReportServer メソッドが呼び出されると、メソッドは暗号化キーの暗号化を試みることがなく成功を返します。  
+ 場合、レポート サーバーの[IsInitialized](configurationsetting-property-isinitialized.md)プロパティに設定されて`true`InitializeReportServer メソッドが呼び出されたときに、メソッドは、暗号化キーの暗号化を試みないで成功を返します。  
   
 ## <a name="requirements"></a>要件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

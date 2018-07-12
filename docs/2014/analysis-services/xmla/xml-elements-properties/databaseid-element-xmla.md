@@ -1,5 +1,5 @@
 ---
-title: DatabaseID 要素 (XMLA) |Microsoft ドキュメント
+title: DatabaseID 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DatabaseID element
 ms.assetid: 2df720dd-9b42-449a-9df6-0d12930603f0
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fec0d96ac6bb69868e5bab389033ffd975219182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ce90874f5b6e0328434bf5f10f755fe0cfa65ddf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259318"
 ---
 # <a name="databaseid-element-xmla"></a>DatabaseID 要素 (XMLA)
   オブジェクト参照を含む親要素内で、データベースを識別します。  
@@ -55,7 +55,7 @@ ms.locfileid: "36173320"
 |データ型と長さ|String|  
 |既定値|なし|  
   
- **基数**  
+ **カーディナリティ**  
   
 |先祖または親|Cardinality|  
 |------------------------|-----------------|  

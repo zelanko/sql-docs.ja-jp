@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8f795c264fb46076ec203e4a21ca8d5fa6ccd82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0233bc6dad87580764f67eea68f20171bcb5e82e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164843"
 ---
 # <a name="ado-net-destination"></a>ADO NET 変換先
   ADO NET 変換先では、データベースのテーブルやビューを使用する、さまざまな [!INCLUDE[vstecado](../../includes/vstecado-md.md)]互換データベースにデータを読み込みます。 このデータを既存のテーブルやビューに読み込むことができますが、新しいテーブルを作成して、そこにデータを読み込むこともできます。  
@@ -53,7 +53,7 @@ ms.locfileid: "36174298"
   
 -   [ADO NET 変換先エディター&#40;接続マネージャー ページ&#41;](../ado-net-destination-editor-connection-manager-page.md)  
   
--   [ADO NET 変換先エディター &#40;[マッピング] ページ&#41;](../ado-net-destination-editor-mappings-page.md)  
+-   [ADO NET 変換先エディター&#40;マッピング ページ&#41;](../ado-net-destination-editor-mappings-page.md)  
   
 -   [ADO NET 変換先エディター&#40;エラー出力 ページ&#41;](../ado-net-destination-editor-error-output-page.md)  
   

@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 610822ec0eb896180ebfffa40d53198749df0428
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: e45ee2308f7f399c08053f8ff4cd6b862b3978df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163820"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427601"
 ---
 # <a name="use-the-eventdata-function"></a>EVENTDATA 関数の使用
   DDL トリガーを起動するイベントに関する情報は、EVENTDATA 関数を使用してキャプチャされます。 この関数は、`xml` 値を返します。 XML スキーマには、次の項目に関する情報が含まれています。  
@@ -53,7 +51,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL トリガーの `EVENTDATA()` ステートメントにより、 `CREATE TABLE` ステートメントでは許可されないテキストがキャプチャされます。 これには、に対して XQuery ステートメントを使用する、`xml`および取得する EVENTDATA によって生成されるデータ、 \<CommandText > 要素。 詳細については、「[XQuery 言語リファレンス &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)」を参照してください。  
+ DDL トリガーの `EVENTDATA()` ステートメントにより、 `CREATE TABLE` ステートメントでは許可されないテキストがキャプチャされます。 に対して XQuery ステートメントを使用して、これは、`xml`および取得する EVENTDATA によって生成されるデータ、 \<CommandText > 要素。 詳細については、「[XQuery 言語リファレンス &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)」を参照してください。  
   
 > [!CAUTION]  
 >  EVENTDATA は、CREATE_SCHEMA イベントのデータをキャプチャします。対応する CREATE SCHEMA 定義の <schema_element> がある場合にはそれもキャプチャします。 さらに、EVENTDATA は <schema_element> 定義を別のイベントとして認識します。 したがって、CREATE_SCHEMA イベント、および CREATE SCHEMA 定義の <schema_element> によって表されるイベントの両方で作成される DDL トリガーは、`TSQLCommand` データのように同じイベント データを 2 回返す場合があります。 たとえば、CREATE_SCHEMA イベントと CREATE_TABLE イベントの両方で DDL トリガーが作成され、次のバッチを実行するとします。  
@@ -129,7 +127,7 @@ GO
 ```  
   
 > [!NOTE]  
->  イベント データを返す場合は、`value()` メソッドの代わりに XQuery の `query()` メソッドを使用してください。 `query()`メソッドが出力では、XML およびアンパサンドでエスケープされる復帰と改行 (CRLF) インスタンスを取得中に、`value()`メソッド crlf の出力で非表示にします。  
+>  イベント データを返す場合は、`value()` メソッドの代わりに XQuery の `query()` メソッドを使用してください。 `query()`メソッドは出力では、XML およびアンパサンドでエスケープされる復帰とライン フィード (CRLF) インスタンスを返します中に、`value()`メソッドでは、出力で非表示の CRLF インスタンスが表示されます。  
   
  同様の DDL トリガーの例を、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースで提供しています。 この例を入手するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して Database Triggers フォルダーを探します。 このフォルダーは **データベースの** [プログラミング] [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] フォルダーにあります。 **ddlDatabseTriggerLog** を右クリックし、 **[データベース トリガーをスクリプト化]** をクリックします。 既定では、DDL トリガー **ddlDatabseTriggerLog** は無効になっています。  
   

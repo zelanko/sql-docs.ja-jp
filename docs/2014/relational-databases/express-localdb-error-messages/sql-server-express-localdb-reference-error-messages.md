@@ -1,26 +1,24 @@
 ---
-title: SQL Server Express LocalDB エラー メッセージ リファレンス |Microsoft ドキュメント
+title: SQL Server Express LocalDB エラー メッセージ リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 352e93741020630786c2812b5306aba9ff9bca91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fc402c7d66505c68a8b6d35005025d45b1201a25
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164547"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411771"
 ---
 # <a name="sql-server-express-localdb-error-message-reference"></a>SQL Server Express LocalDB のエラー メッセージ リファレンス
   ここでは、次の SQL Server Express LocalDB エラー メッセージについての参照情報を示します。  
@@ -89,7 +87,7 @@ ms.locfileid: "36164547"
  指定した共有名は既に使用されています。  
   
  [LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED](localdb-error-sql-server-startup-failed.md)  
- SQL Server プロセスが開始しましたが、SQL Server の起動に失敗しました。  
+ SQL Server プロセスが開始されたが、SQL Server の起動に失敗しました。  
   
  [LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES](localdb-error-too-many-shared-instances.md)  
  共有インスタンスが多すぎます。  
@@ -110,7 +108,7 @@ ms.locfileid: "36164547"
  指定したパッチ レベルはインストールされていません。  
   
  [LOCALDB_ERROR_WAIT_TIMEOUT](localdb-error-wait-timeout.md)  
- 同期ロックを取得しようとしているときにタイムアウトが発生しました。  
+ 同期ロックを取得中にタイムアウトが発生しました。  
   
  [LOCALDB_ERROR_XEVENT_FAILED](localdb-error-xevent-failed.md)  
  LocalDB インスタンスの API 内で XEvent エンジンを開始できませんでした。  
