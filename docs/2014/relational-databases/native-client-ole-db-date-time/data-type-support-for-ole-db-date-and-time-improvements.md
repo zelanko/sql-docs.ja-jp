@@ -1,13 +1,11 @@
 ---
-title: OLE DB の日付と時刻の強化のデータ型のサポート |Microsoft ドキュメント
+title: OLE DB の日付と時刻の強化機能のデータ型のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3c543de3b8062dba9090b405156d492f7b4ab3e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 915a86b1170809bf1508f0214060fea9e0cf8a79
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175207"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427052"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付と時刻の強化に対するデータ型のサポート
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付および時刻データ型をサポートする OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) の型について説明します。  
@@ -55,11 +53,11 @@ ms.locfileid: "36175207"
   
  結果に含まれる秒の小数部にはコロン (:) ではなくドット (.) を使用します。  
   
- アプリケーションに返される文字列値は、指定された列に対して常に同じ長さになります。 年、月、日、時、分、および秒の各部分は、最大幅に合わせて先頭にゼロが埋め込まれます。 日付と時間の間、および時間とタイムゾーン オフセットの間には空白が 1 つずつ入ります。 タイム ゾーン オフセットの前には常に符号を指定します。 オフセットが 0 の場合は、正符号 (+) になります。 符号とオフセット値の間に空白はありません。 秒の小数部では、必要に応じて、列に定義されている有効桁数になるまで後ろにゼロが埋め込まれますが、その有効桁数を超過することはありません。 Datetime 列に対して、3 秒の小数部の桁があります。 smalldatetime 列の場合、秒の小数部がなく、秒は常にゼロになります。  
+ アプリケーションに返される文字列値は、指定された列に対して常に同じ長さになります。 年、月、日、時、分、および秒の各部分は、最大幅に合わせて先頭にゼロが埋め込まれます。 日付と時間の間、および時間とタイムゾーン オフセットの間には空白が 1 つずつ入ります。 タイム ゾーン オフセットの前には常に符号を指定します。 オフセットが 0 の場合は、正符号 (+) になります。 符号とオフセット値の間に空白はありません。 秒の小数部では、必要に応じて、列に定義されている有効桁数になるまで後ろにゼロが埋め込まれますが、その有効桁数を超過することはありません。 Datetime 列の場合、秒の小数部桁数が 3 つがあります。 smalldatetime 列の場合、秒の小数部がなく、秒は常にゼロになります。  
   
  アプリケーションによって指定された文字列値を変換すると、柔軟性が向上し、各部分の値を最大幅より小さくすることができます。 年は 1 ～ 4 桁になります。 月、日、時、分、および秒は 1 桁または 2 桁になります。 日付と時刻の間および時刻とタイムゾーン オフセットの間には、任意の空白を含めることができます。 0 時 0 分のオフセットの符号は、正符号と負符号のどちらでもかまいません。 秒の小数部では、最大 9 桁になるように末尾にゼロを含めることができます。 時刻部分は、小数点で終了して、秒の小数部を省略することができます。  
   
- 空の文字列は、有効な日付リテラルまたは時間リテラルではありません。また、NULL 値を表すものでもありません。 日付/時刻値に空の文字列に変換しようとすると、SQLState 22018 と、メッセージ"無効な文字値のキャスト"エラーが発生します。  
+ 空の文字列は、有効な日付リテラルまたは時間リテラルではありません。また、NULL 値を表すものでもありません。 空の文字列を日付/時刻値に変換しようとすると、SQLState 22018 と、メッセージ"無効な文字値のキャスト"エラーになります。  
   
 ## <a name="data-formats-data-structures"></a>データ形式 : データ構造体  
  次に説明する OLE DB 固有の構造体では、OLE DB は ODBC と同じ制約に準拠しています。 これらはグレゴリオ暦から取得されます。  
@@ -114,7 +112,7 @@ typedef struct tagDBTIMESTAMPOFFSET {
     } DBTIMESTAMPOFFSET;  
 ```  
   
- 場合`timezone_hour`が負の値、`timezone_minute`負の値である必要がありますまたはゼロです。 場合`timezone_hour`が正の値、`timezone minute`正である必要がありますまたはゼロです。 `timezone_hour` が 0 の場合、`timezone minute` は -59 ～ +59 の値を保持できます。  
+ 場合`timezone_hour`が負の値、`timezone_minute`負の値である必要がありますまたは 0。 場合`timezone_hour`が正の値、`timezone minute`正である必要がありますまたは 0。 `timezone_hour` が 0 の場合、`timezone minute` は -59 ～ +59 の値を保持できます。  
   
 ### <a name="ssvariant"></a>SSVARIANT  
  この構造体は、新しい構造体 DBTYPE_DBTIME2 と DBTYPE_DBTIMESTAMPOFFSET を含み、適切な型に対しては秒の小数部の桁数が追加されています。  
@@ -173,16 +171,16 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable でのデータ型マッピング  
- 次の型マッピングは itabledefinition::createtable で使用される DBCOLUMNDESC 構造体で使用されます。  
+ Itabledefinition::createtable で使用される DBCOLUMNDESC 構造体で、次の型マッピングが使用されます。  
   
 |OLE DB データ型 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|注|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|日付||  
-|DBTYPE_DBTIMESTAMP|`datetime2`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを検査、DBCOLUMDESC *bScale*メンバーに秒の小数部の精度を確認します。|  
-|DBTYPE_DBTIME2|`time`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを検査、DBCOLUMDESC *bScale*メンバーに秒の小数部の精度を確認します。|  
-|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを検査、DBCOLUMDESC *bScale*メンバーに秒の小数部の精度を確認します。|  
+|DBTYPE_DBTIMESTAMP|`datetime2`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの検査、DBCOLUMDESC *bScale*メンバーに秒の小数部の精度を確認します。|  
+|DBTYPE_DBTIME2|`time`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの検査、DBCOLUMDESC *bScale*メンバーに秒の小数部の精度を確認します。|  
+|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの検査、DBCOLUMDESC *bScale*メンバーに秒の小数部の精度を確認します。|  
   
- アプリケーションに DBTYPE_DBTIMESTAMP を指定するときに*wType*へのマッピングをオーバーライドできます`datetime2`型の名前を指定することによって*pwszTypeName*です。 場合`datetime`が指定されている*bScale* 3 をする必要があります。 場合`smalldatetime`が指定されている*bScale* 0 にする必要があります。 場合*bScale*と整合性がありません*wType*と*pwszTypeName*DB_E_BADSCALE が返されます。  
+ アプリケーションに DBTYPE_DBTIMESTAMP を指定するときに*wType*へのマッピングをオーバーライドできます`datetime2`で型名を指定することによって*pwszTypeName*します。 場合`datetime`が指定されている*bScale* 3 である必要があります。 場合`smalldatetime`が指定されている*bScale* 0 にする必要があります。 場合*bScale*と整合性がありません*wType*と*pwszTypeName*DB_E_BADSCALE が返されます。  
   
 ## <a name="see-also"></a>参照  
  [日付と時刻の強化&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server プロファイラーのテンプレート |Microsoft ドキュメント
+title: SQL Server Profiler テンプレート |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default SQL Server Profiler templates
 - templates [SQL Server], SQL Server Profiler
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 380d73cf217d8ee006daadc0d05b826c45bccc1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9772140475683ed1c98dc228318d213c10f36ba4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228682"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler のテンプレート
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、トレースに含めるイベント クラスとデータ列を定義するテンプレートを作成できます。 テンプレートを定義して保存したら、選択したイベント クラスごとにデータを記録するトレースを実行できます。 テンプレートは多くのトレースで使用できますが、テンプレート自体は実行できません。  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] には、事前に定義済みのトレース テンプレートが用意されています。これにより、特定のトレースでよく使用するイベント クラスを簡単に構成できるようになります。 たとえば、Standard テンプレートは、ログイン、ログアウト、完了したバッチ、および接続に関する情報を記録するための汎用トレースの作成に役立ちます。 このテンプレートは、変更しないでトレースの実行に使用するか、異なるイベントの構成を持つ新たなテンプレートの基礎として使用できます。  
+ 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] には、事前に定義済みのトレース テンプレートが用意されています。これにより、特定のトレースでよく使用するイベント クラスを簡単に構成できるようになります。 たとえば、Standard テンプレートは、ログイン、ログアウト、完了したバッチ、および接続に関する情報を記録するための汎用トレースの作成に役立ちます。 このテンプレートは、変更しないでトレースの実行に使用するか、異なるイベントの構成を持つ新たなテンプレートの基礎として使用できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、定義済みテンプレートからだけでなく、既定ではイベント クラスは含まれていない空のテンプレートからもトレース テンプレートを作成できます。 空のトレース テンプレートは、計画したトレースがどの定義済みテンプレートの構成とも似ていないときに使用します。  
@@ -64,7 +65,7 @@ ms.locfileid: "36178123"
 >  既定のテンプレートは、サーバーの特定の種類固有のテンプレートです。 あるサーバーの種類の既定のテンプレートを変更しても、他のサーバーの種類の既定のテンプレートには影響しません。 特定のサーバーの既定のテンプレートを設定する方法の詳細については、「[トレース定義の既定値の設定 &#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [トレース テンプレートの作成&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [トレース テンプレートを作成&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [トレース テンプレートの変更 &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [トレース テンプレートのエクスポート &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   
  [トレース テンプレートのインポート &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  

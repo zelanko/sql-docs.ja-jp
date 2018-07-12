@@ -1,5 +1,5 @@
 ---
-title: Analysis Services の構成 - アカウントの準備 |Microsoft ドキュメント
+title: Analysis Services の構成 - アカウントの準備 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services configuration
 - account provisioning
 ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
 caps.latest.revision: 28
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 4df78bd3cf29b2f767fafb1dcc5066a2e1d80a1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3ab054dad44d7e7c6f43604f21ec771279eb050
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151893"
 ---
 # <a name="analysis-services-configuration---account-provisioning"></a>Analysis Services の構成 - アカウントの準備
   このページを使用すると、サーバー モードを設定し、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] への無制限アクセスを必要とするユーザーまたはサービスに管理権限を付与することができます。 セットアップでは、ローカル Windows グループ BUILTIN\Administrators が、インストールするインスタンスの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー管理者ロールに自動的に追加されません。 サーバー管理者ロールにローカルの Administrators グループを追加する場合は、そのグループを明示的に指定する必要があります。  
   
- [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールする場合は、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ファームでの [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] サーバーの配置に責任を負う SharePoint ファーム管理者またはサービス管理者に管理権限を付与してください。 詳細については[!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)]インストールおよびサービス アカウント要件を参照してください。[を SharePoint と SQL Server BI 機能をインストール&#40;PowerPivot と Reporting Services&#41;](../../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)です。  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールする場合は、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ファームでの [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] サーバーの配置に責任を負う SharePoint ファーム管理者またはサービス管理者に管理権限を付与してください。 詳細については[!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)]インストールおよびサービス アカウントの要件を参照してください。 [SharePoint と SQL Server BI 機能のインストール&#40;PowerPivot と Reporting Services&#41;](../../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)します。  
   
 ## <a name="options"></a>および  
  **[サーバー モード]** - サーバー モードでは、サーバーに配置できる Analysis Services データベースの種類を指定します。 セットアップ中に指定したサーバー モードを後で変更することはできません。 各モードは互いに排他的です。そのため、従来の OLAP ソリューションとテーブル モデル ソリューションの両方をサポートする場合は、それぞれ異なるモードで構成した 2 つの Analysis Services のインスタンスが必要になります。  

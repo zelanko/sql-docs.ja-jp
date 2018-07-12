@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupID 要素 (ASSL) |Microsoft ドキュメント
+title: MeasureGroupID 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MeasureGroupID element
 ms.assetid: 3b075f86-dbbc-4285-8d2d-61fa722181c7
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a6ab3a46de67deb375f74b30a0e802680a9d7ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45ec91eee187e7ea0264eded7c92954822b49810
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239642"
 ---
 # <a name="measuregroupid-element-assl"></a>MeasureGroupID 要素 (ASSL)
-  関連付けます、 [MeasureGroup](../objects/group-element-assl.md)親要素、バインド、または不一致のバインド。  
+  関連付けます、 [MeasureGroup](../objects/group-element-assl.md)親要素、バインド、またはアウトオブ ライン バインドします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36176975"
 |[MeasureGroupAttributeBinding](../data-type/measuregroupattributebinding-data-type-out-of-line-assl.md)、 [MeasureGroupBinding](../data-type/binding-data-type-assl.md)と[PerspectiveMeasureGroup](../data-type/perspectivemeasuregroup-data-type-assl.md)|1-1 : 必須要素で、1 回だけ出現します|  
   
 ## <a name="remarks"></a>コメント  
- 親に対応する要素`MeasureGroupID`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.ManyToManyMeasureGroupDimension>、 <xref:Microsoft.AnalysisServices.MeasureGroupBinding>、および<xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>です。  
+ 親に対応する要素`MeasureGroupID`分析管理オブジェクト (AMO) オブジェクト モデルは、 <xref:Microsoft.AnalysisServices.ManyToManyMeasureGroupDimension>、 <xref:Microsoft.AnalysisServices.MeasureGroupBinding>、および<xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

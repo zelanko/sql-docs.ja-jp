@@ -1,13 +1,11 @@
 ---
-title: ODBC 日付と時刻の強化のデータ型のサポート |Microsoft ドキュメント
+title: ODBC の日付と時刻の強化機能のデータ型のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,17 +13,17 @@ helpviewer_keywords:
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ca1a2693acabdb28c221b08535c17dd686a43cb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3e0ee5b224f042cbf8f2b7a12fa96e9057b9a18d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176910"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415111"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 日付と時刻の強化に対するデータ型のサポート
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC の日付と時刻の強化に対するデータ型のサポート
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付と時刻のデータ型をサポートする ODBC 型について説明します。  
   
 ## <a name="data-type-mapping-in-parameters-and-resultsets"></a>パラメーターと結果セットでのデータ型マッピング  
@@ -35,7 +33,7 @@ ms.locfileid: "36176910"
   
 -   SQL_SS_TIMESTAMPOFFSET  
   
- 次の表は、サーバーの完全な種類のマッピングを示します。 表の一部のセルには、2 つの項目が記載されています。このような場合、1 つ目は ODBC 3.0 の値、2 つ目は ODBC 2.0 の値です。  
+ 次の表では、サーバーの完全な種類のマッピングを示します。 表の一部のセルには、2 つの項目が記載されています。このような場合、1 つ目は ODBC 3.0 の値、2 つ目は ODBC 2.0 の値です。  
   
 |SQL Server データ型|SQL データ型|値|  
 |--------------------------|-------------------|-----------|  
@@ -73,7 +71,7 @@ ms.locfileid: "36176910"
   
  結果に含まれる秒の小数部には、常に、コロン (:) ではなくドット (.) を使用します。  
   
- アプリケーションに返される文字列値は、常に特定の列の長さは同じです。 年、月、日、時、分、秒の各部分は、最大幅に合わせて先頭にゼロが埋め込まれます。また、datetime 値の日付と時刻の間には空白が 1 つ入ります。 datetimeoffset 値では、時間とタイム ゾーン オフセットの間にも空白が 1 つ入ります。 タイム ゾーン オフセットの前には常に符号を指定します。オフセットが 0 の場合は、正符号 (+) を指定します。 秒の小数部では、必要に応じて、列に定義されている有効桁数になるまで後ろにゼロが埋め込まれます。 datetime 列の場合、秒の小数部は 3 桁になります。 smalldatetime 列の場合、秒の小数部はなく、秒は常にゼロになります。  
+ アプリケーションに返される文字列値は、常に、特定の列の長さが同じです。 年、月、日、時、分、秒の各部分は、最大幅に合わせて先頭にゼロが埋め込まれます。また、datetime 値の日付と時刻の間には空白が 1 つ入ります。 datetimeoffset 値では、時間とタイム ゾーン オフセットの間にも空白が 1 つ入ります。 タイム ゾーン オフセットの前には常に符号を指定します。オフセットが 0 の場合は、正符号 (+) を指定します。 秒の小数部では、必要に応じて、列に定義されている有効桁数になるまで後ろにゼロが埋め込まれます。 datetime 列の場合、秒の小数部は 3 桁になります。 smalldatetime 列の場合、秒の小数部はなく、秒は常にゼロになります。  
   
  空の文字列は、有効な日付リテラルまたは時間リテラルではありません。また、NULL 値を表すものでもありません。 空の文字列を日付または時刻の値に変換しようとすると、SQLState 22018 のエラーが発生し、"キャストした文字コードが正しくありません" というメッセージが表示されます。  
   

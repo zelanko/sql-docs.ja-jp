@@ -1,5 +1,5 @@
 ---
-title: State プロパティ (SqlService クラス) |Microsoft ドキュメント
+title: State プロパティ (SqlService クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - State property
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5e9c0666457d0d0417af43bd761a1dc42eaff0f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 90acc038d5db2f00c4f37d4177b77f2141bff346
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240502"
 ---
 # <a name="state-property-sqlservice-class"></a>State プロパティ (SqlService クラス)
   サービスの現在の状態を取得または設定します。  
@@ -74,6 +74,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

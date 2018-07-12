@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27830819baa6b5381b8e9b9c41a62067e66f65e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1d8b8569a35a67d2700c0ce48c9c1cd4b29da7e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164511"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427471"
 ---
 # <a name="user-defined-functions"></a>ユーザー定義関数
   プログラミング言語の関数と同様、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザー定義関数は、パラメーターを受け取り複雑な計算などの処理を実行してその結果を値として返すルーチンです。 戻り値は、単一のスカラー値または結果セットになります。  
@@ -39,7 +37,7 @@ ms.locfileid: "36164511"
   
  [スキーマ バインド関数](#SchemaBound)  
   
- [パラメーターの指定](#Parameters)  
+ [パラメーターを指定します。](#Parameters)  
   
  [関連タスク](#Tasks)  
   
@@ -65,7 +63,7 @@ ms.locfileid: "36164511"
   
 ##  <a name="FunctionTypes"></a> 関数の種類  
  スカラー関数  
- ユーザー定義のスカラー関数は、RETURNS 句で定義された型の単一のデータ値を返します。 インライン スカラー関数の場合、スカラー値は単一ステートメントの結果であり、関数の本体がありません。 複数ステートメントを持つスカラー関数の場合、BEGIN...END ブロックで定義された関数本体に、単一の値を返す一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが含まれています。 戻り値の型を除く任意のデータ型を指定できます`text`、 `ntext`、 `image`、 `cursor`、および`timestamp`です。  
+ ユーザー定義のスカラー関数は、RETURNS 句で定義された型の単一のデータ値を返します。 インライン スカラー関数の場合、スカラー値は単一ステートメントの結果であり、関数の本体がありません。 複数ステートメントを持つスカラー関数の場合、BEGIN...END ブロックで定義された関数本体に、単一の値を返す一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが含まれています。 戻り値の型を除く任意のデータ型を指定できます`text`、 `ntext`、 `image`、 `cursor`、および`timestamp`します。  
   
  テーブル値関数  
  ユーザー定義テーブル値関数を返す、`table`データ型。 インライン テーブル値関数の場合、テーブルは単一の SELECT ステートメントの結果セットであり、関数の本体がありません。  
@@ -137,7 +135,7 @@ ms.locfileid: "36164511"
   
  ALTER FUNCTION を使用して、スキーマ バインドを削除できます。 関数を再定義するには、ALTER FUNCTION ステートメントを使用します。WITH SCHEMABINDING は指定しないでください。  
   
-##  <a name="Parameters"></a> パラメーターの指定  
+##  <a name="Parameters"></a> パラメーターを指定します。  
  ユーザー定義関数は、0 個またはそれ以上の入力パラメーターを受け取り、スカラー値またはテーブルのいずれかを返します。 1 つの関数では、最大で 1,024 個の入力パラメーターを受け取ることができます。 関数のパラメーターが既定値を持つ場合は、既定値を得るために、関数を呼び出すときに DEFAULT キーワードを指定する必要があります。 この動作はユーザー定義ストアド プロシージャ内の既定値を持つパラメーターとは異なります。ユーザー定義ストアド プロシージャの場合は、パラメーターを省略すると既定値が暗黙的に使用されます。 ユーザー定義関数では、出力パラメーターがサポートされません。  
   
 ##  <a name="Tasks"></a> 関連タスク  

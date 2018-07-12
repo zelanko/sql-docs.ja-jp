@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
 - updating, data alerts
@@ -20,13 +20,13 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d9da14f27b15da351263653d33616621cb4f7b84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0b0e8d5d18b45d15feb0f1af8f7ef2671053ab1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155703"
 ---
 # <a name="data-alert-designer"></a>データ警告デザイナー
   データ警告の定義は、データ警告デザイナーで作成および編集します。 警告定義は、メタデータのコレクションです (関心のあるレポート データ、データ警告インスタンスの作成とデータ警告メッセージの送信のためにレポート データが満たさなければならないルール、警告メッセージの受信者など)。  
@@ -48,7 +48,7 @@ ms.locfileid: "36178699"
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ警告機能は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] が SharePoint モードでインストールされている場合にのみ使用できるため、警告を作成する対象のレポートは、SharePoint ドキュメント ライブラリに保存、配置、またはアップロードする必要があります。  
 >   
->  データ警告は、Windows 統合認証を使用するレポートや、資格情報の入力が求められるレポート上では作成できません。 レポートでは保存されている資格情報を使用する必要があります。 詳細については、次を参照してください。[資格情報の指定とレポート データ ソースの接続情報を](report-data/specify-credential-and-connection-information-for-report-data-sources.md)です。  
+>  データ警告は、Windows 統合認証を使用するレポートや、資格情報の入力が求められるレポート上では作成できません。 レポートでは保存されている資格情報を使用する必要があります。 詳細については、次を参照してください。[資格情報の指定とレポート データ ソースに関する接続情報](report-data/specify-credential-and-connection-information-for-report-data-sources.md)します。  
   
  データ警告デザイナーを開くには、レポート ツール バーの **[アクション]** メニューの **[新しいデータの警告]** オプションをクリックします。 **[新しいデータの警告]** オプションが表示されない場合は、レポートが保存された資格情報を使用するように構成されていません。 資格情報の種類は、SharePoint ライブラリからレポート データ ソースを更新することで更新できます。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36178699"
 ### <a name="alert-name"></a>警告名  
  既定では、警告の定義の名前はレポートと同じです。 この警告名は、わかりやすい名前に変更できます。 これにより、どの警告に更新や削除を行うかを決定するなど、警告の管理が容易になります。  
   
- レポートには、複数の警告を作成できます。 同じ名前で複数の警告を定義できますが、警告名は一意にすることをお勧めします。 そうすることで、警告の定義を区別および管理することがより簡単になります。 データ警告マネージャーでは、作成したすべての警告の一覧を表示できます。 詳細については、次を参照してください。[警告管理者用のデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)と[データ警告マネージャーで マイ データ警告の管理](manage-my-data-alerts-in-data-alert-manager.md)です。  
+ レポートには、複数の警告を作成できます。 同じ名前で複数の警告を定義できますが、警告名は一意にすることをお勧めします。 そうすることで、警告の定義を区別および管理することがより簡単になります。 データ警告マネージャーでは、作成したすべての警告の一覧を表示できます。 詳細については、次を参照してください。[警告管理者用のデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)と[データ警告マネージャーでデータ警告の管理](manage-my-data-alerts-in-data-alert-manager.md)します。  
   
 ### <a name="rules-and-clauses"></a>ルールと句  
  警告をトリガーするデータ変更は、警告ルール内のデータ変更のスコープによって定義されます。 データ変更のスコープは、次のとおりです。  

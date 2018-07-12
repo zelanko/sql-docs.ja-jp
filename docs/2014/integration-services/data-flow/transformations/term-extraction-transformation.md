@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
 helpviewer_keywords:
@@ -28,13 +28,13 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 783e0909ceaab1d3a9636a60bd0ce27d7682dc05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f88d8b585eca518edf3aebe25e38a79e38bf3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229392"
 ---
 # <a name="term-extraction-transformation"></a>用語抽出変換
   用語抽出変換は、変換入力列内のテキストから用語を抽出し、変換出力列に書き込みます。 この変換で処理されるテキストは英語テキストのみで、独自の英語辞書および英語に関する言語情報を使用します。  
@@ -48,7 +48,7 @@ ms.locfileid: "36178479"
   
  用語抽出変換は、抽出する各用語のスコアを生成します。 スコアには、TFIDF 値または生の頻度のどちらかを設定できます。生の頻度とは、正規化された用語が入力内に出現する回数のことです。 どちらの場合も、スコアは 0 より大きい実数で表されます。 たとえば、TFIDF スコアの値は 0.5、頻度は 1.0 または 2.0 などのように表されます。  
   
- 用語抽出変換の出力には、2 つの列のみが含まれます。 1 つの列には抽出した用語が含まれ、もう 1 つの列にはスコアが含まれます。 列の既定の名前は**用語**と`Score`です。 入力のテキスト列には複数の用語が含まれる場合があるため、通常、用語抽出変換の出力には、入力よりも多くの行が含まれます。  
+ 用語抽出変換の出力には、2 つの列のみが含まれます。 1 つの列には抽出した用語が含まれ、もう 1 つの列にはスコアが含まれます。 既定の列の名前は**用語**と`Score`します。 入力のテキスト列には複数の用語が含まれる場合があるため、通常、用語抽出変換の出力には、入力よりも多くの行が含まれます。  
   
  抽出した用語がテーブルに書き込まれると、用語参照変換、あいまい参照変換、参照変換など、他の参照変換で使用できます。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, multiserver environments
 - master servers [SQL Server], about master servers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - multiserver environments [SQL Server]
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: accad064c75c799af6e871e517975352949f9526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8cecfa64f8aa6656cf055a9e488cfe30d68d5160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183599"
 ---
 # <a name="create-a-multiserver-environment"></a>マルチサーバー環境の作成
   マルチサーバー管理では、マスター サーバー (MSX) 1 台と、対象サーバー (TSX) 1 台以上を設定する必要があります。 すべての対象サーバーで処理されるジョブは、まずマスター サーバーで定義されてから対象サーバーにダウンロードされます。  
@@ -39,15 +39,15 @@ ms.locfileid: "36177457"
 ## <a name="considerations-for-multiserver-environments"></a>マルチサーバー環境に関する注意点  
  サポートされている MSX/TSX 構成については、以下の表を参照してください。  
   
-||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 以降**|**TSX 9.0 を =**|**TSX 10.0 を =**|**TSX 10.5 を =**|**TSX 11.0 を =**|  
+||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 以降**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX 7.0 を =**|はい|はい|いいえ|いいえ|いいえ|いいえ|いいえ|  
+|**MSX = 7.0**|はい|はい|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |**MSX = 8.0 &LT; SP3**|はい|はい|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |**MSX = 8.0 SP3 以降**|いいえ|いいえ|はい|はい|はい|はい|はい|  
-|**MSX 9.0 を =**|いいえ|いいえ|いいえ|はい|はい|はい|はい|  
-|**MSX 10.0 を =**|いいえ|いいえ|いいえ|いいえ|はい|はい|はい|  
-|**MSX 10.5 を =**|いいえ|いいえ|いいえ|いいえ|いいえ|はい|はい|  
-|**MSX 11.0 を =**|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|はい|  
+|**MSX = 9.0**|いいえ|いいえ|いいえ|はい|はい|はい|はい|  
+|**MSX = 10.0**|いいえ|いいえ|いいえ|いいえ|はい|はい|はい|  
+|**MSX = 10.5**|いいえ|いいえ|いいえ|いいえ|いいえ|はい|はい|  
+|**MSX = 11.0**|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|はい|  
   
  マルチサーバー環境を作成するときは、次の点を考慮してください。  
   

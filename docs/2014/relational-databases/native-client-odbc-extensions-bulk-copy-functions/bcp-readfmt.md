@@ -1,13 +1,11 @@
 ---
-title: bcp_readfmt |Microsoft ドキュメント
+title: bcp_readfmt |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3d700f752a3194821065dc21ddd6ab96fa6a8f26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dbf545e694ac6d5368a4abf23aba6ca0a6d32119
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175687"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428731"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
   指定されたフォーマット ファイルからデータ ファイル形式の定義を読み取ります。  
@@ -58,16 +56,16 @@ szFormatFile
  SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>コメント  
- 後に`bcp_readfmt`形式の値を読み取り、適切な呼び出しがなさ[bcp_columns](bcp-columns.md)と[bcp_colfmt](bcp-colfmt.md)です。 ユーザーがフォーマット ファイルを解析し、このような呼び出しを行う必要はありません。  
+ 後`bcp_readfmt`形式の値を読み取り、適切な呼び出し[bcp_columns](bcp-columns.md)と[bcp_colfmt](bcp-colfmt.md)します。 ユーザーがフォーマット ファイルを解析し、このような呼び出しを行う必要はありません。  
   
- フォーマット ファイルを保持するためには、呼び出す[bcp_writefmt](bcp-writefmt.md)です。 呼び出す`bcp_readfmt`保存形式を参照できます。 詳細については、次を参照してください。 [bcp_init](bcp-init.md)です。  
+ フォーマット ファイルを保持するためには、呼び出す[bcp_writefmt](bcp-writefmt.md)します。 呼び出す`bcp_readfmt`保存形式を参照できます。 詳細については、次を参照してください。 [bcp_init](bcp-init.md)します。  
   
- 代わりに、一括コピー ユーティリティ (**bcp**) によって参照されることができるファイルにユーザー定義のデータ形式を保存することができます`bcp_readfmt`です。 詳細については、 **bcp**ユーティリティおよびの構造**bcp**データ フォーマット ファイルを参照してください[データのエクスポートと一括インポート&#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)です。  
+ または、一括コピー ユーティリティ (**bcp**) で参照できるファイルにユーザー定義のデータ形式を保存できます`bcp_readfmt`します。 詳細については、 **bcp**ユーティリティと構造の**bcp**データ形式のファイルを参照してください[一括インポートとエクスポートのデータ&#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)します。  
   
- `BCPDELAYREADFMT`の値、 *eOption*のパラメーター [bcp_control](bcp-control.md) bcp_readfmt の動作を変更します。  
+ `BCPDELAYREADFMT`の値、 *eOption*パラメーターの[bcp_control](bcp-control.md) bcp_readfmt の動作を変更します。  
   
 > [!NOTE]  
->  4.2 以降のバージョンによって、フォーマット ファイルが生成される必要がありますが、 **bcp**ユーティリティです。  
+>  4.2 以降のバージョンによって、フォーマット ファイルが生成される必要がありますが、 **bcp**ユーティリティ。  
   
 ## <a name="example"></a>例  
   

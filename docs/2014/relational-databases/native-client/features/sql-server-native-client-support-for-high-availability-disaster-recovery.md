@@ -1,26 +1,24 @@
 ---
-title: SQL Server Native Client の高可用性、災害復旧のサポート |Microsoft ドキュメント
+title: 高可用性、ディザスター リカバリーのための SQL Server Native Client のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 2016-08-31
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0fc26bfb2fc61cebd781c04b200f5e285b25666f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 72fb6497563e4f1d15e9470eb6d60743d67f83a5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176178"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427491"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>SQL Server Native Client の HADR サポート
   このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client のサポート ([!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で追加) について説明します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の詳細については、「[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」、および「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
@@ -68,7 +66,7 @@ ms.locfileid: "36176178"
   
  データベース ミラーリングを現在使用している [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client アプリケーションをマルチサブネットのシナリオにアップグレードする場合、`Failover_Partner` 接続プロパティを削除して `MultiSubnetFailover` に置き換え、それを `Yes` に設定し、接続文字列内のサーバー名を可用性グループ リスナーの名前に置き換えます。 接続文字列で `Failover_Partner` および `MultiSubnetFailover=Yes` が使用されている場合、ドライバーでエラーが発生します。 ただし、接続文字列で `Failover_Partner` および `MultiSubnetFailover=No` (または `ApplicationIntent=ReadWrite`) が使用されている場合、アプリケーションではデータベース ミラーリングが使用されます。  
   
- 可用性グループのプライマリ データベースでデータベース ミラーリングを使用する場合、ドライバーはエラーを返します`MultiSubnetFailover=Yes`は可用性グループ リスナーにはなく、プライマリ データベースに接続する接続文字列で使用します。  
+ ドライバーは、可用性グループのプライマリ データベースでデータベース ミラーリングを使用する場合、エラーを返します`MultiSubnetFailover=Yes`は可用性グループ リスナーにはなく、プライマリ データベースに接続する接続文字列で使用します。  
   
 ## <a name="specifying-application-intent"></a>アプリケーション インテントの指定  
  `ApplicationIntent=ReadOnly` が指定されている場合、AlwaysOn が有効になっているデータベースにクライアントが接続するときに読み取りワークロードが要求されます。 サーバーは、接続時およびデータベース ステートメントの使用時にインテントを強制しますが、その対象は AlwaysOn 対応データベースのみです。  

@@ -1,27 +1,26 @@
 ---
-title: 新しい検索プロパティ リスト |Microsoft ドキュメント
+title: 新しい検索プロパティ リスト |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.newsearchpropertylist.f1
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b9d37bad141f61ceadafc03d883f36f422965996
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3019133dd0fa326a1595f2815698e10eb9586427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159307"
 ---
 # <a name="new-search-property-list"></a>新しい検索プロパティ リスト
   このダイアログ ボックスを使用すると、検索プロパティ リストを作成できます。  
@@ -49,10 +48,10 @@ ms.locfileid: "36178499"
  選択したデータベースに属している既存の検索プロパティ リストの名前を選択します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 参照してください[CREATE SEARCH PROPERTY LIST &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)です。  
+ 参照してください[CREATE SEARCH PROPERTY LIST &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)します。  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>SQL Server Management Studio を使用した検索プロパティ リストの管理  
- 作成、表示、変更、または検索プロパティ リストを削除する方法について、およびプロパティ検索用のフルテキスト インデックスを構成する方法の詳細については、次を参照してください。[検索プロパティ リストとドキュメント プロパティの検索](../relational-databases/search/search-document-properties-with-search-property-lists.md)です。  
+ プロパティ検索用のフルテキスト インデックスを構成する方法の詳細と作成、表示、変更、または、検索プロパティ リストを削除する方法については、次を参照してください。[検索プロパティ リストを使用したドキュメント プロパティの検索](../relational-databases/search/search-document-properties-with-search-property-lists.md)します。  
   
 ## <a name="see-also"></a>参照  
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   

@@ -1,5 +1,5 @@
 ---
-title: 参照の追加 ダイアログ ボックス |Microsoft ドキュメント
+title: 追加の参照 ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.addreference.f1
 helpviewer_keywords:
 - Edit References dialog box
 ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
 caps.latest.revision: 27
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ecf67f3b8c82ba63ee24aca05238e311f3ed36bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f549130cc2781fddc7480a523ee895400e4155e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150513"
 ---
 # <a name="add-reference-dialog-box"></a>[参照の追加] ダイアログ ボックス
   **[参照の追加]** ダイアログ ボックスを使用すると、カスタム アセンブリや [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] コンポーネントへの参照をレポートに追加できます。 アセンブリ参照を追加すると、アセンブリまたはコンポーネント内のクラスやメソッドへの完全修飾参照を含む式や埋め込みのカスタム コードを記述できます。 詳細については、「[レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)」または「[レポートにアセンブリへの参照を追加する (SSRS)](report-design/add-an-assembly-reference-to-a-report-ssrs.md)」を参照してください。  
@@ -38,7 +38,7 @@ ms.locfileid: "36177467"
 > [!NOTE]  
 >  外部アセンブリへの参照を含むレポートをパブリッシュする場合、レポートを正常に処理するためには、事前にアセンブリをレポート サーバーにインストールしておく必要があります。  
   
- **最近使った**  
+ **最近**  
  最近使用したアセンブリの名前を選択する場合に使用します。  
   
 ## <a name="see-also"></a>参照  

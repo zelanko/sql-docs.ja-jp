@@ -1,5 +1,5 @@
 ---
-title: データ ソースの選択 |Microsoft ドキュメント
+title: データ ソースの選択 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 caps.latest.revision: 31
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cb8cb384b83c4d5ca8ba16e017cbf79d53f3742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 888e3415163fafee1d5300b2a62c5063f61c8621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155793"
 ---
 # <a name="select-the-data-source"></a>データ ソースを選択します
   レポート ウィザードのこのページでは、レポートのデータ ソースを定義できます。  
@@ -33,14 +33,14 @@ ms.locfileid: "36177453"
  **新しいデータ ソース**  
  新しいデータ ソースを定義する場合は **[新しいデータ ソース]** を選択します。 データ ソースの情報は現在のレポートでのみ使用されます。  
   
- **Name**  
+ **名前**  
  データ ソースに対する接続の名前を入力します。 データ ソース名はレポート内で一意である必要があります。  
   
- **Type**  
+ **型**  
  使用しているデータ ソースの種類を選択します。たとえば、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースを使用している場合は、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を選択します。  
   
  **[接続文字列]**  
- データ ソースの接続文字列を入力します。 接続文字列の詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services に接続文字列が](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)です。  
+ データ ソースの接続文字列を入力します。 接続文字列の詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
   
  **[編集]** をクリックし、 **[接続プロパティ]** ダイアログ ボックスを使用してデータ ソース サーバーを指定します。 ローカルまたはリモートのデータ ソースを指定できます。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36177453"
  データ ソースをレポートではなく、共有データ ソースとしてプロジェクトに保存します。 こうすることで、そのデータ ソースをプロジェクト内の他のレポートにも使用できます。  
   
 ## <a name="see-also"></a>参照  
- [埋め込みデータ ソースとデータ接続またはデータ ソースを共有&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [埋め込みし、共有データ接続またはデータ ソース&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)   
  [RSReportDesigner 構成ファイル](report-server/rsreportdesigner-configuration-file.md)   

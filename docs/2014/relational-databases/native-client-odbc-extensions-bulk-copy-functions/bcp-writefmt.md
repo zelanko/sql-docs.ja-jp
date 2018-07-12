@@ -1,13 +1,11 @@
 ---
-title: bcp_writefmt |Microsoft ドキュメント
+title: bcp_writefmt |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1fe386d49ea68e8b6f33048f246c3a3afd037b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4f82c05a8d605b056619e22f7f711762b1555ac7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177744"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427881"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
   現在の一括コピー データ ファイルの形式に関する記述を含むフォーマット ファイルを作成します。  
@@ -58,14 +56,14 @@ szFormatFile
  SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>コメント  
- フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 呼び出す[bcp_columns](bcp-columns.md)と[bcp_colfmt](bcp-colfmt.md)データ ファイルの形式を定義します。 **bcp_writefmt**によって参照されるファイルのこの定義を保存します。 *szFormatFile*です。 詳細については、次を参照してください。 [bcp_init](bcp-init.md)です。  
+ フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 呼び出す[bcp_columns](bcp-columns.md)と[bcp_colfmt](bcp-colfmt.md)データ ファイルの形式を定義します。 **bcp_writefmt**によって参照されるファイルのこの定義を保存します。 *szFormatFile*します。 詳細については、次を参照してください。 [bcp_init](bcp-init.md)します。  
   
- 構造の詳細については**bcp**データ フォーマット ファイルを参照してください[bcp ユーティリティを使用しての一括データのエクスポートとインポート&#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)です。  
+ 構造の詳細については**bcp**データ形式のファイルを参照してください[インポートおよび bcp ユーティリティを使用した一括データのエクスポート&#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)します。  
   
- 保存されたフォーマット ファイルを読み込むには、次のように使用します。 [bcp_readfmt](bcp-readfmt.md)です。  
+ 保存されたフォーマット ファイルを読み込むには、次のように使用します。 [bcp_readfmt](bcp-readfmt.md)します。  
   
 > [!NOTE]  
->  によって生成されるフォーマット ファイル**bcp_writefmt**のバージョンでのみサポートされて、 **bcp**ユーティリティが付属[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]version 7.0 以降。  
+>  によって生成されたフォーマット ファイル**bcp_writefmt**のバージョンでのみサポートされて、 **bcp**ユーティリティが付属[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]version 7.0 以降。  
   
 ## <a name="example"></a>例  
   

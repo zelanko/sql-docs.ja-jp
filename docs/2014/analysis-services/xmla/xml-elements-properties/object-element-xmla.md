@@ -1,5 +1,5 @@
 ---
-title: オブジェクトの要素 (XMLA) |Microsoft ドキュメント
+title: オブジェクトの要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Object element
 ms.assetid: 99470537-2c4a-4072-9613-940c41c12487
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 02d27280ab74e907558c07ece457d114f8dcbd1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 678838cd084fb8d3c7905f3e7363059fea28f541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229582"
 ---
 # <a name="object-element-xmla"></a>Object 要素 (XMLA)
   親要素によって使用されるオブジェクト参照を含みます。  
@@ -56,7 +56,7 @@ ms.locfileid: "36177596"
 |--------------------|-----------------|  
 |データ型と長さ|なし|  
 |既定値|なし|  
-|Cardinality|先祖または親: [Alter](../xml-elements-commands/create-element-xmla.md) &#124; 0-1: 回だけ発生する可能性が省略可能な要素です。<br /><br /> 先祖または親: その他のすべて&#124;1-1: 回だけ出現する必須要素です。|  
+|Cardinality|先祖または親: [Alter](../xml-elements-commands/create-element-xmla.md) &#124; 0-1: 省略可能な要素を一度だけ発生することができます。<br /><br /> 先祖または親: 他のすべて&#124;1-1: 必須要素で、1 回だけ出現します。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

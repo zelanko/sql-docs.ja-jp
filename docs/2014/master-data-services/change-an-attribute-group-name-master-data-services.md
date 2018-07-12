@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94112254829868dbdf10972390359b7156dc1e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a9160e39403d314a5b01e012e6c238400a2854d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164929"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>属性グループ名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性グループ名を変更できます。  
@@ -37,19 +37,19 @@ ms.locfileid: "36178020"
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **モデルビュー**  ページで、メニュー バーのをポイント**管理** をクリック**属性グループ**です。  
+2.  **モデル ビュー**  ページで、ポイントして、メニュー バーから**管理** をクリック**属性グループ**します。  
   
 3.  **[モデル]** ボックスの一覧からモデルを選択します。  
   
 4.  **[エンティティ]** の一覧からエンティティを選択します。  
   
-5.  展開するプラス記号をクリックして**リーフ グループ**、**統合グループ**、または**コレクション グループ**を更新するグループの種類に応じて、します。  
+5.  展開するプラス記号をクリックします。**リーフ グループ**、**統合グループ**、または**コレクション グループ**、更新するグループの種類によって異なります。  
   
 6.  変更する属性グループの名前をクリックします。  
   
-7.  をクリックして**選択した項目を編集**です。  
+7.  クリックして**選択した項目の編集**します。  
   
-8.  **リーフ グループ名**ボックスで、**統合グループ名**ボックス、または**コレクション グループ名**ボックスに、属性グループの更新後の名前を入力します。  
+8.  **リーフ グループ名**ボックスで、**統合グループ名**ボックス、または**コレクション グループ名**ボックスに、属性グループの新しい名前を入力します。  
   
 9. **[グループの保存]** をクリックします。  
   

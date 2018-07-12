@@ -1,5 +1,5 @@
 ---
-title: Optionality 要素 (ASSL) |Microsoft ドキュメント
+title: Optionality 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Optionality element
 ms.assetid: 6cd2ef0a-6fbe-4462-ab27-4cdfeb33f8ab
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 971aaf70fe3cb2e239ace81d85f02d07374ce80f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe204e2b8eed7b5629b9c6d6060295383371aa48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159363"
 ---
 # <a name="optionality-element-assl"></a>Optionality 要素 (ASSL)
   メンバーがオプションかどうかを示す、 [AttributeRelationship](../objects/attributerelationship-element-assl.md)要素。  
@@ -67,7 +67,7 @@ ms.locfileid: "36178081"
 |*必須*|関連属性の各メンバーは、`AttributeRelationship` 要素を所有する属性の少なくとも 1 つのメンバーに関連付けられている必要があります。|  
 |*省略可*|関連属性の各メンバーは、`AttributeRelationship` 要素を所有する属性の少なくとも 1 つのメンバーに関連付けられている必要はありません。|  
   
- 許可される値に対応する列挙`Cardinality`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Optionality>します。  
+ 許容された値に対応する列挙体`Cardinality`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Optionality>します。  
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](../../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

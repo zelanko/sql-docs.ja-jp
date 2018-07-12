@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], null values
 - bulk importing [SQL Server], default values
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7840877066f5f941050d96c3274ab7bf6698326c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f99b040dc2a2caa0b7df7847760e978fef010fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258778"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>一括インポート中の NULL の保持または既定値の使用 (SQL Server)
   既定では、データをテーブルにインポートするとき、 **bcp** コマンドと BULK INSERT ステートメントによって、テーブルの列に対して定義されているすべての既定値が監視されます。 たとえば、データ ファイルに NULL フィールドがある場合は、NULL 値の代わりにその列の既定値が読み込まれます。 **bcp** コマンドと BULK INSERT ステートメントの両方で、NULL 値を保持することを指定することもできます。  
@@ -86,7 +85,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |**bcp**|`-k`|スイッチ|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|引数|  
   
- <sup>1</sup> BULK INSERT、既定値が利用できない場合、テーブル列必要がありますに定義する null 値を許可します。  
+ <sup>1</sup> BULK insert では、既定の値が使用可能な場合、テーブル列必要がありますを定義する null 値を許可します。  
   
 > [!NOTE]  
 >  上記の修飾子は、一括インポート コマンドによるテーブルでの DEFAULT 定義の確認を無効にします。 ただし、同時に実行するすべての INSERT ステートメントでは、DEFAULT 定義が必要です。  
@@ -103,7 +102,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- 挿入する"`NULL`「の代わりに」`Default value of Col2`"を使用する必要があります、`-k`スイッチまたは KEEPNULL オプションを次に示すよう**bcp**と BULK INSERT の例です。  
+ 挿入する"`NULL`「の代わりに」`Default value of Col2`"を使用する必要がある、`-k`スイッチまたは KEEPNULL オプションを次に示すよう**bcp**と BULK INSERT の例。  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>bcp の使用および NULL 値の保持  
  次の例では、 **bcp** コマンドで NULL 値を保持する方法について説明します。 **bcp** コマンドには、次のスイッチがあります。  

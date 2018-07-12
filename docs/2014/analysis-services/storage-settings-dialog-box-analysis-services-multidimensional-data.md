@@ -1,5 +1,5 @@
 ---
-title: ストレージ設定 ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: ストレージ設定 ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.f1
 - sql12.asvs.cubeeditor.cubebuilder.measuregroupstoragesettings.f1
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a15f7470df4ba313e02828b4a7ef2be2c9c4e0c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d39d87c0896ba77d3e323dc762d2618098dfd39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161313"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>[ストレージ設定] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の **[ストレージ設定]** ダイアログ ボックスを使用すると、ディメンション、キューブ、メジャー グループ、およびパーティションのプロアクティブ キャッシュ、ストレージ、および通知設定を指定できます。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で **[ストレージ設定]** ダイアログ ボックスを表示するには、次の手順に従います。  
@@ -44,8 +44,8 @@ ms.locfileid: "36177174"
 ||**リアルタイム HOLAP**<br /><br /> 次のストレージとプロアクティブ キャッシュ設定を使用します。|HOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> 古くなったキャッシュを待機時間 0 秒で削除します。<br /><br /> データが変更されると、アクティビティがない状態の間隔 0 秒、アクティビティがない状態のオーバーライド間隔なしでキャッシュを更新します。<br /><br /> オブジェクトを直ちにオンラインにします。|  
 ||**低待機時間 MOLAP**<br /><br /> 次のストレージとプロアクティブ キャッシュ設定を使用します。|MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> 古くなったキャッシュを待機時間 30 分で削除します。<br /><br /> アクティビティがない状態の間隔 10 秒、アクティビティがない状態のオーバーライド間隔 10 分でキャッシュを更新します。<br /><br /> オブジェクトを直ちにオンラインにします。|  
 ||**中待機時間 MOLAP**<br /><br /> 次のストレージとプロアクティブ キャッシュ設定を使用します。|MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> 古くなったキャッシュを待機時間 4 時間で削除します。<br /><br /> アクティビティがない状態の間隔 10 秒、アクティビティがない状態のオーバーライド間隔 10 分でキャッシュを更新します。<br /><br /> オブジェクトを直ちにオンラインにします。|  
-||**[自動 MOLAP]**<br /><br /> 次のストレージとプロアクティブ キャッシュ設定を使用します。|MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> データが変更されると、アクティビティがない状態の間隔 0 秒、アクティビティがない状態のオーバーライド間隔なしでキャッシュを更新します。|  
-||**[定期 MOLAP]**<br /><br /> 次のストレージとプロアクティブ キャッシュ設定を使用します。|MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> キャッシュを定期的に更新します。再構築間隔は 1 日です。|  
+||**自動 MOLAP**<br /><br /> 次のストレージとプロアクティブ キャッシュ設定を使用します。|MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> データが変更されると、アクティビティがない状態の間隔 0 秒、アクティビティがない状態のオーバーライド間隔なしでキャッシュを更新します。|  
+||**定期 MOLAP**<br /><br /> 次のストレージとプロアクティブ キャッシュ設定を使用します。|MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> キャッシュを定期的に更新します。再構築間隔は 1 日です。|  
 ||**MOLAP**<br /><br /> 次のストレージとプロアクティブ キャッシュ設定を使用します。|MOLAP ストレージ モードに設定します。|  
 |**カスタム設定**|ストレージ モード、プロアクティブ キャッシュ、通知の各オプションを明示的に設定します。||  
 |**[オプション]**|**[ストレージのオプション]** ダイアログ ボックスを表示し、ストレージ モード、プロアクティブ キャッシュ、通知の各オプションを明示的に設定します。 **[ストレージ設定]** ダイアログ ボックスの詳細については、「[[ストレージ設定] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。||  

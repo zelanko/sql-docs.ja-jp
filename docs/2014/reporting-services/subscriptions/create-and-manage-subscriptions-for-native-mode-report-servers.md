@@ -1,5 +1,5 @@
 ---
-title: 作成、変更、および標準のサブスクリプションを (追加する Reporting Services のネイティブ モード) の削除 |Microsoft ドキュメント
+title: 作成、変更、および標準のサブスクリプションを (追加する Reporting Services のネイティブ モード) の削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
@@ -16,13 +16,13 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 508ffaa05c0f5d30204832b49dcdf2b3b791c567
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8c38acc8b25853db76bf89008189928c4cef578
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230392"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>標準サブスクリプションを作成、変更、および削除する (ネイティブ モードの Reporting Services)
   標準のサブスクリプションは、電子メールまたは共有フォルダーを使用してレポートを配信する個々のユーザーによって作成されるサブスクリプションです。 標準のサブスクリプションは常に基になるレポートから定義されます。  
@@ -30,11 +30,11 @@ ms.locfileid: "36176353"
  サブスクリプションを作成するユーザーが、そのサブスクリプションを所有します。 各ユーザーは、自分が所有するサブスクリプションを変更または削除できます。  
   
 > [!NOTE]  
->  以降で[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サブスクリプションの所有権をプログラムによって転送できます。 サブスクリプションの所有権の転送に使用できるユーザー インターフェイスはありません。 詳細については、次を参照してください。 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  以降で[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]プログラムでサブスクリプションの所有権を転送することができます。 サブスクリプションの所有権の転送に使用できるユーザー インターフェイスはありません。 詳細については、次を参照してください。 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
- に応じて**RSReportServer.config**構成ファイルの設定、ユーザーがサブスクリプションにユーザーを追加することが可能性があります (たとえば、マネージャーは、彼の電子メール アドレスを追加または自分直接レポートのコピーを受信した各ようにする、レポートの場合)。 これがサポートされているかどうかは、個々のサブスクリプションを定義する際に、[宛先] フィールドが表示されるかどうかで決まります。 詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)です。  
+ に応じて**RSReportServer.config**構成ファイルの設定、ユーザーがサブスクリプションにユーザーを追加することがあります (たとえば、マネージャーは自分の電子メール アドレスを追加しますまたは、直接レポートのコピーを受信した各している、レポートの場合)。 これがサポートされているかどうかは、個々のサブスクリプションを定義する際に、[宛先] フィールドが表示されるかどうかで決まります。 詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)します。  
   
- このトピックでは、個別のユーザーが作成および管理する標準のサブスクリプションに関する情報を記載しています。 データ ドリブン サブスクリプションについては、必要条件および手順が異なるため、別のトピックで説明します。 詳細については、次を参照してください。[作成、変更、およびデータ ドリブン サブスクリプションを削除](data-driven-subscriptions.md)です。  
+ このトピックでは、個別のユーザーが作成および管理する標準のサブスクリプションに関する情報を記載しています。 データ ドリブン サブスクリプションについては、必要条件および手順が異なるため、別のトピックで説明します。 詳細については、次を参照してください。[作成、変更、およびデータ ドリブン サブスクリプションを削除](data-driven-subscriptions.md)します。  
   
  このトピックの内容  
   
@@ -53,15 +53,15 @@ ms.locfileid: "36176353"
   
 -   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート マネージャーを使用してネイティブ モードのレポート サーバーでサブスクリプションを作成する方法を説明しています。 サブスクリプションを定義した後、レポート マネージャーの [個人用サブスクリプション] ページまたは特定のレポートの **[サブスクリプション]** タブを使用して、そのサブスクリプションにアクセスできます。  
   
--   [作成し、SharePoint モード レポート サーバーの サブスクリプションの管理](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)SharePoint サイトでアプリケーション ページを使用して、SharePoint 統合モードで実行されているレポート サーバー上にレポートをサブスクライブする方法について説明します。  
+-   [作成し、SharePoint モード レポート サーバーのサブスクリプションの管理](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)SharePoint サイトでアプリケーション ページを使用して、SharePoint 統合モードで実行されているレポート サーバーでレポートをサブスクライブする方法について説明します。  
   
  このトピックでは、電子メール サブスクリプションとファイル共有の配信サブスクリプションを作成する方法について説明します。  
   
 -   電子メール配信を使用する場合は、サブスクリプションを作成する前に、SMTP サーバーまたはゲートウェイ接続用にレポート サーバーを構成する必要があります。  
   
--   ファイル共有配信を使用するには、対象フォルダーを定義しておく必要があります。 詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)です。  
+-   ファイル共有配信を使用するには、対象フォルダーを定義しておく必要があります。 詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)します。  
   
- レポートをサブスクライブするには、保存された資格情報を使用するか、資格情報を使用しないように、レポートのデータ ソースを構成しておく必要があります。 詳細については、次を参照してください。 [Reporting Services データ ソースでのストアの資格情報](../report-data/store-credentials-in-a-reporting-services-data-source.md)です。 レポートのデータ ソースをそのように構成しない場合は、 **[新しいサブスクリプション]** ボタンが使用できない状態になります。  
+ レポートをサブスクライブするには、保存された資格情報を使用するか、資格情報を使用しないように、レポートのデータ ソースを構成しておく必要があります。 詳細については、次を参照してください。 [Reporting Services データ ソースに資格情報を保存](../report-data/store-credentials-in-a-reporting-services-data-source.md)します。 レポートのデータ ソースをそのように構成しない場合は、 **[新しいサブスクリプション]** ボタンが使用できない状態になります。  
   
  ここでは、データ ドリブン サブスクリプションを作成する方法については説明しません。 データ ドリブン サブスクリプションを作成する方法の詳細については、「[データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)](../create-a-data-driven-subscription-ssrs-tutorial.md)」を参照するか、オンライン ヘルプで、レポート マネージャーの [データ ドリブン サブスクリプションの作成] ページに関する説明を参照してください。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "36176353"
   
 2.  **[サブスクリプション]** タブをクリックし、 **[新しいサブスクリプション]** をクリックします。  
   
-3.  **によって配信される****電子メール**です。 この配信の種類が選択できない場合、レポート サーバーが電子メール サブスクリプション用に構成されていません。  
+3.  **によって提供される**、**電子メール**します。 この配信の種類が選択できない場合、レポート サーバーが電子メール サブスクリプション用に構成されていません。  
   
-4.  **To**テキスト ボックスで、宛先の受信者名: フィールドは、ドメイン ユーザー アカウントを使用して自動的に指定します。 レポート サーバーの構成設定を決定するかどうか、**に**フィールドは、ユーザー アカウントに自動的に指定します。 電子メール アドレスの構成設定を変更する方法の詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)です。  
+4.  **To**テキスト ボックスに、受信者の名前にするには: フィールドは、ドメイン ユーザー アカウントを使用して自動的に指定します。 レポート サーバーの構成設定を決定するかどうか、**に**フィールドは、ユーザー アカウントで自動的に指定します。 電子メール アドレスの構成設定を変更する方法についての詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)します。  
   
     > [!NOTE]  
     >  権限によっては、レポートの配信先の電子メール アドレスを入力できます。 電子メール アドレスを複数指定するには、セミコロン (;) で区切ります。 **[CC]**、 **[BCC]**、および **[返信先]** テキスト ボックスに、追加の電子メール アドレスを入力することもできます。 このためには、すべてのサブスクリプションを管理する権限が必要です。  
@@ -119,7 +119,7 @@ ms.locfileid: "36176353"
   
     -   レポートのコピーを埋め込んだり添付するには、 **[レポートを含める]** を選択します。 レポートの形式は、選択した表示形式によって決まります。 レポートのサイズが電子メール システムに定義された制限を超えると予想される場合は、このオプションを使用しないでください。  
   
-    -   電子メール メッセージの本文にレポートへの URL リンクを含めるには**リンクを含める**です。  
+    -   レポートへの URL リンクを電子メール メッセージの本文に含めるには、選択**リンクを含める**します。  
   
     > [!NOTE]  
     >  これらのオプションのいずれも選択しない場合、件名行の通知テキストのみが送信されます。  
@@ -168,7 +168,7 @@ ms.locfileid: "36176353"
   
     2.  サブスクリプションを削除するには、サブスクリプションの隣にあるチェック ボックスをオンにして、 **[削除]** をクリックします。  
   
- このトピックでは、現在レポート サーバーで処理されているサブスクリプションを取り消す方法は説明しません。 サブスクリプションのキャンセルの詳細については、次を参照してください[を実行しているプロセスを管理する。](manage-a-running-process.md)  
+ このトピックでは、現在レポート サーバーで処理されているサブスクリプションを取り消す方法は説明しません。 サブスクリプションの取り消しの詳細については、次を参照してください[を実行しているプロセスを管理する。](manage-a-running-process.md)  
   
  サブスクリプションを終了するときに、そのサブスクリプションを簡単に検索できない場合は、受信中のレポートをメモして、名前を使用して検索します。 レポートにアクセスすると、サブスクリプションから自分を削除できます。 サブスクリプションを検索できない場合は、サブスクリプションがデータ ドリブン サブスクリプションである可能性があります。 詳細については、レポート サーバー管理者に問い合わせてください。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "36176353"
 ## <a name="see-also"></a>参照  
  [タスクと権限](../security/tasks-and-permissions.md)   
  [SharePoint モードのレポート サーバーのサブスクリプション作成し、管理](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [ネイティブ モードのレポート サーバーのサブスクリプション作成し、管理](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [サブスクリプションがネイティブ モード レポート サーバーの作成し、管理](../create-manage-subscriptions-native-mode-report-servers.md)   
  [データ ドリブン サブスクリプション](data-driven-subscriptions.md)   
  [サブスクリプションと配信&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   

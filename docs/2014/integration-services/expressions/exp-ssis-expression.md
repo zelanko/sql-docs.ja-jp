@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exponential functions
 - EXP function
@@ -16,13 +16,13 @@ ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 24fde8e1d3401a3c1d8af837f84f34850c81f5e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17fb9a07b4121c0ed49e865f6786d12a42d14e81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229372"
 ---
 # <a name="exp-ssis-expression"></a>EXP (SSIS 式)
   数値式の e を基数とする指数を返します。 EXP 関数は LN 関数の逆関数であり、真数と呼ばれる場合もあります。  

@@ -1,28 +1,26 @@
 ---
-title: 日付と時刻、およびスキーマ行セット |Microsoft ドキュメント
+title: 日付と時刻、およびスキーマ行セットの |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9faf2104ffb2f49281fe677d8e7ff4f23887338d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8a87b2ecdcce3b50eaebcc73471b44f6db48f04b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176826"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431681"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>日付と時刻、およびスキーマ行セット
   このトピックでは、COLUMNS 行セットおよび PROCEDURE_PARAMETERS 行セットについて説明します。 この情報は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で導入された OLE DB の日付と時刻の機能強化に関連しています。  
@@ -59,7 +57,7 @@ ms.locfileid: "36176826"
   
  COLUMN_FLAGS に用意されている新しいフラグ DBCOLUMNFLAGS_SS_ISVARIABLESCALE を使用すると、アプリケーションは、DATA_TYPE が DBTYPE_DBTIMESTAMP である列のサーバーの種類を判断できます。 サーバーの種類を識別するには、DATETIME_PRECISION も使用する必要があります。  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE は有効なに接続しているときにのみ、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降のサーバー。 下位レベルのサーバーに接続されている場合、DBCOLUMNFLAGS_SS_ISFIXEDSCALE は未定義となります。  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE はのみに接続されているときに有効です。 を[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降のサーバー。 下位レベルのサーバーに接続されている場合、DBCOLUMNFLAGS_SS_ISFIXEDSCALE は未定義となります。  
   
 ## <a name="procedureparameters-rowset"></a>PROCEDURE_PARAMETERS 行セット  
  DATA_TYPE には COLUMNS スキーマ行セットと同じ値が格納され、TYPE_NAME にはサーバーの種類が格納されます。  
@@ -90,7 +88,7 @@ ms.locfileid: "36176826"
 |TYPELIB|NULL|NULL|NULL|NULL|NULL|NULL|  
 |VERSION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_LONG|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE (ただし、次のいずれかが当てはまる場合を除く)<br /><br /> -下位サーバーに接続しているクライアントです。<br />-データ型の互換性の接続のプロパティは、互換性レベルが 80 に等しいことを指定します。|VARIANT_TRUE (ただし、次のいずれかが当てはまる場合を除く)<br /><br /> -下位サーバーに接続しているクライアントです。<br />-データ型の互換性の接続のプロパティは、互換性レベルが 80 に等しいことを指定します。|VARIANT_TRUE|  
+|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE (ただし、次のいずれかが当てはまる場合を除く)<br /><br /> -クライアントの下位サーバーに接続されているです。<br />-データ型の互換性の接続のプロパティには、互換性レベルが 80 に相当するを指定します。|VARIANT_TRUE (ただし、次のいずれかが当てはまる場合を除く)<br /><br /> -クライアントの下位サーバーに接続されているです。<br />-データ型の互換性の接続のプロパティには、互換性レベルが 80 に相当するを指定します。|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
  OLE DB では、MINIMUM_SCALE と MAXIMUM_SCALE が numeric 型および decimal 型用にしか定義されないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client でこれらの列を time、datetime2、および datetimeoffset で使用することは標準的ではありません。  

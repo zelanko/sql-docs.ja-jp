@@ -1,13 +1,11 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) |Microsoft ドキュメント
+title: IBCPSession::BCPDone (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 099618fccdf11dba2acb56303e2fec2d7a496ab0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 50f7fe4d747692ff11ffa130bf48b88d3252c994
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176166"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420711"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信される残りの行をコミットします。  
@@ -39,7 +37,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>コメント  
- その他の操作を呼び出せません、 [IBCPSession](ibcpsession-ole-db.md)呼び出した後のインターフェイス、 **BCPDone**メソッドです。 呼び出すだけのことが、 [ibcpsession::bcpinit](ibcpsession-bcpinit-ole-db.md)新しいバルク コピー操作を開始するメソッド。 これは、呼び出しに似ています、 [irowsetfastload::commit](irowsetfastload-commit-ole-db.md)メソッドです。  
+ その他の操作を呼び出すことはできません、 [IBCPSession](ibcpsession-ole-db.md)インターフェイスを呼び出した後、 **BCPDone**メソッド。 唯一の可能性を呼び出すことです、 [ibcpsession::bcpinit](ibcpsession-bcpinit-ole-db.md)新しい一括コピー操作を開始する方法。 これは、呼び出しに似ています、 [irowsetfastload::commit](irowsetfastload-commit-ole-db.md)メソッド。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
@@ -49,7 +47,7 @@ HRESULT BCPDone(void);
  メソッドの呼び出しが予期されませんでした。 たとえば、 **BCPInit**メソッドは、このメソッドを呼び出す前に呼び出されませんでした。  
   
 ## <a name="example"></a>例  
- このサンプルを使用する方法を示します、 **IBCPSession**インターフェイスです。  
+ このサンプルは、使用する方法を示します、 **IBCPSession**インターフェイス。  
   
  このサンプルを実行する前に、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] を実行する必要があります。  
   
