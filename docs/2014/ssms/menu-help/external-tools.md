@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ecaf04f54600f26489aa1b34ee1cbf69645752d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 42e289a8ec12b64841f190297be60cfee31e007f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157493"
 ---
 # <a name="external-tools"></a>[外部ツール]
   このダイアログ ボックスを使用すると、SQL Server 構成マネージャーやメモ帳などの外部ツールを **[ツール]** メニューに追加できます。 外部ツールを追加することにより、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で作業している間に他のアプリケーションを簡単に起動できます。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 さらに、一部のツールの出力は [出力] ウィンドウに表示できます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36163797"
  **[追加]**  
  新しいツールを指定できるようにテキスト ボックスをクリアします。  
   
- **Delete**  
+ **削除**  
  **[メニューの内容]** の一覧および **[ツール]** メニューから、ツールまたはコマンドを削除します。  
   
  **Title**  
@@ -76,9 +76,9 @@ ms.locfileid: "36163797"
   
 2.  **[タイトル]** ボックスで、「 **SQL Server 構成マネージャー**」と入力します。  
   
-3.  **コマンド**ボックスへのパスを入力、[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理コンソールなど、実行可能ファイル `C:\WINNT\system32\mmc.exe`  
+3.  **コマンド**ボックスへのパスを入力、[!INCLUDE[msCoName](../../includes/msconame-md.md)]など、実行可能ファイルの管理コンソール `C:\WINNT\system32\mmc.exe`  
   
-4.  **引数**ボックスで、.msc ファイルへのパスを入力します。 `"C:\WINNT\system32\SQLServerManager.msc"`  
+4.  **引数**ボックスに、.msc ファイルへのパスを入力します。 `"C:\WINNT\system32\SQLServerManager.msc"`  
   
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [スタート] **メニューで** ショートカットのプロパティを表示して、コンピューター上のファイルの場所を確認します。  

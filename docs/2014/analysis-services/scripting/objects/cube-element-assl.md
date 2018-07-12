@@ -1,5 +1,5 @@
 ---
-title: キューブ要素 (ASSL) |Microsoft ドキュメント
+title: キューブ要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Cube element
 ms.assetid: 2d801066-6cca-4a99-bbd8-56a38d762108
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc489a8cb996d57c833a5b91b395c5885073e222
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eab8cc56de346540491664a60c644ef868b02a25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165263"
 ---
 # <a name="cube-element-assl"></a>Cube 要素 (ASSL)
   通常、仮想、またはリンク キューブを定義、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [データベース](database-element-assl.md)要素。  
@@ -88,7 +88,7 @@ ms.locfileid: "36085774"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|[キューブ](../collections/cubes-element-assl.md)|  
-|子要素|[Actions](../collections/actions-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Collation](../properties/collation-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [CubePermissions](../collections/cubepermissions-element-assl.md), [DefaultMeasure](measure-element-assl.md), [Description](../properties/description-element-assl.md), [Dimensions](../collections/dimensions-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [ID](../properties/id-element-assl.md), [Kpis](../collections/kpis-element-assl.md), [Language](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MdxScripts](../collections/mdxscripts-element-assl.md), [MeasureGroups](../collections/groups-element-assl.md), [Name](../properties/name-element-assl.md), [Perspectives](../collections/perspectives-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [ScriptCacheProcessingMode](../properties/scriptcacheprocessingmode-element-assl.md), [State](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](../properties/storagemode-element-assl.md), [Translations](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|子要素|[アクション](../collections/actions-element-assl.md)、 [AggregationPrefix](../properties/aggregationprefix-element-assl.md)、[注釈](../collections/annotations-element-assl.md)、[照合](../properties/collation-element-assl.md)、 [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)、 [CubePermissions](../collections/cubepermissions-element-assl.md)、 [DefaultMeasure](measure-element-assl.md)、[説明](../properties/description-element-assl.md)、[ディメンション](../collections/dimensions-element-assl.md)、 [ErrorConfiguration](errorconfiguration-element-assl.md)、 [EstimatedRows](../properties/estimatedrows-element-assl.md)、 [ID](../properties/id-element-assl.md)、 [Kpi](../collections/kpis-element-assl.md)、[言語](../properties/language-element-assl.md)、 [LastProcessed](../properties/lastprocessed-element-assl.md)、 [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)、 [MdxScripts](../collections/mdxscripts-element-assl.md)、 [MeasureGroups](../collections/groups-element-assl.md)、[名前](../properties/name-element-assl.md)、[パースペクティブ](../collections/perspectives-element-assl.md)、 [ProactiveCaching](proactivecaching-element-assl.md)、 [ProcessingMode](../properties/processingmode-element-assl.md)、 [ProcessingPriority](../properties/processingpriority-element-assl.md)、 [ScriptCacheProcessingMode](../properties/scriptcacheprocessingmode-element-assl.md)、[状態](../properties/state-element-assl.md)、 [StorageLocation](../properties/storagelocation-element-assl.md)、 [StorageMode](../properties/storagemode-element-assl.md)、[翻訳](../collections/translations-element-assl.md)、[表示](../properties/visible-element-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.Cube>します。  

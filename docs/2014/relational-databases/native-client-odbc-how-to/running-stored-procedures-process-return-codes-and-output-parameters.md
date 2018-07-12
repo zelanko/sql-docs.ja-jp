@@ -1,13 +1,11 @@
 ---
-title: リターン コードと出力パラメーター (ODBC) 処理 |Microsoft ドキュメント
+title: リターン コードと出力パラメーター (ODBC) の処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1303c15f94dc32e69378c38e5353f8e82bf1214a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d8f5eab232d9651375ea9cd2857a8b8bb9129e88
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076870"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422531"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>リターン コードと出力パラメーターの処理 (ODBC)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーター、サーバーから最後のパケットで送信され、するまでアプリケーションをご利用いただけません[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA が返されます。 ストアド プロシージャからエラーが返される場合は、SQL_NO_DATA が返されるまでは、次の結果に進める SQLMoreResults を呼び出します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーター、サーバーから最後のパケットで送信され、までアプリケーションをご利用いただけません[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) sql_no_data が返されます。 ストアド プロシージャからエラーが返された場合は、SQL_NO_DATA が返されるまでは、次の結果に進めておく SQLMoreResults を呼び出します。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
@@ -35,7 +33,7 @@ ms.locfileid: "36076870"
   
 1.  ODBC CALL エスケープ シーケンスを使用する SQL ステートメントを構築します。 このステートメントでは、各入力、入出力、出力パラメーター、およびプロシージャの戻り値 (存在する場合) に対してパラメーター マーカーを使用する必要があります。  
   
-2.  呼び出す[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)各入力には、入出力、出力パラメーター、およびプロシージャの戻り値 (存在する場合)。  
+2.  呼び出す[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 、それぞれの入力入出力、出力パラメーター、およびプロシージャの戻り値 (ある場合)。  
   
 3.  `SQLExecDirect` を使用してステートメントを実行します。  
   

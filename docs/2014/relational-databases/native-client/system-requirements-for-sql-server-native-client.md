@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client のシステム要件 |Microsoft ドキュメント
+title: SQL Server Native Client のシステム要件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 87ec4582047abd6742756e1764d95c9f7d751061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cbabe38f62a9bd581bd9e41ab508336332bc3983
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075501"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417951"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client のシステム要件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ アクセス機能 (MARS など) を使用するには、次のソフトウェアがインストールされている必要があります。  
@@ -34,13 +32,13 @@ ms.locfileid: "36075501"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス (サーバー)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client には、Windows インストーラー 3.0 が必要です。 Windows インストーラー 3.0 は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムに既にインストールされています。 他のすべてのプラットフォームには、明示的にインストールする必要があります。 詳細については、次を参照してください。 [Windows Installer 3.0 Redistributable](http://go.microsoft.com/fwlink/?LinkId=46459)です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client には、Windows インストーラー 3.0 が必要です。 Windows インストーラー 3.0 は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムに既にインストールされています。 他のすべてのプラットフォームには、明示的にインストールする必要があります。 詳細については、次を参照してください。 [Windows Installer 3.0 Redistributable](http://go.microsoft.com/fwlink/?LinkId=46459)します。  
   
 > [!NOTE]  
 >  このソフトウェアは、必ず管理者特権でログオンしてからインストールしてください。  
   
 ## <a name="operating-system-requirements"></a>必要なオペレーティング システム  
- サポートするオペレーティング システムの一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client を参照してください[SQL Server Native Client のサポート ポリシー](applications/support-policies-for-sql-server-native-client.md)です。  
+ サポートするオペレーティング システムの一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client を参照してください[SQL Server Native Client のサポート ポリシー](applications/support-policies-for-sql-server-native-client.md)します。  
   
 ## <a name="sql-server-requirements"></a>SQL Server の要件  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータにアクセスするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがインストールされている必要があります。  
@@ -48,7 +46,7 @@ ms.locfileid: "36075501"
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は、MDAC、Windows Data Access Components、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client のすべてのバージョンからの接続をサポートします。 古いクライアント バージョンで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する場合、クライアントで認識されないサーバーのデータ型は、クライアント バージョンと互換する型にマップされます。 詳細については、このトピックの「クライアント バージョンのデータ型の互換性」をご覧ください。  
   
 ## <a name="cross-language-requirements"></a>言語間の要件  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の英語版は、サポートされているオペレーティング システムであれば、そのすべてのローカライズ版でもサポートされます。 ローカライズ版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、ローカライズ版と同じ言語であるローカライズ版のオペレーティング システムでサポートされて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client のバージョン。 ローカライズ版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client はサポートされるオペレーティング システムの英語版のサポートも一致する言語の設定がインストールされている限り、します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の英語版は、サポートされているオペレーティング システムであれば、そのすべてのローカライズ版でもサポートされます。 ローカライズ版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client が、ローカライズされたのと同じ言語であるローカライズされたオペレーティング システムでサポートされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client のバージョン。 ローカライズ版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client はサポートされているオペレーティング システムの英語版のサポートも、一致する言語設定がインストールされている限り、します。  
   
  アップグレードの要件を次に示します。  
   
@@ -56,7 +54,7 @@ ms.locfileid: "36075501"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client のローカライズ版は、同じ言語にローカライズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client にアップグレードできます。  
   
--   ローカライズ版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client の英語版にアップグレードできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client です。  
+-   ローカライズ版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client の英語版にアップグレードできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client のローカライズ版は、異なる言語にローカライズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client にはアップグレードできません。  
   
@@ -67,11 +65,11 @@ ms.locfileid: "36075501"
   
  ODBC 用の `DataTypeCompatibility` コントロールはありません。  
   
- IDBInfo::GetKeywords は常には影響しません、接続のサーバー バージョンに対応するキーワードの一覧を返します`DataTypeCompatibility`です。  
+ IDBInfo::GetKeywords は常には影響されません、接続のサーバー バージョンに対応するキーワードの一覧を返します`DataTypeCompatibility`します。  
   
 |データ型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components、MDAC、<br /><br /> DataTypeCompatibility=80 が設定された SQL Server Native Client OLE DB アプリケーション|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<8 Kb 以下)|udt|Udt|Varbinary|  
+|CLR UDT (\<8 kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|Text|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  

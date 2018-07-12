@@ -1,13 +1,11 @@
 ---
-title: SQLGetDiagField |Microsoft ドキュメント
+title: SQLGetDiagField |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,24 +14,24 @@ helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d10a9383294f02b26bd15113d17f6d6bd0e182c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8fcb95ada7482f48f9316d02553bba9aab4867fc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083629"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421891"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーの次の追加の診断フィールドを指定する`SQLGetDiagField`です。 これらのフィールドでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに関する各種エラー報告がサポートされます。また、これらのフィールドは、接続されている ODBC 接続ハンドルや ODBC ステートメント ハンドルで生成されるすべての診断レコードで使用できます。 これらのフィールドは、sqlncli.h で定義されています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーの次の追加の診断フィールドを指定する`SQLGetDiagField`します。 これらのフィールドでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに関する各種エラー報告がサポートされます。また、これらのフィールドは、接続されている ODBC 接続ハンドルや ODBC ステートメント ハンドルで生成されるすべての診断レコードで使用できます。 これらのフィールドは、sqlncli.h で定義されています。  
   
 |診断レコードのフィールド|説明|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|ストアド プロシージャのエラーが発生した行番号を報告します。 SQL_DIAG_SS_LINE の値は、SQL_DIAG_SS_PROCNAME に値が返される場合にのみ意味があります。 この値は、16 ビットの符号なし整数で返されます。|  
-|SQL_DIAG_SS_MSGSTATE|エラー メッセージの状態。 エラー メッセージの状態については、次を参照してください。 [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql)です。 この値は、32 ビットの符号付き整数で返されます。|  
-|SQL_DIAG_SS_PROCNAME|エラーが発生したストアド プロシージャの名前 (該当する場合)。 この値は文字列で返されます。 この文字列の長さ (文字数) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なります。 呼び出すことで決定できます[SQLGetInfo](sqlgetinfo.md) SQL_MAX_PROCEDURE_NAME_LEN の値を要求します。|  
+|SQL_DIAG_SS_MSGSTATE|エラー メッセージの状態。 エラー メッセージの状態については、次を参照してください。 [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql)します。 この値は、32 ビットの符号付き整数で返されます。|  
+|SQL_DIAG_SS_PROCNAME|エラーが発生したストアド プロシージャの名前 (該当する場合)。 この値は文字列で返されます。 この文字列の長さ (文字数) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なります。 呼び出すことによって判断できる[SQLGetInfo](sqlgetinfo.md) SQL_MAX_PROCEDURE_NAME_LEN の値を要求します。|  
 |SQL_DIAG_SS_SEVERITY|関連付けられたエラー メッセージの重大度レベル。 この値は、32 ビットの符号付き整数で返されます。|  
 |SQL_DIAG_SS_SRVNAME|エラーが発生したサーバーの名前。 この値は文字列で返されます。 この文字列の長さ (文字列) は、sqlncli.h の SQL_MAX_SQLSERVERNAME マクロで定義されます。|  
   
@@ -65,7 +63,7 @@ ms.locfileid: "36083629"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|DROP TRIGGER ステートメント|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|BACKUP DATABASE ステートメントまたは DUMP DATABASE ステートメント|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|DUMP TABLE ステートメント|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP TRANSACTION ステートメントまたは DUMP TRANSACTION ステートメント。 場合に、CHECKPOINT ステートメントに対しても返されます、 **trunc. log、間接的にします。** データベース オプションが有効です。|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP TRANSACTION ステートメントまたは DUMP TRANSACTION ステートメント。 場合に、CHECKPOINT ステートメントに対しても返されます、 **trunc. log 間接的にします。** データベース オプションがオンでします。|  
 |SQL_DIAG_DFC_SS_GOTO|GOTO 流れ制御ステートメント|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|INSERT BULK ステートメント|  
 |SQL_DIAG_DFC_SS_KILL|KILL ステートメント|  
@@ -100,9 +98,9 @@ ms.locfileid: "36083629"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT ステートメント|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField とテーブル値パラメーター  
- SQLGetDiagField は、2 つの診断フィールドを取得するために使用できます: SQL_DIAG_SS_TABLE_COLUMN_NUMBER および SQL_DIAG_SS_TABLE_ROW_NUMBER です。 これらのフィールドは、診断レコードに関連するエラーまたは警告の原因となった値を特定するのに役立ちます。  
+ SQLGetDiagField は、2 つの診断フィールドを取得するために使用できます: SQL_DIAG_SS_TABLE_COLUMN_NUMBER および SQL_DIAG_SS_TABLE_ROW_NUMBER します。 これらのフィールドは、診断レコードに関連するエラーまたは警告の原因となった値を特定するのに役立ちます。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)です。  
+ テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLGetDiagField 関数](http://go.microsoft.com/fwlink/?LinkId=59352)   

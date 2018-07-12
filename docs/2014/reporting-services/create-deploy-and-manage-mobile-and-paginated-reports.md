@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services]
 - SSRS
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 caps.latest.revision: 51
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c7abb24cf0b0a636f2e9ebed1c61b97dca93a8de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 059f2e3a6157c003c6d709b4ea954490803582e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210822"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 作成、展開、および組織のレポートを管理するためにすぐに使用できるツールやサービスの全範囲を提供します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、プログラミング機能を使用し、レポート作成機能を拡張したりカスタマイズしたりすることも可能です。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] すぐに使用できるツールとサービスを作成、展開、およびレポート組織を管理するための完全な範囲を提供します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、プログラミング機能を使用し、レポート作成機能を拡張したりカスタマイズしたりすることも可能です。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サーバー ベースのレポート プラットフォームで、さまざまなデータ ソースの包括的なレポート機能を提供します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 作成、管理、およびレポート、および開発者がデータおよびカスタム アプリケーションでのレポート処理を統合および拡張できるように Api を提供するためのツールの完全なセットが含まれます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 内でツールの作業、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]環境と完全に統合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ツールとコンポーネント。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サーバー ベースのレポート プラットフォームで、さまざまなデータ ソースの包括的なレポート機能を提供します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 作成、管理、およびレポート、および開発者を統合およびデータとカスタム アプリケーションでのレポート処理を拡張できるようにする Api を提供するためのツールの完全なセットが含まれています。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 内でツールの動作、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]環境とは完全に統合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ツールとコンポーネント。  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、リレーショナル データ ソース、多次元データ ソース、または XML ベースのデータ ソースから、対話形式、表形式、グラフィカル形式、または自由形式のレポートを作成できます。 レポートには、グラフ、地図、スパークラインなどの豊富なデータの可視化を含めることができます。 レポートを発行し、レポート処理のスケジュールを設定し、レポートにオン デマンドでアクセスできます。 さまざまな表示形式から選択でき、[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] などの他のアプリケーションにレポートをエクスポートしたり、パブリッシュしたレポートをサブスクライブすることができます。 作成したレポートは、Web ベースの接続によって表示することも、[!INCLUDE[msCoName](../includes/msconame-md.md)] Windows アプリケーションや SharePoint サイトの一部として表示することも可能です。 また、SharePoint サイトに発行されるレポートでデータ警告を作成したり、レポートのデータが変化したときに電子メール メッセージを受信したりすることもできます。  
   
- 新機能の詳細については[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を参照してください[新&#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)です。  
+ 新機能の詳細については[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を参照してください[新&#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)します。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコンポーネント、ツール、およびリソースについては、 [SQL Server オンライン ブック](../2014-toc/books-online-for-sql-server-2014.md)を参照してください。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36084035"
   
  ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン")[サブスクリプションと配信&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
- ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン") [Reporting Services のデータの警告](../ssms/agent/alerts.md)  
+ ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン") [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
  ![フォルダー アイコン](media/hlp-16folder.gif "フォルダー アイコン") [Power View](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx)  
   

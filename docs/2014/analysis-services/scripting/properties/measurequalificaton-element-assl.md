@@ -1,5 +1,5 @@
 ---
-title: MeasureQualificaton 要素 (ASSL) |Microsoft ドキュメント
+title: MeasureQualificaton 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MeasureQualification element
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795e2b7b10f9d7e9988747025c322b25ffa0af47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb84c39d7d7a3b69ea3c13e43dfda0b331c548e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149503"
 ---
 # <a name="measurequalificaton-element-assl"></a>MeasureQualificaton 要素 (ASSL)
-  内のメジャーにプレフィックスが適用されるかどうかを決定、 [MeasureGroup](../objects/group-element-assl.md)です。  
+  内のメジャーにプレフィックスが適用されるかどうかを決定する、 [MeasureGroup](../objects/group-element-assl.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36165105"
   
 ## <a name="see-also"></a>参照  
  [キューブ要素&#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [要素の寸法&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [ディメンション要素&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [MeasureGroup 要素&#40;ASSL&#41;](../objects/group-element-assl.md)   
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  
   

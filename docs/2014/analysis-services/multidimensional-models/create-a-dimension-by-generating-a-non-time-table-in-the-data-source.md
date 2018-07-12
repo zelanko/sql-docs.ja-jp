@@ -1,5 +1,5 @@
 ---
-title: データ ソースのない時間テーブルを生成することによって、ディメンションを作成 |Microsoft ドキュメント
+title: データ ソースの非時間テーブルを生成することで、ディメンションの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Analysis Services], dimensions without data source
 - dimensions [Analysis Services], standard
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - standard dimensions [Analysis Services]
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7165c8da6afd7b67669f21f8aecc06edcc24b5d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45ba4a55fae371792ecffdc79cde7e8b9b51ed23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210102"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>データ ソースに時間テーブル以外のテーブルを生成することによるディメンションの作成
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して、既存のデータ ソースを使用せずにディメンションを作成できます。 この操作を行うには、ウィザードの **[作成方法の選択]** ページで **[データ ソースに時間テーブル以外のテーブルを生成]** オプションを選択します。 基になるデータ ソースに新しいディメンション テーブルを作成するには、基になるデータ ソースにオブジェクトを作成する権限が必要です。 定義済みのデータ ソース ビューを使用せずにディメンションを定義する場合、ディメンションを最初から定義することも、ディメンション テンプレートを使用することもできます。  
@@ -108,7 +108,7 @@ ms.locfileid: "36085538"
  **[ウィザードの完了]** ページで、新しいディメンションの名前を入力し、ディメンション構造を表示します。 **[完了]** をクリックした後にスキーマ生成ウィザードを開始するには、 **[今すぐスキーマを生成する]** チェック ボックスをオンにします。 追加オブジェクトを作成する計画がある場合は、このチェック ボックスはオンにしないでください。 このチェック ボックスを選択しない場合は、ディメンション デザイナーを使用して後でスキーマを作成できます。  
   
 ## <a name="see-also"></a>参照  
- [時間テーブルを生成することによって時間ディメンションを作成します。](create-a-time-dimension-by-generating-a-time-table.md)   
+ [時間テーブルの生成による時間ディメンションを作成します。](create-a-time-dimension-by-generating-a-time-table.md)   
  [時間テーブルの生成による時間ディメンションの作成](create-a-time-dimension-by-generating-a-time-table.md)  
   
   

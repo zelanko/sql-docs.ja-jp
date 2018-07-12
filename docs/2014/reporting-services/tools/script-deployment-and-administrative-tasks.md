@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - moving reports
@@ -25,13 +25,13 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8cec5b29e78115e606951e0bd58516a029840580
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bd4072925cf5cd48785b0c476aa4ea637f096c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159863"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>配置タスクおよび管理タスクのスクリプト作成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、スクリプトを使用した日常的なインストール、配置、および管理タスクの自動化をサポートします。 レポート サーバーの配置は複数の段階を伴うプロセスです。 配置を構成するためには複数のツールとプロセスを使用する必要があります。すべての作業を自動化する単一のプログラムやアプローチは存在しません。  
@@ -56,7 +56,7 @@ ms.locfileid: "36164501"
 |レポート サーバー データベース接続を構成する。|接続文字列、アカウントまたはパスワード、認証の種類を変更する場合は、 **rsconfig** ユーティリティを実行して接続を構成します。 詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」および「[rsconfig ユーティリティ &#40;SSRS&#41;](rsconfig-utility-ssrs.md)」を参照してください。<br /><br /> データベースの作成またはアップグレードに rsconfig.exe を使用することはできません。 データベースと RSExecRole が既に存在している必要があります。|  
 |スケールアウト配置を構成する。|スケールアウト配置を自動化するには、次のいずれかのアプローチを使用します。<br /><br /> rskeymgmt.exe ユーティリティを実行して、レポート サーバー インスタンスを既存の環境に追加する。 詳細については、「[スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS構成マネージャー&#41;](../install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)」を参照してください。<br /><br /> レポート サーバー WMI プロバイダーに対して実行するカスタム コードを作成する。|  
 |暗号化キーをバックアップする。|暗号化キーのバックアップを自動化するには、次のいずれかのアプローチを使用します。<br /><br /> rskeymgmt.exe ユーティリティを実行してキーをバックアップする。 詳細については、「 [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。<br /><br /> レポート サーバー WMI プロバイダーに対して実行するカスタム コードを作成する。|  
-|レポート サーバーの電子メールを構成する。|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI プロバイダーに対して実行するカスタム コードを作成します。 プロバイダーでは、電子メールの構成設定のサブセットがサポートされています。<br /><br /> RSReportServer.config ファイルにはすべての設定が含まれていますが、このファイルの使用を自動化しないようにしてください。 特に、ファイルを別のレポート サーバーにコピーする場合は、バッチ ファイルを使用しないでください。 各構成ファイルには、現在のインスタンスに固有の値が含まれています。 これらの値は、別のレポート サーバー インスタンスでは無効になります。<br /><br /> 設定の詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)です。|  
+|レポート サーバーの電子メールを構成する。|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI プロバイダーに対して実行するカスタム コードを作成します。 プロバイダーでは、電子メールの構成設定のサブセットがサポートされています。<br /><br /> RSReportServer.config ファイルにはすべての設定が含まれていますが、このファイルの使用を自動化しないようにしてください。 特に、ファイルを別のレポート サーバーにコピーする場合は、バッチ ファイルを使用しないでください。 各構成ファイルには、現在のインスタンスに固有の値が含まれています。 これらの値は、別のレポート サーバー インスタンスでは無効になります。<br /><br /> 設定の詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)します。|  
 |自動実行アカウントを構成する。|自動実行アカウントの構成を自動化するには、次のいずれかのアプローチを使用します。<br /><br /> rsconfig.exe ユーティリティを実行してアカウントを構成する。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。<br /><br /> レポート サーバー WMI プロバイダーを呼び出すカスタム コードを作成する。|  
 |既存のコンテンツを別のレポート サーバー上に配置する (フォルダー階層、ロールの割り当て、レポート、サブスクリプション、スケジュール、データ ソース、リソースなど)。|既存のレポート サーバー環境を再構築する最善の方法は、レポート サーバー データベースを新しいレポート サーバー インスタンスにコピーすることです。<br /><br /> カスタム コードを作成して、既存のレポート サーバーのコンテンツをプログラムによって再構築する方法もあります。 ただし、サブスクリプション、レポート スナップショット、レポート履歴は、プログラムによって再作成できないことに注意してください。<br /><br /> 場合によっては両者を組み合わせた方法も効果的です (つまり、レポート サーバー データベースを復元してから、カスタム コードによって、特定の環境に合わせてレポート サーバー データベースを更新します)。<br /><br /> 詳細な例については、「 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。<br /><br /> レポート サーバー データベースの再配置の詳細については、「[別のコンピューターへのレポート サーバー データベースの移動 &#40;SSRS ネイティブ モード&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)」を参照してください。 レポート サーバー環境をプログラムによって構築する方法の詳細については、このトピックの「スクリプトを使用したレポート サーバー コンテンツとフォルダーの移行」を参照してください。|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36164501"
   
 -   既存のコンテンツを再構築したり、レポート サーバーからレポート サーバーに移動したりするためのカスタム コードを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で作成し、レポート サーバーのスクリプト ホスト ツール (rs.exe) で実行できます。 このアプローチでは、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]でスクリプトを作成して .rss ファイルとして保存し、そのスクリプトを rs.exe を使用して、対象レポート サーバー上で実行します。 作成するスクリプトでは、レポート サーバー Web サービスに対する SOAP インターフェイスを呼び出すことができます。 配置スクリプトは、レポート サーバー フォルダーの名前空間および内容の再作成や、ロールベースのセキュリティの再作成を可能にするため、このアプローチで作成します。  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースでは、SharePoint 統合モード用の PowerShell コマンドレットが導入されました。 PowerShell を使用して、SharePoint 統合を構成および管理することができます。  詳細については、次を参照してください。 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)です。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースでは、SharePoint 統合モード用の PowerShell コマンドレットが導入されました。 PowerShell を使用して、SharePoint 統合を構成および管理することができます。  詳細については、次を参照してください。 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)します。  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>スクリプトを使用したレポート サーバー コンテンツとフォルダーの移行  
  レポート サーバー環境を別のレポート サーバー インスタンスに複製するためのスクリプトを作成できます。 配置スクリプトは、一般的には [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で作成し、レポート サーバーのスクリプト ホスト ユーティリティで処理します。  
@@ -97,10 +97,10 @@ ms.locfileid: "36164501"
 > [!NOTE]  
 >  スクリプトは、資格情報を明示的に設定しない限り、スクリプトを実行しているユーザーの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 資格情報を使用して実行されます。  
   
- 書式設定およびスクリプト ファイルを実行する方法の詳細については、次を参照してください。[ユーティリティと Web サービスは、スクリプト、rs.exe と](script-with-the-rs-exe-utility-and-the-web-service.md)です。  
+ 書式を設定してスクリプト ファイルを実行する方法の詳細については、次を参照してください。[ユーティリティと Web サービスを、rs.exe とスクリプト](script-with-the-rs-exe-utility-and-the-web-service.md)します。  
   
 ## <a name="using-scripts-to-set-server-properties"></a>スクリプトを使用したサーバー プロパティの設定  
- レポート サーバーのシステム プロパティを設定するスクリプトを作成できます。 次の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET スクリプトは、プロパティを設定する 1 つの方法を示しています。 この例は、RSClientPrint ActiveX コントロールを無効にしますが、置き換えることができます`EnableClientPrinting`と`False`任意の有効なプロパティ名および値を使用します。 サーバーのプロパティの完全な一覧を表示するには、次を参照してください。[レポート サーバーのシステム プロパティ](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)です。  
+ レポート サーバーのシステム プロパティを設定するスクリプトを作成できます。 次の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET スクリプトは、プロパティを設定する 1 つの方法を示しています。 この例には、RSClientPrint ActiveX コントロールが無効にしますが、置き換えることができます`EnableClientPrinting`と`False`任意の有効なプロパティの名前と値を使用します。 サーバーのプロパティの完全な一覧を表示するのを参照してください。[レポート サーバーのシステム プロパティ](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)します。  
   
  スクリプトを使用するには、.rss 拡張子を持つファイルにスクリプトを保存し、rs.exe コマンド プロンプト ユーティリティを使用してレポート サーバー上でファイルを実行します。 スクリプトはコンパイルされないので [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]のインストールは不要です。 この例では、レポート サーバーをホストするローカル コンピューターに対する権限を持っていることを前提としています。 権限があるアカウントでログオンしていない場合は、追加のコマンド ライン引数を使用してアカウント情報を指定する必要があります。 詳細については、「[RS.exe ユーティリティ (SSRS)](rs-exe-utility-ssrs.md)」を参照してください。  
   

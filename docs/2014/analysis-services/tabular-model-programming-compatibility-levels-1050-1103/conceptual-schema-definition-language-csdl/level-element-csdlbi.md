@@ -1,5 +1,5 @@
 ---
-title: レベルの要素 (CSDLBI) |Microsoft ドキュメント
+title: 上位の要素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b63309bec7a37ef7953eb1a358ed317b366c4bee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3fd89aaa69e8dc2b29b80ca82f89d1453dc44017
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211482"
 ---
 # <a name="level-element-csdlbi"></a>Level 要素 (CSDLBI)
   Level 要素は、階層内の単一のレベルを定義する複合型です  
@@ -87,7 +87,7 @@ ms.locfileid: "36085085"
   
 ## <a name="see-also"></a>参照  
  [表形式オブジェクト モデルをについてください。](../representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [DAX の親子階層を扱う関数をについてください。](https://msdn.microsoft.com/library/gg492192(v=sql.120).aspx)   
+ [DAX の親子階層の機能の理解](https://msdn.microsoft.com/library/gg492192(v=sql.120).aspx)   
  [構成、&#40;すべて&#41;属性階層のレベル](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 830df1dd0f44b237e1571700f81919abeca826ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a57623bc05b443de086835374b5f409f630b9de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184279"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
-  クエリのストアの機能により、クエリ プランの選択やパフォーマンスに関する洞察が DBA に提供されます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 この機能により、クエリ、プラン、ランタイム統計情報の履歴が自動的にキャプチャされ、レビュー用に保持されます。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 使用して、クエリのストアを構成することができます、 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options)オプション。  
+  クエリのストアの機能により、クエリ プランの選択やパフォーマンスに関する洞察が DBA に提供されます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 この機能により、クエリ、プラン、ランタイム統計情報の履歴が自動的にキャプチャされ、レビュー用に保持されます。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 クエリ ストアを使用して構成することができます、 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options)オプション。  
   
 ||  
 |-|  
-|**適用されます**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([入手](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+|**適用対象**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([手](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
   
 > [!IMPORTANT]  
 >  現在、これはプレビュー機能です。 使用するクエリ ストアを確認して、クエリのストアの実装に同意する必要がありますが、プレビューの条項に従ってその適切なライセンス契約 (など、エンタープライズ契約、Microsoft Azure 契約、または Microsoft Online サブスクリプション契約) に [補足使用条件の Microsoft Azure プレビュー](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/)です。  
@@ -36,7 +36,7 @@ ms.locfileid: "36084111"
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>Management Studio でクエリのストアのページを使用する方法  
   
-1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]** をクリックします。 (必要[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]2016年のバージョンの[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)])。  
+1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]** をクリックします。 (必要[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の 2016年バージョン[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)])。  
   
 2.  **[データベースのプロパティ]** ダイアログ ボックスで、 **[クエリのストア]** ページをクリックします。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36084111"
   
 #### <a name="by-using-transact-sql-statements"></a>Transact-SQL ステートメントを使用する方法  
   
-1.  使用して、`ALTER DATABASE`ステートメント、クエリのストアを有効にします。 以下に例を示します。  
+1.  使用して、`ALTER DATABASE`ステートメントがクエリ ストアを有効にします。 以下に例を示します。  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
@@ -74,7 +74,7 @@ ms.locfileid: "36084111"
   
 -   特定のデータベースのリソース (CPU、I/O、メモリ) の使用パターンを分析します。  
   
- クエリのストアには、次の&2; つのストアが含まれています。 **プラン ストア** は実行プラン情報を保持し、 **ランタイム統計情報ストア** は実行統計情報を保持するためのものです。 一意のプランのプラン ストア内のクエリはによる制限を格納できる数、`max_plans_per_query`構成オプション。 パフォーマンスを向上させるために、この情報は 2 つのストアに非同期的に書き込まれます。 領域使用量を最小にするため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 これらのストア内の情報は、クエリのストアのカタログ ビューに対してクエリを実行することによって表示できます。  
+ クエリのストアには、次の&2; つのストアが含まれています。 **プラン ストア** は実行プラン情報を保持し、 **ランタイム統計情報ストア** は実行統計情報を保持するためのものです。 によって制限は、クエリにプラン ストア内に格納できる一意のプランの数、`max_plans_per_query`構成オプション。 パフォーマンスを向上させるために、この情報は 2 つのストアに非同期的に書き込まれます。 領域使用量を最小にするため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 これらのストア内の情報は、クエリのストアのカタログ ビューに対してクエリを実行することによって表示できます。  
   
  次のクエリは、クエリのストア内のクエリとプランに関する情報を返します。  
   
@@ -94,7 +94,7 @@ JOIN sys.query_store_query_text AS Txt
   
  ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
- 選択すると**機能低下したクエリ**、開く、**機能低下したクエリ**ペインで[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]です。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部にあるドロップダウン ボックスを使用すると、さまざまな条件に合わせてクエリを選択できます。 プランを選択して、グラフィカルなクエリ プランを表示します。 ソース クエリの表示、クエリ プランの強制と強制解除、表示の更新に使用できるボタンが用意されています。  
+ 選択**機能低下したクエリ**が表示されます、**機能低下したクエリ**ウィンドウ[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]します。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部にあるドロップダウン ボックスを使用すると、さまざまな条件に合わせてクエリを選択できます。 プランを選択して、グラフィカルなクエリ プランを表示します。 ソース クエリの表示、クエリ プランの強制と強制解除、表示の更新に使用できるボタンが用意されています。  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
@@ -118,14 +118,14 @@ JOIN sys.query_store_query_text AS Txt
  INTERVAL_LENGTH_MINUTES  
  クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定された時間枠は、INTERVAL_LENGTH_MINUTES 引数を介して構成されます。  
   
- クエリ、`sys.database_query_store_options`ビューによって、クエリのストアの現在のオプションを決定します。  
+ クエリ、`sys.database_query_store_options`ビューによって、クエリ ストアの現在のオプションを決定します。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してオプションを設定する方法の詳細については、「 [オプション管理](#OptionMgmt)」をご覧ください。  
   
  
   
 ##  <a name="Related"></a> 関連するビュー、関数、プロシージャ  
- クエリ ストアを表示および管理できます[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]かを次のビューとプロシージャを使用します。  
+ クエリ ストアを表示および管理できる[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]または次のビューとプロシージャを使用しています。  
   
 -   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
   
@@ -211,7 +211,7 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  任意の値は許可されていません。1、5、10、15、30、60 のいずれかの値を使用する必要があります。  
   
- 間隔の新しい値がによって公開される`sys.database_query_store_options`ビュー。  
+ 間隔の新しい値がを介して公開される`sys.database_query_store_options`ビュー。  
   
  クエリのストアの記憶域がいっぱいの場合は、次のステートメントを使用して記憶域を拡張します。  
   
@@ -305,7 +305,7 @@ JOIN sys.query_store_runtime_stats AS rs
 ORDER BY rs.last_execution_time DESC;  
 ```  
   
- **各クエリの実行の数。**  
+ **各クエリの実行回数です。**  
   
 ```  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
@@ -321,7 +321,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **過去 1 時間で実行時間が長かった平均を持つクエリの数。**  
+ **過去 1 時間で平均最長実行時間をクエリの数。**  
   
 ```  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -338,7 +338,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **対応する平均行数および実行カウントの過去 24 時間で読み取りが最大平均物理 IO が多かったクエリの数。**  
+ **最大平均物理 IO がクエリの数は、対応する平均行数および実行カウントと、過去 24 時間に読み取ります。**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -425,7 +425,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  プラン選択の変更に関連するものだけでなく、パフォーマンス低下に関するすべての情報を表示する場合、前のクエリから条件 `AND p1.plan_id <> p2.plan_id` を削除します。  
   
- **最近低下したクエリのパフォーマンス (最近の履歴の実行に実行との比較)。** 次のクエリは、実行期間に基づいてクエリの実行を比較します。 この例では、クエリは、最近の期間 (1 時間) と履歴の期間 (過去 1 日間) とで実行を比較し、additional_duration_workload の原因となったものを識別します。 このメトリックは、最近の平均実行と履歴の平均実行に最近実行の数を掛けた値の間の差として計算されます。 これは、履歴と比較して、最近の実行でどれほどの期間が追加されたかを表します。  
+ **最近 (最近の実行と履歴の実行を比較する場合) のパフォーマンスが低下するクエリ。** 次のクエリは、実行期間に基づいてクエリの実行を比較します。 この例では、クエリは、最近の期間 (1 時間) と履歴の期間 (過去 1 日間) とで実行を比較し、additional_duration_workload の原因となったものを識別します。 このメトリックは、最近の平均実行と履歴の平均実行に最近実行の数を掛けた値の間の差として計算されます。 これは、履歴と比較して、最近の実行でどれほどの期間が追加されたかを表します。  
   
 ```  
 --- "Recent" workload - last 1 hour  
@@ -503,7 +503,7 @@ OPTION (MERGE JOIN);
 
   
 ###  <a name="Stability"></a> クエリ パフォーマンスの安定性を維持する  
- 実行されるクエリを複数回表示した[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]異なるプランにより、別のリソース使用率および期間を使用します。 クエリのストアを使用すると、クエリ パフォーマンスが低下している時点を検出し、対象期間の最適なプランを特定できます。 こうすることで、将来のクエリの実行で最適なプランを強制的に適用できます。  
+ 実行されるクエリを複数回表示した[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]が別のリソース使用率と期間で発生したため、さまざまなプランを使用します。 クエリのストアを使用すると、クエリ パフォーマンスが低下している時点を検出し、対象期間の最適なプランを特定できます。 こうすることで、将来のクエリの実行で最適なプランを強制的に適用できます。  
   
  パラメーターを持つクエリ (自動的にパラメーター化されたもの、または手動でパラメーター化されたもののいずれか) に関して、クエリ パフォーマンスが一定ではないものを特定することもできます。 さまざまなプランの中で、ほとんどすべてのパラメーター値に対して高速で最適なプランを特定し、そのプランを強制的に適用できます。これにより、より一層多様なユーザー シナリオに対して、予測可能なパフォーマンスを維持できます。  
   
@@ -513,9 +513,9 @@ OPTION (MERGE JOIN);
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- 使用する場合`sp_query_store_force_plan`強制できるのクエリ ストアによってそのクエリのプランとして記録されたプランのみです。 つまり、クエリで使用できるプランは、クエリのストアがアクティブであったときに Q1 を実行するために既に使用されているプランのみです。  
+ 使用する場合`sp_query_store_force_plan`のみクエリ ストアによってそのクエリのプランとして記録されたプランを強制することができます。 つまり、クエリで使用できるプランは、クエリのストアがアクティブであったときに Q1 を実行するために既に使用されているプランのみです。  
   
- **クエリに対するプランの強制を削除する。** 依存するもう一度、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クエリ オプティマイザーを使用して、最適なクエリ プランを計算する`sp_query_store_unforce_plan`をクエリに対して選択されたプランを強制しないようにします。  
+ **クエリに対するプランの強制を削除する。** 再利用する、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クエリ オプティマイザーを使用して、最適なクエリ プランを計算する`sp_query_store_unforce_plan`をクエリに対して選択されたプランを強制しないようにします。  
   
 ```  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

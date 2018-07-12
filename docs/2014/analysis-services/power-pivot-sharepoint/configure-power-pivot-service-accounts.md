@@ -1,5 +1,5 @@
 ---
-title: PowerPivot サービス アカウントの構成 |Microsoft ドキュメント
+title: PowerPivot サービス アカウントの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c8e4bd2d01fb5745e3e9c67c94561789cfbc8759
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 719a001aa4c15a36f33dbb44ff51e442d179e51b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149953"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>PowerPivot サービス アカウントの構成
-  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のインストールには、サーバー処理をサポートする 2 つのサービスが含まれます。 **SQL Server Analysis Services (PowerPivot)** サービスは、アプリケーション サーバーで PowerPivot データの処理およびクエリのサポートを提供する Windows サービスです。 このサービスのログイン アカウントは、SharePoint 統合モードで Analysis Services をインストールするときに、SQL Server セットアップで必ず指定します。  
+  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のインストールには、サーバー処理をサポートする 2 つのサービスが含まれます。 **SQL Server Analysis Services (PowerPivot)** サービスは、アプリケーション サーバー上の PowerPivot データの処理およびクエリのサポートを提供する Windows サービスです。 このサービスのログイン アカウントは、SharePoint 統合モードで Analysis Services をインストールするときに、SQL Server セットアップで必ず指定します。  
   
  SharePoint ファームのアプリケーション プール ID で実行される共有 Web サービスである PowerPivot サービス アプリケーション用に、アカウントをもう 1 つ指定する必要があります。 このアカウントは、PowerPivot 構成ツールまたは PowerShell を使用して [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インストールを構成するときに指定します。  
   
@@ -34,11 +34,11 @@ ms.locfileid: "36165698"
   
  [SQL Server Analysis Services (PowerPivot) インスタンスの有効期限切れのパスワードを更新します。](#bkmk_passwordssas)  
   
- [PowerPivot サービス アプリケーションの有効期限切れのパスワードを更新します。](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
+ [PowerPivot サービス アプリケーションの有効期限が切れたパスワードを更新します。](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
   
  [各サービスの実行に使用するアカウントの変更](#bkmk_newacct)  
   
- [作成または、PowerPivot サービス アプリケーションのアプリケーション プールを変更します。](#bkmk_appPool)  
+ [作成するか、PowerPivot サービス アプリケーションのアプリケーション プールの変更](#bkmk_appPool)  
   
  [アカウント要件と権限](#requirements)  
   
@@ -48,25 +48,25 @@ ms.locfileid: "36165698"
   
 ##  <a name="bkmk_passwordssas"></a> SQL Server Analysis Services (PowerPivot) インスタンスの有効期限切れのパスワードを更新します。  
   
-1.  [スタート] ボタンをクリックし、 **[管理ツール]**、 **[サービス]** の順にクリックします。 ダブルクリックして**SQL Server Analysis Services (PowerPivot)** です。 **[ログオン]** をクリックし、アカウントの新しいパスワードを入力します。  
+1.  [スタート] ボタンをクリックし、 **[管理ツール]**、 **[サービス]** の順にクリックします。 ダブルクリック**SQL Server Analysis Services (PowerPivot)** します。 **[ログオン]** をクリックし、アカウントの新しいパスワードを入力します。  
   
-2.  サーバーの全体管理で、[セキュリティ] セクションの **[マネージ アカウントの構成]** をクリックします。  
+2.  サーバーの全体管理で、[セキュリティ] セクションの **[管理アカウントの構成]** をクリックします。  
   
 3.  **[編集]** をクリックして指定のアカウントを変更します。  
   
 4.  **[今すぐパスワードを変更]** をクリックします。  
   
-5.  **[アカウント パスワードを新しい値に設定する]** をクリックします。 マネージ アカウントで実行されるすべてのサービスで、更新された資格情報が使用されます。  
+5.  **[アカウント パスワードを新しい値に設定する]** をクリックします。 管理アカウントで実行されるすべてのサービスで、更新された資格情報が使用されます。  
   
-##  <a name="bkmk_passwordapp"></a> PowerPivot サービス アプリケーションの有効期限切れのパスワードを更新します。  
+##  <a name="bkmk_passwordapp"></a> PowerPivot サービス アプリケーションの有効期限が切れたパスワードを更新します。  
   
-1.  サーバーの全体管理で、[セキュリティ] セクションの **[マネージ アカウントの構成]** をクリックします。  
+1.  サーバーの全体管理で、[セキュリティ] セクションの **[管理アカウントの構成]** をクリックします。  
   
 2.  **[編集]** をクリックして指定のアカウントを変更します。  
   
 3.  **[今すぐパスワードを変更]** をクリックします。  
   
-4.  **[アカウント パスワードを新しい値に設定する]** をクリックします。 マネージ アカウントで実行されるすべてのサービスで、更新された資格情報が使用されます。  
+4.  **[アカウント パスワードを新しい値に設定する]** をクリックします。 管理アカウントで実行されるすべてのサービスで、更新された資格情報が使用されます。  
   
 ##  <a name="bkmk_newacct"></a> 各サービスの実行に使用するアカウントの変更  
   
@@ -74,17 +74,19 @@ ms.locfileid: "36165698"
   
 2.  **[Windows サービス - SQL Server Analysis Services]** を選択して、Analysis Services サービス アカウントを変更します。  
   
-3.  **[このサービスのアカウントを選択する]** で、既存のマネージ アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
+3.  
+  **[このサービスのアカウントを選択する]** で、既存の管理アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
   
-4.  選択**サービス アプリケーション プール - SharePoint Web サービスのシステム**を既定の PowerPivot サービス アプリケーションのアプリケーション プール id を変更します。 インストールの構成によっては、SharePoint サービス用に作成された既存のサービス アプリケーション プールでサービスが実行されている場合があります。 既定では、PowerPivot 構成ツールによって登録されるとしてサービス**既定の PowerPivot サービス アプリケーション (PowerPivot サービス アプリケーション)** です。  
+4.  選択**サービス アプリケーション プール - SharePoint Web サービスのシステム**既定の PowerPivot サービス アプリケーションのアプリケーション プール id を変更します。 インストールの構成によっては、SharePoint サービス用に作成された既存のサービス アプリケーション プールでサービスが実行されている場合があります。 既定では、PowerPivot 構成ツールは、サービスを登録します**既定の PowerPivot サービス アプリケーション (PowerPivot サービス アプリケーション)** します。  
   
      サービスが SharePoint 管理者によって手動で構成された場合、サービスにはほとんどの場合に自身のサービス アプリケーション プールがあります。  
   
-5.  **[このサービスのアカウントを選択する]** で、既存のマネージ アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
+5.  
+  **[このサービスのアカウントを選択する]** で、既存の管理アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
   
 6.  **[OK]** をクリックします。  
   
-##  <a name="bkmk_appPool"></a> 作成または、PowerPivot サービス アプリケーションのアプリケーション プールを変更します。  
+##  <a name="bkmk_appPool"></a> 作成するか、PowerPivot サービス アプリケーションのアプリケーション プールの変更  
   
 1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
@@ -92,7 +94,7 @@ ms.locfileid: "36165698"
   
 3.  リボンの **[プロパティ]** をクリックします。  
   
-4.  **[新しいアプリケーション プールの作成]** をクリックします。 アプリケーション プールの名前を指定し、その ID のマネージ アカウントを指定します。  
+4.  **[新しいアプリケーション プールの作成]** をクリックします。 アプリケーション プールの名前を指定し、その ID の管理アカウントを指定します。  
   
 ##  <a name="requirements"></a> アカウント要件と権限  
  PowerPivot for SharePoint の配置を計画するときには、次のサービス アカウントについて計画する必要があります。  
@@ -105,10 +107,10 @@ ms.locfileid: "36165698"
   
 |要件|説明|  
 |-----------------|-----------------|  
-|プロビジョニングの要件|このアカウントは、SQL Server セットアップで指定する必要がありますを使用して、 **Analysis Services の構成 ページ**インストール ウィザードで (または`ASSVCACCOUNT`セットアップのコマンド ライン インストール パラメーター)。<br /><br /> ユーザー名やパスワードは、サーバーの全体管理、PowerShell、または PowerPivot 構成ツールを使用して変更できます。 その他のツールでのアカウントやパスワードの変更はサポートされていません。|  
+|プロビジョニングの要件|このアカウントは、SQL Server セットアップ中に指定する必要がありますを使用して、 **Analysis Services - 構成ページ**インストール ウィザード (または`ASSVCACCOUNT`コマンド ライン セットアップのインストール パラメーター)。<br /><br /> ユーザー名やパスワードは、サーバーの全体管理、PowerShell、または PowerPivot 構成ツールを使用して変更できます。 その他のツールでのアカウントやパスワードの変更はサポートされていません。|  
 |ドメイン ユーザー アカウントの要件|このアカウントは Windows ドメイン ユーザー アカウントであることが必要です。 ビルトイン コンピューター アカウント (Network Service や Local Service など) は禁止されています。 SQL Server セットアップは、コンピューター アカウントが指定された場合にインストールをブロックすることで、ドメイン ユーザー アカウント要件を適用します。|  
-|権限の要件|このアカウントは SQLServerMSASUser$ のメンバーである必要があります\<server > $PowerPivot セキュリティ グループとローカル コンピューターの WSS_WPG セキュリティ グループです。 これらの権限は自動的に付与されます。 確認するか、アクセス許可を付与する方法の詳細については、次を参照してください[、PowerPivot サービス アカウント管理者のアクセス許可を手動で付与](#updatemanually)」を参照し、[初期構成&#40;PowerPivot for SharePoint。&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).|  
-|スケールアウトの要件|ファームに複数の PowerPivot for SharePoint サーバー インスタンスをインストールする場合は、すべての Analysis Services サーバー インスタンスが同じドメイン ユーザー アカウントで実行されている必要があります。 たとえば、最初の [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスが Contoso\ssas-srv01 として実行されるように構成した場合は、それ以降に同じファームに配置したその他のすべての [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスも Contoso\ssas-srv01 (または現在の任意のアカウント) として実行される必要があります。<br /><br /> すべてのサービス インスタンスが同じアカウントで実行されるように構成すると、PowerPivot System サービスで、クエリ処理やデータ更新のジョブをファーム内の任意の Analysis Services サービス インスタンスに割り当てられるようになります。 また、Analysis Services サーバー インスタンスに対してサーバーの全体管理のマネージ アカウント機能を使用できるようになります。 すべての [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスに同じアカウントを使用すると、アカウントまたはパスワードを 1 回変更するだけで、これらの資格情報を使用するすべてのサービス インスタンスを自動的に更新できます。<br /><br /> SQL Server セットアップでは、同一アカウント要件が適用されます。 PowerPivot for SharePoint インスタンスが既に SharePoint ファームにインストールされているスケールアウト配置では、指定した [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] アカウントとファーム内で既に使用されているアカウントが異なる場合、セットアップによって新規インストールがブロックされます。|  
+|権限の要件|このアカウントは SQLServerMSASUser$ のメンバーである必要があります\<server > $PowerPivot セキュリティ グループとローカル コンピューターの WSS_WPG セキュリティ グループ。 これらの権限は自動的に付与されます。 確認するか、アクセス許可を付与する方法の詳細については、次を参照してください[、PowerPivot サービス アカウント管理のアクセス許可を手動で付与](#updatemanually)このトピックの「と[初期構成&#40;PowerPivot for SharePoint。&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).|  
+|スケールアウトの要件|ファームに複数の PowerPivot for SharePoint サーバー インスタンスをインストールする場合は、すべての Analysis Services サーバー インスタンスが同じドメイン ユーザー アカウントで実行されている必要があります。 たとえば、最初の [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスが Contoso\ssas-srv01 として実行されるように構成した場合は、それ以降に同じファームに配置したその他のすべての [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスも Contoso\ssas-srv01 (または現在の任意のアカウント) として実行される必要があります。<br /><br /> すべてのサービス インスタンスが同じアカウントで実行されるように構成すると、PowerPivot System サービスで、クエリ処理やデータ更新のジョブをファーム内の任意の Analysis Services サービス インスタンスに割り当てられるようになります。 また、Analysis Services サーバー インスタンスに対してサーバーの全体管理の管理アカウント機能を使用できるようになります。 すべての [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスに同じアカウントを使用すると、アカウントまたはパスワードを 1 回変更するだけで、これらの資格情報を使用するすべてのサービス インスタンスを自動的に更新できます。<br /><br /> SQL Server セットアップでは、同一アカウント要件が適用されます。 PowerPivot for SharePoint インスタンスが既に SharePoint ファームにインストールされているスケールアウト配置では、指定した [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] アカウントとファーム内で既に使用されているアカウントが異なる場合、セットアップによって新規インストールがブロックされます。|  
   
 #### <a name="powerpivot-service-application-pool"></a>PowerPivot サービス アプリケーション プール  
   
@@ -124,15 +126,15 @@ ms.locfileid: "36165698"
   
 1.  [監視] で、 **[ジョブ定義の確認]** をクリックします。  
   
-2.  選択**PowerPivot の構成タイマー ジョブ**です。  
+2.  選択**PowerPivot 構成タイマー ジョブ**します。  
   
 3.  **[今すぐ実行]** をクリックします。  
   
- 最後の手段として、PowerPivot サービス アプリケーションに、Analysis Services システム管理権限を付与することで適切なアクセス許可を確認してください、具体的には、サービス アプリケーション id を SQLServerMSASUser$ を追加\<サーバー名 > $PowerPivot Windows セキュリティ グループです。 SharePoint ファームに統合された各 Analysis Services インスタンスに対してこれらの手順を繰り返す必要があります。  
+ 最後の手段として、PowerPivot サービス アプリケーションへの Analysis Services システム管理アクセス許可を付与することで適切なアクセス許可を確認および具体的には、サービス アプリケーションの id を SQLServerMSASUser$ に追加\<servername > $PowerPivot Windows セキュリティ グループ。 SharePoint ファームに統合された各 Analysis Services インスタンスに対してこれらの手順を繰り返す必要があります。  
   
  Windows セキュリティ グループを更新するには、ローカル管理者である必要があります。  
   
-1.  SQL Server Management Studio でとして Analysis Services インスタンスに接続\<サーバー名 > \POWERPIVOT です。  
+1.  SQL Server Management studio で、Analysis Services インスタンスに接続します。\<サーバー名 > \POWERPIVOT します。  
   
 2.  サーバー名を右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -140,7 +142,7 @@ ms.locfileid: "36165698"
   
 4.  **[追加]** をクリックします。  
   
-5.  PowerPivot サービス アプリケーション プールに使用されるアカウントの名前を入力し、クリックして**OK**です。  
+5.  PowerPivot サービス アプリケーション プールを使用するアカウントの名前を入力し、クリックして**OK**します。  
   
 6.  [管理ツール] で、 **[コンピューターの管理]** をクリックします。  
   
@@ -148,11 +150,11 @@ ms.locfileid: "36165698"
   
 8.  **[グループ]** を開きます。  
   
-9. SQLServerMSASUser$ をダブルクリック\<servername > $PowerPivot です。  
+9. SQLServerMSASUser$ をダブルクリックして\<servername > $PowerPivot します。  
   
 10. **[追加]** をクリックします。  
   
-11. PowerPivot サービス アプリケーション プールに使用されるアカウントの名前を入力し、クリックして**OK**です。  
+11. PowerPivot サービス アプリケーション プールを使用するアカウントの名前を入力し、クリックして**OK**します。  
   
 ##  <a name="expired"></a> トラブルシューティング: サーバーの全体管理または SharePoint Foundation Web アプリケーション サービスのパスワードの期限切れによる HTTP 503 エラーの解決  
  アカウントのリセットまたはパスワードの期限切れが原因で、サーバーの全体管理サービスまたは SharePoint Foundation Web アプリケーション サービスが停止する場合は、SharePoint サーバーの全体管理あるいは SharePoint サイトを開こうとすると、"サービスを利用できません" という HTTP 503 エラー メッセージが表示されます。 サーバーをオンラインに戻すには、次の手順を実行します。 サーバーの全体管理を使用できる場合は、続行して期限切れのアカウント情報を更新できます。  
@@ -171,9 +173,10 @@ ms.locfileid: "36165698"
   
 3.  IISRESET を実行します。 この操作を行うには、管理者コマンド プロンプトを開き、コマンドで「`iisreset`」と入力します。  
   
-4.  SharePoint サーバーの全体管理で、[セキュリティ] の **[マネージ アカウントの構成]** をクリックします。  
+4.  SharePoint サーバーの全体管理で、[セキュリティ] の **[管理アカウントの構成]** をクリックします。  
   
-5.  **[編集]** をクリックして、期限切れのパスワードを持つマネージ アカウントの情報を更新します。  
+5.  
+  **[編集]** をクリックして、期限切れのパスワードを持つ管理アカウントの情報を更新します。  
   
 6.  **[今すぐパスワードを変更]** をクリックします。  
   

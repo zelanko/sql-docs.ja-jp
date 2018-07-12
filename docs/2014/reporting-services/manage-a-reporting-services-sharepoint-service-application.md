@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7f33036175d395359efbdb5708a422b27bf711db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6539627f9b1fc5fc41b9cc535efd5cb4c5949ecc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153873"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションは、SharePoint サーバーの全体管理から管理します。 管理ページとプロパティ ページを使用して、サービス アプリケーションや一般的な管理タスクの構成を更新できます。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションは、SharePoint サーバーの全体管理で管理されます。 管理ページとプロパティ ページを使用して、サービス アプリケーションや一般的な管理タスクの構成を更新できます。  
   
  このトピックの内容は次のとおりです。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "36164742"
   
 |ページ|説明|  
 |----------|-----------------|  
-|暗号化キーのバックアップ|1) **[パスワード]** ボックスと **[パスワードの確認入力]** ボックスにパスワードを入力し、 **[エクスポート]** をクリックします。 入力したパスワードがドメイン ポリシーの複雑さの要件を満たしていない場合は、警告が表示されます。<br /><br /> 2) キー ファイルを保存する場所を指定するよう求められます。 実行している 1 つから別のコンピューター上のキー ファイルを保存する必要があります[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]です。 既定のファイル名は、サービス アプリケーションと同じ名前です。|  
+|暗号化キーのバックアップ|1) **[パスワード]** ボックスと **[パスワードの確認入力]** ボックスにパスワードを入力し、 **[エクスポート]** をクリックします。 入力したパスワードがドメイン ポリシーの複雑さの要件を満たしていない場合は、警告が表示されます。<br /><br /> 2) キー ファイルを保存する場所を指定するよう求められます。 別のコンピューターを実行している 1 つからのキー ファイルを格納する必要があります[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]します。 既定のファイル名は、サービス アプリケーションと同じ名前です。|  
 |暗号化キーの復元|1) キー ファイルを入力するか、または **[ファイルの場所]** ボックスでファイルの場所を参照します。<br /><br /> 2) **[パスワード]** ボックスで、暗号化ファイルのバックアップに使用されたパスワードを入力します。<br /><br /> 3) **[OK]** をクリックします。|  
 |暗号化キーの変更|この操作を行うと、新しいキーが作成され、暗号化されたコンテンツが再暗号化されます。 コンテンツの量が多い場合は、この操作は数時間かかります。<br /><br /> 暗号化キーの変更操作が完了したら、新しいキーのバックアップを作成することをお勧めします。|  
 |削除された暗号化されたコンテンツ|削除されたコンテンツを復旧することはできません。<br /><br /> **\*\* 重要: \*\*** 対称キーの削除と再作成の操作は、取り消したり元に戻したりすることはできません。 キーを削除または再作成すると、現在のインストールに重大な影響を及ぼす可能性があります。 対称キーを削除すると、その対称キーを使用して暗号化されている既存のデータも削除されます。 たとえば、外部のレポート データ ソースへの接続文字列、保存されている接続文字列、サブスクリプション情報の一部が削除されることがあります。|  
@@ -157,7 +157,7 @@ ms.locfileid: "36164742"
 Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
 ```  
   
- 詳細については、次を参照してください。 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)です。  
+ 詳細については、次を参照してください。 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)します。  
   
 ### <a name="options"></a>および  
  **[実行アカウントの指定]**  

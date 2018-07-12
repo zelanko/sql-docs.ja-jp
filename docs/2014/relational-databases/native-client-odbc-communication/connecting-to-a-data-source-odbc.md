@@ -1,13 +1,11 @@
 ---
-title: データ ソース (ODBC) への接続 |Microsoft ドキュメント
+title: データ ソース (ODBC) への接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1b4972792bf40c5569a3529c583209bfd4f53407
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 129d0cbe880000bddb42d5089d743e65ce60cb0e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074187"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416321"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>データ ソースへの接続 (ODBC)
   アプリケーションは、環境ハンドルと接続ハンドルを割り当て、任意の接続属性を設定してから、データ ソースまたはドライバーに接続します。 接続には、次の 3 つの関数を使用できます。  
@@ -44,15 +42,15 @@ ms.locfileid: "36074187"
   
 -   **SQLBrowseConnect**  
   
- 使用できる、さまざまな接続文字列オプションを含む、データ ソースに接続の詳細については、次を参照してください。[使用した Connection String Keywords with SQL Server Native Client を使用して](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)です。  
+ 使用可能なさまざまな接続文字列オプションを含む、データ ソースへの接続の詳細については、次を参照してください。[使用した Connection String Keywords with SQL Server Native Client を使用して](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)します。  
   
 ## <a name="sqlconnect"></a>SQLConnect  
- **SQLConnect**最も簡単な接続関数です。 この関数は、データ ソース名、ユーザー ID、パスワードの 3 つのパラメーターを受け取ります。 使用して**SQLConnect**これら 3 つのパラメーターが、データベースへの接続に必要なすべての情報が含まれてとき。 これを行うには、ビルドを使用してデータ ソースの一覧**SQLDataSources**以外の場合は、ユーザーにデータ ソース、ユーザー ID とパスワードです。 確認し、呼び出す**SQLConnect**です。  
+ **SQLConnect**は最も簡単な接続関数です。 この関数は、データ ソース名、ユーザー ID、パスワードの 3 つのパラメーターを受け取ります。 使用**SQLConnect**ときにこれら 3 つのパラメーターは、データベースへの接続に必要なすべての情報を含めることができます。 これを行うには、ビルドを使用してデータ ソースの一覧**SQLDataSources**; データ ソース、ユーザー ID、およびパスワードの入力を求めますを呼び出して**SQLConnect**します。  
   
- **SQLConnect**データ ソース名、ユーザー ID とパスワードがデータ ソースに接続するための十分なことと、ODBC データ ソースに ODBC ドライバーが接続を確立する必要があるその他のすべての情報が含まれることを前提としています。 異なり[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)と[SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md)、 **SQLConnect**接続文字列を使用しません。  
+ **SQLConnect**データ ソース名、ユーザー ID、およびパスワードがデータ ソースに接続するための十分なことと、ODBC データ ソースで ODBC ドライバーは接続を確立する必要がある他のすべての情報が含まれることを前提としています。 異なり[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)と[SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md)、 **SQLConnect**接続文字列を使用しません。  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
- **SQLDriverConnect**データ ソース名、ユーザー ID、およびパスワードより多くの情報が必要な場合に使用します。 パラメーターのいずれかの**SQLDriverConnect**ドライバー固有の情報を含む接続文字列です。 使用する場合があります**SQLDriverConnect**の代わりに**SQLConnect**次の理由。  
+ **SQLDriverConnect**データ ソース名、ユーザー ID、およびパスワードより多くの情報が必要な場合に使用します。 1 つのパラメーターの**SQLDriverConnect**ドライバー固有の情報を含む接続文字列です。 使用する場合があります**SQLDriverConnect**の代わりに**SQLConnect**次の理由。  
   
 -   接続時にドライバー固有の情報を指定する場合  
   
@@ -60,20 +58,20 @@ ms.locfileid: "36074187"
   
 -   ODBC データ ソースを使用せずに接続する場合  
   
- **SQLDriverConnect**接続文字列には、一連 ODBC ドライバーでサポートされているすべての接続情報を指定するキーワードと値のペアにはが含まれています。 各ドライバーでは、ドライバーでサポートされるすべての接続情報を表すドライバー固有のキーワード以外に、標準の ODBC キーワード (DSN、FILEDSN, DRIVER、UID、PWD、および SAVEFILE) をサポートします。 **SQLDriverConnect**せず、データ ソースの接続に使用できます。 たとえばのインスタンスに「DSN のない」接続を作成するように設計されたアプリケーション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]呼び出すことができます**SQLDriverConnect**ログイン ID、パスワード、ネットワーク ライブラリ、サーバーの名前を定義する接続文字列を使用接続して、既定のデータベースを使用します。  
+ **SQLDriverConnect**接続文字列には、一連 ODBC ドライバーでサポートされているすべての接続情報を指定するキーワードと値のペアにはが含まれています。 各ドライバーでは、ドライバーでサポートされるすべての接続情報を表すドライバー固有のキーワード以外に、標準の ODBC キーワード (DSN、FILEDSN, DRIVER、UID、PWD、および SAVEFILE) をサポートします。 **SQLDriverConnect**せず、データ ソースに接続するために使用できます。 たとえば、「DSN のない」のインスタンスに接続を作成するように設計されたアプリケーション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]呼び出せる**SQLDriverConnect**ログイン ID、パスワード、ネットワーク ライブラリ、サーバー名を定義する接続文字列を含む接続して、既定のデータベースを使用します。  
   
  使用する場合**SQLDriverConnect**、接続情報が必要なすべてのユーザーに確認の 2 つのオプションがあります。  
   
 -   アプリケーション ダイアログ ボックス  
   
-     接続情報の入力を要求しを呼び出してアプリケーション ダイアログ ボックスを作成することができます**SQLDriverConnect** NULL ウィンドウ ハンドルを持つと*DriverCompletion*に SQL_DRIVER_NOPROMPT を設定します。 このようにパラメーターを設定すると、ODBC ドライバー独自のダイアログ ボックスが開かれなくなります。 この方法は、アプリケーションでユーザー インターフェイスを制御することが重要な場合に使用します。  
+     接続情報の入力を求めるを呼び出してアプリケーション ダイアログ ボックスを作成することができます**SQLDriverConnect** NULL ウィンドウのハンドルを持つと*DriverCompletion*を SQL_DRIVER_NOPROMPT に設定します。 このようにパラメーターを設定すると、ODBC ドライバー独自のダイアログ ボックスが開かれなくなります。 この方法は、アプリケーションでユーザー インターフェイスを制御することが重要な場合に使用します。  
   
 -   ドライバー ダイアログ ボックス  
   
-     有効なウィンドウ ハンドルを渡すためにアプリケーションをコーディングできます**SQLDriverConnect**設定と、 *DriverCompletion* SQL_DRIVER_COMPLETE、SQL_DRIVER_PROMPT、または SQL_DRIVER_COMPLETE_ パラメーター必須。 この場合、ドライバーがダイアログ ボックスを生成して、ユーザーに接続情報を要求します。 この方法を使用すると、アプリケーション コードが簡素化されます。  
+     識別する有効なウィンドウのハンドルを渡すアプリケーションをコーディングする**SQLDriverConnect**設定と、 *DriverCompletion*パラメーターに SQL_DRIVER_COMPLETE、SQL_DRIVER_PROMPT、または SQL_DRIVER_COMPLETE_必須。 この場合、ドライバーがダイアログ ボックスを生成して、ユーザーに接続情報を要求します。 この方法を使用すると、アプリケーション コードが簡素化されます。  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
- **SQLBrowseConnect**と同様、 **SQLDriverConnect**、接続文字列を使用します。 使用して、ただし、 **SQLBrowseConnect**アプリケーションは、実行時に、データ ソースとやり取りしながら完全な接続文字列を構築できます。 この方法を使用すると、アプリケーションで次の 2 つのことを行えます。  
+ **SQLBrowseConnect**と同様に、 **SQLDriverConnect**、接続文字列を使用します。 使用して、ただし、 **SQLBrowseConnect**アプリケーションが実行時に、データ ソースとやり取りしながら完全な接続文字列を作成できます。 この方法を使用すると、アプリケーションで次の 2 つのことを行えます。  
   
 -   アプリケーション独自のダイアログ ボックスを作成して目的の情報を要求できるので、アプリケーションのユーザー インターフェイスで制御できます。  
   
@@ -81,9 +79,9 @@ ms.locfileid: "36074187"
   
      たとえば、ユーザーは最初にネットワークを介してサーバーを参照して、サーバーを選択します。次に、そのサーバーを介して、ドライバーがアクセスできるデータベースを参照するといった手順です。  
   
- ときに**SQLBrowseConnect**正常な接続が完了する後続の呼び出しで使用できる接続文字列を返します**SQLDriverConnect**です。  
+ ときに**SQLBrowseConnect**が成功した接続を完了すると後続の呼び出しで使用できる接続文字列を返します**SQLDriverConnect**します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは常に正常に実行で SQL_SUCCESS_WITH_INFO を返します**SQLConnect**、 **SQLDriverConnect**、または**SQLBrowseConnect**です。 ODBC アプリケーションを呼び出すと**SQLGetDiagRec** SQL_SUCCESS_WITH_INFO を取得した後、次のメッセージを受信できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーには必ず sql_success_with_info が成功**SQLConnect**、 **SQLDriverConnect**、または**SQLBrowseConnect**します。 ODBC アプリケーションを呼び出すと**SQLGetDiagRec** SQL_SUCCESS_WITH_INFO を取得した後、次のメッセージを受信できます。  
   
  5701  
  このメッセージは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、ユーザーのコンテキストをデータ ソースで定義されている既定のデータベースに登録したことを示します。または、データ ソースに既定のデータベースが定義されていない場合は、接続で使用したログイン ID に対して定義されている既定のデータベースに登録したことを示します。  
@@ -102,7 +100,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- 5701 と 5703 のメッセージは、情報提供だけを目的としているので無視できます。 ただし、SQL_SUCCESS_WITH_INFO リターン コードでは 5701 や 5703 以外のメッセージも返されることがあるので、そのようなリターン コードは無視しないでください。 ドライバーがのインスタンスを実行しているサーバーに接続する場合など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を通じて返さエラーのいずれかの古いカタログ ストアド プロシージャで**SQLGetDiagRec** SQL_SUCCESS_WITH_INFO 後。  
+ 5701 と 5703 のメッセージは、情報提供だけを目的としているので無視できます。 ただし、SQL_SUCCESS_WITH_INFO リターン コードでは 5701 や 5703 以外のメッセージも返されることがあるので、そのようなリターン コードは無視しないでください。 ドライバーのインスタンスを実行しているサーバーに接続する場合など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]古いカタログ ストアド プロシージャと、エラーのいずれかを通じて返さ**SQLGetDiagRec**後から sql_success_with_info に続いて。  
   
 ```  
 SqlState:   01000  
@@ -114,9 +112,9 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- エラー処理用のアプリケーションの関数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続を呼び出す必要があります**SQLGetDiagRec** sql_no_data が返されるまでです。 持つ方以外のすべてのメッセージでが機能し、 *pfNative* 5701 または 5703 のコード。  
+ 処理用のアプリケーションの関数エラー[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続を呼び出す必要があります**SQLGetDiagRec** sql_no_data が返されるまでです。 以外のすべてのメッセージでが機能し、 *pfNative* 5701 または 5703 のコード。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server との通信&#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
+ [SQL Server と通信する&#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10404"
 - sql12.rtp.rptdesigner.categorygroupproperties.variables.f1
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a4a03cad2b19cc853c48a1614daea34cb2fb43ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5385940ba528d0bdd9acf7f784d78832f1fdaa6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148493"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)
   レポート内の式で複数回使用される複雑な計算があれば、変数を作成した方がよい場合があります。 このような場合は、レポート変数またはグループ変数を作成できます。 変数名は、レポート内で一意である必要があります。  
@@ -51,12 +51,12 @@ ms.locfileid: "36164967"
   
 -   **読み書き可能な使用** 値を 1 回設定して、レポート セッション内でその値をシリアル化します。 変数の読み書き可能オプションは、レポート定義のコード ブロックで静的変数を使用するよりも適切な方法です。  
   
-     クリアすると、**読み取り専用**変数、書き込み可能なプロパティのオプションに設定されている変数を`true`です。 式から値を更新するには、SetValue メソッド (たとえば、 `=Variables!MyVariable.SetValue("123")`) を使用します。  
+     オフにすると、**読み取り専用**変数、書き込み可能なプロパティのオプションに設定されている変数を`true`します。 式から値を更新するには、SetValue メソッド (たとえば、 `=Variables!MyVariable.SetValue("123")`) を使用します。  
   
     > [!NOTE]  
     >  レポート プロセッサによって変数が初期化される時期や、変数を更新する式が評価される時期を制御することはできません。 変数の初期化の実行順序は定義されません。  
   
- セッションの詳細については、次を参照してください。[レポート ビルダーでレポートをプレビュー](../report-builder/previewing-reports-in-report-builder.md)です。  
+ セッションの詳細については、次を参照してください。[レポート ビルダーでレポートのプレビュー](../report-builder/previewing-reports-in-report-builder.md)します。  
   
 ## <a name="group-variables"></a>グループ変数  
  グループ変数は、グループのスコープ内で複合式を 1 回計算するために使用します。 グループ変数は、グループとその子グループのスコープ内でのみ有効です。  

@@ -1,5 +1,5 @@
 ---
-title: テンプレート名の選択 |Microsoft ドキュメント
+title: テンプレート名の選択 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.f1
 helpviewer_keywords:
 - Select Template Name dialog box
 ms.assetid: 30ac38b8-0c14-474c-b245-d2b8393d2f36
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 08a22aa4b3877cc338197e2d21e8d20d0eda0120
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b703b2a02146ab66ee3e0dee98dc920a70ef4a45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241182"
 ---
 # <a name="select-template-name"></a>[テンプレート名の選択]
-  **[テンプレート名の選択]** ダイアログ ボックスを使用すると、既存の [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] トレース テンプレートを選択してオペレーティング システム上のファイルにエクスポートできます。 また、このダイアログ ボックスを使用すると、既存のトレース テンプレートを編集する場合に、別の名前を選択または入力してトレース テンプレートを保存できます。 テンプレートをエクスポートするときに、このダイアログ ボックスを表示する、 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **ファイル** メニューのをポイント**テンプレート**、順にクリック**テンプレートのエクスポート**です。 テンプレート名を変更する場合にこのダイアログ ボックスにアクセスするには、 **[ファイル]** メニューの **[テンプレート]** をポイントし、 **[テンプレートの編集]** をクリックします。次に、 **[名前を付けて保存]** をクリックします。  
+  **[テンプレート名の選択]** ダイアログ ボックスを使用すると、既存の [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] トレース テンプレートを選択してオペレーティング システム上のファイルにエクスポートできます。 また、このダイアログ ボックスを使用すると、既存のトレース テンプレートを編集する場合に、別の名前を選択または入力してトレース テンプレートを保存できます。 テンプレートをエクスポートするときにこのダイアログ ボックスにアクセスする、 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **ファイル**メニューで、**テンプレート**、 をクリックし、**テンプレートのエクスポート**。 テンプレート名を変更する場合にこのダイアログ ボックスにアクセスするには、 **[ファイル]** メニューの **[テンプレート]** をポイントし、 **[テンプレートの編集]** をクリックします。次に、 **[名前を付けて保存]** をクリックします。  
   
 ## <a name="options"></a>および  
  **サーバーの種類**  

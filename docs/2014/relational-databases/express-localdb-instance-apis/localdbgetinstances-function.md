@@ -1,5 +1,5 @@
 ---
-title: LocalDBGetInstances 関数 |Microsoft ドキュメント
+title: LocalDBGetInstances 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 054a5da018b0702da0851c0bc29eda6297876724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 94dba6bd5c8900d1010b4d9e7f78402c3c9b2e65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258698"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 関数
   指定したバージョンのすべての SQL Server Express LocalDB インスタンスを返します。  
@@ -48,7 +48,7 @@ HRESULT LocalDBGetInstances(
  [出力] この関数が返す場合、ユーザーのワークステーション上の名前付きおよび既定の LocalDB インスタンスの両方の名前を格納します。  
   
  *lpdwNumberOfInstances*  
- [入力/出力]入力のインスタンス名のスロットの数を格納、 *pInstanceNames*バッファー。 出力側では、ユーザーのワークステーション上で見つかった LocalDB インスタンスの数を格納します。  
+ [入力/出力]入力時にインスタンス名にスロットの数が含まれています。、 *pInstanceNames*バッファー。 出力側では、ユーザーのワークステーション上で見つかった LocalDB インスタンスの数を格納します。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  
@@ -76,7 +76,7 @@ HRESULT LocalDBGetInstances(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)です。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

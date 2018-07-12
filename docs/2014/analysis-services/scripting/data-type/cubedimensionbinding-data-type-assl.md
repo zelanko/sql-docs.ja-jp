@@ -1,5 +1,5 @@
 ---
-title: CubeDimensionBinding データ型 (ASSL) |Microsoft ドキュメント
+title: CubeDimensionBinding データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubeDimensionBinding data type
 ms.assetid: 7288e345-4a3e-4197-82e9-9daa38f6e928
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 44e652f281b6c5164b4ccc44fe85ed2b0a0b5a01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e511f26166e7f8457b2423df2bd3030e695edde1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157343"
 ---
 # <a name="cubedimensionbinding-data-type-assl"></a>CubeDimensionBinding データ型 (ASSL)
-  バインディングを表す派生データ型を定義、[ディメンション](../objects/dimension-element-assl.md)、[メジャー](../objects/measure-element-assl.md)、または[MiningModel](../objects/miningmodel-element-assl.md)キューブ ディメンションへの要素。  
+  バインドを表す派生データ型を定義、[ディメンション](../objects/dimension-element-assl.md)、[メジャー](../objects/measure-element-assl.md)、または[MiningModel](../objects/miningmodel-element-assl.md)キューブ ディメンションへの要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36084881"
 |派生要素|参照してください[バインド](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
- 詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、`Binding`型との継承階層`Binding`型を参照してください[&#40;ASSL&#41;](binding-data-type-assl.md)です。  
+ 詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、`Binding`型との継承階層`Binding`型を参照してください[&#40;ASSL&#41;](binding-data-type-assl.md)します。  
   
- ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.CubeDimensionBinding>します。  
   

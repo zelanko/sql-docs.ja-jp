@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.browseprincipals.f1
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9ffc801a102ecde6cf7070bd404121d62dcec11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e82e472cc78175af5707bcb83cc9777da77c3a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152803"
 ---
 # <a name="browse-all-principals-dialog-box"></a>[すべてのプリンシパルを参照] ダイアログ ボックス
   **[すべてのプリンシパルを参照]** ダイアログ ボックスを使用して、データベースのプリンシパルを選択し、選択したプロジェクトに対する、または選択したフォルダーに格納されたすべてのプロジェクトに対するプリンシパルの権限を変更できます。  
@@ -59,10 +59,10 @@ ms.locfileid: "36164877"
  **[アイコン列]**  
  プリンシパルの **[種類]** に対応したアイコンです。  
   
- **Name**  
+ **名前**  
  プリンシパルの名前です。  
   
- **Type**  
+ **型**  
  プリンシパルの種類。 一般的な種類を次に示します。  
   
 -   SQL ユーザー  

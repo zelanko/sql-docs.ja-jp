@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - deleting roles
@@ -21,13 +21,13 @@ ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4443cdc530e2aeb3e600db9ba09bf7d54a6d9d9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f2c77960d87f06aed87ffddefa534b8ee8a1640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148233"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>ロールを作成、削除、または変更する (Management Studio)
   Reporting Services には、レポート サーバーへのアクセス レベルをあらかじめ定義したロールが用意されています。 レポート サーバーにアクセスする各ユーザーまたはグループは、実行できるタスクが定義されたロールを介して、レポート サーバーにアクセスすることになります。 ロールは、レポート サーバー全体に対して定義されます。 レポート サーバーの特定の部分についてロール定義を変更したり、状況に依存するようなロールを指定したりすることはできません。  
@@ -49,7 +49,7 @@ ms.locfileid: "36085154"
   
      また、システム レベルのロールの定義を作成する場合は、 **[システム ロール]** を右クリックし、 **[新しいシステム ロール]** をポイントします。  
   
-4.  ロールに対する一意の名前を入力します。 名前には、少なくとも 1 つの文字が含まれている必要があります。 スペースおよび記号を含めることもできますが、; ? : @ & = +, $/* \< > |"または/です。  
+4.  ロールに対する一意の名前を入力します。 名前には、少なくとも 1 つの文字が含まれている必要があります。 スペースおよび記号を含めることもできますが、; ? : @ & = +, $/* \< > |"または/。  
   
 5.  必要に応じて、説明を入力します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、この説明はこのページでのみ表示されます。 レポート マネージャーを使用してこのアイテムを表示するユーザーは、この説明をレポート マネージャーで参照できます。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36085154"
   
 ## <a name="see-also"></a>参照  
  [Management Studio でレポート サーバーに接続する](../tools/connect-to-a-report-server-in-management-studio.md)   
- (作成、および-管理-ロール-assignments.md)   
+ (作成-と-管理-ロール-assignments.md)   
  [SQL Server Management Studio の Reporting Services &#40;SSRS&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [SQL Server replication], non-SQL Server Subscribers
 - Oracle Subscribers [SQL Server replication]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 caps.latest.revision: 55
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 86baf5095ce0507a9e714fd682391e5cbe8a0229
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e63539a83e88470e60abd2b53bf0602ada2be052
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160353"
 ---
 # <a name="oracle-subscribers"></a>Oracle サブスクライバー
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以降の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、Oracle の提供する OLE DB プロバイダーによる、Oracle へのプッシュ サブスクリプションがサポートされています。  

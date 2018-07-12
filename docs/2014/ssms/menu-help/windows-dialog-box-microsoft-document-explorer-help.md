@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.windows
 helpviewer_keywords:
 - Windows dialog box
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a5ca9a5b9c78289982bf80a5928127c648015670
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9bffc5cfc513ca5273df4ff0cc00fa52526d66ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210462"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>[ウィンドウ] ダイアログ ボックス (Microsoft Document Explorer ヘルプ)
   このダイアログ ボックスを使用すると、エディターおよびデザイナー内で開いているドキュメントを表示したり、閉じたり、整列したりできます。 このダイアログ ボックスを表示するには、 **[ウィンドウ]** メニューの **[ウィンドウ]** をクリックします。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  ドキュメント ウィンドウおよびツール ウィンドウの名前を、現在選択しているアクティブな項目と一緒に表示します。  
   
  **[パス]**  

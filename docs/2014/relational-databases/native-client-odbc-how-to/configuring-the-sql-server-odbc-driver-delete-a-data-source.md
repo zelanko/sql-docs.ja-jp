@@ -1,41 +1,39 @@
 ---
-title: データ ソース (ODBC) の削除 |Microsoft ドキュメント
+title: データ ソース (ODBC) の削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d3b18bfe882147e0c60033dac9efd9dc4e3a6057
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e870254043d9cc85d99203d76513816f67267560
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074372"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415191"
 ---
 # <a name="delete-a-data-source-odbc"></a>データ ソースの削除 (ODBC)
-  ODBC アドミニストレーターをプログラムでを使用してデータ ソースを削除することができます (を使用して[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md))、または削除するファイル (ファイル データ ソース名)。  
+  プログラムで ODBC アドミニストレーターを使用してデータ ソースを削除することができます (を使用して[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md))、または (する場合、ファイル データ ソース名) にファイルを削除しています。  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>ODBC アドミニストレーターを使用してデータ ソースを削除するには  
   
-1.  **コントロール パネルの **、開かれている**管理ツール**、順にダブルクリック**データ ソース (ODBC)** です。 コマンド プロンプトから odbcad32.exe を実行することもできます。  
+1.  **コントロール パネルの **、オープン**管理ツール**、し、ダブルクリック**データ ソース (ODBC)** します。 コマンド プロンプトから odbcad32.exe を実行することもできます。  
   
-2.  クリックして、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**タブです。  
+2.  をクリックして、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**タブ。  
   
 3.  削除するデータ ソースをクリックします。  
   
-4.  をクリックして**削除**、削除を確定します。  
+4.  クリックして**削除**、削除を確定します。  
   
 ## <a name="example"></a>例  
  データ ソースをプログラムで削除するには、呼び出す[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) 2 番目のパラメーターとして ODBC_REMOVE_DSN または ODBC_REMOVE_SYS_DSN を使用します。  

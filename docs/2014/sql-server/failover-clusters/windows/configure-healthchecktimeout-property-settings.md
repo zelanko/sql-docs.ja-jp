@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 6cd514ae1b9581a52e7dfdb382bc8fded757fb47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d975ed562e5343ceeb921358160309c20ff0bb4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260078"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout プロパティ設定の構成
-  HealthCheckTimeout 設定を使用、SQL Server リソース DLL がによって返される情報を待機するミリ秒単位で時間の長さを指定して、 [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)ストアド プロシージャを報告する前に、AlwaysOn フェールオーバー クラスター インスタンス (FCI) は応答不能とします。 タイムアウトの設定に加えられた変更は直ちに有効になり、SQL Server リソースを再起動する必要はありません。  
+  HealthCheckTimeout 設定を使用して、SQL Server リソース DLL がによって返される情報を待機するミリ秒単位で時間の長さを指定する、 [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)ストアド プロシージャを報告する前に、AlwaysOn フェールオーバー クラスター インスタンス (FCI) は応答不能とします。 タイムアウトの設定に加えられた変更は直ちに有効になり、SQL Server リソースを再起動する必要はありません。  
   
 -   **作業を開始する準備:**  [制限事項と制約事項](#Limits)、 [セキュリティ](#Security)  
   
@@ -46,7 +45,7 @@ ms.locfileid: "36083567"
   
 2.  `FailoverClusters` モジュールをインポートしてクラスター コマンドレットを有効にします。  
   
-3.  使用して、`Get-ClusterResource`を検索するコマンドレット、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]リソースを使用して`Set-ClusterParameter`コマンドレットを設定、 **HealthCheckTimeout**フェールオーバー クラスター インスタンスのプロパティ。  
+3.  使用して、`Get-ClusterResource`コマンドレットを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]リソースを使用して`Set-ClusterParameter`を設定するコマンドレット、 **HealthCheckTimeout**フェールオーバー クラスター インスタンスのプロパティ。  
   
 > [!TIP]  
 >  新しい PowerShell ウィンドウを開くたびにインポートする必要があります、`FailoverClusters`モジュール。  

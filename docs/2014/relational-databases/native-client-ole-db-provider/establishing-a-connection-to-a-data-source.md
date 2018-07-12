@@ -1,13 +1,11 @@
 ---
-title: データ ソースへの接続を確立する |Microsoft ドキュメント
+title: データ ソースへの接続を確立する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,24 +16,24 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server Native Client]
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8354f8927cefd860ce2f212242cc7caea7976d27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9b07fd8c9710c591806721d019f7dc776298fbab
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076200"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425291"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>データ ソースへの接続の確立
-  アクセスする、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを呼び出して、コンシューマーは、データ ソース オブジェクトのインスタンスを作成する必要があります最初、 **CoCreateInstance**メソッドです。 一意のクラス ID (CLSID) で、各 OLE DB プロバイダーが識別されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー、クラス識別子は、clsid_sqlncli10 です。 シンボルを解決する SQLNCLI_CLSID を使用することも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー参照されている sqlncli.h で使用されています。  
+  アクセスする、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを呼び出すことによって、コンシューマーはデータ ソース オブジェクトのインスタンスを作成する必要があります最初、 **CoCreateInstance**メソッド。 一意のクラス ID (CLSID) で、各 OLE DB プロバイダーが識別されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー、クラス識別子は、CLSID_SQLNCLI10 です。 解決する SQLNCLI_CLSID というシンボルを使用することも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーで参照する、sqlncli.h で使用されています。  
   
- データ ソース オブジェクトの公開、 **IDBProperties**インターフェイスで、コンシューマーを使用してサーバー名、データベース名、ユーザー ID やパスワードなどの基本的な認証情報を提供します。 **Idbproperties::setproperties**をこれらのプロパティを設定するメソッドが呼び出されます。  
+ データ ソース オブジェクトの公開、 **IDBProperties**インターフェイスで、コンシューマーを使用してサーバー名、データベース名、ユーザー ID、パスワードなどの基本的な認証情報を提供します。 **Idbproperties::setproperties**メソッドが呼び出され、これらのプロパティを設定します。  
   
  同じコンピューター上で複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが実行されている場合、サーバー名を ServerName\InstanceName のように指定します。  
   
- データ ソース オブジェクトに公開、 **IDBInitialize**インターフェイスです。 呼び出すことによって、データ ソースへの接続が確立されたプロパティを設定した後、 **idbinitialize::initialize**メソッドです。 以下に例を示します。  
+ データ ソース オブジェクトも公開、 **IDBInitialize**インターフェイス。 呼び出すことによって、データ ソースへの接続が確立されているプロパティを設定すると、した後、 **idbinitialize::initialize**メソッド。 以下に例を示します。  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   
@@ -45,7 +43,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- この呼び出しを**CoCreateInstance**により、CLSID_SQLNCLI10 に関連付けられているクラスの 1 つのオブジェクトを作成 (関連付けられている CSLID データとオブジェクトの作成に使用されるコードを使用)。 IID_IDBInitialize はインターフェイスの識別子への参照を (**IDBInitialize**) オブジェクトとの通信に使用します。  
+ この呼び出しを**CoCreateInstance** CLSID_SQLNCLI10 に関連付けられているクラスの 1 つのオブジェクトを作成します (CSLID は、データとオブジェクトの作成に使用されるコードに関連付けられている)。 IID_IDBInitialize は、インターフェイスの識別子への参照 (**IDBInitialize**) オブジェクトとの通信に使用します。  
   
  次に、データ ソースへの接続を初期化し、確立する関数の例を示します。  
   

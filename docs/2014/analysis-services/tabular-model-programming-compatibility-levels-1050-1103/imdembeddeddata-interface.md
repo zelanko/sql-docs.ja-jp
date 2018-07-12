@@ -1,5 +1,5 @@
 ---
-title: IMDEmbedded インターフェイス |Microsoft ドキュメント
+title: IMDEmbedded インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3973640b4a4efca789ec107c1c1f086801cac234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc1f1032a644277cab9645a11f8b3bedbb65c13d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157143"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded インターフェイス
   IMDEmbedded インターフェイスは、埋め込みの PowerPivot データベースまたはテーブル モデル データベースを管理するために使用されるパブリック インターフェイスです。 このインターフェイスは、`IPersistStream` インターフェイスから継承されます。 このインターフェイスでは、次の操作を実行できます。  
@@ -35,16 +35,16 @@ ms.locfileid: "36164168"
   
 -   現在の埋め込み操作を取り消します。  
   
--   推定サイズ (バイト単位)、埋め込みオブジェクトを保存するためのストリームを取得します。 継承された`IPersistStream`です。  
+-   埋め込みオブジェクトを保存するストリームの推定サイズ (単位: バイト) を取得します。 継承された`IPersistStream`します。  
   
--   埋め込みデータベースが最後に保存されてから変更されていないことを確認します。 継承された`IPersistStream`です。  
+-   埋め込みデータベースが最後に保存されてから変更されていないことを確認します。 継承された`IPersistStream`します。  
   
--   ローカルまたはインプロセス エンジンに埋め込み型データベースを読み込みます。 継承された`IPersistStream`です。  
+-   ローカルまたはインプロセス エンジンに埋め込み型データベースを読み込みます。 継承された`IPersistStream`します。  
   
--   ローカルまたはインプロセス データベースをコンテナー ドキュメント内の埋め込みストリームに保存します。 継承された`IPersistStream`です。  
+-   ローカルまたはインプロセス データベースをコンテナー ドキュメント内の埋め込みストリームに保存します。 継承された`IPersistStream`します。  
   
 ## <a name="reference"></a>リファレンス  
- 次のドキュメントを参照する、`IMDEmbedded`インターフェイスで提供されている**msmd.h**ヘッダー ファイルです。  
+ 次の参照、`IMDEmbedded`インターフェイス**msmd.h**ヘッダー ファイル。  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>ソース ファイル: PXOEmbeddedData.idl  
   
@@ -250,7 +250,7 @@ HRESULT GetSizeMax (
 ```  
   
 #### <a name="description"></a>説明  
- ストリームの推定サイズ (バイト単位) を取得し、埋め込みオブジェクトを保存します。 継承された`IPersistStream`です。  
+ ストリームの推定サイズ (バイト単位) を取得し、埋め込みオブジェクトを保存します。 継承された`IPersistStream`します。  
   
 #### <a name="parameters"></a>パラメーター  
  *in_bstrPath*  
@@ -270,7 +270,7 @@ HRESULT IsDirty ( void )
 ```  
   
 #### <a name="description"></a>説明  
- 埋め込みデータベースが最後に保存されてから変更されたかどうかを確認します。 継承された`IPersistStream`です。  
+ 埋め込みデータベースが最後に保存されてから変更されたかどうかを確認します。 継承された`IPersistStream`します。  
   
 #### <a name="parameters"></a>パラメーター  
  なし  
@@ -294,7 +294,7 @@ HRESULT Load (
 ```  
   
 #### <a name="description"></a>説明  
- 埋め込みデータベースをローカルまたはインプロセス エンジンに読み込みます。 継承された`IPersistStream`です。  
+ 埋め込みデータベースをローカルまたはインプロセス エンジンに読み込みます。 継承された`IPersistStream`します。  
   
 #### <a name="parameters"></a>パラメーター  
  *in_pStm*  
@@ -320,7 +320,7 @@ HRESULT Save (
 ```  
   
 #### <a name="description"></a>説明  
- ローカルまたはインプロセス データベースをコンテナー ドキュメント内の埋め込みストリームに保存します。 継承された`IPersistStream`です。  
+ ローカルまたはインプロセス データベースをコンテナー ドキュメント内の埋め込みストリームに保存します。 継承された`IPersistStream`します。  
   
 #### <a name="parameters"></a>パラメーター  
  *in_pStm*  

@@ -1,5 +1,5 @@
 ---
-title: マップの経線のプロパティ ダイアログ ボックス、ラベル |Microsoft ドキュメント
+title: マップの経線のプロパティ ダイアログ ボックス、ラベル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aba651eed623304f977a548a18537c6fdd5c14cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 05fe2f7cecbcc2f43e5013d5785f76e09feecf8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163883"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>[ラベル] ([マップの経線のプロパティ] ダイアログ ボックス)
-  使用して、 **MapMeridian プロパティ** ダイアログ ボックスで、マップ ビューポートの垂直グリッドのラベル オプションを変更します。 経線は、ビューポートに指定された座標系に応じて、次の値を表します。  
+  使用して、 **MapMeridian プロパティ**ダイアログ ボックスで、マップ ビューポートの垂直グリッドのラベルのオプションを変更します。 経線は、ビューポートに指定された座標系に応じて、次の値を表します。  
   
 -   **[平面]**: Y 座標。  
   

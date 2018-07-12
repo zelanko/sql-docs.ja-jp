@@ -5,33 +5,32 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d419f7a018817656ba9bb5910a71e2c2f810ae87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5b923b9b27fd7b67d61b25956f3d44102f1a5f79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158023"
 ---
 # <a name="full-text-search"></a>フルテキスト検索
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のフルテキスト検索は、ユーザーおよびアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの文字ベースのデータに対してフルテキスト クエリを実行できるようにします。 フルテキスト クエリをテーブルに対して実行するには、まずデータベース管理者がテーブル上にフルテキスト インデックスを作成する必要があります。 フルテキスト インデックスには、テーブルの 1 つ以上の文字ベースの列が含まれます。 これらの列は、次のデータ型のいずれかを持つことができます: `char`、 `varchar`、 `nchar`、 `nvarchar`、 `text`、 `ntext`、 `image`、 `xml`、または`varbinary(max)`と FILESTREAM です。 各フルテキスト インデックスによってテーブルの 1 つ以上の列にインデックスが設定され、列ごとに特定の言語を使用できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のフルテキスト検索は、ユーザーおよびアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの文字ベースのデータに対してフルテキスト クエリを実行できるようにします。 フルテキスト クエリをテーブルに対して実行するには、まずデータベース管理者がテーブル上にフルテキスト インデックスを作成する必要があります。 フルテキスト インデックスには、テーブルの 1 つ以上の文字ベースの列が含まれます。 これらの列は、次のデータ型のいずれかを持つことができます: `char`、 `varchar`、 `nchar`、 `nvarchar`、 `text`、 `ntext`、 `image`、 `xml`、または`varbinary(max)`および FILESTREAM です。 各フルテキスト インデックスによってテーブルの 1 つ以上の列にインデックスが設定され、列ごとに特定の言語を使用できます。  
   
  フルテキスト クエリでは、英語や日本語などの特定の言語の規則に基づいて語や句を操作することにより、フルテキスト インデックス内のテキスト データに対して言語検索を実行できます。 フルテキスト クエリには、単純な語や句、または複数の形式の語や句を含めることができます。 フルテキスト クエリでは、1 つ以上の一致 ( *ヒット*とも呼ばれます) が含まれているすべてのドキュメントが返されます。 一致は、フルテキスト クエリに指定されたすべての語句が対象のドキュメントに含まれていて、その他の検索条件 (一致する語句間の距離など) を満たしているときに、発生します。  
   
 > [!NOTE]  
->  フルテキスト検索は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのオプションのコンポーネントです。 詳細については、次を参照してください。 [SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server.md)です。  
+>  フルテキスト検索は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのオプションのコンポーネントです。 詳細については、次を参照してください。 [SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server.md)します。  
   
-##  <a name="benefits"></a> フルテキスト検索では、どうすればよいですか  
+##  <a name="benefits"></a> フルテキスト検索では、どうすればでしょうか。  
  フルテキスト検索はさまざまなビジネス シナリオで応用できます。たとえば、e ビジネスでは Web サイトで品目を検索できます。また、法律事務所では訴訟データのリポジトリで訴訟履歴を検索し、人事部門では保管している履歴書と職務明細書を照合できます。 フルテキスト検索の基本的な管理タスクと開発タスクは、どのビジネス シナリオでも同じです。 ただし、特定のビジネス シナリオで、ビジネスの目標を達成できるようにフルテキスト インデックスおよびクエリを調整することができます。 たとえば e ビジネスでは、結果の順位、再呼び出しの精度 (既存の一致結果のうちフルテキスト クエリで実際に返される結果の数)、または複数言語のサポートよりも、パフォーマンスの最大化が重視されます。 法律事務所では、ヒットしたすべての結果 (情報の*総再呼び出し*) を返すことが最も重要な要素となります。  
   
  [このトピックの内容](#top)  
@@ -78,7 +77,7 @@ ms.locfileid: "36085191"
   
  [このトピックの内容](#top)  
   
-###  <a name="like"></a> 比較する like とフルテキスト検索  
+###  <a name="like"></a> 比較する LIKE とフルテキスト検索  
  フルテキスト検索とは異なり、[LIKE](/sql/t-sql/language-elements/like-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 述語は、文字パターンにのみで動作します。 また、フォーマットされたバイナリ データのクエリには LIKE 述語を使用できません。 さらに、構造化されていない大量のテキスト データに対して LIKE クエリを実行すると、同じデータに対して同等のフルテキスト検索を実行する場合に比べてはるかに時間がかかります。 数百万行のテキスト データに対して LIKE クエリを実行すると、結果が得られるまでに数分かかる場合があります。一方、同じデータに対してフルテキスト クエリを実行すると、返される行数にもよりますが、数秒以内で結果を取得できます。  
   
  [このトピックの内容](#top)  
@@ -138,7 +137,7 @@ ms.locfileid: "36085191"
 ###  <a name="indexing"></a> フルテキスト インデックス作成プロセス  
  フルテキスト作成 (クロールとも呼ばれます) を開始すると、Full-Text Engine は大きなデータをバッチでメモリにプッシュして、フィルター デーモン ホストに通知します。 フィルター デーモン ホストは、データをフィルター処理してから分解し、逆単語リストに変換します。 次にフルテキスト検索が、変換されたデータを単語リストからプルし、データを処理してストップワードを削除し、バッチ用の単語リストを 1 つ以上の逆インデックスに保持します。  
   
- 格納されたデータのインデックスを作成するとき、`varbinary(max)`または`image`列を実装すると、フィルター、 **IFilter**インターフェイス、そのデータに対する指定したファイル形式に基づく抽出テキスト (たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word)。 場合によっては、フィルター コンポーネントが必要な`varbinary(max)`、または`image`メモリにプッシュされるのではなく、filterdata フォルダーに書き込まれるデータ。  
+ 格納されたデータのインデックスを作成するとき、`varbinary(max)`または`image`列に実装すると、フィルター、 **IFilter**インターフェイス、そのデータに対する指定したファイル形式で抽出テキスト (たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word)。 場合によっては、フィルター コンポーネントを必要と、 `varbinary(max)`、または`image`メモリへのプッシュではなく、filterdata フォルダーに書き込まれるデータ。  
   
  一連の処理の中で、生成されたテキスト データがワード ブレーカーに渡され、そこで個々のトークンまたはキーワードに分解されます。 トークン化に使用する言語は列レベルで指定するか、`varbinary(max)` 型、`image` 型、または `xml` 型データのいずれかからフィルター コンポーネントによって識別されます。  
   

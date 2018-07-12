@@ -1,5 +1,5 @@
 ---
-title: '[ディメンション] ([キューブ構造] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント'
+title: ディメンション ([キューブ構造] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.dimensionspane.f1
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: baa3754ed3fe72c19324ae830edf5c2e46a218a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed541a6abd2a6a966df88440d280aa67a1688dca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149163"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>[ディメンション] (キューブ デザイナーの [キューブ構造] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[キューブ構造]** タブの **[ディメンション]** ペインを使用すると、階層と属性を含むキューブ ディメンションを表示したり、編集したりできます。  
@@ -58,7 +58,7 @@ ms.locfileid: "36085328"
 > [!NOTE]  
 >  このオプションは、ディメンションが選択されている場合にのみ表示されます。  
   
- **Delete**  
+ **削除**  
  クリックすると、選択されているキューブ ディメンションをキューブから削除できます。  
   
 > [!NOTE]  
@@ -91,7 +91,7 @@ ms.locfileid: "36085328"
 ## <a name="see-also"></a>参照  
  [ツールバー&#40;キューブ構造 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [メジャー&#40;キューブ構造 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [データ ソース ビューの&#40;キューブ構造 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)   
+ [データ ソース ビュー&#40;キューブ構造 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)   
  [キューブ構造&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

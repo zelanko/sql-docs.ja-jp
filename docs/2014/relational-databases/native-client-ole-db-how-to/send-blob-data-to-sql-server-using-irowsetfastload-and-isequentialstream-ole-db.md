@@ -1,33 +1,31 @@
 ---
-title: IROWSETFASTLOAD と ISEQUENTIALSTREAM (OLE DB) を使用して SQL SERVER に BLOB データを送信 |Microsoft ドキュメント
+title: IROWSETFASTLOAD と ISEQUENTIALSTREAM (OLE DB) を使用して SQL SERVER に BLOB データの送信 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e288e61db68f7ed27015248d762a0c331bf9afb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e58e42b2bede1c29024a17643b611190c980b905
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076594"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410711"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 (OLE DB)
   このサンプルでは、IRowsetFastLoad を使用して可変長の BLOB データを行ごとにストリーミングする方法について説明します。  
   
  このサンプルの既定では、IRowsetFastLoad を使用して、インライン バインドによって可変長の BLOB データを行ごとに送信する方法が示されます。 インライン BLOB データは、使用できるメモリ容量に合わせる必要があります。 BLOB データが数 MB 未満の場合はストリームのオーバーヘッドが追加されないため、このメソッドを使用するとパフォーマンスが最も高くなります。 数 MB を超えるデータ (特にブロックで利用できないデータ) の場合は、ストリーミングした方がパフォーマンスが向上します。  
   
- ソース コードで #define USE_ISEQSTREAM のコメント化を解除した場合、このサンプルでは ISequentialStream が使用されます。 ストリームの実装では、サンプルで定義され、MAX_BLOB を変更するだけであらゆるサイズの BLOB データを送信することができます。 ストリーム データの場合、メモリ容量に合わせる必要も、1 ブロックにする必要もありません。 このプロバイダーを呼び出すには、IRowsetFastLoad::InsertRow を使用します。 IRowsetFastLoad::InsertRow を使用して、ストリームから読み出すことができるデータ量と一緒に、ポインターをデータ バッファー (rgBinding.obValue オフセット) のストリームの実装に渡します。 プロバイダーによっては、バインドするときにデータの長さを渡す必要がない場合があります。 その場合は、バインドから長さを省略できます。  
+ ソース コードで #define USE_ISEQSTREAM のコメント化を解除した場合、このサンプルでは ISequentialStream が使用されます。 ストリームの実装では、サンプルでは、定義し、MAX_BLOB を変更するだけであらゆるサイズの BLOB データを送信することができます。 ストリーム データの場合、メモリ容量に合わせる必要も、1 ブロックにする必要もありません。 このプロバイダーを呼び出すには、IRowsetFastLoad::InsertRow を使用します。 IRowsetFastLoad::InsertRow を使用して、ストリームから読み出すことができるデータ量と一緒に、ポインターをデータ バッファー (rgBinding.obValue オフセット) のストリームの実装に渡します。 プロバイダーによっては、バインドするときにデータの長さを渡す必要がない場合があります。 その場合は、バインドから長さを省略できます。  
   
  このサンプルでは、プロバイダーにデータを書き込む際に、プロバイダーのストリーム インターフェイスを使用しません。 代わりに、プロバイダーがデータを読み出すために使用するストリーム オブジェクトにポインターを渡します。 通常、Microsoft のプロバイダー (SQLOLEDB および SQLNCLI) では、すべてのデータを処理するまでオブジェクトからデータを 1024 バイト単位で読み出します。 SQLOLEDB と SQLNCLI のどちらも、コンシューマーからプロバイダーのストリーム オブジェクトへのデータの書き込みができる完全な実装は備えていません。 プロバイダーのストリーム オブジェクトを使用して送信できるのは、長さ 0 のデータだけです。  
   
@@ -35,7 +33,7 @@ ms.locfileid: "36076594"
   
  DBTYPE_IUNKNOWN はバインドのデータ型として指定されているため、列または対象パラメーターの型と一致している必要があります。 データを行セット インターフェイスから ISequentialStream を使用して送信する場合は、変換できません。 パラメーターの場合は、ICommandWithParameters::SetParameterInfo を使用しないで、別の型を指定して強制的に変換させます。そのためには、BLOB データをすべてローカルにキャッシュするプロバイダーを使用して、SQL Server に送信する前にそのデータを変換する必要があります。 大きな BLOB をキャッシュし、ローカルに変換すると、パフォーマンスが低下します。  
   
- 詳細については、次を参照してください。 [Blob と OLE オブジェクト](../native-client-ole-db-blobs/blobs-and-ole-objects.md)です。  
+ 詳細については、次を参照してください。 [Blob と OLE オブジェクト](../native-client-ole-db-blobs/blobs-and-ole-objects.md)します。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
@@ -43,7 +41,7 @@ ms.locfileid: "36076594"
 ## <a name="example"></a>例  
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するテーブルを作成します。  
   
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムをする必要があります変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 名前付きインスタンスに接続する場合から、接続文字列を変更する"かに\\\name"という名前付きインスタンス。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 Windows オペレーティング システムによっては、必要がありますを変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 を名前付きインスタンスに接続するから、接続文字列を変更"するか\\\name"名は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用したテーブルを削除します。  
   

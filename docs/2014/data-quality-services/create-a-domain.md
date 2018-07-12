@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fa65e6742004206c5116437c4e3bba7dbd316798
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d60f4db93721d20b85b613459a034eaa896dc87a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165253"
 ---
 # <a name="create-a-domain"></a>ドメインの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインを作成する方法について説明します。 ドメインの値は、フィールド内のデータのセマンティック表現です。 ドメインについて詳しくは、「[ドメインの管理](../../2014/data-quality-services/managing-a-domain.md)」をご覧ください。  
@@ -46,7 +46,7 @@ ms.locfileid: "36083967"
   
 3.  アクティビティとして **[ナレッジ検出]** を選択した後に、 **[作成]** をクリックして新しいナレッジ ベースを作成するか、 **[開く]** をクリックして既存のナレッジ ベースを開きます。  
   
-4.  **[マップ]** ページで、データ ソースへの接続を指定します。 詳細については、次を参照してください。 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)です。  
+4.  **[マップ]** ページで、データ ソースへの接続を指定します。 詳細については、次を参照してください。 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)します。  
   
 5.  **"マッピング"** テーブルで、空の行の **[ソース列]** 列のドロップダウン リストからソース列を選択します。 対応するドメインが存在しない場合は、 **[ドメインの作成]** アイコンをクリックします。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36083967"
 1.  **[ドメインの作成]** ダイアログ ボックスで、ナレッジ ベースに一意の名前と 256 文字までの説明を入力します。  
   
     > [!NOTE]  
-    >  ドメインのプロパティの詳細については、次を参照してください。 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)です。  
+    >  ドメイン プロパティの詳細については、次を参照してください。 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)します。  
   
 2.  **[データ型]** の一覧で、ドメイン内の値に対するデータ型を選択します。 データ型には、 **[String]** (既定値)、 **[Date]**、 **[Integer]**、または **[Decimal]** を指定できます。  
   

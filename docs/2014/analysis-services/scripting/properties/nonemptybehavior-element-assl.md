@@ -1,5 +1,5 @@
 ---
-title: NonEmptyBehavior 要素 (ASSL) |Microsoft ドキュメント
+title: NonEmptyBehavior 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NonEmptyBehavior element
 ms.assetid: b4c78af4-b049-4189-a35b-206e3938d1db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d328b41ee8c40497019fe918d40925b3ce2a1436
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eda18e3ed67884e964439e80e0ae0103f522e116
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183299"
 ---
 # <a name="nonemptybehavior-element-assl"></a>NonEmptyBehavior 要素 (ASSL)
-  親に関連付けられている空でない動作を決定、 [CalculationProperty](../objects/calculationproperty-element-assl.md)要素。  
+  親に関連付けられている空でない動作を指定します、 [CalculationProperty](../objects/calculationproperty-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36163943"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `NonEmptyBehavior`プロパティに適用されます`CalculationProperty`要素を[CalculationType](calculationtype-element-assl.md) 'éý'*メンバー*です。  
+ `NonEmptyBehavior`プロパティに適用される`CalculationProperty`を持つ要素を[CalculationType](calculationtype-element-assl.md)に設定*メンバー*します。  
   
  親に対応する要素`NonEmptyBehavior`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.CalculationProperty>します。  
   

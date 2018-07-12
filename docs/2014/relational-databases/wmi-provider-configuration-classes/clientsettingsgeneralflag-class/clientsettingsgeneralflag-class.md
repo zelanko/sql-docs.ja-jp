@@ -1,5 +1,5 @@
 ---
-title: ClientSettingsGeneralFlag クラス |Microsoft ドキュメント
+title: ClientSettingsGeneralFlag クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - ClientSettingsGeneralFlag class
 ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6eba5fe9d3fb18073e2a7177f786c6bbc02e2ce4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 691e8f836298c678db8dfbeb7e470aa453dce25d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230642"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>ClientSettingsGeneralFlag クラス
-  [ClientSettingsGeneralFlag クラス](clientsettingsgeneralflag-class.md)のインスタンス上の一般的なフラグ設定を表す[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント。  
+  [ClientSettingsGeneralFlag クラス](clientsettingsgeneralflag-class.md)のインスタンス上の一般的なフラグ設定を表します[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント。  
   
- [ClientSettingsGeneralFlag クラス](clientsettingsgeneralflag-class.md)次の操作に使用できます。  
+ [ClientSettingsGeneralFlag クラス](clientsettingsgeneralflag-class.md)以下を実行するために使用できます。  
   
 -   フラグ名の表示  
   

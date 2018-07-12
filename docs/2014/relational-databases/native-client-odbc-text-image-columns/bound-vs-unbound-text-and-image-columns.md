@@ -1,13 +1,11 @@
 ---
-title: Vs をバインドします。テキストとイメージの列をバインド解除されました |Microsoft ドキュメント
+title: Vs をバインドします。テキスト列と Image 列にバインドされていない |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,23 +20,23 @@ helpviewer_keywords:
 - image columns [ODBC]
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5129c6b865723721bbb6f176893c950cdf905fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5d77a71aae13c9601acc0ba56146e7882e6ee6e7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074367"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430631"
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>Vs をバインドします。バインドされない Text、Image 列
-  サーバー カーソルを使用するときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーはバインドされていないため、データを転送しないように最適化されて**テキスト**、 **ntext**、または**イメージ**に列を時間**SQLFetch**を実行します。 **テキスト**、 **ntext**、または**イメージ**データが実際には取得されません、サーバーからアプリケーションの問題まで[SQLGetData](../native-client-odbc-api/sqlgetdata.md)用、列です。  
+  サーバー カーソルを使用する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーにバインドされていないため、データを転送しないように最適化された**テキスト**、 **ntext**、または**イメージ**列で、時間**SQLFetch**が実行されます。 **テキスト**、 **ntext**、または**イメージ**データは実際には取得されません、サーバーからアプリケーションの問題まで[SQLGetData](../native-client-odbc-api/sqlgetdata.md)用、列です。  
   
- 多くのアプリケーションを書き込むことができるようにありません**テキスト**、 **ntext**、または**イメージ**ユーザーは単にスクロール カーソルの間のデータが表示されます。 アプリケーションが呼び出すことができますし、ユーザーは、詳細情報を表示する行を選択するときに**SQLGetData**を取得する、**テキスト**、 **ntext**、または**イメージ**データ。 こうと送信、**テキスト**、 **ntext**、または**イメージ**の任意のユーザーがいないを選択し、その行のデータが非常に大きなの転送を防ぐデータの量。  
+ 多くのアプリケーションを作成できるようにありません**テキスト**、 **ntext**、または**イメージ**中に、ユーザーがカーソル内を上下スクロール単にデータが表示されます。 アプリケーションが呼び出すことができますし、ユーザーは、詳細を表示する行を選択するときに**SQLGetData**を取得する、**テキスト**、 **ntext**、または**イメージ**データ。 これにより、送信、**テキスト**、 **ntext**、または**イメージ**ユーザーの選択、およびことができますがない行のいずれかのデータが非常に大きな転送を防ぐ大量のデータ。  
   
 ## <a name="see-also"></a>参照  
- [テキストとイメージの列を管理します。](managing-text-and-image-columns.md)   
+ [テキストとイメージの列の管理](managing-text-and-image-columns.md)   
  [カーソル動作](../native-client-odbc-cursors/cursor-behaviors.md)  
   
   

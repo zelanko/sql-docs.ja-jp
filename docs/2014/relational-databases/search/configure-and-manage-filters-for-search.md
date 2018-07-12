@@ -5,31 +5,30 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ccafb0bccab01286534a0c5499fe474da1262d5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7b19f9141df65be952551dbb899b6cb30544e9a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278928"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>検索用フィルターの構成と管理
   ドキュメントのインデックスを作成、 `varbinary`、 `varbinary(max)`、 `image`、または`xml`データ型の列には、追加の処理が必要です。 この処理はフィルターによって実行します。 フィルターは、ドキュメントから (フォーマットを解除して) 文字情報を抽出します。 次に、テーブル列に関連付けられている言語のワード ブレーカー コンポーネントにテキストを送ります。  
   
  フィルターは、ドキュメント型 (.doc、.pdf、.xls、.xml など) に固有です。 これらのフィルターは IFilter インターフェイスを実装しています。 ドキュメント型の一覧を参照するには、 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) カタログ ビューに対してクエリを実行してください。  
   
- バイナリ ドキュメントは、単一の `varbinary(max)` 列または `image` 列に格納できます。 各ドキュメントについて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はファイル拡張子を基に正しいフィルターを選択します。 ファイルが `varbinary(max)` 列または `image` 列に格納されている場合にはファイル拡張子が表示されないため、ファイル拡張子 (.doc、.xls、.pdf など) を型列と呼ばれるテーブル内の別の列に格納する必要があります。 この型列は、任意の文字ベースのデータ型で、文書ファイルの拡張子 (たとえば [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word 文書の場合は .doc) を格納します。 **ドキュメント**テーブルに[!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]、**ドキュメント**型の列は、 `varbinary(max)`、型の列と**FileExtension**の型は`nvarchar(8)`します。  
+ バイナリ ドキュメントは、単一の `varbinary(max)` 列または `image` 列に格納できます。 各ドキュメントについて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はファイル拡張子を基に正しいフィルターを選択します。 ファイルが `varbinary(max)` 列または `image` 列に格納されている場合にはファイル拡張子が表示されないため、ファイル拡張子 (.doc、.xls、.pdf など) を型列と呼ばれるテーブル内の別の列に格納する必要があります。 この型列は、任意の文字ベースのデータ型で、文書ファイルの拡張子 (たとえば [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word 文書の場合は .doc) を格納します。 **ドキュメント**テーブルに[!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]、**ドキュメント**型の列は、 `varbinary(max)`、型の列と**FileExtension**の種類は`nvarchar(8)`します。  
   
 > [!NOTE]  
 >  フィルターは、実装によっては、親オブジェクトに埋め込まれたオブジェクトを処理できます。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、フィルターが他のオブジェクトへのリンクをたどるように構成されていません。  

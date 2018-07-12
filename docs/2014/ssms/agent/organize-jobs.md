@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - job category
 - organize jobs
 ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 79ec707e21f573e2b2ebfc44076d18b4e3f66f49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd854bd3cf9e32b350d5bcc60162a34b2cc049c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155453"
 ---
 # <a name="organize-jobs"></a>ジョブの整理
   ジョブ カテゴリを使用してジョブを管理すると、フィルター操作やグループ化を簡単に行うことができます。 たとえば、データベース バックアップに関するすべてのジョブを [データベースのメンテナンス] カテゴリとしてまとめます。 ジョブ カテゴリは、独自に作成することもできます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36164706"
   
 |||  
 |-|-|  
-|**description**|**トピック**|  
+|**[説明]**|**トピック**|  
 |ジョブ カテゴリを作成する方法について説明します。|[ジョブ カテゴリの作成](create-a-job-category.md)|  
 |ジョブ カテゴリを削除する方法について説明します。|[ジョブ カテゴリの削除](delete-a-job-category.md)|  
 |ジョブをジョブ カテゴリに割り当てる方法について説明します。|[ジョブ カテゴリへのジョブの割り当て](assign-a-job-to-a-job-category.md)|  

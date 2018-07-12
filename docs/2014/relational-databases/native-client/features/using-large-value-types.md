@@ -1,13 +1,11 @@
 ---
-title: 大きな値の型を使用して |Microsoft ドキュメント
+title: 大きな値の型を使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,42 +17,42 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, large value data types
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98c0d87975289930194faf380740ea85b0599afe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d796264f4a5a15eb6baf0db4d50bd9ac21772c1a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075712"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417561"
 ---
 # <a name="using-large-value-types"></a>大きな値をとるデータ型の使用
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンでは、大きな値をとるデータ型を使用して作業する場合に特別な処理が必要でした。 大きな値データ型は 8 KB の最大行サイズを超えるです。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入された、 **max**の指定子**varchar**、 **nvarchar**と**varbinary** 2 と同じ大きさの値を格納を許可するデータ型 ^31-1バイト数です。 テーブルの列と[!INCLUDE[tsql](../../../includes/tsql-md.md)]変数を指定**varchar (max)**、 **nvarchar (max)** または**varbinary (max)** データ型。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンでは、大きな値をとるデータ型を使用して作業する場合に特別な処理が必要でした。 大きな値データ型は、8 KB の最大行サイズを超えています。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入された、 **max**の指定子**varchar**、 **nvarchar**と**varbinary** 2 と同じ大きさの値を格納を許可するデータ型 ^31-1バイト数。 テーブルの列と[!INCLUDE[tsql](../../../includes/tsql-md.md)]変数を指定できます**varchar (max)**、 **nvarchar (max)** または**varbinary (max)** データ型。  
   
 > [!NOTE]  
 >  大きな値をとるデータ型は、最大サイズを 1 ～ 8 KB に制限できます。また、サイズを無制限にすることもできます。  
   
- 以前は、のみ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]などのデータ型**テキスト**、 **ntext**と**イメージ**このような長さを指定できました。 **Max**の指定子**varchar**、 **nvarchar**と**varbinary**冗長これらのデータ型を作成します。 ただし、これらの大きなデータ型も引き続き使用できるので、OLE DB や ODBC データ アクセス コンポーネントに対する大部分のインターフェイスは変更されません。 以前のリリースとの互換性を維持するために、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの DBCOLUMNFLAGS_ISLONG フラグと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーの SQL_LONGVARCHAR はこれまでどおり使用されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降用に作成されたプロバイダーやドライバーでは、最大長を無制限に設定する場合、新しいデータ型に対して、DBCOLUMNFLAGS_ISLONG や SQL_LONGVARCHAR といった表現を引き続き使用できます。  
+ 以前は、のみ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]などのデータ型**テキスト**、 **ntext**と**イメージ**このような長さに残る可能性があります。 **Max**の指定子**varchar**、 **nvarchar**と**varbinary**冗長これらのデータ型を作成します。 ただし、これらの大きなデータ型も引き続き使用できるので、OLE DB や ODBC データ アクセス コンポーネントに対する大部分のインターフェイスは変更されません。 以前のリリースとの互換性を維持するために、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの DBCOLUMNFLAGS_ISLONG フラグと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーの SQL_LONGVARCHAR はこれまでどおり使用されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降用に作成されたプロバイダーやドライバーでは、最大長を無制限に設定する場合、新しいデータ型に対して、DBCOLUMNFLAGS_ISLONG や SQL_LONGVARCHAR といった表現を引き続き使用できます。  
   
 > [!NOTE]  
->  指定することも**varchar (max)**、 **nvarchar (max)**、および**varbinary (max)** ストアド プロシージャ、関数の入力呼び出し力パラメーターの型としてのデータ型が型を返す、または[CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)関数。  
+>  指定することも**varchar (max)**、 **nvarchar (max)**、および**varbinary (max)** ストアド プロシージャ、関数の入力と出力パラメーターの型としてのデータ型の戻り値の型、または[CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)関数。  
   
 > [!NOTE]  
->  データをレプリケートする場合は、構成する必要があります、 [max text repl size サーバー構成オプション](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)-1 です。  
+>  データをレプリケートする場合は、構成する必要があります、 [max text repl size サーバー構成オプション](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)を-1 にします。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを公開、 **varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** 型 DBTYPE_STR、DBTYPE_BYTES、として、DBTYPE_WSTR、それぞれします。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** 型 DBTYPE_STR、DBTYPE_BYTES、として、DBTYPE_WSTR、それぞれします。  
   
- データ型**varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** での列に、 **max**サイズが無制限に設定されています。は ISLONG で主要な OLE DB スキーマ行セットと列のデータ型を返すインターフェイスとして表されます。  
+ データ型**varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** を持つ列に、 **max**サイズが無制限に設定されます主要な OLE DB スキーマ行セットでは ISLONG と列のデータ型を返すインターフェイスとして表されます。  
   
- コマンド オブジェクトの**IAccessor** DBTYPE_IUNKNOWN としてバインドできるように実装が変更されました。 場合は、コンシューマーが DBTYPE_IUNKNOWN を指定し、設定*pObject*を null、プロバイダーを返します、 **ISequentialStream**コンシューマーにインターフェイスのコンシューマーがストリーミングすることができるように**varchar (max)**、 **nvarchar (max)**、または**varbinary (max)** 出力変数からのデータ。  
+ コマンド オブジェクトの**IAccessor** DBTYPE_IUNKNOWN としてバインドできるように実装に変わりました。 場合は、コンシューマーが DBTYPE_IUNKNOWN を指定し、設定*pObject*を null には、プロバイダーを返します、 **ISequentialStream**コンシューマーをストリーミングできるように、コンシューマーにインターフェイス**varchar (max)**、 **nvarchar (max)**、または**varbinary (max)** 出力変数からのデータ。  
   
- ストリーミングされる出力パラメーターの値は、すべての結果行の後に返されます。 アプリケーションが上の次の結果を呼び出してセットに移動しようとしたかどうかは**imultipleresults::getresult**すべての返された出力パラメーター値を消費することがなく DB_E_OBJECTOPEN が返されます。  
+ ストリーミングされる出力パラメーターの値は、すべての結果行の後に返されます。 アプリケーションが呼び出すことによって設定する次の結果に移動しようとしたかどうかは**imultipleresults::getresult**返された出力のすべてのパラメーター値を使用せず DB_E_OBJECTOPEN が返されます。  
   
- ストリーミングをサポートするために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーには、シーケンシャルな順序でアクセスされる可変長パラメーターが必要です。 つまり、DBPROP_ACCESSORDER を DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS または DBPROPVAL_AO_SEQUENTIAL のいずれかに設定する必要があるたびに**varchar (max)**、 **nvarchchar (max)**、または**varbinary (max)** 列または出力パラメーターを DBTYPE_IUNKNOWN にバインドされます。 呼び出す**irowset::getdata**にこのアクセス順序の制限が遵守していない場合は、DBSTATUS_E_UNAVAILABLE で失敗します。 DBTYPE_IUNKNOWN を使用する出力バインドがない場合は、この制限は適用されません。  
+ ストリーミングをサポートするために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが可変長パラメーターに順番にアクセスできる必要があります。 つまり、DBPROP_ACCESSORDER を DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS または DBPROPVAL_AO_SEQUENTIAL のいずれかに設定する必要があるたびに**varchar (max)**、 **nvarchchar(max)**、または**varbinary (max)** 列または出力パラメーターが DBTYPE_IUNKNOWN にバインドされます。 呼び出す**irowset::getdata**にこのアクセス順序の制限を遵守していない場合は DBSTATUS_E_UNAVAILABLE で失敗します。 DBTYPE_IUNKNOWN を使用する出力バインドがない場合は、この制限は適用されません。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、ストアド プロシージャが DBTYPE_IUNKNOWN として公開される戻り値として大きな値の型を返すシナリオを容易に大きな値データ型の DBTYPE_IUNKNOWN としてバインドの出力パラメーターもがサポートしていますクライアントです。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、ストアド プロシージャが DBTYPE_IUNKNOWN として公開される戻り値として大きな値の型を返すシナリオを容易に大きな値データ型の DBTYPE_IUNKNOWN としてバインドの出力パラメーターもがサポートしていますクライアント。  
   
  このようなデータ型を使用して作業するために、アプリケーションでは次のような操作を行えます。  
   
@@ -66,11 +64,11 @@ ms.locfileid: "36075712"
   
  列の最大サイズを報告するときに、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが報告されます。  
   
--   たとえば、2000 のですが、定義済みの最大サイズ、 **varchar (** 2000 **)** 列、または  
+-   たとえば、2000 には、定義された最大サイズを**varchar (** 2000 **)** 列、または  
   
--   「無制限」の値がの場合、 **varchar (max)** 列が等しい ~ 0 です。 この値は、DBCOLUMN_COLUMNSIZE メタデータのプロパティに設定されます。  
+-   「無制限」の値がの場合、 **varchar (max)** 列が等しい ~ 0。 この値は、DBCOLUMN_COLUMNSIZE メタデータのプロパティに設定されます。  
   
- 標準変換規則に適用されます、 **varchar (max)** 列で、どの変換でも有効であることを意味する**varchar (** 2000 **)** 列はに対して有効でもある、**varchar (max)** 列です。 場合も同様です**nvarchar (max)** と**varbinary (max)** 列です。  
+ 標準の変換規則が適用されます、 **varchar (max)** 列で、どの変換が有効であることを意味する**varchar (** 2000 **)** 列はでも有効である、**varchar (max)** 列。 場合も同様**nvarchar (max)** と**varbinary (max)** 列。  
   
  大きな値をとるデータ型を取得するとき最も効果的な方法は、DBTYPE_IUNKNOWN としてバインドし、行セット プロパティ DBPROP_ACCESSORDER を DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS に設定することです。 これにより、次の例で示すように、値が中間バッファーなしでネットワークから直接ストリーミングされます。  
   
@@ -692,18 +690,18 @@ _ExitProcessResultSet:
 }  
 ```  
   
- 方法の詳細については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは大きな値データ型を公開しを参照してください[Blob と OLE オブジェクト](../../native-client-ole-db-blobs/blobs-and-ole-objects.md)です。  
+ 方法の詳細については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、大きな値データ型を公開します。 は、「 [Blob と OLE オブジェクト](../../native-client-ole-db-blobs/blobs-and-ole-objects.md)します。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを公開して、 **varchar (max)**、 **varbinary (max)** と**nvarchar (max)** 型として SQL_VARCHAR、SQL_VARBINARY、および sql _ODBC API 関数や ODBC SQL データ型を戻り値で WVARCHAR です。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを公開して、 **varchar (max)**、 **varbinary (max)** と**nvarchar (max)** 型として SQL_VARCHAR、SQL_VARBINARY、および sql _WVARCHAR ODBC API 関数や ODBC SQL データ型を戻り値にします。  
   
  ドライバーでは、列の最大サイズを報告するときに次のいずれかを報告します。  
   
--   たとえば、2000 のですが、定義済みの最大サイズ、 **varchar(2000)** 列、または  
+-   たとえば、2000 には、定義された最大サイズを**varchar(2000)** 列、または  
   
 -   「無制限」の値がの場合、 **varchar (max)** 列が 0 に等しい。  
   
- 標準の変換規則を適用する、 **varchar (max)** 列で、どの変換でも有効であることを意味、 **varchar (** 2000 **)** 列も有効になりますをの**varchar (max)** 列です。 場合も同様です**nvarchar (max)** と**varbinary (max)** 列です。  
+ 標準の変換規則を適用する、 **varchar (max)** 変換が有効であることを意味している列、 **varchar (** 2000 **)** 列をに対して有効にもなります**varchar (max)** 列。 場合も同様**nvarchar (max)** と**varbinary (max)** 列。  
   
  次に、大きな値データ型を使用して作業するために機能強化された ODBC API 関数の一覧を示します。  
   

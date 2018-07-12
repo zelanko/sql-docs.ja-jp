@@ -1,29 +1,28 @@
 ---
-title: 初期データの同期 ページ (AlwaysOn 可用性グループ ウィザード) を選択して |Microsoft ドキュメント
+title: 初期データ同期 ページ (AlwaysOn 可用性グループ ウィザード) を選択します |。Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.selectinitialdatasync.f1
 - sql12.swb.adddatabasewizard.selectinitialdatasync.f1
 - sql12.swb.newagwizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 caps.latest.revision: 36
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2c949bd5ec421ac41d602b28af2d087153b0358c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f9a3f04a5d6ea060cd905d2bf81d628c27d99eb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211772"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>[最初のデータの同期を選択] ページ (AlwaysOn 可用性グループ ウィザード)
   新しいセカンダリ データベースの初期データ同期のユーザー設定を指定するには、AlwaysOn の **[最初のデータの同期を選択]** ページを使用します。 このページは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]の 3 つのウィザードで共有されています。  
@@ -95,14 +94,14 @@ ms.locfileid: "36085511"
   
      [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   可用性グループに 1 つ以上のログ配布プライマリ データベースを追加する場合、対応する 1 つ以上のセカンダリ データベースをログ配布から [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に移行できる場合があります。 詳細については、次を参照してください。 [o ' Ñðœ 移行ログ配布から AlwaysOn 可用性グループに&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)です。  
+-   可用性グループに 1 つ以上のログ配布プライマリ データベースを追加する場合、対応する 1 つ以上のセカンダリ データベースをログ配布から [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に移行できる場合があります。 詳細については、次を参照してください。[移行の前提条件のログ配布から AlwaysOn 可用性グループに&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)します。  
   
     > [!NOTE]  
     >  可用性グループのすべてのセカンダリ データベースを作成した後、セカンダリ レプリカにバックアップを実行する場合は、可用性グループの自動バックアップ設定を再構成する必要があります。  
   
      **詳細:**  
   
-     [AlwaysOn 可用性グループからの移行の前提条件のログ配布&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+     [AlwaysOn 可用性グループへのログ配布を移行する前提条件&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
      [可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   

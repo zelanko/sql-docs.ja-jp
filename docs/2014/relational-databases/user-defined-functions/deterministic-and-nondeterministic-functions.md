@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - built-in functions [SQL Server]
 - nondeterministic functions
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - deterministic functions
 - user-defined functions [SQL Server], deterministic
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11780f633b64f7eaa2cfe495bbe90f7c6ba2a832
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f7b60f44d1ee8cf4224fd4b4bd24a0cba5862e4c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076158"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423507"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定的関数と非決定的関数
   決定的関数は、一連の特定の入力値で呼び出され、かつデータベースの状態が同じ場合は、必ず同じ結果を返します。 非決定的関数は、アクセスするデータベースの状態が同じ場合でも、一連の特定の入力値で呼び出すたびに、異なる結果を返すことがあります。 たとえば、AVG 関数は、上記の制限を前提として常に同じ結果を返しますが、現在の datetime 値を返す GETDATE 関数によって返される結果は常に異なります。  
@@ -61,7 +59,7 @@ ms.locfileid: "36076158"
 |--------------|--------------|  
 |すべての集計関数|OVER 句および ORDER BY 句で指定されていない限り、集計関数はすべて決定的です。 集計関数の一覧については、「[集計関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/aggregate-functions-transact-sql)」を参照してください。|  
 |CAST|`datetime` 型、`smalldatetime` 型、または `sql_variant` 型と併用しない場合は決定的関数になります。|  
-|CONVERT|以下の条件に該当しない場合は決定的関数になります。<br /><br /> 変換元の型が `sql_variant` であること。<br /><br /> 対象の型は`sql_variant`し、そのソースの種類は非決定的です。<br /><br /> 変換元または変換先の型が `datetime` または `smalldatetime` であり、他の変換元または変換先の型が文字列で、非決定的スタイルが指定されていること。 決定的にするには、スタイル パラメーターを定数にする必要があります。 また、スタイルが 20 および 21 以外で 100 以下の場合は非決定的です。 スタイルが 101 以上で、106、107、109、113 以外の場合は決定的です。|  
+|CONVERT|以下の条件に該当しない場合は決定的関数になります。<br /><br /> 変換元の型が `sql_variant` であること。<br /><br /> 対象の型は`sql_variant`ソースの型が非決定的であるとします。<br /><br /> 変換元または変換先の型が `datetime` または `smalldatetime` であり、他の変換元または変換先の型が文字列で、非決定的スタイルが指定されていること。 決定的にするには、スタイル パラメーターを定数にする必要があります。 また、スタイルが 20 および 21 以外で 100 以下の場合は非決定的です。 スタイルが 101 以上で、106、107、109、113 以外の場合は決定的です。|  
 |CHECKSUM|CHECKSUM(*) を除き、決定的関数になります。|  
 |ISDATE|CONVERT 関数と共に使用され、CONVERT スタイル パラメーターが指定されており、スタイルが 0、100、9、または 109 と等しくない場合にのみ決定的関数になります。|  
 |RAND|RAND は、 *seed* パラメーターが指定されている場合にのみ決定的です。|  

@@ -1,5 +1,5 @@
 ---
-title: DMSCHEMA_MINING_MODEL_CONTENT 行セット |Microsoft ドキュメント
+title: DMSCHEMA_MINING_MODEL_CONTENT 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODEL_CONTENT rowset
 ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6eb96e8a4a277ee5b7e198fca3d96062bd6d486
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76724967936008e52cb43f7af02bbb7a833475d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165453"
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT 行セット
   クライアント アプリケーションでデータ マニング モデルのコンテンツを参照できるようにします。 クライアント アプリケーションは、このトピックの最後に説明する特殊なツリー操作制限を使用して、マイニング モデルのコンテンツに移動できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "36164672"
   
 |列名|型を表すインジケーター|長さ|説明|  
 |-----------------|--------------------|------------|-----------------|  
-|`MODEL_CATALOG`|`DBTYPE_WSTR`||カタログ名。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モデルがメンバーであるデータベースの名前を持つこの列を追加します。|  
+|`MODEL_CATALOG`|`DBTYPE_WSTR`||カタログ名。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] この列に、モデルがメンバーであるデータベースの名前を設定します。|  
 |`MODEL_SCHEMA`|`DBTYPE_WSTR`||修飾されていないスキーマ名。 この列は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でサポートされていないため、常に `VT_NULL` が格納されます。|  
 |`MODEL_NAME`|`DBTYPE_WSTR`||この行に記述されているコンテンツが関連付けられているモデルの名前。|  
 |`ATTRIBUTE_NAME`|`DBTYPE_WSTR`||このノードに対応する属性の名前です。|  

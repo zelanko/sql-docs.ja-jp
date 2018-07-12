@@ -1,39 +1,37 @@
 ---
-title: 拡張イベント ログの診断情報にアクセスする |Microsoft ドキュメント
+title: 拡張イベント ログの診断情報へのアクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8151d4fa7d6ad1fd96b86b895d8e8b1ac91dc3f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: eab7a558054b423e3a18e54ad94bc91060082aad
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075727"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420911"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>拡張イベント ログの診断情報へのアクセス」を参照してください。
   以降で[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client とデータ アクセスのトレース ([データ アクセスのトレース](http://go.microsoft.com/fwlink/?LinkId=125805))、接続リングからの接続エラーに関する診断情報を取得するが簡単に更新されました拡張イベント ログからバッファーやアプリケーションのパフォーマンス情報。  
   
- 拡張イベント ログの読み取り方法の詳細については、次を参照してください。[イベント セッション データの表示](../../../database-engine/view-event-session-data.md)です。  
+ 拡張イベント ログの読み取り方法の詳細については、次を参照してください。[イベント セッション データの表示](../../../database-engine/view-event-session-data.md)します。  
   
 > [!NOTE]  
 >  この機能は、トラブルシューティングおよび診断用であるため、監査やセキュリティの用途には適さない場合があります。  
   
 ## <a name="remarks"></a>コメント  
- 接続操作では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はクライアント接続 ID を送信します。 接続が失敗した場合、接続リング バッファーにアクセスできます ([、接続リング バッファーによる SQL Server 2008 の接続のトラブルシューティング](http://go.microsoft.com/fwlink/?LinkId=207752)) を見つけて、`ClientConnectionID`フィールドで診断情報を取得し、接続に失敗しました。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます  (ログイン前のパケットを送信する前に接続に失敗した場合、クライアント接続 ID は生成されません)。クライアント接続 ID は 16 バイトの GUID です。 クライアントを見つけることもできる場合、拡張イベントの接続 ID は、ターゲットを出力、`client_connection_id`アクションが拡張イベント セッションのイベントに追加します。 詳しい診断サポートが必要な場合は、データ アクセスのトレースを有効にして、接続コマンドを再実行し、失敗した操作のデータ アクセスのトレースで `ClientConnectionID` フィールドを調べます。  
+ 接続操作では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はクライアント接続 ID を送信します。 接続に失敗した場合、接続リング バッファーを表示できます ([接続リング バッファーによる SQL Server 2008 のトラブルシューティング](http://go.microsoft.com/fwlink/?LinkId=207752)) を見つけて、`ClientConnectionID`フィールドでに関する診断情報を取得し、接続エラーです。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます  (ログイン前のパケットを送信する前に接続に失敗した場合、クライアント接続 ID は生成されません)。クライアント接続 ID は 16 バイトの GUID です。 クライアントを検索することもできます。 場合、拡張イベント内で接続 ID は、ターゲットを出力、`client_connection_id`アクションは、拡張イベント セッションのイベントに追加されます。 詳しい診断サポートが必要な場合は、データ アクセスのトレースを有効にして、接続コマンドを再実行し、失敗した操作のデータ アクセスのトレースで `ClientConnectionID` フィールドを調べます。  
   
- ODBC を使用している場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client との接続が成功すると、クライアントを取得する接続 ID を使用して、`SQL_COPT_SS_CLIENT_CONNECTION_ID`属性が[SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md)です。  
+ ODBC を使用している場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client との接続が成功すると、クライアントを取得する接続 ID を使用して、`SQL_COPT_SS_CLIENT_CONNECTION_ID`属性[SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md)します。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、スレッド固有のアクティビティ ID も送信します。 アクティビティ ID は、TRACK_CAUSAILITY オプションを有効にしてセッションを開始した場合、拡張イベント セッションでキャプチャされます。 アクティブな接続に関するパフォーマンスの問題については、クライアントのデータ アクセスのトレース (`ActivityID` フィールド) からアクティビティ ID を取得し、拡張イベント出力で、このアクティビティ ID を検索できます。 拡張イベントのアクティビティ ID は、16 バイトの GUID (クライアント接続 ID の GUID とは異なります) に 4 バイトのシーケンス番号が付加されたものです。 シーケンス番号は、スレッド内の要求の順序を表し、スレッドのバッチ ステートメントと RPC ステートメントの相対順序を示します。 `ActivityID` は必要に応じて、データ アクセスのトレースが有効であり、データ アクセス トレース構成ワードの 18 番目のビットがオンである場合に、SQL バッチ ステートメントと RPC 要求に送信されます。  
   

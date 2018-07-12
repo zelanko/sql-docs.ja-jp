@@ -1,5 +1,5 @@
 ---
-title: 追加する拡張ストアド プロシージャを SQL Server |Microsoft ドキュメント
+title: ストアド プロシージャを SQL Server の拡張を追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - collations [SQL Server], extended stored procedures
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b69f6ba2dd0fc6c5b3b2ce4f93e70239d8868007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c88e0640c41e7307144912cc05f9cdd21022fee6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211272"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>SQL Server への拡張ストアド プロシージャの追加
     
@@ -49,7 +49,7 @@ ms.locfileid: "36084991"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL12.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- `sp_addextendedproc` に指定した関数の名前が、DLL 内の関数名と正確に一致しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に新しい名前が登録されますが、その名前は役に立ちません。 たとえばが`xp_Hello`として登録されて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にあるストアド プロシージャ`xp_hello.dll`、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用する場合、DLL の関数を検索することはできません`xp_Hello`を後で、関数を呼び出します。  
+ `sp_addextendedproc` に指定した関数の名前が、DLL 内の関数名と正確に一致しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に新しい名前が登録されますが、その名前は役に立ちません。 たとえばが`xp_Hello`として登録されて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]拡張であるストアド プロシージャ`xp_hello.dll`、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用する場合は、DLL で関数を検索することはできません`xp_Hello`を後で、関数を呼び出します。  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  

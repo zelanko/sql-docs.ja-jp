@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 caps.latest.revision: 38
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a670980605130532d5a93c17dd6827343dd68d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 405f70f2063ea9930c31b1c8a8cf60085c31889f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240962"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>手順 6 : 参照変換の追加と構成
   ソース ファイルからデータを取り出すフラット ファイルを構成したら、次は、 **CurrencyKey** および **DateKey**の値を取得する際に必要な参照変換を定義します。 参照変換は、指定の入力列のデータを参照データセットの列に結合することにより、参照を実行します。 参照データセットは、既存のテーブル、既存のビュー、新しいテーブル、または SQL ステートメントの結果のいずれかになります。 このチュートリアルでは、参照変換は、OLE DB 接続マネージャーを使用して、参照データセットのソースとなるデータを含むデータベースに接続します。  
@@ -98,7 +98,7 @@ ms.locfileid: "36085263"
   
 9. [Lookup Currency Key] 変換を右クリックし、 **[プロパティ]** をクリックします。  
   
-10. [プロパティ] ウィンドウであることを確認、`LocaleID`プロパティに設定されている**英語 (米国)** と**DefaultCodePage**プロパティに設定されている**1252**です。  
+10. [プロパティ] ウィンドウであることを確認、`LocaleID`プロパティに設定されて**英語 (米国)** と**DefaultCodePage**プロパティに設定されて**1252**。  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Lookup Date Key 変換を追加および構成するには  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36085263"
   
 11. [Lookup Date Key] 変換を右クリックし、 **[プロパティ]** をクリックします。  
   
-12. [プロパティ] ウィンドウであることを確認、`LocaleID`プロパティに設定されている**英語 (米国)** と**DefaultCodePage**プロパティに設定されている**1252**です。  
+12. [プロパティ] ウィンドウであることを確認、`LocaleID`プロパティに設定されて**英語 (米国)** と**DefaultCodePage**プロパティに設定されて**1252**。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 7: OLE DB 変換先の追加と構成](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  

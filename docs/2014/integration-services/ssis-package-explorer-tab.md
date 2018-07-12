@@ -1,5 +1,5 @@
 ---
-title: SSIS パッケージ エクスプ ローラー タブ |Microsoft ドキュメント
+title: SSIS パッケージ エクスプ ローラー タブ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.treeview.f1
 ms.assetid: fdcd93fc-fe9a-40ec-bac3-5f303cd83eaf
 caps.latest.revision: 19
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 92ccd17ca8895b0c95778c30591e29d8d55b4f5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7e78af728779811eeb8257efd217cc190461e6d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160743"
 ---
 # <a name="ssis-package-explorer-tab"></a>SSIS の [パッケージ エクスプローラー] タブ
   **デザイナーの** [パッケージ エクスプローラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、パッケージのすべての要素 (構成、接続、イベント ハンドラー、タスクやコンテナーなどの実行可能オブジェクト、ログ プロバイダー、優先順位制約、変数) の階層ビューを参照できます。 パッケージにデータ フロー タスクが含まれている場合、 **[パッケージ エクスプローラー]** タブにはデータ フロー コンポーネントの階層ビューを格納するノードが含まれます。  

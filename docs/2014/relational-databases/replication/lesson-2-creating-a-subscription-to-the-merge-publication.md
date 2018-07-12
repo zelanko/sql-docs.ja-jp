@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ad258c2be4e7df3ff353a9fd1a1f9e7c083991d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94f58681e368ce3eff15a5b6ec78afbc7be2018f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258428"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>レッスン 2 : マージ パブリケーションへのサブスクリプションの作成
   このレッスンでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してサブスクリプションを作成します。 次に、サブスクリプション データベースに権限を設定し、新しいサブスクリプション用のフィルター選択データのスナップショットを手動で作成します。 このレッスンを進めるには、前のレッスン「 [レッスン 1: マージ レプリケーションを使用したデータのパブリッシュ](lesson-1-publishing-data-using-merge-replication.md)」を完了している必要があります。  
@@ -40,7 +40,7 @@ ms.locfileid: "36084292"
   
 5.  [マージ エージェントの場所] ページで、 **[サブスクライバーで各エージェントを実行する]** をクリックし、 **[次へ]** をクリックします。  
   
-6.  サブスクライバー ページで、サブスクライバー サーバーのインスタンス名を選択**サブスクリプション データベース** **\<新しいデータベース >** 一覧からです。  
+6.  [サブスクライバー] ページで、サブスクライバー サーバーのインスタンス名を選択します。**サブスクリプション データベース**を選択します**\<新しいデータベース >** 一覧から。  
   
 7.  **[新しいデータベース]** ダイアログ ボックスで、 **[データベース名]** ボックスに「 **SalesOrdersReplica** 」と入力し、 **[OK]** をクリックして **[次へ]** をクリックします。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36084292"
   
 9. [サブスクリプションの初期化] ページで、**[次の場合に初期化]** ボックスの一覧から **[初回同期時]** を選択し、**[次へ]** をクリックし、**[次へ]** もう一度です。  
   
-10. [HOST_NAME 値] ページの値を入力してください。`adventure-works\pamela0`で、 **HOST_NAME 値**ボックスと [] をクリック**完了**です。  
+10. HOST_NAME 値 ページの値を入力します。`adventure-works\pamela0`で、 **HOST_NAME 値**ボックスをクリック**完了**します。  
   
 11. もう一度 **[完了]** をクリックし、サブスクリプションが作成されたら **[閉じる]** をクリックします。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36084292"
   
 3.  **[データ パーティション]** ページを選択して、 **[追加]** をクリックします。  
   
-4.  **データ パーティションの追加** ダイアログ ボックスで、「`adventure-works\pamela0`で、 **HOST_NAME 値**ボックスし、 をクリックして**OK**です。  
+4.  **データ パーティションの追加**ダイアログ ボックスに「`adventure-works\pamela0`で、 **HOST_NAME 値**ボックスをクリック**OK**。  
   
 5.  新しく追加したパーティションを選択して、 **[今すぐ選択したスナップショットを生成する]** をクリックし、 **[OK]** をクリックします。  
   

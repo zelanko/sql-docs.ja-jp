@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client の機能 |Microsoft ドキュメント
+title: SQL Server Native Client の機能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc73fcc6a4ecd188053e3ae8ac1064ecc84192e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 76e7798edc0d11555d0281ff6c026f63f7ea3426
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075952"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411311"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client の機能
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、Windows Data Access Components (WDAC、以前の Microsoft Data Access Components) の機能を公開するだけでなく、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の機能を公開するための機能が数多く実装されています。  
@@ -35,7 +33,7 @@ ms.locfileid: "36075952"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client で変更された動作について説明します。  
   
  [データベース ミラーリングの使用](using-database-mirroring.md)  
- について説明する方法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client のコピー、およびミラーを保持することが、ミラー化されたデータベースの使用をサポートする、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]スタンバイ サーバー上のデータベースです。  
+ について説明する方法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client のコピー、つまりミラーを保持する機能は、ミラー化されたデータベースの使用をサポートする、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]スタンバイ サーバー上のデータベース。  
   
  [非同期操作の実行](performing-asynchronous-operations.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client で、非同期操作をサポートする方法について説明します。非同期操作では、呼び出し側のスレッドをブロックせずに直ちに操作を戻すことができます。  
@@ -47,7 +45,7 @@ ms.locfileid: "36075952"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client で XML データ型をサポートする方法について説明します。XML データ型とは、XML ベースのデータ型で、列の型、変数の型、パラメーターの型、または関数の戻り値の型として使用できます。  
   
  [ユーザー定義型の使用](using-user-defined-types.md)  
- 説明方法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client は、ユーザー定義型 (UDT)、オブジェクトやカスタム データ構造を格納することにより、SQL 型システムを拡張するものをサポートしている、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース。  
+ について説明する方法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client は、ユーザー定義型 (UDT)、オブジェクトとカスタム データ構造を格納することにより、SQL 型システムを拡張するものをサポートしている、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース。  
   
  [大きな値の型の使用](using-large-value-types.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client で大きな値のデータ型をサポートする方法について説明します。大きな値のデータ型とは、ラージ オブジェクト (LOB) データ型のことです。  
@@ -62,7 +60,7 @@ ms.locfileid: "36075952"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client で、行セット変更時のコンシューマーへの通知をサポートする方法について説明します。  
   
  [一括コピー操作の実行](performing-bulk-copy-operations.md)  
- 説明方法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client の大量のデータの転送を許可する一括コピー操作をサポートしている、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブルまたはビュー。  
+ 説明方法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client の大量のデータの転送を許可する一括コピー操作をサポートしています、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブルまたはビュー。  
   
  [検証を伴わない暗号化の使用](using-encryption-without-validation.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用して、証明書の検証をせずに、サーバーに送信されるデータを暗号化する方法について説明します。  
@@ -92,7 +90,7 @@ ms.locfileid: "36075952"
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] で導入された動作の変更について説明します。 列の結果または出力パラメーターをバインドするときに固定長バッファーを指定した場合、ターミネータ文字の前にバッファーに書き込まれる `wchar` 文字がサロゲート ペアの上位サロゲート コード ポイントである場合、および次の `wchar` 文字が下位サロゲート コード ポイントである場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はバッファーに上位サロゲート コード ポイントを追加しません。  
   
  [SQL Server Native Client の HADR サポート](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- 機能が追加された高可用性、災害復旧を活用するために、アプリケーションを構成する方法について説明[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]です。  
+ 高可用性、ディザスター リカバリー機能が追加で活用するために、アプリケーションを構成する方法について説明します。[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]します。  
   
  [拡張イベント ログの診断情報へのアクセス](accessing-diagnostic-information-in-the-extended-events-log.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の機能強化とリング バッファーおよび XEvent ログの診断情報にアクセスできるデータ トレースについて説明します。  

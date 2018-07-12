@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_LITERALS 行セット |Microsoft ドキュメント
+title: DISCOVER_LITERALS 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_LITERALS rowset
 ms.assetid: 1bf0a2e2-a419-4c25-b271-37dfa44de2ea
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4643ab803f3e6a7d63c4172423e909b6badd64b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bd59dfdc385775f0846a1a0f9de41f7d3bf2750
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259968"
 ---
 # <a name="discoverliterals-rowset"></a>DISCOVER_LITERALS 行セット
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーによってサポートされているデータ型や値などを含むリテラルに関する情報を返します。  
   
- 呼び出す場合は、 [Discover](../../xmla/xml-elements-methods-discover.md)メソッドを`DISCOVER_LITERALS`の列挙値に、 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)要素、`Discover`メソッドを返します。、`DISCOVER_LITERALS`行セット。  
+ 呼び出す場合、 [Discover](../../xmla/xml-elements-methods-discover.md)メソッドを`DISCOVER_LITERALS`列挙値、 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)要素、`Discover`メソッドを返します。、`DISCOVER_LITERALS`行セット。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  `DISCOVER_LITERALS`行セットには、次の列が含まれています。  

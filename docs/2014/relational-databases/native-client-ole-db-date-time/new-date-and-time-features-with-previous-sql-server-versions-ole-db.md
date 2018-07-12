@@ -1,45 +1,43 @@
 ---
-title: 新しい日付と時刻の機能と以前の SQL Server バージョン (OLE DB) |Microsoft ドキュメント
+title: 新しい日付と時刻の機能で以前の SQL Server バージョン (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bf1e993892b3e8d009aa6002b35bc0e4cf064531
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: bd1f9f48b1703719ce08ca2d1da4a5c9addaffc0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073972"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420187"
 ---
-# <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>新しい日付と時刻の機能と以前の SQL Server バージョン (OLE DB)
-  このトピックは、バージョンの機能強化された日付と時刻を使用するクライアント アプリケーションと通信するときに予期しない動作をについて説明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、クライアントのバージョンでコンパイルされたときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]強化された日付と時刻の機能をサポートするサーバーへコマンドを送信します。  
+# <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>新しい日付と時刻の機能で以前の SQL Server バージョン (OLE DB)
+  このトピックでは、強化された日付と時刻の機能を使用するクライアント アプリケーションのバージョンと通信する場合に想定される動作を説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、クライアントのバージョンでコンパイルされたときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]強化された日付と時刻の機能をサポートするサーバーへのコマンドを送信します。  
   
 ## <a name="down-level-client-behavior"></a>下位クライアントの動作  
- バージョンを使用するクライアント アプリケーション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client より前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]として新しい日付/時刻型を参照してください`nvarchar`列です。 列のコンテンツはリテラル表現になります。 詳細についてを参照してください「データ形式: 文字列とリテラルをデータする」の[OLE DB の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-ole-db-date-and-time-improvements.md)です。 列のサイズは、列に指定された有効桁数に対するリテラルの最大長です。  
+ バージョンを使用するクライアント アプリケーション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client より前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]として新しい日付/時刻型を参照してください。`nvarchar`列。 列のコンテンツはリテラル表現になります。 詳細については、の「データ形式: 文字列とリテラルをデータする"セクションを参照してください。 [OLE DB の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-ole-db-date-and-time-improvements.md)します。 列のサイズは、列に指定された有効桁数に対するリテラルの最大長です。  
   
  カタログ API によって、クライアントに返される下位データ型のコード (`nvarchar` など) および関連する下位の表現 (適切なリテラル形式など) と一貫性のあるメタデータが返されます。 ただし、返されるデータ型名は、実際の [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の型名です。  
   
- に対して下位クライアント アプリケーションを実行するときに、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはそれ以降) サーバーの種類が加えられました日付/時刻へのスキーマ変更で、予想される動作は次のようにします。  
+ に対して下位クライアント アプリケーションを実行すると、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはそれ以降) サーバーの種類が構成されている日付/時刻へのスキーマ変更で、想定される動作は次のようにします。  
   
 |OLE DB クライアントの型|SQL Server 2005 の型|SQL Server 2008 (またはそれ以降) の種類|結果の変換 (サーバーからクライアントへ)|パラメーターの変換 (クライアントからサーバーへ)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
 |DBTYPE_DBDATE|DATETIME|date|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP|||時刻フィールドは 0 に設定されます。|時刻フィールドが 0 以外の場合は、IRowsetChange を文字列の切り捨てにより失敗します。|  
 |DBTYPE_DBTIME||Time(0)|[OK]|[OK]|  
-|DBTYPE_DBTIMESTAMP|||日付フィールドは現在の日付に設定されます。|IRowsetChange は、秒の小数部は 0 でない場合、文字列の切り捨てにより失敗します。<br /><br /> 日付は無視されます。|  
+|DBTYPE_DBTIMESTAMP|||日付フィールドは現在の日付に設定されます。|IRowsetChange は、秒の小数部が 0 以外の場合、文字列の切り捨てにより失敗します。<br /><br /> 日付は無視されます。|  
 |DBTYPE_DBTIME||Time (7)|失敗します (時刻リテラルが無効です)。|[OK]|  
 |DBTYPE_DBTIMESTAMP|||失敗します (時刻リテラルが無効です)。|[OK]|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (3)|[OK]|[OK]|  
@@ -47,7 +45,7 @@ ms.locfileid: "36073972"
 |DBTYPE_DBDATE|Smalldatetime|date|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP|||時刻フィールドは 0 に設定されます。|時刻フィールドが 0 以外の場合は、IRowsetChange を文字列の切り捨てにより失敗します。|  
 |DBTYPE_DBTIME||Time(0)|[OK]|[OK]|  
-|DBTYPE_DBTIMESTAMP|||日付フィールドは現在の日付に設定されます。|IRowsetChange は、秒の小数部は 0 でない場合、文字列の切り捨てにより失敗します。<br /><br /> 日付は無視されます。|  
+|DBTYPE_DBTIMESTAMP|||日付フィールドは現在の日付に設定されます。|IRowsetChange は、秒の小数部が 0 以外の場合、文字列の切り捨てにより失敗します。<br /><br /> 日付は無視されます。|  
 |DBTYPE_DBTIMESTAMP||Datetime2(0)|[OK]|[OK]|  
   
  OK は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能した場合には、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降でも引き続き機能することを意味します。  
@@ -60,13 +58,13 @@ ms.locfileid: "36073972"
   
 -   日付と時刻に推奨されるデータ型なので `datetime2` に切り替えます。  
   
- Icommandwithparameters::setparameterinfo をパラメーターの型情報を設定する icommandwithparameters::getparameterinfo またはスキーマ行セットから取得したサーバー メタデータを使用するアプリケーションがクライアントでの変換中にエラーが発生場所文字列ソース型の表現は、変換先の型の文字列形式より大きいです。 たとえば、クライアントのバインドで DBTYPE_DBTIMESTAMP を使用して、サーバーの列は日付、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、"yyyy mm dd hh:mm:ss.fff"に値が変換されますが、サーバーのメタデータとして返されます`nvarchar(10)`です。 その結果発生するオーバーフローが、DBSTATUS_E_CATCONVERTVALUE の原因となります。 ような問題が発生したデータ変換を含む IRowsetChange、によって結果セットのメタデータから行セットのメタデータが設定されているためです。  
+ Icommandwithparameters::getparameterinfo またはスキーマ行セットから取得したサーバーのメタデータを使用して、icommandwithparameters::setparameterinfo をパラメーターの型情報を設定するアプリケーションが、クライアントでの変換に失敗、文字列ソース型の表現は、変換先の型の文字列表現を超えています。 たとえば、クライアントのバインディングが DBTYPE_DBTIMESTAMP を使用し、サーバーの列が date、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、"yyyy dd mm hh:mm:ss.fff"に値が変換されますが、サーバーのメタデータとして返されます`nvarchar(10)`します。 その結果発生するオーバーフローが、DBSTATUS_E_CATCONVERTVALUE の原因となります。 ような問題が発生するデータ変換を含む IRowsetChange、によって行セットのメタデータが結果セットのメタデータから設定されているためです。  
   
 ### <a name="parameter-and-rowset-metadata"></a>パラメーターと行セットのメタデータ  
- このセクションのバージョンでコンパイルされたクライアントのパラメーター、結果列、およびスキーマ行セットのメタデータをについて説明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client より前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]です。  
+ このセクションでは、クライアントのバージョンでコンパイルされたパラメーター、結果列、およびスキーマ行セットのメタデータがについて説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client より前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]します。  
   
 #### <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- DBPARAMINFO 構造体を次の情報が返されます、 *prgParamInfo*パラメーター。  
+ DBPARAMINFO 構造体を次の情報を返します、 *prgParamInfo*パラメーター。  
   
 |パラメーターの型|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
@@ -104,7 +102,7 @@ ms.locfileid: "36073972"
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>スキーマ行セット  
- このセクションでは、新しいデータ型のパラメーター、結果列、およびスキーマ行セットのメタデータについて説明します。 この情報は役立ちますツールを使用して開発されたクライアント プロバイダーがあるはよりも前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client です。  
+ このセクションでは、新しいデータ型のパラメーター、結果列、およびスキーマ行セットのメタデータについて説明します。 この情報は、便利なツールを使用して開発されたクライアント プロバイダーがあるはよりも前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。  
   
 #### <a name="columns-rowset"></a>COLUMNS 行セット  
  日付型または時刻型に対して返される列の値を次に示します。  
@@ -158,14 +156,14 @@ ms.locfileid: "36073972"
 |IS_FIXEDLENGTH|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
   
 ## <a name="down-level-server-behavior"></a>下位サーバーの動作  
- 前のバージョンのサーバーに接続しているときに[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、または使用して新しいサーバーの型名 (たとえば、icommandwithparameters::setparameterinfo itabledefinition::createtable) しようとすると DB_E_BADTYPENAME になります。  
+ 前のバージョンのサーバーに接続されているときに[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、(たとえば、icommandwithparameters::setparameterinfo または itabledefinition::createtable) で新しいサーバーの型名を使用しようとすると、DB_E_BADTYPENAME になります。  
   
  型名を使用せずに新しい型がパラメーターまたは結果にバインドされている場合に、新しい型を使用してサーバーの型を暗黙的に指定するか、サーバーの型からクライアントの型への有効な変換がないと、DB_E_ERRORSOCCURRED が返されます。また、実行時に使用されるアクセサーのバインドの状態に DBBINDSTATUS_UNSUPPORTED_CONVERSION が設定されます。  
   
- 接続時に、サーバーのバージョンに対して、クライアントでのバッファーの型からサーバーの型への変換がサポートされている場合は、クライアントのすべてのバッファーの型を使用できます。 このコンテキストで*サーバーの種類*icommandwithparameters::setparameterinfo が呼び出されていない場合、バッファーの種類が含まれるまたは icommandwithparameters::setparameterinfo、によって指定された型のことを意味します。 つまり、クライアントでサポートされるサーバーの型への変換が成功した場合、DBTYPE_DBTIME2 および DBTYPE_DBTIMESTAMPOFFSET は、下位サーバーで使用するか、DataTypeCompatibility=80 の場合に使用することができます。 当然ながら、サーバーの型が正しくないと、実際のサーバーの型への暗黙的な変換を実行できない場合にサーバーからエラーが報告されます。  
+ 接続時に、サーバーのバージョンに対して、クライアントでのバッファーの型からサーバーの型への変換がサポートされている場合は、クライアントのすべてのバッファーの型を使用できます。 このコンテキストで*サーバーの種類*icommandwithparameters::setparameterinfo をで指定されたまたは icommandwithparameters::setparameterinfo が呼び出されていない場合は、バッファーの種類が含まれる型のことを意味します。 つまり、クライアントでサポートされるサーバーの型への変換が成功した場合、DBTYPE_DBTIME2 および DBTYPE_DBTIMESTAMPOFFSET は、下位サーバーで使用するか、DataTypeCompatibility=80 の場合に使用することができます。 当然ながら、サーバーの型が正しくないと、実際のサーバーの型への暗黙的な変換を実行できない場合にサーバーからエラーが報告されます。  
   
 ## <a name="sspropinitdatatypecompatibility-behavior"></a>SSPROP_INIT_DATATYPECOMPATIBILITY の動作  
- SSPROP_INIT_DATATYPECOMPATIBILITY が SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000 に設定されているときに、新しい日付/時刻型と関連付けられているメタデータと表示されますクライアントをダウンレベルのクライアントでは、」の説明に従って[の一括コピーの変更強化された日付と時刻型&#40;OLE DB および ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)です。  
+ SSPROP_INIT_DATATYPECOMPATIBILITY が SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000 に設定されている場合、新しい日付/時刻型と関連付けられているメタデータと表示されますクライアントをダウンレベル クライアントでは、」の説明に従って[の一括コピーの変更強化された日付/時刻型&#40;OLE DB および ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)します。  
   
 ## <a name="comparability-for-irowsetfind"></a>IRowsetFind での比較  
  新しい日付型または時刻型に対しては、すべての比較演算子を使用できます。これは、日付型または時刻型ではなく文字列型と見なされるためです。  

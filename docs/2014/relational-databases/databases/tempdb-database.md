@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
 - tempdb database [SQL Server], about tempdb
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 048386695f2b3d3736ce2b399caa9fa286e0d80c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 251ca5f656425a3a77952b4bfdb6e0b79ee8367d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154333"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
   **tempdb** システム データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続しているすべてのユーザーが使用できるグローバル リソースであり、以下のものを保持するために使用されます。  
@@ -44,10 +44,10 @@ ms.locfileid: "36165563"
   
 |ファイル|論理名|物理名|ファイル拡張|  
 |----------|------------------|-------------------|-----------------|  
-|プライマリ データ|tempdev|tempdb.mdf|ディスクがいっぱいになるまで 10% ずつ自動拡張|  
-|Log|templog|templog.ldf|2 テラバイトの最大値まで 10% ずつ自動拡張|  
+|プライマリ データ|tempdev|tempdb.mdf|ディスクがいっぱいになるまでの 10% ずつ自動拡張|  
+|Log|templog|templog.ldf|2 テラバイトの最大数を 10% ずつ自動拡張|  
   
- サイズ**tempdb**システムのパフォーマンスに影響を与えることができます。 たとえば場合、 **tempdb**サイズが小さすぎる、システムの処理可能性がありますが小さ占有を起動するたびに、ワークロードの要件をサポートするためにデータベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 サイズを増やすことで、このオーバーヘッドを回避できます**tempdb**です。  
+ サイズ**tempdb**システムのパフォーマンスに影響を与えることができます。 たとえば場合、 **tempdb**サイズが小さすぎると、システムの処理がなるすぎますが占有している自動拡張を起動するたびに、ワークロードの要件をサポートするデータベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 サイズを増やすことで、このオーバーヘッドを回避できます**tempdb**します。  
   
 ## <a name="performance-improvements-in-tempdb"></a>tempdb でのパフォーマンスの強化  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 **tempdb** のパフォーマンスは以下の方法で強化されています。  
@@ -58,7 +58,7 @@ ms.locfileid: "36165563"
   
 -   **tempdb** に対するログ記録のオーバーヘッドが削減されています。 これにより、 **tempdb** ログ ファイルでのディスク I/O 帯域幅の消費量が減少します。  
   
--   混合ページを割り当てるためのアルゴリズム**tempdb**が向上します。  
+-   混合ページを割り当てるためのアルゴリズム**tempdb**が向上しています。  
   
 ### <a name="moving-the-tempdb-data-and-log-files"></a>tempdb のデータ ファイルとログ ファイルの移動  
  **tempdb** データ ファイルとログ ファイルを移動するには、「 [システム データベースの移動](system-databases.md)」を参照してください。  

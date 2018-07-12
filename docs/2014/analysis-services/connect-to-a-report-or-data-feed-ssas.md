@@ -1,5 +1,5 @@
 ---
-title: レポートまたはデータ フィード (SSAS) への接続 |Microsoft ドキュメント
+title: レポートまたはデータ フィード (SSAS) への接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connreportdatafeed.f1
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 96e2ad7374493c375e85db4f9bff97a475174997
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 726007e635a41295c682ebc929e909fda8f0b0a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210292"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>[レポートまたはデータ フィードへの接続] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、データ フィードに接続できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
@@ -48,7 +48,7 @@ ms.locfileid: "36083983"
  **接続の表示名**  
  データ フィード接続の表示名を入力します。  
   
- **データ フィード URL**  
+ **データ フィードの URL**  
  Atom サービス ドキュメント (.atomsvc、.atom) への完全なパス、または単一のデータ フィードの URL を入力するか、 **[参照]** をクリックして Atom サービス ドキュメントを選択します。  
   
  **[参照]**  
@@ -75,7 +75,7 @@ ms.locfileid: "36083983"
  **接続の表示名**  
  データ フィード接続の表示名を入力します。  
   
- **データ フィード URL**  
+ **データ フィードの URL**  
  Atom サービス ドキュメント (.atomsvc、.atom) への完全なパス、または単一のデータ フィードの URL を入力するか、 **[参照]** をクリックして Atom サービス ドキュメントを選択します。  
   
  **[すべてのフィード列を含める]** をクリックして、すべてのデータ フィード列をインポートするかどうかを指定します。  

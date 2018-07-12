@@ -1,5 +1,5 @@
 ---
-title: PowerPivot の可用性と災害復旧 (SQL Server 2014) |Microsoft ドキュメント
+title: PowerPivot の可用性と災害復旧 (SQL Server 2014) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c05bb8ca3e917d12fe1452dd598c30c698d3c4a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15efd2e1265635fa2870013d580ea4ef929b4600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159293"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>PowerPivot の可用性と災害復旧 (SQL Server 2014)
   可用性と災害復旧計画[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]主に、SharePoint ファーム、さまざまなコンポーネントで許容されるダウンタイムの量と、ツールと SharePoint の可用性の実装のベスト プラクティスの設計に依存します。 このトピックでは、さまざまなテクノロジについて要約し、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置に関して可用性とディザスター リカバリーを計画するときに考慮する必要のあるトポロジ図の例を示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "36084889"
   
  **このトピックの内容:**  
   
--   [PowerPivot の高可用性の SharePoint 2013 のトポロジの例](#bkmk_sharepoint2013)  
+-   [PowerPivot の高可用性 SharePoint 2013 のトポロジの例](#bkmk_sharepoint2013)  
   
 -   [PowerPivot の高可用性 SharePoint 2010 のトポロジの例](#bkmk_sharepoint2010)  
   
@@ -38,20 +38,20 @@ ms.locfileid: "36084889"
   
 -   [詳細情報へのリンク](#bkmk_more_resources)  
   
-##  <a name="bkmk_sharepoint2013"></a> PowerPivot の高可用性の SharePoint 2013 のトポロジの例  
+##  <a name="bkmk_sharepoint2013"></a> PowerPivot の高可用性 SharePoint 2013 のトポロジの例  
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 を配置するときに、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の可用性を設計する方法に関してより大きな柔軟性を実現できます。 SharePoint 2013 では、SharePoint モードで配置された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] サーバーとも呼ばれますが、SharePoint ファームの外部で実行され、別のサーバーにインストールすることもできます。 SharePoint モードにある [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各インスタンスは、Excel Services に登録されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の共有サービスとサービス アプリケーションは、SharePoint アプリケーション サーバー上で実行されます。  
   
  次の図に、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 の配置に関する例を示します。 この例では、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] サービスの適切な可用性をサポートしており、データベースを定期的にバックアップすることを前提としています。  
   
  ![2013 での powerpivot の可用性](../media/ssas-powerpivot-services-2013.png "2013年での powerpivot の可用性")  
   
--   **(1)** Web フロントエンド サーバー。 各サーバーにデータ プロバイダーをインストールするには、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 のアドインを使用します。 詳細については、次を参照してください。[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)です。  
+-   **(1)** Web フロントエンド サーバー。 各サーバーにデータ プロバイダーをインストールするには、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 のアドインを使用します。 詳細については、次を参照してください。[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)します。  
   
 -   **(2)** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共有サービスは **各** アプリケーション サーバー上で動作し、サービス アプリケーションが複数のアプリケーション サーバーに **またがって** 動作できるようにします。 そのため、1 台のアプリケーション サーバーがオフラインになったときでも、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] アプリケーションは引き続き使用できます。  
   
 -   **(3)** Excel Calculation Services は各アプリケーション サーバー上で動作し、サービス アプリケーションが複数のアプリケーション サーバーにまたがって動作できるようにします。 そのため、1 台のアプリケーション サーバーがオフラインになったときでも、Excel Calculation Services は引き続き使用できます。  
   
--   **(4)** と **(6)** のインスタンス[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]アドイン、SharePoint ファームの外部のサーバーで SharePoint モードを実行、Windows サービスが含まれます**SQL Server Analysis Services (POWERPIVOT)** です。 これらのインスタンスのそれぞれは、Excel Services **(3)** に登録されます。 Excel Services は、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] サーバーに対する要求の負荷分散を管理します。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 アーキテクチャを活用して、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] に対応する複数のサーバーを用意することができ、その結果、必要に応じてより多くのインスタンスを追加できます。 詳細については、「 [Excel Services のデータ モデルの設定を管理する (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)」を参照してください。  
+-   **(4)** と **(6)** のインスタンス[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を SharePoint モードは、SharePoint ファームの外部のサーバーで実行、Windows サービスが含まれます**SQL Server Analysis Services (POWERPIVOT)** します。 これらのインスタンスのそれぞれは、Excel Services **(3)** に登録されます。 Excel Services は、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] サーバーに対する要求の負荷分散を管理します。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 アーキテクチャを活用して、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] に対応する複数のサーバーを用意することができ、その結果、必要に応じてより多くのインスタンスを追加できます。 詳細については、「 [Excel Services のデータ モデルの設定を管理する (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)」を参照してください。  
   
 -   **(5)** コンテンツ、構成、およびアプリケーション データベースとして使用される SQL Server データベース。 これには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション データベースが含まれます。 DR (災害復旧) 計画に、データベース層を含める必要があります。 この設計では、データベースは、 **(4)** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インスタンスのいずれかと同じサーバーで実行されます。 **(4)** と **(5)** を、互いに異なるサーバーで実行することもできます。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36084889"
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]を含んだコールド スタンドバイのシナリオを計画する方法の詳細については、 [PowerPivot の災害復旧](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx)に関するページを参照してください。  
   
 ## <a name="verification"></a>検証  
- ガイダンスとスクリプトを確認するため、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]災害復旧サイクルの前後の展開を参照してください[チェックリスト: PowerPivot for SharePoint を確認する PowerShell を使用して](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)です。  
+ ガイダンスと確認に役立つスクリプト、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]前に、と後、ディザスター リカバリー サイクルのデプロイに確認[チェックリスト: PowerShell を使用して PowerPivot for SharePoint を確認する](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)します。  
   
 ##  <a name="bkmk_more_resources"></a> 詳細情報へのリンク  
   

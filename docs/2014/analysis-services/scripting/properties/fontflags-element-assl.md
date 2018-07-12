@@ -1,5 +1,5 @@
 ---
-title: FontFlags 要素 (ASSL) |Microsoft ドキュメント
+title: FontFlags 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontFlags element
 ms.assetid: ea608da9-ab05-42ab-8872-c52cd9f3f546
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93dfd53940270fb444dd797bfd4d085ab459d200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1896d01c47f7c2e2fa4289f09c10ef859eff1d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156843"
 ---
 # <a name="fontflags-element-assl"></a>FontFlags 要素 (ASSL)
-  フォントに関連する表示特性を記述、 [CalculationProperty](../objects/calculationproperty-element-assl.md)または[メジャー](../objects/measure-element-assl.md)親要素です。  
+  フォント関連の表示特性について説明します、 [CalculationProperty](../objects/calculationproperty-element-assl.md)または[メジャー](../objects/measure-element-assl.md)親要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36084882"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `FontFlags`プロパティは多次元式 (MDX) 式を含みに適用されます`CalculationProperty`を持つ要素を[CalculationType](calculationtype-element-assl.md)の*メンバー*または*セル*.  
+ `FontFlags`プロパティが多次元式 (MDX) 式が含まれていますとに適用されます`CalculationProperty`を持つ要素を[CalculationType](calculationtype-element-assl.md)の*メンバー*または*セル*.  
   
- 親に対応する要素`FontFlags`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.CalculationProperty>と<xref:Microsoft.AnalysisServices.Measure>です。  
+ 親に対応する要素`FontFlags`分析管理オブジェクト (AMO) オブジェクト モデルは、<xref:Microsoft.AnalysisServices.CalculationProperty>と<xref:Microsoft.AnalysisServices.Measure>します。  
   
 ## <a name="see-also"></a>参照  
  [CalculationProperties 要素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

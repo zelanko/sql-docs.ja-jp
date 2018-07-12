@@ -1,13 +1,11 @@
 ---
-title: SQLGetConnectAttr |Microsoft ドキュメント
+title: SQLGetConnectAttr |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,20 +14,20 @@ helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7db4e37d5fa06373bdb60ea9c2288ff7808ec70d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b31b14603777a98a623dbd80144d400a069a2136
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076215"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415671"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、ドライバー固有の接続属性が定義されます。 属性の一部が使用する`SQLGetConnectAttr`関数がその現在の設定をレポートするために使用されます。 報告される値はこれらの属性の保証がないまでの接続が行われたかを使用して、属性が設定されて後[SQLSetConnectAttr](sqlsetconnectattr.md)です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、ドライバー固有の接続属性が定義されます。 属性の一部が利用する`SQLGetConnectAttr`関数は、現在の設定をレポートに使用するとします。 これらの属性とは限りませんまで接続が確立されているかを使用して、属性が設定されている後に報告される値[SQLSetConnectAttr](sqlsetconnectattr.md)します。  
   
- ここでは、読み取り専用の属性を示します。 については、他の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー固有の接続属性を参照してください[SQLSetConnectAttr](sqlsetconnectattr.md)です。  
+ ここでは、読み取り専用の属性を示します。 については、その他の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー固有の接続属性を参照してください[SQLSetConnectAttr](sqlsetconnectattr.md)します。  
   
 ## <a name="sqlcoptssconnectiondead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  SQL_COPT_SS_CONNECTION_DEAD 属性では、サーバーへの接続状態が報告されます。 ドライバーは、接続の現在の状態をネットワークにクエリします。  
@@ -51,7 +49,7 @@ ms.locfileid: "36076215"
   
 -   データ アクセスのトレース ログの診断情報 (有効な場合)。  
   
- 詳細については、次を参照してください。[へのアクセス ログの診断情報、拡張イベント](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)です。  
+ 詳細については、次を参照してください。[診断の情報を拡張イベント ログにアクセスする](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -59,7 +57,7 @@ ms.locfileid: "36076215"
 |SQL_SUCCESS|接続に成功しました。 クライアント接続 ID は出力バッファーで見つかります。|  
   
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
- SQL_COPT_SS_PERF_DATA 属性は、現在のドライバーのパフォーマンス統計情報を保持する SQLPERF 構造体へのポインターを返します。 `SQLGetConnectAttr` パフォーマンスのログ記録が有効でない場合は NULL を返します。 SQLPERF 構造体内の統計情報がドライバーで動的に更新されることはありません。 呼び出す`SQLGetConnectAttr`たびにパフォーマンス統計を更新する必要があります。  
+ SQL_COPT_SS_PERF_DATA 属性は、現在のドライバーのパフォーマンス統計情報を保持する SQLPERF 構造体へのポインターを返します。 `SQLGetConnectAttr` パフォーマンスのログ記録が有効になっていない場合は NULL を返します。 SQLPERF 構造体内の統計情報がドライバーで動的に更新されることはありません。 呼び出す`SQLGetConnectAttr`たびにパフォーマンス統計を更新する必要があります。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -84,7 +82,7 @@ ms.locfileid: "36076215"
   
  SQL_COPT_SS_SERVER_SPN または SQL_COPT_SS_FAILOVER_PARTNER が設定されていない場合は、既定値 (空の文字列) が返されます。  
   
- Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)です。  
+ Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLGetConnectAttr 関数](http://go.microsoft.com/fwlink/?LinkId=59347)   

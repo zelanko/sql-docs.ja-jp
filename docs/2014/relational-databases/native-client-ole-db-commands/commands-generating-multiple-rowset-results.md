@@ -1,13 +1,11 @@
 ---
-title: 複数の行セットの結果を生成するコマンド |Microsoft ドキュメント
+title: 複数の行セットの結果を生成するコマンド |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,25 +17,25 @@ helpviewer_keywords:
 - multiple-rowset results
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da8db391849392ccae05e3abb330fbfa112fcc49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9a741671fa2b667b2a7bc472f64967fc351f1d70
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077082"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414660"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>複数行セットの結果を生成するコマンド
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーからの複数の行セットを返すことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ステートメントです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のステートメントは、次の条件が満たされた場合に複数行セットの結果を返します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから複数の行セットを返すことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ステートメント。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のステートメントは、次の条件が満たされた場合に複数行セットの結果を返します。  
   
 -   バッチにまとめられた SQL ステートメントが 1 つのコマンドとして実行される場合。  
   
 -   ストアド プロシージャが SQL ステートメントのバッチを実装している場合。  
   
 ## <a name="batches"></a>バッチ  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは SQL ステートメントのバッチ区切り記号としてセミコロン文字を認識します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、SQL ステートメントのバッチ区切り記号としてセミコロン文字を認識します。  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

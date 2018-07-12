@@ -1,13 +1,11 @@
 ---
-title: Ibcpsession::bcpwritefmt (OLE DB) |Microsoft ドキュメント
+title: Ibcpsession::bcpwritefmt (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - BCPWriteFmt method
 ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3f7b2437a8a1a46b84f011eb631887d39f7c96eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 68be3cd9b1296ed1f9e3530c4aadcc5a28cea891
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074371"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431051"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
   フォーマット ファイルに列ごとのフォーマット情報を書き込みます。  
@@ -42,9 +40,9 @@ const wchar_t *pwszFormatFile);
 ## <a name="remarks"></a>コメント  
  フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 呼び出し、 [ibcpsession::bcpcolumns](ibcpsession-bcpcolumns-ole-db.md)と[ibcpsession::bcpcolfmt](ibcpsession-bcpcolfmt-ole-db.md)メソッドは、データ ファイルの形式を定義します。 **BCPWriteFmt**メソッドは、この定義を pwszFormatFile 引数で参照されているファイルに保存します。  
   
- **BCPWriteFmt**メソッドは、xml またはテキストのいずれかの形式でフォーマット ファイルを保存できます。 これは、BCP_OPTION_XML 制御オプションを使用して示す必要があります、 [ibcpsession::bcpcontrol](ibcpsession-bcpcontrol-ole-db.md)メソッドです。  
+ **BCPWriteFmt**メソッドは xml またはテキスト形式でフォーマット ファイルを保存することができます。 これで、BCP_OPTION_XML 制御オプションを使用して示す必要があります、 [ibcpsession::bcpcontrol](ibcpsession-bcpcontrol-ole-db.md)メソッド。  
   
- 保存されたフォーマット ファイルを読み込むを使用して、 [ibcpsession::bcpreadfmt](ibcpsession-bcpreadfmt-ole-db.md)メソッドです。  
+ 保存されたフォーマット ファイルを読み込むには、使用、 [ibcpsession::bcpreadfmt](ibcpsession-bcpreadfmt-ole-db.md)メソッド。  
   
 ## <a name="arguments"></a>引数  
  *pwszFormatFile*[in]  
@@ -55,7 +53,7 @@ const wchar_t *pwszFormatFile);
  メソッドが成功しました。  
   
  E_FAIL  
- プロバイダー固有のエラーが発生しました。詳細についてを使用して、 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)インターフェイスです。  
+ プロバイダー固有のエラーが発生しました。詳細については、使用、 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)インターフェイス。  
   
  E_OUTOFMEMORY  
  メモリ不足エラーです。  

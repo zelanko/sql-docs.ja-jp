@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d2829c12a38b75b5b50eb21c44b18252658b6a1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5671d2223c2518972f8947e9e715b6ffc4b7b55d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278798"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>警告デザイナーでのデータ警告の作成
   データ警告の定義は、データ警告デザイナーで作成します。 作成した警告定義は、保存後、再度データ警告デザイナーで開いて編集し、保存し直すことができます。 警告定義の編集の詳細については、「 [データ警告マネージャーでのデータ警告の管理](manage-my-data-alerts-in-data-alert-manager.md) 」および「 [警告デザイナーでのデータ警告の編集](edit-a-data-alert-in-alert-designer.md)」を参照してください。  
@@ -101,7 +101,7 @@ ms.locfileid: "36082927"
      既定では、警告メッセージに停止日はありません。  
   
     > [!NOTE]  
-    >  通知メッセージを停止しても、警告定義は削除されません。 停止した警告メッセージは、開始日と停止日を更新することで再度開始できます。 警告の定義を削除する方法の詳細については、次を参照してください。 [マイ データ警告のデータ警告マネージャーで](manage-my-data-alerts-in-data-alert-manager.md)です。  
+    >  通知メッセージを停止しても、警告定義は削除されません。 停止した警告メッセージは、開始日と停止日を更新することで再度開始できます。 警告の定義を削除する方法の詳細については、次を参照してください。[データ警告の管理データ警告マネージャーで](manage-my-data-alerts-in-data-alert-manager.md)します。  
   
 18. 必要に応じて、 **[結果が変更された場合にのみメッセージを送信]** チェック ボックスをオフにします。  
   

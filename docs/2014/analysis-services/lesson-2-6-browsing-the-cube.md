@@ -1,5 +1,5 @@
 ---
-title: キューブの表示 |Microsoft ドキュメント
+title: キューブの表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: ca4f0a6ee14d46ce9229eb068e3554fe29e0db62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 763fea9f0ff216fab263edb1d30b56e8ca6a630f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239862"
 ---
 # <a name="browsing-the-cube"></a>キューブの表示
   キューブを配置すると、キューブ デザイナーの **[ブラウザー]** タブにキューブ データが表示され、ディメンション デザイナーの **[ブラウザー]** タブにディメンション データが表示されます。 キューブ データとディメンション データを参照すると、作業を段階的に確認できます。 プロパティ、リレーションシップ、およびその他のオブジェクトに対する細かい変更が、それらのオブジェクトの処理後に期待どおりの効果をもたらしていることを検証できます。 [ブラウザー] タブはキューブ データとディメンション データの両方を表示するために使用されますが、参照するオブジェクトに応じて異なる機能を提供します。  
@@ -34,7 +34,7 @@ ms.locfileid: "36077224"
   
 1.  **で、Product ディメンションの** ディメンション デザイナー [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]に切り替えます。 これを行うには、ソリューション エクスプローラーの **[ディメンション]** ノードで **[Product]** ディメンションをダブルクリックします。  
   
-2.  クリックして、**ブラウザー**を表示するタブ、**すべて**のメンバー、`Product Key`属性階層。 レッスン 3 では、Product ディメンションのユーザー階層を定義し、ディメンションを参照できるようにします。  
+2.  をクリックして、**ブラウザー**タブを表示する、**すべて**のメンバー、`Product Key`属性階層。 レッスン 3 では、Product ディメンションのユーザー階層を定義し、ディメンションを参照できるようにします。  
   
 3.  **で** キューブ デザイナー [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]に切り替えます。 これを行うには、ソリューション エクスプローラーの **[キューブ]** ノードで **[Analysis Services Tutorial]** キューブをダブルクリックします。  
   

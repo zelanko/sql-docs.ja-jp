@@ -1,5 +1,5 @@
 ---
-title: KpiGoal 要素 (CSDLBI) |Microsoft ドキュメント
+title: KpiGoal 要素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fd8afbe7-b57d-4b47-862d-eb7b2489c327
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d75a2178d91b93879e4d08d11ba0fa536f7f2ddd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b64e3124ba7a848921e1b0844b20d03e9aa82af4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165243"
 ---
 # <a name="kpigoal-element-csdlbi"></a>KpiGoal 要素 (CSDLBI)
   KpiGoal 要素は、主要業績評価指標 (KPI) の目標値を定義するために使用されている列への参照を提供します。  

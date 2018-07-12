@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-views
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
 - clustered indexes, views
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 77
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5498cda83c3b33d0f6b3c6898954e1442e6e21cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d56783347d9c5aaf59a1b45b24e2003a35df96df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150423"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用し、インデックス付きビューを作成する方法について説明します。 ビューに作成する最初のインデックスは、一意なクラスター化インデックスにする必要があります。 一意のクラスター化インデックスを作成した後は、非クラスター化インデックスを追加で作成できます。 ビューに一意のクラスター化インデックスを作成すると、そのビューは、クラスター化インデックスが定義されているテーブルと同じ方法でデータベースに格納されるので、クエリのパフォーマンスが向上します。 クエリ オプティマイザーではインデックス付きビューを使って、クエリの実行速度を高めることができます。 オプティマイザーでビューを代用するかどうかを判別するために、ビューがクエリで参照されている必要はありません。  
@@ -49,7 +48,7 @@ ms.locfileid: "36163829"
 ###  <a name="Restrictions"></a> インデックス付きビューに必要な SET オプション  
  クエリの実行時、異なる SET オプションがアクティブになっている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は同じ式を評価しても異なる結果を生成することがあります。 たとえば、SET オプションの CONCAT_NULL_YIELDS_NULL を ON に設定した後、式 **'** abc **'** + NULL を実行すると NULL 値が返されます。 CONCAT_NULL_YIELDS_NULL を OFF に設定した後、同じ式を実行すると値 **'** abc **'** が返されます。  
   
- ビューが正しく維持され、一貫性のある結果が返されるようにするには、インデックス付きビューで、いくつかの SET オプションに固定値が必要となります。 次の表の SET オプションで示した値に設定する必要があります、 **RequiredValue**次の条件が発生するたびに、列。  
+ ビューが正しく維持され、一貫性のある結果が返されるようにするには、インデックス付きビューで、いくつかの SET オプションに固定値が必要となります。 次の表の SET オプションに表示される値に設定する必要があります、 **RequiredValue**次の条件が発生するたびに、列。  
   
 -   ビューが作成され、そのビューのインデックスも作成されている。  
   
@@ -128,14 +127,14 @@ ms.locfileid: "36163829"
     |スパース列セット|インラインまたは複数ステートメントのテーブル値関数|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*インデックス付きビューを含めることができる`float`列です。 ただし、このような列は、クラスター化インデックス キーに含めることができません。  
+     \*インデックス付きビューに含めることができます`float`列。 ただし、このような列はクラスター化インデックス キーに含めることができません。  
   
 -   GROUP BY が存在する場合、VIEW 定義には COUNT_BIG(*) を含める必要があります。HAVING を含めることはできません。 このような GROUP BY 制限は、インデックス付きビュー定義にのみ適用されます。 クエリがこの GROUP BY 制限を満たしていない場合でも、実行プランでインデックス付きビューを使用することはできます。  
   
 -   ビュー定義に GROUP BY 句を指定した場合、一意のクラスター化インデックスのキーでは、GROUP BY 句で指定した列のみを参照できること。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
- インデックス付きビューで `datetime` 文字リテラルと `smalldatetime` 文字列リテラルを参照するときは、決定的な日付形式スタイルを使用して、そのリテラルを目的の日付型に明示的に変換することをお勧めします。 決定的な日付形式の一覧については、「[CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。 文字列の暗黙的な変換を含む式`datetime`または`smalldatetime`は非決定的と見なされます。 これは、サーバー セッションの LANGUAGE および DATEFORMAT の設定によって結果が異なるためです。 たとえば、式 `CONVERT (datetime, '30 listopad 1996', 113)` では、言語が異なると文字列 '`listopad`' が異なる月を意味するので、結果が LANGUAGE の設定によって異なります。 同様に、式 `DATEADD(mm,3,'2000-12-01')`の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では DATEFORMAT の設定に基づいて、文字列 `'2000-12-01'` が解釈されます。  
+ インデックス付きビューで `datetime` 文字リテラルと `smalldatetime` 文字列リテラルを参照するときは、決定的な日付形式スタイルを使用して、そのリテラルを目的の日付型に明示的に変換することをお勧めします。 決定的な日付形式の一覧については、「[CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。 文字列の暗黙的な変換が必要な式`datetime`または`smalldatetime`は非決定的であると見なされます。 これは、サーバー セッションの LANGUAGE および DATEFORMAT の設定によって結果が異なるためです。 たとえば、式 `CONVERT (datetime, '30 listopad 1996', 113)` では、言語が異なると文字列 '`listopad`' が異なる月を意味するので、結果が LANGUAGE の設定によって異なります。 同様に、式 `DATEADD(mm,3,'2000-12-01')`の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では DATEFORMAT の設定に基づいて、文字列 `'2000-12-01'` が解釈されます。  
   
  照合順序間で行われる Unicode 以外の文字データの暗黙的な変換も非決定的であると見なされます。  
   

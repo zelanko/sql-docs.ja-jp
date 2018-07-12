@@ -1,5 +1,5 @@
 ---
-title: レポート デザインの CSDLBI 属性 |Microsoft ドキュメント
+title: レポート デザインの CSDLBI 属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e9d68293f4f71280c09d43a6b60dfa087830dc4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 26454c7ed2c1daa5d4ce512066f0a0fcf0ec7479
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259388"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>レポート デザインの CSDLBI 属性
   このセクションでは、テーブル モデリングについての CSDL に対する拡張機能の、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] クエリ デザインに影響のある属性について説明します。  
   
 ## <a name="model-attributes"></a>モデル属性  
- これらの属性が、CSDL のサブ要素で定義されている[EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)要素。  
+ これらの属性は、CSDL のサブ要素で定義された[EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)要素。  
   
 |属性名|データ型|説明|  
 |--------------------|---------------|-----------------|  
@@ -50,8 +50,8 @@ ms.locfileid: "36083066"
 |`DefaultMeasure`|MemberRef|メジャーまたはフィールドをエンティティの複数のインスタンスに対する既定の表現として使用する必要があることを示すための、モデルで定義されているメジャー、または既定の集計関数のある数値フィールドの参照。 省略した場合は、エンティティ インスタンスの数が使用されます。|  
 |`DefaultLocation`|MemberRef|値がエンティティ インスタンスと関連付けられた既定の場所を表しているフィールドの参照。 省略した場合は、エンティティの最初の場所フィールドが使用されます (存在する場合)。|  
   
-## <a name="field-attributes"></a>フィールドを属性します。  
- これらの属性は CSDL Property のサブ要素で定義されているまたは[NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx)要素。  
+## <a name="field-attributes"></a>フィールドの属性  
+ これらの属性は CSDL Property のサブ要素で定義または[NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx)要素。  
   
 |属性名|データ型|説明|  
 |--------------------|---------------|-----------------|  
@@ -60,9 +60,9 @@ ms.locfileid: "36083066"
 |`Documentation`|Text|ビジネス ユーザーがフィールドの意味を理解できるように説明するテキスト。|  
 |`Hidden`|ブール値|フィールドを表示するかどうかを示します。 既定値は `false` で、フィールドが表示されることを意味します。|  
 |`DisplayFolder`|Text|このフィールドが表示されるフォルダーの名前 (完全なパス)。 省略した場合、フィールドはモデルのルートに表示されます。|  
-|`ContextualNameRule`|Enum|プロパティ名をそれが使用されるコンテキストに基づいて変更する必要があるかどうか、および変更する方法を示す値。 指定できる値は: `None`、 `Role`、`Merge`です。|  
+|`ContextualNameRule`|Enum|プロパティ名をそれが使用されるコンテキストに基づいて変更する必要があるかどうか、および変更する方法を示す値。 指定できる値は: `None`、 `Role`、`Merge`します。|  
 |`Alignment`|Enum|表形式の表示でフィールドの値を配置する方法を示す値。 指定できる値は、`Default`、`Center`、`Left`、`Right` です。 省略した場合は、フィールドのデータ型に基づいて既定の配置が決定されます。|  
-|`FormatString`|Text|フィールドの値の既定での書式設定方法を示す .NET 形式の文字列。 省略した場合は、次の形式と見なされます。<br /><br /> -Datetime フィールド: 地域の短い日付または"d"<br />-集計関数を浮動小数点フィールドと、既定値である整数フィールド: 地域の数値または"n"<br />-集計関数を既定値はありません整数: 地域の 10 進数または"d"<br /><br /> 他のすべての型のフィールドについては、書式指定文字列は適用されません。|  
+|`FormatString`|Text|フィールドの値の既定での書式設定方法を示す .NET 形式の文字列。 省略した場合は、次の形式と見なされます。<br /><br /> -[Datetime] フィールド: 地域の短い日付または"d"<br />集計関数を浮動小数点フィールドと、既定値の整数フィールド: 地域の数値または"n"<br />-集計関数の既定値はありません整数: 地域の 10 進数または"d"<br /><br /> 他のすべての型のフィールドについては、書式指定文字列は適用されません。|  
 |`Units`|Text|単位を表現するためにフィールド値に適用される記号。 省略した場合、単位は不明と見なされます。|  
 |`Width`|Integer|表形式の表示でフィールドの値を表示するために確保する必要のある望ましい幅 (文字数)。 省略した場合は、フィールドのデータ型に基づいて既定の幅が決定されます。|  
 |`SortDirection`|Enum|フィールドの値が通常並べ替え方法を示す値。 指定できる値は、`Default`、`Ascending`、`Descending` です。 省略した場合は、フィールドのデータ型に基づいて既定の並べ替え方向が決定されます。|  

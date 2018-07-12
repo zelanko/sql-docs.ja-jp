@@ -1,35 +1,33 @@
 ---
-title: 大きなデータ (OLE DB) を設定 |Microsoft ドキュメント
+title: 大きなデータ (OLE DB) の設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82e4a722f3abec281af12785a0b381f189ef4740
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b7eca258cc315a839f9f46185bcded8d8fc99aae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073000"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424341"
 ---
 # <a name="set-large-data-ole-db"></a>大きなデータの設定 (OLE DB)
   このサンプルでは、BLOB データを設定し、テーブルを作成して、サンプル レコードを追加し、行セット内のそのレコードをフェッチして、BLOB フィールドの値を設定する方法を示します。 このサンプルは IA64 ではサポートされていません。  
   
  コンシューマーは、独自のストレージ オブジェクトにポインターを渡すために、BLOB 列の値をバインドするアクセサーを作成します。次に、`IRowsetChange::SetData` メソッドまたは `IRowsetChange::InsertRow` メソッドを呼び出します。  
   
- このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページです。  
+ このサンプルからダウンロードできる AdventureWorks サンプル データベースが必要です、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページ。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
@@ -38,11 +36,11 @@ ms.locfileid: "36073000"
   
 #### <a name="to-set-blob-data"></a>BLOB データを設定するには  
   
-1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 設定、 **dwFlag** DBOBJECT の要素に STGM_READ を構造化し、iid 要素に設定`IID_ISequentialStream`(インターフェイスを公開する)。  
+1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 設定、 **dwFlag** DBOBJECT の要素に STGM_READ 構造体し、iid 要素に設定`IID_ISequentialStream`(インターフェイスを公開する)。  
   
 2.  行セットが更新可能になるように、DBPROPSET_ROWSET プロパティ グループのプロパティを設定します。  
   
-3.  DBBINDING 構造体の配列を使用して、各列に 1 つずつ一連のバインドを作成します。 設定、 **wType** DBTYPE_IUNKNOWN、DBBINDING 構造体の要素、および**pObject**要素を作成した DBOBJECT 構造体をポイントします。  
+3.  DBBINDING 構造体の配列を使用して、各列に 1 つずつ一連のバインドを作成します。 設定、 **wType**要素に DBTYPE_IUNKNOWN DBBINDING 構造体と**pObject**要素を作成した DBOBJECT 構造体をポイントします。  
   
 4.  DBBINDINGS 構造体の配列内のバインド情報を使用して、アクセサーを作成します。  
   
@@ -53,7 +51,7 @@ ms.locfileid: "36073000"
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムをする必要があります変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 名前付きインスタンスに接続する場合から、接続文字列を変更する"かに\\\name"という名前付きインスタンス。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 Windows オペレーティング システムによっては、必要がありますを変更 (localhost) または (local) の名前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 を名前付きインスタンスに接続するから、接続文字列を変更"するか\\\name"名は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
 ### <a name="code"></a>コード  
   

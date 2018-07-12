@@ -1,5 +1,5 @@
 ---
-title: Version 要素 (ASSL) |Microsoft ドキュメント
+title: Version 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Version element
 ms.assetid: fb26fe5d-de40-443b-a8bc-031c950552e6
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1d6f87dbdfec7af7b330cc24c5d8f227eb7a75c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 64c2f90d1d12f9595098ee6a9fc8c20e1ccc36dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239602"
 ---
 # <a name="version-element-assl"></a>Version 要素 (ASSL)
-  インスタンスの読み取り専用のバージョン番号を含む[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]によって表される、[サーバー](../objects/server-element-assl.md)要素。  
+  インスタンスの読み取り専用のバージョン番号を含む[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]によって表される、 [Server](../objects/server-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

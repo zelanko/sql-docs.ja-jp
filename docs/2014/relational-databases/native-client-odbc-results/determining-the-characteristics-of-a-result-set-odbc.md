@@ -1,13 +1,11 @@
 ---
-title: セット (ODBC) を結果の特性を決定する |Microsoft ドキュメント
+title: セットを結果の特性の決定 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,20 +18,20 @@ helpviewer_keywords:
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ddc884930f52a4b1067a516301d9821346705383
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fcf7c7fb126149de1e8e0355ac698eef1c95d36f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073720"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431581"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>結果セットの特性の決定 (ODBC)
   メタデータは、他のデータを説明するデータです。 たとえば、結果セットのメタデータは、結果セットに含まれる列数、これらの列のデータ型、名前、有効桁数、NULL 値の許容属性など、結果セットの特性を説明します。  
   
- ODBC は、ODBC のカタログ API 関数を使用してアプリケーションにメタデータを渡します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、多くの ODBC API カタログ関数を実装、対応するへの呼び出しとして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カタログ プロシージャです。  
+ ODBC は、ODBC のカタログ API 関数を使用してアプリケーションにメタデータを渡します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、多くの ODBC API カタログ関数を実装を対応する呼び出しとして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カタログ プロシージャ。  
   
  アプリケーションは、ほとんどの結果セット操作にメタデータを必要とします。 たとえば、列のデータ型を使用して、列にバインドされている変数の種類を判断します。 または、文字型の列のバイト長を使用して、その列のデータの表示に必要な領域サイズを判断します。 アプリケーションが列のメタデータを判断する方法は、アプリケーションの種類によって異なります。  
   
@@ -43,11 +41,11 @@ ms.locfileid: "36073720"
   
  アプリケーションは次の関数を呼び出すことで、結果セットの特性を判断できます。  
   
--   [SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md)リクエストを列の数を返すかを判断します。  
+-   [SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md)要求数の列を返すかを判断します。  
   
--   [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md)または[SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md)結果セット内の列を説明します。  
+-   [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md)または[SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md)に結果セット内の列について説明します。  
   
- 適切にデザインされたアプリケーションを作成する場合、結果セットの状態が不明であることが前提となります。またアプリケーションでは、これらの関数により返される情報を使用して結果セットの列をバインドします。 アプリケーションは、ステートメントが準備または実行されると、いつでもこれらの関数を呼び出すことができます。 ただし、最適なパフォーマンスは、アプリケーション呼び出す必要があります**SQLColAttribute**、 **SQLDescribeCol**、および**SQLNumResultCols**ステートメントの実行後。  
+ 適切にデザインされたアプリケーションを作成する場合、結果セットの状態が不明であることが前提となります。またアプリケーションでは、これらの関数により返される情報を使用して結果セットの列をバインドします。 アプリケーションは、ステートメントが準備または実行されると、いつでもこれらの関数を呼び出すことができます。 ただし、最適なパフォーマンス、アプリケーションを呼び出す必要があります**SQLColAttribute**、 **SQLDescribeCol**、および**SQLNumResultCols**ステートメントの実行後。  
   
  メタデータを取得するための呼び出しを複数同時に実行できます。 ODBC カタログ API 実装の基盤であるシステム カタログ プロシージャは、ODBC ドライバーが静的サーバー カーソルを使用しているときでも ODBC ドライバーから呼び出すことができます。 このため、アプリケーションは ODBC カタログ関数の複数の呼び出しを同時に処理できます。  
   

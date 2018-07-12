@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebf2b900457a7c358c86e3df2c0abe06c69b98c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: dcd85163a292cd6c8125619124d346ba876e6acc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152473"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>属性グループを削除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域にタブを表示する必要がなくなった属性グループを削除します。  
@@ -40,17 +40,17 @@ ms.locfileid: "36163887"
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **モデルビュー**  ページで、メニュー バーのをポイント**管理** をクリック**属性グループ**です。  
+2.  **モデル ビュー**  ページで、ポイントして、メニュー バーから**管理** をクリック**属性グループ**します。  
   
 3.  **[モデル]** ボックスの一覧からモデルを選択します。  
   
 4.  **[エンティティ]** の一覧からエンティティを選択します。  
   
-5.  展開するプラス記号をクリックして**リーフ グループ**、**統合グループ**、または**コレクション グループ**を削除するグループの種類に応じて、します。  
+5.  展開するプラス記号をクリックします。**リーフ グループ**、**統合グループ**、または**コレクション グループ**、削除するグループの種類によって異なります。  
   
 6.  削除する属性グループをクリックします。  
   
-7.  をクリックして**選択したグループの削除**です。  
+7.  クリックして**選択したグループの削除**します。  
   
 8.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   

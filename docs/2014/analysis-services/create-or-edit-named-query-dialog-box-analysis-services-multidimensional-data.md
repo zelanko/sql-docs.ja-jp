@@ -1,5 +1,5 @@
 ---
-title: 作成または編集名前付きクエリ ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: 名前付きクエリ ダイアログ ボックス (Analysis Services - 多次元データ) を作成または更新 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createnamedquery.f1
 helpviewer_keywords:
 - Create Named Query dialog box
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f97b06c3fb67080e7ebc3adc3c1e4d84d3fdea61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe4ebd6e0ecaff7d6aed1aecef906bb1a8519e98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149623"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>[名前付きクエリの作成] または [名前付きクエリの編集] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の **[名前付きクエリの作成]/[名前付きクエリの編集]** ダイアログ ボックスを使用すると、**データ ソース ビュー デザイナー**内で名前付きクエリを作成または編集できます。 名前付きクエリは、他の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトの基となるテーブルとして扱うことができます。 **[名前付きクエリの作成]/[名前付きクエリの編集]** ダイアログ ボックスは、次の方法で表示します。  
@@ -45,10 +45,10 @@ ms.locfileid: "36165504"
      上級ユーザー向けです。汎用クエリ ビルダーには、SQL クエリを構築しテストするための、より単純で直接的なユーザー インターフェイスが備えられています。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  クエリの名前を入力します。  
   
- **description**  
+ **[説明]**  
  クエリのな説明をオプションで入力します。  
   
  **Data Source**  
@@ -62,7 +62,7 @@ ms.locfileid: "36165504"
   
 |値|説明|  
 |-----------|-----------------|  
-|**汎用クエリ ビルダーに切り替えます**|選択すると、汎用クエリ ビルダーのビューで使用されるオプションのみが表示されます。 次のオプションのみが表示されます。<br />**SQL ペイン**<br />**[結果] ペイン**<br />**[ツール バー]**。 **[VDT クエリ ビルダーに切り替えます]** と **[実行]**<br /><br /> <br /><br /> 注: このオプションは、**[VDT クエリ ビルダーに切り替えます]** が選択されている場合にのみ表示されます。|  
+|**汎用クエリ ビルダーに切り替えます**|選択すると、汎用クエリ ビルダーのビューで使用されるオプションのみが表示されます。 次のオプションのみが表示されます。<br />**SQL ペイン**<br />**結果ペイン**<br />**[ツール バー]**。 **[VDT クエリ ビルダーに切り替えます]** と **[実行]**<br /><br /> <br /><br /> 注: このオプションは、**[VDT クエリ ビルダーに切り替えます]** が選択されている場合にのみ表示されます。|  
 |**VDT クエリ ビルダーに切り替えます**|選択すると、Visual Database Tools (VDT) クエリ ビルダーのビューで使用できるオプションがすべて表示されます。<br /><br /> 注: このオプションは、 **[汎用クエリ ビルダーに切り替えます]** が選択されている場合にのみ表示されます。|  
 |**[ダイアグラム ペインの表示/非表示]**|**[ダイアグラム]** ペインの表示と非表示を切り替えます。<br /><br /> **注** このオプションは、 **[VDT クエリ ビルダーに切り替えます]** が選択されている場合にのみ表示されます。|  
 |**[グリッド ペインの表示/非表示]**|**[グリッド]** ペインの表示と非表示を切り替えます。<br /><br /> 注: このオプションは、**[VDT クエリ ビルダーに切り替えます]** が選択されている場合にのみ表示されます。|  
@@ -89,7 +89,7 @@ ms.locfileid: "36165504"
 > [!IMPORTANT]  
 >  クエリの種類の変更は、ダイアログ ボックスではサポートされません。  
   
- **[グリッド] ペイン**  
+ **グリッド ペイン**  
  クエリから参照されるオブジェクトをグリッドに表示します。 このペインを使用して、クエリに列を追加したり、列を削除したりできます。また、各列の設定の変更も変更できます。  
   
 > [!NOTE]  
@@ -101,7 +101,7 @@ ms.locfileid: "36165504"
 > [!NOTE]  
 >  **ダイアグラム ペイン**、 **グリッド ペイン**、および **SQL ペイン** の内容は同期しているため、1 つのペインで加えた変更は他の 2 つのペインにも反映されます。  
   
- **[結果] ペイン**  
+ **結果ペイン**  
  **ツール バー** ペインで **[実行]** をクリックしたときに、クエリの結果を表示します。  
   
 ## <a name="see-also"></a>参照  

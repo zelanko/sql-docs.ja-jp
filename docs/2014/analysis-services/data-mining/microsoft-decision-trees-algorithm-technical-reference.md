@@ -1,5 +1,5 @@
 ---
-title: Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+title: Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
 - SPLIT_METHOD parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edb2b9790ac2294f53c26b65e9897064f4050083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a73db73c49f50c49fdfd36d754f8d70ce651547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183409"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、さまざまなツリー作成手法が組み込まれた複合アルゴリズムであり、回帰、分類、アソシエーションなど、複数の分析タスクをサポートしています。 Microsoft デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方のモデリングをサポートしています。  
@@ -179,7 +179,7 @@ ms.locfileid: "36084488"
   
 |モデリング フラグ|説明|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|2 つの状態を持つものとして扱わ、列であることを示します:`Missing`と`Existing`です。 NULL は Missing 値になります。<br /><br /> マイニング モデル列に適用されます。|  
+|MODEL_EXISTENCE_ONLY|2 つの状態を持つものとして扱わ列があることを示します:`Missing`と`Existing`します。 NULL は Missing 値になります。<br /><br /> マイニング モデル列に適用されます。|  
 |NOT NULL|列に NULL を含めることはできないことを示します。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。<br /><br /> マイニング構造列に適用されます。|  
   
 ### <a name="regressors-in-decision-tree-models"></a>デシジョン ツリー モデルのリグレッサー  
@@ -187,7 +187,7 @@ ms.locfileid: "36084488"
   
  連続する数値データ列がリグレッサーを表すことを指定する必要はありません。 列に REGRESSOR フラグを設定しなくても、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムにより、列が自動的にリグレッサー候補として使用され、データセットが意味のあるパターンを持つ領域に分割されます。  
   
- しかし、FORCE_REGRESSOR パラメーターを使用すると、アルゴリズムで特定のリグレッサーが使用されるようにすることができます。 このパラメーターは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムと [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでのみ使用できます。 アルゴリズムは、形式の回帰式を検索しようとしてのモデリング フラグを設定すると、* C1 + b\*C2 +… で、ツリーのノードのパターンに合わせてです。 残差の合計が計算され、偏差が大きすぎる場合には、ツリーが強制的に分割されます。  
+ しかし、FORCE_REGRESSOR パラメーターを使用すると、アルゴリズムで特定のリグレッサーが使用されるようにすることができます。 このパラメーターは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムと [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでのみ使用できます。 アルゴリズムは、形式の回帰式を検索しようとして、モデリング フラグを設定すると、* C1 + b\*C2 +… で、ツリーのノードのパターンに合わせてします。 残差の合計が計算され、偏差が大きすぎる場合には、ツリーが強制的に分割されます。  
   
  たとえば、 **Income** を属性として使用して顧客の購入行動を予測する場合に、その列に REGRESSOR モデリング フラグを設定すると、アルゴリズムはまず、標準の回帰式を使用して **Income** の値を試します。 偏差が大きすぎる場合はその回帰式が放棄され、ツリーが他の属性で分割されます。 その後デシジョン ツリー アルゴリズムは、分割後の各分岐で、Income をリグレッサーとして使用できるかどうかを試します。  
   

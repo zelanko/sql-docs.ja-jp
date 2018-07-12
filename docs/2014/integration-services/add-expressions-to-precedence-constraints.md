@@ -1,5 +1,5 @@
 ---
-title: 優先順位制約に式を追加 |Microsoft ドキュメント
+title: 式の優先順位制約を追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
 - precedence constraints [Integration Services], adding expressions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4066b5b5c6ebd18d6dbbf02f6a150770d5e3b51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc4a614af4bd20a4209d323902c17db1c0a61ece
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161043"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>優先順位制約に式を追加する
   優先順位制約では、優先順位付き実行可能ファイルと、制約付き実行可能ファイルの 2 つの実行可能ファイル間の制約を定義するために、式を使用できます。 これらの実行可能ファイルには、タスクまたはコンテナーを設定できます。 式は単独で使用することも、優先順位付き実行可能ファイルの実行結果と組み合わせて使用することもできます。 実行可能ファイルの実行結果は、成功または失敗のどちらかです。 優先順位制約の実行結果を構成する場合、実行結果を `Success`、`Failure`、または `Completion` に設定できます。 `Success` に設定した場合、優先順位付き実行可能ファイルは成功する必要があります。`Failure` に設定した場合、優先順位付き実行可能ファイルは失敗する必要があります。`Completion` は、優先順位付きタスクの成功または失敗にかかわらず、制約つき実行可能ファイルが実行されることを示します。 優先順位制約の詳細については、「 [優先順位制約](control-flow/precedence-constraints.md)」を参照してください。  
@@ -37,7 +37,7 @@ ms.locfileid: "36164146"
   
  ![2 つのタスク間の優先順位制約](media/mw-dts-03.gif "2 つのタスク間の優先順位制約")  
   
- 異なる式が含まれる複数の優先順位制約を使用して、実行ファイルをリンクすることもできます。 たとえば、次の図では、実行結果と式を使用する優先順位制約によって、タスク B およびタスク C がタスク A にリンクされています。 制約の値のどちら設定されている`Success.`1 つの優先順位制約には、式が含まれています。 `@X >== @Z`、とその他の優先順位制約に式が含まれています`@X < @Z`です。 変数 `X` と変数 `Z` の値に応じて、タスク C とタスク B のどちらかが実行されます。  
+ 異なる式が含まれる複数の優先順位制約を使用して、実行ファイルをリンクすることもできます。 たとえば、次の図では、実行結果と式を使用する優先順位制約によって、タスク B およびタスク C がタスク A にリンクされています。 設定されて、制約値は両方とも`Success.`1 つの優先順位制約に式が含まれています`@X >== @Z`とその他の優先順位制約に式が含まれています`@X < @Z`。 変数 `X` と変数 `Z` の値に応じて、タスク C とタスク B のどちらかが実行されます。  
   
  ![優先順位制約の式](media/mw-dts-04.gif "優先順位制約の式")  
   

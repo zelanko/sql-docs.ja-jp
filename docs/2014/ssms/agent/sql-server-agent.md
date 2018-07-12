@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e90a916b586215b23f15e6d3237690352f9aedd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4f3a29acfe387b4b4e80d9e9a0ee232476d6074d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230472"
 ---
 # <a name="sql-server-agent"></a>SQL Server エージェント
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、 *の* ジョブ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と呼ばれる管理タスクをスケジュールに従って実行する Microsoft Windows サービスです。  
@@ -118,10 +118,10 @@ ms.locfileid: "36077466"
  オペレーターは、個人のグループを表す別名として定義できます。 その場合、その別名のすべてのメンバーが同時に通知を受け取ることになります。 詳細については、「 [オペレーター](operators.md)」を参照してください。  
   
 ##  <a name="Security"></a> SQL Server エージェントの管理のセキュリティ  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して、 **SQLAgentUserRole**、 **SQLAgentReaderRole**、および**SQLAgentOperatorRole**固定データベース ロールで、 **msdb**データベースへのアクセスを制御する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メンバーではないユーザー用のエージェントの`sysadmin`固定サーバー ロール。 これらの固定データベース ロールに加え、サブシステムとプロキシを使用することで、タスクの実行に最低限必要な権限で各ジョブ ステップを実行できるようになります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して、 **SQLAgentUserRole**、 **SQLAgentReaderRole**、および**SQLAgentOperatorRole**固定データベース ロールで、 **msdb**データベースへのアクセスを制御する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メンバーではないユーザー エージェントの`sysadmin`固定サーバー ロール。 これらの固定データベース ロールに加え、サブシステムとプロキシを使用することで、タスクの実行に最低限必要な権限で各ジョブ ステップを実行できるようになります。  
   
 ### <a name="roles"></a>ロール  
- メンバー、 **SQLAgentUserRole**、 **SQLAgentReaderRole**、および**SQLAgentOperatorRole**固定データベース ロールで**msdb**、およびメンバー、`sysadmin`固定サーバー ロールへのアクセスがある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントです。 どのロールのメンバーでもないユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されるロールの詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」を参照してください。  
+ メンバー、 **SQLAgentUserRole**、 **SQLAgentReaderRole**、および**SQLAgentOperatorRole**固定データベース ロールで**msdb**とメンバー、`sysadmin`固定サーバー ロールへのアクセスがある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。 どのロールのメンバーでもないユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されるロールの詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」を参照してください。  
   
 ### <a name="subsystems"></a>サブシステム  
  サブシステムは事前に定義されたオブジェクトで、任意のジョブ ステップで使用できる機能を表します。 各プロキシは 1 つ以上のサブシステムにアクセスできます。 サブシステムはプロキシで使用できる機能へのアクセスを制限することによりセキュリティを提供します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップ以外の各ジョブ ステップは、プロキシのコンテキストで実行されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップでは、EXECUTE AS コマンドを使用してセキュリティ コンテキストが設定されます。  
@@ -150,7 +150,7 @@ ms.locfileid: "36077466"
 ### <a name="proxies"></a>プロキシ  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、プロキシを使用してセキュリティ コンテキストを管理します。 プロキシは、複数のジョブ ステップで使用できます。 メンバー、`sysadmin`固定サーバー ロールは、プロキシを作成できます。  
   
- 各プロキシには対応するセキュリティ資格情報が 1 つあります。 各プロキシは、一連のサブシステムや一連のログインに関連付けることができます。 プロキシは、そのプロキシに関連付けられているサブシステムを使用するジョブ ステップにのみ使用できます。 特定のプロキシを使用するジョブ ステップを作成するには、ジョブの所有者がそのプロキシに関連付けられているログインを使用しているか、プロキシへ制限なしにアクセスできるロールのメンバーである必要があります。 メンバー、`sysadmin`固定サーバー ロールにはプロキシにアクセスが制限なし。 **SQLAgentUserRole**、 **SQLAgentReaderRole**、または **SQLAgentOperatorRole** のメンバーは、特定のアクセスが許可されているプロキシしか使用できません。 これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールのメンバーであるユーザーが特定のプロキシを使用するジョブ ステップを作成するには、ユーザーごとにこれらの特定のプロキシへのアクセスが許可されている必要があります。  
+ 各プロキシには対応するセキュリティ資格情報が 1 つあります。 各プロキシは、一連のサブシステムや一連のログインに関連付けることができます。 プロキシは、そのプロキシに関連付けられているサブシステムを使用するジョブ ステップにのみ使用できます。 特定のプロキシを使用するジョブ ステップを作成するには、ジョブの所有者がそのプロキシに関連付けられているログインを使用しているか、プロキシへ制限なしにアクセスできるロールのメンバーである必要があります。 メンバー、`sysadmin`プロキシに無制限のアクセスに固定サーバー ロール。 **SQLAgentUserRole**、 **SQLAgentReaderRole**、または **SQLAgentOperatorRole** のメンバーは、特定のアクセスが許可されているプロキシしか使用できません。 これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールのメンバーであるユーザーが特定のプロキシを使用するジョブ ステップを作成するには、ユーザーごとにこれらの特定のプロキシへのアクセスが許可されている必要があります。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理を自動化するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成するには、次の手順に従ってください。  
@@ -170,7 +170,7 @@ ms.locfileid: "36077466"
   
 |||  
 |-|-|  
-|**description**|**トピック**|  
+|**[説明]**|**トピック**|  
 |SQL Server エージェントを構成する方法について説明します。|[SQL Server エージェントの構成](configure-sql-server-agent.md)|  
 |SQL Server エージェント サービスを開始、停止、および一時停止する方法について説明します。|[SQL Server エージェント サービスの開始、停止、または一時停止](start-stop-or-pause-the-sql-server-agent-service.md)|  
 |SQL Server エージェント サービスのアカウントを指定する際の考慮事項について説明します。|[SQL Server エージェント サービスのアカウントの選択](select-an-account-for-the-sql-server-agent-service.md)|  

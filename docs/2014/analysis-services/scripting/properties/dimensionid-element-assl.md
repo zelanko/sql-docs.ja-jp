@@ -1,5 +1,5 @@
 ---
-title: DimensionID 要素 (ASSL) |Microsoft ドキュメント
+title: DimensionID 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DimensionID element
 ms.assetid: 00262781-4216-4a19-8bdc-d46647f42165
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24b65d34bfd1e16e464c1469a6c90058f4c100ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c211ed3b218a89bf02e29793573fe0915191641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259488"
 ---
 # <a name="dimensionid-element-assl"></a>DimensionID 要素 (ASSL)
   ディメンションの識別子 (ID) を格納します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36085088"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 親に対応する要素`DimensionID`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.CubeDimension>と<xref:Microsoft.AnalysisServices.DimensionBinding>です。  
+ 親に対応する要素`DimensionID`分析管理オブジェクト (AMO) オブジェクト モデルは、<xref:Microsoft.AnalysisServices.CubeDimension>と<xref:Microsoft.AnalysisServices.DimensionBinding>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  
