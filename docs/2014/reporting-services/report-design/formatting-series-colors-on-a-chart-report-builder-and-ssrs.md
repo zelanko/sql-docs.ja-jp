@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10245"
 - "10252"
@@ -16,18 +16,18 @@ f1_keywords:
 - sql12.rtp.rptdesigner.seriesproperties.borders.f1
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f3760096e00a6c418af3a0d8203f822b65c00508
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 22be979236bd7c42ba231cea42d98c7a47c15ab8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278518"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>グラフの系列の色の書式設定 (レポート ビルダーおよび SSRS)
-  Reporting Services にはグラフ用にいくつかの組み込みパレットが用意されていますが、カスタム パレットを定義することもできます。 既定では、グラフは、組み込みを使用して**BrightPastel**各系列を塗りつぶす色パレット。 これらの色は、凡例にも表示されます。 複数の系統をグラフに追加すると、グラフでは、パレットで定義されている色の順序で系統に色が割り当てられます。  
+  Reporting Services にはグラフ用にいくつかの組み込みパレットが用意されていますが、カスタム パレットを定義することもできます。 既定では、グラフは、組み込みを使用して**BrightPastel**各系統に色パレット。 これらの色は、凡例にも表示されます。 複数の系統をグラフに追加すると、グラフでは、パレットで定義されている色の順序で系統に色が割り当てられます。  
   
  パレットにある色の数より系統の数が多い場合、グラフで色が再利用され、2 つの系統で同じ色が使用される場合があります。 このような状態は、各データ ポイントにパレットから色が割り当てられる、図形グラフを使用する場合に頻繁に起こります。 混同を避けるために、グラフの系列数と少なくとも同じ数の色を使用してカスタム パレットを定義してください。  
   
@@ -49,14 +49,14 @@ ms.locfileid: "36166020"
 ## <a name="using-a-color-fill-on-each-series"></a>各系統での塗りつぶしの使用  
  グラフの各系統に色を指定して、グラフに独自の色を定義することもできます。 この操作を行うには、 **[系列のプロパティ]** ダイアログ ボックスを開き、 **Color** プロパティを **[塗りつぶし]** に設定します。 この方法により、定義されたすべてのパレットがオーバーライドされます。 一般的に、データセットの系統の数はレポート処理の段階まで不明な場合があるため、カスタム パレットを使用して独自の色を定義することをお勧めします。  
   
- この方法は、式を基に系統の色を条件に応じて設定する場合に最も適しています。  詳細については、次を参照してください。 [、グラフの書式設定データ ポイント&#40;レポート ビルダーおよび SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)です。  
+ この方法は、式を基に系統の色を条件に応じて設定する場合に最も適しています。  詳細については、次を参照してください。[グラフのデータ ポイントの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [複数の図形グラフでの色の統一 &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
  [パレットを使用したグラフの色の定義 &#40;レポート ビルダーおよび SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
- [ストリップ ラインを追加することでグラフのデータを強調表示&#40;レポート ビルダーおよび SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
+ [背景の縞模様の追加によるグラフのデータを強調表示&#40;レポート ビルダーおよび SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>参照  
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   

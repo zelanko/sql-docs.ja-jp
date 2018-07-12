@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.msxwiz.complete.f1
 - sql12.ag.msxwiz.target.f1
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Master Server Wizard
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e157f2554d8add51cba02b7428a08a7e47c94d1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7f609af3e4cef804d74772283fc1bb519d3dd89f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163793"
 ---
 # <a name="make-a-master-server"></a>マスター サーバーの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してマスター サーバー [!INCLUDE[tsql](../../includes/tsql-md.md)]を作成する方法について説明します。  
@@ -67,7 +67,7 @@ ms.locfileid: "36174612"
      このエラーを解決するには、対象サーバー上にプロキシ アカウントが存在し、ジョブ ステップを実行するマスター サーバー プロキシ アカウントと同じ名前が付けられているかどうかを確認します。  
   
 ####  <a name="Permissions"></a> Permissions  
- このプロシージャ既定のメンバーを実行する権限、`sysadmin`固定サーバー ロール。  
+ このプロシージャの既定のメンバーを実行するアクセス許可、`sysadmin`固定サーバー ロール。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36174612"
      **[接続の追加]**  
      サーバーを登録せずに対象サーバーの一覧に追加します。  
   
-     **Connection**  
+     **[接続]**  
      選択したサーバーの接続プロパティを変更します。  
   
 5.  **[マスター サーバー ログインの資格情報]** ページで、必要に応じて対象サーバーの新しいログインを作成してマスター サーバーへの権利を割り当てるかどうかを指定します。  
@@ -138,7 +138,7 @@ EXEC dbo.sp_msx_enlist N'AdventureWorks1',
 GO;  
 ```  
   
- 詳細については、次を参照してください。 [sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)します。  
   
 ## <a name="see-also"></a>参照  
  [マルチサーバー環境の作成](create-a-multiserver-environment.md)   

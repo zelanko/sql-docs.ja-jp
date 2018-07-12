@@ -1,13 +1,11 @@
 ---
-title: SQLMoreResults |Microsoft ドキュメント
+title: SQLMoreResults |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,25 +14,25 @@ helpviewer_keywords:
 - SQLMoreResults function
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a882abd409468bdd9a52a8affcdca13b3bc93bd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: aed3bff56fcb794f50958f96ffe14df83205bb07
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174162"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410481"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
-  **SQLMoreResults**により、アプリケーションの複数の結果の行のセットを取得します。 COMPUTE 句を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメント、または ODBC ステートメントや [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの送信済みのバッチによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは複数の結果セットを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どの場合もサーバー カーソルを作成して結果を処理することはできません。 したがって、開発者は ODBC ステートメントがブロックされていることを確認する必要があります。 また、同じ接続で他のアクティブなステートメントからのデータを処理する前に、返されたデータをすべて処理するか ODBC ステートメントを取り消す必要があります。  
+  **SQLMoreResults**により、アプリケーションを複数の結果の行のセットを取得できます。 COMPUTE 句を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメント、または ODBC ステートメントや [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの送信済みのバッチによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは複数の結果セットを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どの場合もサーバー カーソルを作成して結果を処理することはできません。 したがって、開発者は ODBC ステートメントがブロックされていることを確認する必要があります。 また、同じ接続で他のアクティブなステートメントからのデータを処理する前に、返されたデータをすべて処理するか ODBC ステートメントを取り消す必要があります。  
   
 > [!NOTE]  
 >  COMPUTE 句を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のサーバー バージョンの接続している場合にのみサポートされます。  
   
- 開発者は、[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの COMPUTE 句で生成される結果セットの列と行のプロパティを確認できます。 詳細については、次を参照してください。 [SQLColAttribute](sqlcolattribute.md)です。  
+ 開発者は、[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの COMPUTE 句で生成される結果セットの列と行のプロパティを確認できます。 詳細については、次を参照してください。 [SQLColAttribute](sqlcolattribute.md)します。  
   
- ときに**SQLMoreResults**が呼び出された結果セット内のデータが取り出されていない行を含む行は失われ、次の結果行セットから行のデータは使用可能になります。  
+ ときに**SQLMoreResults**と呼びます取り出されていないデータ行の結果セットに、これらの行は失われ、次の結果行セットから行のデータは利用可能になっています。  
   
 ## <a name="examples"></a>使用例  
   

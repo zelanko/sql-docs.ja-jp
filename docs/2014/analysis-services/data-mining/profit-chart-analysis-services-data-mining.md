@@ -1,5 +1,5 @@
 ---
-title: 利益チャート (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: 利益チャート (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy, charting
 - revenue, estimating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68a78acb38762075dba4bd3a6350c68f729f4716
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 898f0d6fe8dacfb2ec2a8148297d7bd5c0eeb949
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239932"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>利益チャート (Analysis Services - データ マイニング)
   利益チャートには、マイニング モデルの使用に関連して推定される収益性が表示されます。 たとえば、あるビジネス シナリオに応じて、会社がどの顧客に連絡を取る必要があるかを、モデルで予測するとしましょう。 この場合、利益チャートに対して、ターゲット メーリング キャンペーンの実施コストに関する情報を追加します。 その後、完成したチャートで、ランダムに顧客に連絡を取った場合と比較して、顧客を正しくターゲット指定した場合に推定される利益を表示できます。  
@@ -79,7 +79,7 @@ ms.locfileid: "36174834"
   
  ここで示したように、複数のモデルが同じ不連続属性を予測する場合は、1 つの利益チャートを使用してそれらを比較することができます。  
   
- ![利益チャートの 3 つのモデルを比較する](../media/dm14-profitchartupdated.gif "利益グラフの 3 つのモデルを比較します。")  
+ ![利益グラフの 3 つのモデルを比較する](../media/dm14-profitchartupdated.gif "利益グラフの 3 つのモデルを比較します。")  
   
  チャート内にある灰色の垂直線に注意してください。 この線をクリックしてドラッグすると、現在のポイントで、対象になる母集団の何パーセントが曲線の下に含まれているかを示すツールヒントが表示されます。  
   
@@ -95,13 +95,13 @@ ms.locfileid: "36174834"
   
 |トピック|リンク|  
 |------------|-----------|  
-|Targeted Mailing モデルのリフト チャートの作成方法に関するチュートリアルが含まれています。|[基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [リフト チャートを使用した精度テスト&#40;基本的なデータ マイニングのチュートリアル&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Targeted Mailing モデルのリフト チャートの作成方法に関するチュートリアルが含まれています。|[基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [リフト チャートを使用した精度テスト&#40;基本的なデータ マイニング チュートリアル&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
 |関連するグラフの種類について説明します。|[リフト チャート&#40;Analysis Services - データ マイニング&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [分類マトリックス&#40;Analysis Services - データ マイニング&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [散布図&#40;Analysis Services - データ マイニング&#41;](scatter-plot-analysis-services-data-mining.md)|  
 |マイニング モデルとマイニング構造の相互検証について説明します。|[クロス検証&#40;Analysis Services - データ マイニング&#41;](cross-validation-analysis-services-data-mining.md)|  
-|リフト チャートおよびその他の精度チャートを作成する手順について説明します。|[テストと検証タスク、および操作方法&#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|リフト チャートおよびその他の精度チャートを作成する手順について説明します。|[テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>参照  
  [テストと検証&#40;データ マイニング&#41;](testing-and-validation-data-mining.md)   
- [リフト チャートを使用した精度テスト&#40;基本的なデータ マイニングのチュートリアル&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [リフト チャートを使用した精度テスト&#40;基本的なデータ マイニング チュートリアル&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
   

@@ -1,29 +1,28 @@
 ---
-title: AlwaysOn 可用性グループの構成 (SQL Server) のトラブルシューティング |Microsoft ドキュメント
+title: AlwaysOn 可用性グループの構成 (SQL Server) のトラブルシューティング |Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [SQL Server], deploying
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 caps.latest.revision: 38
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 1847da6db0f0bc7e3ad8e480d5682dcfbc178a9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: efd9cb30582ffcf48c8a7f410dcb164e0a4d3da0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209862"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>AlwaysOn 可用性グループの構成のトラブルシューティング (SQL Server)
   このトピックでは、サーバー インスタンスでの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。 構成に関する一般的な問題には、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] が無効になっている、アカウントが適切に構成されていない、データベース ミラーリング エンドポイントが存在しない、エンドポイントにアクセスできない (SQL Server エラー 1418)、ネットワーク アクセスが存在しない、データベース参加コマンドが失敗する (SQL Server エラー 35250) などがあります。  
@@ -56,7 +55,7 @@ ms.locfileid: "36175824"
   
     1.  パートナーを同じドメイン ユーザー アカウントで実行している場合は、両方の **master** データベースに正しいユーザー ログインが自動的に存在します。 この場合は、データベースのセキュリティ構成が単純になるため、望ましいといえます。  
   
-    2.  2 つのサーバー インスタンスが別々のアカウントで実行されている場合、リモート サーバー インスタンスの **master** にそれぞれのアカウントのログインを作成する必要があります。また、そのログインには、対応するサーバー インスタンスのデータベース ミラーリング エンドポイントに接続するための CONNECT 権限を付与する必要があります。 詳細については、次を参照してください。[設定のログイン アカウントのデータベース ミラーリングまたは AlwaysOn 可用性グループ&#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)です。  
+    2.  2 つのサーバー インスタンスが別々のアカウントで実行されている場合、リモート サーバー インスタンスの **master** にそれぞれのアカウントのログインを作成する必要があります。また、そのログインには、対応するサーバー インスタンスのデータベース ミラーリング エンドポイントに接続するための CONNECT 権限を付与する必要があります。 詳細については、次を参照してください。[データベース ミラーリングまたは AlwaysOn 可用性グループには、ログイン アカウントを設定&#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)します。  
   
 2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がビルトイン アカウント (Local System、Local Service、Network Service など) で実行されている場合または非ドメイン アカウントで実行されている場合は、エンドポイント認証に証明書を使用する必要があります。 サービス アカウントで同じドメインのドメイン アカウントを使用している場合は、すべてのレプリカの場所の各サービス アカウントに対して CONNECT アクセスを付与するか、証明書を使用できます。 詳細については、「[データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」を参照してください。  
   
@@ -140,7 +139,7 @@ ms.locfileid: "36175824"
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|現在のプライマリ レプリカ|READ_ONLY_ROUTING_LIST に、読み取り可能なセカンダリ レプリカをホストしているサーバー インスタンスだけが含まれていることを確認します。|**読み取り可能なセカンダリ レプリカを識別するには:** sys.availability_replicas  (**secondary_role_allow_connections_desc** 列)<br /><br /> **読み取り専用ルーティング リストを表示するには:** sys.availability_read_only_routing_lists<br /><br /> **読み取り専用ルーティング リストを変更するには:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|read_only_routing_list にあるすべてのレプリカ|READ_ONLY_ROUTING_URL ポートが Windows ファイアウォールでブロックされていないことを確認します。|—|[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|read_only_routing_list にあるすべてのレプリカ|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで次のことを確認します:<br /><br /> SQL Server のリモート接続が有効になっている。<br /><br /> TCP/IP が有効になっている。<br /><br /> IP アドレスが正しく構成されている。|—|[サーバー プロパティの表示または変更 &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|read_only_routing_list にあるすべてのレプリカ|いることを確認、READ_ONLY_ROUTING_URL (TCP **://*`system-address`*: * * * ポート*) 正しい完全修飾ドメイン名 (FQDN) とポート番号が含まれています。|—|[AlwaysOn の read_only_routing_url の計算](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|read_only_routing_list にあるすべてのレプリカ|READ_ONLY_ROUTING_URL ことを確認します (TCP **://*`system-address`*: * * * ポート*) 正しい完全修飾ドメイン名 (FQDN) とポート番号が含まれています。|—|[AlwaysOn の read_only_routing_url の計算](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|クライアント システム|クライアント ドライバーが読み取り専用のルーティングをサポートしていることを確認します。|—|[AlwaysOn クライアント接続 (SQL Server)](always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
@@ -153,7 +152,7 @@ ms.locfileid: "36175824"
   
 -   [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [失敗したファイルの追加操作のトラブルシューティング&#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [ファイル追加失敗の操作のトラブルシューティング&#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 -   [可用性グループのデータベースのためのログインとジョブの管理 &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
   
@@ -165,11 +164,11 @@ ms.locfileid: "36175824"
   
 -   [Get-ClusterLog フェールオーバー クラスター コマンドレット](http://technet.microsoft.com/library/ee461045.aspx)  
   
--   [SQL Server AlwaysOn チームのブログ: 公式 SQL Server AlwaysOn チーム ブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ: 正式な SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ&#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [クライアント ネットワーク構成](../../configure-windows/client-network-configuration.md)   
- [前提条件、制限事項、および AlwaysOn 可用性グループに関する推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

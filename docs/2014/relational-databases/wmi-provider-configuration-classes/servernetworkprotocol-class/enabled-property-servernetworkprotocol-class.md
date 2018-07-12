@@ -1,5 +1,5 @@
 ---
-title: Enabled プロパティ (ServerNetworkProtocol クラス) |Microsoft ドキュメント
+title: プロパティ (ServerNetworkProtocol クラス) を有効になっている |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Enabled property
 ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 538215095bb15aa34d95ecab70eec6894055ead0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0eab01e4ccc8eb0521186304be114264b951617f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278778"
 ---
 # <a name="enabled-property-servernetworkprotocol-class"></a>Enabled プロパティ (ServerNetworkProtocol クラス)
   サーバー ネットワーク プロトコルが有効かどうかを指定するブール型のプロパティを取得します。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>要素  
  *object*  
- A [ServerNetworkProtocol クラス](servernetworkprotocol-class.md)のインスタンスによって使用されるネットワーク プロトコルを表すオブジェクト[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ A [ServerNetworkProtocol クラス](servernetworkprotocol-class.md)のインスタンスによって使用されるネットワーク プロトコルを表すオブジェクトを[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サーバー ネットワーク プロトコルが有効かどうかを指定するブール値。サーバー ネットワーク プロトコルが有効な場合は `true`、サーバー ネットワーク プロトコルが無効な場合は `false` です。  

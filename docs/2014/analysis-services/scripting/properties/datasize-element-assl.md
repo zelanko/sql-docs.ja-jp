@@ -1,5 +1,5 @@
 ---
-title: DataSize 要素 (ASSL) |Microsoft ドキュメント
+title: DataSize 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataSize element
 ms.assetid: 4be79dbb-304e-4a65-9198-89fad407f775
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a79084349dfda487a4675d6963665980cc22e2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a34a8e8740e57bdcafbdd9ff1f3dce188e7d5e5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157153"
 ---
 # <a name="datasize-element-assl"></a>DataSize 要素 (ASSL)
   バイト単位のサイズが含まれています、 [DataItem](../data-type/dataitem-data-type-assl.md)要素。  

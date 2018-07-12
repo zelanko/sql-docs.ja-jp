@@ -1,13 +1,11 @@
 ---
-title: 記憶域を割り当てる |Microsoft ドキュメント
+title: ストレージの割り当て |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,20 +21,20 @@ helpviewer_keywords:
 - array binding
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eb77a63cb3522d86b40742780e44a141dc0a6c15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cc3ce031d7f59395ec54abe1c21276e9b4be9054
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164310"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426352"
 ---
 # <a name="assigning-storage"></a>ストレージの割り当て
   アプリケーションでは、SQL ステートメントの実行前後に、結果用のストレージを割り当てることができます。 アプリケーションで最初に SQL ステートメントを準備または実行すると、結果のストレージを割り当てる前に、結果セットに関する情報を取得できます。 たとえば、結果セットが不明であれば、アプリケーションでは、列にストレージを割り当てる前に、列数を取得する必要があります。  
   
- アプリケーションが呼び出す関連付けるにはデータの列に対する記憶域、 [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)渡します。  
+ ストレージ データの列に関連付けるにアプリケーションを呼び出す[SQLBindCol](../native-client-odbc-api/sqlbindcol.md)を渡します。  
   
 -   データの変換先のデータ型。  
   
@@ -54,11 +52,11 @@ ms.locfileid: "36164310"
   
 -   列方向のバインドは、各列を変数の独自の配列にバインドすると終了します。  
   
-     呼び出して、列方向のバインドが指定されて[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)で*属性*sql_attr_row_bind_type と*ValuePtr*を SQL_BIND_BY_COLUMN に設定します。 すべての配列には、同じ数の要素を保持する必要があります。  
+     呼び出すことによって、列方向のバインドが指定されて[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)で*属性*SQL_ATTR_ROW_BIND_TYPE に、 *ValuePtr* SQL_BIND_BY_COLUMN に設定します。 すべての配列には、同じ数の要素を保持する必要があります。  
   
 -   行方向のバインドは、SQL ステートメント内のすべてのパラメーターを 1 単位として、パラメーターの各変数を保持する構造体の配列にバインドすると終了します。  
   
-     呼び出して、行方向のバインドが指定されて**SQLSetStmtAttr**で*属性*sql_attr_row_bind_type と*ValuePtr*保留されている構造体のサイズに設定、結果を受け取る変数は、列を設定します。  
+     呼び出すことによって、行方向のバインドが指定されて**SQLSetStmtAttr**で*属性*SQL_ATTR_ROW_BIND_TYPE に、 *ValuePtr*いる構造体のサイズに設定、列の結果を受け取る変数に設定します。  
   
  また、アプリケーションでは、SQL_ATTR_ROW_ARRAY_SIZE を列または行の配列内の要素数に設定し、SQL_ATTR_ROW_STATUS_PTR と SQL_ATTR_ROWS_FETCHED_PTR も設定します。  
   

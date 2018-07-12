@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interactive searches [SQL Server Management Studio]
 - searches [SQL Server Management Studio], interactive
 - Query Editor [SQL Server Management Studio], interactive search
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0957ca100cfc9e4f37e1255416a91def14ab037a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f375857a52ba44a3e36977ccdc9ba5bd396c3f65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154133"
 ---
 # <a name="search-documents-interactively"></a>ドキュメントの対話形式の検索
   **[検索と置換]** ダイアログ ボックスを使用して、1 つ以上の開いているファイルやウィンドウで検索し、検索結果の文字列に 1 つずつ移動して確認することができます。 この方法では、検索結果の各文字列をその前後のテキストのコンテキストで個別に確認できます。 さらに、 **[検索と置換]** ダイアログ ボックスには、一括検索操作を実行し、結果をレポート形式で確認するオプションも用意されています。  

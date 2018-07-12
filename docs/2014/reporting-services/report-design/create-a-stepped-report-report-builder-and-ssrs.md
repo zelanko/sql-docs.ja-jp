@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a20097a87111ad7cbedc9b7de7599741e2a4e360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 69b6d59bce9eb4de36ad8cc33192cdee7b583f1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155743"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>階段状レポートの作成 (レポート ビルダーおよび SSRS)
   階段状レポートでは、次の例に示すように、親グループとその下でインデントされた詳細行または子グループが、同一の列内に表示されます。  
@@ -68,7 +68,7 @@ ms.locfileid: "36176550"
   
     2.  プロパティ ペインの **[配置]** で、 **[余白]** のプロパティを展開します。  
   
-    3.  **左**など、新しい余白の値を入力`.5in`です。 指定された値の余白分、セル内のテキストがインデント設定されます。 余白の既定値は 2 ポイントです。 余白のプロパティの有効な値として、0 (ゼロ) 以上の正の数の後に、サイズ指定子を入力します。  
+    3.  **左**、新しい余白の値を入力します。`.5in`します。 指定された値の余白分、セル内のテキストがインデント設定されます。 余白の既定値は 2 ポイントです。 余白のプロパティの有効な値として、0 (ゼロ) 以上の正の数の後に、サイズ指定子を入力します。  
   
          サイズ指定子は次のとおりです。  
   

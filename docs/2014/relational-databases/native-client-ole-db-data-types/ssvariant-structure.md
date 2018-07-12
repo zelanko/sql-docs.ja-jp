@@ -1,13 +1,11 @@
 ---
-title: SSVARIANT 構造体 |Microsoft ドキュメント
+title: SSVARIANT 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -16,20 +14,20 @@ helpviewer_keywords:
 - SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c8d98a54155179fe481fc0a7202a07e6cbf2aff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 52ea23ff970d094330aaf046f9ebdd843c8b4956
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165863"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429041"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 構造体
   sqlncli.h で定義されている `SSVARIANT` 構造体は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB プロバイダーの DBTYPE_SQLVARIANT 値に対応します。  
   
- `SSVARIANT` は、識別共用体です。 Vt メンバーの値は、コンシューマーは読み取るメンバーを確認できます。 vt の値に対応して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。 したがって、`SSVARIANT` 構造体には、任意の SQL Server 型を格納できます。 標準の OLE DB 型のデータ構造の詳細については、次を参照してください。[型インジケーター](http://go.microsoft.com/fwlink/?LinkId=122171)です。  
+ `SSVARIANT` は、識別共用体です。 Vt メンバーの値に応じて、コンシューマーは読み取るメンバーを判断できます。 vt の値に対応して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。 したがって、`SSVARIANT` 構造体には、任意の SQL Server 型を格納できます。 標準の OLE DB 型のデータ構造の詳細については、次を参照してください。[型インジケーター](http://go.microsoft.com/fwlink/?LinkId=122171)します。  
   
 ## <a name="remarks"></a>コメント  
  DataTypeCompat==80 の場合、いくつかの `SSVARIANT` サブタイプが文字列になります。 たとえば、次の vt 値は `SSVARIANT` では VT_SS_WVARSTRING として表されます。  
@@ -44,7 +42,7 @@ ms.locfileid: "36165863"
   
  DateTypeCompat == 0 の場合、これらの型はネイティブ形式で表されます。  
   
- SSPROP_INIT_DATATYPECOMPATIBILITY の詳細については、次を参照してください。[使用した Connection String Keywords with SQL Server Native Client を使用して](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)です。  
+ SSPROP_INIT_DATATYPECOMPATIBILITY の詳細については、次を参照してください。[使用した Connection String Keywords with SQL Server Native Client を使用して](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)します。  
   
  sqlncli.h ファイルには、`SSVARIANT` 構造体のメンバー型の逆参照を単純化するバリアント アクセス マクロが格納されています。 たとえば、V_SS_DATETIMEOFFSET を次のように使用できます。  
   
@@ -72,12 +70,12 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |numNumericVal|DBTYPE_NUMERIC|`DB_NUMERIC`|`VT_SS_NUMERIC`|では、 `numeric` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。|  
 |dDateVal|DBTYPE_DATE|`DBDATE`|`VT_SS_DATE`|では、 `date` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2`|では、 `smalldatetime`、 `datetime`、および`datetime2`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。|  
-|Time2Val|DBTYPE_DBTIME2|`DBTIME2`|`VT_SS_TIME2`|では、 `time` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *tTime2Val* (`DBTIME2`)<br /><br /> *bScale* (`BYTE`) を指定するためのスケール*tTime2Val*値。|  
-|DateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_DATETIME2`|では、 `datetime2` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (`BYTE`) を指定するためのスケール*tsDataTimeVal*値。|  
-|DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|`DBTIMESTAMPOFFSET`|`VT_SS_DATETIMEOFFSET`|では、 `datetimeoffset` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *tsoDateTimeOffsetVal* (`DBTIMESTAMPOFFSET`)<br /><br /> *bScale* (`BYTE`) を指定するためのスケール*tsoDateTimeOffsetVal*値。|  
-|NCharVal|対応する OLE DB 型インジケーターはありません。|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|では、`nchar`と**nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (`SHORT`)、実際の長さを指定する文字列の*pwchNCharVal*ポイント。 末尾の 0 は含まれません。<br /><br /> *sMaxLength* (`SHORT`)、最大の長さを指定する文字列の*pwchNCharVal*ポイント。<br /><br /> *pwchNCharVal* (`WCHAR` \*) 文字列へのポインター。<br /><br /> 使用されないメンバー: *rgbReserved*、 *dwReserved*、および*pwchReserved*です。|  
-|CharVal|対応する OLE DB 型インジケーターはありません。|`struct _CharVal`|`VT_SS_STRING,`<br /><br /> `VT_SS_VARSTRING`|では、`char`と**varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (`SHORT`) を指定する文字列の実際の長さ*pchCharVal*ポイント。 末尾の 0 は含まれません。<br /><br /> *sMaxLength* (`SHORT`) を指定する文字列の最大長*pchCharVal*ポイント。<br /><br /> *pchCharVal* (`CHAR` \*) 文字列へのポインター。<br /><br /> 使用されないメンバー : <br /><br /> *rgbReserved*、 *dwReserved*、および*pwchReserved*です。|  
-|BinaryVal|対応する OLE DB 型インジケーターはありません。|`struct _BinaryVal`|`VT_SS_VARBINARY,`<br /><br /> `VT_SS_BINARY`|では、`binary`と**varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (`SHORT`) を指定するデータの実際の長さ*prgbBinaryVal*ポイント。<br /><br /> *sMaxLength* (`SHORT`) を指定するデータの最大長*prgbBinaryVal*ポイント。<br /><br /> *prgbBinaryVal* (`BYTE` \*) バイナリ データへのポインター。<br /><br /> 使用されないメンバー: *dwReserved*です。|  
+|Time2Val|DBTYPE_DBTIME2|`DBTIME2`|`VT_SS_TIME2`|では、 `time` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *tTime2Val* (`DBTIME2`)<br /><br /> *bScale* (`BYTE`) の有効桁数を指定*tTime2Val*値。|  
+|DateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_DATETIME2`|では、 `datetime2` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (`BYTE`) の有効桁数を指定*tsDataTimeVal*値。|  
+|DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|`DBTIMESTAMPOFFSET`|`VT_SS_DATETIMEOFFSET`|では、 `datetimeoffset` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *tsoDateTimeOffsetVal* (`DBTIMESTAMPOFFSET`)<br /><br /> *bScale* (`BYTE`) の有効桁数を指定*tsoDateTimeOffsetVal*値。|  
+|NCharVal|対応する OLE DB 型インジケーターはありません。|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|では、`nchar`と**nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (`SHORT`) を文字列の実際の長さを指定します*pwchNCharVal*ポイント。 末尾の 0 は含まれません。<br /><br /> *sMaxLength* (`SHORT`) を文字列の最大の長さを指定します*pwchNCharVal*ポイント。<br /><br /> *pwchNCharVal* (`WCHAR` \*) 文字列へのポインター。<br /><br /> 使用されないメンバー: *rgbReserved*、 *dwReserved*、および*pwchReserved*します。|  
+|CharVal|対応する OLE DB 型インジケーターはありません。|`struct _CharVal`|`VT_SS_STRING,`<br /><br /> `VT_SS_VARSTRING`|では、`char`と**varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (`SHORT`) を文字列の実際の長さを指定します*pchCharVal*ポイント。 末尾の 0 は含まれません。<br /><br /> *sMaxLength* (`SHORT`) を文字列の最大長を指定します*pchCharVal*ポイント。<br /><br /> *pchCharVal* (`CHAR` \*) 文字列へのポインター。<br /><br /> 使用されないメンバー : <br /><br /> *rgbReserved*、 *dwReserved*、および*pwchReserved*します。|  
+|BinaryVal|対応する OLE DB 型インジケーターはありません。|`struct _BinaryVal`|`VT_SS_VARBINARY,`<br /><br /> `VT_SS_BINARY`|では、`binary`と**varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (`SHORT`) しているデータの実際の長さを指定します*prgbBinaryVal*ポイント。<br /><br /> *sMaxLength* (`SHORT`) しているデータの最大長を指定します*prgbBinaryVal*ポイント。<br /><br /> *prgbBinaryVal* (`BYTE` \*) バイナリ データへのポインター。<br /><br /> 使用されないメンバー: *dwReserved*します。|  
 |不明な型|未使用|未使用|未使用|未使用|  
 |BLOBType|未使用|未使用|未使用|未使用|  
   

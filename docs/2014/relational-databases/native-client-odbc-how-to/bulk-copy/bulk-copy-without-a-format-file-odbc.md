@@ -1,13 +1,11 @@
 ---
-title: 一括コピー フォーマット ファイル (ODBC) なし |Microsoft ドキュメント
+title: 一括コピー フォーマット ファイル (ODBC) なし |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85bb42550829c875324c10de358312cdf3d05295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6896cc412a01aaa6ce73c80250b15709f78771ae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174920"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425681"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>フォーマット ファイルを使用しない一括コピー (ODBC)
   このサンプルでは、フォーマット ファイルを使用せずに、一括コピー関数を使用してネイティブ モード データ ファイルを作成する方法を示します。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
@@ -41,7 +39,7 @@ ms.locfileid: "36174920"
   
 3.  SQL Server に接続します。  
   
-4.  呼び出す[bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を次の情報を設定します。  
+4.  呼び出す[bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)次の情報を設定します。  
   
     -   一括コピー操作の対象になるテーブルまたはビューの名前  
   
@@ -51,7 +49,7 @@ ms.locfileid: "36174920"
   
     -   コピーの方向 (ファイルからビューまたはテーブルへのコピーの場合は DB_IN、テーブルまたはビューからファイルへのコピーの場合は DB_OUT)  
   
-5.  呼び出す[bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)を一括コピー操作を実行します。  
+5.  呼び出す[bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)一括コピー操作を実行します。  
   
  これらの手順で DB_OUT を設定すると、ファイルはネイティブ形式で作成されます。 その後、以下の同様の手順を使用して、このファイルをサーバーに一括コピーできます。ただし、DB_IN ではなく DB_OUT が設定されます。 この操作は、コピー元のテーブルとコピー先のテーブルの構造が厳密に同じ場合にのみ機能します。  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4db31968d249659890924917be5c40533c0e19af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ea0a37304bbde2ac84e5092e67744226a03b0db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239402"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service の使用
   ここでは、Oracle CDC Service のいくつかの重要な概念について説明します。 このセクションで説明する概念は次のとおりです。  
@@ -112,7 +112,7 @@ ms.locfileid: "36174210"
 |ref_count|同じ Oracle CDC Service がインストールされているコンピューターの数を示します。 同じ名前の Oracle CDC Service が追加されるたびに値が増加し、それらのサービスが削除されると減少します。 この行はカウンターが 0 に達すると削除されます。|  
 |active_service_node|CDC サービスを現在処理している Windows ノードの名前。 この列は、サービスが適切に停止されると null に設定され、アクティブなサービスがなくなったことが示されます。|  
 |active_service_heartbeat|現在の CDC サービスがまだアクティブであるかどうかを示します。<br /><br /> このアイテムは、アクティブな CDC サービスに対する現在のデータベースの UTC タイムスタンプに基づいて一定の間隔で更新されます。 既定の間隔は 30 秒ですが、この間隔は構成することも可能です。<br /><br /> 構成された間隔が経過してもハートビートが更新されていないことが保留中の CDC サービスで検出されると、その保留中のサービスで、アクティブな CDC サービスの役割の引き継ぎが試行されます。|  
-|options|トレースやチューニングなどの二次的なオプションを指定します。 **name[=value][; ]** の形式で記述されます。 options の文字列では、ODBC 接続文字列と同じセマンティクスを使用します。 オプションがブール値 (value が yes または no) の場合は、name だけでもかまいません。<br /><br /> トレースには、次の値があります。<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> off<br /><br /> \<クラス名 > [、クラス名 >]<br /><br /> 既定値は **false**です。<br /><br /> <br /><br /> **service_heartbeat_interval** は、active_service_heartbeat 列を更新する間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **service_config_polling_interval** は、構成の変更を確認するポーリング間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **sql_command_timeout** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対するコマンドのタイムアウトです。 既定値は **1**です。 最大値は **3600**です。|  
+|options|トレースやチューニングなどの二次的なオプションを指定します。 **name[=value][; ]** の形式で記述されます。 options の文字列では、ODBC 接続文字列と同じセマンティクスを使用します。 オプションがブール値 (value が yes または no) の場合は、name だけでもかまいません。<br /><br /> トレースでは、次の値があります。<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> off<br /><br /> \<クラス名 > [、クラス名 >]<br /><br /> 既定値は **false**です。<br /><br /> <br /><br /> **service_heartbeat_interval** は、active_service_heartbeat 列を更新する間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **service_config_polling_interval** は、構成の変更を確認するポーリング間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **sql_command_timeout** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対するコマンドのタイムアウトです。 既定値は **1**です。 最大値は **3600**です。|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC データベースのストアド プロシージャ  
@@ -194,7 +194,7 @@ ms.locfileid: "36174210"
   
 -   [作成](#BKMK_create)  
   
--   [Delete](#BKMK_delete)  
+-   [削除](#BKMK_delete)  
   
 ###  <a name="BKMK_config"></a> Config  
  `Config` は、Oracle CDC Service の構成をスクリプトで更新する場合に使用します。 このコマンドを使用すると、CDC サービスの構成の特定の部分だけを更新できます (たとえば、非対称キーのパスワードがわからない場合に接続文字列だけを更新するなど)。 このコマンドを実行できるのはコンピューターの管理者だけです。 `Config` コマンドの例を次に示します。  

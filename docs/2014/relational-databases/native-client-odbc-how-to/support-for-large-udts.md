@@ -1,40 +1,38 @@
 ---
-title: 大きな Udt のサポート |Microsoft ドキュメント
+title: 大きな Udt のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 672da57ed995d872bf952bc7126b56282ad12312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2626ba94c971f3d31b592e692da3d9fef7227f05
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166070"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409991"
 ---
 # <a name="support-for-large-udts"></a>大きな UDT のサポート
   このサンプル ソリューションには 2 つのプロジェクトが含まれています。 1 つは、C# ソース コードからアセンブリ (DLL) を作成するプロジェクトです。 このアセンブリには、CLR 型が格納されます。 テーブルがデータベースに追加されます。 テーブルの列の型はアセンブリで定義されます。このサンプルでは、既定で master データベースを使用します。 もう 1 つのプロジェクトは、テーブルからデータを読み取るネイティブの C++ アプリケーションです。  
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 大きな Udt のサポートの詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)です。  
+ 大きな Udt のサポートの詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="example"></a>例  
  1 つ目のコード リストは C# ソース コードです。 LargeStringUDT.cs という名前のファイルに貼り付けて、DLL にコンパイルします。 LargeStringUDT.dll を C ドライブのルート ディレクトリにコピーします。  
   
  2 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは master データベースにアセンブリを作成します。  
   
- odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数には、sqlncli.h に含まれているディレクトリが含まれています。 確認してください。  
+ odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
   
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   

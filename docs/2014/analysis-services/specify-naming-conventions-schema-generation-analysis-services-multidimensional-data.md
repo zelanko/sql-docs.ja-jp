@@ -1,5 +1,5 @@
 ---
-title: 指定の名前付け規則 (スキーマ生成ウィザード) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: 指定の名前付け規則 (スキーマ生成ウィザード) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.namingconventions.f1
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93be42d99f0f255807caa23cdf91582e24a8a132
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a984b84c485c24302288eb16747cb3a964794156
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151533"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>[名前付け規則の指定] (スキーマ生成ウィザード) (Analysis Services - 多次元データ)
   **[名前付け規則の指定]** ページを使用すると、スキーマ オブジェクトの作成時にスキーマ生成ウィザードが使用する名前付けの規則を定義できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "36176973"
 |**カスタム ロールアップ プロパティのサフィックス**|各ロールアップ プロパティ列の名前に追加される文字列を指定します。 既定値は **[CustomRollupProperties]** です。|  
 |**単項演算子サフィックス**|各単項演算子列の名前に追加される文字列を指定します。 既定値は **[UnaryOperator]** です。|  
   
- **Value**  
+ **[値]**  
  スキーマの生成時に使用する、 **[オプション]** で指定されたオプションの値を指定します。  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: Distribution 要素 (ASSL) |Microsoft ドキュメント
+title: Distribution 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Distribution element
 ms.assetid: a1309b90-8ad8-431b-a918-67f0cdd4fd20
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a556b4dc3745ecf45eab71339f2db3a0f9174f06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea3422fead59b45957ebdb15735736fba89ddff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163543"
 ---
 # <a name="distribution-element-assl"></a>Distribution 要素 (ASSL)
-  どのようにスカラー値を表すプロバイダー固有の値を含むの列内で分散、 [MiningStructure](../objects/miningstructure-element-assl.md)要素。  
+  どのようにスカラー値を表すプロバイダー固有の値を含む内の列での分布を[MiningStructure](../objects/miningstructure-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36175617"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 使用可能な値、`Distribution`要素など*標準*または*Uniform、* マイニング アルゴリズム プロバイダーごとに固有です。 有効な `Distribution` 値の詳細については、マイニング アルゴリズム プロバイダーのドキュメントを参照してください。  
+ 使用できる値、`Distribution`要素など*標準*または*統一された、* マイニング アルゴリズム プロバイダーごとに固有です。 有効な `Distribution` 値の詳細については、マイニング アルゴリズム プロバイダーのドキュメントを参照してください。  
   
  親に対応する要素`Distribution`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>します。  
   

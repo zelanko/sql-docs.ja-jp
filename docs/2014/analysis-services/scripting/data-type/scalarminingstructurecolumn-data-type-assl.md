@@ -1,5 +1,5 @@
 ---
-title: ScalarMiningStructureColumn データ型 (ASSL) |Microsoft ドキュメント
+title: ScalarMiningStructureColumn データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ScalarMiningStructureColumn data type
 ms.assetid: 8f4afc15-601c-4189-bc45-f5a216aed879
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15e88a5e82dc960e3428587b8d74a046781b90ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90f855bf55292b310e32a167dc005ab2f2f81c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211692"
 ---
 # <a name="scalarminingstructurecolumn-data-type-assl"></a>ScalarMiningStructureColumn データ型 (ASSL)
-  表す派生データ型を定義、 [MiningStructureColumn](miningstructurecolumn-data-type-assl.md)要素に関連付けられている入れ子になったテーブルではなく、スカラー値を含む、 [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md)要素入れ子になったテーブルが含まれています。  
+  表す派生データ型を定義、 [MiningStructureColumn](miningstructurecolumn-data-type-assl.md)要素に関連付けられている、入れ子になったテーブルではなく、スカラー値を含む、 [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md)要素入れ子になったテーブルを格納しています。  
   
 ## <a name="syntax"></a>構文  
   

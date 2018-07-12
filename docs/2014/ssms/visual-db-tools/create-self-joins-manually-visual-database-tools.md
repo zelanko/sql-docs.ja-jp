@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - self-joins
 - manual joins [SQL Server]
 - joins [SQL Server], self
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b74122903e1372c219d925d9ff871bdba91d49d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a0d414857a05107bed224e732d488e5043b11ecf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159773"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>自己結合の手動作成 (Visual Database Tools)
   データベースでテーブルに再帰リレーションシップが設定されていなくても、テーブルをテーブル自身に結合できます。 たとえば、自己結合を使用して、同じ市に住む著者の組を検索できます。  
@@ -129,7 +129,7 @@ Cheryl Carson       Abraham Bennet
 7.  出力列、検索条件、並べ替え順序など、クエリの他のオプションを指定します。  
   
 ## <a name="see-also"></a>参照  
- [作成する自己結合を自動的に&#40;Visual Database Tools&#41;](create-self-joins-automatically-visual-database-tools.md)   
+ [作成する自己結合の自動&#40;Visual Database Tools&#41;](create-self-joins-automatically-visual-database-tools.md)   
  [結合を使用したクエリ (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

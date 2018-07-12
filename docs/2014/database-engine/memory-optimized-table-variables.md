@@ -1,5 +1,5 @@
 ---
-title: メモリ最適化テーブル変数 |Microsoft ドキュメント
+title: メモリ最適化テーブル変数 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f8b24a1ea77e579fcde558e4f58e3448efc4aed1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1ec91cf243fbaa131ca85e7585e448ddb93f36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157073"
 ---
 # <a name="memory-optimized-table-variables"></a>メモリ最適化テーブル変数
-  さらにメモリ最適化テーブル (効率的なデータ アクセス) およびネイティブ コンパイル ストアド プロシージャ (効率的なクエリ処理とビジネス ロジックの実行)[!INCLUDE[hek_2](../includes/hek-2-md.md)]オブジェクトの 3 つ目の種類が導入されています。 メモリ最適化テーブル型です。 メモリ最適化テーブル型を使用して作成されたテーブル変数は、メモリ最適化テーブル変数です。  
+  さらにメモリ最適化テーブル (効率的なデータ アクセス) とネイティブ コンパイル ストアド プロシージャ (効率的なクエリ処理とビジネス ロジックの実行)[!INCLUDE[hek_2](../includes/hek-2-md.md)]オブジェクトの 3 つ目の種類が導入されています。 メモリ最適化テーブル型です。 メモリ最適化テーブル型を使用して作成されたテーブル変数は、メモリ最適化テーブル変数です。  
   
  メモリ最適化テーブル変数には、ディスク ベース テーブル変数と比べて次の利点があります。  
   
@@ -40,9 +40,9 @@ ms.locfileid: "36175406"
   
 -   テーブル変数を使用して、ネイティブ コンパイル ストアド プロシージャのカーソルをシミュレートすることができ、その結果、ネイティブ コンパイル ストアド プロシージャの対象領域の制限を回避できるようになります。  
   
- メモリ最適化テーブルと同様に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各メモリ最適化テーブル型用の DLL が生成されます。 (コンパイル処理は、メモリ最適化テーブル変数の作成に使用されるときではなく、メモリ最適化テーブル型が作成されるときに呼び出されます)。この DLL には、インデックスにアクセスし、テーブル変数からデータを取得するための関数が含まれます。 メモリ最適化テーブル変数がテーブル型に基づいて宣言されると、テーブルとテーブル型に対応するインデックス構造のインスタンスがユーザー セッションで作成されます。 その後、テーブル変数をディスク ベース テーブル変数と同じ方法で使用できます。 テーブル変数の行を挿入、更新、および削除でき、[!INCLUDE[tsql](../includes/tsql-md.md)] クエリで変数を使用できます。 また、ネイティブ コンパイル ストアド プロシージャと、インタープリターによって処理されるストアド プロシージャに、テーブル値パラメーター (TVP) として変数を渡すことができます。  
+ などのメモリ最適化テーブル[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各メモリ最適化テーブル型用の DLL が生成されます。 (コンパイル処理は、メモリ最適化テーブル変数の作成に使用されるときではなく、メモリ最適化テーブル型が作成されるときに呼び出されます)。この DLL には、インデックスにアクセスし、テーブル変数からデータを取得するための関数が含まれます。 メモリ最適化テーブル変数がテーブル型に基づいて宣言されると、テーブルとテーブル型に対応するインデックス構造のインスタンスがユーザー セッションで作成されます。 その後、テーブル変数をディスク ベース テーブル変数と同じ方法で使用できます。 テーブル変数の行を挿入、更新、および削除でき、[!INCLUDE[tsql](../includes/tsql-md.md)] クエリで変数を使用できます。 また、ネイティブ コンパイル ストアド プロシージャと、インタープリターによって処理されるストアド プロシージャに、テーブル値パラメーター (TVP) として変数を渡すことができます。  
   
- 次の例は、AdventureWorks ベースのインメモリ OLTP のサンプルからメモリ最適化テーブル型を示しています ([SQL Server 2014 のインメモリ OLTP のサンプル](https://msftdbprodsamples.codeplex.com/releases/view/114491))。  
+ 次の例では、AdventureWorks に基づくインメモリ OLTP のサンプルからメモリ最適化テーブル型 ([SQL Server 2014 のインメモリ OLTP のサンプル](https://msftdbprodsamples.codeplex.com/releases/view/114491))。  
   
 ```tsql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
@@ -68,7 +68,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
 -   型には少なくとも 1 つのインデックスが必要です。 メモリ最適化テーブルの場合と同様に、ハッシュ インデックスと非クラスター化インデックスを使用できます。  
   
-     ハッシュ インデックスの場合、バケット数は予想される一意のキーの数からその 2 倍の数ぐらいまでの範囲にしてください。 詳細については、次を参照してください。[ハッシュ インデックスの適切なバケット数を決定する](../relational-databases/indexes/indexes.md)です。  
+     ハッシュ インデックスの場合、バケット数は予想される一意のキーの数からその 2 倍の数ぐらいまでの範囲にしてください。 詳細については、次を参照してください。[ハッシュ インデックスの適切なバケット数を決定する](../relational-databases/indexes/indexes.md)します。  
   
 -   メモリ最適化テーブルのデータ型および制約の制限は、メモリ最適化テーブル型にも適用されます。 たとえば、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] では既定の制約はサポートされますが、CHECK 制約はサポートされません。  
   

@@ -1,13 +1,11 @@
 ---
-title: 大きなデータを設定 |Microsoft ドキュメント
+title: 大きなデータの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,22 +16,22 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6fd64ccaa9d5b4abb87123bc6cb1d9977c6ef03b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fa1b0857b155f077920f60eee85cbcebb2ef4250
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174704"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423021"
 ---
 # <a name="setting-large-data"></a>大きなデータの設定
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、コンシューマー ストレージ オブジェクトへのポインターを渡すことによって BLOB データを設定することができます。  
   
  コンシューマーは、データを保持するストレージ オブジェクトを作成し、このストレージ オブジェクトへのポインターをプロバイダーに渡します。 次に、プロバイダーがコンシューマー ストレージ オブジェクトからデータを読み取り、BLOB 列に書き込みます。  
   
- コンシューマーは独自のストレージ オブジェクトへのポインターを渡すために、BLOB 列の値をバインドするアクセサーを作成します。 コンシューマーは、呼び出し、 **irowsetchange::setdata**または**irowsetchange::insertrow** BLOB 列をバインドするアクセサーを持つメソッドです。 このとき、コンシューマーのストレージ オブジェクトのストレージ インターフェイスへのポインターを渡します。  
+ コンシューマーは独自のストレージ オブジェクトへのポインターを渡すために、BLOB 列の値をバインドするアクセサーを作成します。 コンシューマーを呼び出して、 **irowsetchange::setdata**または**irowsetchange::insertrow**メソッドでは、BLOB 列をバインドするアクセサーを指定します。 このとき、コンシューマーのストレージ オブジェクトのストレージ インターフェイスへのポインターを渡します。  
   
  このトピックでは、次の関数で使用可能な機能について説明します。  
   
@@ -44,19 +42,19 @@ ms.locfileid: "36174704"
 -   IRowsetUpdate::Update  
   
 ## <a name="how-to-set-large-data"></a>大きなデータを設定する方法  
- コンシューマーは、BLOB 列とし、呼び出しの値をバインドするアクセサーを作成する独自のストレージ オブジェクトへのポインターを渡す、 **irowsetchange::setdata**または**irowsetchange::insertrow**メソッドです。 BLOB データを設定するには、次の手順を実行します。  
+ コンシューマーを独自のストレージ オブジェクトへのポインターを渡すためには、BLOB 列とし、呼び出しの値をバインドするアクセサーを作成します、 **irowsetchange::setdata**または**irowsetchange::insertrow**メソッド。 BLOB データを設定するには、次の手順を実行します。  
   
-1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 設定、 *dwFlag*に STGM_READ を設定し、DBOBJECT 構造体の要素、 *iid*要素に IID_ISequentialStream (公開されるインターフェイス)。  
+1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 設定、 *dwFlag*要素に STGM_READ を設定し、DBOBJECT 構造体の*iid*要素に IID_ISequentialStream (公開するインターフェイス)。  
   
 2.  行セットが更新可能になるように、DBPROPSET_ROWSET プロパティ グループのプロパティを設定します。  
   
-3.  DBBINDING 構造体の配列を使用して、各列に 1 つずつ一連のバインドを作成します。 設定、 *wType* DBTYPE_IUNKNOWN、DBBINDING 構造体の要素、および*pObject*要素を作成した DBOBJECT 構造体をポイントします。  
+3.  DBBINDING 構造体の配列を使用して、各列に 1 つずつ一連のバインドを作成します。 設定、 *wType*要素に DBTYPE_IUNKNOWN DBBINDING 構造体と*pObject*要素を作成した DBOBJECT 構造体をポイントします。  
   
 4.  DBBINDINGS 構造体の配列内のバインド情報を使用して、アクセサーを作成します。  
   
-5.  呼び出す**GetNextRows**行セットを次の行をフェッチします。 呼び出す**GetData**行セットからデータを読み取れません。  
+5.  呼び出す**GetNextRows**を行セットに次の行をフェッチします。 呼び出す**GetData**行セットからデータを読み取る。  
   
-6.  含むデータ (および長さのインジケーター)、ストレージ オブジェクトを作成し、呼び出す**irowsetchange::setdata** (または**irowsetchange::insertrow**) を設定する BLOB 列をバインドするアクセサーを持つデータ。  
+6.  データ (およびも長さのインジケーター) を保持するストレージ オブジェクトを作成し、呼び出す**irowsetchange::setdata** (または**irowsetchange::insertrow**) に設定する BLOB 列をバインドするアクセサーを指定データ。  
   
 ## <a name="example"></a>例  
  次の例は、BLOB データを設定する方法を示しています。 この例では、テーブルを作成し、サンプル レコードを追加して、行セット内のそのレコードをフェッチし、BLOB フィールドの値を設定しています。  

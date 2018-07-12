@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.extractdacwizard.buildandsave.f1
 - sql12.swb.extractdacwizard.setdacproperties.f1
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0da72e16f77d6f3c850a41f85caa453123afc802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9eb33630708143700d7f5ce6749cf720c71a65fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211502"
 ---
 # <a name="extract-a-dac-from-a-database"></a>データベースからの DAC の抽出
   **データ層アプリケーションの抽出ウィザード** または Windows PowerShell スクリプトを使用すると、既存の SQL Server データベースからデータ層アプリケーション (DAC) パッケージを抽出できます。 抽出プロセスでは、データベース オブジェクトの定義とそれに関連するインスタンスレベルの要素を格納した DAC パッケージ ファイルが作成されます。 たとえば、DAC パッケージ ファイルには、データベース テーブル、ストアド プロシージャ、ビュー、ユーザー、およびデータベース ユーザーにマップされているログインが含まれます。  
@@ -40,7 +40,7 @@ ms.locfileid: "36175211"
 -   **DAC を抽出するを使用して:**[データ層アプリケーションの抽出ウィザード](#UsingDACExtractWizard)、 [PowerShell  ](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>はじめに  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 以降のインスタンスに存在するデータベースから DAC を抽出できます。 DAC から配置されたデータベースに対して抽出プロセスが実行された場合、データベース内のオブジェクトの定義のみが抽出されます。 プロセスはで登録された DAC を参照していません`msdb`(**マスター**で[!INCLUDE[ssSDS](../../includes/sssds-md.md)])。 抽出プロセスは、データベース エンジンの現在のインスタンスの DAC 定義を登録しません。 DAC の登録の詳細については、「 [Register a Database As a DAC](register-a-database-as-a-dac.md)」を参照してください。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 以降のインスタンスに存在するデータベースから DAC を抽出できます。 DAC から配置されたデータベースに対して抽出プロセスが実行された場合、データベース内のオブジェクトの定義のみが抽出されます。 プロセスで登録された DAC を参照していません`msdb`(**マスター**で[!INCLUDE[ssSDS](../../includes/sssds-md.md)])。 抽出プロセスは、データベース エンジンの現在のインスタンスの DAC 定義を登録しません。 DAC の登録の詳細については、「 [Register a Database As a DAC](register-a-database-as-a-dac.md)」を参照してください。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  DAC を抽出できるのは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降のデータベースに限られます。 DAC でサポートされていないオブジェクトまたは包含ユーザーがデータベースに存在する場合は、DAC を抽出できません。 DAC でサポートされるオブジェクトの種類の詳細については、「 [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md)」を参照してください。  
@@ -78,7 +78,7 @@ ms.locfileid: "36175211"
   
  **[キャンセル]** : データベースからデータ層アプリケーションを抽出せずにウィザードを終了します。  
   
-###  <a name="SelectData"></a> データの選択 ページ  
+###  <a name="SelectData"></a> データ ページを選択します。  
  ウィザードのこのページを使用して、データ層アプリケーション (DAC) パッケージ ファイルに含める参照データを選択できます。 DAC パッケージにデータを含めることは必須ではありません。 DAC パッケージには、データベースに関連するサポート対象のデータベース オブジェクトおよびインスタンス オブジェクトのスキーマがすべて、既に含まれています。  
   
  DAC パッケージ ファイルには最大 10 MB の参照データを含めることができます。 ただし、DAC に含まれるテーブルの場合、 **image** や **varchar(max)** などのバイナリ ラージ オブジェクト (BLOB) データ型を含めることはできません。 別のデータベースへ転送するためにより大量のデータを抽出するには、SQL Server Integration Services、一括コピー ユーティリティ、または他の多くのデータ移行方法のいずれかを使用します。  
@@ -90,9 +90,9 @@ ms.locfileid: "36175211"
   
  **[名前]** : この名前で、DAC を識別します。 DAC パッケージ ファイルと異なる名前を設定できますが、アプリケーションを識別できる名前である必要があります。 たとえば、データベースを財務アプリケーションで使用する場合は、"DAC Finance" などの名前を付けます。  
   
- **[バージョン (xx.xx.xx.xx という形式で、x は数字)]** : DAC のバージョンを表す数値。 DAC のバージョンは、開発者が操作している DAC のバージョンを特定するために Visual Studio で使用します。 バージョンが格納されている DAC を配置するときに、`msdb`データベースし、後で下に表示できます、**データ層アプリケーション**内のノード[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
+ **[バージョン (xx.xx.xx.xx という形式で、x は数字)]** : DAC のバージョンを表す数値。 DAC のバージョンは、開発者が操作している DAC のバージョンを特定するために Visual Studio で使用します。 バージョンが格納されている DAC をデプロイするとき、`msdb`データベースし、後で下に表示できます、**データ層アプリケーション**内のノード[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
- **[説明]** - 省略可能です。 DAC の説明です。 格納されて、説明で DAC を配置するときに、`msdb`データベースし、後で下に表示できます、**データ層アプリケーション**内のノード[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]です。  
+ **[説明]** - 省略可能です。 DAC の説明です。 説明が格納されている DAC をデプロイするとき、`msdb`データベースし、後で下に表示できます、**データ層アプリケーション**内のノード[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。  
   
  **[DAC パッケージ ファイルに保存 (.dacpac 拡張子をファイル名に含める)]** : DAC を拡張子が .dacpac の DAC パッケージ ファイルに保存します。 **[参照]** ボタンをクリックしてファイルの名前と場所を指定します。  
   

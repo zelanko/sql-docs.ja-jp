@@ -5,25 +5,24 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 caps.latest.revision: 82
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 64c63acf34e6f3d464fcd402d738c644002ddce7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 19ca1d323f2b0e53e458aa808f791936b823eef7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164263"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではフルテキスト クエリで類義語辞典を使用し、指定した用語のシノニムを検索できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の*類義語辞典*では、特定の言語の一連のシノニムを定義します。 システム管理者は、拡張セットと置換セットという 2 つの形式のシノニムを定義できます。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。 類義語辞典の照合は、FORMSOF THESAURUS 句を指定する [CONTAINS](/sql/t-sql/queries/contains-transact-sql) クエリと [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) クエリの場合、およびすべての [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) クエリと [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) クエリの場合に行われます。  
@@ -46,7 +45,7 @@ ms.locfileid: "36175675"
      置換セットには、代替セットによって置き換えられるテキストのパターンが格納されます。 このトピックの後半で説明する「置換セットの XML 構造」の例をご覧ください。  
   
   
-##  <a name="initial_thesaurus_files"></a> 類義語辞典ファイルの初期内容  
+##  <a name="initial_thesaurus_files"></a> 類義語辞典ファイルの初期コンテンツ  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には XML 類義語辞典ファイルのセットが用意されており、サポートされている各言語に対して 1 つのファイルが存在します。 これらのファイルは基本的に空です。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類義語辞典およびコメント アウトされたサンプル類義語辞典に共通する最上位の XML 構造のみが格納されています。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でリリースされている類義語辞典ファイルには、すべて次の XML コードが含まれています。  
@@ -81,7 +80,7 @@ ms.locfileid: "36175675"
 ##  <a name="location"></a> 類義語辞典ファイルの場所  
  類義語辞典ファイルの既定の場所は次のとおりです。  
   
- *< SQL_Server_data_files_path >* \MSSQL12 です。MSSQLSERVER\MSSQL\FTDATA\  
+ *< SQL_Server_data_files_path >* \mssql12. します。MSSQLSERVER\MSSQL\FTDATA\  
   
  この既定の場所には、次のファイルが格納されています。  
   
@@ -106,12 +105,12 @@ ms.locfileid: "36175675"
  グローバル類義語辞典ファイルは、LCID 0 のニュートラル言語に対応します。 この値は、管理者のみが変更できます。  
   
   
-##  <a name="how_queries_use_tf"></a> クエリを使用して類義語辞典のファイル  
+##  <a name="how_queries_use_tf"></a> クエリの使用の類義語辞典ファイルをする方法  
  類義語辞典クエリでは、言語固有の類義語辞典とグローバル類義語辞典の両方が使用されます。 まず、言語固有のファイルが参照されて処理のために読み込まれ (まだ読み込まれていない場合)、 類義語辞典ファイル内の拡張セットおよび置換セットのルールで指定された言語固有のシノニムを含むようにクエリが拡張されます。 この手順がグローバル類義語辞典に対して繰り返されます。 ただし、言語固有の類義語辞典ファイルで既に一致するものが見つかった用語は、グローバル類義語辞典では照合されません。  
   
   
-##  <a name="structure"></a> 類義語辞典ファイルの構造をについてください。  
- 各類義語辞典ファイルでは、ID が `Microsoft Search Thesaurus`の XML コンテナー、およびサンプル類義語辞典を含むコメント `<!--` … `-->`が定義されます。 類義語辞典がで定義されている、\<類義語辞典 > 要素を次のように分音文字の設定、拡張セットおよび置換セットを定義する子要素のサンプルが含まれています。  
+##  <a name="structure"></a> 類義語辞典ファイルの構造を理解します。  
+ 各類義語辞典ファイルでは、ID が `Microsoft Search Thesaurus`の XML コンテナー、およびサンプル類義語辞典を含むコメント `<!--` … `-->`が定義されます。 類義語辞典がで定義されている、\<類義語辞典 > 要素を次のように分音文字の設定、拡張セット、および置換セットを定義する子要素のサンプルが含まれています。  
   
 -   分音文字の設定の XML 構造  
   
@@ -127,7 +126,7 @@ ms.locfileid: "36175675"
   
 -   拡張セットの XML 構造  
   
-     囲まれている各拡張セット、\<拡張 > 要素。 この要素内で 1 つ以上の代替文字列を指定する、 \<sub > 要素。 拡張セットでは、互いにシノニムとなる代替文字列のグループを指定できます。  
+     囲まれている各拡張セット、\<拡張 > 要素。 この要素内で 1 つまたは複数の置換を指定する、 \<sub > 要素。 拡張セットでは、互いにシノニムとなる代替文字列のグループを指定できます。  
   
      たとえば、拡張のセクションを編集して、代替文字列 "writer"、"author"、および "journalist" をシノニムとして扱うことができます。 1 つの代替文字列と一致するフルテキスト検索クエリは、拡張セット内の他の代替文字列もすべて含むように拡張されます。 したがって、上記の例では、"author" という語に対して FORMS OF THESAURUS クエリまたは FREETEXT クエリを実行すると、フルテキスト検索では "writer" と "journalist" という語も含む検索結果が返されます。  
   
@@ -143,7 +142,7 @@ ms.locfileid: "36175675"
   
 -   置換セットの XML 構造  
   
-     各置換セットが囲ま、\<置換 > 要素。 この要素内で 1 つまたは複数のパターンを指定することができます、 \<pat > 要素と 0 個以上の代替で\<sub > 要素、シノニムごとに 1 つです。 ここで指定するパターンが代替セットで置き換えられます。 パターンと代替文字列には、語または語の並びを含めることができます。 パターンに対して代替文字列が指定されていない場合は、ユーザー クエリからパターンが削除されます。  
+     各置換セットがで囲まれた、\<置換 > 要素。 この要素内で 1 つまたは複数のパターンを指定することができます、 \<pat > 要素と 0 個以上の代替で\<sub > 要素、シノニムごとに 1 つ。 ここで指定するパターンが代替セットで置き換えられます。 パターンと代替文字列には、語または語の並びを含めることができます。 パターンに対して代替文字列が指定されていない場合は、ユーザー クエリからパターンが削除されます。  
   
      たとえば、"Win8" というパターンを検索するクエリを、"Windows Server 2012" または "Windows 8.0" という代替文字列に置き換えるとします。 この場合、"Win8" に対してフルテキスト クエリを実行すると、フルテキスト検索からは "Windows Server 201" または "Windows 8.0" だけを含む検索結果が返されます。 "Win8" を含む結果は返されません。 これは、"Win8" が "Windows Server 2012" と "Windows 8.0" というパターンに置換されるためです。  
   
@@ -177,12 +176,12 @@ ms.locfileid: "36175675"
     ```  
   
   
-##  <a name="working_with_thesaurus_files"></a> 類義語辞典ファイルの操作  
+##  <a name="working_with_thesaurus_files"></a> 類義語辞典ファイルの使用  
  **類義語辞典ファイルを編集するには**  
   
--   [類義語辞典ファイルの編集](#editing)  
+-   [類義語辞典ファイルを編集します。](#editing)  
   
- **更新された類義語辞典ファイルを読み込めません**  
+ **更新された類義語辞典ファイルを読み込む**  
   
 -   [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql)  
   
@@ -191,8 +190,8 @@ ms.locfileid: "36175675"
 -   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="editing"></a> 類義語辞典ファイルの編集  
- 特定の言語の類義語辞典は、類義語辞典ファイル (XML ファイル) を編集することによって構成できます。 セットアップ中に、空の類義語辞典ファイルのみを含む、 \<xml > コンテナーおよびコメント アウトされたサンプル\<類義語辞典 > 要素をインストールします。 順序で、フルテキスト検索クエリを正常に機能するシノニムを検索する必要があります作成実績\<類義語辞典 > 一連のシノニムを定義する要素。 シノニムの定義には、拡張セットと置換セットという 2 つの形式があります。  
+##  <a name="editing"></a> 類義語辞典ファイルを編集します。  
+ 特定の言語の類義語辞典は、類義語辞典ファイル (XML ファイル) を編集することによって構成できます。 セットアップ中に、空の類義語辞典ファイルのみが含まれている、 \<xml > コンテナーおよびコメント アウトされたサンプル\<類義語辞典 > 要素をインストールします。 順序で、フルテキスト検索クエリを正常に機能するシノニムを検索する必要がありますを作成、実際\<類義語辞典 > 一連のシノニムを定義する要素。 シノニムの定義には、拡張セットと置換セットという 2 つの形式があります。  
   
  **類義語辞典ファイルの制限**  
   
@@ -212,7 +211,7 @@ ms.locfileid: "36175675"
   
  類義語辞典ファイル内のエントリには特殊文字を含めないことをお勧めします。 これは、特殊文字に対するワード ブレーカーの動作がわかりづらいためです。 類義語辞典のエントリに特殊文字が含まれる場合、そのエントリと組み合わせて使用されるワード ブレーカーの動作がフルテキスト クエリに与える影響がわかりづらくなる可能性があります。  
   
- お勧め\<sub > エントリ ストップ ワードを含めないストップ ワードはフルテキスト インデックスから省略されるためです。 ようにクエリが拡張されます、 \<sub > エントリ、類義語辞典ファイルから場合に、 \<sub > エントリにストップ ワードが含まれています、クエリのサイズが不必要に大きくします。  
+ お勧め\<sub > エントリ ストップ ワードを含めないストップ ワードはフルテキスト インデックスから省略されるためです。 ようにクエリが拡張されます、 \<sub > エントリを類義語辞典ファイルから場合に、 \<sub > エントリにストップ ワードが含まれています、クエリのサイズが不必要に。  
   
 #### <a name="to-edit-a-thesaurus-file"></a>類義語辞典ファイルを編集するには  
   

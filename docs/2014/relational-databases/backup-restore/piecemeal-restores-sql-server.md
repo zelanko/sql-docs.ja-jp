@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partial updates [SQL Server]
 - staged restores [SQL Server]
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 caps.latest.revision: 73
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06c20ea51fd5c3081323f56875eac49e1f8d1eef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a9f42180f42071d53bcb3754e29baaee3b6bc82d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182869"
 ---
 # <a name="piecemeal-restores-sql-server"></a>段階的な部分復元 (SQL Server)
   このトピックの内容は、複数のファイルまたはファイル グループ (単純復旧モデルでは、読み取り専用ファイル グループのみ) を含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Enterprise エディションのデータベースだけに関するものです。  
@@ -54,7 +53,7 @@ ms.locfileid: "36176205"
   
      オンラインの段階的な部分復元シナリオでは、部分復元シーケンスの実行後にデータベースがオンラインになり、プライマリ ファイル グループと復旧されたすべてのセカンダリ ファイル グループが使用可能になります。 復元されていないファイル グループはオフラインのままになりますが、データベースがオンラインの状態であれば、その間に必要に応じて復元できます。  
   
-     オンラインの段階的な部分復元では遅延トランザクションを実行できます。 ファイル グループのサブセットだけが復元された場合、データベース内のトランザンションの中でオンライン ファイル グループに依存するものは遅延される場合があります。 これは、データベース全体の一貫性を保つための一般的な動作です。 詳細については、「 [遅延トランザクション &#40;SQL Server&#41;](deferred-transactions-sql-server.md)を使用して、機能していないファイル グループを削除する方法を説明します。  
+     オンラインの段階的な部分復元では遅延トランザクションを実行できます。 ファイル グループのサブセットだけが復元された場合、データベース内のトランザンションの中でオンライン ファイル グループに依存するものは遅延される場合があります。 これは、データベース全体の一貫性を保つための一般的な動作です。 詳細については、「 [遅延トランザクション &#40;SQL Server&#41;](deferred-transactions-sql-server.md)」を参照してください。  
   
 -   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 段階的な部分復元のシナリオ  
   

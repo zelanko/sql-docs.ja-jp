@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92395b7b91d94187dc790978baa084c418224686
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3022c5d802da527dc1c1bfb062f8a5dca267f50e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157743"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 関数 (レポート ビルダーおよび SSRS)
   名前と値のペアを含むデータセットから、指定された名前のセットに最初に一致した値のセットを返します。  
@@ -36,13 +36,13 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>パラメーター  
  *source_expression*  
- (`VariantArray`) を検索する名前またはキーのセットを指定する、現在のスコープ内で評価される式。 たとえば、複数値パラメーターの場合、 `=Parameters!IDs.value`のように指定します。  
+ (`VariantArray`)、現在のスコープで評価される式を検索する名前またはキーのセットを指定します。 たとえば、複数値パラメーターの場合、 `=Parameters!IDs.value`のように指定します。  
   
  *destination_expression*  
  (`Variant`) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、 `=Fields!ID.Value`のようにします。  
   
  *result_expression*  
- (`Variant`) データセット内の各行に対して評価される式を*source_expression* = *destination_expression*、取得する値を指定します。 たとえば、 `=Fields!Name.Value`のようにします。  
+ (`Variant`) データセット内の行に対して評価される式を*source_expression* = *destination_expression*、取得する値を指定します。 たとえば、 `=Fields!Name.Value`のようにします。  
   
  *データセット (dataset)*  
  レポート内のデータセットの名前を指定する定数。 たとえば、"Colors" と指定します。  
@@ -51,9 +51,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  返します、 `VariantArray`、または`Nothing`一致が存在しない場合。  
   
 ## <a name="remarks"></a>コメント  
- 使用して`Multilookup`の各ペアが 1 対 1 のリレーションシップを持つ名前/値ペアのデータセットから一連の値を取得します。 `MultiLookup` 呼び出すのと同じ`Lookup`名前またはキーのセット。 たとえば、複数値パラメーターの主キー識別子に基づいている、行うこともできます`Multilookup`パラメーターまたはテーブルにバインドされていないデータセットから関連する値を取得するテーブル内のテキスト ボックス内の式でします。  
+ 使用`Multilookup`の各ペアが 1 対 1 リレーションシップを持つ名前/値ペアをデータセットから一連の値を取得します。 `MultiLookup` 呼び出し元のと同じ`Lookup`名前またはキーのセット。 たとえば、主キー識別子に基づく複数値パラメーターを使用できます`Multilookup`パラメーターまたはテーブルにバインドされていないデータセットから関連する値を取得するテーブル内のテキスト ボックス内の式で。  
   
- `Multilookup` 次のとおり  
+ `Multilookup` 次を行います。  
   
 -   現在のスコープ内でソース式が評価され、variant オブジェクトの配列が生成されます。  
   
@@ -73,7 +73,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   変換元、変換先、結果の式には、レポート変数またはグループ変数への参照を含めることができません。  
   
--   `Multilookup` 次のレポート アイテムの式として使用することはできません。  
+-   `Multilookup` 次のレポート アイテムの式として使用できません。  
   
     -   データ ソースの動的な接続文字列。  
   
@@ -101,7 +101,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 |3|Clothing|  
 |4|Components|  
   
- 識別子のリストに対応する名前を参照するには、`Multilookup` を使用します。 を呼び出し、文字列配列に、リストを分割する必要がありますまず`Multilookup`、カテゴリの名前を取得し、結果を文字列に連結します。  
+ 識別子のリストに対応する名前を参照するには、`Multilookup` を使用します。 まず、リストを呼び出し、文字列配列に分割する必要があります`Multilookup`カテゴリの名前を取得し、結果を文字列に連結します。  
   
  Category データセットにバインドされているデータ領域内のテキスト ボックスに次の式を置いた場合、"Bikes, Components, Bikes, Accessories" と表示されます。  
   
@@ -130,6 +130,6 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [式の合計、集計、および組み込みコレクションのスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

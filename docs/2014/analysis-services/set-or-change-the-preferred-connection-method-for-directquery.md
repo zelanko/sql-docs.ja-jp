@@ -1,5 +1,5 @@
 ---
-title: 設定または DirectQuery の優先接続方法を変更 |Microsoft ドキュメント
+title: 設定または DirectQuery の優先接続方法の変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf6abf3e4576fb28155529ee1bdfd24520176010
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5c9ad99aad3ae46b3e97c3d3b6dfbec03dcff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149523"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>DirectQuery の優先接続方法の設定または変更
-  DirectQuery モードで使用するモデルを作成する場合は、まず、DirectQuery の使用をサポートするようにデザイン環境を構成する必要があります。 これを行うには、次を参照してください。 [DirectQuery デザイン モードを有効にする&#40;SSAS 表形式&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)です。  
+  DirectQuery モードで使用するモデルを作成する場合は、まず、DirectQuery の使用をサポートするようにデザイン環境を構成する必要があります。 これを行うには、次を参照してください。 [DirectQuery デザイン モードを有効にする&#40;SSAS 表形式&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)します。  
   
  モデルを配置する準備ができたら、追加のプロパティを設定して、ユーザーが DirectQuery モードの 1 つを使用してモデルにアクセスできるようにする必要があります。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36176486"
   
     -   **DirectQuery のみ**  
   
-    -   **インメモリ (DirectQuery あり)**  
+    -   **DirectQuery で InMemory**  
   
     -   **DirectQuery (インメモリあり)**  
   

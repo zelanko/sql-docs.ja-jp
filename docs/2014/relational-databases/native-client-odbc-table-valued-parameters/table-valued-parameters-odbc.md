@@ -1,13 +1,11 @@
 ---
-title: テーブル値パラメーター (ODBC) |Microsoft ドキュメント
+title: テーブル値パラメーター (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,26 +13,26 @@ helpviewer_keywords:
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 955ae0daa3a2c15a5b1e6146c269c8d4095fb146
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ce0cd9e87d4bd594fb2c2be4a01e9f2cf8ef4a27
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175333"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421791"
 ---
 # <a name="table-valued-parameters-odbc"></a>テーブル値パラメーター (ODBC)
   ODBC のテーブル値パラメーターのサポートにより、クライアント アプリケーションは、1 回の呼び出しで複数の行をサーバーに送信することで、パラメーター化されたデータをサーバーに効率的に送信できます。  
   
- サーバーのテーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーターの&#40;データベース エンジン&#41;](../tables/use-table-valued-parameters-database-engine.md)です。  
+ サーバー上のテーブル値パラメーターについては、次を参照してください。[テーブル値パラメーターの&#40;データベース エンジン&#41;](../tables/use-table-valued-parameters-database-engine.md)します。  
   
  ODBC でテーブル値パラメーターをサーバーに送信するには、次の 2 つの方法があります。  
   
--   すべてのテーブル値パラメーターのデータを SQLExecDirect または SQLExecute が呼び出されたときにメモリにできます。 テーブル値に複数の行がある場合、このデータを配列に格納します。  
+-   テーブル値パラメーターのすべてのデータを SQLExecDirect または SQLExecute の呼び出し時にメモリにできます。 テーブル値に複数の行がある場合、このデータを配列に格納します。  
   
--   SQLExecDirect または SQLExecute が呼び出されたときに、アプリケーションは、テーブル値パラメーターのデータは実行時に指定できます。 この場合、テーブル値のデータの行をバッチ内で指定するか、必要なメモリ量を減らすために 1 つずつ指定することができます。  
+-   SQLExecDirect または SQLExecute が呼び出されたときに、アプリケーションは、テーブル値パラメーターの実行時データを指定できます。 この場合、テーブル値のデータの行をバッチ内で指定するか、必要なメモリ量を減らすために 1 つずつ指定することができます。  
   
  1 つ目の方法では、より多くのビジネス ロジックをストアド プロシージャにカプセル化できます。 たとえば、発注品目をテーブル値パラメーターとして渡す場合、注文入力のトランザクション全体を 1 つのストアド プロシージャにカプセル化することができます。 サーバーとのやり取りが 1 回で済むため、この方法は非常に効率的です。 また、異なるプロシージャを使用して、注文ヘッダーと発注品目を個別に処理することもできます。この場合、必要なコードが多くなり、クライアントとサーバー間のコントラクトが複雑になります。  
   

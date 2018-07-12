@@ -1,5 +1,5 @@
 ---
-title: ワークスペース データベース (SSAS テーブル) 内のパーティション作成し、管理 |Microsoft ドキュメント
+title: ワークスペース データベース (SSAS テーブル) でのパーティション作成し、管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.partitionmgr.f1
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12655b79c40b71540f314e4f525e7581feac8cc6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ad3a73c669068129cb372144e008a484d784186
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151363"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>ワークスペース データベースのパーティションの作成と管理 (SSAS テーブル)
   パーティションは、テーブルを論理的な部分に分割します。 その後、各パーティションは、個別に、または他のパーティションと並列に処理 (更新) することができます。 パーティションによって、大規模なデータベースのスケーラビリティと管理性を向上させることができます。 既定では、各テーブルに 1 つのパーティションがあり、すべての列がこのパーティションに含まれます。 このトピックのタスクでは、 **[パーティション マネージャー]** ダイアログ ボックスを使用して、モデル ワークスペース データベースでパーティションを作成し管理する方法について説明します。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
@@ -74,6 +74,6 @@ ms.locfileid: "36177370"
   
 ## <a name="see-also"></a>参照  
  [パーティション&#40;SSAS 表形式&#41;](partitions-ssas-tabular.md)   
- [ワークスペース データベースでのパーティション処理&#40;SSAS 表形式&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+ [ワークスペース データベースのパーティションの処理&#40;SSAS 表形式&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)  
   
   

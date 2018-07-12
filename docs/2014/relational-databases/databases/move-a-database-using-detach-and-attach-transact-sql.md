@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database attaching [SQL Server]
 - moving databases [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efd99fbc8c1b9b477ac778c3d71fbab19a413fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a0f6c25060fa70c1b269f884a3c33ba86b3b115f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160523"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデタッチしたデータベースを別の場所に移動し、同じまたは異なるサーバー インスタンスに再アタッチする方法について説明します。 ただし、データベースを移動するときは、デタッチとアタッチではなく、ALTER DATABASE による計画的再配置手順を使用することをお勧めします。 詳細については、「 [ユーザー データベースの移動](move-user-databases.md)」を参照してください。  
@@ -53,7 +53,7 @@ ms.locfileid: "36176414"
 3.  コピーしたファイルをアタッチします。 詳細については、「 [Attach a Database](attach-a-database.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例は、のコピーを作成、[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]ステートメントは、アタッチするサーバー インスタンスに接続されているクエリ エディター ウィンドウで実行されます。  
+ 次の例のコピーを作成する、[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]ステートメントに接続されている、サーバー インスタンスがアタッチされているクエリ エディター ウィンドウで実行されます。  
   
 1.  デタッチ、[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]ステートメント。  
   

@@ -1,28 +1,26 @@
 ---
-title: ODBC エラー (ODBC) の処理 |Microsoft ドキュメント
+title: ODBC エラー (ODBC) の処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b925bc53c1427e1964b8d2487727994d39f24354
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8057ac412d673fff49105c8fd7d051d13f3ac63e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165236"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423031"
 ---
 # <a name="process-odbc-errors-odbc"></a>ODBC エラーの処理 (ODBC)
   2 つの ODBC 関数呼び出し [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) および [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) を使用すると、ODBC メッセージを取得できます。 **SQLState**、**pfNative**、および **ErrorMessage** の各診断フィールドの主要な ODBC 関連情報を取得するには、SQL_NO_DATA が返されるまで [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) を呼び出します。 診断レコードごとに、[SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) を呼び出して個々のフィールドを取得できます。 ドライバー固有のフィールドはすべて、`SQLGetDiagField` を使用して取得する必要があります。  

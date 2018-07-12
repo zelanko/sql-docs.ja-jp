@@ -1,5 +1,5 @@
 ---
-title: 接続のフィルターまたはドキュメント Web パーツ (SharePoint 統合モードで Reporting Services) |Microsoft ドキュメント
+title: 接続のフィルターまたはドキュメント Web パーツ (SharePoint 統合モードで Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Filter Web Part [Reporting Services]
 - SharePoint integration [Reporting Services], Web Parts
@@ -18,13 +18,13 @@ ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f43de4f4118ca7b43370eb8493fe56cd072db2a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 697726db338c9165bdd909b0c324ecf52a472013
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240162"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>フィルター Web パーツまたはドキュメント Web パーツの接続 (Reporting Services の SharePoint 統合モード)
   SharePoint 製品を使用している場合、フィルター Web パーツまたはドキュメント Web パーツとレポート ビューアー Web パーツを含む、ダッシュボードや Web パーツ ページを作成できます。 サポートされているバージョンは [!INCLUDE[SPF2010](../includes/spf2010-md.md)] または [!INCLUDE[SPS2010](../includes/sps2010-md.md)] です。 [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] または [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 もサポートされています。 フィルター Web パーツを接続することによって、フィルター値をフィルター Web パーツで選択するユーザーは、同じページでパラメーター化されたレポートに値を送信できるようになります。 ドキュメント Web パーツを接続することによって、ドキュメント ライブラリでレポートをクリックするユーザーは、隣接するレポート ビューアー Web パーツでレポートを表示できるようになります。  
@@ -80,7 +80,7 @@ ms.locfileid: "36174653"
 11. 変更をチェックインし、ページを保存します。  
   
 ## <a name="see-also"></a>参照  
- [Web ページにレポート ビューアー Web パーツを追加&#40;Reporting Services の SharePoint 統合モード&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [レポート ビューアー Web パーツを Web ページに追加&#40;Reporting Services の SharePoint 統合モード&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
  [SharePoint サイト上のレポート ビューアー Web パーツ](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [レポート ビューアー Web パーツのカスタマイズ](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   

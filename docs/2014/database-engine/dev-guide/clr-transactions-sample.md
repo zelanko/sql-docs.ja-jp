@@ -1,5 +1,5 @@
 ---
-title: CLR Transactions サンプル |Microsoft ドキュメント
+title: CLR Transactions サンプル |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1bf79778ca7c4376545570a538e41c5fa8db17f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 581510c786e31ab83399bb1ca0d21dd8391ff547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154983"
 ---
 # <a name="clr-transactions-sample"></a>CLR Transactions サンプル
-  このサンプルでは、`System.Transactions` 名前空間にあるマネージ API を使用してトランザクションを制御する例を示します。 このサンプルで `System.Transactions.TransactionScope` クラスは、要求に応じるのに十分な在庫が存在する場合を除き、ある場所から別の場所への移動をアトミック レベルで行える程度の在庫が存在する場合に、在庫数が調整されないように、トランザクション境界を確立するために使用されています。 分散トランザクションにおける自動登録の例を、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに格納された監査データベースに在庫の変更を記録するという動作で示しています。  
+  このサンプルでは、`System.Transactions` 名前空間にあるマネージド API を使用してトランザクションを制御する例を示します。 このサンプルで `System.Transactions.TransactionScope` クラスは、要求に応じるのに十分な在庫が存在する場合を除き、ある場所から別の場所への移動をアトミック レベルで行える程度の在庫が存在する場合に、在庫数が調整されないように、トランザクション境界を確立するために使用されています。 分散トランザクションにおける自動登録の例を、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに格納された監査データベースに在庫の変更を記録するという動作で示しています。  
   
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
@@ -53,11 +53,11 @@ ms.locfileid: "36177151"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要があります`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
--   管理者でない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを使用している、する必要がありますが管理者から付与**CreateAssembly**インストールを完了するアクセス許可。  
+-   管理者でない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを使用して、管理者から付与が必要**CreateAssembly**インストールを完了するためのアクセス許可。  
   
 ## <a name="building-the-sample"></a>サンプルのビルド  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36177151"
   
      このコマンドを実行するときには、インスタンスとサーバーの適切な値を指定します。  
   
-9. コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、として保存`test.sql`サンプル ディレクトリにします。  
+9. コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、保存`test.sql`サンプル ディレクトリにします。  
   
 10. 次のコマンドを使用してテスト スクリプトを実行します。  
   

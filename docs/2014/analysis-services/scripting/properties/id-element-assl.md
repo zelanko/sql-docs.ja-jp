@@ -1,5 +1,5 @@
 ---
-title: ID 要素 (ASSL) |Microsoft ドキュメント
+title: ID 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ID element
 ms.assetid: ea3ce0f4-9084-45d0-8150-73afb7005af2
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0a1ad98b6b9609cf50d16816c8ae5328083a63ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c323bd71865d0dd09bf724373ece03d83e7608ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209942"
 ---
 # <a name="id-element-assl"></a>ID 要素 (ASSL)
   親要素の一意の識別子 (ID) を格納します。  
@@ -58,11 +58,11 @@ ms.locfileid: "36177181"
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[Action](../objects/action-element-assl.md), [Aggregation](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [Assembly](../objects/assembly-element-assl.md), [Cube](../objects/cube-element-assl.md), [CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md), [CubeDimension](../data-type/dimension-data-type-assl.md), [Database](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [Hierarchy](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [Level](../objects/level-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [Measure](../objects/measure-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MeasureGroupBinding](../data-type/binding-data-type-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md), [Partition](../objects/partition-element-assl.md), [Permission](../data-type/permission-data-type-assl.md), [Perspective](../objects/perspective-element-assl.md), [Role](../objects/role-element-assl.md), [Server](../objects/server-element-assl.md), [Trace](../objects/trace-element-assl.md)|  
+|親要素|[アクション](../objects/action-element-assl.md)、[集計](../objects/aggregation-element-assl.md)、 [AggregationDesign](../objects/aggregationdesign-element-assl.md)、[アセンブリ](../objects/assembly-element-assl.md)、[キューブ](../objects/cube-element-assl.md)、 [CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md)、 [CubeDimension](../data-type/dimension-data-type-assl.md)、[データベース](../objects/database-element-assl.md)、 [DataSource](../objects/datasource-element-assl.md)、 [DataSourceView](../objects/datasourceview-element-assl.md)、[ディメンション](../objects/dimension-element-assl.md)、 [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)、[階層](../objects/hierarchy-element-assl.md)、 [Kpi](../objects/kpi-element-assl.md)、[レベル](../objects/level-element-assl.md)、 [MdxScript](../objects/mdxscript-element-assl.md)、[メジャー](../objects/measure-element-assl.md)、 [MeasureGroup](../objects/group-element-assl.md)、 [MeasureGroupBinding](../data-type/binding-data-type-assl.md)、 [MiningModel](../objects/miningmodel-element-assl.md)、 [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)、 [MiningStructure](../objects/miningstructure-element-assl.md)、 [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)、[パーティション](../objects/partition-element-assl.md)、[権限](../data-type/permission-data-type-assl.md)、[パースペクティブ](../objects/perspective-element-assl.md)、[ロール](../objects/role-element-assl.md)、 [Server](../objects/server-element-assl.md)、[トレース](../objects/trace-element-assl.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- すべての主要なオブジェクト[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]が、`ID`プロパティとして要素。 値、`ID`要素には、次の制限。  
+ すべての主要なオブジェクトで[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]が、`ID`プロパティとして要素。 値、`ID`要素には、次の制限。  
   
 -   値の先頭または末尾にスペースを含めることはできません。 そのようなスペースは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] によって暗黙的に `ID` 要素の値から削除されます。  
   
@@ -84,11 +84,11 @@ ms.locfileid: "36177181"
   
     -   PRN  
   
- 次の表に、追加の文字の値の中で使用することはできませんが、`ID`によっては、親要素の要素。  
+ 次の表に、追加の文字の値内で使用することはできません、`ID`親要素に応じての要素。  
   
 |親要素|文字|  
 |--------------------|----------------|  
-|[[サーバー]](../objects/server-element-assl.md)|値は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows コンピューター名の規則に従う必要があります。 (IP アドレスが正しくありません。)|  
+|[[サーバー]](../objects/server-element-assl.md)|値は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows コンピューター名の規則に従う必要があります。 (IP アドレスが無効です。)|  
 |[DataSource](../objects/datasource-element-assl.md)|:/\\*&#124;?"(){}<>|  
 |[レベル](../objects/level-element-assl.md)、[要素の属性](../objects/attribute-element-assl.md)|.,;'`:/\\*&#124;?"& % $! + ={}<>|  
 |他のすべての親要素|.,;'`:/\\*&#124;?"& % $! + = (){}<>|  

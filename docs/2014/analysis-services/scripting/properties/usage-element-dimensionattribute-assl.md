@@ -1,5 +1,5 @@
 ---
-title: Usage 要素 (DimensionAttribute) (ASSL) |Microsoft ドキュメント
+title: Usage 要素 (DimensionAttribute) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: c5e38d2e-5a8e-4157-84e9-285e78c84e74
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2e7787edb562580eaaddc3cdaf1094958eec9742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce7dea2cb3c0e928b5a1b0c80aa0ca526f5f8329
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183245"
 ---
 # <a name="usage-element-dimensionattribute-assl"></a>Usage 要素 (DimensionAttribute) (ASSL)
   属性の使用方法を説明します。  
@@ -51,7 +51,7 @@ ms.locfileid: "36176974"
 |特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*通常*|  
+|既定値|*正規表現*|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
@@ -66,11 +66,11 @@ ms.locfileid: "36176974"
   
 |値|説明|  
 |-----------|-----------------|  
-|*通常*|通常の属性です。|  
+|*正規表現*|通常の属性です。|  
 |*[キー]*|属性は、キー属性です。|  
 |*Parent*|親属性です。|  
   
- 許可される値に対応する列挙`Usage`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AttributeUsage>します。  
+ 許容された値に対応する列挙体`Usage`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AttributeUsage>します。  
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](../../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

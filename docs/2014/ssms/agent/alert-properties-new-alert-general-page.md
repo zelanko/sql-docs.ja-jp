@@ -1,5 +1,5 @@
 ---
-title: アラートのプロパティ-新しいアラート ([全般] ページ) |Microsoft ドキュメント
+title: アラートのプロパティ-新しい警告 (全般 ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.general.f1
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ee0b8c8224b935415c3fa60c7a9fdeb930ecdf21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 664daafc77750275a72c6a0933edd66fbd684d38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157623"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>アラートのプロパティ-新しいアラート ([全般] ページ)
   このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告の全般プロパティを表示および変更できます。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  警告の名前を変更します。  
   
  **[有効化]**  
  警告を有効にします。 警告が有効でない場合、警告に指定されたアクションは発生しません。  
   
- **Type**  
+ **型**  
  警告の種類を選択します。  
   
 -   **SQL Server イベント警告** は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログ内のメッセージに応答します。  
@@ -71,7 +71,7 @@ ms.locfileid: "36175647"
  **[警告カウンター]**  
  警告が応答するカウンターの動作を指定します。 たとえば、 **[Free space in tempdb (KB)]** カウンターの値が特定の値を下回る条件や、 **[SQL Compilations/sec]** が特定の値を上回る条件に応答するように警告を設定できます。  
   
- **Value**  
+ **[値]**  
  カウンターの値を指定します。  
   
 ## <a name="wmi-event-alert-options"></a>WMI イベント警告のオプション  
@@ -84,7 +84,7 @@ ms.locfileid: "36175647"
 ## <a name="see-also"></a>参照  
  [Alerts](alerts.md)   
  [WMI provider for Server Events の WQL の使用](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
- [エラー番号を使用して警告を作成します。](create-an-alert-using-an-error-number.md)   
+ [エラー番号を使用して通知を作成します。](create-an-alert-using-an-error-number.md)   
  [Create an Alert Using Severity Level](create-an-alert-using-severity-level.md)  
   
   

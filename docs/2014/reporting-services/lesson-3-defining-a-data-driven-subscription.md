@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 136335f0e56433a9478ddee37d0b8f585564776e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc37afd9e91b23ebef0e7f53fc5690f845f49d28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152133"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
   このレッスンでは、データ ドリブン サブスクリプションを使用し、サブスクリプション データ ソースへの接続、サブスクリプション データを取得するクエリの作成、および結果セットとレポート、配信オプションのマッピングを行います。  
@@ -35,15 +35,15 @@ ms.locfileid: "36175668"
   
 -   [手順 1 - 説明の定義](#bkmk_definesubscription)  
   
--   [手順 2 - サブスクライバー データ ソースへの接続の定義](#bkmk_defineconnectiontosubscriber)  
+-   [手順 2 - サブスクライバー データ ソースへの接続を定義します。](#bkmk_defineconnectiontosubscriber)  
   
 -   [手順 3 - データのサブスクライバーを取得するクエリの定義](#bkmk_definequery)  
   
 -   [手順 4 - 配信オプションの設定](#bkmk_set_deliveryoptions)  
   
--   [手順 5 - 非常にレポート出力をパラメーター値を構成します。](#bkmk_configure_parameter)  
+-   [手順 5 - レポート出力を変化させるパラメーター値を構成します。](#bkmk_configure_parameter)  
   
--   [ステップ 6 - サブスクリプションのスケジュール設定](#bkmk_schedule_subscription)  
+-   [手順 6 - サブスクリプションのスケジュール設定するには](#bkmk_schedule_subscription)  
   
 ##  <a name="bkmk_startwizard"></a> データ ドリブン サブスクリプション ウィザードを開始します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36175668"
   
 2.  レポートのショートカット メニューで、 **[管理]** をクリックし、 **[サブスクリプション]** タブをクリックします。  
   
-3.  をクリックして**新しいデータ ドリブン サブスクリプション**です。 このボタンが表示されない場合は、コンテンツ マネージャーの権限がありません。  
+3.  クリックして**新しいデータ ドリブン サブスクリプション**します。 このボタンが表示されない場合は、コンテンツ マネージャーの権限がありません。  
   
 ##  <a name="bkmk_definesubscription"></a> 手順 1 - 説明の定義  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36175668"
   
 3.  **[このサブスクリプションのみを対象とします]** を選択し、 **[次へ]** をクリックします。  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a> 手順 2 - サブスクライバー データ ソースへの接続の定義  
+##  <a name="bkmk_defineconnectiontosubscriber"></a> 手順 2 - サブスクライバー データ ソースへの接続を定義します。  
   
 1.  データ ソースの種類として **[Microsoft SQL Server]** を選択します。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36175668"
   
 1.  **[ファイル名]** で、 **[データベースから値を取得]** を選択します。 **Order**フィールドをクリックします。  
   
-2.  **[パス]** で、 **[静的な値を指定]** を選択します。 値の設定、書き込みのアクセス許可のあるパブリック ファイル共有の名前を入力します (たとえば、 `\\mycomputer\public\myreports`)。  
+2.  **[パス]** で、 **[静的な値を指定]** を選択します。 値の設定は、書き込みアクセス許可があるパブリック ファイル共有の名前を入力します (たとえば、 `\\mycomputer\public\myreports`)。  
   
 3.  **[表示形式]** で、 **[データベースから値を取得]** を選択します。 **[書式]** を選択します。  
   
@@ -113,11 +113,11 @@ ms.locfileid: "36175668"
   
 8.  **[次へ].**  
   
-##  <a name="bkmk_configure_parameter"></a> 手順 5 - 非常にレポート出力をパラメーター値を構成します。  
+##  <a name="bkmk_configure_parameter"></a> 手順 5 - レポート出力を変化させるパラメーター値を構成します。  
   
 1.  **[OrderNumber]** には、 **[データベースから値を取得]** を選択します。 [値] で、 **[注文]** をクリックします。 **[次へ].**  
   
-##  <a name="bkmk_schedule_subscription"></a> ステップ 6 - サブスクリプションのスケジュール設定  
+##  <a name="bkmk_schedule_subscription"></a> 手順 6 - サブスクリプションのスケジュール設定するには  
   
 1.  **[このサブスクリプション用に作成されたスケジュールで実行]** をクリックし、 **[次へ]** をクリックします。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36175668"
   
  ![レポート マネージャーでのサブスクリプションの結果](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.gif "レポート マネージャーでのサブスクリプションの結果")  
   
- これで、「データ ドリブン サブスクリプションの定義」のチュートリアルは終了します。 詳細については、他の[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]チュートリアルについてを参照してください[Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)です。  
+ これで、「データ ドリブン サブスクリプションの定義」のチュートリアルは終了します。 詳細については、その他は[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]チュートリアルを参照してください[Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)します。  
   
 ## <a name="see-also"></a>参照  
  [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   

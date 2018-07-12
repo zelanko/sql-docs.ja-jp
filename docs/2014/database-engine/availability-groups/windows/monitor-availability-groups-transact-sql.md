@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - dynamic management views [SQL Server], AlwaysOn Availability Groups
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - catalog views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 caps.latest.revision: 48
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 7ad2fed0ddfe6b06b66567dd86d0c343e6cdbff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 666b6487673c5a64ccdf955a4344e61717d9038b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239492"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>可用性グループの監視 (Transact-SQL)
   [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して可用性グループ、可用性レプリカ、および関連付けられているデータベースを監視できるように、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] には、一連のカタログ ビュー、動的管理ビュー、およびサーバー プロパティが用意されています。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT ステートメントを使用すると、これらのビューで、可用性グループや、そのレプリカおよびデータベースを監視できます。 特定の可用性グループに対して返される情報は、接続している [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスにプライマリ レプリカとセカンダリ レプリカのどちらがホストされているかによって変わります。  
@@ -84,7 +83,7 @@ ms.locfileid: "36173326"
 > [!NOTE]  
 >  このトピックの「[可用性レプリカの監視](#AvReplicas)」セクションの **sys.dm_hadr_availability_replica_cluster_nodes** と **sys.dm_hadr_availability_replica_cluster_states** 、および「[可用性データベースの監視](#AvDbs)」セクションの **sys.availability_databases_cluster** と **sys.dm_hadr_database_replica_cluster_states** も参照してください。  
   
- については、WSFC クラスターと[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください [Windows Server フェールオーバー クラスタ リング&#40;WSFC&#41;と SQL Server] ((../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) および[フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)です。  
+ については WSFC クラスターと[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください [Windows Server フェールオーバー クラスタ リング&#40;WSFC&#41;と SQL Server] ((../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) と[フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)します。  
   
 ##  <a name="AvGroups"></a> 可用性グループの監視  
  サーバー インスタンスが可用性レプリカをホストしている可用性グループを監視するには、次のビューを使用します。  
@@ -272,7 +271,7 @@ ms.locfileid: "36173326"
   
  **AlwaysOn 可用性グループのポリシー ベースの管理**  
   
--   [AlwaysOn ポリシーを使用して、可用性グループのヘルスを表示&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [AlwaysOn ポリシーを使用して、可用性グループのヘルスを表示する&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 -   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   

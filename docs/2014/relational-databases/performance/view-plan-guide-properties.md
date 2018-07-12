@@ -5,26 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-plan-guides
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.planguideprop.general.f1
 helpviewer_keywords:
 - plan guides [SQL Server], view plan guide properties
 - viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
-caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 38e5ace88afecc2a8999c14e46ab455d360f838b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d2895dd19b7be1d5a7645f118577c90c6a98c362
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174149"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418971"
 ---
 # <a name="view-plan-guide-properties"></a>プラン ガイド プロパティの表示
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のプラン ガイドのプロパティは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または  を使用して表示できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -66,7 +64,7 @@ ms.locfileid: "36174149"
      **[無効化]**  
      プラン ガイドの状態が表示されます。 指定できる値は、 **[True]** および **[False]** です。  
   
-     **Name**  
+     **名前**  
      プラン ガイドの名前が表示されます。  
   
      **パラメーター**  

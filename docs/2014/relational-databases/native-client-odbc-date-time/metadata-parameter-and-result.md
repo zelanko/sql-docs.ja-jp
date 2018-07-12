@@ -1,28 +1,26 @@
 ---
-title: パラメーターと結果のメタデータ |Microsoft ドキュメント
+title: パラメーターと結果のメタデータ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a898b9aa7a816b93afea875c8d304b520864f40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f07127b8ae80ff212f671d94f55a311584552c58
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165573"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420190"
 ---
 # <a name="parameter-and-result-metadata"></a>パラメーターと結果のメタデータ
   このトピックでは、日付と時刻のデータ型に対して実装パラメーター記述子 (IPD) フィールドと実装行記述子 (IRD) フィールドに返される情報について説明します。  
@@ -53,7 +51,7 @@ ms.locfileid: "36165573"
   
  SQL_CA_SS_VARIANT_SQL_TYPE は新しい記述子フィールドです。 このフィールドは、アプリケーションで `sqlvariant` (SQL_SSVARIANT) 列とパラメーターに関連付けられた値の型を指定できるようにするために IRD と IPD に追加されました。  
   
- SQL_CA_SS_SERVER_TYPE は新しい IPD 専用フィールドです。このフィールドによって、アプリケーションは SQL_TYPE_TYPETIMESTAMP (または C 型の SQL_C_TYPE_TIMESTAMP を持つ SQL_SS_VARIANT) としてバインドされるパラメーターの値がサーバーに送信される方法を制御できます。 ときに SQL_DESC_CONCISE_TYPE が SQL_TYPE_TIMESTAMP 場合 (または sql_ss_variant および C 型が SQL_C_TYPE_TIMESTAMP) SQL_CA_SS_SERVER_TYPE の値では、表形式データ ストリーム (TDS) の型パラメーターの値の決定 SQLExecute または SQLExecDirect が呼び出されると、、次のようにします。  
+ SQL_CA_SS_SERVER_TYPE は新しい IPD 専用フィールドです。このフィールドによって、アプリケーションは SQL_TYPE_TYPETIMESTAMP (または C 型の SQL_C_TYPE_TIMESTAMP を持つ SQL_SS_VARIANT) としてバインドされるパラメーターの値がサーバーに送信される方法を制御できます。 ときに SQL_DESC_CONCISE_TYPE が SQL_TYPE_TIMESTAMP 場合 (または sql_ss_variant および C 型が SQL_C_TYPE_TIMESTAMP) SQLExecute または SQLExecDirect が呼び出されると、SQL_CA_SS_SERVER_TYPE の値が表形式データ ストリーム (TDS) の型のパラメーター値を決定します、次のようにします。  
   
 |SQL_CA_SS_SERVER_TYPE の値|SQL_DESC_PRECISION の有効な値|SQL_DESC_LENGTH の有効な値|TDS 型|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -67,11 +65,11 @@ ms.locfileid: "36165573"
   
 -   準備時または実行時 (SQLExecute、SQLExecDirect、SQLSetPos、または SQLBulkOperations が呼び出されたとき)  
   
--   SQLPrepare でを呼び出すことによって準備で遅延なしアプリケーション強制的遅延時に無効な場合を準備するか、SQLNumResultCols を呼び出すことによって SQLDescribeCol、または SQLDescribeParam しない場合は準備されたステートメントが実行します。  
+-   遅延なしで SQLPrepare を呼び出すことによって準備アプリケーション力、遅延時に無効な場合、準備または SQLNumResultCols を呼び出して SQLDescribeCol、または SQLDescribeParam が準備されたステートメントが実行します。  
   
- Sqlsetdescfield によるへの呼び出しによって SQL_CA_SS_SERVER_TYPE を設定すると、ときに、その値は、SQL_SS_TYPE_DEFAULT、SQL_SS_TYPE_SMALLDATETIME、または SQL_SS_TYPE_DATETIME にする必要があります。 これらの値ではない場合、SQL_ERROR が返され、"無効な属性またはオプションの ID" というメッセージで SQLState HY092 の診断レコードが記録されます。  
+ Sqlsetdescfield による呼び出しによって SQL_CA_SS_SERVER_TYPE を設定すると、その値は、SQL_SS_TYPE_DEFAULT、SQL_SS_TYPE_SMALLDATETIME、または SQL_SS_TYPE_DATETIME になければなりません。 これらの値ではない場合、SQL_ERROR が返され、"無効な属性またはオプションの ID" というメッセージで SQLState HY092 の診断レコードが記録されます。  
   
- SQL_CA_SS_SERVER_TYPE 属性を使用できるのは、`datetime` および `smalldatetime` でサポートされ、`datetime2` ではサポートされない機能に依存するアプリケーションです。 たとえば、`datetime2`の使用が必要です、`dateadd`と**datediif**関数、一方`datetime`と`smalldatetime`算術演算子も使用します。 ほとんどのアプリケーションではこの属性を使用する必要はないので、使用しないでください。  
+ SQL_CA_SS_SERVER_TYPE 属性を使用できるのは、`datetime` および `smalldatetime` でサポートされ、`datetime2` ではサポートされない機能に依存するアプリケーションです。 たとえば、`datetime2`の使用が必要です、`dateadd`と**datediif**関数、一方`datetime`と`smalldatetime`算術演算子を許可することもします。 ほとんどのアプリケーションではこの属性を使用する必要はないので、使用しないでください。  
   
 ## <a name="information-returned-in-ird-fields"></a>IRD フィールドに返される情報  
  IRD フィールドには次の情報が返されます。  

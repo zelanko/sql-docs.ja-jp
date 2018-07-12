@@ -1,68 +1,66 @@
 ---
-title: ドライバー パフォーマンス データ (ODBC) プロファイル |Microsoft ドキュメント
+title: (ODBC) ドライバーのパフォーマンス データをプロファイル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - driver performance data [ODBC]
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5eac379b8a77a071571982cade36e88c8831bacd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e72536c0e5922949650f8bb1ecb6008e75a20dc3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165851"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432521"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>ドライバーのパフォーマンス データのプロファイル (ODBC)
-  このサンプルでは、パフォーマンス統計を記録するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバー固有のオプションを示します。 このサンプルは、1 つのファイルを作成: odbcperf.log.This サンプルを作成する、パフォーマンス データのログ ファイルと、SQLPERF データ構造体 (SQLPERF 構造体は Odbcss.h で定義されます). から直接パフォーマンス データの表示を示しています。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
+  このサンプルでは、パフォーマンス統計を記録するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバー固有のオプションを示します。 サンプルは、1 つのファイルを作成します: odbcperf.log.This サンプル (SQLPERF 構造体は Odbcss.h で定義されます). SQLPERF データ構造体から直接パフォーマンス データの表示、パフォーマンス データのログ ファイルの作成を示しています。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>ODBC アドミニストレーターを使用してドライバーのパフォーマンス データをログに記録するには  
   
-1.  **コントロール パネルの **をダブルクリックして**管理ツール**順にダブルクリック**データ ソース (ODBC)** です。 または、odbcad32.exe を呼び出すことができます。  
+1.  **コントロール パネルの [**、] をダブルクリックします**管理ツール**し、ダブルクリック**データ ソース (ODBC)** します。 または、odbcad32.exe を呼び出すことができます。  
   
-2.  クリックして、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**タブです。  
+2.  をクリックして、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**タブ。  
   
 3.  パフォーマンスのログを記録するデータ ソースをクリックします。  
   
-4.  をクリックして**構成**です。  
+4.  クリックして**構成**します。  
   
-5.  Microsoft SQL Server を構成する DSN ウィザードを使用してページに移動**ログ ファイルにログの ODBC ドライバーの統計**です。  
+5.  Microsoft SQL Server を構成する DSN ウィザードで、ページに移動します。**ログ ODBC ドライバーの統計情報、ログ ファイルに**します。  
   
-6.  選択**ログ ファイルにログの ODBC ドライバーの統計**です。 ボックスに、統計をログに記録するファイルの名前を入力します。 必要に応じて、をクリックして**参照**ファイル システムの統計ログを参照します。  
+6.  選択**ログ ODBC ドライバーの統計情報、ログ ファイルに**します。 ボックスに、統計をログに記録するファイルの名前を入力します。 必要に応じてクリックして**参照**ファイル システムの統計ログを参照します。  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>ドライバーのパフォーマンス データをプログラムを使用してログに記録するには  
   
-1.  呼び出す[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA_LOG およびパフォーマンス データのログ ファイルの完全パスとファイル名にします。 以下に例を示します。  
+1.  呼び出す[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA_LOG およびパフォーマンス データのログ ファイルの完全なパスとファイル名にします。 以下に例を示します。  
   
     ```  
     "C:\\Odbcperf.log"  
     ```  
   
-2.  呼び出す[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA および SQL_PERF_START をパフォーマンス データのログ記録を開始するとします。  
+2.  呼び出す[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)パフォーマンス データのログ記録を開始するには、SQL_COPT_SS_PERF_DATA および SQL_PERF_START を使用します。  
   
-3.  必要に応じて、呼び出す[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_LOG_NOW および NULL パフォーマンス データのログ ファイルへのパフォーマンス データ タブで区切られたレコードの書き込みを使用します。 これは、アプリケーションの実行時に複数回実行できます。  
+3.  必要に応じて、呼び出す[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_LOG_NOW および NULL パフォーマンス データのログ ファイルにパフォーマンス データをタブ区切りのレコードを書き込めません。 これは、アプリケーションの実行時に複数回実行できます。  
   
 4.  呼び出す[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA および SQL_PERF_STOP をパフォーマンス データのログ記録を停止するとします。  
   
 ### <a name="to-pull-driver-performance-data-into-an-application"></a>ドライバーのパフォーマンス データをアプリケーションにプルするには  
   
-1.  呼び出す[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA および SQL_PERF_START をパフォーマンス データのプロファイルを開始するとします。  
+1.  呼び出す[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)パフォーマンス データのプロファイリングを開始するには、SQL_COPT_SS_PERF_DATA および SQL_PERF_START を使用します。  
   
-2.  呼び出す[SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) SQL_COPT_SS_PERF_DATA および SQLPERF 構造体へのポインターのアドレスを使用します。 最初の呼び出しでは、現在のパフォーマンス データを含む有効な SQLPERF 構造体のアドレスを指すポインターが設定されます。 ドライバーは、パフォーマンス構造体内のデータを継続的に更新しません。 アプリケーションへの呼び出しを繰り返す必要があります[SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md)いつでもより現在のパフォーマンス データを含む構造を更新する必要があります。  
+2.  呼び出す[SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) SQL_COPT_SS_PERF_DATA および SQLPERF 構造体へのポインターのアドレスを使用します。 最初の呼び出しでは、現在のパフォーマンス データを含む有効な SQLPERF 構造体のアドレスを指すポインターが設定されます。 ドライバーは、パフォーマンス構造体内のデータを継続的に更新しません。 アプリケーションへの呼び出しを繰り返す必要があります[SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md)より現在のパフォーマンス データの構造体を更新する必要がある任意の時間。  
   
 3.  呼び出す[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA および SQL_PERF_STOP をパフォーマンス データのログ記録を停止するとします。  
   

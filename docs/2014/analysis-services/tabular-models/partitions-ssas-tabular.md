@@ -1,5 +1,5 @@
 ---
-title: パーティション (SSAS テーブル) |Microsoft ドキュメント
+title: パーティション (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 09af0cce9aa8058ea02b597236b48fc0fd58b190
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0797d22b66a40c0cf13fcd9c394d0072827b8e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239702"
 ---
 # <a name="partitions-ssas-tabular"></a>パーティション (SSAS テーブル)
   パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時に [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の [パーティション] ダイアログ ボックスを使用して作成されたパーティションは、モデル ワークスペース データベースに適用されます。 モデルが配置されたときに、モデル ワークスペース データベースに定義されたパーティションが配置済み model データベースで複製されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [パーティション] ダイアログ ボックスを使用して、配置済みモデル データベースのパーティションをさらに作成し管理できます。  このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [パーティション マネージャー] ダイアログ ボックスを使用してモデルを作成するときに作成されたパーティションについて説明します。 配置済みモデルのパーティションの作成と管理の詳細については、「[テーブル モデル パーティションの作成および管理 (SSAS テーブル)](create-and-manage-tabular-model-partitions-ssas-tabular.md)」を参照してください。  
@@ -53,7 +53,7 @@ ms.locfileid: "36176252"
 |トピック|説明|  
 |-----------|-----------------|  
 |[ワークスペース データベースでのパーティション作成し、管理&#40;SSAS 表形式&#41;](workspace-database-ssas-tabular.md)|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で Partition Manager を使用して、モデル ワークスペース データベースでパーティションを作成し管理する方法について説明します。|  
-|[ワークスペース データベースでのパーティション処理&#40;SSAS 表形式&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)|モデル ワークスペース データベースでのパーティションの処理 (更新) 方法について説明します。|  
+|[ワークスペース データベースのパーティションの処理&#40;SSAS 表形式&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)|モデル ワークスペース データベースでのパーティションの処理 (更新) 方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [DirectQuery モード &#40;SSAS テーブル&#41;](directquery-mode-ssas-tabular.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4b72bc48b6e9a4a7b7e52215ed9ef9b7b5ca2c2b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4bb8b841b4835d74eb37ff531f21b4942cc32738
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278478"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>ゲージへの最小値または最大値の設定 (レポート ビルダーおよび SSRS)
   複数のグループが定義されるグラフとは異なり、ゲージには 1 つの値しか表示されません。 レポート ビルダーおよびレポート デザイナーは、ゲージに表示される値のコンテキストや相対的な有意性を判断することができないため、スケールの最小値と最大値は独自に定義する必要があります。 たとえば、データの値が 0 ～ 10 のランキングを表している場合は、最小値を 0 に、最大値を 10 に設定します。 間隔の数は、最小値と最大値として指定された値に基づいて自動的に計算されます。 既定では、最小値と最大値はそれぞれ 0 および 100 に設定されますが、これらは恣意的な値であり、必要に応じて変更する必要があります。 アプリケーションによって値がパーセンテージとして計算されることはありません。  

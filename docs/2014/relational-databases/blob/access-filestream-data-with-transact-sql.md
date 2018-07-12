@@ -5,23 +5,21 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Transact-SQL
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0247063d6885706c5f7a7206be64b9fc7c7e8d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f28e4d17ca71432f8d3908c58ce6b689dc868acb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173546"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412701"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Transact-SQL による FILESTREAM データへのアクセス
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT、UPDATE、および DELETE ステートメントを使用して FILESTREAM データを管理する方法について説明します。  

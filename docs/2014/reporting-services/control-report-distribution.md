@@ -1,5 +1,5 @@
 ---
-title: レポートの配信を制御 |Microsoft ドキュメント
+title: レポートの配信の制御 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - subscriptions [Reporting Services], e-mail
@@ -21,19 +21,19 @@ ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b184eadeefa4b9f1177597172476b743094de8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d73a5e483219df7a8b7c06a3c4719850aaf7a3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160183"
 ---
 # <a name="control-report-distribution"></a>レポートの配布の管理
   電子メール配信およびファイル共有配信に関連するセキュリティ上のリスクを減らすように、レポート サーバーを構成できます。  
   
 ## <a name="securing-reports"></a>レポートの保護  
- レポートの配信を制御する際の最初の手順は、承認されていないアクセスからレポートをセキュリティで保護することです。 レポートでは、サブスクリプションで使用するために、配信ごとに変化しない格納済み資格情報セットを使用する必要があります。 レポート サーバー上のレポートにアクセスできるユーザーなら、だれでもレポートを実行でき、場合によってはレポートを配信することもできます。 このようなことが発生しないように、この操作を必要とするユーザーのみにレポート アクセスを制限する必要があります。 詳細については、次を参照してください。[セキュリティで保護されたレポート、およびリソース](security/secure-reports-and-resources.md)と[フォルダーのセキュリティで保護された](security/secure-folders.md)です。  
+ レポートの配信を制御する際の最初の手順は、承認されていないアクセスからレポートをセキュリティで保護することです。 レポートでは、サブスクリプションで使用するために、配信ごとに変化しない格納済み資格情報セットを使用する必要があります。 レポート サーバー上のレポートにアクセスできるユーザーなら、だれでもレポートを実行でき、場合によってはレポートを配信することもできます。 このようなことが発生しないように、この操作を必要とするユーザーのみにレポート アクセスを制限する必要があります。 詳細については、次を参照してください。[レポートのセキュリティ保護とリソース](security/secure-reports-and-resources.md)と[フォルダーのセキュリティで保護された](security/secure-folders.md)します。  
   
  データベース セキュリティを使用してアクセスを承認する、高い機密情報を含むレポートは、サブスクリプションとして配信することはできません。  
   

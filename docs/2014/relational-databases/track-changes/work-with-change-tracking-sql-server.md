@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], making changes
 - change tracking [SQL Server], troubleshooting
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - change tracking [SQL Server], handling changes
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 39a289fc60bec996e9ed52a8a44f2cf9928ad2f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 35d04b48abdb2085e0428bc4116359128661a19f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229202"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>変更の追跡のしくみ (SQL Server)
   変更の追跡を使用するアプリケーションは、追跡した変更を取得し、その変更を別のデータ ストアに適用して、ソース データベースを更新できる必要があります。 このトピックでは、これらのタスクの実行方法について説明します。また、フェールオーバーが発生してデータベースをバックアップから復元する必要がある場合に、変更の追跡が果たす役割についても説明します。  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserted tables
 - UPDATE statement [SQL Server], DML triggers
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11e879ddc8687bb7daeb7e20158bd4d65fcd0d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f5a195b0cd15716b87f050db5dd835c602303a2f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174119"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427641"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted テーブルと deleted テーブルの使用
   DML トリガー ステートメントでは、deleted テーブルおよび inserted テーブルという 2 つの特殊なテーブルが使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これらのテーブルを自動的に作成および管理します。 これらの一時的なメモリ常駐型のテーブルを使用して、特定のデータ変更の影響をテストしたり、DML トリガー操作に条件を設定したりできます。 これらのテーブル内のデータを直接変更したり、これらのテーブルに対して CREATE INDEX などのデータ定義言語 (DDL) 操作を実行することはできません。  
@@ -74,7 +72,7 @@ ms.locfileid: "36174119"
   
 -   INSERT ステートメントでは、DEFAULT 制約のないすべての NOT NULL 列に対して値を指定する必要があります。  
   
--   計算列、id、以外の任意の列のまたは`timestamp`列、値は null を許容する列の省略可能なまたは NOT NULL を既定の定義を持つ列。  
+-   すべての列、計算列、identity 以外のまたは`timestamp`列、値は null を許可する任意の列の省略可能なまたは NOT NULL を既定の定義を持つ列。  
   
  INSERT、UPDATE、または DELETE の各ステートメントが INSTEAD OF トリガーを含むビューを参照する場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、どのテーブルに対しても直接に動作を実行するのではなく、そのトリガーを呼び出します。 呼び出されたトリガーは、inserted テーブルおよび deleted テーブルの情報を使用して、ベース テーブルで要求された動作を実装するために必要なステートメントを作成する必要があります。その際、ビューに作成された inserted テーブルおよび deleted テーブルの情報の形式がベース テーブルのデータ形式と異なっていてもかまいません。  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1457c44ed95f09891bb8e8617968d2f9b9cbfbc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2776ccbb78346ad6243e5b6a4ed1e7c5827d31bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157833"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML での表示 (レポート ビルダーおよび SSRS)
   HTML 表示拡張機能では、HTML 形式でレポートを表示します。 また、完全な HTML ページを生成することも、他の HTML ページに埋め込むための HTML の一部分を生成することもできます。 すべての HTML は、UTF-8 エンコードで生成されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "36175905"
   
  状況によっては、レポート パラメーターを使用して、レポートが HTML で表示される際にスクリプト インジェクション攻撃を開始することも可能であることを意味します。 レポートのセキュリティ保護の詳細については、「 [レポートとリソースの保護](../security/secure-reports-and-resources.md)」を参照してください。  
   
- ブラウザーに関する詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)です。  
+ ブラウザーの詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

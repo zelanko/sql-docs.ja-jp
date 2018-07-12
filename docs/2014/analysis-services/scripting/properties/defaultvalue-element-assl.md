@@ -1,5 +1,5 @@
 ---
-title: DefaultValue 要素 (ASSL) |Microsoft ドキュメント
+title: DefaultValue 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DefaultValue element
 ms.assetid: 87e964a3-f317-46c3-98c7-b3621765c77b
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a319f22dc353f860ca3b0fa3a8e4b0cf60f421ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4137e73097630d62358ea874a38afda6d90eb87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277848"
 ---
 # <a name="defaultvalue-element-assl"></a>DefaultValue 要素 (ASSL)
-  関連付けられている読み取り専用の既定値を含む[ServerProperty](../objects/serverproperty-element-assl.md)要素。  
+  関連付けられている、読み取り専用の既定値が含まれる[ServerProperty](../objects/serverproperty-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,13 +62,13 @@ ms.locfileid: "36174350"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- この要素には、読み取り専用のインストールの既定値が含まれています、`ServerProperty`の現在のインスタンスの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 既定値はインスタンスによって指定され、通常は変更できません。  
+ この要素には読み取り専用のインストールの既定値が含まれています、`ServerProperty`の現在のインスタンスの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。 既定値はインスタンスによって指定され、通常は変更できません。  
   
  親に対応する要素`DefaultValue`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ServerProperty>します。  
   
 ## <a name="see-also"></a>参照  
  [ServerProperties 要素&#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [サーバー要素&#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Server 要素&#40;ASSL&#41;](../objects/server-element-assl.md)   
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  
   
   

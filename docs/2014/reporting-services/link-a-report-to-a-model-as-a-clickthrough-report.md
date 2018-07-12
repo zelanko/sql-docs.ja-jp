@@ -1,5 +1,5 @@
 ---
-title: レポートをクリックスルー レポートとしてモデルにリンク |Microsoft ドキュメント
+title: レポートをクリックスルー レポートとしてモデルにリンクする |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
@@ -17,23 +17,23 @@ ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9dfe16933e0c2b335cf68816113c336561aac1ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3df0b140c8d1eb08fc3b1502eb2a627be7f175c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210732"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>レポートをクリックスルー レポートとしてモデルにリンクする
-  クリックスルー レポートの既定のテンプレートを使用する代わりに、レポート ビルダーのレポートを作成し、それをレポート モデルの特定のエンティティにリンクすることができます。 レポートを閲覧しているユーザーがメイン レポート内の対話型データをクリックすると、このレポートがクリックスルー レポートとして表示されます。 レポートをエンティティにリンクするには、次のように使用します。[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート マネージャー。  
+  クリックスルー レポートの既定のテンプレートを使用する代わりに、レポート ビルダーのレポートを作成し、それをレポート モデルの特定のエンティティにリンクすることができます。 レポートを閲覧しているユーザーがメイン レポート内の対話型データをクリックすると、このレポートがクリックスルー レポートとして表示されます。 レポートをエンティティにリンクする[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート マネージャー。  
   
 > [!IMPORTANT]  
 >  レポートで使用されるプライマリ (基本) エンティティは、レポートのリンク先と同じエンティティである必要があります。  
   
 ### <a name="to-start-report-manager-from-a-browser"></a>ブラウザーからレポート マネージャーを起動するには  
   
-1.  開いている[!INCLUDE[msCoName](../includes/msconame-md.md)]Internet Explorer 6.0 またはそれ以降。  
+1.  開いている[!INCLUDE[msCoName](../includes/msconame-md.md)]Internet Explorer 6.0 以降。  
   
 2.  Web ブラウザーのアドレス バーに、レポート マネージャーの URL を入力します。 既定では、URL は http://\<*ComputerName*>/reports です。  
   

@@ -1,5 +1,5 @@
 ---
-title: データ マイニング デザイナーおよびダイアログ ボックス |Microsoft ドキュメント
+title: データ マイニング デザイナーおよびダイアログ ボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services dialog boxes
 - Analysis Services designers
 ms.assetid: a2c60d98-c15f-4f0d-ba95-7ee2def4277e
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 696378518b824f7ffcca6d0bfc85f47b353b2dc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 559712565fa32de560b5b9e793682253f4d80aa7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159683"
 ---
 # <a name="data-mining-designers-and-dialog-boxes"></a>データ マイニング デザイナーおよびダイアログ ボックス
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 作成、表示、テスト、およびデータ マイニング モデルから予測の作成に使用できるデザイン ツールを提供します。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 作成、表示、テスト、およびデータ マイニング モデルから予測を作成に使用できるデザイン ツールを提供します。  
   
  次の表に、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のデータ マイニング デザイナーとツールに関するリファレンス トピックを示します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36176041"
 |[マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] に用意されているカスタム ビューアーを使用すると、完成したモデルを参照して、データ内のパターンを十分に理解できます。|  
 |[マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)|リフト チャート、分類マトリックス、クロス検証などの精度チャート ツールを使用すると、データ マイニング モデルと、トレーニングに使用するデータのセットを評価できます。 すべての精度ツールは、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] と [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の両方で使用できます。|  
 |[予測クエリ ビルダー&#40;データ マイニング&#41;](prediction-query-builder-data-mining.md)|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] に用意されている予測クエリ ビルダーを使用すると、|  
-|[マイニング構造のプロパティ ダイアログ&#40;Analysis Services - データ マイニング&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)<br /><br /> [マイニング モデルのプロパティ ダイアログ ボックス&#40;Analysis Services - データ マイニング&#41;](mining-model-properties-dialog-box-analysis-services-data-mining.md)|マイニング構造またはマイニング モデルのプロパティを変更すると、データの処理方法に影響を与えたり、モデリング フラグの追加やメタデータの編集を行うことができます。|  
+|[マイニング構造のプロパティ ダイアログ ボックス&#40;Analysis Services - データ マイニング&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)<br /><br /> [マイニング モデルのプロパティ ダイアログ ボックス&#40;Analysis Services - データ マイニング&#41;](mining-model-properties-dialog-box-analysis-services-data-mining.md)|マイニング構造またはマイニング モデルのプロパティを変更すると、データの処理方法に影響を与えたり、モデリング フラグの追加やメタデータの編集を行うことができます。|  
 |[DMX クエリ エディター &#40;Analysis Services - データ マイニング&#41;](dmx-query-editor-analysis-services-data-mining.md)|DMX クエリ エディターを使用すると、データ マイニング拡張機能 (DMX) 言語で記述されたステートメントを作成したり実行したりできます。|  
   
 ## <a name="see-also"></a>参照  

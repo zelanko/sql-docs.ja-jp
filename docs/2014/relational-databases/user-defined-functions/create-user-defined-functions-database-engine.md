@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SCHEMABINDING clause
 - schema-bound functions [SQL Server]
@@ -16,19 +15,18 @@ helpviewer_keywords:
 - CREATE FUNCTION statement
 - valid statements [SQL Server]
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
-caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5c7e13e3349895d3a6c8d9da2f0c34bf3c6d4345
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1fec7107d5ba00c27e6f81eabfd2bfb199096224
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166047"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418911"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>ユーザー定義関数の作成 (データベース エンジン)
-  このトピック内のユーザー定義関数を作成する方法について説明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して[!INCLUDE[tsql](../../includes/tsql-md.md)]です。  
+  このトピックでユーザー定義関数を作成する方法について説明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して[!INCLUDE[tsql](../../includes/tsql-md.md)]します。  
   
  **このトピックの内容**  
   
@@ -64,7 +62,7 @@ ms.locfileid: "36166047"
   
 -   FOR XML 句は使用できません。  
   
--   ユーザー定義関数は入れ子にすることができます。つまり、1 つのユーザー定義関数で、別のユーザー定義関数を呼び出すことができます。 呼び出された関数が実行を開始すると入れ子レベルが 1 つ上がり、呼び出された関数が実行を終了するとレベルが 1 つ下がります。 ユーザー定義関数は、32 レベルまで入れ子にすることができます。 入れ子レベルが最大値を超えると、関数チェーン全体の呼び出しが失敗します。 Transact-SQL ユーザー定義関数からマネージ コードへの参照は、32 レベルの入れ子制限のうちの 1 レベルとカウントします。 マネージ コード内から呼び出されたメソッドは、この制限としてはカウントされません。  
+-   ユーザー定義関数は入れ子にすることができます。つまり、1 つのユーザー定義関数で、別のユーザー定義関数を呼び出すことができます。 呼び出された関数が実行を開始すると入れ子レベルが 1 つ上がり、呼び出された関数が実行を終了するとレベルが 1 つ下がります。 ユーザー定義関数は、32 レベルまで入れ子にすることができます。 入れ子レベルが最大値を超えると、関数チェーン全体の呼び出しが失敗します。 Transact-SQL ユーザー定義関数からマネージド コードへの参照は、32 レベルの入れ子制限のうちの 1 レベルとカウントします。 マネージド コード内から呼び出されたメソッドは、この制限としてはカウントされません。  
   
 -   以下の Service Broker ステートメントは、Transact-SQL ユーザー定義関数の定義に含めることができません。  
   

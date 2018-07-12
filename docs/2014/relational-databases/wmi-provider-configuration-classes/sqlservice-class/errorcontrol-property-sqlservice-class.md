@@ -1,5 +1,5 @@
 ---
-title: ErrorControl プロパティ (SqlService クラス) |Microsoft ドキュメント
+title: ErrorControl プロパティ (SqlService クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ErrorControl property
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2db7bfd41101f8fddacb3a00adbe450434aa054f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 288967cc836cee58eec07da3232eab3718252f78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164143"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl プロパティ (SqlService クラス)
   起動時にサービスを開始できなかった場合のエラーの重大度を取得または設定します。  
@@ -46,7 +46,7 @@ object
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 起動時にサービスが失敗した場合にレポートされるエラーの重大度を指定する文字列値。 次の表は、使用可能な値を示します。  
+ 起動時にサービスが失敗した場合にレポートされるエラーの重大度を指定する文字列値。 次の表では、使用可能な値を示します。  
   
  Ignore  
  ユーザーへの通知が行われません。  
@@ -67,6 +67,6 @@ object
  値は、失敗が発生した場合に、起動プログラムによって行われるアクションを示しています。 すべてのエラーは、コンピューター システムによって記録されます。  
   
 ## <a name="see-also"></a>参照  
- [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

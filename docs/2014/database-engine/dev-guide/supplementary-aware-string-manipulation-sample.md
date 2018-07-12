@@ -1,5 +1,5 @@
 ---
-title: 補助文字対応文字列操作サンプル |Microsoft ドキュメント
+title: 補助文字対応文字列操作サンプル |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ee5e76ee7d2d8d388da0d54182a80e24e71ca112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ef48666d6e7c73d530895e315cbc3a42b57599eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277098"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>補助文字対応文字列操作サンプル
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のこのサンプルは、補助文字に対応した文字列処理を示します。 このサンプルでは、組み込み関数と同じ文字列操作機能を提供する、Transact-SQL の 5 つの文字列関数の実装を示します。ただしこのサンプルの文字列操作関数では、Unicode 文字列および補助文字文字列の両方を処理することができます。 5 つの関数 lens()、`lefts(), rights(), subs()`と`replace_s()`組み込み関数と等価である`LEN(), LEFT(), RIGHT(), SUBSTRING()`と`REPLACE()`文字列関数。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のこのサンプルは、補助文字に対応した文字列処理を示します。 このサンプルでは、組み込み関数と同じ文字列操作機能を提供する、Transact-SQL の 5 つの文字列関数の実装を示します。ただしこのサンプルの文字列操作関数では、Unicode 文字列および補助文字文字列の両方を処理することができます。 5 つの関数 lens()`lefts(), rights(), subs()`と`replace_s()`組み込み関数と等価である`LEN(), LEFT(), RIGHT(), SUBSTRING()`と`REPLACE()`文字列関数。  
   
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
@@ -53,7 +53,7 @@ ms.locfileid: "36174015"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要があります`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36174015"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、として保存`test.sql`サンプル ディレクトリにします。  
+7.  コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、保存`test.sql`サンプル ディレクトリにします。  
   
 8.  次のコマンドを使用してテスト スクリプトを実行します。  
   
