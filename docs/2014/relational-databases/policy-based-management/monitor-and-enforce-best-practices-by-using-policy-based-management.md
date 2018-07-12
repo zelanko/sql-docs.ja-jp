@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 540b7ec825fa8cacb5fe3852e4ad3e8ea8e096f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0bc95e67c4fc29beb61dc518d2f33b203dcae3fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240572"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したベスト プラクティスの監視と実行
-  ポリシー ベースの管理を許可するためのベスト プラクティスの監視、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ベスト プラクティス ポリシーとしてインポートおよびインスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価できる一連のポリシー ファイルを提供します。 ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)」を参照してください。  
+  ポリシー ベースの管理を許可するためのベスト プラクティスの監視、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ベスト プラクティスのポリシーとしてインポートし、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価できる一連のポリシー ファイルを提供します。 ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)」を参照してください。  
   
 ## <a name="policy-and-rules-for-database-engine"></a>データベース エンジンのポリシーとルール  
- 次の表に、ポリシーのインストールに含まれている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と各ポリシーを評価するベスト プラクティス ルールに関する情報が含まれています。 ポリシーは XML ファイルとして格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートする必要があります。 ポリシーのインポート方法については、「 [ポリシー ベースの管理ポリシーのインポート](import-a-policy-based-management-policy.md)」を参照してください。  
+ 次の表に、ポリシーのインストールに含まれている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と各ポリシーで評価するベスト プラクティス ルールに関する情報が含まれています。 ポリシーは XML ファイルとして格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートする必要があります。 ポリシーのインポート方法については、「 [ポリシー ベースの管理ポリシーのインポート](import-a-policy-based-management-policy.md)」を参照してください。  
   
 |ポリシー名|ベスト プラクティス ルール|  
 |-----------------|------------------------|  
@@ -42,8 +42,8 @@ ms.locfileid: "36165228"
 |guest の権限|[ユーザー データベースに対する guest の権限](guest-permissions-on-user-databases.md)|  
 |最後にバックアップが正常終了した日付|[期限切れのバックアップ](outdated-backup.md)|  
 |パブリックに許可されていないサーバー権限|[サーバーのパブリック権限](server-public-permissions.md)|  
-|SQL Server の 32 ビットの関係マスクの重複|[正しい Affinity Mask と Affinity 入出力マスクの重複](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
-|SQL Server 64 ビットの関係マスクの重複|[正しい Affinity Mask と Affinity 入出力マスクの重複](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server の 32 ビットの関係マスクの重複|[正しい Affinity Mask オプションと関係マスクの重複の入出力](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server 64 ビットの関係マスクの重複|[正しい Affinity Mask オプションと関係マスクの重複の入出力](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server 関係マスク|[関係マスクの既定値の保持](keep-the-affinity-mask-default-value.md)|  
 |SQL Server のブロック対象プロセスのしきい値|[blocked process threshold の増加または無効化](increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server の既定のトレース|[既定のトレース ログ ファイルの無効化](default-trace-log-files-disabled.md)|  
@@ -64,7 +64,7 @@ ms.locfileid: "36165228"
 |Windows イベント ログのクラスター ディスク リソース破損エラー|[SCSI ホスト アダプターの問題の検出](detect-scsi-host-adapter-issues.md)|  
 |Windows イベント ログのデバイス ドライバー制御エラー|[デバイス ドライバー制御エラー](device-driver-control-error.md)|  
 |Windows イベント ログのデバイス準備未完了エラー|[デバイス準備未完了エラー](device-not-ready-error.md)|  
-|Windows イベント ログの I_O 要求失敗エラー|[失敗の入出力要求を検出します。](detect-failed-input-and-output-requests.md)|  
+|Windows イベント ログの I_O 要求失敗エラー|[失敗した入出力要求を検出します。](detect-failed-input-and-output-requests.md)|  
 |Windows イベント ログの I_O 遅延警告|[ディスク I/O サブシステムの I/O 遅延問題の確認](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Windows イベント ログのハード ページ フォールト エラー時の I_O エラー|[ハード ページ フォールト中の I/O エラー](input-and-output-error-during-hard-page-fault.md)|  
 |Windows イベント ログの読み取り再試行エラー|[ディスク I/O サブシステムの読み取り再試行の問題の確認](check-disk-input-output-subsystem-for-read-retry-problems.md)|  

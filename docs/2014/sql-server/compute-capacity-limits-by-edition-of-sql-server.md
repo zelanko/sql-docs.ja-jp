@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0d9d1e3076c19df548eb2a1714a2093046fd352
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2893a0fdb04e834e2eeab0343b23888c244fd036
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157543"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQLServer のエディション別の計算容量制限
   このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の各エディションの計算容量の制限と、ハイパースレッド プロセッサを持つ物理環境と仮想化環境での違いについて説明します。  
@@ -86,7 +86,7 @@ ms.locfileid: "36164237"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [エディション]|1 つのインスタンスで使用される最大計算容量 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|1 つのインスタンスで使用される最大計算容量 (AS、RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition: コア ベース ライセンス<sup>1</sup>|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
+|Enterprise Edition: コアベース ライセンス<sup>1</sup>|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
 |Developer|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
 |Evaluation|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
 |Business Intelligence|4 ソケットまたは 16 コアのいずれか小さいほうに制限|オペレーティング システムの最大容量|  
@@ -96,7 +96,7 @@ ms.locfileid: "36164237"
 |Express with Tools|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
 |Express with Advanced Services|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
   
- <sup>1</sup> Enterprise Edition with Server およびクライアント アクセス ライセンス (CAL) ベース ライセンス (新しい使用許諾契約は利用できません) は、最大 20 コアごとに制限されて[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンス。 コアベースのサーバー ライセンス モデルでは、制限はありません。  
+ <sup>1</sup> Enterprise Edition with Server およびクライアント アクセス ライセンス (CAL) に基づくライセンス (新しい使用許諾契約は利用できません) はあたり 20 コアの最大数に制限されます[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンス。 コアベースのサーバー ライセンス モデルでは、制限はありません。  
   
  仮想化された環境では、計算容量の制限はコアではなく論理プロセッサの数に基づいて決まります。これは、ゲスト アプリケーションがプロセッサのアーキテクチャを認識できないためです。  たとえば、クアッド コア プロセッサが搭載された 4 個のソケットと、コアごとに 2 個のハイパースレッドを有効にする機能を備えたサーバーには、ハイパースレッディングが有効になっている論理プロセッサが 32 個ありますが、ハイパースレッディングが無効になっている論理プロセッサは 16 個しかありません。 これらの論理プロセッサはサーバー上の仮想マシンにマップすることができます。これを行うと、マップした論理プロセッサに対する仮想マシンの計算負荷がホスト サーバーの物理プロセッサの実行スレッドにマップされます。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36164237"
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [SQL Server 2014 の各エディションでサポートされる機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [SQL Server 2014 のエディションでサポートされる機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server の最大容量仕様](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [SQL Server 2014 のクイックスタート インストール](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   

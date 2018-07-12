@@ -1,5 +1,5 @@
 ---
-title: DatabasePermission 要素 (ASSL) |Microsoft ドキュメント
+title: DatabasePermission 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DatabasePermission element
 ms.assetid: 6dcb9136-a40d-42e3-ad3b-b8ce8c7ca78c
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e47203616cc76fa09c0fd0658e7dad8a89c90a9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0fbfd9544e5305169e0d25b1b0157197d39cc002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259528"
 ---
 # <a name="databasepermission-element-assl"></a>DatabasePermission 要素 (ASSL)
-  既定のアクセス許可を定義、[データベース](database-element-assl.md)、特定の要素[ロール](role-element-assl.md)要素。  
+  既定の権限を定義、[データベース](database-element-assl.md)、特定の要素[ロール](role-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36085963"
   
  DeploymentMode の値が 2 (Tabular Models) の場合、この要素には次の検証が適用されます。  
   
--   *管理*に属性の既定値が設定されている`False`ユーザーが管理者特権を有する場合を除く。 管理者権限を持つユーザーの属性値は `True` に設定されます。  
+-   *管理*属性の既定値に設定されます`False`ユーザーが管理者特権を持つ場合を除く。 管理者権限を持つユーザーの属性値は `True` に設定されます。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.DatabasePermission>します。  
   

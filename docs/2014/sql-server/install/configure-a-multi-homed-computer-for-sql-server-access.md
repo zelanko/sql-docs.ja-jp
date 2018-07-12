@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72ea93688420a150d0193c9f91feb26dad91cffe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aa768aea67d95a107380600fee663f2f0ffa5ee8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183899"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server アクセス用のマルチホーム コンピューターの構成
   サーバーが複数のネットワークまたはネットワーク サブネットへの接続を提供する必要がある場合、一般的なシナリオではマルチホーム コンピューターを使用します。 通常、このコンピューターは、境界ネットワーク (DMZ、非武装地帯、またはスクリーン サブネットとも呼ばれます) にあります。 このトピックでは、マルチホーム環境内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのネットワーク接続用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とセキュリティが強化された Windows ファイアウォールを構成する方法について説明します。  
@@ -59,7 +59,7 @@ ms.locfileid: "36164003"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>コンピューターで使用可能な IP アドレスを特定するには  
   
-1.  いるコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされている場合、をクリックして**開始**、 をクリックして**実行**、型`cmd`し[!INCLUDE[clickOK](../../includes/clickok-md.md)]です。  
+1.  コンピューターに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされている場合、をクリックして**開始**、 をクリックして**実行**、型`cmd`し[!INCLUDE[clickOK](../../includes/clickok-md.md)]します。  
   
 2.  コマンド プロンプト ウィンドウで次のように入力します。`ipconfig,`し、enter キーを押してこのコンピューターで使用できる IP アドレスを一覧表示します。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36164003"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているコンピューターで、管理者としてログオンします。  
   
-2.  をクリックして**開始**、 をクリックして**実行**、型`wf.msc`、 をクリック**OK**です。  
+2.  をクリックして**開始**、 をクリックして**実行**、型`wf.msc`、 をクリック**OK**します。  
   
 3.  **[ユーザー アカウント制御]** ダイアログ ボックスの **[続行]** をクリックし、管理者資格情報を使用して、セキュリティが強化された Windows ファイアウォールのスナップインを開きます。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36164003"
   
 8.  **[プロトコルおよびポート]** ページで、 **[TCP]** を選択します。  
   
-9. **[指定したローカル ポート]** を選択します。 コンマで区切ったポート番号を入力して、 **[次へ]** をクリックします。 この例では、既定のポートを構成しますしたがって、入力`1433`です。  
+9. **[指定したローカル ポート]** を選択します。 コンマで区切ったポート番号を入力して、 **[次へ]** をクリックします。 この例では、既定のポートを構成しますそのため、入力`1433`します。  
   
 10. **[アクション]** ページで、オプションを確認します。 この例では、セキュリティで保護された接続を指定するためにファイアウォールを使用しません。 したがって、 **[接続を許可する]**、 **[次へ]** を順にクリックします。  
   

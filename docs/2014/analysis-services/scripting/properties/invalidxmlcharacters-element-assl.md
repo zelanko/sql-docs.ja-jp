@@ -1,5 +1,5 @@
 ---
-title: InvalidXmlCharacters 要素 (ASSL) |Microsoft ドキュメント
+title: InvalidXmlCharacters 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - InvalidXmlCharacters element
 ms.assetid: 92b1210c-1075-4f2f-a2c4-dfdc6d7e5c05
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19367018c772e4d512082a45a7a1b6e13e497f1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1a3735beb602045bc4789d716bdf1cb5968af06f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229672"
 ---
 # <a name="invalidxmlcharacters-element-assl"></a>InvalidXmlCharacters 要素 (ASSL)
   ソース データの有効でない XML 文字の処理方法を指定します。  
@@ -67,10 +67,10 @@ ms.locfileid: "36173333"
 |値|説明|  
 |-----------|-----------------|  
 |*保持します。*|無効な XML 文字は保存されます。|  
-|*削除*|無効な XML 文字は削除されます。|  
+|*[削除]*|無効な XML 文字は削除されます。|  
 |*[置換]*|無効な XML 文字は疑問符 (?) に置き換えられます。|  
   
- 許可される値に対応する列挙`InvalidXmlCharacters`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.InvalidXmlCharacters>します。  
+ 許容された値に対応する列挙体`InvalidXmlCharacters`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.InvalidXmlCharacters>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

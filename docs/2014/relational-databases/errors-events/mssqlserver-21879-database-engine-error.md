@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 21879 (Database Engine error)
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 067373cb329185e42b6fee2b506570fccfcd4f90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9cf6402984022284ca75505a924a3a0f270fc5e6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076248"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413821"
 ---
 # <a name="mssqlserver21879"></a>MSSQLSERVER_21879
     
@@ -58,8 +57,8 @@ ms.locfileid: "36076248"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に Kerberos 認証を構成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「**Kerberos 認証と SQL Server**」を参照してください。  
   
--   使用して`sp_changedistpublisher`MSdistpublishers で元のパブリッシャーに関連付けられているセキュリティ モードを変更するだけでなく、ログインと、接続に使用するパスワードを指定します。  
+-   使用して、 `sp_changedistpublisher` MSdistpublishers の元のパブリッシャーに関連付けられているセキュリティ モードを変更するだけでなく、ログインと、接続に使用するパスワードを指定します。  
   
--   コマンド ライン パラメーターを指定*BypassPublisherValidation* 、マージ エージェント コマンドラインで検証をバイパスする場合に`sp_get_redirected_publisher`ディストリビューターと呼びます。  
+-   コマンド ライン パラメーターを指定*BypassPublisherValidation*検証をバイパスするマージ エージェント コマンドラインでとき`sp_get_redirected_publisher`ディストリビューターと呼びます。  
   
   

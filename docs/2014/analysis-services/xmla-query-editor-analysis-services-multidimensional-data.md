@@ -1,5 +1,5 @@
 ---
-title: XMLA クエリ エディター (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: XMLA クエリ エディター (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.editor.xmla.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Query Editor [XMLA]
 ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b11ee4322f25377f3307c0767e839b6e69e09bef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 221ea55990b98a9723928f52cd5432f13760cc91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211432"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>XMLA クエリ エディター (Analysis Services - 多次元データ)
   XMLA クエリ エディターを使用すると、多次元式 (XMLA) 言語で記述されたステートメントおよびスクリプトを作成したり実行したりできます。  
@@ -46,7 +46,7 @@ ms.locfileid: "36085745"
   
 |項目|定義|  
 |----------|----------------|  
-|**のインスタンスに接続するときには、**|**インスタンスへの接続を確立するための** [サーバーへの接続] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ダイアログ ボックスを開きます。|  
+|**Connect**|**インスタンスへの接続を確立するための** [サーバーへの接続] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ダイアログ ボックスを開きます。|  
 |**[接続解除]**|XMLA クエリ エディターと [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの接続を解除します。|  
 |**[接続の変更]**|別の **インスタンスへの接続を確立するための** [サーバーへの接続] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ダイアログ ボックスを開きます。|  
 |**[新しいクエリを現在の接続で実行]**|現在の [XMLA クエリ エディター] ウィンドウの接続情報を使用して、新しい [XMLA クエリ エディター] ウィンドウを開きます。|  
@@ -60,7 +60,7 @@ ms.locfileid: "36085745"
   
 |項目|定義|  
 |----------|----------------|  
-|**クエリ エディター ウィンドウ**|XMLA クエリ エディターで実行される XMLA ステートメントおよびスクリプトを入力します。<br /><br /> クエリ エディターのコンテキスト メニューには、次のオプションがあります。<br /><br /> **切り取り**: 現在の選択範囲をクリップボードにコピーし、クエリ エディター ウィンドウから選択範囲を削除します。<br />**[コピー]**: 現在選択している部分をクリップボードにコピーします。<br />**貼り付け**: 現在の選択範囲をクリップボードの内容を貼り付けます。<br />**[接続]**: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続を確立するための **[サーバーへの接続]** ダイアログ ボックスを開きます。<br />**切断**: 現在のクエリ エディターの接続が切断、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス。<br />**すべてのクエリの切断**: すべての開いているクエリ エディターの接続が切断されます。<br />**接続を変更する**: 開きます、**サーバーへの接続**ダイアログ ボックスで、別の接続を確立する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス。<br />**オブジェクト エクスプ ローラーでサーバーを開く**: 開きます、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]で、現在のクエリ エディターが接続されているインスタンス**オブジェクト エクスプ ローラー**です。<br />**実行**。 または、選択したコードを実行するコードが選択されていない場合は、現在のクエリ エディターでコード全体を実行します。<br />**[プロパティ] ウィンドウ**: 表示、**プロパティ**ウィンドウ[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の現在のクエリ ウィンドウ。<br />**クエリ オプション**: 表示、**クエリ オプション** ダイアログ ボックス。|  
+|**クエリ エディター ウィンドウ**|XMLA クエリ エディターで実行される XMLA ステートメントおよびスクリプトを入力します。<br /><br /> クエリ エディターのコンテキスト メニューには、次のオプションがあります。<br /><br /> **切り取り**: 現在の選択範囲をクリップボードにコピーし、クエリ エディター ウィンドウから選択範囲を削除します。<br />**[コピー]**: 現在選択している部分をクリップボードにコピーします。<br />**貼り付け**: 現在の選択項目のクリップボードの内容を貼り付けます。<br />**[接続]**: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続を確立するための **[サーバーへの接続]** ダイアログ ボックスを開きます。<br />**切断**: 現在のクエリ エディターからの切断、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス。<br />**すべてのクエリの切断**: すべての開いているクエリ エディターの接続解除します。<br />**接続を変更する**: 開きます、**サーバーへの接続**ダイアログ ボックスで、さまざまなへの接続を確立するために、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス。<br />**オブジェクト エクスプ ローラーでサーバーを開く**: 開きます、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスで、現在のクエリ エディターが接続されている**オブジェクト エクスプ ローラー**します。<br />**実行**: 選択したコードを実行するか、コードが選択されていない場合は、現在のクエリ エディターでコード全体を実行します。<br />**[プロパティ] ウィンドウ**: 表示、**プロパティ**ウィンドウ[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の現在のクエリ ウィンドウ。<br />**クエリ オプション**: 表示、**クエリ オプション** ダイアログ ボックス。|  
 |**結果ウィンドウ**|XMLA ステートメントまたはスクリプトの結果がテキスト形式で表示されます。|  
 |**[メッセージ] ウィンドウ**|XMLA ステートメントまたはスクリプトの実行に関する情報が表示されます。 たとえば、実行中に発生したエラーや、実行後に取得されたセルの数などが表示されます。|  
   

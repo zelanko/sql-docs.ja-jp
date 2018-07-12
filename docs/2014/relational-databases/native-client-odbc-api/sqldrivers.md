@@ -1,13 +1,11 @@
 ---
-title: SQLDrivers |Microsoft ドキュメント
+title: SQLDrivers |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - SQLDrivers function
 ms.assetid: 775bbbef-3d34-4b1c-b494-73ddad83206f
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 737db8aae04aec7e57ed7d4d8066fa6103f63ce8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d660a0b91439248200040fe3135d3cd226f0139b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076586"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416341"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
-  ODBC ドライバー マネージャーでは、すべてを返します**SQLDrivers**属性指定文字列。 属性の文字列と値の定義の詳細については、次を参照してください。、[データ アクセスおよびストレージ デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=4173)、または表示することができます、 [ODBC プログラマ リファレンス](http://go.microsoft.com/fwlink/?LinkId=45250)オンラインです。  
+  ODBC ドライバー マネージャーは、すべてを返します**SQLDrivers**属性指定文字列。 属性の文字列と値の定義の詳細については、次を参照してください。、[データ アクセスおよびストレージ デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=4173)、または表示することができます、 [ODBC プログラマ リファレンス](http://go.microsoft.com/fwlink/?LinkId=45250)オンライン。  
   
 ## <a name="see-also"></a>参照  
  [SQLDrivers](http://go.microsoft.com/fwlink/?LinkId=59341)   

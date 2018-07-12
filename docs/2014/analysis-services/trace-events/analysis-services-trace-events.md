@@ -1,5 +1,5 @@
 ---
-title: Analysis Services トレース イベント |Microsoft ドキュメント
+title: Analysis Services トレース イベント |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c400772f757dcd852ddfd2cf696a966261c60c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163444"
 ---
 # <a name="analysis-services-trace-events"></a>Analysis Services トレース イベント
   Microsoft SQL Server Analysis Services (SSAS) インスタンスのアクティビティは、インスタンスによって生成されるトレース イベントを取得し、分析することで追跡できます。  トレース イベントは、関連するトレース イベントをより簡単に見つけることができるようにグループ化されます。  各トレース イベントには、イベントに関連するデータのセットが含まれています。データのすべての部分がすべてのイベントに関連するわけではありません。  
   
- トレース イベントを起動してを使用してキャプチャ **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]** を参照してください[Monitor Analysis Services を使用して SQL Server Profiler](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)、として、XMLA コマンドから開始できますまたは**SQL Server拡張イベント**し、後で分析しを参照してください[を使用して SQL Server 拡張イベント&#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)です。  
+ トレース イベントを開始しを使用してキャプチャ **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]** を参照してください[Analysis Services の監視を使用して SQL Server Profiler](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)、として、XMLA コマンドから開始できますまたは**SQL Server拡張イベント**後の分析を参照してくださいと[使用して SQL Server 拡張イベント&#40;Xevent&#41; Analysis Services の監視に](../instances/monitor-analysis-services-with-sql-server-extended-events.md)します。  
     
  各イベント カテゴリとそのカテゴリに含まれるイベントを次の表で説明します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36165907"
  イベントの説明  
  イベントの簡潔な説明です。  
   
- **[コマンドのイベントのイベント カテゴリ](command-events-event-category.md)**  
+ **[コマンド イベントのイベント カテゴリ](command-events-event-category.md)**  
   
  コマンドのイベントのコレクションです。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36165907"
 |15|Command Begin|コマンド開始。|  
 |16|Command End|コマンド終了。|  
   
- **[イベントのイベント カテゴリを検出します。](discover-events-event-category.md)**  
+ **[Discover イベントのイベント カテゴリ](discover-events-event-category.md)**  
   
  検出要求のイベントのコレクションです。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36165907"
 |36|Discover Begin|検出要求の開始。|  
 |38|Discover End|検出要求の終了。|  
   
- **[Server State イベント カテゴリを検出します。](discover-server-state-event-category.md)**  
+ **[サーバー状態検出イベント カテゴリ](discover-server-state-event-category.md)**  
   
  サーバー状態検出のイベントのコレクションです。  
   
@@ -191,4 +191,4 @@ ms.locfileid: "36165907"
 |43|Session Initialize|セッションの初期化。|  
   
 ## <a name="see-also"></a>参照  
-[分析サービスを監視するのに SQL Server Profiler を使用します。](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)
+[SQL Server Profiler を使用して、分析サービスを監視するには](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)

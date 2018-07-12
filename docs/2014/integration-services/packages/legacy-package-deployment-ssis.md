@@ -1,5 +1,5 @@
 ---
-title: パッケージの配置 (SSIS) |Microsoft ドキュメント
+title: パッケージの配置 (SSIS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, deploying
 - deploying packages [Integration Services]
@@ -20,13 +20,13 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a732d2b3c8371d0bb5637cbe19101640e8d81a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26c5f0af58ea602a8a0d5e73512b5fa2df2a013b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276958"
 ---
 # <a name="package-deployment-ssis"></a>パッケージの配置 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、開発コンピューターから実稼働サーバーまたは他のコンピューターへのパッケージの配置を簡素化するツールとウィザードが含まれています。  

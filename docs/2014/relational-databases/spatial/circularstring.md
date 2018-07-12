@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8f8d6b042c1284dc0a0b716524f381017320306e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1baa6e59d017df6a0491d4359a8e445fea83d722
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155823"
 ---
 # <a name="circularstring"></a>CircularString
   A `CircularString` 0 個以上の連続する円弧セグメントのコレクションです。 円弧セグメントは、2 次元平面内の 3 つの点によって定義された曲線セグメントです。最初のポイントを 3 番目のポイントと同じにすることはできません。 円弧セグメントの 3 つのポイントすべてが同一線上にある場合は、円弧セグメントが直線セグメントとして扱われます。  
   
 > [!IMPORTANT]  
->  詳細な説明とで導入された新しい空間機能の例の[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]など、`CircularString`サブタイプは、ホワイト ペーパーをダウンロード[SQL Server 2012 の新しい空間機能](http://go.microsoft.com/fwlink/?LinkId=226407)します。  
+>  詳細な説明とで導入された新しい空間機能の例の[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]など、`CircularString`サブタイプは、ダウンロード、ホワイト ペーパー「 [SQL Server 2012 の新しい空間機能](http://go.microsoft.com/fwlink/?LinkId=226407)します。  
   
 ## <a name="circularstring-instances"></a>CircularString インスタンス  
  次の図は有効な表示`CircularString`インスタンス。  
@@ -33,7 +33,7 @@ ms.locfileid: "36173671"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>許容されるインスタンス  
- A`CircularString`場合は空か、ここで、n、n、ポイントの数が奇数を含むインスタンスが許容 > 1。 次`CircularString`インスタンスは許容されます。  
+ A`CircularString`いずれかが空、または奇数ポイント、n、には n が含まれていますがある場合、インスタンスは許容 > 1。 次`CircularString`インスタンスは許容されます。  
   
 ```  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -41,14 +41,14 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
 ```  
   
- `@g3` 示しています`CircularString`インスタンスは、承諾ですが有効でない可能性があります。 次に示す CircularString インスタンスの宣言は許容されません。 この宣言は `System.FormatException`をスローします。  
+ `@g3` 示しています`CircularString`インスタンスは、受理ですが有効でない可能性があります。 次に示す CircularString インスタンスの宣言は許容されません。 この宣言は `System.FormatException`をスローします。  
   
 ```  
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
- 有効な`CircularString`インスタンスが空であるか、次の属性を持つ必要があります。  
+ 有効な`CircularString`インスタンスを空にするか、次の属性を持つ必要があります。  
   
 -   少なくとも 1 つの円弧のセグメントが含まれている (つまり、最低限 3 つのポイントがある)。  
   
@@ -58,7 +58,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
   
 -   このインスタンス自体を間隔に重ねることはできない。  
   
--   `CircularString`インスタンスは直線セグメントを含めることがあります、3 つ同一線上のポイントでこれらの直線セグメントを定義する必要があります。  
+-   ただし`CircularString`インスタンスは直線セグメントを含めることができます、次の 3 つ同一線上のポイントでこれらの線分を定義する必要があります。  
   
  次の例は有効な`CircularString`インスタンス。  
   
@@ -70,7 +70,7 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();  
 ```  
   
- `CircularString` インスタンスでは、完全な円を定義するためには、少なくとも 2 つの円弧セグメントを含める必要があります。 A`CircularString`インスタンスが 1 つの円弧セグメントを使用することはできません (など、(1 1, 3 1, 1 1)) を完全な円を定義します。 (1 1, 2 2, 3 1, 2 0, 1 1) を使用して円を定義してください。  
+ `CircularString` インスタンスでは、完全な円を定義するためには、少なくとも 2 つの円弧セグメントを含める必要があります。 A`CircularString`インスタンスが 1 つの円弧セグメントを使用できません (など、(1 1, 3 1, 1 1))、完全な円を定義します。 (1 1, 2 2, 3 1, 2 0, 1 1) を使用して円を定義してください。  
   
  次の例は、無効な CircularString インスタンスを示しています。  
   
@@ -109,7 +109,7 @@ SELECT @g.ToString();
 ```  
   
 ### <a name="c-instantiating-a-geometry-instance-using-a-circularstring-with-multiple-circular-arc-segments"></a>C. 複数の円弧セグメントを含む CircularString を使用して geometry インスタンスをインスタンス化する  
- 次の例を作成する方法を示しています、 `CircularString` (完全な円) を 1 つ以上の円弧セグメントを持つインスタンスします。  
+ 次の例を作成する方法を示しています、`CircularString`インスタンスは、複数の円弧のセグメント (完全な円)。  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -137,7 +137,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- 注意して値を`CircularString`例は、ある 2 ∏、円の実際の円周の近くにします。  
+ 注意の値、`CircularString`例がある 2 ∏、円の実際の円周の近くにあります。  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. CircularString を同じステートメント内で使用して geometry インスタンスを宣言およびインスタンス化する  
  このコード スニペットは、`geometry` を同じステートメント内で使用して `CircularString` インスタンスを宣言およびインスタンス化する方法を示しています。  

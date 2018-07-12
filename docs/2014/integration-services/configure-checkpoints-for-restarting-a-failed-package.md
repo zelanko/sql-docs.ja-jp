@@ -1,5 +1,5 @@
 ---
-title: 失敗したパッケージを再開するためのチェックポイントの構成 |Microsoft ドキュメント
+title: 失敗したパッケージを再開するためのチェックポイントの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3c2ae5affa24087bbb0511bc29559bba88f86cdb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 254e444658ca179319f2af93a414620e7dfa9ead
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148743"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>失敗したパッケージを再開するためのチェックポイントを構成する
   パッケージ全体を再実行するのではなく、障害が発生した時点からパッケージを再開するように [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを構成するには、チェックポイントに適用するプロパティを設定します。  
@@ -38,7 +38,7 @@ ms.locfileid: "36174304"
   
 4.  制御フローのデザイン画面の背景で任意の場所を右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  SaveCheckpoints プロパティを設定`True`です。  
+5.  SaveCheckpoints プロパティを設定`True`します。  
   
 6.  CheckpointFileName プロパティにチェックポイント ファイルの名前を入力します。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "36174304"
         > [!IMPORTANT]  
         >  チェックポイント ファイルが使用できない場合はエラーが発生します。  
   
-    -   選択`IfExists`チェックポイント ファイルが使用可能な場合にのみ、パッケージを再起動します。  
+    -   選択`IfExists`チェックポイント ファイルが使用可能な場合にのみ、パッケージを再開します。  
   
 8.  パッケージが再開できる地点のタスクおよびコンテナーを構成します。  
   
     -   タスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
   
-    -   FailPackageOnFailure プロパティを設定`True`ごとにタスクとコンテナーを選択します。  
+    -   FailPackageOnFailure プロパティを設定`True`選択した各タスクとコンテナー。  
   
 ## <a name="see-also"></a>参照  
  [チェックポイントを使用してパッケージを再開する](packages/restart-packages-by-using-checkpoints.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploymentwizard.deploymentsettings.f1
 - sql12.swb.deploymentwizard.progress.f1
@@ -43,15 +43,15 @@ helpviewer_keywords:
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 976bd24095536f6ae13cf40fab8129154b14864b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dc5399a395a53f2e37103b5516b0e707eb8c0335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158513"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure Virtual Machine の SQL Server データベースの配置
   **Windows Azure 仮想マシンに SQL Server データベースを配置**ウィザードを使用して、データベースを[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスから Windows Azure 仮想マシン (VM) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に配置します。 このウィザードはデータベースの完全バックアップ操作を活用し、SQL Server のユーザー データベースから常にデータベース スキーマ全体とデータ全体をコピーします。 また、このウィザードは Azure のすべての仮想マシンを自動的に構成するため、仮想マシンの事前構成は必要ありません。  
@@ -88,7 +88,7 @@ ms.locfileid: "36174184"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のソース インスタンスから配置を計画しているデータベースのバックアップ操作の特権資格情報。  
   
- Windows Azure の仮想マシンで SQL Server の実行に関する詳細については、次を参照してください。 [Windows Azure 仮想マシンで SQL Server への移行の準備](http://msdn.microsoft.com/library/dn133142.aspx)です。  
+ Windows Azure 仮想マシンで SQL Server を実行する方法の詳細については、次を参照してください。 [Windows Azure Virtual Machines における SQL Server に移行する準備を行う](http://msdn.microsoft.com/library/dn133142.aspx)します。  
   
  Windows Server オペレーティング システムを実行しているコンピューターでは、このウィザードを実行するために、次の構成設定を使用する必要があります。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36174184"
 ###  <a name="permissions"></a> アクセス許可  
  配置されるデータベースは標準状態でなければならず、このデータベースはウィザードを実行するユーザー アカウントからアクセスできる必要があり、ユーザー アカウントにはバックアップ操作を実行する権限が必要です。  
   
-##  <a name="launch_wizard"></a> Windows Azure VM の作成ウィザードを配置データベースを使用します。  
+##  <a name="launch_wizard"></a> Windows Azure VM ウィザードへのデータベースの配置を使用します。  
  **ウィザードを起動するには、次の手順を実行します。**  
   
 1.  SQL Server Management Studio を使用して、配置するデータベースがある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。  

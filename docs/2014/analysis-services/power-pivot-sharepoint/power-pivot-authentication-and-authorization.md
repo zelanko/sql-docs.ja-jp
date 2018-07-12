@@ -1,5 +1,5 @@
 ---
-title: PowerPivot の認証および承認 |Microsoft ドキュメント
+title: PowerPivot の認証と承認 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e24a764afb7aae49194847354800e580da88a9a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cea8b8e9d6f883d6933ed72591da20de73d55326
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210222"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot の認証および承認
   SharePoint 2010 ファーム内で実行される PowerPivot for SharePoint の配置では、SharePoint サーバーによって提供される認証サブシステムと承認モデルを使用します。 PowerPivot 関連のすべてのコンテンツは SharePoint コンテンツ データベースに格納され、PowerPivot 関連のすべての操作はファーム内の PowerPivot 共有サービスによって実行されるので、SharePoint のセキュリティ インフラストラクチャは PowerPivot のコンテンツや操作にまで及ぶことになります。 PowerPivot データが含まれているブックを要求するユーザーは、Windows ユーザー ID に基づく SharePoint ユーザー ID を使用して認証されます。 この要求が許可されるか拒否されるかは、ブックに対する表示権限によって決まります。  
@@ -28,7 +28,7 @@ ms.locfileid: "36164897"
   
  このトピックの特定のセクションを参照するには、次のリンクをクリックしてください。  
   
- [クラシック モード サインイン要求を使用する Windows 認証](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [クラシック モード サインイン要求を使用して Windows 認証](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [ユーザーの承認を必要とする PowerPivot の操作](#UserConnections)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36164897"
   
 -   キャッシュまたはライブラリからの PowerPivot データの読み込み (それ以外の方法ではデータを利用できない場合)。 システムにまだ読み込まれていない PowerPivot データに対してデータ接続要求が行われた場合、[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスでは、SharePoint ユーザー ID を使用して、データ ソースをコンテンツ ライブラリから取得し、メモリに読み込みます。  
   
--   データ ソースの更新されたコピーをコンテンツ ライブラリのブックに保存するデータ更新操作。 この場合、実際のログオン操作は、Secure Store Service の対象アプリケーションから取得したユーザー名とパスワードを使用して実行されます。 資格情報には、PowerPivot 自動データ更新アカウント、またはデータ更新スケジュールの作成時に一緒に保存された資格情報を使用できます。 詳細については、次を参照してください[格納されている資格情報の構成の PowerPivot データ更新&#40;PowerPivot for SharePoint&#41; ](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)と[PowerPivot 自動データ更新アカウントを構成する&#40;。PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)です。  
+-   データ ソースの更新されたコピーをコンテンツ ライブラリのブックに保存するデータ更新操作。 この場合、実際のログオン操作は、Secure Store Service の対象アプリケーションから取得したユーザー名とパスワードを使用して実行されます。 資格情報には、PowerPivot 自動データ更新アカウント、またはデータ更新スケジュールの作成時に一緒に保存された資格情報を使用できます。 詳細については、次を参照してください[格納されている資格情報の構成の PowerPivot データ更新&#40;PowerPivot for SharePoint&#41; ](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)と[PowerPivot 自動データ更新アカウントを構成する&#40;。PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)します。  
   
 ##  <a name="Permissions"></a> PowerPivot データ アクセスに対する SharePoint 権限  
  PowerPivot ブックのパブリッシュ、管理、およびセキュリティでの保護は、SharePoint 統合を通じてのみサポートされます。 SharePoint サーバーは、データへの正当なアクセスを確保する認証サブシステムと承認サブシステムを提供します。 SharePoint ファーム外に PowerPivot ブックを安全に配置するシナリオはサポートされていません。  
@@ -99,7 +99,7 @@ ms.locfileid: "36164897"
   
  PowerPivot ブックを SharePoint サイトで開くと、Excel Services は PowerPivot の埋め込みデータ接続文字列を読み取り、要求をローカルの SQL Server Analysis Services OLE DB プロバイダーに転送します。 プロバイダーは、この接続情報をファーム内の PowerPivot サーバーに渡します。 要求が 2 つのサーバー間でシームレスに流れるには、PowerPivot for SharePoint により要求される設定を使用するように Excel Services を構成する必要があります。  
   
- Excel Services では、セキュリティ関連の構成設定は信頼できる場所、信頼できるデータ プロバイダー、および信頼できるデータ接続ライブラリで指定します。 次の表に、PowerPivot データ アクセスを有効化または拡張する設定の説明を示します。 ここに記載されていない設定は、PowerPivot サーバー接続には影響しません。 ステップ バイ ステップは、これらの設定を指定する方法についてで「Excel Services 有効にする」セクションを参照してください[初期構成&#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)です。  
+ Excel Services では、セキュリティ関連の構成設定は信頼できる場所、信頼できるデータ プロバイダー、および信頼できるデータ接続ライブラリで指定します。 次の表に、PowerPivot データ アクセスを有効化または拡張する設定の説明を示します。 ここに記載されていない設定は、PowerPivot サーバー接続には影響しません。 これらのステップ バイ ステップの設定を指定する方法についてで「Excel Services 有効にする」セクションを参照してください[初期構成&#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)します。  
   
 > [!NOTE]  
 >  ほとんどのセキュリティ関連の設定は、信頼できる場所に適用されます。 既定値を保持するか、サイトごとに異なる値を使用する場合は、PowerPivot データを含むサイト用に信頼できる場所を追加作成し、そのサイトにのみ以下の設定を構成できます。 詳細については、「 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  

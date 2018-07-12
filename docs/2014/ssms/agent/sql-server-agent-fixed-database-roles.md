@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
 - SQL Server Agent, roles
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQLAgentOperatorRole database role
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7890daf6c0ff4b77bbb8bb44e29d7921a58dd612
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 488132684547dcfbfc69a7c6479cc6ec7e42359e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151873"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server エージェントの固定データベース ロール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次の **msdb** データベースの固定データベース ロールが用意されています。これらのロールを使用することで、管理者は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントへのアクセスをより細かく制御できます。 特権レベルの低いロールから順に、次に示します。  
@@ -65,11 +65,11 @@ ms.locfileid: "36173396"
   
  <sup>1</sup>ジョブの所有権を変更することはできません。  
   
- <sup>2</sup>で使用するため利用可能な演算子の一覧を取得できる**sp_notify_operator**と**ジョブのプロパティ**Management Studio のダイアログ ボックス。  
+ <sup>2</sup>で使用するために利用可能な演算子の一覧を取得できる**sp_notify_operator**と**ジョブのプロパティ**Management Studio のダイアログ ボックス。  
   
- <sup>3</sup>でのみ使用可能なプロキシのリスト、**ジョブ ステップのプロパティ**Management Studio のダイアログ ボックス。  
+ <sup>3</sup>でのみ使用できるプロキシのリスト、**ジョブ ステップのプロパティ**Management Studio のダイアログ ボックス。  
   
- <sup>4</sup>のメンバー **SQLAgentUserRole**必要があります明示的に EXECUTE 権限で許可**sp_purge_jobhistory**を所有するジョブのジョブ履歴を削除します。 他のジョブのジョブ履歴は削除できません。  
+ <sup>4</sup>のメンバー **SQLAgentUserRole**する必要があります明示的に EXECUTE アクセス許可で許可**sp_purge_jobhistory**自分が所有するジョブのジョブ履歴を削除します。 他のジョブのジョブ履歴は削除できません。  
   
 ### <a name="sqlagentreaderrole-permissions"></a>SQLAgentReaderRole の権限  
  **SQLAgentReaderRole** には、すべての **SQLAgentUserRole** の権限、および使用できるマルチサーバー ジョブのリスト、ジョブのプロパティ、およびジョブの履歴を表示する権限が含まれています。 このロールのメンバーは、所有しているジョブとジョブ スケジュールだけでなく、使用できるすべてのジョブとジョブ スケジュール、およびそのプロパティのリストを表示することもできます。 **SQLAgentReaderRole** のメンバーは、ジョブの所有権を変更して、所有していないジョブへのアクセス権を得ることはできません。 **SQLAgentReaderRole** のメンバーに対しては、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーには **[ジョブ]** ノードだけが表示されます。  
@@ -93,11 +93,11 @@ ms.locfileid: "36173396"
   
  <sup>1</sup>ジョブの所有権を変更することはできません。  
   
- <sup>2</sup>で使用するため利用可能な演算子の一覧を取得できる**sp_notify_operator**と**ジョブのプロパティ**Management Studio のダイアログ ボックス。  
+ <sup>2</sup>で使用するために利用可能な演算子の一覧を取得できる**sp_notify_operator**と**ジョブのプロパティ**Management Studio のダイアログ ボックス。  
   
- <sup>3</sup>でのみ使用可能なプロキシのリスト、**ジョブ ステップのプロパティ**Management Studio のダイアログ ボックス。  
+ <sup>3</sup>でのみ使用できるプロキシのリスト、**ジョブ ステップのプロパティ**Management Studio のダイアログ ボックス。  
   
- <sup>4</sup>のメンバー **SQLAgentReaderRole**必要があります明示的に EXECUTE 権限で許可**sp_purge_jobhistory**を所有するジョブのジョブ履歴を削除します。 他のジョブのジョブ履歴は削除できません。  
+ <sup>4</sup>のメンバー **SQLAgentReaderRole**する必要があります明示的に EXECUTE アクセス許可で許可**sp_purge_jobhistory**自分が所有するジョブのジョブ履歴を削除します。 他のジョブのジョブ履歴は削除できません。  
   
 ### <a name="sqlagentoperatorrole-permissions"></a>SQLAgentOperatorRole の権限  
  **SQLAgentOperatorRole** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの固定データベース ロールのうち、最も高いレベルの特権が設定されています。 これには、 **SQLAgentUserRole** および **SQLAgentReaderRole**のすべての権限が含まれています。 このロールのメンバーは、オペレーターおよびプロキシのプロパティを表示することも、サーバー上で使用できるプロキシおよび警告を列挙することもできます。  
@@ -123,13 +123,13 @@ ms.locfileid: "36173396"
 |ジョブ履歴の削除|適用なし|適用なし|はい|いいえ|適用なし|適用なし|  
 |アタッチ/デタッチ|適用なし|適用なし|適用なし|適用なし|可 (所有しているスケジュールのみ)|適用なし|  
   
- <sup>1</sup>で使用するため利用可能な演算子の一覧を取得できる**sp_notify_operator**と**ジョブのプロパティ**Management Studio のダイアログ ボックス。  
+ <sup>1</sup>で使用するために利用可能な演算子の一覧を取得できる**sp_notify_operator**と**ジョブのプロパティ**Management Studio のダイアログ ボックス。  
   
  <sup>2</sup>ジョブの所有権を変更することはできません。  
   
- <sup>3</sup> **SQLAgentOperatorRole**メンバーは有効にしたり、ストアド プロシージャを使用して、所有していないローカル ジョブを無効にする**sp_update_job**の値を指定して、  **@enabled**と**@job_id** (または**@job_name**) のパラメーターです。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。  
+ <sup>3</sup> **SQLAgentOperatorRole**メンバーは有効にしたり、ストアド プロシージャを使用して、所有していないローカル ジョブを無効にする**sp_update_job**の値を指定して、  **@enabled**と**@job_id** (または**@job_name**) パラメーター。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。  
   
- <sup>4</sup> **SQLAgentOperatorRole**メンバーは有効にしたり、ストアド プロシージャを使用して、所有していないスケジュールを無効にする**sp_update_schedule**の値を指定して、 **@enabled** と**@schedule_id** (または**@name**) のパラメーターです。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。  
+ <sup>4</sup> **SQLAgentOperatorRole**メンバーは有効にしたり、ストアド プロシージャを使用して、所有していないスケジュールを無効にする**sp_update_schedule**の値を指定して、 **@enabled** と**@schedule_id** (または**@name**) パラメーター。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。  
   
 ## <a name="assigning-users-multiple-roles"></a>ユーザーへの複数のロールの割り当て  
  固定サーバー ロール **sysadmin** のメンバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのすべての機能にアクセスできます。 **sysadmin** ロールのメンバーではないが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの複数の固定データベース ロールのメンバーであるユーザーの場合、これらのロールの同心構造権限モデルについて覚えておくことが重要です。 特権レベルの高いロールには常に、そのロールよりも特権レベルが低いロールの権限がすべて含まれているため、複数のロールのメンバーであるユーザーは、そのユーザーがメンバーとして属しているロールの中で、最も特権レベルの高いロールに関連付けられた権限を自動的に持っていることになります。  

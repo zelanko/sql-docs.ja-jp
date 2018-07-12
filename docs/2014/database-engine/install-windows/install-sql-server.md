@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 のインストール |Microsoft ドキュメント
+title: SQL Server 2014 のインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, preparing to install
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bf415bef00710562247bcfd9fa310e2c0728497f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f03f01be41395cea94acdc40acd582a6fb78772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157013"
 ---
 # <a name="install-sql-server-2014"></a>SQL Server 2014 のインストール
 ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ SQL Server 2014 Express をダウンロードします。 ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **お送りいただきありがとうございます[Scott Hanselman](http://www.hanselman.com/)すべて 1 か所でインストーラー パッケージへのリンクを収集するためです。**
+  **よろしくお願いする[Scott Hanselman](http://www.hanselman.com/)すべてのインストーラー パッケージ リンクを 1 か所に収集するためです。**
   
- このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の各種インストール オプションについて概説します。 詳細については、さまざまな[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールできるコンポーネントとインストール プロセスを参照してください[for SQL Server 2014 インストール](installation-for-sql-server.md)です。  
-> **注:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は 32 ビットおよび 64 ビット エディションで使用できます。 64 ビット版と 32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、インストール ウィザードを使用するか、コマンド プロンプトからインストールします。 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントを参照して[エディションと SQL Server 2014 のコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)と[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の各種インストール オプションについて概説します。 詳細については、さまざまな[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールできるコンポーネントと、インストール プロセスを参照してください。 [SQL Server 2014 のインストール](installation-for-sql-server.md)。  
+> **注:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は 32 ビットおよび 64 ビット エディションで使用できます。 64 ビット版と 32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、インストール ウィザードを使用するか、コマンド プロンプトからインストールします。 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントを参照してください[エディションと SQL Server 2014 のコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)と[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
  既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベースとサンプル コードはインストールされません。 Express 以外のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサンプル データベースとサンプル コードをインストールするには、[CodePlex Web サイト](http://go.microsoft.com/fwlink/?LinkId=87843)をご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサンプル データベースと [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のサンプル コードのサポートについては、「[データベースとサンプルの概要](http://go.microsoft.com/fwlink/?LinkId=110391)」をご覧ください。  
   

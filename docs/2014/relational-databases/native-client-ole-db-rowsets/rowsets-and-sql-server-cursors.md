@@ -1,13 +1,11 @@
 ---
-title: 行セットと SQL Server カーソル |Microsoft ドキュメント
+title: 行セットと SQL Server カーソル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - cursors [OLE DB]
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 169ab11d5f15b80724db01a4fd73fc546cb2d3b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d7c1768beb903e214260c2b6a37486bfc2583c0c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084992"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416362"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行セットと SQL Server カーソル
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、2 種類の方法でコンシューマーに結果セットが返されます。  
@@ -61,7 +59,7 @@ ms.locfileid: "36084992"
   
     -   複数の結果セットを返す [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントはサポートしません。  
   
- コンシューマーは、特定の行セット プロパティを設定することで、行セットでのカーソルの動作を変更できます。 コンシューマーはこれらの行セット プロパティのいずれかを設定しませんまたはすべての既定値に設定する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、既定の結果セットを使用して行セットを実装します。 これらのプロパティのいずれかが、既定値以外の値に設定されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがサーバー カーソルを使用して行セットを実装します。  
+ コンシューマーは、特定の行セット プロパティを設定することで、行セットでのカーソルの動作を変更できます。 コンシューマーはこれらの行セット プロパティのいずれかを設定しませんまたはすべての既定値に設定した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは既定の結果セットを使用して行セットを実装します。 これらのプロパティのいずれかが、既定以外の値に設定されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、サーバー カーソルを使用して行セットを実装します。  
   
  次の行セット プロパティによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソルを使用することが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーに指示されます。 プロパティによっては、他のプロパティと組み合わせて使用できるものもあります。 たとえば、DBPROP_IRowsetScroll プロパティと DBPROP_IRowsetChange プロパティを備えた行セットは、即時更新動作を表すブックマーク行セットになります。 同時に指定できないプロパティもあります。 たとえば、DBPROP_OTHERINSERT を備えた行セットにはブックマークを含めることはできません。  
   
@@ -72,13 +70,13 @@ ms.locfileid: "36084992"
 |DBPROP_BOOKMARKS または DBPROP_LITERALBOOKMARKS|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できません。 行セットは順次処理され、順方向のスクロールとフェッチのみがサポートされます。 相対行位置指定がサポートされます。 コマンド テキストに ORDER BY 句を指定できます。|  
 |DBPROP_OWNUPDATEDELETE、DBPROP_OWNINSERT、または DBPROP_OTHERUPDATEDELETE|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できません。 行セットでは、両方向へのスクロールとフェッチがサポートされます。 相対行位置指定がサポートされます。 コマンド テキストに ORDER BY 句を指定できます。|  
 |DBPROP_OTHERINSERT|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できません。 行セットでは、両方向へのスクロールとフェッチがサポートされます。 相対行位置指定がサポートされます。 参照先の列にインデックスが存在する場合は、コマンド テキストに ORDER BY 句を指定できます。<br /><br /> 行セットにブックマークが含まれる場合は、DBPROP_OTHERINSERT に VARIANT_TRUE を指定できません。 この表示設定プロパティとブックマークを指定して行セットを作成しようとすると、エラーが発生します。|  
-|DBPROP_IRowsetLocate または DBPROP_IRowsetScroll|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できません。 行セットでは、両方向へのスクロールとフェッチがサポートされます。 ブックマークとを通じて絶対位置指定、 **IRowsetLocate**インターフェイスが、行セットでサポートされます。 コマンド テキストに ORDER BY 句を指定できます。<br /><br /> DBPROP_IRowsetLocate と DBPROP_IRowsetScroll は、行セット内にブックマークを要求します。 ブックマークを含み、DBPROP_OTHERINSERT に VARIANT_TRUE を設定した行セットを作成しようとすると、エラーが発生します。|  
+|DBPROP_IRowsetLocate または DBPROP_IRowsetScroll|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できません。 行セットでは、両方向へのスクロールとフェッチがサポートされます。 ブックマークと絶対位置指定、 **IRowsetLocate**インターフェイスは、行セットでサポートされています。 コマンド テキストに ORDER BY 句を指定できます。<br /><br /> DBPROP_IRowsetLocate と DBPROP_IRowsetScroll は、行セット内にブックマークを要求します。 ブックマークを含み、DBPROP_OTHERINSERT に VARIANT_TRUE を設定した行セットを作成しようとすると、エラーが発生します。|  
 |DBPROP_IRowsetChange または DBPROP_IRowsetUpdate|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できます。 行セットは順次処理され、順方向のスクロールとフェッチのみがサポートされます。 相対行位置指定がサポートされます。 更新可能なカーソルをサポートするすべてのコマンドでは、これらのインターフェイスがサポートされます。|  
-|DBPROP_IRowsetLocate または DBPROP_IRowsetScroll、および DBPROP_IRowsetChange または DBPROP_IRowsetUpdate|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できます。 行セットでは、両方向へのスクロールとフェッチがサポートされます。 ブックマークとを通じて絶対位置指定**IRowsetLocate**行セットではサポートされています。 コマンド テキストに ORDER BY 句を指定できます。|  
+|DBPROP_IRowsetLocate または DBPROP_IRowsetScroll、および DBPROP_IRowsetChange または DBPROP_IRowsetUpdate|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できます。 行セットでは、両方向へのスクロールとフェッチがサポートされます。 ブックマークと絶対位置指定**IRowsetLocate**行セットでサポートされます。 コマンド テキストに ORDER BY 句を指定できます。|  
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できません。 行セットでは、順方向のスクロールしかサポートされません。 相対行位置指定がサポートされます。 参照先の列にインデックスが存在する場合は、コマンド テキストに ORDER BY 句を指定できます。<br /><br /> DBPROP_IMMOBILEROWS は、別のセッションのコマンドや別のユーザーから挿入された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行を表示できる行セットだけで使用できます。 DBPROP_OTHERINSERT に VARIANT_TRUE を設定できない行セットで、プロパティに VARIANT_FALSE が設定されている行セットを開こうとすると、エラーが発生します。|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できません。 行セットでは、順方向のスクロールしかサポートされません。 相対行位置指定がサポートされます。 別のプロパティで制約されている場合を除いて、コマンド テキストに ORDER BY 句を指定できます。|  
   
- A[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバー カーソルでサポートされている Native Client OLE DB プロバイダー行セットを簡単にで作成できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ベース テーブルまたはビューを使用して、 **iopenrowset::openrowset**メソッドです。 名前によって、テーブルまたはビューを指定のプロパティ設定の必要な行セットを渡して、 *rgPropertySets*パラメーター。  
+ A[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサーバー カーソルでサポートされている Native Client OLE DB プロバイダー行セットを簡単に作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ベース テーブルまたはビューを使用して、 **iopenrowset::openrowset**メソッド。 名前でテーブルまたはビューを指定する、プロパティを設定必要な行セットを渡して、 *rgPropertySets*パラメーター。  
   
  コンシューマーが、サーバー カーソルでサポートされる行セットを要求すると、行セットを作成するコマンド テキストが制限されます。 具体的には、1 つの行セットを結果として返す 1 つの SELECT ステートメント、または 1 つの行セットを結果として返す 1 つの SELECT ステートメントを実装するストアド プロシージャに制限されます。  
   
@@ -149,9 +147,9 @@ ms.locfileid: "36084992"
  行セット プロパティの指定されたコレクションから、上の表に示したプロパティのサブセットを取得します。 これらのプロパティを、上に示した表の各行セット プロパティのフラグ値、必須 (T、F) またはオプション (-) に応じて、2 つのサブグループに分けます。 最初の表から始め、左から右に向かってカーソル モデルごとに、2 つのサブグループ内のプロパティの値を、その列の対応するプロパティの値と比較します。 必須プロパティに不一致がなく、かつオプション プロパティの不一致が最も少ないカーソル モデルが選択されます。 複数のカーソル モデルが該当する場合は、一番左側のモデルが選択されます。  
   
 ## <a name="sql-server-cursor-block-size"></a>SQL Server カーソル ブロックのサイズ  
- ときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カーソルがサポートする、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー行セットの行に要素の数のハンドルの配列パラメーター、 **irowset::getnextrows**または**irowsetlocate::getrowsat**メソッドは、カーソル ブロックのサイズを定義します。 配列内のハンドルで指定される行が、カーソル ブロックのメンバーです。  
+ ときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カーソルがサポートする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダー行セットの配列パラメーターを処理する行の要素の数、 **irowset::getnextrows**または**irowsetlocate::getrowsat**メソッドは、カーソル ブロックのサイズを定義します。 配列内のハンドルで指定される行が、カーソル ブロックのメンバーです。  
   
- ブックマークをサポートする、行の行ハンドルの取得を使用して、 **:getrowsbybookmark**メソッドは、カーソル ブロックのメンバーを定義します。  
+ ブックマークをサポートしている行セットの行ハンドルの取得を使用して、 **:getrowsbybookmark**メソッドは、カーソル ブロックのメンバーを定義します。  
   
  行セットの作成や [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソル ブロックの形成にどのメソッドを使用したかにかかわらず、行セットの次の行をフェッチするメソッドが実行されるまで、カーソル ブロックはアクティブです。  
   

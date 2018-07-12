@@ -1,5 +1,5 @@
 ---
-title: (データ マイニング アドイン) を Visio でのデータ マイニング モデルの表示 |Microsoft ドキュメント
+title: Visio (データ マイニング アドイン) でのデータ マイニング モデルの表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagram, modifying
 - templates [Visio]
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - diagram
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 572bbd3b2c3bbcebbd1b5a829ac193ac0bb909a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dbb4e78685982dc3b7cd981fc6df6db9bf40a13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259358"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Visio でのデータ マイニング モデルの参照 (データ マイニング アドイン)
   データ マイニング用 Visio 図形は、サーバーに接続して、既存のデータ マイニング モデルを表すダイアグラムを作成します。 ダイアグラムは、Visio のコントロールを使用してカスタマイズできますが、データのドリル ダウン、基になる統計の公開、基になるモデルの操作もすることができます。  
   
 ## <a name="building-a-model-diagram"></a>モデル ダイアグラムの作成  
- データ マイニング用 Visio 図形を含むファイルを開くときに、**図形**ペインに次の図形が表示されます。  
+ データ マイニング用 Visio 図形を含むファイルを開くと、**図形**ウィンドウには、次の図形が表示されます。  
   
  Visio を開いたときにデータ マイニング図形が表示されない場合は、インストール フォルダーにあるテンプレート ファイルを開きます。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36164167"
 ### <a name="data-mining-menus"></a>データ マイニングのメニュー  
  これらのツール バーとメニュー項目は、各図形またはモデルの種類に固有のアドインによって提供されます。  
   
--   それぞれのダイアグラムの種類には図形のショートカット メニューがあり、これを使用すると特殊なオプションにアクセスできます。 このメニューの多くのオプションはすべての Visio 図形に共通するが、いくつかのオプションに固有のデータ マイニング テンプレート  
+-   それぞれのダイアグラムの種類には図形のショートカット メニューがあり、これを使用すると特殊なオプションにアクセスできます。 このメニューで、多くのオプションは、すべての Visio 図形に共通する、いくつかのオプションは、データ マイニング テンプレートに固有  
   
      たとえば、デシジョン ツリー ダイアグラムにおいて、個々のノードをクリックし、その子ノードを折りたたむと、ダイアグラムを単純化できます。また、子ノードを別のページに移動することもできます。  
   

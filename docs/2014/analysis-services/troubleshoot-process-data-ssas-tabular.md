@@ -1,5 +1,5 @@
 ---
-title: データの処理 (SSAS テーブル) のトラブルシューティング |Microsoft ドキュメント
+title: データの処理 (SSAS テーブル) のトラブルシューティング |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ddebb4bb6a2e1c3e3d4bc53052ff207d7bb1d40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d066eaa1702d096e7e1d0919c988e6ea6e6bdbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239502"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>データの処理のトラブルシューティング (SSAS テーブル)
   このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を使用したモデルの作成時のモデル データの処理 (更新) について説明します。 このトピックでは、Analysis Services サーバー インスタンスに配置されたモデルでのデータの処理については説明しません。 配置済みモデルでのデータ処理の詳細については、「 [Analysis Services の管理タスクのスクリプト作成](script-administrative-tasks-in-analysis-services.md)」を参照してください。  
@@ -50,7 +50,7 @@ ms.locfileid: "36164642"
   
  したがって、データ ソースを変更したり、データ ソースから取得したデータを処理する前に、その影響について常に考慮し、次のような結果への影響を考慮する必要があります。  
   
--   データ ソースを変更した結果、モデル データの一部が破損する場合があります。 一部の列をデータ ソースから取得できない場合 (たとえば、列が削除または変更されている場合)、処理は失敗し、ソース データとモデル データの間のマッピングを更新する必要があります。 詳細については、次を参照してください。[既存のデータ ソース接続の編集&#40;SSAS 表形式&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)です。  
+-   データ ソースを変更した結果、モデル データの一部が破損する場合があります。 一部の列をデータ ソースから取得できない場合 (たとえば、列が削除または変更されている場合)、処理は失敗し、ソース データとモデル データの間のマッピングを更新する必要があります。 詳細については、次を参照してください。[既存のデータ ソース接続の編集&#40;SSAS 表形式&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)します。  
   
 -   処理後、一部の列にエラーの存在を示すフラグが設定されることがあります。 処理時に使用できなくなっていたデータを列内の DAX 式が使用している場合、列のデータ型が変更された場合、または無効な値が外部データに追加された場合に、フラグが設定されます。 この問題を解決するには、数式を編集するか、使用できなくなったデータに基づいている列を削除します。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36164642"
 -   別々のテーブルの列を複数選択して、これらの列のプロパティを変更することはできません。 一度に 1 つのテーブルまたはビューのみを操作できます。  
   
 ## <a name="see-also"></a>参照  
- [データを手動で処理&#40;SSAS 表形式&#41;](manually-process-data-ssas-tabular.md)   
+ [データの手動処理&#40;SSAS 表形式&#41;](manually-process-data-ssas-tabular.md)   
  [既存のデータ ソース接続の編集&#40;SSAS 表形式&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

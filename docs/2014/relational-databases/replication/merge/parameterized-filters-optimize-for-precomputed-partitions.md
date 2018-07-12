@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precomputed partitions [SQL Server replication]
 - merge replication precomputed partitions [SQL Server replication]
 - merge replication precomputed partitions [SQL Server replication], about precomputed partitions
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a6cd94215f90eb9a483258ba0c85f622d0938d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 70edd7a57807f342a3909d16ed0ef4526d68be49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160293"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化
   事前計算済みパーティションは、フィルター選択されたマージ パブリケーションのパフォーマンス最適化に使用されます。 フィルター選択されたパブリケーションで論理レコードを使用する場合にも事前計算済みパーティションが必要になります。 論理レコードの詳細については、「[論理レコードによる関連行への変更をグループ化](group-changes-to-related-rows-with-logical-records.md)」を参照してください。  

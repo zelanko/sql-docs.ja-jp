@@ -1,5 +1,5 @@
 ---
-title: キャッシュ接続マネージャー エディター |Microsoft ドキュメント
+title: キャッシュ接続マネージャー エディター |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7ec4524cebca8f60b64ee97124b5ad7524b4a47d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c777c26de51c9e66244ce9be1931ea40da33a29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241132"
 ---
 # <a name="cache-connection-manager-editor"></a>[キャッシュ接続マネージャー エディター]
   キャッシュ接続マネージャーでは、キャッシュ変換またはキャッシュ ファイル (.caw) から参照データセットを読み取り、そのデータをキャッシュ ファイルに保存できます。 データは常にメモリに格納されます。  
@@ -46,7 +46,7 @@ ms.locfileid: "36165285"
  **接続マネージャー名**  
  ワークフローにおけるキャッシュ接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **description**  
+ **[説明]**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的に従って記述することをお勧めします。  
   
  **[ファイル キャッシュを使用する]**  
@@ -87,20 +87,20 @@ ms.locfileid: "36165285"
 > [!NOTE]  
 >  参照変換がキャッシュ接続マネージャーを使用するように構成されている場合、参照データセット内のインデックス列のみ入力列にマップできます。 また、すべてのインデックス列をマップする必要があります。  
   
- **Type**  
+ **型**  
  列のデータ型を指定します。  
   
  `Length`  
- 列のデータ型を指定します。 かどうか、データ型に適用可能な更新できます`Length`です。  
+ 列のデータ型を指定します。 かどうか、データ型に該当する更新できます`Length`します。  
   
  `Precision`  
- 特定の列のデータ型の有効桁数を指定します。 precision は、数値全体の桁数です。 かどうか、データ型に適用可能な更新できます`Precision`です。  
+ 特定の列のデータ型の有効桁数を指定します。 precision は、数値全体の桁数です。 かどうか、データ型に該当する更新できます`Precision`します。  
   
  `Scale`  
- 特定の列のデータ型の小数点以下桁数を指定します。 scale は、数値の中で小数点より右側の桁数です。 かどうか、データ型に適用可能な更新できます`Scale`です。  
+ 特定の列のデータ型の小数点以下桁数を指定します。 scale は、数値の中で小数点より右側の桁数です。 かどうか、データ型に該当する更新できます`Scale`します。  
   
  `Code Page`  
- 列の型のコード ページを指定します。 かどうか、データ型に適用可能な更新できます`Code Page`です。  
+ 列の型のコード ページを指定します。 かどうか、データ型に該当する更新できます`Code Page`します。  
   
 ## <a name="see-also"></a>参照  
  [参照変換](data-flow/transformations/lookup-transformation.md)  

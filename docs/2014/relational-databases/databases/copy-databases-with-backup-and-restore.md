@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
 - restoring databases [SQL Server], previous SQL Server versions
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5901a8fcdd3a2d24b84fe43d5af1fb2b46d56b39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 551677d78685c5e491d5f1c2dd347bc77f37a437
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164893"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>バックアップと復元によるデータベースのコピー
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンを使用して作成したユーザー データベースのバックアップを復元して、新しいデータベースを作成できます。 ただし、以前のバージョンの **を使用して作成された**master **、** model **、および** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で復元することはできません。 また、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のバックアップを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で復元することもできません。  
@@ -42,7 +42,7 @@ ms.locfileid: "36085681"
   
 1.  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のインスタンスにあるコピー元データベースをバックアップします。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを実行しているコンピューターが *コピー元コンピューター*です。  
   
-2.  データベースをコピーするコンピューターに (、*セットアップ先のコンピューター*) のインスタンスに接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でデータベースを復元します。 必要に応じて、コピー元データベースのバックアップに使用したのと同じバックアップ デバイスをコピー先のサーバー インスタンスにも作成します。  
+2.  データベースをコピーするコンピューター (、*セットアップ先のコンピューター*) のインスタンスに接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でデータベースを復元します。 必要に応じて、コピー元データベースのバックアップに使用したのと同じバックアップ デバイスをコピー先のサーバー インスタンスにも作成します。  
   
 3.  コピー元データベースのバックアップをコピー先コンピューターに復元します。 データベースを復元すると、すべてのデータベース ファイルが自動的に作成されます。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36085681"
   
     -   既存のファイルを上書きできない場合は、復元エラーが発生します。  
   
- エラーと復元操作の前に、意図しない結果を避けるために使用することができます、 [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)履歴テーブルを復元するバックアップのデータベースとログ ファイルを確認します。  
+ エラーと、復元操作の前に、意図しない結果を回避するために使用することができます、 [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)履歴テーブルを復元するバックアップにデータベースとログ ファイルを確認します。  
   
 ## <a name="moving-the-database-files"></a>データベース ファイルの移動  
  前に示した理由によりデータベース バックアップ内のファイルをコピー先コンピューターに復元できない場合は、復元のときにファイルを新しい場所に移動する必要があります。 以下に例を示します。  
@@ -106,7 +106,7 @@ ms.locfileid: "36085681"
   
 -   [新しい場所へのファイルの復元 &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [データベース バックアップを復元&#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [データベースのバックアップを復元&#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
  **既存のファイルにファイルとファイル グループを復元するには**  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36085681"
   
  **新しい名前でデータベースを復元するには**  
   
--   [データベース バックアップを復元&#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [データベースのバックアップを復元&#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
  **中断された復元操作を再開するには**  
   

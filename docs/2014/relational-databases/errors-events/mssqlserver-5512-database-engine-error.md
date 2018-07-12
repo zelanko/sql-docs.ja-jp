@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 5512 (Database Engine error)
 ms.assetid: 64e01ddc-fb74-4af0-88cf-9402a6900cb0
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 71f9511f76c908e9c10d54e3590a15a1b7f26d47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 19caaacd36b99cca41f0e8922dcb46c6a3f6667d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084123"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413751"
 ---
 # <a name="mssqlserver5512"></a>MSSQLSERVER_5512
     
@@ -40,6 +39,6 @@ ms.locfileid: "36084123"
  切り捨て操作に失敗しました。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- エラーの原因を特定の Windows 状態コードを参照してください。 この状態コードの詳細については、次を参照してください。、[イベントとエラー メッセージ センター](http://go.microsoft.com/fwlink/?linkid=47660)です。  
+ エラーの原因を特定の Windows 状態コードを参照してください。 この状態コードの詳細については、次を参照してください。、[イベントとエラー メッセージ センター](http://go.microsoft.com/fwlink/?linkid=47660)します。  
   
   

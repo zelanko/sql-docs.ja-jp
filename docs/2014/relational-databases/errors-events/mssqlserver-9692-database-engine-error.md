@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 9692 (Database Engine error)
 ms.assetid: 02399d6e-ab5e-4f30-8a3e-2bb1e8c135b5
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 396f1ae8e711157bc8f6b911997557f68e397c47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d885e4da6d2da28a7e14fd82062e548f8b36b829
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085220"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424941"
 ---
 # <a name="mssqlserver9692"></a>MSSQLSERVER_9692
     
@@ -40,6 +39,6 @@ ms.locfileid: "36085220"
  指定された TCP ポートが、コンピューター上の別のプログラムで使用されています。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 実行`netstat -aon`をどのようなプログラムがポートを使用して決定します。 そのアプリケーションを無効にするか、Service Broker に対して別のポートを指定します。  
+ 実行`netstat -aon`プログラムは、ポートを使用して特定します。 そのアプリケーションを無効にするか、Service Broker に対して別のポートを指定します。  
   
   
