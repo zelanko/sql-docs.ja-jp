@@ -29,7 +29,7 @@ ms.lasthandoff: 05/23/2018
 # <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  セッションごとに実行されたスレッドにより検出されたすべての待機に関する情報を返します。 このビューは、パフォーマンスの問題を診断を使用することができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セッションと、特定のクエリとバッチです。  このビューは [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) に集計されたのと同じ情報を返しますが、 **session_id** 番号もあわせて提供します。
+  セッションごとに実行されたスレッドにより検出されたすべての待機に関する情報を返します。 このビューを使用すると、SQL Serverセッション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパフォーマンスの問題や特定のクエリやバッチを診断することができます。 このビューは [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) に集計されたものと同じ情報を返しますが、 **session_id** 番号もあわせて提供します。
   
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]まで)。  
   
