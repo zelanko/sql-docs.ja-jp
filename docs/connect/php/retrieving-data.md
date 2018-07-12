@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
 クエリで、複数の結果セットを取得する場合、 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)によって次の結果セットに移動できます。  
   
-以降のバージョン 1.1 では、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]、使用することができます[sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md)結果セットに行が含まれているかどうか。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のバージョン 1.1 以降では、[sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) を使用して結果セットに行が含まれているかどうかを見ることができます。
   
 ## <a name="pdosqlsrv-driver"></a>PDO_SQLSRV ドライバー  
 PDO_SQLSRV ドライバー、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]結果セットからデータを取得するため、次のオプションを提供します。  
