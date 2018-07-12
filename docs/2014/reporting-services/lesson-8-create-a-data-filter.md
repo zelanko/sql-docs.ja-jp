@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e3a0f9aac098f7bc9998cc657e937c04b438359
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cdc62c2e2fa4b4a6bfd662c1b20de6287fc8ff86
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278838"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>レッスン 8: データ フィルターを作成する
   親レポートにドリルスルー アクションを追加した後は、子レポート用に定義したデータ テーブル用のデータ フィルターを作成します。  
@@ -39,17 +39,17 @@ ms.locfileid: "36075910"
   
 1.  子レポートを開きます。  
   
-2.  Tablix 内の列見出しを選択を列見出しの上に表示の灰色のセルを右クリックし、をクリックして**Tablix のプロパティ**です。  
+2.  Tablix の列見出しを選択、列ヘッダーの上に表示される灰色のセルを右クリックしをクリックして**Tablix のプロパティ**します。  
   
-3.  をクリックして、**フィルター**  ページで、クリックして**追加**です。  
+3.  をクリックして、**フィルター** ] ページの [クリックして**追加**します。  
   
-4.  **式**フィールドで、をクリックして`ProductID`ドロップダウン リストからです。 これは、フィルターを適用する列です。  
+4.  **式**フィールドで、をクリックして`ProductID`ドロップダウン リストから。 これは、フィルターを適用する列です。  
   
 5.  [等しい] をクリックして (**=**) 内の演算子、**演算子**ドロップダウン リスト。  
   
-6.  次に、式ボタンをクリックして、**値**フィールドで、をクリックして**パラメーター**で、**カテゴリ**領域、およびダブルクリック`productid`で、 **値**領域。 **[式の設定: 値]** フィールドに、 **=Parameters!productid.Value**のような式が表示されます。  
+6.  次の式ボタンをクリックして、**値**フィールドに、をクリックして**パラメーター**で、**カテゴリ**領域、およびダブルクリック`productid`で、 **値**領域。 **[式の設定: 値]** フィールドに、 **=Parameters!productid.Value**のような式が表示されます。  
   
-7.  をクリックして**ok を**と**OK**で再度、 **Tablix のプロパティ** ダイアログ ボックス。  
+7.  をクリックして**ok、** と**OK**で再度、 **Tablix のプロパティ** ダイアログ ボックス。  
   
 8.  .rdlc ファイルを保存します。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "36075910"
   
 1.  ソリューション エクスプローラーで、Default.aspx を展開し、Default.aspx.cs をダブルクリックします。  
   
-2.  パラメーターを受け入れる新しい関数を作成`productid`、整数型を返します、`datatable`オブジェクト、および、次の処理をします。  
+2.  パラメーターを受け取る新しい関数を作成`productid`、整数型を返します、`datatable`オブジェクト、および実行すると、次です。  
   
-    1.  データセットのインスタンスを作成`DataSet2`のステップ 2 で作成した[レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)です。  
+    1.  データセットのインスタンスを作成します`DataSet2`の手順 2. で作成された[レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)します。  
   
     2.  SqlServer データベースへの接続を作成し、 **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」** で定義されたクエリを実行します。  
   
@@ -109,11 +109,11 @@ ms.locfileid: "36075910"
   
 1.  Default.aspx を開きます。  
   
-2.  ReportViewer コントロールを右クリックし、をクリックして**プロパティです。**  
+2.  ReportViewer コントロールを右クリックし、をクリックし、**プロパティ。**  
   
 3.  **プロパティ** ページで、をクリックして、**イベント**アイコン。  
   
-4.  ダブルクリックして、**ドリル スルー**イベント。  
+4.  ダブルクリックして、**ドリルスルー**イベント。  
   
      次に示すブロックに似たイベント ハンドラー セクションがコードに追加されます。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36075910"
   
     1.  *DrillthroughEventArgs* パラメーターから子レポート オブジェクト参照をフェッチする。  
   
-    2.  関数を呼び出し、 `GetPurchaseOrderDetail`  
+    2.  関数を呼び出す `GetPurchaseOrderDetail`  
   
     3.  `PurchaseOrderDetail` DataTable をレポートの対応するデータ ソースにバインドする。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "36075910"
   
 2.  新しい関数を作成します。この関数は、Integer 型の `productid` パラメーターを受け取った後、`datatable` オブジェクトを返し、次の操作を行います。  
   
-    1.  データセットのインスタンスを作成`DataSet2`のステップ 2 で作成した[レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)です。  
+    1.  データセットのインスタンスを作成します`DataSet2`の手順 2. で作成された[レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)します。  
   
     2.  SqlServer データベースへの接続を作成し、 **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」** で定義したクエリを実行します。  
   
@@ -220,11 +220,11 @@ ms.locfileid: "36075910"
   
 1.  Default.aspx を開きます。  
   
-2.  ReportViewer コントロールを右クリックし、をクリックして**プロパティ**です。  
+2.  ReportViewer コントロールを右クリックし、**プロパティ**します。  
   
-3.  **プロパティ** ウィンドウで、をクリックして、**イベント**アイコン。  
+3.  **プロパティ**ウィンドウで、をクリックして、**イベント**アイコン。  
   
-4.  ダブルクリックして、**ドリル スルー**イベント。  
+4.  ダブルクリックして、**ドリルスルー**イベント。  
   
      次のようなイベント ハンドラー セクションがコードに追加されます。  
   

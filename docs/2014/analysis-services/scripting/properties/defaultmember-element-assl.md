@@ -1,5 +1,5 @@
 ---
-title: DefaultMember 要素 (ASSL) |Microsoft ドキュメント
+title: DefaultMember 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DefaultMember element
 ms.assetid: db4eea9f-f7cf-40de-abd0-b62014e7ec2d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71b8b2ecd1d5cd46ea50cceebe2a0105d9b7311f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd074ab38264bf45ad70a96c37a22bc3c3185d4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229682"
 ---
 # <a name="defaultmember-element-assl"></a>DefaultMember 要素 (ASSL)
   親要素の既定のメンバーを識別する多次元式 (MDX) を格納します。  
@@ -64,11 +64,11 @@ ms.locfileid: "36083510"
 ## <a name="remarks"></a>コメント  
  `DefaultMember` 要素は、親要素の既定のメンバーを定義します。 場合`DefaultMember`が指定されていないか、空の文字列に設定されている[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]既定のメンバーとして使用するメンバーを選択します。  
   
- `ManyToManyMeasureGroupDimension` 要素の場合、`DefaultMember` 要素には、`CubeDimensionID` の `ManyToManyMeasureGroupDimension` 要素で識別されたディメンション内のメンバーを指定する MDX 式が格納されます。 MDX 式がに似ていますが、 [StrToMember](/sql/mdx/strtomember-mdx) MDX の関数、CONSTRAINED キーワードを使用で MDX またはユーザー定義関数に含めることはできません。  
+ `ManyToManyMeasureGroupDimension` 要素の場合、`DefaultMember` 要素には、`CubeDimensionID` の `ManyToManyMeasureGroupDimension` 要素で識別されたディメンション内のメンバーを指定する MDX 式が格納されます。 MDX 式と似ています、 [StrToMember](/sql/mdx/strtomember-mdx) MDX 制約付きのキーワードを使用して関数のことで、MDX またはユーザー定義関数を含めることはできません。  
   
  詳細については、「 [既定メンバーの定義](../../multidimensional-models/attribute-properties-define-a-default-member.md)」を参照してください。  
   
- 親に対応する要素`DefaultMember`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.AttributePermission>、 <xref:Microsoft.AnalysisServices.DimensionAttribute>、および<xref:Microsoft.AnalysisServices.PerspectiveAttribute>です。  
+ 親に対応する要素`DefaultMember`分析管理オブジェクト (AMO) オブジェクト モデルは、 <xref:Microsoft.AnalysisServices.AttributePermission>、 <xref:Microsoft.AnalysisServices.DimensionAttribute>、および<xref:Microsoft.AnalysisServices.PerspectiveAttribute>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

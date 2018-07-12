@@ -1,5 +1,5 @@
 ---
-title: XML for Analysis スキーマ行セット |Microsoft ドキュメント
+title: XML for Analysis スキーマ行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 391f3ab14aef3680b9590e73c5bc94cc2e13b3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c8125b3543e6f3c088ad8b7ae7dd5952d52df26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159273"
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis スキーマ行セット
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーには、サーバーの状態、アクティビティ、およびオブジェクトに関するメタデータを返すスキーマ行セットが含まれています。 構造と特性が変化する Analysis Services モデルに接続するクライアント アプリケーションを開発する場合は、メタデータを取得する必要があります。  
@@ -43,7 +43,7 @@ ms.locfileid: "36083522"
 |------------------------|-----------------|  
 |[DISCOVER_CALC_DEPENDENCY 行セット](discover-calc-dependency-rowset.md)|テーブル、列、メジャー、および計算列の式の依存関係に関する情報を返します。<br /><br /> Analysis Services インスタンスに配置されたテーブル モデル、および SharePoint 環境で実行する Excel ブック内の PowerPivot モデルに適用されます。|  
 |[DISCOVER_CONNECTIONS 行セット](discover-connections-rowset.md)|現在サーバー上で開いている接続について、リソースの使用状況とアクティビティに関する情報を提供します。|  
-|[DISCOVER_COMMAND_OBJECTS 行セット](discover-command-objects-rowset.md)|参照先のコマンドによって使用中のオブジェクトに関するリソース使用状況とアクティビティ情報を提供します。|  
+|[DISCOVER_COMMAND_OBJECTS 行セット](discover-command-objects-rowset.md)|参照先のコマンドで使用中のオブジェクトに関するリソース使用状況とアクティビティ情報を提供します。|  
 |[DISCOVER_COMMANDS 行セット](discover-commands-rowset.md)|現在サーバー上で開いている接続について、実行中のコマンド、または最後に実行したコマンドのリソース使用状況とアクティビティに関する情報を提供します。|  
 |[DISCOVER_CSDL_METADATA 行セット](discover-csdl-metadata-rowset.md)|テーブル モデルまたは PowerPivot モデルを利用し、レポートの一部としてソース データを提示できるクライアントにデータ ソースの XML 定義を返します。<br /><br /> Analysis Services インスタンスに配置されたテーブル モデル、および SharePoint 環境で実行する Excel ブック内の PowerPivot モデルに適用されます。|  
 |[DISCOVER_DATASOURCES 行セット](discover-datasources-rowset.md)|サーバーまたは Web サービスで使用できる XMLA プロバイダー データ ソースの一覧を返します。|  
@@ -59,7 +59,7 @@ ms.locfileid: "36083522"
 |[DISCOVER_MEMORYUSAGE 行セット](discover-memoryusage-rowset.md)|サーバーによって割り当てられているさまざまなオブジェクトのメモリ使用量の統計を返します。|  
 |[DISCOVER_OBJECT_ACTIVITY 行セット](discover-object-activity-rowset.md)|サービスが開始されてからのオブジェクトごとのリソース使用量に関する情報を提供します。|  
 |[DISCOVER_OBJECT_MEMORY_USAGE 行セット](discover-object-memory-usage-rowset.md)|オブジェクトによって使用されたメモリ リソースに関する情報を提供します。|  
-|[DISCOVER_PARTITION_DIMENSION_STAT 行セット](discover-partition-dimension-stat-rowset.md)|パーティションに関連付けられているディメンションで統計情報を返します。|  
+|[DISCOVER_PARTITION_DIMENSION_STAT 行セット](discover-partition-dimension-stat-rowset.md)|パーティションに関連付けられているディメンションで統計を返します。|  
 |[DISCOVER_PARTITION_STAT 行セット](discover-partition-stat-rowset.md)|特定のパーティションの集計に関する統計を返します。|  
 |[DISCOVER_PERFORMANCE_COUNTERS 行セット](discover-performance-counters-rowset.md)|指定した 1 つ以上のパフォーマンス カウンターの値を返します。|  
 |[DISCOVER_PROPERTIES 行セット](discover-properties-rowset.md)|指定されたデータ ソースの XMLA プロバイダーによってサポートされている標準プロパティとプロバイダー固有のプロパティに関する情報および値の一覧を返します。|  
@@ -75,11 +75,11 @@ ms.locfileid: "36083522"
 |[DISCOVER_TRANSACTIONS 行セット](discover-transactions-rowset.md)|現在システムで保留中のトランザクションのセットを返します。|  
 |[DISCOVER_XML_METADATA 行セット](discover-xml-metadata-rowset.md)|要求されたオブジェクトについて記述する XML ドキュメントを返します。|  
   
- <sup>1</sup>の MSOLAP データ ソース プロバイダーによっては、ここに表示されているすべてのスキーマ行セットがサポートされている、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA プロバイダー。  
+ <sup>1</sup>の MSOLAP データ ソース プロバイダーで次のとおり、すべてのスキーマ行セットがサポートされている、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA プロバイダー。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services の XMLA による開発](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [動的管理ビューを使用して&#40;Dmv&#41;サービス分析を監視するのには](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [Analysis Services での XMLA による開発](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
+ [動的管理ビューを使用して&#40;Dmv&#41;サービス モニターは分析するには](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [分析データ ソースからのメタデータの取得](../../multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

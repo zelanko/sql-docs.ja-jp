@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services]
 - attribute groups [Master Data Services], about attribute groups
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c158f4ac41d4d30cf1d53adc2ad07d10d55900fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c9fc5570be58590622d2638d23a8cfa0c9288205
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277368"
 ---
 # <a name="attribute-groups-master-data-services"></a>属性グループ (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性グループがエンティティ内の属性の整理に役立ちます。 エンティティ内に多数の属性がある場合、属性グループを使用すると、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションでのエンティティの表示が見やすくなります。  
@@ -43,7 +43,7 @@ ms.locfileid: "36075755"
  属性グループは、 **の** [システム管理] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域で管理します。  
   
 ## <a name="show-or-hide-attribute-groups"></a>属性グループの表示と非表示  
- 属性グループを作成すると、作成者以外のすべてのユーザーに対して自動的に非表示に設定されます。 詳細については、グループを表示する、次を参照してください。 [、ユーザーが、属性グループ表示&#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)です。  
+ 属性グループを作成すると、作成者以外のすべてのユーザーに対して自動的に非表示に設定されます。 グループを表示する詳細については、次を参照してください。[ことをユーザーに、属性グループ表示&#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)します。  
   
  グループ内の特定の属性を非表示にするために、その属性に **[拒否]** の権限を割り当てることができます。 詳細については、「[リーフ権限 (マスター データ サービス)](../../2014/master-data-services/leaf-permissions-master-data-services.md)」または「[統合権限 (マスター データ サービス)](../../2014/master-data-services/consolidated-permissions-master-data-services.md)」を参照してください。  
   

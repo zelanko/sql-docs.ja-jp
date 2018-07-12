@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
 - replication agent profiles [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: deb2e3e2ea03429e2d37288e85592d54e1512af3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ccbb2f6a8912a68573b9e3d67d677e7a92c7e1f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152463"
 ---
 # <a name="work-with-replication-agent-profiles"></a>レプリケーション エージェント プロファイルを操作する
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、レプリケーション エージェント プロファイルを操作する方法について説明します。 各レプリケーション エージェントの動作は、エージェント プロファイルで設定できる一連のパラメーターによって制御されます。 各エージェントには既定のプロファイルがあり、その一部には事前に定義された追加のプロファイルがあります。1 つのエージェントに対しては、1 つのプロファイルのみがアクティブになります。  
@@ -221,9 +221,9 @@ ms.locfileid: "36083658"
   
      これにより、指定された種類のエージェントのプロファイルがすべて返されます。 値に注意してください`profile_name`を使用するプロファイルの結果セットにします。  
   
-2.  エージェント ジョブからエージェントを起動すると場合の値を指定する、エージェントを起動するジョブ ステップを編集`profile_name`後に手順 1. で得た、 **-profilename**コマンド ライン パラメーターです。 詳細については、「[View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)」(レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;) を参照してください。  
+2.  値を指定する、エージェントを開始するジョブ ステップを編集している場合は、エージェントはエージェント ジョブから起動される、`profile_name`後に手順 1. で得た、 **- ProfileName**コマンド ライン パラメーターです。 詳細については、「[View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)」(レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;) を参照してください。  
   
-3.  値は、コマンド プロンプトからエージェントを開始するときに指定`profile_name`後に手順 1. で得た、 **-profilename**コマンド ライン パラメーターです。  
+3.  コマンド プロンプトからエージェントを開始するときにの値を指定`profile_name`後に手順 1. で得た、 **- ProfileName**コマンド ライン パラメーターです。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、 **custom_merge**という名前のマージ エージェント用のカスタム プロファイルを作成して、 **-UploadReadChangesPerBatch** パラメーターの値を変更し、 **-ExchangeType** パラメーターを新しく追加して、作成されたプロファイルに関する情報を返します。  
@@ -282,7 +282,7 @@ ms.locfileid: "36083658"
   
 2.  <xref:Microsoft.SqlServer.Replication.AgentProfile> クラスのインスタンスを作成します。 プロファイルの名前を <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> に設定し、手順 1. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>に設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが戻る場合`false`、指定した名前が正しくないか、プロファイルがサーバー上に存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが戻る場合`false`、指定した名前が誤ってまたはプロファイルがサーバー上に存在しません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> プロパティが <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>に設定されていることを確認します。これは、顧客のプロファイルを表します。 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> の値が <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>であるプロファイルは削除しないでください。  
   

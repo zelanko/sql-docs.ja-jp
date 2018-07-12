@@ -1,5 +1,5 @@
 ---
-title: AggregationType 要素 (ASSL) |Microsoft ドキュメント
+title: AggregationType 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationType element
 ms.assetid: c1393bc6-d715-4397-8bc5-82abdb275330
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2241c85d9cc83e4cf48affacef10021eec7bc94
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f7c95f9566f483ec7a047ceedd074237f9ff5f7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183219"
 ---
 # <a name="aggregationtype-element-assl"></a>AggregationType 要素 (ASSL)
   によって格納される集計の種類を定義、[パーティション](../objects/partition-element-assl.md)要素。  
@@ -68,7 +68,7 @@ ms.locfileid: "36083285"
 |*Table*|集計はテーブルに格納されます。|  
 |*UserDefined*|集計はユーザーが定義します。|  
   
- 許可される値に対応する列挙`AggregationType`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AggregationInstance>します。  
+ 許容された値に対応する列挙体`AggregationType`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AggregationInstance>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

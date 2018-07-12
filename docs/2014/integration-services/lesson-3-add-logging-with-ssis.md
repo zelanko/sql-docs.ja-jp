@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: ログ機能の追加 |Microsoft ドキュメント'
+title: 'レッスン 3: ログ機能の追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 caps.latest.revision: 24
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be6cb6bb8edfa30ee33ed0431dbf33f11470cd0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4ad03f67a8a386b3c42697d1060910c277580c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164883"
 ---
 # <a name="lesson-3-adding-logging"></a>レッスン 3 : ログ機能の追加
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージの実行を監視し、問題を解決するためのログ機能があります。このログを使用して、タスクやコンテナー イベントを追跡できます。 柔軟性に優れたこのログ機能では、パッケージごと、またはパッケージ内のタスクやコンテナーごとにログ記録を使用することができます。 ログを記録するイベントを複数選択すると、1 つのパッケージに対して複数のログが作成されます。  
@@ -36,10 +36,10 @@ ms.locfileid: "36083450"
   
 -   XML ファイル  
   
- このレッスンで作成したパッケージのコピーを作成する[レッスン 2: ループを追加する](lesson-2-adding-looping-with-ssis.md)です。 この新しいパッケージを操作しながら、パッケージの実行中に特定のイベントを監視するログ記録を追加し、構成します。 前のレッスンで完了していないものがある場合は、チュートリアルに含まれている、レッスン 2 を完了した状態のパッケージをコピーすることもできます。  
+ このレッスンで作成したパッケージのコピーを作成します[レッスン 2: ループを追加する](lesson-2-adding-looping-with-ssis.md)します。 この新しいパッケージを操作しながら、パッケージの実行中に特定のイベントを監視するログ記録を追加し、構成します。 前のレッスンで完了していないものがある場合は、チュートリアルに含まれている、レッスン 2 を完了した状態のパッケージをコピーすることもできます。  
   
 > [!IMPORTANT]  
->  このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 インストールおよび展開方法の詳細についての**AdventureWorksDW2012**、 [CodePlex の Reporting Services Product Samples](http://go.microsoft.com/fwlink/p/?LinkID=52691)です。  
+>  このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 インストールおよび展開方法の詳細について**AdventureWorksDW2012**、 [CodePlex の Reporting Services Product Samples](http://go.microsoft.com/fwlink/p/?LinkID=52691)します。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
  このレッスンの内容は次のとおりです。  

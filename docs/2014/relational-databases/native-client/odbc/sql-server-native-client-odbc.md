@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client (ODBC) |Microsoft ドキュメント
+title: SQL Server Native Client (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - ODBC, about SQL Server Native Client ODBC driver
 ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a70dbbdb338673288ee6f3cb51c9df02e01a0f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: da24388b12c83931ea2a4af9b525e5e2030f6940
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071855"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426301"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
   ODBC は、リレーショナル データベースまたは索引順次アクセス方式 (ISAM) データベースのデータへのアクセスに使用するアプリケーション プログラミング インターフェイス (API) の標準的な定義です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と通信する C および C++ アプリケーションの作成に使用されるネイティブ API の 1 つとして、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを介して ODBC をサポートしています。  
@@ -43,9 +41,9 @@ ms.locfileid: "36071855"
   
 -   [SQL Server Native Client ODBC ドライバー アプリケーションの作成](creating-a-driver-application.md)  
   
--   [SQL Server との通信&#40;ODBC&#41;](../../native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+-   [SQL Server と通信する&#40;ODBC&#41;](../../native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
--   [クエリを実行する&#40;ODBC&#41;](../../native-client-odbc-queries/executing-queries-odbc.md)  
+-   [クエリの実行&#40;ODBC&#41;](../../native-client-odbc-queries/executing-queries-odbc.md)  
   
 -   [結果の処理&#40;ODBC&#41;](../../native-client-odbc-results/processing-results-odbc.md)  
   
@@ -77,7 +75,7 @@ ms.locfileid: "36071855"
   
 -   [スパース列のサポート&#40;ODBC&#41;](sparse-columns-support-odbc.md)  
   
--   [SQL Server Native Client &#40;ODBC&#41;参照](../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
+-   [SQL Server Native Client &#40;ODBC&#41;リファレンス](../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
   
 -   [ODBC の使用法に関するトピック](../../native-client-odbc-how-to/odbc-how-to-topics.md)  
   

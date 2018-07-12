@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.viewfacet.f1
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4921f0f9d80fe32c517297cf0288c3ff96c4de38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7299af1da6bd0a1e77a52163d514d8fc48a44f90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184229"
 ---
 # <a name="view-facets-dialog-box"></a>[ファセットの表示] ダイアログ ボックス
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ファセットのプロパティを表示できます。 ファセットのプロパティは、ファセットの作成時に定義され、このダイアログ ボックスでは変更できません。  
@@ -30,7 +30,7 @@ ms.locfileid: "36083894"
  **ファセット**  
  現在選択されているファセットの名前。  
   
- **description**  
+ **[説明]**  
  ファセットの概要を説明します。  
   
  **[ファセットのプロパティ]**  

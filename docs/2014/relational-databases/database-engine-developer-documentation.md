@@ -1,5 +1,5 @@
 ---
-title: 開発者&#39;ガイド (データベース エンジン) |Microsoft ドキュメント
+title: 開発者&#39;ガイド (データベース エンジン) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e414fe4737caa5c1e9e862555ecd9be3286b592a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6a611237e283ad10a6dfd8433d08ef2b3708dd6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258908"
 ---
 # <a name="developer39s-guide-database-engine"></a>開発者&#39;ガイド (データベース エンジン)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、データベース アプリケーションの開発、管理、および制御のための豊富なツールが用意されています。  
@@ -58,9 +58,9 @@ ms.locfileid: "36076230"
   
 ## <a name="see-also"></a>参照  
  [Data Mining Programming (データ マイニングのプログラミング)](../analysis-services/dev-guide/data-mining-programming.md)   
- [開発者ガイド 』 &#40;Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
- [開発者ガイド 』 &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
- [開発者ガイド 』&#40;レプリケーション&#41;](replication/concepts/replication-developer-documentation.md)   
- [開発者ガイド 』 &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
+ [Developer's Guide &#40;Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
+ [Developer's Guide &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [Developer's Guide&#40;レプリケーション&#41;](replication/concepts/replication-developer-documentation.md)   
+ [Developer's Guide &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 構成ファイルを使用して分散再生のインストール |Microsoft ドキュメント
+title: 構成ファイルを使用して分散再生のインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3259232c-6963-4c9c-9d10-ae42aa262eef
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 357e4a9fd289d4c90f19456c7828e6941d00d6f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4167456a5d1b59dd44451dda26f3ccb56e417a56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155693"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>構成ファイルを使用した 分散再生のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには、ユーザー入力およびシステムの既定値に基づいて構成ファイルを生成する機能が用意されています。 管理ツールをインストールするように指定すると、構成ファイルを使用して、3 つの 分散再生コンポーネント (管理ツール、分散再生コントローラー、および分散再生クライアント) を配置できます。 SQL Server セットアップでは、分散再生ユーティリティ コンポーネントのインストール、修復、およびアンインストールがサポートされています。  
@@ -30,7 +30,7 @@ ms.locfileid: "36084013"
   
 -   コマンド ライン値によって、構成ファイル内の値が上書きされます。  
   
- 構成ファイルを使用する方法の詳細については、次を参照してください。 [SQL Server 2014 を使用したインストール、構成ファイル](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)です。  
+ 構成ファイルを使用する方法の詳細については、次を参照してください。 [SQL Server 2014 を使用したインストール、構成ファイル](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)します。  
   
 > [!IMPORTANT]  
 >  分散再生をインストールした後、コントローラー コンピューターとクライアント コンピューターのファイアウォール ルールを作成し、対象サーバー上で各クライアント コンピューターの権限を付与する必要があります。 詳細については、「 [インストール後の手順の実行](../../tools/distributed-replay/complete-the-post-installation-steps.md)」を参照してください。  

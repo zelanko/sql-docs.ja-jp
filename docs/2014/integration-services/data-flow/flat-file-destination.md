@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledest.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 624815a71ccd642cda1ee11db39ca08994cb6dff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 60337914cab72631b4a6c647af15ce21bbbcfdcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239202"
 ---
 # <a name="flat-file-destination"></a>フラット ファイル変換先
   フラット ファイル変換先は、データをテキスト ファイルに書き込みます。 テキスト ファイルには、区切り形式、固定幅形式、行区切り記号を使用した固定幅形式、または幅合わせしない形式を使用できます。  
@@ -48,9 +48,9 @@ ms.locfileid: "36076017"
   
  **[フラット ファイル ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[フラット ファイル変換先エディター&#40;接続マネージャー] ページ&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [フラット ファイル変換先エディター&#40;接続マネージャー ページ&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [[フラット ファイル変換先エディター &#40;[マッピング] ページ&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [フラット ファイル変換先エディター&#40;マッピング ページ&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   

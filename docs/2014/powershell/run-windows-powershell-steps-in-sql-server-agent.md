@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 58837a63969baff47ff79bcebb78b6dd24deb31e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ff2df6e300c3c422215f459cf258225632bd87eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182756"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>SQL Server エージェントでの Windows PowerShell ステップの実行
   SQL Server エージェントを使用して、スケジュールされた時刻に SQL Server PowerShell スクリプトを実行します。  
@@ -33,7 +33,7 @@ ms.locfileid: "36083425"
   
 1.  PowerShell ジョブ ステップを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サブシステムに `sqlps` ユーティリティを実行させる。このユーティリティは、PowerShell 2.0 を起動し、`sqlps` モジュールをインポートする。  
   
-2.  コマンド プロンプト ジョブ ステップを使用して PowerShell.exe を実行し、インポートするスクリプトを指定、`sqlps`モジュール。  
+2.  コマンド プロンプト ジョブ ステップを使用して、PowerShell.exe を実行して、インポートするスクリプトを指定、`sqlps`モジュール。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
   

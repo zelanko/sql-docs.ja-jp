@@ -1,5 +1,5 @@
 ---
-title: ParentObject 要素 (XMLA) |Microsoft ドキュメント
+title: ParentObject 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ParentObject element
 ms.assetid: f821f8f1-554a-4f16-bf09-262a9448e304
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1fae76d5f4c4dc1e3fbd64ca456af60719de4aaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c9795913ee483aa3b89b8f9fac88ec9515acf834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259168"
 ---
 # <a name="parentobject-element-xmla"></a>ParentObject 要素 (XMLA)
-  親によって定義されているオブジェクトの作成に使用する親オブジェクトの識別子を含む[作成](../xml-elements-commands/create-element-xmla.md)要素。  
+  親によって定義されるオブジェクトの作成に使用する親オブジェクトの識別子を含む[作成](../xml-elements-commands/create-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

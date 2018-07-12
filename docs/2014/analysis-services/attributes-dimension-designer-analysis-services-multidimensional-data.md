@@ -1,5 +1,5 @@
 ---
-title: 属性 (ディメンション構造 タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: 属性 (ディメンション構造 タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.attributespane.f1
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 289127d0d4bb155045c530cc49b336048a80034c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 693eb878c4e16e2b25dc959ce54a1e908c0d50d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161623"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>[属性] ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
-  このペインを使用すると、選択したディメンションに関連付けられている属性を管理できます。 属性をこのペインから **[階層]** ペインにドラッグすると、階層およびレベルを作成できます。 詳細については、次を参照してください。[階層&#40;ディメンション構造 タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)です。  
+  このペインを使用すると、選択したディメンションに関連付けられている属性を管理できます。 属性をこのペインから **[階層]** ペインにドラッグすると、階層およびレベルを作成できます。 詳細については、次を参照してください。[階層&#40;ディメンション構造 タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)します。  
   
  属性を作成するには、一覧モード、ツリー モード、またはビュー モードで、 **[データ ソース ビュー]** ペインから **[属性]** ペインに列をドラッグします。 属性を削除するには、ショートカット メニューの **[削除]** をクリックします。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36083753"
 ## <a name="grid-mode-options"></a>グリッド モードのオプション  
  グリッド モードで属性を表示すると、次に示す列にアクセスできます。  
   
- **Name**  
+ **名前**  
  属性の名前を表示します。  
   
  **使用方法**  
@@ -66,7 +66,7 @@ ms.locfileid: "36083753"
 |Parent|親子リレーションシップにおける親属性を表します。 このリレーションシップの子属性は、常にキー属性である必要があります。|  
 |[AccountType]|勘定科目の種類の属性を表します。 これは、メジャーの集計関数が "ByAccount" に設定されているときに、サーバーまたはエンジンにより使用されます。|  
   
- **Type**  
+ **型**  
  属性の型を設定します。 下向きの矢印をクリックして、選択します。  
   
  **キー列**  

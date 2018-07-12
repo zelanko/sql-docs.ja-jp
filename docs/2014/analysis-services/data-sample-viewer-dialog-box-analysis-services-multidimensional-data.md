@@ -1,5 +1,5 @@
 ---
-title: データ サンプル ビューアー ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: ユーザー所有データ サンプル ビューアー ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasampleviewerdialog.f1
 helpviewer_keywords:
 - Data Sample Viewer dialog box
 ms.assetid: 590383cd-30b3-4e3f-a1cf-3f9ec7ba48e3
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 20175675c684b9618bcbf6f588d645399b68af80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 802ec623fc365ce9814c31afdc6626355f83b5ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183419"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>[データ サンプル ビューアー] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [データ サンプル ビューアー (最初の 1000 個のレコード)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、新しいキューブのメジャーを提供するために使用される、ファクト テーブルの最初の 1,000 レコードを表示できます。  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 16994bcc5c3b4f2be0617f4e4d4521062bd850a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ebf2117570a343c740eaaaa964d956d2c8faede2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158789"
 ---
 # <a name="manage-a-cdc-instance"></a>CDC インスタンスの管理
   CDC デザイナー コンソールを使用して、作成したインスタンスに関する情報を表示し、インスタンスの操作を管理することができます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36084152"
   
  CDC インスタンスをリセットし、変更テーブルに書き込まれた変更を削除することを確認するには、確認のダイアログ ボックスで **[OK]** をクリックします。  
   
- **Delete**  
+ **削除**  
  CDC インスタンスを完全に削除するには、 **[削除]** をクリックします。 このオプションは、CDC インスタンスが停止しているときにのみ使用できます。  
   
  CDC インスタンスを削除することを確認するには、確認のダイアログ ボックスで **[OK]** をクリックします。  
@@ -66,7 +66,7 @@ ms.locfileid: "36084152"
   
  CDC インスタンスの情報を表示するときは、次に示すビューアーのタブを使用できます。 これらのタブに表示される情報は読み取り専用です。  
   
- **Status**  
+ **ステータス**  
  このタブには、CDC インスタンスの現在の状態に関する情報と統計が表示されます。 このタブには、次の情報が含まれています。  
   
 -   **[状態]**: CDC インスタンスの現在の状態を示すアイコンです。 これらの状態を次に示します。  

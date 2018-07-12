@@ -1,5 +1,5 @@
 ---
-title: UTF8 文字列ユーザー定義データ型 (UDT) |Microsoft ドキュメント
+title: UTF8 文字列ユーザー定義データ型 (UDT) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fcb411e3947de3e939a3f7e328c80b0605bf47d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e9ffea3675f13320d68d5b829cde29272c83f28d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259178"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 文字列ユーザー定義データ型 (UDT)
   SQL Server の UTF8String サンプルでは、ユーザー定義データ型の実装について示しています。 このサンプルでは、データベースの型システムを拡張して UTF-8 でエンコードされた値のストレージを提供する UTF-8 ユーザー定義データ型の実装について示します。 このデータ型では、Unicode 文字列と UTF-8 との変換を行うコードの実装も行います。  
@@ -53,7 +53,7 @@ ms.locfileid: "36076050"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要があります`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36076050"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-10. コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、として保存`test.sql`サンプル ディレクトリにします。  
+10. コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、保存`test.sql`サンプル ディレクトリにします。  
   
 11. 次のコマンドを使用してテスト スクリプトを実行します。  
   

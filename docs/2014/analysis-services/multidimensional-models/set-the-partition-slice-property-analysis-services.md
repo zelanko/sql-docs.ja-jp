@@ -1,5 +1,5 @@
 ---
-title: パーティション スライス プロパティ (Analysis Services) の設定 |Microsoft ドキュメント
+title: パーティション スライス プロパティ (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b122622e4bd90f9b78e994a5d5aba55f33bc120d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 539cef78d7c9f9333688f4db1e5fbf35461479ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230082"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>パーティション スライス プロパティの設定 (Analysis Services)
   データ スライスとは、該当するパーティションのデータに対する直接的なクエリを円滑に行うための重要な最適化機能です。 Slice プロパティを明示的に設定すると、MOLAP パーティションと HOLAP パーティションに対して生成される既定のスライスがオーバーライドされるため、クエリのパフォーマンスが向上します。 また、Slice プロパティによって、パーティションの処理時に追加の検証チェックが提供されます。  
@@ -47,11 +47,11 @@ ms.locfileid: "36083738"
 > [!NOTE]  
 >  動的 MDX 関数 ([Generate (MDX)](/sql/mdx/generate-mdx) または [Except (MDX)](/sql/mdx/except-mdx-function) など) はパーティションの Slice プロパティでサポートされていないことに注意してください。 明示的な組またはメンバー参照を使用して、スライスを定義する必要があります。  
 >   
->  使用するのではなく、たとえば、 [:&#40;範囲&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx)関数の範囲を定義する、特定の年で各メンバーを列挙する必要があります。  
+>  使用してなどのではなく、 [:&#40;範囲&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx)範囲を定義する関数を特定の年で各メンバーを列挙する必要があります。  
 >   
->  複雑なスライスを定義する必要がある場合は、XMLA Alter スクリプトを使用して、スライスで組を定義することをお勧めします。 Ascmd コマンド ライン ツールまたは SSIS のいずれかのどちらを使用することができますし、 [Analysis Services DDL 実行のタスク](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)スクリプトを実行し、パーティションを処理する前の直前に指定したメンバーのセットを作成するタスク。  
+>  複雑なスライスを定義する必要がある場合は、XMLA Alter スクリプトを使用して、スライスで組を定義することをお勧めします。 Ascmd コマンド ライン ツールまたは SSIS を使用する、 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)タスク、スクリプトを実行し、パーティションを処理する前にすぐに、指定したメンバーのセットを作成します。  
   
 ## <a name="see-also"></a>参照  
- [作成し、ローカル パーティションを管理&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+ [作成およびローカル パーティションの管理&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

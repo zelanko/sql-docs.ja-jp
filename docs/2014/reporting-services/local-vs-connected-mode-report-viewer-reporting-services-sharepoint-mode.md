@@ -1,5 +1,5 @@
 ---
-title: レポート ビューアーでのローカル モードと接続モードのレポートをレポート ビューアー (Reporting Services の SharePoint モード) の |Microsoft ドキュメント
+title: レポート ビューアーでのローカル モードと接続モードのレポート ビューアー (Reporting Services の SharePoint モード) レポート |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b971bd46283911b81449565e5ad9410912ed456a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1094375d1c911934255878b0e8af6eb7174a761
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157803"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>レポート ビューアーでのローカル モードと接続モードのレポート (Reporting Services の SharePoint モード)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートは、いずれかで実行するように構成できます*ローカル モード*または*接続モード*、どの活用して、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバー。 代わりに、データ拡張機能でローカル モード レポートがサポートされている場合は、レポート ビューアーを使用して SharePoint から直接レポートを表示できます。 この方法は、 *ローカル モード*と呼ばれます。 以前のバージョンの[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、SharePoint ファームに接続する必要が、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポートを表示できるので、レポート ビューアー コントロールの SharePoint モードで、サーバーが構成をレポートします。 この方法は、 *リモート モード* または *接続モード*と呼ばれます。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートは、いずれかで実行するように構成できる*ローカル モード*または*接続モード*を活用して、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバー。 代わりに、データ拡張機能でローカル モード レポートがサポートされている場合は、レポート ビューアーを使用して SharePoint から直接レポートを表示できます。 この方法は、 *ローカル モード*と呼ばれます。 以前のバージョンの[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、SharePoint ファームに接続する必要が、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポートを表示できるレポートのため、レポート ビューアー コントロールの SharePoint モードで、サーバーが構成されます。 この方法は、 *リモート モード* または *接続モード*と呼ばれます。  
   
- *ローカル モード*がない[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバー。 インストールする必要があります、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]が SharePoint 製品用アドイン[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバーが必要です。 ローカル モードでは、ユーザーはレポートを表示できますが、サブスクリプションやデータ警告などのサーバー側機能にはアクセスできません。  
+ *ローカル モード*がない[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバー。 インストールする必要があります、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]は、SharePoint 製品用アドイン[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバーが必要です。 ローカル モードでは、ユーザーはレポートを表示できますが、サブスクリプションやデータ警告などのサーバー側機能にはアクセスできません。  
   
 ||  
 |-|  
@@ -39,15 +39,15 @@ ms.locfileid: "36083814"
 -   [SharePoint 2010 でのローカル モード レポートの作成](#bkmk_local_mode_sharepoint2010)  
   
 ##  <a name="bkmk_local_vs_connected"></a> ローカル モードと接続モードおよびサポートされる拡張機能  
- **ローカル モード:** ローカル モードをサポートしているデータ拡張機能を使用している場合は、レポート ビューアーによって SharePoint から直接レポートが表示されます。 *ローカル モード*がない[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバー。 インストールする必要があります、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]が SharePoint 製品用アドイン[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバーが必要です。 ローカル モードでは、ユーザーはレポートを表示できますが、サブスクリプションやデータ警告などのサーバー側機能には **アクセスできません** 。  
+ **ローカル モード:** ローカル モードをサポートしているデータ拡張機能を使用している場合は、レポート ビューアーによって SharePoint から直接レポートが表示されます。 *ローカル モード*がない[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバー。 インストールする必要があります、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]は、SharePoint 製品用アドイン[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバーが必要です。 ローカル モードでは、ユーザーはレポートを表示できますが、サブスクリプションやデータ警告などのサーバー側機能には **アクセスできません** 。  
   
- **接続モード**もという*リモート モード*が必要です、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバーで SharePoint モードでは、レポート ビューアー コントロールがレポートを表示できるように、SharePoint ファームに接続されている.  
+ **接続モード**とも呼ばれる、*リモート モード*が必要です、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードのレポート ビューアー コントロールがレポートを表示できるように、SharePoint ファームに接続されているレポート サーバー.  
   
  ローカル モード レポートをサポートしているデータ処理拡張機能の一覧を次に示します。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 2010 レポート拡張機能。 Access Services の詳細については、「 [Access Services と SQL Reporting Services の併用: SQL Server 2008 R2 Reporting Services アドインのインストール (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686)」を参照してください。  
   
--   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint リスト データ拡張機能。 SharePoint リスト データ拡張機能の詳細については、次を参照してください[Reporting Services によってサポートされるデータ ソース&#40;SSRS。&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+-   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint リスト データ拡張機能。 SharePoint リスト データ拡張機能の詳細については、次を参照してください[Reporting Services でサポートされるデータ ソース&#40;SSRS。&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
  カスタム データ処理拡張機能を開発して、ローカル モードをサポートすることもできます。 詳細については、「 [Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md)」を参照してください。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36083814"
  詳細については、「 [Access Services と SQL Reporting Services の併用: SQL Server 2008 R2 Reporting Services アドインのインストール (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686) 」および「 [Enable-SPSessionStateService](http://technet.microsoft.com/library/ff607857\(v=office.15\).aspx)」を参照してください。  
   
 ## <a name="connected-mode"></a>または  
- ADS 拡張機能の使用に関する最新情報について[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]接続モードを参照してください[Access Services レポートの SharePoint サイトで表示エラー データ拡張機能「ADS」](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)です。  
+ ADS 拡張機能の使用に関する最新情報について[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]接続モードを参照してください[Access Services レポートの SharePoint サイトに示さエラー データ拡張機能「ADS」](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)します。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services でサポートされるデータ ソース&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  

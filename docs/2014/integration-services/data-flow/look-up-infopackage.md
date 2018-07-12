@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7f217126c83e1bc4f81971df3c3e7b5044f08171
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce2da77e51370960d433981e28c32c5e7c4e55cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151323"
 ---
 # <a name="look-up-infopackage"></a>[インフォパッケージの参照]
   SAP Netweaver BW システムで定義されたインフォパッケージを参照する場合、 **[インフォパッケージの参照]** ダイアログ ボックスを使用します。 インフォパッケージの一覧が表示されたら、目的のインフォパッケージを選択します。変換先の関連するオプションに必要な値が設定されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "36083936"
  **インフォパッケージ**  
  SAP Netweaver BW システムで定義された InfoPackage の名前を表示します。  
   
- **Type**  
+ **型**  
  インフォパッケージの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
 |値|説明|  
@@ -69,7 +69,7 @@ ms.locfileid: "36083936"
 |Attr.|属性データ。|  
 |テキスト|テキスト。|  
   
- **description**  
+ **[説明]**  
  インフォパッケージの説明を表示します。  
   
  **インフォソース**  

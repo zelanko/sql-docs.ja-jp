@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full differential backups [SQL Server]
 - database backups [SQL Server], full differential backups
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59dc50f9d3e72e7591d512ab98c5731e2cc6d5c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 595470b98b16cf955d2456891dac2284a94508c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160933"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>データベースの差分バックアップの作成 (SQL Server)
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、データベースの差分バックアップを作成する方法について説明します。  
@@ -55,7 +54,7 @@ ms.locfileid: "36083431"
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
--   データベースの差分バックアップを作成するには、データベースの以前の完全バックアップが存在している必要があります。 選択したデータベースをバックアップしたことがない場合は、差分バックアップを作成する前にデータベースの完全バックアップを実行してください。 詳細については、データベースの完全バックアップの作成 [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)を使用してデータベースの差分バックアップを作成します。  
+-   データベースの差分バックアップを作成するには、データベースの以前の完全バックアップが存在している必要があります。 選択したデータベースをバックアップしたことがない場合は、差分バックアップを作成する前にデータベースの完全バックアップを実行してください。 詳細については、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)」を参照してください。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -85,7 +84,7 @@ ms.locfileid: "36083431"
 5.  **[バックアップの種類]** ボックスの一覧の **[差分]** を選択します。  
   
     > [!IMPORTANT]  
-    >  ときに**差分**が選択されていることを確認、**バックアップのみコピー**チェック ボックスはオフです。  
+    >  ときに**差分**が選択されていることを確認、**バックアップのみコピー**チェック ボックスをオフします。  
   
 6.  **[バックアップ コンポーネント]** で、 **[データベース]** をクリックします。  
   
