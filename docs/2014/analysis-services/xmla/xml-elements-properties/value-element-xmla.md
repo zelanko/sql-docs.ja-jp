@@ -1,5 +1,5 @@
 ---
-title: 値の要素 (XMLA) |Microsoft ドキュメント
+title: 要素 (XMLA) の値 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Value element
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7a422298e8d1b77f3d036b4cea5761dc6dc6dde4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8defb7fe2115bd1ea9ccb7b3f23b0717db8b9aef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263254"
 ---
 # <a name="value-element-xmla"></a>Value 要素 (XMLA)
-  目的の値が含まれています、[属性](attribute-element-xmla.md)で追加する要素、[挿入](../xml-elements-commands/insert-element-xmla.md)コマンド、または[セル](cell-element-xmla.md)要素で更新する、 [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)コマンド。  
+  目的の値が含まれています、[属性](attribute-element-xmla.md)によって追加される要素、[挿入](../xml-elements-commands/insert-element-xmla.md)コマンド、または[セル](cell-element-xmla.md)によって更新される要素、 [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)コマンド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36071954"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `Attribute` 要素の場合、`Value` 要素は、`Insert` コマンドがコミットされた後にメンバーが含む値としての目的の値を含みます。 メンバーの挿入の詳細については、次を参照してください。[挿入、更新、および削除するメンバー &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)です。  
+ `Attribute` 要素の場合、`Value` 要素は、`Insert` コマンドがコミットされた後にメンバーが含む値としての目的の値を含みます。 メンバーの挿入の詳細については、次を参照してください。[挿入、更新、および削除するメンバー &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)します。  
   
  `Cell` 要素の場合、`Value` 要素は、`UpdateCells` コマンドがコミットされた後にセルが含む値としての目的の値を含みます。 そのセルの書き戻しテーブルに格納される実際の値は、セルの元の値と目的の値との差異です。  
   

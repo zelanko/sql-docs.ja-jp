@@ -1,5 +1,5 @@
 ---
-title: 標準アクションの追加 |Microsoft ドキュメント
+title: 標準アクションの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d0540fc8cee3dff44cd7e2baf9115cf817e3ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47b13520762bd1ffc23f9bc466b82090fa60d8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165533"
 ---
 # <a name="add-a-standard-action"></a>標準アクションの追加
   アクションをデータベースに追加するには、キューブ デザイナーの [アクション] ビューを使用します。 このビューには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。 作成されたアクションは、関連キューブの再処理後、使用可能になります。 詳細については、「 [Analysis Services オブジェクトの処理](processing-analysis-services-objects.md)」を参照してください。  
@@ -76,7 +76,7 @@ ms.locfileid: "36073360"
         > [!NOTE]  
         >  **[アプリケーション]** で指定した名前と一致するアクションのみを返すスキーマの行セットをクライアント アプリケーションが明示的に制限する場合を除き、独自のアクションがサーバーに返されることはありません。  
   
-    -   **アクション コンテンツ**URL の種類を使用している場合は、引用符で囲むなどのインターネット アドレスを囲む"http://www.adventure-works.com"です。  
+    -   **アクションの内容**、URL の種類を使用している場合、インターネット アドレスをたとえば、引用符で囲みます"http://www.adventure-works.com"。  
   
     -   **[説明]** には、アクションの説明を入力します。  
   

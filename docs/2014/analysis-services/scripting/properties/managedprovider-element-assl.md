@@ -1,5 +1,5 @@
 ---
-title: ManagedProvider 要素 (ASSL) |Microsoft ドキュメント
+title: ManagedProvider 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ManagedProvider element
 ms.assetid: ed5a1077-20a4-40b9-b62d-0db0d53b9624
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe2bb53abd8a528fa9ca5e1b685591bc57f162e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5a4b2d94d0d3abb681be2b288ce3a5ca3b371e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180849"
 ---
 # <a name="managedprovider-element-assl"></a>ManagedProvider 要素 (ASSL)
-  派生した要素で使用されるマネージ プロバイダーの名前を含む、[データソース](../data-type/datasource-data-type-assl.md)データ型。  
+  派生した要素で使用されるマネージ プロバイダーの名前を含む、 [DataSource](../data-type/datasource-data-type-assl.md)データ型。  
   
 ## <a name="syntax"></a>構文  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36075823"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- データ ソースでマネージ プロバイダーが使用される場合、`ManagedProvider` 要素にはマネージ プロバイダーの名前が格納されます。  
+ データ ソースでマネージド プロバイダーが使用される場合、`ManagedProvider` 要素にはマネージド プロバイダーの名前が格納されます。  
   
 ## <a name="see-also"></a>参照  
  [要素名を指定&#40;ASSL&#41;](name-element-assl.md)   

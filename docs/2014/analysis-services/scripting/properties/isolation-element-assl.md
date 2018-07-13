@@ -1,5 +1,5 @@
 ---
-title: Isolation 要素 (ASSL) |Microsoft ドキュメント
+title: Isolation 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Isolation element
 ms.assetid: 28c98c6f-668e-4547-8d25-127cc3995a7d
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cdcbf79ccd1281c9f3dbaa109b3c77214ced22bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a21593d360342dc703e1da45d50b4ddff74241a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257228"
 ---
 # <a name="isolation-element-assl"></a>Isolation 要素 (ASSL)
-  派生した要素の分離レベルを示す、[データソース](../data-type/datasource-data-type-assl.md)データ型。  
+  派生した要素の分離レベルを示します、 [DataSource](../data-type/datasource-data-type-assl.md)データ型。  
   
 ## <a name="syntax"></a>構文  
   

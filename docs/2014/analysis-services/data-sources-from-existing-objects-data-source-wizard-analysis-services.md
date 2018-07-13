@@ -1,5 +1,5 @@
 ---
-title: 既存のオブジェクト (データ ソース ウィザード) (Analysis Services) からのデータ ソース |Microsoft ドキュメント
+title: データ ソースから既存のオブジェクト (データ ソース ウィザード) (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.specifyobject.f1
 ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60f07885aff1d323cb2627e933330af3f35b8d45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39ae96a5ebc4849e61fe2a2630702c2a8cf16111
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180999"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>[既存のオブジェクトのデータ ソース] (データ ソース ウィザード) (Analysis Services)
   **[既存のオブジェクトのデータ ソース]** ページを使用すると、新しいデータ ソースの基となる既存のデータ ソースまたはプロジェクトを指定できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36074961"
   
 ## <a name="see-also"></a>参照  
  [データ ソース ウィザードの F1 ヘルプ&#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
- [多次元モデル内のデータ ソース](multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [多次元モデルのデータ ソース](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [サポートされるデータ ソース&#40;SSAS 多次元&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

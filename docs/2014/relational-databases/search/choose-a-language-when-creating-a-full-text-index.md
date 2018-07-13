@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - full-text indexes [SQL Server], languages
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d6f87d5916bcda7db3ff52fcca222d2c3f21816
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3ce5d56ec84c1dcf33e3a915a8fa8bf94b1cdced
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268678"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>フルテキスト インデックス作成時の言語の選択
   フルテキスト インデックスを作成する際には、列レベルの言語をインデックス列に対して指定する必要があります。 指定した言語の [ワード ブレーカーとステマー](configure-and-manage-word-breakers-and-stemmers-for-search.md) が、列のフルテキスト クエリで使用されます。 フルテキスト インデックスの作成時に列の言語を選択する際には、注意点が 2 つあります。 これらの注意点は、テキストをトークン化する方法と、Full-Text Engine によるインデックス作成の方法にかかわるものです。  
@@ -40,7 +39,7 @@ ms.locfileid: "36071904"
  ここでは、ワード ブレーカーとステミング機能の概要を示し、列レベルの言語の LCID がフルテキスト検索で使用されるしくみについて説明します。  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>ワード ブレーカーとステミング機能の概要  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンは、ワード ブレーカーとステミング機能は、以前よりも大幅に向上がの場合は、完全な新しいファミリおよび[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンは、ワード ブレーカーとステミング機能、以前よりもはるかに優れているの完全な新しいファミリと[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 > [!NOTE]  
 >  これらの新しい言語コンポーネントは、Microsoft Natural Language Group (MS NLG) によって実装およびサポートされています。  
@@ -53,7 +52,7 @@ ms.locfileid: "36071904"
   
 -   Security  
   
-     新しいワード ブレーカーが既定で有効に[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]言語コンポーネントのセキュリティが向上したためです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の全体的なセキュリティと堅牢性を強化するためには、ワード ブレーカーやフィルターなどの外部コンポーネントに署名することを強くお勧めします。 次のようにフルテキストを構成すると、これらのコンポーネントが署名されていることを確認できます。  
+     新しいワード ブレーカーが既定で有効に[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]言語コンポーネントのセキュリティが向上します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の全体的なセキュリティと堅牢性を強化するためには、ワード ブレーカーやフィルターなどの外部コンポーネントに署名することを強くお勧めします。 次のようにフルテキストを構成すると、これらのコンポーネントが署名されていることを確認できます。  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -63,9 +62,9 @@ ms.locfileid: "36071904"
   
      ワード ブレーカーの設計が変更されました。新しいワード ブレーカーのセマンティクスの品質が以前よりも向上したことが、テストによって明らかにされています。 このため、再呼び出しの精度が向上します。  
   
--   カバレッジ vast の言語の一覧については、ワード ブレーカーに含まれる[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ボックスのチェック アウトし、既定で有効にします。  
+-   カバレッジの言語の膨大な一覧については、ワード ブレーカーに含まれる[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ボックスの既定で有効にするとします。  
   
- 対象の言語の一覧については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ワード ブレーカーとステミング機能が含まれていますを参照してください[sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)です。  
+ 対象の言語の一覧については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ワード ブレーカーとステミング機能が含まれていますを参照してください[sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)します。  
   
 
   
@@ -73,7 +72,7 @@ ms.locfileid: "36071904"
  フルテキスト インデックスの作成時には、有効な言語名を各列に対して指定する必要があります。 言語名が有効であっても [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) カタログ ビューによって返されない場合、同じ言語ファミリに使用可能な言語名があれば、最も近いものがフルテキスト検索に使用されます。 それ以外の場合は、代わりにニュートラル ワード ブレーカーがフルテキスト検索に使用されます。 このフォールバック動作は、再呼び出しの精度に影響する可能性があります。 したがって、フルテキスト インデックスの作成時には、有効かつ使用可能な言語名を各列に対して指定することを強くお勧めします。  
   
 > [!NOTE]  
->  LCID は、フルテキスト インデックス作成で有効なすべてのデータ型 (`char` 型や `nchar` 型など) に適用されます。 並べ替え順序がある場合、 `char`、 `varchar`、または`text`言語に設定 LCID、LCID で識別された言語と異なる型の列は、フルテキスト インデックスの作成とそれらの列のクエリを実行中にまま使用します。  
+>  LCID は、フルテキスト インデックス作成で有効なすべてのデータ型 (`char` 型や `nchar` 型など) に適用されます。 並べ替え順序がある場合、 `char`、 `varchar`、または`text`設定 LCID、LCID で識別された言語から別の言語に設定する型の列はフルテキスト インデックス作成と、それらの列のクエリを実行するときにも使用します。  
   
 
   
@@ -100,7 +99,7 @@ ms.locfileid: "36071904"
   
 -   プレーン テキスト コンテンツの場合  
   
-     コンテンツがプレーン テキストの場合に変換できる、`xml`データ型で、各ドキュメントまたはドキュメント セクションに対応する言語を示す言語タグを追加します。 ただし、そのためには、フルテキスト インデックスの作成前に言語を把握しておく必要があります。  
+     コンテンツがプレーン テキストの場合に変換できる、`xml`データを入力し、各ドキュメントまたはドキュメント セクションに対応する言語を示す言語タグを追加します。 ただし、そのためには、フルテキスト インデックスの作成前に言語を把握しておく必要があります。  
   
 
   
@@ -110,7 +109,7 @@ ms.locfileid: "36071904"
 
   
 ##  <a name="type"></a> 列の型がフルテキスト検索に及ぼす影響  
- 言語を選択する際のもう 1 つの注意点は、データの表記方法に関連するものです。 格納されていないデータの`varbinary(max)`列でない特別なフィルター処理を実行します。 テキストはそのままの形で単語を分解するコンポーネント (ワード ブレーカー) に渡されます。  
+ 言語を選択する際のもう 1 つの注意点は、データの表記方法に関連するものです。 格納されていないデータの`varbinary(max)`列、いない特別なフィルター処理を実行します。 テキストはそのままの形で単語を分解するコンポーネント (ワード ブレーカー) に渡されます。  
   
  また、ワード ブレーカーは主に記述されたテキストを処理することを目的として設計されています。 したがって、HTML などのなんらかのマークアップがテキストに含まれている場合には、言語面での精度が高いインデックス作成と検索は期待できません。 このような場合には、2 つの選択肢があります。推奨される方法は、テキスト データを `varbinary(max)` 列に格納し、ドキュメント タイプを明示してフィルター処理されるようにする方法です。 この方法を選択できない場合は、ニュートラル ワード ブレーカーの使用を検討してください。また、可能であれば、ノイズ ワードの一覧にマークアップ データ (HTML の「br」など) を追加します。  
   

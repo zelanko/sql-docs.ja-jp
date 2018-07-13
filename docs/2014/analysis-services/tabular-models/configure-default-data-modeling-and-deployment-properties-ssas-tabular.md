@@ -1,5 +1,5 @@
 ---
-title: 既定のデータ モデルと配置プロパティ (SSAS テーブル) の構成 |Microsoft ドキュメント
+title: 既定のデータ モデルと配置プロパティ (SSAS テーブル) の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deployment.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
@@ -16,15 +16,15 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a38556f1c6b9d93f844441327a5ea8fe5f9ae9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13c674a47f074adaad3e4dbeff41797018bb0dbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171473"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>既定のデータ モデルと配置プロパティの構成 (SSAS テーブル)
   このトピックでは、既定の互換性レベル、配置、およびワークスペース データベース プロパティの設定について説明します。これらは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で作成する新しい各テーブル モデル プロジェクトに対して事前に定義できます。 新しいプロジェクトの作成後も、これらのプロパティを特定の要件に応じて変更できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "36073332"
   
     |プロパティ|既定の設定|説明|  
     |--------------|---------------------|-----------------|  
-    |**新しいプロジェクトの既定の互換性レベル**|SQL Server 2012 (1100)|この設定では、新しいテーブル モデル プロジェクトを作成するときに使用する既定の互換性レベルを指定します。 SP1 が適用されていない Analysis Services インスタンスに配置する場合は SQL Server 2012 RTM (1100) を、配置インスタンスに SP1 が適用されている場合は SQL Server 2012 SP1 または SQL Server 2014 を選択できます。 詳細については、次を参照してください。[互換性レベル&#40;SSAS テーブル SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)です。|  
+    |**新しいプロジェクトの既定の互換性レベル**|SQL Server 2012 (1100)|この設定では、新しいテーブル モデル プロジェクトを作成するときに使用する既定の互換性レベルを指定します。 SP1 が適用されていない Analysis Services インスタンスに配置する場合は SQL Server 2012 RTM (1100) を、配置インスタンスに SP1 が適用されている場合は SQL Server 2012 SP1 または SQL Server 2014 を選択できます。 詳細については、次を参照してください。[互換性レベル&#40;SSAS テーブル SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)します。|  
     |**互換性レベルのオプション**|すべてをオン|新しいテーブル モデル プロジェクトと、別の Analysis Services インスタンスに配置するときの互換性レベル オプションを指定します。|  
   
 #### <a name="to-configure-the-default-deployment-server-property-setting-for-new-model-projects"></a>新しいモデル プロジェクトの既定の配置サーバー プロパティの設定を構成するには  

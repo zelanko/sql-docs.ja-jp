@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], changing name
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b70b2ee10b092be94df67c13be09944824546b77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d10fa33ef28b7b8cf6b46bb15d35b5975f979cb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239142"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>ビジネス ルールの名前を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、ビジネス ルールに割り当てられている名前がビジネス ニーズに合わない場合には、名前を変更します。  
@@ -45,11 +45,11 @@ ms.locfileid: "36070518"
   
 4.  **[エンティティ]** の一覧からエンティティを選択します。  
   
-5.  **メンバー型**一覧で、メンバーの種類を選択します。  
+5.  **メンバーの種類**一覧で、メンバーの種類を選択します。  
   
 6.  **[属性]** の一覧で、属性を選択するか、 **[すべて]** の既定値のままにします。  
   
-7.  グリッドで、ビジネス ルールの行をダブルクリックして、**名前**フィールドです。  
+7.  グリッドで、ビジネス ルールの行で、ダブルクリック、**名前**フィールド。  
   
 8.  ビジネス ルールの名前を入力します。  
   

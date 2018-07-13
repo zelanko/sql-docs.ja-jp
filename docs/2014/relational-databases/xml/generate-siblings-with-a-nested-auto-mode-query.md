@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93626d4db9c82360369e0f94bd91574e77274c4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d0248cb60068c86c641046b4d80deda1b78f95da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168223"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>入れ子になった AUTO モードのクエリを使用した兄弟の生成
   次の例では、入れ子になった AUTO モードのクエリを使用して兄弟を作成する方法を示します。 他の方法では、EXPLICIT モードを使用する以外に、このような XML を生成する方法はありません。 ただし、この方法は複雑になる場合があります。  
@@ -70,7 +70,7 @@ FOR XML AUTO, TYPE
   
 -   `SalesOrder` 句で指定された行セット `FROM` に対してクエリを実行しています。 結果は、1 つ以上の <`SalesOrder`> 要素を含む XML になります。  
   
--   `AUTO` モードと `TYPE` ディレクティブが指定されています。 `AUTO` モードは、XML をクエリの結果を変換し、`TYPE`ディレクティブは、結果として返します`xml`型です。  
+-   `AUTO` モードと `TYPE` ディレクティブが指定されています。 `AUTO` モードを XML にクエリ結果を変換して、`TYPE`ディレクティブは、結果として返します`xml`型。  
   
 -   2 つの `SELECT` ステートメントが含まれており、コンマで区切られ、入れ子構造になっています。 入れ子の最初の `SELECT` ステートメントで、販売注文情報、ヘッダー、および明細を取得し、入れ子の 2 番目の `SELECT` ステートメントで販売員情報を取得しています。  
   
@@ -148,7 +148,7 @@ FOR XML AUTO, TYPE
   
 -   上記のクエリが `FROM` 句に追加されています。 クエリの結果はテーブルで返されます。 追加された `XmlCol` 別名に注意してください。  
   
--   `SELECT` 句では、 `XmlCol` 句で返される `FROM` に対して XQuery を指定しています。 `query()`のメソッド、`xml`データ型は、XQuery を指定するときに使用します。 詳細については、「[クエリ&#40;&#41; メソッド &#40;xml データ型&#41;](/sql/t-sql/xml/query-method-xml-data-type)」を参照してください。  
+-   `SELECT` 句では、 `XmlCol` 句で返される `FROM` に対して XQuery を指定しています。 `query()`のメソッド、`xml`データ型は、XQuery を指定するときに使用されます。 詳細については、「[クエリ&#40;&#41; メソッド &#40;xml データ型&#41;](/sql/t-sql/xml/query-method-xml-data-type)」を参照してください。  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

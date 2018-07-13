@@ -1,5 +1,5 @@
 ---
-title: 不規則階層 |Microsoft ドキュメント
+title: 不規則階層 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ragged hierarchies [Analysis Services]
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 57da031b308d9480c2523ef5ee6487bbf469a740
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f27105d3a19dc76a8cad643b057a27fff63d10f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267698"
 ---
 # <a name="ragged-hierarchies"></a>不規則階層
   不規則階層はユーザー定義の階層で、不均一な数のレベルが含まれています。 一般的な例として、部門の管理者と管理者以外のメンバーの両方が直属の部下として上級管理者に属している組織図や、国 - 地域 - 市から構成される地理的な階層 (ワシントン D.C.、バチカン、ニューデリーなど、親となる州や省などを持たない市がいくつかあります) などを挙げることができます。  
@@ -43,11 +43,11 @@ ms.locfileid: "36071562"
 ##  <a name="bkmk_approach"></a> 不規則階層でのドリル ダウン ナビゲーションを変更する方法  
  ドリル ダウン ナビゲーションが予期した値を返さない場合や使いにくい場合、不規則階層の存在が問題になります。 不規則階層が原因となるナビゲーションの問題を解決するには、次の点を検討してください。  
   
--   標準階層を使用します。ただし、各レベルの `HideMemberIf` プロパティを設定し、ユーザーに対して欠落しているレベルを表示するかどうかを指定します。 設定するときに`HideMemberIf`、設定する必要もあります`MDXCompatibility`を既定のナビゲーション動作をオーバーライドする接続文字列にします。 これらのプロパティの設定手順をこのトピックで説明します。  
+-   標準階層を使用します。ただし、各レベルの `HideMemberIf` プロパティを設定し、ユーザーに対して欠落しているレベルを表示するかどうかを指定します。 設定するときに`HideMemberIf`も設定する必要があります`MDXCompatibility`既定のナビゲーション動作をオーバーライドする接続文字列にします。 これらのプロパティの設定手順をこのトピックで説明します。  
   
--   レベル メンバーを明示的に管理する親子階層を作成します。 この技法の図解については、「 [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)」(SSAS での不規則階層 (ブログ投稿)) をご覧ください。 オンライン ブックの詳細については、次を参照してください。[親子階層](parent-child-dimension.md)です。 親子階層を作成する際の問題点は、ディメンションごとに 1 つの階層があるので、中間レベルのメンバーを集計する場合のパフォーマンスが一般的に低下することです。  
+-   レベル メンバーを明示的に管理する親子階層を作成します。 この技法の図解については、「 [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)」(SSAS での不規則階層 (ブログ投稿)) をご覧ください。 オンライン ブックの「詳細については、次を参照してください。 [、親子階層](parent-child-dimension.md)します。 親子階層を作成する際の問題点は、ディメンションごとに 1 つの階層があるので、中間レベルのメンバーを集計する場合のパフォーマンスが一般的に低下することです。  
   
- ディメンションに複数の不規則階層が含まれている場合は、最初の方法では、設定を使用する必要があります`HideMemberIf`です。 不規則階層の操作について実践的な経験がある BI 開発者であれば、さらに、物理データ テーブルへの追加の変更を提案したり、レベルごとの個別のテーブルを作成したりすることができます。 この方法の詳細については、「 [SSAS Financial Cube–Part 1a–Ragged Hierarchies](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 」(SSAS 財務キューブ – パート 1a – 不規則階層 (Martin Mason のブログ)) をご覧ください。  
+ 最初の方法では、設定を使用する必要があります、ディメンションには、複数の不規則階層が含まれている場合`HideMemberIf`します。 不規則階層の操作について実践的な経験がある BI 開発者であれば、さらに、物理データ テーブルへの追加の変更を提案したり、レベルごとの個別のテーブルを作成したりすることができます。 この方法の詳細については、「 [SSAS Financial Cube–Part 1a–Ragged Hierarchies](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 」(SSAS 財務キューブ – パート 1a – 不規則階層 (Martin Mason のブログ)) をご覧ください。  
   
 ##  <a name="bkmk_Hide"></a> HideMemberIf を設定して標準階層のメンバーを非表示にする  
  不規則なディメンションのテーブルでは、論理的に欠落しているメンバーはさまざまな方法で表されます。 テーブルのセルに NULL または空の文字列を含めたり、親と同じ値を含めてプレースホルダーとして使用できます。 プレースホルダーの表示は、子メンバーのプレースホルダーのステータス、`HideMemberIf` プロパティ、クライアント アプリケーションの `MDX Compatibility` 接続文字列プロパティによって決まります。  
@@ -67,7 +67,7 @@ ms.locfileid: "36071562"
     |**ParentName**|レベル メンバーは、名前がその親の名前と同じである場合、表示されません。|  
   
 ##  <a name="bkmk_Mdx"></a> MDX の互換性を設定してクライアント アプリケーションでのプレースホルダーの表示方法を指定する  
- 設定後`HideMemberIf`階層のレベルも設定し、`MDX Compatibility`クライアント アプリケーションから送信される接続文字列プロパティです。 `MDX Compatibility` の設定によって、`HideMemberIf` が使用されるかどうかが決まります。  
+ 設定後`HideMemberIf`階層レベルで設定は、`MDX Compatibility`クライアント アプリケーションから送信される接続文字列内のプロパティ。 `MDX Compatibility` の設定によって、`HideMemberIf` が使用されるかどうかが決まります。  
   
 |MDX Compatibility の設定|説明|使用方法|  
 |-------------------------------|-----------------|-----------|  

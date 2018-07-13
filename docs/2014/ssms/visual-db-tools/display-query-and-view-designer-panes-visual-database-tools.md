@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], panes
 - viewing View Designer panes
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - displaying Query Designer panes
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 718e4f343cf10ccf13ed108de95de4d815443115
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f0061c4891854c25dadf28bb8f3c18ab4828106f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222272"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>クエリおよびビュー デザイナーのペインの表示 (Visual Database Tools)
   クエリおよびビュー デザイナーは、ダイアグラム ペイン、検索条件ペイン、SQL ペイン、および結果ペインの 4 つのペインで構成されます。 通常、ビューを開くか、新しいクエリを作成するときには、4 つのウィンドウがすべて開きますが、この 4 つのウィンドウのいずれかを開く必要がある場合は、クエリおよびビュー デザイナーが開いていれば開くことができます。  

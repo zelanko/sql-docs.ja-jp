@@ -1,5 +1,5 @@
 ---
-title: ディメンションの要素 (ASSL) |Microsoft ドキュメント
+title: ディメンション要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Dimension element
 ms.assetid: 71886014-f463-4b70-a2a2-d9e5053ba4f0
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2995ceae19dc17fc6abd71cbdd102375058237be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6d8b909b6bf7018f70f381ec8d07b20f6b7d851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185245"
 ---
 # <a name="dimension-element-assl"></a>Dimension 要素 (ASSL)
   ディメンションを定義します。  
@@ -81,7 +81,7 @@ ms.locfileid: "36071559"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 分析管理オブジェクト (AMO) オブジェクト モデル内の対応する要素が<xref:Microsoft.AnalysisServices.Dimension>、 <xref:Microsoft.AnalysisServices.AggregationDimension>、 <xref:Microsoft.AnalysisServices.AggregationDesignDimension>、 <xref:Microsoft.AnalysisServices.CubeDimension>、 <xref:Microsoft.AnalysisServices.MeasureGroupDimension>、および<xref:Microsoft.AnalysisServices.PerspectiveDimension>です。  
+ 分析管理オブジェクト (AMO) オブジェクト モデル内の対応する要素が<xref:Microsoft.AnalysisServices.Dimension>、 <xref:Microsoft.AnalysisServices.AggregationDimension>、 <xref:Microsoft.AnalysisServices.AggregationDesignDimension>、 <xref:Microsoft.AnalysisServices.CubeDimension>、 <xref:Microsoft.AnalysisServices.MeasureGroupDimension>、および<xref:Microsoft.AnalysisServices.PerspectiveDimension>します。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクト&#40;ASSL&#41;](objects-assl.md)  

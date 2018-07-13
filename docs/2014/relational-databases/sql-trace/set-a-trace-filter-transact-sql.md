@@ -1,5 +1,5 @@
 ---
-title: SetBoolValue メソッド (SqlServiceAdvancedProperty クラス) |Microsoft ドキュメント
+title: SetBoolValue メソッド (SqlServiceAdvancedProperty クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetBoolValue method
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a26fae3ba51f68dbcd2e519ea6a711b2fd471c43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 508a9c7f0423da077519fe8c6a046638e88f946a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208582"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>SetBoolValue メソッド (SqlServiceAdvancedProperty クラス)
   プロパティのブール値を設定します。  
@@ -58,6 +58,6 @@ object
  プロパティをブール値に設定するには、プロパティ値の型がブール型である必要があります。  
   
 ## <a name="see-also"></a>参照  
- [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Execute メソッド (XMLA) |Microsoft ドキュメント
+title: Execute メソッド (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,22 +26,22 @@ helpviewer_keywords:
 - Execute method
 ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
 caps.latest.revision: 34
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5c32261e06788f366a6c5ce5af24c508b87a6882
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec3fa458148638af5431b4a519acf8556d29b122
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235562"
 ---
 # <a name="execute-method-xmla"></a>Execute メソッド (XMLA)
-  For Analysis (XMLA) コマンドのインスタンスに XML を送信[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 これには、サーバー上のデータの取得や更新など、データ転送に関連した要求が含まれます。  
+  For Analysis (XMLA) コマンドのインスタンスに XML を送信します[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 これには、サーバー上のデータの取得や更新など、データ転送に関連した要求が含まれます。  
   
- **Namespace** urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql} の分析  
+ **Namespace** urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-分析  
   
- **SOAP アクション**"urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql}-分析: 実行"  
+ **SOAP アクション**"urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-分析: 実行"  
   
 ## <a name="syntax"></a>構文  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36073537"
 |子要素|[Command](xml-elements-properties/command-element-xmla.md)、[Parameters](xml-elements-properties/parameters-element-xmla.md)、[Properties](xml-elements-properties/properties-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
- `Execute`メソッドで提供される XMLA コマンドの実行、`Command`要素を XMLA のいずれかを使用して結果データを返します[行セット](xml-data-types/rowset-data-type-xmla.md)(表形式の結果セット) のデータ型または XMLA [MDDataSet](xml-data-types/mddataset-data-type-xmla.md)データ型 (多次元結果を設定します)。  
+ `Execute`メソッドが含まれる XMLA コマンドが実行される、`Command`要素を XMLA のいずれかを使用して結果データを返します[行セット](xml-data-types/rowset-data-type-xmla.md)(表形式の結果セット) のデータ型または XMLA [MDDataSet](xml-data-types/mddataset-data-type-xmla.md) (多次元結果を設定します) のデータ型。  
   
 ## <a name="example"></a>例  
  次のコード サンプルは、多次元式 (MDX) の SELECT ステートメントを含む `Execute` メソッド呼び出しの例です。  

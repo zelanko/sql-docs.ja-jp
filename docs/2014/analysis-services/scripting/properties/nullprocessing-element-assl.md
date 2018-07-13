@@ -1,5 +1,5 @@
 ---
-title: NullProcessing 要素 (ASSL) |Microsoft ドキュメント
+title: NullProcessing 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullProcessing element
 ms.assetid: 697be5c6-e9a6-4f74-9ff4-5f31400c2178
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 54b75b2e1a7bddd6f7b5df1aeda0311c1b60ff99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc55d97fabaf3f2391beb5c33e3889f6866738d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246106"
 ---
 # <a name="nullprocessing-element-assl"></a>NullProcessing Element (ASSL)
   NULL 値の処理方法を定義します。  
@@ -67,12 +67,12 @@ ms.locfileid: "36071966"
 |値|説明|  
 |-----------|-----------------|  
 |*保持します。*|NULL 値を保持します。 **注:** 個別のカウント メジャーは、この値はサポートされていません。|  
-|*Error*|NULL キー エラーを発生します。 値[NullKeyNotAllowed](nullkeynotallowed-element-assl.md)インスタンスと、エラーの処理方法が決まります。 **注:** のメジャーは、この値はサポートされていません。|  
-|*UnknownMember*|不明なメンバーを生成し、NULL 変換エラーを発生します。 値[NullKeyConvertedToUnknown](nullkeyconvertedtounknown-element-assl.md)インスタンスと、エラーの処理方法が決まります。 **注:** メジャーに関連付けられた列にこの値がサポートされていません。|  
-|*ZeroOrBlank*|数値データ アイテムの場合は NULL 値を 0 に変換し、文字列データ アイテムの場合は NULL 値を空白の文字列に変換します。 **注:** この値は、以前のバージョンの互換性[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。|  
-|*自動*|要素に適した既定の処理を使用します。<br /><br /> -   *ZeroOrBlank* OLAP データ アイテムのです。<br />-   *UnknownMember*用データ マイニング データ アイテムです。|  
+|*Error*|NULL キー エラーを発生します。 値[NullKeyNotAllowed](nullkeynotallowed-element-assl.md)インスタンスが、エラーに反応する方法を決定します。 **注:** メジャーにこの値がサポートされていません。|  
+|*UnknownMember*|不明なメンバーを生成し、NULL 変換エラーを発生します。 値[NullKeyConvertedToUnknown](nullkeyconvertedtounknown-element-assl.md)インスタンスが、エラーに反応する方法を決定します。 **注:** メジャーに関連する列にこの値がサポートされていません。|  
+|*ZeroOrBlank*|数値データ アイテムの場合は NULL 値を 0 に変換し、文字列データ アイテムの場合は NULL 値を空白の文字列に変換します。 **注:** この値は、以前のバージョンの互換性を提供します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。|  
+|*自動*|要素に適した既定の処理を使用します。<br /><br /> -   *ZeroOrBlank* OLAP データ アイテムの。<br />-   *UnknownMember*データ マイニング データ アイテムです。|  
   
- 許可される値に対応する列挙`NullProcessing`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.NullProcessing>します。  
+ 許容された値に対応する列挙体`NullProcessing`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.NullProcessing>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

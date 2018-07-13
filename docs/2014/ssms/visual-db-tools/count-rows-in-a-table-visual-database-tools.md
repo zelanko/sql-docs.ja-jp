@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - totals [SQL Server], row counts
 - row counts [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - counting rows
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 41a1b6010d0a1542811d9bbbec9a3e94ac4d943f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d55f9112a4015ead999ca88f7b3b55555fabf324
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269958"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>テーブルの行数のカウント (Visual Database Tools)
   テーブルの行数をカウントすることにより、次の内容を確認できます。  
@@ -47,7 +47,7 @@ ms.locfileid: "36071585"
   
 2.  ダイアグラム ペインの背景を右クリックし、ショートカット メニューの **[グループ化を追加]** を選択します。 [クエリおよびビュー デザイナー](visual-database-tools.md) により、抽出条件ペインのグリッドに **[グループ化]** 列が追加されます。  
   
-3.  選択 **\* (すべての列)** テーブルまたはテーブル値オブジェクトを表す四角形にします。  
+3.  選択 **\* (すべての列)** テーブルまたはテーブル値オブジェクトを表す四角形。  
   
      クエリおよびビュー デザイナーにより、抽出条件ペインの **[グループ化]** 列に **[カウント]** という語句が自動的に入力され、集計する列に列の別名が割り当てられます。 この自動的に割り当てられた別名は、わかりやすい名前に変更することができます。 詳細については、「[列の別名の作成 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)」を参照してください。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36071585"
   
 2.  ダイアグラム ペインの背景を右クリックし、ショートカット メニューの **[グループ化を追加]** を選択します。 クエリおよびビュー デザイナーにより、抽出条件ペインのグリッドに **[グループ化]** 列が追加されます。  
   
-3.  選択 **\*(すべての列)** テーブルまたはテーブル構造オブジェクトを表す四角形にします。  
+3.  選択 **\*(すべての列)** テーブルまたはテーブル構造オブジェクトを表す四角形。  
   
      クエリおよびビュー デザイナーにより、抽出条件ペインの **[グループ化]** 列に **[カウント]** という語句が自動的に入力され、集計する列に列の別名が割り当てられます。 クエリ出力に表示する列ヘッダーをわかりやすくするには、「[列の別名の作成 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)」を参照してください。  
   

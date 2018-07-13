@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - security [data collector]
 - data collector [SQL Server], security
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1864b580a681cb3c9e7fca612140f21548d2c96a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: df296ef140f92e8a035e85d3123b0f1426e6288a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235282"
 ---
 # <a name="data-collector-security"></a>データ コレクターのセキュリティ
   データ コレクターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって実装されるロールベースのセキュリティ モデルを使用します。 このモデルを使用すると、データベース管理者は、データ コレクターのさまざまなタスクをそのタスクの実行に必要な権限だけがあるセキュリティ コンテキスト内で実行できます。 この方法は、ストアド プロシージャかビューを使用しないとアクセスできない内部テーブルに関係する操作に対しても使用されます。 内部テーブルに対する権限は与えられず、 テーブルへのアクセスに使用されるストアド プロシージャやビューのユーザーに対して権限がチェックされます。  
@@ -52,13 +52,13 @@ ms.locfileid: "36074194"
   
  上記のロールは、msdb データベースに格納されています。 既定では、これらのデータベース ロールのメンバーであるユーザーはいません。 これらのロールのユーザー メンバーシップは、明示的に許可する必要があります。  
   
- メンバーであるユーザーの`sysadmin`固定サーバー ロールへのフル アクセスがある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント オブジェクトとデータ コレクターのビューです。 しかし、これらのユーザーも、データ コレクターのロールに明示的に追加する必要があります。  
+ メンバーであるユーザーの`sysadmin`固定サーバー ロールへのフル アクセスがある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント オブジェクトとデータ コレクターのビュー。 しかし、これらのユーザーも、データ コレクターのロールに明示的に追加する必要があります。  
   
 > [!IMPORTANT]  
 >  db_ssisadmin ロールおよび dc_admin ロールのメンバーは、特権を sysadmin に昇格できる可能性があります。 このような特権の昇格が発生するのは、それらのロールが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを変更でき、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェントの sysadmin セキュリティ コンテキストを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージを実行できるためです。 メンテナンス プラン、データ コレクション セット、およびその他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行時にこの特権の昇格を防ぐには、特権が制限されたプロキシ アカウントを使用するようにパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを構成するか、db_ssisadmin ロールおよび dc_admin ロールには sysadmin メンバーのみを追加するようにします。  
   
 ### <a name="dcadmin-role"></a>dc_admin ロール  
- 割り当てられたユーザー、`dc_admin`ロール完全管理者アクセス権を持つ (作成、読み取り、更新、および削除)、データ コレクターの構成をサーバー インスタンスでします。 このロールのメンバーが実行できる操作を以下に示します。  
+ ユーザーに割り当てられている、`dc_admin`ロールがデータ コレクターの構成への完全な管理者アクセス (作成、読み取り、更新、および Delete) をサーバー インスタンス上にあります。 このロールのメンバーが実行できる操作を以下に示します。  
   
 -   コレクター レベルのプロパティの設定  
   
@@ -68,14 +68,14 @@ ms.locfileid: "36074194"
   
 -   **dc_operator** ロールに対して許可されているすべての操作の実行  
   
- `dc_admin`ロールは次のロールのメンバーです。  
+ `dc_admin`ロールは、次の役割のメンバーです。  
   
 -   **SQLAgentUserRole**。 スケジュールを作成したりジョブを実行したりするために必要です。  
   
     > [!NOTE]  
-    >  データ コレクターへのアクセスを許可する必要があります用に作成されたプロキシ`dc_admin`を作成したり、プロキシを必要とするジョブ ステップで使用します。  
+    >  データ コレクターへのアクセスを許可する必要があります用に作成されたプロキシ`dc_admin`それらを作成し、プロキシを必要とするジョブ ステップで使用します。  
   
--   **dc_operator**。 メンバー`dc_admin`に与えられるアクセス許可を継承**dc_operator**です。  
+-   **dc_operator**。 メンバーの`dc_admin`に付与されたアクセス許可を継承**dc_operator**します。  
   
 ### <a name="dcoperator-role"></a>dc_operator ロール  
  **dc_operator** ロールのメンバーには、読み取りと更新のアクセス権が与えられます。 このロールは、コレクション セットの実行と構成に関連する操作タスクをサポートします。 このロールのメンバーが実行できる操作を以下に示します。  
@@ -128,7 +128,7 @@ ms.locfileid: "36074194"
   
  上記のロールは、msdb データベースに格納されています。 既定では、これらのデータベース ロールのメンバーであるユーザーはいません。 これらのロールのユーザー メンバーシップは、明示的に許可する必要があります。  
   
- メンバーであるユーザーの`sysadmin`固定サーバー ロールがあるデータ コレクター ビューへのフル アクセスできます。 しかし、その他の操作を実行するには、明示的にデータベース ロールに追加する必要があります。  
+ メンバーであるユーザーの`sysadmin`固定サーバー ロールがデータ コレクター ビューへのフル アクセスがあります。 しかし、その他の操作を実行するには、明示的にデータベース ロールに追加する必要があります。  
   
 ### <a name="mdwadmin-role"></a>mdw_admin ロール  
  **mdw_admin** ロールのメンバーには、管理データ ウェアハウスへの読み取り、書き込み、更新、および削除のアクセス権が与えられます。  
@@ -138,7 +138,7 @@ ms.locfileid: "36074194"
 -   管理データ ウェアハウスのスキーマを必要に応じて変更する (新しいコレクション型がインストールされたときに新しいテーブルを追加するなど)  
   
     > [!NOTE]  
-    >  スキーマの変更では、ユーザーのメンバーにもする必要があります、`dc_admin`をこの操作には、msdb のデータ コレクターの構成を更新するアクセス許可が必要なため、新しいコレクター型をインストールするロール。  
+    >  スキーマ変更では、ユーザーのメンバーであることも、`dc_admin`このアクションには、msdb のデータ コレクターの構成を更新するアクセス許可が必要なため、新しいコレクター型をインストールするロール。  
   
 -   管理データ ウェアハウスのメンテナンス ジョブ (アーカイブやクリーンアップなど) を実行する  
   

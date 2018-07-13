@@ -1,5 +1,5 @@
 ---
-title: BackColor 要素 (ASSL) |Microsoft ドキュメント
+title: BackColor 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - BackColor element
 ms.assetid: 9024d131-74cc-4815-833a-f8cae57b7453
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe0ab54477b22f1e6ea1bdc55156ea8318dd87a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed491d6307e6e5776843c3f5e490d9369235143b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274118"
 ---
 # <a name="backcolor-element-assl"></a>BackColor 要素 (ASSL)
   親要素の色関連の表示特性を記述します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36073576"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `BackColor`プロパティ多次元式 (MDX) 言語の式を含みに適用されます`CalculationProperty`要素を[CalculationType](calculationtype-element-assl.md)の*メンバー*または*セル*です。  
+ `BackColor`プロパティは多次元式 (MDX) 言語の式が含まれていて、適用`CalculationProperty`を持つ要素を[CalculationType](calculationtype-element-assl.md)の*メンバー*または*セル*します。  
   
  親に対応する要素`BackColor`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.CalculationProperty>します。  
   

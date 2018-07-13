@@ -1,37 +1,36 @@
 ---
-title: SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス |Microsoft ドキュメント
+title: SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98f774809a3b6bb1d37836c3e7c216f1058a9ec1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 38e20e433b7fed2e34750c300ee7e1489d6df665
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193552"
 ---
 # <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元
-  このトピックで紹介[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのバックアップとからの復元、 [Windows Azure Blob ストレージ サービス](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)です。 また、Windows Azure BLOB Service を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを格納する利点の概要についても説明します。  
+  このトピックでは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]およびへのバックアップから復元する、 [Windows Azure Blob ストレージ サービス](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)します。 また、Windows Azure BLOB Service を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを格納する利点の概要についても説明します。  
   
  SQL Server では、次の方法で Windows Azure Blob ストレージ サービスにバックアップを格納できます。  
   
--   **Windows Azure へのバックアップを管理:** に使用される同じメソッドを使用してディスクおよびテープへのバックアップ、今すぐバックアップできます Windows Azure ストレージにバックアップ先として URL を指定しています。  この機能を使用すると、手動でバックアップすることも、ローカル ストレージまたはその他のオフサイト オプションの場合と同じように独自のバックアップ方法を構成することもできます。 この機能は、 **SQL Server Backup to URL**とも呼ばれます。 詳細については、「 [SQL Server Backup to URL](sql-server-backup-to-url.md)」を参照してください。 この機能は、SQL Server 2012 SP1 CU2 以降で使用できます。  
+-   **Windows Azure へのバックアップの管理:** を同じ方法を使用してディスクとテープへのバックアップ、今すぐバックアップできます Windows Azure ストレージにバックアップ先として URL を指定することによって。  この機能を使用すると、手動でバックアップすることも、ローカル ストレージまたはその他のオフサイト オプションの場合と同じように独自のバックアップ方法を構成することもできます。 この機能は、 **SQL Server Backup to URL**とも呼ばれます。 詳細については、「 [SQL Server Backup to URL](sql-server-backup-to-url.md)」を参照してください。 この機能は、SQL Server 2012 SP1 CU2 以降で使用できます。  
   
     > [!NOTE]  
     >  SQL Server 2014 より前の SQL Server バージョンでは、Windows Azure への SQL Server バックアップ ツール アドインを使用して、Windows Azure ストレージへのバックアップをすばやく簡単に作成できます。 詳細については、 [ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=324399)を参照してください。  
   
--   **Windows Azure への SQL Server 管理のバックアップを使用できます:** 単一データベースまたは複数のデータベースのバックアップ方法やスケジュールを管理またはインスタンス レベルで既定値の設定を SQL Server を構成します。 この機能と呼ばれます **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** です。 詳細については、次を参照してください。 [SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)です。 この機能は、SQL Server 2014 以降で使用できます。  
+-   **Windows Azure へのバックアップの SQL Server を管理できるように:** インスタンス レベルで既定値の設定を 1 つのデータベースまたは複数のデータベースのバックアップ方法やスケジュールを管理する SQL Server を構成します。 この機能と呼ばれます **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** します。 詳細については、次を参照してください。 [SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)します。 この機能は、SQL Server 2014 以降で使用できます。  
   
 ## <a name="benefits-of-using-the-windows-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップに Windows Azure BLOB サービスを使用する利点  
   
@@ -45,7 +44,7 @@ ms.locfileid: "36071219"
   
      また、Windows Azure BLOB ストレージ サービスに保存されているバックアップ ファイルは、内部設置型の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、または Windows Azure バーチャル マシンで実行している別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で直接使用できます。その際、データベースのアタッチ/デタッチや、VHD のダウンロードとアタッチは必要ありません。  
   
--   コスト面での利点: 使用するサービスにのみ料金がかかります。 オフサイトのバックアップ アーカイブ オプションとして、優れたコスト効果を得ることができます。 参照してください、 [Windows Azure の課金に関する注意点](#Billing)セクションで詳細情報とリンクします。  
+-   コスト面での利点: 使用するサービスにのみ料金がかかります。 オフサイトのバックアップ アーカイブ オプションとして、優れたコスト効果を得ることができます。 参照してください、 [Windows Azure の課金に関する注意点](#Billing)セクションの詳細情報とリンクします。  
   
 ##  <a name="Billing"></a> Windows Azure の課金に関する注意点:  
  Windows Azure ストレージのコストを把握しておくと、Windows Azure でバックアップを作成および格納するコストを予測できます。  

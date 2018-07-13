@@ -1,5 +1,5 @@
 ---
-title: アーティクルを追加し、(SQL Server Management Studio)、パブリケーションからアーティクルを削除 |Microsoft ドキュメント
+title: アーティクルを追加したり削除パブリケーション (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], dropping
 - deleting articles
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ea3c32da50b3ec5e2a2eb3d3bf58fad1e0323f10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: da55583a9d883d14a7baffea7ecf72a0128e196e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260378"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication-sql-server-management-studio"></a>パブリケーションでのアーティクルの追加または削除 (SQL Server Management Studio)
   パブリケーションの新規作成ウィザードでパブリケーションを作成する場合は、最初にアーティクルを追加します。 このウィザードの使用の詳細については、「[パブリケーションの作成](create-a-publication.md)」を参照してください。  

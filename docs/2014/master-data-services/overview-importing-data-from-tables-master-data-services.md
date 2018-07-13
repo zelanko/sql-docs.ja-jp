@@ -1,5 +1,5 @@
 ---
-title: データのインポート (Master Data Services) |Microsoft ドキュメント
+title: データのインポート (マスター データ サービス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d386070df790164e11763d0dfc459cb7de2c1a95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d1d0810c58b2dd0a899c95a358ddccac601b8380
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162833"
 ---
 # <a name="data-import-master-data-services"></a>データのインポート (Master Data Services)
-  データのモデルを作成したら[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、データの追加を開始して、内のデータに変更を加えます、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース。   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ステージング テーブル、ストアド プロシージャ、マスター データ マネージャーを使います。  
+  データ モデルを作成したら[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、データの追加を開始して、内のデータに変更を加える、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース。   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ステージング テーブル、ストアド プロシージャ、マスター データ マネージャーを使います。  
   
- 使用することも、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]、MDS リポジトリにデータを追加する ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース)。 詳細については、次を参照してください。[データのパブリッシュ&#40;MDS アドインを Excel 用&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)です。  
+ 使用することも、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]、MDS リポジトリにデータを追加する ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース)。 詳細については、次を参照してください。[データのパブリッシュ&#40;MDS アドインの Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)します。  
   
  データを追加して更新するときに、次の操作を行うことができます。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36072353"
   
  モデル内の各エンティティには、リーフ メンバー、統合メンバー、リレーションシップ ステージング テーブルに対応する 3 つのストアド プロシージャがあります。  次の画像は、通貨、顧客、製品のエンティティのステージング ストアド テーブルを示しています。  
   
- ![MDS データベースに、ステージング ストアド プロシージャ](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "MDS データベースに、ステージング ストアド プロシージャ")  
+ ![MDS データベースのステージング ストアド プロシージャ](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "MDS データベースのステージング ストアド プロシージャ")  
   
  ストアド プロシージャの詳細については、「[ステージング ストアド プロシージャ (マスター データ サービス)](../../2014/master-data-services/staging-stored-procedure-master-data-services.md)」を参照してください。  
   

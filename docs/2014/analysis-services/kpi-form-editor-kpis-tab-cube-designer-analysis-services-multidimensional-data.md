@@ -1,5 +1,5 @@
 ---
-title: KPI フォーム エディター ([KPIs] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: KPI フォーム エディター ([Kpi] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpidefinitionpane.f1
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: af159d0cdc724af8f0b7e768146527588b4e16fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 284ccc63f98624e1a64b114d31b69215d8e6b1be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224842"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI フォーム エディター (キューブ デザイナーの [KPI] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[KPI]** タブの **KPI フォーム エディター** ペインを使用すると、選択した主要業績評価指標 (KPI) を変更したり作成したりできます。  
@@ -30,7 +30,7 @@ ms.locfileid: "36074503"
 >  このペインはフォーム ビューでのみ表示されます。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  KPI の名前を入力します。  
   
  **関連付けられたメジャー グループ**  
@@ -50,7 +50,7 @@ ms.locfileid: "36074503"
   
  選択した要素を **[計算ツール]** ペインからこのオプションへドラッグして、選択した要素に対して MDX 構文を含めます。  
   
- **Status**  
+ **ステータス**  
  展開すると、 **[状態マーク]** および **[状態式]** のオプションが表示されます。  
   
  **Statusgraphic**  
@@ -59,7 +59,7 @@ ms.locfileid: "36074503"
 > [!NOTE]  
 >  選択したグラフィックがクライアント アプリケーションでサポートされない場合、適切なグラフィックに置き換えてください。  
   
- **状態の式**  
+ **状態式**  
  KPI を実行したときの状態値を返す MDX 式を入力します。  
   
  選択した要素を **[計算ツール]** ペインからこのオプションへドラッグして、選択した要素に対して MDX 構文を含めます。  
@@ -115,7 +115,7 @@ ms.locfileid: "36074503"
   
  選択した要素を **[計算ツール]** ペインからこのオプションへドラッグして、選択した要素に対して MDX 構文を含めます。  
   
- **description**  
+ **[説明]**  
  KPI の説明をオプションで入力します。  
   
 ## <a name="see-also"></a>参照  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10545"
 - "10547"
@@ -18,15 +18,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6f01f4c20446507bd63c8bd1c82d6c32355582b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 30938348fcb78d1afeeeacaead3bb02362a28574
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168313"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>インジケーター (レポート ビルダーおよび SSRS)
   インジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 インジケーターとその状態を表すアイコンは単純で、小さなサイズでもわかりやすくなっています。  
@@ -41,7 +41,7 @@ ms.locfileid: "36073412"
   
 -   評価 (正方形および星形の四分区間数などで進行状況を表示する一般的な図形および記号を使用)  
   
- インジケーターは、ダッシュ ボードや自由形式レポートで単独で使用できますが、最もよくされるテーブルまたはマトリックスで行または列のデータを視覚化します。 次の図は、販売員および販売区域ごとの年度累計売上を示す信号機インジケーターを使用したテーブルです。  
+ インジケーターは、ダッシュ ボードや自由形式レポートで単独で使用できますが、最もよくテーブルまたはマトリックスで使用して行または列のデータを視覚化するされます。 次の図は、販売員および販売区域ごとの年度累計売上を示す信号機インジケーターを使用したテーブルです。  
   
  ![rs_IndicatorTableTrafficLight](../media/rs-indicatortabletrafficlight.gif "rs_IndicatorTableTrafficLight")  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36073412"
   
  レポートにインジケーターを最初に追加すると、既定値を使用するように構成されます。 この値は、データがインジケーターに希望どおりに表示されるように変更できます。 また、インジケーター アイコンの外観、使用するアイコンをインジケーターが選択する方法、およびインジケーター セットによって使用されるアイコンを変更できます。 詳細については、「[インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)」を参照してください。  
   
- 既定では、インジケーターは測定単位としてパーセンテージを使用し、データの最小値と最大値を自動的に検出するように構成されます。 インジケーター内の各アイコンにはパーセンテージ範囲があります。 パーセンテージ範囲の数は、アイコン セット内のアイコンの数によって異なりますが、範囲は同じサイズで、連続しています。 たとえば、アイコン セットに 5 つのアイコンが含まれている場合は、それぞれ 20% のサイズのパーセンテージ範囲が 5 つ存在することになります。 最初の範囲は 0 で始まり 20 で終わります。同様に 2 番目の範囲は 20 で始まり、40 で終わります。それ以降の範囲も同様です。 レポートのインジケーターは、パーセンテージ範囲にインジケーター データ値が含まれるインジケーター セットのアイコンを使用します。 セット内の各アイコンのパーセンテージ範囲は変更可能です。 最小値と最大値は、値または式を指定することにより、明示的に設定できます。 さらに、測定単位が数値になるように変更することができます。 その場合、データの最小値または最大値は指定しません。 代わりに、インジケーターが使用する各アイコンに対して開始値と終了値のみを指定します。 詳細については、次を参照してください。[セットと構成の測定単位&#40;レポート ビルダーおよび SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)です。  
+ 既定では、インジケーターは測定単位としてパーセンテージを使用し、データの最小値と最大値を自動的に検出するように構成されます。 インジケーター内の各アイコンにはパーセンテージ範囲があります。 パーセンテージ範囲の数は、アイコン セット内のアイコンの数によって異なりますが、範囲は同じサイズで、連続しています。 たとえば、アイコン セットに 5 つのアイコンが含まれている場合は、それぞれ 20% のサイズのパーセンテージ範囲が 5 つ存在することになります。 最初の範囲は 0 で始まり 20 で終わります。同様に 2 番目の範囲は 20 で始まり、40 で終わります。それ以降の範囲も同様です。 レポートのインジケーターは、パーセンテージ範囲にインジケーター データ値が含まれるインジケーター セットのアイコンを使用します。 セット内の各アイコンのパーセンテージ範囲は変更可能です。 最小値と最大値は、値または式を指定することにより、明示的に設定できます。 さらに、測定単位が数値になるように変更することができます。 その場合、データの最小値または最大値は指定しません。 代わりに、インジケーターが使用する各アイコンに対して開始値と終了値のみを指定します。 詳細については、次を参照してください。[セットと構成の測定単位&#40;レポート ビルダーおよび SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)します。  
   
  インジケーターは、指定されたスコープ内のインジケーター データ値全体を同期することによってデータ値を示します。 既定では、このスコープは、インジケーターを含んでいるテーブルやマトリックスなどのインジケーターの親コンテナーです。 インジケーターの同期を変更するには、レポートのレイアウトに応じて、異なるスコープを選択します。 インジケーターの同期は省略できます。 詳細については、「[Set Synchronization Scope &#40;Report Builder and SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)」 (同期スコープの設定 &#40;レポート ビルダーおよび SSRS&#41;) を参照してください。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36073412"
 ##  <a name="SizingIndicatators"></a> 視覚的効果を高めるためのインジケーターのサイズ変更  
  インジケーターは、色、方向、形状のほか、サイズを変更して、視覚的効果を高めることができます。 あるレポートで、さまざまな種類の自転車に関する顧客満足度を示すインジケーターを使用するとします。 インジケーターで使用するアイコンを、顧客満足度に応じて異なるサイズになるように構成します。 顧客満足度が大きくなるほど、レポートに表示されるアイコンのサイズも大きくなります。 次の図は、自転車の売上のレポートを示し、アイコンのサイズは売上高に対応しています。  
   
- 式を使用することで、星形のサイズを、インジケーターで使用されるフィールドの値に基づいて動的に設定できます。 詳細については、次を参照してください。[インジケーターを使用して、式のサイズの指定&#40;レポート ビルダーおよび SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)です。  
+ 式を使用することで、星形のサイズを、インジケーターで使用されるフィールドの値に基づいて動的に設定できます。 詳細については、次を参照してください。[インジケーターを使用して、式のサイズを指定&#40;レポート ビルダーおよび SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)します。  
   
  式の記述と使用の詳細については、「[式 (レポート ビルダーおよび SSRS)](expressions-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -195,9 +195,9 @@ ms.locfileid: "36073412"
   
 -   [インジケーター アイコンとインジケーター セットの変更&#40;レポート ビルダーおよび SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [設定し、測定単位を構成&#40;レポート ビルダーおよび SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [設定および構成の測定単位&#40;レポート ビルダーおよび SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [同期スコープを設定&#40;レポート ビルダーおよび SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [同期スコープの設定&#40;レポート ビルダーおよび SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
 -   [式を使用してインジケーターのサイズを指定する&#40;レポート ビルダーおよび SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   

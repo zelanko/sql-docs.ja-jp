@@ -1,5 +1,5 @@
 ---
-title: シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb03523f20468a24cb901f08dd0eff9a368aa8cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0b505e01e6b8334ed1a0baeaacbda7e29ba7407
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208152"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、Microsoft シーケンス クラスター アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -161,7 +161,7 @@ ms.locfileid: "36074737"
 ###  <a name="bkmk_NODEDIST"></a> NODE_DISTRIBUTION テーブル  
  NODE_DISTRIBUTION テーブルには、特定のクラスターの遷移およびシーケンスについての確率とサポートの詳細な情報が示されます。  
   
- 遷移のテーブルには、有効な `Missing` 値を表すための行が常に 1 行追加されます。 内容については、`Missing`値の意味、および計算に与える影響を参照して[欠損値&#40;Analysis Services - データ マイニング&#41;](missing-values-analysis-services-data-mining.md)です。  
+ 遷移のテーブルには、有効な `Missing` 値を表すための行が常に 1 行追加されます。 詳細については、`Missing`値の意味と、計算に与える影響を参照してください。[欠損値&#40;Analysis Services - データ マイニング&#41;](missing-values-analysis-services-data-mining.md)します。  
   
  サポートと確率の計算は、トレーニング ケースと完成したモデルのどちらに適用するかによって異なります。 これは、既定のクラスタリング手法である Expectation Maximization (EM) で、どのケースも複数のクラスターに所属できることが前提になっているためです。 モデル内のケースのサポートを計算する場合、未加工のカウント数および未加工の確率を使用できます。 ただし、クラスター内の特定のシーケンスの確率は、シーケンスとクラスターのあらゆる組み合わせの合計によって重み付けされる必要があります。  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a6669b33697e573ef0cff9de86adf39aa98301ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2cb2709d0296ce83a842086329f64d5cf0812560
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171053"
 ---
 # <a name="data-collection"></a>データ コレクション
   データ コレクターは、さまざまなデータのセットを収集する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のコンポーネントです。 データ コレクションは、継続的に実行されるかユーザー定義のスケジュールに基づいて実行されます。 データ コレクターは、収集したデータを管理データ ウェアハウスというリレーショナル データベースに格納します。  
@@ -64,7 +64,7 @@ ms.locfileid: "36072348"
   
 ## <a name="data-collector-terminology"></a>データ コレクターの用語  
  ターゲット (target)  
- データ コレクションをサポートする [!INCLUDE[ssDE](../../includes/ssde-md.md)] のエディションにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス。 サポートされているエディションの詳細については、の管理の容易性」セクションを参照してください。 [SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ データ コレクションをサポートする [!INCLUDE[ssDE](../../includes/ssde-md.md)] のエディションにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス。 サポートされているエディションの詳細については、の管理の容易性」セクションを参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
  *対象ルート* では、対象となる階層内のサブツリーを定義します。 *対象セット* は、対象ルートで定義されたサブツリーにフィルターを適用した結果の対象のグループです。 対象ルートはデータベース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス) またはコンピューター インスタンスです。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36072348"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|有効化または無効化コレクションを変更する、データ コレクション セット構成では、管理データ ウェアハウスにデータを表示するなど、データ コレクションのさまざまな側面を管理する方法について説明します。|[データ コレクションの管理](manage-data-collection.md)|  
+|有効化またはコレクションを変更するデータの収集を無効にする設定の構成、または管理データ ウェアハウスのデータの表示など、データのコレクションのさまざまな側面を管理する方法について説明します。|[データ コレクションの管理](manage-data-collection.md)|  
 |レポートを使用して、システム容量の監視やシステム パフォーマンスのトラブルシューティングに役立つ情報を取得する方法について説明します。|[システム データ コレクション セット レポート](system-data-collection-set-reports.md)|  
 |管理データ ウェアハウスを使用して、データ コレクションの対象であるサーバーからデータを収集する方法について説明します。|[管理データ ウェアハウス](management-data-warehouse.md)|  
   

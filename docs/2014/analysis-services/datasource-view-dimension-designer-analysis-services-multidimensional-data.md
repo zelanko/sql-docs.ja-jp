@@ -1,5 +1,5 @@
 ---
-title: データ ソース ビュー ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: データ ソース ビュー ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c960a5c08f3d95ee6ef0813db67f8d9a33a6a683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246162"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>[データ ソース ビュー] ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **[データ ソース ビュー]** ペインを使用すると、選択したディメンションに関連付けられているデータ ソース ビューからテーブルと列を表示できます。 **[データ ソース ビュー]** ペインでは、このペインから **[属性]** ペインまたは **[階層とレベル]** ペインに列をドラッグすることにより、属性、メンバー プロパティ、階層、およびレベルを作成します。  
@@ -42,7 +42,7 @@ ms.locfileid: "36073627"
  **すべてのテーブルを表示します。**  
  ディメンションに関連付けられたデータ ソース ビューに含まれるすべてのテーブルをペインに表示します。  
   
- **使用されているテーブルのみを表示します。**  
+ **使用されるテーブルのみを表示します。**  
  関連するデータ ソース ビューのディメンションによって使用されるテーブルのみをペインに表示します。  
   
  **フレンドリ名を表示します。**  
@@ -54,7 +54,7 @@ ms.locfileid: "36073627"
  **[テーブルの検索]**  
  **[テーブルの検索]** ダイアログ ボックスを表示します。 **[テーブルの検索]** ダイアログ ボックスの詳細については、「[[テーブルの検索] ダイアログ ボックス (Analysis Services - 多次元データ)](find-table-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
   
- **テーブルを整列します。**  
+ **テーブルを並べ替え**  
  **[斜線レイアウトに切り替え]** または **[四角形レイアウトに切り替え]** を選択して指定したレイアウトに従って、ペイン内のオブジェクトを並べ替えます。  
   
  **斜線レイアウトに切り替え**  
@@ -63,7 +63,7 @@ ms.locfileid: "36073627"
 > [!NOTE]  
 >  このオプションは、 **[四角形レイアウトに切り替え]** が選択されている場合にのみ表示されます。  
   
- **四角形レイアウトに切り替える**  
+ **四角形レイアウトに切り替え**  
  オブジェクトを四角形パターンで整列できます。  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ ms.locfileid: "36073627"
 ## <a name="table-context-menu"></a>テーブルのショートカット メニュー  
  **[データ ソース ビュー]** ペインのテーブルまたはビューの名前を右クリックすると表示されるショートカット メニューでは、次のオプションを使用できます。  
   
- **関連するテーブルを表示します。**  
+ **関連テーブルを表示します。**  
  データ ソース ビューで選択されたテーブルに関連するテーブルをペインに表示します。  
   
  **テーブルの非表示します。**  

@@ -1,5 +1,5 @@
 ---
-title: アップグレード アドバイザー (ユーザー インターフェイス) を実行している |Microsoft ドキュメント
+title: アップグレード アドバイザー (ユーザー インターフェイス) を実行している |。Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
 - Upgrade Advisor [SQL Server], running
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, running
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 36a31e74e95b966137df96f5e3f2ab05fa7a991f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bc1151b2df35b7912d03519cdf7f659ba96af16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216592"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>アップグレード アドバイザーの実行 (ユーザー インターフェイス)
-  アップグレード アドバイザーを実行すると、アップグレードの計画時にローカルまたはリモートのコンポーネントを分析できます。 アップグレード アドバイザーでは、各コンポーネントとは、分析するインスタンスのレポートを生成します。  
+  アップグレード アドバイザーを実行すると、アップグレードの計画時にローカルまたはリモートのコンポーネントを分析できます。 アップグレード アドバイザーでは、各コンポーネントとインスタンスは、分析レポートを生成します。  
   
 > [!IMPORTANT]  
 >  アップグレード アドバイザーは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のリモート インスタンスを分析しません。 [!INCLUDE[ssRS](../../includes/ssrs-md.md)] のインスタンスを分析するには、[!INCLUDE[ssRS](../../includes/ssrs-md.md)] がインストールされているコンピューターにアップグレード アドバイザーをインストールしておく必要があります。  
 >   
->  分析する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Integration Services, が必要、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]インストールされていると[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]同じコンピューターにインストールします。  
+>  分析する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Integration Services, が必要、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]インストールと[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]同じコンピューターにインストールします。  
   
 ## <a name="running-the-upgrade-advisor-analysis-wizard"></a>アップグレード アドバイザー分析ウィザードを実行します。  
  アップグレード アドバイザー分析ウィザードの実行には、次の 6 つの手順があります。  
@@ -51,11 +51,11 @@ ms.locfileid: "36070873"
   
 6.  アップグレードの問題に関するレポートを生成します。  
   
- アップグレード アドバイザー分析ウィザードの詳細については、次を参照してください。[する方法: アップグレード アドバイザー分析ウィザードを実行](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)です。  
+ アップグレード アドバイザー分析ウィザードの詳細については、次を参照してください。[方法: アップグレード アドバイザー分析ウィザードを実行](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)します。  
   
- 各ステップに必要な特定の情報を参照してください。[アップグレード アドバイザーのユーザー インターフェイス リファレンス](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)です。  
+ 各ステップに必要な特定の情報を参照してください。[アップグレード アドバイザーのユーザー インターフェイス リファレンス](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)します。  
   
-## <a name="running-the-upgrade-advisor-report-viewer"></a>アップグレード アドバイザー レポート ビューアーを実行します。  
+## <a name="running-the-upgrade-advisor-report-viewer"></a>アップグレード アドバイザー レポート ビューアーを実行しています。  
  アップグレード アドバイザー分析ウィザードによって生成されたレポートを表示するのにには、アップグレード アドバイザー レポート ビューアーを使用します。 レポートを読み込んだら、次の条件でレポートのコンポーネントをフィルター選択できます。  
   
 -   すべての問題  
@@ -72,11 +72,11 @@ ms.locfileid: "36070873"
   
  レポート ビューアーを使用するための操作手順については、次のトピックを参照してください。  
   
--   [方法: アップグレード アドバイザーのレポートの表示](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [アップグレード アドバイザーのレポートを表示する方法](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
--   [方法: レポートのフィルター処理](../../../2014/sql-server/install/how-to-filter-reports.md)  
+-   [レポートに表示する問題を選択する方法](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
--   [方法: レポートのエクスポート](../../../2014/sql-server/install/how-to-export-reports.md)  
+-   [レポートをエクスポートする方法](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>参照  
  [方法: アップグレード アドバイザー分析ウィザードを実行](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   

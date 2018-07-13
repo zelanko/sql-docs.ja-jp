@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
 - tuning overhead [SQL Server]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 810ad8d5d3d977d49469e441efff0b5189c0e4f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a22c2d234ca855d7de9f9dad81d0be4c6b014199
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177736"
 ---
 # <a name="considerations-for-using-test-servers"></a>テスト サーバーの使用に関する注意点
   実稼働サーバー上のデータベースのチューニングにテスト サーバーを使用することは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの大きな利点です。 この機能を使用して、実際のデータを実稼働サーバーからテスト サーバーにコピーすることなく、チューニングにかかるオーバーヘッドをテスト サーバーに移行できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36073465"
   
 -   実稼働サーバー上のデータベースをチューニングするためにテスト サーバーを使用するユーザーは、両方のサーバーに存在している必要があります。存在しない場合、このシナリオは失敗します。  
   
--   テスト サーバーと実稼働サーバーのシナリオでは、拡張ストアド プロシージャ **xp_msver**を有効にする必要があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーでは、この拡張ストアド プロシージャを使用して、実稼働サーバーのプロセッサ数と使用可能なメモリをフェッチし、テスト サーバーでのチューニングに使用します。 **xp_msver** が有効ではない場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを実行しているコンピューターのハードウェア特性が想定値として使用されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを実行しているコンピューターのハードウェア特性を推定できない場合は、1 つのプロセッサと 1,024 MB のメモリがあると仮定します。 この拡張ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールしたときに既定でオンになっています。 詳細については、次を参照してください。 [Surface Area Configuration](../security/surface-area-configuration.md)と [xp_msver &#40;TRANSACT-SQL&#41;] (~/relational-databases/system-stored-procedures/xp-msver-transact-sql.md です。  
+-   テスト サーバーと実稼働サーバーのシナリオでは、拡張ストアド プロシージャ **xp_msver**を有効にする必要があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーでは、この拡張ストアド プロシージャを使用して、実稼働サーバーのプロセッサ数と使用可能なメモリをフェッチし、テスト サーバーでのチューニングに使用します。 **xp_msver** が有効ではない場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを実行しているコンピューターのハードウェア特性が想定値として使用されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを実行しているコンピューターのハードウェア特性を推定できない場合は、1 つのプロセッサと 1,024 MB のメモリがあると仮定します。 この拡張ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールしたときに既定でオンになっています。 詳細については、次を参照してください。[セキュリティ構成](../security/surface-area-configuration.md)と [xp_msver &#40;TRANSACT-SQL&#41;] (~ relational-databases/system-stored-procedures/xp-msver-transact-sql.md/。  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーでは、テスト サーバーと実稼働サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションが同じである必要があります。 2 つの異なるエディションがある場合は、テスト サーバーのエディションが優先されます。 たとえば、テスト サーバーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard が実行されている場合は、実稼働サーバーで実行されているのが [!INCLUDE[ssDE](../../includes/ssde-md.md)] Enterprise であっても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] チューニング アドバイザーの推奨設定にはインデックス付きビュー、パーティション分割、およびオンライン操作は含まれません。  
   

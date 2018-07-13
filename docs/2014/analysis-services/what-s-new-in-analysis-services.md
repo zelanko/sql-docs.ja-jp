@@ -1,5 +1,5 @@
 ---
-title: どのような&#39;Analysis Services と Business Intelligence の |Microsoft ドキュメント
+title: どのような&#39;s New in Analysis Services と Business Intelligence |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81dc5c82b8b034556ab4eb69c9f9ca377f641c43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30789972454ecc6c32ef4cb109bfbb20a2523e37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323112"
 ---
 # <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>どのような&#39;s New in Analysis Services と Business Intelligence
-  多次元のモデルに対して Power View レポートをサポートする機能を追加する例外で[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]以前のリリースから変更されていません。  
+  多次元のモデルに対する Power View レポートをサポートしている機能が追加の例外で[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]以前のリリースから変更されていません。  
   
- その他の方法について[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]製品およびテクノロジとは異なるこのリリースでは、次を参照してください。 [SQL Server 2014 の新](../sql-server/what-s-new-in-sql-server-2016.md)です。  
+ については、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]製品およびテクノロジは、このリリースでは異なる「 [SQL Server 2014 における新](../sql-server/what-s-new-in-sql-server-2016.md)します。  
   
 ## <a name="updates-to-design-tool-installation"></a>デザイン ツールのインストールに対する更新  
  以前は Business Intelligence Development Studio (BIDS) と呼ばれていた、ビジネス インテリジェンス用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (SSDT-BI) を使用して、Analysis Services モデル、Reporting Services レポート、および Integration Services パッケージを作成できます。 次の場所から SSDT-BI をダウンロードできます。  
@@ -49,8 +49,8 @@ ms.locfileid: "36072834"
   
  この機能は、多次元モデル (OLAP キューブとも呼びます) を最新のレポート クライアント ツールで使用できるようにするため、組織が BI への既存の投資を最大限に活用するうえで役立ちます。 多次元モデル内のデータの種類に応じて、テーブルやマトリックスから、バブル チャートや地理的マップまで、さまざまな動的視覚エフェクトを簡単に作成できます。 また、多次元モデルは、Data Analysis Expressions (DAX) を使用するクエリをサポートするようになりました。  
   
- 多次元モデルの power View での組み込みの Power View レポート機能を必要と[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SharePoint モードで)。 Power View の他のバージョン、特に Excel 2013 の Power View アドインは、多次元モデルをサポートしません。  
+ 多次元モデルの power View での組み込みの Power View レポート機能を必要と[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SharePoint モード) では。 Power View の他のバージョン、特に Excel 2013 の Power View アドインは、多次元モデルをサポートしません。  
   
- 詳細については、次を参照してください。[多次元モデルの Power View](http://msdn.microsoft.com/library/dn140246.aspx)です。  
+ 詳細についてを参照してください。[多次元モデルの Power View](http://msdn.microsoft.com/library/dn140246.aspx)します。  
   
   
