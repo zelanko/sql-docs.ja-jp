@@ -1,5 +1,5 @@
 ---
-title: SQL server クラウド アダプター |Microsoft ドキュメント
+title: SQL server クラウド アダプター |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cloud adapter
 - Deploy to Windows Azure
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74a991f9dc8c20e1cf4342312ecd66f95e1b240d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fd0a6901770c3c30138e694c9e792146be85ba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243382"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server のクラウド アダプター
   クラウド アダプター サービスは、Windows Azure 仮想マシン上で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を準備する一環として作成されます。 クラウド アダプター サービスは、最初の実行時に自己署名 SSL 証明書を生成し、 **Local System** アカウントとして実行されます。 その際に、自身を構成するために使用される構成ファイルを生成します。 クラウド アダプターは、Windows ファイアウォール ルールを作成し、既定のポート 11435 で着信する TCP 接続を許可します。  
@@ -34,7 +34,7 @@ ms.locfileid: "36074664"
   
 -   クラウド アダプターは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 以降でサポートされます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクラウド アダプターは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 に対応する SQL 管理オブジェクトを必要とします。  
   
--   クラウド アダプター Web サービスは **ローカル システム** アカウントとして実行され、タスクを実行する前にクライアントの資格情報を確認します。 クライアントによって提供された資格情報は、ローカルのメンバーであるアカウントに属する必要があります**管理者**リモート コンピューターでグループ化します。  
+-   クラウド アダプター Web サービスは **ローカル システム** アカウントとして実行され、タスクを実行する前にクライアントの資格情報を確認します。 クライアントによって指定された資格情報は、ローカルのメンバーであるアカウントに属する必要があります**管理者**リモート コンピューターでグループ化します。  
   
 -   クラウド アダプターでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証のみがサポートされます。  
   
@@ -49,17 +49,17 @@ ms.locfileid: "36074664"
   
 -   **構成ファイルの既定のパス**– C:\Program files \microsoft SQL server \120\tools\cloudadapter\  
   
--   **構成ファイル パラメーター** -  
+-   **構成ファイルのパラメーター** -  
   
-    -   \<構成 >  
+    -   \<configuration >  
   
         -   \<appSettings >  
   
-            -   \<キーを追加"WebServicePort"の値を = =""/>  
+            -   \<キーの追加"WebServicePort"の値を = =""/>  
   
-            -   \<キーを追加"WebServiceCertificate"の値を = ="GUID"/>  
+            -   \<キーの追加"WebServiceCertificate"の値を = ="GUID"/>  
   
-            -   \<キーを追加"ExposeExceptionDetails"の値を = ="true"/>  
+            -   \<キーの追加"ExposeExceptionDetails"の値を = ="true"/>  
   
         -   \</appSettings >  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36074664"
   
 -   **構成の詳細** – 証明書の値は次のとおりです。  
   
-    -   サブジェクト –"CN = CloudAdapter\<VMName >、DC = SQL Server, DC = Microsoft"  
+    -   サブジェクト:"CN = CloudAdapter\<VMName >、DC = SQL Server, DC = Microsoft"  
   
     -   証明書ではサーバー認証 EKU のみを有効にします。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36074664"
   
 -   **トレース、イベント** : すべてのイベントがアプリケーション イベント ログに書き込まれます。  
   
--   **コントロール、構成**– にある構成ファイルを使用します。 C:\Program files \microsoft SQL Server\120\Tools\CloudAdapter\\です。  
+-   **コントロール、構成**– である構成ファイルを使用します。 C:\Program files \microsoft SQL Server\120\Tools\CloudAdapter\\します。  
   
 |[エラー]|エラー ID|原因|解決策|  
 |-----------|--------------|-----------|----------------|  
@@ -97,7 +97,7 @@ ms.locfileid: "36074664"
 |証明書ストアで SSL 証明書 [{サムプリント}] が見つかりませんでした。|45564|証明書のサムプリントが構成ファイルにありますが、そのサービスのための個人証明書ストアに証明書が含まれていません。<br /><br /> 権限が不足しています。|サービスの個人証明書ストアに証明書を置きます。<br /><br /> サービスに、ストアへの適切な権限があることを確認します。|  
 |Web サービスを開始できませんでした。 {例外テキスト}。|45570|例外で説明されています。|ExposeExceptionDetails を有効にし、例外の拡張情報を使用します。|  
 |証明書 [{サムプリント}] の有効期限が切れています。|45565|構成ファイルから参照される期限切れの証明書。|有効な証明書を追加し、サムプリントを使用して構成ファイルを更新します。|  
-|Web サービス エラー:{0}です。|45571|例外で説明されています。|ExposeExceptionDetails を有効にし、例外の拡張情報を使用します。|  
+|Web サービス エラー:{0}します。|45571|例外で説明されています。|ExposeExceptionDetails を有効にし、例外の拡張情報を使用します。|  
   
 ## <a name="see-also"></a>参照  
  [Microsoft Azure Virtual Machine への SQL Server データベースの配置](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  

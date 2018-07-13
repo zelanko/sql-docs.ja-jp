@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 caps.latest.revision: 49
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: ecc1ea0c52016116ca9bbe5c102b6fbb44859da5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a5ed555d0b81e74babd60b16c1ba8df4685d6b37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328492"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>可用性グループの作成 (Transact-SQL)
   このトピックでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 機能を有効にする [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインスタンス上で可用性グループを作成および構成するために [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を使用する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
@@ -57,7 +56,7 @@ ms.locfileid: "36076370"
 |セカンダリ データベースを準備する|[BACKUP](/sql/t-sql/statements/backup-transact-sql) および [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)|プライマリ レプリカをホストするサーバー インスタンスでバックアップを作成します。<br /><br /> セカンダリ レプリカをホストする各サーバー インスタンス上で、RESTORE WITH NORECOVERY を使用してバックアップを復元します。|  
 |各セカンダリ データベースを可用性グループに参加させてデータ同期を開始する|[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|セカンダリ レプリカをホストする各サーバー インスタンスで実行します。|  
   
- **<sup>*</sup>**  特定のタスクを実行するには、指定されたサーバー インスタンスまたはのインスタンスに接続します。  
+ **<sup>*</sup>**  特定のタスクを実行するには、指定されたサーバー インスタンスまたはインスタンスに接続します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL を使用した可用性グループの作成と構成  
   
@@ -460,7 +459,7 @@ GO
   
 -   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [条件を制御する自動フェールオーバー (AlwaysOn 可用性グループ) の柔軟なフェールオーバー ポリシーを構成します。](configure-flexible-automatic-failover-policy.md)  
+-   [自動フェールオーバー (AlwaysOn 可用性グループ) の条件を制御する柔軟なフェールオーバー ポリシーを構成します。](configure-flexible-automatic-failover-policy.md)  
   
 -   [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
@@ -506,9 +505,9 @@ GO
   
  **AlwaysOn 可用性グループの構成をトラブルシューティングするには**  
   
--   [AlwaysOn 可用性グループの構成 (SQL Server) は削除のトラブルシューティングします。](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [削除された AlwaysOn 可用性グループ構成 (SQL Server) のトラブルシューティングします。](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
--   [失敗したファイルの追加操作のトラブルシューティング&#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [ファイル追加失敗の操作のトラブルシューティング&#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
@@ -522,13 +521,13 @@ GO
   
 -   **ビデオ:**  
   
-     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 1: 概要次世代の高可用性ソリューション](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ、パート 1: 次世代の高可用性ソリューションの概要](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 2: 構築 AlwaysOn を使用したミッション クリティカルな高可用性ソリューション](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ、パート 2: AlwaysOn を使用したミッション クリティカルな高可用性ソリューションの構築](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **ホワイト ペーパー:**  
   
-     [高可用性と災害復旧の Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -538,6 +537,6 @@ GO
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [前提条件、制限事項、および AlwaysOn 可用性グループに関する推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

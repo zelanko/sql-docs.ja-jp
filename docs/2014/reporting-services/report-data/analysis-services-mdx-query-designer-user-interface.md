@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 - sql12.rtp.rptdesigner.dataview.asquerydesigner.f1
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ce6de26e90d652c238d1b59dc2a288d3e65733df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f322526680b3a91f2fcb7e93e3159f79b79793a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323852"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 多次元式 (MDX) クエリとのデータ マイニング式 (DMX) クエリを構築するためのグラフィカル クエリ デザイナーを提供する[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データ ソース。 このトピックでは、MDX クエリ デザイナーについて説明します。 DMX クエリ デザイナーの詳細については、次を参照してください。 [DMX のための Analysis Services 接続の種類&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)です。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 多次元式 (MDX) クエリおよびデータ マイニング式 (DMX) クエリを構築するためのグラフィカル クエリ デザイナーの提供、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データ ソース。 このトピックでは、MDX クエリ デザイナーについて説明します。 DMX クエリ デザイナーの詳細については、次を参照してください。 [DMX のための Analysis Services 接続の種類&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)します。  
   
  MDX のグラフィカル クエリ デザイナーには、デザイン モードとクエリ モードという 2 つのモードがあります。 どちらのモードにもメタデータ ペインが表示され、選択したキューブからメンバーをドラッグすることによって MDX クエリを作成できます。レポートの処理時には、このクエリに基づいてデータが取得されます。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36075203"
 |メタデータ ペイン|選択されたキューブで定義されているメジャー、主要業績評価指標 (KPI)、およびディメンションの階層リストを表示します。|  
 |計算されるメンバー ペイン|現在定義されている、クエリに使用することのできる計算されるメンバーを表示します。|  
 |フィルター ペイン|ディメンションおよび関連する階層を選択することにより、ソースのデータをフィルター処理し、レポートに返されるデータを制限できます。|  
-|データ ペイン|メタデータ ペインや計算されるメンバー ペインからアイテムをドラッグすると、結果セットの列見出しが表示されます。 **[自動実行]** ボタンが選択されている場合、結果セットは自動的に更新されます。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|  
+|データ ペイン|メタデータ ペインや計算されるメンバー ペインからアイテムをドラッグすると、結果セットの列見出しが表示されます。 **[自動実行]** ボタンが選択されている場合、結果セットは自動的に更新されます。 .|  
   
  データ ペインには、メタデータ ペインからディメンション、メジャー、KPI をドラッグしたり、計算されるメンバー ペインから計算されるメンバーをドラッグしたりできます。 フィルター ペインでは、ディメンションや関連する階層を選択し、フィルター式を設定することによって、クエリに利用可能なデータを制限できます。 **[自動実行]** (![クエリの自動実行](../../analysis-services/media/rsqdicon-autoexecute.gif "クエリの自動実行")) 切り替えボタンがオンになっている場合、データ ペインにメタデータ オブジェクトをドロップするたびに、クエリが自動的に実行されます。 クエリを手動で実行するには、ツール バーの **[実行]** (![クエリの実行](../../analysis-services/media/rsqdicon-run.gif "クエリの実行")) ボタンを使用します。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36075203"
 ## <a name="see-also"></a>参照  
  [Analysis Services の MDX クエリ デザイナーでパラメーターを定義&#40;レポート ビルダーおよび SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Analysis Services 接続の種類の DMX の&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Analysis Services 接続の種類の DMX のため&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [RSReportDesigner 構成ファイル](../report-server/rsreportdesigner-configuration-file.md)   
  [MDX のための Analysis Services の接続の種類 &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)  
   

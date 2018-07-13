@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 22d9e7f6a9d78093287c146f007a9a722343baea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5bc369f74b77db20a9f7766f8bce0bc93e510bc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242862"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>類似データの照合 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、Data Quality Services (DQS) 機能を使用してデータ内の類似性を見つけます。  
@@ -32,7 +32,7 @@ ms.locfileid: "36075105"
   
 ## <a name="prerequisites"></a>前提条件  
   
--   MDS によって管理されるデータが含まれているワークシートが必要です。 詳細については、次を参照してください。[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)です。  
+-   MDS によって管理されるデータが含まれているワークシートが必要です。 詳細については、次を参照してください。[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)します。  
   
 -   任意。 類似性をチェックする前に、MDS によって管理されるデータとその他のデータを結合することができます。 詳細については、「[データの結合 (Excel 用 MDS アドイン)](combine-data-mds-add-in-for-excel.md)」を参照してください。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36075105"
 -   類似するデータを判別するには、追加情報を表示します。 詳細については、「[データ品質照合の列 (Excel 用 MDS アドイン)](data-quality-matching-columns-mds-add-in-for-excel.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Excel 用の MDS アドインでは、照合データ品質](data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [データ品質の Excel 用 MDS アドインの照合](data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [データ照合](../../data-quality-services/data-matching.md)  
   
   

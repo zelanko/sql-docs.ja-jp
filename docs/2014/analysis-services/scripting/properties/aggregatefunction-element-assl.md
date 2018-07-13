@@ -1,5 +1,5 @@
 ---
-title: AggregateFunction 要素 (ASSL) |Microsoft ドキュメント
+title: AggregateFunction 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregateFunction element
 ms.assetid: 880b6bd0-d62a-4221-831c-39f748ee84f2
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e292a0c509a746130493c7df601a9d373096c406
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc2eccf4ca6e41ffba52424c4f45edb71c9c1c46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261208"
 ---
 # <a name="aggregatefunction-element-assl"></a>AggregateFunction 要素 (ASSL)
   によって使用される集計関数の種類を定義、[メジャー](../objects/measure-element-assl.md)要素。  
@@ -79,7 +79,7 @@ ms.locfileid: "36074064"
 |*FirstNonEmpty*|メジャーはその最初の空でないメンバーを返すことによって集計されます。|  
 |*LastNonEmpty*|メジャーはその最後の空でないメンバーを返すことによって集計されます。|  
   
- 許可される値に対応する列挙`AggregateFunction`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AggregationFunction>します。  
+ 許容された値に対応する列挙体`AggregateFunction`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AggregationFunction>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

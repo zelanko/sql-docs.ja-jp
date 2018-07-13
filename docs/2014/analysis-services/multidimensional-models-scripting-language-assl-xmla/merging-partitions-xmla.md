@@ -1,5 +1,5 @@
 ---
-title: パーティションのマージ (XMLA) |Microsoft ドキュメント
+title: パーティションのマージ (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - XML for Analysis, partitions
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cdcd21c66320c5d29f597bc5f85b35c61f14cf36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a3de50e053ed8b3e16373e4aa5b162991f286dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332722"
 ---
 # <a name="merging-partitions-xmla"></a>パーティションのマージ (XMLA)
-  使用してパーティションをマージするには、同じ集計デザインと構造のパーティションがある場合、 [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) XML for Analysis (XMLA) コマンド。 パーティション管理において、パーティションのマージは重要な操作です。日付によってパーティション分割された履歴データを含むパーティションの場合は特に重要です。  
+  使用して、パーティションをマージするには、同じ集計デザインと構造のパーティションがある場合、 [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) XML for Analysis (XMLA) コマンド。 パーティション管理において、パーティションのマージは重要な操作です。日付によってパーティション分割された履歴データを含むパーティションの場合は特に重要です。  
   
  たとえば、次の 2 つのパーティションを使用する財務キューブがあるとします。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36074483"
  2 つのパーティションは異なるストレージ設定を使用しますが、集計デザインは同じものを使用します。 年の終わりに複数年にわたる履歴データについてキューブを処理する代わりに、`MergePartitions` コマンドを使用して、現在の年のパーティションを過去の年のパーティションにマージできます。 こうすれば、多くの時間をかけてキューブを詳細に処理しなくても、集計データを保持できます。  
   
 ## <a name="specifying-partitions-to-merge"></a>マージするパーティションの指定  
- ときに、`MergePartitions`コマンドの実行で指定されたソース パーティションに格納された集計データ、[ソース](../xmla/xml-elements-properties/source-element-xmla.md)プロパティで指定された対象パーティションに追加、[ターゲット](../xmla/xml-elements-properties/target-element-xmla.md)プロパティです。  
+ ときに、`MergePartitions`コマンドの実行で指定されたソース パーティションに格納された集計データ、[ソース](../xmla/xml-elements-properties/source-element-xmla.md)プロパティで指定された対象パーティションに追加されます、[ターゲット](../xmla/xml-elements-properties/target-element-xmla.md)プロパティ。  
   
 > [!NOTE]  
 >  `Source` プロパティには複数のパーティション オブジェクト参照を含めることができます。 しかし、`Target` プロパティには複数を含めることができません。  
@@ -51,7 +51,7 @@ ms.locfileid: "36074483"
 ## <a name="examples"></a>使用例  
   
 ### <a name="description"></a>説明  
- 次の例では、すべてのパーティション、 **Customer Counts**のメジャー グループ、 **Adventure Works**でキューブ、 **Adventure Works DW**サンプル[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]にデータベース、 **Customers_2004**パーティション。  
+ 次の例では、内のすべてのパーティションのマージ、 **Customer Counts**のメジャー グループ、 **Adventure Works**キューブ、 **Adventure Works DW**サンプル[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]へのデータベース、 **Customers_2004**パーティション。  
   
 ### <a name="code"></a>コード  
   

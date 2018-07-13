@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.saveas
 helpviewer_keywords:
 - Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 968cb13c9a115fcc0445cdfba194a2087a06a234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4dc19118c88734062a9c57ac39acf33bab5942d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326902"
 ---
 # <a name="save-as"></a>[名前を付けて保存]
-  このダイアログ ボックスを使用すると、現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。 このダイアログ ボックスを表示する をクリックして**保存** *\<ファイル >* **として**上、**ファイル**メニュー (ここで *\<ファイル >* 現在のアイテムの名前を指定します)、または alt キーを押しながら F キー、A、コード エディターでキーを押します。  
+  このダイアログ ボックスを使用すると、現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。 このダイアログ ボックスを表示するには、次のようにクリックします**保存** *\<ファイル >* **として**上、**ファイル**メニュー (場所 *。\<ファイル >* は現在の項目の名前です)、または alt キーを押しながら F キーをコード エディターでキーを押します。  
   
 ## <a name="central-panel"></a>中央のパネル  
  **[保存先]**  

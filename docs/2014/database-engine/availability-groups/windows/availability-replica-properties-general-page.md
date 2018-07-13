@@ -5,23 +5,22 @@ ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilityreplicaproperties.general.f1
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 caps.latest.revision: 13
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: f31c40f012c72d87e932032a80ee00bb1f0afe75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 29b53d91b1d60752a9e7ecea5d9d020ab6ab3d70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237412"
 ---
 # <a name="availability-replica-properties-general-page"></a>可用性レプリカのプロパティ ([全般] ページ)
   このダイアログ ボックスには、可用性レプリカのプロパティが表示されます。  
@@ -59,7 +58,7 @@ ms.locfileid: "36075810"
  **[同期コミット]**  
  プライマリ レプリカは、セカンダリ レプリカがトランザクションをディスクに書き込むまで、特定のトランザクションのコミットを待機します。  
   
- 詳細については、次を参照してください。[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)です。  
+ 詳細については、次を参照してください。[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)します。  
   
  **Failover mode**  
  レプリカのフェールオーバー モード。次のいずれかです。  
@@ -91,7 +90,7 @@ ms.locfileid: "36075810"
  **はい**  
  読み取りアクセスに限り、このレプリカのセカンダリ データベースに対するすべての接続が許可されます。 セカンダリ データベースはすべて読み取りアクセスで利用できます。  
   
- 詳細については、次を参照してください。[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)です。  
+ 詳細については、次を参照してください。[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)します。  
   
  **[セッションのタイムアウト (秒)]**  
  タイムアウト時間 (秒単位)。 タイムアウト時間は、レプリカが別のレプリカからのメッセージの受信を待機する最大時間です。この時間を過ぎると、プライマリ レプリカとセカンダリ レプリカの間の接続は障害があるものと見なされます。 セッション タイムアウトは、セカンダリ レプリカがプライマリ レプリカに接続されているかどうかを検出します。 セカンダリ レプリカとの接続が確立されていないことを検出すると、プライマリ レプリカはセカンダリ レプリカが NOT_SYNCHRONIZED であるものと判断します。 プライマリ レプリカとの接続が確立されていないことを検出すると、セカンダリ レプリカは単に再接続を試みます。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45be29be2275a5e0a5c953164a79d377c4f67f41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08b61386de48d83b9d845d57dd831fff68b9ee2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219912"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>SQL Server 更新プログラムのインストール後の DQS データベース スキーマのアップグレード
   あらかじめ構成された DQS インスタンスに SQL Server の更新プログラム (パッチ、修正プログラム、または累積的な更新プログラム) をインストールした後、**upgrade** コマンド ライン パラメーターを指定して DQSInstaller.exe ファイルを実行し、DQS データベース スキーマをアップグレードする必要がある場合があります。 アップグレードしなかった場合、Data Quality Client を使用して Data Quality Server に接続しようとすると、次のエラーが表示されることがあります。  
@@ -45,7 +45,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
   
 2.  コマンド プロンプトを起動します。  
   
-3.  コマンド プロンプトで、DQSInstaller.exe が格納されている場所にディレクトリを変更します。 SQL Server の既定のインスタンスをインストールした場合、DQSInstaller.exe ファイルは C:\Program files \microsoft SQL Server\MSSQL12 で使用されます。MSSQLSERVER\MSSQL\Binn:  
+3.  コマンド プロンプトで、DQSInstaller.exe が格納されている場所にディレクトリを変更します。 SQL Server の既定のインスタンスをインストールした場合、DQSInstaller.exe ファイルは C:\Program files \microsoft SQL Server\MSSQL12 でご利用いただけますになります。MSSQLSERVER\MSSQL\Binn:  
   
     ```  
     cd C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn  
@@ -57,7 +57,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
     dqsinstaller.exe -upgrade  
     ```  
   
-5.  処理を続ける前に DQS データベースをバックアップするように求められます。 DQS データベースを既にバックアップしてある場合は、入力`Y`または`Yes`とアップグレードを続行するには ENTER キーを押します。  
+5.  処理を続ける前に DQS データベースをバックアップするように求められます。 既に DQS データベースをバックアップしてあるを場合は、入力`Y`または`Yes`アップグレードを続行するには ENTER キーを押します。  
   
 6.  DQS データベース スキーマのアップグレードが正常に完了すると、完了のメッセージが表示されます。  
   

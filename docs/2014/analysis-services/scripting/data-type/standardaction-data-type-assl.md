@@ -1,5 +1,5 @@
 ---
-title: StandardAction データ型 (ASSL) |Microsoft ドキュメント
+title: StandardAction データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - StandardAction data type
 ms.assetid: 81b574d5-06c1-4587-8bd2-0e5c5e3b1d99
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bdf3282c6f75cc762ae67a9fab9fc641f25fa3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57116b91719dec65efef9be50926456e33109b4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267548"
 ---
 # <a name="standardaction-data-type-assl"></a>StandardAction データ型 (ASSL)
-  いずれかを表す派生データ型を定義[アクション](../objects/action-element-assl.md)以外の要素、 [DrillThroughAction](action-data-type-assl.md)要素または[ReportAction](reportaction-data-type-assl.md)要素。  
+  いずれかを表す派生データ型を定義します[アクション](../objects/action-element-assl.md)以外の要素を[DrillThroughAction](action-data-type-assl.md)要素または[ReportAction](reportaction-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

@@ -1,5 +1,5 @@
 ---
-title: Source 要素 (Measure) (ASSL) |Microsoft ドキュメント
+title: Source 要素 (Measure) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 9bae7ba4-3065-4623-b3e0-d54cebea7503
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed41316f62469268d86a89d0c0a5e59f07c8f726
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d4e374490fdfe04e5da39a0f4e9424b2cb1ccde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323212"
 ---
 # <a name="source-element-measure-assl"></a>Source 要素 (Measure) (ASSL)
   値を含むソースの詳細を含む、[メジャー](../objects/measure-element-assl.md)要素。  
@@ -62,9 +62,9 @@ ms.locfileid: "36075128"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `Source`の`DataItem`、として機能する、`Source`の`Measure`の種類にできる[RowBinding](../data-type/binding-data-type-assl.md)、 [ColumnBinding](../data-type/columnbinding-data-type-assl.md)、 [MeasureBinding](../data-type/measurebinding-data-type-assl.md)、または[CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md)です。  
+ `Source`の`DataItem`、として使用される、`Source`の`Measure`の種類のさらにできる[RowBinding](../data-type/binding-data-type-assl.md)、 [ColumnBinding](../data-type/columnbinding-data-type-assl.md)、 [MeasureBinding](../data-type/measurebinding-data-type-assl.md)、または[CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md)します。  
   
- 詳細については、`DataItem`の ASSL オブジェクトおよびプロパティのテーブルを含む、型、`DataItem`を入力しを参照してください[DataItem データ型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)です。  
+ 詳細については、`DataItem`の ASSL オブジェクトとプロパティのテーブルを含む、型、`DataItem`入力を参照してください[DataItem データ型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)します。  
   
  親に対応する要素`Source`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Measure>します。  
   

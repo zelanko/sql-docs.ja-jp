@@ -1,5 +1,5 @@
 ---
-title: ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター |Microsoft ドキュメント
+title: ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 43e051ae17b406021092af68767ff3b196c2f250
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0573346427258d9b79188852c8d6e13af1cb8d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238392"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター
   このトピックでは、次の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
@@ -46,9 +46,9 @@ ms.locfileid: "36074753"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint モード |ネイティブ モード。  
   
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service パフォーマンス カウンター (ネイティブ モードのレポート サーバー)  
- `ReportServer:Service` パフォーマンス オブジェクトには複数のカウンターが含まれおり、レポート サーバー インスタンスの HTTP 関連のイベントやメモリ関連のイベントの追跡に使用されます。 このパフォーマンス オブジェクトはそれぞれに 1 回[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]して、コンピューター上のインスタンスを追加したり、パフォーマンス オブジェクトの各インスタンスからカウンターを削除します。 既定のインスタンスのカウンターは、`ReportServer:Service` という形式で表示されます。 形式で表示される名前付きインスタンスのカウンター `ReportServer$<` *instance_name*`>:Service`です。  
+ `ReportServer:Service` パフォーマンス オブジェクトには複数のカウンターが含まれおり、レポート サーバー インスタンスの HTTP 関連のイベントやメモリ関連のイベントの追跡に使用されます。 このパフォーマンス オブジェクトには、ごとに 1 つが表示されます。[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]すると、コンピューター上のインスタンスを追加または各インスタンスのパフォーマンス オブジェクトからカウンターを削除できます。 既定のインスタンスのカウンターは、`ReportServer:Service` という形式で表示されます。 カウンターの形式で名前付きインスタンスの表示は`ReportServer$<` *instance_name*`>:Service`します。  
   
- `ReportServer:Service`パフォーマンス オブジェクトはの新機能が[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]、インターネット インフォメーション サービス (IIS) に含まれていたカウンターのサブセットを提供し、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]以前のバージョンの[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]します。 これらは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に固有の新しいカウンターです。要求、接続、ログオン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 さらに、このパフォーマンス オブジェクトには、メモリ管理イベントを追跡するカウンターも含まれています。  
+ `ReportServer:Service`パフォーマンス オブジェクトはで新しく追加された[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]、インターネット インフォメーション サービス (IIS) に含まれていたカウンターのサブセットを提供および[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]以前のバージョンの[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 これらは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に固有の新しいカウンターです。要求、接続、ログオン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 さらに、このパフォーマンス オブジェクトには、メモリ管理イベントを追跡するカウンターも含まれています。  
   
  次の表に含まれているカウンターの一覧、`ReportServer:Service`パフォーマンス オブジェクトです。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36074753"
 |`Tasks Queued`|スレッドが使用可能になるのを待機しているタスクの数。 レポート サーバーに対する要求は、それぞれ、1 つまたは複数のタスクと対応します。 このカウンターによって表されるのは、処理の準備が整っているタスクの数だけです。現在実行中のタスクの数は含まれません。|  
   
 ##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (SharePoint モードのレポート サーバー)  
- `ReportServerSharePoint:Service`パフォーマンス オブジェクトが追加されました[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]です。  
+ `ReportServerSharePoint:Service`パフォーマンス オブジェクトが追加されました[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]します。  
   
  ![PowerShell 関連コンテンツ](../media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName のパフォーマンス カウンターの一覧を返します。  
   
@@ -107,6 +107,6 @@ ms.locfileid: "36074753"
 ## <a name="see-also"></a>参照  
  [レポート サーバーのパフォーマンスの監視](monitoring-report-server-performance.md)   
  [MSRS 2014 Web Service と MSRS 2014 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター&#40;ネイティブ モード&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
- [MSRS 2014 Web Service SharePoint Mode と MSRS 2014 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター &#40;SharePoint モード&#41;]./performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [パフォーマンス カウンター MSRS 2014 Web Service SharePoint Mode と MSRS 2014 Windows Service SharePoint Mode パフォーマンス オブジェクト&#40;SharePoint モード&#41;]./performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
   
   

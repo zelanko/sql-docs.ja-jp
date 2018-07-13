@@ -3,26 +3,24 @@ title: ストアド プロシージャ (データベース エンジン) | Micro
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - storing programs as stored procedures
 - stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 617e72a83cc861ef66aa94df6b2bfe4e9c61ba24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d131ae229bc82243e0192ce7510392c1c8b355a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260428"
 ---
 # <a name="stored-procedures-database-engine"></a>ストアド プロシージャ (データベース エンジン)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャは、1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) メソッドの参照のグループです。 プロシージャは、以下ができるために、他のプログラミング言語の構造に似ています。  

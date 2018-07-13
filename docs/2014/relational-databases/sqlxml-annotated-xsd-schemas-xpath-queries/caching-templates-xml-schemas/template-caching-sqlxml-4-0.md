@@ -1,5 +1,5 @@
 ---
-title: テンプレート キャッシュ (SQLXML 4.0) |Microsoft ドキュメント
+title: テンプレートのキャッシュ (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - templates [SQLXML], caching
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4107a253b7fc82f3961caa08b005c33a95d46a4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 79d5d5ea1cd40d1a2fc167d16da4fa2e2af65a43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236582"
 ---
 # <a name="template-caching-sqlxml-40"></a>テンプレートのキャッシュ (SQLXML 4.0)
   テンプレートをキャッシュすると、パフォーマンスが大幅に向上します。 テンプレートのキャッシュを設定している場合、テンプレートは初回実行時にメモリに残るので、 以降のテンプレート実行でパフォーマンスが向上します。  
@@ -40,7 +40,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
   
  テンプレートのサイズは、使用できるメモリと使用しているテンプレートの数に基づいて設定します。 既定値は**TemplateCacheSize**サイズは 31 です。 テンプレートのアクセスが遅い場合はキャッシュ サイズを増やし、メモリが少ない場合はキャッシュ サイズを減らします。  
   
- パフォーマンスを向上させることをお勧めを設定すること**TemplateCacheSize**通常使用するテンプレート数よりも大きくします。 場合**TemlateCacheSize**が小さいテンプレートが増えた数として数よりも、テンプレートがある場合、パフォーマンスは低下します。 **TemplateCacheSize** 128 までの値に設定することができます。  
+ パフォーマンスの向上のためお勧め設定した**TemplateCacheSize**通常使用するテンプレートの数より大きい。 場合**TemlateCacheSize**が小さいするテンプレートの数よりパフォーマンスが低下としてテンプレートの増加の数。 **TemplateCacheSize** 128 までの値に設定することができます。  
   
  キャッシュされたテンプレートが使用されるときには、毎回テンプレート ファイルの変更回数がチェックされ、更新が必要がどうかが決定されます。 これは、ディスク コピーがキャッシュ コピーより新しいためです。  
   

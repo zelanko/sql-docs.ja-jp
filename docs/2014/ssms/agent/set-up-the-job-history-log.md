@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
 - logs [SQL Server], jobs
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - historical information [SQL Server], jobs
 ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 206f25645a0b00829f76d45c497938d29a9775cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 23b2eaeabb0bdcecdaafe2bfc736e5cc38ccadad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247878"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴ログをセットアップする方法について説明します。  
@@ -55,7 +55,7 @@ ms.locfileid: "36074967"
   
 ## <a name="see-also"></a>参照  
  [ジョブの実装](implement-jobs.md)   
- [ジョブの利用状況の監視](monitor-job-activity.md)   
+ [モニターのジョブの利用状況](monitor-job-activity.md)   
  [ジョブの作成](create-jobs.md)  
   
   

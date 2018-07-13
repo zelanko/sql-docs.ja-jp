@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6bfd685dd37b40f943a014c2a7230b11c4495216
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8954e5f1959460c8546543e79b2db9cd49c8342b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270248"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>レポート履歴のスナップショットの作成、変更および削除
   レポート履歴は、一連のレポート スナップショットです。 スナップショットの追加と削除、またはレポート履歴の記憶域に影響するプロパティの変更を行うことで、レポート履歴を管理できます。 レポート履歴は手動で、またはスケジュールに従って作成できます。  
@@ -66,7 +66,7 @@ ms.locfileid: "36074751"
 ## <a name="see-also"></a>参照  
  [レポート履歴の作成&#40;Reporting Services の SharePoint 統合モード&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
- [レポート サーバーのコンテンツ管理&#40;SSRS ネイティブ モード&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](report-server-content-management-ssrs-native-mode.md)   
  [レポート履歴にスナップショットを追加&#40;レポート マネージャー&#41;](add-a-snapshot-to-report-history-report-manager.md)   
  [レポート履歴を制限する &#40;レポート マネージャー&#41;](../reports/limit-report-history-report-manager.md)  
   

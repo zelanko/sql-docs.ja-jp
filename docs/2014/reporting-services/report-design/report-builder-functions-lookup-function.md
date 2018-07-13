@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e2617d9704db585e4f8ac3558941a957876fc05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 41a75e8559738294986bc5fb203b1b0469305f57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222912"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 関数 (レポート ビルダーおよび SSRS)
   名前と値のペアを含むデータセットから、指定された名前に最初に一致した値を返します。  
@@ -42,7 +42,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、 `=Fields!ProductID.Value`のようにします。  
   
  *result_expression*  
- (`Variant`) データセット内の各行に対して評価される式を*source_expression* = *destination_expression*、取得する値を指定します。 たとえば、 `=Fields!ProductName.Value`のようにします。  
+ (`Variant`) データセット内の行に対して評価される式を*source_expression* = *destination_expression*、取得する値を指定します。 たとえば、 `=Fields!ProductName.Value`のようにします。  
   
  *データセット (dataset)*  
  レポート内のデータセットの名前を指定する定数。 たとえば、"Products" などです。  
@@ -51,9 +51,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  返します、 `Variant`、または`Nothing`一致が存在しない場合。  
   
 ## <a name="remarks"></a>コメント  
- 使用して`Lookup`名前/値ペアの指定されたデータセットから値を取得する場所 1-1 のリレーションシップが存在します。 たとえば、テーブル内の ID フィールドに対して `Lookup` を使用して、データ領域にバインドされていないデータセットから対応する Name フィールドを取得することができます。  
+ 使用`Lookup`名前/値ペアの指定したデータセットから値を取得する 1-1 のリレーションシップがある場合。 たとえば、テーブル内の ID フィールドに対して `Lookup` を使用して、データ領域にバインドされていないデータセットから対応する Name フィールドを取得することができます。  
   
- `Lookup` 次のとおり  
+ `Lookup` 次を行います。  
   
 -   ソースの式を現在のスコープ内で評価します。  
   
@@ -63,7 +63,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   結果式の値を返します。  
   
- 1 対多のリレーションシップがある場合、1 つの名前フィールドまたはキー フィールドに対応する複数の値を取得するには、[LookupSet 関数 &#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-lookupset-function.md) を使用します。 呼び出す`Lookup`一連の値を使用して[Multilookup 関数&#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-lookup-function.md)です。  
+ 1 対多のリレーションシップがある場合、1 つの名前フィールドまたはキー フィールドに対応する複数の値を取得するには、[LookupSet 関数 &#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-lookupset-function.md) を使用します。 呼び出す`Lookup`一連の値を使用して[Multilookup 関数&#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-lookup-function.md)します。  
   
  次の制限があります。  
   
@@ -75,7 +75,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   変換元、変換先、結果の式には、レポート変数またはグループ変数への参照を含めることができません。  
   
--   `Lookup` 次のレポート アイテムの式として使用することはできません。  
+-   `Lookup` 次のレポート アイテムの式として使用できません。  
   
     -   データ ソースの動的な接続文字列。  
   
@@ -104,6 +104,6 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [式の合計、集計、および組み込みコレクションのスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

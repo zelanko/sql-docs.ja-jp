@@ -1,5 +1,5 @@
 ---
-title: 対話型レポート機能の機能別表示拡張機能 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント
+title: 対話機能のさまざまなレポート表示拡張機能 (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 12aba044c373c9a75c9be3754ece6703eae0e5a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a61442deaf2ca75bd3fb85f5eb8c83f6f58c4fee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238494"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>さまざまなレポート表示拡張機能の対話機能 (レポート ビルダーおよび SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 実行時にレポートを操作できるようにする対話型レポート機能を提供します。 すべてのレポート表示形式で、すべての対話機能をサポートしているわけではありません。 次の表を使用することで、それぞれの対話機能が特定の表示形式でどのように動作するのかを理解できます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 実行時に、レポートを操作するための対話型レポート機能を提供します。 すべてのレポート表示形式で、すべての対話機能をサポートしているわけではありません。 次の表を使用することで、それぞれの対話機能が特定の表示形式でどのように動作するのかを理解できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

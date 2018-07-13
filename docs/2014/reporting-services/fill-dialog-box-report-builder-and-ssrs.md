@@ -1,5 +1,5 @@
 ---
-title: '[塗りつぶし] ダイアログ ボックス (レポート ビルダーおよび SSRS) |Microsoft ドキュメント'
+title: '[塗りつぶし] ダイアログ ボックス (レポート ビルダーおよび SSRS) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportbody.fill.f1
 - "10065"
@@ -20,22 +20,22 @@ f1_keywords:
 - "10124"
 ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1378fb461e3a52f751f79cb0d31e0dcd498d8c0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 135a2d1d7ac4a9783bf2cc66f26dc60953ec2f76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262298"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>[塗りつぶし] ダイアログ ボックス (レポート ビルダーおよび SSRS)
   **[塗りつぶし]** タブでは、データ領域やテキスト ボックスにある 1 つまたは複数のセルの背景色のオプションを指定できます。  
   
 ## <a name="options"></a>および  
  **塗りつぶしの色**  
- 色のボタンをクリックして、四角形の塗りつぶしの色を選択します。 クリックして、**Expression***(fx)* できる RGB 色またはで提供される定義済みの色の名前の 1 つの 16 進数の値を式を編集するボタン、**式** ダイアログ ボックス。 定義済みの色の一覧を表示するには、 **[アイテム]** ペインの **[Web]** を選択します。 **[タイトル]** ペインに表示されている色の名前は、[式] ペインに入力できます。 色の名前を入力する場合は、等号 (=) または引用符 ("") を使用しないでください。  
+ 色のボタンをクリックして、四角形の塗りつぶしの色を選択します。 をクリックして、**Expression***(fx)* RGB 色またはで提供される定義済みの色の名前の 1 つの 16 進数の値を指定できる式を編集するボタン、**式** ダイアログ ボックス。 定義済みの色の一覧を表示するには、 **[アイテム]** ペインの **[Web]** を選択します。 **[タイトル]** ペインに表示されている色の名前は、[式] ペインに入力できます。 色の名前を入力する場合は、等号 (=) または引用符 ("") を使用しないでください。  
   
  **画像ソースを選択します。**  
  レポートを表示する際にレポート プロセッサで表示できるように、画像が格納されている場所を指定します。  
@@ -51,7 +51,7 @@ ms.locfileid: "36074341"
   
  画像を埋め込む場合は、レポートに追加する画像をドロップダウン リストから選択します。 ドロップダウン リストに画像を追加するには、 **[インポート]** をクリックします。 画像を **[データ]** ペインに追加した場合は、 **[埋め込み]** をクリックし、ドロップダウン リストから画像を選択すると、追加した画像を選択できます。  
   
- **[外部]** オプションを選択した場合は、画像の URL を入力します。 ネイティブ モード用に構成されたレポート サーバーにパブリッシュされたレポートの場合、完全パスまたは相対パスを使用して (たとえば、http://*\<servername >*/images/image1.jpg)。 SharePoint 統合モードで構成されているレポート サーバーにパブリッシュされたレポート、完全修飾 URL を使用して (たとえば、http://*\<SharePointservername >/\<サイト >* ドキュメント イメージ//image1.jpg)。  
+ **[外部]** オプションを選択した場合は、画像の URL を入力します。 ネイティブ モード用に構成されたレポート サーバーにパブリッシュされたレポートの場合、完全なパスまたは相対パスを使用して、(たとえば、http://*\<servername >*/images/image1.jpg)。 SharePoint 統合モードで構成されているレポート サーバーにパブリッシュされたレポート、完全修飾 URL を使用して (http:// など*\<SharePointservername >/\<サイト >* ドキュメント/イメージ/image1.jpg)。  
   
  **[インポート]**  
  **[埋め込み]** を選択すると使用できます。 **[次の画像を使用]** ボックスの一覧に画像を追加する場合にクリックします。  
@@ -59,7 +59,7 @@ ms.locfileid: "36074341"
  **このフィールドを使用します。**  
  **[データベース]** を選択すると使用できます。 フィールド名を選択します。  
   
- **この MIME の種類を使用します。**  
+ **この MIME の種類を使用して、**  
  データベース内に含まれている画像の適切な形式を選択します (たとえば、.bmp、.jpeg、.gif、.png、.x-png など)。  
   
 ## <a name="see-also"></a>参照  

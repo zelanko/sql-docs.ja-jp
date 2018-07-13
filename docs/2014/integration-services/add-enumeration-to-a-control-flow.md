@@ -1,5 +1,5 @@
 ---
-title: 列挙を制御フローに追加する |Microsoft ドキュメント
+title: 制御フローに列挙を追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding enumerations
 - Foreach Loop containers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - enumerations [Integration Services]
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 10d30541be42331b544882f8a8b85f75db7f230d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 039b9a1cd94b3baa207c5d738dc8ed2455bb9d74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223737"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>制御フローに列挙を追加する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、Foreach ループ コンテナーが含まれています。Foreach ループ コンテナーとは制御フローの要素で、これを使用すると、パッケージの制御フロー内のファイルおよびオブジェクトを列挙するループ構造を簡単に含めることができます。 詳細については、「 [Foreach ループ コンテナー](control-flow/foreach-loop-container.md)」を参照してください。  
@@ -36,21 +36,21 @@ ms.locfileid: "36077377"
   
 ### <a name="to-implement-a-foreach-loop-container-in-a-control-flow"></a>Foreach ループ コンテナーを制御フローに実装するには  
   
-1.  Foreach ループ コンテナーをパッケージに追加します。 詳細については、次を参照してください[タスクまたはコンテナー制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+1.  Foreach ループ コンテナーをパッケージに追加します。 詳細については、次を参照してください[タスクまたはコンテナーの制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+  .  
   
-2.  タスクとコンテナーを Foreach ループ コンテナーに追加します。 詳細については、次を参照してください[タスクまたはコンテナー制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+2.  タスクとコンテナーを Foreach ループ コンテナーに追加します。 詳細については、次を参照してください[タスクまたはコンテナーの制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+  .  
   
 3.  優先順位制約を使用して、Foreach ループ コンテナー内のタスクとコンテナーを連結します。 詳細については、「 [既定の優先順位制約を使用してタスクとコンテナーを連結する](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)」を参照してください。  
   
 4.  Foreach ループ コンテナーを構成します。 詳細については、「 [Foreach ループ コンテナーを構成する](../../2014/integration-services/configure-a-foreach-loop-container.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [タスクまたはコンテナーを制御フローに追加または削除](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [グループまたはグループ解除コンポーネント](group-or-ungroup-components.md)   
+ [タスクまたはコンテナーの制御フローに追加または削除](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [グループまたはグループ化解除のコンポーネント](group-or-ungroup-components.md)   
  [優先順位制約](control-flow/precedence-constraints.md)   
- [制御フローに繰り返しを追加します。](add-iteration-to-a-control-flow.md)   
+ [繰り返し制御フローを追加します。](add-iteration-to-a-control-flow.md)   
  [制御フロー](control-flow/control-flow.md)  
   
   

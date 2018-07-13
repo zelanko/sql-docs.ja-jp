@@ -1,5 +1,5 @@
 ---
-title: マイニング構造に列を追加 |Microsoft ドキュメント
+title: マイニング構造に列の追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], columns
 - columns [data mining], mining structure columns
 - adding columns
 ms.assetid: 3f879344-9f66-4178-851a-e8c5ccccf4cb
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a13e3216ff7d4209331fb5cbc062b62908283140
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9e7ffb3efc1ba8e9a1182c1232bf397760a88f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271978"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>マイニング構造への列の追加
   データ マイニング ウィザードで定義したマイニング構造に列を追加するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーを使用します。 マイニング構造の定義に使用したデータ ソース ビューに存在する列はどれでも追加できます。  

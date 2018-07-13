@@ -1,5 +1,5 @@
 ---
-title: 予測クエリの結果を表示および |Microsoft ドキュメント
+title: 表示し、予測クエリの結果の保存 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - viewing prediction query results
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], viewing results
 ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d7cfbd171ea3762dae468c9d418bbd9693dd6ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff501825009b9ebdfeb8708419b8dbfb4690be62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253194"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>予測クエリの結果の表示および保存
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の予測クエリ ビルダーを使用してクエリを定義した後は、クエリ結果ビューに切り替えてクエリを実行し、結果を表示できます。  

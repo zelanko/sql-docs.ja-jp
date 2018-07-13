@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1163e8575562c5a81fea3bfef65c89a77b1ce5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9c345312ddadab6c5efd689d36f36f09cc2d0a41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250222"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 設定リファレンス (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では Web.config ファイルを使用することで、インターネット インフォメーション サービス (IIS) を有効にして [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションおよび Web サービスをホストできるようにする構成設定を取り込みます。 この Web.config ファイルは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インストール パスの WebApplication フォルダーにあります。 パスと権限の詳細については、「[フォルダーとファイルの権限 (マスター データ サービス)](folder-and-file-permissions-master-data-services.md)」を参照してください。  
@@ -59,10 +59,10 @@ ms.locfileid: "36076247"
 |アイテム|説明|  
 |----------|-----------------|  
 |`instance`|子要素。 Web サービスとデータベース接続文字列の情報を指定する属性を含みます。|  
-|`virtualPath`|Attribute。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスの仮想パスを指定します。 これに対応して、`path`の属性、 **\<アプリケーション >** 要素の下、 **\<サイト >** IIS ApplicationHost.config ファイル内の要素。|  
-|`siteName`|Attribute。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスをホストするサイトの名前を指定します。 これに対応して、`name`の属性、 **\<サイト >** 要素の下**\<サイト >** IIS ApplicationHost.config ファイルにします。|  
-|`connectionName`|Attribute。 使用する接続の名前を指定します。 これに対応して、`name`の属性、 **\<追加 >** 要素の下、  **\<connectionStrings >** Web.config 内の要素。|  
-|`serviceName`|Attribute。 Web サービスの名前を指定します。 これに対応して、`name`の属性、 **\<サービス >** 要素の下、  **\<services >** Web.config 内の要素。|  
+|`virtualPath`|Attribute。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスの仮想パスを指定します。 これに対応して、`path`の属性、 **\<アプリケーション >** の下の要素、 **\<サイト >** IIS ApplicationHost.config ファイル内の要素。|  
+|`siteName`|Attribute。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとサービスをホストするサイトの名前を指定します。 これに対応して、`name`の属性、 **\<サイト >** 要素  **\<サイト >** IIS ApplicationHost.config ファイルにします。|  
+|`connectionName`|Attribute。 使用する接続の名前を指定します。 これに対応して、`name`の属性、 **\<追加 >** の下の要素、  **\<connectionStrings >** Web.config 内の要素。|  
+|`serviceName`|Attribute。 Web サービスの名前を指定します。 これに対応して、`name`の属性、 **\<サービス >** の下の要素、  **\<services >** Web.config 内の要素。|  
   
 ### <a name="example"></a>例  
  次の例は、Contoso サイト上の MDS1 という名前のサービスと、MDSDB によって指定された接続文字列を使用した /MDS パスを示しています。  

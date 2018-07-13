@@ -1,5 +1,5 @@
 ---
-title: ApplyCompression 要素 (XMLA) |Microsoft ドキュメント
+title: ApplyCompression 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ApplyCompression element
 ms.assetid: 93e222e5-9371-4fb5-aae0-f50b964cc264
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 26cdd98c57e8b280893d97d1362488f8fa50dd2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b0e0fcf4fedf431f9dcdffd69e87539ab84df068
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254904"
 ---
 # <a name="applycompression-element-xmla"></a>ApplyCompression 要素 (XMLA)
-  指定するかどうか、親[バックアップ](../xml-elements-commands/backup-element-xmla.md)コマンドがバックアップ ファイルを圧縮します。  
+  決定かどうか、親[バックアップ](../xml-elements-commands/backup-element-xmla.md)コマンドは、バックアップのファイルを圧縮します。  
   
 ## <a name="syntax"></a>構文  
   

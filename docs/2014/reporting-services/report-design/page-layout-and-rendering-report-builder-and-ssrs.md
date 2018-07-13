@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 544931a2a43d875af5d2688bd1e52667ea5c5b5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c46f1e1993743365c9a0120a086f8732c2b60e5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264208"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS)
   ページ レイアウトや改ページなど、表示レポートに思いどおりの体裁を実現するには、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レンダラーの動作をよく理解したうえでレポートを作成することが大切です。 また、レンダリングされたレポートが、普段自分や組織が使用している用紙サイズに収まるかどうかを確認することも必要です。  
@@ -57,11 +57,11 @@ ms.locfileid: "36075189"
     > [!NOTE]  
     >  異なる形式に直接エクスポートすることはできませんが、Atom 表示拡張機能によってレポートからデータ ファイルを生成できます。  
   
--   **ソフト改ページ レンダラー** : ソフト改ページ レンダラーでは、レポートのレイアウトと書式設定が維持されます。 生成されたファイルは、Web ページなど、画面上での閲覧や配信に最適化されます。 使用可能なソフト改ページ レンダラーが: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、Web アーカイブ (MHTML)、および HTML です。  
+-   **ソフト改ページ レンダラー** : ソフト改ページ レンダラーでは、レポートのレイアウトと書式設定が維持されます。 生成されたファイルは、Web ページなど、画面上での閲覧や配信に最適化されます。 使用可能な論理的な改ページ レンダラーが: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、Web アーカイブ (MHTML)、および HTML。  
   
 -   **ハード改ページ レンダラー** ハード改ページ レンダラーでは、レポートのレイアウトと書式設定が維持されます。 生成されたファイルは、一貫した印刷結果を提供すること、または、レポートを印刷物のような形でオンライン配信する際の見やすさを優先して最適化されます。 TIFF と PDF のハード改ページ レンダラーが利用できます。  
   
- レポートをレポート ビルダーまたはレポート デザイナーでプレビューする場合、またはレポート マネージャーで実行する場合、そのレポートは常に、まず HTML で表示されます。 レポートを実行した後、そのレポートを別のファイル形式にエクスポートすることができます。 詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)です。  
+ レポートをレポート ビルダーまたはレポート デザイナーでプレビューする場合、またはレポート マネージャーで実行する場合、そのレポートは常に、まず HTML で表示されます。 レポートを実行した後、そのレポートを別のファイル形式にエクスポートすることができます。 詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)します。  
   
   
   
@@ -100,15 +100,15 @@ ms.locfileid: "36075189"
   
 -   [改ページを追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [複数のページに行および列ヘッダーを表示&#40;レポート ビルダーおよび SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [複数のページに行および列ヘッダーを表示する&#40;レポート ビルダーおよび SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
--   [追加または削除するページ ヘッダーまたはフッター&#40;レポート ビルダーおよび SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+-   [追加または削除、ページ ヘッダーまたはフッター&#40;レポート ビルダーおよび SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
 -   [レポートのスクロール時にヘッダーを表示したまま&#40;レポート ビルダーおよび SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
 -   [ページ番号またはその他のレポート プロパティの表示&#40;レポート ビルダーおよび SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
--   [ページ ヘッダーまたは最初のページまたは最後のページにフッターを非表示に&#40;レポート ビルダーおよび SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
+-   [ページ ヘッダーまたはフッターの最初のページまたは最後のページを非表示に&#40;レポート ビルダーおよび SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
   
   
@@ -118,7 +118,7 @@ ms.locfileid: "36075189"
  [ページ ヘッダーとページ フッター&#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  レポート ヘッダーおよびレポート フッターに関する情報のほか、レポート ヘッダーおよびレポート フッターを使用してページ割り付けを制御する方法について説明します。  
   
- [見出し、列、および行は、改ページを制御する&#40;レポート ビルダーおよび SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [見出し、列、および行は、改ページの制御&#40;レポート ビルダーおよび SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  改ページの使用に関する情報を提供します。  
   
   

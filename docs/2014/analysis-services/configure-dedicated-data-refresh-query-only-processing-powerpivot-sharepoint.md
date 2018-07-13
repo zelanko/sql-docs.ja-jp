@@ -1,5 +1,5 @@
 ---
-title: データ更新専用またはクエリ専用の処理 (PowerPivot for SharePoint) の構成 |Microsoft ドキュメント
+title: データ更新専用またはクエリ専用処理 (PowerPivot for SharePoint) の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d84528c4d4db768ba58f125e15175604aed7af0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b56558bf2e7d49f336d756699f8b5dc59f2ac58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222302"
 ---
-# <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>データ更新専用またはクエリ専用の処理 (PowerPivot for SharePoint を) 構成します。
+# <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>データ更新専用またはクエリ専用処理 (PowerPivot for SharePoint を) 構成します。
   SharePoint 統合モードでは、データ更新専用の処理やクエリ専用の処理など、特定の種類の処理要求をサポートするように Analysis Services サーバー インスタンスを構成できます。 既定では、どちらの種類の読み込み要求も有効になっています。 これらのどちらかの種類を無効にすることで、専用のクエリ エンジンまたはデータ更新サーバーを作成することができます。  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
@@ -65,7 +65,7 @@ ms.locfileid: "36075859"
   
 |設定|有効な値|説明|  
 |-------------|------------------|-----------------|  
-|既定値|RAM に基づいて計算されます。|既定値は、使用可能なメモリの量を 4 GB で除算して求められます。 既定値を式で計算することで、システムの容量に応じて設定を調整できるようになっています。<br /><br /> 注: 4 ギガバイト除数が実際の PowerPivot データ ソースの大きなサンプリングの RAM 使用量に基づいて選択されます。 PowerPivot の物理的または論理的なアーキテクチャに基づくものではありません。|  
+|既定値|RAM に基づいて計算されます。|既定値は、使用可能なメモリの量を 4 GB で除算して求められます。 既定値を式で計算することで、システムの容量に応じて設定を調整できるようになっています。<br /><br /> 注: 4 ギガバイト除数が実際の PowerPivot データ ソースの多数のサンプリングの RAM 使用量に基づいて選択します。 PowerPivot の物理的または論理的なアーキテクチャに基づくものではありません。|  
 |最大値|CPU の数に基づいて計算されます。|指定できる同時ジョブの最大数は、コンピューターのプロセッサの数に基づきます。 たとえば、4 ソケットのクアッドコア コンピューターの場合、同時に実行できるジョブの最大数は 16 です。|  
   
 #### <a name="increasing-the-default-value-to-a-higher-value"></a>既定値を大きくする  

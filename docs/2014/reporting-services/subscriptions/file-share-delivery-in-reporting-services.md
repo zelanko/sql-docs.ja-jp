@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3bcb077bc785005557f20b96722f5aeb94c58234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4123ae77852bf0ccde4229644393f8160ffb391
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331212"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services でのファイル共有の配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、フォルダーへのレポートの配信を可能にするファイル共有配信拡張機能が用意されています。 ファイル共有配信拡張機能は既定で使用できるため、追加で構成する必要はありません。 ファイルの配信を正常に実行するためには、共有フォルダーに書き込みアクセス権を設定する必要があります。 また、レポートへのアクセスを要求するユーザーは、共有フォルダーの読み取り権限を持っている必要があります。  
@@ -71,7 +71,7 @@ ms.locfileid: "36073932"
   
  上書きオプションを指定すると、毎回のレポート配信または新規ファイルの作成時に同じファイル名を再利用できます。 ファイルを上書きするには、同じファイル名と拡張子を使用する必要があります。  
   
- 配信ごとに一意のファイルを作成するための別の方法として、ファイル名にタイムスタンプを含める方法があります。 これを行うには、追加、`@timestamp`ファイル名を変数 (たとえば、 *CompanySales@timestamp*)。 この方法を使用すると、一意のファイル名が生成されるので、上書きされることはありません。  
+ 配信ごとに一意のファイルを作成するための別の方法として、ファイル名にタイムスタンプを含める方法があります。 これを行うには、追加、`@timestamp`変数にファイル名 (たとえば、 *CompanySales@timestamp*)。 この方法を使用すると、一意のファイル名が生成されるので、上書きされることはありません。  
   
 ## <a name="see-also"></a>参照  
  [作成、変更、および標準のサブスクリプションを削除&#40;Reporting Services のネイティブ モード&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  

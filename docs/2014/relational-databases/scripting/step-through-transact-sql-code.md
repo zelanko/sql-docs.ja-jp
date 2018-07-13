@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
 - Transact-SQL debugger, step over
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cb9a3f5e0d275e4b7b646401f81b8128546a850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 331dca27a98a9493478ff294a21e5c52e1a1ba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331282"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL コードのステップ実行
   [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディター ウィンドウでどの [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントを実行するかを制御できます。 個々のステートメントでデバッガーを一時停止して、その時点のコード要素の状態を確認できます。  
@@ -55,10 +55,10 @@ ms.locfileid: "36073452"
   
 |操作|手順|  
 |------------|---------------|  
-|現在のステートメントから次のブレークポイントまですべてのステートメントを実行する。|**デバッグ** メニューのをクリックして**続行**です。<br /><br /> **デバッグ**ツールバーで、をクリックして、**続行**ボタンをクリックします。|  
-|次のステートメントまたはモジュールにステップ インする。|**デバッグ** メニューのをクリックして**ステップ イン**です。<br /><br /> **デバッグ**ツールバーで、をクリックして、**ステップ イン**ボタンをクリックします。<br /><br /> F11 キーを押す。|  
-|次のステートメントまたはモジュールにステップ オーバーする。|**デバッグ** メニューのをクリックして**ステップ オーバー**です。<br /><br /> **デバッグ**ツールバーで、をクリックして、**ステップ オーバー**ボタンをクリックします。<br /><br /> F10 キーを押す。|  
-|モジュールからステップ アウトする。|**デバッグ** メニューのをクリックして**ステップ アウト**です。<br /><br /> **デバッグ**ツールバーで、をクリックして、**ステップ アウト**ボタンをクリックします。<br /><br /> Shift&lt;/localizedText&gt; + &lt;localizedText&gt;F11&lt;/localizedText&gt; キーを押す。|  
+|現在のステートメントから次のブレークポイントまですべてのステートメントを実行する。|**デバッグ** メニューのをクリックして**続行**します。<br /><br /> **デバッグ**ツールバーで、をクリックして、**続行**ボタンをクリックします。|  
+|次のステートメントまたはモジュールにステップ インする。|**デバッグ** メニューのをクリックして**ステップ イン**します。<br /><br /> **デバッグ**ツールバーで、をクリックして、**ステップ イン**ボタンをクリックします。<br /><br /> F11 キーを押す。|  
+|次のステートメントまたはモジュールにステップ オーバーする。|**デバッグ** メニューのをクリックして**ステップ オーバー**します。<br /><br /> **デバッグ**ツールバーで、をクリックして、**ステップ オーバー**ボタンをクリックします。<br /><br /> F10 キーを押す。|  
+|モジュールからステップ アウトする。|**デバッグ** メニューのをクリックして**ステップ アウト**します。<br /><br /> **デバッグ**ツールバーで、をクリックして、**ステップ アウト**ボタンをクリックします。<br /><br /> Shift&lt;/localizedText&gt; + &lt;localizedText&gt;F11&lt;/localizedText&gt; キーを押す。|  
 |現在のカーソル位置まで実行する。|クエリ エディター ウィンドウ内で右クリックし、 **[カーソルまで実行]** をクリックする。<br /><br /> Ctrl</localizedText> + <localizedText>F10</localizedText> キーを押す。|  
   
 ## <a name="see-also"></a>参照  

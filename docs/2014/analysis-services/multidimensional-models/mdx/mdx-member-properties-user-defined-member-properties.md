@@ -1,5 +1,5 @@
 ---
-title: ユーザー定義メンバー プロパティ (MDX) |Microsoft ドキュメント
+title: ユーザー定義メンバー プロパティ (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - custom member properties [MDX]
 ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba34243609b796eef635fc3b55cd99ef4f225638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50af6373446859ac0bf98a7170504b9d58c4a5f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321282"
 ---
 # <a name="user-defined-member-properties-mdx"></a>ユーザー定義メンバー プロパティ (MDX)
-  属性リレーションシップとして、ディメンション内の指定されたレベルにユーザー定義メンバー プロパティを追加できます。 ユーザー定義メンバー プロパティに追加できません、`(All)`または階層自体に、階層のレベルです。  
+  属性リレーションシップとして、ディメンション内の指定されたレベルにユーザー定義メンバー プロパティを追加できます。 ユーザー定義メンバー プロパティに追加することはできません、`(All)`または階層そのものに、階層のレベル。  
   
 ## <a name="creating-user-defined-member-properties"></a>ユーザー定義メンバー プロパティの作成  
  以下のように、ユーザー インターフェイスを使用して、またはプログラムによって、サーバー ベースのディメンションまたはキューブにユーザー定義メンバー プロパティを追加できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36074686"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- `PROPERTIES`軸仕様のセット式の後にキーワードが表示されます。 たとえば、次の MDX クエリ、`PROPERTIES`キーワードを取得、`List Price`と`Dealer Price`ユーザー定義メンバー プロパティと 1 月に販売された製品を識別するセット式が表示されます。  
+ `PROPERTIES`セット式の軸仕様のキーワードが表示されます。 たとえば、次の MDX クエリ、`PROPERTIES`キーワードを取得、`List Price`と`Dealer Price`ユーザー定義メンバー プロパティと、1 月に販売された製品を示すセット式が表示されます。  
   
 ```  
 SELECT   
@@ -56,7 +56,7 @@ WHERE ([Date].[Month of Year].[January])
 ```  
   
 ### <a name="using-the-properties-function-to-retrieve-user-defined-member-properties"></a>Properties 関数を使用したユーザー定義メンバー プロパティの取得  
- 別の方法として、`Properties` 関数を使ってカスタム メンバー プロパティにアクセスすることもできます。 たとえば、次の MDX クエリを使用して、`WITH`から成る計算されるメンバーを作成するキーワード、`List Price`メンバーのプロパティ。  
+ 別の方法として、`Properties` 関数を使ってカスタム メンバー プロパティにアクセスすることもできます。 たとえば、次の MDX クエリを使用して、`WITH`で構成される計算されるメンバーを作成するキーワード、`List Price`メンバーのプロパティ。  
   
 ```  
 WITH   

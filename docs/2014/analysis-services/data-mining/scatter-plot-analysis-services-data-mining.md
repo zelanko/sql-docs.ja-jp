@@ -1,5 +1,5 @@
 ---
-title: 散布図 (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: 散布図 (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - charts [Analysis Services]
 - mining models [Analysis Services], validating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d087d615a5e2852cdc8d7a72a9facc5df4f33b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ae52af8c9449b5636d799d306e3ab317cea9d6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251554"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>散布図 (Analysis Services - データ マイニング)
   *散布図* では、モデルで予測された値とデータの実際の値がグラフで比較されます。 実際の値は X 軸に表示され、予測された値は Y 軸に表示されます。 そのほかに、完璧な予測 (予測された値が実際の値と完全に一致する状態) を表す線も表示されます。 この理想的な 45 度の線からの距離により、それぞれの点の予測の正確さがわかります。  
@@ -51,10 +51,10 @@ ms.locfileid: "36074085"
   
 |トピック|リンク|  
 |------------|-----------|  
-|Targeted Mailing モデルのリフト チャートの作成方法に関するチュートリアルが含まれています。|[基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [リフト チャートを使用した精度テスト&#40;基本的なデータ マイニングのチュートリアル&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Targeted Mailing モデルのリフト チャートの作成方法に関するチュートリアルが含まれています。|[基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [リフト チャートを使用した精度テスト&#40;基本的なデータ マイニング チュートリアル&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
 |関連するグラフの種類について説明します。|[リフト チャート&#40;Analysis Services - データ マイニング&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート&#40;Analysis Services - データ マイニング&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [分類マトリックス&#40;Analysis Services - データ マイニング&#41;](classification-matrix-analysis-services-data-mining.md)|  
 |マイニング モデルとマイニング構造の相互検証の使用法について説明します。|[クロス検証&#40;Analysis Services - データ マイニング&#41;](cross-validation-analysis-services-data-mining.md)|  
-|リフト チャートおよびその他の精度チャートを作成する手順について説明します。|[テストと検証タスク、および操作方法&#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|リフト チャートおよびその他の精度チャートを作成する手順について説明します。|[テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>参照  
  [テストと検証&#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  

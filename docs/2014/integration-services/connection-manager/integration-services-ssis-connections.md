@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, connections
 - SSIS packages, connections
@@ -23,13 +23,13 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 caps.latest.revision: 90
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa0a870cd1a5e48849b81d392f3d34bdeb7d308e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a226221234b6668a50f6feef2e61e3b5a38f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273288"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージでは接続を使用して、各種のタスクの実行や [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能の実装を行います。  
@@ -55,7 +55,7 @@ ms.locfileid: "36074637"
  これらの接続を確立するために、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は接続マネージャーを使用します。次のセクションでは、この接続マネージャーについて説明します。  
   
 ## <a name="connection-managers"></a>接続マネージャー  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、接続の論理表現として接続マネージャーが使用されます。 デザイン時に接続マネージャーのプロパティを設定し、パッケージの実行時に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が作成する物理接続を指定します。 たとえば、接続マネージャーが含まれています、`ConnectionString`プロパティをデザイン時以外の場合は実行時に設定する場合は、物理的な接続が作成、接続文字列プロパティの値を使用します。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、接続の論理表現として接続マネージャーが使用されます。 デザイン時に接続マネージャーのプロパティを設定し、パッケージの実行時に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が作成する物理接続を指定します。 たとえば、接続マネージャーが含まれています、`ConnectionString`プロパティをデザイン時に、実行時に設定する場合は、物理接続が作成、接続文字列プロパティの値を使用します。  
   
  パッケージは、接続マネージャーの種類の複数のインスタンスを使用でき、各インスタンス上でプロパティを設定できます。 実行時に、接続マネージャーの種類の各インスタンスは、さまざまな属性を持つ接続を作成します。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36074637"
 |----------|-----------------|-----------|  
 |ORACLE|Oracle に接続する\<バージョン情報 > サーバー。|Oracle 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、変換元と変換先も含まれます。 詳細については、 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)のダウンロード ページを参照してください。|  
 |SAPBI|SAP NetWeaver BI Version 7 システムに接続します。|SAP BI 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、変換元と変換先も含まれます。 詳細については、 [Microsoft SQL Server 2008 用 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=262016)のダウンロード ページを参照してください。|  
-|TERADATA|Teradata に接続\<バージョン情報 > サーバー。|Teradata 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity には、変換元と変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526) のダウンロード ページを参照してください。|  
+|TERADATA|Teradata に接続する\<バージョン情報 > サーバー。|Teradata 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity には、変換元と変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526) のダウンロード ページを参照してください。|  
   
 ### <a name="custom-connection-managers"></a>カスタム接続マネージャー  
  カスタム接続マネージャーを作成することもできます。 詳細については、「[カスタム接続マネージャーの開発](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)」を参照してください。  

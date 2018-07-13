@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.target.download.f1
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 75f7722d51e6c2417e81403e2e6262abba063af1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5cbf0ff5ccc24fe019f5496b30d09f965e242fb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228432"
 ---
 # <a name="target-servers-download-instructions-tab"></a>[対象サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)
   このページを使用すると、1 つ以上の対象サーバーに対するダウンロード命令の表示および更新ができます。  
@@ -51,7 +51,7 @@ ms.locfileid: "36073896"
  **[命令のダウンロード状態]**  
  選択されているダウンロード命令の最新の状態を表示します。  
   
- **Delete**  
+ **削除**  
  選択されているダウンロード命令を削除します。  
   
  **Clear**  

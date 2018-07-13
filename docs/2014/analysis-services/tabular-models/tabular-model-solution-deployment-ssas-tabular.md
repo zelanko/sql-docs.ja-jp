@@ -1,5 +1,5 @@
 ---
-title: 表形式モデル ソリューションの配置 (SSAS テーブル) |Microsoft ドキュメント
+title: 表形式モデル ソリューションの配置 (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89e240e5c3a877761f8b26e9a581f462af49f395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b9e1594c4d4fbe07a6085544021b94820db640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220042"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>テーブル モデル ソリューションの配置 (SSAS テーブル)
   テーブル モデル プロジェクトを作成した後、ユーザーがレポート クライアント アプリケーションを使用してモデルを参照できるように配置する必要があります。 このトピックでは、テーブル モデル ソリューションを環境に配置する際に使用できるさまざまなプロパティと方法について説明します。  
@@ -65,7 +65,7 @@ ms.locfileid: "36075816"
 |--------------|---------------------|-----------------|  
 |**[サーバー]**<br /><br /> プロジェクトの作成時に設定します。|**localhost**|このプロパティは、プロジェクトの作成時に設定し、モデルを配置する Analysis Services インスタンスの名前を指定します。 既定では、モデルは、ローカル コンピューター上の Analysis Services の既定のインスタンスに配置されます。 ただし、この設定を変更して、ローカル コンピューター上の名前付きインスタンスや、Analysis Services オブジェクトを作成する権限のあるリモート コンピューター上の任意のインスタンスを指定できます。|  
 |**のエディション**|ワークスペース サーバーがある場所のインスタンスと同じエディション。|このプロパティでは、モデルを配置する Analysis Services サーバーのエディションを指定します。 サーバー エディションにより、プロジェクトに組み込むことができるさまざまな機能が定義されます。 既定では、ローカルの Analysis Services サーバーのエディションになります。 Analysis Services の実稼働サーバーなど、別の Analysis Services サーバーを指定する場合は、その Analysis Services サーバーのエディションを指定する必要があります。|  
-|**[データベース]**|**\<projectname>**|このプロパティでは、配置時にモデル オブジェクトがインスタンス化される Analysis Services データベースの名前を指定します。 この名前は、レポート クライアント データ接続や .bism データ接続ファイルにも指定されます。<br /><br /> この名前は、モデルの作成中にいつでも変更できます。 モデルを配置した後に名前を変更した場合、配置後に行った変更は既に配置されているモデルには反映されません。 たとえば、という名前のソリューションを開く場合`TestDB`に既定のモデルのデータベース名のモデルでは、ソリューションを配置し、ソリューションを変更し、モデル データベースの名前を変更`Sales`ソリューションが配置された Analysis Services のインスタンスデータベース、名前付きの 1 つのモデルおよびそのいずれかが表示を区切る Sales という名前です。|  
+|**[データベース]**|**\<projectname>**|このプロパティでは、配置時にモデル オブジェクトがインスタンス化される Analysis Services データベースの名前を指定します。 この名前は、レポート クライアント データ接続や .bism データ接続ファイルにも指定されます。<br /><br /> この名前は、モデルの作成中にいつでも変更できます。 モデルを配置した後に名前を変更した場合、配置後に行った変更は既に配置されているモデルには反映されません。 たとえば、という名前のソリューションを開く`TestDB`に既定のモデルのデータベース名のモデルでは、ソリューションを配置し、ソリューションを変更および model データベースの名前を変更`Sales`ソリューションが配置された Analysis Services のインスタンスデータベース、1 つの名前付きモデル、および 1 つには表示を区切る Sales という名前です。|  
 |**[キューブ名]**|**[モデル]**|このプロパティでは、クライアント ツール (Excel など) および分析管理オブジェクト (AMO) に表示するキューブ名を指定します。|  
   
 ### <a name="directquery-options-properties"></a>[DirectQuery オプション] のプロパティ  

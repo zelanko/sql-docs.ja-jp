@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - examining the current structure of the employee
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c99b17d6c3b88f7dacdc99437ece36f0d242166f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 16f66dceaa4ff44658d86319d28a7bf068a2ff64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227168"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Employee テーブルの現在の構造の確認
-  サンプル [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースには、**HumanResources** スキーマに含まれる **Employee** テーブルがあります。 元のテーブルを変更しないように、この手順では、 **Employee** テーブルのコピーを作成して **EmployeeDemo**という名前を付けます。 例を単純にするために、元のテーブルから 5 列だけをコピーします。 クエリを実行し、 **HumanResources.EmployeeDemo** 、データを使用せず、テーブルの構造を確認するテーブル、`hierarchyid`データ型。  
+  サンプル [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースには、**HumanResources** スキーマに含まれる **Employee** テーブルがあります。 元のテーブルを変更しないように、この手順では、 **Employee** テーブルのコピーを作成して **EmployeeDemo**という名前を付けます。 例を単純にするために、元のテーブルから 5 列だけをコピーします。 クエリを実行し、 **HumanResources.EmployeeDemo**を使用せず、テーブル内のデータが構造化方法を確認するテーブル、`hierarchyid`データ型。  
   
 ### <a name="to-copy-the-employee-table"></a>Employee テーブルをコピーするには  
   

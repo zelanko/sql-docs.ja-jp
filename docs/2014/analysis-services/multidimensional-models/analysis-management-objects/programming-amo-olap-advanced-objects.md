@@ -1,5 +1,5 @@
 ---
-title: プログラミング AMO OLAP オブジェクトの詳細 |Microsoft ドキュメント
+title: 高度なオブジェクトをプログラミング AMO OLAP |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6408cfd8dd3a7b8f7d6993ca84c3325bedddee24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c511fe1a542804ebf05077d5f9a46c77dd69b2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254924"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>高度な AMO OLAP オブジェクトのプログラミング
   このトピックでは、高度な OLAP オブジェクトの分析管理オブジェクト (AMO) プログラミングの詳細について説明します。 このトピックには、次のセクションが含まれます。  
@@ -61,7 +61,7 @@ ms.locfileid: "36074954"
   
 3.  アクションをキューブ コレクションに追加してキューブを更新します。 アクションは更新可能なオブジェクトではありません。  
   
- アクションのテストには別のプログラム アプリケーションが必要です。 アクションは [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でテストできます。 最初に、インストールする必要があります[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]サンプルを参照してください[多次元モデル オブジェクトの処理](../processing-a-multidimensional-model-analysis-services.md)です。  
+ アクションのテストには別のプログラム アプリケーションが必要です。 アクションは [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でテストできます。 最初に、インストールする必要があります[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]のサンプルを参照してください[多次元モデル オブジェクトの処理](../processing-a-multidimensional-model-analysis-services.md)します。  
   
  次のサンプル コードでは、Adventure Works Analysis Services Project サンプルから 3 つの異なるアクションをレプリケートします。 次のサンプルを使用して作成したアクションは "My" から始まるため、アクションを区別することができます。  
   
@@ -191,7 +191,7 @@ static public void CreateActions(Cube cube)
 ##  <a name="KPI"></a> Kpi オブジェクト  
  主要業績評価指標 (KPI) はキューブ内のメジャー グループに関連付けられた、ビジネスの成功の評価に使用される計算のコレクションです。 <xref:Microsoft.AnalysisServices.Kpi> オブジェクトは AMO で定義できます。ただし、このオブジェクトはデータを参照するクライアント アプリケーションから使用されます。  
   
- 作成する、<xref:Microsoft.AnalysisServices.Kpi>オブジェクトには、次の手順が必要です。  
+ 作成、<xref:Microsoft.AnalysisServices.Kpi>オブジェクトには、次の手順が必要です。  
   
 1.  <xref:Microsoft.AnalysisServices.Kpi> オブジェクトを作成し、基本属性を設定します。  
   
@@ -211,7 +211,7 @@ static public void CreateActions(Cube cube)
   
     -   悪い =-1 ～-0.5  
   
-    -   [Ok] を-0.4999 を-0.4999 を =  
+    -   -0.4999 を OK 0.4999  
   
     -   0.50 ～ 1 の良い =  
   
@@ -237,7 +237,7 @@ static public void CreateActions(Cube cube)
 |状態|ゲージ|3|  
 |状態|反転ゲージ|5|  
 |状態|温度計|3|  
-|状態|シリンダー|3|  
+|状態|円柱|3|  
 |状態|外観|3|  
 |状態|変位の矢印|3|  
 |傾向|標準の矢印|3|  
@@ -350,7 +350,7 @@ static public void CreateKPIs(Cube cube)
 ##  <a name="Persp"></a> Perspective オブジェクト  
  <xref:Microsoft.AnalysisServices.Perspective> オブジェクトは AMO で定義できます。ただし、このオブジェクトはデータを参照するクライアント アプリケーションから使用されます。  
   
- 作成する、<xref:Microsoft.AnalysisServices.Perspective>オブジェクトには、次の手順が必要です。  
+ 作成、<xref:Microsoft.AnalysisServices.Perspective>オブジェクトには、次の手順が必要です。  
   
 1.  <xref:Microsoft.AnalysisServices.Perspective> オブジェクトを作成し、基本属性を設定します。  
   
@@ -413,7 +413,7 @@ static public void CreatePerspectives(Cube cube)
 ##  <a name="PC"></a> ProactiveCaching オブジェクト  
  <xref:Microsoft.AnalysisServices.ProactiveCaching> オブジェクトは AMO で定義できます。  
   
- 作成する、<xref:Microsoft.AnalysisServices.ProactiveCaching>オブジェクトには、次の手順が必要です。  
+ 作成、<xref:Microsoft.AnalysisServices.ProactiveCaching>オブジェクトには、次の手順が必要です。  
   
 1.  作成、<xref:Microsoft.AnalysisServices.ProactiveCaching>オブジェクト。  
   

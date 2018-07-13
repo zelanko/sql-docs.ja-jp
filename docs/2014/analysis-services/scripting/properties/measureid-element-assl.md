@@ -1,5 +1,5 @@
 ---
-title: MeasureID 要素 (ASSL) |Microsoft ドキュメント
+title: MeasureID 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MeasureID element
 ms.assetid: 8457aebc-8fdd-4683-8640-baaf9d89b2a2
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70b7695644f2aa0da85050bb9db96ac277ede298
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7a1ff1e817ae78307f8da134e88e742295892ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326532"
 ---
 # <a name="measureid-element-assl"></a>MeasureID 要素 (ASSL)
-  関連付けます、[メジャー](../objects/measure-element-assl.md)要素を親要素です。  
+  関連付けます、[メジャー](../objects/measure-element-assl.md)親要素を持つ要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36074059"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 親に対応する要素`MeasureID`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.AggregationInstanceMeasure>、 <xref:Microsoft.AnalysisServices.MeasureBinding>、および<xref:Microsoft.AnalysisServices.PerspectiveMeasure>です。  
+ 親に対応する要素`MeasureID`分析管理オブジェクト (AMO) オブジェクト モデルは、 <xref:Microsoft.AnalysisServices.AggregationInstanceMeasure>、 <xref:Microsoft.AnalysisServices.MeasureBinding>、および<xref:Microsoft.AnalysisServices.PerspectiveMeasure>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

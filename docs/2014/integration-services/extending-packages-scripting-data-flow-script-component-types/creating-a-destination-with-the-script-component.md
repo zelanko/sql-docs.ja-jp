@@ -20,18 +20,18 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 61a029231238a0ac47e9a1863f3d4bebeec66eee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f32e91ff81e333a15bd13a3db13aabf0e1340d21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221712"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>スクリプト コンポーネントによる変換先の作成
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フロー内では、変換先コンポーネントを使用して、上流の変換元や変換から受け取ったデータをデータ ソースに保存します。 通常、変換先コンポーネントをデータ ソースに接続するには、既存の接続マネージャーを使用します。  
   
- スクリプト コンポーネントの概要については、[スクリプト コンポーネントによるデータ フローを拡張する] を参照してください (../extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md します。  
+ スクリプト コンポーネントの概要については、[スクリプト コンポーネントによるデータ フローの拡張] を参照してください (../extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md です。  
   
  スクリプト コンポーネントおよびそれによって生成されるインフラストラクチャ コードを活用すれば、カスタム データ フロー コンポーネントを開発するための手順を大幅に簡略化できます。 ただし、スクリプト コンポーネントのしくみを理解するため、「[カスタム データ フロー コンポーネントの開発](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)」セクション、特に「[カスタム変換先コンポーネントの開発](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)」を参照して、カスタム データ フロー コンポーネント開発の手順に目を通しておくと役立つことがあります。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36075316"
  **[スクリプト変換エディター]** の **[入力および出力]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力および出力] ページ&#41;](../script-transformation-editor-inputs-and-outputs-page.md)」を参照してください。  
   
 ### <a name="adding-variables"></a>変数の追加  
- スクリプトで既存の変数を使用する場合でそれらを追加、`ReadOnlyVariables`と`ReadWriteVariables`プロパティのフィールド、**スクリプト**のページ、**スクリプト変換エディター**です。  
+ スクリプトで既存の変数を使用する場合を追加、`ReadOnlyVariables`と`ReadWriteVariables`プロパティ フィールドに、**スクリプト**のページ、**スクリプト変換エディター**します。  
   
- プロパティ フィールドに複数の変数を追加する場合は、各変数名をコンマで区切ります。 省略記号ボタンをクリックして、複数の変数を選択することもできます (**.**) ボタンを`ReadOnlyVariables`と`ReadWriteVariables`プロパティ フィールド内の変数をクリックして、**変数を選択** ダイアログ ボックス。  
+ プロパティ フィールドに複数の変数を追加する場合は、各変数名をコンマで区切ります。 省略記号をクリックして、複数の変数を選択することもできます (**.**) ボタンの横に、`ReadOnlyVariables`と`ReadWriteVariables`プロパティ フィールドでは、および内の変数を選択し、**変数の選択** ダイアログ ボックス。  
   
  スクリプト コンポーネントで変数を使用する方法に関する一般情報については、「[スクリプト コンポーネントでの変数の使用](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36075316"
 ### <a name="understanding-the-auto-generated-code"></a>自動生成されたコードについて  
  変換先コンポーネントを作成、構成した後で VSTA IDE を開くと、コード エディターには `ScriptMain` クラスが編集可能な状態で表示されます。また、`ProcessInputRow` メソッドがスタブとして表示されます。 カスタム コードは `ScriptMain` クラスに記述します。また、`ProcessInputRow` は変換先コンポーネントの最重要メソッドです。  
   
- 開く場合、**プロジェクト エクスプ ローラー** VSTA のウィンドウで、スクリプト コンポーネントが、読み取り専用生成も確認できます`BufferWrapper`と`ComponentWrapper`プロジェクト項目です。 `ScriptMain` クラスは、`UserComponent` プロジェクト アイテム内の `ComponentWrapper` クラスを継承します。  
+ 開く場合、**プロジェクト エクスプ ローラー** VSTA のウィンドウに、スクリプト コンポーネントが読み取り専用に生成も表示できる`BufferWrapper`と`ComponentWrapper`プロジェクト項目。 `ScriptMain` クラスは、`UserComponent` プロジェクト アイテム内の `ComponentWrapper` クラスを継承します。  
   
  実行時には、データ フロー エンジンが `ProcessInput` クラスの `UserComponent` メソッドを呼び出します。これは親クラスである <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドします。 `ProcessInput` メソッドは、入力バッファーに格納された行を順にループし、各行で 1 回ずつ `ProcessInputRow` メソッドを呼び出します。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36075316"
  次の例では、変換先コンポーネントを作成するために `ScriptMain` クラスで必要なコードを示します。  
   
 > [!NOTE]  
->  これらの例を使用して、 **Person.Address**テーブルに、`AdventureWorks`サンプル データベースと、最初と 4 番目の列を渡す、 **int * AddressID*** および**nvarchar (30) 市区町村**をデータ フローの列です。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。  
+>  これらの例を使用して、 **Person.Address**テーブルに、`AdventureWorks`サンプル データベースとの最初と 4 番目の列を渡す、 **int * AddressID*** と**nvarchar (30) City**列をデータ フローです。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。  
   
 ### <a name="adonet-destination-example"></a>ADO.NET 変換先の例  
  この例では、既存の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用して、データ フローのデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存する変換先コンポーネントを示します。  
@@ -124,7 +124,7 @@ ms.locfileid: "36075316"
   
 3.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換先として構成します。  
   
-4.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します  (変換を介さずに変換元を直接変換先に接続することもできます)。この出力はからデータを提供する必要があります、 **Person.Address**のテーブル、`AdventureWorks`を含むサンプル データベースには、少なくとも、 **AddressID**と**市区町村**列です。  
+4.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します  (変換を介さずに変換元を直接変換先に接続することもできます)。この出力からデータを提供する必要があります、 **Person.Address**のテーブル、`AdventureWorks`サンプル データベースを含む、少なくとも**AddressID**と**市区町村**列。  
   
 5.  **[スクリプト変換エディター]** を開きます。 **[入力列]** ページで、**AddressID** 入力列と **City** 入力列を選択します。  
   
@@ -241,7 +241,7 @@ public class ScriptMain:
   
 2.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換先として構成します。  
   
-3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します  (変換を介さずに変換元を直接変換先に接続することもできます)。この出力はからデータを提供する必要があります、 **Person.Address**のテーブル、`AdventureWorks`サンプル データベース、および含める必要がありますが、少なくとも**AddressID**と**市区町村**列です。  
+3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します  (変換を介さずに変換元を直接変換先に接続することもできます)。この出力からデータを提供する必要があります、 **Person.Address**のテーブル、`AdventureWorks`サンプル データベース、および含める必要がありますが、少なくとも**AddressID**と**市区町村**列です。  
   
 4.  **[スクリプト変換エディター]** を開きます。 **[入力列]** ページで、**AddressID** 列と **City** 列を選択します。  
   
@@ -354,7 +354,7 @@ public class ScriptMain:
 }  
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [スクリプト コンポーネントによる変換元の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   

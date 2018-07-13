@@ -1,5 +1,5 @@
 ---
-title: イテレーションを制御フローに追加 |Microsoft ドキュメント
+title: 繰り返し制御フローを追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - repeating workflows
 - adding iterations
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7727dafeee728347511e91723ae9674fe9fd089e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fb691bb954b463e584cf56527b8b87b0662c6f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273418"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>制御フローに繰り返しを追加する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には For ループ コンテナーが含まれています。For ループ コンテナーとは制御フローの要素で、これを使用すると、条件に応じてパッケージ内の制御フローを繰り返すループを、簡単に含めることができます。 詳細については、「 [For ループ コンテナー](control-flow/for-loop-container.md)」を参照してください。  
@@ -42,7 +42,7 @@ ms.locfileid: "36076279"
   
  式には変数を含めることができます。 変数を使用する利点は実行時に更新できるので、パッケージの管理がより柔軟かつ容易になることです。 式の最大長は 4,000 文字です。  
   
- 式の内部で変数を指定する場合、変数名をアット マーク (@) で始める必要があります。 たとえば、という名前の変数`Counter`、入力@CounterFor ループ コンテナーを使用する式。 変数の名前空間のプロパティを含める場合は、変数と名前空間を角かっこで囲む必要があります。 たとえば、`Counter`に変数が、`MyNamespace`名前空間、型 [@MyNamespace::Counter] です。  
+ 式の内部で変数を指定する場合、変数名をアット マーク (@) で始める必要があります。 たとえば、という名前の変数`Counter`、入力@CounterFor ループ コンテナーを使用する式。 変数の名前空間のプロパティを含める場合は、変数と名前空間を角かっこで囲む必要があります。 たとえば、`Counter`変数、`MyNamespace`名前空間、型 [@MyNamespace::Counter]。  
   
  For ループ コンテナーが使用する変数は、For ループ コンテナーのスコープ、またはパッケージ コンテナー階層において上位層にある任意のコンテナーのスコープ内で定義する必要があります。 たとえば、For ループ コンテナーは、それ自体のスコープ内で定義された変数と、パッケージ スコープ内で定義された変数を使用できます。 詳しくは、「[Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)」をご覧ください。  
   
@@ -50,21 +50,21 @@ ms.locfileid: "36076279"
   
 ### <a name="to-implement-a-for-loop-container-in-a-control-flow"></a>For ループ コンテナーを制御フローに実装するには  
   
-1.  For ループ コンテナーをパッケージに追加します。 詳細については、次を参照してください[タスクまたはコンテナー制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+1.  For ループ コンテナーをパッケージに追加します。 詳細については、次を参照してください[タスクまたはコンテナーの制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+  .  
   
-2.  タスクとコンテナーを For ループ コンテナーに追加します。 詳細については、次を参照してください[タスクまたはコンテナー制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+2.  タスクとコンテナーを For ループ コンテナーに追加します。 詳細については、次を参照してください[タスクまたはコンテナーの制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+  .  
   
 3.  優先順位制約を使用して、For ループ コンテナー内のタスクとコンテナーを連結します。 詳細については、「[既定の優先順位制約を使用してタスクとコンテナーを連結する](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)」を参照してください。  
   
 4.  For ループ コンテナーを構成します。 詳細については、「[For ループ コンテナーを構成する](../../2014/integration-services/configure-a-for-loop-container.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [タスクまたはコンテナーを制御フローに追加または削除](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [グループまたはグループ解除コンポーネント](group-or-ungroup-components.md)   
+ [タスクまたはコンテナーの制御フローに追加または削除](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [グループまたはグループ化解除のコンポーネント](group-or-ungroup-components.md)   
  [既定の優先順位制約を使用してタスクとコンテナーを連結する](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
- [列挙を制御フローに追加します。](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   
+ [制御フローに列挙を追加します。](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   
  [制御フロー](control-flow/control-flow.md)  
   
   

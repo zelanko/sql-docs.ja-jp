@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, changing name
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4b9ae4e9db2e2d48def332b337ff9788e26464e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e56e52948282d49db948b76fd1b3837f656fd8de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267078"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>明示的階層名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、明示的階層の名前を変更できます。  
@@ -47,11 +47,11 @@ ms.locfileid: "36075995"
   
 6.  **エンティティの編集** ページで、名前を変更する明示的階層をクリックします。  
   
-7.  をクリックして**選択した階層の編集**です。  
+7.  クリックして**選択した階層の編集**します。  
   
-8.  **明示的階層名**ボックスに、階層の新しい名前を入力します。  
+8.  **明示的階層名**ボックスに、階層の更新後の名前を入力します。  
   
-9. をクリックして**階層の保存**です。  
+9. クリックして**階層の保存**します。  
   
 ## <a name="see-also"></a>参照  
  [明示的階層&#40;マスター データ サービス&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   

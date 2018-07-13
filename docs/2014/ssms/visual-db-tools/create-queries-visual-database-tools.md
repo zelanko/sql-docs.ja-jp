@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 75bf7b8fc40f7eb4a926ec1d43a858b06f704a2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3b1ff0b00bbbee79b5d24144e733f367807a91d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257698"
 ---
 # <a name="create-queries-visual-database-tools"></a>クエリの作成 (Visual Database Tools)
   クエリを使用すると、データベース内のテーブルおよびビューからデータを取得できます。 クエリの作成と処理には、 **クエリおよびビュー デザイナー**を使用します。クエリおよびビュー デザイナーは、 [ダイアグラム ペイン](visual-database-tools.md)、 [SQL ペイン](sql-pane-visual-database-tools.md)、 [抽出条件ペイン](criteria-pane-visual-database-tools.md)、および [結果ペイン](results-pane-visual-database-tools.md)の 4 つのペインで構成されています。  

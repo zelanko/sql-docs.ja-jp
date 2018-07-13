@@ -1,5 +1,5 @@
 ---
-title: サービスの展開の要件と分析に関する考慮事項 |Microsoft ドキュメント
+title: 要件と考慮事項の Analysis Services の配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - memory [Analysis Services]
 - scalability [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c77a12ddc9a5be49fbdcd531f0485bbdf5f4055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3cb9b81c5125f8d4f0e9dd2e0760a072d655f6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247772"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services の配置に関する要件と注意点
   あるソリューションのパフォーマンスと可用性は、多くの因子に左右されます。たとえば、基になるハードウェアの機能、サーバーの配置トポロジ、ソリューションの特性 (たとえば、パーティションが複数サーバーに分散されているとか、リレーショナル エンジンへの直接アクセスを必要とする ROLAP ストレージを使用するなど)、サービス レベル契約、データ モデルの複雑さなどです。  

@@ -1,5 +1,5 @@
 ---
-title: CustomRollupProperties 要素 (XMLA) |Microsoft ドキュメント
+title: CustomRollupProperties 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CustomRollupProperties element
 ms.assetid: 4abf0129-e529-4355-b8d5-6f4e6a88e796
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 004cc629790be3840e7c2b43f71c58dc8416cca7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a564296dd022dece7ff20a7187c2c80bba9c6b7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233702"
 ---
 # <a name="customrollupproperties-element-xmla"></a>CustomRollupProperties 要素 (XMLA)
   親によって表される属性メンバーのカスタム ロールアップ プロパティを含む[属性](attribute-element-xmla.md)要素。  
@@ -66,7 +66,7 @@ ms.locfileid: "36077396"
 ## <a name="remarks"></a>コメント  
  `CustomRollupProperties` 要素は、親要素 `Attribute` によって定義される属性メンバーのカスタム ロールアップ プロパティを定義する多次元式 (MDX) を含みます。  
   
- MDX 式の詳細については、次を参照してください。[式&#40;MDX&#41;](/sql/mdx/expressions-mdx)です。  
+ MDX 式の詳細については、次を参照してください。[式&#40;MDX&#41;](/sql/mdx/expressions-mdx)します。  
   
 ## <a name="see-also"></a>参照  
  [要素を挿入&#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   

@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 caps.latest.revision: 23
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: dbcb69181150f1dd6003ff868e4a1b6909ee8990
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8080c3d0825104019f1e3156d39348b5676d8159
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257448"
 ---
 # <a name="monitoring-of-availability-groups-sql-server"></a>可用性グループの監視 (SQL Server)
   AlwaysOn 可用性グループのプロパティと状態を監視するには、次のツールを使用します。  
@@ -46,7 +45,7 @@ ms.locfileid: "36074243"
   
      [第 1 部 PowerShell を使用した AlwaysOn 正常性状態の監視: 基本的なコマンドレットの概要](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
   
-     [第 2 部 PowerShell を使用した AlwaysOn 正常性状態を監視しますコマンドレットの使用方法の詳細。](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+     [第 2 部 PowerShell を使用した AlwaysOn 正常性状態の監視: コマンドレットの使用方法の詳細](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
   
      [パート 3 PowerShell を使用した AlwaysOn 正常性状態の監視: 単純なアプリケーションの監視](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
   
@@ -67,7 +66,7 @@ ms.locfileid: "36074243"
  [AlwaysOn 可用性グループの動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions)   
  [可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [ページの自動修復&#40;の可用性グループとデータベース ミラーリング&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [ページの自動修復&#40;可用性グループとデータベース ミラーリング&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

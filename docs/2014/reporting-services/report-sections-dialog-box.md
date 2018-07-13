@@ -1,5 +1,5 @@
 ---
-title: レポート セクション ダイアログ ボックス |Microsoft ドキュメント
+title: レポート セクション ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ff14dfa-d56b-449f-bef1-cc217f3c14b7
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9962f996bff428411a0372663ef860dfd0865f53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4bbe031bd7cc918f39d1c3c965cdb9e82ab612a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328923"
 ---
 # <a name="report-sections-dialog-box"></a>[レポート セクション] ダイアログ ボックス
-  レポート デザイナーは、レポートに 1 つだけレポート定義言語 (RDL) が含まれていることを確認、レポートを開くときに**\<セクション >** 要素。 複数の **\<Section>** 要素を含むレポートを開くことはサポートされていません。  
+  レポート デザイナーでは、レポートには、1 つだけレポート定義言語 (RDL) が含まれる検証レポートを開くときに**\<セクション >** 要素。 複数の **\<Section>** 要素を含むレポートを開くことはサポートされていません。  
   
  複数のセクションを含むレポート定義をプログラムで生成することはできますが、そのレポートをレポート作成環境で編集することはサポートされていません。  
   

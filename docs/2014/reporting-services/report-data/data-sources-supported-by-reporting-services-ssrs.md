@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server data processing extension [Reporting Services]
 - XML data processing extension [Reporting Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 caps.latest.revision: 92
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4a2b38ef67782fdc1718c065f264c01e2878eebb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 41c5bf1d39603f1fb0de8dfe6133258f312eab02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266298"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services でサポートされるデータ ソース (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でレポート データをデータ ソースから取得する処理は、データ処理拡張機能を使用するモジュール式の拡張可能なデータ レイヤーを通して行われます。 レポート データをデータ ソースから取得するには、対象となるデータ ソースの種類 (データ ソースで動作しているバージョンのソフトウェア) およびデータ ソース プラットフォーム (32 ビットまたは 64 ビット [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) がサポートされているデータ処理拡張機能を選択する必要があります。  
@@ -38,11 +38,11 @@ ms.locfileid: "36075472"
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mdx、DMX、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerPivot、および表形式モデル  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX、DMX、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerPivot とテーブル モデル  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並列データ ウェアハウス  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse  
   
 -   Oracle  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36075472"
  レポート ビルダーがサポートしているデータ処理拡張機能の詳細については、msdn.microsoft.com の [レポート ビルダーに関するドキュメント](http://go.microsoft.com/fwlink/?LinkId=154494)の「[レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)」を参照してください。  
   
 ## <a name="platform-support-for-report-data-sources"></a>レポート データ ソースに対するプラットフォームのサポート  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置で使用できるデータ ソースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディション、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のバージョン、およびプラットフォームによって異なります。 機能の詳細については、次を参照してください。 [SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 このトピックでは、サポートされるデータ ソースに関する情報をバージョンおよびプラットフォームごとに表に示します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置で使用できるデータ ソースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディション、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のバージョン、およびプラットフォームによって異なります。 機能の詳細については、次を参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 このトピックでは、サポートされるデータ ソースに関する情報をバージョンおよびプラットフォームごとに表に示します。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ ソースに関するプラットフォームの考慮事項は、レポート作成クライアントの場合とレポート サーバーの場合で異なります。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36075472"
 |汎用 OLE DB データ ソース|[OLEDB](#OLEDBStandard)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|OLE DB をサポートする任意のデータ ソース。<br /><br /> プラットフォームのサポートについては、データ ソースのマニュアルを参照してください。|Y|なし|OLE DB をサポートする任意のデータ ソース。 詳細については、「 [注意](#OLEDBStandard)」を参照してください。|Y|なし|  
 |汎用 ODBC データ ソース|[ODBC](#ODBCGeneric)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|ODBC をサポートする任意のデータ ソース。<br /><br /> プラットフォームのサポートについては、データ ソースのマニュアルを参照してください。|Y|なし|ODBC をサポートする任意のデータ ソース。 詳細については、「 [注意](#ODBCGeneric)」を参照してください。|Y|Y|  
   
- 表形式のデータ ソースの使用方法の詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services に接続文字列が](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)です。  
+ 表形式のデータ ソースを使用する方法の詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
   
  外部データ ソースの使用に関する詳細については、「[外部データ ソースのデータを追加する &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)」を参照してください。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "36075472"
  [データ ソースの表に戻る](#DataSourcesTable)  
   
 ## <a name="reporting-services-data-processing-extensions"></a>Reporting Services データ処理拡張機能  
- 次のデータ処理拡張機能は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] および [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]と一緒に自動的にインストールされます。 詳細については、およびインストールを確認するには、「 [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)と[RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)です。  
+ 次のデータ処理拡張機能は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] および [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]と一緒に自動的にインストールされます。 詳細については、およびインストールを確認するには、「 [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)と[RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)します。  
   
 > [!NOTE]  
 >  現在、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ処理拡張機能はサポートされていません。  
@@ -159,12 +159,12 @@ ms.locfileid: "36075472"
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-###  <a name="Azure"></a> Windows Azure SQL データベース処理拡張機能  
+###  <a name="Azure"></a> Windows Azure SQL Database 処理拡張機能  
  データ ソースの種類 **[[!INCLUDE[ssSDS](../../includes/sssds-md.md)]]** は、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をラップし、拡張したものです。  
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] では、このデータ拡張機能に関連付けられているグラフィカル クエリ デザイナーは、[リレーショナル クエリ デザイナーのユーザー インターフェイス](../relational-query-designer-user-interface.md)です。**Microsoft SQL Server** のデータ ソースの種類と共に使用する [Visual Database Tools デザイナー](../../ssms/visual-db-tools/visual-database-tool-designers.md)ではありません。  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自動的に区別**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** と**Microsoft SQL Server**データ ソースの種類し、データ ソースの種類に関連付けられているグラフィカル クエリ デザイナーが開きます。  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自動的に区別**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** と**Microsoft SQL Server**データ ソースの種類し、データ ソースの種類に関連付けられているグラフィカル クエリ デザイナーを開きます。  
   
  クエリ デザイナーをグラフィカル モードで使用すると、クエリが分析され、再作成される場合があります。 クエリの作成に、テキスト ベースのクエリ デザイナーを使用することもできます。 クエリに使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を制御するには、テキストベースのクエリ デザイナーを使用します。 詳細については、「[テキストベースのクエリ デザイナーのユーザー インターフェイス](../text-based-query-designer-user-interface.md)」を参照してください。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36075472"
 ###  <a name="PWD"></a> Microsoft SQL Server 並列データ ウェアハウス処理拡張機能  
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] では、このデータ拡張機能に関連付けられているグラフィカル クエリ デザイナーは、[リレーショナル クエリ デザイナーのユーザー インターフェイス](../relational-query-designer-user-interface.md)です。**Microsoft SQL Server** のデータ ソースの種類と共に使用する [Visual Database Tools デザイナー](../../ssms/visual-db-tools/visual-database-tool-designers.md)ではありません。  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自動的に区別**SQL Server Parallel Data Warehouse**と**Microsoft SQL Server**データ ソースの種類し、データ ソースの種類に関連付けられているグラフィカル クエリ デザイナーが開きます。  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自動的に区別**SQL Server 並列データ ウェアハウス**と**Microsoft SQL Server**データ ソースの種類し、データ ソースの種類に関連付けられているグラフィカル クエリ デザイナーを開きます。  
   
  クエリ デザイナーをグラフィカル モードで使用すると、クエリが分析され、再作成される場合があります。 クエリの作成に、テキスト ベースのクエリ デザイナーを使用することもできます。 クエリに使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を制御するには、テキストベースのクエリ デザイナーを使用します。 詳細については、「 [テキストベースのクエリ デザイナーのユーザー インターフェイス](../text-based-query-designer-user-interface.md)」を参照してください。  
   
@@ -255,7 +255,7 @@ ms.locfileid: "36075472"
  [データ ソースの表に戻る](#DataSourcesTable)  
   
 ###  <a name="OracleClient"></a> Oracle データ処理拡張機能  
- データ ソースの種類に **[Oracle]** を選択した場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for Oracle を拡張した [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ処理拡張機能が選択されます。 **Oracle**データ ソースがラップし、拡張、<xref:System.Data.OracleClient>で必要になったクラス[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]です。 Oracle データベースからレポート データを取得するには、管理者が Oracle クライアント ツールをインストールする必要があります。 このデータ プロバイダーでは、Oracle Client ソフトウェアとして提供される Oracle 8i Release 3 の Oracle Call Interface (OCI) が使用されます。 クライアント アプリケーション バージョンは 8.1.7 以降である必要があります。 これらのツールをレポート作成クライアントにインストールすると、レポートをプレビューすることができ、レポート サーバーにインストールすると、パブリッシュされたレポートを表示できます。  
+ データ ソースの種類に **[Oracle]** を選択した場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for Oracle を拡張した [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ処理拡張機能が選択されます。 **Oracle**データ ソースがラップし、拡張、<xref:System.Data.OracleClient>クラス[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]します。 Oracle データベースからレポート データを取得するには、管理者が Oracle クライアント ツールをインストールする必要があります。 このデータ プロバイダーでは、Oracle Client ソフトウェアとして提供される Oracle 8i Release 3 の Oracle Call Interface (OCI) が使用されます。 クライアント アプリケーション バージョンは 8.1.7 以降である必要があります。 これらのツールをレポート作成クライアントにインストールすると、レポートをプレビューすることができ、レポート サーバーにインストールすると、パブリッシュされたレポートを表示できます。  
   
  この拡張機能では、名前付きパラメーターがサポートされます。 Oracle Version 9 以降の場合、複数値パラメーターがサポートされます。 位置に依存する無名パラメーターを使用するには、OLE DB データ処理拡張機能と [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle データ プロバイダーを組み合わせて使用します。 Oracle をデータ ソースとして構成する方法の詳細については、「 [Reporting Services を使用して Oracle データ ソースの構成およびアクセスを行う方法](http://support.microsoft.com/kb/834305)」を参照してください。 追加の権限の構成の詳細については、 [サポート技術情報の「](http://support.microsoft.com/kb/870668) NETWORK SERVICE セキュリティ プリンシパルに権限を追加する方法 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。  
   
@@ -317,11 +317,11 @@ ms.locfileid: "36075472"
  指定できる資格情報は、クライアント アプリケーションが使用している実装によって異なります。 詳細については、「[SharePoint リストの接続の種類 &#40;SSRS&#41;](sharepoint-list-connection-type-ssrs.md)」を参照してください。  
   
 ###  <a name="XML"></a> XML データ処理拡張機能  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポート内で XML データを使用できるように、XML データ処理拡張機能が含まれています。 データは、XML ドキュメントや Web サービス、または URL を使用してアクセス可能な Web ベースのアプリケーションから取得できます。 詳細については、「[XML の接続の種類 &#40;SSRS&#41;](xml-connection-type-ssrs.md)」を参照してください。 関連付けられているクエリ デザイナーの詳細については、セクションを参照して、テキスト ベースのクエリ デザイナーで[グラフィカル クエリ デザイナーのユーザー インターフェイス](graphical-query-designer-user-interface.md)です。 例については、「 [Reporting Services: XML と Web サービス データ ソースの使用](http://go.microsoft.com/fwlink/?LinkId=81654)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポート内で XML データを使用できるように、XML データ処理拡張機能が含まれています。 データは、XML ドキュメントや Web サービス、または URL を使用してアクセス可能な Web ベースのアプリケーションから取得できます。 詳細については、「[XML の接続の種類 &#40;SSRS&#41;](xml-connection-type-ssrs.md)」を参照してください。 関連付けられているクエリ デザイナーの詳細についてで、テキスト ベースのクエリ デザイナー」セクションを参照してください。[グラフィカル クエリ デザイナーのユーザー インターフェイス](graphical-query-designer-user-interface.md)します。 例については、「 [Reporting Services: XML と Web サービス データ ソースの使用](http://go.microsoft.com/fwlink/?LinkId=81654)」を参照してください。  
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   
-###  <a name="SapBINetWeaver"></a> SAP NetWeaver Business Intelligence のデータ処理拡張機能  
+###  <a name="SapBINetWeaver"></a> SAP NetWeaver Business Intelligence データ処理拡張機能  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートの [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] データ ソースからのデータを使用できるデータ処理拡張機能が含まれます。  
   
  詳細については、「[SAP NetWeaver BI の接続の種類 &#40;SSRS&#41;](sap-netweaver-bi-connection-type-ssrs.md)」を参照してください。 関連付けられているクエリ デザイナーの詳細については、「 [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md)」を参照してください。  
@@ -333,7 +333,7 @@ ms.locfileid: "36075472"
 ###  <a name="Hyperion"></a> Hyperion Essbase Business Intelligence のデータ拡張機能  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートの [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] データ ソースからのデータを使用できるデータ処理拡張機能が含まれます。  
   
- 詳細については、「[Hyperion Essbase の接続の種類 &#40;SSRS&#41;](hyperion-essbase-connection-type-ssrs.md)」を参照してください。 関連付けられているクエリ デザイナーの詳細については、次を参照してください。 [Hyperion Essbase Query Designer User Interface](hyperion-essbase-query-designer-user-interface.md)です。  
+ 詳細については、「[Hyperion Essbase の接続の種類 &#40;SSRS&#41;](hyperion-essbase-connection-type-ssrs.md)」を参照してください。 関連付けられているクエリ デザイナーの詳細については、次を参照してください。 [Hyperion Essbase Query Designer User Interface](hyperion-essbase-query-designer-user-interface.md)します。  
   
  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]の詳細については、「 [Hyperion Essbase での SQL Server 2005 Reporting Services の使用](http://go.microsoft.com/fwlink/?LinkId=81970)」を参照してください。  
   

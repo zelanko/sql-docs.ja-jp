@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: afee43abcadea62f4b1a925a3546693f28919e2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: cea6ddb8e6a7d29d5dffeb43648dd5c08267261d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236202"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>式のリファレンス (レポート ビルダーおよび SSRS)
   レポートの式には、各種の組み込み関数や組み込みコレクションの参照を使用できます。 レポートをパブリッシュまたは処理するには、式に有効な [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 構文が使用されている必要があります。  
@@ -34,7 +34,7 @@ ms.locfileid: "36077046"
 ## <a name="in-this-section"></a>このセクションの内容  
  [式におけるデータ型&#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
- [式で定数&#40;レポート ビルダーおよび SSRS&#41;](constants-in-expressions-report-builder-and-ssrs.md)  
+ [式の定数&#40;レポート ビルダーおよび SSRS&#41;](constants-in-expressions-report-builder-and-ssrs.md)  
   
  [式の演算子&#40;レポート ビルダーおよび SSRS&#41;](operators-in-expressions-report-builder-and-ssrs.md)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36077046"
   
  [DataSources コレクションと DataSets コレクションの参照&#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-datasources-and-datasets-references-report-builder.md)  
   
- [レポート ファイルとグループ変数コレクションの参照&#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [レポート変数とグループ変数コレクションの参照&#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
  [ReportItems コレクション参照&#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-reportitems-collection-references-report-builder.md)  
   

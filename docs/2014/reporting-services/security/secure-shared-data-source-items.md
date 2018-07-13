@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], shared
@@ -17,13 +17,13 @@ ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d61801a6eda3250a23d7e9904bf6a372ddf6c8a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71fc9ae4563515bdfebf79af4a41e9379502d872
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256214"
 ---
 # <a name="secure-shared-data-source-items"></a>共有データ ソース アイテムをセキュリティで保護する
   共有データ ソース アイテムにセキュリティを設定して、そのアイテムへのアクセスを有効または無効にすることができます。  
@@ -46,7 +46,7 @@ ms.locfileid: "36074973"
 ## <a name="see-also"></a>参照  
  [レポート データ ソースを管理します。](../report-data/manage-report-data-sources.md)   
  [フォルダーをセキュリティで保護する](secure-folders.md)   
- [セキュリティで保護されたレポート、およびリソース](secure-reports-and-resources.md)   
+ [レポートとリソースを保護します。](secure-reports-and-resources.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
  [Reporting Services データ ソースに資格情報を保存する](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   

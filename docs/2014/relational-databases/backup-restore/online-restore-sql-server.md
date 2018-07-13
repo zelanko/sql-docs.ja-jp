@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online restores [SQL Server]
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 47093fbf2be19ffcb8891c782df7fd6a72207b42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 391becc72bcbcb21ff0f15c57229ec28acc8f158
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326202"
 ---
 # <a name="online-restore-sql-server"></a>オンライン復元 (SQL Server)
   オンライン復元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition でのみサポートされています。 このエディションの既定で、ファイル復元、ページ復元、または段階的な部分復元はオンラインで行われます。 このトピックの内容は、複数のファイルまたはファイル グループを含むデータベース (単純復旧モデルでは、読み取り専用ファイル グループのみ) に関連しています。  
@@ -40,7 +39,7 @@ ms.locfileid: "36074623"
   
 2.  最後のログの復元に WITH RECOVERY を使用します。 この操作により、復元したデータがオンラインになります。  
   
- 場合によっては、ロールバックに必要なデータが起動時にオフラインになっているために、コミットされていないトランザクションをロールバックできないことがあります。 このような場合は、トランザクションの処理が遅延されます。 詳細については、「 [遅延トランザクション &#40;SQL Server&#41;](deferred-transactions-sql-server.md)を使用して、機能していないファイル グループを削除する方法を説明します。  
+ 場合によっては、ロールバックに必要なデータが起動時にオフラインになっているために、コミットされていないトランザクションをロールバックできないことがあります。 このような場合は、トランザクションの処理が遅延されます。 詳細については、「 [遅延トランザクション &#40;SQL Server&#41;](deferred-transactions-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
 >  データベースで一括ログ復旧モデルを使用している場合は、完全復旧モデルに切り替えてからオンライン復元を開始することをお勧めします。 詳細については、「[データベースの復旧モデルの表示または変更 &#40;SQL Server&#41;](view-or-change-the-recovery-model-of-a-database-sql-server.md)」を参照してください。  

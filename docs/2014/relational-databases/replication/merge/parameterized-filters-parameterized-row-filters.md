@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
 - merge replication [SQL Server replication], dynamic filters
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 74cb3cd9631e0b709b7eb5cf0cb0856bc3b830af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a66dcf09bc64991be32b9d7bf66e2e1729de6c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225421"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   パラメーター化された行フィルターを使用すると、複数のパブリケーションを作成しなくても、パーティションの異なるデータを各サブスクライバーに送信できます (以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、パラメーター化されたフィルターは動的フィルターと呼ばれていました)。 パーティションとは、テーブル内の行のサブセットのことです。パラメーター化された行フィルターの作成時に選択した設定に基づき、パブリッシュされたテーブルの各行は、1 つのパーティションのみに属するか (重複しないパーティションが作成されます)、2 つ以上のパーティションに属します (重複するパーティションが作成されます)。  
@@ -98,7 +98,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  たとえば、従業員の Pamela Ansman-Wolfe には、280 という従業員 ID が割り当てられています。 この従業員のサブスクリプションの作成時に、従業員 ID の値 (この場合は 280) を HOST_NAME() 値に指定します。 マージ エージェントはパブリッシャーに接続すると、HOST_NAME() によって返された値をこのテーブル内の値と比較し、 **EmployeeID** 列に 280 という値が格納された行のみをダウンロードします。  
   
 > [!IMPORTANT]  
->  HOST_NAME() 関数を返します、`nchar`値であるため、上記の例では、変換、フィルター句で列が数値データ型の場合を使用する必要があります。 `CONVERT(nchar,EmployeeID) = HOST_NAME()`のように、パラメーター化された行フィルターの句で列名に関数を適用するとパフォーマンスが低下するため、使用しないことをお勧めします。 代わりに、この例で示されている `EmployeeID = CONVERT(int,HOST_NAME())`という句を使用することをお勧めします。 この句を使用できます、 **@subset_filterclause**のパラメーター [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)、通常は使用できません、新規パブリケーション ウィザードでは (ウィザードが実行検証するのには、フィルター句コンピューター名に変換できないために失敗、 `int`)。 パブリケーションの新規作成ウィザードを使用する場合は、このウィザードで `CONVERT(nchar,EmployeeID) = HOST_NAME()` を指定し、次に [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を使用して句を `EmployeeID = CONVERT(int,HOST_NAME())` に変更してから、パブリケーションのスナップショットを作成することをお勧めします。  
+>  HOST_NAME() 関数を返します、`nchar`値であるため、上記の例では、変換、数値データ型の場合はフィルター句で列を使用する必要があります。 `CONVERT(nchar,EmployeeID) = HOST_NAME()`のように、パラメーター化された行フィルターの句で列名に関数を適用するとパフォーマンスが低下するため、使用しないことをお勧めします。 代わりに、この例で示されている `EmployeeID = CONVERT(int,HOST_NAME())`という句を使用することをお勧めします。 この句を使用することができます、 **@subset_filterclause**パラメーターの[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)が通常では使用できません、パブリケーションの新規作成ウィザードが、(、ウィザードを実行して検証するのには、フィルター句コンピューター名に変換できないため、失敗、 `int`)。 パブリケーションの新規作成ウィザードを使用する場合は、このウィザードで `CONVERT(nchar,EmployeeID) = HOST_NAME()` を指定し、次に [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を使用して句を `EmployeeID = CONVERT(int,HOST_NAME())` に変更してから、パブリケーションのスナップショットを作成することをお勧めします。  
   
  **HOST_NAME() 値をオーバーライドするには**  
   
@@ -123,7 +123,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  フィルター選択オプションを設定するには、「 [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md)」を参照してください。  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>"パーティション グループを使用" および "パーティションの変更を保持" の設定  
- **パーティション グループを使用** オプションと **パーティションの変更を保持** オプションでは、いずれもパブリケーション データベースに追加のメタデータを格納することにより、フィルター選択されたアーティクルを持つパブリケーションの同期パフォーマンスを向上します。 **パーティション グループを使用** オプションでは、事前計算済みパーティション機能を使用することにより、パフォーマンスを向上させることができます。 このオプションに設定されて`true`既定では、パブリケーションのアーティクルが一連の要件を満たしている場合。 これらの要件の詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。 記事には、事前計算済みパーティションを使用するための要件を満たしていない場合、**パーティションの変更を保持**にするオプションが設定されている`true`です。  
+ **パーティション グループを使用** オプションと **パーティションの変更を保持** オプションでは、いずれもパブリケーション データベースに追加のメタデータを格納することにより、フィルター選択されたアーティクルを持つパブリケーションの同期パフォーマンスを向上します。 **パーティション グループを使用** オプションでは、事前計算済みパーティション機能を使用することにより、パフォーマンスを向上させることができます。 このオプションを設定`true`既定では、パブリケーションのアーティクルが一連の要件に従う場合。 これらの要件の詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。 記事には、事前計算済みパーティションを使用するための要件を満たしていない場合、 **@keep_partition_changes**にするオプションが設定されている`true`します。  
   
 ### <a name="setting-partition-options"></a>[パーティションのオプション] の設定  
  **[パーティションのオプション]** プロパティの値は、アーティクルを作成するときに、フィルター選択されたテーブルのデータをサブスクライバーが共有する方法に応じて設定します。 このプロパティは、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)、および **[アーティクルのプロパティ]** ダイアログ ボックスを使用して、4 つの値のいずれかに設定できます。 このプロパティは、 **[フィルターの追加]** ダイアログ ボックスまたは **[フィルターの編集]** ダイアログ ボックスを使用して、2 つの値のいずれかに設定できます。これらのダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ]** ダイアログ ボックスから使用できます。 次の表は、利用可能な値をまとめたものです。  
@@ -135,9 +135,9 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |パーティション内のデータは重複していません。データはサブスクリプション間で共有されます。 サブスクライバーはパラメーター化されたフィルターで参照されている列を更新できません。|該当なし<sup>1</sup>|**[重複しない (複数のサブスクリプションで共有)]**|**2**|  
 |パーティション内のデータは重複していません。パーティションごとに単一のサブスクリプションが存在します。 サブスクライバーでは、パラメーター化されたフィルターで参照される列を更新できません。<sup>2</sup>|**[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]**|**[重複しない (単一のサブスクリプション)]**|**3**|  
   
- <sup>1</sup>基になるフィルター選択オプションが設定されている場合**0**、または**1**、または**2**、**フィルターの追加**と**編集フィルター**  ダイアログ ボックスが表示されます**このテーブルからの行に複数のサブスクリプションに移動する**です。  
+ <sup>1</sup>基になるフィルター選択オプションが設定されている場合**0**、または**1**、または**2**、**フィルターの追加**と**編集フィルター**  ダイアログ ボックスが表示されます**このテーブルから行を複数のサブスクリプションに移動する**します。  
   
- <sup>2</sup>場合は、このオプションを指定すると、できるだけそのアーティクル内のデータのパーティションごとに 1 つのサブスクリプション。 第 2 のサブスクリプションを作成し、その新しいサブスクリプションのフィルター選択条件が既存のサブスクリプションと同じパーティションとして判別される場合、既存のサブスクリプションは削除されます。  
+ <sup>2</sup>場合、このオプションを指定すると、できるだけそのアーティクル内のデータのパーティションごとに 1 つのサブスクリプション。 第 2 のサブスクリプションを作成し、その新しいサブスクリプションのフィルター選択条件が既存のサブスクリプションと同じパーティションとして判別される場合、既存のサブスクリプションは削除されます。  
   
 > [!IMPORTANT]  
 >  **[パーティションのオプション]** の値は、サブスクライバーによるデータの共有方法に応じて設定する必要があります。 たとえば、パーティションが重複せず、パーティションごとに単一のサブスクリプションが存在するように指定したにもかかわらず、データが別のサブスクライバーで更新された場合、マージ エージェントは同期中に失敗し、未集約が発生することがあります。  

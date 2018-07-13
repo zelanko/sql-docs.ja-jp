@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], file storage types
 - importing data, file storage types
@@ -17,18 +16,18 @@ helpviewer_keywords:
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 68630ac6e4a2ffad9079ed620e8d7d9660bf6381
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fff9084513f21333125eaee8995eebfd3e22e1a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251994"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp を使用したファイル ストレージ型の指定 (SQL Server)
-  *ファイル ストレージ型* は、データ ファイルへのデータの格納方法を記述します。 データとしてエクスポートできますデータ ファイルに、データベース テーブルの型 (ネイティブ形式)、文字表現 (文字形式)、または任意のデータ型が暗黙的な変換がサポートされている場合です。たとえば、コピー、`smallint`として、`int`です。 ユーザー定義のデータ型は、基本データ型としてエクスポートされます。  
+  *ファイル ストレージ型* は、データ ファイルへのデータの格納方法を記述します。 データとしてエクスポートできますデータ ファイルに、データベース テーブルの型 (ネイティブ形式)、文字表現 (文字形式)、または任意のデータ型を暗黙的な変換がサポートされています。たとえば、コピー、`smallint`として、`int`します。 ユーザー定義のデータ型は、基本データ型としてエクスポートされます。  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>ファイル ストレージ型の bcp プロンプト  
  対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f** ) またはデータ形式スイッチ ( **-n** 、**-c**、**-w**、または **-N**) のどちらも付けずに **in**または **out**オプションを指定すると、次のように各データ フィールドのファイル ストレージ型を要求するプロンプトが表示されます。  
@@ -39,9 +38,9 @@ ms.locfileid: "36074584"
   
 -   できるだけコンパクトなストレージ型 (ネイティブ データ形式) で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータ ファイルにデータを一括エクスポートするには、 **bcp**によって提供される既定のファイル ストレージ型をそのまま使用します。 ネイティブのファイル ストレージ型の一覧については、このトピックの「ネイティブのファイル ストレージ型」を参照してください。  
   
--   データを一括エクスポートのインスタンスから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字形式でデータ ファイルに次のように指定します。 `char` 、ファイル ストレージ型として、テーブルのすべての列にします。  
+-   インスタンスからデータの一括エクスポートする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字形式でデータ ファイルに次のように指定します。`char`テーブル内のすべての列のファイル ストレージ型として。  
   
--   インスタンスにデータを一括インポートする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ファイルから指定のファイル ストレージ型として`char`文字に格納されている型は、書式設定し、ネイティブ データ型の形式で格納されたデータでは、必要に応じてファイル ストレージ型のいずれかを指定します。  
+-   インスタンスにデータを一括インポートする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データ ファイルから指定のファイル ストレージ型として`char`文字に格納された型は、書式設定し、ネイティブ データ型の形式で格納されているデータの適切なファイル ストレージの種類のいずれかを指定します。  
   
     |ファイル ストレージ型|コマンド プロンプトで入力する文字|  
     |-----------------------|-----------------------------|  
@@ -77,9 +76,9 @@ ms.locfileid: "36074584"
     |`UDT` (ユーザー定義データ型)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup>フィールド長、プレフィックス長、およびターミネータの相互作用データ ファイルとしてエクスポートされた非文字データに割り当てられている記憶域スペースの量を決定する、`char`ファイル ストレージ型です。  
+     <sup>1</sup>フィールド長、プレフィックス長、およびターミネータの相互作用としてエクスポートされた非文字データのデータ ファイルに割り当てられる記憶域スペースの量を決定する、`char`ファイル ストレージ型。  
   
-     <sup>2</sup> 、 `ntext`、 `text`、および`image`データ型は、将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 使用して`nvarchar(max)`、 `varchar(max)`、および`varbinary(max)`代わりにします。  
+     <sup>2</sup> 、 `ntext`、 `text`、および`image`データ型はの将来のバージョンで削除される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 使用`nvarchar(max)`、 `varchar(max)`、および`varbinary(max)`代わりにします。  
   
 ## <a name="native-file-storage-types"></a>ネイティブのファイル ストレージ型  
  各ネイティブのファイル ストレージ型は、対応するホスト ファイル データ型として、フォーマット ファイルに記録されます。  
@@ -113,16 +112,16 @@ ms.locfileid: "36074584"
 |`timestamp`|SQLBINARY|  
 |UDT (ユーザー定義データ型)|SQLUDT|  
   
- <sup>1</sup>文字に格納されているデータ ファイル形式を使用して`char`ファイル ストレージ型として。 したがって、文字データ ファイルの場合、フォーマット ファイルに表示されるデータ型は SQLCHAR のみです。  
+ <sup>1</sup>形式の使用を文字に格納されているデータ ファイル`char`ファイル ストレージ型として。 したがって、文字データ ファイルの場合、フォーマット ファイルに表示されるデータ型は SQLCHAR のみです。  
   
- <sup>2</sup>することはできませんデータを一括インポート`text`、 `ntext`、および`image`既定値を持つ列。  
+ <sup>2</sup>へデータのインポートを一括できません`text`、 `ntext`、および`image`既定値を持つ列。  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>ファイル ストレージ型のその他の考慮事項  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータ ファイルにデータを一括エクスポートするときは、次のことを考慮してください。  
   
 -   `char` 型は、常にファイル ストレージ型として指定できます。  
   
--   無効な暗黙的な変換を表すファイル ストレージ型を入力する場合**bcp**失敗しますたとえば、指定することはできます`int`の`smallint`を指定する場合は、データ`smallint`の`int`データ。結果としてオーバーフロー エラー発生します。  
+-   無効な暗黙的な変換を表すファイル ストレージ型を入力すると**bcp**は失敗します指定できますが、`int`の`smallint`を指定する場合は、データ`smallint`の`int`データ。オーバーフロー エラーの結果。  
   
 -   非文字データ型がなど`float`、 `money`、 `datetime`、または`int`が格納されているそれぞれのデータベース型として、データが内のデータ ファイルに書き込まれます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ形式。  
   

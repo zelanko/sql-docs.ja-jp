@@ -1,5 +1,5 @@
 ---
-title: QueryDefinition 要素 (ASSL) |Microsoft ドキュメント
+title: QueryDefinition 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - QueryDefinition element
 ms.assetid: 25bf0e93-d5c5-41df-b310-a253a4ace80e
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8dc7a5407514bbe212aa7425fe9fc886ac3c7126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bcfe589a233d17f51220db3a46bc5e69b42a5bb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231882"
 ---
 # <a name="querydefinition-element-assl"></a>QueryDefinition 要素 (ASSL)
-  関連付けられているクエリの不透過の式が含まれています、[データソース](../objects/datasource-element-assl.md)内の要素、 [QueryBinding](../data-type/binding-data-type-assl.md)要素。  
+  関連付けられているクエリの不透過の式が含まれています、 [DataSource](../objects/datasource-element-assl.md)内の要素を[QueryBinding](../data-type/binding-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

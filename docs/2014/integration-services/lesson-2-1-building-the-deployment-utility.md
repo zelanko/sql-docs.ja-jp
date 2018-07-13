@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd219231d2c3933ac480f2a5fb3a56207db61eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 523538e5c77ba71bce5a15966bc1b4dd93ee5513
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225592"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>手順 1: 配置ユーティリティの構築
   ここでは、Deployment Tutorial プロジェクト用の配置ユーティリティを構成し、構築します。  
@@ -38,7 +38,7 @@ ms.locfileid: "36074409"
   
 4.  **[Deployment Tutorial プロパティ ページ]** ダイアログ ボックスで、[構成プロパティ] を展開し、[配置ユーティリティ] をクリックします。  
   
-5.  右側のペインで、 **Deployment Tutorial プロパティ ページ** ダイアログ ボックスであることを確認`AllowConfigurationChanges`に設定されている`true`設定、`CreateDeploymentUtility`に`true`、オプションの既定値の更新と`DeploymentOutputPath`です。  
+5.  右側のウィンドウで、 **Deployment Tutorial プロパティ ページ** ダイアログ ボックスで、ことを確認します`AllowConfigurationChanges`に設定されている`true`に設定して、`CreateDeploymentUtility`に`true`、オプションの既定値を更新および`DeploymentOutputPath`。  
   
 6.  **[OK]** をクリックします。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36074409"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 2: 配置バンドルの確認](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [配置ユーティリティを作成する](../../2014/integration-services/create-a-deployment-utility.md)  

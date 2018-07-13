@@ -1,5 +1,5 @@
 ---
-title: データ変換変換エディター |Microsoft ドキュメント
+title: データ変換変換エディター |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataconversiontransformation.f1
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9c5157175181c7a43a2c8e3209c23905a4129d2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 330ac6f9211afbc1dd3e89d9d4c7298a41026f31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225978"
 ---
 # <a name="data-conversion-transformation-editor"></a>データ変換変換エディター
   **[データ変換変換エディター]** ダイアログ ボックスを使用すると、変換対象の列や列の変換先のデータ型を選択したり、変換属性を設定したりできます。  
   
 > [!NOTE]  
->  `FastParse`データ変換の変換の出力列のプロパティでは使用できません、**データ変換変換エディター**を使用して設定できますが、**詳細エディター**です。 このプロパティの詳細については、「 [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)」の「データ変換の変換」を参照してください。  
+>  `FastParse`データ変換の変換の出力列のプロパティでは使用できません、**データ変換変換エディター**を使用して設定できますが、**高度なエディター**します。 このプロパティの詳細については、「 [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)」の「データ変換の変換」を参照してください。  
   
  データ変換の変換の詳細については、「 [データ変換の変換](data-flow/transformations/data-conversion-transformation.md)」を参照してください。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36074641"
  使用できる入力列の一覧から変換対象の列を選択します。 上記のチェック ボックスに、選択内容が反映されます。  
   
  **[出力の別名]**  
- それぞれの新しい列の別名を入力します。 既定値は`Copy of`後に入力列の名前。 ただし、一意のわかりやすい名前を選択できます。  
+ それぞれの新しい列の別名を入力します。 既定値は`Copy of`後に、入力列の名前。 ただし、一意のわかりやすい名前を選択できます。  
   
  **[データ型]**  
  一覧から利用可能なデータ型を選択します。 詳細については、「 [Integration Services Data Types](data-flow/integration-services-data-types.md)」を参照してください。  

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, nested FOR XML queries
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e8ce91a3ee069562a6a4d3f9d6aa3c02999e4dff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: cf9e0d63af7283dfbb36a12d34224a6c379c111f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249662"
 ---
 # <a name="use-nested-for-xml-queries"></a>入れ子になった FOR XML クエリの使用
-  `xml`データ型および[FOR XML クエリで TYPE ディレクティブ](type-directive-in-for-xml-queries.md)サーバー上だけでなく、クライアントで処理する FOR XML クエリによって返された XML を有効にします。  
+  `xml`データ型と[FOR XML クエリで TYPE ディレクティブ](type-directive-in-for-xml-queries.md)クライアントとサーバーで処理する FOR XML クエリによって返された XML を有効にします。  
   
 ## <a name="processing-with-xml-type-variables"></a>xml 型の変数を使用した処理  
  FOR XML クエリの結果を `xml` 型の変数に代入できます。また、XQuery を使用して結果にクエリを実行し、その結果を `xml` 型の変数に代入してからさらに処理を加えることができます。  
@@ -43,7 +43,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- さらに、変数に返された XML を処理できる`@x`のいずれかを使用して、`xml`データ型のメソッドです。 たとえば、 `ProductModelID` value() メソッド [を使用して、](/sql/t-sql/xml/value-method-xml-data-type)属性の値を取得できます。  
+ さらに、変数に返された XML を処理することができます`@x`のいずれかを使用して、`xml`データ型のメソッド。 たとえば、 `ProductModelID` value() メソッド [を使用して、](/sql/t-sql/xml/value-method-xml-data-type)属性の値を取得できます。  
   
 ```  
 DECLARE @i int;  
@@ -70,7 +70,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- 結果であるため`xml`の種類を指定できますいずれかの`xml`次のクエリで示すように、データの型をこの XML に対して直接メソッドです。 クエリでは、[query() メソッド (xml データ型)](/sql/t-sql/xml/query-method-xml-data-type) が使用され、<`row`> 要素の最初の <`myRoot`> 子要素が取得されます。  
+ 結果であるため`xml`の種類を指定できますいずれかの`xml`次のクエリで示すように、データの型をこの XML に対して直接メソッド。 クエリでは、[query() メソッド (xml データ型)](/sql/t-sql/xml/query-method-xml-data-type) が使用され、<`row`> 要素の最初の <`myRoot`> 子要素が取得されます。  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -87,7 +87,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>内側の FOR XML クエリの結果を外側のクエリに xml 型インスタンスとして返す  
- 入れ子になったを記述することができます`FOR XML`クエリとして、内側のクエリの結果が返されます、`xml`外側の照会する型。 以下に例を示します。  
+ 入れ子になった書き込める`FOR XML`クエリとして、内側のクエリの結果が返されます、`xml`型で外側のクエリにします。 以下に例を示します。  
   
 ```  
 SELECT Col1,   

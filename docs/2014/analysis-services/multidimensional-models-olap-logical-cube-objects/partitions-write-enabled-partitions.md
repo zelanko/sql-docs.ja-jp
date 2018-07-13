@@ -1,5 +1,5 @@
 ---
-title: 書き込み許可パーティション |Microsoft ドキュメント
+title: 書き込み許可パーティション |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,30 +19,30 @@ helpviewer_keywords:
 - storing data [Analysis Services], partitions
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9098219cccf4559fbb2a9b9e7e03da0004f1b570
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24fd38410e5719dd72e5a55b2914c22fc153ea98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326572"
 ---
 # <a name="write-enabled-partitions"></a>書き込み許可パーティション
   キューブ内のデータは通常、読み取り専用です。 ただし、シナリオによっては、パーティションに書き込み許可を設定する必要が生じます。 書き込み許可パーティションを使用すると、ビジネス ユーザーは、セル値を変更し、その変更がキューブ データに与える影響を分析して、シナリオを調べることができます。 パーティションを書き込み許可にすると、クライアント アプリケーションは、パーティションのデータへの変更内容を記録できます。 これらの変更内容は、書き戻しデータとして知られており、個別のテーブルに格納され、メジャー グループの既存のデータは上書きされません。 ただし、キューブ データの一部のように、クエリ結果に組み込まれます。  
   
- キューブ全体を書き込み許可にすることも、キューブ内の特定のパーティションのみを書き込み許可にすることもできます。 書き込み許可ディメンションは、互いに異なりますが補完的です。 書き込み許可パーティションではパーティション セルを更新でき、書き込み許可ディメンションではディメンション メンバーを更新できます。 また、これらの 2 つの機能を組み合わせて使用することもできます。 たとえば、書き込み許可キューブまたは書き込み可能パーティションには、書き込み許可ディメンションを含める必要はありません。 **関連トピック:**[Write-Enabled ディメンション](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)です。  
+ キューブ全体を書き込み許可にすることも、キューブ内の特定のパーティションのみを書き込み許可にすることもできます。 書き込み許可ディメンションは、互いに異なりますが補完的です。 書き込み許可パーティションではパーティション セルを更新でき、書き込み許可ディメンションではディメンション メンバーを更新できます。 また、これらの 2 つの機能を組み合わせて使用することもできます。 たとえば、書き込み許可キューブまたは書き込み可能パーティションには、書き込み許可ディメンションを含める必要はありません。 **関連トピック:**[Write-Enabled ディメンション](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)します。  
   
 > [!NOTE]  
->  データ ソースとして Microsoft Access データベースを持つキューブを書き込み許可にするときは、キューブ、パーティション、またはディメンションのデータ ソース定義に Microsoft OLE DB Provider for ODBC Drivers を使用しないでください。 代わりに、Microsoft Jet 4.0 OLE DB Provider、または Jet 4.0 OLE を含む任意のバージョンの Jet Service Pack を使用できます。 詳細については、Microsoft サポート技術情報の記事を参照してください。 [Microsoft Jet 4.0 データベース エンジンの service pack の入手方法](http://support.microsoft.com/?kbid=239114)です。  
+>  データ ソースとして Microsoft Access データベースを持つキューブを書き込み許可にするときは、キューブ、パーティション、またはディメンションのデータ ソース定義に Microsoft OLE DB Provider for ODBC Drivers を使用しないでください。 代わりに、Microsoft Jet 4.0 OLE DB Provider、または Jet 4.0 OLE を含む任意のバージョンの Jet Service Pack を使用できます。 詳細については、マイクロソフト サポート技術情報の記事を参照してください。 [Microsoft Jet 4.0 データベース エンジンの service pack の入手方法](http://support.microsoft.com/?kbid=239114)します。  
   
  キューブを書き込み許可にできるのは、そのすべてのメジャーに `Sum` 集計関数が使用されている場合だけです。 リンク メジャー グループとローカル キューブは書き込み許可にできません。  
   
 ## <a name="writeback-storage"></a>書き戻しストレージ  
  ビジネス ユーザーによるすべての変更は、現在表示中の値との差分として書き戻しテーブルに格納されます。 たとえば、エンド ユーザーがあるセル値を 90 から 100 に変更した場合、書き戻しテーブルには値 `+10` が格納されます。このとき、変更時刻および変更を行ったビジネス ユーザーに関する情報も格納されます。 クライアント アプリケーションには、蓄積された変更の最終結果が表示されます。 キューブにある元の値はそのまま維持され、変更の監査記録は書き戻しテーブルに記録されます。  
   
- リーフ セルおよび非リーフ セルへの変更の処理は異なります。 リーフ セルは、メジャー グループによって参照されるすべてのディメンションのメジャーとリーフ メンバーの交差部分を表します。 リーフ セルの値は、ファクト テーブルから直接取得されるものであり、ドリル ダウンでそれ以上分割することはできません。 キューブまたはいずれかのパーティションが書き込み可能であれば、リーフ セルに変更を加えることができます。 非リーフ セルに変更を加えることができるのは、その非リーフ セルを構成するリーフ セル間で変更を配布する方法がクライアント アプリケーションに用意されている場合だけです。 このプロセスは、"割り当て" と呼ばれ、多元式 (MDX) の UPDATE CUBE ステートメントを介して管理されます。 ビジネス インテリジェンスの開発者は、UPDATE CUBE ステートメントを使用して、割り当て機能を含めることができます。 詳細については、次を参照してください。 [UPDATE CUBE ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-update-cube)です。  
+ リーフ セルおよび非リーフ セルへの変更の処理は異なります。 リーフ セルは、メジャー グループによって参照されるすべてのディメンションのメジャーとリーフ メンバーの交差部分を表します。 リーフ セルの値は、ファクト テーブルから直接取得されるものであり、ドリル ダウンでそれ以上分割することはできません。 キューブまたはいずれかのパーティションが書き込み可能であれば、リーフ セルに変更を加えることができます。 非リーフ セルに変更を加えることができるのは、その非リーフ セルを構成するリーフ セル間で変更を配布する方法がクライアント アプリケーションに用意されている場合だけです。 このプロセスは、"割り当て" と呼ばれ、多元式 (MDX) の UPDATE CUBE ステートメントを介して管理されます。 ビジネス インテリジェンスの開発者は、UPDATE CUBE ステートメントを使用して、割り当て機能を含めることができます。 詳細については、次を参照してください。 [UPDATE CUBE ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-update-cube)します。  
   
 > [!IMPORTANT]  
 >  更新されるセルが重ならない場合は、`Update Isolation Level` 接続文字列プロパティを使用して、UPDATE CUBE のパフォーマンスを向上させることができます。 詳細については、「<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>」を参照してください。  
@@ -56,7 +56,7 @@ ms.locfileid: "36074100"
 -   破棄して、パーティションを元の状態に戻す。 このアクションはパーティションを読み取り専用にします。  
   
 ## <a name="security"></a>Security  
- ビジネス ユーザーは、属しているロールにキューブのセルへの読み取り/書き込み権限が割り当てられている場合にのみキューブの書き戻しテーブルに変更内容を記録できます。 ロールごとに、更新できるキューブ セルと更新できないキューブ セルを管理できます。 詳細については、次を参照してください。[キューブまたはモデルのアクセス許可を与える&#40;Analysis Services&#41;](../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)です。  
+ ビジネス ユーザーは、属しているロールにキューブのセルへの読み取り/書き込み権限が割り当てられている場合にのみキューブの書き戻しテーブルに変更内容を記録できます。 ロールごとに、更新できるキューブ セルと更新できないキューブ セルを管理できます。 詳細については、次を参照してください。[キューブまたはモデル アクセス許可を付与&#40;Analysis Services&#41;](../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)します。  
   
 ## <a name="see-also"></a>参照  
  [書き込み許可ディメンション](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   

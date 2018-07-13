@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checking report server installations
 - verifying report server installations
@@ -21,20 +21,20 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 67898b04b17ad344f07dc457927cd4abee6695bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e57883c7b6119499135fede5ad9c398350e587a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272534"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブまたは SharePoint の 2 つのモードのうちのいずれかのモードでインストールできます。 インストールの確認に必要な手順は、レポート サーバーのモードによって変わります。  
   
  このトピックの内容は次のとおりです。  
   
--   [SharePoint モードのインストールを確認します。](#bkmk_sharepointmode)  
+-   [SharePoint モード インストールを確認します。](#bkmk_sharepointmode)  
   
 -   [ネイティブ モードのインストールを確認します。](#bkmk_nativemode)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36074766"
   
 2.  **SQL Server Reporting Services サービス** がインストールされ、 **実行中** の状態であることを確認します。  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスが一覧に表示されない場合は、サービスがインストールされていることを確認します。 詳細については、のインストールと Reporting Services SharePoint サービスの開始」セクションを参照してください。 [Install Reporting Services SharePoint Mode for SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)です。  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスが一覧に表示されない場合は、サービスがインストールされていることを確認します。 詳細については、の「インストールと Reporting Services SharePoint サービスの開始」セクションを参照してください。 [Install Reporting Services SharePoint Mode for SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)します。  
   
 #### <a name="to-verify-the-service-application"></a>サービス アプリケーションを確認するには  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36074766"
   
 #### <a name="to-verify-reporting-server-content-types"></a>レポート サーバー コンテンツの種類を確認するには  
   
-1.  確認または追加[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー コンテンツの種類を参照してください[ライブラリにレポート サーバー コンテンツ タイプを追加&#40;Reporting Services SharePoint 統合モードで&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)です。  
+1.  確認または追加[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー コンテンツの種類を参照してください[ライブラリにレポート サーバー コンテンツ タイプの追加&#40;Reporting Services SharePoint 統合モードで&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)します。  
   
 #### <a name="to-verify-you-can-launch-report-builder"></a>レポート ビルダーが起動できることを確認するには  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3be2c48f2a3b2dc552d3f9c89bf2caf57b0e0bf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 176e1798f453771f17aa197e122521bb3852bbc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269668"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   メッセージ キュー タスクでは、Message Queuing (MSMQ) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ間でメッセージを送受信したり、カスタム アプリケーションによって処理されるアプリケーションのキューにメッセージを送信したりすることができます。 これらのメッセージは、簡単なテキスト形式、ファイル、変数、またはそれらの値です。  
@@ -53,9 +53,9 @@ ms.locfileid: "36075325"
   
 -   `Data file` メッセージは、ファイルにメッセージが含まれているを指定します。 メッセージを受信するときに、タスクによってファイルを保存したり既存のファイルを上書きできるように、また、タスクによってメッセージを受信できるパッケージを指定するように、タスクを構成できます。  
   
--   `String` メッセージは、文字列としてメッセージを指定します。 メッセージを受信するときに、タスクが受信した文字列とユーザー定義の文字列とを比較したり、比較に基づいて処理を実行するように構成できます。 文字列比較では、完全な比較、大文字と小文字を区別する比較、大文字と小文字を区別しない比較、またはサブストリングを使用した比較を設定できます。  
+-   `String` メッセージは、メッセージを文字列として指定します。 メッセージを受信するときに、タスクが受信した文字列とユーザー定義の文字列とを比較したり、比較に基づいて処理を実行するように構成できます。 文字列比較では、完全な比較、大文字と小文字を区別する比較、大文字と小文字を区別しない比較、またはサブストリングを使用した比較を設定できます。  
   
--   `String message to variable` 出力先変数に送信される文字列として送信元のメッセージを指定します。 完全な比較、大文字と小文字を区別しない比較、またはサブストリングの比較を使用して、受信した文字列とユーザー定義の文字列とを比較するようにタスクを構成できます。 このメッセージ型は、タスクがメッセージを受信するときにのみ使用できます。  
+-   `String message to variable` 出力先変数に送信される文字列として送信元メッセージを指定します。 完全な比較、大文字と小文字を区別しない比較、またはサブストリングの比較を使用して、受信した文字列とユーザー定義の文字列とを比較するようにタスクを構成できます。 このメッセージ型は、タスクがメッセージを受信するときにのみ使用できます。  
   
 -   `Variable` メッセージが 1 つまたは複数の変数が含まれているを指定します。 タスクは、メッセージに含まれる変数の名前を指定するように構成できます。 メッセージを受信するときに、メッセージを受信するパッケージおよびメッセージの送信先となる変数の両方を指定するようにタスクを構成できます。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36075325"
   
 -   メッセージが "`Data file`" に格納されている場合、既存のファイルを上書きします。  
   
--   メッセージで使用する場合に、メッセージ ファイルを別のファイル名を保存、`Data file message`型です。  
+-   メッセージで使用する場合は、別のファイル名に、メッセージ ファイルを保存、`Data file message`型。  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>メッセージ キュー タスクで使用できるカスタム ログ メッセージ  
  次の表は、メッセージ キュー タスクのカスタム ログ エントリの一覧です。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  

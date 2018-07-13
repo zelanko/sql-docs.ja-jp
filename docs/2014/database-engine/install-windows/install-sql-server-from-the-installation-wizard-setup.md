@@ -1,5 +1,5 @@
 ---
-title: インストール ウィザード (セットアップ) からの SQL Server 2014 のインストール |Microsoft ドキュメント
+title: インストール ウィザード (セットアップ) からの SQL Server 2014 のインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,37 +8,37 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, steps
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 caps.latest.revision: 79
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 684a9d837fa08beaf8917a7193edff622aea4cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ff8c854a7f2004b30caa11c48423de0995d4652
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250622"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>インストール ウィザードからの SQL Server 2014 のインストール (セットアップ)
-  ここでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ インストール ウィザードを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールする手順について詳しく説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでは、1 つの機能ツリーを使用してすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをインストールできるため、それらを個別にインストールする必要はありません。 インストール可能なさまざまなコンポーネントの詳細については、次を参照してください。 [for SQL Server 2014 インストール](installation-for-sql-server.md)です。  インストールする方法について、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントを個別に、参照して[SQL Server 2014 のインストール](install-sql-server.md)です。  
+  ここでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ インストール ウィザードを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールする手順について詳しく説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでは、1 つの機能ツリーを使用してすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをインストールできるため、それらを個別にインストールする必要はありません。 インストール可能なさまざまなコンポーネントの詳細については、次を参照してください。 [for SQL Server 2014 インストール](installation-for-sql-server.md)します。  インストールする方法について、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントは個別を参照してください[SQL Server 2014 のインストール](install-sql-server.md)します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールする他の方法については、次のトピックに記載されています。  
   
--   [コマンド プロンプトから SQL Server 2014 のインストール](install-sql-server-from-the-command-prompt.md)です。  
+-   [コマンド プロンプトから SQL Server 2014 インストール](install-sql-server-from-the-command-prompt.md)します。  
   
 -   [構成ファイルを使用した SQL Server 2014 のインストール](install-sql-server-using-a-configuration-file.md)  
   
 -   [SysPrep を使用した SQL Server 2014 のインストール](install-sql-server-using-sysprep.md)  
   
--   [新しい SQL Server フェールオーバー クラスターを作成する&#40;セットアップ&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)です。  
+-   [新しい SQL Server フェールオーバー クラスターの作成&#40;セットアップ&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)します。  
   
--   [SQL へのアップグレード、インストール ウィザードを使用してサーバー 2014年&#40;セットアップ&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)です。  
+-   [アップグレードする SQL Server 2014 のインストール ウィザードを使用して&#40;セットアップ&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)します。  
   
 ## <a name="prerequisites"></a>前提条件  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールする前に、「 [SQL サーバーのインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」のトピックを参照してください。  
@@ -52,7 +52,7 @@ ms.locfileid: "36075125"
   
 2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインストールを作成するには、左側のナビゲーション領域の **[インストール]** をクリックし、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** をクリックします。  
   
-3.  [プロダクト キー] ページで、オプションを選択して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の無償のエディション、または PID キーを持つ製品版のどちらをインストールするかを指定します。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)です。  
+3.  [プロダクト キー] ページで、オプションを選択して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の無償のエディション、または PID キーを持つ製品版のどちらをインストールするかを指定します。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネントの](../../sql-server/editions-and-components-of-sql-server-2016.md)します。  
   
      続行するには、 **[次へ]** をクリックします。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36075125"
   
 9. [セットアップ ロール] ページで、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能のインストール**をクリックし、 **[次へ]** をクリックして [機能の選択] ページに進みます。  
   
-10. [機能の選択] ページで、インストールするコンポーネントを選択します。 機能名を選択すると、 **[機能の説明]** ペインに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできます。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)と[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+10. [機能の選択] ページで、インストールするコンポーネントを選択します。 機能名を選択すると、 **[機能の説明]** ペインに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできます。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)と[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
      選択した機能の必須コンポーネントが、 **[選択した機能に必要なコンポーネント]** ペインに表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、この手順の後半で説明するインストール手順の間に、まだインストールされていない必須コンポーネントをインストールします。  
   
@@ -114,14 +114,14 @@ ms.locfileid: "36075125"
   
     -   セキュリティ モード: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス用に Windows 認証または混合モード認証を選択します。 混合モード認証を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。  
   
-         デバイスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との接続を正常に確立した後のセキュリティ メカニズムは Windows 認証モード、混合モードのどちらの場合も同じです。 詳細については、次を参照してください。[データベース エンジンの構成 - アカウントのプロビジョニング](../../sql-server/install/database-engine-configuration-account-provisioning.md)です。  
+         デバイスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との接続を正常に確立した後のセキュリティ メカニズムは Windows 認証モード、混合モードのどちらの場合も同じです。 詳細については、次を参照してください。[データベース エンジンの構成 - アカウントのプロビジョニング](../../sql-server/install/database-engine-configuration-account-provisioning.md)します。  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [管理者] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの 1 人以上のシステム管理者を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** をクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)] [の構成 - データ ディレクトリ] ページを使用して、既定以外のインストール ディレクトリを指定します。 既定のディレクトリにインストールする場合は、 **[次へ]** をクリックします。  
   
     > [!IMPORTANT]  
-    >  既定以外のインストール ディレクトリを指定する場合は、インストール フォルダーがこの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対して一意であることを確認します。 このダイアログ ボックスのディレクトリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の他のインスタンスのディレクトリと共有できません。 さらに、データ ディレクトリをドライブまたはマウント ポイントのルート フォルダーにして SQL Server をインストールすると、失敗します。 詳細については、「[マウントされたボリュームの SQL Server のサポート。](http://support.microsoft.com/kb/819546/en-us)  
+    >  既定以外のインストール ディレクトリを指定する場合は、インストール フォルダーがこの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対して一意であることを確認します。 このダイアログ ボックスのディレクトリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の他のインスタンスのディレクトリと共有できません。 さらに、データ ディレクトリをドライブまたはマウント ポイントのルート フォルダーにして SQL Server をインストールすると、失敗します。 詳細についてを参照してください[マウントされたボリュームの SQL Server のサポート。](http://support.microsoft.com/kb/819546/en-us)  
   
      詳細については、「 [データベース エンジンの構成 - データ ディレクトリ](../../sql-server/install/database-engine-configuration-data-directories.md)」を参照してください。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "36075125"
      [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の構成 - データ ディレクトリ] ページを使用して、既定以外のインストール ディレクトリを指定します。 既定のディレクトリにインストールする場合は、 **[次へ]** をクリックします。  
   
     > [!IMPORTANT]  
-    >  既定以外のインストール ディレクトリを指定する場合は、インストール フォルダーがこの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対して一意であることを確認します。 このダイアログ ボックスのディレクトリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の他のインスタンスのディレクトリと共有できません。 さらに、データ ディレクトリをドライブまたはマウント ポイントのルート フォルダーにして SQL Server をインストールすると、失敗します。 詳細については、「[マウントされたボリュームの SQL Server のサポート。](http://support.microsoft.com/kb/819546/en-us)  
+    >  既定以外のインストール ディレクトリを指定する場合は、インストール フォルダーがこの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対して一意であることを確認します。 このダイアログ ボックスのディレクトリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の他のインスタンスのディレクトリと共有できません。 さらに、データ ディレクトリをドライブまたはマウント ポイントのルート フォルダーにして SQL Server をインストールすると、失敗します。 詳細についてを参照してください[マウントされたボリュームの SQL Server のサポート。](http://support.microsoft.com/kb/819546/en-us)  
   
      詳細については、「 [Analysis Service の構成 - データ ディレクトリ](../../sql-server/install/analysis-services-configuration-data-directories.md)」を参照してください。  
   

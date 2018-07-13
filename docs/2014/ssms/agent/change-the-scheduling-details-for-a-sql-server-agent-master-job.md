@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8dc41b403419ee3b1eb6734e5fa658dc7950fd6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7d5654908f9decdf0ead70a2b4182fe43129511a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262068"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブのスケジューリングの詳細の変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でジョブ定義のスケジューリングの詳細を変更する方法について説明します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36076556"
   
 4.  スケジュールを編集するジョブを右クリックして、 **[プロパティ]** をクリックします。  
   
-5.  *[ジョブのプロパティ - <ジョブ名>]* ダイアログ ボックスで、**[ページの選択]** の **[スケジュール]** を選択します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ: [新しいジョブ&#40;スケジュール] ページ&#41;](job-properties-new-job-schedules-page.md)です。  
+5.  *[ジョブのプロパティ - <ジョブ名>]* ダイアログ ボックスで、**[ページの選択]** の **[スケジュール]** を選択します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ: [新しいジョブ&#40;スケジュール] ページ&#41;](job-properties-new-job-schedules-page.md)します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   
@@ -87,6 +87,6 @@ ms.locfileid: "36076556"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_update_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)します。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: MasterDatasourceID 要素 (ASSL) |Microsoft ドキュメント
+title: MasterDatasourceID 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MasterDatasourceID element
 ms.assetid: a9cbd3a9-581f-4a08-93d8-e1eea8757ce9
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35f3090a10dd175d507dec4a109f04d36644cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 70258c84b128c879406a8c0cdda837d9f0475789
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228462"
 ---
 # <a name="masterdatasourceid-element-assl"></a>MasterDatasourceID 要素 (ASSL)
-  マスター データ ソース識別子 (ID) が含まれています、[データベース](../objects/database-element-assl.md)要素。  
+  マスター データ ソース識別子 (ID) を含む、[データベース](../objects/database-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36077412"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- リモート インスタンス上のデータベースに対する[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、リモート パーティションが含まれている、`MasterDatasourceID`要素には、データ ソースの ID のマスター インスタンスを識別するために使用するデータ ソースが含まれています[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]を管理する、。リモート パーティションです。  
+ リモート インスタンス上のデータベースに対する[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]リモート パーティションを含んでいる、`MasterDatasourceID`要素には、データ ソース マスター インスタンスを識別するために使用するデータ ソースの ID にはが含まれています[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]を管理する、。リモート パーティション。  
   
  親に対応する要素`MasterDatasourceID`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Database>します。  
   

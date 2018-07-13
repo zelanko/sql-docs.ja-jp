@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_KEYWORDS 行セット (XMLA) |Microsoft ドキュメント
+title: DISCOVER_KEYWORDS 行セット (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_KEYWORDS rowset
 ms.assetid: 99945e53-3a1b-4d7b-9aff-712977db8b2d
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df7fd7c6bf7dbe9ebd0bb9057b5c82dc351afab3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8be22c5132ed85ecb515ccadce20ecd593818a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241552"
 ---
 # <a name="discoverkeywords-rowset-xmla"></a>DISCOVER_KEYWORDS 行セット (XMLA)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーによって予約されているキーワードに関する情報を返します。  
   
- 呼び出す場合は、 [Discover](../../xmla/xml-elements-methods-discover.md)メソッドを`DISCOVER_KEYWORDS`の列挙値に、 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)要素、`Discover`メソッドを返します。、`DISCOVER_KEYWORDS`行セット。  
+ 呼び出す場合、 [Discover](../../xmla/xml-elements-methods-discover.md)メソッドを`DISCOVER_KEYWORDS`列挙値、 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)要素、`Discover`メソッドを返します。、`DISCOVER_KEYWORDS`行セット。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  `DISCOVER_KEYWORDS`行セットには、次の列が含まれています。  

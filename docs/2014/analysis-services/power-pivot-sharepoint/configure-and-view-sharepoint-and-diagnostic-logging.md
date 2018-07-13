@@ -1,5 +1,5 @@
 ---
-title: SharePoint ログ ファイルと診断 (PowerPivot for SharePoint) のログ構成し、表示 |Microsoft ドキュメント
+title: SharePoint ログ ファイルと診断ログ (PowerPivot for SharePoint) 構成し、表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d78836a24938511939c65e127425439aa59f1fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c32447beac0d531f053e6945769b6eba12be23ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255844"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>SharePoint ログ ファイルと診断ログの構成と表示 (PowerPivot for SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーの操作、イベント、およびメッセージは、SharePoint ログ ファイルに記録されます。 このトピックでは、ログ記録レベルの構成とログ ファイルの情報の表示について説明します。 ログ ファイルに記録される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー イベントを制御できます。 また、ログに記録されるメッセージの重大度も制御できます。 詳細については、次を参照してください。[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)です。  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーの操作、イベント、およびメッセージは、SharePoint ログ ファイルに記録されます。 このトピックでは、ログ記録レベルの構成とログ ファイルの情報の表示について説明します。 ログ ファイルに記録される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー イベントを制御できます。 また、ログに記録されるメッセージの重大度も制御できます。 詳細については、次を参照してください。[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。  
   
  このトピックの内容  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36076397"
   
 4.  カテゴリを展開し、個々のカテゴリを選択します。  
   
-     **アプリケーション ページ要求**を検索するときに、サービス アプリケーションによってトリガーされるイベントを指定します、 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] PowerPivot データ ソースの読み込みと、ファーム内の他のサーバーと通信します。  
+     **アプリケーション ページ要求**を検索する際に、サービス アプリケーションによってトリガーされるイベントを指定します、 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] PowerPivot データ ソースの読み込みと、ファーム内の他のサーバーと通信します。  
   
      **[要求の処理]** は、ファーム内のサーバーに読み込まれた PowerPivot データベースに対するクエリ要求によってトリガーされるイベントを指定します。  
   
@@ -123,9 +123,9 @@ ms.locfileid: "36076397"
 |Process|領域|カテゴリ|Level|メッセージ|詳細|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|[PowerPivot サービス]|[使用状況]|"詳細"|現時点では要求の統計は存在せず、ログに記録するものはありません。|サービスは、事前に定義された間隔でクエリ応答統計を使用状況イベントとして使用状況データ収集システムに報告します。 このメッセージは、報告するクエリ統計がないことを示しています。|  
-|w3wp.exe|PowerPivot サービス|Web フロント エンド|"詳細"|アプリケーション サーバーのデータ ソースの検索を開始して =\<*パス*>|接続要求を受信すると、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスは使用できる [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] を識別して要求を処理します。 ファーム内にサーバーが 1 台しかない場合は、すべての要求をローカル サーバーが受け取ります。|  
+|w3wp.exe|PowerPivot サービス|Web フロント エンド|"詳細"|アプリケーション サーバーのデータ ソースの検索を開始しています =\<*パス*>|接続要求を受信すると、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスは使用できる [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] を識別して要求を処理します。 ファーム内にサーバーが 1 台しかない場合は、すべての要求をローカル サーバーが受け取ります。|  
 |w3wp.exe|PowerPivot サービス|Web フロント エンド|"詳細"|アプリケーション サーバーの検索に成功しました。|要求は [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションに割り当てられました。|  
-|w3wp.exe|PowerPivot サービス|Web フロント エンド|"詳細"|リダイレクト要求を\< *PowerPivotdata ソース*> を[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]です。|要求は [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]に転送されました。|  
+|w3wp.exe|PowerPivot サービス|Web フロント エンド|"詳細"|リダイレクトの要求、 \< *PowerPivotdata ソース*> を[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]します。|要求は [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]に転送されました。|  
 |w3wp.exe|[PowerPivot サービス]|[要求の処理]|"詳細"|ユーザー名の要求をリダイレクトする\<*SharePoint ユーザー*> データベースへ|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースへの権限を借用した接続が、SharePoint ユーザーの代わりに作成されました。|  
   
 ## <a name="see-also"></a>参照  

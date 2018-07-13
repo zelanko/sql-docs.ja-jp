@@ -1,5 +1,5 @@
 ---
-title: マイニング モデル列の使用法 (データ マイニング ウィザード) を指定して |Microsoft ドキュメント
+title: 指定のマイニング モデル列の使用法 (データ マイニング ウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycolumnusage.f1
 ms.assetid: 41a9867e-e055-495b-ba40-0a7ffaf57604
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dd71b1a79471a2738a3779f644c73c01771b1a57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfe0b051e2fe3a961065a9c89d1b1b202d3b063d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254964"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>[マイニング モデル列の使用法の指定] (データ マイニング ウィザード)
   **[マイニング モデル列の使用法の指定]** ページを使用すると、マイニング モデル列の使用方法を指定したり、入れ子になったテーブルを追加したりできます。  
@@ -49,7 +49,7 @@ ms.locfileid: "36075580"
   
 ## <a name="see-also"></a>参照  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [選択ケース レベル列&#40;データ マイニング ウィザード&#41;](select-case-level-columns-data-mining-wizard.md)   
- [列のコンテンツおよびデータ型を指定して&#40;データ マイニング ウィザード&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [選択のケース レベル列&#40;データ マイニング ウィザード&#41;](select-case-level-columns-data-mining-wizard.md)   
+ [列のコンテンツおよびデータ型の指定&#40;データ マイニング ウィザード&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

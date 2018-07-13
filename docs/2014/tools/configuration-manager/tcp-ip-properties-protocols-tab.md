@@ -1,5 +1,5 @@
 ---
-title: TCP - IP プロパティ ([プロトコル] タブ) |Microsoft ドキュメント
+title: TCP - IP プロパティ ([プロトコル] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 57b3bd32574aadbd42b25b626756cc20369d9b8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 169e1c0d19cecf50f7c995ff4b4d46f4badb32eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249542"
 ---
 # <a name="tcp---ip-properties-protocols-tab"></a>TCP - IP プロパティ ([プロトコル] タブ)
   **[TCP/IP のプロパティ]** ダイアログ ボックスは、TCP/IP プロトコルのオプションを構成するために使用します。 左ペインで **[TCP/IP]** をクリックすると、詳細ペインに個々の IP アドレス構成が表示されます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36073872"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このプロパティに対する変更は実装されません。  
   
 ## <a name="see-also"></a>参照  
- [ネットワーク プロトコルを選択します。](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
+ [ネットワーク プロトコルの選択](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [TCP/IP を使用した有効な接続文字列の作成](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
   

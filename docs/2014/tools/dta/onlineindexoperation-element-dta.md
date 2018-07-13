@@ -1,5 +1,5 @@
 ---
-title: OnlineIndexOperation 要素 (DTA) |Microsoft ドキュメント
+title: OnlineIndexOperation 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - OnlineIndexOperation element
 ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93d1f68415954a641c94e4bf107d0da59296a6ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 81a1d1762c0d78bce2d16113cc2bd290c7735219
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330842"
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation 要素 (DTA)
   データベース エンジン チューニング アドバイザーによって推奨されるインデックス、インデックス付きビュー、またはパーティションがオンラインで作成可能かどうかを指定します。  
@@ -45,7 +45,7 @@ ms.locfileid: "36076550"
 |**データ型と長さ**|`string`、長さは無制限です。|  
 |**指定できる値**|**OFF**<br /> 推奨される物理デザイン構造をオンラインで作成しません。<br /><br /> **ON**<br /> 推奨される物理デザイン構造をすべてオンラインで作成します。<br /><br /> **MIXED**<br /> データベース エンジン チューニング アドバイザーは、可能な場合にオンラインで作成できる物理デザイン構造を推奨します。<br /><br /> この要素では、上記の値のいずれか 1 つを使用してください。 インデックスがオンラインで作成される場合は、オブジェクト定義に **ONLINE = ON** が追加されます。|  
 |**既定値**|[なし] :|  
-|**個数**|任意。 使用する場合のみ使用できます 1 回の`TuningOptions`要素。|  
+|**個数**|任意。 使用する場合のみできます 1 回、`TuningOptions`要素。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

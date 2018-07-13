@@ -1,5 +1,5 @@
 ---
-title: XmlReader を使用してデータを取得する |Microsoft ドキュメント
+title: XmlReader を使用してデータの取得 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 257777c40c829921680b8fce333bd6e44f6f57fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa47902131522f807ebe96b0b14a3df28aaf657f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267568"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>XmlReader を使用したデータの取得
-  `XmlReader`クラスの一部、 `System.Xml` Microsoft .NET Framework クラス ライブラリの名前空間がに似ていますが、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>を内のクラス、`XmlReader`クラスもにより高速かつ非キャッシュ、前方参照専用データにアクセスします。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトを使用したデータのインメモリ分析ビューが不要であれば、`XmlReader` オブジェクトは、大量の XML データを取得するのに最も適しています。 `XmlReader` 、データをストリーム`XmlReader`を取得し、場合と同様に、呼び出し元にデータを公開する前にすべてのデータをキャッシュする必要はありません、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>オブジェクトは、分析オブジェクトに XML for Analysis 応答を変換に使用されました。モデルの表現。  
+  `XmlReader`クラスの一部、 `System.Xml` Microsoft .NET Framework クラス ライブラリの名前空間はのような<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>クラスを`XmlReader`クラスも高速かつ非キャッシュ、前方参照専用データにアクセスできます。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトを使用したデータのインメモリ分析ビューが不要であれば、`XmlReader` オブジェクトは、大量の XML データを取得するのに最も適しています。 `XmlReader`データ、ストリーミング`XmlReader`取得し、大文字と小文字の場合と同様、呼び出し元にデータを公開する前にすべてのデータをキャッシュする必要はありません、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>オブジェクトが XML for Analysis 応答を分析オブジェクトに変換するために使用されました。モデルの表現。  
   
  `XmlReader` クラスは、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A> オブジェクトの <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> メソッドが呼び出されると、ADOMD.NET が受信した XML for Analysis 応答への直接アクセスを提供します。 取得するデータは未加工の XML なので、データとメタデータを手動で解析する必要があります。 データの取得が完了したら、すぐに `XmlReader` オブジェクトを閉じてください。  
   

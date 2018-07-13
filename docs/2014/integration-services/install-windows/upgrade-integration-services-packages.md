@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
 - migrating packages [Integration Services]
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 caps.latest.revision: 50
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3d975c0ee5764ca0e7038b51392309b52bf17641
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 39f07febdc8c5c9bc8e63b61d42b0a7ff5927ee0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233442"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services パッケージのアップグレード
   インスタンスをアップグレードすると[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]または[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]の現在のリリースに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、既存の[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]パッケージが、現在のリリースされるパッケージ形式に自動的にアップグレードされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用します。 アップグレード方法を選択して、パッケージを手動でアップグレードする必要があります。  
@@ -73,7 +73,7 @@ ms.locfileid: "36075107"
 ## <a name="custom-applications-and-custom-components"></a>カスタム アプリケーションおよびカスタム コンポーネント  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 カスタム コンポーネントが動作しません。  
   
- 現在のリリースを使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]実行およびを含むパッケージを管理するツール[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]と[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)]カスタム コンポーネントです。 ランタイム アセンブリを Version 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) から Version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) にリダイレクトする際に役立つ 4 つのバインド リダイレクト ルールが次のファイルに追加されました。  
+ 現在のリリースを使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ツールの実行し、管理を含むパッケージを[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]と[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)]カスタム コンポーネント。 ランタイム アセンブリを Version 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) から Version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) にリダイレクトする際に役立つ 4 つのバインド リダイレクト ルールが次のファイルに追加されました。  
   
 -   DTExec.exe.config  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36075107"
   
 -   DTExecUI.exe.config  
   
- 使用する[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]を含むパッケージをデザインする[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]と[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]カスタム コンポーネントは、場所にある devenv.exe.config ファイルを変更する必要があります*\<ドライブ >*: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE です。  
+ 使用する[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]を含むパッケージのデザインを[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]と[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]にある devenv.exe.config ファイルを変更する必要があるカスタム コンポーネントは、 *\<ドライブ >*: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE します。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のランタイムで構築された顧客アプリケーションでこれらのパッケージを使用するには、実行可能ファイルに対応する *.exe.config ファイルの configuration セクションにリダイレクト ルールを含めます。 これらのルールにより、ランタイム アセンブリが Version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) にリダイレクトされます。 アセンブリ バージョン リダイレクトについて詳しくは、「[\<runtime> の \<assemblyBinding> 要素](http://msdn.microsoft.com/library/twy1dw1e.aspx)」をご覧ください。  
   
@@ -102,12 +102,12 @@ ms.locfileid: "36075107"
   
 |コンポーネントまたは機能|アップグレード結果|  
 |--------------------------|---------------------|  
-|接続文字列|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] および [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージでは、特定のプロバイダーの名前が変更されているため、接続文字列の値を変更する必要があります。 接続文字列を更新するには、次のいずれかの手順を実行します。<br /><br /> [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードを使用してパッケージをアップグレードし、**[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、[オプション] ダイアログ ボックスの [全般] ページにある **[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。 このオプションの詳細については、「 [General Page](../general-page-of-integration-services-designers-options.md)」を参照してください。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開き、ConnectionString プロパティのテキストを手動で変更します。<br /><br /> メモ: 接続文字列が構成ファイルまたはデータ ソース ファイルに格納されている場合、または式を設定すると、接続文字列を更新する前の手順を使用することはできません、`ConnectionString`プロパティです。 このような場合に接続文字列を更新するには、ファイルまたは式を手動で更新する必要があります。<br /><br /> 使用できるデータ ソースの詳細については、「[データ ソース](../connection-manager/data-sources.md)」を参照してください。|  
-|参照変換|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]パッケージ、アップグレード プロセスによって自動的にその参照変換の現在のリリース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]です。 ただし、現在のリリースのこのコンポーネントには、それ以外にも利用できる機能がいくつか追加されています。<br /><br /> 詳細については、「 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)」を参照してください。|  
+|接続文字列|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] および [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージでは、特定のプロバイダーの名前が変更されているため、接続文字列の値を変更する必要があります。 接続文字列を更新するには、次のいずれかの手順を実行します。<br /><br /> [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードを使用してパッケージをアップグレードし、**[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、[オプション] ダイアログ ボックスの [全般] ページにある **[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。 このオプションの詳細については、「 [General Page](../general-page-of-integration-services-designers-options.md)」を参照してください。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開き、ConnectionString プロパティのテキストを手動で変更します。<br /><br /> 注: 構成ファイルまたはデータ ソース ファイルでは、いずれかで接続文字列が格納されている場合、または式を設定すると、接続文字列を更新する前の手順を使用することはできません、`ConnectionString`プロパティ。 このような場合に接続文字列を更新するには、ファイルまたは式を手動で更新する必要があります。<br /><br /> 使用できるデータ ソースの詳細については、「[データ ソース](../connection-manager/data-sources.md)」を参照してください。|  
+|参照変換|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]パッケージ、アップグレード プロセスに自動的にアップグレード参照変換の現在のリリース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]します。 ただし、現在のリリースのこのコンポーネントには、それ以外にも利用できる機能がいくつか追加されています。<br /><br /> 詳細については、「 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)」を参照してください。|  
 |スクリプト タスクとスクリプト コンポーネント|スクリプト タスクおよびスクリプト コンポーネント内のスクリプトは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] パッケージのアップグレード プロセスで VSA から VSTA に自動的に移行されます。<br /><br /> 移行前に必要となる可能性があるスクリプトへの変更やスクリプトの変換エラーに関する詳細については、「[VSTA へのスクリプトの移行](../../sql-server/install/migrate-scripts-to-vsta.md)」を参照してください。|  
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>ADODB.dll に依存するスクリプト  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] がインストールされていないコンピューターでは、ADODB.dll を明示的に参照するスクリプト タスクおよびスクリプト コンポーネントのスクリプトをアップグレードしたり、実行したりすることはできません。 このようなスクリプト タスクまたはスクリプト コンポーネントのスクリプトをアップグレードするには、ADODB.dll に対する依存関係を削除することをお勧めします。  また、VB や C# のスクリプトなどのマネージ コードの代わりに ADO.NET を使用することをお勧めします。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] がインストールされていないコンピューターでは、ADODB.dll を明示的に参照するスクリプト タスクおよびスクリプト コンポーネントのスクリプトをアップグレードしたり、実行したりすることはできません。 このようなスクリプト タスクまたはスクリプト コンポーネントのスクリプトをアップグレードするには、ADODB.dll に対する依存関係を削除することをお勧めします。  また、VB や C# のスクリプトなどのマネージド コードの代わりに ADO.NET を使用することをお勧めします。  
   
 ## <a name="external-resources"></a>外部リソース  
   

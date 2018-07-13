@@ -1,5 +1,5 @@
 ---
-title: 変数とパラメーター (MDX) の使用 |Microsoft ドキュメント
+title: 変数とパラメーター (MDX) の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [MDX]
 - queries [MDX], variables
@@ -16,24 +16,24 @@ helpviewer_keywords:
 - variables [MDX]
 ms.assetid: a4754d16-d9c4-49f6-9be0-392180b912e4
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e477c1faa1f8bed7568c510418abb006875f48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22adb713c5a75d4cf038e5683a6ddec8adbe836d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266108"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>変数とパラメーターの使用 (MDX)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]では、多次元式 (MDX) ステートメントをパラメーター化できます。 ステートメントをパラメーター化すれば、実行時にカスタマイズ可能な汎用ステートメントを作成できます。  
   
- パラメーター化されたステートメントを作成するときには、パラメーター名の前に @ 記号を付けることによってパラメーター名を識別します。 たとえば、@Year有効なパラメーター名になります  
+ パラメーター化されたステートメントを作成するときには、パラメーター名の前に @ 記号を付けることによってパラメーター名を識別します。 たとえば、@Year有効なパラメーター名になります。  
   
  MDX は、リテラルまたはスカラー値用のパラメーターだけをサポートします。 メンバー、セット、または組を参照するパラメーターを作成するには、 [StrToMember](/sql/mdx/strtomember-mdx) や [StrToSet](/sql/mdx/strtoset-mdx)などの関数を使う必要があります。  
   
- 次の XML for Analysis (XMLA) の例で、@CountryNameパラメーターには、データが取得される顧客の国にが含まれます。  
+ 次の XML for Analysis (XMLA) の例で、@CountryNameパラメーター データを取得する顧客の国が含まれます。  
   
 ```  
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -60,7 +60,7 @@ from [Adventure Works]
 </Envelope>  
 ```  
   
- この機能を OLE DB を使用するには、使用、`ICommandWithParameters`インターフェイスです。 ADOMD.Net でこの機能を使用するには、 **AdomdCommand.Parameters** コレクションを使用します。  
+ OLE DB では、この機能を使用するには、使用して、`ICommandWithParameters`インターフェイス。 ADOMD.Net でこの機能を使用するには、 **AdomdCommand.Parameters** コレクションを使用します。  
   
 ## <a name="see-also"></a>参照  
  [MDX スクリプティングの基礎&#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  

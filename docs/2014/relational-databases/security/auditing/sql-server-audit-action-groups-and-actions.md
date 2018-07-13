@@ -5,10 +5,9 @@ ms.date: 10/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - audit
 helpviewer_keywords:
@@ -22,15 +21,15 @@ helpviewer_keywords:
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 77435fe5d7eba76fd56371d344078420020190e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: b8dd9598fa04b51f250daacaab010739b3855341
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225282"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 監査のアクション グループとアクション
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 機能を使用すると、サーバー レベルおよびデータベース レベルのイベントのグループおよび個別のイベントを監査することができます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](sql-server-audit-database-engine.md)」を参照してください。  
@@ -84,8 +83,8 @@ ms.locfileid: "36074795"
 |DATABASE_CHANGE_GROUP|このイベントは、データベースが作成、変更、または削除されるときに発生します。 このイベントは、任意のデータベースが作成、変更、または削除されるたびに発生します。 [Audit Database Management Event Class](../../event-classes/audit-database-management-event-class.md)と同じです。|  
 |DATABASE_LOGOUT_GROUP|このイベントは、包含データベースのユーザーがデータベースをログアウトするときに発生します。 Database Logout Event Class と同じです。|  
 |DATABASE_MIRRORING_LOGIN_GROUP|このイベントは、データベース ミラーリングのトランスポート セキュリティに関する監査メッセージを報告するために発生します。 [Audit Database Mirroring Login Event Class](../../event-classes/audit-database-mirroring-login-event-class.md)と同じです。|  
-|DATABASE_OBJECT_ACCESS_GROUP|このイベントは、メッセージ型、アセンブリ、コントラクトなどのデータベース オブジェクトへのアクセスが行われるたびに発生します。<br /><br /> このイベントは、任意のデータベースへの任意のアクセスに対して発生します。 **注:** 大量の監査レコードをこの可能性があります。 <br /><br /> [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md)と同じです。|  
-|DATABASE_OBJECT_CHANGE_GROUP|このイベントは、スキーマなどのデータベース オブジェクトで、CREATE、ALTER、または DROP ステートメントが実行されたときに発生します。 このイベントは、任意のデータベース オブジェクトが作成、変更、または削除されるたびに発生します。 **注:** これは非常に大量の監査レコードが生成する可能性があります。 <br /><br /> [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md)と同じです。|  
+|DATABASE_OBJECT_ACCESS_GROUP|このイベントは、メッセージ型、アセンブリ、コントラクトなどのデータベース オブジェクトへのアクセスが行われるたびに発生します。<br /><br /> このイベントは、任意のデータベースへの任意のアクセスに対して発生します。 **注:** 大量の監査レコードにこの可能性があります。 <br /><br /> [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md)と同じです。|  
+|DATABASE_OBJECT_CHANGE_GROUP|このイベントは、スキーマなどのデータベース オブジェクトで、CREATE、ALTER、または DROP ステートメントが実行されたときに発生します。 このイベントは、任意のデータベース オブジェクトが作成、変更、または削除されるたびに発生します。 **注:** 可能性が非常に大量の監査レコードにします。 <br /><br /> [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md)と同じです。|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|このイベントは、データベース スコープ内のオブジェクトの所有者が変更されたときに発生します。 このイベントは、サーバー上の任意のデータベースの任意のオブジェクト所有権の変更に対して発生します。 [Audit Database Object Take Ownership Event Class](../../event-classes/audit-database-object-take-ownership-event-class.md)と同じです。|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|このイベントは、アセンブリやスキーマなどのデータベース オブジェクトに対して GRANT、REVOKE、または DENY が実行された場合に発生します。 このイベントは、サーバー上の任意のデータベースの任意のオブジェクト権限の変更に対して発生します。 [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md)と同じです。|  
 |DATABASE_OPERATION_GROUP|このイベントは、チェックポイントやクエリ通知のサブスクライブなど、データベースの操作が行われたときに発生します。 このイベントは、任意のデータベースの任意のデータベース操作に対して発生します。 [Audit Database Operation Event Class](../../event-classes/audit-database-operation-event-class.md)と同じです。|  
@@ -109,7 +108,7 @@ ms.locfileid: "36074795"
 |SERVER_OBJECT_PERMISSION_CHANGE_GROUP|このイベントは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の任意のプリンシパルによって、サーバー オブジェクトの権限に対して GRANT、REVOKE、または DENY が実行されるたびに発生します。 [Audit Server Object GDR Event Class](../../event-classes/audit-server-object-gdr-event-class.md)と同じです。|  
 |SERVER_OPERATION_GROUP|このイベントは、設定、リソース、外部アクセス、承認の変更などのセキュリティ監査操作が使用されるときに発生します。 [Audit Server Operation Event Class](../../event-classes/audit-server-operation-event-class.md)と同じです。|  
 |SERVER_PERMISSION_CHANGE_GROUP|このイベントは、ログインの作成など、サーバー スコープでの権限に対して GRANT、REVOKE、または DENY が実行されているときに発生します。 [Audit Server Scope GDR Event Class](../../event-classes/audit-server-scope-gdr-event-class.md)と同じです。|  
-|SERVER_PRINCIPAL_CHANGE_GROUP|このイベントは、サーバー プリンシパルが作成、変更、または削除されるときに発生します。 [Audit Server Principal Management Event Class](../../event-classes/audit-server-principal-management-event-class.md)と同じです。<br /><br /> このイベントは、プリンシパルが sp_defaultdb ストアド プロシージャ、sp_defaultlanguage ストアド プロシージャ、または ALTER LOGIN ステートメントを実行したときに発生します。 [Audit Addlogin Event Class](../../event-classes/audit-addlogin-event-class.md)と同じです。<br /><br /> このイベントは、sp_addlogin ストアド プロシージャおよび sp_droplogin ストアド プロシージャに対して発生します。 [Audit Login Change Property Event Class](../../event-classes/audit-login-change-property-event-class.md)とも同じです。<br /><br /> このイベントは、sp_grantlogin または sp_revokelogin のストアド プロシージャです。 [Audit Login GDR Event Class](../../event-classes/audit-login-gdr-event-class.md)と同じです。|  
+|SERVER_PRINCIPAL_CHANGE_GROUP|このイベントは、サーバー プリンシパルが作成、変更、または削除されるときに発生します。 [Audit Server Principal Management Event Class](../../event-classes/audit-server-principal-management-event-class.md)と同じです。<br /><br /> このイベントは、プリンシパルが sp_defaultdb ストアド プロシージャ、sp_defaultlanguage ストアド プロシージャ、または ALTER LOGIN ステートメントを実行したときに発生します。 [Audit Addlogin Event Class](../../event-classes/audit-addlogin-event-class.md)と同じです。<br /><br /> このイベントは、sp_addlogin ストアド プロシージャおよび sp_droplogin ストアド プロシージャに対して発生します。 [Audit Login Change Property Event Class](../../event-classes/audit-login-change-property-event-class.md)とも同じです。<br /><br /> このイベントは、sp_grantlogin または sp_revokelogin のストアド プロシージャ。 [Audit Login GDR Event Class](../../event-classes/audit-login-gdr-event-class.md)と同じです。|  
 |SERVER_PRINCIPAL_IMPERSONATION_GROUP|このイベントは、サーバーのスコープ内に、EXECUTE AS \<login> などの権限の借用が存在するときに発生します。 [Audit Server Principal Impersonation Event Class](../../event-classes/audit-server-principal-impersonation-event-class.md)と同じです。|  
 |SERVER_ROLE_MEMBER_CHANGE_GROUP|このイベントは、固定サーバー ロールにログインが追加または削除されるたびに発生します。 このイベントは sp_addsrvrolemember ストアド プロシージャと sp_dropsrvrolemember ストアド プロシージャに対して発生します。 [Audit Add Login to Server Role イベント クラス](../../event-classes/audit-add-login-to-server-role-event-class.md)と同じです。|  
 |SERVER_STATE_CHANGE_GROUP|このイベントは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスの状態が変更されたときに発生します。 [Audit Server Starts and Stops Event Class](../../event-classes/audit-server-starts-and-stops-event-class.md)と同じです。|  
@@ -144,7 +143,7 @@ ms.locfileid: "36074795"
 |DATABASE_OWNERSHIP_CHANGE_GROUP|このイベントは、ALTER AUTHORIZATION ステートメントを使用してデータベースの所有者を変更した場合に、この動作に必要な権限の確認が行われる際に発生します。 [Audit Change Database Owner Event Class](../../event-classes/audit-change-database-owner-event-class.md)と同じです。|  
 |DATABASE_PERMISSION_CHANGE_GROUP|このイベントは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の任意のユーザーによって、ステートメント権限に対して GRANT、REVOKE、または DENY が実行されるたびに、データベースに対する権限の許可などのデータベース限定のイベントに対して発生します。 [Audit Database Scope GDR Event Class](../../event-classes/audit-database-scope-gdr-event-class.md)と同じです。|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|このイベントは、ユーザーなどのプリンシパルがデータベースで作成、変更、または削除されるときに発生します。 [Audit Database Principal Management Event Class](../../event-classes/audit-database-principal-management-event-class.md)と同じです。 [Audit Add DB User Event Class](../../event-classes/audit-add-db-user-event-class.md)とも同じです。このイベント クラスは、非推奨の sp_grantdbaccess、sp_revokedbaccess、sp_adduser、および sp_dropuser の各ストアド プロシージャに対して発生します。<br /><br /> このイベントは、非推奨の sp_addrole ストアド プロシージャまたは sp_droprole ストアド プロシージャを使用してデータベース ロールが追加または削除されるたびに発生します。 [Audit Add Role イベント クラス](../../event-classes/audit-add-role-event-class.md)と同じです。|  
-|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|EXECUTE AS などのデータベース スコープ内で権限の借用がある場合にこのイベントは発生\<ユーザー > や SETUSER です。 [Audit Database Principal Impersonation Event Class](../../event-classes/audit-database-principal-impersonation-event-class.md)と同じです。|  
+|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|このイベントは、EXECUTE AS などのデータベース スコープ内で権限の借用がある場合に発生します。\<ユーザー > や SETUSER です。 [Audit Database Principal Impersonation Event Class](../../event-classes/audit-database-principal-impersonation-event-class.md)と同じです。|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|このイベントは、データベース ロールにログインが追加または削除されるたびに発生します。 このイベント クラスは、sp_addrolemember、sp_changegroup、および sp_droprolemember の各ストアド プロシージャと共に使用されます。 [Audit Add Member to DB Role イベント クラスs](../../event-classes/audit-add-member-to-db-role-event-class.md)と同じです。|  
 |DBCC_GROUP|このイベントは、プリンシパルが任意の DBCC コマンドを実行するたびに発生します。 [Audit DBCC Event Class](../../event-classes/audit-dbcc-event-class.md)と同じです。|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|プリンシパルが包含データベースにログオンしようとして失敗したことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。 このイベントが発生します。|  
@@ -181,7 +180,7 @@ ms.locfileid: "36074795"
   
 |アクション グループ名|説明|  
 |-----------------------|-----------------|  
-|AUDIT_ CHANGE_GROUP|このイベントは、次のいずれかのコマンドが実行されるたびに発生します。<br /><br /> -サーバー監査を作成します。<br />-ALTER SERVER AUDIT<br />-サーバー監査を削除します。<br />-サーバー監査の仕様を作成します。<br />-サーバー監査の仕様を変更します。<br />-サーバー監査の仕様を削除します。<br />-データベース監査の仕様を作成します。<br />ALTER データベース監査の仕様<br />-データベース監査の仕様を削除します。|  
+|AUDIT_ CHANGE_GROUP|このイベントは、次のいずれかのコマンドが実行されるたびに発生します。<br /><br /> -サーバー監査を作成します。<br />-ALTER SERVER AUDIT<br />-サーバー監査を削除します。<br />-サーバー監査の仕様を作成します。<br />-サーバー監査の仕様を変更します。<br />-サーバー監査の仕様を削除します。<br />-データベース監査の仕様を作成します。<br />-ALTER データベース監査の仕様<br />-データベース監査の仕様を削除します。|  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [サーバー監査およびサーバー監査の仕様を作成する方法](create-a-server-audit-and-server-audit-specification.md)  

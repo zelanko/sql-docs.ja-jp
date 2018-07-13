@@ -1,5 +1,5 @@
 ---
-title: 開始または PowerPivot を SharePoint サーバーの停止 |Microsoft ドキュメント
+title: 開始または PowerPivot を SharePoint サーバーの停止 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6039a0181cfce993e0c1970a5db68deb9d3c17c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df2305d3efa7896d8646be33a5f95ade8c4e7c00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247392"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>開始または PowerPivot を SharePoint サーバーの停止
-  PowerPivot System サービスおよび[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]インスタンスは、SharePoint ファームでの連携要求とデータ処理をサポートするために同じローカル アプリケーション サーバーに同時に動作します。  
+  PowerPivot System サービスおよび[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]インスタンスは、SharePoint ファーム内の連携要求とデータ処理をサポートするために、同じローカル アプリケーション サーバーで同時に動作します。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36076735"
   
  ファーム全体のすべての物理サービスを同時に開始または停止することはできません。 各サーバーを選択してから、特定のサービスを開始または停止する必要があります。  
   
- 特定の Web アプリケーションに対する PowerPivot System サービスを開始、一時停止、または停止することはできませんが、サービスを既定の接続リストから削除して使用できない状態にすることができます。 詳細については、次を参照してください。[サーバーの全体管理での SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションの接続](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)です。  
+ 特定の Web アプリケーションに対する PowerPivot System サービスを開始、一時停止、または停止することはできませんが、サービスを既定の接続リストから削除して使用できない状態にすることができます。 詳細については、次を参照してください。[サーバーの全体管理で SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションの接続](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)します。  
   
 1.  サーバーの全体管理で、 **[システム設定]** の **[サーバーのサービスの管理]** をクリックします。  
   

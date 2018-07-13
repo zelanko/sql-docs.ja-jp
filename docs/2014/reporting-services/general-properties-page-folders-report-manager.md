@@ -1,5 +1,5 @@
 ---
-title: '[全般] プロパティ ページ、フォルダー (レポート マネージャー) |Microsoft ドキュメント'
+title: '[全般] プロパティ ページ、フォルダー (レポート マネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 69330b9a1a65ed147d716d47d9a2cc68e34bab6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4ee15c703cab10ced93359c91f170e7de0768e3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255824"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>[全般] プロパティ ページ、フォルダー (レポート マネージャー)
   フォルダーの [全般] プロパティ ページでは、作成するフォルダーのプロパティを表示または設定できます。 フォルダーを作成または変更したユーザーおよびフォルダーの変更日時に関する情報が、[全般] プロパティ ページの上部に表示されます。  
   
- フォルダーのプロパティには、セキュリティ設定も含まれます。 フォルダーのセキュリティの詳細については、次を参照してください。[フォルダーのセキュリティで保護された](security/secure-folders.md)です。  
+ フォルダーのプロパティには、セキュリティ設定も含まれます。 フォルダーのセキュリティの詳細については、次を参照してください。[フォルダーのセキュリティで保護された](security/secure-folders.md)します。  
   
  [ホーム] フォルダー、[個人用レポート] フォルダー、[Users] フォルダーなどの特別な用途に使用されるフォルダーは、名前を変更したり、レポート サーバーの名前空間内で移動できません。 これらのフォルダーの [全般] プロパティ ページはありません。  
   
@@ -38,10 +38,10 @@ ms.locfileid: "36075676"
 2.  フォルダー バナーの下のツール バーの **[フォルダー設定]** をクリックします。  
   
 ## <a name="options"></a>および  
- **Name**  
- フォルダーの名前を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよびいくつかの記号を含めることもできます。 名前を指定するときに、; ? : @ & = +, $ * \< > |"または/名を指定します。  
+ **名前**  
+ フォルダーの名前を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよびいくつかの記号を含めることもできます。 名前を指定するときに、; ? : @ & = +, $ * \< > |"または/名前を指定します。  
   
- **description**  
+ **[説明]**  
  フォルダーの内容の説明を入力します。 ユーザーがフォルダーへのアクセス権を持っている場合、この説明が [コンテンツ] ページに表示されます。  
   
  **リスト ビューで非表示にします。**  
@@ -50,7 +50,7 @@ ms.locfileid: "36075676"
  **[適用]**  
  変更を保存する場合にクリックします。  
   
- **Delete**  
+ **削除**  
  フォルダーとフォルダーの内容を削除する場合にクリックします。  
   
  **Move**  

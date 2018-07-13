@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database
 - database_uncontained_usage event
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 622a67f232bb24af9efe9c621e86f1415866dc6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8c584cbb736a494ab071dbc570cfcc67bd2e5e32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223672"
 ---
 # <a name="contained-databases"></a>包含データベース
   *包含データベース* は、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスから分離されたデータベースです。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、ユーザーは 4 つの方法でインスタンスからデータベースを分離できます。  
@@ -37,13 +37,13 @@ ms.locfileid: "36075998"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境 (DMV の XEvents など) は、包含情報をレポートおよび操作できます。  
   
- データベースへのメタデータの格納など、部分的包含データベースの一部の機能はすべての [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースに適用されます。 データベース レベル認証やカタログ照合順序など、部分的包含データベースの一部の利点を使用可能にするには、あらかじめこれらを有効にしておく必要があります。 部分的な包含を使用して有効になっている、`CREATE DATABASE`と`ALTER DATABASE`ステートメントを使用して、または[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。 部分的データベース包含を有効にする方法の詳細については、「 [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md)」をご覧ください。  
+ データベースへのメタデータの格納など、部分的包含データベースの一部の機能はすべての [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースに適用されます。 データベース レベル認証やカタログ照合順序など、部分的包含データベースの一部の利点を使用可能にするには、あらかじめこれらを有効にしておく必要があります。 部分的包含を使用して有効になっている、`CREATE DATABASE`と`ALTER DATABASE`ステートメントを使用して、または[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。 部分的データベース包含を有効にする方法の詳細については、「 [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md)」をご覧ください。  
   
  このトピックの内容は次のとおりです。  
   
 -   [部分的包含データベースの概念](#Concepts)  
   
--   [包含構造](#containment)  
+-   [コンテインメント](#containment)  
   
 -   [部分的包含データベースを使用する利点](#benefits)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36075998"
  データベース境界  
  部分的包含データベースはデータベースの機能をインスタンスの機能から分離するので、これらの 2 つの要素間には " *データベース境界*" と呼ばれる、明確に定義された区分線があります。  
   
- データベース境界の内側は " *データベース モデル*" で、ここではデータベースが開発および管理されます。 データベース内にあるエンティティの例としては、 **sys.tables**のようなシステム テーブル、パスワードを持つ包含データベース ユーザー、2 部構成の名前で参照されている現在のデータベース内のユーザー テーブルなどがあります。  
+ データベース境界の内側は *データベース モデル*で、ここではデータベースが開発および管理されます。 データベース内にあるエンティティの例としては、 **sys.tables**のようなシステム テーブル、パスワードを持つ包含データベース ユーザー、2 部構成の名前で参照されている現在のデータベース内のユーザー テーブルなどがあります。  
   
  データベース境界の外側は " *管理モデル*" で、ここではインスタンスレベルの機能と管理が扱われます。 データベース境界の外にあるエンティティの例としては、 **sys.endpoints**のようなシステム テーブル、ログインにマップされているユーザー、3 部構成の名前で参照されている他のデータベース内のユーザー テーブルなどがあります。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36075998"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>AlwaysOn の包含データベース ユーザーの利点  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスとの結び付きを低減することで、部分的包含データベースは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]を使用する場合のフェールオーバー時に役立つことがあります。  
   
- 包含ユーザーを作成すると、そのユーザーは包含データベースに直接接続できます。 これは、AlwaysOn ソリューションなどの高可用性およびディザスター リカバリーのシナリオにおいて非常に重要な機能です。 ユーザーが包含ユーザーである場合は、フェールオーバーが発生したときに、セカンダリ データベースをホストするインスタンスのログインを作成せずに、セカンダリ データベースに接続できます。 これは直接的な利益をもたらします。 詳細については、次を参照してください[AlwaysOn 可用性グループの概要&#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)し、[前提条件、制限事項、および AlwaysOn 可用性グループに関する推奨事項&#40;SQL Server&#41;] ((..。/../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
+ 包含ユーザーを作成すると、そのユーザーは包含データベースに直接接続できます。 これは、AlwaysOn ソリューションなどの高可用性およびディザスター リカバリーのシナリオにおいて非常に重要な機能です。 ユーザーが包含ユーザーである場合は、フェールオーバーが発生したときに、セカンダリ データベースをホストするインスタンスのログインを作成せずに、セカンダリ データベースに接続できます。 これは直接的な利益をもたらします。 詳細については、次を参照してください[AlwaysOn 可用性グループの概要&#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)し、[前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;] ((..。/../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ### <a name="initial-database-development"></a>初期のデータベース開発  
  開発者は新しいデータベースが配置される場所を把握していない場合があるため、配置先の環境がデータベースに及ぼす影響を少なくすることで、開発者の作業や懸案事項が軽減されます。 非包含モデルでは、開発者は新しいデータベースが環境から受ける影響の可能性を考慮して、それに応じたプログラミングをする必要があります。 しかし、部分的包含データベースを使用することによって、開発者はデータベースに対するインスタンス レベルの影響と、開発者のインスタンス レベルの懸案事項を検出できます。  
@@ -163,7 +163,7 @@ ms.locfileid: "36075998"
  この XEvent は、実行時に、含まれていないエンティティが識別されると発生します。 これには、クライアント コードで生成されたエンティティが含まれます。 この Xevent は、実際に含まれていないエンティティに対してのみ発生します。 ただし、このイベントが発生するのは実行時のみです。 したがって、まだ実行されていない場合、含まれていないユーザー エンティティはこの XEvent で識別されません。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [機能の変更&#40;包含データベース&#41;](modified-features-contained-database.md)  
+ [変更された機能&#40;包含データベース&#41;](modified-features-contained-database.md)  
   
  [包含データベースの照合順序](contained-database-collations.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 5: ニューラル ネットワーク モデルとロジスティック回帰モデル (中級者向けデータ マイニング チュートリアル) の作成 |Microsoft ドキュメント'
+title: 'レッスン 5: ニューラル ネットワーク モデルとロジスティック回帰モデル (中級者向けデータ マイニング チュートリアル) の作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - data mining [Analysis Services], tutorials
@@ -19,18 +19,18 @@ ms.assetid: 42c3701a-1fd2-44ff-b7de-377345bbbd6b
 caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2d94de9698ea0e4d8fa0dce110a6e661b941d1be
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 93946e13e9836aef4cd10bc39ec964e7f8c0d531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222342"
 ---
 # <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデルの作成 (中級者向けデータ マイニング チュートリアル)
   
   
- オペレーション部門[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]が進行中で、プロジェクト、コール センターの顧客満足の改善にします。 この部門では、コール センターを管理すると共にコール センターの有効性に関する基準をレポートするためにベンダーを雇っています。ここであなたは、ベンダーから提供されたいくつかの予備データの分析を求められました。 彼らは、興味深い発見があるかどうかを知りたがっています。 彼らは特に、人員の配置上の問題を示唆するデータや、顧客満足の改善に役立つと思われるデータに関する情報を求めています。  
+ オペレーション部門[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]は、コール センターで顧客満足度を向上させるために、プロジェクトに関与しています。 この部門では、コール センターを管理すると共にコール センターの有効性に関する基準をレポートするためにベンダーを雇っています。ここであなたは、ベンダーから提供されたいくつかの予備データの分析を求められました。 彼らは、興味深い発見があるかどうかを知りたがっています。 彼らは特に、人員の配置上の問題を示唆するデータや、顧客満足の改善に役立つと思われるデータに関する情報を求めています。  
   
  データセットは小さなもので、コール センターでのオペレーションの 30 日分しかカバーしていません。 このデータは、シフトごとの未経験のオペレーターと経験を積んだオペレーターの人数、問い合わせの電話の件数、注文の件数と解決する必要がある案件の件数、および顧客からの電話に対する平均応答時間を追跡しています。 さらに、顧客の不満を表す 1 つの指標である *電話放棄呼率*に基づくサービス品質基準も含まれています。  
   
@@ -47,32 +47,32 @@ ms.locfileid: "36311830"
   
  このレッスンの内容は次のとおりです。  
   
--   [コール センター データ用のビューをソース データを追加する&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
+-   [コール センター データ用のビューをソース データを追加する&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
--   [ニューラル ネットワーク構造およびモデルの作成&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
+-   [ニューラル ネットワーク構造およびモデルの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
--   [コール センター モデルの検証&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
+-   [コール センター モデルの検証&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
--   [コール センター構造へのロジスティック回帰モデルの追加&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
+-   [コール センター構造へのロジスティック回帰モデルの追加&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
--   [コール センター モデルの予測の作成&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
+-   [コール センター モデルの予測の作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [コール センター データ用のビューをソース データを追加する&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
+ [コール センター データ用のビューをソース データを追加する&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
 ## <a name="all-lessons"></a>すべてのレッスン  
- [レッスン 1: 中級者向けデータ マイニング ソリューションの作成&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [レッスン 1: 中級者向けデータ マイニング ソリューションの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- [レッスン 2: 予測シナリオの作成&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [レッスン 2: 予測シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
- [レッスン 3: マーケット バスケット シナリオの作成&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [レッスン 3: マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [レッスン 4: シーケンス クラスター シナリオのビルド&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [レッスン 4: シーケンス クラスター シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
  レッスン 5: ニューラル ネットワークとロジスティック回帰のシナリオ (中級者向けデータ マイニング チュートリアル)  
   
 ## <a name="see-also"></a>参照  
- [基本的なデータ マイニングのチュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [データ マイニング チュートリアルを中間&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+ [基本的なデータ マイニング チュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
   

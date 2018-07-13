@@ -1,5 +1,5 @@
 ---
-title: KeyColumn 要素 (ASSL) |Microsoft ドキュメント
+title: KeyColumn 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyColumn element
 ms.assetid: 7b03eeb3-d478-4c38-822e-8cdfcc485039
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7594a92eb8c2eb4cdb423c7298bc3929dc49dc32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e27744d2c8e2d54d44318ceac7b79dc4e4e10e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247762"
 ---
 # <a name="keycolumn-element-assl"></a>KeyColumn 要素 (ASSL)
   属性のキーまたはその一部である、列の定義を格納します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36075362"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 詳細については、`DataItem`の Analysis Services スクリプト言語 (ASSL) オブジェクトおよびプロパティのテーブルを含む、型、`DataItem`を入力しを参照してください[DataItem データ型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)です。  
+ 詳細については、`DataItem`の Analysis Services スクリプト言語 (ASSL) オブジェクトおよびプロパティのテーブルを含む、型、`DataItem`入力を参照してください[DataItem データ型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで `KeyColumns` コレクションの親に対応する要素は、<xref:Microsoft.AnalysisServices.AggregationInstanceAttribute>、<xref:Microsoft.AnalysisServices.DimensionAttribute>、<xref:Microsoft.AnalysisServices.MeasureGroupAttribute>、および <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn> です。  
   

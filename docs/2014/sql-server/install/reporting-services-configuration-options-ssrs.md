@@ -1,5 +1,5 @@
 ---
-title: Reporting Services の構成オプション (SSRS) |Microsoft ドキュメント
+title: Reporting Services の構成オプション (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.reportserverinstoptions.f1
 helpviewer_keywords:
@@ -19,20 +19,20 @@ ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 81a94897a4c5a0ebce5932ef09612a377a458937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8dff91a860d801257d9228dd904cbe36855504cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327082"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 構成オプション (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの **[Reporting Services の構成]** ページを使用すると、レポート サーバーのインストール方法および構成方法を指定できます。 インストール オプションを使用できるかどうかは、これより前に **[機能の選択]** ページで選択したオプションや、レポート サーバーのインストール時に [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のローカル インスタンスを一緒にインストールするかどうかによって決まります。  
   
- SSL (Secure Sockets Layer) 証明書がコンピューターにインストールされ、強いワイルドカードにバインドされている場合は、HTTPS プレフィックスを使用して Reporting Services の URL がセットアップで作成されます。 Reporting Services の Url に証明書をマップする方法の詳細については、次を参照してください。 [Secure Sockets Layer (SSL) 接続用にレポート サーバーを構成する](http://go.microsoft.com/fwlink/?LinkId=199089)(http://go.microsoft.com/fwlink/?LinkId=199089) SQL Server オンライン ブック。  
+ SSL (Secure Sockets Layer) 証明書がコンピューターにインストールされ、強いワイルドカードにバインドされている場合は、HTTPS プレフィックスを使用して Reporting Services の URL がセットアップで作成されます。 Reporting Services の Url に証明書をマップする方法の詳細については、次を参照してください。 [Secure Sockets Layer (SSL) 接続用のレポート サーバーを構成する](http://go.microsoft.com/fwlink/?LinkId=199089)(http://go.microsoft.com/fwlink/?LinkId=199089) SQL Server オンライン ブックの「します。  
   
- 最新の情報に関する[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]インストールと構成のこのリリースを参照してください、[インストールに関する詳細情報](http://go.microsoft.com/fwlink/?LinkId=207425)(http://go.microsoft.com/fwlink/?LinkId=207425)です。  
+ 最新の情報に関する[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]インストールと構成のこのリリースを参照してくださいと[追加のインストール情報](http://go.microsoft.com/fwlink/?LinkId=207425)(http://go.microsoft.com/fwlink/?LinkId=207425)。  
   
 ## <a name="options"></a>および  
   
@@ -47,23 +47,23 @@ ms.locfileid: "36073164"
   
  このオプションを使用できるのは、レポート サーバーのインストールで使用される既定値が現在のシステムに対して有効な場合のみです。 このオプションは、開発者がすべてのコンポーネントをローカルにインストールする場合や、ユーザーがソフトウェアを評価する場合に適しています。  
   
- セットアップで使用される既定の設定に関する情報や、既定の構成をインストールできない理由を確認するには、 **[詳細]** をクリックします。 ネイティブ モード レポート サーバーの既定の構成の詳細については、次を参照してください。[ネイティブ モードのインストール (Reporting Services) の既定の構成](http://go.microsoft.com/fwlink/?LinkId=199091)(http://go.microsoft.com/fwlink/?LinkId=199091)です。  
+ セットアップで使用される既定の設定に関する情報や、既定の構成をインストールできない理由を確認するには、 **[詳細]** をクリックします。 ネイティブ モードのレポート サーバーの既定の構成の詳細については、次を参照してください。[ネイティブ モードのインストール (Reporting Services) の既定の構成](http://go.microsoft.com/fwlink/?LinkId=199091)(http://go.microsoft.com/fwlink/?LinkId=199091)します。  
   
 #### <a name="install-only"></a>[インストールのみ]  
- レポート サーバーのプログラム ファイルをインストールし、レポート サーバー サービス アカウントを作成し、レポート サーバーの WMI (Windows Management Instrumentation) プロバイダーを登録します。 このインストール オプションは、"ファイルのみ" のインストールと呼ばれます。 既定の構成を使用しない場合は、このオプションを選択します。 既定の構成をインストールできない場合や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を含む [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]フェールオーバー クラスターをインストールする場合は、このオプションしか使用できません。 ファイルのみのインストールの詳細については、次を参照してください。[ファイルのみのインストール (Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199093) (http://go.microsoft.com/fwlink/?LinkId=199093)です。  
+ レポート サーバーのプログラム ファイルをインストールし、レポート サーバー サービス アカウントを作成し、レポート サーバーの WMI (Windows Management Instrumentation) プロバイダーを登録します。 このインストール オプションは、"ファイルのみ" のインストールと呼ばれます。 既定の構成を使用しない場合は、このオプションを選択します。 既定の構成をインストールできない場合や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を含む [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]フェールオーバー クラスターをインストールする場合は、このオプションしか使用できません。 ファイルのみのインストールの詳細については、次を参照してください。[ファイルのみのインストール (Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199093) (http://go.microsoft.com/fwlink/?LinkId=199093)します。  
   
- セットアップの終了後、レポート サーバーを使用するには、レポート サーバー データベースを作成し、レポート サーバーを構成する必要があります。 レポート サーバーの構成やデータベースの作成には、Reporting Services 構成マネージャーを使用します。 詳細については、次を参照してください。[する方法: レポート サーバー データベース (Reporting Services 構成) を作成する](http://go.microsoft.com/fwlink/?LinkId=199094)(http://go.microsoft.com/fwlink/?LinkId=199094)と[レポート サーバー データベース接続を構成する](http://go.microsoft.com/fwlink/?LinkId=199095)(http://go.microsoft.com/fwlink/?LinkId=199095)です。  
+ セットアップの終了後、レポート サーバーを使用するには、レポート サーバー データベースを作成し、レポート サーバーを構成する必要があります。 レポート サーバーの構成やデータベースの作成には、Reporting Services 構成マネージャーを使用します。 詳細については、次を参照してください。[方法: レポート サーバー データベース (Reporting Services 構成) を作成する](http://go.microsoft.com/fwlink/?LinkId=199094)(http://go.microsoft.com/fwlink/?LinkId=199094)と[レポート サーバー データベース接続を構成する](http://go.microsoft.com/fwlink/?LinkId=199095)(http://go.microsoft.com/fwlink/?LinkId=199095)します。  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モード  
   
 #### <a name="install-only"></a>[インストールのみ]  
  レポート サーバーのプログラム ファイルと PowerShell コマンドレットをインストールします。 インストールが完了したら、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint サービスを起動し、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成する必要があります。 詳細については、以下を参照してください。  
   
--   [Reporting Services SharePoint モードのレポート サーバーのインストール Power View およびデータの警告](http://go.microsoft.com/fwlink/?LinkId=207543)(http://go.microsoft.com/fwlink/?LinkId=207543)です。  
+-   [Reporting Services SharePoint モードのレポート サーバーのインストール Power View およびデータの警告](http://go.microsoft.com/fwlink/?LinkId=207543)(http://go.microsoft.com/fwlink/?LinkId=207543)します。  
   
--   [Install Reporting Services を単一サーバー ファームとして SharePoint Mode](http://go.microsoft.com/fwlink/?LinkId=207544) (http://go.microsoft.com/fwlink/?LinkId=207544)です。  
+-   [インストールの Reporting Services の SharePoint モードを 1 台のサーバー ファームとして](http://go.microsoft.com/fwlink/?LinkId=207544)(http://go.microsoft.com/fwlink/?LinkId=207544)します。  
   
--   [Reporting Services レポート サーバー (SSRS)](http://go.microsoft.com/fwlink/?LinkID=207244) (http://go.microsoft.com/fwlink/?LinkID=207244)です。  
+-   [Reporting Services レポート サーバー (SSRS)](http://go.microsoft.com/fwlink/?LinkID=207244) (http://go.microsoft.com/fwlink/?LinkID=207244)します。  
   
 ## <a name="installing-the-reporting-services-add-in-for-sharepoint-technologies"></a>SharePoint テクノロジ用 Reporting Services アドインのインストール  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースから、アドインは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの機能の選択ページで SQL Server インストールの一部としてインストールすることができるようになりました。  
@@ -74,11 +74,11 @@ ms.locfileid: "36073164"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアからインストールします。 **セットアップの終了後、** インストール メディアの Setup フォルダーにある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rsSharePoint.msi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイルをクリックします。  
   
--   アドインをダウンロードし、インストールします。 詳細については、次を参照してください。 [SharePoint 製品用 Reporting Services アドインの検索場所](http://go.microsoft.com/fwlink/?LinkID=208634)(http://go.microsoft.com/fwlink/?LinkID=208634)です。  
+-   アドインをダウンロードし、インストールします。 詳細については、次を参照してください。 [SharePoint 製品用 Reporting Services アドインの検索場所](http://go.microsoft.com/fwlink/?LinkID=208634)(http://go.microsoft.com/fwlink/?LinkID=208634)します。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャーを起動します。](http://go.microsoft.com/fwlink/?LinkId=199096)   
- [(Reporting Services 構成) レポート サーバー データベースを作成します。](http://go.microsoft.com/fwlink/?LinkId=199094)   
+ [Reporting Services 構成マネージャーを開始します。](http://go.microsoft.com/fwlink/?LinkId=199096)   
+ [(Reporting Services 構成)、レポート サーバー データベースを作成します。](http://go.microsoft.com/fwlink/?LinkId=199094)   
  [Reporting Services のアップグレードと移行](http://go.microsoft.com/fwlink/?LinkID=245628)   
  [Reporting Services のコマンド プロンプト インストール (SharePoint モードとネイティブ モード)](http://go.microsoft.com/fwlink/?LinkId=217620)  
   

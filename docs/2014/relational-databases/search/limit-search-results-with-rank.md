@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row ranking [full-text search]
 - relevance ranking values [full-text search]
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cef510acee74d2ce261a1e000761f214571c16ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4452b79dda89affda2d964b1d1dc8fb844a3f82b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233092"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK を使用して検索結果を制限する方法
   [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 関数と [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 関数は、0 ～ 1000 の序数値 (順位値) を含む "RANK" 列を返します。 これらの値を使用すれば、選択基準への適合度合いに応じて、返された行に順位を付けることができます。 この順位値が示しているのは、結果セット内の各行の単なる相対順位であり、値が小さいほど関連性は低くなります。 実際の値は重要ではなく、通常はクエリが実行されるたびに変わります。  

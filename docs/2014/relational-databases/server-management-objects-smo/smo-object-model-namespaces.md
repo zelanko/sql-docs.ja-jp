@@ -1,5 +1,5 @@
 ---
-title: SMO 名前空間 |Microsoft ドキュメント
+title: SMO 名前空間 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, namespaces
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1009e5bd7f87c666b4ddf4f207d6e954b714429
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 51702ccf74913990df5c258b2cee5ff548961d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327452"
 ---
 # <a name="smo-namespaces"></a>SMO 名前空間
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) にはさまざまな名前空間があります。 それぞれの名前空間は、SMO 内の機能の各領域を表しています。  
@@ -39,7 +39,7 @@ ms.locfileid: "36074557"
   
 |クラス|機能|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|インスタンス クラス、ユーティリティ クラス、およびプログラムで操作に使用される列挙体を含む[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
+|<xref:Microsoft.SqlServer.Management.Smo>|インスタンス クラス、ユーティリティ クラス、およびプログラムで操作するために使用される列挙体を含む[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |<xref:Microsoft.SqlServer.Management.Common>|接続クラスなど、レプリケーション管理オブジェクト (RMO) および SMO に共通のクラスが含まれています。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを表すクラスが含まれています。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|WMI プロバイダーを表すクラスが含まれています。|  
