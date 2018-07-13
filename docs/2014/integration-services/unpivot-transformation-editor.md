@@ -1,5 +1,5 @@
 ---
-title: ピボット解除変換エディター |Microsoft ドキュメント
+title: ピボット解除変換エディター |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.unpivottransformation.f1
 helpviewer_keywords:
 - Unpivot Transformation Editor
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4d5cd47f0ab4aa9a1c3d2468ddd809846cb7b4c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2864345230b02bc16756c82116dc40a53b2a7264
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199662"
 ---
 # <a name="unpivot-transformation-editor"></a>[ピボット解除変換エディター]
   **[ピボット解除変換エディター]** ダイアログ ボックスを使用すると、行でピボットする列を選択したり、データ列および新しいピボット値出力列を指定したりできます。  
@@ -37,7 +37,7 @@ ms.locfileid: "36074911"
  **使用できる入力列**  
  チェック ボックスを使用して、行でピボットする列を指定します。  
   
- **Name**  
+ **名前**  
  使用できる入力列の名前を表示します。  
   
  **[パススルー]**  

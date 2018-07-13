@@ -1,5 +1,5 @@
 ---
-title: VM 環境でのインメモリ OLTP の使用 |Microsoft ドキュメント
+title: VM 環境でインメモリ OLTP の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ac5bae341711dc0ded20efdf57fe1ac776ec208b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e048f54a3ba3824981c1561c7f2308571e72c450
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180319"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>VM 環境でのインメモリ OLTP の使用
   サーバー仮想化に伴い、各企業は IT の資本コストと運用コストを削減し、アプリケーションの準備、メンテナンス、可用性、バックアップと復旧の各プロセスを向上させることにより、IT 効率の大幅な上昇を達成しています。 最近の技術的な進歩により、仮想化を使用して、複雑なデータベース ワークロードを従来より容易に統合することができます。 ここでは、仮想化環境内での [!INCLUDE[hek_1](../includes/hek-1-md.md)] の使用に関して推奨されるベスト プラクティスについて取り扱います。  
@@ -35,7 +35,7 @@ ms.locfileid: "36076033"
   
  メモリ最適化テーブルがデータベース内に含まれている場合に上記のプラクティスに従うと、データベースの復元と復旧を試みたときに、データベースを復旧するための十分なメモリが存在するにもかかわらず、データベースが "復旧の保留中" という状態にとどまる可能性があります。 その理由は、動的メモリ割り当て機能がメモリをデータベースに割り当てる場合に比べて、 [!INCLUDE[hek_2](../includes/hek-2-md.md)] は起動時により積極的にデータをメモリ内に読み込むことにあります。  
   
- **解決策**  
+ **解決方法**  
   
  この問題を軽減するためには、必要に応じて追加のメモリを提供する動的メモリ機能に依存して最小限のメモリを割り当てる代わりに、データベースを復旧または再起動するために十分なメモリをデータベースに事前に割り当ててください。  
   

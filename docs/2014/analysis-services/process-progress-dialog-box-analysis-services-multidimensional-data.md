@@ -1,5 +1,5 @@
 ---
-title: 処理の進行状況 ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: プロセスの進行状況 ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processprogress.f1
 ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 80bbb03d206bc3b87e27043de0ad29bb258a624d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f7ac5f499c857fda608fd9f6e66e9aa20f145312
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189229"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>[処理の進行状況] ダイアログ ボックス (Analysis Services - 多次元データ)
   **と** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [処理の進行状況] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]で処理を監視できます。 **[処理の進行状況]** ダイアログ ボックスは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクト上で処理が開始される場合に表示されます。  

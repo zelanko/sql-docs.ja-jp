@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - roles [Reporting Services], assignments
@@ -19,13 +19,13 @@ ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4d31a978b4b668045a14f2bf9dbbcaf0317b3c5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 947216cb426750807e99b48ae2e691a5903ed3a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216512"
 ---
 # <a name="create-and-manage-role-assignments"></a>ロールの割り当てを作成および管理する
   *ロールの割り当て* は、ユーザーまたはグループが特定のレポート サーバー アイテムにアクセスできるか、または操作を実行できるかを決定するセキュリティ ポリシーです。 ロールの割り当ては、ユーザーまたはグループのアカウント名 1 つと、1 つ以上のロールの定義で構成されます。  
@@ -54,7 +54,7 @@ ms.locfileid: "36074752"
   
  システムレベルのロールの割り当てには広範囲の権限が含まれますが、アイテムレベルのロールの割り当てに組み込まれている権限は含まれません。 コンピューター上のシステム権限とは異なり、レポート サーバーのシステム ロールは、考えられるすべての操作を含んだ包括的な権限を与えるわけではありません。 システムレベルのロールの割り当ては、レポート サーバー サイトで有効な一連のタスクのみが対象です。 システム ロールの割り当てによって与えられる権限では、ユーザーがアプリケーション プロパティ (ホーム ページのイメージやタイトルなど) を表示できるか、共有スケジュールを表示または管理できるか、あるいはレポート ビルダーを使用できるかどうかを決定します。  
   
- 詳細については、次を参照してください。 [、レポート サーバーにユーザー アクセスの許可&#40;レポート マネージャー&#41; ](grant-user-access-to-a-report-server.md)と[の定義済みロール](role-definitions-predefined-roles.md)です。  
+ 詳細については、次を参照してください。[レポート サーバーにユーザー アクセスを許可&#40;レポート マネージャー&#41; ](grant-user-access-to-a-report-server.md)と[定義済みロール](role-definitions-predefined-roles.md)します。  
   
 ## <a name="modifying-a-role-assignment"></a>ロールの割り当ての変更  
  ロールの割り当ては、いつでも変更できます。 変更は、ロールの割り当てを保存すると有効になります。 ユーザー セッションは、ロールの割り当ての変更による影響を受けません。 ユーザーがレポートを開いているときに、ロールの割り当てを変更してアクセスを拒否しても、セッションがアクティブである間はユーザーはレポートを使用し続けることができます。  
@@ -71,7 +71,7 @@ ms.locfileid: "36074752"
  [ロールの割り当てを変更または削除する &#40;レポート マネージャー&#41;](role-assignments-modify-or-delete.md)   
  [ロールの割り当て](role-assignments.md)   
  [ロールの定義](role-definitions.md)   
- [定義済みのロール](role-definitions-predefined-roles.md)   
+ [定義済みロール](role-definitions-predefined-roles.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)  
   
   

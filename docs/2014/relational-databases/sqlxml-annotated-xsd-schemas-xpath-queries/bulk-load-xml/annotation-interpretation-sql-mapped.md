@@ -1,5 +1,5 @@
 ---
-title: 'sql: マップ (SQLXML 4.0) |Microsoft ドキュメント'
+title: 'sql: マッピング (SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 820e30a4ac82cb54bd76d29dd689f5ddb86a58b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dfac8ddb86223ea64bcc812323170e9a02339ee5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177859"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  XML 一括読み込み処理、`sql:mapped`期待どおりに、XSD スキーマで注釈-は、マッピング スキーマを指定する場合`sql:mapped="false"`任意の要素または属性を使用して、XML 一括読み込みは行われません、対応する列に関連付けられているデータを保存します。  
+  XML 一括読み込みの処理、`sql:mapped`期待どおりに、XSD スキーマで注釈-は、マッピング スキーマが指定されている場合`sql:mapped="false"`の任意の要素または属性を使用して、XML 一括読み込みを試行しません、対応する列に関連付けられているデータを格納します。  
   
  XML 一括読み込みでは、スキーマに記述されていないか、XSD スキーマで `sql:mapped="false"` 注釈が付けられているためマップされない要素と属性は無視されます。 `sql:overflow-field` を使用してオーバフロー列が指定されている場合、マップされないデータはすべてこの列に格納されます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36077277"
 </xsd:schema>  
 ```  
   
- **HomePhone**属性を指定`sql:mapped="false"`、XML 一括読み込みでは、この属性の対応する列にマップされません。 XSD スキーマを識別、オーバーフロー列 (**OverflowColumn**) XML 一括読み込みでこの未使用データを格納します。  
+ **HomePhone**属性を指定します`sql:mapped="false"`、XML 一括読み込みでは、この属性の対応する列にマップされません。 XSD スキーマは、オーバーフロー列を識別します (**OverflowColumn**) XML 一括読み込みでこの未使用データを格納します。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   

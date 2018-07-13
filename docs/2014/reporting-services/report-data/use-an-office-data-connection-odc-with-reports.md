@@ -1,5 +1,5 @@
 ---
-title: レポート (SharePoint 統合モードで Reporting Services) での Office データ接続 (.odc) の使用 |Microsoft ドキュメント
+title: Office Data Connection (.odc) を使用して、レポート (SharePoint 統合モードで Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Office Data Connection (.odc) files
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b6f4f52d1ada7d279a5de935359022947fcf087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 63f220c5201931169546305a0b4115677aedf0e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177209"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>レポートで Office Data Connection (.odc) を使用する (Reporting Services の SharePoint 統合モード)
   限られたシナリオでは、既存の Office データ接続 (.odc) ファイルを使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートに接続情報を提供できます。 共有データ ソースの作成時には、.rsds ファイルの代わりに .odc ファイルを使用できます。 レポート サーバーでは、.rsds ファイルの場合と同様に .odc ファイルを使用して、データ ソースの種類、接続文字列、および資格情報をファイルから読み取ります。  
@@ -38,7 +38,7 @@ ms.locfileid: "36075908"
   
 -   .odc ファイルには、接続文字列を指定しておく必要があります。  
   
--   資格情報に設定することができます`None`、 `Stored`、または`Integrated`です。 資格情報のメソッドに設定されている場合`Stored`、レポート サーバーは、ユーザーに保存された資格情報を使用する代わりに資格情報を求められます。 レポート サーバーでは、.odc ファイルに定義されている保存済みの資格情報を使用することはできません。  
+-   資格情報設定できる`None`、 `Stored`、または`Integrated`します。 資格情報のメソッド設定されている場合`Stored`、レポート サーバーは、ユーザーに保存された資格情報を使用する代わりに資格情報を求められます。 レポート サーバーでは、.odc ファイルに定義されている保存済みの資格情報を使用することはできません。  
   
 -   データ ソースのスキーマは、レポートの作成に使用されたスキーマと同じである必要があります。 データ構造が異なる場合は、レポートが実行されません。  
   

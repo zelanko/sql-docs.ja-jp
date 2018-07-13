@@ -1,5 +1,5 @@
 ---
-title: Insert 要素 (XMLA) |Microsoft ドキュメント
+title: Insert 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Insert command
 ms.assetid: d1137033-cc19-4bcb-b93d-8575f17bea6b
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6b381a2b0cd45e80309f2b6a759374fd9f214f51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cfec9c9a5be2cc19c609bc9de788a4a0df388e5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169293"
 ---
 # <a name="insert-element-xmla"></a>Insert 要素 (XMLA)
   属性メンバーをディメンションに挿入します。  
@@ -67,7 +67,7 @@ ms.locfileid: "36077190"
 ## <a name="remarks"></a>コメント  
  `Insert` コマンドは、書き込み許可ディメンションの中に新しい属性メンバーを挿入します。  
   
- メンバーの削除の詳細については、次を参照してください。[挿入、更新、および削除するメンバー &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)です。  
+ メンバーを削除する方法についての詳細については、次を参照してください。[挿入、更新、および削除するメンバー &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Drop 要素&#40;XMLA&#41;](drop-element-xmla.md)   

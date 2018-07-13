@@ -1,5 +1,5 @@
 ---
-title: ReportAction データ型 (ASSL) |Microsoft ドキュメント
+title: ReportAction データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportAction data type
 ms.assetid: b22f0d52-ed3a-4239-840e-0eaf172d7276
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c2c5140f3d2723f0456b007bc9228c5f87bbaa6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bacb34e6a57126048253a5292fe19627838d21e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176399"
 ---
 # <a name="reportaction-data-type-assl"></a>ReportAction データ型 (ASSL)
   生成するアクションを表す派生データ型を定義、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]レポートします。  
@@ -64,7 +64,7 @@ ms.locfileid: "36076304"
 |派生要素|[アクション](../objects/action-element-assl.md)([アクション](../collections/actions-element-assl.md)のコレクション[キューブ](../objects/cube-element-assl.md)または[パースペクティブ](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>コメント  
- レポート サーバーは、レポートに関する URL ベースの要求に応答します。 型を持つレポート アクションが定義されている*レポート*です。 リソースおよびパラメーターは、アクションの作成時にサーバーに送信されます。 サーバーは、rowset 型のアクションとしてアクションを公開します。  
+ レポート サーバーは、レポートに関する URL ベースの要求に応答します。 型を持つレポート アクションが定義されている*レポート*します。 リソースおよびパラメーターは、アクションの作成時にサーバーに送信されます。 サーバーは、rowset 型のアクションとしてアクションを公開します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.ReportAction>します。  
   

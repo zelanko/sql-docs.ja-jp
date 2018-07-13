@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], XML format files
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0e0607febc04aec78a7310bd069b3af4c19cc8ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 06ba4a93e79d9b2a602101b25944d251ea9c5b54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203552"
 ---
 # <a name="xml-format-files-sql-server"></a>XML フォーマット ファイル (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、 *のテーブルにデータを一括インポートする目的で使用する* XML フォーマット ファイル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を記述するための構文を定義した XML スキーマが用意されています。 このスキーマは XML Schema Definition Language (XSDL) で定義されています。XML フォーマット ファイルはこのスキーマに準拠している必要があります。 XML フォーマット ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client と共にインストールされている場合のみサポートされます。  
@@ -169,7 +168,7 @@ ms.locfileid: "36075523"
   
  [照合順序 **="*`collationName`*"** ]  
   
- [ターミネータ **="*`terminator`*"** ]  
+ [終端記号 **="*`terminator`*"** ]  
   
  />  
   
@@ -177,7 +176,7 @@ ms.locfileid: "36075523"
   
 |FIELD 要素の属性|説明|省略可能 /<br /><br /> 必須|  
 |---------------------|-----------------|------------------------------|  
-|ID **="*`fieldID`*"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> < FIELD ID **="*`fieldID`*"**/> にマップ < COLUMN SOURCE **="*`fieldID`*"**/>|必須|  
+|ID **="*`fieldID`*"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> < FIELD ID **="*`fieldID`*"**/> にマップされます < COLUMN SOURCE **="*`fieldID`*"**/>|必須|  
 |xsi:type **="*`fieldType`*"**|要素のインスタンスの種類を特定する XML コンストラクトです (これは属性のように使用します)。 *fieldType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。|必須 (データ型により異なる)|  
 |LENGTH **="*`n`*"**|固定長データ型のインスタンスの長さを定義します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
 |PREFIX_LENGTH **="*`p`*"**|バイナリ データ表現のプレフィックス長を定義します。 PREFIX_LENGTH 値の *p*は、1、2、4、または 8 のいずれかにする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
@@ -230,9 +229,9 @@ ms.locfileid: "36075523"
   
 |COLUMN 要素の属性|説明|省略可能 /<br /><br /> 必須|  
 |----------------------|-----------------|------------------------------|  
-|ソース **="*`fieldID`*"**|列にマップされているフィールドの ID を指定します。<br /><br /> < COLUMN SOURCE **="*`fieldID`*"**/> にマップ < FIELD ID **="*`fieldID`*"**/>|必須|  
+|ソース **="*`fieldID`*"**|列にマップされているフィールドの ID を指定します。<br /><br /> < COLUMN SOURCE **="*`fieldID`*"**/> にマップされます < FIELD ID **="*`fieldID`*"**/>|必須|  
 |NAME = "*columnName*"|フォーマット ファイルで表している行セットの列の名前を指定します。 この列名は、結果セット内で列名を特定する際に使用されるので、対象のテーブルで使用されている列名に対応する必要はありません。|必須|  
-|xsi **:** 型 **="*`ColumnType`*"**|要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 *ColumnType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。<br /><br /> 注: に指定できる値*ColumnType*し、関連する属性は、次の表に記載されています。|省略可|  
+|xsi **:** 型 **="*`ColumnType`*"**|要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 *ColumnType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。<br /><br /> 注: の有効な値*ColumnType*と関連する属性が次の表に一覧表示します。|省略可|  
 |LENGTH **="*`n`*"**|固定長データ型のインスタンスの長さを定義します。 LENGTH 属性は、xsi:type が文字列データ型の場合にのみ使用します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type が文字列データ型の場合にのみ使用可能)|  
 |PRECISION **="*`n`*"**|数値全体の桁数を示します。 たとえば、数字 123.45 の有効桁数は 5 桁です。<br /><br /> この値は、正の整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
 |スケール **="*`int`*"**|数値の中で小数点より右側の桁数を示します。 たとえば、数字 123.45 の小数点以下桁数は 2 桁です。<br /><br /> この値は、整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
@@ -245,7 +244,7 @@ ms.locfileid: "36075523"
   
 |データ型|\<COLUMN> データ型|必要な XML<br /><br /> 属性|データ型に関する省略可能な XML<br /><br /> 属性|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|固定|`SQLBIT`、 `SQLTINYINT`、 `SQLSMALLINT`、 `SQLINT`、 `SQLBIGINT`、 `SQLFLT4`、 `SQLFLT8`、 `SQLDATETIME`、 `SQLDATETIM4`、 `SQLDATETIM8`、 `SQLMONEY`、 `SQLMONEY4`、 `SQLVARIANT`、および `SQLUNIQUEID`|[なし] :|NULLABLE|  
+|固定|`SQLBIT`、 `SQLTINYINT`、 `SQLSMALLINT`、 `SQLINT`、 `SQLBIGINT`、 `SQLFLT4`、 `SQLFLT8`、 `SQLDATETIME`、 `SQLDATETIM4`、 `SQLDATETIM8`、 `SQLMONEY`、 `SQLMONEY4`、 `SQLVARIANT`、と `SQLUNIQUEID`|[なし] :|NULLABLE|  
 |可変数値|`SQLDECIMAL` および `SQLNUMERIC`|[なし] :|NULLABLE、PRECISION、SCALE|  
 |LOB|`SQLIMAGE`、`CharLOB`、`SQLTEXT`、および `SQLUDT`|[なし] :|NULLABLE|  
 |CLOB|`SQLNTEXT`|[なし] :|NULLABLE|  

@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 763df160d03f3f26824559b2068e3e241bb66d23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fe42fc3dd5e1398cc0e66ad2c37cd14a3fedd67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202812"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>チュートリアル: 自由形式のレポートの作成 (レポート ビルダー)
   このチュートリアルでは、フォーム レターのような SSRS 自由形式レポートを作成する方法を説明します。 レポート アイテムを配置して、テキスト ボックス、画像、その他のデータ領域が含まれるフォームを作成できます。  
   
  このチュートリアルで作成するレポートは、このチュートリアルに含まれているサンプルの売上データに基づいています。 このレポートでは、販売区域ごとに情報をまとめて、各区域の販売責任者の名前と売上情報の概要を表示します。 自由形式レポートでは、一覧データ領域を基盤として使用し、画像を使用した装飾用のパネル、データが挿入された静的テキスト、詳細情報を表示するテーブル、および必要に応じて概要情報を表示する円グラフと縦棒グラフを追加します。  
   
-##  <a name="BackToTop"></a> 学習する内容  
+##  <a name="BackToTop"></a> 学習内容  
  このチュートリアルでは、次の方法を学習します。  
   
--   [空のレポート、データ ソースおよびデータセットを作成します。](#BlankReport)  
+-   [空のレポート、データ ソース、およびデータセットを作成します。](#BlankReport)  
   
 -   [追加し、一覧の構成](#List)  
   
@@ -45,9 +45,9 @@ ms.locfileid: "36075687"
   
 ### <a name="other-optional-steps"></a>その他のオプションの手順  
   
--   [レポートの領域を区切るための行を追加します。](#Line)  
+-   [レポートの領域に行を追加します。](#Line)  
   
--   [概要データの視覚エフェクトを追加します。](#Visualization)  
+-   [概要データの視覚化を追加します。](#Visualization)  
   
  このチュートリアルの推定所要時間 : 20 分  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36075687"
 ##  <a name="BlankReport"></a> 1.空のレポート、データ ソース、およびデータセットを作成する  
   
 > [!NOTE]  
->  このチュートリアルでは、レポートが外部のデータ ソースを必要としないように、クエリにデータ値が含まれています。 この種の内部データは学習に使用する目的に役立ちますが、そのためクエリが長くなっています。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+>  このチュートリアルでは、レポートが外部のデータ ソースを必要としないように、クエリにデータ値が含まれています。 この種の内部データは学習に使用する目的に役立ちますが、そのためクエリが長くなっています。 .  
   
 #### <a name="to-create-a-blank-report"></a>空のレポートを作成するには  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36075687"
   
 4.  接続の種類が Microsoft SQL Server であることを確認したら、**[接続文字列]** ボックスに「**Data Source = \<servername>**」と入力します。  
   
-     \<サーバー名 >、report001 の例は、SQL Server データベース エンジンのインスタンスがインストールされているコンピューターを指定します。 レポート データは SQL Server のデータベースから抽出されるのではないので、データベース名を含める必要はありません。 指定したサーバー上の既定のデータベースを使用して、クエリが解析されます。  
+     \<サーバー名 >、たとえば report001 など、SQL Server データベース エンジンのインスタンスがインストールされているコンピューターを指定します。 レポート データは SQL Server のデータベースから抽出されるのではないので、データベース名を含める必要はありません。 指定したサーバー上の既定のデータベースを使用して、クエリが解析されます。  
   
 5.  **[資格情報]** をクリックし、SQL Server データベース エンジンのインスタンスとの接続に必要な資格情報を入力します。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36075687"
   
 1.  レポート データ ペインで、 **[新規作成]** をクリックし、 **[データセット]** をクリックします。  
   
-2.  `Name`ボックスに、入力: **[listdataset] です。**  
+2.  `Name`ボックスに、入力: **[listdataset]。**  
   
 3.  **[レポートに埋め込まれたデータセットを使用します]** をクリックし、データ ソースが **ListDataSource**であることを確認します。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36075687"
 ##  <a name="List"></a> 2.一覧を追加および構成する  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、テーブル、マトリックス、リストという 3 つのデータ領域テンプレートがあります。 これらのテンプレートはすべて、tablix データ領域に基づいています。  
   
- このチュートリアルでは、リストを使用して、ニュースレターのようなレポートに、販売区域の販売情報を表示します。 情報は、区域ごとにグループ化されます。 区域ごとのデータをグループ化する新しい行グループを追加し、組み込みの詳細行グループを削除します。 リスト テンプレートは、自由形式レポートを作成するのに最適です。 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)です。  
+ このチュートリアルでは、リストを使用して、ニュースレターのようなレポートに、販売区域の販売情報を表示します。 情報は、区域ごとにグループ化されます。 区域ごとのデータをグループ化する新しい行グループを追加し、組み込みの詳細行グループを削除します。 リスト テンプレートは、自由形式レポートを作成するのに最適です。 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
 >  このレポートでは、用紙サイズを Letter (8.5 X11) にし、余白を 1 インチとします。 縦が 9 インチまたは横が 6 1/2 インチよりも大きいレポート ページでは、空のページが生成される可能性があります。  
@@ -202,7 +202,7 @@ ms.locfileid: "36075687"
   
 #### <a name="to-add-graphic-elements-to-the-report"></a>レポートにグラフィック要素を追加するには  
   
-1.  **挿入** タブ、リボンのクリックして**四角形**、一覧の左上隅に四角形をドラッグします。 四角形のサイズを縦 7 インチ、横 1 インチにします。  
+1.  **挿入** タブ、リボンのをクリックして**四角形**リストの左上隅を四角形をドラッグします。 四角形のサイズを縦 7 インチ、横 1 インチにします。  
   
 2.  四角形を右クリックし、 **[四角形のプロパティ]** をクリックします。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "36075687"
   
 4.  **[塗りつぶしの色]** ドロップ ダウン リストの **[その他の色]** をクリックし、 **[濃い灰色]** を選択します。  
   
-     ![塗りつぶしの色を選択して](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "塗りつぶしの色")  
+     ![塗りつぶしの色を選択します](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "選択の塗りつぶしの色。")  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -236,7 +236,7 @@ ms.locfileid: "36075687"
   
 4.  Territory フィールドをテキスト ボックスにドラッグし、手順 3. で入力したテキストの後に配置します。  
   
-     ![Territorial フィールドの追加](../../2014/tutorials/media/tutorial-addterritorialfield.png "Territorial 追加フィールド")  
+     ![Territorial フィールドの追加](../../2014/tutorials/media/tutorial-addterritorialfield.png "追加 Territorial フィールド")  
   
 5.  すべてのテキストを選択して右クリックし、 **[テキストのプロパティ]** をクリックします。  
   
@@ -255,7 +255,7 @@ ms.locfileid: "36075687"
   
 10. FullName フィールドをテキスト ボックスにドラッグして、手順 9. で入力したテキストの後に配置し、コンマ (,) を入力します。  
   
-     ![氏名フィールドの追加](../../2014/tutorials/media/tutorial-addfullnamefield.png "完全名の追加フィールド")  
+     ![完全な名前のフィールドの追加](../../2014/tutorials/media/tutorial-addfullnamefield.png "完全な名前の追加フィールド")  
   
 11. 手順 9. および 10. で追加したテキストを選択して右クリックし、 **[テキスト ボックスのプロパティ]** をクリックします。  
   
@@ -289,7 +289,7 @@ ms.locfileid: "36075687"
   
 21. Sales フィールドをテキスト ボックスにドラッグして、手順 20. で入力したテキストの後に配置し、感嘆符 (!) を入力します。  
   
-22. 売上フィールドを強調表示をフィールドを右クリックし、をクリックして**式**です。  
+22. Sales フィールドを強調表示で、フィールドを右クリックし をクリックし、**式**します。  
   
 23. [式] ボックスの式を変更して、次のように Sum 関数を指定します。  
   
@@ -299,7 +299,7 @@ ms.locfileid: "36075687"
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     ![売上フィールドに式を追加](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "sales フィールドへの式の追加")  
+     ![売上フィールドに式を追加](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "売上フィールドに式を追加")  
   
 25. 手順 20. ～ 23. で追加したテキストを選択して右クリックし、 **[テキスト ボックスのプロパティ]** をクリックします。  
   
@@ -363,7 +363,7 @@ ms.locfileid: "36075687"
   
  レポートに、売上の詳細情報と合計が入力されたテーブルが表示されます。  
   
- ![レポート内の売上合計](../../2014/tutorials/media/tutorial-reportsalestotals.png "レポートの販売集計")  
+ ![レポート内の売上合計](../../2014/tutorials/media/tutorial-reportsalestotals.png "レポート内の Sales totals")  
   
 ##  <a name="Format"></a> 6.データの書式を設定する  
  数値データの書式を通貨にし、日付の書式を日付と時刻のみに設定します。  
@@ -374,7 +374,7 @@ ms.locfileid: "36075687"
   
 2.  `[Sum(SalesSales)]` が格納されているテーブルのセルをクリックし、 **[ホーム]** タブの **[数値]** グループで、 **[通貨]** ボタンをクリックします。  
   
-     ![売上を合計する通貨記号を追加](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "売上を合計する通貨記号を追加")  
+     ![合計売り上げ高を通貨記号を追加](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "合計売り上げ高を通貨記号の追加")  
   
 3.  `[SalesDate]` が格納されているセルをクリックし、 **[数値]** グループで、ドロップダウン リストから **[日付]** を選択します。  
   
@@ -399,7 +399,7 @@ ms.locfileid: "36075687"
   
      "レポート サーバーに接続しています" というメッセージが表示されます。 接続が完了すると、レポート サーバー管理者がレポートの既定の場所として指定したレポート フォルダーのコンテンツが表示されます。  
   
-4.  `Name`、既定の名前を**SalesInformationByTerritory**です。  
+4.  `Name`、既定の名前を**SalesInformationByTerritory**します。  
   
 5.  **[保存]** をクリックします。  
   
@@ -411,11 +411,11 @@ ms.locfileid: "36075687"
   
 2.  **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
-3.  `Name`、既定の名前を**SalesInformationByTerritory**です。  
+3.  `Name`、既定の名前を**SalesInformationByTerritory**します。  
   
 4.  **[保存]** をクリックします。  
   
-##  <a name="Line"></a> 8 です。(省略可) レポートの領域を区切る線を追加する  
+##  <a name="Line"></a> 8。(省略可) レポートの領域を区切る線を追加する  
  レポートの編集領域と詳細領域を区切る線を追加します。  
   
 #### <a name="to-add-a-line"></a>罫線を追加するには  
@@ -455,7 +455,7 @@ ms.locfileid: "36075687"
   
 4.  [グラフのフィールドの配置] ページで、Product を **[カテゴリ]** にドラッグします。  
   
-5.  数量をドラッグ**値**、順にクリック**次**です。  
+5.  数量をドラッグして**値**、順にクリックします**次**します。  
   
 6.  **[スタイルの選択]** ページの **スタイル** ペインで、 **[スレート]** を選択します。  
   
@@ -465,7 +465,7 @@ ms.locfileid: "36075687"
   
 9. 四角形の内側にグラフをドラッグします。  
   
-     ![円グラフを追加](../../2014/tutorials/media/tutorial-addpiechart.png "円グラフを追加")  
+     ![円グラフの追加](../../2014/tutorials/media/tutorial-addpiechart.png "円グラフの追加")  
   
 10. グラフのタイトルを右クリックし、 **[タイトルのプロパティ]** をクリックします。  
   
@@ -483,7 +483,7 @@ ms.locfileid: "36075687"
   
 3.  **[列]** をクリックし、 **[次へ]** をクリックします。  
   
-4.  グラフのフィールドの配置 ページで、Product フィールドをドラッグして**カテゴリ**です。  
+4.  グラフのフィールドの配置 ページで、Product フィールドをドラッグして**カテゴリ**します。  
   
 5.  Sales を **[値]** にドラッグして、 **[次へ]** をクリックします。  
   
@@ -516,21 +516,21 @@ ms.locfileid: "36075687"
     > [!NOTE]  
     >  軸のタイトルと凡例を削除すると、グラフのサイズが小さい場合に、グラフが見やすくなります。  
   
- ![グラフのタイトルを変更して、軸のタイトルを削除する](../../2014/tutorials/media/tutorial-columnchart-newtitle-noaxistitle.png "グラフのタイトルを変更して、軸のタイトルを削除します。")  
+ ![グラフのタイトルを変更したり軸のタイトルを削除したり](../../2014/tutorials/media/tutorial-columnchart-newtitle-noaxistitle.png "グラフのタイトルを変更して、軸のタイトルの削除")  
   
 #### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>四角形の内側にグラフが配置されていることを確認するには  
   
 1.  このレッスンの前の手順で追加した四角形をクリックします。  
   
-     プロパティ ペインで、`Name`プロパティに四角形の名前が表示されます。  
+     プロパティ ペインで、`Name`プロパティは、四角形の名前を表示します。  
   
      ![四角形の名前](../../2014/tutorials/media/tutorial-rectanglename.png "四角形の名前")  
   
 2.  円グラフをクリックします。  
   
-3.  **プロパティ** ウィンドウで、いることを確認、`Parent`プロパティに四角形の名前が含まれています。  
+3.  **プロパティ**ウィンドウで、いることを確認、`Parent`プロパティに四角形の名前が含まれています。  
   
-     ![円グラフのプロパティを親](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "円グラフのプロパティを親")  
+     ![円グラフのプロパティを親](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "円グラフのプロパティの親")  
   
 4.  縦棒グラフをクリックし、手順 2. および 3. を繰り返します。  
   
@@ -552,10 +552,10 @@ ms.locfileid: "36075687"
   
  レポートに、円グラフと縦棒グラフで概要データが表示されます。  
   
- ![SSRS チュートリアル、自由形式レポート](../../2014/tutorials/media/tutorial-reportfinal.png "SSRS チュートリアル、自由形式レポート")  
+ ![SSRS チュートリアル、自由形式レポート](../../2014/tutorials/media/tutorial-reportfinal.png "SSRS チュートリアル、自由形式のレポート")  
   
 ## <a name="more-information"></a>詳細情報  
- リストの詳細については、次を参照してください[テーブル、マトリックス、および一覧&#40;レポート ビルダーおよび SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)、[一覧&#40;レポート ビルダーおよび SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)、 [Tablix データ。領域部分&#40;レポート ビルダーおよび SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md)、および[Tablix データ領域のセル、行、および列&#40;レポート ビルダー&#41;と SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)です。  
+ リストの詳細については、次を参照してください[テーブル、マトリックス、および一覧&#40;レポート ビルダーおよび SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)、[一覧&#40;レポート ビルダーおよび SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)、 [Tablix のデータ。領域部分&#40;レポート ビルダーおよび SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md)、および[Tablix データ領域のセル、行、および列&#40;レポート ビルダー&#41;と SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)します。  
   
  クエリ デザイナーの詳細については、「[クエリ デザイナー (レポート ビルダー)](../../2014/reporting-services/query-designers-report-builder.md)」と「[テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)](report-data/text-based-query-designer-user-interface-report-builder.md)」を参照してください。  
   

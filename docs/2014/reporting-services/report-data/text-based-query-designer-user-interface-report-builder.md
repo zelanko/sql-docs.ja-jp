@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2996f7cfb6f7c873e57619c60f49511a62f8d533
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1c596018bcef960d176cf41a49221972d5652f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162123"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   デザイン時に、データ ソースでサポートされているクエリ言語でクエリを指定し、クエリを実行し、結果を表示するには、テキスト ベースのクエリ デザイナーを使用します。 複数の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント、カスタム データ処理拡張機能のクエリまたはコマンド構文、および式としてのクエリを指定できます。 テキスト ベースのクエリ デザイナーはクエリを前処理せず、あらゆる種類のクエリ構文に対応できるため、これは多くの種類のデータ ソースで既定のクエリ デザイナー ツールになっています。  
@@ -60,7 +60,7 @@ ms.locfileid: "36074991"
 |結果|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]** をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|  
   
 #### <a name="example"></a>例  
- 次のクエリから姓の一覧を返します、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**データベース`ContactType`用のテーブル、`Person`スキーマです。  
+ 次のクエリから姓の一覧を返します、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**データベース`ContactType`用のテーブル、`Person`スキーマ。  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -83,7 +83,7 @@ SELECT Name FROM Person.ContactType
 |[結果]|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]** をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|  
   
 #### <a name="example"></a>例  
- 次のクエリの呼び出し、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**ストアド プロシージャ`uspGetWhereUsedProductID`です。 クエリを実行する場合は、製品 ID 番号パラメーターの値を入力する必要があります。  
+ 次のクエリを呼び出し、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**ストアド プロシージャ`uspGetWhereUsedProductID`します。 クエリを実行する場合は、製品 ID 番号パラメーターの値を入力する必要があります。  
   
 ```  
 uspGetWhereUsedProductID  
@@ -102,7 +102,7 @@ uspGetWhereUsedProductID
  **[コマンドの種類] で [TableDirect]** を選択した場合、テキスト ベースのクエリ デザイナーには、クエリ ペインと結果ペインの 2 つのペインが表示されます。 テーブルを入力し、 **[実行]** ボタンをクリックすると、そのテーブルのすべての列が返されます。  
   
 #### <a name="example"></a>例  
- データ ソースの種類 OLE DB、次のデータセット クエリが結果セット内のすべての連絡先の種類を返します、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**データベース。  
+ 次のデータセット クエリはデータ ソースの種類 OLE DB のすべての連絡先の種類について、結果セットを返します、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**データベース。  
   
  `Person.ContactType`  
   

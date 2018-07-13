@@ -1,5 +1,5 @@
 ---
-title: レベルとメンバー ([ブラウザー] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: レベルとメンバー ([ブラウザー] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb9a6361159c67c24b8254939f3353a2a0063c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e30aae23fda8e929b3348ef09d20265ae1d9784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193972"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>レベルとメンバー ([ブラウザー] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
-  このペインを使用すると、現在選択している階層と言語のメンバーを参照できます。 参照する階層または言語を選択するには、 **ツール バー** ペインの **[階層]** および **[言語]** オプションを使用します。 ツール バー ペインの詳細については、次を参照してください。[ツールバー&#40;ブラウザー タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)です。  
+  このペインを使用すると、現在選択している階層と言語のメンバーを参照できます。 参照する階層または言語を選択するには、 **ツール バー** ペインの **[階層]** および **[言語]** オプションを使用します。 ツール バー ペインの詳細については、次を参照してください。[ツールバー&#40;ブラウザー タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)します。  
   
 ## <a name="writeback-mode"></a>書き戻しモード  
- 書き戻しモードが有効な場合、このペインの機能は変わります。 選択したディメンションが書き込みを有効にする必要があります (つまり、`WriteEnabled`ディメンションのプロパティを設定する必要がありますを true に) に、ディメンションを展開する必要があります、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]書き戻しモードを有効にするためにインスタンス。  
+ 書き戻しモードが有効な場合、このペインの機能は変わります。 選択したディメンションが書き込みが有効にする必要があります (つまり、`WriteEnabled`ディメンションのプロパティを設定する必要がありますを true に) にディメンションを展開する必要があります、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]書き戻しモードを有効にするにはインスタンス。  
   
  書き戻しモードを有効にするには、 **ツールバー** ペインで **[書き戻し]** を選択するか、 **レベルとメンバー** ペインを右クリックしてショートカット メニューから **[書き戻し]** を選択します。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36083531"
 > [!NOTE]  
 >  このオプションは、書き戻しモードが有効な場合にのみ表示されます。  
   
- **Delete**  
+ **削除**  
  選択されているメンバーを階層から削除します。  
   
 > [!NOTE]  

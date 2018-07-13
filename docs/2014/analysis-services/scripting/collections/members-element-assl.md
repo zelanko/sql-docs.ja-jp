@@ -1,5 +1,5 @@
 ---
-title: Members 要素 (ASSL) |Microsoft ドキュメント
+title: Members 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Members element
 ms.assetid: 4bf585a3-b681-486d-852b-1244c5658a04
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45b1dea7d3d3bee599f73b0fc0110933eb0cc363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13718829cb38ff1cbe82071e0f5e3c436888c466
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218082"
 ---
 # <a name="members-element-assl"></a>Members 要素 (ASSL)
-  コレクションを格納[メンバー](../objects/member-element-assl.md)親要素の要素。  
+  コレクションを格納[メンバー](../objects/member-element-assl.md)の親要素の要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36075379"
 |子要素|[Member](../objects/member-element-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
- 親に対応する要素`Members`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.Group>と<xref:Microsoft.AnalysisServices.Role>です。  
+ 親に対応する要素`Members`分析管理オブジェクト (AMO) オブジェクト モデルは、<xref:Microsoft.AnalysisServices.Group>と<xref:Microsoft.AnalysisServices.Role>します。  
   
 ## <a name="see-also"></a>参照  
  [コレクション&#40;ASSL&#41;](collections-assl.md)  

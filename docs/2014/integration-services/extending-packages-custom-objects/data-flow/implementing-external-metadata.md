@@ -27,13 +27,13 @@ ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18a4e657b4b4e0b434656f6a03538ec4a8f89957
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8e43702349bae9dd5f3eb89bb6454fb62b05816
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169218"
 ---
 # <a name="implementing-external-metadata"></a>外部メタデータの実装
   コンポーネントがそのデータ ソースから切断されると、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> インターフェイスを使用することによって、入力および出力列のコレクション内の列を、その外部データ ソースの列に対して検証できます。 このインターフェイスを使用すると、外部データ ソースの列のスナップショットを保持し、これらの列をコンポーネントの入力および出力列コレクションの列にマップできます。  
@@ -82,7 +82,7 @@ End Sub
 ### <a name="connected-validation"></a>接続された状態での検証  
  コンポーネントが外部データ ソースに接続されると、入力または出力コレクション内の列は、外部データ ソースに対して直接検証されます。 また、外部メタデータのコレクション内の列を検証する必要があります。 外部メタデータのコレクションは [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] の **[詳細エディター]** による変更が可能なうえに、それによってコレクションに行われた変更は検出できないため、この検証が必要となります。 したがって、接続された状態のコンポーネントでは、外部メタデータ列のコレクション内の列が外部データ ソースの列を継続して反映していることを確認する必要があります。  
   
- 内の外部メタデータ コレクションを非表示にすることもできます、**詳細エディター**を設定して、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A>にコレクションのプロパティ`false`です。 ただし、この設定を行うと、入力または出力コレクションの列を外部メタデータ列のコレクションの列にマップするために使用する、エディターの **[列マッピング]** タブも非表示になります。 このプロパティを `false` に設定すると、開発者のプログラムによるコレクションの変更を妨げることなく、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でのみ使用されるコンポーネントの、外部メタデータ列のコレクションをある程度保護できます。  
+ 内の外部メタデータ コレクションを非表示にすることができます、**高度なエディター**を設定して、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A>にコレクションのプロパティ`false`します。 ただし、この設定を行うと、入力または出力コレクションの列を外部メタデータ列のコレクションの列にマップするために使用する、エディターの **[列マッピング]** タブも非表示になります。 このプロパティを `false` に設定すると、開発者のプログラムによるコレクションの変更を妨げることなく、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でのみ使用されるコンポーネントの、外部メタデータ列のコレクションをある程度保護できます。  
   
 ### <a name="disconnected-validation"></a>切断された状態での検証  
  コンポーネントが外部データ ソースから切断されている場合、検証は簡略化されます。これは、外部ソースに対してではなく、外部メタデータのコレクション内の列に対して、入力または出力コレクション内の列が直接検証されるためです。 コンポーネントの外部データ ソースへの接続が確立されていない場合、または <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティが `false` の場合は、コンポーネントは切断された状態での検証を行う必要があります。  
@@ -113,7 +113,7 @@ Public  Overrides Function Validate() As DTSValidationStatus
 End Function  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [データ フロー](../../data-flow/data-flow.md)  

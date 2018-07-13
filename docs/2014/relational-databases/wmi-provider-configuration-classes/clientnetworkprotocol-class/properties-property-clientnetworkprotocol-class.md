@@ -1,5 +1,5 @@
 ---
-title: Properties プロパティ (ClientNetworkProtocol クラス) |Microsoft ドキュメント
+title: Properties プロパティ (ClientNetworkProtocol クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Properties property
 ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4882f26e1f74fd68e67f14172482bcc674d1b06e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 569c1b0f8f140bd05c2be03286e6c9fa1d66a200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202732"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Properties プロパティ (ClientNetworkProtocol クラス)
   [Configure Client Protocols (クライアント プロトコルの構成)](http://technet.microsoft.com/library/ms181035.aspx)によって指定された現在のクライアント ネットワーク プロトコルに関連付けられたプロパティを取得します。  
@@ -46,7 +46,7 @@ object
  [クライアントによって使用されるネットワーク プロトコルを表す](clientnetworkprotocol-class.md) ClientNetworkProtocol クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 配列[ClientNetworkProtocolProperty クラス](../clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)によって参照される現在のクライアント ネットワーク プロトコルによってサポートされるプロパティを表すオブジェクト、`OrderValue`プロパティです。  
+ 配列の[ClientNetworkProtocolProperty クラス](../clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)によって参照される現在のクライアント ネットワーク プロトコルによってサポートされるプロパティを表すオブジェクト、`OrderValue`プロパティ。  
   
 ## <a name="remarks"></a>コメント  
   

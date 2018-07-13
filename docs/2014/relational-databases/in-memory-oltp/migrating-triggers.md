@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 caps.latest.revision: 10
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f1f86d8bc9b9be2a503e6e245d2b0b4d88917903
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 49dd8abf026cc3beffe30b0137abe643b29a97d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175356"
 ---
 # <a name="migrating-triggers"></a>トリガーの移行
   このトピックでは、DDL トリガーと DML トリガー、およびメモリ最適化テーブルについて説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "36076214"
   
  トリガー イベント (FOR/AFTER または INSTEAD OF) によっては、テーブルに対して INSERT、UPDATE、DELETE を実行する適切なストアド プロシージャをトリガーする内容を含めることもできます。 たとえば、AFTER INSERT トリガーを移行する場合は、適切な INSERT ステートメントの後にトリガーの内容を含めることによって、挿入操作を実行するストアド プロシージャを変更することができます。  
   
- インタープリターによって処理されるストアド プロシージャ、またはネイティブ コンパイル ストアド プロシージャを使用できます。 インタープリターによって処理されるストアド プロシージャを使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構造のほとんどは、メモリ最適化されたテーブルに対して実行できます。 ただし、ネイティブ コンパイル ストアド プロシージャでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] 構造のサブセットのみをサポートしています。 詳細について[!INCLUDE[tsql](../../includes/tsql-md.md)]メモリ最適化テーブルでサポートを参照してください[最適化テーブルを使用して解釈された TRANSACT-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)です。 詳細について[!INCLUDE[tsql](../../includes/tsql-md.md)]ネイティブ コンパイル ストアド プロシージャでサポートを参照してください[TRANSACT-SQL は、インメモリ OLTP でサポートされていない構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)です。  
+ インタープリターによって処理されるストアド プロシージャ、またはネイティブ コンパイル ストアド プロシージャを使用できます。 インタープリターによって処理されるストアド プロシージャを使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構造のほとんどは、メモリ最適化されたテーブルに対して実行できます。 ただし、ネイティブ コンパイル ストアド プロシージャでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] 構造のサブセットのみをサポートしています。 について[!INCLUDE[tsql](../../includes/tsql-md.md)]メモリ最適化テーブルでサポートを参照してください[したテーブルを使用して解釈された TRANSACT-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)します。 について[!INCLUDE[tsql](../../includes/tsql-md.md)]ネイティブ コンパイル ストアド プロシージャでサポートを参照してください[TRANSACT-SQL は、インメモリ OLTP でサポートされていない構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)します。  
   
  次に、メモリ最適化テーブルに対する DML トリガーの動作をシミュレートする簡単な例を示します。  
   

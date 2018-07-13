@@ -1,5 +1,5 @@
 ---
-title: マイニング モデル (データ マイニング アドインを Excel 用) を文書化 |Microsoft ドキュメント
+title: マイニング モデル (データ マイニング Excel 用アドイン) を文書化 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - documenting models
 - mining structures, managing
@@ -16,30 +16,30 @@ helpviewer_keywords:
 - model properties
 ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a093deb3764c154ae45596ad64d2805aa6d00d88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f605fd2ef1e0aafad5b34a2b74c12fc95be6ef7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167713"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>マイニング モデルのドキュメント化とスケーリング (Excel 用データ マイニング アドイン)
   ![ドキュメント モデルのボタン、データ マイニング リボン](media/dmc-docmodel.gif "モデルのドキュメント化ボタン、データ マイニング リボン")  
   
- **ドキュメント モデル**ウィザードを作成したマイニング モデルに関する有用な情報を提供するレポートを作成します。 作成したモデルをドキュメント化すると、モデルの生成に使用されるデータ ソースの追跡、モデルが処理された日時に関する詳細情報の取得、およびモデルの結果に影響するパラメーターの変更の追跡を実行できます。  
+ **ドキュメント モデル**ウィザードが作成したマイニング モデルに関する有用な情報を提供するレポートを作成します。 作成したモデルをドキュメント化すると、モデルの生成に使用されるデータ ソースの追跡、モデルが処理された日時に関する詳細情報の取得、およびモデルの結果に影響するパラメーターの変更の追跡を実行できます。  
   
 ## <a name="using-the-document-model-wizard"></a>モデルのドキュメント化ウィザードの使用  
   
-1.  クリックして、**データ マイニング**タブです。  
+1.  をクリックして、**データ マイニング**タブ。  
   
-2.  **モデルの使用法**グループで、**ドキュメント モデル**です。  
+2.  **モデルの使用法**グループで、**ドキュメント モデル**します。  
   
-3.  **モデルの選択** ダイアログ ボックスは、レポート、モデルを選択しをクリックして**次**です。 実行する必要があります、**ドキュメント モデル**ウィザードを個別に各モデルのドキュメント化します。  
+3.  **モデルの選択**ダイアログ ボックスは、レポート、モデルを選択しをクリックして**次**します。 実行する必要があります、**ドキュメント モデル**ウィザードを個別に各モデルを文書化します。  
   
-4.  **ドキュメントの詳細の選択** ダイアログ ボックスで、2 つのオプションのいずれかを選択:**情報**または**概要情報**です。  
+4.  **ドキュメントの詳細の選択** ダイアログ ボックスで、2 つのオプションのいずれかを選択:**情報**または**概要情報**します。  
   
 5.  **[完了]** をクリックします。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "36077232"
 ||不連続列|合格数<br /><br /> 不合格数<br /><br /> ログ スコア<br /><br /> リフト|  
   
 > [!NOTE]  
->  ドキュメント化できるのは、SQL Server Analysis Services でサポートされている種類のモデルです。 したがって、この表に示されたモデルの中には、テーブル分析ツールまたはデータ マイニング クライアントのウィザードでは作成できない種類のモデルもあります。 ただしを使用してすべての種類のモデルを作成することができます、**データ マイニング クエリ エディターの高度な**します。 詳細については、次を参照してください。[クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)です。  
+>  ドキュメント化できるのは、SQL Server Analysis Services でサポートされている種類のモデルです。 したがって、この表に示されたモデルの中には、テーブル分析ツールまたはデータ マイニング クライアントのウィザードでは作成できない種類のモデルもあります。 ただし、すべての種類のモデルを使用して作成できます、**データ マイニングのクエリ エディターの高度な**します。 詳細については、次を参照してください。[クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)します。  
   
 ## <a name="see-also"></a>参照  
- [展開して、マイニング モデルをスケーリング&#40;アドイン Excel 用データ マイニング&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+ [展開して、マイニング モデルのスケーリング&#40;データ マイニング Excel 用アドイン&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

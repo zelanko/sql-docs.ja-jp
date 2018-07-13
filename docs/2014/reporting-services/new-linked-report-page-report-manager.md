@@ -1,5 +1,5 @@
 ---
-title: 新しいリンク レポート ページ (レポート マネージャー) |Microsoft ドキュメント
+title: 新しいリンク レポート ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 635352076fac4e993ce7a46e3b66c2e1089f6b59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb12f9012055b4de29712255b427a93dfafef2db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201022"
 ---
 # <a name="new-linked-report-page-report-manager"></a>[新しいリンク レポート] ページ (レポート マネージャー)
   [新しいリンク レポート] ページではリンク レポートを作成できます。 リンク レポートは、独自の設定やプロパティが含まれているレポートですが、別のレポートのレポート定義にリンクしています。 リンク レポートは、特定のグループまたはユーザーによって異なる基本レポート (たとえば、パラメーターとして指定された地域コードに基づいて別のデータを返す地域レポート) がある場合に役立ちます。 通常、リンク レポートは、各レポート インスタンスに異なるパラメーター値を設定して保存する場合に、パラメーター化されたレポートから作成します。 ただし、ユーザーがアクセスできる任意のレポートからリンク レポートを作成することもできます。  
@@ -50,10 +50,10 @@ ms.locfileid: "36075196"
 4.  アイテムのツール バーの **[リンク レポートの作成]** をクリックします。  
   
 ## <a name="options"></a>および  
- **Name**  
- リンク レポートの名前を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよび特定の記号を含めることもできます。 ただし、名前を指定する場合は、次の文字は使用できません。; ? : @ & = +, $/* \< > |"または/名を指定します。  
+ **名前**  
+ リンク レポートの名前を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよび特定の記号を含めることもできます。 ただし、名前を指定する場合は、次の文字は使用できません。; ? : @ & = +, $/* \< > |"または/名前を指定します。  
   
- **description**  
+ **[説明]**  
  レポートの内容の説明を入力します。 この説明は、レポートへのアクセス権を持っているユーザーの [コンテンツ] ページに表示されます。  
   
  **場所**  

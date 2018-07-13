@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsource.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6dbda4a8b745e0745ff13d641a93c3350c8af20e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6aafcdccb92c093b6ff0e8c2a4a163cc6878b21e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217732"
 ---
 # <a name="xml-source"></a>XML ソース
   XML ソースは XML データ ファイルを読み取り、ソース出力の列にデータを設定します。  
@@ -69,7 +69,7 @@ ms.locfileid: "36074917"
 ## <a name="configuration-of-the-xml-source"></a>XML ソースの構成  
  XML ソースでは、3 つの異なるデータ アクセス モードがサポートされています。 XML データ ファイルのファイルの場所、ファイルの場所を含む変数、または XML データを含む変数を指定できます。  
   
- XML ソースに含まれる、`XMLData`と`XMLSchemaDefinition`パッケージが読み込まれるときに、プロパティ式で更新可能なカスタム プロパティです。 詳細については、「[Integration Services (SSIS) の式](../expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../expressions/use-property-expressions-in-packages.md)」、および「[XML 入力元のカスタム プロパティ](xml-source-custom-properties.md)」を参照してください。  
+ XML ソースが含まれています、`XMLData`と`XMLSchemaDefinition`のカスタム プロパティが、パッケージが読み込まれるときに、プロパティ式で更新できます。 詳細については、「[Integration Services (SSIS) の式](../expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../expressions/use-property-expressions-in-packages.md)」、および「[XML 入力元のカスタム プロパティ](xml-source-custom-properties.md)」を参照してください。  
   
  XML ソースでは、複数の標準出力と複数のエラー出力がサポートされています。  
   

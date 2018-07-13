@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 83d48cf33405988c9aedaceccc677ee238a7ea5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d697c1cb894028de8ccea5e3b87fc7d0cf155d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202602"
 ---
 # <a name="report-server-http-log"></a>レポート サーバーの HTTP ログ
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーの HTTP ログ ファイルには、レポート サーバーによって処理された HTTP 要求および HTTP 応答がすべて記録されます。 要求のオーバーフローやタイムアウト エラーは、レポート サーバーに到達しないため、ログ ファイルには記録されません。  
   
- HTTP ログは既定では有効になっていません。 HTTP ログを有効にするには変更、 **ReportingServicesService.exe.config**インストールでこの機能を使用する構成ファイル。  
+ HTTP ログは既定では有効になっていません。 HTTP ログ記録を有効にするには、 **ReportingServicesService.exe.config**インストールでこの機能を使用する構成ファイル。  
   
 ## <a name="viewing-log-information"></a>ログ情報の表示  
  ログは、ASCII テキスト ファイルです。 任意のテキスト エディターでファイルを閲覧できます。 レポート サーバーの HTTP ログ ファイルは、IIS における W3C 拡張ログ ファイルに相当し、同様のフィールドが使用されています。そのため、既存の IIS ログ ファイル ビューアーを使用して、レポート サーバーの HTTP ログ ファイルを閲覧することもできます。 次の表に、HTTP ログ ファイルの補足情報を示します。  
@@ -39,7 +39,7 @@ ms.locfileid: "36074761"
 |**ファイルの作成と保存**|HTTP ログは、構成ファイルでログ機能を有効にし、サービスを再開した後、レポート サーバーによって HTTP 要求が処理されて初めて作成されます。 設定を構成したにもかかわらず、ログ ファイルが確認できない場合は、レポートを開くか、レポート サーバー アプリケーション (レポート マネージャーなど) を起動して、HTTP 要求を生成すると、ログ ファイルが作成されます。<br /><br /> ログ ファイルの新しいインスタンスは、各サービスが再開され、その後、HTTP 要求がレポート サーバーに送信されると作成されます。<br /><br /> 既定では、トレース ログのサイズの上限は 32 MB であり、14 日後に削除されます。|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>レポート サーバーの HTTP ログの構成設定  
- レポート サーバーの HTTP ログを構成するには、変更をメモ帳を使用します。、 **ReportingServicesService.exe.config**ファイル。 構成ファイルは、\Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin フォルダーに格納されています。  
+ レポート サーバーの HTTP ログを構成するには、メモ帳を使用して変更する、 **ReportingServicesService.exe.config**ファイル。 構成ファイルは、\Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin フォルダーに格納されています。  
   
  HTTP サーバーを有効にするには、`http:4` を、ReportingServicesService.exe.config ファイルの RStrace セクションに追加します。 その他の HTTP ログ ファイル エントリはすべてオプションです。 次の例には、RStrace セクションに上書きする形でセクション全体を貼り付けて、不要な設定を削除するだけで済むように、すべての設定が含まれています。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36074761"
 ```  
   
 ## <a name="log-file-fields"></a>ログ ファイル フィールド  
- 次の表は、ログで利用できるフィールドの一覧です。 フィールドの一覧は構成可能です。含めるフィールドを指定することができます、`HTTPTraceSwitches`構成設定。 **既定**列を指定するかどうかフィールドは、ログ ファイルに自動的を指定しない場合`HTTPTraceSwitches`です。  
+ 次の表は、ログで利用できるフィールドの一覧です。 フィールド リストが構成可能です。含めるフィールドを指定することができます、`HTTPTraceSwitches`構成設定。 **既定**列を指定、フィールドを追加するどうか、ログ ファイルに自動的に指定しない場合`HTTPTraceSwitches`します。  
   
 |フィールド|説明|既定|  
 |-----------|-----------------|-------------|  

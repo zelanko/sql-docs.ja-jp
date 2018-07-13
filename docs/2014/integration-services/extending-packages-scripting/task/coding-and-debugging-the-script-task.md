@@ -25,13 +25,13 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6552bc54d8da9475adaa35b86b697c1dbdf3f437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f651eee3c926db0f808a673d7555d02f3fe07d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184719"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>スクリプト タスクのコーディングおよびデバッグ
   **[スクリプト タスク エディター]** でスクリプト タスクを構成したら、スクリプト タスク開発環境でカスタム コードを記述します。  
@@ -56,7 +56,7 @@ ms.locfileid: "36076629"
   
 -   スクリプト タスクが [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] プログラミング言語用に構成されている場合は、`ScriptMain` クラスにパブリック サブルーチン `Main` が含まれます。 `ScriptMain.Main` サブルーチンは、ユーザーのスクリプト タスクを実行するときにランタイムが呼び出すメソッドです。  
   
-     既定では、新しいスクリプトの `Main` サブルーチン内にあるコードは、行 `Dts.TaskResult = ScriptResults.Success` のみです。 この行は、タスクの処理が正常に実行されたことをランタイムに通知します。 `Dts.TaskResult`プロパティは、後ほど[スクリプト タスクから結果を返す](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)です。  
+     既定では、新しいスクリプトの `Main` サブルーチン内にあるコードは、行 `Dts.TaskResult = ScriptResults.Success` のみです。 この行は、タスクの処理が正常に実行されたことをランタイムに通知します。 `Dts.TaskResult`プロパティは、後ほど[スクリプト タスクから結果を返す](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)します。  
   
 -   スクリプト タスクが Visual C# プログラミング言語用に構成されている場合は、`ScriptMain` クラスにパブリック メソッド `Main` が含まれます。 このメソッドは、スクリプト タスク実行時に呼び出されます。  
   
@@ -205,7 +205,7 @@ To open Help, press F1.
  スクリプト タスク プロジェクトには、既定の `ScriptMain` アイテム以外のアイテムを格納できます。 プロジェクトには、クラス、モジュール、およびコード ファイルを追加できます。 また、フォルダーを使用してアイテムのグループを整理できます。 追加したすべてのアイテムは、パッケージ内部に保存されます。  
   
 ### <a name="references-in-the-script-task-project"></a>スクリプト タスク プロジェクトの参照  
- 参照をマネージ アセンブリに追加するには、**プロジェクト エクスプローラー**でスクリプト タスク プロジェクトを右クリックし、**[参照の追加]** をクリックします。 詳しくは、「[スクリプティング ソリューションでの他のアセンブリの参照](../referencing-other-assemblies-in-scripting-solutions.md)」をご覧ください。  
+ 参照をマネージド アセンブリに追加するには、**[プロジェクト エクスプローラー]** でスクリプト タスク プロジェクトを右クリックし、**[参照の追加]** をクリックします。 詳しくは、「[スクリプティング ソリューションでの他のアセンブリの参照](../referencing-other-assemblies-in-scripting-solutions.md)」をご覧ください。  
   
 > [!NOTE]  
 >  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または**プロジェクト エクスプローラー**で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、**[プロジェクト]** メニュー、**プロジェクト エクスプローラー**、または **[クラス ビュー]** から追加できます。  
@@ -250,7 +250,7 @@ To open Help, press F1.
   
 -   blogs.msdn.com のブログ「[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661)」(SSIS 2008 インストールおよび R2 インストールでの VSTA のセットアップと構成に関する問題)。  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> 最新のダウンロード、アーティクル、サンプル、およびビデオの[!INCLUDE[msCoName](../../../includes/msconame-md.md)]は、コミュニティで選択したソリューションを参照してください、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] MSDN のページ。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> 最新のダウンロード、アーティクル、サンプル、およびビデオの[!INCLUDE[msCoName](../../../includes/msconame-md.md)]、およびコミュニティで選択されたソリューションを参照してください、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] msdn ページ。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [スクリプティング ソリューションでの他のアセンブリの参照](../referencing-other-assemblies-in-scripting-solutions.md)   

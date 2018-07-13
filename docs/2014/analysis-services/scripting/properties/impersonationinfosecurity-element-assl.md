@@ -1,5 +1,5 @@
 ---
-title: ImpersonationInfoSecurity 要素 (ASSL) |Microsoft ドキュメント
+title: ImpersonationInfoSecurity 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ImpersonationInfoSecurity element
 ms.assetid: 583fec36-90ef-4d6a-9888-ece6ae865c53
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 331ee3440a3cab5959f83880a08a4ef0d589cddd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6ed6386f862e6fb9d1cababe870cbcca105e7be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189189"
 ---
 # <a name="impersonationinfosecurity-element-assl"></a>ImpersonationInfoSecurity 要素 (ASSL)
   指定されるセキュリティ資格情報に変更を行ったかどうかを示す読み取り専用の値が含まれています、 [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)データ型。  
@@ -65,9 +65,9 @@ ms.locfileid: "36077205"
 |値|説明|  
 |-----------|-----------------|  
 |*PasswordRemoved*|指定されたセキュリティ資格情報からパスワード情報が削除されています。|  
-|*変更されません。*|指定されたセキュリティ資格情報は変更されていません。|  
+|*変更なし*|指定されたセキュリティ資格情報は変更されていません。|  
   
- 許可される値に対応する列挙`ImpersonationInfoSecurity`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ImpersonationInfoSecurity>します。  
+ 許容された値に対応する列挙体`ImpersonationInfoSecurity`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ImpersonationInfoSecurity>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

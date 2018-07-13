@@ -1,5 +1,5 @@
 ---
-title: '[全般] プロパティ ページ、共有データ ソース (レポート マネージャー) |Microsoft ドキュメント'
+title: '[全般] プロパティ ページ、共有データ ソース (レポート マネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0a570567691692f008f6f71966b5ee0b01921dab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b729c41bf0ed0950c20b465bd1f0c70ebbee4a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162283"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>[全般] プロパティ ページ、共有データ ソース (レポート マネージャー)
   [全般] プロパティ ページでは、共有データ ソース アイテムのプロパティを表示または変更できます。 アイテムのプロパティに対して行った変更は、 **[適用]** をクリックしたときに、そのプロパティを参照するすべてのレポートに反映されます。  
@@ -36,10 +36,10 @@ ms.locfileid: "36075912"
 3.  ドロップダウン メニューの **[管理]** をクリックします。 この操作により、共有データ ソースの [全般] プロパティ ページが開きます。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  共有データ ソースの名前を指定します。この名前は、レポート サーバーの名前空間内のアイテムの識別に使用されます。  
   
- **description**  
+ **[説明]**  
  共有データ ソースに関する情報を提供します。 この説明は、[コンテンツ] ページに表示されます。  
   
  **リスト ビューで非表示にします。**  
@@ -49,7 +49,7 @@ ms.locfileid: "36075912"
  共有データ ソースを有効または無効にする場合に使用します。 共有データ ソースを無効にすると、そのアイテムを参照するすべてのレポート、レポート モデル、およびデータ ドリブン サブスクリプションの処理を無効にできます。  
   
  **データ ソースの種類**  
- データ ソースから取得したデータの処理に使用する、データ処理拡張機能を指定します。 レポート サーバーにはデータ処理拡張機能が含まれています[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、Oracle、XML、SAP、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]ODBC、および OLE DB します。 サード パーティ ベンダーから、別のデータ処理拡張機能を入手できる可能性もあります。  
+ データ ソースから取得したデータの処理に使用する、データ処理拡張機能を指定します。 レポート サーバーにはデータ処理拡張機能が含まれています[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、Oracle、XML、SAP、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、ODBC および OLE DB します。 サード パーティ ベンダーから、別のデータ処理拡張機能を入手できる可能性もあります。  
   
  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services を使用している場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ ソースのみ選択することができます。  
   
@@ -72,11 +72,11 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  ユーザーが指定する資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証 (たとえば、SQL Server 認証) を使用している場合は、このチェック ボックスをオフにしてください。  
   
  **レポート サーバーに安全に格納されている資格情報**  
- 暗号化されたユーザー名およびパスワードを、レポート サーバーのデータベースに格納します。 このオプションを選択すると、レポート (たとえば、ユーザーの操作によってではなく、スケジュールまたはイベントによって起動されるレポート) を自動的に実行できます。 既定のセキュリティを使用している場合、ユーザー名は Windows ドメイン アカウントである必要があります。 この形式でアカウントを指定します:\<ドメイン >\\< ユーザー名\>です。 指定するアカウントには、レポートが使用するデータ ソースをホストするコンピューター上でローカルにログオンする権限が必要です。  
+ 暗号化されたユーザー名およびパスワードを、レポート サーバーのデータベースに格納します。 このオプションを選択すると、レポート (たとえば、ユーザーの操作によってではなく、スケジュールまたはイベントによって起動されるレポート) を自動的に実行できます。 既定のセキュリティを使用している場合、ユーザー名は Windows ドメイン アカウントである必要があります。 この形式でアカウントを指定:\<ドメイン >\\< ユーザー名\>します。 指定するアカウントには、レポートが使用するデータ ソースをホストするコンピューター上でローカルにログオンする権限が必要です。  
   
  資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証を使用している場合にこのチェック ボックスをオンされません (たとえば、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認証)。  
   
- データベース認証を使用する場合、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する] (接続に使用する認証)** を選択すると、データベース サーバーが権限借用をサポートする場合に限り、データベース資格情報の委任が可能になります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベース、このオプションは、SETUSER 関数を設定します。  
+ データベース認証を使用する場合、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する] (接続に使用する認証)** を選択すると、データベース サーバーが権限借用をサポートする場合に限り、データベース資格情報の委任が可能になります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベースでは、このオプションは、SETUSER 関数を設定します。  
   
  **Windows 統合セキュリティ**  
  現在のユーザーの Windows 資格情報を使用して、データ ソースにアクセスします。 データ ソースへのアクセスに使用される資格情報が、ネットワーク ドメインへのログオンに使用される資格情報と同じである場合に、このオプションを選択します。 Kerberos 認証が有効なドメインに参加している場合、またはレポート サーバーと同一のコンピューターにデータ ソースがある場合に、このオプションは最適です。 Kerberos 認証が無効になっている場合、Windows 資格情報を別のコンピューターに渡すこともできます。 別のコンピューターの接続が必要な場合に、想定されるデータではなく、エラーが返されます。  
@@ -88,12 +88,12 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **資格情報は必要ありません。**  
  データ ソースへのアクセスに、資格情報が必要でないことを指定します。 データ ソースがユーザーのログインを必要とする場合、このオプションを選択しても効果がありません。 このオプションは、データ ソース接続にユーザーの資格情報を必要としない場合にのみ選択してください。  
   
- このオプションを使用するには、レポート サーバーの配置用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報のソースがない状況で外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、次を参照してください。[無人実行アカウントの構成&#40;SSRS 構成マネージャー&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)です。  
+ このオプションを使用するには、レポート サーバーの配置用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報のソースがない状況で外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、次を参照してください。[自動実行アカウントを構成する&#40;SSRS 構成マネージャー&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)します。  
   
  **[適用]**  
  変更を保存する場合にクリックします。  
   
- **Delete**  
+ **削除**  
  共有データ ソースを削除する場合にクリックします。 共有データ ソースを削除すると、その共有データ ソースを使用するレポート、モデル、およびデータ ドリブン サブスクリプションが非アクティブ化されます。 レポートおよびサブスクリプションを再びアクティブにするには、1 つずつ開いて別の共有データ ソースを使用するようにデータ ソース プロパティを更新する必要があります。 レポートおよびサブスクリプションでは、データ ソース接続情報を [データ ソース] プロパティの値として指定できます。  
   
  **Move**  
@@ -105,7 +105,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [[新しいデータ ソース] ページ &#40;レポート マネージャー&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
- [レポート マネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
+ [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

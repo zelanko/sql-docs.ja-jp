@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06f5acf3bf8c9c4f8df7282934c99b38480a1bd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 400be71a74676d0d95ddcd56d1927aed3e7711f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195022"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>モデル管理者を作成する (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、モデル管理者を作成する場合、グループまたはユーザーに与える**更新**1 つまたは複数のモデル内のすべてのオブジェクトへのアクセスを許可します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、モデル管理者を作成する場合、グループまたはユーザーに与える**Update** 1 つまたは複数のモデルのすべてのオブジェクトへのアクセスを許可します。  
   
 > [!TIP]  
 >  管理を簡素化するために、Windows グループまたはローカル グループを作成し、そのグループをモデル管理者として構成します。 また、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
@@ -52,16 +52,16 @@ ms.locfileid: "36077112"
   
 7.  権限を与えるモデルをクリックします。  
   
-8.  メニューから、次のように選択します。**更新**です。  
+8.  メニューから、次のように選択します。 **Update**します。  
   
 9. グループまたはユーザーを管理者にする各モデルについて、手順 7 と 8 を実行します。  
   
 10. **[保存]** をクリックします。  
   
 ## <a name="remarks"></a>コメント  
- モデル オブジェクトまたは階層メンバーに他の権限を割り当てないでください。 ユーザーが管理者では不要になったとモデルを表示機能領域で以外の場合は、**エクスプ ローラー**です。  
+ モデル オブジェクトまたは階層メンバーに他の権限を割り当てないでください。 ユーザーが管理者では不要になったとモデルを表示機能領域で以外の場合は、**エクスプ ローラー**します。  
   
- 1 つの例外が発生: 場合は、ユーザーがある**更新**階層に割り当てられた権限**ルート**上、**階層メンバー**  タブで、ユーザーと見なされますモデル管理者。  
+ 1 つの例外が発生: 場合は、ユーザーがある**Update**階層に割り当てられた権限**ルート**上、**階層メンバー**  タブで、ユーザーがモデルと見なされますが管理者です。  
   
 ## <a name="see-also"></a>参照  
  [管理者&#40;マスター データ サービス&#41;](administrators-master-data-services.md)   

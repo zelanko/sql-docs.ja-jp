@@ -1,5 +1,5 @@
 ---
-title: 表形式モデル データベース (SSAS) への接続 |Microsoft ドキュメント
+title: 表形式モデル データベース (SSAS) への接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71bfa13950656ea662ba91532abf765bd1b126c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8add1b36631df0706c6463112ed47fcf7f792bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190922"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>テーブル モデル データベースへの接続 (SSAS)
   テーブル モデルを構築し、Analysis Services テーブル モード サーバーに配置したら、クライアント アプリケーションからの使用を可能にするための権限を設定する必要があります。 このトピックでは、クライアント アプリケーションからデータベースに接続するための権限と方法について説明します。  
@@ -85,7 +85,7 @@ ms.locfileid: "36076395"
   
 2.  **[Analysis Services から]** をクリックします。  
   
-3.  **[サーバー名]** に、データベースをホストする Analysis Services インスタンスを指定します。 通常、サーバー名は、サーバー ソフトウェアを実行するコンピューターの名前です。 サーバーが名前付きインスタンスとしてインストールされた場合は、この形式で名を指定する必要があります: \<servername >\\< instancename\>です。  
+3.  **[サーバー名]** に、データベースをホストする Analysis Services インスタンスを指定します。 通常、サーバー名は、サーバー ソフトウェアを実行するコンピューターの名前です。 名前付きインスタンスとしてサーバーをインストールすると場合、は、次の形式で名前を指定する必要があります: \<servername >\\< instancename\>します。  
   
      スタンドアロン テーブル配置用にサーバー インスタンスを構成する必要があります。そのサーバー インスタンスには、アクセスを許可する受信の規則が必要です。 詳細については、「 [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) 」および「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36076395"
  接続を確立した後は、データを使用して、ピボットテーブルやピボットグラフを作成できます。 詳細については、「[Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)」を参照してください。  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint からの接続  
- PowerPivot for SharePoint を使用している場合は、Analysis Services テーブル モード サーバー上で実行されているデータベースへのリダイレクトを提供する BI セマンティック モデル接続ファイルを SharePoint で作成できます。 BI セマンティック モデル接続により、データベースへの HTTP エンドポイントが提供されます。 また、SharePoint サイト上のドキュメントを定期的に使用するナレッジ ワーカーが簡単にテーブル モデルにアクセスできるようになります。 ナレッジ ワーカーがテーブル モデル データベースにアクセスするために知っておく必要があるのは、BI セマンティック モデル接続ファイルの場所またはその URL だけです。 サーバーの場所やデータベース名に関する詳細は、BI セマンティック モデル接続にカプセル化されます。 作成して、BI セマンティック モデル接続ファイルの使用に関する詳細については、次を参照してください[PowerPivot BI セマンティック モデル接続&#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)と[表形式モデルへの BI セマンティック モデル接続を作成します。データベース](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)です。  
+ PowerPivot for SharePoint を使用している場合は、Analysis Services テーブル モード サーバー上で実行されているデータベースへのリダイレクトを提供する BI セマンティック モデル接続ファイルを SharePoint で作成できます。 BI セマンティック モデル接続により、データベースへの HTTP エンドポイントが提供されます。 また、SharePoint サイト上のドキュメントを定期的に使用するナレッジ ワーカーが簡単にテーブル モデルにアクセスできるようになります。 ナレッジ ワーカーがテーブル モデル データベースにアクセスするために知っておく必要があるのは、BI セマンティック モデル接続ファイルの場所またはその URL だけです。 サーバーの場所やデータベース名に関する詳細は、BI セマンティック モデル接続にカプセル化されます。 作成して、BI セマンティック モデル接続ファイルの使用の詳細については、次を参照してください[PowerPivot BI セマンティック モデル接続&#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)と[表形式モデルへの BI セマンティック モデル接続の作成。データベース](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)します。  
   
 ##  <a name="bkmk_Tshoot"></a> 接続の問題のトラブルシューティング  
  このセクションでは、テーブル モデル データベースに接続する際に発生する問題の原因と解決手順について説明します。  
@@ -105,11 +105,11 @@ ms.locfileid: "36076395"
   
  データをインポートする場合に、十分な権限がないのに、ウィザードを使用してリモートの Analysis Services サーバー上のテーブル モデル データベースに接続しようとすると、この Microsoft Excel エラーが発生します。 このエラーを解決するには、データベースに対するユーザー アクセス権が必要です。 データへのユーザー アクセスの許可については、このトピックの前半で説明している手順を参照してください。  
   
- **外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。次の接続を更新できませんでした:\<モデル名 > サンド ボックス**  
+ **外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。次の接続の更新に失敗しました:\<モデル名 > サンド ボックス**  
   
  SharePoint では、モデル データを使用するピボットテーブルでデータのフィルター処理などのデータ操作を実行しようとすると、この Microsoft Excel エラーが発生します。 このエラーは、リモートの Analysis Services サーバーに対する十分な権限がないために発生します。 このエラーを解決するには、データベースに対するユーザー アクセス権が必要です。 データへのユーザー アクセスの許可については、このトピックの前半で説明している手順を参照してください。  
   
- **この操作の実行中にエラーが発生しました。ブックを再読み込みされ、もう一度この操作を実行してください。**  
+ **この操作の実行中にエラーが発生しました。ブックを再読み込みされ、この操作をもう一度実行してください。**  
   
  SharePoint では、モデル データを使用するピボットテーブルでデータのフィルター処理などのデータ操作を実行しようとすると、この Microsoft Excel エラーが発生します。 このエラーは、Excel Services が、モデル データが配置されている Analysis Services インスタンスによって信頼されていないために発生します。 このエラーを解決するには、Analysis Services インスタンスに対する Excel Services の管理権限を付与します。 管理権限の付与については、このトピックの前半で説明している手順を参照してください。 エラーが引き続き発生する場合は、Excel Services アプリケーション プールを再利用します。  
   

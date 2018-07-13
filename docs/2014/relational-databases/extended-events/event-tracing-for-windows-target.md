@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event tracing for windows target
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1ab809f5f3c271faa37129aa55cbf44b0cb70c87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2f768030b110a85d9c2c230bc06d2c9e42e85aa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212912"
 ---
 # <a name="event-tracing-for-windows-target"></a>Event Tracing for Windows ターゲット
   Event Tracing for Windows (ETW) をターゲットとして使用する前に、ETW を活用するための知識を身に付けておくことをお勧めします。 ETW トレースは、拡張イベントと組み合わせて使用されるか、拡張イベントのイベント コンシューマーとして使用されます。 ETW の背景情報については、次の外部リンクを参照してください。  
@@ -48,7 +48,7 @@ ms.locfileid: "36074591"
  ETW ターゲットは、外部 ETW コントローラー (たとえば Logman.exe) からのコントロールをサポートしません。 ETW トレースを生成するには、ETW ターゲットを使用してイベント セッションを作成する必要があります。 詳細については、「 [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)」を参照してください。  
   
 > [!NOTE]  
->  ETW ターゲットを有効にすると、XE_DEFAULT_ETW_SESSION という名前の ETW セッションが作成されます。 XE_DEFAULT_ETW_SESSION という名前のセッションが既に存在する場合は、既存のセッションのプロパティを変更せずに使用されます。 XE_DEFAULT_ETW_SESSION はすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス間で共有されます。 XE_DEFAULT_ETW_SESSION を開始した後に停止する場合は、Logman ツールなどの ETW コントローラーを使用する必要があります。 たとえば、コマンド プロンプトで次のコマンドを実行できます:`logman stop XE_DEFAULT_ETW_SESSION -ets`です。  
+>  ETW ターゲットを有効にすると、XE_DEFAULT_ETW_SESSION という名前の ETW セッションが作成されます。 XE_DEFAULT_ETW_SESSION という名前のセッションが既に存在する場合は、既存のセッションのプロパティを変更せずに使用されます。 XE_DEFAULT_ETW_SESSION はすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス間で共有されます。 XE_DEFAULT_ETW_SESSION を開始した後に停止する場合は、Logman ツールなどの ETW コントローラーを使用する必要があります。 たとえば、コマンド プロンプトで次のコマンドを実行できます:`logman stop XE_DEFAULT_ETW_SESSION -ets`します。  
   
  次の表では、ETW ターゲットの構成に使用できるオプションについて説明します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36074591"
     > [!IMPORTANT]  
     >  最初のセッションの開始後にファイル パスを変更することはできません。  
   
--   マネージ オブジェクト形式 (MOF) のファイルは *\<インストール パス>* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「 [Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851) 」(マネージ オブジェクト形式) を参照してください。  
+-   マネージド オブジェクト フォーマット (MOF) ファイルは *\<インストール パス&gt;* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](http://go.microsoft.com/fwlink/?LinkId=92851)」を参照してください。  
   
 ## <a name="adding-the-target-to-a-session"></a>セッションへのターゲットの追加  
  ETW ターゲットを拡張イベント セッションに追加するには、イベント セッションの作成時または変更時に次のステートメントを含める必要があります。  

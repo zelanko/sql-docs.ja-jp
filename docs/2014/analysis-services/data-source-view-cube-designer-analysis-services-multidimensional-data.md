@@ -1,5 +1,5 @@
 ---
-title: データ ソース ビュー ([キューブ構造] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: データ ソース ビュー ([キューブ構造] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5d1f33aab84cab344ba83478045d1b4bd4962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0025792747cf0cea5fffd7b0a1a35c5efc7ea759
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185309"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>[データ ソース ビュー] (キューブ デザイナーの [キューブ構造] タブ) (Analysis Services - 多次元データ)
   **[データ ソース ビュー]** ペインを使用すると、選択されたキューブに関連付けられているデータ ソース ビューのテーブルおよび列を表示できます。 このペインを使用すると、 **[データ ソース ビュー]** ペインから **[メジャー]** ペインに列をドラッグすることで、メジャー グループおよびメジャーを作成できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36083312"
  **すべてのテーブルを表示します。**  
  キューブに関連付けられているデータ ソース ビューに含まれるすべてのテーブルをペインに表示します。  
   
- **使用されているテーブルのみを表示します。**  
+ **使用されるテーブルのみを表示します。**  
  関連付けられているデータ ソース ビューのキューブによって使用されているテーブルだけをペインに表示します。  
   
  **フレンドリ名を表示します。**  
@@ -54,7 +54,7 @@ ms.locfileid: "36083312"
  **[テーブルの検索]**  
  **[テーブルの検索]** ダイアログ ボックスを表示します。 **[テーブルの検索]** ダイアログ ボックスの詳細については、「[[テーブルの検索] ダイアログ ボックス (Analysis Services - 多次元データ)](find-table-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
   
- **テーブルを整列します。**  
+ **テーブルを並べ替え**  
  **[斜線レイアウトに切り替え]** または **[四角形レイアウトに切り替え]** を選択して指定したレイアウトに従って、ペイン内のオブジェクトを並べ替えます。  
   
  **斜線レイアウトに切り替え**  
@@ -63,7 +63,7 @@ ms.locfileid: "36083312"
 > [!NOTE]  
 >  このオプションは、 **[四角形レイアウトに切り替え]** が選択されている場合にのみ表示されます。  
   
- **四角形レイアウトに切り替える**  
+ **四角形レイアウトに切り替え**  
  オブジェクトを四角形パターンで整列できます。  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ ms.locfileid: "36083312"
 ## <a name="table-context-menu"></a>テーブルのショートカット メニュー  
  **[データ ソース ビュー]** ペインのテーブルまたはビューの名前を右クリックすると表示されるショートカット メニューでは、次のオプションを使用できます。  
   
- **関連するテーブルを表示します。**  
+ **関連テーブルを表示します。**  
  データ ソース ビューで選択されたテーブルに関連するテーブルをペインに表示します。  
   
  **テーブルの非表示します。**  

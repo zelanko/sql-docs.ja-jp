@@ -1,5 +1,5 @@
 ---
-title: 接続表現 (テーブル) |Microsoft ドキュメント
+title: 接続表現 (表形式) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3969d727e4e93bf80de0c195895a6b5c19bcf799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 136c23698e9fe9aff170a66d6a959f57e8cf304a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196002"
 ---
 # <a name="connection-representation-tabular"></a>接続表現 (表形式)
   接続オブジェクトは、テーブル モデルに入力されるデータのソースを定義します。  
@@ -73,6 +73,6 @@ newDatasource.Update();
 ```  
   
 ## <a name="tabular-amo-2012-sample"></a>Tabular AMO 2012 サンプル  
- AMO を使用して作成して接続表現を操作する方法の理解がある、Tabular AMO 2012 サンプル; 内のソース コードを参照してください。具体的には次のソース ファイルで確認してください: Database.cs です。 このサンプルは、Codeplex から入手できます。 サンプル コードは、ここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。  
+ AMO を使用して作成して接続表現を操作する方法の理解がある、Tabular AMO 2012 サンプル; でのソース コードを参照してください。具体的には、次のソース ファイルをチェックイン: Database.cs します。 このサンプルは、Codeplex から入手できます。 サンプル コードは、ここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。  
   
   

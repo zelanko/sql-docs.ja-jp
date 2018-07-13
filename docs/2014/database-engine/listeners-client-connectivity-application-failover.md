@@ -1,14 +1,13 @@
 ---
-title: 可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー (SQL Server) |Microsoft ドキュメント
+title: 可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - read-only routing
@@ -20,13 +19,13 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: 46
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 90dc94aeebdaa99fe2884dc0874f0c01ec8212cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd5187ffce3a34c038471681a5b730b5b92313ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197872"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー (SQL Server)
   このトピックでは、[!INCLUDE[ssHADR](../includes/sshadr-md.md)] クライアント接続とアプリケーションのフェールオーバー機能に関する考慮事項について説明します。  
@@ -61,7 +60,7 @@ ms.locfileid: "36076371"
   
 -   動的ホスト構成プロトコル (DHCP)  
   
-     可用性グループが 1 つのサブネット上にある場合、DHCP を使用するようにすべての可用性グループ リスナーの IP アドレスを構成できます。 実稼動前の環境では、DHCP を使用すると、別のサブネット上のリモート サイトに対する災害復旧を必要としない可用性グループを簡単にセットアップできます。 ただし、実稼働環境では DHCP と可用性グループ リスナーを組み合わせて使用しないでください。 これは、ダウンタイムが発生した場合に DHCP の IP リース期限が切れると、リスナーの DNS 名に関連付けられている新しい DHCP IP アドレスの再登録に余分な時間がかかるためです。 余分な時間がかかると、クライアント接続に失敗します。  
+     可用性グループが 1 つのサブネット上にある場合、DHCP を使用するようにすべての可用性グループ リスナーの IP アドレスを構成できます。 実稼動前の環境では、DHCP を使用すると、別のサブネット上のリモート サイトに対するディザスター リカバリーを必要としない可用性グループを簡単にセットアップできます。 ただし、実稼働環境では DHCP と可用性グループ リスナーを組み合わせて使用しないでください。 これは、ダウンタイムが発生した場合に DHCP の IP リース期限が切れると、リスナーの DNS 名に関連付けられている新しい DHCP IP アドレスの再登録に余分な時間がかかるためです。 余分な時間がかかると、クライアント接続に失敗します。  
   
 -   静的 IP アドレス  
   
@@ -122,13 +121,13 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- この接続文字列の例では、クライアントはポート 1433 で `AGListener` という名前の可用性グループ リスナーへの接続を試みます (可用性グループ リスナーが 1433 でリッスンしている場合、このポートの指定を省略できます)。  この接続文字列は、`ApplicationIntent`プロパティに設定`ReadOnly`、これを行う、*読み取りを目的とした接続文字列*です。  この設定がない場合、サーバーは接続の読み取り専用へのルーティングを試行しません。  
+ この接続文字列の例では、クライアントはポート 1433 で `AGListener` という名前の可用性グループ リスナーへの接続を試みます (可用性グループ リスナーが 1433 でリッスンしている場合、このポートの指定を省略できます)。  接続文字列は、`ApplicationIntent`プロパティに設定`ReadOnly`、これを行う、*読み取りを目的とした接続文字列*します。  この設定がない場合、サーバーは接続の読み取り専用へのルーティングを試行しません。  
   
  可用性グループのプライマリ データベースは、読み取り専用の受信ルーティング要求を処理し、プライマリ レプリカに参加していて読み取り専用ルーティング用に構成されているオンラインの読み取り専用レプリカを特定します。  クライアントは、プライマリ レプリカ サーバーから接続情報を受け取り、特定された読み取り専用レプリカに接続します。  
   
  アプリケーションの目的は、クライアント ドライバーから下位の SQLServer インスタンスに送信できます。  この場合、読み取り専用のアプリケーションの目的は無視され、接続は通常どおり続行されます。  
   
- Application intent 接続プロパティを設定しない読み取り専用ルーティングをバイパスできます`ReadOnly`(指定されていない場合、既定値は`ReadWrite`ログイン時に) または使用する代わりに SQL Server のプライマリ レプリカ インスタンスに直接接続します。可用性グループ リスナー名です。  読み取り専用レプリカに直接接続する場合は、読み取り専用ルーティングも実行されません。  
+ 読み取り専用ルーティング application intent 接続プロパティを設定しないをバイパスする`ReadOnly`(指定しない場合、既定値は`ReadWrite`ログイン時に) または使用する代わりに SQL Server のプライマリ レプリカ インスタンスに直接接続します。可用性グループ リスナー名。  読み取り専用レプリカに直接接続する場合は、読み取り専用ルーティングも実行されません。  
   
 ####  <a name="RelatedTasksApps"></a> 関連タスク  
   
@@ -161,7 +160,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 > [!NOTE]  
 >  可用性グループ リスナーおよび SQL Server フェールオーバー クラスター インスタンス名への単一サブネット接続およびマルチサブネット接続の両方に対して、この設定を推奨します。  このオプションを有効にすると、単一サブネットのシナリオでも、さらに最適化されます。  
   
- `MultiSubnetFailover`接続は TCP ネットワーク プロトコルのみで機能のオプションを選択し、および、仮想ネットワーク名に接続するため、可用性グループ リスナーに接続する場合にのみサポート[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]です。  
+ `MultiSubnetFailover`接続オプションは TCP ネットワーク プロトコルでのみ動作とは、可用性グループ リスナーの仮想ネットワーク名に接続している、および接続する場合にのみ[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]します。  
   
  マルチサブネット フェールオーバーを有効にする ADO.NET プロバイダー (System.Data.SqlClient) の接続文字列の例を次に示します。  
   
@@ -169,7 +168,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- `MultiSubnetFailover`接続オプションを設定する必要があります`True`場合でも、可用性グループは、単一のサブネットのみにします。  これにより、今後、クライアント接続文字列を変更することなく、複数のサブネットをサポートするように新しいクライアントをあらかじめ構成することができ、単一サブネットのフェールオーバーのパフォーマンスも最適化できます。  中に、`MultiSubnetFailover`接続オプションは必要ありません、サブネットのフェールオーバーを高速化が利点です。  これは、クライアント ドライバーが、可用性グループに関連付けられている各 IP アドレスの TCP ソケットを同時に開こうとするためです。  クライアント ドライバーは、最初の IP が正常に応答するのを待ち、応答した場合は、その IP を接続に使用します。  
+ `MultiSubnetFailover`接続オプションを設定する必要があります`True`場合でも、可用性グループは 1 つのサブネットのみにします。  これにより、今後、クライアント接続文字列を変更することなく、複数のサブネットをサポートするように新しいクライアントをあらかじめ構成することができ、単一サブネットのフェールオーバーのパフォーマンスも最適化できます。  中に、`MultiSubnetFailover`接続オプションは必要ありません、サブネット フェールオーバーが速くなる特典が提供されます。  これは、クライアント ドライバーが、可用性グループに関連付けられている各 IP アドレスの TCP ソケットを同時に開こうとするためです。  クライアント ドライバーは、最初の IP が正常に応答するのを待ち、応答した場合は、その IP を接続に使用します。  
   
 ##  <a name="SSLcertificates"></a> 可用性グループ リスナーと SSL 証明書  
  可用性グループ リスナーへの接続時に、参加している SQL Server のインスタンスがセッションの暗号化と共に SSL 証明書を使用していることがあります。この場合、強制的に暗号化するために、接続クライアント ドライバーが SSL 証明書のサブジェクト代替名をサポートする必要があります。  SQL Server ドライバーでの証明書のサブジェクト代替名のサポートは、ADO.NET (SqlClient)、Microsoft JDBC、および SQL Native Client (SNAC) に対して計画されています。  
@@ -210,11 +209,11 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性と災害復旧の Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [可用性グループ リスナーの概要](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (SQL Server AlwaysOn チームのブログ)  
   
--   [SQL Server AlwaysOn チームのブログ: 公式 SQL Server AlwaysOn チーム ブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ: 正式な SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

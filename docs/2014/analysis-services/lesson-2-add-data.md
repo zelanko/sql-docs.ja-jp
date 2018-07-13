@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: データの追加 |Microsoft ドキュメント'
+title: 'レッスン 2: データの追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 697c483d784f4d15682c9690c0c392268ad5b356
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e16182c535fe22a1efe631a42b68c038db365ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165513"
 ---
 # <a name="lesson-2-add-data"></a>レッスン 2: データの追加
   このレッスンでは、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] のテーブルのインポート ウィザードを使用して、AdventureWorksDW SQL データベースに接続し、データを選択し、プレビューして、データをフィルター処理した後、それらのデータをモデル ワークスペース内にインポートします。  
@@ -43,7 +43,7 @@ ms.locfileid: "36075851"
   
 2.  **テーブルのインポート ウィザード**の **[リレーショナル データベース]** で **[Microsoft SQL Server]** をクリックし、 **[次へ]** をクリックします。  
   
-3.  **、Microsoft SQL Server データベースへの接続**] ページの [**接続の表示名**、型`Adventure Works DB from SQL`です。  
+3.  **、Microsoft SQL Server データベースへの接続**] ページの [**接続の表示名**、型`Adventure Works DB from SQL`します。  
   
 4.  **[サーバー名]** に、AdventureWorksDW データベースをインストールしたサーバーの名前を入力します。  
   

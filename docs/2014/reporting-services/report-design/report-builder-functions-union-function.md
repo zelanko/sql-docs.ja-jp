@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 46d0ee10acb57e4553c176be34572fc7f6dd02d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 954da454e2953f14cf61f1d49794829c385a6df3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206692"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union 関数 (レポート ビルダーおよび SSRS)
   式で指定された NULL 以外のすべての数値の結合を、指定されたスコープで評価して返します。  
@@ -36,16 +36,16 @@ Union(expression, scope, recursive)
   
 #### <a name="parameters"></a>パラメーター  
  *式 (expression)*  
- (`SqlGeometry`または`SqlGeography`) この集計関数の実行対象の式。  
+ (`SqlGeometry`または`SqlGeography`) 集計関数の実行対象の式。  
   
  *スコープ (scope)*  
  (`String`) 省略可能です。 集計関数の適用先となるレポート アイテムを含むデータセット、グループ、またはデータ領域の名前です。 *scope* を指定しない場合、現在のスコープが使用されます。  
   
  *再帰*  
- (**列挙型**) 省略可。 `Simple` (既定値) または`RdlRecursive`です。 集計を再帰的に実行するかどうかを指定します。  
+ (**列挙型**) 省略可。 `Simple` (既定値) または`RdlRecursive`します。 集計を再帰的に実行するかどうかを指定します。  
   
 ## <a name="return"></a>戻り値  
- か、空間オブジェクトを返します`SqlGeometry`または`SqlGeography`式の型に基づきます。 詳細については`SqlGeometry`と`SqlGeography`空間データ型を参照してください[空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)です。  
+ いずれかの空間オブジェクトを返します`SqlGeometry`または`SqlGeography`式の型に基づきます。 詳細については`SqlGeometry`と`SqlGeography`空間データ型を参照してください[空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)します。  
   
 ## <a name="remarks"></a>コメント  
  式で指定されたデータセットは、同じデータ型である必要があります。  
@@ -58,7 +58,7 @@ Union(expression, scope, recursive)
   
 -   入れ子集計の*Scope* には、データセット名は使用できません。  
   
--   *式*含めないで`First`、 `Last`、 `Previous`、または`RunningValue`関数。  
+-   *式*する必要がありますが含まれていない`First`、 `Last`、 `Previous`、または`RunningValue`関数。  
   
 -   *Expression* には、 *recursive*を指定する入れ子集計を含めることができません。  
   
@@ -67,7 +67,7 @@ Union(expression, scope, recursive)
  再帰的集計については、「[複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 例を次の表に示します`SqlGeometry`式と`Union`空間データ用の WKT (Well Known Text) 形式に示すように、式の結果します。  
+ 次の表の例を示します`SqlGeometry`式と`Union`空間データ用の WKT (Well Known Text) 形式の式の結果します。  
   
 |空間データを含むフィールド|例|Union の結果|  
 |-----------------------------|-------------|------------------|  
@@ -85,6 +85,6 @@ Union(expression, scope, recursive)
  [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [式の合計、集計、および組み込みコレクションのスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

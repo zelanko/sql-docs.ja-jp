@@ -1,5 +1,5 @@
 ---
-title: TestServer 要素 (DTA) |Microsoft ドキュメント
+title: TestServer 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - TestServer element
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5eced520aee906a2b56abfa5034196add27bfe7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 574f391a94df9881bdec346635197fd273bc836f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194422"
 ---
 # <a name="testserver-element-dta"></a>TestServer 要素 (DTA)
   実稼働サーバーのチューニング時に使用するテスト サーバーを指定します。  

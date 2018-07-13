@@ -1,5 +1,5 @@
 ---
-title: ブックと定期データ更新 (SharePoint 2013) のアップグレード |Microsoft ドキュメント
+title: ブックと定期データ更新 (SharePoint 2013) のアップグレード |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 18
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd35257533c7cbf639ea1c1fecadcf3bcff4acd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5bb205ac875315770454a9075ab0c6acbabd97fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216182"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>ブックのアップグレードと定期データ更新 (SharePoint 2013)
   このトピックでは、以前の PowerPivot 環境で作成されたブックのユーザー エクスペリエンスについて、およびこのリリースで導入された新機能を利用できるよう、PowerPivot ブックをアップグレードする方法について説明します。 新機能の詳細については、「 [PowerPivot の新機能](http://go.microsoft.com/fwlink/?LinkID=203917)」を参照してください。  
@@ -33,9 +33,9 @@ ms.locfileid: "36075387"
   
 -   [SQL Server 2008 R2 ブックから SQL Server 2012 Service Pack 1 (SP1) ブックへのアップグレード](#bkmk_to_2012sp1_from_2008r2)  
   
--   [Office 2013 ブックへの 2012 を使用して作成されたバージョンからアップグレード PowerPivot アドインを Excel 用](#bkmk_to_2012sp1_from_2012)  
+-   [Office 2013 ブックへのアップグレード、2012 を使用して作成したブックから PowerPivot アドインの Excel](#bkmk_to_2012sp1_from_2012)  
   
--   [For Excel 2010、2008 R2 PowerPivot アドインを使用して作成されたバージョンから SQL Server 2012 ブックへのアップグレードします。](#bkmk_to_2012_from_2008R2)  
+-   [For Excel 2010、2008 R2 PowerPivot アドインを使用して作成したブックから SQL Server 2012 ブックへのアップグレードします。](#bkmk_to_2012_from_2008R2)  
   
 -   [新しいサーバーでの複数バージョンのブックの実行](#bkmk_runold)  
   
@@ -89,10 +89,10 @@ ms.locfileid: "36075387"
   
  Analysis Services 機能の変更の詳細については、次を参照してください[SQL Server 2014 Analysis Services 機能の動作の変更。](../../behavior-changes-to-analysis-services-features-in-sql-server-2014.md)  
   
- 更新の履歴の詳細については、次を参照してください。[データ更新履歴の表示&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)です。  
+ 更新の履歴の詳細については、次を参照してください。[データ更新履歴の表示&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)します。  
   
-##  <a name="bkmk_to_2012sp1_from_2012"></a> Office 2013 ブックへの 2012 を使用して作成されたバージョンからアップグレード PowerPivot アドインを Excel 用  
- このセクションでは、アップグレードをについて説明します**に**SQL Server 2012 SP1 PowerPivot in Excel 2013**から**SQL Server 2012 PowerPivot for Excel 2010 ブック。  
+##  <a name="bkmk_to_2012sp1_from_2012"></a> Office 2013 ブックへのアップグレード、2012 を使用して作成したブックから PowerPivot アドインの Excel  
+ このセクションには、アップグレードがについて説明します**に**Excel 2013 では、SQL Server 2012 SP1 PowerPivot**から**for Excel 2010 ブックの SQL Server 2012 PowerPivot です。  
   
  ブックをアップグレードすると、以前のバージョンのブックで定期データ更新を試みると発生する、次のエラーが解決されます。  
   
@@ -108,8 +108,8 @@ ms.locfileid: "36075387"
   
 4.  ブックを保存して、SharePoint 2013 サーバーに再発行します。  
   
-##  <a name="bkmk_to_2012_from_2008R2"></a> For Excel 2010、2008 R2 PowerPivot アドインを使用して作成されたバージョンから SQL Server 2012 ブックへのアップグレードします。  
- このセクションでは、アップグレードをについて説明します**に**SQL Server 2012 PowerPivot for Excel 2010**から**SQL Server 2008 R2 PowerPivot for Excel 2010 ブック。  
+##  <a name="bkmk_to_2012_from_2008R2"></a> For Excel 2010、2008 R2 PowerPivot アドインを使用して作成したブックから SQL Server 2012 ブックへのアップグレードします。  
+ このセクションには、アップグレードがについて説明します**に**SQL Server 2012 PowerPivot for Excel 2010**から**SQL Server 2008 R2 PowerPivot for Excel 2010 ブック。  
   
  ブックをアップグレードすると、以前のバージョンのブックで定期データ更新を試みると発生する、次のエラーが解決されます。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "36075387"
   
  アップグレードには 2 つの方法があります。  
   
-1.  インストールされているコンピューターに Excel で開くことによって、各ブックを手動でアップグレード、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]バージョンの PowerPivot for Excel、し、サーバーに再発行します。 新しいバージョンのアドインでブックを開くと、内部でいくつかの処理が行われます。具体的には、ブックのデータ接続文字列でデータ プロバイダーが MSOLAP.5 に更新され、メタデータが更新され、新しい実装に対応するためにリレーションシップが再作成されます。  
+1.  あるコンピューター上で Excel で開くことによって手動で各ブックをアップグレード、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]バージョンの PowerPivot for Excel、し、サーバーに再発行します。 新しいバージョンのアドインでブックを開くと、内部でいくつかの処理が行われます。具体的には、ブックのデータ接続文字列でデータ プロバイダーが MSOLAP.5 に更新され、メタデータが更新され、新しい実装に対応するためにリレーションシップが再作成されます。  
   
-2.  SharePoint 管理者が自動的にアップグレードする、SharePoint ファームで PowerPivot System サービスの自動アップグレード機能を有効にまたは、 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] PowerPivot ブックの定期データ更新の実行 (ブックのみである時に用に構成されたスケジュールされたデータ更新がアップグレードされます)。  
+2.  または、SharePoint 管理者は自動的にアップグレードする SharePoint ファームで PowerPivot System サービスの自動アップグレード機能できるように、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]定期データ更新の実行 (ブックのみである時に、PowerPivot ブック用に構成されたスケジュールされたデータ更新がアップグレードされます)。  
   
     > [!NOTE]  
     >  自動アップグレードは、サーバー構成機能です。特定のブック、ライブラリ、またはサイト コレクションについては有効または無効にできません。  
@@ -136,7 +136,7 @@ ms.locfileid: "36075387"
 PS C:\Windows\system32> Get-PowerPivotSystemService  
 ```  
   
- Get-PowerPivotSystemService からの出力は、プロパティとそれに対応する値のリストです。 表示されるはず`WorkbookUpgradeOnDataRefresh`プロパティの一覧です。 自動アップグレードが有効になっている場合、値は **true** に設定されます。 **false**の場合は、次の手順を続行し、ブックの自動アップグレードを有効にします。  
+ Get-PowerPivotSystemService からの出力は、プロパティとそれに対応する値のリストです。 表示する必要があります`WorkbookUpgradeOnDataRefresh`プロパティの一覧。 自動アップグレードが有効になっている場合、値は **true** に設定されます。 **false**の場合は、次の手順を続行し、ブックの自動アップグレードを有効にします。  
   
  ブックの自動アップグレードを有効にするには、次のコマンドを実行します。  
   
@@ -176,7 +176,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
 ## <a name="see-also"></a>参照  
  [SharePoint 2013 への PowerPivot を移行します。](migrate-power-pivot-to-sharepoint-2013.md)   
  [PowerPivot for SharePoint をアップグレードします。](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
- [Analysis Services と Business Intelligence の新機能](../../what-s-new-in-analysis-services.md)   
- [データ更新履歴の表示&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
+ [新しい Analysis Services と Business Intelligence の新機能](../../what-s-new-in-analysis-services.md)   
+ [データ更新履歴表示&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

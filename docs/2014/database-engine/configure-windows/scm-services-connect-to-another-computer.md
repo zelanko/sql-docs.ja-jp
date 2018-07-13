@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 147e23e4b2c717d36bf2774f0e3e1d049a46f9fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c0878b7cfa2ca6d77d5d43f6d0642d5ecaf42586
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167223"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>別のコンピューターへの接続 (SQL Server 構成マネージャー)
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で別のコンピューターに接続する方法について説明します。 Windows の [コンピューターの管理] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) を開くための最初の手順に従って、コンピューターに接続し、[サービスとアプリケーション] ツリーを展開します。 2 番目の手順に従って、リモート コンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーへのリンクを含むファイルを作成します。  
@@ -49,7 +49,7 @@ ms.locfileid: "36074657"
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
-2.  **開く**ボックスに、入力`mmc -a`を開くには、[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理コンソールを作成者モードでします。  
+2.  **開く**ボックスに「`mmc -a`を開く、[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理コンソールを作成者モードでします。  
   
 3.  **[ファイル]** メニューの **[スナップインの追加と削除]** をクリックします。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36074657"
   
 11. **[ウィンドウ]** メニューの **[コンソール ルート]** をクリックし、最初のウィンドウに切り替えてからそのウィンドウを削除します。  
   
-12. **ファイル** メニューのをクリックして**名前を付けて保存**、適切な名前を持つ、目的のフォルダーでファイルを保存し、`.msc`ファイル拡張子。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソールを閉じます。  
+12. **ファイル** メニューのをクリックして**名前を付けて保存**で適切な名前で、目的のフォルダーにファイルを保存し、`.msc`ファイル拡張子。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソールを閉じます。  
   
 13. 対象のコンピューターの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開くには、そのファイルをダブルクリックします。 必要な場合は、デスクトップまたは **[スタート]** メニューにファイルへのリンクを保存します。  
   

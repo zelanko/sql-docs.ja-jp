@@ -1,5 +1,5 @@
 ---
-title: 共有データ ソースのプロパティ ダイアログ ボックスで、資格情報 |Microsoft ドキュメント
+title: 共有データ ソースのプロパティ ダイアログ ボックスは、資格情報 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.credentials.f1
 ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4956317c08b1f48e6504122e30392426e3dbcfcd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e70c54de0c3d43d68753780b1b4cde5084ad64b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192592"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>[資格情報] ([共有データ ソース プロパティ] ダイアログ ボックス)
   **[共有データ ソース プロパティ]** ダイアログ ボックスの **[資格情報]** を選択すると、レポート内の共有データ ソースに接続するための資格情報を表示および変更できます。 指定した資格情報は、データ ソースへのアクセス、およびレポート プレビュー用のデータのコピーのキャッシュに使用されます。 プレビュー データのキャッシュの方法の詳細については、「 [レポートのプレビュー](reports/previewing-reports.md)」を参照してください。 資格情報の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
@@ -30,7 +30,7 @@ ms.locfileid: "36084233"
  **Windows 認証 (統合セキュリティ) を使用します。**  
  Windows 認証を使用します。  
   
- **このユーザー名とパスワードを使用します。**  
+ **このユーザー名とパスワードを使用して、**  
  特定のユーザー名とパスワードを指定します。 共有データ ソースの場合、レポート サーバー プロジェクトを対象サーバーにパブリッシュするときに、データベース用の保存された資格情報としてユーザー名とパスワードが保存されます。 ユーザー名とパスワードを Windows 資格情報として使用する場合は、対象サーバーにパブリッシュされた共有データ ソースのプロパティを編集できます。 詳細については、「[共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)」を参照してください。  
   
  **ユーザー名**  
@@ -39,7 +39,7 @@ ms.locfileid: "36084233"
  **Password**  
  データ ソースへのログインに使用するパスワードを入力します。  
   
- **資格情報の入力を求める**  
+ **資格情報のプロンプト**  
  レポートの実行時に資格情報の入力を要求します。  
   
  **プロンプト文字列を入力します。**  

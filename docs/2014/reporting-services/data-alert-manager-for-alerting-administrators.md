@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
@@ -16,13 +16,13 @@ ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6016ec6964ba7045cbad65913fe441b9e2ac38b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 657ab183836530888773b6709d2efbd75577ee37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177299"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>警告管理者用のデータ警告マネージャー
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のデータ警告マネージャーを使用し、SharePoint 警告管理者はデータ警告を管理することができます。 警告管理者は、サイトに保存されたすべての警告についての情報を表示することができ、警告を削除することもできます。 次の図に、SharePoint 警告管理者がデータ警告マネージャー内で使用できる機能を示します。  
@@ -43,7 +43,7 @@ ms.locfileid: "36083600"
   
  ![[サイトの設定] ページの Reporting Services セクション](media/rs-sitesettings.gif "[サイトの設定] ページの Reporting Services セクション")  
   
- データ警告マネージャーには、警告名、レポート名、警告の所有者の名前、警告メッセージが送られた数、警告が最後に実行された時刻、警告の定義が最後に変更された時刻、および警告メッセージの状態を一覧にしたテーブルが組み込まれています。 警告の生成や送信ができない場合は、エラーに関する情報が状態列に含まれているので、これを利用して警告のトラブルシューティングを行います。 詳細については、次を参照してください。[データ警告マネージャーで SharePoint サイト上のすべてのデータ警告の管理](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)です。  
+ データ警告マネージャーには、警告名、レポート名、警告の所有者の名前、警告メッセージが送られた数、警告が最後に実行された時刻、警告の定義が最後に変更された時刻、および警告メッセージの状態を一覧にしたテーブルが組み込まれています。 警告の生成や送信ができない場合は、エラーに関する情報が状態列に含まれているので、これを利用して警告のトラブルシューティングを行います。 詳細については、次を参照してください。[データ警告マネージャーで SharePoint サイト上のすべてのデータ警告の管理](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)します。  
   
  次の表は、データ警告マネージャー内のテーブルから取得されたサンプル データを示しています。 エラーが発生した場合は、エラー メッセージとログ内のエントリの識別子 (GUID) がテーブル内の **[状態]** フィールドに含められます。  
   
@@ -54,13 +54,13 @@ ms.locfileid: "36083600"
 |InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<エラー メッセージ> ログ ファイルにはエラーの詳細が含まれています。 識別子: \<GUID> のログ エントリを参照してください。|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|警告が作成されました。|  
   
- 詳細については、「[データ警告マネージャーで SharePoint サイト上すべてのデータ警告の管理](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)です。  
+ 詳細については、「[データ警告マネージャーで SharePoint サイト上すべてのデータ警告の管理](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)します。  
   
  サイト ユーザーが作成したすべての警告を表示することができます。 まず、ユーザーを選択し、次に、そのユーザーの警告をすべて表示するか、特定のレポートに関する警告のみを表示するかを選択します。  
   
   
 ##  <a name="DeleteAlerts"></a> データ警告の削除  
- 警告の定義は、データ警告マネージャーから削除します。 データ警告の定義にはそれぞれ所有者 (作成した SharePoint ユーザー) が存在します。 所有者は、自分が作成した警告の定義のみ削除することができます。 詳細については、次を参照してください。[データ警告マネージャーで マイ データ警告の管理](manage-my-data-alerts-in-data-alert-manager.md)です。  
+ 警告の定義は、データ警告マネージャーから削除します。 データ警告の定義にはそれぞれ所有者 (作成した SharePoint ユーザー) が存在します。 所有者は、自分が作成した警告の定義のみ削除することができます。 詳細については、次を参照してください。[データ警告マネージャーでデータ警告の管理](manage-my-data-alerts-in-data-alert-manager.md)します。  
   
  SharePoint 警告管理者は、すべてのサイト ユーザーによって作成された警告の定義を一覧表示または削除できます。 詳細については、次を参照してください[データ警告マネージャーで SharePoint サイト上のすべてのデータ警告の管理。](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   

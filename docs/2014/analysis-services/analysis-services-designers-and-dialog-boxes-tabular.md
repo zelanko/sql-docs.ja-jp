@@ -1,5 +1,5 @@
 ---
-title: Analysis Services のデザイナーおよびダイアログ ボックス (テーブル) |Microsoft ドキュメント
+title: Analysis Services のデザイナーおよびダイアログ ボックス (テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd2af1f3-cd8b-4651-9e4d-7c4c94353d7e
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 285f042fb5a3bd4fb85be8e4931f41b6ebe0c023
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14c6ca0494c49b1a445f6d144d3a0a527f13b469
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165723"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Analysis Services のデザイナーおよびダイアログ ボックス (テーブル)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のテーブル プロジェクト作成環境と、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のテーブル モデル管理ツールには、多くのダイアログ ボックス、プロパティ ページ、およびウィザード ページが含まれています。 詳細について調べるには、[ヘルプ] ボタンをクリックするか、F1 キーを押します。  

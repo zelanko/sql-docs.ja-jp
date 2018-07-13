@@ -1,5 +1,5 @@
 ---
-title: LastProcessed 要素 (ASSL) |Microsoft ドキュメント
+title: LastProcessed 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - LastProcessed element
 ms.assetid: df3d1f6f-705c-4408-9eb3-c550a1dec450
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c95c1d2f98e89536b2875193b8dc00d9a7c0c189
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d5fd5e94c8a92ee21b1cb04e5f9ef62eddae91f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206192"
 ---
 # <a name="lastprocessed-element-assl"></a>LastProcessed 要素 (ASSL)
   親要素が含まれているデータベースが最後に処理された時刻を示す読み取り専用のタイムスタンプを格納します。  

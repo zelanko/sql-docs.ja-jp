@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], about
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 656a66a9c0567c7d65a66983a2f459ee802ef523
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 279e47c38c5339f74545cd0b13a175a4a9a604b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170261"
 ---
 # <a name="about-change-data-capture-sql-server"></a>変更データ キャプチャについて (SQL Server)
   変更データ キャプチャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルに対して適用された挿入、更新、削除の各アクティビティを記録して、 変更の詳細を、利用しやすいリレーショナル形式で格納します。 変更された行に対応する列情報が、その変更をターゲット環境に適用するために必要なメタデータと共にキャプチャされ、追跡対象となるソース テーブルの列構造がミラー化された変更テーブルに格納されます。 コンシューマーは、用意されているテーブル値関数を使用して、変更データに体系的にアクセスできます。  
@@ -38,9 +38,9 @@ ms.locfileid: "36075213"
  変更データ キャプチャの変更データのソースは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクション ログです。 追跡対象のソース テーブルに対して挿入、更新、削除の各操作が適用されると、それらの変更を記述するエントリがこのログに追加されます。 このログは、キャプチャ プロセスへの入力として機能します。 このプロセスによってログが読み取られ、変更に関する情報が、追跡対象のテーブルに関連付けられている変更テーブルに追加されます。 用意されている関数を使用すると、指定した範囲にこの変更テーブルに追加された変更を列挙できます。この情報は、フィルター処理された結果セットの形式で返されます。 通常は、このフィルター処理された結果セットを使用して、アプリケーション プロセスによって外部環境のソースの表現が更新されます。  
   
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>変更データ キャプチャとキャプチャ インスタンスについて  
- データベース内の個々のテーブルの変更を追跡するには、まずそのデータベースで変更データ キャプチャを明示的に有効にする必要があります。 これは、 [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)ストアド プロシージャを使用して実行します。 データベースを有効にした後、 [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)ストアド プロシージャを使用して、ソース テーブルを追跡対象テーブルとして指定できます。 テーブルに対して変更データ キャプチャを有効にすると、関連付けられたキャプチャ インスタンスが作成されます。これにより、ソース テーブルの変更データの伝播がサポートされます。 キャプチャ インスタンスは、1 つの変更テーブルと、最大 2 つのクエリ関数で構成されます。 変更データ キャプチャ メタデータ テーブルで、キャプチャ インスタンスの構成の詳細を記述するメタデータが保持される`cdc.change_tables`、 `cdc.index_columns`、および`cdc.captured_columns`です。 この情報を取得するには、 [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql)ストアド プロシージャを使用します。  
+ データベース内の個々のテーブルの変更を追跡するには、まずそのデータベースで変更データ キャプチャを明示的に有効にする必要があります。 これは、 [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)ストアド プロシージャを使用して実行します。 データベースを有効にした後、 [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)ストアド プロシージャを使用して、ソース テーブルを追跡対象テーブルとして指定できます。 テーブルに対して変更データ キャプチャを有効にすると、関連付けられたキャプチャ インスタンスが作成されます。これにより、ソース テーブルの変更データの伝播がサポートされます。 キャプチャ インスタンスは、1 つの変更テーブルと、最大 2 つのクエリ関数で構成されます。 変更データ キャプチャ メタデータ テーブルで、キャプチャ インスタンスの構成の詳細を記述するメタデータが保持される`cdc.change_tables`、 `cdc.index_columns`、および`cdc.captured_columns`します。 この情報を取得するには、 [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql)ストアド プロシージャを使用します。  
   
- キャプチャ インスタンスに関連付けられているオブジェクトはすべて、有効にされたデータベースの変更データ キャプチャ スキーマに作成されます。 キャプチャ インスタンスの名前は、データベースのキャプチャ インスタンス間で重複しない有効なオブジェクト名である必要があります。 既定の名前は、\<*スキーマ名*_ソース テーブルの *テーブル名*> です。 追加することによって、関連付けられている変更テーブルの名前は`_CT`キャプチャ インスタンスの名前にします。 ために使用される関数付加することによってすべての変更のクエリの名前は`fn_cdc_get_all_changes_`キャプチャ インスタンスの名前にします。 キャプチャ インスタンスがサポートするために構成されている場合`net changes`、`net_changes`関数も作成され、付加することによって名前付きクエリ**fn_cdc_get_net_changes\_** キャプチャ インスタンスの名前にします。  
+ キャプチャ インスタンスに関連付けられているオブジェクトはすべて、有効にされたデータベースの変更データ キャプチャ スキーマに作成されます。 キャプチャ インスタンスの名前は、データベースのキャプチャ インスタンス間で重複しない有効なオブジェクト名である必要があります。 既定の名前は、\<*スキーマ名*_ソース テーブルの *テーブル名*> です。 追加することによって、関連付けられている変更テーブルが名前付き`_CT`キャプチャ インスタンスの名前。 ために使用される関数のすべての変更のクエリが付けた`fn_cdc_get_all_changes_`キャプチャ インスタンスの名前。 キャプチャ インスタンスがサポートするために構成されている場合`net changes`、`net_changes`クエリも関数が作成され、付けた**fn_cdc_get_net_changes\_** キャプチャ インスタンスの名前。  
   
 ## <a name="change-table"></a>変更テーブル  
  変更データ キャプチャの変更テーブルの最初の 5 つの列は、メタデータ列です。 これらは、記録された変更に関係する追加情報を提供します。 残りの列には、識別されたソース テーブルのキャプチャ対象列の名前 (および通常は型) が反映されます。 これらの列は、ソース テーブルから収集されたキャプチャ対象列のデータを保持します。  
@@ -54,7 +54,7 @@ ms.locfileid: "36075213"
   
  変更テーブルに格納されるデータは、定期的かつ体系的にクリーンアップしないと、増大して管理しきれなくなります。 このため、変更データ キャプチャのクリーンアップ プロセスにより、保有期間に基づくクリーンアップ ポリシーが適用されます。 このプロセスでは、まず、時間制限を満たすように有効期間の下端が移動されます。 次に、有効期限が切れた変更テーブル エントリが削除されます。 既定では、3 日分のデータが保持されます。  
   
- 高の最後に、キャプチャ プロセスの変更データの新しい各バッチをコミットする新しいエントリに追加されます`cdc.lsn_time_mapping`の変更テーブル エントリを持つ各トランザクションにします。 このマッピング テーブルでは、コミット ログ シーケンス番号 (LSN) とトランザクションのコミット時間の両方 (columns start_lsn と tran_end_time) が保持されます。 ある最大の LSN 値`cdc.lsn_time_mapping`のデータベースの有効期間のハイ ウォーターマークを表します。 それに対応するコミット時間は、保有期間に基づくクリーンアップの新しい下限を計算するための基礎として使用されます。  
+ 高の最後に、キャプチャ プロセスによって変更データの新しい各バッチがコミット新しいエントリに追加されます`cdc.lsn_time_mapping`変更テーブル エントリを持つ各トランザクションにします。 このマッピング テーブルでは、コミット ログ シーケンス番号 (LSN) とトランザクションのコミット時間の両方 (columns start_lsn と tran_end_time) が保持されます。 含まれる最大 LSN 値`cdc.lsn_time_mapping`データベースの有効期間の高基準を表します。 それに対応するコミット時間は、保有期間に基づくクリーンアップの新しい下限を計算するための基礎として使用されます。  
   
  キャプチャ プロセスではトランザクション ログから変更情報を抽出するため、変更がソース テーブルにコミットされてから、関連付けられている変更テーブルにその変更が反映されるまでの間に、構造的な待機時間が生じます。 この待機時間は一般に小さいとはいえ、関連するログ エントリの処理がキャプチャ プロセスによって完了するまでは変更データを利用できないということを覚えておく必要があります。  
   

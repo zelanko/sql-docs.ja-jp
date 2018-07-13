@@ -1,5 +1,5 @@
 ---
-title: DimensionPermission データ型 (ASSL) |Microsoft ドキュメント
+title: DimensionPermission データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DimensionPermission data type
 ms.assetid: 066405ff-903f-467a-b0d5-e58653952c52
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c614d2fd30f7bd3b831c571cc4d3de0cf26e365
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 740479b334195b36ac7f8d04446575917da04d02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178839"
 ---
 # <a name="dimensionpermission-data-type-assl"></a>DimensionPermission データ型 (ASSL)
   データベース ディメンションに割り当てられている権限を表す派生データ型を定義します。  

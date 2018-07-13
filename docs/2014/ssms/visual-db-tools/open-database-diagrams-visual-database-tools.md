@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], opening
 - opening database diagrams
 - diagrams [SQL Server], opening
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9306aa2a1df51b88d0bdbd5fac35351f7407a7d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd31ee9eece672e2499bac5988a8c37481fbe005
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198322"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>データベース ダイアグラムを開く方法 (Visual Database Tools)
   ダイアグラムの構造を表示または編集するには、データベース ダイアグラムを開きます。  
@@ -44,7 +44,7 @@ ms.locfileid: "36076549"
 >  ダイアグラムの所有者、またはデータベースの db_owner ロールのメンバーだけがダイアグラムを開くことができます。  
   
 ## <a name="see-also"></a>参照  
- [データベース ダイアグラムの操作&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [データベース ダイアグラムを扱う&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [データベース ダイアグラムの所有権について (Visual Database Tools)](understand-database-diagram-ownership-visual-database-tools.md)  
   
   
