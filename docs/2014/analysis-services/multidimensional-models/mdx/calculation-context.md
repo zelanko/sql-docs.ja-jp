@@ -1,5 +1,5 @@
 ---
-title: 計算コンテキスト |Microsoft ドキュメント
+title: 計算コンテキスト |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2e0837a34f8e54e9d6042e5b0dcc10b84c3084e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 854e53962dcc1b206d20b441b56b7746650aaf94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202142"
 ---
 # <a name="calculation-context"></a>計算コンテキスト
   計算コンテキストとは、式が評価され、すべての座標が明示的に知られているか、または式から派生することができる、キューブの既知のサブ空間です。  
@@ -74,8 +74,8 @@ WHERE (Customer.Country.France,
 >  クエリのパフォーマンスを向上するには、解決プロセスのできるだけ早い段階でメンバーおよび組を削除してください。 こうすることで、最終的なメンバーのセットに対するクエリ時の複雑な計算を、最小限のセルに対して行うことができます。  
   
 ## <a name="see-also"></a>参照  
- [クエリ内のキューブ コンテキストを確立&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
+ [クエリ内のキューブ コンテキストの確立&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
  [MDX クエリの基礎&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX での概念をキー &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [MDX での基本概念&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
   

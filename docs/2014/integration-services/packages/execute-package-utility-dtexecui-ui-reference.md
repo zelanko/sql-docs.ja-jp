@@ -1,5 +1,5 @@
 ---
-title: パッケージ実行ユーティリティ (DtExecUI) UI リファレンス |Microsoft ドキュメント
+title: 実行パッケージ ユーティリティ (DtExecUI) の UI リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
 - sql12.dts.dtexecui.executionoptions.f1
@@ -26,16 +26,16 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6213873f823c8b4cb89a7db03c612971845b75a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 215634d6a42c25870c4cac476905f19386df69ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256848"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>パッケージ実行ユーティリティ (DtExecUI) の UI リファレンス
-  **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 開くことが、このユーザー インターフェイス[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]」と入力して`dtexecui`を使用してパッケージを実行する代わりには、コマンド プロンプトで、 **DTExec**コマンド プロンプト ツールです。  
+  **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 開くことができます、このユーザー インターフェイス[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または」と入力して`dtexecui`を使用してパッケージを実行する代わりには、コマンド プロンプトで、 **DTExec**コマンド プロンプト ツールです。  
   
  **dtexecui.exe** ユーティリティと同じ手順でパッケージを実行します。 このユーティリティは 32 ビット ツールであるため、64 ビット環境では Windows on Win32 (WOW) で実行される 64 ビット環境の **dtexecui.exe** を使用して、パッケージを実行します。 64 ビット コンピューターで dtexecui.exe ユーティリティを使用してコマンドを開発およびテストする場合、実稼働サーバー上でコマンドの配置またはスケジュール設定を行う前に、64 ビット バージョンの **dtexec.exe** を使用してコマンドのテストを 64 ビット モードで行う必要があります。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36072167"
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>コマンド プロンプトでパッケージ実行ユーティリティを開くには  
   
--   コマンド プロンプト ウィンドウで実行`dtexecui`です。  
+-   コマンド プロンプト ウィンドウで実行`dtexecui`します。  
   
  ここでは、 **[パッケージ実行ユーティリティ]** ダイアログ ボックスのページについて説明します。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36072167"
  **[追加]**  
  **[開く]** ダイアログ ボックスを使用して、構成を追加します。 既定では、.dtsconfig 拡張子を持つファイルのみがダイアログ ボックスに一覧表示されます。  
   
- **削除**  
+ **[削除]**  
  一覧で構成を選択し、次に **[削除]** をクリックします。  
   
  **実行**  
@@ -162,7 +162,7 @@ ms.locfileid: "36072167"
  **[追加]**  
  **[開く]** ダイアログ ボックスを使用して、コマンド ファイルを追加します。  
   
- **削除**  
+ **[削除]**  
  テキスト ボックスでコマンド ファイルを選択し、 **[削除]** ボタンを使用して削除します。  
   
  **実行**  
@@ -178,7 +178,7 @@ ms.locfileid: "36072167"
  **接続マネージャー**  
  チェック ボックスをオンにすると、 **[接続文字列]** 列が編集可能になります。  
   
- **description**  
+ **[説明]**  
  それぞれの接続マネージャーの説明を表示します。 説明は編集できません。  
   
  **[接続文字列]**  
@@ -256,7 +256,7 @@ ms.locfileid: "36072167"
  **[コンソールのログ記録]**  
  選択したイベントが発生したときにログに書き込まれる情報を指定します。  
   
- **Name**  
+ **名前**  
  パッケージを作成した人物の名前をレポートに記録する場合に選択します。  
   
  **[Computer]**  
@@ -296,7 +296,7 @@ ms.locfileid: "36072167"
  **[構成文字列]**  
  ログの場所を指すパッケージから接続マネージャーの名前を選択するか、ログ プロバイダーに接続するための接続文字列を入力します。  
   
- **削除**  
+ **[削除]**  
  ログ プロバイダーを選択し、クリックして削除します。  
   
  **実行**  
@@ -312,10 +312,10 @@ ms.locfileid: "36072167"
  **[プロパティのパス]**  
  プロパティのパスを入力します。 パスの構文では、円記号 (\\) を使用して続くアイテムがコンテナーであることを示し、ピリオド (.) を使用して続くアイテムがプロパティであることを示します。また、角かっこはコレクションのメンバーを示します。 メンバーは、インデックスまたは名前で識別できます。 たとえば、パッケージ変数のプロパティのパスは、「\Package.Variables[MyVariable].Value」です。  
   
- **Value**  
+ **[値]**  
  プロパティの値を入力します。  
   
- **削除**  
+ **[削除]**  
  プロパティのパスを選択し、クリックして削除します。  
   
  **実行**  

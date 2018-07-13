@@ -1,27 +1,26 @@
 ---
-title: SQL Server 2014 の開発者向けリファレンス |Microsoft ドキュメント
+title: SQL Server 2014 の開発者向けリファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- docset-sql-devref
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql12.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8b31e616e301c659ee25f4f6e4be1779ec362b70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d28d430ee7401fcdf248d6a5d13da558519a71ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192902"
 ---
 # SQL Server 2014 の開発者向けリファレンス
   以下の機能とテクノロジによって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースのデータにアクセスするアプリケーションの開発が可能になります。  
@@ -43,7 +42,7 @@ ms.locfileid: "36075855"
   
  ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [SQL Server 管理オブジェクト&#40;SMO&#41;プログラミング ガイド](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[データベース エンジン拡張ストアド プロシージャのプログラミング](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
+ ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[データベース エンジン拡張ストアド プロシージャ プログラミング](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
   
  ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[データ コレクターのプログラミング](../database-engine/dev-guide/data-collector-programming.md)  
   
@@ -53,11 +52,11 @@ ms.locfileid: "36075855"
   
  ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [Analysis Management Objects を使用した開発&#40;AMO&#41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [Services スクリプト言語の分析の使用による開発&#40;ASSL&#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [Services スクリプト言語の分析を使用した開発&#40;ASSL&#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [OLE DB for Data Mining](../analysis-services/dev-guide/ole-db-for-data-mining.md)  
+ ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[データ マイニング用の OLE DB](../analysis-services/dev-guide/ole-db-for-data-mining.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [Integration Services 開発者ガイド](../integration-services/integration-services-developer-documentation.md)  
+ ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [Integration Services の開発者ガイド](../integration-services/integration-services-developer-documentation.md)  
   
  ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[レプリケーション開発者ガイド](../relational-databases/replication/concepts/replication-developer-documentation.md)  
   

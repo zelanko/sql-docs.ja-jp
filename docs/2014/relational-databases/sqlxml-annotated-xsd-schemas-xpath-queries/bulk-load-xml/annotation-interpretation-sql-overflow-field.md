@@ -1,5 +1,5 @@
 ---
-title: sql:overflow-フィールド (SQLXML 4.0) |Microsoft ドキュメント
+title: sql:overflow-フィールド (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a1ea697a212058218be295a49c3ad2ecc7c644c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3b78db405442ea15fe3d62db4688eb82440dfb2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246252"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   スキーマでは、XML ドキュメントからのすべての未使用データを受け取るオーバーフロー列を指定することができます。 この列は、スキーマ内で `sql:overflow-field` 注釈により指定します。 オーバーフロー列は複数指定することもできます。  
@@ -78,9 +78,9 @@ ms.locfileid: "36071623"
 </xsd:schema>  
 ```  
   
- スキーマでは、 **\<顧客 >** 要素は Cust テーブルにマップされ、 **\<順序 >** 要素は CustOrder テーブルにマップします。  
+ スキーマで、 **\<顧客 >** 要素は Cust テーブルにマップし、 **\<順序 >** 要素は CustOrder テーブルにマップされます。  
   
- 両方の**\<顧客 >** と**\<順序 >** 要素は、オーバーフロー列を識別します。 要素と属性に、XML 一括読み込みが未使用のすべての子を保存するため、 **\<顧客 >** Cust テーブルのオーバーフロー列内の要素とすべての未使用の子要素と属性、の**\<順序 >** CustOrder テーブルのオーバーフロー列内の要素。  
+ 両方の**\<顧客 >** と**\<順序 >** 要素は、オーバーフロー列を識別します。 したがって、XML 一括読み込みを保存します未使用のすべての子の要素と属性、 **\<顧客 >** Cust テーブルのオーバーフロー列内の要素と、未使用の子要素と、の属性をすべて**\<順序 >** CustOrder テーブルのオーバーフロー列内の要素。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   

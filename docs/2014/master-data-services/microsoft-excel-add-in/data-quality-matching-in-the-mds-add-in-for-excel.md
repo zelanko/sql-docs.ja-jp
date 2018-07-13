@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 08040fafaa66570d3c0f2023bc1a66d0f82c1d4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2ae32c1e29ec8252326e353e6b62f8b6b6f12b2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227824"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel 用 MDS アドインでのデータ品質照合
   後で、MDS リポジトリにさらにデータを追加する場合があります。 データを追加する前に、新しいデータと既に MDS で管理されているデータを比較することは、重複するデータや不正確なデータの追加を避けるために役立ちます。  
@@ -52,12 +52,12 @@ ms.locfileid: "36073288"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|外部データを MDS によって管理されるデータと結合して、比較できるようにします。|[データを結合&#40;MDS アドインを Excel 用&#41;](combine-data-mds-add-in-for-excel.md)|  
+|外部データを MDS によって管理されるデータと結合して、比較できるようにします。|[データを結合&#40;MDS アドインの Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
 |DQS ナレッジを使用して、データの類似性を見つけます。|[類似データの照合 &#40;MDS Excel 用 MDS アドイン&#41;](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [データのパブリッシュ&#40;MDS アドインを Excel 用&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [データのパブリッシュ&#40;MDS アドインの Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [データ照合](../../data-quality-services/data-matching.md)  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 793052419843c2e2421458da07b2815932683645
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f48df99f595bb313d8ca2406850f75cae82c7020
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274208"
 ---
 # <a name="delete-a-workload-group"></a>ワークロード グループの削除
   ワークロード グループまたはリソース プールを削除にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
@@ -83,7 +83,7 @@ ms.locfileid: "36072100"
   
     -   `DROP WORKLOAD GROUP` ステートメントを実行してから、変更適用のためにセッションを明示的に停止するのは不適切であると判断した場合、DROP ステートメントの実行前と同じ名前でグループを再作成し、このグループを元のリソース プールに移動することができます。  
   
-3.  実行、`ALTER RESOURCE GOVERNOR RECONFIGURE`ステートメントです。  
+3.  実行、`ALTER RESOURCE GOVERNOR RECONFIGURE`ステートメント。  
   
 ### <a name="example-transact-sql"></a>例 (Transact-SQL)  
  次の例では、 `groupAdhoc`というワークロード グループを削除します。  

@@ -1,5 +1,5 @@
 ---
-title: クエリ条件 (使用法に基づく最適化ウィザード) を指定 |Microsoft ドキュメント
+title: クエリ条件 (使用法に基づく最適化ウィザード) の指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.usagebasedoptimizationwizard.specifyquerycriteria.f1
 ms.assetid: 3193adc2-af9f-4234-a4cc-dea0c280a724
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f350959b0e42b4f2b9adca364ff6bc40bfb1d5a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46a0877a1f51964287f9a01f00adeae23d2dcfd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176429"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>[クエリ条件の指定] (使用法に基づく最適化ウィザード)
   **[クエリ条件の指定]** ページを使用すると、最適化するクエリを特定するために 1 つ以上のフィルター オプションを選択できます。  
@@ -55,7 +55,7 @@ ms.locfileid: "36074939"
  **ユーザー**  
  指定されたユーザーのセットに基づいてクエリ ログのクエリをフィルターします。 **[...]** ボタンをクリックして **[ユーザーの選択]** ダイアログ ボックスを開き、クエリをフィルターする対象ユーザーを選択します。 **[ユーザーの選択]** ダイアログ ボックスの詳細については、[「[ユーザーの選択] ダイアログ ボックス (Analysis Services - 多次元データ)」](user-selection-dialog-box-analysis-services-multidimensional-data.md) を参照してください。  
   
- **最も頻繁にクエリ**  
+ **最も頻度の高いクエリ**  
  選択されたパーティションに対して、最も実行頻度の高いクエリの最大比率に基づいて、クエリ ログのクエリをフィルターします。 テキスト ボックスで比率の値を選択するか、値を入力します。  
   
 ## <a name="see-also"></a>参照  

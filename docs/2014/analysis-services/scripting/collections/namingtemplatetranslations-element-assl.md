@@ -1,5 +1,5 @@
 ---
-title: NamingTemplateTranslations 要素 (ASSL) |Microsoft ドキュメント
+title: NamingTemplateTranslations 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NamingTemplateTranslations element
 ms.assetid: fde65778-1fa3-490a-9874-8bf2052ef25c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e22eaea2ab6d19bf1da5620321f0d2002ed382d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2965971734625c4d0c553f652160e1044eb48546
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204402"
 ---
 # <a name="namingtemplatetranslations-element-assl"></a>NamingTemplateTranslations 要素 (ASSL)
-  ローカライズされた変換のコレクションを提供、 [NamingTemplate](../properties/namingtemplate-element-assl.md)要素は親の[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)です。  
+  ローカライズされた変換のコレクションを提供します、 [NamingTemplate](../properties/namingtemplate-element-assl.md)要素は親の[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36073852"
 |子要素|[NamingTemplateTranslation](../objects/translation-element-assl.md)型の[翻訳](translations-element-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
- 値、`NamingTemplateTranslation`要素は親属性によってのみ使用 (つまり、他の値、[使用状況](../properties/usage-element-dimensionattribute-assl.md)の親要素`DimensionAttribute`に設定されている*親*)。  
+ 値、`NamingTemplateTranslation`要素の親属性によってのみ使用されます (つまり、他の値、[使用状況](../properties/usage-element-dimensionattribute-assl.md)要素の親の`DimensionAttribute`に設定されている*親*)。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.DimensionAttribute>します。  
   

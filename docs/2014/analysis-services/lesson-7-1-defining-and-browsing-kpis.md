@@ -1,5 +1,5 @@
 ---
-title: 定義と Kpi を表示 |Microsoft ドキュメント
+title: 定義と Kpi を表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 1a8612cf9e325aaa59f4b79ca74a5aa49f51aaab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f60530d85de673e3cb3bb7e6f19f2c8484cc68bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243732"
 ---
 # <a name="defining-and-browsing-kpis"></a>KPI の定義と表示
   主要業績評価指標 (KPI) を定義するには、まず、KPI の名前と、KPI に関連するメジャー グループを定義します。 すべてのメジャー グループ、または単一のメジャー グループを KPI に関連付けることができます。 その後、KPI の次のような要素を定義します。  
@@ -71,7 +71,7 @@ ms.locfileid: "36071791"
   
      ![表示ウィンドウで空白の KPI テンプレート](../../2014/tutorials/media/l7-kpi-2.gif "表示ウィンドウで空白の KPI テンプレート")  
   
-3.  **名前**ボックスに、入力`Reseller Revenue`、し、[ **Reseller Sales**で、**関連付けられたメジャー グループ**] ボックスの一覧です。  
+3.  **名前**ボックスに「 `Reseller Revenue`、し、 **Reseller Sales**で、**関連付けられたメジャー グループ**一覧。  
   
 4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]**、 **[Reseller Sales]** の順に展開します。次に、 **Reseller Sales-Sales Amount** メジャーを **[値式]** ボックスにドラッグします。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36071791"
   
 1.  **[KPI]** タブのツール バーの **[フォーム ビュー]** ボタンをクリックして、 **[新しい KPI]** ボタンをクリックします。  
   
-2.  **名前**ボックスに、入力`Product Gross Profit Margin`、ことを確認**\<すべて >** に表示されます、**関連付けられたメジャー グループ** ボックスの一覧です。  
+2.  **名前**ボックスに「 `Product Gross Profit Margin`、ことを確認します**\<すべて >** に表示されます、**関連付けられたメジャー グループ**一覧。  
   
 3.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **Total GPM** メジャーを **[値式]** ボックスにドラッグします。  
   
@@ -265,7 +265,7 @@ ms.locfileid: "36071791"
   
 2.  配置が正常に完了したら、 **[KPI]** タブのツール バーの **[再接続]** をクリックして、 **[ブラウザー ビュー]** をクリックします。  
   
-     `Product Gross Profit Margin` KPI が表示され、KPI の値が表示**Q3 CY 2007**と**北米**販売区域。  
+     `Product Gross Profit Margin` KPI が表示され KPI 値と共に**Q3 CY 2007**と**北米**販売区域。  
   
 3.  **[フィルター]** ペインで、 **[ディメンション]** ボックスの一覧の **[Product]** をクリックし、 **[階層]** ボックスの一覧の **[Category]** をクリックし、 **[演算子]** ボックスの一覧の **[等しい]** をクリックします。次に、 **[フィルター式]** ボックスの一覧で **[Bikes]** チェック ボックスをオンにし、 **[OK]** をクリックします。  
   

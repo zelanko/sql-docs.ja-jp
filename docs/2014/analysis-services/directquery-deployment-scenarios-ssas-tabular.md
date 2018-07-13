@@ -1,5 +1,5 @@
 ---
-title: DirectQuery の配置シナリオ (SSAS テーブル) |Microsoft ドキュメント
+title: DirectQuery の配置シナリオ (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e2b6434b8916e0a2f21486c227b649f834823a93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89454dfd53b641401352928ecf8e08b4b23e784c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268018"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery の配置シナリオ (SSAS テーブル)
   このトピックでは、DirectQuery モデルのデザインと展開プロセスを紹介します。 DirectQuery をリレーショナル データのみ使用するように構成するか (DirectQuery のみ)、キャッシュ データのみの使用とリレーショナル データのみの使用を切り替えるようにモデルを構成できます (ハイブリッド モード)。 ここでは、両方のモードの実装プロセスについて説明し、モードとセキュリティ構成に応じたクエリ結果の差異について説明します。  
@@ -43,7 +43,7 @@ ms.locfileid: "36073344"
   
  既定では、DirectQuery は無効になっています。 したがって、デザイン環境が DirectQuery モードをサポートするように構成する必要があります。  
   
- 右クリックし、 **Model.bim**ソリューション エクスプ ローラーと、プロパティ セット内のノード**DirectQuery モード**を`On`です。  
+ 右クリックし、 **Model.bim**ソリューション エクスプ ローラーと、プロパティ セット内のノード**DirectQuery モード**を`On`します。  
   
  いつでも DirectQuery をオンにすることができます。ただし、DirectQuery モードと互換性のない列や数式を作成しないようにするために、最初から DirectQuery モードを有効にすることをお勧めします。  
   
@@ -55,13 +55,13 @@ ms.locfileid: "36073344"
   
 -   エラー メッセージの説明に従って、DirectQuery モードに必要なプロパティ設定を変更します。  
   
--   計算列を削除します。 使用して、列を作成できます常に特定のメジャーの計算列を必要とする場合、[リレーショナル クエリ デザイナー &#40;SSAS&#41; ](relational-query-designer-ssas.md)テーブルのインポート ウィザードで指定します。  
+-   計算列を削除します。 使用して列の作成は常に特定のメジャーの計算列が必要な場合、[リレーショナル クエリ デザイナー &#40;SSAS&#41; ](relational-query-designer-ssas.md)テーブルのインポート ウィザードで指定します。  
   
 -   DirectQuery モードと互換性のない数式を変更または削除します。 計算で特定の関数が必要な場合は、Transact-SQL を使用して同等の関数を提供する方法を検討します。  
   
 -   必要に応じてデータを追加します。  コピーして貼り付けたデータまたは SQL Server 以外のプロバイダーからのデータを以前にモデルで使用していた場合は、既存の接続に新しいビューと派生列を作成するか、分散クエリを使用できます。  DirectQuery モデルで使用されるすべてのデータは、単一の SQL Server データ ソースを介してアクセスできる必要があります。  
   
- **手順 4 です。モデルに対するクエリの応答で優先メソッドを設定します。**  
+ **手順 4 です。推奨される方法、モデルに対するクエリの応答の設定します。**  
   
 |||  
 |-|-|  
@@ -73,7 +73,7 @@ ms.locfileid: "36073344"
 |||  
 |-|-|  
 |**DirectQuery のみ**|任意。 DirectQuery のみのモデルには、パーティションは必要ありません。<br /><br /> ただし、デザイン フェーズ中にモデルにパーティションを作成した場合は、1 つのパーティションだけをデータ ソースとして使用できることに注意してください。 既定では、最初に作成したパーティションが DirectQuery パーティションとして使用されます。<br /><br /> モデルに必要なすべてのデータが DirectQuery パーティションにあることを確認するには、DirectQuery パーティションを選択し、SQL ステートメントを編集してデータ セット全体を取得します。|  
-|**ハイブリッド モード**|モデル内のいずれかのテーブルに複数のパーティションがある場合は、1 つのパーティションを *DirectQuery パーティション*として選択する必要があります。 パーティションを割り当てない場合、既定では、最初に作成されたパーティションが DirectQuery パーティションとして使用されます。<br /><br /> DirectQuery 以外のすべてのパーティションの処理オプションを設定します。 通常、データはリレーショナル ソースから渡されるため、DirectQuery パーティションは処理されません。<br /><br /> 詳細については、次を参照してください。[パーティションと DirectQuery モード&#40;SSAS 表形式&#41;](tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)です。|  
+|**ハイブリッド モード**|モデル内のいずれかのテーブルに複数のパーティションがある場合は、1 つのパーティションを *DirectQuery パーティション*として選択する必要があります。 パーティションを割り当てない場合、既定では、最初に作成されたパーティションが DirectQuery パーティションとして使用されます。<br /><br /> DirectQuery 以外のすべてのパーティションの処理オプションを設定します。 通常、データはリレーショナル ソースから渡されるため、DirectQuery パーティションは処理されません。<br /><br /> 詳細については、次を参照してください。[パーティションと DirectQuery モード&#40;SSAS 表形式&#41;](tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)します。|  
   
  **手順 6 です。権限借用を構成します。**  
   
@@ -81,19 +81,19 @@ ms.locfileid: "36073344"
   
 |||  
 |-|-|  
-|**DirectQuery のみ**|**権限借用設定** プロパティには、SQL Server データ ソースへの接続に使用するアカウントを指定します。<br /><br /> 値を使用する場合**ImpersonateCurrentUser**のインスタンス[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ホスト モデルは、モデルの現在のユーザーの資格情報に渡すこと、SQL Server データベース。|  
+|**DirectQuery のみ**|**権限借用設定** プロパティには、SQL Server データ ソースへの接続に使用するアカウントを指定します。<br /><br /> 値を使用する場合**ImpersonateCurrentUser**のインスタンス[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ホスト モデルが合格する、モデルの現在のユーザーの資格情報を SQL Server データベースにします。|  
 |**ハイブリッド モード**|**権限借用設定** プロパティには、SQL Server データ ソース内のデータへのアクセスに使用するアカウントを指定します。<br /><br /> この設定は、モデルで使用するキャッシュの処理に使用される資格情報には影響しません。|  
   
- **手順 7 です。モデルを配置します。**  
+ **手順 7 です。モデルをデプロイします。**  
   
- モデルを配置する準備ができたら、開く、**プロジェクト**クリックし、Visual Studio のメニュー**プロパティ**です。 **QueryMode** プロパティを、次の表で説明する値のいずれかに設定します。  
+ モデルをデプロイする準備ができたら、開く、**プロジェクト**クリックし、Visual Studio のメニュー**プロパティ**します。 **QueryMode** プロパティを、次の表で説明する値のいずれかに設定します。  
   
- 詳細については、次を参照してください。[展開から SQL Server Data Tools &#40;SSAS 表形式&#41;](tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)です。  
+ 詳細については、次を参照してください。[デプロイから SQL Server Data Tools &#40;SSAS 表形式&#41;](tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)します。  
   
 |||  
 |-|-|  
-|**DirectQuery のみ**|**DirectQueryOnly**<br /><br /> DirectQuery のみを指定したため、モデルのメタデータはサーバーに配置されますが、モデルは処理されません。<br /><br /> ワークスペース データベースで使用されていたキャッシュは自動的には削除されません。 ユーザーがキャッシュされたデータを表示できないようにするには、デザイン時のキャッシュをクリアします。 詳細については、次を参照してください。 [Clear the Analysis Services Caches](instances/clear-the-analysis-services-caches.md)です。|  
-|**ハイブリッド モード**|**インメモリと DirectQuery**<br /><br /> **インメモリ (directquery あり)**<br /><br /> どちらの値でも、必要に応じてキャッシュまたはリレーショナル データ ソースを使用できます。 順序によって、モデルに対するクエリへの応答時に既定で使用されるデータ ソースが定義されます。<br /><br /> ハイブリッド モードでは、モデルのメタデータがサーバーに配置されると同時にキャッシュを処理する必要があります。<br /><br /> この設定は配置後に変更できます。|  
+|**DirectQuery のみ**|**DirectQueryOnly**<br /><br /> DirectQuery のみを指定したため、モデルのメタデータはサーバーに配置されますが、モデルは処理されません。<br /><br /> ワークスペース データベースで使用されていたキャッシュは自動的には削除されません。 ユーザーがキャッシュされたデータを表示できないようにするには、デザイン時のキャッシュをクリアします。 詳細については、次を参照してください。 [Analysis Services のキャッシュをクリア](instances/clear-the-analysis-services-caches.md)します。|  
+|**ハイブリッド モード**|**DirectQuery (インメモリあり)**<br /><br /> **インメモリと DirectQuery**<br /><br /> どちらの値でも、必要に応じてキャッシュまたはリレーショナル データ ソースを使用できます。 順序によって、モデルに対するクエリへの応答時に既定で使用されるデータ ソースが定義されます。<br /><br /> ハイブリッド モードでは、モデルのメタデータがサーバーに配置されると同時にキャッシュを処理する必要があります。<br /><br /> この設定は配置後に変更できます。|  
   
  **手順 8 です。配置済みモデルを確認します。**  
   
@@ -109,14 +109,14 @@ ms.locfileid: "36073344"
  **DirectQuery のみ**  
  このオプションは、データのソースが単一であることを保証する場合、またはデータが大きすぎてメモリに収まらない場合に推奨されます。 非常に大きなリレーショナル データ ソースを操作する場合は、デザイン時にデータのサブセットを使用してモデルを作成できます。 モデルを DirectQuery のみのモードで配置する場合は、データ ソース定義を編集して必要なすべてのデータを含めることができます。  
   
- このオプションは、リレーショナル データ ソースが提供しているセキュリティを使用してユーザーのデータ アクセスを制御する場合にも推奨されます。 キャッシュされた表形式モデルでは、使用することも[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ロールが、データ アクセスを制御、キャッシュに格納されたデータにも保護する必要があります。 セキュリティ コンテキストによってデータをキャッシュしないことが要求される場合は、常にこのオプションを使用する必要があります。  
+ このオプションは、リレーショナル データ ソースが提供しているセキュリティを使用してユーザーのデータ アクセスを制御する場合にも推奨されます。 キャッシュされた表形式モデルでは、使用することも[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ロールが、データ アクセスの制御、キャッシュに格納されているデータも保護する必要があります。 セキュリティ コンテキストによってデータをキャッシュしないことが要求される場合は、常にこのオプションを使用する必要があります。  
   
  次の表で、DirectQuery のみのモードで可能な展開結果について説明します。  
   
 |||  
 |-|-|  
 |**キャッシュなしの DirectQuery**|キャッシュにデータは読み込まれません。 モデルは処理できません。<br /><br /> モデルは、DAX クエリをサポートするクライアントを使用してクエリのみ行うことができます。 クエリ結果は、常に元のデータ ソースから返されます。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **[[QueryMode]]** = **[DirectQuery]**|  
-|**キャッシュのみに対してクエリを実行する DirectQuery**|配置が失敗します。 この構成はサポートされていません。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **[[QueryMode]]** = **In-Memory**|  
+|**キャッシュのみに対するクエリと DirectQuery**|配置が失敗します。 この構成はサポートされていません。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **[[QueryMode]]** = **In-Memory**|  
   
  **ハイブリッド モード**  
  モデルをハイブリッド モードで配置すると多くの利点があります。必要に応じて SQL Server データ ソースから最新データを取得できますが、キャッシュを保持すると、レポートのデザインまたはモデルのテスト時にメモリ内のデータをより高いパフォーマンスで操作できます。  

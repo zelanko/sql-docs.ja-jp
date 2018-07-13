@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 caps.latest.revision: 74
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 811f80385261b9e688c76c6d7b472db210b7cb13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 109ba047a24211c5a41aebf96ccb373a546c26c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218952"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>レポート デザイナーを使用してレポートをデザインする (SSRS)
   レポート デザイナーを使用すると、フル機能の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートおよびレポート ソリューションを作成できます。 レポート デザイナーには、データ ソース、データセット、およびクエリ、データ領域とフィールドのレポート レイアウトの配置、連携するパラメーターとレポートのセットなどの対話機能を定義できるグラフィカル インターフェイスが用意されています。  
@@ -42,7 +42,7 @@ ms.locfileid: "36072283"
 ##  <a name="bkmk_SharedDataSources"></a> 共有データ ソース  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用して、レポート ソリューションの共有データ ソースを定義および配置します。 共有データ ソースは、 **OverwriteDataSources** プロパティおよび **TargetDataSourceFolder** プロパティを使用して、プロジェクト内の他のアイテムとは別に配置できます。 詳細については、「[配置プロパティを設定する (Reporting Services)](set-deployment-properties-reporting-services.md)」を参照してください。  
   
- レポート デザイナーでは、レポート データ ペインとソリューション エクスプローラーの両方で作業して、レポートで使用されるデータ ソースを定義します。 詳しくは、「 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)」をご覧ください。 レポート サーバーまたは SharePoint サイトにパブリッシュされ、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ソリューションに含まれていないデータ ソースを開く際に、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用することはできません。 その機能を使用して[レポート ビルダー &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)です。  
+ レポート デザイナーでは、レポート データ ペインとソリューション エクスプローラーの両方で作業して、レポートで使用されるデータ ソースを定義します。 詳しくは、「 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)」をご覧ください。 レポート サーバーまたは SharePoint サイトにパブリッシュされ、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ソリューションに含まれていないデータ ソースを開く際に、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用することはできません。 その機能を使用して[レポート ビルダー &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)します。  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はクライアント ツールです。 レポート ソリューションをローカル コンピューターでテストし、サーバー ソリューションをテストするためにテスト環境に配置した後、運用環境に配置できます。 配置後、データ ソース処理拡張機能とデータ ソース資格情報がレポート サーバー環境用に構成されていることを確認します。 構成マネージャーを使用すると、さまざまな配置のプロパティを管理できます。 詳細については、「[SQL Server データ ツールの Reporting Services (SSDT)](reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36072283"
   
  レポート デザイナーでは、レポート データ ペインとソリューション エクスプローラーの両方で作業して、レポートで使用される共有データセットを定義します。 詳しくは、「 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)」をご覧ください。 レポート サーバーまたは SharePoint サイトから直接パブリッシュ済みデータセットを開く際に、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用することはできません。 その機能を使用して[レポート ビルダー &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md)共有データセット モードでします。  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はクライアント ツールです。 クエリ デザイナーを使用すると、[プレビュー] でクエリ結果をローカルに作成してテストできます。 配置後、共有データセットは、依存する共有データ ソースおよびレポートとは別に管理できます。 詳細については、次を参照してください[レポート埋め込みデータセットおよび共有データセット&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)、[レポート デザイナーの SQL Server Data Tools のクエリ デザイン ツール&#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md)。、および[共有データセットの管理](../report-data/manage-shared-datasets.md)です。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はクライアント ツールです。 クエリ デザイナーを使用すると、[プレビュー] でクエリ結果をローカルに作成してテストできます。 配置後、共有データセットは、依存する共有データ ソースおよびレポートとは別に管理できます。 詳細については、次を参照してください[レポート埋め込みデータセットと共有データセット&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)、[レポート デザイナーの SQL Server Data Tools でのクエリ デザイン ツール&#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md)。、および[共有データセットを管理する](../report-data/manage-shared-datasets.md)します。  
   
   
 ##  <a name="bkmk_Reports"></a> レポート  
@@ -124,7 +124,7 @@ ms.locfileid: "36072283"
      レポートを作成するものも配置しないプロジェクト構成で指定されているレポートを使用する場合、`StartItem`別のプレビュー ウィンドウで、現在の構成プロパティを開きます。  
   
     > [!NOTE]  
-    >  デバッグ モードを使用するには、開始アイテムを設定する必要があります。 ソリューション エクスプ ローラーで、レポート プロジェクトを右クリックし、をクリックして**プロパティ**、し、 `StartItem`、表示するレポートの名前を選択します。  
+    >  デバッグ モードを使用するには、開始アイテムを設定する必要があります。 ソリューション エクスプ ローラーでレポート プロジェクトを右クリックし、をクリックして**プロパティ**、および`StartItem`、表示するレポートの名前を選択します。  
   
      プロジェクトの開始アイテムではない特定のレポートをプレビューする場合は、レポートを作成しても配置しない構成 (DebugLocal 構成など) を選択し、レポートを右クリックして、 **[実行]** をクリックします。 レポートを配置しない構成を選択する必要があります。そうしないと、レポートはローカルのプレビュー ウィンドウに表示されずに、レポート サーバーにパブリッシュされます。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36072283"
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]では、レポートまたは他のプロジェクト アイテムを複数のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに配置できます。 対象レポート サーバーと互換性のあるスキーマ バージョンへのレポート定義のアップグレードを制御するには、プロジェクト構成を使用します。 プロジェクト構成で制御されるプロパティには、対象レポート サーバー、ビルド プロセスでプレビューと配置のためにレポートを一時的に保存するフォルダー、およびエラー レベルが含まれます。 詳細については、「[構成プロパティと配置プロパティ](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties)」および「[配置プロパティを設定する (Reporting Services)](set-deployment-properties-reporting-services.md)」を参照してください。  
   
 ### <a name="export-a-report-to-a-different-file-format"></a>別のファイル形式へのレポートのエクスポート  
- レポートは、さまざまな形式にエクスポートできますが、エクスポートすることによって、一部のレポート レイアウトや対話機能に影響が生じることがあります。 さまざまな出力形式の設計に関する考慮事項の詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)です。  
+ レポートは、さまざまな形式にエクスポートできますが、エクスポートすることによって、一部のレポート レイアウトや対話機能に影響が生じることがあります。 各種の出力形式の設計に関する考慮事項の詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)します。  
   
   
 ##  <a name="bkmk_ReportValidationandErrorLevels"></a> レポートの検証とエラー レベル  
@@ -186,7 +186,7 @@ ms.locfileid: "36072283"
 |3|レポートのレイアウトが目立たない程度に若干変更されるマイナーなビルドの問題。|  
 |4|パブリッシュ上の警告としてのみ使用される。|  
   
- しようとするプレビューまたはレポート アイテムの新機能を含むレポートを配置[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]マップやデータ バーなどは、これらのレポート アイテムをレポートから削除されることができます。 既定では、構成の ErrorLevel プロパティは 2 に設定されます。この設定では、マップが削除されると、レポートの作成が失敗する原因となります。 ただし、ErrorLevel プロパティの値を 0 または 1 に変更すると、マップが削除されても、警告が発行され、ビルド プロセスは続行されます。  
+ しようとすると、プレビューまたは配置に新しいレポート アイテムを含むレポートを[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]マップ、データ バーなど、これらのレポート アイテムをレポートから削除できます。 既定では、構成の ErrorLevel プロパティは 2 に設定されます。この設定では、マップが削除されると、レポートの作成が失敗する原因となります。 ただし、ErrorLevel プロパティの値を 0 または 1 に変更すると、マップが削除されても、警告が発行され、ビルド プロセスは続行されます。  
   
   
 ## <a name="see-also"></a>参照  

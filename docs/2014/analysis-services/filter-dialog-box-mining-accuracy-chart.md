@@ -1,5 +1,5 @@
 ---
-title: '[フィルター] ダイアログ ボックス (マイニング精度チャート) |Microsoft ドキュメント'
+title: '[フィルター] ダイアログ ボックス (マイニング精度チャート) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 328ebd3f09037c3288450b75b4acd011481c40a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 04630120106816c4018af0fc23cfdf30f26b15cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272608"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>[フィルター] ダイアログ ボックス (マイニング精度チャート)
   **[フィルター]** ダイアログ ボックスを使用すると、データセットに適用できる条件を作成できます。 データセットとして、テスト用の外部データセット、またはマイニング モデルのトレーニング用のケース データを使用できます。 このダイアログ ボックスで作成する条件は、 **[データセット フィルター]** ダイアログ ボックスまたは **[モデル フィルター]** ダイアログ ボックスで複雑なフィルター条件の一部として保存できます。  
@@ -47,10 +47,10 @@ ms.locfileid: "36073866"
 |**[ルールの適用条件]**|この行の条件に AND 演算子または OR 演算子を適用するかどうかを指定する場合にクリックします。 この値は **[マイニング構造列]** リストで列を選択すると有効になります。|  
 |**マイニング構造列**|**[データセット フィルター]** ダイアログ ボックスでデータ ソースから選択したテーブルに含まれる列の一覧から列を選択する場合にクリックします。|  
 |**[演算子]**|一覧から演算子を選択します。 使用できる演算子は、列のデータ型によって異なります。<br /><br /> 列に不連続値が含まれる場合は、次の演算子のみを指定できます。<br /><br /> = (等しい)、<> (等しくない)、IS NOT NULL、IS NULL.<br /><br /> 列に連続値が含まれる場合は、より大きい、より小さいの演算子もサポートされます。|  
-|**Value**|条件として使用する値を入力します。|  
+|**[値]**|条件として使用する値を入力します。|  
   
 ## <a name="see-also"></a>参照  
- [テストと検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)  
   
   

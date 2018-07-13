@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text indexes [SQL Server], creating
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a4bdb94c371342a94c74e72a1cb1f33886fc0963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e9745635b277a53f724b61ff4143e41af47775a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324012"
 ---
 # <a name="get-started-with-full-text-search"></a>フルテキスト検索の概要
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースでは、フルテキストが既定で有効になっています。 ただし、テーブルでフルテキスト インデックスを使用するには、Full-Text Engine を使用してアクセスするテーブルの列に対してフルテキスト インデックス作成機能をセットアップする必要があります。  
@@ -38,7 +37,7 @@ ms.locfileid: "36071122"
   
     1.  フルテキスト インデックスに含めるテキスト列を特定します。  
   
-    2.  指定した列にバイナリ データとして格納されているドキュメントが含まれているかどうか (`varbinary(max)`、または`image`データ)、テーブルの列を指定する必要があります (、*型の列*) インデックスが作成される列内の各ドキュメントの種類を識別します。  
+    2.  指定された列にバイナリ データとして格納されているドキュメントが含まれるかどうか (`varbinary(max)`、または`image`データ)、テーブルの列を指定する必要があります (、*型の列*) インデックスが作成される列内の各ドキュメントの種類を識別します。  
   
     3.  列内のドキュメントに対してフルテキスト検索で使用される言語を指定します。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "36071122"
   
  フルテキスト検索では、ワード ブレーカー、ステマー、ストップワード (ノイズ ワードとも呼ばれます) を含んだストップリスト、類義語辞典ファイルの各*言語コンポーネント*を使用して、複数の言語がサポートされます。 類義語辞典ファイルと (場合によって) ストップリストは、データベース管理者が構成する必要があります。 特定の類義語辞典ファイルは、対応する言語を使用するすべてのフルテキスト インデックスをサポートし、特定のストップリストには任意の数のフルテキスト インデックスを関連付けることができます。  
   
-##  <a name="setup"></a> フルテキスト カタログとインデックスの設定  
+##  <a name="setup"></a> フルテキスト カタログとインデックスを設定します。  
  この作業には、次の基本的な手順が含まれます。  
   
 1.  フルテキスト インデックスを格納するフルテキスト カタログを作成する。  
@@ -55,7 +54,7 @@ ms.locfileid: "36071122"
   
 2.  テーブルまたはインデックス付きビューで、フルテキスト インデックスを作成する。  
   
-     フルテキスト インデックスは、Full-Text Engine により構築および管理されるトークンベースの特殊な機能インデックスです。 テーブルまたはビューにフルテキスト検索を作成するには、そのテーブルまたはビューに、単一列で非 NULL 値の一意なインデックスが作成されている必要があります。 Full-Text Engine では、テーブルの各行を一意の圧縮可能なキーにマップするために、この一意のインデックスが必要になります。 フルテキスト インデックスを含めることができます`char`、 `varchar`、 `nchar`、 `nvarchar`、 `text`、 `ntext`、 `image`、 `xml`、 `varbinary`、および`varbinary(max)`列です。 詳細については、「 [フルテキスト インデックスの作成と管理](create-and-manage-full-text-indexes.md)」をご覧ください。  
+     フルテキスト インデックスは、Full-Text Engine により構築および管理されるトークンベースの特殊な機能インデックスです。 テーブルまたはビューにフルテキスト検索を作成するには、そのテーブルまたはビューに、単一列で非 NULL 値の一意なインデックスが作成されている必要があります。 Full-Text Engine では、テーブルの各行を一意の圧縮可能なキーにマップするために、この一意のインデックスが必要になります。 フルテキスト インデックスを含めることができます`char`、 `varchar`、 `nchar`、 `nvarchar`、 `text`、 `ntext`、 `image`、 `xml`、 `varbinary`、および`varbinary(max)`列。 詳細については、「 [フルテキスト インデックスの作成と管理](create-and-manage-full-text-indexes.md)」をご覧ください。  
   
  フルテキスト インデックスの作成について学習する前に、フルテキスト インデックスと標準の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インデックスの違いを見ることが重要です。 次の表に、両方のインデックスの相違点を示します。  
   
@@ -105,14 +104,14 @@ ms.locfileid: "36071122"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>ストップリストとフルテキスト インデックスの関連付け  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、ストップリストが導入されています。 *ストップリスト* は、ストップワード (ノイズ ワードとも呼ばれます) の一覧です。 ストップリストは各フルテキスト インデックスに関連付けられ、そのストップリスト内の単語がそのインデックスのフルテキスト クエリに適用されます。 既定では、システム ストップリストは、新しいフルテキスト インデックスに関連付けられます。 ただし、独自のストップリストを作成して使用することもできます。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
   
- たとえば、次[CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]文は、システム ストップ リストからコピーして、myStoplist3 という名前の新しいフルテキスト ストップ リストを作成します。  
+ たとえば、次[CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメント、システム ストップ リストからコピーして、myStoplist3 という名前、新しいフルテキスト ストップ リストを作成します。  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- 次[ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントは、ストップ リスト用に追加、単語 'en' をまずスペイン語用、フランス語、myStoplist という名前を変更します。  
+ 次[ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントでは、単語 'en' をまずスペイン語用、フランス語を追加すること、myStoplist という名前のストップ リストを変更します。  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  

@@ -1,5 +1,5 @@
 ---
-title: SynchronizeSecurity 要素 (XMLA) |Microsoft ドキュメント
+title: SynchronizeSecurity 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - SynchronizeSecurity element
 ms.assetid: d37dbb95-f4a4-44ac-8eb9-f661d5bb5018
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cc50a9acd38fe394e5ac6b457f72e76669b5ec64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: dee99edf98aec8a9cd3b11add261cd941f9c9a0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330262"
 ---
 # <a name="synchronizesecurity-element-xmla"></a>SynchronizeSecurity 要素 (XMLA)
-  中に、ロールや権限などのセキュリティ定義を同期する方法を指定、[同期](../xml-elements-commands/synchronize-element-xmla.md)コマンド。  
+  中に、ロールや権限などのセキュリティ定義を同期する方法を指定します、[同期](../xml-elements-commands/synchronize-element-xmla.md)コマンド。  
   
 ## <a name="syntax"></a>構文  
   

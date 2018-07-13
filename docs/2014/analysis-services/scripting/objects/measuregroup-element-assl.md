@@ -1,5 +1,5 @@
 ---
-title: MeasureGroup 要素 (ASSL) |Microsoft ドキュメント
+title: MeasureGroup 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroup element
 ms.assetid: 7aa099db-5dc7-4cac-b437-f73fc0921b24
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f66d555ed09410985622fd2f5edb5d021b9d26c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee73b594fde5e3a9e915615d1a343296ce846d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163373"
 ---
 # <a name="measuregroup-element-assl"></a>MeasureGroup 要素 (ASSL)
   同じレベルの粒度でメジャーのセットを定義します。  
@@ -98,7 +98,7 @@ ms.locfileid: "36072193"
   
 |先祖または親|子要素|  
 |------------------------|--------------------|  
-|[Cube](../collections/aggregationdesigns-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [DataAggregation](aggregation-element-assl.md), [Description](../properties/description-element-assl.md), [Dimensions](../collections/dimensions-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md), [ID](../properties/id-element-assl.md), [IgnoreUnrelatedDimensions](../properties/ignoreunrelateddimensions-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MeasureQualification](../properties/measurequalificaton-element-assl.md), [Measures](../collections/measures-element-assl.md), [Name](../properties/name-element-assl.md), [Partitions](../collections/partitions-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [Source](../properties/source-element-measure-assl.md), [State](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](../properties/storagemode-element-assl.md), [Translations](../collections/translations-element-assl.md), [Type](../properties/type-element-measuregroup-assl.md)|  
+|[キューブ](../collections/aggregationdesigns-element-assl.md)、 [AggregationPrefix](../properties/aggregationprefix-element-assl.md)、[注釈](../collections/annotations-element-assl.md)、 [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)、 [DataAggregation](aggregation-element-assl.md)、 [説明](../properties/description-element-assl.md)、[ディメンション](../collections/dimensions-element-assl.md)、 [ErrorConfiguration](errorconfiguration-element-assl.md)、 [EstimatedRows](../properties/estimatedrows-element-assl.md)、 [EstimatedSize](../properties/estimatedsize-element-assl.md)、[ID](../properties/id-element-assl.md)、 [IgnoreUnrelatedDimensions](../properties/ignoreunrelateddimensions-element-assl.md)、 [LastProcessed](../properties/lastprocessed-element-assl.md)、 [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)、 [MeasureQualification](../properties/measurequalificaton-element-assl.md)、[メジャー](../collections/measures-element-assl.md)、[名前](../properties/name-element-assl.md)、[パーティション](../collections/partitions-element-assl.md)、 [ProactiveCaching](proactivecaching-element-assl.md)、 [ProcessingMode](../properties/processingmode-element-assl.md)、 [ProcessingPriority](../properties/processingpriority-element-assl.md)、[ソース](../properties/source-element-measure-assl.md)、[状態](../properties/state-element-assl.md)、 [StorageLocation](../properties/storagelocation-element-assl.md)、 [StorageMode](../properties/storagemode-element-assl.md)、[翻訳](../collections/translations-element-assl.md)、[型](../properties/type-element-measuregroup-assl.md)|  
 |[CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md)|なし|  
 |[パースペクティブ](perspective-element-assl.md)|なし|  
   

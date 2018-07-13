@@ -1,5 +1,5 @@
 ---
-title: StartService メソッド (SqlService クラス) |Microsoft ドキュメント
+title: StartService メソッド (SqlService クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - StartService method
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a104885bf0c9b25e4ae0155e094634dcc024efb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 83c4c70e01eed39ac18de27fb26d3df5d4c3de7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329414"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService メソッド (SqlService クラス)
   サービスを開始状態にする動作を試行します。  
@@ -74,7 +74,7 @@ object
  サービス要求タイムアウト。 サービスは適切な時間内に開始要求に応答しませんでした。  
   
  8  
- 不明なエラーです。 サービスの開始時に不明なエラーが発生しました。  
+ 不明なエラー。 サービスの開始時に不明なエラーが発生しました。  
   
  9  
  パスが見つかりません。 サービス実行可能ファイルへのディレクトリ パスが見つかりませんでした。  
@@ -127,6 +127,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

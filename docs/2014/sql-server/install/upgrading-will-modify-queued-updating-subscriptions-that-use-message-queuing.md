@@ -1,5 +1,5 @@
 ---
-title: アップグレードすると、メッセージ キューを使用するキュー更新サブスクリプションが変更されます |Microsoft ドキュメント
+title: アップグレードすると、メッセージ キューを使用するキュー更新サブスクリプションが変更されます |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication]
 - MSMQ [SQL Server replication]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - queued updating subscriptions [SQL Server replication]
 ms.assetid: 97944de3-fbad-4db1-939a-dcd550bf5893
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efb1b244385061bee985ec04b5f90d3fb349aef3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 37fcfeecfb7160b48d2ed875f76e3b970c29a880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272368"
 ---
 # <a name="upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing"></a>アップグレードすると、メッセージ キューを使用するキュー更新サブスクリプションが変更される
   アップグレード アドバイザーによって、[!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージ キュー (MSMQ) を使用する 1 つ以上のキュー更新サブスクリプションが存在する可能性があることが検出されました。 レプリケーションでは、メッセージ キューがサポートされないため、キュー更新サブスクリプションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キューを使用するように変更されます。  

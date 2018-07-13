@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
 - updatable subscriptions, about updatable subscriptions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3a7af7b2b8da4c51b72e05a7225a4a18224b377a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 38e7b5970295bec4170c8658c254214f40d250ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268668"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "36071627"
   
  トランザクション パブリケーションの更新可能なサブスクリプションを有効にするには、「 [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)」をご覧ください。  
   
- 更新可能なトランザクション パブリケーションに対するサブスクリプションを作成するを参照してください[トランザクション パブリケーションに対する更新可能なサブスクリプションを作成します。](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ トランザクション パブリケーションに対して更新可能なサブスクリプションを作成するを参照してください[Create an Updatable Subscription to Transactional Publication。](../create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 ## <a name="switching-between-update-modes"></a>更新モードの切り替え  
  更新可能なサブスクリプションを使用する場合に、サブスクリプションに 1 つの更新モードを指定し、アプリケーションで別の更新モードが必要な場合はそちらに切り替えるように指定できます。 たとえば、サブスクリプションで即時更新を使用するが、システム障害でネットワークに接続できなくなった場合には、キュー更新に切り替えるように指定することができます。  
@@ -80,13 +80,13 @@ ms.locfileid: "36071627"
   
 -   サブスクライバーでの更新は、サブスクリプションの有効期限が切れていたり、アクティブでない場合でも、パブリッシャーに反映されます。 そのようなサブスクリプションは、削除または再初期化してください。  
   
--   場合`TIMESTAMP`または`IDENTITY`列を使用する、その基本データ型としてレプリケートされると、これらの列の値は、サブスクライバーでは更新されません。  
+-   場合`TIMESTAMP`または`IDENTITY`列を使用して、基本データ型としてレプリケートされる、これらの列の値はサブスクライバーで更新しない必要があります。  
   
--   サブスクライバーの更新または挿入できません`text`、`ntext`または`image`値をレプリケーションの変更の追跡トリガー内で挿入または削除されたテーブルから読み取ることができないためです。 同様に、サブスクライバーを更新または挿入できません`text`または`image`を使用して値`WRITETEXT`または`UPDATETEXT`データはパブリッシャーによって上書きされます。 代わりに、パーティション化できます。、`text`と`image`テーブルを別の列が表示され、トランザクション内で 2 つのテーブルを変更します。  
+-   サブスクライバーの更新または挿入できません`text`、`ntext`または`image`値ため、レプリケーションの変更の追跡トリガー内で挿入または削除されたテーブルから読み取ることはできません。 同様に、サブスクライバーを更新または挿入できません`text`または`image`を使用して値`WRITETEXT`または`UPDATETEXT`データが、パブリッシャーによって上書きされるためです。 代わりに、パーティション、`text`と`image`を個別の列がテーブルし、トランザクション内で 2 つのテーブルを変更します。  
   
-     更新するには、サブスクライバーでラージ オブジェクト データ型を使用して`varchar(max)`、 `nvarchar(max)`、`varbinary(max)`の代わりに`text`、 `ntext`、および`image`それぞれのデータ型します。  
+     サブスクライバーでラージ オブジェクトを更新するデータ型を使用して、 `varchar(max)`、 `nvarchar(max)`、`varbinary(max)`の代わりに`text`、 `ntext`、および`image`それぞれのデータ型します。  
   
--   一意なキー (主キーを含む) に対する更新によって重複が生じる場合 (たとえば、 `UPDATE <column> SET <column> =<column>+1` などの形式による更新)、その更新を行うことはできません。その更新は一意性違反のため拒否されます。 これは、個人としてレプリケーションによって、サブスクライバーで行われた set 更新が反映されるため`UPDATE`影響を受ける各行のステートメント。  
+-   一意なキー (主キーを含む) に対する更新によって重複が生じる場合 (たとえば、 `UPDATE <column> SET <column> =<column>+1` などの形式による更新)、その更新を行うことはできません。その更新は一意性違反のため拒否されます。 これは、個人としてレプリケーションによって、サブスクライバーで行われた set 更新が反映される`UPDATE`の影響を受ける各行のステートメント。  
   
 -   サブスクライバー データベースが行方向にパーティション分割されていて、行を含むパーティションがサブスクライバーにはあっても、パブリッシャーにはない場合、この既存の行をサブスクライバーは更新できません。 これらの行を更新しようとすると、エラーが返されます。 この行は、テーブルから削除し、再び挿入する必要があります。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36071627"
   
 -   サブスクライバーでアプリケーションがトリガーを必要とする場合、パブリッシャーおよびサブスクライバーで `NOT FOR REPLICATION` オプションを使用してトリガーを定義する必要があります。 これにより、トリガーは元のデータの変更に対してのみ起動され、その変更がレプリケートされるときには起動されません。  
   
-     ユーザー定義トリガーは、レプリケーション トリガーがテーブルを更新するときには起動されません。 これは、プロシージャを呼び出すことによって実現`sp_check_for_sync_trigger`ユーザー定義トリガーの本文にします。 詳細については、「[sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)」を参照してください。  
+     ユーザー定義トリガーは、レプリケーション トリガーがテーブルを更新するときには起動されません。 これは、プロシージャを呼び出す`sp_check_for_sync_trigger`ユーザー定義トリガーの本文にします。 詳細については、「[sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)」を参照してください。  
   
 ### <a name="immediate-updating"></a>即時更新  
   
@@ -110,11 +110,11 @@ ms.locfileid: "36071627"
   
 -   主キーはすべてのキューでレコードを見つけるために使用されるので、キュー更新では主キーの列を更新しないでください。 競合の解決方法がサブスクライバー優先であるとき、主キーの更新には注意が必要です。 主キーの更新をパブリッシャーとサブスクライバーの両方で行うと、その結果は 2 つの行がそれぞれ異なる主キーを持つことになります。  
   
--   データ型の列の`SQL_VARIANT`: データの挿入や更新サブスクライバーで、これは次のようにキュー リーダー エージェントによってするときにマップ、サブスクライバーからキューにコピーします。  
+-   データ型の列の`SQL_VARIANT`: データの挿入や更新サブスクライバーで、これは次のように、キュー リーダー エージェントによってするときにマップ、サブスクライバーからキューにコピーされます。  
   
-    -   `BIGINT`、 `DECIMAL`、 `NUMERIC`、 `MONEY`、および`SMALLMONEY`にマップされる`NUMERIC`です。  
+    -   `BIGINT`、 `DECIMAL`、 `NUMERIC`、 `MONEY`、および`SMALLMONEY`にマップされます`NUMERIC`します。  
   
-    -   `BINARY` および`VARBINARY`にマップされる`VARBINARY`データ。  
+    -   `BINARY` `VARBINARY`にマップされます`VARBINARY`データ。  
   
 ### <a name="conflict-detection-and-resolution"></a>競合の検出と解決  
   

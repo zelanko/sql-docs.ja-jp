@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 09afff6c9464261193283267b33fe5c5533aba63
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: bd78c18acc34c9549c574d3f82cfce6c0e5612a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325622"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>マトリックスとグラフでの同じデータの表示 (レポート ビルダー)
   マトリックスとグラフで同じデータを表示するには、フィルター、グループ、並べ替え、およびデータに対して同じデータセットを指定するだけでなく、同じ式も指定するプロパティを両方のデータ領域に対して設定する必要があります。  
   
- 両方のデータ領域が同じデータ先祖 (レポート データセット) を持つようになるので、対話的な並べ替えボタンをマトリックスに追加することにより、ユーザーがこのボタンをクリックしたときに、マトリックスとグラフの両方の並べ替え順序を変更できるようになります。 詳細については、次を参照してください。[テーブルまたはマトリックスに対話的な並べ替えの追加&#40;レポート ビルダーおよび SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)です。  
+ 両方のデータ領域が同じデータ先祖 (レポート データセット) を持つようになるので、対話的な並べ替えボタンをマトリックスに追加することにより、ユーザーがこのボタンをクリックしたときに、マトリックスとグラフの両方の並べ替え順序を変更できるようになります。 詳細については、次を参照してください。[テーブルまたはマトリックスに対話的な並べ替えの追加&#40;レポート ビルダーおよび SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)します。  
   
  マトリックスの列グループの値をグラフの凡例として使用するには、グラフ上の系列データの色を指定してから、グループ値を表示するマトリックス セル内のテキスト ボックスの背景を塗りつぶす色として、それと同じ色を使用する必要があります。 詳細については、「[複数の図形グラフでの色の統一 &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)」を参照してください。  
   
- グループ定義に関するグループ値が多すぎると、実行時にレポートが煩雑な外観になる場合があります。 このような場合は、値をフィルター選択したり、グループを組み合わせたり、グループが自動的に結合されるようにしきい値を調整したりすることが必要となります。 詳細については、次を参照してください[、同じデータセットに複数のデータ領域のリンク&#40;レポート ビルダーおよび SSRS。&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ グループ定義に関するグループ値が多すぎると、実行時にレポートが煩雑な外観になる場合があります。 このような場合は、値をフィルター選択したり、グループを組み合わせたり、グループが自動的に結合されるようにしきい値を調整したりすることが必要となります。 詳細については、次を参照してください[同じデータセットへの複数のデータ領域のリンク&#40;レポート ビルダーおよび SSRS。&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

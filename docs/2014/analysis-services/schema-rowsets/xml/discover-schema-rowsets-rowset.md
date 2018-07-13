@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_SCHEMA_ROWSETS 行セット |Microsoft ドキュメント
+title: DISCOVER_SCHEMA_ROWSETS 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,27 +18,27 @@ helpviewer_keywords:
 - DISCOVER_SCHEMA_ROWSETS rowset
 ms.assetid: e5012aa0-6ef8-497f-96c1-2772e2394f62
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8071da248e9c7d69a76a22f7c339fad0a217295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa16f7ff677efd8e39367b9e618bdc95d778b405
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220242"
 ---
 # <a name="discoverschemarowsets-rowset"></a>DISCOVER_SCHEMA_ROWSETS 行セット
   すべての列挙値と、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーによってサポートされている追加のプロバイダー固有の列挙値について、名前、制限、説明、その他の情報を返します。  
   
- 呼び出す場合は、 [Discover](../../xmla/xml-elements-methods-discover.md)メソッドを`DISCOVER_SCHEMA_ROWSETS`の列挙値に、 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)要素、`Discover`メソッドを返します。、`DISCOVER_SCHEMA_ROWSETS`行セット。  
+ 呼び出す場合、 [Discover](../../xmla/xml-elements-methods-discover.md)メソッドを`DISCOVER_SCHEMA_ROWSETS`列挙値、 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)要素、`Discover`メソッドを返します。、`DISCOVER_SCHEMA_ROWSETS`行セット。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  DISCOVER_SCHEMA_ROWSETS 行セットには、次の列が含まれています。  
   
 |列名|型を表すインジケーター|長さ|説明|  
 |-----------------|--------------------|------------|-----------------|  
-|`SchemaName`|`DBTYPE_WSTR`||スキーマまたは要求の名前。 この要求の値が返されます、 *RequestTypes*列挙します。|  
+|`SchemaName`|`DBTYPE_WSTR`||スキーマまたは要求の名前。 この要求は、値を返します、 *RequestTypes*列挙体。|  
 |`SchemaGuid`|`DBTYPE_GUID`||スキーマの GUID です。|  
 |`Restrictions`|`DBTYPE_HCHAPTER`||プロバイダーによってサポートされている制限の配列。|  
 |`Description`|`DBTYPE_WSTR`||スキーマのローカライズ可能な説明。|  

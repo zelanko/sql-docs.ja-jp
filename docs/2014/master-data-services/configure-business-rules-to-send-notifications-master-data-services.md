@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], configuring notifications
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2d0c5d66a15ba476806df39792206c47a31bb26d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c20519f4db37f398fefed79042cc2d3ecf5ba631
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326132"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>通知を送信するようにビジネス ルールを構成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、属性値の変更をユーザーに通知する場合は、通知を送信するようにビジネス ルールを構成します。  
@@ -51,13 +51,13 @@ ms.locfileid: "36073030"
   
 4.  **[エンティティ]** の一覧からエンティティを選択します。  
   
-5.  **メンバー型**一覧で、メンバーの種類を選択します。  
+5.  **メンバーの種類**一覧で、メンバーの種類を選択します。  
   
 6.  **[属性]** の一覧で、属性を選択するか、 **[すべて]** の既定値のままにします。  
   
-7.  グリッドで、ビジネス ルールの行をダブルクリックして、**通知**フィールドです。  
+7.  グリッドで、ビジネス ルールの行で、ダブルクリック、**通知**フィールド。  
   
-8.  サブメニューには、電子メール通知を送信するには、ユーザーまたはグループをクリックします。  
+8.  サブメニューから [電子メール通知を送信するには、ユーザーまたはグループ] をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36073030"
   
     -   [ビジネス ルールに対して特定のメンバーを検証する&#40;マスター データ サービス&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [ビジネス ルールに対してバージョンを検証する&#40;マスター データ サービス&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [ビジネス ルールに対してバージョンを検証&#40;マスター データ サービス&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   電子メール プロトコルを次のように構成します。  
   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43a326d53179de549c1ac104b28d1ca9db3e2e25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d24b53a146a7e89a0f6cb8301d3fba34cfb50021
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171453"
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client アプリケーション
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを使用すると、スタンドアロンのツールを使用してデータ品質に関する操作を実行できます。 このアプリケーションでは、ナレッジ ベースを作成し、データ品質プロジェクトを作成して実行し、管理タスクを実行できます。  
   
- データ資産の管理および高水準のデータ品質の維持を担当するデータ スチュワード、データ エキスパート、または IT プロフェッショナルは、3 種類のロールのいずれかでクライアント アプリケーションを使用できます。DQS KB オペレーターは、データ品質オブジェクトを編集および実行できます。DQS KB エディターは、プロジェクトの機能を実行し、ナレッジ ベースを作成および編集できます。DQS 管理者は、プロジェクトおよびナレッジ ベースの機能を実行し、システムを管理できます。 詳細については、次を参照してください。 [DQS Security](../../2014/data-quality-services/dqs-security.md)です。  
+ データ資産の管理および高水準のデータ品質の維持を担当するデータ スチュワード、データ エキスパート、または IT プロフェッショナルは、3 種類のロールのいずれかでクライアント アプリケーションを使用できます。DQS KB オペレーターは、データ品質オブジェクトを編集および実行できます。DQS KB エディターは、プロジェクトの機能を実行し、ナレッジ ベースを作成および編集できます。DQS 管理者は、プロジェクトおよびナレッジ ベースの機能を実行し、システムを管理できます。 詳細については、次を参照してください。 [DQS セキュリティ](../../2014/data-quality-services/dqs-security.md)します。  
   
 ## <a name="installing-the-data-quality-client-application"></a>Data Quality Client アプリケーションのインストール  
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションは、SQL Server セットアップを使用してインストールします。 クライアント アプリケーションは、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]と同じコンピューターまたはリモート コンピューターにインストールできます。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションのインストールについて詳しくは、「[Data Quality Services のインストール](install-windows/install-data-quality-services.md)」をご覧ください。  

@@ -1,5 +1,5 @@
 ---
-title: 分類マトリックス タブ (マイニング精度チャート ビュー) |Microsoft ドキュメント
+title: 分類マトリックス タブ (マイニング精度チャート ビュー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.confusionmatrix.f1
 ms.assetid: 85d5a047-d656-41e0-8a31-400271c2a620
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b4e2f9a8d361cdb400867c08e83be9347d076f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58df3c6d14edb8bfddbd53db0c110475d2a983bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251514"
 ---
 # <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>[分類マトリックス] タブ ([マイニング精度チャート] ビュー)
-  **[分類マトリックス]** タブには、 **[列マッピング]** タブのモデル グリッドで選択した各モデルの分類マトリックスが表示されます。分類マトリックスは、 **[列マッピング]** タブで選択した予測可能列が不連続である場合にのみ使用できます。 詳細の詳細については、**分類マトリックス** タブを参照してください[テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)です。  
+  **[分類マトリックス]** タブには、 **[列マッピング]** タブのモデル グリッドで選択した各モデルの分類マトリックスが表示されます。分類マトリックスは、 **[列マッピング]** タブで選択した予測可能列が不連続である場合にのみ使用できます。 より詳細な説明については、**分類マトリックス** タブを参照してください[テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)します。  
   
 ## <a name="options"></a>および  
  **[コピー]**  
@@ -40,7 +40,7 @@ ms.locfileid: "36073138"
   
 ## <a name="see-also"></a>参照  
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [テストと検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

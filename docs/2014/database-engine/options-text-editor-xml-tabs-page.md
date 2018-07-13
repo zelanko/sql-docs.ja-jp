@@ -1,5 +1,5 @@
 ---
-title: 'オプション ([テキスト エディター: XML:Tabs] ページ) |Microsoft ドキュメント'
+title: 'オプション ([テキスト エディター: XML:Tabs] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Tabs
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb41fb44ad1f820623ab3db96b1bf6108fd580a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 2843acbc8935d8bd9f505a9265c704a342ddee3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324922"
 ---
 # <a name="options-text-editorxmltabs-page"></a>オプション ([テキスト エディター: XML:Tabs] ページ)
   このダイアログ ボックスを使用すると、XML ドキュメントの編集に使用される XML エディターのタブの動作を変更できます。 この設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックして、**[テキスト エディター]** フォルダーを展開し、さらに **[XML]** サブフォルダーを展開して、**[タブ]** をクリックします。  
@@ -43,13 +43,13 @@ ms.locfileid: "36073297"
  **[タブ サイズ]**  
  タブ ストップ間の間隔をスペース数で設定します。 既定値は、スペースが 4 つです。  
   
- **[インデント サイズ]**  
+ **インデントのサイズ**  
  自動インデントのサイズをスペース数で設定します。 既定値は、スペースが 4 つです。 指定されたサイズになるように、タブ文字、スペース文字、またはその両方が挿入されます。  
   
  **スペースを挿入します。**  
  このオプションを選択すると、タブ文字を使用せずにスペース文字だけを挿入してインデントします。 たとえば **[インデント サイズ]** が 5 に設定されている場合、 のメイン ウィンドウで **キーを押すか、ツール バーの [** インデント [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ] ボタンを押すごとに、5 つのスペース文字が挿入されます。  
   
- **タブの保持**  
+ **タブを保持します。**  
  このオプションを選択すると、インデントするときにできる限り多くのタブ文字を挿入します。 それぞれのタブ文字が、**[タブ サイズ]** で指定された数のスペースを満たします。 **[インデント サイズ]** が **[タブ サイズ]** の倍数でない場合は、その差を埋めるためにスペース文字が追加されます。  
   
   

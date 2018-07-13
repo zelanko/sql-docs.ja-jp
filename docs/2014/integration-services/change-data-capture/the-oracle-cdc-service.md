@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc492ecae459c0ff697f829ad6db14872e00da41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a95f78439afc186c7301a5e4b139494601a358aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328122"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
   Oracle CDC Service は、プログラム xdbcdcsvc.exe を実行する Windows サービスです。 それぞれ異なる Windows サービス名を持つ複数の Windows サービスを、同じコンピューターで実行するように構成できます。 1 つのコンピューターで複数の Oracle CDC Windows サービスを作成する場合としては、サービス間の分離を強化したい場合や、各サービスでそれぞれ異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用する必要がある場合などが一般的です。  
   
- Oracle CDC Service は、Oracle CDC Service 構成コンソールを使用して作成されるか、xdbcdcsvc.exe プログラムに組み込まれているコマンド ライン インターフェイスを使用して定義されます。 どちらの場合も、作成された各 Oracle CDC Service は、1 つに関連付けられて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス (クラスター化または使用してミラー化する可能性がありますいる**AlwaysOn**セットアップ) と接続情報 (接続文字列とアクセス資格情報) はサービス構成の一部です。  
+ Oracle CDC Service は、Oracle CDC Service 構成コンソールを使用して作成されるか、xdbcdcsvc.exe プログラムに組み込まれているコマンド ライン インターフェイスを使用して定義されます。 どちらの場合も、作成された各 Oracle CDC Service は、1 つに関連付け[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス (クラスター化またはでミラー化された可能性がありますいる**AlwaysOn**セットアップ) と接続情報 (接続文字列とアクセス資格情報) はサービスの構成の一部です。  
   
  Oracle CDC Service が開始されると、関連付けられている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続が試行され、処理する必要がある Oracle CDC インスタンスの一覧が取得されて、環境の最初の検証が実行されます。 サービス開始時のエラーと、開始/停止の情報は、常に Windows アプリケーション イベント ログに書き込まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続が確立されると、すべてのエラーと情報メッセージが、 **インスタンスの MSXDBCDC データベースの** dbo.xdbcdc_trace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに書き込まれます。 サービス開始時の検証では、たとえば、同じ名前の Oracle CDC Service が現在実行されていないかどうかが確認されます。 同じ名前のサービスが別のコンピューターから現在接続している場合は、Oracle CDC Service が wait ループに入り、そのサービスが切断されるのを待ってから処理が開始されます。  
   
@@ -56,7 +56,7 @@ GO
 ### <a name="protection-of-source-oracle-change-data"></a>ソース Oracle の変更データの保護  
  Oracle CDC Service には、Oracle データベースの任意のテーブルに対する変更をキャプチャできるログ マイニングの資格情報が与えられています。 変更データには、通常のテーブルのような詳細なアクセス許可はないため、変更データにアクセスするときには、Oracle に組み込まれているアクセス制御がバイパスされます。  
   
- CDC データベースには、キャプチャ対象のソース Oracle テーブルと同じスキーマ名とテーブル名を持つ空のミラー テーブルがあります。 キャプチャされたデータは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のキャプチャ インスタンスに格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースからキャプチャされた変更と同じように保護されます。 キャプチャ インスタンスに関連付けられた変更データにアクセスするには、関連付けられたミラー テーブルのすべてのキャプチャ対象列に対する選択アクセスがユーザーに許可されている必要があります。 また、キャプチャ インスタンスの作成時にゲーティング ロールが指定されている場合、呼び出し元は、指定されたゲーティング ロールのメンバーである必要もあります。 メタデータにアクセスするためのその他の一般的な変更データ キャプチャ関数には、public ロールですべてのデータベース ユーザーがアクセスできます。ただし、通常は、返されるメタデータへのアクセスも、基になるソース テーブルに対する選択アクセス、および定義されたすべてのゲーティング ロールのメンバーシップに基づいて制限されます。  
+ CDC データベースには、キャプチャ対象のソース Oracle テーブルと同じスキーマ名とテーブル名を持つ空のミラー テーブルがあります。 キャプチャされたデータは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のキャプチャ インスタンスに格納され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースからキャプチャされた変更と同じように保護されます。 キャプチャ インスタンスに関連付けられた変更データにアクセスするには、関連付けられたミラー テーブルのすべてのキャプチャ対象列に対する選択アクセスがユーザーに許可されている必要があります。 また、キャプチャ インスタンスの作成時にゲーティング ロールが指定されている場合、呼び出し元は、指定されたゲーティング ロールのメンバーである必要もあります。 メタデータにアクセスするためのその他の一般的な変更データ キャプチャ関数には、public ロールですべてのデータベース ユーザーがアクセスできます。ただし、通常は、返されるメタデータへのアクセスも、基になるソース テーブルに対する選択アクセス、および定義されたすべてのゲーティング ロールのメンバーシップに基づいて制限されます。  
   
  したがって、 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールを持つユーザーには、キャプチャされたデータへのフル アクセス権が (既定で) 与えられ、さらなるアクセスは、ゲーティング ロールを使用するか、キャプチャ対象列に対する選択アクセスを許可することによって許可できます。  
   

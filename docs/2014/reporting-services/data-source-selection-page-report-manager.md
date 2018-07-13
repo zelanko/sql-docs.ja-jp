@@ -1,5 +1,5 @@
 ---
-title: データ ソースの選択 ページ (レポート マネージャー) |Microsoft ドキュメント
+title: データ ソースの選択 ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 800b6fdbe63ca1c7adb5f79367e317a4a2a62167
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 528e30c885150e3d9fc422449987ba211e77161b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256481"
 ---
 # <a name="data-source-selection-page-report-manager"></a>[データ ソースの選択] ページ (レポート マネージャー)
   [データ ソースの選択] ページを使用すると、レポートまたはレポート モデルで使用する既存の共有データ ソース アイテムを選択できます。 このページは、異なるデータ ソースを選択する場合も使用します。 データ ソースの種類または接続文字列を表示するには、共有データ ソースに移動してプロパティ ページを開く必要があります。  

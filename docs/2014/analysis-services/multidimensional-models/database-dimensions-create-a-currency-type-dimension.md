@@ -1,5 +1,5 @@
 ---
-title: 通貨の種類ディメンションを作成 |Microsoft ドキュメント
+title: 通貨型ディメンションの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], currency
 - currency [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f45683b404e9a33260edda6163aae9f783c8b7f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b9eb36a77501a7195c18138eab0d767fc7aed63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232022"
 ---
 # <a name="create-a-currency-type-dimension"></a>通貨ディメンションの作成
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、通貨ディメンションとは、通貨を財務報告用に一覧にした属性を持つディメンションを指します。  
@@ -37,14 +37,14 @@ ms.locfileid: "36073131"
   
  ビジネス インテリジェンス ウィザードは、これらの情報に基づいて、適切な換算先通貨ディメンション (換算先の通貨を表す通貨ディメンション) を指定する通貨換算プロセスをデザインします。 ビジネス インテリジェンス ウィザードでは、使用するビジネス インテリジェンス ソリューションに必要な通貨換算の数に応じて、複数の換算先通貨ディメンションを定義できます。 通貨換算の定義の詳細については、「[通貨換算 &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md)」を参照してください。  
   
- 通貨ディメンションとしてディメンションを識別するのには、設定、`Type`にディメンションのプロパティ`Currency`です。  
+ 通貨ディメンションとしてディメンションを識別するためには、設定、`Type`ディメンションのプロパティ`Currency`します。  
   
 ## <a name="dimension-structure"></a>[ディメンション構造]  
  通貨ディメンションには、少なくとも、その通貨ディメンションのディメンション テーブル内で個々の通貨を識別するキー属性が含まれています。 キー属性の値は、換算元通貨ディメンションと換算先通貨ディメンションで異なります。  
   
 -   属性を換算元通貨ディメンションのキー属性として指定するには、属性の `Type` プロパティを `CurrencySource` に設定します。  
   
--   属性を換算先通貨ディメンションとしてを指定するのには、設定、`Type`する属性のプロパティ`CurrencyDestination`です。  
+-   属性を換算先通貨ディメンションとしてを識別するためには、設定、`Type`する属性のプロパティ`CurrencyDestination`します。  
   
  必要に応じて次の属性を換算元通貨ディメンションと換算先通貨ディメンションに含めると、レポート作成に使用できます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36073131"
   
 -   国際標準化機構 (ISO) 通貨コード  
   
-     通貨の ISO コード属性として属性を識別するためには、設定、`Type`する属性のプロパティ`CurrencyIsoCode`です。  
+     通貨の ISO コード属性として属性を識別するためには、設定、`Type`する属性のプロパティ`CurrencyIsoCode`します。  
   
  属性の種類の詳細については、「 [属性の種類の構成](attribute-properties-configure-attribute-types.md)」を参照してください。  
   

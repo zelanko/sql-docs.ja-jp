@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7832b3440ae08597a84f5f0e5f6c3a8d851c3ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2468e7debaa34b08d40ffedef0a7f078f44343a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182309"
 ---
 # <a name="atomic-blocks"></a>ATOMIC ブロック
   `BEGIN ATOMIC` は、ANSI SQL 標準の一部です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ネイティブ コンパイル ストアド プロシージャの最上位でのみ ATOMIC ブロックがサポートされます。  
@@ -33,9 +33,9 @@ ms.locfileid: "36074821"
 ## <a name="transactions-and-error-handling"></a>トランザクションとエラー処理  
  バッチによって `BEGIN TRANSACTION` ステートメントが実行されてトランザクションがアクティブな状態になっているため、トランザクションがセッションに存在する場合、ATOMIC ブロックの処理を開始するとトランザクションにセーブポイントが作成されます。 ブロックが例外なしで終了すると、ブロックに対して作成されたセーブポイントがコミットされますが、セッション レベルでコミットされるまでトランザクションはコミットされません。 ブロックで例外がスローされるとブロックの結果はロールバックされますが、例外によってトランザクションの失敗が決定的にならない限り、セッション レベルのトランザクションは続行されます。 たとえば、書き込みの競合によってトランザクションの失敗は決定的になりますが、型キャスト エラーの場合はそうではありません。  
   
- セッションにアクティブなトランザクションがない場合、`BEGIN ATOMIC` は新しいトランザクションを開始します。 ブロックのスコープ外でスローされる例外が存在しない場合、トランザクションはブロックの末尾でコミットされます。 ブロックで例外がスローされた場合 (つまり、ブロック内で例外をキャッチして処理できなかった場合)、トランザクションはロールバックされます。 1 つの atomic ブロック (1 つは、ストアド プロシージャをネイティブでコンパイル) にまたがるトランザクションの場合は、必要はありません書き込む明示的な`BEGIN TRANSACTION`と`COMMIT`または`ROLLBACK`ステートメントです。  
+ セッションにアクティブなトランザクションがない場合、`BEGIN ATOMIC` は新しいトランザクションを開始します。 ブロックのスコープ外でスローされる例外が存在しない場合、トランザクションはブロックの末尾でコミットされます。 ブロックで例外がスローされた場合 (つまり、ブロック内で例外をキャッチして処理できなかった場合)、トランザクションはロールバックされます。 1 つの atomic ブロック (1 つは、ストアド プロシージャをネイティブ コンパイル) にまたがるトランザクションの必要はありません書き込む明示的な`BEGIN TRANSACTION`と`COMMIT`または`ROLLBACK`ステートメント。  
   
- ネイティブ コンパイル ストアド プロシージャのサポート、 `TRY`、 `CATCH`、および`THROW`エラー処理を構築します。 `RAISERROR` サポートされていません。  
+ ストアド プロシージャのサポートをネイティブ コンパイル、 `TRY`、 `CATCH`、および`THROW`エラー処理を構築します。 `RAISERROR` サポートされていません。  
   
  次の例は、ATOMIC ブロックおよびネイティブ コンパイル ストアド プロシージャでのエラー処理動作を示しています。  
   
@@ -130,22 +130,22 @@ GO
  メモリ最適化テーブルに固有の次のエラー メッセージは、トランザクションの失敗が決定的であることを示しています。 ATOMIC ブロックのスコープ内で、10772、41301、41302、41305、41325、41332、または 41333 のエラーが発生した場合、トランザクションは中止されます。  
   
 ## <a name="session-settings"></a>セッションの設定  
- ATOMIC ブロックのセッション設定は、ストアド プロシージャのコンパイル時に固定されます。 いくつかの設定で指定できる`BEGIN ATOMIC`その他の設定は常に同じ値に固定します。  
+ ATOMIC ブロックのセッション設定は、ストアド プロシージャのコンパイル時に固定されます。 一部の設定で指定できます`BEGIN ATOMIC`他の設定は、常に同じ値に固定します。  
   
  `BEGIN ATOMIC` では以下のオプションは必須です。  
   
 |必須の設定|説明|  
 |----------------------|-----------------|  
-|`TRANSACTION ISOLATION LEVEL`|サポートされる値は`SNAPSHOT`、 `REPEATABLEREAD`、および`SERIALIZABLE`です。|  
+|`TRANSACTION ISOLATION LEVEL`|サポートされる値は`SNAPSHOT`、 `REPEATABLEREAD`、および`SERIALIZABLE`します。|  
 |`LANGUAGE`|日付と時刻の形式とシステム メッセージが決まります。 [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) のすべての言語とエイリアスがサポートされます。|  
   
  次の設定は省略可能です。  
   
 |省略可能な設定|説明|  
 |----------------------|-----------------|  
-|`DATEFORMAT`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての日付形式がサポートされています。 指定した場合、`DATEFORMAT`に関連付けられている既定の日付形式よりも優先`LANGUAGE`です。|  
+|`DATEFORMAT`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての日付形式がサポートされています。 指定した場合、`DATEFORMAT`に関連付けられている既定の日付形式を上書き`LANGUAGE`します。|  
 |`DATEFIRST`|指定した場合、`DATEFIRST` は `LANGUAGE` に関連付けられた既定値をオーバーライドします。|  
-|`DELAYED_DURABILITY`|サポートされる値は`OFF`と`ON`です。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるトランザクションのコミットには、完全持続性、既定値、または遅延持続性が適用されます。詳細については、「[Control Transaction Durability](../logs/control-transaction-durability.md)」 (トランザクションの持続性の制御) を参照してください。|  
+|`DELAYED_DURABILITY`|サポートされる値は`OFF`と`ON`します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるトランザクションのコミットには、完全持続性、既定値、または遅延持続性が適用されます。詳細については、「[Control Transaction Durability](../logs/control-transaction-durability.md)」 (トランザクションの持続性の制御) を参照してください。|  
   
  次の SET オプションには、すべてのネイティブ コンパイル ストアド プロシージャのすべての ATOMIC ブロックについて同じシステム既定値が設定されます。  
   

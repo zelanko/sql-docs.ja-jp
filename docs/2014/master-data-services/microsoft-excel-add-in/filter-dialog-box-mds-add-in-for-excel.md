@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a01425734f0d3182a90481cb2641bb55e6611d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1118f3a7ee1e9bbace60dc2ac36c813d5b147edb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178069"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>[フィルター] ダイアログ ボックス (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、 **[フィルター]** ダイアログ ボックスを使用して、MDS によって管理されるデータを Excel に読み込む前に絞り込むことができます。  
@@ -35,7 +35,7 @@ ms.locfileid: "36075531"
 |明示的階層|属性の型として **[統合]** を選択した場合に、統合メンバーが属する階層を選択します。 詳細については、「[明示的階層 (マスター データ サービス)](../explicit-hierarchies-master-data-services.md)」を参照してください。|  
 |属性グループ|属性グループは、属性のサブセットをグループ化する方法です。 使用可能な属性のサブセットを表示する場合は、属性グループを選択します。 属性の詳細については、「[属性 (マスター データ サービス)](../attribute-groups-master-data-services.md)」を参照してください。|  
 |[すべて選択]|一覧に表示されているすべての属性を選択します。|  
-|[すべてクリア]|一覧に表示されている選択済みの属性をクリアします。<br /><br /> 注: を消去できません**名前**と**コード**です。|  
+|[すべてクリア]|一覧に表示されている選択済みの属性をクリアします。<br /><br /> 注: を消去できません**名前**と**コード**します。|  
 |上矢印|選択した属性を一覧内で上へ移動します。 この順序 (上から下) は、ワークシート内で列が表示される順序 (左から右) に対応します。|  
 |下向きの矢印|選択した属性を一覧内で下へ移動します。 この順序 (上から下) は、ワークシート内で列が表示される順序 (左から右) に対応します。|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36075531"
 |[列]|Excel に読み込まれる列数。 **[列]** セクションで選択した属性に基づきます。|  
   
 ## <a name="see-also"></a>参照  
- [読み込み前にデータをフィルター処理&#40;MDS アドインを Excel 用&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)   
- [データの読み込み&#40;MDS アドインを Excel 用&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+ [読み込み前にデータをフィルター処理&#40;MDS アドインの Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)   
+ [データの読み込み&#40;MDS アドインの Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

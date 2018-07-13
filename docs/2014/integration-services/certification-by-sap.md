@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a009705789a0b037ae34e1be981c10ee581845b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d36f3dbbfc9bb38c255c6ce887f0d92bb44472a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162943"
 ---
 # <a name="certification-by-sap"></a>SAP による認定
   Microsoft Connector 1.1 for SAP BW は、SAP から SAP NetWeaver との統合に関する認定を受けました。  

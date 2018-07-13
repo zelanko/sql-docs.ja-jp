@@ -1,5 +1,5 @@
 ---
-title: Custom Messages for Logging |Microsoft ドキュメント
+title: Custom Messages for Logging |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], custom
 - writing log entries
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80086e7a946ad9d5457e95646bcd9c8bce3e3df3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3929d8c861723c2204214ba66e73ea9268c19cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221842"
 ---
 # <a name="custom-messages-for-logging"></a>ログ記録用のカスタム メッセージ
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージおよび多くのタスクのログ エントリを書き込むための豊富な一連のカスタム イベントを提供します。 記録したエントリを使用すれば、定義済みのイベントやユーザー定義メッセージを後の分析用に記録しておくことで、実行の進行状況、結果、および問題点に関する詳細を保管できます。 たとえば、一括挿入の開始時刻と終了時刻を記録しておけば、パッケージ実行時のパフォーマンスの問題を特定できます。  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージおよび多くのタスクのログ エントリを書き込むためには、カスタム イベントの豊富なセットを提供します。 記録したエントリを使用すれば、定義済みのイベントやユーザー定義メッセージを後の分析用に記録しておくことで、実行の進行状況、結果、および問題点に関する詳細を保管できます。 たとえば、一括挿入の開始時刻と終了時刻を記録しておけば、パッケージ実行時のパフォーマンスの問題を特定できます。  
   
  カスタム ログ エントリとは、パッケージ、すべてのコンテナー、およびタスクに使用できる一連の標準的なログ記録イベントとは異なるエントリのセットです。 カスタム ログ エントリは、パッケージ内の特定のタスクに関する有益な情報を取得するように調整されます。 たとえば、SQL 実行タスクのカスタム ログ エントリの 1 つに、そのタスクで実行される SQL ステートメントをログに記録するものがあります。  
   
- すべてのログ エントリには、パッケージの開始時と終了時に自動的に書き込まれるログ エントリなど、日付と時刻に関する情報が含まれます。 多くのログ イベントでは、ログに複数のエントリが書き込まれます。 通常、イベントにいくつか異なるフェーズが含まれている場合に複数のエントリが書き込まれます。 たとえば、`ExecuteSQLExecutingQuery`ログのイベントは、3 つのエントリを書き込みます: 1 つのエントリ、タスクが別のタスクの後、データベースへの接続を取得した後は、SQL ステートメントの実行が完了した後、SQL ステートメント、および 1 つ以上の準備が開始します。  
+ すべてのログ エントリには、パッケージの開始時と終了時に自動的に書き込まれるログ エントリなど、日付と時刻に関する情報が含まれます。 多くのログ イベントでは、ログに複数のエントリが書き込まれます。 通常、イベントにいくつか異なるフェーズが含まれている場合に複数のエントリが書き込まれます。 たとえば、`ExecuteSQLExecutingQuery`イベントをログには、次の 3 つのエントリが書き込まれます: SQL ステートメントの実行が完了した後に、SQL ステートメントともう 1 つを準備する 1 つのエントリが取得された後、データベースへの接続を開始します。  
   
  次の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクトには、カスタム ログ エントリがあります。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36073786"
 |---------------|-----------------|  
 |`PackageStart`|パッケージの実行が開始されたことを示します。<br /><br /> 注: このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
 |`PackageEnd`|パッケージが完了したことを示します。<br /><br /> 注: このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
-|`Diagnostic`|同時実行できる実行可能ファイル数など、パッケージの実行に影響するシステム構成に関する情報を提供します。<br /><br /> `Diagnostic`ログ エントリは、外部データ プロバイダーへの呼び出しのエントリの前後にも含まれます。 詳細については、「[トラブルシューティング ツールのパッケージ接続](troubleshooting/troubleshooting-tools-for-package-connectivity.md)」を参照してください。|  
+|`Diagnostic`|同時実行できる実行可能ファイル数など、パッケージの実行に影響するシステム構成に関する情報を提供します。<br /><br /> `Diagnostic`ログ エントリは前に、と後の呼び出しを外部データ プロバイダーのエントリにも含まれます。 詳細については、「[トラブルシューティング ツールのパッケージ接続](troubleshooting/troubleshooting-tools-for-package-connectivity.md)」を参照してください。|  
   
 ###  <a name="BulkInsert"></a> 一括挿入タスク  
  次の表は、一括挿入タスクのカスタム ログ エントリの一覧です。  
@@ -103,9 +103,9 @@ ms.locfileid: "36073786"
 |ログ エントリ|説明|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|データ フロー タスクでバッファーのサイズが変更されたことを示します。 このログ エントリはサイズ変更の理由を説明し、一時的な新しいバッファー サイズを表示します。|  
-|`OnPipelinePostEndOfRowset`|最後の呼び出しで設定されて、その行セットへの最後の信号がコンポーネントに指定されていることを示します、`ProcessInput`メソッドです。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
-|`OnPipelinePostPrimeOutput`|コンポーネントが、最後の呼び出しを完了したことを示す、`PrimeOutput`メソッドです。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。 コンポーネントがソースの場合、コンポーネントが行の処理を完了したことを意味します。|  
-|`OnPipelinePreEndOfRowset`|コンポーネントの最後の呼び出しで設定されて、その行セットへの最後の信号を受信しようとしていますが、`ProcessInput`メソッドです。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
+|`OnPipelinePostEndOfRowset`|最後の呼び出しで設定される行セットの終了シグナルがコンポーネントに指定されていることを示します、`ProcessInput`メソッド。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
+|`OnPipelinePostPrimeOutput`|コンポーネントで、最後の呼び出しが完了したことを示します、`PrimeOutput`メソッド。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。 コンポーネントがソースの場合、コンポーネントが行の処理を完了したことを意味します。|  
+|`OnPipelinePreEndOfRowset`|コンポーネントがまもなくの最後の呼び出しで設定される行セットの終了シグナルを受信することを示します、`ProcessInput`メソッド。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
 |`OnPipelinePrePrimeOutput`|コンポーネントに、`PrimeOutput` メソッドからの呼び出しが通知されたことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。|  
 |`OnPipelineRowsSent`|`ProcessInput` メソッドの呼び出しによってコンポーネント入力に指定された行数を報告します。 ログ エントリにはコンポーネント名が含まれます。|  
 |`PipelineBufferLeak`|バッファー マネージャーの終了後もバッファーを保持しているコンポーネントに関する情報を提供します。 つまり、バッファー リソースが解放されていないため、メモリ リークの原因になる可能性があります。 このログ エントリは、コンポーネントの名前とバッファーの ID を含みます。|  

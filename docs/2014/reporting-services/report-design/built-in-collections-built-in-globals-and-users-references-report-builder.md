@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 897cb599b73c6a136c2d79e2a21068dfb05655ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35a17dd8fd787fe585108b661117b36f887bdfca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331012"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>組み込み Globals および Users 参照 (レポート ビルダーおよび SSRS)
   組み込みフィールドのコレクションには、レポートの処理時に Reporting Services によって提供されるグローバルな値を表す `Globals` コレクションと `User` コレクションの両方が含まれています。 `Globals` コレクションでは、レポート名、レポート処理の開始時刻、レポート ヘッダーまたはレポート フッターの現在のページ番号などの値が提供されます。 `User` コレクションでは、ユーザー ID と言語設定が提供されます。 これらの値は、レポート内の結果をフィルター処理する際に式で使用できます。  
@@ -30,10 +30,10 @@ ms.locfileid: "36072494"
 ## <a name="using-the-globals-collection"></a>Globals コレクションの使用  
  `Globals`コレクションには、レポートのグローバル変数が含まれています。 デザイン画面では、これらの変数は、`[&ReportName]` など、先頭に & (アンパサンド) が付いた状態で表示されます。 次の表のメンバー、`Globals`コレクション。  
   
-|**Member**|**Type**|**description**|  
+|**Member**|**型**|**[説明]**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|レポートの実行を開始した日付と時刻です。|  
-|PageNumber|`Integer`|ページ番号をリセットした改ページを基準とする現在のページ番号です。 レポート処理の開始時、初期値は 1 に設定されています。 ページ番号は、表示されるページごとに増えます。<br /><br /> 四角形、データ領域、データ領域グループ、または、PageBreak プロパティで、マップの改ページ内のページを表示する ResetPageNumber プロパティを設定`True`です。 Tablix 列階層グループではサポートされていません。<br /><br /> PageNumber は、ページ ヘッダーまたはページ フッターの式でのみ使用できます。|  
+|PageNumber|`Integer`|ページ番号をリセットした改ページを基準とする現在のページ番号です。 レポート処理の開始時、初期値は 1 に設定されています。 ページ番号は、表示されるページごとに増えます。<br /><br /> 四角形、データ領域、データ領域グループ、または、PageBreak プロパティで、マップの改ページ内のページ番号を ResetPageNumber プロパティを設定`True`します。 Tablix 列階層グループではサポートされていません。<br /><br /> PageNumber は、ページ ヘッダーまたはページ フッターの式でのみ使用できます。|  
 |ReportFolder|`String`|レポートを含んでいるフォルダーへの完全なパスです。 これには、レポート サーバーの URL は含まれません。|  
 |ReportName|`String`|レポート サーバー データベースに格納されているとおりのレポートの名前です。|  
 |ReportServerUrl|`String`|レポートが実行されるレポート サーバーの URL です。|  
@@ -43,7 +43,7 @@ ms.locfileid: "36072494"
 |OverallTotalPages|`Integer`|レポート全体の合計ページ数です。 この値は ResetPageNumber の影響を受けません。<br /><br /> OverallTotalPages は、ページ ヘッダーまたはページ フッターの式でのみ使用できます。|  
 |RenderFormat|`RenderFormat`|現在の表示要求に関する情報です。<br /><br /> 詳細については、次のセクションの「RenderFormat」を参照してください。|  
   
- メンバー、`Globals`コレクションは、バリアント型を返します。 特定のデータ型を必要とする、このコレクションのメンバーを式で使用する場合は、先に変数をキャストする必要があります。 たとえば、バリアント型の実行時間を Date 形式に変換するには、 `=CDate(Globals!ExecutionTime)`を使用します。 詳細については、次を参照してください。[式におけるデータ型&#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)です。  
+ メンバー、`Globals`コレクションは、バリアント型を返します。 特定のデータ型を必要とする、このコレクションのメンバーを式で使用する場合は、先に変数をキャストする必要があります。 たとえば、バリアント型の実行時間を Date 形式に変換するには、 `=CDate(Globals!ExecutionTime)`を使用します。 詳細については、次を参照してください。[式におけるデータ型&#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)します。  
   
 ### <a name="renderformat"></a>RenderFormat  
  次の表では、`RenderFormat` のメンバーについて説明します。  
@@ -76,7 +76,7 @@ ms.locfileid: "36072494"
   
  次の表のメンバー、`User`コレクション。  
   
-|**Member**|**Type**|**description**|  
+|**Member**|**型**|**[説明]**|  
 |----------------|--------------|---------------------|  
 |`Language`|`String`|レポートを実行しているユーザーの言語です。 たとえば、 `en-US`のようにします。|  
 |`UserID`|`String`|レポートを実行しているユーザーの ID です。 Windows 認証を使用している場合、この値は現在のユーザーのドメイン アカウントです。 値は、Windows 認証またはカスタム認証を使用できる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] セキュリティ拡張機能によって決まります。|  

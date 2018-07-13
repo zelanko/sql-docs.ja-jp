@@ -1,5 +1,5 @@
 ---
-title: 情報を表示し、サブスクリプション (レプリケーション モニター) に関連付けられているエージェントのタスクを実行 |Microsoft ドキュメント
+title: 情報を表示し、(レプリケーション モニター) のサブスクリプションに関連付けられているエージェントのタスクを実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], viewing information
 - viewing replication agent information
 - agents [SQL Server replication], tasks in Replication Monitor
 ms.assetid: fbb59d31-2424-4552-9195-0da8d83e755f
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0a9747d46beda33ace53f1a33b394b21602eef5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71ec17050728d3108c3841c73b16865bbc6259ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266358"
 ---
 # <a name="view-information-and-perform-tasks-for-the-agents-associated-with-a-subscription-replication-monitor"></a>サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する (レプリケーション モニター)
   レプリケーション モニターでは、次の 2 つのタブを使用して、サブスクリプションに関連付けられているエージェントの情報にアクセスできます。  

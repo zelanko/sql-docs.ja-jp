@@ -1,5 +1,5 @@
 ---
-title: DirectQuery モード (SSAS 2014) での DAX 数式の互換性 |Microsoft ドキュメント
+title: DirectQuery モード (SSAS 2014) での DAX 数式の互換性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,35 +9,35 @@ ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 caps.latest.revision: 3
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 700fed6039c53bd7e3c485d06fe5df4eae32e7f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68a73fd64b9bba02a917c8538f79062ff85afbdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189479"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery モード (SSAS 2014) での DAX 数式の互換性
-Data Analysis Expression 言語 (DAX) は、Analysis Services 表形式モデルでメジャーおよび他のカスタム式を使用するための作成に使用することができます[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel ブックのデータ モデルと Power BI Desktop データ モデル。 ほとんどの点で、これらの環境を作成するモデルが同じであり、同じメジャー、リレーションシップ、および Kpi を使用するなどです。ただし、Analysis Services 表形式モデルを作成して、DirectQuery モードで展開する場合は、使用できる数式に関していくつかの制限。 このトピックそれらの相違点の概要を示します、互換性レベル 1100 または 1103 tabulars モデルを SQL Server 2014 Analysis Services では、DirectQuery モードではサポートされていない関数が一覧表示し、サポートされている関数を一覧表示される場合があります。異なる結果を返します。  
+Analysis Services 表形式モデルでメジャーと使用するための他のカスタム式を作成する Data Analysis Expression (DAX) 言語を使用できます[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel ブックのデータ モデルと Power BI Desktop データ モデル。 多くの点では、これらの環境を作成するモデルが同じであり、同じメジャー、リレーションシップ、および Kpi を使用するなど。ただし、Analysis Services 表形式のモデルを作成して、DirectQuery モードで展開する場合は、使用できる数式に関していくつかの制限。 このトピックで、これらの違いの概要を説明します、互換性レベル 1100 または 1103 の SQL Server 2014 Analysis Services tabulars モデルおよび DirectQuery モードでは、サポートされていない関数を一覧表示およびサポートされている関数の一覧が可能性があります。異なる結果を返します。  
   
-このトピック内でという用語を使用して*インメモリ モデルで*ホストされている表形式モードで実行されている Analysis Services サーバー上でのインメモリ キャッシュ データを完全には、表形式モデルを参照します。 使用して*DirectQuery モデル*を作成または DirectQuery モードで配置された表形式モデルを参照してください。 DirectQuery モードの詳細については、次を参照してください。 [DirectQuery モード (SSAS テーブル)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)です。  
+このトピックでは、内でという用語を使用しました*インメモリ モデルで*ホストされている表形式モードで実行されている Analysis Services サーバー上のメモリ内キャッシュされたデータを完全には表形式モデルを参照します。 使用して*DirectQuery モデル*を作成または DirectQuery モードで配置された表形式モデルを参照してください。 DirectQuery モードの詳細については、次を参照してください。 [DirectQuery モード (SSAS テーブル)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)します。  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>インメモリと DirectQuery モードの違い  
-DirectQuery モードで配置されたモデルでのクエリは、同じモデルがインメモリで配置されたときとは異なる結果を返す場合があります。 これは、リレーショナル データ ストアから直接データを照会する (directquery あり)、および数式で必要な集計は行われません、xVelocity メモリ内分析エンジン (VertiPaq) 記憶域を使用するのではなく、関連するリレーショナル エンジンを使用しているために、します。計算します。  
+DirectQuery モードで配置されたモデルでのクエリは、同じモデルがインメモリで配置されたときとは異なる結果を返す場合があります。 これは DirectQuery を使用すると、リレーショナル データ ストアから直接データをクエリし、xVelocity メモリ内分析エンジン (VertiPaq) ストレージを使用してよりも、関連するリレーショナル エンジンを使用して、数式で必要な集計が実行されるためです。計算します。  
   
 たとえば、特定のリレーショナル データ ストアが数値、日付、null などを処理する方法に違いがあります。  
   
-一方、DAX 言語は、Microsoft Excel での関数の動作をできる限り忠実にエミュレートするようになっています。 たとえば、null、空の文字列、ゼロ値を処理するときに、Excel では正確なデータ型に関係なく最善の結果を提供するようになっているため、xVelocity エンジンも同様に動作します。 ただし、表形式モデルでは、DirectQuery モードで配置し、数式を評価するためのリレーショナル データ ソースに渡します、データ処理する必要がある空の別個の処理を通常必要とするリレーショナル データ ソースのセマンティックに従ってnull 値と文字列。 このため、同じ数式でも、キャッシュされたデータに対して評価されるときと、リレーショナル ストアから戻されたデータのみに対して評価されるときでは、異なる結果が返される可能性があります。  
+一方、DAX 言語は、Microsoft Excel での関数の動作をできる限り忠実にエミュレートするようになっています。 たとえば、null、空の文字列、ゼロ値を処理するときに、Excel では正確なデータ型に関係なく最善の結果を提供するようになっているため、xVelocity エンジンも同様に動作します。 ただし、表形式モデルが DirectQuery モードで配置されてし、数式を評価のためのリレーショナル データ ソースに渡す、する必要があるに従ってデータを処理、リレーショナル データ ソースのセマンティクスを空の個別の処理を通常必要とします。文字列と null。 このため、同じ数式でも、キャッシュされたデータに対して評価されるときと、リレーショナル ストアから戻されたデータのみに対して評価されるときでは、異なる結果が返される可能性があります。  
   
-さらに、一部の関数では使用できませんすべての DirectQuery モードをパラメーターとしてリレーショナル データ ソースに現在のコンテキストでデータを送信、計算が必要があるためです。 たとえば、メジャー、[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]ブックは多くの場合、ブック内で使用可能な日付範囲を参照するタイム インテリジェンス関数を使用します。 このような数式は、一般に、DirectQuery モードでは使用できません。  
+さらに、一部の関数は使えませんまったく DirectQuery モードで計算が現在のコンテキストでデータをパラメーターとしてのリレーショナル データ ソースに送信必要があるため。 たとえば、メジャー、[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]ブックは多くの場合、ブック内で使用可能な日付範囲を参照するタイム インテリジェンス関数を使用します。 このような数式は、一般に、DirectQuery モードでは使用できません。  
   
 ## <a name="semantic-differences"></a>セマンティックの相違  
 このセクションでは、予想されるセマンティックの相違の種類の一覧を示し、関数の使用方法またはクエリの結果に適用される可能性のある制限について説明します。  
@@ -92,7 +92,7 @@ DAX のようなキャスト関数はありませんが、多くの比較演算�
 **文字列から日付/時刻へのキャスト**  
 DirectQuery モードでは、文字列表現の日時から実際の **datetime** 値へのキャストは、SQL Server と同じように行われます。  
   
-文字列からキャストに適用される規則については**datetime**データ型[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]モデルを参照してください、 [DAX 構文のリファレンス](https://msdn.microsoft.com/library/ee634217.aspx)です。  
+文字列からへのキャストに適用される規則については**datetime**データ型[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]モデルを参照してください、 [DAX 構文のリファレンス](https://msdn.microsoft.com/library/ee634217.aspx)します。  
   
 インメモリ データ ストアを使用するモデルで日付に対してサポートされるテキスト形式の範囲は、SQL Server でサポートされる日付の文字列形式より制限されます。 ただし、DAX では日付と時刻のカスタム形式がサポートされます。  
   
@@ -161,8 +161,8 @@ Excel モデルおよび [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] モデ
   
 式 `BLANK/BLANK` は特殊なケースであり、インメモリ モデルでも DirectQuery モードでも `BLANK` が返されます。  
   
-### <a name="bkmk_Ranges"></a>サポートされている数値と日付時刻範囲  
-内の数式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]およびメモリ内に表形式モデルが最大に関して Excel と同じ制限が適用許可される実際の数値および日付の値。 ただし、最大値が計算またはクエリから返される場合、または値の変換、キャスト、丸め、または切り捨てが行われる場合は、相違が発生することがあります。  
+### <a name="bkmk_Ranges"></a>サポートされている数値と日付/時刻の範囲  
+数式で[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]され、メモリ内に表形式モデルは最大値に関して、Excel と同じ制限される許可実数および日付の値。 ただし、最大値が計算またはクエリから返される場合、または値の変換、キャスト、丸め、または切り捨てが行われる場合は、相違が発生することがあります。  
   
 -   **Currency** 型と **Real** 型の値の乗算を行い、結果が最大許容値より大きい場合、DirectQuery モードではエラーは発生せず、NULL が返されます。  
   
@@ -222,7 +222,7 @@ DirectQuery モードでは、結果は SQL Server の規則に従って切り�
 **SQL の時間データ型はサポートされない**  
 インメモリ モデルでは、SQL の新しい **Time** データ型の使用はサポートされません。 DirectQuery モードでは、このデータ型の列を参照する数式はエラーを返します。 時刻データ列をインメモリ モデルにインポートすることはできません。  
   
-ただし、[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]およびキャッシュ モデルは、ことがあります、エンジン キャスト時間値が許容可能なデータ型をし、結果が返されます。  
+ただし、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 、キャッシュされたモデルでも、エンジン、時刻値にキャスト、許容されるデータ型をし、結果が返されます。  
   
 この動作は、日付列をパラメーターとして使用するすべての関数に影響します。  
   
@@ -399,7 +399,7 @@ DAX テーブル クエリを使用して DirectQuery モデルに対する数�
   
 インメモリ モデルでは、ORDER BY 句を繰り返しても結果に影響はありません。  
   
-## <a name="bkmk_NotSupportedFunc"></a>DirectQuery モードでサポートされない関数  
+## <a name="bkmk_NotSupportedFunc"></a>DirectQuery モードでサポートされていない関数  
 一部の DAX 関数は、DirectQuery モードで配置されたモデルではサポートされません。 特定の関数がサポートされない理由は、次のいずれか、または組み合わせによります。  
   
 -   基になるリレーショナル エンジンが、xVelocity エンジンによって実行されるものと同等の計算を実行できない。  
@@ -434,7 +434,7 @@ RAND
   
 RANDBETWEEN  
   
-**タイム インテリジェンス関数: 開始日と終了日**  
+**タイム インテリジェンス関数: 開始と終了日**  
   
 DATESQTD  
   

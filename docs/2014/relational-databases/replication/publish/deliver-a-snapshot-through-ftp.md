@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
 - FTP snapshots [SQL Server replication]
 - snapshot replication [SQL Server], FTP
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 76f70c85774a84a1d6b7be8de3348c2f6162431b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4396b84840deb4a0973e3aae73183a551d54fce3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331532"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>FTP でのスナップショットの配信
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、FTP でスナップショットを配信する方法について説明します。  
@@ -93,7 +93,7 @@ ms.locfileid: "36072982"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションで FTP スナップショット配信を有効にするには  
   
-1.  パブリッシャーのパブリケーション データベースに対して、 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)を実行します。 指定**@publication**、値の`true`の**@enabled_for_internet**、し、次のパラメーターの値を適切な。  
+1.  パブリッシャーのパブリケーション データベースに対して、 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)を実行します。 指定**@publication**、@property`true`の**@enabled_for_internet**、適切な次のパラメーターの値。  
   
     -   **@ftp_address** - スナップショットの配信に使用する FTP サーバーのアドレス。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36072982"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>マージ パブリケーションで FTP スナップショット配信を有効にするには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)を実行します。 指定**@publication**、値の`true`の**@enabled_for_internet**し、次のパラメーターの値を適切な。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)を実行します。 指定**@publication**、@property`true`の**@enabled_for_internet**に適切な次のパラメーターの値。  
   
     -   **@ftp_address** - スナップショットの配信に使用する FTP サーバーのアドレス。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36072982"
   
 1.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)を実行します。 **@publisher** および **@publication** を指定します。  
   
-    -   サブスクライバー側のサブスクリプション データベースに対して、 [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)を実行します。 指定**@publisher**、 **@publisher_db**、 **@publication**、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 資格情報をディストリビューション エージェントで、実行するときにサブスクライバー **@job_login**と **@job_password**の値と`true`の **@use_ftp**です。  
+    -   サブスクライバー側のサブスクリプション データベースに対して、 [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)を実行します。 指定**@publisher**、 **@publisher_db**、 **@publication**、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 資格情報でディストリビューション エージェント、サブスクライバーで実行される**@job_login**と **@job_password**の値と`true`の **@use_ftp**します。  
   
 2.  パブリッシャー側のパブリケーション データベースに対して [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) を実行し、プル サブスクリプションを登録します。 詳細については、「 [プル サブスクリプションの作成](../create-a-pull-subscription.md)」をご覧ください。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36072982"
   
 1.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)を実行します。 **@publisher** および **@publication** を指定します。  
   
-2.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)を実行します。 指定**@publisher**、 **@publisher_db**、  **@publication**サブスクライバーでディストリビューション エージェントを実行する Windows 資格情報**@job_login**と **@job_password**の値と`true`の **@use_ftp**です。  
+2.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)を実行します。 指定**@publisher**、 **@publisher_db**、  **@publication**サブスクライバーでディストリビューション エージェントを実行する Windows 資格情報**@job_login**と **@job_password**の値と`true`の **@use_ftp**します。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) を実行し、プル サブスクリプションを登録します。 詳細については、「 [プル サブスクリプションの作成](../create-a-pull-subscription.md)」をご覧ください。  
   
@@ -145,9 +145,9 @@ ms.locfileid: "36072982"
   
     -   `ftp_address` -スナップショットの配信に使用する FTP サーバーのアドレス。  
   
-    -   `ftp_port` -FTP サーバーで使用されるポート。  
+    -   `ftp_port` -FTP サーバーによって使用されるポート。  
   
-    -   `ftp_subdirectory` -FTP スナップショットに使用する既定の FTP ディレクトリのサブディレクトリ。  
+    -   `ftp_subdirectory` -FTP スナップショットで使用される既定の FTP ディレクトリのサブディレクトリ。  
   
     -   `ftp_login` - FTP サーバーへの接続に使用されるログイン。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "36072982"
   
 2.  (省略可) 変更する各 FTP 設定について手順 1. を実行します。  
   
-3.  (省略可) FTP スナップショット配信を無効にするには、パブリッシャー側のパブリケーション データベースに対して [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行します。 値を指定して`enabled_for_internet`の**@property**と値の`false`の **@value**です。  
+3.  (省略可) FTP スナップショット配信を無効にするには、パブリッシャー側のパブリケーション データベースに対して [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行します。 値を指定`enabled_for_internet`の**@property**の値と`false`の **@value**します。  
   
 #### <a name="to-change-ftp-snapshot-delivery-settings-for-a-merge-publication"></a>マージ パブリケーションの FTP スナップショット配信の設定を変更するには  
   
@@ -163,9 +163,9 @@ ms.locfileid: "36072982"
   
     -   `ftp_address` -スナップショットの配信に使用する FTP サーバーのアドレス。  
   
-    -   `ftp_port` -FTP サーバーで使用されるポート。  
+    -   `ftp_port` -FTP サーバーによって使用されるポート。  
   
-    -   `ftp_subdirectory` -FTP スナップショットに使用する既定の FTP ディレクトリのサブディレクトリ。  
+    -   `ftp_subdirectory` -FTP スナップショットで使用される既定の FTP ディレクトリのサブディレクトリ。  
   
     -   `ftp_login` - FTP サーバーへの接続に使用されるログイン。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36072982"
   
 2.  (省略可) 変更する各 FTP 設定について手順 1. を実行します。  
   
-3.  (省略可) FTP スナップショット配信を無効にするには、パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) を実行します。 値を指定して`enabled_for_internet`の**@property**と値の`false`の **@value**です。  
+3.  (省略可) FTP スナップショット配信を無効にするには、パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) を実行します。 値を指定`enabled_for_internet`の**@property**の値と`false`の **@value**します。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、サブスクライバーが FTP を使用してスナップショット データにアクセスできるマージ パブリケーションを作成します。 サブスクライバーは、FTP 共有にアクセスするときにセキュリティで保護された VPN 接続を使用する必要があります。 **sqlcmd** スクリプト変数を使用して、ログインとパスワードの値が入力されます。 詳細については、「[Use sqlcmd with Scripting Variables](../../scripting/sqlcmd-use-with-scripting-variables.md)」(sqlcmd でのスクリプト変数の使用) をご覧ください。  

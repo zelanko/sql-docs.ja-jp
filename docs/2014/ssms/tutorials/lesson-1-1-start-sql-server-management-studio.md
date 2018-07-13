@@ -5,21 +5,19 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
-caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2f928645fb89757b2284628d0400847cf5f3a1f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 97aae9bc9e495694868c2f8dec8570cdb1742fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270228"
 ---
 # <a name="start-sql-server-management-studio"></a>SQL Server Management Studio の起動
   このチュートリアルを開始する前に、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開いてみましょう。  
@@ -28,12 +26,12 @@ ms.locfileid: "36071794"
   
 #### <a name="to-open-sql-server-management-studio"></a>SQL Server Management Studio を開くには  
   
-1.  **開始** メニューのをポイント**すべてのプログラム**、 をポイント[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、クリックして**SQL Server Management Studio**です。  
+1.  **開始**メニューで、**すべてのプログラム**、 をポイント[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、順にクリックします**SQL Server Management Studio**します。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、既定ではインストールされません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を利用できない場合は、セットアップを実行してインストールしてください。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] では使用できません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express は無料でダウンロードから使用可能な[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409)がこのチュートリアルの説明とは別のユーザー インターフェイスがします。  
+    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、既定ではインストールされません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を利用できない場合は、セットアップを実行してインストールしてください。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] では使用できません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express は無料でダウンロードから使用可能な[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409)、このチュートリアルでは説明とは別のユーザー インターフェイスのあるがします。  
   
-2.  **[サーバーへの接続]** ダイアログ ボックスで既定の設定を確認し、 **[接続]** をクリックします。 接続する場合、**サーバー名**ボックスは、コンピューターの名前を含める必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。 場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、名前付きインスタンス、**サーバー名**ボックスでは、形式でインスタンス名を含める必要があります\< *computer_name* > \\ <*instance_name*>。  
+2.  **[サーバーへの接続]** ダイアログ ボックスで既定の設定を確認し、 **[接続]** をクリックします。 に接続する、**サーバー名**ボックスは、コンピューターの名前を含める必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。 場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、名前付きのインスタンス、**サーバー名**ボックス形式でインスタンス名を含める必要があります\< *computer_name* > \\ <*instance_name*>。  
   
 ## <a name="management-studio-components"></a>Management Studio のコンポーネント  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、情報は種類ごとに専用のウィンドウに表示されます。 データベース情報はオブジェクト エクスプローラーとドキュメント ウィンドウに表示されます。  
@@ -50,7 +48,7 @@ ms.locfileid: "36071794"
   
      [登録済みサーバー] ウィンドウがオブジェクト エクスプローラーの上に表示されます。 [登録済みサーバー] には、管理頻度の高いサーバーの一覧が表示されます。 この一覧にサーバーを追加したり、一覧からサーバーを削除することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューター上の [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]インスタンスのみが一覧に表示されます。  
   
-2.  サーバーが表示されない場合、登録済みサーバーを右クリックし**データベース エンジン**、順にクリック**更新ローカル サーバーの登録**です。  
+2.  右クリックし、サーバーが表示されない場合、登録済みサーバーで**データベース エンジン**、順にクリックします**更新プログラムのローカル サーバーの登録**します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [登録済みサーバーおよびオブジェクト エクスプローラーを使用した接続](../object/object-explorer.md)  

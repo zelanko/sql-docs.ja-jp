@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], supported objects
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a7b77ccd5d7fdae2ef81b3a19ae557ef6e662d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c7af236b8e48b76787e77baa0e0720153ee8489f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244992"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server オブジェクトとバージョンの DAC サポート
   データ層アプリケーション (DAC) では、よく使用される [!INCLUDE[ssDE](../../includes/ssde-md.md)] オブジェクトがサポートされます。  
@@ -111,7 +111,7 @@ ms.locfileid: "36071917"
 ##  <a name="Considerations"></a> 配置操作に関するその他の注意点  
  DAC Framework のデータ配置操作に関して次の点に注意してください。  
   
--   **抽出、エクスポート** - DAC Framework を使用してデータベースからパッケージを作成する操作 (たとえば、.dacpac ファイルの抽出や .bacpac ファイルのエクスポート) では、ここで述べた制限は適用されません。 パッケージのデータは、ソース データベースのデータを完全に忠実に再現しています。 ここで述べた条件のいずれかがパッケージに存在する場合、抽出およびエクスポート ログに、上で述べたメッセージによって問題の概要が記録されます。 これは、作成したパッケージが潜在的なデータ配置の問題を抱えていることをユーザーに警告するためです。 ログには、**"これらの制限は、DAC Framework によって作成された DAC パッケージに格納されたデータ型および値の忠実性には影響しません。DAC パッケージをデータベースに配置した結果のデータ型および値に対してのみ適用されます。" という概要メッセージも記録されます。影響を受けるデータおよびこの制限を回避する方法の詳細については、次を参照してください。** [ここ](http://go.microsoft.com/fwlink/?LinkId=267086)です。  
+-   **抽出、エクスポート** - DAC Framework を使用してデータベースからパッケージを作成する操作 (たとえば、.dacpac ファイルの抽出や .bacpac ファイルのエクスポート) では、ここで述べた制限は適用されません。 パッケージのデータは、ソース データベースのデータを完全に忠実に再現しています。 ここで述べた条件のいずれかがパッケージに存在する場合、抽出およびエクスポート ログに、上で述べたメッセージによって問題の概要が記録されます。 これは、作成したパッケージが潜在的なデータ配置の問題を抱えていることをユーザーに警告するためです。 ログには、**"これらの制限は、DAC Framework によって作成された DAC パッケージに格納されたデータ型および値の忠実性には影響しません。DAC パッケージをデータベースに配置した結果のデータ型および値に対してのみ適用されます。" という概要メッセージも記録されます。影響を受けるデータと、この制限を回避する方法の詳細については、次を参照してください。** [このトピックの「](http://go.microsoft.com/fwlink/?LinkId=267086)します。  
   
 -   **配置、パブリッシュ、インポート** - DAC Framework を使用してパッケージをデータベースに配置する操作 (たとえば、.dacpac ファイルの配置またはパブリッシュ、.bacpac ファイルのインポート) では、ここで述べた制限が適用されます。 対象データベースに作成されるデータが、パッケージのデータを完全に忠実に再現していない可能性があります。 配置およびインポートのログには、問題が発生したすべてのインスタンスに関して、上記のメッセージが記録されます。 操作はエラーによってブロックされます (上記の分類 3 を参照)。しかし、他の警告では続行されます。  
   

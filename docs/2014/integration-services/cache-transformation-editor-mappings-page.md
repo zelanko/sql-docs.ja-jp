@@ -1,5 +1,5 @@
 ---
-title: キャッシュ変換エディター (マッピング ページ) |Microsoft ドキュメント
+title: キャッシュ変換エディター (マッピング ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17e8b9894ddd1aa375a16703bced5d0cf05b77bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3ec474543bad0eb83d313fd4bf16b2b3163176b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243062"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>[キャッシュ変換エディター] ([マッピング] ページ)
   **[キャッシュ変換エディター]** の **[マッピング]** ページを使用して、キャッシュ変換の入力列をキャッシュ変換マネージャーの変換先列にマップします。  
@@ -51,6 +51,6 @@ ms.locfileid: "36074020"
  利用可能な各変換先列を表示します。  
   
 ## <a name="see-also"></a>参照  
- [キャッシュ変換エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+ [[キャッシュ変換エディター&#40;接続マネージャー] ページ&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Microsoft 線形回帰アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+title: Microsoft 線形回帰アルゴリズム テクニカル リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - AUTO_DETECT_PERIODICITY parameter
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f9655abda58057343b67ef16dd62fcb7a0faa048
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 201242a7347ea564444449071342aa9a3952d7f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181069"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線形回帰アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、連続属性のペアのモデリングに最適化された、特殊な Microsoft デシジョン ツリー アルゴリズムです。 このトピックでは、アルゴリズムの実装について説明し、アルゴリズムの動作をカスタマイズする方法を示します。モデルのクエリに関する追加情報へのリンクも示します。  
@@ -68,7 +68,7 @@ ms.locfileid: "36074956"
 ### <a name="regressors-in-linear-regression-models"></a>線形回帰モデルのリグレッサー  
  線形回帰モデルは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づいています。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用していない場合でも、連続属性の回帰を表すツリーやノードがデシジョン ツリー モデルに含まれることはあります。  
   
- 連続列がリグレッサーを表すことを指定する必要はありません。 列に REGRESSOR フラグを設定しなくても、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムにより、データセットが意味のあるパターンを持つ領域に分割されます。 その違いは、このモデリング フラグを設定すると、アルゴリズムを検索しようという形式の回帰式を * C1 + b\*C2 +… で、ツリーのノードのパターンに合わせてです。 残差の合計が計算され、偏差が大きすぎる場合には、ツリーが強制的に分割されます。  
+ 連続列がリグレッサーを表すことを指定する必要はありません。 列に REGRESSOR フラグを設定しなくても、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムにより、データセットが意味のあるパターンを持つ領域に分割されます。 その違いは、このモデリング フラグを設定すると、アルゴリズムを検索しようという形式の回帰式を * C1 + b\*C2 +… で、ツリーのノードのパターンに合わせてします。 残差の合計が計算され、偏差が大きすぎる場合には、ツリーが強制的に分割されます。  
   
  たとえば、 **Income** を属性として使用して顧客の購入行動を予測する場合に、その列に REGRESSOR モデリング フラグを設定すると、アルゴリズムはまず、標準の回帰式を使用して **Income** の値を試します。 偏差が大きすぎる場合はその回帰式が放棄され、ツリーが他の属性で分割されます。 その後、デシジョン ツリー アルゴリズムは、分割後の各分岐で Income をリグレッサーとして使用できるかどうかを試します。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36074956"
 |予測可能な属性|Continuous、Cyclical、Ordered|  
   
 > [!NOTE]  
->  `Cyclical` および`Ordered`コンテンツの種類がサポートされますが、アルゴリズムは不連続の値として扱う、特別な処理は行いません。  
+>  `Cyclical` `Ordered`コンテンツの種類がサポートされますが、アルゴリズムは不連続の値として扱うを特別な処理は実行されません。  
   
 ## <a name="see-also"></a>参照  
  [Microsoft 線形回帰アルゴリズム](microsoft-linear-regression-algorithm.md)   

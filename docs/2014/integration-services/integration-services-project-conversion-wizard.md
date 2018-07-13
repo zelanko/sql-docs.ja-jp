@@ -1,5 +1,5 @@
 ---
-title: Integration Services プロジェクト変換ウィザード |Microsoft ドキュメント
+title: Integration Services プロジェクト変換ウィザード |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.migrationwizard.f1
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c123f00433dde1f25755772919d7e48b8745e0bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5c547623597e72e4c6ae144baed226dbf88af60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219652"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services プロジェクト変換ウィザード
   **Integration Services プロジェクト変換ウィザード** で、プロジェクトをプロジェクト配置モデルに変換します。  
@@ -104,7 +104,7 @@ ms.locfileid: "36074003"
  **[パッケージ名]**  
  パッケージ ファイルを一覧表示します。  
   
- **Status**  
+ **ステータス**  
  パッケージをパッケージ配置モデルに変換する準備ができているかどうかを示します。  
   
  **メッセージ**  
@@ -172,13 +172,13 @@ ms.locfileid: "36074003"
  **[パッケージ]**  
  パッケージ ファイルを一覧表示します。  
   
- **Type**  
+ **型**  
  XML 構成ファイルなど、構成の種類を一覧表示します。  
   
  **[構成文字列]**  
  構成ファイルのパスを一覧表示します。  
   
- **Status**  
+ **ステータス**  
  構成の状態メッセージが表示されます。 メッセージ テキスト全体を表示するには、メッセージをクリックします。  
   
  **[構成の追加]**  
@@ -205,13 +205,13 @@ ms.locfileid: "36074003"
  パラメーターのスコープ (パッケージまたはプロジェクト) を選択します。  
   
 ##  <a name="configureParameters"></a> [パラメーターの構成] ページのオプションの設定  
- **Name**  
+ **名前**  
  パラメーター名を一覧表示します。  
   
  **Scope**  
  パラメーターのスコープを一覧表示します。  
   
- **Value**  
+ **[値]**  
  パラメーター値を一覧表示します。  
   
  パラメーター プロパティを構成するには、値フィールドの横にある参照ボタンをクリックします。  

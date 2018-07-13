@@ -1,5 +1,5 @@
 ---
-title: インターフェイス (OLE DB) |Microsoft ドキュメント
+title: インターフェイス (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OLE DB, interfaces
 ms.assetid: 34c33364-8538-45db-ae41-5654481cda93
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56eced3c950f301bdff6256642e50d1f054ee2fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 62b26f5cd5d07c8623bf5e318b38b6631ef7588d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250612"
 ---
 # <a name="interfaces-ole-db"></a>インターフェイス (OLE DB)
   Microsoft Data Access Components (MDAC) によって提供される主要 OLE DB インターフェイスだけでなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、次の追加の OLE DB インターフェイスを実装します。  
@@ -52,6 +52,6 @@ ms.locfileid: "36073308"
 -   [ISQLServerErrorInfo &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client &#40;OLE DB&#41;参照](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+ [SQL Server Native Client &#40;OLE DB&#41;リファレンス](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
   

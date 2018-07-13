@@ -16,13 +16,13 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0264b74acc5d4665dbbbe48678ad75538002d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f6377df95d5cb8ade98e7a83b04b7920fe87a62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209372"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>カスタム オブジェクトのビルド、配置、およびデバッグ
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 用カスタム オブジェクトのコードを記述したら、アセンブリをビルドして配置し、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに統合してパッケージで使用できるようにし、テストとデバッグを行う必要があります。  
@@ -75,7 +75,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```  
   
 ##  <a name="deploying"></a> アセンブリの配置  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール時に作成される一連のフォルダー内で検索されたファイルを列挙することにより、パッケージで使用できるカスタム オブジェクトを検索します。 ときに、既定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストール設定を使用する、この一連のフォルダーが下にある**C:\Program files \microsoft SQL Server\120\DTS**です。 ただし、カスタム オブジェクトのセットアップ プログラムを作成する場合は、値を確認する必要があります、 **hkey_local_machine \software\microsoft\microsoft SQL Server\120\SSIS\Setup\DtsPath**これの場所を確認するレジストリ キーフォルダーです。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール時に作成される一連のフォルダー内で検索されたファイルを列挙することにより、パッケージで使用できるカスタム オブジェクトを検索します。 ときに、既定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストール設定を使用する場合、この一連のフォルダーが下にある**C:\Program files \microsoft SQL Server\120\DTS**します。 ただし、カスタム オブジェクトのセットアップ プログラムを作成する場合は、値を確認する必要があります、 **hkey_local_machine \software\microsoft\microsoft SQL Server\120\SSIS\Setup\DtsPath**のこの場所を確認するレジストリ キーフォルダー。  
   
  アセンブリをフォルダーに配置する方法は 2 つあります。  
   
@@ -83,7 +83,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 -   適切なフォルダーでアセンブリを直接ビルドします。  
   
- 次の配置フォルダー **C:\Program files \microsoft SQL Server\120\DTS**のカスタム オブジェクトのさまざまな種類で使用します。  
+ 次の展開フォルダー **C:\Program files \microsoft SQL Server\120\DTS**さまざまな種類のカスタム オブジェクトの使用します。  
   
 |カスタム オブジェクト|配置フォルダー|  
 |-------------------|-----------------------|  
@@ -120,7 +120,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing"></a> コードのテストとデバッグ  
  カスタム オブジェクトの実行時のメソッドをデバッグするための最も簡単な方法は、カスタム オブジェクトのビルド後に [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] から **dtexec.exe** を起動し、コンポーネントを使用するパッケージを実行することです。  
   
- など、コンポーネントのデザイン時のメソッドをデバッグする場合、`Validate`メソッド、コンポーネントを使用して、2 番目のインスタンスにパッケージを開く[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]にアタッチし、 **devenv.exe**プロセスです。  
+ など、コンポーネントのデザイン時のメソッドをデバッグする場合、`Validate`メソッドの 2 番目のインスタンスでコンポーネントを使用するパッケージを開く[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]にアタッチし、 **devenv.exe**プロセス。  
   
  パッケージを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで開いて実行しているときに、コンポーネントの実行時のメソッドもデバッグする場合は、**DtsDebugHost.exe** プロセスにもアタッチできるようにパッケージの実行を一時停止する必要があります。  
   
@@ -128,7 +128,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 1.  デバッグ構成でプロジェクトへの署名とビルドを行い、プロジェクトを配置し、このトピックで説明したようにグローバル アセンブリ キャッシュにインストールします。  
   
-2.  **デバッグ**のタブ**プロジェクトのプロパティ****外部プログラムの開始**として、**開始動作**を見つけて選択**dtexec.exe**が既定では C:\Program files \microsoft SQL server \120\dts\binn にインストールされています。  
+2.  **デバッグ**タブ**プロジェクトのプロパティ**を選択します**外部プログラムの開始**として、**開始動作**、探し**dtexec.exe**が既定で C:\Program files \microsoft SQL server \120\dts\binn にインストールされています。  
   
 3.  **[開始オプション]** の **[コマンド ライン オプション]** テキスト ボックスに、コンポーネントを使用するパッケージを実行するために必要なコマンド ライン引数を入力します。 多くの場合、コマンド ライン引数は /F[ILE] スイッチと、それに続く .dtsx ファイルのパスおよびファイル名で構成されます。 詳しくは、「 [dtexec Utility](../packages/dtexec-utility.md)」をご覧ください。  
   
@@ -152,11 +152,12 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 1.  上記の一覧にある手順を完了したら、**DtsDebugHost.exe** にアタッチできるようにパッケージの実行を一時停止します。 ここで強制的に一時停止するには、ブレークポイントを `OnPreExecute` イベントに追加します。または、スクリプト タスクをプロジェクトに追加し、モーダル メッセージ ボックスを表示するスクリプトを入力します。  
   
-2.  パッケージを実行します。 実行が一時停止されたら、コンポーネント プロジェクトが開かれている [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のインスタンスに切り替え、**[デバッグ]** メニューの **[プロセスにアタッチ]** をクリックします。 **[x86]** としてのみ一覧に表示されているインスタンスではなく、必ず、**[型]** 列で **[マネージ, x86]** として表示されている **DtsDebugHost.exe** のインスタンスにアタッチします。  
+2.  パッケージを実行します。 実行が一時停止されたら、コンポーネント プロジェクトが開かれている [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のインスタンスに切り替え、**[デバッグ]** メニューの **[プロセスにアタッチ]** をクリックします。 
+  **[x86]** としてのみ一覧に表示されているインスタンスではなく、必ず、**[型]** 列で **[マネージド, x86]** として表示されている **DtsDebugHost.exe** のインスタンスにアタッチします。  
   
 3.  一時停止したパッケージに戻り、ブレークポイント以降を続行します。または、**[OK]** をクリックしてスクリプト タスクが生成したメッセージ ボックスを破棄し、パッケージの実行とデバッグを続けます。  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services 用のカスタム オブジェクトの開発](developing-custom-objects-for-integration-services.md)   

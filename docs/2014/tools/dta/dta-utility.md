@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
 - command prompt utilities [SQL Server], dta
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c659a1637b56015bf4642e87677529b0ea4e518b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200822"
 ---
 # <a name="dta-utility"></a>dta ユーティリティ
   **dta** ユーティリティは、データベース エンジン チューニング アドバイザーのコマンド プロンプト バージョンです。 **dta** ユーティリティは、データベース エンジン チューニング アドバイザーの機能をアプリケーションとスクリプトで使用するために作成されました。  
@@ -138,7 +138,7 @@ dta -d AdventureWorks2012 ...
   
  複数のデータベース名を指定すると、 **dta** はエラーを返します。 **-d** 引数は省略可能です。  
   
- XML 入力ファイルを使用している場合は、先となる最初のデータベースを指定できます**dta**を使用して接続、`DatabaseToConnect`要素の下にある、`TuningOptions`要素。 詳細については、「 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)」を参照してください。  
+ XML 入力ファイルを使用している場合を最初のデータベースを指定できます**dta**を使用して接続、`DatabaseToConnect`要素の下にある、`TuningOptions`要素。 詳細については、「 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)」を参照してください。  
   
  データベースを 1 つだけチューニングする場合、 **-d** 引数は **sqlcmd** ユーティリティの **-d** 引数と同様の機能を提供しますが、USE *database_name* ステートメントは実行しません。 詳細については、「 [sqlcmd Utility](../sqlcmd-utility.md)」を参照してください。  
   
@@ -153,7 +153,7 @@ dta -d AdventureWorks2012 ...
 |パラメーター|既定値|  
 |---------------|-------------------|  
 |*database_name*|*–D* オプションで指定された **database_name**|  
-|*owner_name*|**dbo**<br /><br /> 注: *owner_name*する必要があります**dbo**です。 それ以外の値を指定すると、 **dta** の実行は失敗し、エラーが返されます。|  
+|*owner_name*|**dbo**<br /><br /> 注: *owner_name*あります**dbo**します。 それ以外の値を指定すると、 **dta** の実行は失敗し、エラーが返されます。|  
 |*table_name*|なし|  
   
  ファイルを使用する場合、拡張子として .xml を指定します。 たとえば、TuningLog.xml です。  
@@ -165,7 +165,7 @@ dta -d AdventureWorks2012 ...
  既存の出力ファイルの上書きを **dta** に許可します。 同じ名前の出力ファイルが既に存在し、 **-F** が指定されていない場合、 **dta**はエラーを返します。 **-F** と **-of**、 **-or**、または **-ox**を同時に使用することができます。  
   
  **-fa** *physical_design_structures_to_add*  
- **dta** が推奨設定に含む必要がある物理デザイン構造の種類を指定します。 次の表は、この引数で指定できる値の一覧と説明です。 値が指定されていないときに**dta**既定値を使用して **-fa**`IDX`です。  
+ **dta** が推奨設定に含む必要がある物理デザイン構造の種類を指定します。 次の表は、この引数で指定できる値の一覧と説明です。 値が指定されていないときに**dta**既定を使用して **-fa**`IDX`します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -197,7 +197,7 @@ dta -d AdventureWorks2012 ...
 |FULL|完全パーティション分割 (選択するとパフォーマンスが向上します)。|  
 |ALIGNED|固定パーティション分割 (選択すると管理機能が強化されます)。|  
   
- ALIGNED は、 **dta** によって生成された推奨設定では、提示されるすべてのインデックスが、インデックス定義の基になるテーブルとまったく同じ方法でパーティション分割されることを意味します。 インデックス付きビューの非クラスター化インデックスは、インデックス付きビューに準じます。 この引数で指定できる値は 1 つだけです。 既定値は **-fp**`NONE`です。  
+ ALIGNED は、 **dta** によって生成された推奨設定では、提示されるすべてのインデックスが、インデックス定義の基になるテーブルとまったく同じ方法でパーティション分割されることを意味します。 インデックス付きビューの非クラスター化インデックスは、インデックス付きビューに準じます。 この引数で指定できる値は 1 つだけです。 既定値は **-fp**`NONE`します。  
   
  **-fx** *drop_only_mode*  
  **dta** が、既存の物理デザイン構造の削除のみを考慮することを指定します。 新しい物理デザイン構造は考慮されません。 このオプションを指定すると、 **dta** は既存の物理デザイン構造の有用性を評価し、その後、使用頻度の低い構造を削除する推奨設定を提示します。 この引数は値を取りません。 この引数と **-fa**、 **-fp**、または **-fk ALL** 引数を同時に使用することはできません  
@@ -208,7 +208,7 @@ dta -d AdventureWorks2012 ...
  **-ip**  
  プラン キャッシュをワークロードとして使用することを指定します。 明示的に選択したデータベースの上位 1,000 個のプラン キャッシュ イベントが分析されます。 この値は **–n** オプションを使用して変更できます。  
   
- **-ipf**  
+ **ipf、**  
  プラン キャッシュをワークロードとして使用することを指定します。 すべてのデータベースの上位 1,000 個のプラン キャッシュ イベントが分析されます。 この値は **–n** オプションを使用して変更できます。  
   
  **-if** *workload_file*  

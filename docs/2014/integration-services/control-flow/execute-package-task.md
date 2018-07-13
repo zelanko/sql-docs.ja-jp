@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c71123c2b91cd07ca8fb93faf458f7ff42cb04d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 256a7cbabc6c07bb0e1f42aeb6a3a3d77a5d93a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171143"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
   パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36072374"
   
  また、親パッケージと子パッケージが 1 つの単位として共に失敗する方が良い場合や、別のプロセスで追加のオーバーヘッドが発生しない方が良い場合もあります。 たとえば、子プロセスが失敗し、パッケージの親プロセス内の次の処理が、子プロセスが成功した場合に行われる場合、子パッケージは親パッケージのプロセス内で実行される必要があります。  
   
- 既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティに設定が`False`、し、親パッケージと同じプロセスで子パッケージを実行します。 このプロパティを `True` に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 さらに、プロパティを設定する場合に`True`、ツールのみのインストールではパッケージをデバッグすることはできません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールする必要があります。 詳細については、「 [Integration Services のインストール](../install-windows/install-integration-services.md)」を参照してください。  
+ 既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティに設定が`False`、子パッケージが親パッケージと同じプロセスで実行するとします。 このプロパティを `True` に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 さらに、プロパティを設定する場合に`True`、ツールのみのインストールではパッケージをデバッグすることはできません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールする必要があります。 詳細については、「 [Integration Services のインストール](../install-windows/install-integration-services.md)」を参照してください。  
   
 ## <a name="extending-transactions"></a>トランザクションの拡張  
  親パッケージで使用するトランザクションを子パッケージに拡張できます。このため、両方のパッケージで実行される作業をコミットまたはロールバックできます。 たとえば、親パッケージで実行されるデータベースの挿入は、子パッケージで実行されるデータベースの挿入に基づいてコミットまたはロールバックできます。その逆も同様です。 詳細については、「 [トランザクションの継承](../inherited-transactions.md)」を参照してください。  
@@ -101,7 +101,7 @@ ms.locfileid: "36072374"
  詳細については、「 [子パッケージでの変数およびパラメーターの値の使用](../use-the-values-of-variables-and-parameters-in-a-child-package.md)」を参照してください。  
   
 ### <a name="accessing-parent-package-variables"></a>親パッケージの変数へのアクセス  
- 子パッケージではスクリプト タスクを使用して、親パッケージの変数にアクセスできます。 **スクリプト タスク エディター** で **[スクリプト]** ページに親パッケージ変数の名前を入力するときは、変数名に **User:** を含めないでください。 そうしないと、親パッケージを実行したときに子パッケージで変数が見つかりません。 スクリプト タスクを使用して、親パッケージ変数にアクセスする方法の詳細については、このブログ記事を参照してください。 [SSIS: 親パッケージ変数にアクセスする](http://go.microsoft.com/fwlink/?LinkId=257729)、consultingblogs.emc.com です。  
+ 子パッケージではスクリプト タスクを使用して、親パッケージの変数にアクセスできます。 **スクリプト タスク エディター** で **[スクリプト]** ページに親パッケージ変数の名前を入力するときは、変数名に **User:** を含めないでください。 そうしないと、親パッケージを実行したときに子パッケージで変数が見つかりません。 スクリプト タスクを使用して、親パッケージ変数にアクセスする方法の詳細については、このブログ記事を参照してください。 [SSIS: 親パッケージ変数にアクセスする](http://go.microsoft.com/fwlink/?LinkId=257729)、consultingblogs.emc.com します。  
   
 ## <a name="configuring-the-execute-package-task"></a>パッケージ実行タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
@@ -120,8 +120,8 @@ ms.locfileid: "36072374"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   ブログ エントリ「 [SSIS: インプロセスまたはアウト プロセスの子パッケージを実行する必要がありますか。](http://go.microsoft.com/fwlink/?LinkId=220819)、consultingblogs.emc.com です。  
+-   ブログ エントリ「 [SSIS: 子パッケージのインプロセスまたはアウト プロセスを実行する必要がありますか?](http://go.microsoft.com/fwlink/?LinkId=220819)、consultingblogs.emc.com。  
   
--   ブログ エントリ「 [SSIS: 親パッケージ変数にアクセスする](http://go.microsoft.com/fwlink/?LinkId=257729)、consultingblogs.emc.com です。  
+-   ブログ エントリ「 [SSIS: 親パッケージ変数にアクセスする](http://go.microsoft.com/fwlink/?LinkId=257729)、consultingblogs.emc.com します。  
   
   

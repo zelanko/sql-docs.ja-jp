@@ -1,5 +1,5 @@
 ---
-title: メッセージ キュー タスク エディター (ページが表示される) |Microsoft ドキュメント
+title: メッセージ キュー タスク エディター (受信 ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.receive.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 458b1ddb5453a65dbfd96a9231f18b0ea81f507c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 384d15668d835db7d75f9e612595d00d83f41da4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256828"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>[メッセージ キュー タスク エディター] ([受信] ページ)
   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[受信]** ページを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) メッセージを受信するためのメッセージ キュー タスクを構成します。  
@@ -32,7 +32,7 @@ ms.locfileid: "36071929"
   
 ## <a name="options"></a>および  
  **[RemoveFromMessageQueue]**  
- メッセージが受信された後にキューからメッセージを削除するかどうかを示します。 既定では、この値に設定`False`です。  
+ メッセージが受信された後にキューからメッセージを削除するかどうかを示します。 既定では、この値に設定`False`します。  
   
  **[ErrorIfMessageTimeOut]**  
  メッセージがタイムアウトになったときに、エラー メッセージを表示してタスクを中止するかどうかを示します。 既定値は `False` です。  

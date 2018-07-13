@@ -1,5 +1,5 @@
 ---
-title: AMO OLAP 基本オブジェクトのプログラミング |Microsoft ドキュメント
+title: AMO OLAP 基本オブジェクトのプログラミング |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df3206f9bf6bd0548749abf981d6088e9ab85c0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b36af3a013c10567e23852c338c79a834bc8376
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228252"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 基本オブジェクトのプログラミング
   複雑な [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクトの作成は簡単でわかりやすいものですが、詳細については注意が必要です。 このトピックでは、OLAP 基本オブジェクトのプログラミングについて詳しく説明します。 このトピックには、次のセクションが含まれます。  
@@ -40,7 +40,7 @@ ms.locfileid: "36073865"
   
 -   [Aggregation オブジェクト](#AD)  
   
-##  <a name="Dim"></a> Dimension オブジェクト  
+##  <a name="Dim"></a> ディメンション オブジェクト  
  ディメンションを管理または処理するには、<xref:Microsoft.AnalysisServices.Dimension> オブジェクトをプログラミングします。  
   
 ### <a name="creating-dropping-and-finding-a-dimension"></a>ディメンションの作成、削除、および検索  
@@ -165,7 +165,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### <a name="processing-a-dimension"></a>ディメンションの処理  
  ディメンションの処理は、<xref:Microsoft.AnalysisServices.Dimension> オブジェクトの Process メソッドを使用して簡単に実行できます。  
   
- ディメンションの処理は、ディメンションを使用するすべてのキューブに影響する可能性があります。 処理オプションの詳細については、次を参照してください。[処理オブジェクト&#40;XMLA&#41; ](../../xmla/xml-elements-objects.md)と[多次元モデル オブジェクトの処理](../processing-a-multidimensional-model-analysis-services.md)です。  
+ ディメンションの処理は、ディメンションを使用するすべてのキューブに影響する可能性があります。 処理オプションの詳細については、次を参照してください。[オブジェクトの処理&#40;XMLA&#41; ](../../xmla/xml-elements-objects.md)と[多次元モデル オブジェクトの処理](../processing-a-multidimensional-model-analysis-services.md)します。  
   
  次のコードは、指定されたデータベースのすべてのディメンションを増分更新します。  
   
@@ -252,7 +252,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### <a name="processing-a-cube"></a>キューブの処理  
  キューブの処理は、<xref:Microsoft.AnalysisServices.Cube> オブジェクトの Process メソッドを使用して簡単に実行できます。 キューブを処理すると、キューブ内のすべてのメジャー グループ、およびメジャー グループ内のすべてのパーティションも処理されます。 キューブ内で処理可能なオブジェクトはパーティションだけです。処理に関しては、メジャー グループはパーティションのコンテナーにすぎません。 キューブに対して指定した処理の種類はパーティションに反映されます。 キューブおよびメジャー グループの処理は、ディメンションとパーティションの処理に内部的に解決されます。  
   
- 処理オプションの詳細については、次を参照してください。[処理オブジェクト&#40;XMLA&#41;](../../xmla/xml-elements-objects.md)、および[多次元モデル オブジェクトの処理](../processing-a-multidimensional-model-analysis-services.md)です。  
+ 処理オプションの詳細については、次を参照してください。[オブジェクトの処理&#40;XMLA&#41;](../../xmla/xml-elements-objects.md)、および[多次元モデル オブジェクトの処理](../processing-a-multidimensional-model-analysis-services.md)します。  
   
  次のコードでは、指定したデータベース内のすべてのキューブを完全に処理します。  
   
@@ -417,9 +417,9 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ```  
   
 ### <a name="processing-a-measure-group"></a>メジャー グループの処理  
- メジャー グループの処理は、<xref:Microsoft.AnalysisServices.MeasureGroup> オブジェクトの Process メソッドを使用して簡単に実行できます。 メジャー グループを処理すると、メジャー グループに属するすべてのパーティションが処理されます。 メジャー グループの処理は、ディメンションとパーティションの処理に内部的に解決されます。 参照してください[パーティションの処理](#ProcPart)このドキュメントでします。  
+ メジャー グループの処理は、<xref:Microsoft.AnalysisServices.MeasureGroup> オブジェクトの Process メソッドを使用して簡単に実行できます。 メジャー グループを処理すると、メジャー グループに属するすべてのパーティションが処理されます。 メジャー グループの処理は、ディメンションとパーティションの処理に内部的に解決されます。 参照してください[パーティションの処理](#ProcPart)このドキュメントで。  
   
- 処理オプションの詳細については、次を参照してください。[処理オブジェクト&#40;XMLA&#41;](../../xmla/xml-elements-objects.md)、および[多次元モデル オブジェクトの処理](../processing-a-multidimensional-model-analysis-services.md)です。  
+ 処理オプションの詳細については、次を参照してください。[オブジェクトの処理&#40;XMLA&#41;](../../xmla/xml-elements-objects.md)、および[多次元モデル オブジェクトの処理](../processing-a-multidimensional-model-analysis-services.md)します。  
   
  次のコードは、指定されたキューブのすべてのメジャー グループを完全に処理します。  
   
@@ -485,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> パーティションの処理  
  パーティションの処理は、<xref:Microsoft.AnalysisServices.Partition> オブジェクトの Process メソッドを使用して簡単に実行できます。  
   
- 処理オプションの詳細については、次を参照してください。[処理オブジェクト&#40;XMLA&#41; ](../../xmla/xml-elements-objects.md)と[多次元モデル オブジェクトの処理](../processing-a-multidimensional-model-analysis-services.md)です。  
+ 処理オプションの詳細については、次を参照してください。[オブジェクトの処理&#40;XMLA&#41; ](../../xmla/xml-elements-objects.md)と[多次元モデル オブジェクトの処理](../processing-a-multidimensional-model-analysis-services.md)します。  
   
  次のサンプル コードは、指定されたメジャー グループのすべてのパーティションを完全に処理します。  
   

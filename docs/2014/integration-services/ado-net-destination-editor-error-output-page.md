@@ -1,5 +1,5 @@
 ---
-title: ADO NET 変換先エディター (エラー出力 ページ) |Microsoft ドキュメント
+title: ADO NET 変換先エディター ([エラー出力] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.erroroutput.f1
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9b94239429682cae67540b028b3a170ca4ef377c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee5dfecc61bcc7717052417efaeb3120a7432c67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227832"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>[ADO NET 変換先エディター] ([エラー出力] ページ)
   **[ADO NET 変換先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
@@ -51,7 +51,7 @@ ms.locfileid: "36073780"
  **切り捨て**  
  使用されていません。  
   
- **description**  
+ **[説明]**  
  操作の説明を表示します。  
   
  **[選択したセルに設定する値]**  
@@ -62,6 +62,6 @@ ms.locfileid: "36073780"
   
 ## <a name="see-also"></a>参照  
  [ADO NET 変換先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [ADO NET 変換先エディター &#40;[マッピング] ページ&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [ADO NET 変換先エディター&#40;マッピング ページ&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   
