@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - database [Master Data Services], members staging table
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 caps.latest.revision: 15
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b11f9b49ade15182e247d6d85fbc66f87d590567
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 41c59703917460b06b3457cd013309f13e4b1288
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184829"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>リーフ メンバー ステージング テーブル (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのリーフ メンバー ステージング テーブル (stg.name_Leaf) を使用して、リーフ メンバーを作成、更新、非アクティブ化、および削除します。 また、このテーブルを使用して、リーフ メンバーの属性値を更新できます。  
@@ -41,17 +41,17 @@ ms.locfileid: "36071466"
 |**BatchTag**<br /><br /> Web サービス以外は必須|バッチの一意名 (最大 50 文字)。|  
 |**ErrorCode**|エラー コードを表示します。 **ImportStatus_ID** が **2** のすべてのレコードについては、「[ステージング処理のエラー (マスター データ サービス)](staging-process-errors-master-data-services.md)」を参照してください。|  
 |**コード**<br /><br /> 必須。**ImportType1** や **2** でコードが自動的に生成される場合は除きます。詳しくは、「[コードの自動作成 (マスター データ サービス)](../../2014/master-data-services/automatic-code-creation-master-data-services.md)」を参照してください。|メンバーの一意コード。|  
-|**Name**<br /><br /> 省略可|メンバーの名前。|  
+|**名前**<br /><br /> 省略可|メンバーの名前。|  
 |**NewCode**|メンバー コードを変更する場合にのみ使用します。|  
 |\<属性名>|エンティティ内の属性ごとに列が存在します。 **ImportType** が **0** または **2**の場合に、これを使用します。 自由形式属性の場合、属性の新しいテキストまたは文字列値を指定します。 ドメイン ベース属性の場合は、属性となるメンバーのコードを指定します。 リンク属性の場合、URL は **http://** で始まる必要があります。<br /><br /> 注: ファイル属性をステージングすることはできません。|  
   
-##  <a name="feedback"></a> この記事役に立ちましたか。 フィードバックをお待ちしております。  
+##  <a name="feedback"></a> この記事ではする方法でしょうか。 フィードバックをお待ちしております。  
  どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Leaf%20Member%20Staging%20Table%20page) にコメントをお送りください  
   
 ## <a name="see-also"></a>参照  
  [読み込むか、ステージング処理を使用してマスター データ サービス内のメンバーを更新します。](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
  [データのインポート&#40;マスター データ サービス&#41;](overview-importing-data-from-tables-master-data-services.md)   
- [ステージング処理中に発生したエラーを表示する&#40;マスター データ サービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
- [ステージング プロセス エラー&#40;マスター データ サービス&#41;](staging-process-errors-master-data-services.md)  
+ [ステージング処理中に発生するエラーを表示する&#40;マスター データ サービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
+ [ステージング処理のエラー&#40;マスター データ サービス&#41;](staging-process-errors-master-data-services.md)  
   
   

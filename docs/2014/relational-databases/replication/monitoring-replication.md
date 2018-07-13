@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], about monitoring replication
 - transactional replication, monitoring
@@ -21,20 +21,20 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 caps.latest.revision: 38
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7434a211de780ab5a363aeec97b8914bb587f5a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1276429c773656e04a3ce15f277d08c3b3e52f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162303"
 ---
 # <a name="monitoring-replication"></a>監視 (レプリケーション)
   レプリケーション トポロジの監視は、レプリケーションの配置における重要な側面です。 レプリケーション処理は分散環境で行われるため、レプリケーションに関連するすべてのコンピューターについてその利用状況と状態を追跡することが不可欠です。 レプリケーションの監視には以下のツールを使用できます。  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Replication Monitor  
   
-     レプリケーションの監視を行うにあたり、最も重要なツールがレプリケーション モニターです。すべてのレプリケーションの利用状況がパブリッシャー関連のビューで表示されます。 詳細については、次を参照してください。[レプリケーションの監視](monitor/monitoring-replication-overview.md)です。  
+     レプリケーションの監視を行うにあたり、最も重要なツールがレプリケーション モニターです。すべてのレプリケーションの利用状況がパブリッシャー関連のビューで表示されます。 詳細については、次を参照してください。[レプリケーションの監視](monitor/monitoring-replication-overview.md)します。  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 163b33618f6d303d3ab08e078ee2b06096dc2ad8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 75446ba8c61f03c46c4000793d7ca75f1dc8cb85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201112"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>FOR XML を使用した行セットからの XML の生成
-  生成することができます、`xml`データ型のインスタンスに新しい FOR XML を使用して行セットから**型**ディレクティブです。  
+  生成することができます、`xml`新しいを FOR XML を使用して行セットからのデータ型のインスタンス**型**ディレクティブ。  
   
- 結果に割り当てることができます、`xml`データ型の列、変数、またはパラメーターです。 また、FOR XML を入れ子にして階層構造を作成することもできます。 入れ子にした FOR XML は FOR XML EXPLICIT よりも記述が容易ですが、階層が深いとパフォーマンスが低下する場合があります。 FOR XML には新しい PATH モードも導入されています。 この新しいモードで、列の値が現れる XML ツリーのパスを指定します。  
+ 結果に割り当てることができます、`xml`データ型の列、変数、またはパラメーター。 また、FOR XML を入れ子にして階層構造を作成することもできます。 入れ子にした FOR XML は FOR XML EXPLICIT よりも記述が容易ですが、階層が深いとパフォーマンスが低下する場合があります。 FOR XML には新しい PATH モードも導入されています。 この新しいモードで、列の値が現れる XML ツリーのパスを指定します。  
   
  新しい **FOR XML TYPE** ディレクティブを使用すると、リレーショナル データの読み取り専用の XML ビューを SQL 構文で定義できます。 このビューには、次の例で示すように SQL ステートメントおよびそれに埋め込まれた XQuery を使用してクエリを実行できます。 この SQL ビューをストアド プロシージャで参照することもできます。  
   

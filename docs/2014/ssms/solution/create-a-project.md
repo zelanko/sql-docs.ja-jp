@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.newproject
 - vs.addnewproject
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d1e3ae0c46b8ad7f56ebb71ee0a416670aa56fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8ee87fea9b2586b8da9c54b2d074228b93a97e11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191202"
 ---
 # <a name="create-a-project"></a>プロジェクトを作成する
   既存のソリューション内に、1 つ以上のプロジェクトを作成できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "36072465"
      **[テンプレート]**  
      **[テンプレート]** ボックスで、テンプレートを選択します。 **[テンプレート]** ボックスの下に、選択したプロジェクト テンプレートの簡単な説明が表示されます。  
   
-     **Name**  
+     **名前**  
      作成するスクリプト プロジェクトの名前を入力します。 **[場所]** フィールドに表示された場所に、プロジェクトと同じ名前のフォルダーも作成されます。 プロジェクトによっては、ソース ファイルなどのサポート ファイルが [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] によって作成され、新しいプロジェクト フォルダーに追加されます。  
   
     > [!NOTE]  
@@ -106,7 +106,7 @@ ms.locfileid: "36072465"
  [新しい項目をプロジェクトに追加します。](add-new-items-to-a-project.md)   
  [既存の項目をプロジェクトに追加します。](add-existing-items-to-a-project.md)   
  [プロジェクトの既定の場所を変更します。](change-the-default-location-for-projects.md)   
- [削除するか、項目またはプロジェクトを削除します。](remove-or-delete-an-item-or-project.md)   
+ [削除するか、アイテムやプロジェクトの削除](remove-or-delete-an-item-or-project.md)   
  [ソリューションを削除する](delete-a-solution.md)  
   
   

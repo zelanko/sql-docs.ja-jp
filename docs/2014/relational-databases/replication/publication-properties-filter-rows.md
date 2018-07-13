@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.filterrows.f1
 ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a31d710caec8ee0e8d8e66a511cdaaf5c2ae5d53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a322caebeafa5973db878971014b12b32248379e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188589"
 ---
 # <a name="publication-properties-filter-rows"></a>[パブリケーションのプロパティ]、[行のフィルター選択]
   **[パブリケーションのプロパティ]** ダイアログ ボックスの **[行のフィルター選択]** ページを使用すると、次のフィルターを追加、編集、または削除できます。  
@@ -71,7 +71,7 @@ ms.locfileid: "36074575"
  **[編集]**  
  フィルター ペインで行フィルターまたは結合フィルターを選択し、 **[編集]** をクリックすると、 **[フィルターの編集]** ダイアログ ボックスまたは **[結合の編集]** ダイアログ ボックスが表示されます。  
   
- **Delete**  
+ **削除**  
  フィルター ペインで行フィルターまたは結合フィルターを選択し、 **[削除]** をクリックすると、フィルターを削除できます。  
   
  **[テーブルの検索]**  

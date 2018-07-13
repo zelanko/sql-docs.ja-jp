@@ -1,5 +1,5 @@
 ---
-title: DataSources 要素 (ASSL) |Microsoft ドキュメント
+title: DataSources 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSources element
 ms.assetid: c79760f2-9002-4a73-805d-d40bc042ea2b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f668403ee94c9bba745cdc64766da1f2531b9426
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17fa99c0953e7fb65b27aa4cc4b3e4e35c276d22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253524"
 ---
 # <a name="datasources-element-assl"></a>DataSources 要素 (ASSL)
-  コレクションを格納[データソース](../objects/datasource-element-assl.md)要素に関連付けられた、[データベース](../objects/database-element-assl.md)要素。  
+  コレクションを格納[DataSource](../objects/datasource-element-assl.md)要素に関連付けられた、[データベース](../objects/database-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
 - connections [SQL Server], server network configuration
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 619f8faae3d57cc7ec28a427d7f29bacab4b62ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 798ba8646da29796e11f6391a3132afc22c99732
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167233"
 ---
 # <a name="server-network-configuration"></a>サーバー ネットワークの構成
   サーバー ネットワークの構成作業には、プロトコルの有効化、プロトコルで使用されるポートまたはパイプの変更、暗号化の構成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスの構成、ネットワーク上での [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の公開または非表示、サーバー プリンシパル名の登録などがあります。 ほとんどの場合、サーバー ネットワークの構成を変更する必要はありません。 特殊なネットワーク要件がある場合は、サーバー ネットワーク プロトコルのみを再構成します。  

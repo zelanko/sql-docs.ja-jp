@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - denying My Reports folder access
 - private folders [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2db8163ff6f2ff380c475b89095724a1d38e6c2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 959706458a4b529252d8a45c80aae99f377b9531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238312"
 ---
 # <a name="secure-my-reports"></a>個人用レポートをセキュリティで保護する
   個人用レポート機能により、ユーザーが管理するレポート処理用のワークスペースが提供されます。 [個人用レポート] フォルダーは、その性質上、他の汎用的な用途のフォルダーよりも権限の制限を緩める必要があります。 他のフォルダーのレポートを表示および実行する権限しか持たないユーザーが、[個人用レポート] フォルダーおよび自らが所有するコンテンツを管理するためには、より強い権限が必要となります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、そのための特別なロールの割り当てとロールの定義が用意されています。  
@@ -52,14 +52,14 @@ ms.locfileid: "36071806"
 ## <a name="denying-access-to-my-reports"></a>個人用レポートへのアクセス拒否  
  ユーザーによる個人用レポートへのアクセスを拒否するには、次の方法を使用します。  
   
--   [サイトの設定] ページで個人用レポートを無効にします。 詳細については、次を参照してください。[の有効化および無効にするには、個人用レポート](../report-server/enable-and-disable-my-reports.md)です。  
+-   [サイトの設定] ページで個人用レポートを無効にします。 詳細については、次を参照してください。[の有効化と無効にするには、個人用レポート](../report-server/enable-and-disable-my-reports.md)します。  
   
 -   **個人用レポート** ロールからすべてのタスクを削除します。  
   
  個人用レポートを無効にすると、[個人用レポート] フォルダーのリンクがレポート マネージャーから削除されます。 個人用レポートをサポートする基本のフォルダー構造 (つまり Users フォルダーとサブフォルダー) は有効なままなので、ユーザーはフォルダーのパスがわかればアクセスすることができます。 **個人用レポート** ロールからタスクを削除すると、アクセスが拒否されます。  
   
 ## <a name="see-also"></a>参照  
- [セキュリティで保護されたレポート、およびリソース](secure-reports-and-resources.md)   
+ [レポートとリソースを保護します。](secure-reports-and-resources.md)   
  [フォルダーをセキュリティで保護する](secure-folders.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)  
   

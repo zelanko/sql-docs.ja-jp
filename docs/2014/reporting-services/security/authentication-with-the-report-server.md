@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services], accounts
@@ -19,19 +19,21 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6ee89d1d6b01fe39f3798eef9f39c1ca460cc799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71382e58d8709c2a0015e40819b74638413441e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266088"
 ---
 # <a name="authentication-with-the-report-server"></a>レポート サーバーでの認証
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) には、レポート サーバーに対してユーザーおよびクライアント アプリケーションを認証するための構成可能なオプションがいくつか用意されています。 既定では、レポート サーバーは Windows 統合認証を使用し、クライアントとネットワーク リソースが同じドメインまたは信頼されているドメインに属している場合は、信頼関係があると見なされます。 ネットワーク トポロジおよび組織のニーズに応じて、Windows 統合認証に使用される認証プロトコルをカスタマイズしたり、基本認証を使用したり、自分で提供したカスタムのフォームベースの認証拡張機能を使用したりすることができます。 認証の種類ごとに、個別にオンとオフを切り替えることができます。 レポート サーバーで複数の種類の要求を受け入れる場合は、複数の種類の認証を有効にすることができます。  
+  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) には、レポート サーバーに対してユーザーおよびクライアント アプリケーションを認証するための構成可能なオプションがいくつか用意されています。 既定では、レポート サーバーは Windows 統合認証を使用し、クライアントとネットワーク リソースが同じドメインまたは信頼されているドメインに属している場合は、信頼関係があると見なされます。 ネットワーク トポロジおよび組織のニーズに応じて、Windows 統合認証に使用される認証プロトコルをカスタマイズしたり、基本認証を使用したり、自分で提供したカスタムのフォームベースの認証拡張機能を使用したりすることができます。 認証の種類ごとに、個別にオンとオフを切り替えることができます。 レポート サーバーで複数の種類の要求を受け入れる場合は、複数の種類の認証を有効にすることができます。  
   
 > [!NOTE]  
->  以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、すべての認証が IIS でサポートされていました。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、IIS は使用されなくなり、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 内部的にすべての認証要求を処理します。  
+>  以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、すべての認証が IIS でサポートされていました。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、IIS は使用されなくなり、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] すべての認証要求を内部的に処理します。  
   
  レポート サーバーのコンテンツまたは操作へのアクセスを要求するすべてのユーザーとアプリケーションは、事前に認証を受けないとアクセスを許可されません。  
   
@@ -57,7 +59,7 @@ ms.locfileid: "36072940"
 |ダイジェスト|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ではサポートされていません。|  
   
 ## <a name="configuration-of-authentication-settings"></a>認証設定の構成  
- 認証設定は、レポート サーバーの URL が予約されたときに、既定のセキュリティを使用するように構成されます。 これらの設定を誤って変更すると、レポート サーバーは、認証できない HTTP 要求に対して HTTP 401 アクセス拒否エラーを返します。 認証の種類を選択する際は、ネットワークで Windows 認証がどのようにサポートされているかを理解している必要があります。 少なくとも 1 種類の認証を指定する必要があります。 RSWindows に対しては、複数の種類の認証を指定できます。 RSWindows 認証タイプ (つまり、 `RSWindowsBasic`、 `RSWindowsNTLM`、 `RSWindowsKerberos`、および**RSWindowsNegotiate**) がカスタムで相互に排他的です。  
+ 認証設定は、レポート サーバーの URL が予約されたときに、既定のセキュリティを使用するように構成されます。 これらの設定を誤って変更すると、レポート サーバーは、認証できない HTTP 要求に対して HTTP 401 アクセス拒否エラーを返します。 認証の種類を選択する際は、ネットワークで Windows 認証がどのようにサポートされているかを理解している必要があります。 少なくとも 1 種類の認証を指定する必要があります。 RSWindows に対しては、複数の種類の認証を指定できます。 RSWindows 認証の種類 (つまり、 `RSWindowsBasic`、 `RSWindowsNTLM`、`RSWindowsKerberos`と**RSWindowsNegotiate**) がカスタムで相互に排他的です。  
   
 > [!IMPORTANT]  
 >  Reporting Services では、指定した設定がコンピューティング環境に対して適切かどうかは検証されません。 インストールの状況によっては既定のセキュリティが機能しない場合や、指定した構成設定がセキュリティ インフラストラクチャに対して有効ではない場合があります。 そのため、レポート サーバーを配置する際は、大規模な組織で使用できるようにする前に、管理されたテスト環境で十分にテストすることが重要です。  
@@ -86,13 +88,13 @@ ms.locfileid: "36072940"
 ## <a name="see-also"></a>参照  
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
  [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
- (作成、および-管理-ロール-assignments.md)   
+ (作成-と-管理-ロール-assignments.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
  [セキュリティ拡張機能の実装](../extensions/security-extension/implementing-a-security-extension.md)   
- [ネイティブ モード レポート サーバーで SSL 接続を構成します。](configure-ssl-connections-on-a-native-mode-report-server.md)   
+ [ネイティブ モードのレポート サーバーで SSL 接続を構成します。](configure-ssl-connections-on-a-native-mode-report-server.md)   
  [レポート ビルダーへのアクセスを構成します。](../report-server/configure-report-builder-access.md)   
  [セキュリティ拡張機能の概要](../extensions/security-extension/security-extensions-overview.md)   
- [Reporting Services の認証](../extensions/security-extension/authentication-in-reporting-services.md)   
+ [Reporting Services での認証](../extensions/security-extension/authentication-in-reporting-services.md)   
  [Reporting Services での承認](../extensions/security-extension/authorization-in-reporting-services.md)  
   
   

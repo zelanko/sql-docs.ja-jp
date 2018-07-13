@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
 - backup devices [SQL Server]
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 caps.latest.revision: 89
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c3f5bfc7186470ed713cdb9d979af2e5b3b0367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d7a3603d8d2f8f947a2c708a11015bf031ede8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237182"
 ---
 # <a name="backup-devices-sql-server"></a>バックアップ デバイス (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース上でのバックアップ操作中、バックアップ対象のデータ (*backup*) は、物理バックアップ デバイスに書き込まれます。 この物理バックアップ デバイスは、メディア セットの最初のバックアップが書き込まれるときに初期化されます。 単一または一連のバックアップ デバイス上にあるバックアップによって、1 つのメディア セットが構成されます。  
@@ -49,7 +48,7 @@ ms.locfileid: "36073021"
   
 -   [論理バックアップ デバイスの使用](#LogicalBackupDevice)  
   
--   [ミラー化バックアップ メディア セット](#MirroredMediaSets)  
+-   [バックアップ メディア セットをミラー化](#MirroredMediaSets)  
   
 -   [SQL Server のバックアップのアーカイブ](#Archiving)  
   
@@ -159,7 +158,7 @@ GO
   
 -   [物理名 (TRANSACT-SQL) を使用してバックアップ テープの指定](#BackupTapeUsingPhysicalName)  
   
--   [テープ固有の BACKUP 操作と RESTORE 操作 (TRANSACT-SQL)](#TapeOptions)  
+-   [テープ固有の BACKUP と RESTORE 操作 (TRANSACT-SQL)](#TapeOptions)  
   
 -   [開いているテープの管理](#OpenTapes)  
   
@@ -194,7 +193,7 @@ GO
   
  FROM TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
-###  <a name="TapeOptions"></a> テープ固有の BACKUP 操作と RESTORE 操作 (TRANSACT-SQL)  
+###  <a name="TapeOptions"></a> テープ固有の BACKUP と RESTORE 操作 (TRANSACT-SQL)  
  テープ管理を容易にするには、BACKUP ステートメントで次のテープ固有のオプションを指定します。  
   
 -   { NOUNLOAD | **UNLOAD** }  
@@ -242,7 +241,7 @@ GO
   
 2.  新しい論理バックアップ デバイスを定義します。このデバイスは、元の論理デバイス名を使用しますが、別の物理バックアップ デバイスにマップされているものです。 論理バックアップ デバイスは、テープ バックアップ デバイスを識別する際に特に役立ちます。  
   
-##  <a name="MirroredMediaSets"></a> ミラー化バックアップ メディア セット  
+##  <a name="MirroredMediaSets"></a> バックアップ メディア セットをミラー化  
  バックアップ メディア セットをミラー化すると、バックアップ デバイスの誤動作の影響を軽減できます。 バックアップはデータ損失に対する最後の防護策なので、このような誤動作は非常に深刻です。 データベースのサイズが大きくなるにつれて、バックアップ デバイスやメディアの障害によってバックアップを復元できなくなる可能性が高くなります。 バックアップ メディアをミラー化すると、物理バックアップ デバイスの冗長性が実現され、バックアップの信頼性が向上します。 詳細については、「[ミラー化バックアップ メディア セット &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)」を参照してください。  
   
 > [!NOTE]  

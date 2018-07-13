@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.openwith
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 57aa51909a5fe1c3bb0488ce4bc05bcceab37d26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b254e3d03945f3a7c3641c036a54df18ba13f7bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272098"
 ---
 # <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] ([新しいファイル])
   1 つ以上のエディターでドキュメントを開くには、**[ファイル]** メニューの **[開く]** をクリックし、次に **[ファイル]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスでファイルを選択し、 **[開く]** の横の矢印をクリックし、次に **[ファイルを開くアプリケーションの選択]** をクリックします。 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスの **[このファイルを開くのに使用するプログラムを選択してください]** の一覧で、目的のプログラムをクリックし、次に **[開く]** をクリックします。  

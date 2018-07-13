@@ -1,5 +1,5 @@
 ---
-title: AllowOverwrite 要素 (XMLA) |Microsoft ドキュメント
+title: AllowOverwrite 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - AllowOverwrite element
 ms.assetid: e7e92481-5f29-47f2-9efd-4e5e60c002bb
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b34b0becd78adca99e4052e142fc696c155f6e20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0ad153d33b57f7fea763666d19e8e0b44fa155c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190902"
 ---
 # <a name="allowoverwrite-element-xmla"></a>AllowOverwrite 要素 (XMLA)
-  決定するかどうか、親[バックアップ](../xml-elements-commands/backup-element-xmla.md)または[復元](../xml-elements-commands/restore-element-xmla.md)コマンドは、ターゲット ファイルまたはデータベースを上書きしようとしています。  
+  決定かどうか、親[バックアップ](../xml-elements-commands/backup-element-xmla.md)または[復元](../xml-elements-commands/restore-element-xmla.md)コマンドは、ターゲット ファイルまたはデータベースを上書きしようとしています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36071553"
 ## <a name="remarks"></a>コメント  
  `Backup` コマンドの場合、`AllowOverwrite` 要素は、`File` 要素で指定されたバックアップ ファイルをコマンドが上書きできるかどうかを決定します。  
   
- `Restore` 、要素、`AllowOverwrite`要素は、コマンドが上書きできるかどうかを判断、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]で指定されたデータベース、`DatabaseName`要素。  
+ `Restore` 、要素、`AllowOverwrite`要素は、コマンドが上書きできるかどうかを決定、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]で指定されたデータベース、`DatabaseName`要素。  
   
 ## <a name="see-also"></a>参照  
  [DatabaseName 要素&#40;XMLA&#41;](name-element-xmla.md)   

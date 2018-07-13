@@ -1,5 +1,5 @@
 ---
-title: DataType 要素 (ASSL) |Microsoft ドキュメント
+title: DataType 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataType element
 ms.assetid: efe6f717-8288-4ca2-85ed-9b63d27c02d8
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 706d13e68b21a71fa9be80bf89fc4f9cdd4c6014
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16bc234f74aa8d6eb80607c7d03d63da8130e8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231872"
 ---
 # <a name="datatype-element-assl"></a>DataType 要素 (ASSL)
   関連する要素のデータ型を定義します。  
@@ -66,13 +66,13 @@ ms.locfileid: "36072423"
   
 |値|説明|  
 |-----------|-----------------|  
-|*BigInt*|64 ビットの符号付き整数です。 このデータ型にマップ、`Int64`のデータ型の[!INCLUDE[msCoName](../../../includes/msconame-md.md)]OLE DB に .NET Framework と DBTYPE_I8 データを入力します。|  
-|*Bool*|ブール値です。 このデータ型は、.NET Framework の `Boolean` データ型と、OLE DB の DBTYPE_BOOL データ型にマップされます。|  
-|*通貨*|-2 から範囲の通貨値<sup>63</sup> (または-922,337,203,685,477.5808) を 2<sup>63</sup>精度が通貨単位の 10,000-1 (または +922,337,203,685,477.5807)。 このデータ型は、.NET Framework の `Decimal` データ型と、OLE DB の DBTYPE_CY データ型にマップされます。|  
+|*BigInt*|64 ビットの符号付き整数です。 このデータ型にマップされます、`Int64`のデータ型の[!INCLUDE[msCoName](../../../includes/msconame-md.md)]OLE DB で .NET Framework および DBTYPE_I8 データを入力します。|  
+|*bool*|ブール値です。 このデータ型は、.NET Framework の `Boolean` データ型と、OLE DB の DBTYPE_BOOL データ型にマップされます。|  
+|*通貨*|通貨値の-2<sup>63</sup> (または-922,337,203,685,477.5808) を 2 に<sup>63</sup>精度が通貨単位の 10,000-1 (または +922,337,203,685,477.5807)。 このデータ型は、.NET Framework の `Decimal` データ型と、OLE DB の DBTYPE_CY データ型にマップされます。|  
 |*日付*|倍精度浮動小数点数として保存される日付データ。 整数部分は 1899 年 12 月 30 日からの日数で、小数部分は日の端数です。 このデータ型は、.NET Framework の `DateTime` データ型と、OLE DB の DBTYPE_DATE データ型にマップされます。|  
-|*double 型*|倍精度浮動小数点数、範囲 - 1.79 e +308 ~ 1.79 です。 このデータ型は、.NET Framework の `Double` データ型と、OLE DB の DBTYPE_R8 データ型にマップされます。|  
+|*Double 型*|倍精度浮動小数点番号を範囲 - 1.79 e +308 ~ 1.79 です。 このデータ型は、.NET Framework の `Double` データ型と、OLE DB の DBTYPE_R8 データ型にマップされます。|  
 |*Integer*|32 ビットの符号付き整数です。 このデータ型は、.NET Framework の `Int32` データ型と、OLE DB の DBTYPE_I4 データ型にマップされます。|  
-|*単一*|単精度浮動小数点数 - 3.40 e の範囲内で +38 から 3.40 e +38 です。 このデータ型は、.NET Framework の `Single` データ型と、OLE DB の DBTYPE_R4 データ型にマップされます。|  
+|*単一*|単精度浮動小数点数 - 3.40 e の範囲内で +38 から 3.40 e +38 します。 このデータ型は、.NET Framework の `Single` データ型と、OLE DB の DBTYPE_R4 データ型にマップされます。|  
 |*SmallInt*|16 ビットの符号付き整数です。 このデータ型は、.NET Framework の `Int16` データ型と、OLE DB の DBTYPE_I2 データ型にマップされます。|  
 |*TinyInt*|8 ビットの符号付き整数です。 このデータ型は、.NET Framework の `SByte` データ型と、OLE DB の DBTYPE_I1 データ型にマップされます。|  
 |*UnsignedBigInt*|64 ビットの符号なし整数です。 このデータ型は、.NET Framework の `UInt64` データ型と、OLE DB の DBTYPE_UI8 データ型にマップされます。|  

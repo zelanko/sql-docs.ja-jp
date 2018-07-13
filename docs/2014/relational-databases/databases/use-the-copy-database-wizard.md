@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
 - sql12.swb.cdw.welcome.f1
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: 61
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e22f3ae3949c47c21423e855e5d4d35cbbe914fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 27352ec11f14042266d17babefda47055a57a9ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199552"
 ---
 # <a name="use-the-copy-database-wizard"></a>データベース コピー ウィザードの使用
-  データベース コピー ウィザードを使用すると、サーバーを停止することなく、データベースとそのオブジェクトをサーバー間で簡単にコピーできます。 前回のデータベースをアップグレードすることも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。 このウィザードを使用すると、次の操作を実行できます。  
+  データベース コピー ウィザードを使用すると、サーバーを停止することなく、データベースとそのオブジェクトをサーバー間で簡単にコピーできます。 以前からデータベースをアップグレードすることもできます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。 このウィザードを使用すると、次の操作を実行できます。  
   
 -   移動元またはコピー元、および移動先またはコピー先サーバーを選択します。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "36071909"
   
      [コピー、移動、またはデータベースのアップグレード](#Copy_Move)  
   
--   **補足情報、アップグレード後に。**  
+-   **アップグレード後に従います。**  
   
-     [SQL Server データベースをアップグレードした後](#FollowUp)  
+     [SQL Server データベースのアップグレード後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
@@ -116,13 +116,13 @@ ms.locfileid: "36071909"
 2.  **[転送元サーバーの選択]** ページで、移動またはコピーするデータベースがあるサーバーの指定や、ログイン情報の入力を行います。 認証方法を選択し、ログイン情報を入力したら、 **[次へ]** をクリックして転送元サーバーとの接続を確立します。 セッションの間、この接続は開いています。  
   
      **[転送元サーバー]**  
-     データベースまたはに移動またはコピーするデータベースが存在する、サーバーの名前を選択するか、参照ボタンをクリックして (**.**) をクリックします。 サーバーは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以上である必要があります。  
+     以上の移動またはコピーするデータベースが置かれているサーバーの名前を選択しますまたは、参照 をクリックします (**.。**) をクリックします。 サーバーは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以上である必要があります。  
   
      **[Windows 認証を使用する]**  
      [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー アカウントを使用して接続することをユーザーに許可します。  
   
      **[SQL Server 認証を使用する]**  
-     ユーザーに提供することで接続を許可する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ユーザー名とパスワード。  
+     ユーザーが提供することで接続を許可する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ユーザー名とパスワード。  
   
      **ユーザー名**  
      接続に使用するユーザー名を入力します。 このオプションを使用して接続を選択した場合にのみ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
@@ -136,7 +136,7 @@ ms.locfileid: "36071909"
 3.  **[転送先サーバーの選択]** ページで、データベースが移動またはコピーされるサーバーを指定します。 転送先またはコピー先のサーバーと、転送元またはコピー元のサーバーに同じサーバー インスタンスを設定した場合、データベースのコピーが作成されます。 この場合、後でウィザードでデータベースの名前を変更する必要があります。 コピー元または移動元データベースの名前をコピー先または移動先データベースの名前に使用できるのは、コピー先または移動先サーバーに名前の競合がない場合のみです。 名前が競合する場合、コピー元または移動元のデータベース名を使用する前にコピー先または移動先サーバーの競合を手動で解決する必要があります。  
   
      **[転送先サーバー]**  
-     データベースまたはデータベースは移動またはコピー、または、参照ボタンをクリックして、サーバーの名前を選択 (**.**) 移行先サーバーを検索するボタンをクリックします。  
+     または複数のデータベースが移動またはコピー、またはサーバーの参照 をクリックしての名前を選択します (**.**) 移行先サーバーを検索するボタンをクリックします。  
   
     > [!NOTE]  
     >  転送先またはコピー先のサーバーとして、クラスター化されたサーバーを選択できます。その場合、データベース コピー ウィザードは、そのクラスター化された転送先またはコピー先のサーバーの共有ドライブのみが選択されていることを確認します。  
@@ -145,7 +145,7 @@ ms.locfileid: "36071909"
      [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー アカウントを使用して接続することをユーザーに許可します。  
   
      **[SQL Server 認証を使用する]**  
-     ユーザーに提供することで接続を許可する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ユーザー名とパスワード。  
+     ユーザーが提供することで接続を許可する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ユーザー名とパスワード。  
   
      **ユーザー名**  
      接続に使用するユーザー名を入力します。 このオプションは使用できるは、選択した場合にのみ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
@@ -184,7 +184,7 @@ ms.locfileid: "36071909"
      **Source**  
      移動またはコピー元のサーバーに存在するデータベースが表示されます。  
   
-     **Status**  
+     **ステータス**  
      表示**OK**場合は、データベースを移動することができます。 データベースを移動できない場合はその理由が表示されます。  
   
      **[更新]**  
@@ -207,7 +207,7 @@ ms.locfileid: "36071909"
     >  拡張ストアド プロシージャおよび関連する DLL は、自動コピーの対象になりません。  
   
      **SQL Server エージェント ジョブ**  
-     ジョブを含めます、 **msdb**移動またはコピー操作でデータベース。  
+     ジョブ、 **msdb**移動またはコピー操作でデータベース。  
   
      **[ユーザー定義エラー メッセージ]**  
      ユーザー定義のエラー メッセージを移動またはコピー操作の対象にします。  
@@ -221,7 +221,7 @@ ms.locfileid: "36071909"
      **[SSIS パッケージ]**  
      ソース データベースに定義されている [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージを対象にします。  
   
-     **description**  
+     **[説明]**  
      オブジェクトの説明。  
   
 8.  **[転送元のデータベース ファイルの場所]** ページで、転送元サーバー上のデータベース ファイルが格納されているファイル システム共有を指定します。 転送元と転送先のサーバー インスタンスが異なるコンピューター上に存在する場合、この設定は必須です。  
@@ -237,15 +237,15 @@ ms.locfileid: "36071909"
      **[転送元のサーバーでのファイル共有]**  
      ソース データベース ファイルの場所をファイル共有のパスとして指定します。  
   
-     例:"\\\\*server_name*\C$\Program Files\Microsoft SQL Server\MSSQL110 です。MSSQLSERVER\MSSQL\Data  
+     例:"\\\\*server_name*\C$\Program Files\Microsoft SQL Server\MSSQL110 します。MSSQLSERVER\MSSQL\Data  
   
-9. データベース コピー ウィザードを作成、[!INCLUDE[ssIS](../../includes/ssis-md.md)]からデータベースを転送するためのパッケージ、 **、パッケージを構成する** ページで、適切なパッケージをカスタマイズします。  
+9. データベース コピー ウィザードを作成、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージからデータベースを転送、**パッケージを構成して** ページで、適切なパッケージをカスタマイズします。  
   
      **[パッケージの場所]**  
-     場所が表示、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージが書き込まれます。  
+     場所が表示されます、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージが書き込まれます。  
   
      **パッケージ名**  
-     名前を入力、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージです。  
+     名前を入力、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージ。  
   
      **[ログ オプション]**  
      ログ情報を Windows イベント ログとして保存するか、テキスト ファイルとして保存するかを選択します。  
@@ -253,10 +253,10 @@ ms.locfileid: "36071909"
      **[エラー ログ ファイルのパス]**  
      ログ ファイルの場所のパスを指定します。 このオプションは、テキスト ファイルのログのオプションが選択されている場合のみ使用できます。  
   
-10. **[パッケージのスケジュール設定]** ページで、移動操作またはコピー操作をいつ開始するのかを指定します。 かどうか、システム管理者ではありません、する必要がありますを指定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウントへのアクセス権を持つ、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) パッケージ実行サブシステムです。  
+10. **[パッケージのスケジュール設定]** ページで、移動操作またはコピー操作をいつ開始するのかを指定します。 かどうかには、システム管理者でないを指定してください、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウントにアクセスできる、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) パッケージ実行サブシステム。  
   
      **Run immediately**  
-     クリックした後に移動またはコピー操作を開始**次**です。  
+     クリックした後、移動またはコピー操作を開始**次**します。  
   
      **[スケジュール]**  
      移動操作またはコピー操作を後で開始します。 説明ボックスには、現在のスケジュール設定が表示されます。 スケジュールを変更するには、 **[変更]** をクリックします。  
@@ -267,7 +267,7 @@ ms.locfileid: "36071909"
      **Integration Services プロキシ アカウント**  
      利用可能なプロキシ アカウントを選択します。 転送をスケジュールするには、1 つ以上のプロキシ アカウントをユーザーが使用できる状態であり、**SQL Server Integration Services パッケージ実行用サブシステム** に対する権限がこれらのアカウントに対して構成されている必要があります。  
   
-     プロキシ アカウントを作成する[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージの実行、オブジェクト エクスプ ローラーで、展開**SQL Server エージェント**、展開**プロキシ**を右クリックして**SSIS パッケージ実行**、クリックして**新しいプロキシ**です。  
+     プロキシ アカウントを作成する[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージの実行、オブジェクト エクスプ ローラーで、展開**SQL Server エージェント**、展開**プロキシ**を右クリックして**SSIS パッケージの実行**、 をクリックし、**新しいプロキシ**します。  
   
      **sysadmin** 固定サーバー ロールのメンバーは、必要なアクセス許可のある **SQL Server エージェント サービス アカウント**を選択できます。  
   
@@ -276,7 +276,7 @@ ms.locfileid: "36071909"
      **操作**  
      実行されている各アクションが一覧表示されます。  
   
-     **Status**  
+     **ステータス**  
      アクションが全体として成功したか、失敗したかを示します。  
   
      **メッセージ**  

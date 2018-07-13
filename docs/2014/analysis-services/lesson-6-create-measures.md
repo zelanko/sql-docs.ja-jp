@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 7: メジャーを作成する |Microsoft ドキュメント'
+title: 'レッスン 7: メジャーの作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e96525c0e50e560e255156f7dd1bb731398df679
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5c6b18e88a4fbff18c06c9a10a06fe5d2f1e803
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222852"
 ---
 # <a name="lesson-7-create-measures"></a>レッスン 7: メジャーの作成
   このレッスンでは、モデルに含められるメジャーを作成します。 前のレッスンで作成した計算列と同様、メジャーは、基本的には、DAX 数式を使用して作成される計算です。 ただし、計算列とは違い、メジャーはユーザーが選択した "*フィルター*" に基づいて評価されます (たとえば、PivotTable 内の行ラベル フィールドに追加された特定の列やスライサーなど)。   フィルター内の各セルの値は、適用されたメジャーによって計算されます。 メジャーは強力で柔軟な計算なので、ほとんどすべてのテーブル モデルに含めて、数値データに対する動的な計算を実行できます。 詳細については、「[メジャー (SSAS テーブル)](tabular-models/measures-ssas-tabular.md)」を参照してください。  
@@ -51,9 +51,9 @@ ms.locfileid: "36073139"
   
      数式の入力が終了したら、Enter キーを押します。  
   
-     左上のセルが含まれています、メジャー名に注意してください**Measure 1**」と入力し、結果を**30**します。 メジャー名は、数式バーの数式の前にも表示されます。  
+     左上のセルのメジャーの名前では、すぐに**Measure 1**、結果、その後に**30**します。 メジャー名は、数式バーの数式の前にも表示されます。  
   
-5.  [数式] バーで、メジャーの名前を変更する、名前を強調表示**Measure 1**、入力`Days Current Quarter to Date`、ENTER キーを押します。  
+5.  数式バーで、メジャーの名前を変更する、名前を強調表示**Measure 1**、入力`Days Current Quarter to Date`、し、ENTER キーを押します。  
   
     > [!TIP]  
     >  数式バーで数式を入力する際には、最初にメジャー名を入力し、続けてコロン (:)、スペース、数式の順に入力することもできます。 この方法を使用すれば、メジャー名を変更する必要はありません。  

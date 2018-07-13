@@ -1,5 +1,5 @@
 ---
-title: Properties 要素 (XMLA) |Microsoft ドキュメント
+title: Properties 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Properties element
 ms.assetid: 0b5468e5-bf23-4d22-862f-72e27a9fff2f
 caps.latest.revision: 30
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 66accb9aab2c970c1fd09b1e14408b5585269d7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 99cb1b43ad7629fd87759d5ea724e068319152b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237232"
 ---
 # <a name="properties-element-xmla"></a>Properties 要素 (XMLA)
-  使用される分析 (XMAL) プロパティの XML が含まれています、 [Discover](../xml-elements-methods-discover.md)と[Execute](../xml-elements-methods-execute.md)メソッドです。  
+  によって使用される分析 (XMAL) プロパティの XML が含まれています、 [Discover](../xml-elements-methods-discover.md)と[Execute](../xml-elements-methods-execute.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36072415"
 ## <a name="remarks"></a>コメント  
  `Properties` 要素は、`Discover` および `Execute` メソッドのさまざまな側面を制御するために使用される XMLA プロパティを表します。たとえば、データ ソースへの接続に必要な情報の定義、返される結果セットの形式の指定、データを書式設定する際のロケールの指定などを制御します。  
   
- DISCOVER_PROPERTIES 要求の種類を使用して、使用可能なプロパティとその値を取得できます、`Discover`メソッドです。  
+ 要求の種類として DISCOVER_PROPERTIES を使用して、使用可能なプロパティとその値を取得できます、`Discover`メソッド。  
   
 ## <a name="example"></a>例  
   

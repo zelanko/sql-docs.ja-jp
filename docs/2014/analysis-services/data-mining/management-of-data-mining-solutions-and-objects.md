@@ -1,5 +1,5 @@
 ---
-title: オブジェクトとデータ マイニング ソリューションの管理 |Microsoft ドキュメント
+title: データ マイニング ソリューションおよびオブジェクトの管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6ea150e4f35eaa1e9251f17894c7f0cf665439ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f20cc2fe28f5d798f3521a36aebcfe346aa643d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218302"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>データ マイニング ソリューションおよびオブジェクトの管理
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、既存のマイニング構造とマイニング モデルの管理に使用できるクライアント ツールがあります。 ここでは、それぞれの環境を使用して実行できる管理操作について説明します。  
@@ -32,20 +32,21 @@ ms.locfileid: "36073628"
 ## <a name="in-this-section"></a>このセクションの内容  
  [データ マイニング オブジェクトの移動](moving-data-mining-objects.md)  
   
- [処理の要件および考慮事項&#40;データ マイニング&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [処理の要件および注意事項&#40;データ マイニング&#41;](processing-requirements-and-considerations-data-mining.md)  
   
  [データ マイニングの監視する SQL Server Profiler を使用して&#40;Analysis Services - データ マイニング&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>データ マイニング オブジェクトの場所  
  処理されたマイニング構造およびマイニング モデルは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに格納されます。  
   
- 接続を作成する場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース`Immediate`モード、データ マイニングを開発するときにオブジェクトを作成するすべてのオブジェクトが直ちに追加サーバーに作業するいるとします。 一方、 **の既定の動作である** オフライン [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]モードでデータ マイニング オブジェクトを設計した場合、作成したマイニング オブジェクトは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに配置されるまでは単なるメタデータ コンテナーです。 そのため、オブジェクトに変更を加えた場合は、オブジェクトを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーに再配置する必要があります。 データ マイニングのアーキテクチャの詳細については、「[物理アーキテクチャ (Analysis Services - データ マイニング)](physical-architecture-analysis-services-data-mining.md)」を参照してください。  
+ 接続を作成する場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース`Immediate`モード、データ マイニングを開発する際にオブジェクトの場合、ユーザーが作業で作成したすべてのオブジェクトは、サーバーにすぐに追加します。 一方、 **の既定の動作である** オフライン [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]モードでデータ マイニング オブジェクトを設計した場合、作成したマイニング オブジェクトは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに配置されるまでは単なるメタデータ コンテナーです。 そのため、オブジェクトに変更を加えた場合は、オブジェクトを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーに再配置する必要があります。 データ マイニングのアーキテクチャの詳細については、「[物理アーキテクチャ (Analysis Services - データ マイニング)](physical-architecture-analysis-services-data-mining.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007 用データ マイニング アドインなどの一部のクライアントでは、インスタンスへの接続を使用する一方でマイニング構造およびマイニング モデルをセッション中のみサーバー上に格納する、セッション マイニング モデルおよびセッション マイニング構造を作成することもできます。 これらのモデルは、クライアントを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに格納されている構造およびモデルの場合と同じ方法で管理できますが、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスとの接続を解除したときにオブジェクトは保持されません。  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>SQL Server データ ツールでのデータ マイニング オブジェクトの管理  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] には、データ マイニング オブジェクトの作成、参照、および編集を容易にする機能が用意されています。  
+ 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] には、データ マイニング オブジェクトの作成、参照、および編集を容易にする機能が用意されています。  
   
  次のリンクでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用してデータ マイニング オブジェクトを変更する方法について説明しています。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "36073628"
   
 -   [マイニング モデルのプロパティの変更](change-the-properties-of-a-mining-model.md)  
   
--   [表示または変更するモデリング フラグ&#40;データ マイニング&#41;](modeling-flags-data-mining.md)  
+-   [モデリング フラグの変更を表示または&#40;データ マイニング&#41;](modeling-flags-data-mining.md)  
   
 -   [アルゴリズム パラメーターの表示または変更](view-or-change-algorithm-parameters.md)  
   
@@ -66,7 +67,7 @@ ms.locfileid: "36073628"
 > [!WARNING]  
 >  名前や説明などのメタデータの変更を含め、マイニング構造またはマイニング モデルに対して変更を加えた場合は、構造またはモデルを再処理する必要があります。  
   
- 場合、データ マイニング プロジェクトまたはオブジェクトの作成に使用されたソリューション ファイルがない、Analysis Services のインポート ウィザードを使用して、サーバーから既存のプロジェクトをインポート、オブジェクトへの変更を加えるして使用して、再、、 `Incremental`オプション。 詳細については、「 [Analysis Services インポート ウィザードを使用したデータ マイニング プロジェクトのインポート](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)」を参照してください。  
+ データ マイニング プロジェクトまたはオブジェクトの作成に使用されたソリューション ファイルがない、Analysis Services のインポート ウィザードを使用して、サーバーから既存のプロジェクトをインポート、オブジェクトへの変更を加えるして使用して再デプロイ、、 `Incremental`オプション。 詳細については、「 [Analysis Services インポート ウィザードを使用したデータ マイニング プロジェクトのインポート](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)」を参照してください。  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でのデータ マイニング オブジェクトの管理  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、マイニング構造とマイニング モデルのスクリプト処理、処理、または削除を行うことができます。 オブジェクト エクスプローラーを使用した場合はプロパティ セットの一部のみが表示されます。ただし、 **[DMX クエリ]** ウィンドウを開き、マイニング構造を選択すると、マイニング モデルに関する追加のメタデータを表示できます。  
@@ -98,6 +99,6 @@ ms.locfileid: "36073628"
  **制限事項:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、内部使用の目的でのみサポートされ XMLA DDL スクリプト内では使用できない XML ステートメントを生成する場合があります。  
   
 ## <a name="see-also"></a>参照  
- [開発者ガイド 』 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
+ [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
   
   

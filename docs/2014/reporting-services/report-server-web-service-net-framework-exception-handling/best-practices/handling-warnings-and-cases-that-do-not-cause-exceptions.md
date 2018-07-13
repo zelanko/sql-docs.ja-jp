@@ -15,15 +15,15 @@ helpviewer_keywords:
 - warnings [Reporting Services]
 ms.assetid: 475c0713-6265-44e7-9ebc-ebdd1b89e0af
 caps.latest.revision: 30
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c53beeb441e3d7f84bd2813245e4c426ef301463
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: edeb4430251dc7d7d335aaaf25d33bf3695796ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321792"
 ---
 # <a name="handling-warnings-and-cases-that-do-not-cause-exceptions"></a>例外が発生しない警告および状況の処理
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、警告および特定のエラーに対して例外をスローしません。 たとえば、<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> メソッドを使用して新しいレポートをレポート サーバーにパブリッシュしたときに警告が発生した場合、その警告は <xref:ReportService2010.Warning> オブジェクトの配列として返されます。 それらの警告は、適切な処置を実行できるように処理および表示する必要があります。  

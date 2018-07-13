@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
 - View Designer, Criteria pane
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b690cc4fd041673e0d46ecfc4afe123063305c45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d14127f643e1e5bf496fd012ca58290e7671e2cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177109"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>抽出条件ペイン (Visual Database Tools)
   抽出条件ペインでは、表示するデータ列、結果の順序、選択する行などのクエリ オプションを選択してスプレッドシート形式のグリッドに入力することにより、クエリ オプションを指定できます。 抽出条件ペインでは次の内容を指定できます。  
@@ -59,7 +59,7 @@ ms.locfileid: "36073148"
   
 ## <a name="options"></a>および  
   
-|**列**|**[クエリの種類]**|**description**|  
+|**列**|**[クエリの種類]**|**[説明]**|  
 |----------------|--------------------|---------------------|  
 |[列]|All|クエリに使用されるデータ列の名前、または計算が必要な列の式が表示されます。 水平にスクロールしても常に表示されるよう、この列はロックされています。|  
 |別名|選択、結果の挿入、更新、テーブルの作成|列に対する別名、または計算列で使用できる名前を指定します。|  
@@ -74,7 +74,7 @@ ms.locfileid: "36073148"
 |[新しい値]|更新、値の挿入|対応する列に格納する値を指定します。 リテラル値または式を入力します。|  
   
 ## <a name="see-also"></a>参照  
- [クエリおよびビューの操作方法に関するトピックをデザイン&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [ダイアグラム ペイン&#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
  [ルールを入力するための値を検索する&#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [クエリ結果の並べ替えとグループ化&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   

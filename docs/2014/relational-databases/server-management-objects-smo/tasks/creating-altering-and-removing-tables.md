@@ -1,5 +1,5 @@
 ---
-title: 作成、変更、および削除、テーブル |Microsoft ドキュメント
+title: 作成、変更、およびテーブルの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - tables [SMO]
 ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1498ac39d8ebf69a406fc37d8aa41319386e8fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bb1760bb19f6f32b93e8ee1b62546d7c615ae9f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177869"
 ---
 # <a name="creating-altering-and-removing-tables"></a>テーブルの作成、変更、および削除
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) では、テーブルは <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトによって表されます。 SMO オブジェクト階層では、<xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトは <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトの下位にあります。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、プログラミング環境、テンプレート、およびアプリケーションを作成するプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 提供されているコード例を使用するには、プログラミング環境、テンプレート、およびアプリケーションを作成するプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Visual Basic でのテーブルの作成、変更、および削除  
  このコード例では、型や目的の異なるさまざまな列があるテーブルを作成します。 また、ID フィールドの作成方法、主キーの作成方法、およびテーブル プロパティの変更方法の例を示します。  

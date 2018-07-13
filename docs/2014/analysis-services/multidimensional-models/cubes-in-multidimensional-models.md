@@ -1,5 +1,5 @@
 ---
-title: 多次元モデルのキューブ |Microsoft ドキュメント
+title: 多次元モデルのキューブ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], cubes
 - cubes [Analysis Services], about cubes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OLAP [Analysis Services], cubes
 ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4c32903245da975c9a62d6b7600abbe074b19bc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca5da5ea8dfb22adc6e038f9dc54740e5102aad0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237732"
 ---
 # <a name="cubes-in-multidimensional-models"></a>多次元モデルのキューブ
   キューブは、分析目的の情報を含む多次元構造です。キューブの主な構成要素はディメンションとメジャーです。 ディメンションでは、スライスおよびダイス化に使用するキューブの構造が定義され、メジャーによってエンド ユーザーが必要とする集計された数値が用意されます。 論理構造としてキューブを使用すると、クライアント アプリケーションでは、キューブ内のセルに含まれているかのようにメジャーの値を取得できます。セルは、考えられるすべての集約値に対して定義されます。 キューブのセルは、ディメンションのメンバーの交差領域によって定義され、その交差領域のメジャーの集計値を含みます。  
@@ -39,12 +39,12 @@ ms.locfileid: "36072446"
 |-------------|-----------------|  
 |ディメンション|[多次元モデル内のディメンション](dimensions-in-multidimensional-models.md)|  
 |メジャーおよびメジャー グループ|[多次元モデル内のメジャーおよびメジャー グループを作成します。](create-measures-and-measure-groups-in-multidimensional-models.md)|  
-|[メジャー グループ]|[多次元モデルではパーティション](partitions-in-multidimensional-models.md)|  
+|[メジャー グループ]|[多次元モデル内のパーティション](partitions-in-multidimensional-models.md)|  
 |パースペクティブ|[多次元モデルのパースペクティブ](perspectives-in-multidimensional-models.md)|  
 |階層|[ユーザー定義階層を作成します。](user-defined-hierarchies-create.md)|  
-|アクション|[多次元モデル内のアクション](actions-in-multidimensional-models.md)|  
-|主要業績評価指標 (KPI)|[主要業績評価指標&#40;Kpi&#41;多次元モデルでは](key-performance-indicators-kpis-in-multidimensional-models.md)|  
-|[新しい名前付きセット]|[多次元モデルでの計算](calculations-in-multidimensional-models.md)|  
+|アクション|[多次元モデルのアクション](actions-in-multidimensional-models.md)|  
+|主要業績評価指標 (KPI)|[主要業績評価指標&#40;Kpi&#41;多次元モデル](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|[新しい名前付きセット]|[多次元モデルの計算](calculations-in-multidimensional-models.md)|  
 |翻訳|[多次元モデルの翻訳](translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
@@ -53,8 +53,8 @@ ms.locfileid: "36072446"
 |-----------|-----------------|  
 |[キューブ ウィザードを使用したキューブの作成](create-a-cube-using-the-cube-wizard.md)|キューブ ウィザードを使用して、キューブ、ディメンション、ディメンション属性、ユーザー定義階層を定義する方法を説明します。|  
 |[多次元モデル内のメジャーおよびメジャー グループを作成します。](create-measures-and-measure-groups-in-multidimensional-models.md)|メジャー グループを定義する方法について説明します。|  
-|[多次元モデルでの計算](calculations-in-multidimensional-models.md)|MDX スクリプトで計算を定義して構成する方法を説明します。|  
-|[多次元モデル内のアクション](actions-in-multidimensional-models.md)|アクションを定義して構成する方法を説明します。|  
+|[多次元モデルの計算](calculations-in-multidimensional-models.md)|MDX スクリプトで計算を定義して構成する方法を説明します。|  
+|[多次元モデルのアクション](actions-in-multidimensional-models.md)|アクションを定義して構成する方法を説明します。|  
 |[多次元モデルのパースペクティブ](perspectives-in-multidimensional-models.md)|パースペクティブを定義して構成する方法を説明します。|  
 |[ストアド プロシージャの定義](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)|ストアド プロシージャを操作する方法について説明します。|  
   

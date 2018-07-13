@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルからケース データにドリルスルー |Microsoft ドキュメント
+title: マイニング モデルからケース データにドリルスルー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - drillthrough [Analysis Services]
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86a8cc832572d7a1c2e296c72d9bcd9a0a4d1969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3ce4a5aea740048a53ab40db8b40d0a83d40e19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272168"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>マイニング モデルからケース データへのドリルスルー
   モデル ケースへのドリルスルーを許可するようにマイニング モデルが構成されている場合は、モデルの参照時に、モデルの作成に使用されたケースに関する詳細情報を取得できます。 さらに、基になるマイニング構造が、構造ケースへのドリルスルーを許可するように構成されており、ユーザーが適切な権限を持っている場合は、マイニング構造から情報を返すことができます。 これには、マイニング モデルに含まれていない列を含めることもできます。  
@@ -35,7 +35,7 @@ ms.locfileid: "36072642"
   
 |ビューアー名|ペイン名またはタブ名|選択するノード|  
 |-----------------|----------------------|-----------------|  
-|**Microsoft ツリー ビューアー**|**[デシジョン ツリー]** タブ|ツリー ノードをクリックします。<br /><br /> **注**におけるドリルスルーの使用を避けるため、`All`ノード、結果を返すための非常に長い時間がかかることがあります。|  
+|**Microsoft ツリー ビューアー**|**[デシジョン ツリー]** タブ|ツリー ノードをクリックします。<br /><br /> **注**でドリルスルーを使用しないでください、`All`ノード、結果を返す非常に長い時間がかかるためです。|  
 |**Microsoft クラスター ビューアー**|**クラスター ダイアグラム**|クラスター ノードをクリックします。|  
 |**Microsoft クラスター ビューアー**|**クラスターのプロファイル**|クラスター列内の任意の場所をクリックします。|  
 |**Microsoft アソシエーション ビューアー**|**[ルール]** タブ|一連のルールを含む行をクリックします。|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], best practices
 - security [SQL Server replication], between domains
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Internet [SQL Server replication], security
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6a4834396b072ddfb422ecc8f4cc6caec9ad6b20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4a50f2e9e643db23f3d26059625f69c34a392e65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194954"
 ---
 # <a name="replication-security-best-practices"></a>レプリケーション セキュリティの推奨事項
   レプリケーションでは、単一ドメインのイントラネットから、信頼できないドメイン間およびインターネット経由でデータにアクセスするアプリケーションに及ぶ分散環境でデータを移動します。 これらのさまざまな状況下でレプリケーション接続のセキュリティを確保するためには、推奨事項を理解することが重要です。  

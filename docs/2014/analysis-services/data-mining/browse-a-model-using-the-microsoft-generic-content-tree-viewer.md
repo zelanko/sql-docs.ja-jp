@@ -1,5 +1,5 @@
 ---
-title: Microsoft 汎用コンテンツ ツリー ビューアーを使用してモデルを参照 |Microsoft ドキュメント
+title: Microsoft 汎用コンテンツ ツリー ビューアーを使用してモデルの参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, viewing
 ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 11c4eedca05eac85572bd30eddbc4d23b835fa33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5919fc4d600c8c4172edd4d067efbd37708dc87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273568"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用マイニング モデル コンテンツ ビューアーは、マイニング アルゴリズムによって発見されたパターンについての詳細情報を提供します。また、分析処理中に生成されたさまざまな統計情報へのアクセスも提供します。 情報の量と種類は、使用されたアルゴリズムによって異なりますが、次のカテゴリを含んでいます。  

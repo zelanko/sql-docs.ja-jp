@@ -1,5 +1,5 @@
 ---
-title: OLE DB コマンド変換の構成 |Microsoft ドキュメント
+title: OLE DB コマンド変換の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Integration Services]
 - OLE DB Command transformation
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43024686011ed5c1dea232e397df988b97a35a78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a29642a667d4d22ecf5c7f6d3de0848b4725df91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254484"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>OLE DB コマンド変換を構成する
   OLE DB コマンド変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと、フラット ファイル ソースや OLE DB ソースなどの変換元があらかじめ含まれている必要があります。 この変換は、通常、パラメーター化クエリを実行するために使用されます。  

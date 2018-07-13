@@ -1,5 +1,5 @@
 ---
-title: '[全般] プロパティ ページ、レポート パーツ (レポート マネージャー) |Microsoft ドキュメント'
+title: '[全般] プロパティ ページ、レポート パーツ (レポート マネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ce0b1ca08f1d0d97f268f3ec8c145c117d56a60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3823b01bfc318f26ba0135d054d913d3ffe1fd6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238512"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>[全般] プロパティ ページ、レポート パーツ (レポート マネージャー)
   レポート パーツの全般プロパティを表示および管理するには、[プロパティ] ページを使用します。  
@@ -41,7 +41,7 @@ ms.locfileid: "36072504"
  **変更された日付**  
  レポート パーツ プロパティがサーバー上で最後に変更された日付と時刻、またはレポート パーツの新しいバージョンがサーバーにパブリッシュされた日付と時刻です。 読み取り専用です。  
   
- **によって変更**  
+ **によって変更されました。**  
  レポート パーツを最後に変更したユーザーの名前です。 読み取り専用です。  
   
  **作成日**  
@@ -53,26 +53,26 @@ ms.locfileid: "36072504"
  **Size**  
  レポート パーツのファイル サイズです。 読み取り専用です。  
   
- **Name**  
+ **名前**  
  レポート パーツを識別する名前を入力します。  
   
- **description**  
+ **[説明]**  
  レポート パーツに関する情報を入力します。 この説明は、レポート マネージャーの [コンテンツ] ページに表示されます。 この説明テキストは、ユーザーがレポート作成ツールからレポート パーツを検索するときに、検索対象として使用できます。  
   
  **リスト ビューで非表示にします。**  
  このオプションをオンにすると、レポート マネージャーでリスト ビュー モードを使用しているユーザーにレポート パーツが表示されません。 リスト ビュー モードは、レポート サーバー フォルダー階層を参照するときの既定のビュー形式です。 リスト ビューのアイテムは非表示にできますが、詳細ビューのアイテムは非表示にできません。 アイテムへのアクセスを制限する場合は、ロールの割り当てを作成する必要があります。  
   
- **Type**  
+ **型**  
  レポート パーツの種類です。 読み取り専用です。  
   
  **[適用]**  
  変更を保存します。  
   
- **Delete**  
+ **削除**  
  レポート サーバー データベースからレポート パーツを削除します。 サーバーからレポート パーツを削除しても、そのレポート パーツが追加された既存のレポートは表示されます。  
   
  **Move**  
- [移動] をクリックすると、[アイテムの移動] ページが開き、レポート サーバーのフォルダー階層内でレポート パーツを移動できます。 詳細については、次を参照してください。[項目ページに移動&#40;レポート マネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)です。  
+ [移動] をクリックすると、[アイテムの移動] ページが開き、レポート サーバーのフォルダー階層内でレポート パーツを移動できます。 詳細については、次を参照してください。[項目ページに移動&#40;レポート マネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)します。  
   
  **ダウンロード**  
  レポート パーツ定義のコピーが抽出され、.rsc ファイルとして保存されます。 この .rsc ファイルは、レポート サーバー フォルダーにアップロードするか、またはレポート サーバー フォルダー内の既存のレポート パーツと置き換えるために使用することができます。  
@@ -85,7 +85,7 @@ ms.locfileid: "36072504"
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [レポート パーツ&#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [レポート マネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
+ [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [レポート ビルダーのレポート パーツおよびデータセット](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

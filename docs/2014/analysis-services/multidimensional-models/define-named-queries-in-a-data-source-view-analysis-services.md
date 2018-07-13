@@ -1,5 +1,5 @@
 ---
-title: 名前付きクエリ、データ ソース ビューで定義 (Analysis Services) |Microsoft ドキュメント
+title: データ ソース ビュー (Analysis Services) で名前付きクエリの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - named queries [Analysis Services], creating
 - modifying named queries
 - data source views [Analysis Services], named queries
 ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81155cc3036fb0e71a1d56515c7218e2f106664b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aacf40665a651436c159aeb67a6514c6647883e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263818"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの名前付きクエリの定義 (Analysis Services)
   名前付きクエリは、テーブルとして表現されている SQL 式です。 名前付きクエリでは、1 つ以上のデータ ソースの 1 つ以上のテーブルから返される行および列を選択する SQL 式を指定できます。 名前付きクエリは、式に基づいていることを除いて、行とリレーションシップを持つデータ ソース ビュー (DSV) 内の他のテーブルに似ています。  
@@ -65,7 +65,7 @@ ms.locfileid: "36073337"
 5.  **[OK]** をクリックします。 重なった 2 つのテーブルを示すアイコンがテーブル ヘッダーに表示され、そのテーブルが名前付きクエリに置換されたことを示します。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル内のデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
+ [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
  [データ ソース ビューで名前付き計算の定義&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

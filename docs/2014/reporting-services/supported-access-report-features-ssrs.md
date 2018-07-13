@@ -1,5 +1,5 @@
 ---
-title: サポートされる Access レポート機能 (SSRS) |Microsoft ドキュメント
+title: サポートされる Access レポート機能 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
 - functions [Reporting Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 caps.latest.revision: 43
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a3bb7caa0d570b83bb8b487a42fa2364731602d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268478"
 ---
 # <a name="supported-access-report-features-ssrs"></a>サポートされる Access レポート機能 (SSRS)
   レポート デザイナーにレポートをインポートすると、インポート処理の際に、[!INCLUDE[msCoName](../includes/msconame-md.md)] Access のレポートは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート定義言語 (RDL) ファイルに変換されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は Access のいくつかの機能をサポートしていますが、Access と [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の相違のため、アイテムの中には、若干変更されるものや、まったくサポートされないものがあります。 このトピックでは、Access のレポート機能を RDL に変換する方法を説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "36073191"
 ## <a name="importing-access-reports"></a>Access レポートのインポート  
  一部のクエリには、Access 固有のコードが含まれています。 Access のコードがレポートと一緒にインポートされることはありません。 また、クエリに埋め込み文字列が含まれている場合、レポートは正しくインポートされません。 これを修正するには、文字列を文字コードに置き換えます。 たとえば、コンマ (,) 文字を CHAR(34) に置き換えます。  
   
- インポート プロセスが正しく通らなかったセミコロン (;) や XML マークアップ文字 (\<、> など) で接続文字列情報。 接続文字列にセミコロンや XML マークアップ文字が含まれている場合は、レポートのインポート後に、新しいレポートでパスワードを手動で設定する必要があります。  
+ インポート プロセスがセミコロン (;) を正しく渡していないや XML マークアップ文字 (\<、> など) で接続文字列情報。 接続文字列にセミコロンや XML マークアップ文字が含まれている場合は、レポートのインポート後に、新しいレポートでパスワードを手動で設定する必要があります。  
   
  インポート処理では、接続文字列に含まれる接続設定や全般的なタイムアウト設定がインポートされません。 レポートをインポートした後、これらの設定の調整が必要になる場合があります。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36073191"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] などの OLE DB データ ソースをサポートします。 Access プロジェクト (.adp) ファイルからレポートをインポートする場合は、データ ソースの接続文字列は、.adp ファイルの接続文字列から取得されます。 Access データベース (.mdb または .accdb) ファイルからレポートをインポートする場合は、データ ソースの接続文字列が Access データベースを指していることがあるため、レポートのインポート後に修正が必要になる可能性があります。 Access レポートのデータ ソースがクエリである場合は、クエリ情報は変更されることなく RDL に保存されます。 Access レポートのデータ ソースがテーブルである場合は、変換処理の際、テーブル名およびテーブル内のフィールドを基にクエリが作成されます。  
   
 ## <a name="reports-with-custom-modules"></a>カスタム モジュールを含むレポート  
- カスタムがある場合[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]モジュール内に含まれるコードは変換されません。 レポート デザイナーでは、インポート処理中にコードを検出すると、警告は生成されに表示される、**タスク一覧**ウィンドウです。  
+ ユーザー設定がある場合[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]モジュール内に含まれるコードは変換されません。 レポート デザイナーでは、インポート処理中にコードを検出すると、警告が生成されに表示される、**タスク一覧**ウィンドウ。  
   
 ## <a name="report-controls"></a>レポート コントロール  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の Access コントロールがサポートされ、これらは変換後のレポート定義に保持されます。  
@@ -61,7 +61,7 @@ ms.locfileid: "36073191"
 |||||  
 |-|-|-|-|  
 |image|[ラベル]|線|四角形|  
-|サブフォーム|サブレポート<br /><br /> **注**メイン レポート内のサブレポート コントロールの変換は、サブレポート自体は個別に変換されます。|テキスト ボックス||  
+|サブフォーム|サブレポート<br /><br /> **注**サブレポート コントロールは、メイン レポート内で変換は、サブレポート自体は個別に変換されます。|テキスト ボックス||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のコントロールはサポートされません。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36073191"
 |カスタム コントロール|リスト ボックス|オブジェクト フレーム|オプション ボタン|  
 |タブ コントロール|トグル ボタン|||  
   
- レポート デザイナーは、インポート処理中にこれらのコントロールのいずれかのように発生すると、警告は生成されに表示される、**タスク一覧**ウィンドウです。  
+ レポート デザイナーは、インポート処理中にこれらのコントロールのいずれかのように検出すると、警告が生成されに表示される、**タスク一覧**ウィンドウ。  
   
  ActiveX や Office Web コンポーネントなどのその他のコントロールは、インポートされません。 たとえば、Access レポートに OWC Chart コントロールが含まれていても、インポート時に変換されません。  
   
@@ -298,7 +298,7 @@ ms.locfileid: "36073191"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート定義では、四角形内に他のレポート アイテムを含めることができます。 レポート アイテムよりも大きく、レポート アイテムの領域のうち 90% を超える領域と重なっている四角形は、そのレポート アイテムのコンテナーになります。  
   
 ## <a name="bitmaps"></a>ビットマップ  
- レポート内に埋め込まれているビットマップはすべて、インポート時に .bmp 形式に変換されます。これらのビットマップの最初の形式は無視されます。 たとえば、レポートに .jpg ファイルおよび .gif ファイルが含まれていた場合、レポートと一緒にインポートされるリソースは .bmp ファイルになります。 ビットマップは、レポートの埋め込み画像として保存されます。 埋め込みイメージについては、次を参照してください。[イメージ&#40;レポート ビルダーおよび SSRS&#41;](report-design/images-report-builder-and-ssrs.md)です。  
+ レポート内に埋め込まれているビットマップはすべて、インポート時に .bmp 形式に変換されます。これらのビットマップの最初の形式は無視されます。 たとえば、レポートに .jpg ファイルおよび .gif ファイルが含まれていた場合、レポートと一緒にインポートされるリソースは .bmp ファイルになります。 ビットマップは、レポートの埋め込み画像として保存されます。 埋め込みイメージについては、次を参照してください。[イメージ&#40;レポート ビルダーおよび SSRS&#41;](report-design/images-report-builder-and-ssrs.md)します。  
   
 ## <a name="other-considerations"></a>他の考慮事項  
  上記のほか、Access からインポートされるレポートについては以下の事項も適用されます。  

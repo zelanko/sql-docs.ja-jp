@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB Call event class
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98ee5b7ecc2f2705278211df9432db1020b224bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a068ccc8c24d8dc75fd0ec35b7b99adb4d6d875a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203532"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call イベント クラス
   **OLEDB Call** イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から分散クエリやリモート ストアド プロシージャの OLE DB プロバイダーが呼び出されるときに発生します。  
@@ -55,7 +55,7 @@ ms.locfileid: "36071681"
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
 |ProviderName|`nvarchar`|OLE DB プロバイダーの名前です。|46|はい|  
 |RequestID|`Int`|ステートメントが含まれている要求の ID。|49|はい|  
-|SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 接続する場合など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 を使用し、login2 でステートメントを実行して`SessionLoginName`Login1 が表示および`LoginName`login2 です。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
+|SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 接続する場合など[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Login1 を使用して、login2 でステートメントを実行`SessionLoginName`Login1 が表示と`LoginName`示します login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|`Int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |TextData|`nvarchar`|OLE DB 呼び出しで送受信されるパラメーター。|1|いいえ|  

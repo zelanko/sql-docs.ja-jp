@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
@@ -16,13 +16,13 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ec1501c32505b760fba2ec88e21140de1cf0211
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f7e1231111f795383748438730f2652ac8d9056
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200792"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>レポート サーバーの構成 (Reporting Services ネイティブ モード)
   インストール中に選択したオプションによっては、レポート サーバーを使用する前に追加の構成が必要になる場合があります。 少なくともレポート サーバーの構成には以下が必要です。  
@@ -37,7 +37,7 @@ ms.locfileid: "36071833"
   
  レポート マネージャーは、ネイティブ モードのレポート サーバーのオプション機能ですが、レポート サーバーへのアクセス権をユーザーに付与したり、レポート サーバーのコンテンツを管理したりできるようにレポート マネージャーを構成することをお勧めします。 SharePoint 統合モードでレポート サーバーを配置した場合、SharePoint サーバーの Web フロントエンドを使用してアクセス権を付与します。  
   
- レポート サーバーの電子メールや自動実行アカウントなどの追加の機能は、必要に応じて構成できます。 詳細については、次を参照してください。 [Reporting Services ネイティブ モード レポート サーバーの管理](manage-a-reporting-services-native-mode-report-server.md)です。  
+ レポート サーバーの電子メールや自動実行アカウントなどの追加の機能は、必要に応じて構成できます。 詳細については、次を参照してください。 [、Reporting Services ネイティブ モード レポート サーバーを管理](manage-a-reporting-services-native-mode-report-server.md)します。  
   
  レポート サーバーを構成するには、Reporting Services 構成ツールを使用します。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "36071833"
 ## <a name="next-steps"></a>次の手順  
  配置を完了するには、レポート マネージャーまたは SharePoint 統合を構成する必要があります。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](configure-web-portal.md)」を参照してください。  
   
- Windows ファイアウォールが有効になっている場合、レポート サーバーで使用するように構成されているポートは閉じられる可能性が高くなります。 ポートが閉じられている場合は、たとえばリモート クライアント コンピューターからレポート マネージャーを開こうとすると、空のページが返されます。 ファイアウォールを構成する方法の詳細については、次を参照してください。[レポート サーバー アクセスに対してファイアウォールを構成する](configure-a-firewall-for-report-server-access.md)です。  
+ Windows ファイアウォールが有効になっている場合、レポート サーバーで使用するように構成されているポートは閉じられる可能性が高くなります。 ポートが閉じられている場合は、たとえばリモート クライアント コンピューターからレポート マネージャーを開こうとすると、空のページが返されます。 ファイアウォールを構成する方法の詳細については、次を参照してください。[レポート サーバーへのアクセスのファイアウォールを構成する](configure-a-firewall-for-report-server-access.md)します。  
   
  Windows Vista または Windows Server 2008 を使用している場合は、レポート マネージャーをローカルで開く前に追加の手順が必要になります。 詳細については、「[ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](configure-a-native-mode-report-server-for-local-administration-ssrs.md)」をご覧ください。  
   
- フォルダーを作成し、アイテムをアップロードし、レポートを実行してインストール状況を確認します。 指示に従って、 [Verify a Reporting Services Installation](../install-windows/verify-a-reporting-services-installation.md)インストールを確認します。  
+ フォルダーを作成し、アイテムをアップロードし、レポートを実行してインストール状況を確認します。 指示に従って、 [Reporting Services のインストールを確認します。](../install-windows/verify-a-reporting-services-installation.md)インストールを確認します。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services ネイティブ モード レポート サーバーを管理します。](manage-a-reporting-services-native-mode-report-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: SSIS による Analysis Services の管理タスクを自動化 |Microsoft ドキュメント
+title: SSIS による Analysis Services の管理タスクの自動化 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
 - Analysis Services Processing task
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a06a04c50dbb1548ac28902dcfb2f7f7a2883232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35ba767c2c6d0b230a3515a8e5df48d6f126284a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251144"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>SSIS による Analysis Services 管理タスクの自動化
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を使用すると、DDL スクリプト、キューブおよびマイニング モデルの処理タスク、データ マイニング クエリ タスクの実行を自動化できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、制御フローおよびメンテナンス タスクの集合と考えることができ、これらをリンクしてシーケンシャルおよび並列のデータ処理ジョブを作成できます。  
@@ -46,6 +46,6 @@ ms.locfileid: "36072233"
  [ディメンション処理変換先](../../integration-services/data-flow/dimension-processing-destination.md)   
  [データ マイニング クエリ変換](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
  [多次元モデル オブジェクトの処理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Analysis Services の管理タスクをスクリプト作成](../script-administrative-tasks-in-analysis-services.md)  
+ [Analysis Services での管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)  
   
   

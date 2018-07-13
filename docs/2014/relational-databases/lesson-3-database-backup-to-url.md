@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 4: Windows Azure ストレージにデータベースを作成する |Microsoft ドキュメント'
+title: 'レッスン 4: Windows Azure ストレージにデータベースを作成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b72bfc90936011fc4556fae6021fad89b134c57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1d31f0d1eabe73a681b1932b2826ef38ad9b5456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327842"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>レッスン 4: Windows Azure ストレージにデータベースを作成する
-  このレッスンでは、Windows Azure 機能で SQL Server データ ファイルを使用してデータベースを作成する方法を学習します。 このレッスンの前に、レッスン 1、2、および 3 を完了する必要があることに注意してください。 レッスン 3 は非常に重要な手順です。レッスン 4 の前に、SQL Server の資格情報ストアに、Windows Azure ストレージ コンテナーと関連するポリシー名、および SAS キーに関する情報を格納する必要があるためです。  
+  このレッスンでは、Windows Azure 機能で SQL Server データ ファイルを使用してデータベースを作成する方法を学びます。 このレッスンの前に、レッスン 1、2、および 3 を完了する必要があることに注意してください。 レッスン 3 は非常に重要な手順です。レッスン 4 の前に、SQL Server の資格情報ストアに、Windows Azure ストレージ コンテナーと関連するポリシー名、および SAS キーに関する情報を格納する必要があるためです。  
   
  データ ファイルまたはログ ファイルによって使用されるストレージ コンテナーごとに、名前がコンテナーのパスに一致する SQL Server 資格情報を作成する必要があります。 その後、Windows Azure ストレージに新しいデータベースを作成できます。  
   
- このレッスンでは、次の手順を完了することを前提としています。  
+ このレッスンでは、次の手順が既に完了したことを前提としています。  
   
 -   Windows Azure ストレージ アカウントを入手しました。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36071656"
   
 2.  オブジェクト エクスプローラーで、インストールしたデータベース エンジンのインスタンスに接続します。  
   
-3.  標準的なツール バーで、新しいクエリ をクリックします。  
+3.  標準ツールバーには、新しいクエリをクリックします。  
   
 4.  次の例をコピーしてクエリ ウィンドウに貼り付け、必要に応じて変更します。 FILENAME フィールドがストレージ コンテナーにあるデータベース ファイルの URI パスを指し、先頭は https にする必要があることに注意してください。  
   
@@ -77,11 +77,11 @@ ms.locfileid: "36071656"
   
 6.  同様に、ストレージ アカウントに新しく作成したデータベースを表示するには、SQL Server Management Studio (SSMS) 経由でストレージ アカウントに接続します。 SQL Server Management Studio を使用して Windows Azure ストレージに接続する方法については、以下の手順に従ってください。  
   
-    1.  まず、ストレージ アカウント情報を取得します。 管理ポータルにログインします。 クリックし、**ストレージ**し、ストレージ アカウントを選択します。 ストレージ アカウントを選択すると、クリックして**アクセス キーの管理**ページの下部にあります。 次のようなダイアログ ウィンドウが開きます。  
+    1.  まず、ストレージ アカウント情報を取得します。 管理ポータルにログインします。 をクリックし、**ストレージ**ストレージ アカウントを選択します。 ストレージ アカウントを選択すると、クリックすると**アクセス キーの管理**ページの下部にあります。 次のようなダイアログ ウィンドウが開きます。  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  コピー、**ストレージ アカウント名**と**プライマリ アクセス キー**値を**Windows Azure ストレージへの接続**SSMS でのダイアログ ウィンドウです。 をクリックし、**接続**です。 これで、次のスクリーン ショットに示すように、ストレージ アカウント コンテナーについての情報が SSMS に表示されます。  
+    2.  コピー、**ストレージ アカウント名**と**プライマリ アクセス キー**値を**Windows Azure Storage へ接続**SSMS でのダイアログ ウィンドウ。 をクリックし、 **Connect**します。 これで、次のスクリーン ショットに示すように、ストレージ アカウント コンテナーについての情報が SSMS に表示されます。  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36071656"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **注:** コンテナー内のデータ ファイルに対するアクティブな参照がある場合は、関連付けられている SQL サーバーを削除しようとすると資格情報を失敗します。 同様に、既に BLOB の特定のデータベース ファイルにリースが設定されていて、そのデータベースを削除する場合、まず、BLOB のリースを解除する必要があります。 使用することができますのリースを中断する[Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)です。  
+ **注:** 資格情報の失敗を関連付けられている SQL サーバーを削除しようとすると、コンテナーのデータ ファイルに対するアクティブな参照がある場合。 同様に、既に BLOB の特定のデータベース ファイルにリースが設定されていて、そのデータベースを削除する場合、まず、BLOB のリースを解除する必要があります。 使用することができます、リースを解約するには、 [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)します。  
   
  この新しい機能を使用して、CREATE DATABASE ステートメントの既定値がクラウド対応データベースになるように、SQL Server を構成できます。 言い換えれば、SQL Server Management Studio でサーバー インスタンスのプロパティに既定のデータとログの場所を設定して、データベースを作成すると常にすべてのデータベース ファイル (.mdf、.ldf) が Windows Azure ストレージにページ BLOB として作成されるようにすることができます。  
   
@@ -115,6 +115,6 @@ ms.locfileid: "36071656"
   
  **次のレッスン:**  
   
- [レッスン 5 です。&#40;オプション&#41;TDE を使用して、データベースの暗号化](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [レッスン 5。&#40;(省略可能)&#41; TDE を使用して、データベースの暗号化](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   

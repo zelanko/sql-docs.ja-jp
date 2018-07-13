@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f69c4a6dd5f2593650067be51eae3b63e49dcd96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2c305f6a4b4188e05f67bc8ac8ffd8cd66cdbb5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328991"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>グラフの種類 (レポート ビルダーおよび SSRS)
-  表示するデータの種類に対して適切な種類のグラフを選択することが重要です。 これにより、データをグラフ形式にした場合にどの程度わかりやすくなるかが決まります。 たとえば、グラフのサイズに対して多数のデータ ポイントがデータセットに含まれている場合は、面グラフ、折れ線グラフ、または散布図を使用して表示するのが適しています。 選択したグラフの種類に応じてデータを準備する方法の詳細については、次を参照してください。[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)です。  
+  表示するデータの種類に対して適切な種類のグラフを選択することが重要です。 これにより、データをグラフ形式にした場合にどの程度わかりやすくなるかが決まります。 たとえば、グラフのサイズに対して多数のデータ ポイントがデータセットに含まれている場合は、面グラフ、折れ線グラフ、または散布図を使用して表示するのが適しています。 選択したグラフの種類に応じてデータを準備する方法の詳細については、次を参照してください。[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,9 +47,9 @@ ms.locfileid: "36072046"
 |[極座標グラフ&#40;レポート ビルダーおよび SSRS&#41;](polar-charts-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")||||  
 |[範囲グラフ&#40;レポート ビルダーおよび SSRS&#41;](range-charts-report-builder-and-ssrs.md)|||![使用可能](../media/greencheck.gif "使用可能")|![使用可能](../media/greencheck.gif "使用可能")|  
 |[散布図&#40;レポート ビルダーおよび SSRS&#41;](scatter-charts-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")||![使用可能](../media/greencheck.gif "使用可能")||  
-|[図形グラフでは&#40;レポート ビルダーおよび SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")||||  
+|[図形グラフ&#40;レポート ビルダーおよび SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")||||  
 |[スパーク ライン](sparklines-and-data-bars-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")|![使用可能](../media/greencheck.gif "使用可能")|![使用可能](../media/greencheck.gif "使用可能")|![使用可能](../media/greencheck.gif "使用可能")|  
-|[グラフのストック&#40;レポート ビルダーおよび SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![使用可能](../media/greencheck.gif "使用可能")||![使用可能](../media/greencheck.gif "使用可能")|  
+|[株価チャート&#40;レポート ビルダーおよび SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![使用可能](../media/greencheck.gif "使用可能")||![使用可能](../media/greencheck.gif "使用可能")|  
   
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   

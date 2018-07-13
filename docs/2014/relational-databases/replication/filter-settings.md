@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.filtersettings.f1
 ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c8ddf87ba8b29262d0e1c3450a7ab94e16aa0587
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a915f09cb5badd23f4384bdb2e6c8a6e6aedaed9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188519"
 ---
 # <a name="filter-settings"></a>[フィルターの設定]
   **[フィルターの設定]** ダイアログ ボックスを使用すると、レプリケーション モニターのグリッドのフィルターを定義できます。 たとえば、アクティブなサブスクリプションのみを **[すべてのサブスクリプション]** タブに表示するには、 **[列名]** 列から **[状態]** を選択し、 **[演算子]** 列から **[等しい]** を選択し、 **[値 1]** 列から **[アクティブ]** を選択します。 1 つ以上の列に基づくフィルターを定義したら、フィルター条件に一致する行のサブセットのみがグリッドに表示されるようにフィルターが適用されます。  

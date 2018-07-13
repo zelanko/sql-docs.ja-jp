@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: Suppliers ナレッジ ベースを使用して仕入先データのクレンジング |Microsoft ドキュメント'
+title: 'レッスン 2: Suppliers ナレッジ ベースを使用して仕入先データのクレンジング |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1b4c227ff846649e29b7efc0ad50e4b13416c48c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5708dfe72d3eaa745d1ffefd88147b3e72b7c46c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191222"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>レッスン 2: Suppliers ナレッジ ベースを使用して仕入先データをクレンジングする
-  このレッスンで使用して Excel ファイルの仕入先データをクレンジングする、 **Suppliers**最初のレッスンで作成したナレッジ ベース。 DQS でのデータ クレンジングが含まれています、**コンピューター支援型プロセス**データが、ナレッジ ベース内のナレッジに従っている方法を分析し、**対話型プロセス**確認および変更することができますコンピューター支援型プロセスからの結果。 データ クレンジング機能は、データ ソース内の不適切なデータを識別し、不適切なデータを修正するか、修正を提案します。 また、ドメイン値、シノニムの先頭の値、ドメイン ルール、用語ベースのリレーション、および参照データを使用して、顧客データを標準化および拡充します。 対話形式で、コンピューター支援型プロセスによって提案された変更を承認または拒否できます。 参照してください[データ クレンジング](http://msdn.microsoft.com/library/gg524800.aspx)詳細についてはします。  
+  このレッスンでを使用して Excel ファイルの仕入先データをクレンジングする、 **Suppliers**最初のレッスンで作成したナレッジ ベース。 DQS でのデータ クレンジングが含まれています、**コンピューター支援型プロセス**データは、ナレッジ ベース内のナレッジに準拠する方法を分析し、**対話型プロセス**確認および変更することができますコンピューター支援型プロセスの結果。 データ クレンジング機能は、データ ソース内の不適切なデータを識別し、不適切なデータを修正するか、修正を提案します。 また、ドメイン値、シノニムの先頭の値、ドメイン ルール、用語ベースのリレーション、および参照データを使用して、顧客データを標準化および拡充します。 対話形式で、コンピューター支援型プロセスによって提案された変更を承認または拒否できます。 参照してください[データ クレンジング](http://msdn.microsoft.com/library/gg524800.aspx)の詳細。  
   
  コンピューター支援型のプロセスでは、DQS クライアントのメイン ページで [構成] オプションを使用して構成できる次のしきい値が使用されます。  
   
--   **提案の最小スコア:** 最小スコアまたは値を提案するために DQS によって使用される信頼レベル。  
+-   **提案の最小スコア:** 最小スコア (信頼レベル) の値を提案するために DQS によって使用されます。  
   
--   **自動修正の最小スコア:** 最小スコアまたは信頼レベルでは値を自動的に修正するために DQS によって使用されます。  
+-   **自動修正の最小スコア:** 最小スコアまたは信頼レベルでは自動的に値を修正するために DQS によって使用されます。  
   
- 参照してください[Configure Threshold Values for Cleansing and Matching](http://msdn.microsoft.com/library/hh510415.aspx)をこれらの設定を構成する方法の詳細。  
+ 参照してください[クレンジングと照合のしきい値の値を構成する](http://msdn.microsoft.com/library/hh510415.aspx)これらの設定を構成する方法の詳細について。  
   
  このレッスンでは、次のタスクを実行して、Suppliers ナレッジ ベースを使用して入力データをクレンジングします。  
   

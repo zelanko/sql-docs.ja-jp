@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - SQL Server Agent jobs, creating
 ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 40ec697eb5093ee690d944e0ec07cc01e2bf8ac6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ed5eada15f8f63404c0d6053fad452d372b09cef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270188"
 ---
 # <a name="create-jobs"></a>ジョブの作成
   ジョブとは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって順番に実行される一連の操作です。 ジョブは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト、コマンド プロンプト アプリケーション、Microsoft ActiveX スクリプト、Integration Services パッケージ、Analysis Services コマンドおよびクエリ、レプリケーション タスクの実行など、広範な操作を実行できます。 ジョブは、反復的なタスクやスケジュール可能なタスクを実行でき、警告を発生させてジョブのステータスをユーザーに自動的に通知できるので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の管理が非常に簡単になります。  
@@ -37,7 +37,7 @@ ms.locfileid: "36073153"
   
 |||  
 |-|-|  
-|**description**|**トピック**|  
+|**[説明]**|**トピック**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを作成する方法について説明します。|[ジョブの作成](create-a-job.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブの所有権を他のユーザーに再割り当てする方法について説明します。|[Give Others Ownership of a Job](give-others-ownership-of-a-job.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴ログをセットアップする方法について説明します。|[Set Up the Job History Log](set-up-the-job-history-log.md)|  
@@ -45,7 +45,7 @@ ms.locfileid: "36073153"
 ## <a name="see-also"></a>参照  
  [ジョブ ステップの管理](manage-job-steps.md)   
  [エンタープライズ全体の管理の自動化](automated-administration-across-an-enterprise.md)   
- [作成し、ジョブにスケジュールをアタッチ](create-and-attach-schedules-to-jobs.md)   
+ [作成し、スケジュールをジョブにアタッチ](create-and-attach-schedules-to-jobs.md)   
  [ジョブを実行します。](run-jobs.md)   
  [ジョブの表示または変更](view-or-modify-jobs.md)  
   

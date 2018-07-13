@@ -1,5 +1,5 @@
 ---
-title: アップグレード アドバイザー (コマンド プロンプト) を実行している |Microsoft ドキュメント
+title: アップグレード アドバイザー (コマンド プロンプト) を実行している |。Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
 - command prompt [Upgrade Advisor]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML formats [Upgrade Advisor]
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 525cb2237795e778bef2aa33ad43cff7c2e5ad6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f30f9169e352b7ac7b889d0ca066eadf6c1778db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330952"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>アップグレード アドバイザーの実行 (コマンド プロンプト)
   使用して、 **UpgradeAdvisorWizardCmd**ユーティリティをコマンド プロンプトからアップグレード アドバイザーを実行します。 結果を XML 形式で受け取るか、コンマ区切り値のファイルで受け取るかを選択できます。  
@@ -46,8 +46,8 @@ where <server_info> is any combination of the following:
  **-?**  
  コマンドの構文を表示します。  
   
- **-ConfigFile** *ファイル名*  
- 実行するときに使用する設定を含む XML ファイルのファイル名とパスの名前には、 **UpgradeAdvisorWizardCmd**ユーティリティです。  
+ **-Configfile** *ファイル名*  
+ 実行するときに使用する設定を含む XML ファイルのファイル名とパスの名前には、 **UpgradeAdvisorWizardCmd**ユーティリティ。  
   
  *< server_info >*  
  分析するコンピューターとインスタンスを指定します。 構成ファイルを使用していない場合に、これらのオプションを使用します。  
@@ -58,7 +58,7 @@ where <server_info> is any combination of the following:
  分析するコンピューターの名前を指定します。 ローカル コンピューター (既定値) またはリモート コンピューターのどちらでも指定できます。  
   
  **-インスタンス** *instance_name*  
- 分析するインスタンスの名前を指定します。 既定値はありません。 このパラメーターが指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はスキャンされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスの値は MSSQLSERVER です。 名前付きインスタンスの場合は、インスタンス名を使用します。  
+ 分析するインスタンスの名前を指定します。 既定値はありません。 このパラメーターを指定しない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はスキャンされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスの値は MSSQLSERVER です。 名前付きインスタンスの場合は、インスタンス名を使用します。  
   
  **-ASInstance***AS_instance_name*   
  分析する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスの名前を指定します。 既定値はありません。 この値を指定しない場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はスキャンされません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスの値は MSSQLServerOLAPService です。 名前付きインスタンスの場合は、インスタンス名を使用します。  
@@ -70,10 +70,10 @@ where <server_info> is any combination of the following:
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、この値に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。アップグレード アドバイザーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続にこのログインを使用します。 ログインを指定しないと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続に Windows 認証が使用されます。  
   
  **-SqlPassword** *パスワード*  
- 使用する場合、 **- SqlUser**引数、パスワードを指定するこの引数を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
+ 使用する場合、 **- SqlUser**引数では、この引数を使用して、パスワードを指定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
   
- **CSV**  
- 標準的な XML の結果に加え、コンマ区切り値の結果を .csv ファイルに出力する場合に指定します。 マイ ドキュメント に結果が書き込まれる\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade advisor \110\reports フォルダーです。  
+ **-CSV**  
+ 標準的な XML の結果に加え、コンマ区切り値の結果を .csv ファイルに出力する場合に指定します。 My Documents に結果が書き込まれる\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade advisor \110\reports フォルダー。  
   
 ## <a name="return-values"></a>戻り値  
  次の表は、値を**UpgradeAdvisorWizardCmd**を返します。  
@@ -132,21 +132,21 @@ where <server_info> is any combination of the following:
 |`Instance`|分析する[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前です。|省略可。構成ファイルにつき 1 個。 既定値は既定のインスタンスです。<br /><br /> サーバー上に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要素または `IntegrationServices` 要素が存在する場合は必須。構成ファイルにつき 1 個。|  
 |`Components`|分析するコンポーネントを指定する要素を含みます。|必須。構成ファイルにつき 1 個。|  
 |`SQLServer`|[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスの分析設定を含みます。|省略可。構成ファイルにつき 1 個。 指定しないと、[!INCLUDE[ssDE](../../includes/ssde-md.md)] データベースが分析されません。|  
-|`Databases` 要素の `SQLServer`|分析するデータベースの一覧を含みます。|省略可能なごとに 1 回`SQLServer`要素。 この要素が存在しない場合、インスタンスのすべてのデータベースが分析されます。|  
+|`Databases` 要素の `SQLServer`|分析するデータベースの一覧を含みます。|省略可能な 1 回`SQLServer`要素。 この要素が存在しない場合、インスタンスのすべてのデータベースが分析されます。|  
 |`Database` 要素の `SQLServer`|分析するデータベースの名前を指定します。|必須。`Databases` 要素が存在する場合に 1 個以上。 `Database` 要素に値 "*" が含まれている場合は、インスタンスのすべてのデータベースが分析されます。 既定値はありません。|  
-|`TraceFiles`|分析するトレース ファイルの一覧を含みます。|省略可能なごとに 1 回`SQLServer`要素。|  
+|`TraceFiles`|分析するトレース ファイルの一覧を含みます。|省略可能な 1 回`SQLServer`要素。|  
 |`TraceFile`|分析するトレース ファイルのパスと名前を指定します。|必須。`TraceFiles` 要素が存在する場合に 1 個以上。 既定値はありません。|  
-|`BatchFiles`|分析するバッチ ファイルの一覧を含みます。|省略可能なごとに 1 回`SQLServer`要素。|  
+|`BatchFiles`|分析するバッチ ファイルの一覧を含みます。|省略可能な 1 回`SQLServer`要素。|  
 |`BatchFile`|分析するバッチ ファイルを指定します。 複数指定することもできます。|必須。`BatchFiles` 要素が存在する場合に 1 個以上。 既定値はありません。|  
-|`BatchSeparator`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バッチ ファイルに使用されるバッチ区切り記号を指定します。|省略可能なごとに 1 回`SQLServer`要素。 既定値は GO です。|  
+|`BatchSeparator`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バッチ ファイルに使用されるバッチ区切り記号を指定します。|省略可能な 1 回`SQLServer`要素。 既定値は、GO です。|  
 |`AnalysisServices`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の分析設定を含みます。|省略可。構成ファイルにつき 1 個。 指定しないと、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースが分析されません。|  
-|`ASInstance`|インスタンスの名前を指定[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。|1 回ごとに必要な`AnalysisServices`要素。 既定値はありません。|  
-|`Databases` 要素の `Analysis Services`|分析するデータベースの一覧を含みます。|省略可能なごとに 1 回`AnalysisServices`要素。 この要素が存在しない場合、インスタンスのすべてのデータベースが分析されます。|  
+|`ASInstance`|インスタンスの名前を示す[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。|1 回ごとに必要な`AnalysisServices`要素。 既定値はありません。|  
+|`Databases` 要素の `Analysis Services`|分析するデータベースの一覧を含みます。|省略可能な 1 回`AnalysisServices`要素。 この要素が存在しない場合、インスタンスのすべてのデータベースが分析されます。|  
 |`Database` 要素の `AnalysisServices`|分析するデータベースの名前を指定します。|必須。`Databases` 要素が存在する場合に 1 個以上。 `Database` 要素に値 "*" が含まれている場合は、インスタンスのすべてのデータベースが分析されます。 既定値はありません。|  
 |`ReportingServices`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に対して分析を実行することを指定します。|省略可。構成ファイルにつき 1 個。 指定しなかった場合、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は分析されません。|  
-|`RSInstance`|インスタンスの名前を指定[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]です。|1 回ごとに必要な`ReportingServices`要素。 既定値はありません。|  
-|`IntegrationServices`|分析の設定を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]です。|省略可。構成ファイルにつき 1 個。 指定しなかった場合、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は分析されません。|  
-|`PackagePath`|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのセットのパスを指定します。|省略可能なごとに 1 回`IntegrationServices`要素。 この要素が存在しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して分析が行われ、外部に格納されたパッケージは分析されません。 既定値はありません。|  
+|`RSInstance`|インスタンスの名前を示す[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]します。|1 回ごとに必要な`ReportingServices`要素。 既定値はありません。|  
+|`IntegrationServices`|分析の設定を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]します。|省略可。構成ファイルにつき 1 個。 指定しなかった場合、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は分析されません。|  
+|`PackagePath`|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのセットのパスを指定します。|省略可能な 1 回`IntegrationServices`要素。 この要素が存在しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して分析が行われ、外部に格納されたパッケージは分析されません。 既定値はありません。|  
   
 ## <a name="examples"></a>使用例  
   

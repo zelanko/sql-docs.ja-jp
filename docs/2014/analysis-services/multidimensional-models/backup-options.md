@@ -1,5 +1,5 @@
 ---
-title: バックアップ オプション |Microsoft ドキュメント
+title: バックアップのオプション |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [Analysis Services]
 - databases [Analysis Services], backing up
 ms.assetid: 02d33fc9-f3f4-4b85-8b90-449b68625cf7
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d7c4d99153f3bf47589edeecebf7b6444968573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce7ca784325be140ffbd62880be2fb717ce058f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257288"
 ---
 # <a name="backup-options"></a>バックアップ オプション
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをバックアップする方法は数多くありますが、これらすべての方法では、サーバー管理者とデータベース管理者の権限が必要です。 **で** [バックアップ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを開き、適切なオプション構成を選択し、ダイアログ ボックスから直接バックアップを実行できます。 または、ファイルに既に指定されている設定を使用してスクリプトを作成できます。このスクリプトを保存して、必要に応じて実行できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "36072890"
 ## <a name="see-also"></a>参照  
  [[データベース] ダイアログ ボックスをバックアップ&#40;Analysis Services - 多次元データ&#41;](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Analysis Services データベースのバックアップと復元](backup-and-restore-of-analysis-services-databases.md)   
- [要素をバックアップ&#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
+ [バックアップ要素&#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
  [バックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

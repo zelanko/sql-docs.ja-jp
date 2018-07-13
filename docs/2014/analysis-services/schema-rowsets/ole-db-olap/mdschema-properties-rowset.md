@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_PROPERTIES 行セット |Microsoft ドキュメント
+title: MDSCHEMA_PROPERTIES 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_PROPERTIES rowset
 ms.assetid: 95c480f7-c525-44ba-a59b-cd36f5855a4f
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c0e0506be8f531018285bba9145a587448e743e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f62a6e4f77053c1aec69fc2e16b8049193249466
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189219"
 ---
 # <a name="mdschemaproperties-rowset"></a>MDSCHEMA_PROPERTIES 行セット
   データベース内のメンバーのプロパティについて記述します。  
@@ -43,7 +43,7 @@ ms.locfileid: "36074267"
 |`HIERARCHY_UNIQUE_NAME`|`DBTYPE_WSTR`||階層の一意な名前。 修飾によって一意な名前を生成するプロバイダーの場合、この名前の各コンポーネントは区切り記号付きです。|  
 |`LEVEL_UNIQUE_NAME`|`DBTYPE_WSTR`||このプロパティが所属するレベルの一意の名前。 プロバイダーで名前付きレベルがサポートされていない場合は、このフィールドに対して `DIMENSION_UNIQUE_NAME` 値が返されます。 修飾によって一意な名前を生成するプロバイダーの場合、この名前の各コンポーネントは区切り記号付きです。|  
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`||このプロパティが所属するメンバーの一意の名前。 名前付きレベルをサポートしないデータ ストアや、プロパティがメンバー単位であるデータ ストアに対して使用されます。 プロパティがレベル内のすべてのメンバーに適用される場合、この列は `NULL` になります。 修飾によって一意な名前を生成するプロバイダーの場合、この名前の各コンポーネントは区切り記号付きです。|  
-|`PROPERTY_TYPE`|`DBTYPE_I2`||プロパティの種類を指定するビットマップ。<br /><br /> -   `MDPROP_MEMBER` (`1`) メンバーのプロパティを識別します。 このプロパティは、SELECT ステートメントの DIMENSION PROPERTIES 句で使用できます。<br />-   `MDPROP_CELL` (`2`) セルのプロパティを識別します。 このプロパティは、SELECT ステートメントの最後にある CELL PROPERTIES 句で使用できます。<br />-   `MDPROP_SYSTEM` (`4`) 内部プロパティを識別します。<br />-   `MDPROP_BLOB` (`8`) をバイナリ ラージ オブジェクト (blob) を格納するプロパティを識別します。|  
+|`PROPERTY_TYPE`|`DBTYPE_I2`||プロパティの種類を指定するビットマップ。<br /><br /> -   `MDPROP_MEMBER` (`1`) メンバーのプロパティを識別します。 このプロパティは、SELECT ステートメントの DIMENSION PROPERTIES 句で使用できます。<br />-   `MDPROP_CELL` (`2`) セルのプロパティを識別します。 このプロパティは、SELECT ステートメントの最後にある CELL PROPERTIES 句で使用できます。<br />-   `MDPROP_SYSTEM` (`4`) 内部のプロパティを識別します。<br />-   `MDPROP_BLOB` (`8`) バイナリ ラージ オブジェクト (blob) を含むプロパティを識別します。|  
 |`PROPERTY_NAME`|`DBTYPE_WSTR`||プロパティの名前。 プロパティのキーがプロパティの名前と同じである場合、`PROPERTY_NAME` は空白になります。|  
 |`PROPERTY_CAPTION`|`DBTYPE_WSTR`||プロパティに関連付けられ、主に表示目的に使用されるラベルまたはキャプション。 キャプションが存在しない場合は、`PROPERTY_NAME` を返します。|  
 |`DATA_TYPE`|`DBTYPE_UI2`||プロパティのデータ型。|  
@@ -79,8 +79,8 @@ ms.locfileid: "36074267"
 |`PROPERTY_NAME`|`DBTYPE_WSTR`|省略可|  
 |`PROPERTY_CONTENT_TYPE`|`DBTYPE_I2`|(省略可) 既定の制限は、`MDPROP_MEMBER` または `MDPROP_CELL` に適用されます。|  
 |`PROPERTY_ORIGIN`|`DBTYPE_UI2`|(省略可) 既定の制限は、`MD_USER_DEFINED` または `MD_SYSTEM_ENABLED` に適用されます。|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 のキューブ<br />2 つのディメンション<br /><br /> 既定の制限の値は 1 です。|  
-|`PROPERTY_VISIBILITY`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 の表示<br />-2 not 表示<br /><br /> 既定の制限の値は 1 です。|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 のキューブ<br />-2 つのディメンション<br /><br /> 既定の制限の値は 1 です。|  
+|`PROPERTY_VISIBILITY`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 の表示<br />-2 の非表示<br /><br /> 既定の制限の値は 1 です。|  
   
 ## <a name="see-also"></a>参照  
  [OLE DB for OLAP Schema 行セット](ole-db-for-olap-schema-rowsets.md)  

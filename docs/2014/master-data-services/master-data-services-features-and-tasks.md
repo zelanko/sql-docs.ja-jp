@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68e220c2f80260359234fb80869844c531744bfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f26531b3b4e783c70e1a3b060e803908cbf275b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191932"
 ---
 # <a name="master-data-services-features-and-tasks"></a>マスター データ サービスの機能とタスク
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] を使用して組織のマスター データを管理する方法について説明します。 データのコンテナーとなるモデル プロジェクトを作成し操作する方法を説明します。 マスター データ自体を編成して管理する方法を説明します。 マスター データおよび、テスト環境と運用環境間の共有モデルをインポートおよびエクスポートする方法を説明します。 最後に、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サービスにアクセスするカスタム アプリケーションを開発する方法を説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "36072143"
   
 ## <a name="maintain-master-data"></a>マスター データの管理  
   
--   [マスター データ サービス アドインを Microsoft Excel](microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
+-   [マスター データ サービス アドイン for Microsoft Excel](microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
 -   [メンバー&#40;マスター データ サービス&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36072143"
   
 ## <a name="develop-a-custom-application"></a>カスタム アプリケーションの開発  
   
--   [開発者ガイド 』&#40;マスター データ サービス&#41;](develop/master-data-services-developer-documentation.md)  
+-   [Developer's Guide&#40;マスター データ サービス&#41;](develop/master-data-services-developer-documentation.md)  
   
 -   <xref:Microsoft.MasterDataServices>  
   

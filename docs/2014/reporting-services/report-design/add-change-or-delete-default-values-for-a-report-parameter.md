@@ -1,5 +1,5 @@
 ---
-title: 追加、変更、またはレポート パラメーター (レポート ビルダーおよび SSRS) の既定値を削除します |。Microsoft ドキュメント
+title: 追加、変更、または (レポート ビルダーおよび SSRS) レポート パラメーターの既定値の削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10460"
 - sql12.rtp.rptdesigner.reportparameters.defaultvalues.f1
 - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2d5ccd789a763ed610df4c4782342253716119c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 448ae66acdfdbe4a0c90ff3f69e26be7cce56e12
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192882"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter-report-builder-and-ssrs"></a>レポート パラメーターの既定値の追加、変更、または削除 (レポート ビルダーおよび SSRS)
   レポート パラメーターを作成した後、既定値のリストを指定できます。 すべてのパラメーターに有効な既定値がある場合、レポートは、最初に表示またはプレビューしたときに自動的に実行します。  
@@ -73,7 +73,7 @@ ms.locfileid: "36074755"
  [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
  [レポート パラメーターの順序を変更&#40;レポート ビルダーおよび SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [追加、変更、またはレポート パラメーターを削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [レポート パラメーターを追加、変更、削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
   

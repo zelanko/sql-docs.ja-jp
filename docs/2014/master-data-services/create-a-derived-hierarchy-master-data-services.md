@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, creating
 - creating derived hierarchies [Master Data Services]
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eed0b86271cb44565e2724cc6c961521c8d683ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 696b4bc98f4feb47ae7db6cae99d1ba9ae8a6628
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217642"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>派生階層を作成する (マスター データ サービス)
   正しいレベルにメンバーが確実に存在するレベル ベースの階層が必要な場合、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、派生階層を作成します。 派生階層は、モデル内に存在するドメイン ベースの属性のリレーションシップに基づきます。  
@@ -41,11 +41,11 @@ ms.locfileid: "36073519"
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **モデルビュー**  ページで、メニュー バーのをポイント**管理** をクリック**派生階層**です。  
+2.  **モデル ビュー**  ページで、ポイントして、メニュー バーから**管理** をクリック**派生階層**します。  
   
 3.  **[派生階層のメンテナンス]** ページの **[モデル]** の一覧からモデルを選択します。  
   
-4.  をクリックして**派生階層の追加**です。  
+4.  クリックして**派生階層の追加**します。  
   
 5.  **[派生階層の追加]** ページの **[派生階層名]** ボックスに階層の名前を入力します。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36073519"
   
 6.  **[派生階層の保存]** をクリックします。  
   
-7.  **派生階層の編集** ページの 、**使用可能なエンティティと階層** ウィンドウで、エンティティまたは階層をクリックして、ドラッグして、**現在のレベル**ウィンドウです。  
+7.  **派生階層の編集**ページで、**使用できるエンティティと階層**ウィンドウで、エンティティまたは階層をクリックして、ドラッグして、**現在のレベル**ウィンドウ。  
   
 8.  その他のエンティティまたは階層をドラッグして、階層を完成させます。  
   

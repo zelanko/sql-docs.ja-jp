@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimensionprocessingdest.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 41f97ad80771839d00ee73e75a3b30bdcaf5b09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 139058c982315f12141d55c315a18554d4babd4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217722"
 ---
 # <a name="dimension-processing-destination"></a>ディメンション処理変換先
   ディメンション処理変換先は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションを読み込んで処理します。 ディメンションの詳細については、「[ディメンション (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)」を参照してください。  
@@ -52,7 +52,7 @@ ms.locfileid: "36072818"
   
 -   [ディメンション処理変換先エディター&#40;接続マネージャー ページ&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [ディメンション処理変換先エディター &#40;[マッピング] ページ&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [ディメンション処理変換先エディター&#40;マッピング ページ&#41;](../dimension-processing-destination-editor-mappings-page.md)  
   
 -   [ディメンション処理変換先エディター &#40;[詳細] ページ&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   

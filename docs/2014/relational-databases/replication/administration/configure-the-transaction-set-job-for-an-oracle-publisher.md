@@ -1,5 +1,5 @@
 ---
-title: Oracle パブリッシャー (レプリケーション TRANSACT-SQL プログラミング) のトランザクション セット ジョブを構成する |Microsoft ドキュメント
+title: Oracle パブリッシャー (レプリケーション TRANSACT-SQL プログラミング) のトランザクション セット ジョブの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: beea1a5c-0053-4971-a68f-0da53063fcbb
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c16d9dbd07be6b66a81e1e9e4f9745b80dccfc0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8da949228afdfa4b0e6407205f1a995ee80fb343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248382"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher-replication-transact-sql-programming"></a>Oracle パブリッシャー用のトランザクション セット ジョブの構成 (レプリケーション Transact-SQL プログラミング)
   **Xactset** ジョブは、Oracle パブリッシャーで実行されているレプリケーションがトランザクション セットを生成するために作成する Oracle データベース ジョブです。Oracle パブリッシャーにログ リーダー エージェントが接続されていない場合に使用されます。 このジョブは、レプリケーションのストアド プロシージャを使用し、ディストリビューターからプログラムによって有効化したり構成することができます。 詳細については、「[Performance Tuning for Oracle Publishers](../non-sql/performance-tuning-for-oracle-publishers.md)」 (Oracle パブリッシャーのパフォーマンス チューニング) を参照してください。  
@@ -33,11 +33,11 @@ ms.locfileid: "36071398"
   
 1.  Oracle パブリッシャーで、 **job_queue_processes** 初期化パラメーターに、Xactset ジョブを実行できるだけの十分な値を設定します。 このパラメーターの詳細については、Oracle パブリッシャー用データベースのマニュアルを参照してください。  
   
-2.  ディストリビューターで、[sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql) を実行します。 Oracle パブリッシャーの名前を指定**@publisher**、値の`xactsetbatching`の **@propertyname**の値と`enabled`の**@propertyvalue**.  
+2.  ディストリビューターで、[sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql) を実行します。 Oracle パブリッシャーの名前を指定**@publisher**、@property`xactsetbatching`の **@propertyname**の値と`enabled`の**@propertyvalue**.  
   
-3.  ディストリビューターで、[sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql) を実行します。 Oracle パブリッシャーの名前を指定**@publisher**、値の`xactsetjobinterval`の**@propertyname**、および分単位で、ジョブの実行間隔の**@propertyvalue**.  
+3.  ディストリビューターで、[sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql) を実行します。 Oracle パブリッシャーの名前を指定**@publisher**、@property`xactsetjobinterval`の**@propertyname**、およびジョブの実行間隔を分単位での**@propertyvalue**.  
   
-4.  ディストリビューターで、[sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql) を実行します。 Oracle パブリッシャーの名前を指定**@publisher**、値の`xactsetjob`の **@propertyname**の値と`enabled`の**@propertyvalue**.  
+4.  ディストリビューターで、[sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql) を実行します。 Oracle パブリッシャーの名前を指定**@publisher**、@property`xactsetjob`の **@propertyname**の値と`enabled`の**@propertyvalue**.  
   
 ### <a name="to-configure-the-transaction-set-job"></a>トランザクション セット ジョブを構成するには  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36071398"
   
 ### <a name="to-disable-the-transaction-set-job"></a>トランザクション セット ジョブを無効にするには  
   
-1.  ディストリビューターで、[sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql) を実行します。 Oracle パブリッシャーの名前を指定**@publisher**、値の`xactsetjob`の **@propertyname**の値と`disabled`の**@propertyvalue**.  
+1.  ディストリビューターで、[sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql) を実行します。 Oracle パブリッシャーの名前を指定**@publisher**、@property`xactsetjob`の **@propertyname**の値と`disabled`の**@propertyvalue**.  
   
 ## <a name="example"></a>例  
  次の例では、 `Xactset` ジョブを有効にし、実行間隔を 3 分に設定しています。  

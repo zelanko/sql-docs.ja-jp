@@ -1,5 +1,5 @@
 ---
-title: 属性の要素 (XMLA) |Microsoft ドキュメント
+title: 要素 (XMLA) の属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Attribute element
 ms.assetid: 0df9cf44-dc5f-4234-8a5a-daac8aabc0d6
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 665626323e435eeed50b73f4d94de4506dba4f19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 262114f7bbd9200bfab3a74bb14e8cea08400f5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185119"
 ---
 # <a name="attribute-element-xmla"></a>Attribute 要素 (XMLA)
-  定義またはフィルターの対象である属性内のメンバー、親[挿入](../xml-elements-commands/insert-element-xmla.md)、[更新](../xml-elements-commands/update-element-xmla.md)、または[ドロップ](../xml-elements-commands/drop-element-xmla.md)コマンドを実行します。  
+  定義またはとする属性のメンバーをフィルター処理を親[挿入](../xml-elements-commands/insert-element-xmla.md)、 [Update](../xml-elements-commands/update-element-xmla.md)、または[ドロップ](../xml-elements-commands/drop-element-xmla.md)コマンドを実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -78,10 +78,10 @@ ms.locfileid: "36073827"
 |-|-|  
 |**先祖または親**|**子要素**|  
 |[Drop](../xml-elements-commands/drop-element-xmla.md)、[場所](name-element-xmla.md)、[キー](keys-element-xmla.md)|  
-|[挿入](../xml-elements-commands/insert-element-xmla.md)、[更新](../xml-elements-commands/update-element-xmla.md)|[AttributeName](name-element-xmla.md)、 [[customrollup]](customrollup-element-xmla.md)、 [[customrollupproperties]](properties-element-xmla.md)、[キー](keys-element-xmla.md)、[名前](name-element-xmla.md)、 [SkippedLevels](skippedlevels-element-xmla.md)、[翻訳](translations-element-xmla.md)、 [[unaryoperator]](unaryoperator-element-xmla.md)|  
+|[挿入](../xml-elements-commands/insert-element-xmla.md)、 [Update](../xml-elements-commands/update-element-xmla.md)|[AttributeName](name-element-xmla.md)、 [CustomRollup](customrollup-element-xmla.md)、 [CustomRollupProperties](properties-element-xmla.md)、[キー](keys-element-xmla.md)、[名前](name-element-xmla.md)、 [SkippedLevels](skippedlevels-element-xmla.md)、[翻訳](translations-element-xmla.md)、 [[unaryoperator]](unaryoperator-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
- `Attribute`要素が挿入、更新、または削除して、それぞれ、属性メンバーの定義、 `Insert`、 `Update`、または`Drop`コマンド。 1 つの属性メンバーだけで、一度に処理できるためにこれらのコマンド、[属性](attributes-element-xmla.md)のコレクション、 `Insert`、 `Update`、および`Drop`コマンドには、1 つだけ含めることができます`Attribute`要素。 ただし、`Attributes` および `Where` コマンドの `Drop` 要素の `Update` コレクションには複数の `Attribute` 要素を含めることができ、書き込み許可ディメンション内の削除または更新対象の属性をフィルター処理できます。  
+ `Attribute`要素が挿入、更新、または削除によって、属性メンバーの定義、 `Insert`、 `Update`、または`Drop`コマンド。 一度に 1 つの属性のメンバーでのみこれらのコマンドが処理できるため、[属性](attributes-element-xmla.md)のコレクション、 `Insert`、 `Update`、および`Drop`コマンドは 1 つだけを含めることができます`Attribute`要素。 ただし、`Attributes` および `Where` コマンドの `Drop` 要素の `Update` コレクションには複数の `Attribute` 要素を含めることができ、書き込み許可ディメンション内の削除または更新対象の属性をフィルター処理できます。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;XMLA&#41;](xml-elements-properties.md)   

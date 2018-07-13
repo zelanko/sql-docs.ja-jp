@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [SQL Server]
 - server message blocks [SQL Server]
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - installing SQL Server, security
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 849fdd75ab2ad73c673ef0c4c0e70ec3ba25b8f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f8d17d471020a4b6960307c6718caf4624579da8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166103"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server インストールにおけるセキュリティの考慮事項
   セキュリティは、あらゆる製品、あらゆる企業にとって重要です。 単純なベスト プラクティスに従うことで、多くのセキュリティの脆弱性を避けることができます。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールする前と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールした後の両方で考慮する必要があるセキュリティのベスト プラクティスについて説明します。 特定の機能のセキュリティについては、その機能の参照トピックで説明しています。  
@@ -147,7 +147,7 @@ ms.locfileid: "36072673"
   
  **強力なパスワード**  
   
--   常に強力なパスワードを指定する、`sa`アカウント。  
+-   常に強力なパスワードを割り当てます、`sa`アカウント。  
   
 -   パスワードの強度と有効期限に関するパスワード ポリシー チェックを必ず有効にします。  
   

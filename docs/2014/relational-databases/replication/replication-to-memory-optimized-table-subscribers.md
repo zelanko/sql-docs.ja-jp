@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 569e88c7fbf844494276948690c583f69737ff14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bf93e552732ea0a5659211fbc11c2d3751a326a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188489"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>メモリ最適化テーブル サブスクライバーへのレプリケーション
   トランザクション レプリケーションのサブスクライバーとして機能するテーブルは、ピア ツー ピア トランザクション レプリケーションを除き、メモリ最適化テーブルとして構成できます。 その他のレプリケーション構成はメモリ最適化テーブルとは互換性がありません。  
@@ -63,9 +63,9 @@ ms.locfileid: "36074160"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  スナップショット フォルダーに移動します。 既定の場所は"C:\Program files \microsoft SQL Server\MSSQL12 です。\<インスタンス > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\"です。  
+2.  スナップショット フォルダーに移動します。 既定の場所は"C:\Program files \microsoft SQL Server\MSSQL12 します。\<インスタンス > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\"。  
   
-3.  検索、**です。SCH**テーブルのファイルし、Management Studio で開きます。 次に説明するように、テーブル スキーマを変更し、ストアド プロシージャを更新します。  
+3.  検索、**します。SCH**テーブルのファイルし、Management Studio で開きます。 次に説明するように、テーブル スキーマを変更し、ストアド プロシージャを更新します。  
   
      IDX ファイルで定義されているインデックスを評価します。 必要なインデックス、制約、主キー、メモリ最適化構文を指定するように `CREATE TABLE` を変更します。 メモリ最適化テーブルでは、インデックス列を null にしないでください。文字型のインデックス列は Unicode にし、BIN2 照合順序を使用する必要があります。 次の例を参照してください。  
   
@@ -230,7 +230,7 @@ ms.locfileid: "36074160"
     go  
     ```  
   
-5.  使用してサブスクライバー データベースを作成、**スナップショット分離に昇格させる**オプションを選択し、非 Unicode 文字データ型を使用して既定の照合順序を Latin1_General_CS_AS_KS_WS に設定します。  
+5.  サブスクライバー データベースを使用して作成、**スナップショット分離に昇格させる**オプションを選択し、非 Unicode 文字データ型を使用して既定の照合順序を Latin1_General_CS_AS_KS_WS に設定します。  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -297,15 +297,15 @@ GO
   
  サブスクライバーで、トランザクション レプリケーションにかかわるテーブルをメモリ最適化テーブルとして構成できますが、サブスクライバーのテーブルはメモリ最適化テーブルの要件を満たす必要があります。 この場合の制限事項は次のとおりです。  
   
--   トランザクション レプリケーションのサブスクライバーでメモリ最適化テーブルを作成するには、メモリ最適化テーブルの作成に使用されるスナップショット スキーマ ファイルを手動で変更する必要があります。 詳細については、次を参照してください。[スキーマ ファイルの変更](#Schema)です。  
+-   トランザクション レプリケーションのサブスクライバーでメモリ最適化テーブルを作成するには、メモリ最適化テーブルの作成に使用されるスナップショット スキーマ ファイルを手動で変更する必要があります。 詳細については、次を参照してください。[スキーマ ファイルの変更](#Schema)します。  
   
 -   サブスクライバーのメモリ最適化テーブルにレプリケートされるテーブルは、メモリ最適化テーブルの行の制限に従って 8,060 バイトに制限されます。  
   
--   サブスクライバーのメモリ最適化テーブルにレプリケートされるテーブルは、メモリ最適化テーブルに使用できるデータ型に制限されます。 詳細については、次を参照してください。 [Supported Data Types](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md)です。  
+-   サブスクライバーのメモリ最適化テーブルにレプリケートされるテーブルは、メモリ最適化テーブルに使用できるデータ型に制限されます。 詳細については、次を参照してください。 [Supported Data Types](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md)します。  
   
--   サブスクライバーのメモリ最適化テーブルにレプリケートされるテーブルの主キーを更新するには、制限があります。 詳細については、次を参照してください。[主キーに変更をレプリケートする](#PrimaryKey)です。  
+-   サブスクライバーのメモリ最適化テーブルにレプリケートされるテーブルの主キーを更新するには、制限があります。 詳細については、次を参照してください。[主キーに変更をレプリケートする](#PrimaryKey)します。  
   
--   外部キー、UNIQUE 制約、トリガー、スキーマの変更、ROWGUIDCOL、計算列、データ圧縮、別名データ型、バージョン管理、ロックは、メモリ最適化テーブルではサポートされていません。 参照してください[TRANSACT-SQL は、インメモリ OLTP でサポートされていない構造](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)についてです。  
+-   外部キー、UNIQUE 制約、トリガー、スキーマの変更、ROWGUIDCOL、計算列、データ圧縮、別名データ型、バージョン管理、ロックは、メモリ最適化テーブルではサポートされていません。 参照してください[TRANSACT-SQL は、インメモリ OLTP でサポートされていない構造](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)について。  
   
 ##  <a name="Schema"></a> スキーマ ファイルの変更  
   

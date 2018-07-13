@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sa account
 - connecting when locked out [SQL Server]
 - locked out [SQL Server]
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e4a6f1d769833a451f7360c747249cb28d0d0c12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 40950fec562e5f313f6a16302ea714aaef522fa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267178"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>システム管理者がロックアウトされた場合の SQL Server への接続
   このトピックでは、システム管理者が [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] へのアクセスを復旧する方法について説明します。 システム管理者は、次のいずれかの理由で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアクセスできなくなることがあります。  
@@ -62,12 +62,12 @@ ms.locfileid: "36071249"
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの左ペインで、 **[SQL Server のサービス]** を選択します。 右ペインで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを探します ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスには、コンピューター名の後に **(MSSQLSERVER)** が付いています。 名前付きインスタンスは、[登録済みサーバー] に表示されているものと同じ名前が大文字表記で表示されます)。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを右クリックし、**[プロパティ]** をクリックします。  
   
-5.  **起動時のパラメーター**  タブで、**起動時のパラメーターを指定**ボックスに、入力`-m`順にクリック`Add`です。 (入力文字はダッシュの後に小文字の m です)。  
+5.  **起動時のパラメーター**  タブで、**起動時のパラメーターを指定**ボックスに「`-m`順にクリックします`Add`します。 (入力文字はダッシュの後に小文字の m です)。  
   
     > [!NOTE]  
-    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 既存のパラメーターは、いずれも変更しないように注意してください。 最後に、新しいパラメーターを追加`;-m` をクリックし、`OK`です。 (入力文字はセミコロンの後に小文字の m です)。  
+    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 既存のパラメーターは、いずれも変更しないように注意してください。 最後に、新しいパラメーターを追加`;-m`し`OK`します。 (入力文字はセミコロンの後に小文字の m です)。  
   
-6.  をクリックして`OK`、再起動するメッセージの後、サーバー名を右クリックし、クリックして**再起動**です。  
+6.  クリックして`OK`とを再起動するメッセージが表示されたら、サーバー名を右クリックし、順にクリックします**再起動**します。  
   
 7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動すると、サーバーはシングル ユーザー モードになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されていないことを確認します。 起動した場合、それが唯一の接続となります。  
   
@@ -78,16 +78,16 @@ ms.locfileid: "36071249"
   
      構成によっては、SSMS が複数の接続の確立を試みます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はシングル ユーザー モードなので、複数の接続は失敗します。 次のいずれかの操作を選択して実行できます。 次のいずれかの操作を行います。  
   
-    1.  Windows 認証 (管理者の資格情報を含む) を使用してオブジェクト エクスプローラーと接続します。 **[セキュリティ]**、 **[ログイン]** の順に展開し、自身のログインをダブルクリックします。 **サーバーの役割**] ページで、[ `sysadmin`、クリックして`OK`です。  
+    1.  Windows 認証 (管理者の資格情報を含む) を使用してオブジェクト エクスプローラーと接続します。 **[セキュリティ]**、 **[ログイン]** の順に展開し、自身のログインをダブルクリックします。 **サーバーの役割** ページで、 `sysadmin`、 をクリックし、`OK`します。  
   
-    2.  オブジェクト エクスプローラーではなく、Windows 認証 (管理者の資格情報を含む) を使用してクエリ ウィンドウと接続します  (この方法で接続できるのは、オブジェクト エクスプローラーと接続していない場合のみです)。メンバーである新しい Windows 認証ログインを追加するには、次のようなコードを実行、`sysadmin`固定サーバー ロール。 次の例では、`CONTOSO\PatK` という名前のドメイン ユーザーを追加します。  
+    2.  オブジェクト エクスプローラーではなく、Windows 認証 (管理者の資格情報を含む) を使用してクエリ ウィンドウと接続します  (この方法で接続できるのは、オブジェクト エクスプローラーと接続していない場合のみです)。などのメンバーである新しい Windows 認証ログインを追加するには、次のコードを実行、`sysadmin`固定サーバー ロール。 次の例では、`CONTOSO\PatK` という名前のドメイン ユーザーを追加します。  
   
         ```  
         CREATE LOGIN [CONTOSO\PatK] FROM WINDOWS;  
         ALTER SERVER ROLE sysadmin ADD MEMBER [CONTOSO\PatK];  
         ```  
   
-    3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を混合認証モードで実行している場合、Windows 認証 (管理者の資格情報を含む) を使用してクエリ ウィンドウと接続します。 新規作成するには、次のようなコードを実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログインのメンバーである、`sysadmin`固定サーバー ロール。  
+    3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を混合認証モードで実行している場合、Windows 認証 (管理者の資格情報を含む) を使用してクエリ ウィンドウと接続します。 新たに作成するには、次のコードを実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログインのメンバーである、`sysadmin`固定サーバー ロール。  
   
         ```  
         CREATE LOGIN TempLogin WITH PASSWORD = '************';  
@@ -97,7 +97,7 @@ ms.locfileid: "36071249"
         > [!WARNING]  
         >  ************ は強力なパスワードと置き換えてください。  
   
-    4.  場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]混合認証モードで実行してのパスワードをリセットして、`sa`アカウントは、Windows 認証 (管理者の資格情報を含む) を使用してクエリ ウィンドウと接続します。 パスワードの変更、`sa`次の構文を持つアカウントです。  
+    4.  場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]混合認証モードで実行してのパスワードをリセットして、`sa`アカウントは、Windows 認証 (を管理者の資格情報を含む) を使用してクエリ ウィンドウと接続します。 パスワードの変更、`sa`次の構文を持つアカウント。  
   
         ```  
         ALTER LOGIN sa WITH PASSWORD = '************';  
@@ -110,14 +110,14 @@ ms.locfileid: "36071249"
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの左ペインで、 **[SQL Server のサービス]** を選択します。 右ペインで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを右クリックし、 **[プロパティ]** をクリックします。  
   
-11. **起動時のパラメーター**  タブで、**既存のパラメーター**ボックスで、`-m`順にクリック`Remove`です。  
+11. **起動時のパラメーター**  タブで、**既存のパラメーター**ボックスで、`-m`順にクリックします`Remove`します。  
   
     > [!NOTE]  
-    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 削除、 `;-m` 、前に追加し、をクリックする`OK`です。  
+    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 削除、 `;-m` 、前に追加し、クリック`OK`します。  
   
 12. サーバー名を右クリックし、 **[再起動]** をクリックします。  
   
- これで、現在のメンバーになっているアカウントのいずれかで正常に接続できるの`sysadmin`固定サーバー ロール。  
+ 現在のメンバーになっているアカウントのいずれかで正常に接続できるようになりましたの`sysadmin`固定サーバー ロール。  
   
 ## <a name="see-also"></a>参照  
  [シングル ユーザー モードでの SQL Server の起動](start-sql-server-in-single-user-mode.md)   

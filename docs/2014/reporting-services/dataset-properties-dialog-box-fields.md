@@ -1,5 +1,5 @@
 ---
-title: データセットのプロパティ ダイアログ ボックス (フィールド) |Microsoft ドキュメント
+title: データセットのプロパティ] ダイアログ ボックスの [フィールド |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasetproperties.fields.f1
 - "10140"
 ms.assetid: e1367556-736e-4a6b-b9e7-10432a3e50b5
 caps.latest.revision: 36
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0006ff1564f6adbcadd529cd82e726d847ed646f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad672dfa5e9161e781d2caf975e5511126924c2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274138"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>[フィールド] ([データセットのプロパティ] ダイアログ ボックス)
   **[データセットのプロパティ]** ダイアログ ボックスの **[フィールド]** を選択すると、レポート データセットのフィールド コレクションを変更できます。 フィールドの一覧は自動的に作成されますが、 **[フィールド]** を使用してクエリ フィールドや計算フィールドを追加、編集、および削除することができます。  
   
 ## <a name="options"></a>および  
  **[追加]**  
- データセットに新しいクエリ フィールドまたは計算フィールドを追加します。  
+ 新しいクエリ フィールドまたは計算フィールドをデータセットに追加します。  
   
- **Delete**  
+ **削除**  
  選択したフィールドをデータセットから削除します。  
   
  **フィールド名**  

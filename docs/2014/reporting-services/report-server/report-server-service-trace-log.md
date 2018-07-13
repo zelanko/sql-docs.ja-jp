@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
 - traces [Reporting Services]
@@ -18,23 +18,23 @@ ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5473021393acf02a3910b4eb8090486d838e0770
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0fd7269ca32442cc53ad86d124db2eb8c1ff5d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270278"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]レポート サーバー トレース ログはレポート サーバー サービスの操作の詳細が含まれる ASCII テキスト ファイル、含むによって実行された操作、レポート サーバー Web サービス、レポート マネージャー、およびバック グラウンド処理します。 トレース ログ ファイルには、他のログ ファイルに記録されている冗長な情報、およびトレース ログ以外からは入手できない追加情報が含まれています。 トレース ログ情報は、レポート サーバーを含むアプリケーションをデバッグしている場合、またはイベント ログや実行ログに書き込まれた特定の問題を調査している場合に役立ちます。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]レポート サーバーのトレース ログはレポート サーバー サービスの操作に関する詳細な情報が含まれる ASCII テキスト ファイル、操作を含め、レポート サーバー Web によって実行されるサービス、レポート マネージャー、およびバック グラウンド処理します。 トレース ログ ファイルには、他のログ ファイルに記録されている冗長な情報、およびトレース ログ以外からは入手できない追加情報が含まれています。 トレース ログ情報は、レポート サーバーを含むアプリケーションをデバッグしている場合、またはイベント ログや実行ログに書き込まれた特定の問題を調査している場合に役立ちます。  
   
 > [!NOTE]  
 >  以前のリリースでは、複数のトレース ログ ファイル (アプリケーションごとに 1 つ) が存在しました。 次のファイルが廃止されでは作成されません[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降のバージョン: reportserverwebapp _*\<タイムスタンプ >*.log、reportserver _*\<タイムスタンプ >* Reportserverservice_main _ .log、および*\<タイムスタンプ >*。 ログ。  
   
  **このトピックの内容:**  
   
--   [レポート サーバーのログ ファイルを参照しているか。](#bkmk_view_log)  
+-   [レポート サーバーのログ ファイルの場所](#bkmk_view_log)  
   
 -   [トレースの構成設定](#bkmk_trace_configuration_settings)  
   
@@ -49,12 +49,12 @@ ms.locfileid: "36072490"
   
  トレース ログは毎日作成され、午前 0 時 (ローカル時刻) 以降に発生する最初のエントリで始まります。また、サービスを再起動したときにも作成されます。 タイムスタンプには、協定世界時 (UTC) が使用されます。 このファイルは EN-US 形式です。 既定では、トレース ログのサイズの上限は 32 MBであり、14 日後に削除されます。  
   
- 短いビデオを表示する、Microsoft Power Query の使用方法を示す表示[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]ログ ファイルです。  
+ 表示する Microsoft Power Query の使用方法を示す短いビデオを表示[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]ログ ファイル。  
   
- ![Power Query および SSRS ログに関するビデオの表示](../media/generic-video-thumbnail.png "Power Query および SSRS ログに関するビデオの表示")  
+ ![Power Query および SSRS ログに関するビデオを表示](../media/generic-video-thumbnail.png "Power Query および SSRS ログに関するビデオを表示")  
   
 ##  <a name="bkmk_trace_configuration_settings"></a> トレースの構成設定  
- トレース ログの動作は構成ファイル **ReportingServicesrService.exe.config**で管理されています。構成ファイルは次のフォルダー パスにあります。  
+ トレース ログの動作は構成ファイル **ReportingServicesrService.exe.config** で管理されています。構成ファイルは次のフォルダー パスにあります。  
   
  `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36072490"
 |`Prefix`|あるログのインスタンスを別のログのインスタンスと区別するために生成する値を指定します。 既定では、トレース ログ ファイル名にタイムスタンプの値が追加されます。 この値は、" tid, time " に設定されます。 この設定は変更しないでください。|  
 |**TraceListeners**|トレース ログ コンテンツの出力先を指定します。 複数の出力先を指定する場合、各出力先をコンマで区切ってください。 有効な値は、<br /><br /> DebugWindow<br /><br /> File (既定値)<br /><br /> StdOut|  
 |**TraceFileMode**|トレース ログに 24 時間データを含めるかどうかを指定します。 コンポーネントごとに、毎日 1 つ、一意のトレース ログが必要です。 この値は、"Unique (既定値)" に設定されます。 この値は変更しないでください。|  
-|`Components`|トレース ログ情報の生成対象となるコンポーネントおよびトレース レベルを次の形式で指定します。<br /><br /> \<component category>:\<tracelevel><br /><br /> コンポーネントのカテゴリには次の値を設定できます。<br />特定のカテゴリに分類されないすべてのプロセスに対する通常のレポート サーバーの利用状況を追跡するには、`All` を使用します。<br />`RunningJobs` 進行中のレポートまたはサブスクリプションの操作をトレースに使用されます。<br />ユーザーがモデルベースのレポートでアドホック データ探索を実行する場合に処理されるセマンティック クエリを追跡するには、`SemanticQueryEngine` を使用します。<br />モデルの生成を追跡するには、`SemanticModelGenerator` を使用します。<br />レポート サーバーの HTTP ログ ファイルを有効にするには、`http` を使用します。 詳細については、次を参照してください。 [Report Server HTTP Log](report-server-http-log.md)です。<br /><br /> <br /><br /> トレース レベルの有効な値は次のとおりです。<br /><br /> 0= トレースの無効化<br /><br /> 1= 例外および再起動<br /><br /> 2= 例外、再起動、警告<br /><br /> 3= 例外、再起動、警告、状態メッセージ (既定)<br /><br /> 4= 詳細モード<br /><br /> レポート サーバーの既定値は "all:3" です。<br /><br /> コンポーネントの全部または一部を指定することができます (`all`、 `RunningJobs`、 `SemanticQueryEngine`、 `SemanticModelGenerator`)。 特定のコンポーネントに関する情報を生成しない場合は、そのコンポーネントのトレースを無効にできます (たとえば "SemanticModelGenerator:0")。 `all` の場合は、トレースを無効にしないでください。<br /><br /> コンポーネントにトレース レベルを追加しない場合は、`DefaultTraceSwitch` に指定された値が使用されます。 たとえば、"all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator" と指定すると、すべてのコンポーネントで既定のトレース レベルが使用されます。<br /><br /> 各セマンティック クエリに対して生成される Transact-SQL ステートメントを表示する場合は、"SemanticQueryEngine:4" を設定できます。 Transact-SQL ステートメントは、トレース ログに記録されます。 次の例では、Transact-SQL ステートメントをログに追加する構成設定を示しています。<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
+|`Components`|トレース ログ情報の生成対象となるコンポーネントおよびトレース レベルを次の形式で指定します。<br /><br /> \<component category>:\<tracelevel><br /><br /> コンポーネントのカテゴリには次の値を設定できます。<br />特定のカテゴリに分類されないすべてのプロセスに対する通常のレポート サーバーの利用状況を追跡するには、`All` を使用します。<br />`RunningJobs` 実行中のレポートまたはサブスクリプションの操作に使用されます。<br />ユーザーがモデルベースのレポートでアドホック データ探索を実行する場合に処理されるセマンティック クエリを追跡するには、`SemanticQueryEngine` を使用します。<br />モデルの生成を追跡するには、`SemanticModelGenerator` を使用します。<br />レポート サーバーの HTTP ログ ファイルを有効にするには、`http` を使用します。 詳細については、次を参照してください。 [Report Server HTTP Log](report-server-http-log.md)します。<br /><br /> <br /><br /> トレース レベルの有効な値は次のとおりです。<br /><br /> 0= トレースの無効化<br /><br /> 1= 例外および再起動<br /><br /> 2= 例外、再起動、警告<br /><br /> 3= 例外、再起動、警告、状態メッセージ (既定)<br /><br /> 4= 詳細モード<br /><br /> レポート サーバーの既定値は "all:3" です。<br /><br /> コンポーネントのすべてまたは一部を指定することができます (`all`、 `RunningJobs`、 `SemanticQueryEngine`、 `SemanticModelGenerator`)。 特定のコンポーネントに関する情報を生成しない場合は、そのコンポーネントのトレースを無効にできます (たとえば "SemanticModelGenerator:0")。 `all` の場合は、トレースを無効にしないでください。<br /><br /> コンポーネントにトレース レベルを追加しない場合は、`DefaultTraceSwitch` に指定された値が使用されます。 たとえば、"all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator" と指定すると、すべてのコンポーネントで既定のトレース レベルが使用されます。<br /><br /> 各セマンティック クエリに対して生成される Transact-SQL ステートメントを表示する場合は、"SemanticQueryEngine:4" を設定できます。 Transact-SQL ステートメントは、トレース ログに記録されます。 次の例では、Transact-SQL ステートメントをログに追加する構成設定を示しています。<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
   
 ##  <a name="bkmk_add_custom"></a> ダンプ ファイルの場所を指定するカスタム構成設定の追加  
  カスタム設定を追加して、Windows ワトソン博士ツールでダンプ ファイルを格納する際に使用する場所を設定できます。 カスタム設定は `Directory` です。 次の例では、この構成設定を `RStrace` セクションに指定する方法を示しています。  
@@ -117,7 +117,7 @@ ms.locfileid: "36072490"
   
 -   HTTP ヘッダー、スタック トレース、およびデバッグ トレースの情報  
   
- トレース ログの情報を確認して、レポートが配信されたかどうか、レポートの受信者、および配信の試行回数を判断できます。 また、トレース ログには、レポートの処理中に有効なレポート実行操作および環境変数も記録されます。 トレース ログには、エラーおよび例外も記録されます。 たとえば、ありますレポートのタイムアウト エラー (として示されている、`ThreadAbortExceptions`エントリ)。  
+ トレース ログの情報を確認して、レポートが配信されたかどうか、レポートの受信者、および配信の試行回数を判断できます。 また、トレース ログには、レポートの処理中に有効なレポート実行操作および環境変数も記録されます。 トレース ログには、エラーおよび例外も記録されます。 たとえば、ことがわかりますレポートのタイムアウト エラー (として示される、`ThreadAbortExceptions`エントリ)。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)   

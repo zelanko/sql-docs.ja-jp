@@ -1,5 +1,5 @@
 ---
-title: データ マイニングの監視する SQL Server Profiler の使用 (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: データ マイニングの監視する SQL Server Profiler を使用して (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e3c09140c6524e7bff893a72c78aed07b056c1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71927782c80006c76b5ae54ea5edc00d53a93fed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323402"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>SQL Server Profiler を使用したデータ マイニングの監視 (Analysis Services - データ マイニング)
   必要な権限があれば、SQL Server Profiler を使用して、SQL Server Analysis Services のインスタンスに要求として送信されるデータ マイニング操作を監視できます。 データ マイニング操作には、モデルまたは構造の処理、予測クエリまたはコンテンツ クエリ、新しいモデルまたは構造の作成を組み込むことができます。  
   
- SQL Server Profiler を使用して、`trace`を含む、複数のクライアントから送信された要求を監視する[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、SQL Server Management Studio、Web サービス、または、データ マイニング アドインで、Excel の限りすべての操作は、SQL Server の同じインスタンスを使用します。Analysis Services。 監視対象とする SQL Server Analysis Services のインスタンスごとに個別のトレースを作成する必要があります。 トレースについての全般的な情報と SQL Server Profiler の使用方法については、「[SQL Server Profiler を使用した Analysis Services の監視](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)」を参照してください。  
+ SQL Server Profiler を使用して、`trace`など、複数のクライアントから送信された要求を監視する[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、SQL Server Management Studio、Web サービス、またはデータ マイニング アドイン、Excel のすべてのアクティビティとして限り SQL Server の同じインスタンスを使用します。Analysis Services。 監視対象とする SQL Server Analysis Services のインスタンスごとに個別のトレースを作成する必要があります。 トレースについての全般的な情報と SQL Server Profiler の使用方法については、「[SQL Server Profiler を使用した Analysis Services の監視](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)」を参照してください。  
   
  キャプチャするイベントの種類に関する特定の指針については、「[再生用のプロファイラー トレースの作成 (Analysis Services)](../instances/create-profiler-traces-for-replay-analysis-services.md)」を参照してください。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "36072223"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services インスタンスを監視します。](../instances/monitor-an-analysis-services-instance.md)   
- [SQL Server 拡張イベントを使用して&#40;XEvents&#41;サービス分析を監視するのには](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
+ [SQL Server 拡張イベントを使用して、 &#40;Xevent&#41;サービス モニターは分析するには](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

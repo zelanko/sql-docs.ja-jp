@@ -24,13 +24,13 @@ ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9b2255f8f2d710e5b78c58b0912a331b91e631cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 003a19e948a7b0dba2c4b9d1f251c9de78d9067a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184789"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>プログラムによるローカル パッケージの読み込みと実行
   「[パッケージの実行](../packages/run-integration-services-ssis-packages.md)」で説明されている方法を使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを必要に応じて実行したり、事前に定義した時刻に実行したりすることができます。 また、数行のコードを記述するだけで、Windows フォーム アプリケーション、コンソール アプリケーション、ASP.NET Web フォームや Web サービス、または Windows サービスなどのカスタム アプリケーションから、パッケージを実行することもできます。  
@@ -56,7 +56,7 @@ ms.locfileid: "36072787"
 >  SSIS パッケージ ストアを操作するための <xref:Microsoft.SqlServer.Dts.Runtime.Application> クラスのメソッドは、"."、localhost、またはローカル サーバーのサーバー名のみをサポートします。 "(local)" は使用できません。  
   
 ## <a name="running-a-package-programmatically"></a>プログラムによるパッケージの実行  
- ローカル コンピューターでマネージ コードを使用して、パッケージを実行するカスタム アプリケーションを開発するには、次の方法が必要です。 ここにまとめた手順は、後のサンプル コンソール アプリケーションで示します。  
+ ローカル コンピューターでマネージド コードを使用して、パッケージを実行するカスタム アプリケーションを開発するには、次の方法が必要です。 ここにまとめた手順は、後のサンプル コンソール アプリケーションで示します。  
   
 #### <a name="to-run-a-package-on-the-local-computer-programmatically"></a>プログラムによってローカル コンピューターでパッケージを実行するには  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36072787"
   
 2.  **[プロジェクト]** メニューの **[参照の追加]** をクリックし、**Microsoft.SqlServer.ManagedDTS.dll** への参照を追加します。 **[OK]** をクリックします。  
   
-3.  Visual Basic を使用して`Imports`ステートメント、または c#`using`インポートするステートメント、 **Microsoft.SqlServer.Dts.Runtime**名前空間。  
+3.  Visual Basic を使用して、`Imports`ステートメント、または c#`using`をインポートするステートメント、 **Microsoft.SqlServer.Dts.Runtime**名前空間。  
   
 4.  メイン ルーチンに次のコードを追加します。 完成したコンソール アプリケーションは、たとえば次の例のようになります。  
   
@@ -228,7 +228,7 @@ namespace RunFromClientAppWithEventsCS
 }  
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [ローカル実行とリモート実行の相違点について](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

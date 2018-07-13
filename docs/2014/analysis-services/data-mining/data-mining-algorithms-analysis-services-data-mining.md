@@ -1,5 +1,5 @@
 ---
-title: データ マイニング アルゴリズム (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: データ マイニング アルゴリズム (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - clustering [Data Mining]
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - machine learning algorithms [Analysis Services]
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 caps.latest.revision: 72
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f0c797ed300d90416e92f3dd85f575db3a08aa8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bba1521f808be45dabb89f1fe025ae1b9aa461bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243752"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>データ マイニング アルゴリズム (Analysis Services - データ マイニング)
-  A*データ マイニング アルゴリズム*データから、データ マイニング モデルを作成するヒューリスティクスと計算のセットします。 モデルを作成するために、データ マイニング アルゴリズムは、まず提供されたデータを分析し、特定の種類のパターンまたは傾向を探します。 この分析の結果は、マイニング モデルを作成するための最適化されたパラメーターを定義するために使用されます。 これらのパラメーターはデータセット全体に適用され、実用的なパターンおよび詳細な統計情報が抽出されます。  
+  A*データ マイニング アルゴリズム*データからのデータ マイニング モデルを作成するヒューリスティクスと計算のセットです。 モデルを作成するために、データ マイニング アルゴリズムは、まず提供されたデータを分析し、特定の種類のパターンまたは傾向を探します。 この分析の結果は、マイニング モデルを作成するための最適化されたパラメーターを定義するために使用されます。 これらのパラメーターはデータセット全体に適用され、実用的なパターンおよび詳細な統計情報が抽出されます。  
   
  アルゴリズムによってデータから作成されるマイニング モデルは、次のようにさまざまな形式を取ります。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36070856"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング ソリューションで使用するためには、複数のアルゴリズムを提供します。 これらのアルゴリズムは、データ マイニングで使用される最も人気のある方法論のうちのいくつかを実装したものです。 どの Microsoft データ マイニング アルゴリズムも、カスタマイズ可能であり、用意されている API または SQL Server Integration Services のデータ マイニング コンポーネントを使用して十分にプログラムできます。  
   
- OLE db for Data Mining 仕様は、準拠しているサード パーティのアルゴリズムを使用したり、サービスとして登録して、SQL Server データ マイニング フレームワーク内で使用できるカスタム アルゴリズムを開発できます。  
+ OLE db for Data Mining 仕様に準拠するサードパーティ製アルゴリズムを使用したり、サービスとして登録して、SQL Server データ マイニング フレームワーク内で使用できるカスタム アルゴリズムを開発できます。  
   
 ## <a name="choosing-the-right-algorithm"></a>適切なアルゴリズムの選択  
  特定の分析タスクに使用する最適なアルゴリズムを選択するのが困難な場合があります。 異なるアルゴリズムを使用して同じビジネス タスクを実行できる一方、各アルゴリズムによって異なる結果が生成されたり、一部のアルゴリズムでは複数の種類の結果が生成されたりする場合があります。 たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、予測だけでなく、データセット内の列の数を減らす方法としても使用できます。これは、デシジョン ツリーが、最終的なマイニング モデルに影響を与えない列を識別できるためです。  
@@ -63,7 +63,7 @@ ms.locfileid: "36070856"
   
 -   **アソシエーション アルゴリズム** 。データセット内の異なる属性間の相関関係を検出します。 この種類のアルゴリズムの最も一般的な使用例は、マーケット バスケット分析で使用するアソシエーション ルールの作成です。  
   
--   **シーケンス分析アルゴリズム**頻度の高いシーケンスまたはエピソード Web パス フローなどのデータを要約します。  
+-   **シーケンス分析アルゴリズム**頻度の高いシーケンスまたは Web パス フローなどのデータの他のエピソードを要約します。  
   
  ただし、ソリューションが複数ある中で、1 つのアルゴリズムに限定される必要はありません。 経験豊富なアナリストであれば、ある 1 つのアルゴリズムを使用して最も効果的な入力 (つまり変数) を判断し、次に別のアルゴリズムを適用してそのデータに基づいて特定の結果を予測するものです。 SQL Server データ マイニングでは、1 つのマイニング構造上に複数のモデルを構築できます。そのため、1 つのデータ マイニング ソリューション内でクラスタリング アルゴリズム、デシジョン ツリー モデル、および Naïve Bayes モデルを使用して、データに関するさまざまなビューを得ることができます。 また、1 つのソリューション内で複数のアルゴリズムを使用して、個別のタスクを実行することもできます。たとえば、回帰を使用して財務予測を取得したり、ニューラル ネットワーク アルゴリズムを使用して売上に影響を及ぼす因子を分析したりできます。  
   
@@ -75,8 +75,8 @@ ms.locfileid: "36070856"
 |**不連続属性の予測**<br /><br /> 見込み客リスト内の顧客について、見込みがあるかないかをフラグで示します。<br /><br /> あるサーバーに半年以内に障害が発生する確率を計算します。<br /><br /> 患者の転帰を分類し、関連因子を探ります。|[Microsoft デシジョン ツリー アルゴリズム](microsoft-decision-trees-algorithm.md)<br /><br /> [Microsoft Naive Bayes アルゴリズム](microsoft-naive-bayes-algorithm.md)<br /><br /> [Microsoft クラスタリング アルゴリズム](microsoft-clustering-algorithm.md)<br /><br /> [Microsoft ニューラル ネットワーク アルゴリズム](microsoft-neural-network-algorithm.md)|  
 |**連続属性の予測**<br /><br /> 翌年の売上を予測します。<br /><br /> 過去の歴史的、季節的傾向を考慮に入れて、来場者を予測します。<br /><br /> 人口統計を考慮に入れて、リスク スコアを生成します。|[Microsoft デシジョン ツリー アルゴリズム](microsoft-decision-trees-algorithm.md)<br /><br /> [Microsoft タイム シリーズ アルゴリズム](microsoft-time-series-algorithm.md)<br /><br /> [Microsoft 線形回帰アルゴリズム](microsoft-linear-regression-algorithm.md)|  
 |**シーケンスの予測**<br /><br /> ある企業の Web サイトのクリックストリーム分析を実行します。<br /><br /> サーバーの障害につながる要因を分析します。<br /><br /> 外来患者の来院中の一連の行動を把握し分析して、共通する行動に関するベスト プラクティスを組み立てます。|[Microsoft シーケンス クラスタリング アルゴリズム](microsoft-sequence-clustering-algorithm.md)|  
-|**トランザクション内のグループの共通アイテムの検出**<br /><br /> マーケット バスケット分析を使用して、製品の配置を決定します。<br /><br /> ある顧客に追加購入を勧める製品を提案します。<br /><br /> ある 1 件のイベントへの来場者の調査データを分析して、相関関係のある行動またはブースを特定し、今後の活動計画を立てます。|[Microsoft アソシエーション アルゴリズム](microsoft-association-algorithm.md)<br /><br /> [Microsoft デシジョン ツリー アルゴリズム](microsoft-decision-trees-algorithm.md)|  
-|**類似した項目のグループの検索**<br /><br /> 人口統計や行動などの属性に基づいて、患者リスク プロファイル グループを作成します。<br /><br /> ユーザーを閲覧パターンと購買パターンで分析します。<br /><br /> 同じような使用状況特性を持つサーバーを特定します。|[Microsoft クラスタリング アルゴリズム](microsoft-clustering-algorithm.md)<br /><br /> [Microsoft シーケンス クラスタリング アルゴリズム](microsoft-sequence-clustering-algorithm.md)|  
+|**トランザクション内の共通項目グループの検出**<br /><br /> マーケット バスケット分析を使用して、製品の配置を決定します。<br /><br /> ある顧客に追加購入を勧める製品を提案します。<br /><br /> ある 1 件のイベントへの来場者の調査データを分析して、相関関係のある行動またはブースを特定し、今後の活動計画を立てます。|[Microsoft アソシエーション アルゴリズム](microsoft-association-algorithm.md)<br /><br /> [Microsoft デシジョン ツリー アルゴリズム](microsoft-decision-trees-algorithm.md)|  
+|**類似アイテムのグループの検索**<br /><br /> 人口統計や行動などの属性に基づいて、患者リスク プロファイル グループを作成します。<br /><br /> ユーザーを閲覧パターンと購買パターンで分析します。<br /><br /> 同じような使用状況特性を持つサーバーを特定します。|[Microsoft クラスタリング アルゴリズム](microsoft-clustering-algorithm.md)<br /><br /> [Microsoft シーケンス クラスタリング アルゴリズム](microsoft-sequence-clustering-algorithm.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に用意されている各データ マイニング アルゴリズムの学習用リソースのリンクを次の表に示します。  
@@ -94,7 +94,7 @@ ms.locfileid: "36070856"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|**トピック**|**description**|  
+|**トピック**|**[説明]**|  
 |---------------|---------------------|  
 |あるデータ マイニング モデルで使用されるアルゴリズムを判断します。|[マイニング モデルの作成に使用されたパラメーターのクエリ](query-the-parameters-used-to-create-a-mining-model.md)|  
 |カスタム プラグイン アルゴリズムを作成します。|[プラグイン アルゴリズム](plugin-algorithms.md)|  

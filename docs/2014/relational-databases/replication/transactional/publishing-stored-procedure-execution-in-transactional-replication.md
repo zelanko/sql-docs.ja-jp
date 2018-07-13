@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
 - articles [SQL Server replication], stored procedures and
 - transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 54248d09fb5db085a147f8e57ed245768c90016e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c0217a945e7197f44869c74b381eb61c75d6bf9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212722"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行
   パブリッシャー側で実行され、パブリッシュされたテーブルに影響を与えるストアド プロシージャがある場合、それらのストアド プロシージャをストアド プロシージャ実行アーティクルとしてパブリケーションに含めることを検討してください。 プロシージャの定義 (CREATE PROCEDURE ステートメント) はサブスクリプションが初期化されるときにサブスクライバーにレプリケートされます。プロシージャがパブリッシャーで実行されるときに、レプリケーションは対応するプロシージャをサブスクライバーで実行します。 これにより、各行の個別の変更のレプリケーションが回避されてプロシージャの実行のみがレプリケートされるため、大量のバッチ操作が実行される場合にはパフォーマンスが著しく向上します。 たとえば、パブリケーション データベースで次のストアド プロシージャを作成するとします。  

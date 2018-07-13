@@ -1,5 +1,5 @@
 ---
-title: データ マイニング プロパティ |Microsoft ドキュメント
+title: データ マイニング プロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ClusterCount property
 - AllowedProvidersInOpenRowset property
@@ -58,15 +58,15 @@ helpviewer_keywords:
 - MaximumSeriesValue property
 ms.assetid: 9bc9abed-180a-4bd8-b2eb-89c62fa88110
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7febe30dd05f52525b579474ec7a68cdd15a31f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c7db78e6f09191f0c778fd8026d1b8a251eb126
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253054"
 ---
 # <a name="data-mining-properties"></a>データ マイニング プロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すデータ マイニング サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  

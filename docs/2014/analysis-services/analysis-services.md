@@ -1,5 +1,5 @@
 ---
-title: Analysis Services |Microsoft ドキュメント
+title: Analysis Services |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, about Analysis Services - Multidimensional Data
 - SSAS
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2cfc01ba3942ff431ca9bef78ea7bb16a5d56d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4c20d17212de682466947bf86ddd415420b0576
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185449"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、意思決定支援とビジネス インテリジェンス (BI) ソリューションに使用されるオンライン分析データ エンジンであり、ビジネス レポートおよび、Excel、Reporting Services レポート、他のサード パーティの BI ツールのようなクライアント アプリケーションによって使用される分析データを提供します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の一般的なワークフローには、OLAP または表形式のデータ モデルを作成し、そのモデルをデータベースとして [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに配置し、データが読み込まれるようにデータベースを処理し、データへのアクセスを許可する権限を割り当てることが含まれます。 準備が完了すると、複数の用途を持つこのデータ モデルに、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] をデータ ソースとしてサポートしている任意のクライアント アプリケーションがアクセスできるようになります。  
   
- モデルを作成するには、SQL Server Data Tools を使用 (を参照してください[ツールと Analysis Services で使用されるアプリケーション](tools-and-applications-used-in-analysis-services.md))、テーブルまたは多次元およびデータ マイニング プロジェクト テンプレートのいずれかを選択します。 プロジェクト テンプレートには、モデルで必要とされるすべてのオブジェクトのフォルダーが含まれています。 ウィザードを使用して、データ ソース、データ ソース ビュー、ディメンション、キューブ、ロールなど、すべての基本的な要素を作成することができます。  
+ モデルを作成するには、SQL Server Data Tools を使用 (を参照してください[ツールと Analysis Services で使用されるアプリケーション](tools-and-applications-used-in-analysis-services.md))、いずれかを表形式または多次元およびデータ マイニング プロジェクト テンプレートを選択します。 プロジェクト テンプレートには、モデルで必要とされるすべてのオブジェクトのフォルダーが含まれています。 ウィザードを使用して、データ ソース、データ ソース ビュー、ディメンション、キューブ、ロールなど、すべての基本的な要素を作成することができます。  
   
  モデルは、外部データ システムから取得したデータによって作成されます。通常は外部データ システムとして、SQL Server または Oracle リレーショナル データベース エンジンでホストされているデータ ウェアハウスを使用します (テーブル モデルでは、追加のデータ ソースの種類もサポートされています)。 モデルは、キューブなどのクエリ オブジェクトを指定しますが、複数のキューブ、計算、KPI (ビジネス ロジック、ナビゲーションやドリルスルー動作などの相互作用をカプセル化する) で使用できるディメンションも指定します。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "36074086"
  Analysis Services に関する基本ドキュメントは、作成するプロジェクトの種類に対応するセクション別に分類されます。 それぞれのモードまたは機能領域の詳細については、次のリンクから選択してください。  
   
  **領域ごとのコンテンツの参照**  
- ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[テーブル ソリューションと多次元ソリューションの比較&#40;SSAS&#41;](comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[テーブルと多次元ソリューションのソリューションの比較&#40;SSAS&#41;](comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [Analysis Services インスタンス管理](instances/analysis-services-instance-management.md)  
+ ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [Analysis Services インスタンスの管理](instances/analysis-services-instance-management.md)  
   
  ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[テーブル モデリング&#40;SSAS 表形式&#41;](tabular-models/tabular-models-ssas.md)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36074086"
 ## <a name="see-also"></a>参照  
  [Analysis Services チュートリアル&#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [SQL Server 2014 のインストール](../database-engine/install-windows/installation-for-sql-server.md)   
- [開発者ガイド 』 &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
+ [Developer's Guide &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
  [SQL Server リソース センター](http://go.microsoft.com/fwlink/?linkID=219676)   
  [SQLCat.com](http://go.microsoft.com/fwlink/?linkID=220963)  
   

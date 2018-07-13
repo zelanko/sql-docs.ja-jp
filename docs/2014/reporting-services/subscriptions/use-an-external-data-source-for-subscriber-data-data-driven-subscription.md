@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriber data sources [Reporting Services]
 - subscriptions [Reporting Services], external data sources
@@ -20,13 +20,13 @@ ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 15d1bfd8489a8150fb0773708fa7f62b6a659cbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b81ef71db369b8ede4b85043c860edc73763252
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255534"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション)
   データ ドリブン サブスクリプションでは、外部データ ソースからデータを取得するクエリまたはコマンドによって、動的サブスクリプション データが提供されます。 サブスクリプション データは、データ ドリブン サブスクリプション処理の要件を満たす、サポートされているデータ ソースから取得できます。 クエリまたはコマンドの構文は、レポート サーバーと一緒にインストールされたデータ処理拡張機能に対して有効である必要があります。  
@@ -64,7 +64,7 @@ ms.locfileid: "36072486"
 -   レポート サーバーでは、結果セットの行ごとにレポート配信が作成されます。 結果セットが 300 行の場合、レポート サーバーでは、300 個のレポートについて配信が試行されます。  
   
 ## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>サブスクライバー データベースの変数データを使用した配信オプションの設定  
- サブスクライバー データベースのデータを使用して、各受信者に関する配信オプションをカスタマイズできます。 利用可能なオプションは、使用している配信拡張機能の種類によって決まります。 レポート サーバーの電子メール配信拡張機能を使用している場合、クエリは、各サブスクライバーの電子メール エイリアスを含む必要があります。 ファイル共有配信を使用している場合、サブスクライバー固有のレポート ファイルの作成や配信先の指定に使用できる値をサブスクライバー データに含める必要があります。 詳細については、次を参照してください。 [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)と[Reporting Services での電子メール配信](e-mail-delivery-in-reporting-services.md)です。  
+ サブスクライバー データベースのデータを使用して、各受信者に関する配信オプションをカスタマイズできます。 利用可能なオプションは、使用している配信拡張機能の種類によって決まります。 レポート サーバーの電子メール配信拡張機能を使用している場合、クエリは、各サブスクライバーの電子メール エイリアスを含む必要があります。 ファイル共有配信を使用している場合、サブスクライバー固有のレポート ファイルの作成や配信先の指定に使用できる値をサブスクライバー データに含める必要があります。 詳細については、次を参照してください。 [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)と[Reporting Services での電子メール配信](e-mail-delivery-in-reporting-services.md)します。  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>サブスクライバー データベースからレポートへのパラメーター値の受け渡し  
  パラメーター化されたレポート用のデータ ドリブン サブスクリプションを作成する場合、変数パラメーター値を使用して、各レポートの出力をカスタマイズできます。 たとえば、サブスクライバー データベースには、レポート データのフィルター処理に使用できる従業員 ID 番号、雇用日、職種、および勤務地情報が含まれていることがあります。 これらの列データまたは他の使用可能な列データに基づいたパラメーターをレポートが受け取ると、そのパラメーターを適切な列にマップすることができます。  

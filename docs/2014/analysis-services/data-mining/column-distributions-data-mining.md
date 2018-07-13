@@ -1,5 +1,5 @@
 ---
-title: 列の分布 (データ マイニング) |Microsoft ドキュメント
+title: 列の分布 (データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - normal distribution type [data mining]
 - uniform distribution type [data mining]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - distributions [data mining]
 ms.assetid: 87e700de-32be-4bc8-b01d-ba4ee1ab48de
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5170f490f6e6940b2d5bf4d8f7de7880f88d2e7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ee97f2b92aa1d98317ac9f420d6065340a60dba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189429"
 ---
 # <a name="column-distributions-data-mining"></a>列の分布 (データ マイニング)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、マイニング構造内の列の分布を定義して、マイニング モデルの作成時にこれらの列のデータがアルゴリズムによってどのように処理されるかを指定できます。 いくつかのアルゴリズムは、列が値の一般的な分布を含むことが認識された場合、モデルを処理する前にすべての連続列の分布を定義するために使用されます。 分布が定義されない場合、アルゴリズムが持つデータを解釈するための情報が少ないため、分布が定義されたときよりも、マイニング モデルの結果が実際の予測より小さくなる場合があります。  
@@ -46,7 +46,7 @@ ms.locfileid: "36071564"
  `Uniform`  
  連続列の値はフラット曲線を形成し、すべての値が等しくなります。  
   
- ![一様分布によるヒストグラム](../media/uniform-distribution.gif "一様分布によるヒストグラム")  
+ ![一様分布のヒストグラム](../media/uniform-distribution.gif "一様分布のヒストグラム")  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が提供するアルゴリズムの詳細については、「[データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)」を参照してください。  
   

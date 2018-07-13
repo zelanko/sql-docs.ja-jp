@@ -1,5 +1,5 @@
 ---
-title: オプション (テキスト エディターに XML が書式設定 ページ) |Microsoft ドキュメント
+title: オプション (テキスト エディターに XML が書式設定 ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 caps.latest.revision: 12
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d77f7351d712f63e9cfc92c3ff03b131cb6d5d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 667b01cbdaa1e5107dcbac8a68879a94d6efc06e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209592"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>[オプション] ([テキスト エディター]/[XML]/[書式設定] ページ)
   このダイアログ ボックスでは、XML エディターの書式設定を指定できます。 **[ツール]** メニューから **[オプション]** ダイアログ ボックスにアクセスできます。  
@@ -30,13 +30,13 @@ ms.locfileid: "36072395"
 >  次の設定は、**[テキスト エディター]** フォルダーを展開し、**[XML]** フォルダーを展開して、**[オプション]** ダイアログ ボックスの **[書式設定]** オプションを選択したときに利用可能になります。  
   
 ## <a name="attributes"></a>属性  
- **手動による属性の書式を保持します。**  
+ **手動による属性の書式設定を保持します。**  
  属性の書式設定を変更しません。 既定値です。  
   
 > [!NOTE]  
 >  属性が複数行にある場合、エディターは属性の各行にインデントを設定して、親要素のインデントに一致させます。  
   
- **別の行に属性を揃える**  
+ **別の行に属性を配置します。**  
  2 番目以降の属性を縦に配置して、最初の属性のインデントに一致させます。 次の XML テキストは、属性を配置する方法の例です。  
   
 ```  
@@ -54,7 +54,7 @@ ms.locfileid: "36072395"
  終了タグが完了するときに、要素の書式設定を変更します。  
   
 ## <a name="mixed-content"></a>[混合コンテンツ]  
- **既定では混合コンテンツを書式設定します。**  
+ **既定では、混合コンテンツを書式設定します。**  
  コンテンツが `xml:space="preserve"` 範囲内で検出された場合以外は、混合コンテンツの書式設定を変更します。 既定値です。  
   
  要素にテキストとマークアップが混在している場合、コンテンツは混合コンテンツと見なされます。 次に、混合コンテンツを含む要素の例を示します。  

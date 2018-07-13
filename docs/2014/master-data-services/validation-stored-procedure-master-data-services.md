@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 332d3c86-4440-4f12-a6cb-ffbfbccde52c
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0e1278d7d44d4fb808d03b4055ff823249e1b955
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1eac3e49af2f5caa615a35f4a1d55f288a6fde28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170964"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>検証ストアド プロシージャ (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ビジネス ルールをモデル バージョンのすべてのメンバーに適用するためにバージョンが検証されます。  
@@ -63,6 +63,6 @@ EXECUTE mdm.udpValidateModel @User_ID, @Model_ID, @Version_ID, 1
   
 ## <a name="see-also"></a>参照  
  [データのインポート&#40;マスター データ サービス&#41;](overview-importing-data-from-tables-master-data-services.md)   
- [ビジネス ルールに対してバージョンを検証する&#40;マスター データ サービス&#41;](validate-a-version-against-business-rules-master-data-services.md)  
+ [ビジネス ルールに対してバージョンを検証&#40;マスター データ サービス&#41;](validate-a-version-against-business-rules-master-data-services.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], rows not matching value
 - row not matching value [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - search criteria [SQL Server], rows not matching value
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c0bfc7ef077a3e968ec418430a5b4213c4ef552b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fe569d2b93def44db3af6c769ca975823c218a4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169813"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>値の一致しない行を選択する方法 (Visual Database Tools)
   値の一致しない行を検索するには、NOT 演算子を使用します。  

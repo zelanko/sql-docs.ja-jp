@@ -1,5 +1,5 @@
 ---
-title: 使用中のファイルをチェック |Microsoft ドキュメント
+title: 使用中のファイルを確認してください |。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 26b0f9598aa04afc9afebc90a571c999ce653821
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 32e2152d93cc49309b6824462f5d413d59d30daf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242312"
 ---
 # <a name="check-files-in-use"></a>使用中のファイルの確認
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのインストール後に Windows が再起動されないようにするには、[使用中のファイルの確認] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのセットアップ プログラムで必要とされるファイルをロックしているプロセスを特定します。  

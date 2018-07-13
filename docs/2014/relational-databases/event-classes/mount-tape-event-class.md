@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Mount Tape event class
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ff91df60400c4791e774f786e14fe611326a546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c0d6b7726e2a9bdeeb378df45b998bcd6d8e5187
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271368"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape イベント クラス
   Mount Tape イベント クラスは、テープのマウント要求を受け取ったときに発生します。 テープのマウント要求およびその要求の成功と失敗を監視するには、このイベント クラスを使用します。  

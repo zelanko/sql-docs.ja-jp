@@ -1,5 +1,5 @@
 ---
-title: Analysis Services データベースの同期 |Microsoft ドキュメント
+title: Analysis Services データベースの同期 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, Synchronize Database Wizard
 - deploying [Analysis Services], Synchronize Database Wizard
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 193368b32f32941c5da99b134ce02b00b0b4c7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b7bf8e598c6f9db0d2c0db12b63c84dad20daf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216202"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services データベースの同期
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に付属しているデータベースの同期機能は、同期元サーバー上のデータベースから同期先サーバー上のデータベースにデータおよびメタデータをコピーすることによって、2 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを同一にします。 データベースの同期機能は、次のタスクを達成するために使用します。  
@@ -47,11 +47,11 @@ ms.locfileid: "36073342"
 >  次のホワイト ペーパーは、Analysis Services の以前のバージョンを対象として作成されたものですが、SQL Server 2012 を使用して作成したスケーラブルな多次元ソリューションにも引き続き当てはまります。 詳細については、「 [Analysis Services を使用するクエリのスケールアウト](http://go.microsoft.com/fwlink/?LinkId=253136) 」および「 [読み取り専用データベースによる Analysis Services のクエリのスケールアウト](http://go.microsoft.com/fwlink/?LinkId=253137.)」を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
- データベースの同期を開始する同期先 (またはターゲット) サーバーで、Analysis Services サーバー管理者ロールのメンバーである必要があります。 同期元サーバーで、使用している Windows ユーザー アカウントに、同期元データベースに対するフル コントロールの権限が付与されている必要があります。 データベースを対話形式で同期する場合は、自分の Windows ユーザー ID のセキュリティ コンテキストで同期が実行されることに注意してください。 自分のアカウントが特定のオブジェクトへのアクセスを拒否された場合は、そのようなオブジェクトは操作から除外されます。 サーバー管理者ロールとデータベース権限の詳細については、次を参照してください[サーバー管理者のアクセス許可を付与&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)と[データベース権限の付与&#40;。Analysis Services&#41;](grant-database-permissions-analysis-services.md)です。  
+ データベースの同期を開始する同期先 (またはターゲット) サーバーで、Analysis Services サーバー管理者ロールのメンバーである必要があります。 同期元サーバーで、使用している Windows ユーザー アカウントに、同期元データベースに対するフル コントロールの権限が付与されている必要があります。 データベースを対話形式で同期する場合は、自分の Windows ユーザー ID のセキュリティ コンテキストで同期が実行されることに注意してください。 自分のアカウントが特定のオブジェクトへのアクセスを拒否された場合は、そのようなオブジェクトは操作から除外されます。 サーバー管理者ロールとデータベース権限の詳細については、次を参照してください[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)と[データベース アクセス許可を付与&#40;。Analysis Services&#41;](grant-database-permissions-analysis-services.md)します。  
   
  既定のインスタンス間のリモート接続を許可するために、両方のサーバーで TCP ポート 2383 を開く必要があります。 Windows ファイアウォールの例外を作成する方法の詳細については、「[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
   
- ソースと変換先の両方のサーバーには、同じバージョンおよびサービス パックがあります。 モデルのメタデータも同期されているため、ビルドの互換性を確保する両方のサーバーの数、同じはずです。 各インストールのエディションが、データベースの同期をサポートしている必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データベースの同期は、Enterprise、Developer、および Business Intelligence の各エディションでサポートされています。 各エディションで機能の詳細については、次を参照してください。 [SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ ソースと宛先の両方のサーバーは、同じバージョンおよび service pack である必要があります。 モデルのメタデータが同期されていることもあるため、ビルドの互換性を確保する両方のサーバー数する必要があります同じであります。 各インストールのエディションが、データベースの同期をサポートしている必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データベースの同期は、Enterprise、Developer、および Business Intelligence の各エディションでサポートされています。 各エディションで機能の詳細については、次を参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
  サーバー配置モードは、各サーバーで同じである必要があります。 同期するデータベースが多次元である場合は、同期元サーバーと同期先サーバーの両方が、多次元サーバー モードで構成されている必要があります。 配置モードの詳細については、「[Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)」を参照してください。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36073342"
      **[サイズ (MB)]**  
      パーティションのサイズ (MB) が表示されます。  
   
-5.  必要に応じて、リモート パーティションの場所を変更します。 **[リモート パーティションの場所を指定]** ページでは、同期元サーバー上の指定したデータベースによって管理されているリモート パーティションを同期するかどうかを決定し、選択したリモート パーティションを格納する同期先の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスおよびデータベースを指定します。  
+5.  必要に応じて、リモート パーティションの場所を変更します。**[リモート パーティションの場所を指定]** ページでは、同期元サーバー上の指定したデータベースによって管理されているリモート パーティションを同期するかどうかを決定し、選択したリモート パーティションを格納する同期先の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスおよびデータベースを指定します。  
   
     > [!NOTE]  
     >  このページは、同期元の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの指定されたデータベースによって 1 つ以上のリモート パーティションが管理されている場合にのみ表示されます。  

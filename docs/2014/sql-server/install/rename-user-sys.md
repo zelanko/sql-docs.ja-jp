@@ -1,5 +1,5 @@
 ---
-title: ユーザー sys の名前を変更 |Microsoft ドキュメント
+title: ユーザー sys の名前を変更する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sys user names [SQL Server]
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 959eb9877fa4b73ff9bd307019976a05514b8f8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8cfb55c4199935d7d859cdc9144f5a29dc34eff9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202562"
 ---
 # <a name="rename-user-sys"></a>ユーザー sys の名前変更が必要
   アップグレード アドバイザーには、ユーザー名が検出された**sys**データベースにします。 この名前は予約されています。 このユーザー名を変更した後、アップグレードしてください。 ユーザー名が変更されていないと、データベースはアップグレード処理後に問題ありの状態となり、データベースをオンラインにするまで使用できません。  
@@ -39,7 +39,7 @@ ms.locfileid: "36073666"
   
 1.  新しいユーザーを作成します。  
   
-2.  次のステートメントを使用してユーザーに与えられた権限をすべて表示**sys**とユーザーに与え**sys**です。  
+2.  次のステートメントを使用して、ユーザーが与えられているすべてのアクセス許可を表示する**sys**し、ユーザーに与えられた**sys**します。  
   
     ```  
     -- Return permissions granted by user sys.  
@@ -48,11 +48,11 @@ ms.locfileid: "36073666"
     SELECT * FROM sysprotects WHERE uid = USER_ID('sys')  
     ```  
   
-3.  所有するすべてのオブジェクトの所有権を譲渡する**sys**を使用して、新しいユーザーを**sp_changeobjectowner**です。  
+3.  によって所有されているすべてのオブジェクトの所有権を譲渡する**sys** 、新しいユーザーを使用して**sp_changeobjectowner**します。  
   
-4.  ユーザーを削除して**sys**です。  
+4.  ユーザーを削除して**sys**します。  
   
-5.  手順 2. でキャプチャされた元のアクセス許可を復元するには、使用、AS *new_user* GRANT ステートメントの句。  
+5.  手順 2. でキャプチャされた元のアクセス許可を復元するために、AS を使用して、 *new_user* GRANT ステートメントの句。  
   
 6.  新しいユーザーを参照するようにスクリプトを修正します。 たとえば、`SELECT * FROM sys.my`_`table` などのステートメントを含むスクリプトを `SELECT * FROM new_user.my_table` に変更する必要があります。  
   

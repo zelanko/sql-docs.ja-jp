@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index size [SQL Server]
 - index keys [SQL Server]
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8c05f2575c1c3d49c76024e50e6defdff12185b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b36575e6dbd197db0617ba258e93ae337027db2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197242"
 ---
 # <a name="create-indexes-with-included-columns"></a>付加列インデックスの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用し、付加列 (非キー列) を追加して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]の非クラスター化インデックスの機能を拡張する方法について説明します。 非キー列を含めることにより、より多くのクエリをカバーする非クラスター化インデックスを作成できます。 これは、非キー列には次の利点があるためです。  
@@ -83,7 +82,7 @@ ms.locfileid: "36072778"
   
     -   列の NULL 値の許容を NOT NULL から NULL に変更する。  
   
-    -   長さを増やす`varchar`、 `nvarchar`、または`varbinary`列です。  
+    -   長さを増やす`varchar`、 `nvarchar`、または`varbinary`列。  
   
 ###  <a name="Security"></a> セキュリティ  
   

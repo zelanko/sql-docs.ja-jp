@@ -1,5 +1,5 @@
 ---
-title: データ フロー コンポーネントで、エラー出力の構成 |Microsoft ドキュメント
+title: データ フロー コンポーネントでエラー出力の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [Integration Services], data flow components
 - components [Integration Services], data flow
 - error outputs [Integration Services]
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 03e93be67cdaba636edf9be0c0a33abc12e3700b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e61c6583a58ffb2ae84af9a4050ca077fb11b80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329875"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>データ フロー コンポーネントでエラー出力を構成する
   多くのデータ フロー コンポーネントがエラー出力をサポートしており、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでエラー出力を構成する方法は、コンポーネントに応じて異なります。 エラー出力の構成以外に、エラー出力の列を構成することもできます。 これには、コンポーネントによって追加される **[ErrorCode]** 列や **[ErrorColumn]** 列の構成が含まれます。  

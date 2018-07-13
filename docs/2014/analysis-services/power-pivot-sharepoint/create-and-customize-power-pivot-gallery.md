@@ -1,5 +1,5 @@
 ---
-title: 作成し、PowerPivot ギャラリーのカスタマイズ |Microsoft ドキュメント
+title: 作成し、PowerPivot ギャラリーのカスタマイズ |Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 039c5b834287d17480c9031f17ab2fed25c641fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d2e5434ae7f306b3f4a8de1d1c7356beb989b82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181011"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>PowerPivot ギャラリーの作成およびカスタマイズ
   PowerPivot ギャラリーは、特殊な種類の SharePoint ドキュメント ライブラリであり、PowerPivot データを含むパブリッシュ済みの Excel ブックおよび Reporting Services レポートを対象とする、豊富なプレビュー機能とドキュメント管理機能を提供します。  
@@ -54,12 +54,12 @@ ms.locfileid: "36073595"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを制限付きサイトに入れることはできません。 信頼済みサイトやローカル イントラネット ゾーンのいずれかに、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを含む親サイトを追加する必要があります。  
   
--   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web アプリケーション ソリューションをアプリに配置し、サイト コレクション用に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能をアクティブにしておく必要があります。 詳細については、次を参照してください。[を SharePoint に PowerPivot ソリューションの配置](deploy-power-pivot-solutions-to-sharepoint.md)と[サーバーの全体管理のサイト コレクションの PowerPivot 機能統合をアクティブ化](activate-power-pivot-integration-for-site-collections-in-ca.md)です。  
+-   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web アプリケーション ソリューションをアプリに配置し、サイト コレクション用に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能をアクティブにしておく必要があります。 詳細については、次を参照してください。 [SharePoint に PowerPivot ソリューションの配置](deploy-power-pivot-solutions-to-sharepoint.md)と[PowerPivot 機能の統合サーバーの全体管理のサイト コレクション用にアクティブ化](activate-power-pivot-integration-for-site-collections-in-ca.md)します。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに基づく Reporting Services レポートを表示または作成するには、ブックとレポートが同じ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーに含まれている必要があります。 埋め込みデータを含む [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックをレポートで使うか、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックである外部データ ソースがブックに 1 つだけ含まれている必要があります。  
   
 ##  <a name="overview"></a> 概要  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーは、SharePoint サーバーに [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] をインストールしたときに使用可能になるライブラリ テンプレートです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーには、ファイルのコンテンツを正確にプレビューしたものとドキュメントのパブリッシュ元に関する情報を組み合わせたテンプレートが格納されます。 ドキュメントの作成者と最終変更日時をすぐに確認できます。 プレビュー イメージを作成する[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ギャラリーは読み取ることができるスナップショット サービスを使用して[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ブックおよび Reporting Services レポートを PowerPivot データが含まれます。 スナップショット サービスで読み取ることのできないファイルをパブリッシュした場合、そのファイルのプレビュー イメージは表示されません。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーは、SharePoint サーバーに [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] をインストールしたときに使用可能になるライブラリ テンプレートです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーには、ファイルのコンテンツを正確にプレビューしたものとドキュメントのパブリッシュ元に関する情報を組み合わせたテンプレートが格納されます。 ドキュメントの作成者と最終変更日時をすぐに確認できます。 プレビュー イメージを作成する[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ギャラリーが読み取ることができるスナップショット サービスを使用して[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ブックと PowerPivot データを含む Reporting Services レポート。 スナップショット サービスで読み取ることのできないファイルをパブリッシュした場合、そのファイルのプレビュー イメージは表示されません。  
   
  プレビュー イメージは、Excel Services がブックを表示する方法に基づいています。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーでの表示は、通常、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックをブラウザーで表示したときと同じです。 ただし、プレビュー領域は限られており、 使用可能な領域に合わせてブックやレポートの一部が省略される場合があります。 ドキュメント全体を表示するために、ブックまたはレポートを開くことが必要になる場合があります。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36073595"
   
     3.  [ライブラリ] の **[PowerPivot ギャラリー]** をクリックします。  
   
-    1.  **SharePoint 2013**: 設定アイコンをクリックして![SharePoint 設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")です。 **[サイト コンテンツ]** をクリックします。  
+    1.  **SharePoint 2013**: 設定アイコンをクリックして![SharePoint 設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")します。 **[サイト コンテンツ]** をクリックします。  
   
     2.  **[アプリケーションの追加]** をクリックします。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36073595"
   
 3.  **[作成]** をクリックします。  
   
-4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを Excel Services の信頼できる場所として追加するように、ファーム管理者またはサービス管理者に依頼します。 この手順は、ユーザーが [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの更新をブックに構成した場合にエラーが発生するのを防ぐために必要です。 このタスクの詳細については、次を参照してください。[サーバーの全体管理で PowerPivot サイト用の信頼できる場所を作成する](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)です。  
+4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを Excel Services の信頼できる場所として追加するように、ファーム管理者またはサービス管理者に依頼します。 この手順は、ユーザーが [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの更新をブックに構成した場合にエラーが発生するのを防ぐために必要です。 このタスクの詳細については、次を参照してください。[サーバーの全体管理で PowerPivot サイト用の信頼できる場所を作成](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)です。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー ライブラリへのリンクが、現在のサイトのナビゲーションのクイック起動ペインに表示されます。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36073595"
   
 ## <a name="see-also"></a>参照  
  [PowerPivot for SharePoint のインストールのトラブルシューティングを行う](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
- [PowerPivot ギャラリーの使用](use-power-pivot-gallery.md)   
+ [PowerPivot ギャラリーを使用します。](use-power-pivot-gallery.md)   
  [サーバーの全体管理で PowerPivot サイト用の信頼できる場所を作成します。](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [PowerPivot ギャラリーの削除](delete-power-pivot-gallery.md)  
   

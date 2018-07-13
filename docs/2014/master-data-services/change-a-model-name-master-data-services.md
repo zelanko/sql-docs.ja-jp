@@ -1,5 +1,5 @@
 ---
-title: 名前を変更するモデル (Master Data Services) |Microsoft ドキュメント
+title: モデル名を変更 (マスター データ サービス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 caps.latest.revision: 4
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc049820c419dd2b5dd3fbcd165522ef80193d2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58f66ff01adba7661897b93076d7867bab73dcff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324422"
 ---
 # <a name="change-a-model-name-master-data-services"></a>モデル名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、モデルの名前を変更できます。  
@@ -39,19 +39,19 @@ ms.locfileid: "36071700"
   
 2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして **[モデル]** をクリックします。  
   
-3.  **モデルのメンテナンス** ページで、グリッドでは、名前を変更すると、モデルの行をクリックします。  
+3.  **モデルのメンテナンス**ページで、グリッドはモデルの名前を変更する行をクリックします。  
   
     > [!NOTE]  
     >  メタデータ モデルの名前は変更できません。  
   
-4.  をクリックして**選択したモデルの編集**です。  
+4.  クリックして**選択したモデルの編集**します。  
   
 5.  **モデル名**ボックスに、モデルの更新後の名前を入力します。  
   
 6.  **[モデルの保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [モデルを作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
+ [モデルを作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
  [モデルを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-model-master-data-services.md)   
  [モデル (マスター データ サービス)](../../2014/master-data-services/models-master-data-services.md)  
   

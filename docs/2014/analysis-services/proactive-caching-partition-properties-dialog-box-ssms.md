@@ -1,5 +1,5 @@
 ---
-title: プロアクティブ キャッシュ (パーティションのプロパティ ダイアログ ボックス) (SSMS) |Microsoft ドキュメント
+title: プロアクティブ キャッシュ (パーティションのプロパティ ダイアログ ボックス) (SSMS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.proactivecaching.f1
 ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f9fd673862cb7443a69a3a1bb91b070914bfc455
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af6d5134b697b2554170695d2e87824d961f090b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237652"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>[プロアクティブ キャッシュ] ([パーティションのプロパティ] ダイアログ ボックス) (SSMS)
   SQL Server Management Studio の **[パーティションのプロパティ]** ダイアログ ボックスの **[プロアクティブ キャッシュ]** ページでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのキューブに対してメジャー グループのパーティションのストレージおよびプロアクティブ キャッシュのプロパティを設定できます。  
@@ -38,9 +38,9 @@ ms.locfileid: "36072443"
 |**リアルタイム ROLAP**|次のストレージとプロアクティブ キャッシュ設定を使用します。<br /><br /> ROLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> 古くなったキャッシュを待機時間 0 秒で削除します。<br /><br /> オブジェクトを直ちにオンラインにします。|  
 |**リアルタイム HOLAP**|次のストレージとプロアクティブ キャッシュ設定を使用します。<br /><br /> HOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> 古くなったキャッシュを待機時間 0 秒で削除します。<br /><br /> データが変更されると、アクティビティがない状態の間隔 0 秒、アクティビティがない状態のオーバーライド間隔なしでキャッシュを更新します。<br /><br /> オブジェクトを直ちにオンラインにします。|  
 |**低待機時間 MOLAP**|次のストレージとプロアクティブ キャッシュ設定を使用します。<br /><br /> MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> 古くなったキャッシュを待機時間 30 分で削除します。<br /><br /> アクティビティがない状態の間隔 10 秒、アクティビティがない状態のオーバーライド間隔 10 分でキャッシュを更新します。<br /><br /> アクティビティがない状態の間隔 10 秒、アクティビティがない状態のオーバーライド間隔 10 分でキャッシュを更新します。<br /><br /> オブジェクトを直ちにオンラインにします。|  
-|**中待機時間 MOLAP**|すぐにオンライン useBrings のオブジェクトを選択します。<br /><br /> 次のストレージとプロアクティブ キャッシュ設定:<br /><br /> MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> 古くなったキャッシュを待機時間 4 時間で削除します。<br /><br /> アクティビティがない状態の間隔 10 秒、アクティビティがない状態のオーバーライド間隔 10 分でキャッシュを更新します。<br /><br /> オブジェクトを直ちにオンラインにします。|  
-|**[自動 MOLAP]**|次のストレージとプロアクティブ キャッシュ設定を使用します。<br /><br /> MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> データが変更されると、アクティビティがない状態の間隔 0 秒、アクティビティがない状態のオーバーライド間隔なしでキャッシュを更新します。|  
-|**[定期 MOLAP]**|次のストレージとプロアクティブ キャッシュ設定を使用します。<br /><br /> MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> キャッシュを定期的に更新します。再構築間隔は 1 日です。|  
+|**中待機時間 MOLAP**|すぐにオンラインに useBrings オブジェクトを選択します。<br /><br /> 次のストレージとプロアクティブ キャッシュの設定:<br /><br /> MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> 古くなったキャッシュを待機時間 4 時間で削除します。<br /><br /> アクティビティがない状態の間隔 10 秒、アクティビティがない状態のオーバーライド間隔 10 分でキャッシュを更新します。<br /><br /> オブジェクトを直ちにオンラインにします。|  
+|**自動 MOLAP**|次のストレージとプロアクティブ キャッシュ設定を使用します。<br /><br /> MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> データが変更されると、アクティビティがない状態の間隔 0 秒、アクティビティがない状態のオーバーライド間隔なしでキャッシュを更新します。|  
+|**定期 MOLAP**|次のストレージとプロアクティブ キャッシュ設定を使用します。<br /><br /> MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> キャッシュを定期的に更新します。再構築間隔は 1 日です。|  
 |**MOLAP**|次のストレージとプロアクティブ キャッシュ設定を使用します。<br /><br /> MOLAP ストレージ モードに設定します。|  
   
  **カスタム設定**  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 48662e0bb7a9402fab5ed45f6b3f6590374e5560
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: b82d170d7af35d21f19fd90d2328ccbdd07f4a3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213312"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>エンティティの作成 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]の管理者は、新しいエンティティを作成してデータを格納することができます。 エンティティを作成する場合、少なくとも、格納するデータのサンプリングを読み込む必要があります。  

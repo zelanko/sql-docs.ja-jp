@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
@@ -16,13 +16,13 @@ ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 012d0a129f97b87423f295f56c3b00e13a542c4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b4fd1def743928ef113b732fac0fde630c0b7d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328963"
 ---
 # <a name="update-a-resource-report-manager"></a>リソースの更新 (レポート マネージャー)
   リソースを新しいバージョンに置換すると、リソースを更新することができます。 リソースは、レポート サーバーに格納されたアイテムです。このアイテムには、アップロードするファイルのコンテンツが含まれます。 新しいコンテンツまたは異なるコンテンツをインポートすると、既存のリソースを置換できます。 リソースの更新は、既存のプロパティやリソース上のセキュリティ設定を保持しながらコンテンツを更新する方法を提供します。  

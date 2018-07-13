@@ -1,5 +1,5 @@
 ---
-title: 暗号化キー (SSRS ネイティブ モード) のバックアップ |Microsoft ドキュメント
+title: バックアップの暗号化キー (SSRS ネイティブ モード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.backupencryptionkey.F1
 ms.assetid: eb8c82be-323b-4d86-ab10-c1bf69a4abe3
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: a59510ae92160286983f4fa225fad8e3a4cb6af0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89d5ffa496220bc14b963ebbad08b89b919eec3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191245"
 ---
 # <a name="backup-encryption-key-ssrs-native-mode"></a>暗号化キーをバックアップする (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー データベースに格納されている機密データをセキュリティで保護するのに暗号化キーを使用します。 このキーのバックアップを取ることは、暗号化された接続文字列と資格情報に継続してアクセスできるようにするうえで不可欠です。 レポート サーバー データベースを別のコンピューターに移動する場合や、レポート サーバー サービス アカウントのユーザー名またはパスワードを変更する場合は、このキーのバックアップ コピーを取る必要があります。 どちらの操作でも、前もって作成したバックアップ コピーからキーを復元する必要があります。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード。  
   
- 暗号化キーのバックアップ ダイアログ ボックスを開くにはクリックして**暗号化キー**のナビゲーション ウィンドウで、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]クリックして Configuration Manager**バックアップ**です。 このダイアログ ボックスで [サービス アカウント] ページを使用して、サービス アカウントを更新するときにも表示されます、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager です。 詳細については、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]構成マネージャーを参照してください[Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)です。  
+ 暗号化キーのバックアップ ダイアログ ボックスを開くには、次のようにクリックします。**暗号化キー**のナビゲーション ウィンドウで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager、およびクリック**バックアップ**します。 このダイアログ ボックスは、サービス アカウント ページを使用してサービス アカウントを更新するときにも表示されます、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager。 詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager を参照してください[Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)します。  
   
 ## <a name="options"></a>および  
  **ファイルの場所**  

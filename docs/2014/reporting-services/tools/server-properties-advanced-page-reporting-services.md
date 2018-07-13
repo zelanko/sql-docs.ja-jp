@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: erikre
-ms.openlocfilehash: 81c0e6a2bce527404e7c4f59c10a914e3ac938b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b8459ccb49c2e8d2d681cada3646d7d9aa447b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258128"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>[サーバーのプロパティ]\([詳細設定] ページ) - Reporting Services
   このページを使用して、レポート サーバーのシステム プロパティを設定します。 システム プロパティを設定する方法はいくつかあります。 このツールにはグラフィカル ユーザー インターフェイスが用意されているので、コードを記述しなくてもプロパティを設定できます。  
@@ -36,13 +36,13 @@ ms.locfileid: "36071811"
  ユーザーの個人用レポート フォルダーに、セキュリティ ポリシーを作成する際に使用するロールの名前。 既定値は `My Reports Role` です。  
   
  **EnableClientPrinting**  
- レポート サーバーからのダウンロードに RSClientPrint ActiveX コントロールが使用可能かどうかを示します。 有効な値は`true`と`false`です。 既定値は `true` です。 このコントロールに必要な追加設定に関する詳細については、「 [Reporting Services のクライアント側印刷機能の有効化と無効化](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。  
+ レポート サーバーからのダウンロードに RSClientPrint ActiveX コントロールが使用可能かどうかを示します。 有効な値は`true`と`false`します。 既定値は `true` です。 このコントロールに必要な追加設定に関する詳細については、「 [Reporting Services のクライアント側印刷機能の有効化と無効化](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。  
   
  **EnableExecutionLogging**  
- レポート実行のログ記録が有効になっているかどうかを示します。 既定値は `true` です。 レポート サーバー実行ログの詳細については、次を参照してください。[レポート サーバー実行ログと ExecutionLog3 ビュー](../report-server/report-server-executionlog-and-the-executionlog3-view.md)です。  
+ レポート実行のログ記録が有効になっているかどうかを示します。 既定値は `true` です。 レポート サーバー実行ログの詳細については、次を参照してください。[レポート サーバー実行ログと ExecutionLog3 ビュー](../report-server/report-server-executionlog-and-the-executionlog3-view.md)します。  
   
  **ExecutionLogDaysKept**  
- レポート実行情報を実行ログに保持する日数。 このプロパティの有効な値`-1`を通じて`2`、`147`、`483`、`647`です。 値が `-1` の場合、エントリは実行ログ テーブルから削除されません。 既定値は `60` です。  
+ レポート実行情報を実行ログに保持する日数。 このプロパティの有効な値は`-1`を通じて`2`、`147`、`483`、`647`します。 値が `-1` の場合、エントリは実行ログ テーブルから削除されません。 既定値は `60` です。  
   
  **SessionTimeout**  
  セッションがアクティブな状態になっている期間 (秒単位)。 既定値は `600` です。  
@@ -54,10 +54,10 @@ ms.locfileid: "36071811"
  レポート マネージャーのページ タイトルに表示されるレポート サーバー サイトの名前。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] です。 このプロパティには空の文字列を指定できます。 最大長は 8,000 文字です。  
   
  **StoredParametersLifetime**  
- 保存したパラメーターを保持できる最大日数を指定します。 有効な値は`-1`、`+1`を通じて`2,147,483,647`です。 既定値は`180`日数。  
+ 保存したパラメーターを保持できる最大日数を指定します。 有効な値は`-1`、`+1`を通じて`2,147,483,647`します。 既定値は`180`日。  
   
  **StoredParametersThreshold**  
- レポート サーバーが保存できるパラメーター値の最大数を指定します。 有効な値は`-1`、`+1`を通じて`2,147,483,647`です。 既定値は `1500` です。  
+ レポート サーバーが保存できるパラメーター値の最大数を指定します。 有効な値は`-1`、`+1`を通じて`2,147,483,647`します。 既定値は `1500` です。  
   
  **UseSessionCookies**  
  レポート サーバーがクライアント ブラウザーとの通信時にセッションクッキーを使用する必要があるかどうかを指定します。 既定値は `true` です。  
@@ -75,10 +75,10 @@ ms.locfileid: "36071811"
  **すべて** = すべてのストレージ オプションのスナップショットが圧縮されます。このオプションには、レポート サーバー データベースやファイル システムが含まれます。  
   
  **SystemReportTimeout**  
- レポート サーバー名前空間で管理されているすべてのレポートの既定のレポート処理タイムアウト値 (秒単位)。 この値はレポート レベルでオーバーライドできます。 このプロパティを設定すると、レポート サーバーは指定された時間が経過した後、レポートの処理を停止しようとします。 有効な値は`-1`を通じて`2`、`147`、`483`、`647`です。 値に `-1` を設定すると、名前空間内のレポートが処理中にタイムアウトしません。 既定値は `1800` です。  
+ レポート サーバー名前空間で管理されているすべてのレポートの既定のレポート処理タイムアウト値 (秒単位)。 この値はレポート レベルでオーバーライドできます。 このプロパティを設定すると、レポート サーバーは指定された時間が経過した後、レポートの処理を停止しようとします。 有効な値は`-1`を通じて`2`、`147`、`483`、`647`します。 値に `-1` を設定すると、名前空間内のレポートが処理中にタイムアウトしません。 既定値は `1800` です。  
   
  **SystemSnapshotLimit**  
- レポートに格納されるスナップショットの最大数。 有効な値は`-1`を通じて`2`、`147`、`483`、`647`です。 値が場合`-1`スナップショットの制限はありません。  
+ レポートに格納されるスナップショットの最大数。 有効な値は`-1`を通じて`2`、`147`、`483`、`647`します。 値が場合`-1`スナップショットの制限はありません。  
   
  **EnableIntegratedSecurity**  
  Windows 統合セキュリティをレポート データ ソース接続でサポートするかどうかを決定します。 既定値は `True` です。 有効な値は次のとおりです。  
@@ -88,14 +88,14 @@ ms.locfileid: "36071811"
  `False` = Windows 統合セキュリティは無効になります。 Windows 統合セキュリティを使用するように構成されているレポート データ ソースは実行されません。  
   
  `EnableLoadReportDefinition`  
- ユーザーがレポート ビルダーのレポートからアドホック レポートを実行できるかどうかを指定するには、このオプションを選択します。 このオプションの設定の値を決定、`EnableLoadReportDefinition`レポート サーバーのプロパティです。  
+ ユーザーがレポート ビルダーのレポートからアドホック レポートを実行できるかどうかを指定するには、このオプションを選択します。 このオプションの設定の値を決定、`EnableLoadReportDefinition`レポート サーバーのプロパティ。  
   
  このオプションをオフにするとプロパティが False に設定され、データ ソースとしてレポート モデルを使用するレポートのクリックスルー レポートは生成されません。 LoadReportDefinition メソッドへの呼び出しをブロックします。  
   
  この機能を無効にすることで、悪意のあるユーザーが LoadReportDefinition 要求でレポート サーバーを過負荷にするサービス拒否攻撃の脅威を軽減することができます。  
   
  **EnableRemoteErrors**  
- リモート コンピューターからレポートを要求したユーザーに返されるエラー メッセージに、外部エラー情報 (レポート データ ソースに関するエラー情報など) を含めます。 有効な値は`true`と`false`です。 既定値は `false` です。 詳細については、「[リモート エラーの有効化 (Reporting Services)](../report-server/enable-remote-errors-reporting-services.md)」を参照してください。  
+ リモート コンピューターからレポートを要求したユーザーに返されるエラー メッセージに、外部エラー情報 (レポート データ ソースに関するエラー情報など) を含めます。 有効な値は`true`と`false`します。 既定値は `false` です。 詳細については、「[リモート エラーの有効化 (Reporting Services)](../report-server/enable-remote-errors-reporting-services.md)」を参照してください。  
   
  **EnableReportDesignClientDownload**  
  レポート ビルダーのインストール パッケージをレポート サーバーからダウンロードできるかどうかを指定します。 この設定をオフにすると、レポート ビルダーの URL が機能しません。 詳細については、「 [レポート ビルダーへのアクセスの構成](../report-server/configure-report-builder-access.md)」を参照してください。  
@@ -107,7 +107,7 @@ ms.locfileid: "36071811"
  レポート編集セッションがタイムアウトするまでの秒数を指定します。既定値は 7200 秒 (2 時間) です。  
   
  **EnableTestConnectionDetailedErrors**  
- ユーザーがレポート サーバーを使用してデータ ソース接続をテストする際に、クライアント コンピューターに詳細なエラー メッセージが送信されるようにするかどうかを指定します。 既定値は `true` です。 オプションが に設定されている場合`false`、一般的なエラー メッセージのみが送信されます。  
+ ユーザーがレポート サーバーを使用してデータ ソース接続をテストする際に、クライアント コンピューターに詳細なエラー メッセージが送信されるようにするかどうかを指定します。 既定値は `true` です。 オプションが設定されている場合`false`、一般的なエラー メッセージのみが送信されます。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーのプロパティを設定する (Management Studio)](set-report-server-properties-management-studio.md)   

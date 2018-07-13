@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0fdbe801bc58296f0cbfa116056615c341ec3e1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: beeecbb80ff375bdb13f2a91bff84dbb34a9a4f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181642"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>スパークラインとデータ バー (レポート ビルダーおよび SSRS)
   スパークラインとデータ バーは、小さい領域で多くの情報を伝達する小さい単純なグラフで、多くの場合、インライン テキストが含まれています。 スパークラインとデータ バーはテーブルやマトリックスでよく使用されます。 その効果は、それらを個々に表示するのではなく、同時に上下に表示して簡単に比較できることにあります。 この機能によって、他の値と動作の異なる行である外れ値を把握しやすくなります。 これらは小さいですが、各スパークラインは長期にわたる複数のデータ ポイントを表す場合が多く、 データ バーは複数のデータ ポイントを表すこともできますが、通常は 1 つのデータ ポイントのみを示します。 各スパークラインは通常 1 つの系列を表します。 スパークラインをテーブル内の詳細グループに追加することはできません。 スパークラインは集計データを表示するため、グループに関連付けられているセル内に含める必要があります。 スパークラインとデータ バーには、カテゴリ、系列、および値という同じ基本グラフ要素がありますが、凡例、軸線、ラベル、目盛りはありません。  
@@ -88,7 +88,7 @@ ms.locfileid: "36073188"
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
- [スパーク ラインとデータ バーを追加&#40;レポート ビルダーおよび SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [スパーク ラインとデータ バーの追加&#40;レポート ビルダーおよび SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
  [テーブルまたはマトリックス内のグラフでのデータの整列&#40;レポート ビルダーおよび SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36073188"
   
  [グラフの種類を変更する&#40;レポート ビルダーおよび SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
   
- [パレットを使用してグラフの色を定義&#40;レポート ビルダーおよび SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [パレットを使用してグラフの色の定義&#40;レポート ビルダーおよび SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
  [系列へのツールヒントの表示 (レポート ビルダーおよび SSRS)](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
@@ -115,8 +115,8 @@ ms.locfileid: "36073188"
   
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへのスパーク ラインを追加する&#40;レポート ビルダー&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
- [スパーク ライン、横棒グラフ、およびレポート ビルダー (ビデオ) 内のインジケーター](http://technet.microsoft.com/bi/video/ff877165)   
+ [チュートリアル: レポートへのスパーク ラインの追加&#40;レポート ビルダー&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
+ [スパーク ライン、横棒グラフ、およびレポート ビルダー (ビデオ) インジケーター](http://technet.microsoft.com/bi/video/ff877165)   
  [方法: (ビデオ) テーブルにスパーク ラインを作成](http://go.microsoft.com/fwlink/?LinkId=197092)  
   
   

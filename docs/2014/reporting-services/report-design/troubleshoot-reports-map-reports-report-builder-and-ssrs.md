@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: df4a48740b1bcb32d49355d91c966741103cf059
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c4d1f9287227b3e37fd05b97d77c242173c68f2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218722"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)
   レポートでマップの問題が発生しやすいのは、マップまたはマップ レイヤーをレポートに追加するときや、レポート内の既存のマップまたはマップ レイヤーをカスタマイズするとき、レポートのマップをプレビューするとき、またはマップを含んだレポートをパブリッシュするときです。 このトピックでは、このような問題のトラブルシューティングについて説明します。  
@@ -176,7 +176,7 @@ ms.locfileid: "36072294"
 -   詳細については、「 [ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)」を参照してください。  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>カラー スケールの NaN という値について  
- `NaN` 非数を表します。 カラー スケールの値には数値が想定されています。 カラー スケールに関連付けられているルールの分布の設定と凡例のテキスト値をチェックしてください。 分布の範囲を独自に作成した場合は、最初の範囲に下限が、最後の範囲に上限が指定されていることを確認してください。  
+ `NaN` 非数の略です。 カラー スケールの値には数値が想定されています。 カラー スケールに関連付けられているルールの分布の設定と凡例のテキスト値をチェックしてください。 分布の範囲を独自に作成した場合は、最初の範囲に下限が、最後の範囲に上限が指定されていることを確認してください。  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>レポートを実行してもカラー スケールが表示されない  
  カラー スケールは、マップ レイヤーのレイヤー全体または埋め込みマップ要素に対し、多角形、線、またはポイントに対する色ルールが指定されている場合に、ユーザーに情報を表示するものです。 マップ要素に色ルールが指定されていない場合や、色ルールの指定に (カラー マップではなく) 凡例が使用されている場合、レンダリングされたレポートにカラー マップは表示されません。  

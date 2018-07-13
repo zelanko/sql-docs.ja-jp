@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: bee3e33f3695b89ff4ca84b0ab6e6b657fc3e810
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ebec1a7f57606b2b07fe8b2c2d80529c3f04d583
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209082"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>メモリ最適化テーブルの概要
   メモリ最適化テーブルは、[CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) を使用して作成されるテーブルです。  
@@ -28,7 +28,7 @@ ms.locfileid: "36070942"
   
  インメモリ OLTP は、開発、配置、管理、サポートなど、すべての領域においてシームレスな使用環境を提供するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と統合されています。 データベースには、ディスク ベースのオブジェクトと同様にインメモリのオブジェクトを含めることができます。  
   
- メモリ最適化テーブル内の行には、バージョンが付いています。 これは、テーブルの各行に複数のバージョンが存在する可能性があることを意味します。 行バージョンはいずれも、同じテーブル データ構造で保持されます。 行のバージョン管理は、同じ行に対して読み取りと書き込みを同時に実行できるようにするために使用します。 詳細については、同時実行の読み取りと書き込みが、同じ行に対して、次を参照してください。[メモリ最適化テーブル内のトランザクション](memory-optimized-tables.md)です。  
+ メモリ最適化テーブル内の行には、バージョンが付いています。 これは、テーブルの各行に複数のバージョンが存在する可能性があることを意味します。 行バージョンはいずれも、同じテーブル データ構造で保持されます。 行のバージョン管理は、同じ行に対して読み取りと書き込みを同時に実行できるようにするために使用します。 詳細については、同時読み取りと書き込みが同じ行には、次を参照してください。[メモリ最適化テーブルでのトランザクション](memory-optimized-tables.md)です。  
   
  次の図は、複数バージョン管理について説明したものです。 この図では、行が 3 つあるテーブルを示しています。行のそれぞれに、バージョンが複数存在します。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36070942"
 ## <a name="accessing-data-in-memory-optimized-tables"></a>メモリ最適化テーブルのデータへのアクセス  
  メモリ最適化テーブルのデータには、次の 2 つの方法でアクセスできます。  
   
--   解釈を通じて[!INCLUDE[tsql](../../../includes/tsql-md.md)](、ネイティブ コンパイル ストアド プロシージャ外で)。 これらの [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、解釈されたストアド プロシージャ内にあっても、アドホック [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントであってもかまいません。  
+-   解釈を通じて[!INCLUDE[tsql](../../../includes/tsql-md.md)](ネイティブ コンパイル ストアド プロシージャ) の外部でします。 これらの [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、解釈されたストアド プロシージャ内にあっても、アドホック [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントであってもかまいません。  
   
 -   ネイティブ コンパイル ストアド プロシージャを経由してアクセスできます。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36070942"
 |[メモリ最適化テーブル変数](../../database-engine/memory-optimized-table-variables.md)|はい|はい|いいえ|  
 |[ネイティブ コンパイル ストアド プロシージャ](http://msdn.microsoft.com/library/dn133184.aspx)|EXECUTE ステートメントを使用してネイティブ コンパイル ストアド プロシージャからストアド プロシージャを実行することはできません。|はい|不可 <sup>1</sup>|  
   
- <sup>1</sup>コンテキスト接続からメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャにアクセスすることはできません (からの接続[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CLR モジュールを実行する場合)。 ただし、別の接続を作成して開き、そこからメモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャにアクセスできます。 詳細については、次を参照してください。[正規 vs です。コンテキスト接続](../clr-integration/data-access/context-connections-vs-regular-connections.md)です。  
+ <sup>1</sup>コンテキスト接続からメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャにアクセスすることはできません (から接続[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CLR モジュールを実行する場合)。 ただし、別の接続を作成して開き、そこからメモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャにアクセスできます。 詳細については、次を参照してください。[正規 vs します。コンテキスト接続](../clr-integration/data-access/context-connections-vs-regular-connections.md)します。  
   
 ## <a name="performance-and-scalability"></a>パフォーマンスとスケーラビリティ  
  インメモリ OLTP を使用することで実現できるパフォーマンスの向上には、次の要素が影響します。  

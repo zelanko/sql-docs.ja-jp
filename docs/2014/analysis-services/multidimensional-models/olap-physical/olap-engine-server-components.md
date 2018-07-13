@@ -1,5 +1,5 @@
 ---
-title: OLAP エンジンのサーバー コンポーネント |Microsoft ドキュメント
+title: OLAP エンジンのサーバー コンポーネント |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - server architecture [Analysis Services]
 ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a3486ed70d6da2d2091da02cf7e2a55fcd2b1d1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2471838c89fa2cfb6ded22c9daa8ad9ca6e1cfd8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224124"
 ---
 # <a name="olap-engine-server-components"></a>OLAP エンジンのサーバー コンポーネント
-  サーバー コンポーネントの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]は、 **msmdsrv.exe** Windows サービスとして実行されるアプリケーション。 このアプリケーションは、セキュリティ コンポーネント、XML for Analysis (XMLA) リスナー コンポーネント、クエリ プロセッサ コンポーネント、および次の機能を実行するその他多くの内部コンポーネントで構成されています。  
+  サーバー コンポーネント[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]は、 **msmdsrv.exe**アプリケーション、Windows サービスとして実行されます。 このアプリケーションは、セキュリティ コンポーネント、XML for Analysis (XMLA) リスナー コンポーネント、クエリ プロセッサ コンポーネント、および次の機能を実行するその他多くの内部コンポーネントで構成されています。  
   
 -   クライアントから受信したステートメントの解析  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36073601"
   
  次の図は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] コンポーネントのアーキテクチャを示しており、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンス内で実行されるすべての主要な要素と、インスタンスと連携するすべてのユーザー コンポーネントを含んでいます。 また、この図は、XML for Analysis (XMLA) リスナーと、HTTP または TCP のいずれかを使用する以外に、インスタンスにアクセスする方法がないことも示しています。  
   
- ![Analysis Services のシステム アーキテクチャ図](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services のシステム アーキテクチャ図")  
+ ![Analysis Services システムのアーキテクチャ ダイアグラム](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services システムのアーキテクチャ ダイアグラム")  
   
 ## <a name="xmla-listener"></a>XMLA リスナー  
  XMLA リスナー コンポーネントでは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] とそのクライアントの間のすべての XMLA 通信が処理されます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port`いるポートを指定する、msmdsrv.ini ファイルで構成設定を使用できます、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスがリッスンします。 このファイルの 0 の値は、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が既定のポートをリッスンすることを示します。 特に指定がなければ、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では次の既定の TCP ポートが使用されます。  
@@ -64,7 +64,7 @@ ms.locfileid: "36073601"
 |2382|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の他のインスタンスのリダイレクターです。|  
 |サーバーの起動時に動的に割り当てられます。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の名前付きインスタンスです。|  
   
- 参照してください[Analysis Services のアクセスを許可するための Windows ファイアウォールを構成する](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)詳細についてはします。  
+ 参照してください[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)の詳細。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクトの名前付け規則&#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   

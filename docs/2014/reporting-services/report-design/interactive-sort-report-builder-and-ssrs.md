@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e9d85e66cd3ccbfb4c3695f6d7485dbb1a8a9de2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 42d4a6aa9601c7b49cc69a2406550c76134ed6dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162033"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>対話的な並べ替え (レポート ビルダーおよび SSRS)
   対話的な並べ替えボタンを追加すると、ユーザーがテーブルの行またはマトリックスの行と列を昇順および降順で並べ替えることができるようになります。 対話的な並べ替えの最も一般的な使用方法は、各列ヘッダーに並べ替えボタンを追加することです。 これにより、ユーザーは並べ替えの基準となる列を選択できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36072947"
   
 -   **複数のデータ領域の並べ替えを同期するかどうか:** ユーザーが並べ替え順序を切り替えたとき、同じ祖先を持つ他のデータ領域も並べ替えられるようにレポートをデザインできます。  
   
- 手順については、次を参照してください。[テーブルまたはマトリックスに対話的な並べ替えの追加&#40;レポート ビルダーおよび SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)です。  
+ 手順については、次を参照してください。[テーブルまたはマトリックスに対話的な並べ替えの追加&#40;レポート ビルダーおよび SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)します。  
   
  対話型の並べ替えボタンを使用して実現できる効果を次の表にまとめます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36072947"
 ## <a name="adding-interactive-sort-for-multiple-groups"></a>複数のグループの対話的な並べ替えの追加  
  入れ子になった行グループがそれぞれ 1 つのデータセット フィールドに基づいているテーブルでは、親グループの値、子グループの値、または詳細行を並べ替える対話的な並べ替えボタンを追加できます。 ただし、ユーザーが何度もクリックしなくても親グループの値と子グループの値の両方でテーブルを並べ替えることができるようにすることもできます。  
   
- それには、複数のフィールドを組み合わせる式に基づいてグループ化するようにテーブルをデザインし直す必要があります。 たとえば、在庫数を含むデータセットで、元のテーブルがサイズ、色の順にグループ化されている場合、サイズと色を組み合わせたグループ式で 1 つのグループを指定できます。 詳細については、次を参照してください。[テーブルまたはマトリックスに対話的な並べ替えの追加&#40;レポート ビルダーおよび SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)です。  
+ それには、複数のフィールドを組み合わせる式に基づいてグループ化するようにテーブルをデザインし直す必要があります。 たとえば、在庫数を含むデータセットで、元のテーブルがサイズ、色の順にグループ化されている場合、サイズと色を組み合わせたグループ式で 1 つのグループを指定できます。 詳細については、次を参照してください。[テーブルまたはマトリックスに対話的な並べ替えの追加&#40;レポート ビルダーおよび SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)します。  
   
 ## <a name="see-also"></a>参照  
  [データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)](sort-data-in-a-data-region-report-builder-and-ssrs.md)   

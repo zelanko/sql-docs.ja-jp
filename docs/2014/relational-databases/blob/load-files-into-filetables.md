@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], migrating files
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f04207a9f61228b48318afbc321dcc5f10358ad7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fe047d365e3ce7b8df00307499eca50553a2c76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169103"
 ---
 # <a name="load-files-into-filetables"></a>FileTable へのファイルの読み込み
   FileTable にファイルを読み込むまたは移行する方法について説明します。  
@@ -48,7 +47,7 @@ ms.locfileid: "36071691"
 ###  <a name="HowToMigrateFiles"></a> 例: ファイルをファイル システムから FileTable に移行する  
  このシナリオでは、ファイルはファイル システムに格納されていて、このファイルへのポインターを含むメタデータのテーブルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に配置されています。 ここでは、ファイルを FileTable に移動した後、メタデータ内の各ファイルの元の UNC パスを FileTable の UNC パスに置き換えます。 この操作を行うには、[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 関数を使用します。  
   
- この例では、既存のデータベース テーブルがあると仮定しています`PhotoMetadata`、写真に関するデータが含まれています。 このテーブルに列`UNCPath`型の`varchar`(512)、.jpg ファイルへの実際の UNC パスが含まれています。  
+ この例では、既存のデータベース テーブルがあることを想定して`PhotoMetadata`、写真に関するデータを格納します。 このテーブルには、列`UNCPath`型の`varchar`(512)、.jpg ファイルへの実際の UNC パスを含むです。  
   
  画像ファイルをファイル システムから FileTable に移行するには、次の操作を実行する必要があります。  
   

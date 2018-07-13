@@ -1,5 +1,5 @@
 ---
-title: クリックスルー レポート ページ (レポート マネージャー) |Microsoft ドキュメント
+title: クリックスルー レポート ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0e9deeb0187814b89a4445ae13edaf9e1e5a5a16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20c212e7829a04e1c6261a8818cebf7534d2529a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244352"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>[クリックスルー レポート] ページ (レポート マネージャー)
   クリックスルー レポートは、レポート内に含まれている対話的なデータをユーザーがクリックしたときに、関連するデータのテーブルを表示するレポートです。 これらのレポートは、レポートの作成に使用したモデルに含まれている情報に基づいて、レポート サーバーによって生成されます。 レポート サーバーによって生成されるクリックスルー レポートを使用しない場合は、カスタム レポートを作成し、レポート サーバーにパブリッシュして、そのモデルで定義されている対話的なデータ ポイントにマップすることができます。 カスタム レポートは、レポート ビルダーで同じモデルを使用して作成し、レポート サーバーにパブリッシュする必要があります。 カスタム レポートをモデル内のアイテムにマップするには、レポート マネージャーの [クリックスルー レポート] ページを使用します。  
@@ -35,7 +35,7 @@ ms.locfileid: "36070895"
  アクセス可能な任意のレポートを選択できますが、構成する対象のモデル用に作成されたレポートのみを選択してください。  
   
 > [!NOTE]  
->  クリックスルー レポートでは使用できませんのすべてのエディション[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 組織で実行している [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションが不明な場合は、データベース管理者に問い合わせてください。  
+>  クリックスルー レポートはすべてのエディションで使用できません[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 組織で実行している [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションが不明な場合は、データベース管理者に問い合わせてください。  
   
 ## <a name="navigation"></a>ナビゲーション  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  

@@ -1,5 +1,5 @@
 ---
-title: データ マイニング ソリューションの配置 |Microsoft ドキュメント
+title: データ マイニング ソリューションの配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], deploying
 - deploying [Analysis Services], production environments
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32f154993f65fc2e86538ebf5bff8528d2c491bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 73e598996172c6e29e8e6ed14ba863d28a7b3b43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249462"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>データ マイニング ソリューションの配置
   データ マイニング プロセスの最後の手順は、実稼働環境へのモデルの配置です。 配置は、モデルをユーザーが使用できるようにし、次のようなタスクを実行できるようになるという点で重要です。  
   
--   モデルを使用して予測を作成し、業務上の意思決定を行います。 クエリの作成に使用できるツールについて、次を参照してください。[データ マイニング クエリ インターフェイス](data-mining-query-tools.md)です。  
+-   モデルを使用して予測を作成し、業務上の意思決定を行います。 クエリを作成に使用できるツールについては、次を参照してください。[データ マイニング クエリ インターフェイス](data-mining-query-tools.md)します。  
   
 -   データ マイニング機能をアプリケーションに直接埋め込みます。 マイニング構造とマイニング モデルを作成、変更、処理、および削除するためにアプリケーションで使用できる一連のオブジェクトを含んでいる分析管理オブジェクト (AMO) またはアセンブリを含めることができます。  
   
@@ -88,6 +88,6 @@ ms.locfileid: "36072910"
 ## <a name="see-also"></a>参照  
  [多次元モデル オブジェクトの処理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [データ マイニング クエリ インターフェイス](data-mining-query-tools.md)   
- [処理の要件および考慮事項&#40;データ マイニング&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [処理の要件および注意事項&#40;データ マイニング&#41;](processing-requirements-and-considerations-data-mining.md)  
   
   

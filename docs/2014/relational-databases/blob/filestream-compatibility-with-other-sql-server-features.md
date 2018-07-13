@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be0912f1da8e17d5fbd1723595e845393e94cf41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fce4632ddcee1ed29ce8a06ee5efc631f8ce1f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175785"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM と SQL Server のその他の機能との互換性
   ここでは、FILESTREAM データがファイル システムに存在することに関連して、FILESTREAM を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次の機能と共に使用する際の注意事項、ガイドライン、および制限事項について説明します。  
@@ -55,7 +54,7 @@ ms.locfileid: "36073302"
  列インポート変換を使用すると、ファイル システムから FILESTREAM 列にファイルを読み込むことができます。 また、列エクスポート変換を使用すると、FILESTREAM 列からファイル システム内の別の場所にファイルを抽出できます。  
   
 ##  <a name="distqueries"></a> 分散クエリおよびリンク サーバー  
- 分散クエリおよびリンク サーバーを介した FILESTREAM データを使用するには、として扱うことにより`varbinary(max)`データ。 4 部構成の名前を使用する分散クエリでは、FILESTREAM の **PathName()** 関数を使用することはできません。その名前がローカル サーバーを指し示す場合も同様です。 ただし、 **OPENQUERY()** を使用するパススルー クエリの内側のクエリでは **PathName()** を使用できます。  
+ 分散クエリおよびリンク サーバーを使用して FILESTREAM データを使用するには、扱うことにより`varbinary(max)`データ。 4 部構成の名前を使用する分散クエリでは、FILESTREAM の **PathName()** 関数を使用することはできません。その名前がローカル サーバーを指し示す場合も同様です。 ただし、 **OPENQUERY()** を使用するパススルー クエリの内側のクエリでは **PathName()** を使用できます。  
   
 ##  <a name="encryption"></a> 暗号化  
  FILESTREAM データは、透過的なデータ暗号化が有効になっている場合でも暗号化されません。  
@@ -70,7 +69,7 @@ ms.locfileid: "36073302"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Replication  
- パブリッシャーで FILESTREAM 属性が有効になっている `varbinary(max)` 列は、FILESTREAM 属性を含めてサブスクライバーにレプリケートすることも、含めずにレプリケートすることもできます。 列をレプリケートする方法を指定するには、**[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスを使用するか、[sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) または [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) の @schema_option パラメーターを使用します。 FILESTREAM 属性を持たない `varbinary(max)` 列にレプリケートされるデータは、このデータ型の制限 (2 GB) を超えないようにする必要があります。この制限を超えると実行時エラーが発生します。 お勧め、FILESTREAM 属性をレプリケートする際にデータをレプリケートする場合を除き、[!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)]サブスクライバーがサポートされていない、指定されているスキーマ オプションに関係なく、します。  
+ パブリッシャーで FILESTREAM 属性が有効になっている `varbinary(max)` 列は、FILESTREAM 属性を含めてサブスクライバーにレプリケートすることも、含めずにレプリケートすることもできます。 列をレプリケートする方法を指定するには、**[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスを使用するか、[sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) または [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) の @schema_option パラメーターを使用します。 FILESTREAM 属性を持たない `varbinary(max)` 列にレプリケートされるデータは、このデータ型の制限 (2 GB) を超えないようにする必要があります。この制限を超えると実行時エラーが発生します。 データをレプリケートする場合を除き、FILESTREAM 属性をレプリケートすることお勧めします[!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)]サブスクライバーがサポートされていない、指定されているスキーマ オプションに関係なく、します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] から [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] サブスクライバーにレプリケートできるデータ値の大きさは、最大 256 MB に制限されています。 詳細については、「 [最大容量仕様](http://go.microsoft.com/fwlink/?LinkId=103810)」を参照してください。  
@@ -82,18 +81,18 @@ ms.locfileid: "36073302"
   
 -   max text repl size オプションは、レプリケーション用にパブリッシュされる列に挿入できるデータの最大サイズを指定します。 このオプションを使用すると、レプリケートされる FILESTREAM データのサイズを制御できます。  
   
--   FILESTREAM 属性をレプリケートするスキーマ オプションを指定するが、フィルターで除外する場合、 `uniqueidentifier` FILESTREAM で必要な列または列の UNIQUE 制約をレプリケートしないように指定、FILESTREAM はレプリケートされません属性です。 その列は、`varbinary(max)` 列としてのみレプリケートされます。  
+-   FILESTREAM 属性をレプリケートするスキーマ オプションを指定するが、フィルターで除外する場合、 `uniqueidentifier` FILESTREAM で必要な列をしないように指定したり、列の UNIQUE 制約をレプリケート、FILESTREAM はレプリケートされません属性。 その列は、`varbinary(max)` 列としてのみレプリケートされます。  
   
 ### <a name="considerations-for-merge-replication"></a>マージ レプリケーションに関する注意点  
  マージ レプリケーション用にパブリッシュされるテーブルで FILESTREAM 列を使用する場合は、次のことに注意してください。  
   
--   マージ レプリケーションと FILESTREAM データ型の列を必要と`uniqueidentifier`をテーブル内の各行を識別します。 マージ レプリケーションでは、この列がテーブルに含まれていなければ自動的に追加されます。 またその列で、ROWGUIDCOL プロパティと、NEWID() または NEWSEQUENTIALID() の既定値が設定されている必要があります。 FILESTREAM ではさらに、この列に対して UNIQUE 制約が定義されている必要もあります。 これらの要件により、次のような結果になります。  
+-   マージ レプリケーションと FILESTREAM データ型の列を必要と`uniqueidentifier`テーブル内の各行を識別するためにします。 マージ レプリケーションでは、この列がテーブルに含まれていなければ自動的に追加されます。 またその列で、ROWGUIDCOL プロパティと、NEWID() または NEWSEQUENTIALID() の既定値が設定されている必要があります。 FILESTREAM ではさらに、この列に対して UNIQUE 制約が定義されている必要もあります。 これらの要件により、次のような結果になります。  
   
     -   既にマージ レプリケーション用にパブリッシュされているテーブルに FILESTREAM 列を追加する場合は、`uniqueidentifier` 列に UNIQUE 制約があることを確認してください。 UNIQUE 制約がない場合は、パブリケーション データベースのテーブルに名前付き制約を追加します。 既定では、マージ レプリケーションによってこのスキーマ変更がパブリッシュされ、各サブスクリプション データベースに適用されます。  
   
          上の説明に従って手動で UNIQUE 制約を追加した場合は、マージ レプリケーションを削除する際に先に UNIQUE 制約を削除する必要があります。そうしないと、レプリケーションの削除に失敗します。  
   
-    -   NEWID() より NEWSEQUENTIALID() の方がパフォーマンスが高いため、マージ レプリケーションでは既定で NEWSEQUENTIALID() が使用されます。 追加する場合、 `uniqueidentifier` NEWSEQUENTIALID() を既定値として指定してマージ レプリケーションでパブリッシュされるテーブルに列です。  
+    -   NEWID() より NEWSEQUENTIALID() の方がパフォーマンスが高いため、マージ レプリケーションでは既定で NEWSEQUENTIALID() が使用されます。 追加する場合、 `uniqueidentifier` NEWSEQUENTIALID() を既定として指定します。 マージ レプリケーションでパブリッシュされるテーブルに列。  
   
 -   マージ レプリケーションには、ラージ オブジェクト型のレプリケーションを最適化する機能が含まれています。 この機能は、[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) の @stream_blob_columns パラメーターによって制御されます。 FILESTREAM 属性をレプリケートするスキーマ オプションを設定すると、@stream_blob_columns パラメーターの値が `true` に設定されます。 この値をオーバーライドするには、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を使用します。 このストアド プロシージャを使用すると、@stream_blob_columns を `false` に設定できます。 既にマージ レプリケーション用にパブリッシュされているテーブルに FILESTREAM 列を追加する場合は、sp_changemergearticle を使用してこのオプションを `true` に設定することをお勧めします。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "36073302"
  データベース ミラーリングは FILESTREAM をサポートしていません。 プリンシパル サーバー上に FILESTREAM ファイル グループを作成することはできません。 FILESTREAM ファイル グループを含むデータベースに対してデータベース ミラーリングを構成することはできません。  
   
 ##  <a name="FullText"></a> フルテキスト インデックス作成  
- [フルテキスト インデックス作成](../indexes/indexes.md)の場合と同様に、FILESTREAM 列は、`varbinary(max)`列です。 FILESTREAM テーブルに、各 FILESTREAM BLOB のファイル名拡張子を含む列が含まれている必要があります。 詳細については、「[フルテキスト検索でのクエリ](../search/query-with-full-text-search.md)」、「[検索用フィルターの構成と管理](../search/configure-and-manage-filters-for-search.md)」、および「[sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)」を参照してください。  
+ [フルテキスト インデックス作成](../indexes/indexes.md)がの場合と同様に、FILESTREAM 列を`varbinary(max)`列。 FILESTREAM テーブルに、各 FILESTREAM BLOB のファイル名拡張子を含む列が含まれている必要があります。 詳細については、「[フルテキスト検索でのクエリ](../search/query-with-full-text-search.md)」、「[検索用フィルターの構成と管理](../search/configure-and-manage-filters-for-search.md)」、および「[sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)」を参照してください。  
   
  フルテキスト エンジンは、FILESTREAM BLOB の内容のインデックスを作成します。 イメージなど、インデックスを作成しても役に立たないファイルもあります。 FILESTREAM BLOB が更新されると、インデックスが再作成されます。  
   

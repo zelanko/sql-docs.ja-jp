@@ -1,5 +1,5 @@
 ---
-title: データ探索オプション ダイアログ ボックス (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: データ探索オプション ダイアログ ボックス (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dataexplorationoptionsdialog.f1
 helpviewer_keywords:
 - Data Exploration Options dialog box
 ms.assetid: 876920c8-9d6f-4d09-abb2-53d78161a289
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb1785ea312e588c9c2246af6f33c8cebc7905b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 956c8ad82cc1675dd2e5838327a8300c3ffb22b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254974"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>[データ探索オプション] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [データ探索オプション] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、 **[データの探索]** ダイアログ ボックスのサンプリングおよびグラフ作成オプションを設定できます。 **[データ探索オプション]** ダイアログ ボックスを表示するには、 **[データの探索]** ダイアログ ボックスの **[サンプリング オプション]** をクリックします。  

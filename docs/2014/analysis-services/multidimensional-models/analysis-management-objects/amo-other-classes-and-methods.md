@@ -1,5 +1,5 @@
 ---
-title: AMO の他のクラスとメソッド |Microsoft ドキュメント
+title: AMO クラスとメソッドの他の |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15c90d9b5c11f22af27332467d3501030a9ce7d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff888c133491bfca9569daf08dc76e54e14d6d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180879"
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO のその他のクラスとメソッド
-  このセクションには、OLAP またはデータ マイニングに限定されないことと、管理でオブジェクトの管理に役立つ、共通のクラスが含まれています。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 これらのクラスは、ストアド プロシージャ、トレース、例外、およびバックアップと復元などの機能を対象としています。  
+  このセクションには、OLAP またはデータ マイニングに固有ではないと、管理または内のオブジェクトを管理するときに役立つ一般的なクラスが含まれています。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。 これらのクラスは、ストアド プロシージャ、トレース、例外、およびバックアップと復元などの機能を対象としています。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -42,20 +42,20 @@ ms.locfileid: "36073605"
   
 -   [トレース オブジェクト](#Traces)  
   
--   [CaptureLog クラスと CaptureXML 属性](#CaptureLog)  
+-   [CaptureLog 属性と CaptureXML 属性](#CaptureLog)  
   
 -   [AMOException 例外クラス](#AMO)  
   
  次の図は、このトピックで説明するクラスの関係を示しています。  
   
- ![AMO クラスの他の](../../../analysis-services/dev-guide/media/amo-otherclasses.gif "AMO の他のクラス")  
+ ![AMO クラスの他の](../../../analysis-services/dev-guide/media/amo-otherclasses.gif "AMO 他のクラス")  
   
 ##  <a name="Assembly"></a> アセンブリ オブジェクト  
  <xref:Microsoft.AnalysisServices.Assembly> オブジェクトを作成するには、サーバーのアセンブリ コレクションに新しいオブジェクトを追加した後、Update メソッドを使用して、サーバー上で <xref:Microsoft.AnalysisServices.Assembly> オブジェクトを更新します。  
   
  <xref:Microsoft.AnalysisServices.Assembly> オブジェクトを削除するには、<xref:Microsoft.AnalysisServices.Assembly> オブジェクトの Drop メソッドを使用してこれを削除する必要があります。 データベースのアセンブリのコレクションから <xref:Microsoft.AnalysisServices.Assembly> オブジェクトを削除しても、そのアセンブリはアプリケーションを次回実行するまで見えなくなるだけで、削除されません。  
   
- メソッドおよび使用可能なプロパティの詳細については、次を参照してください。<xref:Microsoft.AnalysisServices.Assembly>で<xref:Microsoft.AnalysisServices>です。  
+ メソッドと使用可能なプロパティの詳細については、次を参照してください。<xref:Microsoft.AnalysisServices.Assembly>で<xref:Microsoft.AnalysisServices>します。  
   
 > [!IMPORTANT]  
 >  COM アセンブリにより、セキュリティ上のリスクが生じる可能性があります。 このリスクやその他の考慮事項により、[!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)] では、COM アセンブリが非推奨とされました。 COM アセンブリは、今後のリリースではサポートされない可能性があります。  
@@ -152,12 +152,12 @@ ms.locfileid: "36073605"
   
 6.  アプリケーションを続行します。  
   
-##  <a name="CaptureLog"></a> CaptureLog クラスと CaptureXML 属性  
- AMO によって実行されるすべてのアクションは、XMLA メッセージとしてサーバーに送信されます。 AMO によって、SOAP ヘッダーを持たないこれらのメッセージをすべてキャプチャする手段が提供されます。 詳細については、次を参照してください。 [AMO クラスの導入](amo-classes-introduction.md)です。 CaptureLog は、オブジェクトと操作をスクリプト出力するための AMO 内のメカニズムです。オブジェクトと操作のスクリプトは XMLA で作成されます。  
+##  <a name="CaptureLog"></a> CaptureLog 属性と CaptureXML 属性  
+ AMO によって実行されるすべてのアクションは、XMLA メッセージとしてサーバーに送信されます。 AMO によって、SOAP ヘッダーを持たないこれらのメッセージをすべてキャプチャする手段が提供されます。 詳細については、次を参照してください。 [AMO クラスの概要](amo-classes-introduction.md)します。 CaptureLog は、オブジェクトと操作をスクリプト出力するための AMO 内のメカニズムです。オブジェクトと操作のスクリプトは XMLA で作成されます。  
   
  XML のキャプチャを開始するには、CaptureXML サーバー オブジェクト プロパティを `true` に設定する必要があります。 その後、サーバーに送信されるすべてのアクションが、サーバーに送信されることなく、CaptureLog クラスでキャプチャされるようになります。 CaptureLog にはキャプチャ ログを消去するために使用する Clear メソッドがあるため、CaptureLog はクラスと見なされます。  
   
- ログを読み取るには、文字列コレクションを取得し、それらの文字列の反復処理を開始します。 また、サーバー オブジェクト メソッド ConcatenateCaptureLog を使用して、すべてのログを 1 つの文字列に連結することもできます。 ConcatenateCaptureLog には、3 つのパラメーターがあり、そのうち 2 つは必須です。 必要なパラメーターが*トランザクション*のブール型、および*並列*、ブール型のです。 場合*トランザクション*に設定されている`true`、各コマンドの中ではなく、単一のトランザクションが個別のトランザクションとして扱われる XML バッチ ファイルが作成されることを示します。 場合*並列*に設定されている`true`、記録されたと、バッチ ファイル内のすべてのコマンドは順番にではなく、同時実行記録することを示します。  
+ ログを読み取るには、文字列コレクションを取得し、それらの文字列の反復処理を開始します。 また、サーバー オブジェクト メソッド ConcatenateCaptureLog を使用して、すべてのログを 1 つの文字列に連結することもできます。 ConcatenateCaptureLog には、3 つのパラメーターがあり、そのうち 2 つは必須です。 必要なパラメーターは*トランザクション*、ブール型の*並列*、ブール型のです。 場合*トランザクション*に設定されている`true`、されている各コマンドではなく 1 つのトランザクションは、個別のトランザクションとして扱われる XML バッチ ファイルが作成されることを示します。 場合*並列*に設定されている`true`、記録されたように、バッチ ファイル内のすべてのコマンドが順番にではなく、同時実行の記録されることを示します。  
   
 ##  <a name="AMO"></a> AMOException 例外クラス  
  AMOException 例外クラスを使用して、AMO によってスローされるアプリケーション内の例外を簡単にキャッチできます。  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.createpartition.partitionscheme.f1
 - sql12.swb.createpartition.selectoutput.f1
@@ -28,16 +27,15 @@ helpviewer_keywords:
 - partition functions [SQL Server]
 - partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
-caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1dc34a6fdd21b8d4debd2f32df73ef97ba3b281c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d6e7ccf536d221117ecc8359af753a4319f7f5d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244792"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスの作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、パーティション テーブルまたはパーティション インデックスを作成できます。 パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、行方向に複数の単位に分割されています。 パーティション分割により、大規模なテーブルとインデックスの管理の可能性と拡張性が向上します。  
@@ -119,7 +117,7 @@ ms.locfileid: "36071642"
   
 3.  **[パーティション分割列の選択]** ページの **[使用可能なパーティション分割列]** グリッドで、テーブルのパーティション分割に使用する列を選択します。 **[使用可能なパーティション分割列]** グリッドには、データのパーティション分割に使用できるデータ型の列だけが表示されます。 計算列をパーティション分割列として選択する場合は、列を PERSISTED として指定する必要があります。  
   
-     パーティション分割列とその値の範囲の選択肢は、主に、データをどの程度論理的にグループ化できるかによって決まります。 たとえば、月や四半期に基づいてデータを論理グループに分割することができます。 この論理グループがテーブル パーティションの管理に適しているかどうかは、データに対してどのようなクエリを実行する予定かによって決まります。 すべてのデータ型は、列をパーティション分割を除くとして使用する有効な`text`、 `ntext`、 `image`、 `xml`、 `timestamp`、 `varchar(max)`、 `nvarchar(max)`、 `varbinary(max)`、別名データ型、または CLR ユーザー定義データ型。  
+     パーティション分割列とその値の範囲の選択肢は、主に、データをどの程度論理的にグループ化できるかによって決まります。 たとえば、月や四半期に基づいてデータを論理グループに分割することができます。 この論理グループがテーブル パーティションの管理に適しているかどうかは、データに対してどのようなクエリを実行する予定かによって決まります。 すべてのデータ型は、列をパーティション分割を除くとして使用するために有効な`text`、 `ntext`、 `image`、 `xml`、 `timestamp`、 `varchar(max)`、 `nvarchar(max)`、 `varbinary(max)`、別名データ型、または CLR ユーザー定義データ型。  
   
      このページで使用できる他のオプションを次に示します。  
   
@@ -146,7 +144,7 @@ ms.locfileid: "36071642"
      このページで使用できる他のオプションを次に示します。  
   
      **[境界の設定]**  
-     **[境界値の設定]** ダイアログ ボックスを開き、パーティションの境界値と日付範囲を選択します。 このオプションは、次のデータ型のいずれかを含むパーティション分割列を選択した場合にのみ使用可能な: `date`、 `datetime`、 `smalldatetime`、 `datetime2`、または`datetimeoffset`です。  
+     **[境界値の設定]** ダイアログ ボックスを開き、パーティションの境界値と日付範囲を選択します。 このオプションは次のデータ型のいずれかを含むパーティション分割列を選択した場合にのみ使用できます: `date`、 `datetime`、 `smalldatetime`、 `datetime2`、または`datetimeoffset`します。  
   
      **[ストレージの推定]**  
      パーティションに指定された各ファイル グループのストレージの行数、必要な領域、および使用できる領域を推定します。 これらの値は、読み取り専用の値としてグリッドに表示されます。  
@@ -237,7 +235,7 @@ ms.locfileid: "36071642"
      **操作**  
      各アクションの種類と名前を指定します。  
   
-     **Status**  
+     **ステータス**  
      全体としてウィザードのアクションが **[成功]** または **[失敗]** のいずれの値を返したかを示します。  
   
      **メッセージ**  

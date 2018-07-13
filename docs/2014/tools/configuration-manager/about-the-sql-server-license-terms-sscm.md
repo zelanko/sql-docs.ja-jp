@@ -1,5 +1,5 @@
 ---
-title: SQL Server のライセンス条項 (SSCM) に関する |Microsoft ドキュメント
+title: SQL Server のライセンス条項 (SSCM) について |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
 caps.latest.revision: 5
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3c3e8f4976f2ceafd73970e44b7d6f797298c672
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5991bbfb135ccd0ab65f342bf59648e4c82de36e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268098"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>SQL Server のライセンス条項について (SSCM)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]ソフトウェア ライセンス条項は、ローカル コンピューターにコピー時に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。 同じエディションと言語の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルに書き込まれます。 %ProgramFiles%\Microsoft SQL server \110\license terms \ または %programfiles (x86) %\Microsoft SQL server \110\license 条項\\です。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]ソフトウェア ライセンス条項は、ローカル コンピューターにコピー時に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。 同じエディションと言語の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルに書き込まれます: %ProgramFiles%\Microsoft SQL server \110\license terms \ または %programfiles (x86) %\Microsoft SQL server \110\license 条項\\します。  
   
  同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションと言語のインスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36071344"
 -   RUS - ロシア語  
   
 ## <a name="sql-server-licensing-options"></a>SQL Server ライセンス オプション  
- 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]価格およびライセンス オプションを参照してください、 [Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=190955) Web サイトです。  
+ 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]価格およびライセンス オプションを参照してください、 [Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=190955) Web サイト。  
   
 ## <a name="see-also"></a>参照  
  [Microsoft SQL Server のプライバシーに関する声明](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   

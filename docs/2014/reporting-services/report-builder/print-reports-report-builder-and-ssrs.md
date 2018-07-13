@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f673ebfb9034511dc6023cc34d9c3670237d35d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5859430b9a928b79697e53873ef549173963a90f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268518"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>レポートの印刷 (レポート ビルダーおよび SSRS)
   レポートをレポート サーバーに保存した後は、ブラウザーやレポート マネージャーのほか、エクスポートされたレポートの表示に使用する任意のアプリケーションで、レポートを表示および印刷できます。 レポートを保存する前にプレビューする場合は、印刷することができます。  
@@ -37,7 +37,7 @@ ms.locfileid: "36071134"
 3.  エクスポートしたレポートでは、ほとんどの場合、レポートに表示されるすべての要素 (ユーザーがコンピューターの画面上で見るすべての要素) がレポートの印刷結果に含まれます。 レポート デザイン画面上の空白は保持されます。 水平方向の余分な空白ページを追加または削除するには、レポートのページの幅を変更します。  
   
 > [!NOTE]  
->  ブラウザーの印刷コマンドを使用して HTML レポートを印刷すると、最初のページの内容しか印刷されないことがあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のクライアント側印刷機能を使用すると、より優れた HTML レポートの印刷結果を得ることができます。 詳細については、次を参照してください。[印刷コントロールを使用したブラウザーから印刷レポート&#40;レポート ビルダーおよび SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)です。  
+>  ブラウザーの印刷コマンドを使用して HTML レポートを印刷すると、最初のページの内容しか印刷されないことがあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のクライアント側印刷機能を使用すると、より優れた HTML レポートの印刷結果を得ることができます。 詳細については、次を参照してください。[印刷コントロールを使用したブラウザーからのレポートの印刷&#40;レポート ビルダーおよび SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

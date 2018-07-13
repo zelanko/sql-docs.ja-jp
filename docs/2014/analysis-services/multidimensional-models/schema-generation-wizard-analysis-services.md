@@ -1,5 +1,5 @@
 ---
-title: スキーマ生成ウィザード (Analysis Services) |Microsoft ドキュメント
+title: スキーマ生成ウィザード (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - relational schema [Analysis Services]
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 82df99618c39c8fb7212747eed2c9cc269701ca5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1842a775468c03f47b9d6af19e2d1450ce2e8921
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232032"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>スキーマ生成ウィザード (Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベース内で OLAP プロジェクトを定義する際の、2 種類のリレーショナル スキーマ操作方法をサポートしています。 一般的に、OLAP オブジェクトは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベース内のデータ ソース ビューで作成される論理データ モデルに基づいて定義します。 このデータ ソース ビューは、データ ソース ビューでカスタマイズされる、1 つ以上のリレーショナル データ ソースのスキーマ要素に基づいて定義されます。  
@@ -43,13 +43,13 @@ ms.locfileid: "36073125"
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[スキーマ生成ウィザードを使用して&#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|サブジェクト領域データベースとステージング領域データベースのスキーマの生成方法について説明します。|  
+|[スキーマ生成ウィザードを使用して、 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|サブジェクト領域データベースとステージング領域データベースのスキーマの生成方法について説明します。|  
 |[データベース スキーマの理解](understanding-the-database-schemas.md)|サブジェクト領域データベースとステージング領域データベースに対して生成されるスキーマについて説明します。|  
 |[増分生成の理解](understanding-incremental-generation.md)|スキーマ生成ウィザードの増分生成機能について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル内のデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
- [多次元モデル内のデータ ソース](data-sources-in-multidimensional-models.md)   
+ [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
+ [多次元モデルのデータ ソース](data-sources-in-multidimensional-models.md)   
  [サポートされるデータ ソース&#40;SSAS 多次元&#41;](supported-data-sources-ssas-multidimensional.md)  
   
   

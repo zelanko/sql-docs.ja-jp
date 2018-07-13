@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - manual joins [SQL Server]
 - joins [SQL Server], manual
 - joins [SQL Server], creating
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f0fd7266897e6a17ce1997caf244dcfa755d8e6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 07d1b780101fea96160f0a248098a80208ebebbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236112"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>手動でのテーブルの結合 (Visual Database Tools)
   [クエリおよびビュー デザイナー](visual-database-tools.md)では、クエリに複数のテーブルを追加すると、共通データ、またはテーブルの関連付けに関するデータベース内に格納されている情報に基づいて、テーブルが結合されます。 詳しくは、「[テーブルの自動結合 (Visual Database Tools)](join-tables-automatically-visual-database-tools.md)」をご覧ください。 ただし、クエリおよびビュー デザイナーでテーブルが自動的に結合されなかった場合、またはテーブル間の結合条件を追加作成する場合は、テーブルを手動で結合できます。  

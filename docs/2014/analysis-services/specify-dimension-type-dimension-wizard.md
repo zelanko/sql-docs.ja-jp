@@ -1,5 +1,5 @@
 ---
-title: ディメンションの種類 (ディメンション ウィザード) を指定 |Microsoft ドキュメント
+title: 指定のディメンションの種類 (ディメンション ウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a5b5d77a8f54b24488b7152bba95ac705d5196d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185320"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>[ディメンションの種類を指定] (ディメンション ウィザード)
   **[ディメンションの種類を指定]** ページを使用すると、ディメンションの種類を定義し、選択したディメンションの種類に関連付けられている特殊な属性の型をディメンションに追加できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36074266"
 |**製品**|製品ディメンションは、製品情報を表すデータとメタデータが収められる標準ディメンションです。<br /><br /> 標準ディメンションの詳細については、 [「ディメンションの種類」](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)を参照してください。|  
 |**Promotion**|プロモーション ディメンションは、マーケティングや販売促進の情報を表すデータとメタデータが収められる標準ディメンションです。<br /><br /> 標準ディメンションの詳細については、 [「ディメンションの種類」](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)を参照してください。|  
 |**Quantitative**|数量ディメンションは、量的な情報を表すデータとメタデータが収められる標準ディメンションです。<br /><br /> 標準ディメンションの詳細については、 [「ディメンションの種類」](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)を参照してください。|  
-|**レート**|レート ディメンションには、換算レートと通貨変換の情報を表すデータとメタデータが収められます。|  
+|**料金**|レート ディメンションには、換算レートと通貨変換の情報を表すデータとメタデータが収められます。|  
 |**Regular**|標準ディメンションは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]で最も一般的に使用されるディメンションの種類です。<br /><br /> 標準ディメンションの詳細については、 [「ディメンションの種類」](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)を参照してください。|  
 |**Scenario**|シナリオ ディメンションは、計画的または戦略的な分析の情報を表すデータとメタデータが収められる標準ディメンションです。<br /><br /> 標準ディメンションの詳細については、 [「ディメンションの種類」](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)を参照してください。|  
 |**Time**|時間ディメンションには、時刻に関するデータとメタデータが収められます。<br /><br /> 時間ディメンションの詳細については、「 [日付型ディメンションの作成](multidimensional-models/database-dimensions-create-a-date-type-dimension.md)」を参照してください。|  

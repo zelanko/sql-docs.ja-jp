@@ -1,5 +1,5 @@
 ---
-title: データ マイニング クエリ タスク エディター ([出力] タブ) |Microsoft ドキュメント
+title: データ マイニング クエリ タスク エディター ([出力] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.output.f1
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7509dd4140236fc7aea3358aff1071f4585fb987
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f730d9c7544263bc925c8464d4c150318997376
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237132"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>[データ マイニング クエリ タスク エディター] ([出力] タブ)
   **[データ マイニング クエリ タスク エディター]** ダイアログ ボックスの **[出力]** タブを使用すると、予測クエリの出力先を指定できます。  
@@ -31,17 +31,17 @@ ms.locfileid: "36071717"
  パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](../analysis-services/data-mining/data-mining-solutions.md)」を参照してください。  
   
 ## <a name="general-options"></a>[全般] のオプション  
- **Name**  
+ **名前**  
  データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **description**  
+ **[説明]**  
  データ マイニング クエリ タスクの説明を入力します。  
   
 ## <a name="output-tab-options"></a>[出力] タブのオプション  
- **Connection**  
+ **[接続]**  
  接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
  **[新規作成]**  

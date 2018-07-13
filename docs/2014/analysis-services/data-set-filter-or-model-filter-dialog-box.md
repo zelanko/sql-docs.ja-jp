@@ -1,5 +1,5 @@
 ---
-title: データセット フィルターまたはモデル フィルター ダイアログ ボックス |Microsoft ドキュメント
+title: データ セットのフィルターまたはモデル フィルター ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85986f7f73a96ce0fc2286ad8f9377df1d53845c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34cb8f45c8380cffdfd58c99078f05fd5c8bd2e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187319"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>[データセット フィルター] または [モデル フィルター] ダイアログ ボックス
   このダイアログ ボックスを使用すると、データセットに適用できるフィルターを作成できます。  データセットとして、テスト用の外部データセット、またはマイニング モデルのケース データを使用できます。 フィルターの対象が外部データセットかマイニング モデルかによって、ダイアログ ボックスの名前が異なります。  
@@ -46,7 +46,7 @@ ms.locfileid: "36073135"
 |**[ルールの適用条件]**|複数の条件を結合する演算子を選択します。|  
 |**マイニング構造列**|クリックして、データ ソースを選択します。次に、グリッド内の連続する行をクリックして、追加するデータ ソースの列を選択します。<br /><br /> グリッドの最初の行は、データ ソース ビューを指定します。 データ ソース ビューを選択すると、 **[マイニング構造列]** にテーブル アイコンが表示され、 **[値]** フィールドにこのデータ ソースに対して定義されているすべての条件の組み合わせが表示されます。<br /><br /> データ ソースを選択すると、 **[マイニング構造列]** ボックスに、データ ソース内の個々の列を含むドロップダウン リストが表示されます。|  
 |**[演算子]**|一覧から演算子を選択します。|  
-|**Value**|テーブルの場合、データ ソースに適用されるすべてのフィルターの組み合わせが **[値]** フィールドに表示されます。 テキスト ボックスの右側にある作成ボタン ( **[...]** ) をクリックして **[フィルター]** ダイアログ ボックスを開き、条件を作成することもできます。|  
+|**[値]**|テーブルの場合、データ ソースに適用されるすべてのフィルターの組み合わせが **[値]** フィールドに表示されます。 テキスト ボックスの右側にある作成ボタン ( **[...]** ) をクリックして **[フィルター]** ダイアログ ボックスを開き、条件を作成することもできます。|  
   
  **[式]**  
  グリッドを使用して作成した条件のセットが表示されます。  
@@ -61,7 +61,7 @@ ms.locfileid: "36073135"
  グリッドを直前の状態に戻し、フィルター式に加えた変更を取り消します。  
   
 ## <a name="see-also"></a>参照  
- [テストと検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)  
   
   

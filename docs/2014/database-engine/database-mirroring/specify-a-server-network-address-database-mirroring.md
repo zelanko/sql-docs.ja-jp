@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d7d32195aa304c509001c5ce6f057ae0b6dfb09e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 3e50f752e1a9c7f9f574b31779d543296a7fbaec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219812"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>サーバー ネットワーク アドレスの指定 (データベース ミラーリング)
   データベース ミラーリング セッションを設定するには、サーバー インスタンスごとにサーバー ネットワーク アドレスが必要です。 サーバー インスタンスのサーバー ネットワーク アドレスは、システム アドレス、およびインスタンスがリッスンしているポート番号を指定することにより、明確にインスタンスを識別する必要があります。  

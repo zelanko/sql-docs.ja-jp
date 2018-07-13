@@ -1,5 +1,5 @@
 ---
-title: Visio 用データ マイニング図形 |Microsoft ドキュメント
+title: Visio 用データ マイニング図形 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining shapes
 - templates [Visio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - shapes, data mining
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd037e0d4eefb7f894d956222219902a5082fffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6dae172d599b6da648962e50cb3d24fa2f36351d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261808"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Visio 用のデータ マイニング図形
   Visio 用データ マイニング図形は、データ マイニング モデルを表示するためにカスタマイズされたテンプレートです。 これらのテンプレートを使用すると、作成したモデルに接続し、インタラクティブなプレゼンテーションを作成してデータ マイニングの結果を示すことができます。  
@@ -35,16 +35,16 @@ ms.locfileid: "36073351"
   
  Visio テンプレートには、以下のウィザードが含まれています:  
   
--   **依存関係ネットワーク ダイアグラム:** デシジョン ツリーやニューラル ネットワークのグラフを作成するこのウィザードを使用します。  
+-   **依存関係ネットワーク ダイアグラム:** このウィザードを使用して、デシジョン ツリーとニューラル ネットワークのグラフを作成します。  
   
--   **デシジョン ツリー ダイアグラム:** 意思決定ポイントとデシジョン ツリー モデルに関連付けられている数式を示すダイアグラムを作成するこのウィザードを使用します。 このダイアグラムは、回帰モデルでも使用できます。  
+-   **デシジョン ツリー ダイアグラム:** このウィザードを使用して、意思決定ポイントとデシジョン ツリー モデルに関連付けられている数式を示すダイアグラムを作成します。 このダイアグラムは、回帰モデルでも使用できます。  
   
--   **クラスター ダイアグラム:** カラフルなグラフのセグメント化モデルを作成するこのウィザードを使用します。 属性の識別、プロファイル、依存関係などのビューを切り替え、クラスターの外観をカスタマイズすることができます。  
+-   **クラスター ダイアグラム:** 分割モデルに対応するカラフルなグラフを作成するこのウィザードを使用します。 属性の識別、プロファイル、依存関係などのビューを切り替え、クラスターの外観をカスタマイズすることができます。  
   
 ## <a name="installation"></a>インストール  
- Visio 用データ マイニング テンプレートをインストールするときに既定では、次のファイルにインストールされます\<ドライブ > \Program Files\Microsoft SQL Server 2012 DM Add-ins (または\<ドライブ > \ Program Files (x86) \Microsoft SQL Server 2012 DM またはAdd-Ins)。  
+ Visio 用データ マイニング テンプレートをインストールするときに既定では、次のファイルにインストールされます\<ドライブ > \Program Files\Microsoft SQL Server 2012 DM Add-ins (または\<ドライブ > \ または Program Files (x86) \Microsoft SQL Server 2012 DMAdd-Ins)。  
   
--   **Microsoft データ Mining.vst**このテンプレートには、デザイン済みの書式設定、レイアウト、およびデータ マイニング図形を操作するのに役立つウィザードが含まれています。  
+-   **Microsoft Data Mining.vst**このテンプレートには、デザイン済みの書式設定、レイアウト、およびデータ マイニングの図形を操作するためのウィザードが含まれています。  
   
 -   **Microsoft Data Mining Shape Studio.vss**このステンシル ファイルには、テンプレートに関連付けられた図形が含まれています。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36073351"
   
 4.  データの表示オプションと書式設定オプションを設定します。  
   
-5.  完了した後、**データ マイニング図形ウィザード**図を変更して、Visio の機能を使用して拡張機能があります。  
+5.  完了した後、**データ マイニング図形ウィザード**Visio の機能を使用して拡張機能および変更できる図があります。  
   
  操作および Visio のモデル ダイアグラムを強化する方法の詳細については、次を参照してください[を表示するデータ マイニング モデルを Visio で&#40;データ マイニング アドイン。&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
@@ -69,9 +69,9 @@ ms.locfileid: "36073351"
   
      ウィザードに従って、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーを選択し、マイニング モデルが格納されているデータベースを指定します。  
   
-     接続を作成する方法については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)です。  
+     接続を作成する方法については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)します。  
   
--   テーブル分析ツールを使用している場合に、モデルを保存することを確認してください、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]サーバー、および一時的なモデルを使用しないでください。  
+-   テーブル分析ツールを使用している場合、モデルを保存する確認、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]サーバー、および一時的なモデルを使用しないでください。  
   
 -   モデルは、サポートされているアルゴリズム (クラスタリング、デシジョン ツリー、ニューラル ネットワーク、Naïve Bayes、またはロジスティック回帰) を使用して作成されている必要があります。  
   

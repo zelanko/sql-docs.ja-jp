@@ -1,5 +1,5 @@
 ---
-title: 追加およびスケール アウト配置 (SSRS 構成マネージャー) の暗号化キーを削除する |Microsoft ドキュメント
+title: 追加およびスケール アウト配置 (SSRS 構成マネージャー) の暗号化キーの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
 - deleting encryption keys
@@ -20,13 +20,13 @@ ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8a8b5ef42a5a235080e229c1072ad03d8dc1d677
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d253287d8eb5b774794114003682151ecd00c4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170273"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>スケールアウト配置に関する暗号化キーの追加と削除 (SSRS 構成マネージャー)
   1 つのレポート サーバー データベースを複数のレポート サーバーで共有するように構成すると、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をスケールアウト配置モデルで実行できます。 スケールアウト配置でのメンバーシップは、レポート サーバーがレポート サーバー データベースに暗号化キーを格納するかどうかに基づいています。 特定のレポート サーバー インスタンスの暗号化キーを追加および削除することで、スケールアウト配置のメンバーシップを制御できます。 配置からノードを削除する場合は、それらを任意の順序で削除できます。 配置にノードを追加する場合は、既に配置の一部になっているレポート サーバーのすべての新しいインスタンスを結合する必要があります。  
@@ -66,7 +66,7 @@ ms.locfileid: "36072948"
  これらの手順によってスケール アウト配置からレポート サーバーが削除されますが、レポート サーバーの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスはアンインストールされません。 スケール アウト配置からレポート サーバーを削除した後、サーバー上で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] が不要になった場合は、そのサーバーから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアンインストールできます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [構成し、暗号化キーを管理&#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [構成し、暗号化キーの管理&#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
  [レポート サーバーの初期化&#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

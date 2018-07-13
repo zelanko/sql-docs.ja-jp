@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bd5353f86fd042c556d0c7287f176514e262903f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86290de5911ed16aa0c662ccdd0e93057bedc52b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273188"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>ドメインへのクレンジング プロジェクトの値のインポート
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) では、データ品質プロジェクトのクレンジング プロセス中、または Integration Services パッケージの DQS クレンジング コンポーネントで収集されるデータ品質ナレッジをドメインにインポートできます。 これにより、信頼できるナレッジを保持し、ナレッジ ベースを継続的に改善することができます。  
@@ -73,7 +73,7 @@ ms.locfileid: "36071031"
 10. **[完了]** をクリックします。  
   
     > [!NOTE]  
-    >  値を操作の詳細については、**ドメイン値** タブを参照してください[Change Domain Values](../../2014/data-quality-services/change-domain-values.md)です。  
+    >  値を操作の詳細については、**ドメイン値** タブを参照してください[Change Domain Values](../../2014/data-quality-services/change-domain-values.md)します。  
   
 ##  <a name="FollowUp"></a> 補足情報: プロジェクトの値をドメインにインポートした後  
  クレンジング プロセス中に収集したデータ品質ナレッジ ベースをドメインにインポートしたら、ドメインおよび値に対してその他のドメイン管理タスクを実行できます。 詳しくは、「[ドメインの管理](../../2014/data-quality-services/managing-a-domain.md)」をご覧ください。  

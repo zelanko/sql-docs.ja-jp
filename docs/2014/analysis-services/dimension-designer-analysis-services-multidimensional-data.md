@@ -1,5 +1,5 @@
 ---
-title: ディメンション デザイナー (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: ディメンション デザイナー (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Designer
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd1efb474f3e9c70641496fcc023ef0795b579f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7c5920ede56424510e1a6edca52e6de8d56b099
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208112"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>ディメンション デザイナー (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーを使用すると、ディメンションに含まれるデータを参照したり、既存のディメンションの属性、階層、レベル、属性リレーションシップ、および翻訳などの各種プロパティを変更したりできます。  
@@ -39,7 +39,7 @@ ms.locfileid: "36073136"
 ## <a name="pages"></a>ページ  
  ディメンション デザイナーには、次のページがあります。  
   
- [ディメンションの構造](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  
+ [ディメンションの構造体](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  
  このページは、ディメンションの属性、階層、およびレベルを表示および変更するために使用します。  
   
  [属性リレーションシップ](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
 - attributes [Master Data Services], change tracking groups
 - change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 77a151fe4238c7ed99282436a9668a94d85e2b35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1ae8616c44e6ba58c254989c718eb53ea53a197f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235182"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>変更の追跡グループに属性を追加する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で属性の値に対する変更を追跡する場合、変更の追跡グループに属性を追加します。  
@@ -44,7 +44,7 @@ ms.locfileid: "36072116"
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **モデル エクスプ ローラー**  ページで、メニュー バーのをポイント**管理** をクリック**エンティティ**です。  
+2.  **モデル エクスプ ローラー**  ページで、ポイントして、メニュー バーから**管理** をクリック**エンティティ**します。  
   
 3.  **[エンティティのメンテナンス]** ページの **[モデル]** ボックスの一覧からモデルを選択します。  
   
@@ -54,11 +54,11 @@ ms.locfileid: "36072116"
   
 6.  **[エンティティの編集]** ページで、次の手順を実行します。  
   
-    -   内のリーフ メンバーの属性の場合、**属性には、リーフ** ウィンドウで、属性を選択し、をクリックして**リーフ属性の編集**です。  
+    -   リーフ メンバーの属性がの場合、**属性のリーフ**ウィンドウで、属性を選択し、をクリックして**リーフ属性の編集**します。  
   
-    -   属性が、統合メンバーの場合、**属性を統合** ウィンドウで、属性を選択し、をクリックして**統合属性の編集**です。  
+    -   統合メンバーの属性がの場合、**統合属性**ウィンドウで、属性を選択し、をクリックして**統合属性の編集**します。  
   
-    -   属性が、コレクションの場合、**コレクション属性** ウィンドウで、属性を選択し、をクリックして**コレクション属性の編集**です。  
+    -   コレクションの属性がの場合、**コレクション属性**ウィンドウで、属性を選択し、をクリックして**コレクション属性の編集**します。  
   
 7.  **[変更の追跡の有効化]** チェック ボックスをオンにします。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36072116"
 -   [属性値の変更に基づいてアクションを開始する&#40;マスター データ サービス&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [テキスト属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
+ [テキスト属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
  [ドメイン ベースの属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

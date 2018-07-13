@@ -1,14 +1,13 @@
 ---
-title: sp_pdw_log_user_data_masking (SQL データ ウェアハウス) |Microsoft ドキュメント
+title: sp_pdw_log_user_data_masking (SQL データ ウェアハウス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-stored-procedures
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-warehouse
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -18,24 +17,24 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b158d6c0ea65159d6e310512ee45abb4916a0e7
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
-ms.translationtype: MT
+ms.openlocfilehash: 16de9489583cce2e696a94c75c7e5fd3ac1c0fe1
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33701815"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36760157"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  使用して**sp_pdw_log_user_data_masking**ユーザーのデータのマスキングを有効にする[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログです。 ユーザー データのマスキングでは、アプライアンス上のすべてのデータベースに対して、ステートメントに影響します。  
+  使用**sp_pdw_log_user_data_masking**ユーザーのデータのマスキングを有効にする[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ。 ユーザー データのマスキングでは、アプライアンス上のすべてのデータベースに対して、ステートメントに影響します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログを受けた**sp_pdw_log_user_data_masking**確実な[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログです。 **sp_pdw_log_user_data_masking**データベース トランザクション ログには影響しませんまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー ログ。  
+>  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログを受ける**sp_pdw_log_user_data_masking**特定は[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ。 **sp_pdw_log_user_data_masking**データベースのトランザクション ログには影響しませんまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー ログ。  
   
- **背景知識:** 既定の構成で[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログが完全に含む[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、および場合によってなどの操作に含まれているユーザー データを含める**挿入**、 **更新**、および**選択**ステートメントです。 アプライアンス上の問題が発生した場合は、分析、問題を再現するがなくても、問題の原因となった条件を許可します。 ユーザー データに書き込まれていることを防ぐために[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログ、お客様がこのストアド プロシージャを使用してユーザー データのマスキングを有効にするを選択できます。 ステートメントが引き続き書き込まれます[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティのログはすべて、いくつかの定義済みの定数値に置き換えられます。 ユーザー データを含む可能性のあるステートメント内のリテラルを隠蔽することができます。  
+ **背景知識:** 既定の構成で[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログが完全に含む[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、およびによってなどの操作に含まれるユーザー データを含める**挿入**、 **UPDATE**、および**選択**ステートメント。 アプライアンス上の問題が発生した場合は、分析、問題を再現するがなくても、問題の原因となった条件を許可します。 ユーザー データが書き込まれることを防ぐために[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ、顧客は、このストアド プロシージャを使用してユーザー データのマスキングを有効にすることを選択できます。 ステートメントが引き続きに書き込まれます[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログがいくつかの定義済みの定数値に置き換えられます; ユーザー データを含む可能性のあるステートメント内のリテラルを隠蔽することができます。  
   
- アプライアンスの透過的なデータ暗号化が有効の場合は、ユーザーのデータのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログが自動的にオンにします。  
+ アプライアンスの透過的なデータ暗号化が有効な場合は、内のユーザー データのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログが自動的にオンにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,29 +48,29 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
  [ **@masking_mode=** ] *masking_mode*  
  透過的なデータ暗号化ログ ユーザー データのマスキングが有効になっているかどうかを決定します。 *masking_mode*は**int**値は次のいずれかを指定できます。  
   
--   0 = 無効な場合、ユーザーに表示されるデータ、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログです。  
+-   0 = 無効、ユーザーに表示されるデータ、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ。  
   
--   1 = 有効、ユーザーがデータのステートメントでの表示、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログは、ユーザー データをマスクします。  
+-   1 = 有効、ユーザーがデータのステートメントでの表示、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログは、ユーザー データはマスクされています。  
   
--   2 = ステートメントには、ユーザー データを含むは書き込まれていない、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログです。  
+-   2 = ステートメントにユーザー データを含むは書き込まれません、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ。  
   
- 実行する**sp_pdw log_user_data_masking**パラメーターでは、TDE ログ ユーザー データのマスキングの現在の状態を返すスカラーの結果セットとしてアプライアンス上なくです。  
+ 実行**sp_pdw log_user_data_masking**パラメーターでは、TDE ログ ユーザー データのマスキングの現在の状態を返すスカラーの結果セットとしてアプライアンス上なくです。  
   
-## <a name="remarks"></a>解説  
- ユーザーのデータのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティで定義済みの定数値を持つリテラルの置換を有効をログに記録**選択**DML ステートメントでは、ユーザー データを含めるようにします。 設定*masking_mode*を 1 にマスクしません、列名またはテーブル名などのメタデータ。 設定*masking_mode* 2 に列名またはテーブル名などのメタデータを持つステートメントを削除します。  
+## <a name="remarks"></a>コメント  
+ ユーザーのデータのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティで定義済みの定数値を持つリテラルの置換を有効をログ**選択**や DML ステートメントでは、ユーザー データを含めることができるようにします。 設定*masking_mode*を 1 にマスクしません、列名またはテーブル名などのメタデータ。 設定*masking_mode* 2 列名またはテーブル名などのメタデータを持つステートメントを削除します。  
   
- ユーザーのデータのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログは次のように実装します。  
+ ユーザーのデータのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログは、次のように実装されます。  
   
 -   TDE とユーザー データのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログは既定でオフにします。 ステートメントは自動的にマスクされないアプライアンスに、データベースの暗号化が有効でない場合。  
   
--   ユーザー データのマスキングをオンに自動的にアプライアンスで TDE を有効にする[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログです。  
+-   ユーザー データのマスキング アプライアンスで TDE を自動的に有効にするオン[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ。  
   
--   TDE を無効にするには影響しませんユーザーのデータのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログです。  
+-   TDE を無効にした場合、ユーザーのデータのマスキングは影響しません[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ。  
   
--   ユーザー データのマスキングでは、明示的に有効に[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログを使用して、 **sp_pdw_log_user_data_masking**プロシージャです。  
+-   ユーザー データのマスキングでは、明示的に有効に[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログを使用して、 **sp_pdw_log_user_data_masking**プロシージャ。  
   
-## <a name="permissions"></a>権限  
- メンバーシップが必要、 **sysadmin**固定データベース ロール、または**CONTROL SERVER**権限です。  
+## <a name="permissions"></a>アクセス許可  
+ メンバーシップが必要です、 **sysadmin**固定データベース ロール、または**CONTROL SERVER**権限。  
   
 ## <a name="example"></a>例  
  次の例には、TDE のログ ユーザー データが、アプライアンスのマスクが可能です。  

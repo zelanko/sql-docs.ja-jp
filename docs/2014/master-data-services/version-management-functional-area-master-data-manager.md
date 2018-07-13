@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b36b06422cf2e88cfd68fd640f562204a40dde6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: badabfd899f3e4bad719f5c3c731cbc768cfe645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225642"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>[バージョン管理] 機能領域 (マスター データ マネージャー)
   [バージョン管理] 機能領域では、管理者はデータの検証、トランザクションの確認と破棄、データのバージョン管理対象コピーの作成、およびシステムをサブスクライブする場合のデータのバージョンへのフラグ設定を実行できます。 管理者の詳細については、「[管理者 (マスター データ サービス)](administrators-master-data-services.md)」を参照してください。  
@@ -42,12 +42,12 @@ ms.locfileid: "36072115"
   
  [バージョンにフラグを割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
- [バージョン フラグ名を変更&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
+ [バージョン フラグ名を変更する&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
   
 ## <a name="validation"></a>検証  
  [ビジネス ルール (マスター データ サービス)](../../2014/master-data-services/business-rules-master-data-services.md)  
   
- [ビジネス ルールに対してバージョンを検証する&#40;マスター データ サービス&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+ [ビジネス ルールに対してバージョンを検証&#40;マスター データ サービス&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
  [トランザクションを破棄する&#40;マスター データ サービス&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
   

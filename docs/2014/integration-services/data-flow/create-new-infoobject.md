@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 551ba484eb8cebe4278c5a39910d062292caf57f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28bcbf4e05302ca7b3d5deda1fb9a49ad4ba25a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324670"
 ---
 # <a name="create-new-infoobject"></a>[新しいインフォオブジェクトの作成]
   SAP Netweaver BW システムで新しいインフォオブジェクトを作成するには、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用します。  
@@ -127,7 +127,7 @@ ms.locfileid: "36070758"
  **[インフォオブジェクト]**  
  インフォオブジェクトの名前を表示します。  
   
- **description**  
+ **[説明]**  
  インフォオブジェクトの説明を表示します。  
   
  **インフォオブジェクトの種類**  
@@ -153,7 +153,7 @@ ms.locfileid: "36070758"
   
  新しいインフォオブジェクトを作成して追加するには、[新規作成] をクリックし、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスの新しいインスタンスを使用して、新しいインフォオブジェクトを作成します。  
   
- **削除**  
+ **[削除]**  
  選択したインフォオブジェクトを **[属性]** の一覧から削除します。  
   
 ## <a name="see-also"></a>参照  

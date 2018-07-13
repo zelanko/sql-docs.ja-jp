@@ -1,14 +1,13 @@
 ---
-title: レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ (SQL Server) |Microsoft ドキュメント
+title: レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
 - change data capture [SQL Server], AlwaysOn Availability Groups
@@ -16,22 +15,22 @@ helpviewer_keywords:
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0afd1136c2426b749beaff5c713f6c5e77671940
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204032"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、高可用性と追加のデータベース復旧機能を提供します。  
   
  
   
-##  <a name="Overview"></a> AlwaysOn 可用性グループでレプリケーションの概要  
+##  <a name="Overview"></a> AlwaysOn 可用性グループのレプリケーションの概要  
   
 ###  <a name="PublisherRedirect"></a> パブリッシャー リダイレクト  
  パブリッシュされたデータベースが [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に対応している場合、パブリッシング データベースへのエージェント アクセス権を提供するディストリビューターは、redirected_publishers エントリで構成されます。 これらのエントリは、パブリッシャーとパブリッシング データベースへの接続に可用性グループ リスナー名を使用して、最初に構成されていたパブリッシャー/データベース ペアをリダイレクトします。 可用性グループ リスナー名を介して確立された接続は、フェールオーバーに失敗します。 フェールオーバー後にレプリケーション エージェントを再起動すると、接続は自動的に新しいプライマリにリダイレクトされます。  
@@ -43,7 +42,7 @@ ms.locfileid: "36073568"
 > [!NOTE]  
 >  セカンダリ レプリカにフェールオーバーした後、レプリケーション モニターは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のパブリッシング インスタンスの名前を調整できないため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の元のプライマリ インスタンスの名前を引き続き使ってレプリケーション情報が表示されます。 フェールオーバー後は、トレーサー トークンはレプリケーション モニターを使用して入力できませんが、新しいパブリッシャーで [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して入力されたトレース トークンがレプリケーション モニターに表示されます。  
   
-###  <a name="Changes"></a> AlwaysOn 可用性グループをサポートするためにレプリケーション エージェントへの一般的な変更  
+###  <a name="Changes"></a> AlwaysOn 可用性グループをサポートするためにレプリケーション エージェントへの変更の概要  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]をサポートするために、3 つのレプリケーション エージェントが変更されました。 ログ リーダー、スナップショット、およびマージ エージェントは、リダイレクトされたパブリッシャーについてディストリビューション データベースにクエリを実行し、リダイレクトされたパブリッシャーが宣言されていた場合は、返された可用性グループ リスナー名を使用してデータベース パブリッシャーに接続するように変更されました。  
   
  既定では、エージェントがディストリビューターにクエリを実行して、元のパブリッシャーがリダイレクトされたかどうかを判断する場合、リダイレクトされたホストがエージェントに戻る前に、現在のターゲットまたはリダイレクトの適合性が検証されます。 これは推奨される動作です。 ただし、エージェントの起動が非常に頻繁に行われる場合、検証ストアド プロシージャに関連するオーバーヘッドのコストが高くなる可能性があります。 新しいコマンド ライン スイッチ *BypassPublisherValidation*が、ログ リーダー、スナップショット、およびマージ エージェントに追加されました。 スイッチが使用される場合、リダイレクトされたパブリッシャーはエージェントに即時に戻り、検証ストアド プロシージャの実行が省略されます。  
@@ -115,7 +114,7 @@ ms.locfileid: "36073568"
     > [!NOTE]  
     >  フェールオーバーの前にすべてのフェールオーバー ターゲット候補でジョブを作成し、ホストの可用性レプリカが新しいプライマリ レプリカになるまで無効としてマークしておく必要があります。 ローカル データベースがセカンダリ データベースになったときに、古いプライマリ データベースで実行されている CDC ジョブも無効にする必要があります。 ジョブを無効/有効にするには、[sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql) の *@enabled* オプションを使用します。 CDC ジョブの作成の詳細については、「 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。  
   
--   **AlwaysOn プライマリ データベース レプリカへの CDC ロールの追加**  
+-   **AlwaysOn プライマリ データベースのレプリカへの CDC ロールの追加**  
   
      CDC に対してテーブルを有効にした場合は、データベース ロールをキャプチャ インスタンスに関連付けることができます。 ロールが指定されている場合、CDC テーブル値関数を使用してテーブルの変更にアクセスするユーザーは、追跡されるテーブル列への選択アクセス権を持つだけでなく、名前付きロールのメンバーでもある必要があります。 指定したロールが存在しない場合は、ロールが作成されます。 AlwaysOn プライマリ データベースにデータベース ロールが自動的に追加されると、ロールは可用性グループのセカンダリ データベースにも反映されます。  
   
@@ -160,7 +159,7 @@ ms.locfileid: "36073568"
   
      可用性グループ リスナー名または明示的なノード名を使用してセカンダリ レプリカを検索できます。 可用性グループ リスナー名を使用すると、アクセスは適切なセカンダリ レプリカに送られます。  
   
-     ときに`sp_addlinkedserver`を使用してセカンダリにアクセスするリンク サーバーを作成する、 *@datasrc*パラメーターは、可用性グループ リスナー名または明示的なサーバー名を使用し、  *@provstr*パラメーターを使用して、読み取り専用の目的を指定します。  
+     ときに`sp_addlinkedserver`セカンダリにアクセスするリンク サーバーを作成するために使用、 *@datasrc* 、可用性グループ リスナー名または明示的なサーバー名、パラメーターを使用し、  *@provstr*パラメーターを使用して読み取り専用の目的を指定します。  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -222,7 +221,7 @@ ms.locfileid: "36073568"
   
 ### <a name="considerations"></a>考慮事項  
   
--   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] またはデータベース ミラーリングでディストリビューション データベースを使用することはできません。 レプリケーション構成は、ディストリビューターが構成された SQL Server インスタンスと結び付けられます。そのため、ディストリビューション データベースはミラー化またはレプリケートできません。 ディストリビューターの高可用性を実現するには、SQL Server のフェールオーバー クラスターを使用します。 詳細については、次を参照してください。 [ AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)です。  
+-   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] またはデータベース ミラーリングでディストリビューション データベースを使用することはできません。 レプリケーション構成は、ディストリビューターが構成された SQL Server インスタンスと結び付けられます。そのため、ディストリビューション データベースはミラー化またはレプリケートできません。 ディストリビューターの高可用性を実現するには、SQL Server のフェールオーバー クラスターを使用します。 詳細については、次を参照してください。 [ AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)します。  
   
 -   セカンダリ データベースへのサブスクライバーのフェールオーバーはサポートされていますが、かなり複雑な手動での手順になります。 手順は、ミラー化されたサブスクライバー データベースをフェールオーバーするために使用される方法と本質的には同じです。 可用性グループに参加するには、サブスクライバーは [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降を実行している必要があります。  
   
@@ -255,7 +254,7 @@ ms.locfileid: "36073568"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション サブスクライバーと AlwaysOn 可用性グループ&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
- [前提条件、制限事項、および AlwaysOn 可用性グループに関する推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループ: 相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [変更データ キャプチャについて &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   

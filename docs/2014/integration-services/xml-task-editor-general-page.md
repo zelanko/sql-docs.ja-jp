@@ -1,5 +1,5 @@
 ---
-title: XML タスク エディター (全般 ページ) |Microsoft ドキュメント
+title: XML タスク エディター ([全般] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.general.f1
 helpviewer_keywords:
 - XML Task Editor
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 67d02b183ab38ec046bf3fc0004c8d8f9de7e1d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae95fb2d0db4d052c241fb4b1968102b1bbe268c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237162"
 ---
 # <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   **[XML タスク エディター]** ダイアログ ボックスの **[全般]** ノードを使用すると、操作の種類を指定したり構成したりできます。  
@@ -316,11 +316,11 @@ ms.locfileid: "36073061"
 |**[IgnoreXMLDeclaration]**|XML 宣言を比較するかどうかを指定します。|  
 |**[IgnoreDTD]**|文書型定義 (DTD) を無視するかどうかを指定します。|  
 |**[IgnoreWhiteSpaces]**|ドキュメントを比較するときに空白の量の違いを無視するかどうかを指定します。|  
-|**[IgnoreNamespaces]**|要素名および属性名の名前空間の URI (Uniform Resource Identifier) を比較するかどうかを指定します。<br /><br /> 注: は、このオプションが設定されている場合`True`、2 つの要素を持つ同じローカル名しますが、異なる名前空間が同一と見なされます。|  
+|**[IgnoreNamespaces]**|要素名および属性名の名前空間の URI (Uniform Resource Identifier) を比較するかどうかを指定します。<br /><br /> 注: このオプション設定されている場合`True`、2 つの要素を持つ同じローカル名しますが、異なる名前空間は同一と見なされます。|  
 |**[IgnoreProcessingInstructions]**|処理命令を比較するかどうかを指定します。|  
-|**[IgnoreOrderOfChildElements]**|子の要素の順序を比較するかどうかを指定します。<br /><br /> 注: このオプションが 設定されている場合`True`兄弟の一覧で位置のみが異なる子要素は同一と見なされます。|  
+|**[IgnoreOrderOfChildElements]**|子の要素の順序を比較するかどうかを指定します。<br /><br /> 注: このオプション設定されている場合`True`兄弟の一覧で位置のみが異なる子要素は同一と見なされます。|  
 |**[IgnoreComments]**|コメント ノードを比較するかどうかを指定します。|  
-|**[IgnorePrefixes]**|要素名および属性名のプレフィックスを比較するかどうかを指定します。<br /><br /> 注: このオプションを設定する場合`True`を持つ、ローカル名が同じ別の名前空間 Uri とプレフィックスが、2 つの要素は同一と見なされます。|  
+|**[IgnorePrefixes]**|要素名および属性名のプレフィックスを比較するかどうかを指定します。<br /><br /> 注: このオプションを設定する場合`True`、ローカル名が同じが別の名前空間 Uri とプレフィックスを持つ 2 つの要素は同一と見なされます。|  
   
  **[FailOnDifference]**  
  Diff 操作が失敗した場合に、タスクが失敗するかどうかを指定します。  

@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行セット |Microsoft ドキュメント
+title: DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2155e4a905da3aeade0f0789f05cc04cdd42f8d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae9955e9f052e4be2317206d5618ccf9294232cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325022"
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行セット
   テーブル モードまたは PowerPivot モードで動作している Analysis Services データベースに関して、使用されているストレージ テーブルについての列およびセグメント レベルの情報を提供します。 この行セットは、主にトラブルシューティングや分析に使用されます。  
@@ -30,10 +30,10 @@ ms.locfileid: "36072184"
 ## <a name="rowset-columns"></a>行セットの列  
  `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS`行セットには、次の列が含まれています。  
   
-|**列名**|**型インジケーター**|**制限**|**description**|  
+|**列名**|**型インジケーター**|**制限**|**[説明]**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|はい|表形式のデータベースを指定します。<br /><br /> `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS`この列を使用して行セットを制限することができます。 現在のデータベースを省略した場合は使用されます。|  
-|`CUBE_NAME`|`DBTYPE_WSTR`|はい|モデルの名前。<br /><br /> `DISCOVER_STORAGE_TABLES`この列を使用して行セットを制限することができます。|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|はい|表形式のデータベースを指定します。<br /><br /> `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS`行セットは、この列を使用して制限できます。 現在のデータベースを省略した場合に使用されます。|  
+|`CUBE_NAME`|`DBTYPE_WSTR`|はい|モデルの名前。<br /><br /> `DISCOVER_STORAGE_TABLES`行セットは、この列を使用して制限できます。|  
 |`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`|はい|メジャー グループの名前。|  
 |`PARTITION_NAME`|`DBTYPE_WSTR`|はい|パーティションの名前。|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`||ディメンションの名前。|  
@@ -47,7 +47,7 @@ ms.locfileid: "36072184"
 |`COMPRESSION_TYPE`|`DBTYPE_WSTR`||列セグメントに適用されている圧縮の種類。 この値は内部使用とカスタマー サポートでの使用のみを目的としています。 Microsoft では、有効な値およびこの列に関する説明を公開していません。|  
 |`BITS_COUNT`|`DBTYPE_I8`||ビットのカウント。|  
 |`BOOKMARK_BITS_COUNT`|`DBTYPE_I8`||ブックマーク ビットのカウント。|  
-|`VERTIPAQ_STATE`|`DBTYPE_WSTR`||この列セグメントの VertiPaq 圧縮の状態です。 値は次のいずれかになります。<br /><br /> -SKIPPED – VertiPaq 圧縮はスキップされました。<br />完成した – VertiPaq 圧縮を正常に完了しました。<br />-TIMEBOXED – VertiPaq 圧縮は、時間枠は設定されました。|  
+|`VERTIPAQ_STATE`|`DBTYPE_WSTR`||この列セグメントの VertiPaq 圧縮の状態です。 値は次のいずれかになります。<br /><br /> -SKIPPED – VertiPaq 圧縮はスキップされました。<br />-完了 – VertiPaq 圧縮を正常に完了しました。<br />-TIMEBOXED – VertiPaq の圧縮は、枠が設定されたでした。|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>ADOMD.NET を使用した行セットのリターン  
  ADOMD.NET とスキーマ行セットを使用してメタデータを取得する場合、GetSchemaDataSet メソッドで GUID または文字列を使用してスキーマ行セット オブジェクトを参照できます。 詳細については、「 [Working with Schema Rowsets in ADOMD.NET](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)」を参照してください。  

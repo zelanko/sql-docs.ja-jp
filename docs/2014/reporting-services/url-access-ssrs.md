@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services]
 - links [Reporting Services], URL access
@@ -20,13 +20,13 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1e969deea2a5a2ca99af25a763adf324818ce741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11542b799e24e33fea852e8cac9e118349787a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216472"
 ---
 # <a name="url-access-ssrs"></a>URL アクセス (SSRS)
   SQL Server Reporting Services (SSRS) のレポート サーバーの URL アクセスにより、URL 要求を使用してレポート サーバーにコマンドを送信できます。 たとえば、ネイティブ モードのレポート サーバーや SharePoint ライブラリのレポートの表示をカスタマイズすることができます。 特定のレポート パラメーター値のセットを使用してレポートを表示したり、レポートの関心のある特定ページを表示することがあります。 この情報を、事前に定義された URL アクセス パラメーターを使用して URL にカプセル化することができます。 表示形式またはレポート ビューアーのルック アンド フィールのパラメーターを埋め込むことで、レポート サーバーによるレポートの処理方法をさらにカスタマイズできます。 その後、この URL を電子メールまたは Web ページに直接貼り付けて、他のユーザーがブラウザーから同じ方法でレポートにアクセスできるようにすることができます。  
@@ -43,7 +43,7 @@ ms.locfileid: "36073669"
   
 -   レポート セッションを管理する  
   
- コマンドおよび URL アクセスを通じて使用可能な設定の完全な一覧については[URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)です。  
+ コマンドおよび URL アクセスにより使用できる設定の完全な一覧で、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。  
   
 ## <a name="url-access-concepts"></a>URL アクセスの概念  
  レポート サーバーに対する URL 要求には、レポート サーバーによって処理されるパラメーターが含まれます。 レポート サーバーが URL 要求を処理する方法は、URL に含まれるパラメーター、パラメーター プレフィックス、アイテムの種類によって異なります。 レポート サーバーの URL は、World Wide Web Consortium W3C/IETF 共同ドラフト仕様として提案されている URL フォーマット ガイドラインに準拠します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の URL 機能は、標準的な URL アドレス指定をサポートするほとんどのインターネット ブラウザーやアプリケーションと互換性があります。  
@@ -108,7 +108,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  使用しているパラメーターの値に対応する URL テキスト。  
   
- **注:** 使用可能な URL アクセス パラメーターの一覧は、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)です。 URL でレポート パラメーターを渡す例については、次を参照してください。 [、レポート内で URL パラメーターを渡す](pass-a-report-parameter-within-a-url.md)です。  
+ **注:** 使用可能な URL アクセス パラメーターの一覧は、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。 URL でレポート パラメーターを渡す例については、次を参照してください。 [、レポート内で URL パラメーターを渡す](pass-a-report-parameter-within-a-url.md)します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

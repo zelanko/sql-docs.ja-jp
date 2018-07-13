@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.schema.databasechangesdetected
 - vdtsql.chm:65543
 - vdtsql.chm:65554
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5fbb34856b414a561126b977360eb8b8337c7ce4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 958f892df463533138b722e16a61eeccd0e06b19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244042"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>[データベースの変更を確認] ダイアログ ボックス (Visual Database Tools)
   このダイアログは、データベース ダイアグラムまたは選択したテーブルを保存しようとしたときに、保存によって影響を受けるデータベース オブジェクトの一部がデータベースの最新の内容と異なる場合に表示されます。 このダイアログ ボックスに表示された変更を受け入れると、ダイアグラムに一致するようにデータベースが更新され、他のユーザーが加えた変更が上書きされます。  
@@ -48,7 +48,7 @@ ms.locfileid: "36071346"
  **[名前を付けて保存]** ダイアログ ボックスが表示され、データベースへの変更の一覧を保存するテキスト ファイルの場所を指定できます。  
   
 ## <a name="see-also"></a>参照  
- [データベース ダイアグラムにデータベースの変更を反映&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [データベースの変更のデータベース ダイアグラムへの反映&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [マルチユーザー環境 (Visual Database Tools)](multiuser-environments-visual-database-tools.md)  
   
   

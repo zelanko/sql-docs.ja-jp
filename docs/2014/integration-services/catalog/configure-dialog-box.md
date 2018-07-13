@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 - SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
@@ -17,13 +17,13 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d5cb3dfa73f2636acbc2189b54b5cfb55f22b0e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 021cb357b85b7e75ec2d4594300c096b8f09fda8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184679"
 ---
 # <a name="configure-dialog-box"></a>[構成] ダイアログ ボックス
   パッケージとプロジェクトのパラメーター、接続マネージャー、および環境への参照を構成するには、 **[構成]** ダイアログ ボックスを使用します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36071527"
  **コンテナー**  
  パラメーターを含むオブジェクトを一覧表示します。  
   
- **Name**  
+ **名前**  
  パラメーター名を一覧表示します。  
   
  **Value**  
@@ -71,13 +71,13 @@ ms.locfileid: "36071527"
  **コンテナー**  
  接続マネージャーを含むオブジェクトを一覧表示します。  
   
- **Name**  
+ **名前**  
  接続マネージャーの名前を一覧表示します。  
   
  **プロパティ名**  
  接続マネージャーのプロパティの名前を一覧表示します。  
   
- **Value**  
+ **[値]**  
  接続マネージャーのプロパティに割り当てられた値を一覧表示します。 **[パラメーター値の設定]** ダイアログ ボックスの値を変更するには、参照ボタンをクリックします。 リテラル値を入力するか、使用する値を含んでいる環境変数をマップするか、パッケージの既定値を使用することができます。  
   
 ##  <a name="references"></a> [参照] ページのオプションの設定  
@@ -91,7 +91,7 @@ ms.locfileid: "36071527"
  **環境フォルダー**  
  環境を含むフォルダーを一覧表示します。  
   
- **Open**  
+ **[ファイル]**  
  **[環境のプロパティ]** ダイアログ ボックスを開く場合にクリックします。  
   
  **[追加]**  
@@ -99,7 +99,7 @@ ms.locfileid: "36071527"
   
  **SSISDB** ノードの下の任意のプロジェクト フォルダーに含まれている環境を選択できます。  
   
- **削除**  
+ **[削除]**  
  **[参照]** 領域に表示されている環境を選択し、 **[削除]** をクリックします。  
   
   

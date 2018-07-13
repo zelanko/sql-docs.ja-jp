@@ -1,5 +1,5 @@
 ---
-title: シーケンス クラスターのクラスター ダイアグラム タブ (マイニング モデル ビューアー |Microsoft ドキュメント
+title: シーケンス クラスターのクラスター ダイアグラム タブ (マイニング モデル ビューアー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.diagrams.f1
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56c384e39ae4ef364f608cef8fa507d20bb746ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 862dca35dcec3c1113117cf472b3866fb9df0be3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257248"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>シーケンス クラスターの [クラスター ダイアグラム] タブ (マイニング モデル ビューアー)
   **Microsoft シーケンス クラスター ビューアー**の **[クラスター ダイアグラム]** タブには、シーケンス クラスター モデルに含まれるすべてのクラスターのグラフィカル ビューが表示されます。  
@@ -43,13 +43,13 @@ ms.locfileid: "36072414"
  **ズーム イン**  
  ダイアグラムを拡大して、クラスターの詳細を表示します。  
   
- **ズーム アウトします。**  
+ **ズーム アウト**  
  ダイアグラムをズーム アウトして、モデル内のすべてのクラスターを表示します。  
   
  **グラフ ビューのコピー**  
  ダイアグラムで表示されている部分をクリップボードにコピーします。  
   
- **グラフ全体のコピーします。**  
+ **グラフ全体のコピー**  
  ダイアグラム全体をクリップボードにコピーします。  
   
  **ウィンドウに合わせてダイアグラムの倍率**  
@@ -70,7 +70,7 @@ ms.locfileid: "36072414"
   
 -   **[シェーディング変数]** で属性を選択した場合は、 **[状態]** の値も選択する必要があります。 この操作を行うと、密度バー グラフが更新され、状態の確率が示されます。 個々のクラスターの上にマウス ポインターを置くことで、クラスターの選択した状態の確率を確認できます。  
   
- **[シェーディング変数]**  
+ **網掛け変数**  
  クラスター ダイアグラムのシェーディングで使用する属性をマイニング モデルから選択します。  
   
  **State**  

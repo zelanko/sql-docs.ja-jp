@@ -1,5 +1,5 @@
 ---
-title: 権限借用 (SSAS テーブル) |Microsoft ドキュメント
+title: 権限借用 (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16323d7df2fa3620bbdd6fb541f028ebaf582cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c60f64bc76967fb6d4191aee4f1de7c7bbbb537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176489"
 ---
 # <a name="impersonation-ssas-tabular"></a>権限借用 (SSAS テーブル)
   このトピックでは、データのインポートおよび処理 (更新) のためにデータ ソースに接続するときに、ログオン資格情報が Analysis Services によってどのように使用されるかについて、テーブル モデルの作成者を対象に説明しています。  
@@ -71,12 +71,12 @@ ms.locfileid: "36073821"
   
 |オプション|ImpersonationMode<sup>1</sup>|説明|  
 |------------|-----------------------------------|-----------------|  
-|**特定の Windows ユーザー名とパスワード** <sup>2</sup>|ImpersonateWindowsUserAccount|データ ソースのデータをインポートまたは処理する際に、モデルで Windows ユーザー アカウントが使用されるように指定します。 ドメインとユーザー アカウントの名前は、次の形式:**\<ドメイン名 >\\< ユーザー アカウント名\>** です。 テーブルのインポート ウィザードを使用して新しいモデルを作成する場合は、これが既定のオプションです。|  
+|**特定の Windows ユーザー名とパスワード** <sup>2</sup>|ImpersonateWindowsUserAccount|データ ソースのデータをインポートまたは処理する際に、モデルで Windows ユーザー アカウントが使用されるように指定します。 ドメインとユーザー アカウントの名前は、次の形式:**\<ドメイン名 >\\< ユーザー アカウント名\>** します。 テーブルのインポート ウィザードを使用して新しいモデルを作成する場合は、これが既定のオプションです。|  
 |**[サービス アカウント]**|ImpersonateServiceAccount|モデルを管理している Analysis Services サービス インスタンスに関連付けられているセキュリティ資格情報をモデルで使用するように指定します。|  
   
- <sup>1</sup>ImpersonationMode の値を指定する、 [DataSourceImpersonationInfo 要素&#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md)データ ソースのプロパティです。  
+ <sup>1</sup>ImpersonationMode の値を指定する、 [DataSourceImpersonationInfo 要素&#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md)データ ソースのプロパティ。  
   
- <sup>2</sup>、再起動が原因には、メモリからワークスペース データベースが削除された場合、このオプションを使用する場合、または**ワークスペースの保有期間**プロパティに設定されている**メモリからアンロード**または**ワークスペースから削除**、そのモデル プロジェクトを閉じると、後続のセッションで、テーブル データを処理しようとする場合は、求められます各データ ソースの資格情報を入力します。 同様に、配置されたモデル データベースがメモリから削除されると、各データ ソースの資格情報の入力を求められるようになります。  
+ <sup>2</sup>を再起動するか、メモリからワークスペース データベースが削除された場合、このオプションを使用する場合、または**ワークスペースの保有期間**プロパティに設定されて**メモリからアンロード**または**ワークスペースから削除**、し、モデル プロジェクトを閉じると、後続のセッションでテーブル データを処理しようとした場合は、求められますの各データ ソースの資格情報を入力します。 同様に、配置されたモデル データベースがメモリから削除されると、各データ ソースの資格情報の入力を求められるようになります。  
   
 ##  <a name="bkmk_impers_sec"></a> Security  
  権限借用で使用される資格情報は、ワークスペース データベースまたは配置されたモデルを管理する Analysis Services サーバーに関連付けられている xVelocity メモリ内分析エンジン (VertiPaq™ エンジン) によって、メモリ内に保存されます。  資格情報がディスクに書き込まれることはありません。 モデルが配置されるときにワークスペース データベースがメモリ内にない場合、ユーザーはデータ ソースへの接続とデータのフェッチに使用する資格情報の入力を求められます。  
@@ -87,14 +87,14 @@ ms.locfileid: "36073821"
 ##  <a name="bkmk_imp_newmodel"></a> モデルをインポートする場合の権限借用  
  テーブル モデルの場合、アウト プロセスのデータ コレクションをサポートしているいくつかの異なる権限借用モードを使用できますが、PowerPivot では ImpersonateCurrentUser モードのみが使用されます。 PowerPivot は常にインプロセスで実行されるため、現在ログオンしているユーザーの資格情報を使用してデータ ソースに接続します。 テーブル モデルの場合、現在ログオンしているユーザーの資格情報は、テーブルのインポート ウィザードの **[プレビューとフィルター]** 機能と、 **[テーブルのプロパティ]** の表示にのみ使用されます。 権限借用の資格情報は、ワークスペース データベースに対するデータのインポートまたは処理、あるいは配置済みモデルに対するデータのインポートまたは処理で使用されます。  
   
- 既存の PowerPivot ブックのインポートによって新しいモデルを作成する場合、既定では、モデル デザイナーによって、サービス アカウントを使用するように権限借用が構成されます (ImpersonateServiceAccount)。 PowerPivot からインポートしたモデルについては、権限借用の資格情報を Windows ユーザー アカウントに変更することをお勧めします。 使用して、資格情報を変更するには、PowerPivot ブックがインポートされていて、モデル デザイナーで新しいモデルを作成後、**既存の接続**ダイアログ。  
+ 既存の PowerPivot ブックのインポートによって新しいモデルを作成する場合、既定では、モデル デザイナーによって、サービス アカウントを使用するように権限借用が構成されます (ImpersonateServiceAccount)。 PowerPivot からインポートしたモデルについては、権限借用の資格情報を Windows ユーザー アカウントに変更することをお勧めします。 使用して、資格情報を変更するには、PowerPivot ブックがインポートされているし、新しいモデルを作成、モデル デザイナーで、**既存の接続**ダイアログ。  
   
  Analysis Services サーバー上の既存のモデルからインポートして新しいモデルを作成する場合、権限借用の資格情報は、既存のモデル データベースから、新しいモデル ワークスペース データベースに渡されます。 必要に応じて、 **[既存の接続]** ダイアログ ボックスを使用して、新しいモデルの資格情報を変更できます。  
   
 ##  <a name="bkmk_conf_imp_info"></a> 権限借用の構成  
  モデルが存在する場所とコンテキストに応じて、権限借用情報の構成方法が決まります。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で作成中のモデルでは、テーブルのインポート ウィザードの **[権限借用情報]** ページで、または **[既存の接続]** ダイアログ ボックスでデータ ソース接続を編集して、権限借用情報を構成できます。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で既存の接続を表示するには、 **[モデル]** メニューの **[既存の接続]** をクリックします。  
   
- 省略記号 (...) をクリックして、Analysis Services サーバーに配置されているモデルの場合、権限借用情報を構成することができます、**データ ソース権限借用情報**プロパティに、 **データベースのプロパティ**  ダイアログ ボックスの[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
+ 省略記号 (...) をクリックして、Analysis Services サーバーに配置されているモデルの場合、権限借用情報を構成することができます、**データ ソース権限借用情報**プロパティ、 **データベースのプロパティ**  ダイアログ ボックスの[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
 ## <a name="see-also"></a>参照  
  [DirectQuery モード &#40;SSAS テーブル&#41;](directquery-mode-ssas-tabular.md)   

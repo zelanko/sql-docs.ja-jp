@@ -1,5 +1,5 @@
 ---
-title: パッケージで使用されるファイルへのアクセス |Microsoft ドキュメント
+title: パッケージで使用されるファイルへのアクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
 - packages [Integration Services], security
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, security
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0125f75dc0a62886cabedd0f7752b43c426e5f69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3f4c1efc392020f943759d7698c837316f4fdf4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178419"
 ---
 # <a name="access-to-files-used-by-packages"></a>パッケージで使用されるファイルへのアクセス
   パッケージに格納されないファイルは、パッケージ保護レベルでは保護されません。 このようなファイルには、次のファイルが含まれます。  
@@ -42,7 +42,8 @@ ms.locfileid: "36074437"
  特に機密情報が含まれている場合、これらのファイルは個別に保護する必要があります。  
   
 ## <a name="configuration-files"></a>[構成ファイル]  
- ログイン情報やパスワード情報などの機密情報が構成に含まれている場合は、その構成を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に保存することを検討するか、アクセス制御リスト (ACL) を使用して、ファイルを保存する場所またはフォルダーへのアクセスを制限し、特定のアカウントにのみアクセスを許可する必要があります。 通常は、パッケージの実行を許可するアカウント、およびパッケージの管理とトラブルシューティング (構成の内容、チェックポイント、およびログ ファイルの確認) を行うアカウントにアクセス権を許可します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、サーバー レベルおよびデータベース レベルでの保護により、さらに堅牢なセキュリティが提供されます。 構成を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に保存するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成の種類を使用します。 ファイル システムに保存するには、XML 構成の種類を使用します。  
+ ログイン情報やパスワード情報などの機密情報が構成に含まれている場合は、その構成を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に保存することを検討するか、アクセス制御リスト (ACL) を使用して、ファイルを保存する場所またはフォルダーへのアクセスを制限し、特定のアカウントにのみアクセスを許可する必要があります。 通常は、パッケージの実行を許可するアカウント、およびパッケージの管理とトラブルシューティング (構成の内容、チェックポイント、およびログ ファイルの確認) を行うアカウントにアクセス権を許可します。 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、サーバー レベルおよびデータベース レベルでの保護により、さらに堅牢なセキュリティが提供されます。 構成を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に保存するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成の種類を使用します。 ファイル システムに保存するには、XML 構成の種類を使用します。  
   
  詳細については、「 [パッケージ構成](../../2014/integration-services/package-configurations.md)」、「 [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)」、および「 [SQL Server インストールにおけるセキュリティの考慮事項](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)」を参照してください。  
   

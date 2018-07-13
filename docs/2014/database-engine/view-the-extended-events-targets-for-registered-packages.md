@@ -1,5 +1,5 @@
 ---
-title: 登録パッケージの拡張イベント ターゲットの表示 |Microsoft ドキュメント
+title: 登録パッケージの拡張イベント ターゲットの表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events]
 - viewing event targets
 - extended events [SQL Server], viewing targets
 ms.assetid: 4985aa5f-ac99-49f6-852c-9d25916549e9
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c5552ca54f3297226fad6a15de2d5c80bc49067
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99205caab9b42d8d17f165f7e75d434b0c9cccae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257388"
 ---
 # <a name="view-the-extended-events-targets-for-registered-packages"></a>登録パッケージの拡張イベント ターゲットの表示
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拡張イベント セッションを作成する前に、提供されている拡張イベント ターゲットを確認すると役立つことがあります。 この作業では、以降に示した手順を実行するために [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用します。  

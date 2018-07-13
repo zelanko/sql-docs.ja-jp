@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d947f43f2f08c38a01102971dd62581affc80b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0b96ae16398f9ed8fd3ec6c62c61451966b458f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212702"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>変更データ キャプチャとその他の SQL Server 機能
   このトピックでは、次の機能と変更データ キャプチャとの連携について説明します。  
@@ -51,7 +51,7 @@ ms.locfileid: "36070906"
  データベース ミラーリングの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
 ##  <a name="TransReplication"></a> Transactional Replication  
- 変更データ キャプチャとトランザクション レプリケーションは、同じデータベースで共存できます。ただし、両方の機能が有効になっている場合、変更テーブルが異なる方法で作成されます。 変更データ キャプチャとトランザクション レプリケーションでは、トランザクション ログから変更を読み取る際に、常に同じプロシージャ ( [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)) が使用されます。 、それ自体に変更データ キャプチャが有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブによって`sp_replcmds`です。 同じデータベースでは、両方の機能が有効な場合、ログ リーダー エージェントを呼び出す`sp_replcmds`です。 このエージェントは、変更テーブルとディストリビューション データベース テーブルの両方を作成します。 詳細については、「 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)」を参照してください。  
+ 変更データ キャプチャとトランザクション レプリケーションは、同じデータベースで共存できます。ただし、両方の機能が有効になっている場合、変更テーブルが異なる方法で作成されます。 変更データ キャプチャとトランザクション レプリケーションでは、トランザクション ログから変更を読み取る際に、常に同じプロシージャ ( [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)) が使用されます。 自身で変更データ キャプチャが有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブによって`sp_replcmds`します。 同じデータベースでは、両方の機能が有効な場合、ログ リーダー エージェントを呼び出す`sp_replcmds`します。 このエージェントは、変更テーブルとディストリビューション データベース テーブルの両方を作成します。 詳細については、「 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)」を参照してください。  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで変更データ キャプチャが有効になっており、2 つのテーブルでキャプチャが有効になっているシナリオについて考えてみます。 変更テーブルを作成するために、キャプチャ ジョブによって `sp_replcmds` が呼び出されます。 データベースでトランザクション レプリケーションが有効になり、パブリケーションが作成されます。 次に、ログ リーダー エージェントがデータベースに対して作成され、キャプチャ ジョブが削除されます。 ログ リーダー エージェントは、変更テーブルにコミットされた最後のログ シーケンス番号からログのスキャンを続行します。 これにより、変更テーブル内のデータの一貫性が確保されます。 このデータベースでトランザクション レプリケーションが無効になっている場合、ログ リーダー エージェントが削除され、キャプチャ ジョブが再作成されます。  
   
@@ -67,11 +67,11 @@ ms.locfileid: "36070906"
   
 -   データベースを別のサーバーに復元した場合、既定では変更データ キャプチャが無効になり、関連するメタデータがすべて削除されます。  
   
-     変更データ キャプチャを保持するには、`KEEP_CDC`データベースを復元するオプションを選択します。 このオプションの詳細については、「 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
+     変更データ キャプチャを保持するには使用、`KEEP_CDC`データベースを復元するときのオプションします。 このオプションの詳細については、「 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
   
 -   データベースをデタッチしてから、同じサーバーまたは別のサーバーにアタッチした場合、変更データ キャプチャは有効のままです。  
   
--   データベースがアタッチまたは復元の場合、`KEEP_CDC`変更データ キャプチャが必要であるため、操作を Enterprise 以外のエディションにオプションがブロックされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise。 エラー メッセージ 934 が表示されます。  
+-   データベースをアタッチまたは復元、`KEEP_CDC`変更データ キャプチャが必要なため、操作、エンタープライズ以外のエディションにオプションがブロックされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise。 エラー メッセージ 934 が表示されます。  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   

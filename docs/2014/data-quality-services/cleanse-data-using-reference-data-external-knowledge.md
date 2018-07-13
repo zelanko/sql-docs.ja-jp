@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc8344f54b19d042082d1f9649ef0e883cc7a57a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c2ad64e98e5dbee5661554272f498bf5cde0164
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213952"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>参照データ (外部) のナレッジを使用したデータのクレンジング
   このトピックでは、参照データ プロバイダーから提供されるナレッジを使用してデータをクレンジングする方法について説明します。 クレンジング アクティビティを実行する手順は、参照データ プロバイダーから提供されるナレッジを使ってデータをクレンジングする場合も「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」で説明した手順とすべて同じですが、このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) での参照データ サービスを使ったデータ クレンジングに固有の情報を示します。  
@@ -37,7 +37,7 @@ ms.locfileid: "36071746"
 -   ドメインを参照データ サービスにマップするときに指定した **[自動修正しきい値]** と **[最小信頼度]** の値に基づいて、ドメイン値が信頼レベルに応じて自動的に修正または提案されます。  
   
     > [!NOTE]  
-    >  参照データ サービスのナレッジを使用してデータをクレンジングするときは、 **[全般設定]** タブの **[構成]** セクションで指定したしきい値ではなく、参照データ サービスにドメインをマップするときに指定したしきい値が適用されます。 参照データのクレンジングのしきい値の指定方法の詳細については、手順 9. を参照してください。[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)です。  
+    >  参照データ サービスのナレッジを使用してデータをクレンジングするときは、 **[全般設定]** タブの **[構成]** セクションで指定したしきい値ではなく、参照データ サービスにドメインをマップするときに指定したしきい値が適用されます。 参照データのクレンジングのしきい値の値を指定する方法の詳細については、手順 9. を参照してください。[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)します。  
   
 -   ドメイン値が " **提案**"、" **新規**"、" **無効**"、" **修正済み**"、および " **適切**" に分類されます。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36071746"
 ## <a name="before-you-begin"></a>はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
- DQS のナレッジ ベース内の必要なドメインを適切な参照データ サービスにマップしておく必要があります。 また、クレンジングするデータの種類に関するナレッジがナレッジ ベースに含まれている必要があります。 たとえば、米国の住所が格納されたソース データをクレンジングする場合は、米国の住所に関する高品質データを提供する参照データ サービス プロバイダーにドメインをマップする必要があります。 詳細については、次を参照してください。[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)です。  
+ DQS のナレッジ ベース内の必要なドメインを適切な参照データ サービスにマップしておく必要があります。 また、クレンジングするデータの種類に関するナレッジがナレッジ ベースに含まれている必要があります。 たとえば、米国の住所が格納されたソース データをクレンジングする場合は、米国の住所に関する高品質データを提供する参照データ サービス プロバイダーにドメインをマップする必要があります。 詳細については、次を参照してください。[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)します。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36071746"
  データ クレンジングを実行するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_kb_operator ロールが必要です。  
   
 ##  <a name="Cleanse"></a> 参照データのナレッジを使用したデータのクレンジング  
- 前のトピックではマップされているドメインを使用する同じ例を引き続き[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)、Windows Azure Marketplace の Melissa Data サービスとします。 ここでは、同じドメインを使用して、いくつかのサンプルの米国の住所をクレンジングします。 データをクレンジングする手順は、「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」で説明されているものと同じです。 処理中に注意が必要な箇所には説明を補足しています。  
+ 前のトピックでは、マップしたドメインを使用したのと同じ例では、引き続き[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)、Windows Azure Marketplace の Melissa Data サービスとします。 ここでは、同じドメインを使用して、いくつかのサンプルの米国の住所をクレンジングします。 データをクレンジングする手順は、「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」で説明されているものと同じです。 処理中に注意が必要な箇所には説明を補足しています。  
   
 1.  データ品質プロジェクトを作成し、 **[クレンジング]** アクティビティを選択します。 参照してください[データ品質プロジェクトの作成](../../2014/data-quality-services/create-a-data-quality-project.md)です。  
   

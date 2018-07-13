@@ -1,5 +1,5 @@
 ---
-title: レポート マネージャーを使用してモデルを作成 |Microsoft ドキュメント
+title: レポート マネージャーを使用して、モデルの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
@@ -16,13 +16,13 @@ ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9f4de8368cadbc56819cd22c65892cbf143ae02c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a4f951a901361e47e1582146d306955da0e9bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175091"
 ---
 # <a name="create-a-model-using-report-manager"></a>レポート マネージャーを使用してモデルを作成する
   レポート マネージャーを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のキューブ、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のデータベース、Oracle のデータベースからモデルを生成できます。 レポート モデルは、レポート サーバーにパブリッシュされている共有データ ソースから生成されます。 まだ共有データ ソースがない場合は、作成する必要があります。  
@@ -52,7 +52,7 @@ ms.locfileid: "36072746"
   
     -   Windows 認証 : オペレーティング システムで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーザーを認証する場合には、このオプションを選択します。 このオプションを選択すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、パスワードの暗号化などの Windows のセキュリティ機能を使用してユーザーを認証します。 このオプションを選択することを強くお勧めします。  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証: がユーザーを使用する場合、このオプションを選択、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログイン アカウントを作成します。 ユーザーは、正しい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログイン名とパスワードを入力する必要があります。  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証: は、ユーザーを使用する場合にこのオプションを選択、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログイン アカウントを作成します。 ユーザーは、正しい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログイン名とパスワードを入力する必要があります。  
   
         > [!CAUTION]  
         >  できるだけ Windows 認証を使用してください。  

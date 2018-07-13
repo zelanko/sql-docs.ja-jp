@@ -1,5 +1,5 @@
 ---
-title: Ordinal 要素 (ASSL) |Microsoft ドキュメント
+title: Ordinal 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Ordinal element
 ms.assetid: 64e68ad5-439c-4c1d-9df4-ee90c56761b4
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c9328a33db828af8bb7b0b129574d8ba855433e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91119d5eb5107dd691141c03a24cef7140999094
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195942"
 ---
 # <a name="ordinal-element-assl"></a>Ordinal 要素 (ASSL)
   キーおよび翻訳などコレクション内でバインドする序数を示します。  
@@ -62,9 +62,9 @@ ms.locfileid: "36072847"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `AttributeBinding` および`CubeAttributeBinding`要素を[型](type-element-binding-assl.md)プロパティに設定されている*キー*または*翻訳*のコレクションをさらにバインドされている属性にバインドすることができますデータの列にはソース ビューです。 `Ordinal` 要素の値によって、そのコレクション内で、`AttributeBinding` または `CubeAttributeBinding` が参照する列が決まります。  
+ `AttributeBinding` `CubeAttributeBinding`いる要素、[型](type-element-binding-assl.md)プロパティがいずれかに*キー*または*翻訳*のコレクションにさらにバインドされている属性にバインドできますソース ビューのデータの列。 `Ordinal` 要素の値によって、そのコレクション内で、`AttributeBinding` または `CubeAttributeBinding` が参照する列が決まります。  
   
- 親に対応する要素`Ordinal`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.AttributeBinding>と<xref:Microsoft.AnalysisServices.CubeAttributeBinding>です。  
+ 親に対応する要素`Ordinal`分析管理オブジェクト (AMO) オブジェクト モデルは、<xref:Microsoft.AnalysisServices.AttributeBinding>と<xref:Microsoft.AnalysisServices.CubeAttributeBinding>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

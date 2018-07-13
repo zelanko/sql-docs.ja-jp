@@ -1,5 +1,5 @@
 ---
-title: アタッチし、Analysis Services データベースをデタッチ |Microsoft ドキュメント
+title: アタッチし、Analysis Services データベースのデタッチ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssms.detachdatabase.f1
 - sql12.asvs.ssms.attachdatabase.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - databases [Analysis Services], detach
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8c997e90d611f1ab574ae483d4c71ee5d8fa777
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e9853b445f795d5bafdfb8839496056a521900d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271748"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Analysis Services データベースのインポートとデタッチ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) がデータベースを一時的にオフラインにした後、そのデータベースを同じサーバー インスタンスまたは別のサーバー インスタンス上でオンラインに戻すことは少なくありません。 こうした状況は、パフォーマンス向上のためにデータベースを別のディスクに移動したり、データベース拡張のための領域を確保したり、製品をアップグレードしたりするなど、ビジネス上のニーズによって頻繁に発生します。 このような状況だけでなくさまざまな場合に、`Attach` コマンドと `Detach` コマンドを使用することによって、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の DBA は、データベースをオフラインにした後、簡単にオンラインに戻すことができます。  
@@ -36,12 +36,12 @@ ms.locfileid: "36073134"
  `Attach`コマンドでは、オフラインにする必要があるデータベースをオンラインにすることができます。 データベースは元のサーバー インスタンスにでも、別のインスタンスにでもアタッチできます。 データベースをアタッチする場合、データベースに **ReadWriteMode** 設定を指定できます。 `Detach` コマンドを使用すると、データベースをサーバーからオフラインにすることができます。  
   
 ## <a name="attach-and-detach-usage"></a>Attach と Detach の使用方法  
- `Attach`コマンドを使用して、既存のデータベース構造をオンラインにします。 データベースをアタッチする場合`ReadWrite`モードでは、サーバー インスタンスに接続されている 1 つだけの時間となります。 ただしでデータベースをアタッチする場合`ReadOnly`モードでは、別のサーバー インスタンスに複数回、アタッチすることができます。 ただし、同じデータベースを同じサーバー インスタンスに複数回アタッチすることはできません。 同じデータベースを複数回アタッチしようとすると、データを別のフォルダーにコピーした場合でも、エラーが発生します。  
+ `Attach`既存のデータベース構造をオンラインするコマンドを使用します。 データベースがアタッチされている場合`ReadWrite`モードでは、サーバー インスタンスに接続されている 1 つだけの時間となります。 ただしで、データベースがアタッチされている場合`ReadOnly`モードでは、別のサーバー インスタンスに複数回をアタッチすることできます。 ただし、同じデータベースを同じサーバー インスタンスに複数回アタッチすることはできません。 同じデータベースを複数回アタッチしようとすると、データを別のフォルダーにコピーした場合でも、エラーが発生します。  
   
 > [!IMPORTANT]  
 >  データベースをデタッチする際にパスワードが必要だった場合は、そのデータベースをアタッチする際にも同じパスワードが必要になります。  
   
- `Detach`コマンドを使用して、既存のデータベース構造をオフラインにします。 データベースをデタッチする場合は、パスワードを指定して、機密性のあるメタデータを保護する必要があります。  
+ `Detach`既存のデータベース構造をオフラインにするコマンドを使用します。 データベースをデタッチする場合は、パスワードを指定して、機密性のあるメタデータを保護する必要があります。  
   
 > [!IMPORTANT]  
 >  データ ファイルの内容を保護するには、フォルダー、サブフォルダー、およびデータ ファイルのアクセス制御リストを使用する必要があります。  
@@ -55,7 +55,7 @@ ms.locfileid: "36073134"
  `Attach` コマンドおよび `Detach` コマンドは 1 つの操作として実行する必要があります。 同じトランザクション内でその他の操作と組み合わせることはできません。 また、`Attach`と`Detach`コマンドはアトミックなトランザクション コマンドです。 つまり、操作は成功するか失敗するかのどちらかになります。 データベースは未完了の状態にしておくことはできません。  
   
 > [!IMPORTANT]  
->  実行するサーバーまたはデータベースの管理者特権が必要、`Detach`コマンド。  
+>  サーバーまたはデータベース管理者特権は、実行に必要な`Detach`コマンド。  
   
 > [!IMPORTANT]  
 >  `Attach` コマンドを実行するには、サーバーの管理者特権が必要です。  

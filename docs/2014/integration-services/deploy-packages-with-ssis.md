@@ -1,5 +1,5 @@
 ---
-title: 'SSIS チュートリアル: パッケージの配置 |Microsoft ドキュメント'
+title: 'SSIS チュートリアル: パッケージの配置 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
 - deploying packages [Integration Services]
@@ -23,13 +23,13 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f01cb3f126267a5ebef2cf0d4862440732bb1766
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68a9e0c00bc51d7bee4c083a8ccc4f65b85d4880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213432"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS チュートリアル : パッケージの配置
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージを別のコンピューターへ簡単に配置できるツールが用意されています。 この配置ツールでは、パッケージに必要な構成やファイルなどの依存関係を管理することもできます。 このチュートリアルでは、これらのツールを使用して、対象のコンピューターにパッケージとその依存関係をインストールする方法を学習します。  
@@ -50,11 +50,11 @@ ms.locfileid: "36071932"
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の新しいツール、コントロール、機能などに慣れる最良の方法は、実際に使ってみることです。 このチュートリアルでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加する手順を紹介します。 プロジェクトが完成したら、配置バンドルを作成し、バンドルを目的のコンピューターにコピーして、そのコンピューターにパッケージをインストールします。  
   
 ## <a name="requirements"></a>要件  
- このチュートリアルは、ファイル システムの基本的な操作は理解していても、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の新機能はほとんど使用したことがないユーザーを対象にしています。 基本的な理解するのには[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]このチュートリアルで使用する概念、した方が最初に、次を完了するのに役立ちます[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]チュートリアル: [、SQL Server インポートおよびエクスポート ウィザードを実行](import-export-data/start-the-sql-server-import-and-export-wizard.md)と[SSIS チュートリアル: 簡単な ETL パッケージを作成する](../integration-services/ssis-how-to-create-an-etl-package.md)です。  
+ このチュートリアルは、ファイル システムの基本的な操作は理解していても、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の新機能はほとんど使用したことがないユーザーを対象にしています。 基本を理解する[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]このチュートリアルで使用する配置は概念、便利に最初に、次の手順に[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]チュートリアル: [、SQL Server インポートおよびエクスポート ウィザードを実行](import-export-data/start-the-sql-server-import-and-export-wizard.md)と[SSIS チュートリアル: 簡単な ETL パッケージを作成する](../integration-services/ssis-how-to-create-an-etl-package.md)します。  
   
  **ソース コンピューター** 配置バンドルを作成するコンピューターには、次のコンポーネントがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および AdventureWorks データベース。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 サンプル データベースをダウンロードする[CodePlex](http://msftdbprodsamples.codeplex.com/releases/view/125550)です。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および AdventureWorks データベース。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 サンプル データベースをダウンロードする[CodePlex](http://msftdbprodsamples.codeplex.com/releases/view/125550)します。  
   
 -   AdventureWorks に対してテーブルの作成および削除を行うための権限。  
   
@@ -88,6 +88,6 @@ ms.locfileid: "36071932"
  [レッスン 3: パッケージのインストール](../integration-services/lesson-3-install-ssis-package.md)  
  このレッスンでは、配置バンドルを対象のコンピューターにコピーし、パッケージをインストールして、パッケージを実行します。  
   
-![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
   

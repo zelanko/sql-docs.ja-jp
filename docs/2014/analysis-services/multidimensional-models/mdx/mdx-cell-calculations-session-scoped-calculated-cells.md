@@ -1,5 +1,5 @@
 ---
-title: 計算されるセルのセッション スコープの作成 |Microsoft ドキュメント
+title: 計算されるセルのセッション スコープの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - session-scoped calculated members [MDX]
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6cf66b12594d83e315e5cd1f633f0a4261e095e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1df213e83122d3d93a57c2bbdd131741043ffe7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232092"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>セッション スコープの計算されるセルの作成
     
@@ -83,7 +83,7 @@ FOR String_Expression AS 'MDX_Expression'
 |--------------|-----------------|  
 |空セット|空セットに解決される MDX セット式。 この場合、計算されるセルのスコープはキューブ全体です。|  
 |単一メンバー セット|1 つのメンバーに解決される MDX セット式。|  
-|レベル メンバーのセット|単一レベルのメンバーに解決される MDX セット式。 この例は、 *Level_Expression*です。`Members` MDX 関数です。 計算されるメンバーを含めるを使用して、 *Level_Expression*です。`AllMembers` MDX 関数です。<br /><br /> 詳細については、「[AllMembers (MDX)](/sql/mdx/allmembers-mdx)」を参照してください。|  
+|レベル メンバーのセット|単一レベルのメンバーに解決される MDX セット式。 この例は、 *Level_Expression*します。`Members` MDX 関数です。 計算されるメンバーを含めるには使用、 *Level_Expression*します。`AllMembers` MDX 関数です。<br /><br /> 詳細については、「[AllMembers (MDX)](/sql/mdx/allmembers-mdx)」を参照してください。|  
 |子孫のセット|指定したメンバーの子孫に解決される MDX セット式。 この例は、 `Descendants`(*メンバー式*、 *Level_Expression*、 *Desc_Flag*) MDX 関数です。<br /><br /> 詳細については、「[Descendants (MDX)](/sql/mdx/descendants-mdx)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  

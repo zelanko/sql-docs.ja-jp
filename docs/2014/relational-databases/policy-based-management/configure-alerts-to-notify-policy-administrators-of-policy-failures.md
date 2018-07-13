@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, configure alerts
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4b40bdea995e10e799b1280a2e987a8c55f8fbd8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7a70f9384154f6868be202c35f8cac640f56e3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246248"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>ポリシー管理者にポリシー エラーを通知する警告の構成
   ポリシー ベースの管理ポリシーが 3 つの自動評価モードのいずれかで実行された場合にポリシー違反が発生すると、メッセージがイベント ログに書き込まれます。 このメッセージがイベント ログに書き込まれたときに通知を受けるには、メッセージを検出してアクションを実行する警告を作成します。 警告は、次の表に示すようにメッセージを検出します。  

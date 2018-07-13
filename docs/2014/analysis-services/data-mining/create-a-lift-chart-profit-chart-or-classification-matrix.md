@@ -1,5 +1,5 @@
 ---
-title: リフト チャート、利益チャート、または分類マトリックスを作成 |Microsoft ドキュメント
+title: リフト チャート、利益チャート、または分類マトリックスの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], mining structures
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4538b84c5dcda3ef5c29d191e8e2dcf78c39442
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3dda0b4a75cf8abc6a6454aded4c342e38f7fabc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198522"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>リフト チャート、利益チャート、または分類マトリックスの作成
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング モデルの精度チャートを作成するには、次の 5 つの基本手順に従います。  

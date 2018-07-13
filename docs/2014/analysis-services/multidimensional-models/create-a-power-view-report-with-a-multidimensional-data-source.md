@@ -1,5 +1,5 @@
 ---
-title: 多次元データ ソースと Power View レポートを作成 |Microsoft ドキュメント
+title: 多次元データ ソースと Power View レポートの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b9b6f4c9-7e1f-4f61-b657-8986e39a6af2
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 736048d9cb6c8c2054c9d86bd3c8a8a0e2411daf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0edc1c2b45707afe65325e484ff2e772a224895a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220312"
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>多次元データ ソースを使用した Power View レポートの作成
   多次元モデルに基づく Power View レポートを作成するのは、PowerPivot ブックまたは Analysis Services テーブル モデルに基づくレポートを作成するのと同じです。 Power View レポートは、SharePoint ライブラリのレポート データ ソース接続ファイル (.rsds) から作成されます。 .rsds ファイルの作成方法については、「 [レポート データ ソースの作成](create-a-report-data-source.md)」を参照してください。  

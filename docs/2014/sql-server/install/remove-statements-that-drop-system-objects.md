@@ -1,5 +1,5 @@
 ---
-title: システム オブジェクトを削除するステートメントを削除します |Microsoft ドキュメント
+title: システム オブジェクトを削除するステートメントを削除する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - drop system objects [SQL Server]
 ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4c017e6fedbc7fd994e5b2d2ca4de184a082da65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7bb577db82aae98356481657faa9bd76a0ab2a82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161833"
 ---
 # <a name="remove-statements-that-drop-system-objects"></a>システム オブジェクトを破棄するステートメントを削除する
-  アップグレード アドバイザーによって、システム オブジェクトを削除するステートメントが検出されました。 拡張ストアド プロシージャなどのシステム オブジェクトは、読み取り専用で配置されて**リソース**データベース (mssqlsystemresource) を削除できません。 システム オブジェクトに対する EXECUTE 権限を禁止または拒否するように、アプリケーションを変更します。  
+  アップグレード アドバイザーによって、システム オブジェクトを削除するステートメントが検出されました。 拡張ストアド プロシージャを含む、システム オブジェクトは、読み取り専用でデプロイされる**リソース**データベース (mssqlsystemresource) を削除できません。 システム オブジェクトに対する EXECUTE 権限を禁止または拒否するように、アプリケーションを変更します。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>説明  
- DROP TABLE、DROP PROCEDURE などのステートメントと**sp_dropextendedproc** 、読み取り専用でこれらのオブジェクトが展開されているため、システム オブジェクトを削除するのには使用できません**リソース**データベース。  
+ DROP TABLE、DROP PROCEDURE などのステートメントと**sp_dropextendedproc** 、読み取り専用でこれらのオブジェクトが展開されるため、システム オブジェクトを削除するのには使用できません**リソース**データベース。  
   
 ## <a name="corrective-action"></a>修正措置  
- アプリケーションからシステム オブジェクトの削除を試行するすべてのステートメントを削除します。 システム オブジェクトに対する EXECUTE 権限を禁止または拒否するように、アプリケーションを変更します。 または、セキュリティ構成 (SAC) ツールを使用して、システム オブジェクトの一部を無効にすることもできます。 たとえば、 **xp_cmdshell**拡張ストアド プロシージャを無効にできますまたは SAC ツールを使用して有効にします。  
+ アプリケーションからシステム オブジェクトの削除を試行するすべてのステートメントを削除します。 システム オブジェクトに対する EXECUTE 権限を禁止または拒否するように、アプリケーションを変更します。 または、セキュリティ構成 (SAC) ツールを使用して、システム オブジェクトの一部を無効にすることもできます。 たとえば、 **xp_cmdshell**拡張ストアド プロシージャを無効にできますか、SAC ツールを使用して有効になっています。  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

@@ -1,5 +1,5 @@
 ---
-title: Try を使用するには.ネイティブ コンパイル ストアド プロシージャで catch |Microsoft ドキュメント
+title: Try を使用するには.ネイティブ コンパイル ストアド プロシージャで catch |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f730e70c-4f92-411d-9984-289e241e43ee
 caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 2339c5124875602012b44502f78d50b2c71a2b3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 388423c9b87ee567b3fd96f9f9e977d6c7cc07ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187159"
 ---
 # <a name="using-trycatch-in-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャでの Try..Catch の使用
   ネイティブ コンパイル ストアド プロシージャ内で try..catch ブロックを使用できます。 次の構造がサポートされます。  

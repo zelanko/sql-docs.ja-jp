@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.deleteag.f1
 helpviewer_keywords:
@@ -16,18 +15,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], dropping
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 caps.latest.revision: 46
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: fae0ec2e1aac160387ea36a9e665db82ffc06d75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b9ff8c441e73f24fee00a5c599ad3a1d8223b3fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219822"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>可用性グループの削除 (SQL Server)
-  このトピックを使用して (drop)、AlwaysOn 可用性グループを削除する方法について説明[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 可用性グループを削除する際、可用性レプリカの 1 つをホストするサーバー インスタンスがオフラインだった場合は、再度オンラインになった時点でローカルの可用性レプリカが削除されます。 可用性グループを削除すると、関連付けられている可用性グループ リスナーもすべて削除されます。  
+  このトピックを使用して (削除)、AlwaysOn 可用性グループを削除する方法を説明します。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。 可用性グループを削除する際、可用性レプリカの 1 つをホストするサーバー インスタンスがオフラインだった場合は、再度オンラインになった時点でローカルの可用性レプリカが削除されます。 可用性グループを削除すると、関連付けられている可用性グループ リスナーもすべて削除されます。  
   
  必要であれば、可用性グループの削除は、その可用性グループに対する適切なセキュリティ資格情報が存在する任意の Windows Server フェールオーバー クラスタリング (WSFC) ノードから行うことができます。 そのため、可用性レプリカがまったく残っていなくても可用性グループを削除することができます。  
   
@@ -118,7 +117,7 @@ ms.locfileid: "36073088"
     ```  
   
     > [!NOTE]  
-    >  表示するには、コマンドレットの構文を使用して、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   

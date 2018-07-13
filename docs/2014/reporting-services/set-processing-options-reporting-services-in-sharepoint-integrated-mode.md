@@ -1,5 +1,5 @@
 ---
-title: 処理オプション (SharePoint 統合モードで Reporting Services) を設定 |Microsoft ドキュメント
+title: 設定の処理オプション (SharePoint 統合モードで Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - snapshots [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b1d308718d1bfd1b9215cfe9595439f5657b95e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b04adc1d53fd4c41732a753cca5d7be1a3919c06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255654"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>処理オプションの設定 (Reporting Services の SharePoint 統合モード)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートの処理オプションを設定することにより、データ処理のタイミングを決定することができます。 また、レポート処理のタイムアウト値や、現在のレポートでレポート履歴を有効にするかどうかを決定するオプションも設定できます。  
@@ -106,7 +106,7 @@ ms.locfileid: "36071820"
   
 ##  <a name="bkmk_set_database_timeout"></a> データベースのタイムアウトを設定する  
   
-1.  Windows PowerShell を使用すると、SharePoint レポート サーバーのデータベースのタイムアウト値を設定できます。 詳細についてを参照してください、取得し、レポートするサービス アプリケーション データベースのプロパティの設定」のセクション[Reporting Services SharePoint モード用の PowerShell コマンドレット](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)です。  
+1.  Windows PowerShell を使用すると、SharePoint レポート サーバーのデータベースのタイムアウト値を設定できます。 詳細については、取得し、レポートするサービス アプリケーション データベースのプロパティを設定"を参照してください セクションの[Reporting Services SharePoint モード用の PowerShell コマンドレット](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)します。  
   
 ## <a name="see-also"></a>参照  
  [レポート処理プロパティを設定します。](report-server/set-report-processing-properties.md)   

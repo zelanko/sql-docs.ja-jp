@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23e267d78091895e5d0ec899835ce7aa09e8c9d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9e5c53e76330c00dde7b6d14fb0c6592546582bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329842"
 ---
 # <a name="create-an-entity-master-data-services"></a>エンティティを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でエンティティを作成して、メンバーおよびその属性を含めます。  
@@ -44,32 +44,32 @@ ms.locfileid: "36072121"
   
 3.  **[エンティティのメンテナンス]** ページの **[モデル]** ボックスの一覧からモデルを選択します。  
   
-4.  をクリックして**エンティティを追加**です。  
+4.  クリックして**エンティティを追加**します。  
   
 5.  **エンティティ名**ボックスに、エンティティの名前を入力します。  
   
-6.  **ステージング テーブルの名前**ボックスで、ステージング テーブルの名前を入力します。  
+6.  **ステージング テーブルの名前**ボックスに、ステージング テーブルの名前を入力します。  
   
     > [!TIP]  
-    >  ステージング テーブルの名前の一部にはモデル名を使用します。たとえば、 *Modelname_Entityname*のようにします。 こうすることで、データベースからテーブルを見つけやすくなります。 ステージング テーブルの詳細については、次を参照してください。[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)です。  
+    >  ステージング テーブルの名前の一部にはモデル名を使用します。たとえば、 *Modelname_Entityname*のようにします。 こうすることで、データベースからテーブルを見つけやすくなります。 ステージング テーブルの詳細については、次を参照してください。[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)します。  
   
 7.  任意。 **[コード値を自動的に作成する]** チェック ボックスをオンにします。 詳細については、「[コードの自動作成 (マスター データ サービス)](../../2014/master-data-services/automatic-code-creation-master-data-services.md)」を参照してください。  
   
 8.  **明示的階層およびコレクションを有効にする**一覧で、次のオプションのいずれかを選択します。  
   
-    -   **いいえ**です。 明示的階層およびコレクションに対してエンティティを有効にする必要がない場合、このオプションを選択します。 これは、必要に応じて後で変更できます。  
+    -   **いいえ**します。 明示的階層およびコレクションに対してエンティティを有効にする必要がない場合、このオプションを選択します。 これは、必要に応じて後で変更できます。  
   
-    -   **[はい]** です。 明示的階層およびコレクションに対してエンティティを有効にする場合、このオプションを選択します。 **明示的階層名**ボックスで、名前を入力します。 必要に応じて、選択**必須階層 (すべてのリーフ メンバーが含まれる**して、明示的階層を必須階層にします。  
+    -   **[はい]** します。 明示的階層およびコレクションに対してエンティティを有効にする場合、このオプションを選択します。 **明示的階層名**ボックスに、名前を入力します。 必要に応じて、**必須階層 (すべてのリーフ メンバーが含まれる**して明示的階層を必須階層にします。  
   
-9. をクリックして**エンティティの保存**です。  
+9. クリックして**エンティティの保存**します。  
   
 ## <a name="next-steps"></a>次の手順  
   
--   [テキスト属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
+-   [テキスト属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
   
 -   [ドメイン ベースの属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
--   [ファイル属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+-   [ファイル属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
  [エンティティ&#40;マスター データ サービス&#41;](../../2014/master-data-services/entities-master-data-services.md)   

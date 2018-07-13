@@ -1,5 +1,5 @@
 ---
-title: 'ブック内のデータ接続に関するデータを更新できません。 再試行するか、システム管理者に問い合わせてください。 次の接続の更新に失敗しました: PowerPivot データ |Microsoft ドキュメント'
+title: 'ブック内のデータ接続に関するデータを更新できません。 再試行するか、システム管理者に問い合わせてください。 次の接続の更新に失敗しました: PowerPivot データ |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 705aa014770346e7554a41d01a75235b3e2a0451
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 396b4b32d2af95b8c7d49beab0fde988d2bee903
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220272"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>ブック内のデータ接続に関するデータを更新できません。 再試行するか、システム管理者に問い合わせてください。 次の接続は更新に失敗しました: PowerPivot データ
   PowerPivot データを含む Excel ブックで、Excel Services は、PowerPivot サーバーに送信した接続要求が失敗した場合にこのエラーを返します。  
@@ -38,13 +38,13 @@ ms.locfileid: "36073353"
   
  **シナリオ 1: サービスが開始されていない**  
   
- SQL Server Analysis Services (PowerPivot) インスタンスが開始されていません。 パスワードの期限が切れると、サービスの実行が停止します。 パスワードの変更の詳細については、次を参照してください。 [PowerPivot サービス アカウントの構成](configure-power-pivot-service-accounts.md)と[開始または PowerPivot を SharePoint サーバーの停止](start-or-stop-a-power-pivot-for-sharepoint-server.md)です。  
+ SQL Server Analysis Services (PowerPivot) インスタンスが開始されていません。 パスワードの期限が切れると、サービスの実行が停止します。 パスワードを変更する方法についての詳細については、次を参照してください。 [PowerPivot サービス アカウントの構成](configure-power-pivot-service-accounts.md)と[開始または PowerPivot を SharePoint サーバーの停止](start-or-stop-a-power-pivot-for-sharepoint-server.md)します。  
   
  **シナリオ 2a: サーバー上で以前バージョンのブックを開こうとしている**  
   
  開こうとしているブックが、SQL Server 2008 R2 バージョンの PowerPivot for Excel で作成された可能性があります。 ほとんどの場合、データ接続文字列で指定された Analysis Services データ プロバイダーは、要求を処理しているコンピューター上に存在しません。  
   
- 大文字と小文字の場合は、ULS ログにこのメッセージが表示されます:"ブック 'PowerPivot データ' の更新に失敗しました '\<ブックへの URL >'"、「接続を取得できません」という順です。  
+ 大文字と小文字の場合は、ULS ログにこのメッセージが表示されます:"ブック 'PowerPivot データ' の更新に失敗しました '\<ブックへの URL >'"、続いて「接続を取得できません」です。  
   
  ブックのバージョンを決定するには、Excel で開き、接続文字列にどのデータ プロバイダーが指定されているか確認します。 SQL Server 2008 R2 ブックは、MSOLAP.4 をデータ プロバイダーとして使用します。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36073353"
   
  この問題を回避するには、PowerPivot サーバーと同じドメインにコンピューターを所属させるか、ローカル コンピューターにドメイン コントローラーをインストールします。 2 番目の解決策として、ドメイン コントローラーのインストールを行う場合は、すべてのサービスとユーザーのローカル ドメイン アカウントを作成することが必要になります。 それには、サービス アカウントを構成して、定義したアカウントの SharePoint 権限を構成する必要があります。  
   
- PowerPivot for SharePoint をオフライン状態で使用することを目的とする場合は、コンピューターにドメイン コントローラーをインストールすると便利です。 PowerPivot をオフラインで使用する方法の詳細については、ブログ エントリを参照してください。"時間の PowerPivot サーバーはネットワークから" [ http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241)です。  
+ PowerPivot for SharePoint をオフライン状態で使用することを目的とする場合は、コンピューターにドメイン コントローラーをインストールすると便利です。 PowerPivot をオフラインで使用する方法の詳細については、ブログ エントリを参照してください「"PowerPivot サーバーをネットワークから切断を取り入れること」 [ http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241)します。  
   
  **シナリオ 4: 不安定なサーバー**  
   

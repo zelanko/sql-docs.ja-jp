@@ -1,5 +1,5 @@
 ---
-title: エラーの構成 (マイニング構造 ダイアログ ボックス) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: エラーの構成 (マイニング構造 ダイアログ ボックス) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.miningstructuredialog.general.f1
 ms.assetid: d9aa028b-bad9-49c7-a81c-c2150e4dd481
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 95f347b876673bd178f2059136bbbf6e79d8df5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 73c3627f3861b978a9e539943bcb65777b2f36b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257408"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>[エラーの構成] ([マイニング構造] ダイアログ ボックス) (Analysis Services - 多次元データ)
   **SQL Server Management Studio** で **[マイニング構造のプロパティ]** ダイアログ ボックスの **[エラーの構成]** ページを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース内のマイニング構造のエラー構成プロパティを設定できます。  
   
 ## <a name="options"></a>および  
- **既定のエラー構成を使用します。**  
+ **既定のエラー構成を使用して、**  
  処理操作でオブジェクトに対して既定のエラー構成を使用します。  
   
  **[キー エラー アクション]**  
@@ -37,7 +37,7 @@ ms.locfileid: "36071062"
   
 -   **[レコードの破棄]** は、レコードの情報をオブジェクトでの処理から除外します。  
   
- **エラー数を無視します。**  
+ **エラーの数を無視します。**  
  処理中に発生するエラーは、すべて無視します。  
   
  **[エラー時に停止する]**  
@@ -93,7 +93,7 @@ ms.locfileid: "36071062"
  エラー ログ ファイルの完全なパスとファイル名を入力します。  
   
 ## <a name="see-also"></a>参照  
- [マイニング構造のプロパティ ダイアログ&#40;Analysis Services - データ マイニング&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
+ [マイニング構造のプロパティ ダイアログ ボックス&#40;Analysis Services - データ マイニング&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
  [一般的な&#40;マイニング構造 ダイアログ ボックス&#41; &#40;Analysis Services - データ マイニング&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
   
   

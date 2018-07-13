@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 25
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5c35ff979ce6d5e37d8eaba1942da681d3a73470
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2a6d943e02529785fdef26baeee82b6d11ddd433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231095"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>メモリ最適化テーブルのテーブルと行のサイズ
   メモリ最適化テーブルは、行のコレクションと、行へのポインターを格納するインデックスで構成されています。 メモリ最適化テーブルでは、行を 8,060 バイトより長くすることはできません。 メモリ最適化テーブルのサイズを知ることで、コンピューターに十分なメモリがあるかどうかがわかります。  
@@ -76,7 +76,7 @@ ms.locfileid: "36072328"
   
 |セクション|サイズ|コメント|  
 |-------------|----------|--------------|  
-|シャロー型の列|SUM([シャロー型のサイズ] (size of shallow types))<br /><br /> **それぞれの型のサイズは次のとおりです。**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> 数値 (精度 < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
+|シャロー型の列|SUM([シャロー型のサイズ] (size of shallow types))<br /><br /> **個別の型のサイズは次のとおりです。**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> 数値 (有効桁数 < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |シャロー列のパディング|有効な値は次のとおりです。<br /><br /> ディープ型の列が存在し、シャロー列の合計データ サイズが奇数になる場合は 1。<br /><br /> それ以外の場合は、0。|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
 |ディープ型の列のオフセット配列|有効な値は次のとおりです。<br /><br /> ディープ型の列がない場合は 0<br /><br /> それ以外の場合は 2 + 2 * [ディープ型の列の数] (number of deep type columns)|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
 |NULL 配列|[NULL 値を許容する列の数] / 8 (完全なバイト数になるように切り上げ)。|配列は、NULL 値を許容する列ごとに 1 ビットを保持します。 これは、完全なバイト数になるように切り上げられます。|  
@@ -97,7 +97,7 @@ ms.locfileid: "36072328"
   
  ![2 つのインデックスがあるテーブルの行構造。](../../database-engine/media/hekaton-tables-4.gif "2 つのインデックスがあるテーブルの行構造。")  
   
- 開始タイムスタンプおよび終了タイムスタンプは、特定の行バージョンが有効である期間を示します。 その期間内に開始されるトランザクションは、この行バージョンを認識できます。 詳細についてを参照してください[メモリ最適化テーブル内のトランザクション](memory-optimized-tables.md)です。  
+ 開始タイムスタンプおよび終了タイムスタンプは、特定の行バージョンが有効である期間を示します。 その期間内に開始されるトランザクションは、この行バージョンを認識できます。 詳細についてを参照してください[メモリ最適化テーブルでのトランザクション](memory-optimized-tables.md)です。  
   
  インデックス ポインターは、ハッシュ バケットに属しているチェーン内の次の行を参照します。 次の図は、(名前と都市の) 2 列があり、名前の列用と都市の列用にそれぞれ 1 つのインデックスを備えたテーブルの構造を示しています。  
   

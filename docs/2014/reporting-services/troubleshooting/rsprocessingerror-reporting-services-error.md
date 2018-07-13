@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9be2d437953424ac256d593fb39a727ae96a5ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 124c7b2dee86e1bd42b2d5cb3f450323bad8161a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218592"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services エラー
     
@@ -57,7 +57,7 @@ ms.locfileid: "36073401"
   
 -   正しく展開されていないカスタム アセンブリまたは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アセンブリを読み込めなかった。  
   
--   Null 許容のプロパティに設定を持つパラメーター`False`パラメーターに null 値を検出しました。  
+-   Null 許容のプロパティを設定するパラメーター`False`パラメーターに null 値が検出されました。  
   
 -   データ領域の Hidden プロパティの式にエラーが含まれている。オブジェクト参照が、オブジェクトのインスタンスに設定されていない。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36073401"
 -   レポート サーバーでローカル管理者として処理を実行している場合は、ログ ファイル内で `ReportProcessingException`を検索します。 ログ エントリには詳細情報が含まれています。 通常、レポート サーバーのログ ファイルは \<*ドライブ*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log にあります。 詳細については、「[Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>式のホスト アセンブリの読み込みに失敗した  
- カスタム アセンブリには、厳密な名前の署名と、属性 AllowPartiallyTrustedCallers の設定が必要です。 詳細については、次を参照してください。[レポートでカスタム アセンブリを使用して](../custom-assemblies/using-custom-assemblies-with-reports.md)と[セキュリティ ポリシーの理解](../extensions/secure-development/understanding-security-policies.md)です。  
+ カスタム アセンブリには、厳密な名前の署名と、属性 AllowPartiallyTrustedCallers の設定が必要です。 詳細については、次を参照してください。[レポートでカスタム アセンブリを使用して](../custom-assemblies/using-custom-assemblies-with-reports.md)と[セキュリティ ポリシーの概要](../extensions/secure-development/understanding-security-policies.md)します。  
   
 ### <a name="a-built-in-global-name-does-not-exist"></a>組み込みのグローバル名が存在しない  
  式内のスペルを確認します。 組み込みのグローバル、パラメーター、およびフィールド名では、大文字と小文字が区別されます。 エラーが発生した式で、レポートに名前が実際に存在し、そのスペルが正しいことを確認します。 詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
@@ -90,7 +90,7 @@ ms.locfileid: "36073401"
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>サブレポートを含むメイン レポートを処理できなかった  
  サブレポートを含むレポートは、同一バージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサで処理する必要があります。 レポートを最新バージョンのレポート定義スキーマにアップグレードする場合、メイン レポートとサブレポートは同時に更新されることもされないこともあります。 レポートとそのサブレポートの間でバージョンが一致しないと、"サブレポートを処理できませんでした。" というメッセージが表示されます。  
   
- すべてのレポートを同一バージョンのレポート プロセッサで処理できるように、メイン レポートまたはサブレポートのいずれかを変更する必要があります。 レポートのアップグレードが失敗した理由については、次を参照してください。 [Upgrade Reports](../install-windows/upgrade-reports.md)です。  
+ すべてのレポートを同一バージョンのレポート プロセッサで処理できるように、メイン レポートまたはサブレポートのいずれかを変更する必要があります。 レポートをアップグレードが失敗した理由については、次を参照してください。[レポートのアップグレード](../install-windows/upgrade-reports.md)します。  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>関数呼び出しが SQL ではなく Visual Basic であることを確認する  
  リレーショナル データベースのクエリ テキストでは SQL 関数を使用できます。 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 関数はクエリ テキストで使用できません。  
@@ -121,7 +121,7 @@ ms.locfileid: "36073401"
   
  累計を計算する集計関数 (`Previous`、`RunningValue`、または `RowNumber`) の場合、行グループ名または列グループ名をスコープのパラメーターに指定できますが、両方を指定することはできません。 これは、次のエラー メッセージに当てはまります。  
   
--   `Previous`、`RunningValue`または`RowNumber`集計関数のデータ セルで使用される、 *\<レポート アイテムの種類 >* '*\<レポート項目名 >*' スコープのグループ化を参照してください行および列の両方に、 *\<レポート アイテムの種類 >* です。 すべてのスコープ パラメーター `Previous`、`RunningValue`と`RowNumber`集計関数内で、 *\<レポート アイテムの種類 >* 行グループまたはデータ列のグループ、両方ではなく参照できます。  
+-   `Previous`、`RunningValue`または`RowNumber`集計関数のデータ セルで使用される、 *\<レポート アイテムの種類 >* '*\<レポート項目名 >*' グループ化スコープを参照してください列と行の両方で、 *\<レポート アイテムの種類 >* します。 すべてのスコープ パラメーター `Previous`、`RunningValue`と`RowNumber`集計関数内で、 *\<レポート アイテムの種類 >* 行グループまたはデータ列のグループが、両方を参照できます。  
   
  詳細については、「[合計、集計、および組み込みコレクションの式のスコープについて (レポート ビルダー 3.0 および SSRS)](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」および「[式での組み込みコレクションの使用 (レポート ビルダー 3.0 および SSRS)](../report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   

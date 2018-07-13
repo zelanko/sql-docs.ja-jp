@@ -24,13 +24,13 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a8179cd44f9cb9bb2c97971ca2c347eb76b3f82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a9e2fac6ad07c177dc3f3247207dc3d6224d9d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193522"
 ---
 # <a name="using-variables-in-the-script-task"></a>スクリプト タスクでの変数の使用
   スクリプト タスクで変数を使用すると、パッケージ内の別のオブジェクトとデータを交換できます。 詳細については、「[Integration Services (SSIS) の変数](../../integration-services-ssis-variables.md)」を参照してください。  
@@ -51,10 +51,10 @@ ms.locfileid: "36074026"
   
  変数を使用すると、Foreach ループ コンテナーとスクリプト タスク間のこうしたやり取りが可能になります。 **[Foreach ループ エディター]** の **[変数のマッピング]** ページでは、単一の列挙アイテムによって返されたデータの各アイテムに、変数が割り当てられます。 たとえば、Foreach File 列挙子の場合は、ファイル名のみがインデックス 0 で返されるためマッピングが必要な変数は 1 つのみですが、各行の複数のデータ列を返す列挙子の場合は、スクリプト タスクで使用する各列に、個別の変数をマップする必要があります。  
   
- 列挙の項目を変数にマップした後、必要があります、マップされた変数を追加する、`ReadOnlyVariables`プロパティを**スクリプト**のページ、**スクリプト タスク エディター**に利用できるように、スクリプトです。 フォルダー内の画像ファイルを処理する Foreach ループ コンテナー内のスクリプト タスクの例については、「[スクリプト タスクによる画像の操作](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)」を参照してください。  
+ 列挙アイテムを変数にマップした後は追加する必要ありますにマップされた変数、`ReadOnlyVariables`プロパティを**スクリプト**のページ、**スクリプト タスク エディター**に利用できるように、スクリプトです。 フォルダー内の画像ファイルを処理する Foreach ループ コンテナー内のスクリプト タスクの例については、「[スクリプト タスクによる画像の操作](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)」を参照してください。  
   
 ## <a name="variables-example"></a>変数の例  
- 次の例では、スクリプト タスク内の変数にアクセスし、その変数を使用してパッケージ ワークフローのパスを決定する方法を示します。 サンプルは、という名前の整数変数を作成している前提としています。`CustomerCount`と`MaxRecordCount`を追加し、`ReadOnlyVariables`内のコレクション、**スクリプト タスク エディター**です。 `CustomerCount` 変数には、インポートされる顧客レコードの数が格納されます。 この値が `MaxRecordCount` の値よりも大きい場合、スクリプト タスクから失敗が報告されます。 `MaxRecordCount` のしきい値を超過したために失敗が発生した場合、ワークフローのエラー パスには、任意の必要なクリーンアップを実装できます。  
+ 次の例では、スクリプト タスク内の変数にアクセスし、その変数を使用してパッケージ ワークフローのパスを決定する方法を示します。 サンプルは、という名前の整数変数を作成することを想定しています`CustomerCount`と`MaxRecordCount`を追加し、`ReadOnlyVariables`内のコレクション、**スクリプト タスク エディター**します。 `CustomerCount` 変数には、インポートされる顧客レコードの数が格納されます。 この値が `MaxRecordCount` の値よりも大きい場合、スクリプト タスクから失敗が報告されます。 `MaxRecordCount` のしきい値を超過したために失敗が発生した場合、ワークフローのエラー パスには、任意の必要なクリーンアップを実装できます。  
   
  サンプルを正常にコンパイルするには、Microsoft.SqlServer.ScriptTask アセンブリへの参照を追加する必要があります。  
   
@@ -119,7 +119,7 @@ public class ScriptMain
   
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41;変数](../../integration-services-ssis-variables.md)   

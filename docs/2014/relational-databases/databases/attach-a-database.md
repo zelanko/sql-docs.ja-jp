@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.attachdatabase.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 77d1a66f1cf5ee746e24ac278849b9a8f2816df6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1cbf5e35d6bab800cfc025be9a7ca2bc4bc1b0e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239052"
 ---
 # <a name="attach-a-database"></a>データベースのインポート
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースをアタッチする方法について説明します。 この機能は、SQL Server データベースのコピー、移動、またはアップグレードに使用できます。  
@@ -92,7 +92,7 @@ ms.locfileid: "36072551"
      **[MDF ファイルの場所]**  
      選択した MDF ファイルのパスとファイル名が表示されます。  
   
-     **Database Name**  
+     **データベース名**  
      データベースの名前が表示されます。  
   
      **[次の名前でアタッチ]**  
@@ -101,7 +101,7 @@ ms.locfileid: "36072551"
      **[所有者]**  
      データベースの所有者のドロップダウン リストです。これを使用して、必要に応じて別の所有者を選択できます。  
   
-     **Status**  
+     **ステータス**  
      次の表に示すように、データベースの状態を表示します。  
   
     |アイコン|状態テキスト|説明|  
@@ -119,7 +119,7 @@ ms.locfileid: "36072551"
      **[追加]**  
      主な必須データベース ファイルを検索します。 ユーザーが .mdf ファイルを選択した場合、 **[アタッチするデータベース]** グリッドの対応するフィールドに、対応する情報が自動的に入力されます。  
   
-     **削除**  
+     **[削除]**  
      選択したファイルを **[アタッチするデータベース]** グリッドから削除します。  
   
      **"** *<database_name>* **" データベースの詳細**  

@@ -1,5 +1,5 @@
 ---
-title: Reporting Services クエリ デザイナー |Microsoft ドキュメント
+title: Reporting Services クエリ デザイナー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
 caps.latest.revision: 16
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ca805856f4cd09d6d1172b5602a7a9e54b4cc16c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aed7304b4e7e48eff1691970da5ff68b03fd0962
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222942"
 ---
 # <a name="reporting-services-query-designers"></a>Reporting Services クエリ デザイナー
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 各データ ソースの種類、レポートにクエリを構築するためのグラフィカルおよびテキスト ベースのクエリ デザイナーを提供します。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートで各データ ソースの種類のクエリを構築するためにはグラフィカルおよびテキスト ベースのクエリ デザイナーを提供します。  
   
  一部のデータ ソースでは、クエリを対話形式で作成できるグラフィカル デザイナーがサポートされています。 その他のデータ ソースでは、テキスト ベースのクエリ デザイナーを使用します。 グラフィカル クエリ デザイナーでは、データ ソースの基になるデータを表すメタデータ アイテムをクエリ デザイン画面にドラッグできます。 テキスト ベースのクエリ デザイナーでは、コマンド テキストをクエリ ペインに入力できます。 グラフィカル クエリ デザイナーからテキスト ベースのクエリ デザイナーに変更するには、ツール バーのテキスト ベースのクエリ デザイナー アイコンをクリックします。  
   
- レポートで使用できるデータ ソースの種類は、クライアントまたはレポート サーバーにインストールされている [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ拡張機能によって決まります。 詳細については、次を参照してください。 [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md)と[RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)です。  
+ レポートで使用できるデータ ソースの種類は、クライアントまたはレポート サーバーにインストールされている [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ拡張機能によって決まります。 詳細については、次を参照してください。 [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md)と[RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)します。  
   
  データ処理拡張機能および関連するクエリ デザイナーは、次のようにデータ ソースのサポートにおいて異なる場合があります。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36072727"
 ## <a name="see-also"></a>参照  
  [Reporting Services でサポートされるデータ ソース&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [外部データ ソースのデータを追加する &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md)   
- [データ処理拡張機能と .NET Framework Data Providers &#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)   
+ [データ処理拡張機能と .NET Framework データ プロバイダー &#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)   
  [拡張機能&#40;SSRS&#41;](extensions-ssrs.md)  
   
   

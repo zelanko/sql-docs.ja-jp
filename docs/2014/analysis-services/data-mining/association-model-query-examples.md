@@ -1,5 +1,5 @@
 ---
-title: アソシエーション モデルのクエリ例 |Microsoft ドキュメント
+title: アソシエーション モデルのクエリ例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - association algorithms [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1b0c7f81123188af9b929dcdcc33f6cf44ed4aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccd88cf081949cfad9c3d032598af9b96707fd0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173613"
 ---
 # <a name="association-model-query-examples"></a>結合モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析の間に検出されたルールやアイテムセットの詳細情報を取得できます。予測クエリでは、データ内で検出されたアソシエーションを使用して予測を行うことができます。 アソシエーション モデルの場合、予測はルールに基づいて行われるのが一般的で、提案を行うために使用できます。一方、コンテンツ クエリではアイテムセット間の関係を調べるのが一般的です。 モデルに関するメタデータを取得することもできます。  
@@ -77,7 +77,7 @@ WHERE NODE_TYPE = 1
 |CHILDREN_CARDINALITY|942|  
 |NODE_DESCRIPTION|Association Rules Model; ITEMSET_COUNT=679; RULE_COUNT=263; MIN_SUPPORT=14; MAX_SUPPORT=4334; MIN_ITEMSET_SIZE=0; MAX_ITEMSET_SIZE=3; MIN_PROBABILITY=0.400390625; MAX_PROBABILITY=1; MIN_LIFT=0.14309369632511; MAX_LIFT=1.95758227647523|  
   
- アソシエーション モデルでこれらの列の意味の定義では、次を参照してください。[マイニング モデル コンテンツのアソシエーション モデル&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)です。  
+ これらの列の意味では、アソシエーション モデルの定義では、次を参照してください。[アソシエーション モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)します。  
   
  [トップに戻る](#bkmk_top2)  
   
@@ -170,7 +170,7 @@ WHERE NODE_TYPE = 7
  アソシエーション モデルに対するクエリは、そのほか、異なるクロスセル戦略の効果を比較できるようにさまざまなルールやアイテムセットの信頼度を取得するためにも使用できます。 以降の例は、このようなクエリの作成方法を示しています。  
   
 ###  <a name="bkmk_Query6"></a> サンプル クエリ 6: 関連のあるアイテムを予測する  
- この例では、「[中級者向けデータ マイニング チュートリアル (Analysis Services - データ マイニング)](../../tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)」で作成したアソシエーション モデルを使用します。 この例は、特定の製品を購入した顧客に対してどの製品を提案すればよいかを示す予測クエリの作成方法を示しています。 このクエリのように、`SELECT…UNION` ステートメントでモデルに値を渡す種類のクエリを、単一クエリと呼びます。 新しい値に対応する予測可能なモデル列は入れ子になったテーブルなので、いずれかを使用する必要があります`SELECT`句に新しい値を入れ子になったテーブル列にマップする`[Model]`、もう 1 つと`SELECT`句を入れ子になったテーブル列にマップする、ケース レベル列`[v Assoc Seq Line Items]`です。 キーワード INCLUDE-STATISTICS をクエリに追加すると、提案の確率とサポートも確認できます。  
+ この例では、「[中級者向けデータ マイニング チュートリアル (Analysis Services - データ マイニング)](../../tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)」で作成したアソシエーション モデルを使用します。 この例は、特定の製品を購入した顧客に対してどの製品を提案すればよいかを示す予測クエリの作成方法を示しています。 このクエリのように、`SELECT…UNION` ステートメントでモデルに値を渡す種類のクエリを、単一クエリと呼びます。 新しい値に対応する予測可能なモデル列は入れ子になったテーブルでは、いずれかを使用する必要があります`SELECT`句に新しい値を入れ子になったテーブル列にマップする`[Model]`、もう 1 つと`SELECT`句を入れ子になったテーブル列にマップする、ケース レベル列、`[v Assoc Seq Line Items]`します。 キーワード INCLUDE-STATISTICS をクエリに追加すると、提案の確率とサポートも確認できます。  
   
 ```  
 SELECT PredictAssociation([Association].[vAssocSeqLineItems],INCLUDE_STATISTICS, 3)  

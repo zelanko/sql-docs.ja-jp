@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 69369e5f1701ea1807a42bfb426f8cd26073e2c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f691cc55d7e8a6107e9c602d8edbb5c7d32d904c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323882"
 ---
 # <a name="secure-shared-dataset-items"></a>共有データセット アイテムをセキュリティで保護する
   レポート サーバーでは、複数のレポートで共有データセット アイテムを使用できます。 共有データセットをセキュリティ保護することによって、共有データセットにユーザーがアクセスする度合いを制御できます。 既定では、あらかじめ登録された **Administrators** グループのメンバーであるユーザーのみが、共有データセットの表示、プロパティの変更、キャッシュの有効化、キャッシュ更新計画の作成、およびアイテムの削除を行えます。 他のすべてのユーザーについては、共有データセットへのアクセスを許可するロールの割り当てを作成する必要があります。  
@@ -50,12 +50,12 @@ ms.locfileid: "36072041"
 |レポートの使用|共有データセット定義を表示します。|コンテンツ マネージャー<br /><br /> レポート ビルダー|  
 |アイテムへのセキュリティの設定|共有データセットへのアクセスを制御するロールの割り当てを作成および変更します。 このタスクは、"レポートの表示" または "レポートの管理" のいずれかのタスクと併用する必要があります。 それ以外の場合、ユーザーはアイテムを選択できないので効果がありません。|コンテンツ マネージャー|  
   
- 詳細については、次を参照してください。[アイテム レベルのタスク](tasks-and-permissions-item-level-tasks.md)と[の定義済みロール](role-definitions-predefined-roles.md)です。  
+ 詳細については、次を参照してください。[アイテム レベルのタスク](tasks-and-permissions-item-level-tasks.md)と[定義済みロール](role-definitions-predefined-roles.md)します。  
   
 ## <a name="see-also"></a>参照  
  [共有データセットを管理します。](../report-data/manage-shared-datasets.md)   
  [フォルダーをセキュリティで保護する](secure-folders.md)   
- [セキュリティで保護されたレポート、およびリソース](secure-reports-and-resources.md)   
+ [レポートとリソースを保護します。](secure-reports-and-resources.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)  
   

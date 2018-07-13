@@ -1,5 +1,5 @@
 ---
-title: Web サービス タスク エディター (全般 ページ) |Microsoft ドキュメント
+title: Web サービス タスク エディター ([全般] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d23c975b44a9d61bb9e9b1b61ebf04285842ba01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d68fdf156caf460ee6130df7ab746fcbd13fec0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331862"
 ---
 # <a name="web-service-task-editor-general-page"></a>[Web サービス タスク エディター] ([全般] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、HTTP 接続マネージャーの指定、Web サービス タスクで使用する WSDL (Web サービス記述言語) ファイルの場所の指定、Web サービス タスクの記述、WSDL ファイルのダウンロードなどの操作を実行できます。  
@@ -48,7 +48,7 @@ ms.locfileid: "36071464"
   
 -   **[WSDLFile]** オプションで、この空のファイルを選択します。  
   
--   値を設定**OverwriteWSDLFile**に`True`を実際の WSDL ファイルで上書きするのには、空のファイルを有効にします。  
+-   値を設定**OverwriteWSDLFile**に`True`を実際の WSDL ファイルで上書きできる空のファイルを有効にします。  
   
 -   **[WSDL のダウンロード]** をクリックして実際の WSDL ファイルをダウンロードし、空のファイルを上書きします。  
   
@@ -58,15 +58,15 @@ ms.locfileid: "36071464"
  **[OverwriteWSDLFile]**  
  Web サービス タスクの WSDL ファイルを上書きできるかどうかを示します。  
   
- 使用して WSDL ファイルをダウンロードするかどうか、 **WSDL のダウンロード**ボタンをこの値を設定`True`です。  
+ 使用して WSDL ファイルをダウンロードするかどうか、 **WSDL のダウンロード**ボタン、この値に設定`True`します。  
   
- **Name**  
+ **名前**  
  Web サービス タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **description**  
+ **[説明]**  
  Web サービス タスクの説明を入力します。  
   
  **[WSDL のダウンロード]**  

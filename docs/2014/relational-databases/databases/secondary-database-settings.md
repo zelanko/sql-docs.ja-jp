@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d1227ddc27604e8cb8298e34d63b741cd57d0ebf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cc5627fd991887748c326d5b271704d6b023b7a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197232"
 ---
 # <a name="secondary-database-settings"></a>[セカンダリ データベースの設定]
   このダイアログ ボックスを使用すると、ログ配布構成におけるセカンダリ データベースのプロパティを構成および変更できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "36074192"
  **[セカンダリ データベース]**  
  ログ配布構成のセカンダリ データベースの名前を表示します。 新しいセカンダリ データベースをログ配布構成に追加する場合は、一覧からデータベースを選択するか、ボックスに新しいデータベースの名前を入力します。 新しいデータベースの名前を入力する場合は、セカンダリ データベースにプライマリ データベースの完全なデータベース バックアップを復元するオプションを **[初期化]** タブで選択する必要があります。 新しいデータベースは復元操作の一部として作成されます。  
   
- **のインスタンスに接続するときには、**  
+ **Connect**  
  ログ配布構成において、セカンダリ サーバーとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 接続に使用するアカウントは、セカンダリ サーバーのインスタンスの sysadmin 固定サーバー ロールのメンバーである必要があります。  
   
  **[初期化] タブ**  

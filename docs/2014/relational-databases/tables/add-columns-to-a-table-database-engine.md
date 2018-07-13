@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting columns
 - columns [SQL Server], adding
 - adding columns
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 08e262af1a2e424f497aa39e7b136c62cb5ac09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3f71832822b93dfaf514ef13c1efed641a626333
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264268"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>テーブルへの列の追加 (データベース エンジン)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブルに新しい列を追加する方法について説明します。  
@@ -36,7 +36,7 @@ ms.locfileid: "36072744"
   
      [Security](#Security)  
   
--   **使用して、列の挿入。**  
+-   **使用して列を挿入するには。**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36072744"
     > [!NOTE]  
     >  新しい列の作成時には、列プロパティの既定の値が追加されますが、 **[列のプロパティ]** タブで値を変更できます。  
   
-6.  列の追加が完了したら、**ファイル**] メニューの [選択 **保存 * * * テーブル名*です。  
+6.  列の追加が完了したら、**ファイル**] メニューの [選択 **保存 * * * テーブル名*します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

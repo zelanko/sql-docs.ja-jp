@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
 - custom resolvers [SQL Server replication]
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7ca1843763ae4847da6bbb5e93817cdafc98b756
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 582fd0ee38209100ee46eca124d105e44034d016
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242342"
 ---
 # <a name="microsoft-com-based-resolvers"></a>Microsoft COM-Based Resolvers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のすべての COM ベースの競合回避モジュールでは、更新の競合が処理され、指定した場所で挿入および削除の競合が処理されます。 すべての競合回避モジュールで列追跡処理が可能です。また、ほとんどのモジュールで行追跡処理を行うこともできます。 この競合回避モジュール、および他の COM ベースの競合回避モジュールで処理可能な競合の種類が宣言され、それ以外の競合に対してはマージ  エージェントで既定の競合回避モジュールが使用されます。  

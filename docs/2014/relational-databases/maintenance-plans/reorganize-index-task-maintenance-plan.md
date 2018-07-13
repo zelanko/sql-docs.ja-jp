@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.defrag.f1
 helpviewer_keywords:
 - Reorganize Index Task dialog box
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a40c60191c417f9231063066360ac7ef08c2ef10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: aba2815d7524369dc0da87988cc96dffc213ddb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203272"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>[インデックスの再構成タスク] \(メンテナンス プラン)
   **[インデックスの再構成タスク]** ダイアログを使用すると、インデックス ページを効率的な検索順になるように移動できます。 このタスクでは、 `ALTER INDEX REORGANIZE` データベースに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ステートメントを使用します。  
   
 ## <a name="options"></a>および  
- **Connection**  
+ **[接続]**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  

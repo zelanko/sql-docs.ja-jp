@@ -1,5 +1,5 @@
 ---
-title: メジャー要素 (CSDLBI) |Microsoft ドキュメント
+title: メジャー要素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bfbc9274-053a-421a-bb81-2095bba710be
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 36dda5645c53a88fa497682e6946331c85ca67db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0c3a2f2ef1c1dcc80e0b8ac9cb68ce5d5694d104
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224020"
 ---
 # <a name="measure-element-csdlbi"></a>Measure 要素 (CSDLBI)
   Measure 要素は CSDL Property 要素に基づく複合型です。 CSDLBI 注釈によって、ビジネス インテリジェンス データ モデルで使用される複雑な式の定義をサポートする属性が追加されます。  
@@ -72,7 +72,7 @@ ms.locfileid: "36072858"
 ```  
   
 ## <a name="example"></a>例  
- **Multidimensiona です。**  
+ **Multidimensiona;**  
   
  CSDLBI Version 1.1 における次の例では、KPI として使用されている Contoso Operations キューブからのメジャーを示します。  
   

@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_DIMENSIONS 行セット |Microsoft ドキュメント
+title: MDSCHEMA_DIMENSIONS 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_DIMENSIONS rowset
 ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b00b617adf90e1dba8eac94a9872ce07c0773e7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69cb4e0c997d3d786a55a6673327e50d0aac27a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273398"
 ---
 # <a name="mdschemadimensions-rowset"></a>MDSCHEMA_DIMENSIONS 行セット
   データベース内の共有ディメンションとプライベート ディメンションについて記述します。  
@@ -52,7 +52,7 @@ ms.locfileid: "36073128"
 |`IS_READWRITE`|`DBTYPE_BOOL`||ディメンションが書き込み許可されているかどうかを示すブール値。<br /><br /> ディメンションが書き込み許可されている場合は、`TRUE` になります。|  
 |`DIMENSION_UNIQUE_SETTINGS`|`DBTYPE_I4`||ディメンションに一意の名前を持つメンバーのみが含まれている場合に、一意な値を含んでいる列を示すビットマップ。 このビットマップの Msmd.h では、次のビット値定数が定義されています。<br /><br /> -   `MDDIMENSIONS_MEMBER_KEY_UNIQUE`|  
 |`DIMENSION_MASTER_UNIQUE_NAME`|`DBTYPE_WSTR`||常に `NULL` です。|  
-|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||常に `TRUE` です。 **注:** ディメンション内の 1 つまたは複数の階層が表示されていない限り、ディメンションは表示されません。|  
+|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||常に `TRUE` です。 **注:** ディメンションが表示されていない限り、ディメンション内の 1 つまたは複数の階層が表示されます。|  
   
  行セットは、`CATALOG_NAME`、`SCHEMA_NAME`、`CUBE_NAME`、`DIMENSION_NAME` を基準に並べ替えることができます。  
   
@@ -66,8 +66,8 @@ ms.locfileid: "36073128"
 |`CUBE_NAME`|`DBTYPE_WSTR`|任意。|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`|任意。|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`|任意。|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 のキューブ<br />2 つのディメンション<br /><br /> 既定の制限の値は 1 です。|  
-|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 の表示<br />-2 not 表示<br /><br /> 既定の制限の値は 1 です。|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 のキューブ<br />-2 つのディメンション<br /><br /> 既定の制限の値は 1 です。|  
+|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 の表示<br />-2 の非表示<br /><br /> 既定の制限の値は 1 です。|  
   
 ## <a name="see-also"></a>参照  
  [OLE DB for OLAP Schema 行セット](ole-db-for-olap-schema-rowsets.md)  
