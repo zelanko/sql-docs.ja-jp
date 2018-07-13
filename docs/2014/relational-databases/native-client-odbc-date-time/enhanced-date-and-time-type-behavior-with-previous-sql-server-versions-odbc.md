@@ -1,40 +1,38 @@
 ---
-title: 強化された日付と時刻型の前の SQL Server バージョン (ODBC) での動作 |Microsoft ドキュメント
+title: 強化された日付と時刻型の以前の SQL Server バージョン (ODBC) での動作 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0c0d2cd04460e7fd53db4a4c291c65cfcaa64ebc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 91052172849df1cd0234fe73cd39130d4568f131
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179523"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422961"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>以前のバージョンの SQL Server における、強化された日付型と時刻型の動作 (ODBC)
   このトピックでは、強化された日付や時刻の機能を使用するクライアント アプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] と通信する場合、および Microsoft Data Access Components、Windows Data Access Components、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client を使用しているクライアント アプリケーションから、機能強化された日付や時刻をサポートするサーバーへコマンドを送信する場合に想定される動作について説明します。  
   
 ## <a name="down-level-client-behavior"></a>下位クライアントの動作  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client を使用してコンパイルされたクライアント アプリケーションでは、新しい日付型と時刻型が nvarchar 列と見なされます。 「データ形式: 文字列とリテラルをデータする」セクションで説明したよう列のコンテンツ リテラル表現[ODBC の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-odbc-date-and-time-improvements.md)です。 列のサイズは、列に指定された秒の小数部の有効桁数に対するリテラルの最大長です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client を使用してコンパイルされたクライアント アプリケーションでは、新しい日付型と時刻型が nvarchar 列と見なされます。 「データ形式: 文字列とリテラルをデータする"セクションで説明した列のコンテンツ リテラル表現[ODBC の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-odbc-date-and-time-improvements.md)します。 列のサイズは、列に指定された秒の小数部の有効桁数に対するリテラルの最大長です。  
   
  カタログ API によって、クライアントに返される下位データ型のコード (nvarchar など) および関連する下位の表現 (適切なリテラル形式など) と一貫性のあるメタデータが返されます。 ただし、返されるデータ型名は、実際の [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の型名です。  
   
- SQLDescribeCol、SQLDescribeParam、SQGetDescField、および SQLColAttribute によって返されるステートメント メタデータは、型名を含む、すべての点で下位型と一致するメタデータを返します。 `nvarchar` は、このような下位型の一例です。  
+ SQLDescribeCol、SQLDescribeParam、SQGetDescField、および SQLColAttribute によって返されるステートメント メタデータには、型名を含む、すべての点で下位型と一貫性のあるメタデータが返されます。 `nvarchar` は、このような下位型の一例です。  
   
- に対して下位クライアント アプリケーションを実行するときに、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはそれ以降) サーバーの種類が加えられました日付/時刻へのスキーマ変更で、予想される動作は次のようにします。  
+ に対して下位クライアント アプリケーションを実行すると、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはそれ以降) サーバーの種類が構成されている日付/時刻へのスキーマ変更で、想定される動作は次のようにします。  
   
 |SQL Server 2005 の型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはそれ以降)型|ODBC クライアントの型|結果の変換 (SQL から C へ)|パラメーターの変換 (C から SQL へ)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  

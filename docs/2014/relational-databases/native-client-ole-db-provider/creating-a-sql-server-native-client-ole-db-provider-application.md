@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client OLE DB プロバイダー アプリケーションの作成 |Microsoft ドキュメント
+title: SQL Server Native Client OLE DB プロバイダー アプリケーションの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - OLE DB, creating applications
 ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f0912b99394b8317c78c134a3324dd9d30a04bd8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 769c151f6b115065b62b2b3b4f7d9fc61b408463
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179509"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426801"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>SQL Server Native Client OLE DB プロバイダー アプリケーションの作成
-  作成する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのアプリケーションに次の手順します。  
+  作成、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー アプリケーションがこれらの手順が含まれます。  
   
 1.  データ ソースへの接続を確立します。  
   
@@ -36,7 +34,7 @@ ms.locfileid: "36179509"
 3.  結果を処理します。  
   
 > [!NOTE]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合、それらを暗号化する必要があります[Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)です。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合、それらを暗号化する必要があります[Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

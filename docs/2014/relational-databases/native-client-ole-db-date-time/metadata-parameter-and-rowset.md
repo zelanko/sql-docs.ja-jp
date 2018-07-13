@@ -1,28 +1,26 @@
 ---
-title: パラメーターと行セットのメタデータ |Microsoft ドキュメント
+title: パラメーターと行セットのメタデータ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a8b3365cdf3a2773b6627dfd49edd20b839ef9a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d2f6d55777a6f11e968a75be0f3d5509294c484d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179518"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427861"
 ---
 # <a name="parameter-and-rowset-metadata"></a>パラメーターと行セットのメタデータ
   このトピックでは、OLE DB の日付および時刻の機能強化に関連する、次の型と型メンバーについて説明します。  
@@ -51,7 +49,7 @@ ms.locfileid: "36179518"
   
  場合によっては、値の範囲が連続していないことに注意してください。 有効桁数が 0 より大きい場合は、小数点が追加されるためです。  
   
- DBPARAMFLAGS_SS_ISVARIABLESCALE は有効なに接続しているときにのみ、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはそれ以降) サーバー。 下位レベルのサーバーに接続されている場合は、DBPARAMFLAGS_SS_ISVARIABLESCALE は設定しないでください。  
+ DBPARAMFLAGS_SS_ISVARIABLESCALE はのみに接続されているときに有効です。 を[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](またはそれ以降) サーバー。 下位サーバーに接続されている場合は、DBPARAMFLAGS_SS_ISVARIABLESCALE は設定しないでください。  
   
 ## <a name="icommandwithparameterssetparameterinfo-and-implied-parameter-types"></a>ICommandWithParameters::SetParameterInfo と暗黙のパラメーターの型  
  DBPARAMBINDINFO 構造体で提供される情報は、次の表に準拠する必要があります。  
@@ -69,9 +67,9 @@ ms.locfileid: "36179518"
   
  *BPrecision*パラメーターは無視されます。  
   
- データをサーバーに送信する場合、"DBPARAMFLAGS_SS_ISVARIABLESCALE" は無視されます。 アプリケーションでは、プロバイダー固有の型名 "`datetime`" および "`smalldatetime`" を使用して、従来の表形式のデータ ストリーム (TDS) の型を強制的に使用することができます。 接続しているときに[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](またはそれ以降)、サーバー"`datetime2`"の形式が使用して、暗黙的なサーバー変換が発生、必要に応じて、型名が"`datetime2`"または"DBTYPE_DBTIMESTAMP"です。 *bScale*プロバイダー固有の型名の場合は無視されます"`datetime`「または」`smalldatetime`"を使用します。 それ以外の場合、アプリケーションでは、必ずを*bScale*が正しく設定されています。 MDAC からアップグレードしたアプリケーションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client を[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]"DBTYPE_DBTIMESTAMP"には、設定しない場合は失敗を使用する*bScale*正しくです。 サーバー インスタンスに接続している場合よりも前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 *bScale* "DBTYPE_DBTIMESTAMP"で 0 または 3 以外の値がエラーであり、E_FAIL が返されます。  
+ データをサーバーに送信する場合、"DBPARAMFLAGS_SS_ISVARIABLESCALE" は無視されます。 アプリケーションでは、プロバイダー固有の型名 "`datetime`" および "`smalldatetime`" を使用して、従来の表形式のデータ ストリーム (TDS) の型を強制的に使用することができます。 接続されているときに[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](またはそれ以降)、サーバー"`datetime2`"形式が使用して、暗黙的なサーバー変換が発生、必要に応じて、型名が"`datetime2`"または"DBTYPE_DBTIMESTAMP"。 *bScale*プロバイダー固有の型名の場合は無視されます"`datetime`「または」`smalldatetime`"ために使用されます。 それ以外の場合、アプリケーションである必要がありますように*bScale*が正しく設定されています。 MDAC からアップグレードされたアプリケーションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client から[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]"DBTYPE_DBTIMESTAMP"が設定されない場合は失敗を使用して*bScale*正しくします。 サーバー インスタンスに接続されている場合よりも前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 *bScale* "DBTYPE_DBTIMESTAMP"で 0 または 3 以外の値がエラーであり、E_FAIL が返されます。  
   
- Icommandwithparameters::setparameterinfo が呼び出されていない場合プロバイダー基、サーバーに iaccessor::createaccessor で指定されたバインディングの種類から次のように入力します。  
+ Icommandwithparameters::setparameterinfo が呼び出されていない場合プロバイダー基、サーバーに iaccessor::createaccessor で指定されたバインドの種類から次のように入力します。  
   
 |バインドの種類|*pwszDataSourceType*<br /><br /> (プロバイダー固有)|  
 |------------------|----------------------------------------------------|  
@@ -114,7 +112,7 @@ ms.locfileid: "36179518"
   
  DBCOLUMN_FLAGS に用意されている新しいフラグ DBCOLUMNFLAGS_SS_ISVARIABLESCALE を使用すると、アプリケーションは、DBCOLUMN_TYPE が DBTYPE_DBTIMESTAMP である列のサーバーの種類を判断できます。 サーバーの種類を識別するには、DBCOLUMN_SCALE または DBCOLUMN_DATETIMEPRECISION も使用する必要があります。  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE は有効なに接続しているときにのみ、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはそれ以降) サーバー。 下位レベルのサーバーに接続されている場合、DBCOLUMNFLAGS_SS_ISVARIABLESCALE は未定義となります。  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE はのみに接続されているときに有効です。 を[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](またはそれ以降) サーバー。 下位レベルのサーバーに接続されている場合、DBCOLUMNFLAGS_SS_ISVARIABLESCALE は未定義となります。  
   
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 構造体から次の情報が返されます。  
@@ -128,7 +126,7 @@ ms.locfileid: "36179518"
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
- *DwFlags*DBCOLUMNFLAGS_ISFIXEDLENGTH は日付/時刻型の場合は true 常におよび、次のフラグは常に false:。  
+ *DwFlags*DBCOLUMNFLAGS_ISFIXEDLENGTH は日付/時刻型の場合は true。 常におよび、次のフラグは常に false。  
   
 -   DBCOLUMNFLAGS_CACHEDEFERRED  
   
@@ -144,7 +142,7 @@ ms.locfileid: "36179518"
   
  その他のフラグ (DBCOLUMNFLAGS_ISNULLABLE、DBCOLUMNFLAGS_MAYBENULL、DBCOLUMNFLAGS_WRITE、および DBCOLUMNFLAGS_WRITEUNKNOWN) は、設定することができます。  
   
- 新しいフラグ DBCOLUMNFLAGS_SS_ISVARIABLESCALE がで提供される*dwFlags*アプリケーションで、列のサーバーの種類を決定するを許可する場所*wType* DBTYPE_DBTIMESTAMP がします。 *bScale*サーバーの種類の識別にも使用する必要があります。  
+ 新しいフラグ DBCOLUMNFLAGS_SS_ISVARIABLESCALE を記載*dwFlags*アプリケーションで、列のサーバーの種類を決定するため、 *wType* DBTYPE_DBTIMESTAMP が。 *bScale*もサーバーの種類を識別するために使用する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [メタデータ&#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
