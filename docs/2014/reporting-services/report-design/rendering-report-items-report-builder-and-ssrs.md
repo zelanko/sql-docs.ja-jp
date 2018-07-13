@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 66738f617a6b882e1b72c526fb66aad5f438f969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c4b2c799771c6ff5e87100e4906411b4a8a613bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240402"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>レポート アイテムのレンダリング (レポート ビルダーおよび SSRS)
   レポート アイテムの数、サイズ、および位置は、レポート本文の改ページに影響します。 以降、各種のレポート アイテムがどのようにレンダリングされるかについて説明します。  
@@ -81,13 +81,13 @@ ms.locfileid: "36178612"
   
 -   繰り返し表示される列ヘッダーおよび行ヘッダー。  
   
-     ヘッダーはフッターよりも優先されます。 繰り返し表示されるグループが入れ子になっている場合は、内側のグループの方が、外側のグループよりも優先されます。 アイテムで、`RepeatWith`プロパティが設定されたターゲットのデータ領域に近い方は、アイテムが、データ領域を遠い方のアイテムより優先順位を持ちます。  
+     ヘッダーはフッターよりも優先されます。 繰り返し表示されるグループが入れ子になっている場合は、内側のグループの方が、外側のグループよりも優先されます。 アイテムで、`RepeatWith`プロパティが設定されたターゲットのデータ領域に近いデータ領域に遠い項目に優先順位を持ちます。  
   
--   テキスト ボックス、四角形の場合は、明示的な KeepTogether プロパティに設定されたなどの小さなレポート アイテム`true`です。  
+-   テキスト ボックス、四角形の場合は、明示的な KeepTogether プロパティに設定されたなどの小さなレポート アイテム`true`します。  
   
--   サブレポートまたは明示的な KeepTogether プロパティに設定のない最も内側の tablix メンバーなどの大きなレポート アイテム`true`です。  
+-   サブレポートまたは明示的な KeepTogether プロパティに設定のない最も内側の tablix メンバーなどの大きなレポート アイテム`true`します。  
   
--   明示的な KeepTogether プロパティを持つ Tablix データ領域に設定`true`です。  
+-   Tablix データ領域の KeepTogether プロパティが明示的に設定`true`します。  
   
 ### <a name="subreports"></a>サブレポート  
  サブレポートは、別途レポート (.rdl) ファイルに定義された他のレポートを含んだ四角形としてレンダリングされます。 親レポートからアクセスできるようにするには、あらかじめサブレポート ファイルをレポート サーバーにパブリッシュしておく必要があります。  

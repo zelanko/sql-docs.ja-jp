@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: Web サービスにアクセスする |Microsoft ドキュメント'
+title: 'レッスン 3: Web サービスへのアクセス |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3e4c198-ab35-4548-9471-1b4e6b6e5dfd
 caps.latest.revision: 43
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f9cff3b2bec832eec9dc6cf8462511db89454eba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9e5decf2f1d6c702b3bc3483ffb89bff9a2cd9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230132"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>レッスン 3 : Web サービスへのアクセス
-  レポート サーバー Web サービスへの参照をプロジェクトに追加したら、次は、Web サービスのプロキシ クラスのインスタンスを作成します。 その後、このプロキシ クラスのメソッドを呼び出すことによって、Web サービスのメソッドにアクセスできます。 プロキシ クラスで生成されたコードのアプリケーションでは、これらのメソッドを呼び出す、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]アプリケーションと Web サービス間の通信を処理します。  
+  レポート サーバー Web サービスへの参照をプロジェクトに追加したら、次は、Web サービスのプロキシ クラスのインスタンスを作成します。 その後、このプロキシ クラスのメソッドを呼び出すことによって、Web サービスのメソッドにアクセスできます。 プロキシ クラスによって生成されたコードのアプリケーションがこれらのメソッドを呼び出すときに[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]アプリケーションと Web サービスの間の通信を処理します。  
   
- Web サービスのプロキシ クラスのインスタンスを作成する最初に、<xref:ReportService2010.ReportingService2010>です。 次に、このプロキシ クラスを使用して Web サービスの <xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドを呼び出します。 この呼び出しを使用して、サンプル レポート Company Sales の名前と記述を取得します。  
+ Web サービスのプロキシ クラスのインスタンスを作成する最初に、<xref:ReportService2010.ReportingService2010>します。 次に、このプロキシ クラスを使用して Web サービスの <xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドを呼び出します。 この呼び出しを使用して、サンプル レポート Company Sales の名前と記述を取得します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services 上で実行されている Web サービスにアクセスする場合は、"ReportServer" パスに "$SQLExpress" を追加する必要があります。 以下に例を示します。  
@@ -117,14 +117,14 @@ ms.locfileid: "36179432"
   
 4.  ソリューションを保存します。  
   
- このチュートリアルのサンプル コードを使用して、<xref:ReportService2010.ReportingService2010.GetProperties%2A>サンプル レポート Company Sales 2012 のプロパティを取得する Web サービスのメソッドです。 <xref:ReportService2010.ReportingService2010.GetProperties%2A>メソッドが 2 つの引数を受け取る: プロパティの情報との配列を取得するレポートの名前**property[]** 値を取得するプロパティの名前を含むオブジェクト。 メソッドの配列を返しますも**property[]** 名前と、プロパティ引数に指定したプロパティの値が含まれているオブジェクト。  
+ チュートリアルのサンプル コードを使用して、<xref:ReportService2010.ReportingService2010.GetProperties%2A>サンプル レポート Company Sales 2012 のプロパティを取得する Web サービスのメソッド。 <xref:ReportService2010.ReportingService2010.GetProperties%2A>メソッドは 2 つの引数を受け取ります。 プロパティ情報の配列を取得するレポートの名前**property[]** 値を取得するプロパティの名前を含むオブジェクト。 メソッドの配列を返しますも**property[]** 名前とプロパティの引数で指定したプロパティの値が含まれているオブジェクト。  
   
 > [!NOTE]  
->  場合は、空を指定する**property[]** 配列プロパティ引数には、すべての利用可能なプロパティが返されます。  
+>  場合は、空を指定する**property[]** 配列プロパティの引数の使用可能なすべてのプロパティが返されます。  
   
  上記のサンプル コードでは、<xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドを使用して、サンプル レポート Company Sales 2012 の名前と記述が返されています。 次に、`foreach` ループを使用して、プロパティと値をコンソールに書き込んでいます。  
   
- 作成して、レポート サーバー Web サービスのプロキシ クラスの使用に関する詳細については、次を参照してください。 [Web サービス プロキシを作成する](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)です。  
+ 作成して、レポート サーバー Web サービスのプロキシ クラスの使用の詳細については、次を参照してください。 [Web サービス プロキシの作成](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)です。  
   
 ## <a name="see-also"></a>参照  
  [レッスン 4: アプリケーションを実行する&#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   

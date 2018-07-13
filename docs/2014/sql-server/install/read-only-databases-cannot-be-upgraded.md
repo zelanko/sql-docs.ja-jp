@@ -1,5 +1,5 @@
 ---
-title: 読み取り専用データベースをアップグレードすることはできません |Microsoft ドキュメント
+title: 読み取り専用データベースをアップグレードすることはできません |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database cannot be upgraded
 ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 11f94ceed205d8984ed5a253e1d989211012f10f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8ce09bf818efcedca3fdfce7f138219236a254f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183829"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>読み取り専用データベースをアップグレードできない
   アップグレード アドバイザーによって、この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにある一部のデータベースをアップグレードできないことが判定されました。  
@@ -33,7 +33,7 @@ ms.locfileid: "36179059"
  読み取り専用データベースが検出されました。 データベースをアップグレードするには、セットアップ時にそのデータベースへの書き込みが可能である必要があります。  
   
 ## <a name="corrective-action"></a>修正措置  
- 誰が使用すると、データベースを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、または、ALTER DATABASE ステートメントを読み取り/書き込みデータベースを変更します。 次のステートメントを使用すると、データベースが読み取り/書き込み可能に変更されます。  
+ 使用して、データベースを使用していない、ときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、または ALTER DATABASE ステートメントを読み取り/書き込みデータベースを変更します。 次のステートメントを使用すると、データベースが読み取り/書き込み可能に変更されます。  
   
 ```  
 USE master;  

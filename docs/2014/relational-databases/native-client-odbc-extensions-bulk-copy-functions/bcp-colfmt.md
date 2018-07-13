@@ -1,13 +1,11 @@
 ---
-title: bcp_colfmt |Microsoft ドキュメント
+title: bcp_colfmt |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,18 +18,18 @@ helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f4c800d1652529374506137b2f536b9bef958025
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ad117fe5580267db103f1e6a44ec6798bf87c023
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176824"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423581"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
-  ユーザー ファイルのデータのコピー元またはコピー先の形式を指定します。 ソースの形式として使用すると**bcp_colfmt**への一括コピーでデータのソースとして使用される既存のデータ ファイルの形式を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 指定された列の形式を使用してデータ ファイルを作成する、ターゲットの形式として使用されるときに**bcp_colfmt**です。  
+  ユーザー ファイルのデータのコピー元またはコピー先の形式を指定します。 ソースの形式として使用すると**bcp_colfmt**への一括コピーでデータのソースとして使用される既存のデータ ファイルの形式を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 指定された列の形式を使用して、データ ファイルを作成する先の形式として使用するときに**bcp_colfmt**します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -73,17 +71,17 @@ idxServerCol
  ユーザー データ ファイルの、形式が指定される列の序数です。 最初の列は 1 です。  
   
  *eUserDataType*  
- ユーザー ファイル内にある列のデータ型です。 データベース テーブル内の対応する列のデータ型と異なる場合 (*idxServerColumn*)、一括コピーが可能であれば、データを変換します。  
+ ユーザー ファイル内にある列のデータ型です。 データベース テーブルの対応する列のデータ型と異なる場合 (*idxServerColumn*)、一括コピーが可能であれば、データを変換します。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SQLXML、SQLUDT データ型のトークンのサポートが導入されました、 *eUserDataType*パラメーター。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SQLXML および SQLUDT データ型のトークンでのサポートが導入され、 *eUserDataType*パラメーター。  
   
- *EUserDataType*パラメーターは列挙型、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlncli.h 内のデータ型のトークン、されません、ODBC C データ型の列挙子。 たとえば、文字の文字列では、ODBC を指定できます SQL_C_CHAR の型を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定の種類 SQLCHARACTER です。  
+ *EUserDataType*パラメーターは列挙型によって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlncli.h 内のデータ型のトークン、しない、ODBC C データ型の列挙子。 文字の文字列では、ODBC の指定などを使用して SQL_C_CHAR、入力、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SQLCHARACTER、特定の種類。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型に対して既定のデータ表現を指定するには、このパラメーターに 0 を設定します。  
   
- 一括コピーの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をファイルと*eUserDataType* SQLDECIMAL または SQLNUMERIC は。  
+ 一括コピーの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルと*eUserDataType* SQLDECIMAL または SQLNUMERIC:  
   
--   基になる列がない場合**10 進**または**数値**既定の有効桁数と小数点以下桁数が使用されます。  
+-   ソース列がない場合**decimal**または**数値**の既定の有効桁数と小数点を使用します。  
   
 -   ソース列がある場合**decimal**または**数値**、有効桁数と基になる列の小数点以下桁数を使用します。  
   
@@ -103,13 +101,13 @@ idxServerCol
   
  設定*cbUserData* SQL_NULL_DATA することを示しますデータ ファイルの列のすべての値、または NULL に設定する必要があります。  
   
- 設定*cbUserData*を SQL_VARLEN_DATA に示す、システムが各列のデータの長さを決定する必要があります。 これは、列によっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーされるデータの前に長さのインジケーターや NULL インジケーターを生成したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするデータにインジケーターが必要になる場合があることを意味します。  
+ 設定*cbUserData*を SQL_VARLEN_DATA には、システムが各列のデータの長さを調べることを示します。 これは、列によっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーされるデータの前に長さのインジケーターや NULL インジケーターを生成したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするデータにインジケーターが必要になる場合があることを意味します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字やバイナリ データ型、 *cbUserData* SQL_VARLEN_DATA、SQL_NULL_DATA、0 または正の値を指定できます。 場合*cbUserData*が sql_varlen_data の場合、システムは存在する場合は、長さのインジケーターやターミネータ シーケンスのいずれかを使用して、データの長さを決定します。 長さのインジケーターとターミネータ シーケンスの両方を指定した場合、一括コピーはコピーするデータ量が少なくなる方法を使用します。 場合*cbUserData*が sql_varlen_data の場合、データ型は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字またはバイナリ型でともない長さのインジケーターとターミネータ シーケンスを指定すると、システム エラー メッセージが返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字やバイナリ データ型、 *cbUserData* SQL_VARLEN_DATA、SQL_NULL_DATA、0 または正の値を指定できます。 場合*cbUserData* SQL_VARLEN_DATA は、システムは存在する場合は、長さのインジケーターやターミネータ シーケンスのいずれかを使用して、データの長さを決定します。 長さのインジケーターとターミネータ シーケンスの両方を指定した場合、一括コピーはコピーするデータ量が少なくなる方法を使用します。 場合*cbUserData* SQL_VARLEN_DATA、データは、型が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字またはバイナリの型と長さのインジケーターもターミネータ シーケンスを指定すると、システムには、エラー メッセージが返されます。  
   
- 場合*cbUserData*が 0 または正の値は、システムが使用*cbUserData*最大データ長として。 ただし、正の値にいる場合、 *cbUserData*長さのインジケーターとターミネータ シーケンスの提供、コピーするデータの量が最も少なくなる方法を使用して、データの長さを決定します。  
+ 場合*cbUserData*が 0 または正の値をシステムを使用して*cbUserData*最大データ長として。 ただし、正の値の場合、 *cbUserData*長さのインジケーターとターミネータ シーケンスの提供、コピーするデータ量が少なくなる方法を使用してデータの長さを決定します。  
   
- *CbUserData*値は、データのバイト数を表します。 文字データが Unicode ワイド文字、正の値で表されている場合*cbUserData*パラメーターの値は、各文字のバイト単位のサイズを乗算する文字の数を表します。  
+ *CbUserData*値は、データのバイト数を表します。 文字データが Unicode ワイド文字では、正の値で表されている場合*cbUserData*パラメーターの値は、各文字のバイト単位でサイズを乗算する文字数を表します。  
   
  *pUserDataTerm*  
  列に使用するターミネータ シーケンスです。 このパラメーターは主に文字データ型に対して有効です。これは、他のすべての型は固定長であったり、バイト数を正確に記録するために長さのインジケーターが必要になる (バイナリ データの場合) ためです。  
@@ -124,7 +122,7 @@ idxServerCol
  列に使用するターミネータ シーケンスの長さ (バイト単位)。 データ内にターミネータが存在しないか不要な場合は、この値を 0 に設定します。  
   
  *idxServerCol*  
- データベース テーブルの列の序数位置です。 最初の列の序数は 1 です。 列の序数位置がによって報告された[SQLColumns](../native-client-odbc-api/sqlcolumns.md)です。  
+ データベース テーブルの列の序数位置です。 最初の列の序数は 1 です。 列の序数位置がによって報告された[SQLColumns](../native-client-odbc-api/sqlcolumns.md)します。  
   
  この値が 0 の場合、一括コピーではデータ ファイル内のこの列が無視されます。  
   
@@ -146,11 +144,11 @@ idxServerCol
   
 -   省略可能なターミネータ バイト シーケンスの長さ  
   
- 各呼び出し**bcp_colfmt**ユーザー ファイルの 1 つの列の形式を指定します。 たとえば、5 つの列のユーザー データ ファイル内の 3 つの列の既定の設定を変更するに最初に呼び出す[bcp_columns](bcp-columns.md)**(5)**、およびを呼び出す**bcp_colfmt**に 5 回、これらの 3 つを呼び出すカスタム形式を設定します。 残りの 2 つの呼び出しでは、設定*eUserDataType*を 0 に設定し*cbIndicator*、 *cbUserData*、および*cbUserDataTerm* 0、SQL_VARLEN_DATA で、0 それぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
+ 呼び出しごとに**bcp_colfmt**のユーザー ファイルの 1 つの列の形式を指定します。 たとえば、5 つの列のユーザーのデータ ファイル内の 3 つの列の既定の設定を変更するにまず[bcp_columns](bcp-columns.md)**(5)** を呼び出して**bcp_colfmt**で 5 回、これらの 3 つは、独自の形式の設定を呼び出します。 残りの 2 つの呼び出しでは、設定*eUserDataType*を 0 に設定し*cbIndicator*、 *cbUserData*、および*cbUserDataTerm*を 0 に SQL_VARLEN(_D)、0、それぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
   
- *CbIndicator*、大きな値の型を示すために 8 の値は有効です。 フィールドにプレフィックスを指定し、そのフィールドに対応する列が新しい max 型である場合、この値は 8 にしか設定できません。 詳細については、「 [bcp_bind](bcp-bind.md)です。  
+ *CbIndicator*、大きな値の型を示す 8 の値は有効です。 フィールドにプレフィックスを指定し、そのフィールドに対応する列が新しい max 型である場合、この値は 8 にしか設定できません。 詳細については、次を参照してください。 [bcp_bind](bcp-bind.md)します。  
   
- **Bcp_columns**呼び出しの前に関数を呼び出す必要があります**bcp_colfmt**です。  
+ **Bcp_columns**呼び出しの前に関数を呼び出す必要があります**bcp_colfmt**します。  
   
  呼び出す必要があります**bcp_colfmt**ユーザー ファイル内の各列に対して 1 回です。  
   
@@ -158,12 +156,12 @@ idxServerCol
   
  ユーザー ファイル内のすべてのデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにコピーする必要はありません。 列をスキップするには、設定、列のデータの形式を指定、 *idxServerCol*パラメーターを 0 にします。 列をスキップする場合でも、その列の型を指定する必要があります。  
   
- [Bcp_writefmt](bcp-writefmt.md)関数は、書式指定を永続化に使用できます。  
+ [Bcp_writefmt](bcp-writefmt.md)形式指定を保存する関数を使用できます。  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_colfmt による機能強化された日付と時刻のサポート  
- 使用される型彼情報 aboutt の*eUserDataType*日付/時刻型のパラメーターを参照してください[強化された日付と時刻型の変更の一括コピー &#40;OLE DB および ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)です。  
+ 使用される型は aboutt 情報の*eUserDataType*日付/時刻の型のパラメーターを参照してください[強化された日付と時刻型向けの一括コピーの変更&#40;OLE DB および ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)します。  
   
- 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)です。  
+ 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](sql-server-driver-extensions-bulk-copy-functions.md)  

@@ -1,5 +1,5 @@
 ---
-title: リレーショナル クエリ デザイナー (SSAS) |Microsoft ドキュメント
+title: リレーショナル クエリ デザイナー (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.relquerydesginer.f1
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 301653a9279cec3690ea0451fe96771342bec030
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 386ac327689aa74028d28dc688dee28257568cae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259658"
 ---
 # <a name="relational-query-designer-ssas"></a>リレーショナル クエリ デザイナー (SSAS)
   リレーショナル クエリ デザイナーを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] リレーショナル データベース、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] リレーショナル データベース、および [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]から取得するデータを指定するクエリを作成できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。  グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -84,7 +84,7 @@ ms.locfileid: "36178097"
   
  集計ではデータの要約が返されます。データは、要約データを提供する集計をサポートするためにグループ化されます。 クエリで集計を使用すると、そのクエリによって返される他のフィールドは自動的にグループ化され、クエリには SQL の GROUP BY 句が含まれます。 **[グループ化と集計]** ボックスの一覧では、 **[グループ化]** オプションだけを使用することによって、集計を追加せずにデータを要約できます。 多くの集計には、DISTINCT キーワードを使用するバージョンが含まれています。 DISTINCT を含めることで値の重複を排除できます。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用して[!INCLUDE[tsql](../includes/tsql-md.md)]と[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[DWsql](../includes/dwsql-md.md)]です。 いずれの SQL 言語構文でも、クエリ デザイナーに用意されている句、キーワード、および集計がサポートされます。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用して[!INCLUDE[tsql](../includes/tsql-md.md)]と[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[DWsql](../includes/dwsql-md.md)]します。 いずれの SQL 言語構文でも、クエリ デザイナーに用意されている句、キーワード、および集計がサポートされます。  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=141687)にある「[Transact-SQL リファレンス (データベース エンジン)](/sql/t-sql/language-reference)」を参照してください。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36178097"
 -   **自動検出** : テーブル間のリレーションシップを自動的に作成する自動検出機能を切り替えます。 自動検出をオンにすると、クエリ デザイナーによって、テーブル内の外部キーからリレーションシップが作成されます。自動検出をオフにすると、リレーションシップを手動で作成する必要があります。 **データベース ビュー** ペインでテーブルを選択する際、自動検出によってリレーションシップが自動的に作成されます。 結合を手動で作成した後に自動検出をオンにすると、これらの結合は破棄されます。  
   
     > [!IMPORTANT]  
-    >  使用すると[!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]結合の作成に必要なメタデータが指定されていないと、リレーションシップを自動的に検出できません。 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] からデータを取得するクエリの場合は、すべてのテーブル結合を手動で作成する必要があります。  
+    >  使用すると[!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]結合を作成するために必要なメタデータが指定されていないと、リレーションシップを自動的に検出できません。 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] からデータを取得するクエリの場合は、すべてのテーブル結合を手動で作成する必要があります。  
   
 -   **リレーションシップの追加** : **[リレーションシップ]** ボックスの一覧にリレーションシップを追加します。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36178097"
   
 -   **左テーブル** : 結合リレーションシップの一部である最初のテーブルの名前を表示します。  
   
--   **結合の種類** : 自動的に生成されるクエリで使用される SQL の JOIN ステートメントの種類を表示します。 既定では、外部キー制約が検出された場合は INNER JOIN が使用されます。 その他の結合の種類は LEFT JOIN または RIGHT JOIN です。 これらのいずれの結合の種類も該当しない場合は、 **[結合の種類]** 列に **[リレーションシップなし]** と表示されます。 リレーションシップのないテーブルには CROSS JOIN 結合は作成されません。代わりに、左テーブルと右テーブル内の列を結合することでリレーションシップを手動で作成する必要があります。 結合の種類の詳細についてを参照してください「結合の基礎」 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=141687)msdn.microsoft.com の「.  
+-   **結合の種類** : 自動的に生成されるクエリで使用される SQL の JOIN ステートメントの種類を表示します。 既定では、外部キー制約が検出された場合は INNER JOIN が使用されます。 その他の結合の種類は LEFT JOIN または RIGHT JOIN です。 これらのいずれの結合の種類も該当しない場合は、 **[結合の種類]** 列に **[リレーションシップなし]** と表示されます。 リレーションシップのないテーブルには CROSS JOIN 結合は作成されません。代わりに、左テーブルと右テーブル内の列を結合することでリレーションシップを手動で作成する必要があります。 結合の種類に関する詳細については、「結合の基礎」を参照してください[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?LinkId=141687) msdn.microsoft.com.  
   
 -   **右テーブル** : 結合リレーションシップの 2 番目のテーブルの名前を表示します。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36178097"
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。 すべての種類のデータ ソースでグラフィカル クエリ デザイナーがサポートされているとは限りません。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。|  
 |![クエリを実行する](media/rsqdicon-run.gif "クエリを実行する")|クエリを実行し、その結果セットを結果ペインに表示します。|  
-|**[コマンドの種類]**|**[Text]**、 **[StoredProcedure]**、または **[TableDirect]** を選択します。 パラメーターを受け取るストアド プロシージャの場合、ツール バーの **[実行]** をクリックすると、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示され、必要な値を入力できます。<br /><br /> ストアド プロシージャが 1 つ以上の結果セットを返す場合は、最初の結果セットのみがデータセットを作成する使用に注意してください。 またを注意してください。 <br />                      **[Tabledirect]** は OLE DB データ ソースの種類でのみ使用できます。|  
+|**[コマンドの種類]**|**[Text]**、 **[StoredProcedure]**、または **[TableDirect]** を選択します。 パラメーターを受け取るストアド プロシージャの場合、ツール バーの **[実行]** をクリックすると、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示され、必要な値を入力できます。<br /><br /> ストアド プロシージャが 1 つ以上の結果セットを返す場合に、データセットを作成する最初の結果セットのみが使用することに注意してください。 また、 <br />                      **[Tabledirect]** は OLE DB データ ソースの種類でのみ使用できます。|  
   
 #### <a name="command-type-text"></a>コマンドの種類 (Text)  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データセットを作成するとき、既定ではリレーショナル クエリ デザイナーが表示されます。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** 切り替えボタンをクリックします。 テキスト ベースのクエリ デザイナーは、クエリ ペインと結果ペインの 2 つのペインで構成されています。 次の図に各ペインの名称を示します。  
@@ -251,7 +251,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- **[実行]** (**!**) ボタンをクリックします。 次の表の例を示します`uspGetWhereUsedProductID`パラメーターに値を提供する、**クエリ パラメーターの定義** ダイアログ ボックス。  
+ **[実行]** (**!**) ボタンをクリックします。 次の表の例を示します`uspGetWhereUsedProductID`で値を指定するパラメーター、**クエリ パラメーターの定義** ダイアログ ボックス。  
   
 |||  
 |-|-|  
@@ -266,6 +266,6 @@ uspGetWhereUsedProductID
   
  `ContactType`  
   
- テーブル名を入力すると`ContactType`、SQL ステートメントを作成するのと同じ`SELECT * FROM ContactType`です。  
+ テーブル名を入力すると`ContactType`、SQL ステートメントを作成するのと同じ`SELECT * FROM ContactType`します。  
   
   

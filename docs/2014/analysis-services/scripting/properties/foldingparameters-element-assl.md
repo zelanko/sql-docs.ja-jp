@@ -1,5 +1,5 @@
 ---
-title: FoldingParameters 要素 (ASSL) |Microsoft ドキュメント
+title: FoldingParameters 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FoldingParameters element
 ms.assetid: 5f5c5a3e-4aed-48fb-bca5-e67f421bef2f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12cae8f4ad02f57f63fd168ff41503f233f53c4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac348aa326c53b1266edfff3396feadda6c80ea6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161143"
 ---
 # <a name="foldingparameters-element-assl"></a>FoldingParameters 要素 (ASSL)
   マイニング モデルのクロス検証を実行するときに [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーによって使用されるパラメーターを指定します。  
@@ -72,9 +72,9 @@ ms.locfileid: "36178563"
 ## <a name="remarks"></a>コメント  
  これらのプロパティは内部でのみ使用され、DDL ステートメントで使用することはできません。  
   
- クロス検証を使用する方法については[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]を参照してください[クロス検証レポート内のメジャー](../../data-mining/measures-in-the-cross-validation-report.md)です。  
+ クロス検証を使用する方法については[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]を参照してください[クロス検証レポートのメジャー](../../data-mining/measures-in-the-cross-validation-report.md)します。  
   
- 使用してクロス検証を実行する方法については[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ストアド プロシージャを参照してください[データ マイニングのストアド プロシージャ&#40;Analysis Services - データ マイニング&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)です。  
+ 使用してクロス検証を実行する方法については[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ストアド プロシージャを参照してください[データ マイニングのストアド プロシージャ&#40;Analysis Services - データ マイニング&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

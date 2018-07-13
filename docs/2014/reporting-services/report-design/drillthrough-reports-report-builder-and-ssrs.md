@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ececfced738b8ea71b8cbedef4c7495607522309
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6cea127909617ef7230dfd59e995f878274291a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230622"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>詳細レポート (レポート ビルダーおよび SSRS)
   詳細レポートは、ユーザーが別のレポート内のリンクをクリックすることで開かれるレポートのことです。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。 たとえば、次の図では、売り上げ要約レポートに販売注文と合計の一覧が含まれています。 この要約一覧で任意の注文番号をクリックすると、この注文に関する詳細が含まれた別のレポートが開きます。  
@@ -31,7 +31,7 @@ ms.locfileid: "36177670"
 > [!NOTE]  
 >  レポート ビルダーで作業しているときに、メイン レポートのドリルスルー リンクをクリックしたときに開く詳細レポートを表示するには、レポート サーバーに接続している必要があります。  
   
- 今すぐ詳細レポートを表示するには、「[チュートリアル: 詳細レポートとメイン レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)」を参照してください。 詳細レポートは、2 つのビジネス インテリジェンス ソリューションでも取り上げて[の BI レポート: レポートとサブスクリプションのシナリオ](http://technet.microsoft.com/bi/ff769487.aspx)と[企業ダッシュ ボード: 販売ソリューション](http://technet.microsoft.com/bi/ff643005.aspx)  
+ 今すぐ詳細レポートを表示するには、「[チュートリアル: 詳細レポートとメイン レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)」を参照してください。 詳細レポートは、2 つのビジネス インテリジェンス ソリューションでも取り上げて[BI レポート: レポートとサブスクリプションのシナリオ](http://technet.microsoft.com/bi/ff769487.aspx)と[企業ダッシュ ボード: 販売ソリューション](http://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

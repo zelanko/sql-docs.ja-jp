@@ -1,5 +1,5 @@
 ---
-title: ライセンス条項に同意 |Microsoft ドキュメント
+title: ライセンス条項に同意 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - license terms
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Registration Information page
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55d500b13cc3ab3c859474bb3050e29a7487f4a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b060499f9b3a008e0106455afde5f1a7691d90f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260098"
 ---
 # <a name="accept-license-terms"></a>使用許諾条件への同意
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの **[使用許諾条件への同意]** ページを使用して、このリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の使用許諾条件に同意します。  
@@ -56,7 +56,7 @@ ms.locfileid: "36178798"
   
  他のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントでは、情報はすべての有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで 1 日 1 回収集されます。 既定の収集時刻は、サーバーにかかる負荷を最小限に抑えるため、午前 0 時に設定されています。 収集時刻を変更する場合は、収集時刻を制御するレジストリ キーを手動で編集します。 各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスには、次のような専用のレジストリ キーがあります。  
   
- Hklm \software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12\< 。インスタンス ID > \CPE\TimeofReporting  
+ Hklm \software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.\< 。INSTANCEID > \CPE\TimeofReporting  
   
  このレジストリ キーの値には、収集を実行する時刻が 00:00 (午前 0 時) から何分後であるかが示されています。 たとえば、値が 60 の場合は収集が午前 1 時に実行され、1200 の場合は午後 8 時に実行されます。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36178798"
   
 -   のレプリケーション  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] エラー レポートを使用して強化[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能され、すべての情報を機密情報として扱われます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] エラー レポートを向上させるために使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能し、すべての情報を機密として扱われます。  
   
  エラーに関する情報はセキュリティで保護された接続 (https) を経由して [!INCLUDE[msCoName](../../includes/msconame-md.md)] に送信され、情報はアクセスが制限された場所に格納されます。 また、エラー レポートを独自の企業内エラー報告サーバーに送信することもできます。  
   

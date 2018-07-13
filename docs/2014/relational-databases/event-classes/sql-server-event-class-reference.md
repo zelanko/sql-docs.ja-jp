@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server event classes
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0afc75d01e181c4b91e19e38a446d925299b7651
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aea5b9aaed8d44162fb9f63474751de47a81e2bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154593"
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server イベント クラスの参照
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで発生したイベントを記録できます。 記録されるイベントは、トレース定義におけるイベント クラスのインスタンスです。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]では、イベント クラスとそのイベント カテゴリが **[トレース ファイルのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブに表示されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36178724"
 |[CLR イベント カテゴリ](clr-event-category.md) には、.NET 共通言語ランタイム (CLR) オブジェクトを実行すると生成されるイベント クラスが含まれます。|[Assembly Load イベント クラス](../../database-engine/assembly-load-event-class.md)|  
 |[Database イベント カテゴリ](database-event-category.md) には、データ ファイルやログ ファイルが自動的に拡張または圧縮されたときに生成されるイベント クラスが含まれます。|[Data File Auto Grow イベント クラス](data-file-auto-grow-event-class.md)<br /><br /> [Data File Auto Shrink イベント クラス](data-file-auto-shrink-event-class.md)<br /><br /> [Database Mirroring State Change イベント クラス](database-mirroring-state-change-event-class.md)<br /><br /> [Log File Auto Grow イベント クラス](log-file-auto-grow-event-class.md)<br /><br /> [Log File Auto Shrink イベント クラス](log-file-auto-shrink-event-class.md)|  
 |[Deprecation イベント カテゴリ](deprecation-event-category.md) には、今後廃止予定の機能に関するイベントが含まれます。|[Deprecation Announcement イベント クラス](deprecation-announcement-event-class.md)<br /><br /> [Deprecation Final Support イベント クラス](deprecation-final-support-event-class.md)|  
-|[Errors and Warnings イベント カテゴリ&#40;データベース エンジン&#41;](errors-and-warnings-event-category-database-engine.md)されるイベント クラスが含まれています。 ときに生成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|[Attention イベント クラス](attention-event-class.md)<br /><br /> [Background Job Error イベント クラス](background-job-error-event-class.md)<br /><br /> [Blocked Process Report イベント クラス](blocked-process-report-event-class.md)<br /><br /> [CPU Threshold Exceeded イベント クラス](cpu-threshold-exceeded-event-class.md)<br /><br /> [ErrorLog イベント クラス](errorlog-event-class.md)<br /><br /> [EventLog イベント クラス](eventlog-event-class.md)<br /><br /> [Exception イベント クラス](exception-event-class.md)<br /><br /> [Exchange Spill イベント クラス](exchange-spill-event-class.md)<br /><br /> [Execution Warnings イベント クラス](execution-warnings-event-class.md)<br /><br /> [Hash Warning イベント クラス](hash-warning-event-class.md)<br /><br /> [Missing Column Statistics イベント クラス](missing-column-statistics-event-class.md)<br /><br /> [Missing Join Predicate イベント クラス](missing-join-predicate-event-class.md)<br /><br /> [Sort Warnings イベント クラス](sort-warnings-event-class.md)<br /><br /> [User Error Message イベント クラス](user-error-message-event-class.md)|  
+|[Errors and Warnings イベント カテゴリ&#40;データベース エンジン&#41;](errors-and-warnings-event-category-database-engine.md)イベント クラスを含むときに生成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|[Attention イベント クラス](attention-event-class.md)<br /><br /> [Background Job Error イベント クラス](background-job-error-event-class.md)<br /><br /> [Blocked Process Report イベント クラス](blocked-process-report-event-class.md)<br /><br /> [CPU Threshold Exceeded イベント クラス](cpu-threshold-exceeded-event-class.md)<br /><br /> [ErrorLog イベント クラス](errorlog-event-class.md)<br /><br /> [EventLog イベント クラス](eventlog-event-class.md)<br /><br /> [Exception イベント クラス](exception-event-class.md)<br /><br /> [Exchange Spill イベント クラス](exchange-spill-event-class.md)<br /><br /> [Execution Warnings イベント クラス](execution-warnings-event-class.md)<br /><br /> [Hash Warning イベント クラス](hash-warning-event-class.md)<br /><br /> [Missing Column Statistics イベント クラス](missing-column-statistics-event-class.md)<br /><br /> [Missing Join Predicate イベント クラス](missing-join-predicate-event-class.md)<br /><br /> [Sort Warnings イベント クラス](sort-warnings-event-class.md)<br /><br /> [User Error Message イベント クラス](user-error-message-event-class.md)|  
 |[Full Text イベント カテゴリ](full-text-event-category.md) には、フルテキスト検索を開始、中断、または停止したときに生成されるイベント クラスが含まれます。|[FT:Crawl Aborted イベント クラス](ft-crawl-aborted-event-class.md)<br /><br /> [FT:Crawl Started イベント クラス](ft-crawl-started-event-class.md)<br /><br /> [FT:Crawl Stopped イベント クラス](ft-crawl-stopped-event-class.md)|  
 |[Locks イベント カテゴリ](locks-event-category.md) には、ロックが取得、キャンセル、解放されるか、またはその他の操作がロックに対して実行されたときに生成されるイベント クラスが含まれます。|[Deadlock Graph イベント クラス](deadlock-graph-event-class.md)<br /><br /> [Lock:Acquired イベント クラス](lock-acquired-event-class.md)<br /><br /> [Lock:Cancel イベント クラス](lock-cancel-event-class.md)<br /><br /> [Lock:Deadlock Chain イベント クラス](lock-deadlock-chain-event-class.md)<br /><br /> [Lock:Deadlock イベント クラス](lock-deadlock-event-class.md)<br /><br /> [Lock:Escalation イベント クラス](lock-escalation-event-class.md)<br /><br /> [Lock:Released イベント クラス](lock-released-event-class.md)<br /><br /> [Lock:Timeout &#40;timeout &#62; 0&#41; イベント クラス](lock-timeout-timeout-0-event-class.md)<br /><br /> [Lock:Timeout イベント クラス](lock-timeout-event-class.md)|  
 |[Objects イベント カテゴリ](objects-event-category.md) には、データベース オブジェクトの作成、オープン、クローズ、または削除を行ったときに生成されるイベント クラスが含まれます。|[Auto Stats イベント クラス](auto-stats-event-class.md)<br /><br /> [Object:Altered イベント クラス](object-altered-event-class.md)<br /><br /> [Object:Created イベント クラス](object-created-event-class.md)<br /><br /> [Object:Deleted イベント クラス](object-deleted-event-class.md)|  

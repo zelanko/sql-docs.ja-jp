@@ -1,13 +1,11 @@
 ---
-title: データ ソース オブジェクトを永続化 |Microsoft ドキュメント
+title: データ ソース オブジェクトを永続化 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,23 +15,23 @@ helpviewer_keywords:
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e99fbda459ba57838ba60b8fcf3f126b50b1cb1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a44176c06f105fd4a560718ee5b757f5c71ff1cf
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178206"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423551"
 ---
-# <a name="persisted-data-source-objects"></a>永続化されたデータ ソース オブジェクト
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが使用して永続化されたデータ ソース オブジェクトをサポートしている、 **IPersistFile**インターフェイスです。  
+# <a name="persisted-data-source-objects"></a>データ ソース オブジェクトを永続化
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは永続化されたデータ ソース オブジェクトをサポート、 **IPersistFile**インターフェイス。  
   
 ## <a name="examples"></a>使用例  
  **A.データ ソースの初期化を保持します。**  
   
- 次の例では、サーバー、データベース、および接続用の Windows 認証モードを定義しているデータ ソースの初期化プロパティを保存する関数を示します。 サーバー名とデータベース名を受け取る、 *pLocation*と*pDatasource*関数のパラメーターです。  
+ 次の例では、サーバー、データベース、および接続用の Windows 認証モードを定義しているデータ ソースの初期化プロパティを保存する関数を示します。 サーバー名とデータベース名を受け取る、 *pLocation*と*pDatasource*関数のパラメーター。  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -230,7 +228,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **Ipersistfile::save**前に、または呼び出し後、メソッドを呼び出すことができる**idbinitialize::initialize**です。 正常に返された後に、メソッドを呼び出す**idbinitialize::initialize**有効なデータ ソースの指定が保存されることを確認します。  
+ **Ipersistfile::save**呼び出しの前後に、メソッドを呼び出すことが**idbinitialize::initialize**します。 メソッドの呼び出しから正常に戻った後**idbinitialize::initialize**が確実に有効なデータ ソースの仕様を保持します。  
   
 ## <a name="see-also"></a>参照  
  [データ ソース オブジェクト&#40;OLE DB&#41;](data-source-objects-ole-db.md)  

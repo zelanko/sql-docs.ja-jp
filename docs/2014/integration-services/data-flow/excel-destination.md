@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldest.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d88fa949954272942c8eca4c9f62ac470dd717cc
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: d093981287236aafa91b6ec4aa4ffeb2e75a05c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156773"
 ---
 # <a name="excel-destination"></a>Excel 変換先
   Excel 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブックのワークシートまたは範囲にデータを読み込みます。  
@@ -87,7 +87,7 @@ ms.locfileid: "36324636"
   
 -   [Excel 変換先エディター&#40;接続マネージャー ページ&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [Excel 変換先エディター &#40;[マッピング] ページ&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Excel 変換先エディター&#40;マッピング ページ&#41;](../excel-destination-editor-mappings-page.md)  
   
 -   [Excel 変換先エディター&#40;エラー出力 ページ&#41;](../excel-destination-editor-error-output-page.md)  
   

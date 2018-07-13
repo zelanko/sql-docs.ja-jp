@@ -1,5 +1,5 @@
 ---
-title: 処理の Analysis Services オブジェクト |Microsoft ドキュメント
+title: Analysis Services 処理オブジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45fc3c5f6ba3effb69518987256b052f5225cd25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 765db574f9db0a4e81dbdbfc4a154e1ccad01491
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210162"
 ---
 # <a name="processing-analysis-services-objects"></a>Analysis Services オブジェクトの処理
   処理は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの種類 ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース、キューブ、ディメンション、メジャー グループ、パーティション、データ マイニング構造、およびデータ マイニング モデル) に影響します。 オブジェクトごとに、オブジェクトの処理レベルを指定するか、または [既定の処理] オプションを指定して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が自動的に最適な処理レベルを選択するようにできます。 各オブジェクトに適用できる異なるレベルの処理の詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)」を参照してください。  
@@ -98,7 +98,7 @@ ms.locfileid: "36179011"
   
 ## <a name="see-also"></a>参照  
  [ツールと処理のためのアプローチ&#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
- [バッチ処理の&#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [バッチ処理&#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)  
   
   

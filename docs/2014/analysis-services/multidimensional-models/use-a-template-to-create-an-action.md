@@ -1,5 +1,5 @@
 ---
-title: テンプレートを使用してアクションを作成 |Microsoft ドキュメント
+title: テンプレートを使用して、操作を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad0917d6-349a-4923-97be-83c778424286
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0b608f3ffeb7836481adb23fc316d3dce63bd3bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c1f322ee3d775605a0c9636c5da060044d35006
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259568"
 ---
 # <a name="use-a-template-to-create-an-action"></a>テンプレートを使用したアクションの作成
   キューブ デザイナーの **[アクション]** ビューには、一般的なアクションの作成に使用する数多くのテンプレートが用意されています。 キューブ デザイナーには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。  
   
 > [!NOTE]  
->  アクションが作成された後、ユーザーがキューブを更新または再処理してからアクションが使用できるようになります。 詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)です。  
+>  アクションが作成された後、ユーザーがキューブを更新または再処理してからアクションが使用できるようになります。 詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)します。  
   
 ### <a name="to-use-a-template-to-create-an-action"></a>テンプレートを使用してアクションを作成するには  
   

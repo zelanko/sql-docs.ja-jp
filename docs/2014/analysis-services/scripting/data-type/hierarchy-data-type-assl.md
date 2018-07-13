@@ -1,5 +1,5 @@
 ---
-title: Hierarchy データ型 (ASSL) |Microsoft ドキュメント
+title: Hierarchy データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Hierarchy data type
 ms.assetid: 2e05917e-7e5d-4dd1-817b-4ff5647747ff
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14354458e3441c6f8f2691350e9236f2aecb6cdd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b20bed156e97c33a1c9f9df02677ef403767e472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230012"
 ---
 # <a name="hierarchy-data-type-assl"></a>Hierarchy データ型 (ASSL)
   ディメンション内の階層を表すプリミティブ データ型を定義します。  

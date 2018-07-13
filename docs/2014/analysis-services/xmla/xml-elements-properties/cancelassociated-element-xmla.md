@@ -1,5 +1,5 @@
 ---
-title: CancelAssociated 要素 (XMLA) |Microsoft ドキュメント
+title: CancelAssociated 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CancelAssociated element
 ms.assetid: fd890440-d1a7-4c05-9e81-c81e6b8c274c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1e747815b30daf86edff4ad976d6fb5370bf9c3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 66a866a9f00a745e24fe2c83a4fce31ac67b2f34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159233"
 ---
 # <a name="cancelassociated-element-xmla"></a>CancelAssociated 要素 (XMLA)
   親要素 [Cancel](../xml-elements-commands/cancel-element-xmla.md) によって、関連するすべてのコマンドを取り消すかどうかを示します。  
@@ -64,7 +64,7 @@ ms.locfileid: "36178731"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- この要素が指定されており、設定場合`True`、すべての対応する接続、セッション、および親に指定されたコマンド`Cancel`コマンドが取り消されました。  
+ この要素が指定され、設定場合`True`、すべての対応する接続、セッション、およびコマンドの親で識別される`Cancel`コマンドが取り消されました。  
   
 ## <a name="see-also"></a>参照  
  [ConnectionID 要素&#40;XMLA&#41;](id-element-xmla.md)   

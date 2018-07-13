@@ -1,5 +1,5 @@
 ---
-title: マップの結果セット内の変数を SQL 実行タスク |Microsoft ドキュメント
+title: マップの結果セット内の変数を SQL 実行タスク |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62dab9509a080e00edc4d990cd3f23fa67c93113
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdd76b3f0b1665fa6336e82536ca474c0b5e1fab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277378"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>結果セットを SQL 実行タスクの変数にマップする
   このトピックでは、結果セットと SQL 実行タスクの変数との間のマッピングを作成する方法について説明します。 結果セットを変数にマップすることで、結果セットをパッケージ内の他の要素で使用できるようになります。 たとえば、スクリプト タスクのスクリプトでは、変数を読み取ってから、結果セットからの値を使用できます。XML ソースでは、変数に格納された結果セットを利用できます。 親パッケージで結果セットが生成される場合、パッケージ実行タスクから呼び出された子パッケージでその結果セットを使用できるようにするには、結果セットを親パッケージ内の変数にマップしてから、子パッケージ内で親パッケージの変数構成を作成して、親変数の値を格納します。  
@@ -38,8 +38,8 @@ ms.locfileid: "36178698"
   
 3.  **[制御フロー]** タブをクリックします。  
   
-4.  SQL 実行タスクがまだパッケージに含まれていない場合、SQL 実行タスクをパッケージの制御フローに追加します。 詳細については、次を参照してください[タスクまたはコンテナー制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+4.  SQL 実行タスクがまだパッケージに含まれていない場合、SQL 実行タスクをパッケージの制御フローに追加します。 詳細については、次を参照してください[タスクまたはコンテナーの制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+  .  
   
 5.  SQL 実行タスクをダブルクリックします。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36178698"
  [パッケージ実行タスク](control-flow/execute-package-task.md)   
  [パッケージの構成](../../2014/integration-services/package-configurations.md)   
  [パッケージ構成を作成します。](../../2014/integration-services/create-package-configurations.md)   
- [子パッケージで変数やパラメーターの値を使用します。](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
+ [子パッケージで変数とパラメーターの値を使用します。](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
  [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)  
   
   

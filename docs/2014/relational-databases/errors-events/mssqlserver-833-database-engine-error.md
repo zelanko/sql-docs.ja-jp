@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 833 (Database Engine error)
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 53f86ad23c967f573e66251430579475e64a0714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e3e9519dce24bbe29f9cf30f89706fff9b42f9c7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179319"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428681"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
     
@@ -34,7 +33,7 @@ ms.locfileid: "36179319"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|BUF_LONG_IO|  
-|メッセージ テキスト|SQL Server がファイル [%ls] データベースで、完了に %d 秒以上かかった I/O 要求を %d 個検出しました`[%ls] (%d)`です。  OS ファイル ハンドルは 0x%p です。  最新の実行時間の長い I/O のオフセットは %#016I64x です。|  
+|メッセージ テキスト|SQL Server データベースのファイル [%ls] での完了に %d 秒以上かかった I/O 要求の %d 個検出しましたが`[%ls] (%d)`します。  OS ファイル ハンドルは 0x%p です。  最新の実行時間の長い I/O のオフセットは %#016I64x です。|  
   
 ## <a name="explanation"></a>説明  
  このメッセージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がディスクからの読み取り要求やディスクへの書き込み要求を発行してからその要求が完了するまでの時間が 15 秒を超えたことを示しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からこのエラーが報告された場合は、IO サブシステムに問題があります。  

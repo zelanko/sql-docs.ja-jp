@@ -1,5 +1,5 @@
 ---
-title: 要素 (ASSL) を有効になっている |Microsoft ドキュメント
+title: 要素 (ASSL) を有効になっている |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Enabled element
 ms.assetid: dbe57903-75c0-4060-a2b3-eab241d7469f
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 917116f506c89ad5f0f0b2c2bee18a234f253665
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd8206bbf0dffe84a1012a0e47b4c261b15fb4ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211662"
 ---
 # <a name="enabled-element-assl"></a>Enabled 要素 (ASSL)
   親要素が有効になっているかどうかを示します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36178964"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 親に対応する要素`Enabled`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.CubeHierarchy>と<xref:Microsoft.AnalysisServices.ProactiveCaching>です。  
+ 親に対応する要素`Enabled`分析管理オブジェクト (AMO) オブジェクト モデルは、<xref:Microsoft.AnalysisServices.CubeHierarchy>と<xref:Microsoft.AnalysisServices.ProactiveCaching>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

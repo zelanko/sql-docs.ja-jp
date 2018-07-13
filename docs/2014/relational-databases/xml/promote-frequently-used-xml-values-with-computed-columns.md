@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6b9737311798edfe7f65ea74d03d7a941a145ef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d7a43e9ff408c185abf91a4ef71e7ccc734a3cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278818"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>計算列を使用した使用頻度の高い XML 値の昇格
   クエリが主に少数の要素や属性の値に対して行われる場合、対象になる値をリレーショナル列に昇格できます。 XML インスタンス全体を取得する一方で、XML データの一部に対してクエリを実行する場合に昇格が役立ちます。 XML 列に XML インデックスを作成する必要はありません。 代わりに、昇格した列にインデックスを設定できます。 クエリは昇格した列を使用するように記述する必要があります。 クエリ オプティマイザーは、クエリの対象を XML 列から、昇格した列に振り替えないためです。  
@@ -30,7 +30,7 @@ ms.locfileid: "36179074"
  昇格した列は、同一のテーブルで計算列にすることができます。また、任意のテーブルでユーザーが管理する独立した列にすることもできます。 これは、各 XML インスタンスから単一の値を昇格するときには十分です。 しかし、複数の値から構成されるプロパティの場合、個々のプロパティ用に個別のテーブルを作成する必要があります。詳細については、次のセクションを参照してください。  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>xml データ型を基にした計算列  
- 呼び出すユーザー定義関数を使用して計算列を作成できる`xml`データ型のメソッドです。 計算列の型は、XML を含めどの SQL 型でもかまいません。 この例を次に示します。  
+ 呼び出すユーザー定義関数を使用して計算列を作成できる`xml`データ型のメソッド。 計算列の型は、XML を含めどの SQL 型でもかまいません。 この例を次に示します。  
   
 ### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>例 : xml データ型のメソッドを基にした計算列  
  書籍の ISBN 番号を取得するユーザー定義関数を作成します。  
@@ -71,7 +71,7 @@ FROM   T
 WHERE  ISBN = '0-7356-1588-2'  
 ```  
   
- 返すユーザー定義関数を作成することができます、`xml`データ型とユーザー定義関数を使用して計算列です。 ただし、XML 計算列には XML インデックスを作成できません。  
+ 返すユーザー定義関数を作成することができます、`xml`データ型とユーザー定義関数を使用して計算列。 ただし、XML 計算列には XML インデックスを作成できません。  
   
 ## <a name="creating-property-tables"></a>プロパティ テーブルの作成  
  XML データの中から複数の値で構成されるプロパティの一部を 1 つ以上のテーブルに昇格させ、インデックスを作成してクエリの対象をそのテーブルに振り替えることができます。 クエリ ワークロードの大半が少数のプロパティで占められているシナリオが典型的です。 次の操作を実行できます。  
@@ -82,7 +82,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   プロパティ テーブルを管理するためのトリガーを XML 列に作成します。 トリガー内では次のいずれかを行うことができます。  
   
-    -   使用して`xml`データ型のなどメソッド、 **nodes()** と**value()** を挿入し、プロパティ テーブルの行を削除します。  
+    -   使用`xml`データ型のなどメソッド、 **nodes()** と**value()** を挿入およびプロパティ テーブルの行を削除します。  
   
     -   CLR (共通言語ランタイム) でストリーミング テーブル値関数を作成し、プロパティ テーブルの行を挿入および削除します。  
   
@@ -176,7 +176,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  ユーザー定義関数を使用して、プロパティ テーブルのメンテナンスに使用する挿入トリガー、更新トリガー、および削除トリガーを定義します。  
   
- まず、ストリーミング CLR 関数を作成します。 `xml`データ型は、ADO.NET での SqlXml マネージ クラスとして公開され、サポート、 **CreateReader()** XmlReader を返すメソッド。  
+ まず、ストリーミング CLR 関数を作成します。 `xml`データ型が ADO.NET での SqlXml マネージ クラスとして公開され、サポート、 **CreateReader()** XmlReader を返すメソッド。  
   
 > [!NOTE]  
 >  このセクションの例のコードでは、XPathDocument および XPathNavigator を使用しています。 この 2 つはすべての XML ドキュメントをメモリに読み込みます。 大きな XML ドキュメントを処理するためにこのサンプルと同様のコードを使用する場合、このコードにはスケーラビリティはありません。 代わりに、メモリの割り当てを少なく抑え、可能な限りストリーミング インターフェイスを使用してください。 パフォーマンスの詳細については、「 [CLR 統合のアーキテクチャ](../../database-engine/dev-guide/architecture-of-clr-integration.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: 分析データ ソースからメタデータを取得する |Microsoft ドキュメント
+title: 分析データ ソースからメタデータを取得する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3a49a4ddc8687cd2e0cfdd47e4025e9bc51eefe6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2beb806c4a76aa3ac6062f8e6ae0e44c007520ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151673"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>分析データ ソースからのメタデータの取得
   分析データを取得して操作するアプリケーションにとって、メタデータは重要です。 リレーショナル データ ソースからデータを取得する場合、データセットが入れ子になっていても、それらのデータの次元を予測することができます。 通常、リレーショナル データベースから取得する結果セットは 2 次元またはスカラー構造です。 一方、分析データ ソースから取得したデータは次元がさまざまであり、多層構造になっている場合もあります。  
@@ -33,7 +33,7 @@ ms.locfileid: "36179002"
  **オブジェクト モデル**  
  ADOMD.NET オブジェクト モデルは、一般に、スキーマ行セットよりも使い方が簡単です。 ほとんどの場合、オブジェクト モデルを使用すれば、さまざまなデータベース オブジェクトのメタデータにアクセスできます。 ADOMD.NET では、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> を通してオブジェクト モデルが公開されます。  
   
- 詳細については: [ADOMD.NET オブジェクト モデルの操作](retrieving-metadata-working-with-adomd-net-object-model.md)  
+ 詳細については: [ADOMD.NET オブジェクト モデルの使用](retrieving-metadata-working-with-adomd-net-object-model.md)  
   
  **スキーマ行セット**  
  少し難しくなりますが、メタデータを取得するための完全なアプローチとして、スキーマ行セットを使用する方法があります。 スキーマ行セットは、データベース内の特定の種類のすべてのオブジェクトの記述をカプセル化した、OLE DB 行セットです。 分析データ ソースのスキーマの情報には、そのデータ ソースで使用できるデータベースやカタログ、データベース内のキューブ モデルとマイニング モデル、データ ソースのキューブに割り当てられているロールなどが含まれています。 このメタデータを取得するには、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A> メソッドを使用して、`GUID` または XML for Analysis (XMLA) 名を渡します。  
