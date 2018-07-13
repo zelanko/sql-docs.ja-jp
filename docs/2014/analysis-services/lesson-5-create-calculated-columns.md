@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 6: 計算列の作成 |Microsoft ドキュメント'
+title: 'レッスン 6: 計算列を作成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: efec616591ab3e6d85b9199a5a4706ecd740c66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f837fd314cd8a279e03cdfa2aa420920509510a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228412"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>レッスン 6: 計算列の作成
   このレッスンでは、計算列を追加して、モデル内に新しいデータを作成します。 計算列は、モデル内の既存のデータに基づいて機能します。 詳細については、「[計算列 (SSAS テーブル)](tabular-models/ssas-calculated-columns.md)」を参照してください。  
@@ -41,9 +41,9 @@ ms.locfileid: "36074278"
   
 2.  モデル デザイナーで、 **Date** テーブル (タブ) をクリックします。  
   
-3.  右クリックし、 **Calendar Quarter**列、およびクリック**列の挿入**です。  
+3.  右クリックし、 **Calendar Quarter**列、およびクリック**列の挿入**します。  
   
-     という名前の新しい列**CalculatedColumn1**の左側に挿入された、 **Calendar Quarter**列です。  
+     という名前の新しい列**CalculatedColumn1**の左側に挿入される、 **Calendar Quarter**列。  
   
 4.  テーブルの上にある数式バーに、以下の数式を入力します。 オートコンプリートを利用すると、列やテーブルの完全修飾名を簡単に入力できるだけでなく、使用可能な関数の一覧も表示できます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36074278"
     > [!NOTE]  
     >  エラーが返された場合は、数式内の列名が、「[レッスン 3: 列名の変更](rename-columns.md)」で変更した列名と一致していることを確認してください。  
   
-5.  この列の名前を変更`Month Calendar`です。  
+5.  この列の名前を変更`Month Calendar`します。  
   
  Month Calendar 計算列は、Month の並べ替え可能な名前を提供します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36074278"
   
      数式の入力が終了したら、Enter キーを押します。  
   
-3.  列の名前を変更`Day of Week`です。  
+3.  列の名前を変更`Day of Week`します。  
   
 4.  列見出しをクリックし、列を **Day Name** 列と **Day of Month** 列の間にドラッグします。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36074278"
   
      数式の入力が終了したら、Enter キーを押します。  
   
-4.  列の名前を変更`Product Subcategory Name`です。  
+4.  列の名前を変更`Product Subcategory Name`します。  
   
  Product Subcategory Name 計算列は、Product テーブル内に、Product Subcategory テーブルの Product Subcategory Name 列のデータを含んだ階層を作成するために使用されます。 階層は、複数のテーブルにまたがって存在することはできません。 階層の作成は、この後のレッスン 7 で行います。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36074278"
   
      数式の入力が終了したら、Enter キーを押します。  
   
-3.  列の名前を変更`Product Category Name`です。  
+3.  列の名前を変更`Product Category Name`します。  
   
  Product Category Name 計算列は、Product テーブル内に、Product Category テーブルの Product Category Name 列のデータを含んだ階層を作成するために使用されます。 階層は、複数のテーブルにまたがって存在することはできません。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36074278"
   
      数式の入力が終了したら、Enter キーを押します。  
   
-4.  列の名前を変更`Margin`です。  
+4.  列の名前を変更`Margin`します。  
   
 5.  列を、 **Sales Amount** 列と **Tax Amt** 列の間にドラッグします。  
   

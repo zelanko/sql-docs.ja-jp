@@ -8,36 +8,36 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.previewview.f1
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e64635a1600a6949287e4528802faf8cdc93f15d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3114b56007619d54d0a9aea95e136d65fe0f725b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212222"
 ---
 # <a name="preview-view"></a>[プレビュー] ビュー
   **[プレビュー]** ビューを使用すると、表示レポートを表示できます。 レポートをプレビューすると、レポート デザイナーでは、レポートがローカルで実行され、[プレビュー] ビューに表示されます。 プレビュー モードでは、レポート全体が処理されます。 レポートに複雑なクエリや大量のデータが含まれている場合、初回のプレビューは、完了するまでに数分かかることがあります。 その後の変更内容が、レポートの形式に関するのみである場合、プレビュー時にはキャッシュされたデータが使用されます。  
   
 > [!IMPORTANT]  
->  ときに[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]実行で、RemoteApp としてレポートを表示することはできません**プレビュー**で表示[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。 RemoteApp プログラムは、リモート デスクトップ サービスを使用してリモートでアクセスされるプログラムです。 詳細については、次を参照してください。 [TS RemoteApp Step-by-Step guide 』](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx)です。  
+>  ときに[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]実行で、RemoteApp としてレポートを表示することはできません**プレビュー**で表示[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]します。 RemoteApp プログラムは、リモート デスクトップ サービスを使用してリモートでアクセスされるプログラムです。 詳細については、次を参照してください。 [TS RemoteApp Step-by-Step Guide](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx)します。  
   
 ## <a name="options"></a>および  
  ツール バーは、プレビュー機能を管理するために使用します。  
   
- **ドキュメント マップを非表示を切り替える**  
+ **ドキュメント マップ、非表示**  
  ドキュメント マップがある場合に、ドキュメント マップの表示と非表示を切り替えます。  
   
- **表示または非表示のパラメータ エリア**  
+ **パラメーター領域、非表示**  
  レポートにパラメーターがある場合に、パラメーター ボックスの表示と非表示を切り替えます。  
   
  **最初のページ**  
@@ -70,7 +70,7 @@ ms.locfileid: "36074971"
  **印刷**  
  レポートを印刷します。  
   
- **印刷レイアウト**  
+ **[印刷レイアウト]**  
  レポート プレビューにするか、印刷されるページと同じ表示にするかを指定します。  
   
  **ページ設定**  

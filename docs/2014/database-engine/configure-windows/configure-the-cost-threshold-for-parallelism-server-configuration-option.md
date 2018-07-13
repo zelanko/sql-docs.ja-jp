@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cost threshold for parallelism option
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 11e27a526265257278d47bcf27cda69529313261
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5b74ba425ff93ccdd828de01c69ca250e3dea0f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332552"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>cost threshold for parallelism サーバー構成オプションの構成
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cost threshold for parallelism [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **cost threshold for parallelism** オプションによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクエリの並列プランを作成および実行するしきい値が指定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、クエリの並列プランが作成および実行されるのは、同じクエリの直列プランを実行するための推定コストが **cost threshold for parallelism**に設定されている値を超える場合のみです。 コストとは、特定のハードウェア構成で、直列プランを実行するための予想所要時間を秒単位で表したものです。 **cost threshold for parallelism** オプションには、0 ～ 32,767 の範囲の値を設定できます。 既定値は 5 です。  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.LOGIN.SERVERROLES.F1
 - sql12.swb.login.databaseaccess.f1
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 27f80c34522042794bae5fee9a99bfd95bb15d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 01ea98feb38ee8fcfdf7a021f9663bd8001ff941
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274668"
 ---
 # <a name="create-a-login"></a>ログインの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、ログインを作成する方法について説明します。 ログインとは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに接続しようとしている人またはプロセスの ID を指します。  
@@ -58,7 +57,7 @@ ms.locfileid: "36074179"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用するためには、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]に混合モード認証が使用されている必要があります。 詳細については、「[認証モードの選択](../choose-an-authentication-mode.md)」を参照してください。  
   
- セキュリティ プリンシパルとして、ログインには権限を許可することができます。 ログインのスコープは、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]全体です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上の特定のデータベースに接続するには、データベース ユーザーにログインをマップする必要があります。 データベース内の権限を許可したり拒否したりする際に、その対象となるのは、ログインではなく、データベース ユーザーです。 インスタンス全体のスコープを持つアクセス許可[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](たとえば、`CREATE ENDPOINT`権限)、ログインに付与することができます。  
+ セキュリティ プリンシパルとして、ログインには権限を許可することができます。 ログインのスコープは、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]全体です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上の特定のデータベースに接続するには、データベース ユーザーにログインをマップする必要があります。 データベース内の権限を許可したり拒否したりする際に、その対象となるのは、ログインではなく、データベース ユーザーです。 インスタンス全体をスコープとして持つ権限[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](たとえば、`CREATE ENDPOINT`権限)、ログインに付与することができます。  
   
 ##  <a name="Security"></a> セキュリティ  
   
@@ -114,7 +113,8 @@ ms.locfileid: "36074179"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>追加オプション  
- **[ログイン - 新規作成]** ダイアログ ボックスでは、 **[サーバー ロール]**、 **[ユーザー マッピング]**、 **[セキュリティ保護可能なリソース]**、 **[状態]** の 4 つの追加ページにもオプションがあります。  
+ 
+  **[ログイン - 新規作成]** ダイアログ ボックスでは、 **[サーバー ロール]**、 **[ユーザー マッピング]**、 **[セキュリティ保護可能なリソース]**、 **[状態]** の 4 つの追加ページにもオプションがあります。  
   
 ### <a name="server-roles"></a>[サーバー ロール]  
  **[サーバー ロール]** ページには、新しいログインに割り当てることができるすべての可能なロールが一覧表示されます。 使用できるオプションは以下のとおりです。  
@@ -183,7 +183,7 @@ ms.locfileid: "36074179"
 2.  **[オブジェクトの追加]** ダイアログ ボックスで、**[特定のオブジェクト]**、**[この種類のすべてのオブジェクト]**、**[サーバー***server_name]* のいずれかのオプションを選択します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  選択する **サーバー * * * server_name*上のグリッドをそのサーバーのセキュリティ保護可能なオブジェクトのすべてに自動的に入力します。  
+    >  選択 **サーバー * * * server_name*すべてそのサーバーのセキュリティ保護可能なオブジェクトの上のグリッドが自動的に入力します。  
   
 3.  **[特定のオブジェクト]** を選択した場合:  
   
@@ -199,10 +199,10 @@ ms.locfileid: "36074179"
   
 4.  **[オブジェクトの種類を選択]** ダイアログ ボックスで **[この種類のすべてのオブジェクト]** を選択した場合は、 **[エンドポイント]**、 **[ログイン]**、 **[サーバー]**、 **[可用性グループ]**、 **[サーバー ロール]** のオブジェクトの種類のいずれかまたはすべてを選択します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **Name**  
+ **名前**  
  グリッドに追加される各プリンシパルまたはセキュリティ保護可能なリソースの名前です。  
   
- **Type**  
+ **型**  
  各アイテムの種類について説明します。  
   
  **[明示的] タブ**  

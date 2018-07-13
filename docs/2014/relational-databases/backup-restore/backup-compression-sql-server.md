@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], backup compression
 - backup compression [SQL Server], about backup compression
@@ -18,21 +17,21 @@ helpviewer_keywords:
 - backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a060cc63c07c69c882ecd3eab635e6fa32a148b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: fe90321363497500a46e81faee7b40bf3bf8a4d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169003"
 ---
 # <a name="backup-compression-sql-server"></a>バックアップの圧縮 (SQL Server)
   このトピックでは、バックアップの圧縮の制限、パフォーマンス面のトレードオフ、バックアップの圧縮の構成、圧縮比率など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの圧縮について説明します。  
   
 > [!NOTE]  
->  についてのどのエディション[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]バックアップの圧縮をサポートしを参照してください[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 圧縮されたバックアップは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の各エディションで復元できます。  
+>  情報ののどのエディション[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]バックアップの圧縮のサポートを参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 圧縮されたバックアップは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の各エディションで復元できます。  
   
   
 ##  <a name="Benefits"></a> 利点  
@@ -53,7 +52,7 @@ ms.locfileid: "36074193"
   
   
 ##  <a name="PerfImpact"></a> バックアップの圧縮がパフォーマンスに与える影響  
- 既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、[リソース ガバナー](../resource-governor/resource-governor.md)によって CPU 使用率が制限されるセッションでは、優先度の低い圧縮バックアップを作成することができます。 詳細については、[「リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;」](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)を参照してください。  
+ 既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、[リソース ガバナー](../resource-governor/resource-governor.md)によって CPU 使用率が制限されるセッションでは、優先度の低い圧縮バックアップを作成することができます。 詳細については、「 [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)」を参照してください。  
   
  バックアップ I/O パフォーマンスの実態を把握するためには、次のようなパフォーマンス カウンターを評価することで、デバイスに対するバックアップ I/O を特定できます。  
   

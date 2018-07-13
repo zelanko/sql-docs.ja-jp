@@ -1,5 +1,5 @@
 ---
-title: メジャー (SSAS テーブル) |Microsoft ドキュメント
+title: メジャー (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d5690f488c5cb0119c62be819e1cfece41d2fda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9715d64ea8d2df1747a26fc15cf830bab3d5efd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218002"
 ---
 # <a name="measures-ssas-tabular"></a>メジャー (SSAS テーブル)
   テーブル モデルでは、メジャーとはレポート クライアントで使用するために DAX 数式を使用して作成される計算のことです。 メジャーの評価は、ユーザーがレポート クライアント アプリケーションで選択するフィールド、フィルター、またはスライサーに基づいて行われます。  
@@ -88,7 +88,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 |プロパティ|既定の設定|説明|  
 |--------------|---------------------|-----------------|  
-|**description**|空白|メジャーの説明。 レポート クライアントのメジャーの場合、説明は表示されません。|  
+|**[説明]**|空白|メジャーの説明。 レポート クライアントのメジャーの場合、説明は表示されません。|  
 |**形式**|式で参照されている列のデータ型に基づいて自動的に決定されます。|メジャーの形式。 たとえば、通貨やパーセンテージなどです。|  
 |**[数式]**|メジャーの作成時に数式バーに入力された式。|メジャーの数式。|  
 |**[メジャー名]**|オート SUM を使用する場合は、メジャー名の後に列名、コロンが順に続きます。 カスタム式を入力する場合は、名前の後にコロン、数式を順に入力します。|レポート クライアントのフィールドの一覧に表示されるメジャーの名前。|  
@@ -96,17 +96,17 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_KPI"></a> KPI でのメジャーの使用  
  KPI (主要業績評価指標) は、メジャーによって定義される *基準* 値を、同じくメジャーまたは絶対値によって定義される *対象* の値と比較することによって定義されます。 KPI には *状態*も含まれています。状態とは、しきい値間の対象の値と比較して基準値を評価した場合の計算結果をグラフィカルに表示したものです。 KPI は、多くの場合、重要なビジネス基準における傾向を特定するためにビジネス プロフェッショナルによって使用されます。  
   
- どのメジャーも KPI のベース メジャーとして使用できます。 KPI を作成するには、メジャー グリッドでメジャーを右クリックして、 **[KPI の作成]** をクリックします。 [主要業績評価指標] ダイアログ ボックスが開き、(メジャーまたは絶対値によって定義される) 対象の値を指定し、状態しきい値とグラフィック タイプを定義できるようになります。 詳細については、次を参照してください。 [Kpi &#40;SSAS 表形式&#41;](kpis-ssas-tabular.md)です。  
+ どのメジャーも KPI のベース メジャーとして使用できます。 KPI を作成するには、メジャー グリッドでメジャーを右クリックして、 **[KPI の作成]** をクリックします。 [主要業績評価指標] ダイアログ ボックスが開き、(メジャーまたは絶対値によって定義される) 対象の値を指定し、状態しきい値とグラフィック タイプを定義できるようになります。 詳細については、次を参照してください。 [Kpi &#40;SSAS 表形式&#41;](kpis-ssas-tabular.md)します。  
   
 ##  <a name="bkmk_rel_tasks"></a> 関連タスク  
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[作成および管理メジャー &#40;SSAS 表形式&#41;](measures-ssas-tabular.md)|モデル デザイナーのメジャー グリッドを使用してメジャーを作成および管理する方法について説明します。|  
+|[作成し、管理メジャー &#40;SSAS 表形式&#41;](measures-ssas-tabular.md)|モデル デザイナーのメジャー グリッドを使用してメジャーを作成および管理する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [Kpi &#40;SSAS 表形式&#41;](kpis-ssas-tabular.md)   
- [作成および管理 Kpi &#40;SSAS 表形式&#41;](create-and-manage-kpis-ssas-tabular.md)   
+ [作成し、管理 Kpi &#40;SSAS 表形式&#41;](create-and-manage-kpis-ssas-tabular.md)   
  [計算列&#40;SSAS 表形式&#41;](ssas-calculated-columns.md)  
   
   

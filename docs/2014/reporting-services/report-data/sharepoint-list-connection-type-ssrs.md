@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2c4022d7cfca3a85e6e01618bbf5ee20694a9b88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 129fabab52b2e7b7e59cf832d21e25972cb9b07a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260398"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint リストの接続の種類 (SSRS)
   Microsoft SharePoint リストのデータをレポートに含めるには、種類が Microsoft SharePoint リストのレポート データ ソースに基づいたデータセットを追加または作成する必要があります。 これは、Microsoft SQL Server Reporting Services SharePoint リストのデータ拡張機能に基づいたビルトイン データ ソースの種類です。 このデータ ソースの種類を使用して、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0、および [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 のサイトからのリスト データに接続し、そのデータを取得します。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[を追加して、データ接続またはデータ ソースを確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)です。  
+ このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)します。  
   
 ##  <a name="Connection"></a> 接続文字列  
  SharePoint リストへの接続文字列は、SharePoint サイトまたはサブサイトの URL です ( `http://MySharePointWeb/MySharePointSite` や `http://MySharePointWeb/MySharePointSite/Subsite`など)。  
@@ -58,11 +58,11 @@ ms.locfileid: "36074540"
 |リモートの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|はい|いいえ<sup>2</sup>|  
 ||保存、要求、なし (Windows 資格情報を持つ<sup>1</sup>)|いいえ|いいえ<sup>2</sup>|  
   
- <sup>1</sup>格納と Windows 以外の資格情報を持つプロンプトの資格情報はサポートされていません。  
+ <sup>1</sup>保存された情報や Windows 以外の資格情報のプロンプトの資格情報はサポートされていません。  
   
  <sup>2</sup>リモートの SharePoint リストのフォーム ベースの認証および要求認証はサポートされません。  
   
- <sup>3</sup> Windows 認証、フォーム ベース認証 (FBA)、セキュア アプリケーション マークアップ言語 (SAML) トークン、その他の id プロバイダーまたは上記の 1 つ以上の組み合わせの認証プロバイダーを記載します。  
+ <sup>3</sup> Windows 認証、フォーム ベース認証 (FBA)、セキュア アプリケーション マークアップ言語 (SAML) トークン、その他の id プロバイダーまたは上記の 1 つ以上の組み合わせは、認証プロバイダーを説明します。  
   
  **[Windows 認証]**  
  信頼済みアカウント モードのレポート サーバーと連携するように構成されている SharePoint テクノロジの場合、このオプションはサポートされません。 これは、SQL Server 2012 Reporting Services より前のリリースにのみ適用されます。  
@@ -76,7 +76,7 @@ ms.locfileid: "36074540"
   
  Microsoft BI スタックにおける要求認証サポートの詳細については、「 [Microsoft BI スタックにおける要求認証の使用](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)」を参照してください。  
   
- 詳細については、次を参照してください[データ接続、データ ソース、および Reporting Services に接続文字列が](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)、[レポート ビルダーでの資格情報を指定](../specify-credentials-in-report-builder.md)、および[でサポートされるデータ ソース。Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)です。  
+ 詳細については、次を参照してください[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)、[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)、および[でサポートされるデータ ソース。Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)します。  
   
 ##  <a name="Query"></a> クエリ  
  クエリを設計するには、データ ソースから新規データセットを作成し、関連するクエリ デザイナーを開きます。 詳細については、「 [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」を参照してください。  

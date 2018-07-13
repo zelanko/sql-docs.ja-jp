@@ -1,5 +1,5 @@
 ---
-title: Reporting Services 構成マネージャーの F1 ヘルプ トピック (SSRS ネイティブ モード) |Microsoft ドキュメント
+title: Reporting Services 構成マネージャーの F1 ヘルプ トピック (SSRS ネイティブ モード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: e38b7d703fb91c0f03f2db55b3f8a82fa4c5b4cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 874c69dcef4dd0704fa0c6fe59e96edfbffe9743
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177249"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 構成マネージャーの F1 ヘルプ トピック (SSRS ネイティブ モード)
   ここでは、Reporting Services 構成マネージャーの F1 ヘルプについて紹介します。  
@@ -36,7 +36,7 @@ ms.locfileid: "36075874"
   
 -   [サービス アカウント](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
   
--   [Web サービス URL](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
+-   [Web サービスの URL](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
   
 -   [複数の Web サイトの構成の詳細](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36075874"
   
 -   [暗号化キー](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   
--   [バックアップの暗号化キー](../../../2014/sql-server/install/backup-encryption-key-ssrs-native-mode.md)  
+-   [暗号化キーのバックアップ](../../../2014/sql-server/install/backup-encryption-key-ssrs-native-mode.md)  
   
 -   [暗号化キーを復元します。](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   

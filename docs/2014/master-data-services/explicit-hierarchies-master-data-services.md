@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, about explicit hierarchies
 - hierarchies [Master Data Services], explicit hierarchies
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be188904b52896376b36023bc254f05826acebea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: eb2760274d8db96aefd578e124b9d69eca67e4a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245062"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明示的階層 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の明示的階層は、1 つのエンティティからのメンバーを指定した任意の方法で整理します。 構造は不規則にすることができます。派生階層とは異なり、明示的階層はドメイン ベースの属性のリレーションシップに基づいていません。  
@@ -34,7 +34,7 @@ ms.locfileid: "36074407"
  明示的階層は不規則で、階層は異なるレベルで同時に終了できます。 各統合メンバーの下位に統合メンバーとリーフ メンバーを無制限に含めることも、まったく含めないこともできます。 リーフ メンバーは、単一の統合メンバーの下位に含めることも、複数レベルの統合メンバーの下位に含めることもできます。  
   
 > [!NOTE]  
->  明示的階層を作成するには、明示的階層でエンティティを有効にしておく必要があります。 詳細については、次を参照してください。[明示的階層およびコレクションに対してエンティティを有効にする&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)です。  
+>  明示的階層を作成するには、明示的階層でエンティティを有効にしておく必要があります。 詳細については、次を参照してください。[明示的階層およびコレクションに対してエンティティを有効にする&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)します。  
   
 ## <a name="types-of-explicit-hierarchies"></a>明示的階層の種類  
  明示的階層には、必須階層と任意階層の 2 種類があります。  

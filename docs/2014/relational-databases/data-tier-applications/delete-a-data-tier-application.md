@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deletedacwizard.introduction.f1
 - sql12.swb.deletedacwizard.deletedac.f1
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c5afc38b9c3864790888a41496261adeed76661
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e3613ce8ccee33accac25dc702d70fea9536587e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166923"
 ---
 # <a name="delete-a-data-tier-application"></a>データ層アプリケーションの削除
   データ層アプリケーションの削除ウィザードまたは Windows PowerShell スクリプトを使用して、データ層アプリケーションを削除できます。 関連付けられたデータベースの保持、デタッチ、または削除を指定することができます。  
@@ -138,20 +138,20 @@ ms.locfileid: "36074404"
   
 2.  開く、`ServerConnection`オブジェクトし、同じインスタンスに接続します。  
   
-3.  使用して`add_DacActionStarted`と`add_DacActionFinished`DAC アップグレード イベントをサブスクライブします。  
+3.  使用`add_DacActionStarted`と`add_DacActionFinished`DAC アップグレード イベントをサブスクライブします。  
   
 4.  削除する DAC を指定します。  
   
 5.  どの削除オプションが適しているかによって、これらの 3 つのコードのいずれかを使用します。  
   
-    -   DAC 登録を削除するが、データベースはそのまま残すを使用して、`Unmanage()`メソッドです。  
+    -   DAC の登録の削除をデータベースをそのまま使用して、`Unmanage()`メソッド。  
   
     -   DAC 登録を削除し、データベースをデタッチするには、`Uninstall()` メソッドを使用し、`DetachDatabase` を指定します。  
   
-    -   を、DAC の登録を削除してから、データベースを削除するには、`Uninstall()`メソッドを指定して`DropDatabase`です。  
+    -   DAC 登録を削除し、データベースを削除するには使用、`Uninstall()`メソッドを指定して`DropDatabase`します。  
   
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>DAC のみ削除してデータベースはそのまま残す例 (PowerShell)  
- 次の例は、MyApplication を使用してという名前の DAC を削除、 `Unmanage()` DAC を削除するデータベースはそのまま残すメソッドです。  
+ 次の例は、MyApplication を使用してという名前の DAC を削除、`Unmanage()`メソッドを DAC を削除するデータベースをそのままです。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

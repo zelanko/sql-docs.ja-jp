@@ -1,5 +1,5 @@
 ---
-title: ディメンションの属性の追加 |Microsoft ドキュメント
+title: ディメンションの属性の追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7718d6af1f7a33dc02960e2228903b36deb19582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19fdf91a124a02da60e91c28a6f6be42fd5f2e42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198492"
 ---
 # <a name="adding-attributes-to-dimensions"></a>ディメンションへの属性の追加
   ディメンションを定義したので、ディメンションの各データ要素を表す属性をディメンションに読み込めるようになりました。 属性は、通常、データ ソース ビューのフィールドに基づいています。 ディメンションに属性を追加するときに、データ ソース ビュー内の任意のテーブルのフィールドを含めることができます。  
@@ -122,7 +122,7 @@ ms.locfileid: "36076332"
   
     -   **EndDate**  
   
-    -   **Status**  
+    -   **ステータス**  
   
 5.  [ファイル] メニューの **[すべてを保存]** をクリックします。  
   
