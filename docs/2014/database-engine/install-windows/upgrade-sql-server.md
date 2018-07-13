@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 へのアップグレード |Microsoft ドキュメント
+title: SQL Server 2014 へのアップグレード |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a9cc1e34ab957e869996d5c8e190de6e0a78979b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b5c7262807cddc848c12e08988e1d28cb0965279
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203952"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>SQL Server 2014 へのアップグレード
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードできます。 実行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアップグレードのセットアップ[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、チェック アウト、 [SQL Server 2014 アップグレード テクニカル ガイド](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf)(pdf ファイルをダウンロード)、このセクションで、アップグレード プロセスに関するトピックを確認し、読み取り、 [SQLServer 2014 リリース ノート](http://go.microsoft.com/fwlink/?LinkID=296445)です。  
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードできます。 実行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアップグレードのセットアップ[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、チェック アウト、 [SQL Server 2014 アップグレード テクニカル ガイド](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf)(PDF ダウンロード) のこのセクションで、アップグレード プロセスに関するトピックを確認して、読み取り、 [SQLServer 2014 リリース ノート](http://go.microsoft.com/fwlink/?LinkID=296445)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  このセクションのトピックは次のとおりです。  

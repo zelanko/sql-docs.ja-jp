@@ -28,13 +28,13 @@ ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5d3253edf3649c7a9e530a68b7830b2b843b2b11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 818e202333a807b457e20b4372d10d2f57b909fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195652"
 ---
 # <a name="handling-events-programmatically"></a>プログラムによるイベントの処理
   [!INCLUDE[ssIS](../../includes/ssis-md.md)] のランタイムには、パッケージの検証や実行の処理前、処理中、処理後に発生する一連のイベントがあります。 これらのイベントをキャプチャするには、次の 2 つの方法があります。 1 つは、あるクラスに <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを実装し、このクラスをパラメーターとして、パッケージの `Execute` メソッドおよび `Validate` メソッドに渡す方法です。 もう 1 つは <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> オブジェクトを作成する方法です。このオブジェクトには、タスクやループなど、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> に属するイベントが発生したときに実行される、他の [!INCLUDE[ssIS](../../includes/ssis-md.md)] オブジェクトを含めることができます。 ここでは、この 2 つの方法について説明し、その使用法をコード例で示します。  
@@ -44,7 +44,7 @@ ms.locfileid: "36073063"
   
  <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> クラスにはあらかじめ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスが実装されています。したがって、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを直接実装する代わりに、<xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> から派生するクラスを作成し、応答を受ける特定のイベントをオーバーライドする方法を取ることもできます。 その後、このクラスをパラメーターとして、<xref:Microsoft.SqlServer.Dts.Runtime.Package> の `Validate` メソッドおよび `Execute` メソッドに渡し、イベントのコールバックを受け取ります。  
   
- 次のコード サンプルは、<xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> から派生するクラスを示し、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> メソッドをオーバーライドします。 クラスをパラメーターとして提供し、`Validate`と`Execute`パッケージのメソッドです。  
+ 次のコード サンプルは、<xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> から派生するクラスを示し、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> メソッドをオーバーライドします。 クラスをパラメーターとして指定、`Validate`と`Execute`パッケージのメソッド。  
   
 ```csharp  
 using System;  
@@ -252,7 +252,7 @@ Module Module1
 End Module  
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../integration-services-ssis-event-handlers.md)   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 caps.latest.revision: 50
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 429963c3a8b9e727913ecd1e2564c89fa8bbe38b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c88878e5bd680ec6ca6fcbb310b25e5ec216977e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212292"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>レポートを開閉する (レポート マネージャー)
   レポート サーバーにパブリッシュされたレポートは、レポート マネージャーを使って閲覧できます。 既定では、すべてのレポートが HTML 形式で表示されます。 開いたレポートをエクスポートすることにより、他のアプリケーションの形式で閲覧することもできます。 対話機能を持ったレポートや対話型データを含んだレポート ビルダーのレポートでは、リンクをクリックして追加のレポートまたはデータを閲覧できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36070882"
      レポートを閉じても、レポートはブラウザーのキャッシュから削除されません。 レポートへの接続を切断するには、ブラウザーを閉じる必要があります。  
   
 ## <a name="see-also"></a>参照  
- [レポートおよびその他の項目の検索&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [レポートおよびその他の項目を検索する&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../contents-page-report-manager.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  

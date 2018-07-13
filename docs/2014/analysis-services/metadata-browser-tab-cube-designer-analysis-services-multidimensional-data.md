@@ -1,5 +1,5 @@
 ---
-title: メタデータ ([ブラウザー] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: メタデータ ([ブラウザー] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.metadatapane.f1
 ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8469a144844e7b4bb7c02ea7fa5255a04654a34c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3d3c2c707e42204fe3ae3eb75ea90b28525f2b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241692"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>[メタデータ] (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
   キューブ構造の参照、関連するメジャーの確認、ディメンションの閲覧と作成には、キューブ デザイナーの **[ブラウザー]** タブの **[メタデータ]** ペインを使用します。 階層のドリル ダウン、使用できるメジャーと KPI の一覧表示、オブジェクトの完全修飾名のコピーなどを実行できます。  
@@ -56,7 +56,7 @@ ms.locfileid: "36071985"
 ## <a name="see-also"></a>参照  
  [ツールバー&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Excel で分析&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [クエリとフィルター&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [クエリおよびフィルター&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   
  [ブラウザー&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

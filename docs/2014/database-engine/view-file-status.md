@@ -1,5 +1,5 @@
 ---
-title: ファイルの状態の表示 |Microsoft ドキュメント
+title: ファイルの状態の表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file status information [SQL Server]
 - file history [SQL Server]
 - version control services [SQL Server], file status
 ms.assetid: 96601fc3-64b8-4dd8-9b73-cc6710293eb9
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e22e0082e2a8d380c384b17a367d16b15612162
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 87400d7bed6f23c6990afd45b5c3fe7bf81a683f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189149"
 ---
 # <a name="view-file-status"></a>ファイルの状態の表示
   ソース管理では、ソース管理の対象であるすべての項目について、状態の詳細な情報が保持されます。 その情報に基づいて、ファイルの現在の状態を確認し、項目の状態レポートを作成できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "36072394"
   
 1.  ソリューション エクスプローラーで、項目を選択します。  
   
-2.  **ファイル** メニューのをポイント**ソース管理**、 をクリック**SourceSafe プロパティ**です。  
+2.  **ファイル**メニューで、**ソース管理**、 をクリック**SourceSafe プロパティ**します。  
   
 ## <a name="see-also"></a>参照  
  [設定し、バージョン情報の取得](../../2014/database-engine/set-and-retrieve-version-information.md)   

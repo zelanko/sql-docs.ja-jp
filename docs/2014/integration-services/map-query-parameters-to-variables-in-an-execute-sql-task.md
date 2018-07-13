@@ -1,5 +1,5 @@
 ---
-title: クエリ パラメーターをマップ内の変数に、SQL 実行タスク |Microsoft ドキュメント
+title: クエリ パラメーターを変数にマップを SQL 実行タスク |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
 - parameterized SQL commands [Integration Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - variables [Integration Services], mapping parameters to
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6427fe7773569abc5d3989e6ca830c0999a962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92972c340a71587329146f71542e15d8a45cb914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233392"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>クエリ パラメーターを SQL 実行タスクの変数にマップする方法
   このトピックでは、SQL 実行タスクでパラメーター化された SQL ステートメントを使用して、SQL ステートメント内の変数とパラメーター間のマッピングを作成する方法を説明します。  
@@ -41,8 +41,8 @@ ms.locfileid: "36070740"
   
 3.  **[制御フロー]** タブをクリックします。  
   
-4.  SQL 実行タスクがまだパッケージに含まれていない場合、SQL 実行タスクをパッケージの制御フローに追加します。 詳細については、次を参照してください[タスクまたはコンテナー制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+4.  SQL 実行タスクがまだパッケージに含まれていない場合、SQL 実行タスクをパッケージの制御フローに追加します。 詳細については、次を参照してください[タスクまたはコンテナーの制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+  .  
   
 5.  SQL 実行タスクをダブルクリックします。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36070740"
   
 ## <a name="see-also"></a>参照  
  [SQL 実行タスク](control-flow/execute-sql-task.md)   
- [パラメーターと戻り値のコードは、SQL 実行タスク](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
+ [パラメーターとリターン コード、SQL 実行タスク](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)  
   
   

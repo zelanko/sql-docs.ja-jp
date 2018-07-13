@@ -1,5 +1,5 @@
 ---
-title: レポート ビルダー (レポート ビルダー) のスタンドアロン バージョンをアンインストール |Microsoft ドキュメント
+title: レポート ビルダー (レポート ビルダー) のスタンドアロン バージョンのアンインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5482ca3ec570b4155712dbeaf3768a55372eccad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3fec5ecbe30bb55262a274b5764d6650044a54a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216852"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>スタンドアロン バージョンのレポート ビルダーのアンインストール (レポート ビルダー)
   スタンドアロン バージョンのレポート ビルダーは、コントロール パネルまたはコマンド ラインからアンインストールできます。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] バージョンのレポート ビルダーをアンインストールするには、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] をアンインストールする必要があります。  
@@ -44,7 +44,7 @@ ms.locfileid: "36071377"
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
-2.  **開く**テキスト ボックスで、「 `cmd.`  
+2.  **オープン**テキスト ボックスに「 `cmd.`  
   
 3.  コマンド プロンプト ウィンドウで、ReportBuilder3_x86.msi が格納されているフォルダーに移動します。  
   

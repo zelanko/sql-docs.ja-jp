@@ -1,5 +1,5 @@
 ---
-title: 参照リレーションシップの定義 |Microsoft ドキュメント
+title: 参照リレーションシップの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 50be0ad05e579d21095e6446b8e84d39cbef1f20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f49d90e05c7d76129b5c2385ed1af05fc6e3731a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200382"
 ---
 # <a name="defining-a-referenced-relationship"></a>参照リレーションシップの定義
   このチュートリアルのこれまでの実習では、主キーから外部キーへのリレーションシップを使用し、メジャー グループのファクト テーブルに直接リンクしているテーブルに基づいて、各キューブ ディメンションを定義しました。 このトピックの実習では、 **Reseller** ディメンションを介し、 **Geography** ディメンションを再販業者販売のファクト テーブルにリンクさせます。このようにリンクを中継するディメンションを、 *参照ディメンション*といいます。 参照ディメンションにより、販売店の売上と地域を関連付けることができます。 詳細については、「 [参照リレーションシップと参照リレーションシップのプロパティの定義](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)」を参照してください。  
@@ -108,7 +108,7 @@ ms.locfileid: "36071293"
   
 9. **[ディメンションの使用法]** タブを開き、 **[ディメンション]** の一覧で **[Geography]** を右クリックし、 **[名前の変更]** をクリックします。  
   
-10. このキューブ ディメンションの名前を変更`Reseller Geography`です。  
+10. このキューブ ディメンションの名前を変更`Reseller Geography`します。  
   
      このキューブ ディメンションを **Reseller Sales** メジャー グループにリンクしたので、以降は同キューブ ディメンションを明示的にキューブ内で使用できます。これにより、ユーザーの混乱を避けることができます。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36071293"
   
 2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブをクリックし、 **[再接続]** ボタンをクリックします。  
   
-3.  メタデータ ペインで、展開`Reseller Geography`を右クリックして**地理的環境**、クリックして**を行領域に追加**です。  
+3.  メタデータ ペインで  `Reseller Geography`、右クリック**地域**、順にクリックします**を行領域に追加**します。  
   
      次の図を見ると、 **Reseller Sales-Sales Amount** メジャーが、 **Geographies** ユーザー定義階層の **Country-Region** 属性によって正しく多次元化されたことがわかります。  
   

@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_DATASOURCES 行セット |Microsoft ドキュメント
+title: DISCOVER_DATASOURCES 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32e7aa7327cce301cc8415f45635fda651d861f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e319b05d1d9aec74b01b73b671f613a2703d900f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185259"
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 行セット
   サーバーまたは Web サービスで使用できる XML for Analysis (XMLA) プロバイダー データ ソースの一覧を返します。 パブリッシュされたデータ ソースは、アプリケーション Web サーバーの URL から返されます。 クライアントは、この一覧内のいずれかのデータ ソースに接続できます。  
   
- 呼び出す場合は、 [Discover](../../xmla/xml-elements-methods-discover.md)メソッドを`DISCOVER_DATASOURCES`の列挙値に、 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)要素、`Discover`メソッドを返します。、`DISCOVER_DATASOURCES`行セット。  
+ 呼び出す場合、 [Discover](../../xmla/xml-elements-methods-discover.md)メソッドを`DISCOVER_DATASOURCES`列挙値、 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)要素、`Discover`メソッドを返します。、`DISCOVER_DATASOURCES`行セット。  
   
- **適用されます:** 表形式モデル、多次元モデル  
+ **適用対象:** 表形式モデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
- クライアントでは、データ ソースを選択するには、`DataSourceInfo`プロパティに、[プロパティ](../../xmla/xml-elements-properties/properties-element-xmla.md)と共に送信される要素、[コマンド](../../xmla/xml-elements-properties/command-element-xmla.md)要素を[Execute](../../xmla/xml-elements-methods-execute.md)メソッド。 クライアントは、サーバーに送信する `DataSourceInfo` プロパティのコンテンツを作成するのではなく、 `Discover` メソッドを使用して、プロバイダーでサポートされているデータ ソースを見つける必要があります。 次に、クライアントは、`DataSourceInfo` 行セットから取得される `DISCOVER_DATASOURCES` プロパティに同じ値を返送します。  
+ クライアントを設定してデータ ソースを選択する、`DataSourceInfo`プロパティ、[プロパティ](../../xmla/xml-elements-properties/properties-element-xmla.md)と共に送信される要素、[コマンド](../../xmla/xml-elements-properties/command-element-xmla.md)要素を[Execute](../../xmla/xml-elements-methods-execute.md)メソッド。 クライアントは、サーバーに送信する `DataSourceInfo` プロパティのコンテンツを作成するのではなく、 `Discover` メソッドを使用して、プロバイダーでサポートされているデータ ソースを見つける必要があります。 次に、クライアントは、`DataSourceInfo` 行セットから取得される `DISCOVER_DATASOURCES` プロパティに同じ値を返送します。  
   
  `DISCOVER_DATASOURCES`行セットには、次の列が含まれています。  
   

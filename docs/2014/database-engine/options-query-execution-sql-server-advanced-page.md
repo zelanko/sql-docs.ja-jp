@@ -1,5 +1,5 @@
 ---
-title: 'オプション (クエリの実行: SQL Server: [詳細] ページ) |Microsoft ドキュメント'
+title: 'オプション (クエリの実行: SQL Server: [詳細] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 679c6d8f5a6abf931eb28d0f2f8116ac9f551d91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 179cddf3670cc29cbb298b53c442c30b80dd202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187239"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>オプション (クエリの実行: SQL Server: [詳細] ページ)
   SET コマンドを使用する場合は、いくつかのオプションを使用できます。 このページを使用すると、SQL Server クエリ エディターで [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリを実行するための **set** オプションを指定できます。 他のコード エディターには影響しません。 これらのオプションに加えられた変更は、新しい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリだけに適用されます。 現在のクエリのオプションを変更するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ ウィンドウの **[クエリ]** メニューまたはショートカット メニューの **[クエリ オプション]** をクリックします。 **[実行]** の **[詳細設定]** をクリックします。 各オプションの詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
@@ -59,7 +59,7 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 GO  
 ```  
   
- **[SET DEADLOCK_PRIORITY]**  
+ **デッドロックの優先度を設定**  
  既定値の [Normal] の場合、デッドロックが発生したときに各クエリに同じ優先度が与えられます。 このクエリが、デッドロックの競合で常に優先されずに終了するクエリとして選択されるようにするには、優先度に [Low] を選択してください。  
   
  **SET LOCK TIMEOUT**  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3bcc71c63896289bc924a540ad14b1b9cb591dc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af52516dccd163380cc6c36be9d0a862f3de94e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168303"
 ---
 # <a name="manage-shared-datasets"></a>共有データセットを管理する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、共有データセットによって、外部データ ソースに接続された共有データ ソースからデータを取得します。 共有データセットを使用するとクエリを共有できるので、複数のレポートに同じデータ セットを取り込むことができます。 データセット クエリにはデータセット パラメーターが含まれる場合があります。 初回使用時または指定したスケジュールに従い、特定のパラメーターの組み合わせによるクエリ結果をキャッシュするよう共有データセットを構成できます。 レポート キャッシュおよびレポート データ フィードと共に共有データセットのキャッシュを使用すると、データ ソースへのアクセスの管理に役立ちます。  
@@ -83,7 +83,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   **アイテムへのセキュリティの設定** 共有データセットのセキュリティ設定を表示および変更します。  
   
- どのタスクと権限でネイティブ モード レポート サーバー上のデータ ソース プロパティへのアクセスが制御の詳細については、次を参照してください。[共有データセット アイテムのセキュリティで保護された](../security/secure-shared-dataset-items.md)です。  
+ タスクと権限を制御するネイティブ モードのレポート サーバー上のデータ ソース プロパティへのアクセスの詳細については、次を参照してください。[共有データセット アイテムをセキュリティで保護された](../security/secure-shared-dataset-items.md)します。  
   
  SharePoint ライブラリのアイテムのプロパティを表示および編集する権限は、サイトの管理者によって決定されます。 詳細については、「 [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)」を参照してください。  
   
@@ -92,7 +92,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 |タスク|ツール|リンク|  
 |----------|----------|----------|  
-|共有データセットの追加、または共有データセット定義プロパティの変更|レポート ビルダーでの保存<br /><br /> レポート デザイナーでの配置<br /><br /> レポート マネージャーでの .rsd ファイルのアップロード|msdn.microsoft.com の[レポート ビルダーに関するドキュメント](http://go.microsoft.com/fwlink/?LinkId=154494)の「[レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」<br /><br /> [[ファイル] ページをアップロード&#40;レポート マネージャー&#41;](../upload-file-page-report-manager.md)<br /><br /> 依存する共有データ ソースがパブリッシュされる前に共有データセットをアップロードする場合は、共有データセットを共有データ ソースに手動でバインドする必要があります。 詳細については、次を参照してください。 [[全般] プロパティ ページ、共有データセット&#40;レポート マネージャー&#41;](../general-properties-page-shared-datasets-report-manager.md)です。|  
+|共有データセットの追加、または共有データセット定義プロパティの変更|レポート ビルダーでの保存<br /><br /> レポート デザイナーでの配置<br /><br /> レポート マネージャーでの .rsd ファイルのアップロード|msdn.microsoft.com の[レポート ビルダーに関するドキュメント](http://go.microsoft.com/fwlink/?LinkId=154494)の「[レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」<br /><br /> [[ファイル] ページをアップロード&#40;レポート マネージャー&#41;](../upload-file-page-report-manager.md)<br /><br /> 依存する共有データ ソースがパブリッシュされる前に共有データセットをアップロードする場合は、共有データセットを共有データ ソースに手動でバインドする必要があります。 詳細については、次を参照してください。 [[全般] プロパティ ページ、共有データセット&#40;レポート マネージャー&#41;](../general-properties-page-shared-datasets-report-manager.md)します。|  
 |共有データセット アイテムのプロパティの変更|レポート マネージャー|[[全般] プロパティ ページ、共有データセット&#40;レポート マネージャー&#41;](../general-properties-page-shared-datasets-report-manager.md)|  
 |レポート内の共有データセット インスタンスに対する、追加の共有データセット プロパティの指定|レポート ビルダー、レポート デザイナー|[[クエリ] ([データセットのプロパティ] ダイアログ ボックス)](../dataset-properties-dialog-box-query.md)|  
 |共有データセットでの、異なる共有データ ソースへのバインド|レポート マネージャー|[データ ソースの選択 ページ&#40;レポート マネージャー&#41;](../data-source-selection-page-report-manager.md)|  
@@ -124,7 +124,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 -   共有データセットでは、サブスクリプションと同じルールに従ってパラメーター値が指定されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーのコンテンツ管理&#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](../security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

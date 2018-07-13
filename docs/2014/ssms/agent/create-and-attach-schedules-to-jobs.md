@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server]
 - scheduling jobs [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - idle time [SQL Server]
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 77f1f09ddb3d978d1308d4c7ec70bf5d8d177812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f85e651f67b6553f597fab920bde7cc05ca37167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192872"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>スケジュールの作成とジョブへのアタッチ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのスケジュール設定とは、ユーザーの操作なしでジョブの実行が開始される条件を定義することです。 ジョブのスケジュールを設定して自動的に実行するには、ジョブの新しいスケジュールを作成するか、既存のスケジュールをジョブにアタッチします。  
@@ -83,13 +83,13 @@ ms.locfileid: "36072263"
   
  CPU アイドル時に実行するジョブを定義する前に、通常処理時の CPU の負荷を調べてください。 CPU の負荷を調べるには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] またはパフォーマンス モニターを使用して、サーバー トラフィックを監視し、統計情報を収集します。 収集した情報を参考にして、CPU アイドル時の比率および時間を設定します。  
   
- CPU アイドル条件は、特定の時間にわたり、CPU 使用率が一定の割合を下回っている状態として定義します。 次に、この時間の長さを設定します。 指定された長さの時間にわたって CPU 使用率が指定の率を下回ると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、CPU アイドル時スケジュールが設定されているすべてのジョブを開始します。 使用する方法について[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]CPU 使用率を監視するパフォーマンス モニターを参照してくださいまたは[CPU 使用率の監視](../../relational-databases/performance-monitor/monitor-cpu-usage.md)です。  
+ CPU アイドル条件は、特定の時間にわたり、CPU 使用率が一定の割合を下回っている状態として定義します。 次に、この時間の長さを設定します。 指定された長さの時間にわたって CPU 使用率が指定の率を下回ると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、CPU アイドル時スケジュールが設定されているすべてのジョブを開始します。 使用しての詳細については[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]CPU 使用率を監視するパフォーマンス モニターを参照してくださいまたは[CPU 使用状況の監視](../../relational-databases/performance-monitor/monitor-cpu-usage.md)します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**description**|**トピック**|  
+|**[説明]**|**トピック**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのスケジュールを作成する方法について説明します。|[Create a Schedule](create-a-schedule.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのスケジュールを設定する方法について説明します。|[ジョブのスケジュール設定](schedule-a-job.md)|  
 |使用しているサーバーの CPU アイドル状態を定義する方法について説明します。|[CPU のアイドル時間と期間の設定 (SQL Server Management Studio)](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  

@@ -1,5 +1,5 @@
 ---
-title: XSL 変換 (SQLXMLOLEDB プロバイダー) の適用 |Microsoft ドキュメント
+title: XSL 変換 (SQLXMLOLEDB プロバイダー) の適用 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 170bed8eece89add964d3f8f0b3ab3fe46552b26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0631033305d05252eb9253fb24614485a5ebccbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268488"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>XSL 変換の適用 (SQLXMLOLEDB プロバイダー)
-  このサンプル ADO アプリケーションでは、SQL クエリが実行され、結果に XSL 変換が適用されます。 ClientSideXML プロパティを True に設定すると、クライアント側で行セットの処理が適用されます。 SQL クエリをテンプレートで指定する場合は、テンプレート実行時にコマンド言語を指定する必要があるため、コマンド言語 {5d531cb2-e6ed-11d2-b252-00c04f681b71} を設定します。 Xsl プロパティでは、変換の適用に使用する XSL ファイルを指定します。 Base Path プロパティの値は、XSL ファイルの検索に使用されます。 Xsl プロパティの値にパスを指定する場合、パス Base Path プロパティで指定されているパスの相対パスです。  
+  このサンプル ADO アプリケーションでは、SQL クエリが実行され、結果に XSL 変換が適用されます。 ClientSideXML プロパティを True に設定すると、クライアント側で行セットの処理が適用されます。 SQL クエリをテンプレートで指定する場合は、テンプレート実行時にコマンド言語を指定する必要があるため、コマンド言語 {5d531cb2-e6ed-11d2-b252-00c04f681b71} を設定します。 Xsl プロパティには、変換の適用に使用する XSL ファイルを指定します。 Base Path プロパティの値は、XSL ファイルの検索に使用されます。 Xsl プロパティの値にパスを指定する場合は、Base Path プロパティで指定されているパスの相対パスです。  
   
  この例では、次の SQLXMLOLEDB プロバイダー固有のプロパティについて、使用法を示します。  
   
@@ -39,14 +39,14 @@ ms.locfileid: "36070690"
   
  このクライアント側の ADO サンプル アプリケーションでは、SQL クエリで構成される XML テンプレートがサーバーで実行されます。  
   
- ClientSideXML プロパティが True に設定されているために、FOR XML 句のない SELECT ステートメントは、サーバーに送信されます。 サーバーではクエリが実行され、クライアントに行セットが返されます。 クライアントは、行セットに FOR XML 変換を適用し、XML ドキュメントを生成します。  
+ ClientSideXML プロパティが True に設定されているために、FOR XML 句のない SELECT ステートメントは、サーバーに送信されます。 サーバーではクエリが実行され、クライアントに行セットが返されます。 クライアントは、行セットに FOR XML 変換を適用し、XML ドキュメントが生成します。  
   
- Xsl プロパティは、アプリケーションで指定されました。そのため、クライアントでは、生成される XML ドキュメントに XSL 変換を適用し、結果は 2 列のテーブルです。  
+ Xsl プロパティが、アプリケーションで指定されました。そのため、クライアントでは、生成される XML ドキュメントに XSL 変換が適用し、2 列のテーブルになります。  
   
  テンプレート コマンドを実行するには、XML テンプレート言語 {5d531cb2-e6ed-11d2-b252-00c04f681b71} を指定する必要があります。  
   
 > [!NOTE]  
->  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例ではデータ プロバイダーとして [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用するよう指定していますが、これには追加ネットワーク クライアントがインストールされていることが必要です。 詳細については、次を参照してください。 [SQL Server Native Client のシステム要件](../../native-client/system-requirements-for-sql-server-native-client.md)です。  
+>  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例ではデータ プロバイダーとして [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用するよう指定していますが、これには追加ネットワーク クライアントがインストールされていることが必要です。 詳細については、次を参照してください。 [SQL Server Native Client のシステム要件](../../native-client/system-requirements-for-sql-server-native-client.md)します。  
   
 ```  
 Option Explicit  

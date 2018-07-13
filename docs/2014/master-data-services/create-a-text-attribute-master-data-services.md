@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating text attributes
 - creating text attributes [Master Data Services]
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5ac647c9a77c19238a73d98ce9032cf74ba2449b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f72155508494f4f88267ecb2cf3ffd021a04a66a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213263"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>テキスト属性を作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、ユーザーに属性値としてテキスト文字列を入力させる場合、テキスト属性を作成します。  
@@ -76,6 +76,6 @@ ms.locfileid: "36071458"
  [属性&#40;マスター データ サービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
  [属性名を変更&#40;マスター データ サービス&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [ドメイン ベースの属性を作成する &#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [ファイル属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+ [ファイル属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: IIS の下位互換コンポーネントがなかった検出 (アップグレード アドバイザー) |Microsoft ドキュメント
+title: IIS の下位互換コンポーネントがなかった検出 (アップグレード アドバイザー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS [Reporting Services]
 ms.assetid: e794185a-0a77-480a-9aea-d09f8760a6b8
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4eec6ccfad4d83a8b0ec01b77048228dcb4c36b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 689ca199202b594376a4d0785992123f6016e384
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177226"
 ---
 # <a name="iis-backward-compatibility-components-were-not-detected-upgrade-advisor"></a>IIS の下位互換コンポーネントが検出されない (アップグレード アドバイザー)
   新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL を作成するためにセットアップで使用する情報を提供する IIS コンポーネントと設定が、アップグレード アドバイザーで検出されませんでした。  
@@ -39,9 +39,9 @@ ms.locfileid: "36073386"
 ## <a name="corrective-action"></a>修正措置  
  アップグレードの完了後、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用してレポート サーバーまたはレポート マネージャーの URL を設定します。 IIS マネージャーを使用して、不要になった仮想ディレクトリを削除します。  
   
- 詳細については、次を参照してください。 [URL の構成&#40;SSRS 構成マネージャー&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブック。  
+ 詳細については、次を参照してください。 [URL の構成&#40;SSRS 構成マネージャー&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services のアップグレード問題&#40;アップグレード アドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [Reporting Services のアップグレードに関する問題&#40;アップグレード アドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

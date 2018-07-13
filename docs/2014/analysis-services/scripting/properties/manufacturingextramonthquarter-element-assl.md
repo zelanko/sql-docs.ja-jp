@@ -1,5 +1,5 @@
 ---
-title: ManufacturingExtraMonthQuarter 要素 (ASSL) |Microsoft ドキュメント
+title: ManufacturingExtraMonthQuarter 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ManufacturingExtraMonthQuarter element
 ms.assetid: 6e97d92c-dd1e-48f6-a379-c1036c975f9f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d4bc2e36bb67e64aabb5bfdaee67ea945f4bb077
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e57e3e7dbaa07ce86eaa5c0b29749fdc6c974cd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243632"
 ---
 # <a name="manufacturingextramonthquarter-element-assl"></a>ManufacturingExtraMonthQuarter 要素 (ASSL)
   追加の月が割り当てられる製造期間の月を定義、 [TimeBinding](../data-type/binding-data-type-assl.md)要素。  

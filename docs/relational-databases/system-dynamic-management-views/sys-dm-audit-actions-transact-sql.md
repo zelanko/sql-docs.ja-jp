@@ -1,5 +1,5 @@
 ---
-title: sys.dm_audit_actions (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_audit_actions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,18 +22,19 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a180e8b337ea984e320d41f77284ee9833b624
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 864072a00f2db088b03ce280bf0ad137627b6a7c
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957635"
 ---
 # <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  監査ログで報告される可能性のあるすべての監査アクション、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit の一部として構成できるすべての監査アクション グループに対して 1 つの行を返します。 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]監査を参照してください[SQL Server Audit&#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)です。  
+  監査ログで報告される可能性のあるすべての監査アクション、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit の一部として構成できるすべての監査アクション グループに対して 1 つの行を返します。 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]監査を参照してください[SQL Server Audit&#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**varchar (4)**|監査アクションの ID。 関連する、 **action_id**各監査レコードに書き込まれた値。 NULL 値が許可されます。 監査グループの場合は NULL です。|  
 |**action_in_log**|**bit**|アクションを監査ログに書き込むことができるかどうかを示します。 値は次のとおりです。<br /><br /> 1 = はい<br /><br /> 0 = いいえ|  
@@ -44,10 +45,10 @@ ms.lasthandoff: 05/23/2018
 |**configuration_level**|**nvarchar(10)**|この行で指定されるアクションまたはアクション グループを、グループ レベルとアクション レベルのどちらで構成可能かを示します。 アクションを構成できない場合は NULL です。|  
 |**containing_group_name**|**nvarchar(120)**|指定のアクションが含まれる監査グループの名前。 名前の値がグループの場合は NULL です。|  
   
-## <a name="permissions"></a>権限  
- プリンシパルがある必要があります**選択**権限です。 既定では、この権限は Public に与えられます。  
+## <a name="permissions"></a>アクセス許可  
+ プリンシパルが必要**選択**権限。 既定では、この権限は Public に与えられます。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]」を参照してください。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

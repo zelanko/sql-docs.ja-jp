@@ -26,13 +26,13 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f2f8a1e936199869f404eddae921bfff8a6a5fc6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8a6c3b3624fc06f650179610778b75de5ef63cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219702"
 ---
 # <a name="working-with-variables-programmatically"></a>プログラムでの変数の使用
   変数を使用すると、値を動的に設定し、パッケージ、コンテナー、タスク、およびイベント ハンドラーの処理を制御できます。 また、優先順位制約で変数を使用して、別のタスクへのデータ フローの方向を制御することもできます。 変数には、以下のようにさまざまな使用方法があります。  
@@ -233,7 +233,7 @@ End Module
 ## <a name="configuration-files"></a>構成ファイル  
  構成ファイルにカスタム変数を含めると、実行時に変数を更新できます。 つまり、パッケージを実行すると、パッケージにあらかじめ含まれていた変数の値は、構成ファイルの新しい値で置き換えられます。 この置き換え方法を使用すると、異なる変数値が必要な複数のサーバーにパッケージを配置するときに便利です。 たとえば、変数を使用して、**Foreach ループ** コンテナーがそのワークフローを繰り返す回数を指定したり、エラーが発生したときにイベント ハンドラーが送信する電子メールの受信者を一覧表示したり、パッケージが失敗するまでのエラーの発生回数を変更できます。 これらの変数は、各環境の構成ファイルで動的に指定できます。 したがって、構成ファイルでは読み取り/書き込み用の変数のみを使用できます。 詳細については、「[パッケージ構成を作成する](../create-package-configurations.md)」を参照してください。  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41;変数](../integration-services-ssis-variables.md)   

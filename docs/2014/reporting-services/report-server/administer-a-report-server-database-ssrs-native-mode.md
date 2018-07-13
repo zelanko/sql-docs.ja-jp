@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - renaming databases
@@ -20,13 +20,13 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ee0c8711727a4661a9f9ac7a75d9739d98afc1b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef8be1c1777e51b14a0db38a15a5ff806a83443d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198762"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>レポート サーバー データベースを管理する (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の環境では、2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースが内部記憶域として使用されます。 既定では、データベース名がそれぞれ ReportServer と ReportServerTempdb になります。 ReportServerTempdb は、レポート サーバーのプライマリ データベースと共に作成され、一時データ、セッション情報、およびキャッシュされたレポートを格納する目的に使用されます。  
@@ -39,7 +39,7 @@ ms.locfileid: "36071813"
   
 -   既存のデータベース コンテンツを他のレポート サーバー データベースにコピーする場合、レポート サーバー データベースのコピーをアタッチして、別のレポート サーバー インスタンスで使用します。 また、SOAP 呼び出しを使用して新しいデータベースにレポート サーバー コンテンツを再作成するスクリプトを作成して、実行することもできます。 スクリプトを実行するには、 **rs** ユーティリティを使用します。  
   
--   レポート サーバーとレポート サーバー データベースの接続の管理、および特定のレポート サーバー インスタンスで使用しているデータベースの検索を行うには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]構成ツールの [データベースのセットアップ] ページを使用します。 レポート サーバーでレポート サーバー データベースへの接続の詳細については、次を参照してください。[レポート サーバー データベース接続を構成する&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)です。  
+-   レポート サーバーとレポート サーバー データベースの接続の管理、および特定のレポート サーバー インスタンスで使用しているデータベースの検索を行うには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]構成ツールの [データベースのセットアップ] ページを使用します。 レポート サーバー データベースへのレポート サーバー接続の詳細については、次を参照してください。[レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)します。  
   
 ## <a name="sql-server-login-and-database-permissions"></a>SQL Server のログインとデータベースの権限  
  レポート サーバー データベースは、レポート サーバーによって内部的に使用されます。 データベースへの接続は、レポート サーバー サービスによって行われます。 レポート サーバー データベースに対するレポート サーバー接続を構成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用します。  
@@ -48,7 +48,7 @@ ms.locfileid: "36071813"
   
  レポート サーバー データベースに対する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインは、指定したアカウントに対して自動的に作成されます。  
   
- データベースに対する権限も自動的に構成されます。 Reporting Services 構成ツールがアカウントまたはデータベース ユーザーを割り当てる、`Public`と`RSExecRole`レポート サーバー データベースのロール。 `RSExecRole`ストアド プロシージャを実行するため、データベース テーブルにアクセスするためのアクセス許可を提供します。 `RSExecRole`レポート サーバー データベースを作成するときにマスターおよび msdb に作成します。 `RSExecRole`のメンバーである、`db_owner`によりレポート サーバーが自動アップグレード プロセスをサポートするための独自のスキーマを更新する、レポート サーバー データベースのロール。  
+ データベースに対する権限も自動的に構成されます。 Reporting Services 構成ツールは、アカウントまたはデータベース ユーザーを割り当てる、`Public`と`RSExecRole`レポート サーバー データベースのロール。 `RSExecRole`とストアド プロシージャを実行するため、データベース テーブルにアクセスするためのアクセス許可を提供します。 `RSExecRole`レポート サーバー データベースを作成するときに master および msdb に作成します。 `RSExecRole`のメンバーである、`db_owner`ロール、レポート サーバー データベースのレポート サーバーを自動アップグレード プロセスをサポートするための独自のスキーマを更新することができます。  
   
 ## <a name="naming-conventions-for-the-report-server-databases"></a>レポート サーバー データベースの名前付け規則  
  プライマリ データベースを作成する際、データベースの名前は、「 [データベース識別子](../../relational-databases/databases/database-identifiers.md)」に指定されている規則に従う必要があります。 一時データベースには、レポート サーバーのプライマリ データベース名に、Tempdb というサフィックスを追加した名前を使用する必要があります。 一時データベースに別の名前を選択することはできません。  
@@ -80,18 +80,18 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>データベースのバージョンについて  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、データベースのバージョンについて明確な情報を入手できません。 ただし、データベースのバージョンは常に製品のバージョンと同期しているので、製品バージョンの情報からデータベースのバージョンが変更された時期がわかります。 製品バージョン情報[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ファイル バージョン情報、ログ ファイルをすべての SOAP 呼び出しのヘッダー内に表示されると、レポート サーバーの URL に接続する場合に示されます (たとえば、ブラウザーを開くとhttp://localhost/reportserver)です。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、データベースのバージョンについて明確な情報を入手できません。 ただし、データベースのバージョンは常に製品のバージョンと同期しているので、製品バージョンの情報からデータベースのバージョンが変更された時期がわかります。 製品バージョンの情報[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ファイル バージョン情報のすべての SOAP 呼び出しのヘッダー内のログ ファイルに表示されると、レポート サーバーの URL に接続するときに示されます (たとえば、ブラウザーを開くhttp://localhost/reportserver)します。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [ネイティブ モード レポート サーバー データベースの作成&#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [レポート サーバー サービス アカウントを構成する&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [レポート サーバー データベース接続を構成する&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー サービス アカウントの構成&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [レポート サーバー データベースの作成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Reporting Services のバックアップおよび復元操作](../install-windows/backup-and-restore-operations-for-reporting-services.md)   
  [レポート サーバー データベース&#40;SSRS ネイティブ モード&#41;](report-server-database-ssrs-native-mode.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](reporting-services-report-server-native-mode.md)   
  [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [構成し、暗号化キーを管理&#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [構成し、暗号化キーの管理&#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: レポート サーバー コンテンツ タイプを (追加する Reporting Services SharePoint 統合モードの) ライブラリに追加 |Microsoft ドキュメント
+title: ライブラリ (SharePoint 統合モードで Reporting Services) へのレポート サーバー コンテンツ タイプの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3a1b9a692b8aa26b2d3d5679866617dd4fcfe51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da7ee6e652442bdd2773a8c669b0d134f1fadc37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177549"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>レポート サーバー コンテンツの種類をライブラリに追加する (Reporting Services の SharePoint 統合モード)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、およびレポート ビルダーのレポート定義 (.rdl) ファイルの管理に使用される定義済みの SharePoint コンテンツ タイプを提供します。 コンテンツの種類として、 **[レポート ビルダー レポート]**、 **[レポート モデル]**、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。  
@@ -28,12 +28,12 @@ ms.locfileid: "36070474"
   
  コンテンツの種類をライブラリに追加するには、サイトの管理者であるか、またはフル コントロール レベルの権限を持っている必要があります。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]コンテンツの種類とコンテンツの種類の管理が自動的に有効になります次から作成された既存のサイト コレクションのすべてのドキュメント ライブラリから**ビジネス インテリジェンス センター**サイト テンプレート。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]コンテンツの種類とコンテンツの種類の管理は自動的に有効になります次から作成された既存のサイト コレクションのすべてのドキュメント ライブラリで**ビジネス インテリジェンス センター**サイト テンプレート。  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 統合後に作成されたサイトでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のコンテンツの種類が有効になっていません。  
   
 > [!TIP]  
->  あれば**いない**以前に構成したライブラリに対してコンテンツの種類は最初のコンテンツの種類の管理を有効にし、有効にする、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]コンテンツの種類。 単一のドキュメント ライブラリでコンテンツの種類の管理を有効にするための手順を参照してください。  
+>  あれば**いない**ライブラリに対してコンテンツの種類は、最初のコンテンツの種類の管理を有効にし、有効にする以前に構成された、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]コンテンツの種類。 単一のドキュメント ライブラリでコンテンツの種類の管理を有効にするための手順を参照してください。  
   
  **短いビデオ:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w)。  
   
@@ -110,9 +110,9 @@ ms.locfileid: "36070474"
 8.  コンテンツの種類の追加操作が完了したら、 **[OK]** をクリックします。  
   
 9. > [!NOTE]  
-    >  場合、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]コンテンツ タイプ グループ**SQL Server Reporting Services コンテンツの種類**に表示されていない、 **[コンテンツ タイプの**] ページで、次の条件のいずれかが true:  
+    >  場合、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]コンテンツ タイプ グループ**SQL Server Reporting Services のコンテンツ種類**に表示されていない、**コンテンツ タイプの追加**true は、次の条件のいずれかのページで。  
   
-    -   SharePoint 製品用の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインがインストールされていません。 詳細については、次を参照してください。[インストールまたは SharePoint 用 Reporting Services アドインをアンインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)です。 このトピックには、アドインのインストール方法、アドインのファイルのみのインストールをステップ実行して問題に対処する方法が記載されています。  
+    -   SharePoint 製品用の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインがインストールされていません。 詳細については、次を参照してください。[インストールまたは SharePoint 用 Reporting Services アドインのアンインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)します。 このトピックには、アドインのインストール方法、アドインのファイルのみのインストールをステップ実行して問題に対処する方法が記載されています。  
   
     -   アドインはインストールされていますが、サイト コレクション機能 **[レポート サーバーの統合機能]** がアクティブになっていません。 **[サイトの設定]** でサイト コレクション機能を確認してください。  
   

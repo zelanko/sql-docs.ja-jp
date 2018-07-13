@@ -27,13 +27,13 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 614e925a7481c574bce63c0815b587e4984604df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a9a34f810805817075651cfe148f2d5de252c91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243002"
 ---
 # <a name="working-with-images-with-the-script-task"></a>スクリプト タスクによる画像の操作
   製品またはユーザーのデータベースには、テキストや数値データに加え、画像も頻繁に含まれています。 Microsoft .NET Framework の `System.Drawing` 名前空間では、画像を操作するためのクラスが提供されています。  
@@ -52,7 +52,7 @@ ms.locfileid: "36070748"
   
 1.  `CurrentImageFile` という名前の文字列変数を作成し、その値を既存の画像ファイルのパスおよびファイル名に設定します。  
   
-2.  **スクリプト**のページ、**スクリプト タスク エディター**、追加、`CurrentImageFile`変数を`ReadOnlyVariables`プロパティです。  
+2.  **スクリプト**のページ、**スクリプト タスク エディター**、追加、`CurrentImageFile`変数を`ReadOnlyVariables`プロパティ。  
   
 3.  このスクリプト プロジェクトでは、参照を `System.Drawing` 名前空間に設定します。  
   
@@ -163,7 +163,7 @@ End Function
   
 2.  次に `MaxThumbSize` 整数変数を作成し、100 などのピクセル値を割り当てます。  
   
-3.  **スクリプト**のページ、**スクリプト タスク エディター**、両方の変数を追加して、`ReadOnlyVariables`プロパティです。  
+3.  **スクリプト**のページ、**スクリプト タスク エディター**、両方の変数を追加して、`ReadOnlyVariables`プロパティ。  
   
 4.  このスクリプト プロジェクトでは、参照を `System.Drawing` 名前空間に設定します。  
   
@@ -294,6 +294,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
   

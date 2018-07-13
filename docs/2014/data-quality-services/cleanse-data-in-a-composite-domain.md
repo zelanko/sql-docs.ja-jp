@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba152d105052ae8f481794ca28869cb5d4528de4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f03d5f5961bd09494fccde146a812ea07bb390c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261438"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>複合ドメインでのデータのクレンジング
-  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) での複合ドメインのクレンジングについて説明します。 複合ドメインは 2 つ以上の単一ドメインで構成され、複数の関連用語で構成されるデータ フィールドにマップされます。 複合ドメイン内の個々のドメインには、ナレッジの共通領域が必要です。 複合ドメインの詳細については、次を参照してください。[複合ドメインの管理](../../2014/data-quality-services/managing-a-composite-domain.md)です。  
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) での複合ドメインのクレンジングについて説明します。 複合ドメインは 2 つ以上の単一ドメインで構成され、複数の関連用語で構成されるデータ フィールドにマップされます。 複合ドメイン内の個々のドメインには、ナレッジの共通領域が必要です。 複合ドメインの詳細については、次を参照してください。[複合ドメインの管理](../../2014/data-quality-services/managing-a-composite-domain.md)します。  
   
 ##  <a name="Mapping"></a> ソース データへの複合ドメインのマッピング  
  複合ドメインにソース データをマップするには、次の 2 つの方法があります。  
@@ -31,11 +31,11 @@ ms.locfileid: "36070778"
   
     -   複合ドメインを参照データ サービスにマップすると、ソース データはそのまま参照データ サービスに送信されて修正および解析されます。  
   
-    -   複合ドメインを参照データ サービスにマップしない場合、複合ドメインに定義されている解析方法に基づいて解析されます。 複合ドメインの解析方法を指定する方法の詳細については、次を参照してください[複合ドメインの作成。](../../2014/data-quality-services/create-a-composite-domain.md)  
+    -   複合ドメインを参照データ サービスにマップしない場合、複合ドメインに定義されている解析方法に基づいて解析されます。 複合ドメインの解析方法を指定する方法については、次を参照してください[複合ドメインの作成。](../../2014/data-quality-services/create-a-composite-domain.md)  
   
 -   ソース データを複数のフィールド ("名"、"ミドル ネーム"、"姓") で構成し、複合ドメイン内の個々のドメインにマップします。  
   
- ソース データを複合ドメインをマップする方法の例は、次を参照してください。[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)です。  
+ ソース データを複合ドメインをマップする方法の例は、次を参照してください。[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)します。  
   
 ##  <a name="CDCorrection"></a> 明確なクロス ドメイン ルールを使用したデータの修正  
  複合ドメインのクロス ドメイン ルールを使用して、複合ドメイン内の個々のドメインの間のリレーションシップを示すルールを作成できます。 複合ドメインを含むソース データでクレンジング アクティビティを実行するときに、クロス ドメイン ルールが考慮されます。 明確な *Then* クロス ドメイン ルールの **"値が次の値と等しい"** では、単にクロス ドメイン ルールの有効性について知らせるだけでなく、データ クレンジング アクティビティ中にデータの修正も行います。  
@@ -58,7 +58,7 @@ ms.locfileid: "36070778"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 明確な *Then* クロス ドメイン ルール **"値が次の値と等しい"** をテストするときは、 **[複合ドメイン ルールのテスト]** ダイアログ ボックスに、正しいデータを示す新しい列 **[次に修正]** が含まれます。 クレンジング データ品質プロジェクトでは、この明確なクロス ドメイン ルールでデータが 100% の信頼度で変更され、**Reason** 列には、"ルール ‘*\<クロス ドメイン ルール名>*’ によって修正" というメッセージが表示されます。 クロス ドメイン ルールの詳細については、次を参照してください。[クロス ドメイン ルールを作成する](../../2014/data-quality-services/create-a-cross-domain-rule.md)です。  
+ 明確な *Then* クロス ドメイン ルール **"値が次の値と等しい"** をテストするときは、 **[複合ドメイン ルールのテスト]** ダイアログ ボックスに、正しいデータを示す新しい列 **[次に修正]** が含まれます。 クレンジング データ品質プロジェクトでは、この明確なクロス ドメイン ルールでデータが 100% の信頼度で変更され、**Reason** 列には、"ルール ‘*\<クロス ドメイン ルール名>*’ によって修正" というメッセージが表示されます。 クロス ドメイン ルールの詳細については、次を参照してください。[クロス ドメイン ルールを作成する](../../2014/data-quality-services/create-a-cross-domain-rule.md)します。  
   
 > [!NOTE]  
 >  明確なクロス ドメイン ルールは、参照データ サービスにアタッチされている複合ドメインでは動作しません。  

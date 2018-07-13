@@ -1,5 +1,5 @@
 ---
-title: ターゲット要素 (ASSL) |Microsoft ドキュメント
+title: Target 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Target element
 ms.assetid: 08ce0441-94b6-4f1d-acba-f31c8212cb79
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 65150d66769a2ebdb67609989efbc1a7f81e9f89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec2f4a43b8b03e2f28d4bd8c61a9c6e4a9d20eb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180769"
 ---
 # <a name="target-element-assl"></a>Target 要素 (ASSL)
   対象を識別、[アクション](../objects/action-element-assl.md)要素。  
@@ -62,14 +62,14 @@ ms.locfileid: "36072616"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- この要素の予期される値は、の値によって異なります、 [TargetType](targettype-element-assl.md)親要素`Action`です。 次の表は、`Target` の値に基づいた `TargetType` の期待値を示しています。  
+ この要素の予期される値の値に依存、 [TargetType](targettype-element-assl.md)親要素`Action`します。 次の表は、`Target` の値に基づいた `TargetType` の期待値を示しています。  
   
 |TargetType の値|期待値|  
 |----------------------|--------------------|  
 |*Cube*|キューブの名前|  
 |*セル*|サブキューブの式|  
 |*設定*|セットの式または名前付きセットの名前 **注:** サブセレクト ステートメントを使用することはできません。|  
-|*階層、HierarchyMembers*|階層の名前|  
+|*HierarchyMembers 階層*|階層の名前|  
 |*ディメンション、DimensionMembers*|ディメンションの名前|  
 |*レベル、LevelMembers*|レベルの名前|  
 |*属性、AttributeMembers*|属性の名前|  

@@ -1,5 +1,5 @@
 ---
-title: 優先順位制約のプロパティを設定 |Microsoft ドキュメント
+title: 優先順位制約のプロパティを設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 344dbadc0aeabbce3b2a554d4ff15370eeadd1fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38e20290eb9499191307c7afb146e9242603c3ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271348"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>優先順位制約のプロパティを設定する
   優先順位制約のプロパティを設定するには、次のいずれかのツールを使用します。  
@@ -47,14 +47,14 @@ ms.locfileid: "36071480"
   
 5.  **[評価操作]** ドロップダウン リストで、評価操作を選択します。  
   
-6.  `Value`ドロップダウン リストで、優先順位付き実行可能ファイルの実行結果を選択します。  
+6.  `Value`ドロップダウン リストで、優先実行可能オブジェクトの実行結果を選択します。  
   
-7.  評価操作で、式を使用している場合、`Expression`ボックスで、式を入力し、をクリックして**テスト**式を評価します。  
+7.  評価操作で式を使用する場合、`Expression`ボックスで、式を入力し、をクリックして**テスト**式を評価します。  
   
     > [!NOTE]  
     >  変数名の大文字と小文字は区別されます。  
   
-8.  複数のタスクまたはコンテナーが制約付き実行可能ファイルに接続されている場合は、選択**論理的かつ**を上記すべての実行可能ファイルの実行結果を評価することを指定する`true`です。 選択**論理 OR**を 1 つだけ実行結果を評価することを指定する`true`です。  
+8.  複数のタスクまたはコンテナーが制約付き実行可能ファイルに接続されている場合は、選択**論理的かつ**に上記すべての実行可能ファイルの実行結果を評価する必要がありますを指定する`true`します。 選択**論理和**に 1 つだけの実行結果を評価する必要がありますを指定する`true`します。  
   
 9. **[OK]** をクリックし、 **[優先順位制約エディター]** を閉じます。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "36071480"
     |読み取り/書き込みプロパティ|構成アクション|  
     |--------------------------|--------------------------|  
     |説明|説明を指定します。|  
-    |EvalOp|評価操作を選択します。 場合、 `Expression`、 **ExpressionAndConstant**、または**ExpressionOrConstant**操作が選択されている式を指定することができます場合、。|  
+    |EvalOp|評価操作を選択します。 場合、 `Expression`、 **ExpressionAndConstant**、または**ExpressionOrConstant**操作が選択した場合、式を指定することができます。|  
     |式|評価操作に and 式が含まれる場合は、式を指定します。 式はブール値に評価される必要があります。 式言語の詳細については、「[Integration Services &#40;SSIS&#41; 式](expressions/integration-services-ssis-expressions.md)」をご覧ください。|  
-    |LogicalAnd|設定`LogicalAnd`複数実行可能ファイルの直前および制約付き実行可能ファイルにリンクしているときに、その他の優先順位制約と連携して、優先順位制約を評価するかどうかを指定するには|  
+    |LogicalAnd|設定`LogicalAnd`複数実行可能ファイルの直前および制約付き実行可能ファイルにリンクしているときに、その他の優先順位制約と組み合わせて、優先順位制約を評価するかどうかを指定するには|  
     |名前|優先順位制約の名前を更新します。|  
     |ShowAnnotation|使用する注釈の種類を指定します。 注釈を無効にするには **[Never]** 、要求時に注釈を有効にするには **[AsNeeded]** 、Name プロパティの値を使用して注釈を自動的に設定するには **[ConstraintName]** 、Description プロパティの値を使用して注釈を自動的に設定するには **[ConstraintDescription]** 、Value プロパティと Expression プロパティの値を使用して注釈を自動的に設定するには **[ConstraintOptions]** をそれぞれ選択します。|  
     |値|EvalOP プロパティで指定された評価操作に制約が含まれる場合は、制約付き実行可能ファイルの実行結果を選択します。|  

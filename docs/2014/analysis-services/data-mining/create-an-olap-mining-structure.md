@@ -1,5 +1,5 @@
 ---
-title: OLAP マイニング構造の作成 |Microsoft ドキュメント
+title: OLAP マイニング構造を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71efb42dd17c6b959fedab50841d09625f62f458
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 060b2fc3a8cfcb54470d21dace787cd1ccbc025c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232432"
 ---
 # <a name="create-an-olap-mining-structure"></a>Create an OLAP Mining Structure
   OLAP キューブまたはその他の多次元データ ストアに基づいてデータ マイニング モデルを作成することには、多くの利点があります。 OLAP ソリューションには、適切に整理、クリーンアップ、および書式設定された大量のデータが既に含まれています。ただし、データが複雑なため、アドホック探索でユーザーが有意なパターンを見つけることは困難です。 データ マイニングは、新しい相関関係を発見し、実用的な洞察力を得るための手段を提供します。  

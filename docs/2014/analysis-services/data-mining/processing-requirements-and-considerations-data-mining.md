@@ -1,5 +1,5 @@
 ---
-title: 処理の要件および考慮事項 (データ マイニング) |Microsoft ドキュメント
+title: 処理の要件および注意事項 (データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbb38b12357b90b8ee2e4183af2d44724e7ce969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 982349548e300e17f97c61f4679c085ed98b3208
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232392"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>処理の要件および注意事項 (データ マイニング)
   このトピックでは、データ マイニング オブジェクトを処理するときに注意するいくつかの技術的な考慮事項について説明します。 処理について、および処理がデータ マイニングに適用される方法に関する一般情報については、「 [データ マイニング オブジェクトの処理](processing-data-mining-objects.md)」を参照してください。  
@@ -39,11 +39,11 @@ ms.locfileid: "36071069"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーは、生データを提供するデータベースに対してクエリを実行します。 そのデータベースは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以前のバージョンの SQL Server データベース エンジンのインスタンスである場合もあります。 データ マイニング構造の処理時には、ソース内のデータがマイニング構造に転送され、圧縮形式でディスク上に新たに保存されます。 データ ソース内のすべての列が処理されるとは限りません。バインドの定義に従って、マイニング構造に含まれる列だけが処理されます。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はそのデータを使用して、すべてのデータおよび離散化列のインデックスと、連続列のための別のインデックスを作成します。 入れ子になったテーブルごとに、インデックスを作成するためのクエリが実行され、入れ子になったテーブルとケース テーブルの各ペアの関係を処理するための追加のクエリが生成されます。 このように複数のクエリが作成されるのは、特殊な内部多次元データ ストアを処理するためです。 クエリの数を制限することができますを[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サーバー プロパティの設定によってリレーショナル ストアに送信`DatabaseConnectionPoolMax`です。 詳細については、「 [OLAP のプロパティ](../server-properties/olap-properties.md)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はそのデータを使用して、すべてのデータおよび離散化列のインデックスと、連続列のための別のインデックスを作成します。 入れ子になったテーブルごとに、インデックスを作成するためのクエリが実行され、入れ子になったテーブルとケース テーブルの各ペアの関係を処理するための追加のクエリが生成されます。 このように複数のクエリが作成されるのは、特殊な内部多次元データ ストアを処理するためです。 クエリの数を制限することができますを[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サーバー プロパティを設定して、リレーショナル ストアに送信`DatabaseConnectionPoolMax`します。 詳細については、「 [OLAP のプロパティ](../server-properties/olap-properties.md)」を参照してください。  
   
  モデルの処理時に、モデルは、データ ソースからデータを再度読み取るのではなく、マイニング構造からデータの概要を取得します。 サーバーは、作成されたキューブと、キャッシュされたインデックス データとケース データを使用して、モデルのトレーニングを行うための独立したスレッドを作成します。  
   
- 各エディションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並列モデル処理をサポートするを参照してください[SQL Server 2012 の各エディションでサポートされる機能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)です。  
+ 各エディションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並列モデル処理をサポートするを参照してください[機能は、SQL Server 2012 の各エディションでサポートされている](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)します。  
   
 ##  <a name="bkmk_ProcessStructures"></a> マイニング構造の処理  
  マイニング構造は、すべての依存モデルと一緒に処理することも、個別に処理することもできます。 処理に時間がかかると予想されるモデルがあり、その操作を保留する場合、モデルとは別にマイニング構造を処理すると便利です。  

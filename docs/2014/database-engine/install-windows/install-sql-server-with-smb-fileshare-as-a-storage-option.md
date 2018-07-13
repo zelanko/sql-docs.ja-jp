@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e83b4a29d1fae74c5b20f3290be8431045f1f38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3aef5a22131fd26d72ccbe569a2adb73d045dfa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200032"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>SQL Server をストレージ オプションとして SMB ファイル共有にインストールする
-  開始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、システム データベース (Master、Model、MSDB、および TempDB) と[!INCLUDE[ssDE](../../includes/ssde-md.md)]ユーザー データベースをストレージ オプションとしてサーバー メッセージ ブロック (SMB) ファイル サーバーにインストールできます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スタンドアロン インストールと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール (FCI) の両方に当てはまります。  
+  開始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、システム データベース (Master、Model、MSDB、および TempDB) と[!INCLUDE[ssDE](../../includes/ssde-md.md)]ストレージ オプションとしてサーバー メッセージ ブロック (SMB) ファイル サーバーのユーザー データベースをインストールすることができます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スタンドアロン インストールと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール (FCI) の両方に当てはまります。  
   
 > [!NOTE]  
 >  Filestream は現在、SMB ファイル共有ではサポートされていません。  
@@ -36,7 +36,7 @@ ms.locfileid: "36072403"
   
 -   \\\ServerName\ShareName  
   
- 汎用名前付け規則の詳細については、次を参照してください。 [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534)です。  
+ 汎用名前付け規則の詳細については、次を参照してください。 [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534)します。  
   
  ループバック UNC パス (サーバー名が localhost、127.0.0.1、またはローカル コンピューター名である UNC パス) はサポートされません。 特別なケースとして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同じノードでホストされたファイル サーバー クラスターを使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] もサポートされません。 この状況を避けるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とファイル サーバー クラスターは、別個の Windows クラスターに作成することをお勧めします。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36072403"
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     さまざまなコマンド ライン パラメーター オプションの詳細については、使用状況の[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を参照してください[コマンド プロンプトから SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)です。  
+     さまざまなコマンド ライン パラメーター オプションの使用方法の詳細については[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を参照してください[コマンド プロンプトから SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)します。  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>オペレーティング システムに関する注意事項 (SMB プロトコルと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Windows オペレーティング システムのバージョンによって SMB プロトコルのバージョンも異なりますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、どのバージョンの SMB プロトコルにも対応します。 SMB プロトコルの各バージョンによって、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に対するメリットも異なります。  
@@ -102,7 +102,7 @@ ms.locfileid: "36072403"
     > [!NOTE]  
     >  SMB 共有フォルダーに対するフル コントロールの共有権限と NTFS 権限は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウント、および管理サーバー ロールを持つ Windows ユーザーに制限する必要があります。  
   
-     ドメイン アカウントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとして使用することをお勧めします。 システム アカウントがサービス アカウントとして使用されている場合は、形式でコンピューター アカウントのアクセス許可を付与します。 * < domain_name >***\\***< computer_name > ***$** です。  
+     ドメイン アカウントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとして使用することをお勧めします。 サービス アカウントとしてシステム アカウントを使用すると場合の形式でコンピューター アカウントのアクセス許可を付与します。 * < domain_name >***\\***< computer_name > ***$** します。  
   
     > [!NOTE]  
     >  -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで、ストレージ オプションとして SMB ファイル共有を指定した場合は、ドメイン アカウントをサービス アカウントとして指定する必要があります。 SMB ファイル共有を使用する場合、システム アカウントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール後にのみサービス アカウントとして指定することができます。  
@@ -116,9 +116,9 @@ ms.locfileid: "36072403"
   
 -   ネットワークにアタッチされたストレージ上に存在する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースをデタッチした後で、その [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを再アタッチしようとすると、データベース権限の問題が発生する場合があります。 この問題は、[こちらのサポート技術情報の記事](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321) で定義されています。 この問題を回避するには、このサポート技術情報の「 **詳細** 」を参照してください。  
   
--   NetApp デバイスなど、いくつかのサード パーティは、すべての SQL Server API 呼び出しをサポートしているわけではありません。 これらをする可能性があります。   
+-   NetApp デバイスなど、いくつかのサード パーティは、すべての SQL Server API 呼び出しをサポートしているわけではありません。 これらは、次の取得可能性があります。   
     2015-06-04 13:14:19.97 spid9s エラー: 17053、重大度: 16、状態: 1。  
-    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult(): オペレーティング システム エラー 1 (正しくない関数です。) が発生しました。  
+    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult(): オペレーティング システム エラー (間違った関数). 1 が発生しました。  
   
      Ntfs では、エラーは問題ありません。  しかし ReFS の場合、パフォーマンスが大幅に低下する可能性があります。  
   

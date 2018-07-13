@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
 - WMI firewall ports
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67bf7427229a117ff541ae353c222839e27a8aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 142606e6d344fc1431bc287771fc429d6e05e056
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198834"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールがオンになっているが、正しく構成されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続の試行がブロックされる可能性があります。  
@@ -95,7 +95,7 @@ ms.locfileid: "36071911"
   
     -   一部のスコープの制限を設定する  
   
-     コントロール パネルの **[Windows ファイアウォール]** は、ファイアウォールの構成に慣れていないユーザーや、モバイル デバイスでないコンピューターに基本的なファイアウォール オプションを構成するユーザーに最適です。 開くことも、 **Windows ファイアウォール**からコントロール パネル で、`run`次の手順を使用して、コマンド。  
+     コントロール パネルの **[Windows ファイアウォール]** は、ファイアウォールの構成に慣れていないユーザーや、モバイル デバイスでないコンピューターに基本的なファイアウォール オプションを構成するユーザーに最適です。 開くこともできます、 **Windows ファイアウォール**からコントロール パネル で、`run`次の手順を使用して、コマンド。  
   
     #### <a name="to-open-the-windows-firewall-item"></a>[Windows ファイアウォール] を開くには  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36071911"
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP ポート 4022。 使用されるポートを確認するには、次のクエリを実行します。<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]の既定のポートはありませんが、これがオンライン ブックの例で使用される通常の構成です。|  
 |データベース ミラーリング|管理者が選択したポート。 ポートを特定するには、次のクエリを実行します。<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|データベース ミラーリング用の既定のポートはありませんが、オンライン ブックの例では TCP ポート 7022 が使用されています。 特に自動フェールオーバーを伴う高い安全性モードでは、使用中のミラーリング エンドポイントが中断しないようにすることはきわめて重要です。 ファイアウォール構成によりクォーラムが分割されないようにする必要があります。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。|  
 |のレプリケーション|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのレプリケーション接続では、一般的な正規の [!INCLUDE[ssDE](../../includes/ssde-md.md)] ポートを使用します (既定のインスタンスに使用される TCP ポート 1433 など)。<br /><br /> レプリケーション スナップショットのための Web 同期と FTP/UNC アクセスには、ファイアウォール上で追加のポートを開く必要があります。 ある場所から別の場所に初期データおよびスキーマを転送するために、レプリケーションでは FTP (TCP ポート 21)、HTTP (TCP ポート 80) を使用した同期、またはファイル共有を使用できます。 ファイル共有では、NetBIOS を使用する場合、UDP ポート 137 と 138、および TCP ポート 139 を使用します。 ファイル共有は TCP ポート 445 を使用します。|HTTP を使用した同期のために、レプリケーションでは IIS エンドポイント (既定ではポート 80 だが構成可能) を使用しますが、IIS プロセスは標準のポート (既定のインスタンスの場合は 1433) を使用してバックエンドの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します。<br /><br /> FTP を使用した Web 同期時は、サブスクライバーと IIS の間ではなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 発行者と IIS の間で FTP 転送が行われます。|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガー|TCP ポート 135<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。<br /><br /> [IPsec](#BKMK_IPsec) の例外が必要な場合もあります。|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ホスト コンピューターで [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を使用している場合は、 **Devenv.exe** を例外リストに追加し、TCP ポート 135 を開く必要もあります。<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ホスト コンピューターで [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用している場合は、 **ssms.exe** を例外リストに追加し、TCP ポート 135 を開く必要もあります。 詳細については、次を参照してください。 [TRANSACT-SQL デバッガーを構成する](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)です。|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガー|TCP ポート 135<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。<br /><br /> [IPsec](#BKMK_IPsec) の例外が必要な場合もあります。|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ホスト コンピューターで [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を使用している場合は、 **Devenv.exe** を例外リストに追加し、TCP ポート 135 を開く必要もあります。<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ホスト コンピューターで [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用している場合は、 **ssms.exe** を例外リストに追加し、TCP ポート 135 を開く必要もあります。 詳細については、次を参照してください。 [TRANSACT-SQL デバッガーを構成する](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)します。|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]で Windows ファイアウォールを構成する詳細な手順については、「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36071911"
   
 1.  コントロール パネルの **[Windows ファイアウォール]** の **[例外]** タブをクリックし、 **[プログラムの追加]** をクリックします。  
   
-2.  インスタンスの場所を参照[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのファイアウォールを通過できるようにする**C:\Program files \microsoft SQL Server\MSSQL12 < instance_name > \MSSQL\Binn**  **。sqlservr.exe**、クリックして**開く**です。  
+2.  インスタンスの場所を参照[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たとえばファイアウォールを通過できるようにしたい**Server\MSSQL12 C:\Program files \microsoft SQL < instance_name > \MSSQL\Binn**、  **。sqlservr.exe**、 をクリックし、**オープン**します。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -320,7 +320,7 @@ ms.locfileid: "36071911"
   
     1.  コマンド プロンプト ウィンドウを開きます。  
   
-    2.  コマンド プロンプトで次のように入力します。`netstat -n -a`です。  
+    2.  コマンド プロンプトで「`netstat -n -a`します。  
   
          **-n** スイッチは、 **netstat** に対して、アクティブな TCP 接続のアドレスおよびポート番号を数字で表示するように指示します。 **-a** スイッチは、 **netstat** に対して、コンピューターがリッスンしている TCP ポートおよび UDP ポートを表示するように指示します。  
   

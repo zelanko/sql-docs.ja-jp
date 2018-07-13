@@ -1,5 +1,5 @@
 ---
-title: CubeDimension データ型 (ASSL) |Microsoft ドキュメント
+title: CubeDimension データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeDimension data type
 ms.assetid: 128ac790-65a1-4e35-b909-8dba2a61b24c
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a043895929e09a59d3ae14c5995804c4fa5c7eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a02ef89f5dac200450faf8151a71aeae703e8b35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220325"
 ---
 # <a name="cubedimension-data-type-assl"></a>CubeDimension データ型 (ASSL)
   ディメンションとキューブの関係を表すプリミティブ データ型を定義します。  
@@ -72,9 +72,9 @@ ms.locfileid: "36071579"
 ## <a name="remarks"></a>コメント  
  `CubeDimension` のディメンション リレーションシップごとに 1 つの `Cube` があります。 `CubeDimension` では、キューブのすべての `MeasureGroups` が対象になります。  
   
- A`CubeDimension`含める必要があります、 [CubeHierarchy](hierarchy-data-type-assl.md)がディメンションにある特定の階層に関する記述でも含める場合は、階層を無効にする (これにより、選択できるを特定する階層を適用ディメンションの使用法)、または階層を非表示にします。  
+ A`CubeDimension`含める必要があります、 [CubeHierarchy](hierarchy-data-type-assl.md)ディメンション、階層に関する特定の場合などの階層を無効にする (これにより、選択可能になりますがの階層は、特定に適用されます。ディメンションの使用法)、または階層を非表示にします。  
   
- 同様に、`CubeDimension`含める必要があります、 [CubeAttribute](cubeattribute-data-type-assl.md)ディメンションに属性に対するに固有のものがある場合にのみです。 属性は非表示にすることができますが、特定のディメンションの使用法に適用する属性を選択することはできません。  
+ 同様に、`CubeDimension`含める必要があります、 [CubeAttribute](cubeattribute-data-type-assl.md)ディメンションに属性について固有のものがある場合にのみです。 属性は非表示にすることができますが、特定のディメンションの使用法に適用する属性を選択することはできません。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.CubeDimension>します。  
   

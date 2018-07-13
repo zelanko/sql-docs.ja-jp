@@ -1,5 +1,5 @@
 ---
-title: Password 要素 (ASSL) |Microsoft ドキュメント
+title: Password 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Password element
 ms.assetid: ee756b01-fb08-4a9a-8c2a-7c04af0f8658
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e702e7307e11c506652e91ca4cdc8f02ca06318d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99d7eabdd66e6c7f036389b4825c5926873367b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197742"
 ---
 # <a name="password-element-assl"></a>Password 要素 (ASSL)
-  ユーザー アカウントのパスワードが含まれています、 [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)要素。  
+  ユーザー アカウントのパスワードを含む、 [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36071263"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 値、`Password`の値と同様に、要素、[アカウント](account-element-impersonationinfo-assl.md)場合権限借用の目的が使用できる要素の値、 [ImpersonationMode](impersonationmode-element-assl.md)から派生した要素の`ImpersonationInfo`に設定されているデータ型*ImpersonateAccount*です。  
+ 値、`Password`の値と同様に、要素、[アカウント](account-element-impersonationinfo-assl.md)場合、偽装のために、要素が使用される値の[ImpersonationMode](impersonationmode-element-assl.md)から派生した任意の要素の要素、`ImpersonationInfo`に設定されているデータ型*ImpersonateAccount*します。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスのサーバー管理者ロールのメンバーのみが、`Password` 要素に空白の値を指定できます。  
   

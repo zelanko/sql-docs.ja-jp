@@ -1,5 +1,5 @@
 ---
-title: return 要素 (XMLA) |Microsoft ドキュメント
+title: return 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - return element
 ms.assetid: 3cfe8b74-fec3-4987-a74a-5f731444e024
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1a4468ce3d4b14ff9cd9db7c9373083aad75d3eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4808372fbf80b2b3a79bc11e3f2423511eb717be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192410"
 ---
 # <a name="return-element-xmla"></a>return 要素 (XMLA)
-  によって返される情報が含まれています、 [DiscoverResponse](../xml-elements-objects-discoverresponse.md)への応答内の要素、 [Discover](../xml-elements-methods-discover.md)メソッドの呼び出しまたは[ExecuteResponse](../xml-elements-objects-executeresponse.md) への応答内の要素[Execute](../xml-elements-methods-execute.md)メソッドの呼び出しです。  
+  によって返される情報が含まれています、 [DiscoverResponse](../xml-elements-objects-discoverresponse.md)への応答内の要素を[Discover](../xml-elements-methods-discover.md)メソッドの呼び出しまたは[ExecuteResponse](../xml-elements-objects-executeresponse.md) に応じて要素の[Execute](../xml-elements-methods-execute.md)メソッドの呼び出し。  
   
 ## <a name="syntax"></a>構文  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abc9d5df546baf36bdf566e4669faf6a2611a612
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a9005404601b3600da088678741434bd192d0579
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238002"
 ---
 # <a name="open-and-configure-object-explorer"></a>オブジェクト エクスプローラーを開き、構成する
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[表示]** メニューを使用してオブジェクト エクスプローラーを開きます。 **[ツール]** メニューの **[オプション]** を使用して、オブジェクト エクスプローラーのオプションを構成します。  
@@ -33,7 +33,7 @@ ms.locfileid: "36070652"
 ## <a name="see-also"></a>参照  
  [オブジェクト エクスプ ローラー](object-explorer.md)   
  [オブジェクト エクスプ ローラーからインスタンスに接続します。](connect-to-an-instance-from-object-explorer.md)   
- [オブジェクト エクスプ ローラーを使用して、オブジェクトを管理します。](manage-objects-by-using-object-explorer.md)   
+ [オブジェクト エクスプ ローラーを使用してオブジェクトを管理します。](manage-objects-by-using-object-explorer.md)   
  [オブジェクト エクスプ ローラーの詳細 ペイン](object-explorer-details-pane.md)   
  [Management Studio におけるカスタム レポート](custom-reports-in-management-studio.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Write 要素 (ASSL) |Microsoft ドキュメント
+title: Write 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Write element
 ms.assetid: d8f7a367-d7bf-4b40-acb4-19c8bc8c6c20
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1fcc05df0f670deb737b70e0de276e698501c85b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0f275ecb6ca20d22cedb1aed214fb2d0f78479b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176189"
 ---
 # <a name="write-element-assl"></a>Write 要素 (ASSL)
-  データまたはメタデータの機能を書き込めるかどうかを決定する、指定された[CubeDimensionPermission](../data-type/permission-data-type-assl.md)または[権限](../data-type/permission-data-type-assl.md)要素。  
+  データまたはメタデータを書き込みが可能かどうかを判断します、指定された[CubeDimensionPermission](../data-type/permission-data-type-assl.md)または[権限](../data-type/permission-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36071752"
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[CubeDimensionPermission](../objects/cubepermission-element-assl.md)、[権限](../data-type/permission-data-type-assl.md)|  
+|親要素|[CubeDimensionPermission](../objects/cubepermission-element-assl.md)、[アクセス許可](../data-type/permission-data-type-assl.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
@@ -68,11 +68,11 @@ ms.locfileid: "36071752"
 |*許可されています。*|親オブジェクトのデータおよびメタデータへの書き込みアクセスが許可されています。|  
   
 ## <a name="remarks"></a>コメント  
- 親に対応する要素`Write`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.CubeDimensionPermission>と<xref:Microsoft.AnalysisServices.Permission>です。  
+ 親に対応する要素`Write`分析管理オブジェクト (AMO) オブジェクト モデルは、<xref:Microsoft.AnalysisServices.CubeDimensionPermission>と<xref:Microsoft.AnalysisServices.Permission>します。  
   
 ## <a name="see-also"></a>参照  
  [キューブ要素&#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [要素の寸法&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [ディメンション要素&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  
   
   

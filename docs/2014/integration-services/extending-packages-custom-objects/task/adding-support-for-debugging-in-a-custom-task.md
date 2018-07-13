@@ -25,13 +25,13 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 244acf0ae9180199a40f16b26ec6d02f4de9ba4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b70e10daa74878ad1d32a09fdfa37c2c6a583691
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257418"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>カスタム タスクにおけるデバッグのサポートの追加
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム エンジンでは、ブレークポイントを使用することにより、パッケージ、タスク、およびその他の種類のコンテナーを実行中に中断できます。 ブレークポイントを使用すると、アプリケーションまたはタスクの正しい動作を妨げるエラーを確認し、修正できます。 ブレークポイントのアーキテクチャにより、クライアントは、タスクの処理を中断している間にパッケージ内のオブジェクトのランタイム値を定義された実行地点で評価できます。  
@@ -94,7 +94,7 @@ End Function
 ## <a name="idtssuspend-interface"></a>IDTSSuspend インターフェイス  
  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスは、タスクの実行が一時停止または再開されるときに、ランタイム エンジンによって呼び出されるメソッドを定義します。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスは <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> インターフェイスによって実装され、この `Suspend` メソッドおよび `ResumeExecution` メソッドは、通常カスタム タスクによってオーバーライドされます。 ランタイム エンジンがタスクから `OnBreakpointHit` イベントを受け取ると、実行中の各タスクの `Suspend` メソッドを呼び出し、タスクに一時停止するよう通知します。 クライアントが実行を再開すると、ランタイム エンジンは中断しているタスクの `ResumeExecution` メソッドを呼び出します。  
   
- タスクの実行が中断および再開されると、タスクの実行スレッドも一時停止および再開されます。 マネージ コードでは、これは、.NET Framework の `ManualResetEvent` 名前空間の `System.Threading` クラスを使用することにより実現されます。  
+ タスクの実行が中断および再開されると、タスクの実行スレッドも一時停止および再開されます。 マネージド コードでは、これは、.NET Framework の `ManualResetEvent` 名前空間の `System.Threading` クラスを使用することにより実現されます。  
   
  次のコード サンプルは、タスクの実行を中断および再開します。 `Execute` メソッドは上記のコード サンプルから変更され、ブレークポイントが発生すると実行スレッドが一時停止します。  
   
@@ -345,7 +345,7 @@ Public Sub Suspend()
 End Sub  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [制御フローのデバッグ](../../troubleshooting/debugging-control-flow.md)  

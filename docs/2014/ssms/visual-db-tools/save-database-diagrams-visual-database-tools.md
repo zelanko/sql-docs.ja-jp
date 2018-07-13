@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - saving database diagrams
 - database diagrams [SQL Server], saving
 - diagrams [SQL Server], saving
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55d66340b5f095fc8e2d4640daad22fc78c70e0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7f2fd6fd4690c8b58c0c7c022e0b1e19c41c76db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222292"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>データベース ダイアグラムの保存 (Visual Database Tools)
   データベース ダイアグラムを保存すると、テーブルや列やその他のデータベース オブジェクトに加えた変更をすべて保存できます。  
   
 ### <a name="to-save-the-database-diagram"></a>データベース ダイアグラムを保存するには  
   
-1.  **ファイル**] メニューの [選択**保存 <*`tablename`*>** です。  
+1.  **ファイル**] メニューの [選択**保存 <*`tablename`*>** します。  
   
 2.  このダイアグラムを初めて保存する場合は、 **[名前を付けて保存]** ダイアログ ボックスが表示されます。 ダイアグラムの名前を入力します。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9096317e6ab364ae440ad921045d5bed38083af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616ca1e1984c36c2a20814367b3bd030825f3c0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181529"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] が提供するデータ ドリブン サブスクリプションにより、動的なサブスクライバー データに基づいてレポートの配信をカスタマイズできます。 データ ドリブン サブスクリプションには次のような用途があります。  
@@ -49,17 +49,17 @@ ms.locfileid: "36071378"
 ## <a name="requirements"></a>要件  
  通常、データ ドリブン サブスクリプションはレポート サーバー管理者が作成し、保守します。 データ ドリブン サブスクリプションを作成するには、クエリ作成の専門知識、サブスクライバー データを持つデータ ソースに関する知識、およびレポート サーバーへの高度なアクセス権が必要です。  
   
- チュートリアルは、チュートリアルで作成したレポートを使用して[基本的なテーブル レポートを作成する&#40;SSRS チュートリアル&#41;](create-a-basic-table-report-ssrs-tutorial.md)とからのデータ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ チュートリアルでは、このチュートリアルで作成したレポートを使用します[基本的な表レポートの作成&#40;SSRS チュートリアル&#41;](create-a-basic-table-report-ssrs-tutorial.md)とからのデータ。 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  このチュートリアルを使用するには、システムに以下のコンポーネントがインストールされている必要があります。  
   
--   データ ドリブン サブスクリプションをサポートするエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)です。  
+-   データ ドリブン サブスクリプションをサポートするエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネントの](../sql-server/editions-and-components-of-sql-server-2016.md)します。  
   
 -   レポート サーバー (ネイティブ モードで実行)。 このチュートリアルで説明するユーザー インターフェイスは、ネイティブ モードのレポート サーバーに基づいています。 サブスクリプションは SharePoint モードのレポート サーバーでサポートされていますが、ユーザー インターフェイスはこのチュートリアルで説明されているものとは異なります。  
   
 -   SQL Server エージェント サービス (実行された状態)。  
   
--   パラメーターを含むレポート。 このチュートリアルでは、サンプル レポート`Sales Orders`チュートリアルを使用して作成する[基本的なテーブル レポートを作成する&#40;SSRS チュートリアル&#41;](create-a-basic-table-report-ssrs-tutorial.md)です。  
+-   パラメーターを含むレポート。 このチュートリアルで、サンプル レポート`Sales Orders`チュートリアルを使用して作成する[基本的な表レポートの作成&#40;SSRS チュートリアル&#41;](create-a-basic-table-report-ssrs-tutorial.md)します。  
   
 -   サンプル レポートにデータを提供する [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] サンプル データベース。  
   

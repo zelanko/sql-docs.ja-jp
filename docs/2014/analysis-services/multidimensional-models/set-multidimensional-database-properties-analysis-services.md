@@ -1,5 +1,5 @@
 ---
-title: 多次元データベースのプロパティ (Analysis Services) を設定 |Microsoft ドキュメント
+title: 多次元データベースの設定 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], databases
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2ec653606418e1c3dea32b04cb1e923b54c98e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1de79fd7eb257364069dfaa15146036dd617bdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200232"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>多次元データベースのプロパティ設定 (Analysis Services)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース プロパティには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] データベース デザイナーで構成できるものが多数あります。  
@@ -32,7 +32,7 @@ ms.locfileid: "36072445"
   
 -   ユーザーに表示するデータベースの説明を入力できます。 また、データベースの名前も表示できますが、変更はできません。 データベース名を変更するには、プロジェクトのプロパティを編集する必要があります。  
   
--   1 つまたは複数の言語によるデータベース名と説明の翻訳を提供できます。 詳細については、次を参照してください。[キューブの翻訳](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)、[ディメンションの翻訳](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)、および[翻訳&#40;Analysis Services&#41;](../translations-analysis-services.md)です。  
+-   1 つまたは複数の言語によるデータベース名と説明の翻訳を提供できます。 詳細については、次を参照してください。[キューブの翻訳](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)、[ディメンションの翻訳](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)、および[翻訳&#40;Analysis Services&#41;](../translations-analysis-services.md)します。  
   
 -   既定の勘定科目の種類のマッピングを表示し、必要に応じて変更できます。 勘定科目の種類のマッピングは、1 つまたは複数のメジャーで *ByAccount* 集計関数を使用する場合に使用します。 勘定科目の種類ごとに別名を指定し、その勘定科目の種類に関連する既存の集計関数を変更できます。 既定の集計を変更する方法の詳細については、「 [準加法の動作の定義](define-semiadditive-behavior.md)」を参照してください。  
   

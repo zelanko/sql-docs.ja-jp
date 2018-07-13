@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4f376b2ba1e707afdba55b6fc7443d9d8be257e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 00ee8c2e88f571e3e9fcf5455a6627c0d7ff65cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204852"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>複数の値を持つパラメーターのレポートへの追加
   ユーザーがパラメーター値として複数の値を選択できるパラメーターをレポートに追加できます。  
   
- レポート URL に複数のパラメーター値を含めてレポートに渡すことができます。 URL の例には、複数値パラメーターが含まれているを参照してください[、レポート内で URL パラメーターを渡す](../pass-a-report-parameter-within-a-url.md)です。  
+ レポート URL に複数のパラメーター値を含めてレポートに渡すことができます。 URL の例では、複数値パラメーターを含むを参照してください。 [、レポート内で URL パラメーターを渡す](../pass-a-report-parameter-within-a-url.md)します。  
   
  複数のパラメーター値をストアド プロシージャに渡す方法については、mssqltips.com の「 [SSRS レポートでの複数選択パラメーターの操作](http://go.microsoft.com/fwlink/?LinkId=321529) 」を参照してください。  
   
@@ -98,6 +98,6 @@ ms.locfileid: "36071375"
   
 ## <a name="see-also"></a>参照  
  [カスケード型パラメーターをレポートに追加&#40;レポート ビルダーおよび SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [追加、変更、またはレポート パラメーターを削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+ [レポート パラメーターを追加、変更、削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   

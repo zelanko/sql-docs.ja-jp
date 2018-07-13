@@ -1,5 +1,5 @@
 ---
-title: SetNumericalValue メソッド (ServerNetworkProtocolProperty クラス) |Microsoft ドキュメント
+title: SetNumericalValue メソッド (ServerNetworkProtocolProperty クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetNumericalValue method
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0967a05d728dd93c331eb8133a2bf8239b2716a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f3ec7edfffdaf18610942e73fead3138b4a61366
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198912"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>SetNumericalValue メソッド (ServerNetworkProtocolProperty クラス)
   参照されたプロパティの数値を設定します。  
@@ -46,13 +46,13 @@ NumValue
   
 ## <a name="parts"></a>要素  
  *object*  
- [ServerNetworkProtocolProperty クラス] servernetworkprotocolproperty-class.md) のインスタンス上のネットワーク プロトコルの属性を表すオブジェクト[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ [ServerNetworkProtocolProperty クラス] servernetworkprotocolproperty-class.md) のインスタンス上のネットワーク プロトコルの属性を表すオブジェクトを[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 #### <a name="parameters"></a>パラメーター  
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|*NumValue*|現在のプロパティの新しい値を指定する `uint32` 値|  
+|*%Numvalue% 個*|現在のプロパティの新しい値を指定する `uint32` 値|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  

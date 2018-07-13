@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - DatabaseLogonType
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DatabaseLogonType property
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 30c6961f915789c358ba8d38ad0d18e164e072cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 001eee372f6c35a6938f3e5c99b9e82524285d25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166133"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonType プロパティ (WMI MSReportServer_ConfigurationSetting)
   レポート サーバーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows サービス アカウント、Windows ユーザー アカウント、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのうちどれを使用してレポート サーバー データベースにアクセスするかを指定します。 読み取り専用です。  
@@ -57,7 +57,7 @@ public int DatabaseLogonType;
   
 -   サービスとしてログインする場合は 2  
   
- 0 (Windows) を指定する場合値を設定する必要があります、 [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)を対応する有効な Windows ユーザー アカウントのプロパティです。  
+ 0 (Windows) を指定する場合値を設定する必要があります、 [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)を対応する有効な Windows ユーザー アカウントのプロパティ。  
   
  場合 1 (SQL Server) を指定すると、確認の値、 [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)が有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
   

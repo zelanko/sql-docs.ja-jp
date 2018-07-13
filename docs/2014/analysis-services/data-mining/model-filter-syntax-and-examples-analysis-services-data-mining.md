@@ -1,5 +1,5 @@
 ---
-title: モデル フィルターの構文と例 (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: モデル フィルターの構文と例 (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filter syntax [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 881b62a2e013d9e01a21272d3adeaf6819b2abb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 252af15e8afcf42d407176c4ff72f0076053b52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236342"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>モデル フィルターの構文と例 (Analysis Services - データ マイニング)
   ここでは、モデル フィルターの構文について詳しく説明し、サンプル式を示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "36071303"
 ##  <a name="bkmk_Syntax"></a> Filter Syntax  
  一般に、フィルター式は WHERE 句の内容に相当します。 `AND`、`OR`、および `NOT` の論理演算子を使用すると、複数の条件を結合できます。  
   
- 入れ子になったテーブルは、使用することも、`EXISTS`と`NOT EXISTS`演算子。 サブクエリから少なくとも 1 行が返される場合、`EXISTS` 条件が `true` と評価されます。 これは、入れ子になったテーブルに特定の値があるケース (ある品目を少なくとも 1 回購入した顧客など) のみをモデルで使用する場合に役立ちます。  
+ 入れ子になったテーブルで使用することも、`EXISTS`と`NOT EXISTS`演算子。 サブクエリから少なくとも 1 行が返される場合、`EXISTS` 条件が `true` と評価されます。 これは、入れ子になったテーブルに特定の値があるケース (ある品目を少なくとも 1 回購入した顧客など) のみをモデルで使用する場合に役立ちます。  
   
  サブクエリに指定した条件が存在しない場合、`NOT EXISTS` 条件が `true` と評価されます。 特定の品目を購入したことがない顧客のみをモデルで使用する場合などに役立ちます。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36071303"
 -   **\<=** (以下)  
   
 > [!NOTE]  
->  データ型に関係なく、型を持つ列にこれらの演算子は適用できません`Discrete`、 `Discretized`、または`Key`です。  
+>  データの種類に関係なく、型を持つ列にこれらの演算子を適用できません`Discrete`、 `Discretized`、または`Key`します。  
   
  次のいずれかの演算子を使用する式は、連続列、不連続列、離散化列、またはキー列に適用できます。  
   
@@ -242,9 +242,9 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="bkmk_Ex7"></a> 例 7: フィルターの複雑な組み合わせ  
- 次のモデルのシナリオは例 4 と似ていますが、はるかに複雑です。 入れ子になったテーブル、 **ProductsOnSale**、フィルター条件を持つ`(OnSale)`の値を意味する**OnSale**する必要があります`true`で表示されている製品の**ProductName**. この **[OnSale]** は構造列です。  
+ 次のモデルのシナリオは例 4 と似ていますが、はるかに複雑です。 入れ子になったテーブル、 **ProductsOnSale**、フィルター条件を持つ`(OnSale)`の値を意味する **[onsale]** 必要があります`true`で製品に対する**ProductName**. この **[OnSale]** は構造列です。  
   
- フィルターの 2 番目の部分の**ProductsNotOnSale**、構文の繰り返しが、フィルター、ある製品の値**OnSale**は`not true``(!OnSale)`します。  
+ フィルターの 2 番目の部分の**ProductsNotOnSale**、構文の繰り返しが、フィルター処理、ある製品の値**OnSale**は`not true``(!OnSale)`します。  
   
  最後にこれらの条件を組み合わせ、ケース テーブルに対する制限をさらに 1 つ追加します。 その結果、25 歳以上のすべての顧客を対象として、 **[ProductsOnSale]** の一覧内のケースに基づき、 **[ProductsNotOnSale]** の一覧内の製品の購入が予測されます。  
   
@@ -287,7 +287,7 @@ FILTER (EXISTS (Products))
 ###  <a name="bkmk_Ex8"></a> 例 8: 日付に基づくフィルター処理  
  他のデータと同様に、日付に基づいて入力列をフィルター処理することができます。 日付/時刻の型の列に含まれる日付は連続値です。そのため、大なり (>) や小なり (<) などの演算子を使用して、日付範囲を指定することができます。 データ ソースの日付が連続するデータ型で表されず、不連続値またはテキスト値として表されている場合は、日付範囲に基づいてフィルター処理を行うことはできず、個々の不連続値を指定する必要があります。  
   
- ただし、フィルターに使用されている日付列がモデルのキー列でもある場合は、時系列モデルの日付列に基づくフィルターを作成できません。 ため、タイム シリーズ モデルとシーケンス クラスター モデルでは、日付の列を型として処理される可能性があります`KeyTime`または`KeySequence`です。  
+ ただし、フィルターに使用されている日付列がモデルのキー列でもある場合は、時系列モデルの日付列に基づくフィルターを作成できません。 タイム シリーズ モデルおよびシーケンス クラスター モデルでは、日付列を型として処理される可能性がありますので、ある`KeyTime`または`KeySequence`します。  
   
  時系列モデルで連続する日付に対してフィルター処理を行う必要がある場合は、マイニング構造で列のコピーを作成し、新しい列に基づいてモデルをフィルター処理することができます。  
   
@@ -296,9 +296,9 @@ FILTER (EXISTS (Products))
  `=[DateCopy] > '12:31:2003:00:00:00'`  
   
 > [!NOTE]  
->  モデルに列を追加すると、結果に影響を及ぼす場合があることに注意してください。 そのため、系列の計算に列を使用しない場合は、マイニング構造のみに列を追加し、モデルには追加しないでください。 列へのモデル フラグを設定することもできます。`PredictOnly`または`Ignore`です。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)」を参照してください。  
+>  モデルに列を追加すると、結果に影響を及ぼす場合があることに注意してください。 そのため、系列の計算に列を使用しない場合は、マイニング構造のみに列を追加し、モデルには追加しないでください。 列へのモデル フラグを設定することもできます。`PredictOnly`または`Ignore`します。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)」を参照してください。  
   
- その他のモデルの種類では、他の列の場合と同様に、入力条件やフィルター条件として日付を使用することができます。 ただしでサポートされていないの粒度の特定のレベルを使用する必要がある場合、`Continuous`データ型できます値を作成する派生データ ソースのフィルター処理と分析に使用する単位を抽出する式を使用しています。  
+ その他のモデルの種類では、他の列の場合と同様に、入力条件やフィルター条件として日付を使用することができます。 ただし、特定のレベルの粒度でサポートされていないを使用する必要がある場合、`Continuous`データ型を作成できます派生値をデータ ソースのフィルター処理と分析で使用する単位を抽出する式を使用しています。  
   
 > [!WARNING]  
 >  フィルター条件として日付を指定する場合は、現在の OS の日付の形式に関係なく、 `mm/dd/yyyy`という形式を使用する必要があります。 他の形式では、エラーが発生します。  
@@ -308,7 +308,7 @@ FILTER (EXISTS (Products))
  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル フィルターの&#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)   
+ [マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)   
  [テストと検証&#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  
   
   

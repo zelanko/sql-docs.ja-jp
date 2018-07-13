@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_MEASURES 行セット |Microsoft ドキュメント
+title: MDSCHEMA_MEASURES 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_MEASURES rowset
 ms.assetid: 6ff5bd1a-aad0-49b8-9f8d-7df2637caacf
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6608c64caa882499282ad7a7e30090ab4118b522
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84ea2ceeaef0c6431f3860f3b23da07f43ee6c5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237472"
 ---
 # <a name="mdschemameasures-rowset"></a>MDSCHEMA_MEASURES 行セット
   キューブ内の各メジャーについて記述します。  
@@ -43,7 +43,7 @@ ms.locfileid: "36070557"
 |`MEASURE_UNIQUE_NAME`|`DBTYPE_WSTR`||メジャーの一意の名前。 修飾によって一意な名前を生成するプロバイダーの場合、この名前の各コンポーネントは区切り記号付きです。|  
 |`MEASURE_CAPTION`|`DBTYPE_WSTR`||メジャーに関連付けられたラベルまたはキャプション。 主に表示のために使用されます。 キャプションが存在しない場合`MEASURE_NAME`が返されます。|  
 |`MEASURE_GUID`|`DBTYPE_GUID`||サポートされていません。|  
-|`MEASURE_AGGREGATOR`|`DBTYPE_I4`||メジャーがどのように派生したかを識別する列挙。 次の値のいずれかです。<br /><br /> -   `MDMEASURE_AGGR_SUM` (`1`) からメジャーを集計することを識別`SUM`です。<br />-   `MDMEASURE_AGGR_COUNT` (`2`) からメジャーを集計することを識別`COUNT`です。<br />-   **MDMEASURE_AGGR_MIN** (`3`) からメジャーを集計することを識別`MIN`です。<br />-   **MDMEASURE_AGGR_MAX** (`4`) からメジャーを集計することを識別`MAX`です。<br />-   `MDMEASURE_AGGR_AVG` (`5`) からメジャーを集計することを識別`AVG`です。<br />-   `MDMEASURE_AGGR_VAR` (`6`) からメジャーを集計することを識別`VAR`です。<br />-   `MDMEASURE_AGGR_STD` (`7`) からメジャーを集計することを識別`STDEV`です。<br />-   `MDMEASURE_AGGR_DST` (`8`) からメジャーを集計することを識別`DISTINCT COUNT`です。<br />-   `MDMEASURE_AGGR_NONE` (`9`) からメジャーを集計することを識別`NONE`です。<br />-   `MDMEASURE_AGGR_AVGCHILDREN` (`10`) からメジャーを集計することを識別`AVERAGEOFCHILDREN`です。<br />-   `MDMEASURE_AGGR_FIRSTCHILD` (`11`) からメジャーを集計することを識別`FIRSTCHILD`です。<br />-   `MDMEASURE_AGGR_LASTCHILD` (`12`) からメジャーを集計することを識別`LASTCHILD`です。<br />-   `MDMEASURE_AGGR_FIRSTNONEMPTY` (`13`) からメジャーを集計することを識別`FIRSTNONEMPTY`、<br />-   `MDMEASURE_AGGR_LASTNONEMPTY` (`14`) からメジャーを集計することを識別`LASTNONEMPTY`です。<br />-   `MDMEASURE_AGGR_BYACCOUNT` (`15`) からメジャーを集計することを識別`BYACCOUNT`です。<br />-   `MDMEASURE_AGGR_CALCULATED` (`127`) が使用されて記の関数式からメジャーが派生したことを識別します。<br />-   `MDMEASURE_AGGR_UNKNOWN` (`0`)、不明な集計関数または式からメジャーが派生したことを識別します。|  
+|`MEASURE_AGGREGATOR`|`DBTYPE_I4`||メジャーがどのように派生したかを識別する列挙。 次の値のいずれかです。<br /><br /> -   `MDMEASURE_AGGR_SUM` (`1`) からのメジャーの集計を識別する`SUM`します。<br />-   `MDMEASURE_AGGR_COUNT` (`2`) からのメジャーの集計を識別する`COUNT`します。<br />-   **MDMEASURE_AGGR_MIN** (`3`) からのメジャーの集計を識別する`MIN`します。<br />-   **MDMEASURE_AGGR_MAX** (`4`) からのメジャーの集計を識別する`MAX`します。<br />-   `MDMEASURE_AGGR_AVG` (`5`) からのメジャーの集計を識別する`AVG`します。<br />-   `MDMEASURE_AGGR_VAR` (`6`) からのメジャーの集計を識別する`VAR`します。<br />-   `MDMEASURE_AGGR_STD` (`7`) からのメジャーの集計を識別する`STDEV`します。<br />-   `MDMEASURE_AGGR_DST` (`8`) からのメジャーの集計を識別する`DISTINCT COUNT`します。<br />-   `MDMEASURE_AGGR_NONE` (`9`) からのメジャーの集計を識別する`NONE`します。<br />-   `MDMEASURE_AGGR_AVGCHILDREN` (`10`) からのメジャーの集計を識別する`AVERAGEOFCHILDREN`します。<br />-   `MDMEASURE_AGGR_FIRSTCHILD` (`11`) からのメジャーの集計を識別する`FIRSTCHILD`します。<br />-   `MDMEASURE_AGGR_LASTCHILD` (`12`) からのメジャーの集計を識別する`LASTCHILD`します。<br />-   `MDMEASURE_AGGR_FIRSTNONEMPTY` (`13`) からのメジャーの集計を識別する`FIRSTNONEMPTY`、<br />-   `MDMEASURE_AGGR_LASTNONEMPTY` (`14`) からのメジャーの集計を識別する`LASTNONEMPTY`します。<br />-   `MDMEASURE_AGGR_BYACCOUNT` (`15`) からのメジャーの集計を識別する`BYACCOUNT`します。<br />-   `MDMEASURE_AGGR_CALCULATED` (`127`) 記の関数が式からメジャーが派生ことを示します。<br />-   `MDMEASURE_AGGR_UNKNOWN` (`0`)、メジャーが、不明な集計関数または式から派生したことを識別します。|  
 |`DATA_TYPE`|`DBTYPE_UI2`||メジャーのデータ型。|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||メジャー オブジェクトのデータ型が真数の場合は、プロパティの最大有効桁数。 その他すべてのプロパティの型では `NULL`。|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||メジャー オブジェクトの型インジケーターが `DBTYPE_NUMERIC` または `DBTYPE_DECIMAL` である場合は、小数点以下の桁数になります。 それ以外の場合、この値は `NULL` になります。|  
@@ -71,8 +71,8 @@ ms.locfileid: "36070557"
 |`MEASURE_NAME`|`DBTYPE_WSTR`|任意。|  
 |`MEASURE_UNIQUE_NAME`|`DBTYPE_WSTR`|任意。|  
 |`MEASUREGROUP_NAME`|`DBTYPE_WSTR`|任意。|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 のキューブ<br />2 つのディメンション<br /><br /> 既定の制限の値は 1 です。|  
-|`MEASURE_VISIBILITY`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 の表示<br />-2 非表示<br /><br /> 既定の制限の値は 1 です。|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 のキューブ<br />-2 つのディメンション<br /><br /> 既定の制限の値は 1 です。|  
+|`MEASURE_VISIBILITY`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 の表示<br />-2 は表示されません<br /><br /> 既定の制限の値は 1 です。|  
   
 ## <a name="see-also"></a>参照  
  [OLE DB for OLAP Schema 行セット](ole-db-for-olap-schema-rowsets.md)  

@@ -1,5 +1,5 @@
 ---
-title: マーケット バスケット DMX のチュートリアル |Microsoft ドキュメント
+title: マーケット バスケット DMX のチュートリアル |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -21,16 +21,16 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a8806eceb5c16354d6581c8fcdd4e664619d2d2a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: b73a618c5318d88ec6ee09751e09327687d865f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220582"
 ---
 # <a name="market-basket-dmx-tutorial"></a>マーケット バスケット DMX のチュートリアル
-  このチュートリアルでは、作成、トレーニング、およびデータ マイニング拡張機能 (DMX) クエリ言語を使用してマイニング モデルを調査する方法を学習します。 その後、このマイニング モデルを使用して、同時に購入される傾向が高い製品を示す予測を作成します。  
+  このチュートリアルでは、作成、トレーニング、およびデータ マイニング拡張機能 (DMX) クエリ言語を使用してマイニング モデルを調査する方法を学びます。 その後、このマイニング モデルを使用して、同時に購入される傾向が高い製品を示す予測を作成します。  
   
  マイニング モデルは、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] サンプル データベース内のデータから作成します。このサンプル データベースには、架空の企業である [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のデータが格納されています。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、多国籍の大規模な製造企業です。 北米、ヨーロッパ、およびアジアの市場向けに、金属製自転車や複合材製自転車の製造および販売を行っています。 企業の拠点は従業員 290 人を擁する米国ワシントン州ボセルで、また各国の市場の拠点として、複数の地域販売チームが配置されています。  
   
@@ -45,14 +45,14 @@ ms.locfileid: "36312930"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のクエリ エディター  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で提供されるデータ マイニング拡張機能 (DMX) は、マイニング モデルの作成と作業に使用できるクエリ言語です。 [!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーション アルゴリズムを一緒に購入される可能性が高い製品を予測するモデルを作成します。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で提供されるデータ マイニング拡張機能 (DMX) は、マイニング モデルの作成と作業に使用できるクエリ言語です。 [!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーション アルゴリズムを一緒に購入される可能性のある製品を予測できるモデルを作成します。  
   
  このチュートリアルの目標は、カスタム アプリケーションで使用する DMX クエリを設定することです。  
   
  **詳細については:** [データ マイニング ソリューション](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>マイニング構造とマイニング モデル  
- DMX ステートメントを作成するにあたっては、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] がマイニング モデルの作成に使用する主なオブジェクトを理解しておくことが重要です。 *マイニング構造*マイニング モデルの作成元となるデータ ドメインを定義するデータ構造です。 1 つのマイニング構造を複数*マイニング モデル*同じドメインを共有します。 マイニング モデルは、マイニング構造によって表されるデータにマイニング モデル アルゴリズムを適用します。  
+ DMX ステートメントを作成するにあたっては、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] がマイニング モデルの作成に使用する主なオブジェクトを理解しておくことが重要です。 *マイニング構造*はマイニング モデルの作成元となるデータ ドメインを定義するデータ構造です。 1 つのマイニング構造に複数含めることができます*マイニング モデル*同じドメインを共有します。 マイニング モデルは、マイニング構造によって表されるデータにマイニング モデル アルゴリズムを適用します。  
   
  マイニング構造の構成要素は、データ ソースに格納されているデータについて記述したマイニング構造列です。 マイニング構造列には、データ型、コンテンツの種類、データの配布方法などの情報が格納されます。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36312930"
  `ALTER MINING STRUCTURE`  
  このステートメントを使用すると、サーバー上に既に存在するマイニング構造にマイニング モデルを追加できます。  
   
- 1 つのマイニング構造に複数のマイニング モデルを追加すると、いくつかの作業に役立ちます。 たとえば、異なるアルゴリズムを使用して複数のマイニング モデルを作成し、最適なアルゴリズムを見つけ出すことができます。 代わりに、同じアルゴリズムを使用していくつかのマイニング モデルの作成は、パラメーターを設定が異なるそのパラメーターの最適な設定を検索するには、各マイニング モデルのことができます。  
+ 1 つのマイニング構造に複数のマイニング モデルを追加すると、いくつかの作業に役立ちます。 たとえば、異なるアルゴリズムを使用して複数のマイニング モデルを作成し、最適なアルゴリズムを見つけ出すことができます。 または、同じのアルゴリズムを使用して複数のマイニング モデルの作成がパラメーターを持つでそのパラメーターの最適な設定を検索するには、各マイニング モデルを異なる方法で設定する可能性があります。  
   
  詳細については、次を参照してください。 [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md)。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36312930"
   
  **詳細については**  
   
- [データ マイニング拡張機能&#40;DMX&#41;参照](/sql/dmx/data-mining-extensions-dmx-reference)、 [Select ステートメントを DMX を理解する](/sql/dmx/understanding-the-dmx-select-statement)、[構造と DMX 予測クエリの使用状況](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [データ マイニング拡張機能&#40;DMX&#41;参照](/sql/dmx/data-mining-extensions-dmx-reference)、 [Select ステートメントを DMX を理解する](/sql/dmx/understanding-the-dmx-select-statement)、[構造と DMX 予測クエリの使用](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
  このチュートリアルは次のレッスンで構成されています。  
@@ -97,7 +97,7 @@ ms.locfileid: "36312930"
  このレッスンでは、`ALTER` ステートメントを使用して、マイニング モデルをマイニング構造に追加する方法を学習します。  
   
  [レッスン 3: Market Basket マイニング構造の処理](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
- このレッスンでは、使用する方法を学習します、`INSERT INTO`マイニング構造とその関連マイニング モデルを処理するステートメント。  
+ このレッスンでは、使用する方法について説明します、`INSERT INTO`マイニング構造とその関連マイニング モデルを処理するステートメント。  
   
  [レッスン 4: マーケット バスケット予測の実行](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  このレッスンでは、`PREDICTION JOIN` ステートメントを使用して、マイニング モデルに対する予測を作成する方法を学習します。  
@@ -111,14 +111,14 @@ ms.locfileid: "36312930"
   
 -   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データベース  
   
- セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 公式サンプル データベースをインストールする[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に進み、 [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417)または Microsoft SQL Server の製品サンプル セクションに Microsoft SQL Server のサンプルとコミュニティのプロジェクトのホーム ページです。 をクリックして**データベース**、をクリックして、**リリース**タブし、データベースを選択します。  
+ セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 公式サンプル データベースをインストールする[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に移動して、 [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417)または Microsoft SQL Server の製品サンプルのセクションでは Microsoft SQL Server のサンプルとコミュニティのプロジェクトのホーム ページ。 をクリックして**データベース**、 をクリックし、**リリース**タブし、データベースを選択します。  
   
 > [!NOTE]  
->  追加することをお勧めのチュートリアルを確認するときに**次のトピック「** と**前のトピック**ドキュメント ビューアーのツールバーのボタンです。  
+>  追加することをお勧めのチュートリアルを確認するとき**次のトピック**と**前のトピック**ドキュメント ビューアーのツールバーのボタン。  
   
 ## <a name="see-also"></a>参照  
  [Bike Buyer DMX のチュートリアル](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
- [基本的なデータ マイニングのチュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [レッスン 3: マーケット バスケット シナリオの作成&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [基本的なデータ マイニング チュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [レッスン 3: マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

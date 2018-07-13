@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 18869143876b0db6042c2af3588cc442e2eafec5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 18815fb99232048f0d914283b15855f5525ef65c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198342"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>テーブル (レポート ビルダーおよび SSRS)
   テーブルを使用すると、詳細データまたはグループ化されたデータ、あるいはその両方を組み合わせて表示できます。 データは、1 つのフィールドまたは複数のフィールドでグループ化することも、独自の式を記述してグループ化することもできます。 入れ子になったグループまたは独立した隣接するグループを作成できます。 グループ化されたデータの集計値を表示するには、合計をグループに追加します。 行と列を書式設定して、強調するデータを強調表示します。 最初は詳細データまたはグループ化されたデータを非表示にして、ユーザーが表示するデータを対話的に選択できるドリルダウンの切り替えを含めることもできます。  

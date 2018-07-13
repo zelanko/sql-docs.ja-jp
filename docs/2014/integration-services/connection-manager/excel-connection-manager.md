@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - files [Integration Services], connections
 - connections [Integration Services], Excel
@@ -18,20 +18,20 @@ ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5c853ba0255f0e1afc511465de6c31a62376bf4c
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 81dc5d87384613ba742986715e876a0b9bc809f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187129"
 ---
 # <a name="excel-connection-manager"></a>Excel 接続マネージャー
-  Excel 接続マネージャーを使用すると、パッケージは既存の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック ファイルに接続できます。 Excel ソースおよび Excel 変換先を[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]含める Excel 接続マネージャーを使用します。  
+  Excel 接続マネージャーを使用すると、パッケージは既存の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック ファイルに接続できます。 Excel ソースおよび Excel 変換先を[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]は、Excel 接続マネージャーを使用します。  
   
  Excel 接続マネージャーをパッケージに追加するときに、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、実行時に Excel 接続として解決される接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの `Connections` コレクションに追加します。  
   
- `ConnectionManagerType`接続マネージャーのプロパティに設定されて`EXCEL`です。  
+ `ConnectionManagerType`接続マネージャーのプロパティに設定されて`EXCEL`します。  
   
 > [!NOTE]  
 >  パスワードで保護された Excel ファイルには接続できません。  
@@ -47,13 +47,13 @@ ms.locfileid: "36324696"
   
  Excel ソースによって Excel 接続マネージャーが使用された場合は、抽出したデータに列名が含められます。 Excel 変換先によって使用された場合は、出力されたデータに列名が含められます。  
   
- Excel 接続マネージャーを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 とサポートの Excel ISAM (Indexed Sequential Access Method) ドライバーの接続、読み取りし、Excel データ ソースにデータを書き込むにします。 このプロバイダーとドライバーの Excel ソースおよび Excel 変換先で使用する場合の動作に関する詳細については、次を参照してください。 [Excel ソース](../data-flow/excel-source.md)と[Excel 変換先](../data-flow/excel-destination.md)です。  
+ Excel 接続マネージャーを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 とそのサポートの Excel ISAM (Indexed Sequential Access Method) ドライバーに接続し、読み取り、および Excel データ ソースにデータを書き込みます。 このプロバイダーとドライバーの Excel ソースおよび Excel 変換先で使用する場合の動作に関する詳細については、次を参照してください。 [Excel ソース](../data-flow/excel-source.md)と[Excel 変換先](../data-flow/excel-destination.md)します。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [Excel 接続マネージャー](../excel-connection-manager-editor.md)」を参照してください。  
   
- プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムで接続を追加する](../building-packages-programmatically/adding-connections-programmatically.md)です。  
+ プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)します。  
   
  Excel ファイルのグループによるループ処理については、「 [Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する](../control-flow/foreach-loop-container.md)」をご覧ください。  
   

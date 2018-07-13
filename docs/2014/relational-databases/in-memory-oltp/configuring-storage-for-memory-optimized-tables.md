@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4d13b8b46066eb6c2c8c855859fdab0114269700
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5c8b5a9f50c30cccb7a0e24799ca59105294aba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236772"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>メモリ最適化テーブルのストレージの構成
   記憶域の容量と 1 秒間の入出力操作 (IOPS) を構成する必要があります。  
@@ -34,11 +34,11 @@ ms.locfileid: "36070711"
   
 -   メモリ最適化テーブルは、1 つまたは複数のコンテナーに分散されたファイルに保存されます。 各コンテナーは、通常、独自のスピンドルにマップする必要があり、増加する記憶域容量とパフォーマンスの向上の両方のために使用されます。 記憶メディアのシーケンシャル IOPS が、トランザクション ログのスループットの増加量の 3 倍をサポートできることを確認する必要があります。  
   
-     たとえば、メモリ最適化テーブルでは、トランザクション ログで 500 MB/秒のアクティビティを生成する場合メモリ最適化テーブルのストレージは 1.5 GB/秒をサポートする必要があります。3 倍をサポートする必要がトランザクション ログのスループットの増加が監視データとデルタ ファイルのペアは、まず初期データと共に書き込まし、読み取り/再書き込みされる必要がありますを起源マージ操作の一部として。  
+     たとえば、メモリ最適化テーブルでは、トランザクション ログで 500 MB/秒のアクティビティを生成するメモリ最適化テーブルのストレージは 1.5 GB/秒をサポートする必要があります。3 倍をサポートする必要があるトランザクション ログのスループット向上するには、監視データとデルタ ファイル ペアは、まず初期データと共に書き込まし、読み取り/再書き込みされる必要がありますからマージ操作の一部として。  
   
      記憶域のスループットを見積もる際のもう 1 つの要因は、メモリ最適化テーブルの復旧時間です。 持続性のあるテーブルからのデータは、データベースがアプリケーションで使用される前にメモリに読み込む必要があります。 一般的に、メモリ最適化テーブルへのデータの読み込みは IOPS の速度で実行できます。 それで、持続性のあるメモリ最適化テーブルの合計の記憶域が 60 GB で、1 分でこのデータを読み込めるようにする場合は、記憶域の IOPS を 1 GB/秒に設定する必要があります。  
   
--   偶数個のスピンドルを使用している場合、コンテナー数の 2 倍を作成し、各ペアを同じスピンドルにマップする必要があります。 これは、IOPS および記憶域を分散するために必要です。 詳細については、次を参照してください。[メモリ最適化ファイルグループ](the-memory-optimized-filegroup.md)です。  
+-   偶数個のスピンドルを使用している場合、コンテナー数の 2 倍を作成し、各ペアを同じスピンドルにマップする必要があります。 これは、IOPS および記憶域を分散するために必要です。 詳細については、次を参照してください。[メモリ最適化ファイルグループ](the-memory-optimized-filegroup.md)します。  
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化オブジェクト用ストレージの作成と管理](creating-and-managing-storage-for-memory-optimized-objects.md)  

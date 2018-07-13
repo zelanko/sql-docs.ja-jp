@@ -1,5 +1,5 @@
 ---
-title: ドリルスルーを使用して、ソース データ (MDX) を取得する |Microsoft ドキュメント
+title: ドリルスルーを使用して、ソース データ (MDX) を取得する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DRILLTHROUGH statement
 - retrieving data
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [MDX]
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9869be182f398df326c0c81b7e00e869f0b3eae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b98ebd1516d2aa26fa1e3a66edebdaf99f0f181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204422"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>DRILLTHROUGH を使用したソース データの取得 (MDX)
   多次元式 (MDX) では、キューブ セルのソース データから行セットを取得するために [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough)ステートメントを使用します。  
@@ -32,7 +32,7 @@ ms.locfileid: "36070574"
  キューブに対して `DRILLTHROUGH` ステートメントを実行するには、そのキューブに対するドリルスルー アクションを定義する必要があります。 ドリルスルー アクションを定義するには、 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]のキューブ デザイナーの **[アクション]** ペインで、ツール バーの **[新しいドリルスルー アクション]** をクリックします。 新しいドリルスルー アクションでは、アクションの名前、対象、条件を指定し、`DRILLTHROUGH` ステートメントによって返される列を指定します。  
   
 ## <a name="drillthrough-statement-syntax"></a>DRILLTHROUGH ステートメントの構文  
- `DRILLTHROUGH`ステートメントは、次の構文を使用します。  
+ `DRILLTHROUGH`ステートメントは次の構文を使用します。  
   
 ```  
 <drillthrough> ::= DRILLTHROUGH [<Max_Rows>] [<First_Rowset>] <MDX select> [<Return_Columns>]  
@@ -50,7 +50,7 @@ ms.locfileid: "36070574"
  構文 `<Return_Columns>` は、基になるデータベースのどの列が返されるかを識別します。  
   
 ## <a name="drillthrough-statement-example"></a>DRILLTHROUGH ステートメントの例  
- 次の例での使用、`DRILLTHROUGH`ステートメントです。 この例の DRILLTHROUGH ステートメントは、Stores ディメンション (スライサー軸) 上の Store、Product、Time ディメンションのリーフを照会して、部門メジャー グループ、部門 ID、従業員の名前を返します。  
+ 次の例では、使用、`DRILLTHROUGH`ステートメント。 この例の DRILLTHROUGH ステートメントは、Stores ディメンション (スライサー軸) 上の Store、Product、Time ディメンションのリーフを照会して、部門メジャー グループ、部門 ID、従業員の名前を返します。  
   
 ```  
 DRILLTHROUGH  

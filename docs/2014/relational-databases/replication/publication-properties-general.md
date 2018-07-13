@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.general.f1
 ms.assetid: 7912362f-c4d6-4f60-bd39-dee1f656ed18
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6b9659f1f60265072c5bdf5d5ca0a57364894277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7cb3bae46b114340930d2ffbd66aa4049f7a46ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217002"
 ---
 # <a name="publication-properties-general"></a>[パブリケーションのプロパティ]、[全般]
   **[パブリケーションのプロパティ]** ダイアログ ボックスの **[全般]** ページには、名前、説明、およびサブスクリプションの有効期限ポリシーなどの、パブリケーションに関する基本情報が表示されます。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  パブリケーションの名前です (読み取り専用)。  
   
  **[データベース]**  
  パブリケーション データベースの名前です (読み取り専用)。  
   
- **description**  
+ **[説明]**  
  パブリケーションの説明です。  
   
- **Type**  
+ **型**  
  パブリケーションの種類です (読み取り専用)。  
   
  **[サブスクリプションの有効期限]**  

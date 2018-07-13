@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
 - snapshots [SQL Server replication], parameterized filters and
 - filters [SQL Server replication], parameterized
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9ee83b25591d336a5be02197b9de2e79b2d282d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5de6e6d274ccaf030e900ce9448b2713091d9a79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179859"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パラメーター化されたフィルターでマージ パブリケーションのスナップショットを作成する方法ついて説明します。  
@@ -100,11 +100,11 @@ ms.locfileid: "36073004"
   
     -   **@publication** にパブリケーション名を指定します。  
   
-    -   値`true`の**@allow_subscriber_initiated_snapshot**、これにより、サブスクライバーがスナップショット プロセスを開始します。  
+    -   値`true`の **@allow_subscriber_initiated_snapshot**サブスクライバーがスナップショット プロセスを開始できます。  
   
     -   (省略可) **@max_concurrent_dynamic_snapshots**」をご覧ください。 最大限の数のプロセスが実行しているときに、サブスクライバーがスナップショットを生成しようとすると、そのプロセスはキューに格納されます。 既定では、同時プロセスの数に限度はありません。  
   
-2.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 1. で使用されるパブリケーションの名前を指定**@publication**と[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 資格情報を[レプリケーション スナップショット エージェント](agents/replication-snapshot-agent.md)認証に接続するときに、発行元の値も指定する必要があります**0**の**@publisher_security_mode**と[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のログイン情報**@publisher_login**と **@publisher_password**です。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。 初期スナップショットの作成と、スナップショット エージェントのカスタム スケジュールの定義については、「 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)」を参照してください。  
+2.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 1. で使用されるパブリケーションの名前を指定**@publication**と[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 資格情報、 [Replication Snapshot Agent](agents/replication-snapshot-agent.md)認証に接続するときに、発行元の値も指定する必要があります**0**の**@publisher_security_mode**と[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のログイン情報**@publisher_login**と **@publisher_password**します。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。 初期スナップショットの作成と、スナップショット エージェントのカスタム スケジュールの定義については、「 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)」を参照してください。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
@@ -269,7 +269,7 @@ PAUSE
   
 2.  パブリケーション データベースに <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> クラスのインスタンスを作成するには、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> インスタンスを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> から `false` が返された場合は、データベースが存在していることを確認してください。  
   
-3.  場合<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>プロパティは`false`には、設定`true`を呼び出すと<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>です。  
+3.  場合<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>プロパティは`false`に設定`true`を呼び出すと<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>します。  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成し、このオブジェクトに次のプロパティを設定します。  
   
@@ -281,7 +281,7 @@ PAUSE
   
     -   <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>に、実行する動的スナップショット ジョブの最大数を指定します。 サブスクライバーがスナップショットを要求するタイミングは不定です。そのため、同時に複数のサブスクライバーがパーティション スナップショットを要求した場合に、このプロパティを使って、同時に実行できるスナップショット エージェント ジョブの数を制限します。 実行中のジョブが最大数に達した場合は、パーティション スナップショットに対するそれ以降の要求は、実行されているいずれかのジョブが完了するまでキューに格納されます。  
   
-    -   ビットごとの論理 OR を使用して (`|` Visual C# の場合と`Or`Visual Basic で) 値を追加する演算子を<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot>に<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>です。  
+    -   ビットごとの論理 OR を使用して (`|` Visual c# と`Or`Visual Basic で) 演算子、値を追加する<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot>に<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>します。  
   
     -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> フィールドに、スナップショット エージェント ジョブの実行に使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントの資格情報を指定します。  
   
@@ -295,7 +295,7 @@ PAUSE
   
 6.  <xref:Microsoft.SqlServer.Replication.MergeArticle> プロパティを使用して、アーティクルをパブリケーションに追加します。 パラメーター化されたフィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> プロパティを少なくとも 1 つのアーティクルについて指定します。 (省略可) アーティクル間の結合フィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> オブジェクトを作成します。 詳しくは、「 [アーティクルを定義](publish/define-an-article.md)」をご覧ください。  
   
-7.  場合の値<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>は`false`、呼び出す<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>このパブリケーションの初期スナップショット エージェント ジョブを作成します。  
+7.  場合の値<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>は`false`、呼び出す<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>このパブリケーション用の初期スナップショット エージェント ジョブを作成します。  
   
 8.  手順 4. で作成した <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.MergePublication> メソッドを呼び出します。 これにより、初期スナップショットを生成するエージェント ジョブが開始されます。 初期スナップショットの作成と、スナップショット エージェントのカスタム スケジュールの定義については、「 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)」を参照してください。  
   
@@ -313,7 +313,7 @@ PAUSE
   
 4.  手順 1. で作成した <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.MergePublication> メソッドを呼び出します。 このメソッドにより、初期スナップショットを生成するエージェント ジョブが開始されます。 初期スナップショットを生成する方法、およびスナップショット エージェントのカスタム スケジュールを定義する方法については、「 [初期スナップショットの作成および適用](create-and-apply-the-initial-snapshot.md)」を参照してください。  
   
-5.  値をチェックして`true`の<xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A>初期スナップショットが使用可能な状態を決定するプロパティです。  
+5.  値をチェック`true`の<xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A>プロパティを確認し、初期スナップショットが使用できるようにします。  
   
 6.  <xref:Microsoft.SqlServer.Replication.MergePartition> クラスのインスタンスを作成し、次のいずれかまたは両方のプロパティを使って、サブスクライバー用のパラメーター化されたフィルター条件を設定します。  
   

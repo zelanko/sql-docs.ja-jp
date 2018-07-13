@@ -1,5 +1,5 @@
 ---
-title: トレース テーブルのプロパティ (イベントの選択 タブ) |Microsoft ドキュメント
+title: トレース テーブルのプロパティ (イベントの選択 タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetableproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace Table Properties dialog box
 ms.assetid: fa21df6a-b6b5-4b15-9104-957385821594
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 503c7851b79135fa2c4d4a0dc6888c7345414ea9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 28084e041538412399e518856ef4d948add75def
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250562"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>[トレース テーブルのプロパティ] ([イベントの選択] タブ)
   **[トレース テーブルのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブを使用すると、トレースのイベントやデータ列プロパティを表示したり、トレースからイベントまたは列を削除したりできます。  

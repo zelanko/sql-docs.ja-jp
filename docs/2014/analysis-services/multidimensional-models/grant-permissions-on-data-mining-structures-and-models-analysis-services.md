@@ -1,5 +1,5 @@
 ---
-title: データ マイニング構造およびモデル (Analysis Services) に対するアクセス許可を付与 |Microsoft ドキュメント
+title: データ マイニング構造およびモデル (Analysis Services) に対する権限の付与 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.miningmodels.f1
 helpviewer_keywords:
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - user access rights [Analysis Services], mining models
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5558e0ca08d13a5f746eb4694fdafc271e49df9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2763f0af1b911c8fca27dad035ed25be8b29f7c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200312"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>データ マイニング構造およびデータ マイニング モデルに対する権限の付与 (Analysis Services)
   既定では、Analysis Services サーバー管理者にのみ、データベースのデータ マイニング構造またはマイニング モデルを表示する権限があります。 管理者以外のユーザーに権限を付与するには、次の手順に従ってください。  
@@ -71,8 +71,8 @@ ms.locfileid: "36070838"
 >  既定では、OPENROWSET を使った DMX クエリの送信が無効になっています。  
   
 ## <a name="see-also"></a>参照  
- [サーバーの管理者のアクセス許可を付与&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [キューブまたはモデルのアクセス許可を与える&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [キューブまたはモデル アクセス許可を付与&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [ディメンション データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [セル データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   

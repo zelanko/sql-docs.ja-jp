@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing files [SQL Server]
 - instant file initializations [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0dc65b8fb0985be59fa22e7a5b4f650d5f779d12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: da60e00ce0162a553d9ecf68368edd3dde193a08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180107"
 ---
 # <a name="database-instant-file-initialization"></a>データベースのファイルの瞬時初期化
   データおよびログ ファイルの初期化は、ディスクに以前削除したファイルのデータが残っている場合にそれを上書きするために行います。 データおよびログ ファイルは、次のいずれかの操作を実行したときに、ファイルを 0 で埋め込むことにより、まず初期化されます。  
@@ -51,7 +51,7 @@ ms.locfileid: "36072108"
   
  アカウントに `Perform volume maintenance tasks` 権限を許可する方法。  
   
-1.  コンピューターで、バックアップ ファイルを作成する、開く、`Local Security Policy`アプリケーション (`secpol.msc`)。  
+1.  バックアップ ファイルを作成するコンピューターで開く、`Local Security Policy`アプリケーション (`secpol.msc`)。  
   
 2.  左側のペインで **[ローカル ポリシー]** を展開し、 **[ユーザー権利の割り当て]** をクリックします。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36072108"
   
 4.  **[ユーザーまたはグループの追加]** をクリックし、バックアップに使用される任意のユーザー アカウントを追加します。  
   
-5.  をクリックして**適用**、すべてを閉じると`Local Security Policy` ダイアログ ボックス。  
+5.  クリックして**適用**、すべてを閉じると`Local Security Policy` ダイアログ ボックス。  
   
 ### <a name="security-considerations"></a>セキュリティに関する考慮事項  
  削除されたディスクの内容は、新しいデータがファイルに書き込まれるときにのみ上書きされるため、許可されていないプリンシパルがこの削除された内容にアクセスする可能性があります。 データベース ファイルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスにアタッチされている間は、ファイル上の任意のアクセス制御リスト (DACL) により、このような情報公開の脅威は低減されます。 この DACL により、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとローカル管理者のみにファイル アクセスが許可されます。 しかし、ファイルがデタッチされると、SE_MANAGE_VOLUME_NAME のないユーザーまたはサービスによりアクセスされる可能性があります。 データベースがバックアップされる際にも、同様の脅威が存在します。 バックアップ ファイルが適切な DACL で保護されていないと、許可されていないユーザーやサービスが削除された内容を利用できるようになる場合があります。  

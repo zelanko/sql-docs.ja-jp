@@ -1,5 +1,5 @@
 ---
-title: SSIS パッケージ形式 |Microsoft ドキュメント
+title: SSIS パッケージの形式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dcb50760bcbe0ce1a4eb01a9a1a2de29565defdf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c025877f39e66fcf25e6ed2b27d6e1b422a299d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237122"
 ---
 # <a name="ssis-package-format"></a>SSIS パッケージの形式
   最新のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、形式の読み取りとパッケージの比較を容易にするために、パッケージの形式 (.dtsx file) に大幅な変更が加えられました。 さらに、競合を引き起こす可能性のある変更やバイナリ形式で保存されている変更を含まないパッケージをより確実にマージできるようになりました。  
@@ -34,9 +34,9 @@ ms.locfileid: "36070966"
   
 -   他のオブジェクトで参照できるパッケージ内のほとんどのオブジェクトに、パッケージ XML で定義された `refId` 属性が割り当てられています。 系列 ID の代わりに `refID`が残っています。 系列 ID は今でもランタイム内で使用され、パッケージを読み込むと再生成されます。  
   
-     `refId`値は Guid または整数値と比較して読み取り可能で、わかりやすいものには、一意の文字列。 この文字列は、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]でパッケージ構成に使用されたパス値に似ています。  
+     `refId`値が読みやすく、わかりやすく、Guid または整数値と比較して一意の文字列です。 この文字列は、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]でパッケージ構成に使用されたパス値に似ています。  
   
-     パッケージの 2 つのバージョン間の変更をマージする場合は、`refId`にそのオブジェクトに対するすべての参照が正しく更新されていることを確認してください。 検索と置換操作で使用できます。  
+     パッケージの 2 つのバージョン間の変更をマージする場合は、`refId`検索/置換操作でそのオブジェクトに対するすべての参照が正しく更新されていることを確認するのに使用できます。  
   
 -   レイアウト情報は CData セクションにあります。  
   

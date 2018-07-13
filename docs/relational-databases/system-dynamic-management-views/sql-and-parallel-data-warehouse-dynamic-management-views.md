@@ -1,13 +1,13 @@
 ---
-title: SQL と並列データ ウェアハウスの動的管理ビュー |Microsoft ドキュメント
+title: SQL と並列データ ウェアハウスの動的管理ビュー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -18,22 +18,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8df833bdcc049bd9c8197dd8caea6410aa94d45c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: e610fb5bf6b64432b28a20d6e57e4b729a3c044e
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467509"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36915023"
 ---
-# <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>SQL と並列データ ウェアハウスの動的管理ビュー
+# <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>SQL と Parallel Data Warehouse の動的管理ビュー
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  このトピックの内容を一覧表示、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]動的管理ビュー (Dmv)。  
+  このトピックで、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]動的管理ビュー (Dmv)。  
   
- すべて[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Dmv が始まる**sys.dm_pdw**です。  
+ すべて[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Dmv が始まる**sys.dm_pdw**します。  
   
-## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]動的管理ビュー  
- 次の動的管理ビューは、両方に適用[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
+## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]動的管理ビュー  
+ 次の動的管理ビューの両方に適用されます[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
  [sys.dm_pdw_dms_cores &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md)  
   

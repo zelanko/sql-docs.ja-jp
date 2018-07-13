@@ -17,15 +17,15 @@ helpviewer_keywords:
 - read-only data
 ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1b53c5af0d875d79052a9d5fdba4de47af41612f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7b8dc9adccd625838c6ccaf4eed0af0f1f818608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175101"
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>データ処理拡張機能の DataReader クラスの実装
   クライアントは **DataReader** オブジェクトを使用して、読み取り専用、順方向専用のデータ ストリームをデータ ソースから取得できます。 クエリを実行すると結果が返され、結果は **DataReader** クラスの **Read** メソッドを使用して要求するまではクライアントのネットワーク バッファーに格納されます。 **DataReader** クラスを作成するには、<xref:Microsoft.ReportingServices.DataProcessing.IDataReader> を実装し、必要に応じて <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> を実装します。 **DataReader** オブジェクトを使用すると、アプリケーションのパフォーマンスが向上します。これは、クエリの結果全体が返されるまで待機するのではなく、データが使用可能になりしだい取得することと、メモリに一度に 1 行のみが格納されるため (既定)、システムのオーバーヘッドが小さくなることにより実現します。  

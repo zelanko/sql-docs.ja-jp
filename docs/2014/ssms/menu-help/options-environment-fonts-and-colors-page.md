@@ -1,5 +1,5 @@
 ---
-title: 'オプション (環境: フォントおよび色 ページ) |Microsoft ドキュメント'
+title: 'オプション (環境: フォントおよび色 ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Fonts_And_Colors
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb667cb31bdb718044b2c4298dcc8c174f3c0c19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9a88ae6c8205ea8267ca044f6dc978a725931f59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200782"
 ---
 # <a name="options-environment-fonts-and-colors-page"></a>オプション (環境: フォントおよび色 ページ)
   **[オプション]** ダイアログ ボックスを使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のさまざまなユーザー インターフェイス要素にカスタム フォントや配色を設定できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して、 **[フォントおよび色]** を選択します。  
@@ -35,7 +35,7 @@ ms.locfileid: "36072023"
 |項目|定義|  
 |----------|----------------|  
 |[テキスト エディター]|[テキスト エディター] のフォント スタイル、フォント サイズ、フォント色を変更すると、既定のテキスト エディターに表示されるテキストの外観が変更されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の外部のテキスト エディターで開いたドキュメントは、この設定の影響を受けません。|  
-|[プリンター]|[プリンター] のフォント スタイル、フォント サイズ、色の表示設定を変更すると、印刷されるドキュメント内のテキストの外観が変更されます。<br /><br /> ヒント: 必要に応じて、テキスト エディターでの表示に使用するよりも印刷用の異なる既定フォントを選択できます。 これは、1 バイト文字と 2 バイト文字の両方を含むコードを印刷する場合に役立ちます。|  
+|[プリンター]|[プリンター] のフォント スタイル、フォント サイズ、色の表示設定を変更すると、印刷されるドキュメント内のテキストの外観が変更されます。<br /><br /> ヒント: 必要に応じて、テキスト エディターでの表示に使用される印刷用の異なる既定フォントを選択できます。 これは、1 バイト文字と 2 バイト文字の両方を含むコードを印刷する場合に役立ちます。|  
 |[すべてのテキスト ツール ウィンドウ **]**|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で出力ペインを持つツール ウィンドウ内のテキストの外観が変更されます。 これには、たとえば [出力] ウィンドウや [結果のテキスト表示] ウィンドウなどが該当します。<br /><br /> 注: [すべてのテキスト ツール ウィンドウ] 項目のテキストを変更するセッション中は、変更は適用されません。 変更を確認するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の別のインスタンスを開きます。|  
 |[検索結果ウィンドウ]|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、検索結果ウィンドウ内のテキストの外観が変更されます。|  
 |[出力ウィンドウ]|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、[出力] ウィンドウ内のテキストの外観が変更されます。|  

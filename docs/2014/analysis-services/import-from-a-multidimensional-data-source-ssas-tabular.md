@@ -1,5 +1,5 @@
 ---
-title: 多次元データ ソース (SSAS テーブル) からのインポート |Microsoft ドキュメント
+title: 多次元データ ソース (SSAS テーブル) からのインポート |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f0793ea-a4c7-42e9-b722-2164a454ebca
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6ad945994bda3f9198d3e686a3ce52ea02f496fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 75e62c1a920739729f83c61d031756ec96a2ffb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245698"
 ---
 # <a name="import-from-a-multidimensional-data-source-ssas-tabular"></a>多次元データ ソースからのインポート (SSAS テーブル)
   Analysis Services キューブ データベースは、テーブル モデルのデータ ソースとして使用できます。 Analysis Services キューブからデータをインポートするには、インポートするデータを選択するための MDX クエリを定義する必要があります。  

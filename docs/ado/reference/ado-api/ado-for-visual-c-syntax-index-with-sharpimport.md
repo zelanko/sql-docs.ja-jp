@@ -1,5 +1,5 @@
 ---
-title: 'ADO の #import を使用して Visual C++ 構文インデックスの |Microsoft ドキュメント'
+title: '#Import の Visual C 構文のインデックス用の ADO |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -21,19 +21,19 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9af0435791391ffcf3224a0246fc7a7f12598dcf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 88843691166fab6300f2a2f4a092b25ce9552ac3
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275531"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957705"
 ---
-# <a name="ado-for-visual-c-syntax-index-with-import"></a>#Import を使用して Visual C++ 構文インデックスの ADO
-このインデックスは、Microsoft Visual C に基づく、ADO 言語リファレンスへの相互参照と **#import**ディレクティブです。  
+# <a name="ado-for-visual-c-syntax-index-with-import"></a>#Import の Visual C 構文のインデックス用の ADO
+このインデックスはベースの Microsoft Visual C で ADO 言語リファレンスへの相互参照と **#import**ディレクティブ。  
   
- プログラムをコンパイルすると、この特定のインデックスが派生しました、 **#import** *.tlh 生成されたファイルを再フォーマットし、ADO .dll ディレクティブです。 メソッド、プロパティ、およびイベントに関する情報のみが保持されます。 各プロパティに表示されて、対応する宣言される代替構文"`__declspec(property...)`"ディレクティブです。  
+ この特定のインデックスを使用してプログラムをコンパイルすることによって派生した、 **#import** ADO .dll、ディレクティブ、再フォーマット、 \*.tlh ファイルに生成されました。 メソッド、プロパティ、およびイベントに関する情報のみが保持されます。 各プロパティに表示されて、対応する宣言される代替構文"`__declspec(property...)`"ディレクティブ。  
   
- 読み取ることを強く推奨[Visual C++ ADO Programming](../../../ado/guide/appendixes/visual-c-ado-programming.md)詳細についてはします。  
+ 読み取ることを強く推奨[Visual で C++ の ADO プログラミング](../../../ado/guide/appendixes/visual-c-ado-programming.md)詳細についてはします。  
   
  Visual C とのメソッドおよびプロパティの構文、 **#import**ディレクティブは、次の要素の一覧表示。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "35275531"
   
 -   [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
   
--   [オブジェクトのプロパティ](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
+-   [プロパティ オブジェクト](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Record オブジェクト](../../../ado/reference/ado-api/record-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [レコード セット オブジェクト](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
   
--   [ストリーム オブジェクト](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
+-   [Stream オブジェクト](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [接続イベント](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
   

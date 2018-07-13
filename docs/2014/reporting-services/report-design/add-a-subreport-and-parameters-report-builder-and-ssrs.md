@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10093"
 - sql12.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f99f7baef82824a4af4c9520825043523bb8255d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 05784b220a590166b00605ff921508979e633f64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179539"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>サブレポートおよびパラメーターの追加 (レポート ビルダーおよび SSRS)
   複数の関連レポートのコンテナーであるメイン レポートを作成する場合は、レポートにサブレポートを追加します。 サブレポートは別のレポートへの参照です。 これらのレポートをデータ値で関係付けるには (たとえば、複数のレポートに同じ顧客のデータを表示する場合)、サブレポートとしてパラメーター化されたレポート (特定の顧客の詳細を示すレポートなど) をデザインする必要があります。 サブレポートをメイン レポートに追加するときは、サブレポートに渡すパラメーターを指定できます。  
   
  また、サブレポートをテーブルまたはマトリックスの動的列または動的行に追加することもできます。 メイン レポートを処理するとき、各行のサブレポートが処理されます。 この場合、データ領域または入れ子になったデータ領域を使用して、意図した結果が得られたか確認してください。  
   
- レポートにサブレポートを追加するには、サブレポートとして機能するレポートを最初に作成する必要があります。 サブレポートの作成の詳細については、次を参照してください。[サブレポート&#40;レポート ビルダーおよび SSRS&#41;](subreports-report-builder-and-ssrs.md)です。  
+ レポートにサブレポートを追加するには、サブレポートとして機能するレポートを最初に作成する必要があります。 サブレポートの作成の詳細については、次を参照してください。[サブレポート&#40;レポート ビルダーおよび SSRS&#41;](subreports-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

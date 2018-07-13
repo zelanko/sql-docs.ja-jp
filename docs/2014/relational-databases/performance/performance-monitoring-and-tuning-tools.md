@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], monitoring performance
 - monitoring server performance [SQL Server], tools
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 76cb6106fb7b4c21ec8fbb8101ad7cfecea82282
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1848d19202b8bfe7a7c44b00b9b2e781366ca90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262468"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>パフォーマンス監視およびチューニング ツール
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントを監視したり、物理データベース デザインをチューニングしたりするための広範なツール セットが用意されています。 どのツールを選択するかは、実行する監視またはチューニングの種類や、監視するイベントによって異なります。  
@@ -43,7 +43,7 @@ ms.locfileid: "36071897"
 |[利用状況モニターを開く方法 &#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の利用状況モニターは、現在のアクティビティのカスタム ビューの場合に便利であり、次の情報をグラフィカルに表示します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで実行中のプロセス<br /><br /> ブロックされているプロセス<br /><br /> ロック<br /><br /> ユーザーの利用状況|  
 |[SQL トレース (SQL Trace)](../sql-trace/sql-trace.md)|[!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャは次のとおりです。<br /><br /> [sp_trace_create &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)<br /><br /> [sp_trace_generateevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)<br /><br /> [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)<br /><br /> [sp_trace_setfilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)<br /><br /> [sp_trace_setstatus &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)|  
 |エラー ログ|Windows アプリケーション イベント ログでは、Windows Server と Windows オペレーティング システム全体で発生しているイベントと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、およびフルテキスト検索で発生しているイベントの全般的な概要が示されます。 他のツールでは提供されない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントに関する情報が含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に関連する問題のトラブルシューティングでエラー ログの情報を使用できます。|  
-|[システム ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)|次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム ストアド プロシージャでは、多くの監視タスクの強力な代替方法が提供されています。<br /><br /> [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql): <br />                    このシステム ストアド プロシージャは、現在実行中のステートメントとそのステートメントがブロックされているかどうかなど、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーおよびプロセスに関するスナップショット情報を報告します。<br /><br /> [sp_lock &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql): オブジェクト ID、インデックス ID、ロックの種類と型またはリソースのロックを適用するなど、ロックに関するスナップショット情報を報告します。<br /><br /> [sp_spaceused &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql): 現在のテーブル (またはデータベース全体) によって使用されるディスク領域量の推定値を表示します。<br /><br /> [sp_monitor &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-monitor-transact-sql): CPU 使用率、I/O 使用量からのアイドル時間の量などの統計情報を表示**sp_monitor**を最後に実行します。|  
+|[システム ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)|次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム ストアド プロシージャでは、多くの監視タスクの強力な代替方法が提供されています。<br /><br /> [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql): <br />                    このシステム ストアド プロシージャは、現在実行中のステートメントとそのステートメントがブロックされているかどうかなど、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーおよびプロセスに関するスナップショット情報を報告します。<br /><br /> [sp_lock &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql): オブジェクト ID、インデックス ID、ロックの種類と種類またはリソースのロックを適用するなど、ロックに関するスナップショット情報を報告します。<br /><br /> [sp_spaceused &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql): 現在のテーブル (またはデータベース全体) によって使用されるディスク領域の量の推定値が表示されます。<br /><br /> [sp_monitor &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-monitor-transact-sql): CPU 使用率、I/O 使用量、およびからのアイドル時間の量などの統計情報を表示します。 **sp_monitor**最後に実行します。|  
 |[DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)|DBCC (データベース コンソール コマンド) ステートメントによって、パフォーマンス統計とデータベースの論理的および物理的一貫性を確認できます。|  
 |[組み込み関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)|組み込み関数では、サーバーが起動してからの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況に関するスナップショット統計が表示されます。この統計は、あらかじめ定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターに格納されます。 たとえば、**@@CPU_BUSY** には、CPU が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コードを実行している時間が格納されます。**@@CONNECTIONS** には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続数または接続試行数が格納されます。**@@PACKET_ERRORS** には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続で発生するネットワーク パケット数が格納されます。|  
 |[トレース フラグ &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)|トレース フラグでは、サーバー内の特定の利用状況に関する情報が示されます。このトレース フラグを使用して、問題やデッドロック チェーンなどのパフォーマンスの問題を診断します。|  
@@ -61,7 +61,7 @@ ms.locfileid: "36071897"
 |グラフィック インターフェイス|はい||はい|はい||はい|  
 |カスタム アプリケーション内での使用|可 <sup>1</sup>||||はい||  
   
- <sup>1</sup> Using[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]システム ストアド プロシージャです。  
+ <sup>1</sup> Using[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]システム ストアド プロシージャ。  
   
 ## <a name="windows-monitoring-tools"></a>Windows 監視ツール  
  Windows オペレーティング システムおよび Windows Server 2003 では、次の監視ツールが提供されています。  

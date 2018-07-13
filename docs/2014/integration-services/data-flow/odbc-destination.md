@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 648e743d67b308e7dae75106165d65183fd735c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f19732c1287b1c915f8a49adc9f12938ebb9a744
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273358"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
   ODBC 入力先は、ODBC でサポートされているデータベース テーブルにデータを一括で読み込みます。 ODBC 入力先は ODBC 接続マネージャーを使用してデータ ソースに接続します。  
@@ -65,7 +65,7 @@ ms.locfileid: "36070997"
   
 -   [Odbc 入力先エディター&#40;接続マネージャー ページ&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
--   [Odbc 入力先エディター &#40;[マッピング] ページ&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [Odbc 入力先エディター&#40;マッピング ページ&#41;](../odbc-destination-editor-mappings-page.md)  
   
 -   [Odbc 入力先エディター&#40;エラー出力 ページ&#41;](../odbc-destination-editor-error-output-page.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36070997"
   
 -   [Odbc 入力先エディター&#40;エラー出力 ページ&#41;](../odbc-destination-editor-error-output-page.md)  
   
--   [Odbc 入力先エディター &#40;[マッピング] ページ&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [Odbc 入力先エディター&#40;マッピング ページ&#41;](../odbc-destination-editor-mappings-page.md)  
   
 -   [Odbc 入力先エディター&#40;接続マネージャー ページ&#41;](../odbc-destination-editor-connection-manager-page.md)  
   

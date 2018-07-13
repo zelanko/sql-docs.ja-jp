@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021798 error
 ms.assetid: 596f5092-75ab-4a19-8582-588687c7b089
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7a6e96a8dfe1bca20b1be549a180def3e9286056
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 20ff3eda2bbb50764afa0782c31b9d90d05ee868
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221132"
 ---
 # <a name="mssqleng021798"></a>MSSQL_ENG021798
     
@@ -48,7 +48,7 @@ ms.locfileid: "36071148"
  ストアド プロシージャ **sp_addlogreader_agent** および **sp_addqreader_agent** は、それぞれエージェント ジョブを作成します。これにより、エージェントの実行に使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを指定できます。 **sp_addlogreader_agent** および **sp_addqreader_agent** が実行されていない場合は、 **sysadmin** ロールのユーザーに対し、エージェント ジョブが暗黙的に作成されます。エージェントは、ディストリビューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントのコンテキストで実行されます。 **sysadmin** ロールでは、ユーザーは **sp_addlogreader_agent** および **sp_addqreader_agent** を必要としませんが、セキュリティ上、エージェントごとに異なるアカウントを指定することをお勧めします。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](security/replication-agent-security-model.md)」を参照してください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 正しい順序でプロシージャを実行してください。 詳細については、次を参照してください。[パブリケーションを作成する](publish/create-a-publication.md)、これらのスクリプト、ストアド プロシージャとに必要なパラメーターを含める更新[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョン。 詳細については、「[レプリケーション スクリプトのアップグレード &#40;レプリケーション Transact-SQL プログラミング&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)」を参照してください。  
+ 正しい順序でプロシージャを実行してください。 詳細については、次を参照してください。[パブリケーションを作成](publish/create-a-publication.md)、これらのスクリプトをストアド プロシージャで必要なパラメーターを含む更新[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョン。 詳細については、「[レプリケーション スクリプトのアップグレード &#40;レプリケーション Transact-SQL プログラミング&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  

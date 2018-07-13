@@ -1,5 +1,5 @@
 ---
-title: ソリューション エクスプ ローラー (SSAS 多次元) でデータ ソースの削除 |Microsoft ドキュメント
+title: ソリューション エクスプ ローラー (SSAS 多次元) でのデータ ソースの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.deleteobjects.f1
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - removing data sources
 ms.assetid: b45441ef-f909-4736-98b9-cc80d0acac99
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6dbf7b309db50ec291ccc956c2dc75522786616e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7be5e8a95a340794e2754f272a223c31a27e8a58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169683"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>ソリューション エクスプローラーでのデータ ソースの削除 (SSAS 多次元)
   データ ソース オブジェクトを削除して、Analysis Services 多次元モデル プロジェクトから完全に消去することができます。  
@@ -48,7 +48,7 @@ ms.locfileid: "36070792"
      [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトからデータ ソースを削除した後で、変更されたプロジェクトを保存する必要があります。そうしないと、次回プロジェクトを開くときにエラーが表示されます。これは、プロジェクトで、削除されたデータ ソースを読み込もうとするときに、その基になる XML ファイルがないためです。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル内のデータ ソース](data-sources-in-multidimensional-models.md)   
+ [多次元モデルのデータ ソース](data-sources-in-multidimensional-models.md)   
  [サポートされるデータ ソース&#40;SSAS 多次元&#41;](supported-data-sources-ssas-multidimensional.md)  
   
   

@@ -1,14 +1,13 @@
 ---
-title: 'アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ) |Microsoft ドキュメント'
+title: 'アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
 - Availability Groups [SQL Server], availability replicas
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 caps.latest.revision: 75
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: bb88bd5c239be09d17abf5bfeb3553ce958be542
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7c483e09f0136ec85ef9a5355a31b0fab733d1af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176549"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のアクティブなセカンダリ機能では、1 つ以上のセカンダリ レプリカ (*読み取り可能なセカンダリ レプリカ*) への読み取り専用アクセスをサポートしています。 読み取り可能なセカンダリ レプリカは、すべてのセカンダリ データベースへの読み取り専用アクセスを許可します。 ただし、読み取り可能なセカンダリ データベースは読み取り専用に設定されません。 これらは動的です。 セカンダリ データベースは、対応するプライマリ データベースに対する変更がそのセカンダリ データベースに適用されると変更されます。 一般的なセカンダリ レプリカでは、持続性のあるメモリ最適化テーブルを含めて、セカンダリ データベースのデータはほぼリアルタイムです。 また、フルテキスト インデックスはセカンダリ データベースと同期されます。 多くの場合、プライマリ データベースと対応するセカンダリ データベース間のデータ待機時間は数秒です。  
@@ -296,7 +295,7 @@ GO
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [SQL Server AlwaysOn チームのブログ: 公式 SQL Server AlwaysOn チーム ブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ: 正式な SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

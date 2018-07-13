@@ -1,5 +1,5 @@
 ---
-title: Goal 要素 (ASSL) |Microsoft ドキュメント
+title: Goal 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Goal element
 ms.assetid: 75fa5b57-418e-43ad-8704-764e4f0a40cf
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8b408e73bd8cb376afe0b8cf36157628be908780
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 81a85c6bec79add033825311bb790ba6e39349bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250912"
 ---
 # <a name="goal-element-assl"></a>Goal 要素 (ASSL)
   目標を識別、 [Kpi](../objects/kpi-element-assl.md)要素。  
@@ -69,7 +69,7 @@ ms.locfileid: "36071556"
 ## <a name="see-also"></a>参照  
  [Status 要素&#40;ASSL&#41;](status-element-assl.md)   
  [要素の傾向&#40;ASSL&#41;](trend-element-assl.md)   
- [要素を値&#40;ASSL&#41;](value-element-assl.md)   
+ [要素の値&#40;ASSL&#41;](value-element-assl.md)   
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  
   
   

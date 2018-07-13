@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connectoserverunknownservertype.f1
 - sql12.swb.connection.login.sqlserver.f1
@@ -18,15 +18,15 @@ f1_keywords:
 - sql12.swb.connecttoce.connectionproperties.f1
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 25af65c6e9aa165102e2e14785583aba58949049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a7861729d8990c0309a926a30209096f8777119e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191322"
 ---
 # <a name="connect-to-server-database-engine"></a>[サーバーへの接続] \(データベース エンジン)
   このダイアログを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] に接続するときのオプションを表示または指定できます。 ほとんどの場合、 **[サーバー名]** ボックスにデータベース サーバーのコンピューター名を入力し、 **[接続]** をクリックすることで接続できます。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]に接続している場合、コンピューター名の後に **\sqlexpress**を付けて使用します。  
@@ -44,7 +44,7 @@ ms.locfileid: "36070295"
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のアクティブなユーザー インスタンスに接続するには、パイプ名を指定した名前付きパイプ プロトコル (np:\\\\.\pipe\3C3DF6B1-2262-47\tsql\query など) を使用して接続します。詳細については、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のドキュメントを参照してください。  
   
  **[認証]**  
- インスタンスに接続するときに、2 つの認証モードが使用可能な[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。  
+ インスタンスに接続するときに、2 つの認証モードが使用可能な[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
   
  **Windows 認証モード ([Windows 認証])**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証モードを使用すると、ユーザーは Windows ユーザー アカウントを使用して接続できます。  
@@ -64,7 +64,7 @@ ms.locfileid: "36070295"
  **Password**  
  ログインのパスワードを入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合のみ編集できます。  
   
- **のインスタンスに接続するときには、**  
+ **Connect**  
  クリックすると、上記で選択したサーバーに接続します。  
   
  **[オプション]**  

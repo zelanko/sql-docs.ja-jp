@@ -1,5 +1,5 @@
 ---
-title: AxesInfo 要素 (XMLA) |Microsoft ドキュメント
+title: AxesInfo 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - AxesInfo element
 ms.assetid: 15cfa67d-5acd-4737-8a81-2df34b334d3f
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c5f11dce65c7e3d2c7b87cfed2d29147a5eba70f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 93ad2eb9d35384831cb952d140be267e75a7647d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178409"
 ---
 # <a name="axesinfo-element-xmla"></a>AxesInfo 要素 (XMLA)
-  コレクションを格納[AxisInfo](axisinfo-element-xmla.md)要素、親に含まれる軸のメタデータを表す[OlapInfo](olapinfo-element-xmla.md)要素。  
+  コレクションを含む[AxisInfo](axisinfo-element-xmla.md)要素を親に含まれる軸のメタデータを表す[OlapInfo](olapinfo-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 caps.latest.revision: 113
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fcddb47c254b897403cb784810703a1c7b20437a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77db86a684089c0696d499499bc52c816f35c0d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231552"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
   SQL 実行タスクは、パッケージ内の SQL ステートメントやストアド プロシージャを実行します。 このタスクには、1 つの SQL ステートメントまたは順に実行される複数の SQL ステートメントを含めることができます。 SQL 実行タスクは、次の目的で使用できます。  
@@ -84,7 +84,7 @@ ms.locfileid: "36070753"
 -   タスクでパラメーターのバインドを使用する場合、バッチ内のすべてのクエリは、同じ数と種類のパラメーターを持つ必要があります。  
   
 ## <a name="running-parameterized-sql-commands"></a>パラメーター化 SQL コマンドの実行  
- SQL ステートメントとストアド プロシージャでは多くの場合、入力パラメーター、出力パラメーター、およびリターン コードを使用します。 SQL 実行タスクをサポートしている、 `Input`、 `Output`、および`ReturnValue`パラメーターの型。 使用する、 `Input` 、入力パラメーターの型`Output`の出力パラメーター、および`ReturnValue`のリターン コード。  
+ SQL ステートメントとストアド プロシージャでは多くの場合、入力パラメーター、出力パラメーター、およびリターン コードを使用します。 SQL 実行タスクでは、 `Input`、 `Output`、および`ReturnValue`パラメーターの型。 使用する、 `Input` 、入力パラメーターの型`Output`の出力パラメーター、および`ReturnValue`リターン コード。  
   
 > [!NOTE]  
 >  SQL 実行タスクでは、データ プロバイダーがサポートしている場合のみ、パラメーターを使用できます。  
@@ -99,7 +99,7 @@ ms.locfileid: "36070753"
 ## <a name="troubleshooting-the-execute-sql-task"></a>SQL 実行タスクのトラブルシューティング  
  SQL 実行タスクによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、SQL 実行タスクが実行する SQL コマンドに関するトラブルシューティングを行うことができます。 SQL 実行タスクによる外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「[パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
   
- SQL コマンドまたはストアド プロシージャから、複数の結果セットが返される場合があります。 これらの結果セットを含めるの結果は、行セットだけでなく`SELECT`のエラーの結果である単一の値もクエリ、`RAISERROR`または`PRINT`ステートメントです。 1 つ目以外の結果セット内のエラーがタスクで無視されるかどうかは、使用する接続マネージャーの種類によって異なります。  
+ SQL コマンドまたはストアド プロシージャから、複数の結果セットが返される場合があります。 これらの結果セットは、の結果である行セットだけでなく`SELECT`のエラーの結果である単一の値もクエリ、`RAISERROR`または`PRINT`ステートメント。 1 つ目以外の結果セット内のエラーがタスクで無視されるかどうかは、使用する接続マネージャーの種類によって異なります。  
   
 -   OLE DB 接続マネージャーおよび ADO 接続マネージャーを使用する場合、1 つ目の結果セット以外はすべて無視されます。 したがって、これらの接続マネージャーでは、SQL コマンドまたはストアド プロシージャから返されるエラーは、1 つ目の結果セットに含まれていない限りタスクで無視されます。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36070753"
   
 -   SQL ステートメントの準備フェーズをタスクがスキップするかどうかを指定します。  
   
--   ADO 接続の種類を使用している場合、SQL ステートメントがストアド プロシージャかどうかを指定する必要があります。 その他の接続の種類では、このプロパティは読み取り専用とその値は常に`false`です。  
+-   ADO 接続の種類を使用している場合、SQL ステートメントがストアド プロシージャかどうかを指定する必要があります。 このプロパティは読み取り専用の他の接続の種類とその値は常に`false`します。  
   
  プロパティはプログラムによって設定するか、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから設定できます。  
   

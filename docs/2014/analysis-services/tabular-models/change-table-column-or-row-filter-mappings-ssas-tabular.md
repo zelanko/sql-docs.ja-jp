@@ -1,5 +1,5 @@
 ---
-title: 変更テーブル、列、または行のフィルターのマッピング (SSAS テーブル) |Microsoft ドキュメント
+title: テーブル、列、または行のフィルターのマッピング (SSAS テーブル) の変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e085b0693e0043283cc142ccf2ca764ae234eed7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db70af7541a46fb061a3b668b61040361b261347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241312"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>テーブル、列、または行のフィルターのマッピングの変更 (SSAS テーブル)
   このトピックでは、 **の** [テーブルのプロパティの編集] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ダイアログ ボックスを使用して、テーブル、列、または行のフィルターのマッピングを変更する方法について説明します。  
@@ -48,6 +48,6 @@ ms.locfileid: "36071039"
          設定を間違ったため最初からやり直す場合は、 **[行フィルターのクリア]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [テーブルのプロパティ ダイアログ ボックスの編集&#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [テーブルのプロパティ ダイアログ ボックスを編集&#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

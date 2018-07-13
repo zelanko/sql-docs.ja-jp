@@ -1,5 +1,5 @@
 ---
-title: データベース表現 (テーブル) |Microsoft ドキュメント
+title: データベース表現 (テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 653395b2733fc6af8df7b19a746bb04edc3d7f53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e288ccfb3cee35ef1506fe46d2128dd6ab43480a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197774"
 ---
 # <a name="database-representationtabular"></a>データベース表現 (テーブル)
   テーブル モードでは、データベースは、テーブル モデル内に存在するすべてのオブジェクトを対象にするコンテナーです。  
   
 ## <a name="database-representation"></a>データベース表現  
- データベースは、テーブル モデルを構成するすべてのオブジェクトが格納される場所です。 データベースに含まれる、開発者は、接続、テーブル、ロールおよびさらに多くのようなオブジェクトを検索します。  
+ データベースは、テーブル モデルを構成するすべてのオブジェクトが格納される場所です。 開発者は、データベースに含まれる、接続、テーブル、ロール、およびさらに多くのようなオブジェクトを検索します。  
   
 ### <a name="database-in-amo"></a>AMO 内のデータベース  
  AMO を使用してテーブル モデル データベースを管理する場合、AMO 内の <xref:Microsoft.AnalysisServices.Database> オブジェクトは、テーブル モデル内のデータベース論理オブジェクトと一対一で対応します。  
@@ -91,6 +91,6 @@ catch (Exception createDBxc)
   
 ```  
   
- AMO を使用して作成し、データベース表現を操作する方法の実用的な知識、Tabular AMO 2012 サンプル; 内のソース コードを参照してください。具体的には次のソース ファイルで確認してください: Database.cs です。 サンプル コードは、ここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。  
+ AMO を使用して作成してデータベース表現を操作する方法については、実用的な理解 Tabular AMO 2012 サンプル; 内のソース コードを参照してください。具体的には、次のソース ファイルをチェックイン: Database.cs します。 サンプル コードは、ここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Bike Buyer DMX のチュートリアル |Microsoft ドキュメント
+title: Bike Buyer DMX のチュートリアル |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -19,18 +19,18 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fc1676f55d2d920c90d56f552973cf7e2a1d3942
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 788cdb0ccd3f8093972c45db1463412c5f41a765
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187669"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX のチュートリアル
   このチュートリアルでは、データ マイニング拡張機能 (DMX) クエリ言語を使用して、マイニング モデルを作成、トレーニング、および調査する方法を学習します。 その後、これらのマイニング モデルを使用して、顧客が自転車を購入するかどうかを判断する予測を作成します。  
   
- マイニング モデルは、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] サンプル データベース内のデータから作成します。このサンプル データベースには、架空の企業である [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のデータが格納されています。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、多国籍の大規模な製造企業です。 北米、ヨーロッパ、およびアジアの市場向けに、金属製自転車や複合材製自転車の製造および販売を行っています。 基本操作ワシントン州ボセルで 290 の従業員であり、自社の国際対応のマーケット基盤全体にいくつかの地域販売チームができます。  
+ マイニング モデルは、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] サンプル データベース内のデータから作成します。このサンプル データベースには、架空の企業である [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のデータが格納されています。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、多国籍の大規模な製造企業です。 北米、ヨーロッパ、およびアジアの市場向けに、金属製自転車や複合材製自転車の製造および販売を行っています。 基本操作は、従業員 290 人のワシントン州ボセルであるし、国際市場ベース全体に複数の地域販売チームがあります。  
   
 ## <a name="tutorial-scenario"></a>チュートリアルのシナリオ  
  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、データ マイニング機能を用いたカスタム アプリケーションを作成して、データ分析を拡張することにしました。 このカスタム アプリケーションでは、次の機能を実現することを目標にします。  
@@ -47,7 +47,7 @@ ms.locfileid: "36312960"
   
 -   DMX クエリ言語  
   
--   [Microsoft デシジョン ツリー アルゴリズム](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)と[Microsoft クラスタ リング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
+-   [Microsoft デシジョン ツリー アルゴリズム](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)、 [Microsoft クラスタ リング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のクエリ エディター  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36312960"
   
  **詳細については**  
   
- [データ マイニング拡張機能&#40;DMX&#41;参照](/sql/dmx/data-mining-extensions-dmx-reference)、 [Select ステートメントを DMX を理解する](/sql/dmx/understanding-the-dmx-select-statement)、[構造と DMX 予測クエリの使用状況](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [データ マイニング拡張機能&#40;DMX&#41;参照](/sql/dmx/data-mining-extensions-dmx-reference)、 [Select ステートメントを DMX を理解する](/sql/dmx/understanding-the-dmx-select-statement)、[構造と DMX 予測クエリの使用](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
  このチュートリアルは次のレッスンで構成されています。  
@@ -105,10 +105,10 @@ ms.locfileid: "36312960"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]、 [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)]、 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベース。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 公式サンプル データベースをインストールする[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください、 [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417)ページし、データベースをインストールするを選択.  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベース。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 公式サンプル データベースをインストールする[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください、 [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417)ページし、インストールするデータベースを選択.  
   
 > [!NOTE]  
->  追加することをお勧めのチュートリアルを確認するときに**次のトピック「** と**前のトピック**ドキュメント ビューアーのツールバーのボタンです。  
+>  追加することをお勧めのチュートリアルを確認するとき**次のトピック**と**前のトピック**ドキュメント ビューアーのツールバーのボタン。  
   
 ## <a name="see-also"></a>参照  
  [マーケット バスケット DMX のチュートリアル](../../2014/tutorials/market-basket-dmx-tutorial.md)   

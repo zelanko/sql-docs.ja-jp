@@ -1,5 +1,5 @@
 ---
-title: 多次元モデル ソリューションの配置 |Microsoft ドキュメント
+title: 多次元モデル ソリューションの配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
 - deploying [Analysis Services]
 - deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0a5ef8d41ebc37beee73b83fa27eaa5a7d6358
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 781bbeed98772266d4ea9c228c42426df424fe1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222222"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>多次元モデルのソリューションの配置
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの開発を完了したら、Analysis Services サーバーにデータベースを配置できます。 Analysis Services には、テスト サーバーまたは実稼働サーバーにデータベースを移動するために使用できる 6 つの配置方法が用意されています。 ここでは、それらの方法を効果の大きいものから、AMO オートメーション、XMLA、配置ウィザード、配置ユーティリティ、同期ウィザード、バックアップおよび復元の順に説明します。  
@@ -55,7 +55,7 @@ ms.locfileid: "36070825"
 |このソリューションにはどのようなハードウェアおよびソフトウェア リソースが必要か。|[Analysis Services の配置に関する要件と注意点](requirements-and-considerations-for-analysis-services-deployment.md)|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパッケージ、レポート、リレーショナル データベース スキーマなど、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの範囲外にある関連オブジェクトをどのように配置するか。||  
 |配置した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースでデータをどのように読み込んで更新するか。<br /><br /> 配置した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のメタデータ (計算など) をどのように更新するか。|このトピックの「[配置方法](#bkmk_meth) 」を参照してください。|  
-|インターネット経由での [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データへのアクセスをユーザーに許可するか。|[インターネット インフォメーション サービスで Analysis Services への HTTP アクセスを構成する&#40;IIS&#41; 8.0](../instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
+|インターネット経由での [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データへのアクセスをユーザーに許可するか。|[インターネット インフォメーション サービスでの Analysis Services への HTTP アクセスの構成&#40;IIS&#41; 8.0](../instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データへの連続クエリ アクセスを提供するか。|[Analysis Services の配置に関する要件と注意点](requirements-and-considerations-for-analysis-services-deployment.md)|  
 |リンクされているオブジェクトまたはリモート パーティションを使用して、分散環境にオブジェクトを配置するか。|[ローカル パーティションの作成と管理 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)[リモート パーティションの作成と管理 (Analysis Services)](create-and-manage-a-remote-partition-analysis-services.md) および [リンク メジャー グループ](linked-measure-groups.md)。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データをどのように保護するか。|[オブジェクトと操作へのアクセスの承認&#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  

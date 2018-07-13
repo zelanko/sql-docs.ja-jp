@@ -1,5 +1,5 @@
 ---
-title: 単項演算子 (ビジネス インテリジェンス ウィザード) を指定する |Microsoft ドキュメント
+title: 単項演算子 (ビジネス インテリジェンス ウィザード) を指定する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.addcustomaggregation.customrollups.f1
 ms.assetid: 07e4a56c-37b3-43bf-a404-bf22b2b8cfca
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4edbf414a962f5ed057c68fe824d09200f4ea3be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc5c8210dee9960dbb40320d1923d8e8681b4988
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237322"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>[単項演算子の指定] (ビジネス インテリジェンス ウィザード)
   **[単項演算子の指定]** ページを使用すると、単項演算子 (通常の集計に使用) または重み計数を表す値 (加重計算される集計に使用) を含む列の親子リレーションシップを指定できます。通常の加重計算される集計の詳細については、「[集計と集計デザイン](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)」を参照してください。  

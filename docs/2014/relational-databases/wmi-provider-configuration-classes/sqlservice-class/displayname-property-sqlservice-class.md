@@ -1,5 +1,5 @@
 ---
-title: DisplayName プロパティ (SqlService クラス) |Microsoft ドキュメント
+title: DisplayName プロパティ (SqlService クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DisplayName property
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a6cb6dcbc9872f049e3c534296a26b1028b991b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2295409a459c9b5264876cc4201beb86cae9a356
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177329"
 ---
 # <a name="displayname-property-sqlservice-class"></a>DisplayName プロパティ (SqlService クラス)
   サービスの表示名を取得します。  
@@ -58,6 +58,6 @@ mysqlservice.DisplayName = "Atdisk"
 ```  
   
 ## <a name="see-also"></a>参照  
- [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

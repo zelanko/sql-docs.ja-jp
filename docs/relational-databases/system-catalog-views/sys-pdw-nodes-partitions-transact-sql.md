@@ -1,37 +1,35 @@
 ---
-title: sys.pdw_nodes_partitions (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.pdw_nodes_partitions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
-caps.latest.revision: 11
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f05d5ce80bf7ca286050a160d5cfbc41a689e67e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: 697c602b41c1225202f12cae52297009ae1e99dc
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180228"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36798217"
 ---
 # <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  すべてのテーブルとインデックスでのほとんどの種類の各パーティションの行が含まれています、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]データベース。 すべてのテーブルとインデックスには明示的にパーティション分割されているかどうかを示す、少なくとも 1 つのパーティションが含まれます。  
+  すべてのテーブルとインデックスのほとんどの種類の各パーティションの行を格納する[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]データベース。 すべてのテーブルとインデックスには明示的にパーティション分割されているかどうかを示す、少なくとも 1 つのパーティションが含まれます。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |partition_id|`bigint`|パーティションの id です。 データベース内で一意です。|  
 |object_id|`int`|このパーティションが所属するオブジェクトの id。 すべてのテーブルまたはビューは 1 つ以上のパーティションで構成されます。|  
@@ -43,22 +41,22 @@ ms.locfileid: "33180228"
 |data_compression_desc|`nvarchar(60)`|各パーティションの圧縮状態を示します。 有効値は、NONE、ROW、および PAGE です。|  
 |pdw_node_id|`int`|一意の識別子、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノード。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>各配布内で各パーティション内の例 a: 表示行 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>各配布内で各パーティション内の表示行の例 a: 
 
 適用対象: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
-各配布内で各パーティションで行の数を表示するには、使用[DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md)です。
+各配布内で各パーティションで行の数を表示する使用[DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md)します。
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>例 b: 使用してシステム ビューをテーブルの各配布の各パーティションの行を表示するには
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>例 b: 使用のシステム ビュー、テーブルの各配布の各パーティションの行を表示するには
 
 適用対象: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
-このクエリは、テーブルの各配布の各パーティションに行の数を返します`myTable`です。  
+このクエリは、各パーティション内の各ディストリビューション テーブルの行の数を返します`myTable`します。  
  
 ```  
 SELECT o.name, pnp.index_id, pnp.partition_id, pnp.rows,   
@@ -77,7 +75,7 @@ ORDER BY o.name, pnp.index_id, pnp.partition_id;
 ```    
   
 ## <a name="see-also"></a>参照  
- [SQL Data Warehouse と並列データ ウェアハウスのカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
 

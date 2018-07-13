@@ -1,5 +1,5 @@
 ---
-title: Integration Services の機能とタスク |Microsoft ドキュメント
+title: Integration Services の機能とタスク |Microsoft Docs
 ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - development [Integration Services]
 - Integration Services, programming
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 611219cbefc037bc0719b1f48b46178d6eef8af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 451b29e05d7bcb3dfca26a1f6c5287bf47e20f90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186629"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services の機能とタスク
-  情報を検索-デザイナー、開発者、アナリスト、管理者または — 作成および開発のために必要な[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージです。 開発中のアプリケーションや Web サイトにパッケージを組み込む方法についても解説されています。  
+  すべての人が情報の検索-デザイナーや開発者、アナリスト、管理者-作成および開発する必要があります[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージ。 開発中のアプリケーションや Web サイトにパッケージを組み込む方法についても解説されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Integration Services &#40;SSIS&#41;と Studio の環境](integration-services-ssis-development-and-management-tools.md)  
+ [Integration Services &#40;SSIS&#41;と Studio 環境](integration-services-ssis-development-and-management-tools.md)  
   
  [Integration Services &#40;SSIS&#41; パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)  
   

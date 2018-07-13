@@ -1,5 +1,5 @@
 ---
-title: DSVTableBinding データ型 (ASSL) |Microsoft ドキュメント
+title: DSVTableBinding データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DSVTableBinding data type
 ms.assetid: 149e753f-6218-4805-9223-7155b6827e64
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75a84b2709d2c85ac0dfa8ce4538406c3daa7a61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d4748adb2ca6b26c42bee9b0ba5ea502d973679
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195992"
 ---
 # <a name="dsvtablebinding-data-type-assl"></a>DSVTableBinding データ型 (ASSL)
   テーブル間のバインドを表す派生データ型を定義し、 [DataSourceView](../objects/datasourceview-element-assl.md)要素。  
@@ -64,7 +64,7 @@ ms.locfileid: "36071765"
 ## <a name="remarks"></a>コメント  
  詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、`Binding`型との継承階層`Binding`型を参照してください[バインド](binding-data-type-assl.md)要素。  
   
- ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.DSVTableBinding>します。  
   

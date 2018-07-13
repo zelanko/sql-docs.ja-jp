@@ -1,5 +1,5 @@
 ---
-title: ソース キューブ ディメンション (データ マイニング ウィザード) の選択 |Microsoft ドキュメント
+title: ソース キューブ ディメンション (データ マイニング ウィザード) を選択します |。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectsourcecube.f1
 ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ddd4affa954cf080cec3ad1ca37df82d494221e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 613847dca4d6113a8acfc8079ebc1e7a97ef3311
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192484"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>[ソース キューブ ディメンションの選択] (データ マイニング ウィザード)
   **[ソース キューブ ディメンションの選択]** ページを使用すると、分析する対象のケースを含んでいるキューブからディメンションを選択できます。 たとえば、人口統計に基づいて顧客の購入行動を分析するモデルを構築する場合は、Customer ディメンションを選択します。一般に、このディメンションには、顧客ごとに固有のレコードが含まれているほか、性別、居住地、所得など、人口統計の内訳を表す各種の属性が含まれます。 ウィザードの後半では、このケース テーブルに関連したテーブルを追加できます。たとえば、顧客が購入した製品を表す、入れ子になったテーブルを追加することも可能です。  

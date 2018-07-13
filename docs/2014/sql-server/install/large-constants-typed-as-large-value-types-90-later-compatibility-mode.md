@@ -1,5 +1,5 @@
 ---
-title: 大きな定数が互換性モード 90 以上で大きな値の型として型指定された |Microsoft ドキュメント
+title: 大きな定数が互換性モード 90 以上に大きな値の型として型指定された |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binary constants
 - CHARINDEX function
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - PATINDEX function
 ms.assetid: 6e309fa0-5fb9-45a1-9739-f13fae525bfe
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d40faa01af8e275e7d085a06475322e093786150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 59f9afc3c8f083da2c1d3934d5aea5b541c6c527
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257768"
 ---
 # <a name="large-constants-are-typed-as-large-value-types-in-90-or-later-compatibility-modes"></a>90 以上の互換性モードでは大きな定数が大きな値の型として指定される
   アップグレード アドバイザーは、大きな定数の存在を検出しました。 サイズが 8,000 バイトを超える文字列定数とバイナリ定数は、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ではラージ オブジェクト データ型として扱われます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、大きなサイズの文字定数、Unicode 定数、およびバイナリ定数が大きな値の型として指定されます。  

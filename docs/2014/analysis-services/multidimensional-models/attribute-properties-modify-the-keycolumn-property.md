@@ -1,5 +1,5 @@
 ---
-title: 属性の KeyColumn プロパティを変更する |Microsoft ドキュメント
+title: 属性の KeyColumn プロパティの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binding attributes [Analysis Services]
 - attributes [Analysis Services], binding
 - key columns [Analysis Services]
 ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68a1759aa5a527037c87efc6763ac81e40958d2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10b3735131b85bd071b8f8333bc663f1ed4e109a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185354"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>属性の KeyColumns プロパティの変更
   属性の **KeyColumns** プロパティは変更できます。 たとえば、単一キーではなく複合キーをその属性のキーとして指定する場合があります。  
@@ -38,7 +38,7 @@ ms.locfileid: "36073123"
   
          — または —  
   
-    -   キューブ デザイナーで、上、 **キューブ構造**  タブで、キューブ ディメンションを展開し、**ディメンション**ペインをクリック**編集\<ディメンション >** です。  
+    -   キューブ デザイナーの上、**キューブ構造** タブで、キューブ ディメンションを展開し、**ディメンション**ウィンドウをクリックします**編集\<ディメンション >**。  
   
 3.  **[ディメンション構造]** タブの **[属性]** ペインで、変更する **KeyColumns** プロパティを含む属性をクリックします。  
   

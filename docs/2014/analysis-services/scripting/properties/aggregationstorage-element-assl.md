@@ -1,5 +1,5 @@
 ---
-title: AggregationStorage 要素 (ASSL) |Microsoft ドキュメント
+title: AggregationStorage 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationStorage element
 ms.assetid: dd082388-534d-4847-9232-8f80fc9fe96e
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb4bfcab9de31851c054a5f24382a01af1d2d9b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1f66a2161d7c5d5983366fd67cd695e7d90c4917
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200082"
 ---
 # <a name="aggregationstorage-element-assl"></a>AggregationStorage 要素 (ASSL)
   集計の保存方法を識別します。  
@@ -51,7 +51,7 @@ ms.locfileid: "36071278"
 |特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*通常*|  
+|既定値|*正規表現*|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
@@ -66,12 +66,12 @@ ms.locfileid: "36071278"
   
 |値|説明|  
 |-----------|-----------------|  
-|*通常*|集計データは既定の方法で保存されます。|  
+|*正規表現*|集計データは既定の方法で保存されます。|  
 |*MolapOnly*|集計データは、多次元 OLAP (MOLAP) ストレージのみを使用して保存されます。|  
   
- *MolapOnly*オプションは、に対してのみ使用可能な[パーティション](../objects/partition-element-assl.md)要素。  
+ *MolapOnly*オプションにのみ使用できますが、[パーティション](../objects/partition-element-assl.md)要素。  
   
- 許可される値に対応する列挙`AggregationStorage`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ProactiveCachingAggregationStorage>します。  
+ 許容された値に対応する列挙体`AggregationStorage`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ProactiveCachingAggregationStorage>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

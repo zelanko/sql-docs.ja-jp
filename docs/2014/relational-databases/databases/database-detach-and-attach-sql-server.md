@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [SQL Server], detaching
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 caps.latest.revision: 96
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 421c743456b6a0a2303b2ec0407af566c77ab39e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 11f01f4fe44284d94aa0cfb4d3c008c758a930a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227742"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>データベースのデタッチとアタッチ (SQL Server)
   データベースのデータ ファイルおよびトランザクション ログ ファイルは、デタッチして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の同一または別のインスタンスに再度アタッチすることができます。 同一コンピューターの別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにデータベースを変更したり、データベースを移動したりする場合、データベースをデタッチしてアタッチする操作が便利です。  
@@ -89,14 +89,14 @@ ms.locfileid: "36071419"
 3.  データベースをデタッチし直します。  
   
 ##  <a name="AttachDb"></a> データベースのインポート  
- コピーまたはデタッチした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースはアタッチできます。 接続するときに、[!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)]サーバー インスタンス、データベースに他のファイルの場合と同じと一緒に以前の場所からファイルが接続されているカタログ[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 詳細については、「 [SQL Server 2005 からのフルテキスト検索のアップグレード](../search/upgrade-full-text-search.md)」を参照してください。  
+ コピーまたはデタッチした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースはアタッチできます。 接続するときに、[!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)]サーバー インスタンス、その他のデータベース ファイルと一緒にと同様の以前の場所からファイルがアタッチされているカタログ[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]します。 詳細については、「 [SQL Server 2005 からのフルテキスト検索のアップグレード](../search/upgrade-full-text-search.md)」を参照してください。  
   
  データベースをアタッチするときは、すべてのデータ ファイル (MDF ファイルおよび NDF ファイル) を利用できる状態にする必要があります。 データベースを最初に作成したときか最後にアタッチしたときとデータ ファイルのパスが異なる場合、ファイルの現在のパスを指定する必要があります。  
   
 > [!NOTE]  
 >  アタッチ中のプライマリ データ ファイルが読み取り専用の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ではデータベースが読み取り専用であると想定されます。  
   
- 暗号化されたデータベースがのインスタンスにアタッチされる最初と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データベース所有者は、次のステートメントを実行することによって、データベースのマスター_キーを開く必要があります OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`。*'**. ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY ステートメントを実行してマスター キーの自動暗号化解除を有効にすることをお勧めします。 詳細については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)」を参照してください。  
+ 暗号化されたデータベースが最初のインスタンスに接続とき[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データベース所有者は、次のステートメントを実行して、データベースのマスター_キーを開く必要があります: OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`*'**. ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY ステートメントを実行してマスター キーの自動暗号化解除を有効にすることをお勧めします。 詳細については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)」を参照してください。  
   
  次に示すように、ログ ファイルをアタッチするための要件の一部は、データベースが読み書き可能か読み取り専用かによって異なります。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36071419"
   
      読み書き可能なデータベースのログ ファイルが 1 つで、そのファイルの新しい場所を指定しない場合、アタッチ操作ではファイルの古い場所が検索されます。 古いログ ファイルが見つかった場合、データベースがクリーンにシャットダウンされたかどうかにかかわらず、そのファイルが使用されます。 しかし、古いログ ファイルが見つからなかった場合、およびデータベースがクリーンにシャットダウンされたもののアクティブなログ チェーンがない場合、アタッチ操作によってそのデータベースの新しいログ ファイルが作成されます。  
   
--   アタッチされているプライマリ データ ファイルが読み取り専用の場合、[!INCLUDE[ssDE](../../includes/ssnoversion-md.md)]プライマリ ファイルに格納されているログの場所を更新できません。  
+-   関連付けられているプライマリ データ ファイルが読み取り専用の場合、[!INCLUDE[ssDE](../../includes/ssnoversion-md.md)]プライマリ ファイルに格納されているログの場所を更新することはできません。  
   
   
   

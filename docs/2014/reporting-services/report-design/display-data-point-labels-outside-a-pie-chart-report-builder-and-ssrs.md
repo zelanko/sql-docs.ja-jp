@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 959b7574-cf43-470b-b592-4944d8a9948f
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d6232128f0c718b17c93471b245476c31f379f09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 759f9ff43075f5285fba0c3799577855c5e8f20d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071141"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208481"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、円グラフのラベル付けは、データのいくつかのスライスのみにラベルが表示されるように最適化されています。 円グラフに含まれるスライスが多すぎると、ラベルが重なる可能性があります。 1 つの解決策として、円グラフの外側にラベルを表示する方法があります。これにより、長いデータ ラベル用に領域を確保できます。 ラベルがまだ重なっていることが判明した場合は、3D を有効にすることでラベル用の領域をさらに確保することができます。 これにより、円グラフの直径が小さくなり、グラフの周囲でさらに領域が確保されます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36071141"
   
 5.  **[PieLabelStyle]** プロパティを **Outside**に設定します。  
   
-6.  設定、`PieLineColor`プロパティを**黒**です。 PieLineColor プロパティでは、各データ ポイント ラベルの引き出し線を定義します。  
+6.  設定、`PieLineColor`プロパティを**黒**します。 PieLineColor プロパティでは、各データ ポイント ラベルの引き出し線を定義します。  
   
 ### <a name="to-prevent-overlapping-labels-displayed-outside-a-pie-chart"></a>円グラフの外側に表示されるラベルの重なりを防ぐには  
   

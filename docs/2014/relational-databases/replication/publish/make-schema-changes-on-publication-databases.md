@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
 - snapshot replication [SQL Server], replicating schema changes
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: 71
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c5fdf15e3038f865bb123f3dd79321d036813281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4c84487775fb5eb3839910fd800489927edcc77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172733"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>パブリケーション データベースでのスキーマの変更
   レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 パブリッシュされた適切なオブジェクトに対して、以下に示すスキーマ変更を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーで実行した場合、既定ではすべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。  
@@ -61,7 +61,7 @@ ms.locfileid: "36070493"
   
 -   スキーマ変更は、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の制限の対象となります。 たとえば、ALTER TABLE で主キー列を変更することはできません。  
   
--   データ型マッピングは、初期スナップショットに対してのみ実行されます。 スキーマ変更で、以前のバージョンのデータ型へのマッピングは行われません。 たとえば場合、ステートメント`ALTER TABLE ADD datetime2 column`で使用される[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]、データ型に変換されません`nvarchar`の[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]サブスクライバーです。 場合によっては、スキーマ変更がパブリッシャーでブロックされます。  
+-   データ型マッピングは、初期スナップショットに対してのみ実行されます。 スキーマ変更で、以前のバージョンのデータ型へのマッピングは行われません。 たとえば場合、ステートメント`ALTER TABLE ADD datetime2 column`で使用されて[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]、データ型には翻訳されません`nvarchar`の[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]サブスクライバー。 場合によっては、スキーマ変更がパブリッシャーでブロックされます。  
   
 -   スキーマ変更の反映を許可するようにパブリケーションが設定されている場合は、関連するスキーマ オプションがパブリケーションのアーティクルに対してどのように設定されているかに関係なく、スキーマ変更が反映されます。 たとえば、外部キー制約をレプリケートしないようにテーブル アーティクルに対して指定している場合に、外部キーをテーブルに追加する ALTER TABLE コマンドをパブリッシャーで実行すると、サブスクライバーで外部キーがテーブルに追加されます。 これを回避するには、ALTER TABLE コマンドを実行する前にスキーマ変更の反映を無効にします。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36070493"
         |`filestream`|変更を許可する|変更をブロックする|変更をブロックする|  
         |`date`、`time`、`datetime2`、および `datetimeoffset`|変更を許可する|変更を許可する<sup>1</sup>|変更をブロックする|  
   
-         <sup>1</sup> SQL Server Compact サブスクライバー、サブスクライバーでのこれらのデータ型に変換します。  
+         <sup>1</sup> SQL Server Compact サブスクライバー、サブスクライバーでは、これらのデータ型に変換します。  
   
 -   スキーマ変更の適用時にエラー (サブスクライバーで利用できないテーブルを参照する外部キーを追加した結果のエラーなど) が発生すると、同期が失敗し、サブスクリプションを再初期化しなければならなくなります。  
   

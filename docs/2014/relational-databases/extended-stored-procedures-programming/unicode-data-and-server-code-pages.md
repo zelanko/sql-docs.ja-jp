@@ -1,5 +1,5 @@
 ---
-title: Unicode データとサーバー コード ページ |Microsoft ドキュメント
+title: Unicode データおよびサーバー コード ページ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd532c5b3d564051c8d32171e861791017e8ab3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: fff43500155bdd6fc4fece74a018dc6dd4f7f0fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199252"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode データおよびサーバー コード ページ
     
@@ -33,20 +33,20 @@ ms.locfileid: "36070936"
   
  拡張ストアド プロシージャ API は、Unicode データを扱うことはできますが、Unicode メタデータを扱うことはできません。 #define Unicode ディレクティブは、拡張ストアド プロシージャ API にまったく影響しません。  
   
- 拡張ストアド プロシージャ API が返したメタデータ、または拡張ストアド プロシージャ アプリケーションによって拡張ストアド プロシージャ API に渡されたメタデータは、すべてサーバーのマルチバイト コード ページにあることが想定されています。 拡張ストアド プロシージャ API サーバー アプリケーションの既定のコード ページは呼び出すことによって取得できるアプリケーションが実行されているコンピューターの ANSI コード ページ**srv_pfield**フィールド パラメーターが SRV_ に設定SPROC_CODEPAGE です。  
+ 拡張ストアド プロシージャ API が返したメタデータ、または拡張ストアド プロシージャ アプリケーションによって拡張ストアド プロシージャ API に渡されたメタデータは、すべてサーバーのマルチバイト コード ページにあることが想定されています。 拡張ストアド プロシージャ API サーバー アプリケーションの既定のコード ページは呼び出すことによって取得できるアプリケーションが実行されているコンピューターの ANSI コード ページ**srv_pfield** srv _ に設定するフィールド パラメーターを使用SPROC_CODEPAGE します。  
   
  Unicode 対応の拡張ストアド プロシージャ API アプリケーションの場合は、Unicode メタデータの列名やエラー メッセージなどを拡張ストアド プロシージャ API に渡す前に、マルチバイト データに変換する必要があります。  
   
 ## <a name="example"></a>例  
  次の拡張ストアド プロシージャは、上記で説明した Unicode 変換の例です。 次の点に注意してください。  
   
--   列のデータが Unicode データとして渡される**srv_describe**列が srvnvarchar 記述されているためです。  
+-   列のデータが Unicode データとして渡される**srv_describe**列が srvnvarchar 説明されているためです。  
   
--   列名のメタデータに渡される**srv_describe**マルチバイト データとして。  
+-   列名のメタデータが渡される**srv_describe**マルチバイト データとして。  
   
-     拡張ストアド プロシージャ呼び出し**srv_pfield** SRV_SPROC_CODEPAGE に設定のマルチバイト コード ページを取得するフィールドのパラメーターを持つ[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+     拡張ストアド プロシージャ呼び出し**srv_pfield**フィールド パラメーターを SRV_SPROC_CODEPAGE に設定すると取得のマルチバイト コード ページと[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
--   エラー メッセージに渡される**srv_sendmsg**マルチバイト データとして。  
+-   エラー メッセージが渡される**srv_sendmsg**マルチバイト データとして。  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  

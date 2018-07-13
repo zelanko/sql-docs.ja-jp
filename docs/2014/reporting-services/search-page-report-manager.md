@@ -1,5 +1,5 @@
 ---
-title: '[検索] ページ (レポート マネージャー) |Microsoft ドキュメント'
+title: '[検索] ページ (レポート マネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4bc093b32a6fe3b5311bba109a7f4e672dc1fc9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8fbd4956e5e836def836acf1693fe9f548dc081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192992"
 ---
 # <a name="search-page-report-manager"></a>[検索] ページ (レポート マネージャー)
   レポート、リンク レポート、レポート モデル、共有データ ソース、フォルダー、またはリソースに対して指定された検索操作の結果を表示するには、[検索結果] ページを使用します。 検索結果はアルファベット順に表示されます。 型、名前、または説明で並べ替えることができます。  
@@ -38,7 +38,7 @@ ms.locfileid: "36072485"
 2.  ページ上部の **[検索]** ボックスに検索条件を入力します。 Enter キーを押し、検索の矢印をクリックします。  
   
 ## <a name="options"></a>および  
- **Delete**  
+ **削除**  
  レポート サーバー データベースからアイテムを削除する場合にクリックします。  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: DBSCHEMA_CATALOGS 行セット |Microsoft ドキュメント
+title: DBSCHEMA_CATALOGS 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DBSCHEMA_CATALOGS rowset
 ms.assetid: f02dc75d-5442-4eea-b33a-567dc816be7a
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df3b146d3e1015fd4a78254be0d8a7a6083991d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2151d55ce06a8111ab1707e5673ee6d6982ef05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187049"
 ---
 # <a name="dbschemacatalogs-rowset"></a>DBSCHEMA_CATALOGS 行セット
   データベース管理システム (DBMS) からアクセス可能なカタログに関連付けられている物理属性を識別します。  
@@ -38,7 +38,7 @@ ms.locfileid: "36071764"
 |-----------------|--------------------|------------|-----------------|  
 |`CATALOG_NAME`|`DBTYPE_WSTR`|255|カタログ名。 null にすることはできません。|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||テーブルに関して人が認識できる説明。|  
-|`ROLES`|`DBTYPE_WSTR`||現在のユーザーが所属するロールのコンマ区切りの一覧。<br /><br /> アスタリスク (\*)、現在のユーザーがサーバーまたはデータベース管理者の場合は、ロールとして含まれます。<br /><br /> いずれかのロールで動的なセキュリティを使用する場合は、`Username` が `ROLES` に追加されます。|  
+|`ROLES`|`DBTYPE_WSTR`||現在のユーザーが所属するロールのコンマ区切りの一覧。<br /><br /> アスタリスク (\*) は、現在のユーザーがサーバーまたはデータベース管理者の場合、ロールとして含まれます。<br /><br /> いずれかのロールで動的なセキュリティを使用する場合は、`Username` が `ROLES` に追加されます。|  
 |`DATE_MODIFIED`|`DBTYPE_DBTIMESTAMP`||カタログの最後変更日。|  
   
  行セットは、`CATALOG_NAME` を基準に並べ替えることができます。  
