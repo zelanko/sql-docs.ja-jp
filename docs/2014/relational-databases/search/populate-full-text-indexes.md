@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index populations [full-text search]
 - incremental populations [full-text search]
@@ -25,20 +24,20 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 caps.latest.revision: 74
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ce7d4774b40f43cc6a88c414cc18f7005a137e0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: cbe50e41fb353e092edddf2eacc2f189d635aa5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162263"
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
   フルテキスト インデックスの作成と保持では、 *作成* (または *クロール*) と呼ばれるプロセスを使用してインデックスが作成されます。  
   
-##  <a name="types"></a> 作成の種類  
+##  <a name="types"></a> 種類の作成  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次の種類の作成をサポートしています。 完全作成、変更の追跡に基づく自動または手動作成、およびタイムスタンプに基づく増分作成します。  
   
 ### <a name="full-population"></a>すべてのカタログの作成  
@@ -52,7 +51,7 @@ ms.locfileid: "36177487"
  必要に応じて、変更の追跡を使用して、完全作成が最初に実行された後のフルテキスト インデックスを保持することができます。 変更の追跡には若干のオーバーヘッドが伴います。これは、前回のカタログ作成以降にベース テーブルに対して行われた変更を追跡するテーブルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で保持されるためです。 変更の追跡を使用すると、ベース テーブルまたはインデックス付きビューで更新、削除、または挿入によって変更された行の記録が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で保持されます。 WRITETEXT および UPDATETEXT によるデータの変更は、フルテキスト インデックスには反映されず、変更の監視でも取得されません。  
   
 > [!NOTE]  
->  含んでいるテーブル、`timestamp`列、増分作成を行うこともできます。  
+>  含んでいるテーブルを`timestamp`列で、増分作成を使用することができます。  
   
  インデックス作成時に変更の追跡を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で新しいフルテキスト インデックスが作成された直後にそのインデックスですべてのカタログの作成が実行されます。 それ以降は、変更が追跡されてフルテキスト インデックスに反映されます。 変更の追跡には、自動 (CHANGE_TRACKING AUTO オプション) と手動 (CHANGE_TRACKING MANUAL オプション) の 2 種類があります。 既定では自動で変更が追跡されます。  
   
@@ -93,11 +92,11 @@ ms.locfileid: "36177487"
 ### <a name="incremental-timestamp-based-population"></a>タイムスタンプに基づく増分作成  
  増分作成は、フルテキスト インデックスに手動でカタログを作成するためのもう 1 つのメカニズムです。 増分作成は、CHANGE_TRACKING が MANUAL または OFF に設定されているフルテキスト インデックスに対して実行できます。 フルテキスト インデックスの最初のカタログ作成が増分作成の場合、すべての行にインデックスが付けられるため、完全作成と同じになります。  
   
- 増分作成の要件は、インデックス付きテーブルの列がある必要があります、`timestamp`データ型。 `timestamp` 型の列が存在しない場合には、増分作成を実行できません。 せずにテーブルの増分作成の要求、`timestamp`列の完全作成操作の結果します。 また、前回のカタログ作成後にテーブルのフルテキスト インデックスに影響するようなメタデータの変更があった場合、増分作成の要求はすべてのカタログの作成として実行されます。 これには、列、インデックス、またはフルテキスト インデックスの定義を変更したことによるメタデータの変更が含まれます。  
+ 増分作成の要件は、インデックス付きテーブルの列がある必要があります、`timestamp`データ型。 `timestamp` 型の列が存在しない場合には、増分作成を実行できません。 いないテーブルで増分作成の要求、`timestamp`列の完全作成操作の結果します。 また、前回のカタログ作成後にテーブルのフルテキスト インデックスに影響するようなメタデータの変更があった場合、増分作成の要求はすべてのカタログの作成として実行されます。 これには、列、インデックス、またはフルテキスト インデックスの定義を変更したことによるメタデータの変更が含まれます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`timestamp` 列を使用して前回の作成後に変更された行が識別されます。 増分作成では、前回のカタログ作成後、または作成中に追加、削除、または変更された行のフルテキスト インデックスが更新されます。 テーブルで大量の挿入が行われた場合は、手動でのカタログ作成よりも増分作成を使用した方が効率的です。  
   
- 作成が終わると、Full-Text Engine は新しい `timestamp` 型の値を記録します。 この値が最大`timestamp`SQL Gatherer が検出した値です。 今後、増分作成を開始するときには、この値が使用されます。  
+ 作成が終わると、Full-Text Engine は新しい `timestamp` 型の値を記録します。 この値は、最大`timestamp`SQL Gatherer が検出された値。 今後、増分作成を開始するときには、この値が使用されます。  
   
  増分作成を実行するには、START INCREMENTAL POPULATION 句を指定して ALTER FULLTEXT INDEX ステートメントを実行します。  
   
@@ -188,7 +187,7 @@ GO
      このページでは、フルテキスト インデックスのベース テーブルまたはインデックス付きビューの増分作成を開始する SQL Server エージェント ジョブのスケジュールを作成または管理できます。  
   
     > [!IMPORTANT]  
-    >  ベース テーブルまたはビューでの列が含まれない場合、`timestamp`型では、完全作成が実行されます。  
+    >  ベース テーブルまたはビューの列がない場合、`timestamp`データ型の完全作成が実行されます。  
   
      次のオプションがあります。  
   
@@ -213,15 +212,15 @@ GO
 
   
 ##  <a name="crawl"></a> フルテキスト作成 (クロール) でエラーのトラブルシューティング  
- クロール時にエラーが発生すると、フルテキスト検索クロール ログ記録機能によってクロール ログが作成および保持されます。このログはプレーンテキスト ファイルです。 各クロール ログは特定のフルテキスト カタログに対応します。 によって、特定のインスタンスの既定のクロール ログ、ここでは、最初のインスタンス内にある %ProgramFiles%\Microsoft SQL Server\MSSQL12 です。MSSQLSERVER\MSSQL\LOG フォルダーです。 クロール ログは次のような規則に従って命名されます。  
+ クロール時にエラーが発生すると、フルテキスト検索クロール ログ記録機能によってクロール ログが作成および保持されます。このログはプレーンテキスト ファイルです。 各クロール ログは特定のフルテキスト カタログに対応します。 この場合は、特定のインスタンスに対して既定のクロール ログでは、最初のインスタンスが %programfiles%\microsoft SQL Server\MSSQL12 に配置が。MSSQLSERVER\MSSQL\LOG フォルダーです。 クロール ログは次のような規則に従って命名されます。  
   
  SQLFT\<DatabaseID >\<FullTextCatalogID >。ログ [\<n >]  
   
  <`DatabaseID`>  
- データベースの ID です。 <`dbid`> は 5 桁がゼロで始まる番号。  
+ データベースの ID です。 <`dbid`> は 5 桁のゼロで始まる番号。  
   
  <`FullTextCatalogID`>  
- フルテキスト カタログ ID です。 <`catid`> は 5 桁がゼロで始まる番号。  
+ フルテキスト カタログ ID です。 <`catid`> は 5 桁のゼロで始まる番号。  
   
  <`n`>  
  同じフルテキスト カタログに 1 つ以上のクロール ログが存在することを示す整数です。  

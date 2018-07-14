@@ -1,5 +1,5 @@
 ---
-title: SetStringValue メソッド (SqlServiceAdvancedProperty クラス) |Microsoft ドキュメント
+title: SetStringValue メソッド (SqlServiceAdvancedProperty クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetStringValue method
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a62c17ed296d7d35be0ee4954583d0f6ab7b1e29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: be05ab6bccb772ef4f2bb0a65eed716f9633edff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166723"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>SetStringValue メソッド (SqlServiceAdvancedProperty クラス)
   プロパティの文字列値を設定します。  
@@ -58,9 +58,9 @@ StrValue
  `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
 ## <a name="remarks"></a>コメント  
- プロパティ値の型である必要があります`string`する文字列値にプロパティを設定することです。  
+ プロパティ値の型である必要があります`string`文字列値にプロパティを設定できるようにします。  
   
 ## <a name="see-also"></a>参照  
- [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

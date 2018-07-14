@@ -1,5 +1,5 @@
 ---
-title: データ マイニング ウィザード |Microsoft ドキュメント
+title: データ マイニング ウィザード |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Mining Wizard
 - Analysis Services Data Mining Wizard
 ms.assetid: f949a5f0-d8f5-4da1-a9f8-200b918e29ff
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 442e77491d2254c230c60c99c8f1ede91117d171
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d309e9ce8d0ccfd48402be1bf6ce8f3f2ff2c3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263828"
 ---
 # <a name="data-mining-wizards"></a>データ マイニング ウィザード
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用するウィザードが用意されて[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]と[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]です。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用するためのウィザードを提供[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]と[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]します。  
   
  次の表に、データ マイニングのソース、ビュー、およびオブジェクトを作成するために使用できるウィザードを示します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36176518"
   
 ## <a name="see-also"></a>参照  
  [データ マイニング ツール](data-mining/data-mining-tools.md)   
- [基本的なデータ マイニングのチュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [基本的なデータ マイニング チュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [OLAP マイニング構造を作成します。](data-mining/create-an-olap-mining-structure.md)   
  [リレーショナル マイニング構造を作成します。](data-mining/create-a-relational-mining-structure.md)   
  [新しいリレーショナル マイニング構造を作成します。](data-mining/create-a-new-relational-mining-structure.md)   

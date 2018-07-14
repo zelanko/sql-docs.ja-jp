@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7ae6615491a300a5e5270f417522e9613914319
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e5e75f62bc6d0b5d8da6a0ce244dfde1939155e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188339"
 ---
 # <a name="sql-trace"></a>SQL トレース (SQL Trace)
   SQL トレースでは、トレース定義に一覧表示されているイベント クラスのインスタンスであるイベントが収集されます。 このようなイベントは、フィルターによってトレースから除外したり、対象のキューに登録したりすることができます。 イベントの対象には、ファイルまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を指定できます。SMO では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を管理するアプリケーションでトレース情報を使用できます。  
@@ -137,13 +137,13 @@ ms.locfileid: "36178179"
 |**TargetUserName**|39|データベース ユーザーを対象とした操作 (ユーザーへの権限の許可など) を行う場合の対象となるユーザーの名前。|  
 |**TextData**|1|トレースにキャプチャされるイベント クラスに依存するテキスト値。 ただし、パラメーター化クエリをトレースする場合は、変数は **TextData** 列のデータ値と共には表示されません。|  
 |**Transaction ID**|4|トランザクションに対してシステムが割り当てた ID。|  
-|**Type**|57|トレースにキャプチャされるイベント クラスに依存する整数値。|  
+|**型**|57|トレースにキャプチャされるイベント クラスに依存する整数値。|  
 |**Writes**|17|イベントの代わりにサーバーによって実行される物理ディスクの書き込み操作回数。|  
 |**XactSequence**|50|現在のトランザクションを記述するトークン。|  
   
- <sup>1</sup>これらのデータ列は既定ですべてのイベントについて作成されます。  
+ <sup>1</sup>これらのデータ列がすべてのイベントの既定で設定されます。  
   
- <sup>2</sup>の詳細については、 **ObjectType**データ列を参照してください[ObjectType トレース イベント列](../event-classes/objecttype-trace-event-column.md)です。  
+ <sup>2</sup>の詳細については、 **ObjectType**データの列を参照してください[ObjectType トレース イベント列](../event-classes/objecttype-trace-event-column.md)します。  
   
 ## <a name="sql-trace-tasks"></a>SQL トレースのタスク  
   

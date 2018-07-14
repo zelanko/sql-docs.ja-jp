@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: 65
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6747eb3df75a585236e85de6bc0103241f5b6d8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 30a0bf869529c81b86e05a9bf6a8be8b43573705
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187019"
 ---
 # <a name="database-properties-options-page"></a>[データベースのプロパティ] \([オプション] ページ)
-  このページを使用すると、選択されているデータベースのオプションを表示または変更できます。 このページで利用できるオプションの詳細については、次を参照してください。 [ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)です。  
+  このページを使用すると、選択されているデータベースのオプションを表示または変更できます。 このページで使用できるオプションについては、次を参照してください。 [ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)します。  
   
 ## <a name="page-header"></a>ページ ヘッダー  
  **[照合順序]**  
@@ -59,11 +59,11 @@ ms.locfileid: "36176907"
  データベースで古い最適化統計を自動的に更新するかどうかを指定します。 設定可能な値は `True` および `False` です。 `True` を指定すると、クエリの最適化に必要な統計が期限切れの場合、最適化時に自動的に構築されます。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)」を参照してください。  
   
  **[統計の非同期的自動更新]**  
- ときに`True`、古い統計の自動更新を開始するクエリをコンパイルする前に更新する統計情報を待ちません。 後続のクエリは、更新された統計が使用可能になった時点で、その統計を使用します。  
+ ときに`True`、古い統計の自動更新を開始するクエリをコンパイルする前に更新する統計を待ちません。 後続のクエリは、更新された統計が使用可能になった時点で、その統計を使用します。  
   
- ときに`False`クエリ、古い統計の自動更新を開始するを待って、更新された統計はクエリ最適化プランで使用できます。  
+ ときに`False`、古い統計の自動更新を開始するクエリが、更新された統計はクエリ最適化プランで使用できるまでに待機します。  
   
- このオプションを設定`True`及ぼしませんしない限り、**統計の自動更新**にも設定されている`True`です。  
+ このオプションを設定`True`及ぼしませんしない限り、**統計の自動更新**にも設定されている`True`します。  
   
 ## <a name="containment"></a>Containment  
  包含データベースでは、通常サーバー レベルで構成する設定の一部をデータベース レベルで構成できます。  
@@ -101,16 +101,16 @@ ms.locfileid: "36176907"
   
 ## <a name="miscellaneous"></a>その他  
  **[ANSI NULL 既定値]**  
- すべてのユーザー定義データ型またはとして明示的に定義されていない列に対して null 値を許可する`NOT NULL`中に、`CREATE TABLE`または`ALTER TABLE`ステートメント (既定の状態)。 詳細については、「[SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql)」と「[SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql)」をご覧ください。  
+ すべてのユーザー定義データ型またはとして明示的に定義されていない列に対して null 値を許容`NOT NULL`中に、`CREATE TABLE`または`ALTER TABLE`ステートメント (既定の状態)。 詳細については、「[SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql)」と「[SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql)」をご覧ください。  
   
  **[ANSI NULL 有効]**  
- `=`(等号) 比較演算子と`<>`(不等号) 比較演算子を NULL 値に対して使用した場合の動作を指定します。 指定できる値は`True`(オン) と`False`(オフ)。 `True` を指定すると、NULL 値との比較結果はすべて UNKNOWN になります。 ときに`False`、UNICODE 以外の値、null 値の比較に評価`True`両方の値が NULL の場合。 詳細については、「[SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)」をご覧ください。  
+ `=`(等号) 比較演算子と`<>`(不等号) 比較演算子を NULL 値に対して使用した場合の動作を指定します。 指定できる値は`True`(オン) と`False`(オフ)。 `True` を指定すると、NULL 値との比較結果はすべて UNKNOWN になります。 ときに`False`、UNICODE 以外の値に null 値の比較に評価`True`両方の値が NULL の場合。 詳細については、「[SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)」をご覧ください。  
   
  **[ANSI PADDING 有効]**  
  ANSI による埋め込みが有効かどうかを指定します。 指定できる値は`True`(オン) と`False`(オフ)。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)」を参照してください。  
   
  **[ANSI 警告有効]**  
- 複数のエラー条件に対する ISO の標準動作を指定します。 ときに`True`、集計関数 (SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP、または数) などで null 値が表示されない場合は、警告メッセージが生成されます。 ときに`False`、警告メッセージは生成されません。 詳細については、「[SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)」をご覧ください。  
+ 複数のエラー条件に対する ISO の標準動作を指定します。 ときに`True`、(SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP、または数) などの集計関数で null 値が表示されない場合に警告メッセージが生成されます。 ときに`False`警告は発行されません。 詳細については、「[SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)」をご覧ください。  
   
  **[算術アボート有効]**  
  算術アボートのデータベース オプションが有効かどうかを指定します。 設定可能な値は `True` および `False` です。 `True` を指定すると、オーバーフローまたは 0 除算エラーが発生したときにクエリまたはバッチが終了します。 エラーがトランザクションの内部で発生した場合には、トランザクションはロールバックされます。 `False` を指定すると、警告メッセージが表示されますが、クエリ、バッチ、またはトランザクションは、エラーが発生しなかったかのように処理を続行します。 詳細については、「[SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)」をご覧ください。  
@@ -119,15 +119,15 @@ ms.locfileid: "36176907"
  NULL 値が連結された場合の動作を指定します。 プロパティ値が`True`、 `string` + NULL は NULL を返します。 ときに`False`、結果は`string`します。 詳細については、「[SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)」をご覧ください。  
   
  **[複数データベースの組み合わせ所有権有効]**  
- 複数データベースの組み合わせ所有権が有効になっているかどうかを示す、読み取り専用の値です。 ときに`True`、ソースまたはターゲット データベースにまたがる所有権の継承のデータベースを指定できます。 このプロパティを設定するには、ALTER DATABASE ステートメントを使用します。  
+ 複数データベースの組み合わせ所有権が有効になっているかどうかを示す、読み取り専用の値です。 ときに`True`、ソースまたはターゲット データベースにまたがる組み合わせ所有権のデータベースを指定できます。 このプロパティを設定するには、ALTER DATABASE ステートメントを使用します。  
   
  **[日付の相関関係の最適化有効]**  
- ときに`True`、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を FOREIGN KEY 制約でリンクされていて、データベースに 2 つのテーブル間の相関統計を保持`datetime`列です。  
+ ときに`True`、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FOREIGN KEY 制約でリンクされていて、データベースの 2 つのテーブル間の相関統計を保持`datetime`列。  
   
  ときに`False`、相関関係の統計は保持されません。  
   
  **[数値丸め処理アボート]**  
- データベースが丸めエラーを処理する方法を指定します。 設定可能な値は `True` および `False` です。 `True` を指定すると、式の精度が低下したときにエラーが生成されます。 ときに`False`有効桁数の損失にはエラー メッセージは生成されず、結果は、結果を格納する変数または列の有効桁数に丸められます。 詳細については、「[SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)」をご覧ください。  
+ データベースが丸めエラーを処理する方法を指定します。 設定可能な値は `True` および `False` です。 `True` を指定すると、式の精度が低下したときにエラーが生成されます。 ときに`False`、有効桁数の損失は、エラー メッセージを生成しないと、結果は、結果を格納する変数または列の有効桁数に丸められます。 詳細については、「[SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)」をご覧ください。  
   
  **[パラメーター化]**  
  **[単純]** を指定すると、データベースの既定の動作に基づいてクエリがパラメーター化されます。 **[強制]** を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、データベースのすべてのクエリがパラメーター化されます。  
@@ -136,25 +136,25 @@ ms.locfileid: "36176907"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キーワードを引用符で囲んで識別子 (オブジェクト名または変数名) として使用できるかどうかを指定します。 設定可能な値は `True` および `False` です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)」をご覧ください。  
   
  **[再帰トリガー有効]**  
- トリガーを他のトリガーによって起動できるかどうかを指定します。 設定可能な値は `True` および `False` です。 設定すると`True`トリガーの再帰的に起動します。 設定すると`False`のみ、直接再帰が回避されます。 間接再帰を無効にするには、sp_configure を使用して nested triggers サーバー オプションを 0 に設定します。 詳しくは、「 [入れ子になったトリガーの作成](../triggers/create-nested-triggers.md)」をご覧ください。  
+ トリガーを他のトリガーによって起動できるかどうかを指定します。 設定可能な値は `True` および `False` です。 設定すると`True`トリガーの再帰的に起動できます。 設定すると`False`のみ、直接再帰が回避されます。 間接再帰を無効にするには、sp_configure を使用して nested triggers サーバー オプションを 0 に設定します。 詳しくは、「 [入れ子になったトリガーの作成](../triggers/create-nested-triggers.md)」をご覧ください。  
   
  `Trustworthy`  
- 表示するときに`True`、この読み取り専用オプションが示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース内で確立された権限借用コンテキストでデータベース外部のリソースにアクセスできるようにします。 権限借用コンテキストは、EXECUTE AS ユーザー ステートメントまたはデータベース モジュールの EXECUTE AS 句を使用して、データベース内に確立できます。  
+ 表示するときに`True`、この読み取り専用オプションが示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース内で確立されている、権限借用コンテキストでデータベース外部のリソースにアクセスできます。 権限借用コンテキストは、EXECUTE AS ユーザー ステートメントまたはデータベース モジュールの EXECUTE AS 句を使用して、データベース内に確立できます。  
   
  データベースの所有者がアクセス権を得るには、サーバー レベルの AUTHENTICATE SERVER 権限も必要です。  
   
  また、このプロパティを True に設定して、安全でない外部のアクセス アセンブリをデータベース内で作成および実行することもできます。 データベースの所有者は、このプロパティを `True` に設定することだけでなく、サーバー レベルの EXTERNAL ACCESS ASSEMBLY 権限または UNSAFE ASSEMBLY 権限も必要です。  
   
- 既定で、すべてのユーザー データベースとすべてのシステム データベース (の例外を除いて**MSDB**) このプロパティ設定されている`False`です。 **model** データベースおよび **tempdb** データベースのこの値は変更できません。  
+ 既定で、すべてのユーザー データベースとすべてのシステム データベース (例外として**MSDB**) このプロパティに設定されて`False`します。 **model** データベースおよび **tempdb** データベースのこの値は変更できません。  
   
  データベースをサーバーにアタッチするときは、必ず TRUSTWORTHY を `False` に設定します。  
   
- 権限借用コンテキストでデータベース外部のリソースにアクセスするための推奨アプローチがすれば済むため、証明書と署名を使用するには、`Trustworthy`オプション。  
+ 権限借用コンテキストでデータベース外部のリソースにアクセスするための推奨される方法がなく証明書と署名を使用するには、`Trustworthy`オプション。  
   
  このプロパティを設定するには、ALTER DATABASE ステートメントを使用します。  
   
  **[VarDecimal ストレージ形式有効]**  
- このオプションは読み取り専用で始まる[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降のバージョンですべてのデータベースが vardecimal ストレージ形式に対応します。 このオプションでは、 [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)が使用されます。  
+ このオプションは読み取り専用で始まる[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降のバージョンですべてのデータベースは vardecimal ストレージ形式を有効になっているとします。 このオプションでは、 [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)が使用されます。  
   
 ## <a name="recovery"></a>復旧  
  **[ページ確認]**  

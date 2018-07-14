@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
@@ -16,20 +16,20 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d8c509675ed604582fe83ce7ddf539b0e7be717e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7184a0a5aa72ea7fe4ff681103044f2791bdf33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227096"
 ---
 # <a name="access-report-server-items-using-url-access"></a>URL アクセスを使用したレポート サーバー アイテムへのアクセス
   このトピックでは、*rs:Command*=*Value* を使用してレポート サーバー データベースまたは SharePoint サイトにある異なる種類のカタログ アイテムにアクセスする方法について説明します。  
   
  このパラメーターの文字列を追加する必要はありません。 この文字列を省略した場合、レポート サーバーがアイテムの種類を評価し、適切なパラメーター値を自動的に選択します。 ただし、URL に *rs:Command*=*Value* 文字列を使用することで、レポート サーバーのパフォーマンスを向上できます。  
   
- 以下の例では、 `_vti_bin` プロキシ構文に注意してください。 詳細については、プロキシ構文を使用して、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)です。  
+ 以下の例では、 `_vti_bin` プロキシ構文に注意してください。 プロキシ構文の使用に関する詳細については、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。  
   
 ## <a name="access-a-report"></a>レポートへのアクセス  
  ブラウザーでレポートを表示するには、 *rs:Command*=*Render* パラメーターを使用します。 以下に例を示します。  
@@ -69,7 +69,7 @@ ms.locfileid: "36175119"
 </DataSourceDefinition>  
 ```  
   
- 接続文字列は、レポート サーバーの **SecureConnectionLevel** 設定に基づいて返されます。 詳細については、 **SecureConnectionLevel**設定、表示[セキュリティで保護された Web サービス メソッドを使用して](report-server-web-service/net-framework/using-secure-web-service-methods.md)です。  
+ 接続文字列は、レポート サーバーの **SecureConnectionLevel** 設定に基づいて返されます。 詳細については、 **SecureConnectionLevel**設定、表示[セキュリティで保護された Web サービス メソッドを使用して](report-server-web-service/net-framework/using-secure-web-service-methods.md)します。  
   
 ## <a name="access-the-contents-of-a-folder"></a>フォルダーのコンテンツへのアクセス  
  フォルダーのコンテンツにアクセスするには、 *rs:Command*=*GetChildren* パラメーターを使用します。 要求されたフォルダーのサブフォルダー、レポート、データ ソース、およびリソースへのリンクを含む汎用フォルダー ナビゲーション ページが返されます。 以下に例を示します。  

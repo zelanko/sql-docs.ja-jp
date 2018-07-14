@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4b7782cb836f437aa61064d64d084859dedf97ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0eabbd703d04e5aca74b8b94e449d5d8fd18ae97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261998"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>グラフへのラベルの配置 (レポート ビルダーおよび SSRS)
   グラフはその種類によって形状が異なるので、グラフが見やすい位置にデータ ポイント ラベルを配置する必要があります。 ラベルの既定の位置は、グラフの種類によって異なります。  
@@ -66,7 +66,7 @@ ms.locfileid: "36177244"
 6.  じょうごグラフの場合は、FunnelLabelStyle プロパティの値を選択します。 ピラミッド グラフの場合は、PyramidLabelStyle プロパティの値を選択します。  
   
     > [!NOTE]  
-    >  値にこのプロパティを設定すると`OutsideInColumn`ラベルは縦一列に描画されます。 列の位置を変更することはできません。  
+    >  このプロパティを値に設定すると`OutsideInColumn`ラベルは縦一列に描画されます。 列の位置を変更することはできません。  
   
 ### <a name="to-change-the-position-of-point-labels-in-a-bar-chart"></a>横棒グラフ内のポイント ラベルの場所を変更するには  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36177244"
   
 6.  BarLabelStyle プロパティの値を選択します。  
   
- バーのラベル スタイルに設定されている`Outside`、グラフ領域に収まる限りにそのラベルがバーの外側に配置します。 ラベルをバーの外側に置くことで、グラフ領域からはみ出る場合は、ラベルがバーの内側の終端部分に近接する位置に配置されます。  
+ ときに、バーのラベル スタイルに設定されている`Outside`、グラフ領域に収まる限りにそのラベルがバーの外側に配置します。 ラベルをバーの外側に置くことで、グラフ領域からはみ出る場合は、ラベルがバーの内側の終端部分に近接する位置に配置されます。  
   
 ### <a name="to-change-the-position-of-point-labels-in-an-area-column-line-or-scatter-chart"></a>面グラフ、縦棒グラフ、折れ線グラフ、または散布図内のポイント ラベルの場所を変更するには  
   

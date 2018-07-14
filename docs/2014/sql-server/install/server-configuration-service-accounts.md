@@ -1,5 +1,5 @@
 ---
-title: サーバーの構成 - サービス アカウント |Microsoft ドキュメント
+title: サーバーの構成 - サービス アカウント |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - service account configuration, SQL Server
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e390c18563b092fd0460da5b9aed90828921d10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2debf9c1754b81741e25f535b1cf05dce2ce2233
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212372"
 ---
 # <a name="server-configuration---service-accounts"></a>サーバーの構成 - サービス アカウント
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [サーバーの構成] ページを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスにログイン アカウントを割り当てます。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。  
   
- 起動し、実行するために使用する開始アカウント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ハイパーリンク"ms help://SQL11_I1033/s11sq_GetStart_I/html/309b9dac-0b3a-4617-85ef-c4519ce9d014.htm"\l"Domain_User"ドメイン ユーザー アカウント、ローカル ユーザー アカウント、管理されたサービス アカウントを指定できます仮想アカウント、またはビルトイン システム アカウントです。  
+ 起動し、実行するために使用する開始アカウント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]HYPERLINK"ms help://SQL11_I1033/s11sq_GetStart_I/html/309b9dac-0b3a-4617-85ef-c4519ce9d014.htm"\l"Domain_User"ドメイン ユーザー アカウント、ローカル ユーザー アカウント、管理されたサービスのアカウントを指定できます仮想アカウント、またはビルトイン システム アカウント。  
   
 ## <a name="options"></a>および  
  すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに同じログイン アカウントを割り当てることも、各サービス アカウントを個々に構成することもできます。 サービスを自動的に開始するか、手動で開始するか、または無効にするかを指定することもできます。 ほとんどのインストールでは、既定のアカウントをお勧めします。  
@@ -50,7 +50,7 @@ ms.locfileid: "36176762"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアント|分散再生クライアントのサービスで使用されるサービス アカウント。<br /><br /> 分散再生クライアントのサービスを実行するアカウントを指定します。 このアカウントには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに使用するアカウントとは別のアカウントを指定する必要があります。<br /><br /> 既定のスタートアップの種類は [手動] です。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー|分散再生コントローラー サービスのサービス アカウント。<br /><br /> 分散再生コントローラー サービスを実行するアカウントを指定します。 このアカウントには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに使用するアカウントとは別のアカウントを指定する必要があります。<br /><br /> 既定のスタートアップの種類は [手動] です。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト フィルター デーモン ランチャー|fdhost.exe プロセスを作成するサービスです。 このサービスは、フルテキスト インデックスのテキスト データを処理する、ワード ブレーカーおよびフィルターをホストするために必要です。<br /><br /> FDHOST ランチャー サービスを実行するドメイン アカウントを指定する場合は、権限の低いアカウントを使用することを強くお勧めします。 このアカウントには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに使用するアカウントとは別のアカウントを指定する必要があります。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ブラウザー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ブラウザーが、名前解決サービスを提供する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント コンピューターへの接続情報です。 このサービスは複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] インスタンス間で共有されます。 既定のログオン アカウントは NT Authority\Local Service で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中には変更できません。 アカウントはセットアップの完了後に変更できます。 スタートアップの種類をセットアップ中に指定しない場合、種類は次のようにして決まります。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ブラウザーは、自動と次に示すインストール シナリオで実行設定されます。<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス<br />-<br />                            TCP または NP が有効になっている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンス<br />-<br />                            クラスター化されていない分析サーバーの名前付きインスタンス<br /><br /> 上記のシナリオのいずれにも該当せず、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser が既にインストールされている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser の現在の状態が継続されます。<br /><br /> インストールの前に古い [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンの既存のインスタンスが存在しない場合、スタートアップの種類が [無効] に設定され、停止します。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ブラウザー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ブラウザーが名前解決サービスを提供する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント コンピューターへの接続情報。 このサービスは複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] インスタンス間で共有されます。 既定のログオン アカウントは NT Authority\Local Service で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中には変更できません。 アカウントはセットアップの完了後に変更できます。 スタートアップの種類をセットアップ中に指定しない場合、種類は次のようにして決まります。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ブラウザーは、以下に示すインストール シナリオで実行し、自動設定されます。<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス<br />-<br />                            TCP または NP が有効になっている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンス<br />-<br />                            クラスター化されていない分析サーバーの名前付きインスタンス<br /><br /> 上記のシナリオのいずれにも該当せず、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser が既にインストールされている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser の現在の状態が継続されます。<br /><br /> インストールの前に古い [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンの既存のインスタンスが存在しない場合、スタートアップの種類が [無効] に設定され、停止します。|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server インストールにおけるセキュリティの考慮事項](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

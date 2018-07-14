@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connectionproperties.f1
 helpviewer_keywords:
 - Connection Properties dialog box
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7f4f764af2fd823486ba4a8602d134ccea6e4317
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 339bbe1ec75abc3c3d384aeab5080270b4d5f3fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163363"
 ---
 # <a name="connection-properties-dialog-box"></a>[接続プロパティ] ダイアログ ボックス
   このダイアログ ボックスを使用すると、現在の接続プロパティを表示できます。 このダイアログ ボックスは、オブジェクト エクスプローラーの各種のダイアログ ボックスで **[接続のプロパティを表示します]** をクリックすると表示されます。 このページに表示されるプロパティは読み取り専用です。  

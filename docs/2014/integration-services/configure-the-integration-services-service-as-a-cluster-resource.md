@@ -1,5 +1,5 @@
 ---
-title: クラスター リソースとして Integration Services サービスの構成 |Microsoft ドキュメント
+title: クラスター リソースとして Integration Services サービスの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8455d0a43e478cdb05f945269a3999b72fc581ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b524b2c570b3fac16403565716aaea36a31a7f24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223772"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>クラスター リソースとして Integration Services サービスを構成する
   このセクションでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成する利点が欠点を上回ると判断したユーザー向けに、必要な構成手順を説明します。 ただし、 [!INCLUDE[msCoName](../includes/msconame-md.md)] では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成することをお勧めしません。  
@@ -106,7 +106,7 @@ ms.locfileid: "36178047"
   
 3.  共有ディスク上で、テキスト エディターまたは XML エディターを使用して構成ファイルを開き、 値を変更、`ServerName`要素の仮想名を[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]同じリソース グループ内にあります。  
   
-4.  値を変更、`StorePath`要素の完全修飾パスを**パッケージ**フォルダー前の手順で共有ディスク上に作成します。  
+4.  値を変更、`StorePath`要素の完全修飾パスを**パッケージ**フォルダーの前の手順で共有ディスク上に作成します。  
   
 5.  レジストリ内の **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** の値を共有ディスク上のサービス構成ファイルの完全修飾パスとファイル名に更新します。  
   

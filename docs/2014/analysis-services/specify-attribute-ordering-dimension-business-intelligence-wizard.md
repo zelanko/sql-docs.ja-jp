@@ -1,5 +1,5 @@
 ---
-title: 属性の順序 ([ディメンション]) (ビジネス インテリジェンス ウィザード) を指定 |Microsoft ドキュメント
+title: 指定の属性の順序 (Dimension) (ビジネス インテリジェンス ウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.selectdimension.f1
 ms.assetid: 071d8c50-de8a-490d-b4a7-c809ba79df18
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b9c67acc303534e2b71b8f408cce1d855af785f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05caa09e6100aad7943ade8d64231d8293f1f9ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167263"
 ---
 # <a name="specify-attribute-ordering-dimension-business-intelligence-wizard"></a>[属性の順序の指定] ([ディメンション]) (ビジネス インテリジェンス ウィザード)
   **[属性の順序の指定]** ページを使用すると、ビジネス インテリジェンス ウィザードで属性と順序の条件を定義するディメンションを選択できます。この条件を使用して、そのディメンションに含まれている各属性のメンバーが並べ替えられます。  

@@ -1,5 +1,5 @@
 ---
-title: オブジェクトの名前付け規則 (Analysis Services) |Microsoft ドキュメント
+title: オブジェクトの名前付け規則 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - objects [Analysis Services], naming
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 029d851c7ad8048fab574cc6ae3122719d857378
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c59c295c627c311aaec574ecd04b153004c3c926
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202082"
 ---
 # <a name="object-naming-rules-analysis-services"></a>オブジェクトの名前付け規則 (Analysis Services)
   このトピックでは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のコードまたはスクリプトにおけるオブジェクトの名前付け規則、および、オブジェクト名で使用できない予約語と文字について説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "36177599"
   
 -   最大文字数は 100 文字です。  
   
--   識別子の最初の文字に関する特別な要件はありません。 最初の文字は、有効な文字を使用できます。  
+-   識別子の最初の文字に関する特別な要件はありません。 最初の文字は、任意の有効な文字である可能性があります。  
   
 ##  <a name="bkmk_reserved"></a> 予約語と文字  
  予約語は英語で、オブジェクト名に適用されます。キャプションには適用されません。 不注意で予約語をオブジェクト名に使用すると、検証エラーが発生します。 多次元モデルとデータ マイニング モデルでは、どのような場合でも、以下で説明する予約語をオブジェクト名で使用することはできません。  
@@ -75,11 +75,11 @@ ms.locfileid: "36177599"
 |------------|------------------------|  
 |`Server`|サーバー オブジェクトに名前を付けるときは、Windows サーバーの名前付け規則に従います。 参照してください[名前付け規則 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx)詳細についてはします。|  
 |`DataSource`|: / \ * &#124; ? "() {} <>|  
-|`Level` または `Attribute`|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
-|`Dimension` または `Hierarchy`|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} \<、>|  
-|他のすべてのオブジェクト|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
+|`Level` または `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
+|`Dimension` または `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} \<、>|  
+|他のすべてのオブジェクト|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
   
- **例外処理: 場合の予約された文字が許可されます。**  
+ **例外処理: 場合の予約文字が許可されます。**  
   
  先に述べたように、特定のモダリティと互換性レベルを持つデータベースでは、予約文字を含むオブジェクト名を使用できます。 拡張文字を使用できる表形式データベース (1103 以上) の場合、ディメンション属性、階層、レベル、メジャー、および KPI オブジェクト名で予約文字を使用できます。  
   

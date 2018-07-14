@@ -1,5 +1,5 @@
 ---
-title: ファイルをチェックイン |Microsoft ドキュメント
+title: ファイルをチェックイン |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.CheckInDialog
 helpviewer_keywords:
 - checking in files
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cf955c5a2101ba6ffa582601cd587b27a63c1621
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b657d02a06d76645fce350e1f6ba82523e69ff37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222652"
 ---
 # <a name="check-in-files"></a>ファイルのチェックイン
   ファイルのソース管理を行っている場合、修正後のファイルを他のユーザーも利用できるようにするには、そのファイルをソース管理にチェックインする必要があります。 ファイルをチェックインすると、チェックインしたバージョンがソース管理プロバイダーに書き込まれ、そのファイルの最新バージョンになります。  
@@ -32,9 +32,9 @@ ms.locfileid: "36178285"
   
 ### <a name="to-check-in-a-file"></a>ファイルをチェックインするには  
   
-1.  ソリューション エクスプ ローラーで、チェックインするファイルを右クリックして**チェックイン**です。  
+1.  ソリューション エクスプ ローラーで、チェックインするファイルを右クリックして**チェックイン**します。  
   
-2.  場合、**チェックイン** ダイアログ ボックスが表示されたら、適切なオプションを選択し、クリックして**OK**です。  
+2.  場合、**チェックイン** ダイアログ ボックスが表示されたら、適切なオプションを選択し、クリックして**OK**します。  
   
      **チェックイン**  
      選択されている項目をすべてチェックインします。  
@@ -45,14 +45,14 @@ ms.locfileid: "36178285"
      **コメント**  
      チェックイン操作に関連付けるコメントを追加します。  
   
-     **項目のチェックイン時に、ダイアログ ボックスでチェックを表示しません。**  
+     **項目をチェックインするときに、ダイアログ ボックスのチェックを表示しません。**  
      チェックインの処理中にダイアログ ボックスが表示されないようにします。  
   
      **フラット ビュー**  
      チェックインするファイルをソース管理接続の下に一覧表示します。  
   
-     **Name**  
-     チェックインする項目の名前を表示します。 チェック ボックスをオンの横にあるアイテムが表示されます。 特定の項目をチェックインしない場合は、そのチェック ボックスをオフにします。  
+     **名前**  
+     チェックインする項目の名前を表示します。 項目になっての横にあるチェック ボックスが表示されます。 特定の項目をチェックインしない場合は、そのチェック ボックスをオフにします。  
   
      **[オプション]**  
      ボタンの右側の矢印をクリックすると、ソース管理のプラグインに固有のチェックイン オプションが表示されます。  

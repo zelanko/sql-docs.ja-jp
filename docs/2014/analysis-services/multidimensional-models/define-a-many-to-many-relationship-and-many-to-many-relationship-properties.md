@@ -1,5 +1,5 @@
 ---
-title: 多対多リレーションシップと多対多リレーションシップのプロパティの定義 |Microsoft ドキュメント
+title: 多対多リレーションシップと多対多リレーションシップのプロパティの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - many-to-many relationships [Analysis Services]
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: db0d630f6efa2ed3499d6e42d7ebe8be5945700e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5a9e14fc0da918438c6284870d0612185231c22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173579"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>多対多のリレーションシップと多対多のリレーションシップのプロパティの定義
   このトピックでは、多対多ディメンションを使用する状況と作成方法を含め、Analysis Services 内の多対多ディメンションについて説明します。  
@@ -47,7 +47,7 @@ ms.locfileid: "36177197"
   
  視覚的には、多対多ディメンションのリレーションシップはキューブ図では表示されません。 代わりに、[ディメンションの使用法] タブを使用して、モデル内にあるすべての多対多リレーションシップをすばやく識別することができます。 多対多リレーションシップは、次のアイコンによって示されます。  
   
- ![ディメンションの使用法の多対多アイコン](../media/ssas-m2m-icondimusage.png "多対多ディメンションの使用法のアイコン")  
+ ![ディメンションの使用法での多対多アイコン](../media/ssas-m2m-icondimusage.png "多対多ディメンションの使用法のアイコン")  
   
  ボタンをクリックすると、[リレーションシップの定義] ダイアログ ボックスが開き、リレーションシップの種類が多対多であることを確認し、リレーションシップ内で使用されている中間メジャー グループを表示することができます。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36177197"
   
 5.  ウィザードの次のページで、属性を選択します。 この例では、 **SalesOrderNumber**のみを選択できます。  
   
-     ![Sales order ディメンションを示す属性リスト](../media/ssas-m2m-dimsalesorderattrib.PNG "Sales order ディメンションを示す属性の一覧")  
+     ![ディメンションが表示された属性の一覧の販売注文](../media/ssas-m2m-dimsalesorderattrib.PNG "Sales order ディメンションが表示された属性の一覧")  
   
 6.  そのディメンションを **Dim Sales Orders**という名前に変更します。その結果、ディメンションに関して、一貫性のある名前付け規約を使用できます。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36177197"
   
 1.  キューブ デザイナーで、[ディメンションの使用法] タブをクリックします。**Dim Sales Reason** と **Fact Internet Sales**の間に、既に多対多アイコンがあることに注意してください。 次のアイコンが、多対多リレーションシップを示していることに注意してください。  
   
-     ![ディメンションの使用法の多対多アイコン](../media/ssas-m2m-icondimusage.png "多対多ディメンションの使用法のアイコン")  
+     ![ディメンションの使用法での多対多アイコン](../media/ssas-m2m-icondimusage.png "多対多ディメンションの使用法のアイコン")  
   
 2.  **Dim Sales Reason** と **Fact Internet Sales**の交差セルをクリックし、ボタンをクリックして [リレーションシップの定義] ダイアログ ボックスを開きます。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "36177197"
 ##  <a name="bkmk_Learn"></a> Learn more  
  以下のリンクを使用して、この内容を習得するのに役立つ詳細情報を参照してください。  
   
- [Analysis Services の多対多ディメンションを定義する方法](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Analysis Services で多対多ディメンションを定義する方法](http://go.microsoft.com/fwlink/?LinkId=324759)  
   
  [多対多の回転 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
   
@@ -191,7 +191,7 @@ ms.locfileid: "36177197"
   
 ## <a name="see-also"></a>参照  
  [ディメンションのリレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Analysis Services 多次元モデリング チュートリアル用サンプル データとプロジェクトをインストールします。](../install-sample-data-and-projects.md)   
+ [Analysis Services 多次元モデリング チュートリアル用サンプル データおよびプロジェクトをインストールします。](../install-sample-data-and-projects.md)   
  [Analysis Services プロジェクトの配置&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
  [多次元モデルのパースペクティブ](perspectives-in-multidimensional-models.md)  
   

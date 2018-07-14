@@ -8,36 +8,36 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6f0bfcc4ed838cccd0088cbf0011f6e630ee1fc5
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 75a9ef3ae1c496c2469ea27d766eedf317af5bf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176159"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)
-  使用して、**先選択**ページをコピーするデータの送信先を指定します。  
+  使用して、**変換先の選択**ページをコピーするデータの送信先を指定します。  
   
- このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)です。 ウィザードを正常に実行するために必要なアクセス許可と同様に、ウィザードを開始するためのオプションの詳細については、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)です。  
+ このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と同様に、ウィザードを開始するためのオプションについては、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
   
- 目的、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードはデータ ソースからの保存先にコピーします。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
+ 目的、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードは、先のソースからデータをコピーします。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
 ## <a name="static-options"></a>静的オプション  
  **変換先**  
- 変換先の保存形式に対応したデータ プロバイダーを選択します。 データ ソースに使用できるプロバイダーが複数存在する可能性があります。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client で、.NET Framework Data Provider for SQL Server、または、Microsoft OLE DB Provider for SQL Server。  
+ 変換先の保存形式に対応したデータ プロバイダーを選択します。 データ ソースに使用できるプロバイダーが複数存在する可能性があります。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、.NET Framework Data Provider for SQL Server、または、Microsoft OLE DB Provider for SQL Server。  
   
 > [!NOTE]  
 >  データを ODBC 変換先に保存するには、.NET Framework Data Provider for ODBC を選択します。  
   
- **データソース**プロパティには、可変個のオプションは、コンピューターにインストールされているプロバイダーによって異なります。 次の表に、一般的に使用される変換先に対応するオプションを示します。 他のプロバイダーについては、プロバイダー固有のマニュアルを参照してください。  
+ **データソース**プロパティは、さまざまなオプションは、コンピューターにインストールされているプロバイダーによって異なります。 次の表に、一般的に使用される変換先に対応するオプションを示します。 他のプロバイダーについては、プロバイダー固有のマニュアルを参照してください。  
   
 ## <a name="dynamic-options"></a>動的オプション  
  以下では、いくつかのデータ ソースで利用可能なオプションを示します。 [変換先] ドロップダウン リストに表示される変換先をすべて示しているわけではありません。  
@@ -50,7 +50,7 @@ ms.locfileid: "36324626"
  パッケージで Microsoft Windows 認証を使用してデータベースにログインするかどうかを指定します。 より高いセキュリティのためには Windows 認証をお勧めします。  
   
  **[SQL Server 認証を使用する]**  
- パッケージを使用するかどうか指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースへのログインを認証します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
+ パッケージを使用するかどうかを指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースへのログインを認証します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
   
  **ユーザー名**  
  使用しているときに、データベース接続のユーザー名を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
@@ -59,13 +59,13 @@ ms.locfileid: "36324626"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合に、データベース接続用のパスワードを指定します。  
   
  **[データベース]**  
- 指定されたインスタンス上のデータベースの一覧から選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をクリックして新しいデータベースを作成または**新規**です。  
+ 指定されたインスタンス上のデータベースの一覧から選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、クリックして新しいデータベースを作成または**新規**します。  
   
  **[更新]**  
  **[更新]** をクリックして、利用可能なデータベースの一覧を復元します。  
   
  **[新規作成]**  
- 使用して、新しい移行先データベースを作成、 **Create Database**  ダイアログ ボックス。  
+ 使用して新しい変換先データベースを作成、 **Create Database**  ダイアログ ボックス。  
   
 ### <a name="destination--flat-file-destination"></a>[変換先] = [フラット ファイル変換先]  
  **[ファイル名]**  
@@ -101,30 +101,30 @@ ms.locfileid: "36324626"
 ### <a name="destination--microsoft-excel"></a>[変換先] = [Microsoft Excel]  
   
 > [!NOTE]  
->  選択**Excel** Excel 2003 を使用するデータ ソースに接続する場合にのみ、またはそれ以前です。 Excel 2007 を使用するデータ ソースに接続するには、選択**Microsoft Office 12.0 Access Database Engine OLE DB Provider**をクリックして**プロパティ**、し、**すべて**のタブ、**データ リンク プロパティ** ダイアログ ボックスの**Extended Properties**、入力`Excel 12.0`です。  
+>  選択**Excel** Excel 2003 を使用するデータ ソースに接続する場合にのみ、またはそれ以前。 Excel 2007 を使用するデータ ソースに接続するには、選択**Microsoft Office 12.0 Access Database Engine OLE DB Provider**、 をクリックして**プロパティ**、し、**すべて**のタブ、**データ リンク プロパティ** ダイアログ ボックスの**拡張プロパティ**、入力`Excel 12.0`します。  
   
  **[Excel ファイル パス]**  
  データを格納するブックのパスとファイル名を指定 (たとえば、C:\MyData.xls、 \\\Sales\Database\Northwind.xls)。 または、 **[参照]** をクリックしてブックを探します。  
   
  **[参照]**  
- 使用して、Excel ブックを探します、**開く** ダイアログ ボックス。  
+ 使用して、Excel ブックを検索、**オープン** ダイアログ ボックス。  
   
  **[Excel バージョン]**  
  変換先のブックで使用される Excel のバージョンを選択します。  
   
 > [!NOTE]  
->  データをエクスポートするときに、[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]変換先、ウィザードを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Excel 変換先コンポーネントです。 いくつかの使用に関する注意点と既知の問題については、次を参照してください。 [Excel 変換先](../data-flow/excel-destination.md)です。  
+>  データをエクスポートするときに、[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]変換先、ウィザードを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Excel 変換先コンポーネントです。 いくつかの使用に関する考慮事項と既知の問題については、次を参照してください。 [Excel 変換先](../data-flow/excel-destination.md)します。  
   
 ### <a name="destination--microsoft-access"></a>[変換先] = [Microsoft Access]  
   
 > [!NOTE]  
->  選択**Access** Access 2003 を使用するデータベースに接続する場合にのみ、またはそれ以前です。 Access 2007 を使用するデータベースに接続するには、選択**Microsoft Office 12.0 Access Database Engine OLE DB Provider**です。  
+>  選択**Access** Access 2003 を使用するデータベースに接続する場合にのみ、またはそれ以前。 Access 2007 を使用するデータベースに接続するには、選択**Microsoft Office 12.0 Access Database Engine OLE DB Provider**します。  
   
  **[ファイル名]**  
- データを格納するデータベース ファイルのパスとファイル名を指定 (たとえば、C:\MyData.mdb、 \\\Sales\Database\Northwind.mdb)。 または、 **[参照]** をクリックしてデータベース ファイルを探します。  
+ データを格納するデータベース ファイルのパスとファイル名を指定する (たとえば、C:\MyData.mdb、 \\\Sales\Database\Northwind.mdb)。 または、 **[参照]** をクリックしてデータベース ファイルを探します。  
   
  **[参照]**  
- 使用して、データベース ファイルを参照、**開く** ダイアログ ボックス。  
+ データベース ファイルを使用して参照、**オープン** ダイアログ ボックス。  
   
  **ユーザー名**  
  ワークグループの情報ファイルがデータベースに関連付けられている場合は、データベース接続のために有効なユーザー名を指定します。  

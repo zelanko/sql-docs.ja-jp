@@ -1,5 +1,5 @@
 ---
-title: トレースのプロパティ (全般 タブ) |Microsoft ドキュメント
+title: トレースのプロパティ ([全般] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.traceproperties.general.f1
 helpviewer_keywords:
 - Trace Properties dialog box
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8d92a51eaca0f98624ea6174a56448b383c1744a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99621b4d142e6d1686c908783ba63628109eae5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221942"
 ---
 # <a name="trace-properties-general-tab"></a>[トレースのプロパティ] ([全般] タブ)
   **[トレースのプロパティ]** ダイアログ ボックスの **[全般]** タブを使用すると、トレースのプロパティを表示したり指定したりできます。  
@@ -62,7 +62,7 @@ ms.locfileid: "36177576"
  **[テーブルに保存]**  
  トレース データをデータベース テーブルにキャプチャします。 トレース データを保存しておくと、後でチェックしたり分析したりするのに便利です。 ただし、トレース データをテーブルに保存すると、保存先となるサーバーに大きなオーバーヘッドが発生する可能性があります。 可能な限り、トレースしているサーバーと同じサーバーにトレース テーブルを保存しないでください。  
   
- \<グラフィック >**コピー先のテーブル**  
+ \<グラフィック >**変換先テーブル**  
  トレース データをデータベース テーブルに保存することを選択した後で、このアイコンをクリックしてテーブル名を変更できます。  
   
  **[最大行数の設定 (1000 行単位)]**  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dda8f1ee734281fc344809bed69a34211bc9009d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9f829419b11015209ee06f39b24ec0f773874d41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209142"
 ---
 # <a name="database-properties-files-page"></a>「データベースのプロパティ」 ([ファイル] ページ)
   このページを使用すると、新しいデータベースを作成したり、選択したデータベースのプロパティを表示または変更したりできます。 このトピックは、既存のデータベースの **[データベースのプロパティ] ([ファイル] ページ)** 、および **[新しいデータベース] ([全般] ページ)** に該当します。  
@@ -81,7 +81,7 @@ ms.locfileid: "36175975"
  **[追加]**  
  データベースに新しいファイルを追加します。  
   
- **削除**  
+ **[削除]**  
  選択されているファイルをデータベースから削除します。 空でないファイルは削除できません。 プライマリ データ ファイルおよびログ ファイルは削除できません。  
   
  ファイルの詳細については、「 [データベース ファイルとファイル グループ](database-files-and-filegroups.md)」を参照してください。  

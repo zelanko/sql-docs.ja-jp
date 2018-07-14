@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
 - modifying replication properties, articles
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8168a9cb358f2be2a4b5c7c120ee06a8c10f7ccc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bc7d6dd823e7f19ad13a8921146d13e59f4e443f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230842"
 ---
 # <a name="view-and-modify-publication-properties"></a>パブリケーション プロパティの表示および変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリケーションのプロパティを表示および変更する方法について説明します。  
@@ -160,11 +160,11 @@ ms.locfileid: "36176585"
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPublication> クラスのインスタンスを作成し、パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティと <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定して、手順 1. で作成した接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーション プロパティの定義が正しくなかったか、パブリケーションが存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
   
-4.  (省略可) プロパティを変更するには、設定可能なプロパティに新しい値を設定します。 論理 AND 演算子を使用して (`&` Microsoft Visual C# の場合と`And`Microsoft Visual Basic で) かどうかを指定された<xref:Microsoft.SqlServer.Replication.PublicationAttributes>の値が設定されて、<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>プロパティです。 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> プロパティの <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 値を変更するには、包括的論理和演算子 (Visual C# では `|`、Visual Basic では `Or`) および排他的論理和演算子 (Visual C# では `^`、Visual Basic では `Xor`) を使用します。  
+4.  (省略可) プロパティを変更するには、設定可能なプロパティに新しい値を設定します。 論理 AND 演算子を使用して (`&` Microsoft Visual c# でと`And`Microsoft Visual Basic で) かどうかを指定された<xref:Microsoft.SqlServer.Replication.PublicationAttributes>値が設定されている、<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>プロパティ。 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> プロパティの <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 値を変更するには、包括的論理和演算子 (Visual C# では `|`、Visual Basic では `Or`) および排他的論理和演算子 (Visual C# では `^`、Visual Basic では `Xor`) を使用します。  
   
-5.  (省略可能)値を指定した場合`true`の<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>、呼び出し、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>メソッドをサーバー上の変更をコミットします。 値を指定した場合`false`の<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>(既定)、変更はサーバーに直ちに送信されます。  
+5.  (省略可能)値が指定されている場合`true`の<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>を呼び出し、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>メソッドに、サーバー上の変更をコミットします。 値が指定されている場合`false`の<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>(既定値) の変更はサーバーに送信、すぐにします。  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>マージ パブリケーションのプロパティを表示または変更するには  
   
@@ -172,11 +172,11 @@ ms.locfileid: "36176585"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成し、パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティと <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定して、手順 1. で作成した接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーション プロパティの定義が正しくなかったか、パブリケーションが存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
   
 4.  (省略可) プロパティを変更するには、設定可能なプロパティに新しい値を設定します。 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> プロパティに特定の <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 値が設定されているかどうかを判断するには、論理積演算子 (Visual C# では `&`、Visual Basic では `And`) を使用します。 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> プロパティの <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 値を変更するには、包括的論理和演算子 (Visual C# では `|`、Visual Basic では `Or`) および排他的論理和演算子 (Visual C# では `^`、Visual Basic では `Xor`) を使用します。  
   
-5.  (省略可能)値を指定した場合`true`の<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>、呼び出し、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>メソッドをサーバー上の変更をコミットします。 値を指定した場合`false`の<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>(既定)、変更はサーバーに直ちに送信されます。  
+5.  (省略可能)値が指定されている場合`true`の<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>を呼び出し、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>メソッドに、サーバー上の変更をコミットします。 値が指定されている場合`false`の<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>(既定値) の変更はサーバーに送信、すぐにします。  
   
 ###  <a name="PShellExample"></a> 例 (RMO)  
  次の例では、トランザクション パブリケーションにパブリケーション属性を設定します。 変更は明示的にサーバーに送られるまでキャッシュされます。  

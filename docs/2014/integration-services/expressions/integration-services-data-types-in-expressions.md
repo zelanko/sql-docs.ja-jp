@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
@@ -16,13 +16,13 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a06b8864c458817185223a9ee45c3dd25c4a2d33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cd26c9c3d81ffd308ca013915f924f9cf88d7e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237142"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
   式エバリュエーターは、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型を使用します。 データが [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージのデータ フローに入力されると、データ フロー エンジンはすべての列データを [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型に変換します。このため、式が列データを使用するときには、既に [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型になっています。 条件分割変換および派生列変換で使用される式は、列データが含まれるデータ フローの一部であるため、列を参照できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "36175393"
  式には、文字列、ブール、および数値リテラルも含めることができます。 数値リテラルの [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数値データ型への変換の詳細については、「[ &#40;SSIS&#41;](numeric-string-and-boolean-literals.md)」を参照してください。  
   
 ## <a name="implicit-data-conversion"></a>暗黙的なデータ変換  
- データ型の暗黙的な変換は、式エバリュエーターがあるデータ型を別のデータ型に自動的に変換するときに行われます。 たとえば場合、`smallint`と比較されます、 `int`、`smallint`暗黙的に変換されます`int`比較が行われる前にします。  
+ データ型の暗黙的な変換は、式エバリュエーターがあるデータ型を別のデータ型に自動的に変換するときに行われます。 たとえば場合、`smallint`と比較されます、 `int`、`smallint`に暗黙的に変換されます`int`比較を実行する前にします。  
   
  引数やオペランドに互換性のないデータ型がある場合は、式エバリュエーターは暗黙的なデータ変換を実行できません。 また、式エバリュエーターは、どのような値もブール値に暗黙的に変換することはできません。 代わりに、キャスト演算子を使用して引数とオペランドを明示的に変換する必要があります。 詳細については、「[Cast &#40;SSIS 式&#41;](cast-ssis-expression.md)」を参照してください。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36175393"
 > [!NOTE]  
 >  ブール値は論理値であり、数値ではありません。 ブール値は一部の環境で数値として表示される場合がありますが、数値として格納されることはありません。また、.NET Framework のメソッドと同様に、さまざまなプログラミング言語でブール値が個別の数値として表されます。  
 >   
->  たとえば、Visual Basic で利用できる変換関数では `True` は -1 に変換されますが、.NET Framework の `System.Convert.ToInt32` メソッドでは `True` は +1 に変換されます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]式言語に変換します`True`-1 です。  
+>  たとえば、Visual Basic で利用できる変換関数では `True` は -1 に変換されますが、.NET Framework の `System.Convert.ToInt32` メソッドでは `True` は +1 に変換されます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]式言語に変換します`True`を-1 にします。  
 >   
 >  エラーや予期しない結果が発生しないように、`True` および `False` については、特定の数値を参照するようなコードは記述しないでください。 可能な限り、ブール型の変数には、仕様で定められている論理値以外の値を使用しないようにしてください。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "36175393"
   
 -   [&#62; &#40;より大きい&#41; &#40;SSIS 式&#41;](greater-than-ssis-expression.md)  
   
--   [&#60;&#40;より小さい&#41; &#40;SSIS 式&#41;](less-than-ssis-expression.md)  
+-   [&#60;&#40;未満&#41; &#40;SSIS 式&#41;](less-than-ssis-expression.md)  
   
--   [&#62;=&#40;より大きいか等しい&#41; &#40;SSIS 式&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;=&#40;より大きいまたは等しい&#41; &#40;SSIS 式&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;=&#40;以下に&#41; &#40;SSIS 式&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;=&#40;に等しいまたはそれよりも小さい&#41; &#40;SSIS 式&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  関数の引数が 1 つの場合、その関数は引数と同じデータ型の結果を返します。ただし、次の場合は除きます。  
   

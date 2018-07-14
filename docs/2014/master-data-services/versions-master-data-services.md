@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
 - versions [Master Data Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2777ef1871da042c18459ac33c93e71844b89838
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 40d1a247b8d6efeb39b0c0f311a014ef76b55db4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217682"
 ---
 # <a name="versions-master-data-services"></a>バージョン (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデル内に複数のバージョンのマスター データを作成できます。 データを検証している間はバージョンをロックし、データが検証した後にコミットすることができます。 コミットされたバージョンは、変更の監査可能なレコードを形成します。 作成される各バージョンには、モデルのすべてのメンバー、属性値、階層メンバー、階層リレーションシップ、およびコレクションが含まれます。  
@@ -78,7 +78,7 @@ ms.locfileid: "36178248"
 |ユーザーがデータを編集できるようにバージョンのロックを解除する。|[バージョンをロック解除&#40;マスター データ サービス&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
 |すべてのデータを検証した後にバージョンをコミットする。|[バージョンをコミットする&#40;マスター データ サービス&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
 |新しいフラグを作成してバージョンをマークする。|[バージョン フラグを作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
-|既存のバージョンのフラグ名を変更する。|[バージョン フラグ名を変更&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|既存のバージョンのフラグ名を変更する。|[バージョン フラグ名を変更する&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
 |既存のフラグをバージョンに割り当てる。|[バージョンにフラグを割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
 |既存のバージョンの新しいコピーを作成する。|[バージョンをコピーする&#40;マスター データ サービス&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
 |既存のバージョンを削除する。|[バージョンを削除する&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)|  

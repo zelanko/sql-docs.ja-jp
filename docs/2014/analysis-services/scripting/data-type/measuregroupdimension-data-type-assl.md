@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupDimension データ型 (ASSL) |Microsoft ドキュメント
+title: MeasureGroupDimension データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupDimension data type
 ms.assetid: 9d1c1c19-31ce-4c42-b2e6-4c1b08875a83
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 369e20e1eaf3c5716e81a580b587c69efa64455f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3dcbba7071e1f2efc8ede59259a48a334652de81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249122"
 ---
 # <a name="measuregroupdimension-data-type-assl"></a>MeasureGroupDimension データ型 (ASSL)
   ディメンションとメジャー グループとの間のリレーションシップを表す抽象プリミティブ データ型を定義します。  
@@ -68,9 +68,9 @@ ms.locfileid: "36176267"
   
  属性が指定されていない場合、そのディメンションのキー属性のみが一覧に含まれ、最低の粒度レベルを定義しているかのようになります。 メジャー グループの各パーティションの粒度は同一である必要があります。 一覧表示される属性のセットは、属性間のリレーションシップが重複することはありません。 たとえば、Month が Year を暗黙に指定する場合、粒度は Month として定義され、Month と Year としては定義されません。  
   
- `MeasureGroupDimension` は、自身について示すなんらかの情報がある場合にのみ、階層を含む必要があります  (特定のメジャー グループにどの階層を適用するかを選択することはできません)。 同様を含める必要があります、 [MeasureGroupAttribute](measuregroupattribute-data-type-assl.md)について示す固有のものがある場合のみです。  
+ `MeasureGroupDimension` は、自身について示すなんらかの情報がある場合にのみ、階層を含む必要があります  (特定のメジャー グループにどの階層を適用するかを選択することはできません)。 同様に、それを含める必要があります、 [MeasureGroupAttribute](measuregroupattribute-data-type-assl.md)自身について示す固有のものがある場合のみです。  
   
- 各階層に含まれている階層のサブセットである必要があります、 [CubeDimension](cubedimension-data-type-assl.md)です。 メジャー グループの粒度によっては自動的に無効になるレベルがある場合もありますが、レベルを選択することはできません。  
+ 各階層に含まれている階層のサブセットである必要があります、 [CubeDimension](cubedimension-data-type-assl.md)します。 メジャー グループの粒度によっては自動的に無効になるレベルがある場合もありますが、レベルを選択することはできません。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.MeasureGroupDimension>します。  
   

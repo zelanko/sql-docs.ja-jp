@@ -1,5 +1,5 @@
 ---
-title: インストール方法に関するトピック |Microsoft ドキュメント
+title: インストール方法に関するトピック |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installation [SQL Server]
 - installing SQL Server, how-to topics
 ms.assetid: 59de41e7-557f-462a-8914-53ec35496baa
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d9159ce105c284dd9e5c66ac3127bfa0df9713c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4fbf9a77563d670713836fb2dea7d248756bdb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170265"
 ---
 # <a name="installation-how-to-topics"></a>インストール方法に関するトピック
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール方法については、次の各トピックを参照してください。  
@@ -31,7 +31,7 @@ ms.locfileid: "36177652"
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[インストール ウィザードによる SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|インストール ウィザードを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一般的なインストール手順に関するトピック。|  
+|[SQL Server 2014 インストール ウィザードからインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|インストール ウィザードを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一般的なインストール手順に関するトピック。|  
 |[コマンド プロンプトからの SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|自動セットアップを実行するためのサンプルの構文とインストール パラメーターを提供する手順に関するトピック。|  
 |[構成ファイルを使用した SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)|構成ファイルからセットアップを実行するためのサンプルの構文とインストール パラメーターを提供する手順に関するトピック。|  
 |[PowerPivot for SharePoint 2010 をインストールする](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)|[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をさまざまな SharePoint サーバー構成でインストールするための追加手順へのリンクが提供されているトピック。|  

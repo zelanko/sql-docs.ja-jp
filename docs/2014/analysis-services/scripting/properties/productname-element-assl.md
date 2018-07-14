@@ -1,5 +1,5 @@
 ---
-title: ProductName 要素 (ASSL) |Microsoft ドキュメント
+title: ProductName 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ProductName element
 ms.assetid: f8129bb2-55c9-44e1-8857-82dc01c04a7f
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a63e5209f206a99002fad139b44aab5a32cb13a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be8078f2e3949513f76d6aed6dfdd3e66c50ed18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187039"
 ---
 # <a name="productname-element-assl"></a>ProductName 要素 (ASSL)
-  インスタンスの読み取り専用の製品名を含む[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]と関連付けられている、[サーバー](../objects/server-element-assl.md)要素。  
+  インスタンスの読み取り専用の製品名を含む[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]関連付けられている、 [Server](../objects/server-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

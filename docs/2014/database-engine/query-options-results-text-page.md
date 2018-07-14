@@ -1,5 +1,5 @@
 ---
-title: '[クエリ オプション] ([テキスト] ページ) の結果 |Microsoft ドキュメント'
+title: クエリ オプション の結果 (テキスト ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 51e1a98f00bc4d33e0609f1b03ceca928bded049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205752"
 ---
 # <a name="query-options-results-text-page"></a>[クエリ オプション] の [結果] ([テキスト] ページ)
   このページを使用すると、クエリ結果セットをテキスト形式で表示するオプションを指定できます。 このページの設定は、 **[結果をファイルに出力]** が選択されているときにも使用できます。  
@@ -35,19 +35,19 @@ ms.locfileid: "36176460"
  **結果セットの列のヘッダーを含める**  
  各列に列タイトルのラベルを付けない場合は、このチェック ボックスをオフにします。  
   
- **受け取った順に結果をスクロールする します。**  
+ **結果を受信するとスクロールします。**  
  末尾の最新の取得レコードに常に表示フォーカスを置く場合は、このチェック ボックスをオンにします。 常に、取得した最初の行に表示フォーカスを置く場合は、このチェック ボックスをオフにします。  
   
  **数値を右揃え**  
  数値を列の右揃えにする場合は、このチェック ボックスをオンにします。 これにより、固定小数点数の数値を簡単に調べることができます。  
   
- **クエリの実行後に、結果を破棄します。**  
+ **クエリの実行後に結果を破棄します。**  
  画面表示が、クエリ結果を受け取った後にクエリ結果を破棄することによって、メモリを解放します。  
   
- **結果を別のタブに表示します。**  
+ **別のタブで結果を表示します。**  
  クエリ ドキュメント ウィンドウの下部ではなく、新しいドキュメント ウィンドウに結果セットを表示する場合は、このチェック ボックスをオンにします。  
   
- **クエリ実行後に 結果 タブに切り替える**  
+ **クエリ実行後に [結果] タブに切り替えます**  
  画面のフォーカスを自動的に結果セットに設定するには、これをクリックします。  
   
  **各列に表示される文字の最大数**  

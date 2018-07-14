@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsServerConfigurationError
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 49183fb1ff712ee3d0be8cd76d99492fcc9a93d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86394a3e44d1dab34bc451eee19410083bc676e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238202"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services エラー
     
@@ -51,7 +51,7 @@ ms.locfileid: "36177037"
 ## <a name="user-action"></a>ユーザーの操作  
  構成ファイルを手動で編集した後にこのエラーが発生するようになった場合は、変更を破棄して以前の値を入力するか、バックアップがある場合は以前のバージョンを復元します。  
   
- 付属している追加のエラー メッセージ情報を確認する、`rsServerConfiguration`エラー、\Microsoft SQL Server\MSRS12 は、レポート サーバー トレース ログ ファイルを確認します\<。instancename > \reporting です。 詳細については、「[Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
+ 付属する追加のエラー メッセージ情報を確認する、`rsServerConfiguration`エラー、\Microsoft SQL Server\MSRS12 にあるレポート サーバー トレース ログ ファイルを確認します\<。instancename > \reporting します。 詳細については、「[Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
   
 ## <a name="internal-only"></a>内部使用のみ  
   

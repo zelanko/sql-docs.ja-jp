@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1cd5ef5a1e4a29b70d742e858a30ab9912cce6bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f3f7ee5edc3c9deb73e19f97421c7a0da7206082
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166073"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>ReserveURL メソッド (WMI MSReportServer_ConfigurationSetting)
   指定したアプリケーションの URL 予約を追加します。  
@@ -59,7 +59,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
   
 ## <a name="remarks"></a>コメント  
- *UrlString* には仮想ディレクトリ名は含まれません。 [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md)を目的とするメソッドを提供します。  
+ *UrlString* には仮想ディレクトリ名は含まれません。 [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md)メソッドは、目的のために提供されます。  
   
  現在の Windows サービス アカウントに対して URL 予約が作成されます。 Windows サービス アカウントを変更するには、すべての URL 予約を手動で更新する必要があります。  
   

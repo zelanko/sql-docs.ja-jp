@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
 - field terminators [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9730f5e59d302b95f892d4de2860f3f8a0b147f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5ba5e58a3f3c05985b8219e004e803a516a2ff81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197212"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>フィールド ターミネータと行ターミネータの指定 (SQL Server)
   文字列データ フィールドでは、省略可能なターミネータ文字を使用して、データ ファイルの各フィールドの末尾 ( *フィールド ターミネータ* を使用) と各行の末尾 ( *行ターミネータ*を使用) を示すことができます。 ターミネータ文字は、フィールドや行の終了位置と次のフィールドや行の開始位置を、データ ファイルを読み取るプログラムに示す方法の 1 つです。  
@@ -46,7 +45,7 @@ ms.locfileid: "36178729"
 |任意の印刷可能な文字 (NULL、タブ、改行、およびキャリッジ リターンを除き、制御文字は印刷可能ではありません)|(*、A、t、l など)|  
 |上に列挙したターミネータ文字の一部または全部を含む 10 文字までの印刷可能な文字列|(\*\*\t\*\*、end、!!!!!!!!!!、\t?\n など)|  
   
- <sup>1</sup>のみ t、n、r、0 および '\0' の文字が制御文字を生成するために円記号のエスケープ文字と共に機能します。  
+ <sup>1</sup>のみ t、n、r、0 および '\0' 文字が制御文字をエスケープ文字を使用します。  
   
  <sup>2</sup>データ ファイルの 1 つの文字は null 制御文字 (\0) が印刷されたときに表示されない場合でもです。 つまり、フィールド ターミネータまたは行ターミネータとして NULL 制御文字を使用することと、フィールド ターミネータまたは行ターミネータをまったく使用しないことは異なります。  
   
@@ -80,13 +79,13 @@ ms.locfileid: "36178729"
   
          `Enter field terminator [none]:`  
   
-         通常は、既定値を選択することをお勧めします。 ただし、`char`または`nchar`データ フィールドは、次のサブセクションでは、「ターミネータ使用のガイドライン。」を参照してください。 コンテキスト内でこのプロンプトが表示される例については、「[bcp を使用した互換性のためのデータ形式の指定 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)」を参照してください。  
+         通常は、既定値を選択することをお勧めします。 ただし、`char`または`nchar`データ フィールドは、次のサブセクションでは、「ターミネータ使用のガイドラインです。」を参照してください。 コンテキスト内でこのプロンプトが表示される例については、「[bcp を使用した互換性のためのデータ形式の指定 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)」を参照してください。  
   
         > [!NOTE]  
         >  **bcp** コマンドですべてのフィールドを対話形式で指定すると、各フィールドへの応答を XML 形式以外のファイルに保存するように要求するプロンプトが表示されます。 XML 以外のフォーマット ファイルの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」を参照してください。  
   
 ### <a name="guidelines-for-using-terminators"></a>ターミネータ使用のガイドライン  
- 一部の状況で、ターミネータは適して、`char`または`nchar`データ フィールドです。 以下に例を示します。  
+ 状況によっては、ターミネータは適して、`char`または`nchar`データ フィールド。 以下に例を示します。  
   
 -   プレフィックス長がわからないプログラムにインポートされるデータ ファイル内で NULL 値が含まれるデータ列。  
   

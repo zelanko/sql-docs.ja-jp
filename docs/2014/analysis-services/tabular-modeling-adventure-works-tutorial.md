@@ -1,5 +1,5 @@
 ---
-title: テーブル モデリング (Adventure Works チュートリアル) |Microsoft ドキュメント
+title: テーブル モデリング (Adventure Works チュートリアル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3d8b4a492a5da9ae0f709c0ab98189e74ed21269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69522d087dffcebf88b011f27797cafc6c0f947e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247372"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>テーブル モデリング (Adventure Works チュートリアル)
   このチュートリアルでは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] を使用して、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Analysis Services テーブル モデルを作成する方法を学習します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36175618"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
--   AdventureWorksDW サンプル データベース このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 サンプル データベースをダウンロードするを参照してください。 [ http://go.microsoft.com/fwlink/?LinkID=335807](http://go.microsoft.com/fwlink/?LinkID=335807)です。  
+-   AdventureWorksDW サンプル データベース このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 サンプル データベースをダウンロードするには、次を参照してください。 [ http://go.microsoft.com/fwlink/?LinkID=335807](http://go.microsoft.com/fwlink/?LinkID=335807)します。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 以降 (レッスン 11 で "Excel で分析" 機能を使用するため)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36175618"
 |レッスン|推定所要時間|  
 |------------|--------------------------------|  
 |[行フィルターを使用した動的なセキュリティの実装](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 分|  
-|[Power View レポートのレポートのプロパティを構成する](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)Power View レポートのレポートのプロパティを構成します。|30 分|  
+|[Power View レポートのレポートのプロパティを構成](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)Power View レポートのレポートのプロパティを構成します。|30 分|  
   
 ## <a name="next-step"></a>次の手順  
  チュートリアルを開始するには、[「レッスン 1: 新しいテーブル モデル プロジェクトの作成」](lesson-1-create-a-new-tabular-model-project.md) に進みます。  

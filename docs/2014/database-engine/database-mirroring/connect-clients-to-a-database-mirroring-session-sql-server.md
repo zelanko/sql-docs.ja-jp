@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
 - database mirroring [SQL Server], connecting clients to
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 caps.latest.revision: 92
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2af439599d16904cf7b66fa78882692ab87c05f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 482b72fac9416918bdee38b74fbc483027b4b345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204050"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションへのクライアントの接続 (SQL Server)
   データベース ミラーリング セッションに接続するには、クライアント側で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client または .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。 これらのデータ アクセス プロバイダーは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース用に構成されると、両方ともデータベース ミラーリングを完全にサポートします。 ミラー化されたデータベースの使用に関するプログラミングの注意点については、「 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)」を参照してください。 さらに、現在のプリンシパル サーバー インスタンスは使用可能であり、クライアントのログインがサーバー インスタンス上に作成されている必要があります。 詳細については、「 [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)を実行します。 データベース ミラーリング セッションへのクライアント接続では、ミラーリング監視サーバー インスタンスが存在していても使用されません。  
@@ -36,7 +35,7 @@ ms.locfileid: "36177155"
   
  また、接続文字列にはデータベース名も指定する必要があります。 データベース名は、データ アクセス プロバイダーがフェールオーバーを試行できるようにするために必要です。  
   
- データ アクセス プロバイダーは接続文字列を受け取ると、イニシャル パートナー名とフェールオーバー パートナー名 (指定された場合) をクライアントの揮発性メモリのキャッシュに格納します (マネージ コードの場合、キャッシュはアプリケーション ドメインにスコープが設定されます)。 キャッシュに保存されたイニシャル パートナー名は、データ アクセス プロバイダーによって更新されません。 クライアントがフェールオーバー パートナー名を指定した場合、データ アクセス プロバイダーでは、イニシャル パートナー名を使用して接続できなかった場合に備えて、このフェールオーバー パートナー名も一時的に保存します。  
+ データ アクセス プロバイダーは接続文字列を受け取ると、イニシャル パートナー名とフェールオーバー パートナー名 (指定された場合) をクライアントの揮発性メモリのキャッシュに格納します (マネージド コードの場合、キャッシュはアプリケーション ドメインにスコープが設定されます)。 キャッシュに保存されたイニシャル パートナー名は、データ アクセス プロバイダーによって更新されません。 クライアントがフェールオーバー パートナー名を指定した場合、データ アクセス プロバイダーでは、イニシャル パートナー名を使用して接続できなかった場合に備えて、このフェールオーバー パートナー名も一時的に保存します。  
   
  データベース ミラーリング セッションによる保護は、クライアント コンピューターでネットワーク通信に関する問題が発生した場合など、サーバーへのアクセスに関するクライアント固有の問題には対処できません。 ミラー化されたデータベースへの接続は、データ アクセス プロバイダーに関連しない原因で失敗することもあります。たとえば、データベースがフェールオーバー中である場合や、ネットワーク エラーが発生した場合に、プリンシパル サーバー インスタンスがアクティブでないことが原因で接続試行が失敗することがあります。  
   
@@ -87,7 +86,7 @@ Network=dbnmpntw;
 >  名前付きパイプでは TCP/IP の再試行アルゴリズムを使用しないので、多くの場合、名前付きパイプによる接続試行はミラー化されたデータベースに接続される前にタイムアウトします。  
   
 #### <a name="server-attribute"></a>Server 属性  
- 接続文字列を含める必要があります、`Server`を現在のプリンシパル サーバー インスタンスを特定するイニシャル パートナー名を提供する属性。  
+ 接続文字列を含める必要があります、`Server`現在のプリンシパル サーバー インスタンスを特定するイニシャル パートナー名を提供する属性。  
   
  サーバー インスタンスを特定する最も簡単な方法は、*<server_name>*[**\\***<SQL_Server_instance_name>*] の形式でインスタンス名を指定することです。 以下に例を示します。  
   
@@ -102,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  接続文字列に名前付きインスタンス名を指定し、ポート名を指定しない場合は、SQL Server Browser クエリの実行が必要です。  
   
- IP アドレスとポートを指定する、`Server`属性では、次の形式`Server=` *< ip_address >*`,`*\<ポート >*、例を示します。  
+ IP アドレスとポートを指定する、`Server`属性では、次の形式では、 `Server=` *< ip_address >*`,`*\<ポート >* など。  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -122,7 +121,7 @@ Server=123.34.45.56,4724;
 >  この文字列では、認証情報が省略されています。  
   
 > [!IMPORTANT]  
->  プロトコル プレフィックスのバンドル、`Server`属性 (`Server=tcp:`*\<servername >*) と互換性がない、**ネットワーク**属性がありでプロトコルを指定します。両方の場所が発生する可能性が、エラーが発生します。 したがってをお勧めプロトコルを使用して、接続文字列を指定する、**ネットワーク**属性し、サーバー名だけを指定、`Server`属性 (`"Network=dbmssocn; Server=`*\<servername>*`"`)。  
+>  バンドルにプロトコル プレフィックス、`Server`属性 (`Server=tcp:`*\<servername >*) と互換性がない、**ネットワーク**属性とにプロトコルを指定します。両方の場所は可能性がありますエラーが発生します。 接続文字列では、プロトコルを使用して、指定こと勧めそのため、**ネットワーク**属性しでサーバー名だけを指定、`Server`属性 (`"Network=dbmssocn; Server=`*\<servername>*`"`)。  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 属性  
  クライアントは、イニシャル パートナー名以外に、現在のミラー サーバー インスタンスを特定するフェールオーバー パートナー名も指定できます。 フェールオーバー パートナーは、Failover Partner 属性を表すいずれかのキーワードで指定します。 この属性を表すキーワードは、使用する API によって異なります。 次の表は、これらのキーワードを示しています。  

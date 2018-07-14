@@ -1,5 +1,5 @@
 ---
-title: あいまいグループ化変換エディター (詳細 タブ) |Microsoft ドキュメント
+title: あいまいグループ化変換エディター (詳細 タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.advanced.f1
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1696734810b1b3fd4ceccb624139358cea0dcaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7e8c12ad683e46838a88359170ea970f20c02828
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231522"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>[あいまいグループ化変換エディター] ([詳細設定] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、入力列と出力列の指定、類似性のしきい値の設定、区切り記号の定義ができます。  
   
 > [!NOTE]  
->  `Exhaustive`と`MaxMemoryUsage`あいまいグループ化変換のプロパティでは使用できない、**あいまいグループ化変換エディター**を使用して設定することが、**詳細エディター**. これらのプロパティの詳細については、「 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)」の「あいまいグループ化変換」を参照してください。  
+>  `Exhaustive`と`MaxMemoryUsage`、あいまいグループ化変換のプロパティが表示されない、**あいまいグループ化変換エディター**を使用して設定することが、**高度なエディター**. これらのプロパティの詳細については、「 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)」の「あいまいグループ化変換」を参照してください。  
   
  あいまいグループ化変換の詳細については、「 [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)」を参照してください。  
   
 ## <a name="options"></a>および  
  **[入力キー列名]**  
- 各入力行の一意の識別子を含む、出力列の名前を指定します。 `_key_in`列に各行を一意に識別する値。  
+ 各入力行の一意の識別子を含む、出力列の名前を指定します。 `_key_in`列は各行を一意に識別する値。  
   
  **[出力キー列名]**  
  重複する行グループの正規行の一意識別子を含む、出力列の名前を指定します。 [`_key_out`] 列は、正規データ行の `_key_in` 値に対応します。  

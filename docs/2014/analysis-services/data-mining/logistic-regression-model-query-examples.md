@@ -1,5 +1,5 @@
 ---
-title: ロジスティック回帰モデルのクエリ例 |Microsoft ドキュメント
+title: ロジスティック回帰モデルのクエリ例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b079609e6d2df8d104b3430488ae37ac0e9ea179
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f908b029074e58866f51dbd7deff571763e11b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189599"
 ---
 # <a name="logistic-regression-model-query-examples"></a>ロジスティック回帰モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータによる予測を行うことができます。  
@@ -161,7 +161,7 @@ NATURAL PREDICTION JOIN
   
 6.  **[マイニング構造]** タブで、Service Grade の列を右クリックし、 **[プロパティ]** をクリックします。  
   
-7.  変更、`Content`プロパティから**Continuous**に**Discretized**です。 変更、`DiscretizationMethod`プロパティを**クラスター**です。 Discretization BucketCount に「 **3**」と入力します。  
+7.  変更、`Content`プロパティから**Continuous**に**Discretized**します。 変更、`DiscretizationMethod`プロパティを**クラスター**します。 Discretization BucketCount に「 **3**」と入力します。  
   
     > [!NOTE]  
     >  これらのパラメーターは、プロセスを説明するために使用されており、有効なモデルを生成するとは限りません。  
@@ -216,6 +216,6 @@ NATURAL PREDICTION JOIN
  [Microsoft ロジスティック回帰アルゴリズム](microsoft-logistic-regression-algorithm.md)   
  [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [ロジスティック回帰モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-logistic-regression-models.md)   
- [レッスン 5: ニューラル ネットワーク モデルとロジスティック回帰モデルの構築&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [レッスン 5: ニューラル ネットワーク モデルとロジスティック回帰モデルの構築&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

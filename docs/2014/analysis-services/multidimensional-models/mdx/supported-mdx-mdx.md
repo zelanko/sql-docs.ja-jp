@@ -1,5 +1,5 @@
 ---
-title: サポートされる MDX (MDX) |Microsoft ドキュメント
+title: MDX (MDX) のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], statements
 - MDX [Analysis Services], functions
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0db1a0ef59eafcf20e240aa863ba7ce61edfad55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3301717dda71b51283f971fa1a21dbca1c228781
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191166"
 ---
 # <a name="supported-mdx-mdx"></a>サポートされる MDX (MDX)
   多次元式 (MDX) スクリプト内では、以下のステートメントおよび関数がサポートされます。  
@@ -57,7 +57,7 @@ ms.locfileid: "36178755"
  [これは、 &#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
->  MDX では、セル プロパティ `BACK_COLOR`、`FORE_COLOR`、`FORMAT_STRING`、`FONT_FLAGS`、`FONT_NAME`、および `FONT_SIZE` への代入がサポートされています。 詳細については、[「セル プロパティの使用 (MDX)」](mdx-cell-properties-using-cell-properties.md) をご覧ください。 MDX への代入もサポートしています、`NON_EMPTY_BEHAVIOR`のプロパティ、 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)ステートメントです。  
+>  MDX では、セル プロパティ `BACK_COLOR`、`FORE_COLOR`、`FORMAT_STRING`、`FONT_FLAGS`、`FONT_NAME`、および `FONT_SIZE` への代入がサポートされています。 詳細については、[「セル プロパティの使用 (MDX)」](mdx-cell-properties-using-cell-properties.md) をご覧ください。 MDX への代入もサポートしています、`NON_EMPTY_BEHAVIOR`のプロパティ、 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)ステートメント。  
   
  [SCOPE ステートメント&#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
   

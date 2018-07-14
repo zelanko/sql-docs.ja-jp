@@ -1,14 +1,13 @@
 ---
-title: 進行状況 ページ (AlwaysOn 可用性グループ ウィザード) |Microsoft ドキュメント
+title: 進行状況 ページ (AlwaysOn 可用性グループ ウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.progress.f1
 - sql12.swb.newagwizard.progress.f1
@@ -20,15 +19,15 @@ f1_keywords:
 - sql12.swb.failoverwixard.progress.f1
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 caps.latest.revision: 11
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 92a1adb3921b8daf0a2692ad840bf30af6561cf8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: de5c8d19326015da6371cc3796c752d9f80f5842
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217892"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>進行状況 ページ (AlwaysOn 可用性グループ ウィザード)
   このダイアログ ボックスを使用すると、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で実行中の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ウィザードの進行状況を表示できます。 進行状況バーには、ウィザードが実行している手順の相対的な進行状況が示されます。  
@@ -37,10 +36,10 @@ ms.locfileid: "36177367"
  **[詳細]**  
  下矢印をクリックすると、完了した手順を順に示す一覧と現在進行中の操作が進行状況グリッドに表示されます。 このグリッドには次の列が含まれています。  
   
- **Name**  
+ **名前**  
  各手順についての説明が表示されます。  
   
- **Status**  
+ **ステータス**  
  完了した手順の結果と、現在の手順の完了の割合を次のように示します。  
   
 |結果|説明|  

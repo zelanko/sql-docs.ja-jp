@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
@@ -16,13 +16,13 @@ ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4b9b26dab6040c5ca98fdf11271233415f163906
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d8b6de50b412029a69ecb0ac2f90406cb26fa50
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224782"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>データ警告マネージャーでのデータ警告の管理
   SharePoint ユーザーは、自分が作成したデータ警告と、それらの警告に関する情報を一覧表示できます。 また、警告を削除したり、データ警告デザイナーで警告定義を開いて編集したり、それらの警告を実行することもできます。 次の図に、データ警告マネージャーでユーザーが使用できる機能を示します。  
@@ -50,7 +50,7 @@ ms.locfileid: "36176564"
   
 -   警告定義を編集するデータ警告を右クリックし、 **[編集]** をクリックします。  
   
-     データ警告デザイナーに警告定義が表示されます。 詳細については、次を参照してください。[警告デザイナーでデータの警告を編集](edit-a-data-alert-in-alert-designer.md)と[データ警告デザイナー](../../2014/reporting-services/data-alert-designer.md)です。  
+     データ警告デザイナーに警告定義が表示されます。 詳細については、次を参照してください。[警告デザイナーでデータ警告の編集](edit-a-data-alert-in-alert-designer.md)と[データ警告デザイナー](../../2014/reporting-services/data-alert-designer.md)します。  
   
     > [!NOTE]  
     >  データ警告定義は、作成したユーザーのみが編集できます。  

@@ -1,5 +1,5 @@
 ---
-title: クエリ処理イベントのカテゴリ |Microsoft ドキュメント
+title: クエリ処理イベント カテゴリ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ddcdd85807e9b77c5baf91cc7bb6fd4418f8316b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ee6ef696f26397c3b4ca7656710d666d6e1941d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261488"
 ---
 # <a name="query-processing-events-category"></a>クエリ処理イベント カテゴリ
   クエリ処理イベント カテゴリには、次の表に示したイベント クラスがあります。  
   
-|**Event Class**|**イベント ID**|**description**|  
+|**Event Class**|**イベント ID**|**[説明]**|  
 |---------------------|------------------|---------------------|  
 |Query Subcube|11|使用法に基づく最適化用のサブキューブのクエリ。|  
 |Query Subcube Verbose|12|詳細情報を指定してサブキューブをクエリします。 このイベントを有効にすると、パフォーマンスが低下する場合があります。|  

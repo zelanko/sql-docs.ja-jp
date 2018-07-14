@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.new.custom.report.f1
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59819655763d017ebe549b7325aa920960000fa0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 08c664c7e8f2c345331b90d5b4ad502638a0c5be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263758"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio におけるカスタム レポート
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] で作成された一連の標準レポートが多数のオブジェクト エクスプローラー ノードに表示されます。 これらのレポートは、要求されることの多いサーバー情報を要約表示できるように設計されています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 以降は、管理者が [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成されたカスタム レポートを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から実行できるようになりました。  
@@ -75,10 +75,10 @@ ms.locfileid: "36176749"
 >  レポートには任意の有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを埋め込み、レポートから実行することができます。 高い特権を持つユーザー アカウントでレポートを実行すると、このように埋め込まれた命令を容易に実行できるようになります。  
   
 ## <a name="report-samples"></a>サンプル レポート  
- [レポートのサンプル](http://go.microsoft.com/fwlink/?LinkId=81792)、によって作成される標準のレポートを含む[!INCLUDE[msCoName](../../includes/msconame-md.md)]をダウンロードします。 サンプルは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して変更することができます。  
+ [レポートのサンプル](http://go.microsoft.com/fwlink/?LinkId=81792)、によって作成される、標準的なレポートを含む[!INCLUDE[msCoName](../../includes/msconame-md.md)]をダウンロードできます。 サンプルは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して変更することができます。  
   
 ## <a name="see-also"></a>参照  
- [カスタム レポートを Management Studio に追加します。](add-a-custom-report-to-management-studio.md)   
+ [Management Studio へのカスタム レポートを追加します。](add-a-custom-report-to-management-studio.md)   
  [カスタム レポート実行の警告を抑制します。](unsuppress-run-custom-report-warnings.md)   
  [カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用](use-custom-reports-with-object-explorer-node-properties.md)  
   

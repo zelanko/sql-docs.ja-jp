@@ -1,5 +1,5 @@
 ---
-title: データ フロー式を使用して設定できるプロパティ |Microsoft ドキュメント
+title: データ フロー式を使用して設定できるプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,26 +20,26 @@ helpviewer_keywords:
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0dccc1a7bb932ae044f6d1e2491c7521652e9033
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9855c21e19e4e2ef0e9f9d7ab88d6d12fdadda16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173173"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>式を使って設定できるデータ フロー プロパティ
   データ フロー タスク コンテナーで使用できるプロパティ式を使用して、データ フロー オブジェクトの特定のプロパティの値を指定できます。  
   
  プロパティ式の使用の詳細については、「 [パッケージでプロパティ式を使用する](expressions/use-property-expressions-in-packages.md)」を参照してください。  
   
- プロパティ式を使用して、パッケージを配置するインスタンスごとに構成をカスタマイズできます。 また、コマンド プロンプト ユーティリティ **dtexec** に **/set** オプションを付けて使用すると、プロパティ式を使用してパッケージの実行時制約を指定することもできます。 たとえば、制限、`MaximumThreads`並べ替え変換で使用される、または`MaxMemoryUsage`あいまいグループ化変換およびあいまい参照変換のです。 制約を行わないと、これらの変換により大容量のデータがメモリ内にキャッシュされる場合があります。  
+ プロパティ式を使用して、パッケージを配置するインスタンスごとに構成をカスタマイズできます。 また、コマンド プロンプト ユーティリティ **dtexec** に **/set** オプションを付けて使用すると、プロパティ式を使用してパッケージの実行時制約を指定することもできます。 たとえば、制限、 `MaximumThreads` 、並べ替え変換で使用される、または`MaxMemoryUsage`あいまいグループ化とあいまい参照変換の。 制約を行わないと、これらの変換により大容量のデータがメモリ内にキャッシュされる場合があります。  
   
  このトピックに示すデータ フロー オブジェクトのプロパティの 1 つに対するプロパティ式を指定するには、デザイナーの **[制御フロー]** 画面でデータ フロー タスクを選択するか、コンポーネントやパスを個別に選択せずにデザイナーの **[データ フロー]** タブを選択して、データ フロー タスクの **[プロパティ]** ウィンドウを表示します。 **[式]** プロパティを選択し、省略記号 (...) をクリックして、 **[プロパティ式エディター]** ダイアログ ボックスを表示します。 **[プロパティ]** の一覧からプロパティを選択し、 **[式]** テキスト ボックスに式を入力するか、省略記号 (...) をクリックして **[式ビルダー]** ダイアログ ボックスを表示します。  
   
- **[プロパティ]** の一覧には、現在、デザイナーの **[データ フロー]** 画面に配置されているデータ フロー オブジェクトで使用できるプロパティのみが表示されます。 したがって、 **[プロパティ]** の一覧では、プロパティ式をサポートするデータ フロー オブジェクトのすべてのプロパティを表示することはできません。 たとえば、デザイナー サーフェイスでは、ADO NET ソースを配置した場合、**プロパティ**一覧にはエントリが含まれています、`[ADO NET Source].[SqlCommand]`プロパティです。 この一覧には、データ フロー タスク自体の多数のプロパティも表示されます。  
+ **[プロパティ]** の一覧には、現在、デザイナーの **[データ フロー]** 画面に配置されているデータ フロー オブジェクトで使用できるプロパティのみが表示されます。 したがって、 **[プロパティ]** の一覧では、プロパティ式をサポートするデータ フロー オブジェクトのすべてのプロパティを表示することはできません。 たとえば、デザイナー画面で、ADO NET ソースを配置した場合、**プロパティ**一覧にはエントリが含まれています、`[ADO NET Source].[SqlCommand]`プロパティ。 この一覧には、データ フロー タスク自体の多数のプロパティも表示されます。  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>プロパティ式をサポートするデータ フロー オブジェクトのプロパティ  
  次の一覧にあるプロパティの値は、プロパティ式を使用して指定できます。  
@@ -85,7 +85,7 @@ ms.locfileid: "36179151"
  pragmaticworks.com の技術記事「 [SSIS 式チート シート](http://pragmaticworks.com/cheatsheet/)」  
   
 ## <a name="see-also"></a>参照  
- [パッケージのプロパティ式を使用します。](expressions/use-property-expressions-in-packages.md)   
+ [パッケージでプロパティ式を使用します。](expressions/use-property-expressions-in-packages.md)   
  [共通プロパティ](../../2014/integration-services/common-properties.md)   
  [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)   
  [パスのプロパティ](../../2014/integration-services/path-properties.md)  

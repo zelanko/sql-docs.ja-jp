@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
 - updating, data alerts
@@ -18,13 +18,13 @@ ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f5c9314b2dca029341c4ea503e6417a5e9c2507d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8b11052241d66086eb9206978a65527e0df9a93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251704"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>警告デザイナーでのデータ警告の編集
   編集対象のデータ警告定義は、データ警告マネージャーから開きます。 警告の定義は、作成したユーザーのみが編集できます。 詳細については、「 [データ警告マネージャーでのデータ警告の管理](manage-my-data-alerts-in-data-alert-manager.md)」をご覧ください。  
@@ -41,7 +41,7 @@ ms.locfileid: "36176340"
   
      データ警告デザイナーに警告定義が表示されます。  
   
-2.  ルール、スケジュール設定、および電子メールの設定を更新します。 詳細については、次を参照してください。[データ警告デザイナー](../../2014/reporting-services/data-alert-designer.md)と[データ警告デザイナーでデータの警告を作成](create-a-data-alert-in-data-alert-designer.md)です。  
+2.  ルール、スケジュール設定、および電子メールの設定を更新します。 詳細については、次を参照してください。[データ警告デザイナー](../../2014/reporting-services/data-alert-designer.md)と[データ警告デザイナーでデータ アラートを作成して](create-a-data-alert-in-data-alert-designer.md)します。  
   
     > [!NOTE]  
     >  別のデータ フィードを選択することはできません。 異なるデータ フィードを使用するには、新しいデータ警告定義を作成する必要があります。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - report servers [Reporting Services], performance
@@ -21,13 +21,13 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 caps.latest.revision: 64
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c672255a822313437682e0dc9e91c73d38a7563f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: facca3a93bb3681903ff6bb9ee7b6cf219c9ffcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244342"
 ---
 # <a name="monitoring-report-server-performance"></a>レポート サーバーのパフォーマンスの監視
   パフォーマンス監視ツールを使用してレポート サーバーのパフォーマンスを監視することにより、サーバーの利用状況の評価、傾向の監視、システムのボトルネックの診断、および現在のシステム構成で十分かどうかを判断するためのデータの収集を行うことができます。 サーバーのパフォーマンスを調整するには、レポート サーバー アプリケーション ドメインを再利用する頻度を指定します。 詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。  
@@ -43,7 +43,7 @@ ms.locfileid: "36175109"
   
  タスク マネージャーは、コンピューター上で現在実行されているプログラムおよびプロセスに関する情報を提供します。 タスク マネージャーを使用することで、レポート サーバーのパフォーマンスに関する重要な指標を監視することができます。 また、実行中のプロセスの利用状況を査定したり、CPU やメモリの使用状況に関するグラフやデータを参照することもできます。 タスク マネージャーの使用方法については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows の製品マニュアルを参照してください。  
   
- パフォーマンス コンソールとイベント ビューアーは、レポートの処理やリソースの消費に関するログおよび警告を作成する際に使用できます。 によって生成される Windows イベントについては[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を参照してください[Windows アプリケーション ログ](windows-application-log.md)です。 パフォーマンス コンソールの詳細については、後の「Windows パフォーマンス カウンター」を参照してください。  
+ パフォーマンス コンソールとイベント ビューアーは、レポートの処理やリソースの消費に関するログおよび警告を作成する際に使用できます。 によって生成される Windows イベントについて[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を参照してください[Windows アプリケーション ログ](windows-application-log.md)します。 パフォーマンス コンソールの詳細については、後の「Windows パフォーマンス カウンター」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでは、キャッシュおよびセッション管理に使用するレポート サーバー データベースと一時データベースに関する情報も提供されます。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36175109"
   
 -   スケジュール設定した操作、およびレポートの配信を監視するための `MSRS 2011 Windows Service` および `MSRS 2011 Windows Service SharePoint Mode`。 これらのパフォーマンス オブジェクトには複数のカウンターが含まれ、スケジュールされた操作を介して開始されるレポート処理の追跡に使用されます。 スケジュールされた操作には、サブスクリプションと配信、レポート実行スナップショット、およびレポート履歴が含まれます。  
   
--   `ReportServer:Service` および`ReportServerSharePoint:Service`HTTP 関連のイベントおよびメモリ管理を監視します。 これらは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に固有のカウンターです。要求、接続、ログオン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 このパフォーマンス オブジェクトには、メモリ管理に関連したカウンターも含まれています。  
+-   `ReportServer:Service` `ReportServerSharePoint:Service` HTTP 関連のイベントおよびメモリ管理を監視します。 これらは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に固有のカウンターです。要求、接続、ログオン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 このパフォーマンス オブジェクトには、メモリ管理に関連したカウンターも含まれています。  
   
  1 台のコンピューターに複数のレポート サーバー インスタンスが存在する場合、インスタンスをまとめて監視することも個別に監視することもできます。 カウンターを追加する場合は、監視対象に含めるインスタンスを選択してください。 パフォーマンス コンソール (perfmon.msc) の使用およびカウンターの追加に関する詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows の製品マニュアルを参照してください。  
   

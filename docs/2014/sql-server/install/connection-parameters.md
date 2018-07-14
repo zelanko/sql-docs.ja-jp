@@ -1,5 +1,5 @@
 ---
-title: 接続パラメーター |Microsoft ドキュメント
+title: 接続パラメーター |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], connections
 - authentication [Upgrade Advisor]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], connections
 ms.assetid: f754d038-637a-4d8e-85b0-b242e6499d26
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc99f9fc26f0e46f0f5ea0d717614bf5935f4814
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ba6652a172e06c64018243acd01a6d60dcced47b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181619"
 ---
 # <a name="connection-parameters"></a>接続パラメーター
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]など、特定の種類のサーバーを分析するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスを選択する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスは自動的に選択されます。 この選択は変更できますが、アップグレード アドバイザーによる分析用に選択できるのは一度に 1 つのインスタンスだけです。 認証が必要なサーバーを選択した場合は、認証モードと資格情報を入力する必要があります。  
@@ -46,7 +46,7 @@ ms.locfileid: "36177030"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、このボックスにユーザー名を入力します。 ここには、コンピューターの管理者の資格情報を持っているユーザー名を入力することをお勧めします。  
   
 > [!NOTE]  
->  現在ログオンしているユーザーのユーザー名が入力 Windows 認証を選択した場合、**ユーザー名**テキスト ボックス。  
+>  現在ログオンしているユーザーのユーザー名が入力されて Windows 認証を選択した場合、**ユーザー名**テキスト ボックス。  
   
  **Password**  
  指定したユーザーのパスワードを入力します。  

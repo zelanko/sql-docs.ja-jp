@@ -1,5 +1,5 @@
 ---
-title: DBSCHEMA_PROVIDER_TYPES 行セット |Microsoft ドキュメント
+title: DBSCHEMA_PROVIDER_TYPES 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c26c713f7032038b3cb969ff7681dc23c7deea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7bca2527b77df65dede59878e91ef88ec5f933e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250952"
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>DBSCHEMA_PROVIDER_TYPES 行セット
   データ プロバイダーによってサポートされている (基本) データ型を識別します。  
@@ -42,16 +42,16 @@ ms.locfileid: "36175624"
 |`LITERAL_PREFIX`|`DBTYPE_WSTR`||テキスト コマンドでこの型のリテラルのプレフィックスとして使用する文字または文字列。|  
 |`LITERAL_SUFFIX`|`DBTYPE_WSTR`||テキスト コマンドでこの型のリテラルのサフィックスとして使用する文字または文字列。|  
 |`CREATE_PARAMS`|`DBTYPE_WSTR`||このデータ型の列の作成時にコンシューマーによって指定された作成パラメーター。 たとえば、SQL データ型 `DECIMAL,` には、有効桁数と小数点以下桁数が必要です。 この場合、作成パラメーターには文字列 "precision,scale" を使用できます。 有効桁数が 10 で、小数点以下桁数が 2 である `DECIMAL` 列を作成するテキスト コマンドでは、`TYPE_NAME` 列の値は `DECIMAL()` になり、完全な型指定は `DECIMAL(10,2)` になります。<br /><br /> 作成パラメーターは、値をコンマで区切った一覧として表示されます。値は指定された順に表示され、かっこで囲まれません。 作成パラメーターが length、maximum length、precision、scale、seed、または increment の場合は、それぞれ "length"、"max length"、"precision"、"scale"、"seed"、および "increment" を使用します。 作成パラメーターがその他の値の場合は、作成パラメーターの記述に使用するテキストはプロバイダーによって決定されます。<br /><br /> データ型に作成パラメーターが必要な場合は、型名に "()" が含まれます。 これは、作成パラメーターを挿入する位置を示します。 型名に "()" が含まれない場合、作成パラメーターはかっこで囲まれ、データ型名に追加されます。|  
-|`IS_NULLABLE`|`DBTYPE_BOOL`||データ型で NULL 値が許容されるかどうかを示すブール値。<br /><br /> `VARIANT_TRUE` は、データ型で NULL 値が許容されることを意味します。<br /><br /> `VARIANT_FALSE` データ型が null 許容でないことを示します。<br /><br /> `NULL` は、データ型で NULL 値が許容されるかどうかが不明であることを意味します。|  
+|`IS_NULLABLE`|`DBTYPE_BOOL`||データ型で NULL 値が許容されるかどうかを示すブール値。<br /><br /> `VARIANT_TRUE` は、データ型で NULL 値が許容されることを意味します。<br /><br /> `VARIANT_FALSE` データ型が null 許容ではないことを示します。<br /><br /> `NULL` は、データ型で NULL 値が許容されるかどうかが不明であることを意味します。|  
 |`CASE_SENSITIVE`|`DBTYPE_BOOL`||データ型が文字型で、大文字と小文字が区別されるかどうかを示すブール値。<br /><br /> `VARIANT_TRUE` は、データ型が文字型であり、大文字と小文字が区別されることを意味します。<br /><br /> `VARIANT_FALSE` は、データ型が文字型ではなく、大文字と小文字が区別されないことを意味します。|  
-|`SEARCHABLE`|`DBTYPE_UI4`||プロバイダーで `ICommandText` がサポートされている場合、検索でのデータ型の使用方法を示す整数。それ以外の場合は、`NULL` です。<br /><br /> この列は、次の値をとります。<br /><br /> -   `DB_UNSEARCHABLE` データ型を使用できないことを示します、`WHERE`句。<br />-   `DB_LIKE_ONLY` データ型を使用できることを示す、`WHERE`句でのみ、`LIKE`述語。<br />-   `DB_ALL_EXCEPT_LIKE` データ型を使用できることを示す、`WHERE`を除くすべての比較演算子を含む句`LIKE`です。<br />-   `DB_SEARCHABLE` データ型を使用できることを示す、`WHERE`任意の比較演算子を含む句。|  
+|`SEARCHABLE`|`DBTYPE_UI4`||プロバイダーで `ICommandText` がサポートされている場合、検索でのデータ型の使用方法を示す整数。それ以外の場合は、`NULL` です。<br /><br /> この列は、次の値をとります。<br /><br /> -   `DB_UNSEARCHABLE` データ型を使用できないことを示します、`WHERE`句。<br />-   `DB_LIKE_ONLY` データ型を使用できることを示します、`WHERE`句でのみ、`LIKE`述語。<br />-   `DB_ALL_EXCEPT_LIKE` データ型を使用できることを示します、`WHERE`を除くすべての比較演算子を含む句`LIKE`します。<br />-   `DB_SEARCHABLE` データ型を使用できることを示します、`WHERE`任意の比較演算子を含む句。|  
 |`UNSIGNED_ATTRIBUTE`|`DBTYPE_BOOL`||データ型が符号なしかどうかを示すブール値。<br /><br /> `VARIANT_TRUE` は、データ型が符号なしであることを意味します。<br /><br /> `VARIANT_FALSE` は、データ型が符号付きであることを意味します。<br /><br /> `NULL` は、この列がデータ型に適用されないことを意味します。|  
 |`FIXED_PREC_SCALE`|`DBTYPE_BOOL`||データ型の有効桁数と小数点以下桁数が固定しているかどうかを示すブール値。<br /><br /> `VARIANT_TRUE` は、データ型の有効桁数と小数点以下桁数が固定していることを意味します。<br /><br /> `VARIANT_FALSE` は、データ型の有効桁数と小数点以下桁数が固定していないことを意味します。|  
 |`AUTO_UNIQUE_VALUE`|`DBTYPE_BOOL`||データ型が自動増分かどうかを示すブール値。<br /><br /> `VARIANT_TRUE` は、この型の値が自動増分できることを意味します。<br /><br /> `VARIANT_FALSE` は、この型の値が自動増分できないことを意味します。<br /><br /> この値が `VARIANT_TRUE` である場合、この型の列が常に自動増分されるかどうかは、プロバイダーの `DBPROP_COL_AUTOINCREMENT` 列プロパティによって決まります。 `DBPROP_COL_AUTOINCREMENT` プロパティが読み取り/書き込み可能である場合、この型の列が自動増分されるかどうかは、`DBPROP_COL_AUTOINCREMENT` プロパティの設定によって決まります。 `DBPROP_COL_AUTOINCREMENT` が読み取り専用プロパティである場合は、この型のすべての列が自動増分されるか、どの列も自動増分されません。|  
 |`LOCAL_TYPE_NAME`|`DBTYPE_WSTR`||`TYPE_NAME` のローカライズされたバージョン。 ローカライズされた名前がデータ プロバイダーによってサポートされていない場合は、`NULL` が返されます。|  
-|`MINIMUM_SCALE`|`DBTYPE_I2`||型インジケーターが `DBTYPE_VARNUMERIC`、`DBTYPE_DECIMAL`、`DBTYPE_NUMERIC` のいずれかである場合、小数点以下で許容される最小桁数。 それ以外の場合、`NULL`です。|  
+|`MINIMUM_SCALE`|`DBTYPE_I2`||型インジケーターが `DBTYPE_VARNUMERIC`、`DBTYPE_DECIMAL`、`DBTYPE_NUMERIC` のいずれかである場合、小数点以下で許容される最小桁数。 それ以外の場合、`NULL`します。|  
 |`MAXIMUM_SCALE`|`DBTYPE_I2`||型インジケーターが `DBTYPE_VARNUMERIC`、`DBTYPE_DECIMAL`、または `DBTYPE_NUMERIC` のいずれかである場合、小数点以下で許容される最大桁数。それ以外の場合は、`U` です。|  
-|`GUID`|`DBTYPE_GUID`||(将来使用する予定) 型がタイプ ライブラリに記述されている場合は、型の `GUID`。 それ以外の場合、`NULL`です。|  
+|`GUID`|`DBTYPE_GUID`||(将来使用する予定) 型がタイプ ライブラリに記述されている場合は、型の `GUID`。 それ以外の場合、`NULL`します。|  
 |`TYPELIB`|`DBTYPE_WSTR`||(将来使用する予定) 型がタイプ ライブラリに記述されている場合は、型の記述を含んでいるタイプ ライブラリ。 それ以外の場合は、NULL。|  
 |`VERSION`|`DBTYPE_WSTR`||(将来使用する予定) 型定義のバージョン。 プロバイダーは、型定義をバージョン管理できます。 プロバイダーによって、タイムスタンプや番号 (整数または浮動小数点数) などの異なるバージョン管理スキームが使用されます。 サポートされない場合は、`NULL` です。|  
 |`IS_LONG`|`DBTYPE_BOOL`||データ型がバイナリ ラージ オブジェクト (BLOB) で、非常に長いデータを持つかどうかを示すブール値。<br /><br /> `VARIANT_TRUE` は、データ型が非常に長いデータを含んでいる `BLOB` であることを意味します。非常に長いデータの定義は、プロバイダーによって異なります。<br /><br /> `VARIANT_FALSE` は、データ型が非常に長いデータを含んでいない `BLOB` であるか、`BLOB` でないことを意味します。<br /><br /> この値によって、`DBCOLUMNFLAGS_ISLONG` の `GetColumnInfo` および `IColumnsInfo` の `GetParameterInfo` によって返される `ICommandWithParameters` フラグの設定が決まります。|  

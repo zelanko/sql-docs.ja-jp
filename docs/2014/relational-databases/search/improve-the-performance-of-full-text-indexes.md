@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [SQL Server], full-text search
 - full-text queries [SQL Server], performance
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 caps.latest.revision: 66
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb10d58c2197f422fe59ff2fa9a165bca5f8bf62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e1f24b14396b5277192ff0a7f7e814e66e40fdc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212772"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
   フルテキスト インデックス作成とフルテキスト クエリのパフォーマンスは、メモリ、ディスク速度、CPU 速度、コンピューターのアーキテクチャなどのハードウェア リソースの影響を受けます。  
@@ -59,16 +58,16 @@ ms.locfileid: "36177295"
   
   
   
-##  <a name="tuning"></a> フルテキスト インデックスのパフォーマンスをチューニング  
+##  <a name="tuning"></a> フルテキスト インデックスのパフォーマンスのチューニング  
  フルテキスト インデックスのパフォーマンスを最大化するには、次に示すベスト プラクティスを実装します。  
   
--   すべてのプロセッサまたはコアを最大限に使用する設定[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' に、システム上の Cpu の数。 構成オプションの詳細については、「 [max full-text crawl range サーバー構成オプション](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)」を参照してください。  
+-   すべてのプロセッサまたはコアを最大値を使用する設定[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' に、システム上の Cpu の数。 構成オプションの詳細については、「 [max full-text crawl range サーバー構成オプション](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)」を参照してください。  
   
 -   ベース テーブルにクラスター化インデックスがあることを確認します。 クラスター化インデックスの最初の列には整数データ型を使用します。 GUID は使用しないようにしてください。 クラスター化インデックスで複数の範囲の作成を使用すると、作成速度を最大限に高めることができます。 フルテキスト キーとして機能する列は整数データ型にすることをお勧めします。  
   
 -   [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) ステートメントを使用してベース テーブルの統計を更新します。 さらに重要な点は、クラスター化インデックスの統計や完全作成のフルテキスト キーを更新することです。 これにより、複数の範囲の作成によってテーブルに適切なパーティションが生成されるようになります。  
   
--   セカンダリ インデックスを作成、`timestamp`増分作成のパフォーマンスを向上させたい場合は列です。  
+-   セカンダリ インデックスを作成、`timestamp`列の増分作成のパフォーマンスを向上する場合。  
   
 -   大型のマルチ CPU コンピューター上で完全作成を実行する前に、fdhost.exe プロセスおよびオペレーティング システムが使用するメモリを十分に確保するために、`max server memory` 値を設定してバッファー プールのサイズを一時的に制限することをお勧めします。 詳細については、このトピックの「フィルター デーモン ホスト プロセス (fdhost.exe) のメモリ要件の推定」を参照してください。  
   
@@ -130,16 +129,16 @@ ms.locfileid: "36177295"
 > [!IMPORTANT]  
 >  数式に関する基本情報については、次を参照してください。 <sup>1</sup>、 <sup>2</sup>、および<sup>3</sup>、後述します。  
   
-|プラットフォーム|Mb fdhost.exe のメモリ要件の推定 —*F*<sup>1</sup>|Max server memory の計算式 —*M*<sup>2</sup>|  
+|プラットフォーム|Fdhost.exe のメモリ要件 (mb) の推定-*F*<sup>1</sup>|Max server memory の計算式 —*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
 |x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= 最小 (** *T* **、** 2000 **) –*`F`*–** 500|  
 |x64|*F* **=** *クロール範囲の数* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
   
- <sup>1</sup>複数の完全作成が進行中である場合は、それぞれの fdhost.exe のメモリ要件の計算として別に、 *F1*、 *F2*などのようにします。 その後、 *M* を *T***–** sigma **(***F*i**)** で計算します。  
+ <sup>1</sup>複数の完全作成が進行中である場合は、それぞれの fdhost.exe のメモリ要件の計算として個別に*F1*、 *F2*となります。 その後、 *M* を *T***–** sigma **(***F*i**)** で計算します。  
   
- <sup>2</sup> 500 MB は、システム内の他のプロセスに必要なメモリの推定値です。 システムで追加の作業を実行している場合、適宜この値を大きくします。  
+ <sup>2</sup> 500 MB は、その他のプロセス、システムに必要なメモリの推定値です。 システムで追加の作業を実行している場合、適宜この値を大きくします。  
   
- <sup>3</sup> .*ism_size* x64 8 MB と見なされますプラットフォームです。  
+ <sup>3</sup> .*ism_size* x64 8 MB と見なされますプラットフォーム。  
   
  **例: fdhost.exe のメモリ要件の推定**  
   
@@ -147,11 +146,11 @@ ms.locfileid: "36177295"
   
  `F = 8*10*8=640`  
   
- 次の計算に最適な値を取得する`max server memory`—*M*です。 *こ*のシステムで使用可能な合計物理メモリ (MB 単位) (*T*) は `8192`です。  
+ 次の計算の最適な値を取得する`max server memory`—*M*します。 *こ*のシステムで使用可能な合計物理メモリ (MB 単位) (*T*) は `8192`です。  
   
  `M = 8192-640-500=7052`  
   
- **例: max server memory の設定**  
+ **例: 最大サーバー メモリの設定**  
   
  この例では、 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)と[再構成](/sql/t-sql/language-elements/reconfigure-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]を設定するステートメント`max server memory`に対して計算された値に*M*前の例, `7052`:  
   
@@ -202,12 +201,12 @@ GO
   
   
   
-##  <a name="filters"></a> フィルター処理によるインデックス作成のパフォーマンス低下のトラブルシューティング  
+##  <a name="filters"></a> フィルター処理によるインデックス作成パフォーマンスの低下のトラブルシューティング  
  Full-Text Engine では、フルテキスト インデックスを作成するときに、マルチスレッド フィルターとシングル スレッド フィルターの 2 種類のフィルターを使用します。 フィルター処理するドキュメントに応じて、マルチスレッド フィルターを使用する場合 ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 文書など) と、 シングル スレッド フィルターを使用する場合 (Adobe Acrobat Portable Document Format (PDF) ドキュメントなど) があります。  
   
  セキュリティ上の理由から、フィルターはフィルター デーモン ホスト プロセスによって読み込まれます。 サーバー インスタンスでは、マルチスレッド フィルターに対してはすべてマルチスレッド処理が使用され、シングル スレッド フィルターに対してはすべてシングル スレッド処理が使用されます。 マルチスレッド フィルターを使用するドキュメントにシングル スレッド フィルターを使用するドキュメントが埋め込まれていると、Full-Text Engine では埋め込まれたドキュメントに対してシングル スレッド処理を開始します。 たとえば、PDF ドキュメントが埋め込まれた Word 文書の場合、Full-Text Engine は、Word コンテンツに対してはマルチスレッド プロセスを使用し、PDF の内容に対してはシングル スレッド プロセスを開始します。 ただし、このような環境では、シングル スレッド フィルターが適切に機能しない場合があり、フィルター処理が不安定になることがあります。 このような埋め込みが通例であるような特定の状況では、不安定になった結果、フィルター処理がクラッシュすることもあります。 クラッシュが発生すると、エラーが発生したドキュメント (たとえば、PDF の内容が埋め込まれた Word 文書) がシングル スレッド フィルター処理に再ルーティングされます。 再ルーティングが頻繁に起こると、フルテキスト インデックス作成処理のパフォーマンスが低下します。  
   
- この問題を回避するには、コンテナー ドキュメント (この場合は Word) に対するフィルターとして、シングル スレッド フィルターを設定します。 フィルターのレジストリ値を変更して、特定のフィルターをシングル スレッド フィルターとして設定できます。 シングル スレッド フィルターとしてはマークを設定する必要があります、 **ThreadingModel**にフィルターのレジストリ値`Apartment Threaded`です。 シングル スレッド アパートメントの詳細については、ホワイト ペーパー「 [COM スレッド モデルの概要と使用方法](http://go.microsoft.com/fwlink/?LinkId=209159)」を参照してください。  
+ この問題を回避するには、コンテナー ドキュメント (この場合は Word) に対するフィルターとして、シングル スレッド フィルターを設定します。 フィルターのレジストリ値を変更して、特定のフィルターをシングル スレッド フィルターとして設定できます。 シングル スレッド フィルターとしてをマークするには、設定する必要があります、 **ThreadingModel**にフィルターの値はレジストリ`Apartment Threaded`します。 シングル スレッド アパートメントの詳細については、ホワイト ペーパー「 [COM スレッド モデルの概要と使用方法](http://go.microsoft.com/fwlink/?LinkId=209159)」を参照してください。  
   
   
   

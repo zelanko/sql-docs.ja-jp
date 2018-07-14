@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fe79b6a9cd0e3c25caa2e3a1bccc67f0ac3e9be5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fd8f519abce87b224d062cb245365b42d5ffc79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262078"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>レポート パーツ (レポート ビルダーおよび SSRS)
   テーブル、マトリックス、グラフ、画像などのレポート アイテムを、 *レポート パーツ*としてパブリッシュできます。 レポート パーツは、レポート サーバーに個別にパブリッシュされ、別のレポートで再利用できるレポート アイテムです。 レポート パーツのファイル拡張子は .rsc です。  
@@ -30,7 +30,7 @@ ms.locfileid: "36175193"
   
  レポートに追加するレポート パーツは、サイトやサーバーにあるレポート パーツのインスタンスとのリレーションシップを一意の ID によって維持します。 サイトやサーバーのレポート パーツをレポートに追加した後、サイトやサーバーにある元のレポート パーツに影響を及ぼすことなく、それらを変更できます。 十分な権限を持っている場合は、サイトやサーバーのレポート パーツに他のユーザーが行った更新内容を受け入れ、新しいレポート パーツを追加するか、元のレポート パーツに書き込んで、変更後のレポート パーツをサイトやサーバーに保存できます。  
   
- すぐに始めるレポート パーツ、ビデオを参照してください。 [SQL Server 2008 r2 レポート ビルダー 3 のレポート パーツ](http://technet.microsoft.com/edge/Video/ff711300)と[操作方法: 作成する再利用可能なレポート パーツと SQL Server レポート ビルダー](http://technet.microsoft.com/sqlserver/ff634166.aspx)です。  
+ レポート パーツをすばやく開始する、ビデオを参照してください。[で SQL Server 2008 R2 レポート ビルダー 3 のレポート パーツ](http://technet.microsoft.com/edge/Video/ff711300)と[方法は i: 再利用可能なレポート パーツを作成する SQL Server レポート ビルダーで](http://technet.microsoft.com/sqlserver/ff634166.aspx)します。  
   
 ##  <a name="ComponentWorkflow"></a> レポート パーツのライフ サイクル  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -78,7 +78,7 @@ ms.locfileid: "36175193"
   
  一部のレポート パーツは、他のレポート アイテムを中に含めることができます。 たとえば、テーブルにはグラフ、四角形にはマトリックスとグラフをそれぞれ含めることができます。 他のレポート アイテムを含むレポート アイテムをパブリッシュすると、まとめて保存されます。 他のレポート アイテムは、コンテナーのレポート パーツに埋め込まれたまま保存されます。 それらを個別に更新したり、コンテナー内のアイテムを個別のレポート パーツとして保存することはできません。  
   
- レポート パーツのパブリッシュの詳細については、次を参照してください。[発行およびレポート パーツの再パブリッシュ&#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)です。  
+ レポート パーツのパブリッシュの詳細については、次を参照してください。[発行およびレポート パーツの再パブリッシュ&#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)します。  
   
 ### <a name="modifying-report-part-metadata"></a>レポート パーツのメタデータの変更  
  レポート パーツを既定の設定を使用して既定の場所でパブリッシュすることも、各レポート パーツを別の場所に保存し、タイトルや説明などのメタデータを変更することもできます。  
@@ -97,12 +97,12 @@ ms.locfileid: "36175193"
 ### <a name="searching-for-report-parts"></a>レポート パーツの検索  
  レポート パーツ ギャラリーで、レポートに追加するレポート パーツを検索します。 レポート パーツは、パーツの名前全体またはその一部、作成者、最終変更者、最終変更日、保存場所、またはレポート パーツの種類によって、フィルター処理できます。 たとえば、ある同僚が先週作成したグラフをすべて検索できます。  
   
- 検索結果はサムネイルまたは一覧で表示でき、名前、作成日、変更日、および作成者で検索結果を並べ替えることができます。 詳細については、次を参照してください。[レポート パーツの参照と既定のフォルダーの設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)です。  
+ 検索結果はサムネイルまたは一覧で表示でき、名前、作成日、変更日、および作成者で検索結果を並べ替えることができます。 詳細については、次を参照してください。[レポート パーツの参照と既定のフォルダーの設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)します。  
   
 ### <a name="what-comes-with-a-report-part"></a>レポート パーツの付属アイテム  
  レポートにレポート パーツを追加すると、動作に必要なアイテムもすべて追加されます。 たとえば、クエリやデータ ソースへの接続など、データを表示するオブジェクトはデータセットに依存しています。 また、1 つ以上のパラメーターが含まれている場合もあります。 依存するアイテムには *依存関係*があり、レポート パーツをレポートに追加する場合、依存するすべてのアイテムまたはアイテムへのポインターがレポート パーツに付属しています。 データセットとパラメーターは、レポートのレポート データ ペインに一覧表示されます。  
   
- レポート パーツのデータセットは、レポート パーツに埋め込むか、レポート パーツが参照する別の共有データセットとして指定できます。 レポート パーツに埋め込まれているデータセットは、変更できる場合があります。 共有データセットである場合は、別のオブジェクトであり、権限が必要になります。 共有し、埋め込みデータセットについての詳細についてを参照してください[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)です。  
+ レポート パーツのデータセットは、レポート パーツに埋め込むか、レポート パーツが参照する別の共有データセットとして指定できます。 レポート パーツに埋め込まれているデータセットは、変更できる場合があります。 共有データセットである場合は、別のオブジェクトであり、権限が必要になります。 共有し、埋め込みデータセットについての詳細についてを参照してください[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)します。  
   
 ### <a name="resolving-naming-conflicts"></a>名前の競合の解決  
  レポート パーツを追加する場合、レポート ビルダーによって名前の競合が修正されます。 たとえば、レポートに Chart1 が既に存在する場合、Chart1 という名前のレポート パーツを追加すると、レポート ビルダーによって新しいレポート パーツは Chart2 という名前に自動的に変更されます。 レポートに Dataset1 が既に存在する場合、同じ Dataset1 という名前の別のデータセットを参照するレポート パーツを追加すると、レポート ビルダーによって新しいデータセットは Dataset2 という名前に変更され、参照が更新されます。  
@@ -118,7 +118,7 @@ ms.locfileid: "36175193"
  レポートを開くたびに、レポート ビルダーによって、そのレポートにあるレポート パーツのサーバー インスタンスがサーバー上で更新されたかどうかが確認されます。 また、データセットやパラメーターなどのレポート パーツの依存アイテムに変更が加えられたかどうかも確認されます。 パブリッシュ済みレポート パーツまたはレポート パーツの依存アイテムがサーバー上で更新されている場合は、レポート内の情報バーに、更新されたアイテムの数が表示されます。 更新は、表示して受け入れることも、拒否することもできます。また、情報バーを消去することもできます。 更新内容を表示すると、レポート パーツのサムネイル、最終変更者、および最終変更日が表示されます。 更新されたアイテムのすべてまたは一部を受け入れることができます。  
   
 > [!NOTE]  
->  情報バーを無効にして、レポート パーツの変更に関する情報が表示されないようにすることもできます。 このオプションは、レポートにレポート パーツを追加する場合に設定します。 情報バーを無効にした場合でも、更新を確認できます。 詳細については、次を参照してください。[更新プログラムまたは更新プログラムを無効にするチェック&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)です。  
+>  情報バーを無効にして、レポート パーツの変更に関する情報が表示されないようにすることもできます。 このオプションは、レポートにレポート パーツを追加する場合に設定します。 情報バーを無効にした場合でも、更新を確認できます。 詳細については、次を参照してください。[確認の更新プログラムまたは更新プログラムを無効にする&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)します。  
   
  レポート ビルダーによって、レポート パーツのサーバー上での最終更新日とレポート パーツとサーバーの最終同期日が異なるかどうかが確認されます。 レポート内のレポート パーツの変更日は確認されません。 したがって、レポート内のレポート パーツとサーバー上のレポート パーツはまったく異なる場合がありますが、レポート ビルダーが更新を確認する際には、その違いは検出されません。  
   
@@ -147,15 +147,15 @@ ms.locfileid: "36175193"
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  [およびレポート パーツを再パブリッシュ&#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [レポート パーツの参照し、既定のフォルダーを設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [レポート パーツの参照し、既定のフォルダーの設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [更新プログラムまたは更新をチェック&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
+ [更新プログラムまたは更新のチェック&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>参照  
- [レポート パーツとレポート ビルダーでデータセット](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [レポート ビルダーのレポート パーツおよびデータセット](report-data/report-parts-and-datasets-in-report-builder.md)   
  [レポート パーツのトラブルシューティング&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [レポート パーツの管理](report-design/managing-report-parts.md)   
- [レポート ビルダー 3 のレポート パーツで SQL Server 2008 R2 (ビデオ)](http://technet.microsoft.com/edge/Video/ff711300)   
- [SQL Server レポート ビルダー (ビデオ) での Create 再利用可能なレポート パーツの操作方法:](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
+ [レポート ビルダー 3 のレポート パーツでは、SQL Server 2008 R2 (ビデオ)](http://technet.microsoft.com/edge/Video/ff711300)   
+ [SQL Server レポート ビルダー (ビデオ) を作成する再利用可能なレポート パーツを how Do i:](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

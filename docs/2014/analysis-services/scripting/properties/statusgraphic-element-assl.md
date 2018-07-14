@@ -1,5 +1,5 @@
 ---
-title: StatusGraphic 要素 (ASSL) |Microsoft ドキュメント
+title: StatusGraphic 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - StatusGraphic element
 ms.assetid: 14b365bc-924d-4791-ad4a-a38155fec42e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c551e084d833dff17b7d6c1ab46b398cf6f62313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12d175d20c562fd9c0df30941ded999988fed976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215962"
 ---
 # <a name="statusgraphic-element-assl"></a>StatusGraphic 要素 (ASSL)
-  状態を表す推奨グラフィカル表示が含まれています、 [Kpi](../objects/kpi-element-assl.md)要素。  
+  ステータスを表す推奨グラフィカル表示が含まれています、 [Kpi](../objects/kpi-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,13 +66,13 @@ ms.locfileid: "36176251"
   
 |値|説明|  
 |-----------|-----------------|  
-|*信号機 - 単一*|信号機 (1 つ)|  
-|*信号機 - 複数*|信号機 (複数)|  
+|*信号機の 1 つ*|信号機 (1 つ)|  
+|*信号機の複数*|信号機 (複数)|  
 |*道路標識*|道路標識|  
 |*ゲージ - 昇順*|ゲージ|  
 |*ゲージの降順*|反転ゲージ|  
 |*温度計*|温度計|  
-|*シリンダー*|シリンダー|  
+|*円柱*|円柱|  
 |*スマイリー フェイス*|顔マーク|  
   
  親に対応する要素`StatusGraphic`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Kpi>します。  

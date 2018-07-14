@@ -1,5 +1,5 @@
 ---
-title: GEOMETRY、GEOGRAPHY、および HIERARCHYID のクライアント側の使用状況についての警告 |Microsoft ドキュメント
+title: GEOMETRY、geography 型、および HIERARCHYID のクライアント側の使用状況についての警告 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 02748f9dca8e4f9f29c7c94658d2a4068b1ba65e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 46e4f63ef0909ca07eeac5d09b8233fb509f87a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166113"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>幾何学、地理学、HIERARCHYID のクライアント側の使用に関する警告
-  アセンブリ**Microsoft.SqlServer.Types.dll**、バージョン 11.0 に、バージョン 10.0 からアップグレードされたが、空間データ型が含まれています。 このアセンブリを参照するカスタム アプリケーションは、特定の条件に該当する場合に失敗します。  
+  アセンブリ**Microsoft.SqlServer.Types.dll**、バージョン 11.0 に、バージョン 10.0 からアップグレードされましたが、空間データ型が含まれています。 このアセンブリを参照するカスタム アプリケーションは、特定の条件に該当する場合に失敗します。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>説明  
- アセンブリ**Microsoft.SqlServer.Types.dll**、バージョン 11.0 に、バージョン 10.0 からアップグレードされたが、空間データ型が含まれています。 このアセンブリを参照するカスタム アプリケーションは、次の条件に該当する場合に失敗します。  
+ アセンブリ**Microsoft.SqlServer.Types.dll**、バージョン 11.0 に、バージョン 10.0 からアップグレードされましたが、空間データ型が含まれています。 このアセンブリを参照するカスタム アプリケーションは、次の条件に該当する場合に失敗します。  
   
--   移動すると、カスタム アプリケーション、コンピューターを[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のみいるコンピューターにインストールされた[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]がインストールされているアプリケーションは失敗ための参照されるバージョン 10.0、 **SqlTypes**アセンブリ存在しません。 この場合、次のエラー メッセージが返されることがあります: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
+-   移動すると、カスタム アプリケーション、コンピューターを[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のみをコンピューターにインストールされた[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]がインストールされている、ためアプリケーションが失敗の参照されるバージョン 10.0、 **SqlTypes**アセンブリ存在しません。 この場合、次のエラー メッセージが返されることがあります: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
   
--   参照するとき、 **SqlTypes**アセンブリ バージョン 11.0、バージョン 10.0 もインストールし、このエラー メッセージを表示することがあります。 `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
+-   参照するとき、 **SqlTypes**アセンブリ バージョン 11.0、バージョン 10.0 もインストールしは、このエラー メッセージを表示することがあります。 `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
   
--   参照する場合、 **SqlTypes**アセンブリ バージョン 11.0 を .NET 3.5、4、または 4.5 を対象とするカスタム アプリケーションから、アプリケーションが失敗 SqlClient が仕様によってバージョン 10.0 のアセンブリを読み込むためです。 このエラーは、アプリケーションが次のいずれかのメソッドを呼び出したときに発生します。  
+-   参照するとき、 **SqlTypes**アセンブリ バージョン 11.0 を .NET 3.5、4、または 4.5 を対象とするカスタム アプリケーションから、アプリケーションは SqlClient が仕様は、バージョン 10.0 のアセンブリを読み込むために失敗します。 このエラーは、アプリケーションが次のいずれかのメソッドを呼び出したときに発生します。  
   
     -   `GetValue` クラスの `SqlDataReader` メソッド  
   

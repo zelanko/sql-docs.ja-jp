@@ -1,5 +1,5 @@
 ---
-title: マイニング モデル ビューアーのタスクと操作方法 |Microsoft ドキュメント
+title: マイニング モデル ビューアーのタスクと操作方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], viewing
 - displaying mining models
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services]
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6249d4a1c63b58135a1b7585c706496712bf80e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2b463cd9a5cb58c1286d66ce88ab749e408d852
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200392"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>マイニング モデル ビューアーのタスクと操作方法
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーには、マイニング モデルの探索に使用できるいくつかのツールが含まれています。 次のトピックでは、デザイナーの **[マイニング モデル ビューアー]** タブを使用して特定のタスクを実行する手順について説明します。  
@@ -45,12 +45,12 @@ ms.locfileid: "36177430"
   
 -   [マイニング モデルからケース データにドリルスルーする](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [タイム シリーズの式の表示モデル&#40;データ マイニング&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [式の時系列表示モデル&#40;データ マイニング&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [データ マイニング ビューアーで使用する色の変更](change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## <a name="see-also"></a>参照  
- [基本的なデータ マイニングのチュートリアル](../../tutorials/basic-data-mining-tutorial.md)   
+ [基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)   
  [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

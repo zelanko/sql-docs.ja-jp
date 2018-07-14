@@ -1,5 +1,5 @@
 ---
-title: Microsoft ニューラル ネットワーク アルゴリズム |Microsoft ドキュメント
+title: Microsoft ニューラル ネットワーク アルゴリズム |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
 - output neurons [Analysis Services]
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc557e9a063b5f3031d6a817b0bf85325b94e086
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8845e1bee588c8f79046e12015b6a9bed021ba4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202052"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]ニューラル ネットワーク アルゴリズムは、予測可能属性の考えられる各状態を持つ入力属性の考えられる各状態を結合し、トレーニング データを使用して確率を計算します。 これらの確率は、分類や回帰で使用することも、入力属性に基づいて予測属性の結果を予測するために使用することもできます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]ニューラル ネットワーク アルゴリズムは、予測可能な属性の考えられる各状態の入力属性の考えられる各状態を結合し、トレーニング データを使用して確率を計算します。 これらの確率は、分類や回帰で使用することも、入力属性に基づいて予測属性の結果を予測するために使用することもできます。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムで作成されたマイニング モデルには、入力と予測の両方に使用する列の数または予測のみに使用する列の数に応じて、複数のネットワークを含めることができます。 1 つのマイニング モデルに含まれるネットワークの数は、マイニング モデルで使用される入力列および予測可能列に含まれる状態の数によって異なります。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "36176050"
   
  **入力層:** 入力ニューロンは、データ マイニング モデル、およびそれらの確率のすべての入力属性値を定義します。  
   
- **非表示層:** 非表示ニューロンは入力ニューロンから入力を受け取り、出力ニューロンに出力を提供します。 非表示層では、入力のさまざまな確率に重みが割り当てられます。 重みは、非表示ニューロンに対する特定の入力の関連性または重要性を表します。 入力に割り当てられている重みが大きいほど、その入力の値の重要性が増加します。 重みには負の値も使用できます。これは、その入力によって特定の結果が優先されるのではなく、抑制されることを意味します。  
+ **非表示層:** 非表示ニューロンは入力ニューロンから入力を受け取るし、出力ニューロンに出力を提供します。 非表示層では、入力のさまざまな確率に重みが割り当てられます。 重みは、非表示ニューロンに対する特定の入力の関連性または重要性を表します。 入力に割り当てられている重みが大きいほど、その入力の値の重要性が増加します。 重みには負の値も使用できます。これは、その入力によって特定の結果が優先されるのではなく、抑制されることを意味します。  
   
- **出力層:** 出力ニューロンは、データ マイニング モデルの予測可能属性値を表します。  
+ **出力層:** 出力ニューロンは、データ マイニング モデルの予測可能属性の値を表します。  
   
  入力層、非表示層、および出力層の作成方法およびスコア計算方法の詳細については、「 [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)」を参照してください。  
   

@@ -1,5 +1,5 @@
 ---
-title: ウィザードの完了 (ディメンション ウィザード) |Microsoft ドキュメント
+title: ウィザードの完了 (ディメンション ウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.finish.f1
 ms.assetid: 1137740d-3063-4ab1-9cfe-8319194db937
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 191c0fd95b4a6a12517bb926b631cbfe05979e68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91e498fc8ca6b995dc30b2a2e271b90a627b8940
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196562"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>[ウィザードの完了] (ディメンション ウィザード)
   **[ウィザードの完了]** ページを使用すると、次の手順を実行できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "36177872"
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の **ソリューション エクスプローラー**で、 **プロジェクトの** [ディメンション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] フォルダーを右クリックし、 **[新しいディメンション]** をクリックします。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  新しいディメンションの名前を入力します。  
   
  **プレビュー**  

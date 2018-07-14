@@ -1,5 +1,5 @@
 ---
-title: 分離メソッド (データ マイニング) |Microsoft ドキュメント
+title: 分離メソッド (データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - discretization [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2cedf4996536560ff415746c7948cc62a86de77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29ef2a25704911e1feb31f20a048952d45966925
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206252"
 ---
 # <a name="discretization-methods-data-mining"></a>分離メソッド (データ マイニング)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でデータ マイニング モデルを作成するための一部のアルゴリズムでは、正常に機能するために特定の種類のコンテンツが必要です。 たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、連続列を入力として使用したり、連続する値を予測したりすることはできません。 また、一部の列に含まれている値が多すぎるため、データ マイニング モデルの作成元となるデータ内の対象パターンをアルゴリズムで容易に識別できない場合があります。  
@@ -42,7 +42,7 @@ ms.locfileid: "36176720"
   
  `Number of Buckets = sqrt(n)`  
   
- たくない場合[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]バケットの数を計算する際、<xref:Microsoft.AnalysisServices.DimensionAttribute.DiscretizationBucketCount%2A>プロパティを手動でバケットの数を指定します。  
+ たくない場合[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]バケットの数を計算するには、使用することができます、<xref:Microsoft.AnalysisServices.DimensionAttribute.DiscretizationBucketCount%2A>プロパティを手動でバケットの数を指定します。  
   
  次の表では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でデータを分離するときに使用できるメソッドについて説明します。  
   
@@ -54,11 +54,11 @@ ms.locfileid: "36176720"
   
 ## <a name="remarks"></a>コメント  
   
--   使用することができます、`EQUAL_AREAS`メソッド文字列を分離します。  
+-   使用することができます、`EQUAL_AREAS`メソッドは文字列を分離します。  
   
--   `CLUSTERS`メソッドでは、1000 レコードのランダムなサンプルを使用して、データを分離します。 アルゴリズムでデータをサンプリングしない場合は、`EQUAL_AREAS` メソッドを使用します。  
+-   `CLUSTERS`メソッドでは、1000 個のレコードのランダムなサンプルを使用して、データを分離します。 アルゴリズムでデータをサンプリングしない場合は、`EQUAL_AREAS` メソッドを使用します。  
   
--   ニューラル ネットワーク マイニング モデルのチュートリアルには、分離をカスタマイズする例が示されています。 詳細については、次を参照してください。[レッスン 5: ビルド ニューラル ネットワーク モデルとロジスティック回帰モデル&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)です。  
+-   ニューラル ネットワーク マイニング モデルのチュートリアルには、分離をカスタマイズする例が示されています。 詳細については、次を参照してください。[レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデル&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)します。  
   
 ## <a name="see-also"></a>参照  
  [コンテンツの種類&#40;データ マイニング&#41;](content-types-data-mining.md)   

@@ -1,5 +1,5 @@
 ---
-title: OData ソース エディター (接続 ページ) |Microsoft ドキュメント
+title: OData ソース エディター ([接続] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 35f67b1f60acd8fd65132f1d6fe71bff2d52c724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3ae477a34a296ade90fb50dde0a600cf81ac18a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213272"
 ---
 # <a name="odata-source-editor-connection-page"></a>[OData ソース エディター] ([接続] ページ)
   **[ODBC ソース エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、OData ソースに対応する ODBC 接続マネージャーを選択できます。 また、このページで、コレクションまたはリソースのパスと、どのデータを OData ソースから取得する必要があるかを示すクエリ オプションを指定することができます。 OData ソースの詳細については、「 [OData ソース](data-flow/odata-source.md)」を参照してください。  
@@ -61,8 +61,8 @@ ms.locfileid: "36178250"
  リソースのパスを入力します。 例: Employees  
   
 ## <a name="see-also"></a>参照  
- [[OData ソース エディター&#40;列] ページ&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [[OData ソース エディター&#40;エラー出力] ページ&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [OData ソース エディター&#40;列 ページ&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [OData ソース エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [OData 接続マネージャー](connection-manager/odata-connection-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 処理タスク エディター (Analysis Services ページ) |Microsoft ドキュメント
+title: Analysis Services 処理タスク エディター (Analysis Services ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.as.f1
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2501594838b9113b8ec787030033272d3e011682
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a131a7a25e9539eac5d7090508e3b67aa79fd9a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187189"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>[Analysis Services 処理タスク エディター] ([Analysis Services] ページ)
   **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[Analysis Services]** ページを使用すると、Analysis Services 接続マネージャーの指定、処理する分析オブジェクトの選択、処理およびエラー処理オプションの設定を行うことができます。  
@@ -53,14 +53,14 @@ ms.locfileid: "36178268"
  |プロパティ|説明|  
 |--------------|-----------------|  
 |**Object Name**|指定されたオブジェクト名を表示します。|  
-|**Type**|指定されたオブジェクトの種類を表示します。|  
+|**型**|指定されたオブジェクトの種類を表示します。|  
 |**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック**:[多次元モデル オブジェクトの処理](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
 |**[設定]**|指定されたオブジェクトの処理設定を表示します。|  
   
  **[追加]**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトを一覧に追加します。  
   
- **削除**  
+ **[削除]**  
  オブジェクトを選択し、 **[削除]** をクリックします。  
   
  **[影響分析]**  

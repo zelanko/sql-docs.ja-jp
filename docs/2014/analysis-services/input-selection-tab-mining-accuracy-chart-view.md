@@ -1,5 +1,5 @@
 ---
-title: 入力の選択 タブ (マイニング精度チャート ビュー) |Microsoft ドキュメント
+title: 入力の選択 タブ (マイニング精度チャート ビュー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5abde47c5da9405f7768f1167496fdd603f04f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbee4807b3e68c79edd9e06fbbf85379dc49354b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198212"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>[入力の選択] タブ ([マイニング精度チャート] ビュー)
   **[マイニング精度チャート]** デザイナーの **[入力の選択]** タブを使用すると、モデルのテストや精度チャートの作成に使用するデータのソースを指定できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "36177870"
 |**予測可能列名**|リフト チャートの作成に使用される、マイニング モデル内に含まれた予測可能列を選択します。|  
 |**値を予測します。**|予測可能列の値を選択します。 この値を空白にすると、リフト チャートは、予測可能列のすべての状態に対してモデルがどのように実行されるかを予測します。|  
   
- **精度チャートに使用するデータセットの選択します。**  
+ **精度チャートに使用するデータ セットを選択します。**  
  精度テスト データを指定するための 3 つのオプションを含むオプション グループです。  
   
 |値|説明|  
@@ -72,9 +72,9 @@ ms.locfileid: "36177870"
  **[データセット フィルター]** ダイアログ ボックスを開きます。このダイアログ ボックスでは、外部テーブルの選択やケース テーブル列への条件の設定を行うことができます。さらに、 **[フィルター]** ダイアログ ボックスを使用して、選択されているテーブルの個々の列または入れ子になったテーブルの列に適用する条件を作成できます。  
   
 ## <a name="see-also"></a>参照  
- [テストと検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [マイニング モデルにフィルターを適用します。](data-mining/apply-a-filter-to-a-mining-model.md)   
- [マイニング モデル フィルターの&#40;Analysis Services - データ マイニング&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

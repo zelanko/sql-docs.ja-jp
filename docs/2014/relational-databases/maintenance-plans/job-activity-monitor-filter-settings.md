@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 732e20f57170f18bfc3b1d441bc7c0e7a4fc5a88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d8cdb39e6070e1a7876859d3a620cb852345dbb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205262"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] \([フィルターの設定])
   このページを使用すると、ジョブの利用状況モニターに表示される行数を削減できます。 1 つまたは複数の利用可能なボックスに基準を入力すると、指定した値に一致する行のみが表示されます。 一部のボックス ( **[状態]** や **[ブロッキングの種類]** ) は指定できる有効な値が決まっており、ドロップダウン リストによって提供されます。 他のボックス ( **[アプリケーション]** など) は、任意の値をコンマ区切りのリストにして必要な数だけ入力できます。 ツール バーのアイコンを使用すると、利用可能なボックスをカテゴリ別またはアルファベット順に並べ替えることができます。 基準をクリックすると、それぞれの簡単な説明が表示されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "36176608"
 ## <a name="all-jobs"></a>すべてのジョブ  
  このフィルター基準のグループは、ジョブの利用状況モニターをフィルタリングする場合に使用できます。  
   
- **Name**  
+ **名前**  
  ジョブを名前でフィルタリングします。  
   
  **[次の実行]**  
@@ -55,7 +55,7 @@ ms.locfileid: "36176608"
  **[スケジュール]**  
  スケジュールを使用するジョブ、またはスケジュールを使用しないジョブをすべて表示します。  
   
- **Status**  
+ **ステータス**  
  状態でジョブをフィルタリングします。  
   
 ## <a name="description-area"></a>説明領域  

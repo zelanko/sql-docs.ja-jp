@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 060ab17ca1f86e2b5b1da0c900bd7e49a7103ab0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e9250860dbdc750bda53e28e52a31bcbe0e038b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185171"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>データベース ミラーリング エンドポイント (SQL Server)
   サーバー インスタンスが [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] またはデータベース ミラーリングに参加するには、専用の *データベース ミラーリング エンドポイント*が必要です。 このエンドポイントの用途は特殊で、他のサーバー インスタンスからの接続を受信するためにのみ使用されます。 特定のサーバー インスタンスでは、他のサーバー インスタンスに対するすべての [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] またはデータベース ミラーリング接続では、単一のデータベース ミラーリング エンドポイントが使用されます。  
@@ -51,7 +50,7 @@ ms.locfileid: "36176675"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターでファイアウォールを使用している場合は、エンドポイントで指定されているポートを送信と受信の両方の接続で使用できるようにファイアウォールを構成する必要があります。  
   
- データベース ミラーリングと [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、認証と暗号化はエンドポイントで構成されます。 詳細については、次を参照してください。[データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)です。  
+ データベース ミラーリングと [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、認証と暗号化はエンドポイントで構成されます。 詳細については、次を参照してください。[データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)します。  
   
 > [!IMPORTANT]  
 >  使用中のデータベース ミラーリング エンドポイントは再構成しないでください。 サーバー インスタンスは、互いのエンドポイントを使用して、他のシステムの状態を調べます。 エンドポイントを再構成すると、そのエンドポイントは再起動されます。これにより、他のサーバー インスタンスではエラーが発生したように見えることがあります。 これは、自動フェールオーバー モードでは特に重要です。この場合、パートナーでエンドポイントを再構成すると、フェールオーバーが発生する可能性があります。  
@@ -62,7 +61,7 @@ ms.locfileid: "36176675"
   
 -   サーバー インスタンスがドメイン サービス アカウントで実行中の場合は、データベース ミラーリング エンドポイントで Windows 認証を使用できます。 同じドメイン ユーザー アカウントですべてのサーバー インスタンスを実行した場合は、自動的に両方の **マスター** データベースに正しいユーザー ログインが存在します。 可用性データベースのセキュリティ構成が単純化されるので、こちらの方法をお勧めします。  
   
-     可用性グループの可用性レプリカをホストするサーバー インスタンスが異なるアカウントで実行される場合は、他のサーバー インスタンスの **マスター** 内にログイン アカウントを作成する必要があります。 その後、そのログインに対して、そのサーバー インスタンスのデータベース ミラーリング エンドポイントに接続するための CONNECT 権限を与える必要があります。 詳細については、[設定のログイン アカウントのデータベース ミラーリングまたは AlwaysOn 可用性グループ&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)です。  
+     可用性グループの可用性レプリカをホストするサーバー インスタンスが異なるアカウントで実行される場合は、他のサーバー インスタンスの **マスター** 内にログイン アカウントを作成する必要があります。 その後、そのログインに対して、そのサーバー インスタンスのデータベース ミラーリング エンドポイントに接続するための CONNECT 権限を与える必要があります。 詳細については、[データベース ミラーリングまたは AlwaysOn 可用性グループには、ログイン アカウントを設定&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)します。  
   
      サーバー インスタンスで Windows 認証を使用する場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、PowerShell、または新しい可用性グループ ウィザードを使用して、データベース ミラーリング エンドポイントを作成できます。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "36176675"
   
 -   サービス インスタンスがビルトイン アカウント (Local System、Local Service、Network Service など) で実行されている場合、または、非ドメイン アカウントで実行されている場合は、エンドポイント認証に証明書を使用する必要があります。 データベース ミラーリング エンドポイントに証明書を使用する場合、各サーバー インスタンスの発信接続と着信接続の両方に証明書を使用するための構成をシステム管理者が行う必要があります。  
   
-     証明書を使用してデータベース ミラーリング セキュリティを自動的に構成する方法は用意されていません。 作成エンドポイントのどちらかを使用する必要があります[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたは`New-SqlHadrEndpoint`PowerShell コマンドレット。 詳細については、「[CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)」を参照してください。 サーバー インスタンス上の証明書の認証を有効にする方法については、次を参照してください。[データベース ミラーリング エンドポイントの証明書を使用&#40;TRANSACT-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)です。  
+     証明書を使用してデータベース ミラーリング セキュリティを自動的に構成する方法は用意されていません。 作成エンドポイントのどちらかを使用する必要があります[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたは`New-SqlHadrEndpoint`PowerShell コマンドレット。 詳細については、「[CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)」を参照してください。 サーバー インスタンスの証明書認証を有効にする方法については、次を参照してください。[データベース ミラーリング エンドポイントの証明書を使用&#40;TRANSACT-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)します。  
   
   
 ##  <a name="RelatedTasks"></a> 関連タスク  

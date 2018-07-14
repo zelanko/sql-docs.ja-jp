@@ -1,5 +1,5 @@
 ---
-title: DataSource 要素 (XMLA) |Microsoft ドキュメント
+title: DataSource 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSource element
 ms.assetid: adc0713a-3927-40f3-8b87-012130908f34
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f0af7343a1d359bae1e02763b71fa80bdf557d82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 40efe20736e6e2e6364ddcf5aa41a92409a2e68c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167163"
 ---
 # <a name="datasource-element-xmla"></a>DataSource 要素 (XMLA)
-  親の行外のデータ ソース バインドを含む[バッチ](../xml-elements-commands/batch-element-xmla.md)または[プロセス](../xml-elements-commands/process-element-xmla.md)要素。  
+  親の行外のデータ ソースのバインドを含む[バッチ](../xml-elements-commands/batch-element-xmla.md)または[プロセス](../xml-elements-commands/process-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36178950"
 ## <a name="remarks"></a>コメント  
  `DataSource` 要素は、データ ソースに対する不一致バインドを表します。これは、コマンドによって処理される [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクトのデータ ソース バインドを一時的にオーバーライドするために、`Batch` または `Process` コマンドによって使用されます。  
   
- アウトオブ ライン バインドの詳細については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ アウトオブ ライン バインドの詳細については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;XMLA&#41;](xml-elements-properties.md)  

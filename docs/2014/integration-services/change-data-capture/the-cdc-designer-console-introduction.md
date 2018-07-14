@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ae16ede1cf9a1fc51f0b7f7f31cc0b65a4565b9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bbbaf9e86f3a75f57c61099475f0692e8a017cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171003"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC デザイナー コンソールの概要
   ここでは、Change Data Capture Designer for Oracle by Attunity のインストール手順について説明します。  
   
 ## <a name="installation"></a>インストール  
- ここでは、Change Data Capture Designer for Oracle by Attunity のインストール手順について説明します。 CDC デザイナー コンソールをインストールするには、手動で実行**AttunityOracleCdcDesigner.msi** SQL Server インストール メディアからです。  X86 および x64 インストール パッケージにある **.\Tools\AttunityCDCOracle\\**  SQL Server インストール メディアにします。  
+ ここでは、Change Data Capture Designer for Oracle by Attunity のインストール手順について説明します。 CDC デザイナー コンソールをインストールするには、手動で実行**AttunityOracleCdcDesigner.msi** SQL Server のインストール メディアから。  X86 および x64 インストール パッケージにある **.\Tools\AttunityCDCOracle\\**  SQL Server インストール メディアにします。  
   
 ## <a name="supported-windows-environments"></a>サポートされている Windows 環境  
  CDC デザイナー コンソールは、次の Windows 環境で実行できます。  

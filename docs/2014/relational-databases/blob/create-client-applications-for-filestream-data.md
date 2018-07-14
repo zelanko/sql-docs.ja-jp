@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01789595c470865d4a422ac87c2814bcc9570468
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 16ea4d4a00726453918577e2eb0eb92d73580ccd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260868"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>FILESTREAM データ用のクライアント アプリケーションの作成
   Win32 を使用して FILESTREAM BLOB に対してデータを読み書きすることができます。 次の手順を実行する必要があります。  
@@ -51,7 +50,7 @@ ms.locfileid: "36177107"
 ##  <a name="steps"></a> FILESTREAM データにアクセスするための手順  
   
 ###  <a name="path"></a> FILESTREAM ファイルのパスの読み取り  
- FILESTREAM テーブルの各セルには、ファイル パスが関連付けられています。 パスを読み取るには使用、`PathName`のプロパティ、`varbinary(max)`内の列、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 次の例のファイル パスを読み取る方法を示しています、`varbinary(max)`列です。  
+ FILESTREAM テーブルの各セルには、ファイル パスが関連付けられています。 パスを読み取るには、`PathName`のプロパティを`varbinary(max)`内の列を[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 次の例のファイル パスを読み取る方法を示しています、`varbinary(max)`列。  
   
  [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   
@@ -83,7 +82,7 @@ ms.locfileid: "36177107"
   
 -   FILESTREAM BLOB の更新や FILESTREAM BLOB の後または前にデータを追加する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは使用しないようにします。 そのような操作を行うと、BLOB データが tempdb データベースにスプールされ、新しい物理的ファイルに戻される可能性があります。  
   
--   小さな BLOB 更新を FILESTREAM BLOB に追加しないようにします。 追加操作ごとに、基になる FILESTREAM ファイルがコピーされます。 小さな Blob を追加するアプリケーションがある場合に Blob を書き込む、`varbinary(max)`列で、Blob の数があらかじめ設定された制限に達したときに FILESTREAM BLOB に対して 1 回の書き込み操作を行います。  
+-   小さな BLOB 更新を FILESTREAM BLOB に追加しないようにします。 追加操作ごとに、基になる FILESTREAM ファイルがコピーされます。 アプリケーションは、小さな Blob を追加するが、書き込む、Blob を`varbinary(max)`列、し、Blob の数があらかじめ設定された制限に達したときに FILESTREAM BLOB に対して 1 回の書き込み操作を実行します。  
   
 -   アプリケーションで大量の BLOB ファイルのデータ長を取得しないようにします。 サイズは [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に格納されないため、この操作を実行するには多くの時間が必要になります。 BLOB ファイルの長さを調べる必要がある場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH() 関数を使用して BLOB のサイズを調べます (BLOB が閉じている場合)。 DATALENGTH() でサイズを取得する際には、BLOB ファイルは開かれません。  
   

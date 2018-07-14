@@ -1,5 +1,5 @@
 ---
-title: LocalDBGetVersionInfo 関数 |Microsoft ドキュメント
+title: LocalDBGetVersionInfo 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ topic_type:
 - apiref
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03e8e4a07dfed1dc2430f020ad221bfb494eb41f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: dc8b45c449a8bea7ca25e2f75fd0e21432838af1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186539"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 関数
   指定した SQL Server Express LocalDB バージョンの情報を返します。たとえば、存在するかどうか、LocalDB 完全バージョン番号 (ビルド番号やリリース番号を含む) などです。  
   
- 形式で返される情報、`struct`という**LocalDBVersionInfo**、次の定義を持ちます。  
+ 形式で、情報が返されます、`struct`という**LocalDBVersionInfo**、次の定義を持ちます。  
   
 ```  
 typedef struct _LocalDBVersionInfo  
@@ -90,11 +90,11 @@ HRESULT LocalDBGetVersionInfo(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="details"></a>詳細  
- 導入根拠、`struct`サイズ引数 (*lpVersionInfoSize*) を返す別のバージョンの API を有効にするのには、 **LocalDBVersionInfostruct**、効果的に上位および下位互換性を有効にします。  
+ 概要の背後にある"the rationale"、`struct`サイズ引数 (*lpVersionInfoSize*) を返す別のバージョンの API を有効にするのには、 **LocalDBVersionInfostruct**、効果的に上位および下位互換性を有効にします。  
   
- 場合、`struct`サイズ引数 (*lpVersionInfoSize*) の既知のバージョンのサイズと一致する、 **LocalDBVersionInfostruct**、そのバージョンの`struct`が返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
+ 場合、`struct`サイズ引数 (*lpVersionInfoSize*) の既知のバージョンのサイズに合った、 **LocalDBVersionInfostruct**、そのバージョンの`struct`が返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
   
- 典型的な例**LocalDBGetVersionInfo** API の使用率が次のように検索します。  
+ 典型的な例**LocalDBGetVersionInfo**次のような API の使用量。  
   
 ```  
 LocalDBVersionInfo vi;  
@@ -103,7 +103,7 @@ LocalDBVersionInfo(L”11.0”, &vi, sizeof(LocalDBVersionInfo));
 ```  
   
 ## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)です。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

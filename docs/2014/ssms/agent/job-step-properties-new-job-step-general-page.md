@@ -1,5 +1,5 @@
 ---
-title: 'ジョブ ステップのプロパティ: 新しいジョブ ステップ ([全般] ページ) |Microsoft ドキュメント'
+title: ジョブ ステップのプロパティ ジョブ ステップの新しい ([全般] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.stepgeneral.f1
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: aa555b9bb72a57a5001a931c018e5a963a80ab27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aa2ee7a5a54c02618230a91b67e0d4c1db8a294e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224742"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>ジョブ ステップのプロパティ: 新しいジョブ ステップ ([全般] ページ)
+# <a name="job-step-properties-new-job-step-general-page"></a>ジョブ ステップの新しいジョブ ステップのプロパティ ([全般] ページ)
   このページでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップのプロパティを表示または変更します。新しいジョブ ステップを定義することもできます。  
   
  このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを展開します。次に **[ジョブ]** を右クリックし、 **[新しいジョブ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]** をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]**、 **[挿入]**、または **[編集]** をクリックします。  
@@ -373,7 +373,7 @@ ms.locfileid: "36177914"
   
 ## <a name="see-also"></a>参照  
  [ジョブ ステップの管理](manage-job-steps.md)   
- [パッケージの SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
+ [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
  [レプリケーション エージェントの管理](../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

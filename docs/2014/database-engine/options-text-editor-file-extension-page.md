@@ -1,5 +1,5 @@
 ---
-title: オプション (テキスト エディターでファイル拡張子 ページ) |Microsoft ドキュメント
+title: オプション (テキスト エディターでファイル拡張子 ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 307d7f6fbf3405d0ff84d1c2672c1de2c90bf092
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4fd0abdb6c1bc93d730ccb502d6eb1c2facf891a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176419"
 ---
 # <a name="options-text-editor---file-extension-page"></a>[オプション] ([テキスト エディター]/[ファイル拡張子] ページ)
   **[オプション]** ダイアログ ボックスを使用すると、特定のファイル拡張子を持つすべてのファイルを [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で処理するときの方法を指定できます。 入力したそれぞれの拡張子について、エディターを選択できます。 つまり、特定の種類のドキュメントを開く [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] エディターを選択できます。 ファイル拡張子のオプションを開くには、**[ツール]** メニューの **[オプション]** をクリックして、**[テキスト エディター]** を展開し、**[ファイル拡張子]** をクリックします。  
@@ -38,7 +38,7 @@ ms.locfileid: "36177819"
  **[追加]**  
  指定された **[拡張子]** および **[使用したエディター]** の値を含むエントリを **[拡張子一覧]** に追加します。  
   
- **削除**  
+ **[削除]**  
  選択したエントリを **[拡張子一覧]** から削除します。  
   
  **拡張子**  

@@ -1,5 +1,5 @@
 ---
-title: データ ソースのプロパティ ダイアログ ボックス、全般 |Microsoft ドキュメント
+title: データ ソースのプロパティ ダイアログ ボックスで、全般 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.general.f1
 - "10120"
 ms.assetid: 44b5edd3-5c11-4d3d-91b8-5871aa0572ed
 caps.latest.revision: 35
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 823604c6116c78f4313d5f1e328d98d7ed35f950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5e5b2f1c1792a2fdbc6b83d94f85dd5883b8954
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206732"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>[全般] ([データ ソースのプロパティ] ダイアログ ボックス)
   **[データ ソースのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、レポート内のデータ ソースに関する接続情報を表示および変更できます。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  データ ソースの名前を入力します。 データ ソース名はレポート内で一意である必要があります。 既定では、DataSource1 または DataSource2 などの一般的な名前がデータ ソースに割り当てられます。  
   
  **埋め込み接続**  
  共有データ ソースを使用しない場合は、このオプションを選択します。  
   
- **Type**  
+ **型**  
  データ処理拡張機能を選択します。 一覧には、登録されているすべての拡張機能が表示されます。  
   
  **[接続文字列]**  
@@ -43,12 +43,12 @@ ms.locfileid: "36176135"
  **共有データ ソース参照を使用します。**  
  共有データ ソースにリンクする場合は、このオプションを選択します。 ドロップダウン リストから共有データ ソースを選択します。 選択したデータ ソースを編集する場合は、 **[編集]** をクリックします。 **[共有データ ソース参照を使用する]** が選択されている場合、 **[型]** および **[接続文字列]** は使用できません。  
   
- **クエリを処理するときに、単一のトランザクションを使用します。**  
+ **クエリの処理時に、1 つのトランザクションを使用します。**  
  このデータ ソースを使用するデータセットが、データベースに対する単一のトランザクションで処理されるように指定する場合は、このオプションを選択します。 同じデータ ソースを使用するサブレポートのトランザクションを含めるには、 **[プロパティ]** ペインのサブレポートの **[その他]** のプロパティ セクションで、 **[MergeTransactions]** を **[True]** に設定します。  
   
 ## <a name="see-also"></a>参照  
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [埋め込みまたは共有データ ソースを作成する&#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)   
+ [埋め込みまたは共有データ ソースを作成&#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)   
  [データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [[資格情報] ([データ ソースのプロパティ] ダイアログ ボックス)](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 記載されていないシステム テーブルへの参照を削除する |Microsoft ドキュメント
+title: 文書化されていないシステム テーブルへの参照の削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - undocumented system tables [SQL Server]
 - system tables [SQL Server]
 ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cd8ff349ae3e065233ea104d34016a919b9fd6e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d4f0c1789e4f352fe18fd50b6de739b82328a777
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226572"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>ドキュメントに記載されていないシステム テーブルへの参照の削除
   以前のリリースのドキュメントには記載されていなかった多くのシステム テーブルが変更されたか、存在しなくなりました。そのため、アップグレード後にそのようなシステム テーブルを使用すると、エラーが発生する場合があります。 アップグレード アドバイザーはシステム テーブル名への参照を検索するので、システム テーブルと同じ名前のユーザー テーブルへの参照を報告します。  
@@ -86,7 +86,7 @@ ms.locfileid: "36177234"
   
 |以前のシステム ストアド プロシージャ|新しく使用する機能|  
 |----------------|---------|  
-|**sysfulltextnotify**|**TableFulltextPendingChanges** OBJECTPROPERTYEX 関数のプロパティです。|  
+|**sysfulltextnotify**|**TableFulltextPendingChanges** OBJECTPROPERTYEX 関数のプロパティ。|  
 |**syslocks**|**sys.dm_tran_locks**動的管理ビューまたは sp_lock、または**sys.syslockinfo**互換性ビューです。|  
 |**sysproperties**|**sys.extended_properties**カタログ ビューまたは**fn_listextendedproperty**関数|  
 |**sysxlogins**|**sys.server_principals**カタログ ビューまたは**syslogins**互換性ビューです。|  

@@ -1,5 +1,5 @@
 ---
-title: マップの色ルール ダイアログ ボックスの 全般 |Microsoft ドキュメント
+title: マップの色ルール ダイアログ ボックスで、全般 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 103e038b715f07c50d702a659f396f9cdd34ffee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 2de58631464b4d96ebde5cac82778f6b365e5b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238522"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>[全般] ([マップの色のルールのプロパティ] ダイアログ ボックス)
   **[マップの色のルールのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、このレイヤー上のマップ要素の色オプションを定義できます。 マップ要素には、多角形、線、およびポイントがあります。 データセット フィールドまたは空間データ ソース フィールドからの空間データと分析データに基づいてマップ要素間のリレーションシップを作成している場合に、色ルールを適用できます。  
@@ -33,13 +33,13 @@ ms.locfileid: "36176337"
  **テンプレート スタイルを適用します。**  
  ウィザードで選択したテーマか、多角形、線、またはポイント レイヤーのプロパティで設定したテーマに基づく色を使用します。 テーマを適用すると、マップの色、フォント、および罫線に対して既定のオプションが設定されます。 このオプションを選択した場合、各マップ要素に色を割り当てるルールは適用されません。  
   
- **色パレットを使用してデータを表示する します。**  
+ **色パレットを使用してデータを視覚化します。**  
  特定のカラー パレットの色を使用して、分析データを視覚化します。  
   
- **色の範囲を使用してデータを表示する します。**  
+ **色の範囲を使用してデータを視覚化します。**  
  各マップ要素の色の範囲を使用して、分析データを視覚化します。 たとえば、赤を開始色、黄を中間の色、緑を終了色として指定した場合、範囲の下限の値は赤、範囲の中間の値は黄、範囲の上限の値は緑になります。  
   
- **カスタム色を使用してデータを表示する します。**  
+ **カスタム色を使用してデータを視覚化します。**  
  独自の色のリストを指定して、分析データを視覚化します。  
   
  **データ フィールド**  

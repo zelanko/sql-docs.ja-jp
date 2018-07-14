@@ -1,5 +1,5 @@
 ---
-title: SQL Server の参考資料の取得 |Microsoft ドキュメント
+title: SQL Server の参考資料の取得 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - offline resources [SQL Server]
 - Books Online [SQL Server], additional resources
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac98b9aa879844e1a458e9f9ed59cd14c10804c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171163"
 ---
 # <a name="getting-sql-server-assistance"></a>SQL Server の参考資料の入手
   [!INCLUDE[msCoName](../includes/msconame-md.md)] に関して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が提供している主な情報ソースは次の 3 つです。  
@@ -64,13 +64,13 @@ ms.locfileid: "36179152"
  探している情報がこれらのソースで見つからない場合は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティのフォーラムやニュースグループに質問を投稿したり、[!INCLUDE[msCoName](../includes/msconame-md.md)] と協力してサポート ケースを調査したりできます。  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブック  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 概念および使用するために必要な手順は、オンライン ドキュメントをブック[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。 また、オンライン ブックには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を使用したデータの格納、取得、報告、および変更を行うための言語やプログラミング インターフェイスについての参考資料も含まれています。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 概念と手順を使用するために必要なドキュメントのオンライン ブックの「[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 また、オンライン ブックには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を使用したデータの格納、取得、報告、および変更を行うための言語やプログラミング インターフェイスについての参考資料も含まれています。  
   
  オンライン ブックは次の方法で表示できます。  
   
--   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] オンライン ブックのコピーが、インターネット上の MSDN ライブラリと TechNet ライブラリの両方で公開されています。 このような [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックのコピーのトピックには、他のユーザーからの追加情報やコード例など、コミュニティからのコメントが含まれています。 MSDN ライブラリのコピーを表示することができます、 [SQL Server 2014 オンライン ブック](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx)です。  
+-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] オンライン ブックのコピーが、インターネット上の MSDN ライブラリと TechNet ライブラリの両方で公開されています。 このような [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックのコピーのトピックには、他のユーザーからの追加情報やコード例など、コミュニティからのコメントが含まれています。 MSDN ライブラリのコピーを表示することができます、 [SQL Server 2014 オンライン ブックの「](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx)します。  
   
--   ヘルプ ライブラリ マネージャーを使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックをローカル コンピューターにインストールできます。 詳細については、次を参照してください。[の追加と SQL Server の製品ドキュメントを削除する](../2014-toc/books-online-for-sql-server-2014.md)です。  
+-   ヘルプ ライブラリ マネージャーを使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックをローカル コンピューターにインストールできます。 詳細については、次を参照してください。[の追加と SQL Server の製品ドキュメントを削除](../2014-toc/books-online-for-sql-server-2014.md)します。  
   
  MSDN ライブラリの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックのコピーと、ヘルプ ライブラリ マネージャーで利用できるオンライン ブック ファイルは共に、[!INCLUDE[msCoName](../includes/msconame-md.md)] が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックへの更新を公開した時点で更新されます。  
   
@@ -93,11 +93,11 @@ ms.locfileid: "36179152"
 |リソース|説明|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)|データ ストレージおよびビジネス インテリジェンス ツールとしての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の評価に関する発売前情報を提供します。|  
-|[Microsoft サポート技術情報](http://go.microsoft.com/fwlink/?LinkId=42461)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サポートで作成された [!INCLUDE[msCoName](../includes/msconame-md.md)] 記事を検索できるリポジトリを提供します。|    
+|[マイクロソフト サポート技術情報](http://go.microsoft.com/fwlink/?LinkId=42461)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サポートで作成された [!INCLUDE[msCoName](../includes/msconame-md.md)] 記事を検索できるリポジトリを提供します。|    
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品には、各リリースに利用できるサポート期間を定めたサポート ライフサイクルがあります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] サポートが、[!INCLUDE[msCoName](../includes/msconame-md.md)] サポート ライフサイクルを定めたページを管理しています。 このページには、[!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のサポートが利用可能かどうかを指定した別のページへのリンクが含まれています。 詳細については、次を参照してください。[マイクロソフト サポート ライフ サイクル](http://go.microsoft.com/fwlink/?LinkId=98306)です。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品には、各リリースに利用できるサポート期間を定めたサポート ライフサイクルがあります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] サポートが、[!INCLUDE[msCoName](../includes/msconame-md.md)] サポート ライフサイクルを定めたページを管理しています。 このページには、[!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のサポートが利用可能かどうかを指定した別のページへのリンクが含まれています。 詳細については、次を参照してください。[マイクロソフト サポート ライフ サイクル](http://go.microsoft.com/fwlink/?LinkId=98306)します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 製品ドキュメントを使用します。](../2014-toc/books-online-for-sql-server-2014.md)  
+ [SQL Server の製品ドキュメントを使用します。](../2014-toc/books-online-for-sql-server-2014.md)  
   
   

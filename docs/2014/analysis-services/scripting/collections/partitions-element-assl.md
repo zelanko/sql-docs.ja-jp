@@ -1,5 +1,5 @@
 ---
-title: パーティションの要素 (ASSL) |Microsoft ドキュメント
+title: 要素 (ASSL) をパーティション分割 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Partitions element
 ms.assetid: e41c97ca-da44-48e9-a454-d25ee74209fd
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39e719c6ae4e04e1a05abc42f4290bbf0746e55b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f54cab2990fcd5f3679da1c83c997921a59e67ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185211"
 ---
 # <a name="partitions-element-assl"></a>Partitions 要素 (ASSL)
-  コレクションを格納[パーティション](../objects/partition-element-assl.md)によって使用される要素、 [MeasureGroup](../objects/group-element-assl.md)要素、またはの不一致を構成するパーティション バインドのコレクション[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)要素。  
+  コレクションを格納[パーティション](../objects/partition-element-assl.md)によって使用される要素を[MeasureGroup](../objects/group-element-assl.md)要素、またはの不一致を構成するパーティション バインドのコレクション[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

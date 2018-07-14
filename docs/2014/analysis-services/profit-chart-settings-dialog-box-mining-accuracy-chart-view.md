@@ -1,5 +1,5 @@
 ---
-title: 利益チャートの設定 ダイアログ ボックス (マイニング精度チャート ビュー) |Microsoft ドキュメント
+title: 利益チャートの設定 ダイアログ ボックス (マイニング精度チャート ビュー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.profitcostdialog.f1
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e662f4db0a812253a8113779347457871ce1d2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44e18791656240d2f6253d325d2151e49f5b890f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187279"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>[利益チャートの設定] ダイアログ ボックス ([マイニング精度チャート] ビュー)
   **[利益チャートの設定]** ダイアログ ボックスを使用すると、利益チャートの生成に関する設定を構成できます。 利益チャートの詳細については、「[リフト チャート &#40;Analysis Services - データ マイニング&#41;](data-mining/lift-chart-analysis-services-data-mining.md)」をご覧ください。  
@@ -41,7 +41,7 @@ ms.locfileid: "36178315"
   
 ## <a name="see-also"></a>参照  
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [テストと検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

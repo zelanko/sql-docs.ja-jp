@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], about models
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17d84c1656e90c4fc00e4b3474bc986ae84f8404
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4b7d295a5f9eac9c6a333618dc62d53cbf8294f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178109"
 ---
 # <a name="models-master-data-services"></a>モデル (Master Data Services)
   モデルは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の最上位レベルのデータ編成単位です。 モデルは、マスター データ管理ソリューションでのデータの構造を定義します。 モデルには次のオブジェクトが含まれています。  
@@ -74,7 +74,7 @@ ms.locfileid: "36177119"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|モデルを作成してマスター データを整理する。|[モデルを作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
+|モデルを作成してマスター データを整理する。|[モデルを作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
 |既存のモデルの名前を変更する。|[モデル名を変更&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
 |既存のモデルを削除する。|[モデルを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
   

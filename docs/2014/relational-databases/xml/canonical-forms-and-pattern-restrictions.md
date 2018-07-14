@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pattern restrictions
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 731fce4f107240da52dbba01d95ce50b88fea5e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d5fb6b52893b4bd79220b1fb6ec5096350f387a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249702"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>正規の形式とパターン制限
   XSD パターン ファセットを使用すると、単純型の字句空間を制限できます。 複数の字句表現が可能であるような型にパターン制限を適用すると、一部の値が原因で検証時に予想外の動作が発生することがあります。  
@@ -31,7 +31,7 @@ ms.locfileid: "36176143"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれを回避するために、再挿入できない値を含む XML ドキュメントはすべて、正規の形式がパターン制限に違反しているという理由で拒否します。 たとえば、値 "33.000" は、"33 **.0+" というパターン制限が指定されている** xs:decimal\\からの派生型に対して有効であると判断されません。 "33.000" はこのパターンに準拠していますが、正規の形式である "33" がパターンに違反しているためです。  
   
- そのため、注意が必要、プリミティブ型から派生した型にパターン ファセットを適用する場合: `boolean`、 `decimal`、 `float`、 `double`、 `dateTime`、 `time`、 `date`、 `hexBinary`、および`base64Binary`です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から警告が発行されます。  
+ そのため、注意が必要、プリミティブ型から派生した型にパターン ファセットを適用する場合: `boolean`、 `decimal`、 `float`、 `double`、 `dateTime`、 `time`、 `date`、 `hexBinary`、および`base64Binary`します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から警告が発行されます。  
   
  浮動小数点値の不正確なシリアル化にも同様の問題があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用されている浮動小数点のシリアル化アルゴリズムにより、近い値が同じ正規表現になることがあり得ます。 ただし、浮動小数点値がシリアル化され、再挿入される際に、その値がわずかに変化することがあります。 その結果、再挿入時にその型の **enumeration**、 **minInclusive**、 **minExclusive**、 **maxInclusive**、または **maxExclusive**の各ファセットに違反する値になることがまれにあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれを回避するために、シリアル化や再挿入を行えない `xs:float` または `xs:double` から派生した値を拒否します。  
   

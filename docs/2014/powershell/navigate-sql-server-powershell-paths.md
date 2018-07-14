@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: a737eb351e6de2160ddf3385dbd3e5448bc2a937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd5d59a76ae4a9b6ec2bfb7cc811a23037f720ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242762"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell パスの移動
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell プロバイダーは、ファイル パスと同様の構造で、SQL Server のインスタンス内のオブジェクトのセットを公開します。 Windows PowerShell コマンドレットを使用することで、プロバイダー パスを移動し、カスタム ドライブを作成して、入力するパスを短くすることができます。  
@@ -118,9 +118,9 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>カスタム ドライブの作成  
  **カスタム ドライブの作成と使用**  
   
-1.  `New-PSDrive` を使用して、カスタム ドライブを定義します。 使用して、`Root`パラメーターをカスタム ドライブ名で表されるパスを指定します。  
+1.  `New-PSDrive` を使用して、カスタム ドライブを定義します。 使用して、`Root`カスタム ドライブ名で表されるパスを指定するパラメーター。  
   
-2.  などのパス移動コマンドレットでカスタム ドライブ名の参照`Set-Location`です。  
+2.  などのパス移動コマンドレットでカスタム ドライブ名参照`Set-Location`します。  
   
 ### <a name="custom-drive-example-powershell"></a>カスタム ドライブの例 (PowerShell)  
  この例では、配置された AdventureWorks2012 サンプル データベースのコピーのノードにマップする AWDB という名前の仮想ドライブを作成します。 仮想ドライブを使用して、データベース内のテーブルに移動します。  

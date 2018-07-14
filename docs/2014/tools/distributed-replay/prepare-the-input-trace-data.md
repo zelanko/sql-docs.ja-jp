@@ -1,5 +1,5 @@
 ---
-title: 入力トレース データを準備する |Microsoft ドキュメント
+title: 入力トレース データの準備 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30b9108a8586e56f7a96695be513e6e33fe39c85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7da90e14d33fb19b421e0cd5a9219ac356952e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196722"
 ---
 # <a name="prepare-the-input-trace-data"></a>入力トレース データの準備
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能を使用して分散再生を開始する前に、分散再生管理ツールから前処理段階を開始することで、入力トレース データを準備する必要があります。 前処理段階で、Distributed Replay Controller がトレース データを処理し、中間ファイルを生成します。  
@@ -45,7 +45,7 @@ ms.locfileid: "36177638"
   
 2.  **前処理段階を開始する**: 入力トレース データを準備するには、 **前処理** オプションを使用して、管理ツールを実行する必要があります。 詳細については、「[前処理オプション &#40;Distributed Replay 管理ツール&#41;](preprocess-option-distributed-replay-administration-tool.md)」を参照してください。  
   
-    1.  Windows コマンド プロンプト ユーティリティを開く (`CMD.exe`)、Distributed Replay 管理ツールのインストール場所に移動し、(`DReplay.exe`)。  
+    1.  Windows コマンド プロンプト ユーティリティを開きます (`CMD.exe`)、分散再生管理ツールのインストール場所に移動します (`DReplay.exe`)。  
   
     2.  (省略可能) 管理ツールを実行するコンピューターとは別のコンピューター上でコントローラー サービスが実行されている場合、 *controller* パラメーター **-m**を使用して、コントローラーを指定します。  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36177638"
 3.  前処理段階が完了したら、コントローラー作業ディレクトリに中間ファイルが格納されます。 イベント再生段階を開始するには、 **再生** オプションを使用して、管理ツールを実行する必要があります。 詳細については、「 [トレース データの再生](replay-trace-data.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [SQL Server 分散再生](sql-server-distributed-replay.md)   
  [分散再生の要件](distributed-replay-requirements.md)   
- [管理ツールのコマンド ライン オプション&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [管理ツール コマンド ライン オプション&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [分散再生の構成](configure-distributed-replay.md)  
   
   

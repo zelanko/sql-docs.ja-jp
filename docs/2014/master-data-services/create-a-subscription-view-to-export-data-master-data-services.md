@@ -1,5 +1,5 @@
 ---
-title: サブスクリプション ビュー (マスター データ サービス) を作成 |Microsoft ドキュメント
+title: サブスクリプション ビューを作成 (マスター データ サービス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0b79bd1e50871fb921a3ce2b3fe9e43ab0995a9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4d8114d933027d5392896f14c33e1ea9685841b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252284"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>サブスクリプション ビューを作成する (マスター データ サービス)
-  内のデータのビューを作成する場合は、サブスクリプション ビューを作成、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]サブスクライブ システムで使用するデータベース。  
+  サブスクリプション ビューを作成して、データのビューを作成するとき、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]サブスクライブ システムで使用するデータベース。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
@@ -40,18 +40,18 @@ ms.locfileid: "36174743"
   
 2.  メニュー バーの **[ビューの作成]** をクリックします。  
   
-3.  **サブスクリプション ビュー** ] ページで [**サブスクリプション ビューの追加**です。  
+3.  **サブスクリプション ビュー** ] ページで [**サブスクリプション ビューの追加**します。  
   
 4.  **サブスクリプション ビューの作成** ウィンドウで、**サブスクリプション ビュー名**ボックスに、ビューの名前を入力します。  
   
 5.  **[モデル]** ボックスの一覧からモデルを選択します。  
   
-6.  いずれかを選択、**バージョン**または**バージョン フラグ**オプション、し、対応する一覧から選択します。  
+6.  いずれかを選択、**バージョン**または**バージョン フラグ**オプションし、対応する一覧から選択します。  
   
     > [!TIP]  
     >  サブスクリプション ビューはバージョン フラグに基づいて作成します。 バージョンをロックするとき、サブスクリプション ビューを更新せずに未処理のバージョンにフラグを割り当て直すことができます。  
   
-7.  いずれかを選択、**エンティティ**または**派生階層**オプション、し、対応する一覧から選択します。  
+7.  いずれかを選択、**エンティティ**または**派生階層**オプションし、対応する一覧から選択します。  
   
 8.  **[形式]** ボックスの一覧からサブスクリプション ビュー形式を選択します。  
   

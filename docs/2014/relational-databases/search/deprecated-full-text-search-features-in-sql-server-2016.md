@@ -1,29 +1,28 @@
 ---
-title: 非推奨 SQL Server 2014 におけるフルテキスト検索機能 |Microsoft ドキュメント
+title: 非推奨の SQL Server 2014 におけるフルテキスト検索機能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [full-text search]
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7f6820edd97ae68872c56bd086e8e981c88f7399
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 140e7262d3cfc66e956ee0fc53ea1009d7afda0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179689"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>SQL Server 2014 の非推奨のフルテキスト検索機能
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でまだ使用できるものの、非推奨のフルテキスト検索機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
@@ -52,7 +51,7 @@ ms.locfileid: "36177960"
   
 |非推奨の機能|代替|機能名|機能 ID|  
 |------------------------|-----------------|------------------|----------------|  
-|CONTAINS および CONTAINSTABLE 汎用 NEAR 演算子<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|カスタム NEAR 演算子<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [、\<距離 > [、\<順序 >]<br /><br /> }<br /><br /> )<br /><br /> \<距離 >:: = {*整数* &#124; **MAX**}<br /><br /> \<順序 >:: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|CONTAINS および CONTAINSTABLE 汎用 NEAR 演算子<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|カスタム NEAR 演算子<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [、\<距離 > [、\<順序 >]<br /><br /> }<br /><br /> )<br /><br /> \<距離 >:: = {*整数* &#124; **最大**}<br /><br /> \<順序 >:: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG オプション<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|[なし] :|CREATE FULLTEXT CATLOG IN PATH<br /><br /> なし*|237<br /><br /> [なし] :<sup>*</sup>|  
 |DATABASEPROPERTYEX プロパティ : IsFullTextEnabled|[なし] :|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |sp_detach_db オプション<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|[なし] :|sp_detach_db @keepfulltextindexfile|226|  
@@ -61,8 +60,8 @@ ms.locfileid: "36177960"
  \***SQL Server:Deprecated Features** オブジェクトは、CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*の使用を監視しません。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server:deprecated Features オブジェクト](../performance-monitor/sql-server-deprecated-features-object.md)   
- [重大な変更をフルテキスト検索](../../database-engine/breaking-changes-to-full-text-search.md)   
+ [SQL Server の Deprecated Features オブジェクト](../performance-monitor/sql-server-deprecated-features-object.md)   
+ [フルテキスト検索の重大な変更](../../database-engine/breaking-changes-to-full-text-search.md)   
  [SQL Server 2014 データベース エンジンの非推奨の機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

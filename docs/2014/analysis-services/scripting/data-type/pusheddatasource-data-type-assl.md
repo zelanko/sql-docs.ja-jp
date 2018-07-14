@@ -1,5 +1,5 @@
 ---
-title: PushedDataSource データ型 (ASSL) |Microsoft ドキュメント
+title: PushedDataSource データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PushedDataSource data type
 ms.assetid: b319ee87-7c0a-41ec-a8af-cc7089aeb6ad
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd0dec86e7c3abedf241fd79e44bdafd28297c7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98309a1fa1706efaed47ab27cdf88d0b3e313fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235572"
 ---
 # <a name="pusheddatasource-data-type-assl"></a>PushedDataSource  データ型 (ASSL)
-  データ ソースを表すプリミティブ データ型を定義 (など、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]パッケージ) へのデータを「プッシュ」するために使用される、[キューブ](../objects/cube-element-assl.md)要素。  
+  データ ソースを表すプリミティブ データ型を定義します (など、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]パッケージ) にデータを"プッシュ"するために使用される、[キューブ](../objects/cube-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

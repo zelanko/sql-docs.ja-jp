@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6523603f7524af93bc21417f378a41bd907532d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 06b8f48e1f2b7c246c1f5e4559bbbba851ccf128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264938"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>ユーザー権限とグループ権限の重複 (Master Data Services)
   ユーザーの権限は、次の権限に基づきます。  
@@ -37,7 +37,7 @@ ms.locfileid: "36177324"
 -   
   **拒否** が他のどの権限をオーバーライドします。  
   
--   **更新**オーバーライド**読み取り専用**です。  
+-   **Update**オーバーライド**読み取り専用**します。  
   
  上記のルールは、 **[モデル]** タブと **[階層メンバー]** タブに適用されます。 権限は、各タブで解決された後で組み合わされます。 詳細については、「[権限の決定方法 (マスター データ サービス)](how-permissions-are-determined-master-data-services.md)」を参照してください。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36177324"
   
  グループ 1 には、Product エンティティに対する **更新** 権限が与えられています。  
   
- グループ 2 には**読み取り専用**Product エンティティにアクセスを許可します。  
+ グループ 2 に**読み取り専用**Product エンティティにアクセスを許可します。  
   
  結果: ユーザーの有効な権限は、Product エンティティに対する **更新** 権限となります。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "36177324"
   
  ユーザーには、階層ノードのメンバーのグループに対する **更新** 権限が与えられています。  
   
- グループ 1 には**読み取り専用**階層ノードのメンバーのグループにアクセス許可。  
+ グループ 1 には**読み取り専用**階層ノードのメンバーのグループにアクセスを許可します。  
   
- グループ 2 には**読み取り専用**階層ノードのメンバーのグループにアクセス許可。  
+ グループ 2 に**読み取り専用**階層ノードのメンバーのグループにアクセスを許可します。  
   
  結果: ユーザーの有効な権限は、メンバーに対する **更新** 権限となります。  
   

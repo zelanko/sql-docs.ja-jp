@@ -1,5 +1,5 @@
 ---
-title: MembersWithData 要素 (ASSL) |Microsoft ドキュメント
+title: MembersWithData 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MembersWithData element
 ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c0311a774b225234aeb63d4d67680e12b693b0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0c2e35549f4db2de489916ad1760954d4f6dfd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218232"
 ---
 # <a name="memberswithdata-element-assl"></a>MembersWithData 要素 (ASSL)
   親属性内の非リーフ メンバーのデータ メンバーを表示するかどうかを指定します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36176034"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 値、`MembersWithData`要素は親属性によってのみ使用 (つまり、他の値、[使用状況](usage-element-dimensionattribute-assl.md)の要素、`DimensionAttribute`に設定されている親要素*親*) を決定するかどうか親属性の非リーフ メンバーのデータ メンバーを表示します。 データ メンバーの詳細については、「 [親子階層の属性](../../multidimensional-models/parent-child-dimension-attributes.md)」を参照してください。  
+ 値、`MembersWithData`要素は親属性でのみ使用 (つまり、他の値、[使用状況](usage-element-dimensionattribute-assl.md)の要素、`DimensionAttribute`に設定されている親要素*親*) を決定するかどうか親属性内の非リーフ メンバーのデータ メンバーを表示します。 データ メンバーの詳細については、「 [親子階層の属性](../../multidimensional-models/parent-child-dimension-attributes.md)」を参照してください。  
   
  この要素の値は、次の表の一覧に示す文字列のいずれかに限定されています。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36176034"
 |*NonLeafDataHidden*|非リーフ データは表示されません。|  
 |*NonLeafDataVisible*|非リーフ データは表示されます。|  
   
- 許可される値に対応する列挙`MembersWithData`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MembersWithData>します。  
+ 許容された値に対応する列挙体`MembersWithData`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MembersWithData>します。  
   
 ## <a name="see-also"></a>参照  
  [MembersWithDataCaption 要素&#40;ASSL&#41;](caption-element-assl.md)   

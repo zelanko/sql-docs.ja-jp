@@ -1,5 +1,5 @@
 ---
-title: StorageEngineUsed 要素 (XMLA) |Microsoft ドキュメント
+title: StorageEngineUsed 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 608ebcbb1252b4fafa44bf242a83418cc6b3d053
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6c8f7cdca7fb8134a27c8d1319385861294893a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203962"
 ---
 # <a name="storageengineused-element-xmla"></a>StorageEngineUsed 要素 (XMLA)
   現在のデータベースの種類を示す読み取り専用の値を格納します。  
@@ -89,10 +89,10 @@ ms.locfileid: "36177397"
 |-----------|-----------------|  
 |*従来*|データベース モデルは、MOLAP、ROLAP、または HOLAP ストレージ モードに対応します。|  
 |*InMemory*|データベース モデルは、IMBI ストレージ モードに対応します。|  
-|*混在*|データベース モデルは、IMBI と、MOLAP、ROLAP、または HOLAP ストレージ モードを組み合わせます。|  
+|*混合*|データベース モデルは、IMBI と、MOLAP、ROLAP、または HOLAP ストレージ モードを組み合わせます。|  
   
- 許可される値に対応する列挙`StorageEngineUsed`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.StorageEngineUsed>します。  
+ 許容された値に対応する列挙体`StorageEngineUsed`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.StorageEngineUsed>します。  
   
- 親に対応する要素`StorageEngineUsed`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.Database>します。  
+ 親に対応する要素`StorageEngineUsed`分析管理オブジェクト (AMO) オブジェクト モデルは、<xref:Microsoft.AnalysisServices.Database>します。  
   
   

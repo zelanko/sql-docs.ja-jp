@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a82a52b230564b81261cece8f61ea56cdb21da8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3c4144787ac5085c4713781569d7e6d364ff7951
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172173"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>再帰型階層グループの作成 (レポート ビルダーおよび SSRS)
   再帰型階層グループは、組織階層内のマネージャーと従業員のリレーションシップを表す上司/部下構造など、複数の階層レベルから成る単一のレポート データセットのデータを編成します。  
@@ -54,13 +54,13 @@ ms.locfileid: "36178380"
     > [!NOTE]  
     >  プロパティ ペインが表示されない場合は、 **[表示]** タブの **[プロパティ]** をクリックします。  
   
-2.  プロパティ ペインで、展開、`Padding`ノード、 をクリックして**左**、ドロップダウン リストから選択し、 **\<式… >** です。  
+2.  [プロパティ] ウィンドウで、展開、`Padding`ノード、をクリックして**左**、ドロップダウン リストから選択し、 **\<式… >**。  
   
 3.  式ペインで次の式を入力します。  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Padding のプロパティはすべて、 *nnyy*形式の文字列が必要です。ここで、 *nn* は数字、 *yy* は単位です。 この例の式を使用する文字列を構築して、`Level`再帰レベルに基づいて余白のサイズを大きく関数。 たとえば、レベルが 1 の行では余白は 12 ポイント (2 + (1\*10)) に、レベルが 3 の行では 32 ポイント (2 + (3\*10)) になります。 については、`Level`関数を参照してください[レベル](report-builder-functions-level-function.md)です。  
+     Padding のプロパティはすべて、 *nnyy*形式の文字列が必要です。ここで、 *nn* は数字、 *yy* は単位です。 例の式を使用する文字列を構築して、`Level`再帰レベルに基づいて余白のサイズを大きく関数。 たとえば、レベルが 1 の行では余白は 12 ポイント (2 + (1\*10)) に、レベルが 3 の行では 32 ポイント (2 + (3\*10)) になります。 については、`Level`関数を参照してください[レベル](report-builder-functions-level-function.md)します。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

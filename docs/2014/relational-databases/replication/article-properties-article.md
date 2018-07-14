@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articleproperties.f1
 helpviewer_keywords:
 - Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 602452b683e779eba316aa014cc0799d9068d67c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1db1837c339960c0d320170fd25eb8a05b499a35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242362"
 ---
 # <a name="article-properties---ltarticlegt"></a>アーティクルのプロパティ - &lt;Article&gt;
   **[アーティクルのプロパティ]** ダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ]** ダイアログ ボックスから開くことができます。 このダイアログ ボックスでは、すべての種類のアーティクルのプロパティを表示し、設定できます。 パブリケーションを作成するときにのみ設定できるプロパティや、パブリケーションにアクティブなサブスクリプションがない場合にのみ設定できるプロパティがあります。 設定できないプロパティは読み取り専用として表示されます。  
@@ -43,7 +43,8 @@ ms.locfileid: "36174707"
   
 ## <a name="options-for-all-publications"></a>すべてのパブリケーションのオプション  
  **[テーブル分割構成のコピー]** と **[インデックス分割構成のコピー]**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、テーブル分割とインデックス分割の機能が導入されました。これは、レプリケーションによって行フィルターと列フィルターを使用して実現される分割とは関係ありません。 **[テーブル分割構成のコピー]** オプションと **[インデックス分割構成のコピー]** オプションでは、パーティション分割構成をサブスクライバーにコピーするかどうかを指定します。 パーティション分割の詳細については、「 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)」を参照してください。  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、テーブル分割とインデックス分割の機能が導入されました。これは、レプリケーションによって行フィルターと列フィルターを使用して実現される分割とは関係ありません。 **[テーブル分割構成のコピー]** オプションと **[インデックス分割構成のコピー]** オプションでは、パーティション分割構成をサブスクライバーにコピーするかどうかを指定します。 パーティション分割の詳細については、「 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
  **[データ型の変換]**  
  サブスクライバーにオブジェクトを作成する際に、ユーザー定義のデータ型を基本データ型に変換するかどうかを指定します。 ユーザー定義のデータ型には、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]で導入されたユーザー定義 CLR 型が含まれます。 このようなデータ型を古いバージョンの **にレプリケートする場合には、** [True] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を指定します。これにより、このデータ型をサブスクライバーで適切に処理できるようになります。  

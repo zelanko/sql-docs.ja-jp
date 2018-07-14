@@ -1,5 +1,5 @@
 ---
-title: OLE DB ソース エディター (接続マネージャー ページ) |Microsoft ドキュメント
+title: OLE DB ソース エディター ([接続マネージャー] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
 caps.latest.revision: 41
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 48a56983486d07e2331394a9a07b39bde38925b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71b29c69425508e15ba306c6f9ae7d0319c8a6ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206492"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>[OLE DB ソース エディター] ([接続マネージャー] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、ソースの OLE DB 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36176203"
 >  [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 以前のバージョンを使用するデータ ソースからデータを読み込むには、Excel ソースを使用します。 詳細については、「[[Excel ソース エディター] ([接続マネージャー] ページ)](../../2014/integration-services/excel-source-editor-connection-manager-page.md)」を参照してください。  
   
 > [!NOTE]  
->  `CommandTimeout` OLE DB ソースのプロパティでは使用できません、 **OLE DB ソース エディター**を使用して設定できますが、**詳細エディター**です。 このプロパティの詳細については、「 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)」(OLE DB のカスタム プロパティ) の Excel ソースのセクションを参照してください。  
+>  `CommandTimeout`の OLE DB ソースのプロパティでは使用できません、 **OLE DB ソース エディター**を使用して設定できますが、**高度なエディター**します。 このプロパティの詳細については、「 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)」(OLE DB のカスタム プロパティ) の Excel ソースのセクションを参照してください。  
   
  OLE DB ソースの詳細については、「 [OLE DB Source](data-flow/ole-db-source.md)」を参照してください。  
   

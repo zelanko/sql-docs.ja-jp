@@ -1,5 +1,5 @@
 ---
-title: '[グラフ] タブ (マイニング モデル ビューアー) |Microsoft ドキュメント'
+title: '[グラフ] タブ (マイニング モデル ビューアー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.chart.f1
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08c1fbe446555e34354330b18ffe5bc5c4d80ef5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd1c2cf7ecc6a4cc734197a55365fb4a661b1b36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169803"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>[グラフ] タブ (マイニング モデル ビューアー)
   タイム シリーズ モデルのトレーニングで使用する履歴データを、予測される値と共に表示するには、**[グラフ]** ペインを使用します。 グラフの縦軸はタイム シリーズの値を表し、横軸は時間を表します。 将来の予測は、点線によって表します。  
@@ -41,7 +41,7 @@ ms.locfileid: "36178572"
  **ズーム イン**  
  グラフを拡大します。  
   
- **ズーム アウトします。**  
+ **ズーム アウト**  
  グラフを縮小します。  
   
  **ウィンドウに合わせてダイアグラムの倍率**  

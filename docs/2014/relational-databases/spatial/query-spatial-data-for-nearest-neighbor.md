@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 46d2c75b69d283d6122255ec9ac4a41c4ccdbc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 361c4e6fe070170163b5e14f1b061467bab96186
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227144"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>空間データに対するニアレスト ネイバーのクエリ
   空間データで使用される一般的なクエリの 1 つに、ニアレスト ネイバー クエリがあります。 ニアレスト ネイバー クエリは、特定の空間オブジェクトに最も近い空間オブジェクトを検索するために使用されます。 たとえば、Web サイトのストア ロケーターは、多くの場合、顧客の場所に最も近い店舗の場所を検索する必要があります。  
@@ -55,7 +55,7 @@ SELECT TOP ( number )
 ```  
   
 ## <a name="nearest-neighbor-query-and-spatial-indexes"></a>ニアレスト ネイバー クエリと空間インデックス  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`TOP` および `ORDER BY` 句は、空間データ列にニアレスト ネイバー クエリを実行するために使用されます。 `ORDER BY`句への呼び出しが含まれている、`STDistance()`空間列のデータ型のメソッドです。 `TOP`句がクエリで返されるオブジェクトの数を示します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`TOP` および `ORDER BY` 句は、空間データ列にニアレスト ネイバー クエリを実行するために使用されます。 `ORDER BY`句への呼び出しが含まれている、`STDistance()`空間列のデータ型のメソッド。 `TOP`句は、クエリで返されるオブジェクトの数を示します。  
   
  ニアレスト ネイバー クエリで空間インデックスを使用するには、次の要件を満たす必要があります。  
   
@@ -105,7 +105,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- クエリがない、`WHERE`句を使用する`STDistance()`クエリが空間インデックスを使用できないために、「構文」セクションで指定した形式にします。  
+ ない、`WHERE`句を使用する`STDistance()`のため、クエリは、空間インデックスを使用できません、構文で指定した形式です。  
   
 ## <a name="see-also"></a>参照  
  [空間データ &#40;SQL Server&#41;](spatial-data-sql-server.md)  

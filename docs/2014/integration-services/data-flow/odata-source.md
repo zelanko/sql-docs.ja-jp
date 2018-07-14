@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.ODATASOURCE.F1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14e8cb87d04ff0f929fe88c5755087ead58e0c7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af382eb9398dc2c8d790f8af1cf72fc89c572959
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250352"
 ---
 # <a name="odata-source"></a>OData ソース
   SSIS パッケージ内で OData ソース コンポーネントを使用して、Open Data Protocol (OData) サービスから取得したデータを使用します。 このコンポーネントは、OData v2 と v3 の各プロトコル、および ATOM と JSON の各データ形式をサポートします。  
   
 > [!NOTE]  
->  OData ソースを使用して、SharePoint リストから読み取りを行うことができます。 SharePoint サーバーですべてのリストを確認するには、次の URL を使用: http://\<サーバー >/_vti_bin/ListData.svc です。 SharePoint の URL の規則に関する詳細については、「 [SharePoint Foundation REST インターフェイス](http://msdn.microsoft.com/library/ff521587.aspx)」を参照してください。  
+>  OData ソースを使用して、SharePoint リストから読み取りを行うことができます。 SharePoint サーバー上のすべてのリストを表示するには、次の URL を使用: http://\<server >//_vti_bin/listdata.svc。 SharePoint の URL の規則に関する詳細については、「 [SharePoint Foundation REST インターフェイス](http://msdn.microsoft.com/library/ff521587.aspx)」を参照してください。  
   
 ## <a name="odata-format"></a>OData の形式  
- ほとんどの OData サービスは、結果を複数の形式で返します。 $format クエリ オプションを使用して、結果セットの形式を指定することができます。 JSON と JSON Light のような形式は、ATOM/XML より効率的であり、大量のデータを転送する場合により高いパフォーマンスを達成できる可能性があります。 次の表に、サンプル テストの結果を示します。 わかります、ATOM から新しい JSON light 形式 (WCF Data Services 5.1 で使用可能) に切り替える際に、ATOM から JSON と 67% パフォーマンスの向上に切り替える際、30 ~ 53% パフォーマンスの向上を発生しました。  
+ ほとんどの OData サービスは、結果を複数の形式で返します。 $format クエリ オプションを使用して、結果セットの形式を指定することができます。 JSON と JSON Light のような形式は、ATOM/XML より効率的であり、大量のデータを転送する場合により高いパフォーマンスを達成できる可能性があります。 次の表に、サンプル テストの結果を示します。 ご覧のように、ATOM から新しい JSON light 形式 (WCF Data Services 5.1 で使用可能) に切り替える場合、ATOM から JSON と 67% パフォーマンスの向上に切り替える場合がありますが 30 ~ 53% パフォーマンスが向上します。  
   
 |||||  
 |-|-|-|-|  
@@ -45,7 +45,7 @@ ms.locfileid: "36175399"
   
 -   [OData ソース コンポーネントのインストールと、アンインストール](../install-and-uninstall-odata-source-component.md)  
   
--   [チュートリアル: OData ソースを使用して&#91;SSIS&#93;](tutorial-using-the-odata-source.md)  
+-   [チュートリアル: OData ソースの使用&#91;SSIS&#93;](tutorial-using-the-odata-source.md)  
   
 -   [実行時の OData ソース クエリの変更](modify-odata-source-query-at-runtime.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: トレーニング セットとテスト データ セット |Microsoft ドキュメント
+title: トレーニング セットとテスト データ セット |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
 - holdout [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0789d5f5ae4c141e8b7e53f7cab9938fae488a87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 770a5446b640cb3a2c5f5ce61f222e200f85ae3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173553"
 ---
 # <a name="training-and-testing-data-sets"></a>トレーニング データ セットとテスト データ セット
   トレーニング セットとテスト セットにデータを分割することは、データ マイニング モデルの評価における重要な部分です。 通常、データセットをトレーニング セットとテスト セットに分割すると、ほとんどのデータはトレーニングに使用され、テストに使用されるデータは少量になります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではデータのサンプルがランダムに抽出されるため、テスト セットとトレーニング セットが同様になるように分割されます。 トレーニングとテストに類似データを使用すると、データの差異による影響を最小限に抑えることができ、モデルの特性をよりよく理解できます。  
@@ -47,7 +47,7 @@ ms.locfileid: "36178576"
   
  また、トレーニング ケースの最大数を設定するようにウィザードを構成したり、指定したケースの最大数まで最大割合を許可するように制限を組み合わせたりすることもできます。 ケースの最大割合と最大数の両方を指定した場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって、2 つの制限のうちの小さい方がテスト セットのサイズとして使用されます。 たとえば、テスト ケースに 30% の提示データを指定し、テスト ケースの最大数を 1000 に指定した場合、テスト セットのサイズが 1000 ケースを超えることはありません。 これを利用すると、モデルにトレーニング データが追加されてもテスト セットのサイズが一定に保たれるようにすることができます。  
   
- 複数のマイニング構造に同じデータ ソース ビューを使用する場合、すべてのマイニング構造とそのモデルでほぼ同じようにデータが分割されるようにするには、ランダム サンプリングの初期化に使用するシードを指定します。 値を指定すると`HoldoutSeed`、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]その値を使用してサンプリングを開始します。 指定しないと、サンプリング時に、マイニング構造の名前に対してハッシュ アルゴリズムを使用してシード値が作成されます。  
+ 複数のマイニング構造に同じデータ ソース ビューを使用する場合、すべてのマイニング構造とそのモデルでほぼ同じようにデータが分割されるようにするには、ランダム サンプリングの初期化に使用するシードを指定します。 値を指定すると`HoldoutSeed`、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サンプリングの開始にその値が使用されます。 指定しないと、サンプリング時に、マイニング構造の名前に対してハッシュ アルゴリズムを使用してシード値が作成されます。  
   
 > [!NOTE]  
 >  `EXPORT` ステートメントおよび `IMPORT` ステートメントを使用してマイニング構造のコピーを作成すると、新しいマイニング構造でも同じトレーニング データセットとテスト データセットが使用されます。エクスポート プロセスでは新しい ID が作成されますが、同じ名前が使用されるためです。 一方、2 つのマイニング構造の基になるデータ ソースが同じでも、名前が異なる場合は、それぞれのマイニング構造に作成されるセットも異なります。  
@@ -91,7 +91,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 ## <a name="limitations-on-the-use-of-holdout-data"></a>予約データの使用に関する制限事項  
   
--   提示データを使用するには、マイニング構造の <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> プロパティが既定値の `KeepTrainingCases` に設定されている必要があります。 変更した場合、`CacheMode`プロパティを`ClearAfterProcessing`、マイニング構造が再処理し、パーティションはすべて失われます。  
+-   提示データを使用するには、マイニング構造の <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> プロパティが既定値の `KeepTrainingCases` に設定されている必要があります。 変更した場合、`CacheMode`プロパティを`ClearAfterProcessing`、マイニング構造を再処理しは、パーティションは失われます。  
   
 -   タイム シリーズ モデルからデータを削除することはできません。したがって、ソース データをトレーニング セットとテスト セットに分割することはできません。 マイニング構造とモデルの作成を開始し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムを選択すると、予約データセットを作成するオプションは無効になります。 また、ケース テーブル レベルまたは入れ子になったテーブル レベルで、マイニング構造に KEY TIME 列が含まれている場合も、予約データの使用が無効になります。  
   
@@ -99,13 +99,13 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   多くの場合、提示データの既定値である 30 を使用すると、トレーニング データとテスト データのバランスがとれます。 十分なトレーニングのためにデータセットをどの程度大きくするか、また、オーバーフィットを回避するためにトレーニング セットをどの程度小さくするかを、単純に算出する方法はありません。 ただし、モデルを作成した後、クロス検証を使用して、特定のモデルについてデータセットを評価できます。  
   
--   AMO と XML DDL には、前の表に示したプロパティに加えて、読み取り専用プロパティ `HoldoutActualSize` が用意されています。 ただし、パーティションの実際のサイズを特定できないため正確にするまで、構造が処理された後、必要がありますを確認するかどうかの値を取得する前に、モデルは処理されて、`HoldoutActualSize`プロパティです。  
+-   AMO と XML DDL には、前の表に示したプロパティに加えて、読み取り専用プロパティ `HoldoutActualSize` が用意されています。 ただし、パーティションの実際のサイズを判断できないため正確にまで構造が処理された後、必要がありますチェックの値を取得する前に、モデルが処理されたかどうか、`HoldoutActualSize`プロパティ。  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
 |トピック|リンク|  
 |------------|-----------|  
-|モデルに対するフィルターとトレーニング データセットおよびテスト データセットとの間の対話方法について説明します。|[マイニング モデル フィルターの&#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)|  
+|モデルに対するフィルターとトレーニング データセットおよびテスト データセットとの間の対話方法について説明します。|[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)|  
 |トレーニング データとテスト データの使用が相互検証に与える影響について説明します。|[クロス検証&#40;Analysis Services - データ マイニング&#41;](cross-validation-analysis-services-data-mining.md)|  
 |マイニング構造でのトレーニング セットとテスト セットの操作のためのプログラム インターフェイスに関する情報を提供します。|[AMO の概念とオブジェクト モデル](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [MiningStructure 要素&#40;ASSL&#41;](../scripting/objects/miningstructure-element-assl.md)|  
 |提示セットを作成するための DMX 構文について説明します。|[マイニング構造の作成&AMP;#40;DMX&AMP;#41;](/sql/dmx/create-mining-structure-dmx)|  

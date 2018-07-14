@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f17620dc2fc58b033bef928035b4f5f40816214e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 37bbe195179a13d00961f3f33149e3d25b9476e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188039"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services の改ページ (レポート ビルダーおよび SSRS)
-  ページ割り付けとは、レポートに含まれるページ数と、ページ上でのレポート アイテムの配置方法をいいます。 改ページ[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]表示し、レポートの配信に使用する表示拡張機能によって異なります。 レポート サーバーでレポートを実行した場合は HTML レンダラーが使用されます。 HTML には、特定の改ページ規則が適用されます。 たとえば、同じレポートを PDF にエクスポートした場合は、PDF レンダラーが使用され、異なる規則が適用されるため、レポートの改ページも異なります。 レポートの配信に使用するレンダラーに最適化された、ユーザーにとっての読みやすいレポートをデザインするにおけるページ割り付けの制御に使用される規則を理解する必要があります。[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]です。  
+  ページ割り付けとは、レポートに含まれるページ数と、ページ上でのレポート アイテムの配置方法をいいます。 改ページ[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]表示し、レポートの配信に使用する表示拡張機能によって異なります。 レポート サーバーでレポートを実行した場合は HTML レンダラーが使用されます。 HTML には、特定の改ページ規則が適用されます。 たとえば、同じレポートを PDF にエクスポートした場合は、PDF レンダラーが使用され、異なる規則が適用されるため、レポートの改ページも異なります。 レンダラーを使用して、レポートの配信に最適化された、ユーザーの読みやすいレポートをデザインするのには、改ページを制御するために使用するルールを理解する必要があります[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]します。  
   
  このトピックでは、物理的なページ サイズとレポート レイアウトが、ハード改ページ レンダラーによるレポートのレンダリングに与える影響について説明します。 **[レポートのプロパティ]** ペイン、 **[プロパティ]** ペイン、または **[ページ設定]** ダイアログ ボックスを使用すると、プロパティを設定することで、物理的なページ サイズと余白を変更し、レポートを複数のカラムに分割できます。 **[レポートのプロパティ]** ペインにアクセスするには、レポート本文の外側の青い領域をクリックします。 **[ページ設定]** ダイアログ ボックスにアクセスするには、[ホーム] タブで **[実行]** をクリックした後、[実行] タブで **[ページ設定]** をクリックします。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36176770"
   
  定数と、単純型または複合型の式を使用して、Disabled および ResetPageNumber プロパティの値を設定します。 ただし、BreakLocation プロパティを持つ式は使用できません。 式の記述と使用の詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)」をご覧ください。  
   
- レポートを使用して、現在のページ名またはページ番号を参照する式を作成することができます、`Globals`コレクション。 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。  
+ レポートを使用して、現在のページ名またはページ番号を参照する式を記述することができます、`Globals`コレクション。 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。  
   
 ### <a name="naming-excel-worksheet-tabs"></a>Excel ワークシート タブの名前指定  
  これらのプロパティは、Excel ブックにレポートをエクスポートする際に役立ちます。 レポートをエクスポートするときに、ワークシートのタブ名として既定の名前を指定するには、InitialPage プロパティを使用し、各ワークシートで異なる名前を指定する場合は、PageName プロパティを使用します。 改ページで定義された新しい各レポート ページは、PageName プロパティの値によって指定されたそれぞれのワークシートにエクスポートされます。 PageName が空白であるが、レポートに最初のページ名が含まれる場合、Excel ブックのすべてのワークシートでは、同じ名前 (最初のページ名) が使用されます。  

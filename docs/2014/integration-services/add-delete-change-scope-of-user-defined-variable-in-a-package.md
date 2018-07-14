@@ -1,5 +1,5 @@
 ---
-title: 追加、削除、パッケージ内のユーザー定義変数のスコープを変更する |Microsoft ドキュメント
+title: 追加、削除、パッケージ内のユーザー定義変数のスコープの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], adding
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 caps.latest.revision: 46
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3d0d607408aed88a91be310d715505881708edee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fdccdecea434aa3fe56c362f932b3ba0da396b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213602"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>パッケージ内のユーザー定義変数のスコープの追加、削除、変更
   この手順では、**[変数]** ウィンドウを使用して、パッケージ内のユーザー定義変数のスコープを追加、削除、および変更する方法について説明します。  
   
- 変数のスコープの詳細については、次を参照してください。 [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)です。  
+ 変数のスコープの詳細については、次を参照してください。 [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)します。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 実行時にシステム情報を使用できるようにし、パッケージやイベント ハンドラーなどのコンテナーで使用できるシステム変数も用意されています。 システム変数は削除できません。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 実行時にシステムの情報を使用できるようにパッケージやイベント ハンドラーなどのコンテナーで使用できるシステム変数も用意されています。 システム変数は削除できません。  
   
 ### <a name="to-add-a-variable"></a>変数を追加するには  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36177808"
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)   
- [パッケージの変数を使用します。](../../2014/integration-services/use-variables-in-packages.md)   
+ [パッケージで変数を使用します。](../../2014/integration-services/use-variables-in-packages.md)   
  [ユーザー定義変数のプロパティを設定します。](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [子パッケージでの変数およびパラメーターの値の使用](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   

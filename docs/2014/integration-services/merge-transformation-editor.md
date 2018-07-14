@@ -1,5 +1,5 @@
 ---
-title: マージ変換エディター |Microsoft ドキュメント
+title: マージ変換エディター |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergetransformation.f1
 helpviewer_keywords:
 - Merge Transformation Editor
 ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0123d4af9d55a0cc95dcc439310566c1f5f4c08c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d49bef8fb6f6391c616e919b819db05b5ff5e63f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221722"
 ---
 # <a name="merge-transformation-editor"></a>マージ変換エディター
   **[マージ変換エディター]** を使用すると、マージする 2 つの並べ替え済みデータのセットの列を指定できます。  

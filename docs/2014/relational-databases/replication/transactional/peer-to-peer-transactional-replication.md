@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
 - transactional replication, bidirectional replication
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 299b9968d9daebc61c9625a661125d45f33a3dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 838d3fa3190e592c0b46529ea45b7e1a7b91c8be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236652"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   ピア ツー ピア レプリケーションは、データのコピーを複数のサーバー インスタンス ( *ノード*) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。 ピア ツー ピア レプリケーションはトランザクション レプリケーションを基礎としており、トランザクション的に一貫性のある変更がほぼリアルタイムで反映されます。 これにより、読み取り操作のスケールアウトを必要とするアプリケーションで、クライアントからの読み取りを複数のノードに分散することができます。 また、データがほぼリアルタイムで複数のノードに保持されるため、データの冗長性が実現され、データの可用性が向上します。  
@@ -147,18 +147,18 @@ ms.locfileid: "36175133"
   
  次のプロパティには特別な注意が必要です。  
   
--   パブリケーションのプロパティを**@allow_initialize_from_backup**の値が必要です`true`です。  
+-   パブリケーションのプロパティを**@allow_initialize_from_backup**の値が必要です`true`します。  
   
--   アーティクルのプロパティ**@replicate_ddl**の値が必要です`true`です。**@identityrangemanagementoption**の値が必要です`manual`; と**@status**そのオプションが必要です**24**が設定されています。  
+-   アーティクルのプロパティ**@replicate_ddl**の値が必要です`true`;**@identityrangemanagementoption**の値が必要です`manual`; と**@status**そのオプションが必要です**24**設定されます。  
   
--   アーティクルのプロパティの値**@ins_cmd**、 **@del_cmd**、および**@upd_cmd**に設定することはできません`SQL`です。  
+-   アーティクルのプロパティの値**@ins_cmd**、 **@del_cmd**、および**@upd_cmd**に設定することはできません`SQL`します。  
   
--   サブスクリプションのプロパティ**@sync_type**の値が必要です`none`または`automatic`です。  
+-   サブスクリプション プロパティ**@sync_type**の値が必要です`none`または`automatic`します。  
   
 ### <a name="maintenance-considerations"></a>メンテナンスの注意事項  
  次のアクションを実行する場合は、システムを停止する必要があります。 システムの停止を実行するには、すべてのノードのパブリッシュされたテーブルで処理を停止し、他のすべてのノードからのすべての変更を各ノードが受信しているかどうかを確認します。  
   
--   追加する、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]既存のトポロジにノード  
+-   追加、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]既存のトポロジへのノード  
   
 -   既存のパブリケーションへのアーティクルの追加  
   

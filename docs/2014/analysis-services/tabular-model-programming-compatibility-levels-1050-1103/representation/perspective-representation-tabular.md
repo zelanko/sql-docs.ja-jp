@@ -1,5 +1,5 @@
 ---
-title: パースペクティブ表現 (テーブル) |Microsoft ドキュメント
+title: パースペクティブ表現 (表形式) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6d2636c4-dae4-448f-a1d4-dbee739e177c
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 528e3dd1d5147a2e2f5a4712a79f88ad936cbaa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 269ec7f8349697eb6911c789b73a1a1fc3111363
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252874"
 ---
 # <a name="perspective-representation-tabular"></a>パースペクティブ表現 (テーブル)
   パースペクティブは、クライアント アプリケーション向けに、テーブル モデルをより小さな部分に簡素化したり絞りこんだりするメカニズムです。  
   
- 参照してください[パースペクティブ表現 (テーブル)](perspective-representation-tabular.md)を作成して、パースペクティブ表現を操作する方法の詳細についてはします。  
+ 参照してください[パースペクティブ表現 (表形式)](perspective-representation-tabular.md)を作成して、パースペクティブ表現を操作する方法の詳細についてはします。  
   
 > [!WARNING]  
 >  パースペクティブはセキュリティ メカニズムではありません。パースペクティブの外にあるオブジェクトも、ユーザーは他のインターフェイスを利用してアクセスできます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36174792"
  AMO オブジェクトの場合、パースペクティブ表現は <xref:Microsoft.AnalysisServices.Perspective> と一対一マッピングのリレーションシップにあり、その他の主要 AMO オブジェクトを必要としません。  
   
 ### <a name="perspective-in-amo"></a>AMO におけるパースペクティブ  
- 次のコード スニペットでは、テーブル モデルでパースペクティブを作成する方法を示します。 このコードで中心となる要素は、perspectiveElements です。このオブジェクトは、ユーザーに提示されるテーブル モデルのすべてのオブジェクトをグラフィカルに表現したものです。 *perspectiveElements* 4 つの列が含まれています。 このシナリオのみでは列 1、2 および 3 が関連するとします。 列 1 には表示される要素の型が格納されます (elementTypeValue)。列 2 には要素の完全な名前が格納されます。ほとんどの場合、この名前はパースペクティブに要素を入力するために解析する必要があります。列 3 にはチェック ボックスの項目が格納されます (checkedElement)。これによって、要素がパースペクティブに含まれているかどうかが指定されます。  
+ 次のコード スニペットでは、テーブル モデルでパースペクティブを作成する方法を示します。 このコードで中心となる要素は、perspectiveElements です。このオブジェクトは、ユーザーに提示されるテーブル モデルのすべてのオブジェクトをグラフィカルに表現したものです。 *perspectiveElements* 4 つの列が含まれています。 このシナリオでは 1、2、3 列のみが関連するとします。 列 1 には表示される要素の型が格納されます (elementTypeValue)。列 2 には要素の完全な名前が格納されます。ほとんどの場合、この名前はパースペクティブに要素を入力するために解析する必要があります。列 3 にはチェック ボックスの項目が格納されます (checkedElement)。これによって、要素がパースペクティブに含まれているかどうかが指定されます。  
   
 ```  
   
@@ -135,6 +135,6 @@ private void updatePerspective_Click(
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular サンプル  
- ただし、理解を使用する方法の作成およびパースペクティブ表現を操作するのには AMO を参照してください、AMO to Tabular サンプルのソース コードです。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
+ ただし、使用する方法を理解するに AMO パースペクティブ表現の操作を作成する際に、AMO to Tabular サンプルのソース コード参照してください。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
   
   
