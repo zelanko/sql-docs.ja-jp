@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - files [SQL Server Management Studio]
 - encoding [SQL Server Management Studio]
 - files [SQL Server Management Studio], encoding
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7a252e4e766b85c83c97ee55a5204932932ee3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cc038e491f895ad3ee017ff9e06835ad25c48912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208422"
 ---
 # <a name="manage-files-with-encoding"></a>エンコーディングによるファイルの管理
   特定の言語や特定のプラットフォームでコードを正しく表示するために、特定の文字エンコードをファイルに関連付けることができます。  
@@ -46,7 +46,7 @@ ms.locfileid: "36165511"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>他のエンコードまたは行終端文字の種類を指定してファイルを保存するには  
   
-1.  **ファイル** メニューのをクリックして**保存\<ファイル名 > として**です。  
+1.  **ファイル** メニューのをクリックして**保存\<ファイル名 > として**します。  
   
 2.  **[ファイル名を付けて保存]** ダイアログ ボックスで、 **[保存]** ボタンを展開し、 **[エンコード付きで保存]** をクリックします。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36165511"
 -   UTF8 ファイルは、Visual SourceSafe で安全に動作しません。チェックイン、チェックアウト、差分チェック、マージの実行時に、UTF8 ファイル エディターで問題を起こす原因になる変更が加えられるためです。  
   
 ## <a name="see-also"></a>参照  
- [ソリューションとプロジェクトを管理するファイル](files-that-manage-solutions-and-projects.md)   
+ [管理ソリューションとプロジェクト ファイル](files-that-manage-solutions-and-projects.md)   
  [ファイル拡張子をコード エディターに関連付ける方法](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
   

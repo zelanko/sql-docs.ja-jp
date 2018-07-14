@@ -1,5 +1,5 @@
 ---
-title: パッケージおよびプロジェクトのパスワード |Microsoft ドキュメント
+title: パッケージとプロジェクトのパスワード |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.packagepassword.f1
 - sql12.ssis.bids.projectpassword.f1
 ms.assetid: 090277a5-4659-461d-944c-eb9b26167720
 caps.latest.revision: 11
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 34245f715cfba96624097fb1b79189b5d00dc1d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ece8495ab25c9b7abba8d35e2ed3e635cf5d15d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199602"
 ---
 # <a name="package-and-project-password"></a>パッケージおよびプロジェクトのパスワード
   **[パッケージ パスワード]** ダイアログ ボックスを使用すると、パスワードによって暗号化されるパッケージのパッケージ パスワードを指定できます。 パッケージで使用される保護レベルが **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** の場合、パスワードを指定する必要があります。  

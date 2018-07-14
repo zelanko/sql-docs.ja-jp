@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
 - spatial indexes [SQL Server], dropping
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 188c001672c31b4fdf4b72490553b7f65ccf0cb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 595a45a89413359861dc9298068622a076c693e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181636"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>空間インデックスの作成、変更、および削除
-  空間インデックスは、の列に対して特定の操作をより効率的に実行できる、`geometry`または`geography`データ型 (、*空間列*)。 1 つの空間列に対して複数の空間インデックスを指定できます。 たとえば、1 つの列の異なるテセレーション パラメーターのインデックスを作成する場合などに便利です。  
+  空間インデックスは、の列で特定の操作をより効率的に実行できる、`geometry`または`geography`データ型 (、*列 spatial*)。 1 つの空間列に対して複数の空間インデックスを指定できます。 たとえば、1 つの列の異なるテセレーション パラメーターのインデックスを作成する場合などに便利です。  
   
  空間インデックスの作成にはいくつかの制限があります。 詳細については、このトピックの「 [空間インデックスに関する制限](#restrictions) 」を参照してください。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36174450"
   
 7.  インデックスを作成する空間列を指定するには、 **[追加]** をクリックします。  
   
-8.  **から列を選択** *\<テーブル名 >* 型の列を選択 ダイアログ ボックス、`geometry`または`geography`対応するチェック ボックスをオンにします。 その他の空間列は編集できなくなります。 別の空間列を選択するには、先に現在選択されている列の選択を解除する必要があります。 完了したら、 **[OK]** をクリックします。  
+8.  **から列を選択** *\<テーブル名 >* 型の列の選択 ダイアログ ボックスで、`geometry`または`geography`対応するチェック ボックスをオンにします。 その他の空間列は編集できなくなります。 別の空間列を選択するには、先に現在選択されている列の選択を解除する必要があります。 完了したら、 **[OK]** をクリックします。  
   
 9. **[インデックス キー列]** グリッドで、選択した列を確認します。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36174450"
   
 11. **[空間]** ページで、インデックスの空間プロパティに対して使用する値を指定します。  
   
-     インデックスを作成するときに、`geometry`型の列である必要がありますを指定する、 **(*`X-min`*、*`Y-min`*)** と **(*`X-max`*、*`Y-max`*)** 境界ボックスの座標。 インデックスの場合、`geography`型の列で境界ボックスのフィールド読み取り専用に指定した後、**地理グリッド**テセレーション スキーム、地理グリッド テセレーション スキームが境界ボックスを使用しないためです。  
+     インデックスを作成するとき、`geometry`型の列を指定する必要がある、 **(*`X-min`*、*`Y-min`*)** と **(*`X-max`*、*`Y-max`*)** 境界ボックスの座標。 インデックスの場合、`geography`型の列で、境界ボックスのフィールド読み取り専用に指定した後、**地理グリッド**テセレーション スキーム、地理グリッド テセレーション スキームは境界ボックスを使用しないためです。  
   
      また、 **[オブジェクトごとのセル数]** フィールドに既定以外の値を指定したり、テセレーション スキームの任意のレベルのグリッド密度を指定したりすることもできます。 オブジェクトごとのセル数の既定値は、 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] では 16、 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降では 8 で、 **のグリッド密度の既定値は** [中] [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]です。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36174450"
   
      テーブル デザイナーにテーブルが表示されます。  
   
-2.  選択、`geometry`または`geography`インデックスの列です。  
+2.  選択、`geometry`または`geography`インデックスの列。  
   
 3.  **[テーブル デザイナー]** メニューの **[空間インデックス]** をクリックします。  
   

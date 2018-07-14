@@ -1,5 +1,5 @@
 ---
-title: Analysis Services OLE DB Provider (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: Analysis Services OLE DB Provider (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - Analysis Services OLE DB Provider
 ms.assetid: cdeecd50-1d91-4162-a4a2-01c7799b02a8
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32c717ef25e95192bceaa7084f3c8de63600f834
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 037d81293836bb771fd28033e86d340fcc067e29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200352"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Analysis Services OLE DB Provider (Analysis Services - 多次元データ)
-  Analysis Services OLE DB プロバイダーがアプリケーションと対話するためのインターフェイス[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 これを使用して、多次元データを扱うクライアント アプリケーションを構築します。 このプロバイダーは、多次元データとリレーショナル データのオンラインやオフラインでのデータ マイニング分析用のメソッドを提供しており、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に含まれています。 サードパーティのクライアント アプリケーションにより、再配布できます。  
+  Analysis Services OLE DB プロバイダーはインターフェイスと対話するアプリケーションを[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 これを使用して、多次元データを扱うクライアント アプリケーションを構築します。 このプロバイダーは、多次元データとリレーショナル データのオンラインやオフラインでのデータ マイニング分析用のメソッドを提供しており、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に含まれています。 サードパーティのクライアント アプリケーションにより、再配布できます。  
   
  キューブやデータ マイニング モデルへの接続、キューブやデータ マイニング モデルへのクエリ、スキーマ情報の取得などのタスクを実行するために [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] と相互作用する場合、基本的には Analysis Services OLE DB Provider が使用されます。  
   

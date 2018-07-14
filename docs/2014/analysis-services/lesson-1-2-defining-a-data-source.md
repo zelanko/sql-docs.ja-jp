@@ -1,5 +1,5 @@
 ---
-title: データ ソースの定義 |Microsoft ドキュメント
+title: データ ソースの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a564a314e92b683418b2bb3d12291fddeded016c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f764d7e7640fc7549d97402a83f997b63f9105cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179079"
 ---
 # <a name="defining-a-data-source"></a>データ ソースの定義
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを作成した後は、通常、そのプロジェクトで使用するデータ ソースを 1 つ以上定義します。 データ ソースを定義するときは、データ ソースへの接続に使用する接続文字列情報を定義します。 詳細については、「[データ ソースの作成 (SSAS 多次元)](multidimensional-models/create-a-data-source-ssas-multidimensional.md)」を参照してください。  
@@ -38,9 +38,9 @@ ms.locfileid: "36174038"
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、 **[プロバイダー]** ボックスの一覧に表示されるその他のプロバイダーもサポートしています。  
   
-5.  **サーバー名**テキスト ボックスで、「`localhost`です。  
+5.  **サーバー名**テキスト ボックスに「`localhost`します。  
   
-     ローカル コンピューターの名前付きインスタンスに接続するには、入力**localhost\\< インスタンス名\>** です。 ローカル コンピューターではなく指定のコンピューターに接続するには、コンピューター名または IP アドレスを入力します。  
+     ローカル コンピューターの名前付きインスタンスに接続するには、入力**localhost\\< インスタンス名\>** します。 ローカル コンピューターではなく指定のコンピューターに接続するには、コンピューター名または IP アドレスを入力します。  
   
 6.  **[Windows 認証を使用]** が選択されていることを確認します。 **[データベースの選択または入力]** ボックスの一覧で、 **[AdventureWorksDW2012]** を選択します。  
   
@@ -59,6 +59,6 @@ ms.locfileid: "36174038"
  [データ ソース ビューの定義](lesson-1-3-defining-a-data-source-view.md)  
   
 ## <a name="see-also"></a>参照  
- [データ ソースを作成&#40;SSAS 多次元&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [データ ソースを作成する&#40;SSAS 多次元&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

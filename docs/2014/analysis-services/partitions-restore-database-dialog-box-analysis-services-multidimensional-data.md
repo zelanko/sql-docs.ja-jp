@@ -1,5 +1,5 @@
 ---
-title: パーティション (復元データベース ダイアログ ボックス) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: パーティション (復元データベース ダイアログ ボックス) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.partitions.f1
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24e07fc2d8374af6f4bf0b6de5f73bc0df4a3bfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca646ca62f0e91f026c2917325ca6c8c75b63d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269988"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>[パーティション] ([データベースの復元] ダイアログ ボックス) (Analysis Services - 多次元データ)
   **の** [データベースの復元] **ダイアログ ボックスの** [パーティション] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ページを使用すると、ローカル パーティションを復元する場所の指定、リモート パーティションを復元するかどうかの指定、リモート パーティションを復元する際に使用するリモート バックアップ ファイルの指定ができます。  
@@ -32,7 +32,7 @@ ms.locfileid: "36165696"
 > [!NOTE]  
 >  既存のデータベースを復元すると、データベースを復元したユーザーは、復元されたデータベースにアクセスできなくなる可能性があります。 バックアップの実行時に、ユーザーがサーバー ロールのメンバー、またはフル コントロール (管理者) 権限を持つデータベース ロールのメンバーではなかった場合、このようにアクセスできなくなることがあります。  
   
- **データベースの復元 ダイアログの パーティション ページを表示するには**  
+ **データベースの復元 ダイアログ ボックスで パーティション ページを表示するには**  
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の **オブジェクト エクスプローラー** で、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの **[データベース]** フォルダー、またはデータベースを右クリックし、 **[データベースの復元]** をクリックします。次に、 **[ページの選択]** で **[パーティション]** をクリックします。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36165696"
 |**パーティション**|ローカル パーティションの名前が表示されます。|  
 |**[サイズ (MB)]**|ローカル パーティションのサイズ (MB) が表示されます。|  
 |**元のフォルダー**|ローカル パーティションが収められていた元のフォルダーの名前が表示されます。|  
-|**[復元フォルダー]**|ローカル パーティションの復元フォルダーの名前を入力するか、参照ボタン (**[...]**) をクリックして **[リモート フォルダーの参照]** ダイアログ ボックスを表示し、使用するフォルダーのパスを選択します。 **[リモート フォルダーの参照]** ダイアログ ボックスの詳細については、「[[リモート フォルダーの参照] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
+|**復元フォルダー**|ローカル パーティションの復元フォルダーの名前を入力するか、参照ボタン (**[...]**) をクリックして **[リモート フォルダーの参照]** ダイアログ ボックスを表示し、使用するフォルダーのパスを選択します。 **[リモート フォルダーの参照]** ダイアログ ボックスの詳細については、「[[リモート フォルダーの参照] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
   
  **リモート パーティションを復元します。**  
  選択すると、リモート バックアップ ファイルに保存されているリモート パーティションを復元します。  

@@ -1,5 +1,5 @@
 ---
-title: IsReadOnly プロパティ (SqlServiceAdvancedProperty クラス) |Microsoft ドキュメント
+title: IsReadOnly プロパティ (SqlServiceAdvancedProperty クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IsReadOnly property
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7b8d153072f4e934bbbe95b37375d53acd6f559
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6f149dcd62d9e2e91df6b129d64022bcbc305ba8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242392"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>IsReadOnly プロパティ (SqlServiceAdvancedProperty クラス)
   詳細プロパティが読み取り専用かどうかを指定するブール型のプロパティを取得または設定します。  
@@ -51,6 +51,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

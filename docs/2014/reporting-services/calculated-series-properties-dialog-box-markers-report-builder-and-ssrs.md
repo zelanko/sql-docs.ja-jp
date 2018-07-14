@@ -1,5 +1,5 @@
 ---
-title: 計算系列のプロパティ ダイアログ ボックス (レポート ビルダーおよび SSRS) のマーカー |Microsoft ドキュメント
+title: 計算系列のプロパティ ダイアログ ボックスのマーカー (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10153"
 - sql12.rtp.rptdesigner.calculatedseriesproperties.markers.f1
 ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ec388f2c247b4eceb533aa80f7fd8b2b0fc01f10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12cdf89aff76bb651efd1c40b17364c3321cd224
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270798"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>[マーカー] ([計算系列のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[計算系列のプロパティ]** ダイアログ ボックスの **[マーカー]** を選択すると、系列の各データ ポイントでマーカーを表示する方法を定義できます。 マーカーは、特定の種類のグラフのみで使用できます。 マーカーがサポートされているのは、面グラフ、横棒グラフ、縦棒グラフ、折れ線グラフ、極座標グラフ、および散布図です。 グラフ機能の詳細については、「[グラフの種類 (レポート ビルダーおよび SSRS)](report-design/chart-types-report-builder-and-ssrs.md)」を参照してください。  
@@ -31,7 +31,7 @@ ms.locfileid: "36165753"
  **マーカーの種類**  
  グラフでマーカーが有効な場合に、マーカーの種類を選択します。 既定では **[円]** に設定されています。  
   
- **[マーカー サイズ]**  
+ **マーカーのサイズ**  
  データ ポイントに表示するマーカーのサイズを選択します。  
   
  **マーカーの色**  
@@ -40,7 +40,7 @@ ms.locfileid: "36165753"
  **マーカーの罫線の幅**  
  データ ポイントに表示するマーカーの罫線の幅を選択します。  
   
- **マーカーの罫線の色**  
+ **マーカーの境界線の色**  
  データ ポイントに表示するマーカーの罫線の色を選択します。  
   
 ## <a name="see-also"></a>参照  

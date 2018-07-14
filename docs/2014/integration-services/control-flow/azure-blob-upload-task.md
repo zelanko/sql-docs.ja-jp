@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpblobuptask.f1
 - sql11.dts.designer.afpblobuptask.f1
@@ -16,23 +16,23 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: df2e6673be9e257c71784211c53ba86309dc16de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0f0e4123a16eb82000c6506dc7bcb62b353a268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188559"
 ---
 # <a name="azure-blob-upload-task"></a>Azure BLOB のアップロード タスク
-  Azure Blob Upload Task は、SSIS パッケージで Azure blob ストレージにファイルをアップロードできます。   
+  Azure Blob アップロード タスクにより、SSIS パッケージを Azure blob ストレージにファイルをアップロードします。   
 **Azure BLOB のアップロード タスク**を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックし、次の **[Azure Blob Upload Task Editor (Azure BLOB アップロード タスク エディター)]** ダイアログ ボックスを表示します。  
   
  次の表で、このダイアログ ボックスの各フィールドを説明します。  
   
 |||  
 |-|-|  
-|**フィールド**|**description**|  
+|**フィールド**|**[説明]**|  
 |AzureStorageConnection|既存の Azure ストレージ接続マネージャーを指定するか、Azure ストレージ アカウントを参照する新しい接続マネージャーを作成します。この接続マネージャーは、BLOB ファイルがホストされている場所をポイントします。|  
 |BlobContainer|アップロードしたファイルを BLOB として保持する BLOB コンテナーの名前を指定します。|  
 |BlobDirectory|アップロードしたファイルをブロック BLOB として格納する BLOB ディレクトリを指定します。 BLOB ディレクトリは仮想階層構造です。 BLOB が既に存在する場合は置き換えられます。|  

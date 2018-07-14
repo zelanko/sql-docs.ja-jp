@@ -1,5 +1,5 @@
 ---
-title: Reporting Services のインストールとインターネット情報サービス サイド バイ サイド (SSRS ネイティブ モード) |Microsoft ドキュメント
+title: Reporting Services のインストールとインターネット情報サービス サイド バイ サイド (SSRS ネイティブ モード) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2111d9ceda6e38f4abc079b94d678d981b075a91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3db5a0da0050541b0adec9b726184a959ac59001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274658"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール (SSRS ネイティブ モード)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) とインターネット インフォメーション サービス (IIS) は、同じコンピューターにインストールして実行できます。 対処する必要のある相互運用性の問題は、使用している IIS のバージョンによって異なります。  
@@ -47,9 +47,9 @@ ms.locfileid: "36164971"
   
 |例|要求|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|送信されるすべての要求受信http://123.234.345.456/reportsまたは http://\<コンピューター名 >/reports ドメイン ネーム サービスがそのホスト名に IP アドレスを解決できるかどうかです。|  
+|http://123.234.345.456:80/reports|すべての要求に送信される受信http://123.234.345.456/reportsまたは http://\<computername >]、[ドメイン名サービスがそのホスト名を IP アドレスを解決できるかどうかにレポートします。|  
 |http://+:80/reports|URL に "reports" という仮想ディレクトリ名が含まれている限り、任意の IP アドレス (またはそのコンピューターの有効なホスト名) に送信されたすべての要求が受信されます。|  
-|http://123.234.345.456:80|指定するすべての要求を受け取るhttp://123.234.345.456または http://\<computername > ドメイン名サービスがそのホスト名を IP アドレスを解決できる場合です。|  
+|http://123.234.345.456:80|指定するすべての要求を受け取るhttp://123.234.345.456または http://\<computername > ドメイン名サービスがそのホスト名を IP アドレスを解決できる場合。|  
 |http://+:80|**[すべて割り当て]** にマップされたすべてのアプリケーション エンドポイントについて、まだ他のアプリケーションによって受信されていない要求が受信されます。|  
 |http://*:80|**[すべて未割り当て]** にマップされたアプリケーション エンドポイントについて、まだ他のアプリケーションによって受信されていない要求が受信されます。|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36164971"
 |アプリケーション|URL 予約|説明|受信する要求|  
 |-----------------|---------------------|-----------------|---------------------|  
 |レポート サーバー|http://+:80/ReportServer|厳密なワイルドカード、ポート 80、レポート サーバーの仮想ディレクトリ|レポート サーバーの仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 http://\<コンピューター名>/reportserver に対するすべての要求が、レポート サーバー Web サービスによって受信されます。|  
-|レポート マネージャー|http://+:80/Reports|厳密なワイルドカード、ポート 80、Reports という仮想ディレクトリ|reports という仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 レポート マネージャーは http:// に対するすべての要求を受け取る\<コンピューター名 >/reports です。|  
+|レポート マネージャー|http://+:80/Reports|厳密なワイルドカード、ポート 80、Reports という仮想ディレクトリ|reports という仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 レポート マネージャーが http:// にすべての要求を受信\<computername >/reports です。|  
 |IIS|http://*:80/|弱いワイルドカード、ポート 80|まだ他のアプリケーションによって受信されていない残りの要求をすべてポート 80 で受信します。|  
   
 ## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] と SQL Server 2005 の Reporting Services のサイド バイ サイド配置 (IIS 6.0、7.0、8.0、8.5)  
@@ -69,7 +69,7 @@ ms.locfileid: "36164971"
   
 -   ポート 80、仮想ディレクトリ名 "Reports" に割り当てられた IIS Web サイトが存在。  
   
--   A[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]レポート サーバー インスタンスの URL 予約では、ポート 80 もを指定、レポート マネージャー アプリケーションは、仮想ディレクトリ名"Reports"を使用するも既定の構成でインストールします。  
+-   A[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]レポート サーバー インスタンスの URL 予約では、ポート 80 も指定します、レポート マネージャー アプリケーションは、仮想ディレクトリ名の"Reports"を使用することも、既定の構成でインストールします。  
   
  この構成では、http:// に送信される要求\<computername >: 80/reports は、レポート マネージャーによって受信されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバー インスタンスのインストール後、IIS の Reports 仮想ディレクトリ経由でアクセスされるアプリケーションは、要求を受け取ることができなくなります。  
   

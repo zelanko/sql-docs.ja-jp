@@ -1,5 +1,5 @@
 ---
-title: クロス検証 タブ (マイニング精度チャート ビュー) |Microsoft ドキュメント
+title: クロス検証 タブ (マイニング精度チャート ビュー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b39187ddfc3e4ce0fa8ef0fc7e0402ef54b129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a30cf9ce920f7e0416e46dd87044ef7e3d52318c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169823"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>[相互検証] タブ ([マイニング精度チャート] ビュー)
-  相互検証では、マイニング構造をセクションにパーティション分割し、それぞれのセクションに対してモデルのトレーニングとテストを反復的に実行できます。 データの分割先のフォールドをいくつか指定します。それぞれのフォールドは、順にテスト データとして使用されます。一方、残りのデータは、新しいモデルのトレーニングに使用されます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 各モデルに対して標準的な精度基準のセットが生成されます。 それぞれのセクションに対して生成されるモデルの基準を比較することで、データセット全体に対するマイニング モデルの信頼性を確認できます。  
+  相互検証では、マイニング構造をセクションにパーティション分割し、それぞれのセクションに対してモデルのトレーニングとテストを反復的に実行できます。 データの分割先のフォールドをいくつか指定します。それぞれのフォールドは、順にテスト データとして使用されます。一方、残りのデータは、新しいモデルのトレーニングに使用されます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 各モデルに対して標準的な精度の基準のセットが生成されます。 それぞれのセクションに対して生成されるモデルの基準を比較することで、データセット全体に対するマイニング モデルの信頼性を確認できます。  
   
  詳細については、「[相互検証 (Analysis Services - データ マイニング)](data-mining/cross-validation-analysis-services-data-mining.md)」を参照してください。  
   
@@ -100,12 +100,12 @@ ms.locfileid: "36174382"
   
  たとえば、特定の対象の状態に対して 3 つの予測を作成し、それぞれの予測の確率が 0.05、0.15、および 0.8 であるとします。 ここで、しきい値を 0.5 に設定した場合、1 つの予測だけが正しい予測であると見なされます。 また、**[対象の****しきい値]** を 0.10 に設定した場合は、2 つの予測が正しい予測であると見なされます。  
   
- ときに**ターゲット****しきい値**に設定されている`null`既定値は、各ケースに対して最も可能性の高い予測が正しいと見なされます。 前の例では、0.05、0.15、および 0.8 が、3 つの異なるケースの予測の確率です。 これらの値は大きく異なりますが、それぞれの予測はすべて正しいものと見なされます。なぜなら、それぞれのケースで生成された予測はそれぞれ 1 つであり、これらの予測はそのケースで最善の予測であるからです。  
+ ときに**ターゲット****しきい値**に設定されている`null`既定値は、各ケースの最も可能性の高い予測が正しいと見なされます。 前の例では、0.05、0.15、および 0.8 が、3 つの異なるケースの予測の確率です。 これらの値は大きく異なりますが、それぞれの予測はすべて正しいものと見なされます。なぜなら、それぞれのケースで生成された予測はそれぞれ 1 つであり、これらの予測はそのケースで最善の予測であるからです。  
   
 ## <a name="see-also"></a>参照  
  [テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)   
  [クロス検証&#40;Analysis Services - データ マイニング&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
- [クロス検証レポート内のメジャー](data-mining/measures-in-the-cross-validation-report.md)   
+ [クロス検証レポートのメジャー](data-mining/measures-in-the-cross-validation-report.md)   
  [データ マイニングのストアド プロシージャ&#40;Analysis Services - データ マイニング&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

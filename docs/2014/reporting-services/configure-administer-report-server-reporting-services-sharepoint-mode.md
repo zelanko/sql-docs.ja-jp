@@ -1,5 +1,5 @@
 ---
-title: レポート サーバー (Reporting Services SharePoint モード) の構成と管理 |Microsoft ドキュメント
+title: レポート サーバー (Reporting Services SharePoint モード) の構成と管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bd580d08512b72d6643e97b1dda6f7a58d092714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7546ee205dc20dccbac6a83e8f1fea8420ee511d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329353"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>レポート サーバーの構成と管理 (Reporting Services SharePoint モード)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サーバー ベースのレポート プラットフォームを作成、展開、および、組織、およびそのプログラミング機能を拡張し、レポートをカスタマイズすることを有効にするためのレポートを管理するためにすぐに使用できるツールやサービスの全範囲を提供します。機能します。 レポート環境を SharePoint 製品と統合すると、SharePoint サイトによって提供されるコラボレーション環境を使用するメリットを実感できます。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サーバー ベースのレポート プラットフォームで、すぐに使用できるツールとサービスを作成、展開、および、組織、および拡張して、レポートをカスタマイズするためのプログラミング機能のレポートを管理するための完全な範囲を提供します。機能。 レポート環境を SharePoint 製品と統合すると、SharePoint サイトによって提供されるコラボレーション環境を使用するメリットを実感できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  次のセクションでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境と SharePoint 製品またはテクノロジとの統合に関する概念、配置シナリオ、手順などについて説明します。  

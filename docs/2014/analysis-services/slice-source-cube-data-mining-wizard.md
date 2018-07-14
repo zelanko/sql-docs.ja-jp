@@ -1,5 +1,5 @@
 ---
-title: ソース キューブ (データ マイニング ウィザード) をスライス |Microsoft ドキュメント
+title: スライスのソース キューブ (データ マイニング ウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0e3badd385e654db3b869a197130fde26fbffcc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6024c1e58b48c8661eaa15a0ea85c464103403ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326552"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Slice Source Cube (Data Mining Wizard)
   **[ソース キューブのスライス]** ダイアログ ボックスを使用すると、モデルのトレーニング用に使用するデータを制限できます。 通常、キューブには、すべての店舗、すべての地域、すべての製品など、多くの異なるディメンションと属性に関連するデータが含まれています。 属性の無限の組み合わせに対してモデルのトレーニングを実行することは実用的ではないため、このダイアログ ボックスを使用して、モデルのトレーニングで利用する特定のセットを選択します。  
@@ -30,16 +30,16 @@ ms.locfileid: "36165100"
   
  スライスおよびキューブについて詳しく理解していない場合は、次の記事を確認することをお勧めします。  
   
--   [パーティション スライス プロパティの設定&#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
+-   [パーティションの Slice プロパティを設定&#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
   
--   [作成し、ローカル パーティションを管理&#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+-   [作成およびローカル パーティションの管理&#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
 >  動的 MDX 関数 ([Generate (MDX)](/sql/mdx/generate-mdx) または [Except (MDX)](/sql/mdx/except-mdx-function) など) はパーティションの Slice プロパティでサポートされていないことに注意してください。 明示的な組またはメンバー参照を使用して、スライスを定義する必要があります。  
 >   
->  使用するのではなく、たとえば、 [:&#40;範囲&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx)範囲を定義する必要があります、特定の年で各メンバーを列挙します。  
+>  使用するのではなく、たとえば、 [:&#40;範囲&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx)範囲を定義するには、特定の年で各メンバーを列挙する必要があるとします。  
 >   
->  複雑なスライスを定義する必要がある場合は、XMLA Alter スクリプトを使用して、スライスで組を定義することをお勧めします。 Ascmd コマンド ライン ツールまたは SSIS のいずれかのどちらを使用することができますし、 [Analysis Services DDL 実行のタスク](../integration-services/control-flow/analysis-services-execute-ddl-task.md)スクリプトを実行し、パーティションを処理する前の直前に指定したメンバーのセットを作成します。  
+>  複雑なスライスを定義する必要がある場合は、XMLA Alter スクリプトを使用して、スライスで組を定義することをお勧めします。 Ascmd コマンド ライン ツールまたは SSIS を使用する、 [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md)スクリプトを実行し、パーティションを処理する前にすぐに、指定したメンバーのセットを作成します。  
   
  **詳細情報:** [データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
@@ -66,6 +66,6 @@ ms.locfileid: "36165100"
 ## <a name="see-also"></a>参照  
  [ウィザードの完了&#40;データ マイニング ウィザード&#41;](completing-the-wizard-data-mining-wizard.md)   
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [マイニング モデル列の使用法を指定して&#40;データ マイニング ウィザード&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
+ [マイニング モデル列の使用法の指定&#40;データ マイニング ウィザード&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

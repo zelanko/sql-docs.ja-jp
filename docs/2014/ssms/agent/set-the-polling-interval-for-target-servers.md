@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interval for polling [SQL Server]
 - target servers [SQL Server], polling interval
 - polling interval [SQL Server]
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db2913badf1b5ecf8bda10a810f7d2f604354cf9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c6ec96e9b728d5b00b15b5258895e1f17b119e18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165785"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>対象サーバーのポーリング間隔の設定
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってマスター サーバーから対象サーバーに対して情報が更新される頻度を設定する方法について説明します。 ジョブとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行される特定の一連の処理のことです。 マルチサーバー ジョブとは、1 つ以上の対象サーバーでマスター サーバーにより実行されるジョブです。  
   
 -   **作業を開始する準備:**  [セキュリティ](#Security)  
   
--   **使用して、ターゲット サーバーのポーリング間隔を設定する:**[SQL Server Management Studio](#SSMS)、 [TRANSACT-SQL  ](#TSQL)  
+-   **使用して、対象サーバーのポーリング間隔を設定する:**[SQL Server Management Studio](#SSMS)、 [TRANSACT-SQL  ](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
  各対象サーバーは、同じジョブのインスタンスを同時に実行できます。 各対象サーバーからマスター サーバーに定期的にポーリングし、その対象サーバーに割り当てられた新しいジョブのコピーをダウンロードした後、切断します。 ダウンロードされたジョブは対象サーバーでローカルに実行され、マスター サーバーに再接続してジョブ結果状態をアップロードします。  
@@ -67,7 +67,7 @@ ms.locfileid: "36174394"
   
 2.  ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  使用してクエリ ウィンドウで、 [sp_post_msx_operation &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)システム ストアド プロシージャを対象サーバーのポーリング間隔を設定します。  
+3.  クエリ ウィンドウで実行して、 [sp_post_msx_operation &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)システム ストアド プロシージャを対象サーバーのポーリング間隔を設定します。  
   
 ## <a name="see-also"></a>参照  
  [dbo.sysdownloadlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  

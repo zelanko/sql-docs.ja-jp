@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transact sql scripts
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ff18203f0120210f3443973ed7e44761b84ac8ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4aa1fd4418e4758ca41cce9d3aeba70838a0dce0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260408"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>sqlcmd を使用した Transact-SQL スクリプト ファイルの実行
-  `sqlcmd` を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルを実行できます。 A[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト ファイルの組み合わせを含めることができるテキスト ファイル、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、`sqlcmd`コマンド、およびスクリプト変数です。  
+  `sqlcmd` を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルを実行できます。 A[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト ファイルは、テキスト ファイルの組み合わせを含むことのできる[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、`sqlcmd`コマンド、およびスクリプト変数です。  
   
  メモ帳を使用して簡単な [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルを作成するには  
   
 1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[アクセサリ]** の順にポイントして、 **[メモ帳]** をクリックします。  
   
-2.  コピーし、貼り付け[!INCLUDE[tsql](../../includes/tsql-md.md)]コードをメモ帳に。  
+2.  コピーし、貼り付け[!INCLUDE[tsql](../../includes/tsql-md.md)]をメモ帳にコード。  
   
     ```  
     USE AdventureWorks2012;  

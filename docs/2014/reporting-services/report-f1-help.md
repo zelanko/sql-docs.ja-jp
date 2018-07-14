@@ -1,5 +1,5 @@
 ---
-title: F1 ヘルプをレポートする |Microsoft ドキュメント
+title: レポートの F1 ヘルプ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 775706be-41a7-4ae7-bad6-349f5ebd9e4d
 caps.latest.revision: 5
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 18a145599349aa25fdf4914e4c61a02defc8e5af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6feda48cdac4f7a6c43f94abb0fd74d688e7a963
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270848"
 ---
 # <a name="report-f1-help"></a>レポートの F1 ヘルプ
   このセクションの各トピックでは、 **[レポートのプロパティ]** ダイアログ ボックスでレポートに対して設定できるオプションについて説明します。 **[レポートのプロパティ]** ダイアログ ボックスを表示するには、レポート デザイナーの背景を右クリックし、 **[レポートのプロパティ]** をクリックします。  

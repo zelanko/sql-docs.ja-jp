@@ -1,5 +1,5 @@
 ---
-title: Cancel 要素 (XMLA) |Microsoft ドキュメント
+title: Cancel 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Cancel command
 ms.assetid: de4062c1-7434-44dc-9f01-29fcf78963bd
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd0fdd50a1dcddb51d167ab76cd5408b631bb3ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fb71b55e514a2e058d50cd1c923a3e0b794ac8f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173273"
 ---
 # <a name="cancel-element-xmla"></a>Cancel 要素 (XMLA)
   現在実行中のコマンドを取り消します、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
@@ -73,7 +73,7 @@ ms.locfileid: "36174255"
   
  通常、`Cancel` コマンドは、現在アクティブなセッション上の実行中のコマンドを取り消すために使用されます。 その場合、`Cancel` コマンドの子要素を指定しないでください。 さらに、管理者は、現在アクティブなセッション以外の接続やセッションで実行中のコマンドを取り消すために `Cancel` コマンドを使用することもできます。 特定のデータベースの管理者権限を持つロールのメンバーは、そのデータベースに該当する接続やセッションでのコマンドをキャンセルできます。サーバー管理者は、特定の Analysis Services インスタンスに関連した接続やセッションでのコマンドをキャンセルできます。  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスの現在の接続やセッションに関する情報を取得するには、`Discover` メソッドを実行して、それぞれ DISCOVER_CONNECTIONS および DISCOVER_SESSIONS スキーマ行セットを要求することができます。 特定のデータベースの管理者権限を持つロールのメンバーは、DISCOVER_SESSIONS スキーマ行セットの SESSION_CURRENT_DATABASE 制限列の中でそのデータベースを指定することにより、特定のデータベースに関連したセッションだけを返すことができます。 詳細については、`Discover`メソッドを参照してください[検出メソッド&#40;XMLA&#41;](../xml-elements-methods-discover.md)です。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスの現在の接続やセッションに関する情報を取得するには、`Discover` メソッドを実行して、それぞれ DISCOVER_CONNECTIONS および DISCOVER_SESSIONS スキーマ行セットを要求することができます。 特定のデータベースの管理者権限を持つロールのメンバーは、DISCOVER_SESSIONS スキーマ行セットの SESSION_CURRENT_DATABASE 制限列の中でそのデータベースを指定することにより、特定のデータベースに関連したセッションだけを返すことができます。 詳細については、`Discover`メソッドを参照してください[Discover メソッド&#40;XMLA&#41;](../xml-elements-methods-discover.md)します。  
   
 ## <a name="see-also"></a>参照  
  [要素をバッチ&#40;XMLA&#41;](batch-element-xmla.md)   

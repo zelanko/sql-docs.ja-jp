@@ -1,5 +1,5 @@
 ---
-title: Materialization 要素 (ASSL) |Microsoft ドキュメント
+title: Materialization 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Materialization element
 ms.assetid: a87a95ae-d89c-4005-b22c-47c8991673b7
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08e3607d1cb04f3a4483d43ead544edbbcf42a16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf6b3121159a1a98cfac56c91af1920c5b96935b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176409"
 ---
 # <a name="materialization-element-assl"></a>Materialization 要素 (ASSL)
   メジャー グループと参照ディメンションの間のリレーションシップの種類を示します。  
@@ -64,13 +64,13 @@ ms.locfileid: "36174022"
   
 |値|説明|  
 |-----------|-----------------|  
-|*通常*|参照ディメンションには、通常のディメンションと同様に、通常のリレーションシップがあります。|  
+|*正規表現*|参照ディメンションには、通常のディメンションと同様に、通常のリレーションシップがあります。|  
 |*間接*|参照ディメンションには、多対多ディメンションと同様に、間接リレーションシップがあります。|  
   
  親に対応する要素`Materialization`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>します。  
   
 ## <a name="see-also"></a>参照  
- [要素の寸法&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [ディメンション要素&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  
   
   

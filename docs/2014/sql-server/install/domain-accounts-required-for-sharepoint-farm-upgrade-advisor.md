@@ -1,5 +1,5 @@
 ---
-title: SharePoint ファーム (アップグレード アドバイザー) に必要なドメイン アカウント |Microsoft ドキュメント
+title: SharePoint ファーム (アップグレード アドバイザー) に必要なドメイン アカウント |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd013ae4f7266604dde798aa76393612cd578bad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122f0209e7254d558ac5cc3db806d8bb648a849c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251214"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>SharePoint ファームに必要なドメイン アカウント (アップグレード アドバイザー)
   ファーム環境向けに構成されている SharePoint 製品では、ドメイン アカウントを使用する必要があります。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードです。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssRS](../../includes/ssrs-md.md)]  
@@ -36,20 +36,20 @@ ms.locfileid: "36164937"
   
  SharePoint 2010 のサーバーの全体管理ページを使用すると、1 か所で、Reporting Services にドメイン ユーザー アカウントを使用していない場合の問題を確認できます。 Reporting Services 統合の構成を試みると、次のようなエラー メッセージが表示されます。  
   
- "レポート サーバーの実行に使用されているビルトイン NT AUTHORITY\NETWORK SERVICE アカウントは、SharePoint ファームのインストールでサポートされていません。 再構成してください、レポート サーバーをドメイン アカウントで実行する。"  
+ "レポート サーバーの実行に使用されているビルトイン NT AUTHORITY\NETWORK SERVICE アカウントは、SharePoint ファームのインストールでサポートされていません。 再構成してください、レポート サーバーをドメイン アカウントで実行します。"  
   
 ## <a name="corrective-action"></a>修正措置  
  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]以前のバージョンでは、Reporting Services 構成マネージャーを使用して、レポート サーバー サービス アカウントとして割り当てられているアカウントを変更するとします。  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>構成マネージャーでサービス アカウントを変更するには  
   
-1.  **開始**メニューの **すべてのプログラム**、クリックして**Microsoft SQL Server 2008 R2**です。  
+1.  **開始**メニューの [**すべてのプログラム**、] をクリックし、 **Microsoft SQL Server 2008 R2**します。  
   
-2.  選択**構成ツール**、クリックして**Reporting Services 構成マネージャー**です。  
+2.  選択**構成ツール**、 をクリックし、 **Reporting Services 構成マネージャー**します。  
   
-3.  Configuration Manager での選択、**サービス アカウント**タブです。  
+3.  Configuration Manager での選択、**サービス アカウント**タブ。  
   
-4.  選択**別のアカウントを使用して**とドメイン アカウントの資格情報を入力します。  
+4.  選択**別のアカウントを使用して、** ドメイン アカウントの資格情報を入力します。  
   
 5.  **[適用]** をクリックします。  
   

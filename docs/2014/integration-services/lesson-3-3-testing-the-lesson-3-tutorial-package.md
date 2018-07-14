@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 03a681cf4ab018d82d991b91c463dfbef3fe8d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 690c7a670ca448c14c984b9fda76098ae7269c4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322712"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>手順 3: レッスン 3 のチュートリアル パッケージのテスト
   この実習では、Lesson 3.dtsx パッケージを実行します。 パッケージを実行すると、[ログ イベント] ウィンドウに、ログ ファイルに書き込まれているログ エントリの一覧が表示されます。 パッケージの実行が完了したら、ログ プロバイダーによって生成されたログ ファイルの内容を確認します。  
@@ -47,7 +47,7 @@ ms.locfileid: "36164838"
   
 -   メモ帳などのテキスト エディターを使用し、TutorialLog.log ファイルを開きます。  
   
--   に対して生成される情報のセマンティクスは、`PipelineExecutionPlan`と`PipelineExecutionTrees`イベントは、このチュートリアルのスコープを超えても、最初の行がで指定した情報フィールドを一覧表示されるを参照してください、**詳細**のタブ**SSIS ログの構成** ダイアログ ボックス。 また、Foreach ループが繰り返されるたびに、選択した 2 つのイベント、PipelineExecutionPlan および PipelineExecutionTrees が記録されていることも確認できます。  
+-   情報のセマンティクスが生成されますが、`PipelineExecutionPlan`と`PipelineExecutionTrees`イベントは、このチュートリアルでは扱いませんが、最初の行で指定した情報フィールドが一覧表示されるを参照してください、**詳細**のタブ**SSIS ログの構成** ダイアログ ボックス。 また、Foreach ループが繰り返されるたびに、選択した 2 つのイベント、PipelineExecutionPlan および PipelineExecutionTrees が記録されていることも確認できます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 4: エラー フロー リダイレクションの追加](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  

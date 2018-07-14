@@ -1,5 +1,5 @@
 ---
-title: Aggregations 要素 (ASSL) |Microsoft ドキュメント
+title: Aggregations 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Aggregations element
 ms.assetid: 79b7de7a-53b2-4202-bc0f-de1daaf1b179
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6a81b8107738121797d06c185b6043ca81a90c50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c94129a76064bbbc98f300a855e77826ec57794
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189199"
 ---
 # <a name="aggregations-element-assl"></a>Aggregations 要素 (ASSL)
-  に対して定義された集計のコレクションを格納、 [AggregationDesign](../objects/aggregationdesign-element-assl.md)要素。  
+  に対して定義された集計のコレクションを格納する[AggregationDesign](../objects/aggregationdesign-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

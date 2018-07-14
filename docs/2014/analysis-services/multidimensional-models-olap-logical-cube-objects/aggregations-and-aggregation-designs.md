@@ -1,5 +1,5 @@
 ---
-title: 集計と集計デザイン |Microsoft ドキュメント
+title: 集計と集計デザイン |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - aggregations [Analysis Services]
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 283825b20aaad5764744197aca46d3358feb20b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b196f950e04a2b636c9b758dda6f5f6947a9912d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228202"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>集計と集計デザイン
   <xref:Microsoft.AnalysisServices.AggregationDesign> オブジェクトは、複数のパーティションで共有できる集計定義のセットを定義します。  
@@ -46,11 +46,11 @@ ms.locfileid: "36165116"
  キューブに含まれるすべての集計を事前計算しておくと、すべてのクエリの応答時間が最も高速になりますが、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では特定の集計値を他の事前計算された集計から簡単に計算することができます。 これに加えて、可能な集計をすべて計算するには、大量の処理時間とストレージが必要になります。 そのため、必要なストレージと事前計算される集計の割合の間にトレードオフが発生します。 集計を事前計算しない (0%) 場合、キューブに必要な処理時間とストレージ領域は最小限に抑えられます。ただし、各クエリへの応答に必要なデータをリーフ セルから取得してから、各クエリに応答するためにクエリ時に集計しなければならないので、クエリ応答時間は遅くなる可能性があります。 たとえば、前述の質問 ("北西地域における 1998 年の製品 X の売上は?") の場合、回答となる 1 つの数値を返すために、場合によっては何千行ものデータ行を読み取り、それぞれの行から Sales メジャーを求めるための列の値を抽出し、合計を算出しなければなりません。 これだけでなく、そのデータに使用されているストレージ モード (MOLAP、HOLAP、または ROLAP) によっても、データの取得に必要な時間が異なります。  
   
 ## <a name="designing-aggregations"></a>集計のデザイン  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 集計を事前計算された値からすばやく計算できるように、事前計算の集計を選択する高度なアルゴリズムが組み込まれています。 たとえば、時間階層の Month レベルの集計が事前計算されている場合、Quarter レベルの算出に必要なのは 3 つの数値を集計することだけで、これは要求時に即座に計算できます。 この方法では、クエリ応答時間への影響を最小限に抑えながら、処理時間を節約し、必要なストレージを削減できます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ならなかったの集計を選択して、その他の集計を事前計算された値からすばやく計算できるようにする高度なアルゴリズムが組み込まれています。 たとえば、時間階層の Month レベルの集計が事前計算されている場合、Quarter レベルの算出に必要なのは 3 つの数値を集計することだけで、これは要求時に即座に計算できます。 この方法では、クエリ応答時間への影響を最小限に抑えながら、処理時間を節約し、必要なストレージを削減できます。  
   
  集計のデザイン ウィザードには、このアルゴリズムに対するストレージと集計の割合の制約を指定するためのオプションが用意されています。これらのオプションを使用して、クエリ応答時間と必要なストレージの間のトレードオフを最適化することができます。 ただし、集計のデザイン ウィザードのアルゴリズムでは、すべてのクエリが等しく発生することが前提となっています。 また、使用法に基づく最適化ウィザードでは、クライアント アプリケーションによって送信されたクエリを分析して、メジャー グループの集計デザインを調整できます。 このウィザードを使用することで、キューブに必要なストレージにはほとんど影響を与えずに、使用頻度の低いクエリよりも使用頻度の高いクエリへの応答の方が高速になるように、キューブの集計をチューニングできます。  
   
- このウィザードを使用することで集計はデザインされますが、集計デザインの対象であるパーティションが処理されるまで、実際の計算は行われません。 キューブの構造が変更された場合、集計が作成された後、またはデータの追加またはキューブのソース テーブルで変更された場合は、通常、キューブの集計を確認し、キューブを再処理する必要があります。  
+ このウィザードを使用することで集計はデザインされますが、集計デザインの対象であるパーティションが処理されるまで、実際の計算は行われません。 キューブの構造がこれまでに変更された場合、集計が作成された後、またはデータを追加またはキューブのソース テーブルで変更された場合は、通常、キューブの集計を確認し、キューブを再処理する必要です。  
   
 ## <a name="see-also"></a>参照  
  [パーティションのストレージ モードおよび処理](partitions-partition-storage-modes-and-processing.md)  

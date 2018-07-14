@@ -1,5 +1,5 @@
 ---
-title: ファイルまたはアセンブリを読み込めませんでした&#39;'microsoft.data.services, バージョン = 3.5.0.0、カルチャ = neutral, PublicKeyToken = b77a5c561934e089&#39;またはその依存関係の 1 つです。 指定されたファイルが見つかりません。 | Microsoft Docs
+title: ファイルまたはアセンブリを読み込めませんでした&#39;, バージョン 3.5.0.0、カルチャを = = neutral, PublicKeyToken = b77a5c561934e089&#39;またはその依存関係の 1 つ。 指定されたファイルが見つかりません。 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0330867bb1ffc9d7715d285b6c2c4c5143fb40c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63c549d310d283743d17632b814b4a621eee0286
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226392"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>ファイルまたはアセンブリを読み込めませんでした&#39;'microsoft.data.services, バージョン = 3.5.0.0、カルチャ = neutral, PublicKeyToken = b77a5c561934e089&#39;またはその依存関係の 1 つです。 指定されたファイルが見つかりません。
+# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>ファイルまたはアセンブリを読み込めませんでした&#39;, バージョン 3.5.0.0、カルチャを = = neutral, PublicKeyToken = b77a5c561934e089&#39;またはその依存関係の 1 つ。 指定されたファイルが見つかりません。
   PowerPivot for SharePoint がある SharePoint 2010 環境では、データ フィードのエクスポートを実行しようとした場合に必要なバージョンの Microsoft ADO.NET Data Services がないと、このエラーが発生します。  
   
 ## <a name="details"></a>詳細  
@@ -40,7 +40,7 @@ ms.locfileid: "36165714"
   
 ## <a name="user-action"></a>ユーザーの操作  
   
-1.  SharePoint 2010 のハードウェアとソフトウェア要件のドキュメントに移動して[決定 Hardware and Software Requirements (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734)です。  
+1.  SharePoint 2010 のハードウェアとソフトウェアの要件に関するドキュメントに移動して[決定 Hardware and Software Requirements (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734)します。  
   
 2.  「 **前提条件となっているソフトウェアをインストールする**」で、使用しているオペレーティング システムに対応する ADO.NET Data Services 3.5 のリンクを見つけます。  
   

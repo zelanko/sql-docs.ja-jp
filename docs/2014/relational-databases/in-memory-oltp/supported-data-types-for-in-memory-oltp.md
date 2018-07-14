@@ -1,5 +1,5 @@
 ---
-title: サポートされているデータの種類 |Microsoft ドキュメント
+title: サポートされているデータの種類 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 93c6555c1a8400306d40b2d3a719f280104ef582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3f967b7cf4c20492f7e7d46ad9b8f9a2556042e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195313"
 ---
 # <a name="supported-data-types"></a>サポートされるデータ型
   次のデータ型は**サポート**でメモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャ。  
@@ -49,9 +49,9 @@ ms.locfileid: "36174484"
 |nvarchar (n) <sup>1</sup>|[nchar および nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar および nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
- <sup>1</sup>制限では、合計、行ごとに 8,060 バイトの可変長型で (n) をカウントします。  
+ <sup>1</sup>制限では、1 行の合計、8,060 バイトの可変長型の (n) をカウントします。  
   
- サポートされている照合順序については、次を参照してください。 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)です。  
+ サポートされる照合順序については、次を参照してください。 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)します。  
   
  **日付および時刻のデータ型**  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36174484"
 |binary(n)|[binary と varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
 |varbinary (n) <sup>1</sup>|[binary と varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
   
- <sup>1</sup>制限では、合計、行ごとに 8,060 バイトの可変長型で (n) をカウントします。  
+ <sup>1</sup>制限では、1 行の合計、8,060 バイトの可変長型の (n) をカウントします。  
   
  **他のデータ型**  
   

@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 5: リレーションシップの作成 |Microsoft ドキュメント'
+title: 'レッスン 5: リレーションシップの作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: d9428908b712fcda9a016af0825602c62548a691
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f0c32363cd3af495ef17d689bbf8c704e8ba21d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204506"
 ---
 # <a name="lesson-5-create-relationships"></a>レッスン 5: リレーションシップの作成
   このレッスンでは、データをインポートした際に自動的に作成されたリレーションシップを確認し、異なるテーブル間に新しいリレーションシップを追加します。 リレーションシップとは、2 つのテーブル間を接続し、それらのテーブル内のデータをどのように関連付けるかを決定するものです。 たとえば、Product テーブルと Product Subcategory テーブルの間には、どの製品も特定のサブカテゴリに属しているという事実に基づいたリレーションシップが存在します。 詳細については、[「リレーションシップ (SSAS テーブル)」](tabular-models/relationships-ssas-tabular.md) を参照してください。  
@@ -52,8 +52,8 @@ ms.locfileid: "36165131"
     |Active|テーブル|関連する参照テーブル|  
     |------------|-----------|--------------------------|  
     |はい|**Customer [Geography Id]**|**Geography [Geography Id]**|  
-    |はい|**製品 [Product Subcategory Id]**|**Product Subcategory [Product Subcategory Id]**|  
-    |はい|**Product Subcategory [製品カテゴリ Id]**|**製品カテゴリ [製品カテゴリ Id]**|  
+    |はい|**製品 [製品のサブカテゴリの Id]**|**Product Subcategory [製品のサブカテゴリの Id]**|  
+    |はい|**Product Subcategory [製品カテゴリ Id]**|**製品カテゴリの [製品カテゴリ Id]**|  
     |はい|**Internet Sales [Customer Id]**|**Customer [Customer Id]**|  
     |はい|**Internet Sales [Product Id]**|**製品 [Product Id]**|  
   

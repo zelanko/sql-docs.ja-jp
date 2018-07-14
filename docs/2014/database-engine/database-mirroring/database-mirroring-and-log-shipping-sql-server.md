@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc30bd62cc7a61305e0e0b7953095bda36b34e22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 97b618470bbf5fb95ed4817f17f48890a70a5990
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269588"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>データベース ミラーリングとログ配布 (SQL Server)
   特定のデータベースをミラーリングまたはログ配布することができます。また、ミラーリングとログ配布を同時に行うこともできます。 使用する方法を選択するには、次の点を検討します。  
@@ -69,7 +68,7 @@ ms.locfileid: "36165309"
   
  ![ログ配布とデータベース ミラーリング](../media/logshipping-and-dbm-automatic-failover.gif "ログ配布とデータベース ミラーリング")  
   
- ミラーリング フェールオーバー後も、セカンダリ サーバーで定義されているプライマリ サーバーの名前は変わりません。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+ ミラーリング フェールオーバー後も、セカンダリ サーバーで定義されているプライマリ サーバーの名前は変わりません。 .  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>リモート監視インスタンスでのデータベース ミラーリングの影響  
  ログ配布をリモート監視インスタンスと共に使用しているときは、ログ配布セッションとデータベース ミラーリングを組み合わせることでモニター テーブルの情報に影響が及びます。 プライマリに関する情報は、プリンシパル/プライマリで構成されたモニターと各セカンダリで構成されたモニターの組み合わせです。  

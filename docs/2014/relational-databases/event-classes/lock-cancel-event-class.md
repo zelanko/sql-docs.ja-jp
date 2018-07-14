@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Cancel event class
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93c121cbfef50c7f941f090ae54399bf0ad7760f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9f9c82becfb066b6eb7da70d9e0524e0837be680
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242712"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel イベント クラス
   **Lock:Cancel** イベント クラスは、クエリの取り消しなどにより、リソースのロックの取得が取り消されたことを示します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36165035"
 |**StartTime**|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |**TextData**|`ntext`|取得したロックの種類に依存するテキスト値。 この値は、 **sys.dm_tran_locks** の **resource_description**列と同じです。|1|はい|  
 |**TransactionID**|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
-|**Type**|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|はい|  
+|**型**|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|はい|  
   
 ## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

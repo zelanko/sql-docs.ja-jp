@@ -1,5 +1,5 @@
 ---
-title: メジャーのプロパティを構成する |Microsoft ドキュメント
+title: メジャーのプロパティの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - additivity [Analysis Services]
 - ID property
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - ProactiveCaching property
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 caps.latest.revision: 50
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4072342fcdace380e08b507c118279b837ba26fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b7be3b5e73134e65cefad48b3d03c4c912a4279a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323182"
 ---
 # <a name="configure-measure-properties"></a>メジャーのプロパティの構成
   メジャーには、メジャーの動作を定義し、メジャーがユーザーに表示される方法を制御できるプロパティがあります。  
@@ -66,7 +66,7 @@ ms.locfileid: "36164904"
 |`DataType`|必須。 メジャーのバインド先である、基になるファクト テーブル列のデータ型を指定します。 既定では、この値は基になる列から継承されます。|  
 |`Description`|メジャーの説明を指定します。クライアント アプリケーションに表示される場合があります。|  
 |`DisplayFolder`|ユーザーがキューブに接続するとメジャーが表示されるフォルダーです。 キューブに多くのメジャーがある場合、表示フォルダーを使用すると、メジャーを分類して表示を見やすく改善できます。|  
-|`FormatString`|使用してユーザーにメジャーの値を表示するために使用される形式を選択することができます、`FormatString`メジャーのプロパティです。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に表示形式の一覧が用意されていますが、一覧にはない追加形式を複数指定できます。 Microsoft Visual Basic で有効な名前付き形式またはユーザー定義形式を指定できます。|  
+|`FormatString`|使用してメジャーの値をユーザーに表示するために使用される形式を選択することができます、`FormatString`メジャーのプロパティ。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に表示形式の一覧が用意されていますが、一覧にはない追加形式を複数指定できます。 Microsoft Visual Basic で有効な名前付き形式またはユーザー定義形式を指定できます。|  
 |`ID`|必須。 メジャーの一意識別子 (ID) です。 このプロパティは読み取り専用です。|  
 |`MeasureExpression`|メジャーの値を定義する、制約付きの MDX 式を指定します。 式は、集計前にリーフ レベルで評価され、値の重み付けができるようになります。 たとえば、売上高が為替レートで重み付けされる通貨の換算などです。|  
 |`Name`|必須。 メジャーの名前を指定します。|  

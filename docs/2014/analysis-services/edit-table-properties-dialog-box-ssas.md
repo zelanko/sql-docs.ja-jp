@@ -1,5 +1,5 @@
 ---
-title: テーブルのプロパティ ダイアログ ボックス (SSAS) の編集 |Microsoft ドキュメント
+title: テーブルのプロパティ ダイアログ ボックス (SSAS) の編集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.edittablepropdb.f1
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36cabf1186738420e3dbd35504a81ea0318b966b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd8e464967dbe4b2546f51889f2a2da49d81e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249592"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>[テーブルのプロパティの編集] ダイアログ ボックス (SSAS)
   **[テーブルのプロパティの編集]** ダイアログ ボックスを使用すると、テーブルのインポート ウィザードを使用してモデル デザイナーにインポートされたテーブルのプロパティを表示して変更を加えることができます。 このダイアログ ボックスにアクセスするには、モデル デザイナーでテーブルを選択し、 **[テーブル]** メニュー、 **[テーブルのプロパティ]** の順にクリックします。  
@@ -65,7 +65,7 @@ ms.locfileid: "36164428"
  **列ヘッダーのチェック ボックス**  
  列をデータ インポートの対象にする場合は、チェック ボックスをオンにします。 列をデータ インポートの対象から除外する場合は、チェック ボックスをオフにします。  
   
- **列ヘッダーに下向きの矢印ボタン**  
+ **列ヘッダーの矢印ボタンをクリックします。**  
  列のデータをフィルター処理します。  
   
  **行フィルターのクリア**  
@@ -103,6 +103,6 @@ ms.locfileid: "36164428"
  クリックすると、列の置換も含めて、加えたすべての変更が適用されます。  
   
 ## <a name="see-also"></a>参照  
- [テーブルおよび列&#40;SSAS 表形式&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [テーブルと列&#40;SSAS 表形式&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

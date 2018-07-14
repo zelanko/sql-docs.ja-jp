@@ -1,5 +1,5 @@
 ---
-title: AMO セキュリティ オブジェクトをプログラミング |Microsoft ドキュメント
+title: AMO セキュリティ オブジェクトのプログラミング |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 660afdf9a8c6c51c1dc97b8ee8de22ba6853708d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e110e71630a43d30f29be89cd56197ab8f18fd7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197952"
 ---
 # <a name="programming-amo-security-objects"></a>AMO セキュリティ オブジェクトのプログラミング
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、セキュリティ オブジェクトをプログラミングまたは AMO セキュリティ オブジェクトを使用するアプリケーションを実行しているサーバーの管理者グループまたは Database Administrator グループのメンバーであることが必要です。 サーバー管理者およびデータベース管理者は、アクセス レベルがによって提供される[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、セキュリティ オブジェクトをプログラミングまたは AMO セキュリティ オブジェクトを使用するアプリケーションを実行するサーバーの管理者グループまたはデータベース管理者グループのメンバーである必要があります。 サーバー管理者とデータベース管理者は、アクセス レベルは、によって提供される[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、オブジェクトに割り当てられたロールと権限の組み合わせを使用してオブジェクトへのユーザー アクセスが行われます。 詳細については、次を参照してください。 [AMO セキュリティ クラス](amo-security-classes.md)です。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、オブジェクトに割り当てられたロールと権限の組み合わせを使用してオブジェクトへのユーザー アクセスが行われます。 詳細については、次を参照してください。 [AMO セキュリティ クラス](amo-security-classes.md)します。  
   
 ## <a name="role-and-permission-objects"></a>Role オブジェクトと Permission オブジェクト  
  サーバー ロールのコレクションに含まれる唯一のロールが Administrators ロールです。 新しいロールをサーバー ロールのコレクションに追加することはできません。 Administrators ロールのメンバーは、サーバー内のすべてのオブジェクトに完全にアクセスできます。  
@@ -147,8 +147,8 @@ static public void CreateRolesAndPermissions(Database db, Cube cube)
  <xref:Microsoft.AnalysisServices>   
  [AMO クラスの概要](amo-classes-introduction.md)   
  [AMO セキュリティ オブジェクトのプログラミング](programming-amo-security-objects.md)   
- [権限とアクセス権&#40;Analysis Services - 多次元データ&#41;](https://msdn.microsoft.com/library/ms174786(v=sql.120).aspx)   
- [Analysis Services インスタンスのセキュリティ保護](https://technet.microsoft.com/library/ms175663\(v=sql.110\).aspx)   
+ [アクセス許可とアクセス権&#40;Analysis Services - 多次元データ&#41;](https://msdn.microsoft.com/library/ms174786(v=sql.120).aspx)   
+ [Analysis Services のインスタンスをセキュリティで保護します。](https://technet.microsoft.com/library/ms175663\(v=sql.110\).aspx)   
  [論理アーキテクチャ&#40;Analysis Services - 多次元データ&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [データベース オブジェクト&#40;Analysis Services - 多次元データ&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

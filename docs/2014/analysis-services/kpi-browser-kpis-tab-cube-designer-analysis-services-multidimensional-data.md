@@ -1,5 +1,5 @@
 ---
-title: '[KPI ブラウザー] ([KPIs] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント'
+title: KPI ブラウザー (キューブ デザイナーの [Kpi] タブ) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpibrowserpane.f1
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32373127f72dae058a80712cec564af7dffca45e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 520024140f0406f897e897cd2d41eff065923aa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257378"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI ブラウザー (キューブ デザイナーの [KPI] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[KPI]** タブの **[KPI ブラウザー]** ペインを使用すると、主要業績評価指標 (KPI) の結果を表示およびテストできます。 KPI を表示するには、最初に [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに配置する必要があります。  
@@ -44,13 +44,13 @@ ms.locfileid: "36165501"
   
 |値|説明|  
 |-----------|-----------------|  
-|**等しいかどうか**|結果は **[フィルター式]** で定義された設定に制限されます。|  
+|**等しい**|結果は **[フィルター式]** で定義された設定に制限されます。|  
 |**等しくないです。**|結果は **[フィルター式]** で定義された設定によって除外されたメンバーに制限されます。|  
 |**In**|結果は **[フィルター式]** で選択された名前付きセットに制限されます。|  
-|**含まれない**|結果は **[フィルター式]** で選択された名前付きセットによって除外されたメンバーに制限されます。|  
+|**ではありません。**|結果は **[フィルター式]** で選択された名前付きセットによって除外されたメンバーに制限されます。|  
 |**[値を含む]**|結果は **[フィルター式]** にある文字列をメンバー名に含むメンバーに制限されます。|  
 |**始まる**|結果は **[フィルター式]** にある文字列で始まるメンバー名を持つメンバーに制限されます。|  
-|**範囲 (包括)**|結果は **[フィルター式]** で選択された範囲に制限されます。|  
+|**範囲 (包含)**|結果は **[フィルター式]** で選択された範囲に制限されます。|  
 |**範囲 (排他)**|結果は **[フィルター式]** で選択された範囲によって除外されたメンバーに制限されます。|  
 |**MDX**|結果は **[フィルター式]** で設定された多次元式 (MDX) に制限されます。|  
   
@@ -66,13 +66,13 @@ ms.locfileid: "36165501"
  **構造を表示します。**  
  各 KPI の **[フォルダーの表示]** または **[親 KPI]** の値に従って階層化された、キューブに含まれる KPI を表示します。  
   
- **Value**  
+ **[値]**  
  KPI の値を表示します。  
   
  **目標**  
  KPI の目標値を表示します。  
   
- **Status**  
+ **ステータス**  
  KPI の状態マークを表示します。  
   
  **傾向**  

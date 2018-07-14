@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], marks
 - STOPBEFOREMARK option [RESTORE statement]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ca2529a4dbe6e237b3d8e833659a7c3df1fc941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8fc37a9704dde533ae9d626a9853ccfb147cb06a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188609"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>マークされたトランザクションを含む関連データベースの復旧
   このトピックは、マークされたトランザクションが含まれており、完全復旧モデルまたは一括ログ復旧モデルを使用するデータベースのみに関連しています。  
@@ -58,7 +57,7 @@ ms.locfileid: "36174499"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- マーク名 (トランザクション名)、説明、データベース、ユーザー、トランザクション ログに記録`datetime`情報、およびログ シーケンス番号 (LSN)。 `datetime`情報は、マークを一意に識別するマーク名と共に使用します。  
+ マーク名 (トランザクション名)、説明、データベース、ユーザー、トランザクション ログに記録`datetime`情報、およびログ シーケンス番号 (LSN)。 `datetime`情報は、マーク名と共に、マークを一意に識別するために使用されます。  
   
  複数のデータベースに関係するトランザクションにマークを挿入する方法については、「 [マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法 &#40;完全復旧モデル&#41;](use-marked-transactions-to-recover-related-databases-consistently.md)」を参照してください。  
   
@@ -69,7 +68,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
      STOPATMARK では、マークまでロールフォワードされます。ロールフォワードには、マークされたトランザクションも含まれます。  
   
--   WITH STOPBEFOREMARK を使用して = **'*`<mark_name>`*'** 句を指定する場合は、ログ レコードは、マークは、回復ポイントの直前にします。  
+-   使用して、WITH STOPBEFOREMARK = **'*`<mark_name>`*'** ログを記録することを指定する句は、マークは、回復ポイントの直前。  
   
      STOPBEFOREMARK では、マークまでロールフォワードされますが、マークされたトランザクションは含まれません。  
   

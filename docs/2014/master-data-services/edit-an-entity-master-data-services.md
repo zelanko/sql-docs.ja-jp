@@ -1,5 +1,5 @@
 ---
-title: 名を変更するエンティティ (Master Data Services) |Microsoft ドキュメント
+title: エンティティ名を変更 (マスター データ サービス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c2f0869bd7cff707ac65d83c870b290aa1af4cec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 3986f5508bd5b6fe5ce55b38ff038e4a14a2b73c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260998"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>エンティティ名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、エンティティの名前を変更できます。  
@@ -48,9 +48,9 @@ ms.locfileid: "36165570"
   
 5.  **[選択したエンティティの編集]** をクリックします。  
   
-6.  **エンティティ名**ボックスに、エンティティの更新後の名前を入力します。  
+6.  **エンティティ名**ボックスに、エンティティの新しい名前を入力します。  
   
-7.  をクリックして**エンティティの保存**です。  
+7.  クリックして**エンティティの保存**します。  
   
 ## <a name="see-also"></a>参照  
  [エンティティを作成する&#40;マスター データ サービス&#41;](create-an-entity-master-data-services.md)   

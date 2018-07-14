@@ -5,29 +5,28 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb72092ec96c373c05a74a479eaefa47de6d3d35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d3d1bf94e65ffb789204bb774ea502ef824659ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266328"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>フルテキスト カタログの作成と管理
   フルテキスト カタログが、ファイル グループに属さない仮想オブジェクトとなりました。これは、フルテキスト インデックスのグループを指す論理的概念です。  
   
-##  <a name="creating"></a> フルテキスト カタログの作成  
+##  <a name="creating"></a> フルテキスト カタログを作成します。  
   
 #### <a name="to-create-a-full-text-catalog"></a>フルテキスト カタログを作成するには  
   
@@ -47,7 +46,7 @@ ms.locfileid: "36164992"
   
   
 ##  <a name="props"></a> フルテキスト カタログのプロパティを表示します。  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] フルテキスト インデックスに関連するさまざまなプロパティの値を取得する、FULLTEXTCATALOGPROPERTY などの関数を使用できます。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] FULLTEXTCATALOGPROPERTY などの関数は、フルテキスト インデックスに関連するさまざまなプロパティの値を取得できます。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。  
   
  次の表は、フルテキスト カタログに関連しているプロパティを示しています。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "36164992"
   
   
   
-##  <a name="rebuildall"></a> データベースのすべてのフルテキスト カタログの再構築  
+##  <a name="rebuildall"></a> データベースのすべてのフルテキスト カタログを再構築  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>データベースのフルテキスト カタログを再構築するには  
   

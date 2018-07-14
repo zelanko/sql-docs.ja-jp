@@ -1,5 +1,5 @@
 ---
-title: LogFileName 要素 (ASSL) |Microsoft ドキュメント
+title: LogFileName 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileName element
 ms.assetid: 80c7530d-ef73-44c3-88b5-c11c0f290946
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3038ae45e740b52662f6e580808096541b7b386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78f8a9cfa6462f7932e69323b0f7622d0f12064a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171343"
 ---
 # <a name="logfilename-element-assl"></a>LogFileName 要素 (ASSL)
-  ログ ファイルのファイル名を含む、[トレース](../objects/trace-element-assl.md)要素。  
+  ログ ファイルのファイル名が含まれています、[トレース](../objects/trace-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36174795"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- インスタンスのログ フォルダーにログ ファイルが保存された[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+ インスタンスのログ フォルダーに、ログ ファイルを保存[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。  
   
  親に対応する要素`LogFileName`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Trace>します。  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c2c513f4caeb820e561d5b6be889a850404d79ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 81db67b6450e7b259d84b647ffe2173024a7430f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191212"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>レポート作成の概念 (レポート ビルダーおよび SSRS)
   ここでは、レポート ビルダーとレポート デザイナーのドキュメントで使用する主要な概念について簡単に説明します。 特定の用語の定義については、「[用語集 &#40;レポート ビルダー&#41;](../report-builder/glossary-report-builder.md)」を参照してください。  
@@ -34,7 +34,7 @@ ms.locfileid: "36174652"
  [レポート、レポート パーツ、およびレポート定義&#40;レポート ビルダーおよび SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  初期定義、パブリッシュされたレポート、ユーザーに表示される表示レポートなど、レポートの異なる状態を示すさまざまな用語について説明します。  
   
- [埋め込みデータ ソースとデータ接続またはデータ ソースを共有&#40;レポート ビルダーおよび SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
+ [埋め込みし、共有データ接続またはデータ ソース&#40;レポート ビルダーおよび SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
  レポート、レポート モデル、およびデータ ドリブン サブスクリプションで使用されるデータ ソースへの接続を定義する方法について説明します。  
   
  [埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  

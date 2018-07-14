@@ -1,5 +1,5 @@
 ---
-title: Excel 変換先エディター (接続マネージャー ページ) |Microsoft ドキュメント
+title: Excel 変換先エディター ([接続マネージャー] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.connection.f1
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14b06c895b60f3965d7b7ccd0bea5c3d6f8b447b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af5336747676827b054d34ce2c4aa616fb383813
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330002"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>[Excel 変換先エディター] ([接続マネージャー] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、データ ソース情報を指定したり、結果をプレビューしたりできます。 Excel 変換先では、 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] ブックのワークシートまたは名前付き範囲にデータが読み込まれます。  
   
 > [!NOTE]  
->  `CommandTimeout` Excel 変換先のプロパティでは使用できません、 **Excel 変換先エディター**を使用して設定できますが、**詳細エディター**です。 また、一部の高速読み込みオプションは **[詳細エディター]** でしか使用できません。 これらのプロパティの詳細については、「 [Excel Custom Properties](data-flow/excel-custom-properties.md)」の「Excel 変換先」を参照してください。  
+>  `CommandTimeout` Excel 変換先のプロパティでは使用できません、 **Excel 変換先エディター**を使用して設定できますが、**高度なエディター**します。 また、一部の高速読み込みオプションは **[詳細エディター]** でしか使用できません。 これらのプロパティの詳細については、「 [Excel Custom Properties](data-flow/excel-custom-properties.md)」の「Excel 変換先」を参照してください。  
   
  Excel 変換先の詳細については、「 [Excel Destination](data-flow/excel-destination.md)」を参照してください。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36165289"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 変換先エディター &#40;[マッピング] ページ&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Excel 変換先エディター&#40;マッピング ページ&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Excel 変換先エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する](control-flow/foreach-loop-container.md)  
   

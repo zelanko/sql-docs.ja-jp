@@ -1,5 +1,5 @@
 ---
-title: 作成、変更、および外部キーの削除 |Microsoft ドキュメント
+title: 作成、変更、および外部キーの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - foreign keys [SMO]
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4523fc03ea6b0749c8818671c26403eeef243a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 173383d491d80bfe6f685f2ed6ea7ca83027fe77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197252"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>外部キーの作成、変更、および削除
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) では、外部キーは <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> オブジェクトで表現します。  
   
- SMO では、外部キーを作成するには、外部キーが、コンス トラクターで定義されているテーブルを指定する必要があります、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>オブジェクト。 このテーブルから、外部キーになる列を少なくとも 1 つ選択する必要があります。 選択するには、<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> オブジェクト変数を作成し、外部キーの列の名前を指定します。 次に、参照先のテーブルと列を指定します。 使用して、<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A>列を追加する方法、`Columns`オブジェクト プロパティです。  
+ SMO に外部キーを作成するには、外部キーが、コンス トラクターで定義されているテーブルを指定する必要があります、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>オブジェクト。 このテーブルから、外部キーになる列を少なくとも 1 つ選択する必要があります。 選択するには、<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> オブジェクト変数を作成し、外部キーの列の名前を指定します。 次に、参照先のテーブルと列を指定します。 使用して、<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A>列を追加する方法、`Columns`オブジェクト プロパティです。  
   
- 外部キーを表す列は、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey> オブジェクトの一覧は `Columns` オブジェクト プロパティで表されます。 外部キーによって参照される主キーがで表される、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>プロパティで指定されたテーブルにある、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>プロパティです。  
+ 外部キーを表す列は、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey> オブジェクトの一覧は `Columns` オブジェクト プロパティで表されます。 外部キーによって参照される主キーがで表される、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>プロパティで指定したテーブルにある、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>プロパティ。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Visual Basic での外部キーの作成、変更、および削除  
  このコード例では、あるテーブル内の 1 つまたは複数の列から、別のテーブル内の主キー列に対する外部キー リレーションシップを作成する方法を示します。  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 caps.latest.revision: 85
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2f8f3ef496f04bc44134340b997a3969f0a029cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bfb3e87fd7d98c2a7daadb649c6a272a79355bd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328172"
 ---
 # <a name="database-properties-mirroring-page"></a>[データベースのプロパティ] \([ミラーリング] ページ)
   このページにはプリンシパル データベースからアクセスし、データベース ミラーリングのプロパティを構成および変更します。 また、データベース ミラーリング セキュリティ構成ウィザードを起動し、ミラーリング セッションの状態の確認やデータベース ミラーリング セッションの一時停止または削除を行うこともできます。  
@@ -132,7 +132,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  動作モードの詳細については、「 [データベース ミラーリングの動作モード](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)」を参照してください。  
   
- **Status**  
+ **ステータス**  
  ミラーリングが開始された後、 **[状態]** パネルには **[ミラーリング]** ページを選択したときのデータベース ミラーリング セッションの状態が表示されます。 **[状態]** パネルを更新するには、 **[最新の情報に更新]** ボタンをクリックします。 表示される状態は次のとおりです。  
   
 |状態|説明|  

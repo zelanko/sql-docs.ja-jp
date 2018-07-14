@@ -1,5 +1,5 @@
 ---
-title: インデックスを作成し、キー ダイアログ ボックス (Visual Database Tools) |Microsoft ドキュメント
+title: インデックスを作成し、[キー] ダイアログ ボックス (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65539
 - vdt.ppg.indexeskeys
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e6743bf4c39d92df79f68b98b4d8c40a70a79e64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 77d81f3bb0e0d923bdf9fd8bd6a8ae88c14afa60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168278"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>インデックスとキー ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスを使用すると、インデックス、主キー、および一意キーを作成したり、変更したりできます。 このダイアログ ボックスにアクセスするには、インデックスまたはキーを持つテーブルのテーブル定義を開いて、テーブル定義グリッドを右クリックし、 **[インデックス/キー]** をクリックします。  
@@ -37,7 +37,7 @@ ms.locfileid: "36174844"
  **[追加]**  
  新しい主キー、一意キー、またはインデックスを作成します。  
   
- **Delete**  
+ **削除**  
  **[選択された主/一意キーまたはインデックス]** 一覧で選択したキーまたはインデックスを削除します。  
   
  **[全般] カテゴリ**  
@@ -49,16 +49,16 @@ ms.locfileid: "36174844"
  **[UNIQUE]**  
  インデックスまたはキーに入力するデータが一意である必要があるかどうかを示します。 XML インデックスでは使用できません。  
   
- **Type**  
+ **型**  
  **[選択された主/一意キーまたはインデックス]** の一覧で選択された項目が一意のキーであるか、主キーであるか、またはインデックスであるかを指定します。 主キーを選択した場合、該当するフィールドは読み取り専用になります。  
   
  **[IDENTITY] カテゴリ**  
  展開して **[オブジェクト名]** プロパティ フィールドと **[説明]** プロパティ フィールドを表示します。  
   
- **Name**  
+ **名前**  
  キーまたはインデックスの名前を表示します。 新しいキーまたはインデックスを作成した場合、このプロパティには、テーブル デザイナーのアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
- **description**  
+ **[説明]**  
  キーまたはインデックスの説明を記述できます。 より詳細な説明を記述する場合は、 **[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号ボタン (**[...]**) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
   
  **[テーブル デザイナー] カテゴリ**  

@@ -1,5 +1,5 @@
 ---
-title: テーブル表現 (テーブル) |Microsoft ドキュメント
+title: テーブル表現 (テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e642969cb2fa91b6edf5d514a47a9135d39a0ed7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33f266b37ea40a6c0796f6b8f5676f12fbbe6666
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205982"
 ---
 # <a name="tables-representation-tabular"></a>テーブル表現 (テーブル)
   テーブル モデルでは、テーブルがデータの基本表現です。  
@@ -32,7 +32,7 @@ ms.locfileid: "36165318"
   
  実際の操作手順では、他のオブジェクトを定義する前にデータ ソース ビューを作成する必要があります。 データ ソース ビュー オブジェクトには、データ ソース内のすべての該当オブジェクトのマッピングが含まれます。 リレーショナル モデルのマッピングは、.NET DataSet オブジェクトとしてデータ ソース ビューに埋め込まれ、DSV の Schema プロパティに格納されます。  
   
- 次のコード スニペットは、SQL クライアント接続文字列を表形式モデルとデータの名前を持つ newDataSourceViewName 変数で表現するリレーショナル モデル内のすべてのテーブルにマップされる Select ステートメントのディクショナリがある前提としています。ソース ビュー (通常は、リレーショナル データベースの名前)。  
+ 次のコード スニペットは、SQL クライアント接続文字列、表形式モデル、およびデータの名前を持つ newDataSourceViewName 変数で表現するリレーショナル モデルのすべてのテーブルにマップされる Select ステートメントのディクショナリがある前提としています。ソース ビュー (通常はリレーショナル データベースの名前)。  
   
 ```  
   

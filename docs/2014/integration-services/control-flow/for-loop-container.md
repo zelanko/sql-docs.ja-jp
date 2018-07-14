@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainerdetails.f1
 helpviewer_keywords:
@@ -19,16 +19,16 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47b5fffebd2ce4eba41aceb88725e4dc4c867348
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15e2239a7285e4d460e4fa5a85add8445f797ede
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227852"
 ---
 # <a name="for-loop-container"></a>For ループ コンテナー
-  For ループ コンテナーは、パッケージ内で繰り返す制御フローを定義します。 ループの実装は、プログラミング言語の **For** ループ構造と同じです。 For ループ コンテナー、ループの各繰り返しで式を評価し、式に評価されるまでそのワークフローを繰り返します`False`です。  
+  For ループ コンテナーは、パッケージ内で繰り返す制御フローを定義します。 ループの実装は、プログラミング言語の **For** ループ構造と同じです。 For ループ コンテナー、ループの各繰り返しで式を評価し、式が評価されるまでそのワークフローを繰り返します`False`します。  
   
  For ループ コンテナーは、次の要素を使用してループを定義します。  
   

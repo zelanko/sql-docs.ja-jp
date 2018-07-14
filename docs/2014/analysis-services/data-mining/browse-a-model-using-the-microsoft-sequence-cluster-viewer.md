@@ -1,5 +1,5 @@
 ---
-title: Microsoft シーケンス クラスター ビューアーを使用してモデルを参照 |Microsoft ドキュメント
+title: Microsoft シーケンス クラスター ビューアーを使用してモデルの参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Sequence Cluster Viewer
 - clusters [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - transitions [Analysis Services]
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37a7d3c5be648c1861dbbb33ac20a824e462296f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14b1cb2c1aff17b9953865846ba2d4d100132397
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276218"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Microsoft シーケンス クラスター ビューアーを使用したモデルの参照
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] シーケンス クラスター ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムは、パス ( *シーケンス*) をたどることによってリンクできるイベントが含まれているデータを探索するためのシーケンス分析アルゴリズムです。 このアルゴリズムの詳細については、 [「Microsoft シーケンス クラスター アルゴリズム」](microsoft-sequence-clustering-algorithm.md)を参照してください。  
@@ -65,7 +65,7 @@ ms.locfileid: "36165710"
  [トップに戻る](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Profile"></a> クラスターのプロファイル  
- **[クラスターのプロファイル]** タブには、モデルのアルゴリズムによって作成されるクラスターの概要が表示されます。 グリッド内の **[母集団]** 列に続く各列は、モデルによって発見されたクラスターを表します。 \<属性 > <attribute>.samples 行は、クラスター内に存在するデータのさまざまなシーケンスを表す、\<属性 > 行は、クラスターに含まれるすべてのアイテムとその全体的な分布について説明します。  
+ **[クラスターのプロファイル]** タブには、モデルのアルゴリズムによって作成されるクラスターの概要が表示されます。 グリッド内の **[母集団]** 列に続く各列は、モデルによって発見されたクラスターを表します。 \<属性 > .samples 行は、クラスター内に存在するデータのさまざまなシーケンスを表す、\<属性 > 行は、クラスターに含まれるすべてのアイテムとその全体的な分布について説明します。  
   
  **[ヒストグラム バー]** オプションでは、ヒストグラムに表示されるバーの数を制御します。 指定した数よりも多くのバーが存在する場合は、重要度が最も高いバーが保持され、残りのバーは灰色のバケットにまとめられます。  
   

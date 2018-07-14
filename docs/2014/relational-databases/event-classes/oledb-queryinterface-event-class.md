@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB QueryInterface event class
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0ec866dba3009e9c660710ce65b9d3a202b6bc19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a6fcacac48a6f32cbdd7744566400936decc51e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223442"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface イベント クラス
   **OLEDB QueryInterface** イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から分散クエリやリモート ストアド プロシージャの **OLE DB QueryInterface** 呼び出しが行われるときに発生します。 このイベント クラスは、分散クエリやリモート ストアド プロシージャに関連する問題を監視するトレースに含めます。  
@@ -55,7 +55,7 @@ ms.locfileid: "36166080"
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
 |ProviderName|`nvarchar`|OLE DB プロバイダーの名前です。|46|はい|  
 |RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  
-|SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 接続する場合など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 を使用し、login2 でステートメントを実行して`SessionLoginName`Login1 が表示および`LoginName`login2 です。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
+|SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 接続する場合など[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Login1 を使用して、login2 でステートメントを実行`SessionLoginName`Login1 が表示と`LoginName`示します login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |TextData|`nvarchar`|OLE DB 呼び出しで送受信されるパラメーター。|1|いいえ|  

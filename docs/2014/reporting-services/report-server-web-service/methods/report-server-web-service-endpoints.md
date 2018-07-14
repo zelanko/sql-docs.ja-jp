@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b525f90b91d3b1d540513212164b8efc062b6ed3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 79713fc3f83f83774e95a8956cfbc6c591f9d6dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268448"
 ---
 # <a name="report-server-web-service-endpoints"></a>レポート サーバー Web サービスのエンドポイント
   レポート サーバー Web サービスでは、レポートの実行およびナビゲーションに加えて、レポート サーバーの管理に利用できる複数のエンドポイントが提供されます。  
@@ -70,7 +70,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |プロキシ エンドポイント|Description|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|SharePoint 統合モード用に構成されたレポート サーバーを管理するための API を提供します。 **注:** でこのエンドポイントは非推奨[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]です。|  
+|<xref:ReportService2006>|SharePoint 統合モード用に構成されたレポート サーバーを管理するための API を提供します。 **注:** このエンドポイントは非推奨[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]します。|  
 |<xref:ReportService2010>|ネイティブ モード用または SharePoint 統合モード用に構成されたレポート サーバーを管理するための API を提供します。|  
 |<xref:ReportExecution2005>|レポートの実行とナビゲーションのための API を提供します。|  
 |<xref:ReportServiceAuthentication>|SharePoint Web アプリケーションがフォーム認証用に構成されている場合にレポート サーバーに対してユーザーを認証するための API を提供します。|  

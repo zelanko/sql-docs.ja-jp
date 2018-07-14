@@ -1,5 +1,5 @@
 ---
-title: Cardinality 要素 (ASSL) |Microsoft ドキュメント
+title: Cardinality 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Cardinality element
 ms.assetid: 60ac8a26-7c8b-4011-9b9b-a29863779428
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b90e85efbde384bd0d2854fdb2bbd4b325632e2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7446923efc15a2fe05f3e8bf8c86a2e9f429a2c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325082"
 ---
 # <a name="cardinality-element-assl"></a>Cardinality 要素 (ASSL)
-  記述されるリレーションシップの基数を示します、 [AttributeRelationship](../objects/attributerelationship-element-assl.md)または[RegularMeasureGroupDimension](../data-type/dimension-data-type-assl.md)です。  
+  記述されるリレーションシップのカーディナリティを示します、 [AttributeRelationship](../objects/attributerelationship-element-assl.md)または[RegularMeasureGroupDimension](../data-type/dimension-data-type-assl.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36164891"
 |*多く*|多対一のリレーションシップ|  
 |*1 つ*|一対一のリレーションシップ|  
   
- 許可される値に対応する列挙`Cardinality`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Cardinality>します。  
+ 許容された値に対応する列挙`Cardinality`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Cardinality>します。  
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](../../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

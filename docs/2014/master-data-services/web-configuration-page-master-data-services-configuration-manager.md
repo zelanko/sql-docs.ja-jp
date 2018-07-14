@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.webconfigpg.f1
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8669ed96e5fbe5d34f673375cdc1269db24932c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 23702f53f7e34d7f0bfc11e2248383fc6a3d76f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193366"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>[Web の構成] ページ (マスター データ サービス構成マネージャー)
   **[Web の構成]** ページを使用すると、Web サイトまたは Web アプリケーションを新規作成できます。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションを選択すると、アプリケーションの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを指定して、Data Quality Services を有効にすることができます。  
@@ -49,9 +49,9 @@ ms.locfileid: "36174943"
 |**[Data Quality Services との統合を有効化]**|このオプションを選択すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]で使用可能な Data Quality 機能が有効になります。 詳細については、「 [マスター データ サービスを使用した Data Quality Services 統合の有効化](install-windows/enable-data-quality-services-integration-with-master-data-services.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [マスター データ サービスのデータベースと web サイトを設定します。](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [アプリケーションの要件を web&#40;マスター データ サービス&#41;](install-windows/web-application-requirements-master-data-services.md)   
- [マスター データ マネージャー Web アプリケーションを作成&#40;マスター データ サービス&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [MDS 2014 と「サービスを利用できません」エラー](http://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
+ [マスター データ サービスのデータベースと web サイトの設定します。](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Web アプリケーションの要件&#40;マスター データ サービス&#41;](install-windows/web-application-requirements-master-data-services.md)   
+ [マスター データ マネージャー Web アプリケーションを作成する&#40;マスター データ サービス&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
+ [MDS 2014 と「サービス利用不可」エラー](http://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
   
   

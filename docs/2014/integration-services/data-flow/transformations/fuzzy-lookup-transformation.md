@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
 helpviewer_keywords:
@@ -33,13 +33,13 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47afae752c8e9f82e5904346de21613509499673
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f73bbc60cfcc59cc53252239da9acc4ecf05919d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185189"
 ---
 # <a name="fuzzy-lookup-transformation"></a>あいまい参照変換
   あいまい参照変換では、データの標準化、データの修正、不足している値の提供など、データのクリーン タスクを実行します。  
@@ -55,7 +55,7 @@ ms.locfileid: "36174207"
   
  この変換は 1 つの入力と 1 つの出力をとります。  
   
- あいまい一致では、データ型が `DT_WSTR` または `DT_STR` の入力列だけが使用されます。 完全一致では、`DT_TEXT`、`DT_NTEXT`、`DT_IMAGE` を除くすべての DTS データ型を使用できます。 詳細については、「 [Integration Services Data Types](../integration-services-data-types.md)」を参照してください。 入力と参照テーブルの結合に使用される列のデータ型には、互換性が必要です。 たとえば、DTS の列を結合する有効なは`DT_WSTR`データ型を持つ列を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`nvarchar`を持つ列を結合するには、データ型が無効です、`DT_WSTR`データ型を持つ列を`int`データ型。  
+ あいまい一致では、データ型が `DT_WSTR` または `DT_STR` の入力列だけが使用されます。 完全一致では、`DT_TEXT`、`DT_NTEXT`、`DT_IMAGE` を除くすべての DTS データ型を使用できます。 詳細については、「 [Integration Services Data Types](../integration-services-data-types.md)」を参照してください。 入力と参照テーブルの結合に使用される列のデータ型には、互換性が必要です。 たとえば、列、DTS の結合に有効なは`DT_WSTR`データ型の列に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar`列と結合するには、データ型は無効です、`DT_WSTR`データ型の列に、`int`データ型。  
   
  この変換は、使用する最大メモリ量、行比較アルゴリズム、および変換で使用するインデックス テーブルと参照テーブルのキャッシュを指定することにより、カスタマイズできます。  
   
@@ -108,17 +108,18 @@ ms.locfileid: "36174207"
  SQL の TRUNCATE TABLE コマンドでは、DELETE トリガーは起動されません。 TRUNCATE TABLE コマンドが参照テーブルに対して使用されると、参照テーブルと一致インデックスが同期されなくなり、あいまい参照変換が失敗します。 一致インデックス テーブルを維持するトリガーが参照テーブルに組み込まれている場合は、TRUNCATE TABLE コマンドではなく、SQL の DELETE コマンドを使用してください。  
   
 > [!NOTE]  
->  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブで **[保存されたインデックスを維持する]** を選択すると、変換ではマネージ ストアド プロシージャを使用してインデックスを維持します。 これらのマネージ ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の共通言語ランタイム (CLR) 統合機能を使用します。 既定では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合は無効です。 **[保存されたインデックスを維持する]** 機能を使用するには、CLR 統合を有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
+>  
+  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブで **[保存されたインデックスを維持する]** を選択すると、変換ではマネージド ストアド プロシージャを使用してインデックスを維持します。 これらのマネージド ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の共通言語ランタイム (CLR) 統合機能を使用します。 既定では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合は無効です。 **[保存されたインデックスを維持する]** 機能を使用するには、CLR 統合を有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
 >   
 >  **[保存されたインデックスを維持する]** オプションは CLR 統合を必要とするため、この機能を使用できるのは、CLR 統合が有効になっている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの参照テーブルを選択した場合だけです。  
   
 ## <a name="row-comparison"></a>行の比較  
- あいまい参照変換を構成する際には、参照テーブル内の一致するレコードの検索に使用する比較アルゴリズムを指定できます。 Exhaustive プロパティを設定した場合`True`変換が参照テーブル内のすべての行への入力のすべての行を比較します。 この比較アルゴリズムを使用すると、より正確な結果が生成されますが、参照テーブルの行の数が少ない場合を除けば、処理により多くの時間がかかるようになります。 Exhaustive プロパティが設定されている場合`True`、参照テーブル全体がメモリに読み込まれます。 パフォーマンスの問題を回避するのには、Exhaustive プロパティを設定することをお勧め`True`パッケージ開発中のみです。  
+ あいまい参照変換を構成する際には、参照テーブル内の一致するレコードの検索に使用する比較アルゴリズムを指定できます。 Exhaustive プロパティを設定する場合`True`変換、参照テーブル内のすべての行に入力されたすべての行を比較します。 この比較アルゴリズムを使用すると、より正確な結果が生成されますが、参照テーブルの行の数が少ない場合を除けば、処理により多くの時間がかかるようになります。 Exhaustive プロパティ設定されている場合`True`、参照テーブル全体がメモリに読み込まれます。 パフォーマンスの問題を回避するためには、Exhaustive プロパティを設定することをお勧め`True`パッケージの開発中にします。  
   
- Exhaustive プロパティ設定されている場合`False`、あいまい参照変換が一致するものだけを持つ、少なくとも 1 つのインデックス付きのトークンまたはサブスト リングを返します (部分文字列が呼び出された、 *q グラム*)、入力レコードと共通します。 参照の効率を最大にするために、あいまい参照変換が一致の検索に使用する逆インデックス構造で、テーブルの各行に含まれたトークンのサブセットにのみインデックス付けが行われます。 Exhaustive を設定するには、入力データセットが小さい場合、`True`を一般的なトークンが存在しないインデックス テーブルの一致の欠落を回避します。  
+ Exhaustive プロパティ設定されている場合`False`、あいまい参照変換は、少なくとも 1 つのインデックス付きのトークンまたはサブスト リングに含まれた一致のみを返します (部分文字列が呼び出されます、*の q-gram*)、入力レコードと共通します。 参照の効率を最大にするために、あいまい参照変換が一致の検索に使用する逆インデックス構造で、テーブルの各行に含まれたトークンのサブセットにのみインデックス付けが行われます。 入力データセットが小さい場合は、Exhaustive に設定することができます`True`の一般的なトークンが存在インデックス テーブル内の一致の見落としを避けるためです。  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>インデックス テーブルと参照テーブルのキャッシュ  
- あいまい参照変換の設定時に、インデックス テーブルと参照テーブルの一部を、変換を開始する前にメモリにキャッシュするかどうかを指定できます。 WarmCaches プロパティを設定する場合`True`、インデックスおよび参照テーブルがメモリに読み込まれます。 入力が WarmCaches プロパティを設定、多くの行が場合`True`変換のパフォーマンスを向上させることができます。 入力行の数が小さい場合は、プロパティを設定 WarmCaches`False`大きなインデックスの再利用を高速に行うことができます。  
+ あいまい参照変換の設定時に、インデックス テーブルと参照テーブルの一部を、変換を開始する前にメモリにキャッシュするかどうかを指定できます。 WarmCaches プロパティを設定する場合`True`、インデックスおよび参照テーブルがメモリに読み込まれます。 入力が WarmCaches プロパティを設定する、多くの行が場合`True`変換のパフォーマンスを向上させることができます。 入力行の数が少ない場合は、WarmCaches プロパティを設定`False`高速化すると大きなインデックスの再利用を行うことができます。  
   
 ## <a name="temporary-tables-and-indexes"></a>一時テーブルおよびインデックス  
  あいまい参照変換の実行時には、変換の接続先の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース内に、テーブルやインデックスなどの一時オブジェクトが作成されます。 これらの一時テーブルとインデックスのサイズは、参照テーブルの行数とトークン数や、あいまい参照変換が作成するトークン数に比例します。したがって、膨大なディスク容量を消費する可能性もあります。 また、変換はこれらの一時テーブルに対してクエリを実行します。 このため、特に稼働サーバーのディスク容量が少ない場合は、あいまい参照変換を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースの非稼働インスタンスに接続することを検討してください。  
@@ -130,7 +131,7 @@ ms.locfileid: "36174207"
   
  **[あいまい参照変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [あいまい参照変換エディター&#40;テーブル タブを参照&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [あいまい参照変換エディター&#40;参照テーブル タブ&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [あいまい参照変換エディター&#40;列 タブ&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   

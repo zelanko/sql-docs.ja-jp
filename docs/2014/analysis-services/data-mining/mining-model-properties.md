@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルのプロパティ |Microsoft ドキュメント
+title: マイニング モデルのプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - data mining [Analysis Services], properties
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b0d00f10bd4ab4ac5f11b0af3e798c873cc5493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 731ce6e077040767fd5f1bd4eec05242977097a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330902"
 ---
 # <a name="mining-model-properties"></a>マイニング モデルのプロパティ
   マイニング モデルには、次の種類のプロパティがあります。  
@@ -48,7 +48,7 @@ ms.locfileid: "36165713"
 |**アルゴリズム**|マイニング モデルのアルゴリズムの種類を設定します。|  
 |**AlgorithmParameters**|アルゴリズムの各種類で使用可能なアルゴリズム パラメーターの値を設定します。|  
 |**Assert**|マイニング モデルのトレーニングとテストに使用するデータに適用するフィルターを設定します。 フィルター定義はモデルと共に格納され、予測クエリの作成時やモデル精度のテスト時に必要に応じて使用できます。<br /><br /> モデルのトレーニング時には、モデルのフィルターは省略できません。|  
-|**Name**|マイニング モデルの名前を設定します。|  
+|**名前**|マイニング モデルの名前を設定します。|  
 |**AllowDrillThrough**|マイニング モデルでドリルスルーを有効にするかどうかを指定します。|  
   
 ## <a name="properties-of-model-columns"></a>モデル列のプロパティ  
@@ -56,8 +56,8 @@ ms.locfileid: "36165713"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|**description**|マイニング列の目的について説明します。|  
-|**Name**|マイニング モデル列の名前を設定します。 新しい名前を入力し、マイニング モデル列に別名を指定できます。|  
+|**[説明]**|マイニング列の目的について説明します。|  
+|**名前**|マイニング モデル列の名前を設定します。 新しい名前を入力し、マイニング モデル列に別名を指定できます。|  
 |**ModelingFlags**|列に対してアルゴリズム固有のフラグを設定します。|  
 |**SourceColumnID**|モデル列の基になるマイニング構造列の名前を示します。<br /><br /> このプロパティは読み取り専用です。|  
 |**使用方法**|マイニング モデルによる列の使用方法を設定します。|  

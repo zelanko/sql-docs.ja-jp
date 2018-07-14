@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - System Monitor [SQL Server], starting
 - starting Windows System Monitor
 - Windows System Monitor [SQL Server], starting
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a47d55fc6ef0a035dd4298b5e6ad6e94972fb8bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ffa377c7c9138521073b226213d087d2097b6af1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254084"
 ---
 # <a name="start-system-monitor-windows"></a>システム モニターの起動 (Windows)
   システム モニターを使用すると、システム リソースの使用率を監視できます。 プロセッサやメモリの使用率などのサーバー リソース、ロックやトランザクションなどの多くの Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースについて、リアルタイムのパフォーマンス データをカウンター形式で収集し表示できます。  

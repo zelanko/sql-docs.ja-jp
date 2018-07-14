@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
 - sql12.dta.general.f1
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a64863d6d36d7eb5d934b08db7c7ed8fdb2638e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 536c0a6a1a730fcf74d084fbef2d9f1debb347a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182079"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。 データベースをチューニングした後で結果を表示および操作する方法については、「 [データベース エンジン チューニング アドバイザーからの出力の表示および操作](database-engine-tuning-advisor.md)」を参照してください。  
   
 ##  <a name="Initialize"></a> データベース エンジン チューニング アドバイザーを初期化する  
- 初回起動時に、 **sysadmin** 固定サーバー ロールのメンバーであるユーザーがデータベース エンジン チューニング アドバイザーを初期化する必要があります。 これで複数のシステム テーブルを作成しなければならないため、`msdb`チューニング操作をサポートするデータベース。 また、初期化によって、 **db_owner** 固定データベース ロールのメンバーであるユーザーも自分の所有するデータベースにあるテーブルのワークロードをチューニングできます。  
+ 初回起動時に、 **sysadmin** 固定サーバー ロールのメンバーであるユーザーがデータベース エンジン チューニング アドバイザーを初期化する必要があります。 これで複数のシステム テーブルを作成する必要があるため、`msdb`チューニング操作をサポートするデータベース。 また、初期化によって、 **db_owner** 固定データベース ロールのメンバーであるユーザーも自分の所有するデータベースにあるテーブルのワークロードをチューニングできます。  
   
  システム管理者権限を持つユーザーは、次の操作のいずれかを実行する必要があります。  
   
@@ -500,7 +500,7 @@ database_name.owner_name.table_name
  **操作**  
  実行中のステップが表示されます。  
   
- **Status**  
+ **ステータス**  
  アクション ステップの状態が表示されます。  
   
  **メッセージ**  
