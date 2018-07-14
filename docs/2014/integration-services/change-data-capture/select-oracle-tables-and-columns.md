@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 402927baa685e906e7f6669147f0e1c3be2d2918
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eaafdee895b1fe86fb5646b35dd3cdb2b30070d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207602"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Oracle のテーブルおよび列の選択
   [Oracle のテーブルおよび列の選択] ページを使用すると、変更をキャプチャする Oracle ソース データベースからテーブルを選択できます。 このページには次の要素があります。  
@@ -48,7 +48,7 @@ ms.locfileid: "36164853"
  **[編集]**  
  一覧からテーブルを選択して **[編集]** をクリックすると、そのテーブルの **[プロパティ]** ダイアログ ボックスが表示され、 [変更をキャプチャするために選択したテーブルに対する変更](make-changes-to-the-tables-selected-for-capturing-changes.md)を行うことができます。  
   
- **削除**  
+ **[削除]**  
  一覧からテーブルを選択して **[削除]** をクリックすると、CDC インスタンスからテーブルを削除できます。  
   
  適切なダイアログ ボックスを使用して [変更をキャプチャするための Oracle テーブルの選択](select-oracle-tables-for-capturing-changes.md) または [変更をキャプチャするために選択したテーブルに対する変更](make-changes-to-the-tables-selected-for-capturing-changes.md) を行った後、 **[次へ]** をクリックして [補足ログ スクリプトの生成および実行](generate-and-run-the-supplemental-logging-script.md)を行います。  

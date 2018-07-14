@@ -1,5 +1,5 @@
 ---
-title: ImpersonationMode 要素 (ASSL) |Microsoft ドキュメント
+title: ImpersonationMode 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ImpersonateMode element
 ms.assetid: 160fdcb2-ac9f-4c5a-a0eb-a5f7669166b9
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e41e5b5fef7759f6ad310a7f04dc012a7b7cb54f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dad131322f27cee48fa2fe1dd1ed593477afbe42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216232"
 ---
 # <a name="impersonationmode-element-assl"></a>ImpersonationMode 要素 (ASSL)
   派生した要素の権限借用の方法を示す値を含む、 [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)データ型。  
@@ -70,9 +70,9 @@ ms.locfileid: "36165690"
 |*権限借用アカウント*|親は、親要素で指定されているユーザー アカウントの資格情報を使用します。|  
 |*ImpersonateAnonymous*|親は、匿名ユーザーの資格情報を使用します。|  
 |*ImpersonateCurrentUser*|親は、現在のユーザーの資格情報を使用します。|  
-|*ImpersonateServiceAccount*|親のインスタンスに関連付けられているサービス アカウントの資格情報を使用して[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。|  
+|*ImpersonateServiceAccount*|親のインスタンスに関連付けられているサービス アカウントの資格情報を使用して[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。|  
   
- 許可される値に対応する列挙`ImpersonationMode`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ImpersonationLevel>します。  
+ 許容された値に対応する列挙体`ImpersonationMode`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ImpersonationLevel>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

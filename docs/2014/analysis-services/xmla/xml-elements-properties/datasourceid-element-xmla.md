@@ -1,5 +1,5 @@
 ---
-title: DataSourceID 要素 (XMLA) |Microsoft ドキュメント
+title: DataSourceID 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSourceID element
 ms.assetid: 695522c7-acca-420a-a5fb-f01f3fd9a96b
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2adec20f28e51639352dc89c70b6682e4df240fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e96d9386319fa9d850a755519fad7360da8ec3b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231822"
 ---
 # <a name="datasourceid-element-xmla"></a>DataSourceID 要素 (XMLA)
-  によって使用されるデータ ソースを識別、[場所](location-element-xmla.md)実行中に、[バックアップ](../xml-elements-commands/backup-element-xmla.md)、[復元](../xml-elements-commands/restore-element-xmla.md)、または[同期](../xml-elements-commands/synchronize-element-xmla.md)コマンド。  
+  使用されるデータ ソースを識別、[場所](location-element-xmla.md)中に要素を[バックアップ](../xml-elements-commands/backup-element-xmla.md)、[復元](../xml-elements-commands/restore-element-xmla.md)、または[同期](../xml-elements-commands/synchronize-element-xmla.md)コマンド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36164160"
 ## <a name="remarks"></a>コメント  
  `DataSourceID` 要素は、リモート パーティション情報をバックアップ、復元、または同期する場所であるリモート インスタンスを識別するソース インスタンス上のデータ ソースの名前を含みます。  
   
- バックアップと、リモート パーティションの復元の詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)です。  
+ バックアップおよびリモート パーティションを復元する詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)します。  
   
 ## <a name="see-also"></a>参照  
  [ConnectionString 要素&#40;XMLA&#41;](connectionstring-element-xmla.md)   

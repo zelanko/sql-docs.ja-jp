@@ -1,5 +1,5 @@
 ---
-title: AllMemberAggregationUsage 要素 (ASSL) |Microsoft ドキュメント
+title: AllMemberAggregationUsage 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllMemberAggregationUsage element
 ms.assetid: 264fe9d8-8e9a-4642-8cee-7c2804126926
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1da20a067a1f293bafbca858623ab477aacac6b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35d13952ed0cc77405f1c0518562a67749d1521f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252954"
 ---
 # <a name="allmemberaggregationusage-element-assl"></a>AllMemberAggregationUsage 要素 (ASSL)
-  コントロール方法で、集計デザイナー [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]集計をデザインします。  
+  コントロール方法で集計デザイナー [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]集計をデザインします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,15 +68,15 @@ ms.locfileid: "36164166"
 |-----------|-----------------|  
 |*Full*|キューブの各集計に、All メンバーが含まれている必要があります。|  
 |*なし*|キューブの集計に All メンバーを含めることはできません。|  
-|*制限なし*|集計デザイナーに対して制約を課しません。|  
-|*[Default]*|同じ*無制限*です。|  
+|*無制限*|集計デザイナーに対して制約を課しません。|  
+|*[Default]*|同じ*無制限*します。|  
   
 ## <a name="remarks"></a>コメント  
  親に対応する要素`AllMemberAggregationUsage`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.CubeDimension>します。  
   
 ## <a name="see-also"></a>参照  
  [キューブ要素&#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [要素の寸法&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [ディメンション要素&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  
   
   

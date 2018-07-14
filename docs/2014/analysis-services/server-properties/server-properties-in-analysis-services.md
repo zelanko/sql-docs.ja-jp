@@ -1,5 +1,5 @@
 ---
-title: Analysis Services のサーバー プロパティの構成 |Microsoft ドキュメント
+title: Analysis Services のサーバー プロパティの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, configuration properties
 - Analysis Services, configuration properties
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fbb4d0682f7bb961b17901efc3cf3994fd81a7cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19f6f04dfe165cb5f3af5bd5587232d65c8c4582
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247352"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Analysis Services のサーバーのプロパティの構成
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス用に既定のサーバー構成プロパティを変更できます。 各インスタンスには、同じサーバーの他のインスタンスとは別に設定できる固有の構成プロパティがあります。  
@@ -44,7 +44,7 @@ ms.locfileid: "36085756"
  SQL Server Management Studio のプロパティ ページには、利用可能なプロパティのサブセットが含まれ、変更する可能性の高いプロパティのみが表示されます。 プロパティの完全なセットは msmdsrv.ini ファイルにあります。  
   
 > [!NOTE]  
->  このトピックには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の配置構成プロパティに関する情報は含まれていません。 展開構成の詳細については、次を参照してください。[ソリューションの配置の構成設定を指定する](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)です。  
+>  このトピックには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の配置構成プロパティに関する情報は含まれていません。 展開構成の詳細については、次を参照してください。[ソリューションの配置に関する構成設定を指定する](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)します。  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Management Studio での構成プロパティの表示または設定  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36085756"
   
 #### <a name="view-or-edit-configuration-properties-in-the-msmdsrvini-file"></a>msmdsrv.ini ファイルの構成プロパティの表示または編集  
   
-1.  作業を開始する前に、確認、 **DataDir** msmdsrv.ini ファイルを含む、Analysis Services プログラム ファイルの場所を確認するのには Management Studio の [全般] プロパティ ページで、プロパティです。 プログラム ファイルの場所を確認することで、確実に、目的のファイルに変更を加えることができます。  
+1.  開始する前に、 **DataDir** msmdsrv.ini ファイルを含む、Analysis Services プログラム ファイルの場所を確認の Management Studio の [全般プロパティ] ページのプロパティ。 プログラム ファイルの場所を確認することで、確実に、目的のファイルに変更を加えることができます。  
   
     > [!NOTE]  
     >  既定のインストールでは、ファイルは \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config フォルダーに格納されます。  
@@ -79,7 +79,7 @@ ms.locfileid: "36085756"
 ##  <a name="bkmk_ref"></a> サーバー プロパティ リファレンス  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の構成プロパティは、システムを微調整するために重要です。 たとえば、クエリ ログ動作を必要条件に合わせるために、関連するプロパティを設定できます。  
   
- 次のトピックでは、さまざまなについて説明する[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]構成プロパティ。  
+ 次のトピックの説明、さまざまな[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]構成プロパティ。  
   
 |トピック|説明|  
 |-----------|-----------------|  

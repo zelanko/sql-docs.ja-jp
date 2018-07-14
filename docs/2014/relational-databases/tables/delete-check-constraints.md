@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing constraints
 - CHECK constraints, deleting
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - deleting constraints
 ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 70c87ea84fbf7bb506e404931450c52161628a41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d4a9a87f253f14df01165cf1099090e946dbff52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246329"
 ---
 # <a name="delete-check-constraints"></a>CHECK 制約の削除
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して CHECK 制約を削除できます。 CHECK 制約を削除すると、制約式に含まれる 1 つ以上の列に入力できるデータ値に対する制限が取り除かれます。  

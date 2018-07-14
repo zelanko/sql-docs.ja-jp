@@ -1,5 +1,5 @@
 ---
-title: 配置スクリプトを作成するための入力ファイルを理解する |Microsoft ドキュメント
+title: 配置スクリプトを作成するために使用する入力ファイルについて |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input files [Analysis Services]
 - Analysis Services Deployment Wizard, scripts
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - modifying input files
 ms.assetid: 20e080cd-6a0e-4591-b022-ea4cd3638e36
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 396d52a32e7ead5b625534e3ce4c60fafbddc6aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c9666014d613792c4c12f202ea5e0b790130b6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189039"
 ---
 # <a name="understanding-the-input-files-used-to-create-the-deployment-script"></a>配置スクリプトを作成するための入力ファイルについて
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを作成すると、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] によってそのプロジェクトの XML ファイルが生成されます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 出力フォルダーにこれらの XML ファイルを配置、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクト。 既定では、出力は \Bin フォルダーに対して行われます。 次の表は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成される XML ファイルを示しています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを作成すると、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] によってそのプロジェクトの XML ファイルが生成されます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] これらの XML ファイルの出力フォルダーに格納、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクト。 既定では、出力は \Bin フォルダーに対して行われます。 次の表は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成される XML ファイルを示しています。  
   
 |XMLA ファイル|説明|  
 |---------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "36173584"
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、プロジェクト ファイルにパスワードは保存されません。  
   
 ## <a name="modifying-the-input-files"></a>入力ファイルの変更  
- 入力ファイル内の値または入力ファイルから取得された値を変更すること、配置先、構成設定を変更することおよび配置オプションが、全体を編集しなくても\<*プロジェクト名前*> .asdatabase ファイル (または、既存のスクリプトを生成する場合、全体 XMLA スクリプト ファイル[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース)。 個々のファイルを変更できると、さまざまな目的に合わせてさまざまな配置スクリプトを簡単に作成できます。  
+ 入力ファイル内の値または入力ファイルから取得した値を変更、配置先、構成設定を変更することおよび配置オプションを全体を編集することがなく\<*プロジェクト名前*> .asdatabase ファイル (または既存のスクリプトを生成する場合、全体 XMLA スクリプト ファイル[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース)。 個々のファイルを変更できると、さまざまな目的に合わせてさまざまな配置スクリプトを簡単に作成できます。  
   
  次のトピックでは、さまざまな入力ファイル内の値を変更する方法について説明します。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36173584"
 -   [処理オプションの指定](deployment-script-files-specifying-processing-options.md)  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services 配置ウィザードを実行しています。](running-the-analysis-services-deployment-wizard.md)   
+ [Analysis Services 配置ウィザードの実行](running-the-analysis-services-deployment-wizard.md)   
  [Analysis Services 配置スクリプトについて](understanding-the-analysis-services-deployment-script.md)  
   
   

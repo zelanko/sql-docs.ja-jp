@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10020"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b0d5e7c55b8040496e0714acd98bb81d37c602bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e0fc786c5cf35dda0beec0800b1515c9e0a44ca0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255794"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>[オプション] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   **[データセットのプロパティ]** ダイアログ ボックスの **[オプション]** を選択すると、照合順序オプションや小計を詳細行として処理するオプションなど、クエリのデータ オプションを変更できます。 照合順序の詳細については、 [SQL Server オンライン ブック](../../relational-databases/collations/collation-and-unicode-support.md) の「 [照合順序と Unicode のサポート](http://go.microsoft.com/fwlink/?linkid=98335)」を参照してください。  
@@ -49,7 +49,7 @@ ms.locfileid: "36164025"
  文字幅の区別を決める値を選択します。 データで文字幅を区別するかどうかを示します。 **[True]**、 **[False]**、または **[自動]** に設定できます。既定値の **[自動]** は、レポート サーバーが、レポートの実行時にデータ プロバイダーから値の取得を試みる必要があることを示します。 データ プロバイダーが文字幅の区別をサポートしない場合、レポートは値が **[False]** の場合と同じように実行されます。 値を正確に把握しており、その値が確実にサポートされる場合は、 **[True]** を選択します。  
   
  **[小計を詳細行として解釈]**  
- 集計行ではなく詳細行として小計行を解釈するかどうかを示す値を選択します。 既定値は**自動**、レポートを使用しない場合、詳細行として小計行を処理する必要があることを示します、`Aggregate`データ セット内のフィールドにアクセスする関数。 小計行を集計行として解釈する必要がある場合は、 **[False]** を選択します。 使用しないことがわかってや詳細行として解釈する小計行をする場合、 `Aggregate`() 関数を選択して**True**です。  
+ 集計行ではなく詳細行として小計行を解釈するかどうかを示す値を選択します。 既定値は**自動**、レポートを使用しない場合に、小計行の詳細行として処理することを示します、`Aggregate`データ セット内のフィールドにアクセスする関数。 小計行を集計行として解釈する必要がある場合は、 **[False]** を選択します。 小計行の詳細行として解釈して、使用しないことがわかっている場合、 `Aggregate`() 関数を選択**True**します。  
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   

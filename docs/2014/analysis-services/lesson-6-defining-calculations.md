@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 6: 計算の定義 |Microsoft ドキュメント'
+title: 'レッスン 6: 計算の定義 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 27d54217fe24f18184cacbbdb671f1d7569e350c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dcc6179b4a0cc0a5b5ade735ef7272d265e35c24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326662"
 ---
 # <a name="lesson-6-defining-calculations"></a>レッスン 6 : 計算の定義
   このレッスンでは、多次元式 (MDX) の式またはスクリプトである計算を定義する方法について学習します。 計算を使用すると、計算されるメンバーや名前付きセットを定義できます。また、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブの機能を拡張するさまざまなスクリプト コマンドを実行できます。 たとえば、サブキューブを定義し、計算をサブキューブ内のセルに割り当てるスクリプト コマンドを実行できます。  

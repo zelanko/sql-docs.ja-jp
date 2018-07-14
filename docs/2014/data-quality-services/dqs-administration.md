@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dqs administration
 - administration
@@ -17,13 +17,13 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9c96312e55315160e8433a1c2fb0cf94e38af2ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2dd08fce2cc93b62d323aee669f9e5e8b49dffa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222672"
 ---
 # <a name="dqs-administration"></a>DQS 管理
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) では、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]で実行されるさまざまな DQS アクティビティを管理し、DQS アクティビティに関連するサーバー レベルのプロパティを構成し、参照データ サービスの設定を構成し、DQS ログの設定を構成できます。 これらの作業は、 **の** 管理 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]機能を使用して行います。 DQS でのセキュリティ アクセス (ロール) に基づいて、特定の管理機能へのアクセスが許可/禁止されます。  
@@ -69,7 +69,7 @@ ms.locfileid: "36165684"
   
 -   **DQS のデータベースのデタッチとアタッチ**: DQS データベースをデタッチおよびアタッチする手順は、他の SQL Server データベースのデタッチおよびアタッチと同じですが、DQS に固有の考慮事項がいくつかあります。  
   
- 詳細については、次を参照してください。 [DQS データベースの管理](../../2014/data-quality-services/manage-dqs-databases.md)です。  
+ 詳細については、次を参照してください。 [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

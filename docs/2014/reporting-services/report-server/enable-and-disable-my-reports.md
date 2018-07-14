@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deactivated My Reports folder
 - folders [Reporting Services], My Reports
@@ -19,13 +19,13 @@ ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 56a4d317debae238ffc65cfcc04c72b8787421d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03c0949c5004d3b6485d1142ab6e532e0637cb2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194874"
 ---
 # <a name="enable-and-disable-my-reports"></a>個人用レポートの有効化と無効化
   個人用レポート機能では、ユーザーが所有しているレポートを個人用のフォルダーに保存できるように、レポート サーバー データベースに個人の記憶域を割り当てます。 レポート サーバー管理者として、この機能を有効化または無効化したり、セキュリティ設定を変更してユーザーがこの作業領域で実行できる操作を制御することで機能の動作を変更することができます。  
@@ -55,7 +55,7 @@ ms.locfileid: "36173632"
  個人用レポートをアクティブ化すると、ユーザーが [個人用レポート] フォルダーを必要とするかどうかに関係なく、ドメイン アカウントを持つ各ユーザーが [個人用レポート] リンクをクリックしたときに、[個人用レポート] フォルダーが作成されます。 フォルダーが使用されているかどうかを判断する体系的な方法はありません。 フォルダーに含まれているデータがあるかどうかを調べるには、フォルダーを手動で確認する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [個人用レポートのセキュリティ保護します。](../security/secure-my-reports.md)   
+ [個人用レポートをセキュリティで保護します。](../security/secure-my-reports.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](report-server-content-management-ssrs-native-mode.md)  
   
   

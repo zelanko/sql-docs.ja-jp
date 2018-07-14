@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
 - UNION queries
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - merged SELECT query [SQL Server]
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fbfe0de4422aba4a73a5cabf16c42566c272a7d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3469f186285d5885e1353b5c8a1f8cffe444e3cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263928"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>UNION クエリの作成 (Visual Database Tools)
-  UNION キーワードを使用すると、2 つの SELECT ステートメントの結果を、1 つのテーブルに表示できます。 いずれかの SELECT ステートメントから返された行がすべて組み合わされて、UNION 式の結果として表示されます。 例については、次を参照してください。[選択例&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql)です。  
+  UNION キーワードを使用すると、2 つの SELECT ステートメントの結果を、1 つのテーブルに表示できます。 いずれかの SELECT ステートメントから返された行がすべて組み合わされて、UNION 式の結果として表示されます。 例については、次を参照してください。 [SELECT の例&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql)します。  
   
 > [!NOTE]  
 >  ダイアグラム ペインに表示できるのは、1 つの SELECT 句だけです。 したがって、UNION クエリを使用している場合、クエリ デザイナーにはテーブル操作ペインは表示されません。  
@@ -55,8 +55,8 @@ ms.locfileid: "36164216"
   
 ## <a name="see-also"></a>参照  
  [クエリの種類がサポートされている&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [クエリおよびビューの操作方法に関するトピックをデザイン&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [クエリで基本的な操作を実行&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
+ [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [クエリに関する基本操作を実行&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
  [共用体&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/set-operators-union-transact-sql)  
   
   

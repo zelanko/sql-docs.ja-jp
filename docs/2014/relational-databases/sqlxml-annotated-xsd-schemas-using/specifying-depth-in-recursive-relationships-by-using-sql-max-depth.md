@@ -1,5 +1,5 @@
 ---
-title: Sql:max を使用して、再帰リレーションシップの深さを指定する-深さ |Microsoft ドキュメント
+title: Sql:max を使用して、再帰リレーションシップの深さの指定-深さ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a08a5d6e7d58157bc61d7cbd604d12d0fd705b2a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0cb07848e18f1f992b0f4f815c24d731c9001268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217098"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth を使用した、再帰リレーションシップの深さの指定
   リレーショナル データベースでは、テーブルのリレーションシップにそのテーブル自身が含まれることを、再帰リレーションシップと呼びます。 たとえば、監督者と被監督者のリレーションシップでは、従業員の記録を格納するテーブルのリレーションシップに、そのテーブル自身が含まれます。 この場合、従業員テーブルはリレーションシップの 1 つの側では監督者となり、別の側では被監督者となります。  
@@ -64,7 +64,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  このフラグメントでは、従業員 5 が従業員 4、従業員 4 が従業員 3 に、従業員 3 と 2 は従業員 1 に報告を行います。  
   
- この結果を生成するには、次の XSD スキーマを使用して、これに対する XPath クエリを指定できます。 スキーマでは、記述、  **\<Emp >** から成る EmployeeType 型の要素、  **\<Emp >** 同じ EmployeeType 型の子要素です。 これは、要素とその先祖が同じ型の再帰リレーションシップです。 さらに、スキーマを使用して、  **\<sql:relationship >** 監督者と被間の親子リレーションシップを記述します。 これで **\<sql:relationship >** Emp は親と子テーブルの両方です。  
+ この結果を生成するには、次の XSD スキーマを使用して、これに対する XPath クエリを指定できます。 スキーマについて説明します、  **\<Emp >** から成る EmployeeType 型の要素、  **\<Emp >** 同じ EmployeeType 型の子要素。 これは、要素とその先祖が同じ型の再帰リレーションシップです。 さらに、スキーマを使用して、  **\<sql:relationship >** 監督者と被監督者間の親子リレーションシップを記述します。 これで **\<sql:relationship >** Emp は親と子テーブルの両方。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -149,7 +149,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
     mapping-schema="C:\MyDir\maxDepth.xml"  
     ```  
   
-5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  結果を次に示します。  
   
@@ -174,7 +174,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  結果の階層の深さを変更するには、スキーマの `sql:max-depth` 注釈の値を変更し、それぞれの変更の後にもう一度テンプレートを実行します。  
   
- 上のスキーマでは、すべて、  **\<Emp >** 要素がまったく同じ属性のセット (**EmployeeID**、 **FirstName**、および**LastName**)。 次のスキーマが返す、さらに若干変更されて**ReportsTo**すべての属性、  **\<Emp >** マネージャーに報告する要素。  
+ 上のスキーマでは、すべて、  **\<Emp >** 要素がまったく同じ属性のセット (**EmployeeID**、 **FirstName**、および**LastName**)。 次のスキーマを返す追加少し変更した**ReportsTo**すべての属性、  **\<Emp >** マネージャーに報告する要素。  
   
  たとえば、次の XML フラグメントでは、従業員 1 の部下が示されています。  
   
@@ -246,7 +246,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  `sql:max-depth` 注釈は、複合コンテンツを含む要素にも指定できます。  
   
 ### <a name="recursive-elements"></a>再帰要素  
- `sql:max-depth` を再帰リレーションシップの親要素と子要素の両方で指定した場合は、親で指定した `sql:max-depth` 注釈が優先されます。 たとえば次のスキーマでは、親と子の両方の従業員要素に `sql:max-depth` 注釈が指定されています。 この場合、`sql:max-depth=4`に指定されている、  **\<Emp >** 親要素 (監督者) が優先されます。 `sql:max-depth`の子で指定された **\<Emp >** 要素 (被監督者) は無視されます。  
+ `sql:max-depth` を再帰リレーションシップの親要素と子要素の両方で指定した場合は、親で指定した `sql:max-depth` 注釈が優先されます。 たとえば次のスキーマでは、親と子の両方の従業員要素に `sql:max-depth` 注釈が指定されています。 この場合、`sql:max-depth=4`に指定されている、  **\<Emp >** 親要素 (監督者) が優先されます。 `sql:max-depth`子で指定された **\<Emp >** 要素 (被監督者) は無視されます。  
   
 #### <a name="example-b"></a>例 B  
   
@@ -283,12 +283,12 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- このスキーマをテストするには、サンプル A は、このトピックの前半に記載されている手順に従います。  
+ このスキーマをテストするには、サンプル A は、このトピックの前の手順に従います。  
   
 ### <a name="nonrecursive-elements"></a>非再帰要素  
- 再帰のないスキーマ内の要素に `sql:max-depth` 注釈が指定されている場合、その注釈は無視されます。 次のスキーマで、  **\<Emp >** 要素から成る、 **\<定数 >** が含まれている子要素、  **\<Emp >** 子要素です。  
+ 再帰のないスキーマ内の要素に `sql:max-depth` 注釈が指定されている場合、その注釈は無視されます。 次のスキーマで、  **\<Emp >** 要素から成る、 **\<定数 >** これには子要素、  **\<Emp >** 子要素。  
   
- このスキーマで、`sql:max-depth`で指定されている注釈、 **\<定数 >** 間に再帰がないために、要素は無視されます、  **\<Emp >** 親と**\<定数 >** 子要素です。 間に再帰が、  **\<Emp >** 先祖と **\<Emp >** 子。 このスキーマでは先祖と子の両方に `sql:max-depth` 注釈が指定されています。 したがって、 `sql:max-depth` 、先祖に対して指定されている注釈 (**\<Emp >** 監督) が優先されます。  
+ このスキーマで、`sql:max-depth`で指定されている注釈、 **\<定数 >** 間に再帰がないために、要素は無視されます、  **\<Emp >** 親と**\<定数 >** 子要素。 間に再帰があるが、  **\<Emp >** 先祖と **\<Emp >** 子。 このスキーマでは先祖と子の両方に `sql:max-depth` 注釈が指定されています。 そのため、 `sql:max-depth` 、先祖に対して指定されている注釈 (**\<Emp >** 監督) が優先されます。  
   
 #### <a name="example-c"></a>例 C  
   
@@ -334,9 +334,9 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 ## <a name="complex-types-derived-by-restriction"></a>制限により派生する複合型  
  により派生する複合型があれば**\<制限 >**、対応する基本複合型の要素が指定することはできません、`sql:max-depth`注釈。 このような場合は、派生した型の要素に `sql:max-depth` 注釈を追加できます。  
   
- 一方で、により派生する複合型があれば**\<拡張子 >**、対応する基本複合型の要素を指定できます、`sql:max-depth`注釈。  
+ その一方、により派生する複合型があれば**\<拡張機能 >**、対応する基本複合型の要素を指定できます、`sql:max-depth`注釈。  
   
- たとえば、次の XSD スキーマでは、基本型に `sql:max-depth` 注釈が指定されているのでエラーが発生します。 によって派生した型では、この注釈はサポートされていません**\<制限 >** 別の型から。 この問題を解決するには、スキーマを変更し、派生した型の要素に `sql:max-depth` 注釈を指定する必要があります。  
+ たとえば、次の XSD スキーマでは、基本型に `sql:max-depth` 注釈が指定されているのでエラーが発生します。 この注釈は、派生した型ではサポートされていません**\<制限 >** 別の型から。 この問題を解決するには、スキーマを変更し、派生した型の要素に `sql:max-depth` 注釈を指定する必要があります。  
   
 #### <a name="example-d"></a>例 D  
   
@@ -380,7 +380,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- このスキーマでは、`sql:max-depth` 複合型に `CustomerBaseType` が指定されています。 スキーマで指定も、 **\<顧客 >** 型の要素`CustomerType`から派生した`CustomerBaseType`です。 このようなスキーマで指定される XPath クエリでは、制限の基本型で定義されている要素に `sql:max-depth` がサポートされていないので、エラーが発生します。  
+ このスキーマでは、`sql:max-depth` 複合型に `CustomerBaseType` が指定されています。 指定する**\<顧客 >** 型の要素`CustomerType`から派生`CustomerBaseType`します。 このようなスキーマで指定される XPath クエリでは、制限の基本型で定義されている要素に `sql:max-depth` がサポートされていないので、エラーが発生します。  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>深い階層のスキーマ  
  要素に子要素が含まれ、その子要素にさらに別の子要素が含まれるというような深い階層のスキーマの場合は、 指定されている `sql:max-depth` 注釈によって生成される XML ドキュメントで、階層が 500 レベルを超えた場合はエラーが返されます。ここでは、最上位要素をレベル 1、その子をレベル 2 と数えます。  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], asynchronous commit
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: 37
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 924708dabd2cfe4fa94eb6f726e29613d6917d86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 13676e5706743cb2ce16e0f94e72ab8301695a71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273748"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性モード (AlwaysOn 可用性グループ)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の *可用性モード* は、可用性レプリカが同期コミット モードで動作できるかどうかを指定するレプリカのプロパティです。 可用性レプリカごとに、可用性モードを同期コミット モードまたは非同期コミット モードとして構成する必要があります。  プライマリ レプリカが *非同期コミット モード*で構成されている場合、プライマリ レプリカはセカンダリ レプリカによる受信トランザクション ログ レコードのディスクへの書き込みを ( *ログ書き込み*) 待機しません。 特定のセカンダリ レプリカが非同期コミット モードで構成されている場合、プライマリ レプリカはそのセカンダリ レプリカによるログ書き込みを待機しません。 プライマリ レプリカとセカンダリ レプリカの両方が *同期コミット モード*で構成されている場合、プライマリ レプリカはログが書き込まれたことをセカンダリ レプリカが確認するまで待機します (プライマリの *セッション タイムアウト期間*内に、セカンダリ レプリカがプライマリ レプリカに対する ping に失敗した場合を除きます)。  
@@ -66,7 +65,7 @@ ms.locfileid: "36164159"
   
  非同期コミット セカンダリ レプリカは、プライマリ レプリカから受信するログ レコードとの時間差を埋めようとします。 ただし、非同期コミット セカンダリ データベースは常に同期されていない状態であり、対応するプライマリ データベースよりも若干遅れる可能性があります。 通常、非同期コミット セカンダリ データベースと対応するプライマリ データベース間の時間差はわずかですが、 セカンダリ レプリカをホストするサーバーに負荷がかかり過ぎている場合やネットワークが低速の場合は、この時間差が大きくなります。  
   
- 非同期コミット モードでサポートされるフェールオーバーは、強制フェールオーバーのみです (データ損失の可能性あり)。 フェールオーバーの強制は、現在のプライマリ レプリカが長期間使用できない状態のままであり、データを失うリスクよりもプライマリ データベースがすぐに使用できるようになることの方が重要である場合にのみ、最後の手段として使用します。フェールオーバー ターゲットとなるレプリカは、ロールが SECONDARY 状態または RESOLVING 状態であることが必要です。 フェールオーバー ターゲットはプライマリ ロールに移行し、データベースのコピーがプライマリ データベースになります。 元のプライマリ データベースが使用できるようになると、残りのセカンダリ データベースと元のプライマリ データベースは手動で個別に再開されるまで中断されます。 非同期コミット モードでは、元のプライマリ レプリカから元のセカンダリ レプリカにまだ送信されていなかったトランザクション ログはすべて失われます。 つまり、一部またはすべての新しいプライマリ データベースで、最近コミットされたトランザクションが欠落している可能性があります。 強制フェールオーバーの動作および使用するためのベスト プラクティスの詳細については、次を参照してください。[フェールオーバーとフェールオーバー モード&#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)です。  
+ 非同期コミット モードでサポートされるフェールオーバーは、強制フェールオーバーのみです (データ損失の可能性あり)。 フェールオーバーの強制は、現在のプライマリ レプリカが長期間使用できない状態のままであり、データを失うリスクよりもプライマリ データベースがすぐに使用できるようになることの方が重要である場合にのみ、最後の手段として使用します。フェールオーバー ターゲットとなるレプリカは、ロールが SECONDARY 状態または RESOLVING 状態であることが必要です。 フェールオーバー ターゲットはプライマリ ロールに移行し、データベースのコピーがプライマリ データベースになります。 元のプライマリ データベースが使用できるようになると、残りのセカンダリ データベースと元のプライマリ データベースは手動で個別に再開されるまで中断されます。 非同期コミット モードでは、元のプライマリ レプリカから元のセカンダリ レプリカにまだ送信されていなかったトランザクション ログはすべて失われます。 つまり、一部またはすべての新しいプライマリ データベースで、最近コミットされたトランザクションが欠落している可能性があります。 強制フェールオーバーの動作および使用するためのベスト プラクティスの詳細については、次を参照してください。[フェールオーバーとフェールオーバー モード&#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)します。  
   
 ##  <a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
  同期コミット可用性モード (*同期コミット モード*) では、セカンダリ データベースは可用性グループに参加すると、対応するプライマリ データベースからの遅れを取り戻し、SYNCHRONIZED 状態になります。 データの同期が継続されている間は、セカンダリ データベースは SYNCHRONIZED のままです。 これにより、特定のプライマリ データベースでコミットされたすべてのトランザクションが、対応するセカンダリ データベースでもコミットされていることが保証されます。 特定のセカンダリ レプリカのすべてのセカンダリ データベースが同期されると、セカンダリ レプリカ全体の同期状態が HEALTHY になります。  
@@ -78,7 +77,7 @@ ms.locfileid: "36164159"
 -   ネットワークやコンピューターの遅延または不具合が原因で、セカンダリ レプリカとプライマリ レプリカ間のセッションがタイムアウトになった。  
   
     > [!NOTE]  
-    >  可用性レプリカのセッション時間プロパティについては、次を参照してください。 [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)です。  
+    >  可用性レプリカのセッション時間プロパティの詳細については、次を参照してください。 [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)します。  
   
 -   セカンダリ レプリカ上のセカンダリ データベースを中断した。 セカンダリ レプリカの同期が行われなくなり、同期状態が NOT_HEALTHY としてマークされます。 中断されたセカンダリ データベースが再開されて再同期されるか、可用性グループから削除されるまで、セカンダリ レプリカを HEALTHY にすることはできません。  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36164159"
 ###  <a name="SyncCommitWithAuto"></a> 自動フェールオーバーを指定した同期コミット モード  
  自動フェールオーバーは、プライマリ レプリカが機能しなくなった後もデータベースをすぐに再度使用できるようにすることで、高可用性を実現します。 可用性グループを自動フェールオーバー用に構成するには、現在のプライマリ レプリカと 1 つのセカンダリ レプリカの両方を、自動フェールオーバーを指定した同期コミット モードに設定する必要があります。  
   
- さらに、特定の時点で自動フェールオーバーを実行するには、このセカンダリ レプリカがプライマリ レプリカと同期されている (つまり、すべてのセカンダリ レプリカが同期されている) 必要があるだけでなく、Windows Server フェールオーバー クラスタリング (WSFC) クラスターがクォーラムを持っている必要もあります。 プライマリ レプリカが使用できなくなると、これらの条件で自動フェールオーバーが発生します。 セカンダリ レプリカはプライマリ ロールに切り替わり、そのデータベースをプライマリ データベースとして提供します。 詳細については、の自動フェールオーバー」セクションを参照して、[フェールオーバーとフェールオーバー モード&#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)トピックです。  
+ さらに、特定の時点で自動フェールオーバーを実行するには、このセカンダリ レプリカがプライマリ レプリカと同期されている (つまり、すべてのセカンダリ レプリカが同期されている) 必要があるだけでなく、Windows Server フェールオーバー クラスタリング (WSFC) クラスターがクォーラムを持っている必要もあります。 プライマリ レプリカが使用できなくなると、これらの条件で自動フェールオーバーが発生します。 セカンダリ レプリカはプライマリ ロールに切り替わり、そのデータベースをプライマリ データベースとして提供します。 詳細については、の「自動フェールオーバー」セクションを参照してください、[フェールオーバーとフェールオーバー モード&#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)トピック。  
   
 > [!NOTE]  
 >  WSFC クォーラムと [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] については、「[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)」を参照してください。  
@@ -153,9 +152,9 @@ ms.locfileid: "36164159"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性と災害復旧の Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn チームのブログ: 公式 SQL Server AlwaysOn チーム ブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ: 正式な SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: 入れ子になったテーブル (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: 入れ子になったテーブル (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: acb00a14c6fb59a223727c8f551e74fb636a7ee6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b072c134c047f9833f3b5297688bf30d68a6050
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167733"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>入れ子になったテーブル (Analysis Services - データ マイニング)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データを、ケース テーブル内の一連のケースとしてデータ マイニング アルゴリズムに入力する必要があります。 しかし、1 行のデータですべてのケースを表すことはできません。 たとえば、1 つのテーブルに顧客情報、別のテーブルに顧客の購入記録が含まれている 2 つのテーブルから、ケースが派生している場合があります。 顧客情報テーブルの 1 人の顧客が顧客購入記録テーブルに複数の項目を持っている場合、1 行でデータを表すことが難しくなります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、 *入れ子になったテーブル*を使用して、このようなケースを扱うための独自の方法が用意されています。 次の図は、入れ子になったテーブルの概念を示しています。  
   
- ![入れ子になったテーブルを使用して 2 つのテーブルが結合された](../media/nested-tables.gif "入れ子になったテーブルを使用して、2 つのテーブルの結合")  
+ ![入れ子になったテーブルを使用して 2 つのテーブルが結合](../media/nested-tables.gif "入れ子になったテーブルを使用して 2 つのテーブルの結合")  
   
  この図では、親テーブルである最初のテーブルに顧客に関する情報が含まれ、各顧客の一意の識別子が付けられています。 子テーブルである 2 番目のテーブルには、各顧客の購入記録が含まれています。 子テーブルの購入記録は、一意の識別子である **CustomerKey** 列によって親テーブルに関連付けられています。 図の 3 番目のテーブルは、2 つのテーブルが結合されていることを示します。  
   

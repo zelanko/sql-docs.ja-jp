@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], backing up data
 - backups [SQL Server]
@@ -23,26 +22,26 @@ helpviewer_keywords:
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 81
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7df7b8c35327d097e7bbc92bfb1e5cf99c4f4ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b48f8c9bbcb39f68aa0e86957c8713b6044216e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163033"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ コンポーネントについて説明します。 データを保護するためには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップすることが不可欠です。 ここでは、バックアップの種類およびバックアップの制限事項について説明します。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ デバイスとバックアップ メディアについても取り上げます。  
   
  **このトピックの内容**  
   
--   [コンポーネントおよび概念](#TermsAndDefinitions)  
+-   [コンポーネントと概念](#TermsAndDefinitions)  
   
 -   [バックアップの圧縮](#BackupCompression)  
   
--   [SQL Server のバックアップ操作の制限事項](#Restrictions)  
+-   [SQL Server でのバックアップ操作に関する制限事項](#Restrictions)  
   
 -   [関連タスク](#RelatedTasks)  
   
@@ -87,7 +86,7 @@ ms.locfileid: "36165263"
  [部分バックアップ](partial-backups-sql-server.md)  
  データベースの一部のファイル グループのデータのみを格納します。プライマリ ファイル グループ、すべての読み取り/書き込みファイル グループのほか、必要に応じて指定した読み取り専用ファイルが含まれます。  
   
- **バックアップ メディアの用語と定義**  
+ **バックアップ メディア用語と定義**  
   
  [バックアップ デバイス](backup-devices-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server のバックアップは、Windows Azure BLOB ストレージ サービスに書き込むことができます。バックアップ先とバックアップ ファイルの名前を指定するには **URL** 形式を使用します。 詳しくは、「 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
@@ -110,7 +109,7 @@ ms.locfileid: "36165263"
 ##  <a name="BackupCompression"></a> バックアップの圧縮  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降のバージョンでは、バックアップの圧縮がサポートされ、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、圧縮されたバックアップを復元することができます。 詳細については、「[バックアップの圧縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)」を参照してください。  
   
-##  <a name="Restrictions"></a> SQL Server のバックアップ操作の制限事項  
+##  <a name="Restrictions"></a> SQL Server でのバックアップ操作に関する制限事項  
  オンラインでデータベースを使用中であってもバックアップを行うことができます。 ただし、次の制限事項があります。  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>オフライン データはバックアップできない  
@@ -140,7 +139,7 @@ ms.locfileid: "36165263"
  バックアップ操作がファイル管理操作または圧縮操作の実行と重複すると、競合が発生します。 競合する操作のどちらが先に開始されたかにかかわらず、1 つ目の操作によって設定されたロックのタイムアウトを 2 つ目の操作が待機します (タイムアウト期間はセッション タイムアウトの設定によって制御されます)。ロックがタイムアウト期間内に解放されると、2 番目の操作が開始されます。 ロックがタイムアウトになると、2 番目の操作は実行されません。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
- **バックアップ デバイスとバックアップ メディアを操作するには**  
+ **バックアップ デバイスとバックアップ メディアを使用するには**  
   
 -   [ディスク ファイルの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   

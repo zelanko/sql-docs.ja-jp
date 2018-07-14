@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlserverregisteredserver.dhelp
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - server registration [SQL Server]
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b7d990b38bc36ad5a4a4a17d856bfd770a79be59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ddc29cf39385a1d91b0f2328ec69e3e61e4c4902
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332962"
 ---
 # <a name="register-servers"></a>サーバーの登録
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にサーバーを登録することで、サーバー接続情報を保存して、その後の接続時に使用できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にサーバーを登録するには、次の 3 とおりの方法があります。  
@@ -66,7 +66,7 @@ ms.locfileid: "36164491"
 ## <a name="related-tasks"></a>Related Tasks  
  登録したサーバーの基礎知識については、次の各トピックを参照してください。  
   
-|**description**|**トピック**|  
+|**[説明]**|**トピック**|  
 |---------------------|---------------|  
 |ローカル サーバー インスタンスの登録|[接続済みのサーバーの登録 &#40;SQL Server Management Studio&#41;](register-a-connected-server-sql-server-management-studio.md)|  
 |サーバーの登録|[新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)|  

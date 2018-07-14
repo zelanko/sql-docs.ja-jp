@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.reindex.f1
 - reindex
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d12d547871d2602249d042ff6e93060f340e9b2a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 603f79bcbbe2ec42b05de28b3685c71f6cca9c69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268978"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>[インデックスの再構築タスク]\(メンテナンス プラン)
   **[インデックスの再構築タスク]** ダイアログ ボックスを使用すると、データベースのテーブルに新しい FILL FACTOR でインデックスを再作成できます。 FILL FACTOR は、後で拡張できるように、インデックスの各ページの空き領域の量を決定します。 FILL FACTOR が適用されるのはインデックスの作成時だけであるため、テーブルにデータが追加されるにつれて、各ページの空き容量は徐々に減少します。 データ ページおよびインデックス ページを再編成すると、再び空き領域を確保できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "36163854"
  **[インデックスの再構築タスク]** では、ALTER INDEX ステートメントが使用されます。  
   
 ## <a name="options"></a>および  
- **Connection**  
+ **[接続]**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  
@@ -66,20 +66,20 @@ ms.locfileid: "36163854"
  **[選択]**  
  このタスクの対象とするテーブルまたはインデックスを指定します。 [オブジェクト] ボックスで **[テーブルとビュー]** が選択されている場合は、このオプションは利用できません。  
   
- **空き領域の既定の容量を持つページを再構成します。**  
+ **空き領域量が既定のページを再構成します。**  
  データベース内のテーブルに定義されているインデックスを削除し、インデックスの作成時に指定された FILL FACTOR を使用して、新しいインデックスを再作成します。  
   
- **ページの割合にごとの空き領域を変更します。**  
+ **ページの割合をごとの空き領域を変更します。**  
  データベース内のテーブルに定義されているインデックスを削除し、指定した割合の空き領域が各インデックス ページに確保されるように自動的に計算される FILL FACTOR の値を使用してインデックスを再作成します。 指定するパーセント値を大きくすると、インデックス ページに確保される空き領域が増えて、より多くのデータをインデックスに追加できるようになります。 有効値は、0 ～ 100 です。  
   
  **[tempdb の結果を並べ替える]**  
- 使用して、`SORT_IN_TEMPDB`オプションは、インデックスの作成中に生成された中間の並べ替え結果を一時的に格納を決定します。 並べ替え操作が必要ない場合、または並べ替えをメモリ上で実行できる場合、 `SORT_IN_TEMPDB`オプションは無視されます。  
+ 使用して、`SORT_IN_TEMPDB`オプションは、インデックスの作成中に生成された中間の並べ替え結果が一時的に格納場所が決まります。 並べ替え操作が必要ない場合、または並べ替えをメモリ上で実行できる場合、 `SORT_IN_TEMPDB`オプションは無視されます。  
   
  **インデックスの再作成中にオンラインのインデックスを保持します。**  
  `ONLINE` オプションを使用すると、インデックス操作の実行中に、ユーザーは基になるテーブルまたはクラスター化インデックス データ、および任意の関連付けられた非クラスター化インデックスにアクセスできます。  
   
 > [!NOTE]  
->  オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
  **[T-SQL の表示]**  
  選択したオプションに基づき、このタスクでサーバーに対して実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを表示します。  

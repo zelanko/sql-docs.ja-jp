@@ -1,5 +1,5 @@
 ---
-title: DBSCHEMA_TABLES 行セット |Microsoft ドキュメント
+title: DBSCHEMA_TABLES 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - DBSCHEMA_TABLES rowset
 ms.assetid: 14c16e6b-0aff-4ad1-b98f-cdb7df0f8d73
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9033dc2f48b74bc13268d06f66a084f4ada22cfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83537dc9159331342ae344e5003d9c04fd8980eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211832"
 ---
 # <a name="dbschematables-rowset"></a>DBSCHEMA_TABLES 行セット
-  メジャー グループおよび内のテーブルとして公開されているディメンションを識別[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+  メジャー グループおよびディメンション内のテーブルとして公開される識別[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  `DBSCHEMA_TABLES`行セットには、次の列が含まれています。  
@@ -39,7 +39,7 @@ ms.locfileid: "36085967"
 |`TABLE_CATALOG`|`DBTYPE_WSTR`|255|このオブジェクトが所属するカタログの名前。|  
 |`TABLE_SCHEMA`|`DBTYPE_WSTR`|255|このオブジェクトが所属するキューブの名前。|  
 |`TABLE_NAME`|`DBTYPE_WSTR`|255|`TABLE_TYPE` が `TABLE` である場合、オブジェクトの名前。|  
-|`TABLE_TYPE`|`DBTYPE_WSTR`||テーブルの型。<br /><br /> `TABLE` は、オブジェクトがメジャー グループであることを示します。<br /><br /> `SYSTEM TABLE` オブジェクトが、ディメンションであることを示します。|  
+|`TABLE_TYPE`|`DBTYPE_WSTR`||テーブルの型。<br /><br /> `TABLE` は、オブジェクトがメジャー グループであることを示します。<br /><br /> `SYSTEM TABLE` オブジェクトがディメンションであることを示します。|  
 |`TABLE_GUID`|`DBTYPE_GUID`||サポートされていません。|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||オブジェクトに関して人が認識できる説明。|  
 |`TABLE_PROPID`|`DBTYPE_UI4`||サポートされていません。|  

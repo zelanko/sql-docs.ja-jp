@@ -1,5 +1,5 @@
 ---
-title: Aliases 要素 (ASSL) |Microsoft ドキュメント
+title: Aliases 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Aliases element
 ms.assetid: 9de9e683-d30d-4d61-b32d-c5a946825742
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60673c26bf4a430c842da0fb61c98de7242ccd1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 677434b5ea6383e5905a703225edb5e56e3fb4e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267688"
 ---
 # <a name="aliases-element-assl"></a>Aliases 要素 (ASSL)
   コレクションを格納[エイリアス](../properties/alias-element-assl.md)要素に関連付けられた、[アカウント](../objects/account-element-assl.md)要素  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text queries [SQL Server], performance
 - transform noise words option
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 36f615f09fa20c2d5d07853d0a9ef07fdc445704
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 708333809439bcada782b72ce67890dc7b3d5799
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231942"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words サーバー構成オプション
-  使用して、`transform noise words`サーバー構成オプションをエラー メッセージを抑制するかどうかはノイズ ワード、つまり[ストップ ワード](../../relational-databases/search/full-text-search.md)、ゼロ行を返すフルテキスト クエリのブール演算が発生します。 フルテキスト クエリに使用されている CONTAINS 述語に、ノイズ ワードを含んだブール演算または NEAR 演算が存在する場合、このオプションを使用すると便利です。 次の表に、このオプションで使用可能な値を示します。  
+  使用して、`transform noise words`サーバー構成オプションをエラー メッセージを抑制するかどうかノイズ ワード、つまり[ストップ ワード](../../relational-databases/search/full-text-search.md)、ゼロ行を返すフルテキスト クエリのブール演算が発生します。 フルテキスト クエリに使用されている CONTAINS 述語に、ノイズ ワードを含んだブール演算または NEAR 演算が存在する場合、このオプションを使用すると便利です。 次の表に、このオプションで使用可能な値を示します。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "36164149"
 |1|ノイズ ワード (ストップワード) の変換が行われます。 これらは無視されて、残りのクエリが評価されます。<br /><br /> 近接語句内にノイズ ワードが指定された場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって削除されます。 たとえば、ノイズ ワードである " `is` " は、 `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`から削除され、検索クエリは `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`に変換されます。 `CONTAINS(<column_name>, 'NEAR(hello,is)')` は、有効な検索用語が 1 つしか存在しないため、単純に `CONTAINS(<column_name>, hello)` に変換されます。|  
   
 ## <a name="effects-of-the-transform-noise-words-setting"></a>transform noise words 設定の影響  
- このセクションでは、ノイズ ワードであるクエリの動作を示しています。"`the`"、代替の設定で`transform noise words`です。  サンプルのフルテキスト クエリ文字列は、 `[1, "The black cat"]`というデータを含んだテーブル行に対して実行するものとします。  
+ このセクションでは、ノイズ ワードが含まれるクエリの動作を示しています。"`the`"、代替の設定の`transform noise words`します。  サンプルのフルテキスト クエリ文字列は、 `[1, "The black cat"]`というデータを含んだテーブル行に対して実行するものとします。  
   
 > [!NOTE]  
 >  このようなシナリオでは必ず、ノイズ ワードの警告が発生する可能性があります。  

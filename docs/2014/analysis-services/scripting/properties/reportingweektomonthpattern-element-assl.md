@@ -1,5 +1,5 @@
 ---
-title: ReportingWeekToMonthPattern 要素 (ASSL) |Microsoft ドキュメント
+title: ReportingWeekToMonthPattern 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportingWeekToMonthPattern element
 ms.assetid: 8d7c694d-d5c5-4faa-af78-155779e84fe9
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b90c07018747c7ad04bbd2324bb0bd697f7d774c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcbbf8a7783d152c66ec4f222ba79b00181b60f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324822"
 ---
 # <a name="reportingweektomonthpattern-element-assl"></a>ReportingWeekToMonthPattern 要素 (ASSL)
-  レポートの週から月のパターンを定義、 [TimeBinding](../data-type/binding-data-type-assl.md)要素。  
+  レポート週から月のパターンを定義、 [TimeBinding](../data-type/binding-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,11 +66,11 @@ ms.locfileid: "36164170"
   
 |値|説明|  
 |-----------|-----------------|  
-|*445*|2 番目の月で、3 番目の月の 5 週間、4 週、四半期の最初の月の 4 週間です。|  
-|*454*|5 週間、2 番目の月と 3 番目の月の 4 週間、四半期の最初の月の 4 週間です。|  
+|*445*|4 週間で 2 番目の月と 3 番目の月に 5 週、四半期の最初の月の 4 週間です。|  
+|*454*|5 週の 2 番目の月と 4 週間では、3 番目の月、四半期の最初の月の 4 週間です。|  
 |*544*|四半期の最初の月の 5 週間、2 番目の月の 4 週間、および 3 番目の月の 4 週間|  
   
- 許可される値に対応する列挙`ReportingWeekToMonthPattern`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ReportingWeekToMonthPattern>します。  
+ 許容された値に対応する列挙体`ReportingWeekToMonthPattern`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ReportingWeekToMonthPattern>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

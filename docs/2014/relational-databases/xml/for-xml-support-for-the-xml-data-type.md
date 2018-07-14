@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f33b889cb9bc409815c6fe8a0501de3bc1388e68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 14010ca375afdf5166f737a27e33f8ed3fc42c49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327345"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml データ型に対する FOR XML サポート
-  FOR XML クエリの列を指定する場合`xml`型、SELECT 句で列の値は、ELEMENTS ディレクティブを指定するかどうかに関係なく、返された xml 要素としてマップされます。 `xml` 型の列内の XML 宣言はシリアル化されません。  
+  FOR XML クエリの列を指定する場合`xml`型 SELECT 句で列の値は、ELEMENTS ディレクティブを指定するかどうかに関係なく、返された xml 要素としてマップされます。 `xml` 型の列内の XML 宣言はシリアル化されません。  
   
- たとえば、顧客の連絡先情報の取得、次のクエリなど、 `BusinessEntityID`、 `FirstName`、および`LastName`列、およびからの電話番号、`AdditionalContactInfo`の列`xml`型です。  
+ たとえば、顧客の連絡先情報の取得、次のクエリなど、 `BusinessEntityID`、 `FirstName`、および`LastName`列、およびからの電話番号、`AdditionalContactInfo`の列`xml`型。  
   
 ```  
 USE AdventureWorks2012;  
@@ -44,7 +44,7 @@ declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-
 FOR XML AUTO, TYPE;  
 ```  
   
- 取得された追加の連絡先情報の値を除き、属性として、クエリでは ELEMENTS ディレクティブを指定しないため、列の値が返される、`xml`型の列です。 これらは要素として返されます。  
+ 列の値がから取得した追加の連絡先情報の値を除く、属性として返されるクエリでは ELEMENTS ディレクティブを指定しないため、`xml`型の列。 これらは要素として返されます。  
   
  結果の一部を次に示します。  
   
@@ -121,7 +121,7 @@ FOR XML AUTO, TYPE;
   
  クエリで ELEMENTS ディレクティブを指定した場合、結果の XML では、BusinessEntityID、LastName、および FirstName が要素として返されます。  
   
- 次の例は、FOR XML の処理ロジックにからの XML データの XML 宣言がシリアル化されないことを示します、`xml`型の列。  
+ 次の例では、FOR XML の処理ロジックにから XML データ内の任意の XML 宣言がシリアル化しないことを示しています、`xml`型の列。  
   
 ```  
 create table t(i int, x xml)  
@@ -152,7 +152,7 @@ for xml auto;
   
 -   インスタンス、`xml`型  
   
- たとえば、次のユーザー定義関数がの 1 つの列を含むテーブルを返します`xm`l 型。  
+ たとえば、次のユーザー定義関数がの 1 つの列を持つテーブルを返します`xm`l 型。  
   
 ```  
 USE AdventureWorks2012;  
@@ -174,7 +174,7 @@ declare namespace PD="http://www.adventure-works.com/schemas/products/descriptio
 END;  
 ```  
   
- ユーザー定義関数を実行して、その関数から返されたテーブルにクエリを実行することができます。 この例では、テーブルをクエリすることによって返された XML が割り当てられている、`xml`型の変数です。  
+ ユーザー定義関数を実行して、その関数から返されたテーブルにクエリを実行することができます。 この例では、テーブルのクエリによって返された XML が割り当てられている、`xml`型の変数。  
   
 ```  
 declare @x xml;  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6d8bc72c3c713dc1a113490431f4dba81c2a11a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d7a40c86c0dba2a4b2db08305f7fea379a97b1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164141"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201852"
 ---
 # <a name="transfer-error-messages-task"></a>エラー メッセージ転送タスク
   エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。 ユーザー定義メッセージとは、ID の値が 50000 以上のメッセージのことです。 ID の値が 50000 未満のメッセージはシステム エラー メッセージなので、エラー メッセージ転送タスクを使用して転送することはできません。  
@@ -50,7 +50,7 @@ ms.locfileid: "36164141"
  エラー メッセージ転送タスクでは、エラー メッセージ転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
   
 ## <a name="execution-value"></a>実行値  
- このタスクの `ExecutionValue` プロパティに定義される実行値は、転送されたエラー メッセージの数を返します。 ユーザー定義変数を割り当てることによって、`ExecValueVariable`エラー メッセージ転送に関する情報、エラー メッセージ転送タスクのプロパティが利用できるその他のオブジェクトをパッケージにします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../use-variables-in-packages.md)」をご覧ください。  
+ このタスクの `ExecutionValue` プロパティに定義される実行値は、転送されたエラー メッセージの数を返します。 ユーザー定義変数を割り当てることで、`ExecValueVariable`エラー メッセージ転送に関する情報、エラー メッセージ転送タスクのプロパティが利用できるその他のオブジェクトをパッケージにします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../use-variables-in-packages.md)」をご覧ください。  
   
 ## <a name="log-entries"></a>ログ エントリ  
  エラー メッセージ転送タスクには、次のようなカスタム ログ エントリがあります。  
@@ -59,7 +59,7 @@ ms.locfileid: "36164141"
   
 -   TransferErrorMessagesTaskFinishedTransferringObjects: 転送が終了したことを報告するログ エントリです。 ログ エントリには、終了時刻が含まれます。  
   
- さらのログ エントリ、`OnInformation`イベントが転送されたエラー メッセージとのログ エントリの数を報告、`OnWarning event`が上書きされる変換先では、各エラー メッセージ用に記述します。  
+ さらに、ログ エントリ、`OnInformation`イベントが転送されたエラー メッセージとログ エントリの数を報告、`OnWarning event`が上書きされる変換先では、各エラー メッセージが書き込まれます。  
   
 ## <a name="security-and-permissions"></a>セキュリティおよび権限  
  新しいエラー メッセージを作成する場合、パッケージを実行するユーザーは、転送先サーバーで sysadmin または serveradmin サーバー ロールのメンバーである必要があります。  

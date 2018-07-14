@@ -1,5 +1,5 @@
 ---
-title: KeepExisting 要素 (DTA) |Microsoft ドキュメント
+title: KeepExisting 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - KeepExisting element
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a74552aa4cf5b18273c42250f85bc48a794e1731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 62f81fd7ebdd4cee35c09b685273bba2d14d135b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269878"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting 要素 (DTA)
   データベース エンジン チューニング アドバイザーが、推奨設定を生成するときに保持しなければならない物理設計構造 (インデックス、インデックス付きビュー、パーティション分割) を指定します。  
@@ -45,7 +45,7 @@ ms.locfileid: "36085123"
 |**データ型と長さ**|`string`。長さの制限は、サーバーによって決まります。|  
 |**指定できる値**|**NONE**<br /> 既存の構造を保持しません。<br /><br /> **ALL**<br /> 既存の構造をすべて保持します。<br /><br /> **ALIGNED**<br /> パーティションで固定された構造をすべて保持します。<br /><br /> **CL_IDX**<br /> テーブルのクラスター化インデックスをすべて保持します。<br /><br /> **IDX**<br /> テーブルのクラスター化インデックスと非クラスター化インデックスをすべて保持します。<br /><br /> この要素では、上記の値のいずれか 1 つを使用してください。|  
 |**既定値**|[なし] :|  
-|**個数**|任意。 につき 1 回だけ使用できます`TuningOptions`要素。|  
+|**個数**|任意。 それぞれに 1 回だけ使用できます`TuningOptions`要素。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

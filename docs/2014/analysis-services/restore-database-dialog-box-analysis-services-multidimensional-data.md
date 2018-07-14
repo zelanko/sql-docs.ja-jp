@@ -1,5 +1,5 @@
 ---
-title: データベースの復元 ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: データベースの復元 ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Restore.f1
 ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 20c836a9f18184dc6c5db59cd76358e6c4613d81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ced766942b0bba6c84985315907708d40565f763
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330422"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>[データベースの復元] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[データベースの復元]** ダイアログ ボックスでは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] バックアップ ファイル (.abf) 形式を使用するバックアップ ファイルから [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを復元できます。  

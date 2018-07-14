@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VPNs [SQL Server replication]
 - Web publishing [SQL Server replication], VPNs
 - Internet [SQL Server replication], VPNs
 ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8e8da7742a29f46e289c35c3e2fff7480f8e206b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0e4893511cb952fb40fe129fd4e8b8c8f67502c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199162"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>VPN を使用したインターネット経由のデータのパブリッシュ
   仮想プライベート ネットワーク (VPN) 技術を使用すると、自宅、支店、リモート クライアント、および他社で作業しているユーザーが安全な通信を維持しながらインターネット経由で企業ネットワークに接続できます。 ユーザーは、ローカル エリア ネットワーク (LAN) 上にいる場合と同じように Windows 認証を使用できます。 すべての種類の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションは VPN 経由でデータをレプリケートできますが、マージ レプリケーションを使用している場合は、VPN の必要がない Web 同期を検討してください。 詳細については、「 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)」を参照してください。  

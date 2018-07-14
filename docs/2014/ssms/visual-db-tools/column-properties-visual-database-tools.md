@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
 - vdt.designers.properties.Column
@@ -17,15 +17,15 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2442b50d7c7a6a325013d3a3a808747925391183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1aed3d78cbc0f9ef44c15310e2ae9085226c3413
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236182"
 ---
 # <a name="column-properties-visual-database-tools"></a>[列のプロパティ] \(Visual Database Tools)
   列のプロパティのセットには、テーブル デザイナーの **[列のプロパティ]** タブに表示される完全なセット ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースでのみ使用可能) と、サーバー エクスプローラーで [プロパティ] ウィンドウに表示されるサブセットの 2 種類があります。  
@@ -45,7 +45,7 @@ ms.locfileid: "36164513"
  **[IDENTITY] カテゴリ**  
  展開すると、 **[オブジェクト名]** プロパティと **[データベース]** プロパティが表示されます。  
   
- **Name**  
+ **名前**  
  列の名前が表示されます。  
   
  **[データベース]**  
@@ -129,7 +129,7 @@ ms.locfileid: "36164513"
  **[圧縮データ型]**  
  フィールドのデータ型に関する情報が表示されます。SQL の CREATE TABLE ステートメントと同じ形式で表示されます。 たとえば、最大 20 文字の可変長文字列を含むフィールドは "varchar(20)" と表示されます。 このプロパティを変更するには、値を直接入力します。  
   
- **description**  
+ **[説明]**  
  列の説明が表示されます。 完全な説明を表示したり、説明を表示したりするには、[説明] をクリックして、プロパティの右側にある **[...]** をクリックします。  
   
  **[フルテキストの指定] カテゴリ**  
@@ -183,12 +183,12 @@ ms.locfileid: "36164513"
  この列を別の場所にレプリケートされるかどうかを示します。  
   
  **[RowGuid]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこの列が ROWGUID として使用されるかどうかが示されます。 この値を設定することができます**はい**のデータ型の列に対してのみ`uniqueidentifier`です。 このプロパティを編集するには、値をクリックしてドロップダウン リストを展開し、別の値を選択します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこの列が ROWGUID として使用されるかどうかが示されます。 この値を設定することができます**はい**のデータ型の列に対してのみ`uniqueidentifier`します。 このプロパティを編集するには、値をクリックしてドロップダウン リストを展開し、別の値を選択します。  
   
  **サイズ**  
  列のデータ型で許容されるサイズがバイト単位で表示されます。 たとえば、`nchar` データ型の長さが 10 (文字数) でも、Unicode 文字セットの場合のサイズは 20 になります。  
   
 > [!NOTE]  
->  `varchar(max)` データ型の長さは行ごとに異なります sp_help の長さとして (-1) を返します`varchar(max)`列です。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、列のサイズとして -1 が表示されます。  
+>  `varchar(max)` データ型の長さは行ごとに異なります sp_help の長さとして (-1) を返します`varchar(max)`列。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、列のサイズとして -1 が表示されます。  
   
   

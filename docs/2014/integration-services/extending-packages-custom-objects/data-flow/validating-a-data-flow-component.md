@@ -25,13 +25,13 @@ ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 40ca8f66471a9f5f00e37387055e2aaf24e84a0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 545d4b494dc5214d0fa5b1b25f4687a7263330cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252454"
 ---
 # <a name="validating-a-data-flow-component"></a>データ フロー コンポーネントの検証
   基本クラス <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> メソッドを使用すると、正しく構成されていないコンポーネントが実行されることを防止できます。 このメソッドを使用すると、コンポーネントが想定どおりの数の入出力オブジェクトを持ち、カスタム プロパティの値が許容範囲内で、接続が必要な場合はそれが指定されていることを検証できます。 また、入出力コレクションの各列のデータ型が正しいこと、各列の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> がコンポーネント用に正しく設定されていることも検証できます。 この基本クラスを実装すると、コンポーネントの入力列コレクションをチェックし、コレクションの各列が上流コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> にある列を参照していることを確認できるため、検証プロセスの作業に役立ちます。  
@@ -194,6 +194,6 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
   

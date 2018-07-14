@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], about the database
 - database [Master Data Services]
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f152caf03dd4997dad8b1e177227c330a5e9a30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d426c9c7ffb874cd304932889d41660cf0d3edac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326172"
 ---
 # <a name="master-data-services-database"></a>マスター データ サービス データベース
   データベースには、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システムに関するすべての情報が含まれています。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 配置の中心となる要素です。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの機能は次のとおりです。  
@@ -45,7 +45,7 @@ ms.locfileid: "36164565"
   
 -   [リレーションシップ ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
--   [ステージング プロセス エラー&#40;マスター データ サービス&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
+-   [ステージング処理のエラー&#40;マスター データ サービス&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
  [マスター データ サービス データベースの作成](install-windows/create-a-master-data-services-database.md)   

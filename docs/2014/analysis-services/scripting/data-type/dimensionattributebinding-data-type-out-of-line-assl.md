@@ -1,5 +1,5 @@
 ---
-title: DimensionAttributeBinding データ型 (の不一致) (ASSL) |Microsoft ドキュメント
+title: DimensionAttributeBinding データ型 (の不一致) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DimensionAttributeBinding data type
 ms.assetid: d8ec77a9-749f-4b08-8d56-8b6514a70248
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6f72755c02c6b8b07cdf67c4d5464d1f3b2d9e55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34e2f45189a92397bd0afcbde2e504fa82d83604
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187089"
 ---
 # <a name="dimensionattributebinding-data-type-out-of-line-assl"></a>DimensionAttributeBinding データ型 (不一致) (ASSL)
   ディメンション内の属性の不一致バインドを表す派生データ型を定義します。  
@@ -64,7 +64,7 @@ ms.locfileid: "36165695"
 |派生要素|[バインド](../../xmla/xml-elements-properties/binding-element-xmla.md)([バインド](../collections/attributes-element-assl.md)コレクションの XML for Analysis (XMLA)[バッチ](../../xmla/xml-elements-commands/batch-element-xmla.md)と[プロセス](../../xmla/xml-elements-commands/process-element-xmla.md)コマンド)|  
   
 ## <a name="remarks"></a>コメント  
- アウトオブ ライン バインドの詳細については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ アウトオブ ライン バインドの詳細については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services スクリプト言語の XML データ型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

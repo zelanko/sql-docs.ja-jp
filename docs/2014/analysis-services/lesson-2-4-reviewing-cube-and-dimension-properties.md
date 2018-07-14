@@ -1,5 +1,5 @@
 ---
-title: キューブおよびディメンションのプロパティの確認 |Microsoft ドキュメント
+title: キューブとディメンションのプロパティの確認 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 092ffbd7242d65d06476e3a22f43252600562520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30dc761707ec02843bcc296bdb3cc7408c33a554
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241742"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>キューブとディメンションのプロパティの確認
   キューブを定義した後は、その結果をキューブ デザイナーで確認できます。 この実習では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトのキューブの構造を確認します。  
@@ -38,7 +38,7 @@ ms.locfileid: "36085544"
   
 4.  **[キューブ構造]** タブの **[ディメンション]** ペインで **[Customer]** を展開し、 **[Customer の編集]** をクリックしてディメンション デザイナーでディメンションを開きます。  
   
-     ディメンション デザイナーには、 **[ディメンション構造]**、 **[属性リレーションシップ]**、 **[翻訳]**、 **[ブラウザー]** というタブがあります。 **[ディメンション構造]** タブには、 **[属性]**、 **[階層]**、 **[データ ソース ビュー]** の 3 つのペインがあります。 ディメンションに含まれている属性は **[属性]** ペインに表示されます。 詳細については、次を参照してください。 [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)、 [Create User-Defined 階層](multidimensional-models/user-defined-hierarchies-create.md)です。  
+     ディメンション デザイナーには、 **[ディメンション構造]**、 **[属性リレーションシップ]**、 **[翻訳]**、 **[ブラウザー]** というタブがあります。 **[ディメンション構造]** タブには、 **[属性]**、 **[階層]**、 **[データ ソース ビュー]** の 3 つのペインがあります。 ディメンションに含まれている属性は **[属性]** ペインに表示されます。 詳細については、次を参照してください。 [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)、[ユーザー定義階層の](multidimensional-models/user-defined-hierarchies-create.md)します。  
   
 5.  キューブ デザイナーに切り替えるには、ソリューション エクスプローラーの **[キューブ]** ノードで **[Analysis Services Tutorial]** キューブを右クリックし、 **[ビュー デザイナー]** をクリックします。  
   

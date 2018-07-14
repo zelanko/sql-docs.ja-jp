@@ -1,5 +1,5 @@
 ---
-title: 多次元モデル オブジェクトの処理 |Microsoft ドキュメント
+title: 多次元モデル オブジェクトの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
 - processing objects [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b933c003e840d0ef145159f278b9054b1637956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9f95df4ac7d0bd9e0dd93c1a55189e9e46f747c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180979"
 ---
 # <a name="multidimensional-model-object-processing"></a>多次元モデルのオブジェクト処理
   "処理" とは、Analysis Services がリレーショナル データ ソースから多次元モデルにデータを読み込む 1 つまたは一連のステップです。 MOLAP ストレージを使用するオブジェクトの場合、データはディスクのデータベース ファイル フォルダーに保存されます。 ROLAP ストレージの場合、処理は要求に応じて、オブジェクトに対する MDX クエリへの応答として発生します。 ROLAP ストレージを使用するオブジェクトの場合の処理とは、クエリ結果を返す前にキャッシュを更新する操作のことを指します。  
@@ -49,7 +49,7 @@ ms.locfileid: "36164894"
   
 ##  <a name="bkmk_prereq"></a> 前提条件  
   
--   処理を行うには、Analysis Services のインスタンスに対する管理権限が必要です。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] や [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から対話形式で処理を行う場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスのサーバー管理者ロールのメンバーである必要があります。 たとえば、SQL Server エージェントでスケジュールを設定した SSIS パッケージを使用するなど、自動的に実行される処理の場合は、パッケージの実行に使用するアカウントがサーバー管理者ロールのメンバーである必要があります。 管理者のアクセス許可の設定の詳細については、次を参照してください。[サーバー管理者のアクセス許可を付与&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)です。  
+-   処理を行うには、Analysis Services のインスタンスに対する管理権限が必要です。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] や [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から対話形式で処理を行う場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスのサーバー管理者ロールのメンバーである必要があります。 たとえば、SQL Server エージェントでスケジュールを設定した SSIS パッケージを使用するなど、自動的に実行される処理の場合は、パッケージの実行に使用するアカウントがサーバー管理者ロールのメンバーである必要があります。 管理者のアクセス許可の設定の詳細については、次を参照してください。[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)します。  
   
 -   データの取得に使用するアカウントは、データ ソース オブジェクトで指定されます。Windows 認証を使用する場合は権限借用オプションで指定され、データベース認証を使用する場合は接続文字列のユーザー名で指定されます。 このアカウントには、モデルで使用するリレーショナル データ ソースに対する読み取り権限が必要です。  
   

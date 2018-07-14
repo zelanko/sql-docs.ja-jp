@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full backups [SQL Server]
 - partial backups [SQL Server]
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database backups [SQL Server], about backing up databases
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0b7190e1de273380c39f28b441685e207b7d43f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ce00c1a5f5c9e2847c71581828554f2b2abf070d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175929"
 ---
 # <a name="partial-backups-sql-server"></a>部分バックアップ (SQL Server)
   すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 復旧モデルで部分バックアップがサポートされるため、このトピックの内容はすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに適用されます。 ただし、部分バックアップは、1 つ以上の読み取り専用のファイル グループを含む非常に大きなデータベースをバックアップする場合の柔軟性を向上するために、単純復旧モデルで使用することを目的としています。  

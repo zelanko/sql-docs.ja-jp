@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
 - viewing job history
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - displaying job history
 ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7391d4c6e8ddd5d2c7908a6c532a3fe7c9deade4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fe2287c5dca70fb78371e3f23dd199013c81c611
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208392"
 ---
 # <a name="view-the-job-history"></a>View the Job History
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴ログを表示する方法について説明します。  
@@ -81,9 +81,9 @@ ms.locfileid: "36085580"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_help_jobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_help_jobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql)します。  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトを使用します。  
+##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **ジョブ履歴ログを表示するには**  
   
  Visual Basic、Visual C#、PowerShell などのプログラミング言語で `EnumHistory` クラスの `Job` メソッドを呼び出します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](http://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - proxies [SQL Server Agent], modifying
 - modifying SQL Server Agent proxy
 ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 028f92bc953f1baecae1a68bcdc822a0aa84e8fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d557afd541ebd3d04702ced7e4275aca2845bf17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226594"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシを変更する方法について説明します。  
@@ -94,6 +94,6 @@ ms.locfileid: "36163996"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_proxy &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-proxy-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_update_proxy &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-proxy-transact-sql)します。  
   
   

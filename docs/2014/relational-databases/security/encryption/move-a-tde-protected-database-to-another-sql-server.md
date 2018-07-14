@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e22249985710ebc3ab63aafe99779602ccffe4ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7bb389ff9f94a60607f30355ec5cf8ff5872b5ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266308"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>別の SQL Server への TDE で保護されたデータベースの移動
   このトピックでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、透過的なデータ暗号化 (TDE) によってデータベースを保護し、そのデータベースを別の [!INCLUDE[tsql](../../../includes/tsql-md.md)]インスタンスに移動する方法について説明します。 TDE では、データとログ ファイルの暗号化および暗号化解除がリアルタイムの I/O で実行されます。 暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 DEK とは、サーバーの `master` データベースに保存されている証明書を使用して保護される対称キー、または EKM モジュールによって保護される非対称キーのことです。  
@@ -51,17 +50,17 @@ ms.locfileid: "36164318"
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   TDE で保護されたデータベースを移動するとき、DEK を開くために使用される証明書または非対称キーも移動する必要があります。 証明書または非対称キーをインストールする必要があります、`master`移行先サーバーのデータベースように[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース ファイルにアクセスできます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](transparent-data-encryption.md)」を参照してください。  
+-   TDE で保護されたデータベースを移動するとき、DEK を開くために使用される証明書または非対称キーも移動する必要があります。 証明書または非対称キーをインストールする必要があります、 `master` 、移行先サーバーのデータベースように[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース ファイルにアクセスできます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](transparent-data-encryption.md)」を参照してください。  
   
 -   証明書を復旧するために、証明書ファイルと秘密キー ファイルの両方のコピーを保持する必要があります。 秘密キーのパスワードは、データベース マスター キーのパスワードと同じにする必要はありません。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ここで作成したファイルを格納**C:\Program files \microsoft SQL Server\MSSQL12 です。MSSQLSERVER\MSSQL\DATA**既定です。 ただし、ファイル名と場所は異なる場合があります。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ここで作成されたファイルを格納**C:\Program files \microsoft SQL Server\MSSQL12 します。MSSQLSERVER\MSSQL\DATA**既定。 ただし、ファイル名と場所は異なる場合があります。  
   
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
   
--   必要があります`CONTROL DATABASE`に対する権限、`master`のデータベースをデータベース マスター _ キーを作成します。  
+-   必要があります`CONTROL DATABASE`に対する権限、`master`データベース マスター _ キーを作成するデータベース。  
   
 -   必要があります`CREATE CERTIFICATE`に対する権限、 `master` DEK を保護する証明書を作成するデータベース。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "36164318"
   
 ###  <a name="SSMSCreate"></a> SQL Server Management Studio の使用  
   
-1.  データベース マスター _ キーを作成し、証明書、`master`データベース。 詳細については、「 **Transact-SQL の使用** 」をご覧ください。  
+1.  データベースのマスター _ キーを作成し、証明書、`master`データベース。 詳細については、「 **Transact-SQL の使用** 」をご覧ください。  
   
 2.  サーバーの証明書のバックアップを作成、`master`データベース。 詳細については、「 **Transact-SQL の使用** 」をご覧ください。  
   
@@ -187,7 +186,7 @@ ms.locfileid: "36164318"
      **[フルテキスト カタログの保持]**  
      既定では、デタッチ操作を行っても、データベースに関連付けられたフルテキスト カタログが保持されます。 これらのカタログを削除するには、 **[フルテキスト カタログの保持]** チェック ボックスをオフにします。 このオプションは、データベースを [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]からアップグレードする場合にのみ表示されます。  
   
-     **Status**  
+     **ステータス**  
      **[準備完了]** または **[準備ができていません]** のどちらかの状態を表示します。  
   
      **メッセージ**  
@@ -226,7 +225,7 @@ ms.locfileid: "36164318"
      **[MDF ファイルの場所]**  
      選択した MDF ファイルのパスとファイル名が表示されます。  
   
-     **Database Name**  
+     **データベース名**  
      データベースの名前が表示されます。  
   
      **[次の名前でアタッチ]**  
@@ -235,7 +234,7 @@ ms.locfileid: "36164318"
      **[所有者]**  
      データベースの所有者のドロップダウン リストです。これを使用して、必要に応じて別の所有者を選択できます。  
   
-     **Status**  
+     **ステータス**  
      次の表に示すように、データベースの状態を表示します。  
   
     |アイコン|状態テキスト|説明|  
@@ -253,7 +252,7 @@ ms.locfileid: "36164318"
      **[追加]**  
      主な必須データベース ファイルを検索します。 ユーザーが .mdf ファイルを選択した場合、 **[アタッチするデータベース]** グリッドの対応するフィールドに、対応する情報が自動的に入力されます。  
   
-     **削除**  
+     **[削除]**  
      選択したファイルを **[アタッチするデータベース]** グリッドから削除します。  
   
      **"** *<database_name>* **" データベースの詳細**  

@@ -1,5 +1,5 @@
 ---
-title: 属性の名前を変更 |Microsoft ドキュメント
+title: 属性名の変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], attributes
 - renaming attributes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Name property
 ms.assetid: 4094f0a7-2fde-407c-9b36-c8b30537c2da
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b51406da3fd79878d6634fcdde939972400220d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fefecaf82fac294162c3326c6493a7556d435cb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221982"
 ---
 # <a name="rename-an-attribute"></a>属性名を変更する
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の属性の名前は、**Name** プロパティによって定義されます。 属性名を変更するには、 **のディメンション デザイナーで** [ディメンション構造] **タブの** [属性] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ペイン内の属性を右クリックして、 **[名前の変更]** をクリックします。 **[属性]** ペインがグリッド ビューにある場合は、属性の名前をクリックして、グリッド内で直接編集します。 また、属性を選択し、 **[プロパティ]** ウィンドウでその **Name** プロパティを設定することもできます。  

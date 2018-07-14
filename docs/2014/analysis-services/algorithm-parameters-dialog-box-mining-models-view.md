@@ -1,5 +1,5 @@
 ---
-title: アルゴリズム パラメーター ダイアログ ボックス (マイニング モデル ビュー) |Microsoft ドキュメント
+title: アルゴリズム パラメーター ダイアログ ボックス (マイニング モデル ビュー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.models.algorithmparameters.f1
 helpviewer_keywords:
 - Algorithm Parameters dialog box
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 996a6b9ad990eeccd74888c8b43cd29b12ef17db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 491605a58b6a30f0f8b86afd0a2354e3c9b81ed9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178959"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>[アルゴリズム パラメーター] ダイアログ ボックス ([マイニング モデル] ビュー)
   **[アルゴリズム パラメーター]** ダイアログ ボックスを使用すると、選択したモデルに固有のアルゴリズム パラメーターを調整できます。 アルゴリズム パラメーターを変更する場合、通常マイニング モデルの結果を変更します。 各パラメーターが結果にどのような影響を与えるかは、使用しているアルゴリズムおよびデータによって異なります。 詳細については、「[マイニング モデルとマイニング構造のカスタマイズ](data-mining/customize-mining-models-and-structure.md)」をご覧ください。  
@@ -37,17 +37,17 @@ ms.locfileid: "36173589"
 |[列]|説明|  
 |------------|-----------------|  
 |**パラメーター**|パラメーターの名前の一覧を取得します。|  
-|**Value**|パラメーターの既定値を変更する場合にのみ値を入力します。|  
+|**[値]**|パラメーターの既定値を変更する場合にのみ値を入力します。|  
 |**[Default]**|**[値]** 列に値が指定されていない場合にアルゴリズムが使用するパラメーターの既定値を示します。|  
-|**範囲**|**[値]** 列に入力できる値の範囲を示します。 範囲は、次のいずれかになります。<br /><br /> 1、2、3 などの不連続リスト<br /><br /> 両端を含む範囲など [0, 100]<br /><br /> (0,...) などの両端を除いた範囲<br /><br /> [0,...) のような組み合わせ|  
+|**範囲**|**[値]** 列に入力できる値の範囲を示します。 範囲には、次のいずれかを指定できます。<br /><br /> 1、2、3 などの不連続リスト<br /><br /> 両端を含む範囲をなど、[0, 100]<br /><br /> (0,...) などを除いた範囲<br /><br /> [0,...) などの組み合わせ|  
   
- **description**  
+ **[説明]**  
  **[パラメーター]** の一覧で選択されたパラメーターを説明します。  
   
  **[追加]**  
  このボタンをクリックして、アルゴリズム固有のその他のパラメーターを一覧に追加します。 パラメーターを追加した後で、正しい名前を **[パラメーター]** 列に入力し、 **[値]** 列に値を入力します。  
   
- **削除**  
+ **[削除]**  
  このボタンをクリックして、カスタム パラメーターを一覧から削除します。  
   
  標準の Analysis Services アルゴリズム パラメーターのいずれかを一覧から削除しても、パラメーターはモデルでそのまま使用されますが、そのパラメーターの既定値が使用されます。 パラメーターは完全に削除されず、次にダイアログ ボックスを開いたときに表示されます。  

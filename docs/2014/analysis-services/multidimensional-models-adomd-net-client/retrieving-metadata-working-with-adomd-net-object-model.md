@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET オブジェクト モデルを扱う |Microsoft ドキュメント
+title: ADOMD.NET オブジェクト モデルの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de2d73db65d10acdea5ec0c221eb994700ba5f41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ceb363b3911afb3a1ea21d51e6a65eff09cd3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328542"
 ---
 # <a name="working-with-the-adomdnet-object-model"></a>ADOMD.NET オブジェクト モデルの操作
   ADOMD.NET は、分析データ ソース内のキューブと下位オブジェクトを表示するためのオブジェクト モデルです。 ただし、分析データ ソースのすべてのメタデータを、このオブジェクト モデルで操作できるわけではありません。 このオブジェクト モデルでアクセスできるのは、ユーザーがコマンドを対話的に作成する際、クライアント アプリケーションに表示されると役立つ情報だけです。 提示するメタデータの複雑さが軽減されたことで、ADOMD.NET オブジェクト モデルがより使いやすくなりました。  

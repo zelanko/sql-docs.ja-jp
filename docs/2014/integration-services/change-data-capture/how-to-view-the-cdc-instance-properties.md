@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 55cb3d1689ff1abcf60987a36a28bc5184668f66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b3e75492abf080936f734cd343b51732e201e33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169159"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>CDC インスタンスのプロパティを表示する方法
   この手順では、インスタンスの操作を管理するために作成するインスタンスの情報を、CDC デザイナー コンソールを使用して表示する方法について説明します。  
@@ -34,7 +34,7 @@ ms.locfileid: "36165693"
   
      インスタンスに関する情報は、CDC デザイナー コンソールの中央部分に表示されます。 この部分は 4 つのタブに分かれています。 タブはいずれも読み取り専用です。  
   
-     **Status**  
+     **ステータス**  
      このタブには、インスタンスの変更データ キャプチャの現在の状態に関する情報が表示されます。 このタブに表示される内容の詳細については、「 **Manage a CDC Instance** 」の「 [ビューアーのタブ](manage-a-cdc-instance.md)」を参照してください。  
   
      **Oracle**  

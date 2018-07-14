@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 caps.latest.revision: 42
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c732e124ca8de59f28f4d5121a85e071d6fda7f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7527bbdd1e66db49851832052c8a9393201b202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254544"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>手順 2: フラット ファイル接続マネージャーの追加と構成
   この実習では、先ほど作成したパッケージにフラット ファイル接続マネージャーを追加します。 パッケージにフラット ファイル接続マネージャーを追加すると、フラット ファイルからデータを抽出できるようになります。 フラット ファイル接続マネージャーでは、フラット ファイルからデータを抽出するときに適用するファイルの名前と場所、ロケールとコード ページ、およびファイル形式を指定できます。また、列区切り記号も指定できます。 さらに、各列のデータ型を手動で指定できます。 **[列の型の予測]** ダイアログ ボックスを使用して、抽出したデータの列を [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] データ型に自動的にマップすることもできます。  
@@ -66,13 +66,13 @@ ms.locfileid: "36164129"
   
 2.  プロパティ ペインで、次のように変更します。  
   
-    -   変更、**列 0** name プロパティを`AverageRate`です。  
+    -   変更、**列 0** name プロパティを`AverageRate`します。  
   
-    -   変更、**列 1** name プロパティを`CurrencyID`です。  
+    -   変更、 **Column 1** name プロパティを`CurrencyID`します。  
   
-    -   変更、**列 2** name プロパティを`CurrencyDate`です。  
+    -   変更、**列 2** name プロパティを`CurrencyDate`します。  
   
-    -   変更、**列 3** name プロパティを`EndOfDayRate`です。  
+    -   変更、**列 3** name プロパティを`EndOfDayRate`します。  
   
     > [!NOTE]  
     >  既定では、4 つのすべての列が文字列データ型 [DT_STR] に設定され、`OutputColumnWidth` は 50 に設定されます。  
@@ -94,11 +94,11 @@ ms.locfileid: "36164129"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|日付|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-     データ型にお勧め、`CurrencyID`列は、変換先テーブル内のフィールドのデータ型と互換性がありません。 データ型ため`DimCurrency.CurrencyAlternateKey`nchar (3) は、`CurrencyID`文字列 [DT_STR] から文字列 [DT_WSTR] に変更する必要があります。 フィールドではさらに、`DimDate.FullDateAlternateKey`は、日付データ型として定義です。 そのため、 `CurrencyDate` date [DT_Date] から database date [DT_DBDATE] に変更する必要があります。  
+     に関して推奨されるデータ型、`CurrencyID`列は、変換先テーブル内のフィールドのデータ型と互換性がありません。 データ型であるため`DimCurrency.CurrencyAlternateKey`nchar (3) は、`CurrencyID`文字列 [DT_STR] から文字列 [DT_WSTR] に変更する必要があります。 フィールドではさらに、 `DimDate.FullDateAlternateKey` ; の日付データ型として定義されているがそのため、 `CurrencyDate` date [DT_Date] から database date [DT_DBDATE] に変更する必要があります。  
   
-2.  一覧で、CurrencyID 列を選択し、プロパティ ウィンドウで、列のデータ型を変更する`CurrencyID`を Unicode 文字列 [DT_STR] から文字列 [DT_WSTR] です。  
+2.  一覧で、CurrencyID 列を選択し、プロパティ ペインで列のデータ型を変更する`CurrencyID`string [DT_STR] Unicode から string [DT_WSTR]。  
   
-3.  プロパティ ウィンドウで、列のデータ型を変更する`CurrencyDate`date [DT_DATE] から database date [DT_DBDATE] です。  
+3.  プロパティ ペインで列のデータ型を変更する`CurrencyDate`date [DT_DATE] から database date [DT_DBDATE]。  
   
 4.  **[OK]** をクリックします。  
   

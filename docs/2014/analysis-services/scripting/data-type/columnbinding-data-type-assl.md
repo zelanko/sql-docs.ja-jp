@@ -1,5 +1,5 @@
 ---
-title: ColumnBinding データ型 (ASSL) |Microsoft ドキュメント
+title: ColumnBinding データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ColumnBinding data type
 ms.assetid: 3ab1bac1-6716-4b17-a107-d5f9c744c5e6
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1ad7cea5041f8d65964b85e36a0b992f9f5afdae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 227801af8b66d66ebeba50d2713267720adffa9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200112"
 ---
 # <a name="columnbinding-data-type-assl"></a>ColumnBinding データ型 (ASSL)
   データ ソース ビュー内の列のバインドを表す派生データ型を定義、 [DataItem](dataitem-data-type-assl.md)要素。  
@@ -62,7 +62,7 @@ ms.locfileid: "36164899"
 |派生要素|参照してください[バインド](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
- 有効な XML 要素名を作成する[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]`DataSet`オブジェクトは、XML スキーマ定義 (XSD) にシリアル化するときにテーブル名をエンコードです。 たとえば、名前"Order Details"は"order_x0020_details"です。 同様に、`ColumnID` 要素に含まれており、データ ソース ビュー (DSV) のオブジェクトを参照する `TableID` 要素と `ColumnBinding` 要素も、シリアル化のときに名前が DSV 内のテキストに一致するように、名前をエンコードする必要があります。 Analysis Services インスタンスでは、`DataSet` オブジェクト モデルと同様に、これらの名前をデコードします。  
+ 有効な XML の要素名を作成する[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]`DataSet`オブジェクトは、XML スキーマ定義 (XSD) にシリアル化するときにテーブル名をエンコード; たとえば、名"Order Details"が"Order_x0020_Details"になります。 同様に、`ColumnID` 要素に含まれており、データ ソース ビュー (DSV) のオブジェクトを参照する `TableID` 要素と `ColumnBinding` 要素も、シリアル化のときに名前が DSV 内のテキストに一致するように、名前をエンコードする必要があります。 Analysis Services インスタンスでは、`DataSet` オブジェクト モデルと同様に、これらの名前をデコードします。  
   
  `TableDefinitions` データ型を使用しており、DSV 内のテーブルを参照する要素に含まれている `TableBinding` 要素も、XSD へのシリアル化のときに名前をエンコードする必要があります。 ただし、`Partition` バインド内のテーブル名はエンコードしないでください。これらの名前はデータベースに存在するテーブル名にすぎず、DSV に存在する必要はないためです。 `Partition` バインド内のテーブル名をエンコードしないことで、次の目的も達成されます。  
   
@@ -72,9 +72,9 @@ ms.locfileid: "36164899"
   
  テーブル名と列名に区切り記号 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の場合は "[" など) が含まれません。  
   
- 詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、`Binding`型との継承階層`Binding`型を参照してください[&#40;ASSL&#41;](binding-data-type-assl.md)です。  
+ 詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、`Binding`型との継承階層`Binding`型を参照してください[&#40;ASSL&#41;](binding-data-type-assl.md)します。  
   
- ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
  AMO オブジェクト モデルの対応する要素は <xref:Microsoft.AnalysisServices.ColumnBinding> です。  
   

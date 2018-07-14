@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8400c0ead99718a46844db9c13a4fb5e60a93550
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 23534a159e659cde0b9154a5f7484f6b405f57be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222632"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>dta コマンド プロンプト ユーティリティの起動とワークロードのチューニング
   ここでは、**dta** ユーティリティを起動してヘルプを表示した後、同ユーティリティを使用してコマンド プロンプトからワークロードをチューニングします。 このユーティリティは、データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) の実習「 [ワークロードのチューニング](lesson-1-1-tuning-a-workload.md)」で作成したワークロード MyScript.sql を使用します。  

@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_COMMAND_OBJECTS 行セット |Microsoft ドキュメント
+title: DISCOVER_COMMAND_OBJECTS 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - DISCOVER_COMMAND_OBJECTS rowset
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c53fccdecc824bd123312a881c1ddcdbcae6060a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78970be3b1ed127ad25e4c27fcf81044b1eb9dca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261198"
 ---
 # <a name="discovercommandobjects-rowset"></a>DISCOVER_COMMAND_OBJECTS 行セット
-  参照先のコマンドによって使用中のオブジェクトに関するリソース使用状況とアクティビティ情報を提供します。  
+  参照先のコマンドで使用中のオブジェクトに関するリソース使用状況とアクティビティ情報を提供します。  
   
- **適用されます:** 表形式モデル、多次元モデル  
+ **適用対象:** 表形式モデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
  `DISCOVER_COMMAND_OBJECTS`行セットには、次の列が含まれています。  
@@ -38,7 +38,7 @@ ms.locfileid: "36085104"
 |`SESSION_ID`|`DBTYPE_WSTR`|はい|GUID としてのセッションの一意識別子。|  
 |`SESSION_COMMAND_COUNT`|`DBTYPE_I4`||コマンドのシーケンス番号。|  
 |`OBJECT_PARENT_PATH`|`DBTYPE_WSTR`|はい|現在のオブジェクトの親へのパス。|  
-|`OBJECT_ID`|`DBTYPE_WSTR`|はい|作成したときに定義されたオブジェクトの ID。|  
+|`OBJECT_ID`|`DBTYPE_WSTR`|はい|作成時に定義されているオブジェクトの ID。|  
 |`OBJECT_VERSION`|`DBTYPE_I4`||オブジェクトのメタデータ バージョン番号。この番号は、オブジェクトが変更されるたびに変わります。|  
 |`OBJECT_DATA_VERSION`|`DBTYPE_I4`||オブジェクト内のデータの系列番号。 この番号は、オブジェクトが処理されるたびに増加します。|  
 |`OBJECT_CPU_TIME_MS`|`DBTYPE_I8`||コマンドの開始以降にオブジェクトによって使用された CPU 時間 (ミリ秒単位)。|  

@@ -1,5 +1,5 @@
 ---
-title: Type 要素 (MeasureGroup) (ASSL) |Microsoft ドキュメント
+title: Type 要素 (MeasureGroup) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 3a584baf-36bb-4e1d-9128-c4758c0b8f06
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f1e583e8debf2f8416ac46574e8c4f5dbc8d4453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8e8bab8b822ccb4cf8a17fe4759519eeefb974a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226372"
 ---
 # <a name="type-element-measuregroup-assl"></a>Type 要素 (MeasureGroup) (ASSL)
-  型を指定します、 [MeasureGroup](../objects/group-element-assl.md)です。  
+  型を指定します、 [MeasureGroup](../objects/group-element-assl.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36164372"
 |特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*通常*|  
+|既定値|*正規表現*|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
@@ -66,15 +66,15 @@ ms.locfileid: "36164372"
   
 |値|説明|  
 |-----------|-----------------|  
-|*通常*|標準メジャーを格納します。|  
+|*正規表現*|標準メジャーを格納します。|  
 |*為替レート*|外国換算レート メジャーを格納します。|  
-|*Sales*|売上メジャーを格納します。|  
+|*販売*|売上メジャーを格納します。|  
 |*予算*|予算メジャーを格納します。|  
 |*FinancialReporting*|財務報告メジャーを格納します。|  
 |*マーケティング*|マーケティング メジャーを格納します。|  
 |*インベントリ*|在庫メジャーを格納します。|  
   
- 許可される値に対応する列挙`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MeasureGroupType>します。  
+ 許容された値に対応する列挙体`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MeasureGroupType>します。  
   
  親に対応する要素`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MeasureGroup>します。  
   

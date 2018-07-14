@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.userdefineddatatype.general.f1
 - sql12.swb.new.datatype.properties.general.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d39ce0a1b6d5672ea574f79ef6427ff0d633072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8b3fdf094f1db50860d0f4e29d17463ba1092a9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264830"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名の作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]にユーザー定義データ型の別名を新しく作成する方法について説明します。  
@@ -74,7 +74,7 @@ ms.locfileid: "36085447"
   
      長さは、`nvarchar(max)`、`varchar(max)`、`varbinary(max)` の各データ型に対しては表示されません。  
   
-     **Name**  
+     **名前**  
      ユーザー定義データ型の別名を新規に作成する場合、ユーザー定義データ型を表すためにデータベース全体で使用する一意の名前を入力します。 最大文字数は、システムと一致する必要があります`sysname`データ型。 既存のユーザー定義データ型の別名は編集できません。  
   
      **Rule**  
@@ -96,7 +96,7 @@ ms.locfileid: "36085447"
     |20 ～ 28|13|  
     |29 ～ 38|17|  
   
-     `nchar`と`nvarchar`データ型、ストレージ値は、値の 2 倍では常に**長さ**です。  
+     `nchar`と`nvarchar`データ型の場合は、ストレージ値は 2 倍の値では常に**長さ**します。  
   
      ストレージは、`nvarchar(max)`、`varchar(max)`、`varbinary(max)` の各データ型に対しては表示されません。  
   

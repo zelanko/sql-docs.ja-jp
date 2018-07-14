@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - DECLARE
 - CREATE TYPE
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bbc9653a596eb6c046700fbf3e0a643b1b311656
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ce96eb2e0cad45e15e03f48bbb27afb5cb61938b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223212"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>テーブル値パラメーターの使用 (データベース エンジン)
   テーブル値パラメーターは、ユーザー定義テーブル型を使用して宣言されます。 テーブル値パラメーターを使用すると、一時テーブルまたは多数のパラメーターを作成せずに、ストアド プロシージャや関数などの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはルーチンに複数行のデータを送信できます。  
   
- テーブル値パラメーターは OLE DB や ODBC のパラメーター配列に似ていますが、より柔軟性が高く、 [!INCLUDE[tsql](../../includes/tsql-md.md)]との統合も緊密です。 テーブル値パラメーターには、セットベースの操作に使用できるという利点もあります。  
+ テーブル値パラメーターは OLE DB や ODBC のパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターには、セットベースの操作に使用できるという利点もあります。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] では、入力データのコピーが作成されないようにするために、テーブル値パラメーターがルーチンに参照渡しされます。 テーブル値パラメーターを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンを作成して実行し、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コード、および任意のマネージ言語のマネージ クライアントとネイティブ クライアントから呼び出すことができます。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] では、入力データのコピーが作成されないようにするために、テーブル値パラメーターがルーチンに参照渡しされます。 テーブル値パラメーターを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンを作成して実行し、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コード、および任意のマネージド言語のマネージド クライアントとネイティブ クライアントから呼び出すことができます。  
   
  **このトピックの内容**  
   

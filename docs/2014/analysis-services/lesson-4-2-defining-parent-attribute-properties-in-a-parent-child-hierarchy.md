@@ -1,5 +1,5 @@
 ---
-title: 親子階層で親属性プロパティの定義 |Microsoft ドキュメント
+title: 親子階層の親属性プロパティの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a167d70ba2041a3b40da242e51b6fb99aa14e900
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34e32c84044b1ba709ef893949ef83a612d7e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328582"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>親子階層の親属性プロパティの定義
   親子階層とは、2 つのテーブル列に基づいたディメンション内の階層です。 この 2 つのテーブル列により、ディメンションのメンバー間の階層リレーションシップが定義されます。 一方の列は *メンバー キー列*と呼ばれ、各ディメンション メンバーを識別します。 もう一方の列は *親列*と呼ばれ、各ディメンション メンバーの親を識別します。 親属性の **NamingTemplate** プロパティは、親子階層の各レベルの名前を指定します。 **MembersWithData** プロパティは、親メンバーのデータを表示するかどうかを指定します。  
   
- 詳細については、次を参照してください[親子階層](multidimensional-models/parent-child-dimension.md)、 [、親子階層内の属性。](multidimensional-models/parent-child-dimension-attributes.md)  
+ 詳細については、次を参照してください[、親子階層](multidimensional-models/parent-child-dimension.md)、 [、親子階層の属性。](multidimensional-models/parent-child-dimension-attributes.md)  
   
 > [!NOTE]  
 >  ディメンション ウィザードを使用してディメンションを作成すると、親子リレーションシップを持つテーブルがウィザードによって認識され、親子階層が自動的に定義されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36085782"
   
 3.  **[Ken J. Sánchez]** メンバーをクリックします。  
   
-     このメンバーのレベル名は **Level 02**です。 (レベル名の後ろ**現在のレベル:** すぐ上に、**すべての従業員**メンバーです)。次の実習では、さらにわかりやすい名前を各レベルに定義します。  
+     このメンバーのレベル名は **Level 02**です。 (後に、レベル名が**現在のレベル:** すぐ上に、**すべての従業員**メンバーです)。次の実習では、さらにわかりやすい名前を各レベルに定義します。  
   
 4.  **[Ken J. Sánchez]** を展開し、この管理者の監督下にある従業員の名前を表示します。次に、 **[Brian S. Welcker]** をクリックし、このレベルの名前を表示します。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36085782"
   
      次の図は、展開された Employees 階層を示しています。  
   
-10. ![Employees 階層を示すピボット テーブル](../../2014/tutorials/media/l4-employee-1.gif "Employees 階層を示すピボット テーブル")  
+10. ![Employees 階層を表示するピボット テーブル](../../2014/tutorials/media/l4-employee-1.gif "Employees 階層を表示するピボット テーブル")  
   
      Level 03 の各管理者の売上は Level 04 にも表示されます。 各管理者は、他の管理者の部下でもあるからです。 次の実習では、これらの売上高を非表示にします。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36085782"
   
      **[レベル名前付けテンプレート]** ダイアログ ボックスでレベル名前付けテンプレートを定義します。このテンプレートは、キューブを表示するときに表示される親子階層のレベル名を決定します。  
   
-4.  2 番目の行、 **\*** 行に、入力**Employee Level \*** で、**名前**列、3 番目の行をクリックします。  
+4.  2 番目の行で、 **\*** 行に「 **Employee Level \*** で、**名前**列、3 番目行順にクリックします。  
   
      **[結果]** の下を確認すると、各レベルには、"Employee Level" の後ろに連番を追加した名前が付いています。  
   

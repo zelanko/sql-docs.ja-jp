@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 32c7b286bb80de97ab34b65dec2196c98bbfe282
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 68bae0135dd9b779fa82b60e038b51ac11f202b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201802"
 ---
 # <a name="model-deployment-options-master-data-services"></a>モデル配置オプション (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデル パッケージ ファイルを配置するとき、新しいモデルまたは複製モデルを配置するのか、以前に複製したモデルを更新するのかを決定する必要があります。  
@@ -43,7 +43,7 @@ ms.locfileid: "36165265"
 |更新|パッケージ内のモデルを使用して、既存のモデルを更新します。 両方のモデルの識別子が同じである必要があります。 このオプションは、以前に複製したモデルを更新するために使用します。|以前に複製したモデルのみを更新できます (名前と ID が一致する必要があります)。|  
   
 ## <a name="see-also"></a>参照  
- [MDSModelDeploy を使用して、モデル配置パッケージを展開します。](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
+ [MDSModelDeploy を使用したモデル配置パッケージを展開します。](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
  [ウィザードを使用したモデルの配置パッケージの展開](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
  [モデルの配置&#40;マスター データ サービス&#41;](deploying-models-master-data-services.md)  
   

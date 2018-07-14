@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95c50d2f0859b6da42788d53493c1d49f7900a13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 97b460cf5508c1b95c9d9acedd02d68e5e0acd79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191942"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>データベース スナップショットの作成 (Transact-SQL)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース スナップショットを作成する唯一の方法は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用することです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、データベース スナップショットの作成はサポートされません。  
@@ -34,18 +34,18 @@ ms.locfileid: "36166088"
   
      [ベスト プラクティス: データベース スナップショットの名前付け](#Naming)  
   
--   **スナップショットを使用してデータベースを作成する:**[TRANSACT-SQL  ](#TsqlProcedure)  
+-   **データベースを使用して、スナップショットを作成する:**[TRANSACT-SQL  ](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  任意の復旧モデルを使用できるソース データベースは、次の前提条件を満たす必要があります。  
   
--   サーバー インスタンスで、データベース スナップショットをサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションが実行されている必要があります。 におけるデータベース スナップショットのサポートについては[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+-   サーバー インスタンスで、データベース スナップショットをサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションが実行されている必要があります。 におけるデータベース スナップショットのサポートについて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 -   ソース データベースは、データベース ミラーリング セッション内のミラー データベースである場合を除き、オンラインである必要があります。  
   
--   ミラー データベースにデータベース スナップショットを作成するデータベースが同期する必要があります[ミラーリング状態](../../database-engine/database-mirroring/mirroring-states-sql-server.md)です。  
+-   ミラー データベースにデータベース スナップショットを作成するにはデータベースは同期済みである必要があります[ミラーリング状態](../../database-engine/database-mirroring/mirroring-states-sql-server.md)します。  
   
 -   ソース データベースは、スケーラブルな共有データベースとして構成できません。  
   
@@ -154,7 +154,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> B. Sales データベースのスナップショットを作成する  
- この例では、 `sales_snapshot1200`データベースのデータベース スナップショット `Sales` を作成します。 このデータベースは、例では、「、ファイル グループを含むデータベースを作成する」で作成された[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)です。  
+ この例では、 `sales_snapshot1200`データベースのデータベース スナップショット `Sales` を作成します。 このデータベースは、「を持つファイル グループ、データベースを作成する」の例で作成された[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)します。  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  

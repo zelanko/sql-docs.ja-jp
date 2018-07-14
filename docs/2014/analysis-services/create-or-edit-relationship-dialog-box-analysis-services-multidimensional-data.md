@@ -1,5 +1,5 @@
 ---
-title: 作成または編集のリレーションシップ ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: 作成または編集のリレーションシップ ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createrelationship.f1
 helpviewer_keywords:
 - Create Relationship dialog box
 ms.assetid: da3c7074-623e-4ddf-a707-d3276a47cf1c
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c205a2f7c78345d77dd3080b9ef33fe87f87ba35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 152f9cb38adcad9a90a393150216fea0f10ecd55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167643"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>[リレーションシップの作成] または [リレーションシップの編集] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の **[リレーションシップの作成]/[リレーションシップの編集]** ダイアログ ボックスを使用すると、データ ソース ビューでリレーションシップを定義または変更できます。 **[リレーションシップの作成]/[リレーションシップの編集]** ダイアログ ボックスを表示するには、次の手順に従います。  
@@ -50,10 +50,10 @@ ms.locfileid: "36165704"
  **変換先列**  
  作成元テーブルの列によって参照されている列を選択します。  
   
- **反転**  
+ **逆の順序**  
  リレーションシップの方向を反転させます。  
   
- **description**  
+ **[説明]**  
  リレーションシップの説明をオプションで入力します。  
   
 ## <a name="see-also"></a>参照  

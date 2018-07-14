@@ -1,5 +1,5 @@
 ---
-title: Members 要素 (XMLA) |Microsoft ドキュメント
+title: Members 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Members element
 ms.assetid: 55f9ec3a-5a41-4b3a-acd6-c07598868c46
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5d812d0eea48c4f2b54352f61a176462b280071a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 37eb0532f56fd4aff8ca760b843697f30f3c9585
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201962"
 ---
 # <a name="members-element-xmla"></a>Members 要素 (XMLA)
-  コレクションを格納[メンバー](member-element-xmla.md)親に含まれる要素[CrossProduct](crossproduct-element-xmla.md)要素。  
+  コレクションを含む[メンバー](member-element-xmla.md)親に含まれる要素[CrossProduct](crossproduct-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -71,10 +71,10 @@ ms.locfileid: "36164874"
 |Hieararchy|必要な`String`属性。 `Members` 要素に含まれるメンバーが属する階層の名前です。|  
   
 ## <a name="remarks"></a>コメント  
- クライアント アプリケーションを設定した場合、`AxisFormat`プロパティを*ClusterFormat*、各軸上のメンバーはこれでは、各クラスターは各階層のメンバーの順序付けされたセットの間のクロス積を表します。 クラスターに分割します。 各 `Axis` 要素は、1 つ以上の `CrossProduct` 要素から成っています。 それぞれの `CrossProduct` 要素には、軸上の各階層に対する 1 つの `Members` 要素が含まれます。 さらに、`Members` 要素には、クロス積に含まれる指定された階層のメンバーごとに 1 つの `Member` 要素が含まれます。  
+ クライアント アプリケーションを設定した場合、`AxisFormat`プロパティを*ClusterFormat*、各軸のメンバーは、各クラスターは各階層のメンバーの順序付けされたセット間のクロス積を表します。 クラスターに分けられます。 各 `Axis` 要素は、1 つ以上の `CrossProduct` 要素から成っています。 それぞれの `CrossProduct` 要素には、軸上の各階層に対する 1 つの `Members` 要素が含まれます。 さらに、`Members` 要素には、クロス積に含まれる指定された階層のメンバーごとに 1 つの `Member` 要素が含まれます。  
   
 ## <a name="example"></a>例  
- 次の例の構造を示しています、`Members`クライアントを指定すると要素*ClusterFormat*の`AxisFormat`軸の次のメンバーを指定された、XMLA プロパティ。  
+ 次の例の構造を示しています、`Members`要素をクライアントが指定したときに*ClusterFormat*の`AxisFormat`軸の次のメンバーが指定の XMLA プロパティ。  
   
 ||||||  
 |-|-|-|-|-|  

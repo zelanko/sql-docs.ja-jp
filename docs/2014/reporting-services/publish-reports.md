@@ -1,5 +1,5 @@
 ---
-title: レポートをパブリッシュ |Microsoft ドキュメント
+title: レポートのパブリッシュ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], publishing
 - publishing reports [Reporting Services]
@@ -16,18 +16,18 @@ ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
 caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ff9106915fb683583b800688548703833c5ba0e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fec14c2f0d051259b45125c50c008f9850d02ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204982"
 ---
 # <a name="publish-reports"></a>レポートのパブリッシュ
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]できます発行するか、すべてのレポートおよび共有データ ソース、レポート サーバーにレポート サーバー プロジェクトでプロジェクトを配置して、1 つのレポートを発行することもできます。 レポートをパブリッシュする前に、ターゲット レポート サーバーの URL を指定する必要があります。 詳細については、「[配置プロパティを設定する (Reporting Services)](tools/set-deployment-properties-reporting-services.md)」を参照してください。  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]できますを発行するか、すべてのレポートおよび共有データ ソース、レポート サーバーにレポート サーバー プロジェクトでプロジェクトを配置して、1 つのレポートを発行することもできます。 レポートをパブリッシュする前に、ターゲット レポート サーバーの URL を指定する必要があります。 詳細については、「[配置プロパティを設定する (Reporting Services)](tools/set-deployment-properties-reporting-services.md)」を参照してください。  
   
- 使用することができます、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]バージョンの[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を開くには、変更、プレビュー、保存、および公開両方[!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)]と[!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)]レポートします。 詳細については、「 [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)には含まれていません。  
+ 使用することができます、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]版[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を開くには、変更、プレビュー、保存、および発行両方[!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)]と[!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)]レポート。 詳細については、「 [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)には含まれていません。  
   
 ### <a name="to-publish-all-reports-in-a-project"></a>プロジェクトのすべてのレポートをパブリッシュするには  
   

@@ -1,5 +1,5 @@
 ---
-title: データ フィード (PowerPivot for SharePoint) の使用 |Microsoft ドキュメント
+title: データ フィード (PowerPivot for SharePoint) の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3c8ecd6c4d3cde888559886154c679c0a4f7a5e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e974c81b3f65ef7830362bc80fc7f15df0f1009
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249412"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>データ フィードの使用 (PowerPivot for SharePoint)
   データ フィードは、オンライン データ ソースから生成され、宛先のドキュメントやアプリケーションに送信される 1 つ以上のデータ ストリームです。 PowerPivot for Excel を使用している場合、データ フィードを利用して、任意のデータ ソースにある既存の企業データやビジネス データを Excel 2010 ブック内の PowerPivot ウィンドウに取り込むことができます。 ブックにデータ フィードをインポートすると、SharePoint サーバーでスケジュールしたデータ更新操作でデータ フィードを参照できます。  
   
  Atom データ フィードをサポートするアプリケーションで組み込みのエクスポート機能を使用しているか、カスタムのデータ サービスを作成して使用しているかに応じて、データ フィードの使用方法は変わってきます。 Atom XML データのパブリッシュおよび読み取りを行うことができるアプリケーションでは、データ フィードとデータ サービスの機構をユーザーに意識させることなく、データをシームレスに転送できます。 ユーザーにとっては、単にアプリケーション間でデータを移動しているだけです。  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] および Microsoft SharePoint 2010 がデータを PowerPivot ブックで使用できるフィードを提供します。 このトピックでは、既存のレポートとリストのデータ フィードにアクセスする方法について説明します。  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] および Microsoft SharePoint 2010 は、データを PowerPivot ブックで使用できるフィードを提供します。 このトピックでは、既存のレポートとリストのデータ フィードにアクセスする方法について説明します。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "36163955"
 3.  [接続とエクスポート] で、 **[データ フィードとしてエクスポート]** をクリックします。  
   
     > [!NOTE]  
-    >  **データ フィードとしてエクスポート**ボタンは PowerPivot によって SharePoint に追加します。 PowerPivot for SharePoint がインストールされていないか、PowerPivot 機能をアクティブ化していない場合、このボタンは使用できません。  
+    >  **データ フィードとしてエクスポート**ボタンは、PowerPivot によって SharePoint に追加されます。 PowerPivot for SharePoint がインストールされていないか、PowerPivot 機能をアクティブ化していない場合、このボタンは使用できません。  
   
-4.  をクリックして**開いている**PowerPivot for Excel がローカルにインストールされているか をクリックして**保存**を後でインポート操作のハード ドライブに .atomsvc ドキュメントを保存します。  
+4.  クリックして**オープン**PowerPivot for Excel がローカルにインストールされているか をクリックして**保存**インポート操作のハード ドライブには後で .atomsvc ドキュメントを保存します。  
   
 5.  **[開く]** をクリックした場合は、テーブルのインポート ウィザードを使用してデータ フィードをワークシートにインポートします。 データ フィードは新しいテーブルとして PowerPivot ウィンドウに追加されます。  
   
@@ -69,12 +69,12 @@ ms.locfileid: "36163955"
  データ フィードをレポートからエクスポートする方法については、[レポート ビルダー ヘルプ ファイル](http://go.microsoft.com/fwlink/?LinkId=154494)の「[1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
->  SharePoint ライブラリにパブリッシュされた PowerPivot ブックにレポート データを再インポートする定期的なデータ更新スケジュールを設定するには、レポート サーバーが SharePoint 統合用に構成されている必要があります。 併用 PowerPivot for SharePoint と Reporting Services の詳細については、次を参照してください。[レポート サーバーの構成と管理&#40;Reporting Services SharePoint モード&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)です。  
+>  SharePoint ライブラリにパブリッシュされた PowerPivot ブックにレポート データを再インポートする定期的なデータ更新スケジュールを設定するには、レポート サーバーが SharePoint 統合用に構成されている必要があります。 詳細については、SharePoint と Reporting Services の併用で PowerPivot を使用して、次を参照してください。[レポート サーバーの構成と管理&#40;Reporting Services SharePoint モード&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)します。  
   
 ##  <a name="dsdoc"></a> データ サービス ドキュメントからのデータ フィードの作成  
  Atom フィードを生成するカスタム データ サービスを使用している場合は、ユーザーやアプリケーションがデータを利用できるようにする手段としてデータ サービス ドキュメントを設定できます。 *データ サービス ドキュメント* (.atomsvc) ファイルには、データを Atom ワイヤ形式でパブリッシュするオンライン ソースへの 1 つ以上の接続が指定されます。 データ サービス ドキュメントは *データ フィード ライブラリ*に作成できます。このライブラリは、SharePoint サーバーにパブリッシュされたデータ サービス ドキュメントを参照するための共通アクセス ポイントを提供する、特殊な用途のライブラリです。 データ フィード ライブラリ内のデータ サービス ドキュメントにアクセスする権限を持つインフォメーション ワーカーは、ドキュメントの SharePoint URL を参照し、データ フィードをブックとアプリケーションにインポートできます。  
   
-1.  サイト管理者によって作成されたデータ フィード ライブラリを開きます。 詳細については、次を参照してください。[データ フィード ライブラリのカスタマイズを作成または&#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)です。  
+1.  サイト管理者によって作成されたデータ フィード ライブラリを開きます。 詳細については、次を参照してください。[データ フィード ライブラリのカスタマイズを作成または&#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)します。  
   
 2.  [ライブラリ ツール] で **[ドキュメント]** をクリックします。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36163955"
   
     1.  **[ベース URL]** は省略可能です。 データ サービス ドキュメントが複数のフィードを提供する場合はベース URL を指定してください。 ベース URL には、すべてのフィードに共通する URL の部分 (サーバー名とサイトなど) を指定します。 Reporting Services レポートにデータ サービス ドキュメントを作成している場合、ベース URL はレポート サーバーの URL とレポートになります。  
   
-    2.  **[Web サービス URL]** は必須です。 ベース URL を指定しない場合、この値のアドレスには http:// または https:// を含める必要があります。 ベース URL を指定した場合、Web サービス URL はベース URL の後に続く部分になります。 たとえば、完全な URL がhttp://adventure-works/inventory/today.aspx、ベース URL になりますhttp://adventure-works/inventory、および Web サービスの URL は/today.aspx になります。  
+    2.  **[Web サービス URL]** は必須です。 ベース URL を指定しない場合、この値のアドレスには http:// または https:// を含める必要があります。 ベース URL を指定した場合、Web サービス URL はベース URL の後に続く部分になります。 たとえば、完全な URL はhttp://adventure-works/inventory/today.aspx、ベース URL になります。 http://adventure-works/inventory、および Web サービスの URL は/today.aspx になります。  
   
          Web サービス URL には、データのサブセットを除外または選択するパラメーターを含めることができます。 フィードを提供するアプリケーションまたはサービスは、URL に指定するパラメーターをサポートしている必要があります。  
   

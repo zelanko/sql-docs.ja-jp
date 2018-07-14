@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: abd61e19-dba3-423c-a26c-e8bc43197d3f
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c79ffad767a3b1cfcf7e5f943ebca679dc7a67aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 199b83364fceb93e59b9a1b32824166448a4c23f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191292"
 ---
 # <a name="change-the-order-of-a-report-parameter-report-builder-and-ssrs"></a>レポート パラメーターの順序の変更 (レポート ビルダーおよび SSRS)
   従属パラメーターが、そのパラメーターが依存するパラメーターの前にリストされている場合、レポート パラメーターの順序を変更します。 カスケード型パラメーターがある場合や、パラメーターの既定値をユーザーに対して示してから他のパラメーターの値をユーザーが選択する場合に、パラメーターの順序は重要です。 従属レポート パラメーターには、既定値のクエリまたは有効値のクエリのいずれかの、クエリ パラメーターへの参照が含まれます。これは、レポート データ ペインのパラメーター リストでその後にあるレポート パラメーターを参照します。  
@@ -33,7 +33,7 @@ ms.locfileid: "36166027"
   
 1.  レポート データ ペインで [パラメーター] ノードを展開します。  
   
-2.  パラメーターをクリックし、上矢印を使用して上下の高いまたは低いパラメーター リスト内で移動するレポート データ ペインのツールバーにある矢印ボタンです。 次の図は、レポート ビルダーのレポート データ ペインを示しています。  
+2.  パラメーターをクリックしますおよびを使用し、下向きの矢印ボタンの一覧で上または下のパラメーターを移動するレポート データ ペインのツールバー。 次の図は、レポート ビルダーのレポート データ ペインを示しています。  
   
      ![レポート データ ペイン](../media/reportdatapane.png "レポート データ ペイン")  
   

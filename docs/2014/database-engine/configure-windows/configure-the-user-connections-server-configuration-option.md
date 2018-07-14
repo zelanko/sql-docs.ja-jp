@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - simultaneous connections [SQL Server]
 - user connections option [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4ac585aacfe63de6bddbcaf06f7a36b4df468d0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ce587032e5956e4f86792a60d361e19b4f2a08e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228212"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>user connections サーバー構成オプションの構成
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user connections [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **user connections** オプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで許可される同時ユーザー接続の最大数を指定します。 許可される実際のユーザー接続数は、使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンと、使用しているアプリケーションおよびハードウェアの制限によって異なります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最大 32,767 個のユーザー接続を確立できます。 **User Connections** はサーバー自身が構成する動的なオプションなので、ユーザー接続の最大数は必要に応じて自動的に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって最大許容範囲内で調整されます。 たとえば、10 人のユーザーがログインしている場合、10 個のユーザー接続オブジェクトが割り当てられます。 ほとんどの場合は、このオプションの値を変更する必要はありません。 既定は 0 で、最大数 (32,767) のユーザー接続を許可することを示します。  

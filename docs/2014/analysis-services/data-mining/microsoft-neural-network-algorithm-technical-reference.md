@@ -1,5 +1,5 @@
 ---
-title: Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+title: Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HIDDEN_NODE_RATIO parameter
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e34d664a9eb2338f1a686c8a37303c03c8451ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18c5395a8da571a0c131cc6138a9eb499b3ef786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276508"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワークでは、最大 3 層のニューロンまたは *パーセプトロン* で構成される *多層パーセプトロン*ネットワーク ( *バックプロパゲーション デルタ ルール ネットワーク*とも呼ばれる) を使用します。 これらの層は、入力層、オプションの非表示層、および出力層です。  
@@ -112,7 +112,7 @@ ms.locfileid: "36164214"
   
  **連続値**  
   
- 値が存在 1 - μ/σ を =  
+ 値が存在する 1 - μ/σ を =  
   
  値が存在しない = - μ/σ  
   

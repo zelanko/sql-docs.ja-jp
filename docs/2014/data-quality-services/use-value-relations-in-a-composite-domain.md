@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.cdvaluerelations.f1
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 51cb667ca7b041008c8d452092af73f2f813a84a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3988df0011ecff07756799a3b547428d09eed5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213842"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>複合ドメインでの値のリレーションの使用
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ナレッジ検出の実行中に複合ドメインで検出された値の組み合わせを表示する方法について説明します。 このページには、値の組み合わせの発生回数が示されます。 値の管理は複合ドメインでサポートされないため、これらの値に対して操作を実行することはできません。  
@@ -42,7 +42,7 @@ ms.locfileid: "36173318"
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]** をクリックします。 詳細については、「 [ナレッジ ベースの作成](../../2014/data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../../2014/data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
-3.  **[ドメイン管理]** ページの **[ドメイン リスト]** から、ドメイン ルールを作成する複合ドメインを選択するか、新しい複合ドメインを作成します。 新しいドメインを作成した場合は、次を参照してください。 [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md)です。  
+3.  **[ドメイン管理]** ページの **[ドメイン リスト]** から、ドメイン ルールを作成する複合ドメインを選択するか、新しい複合ドメインを作成します。 新しいドメインを作成する場合を参照してください。[複合ドメインの作成](../../2014/data-quality-services/create-a-composite-domain.md)です。  
   
 4.  **[値のリレーション]** タブをクリックします。  
   

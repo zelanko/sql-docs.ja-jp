@@ -1,5 +1,5 @@
 ---
-title: Analysis Services (レポート ビルダーおよび SSRS) の MDX クエリ デザイナーでパラメーターを定義 |Microsoft ドキュメント
+title: Analysis Services (レポート ビルダーおよび SSRS) の MDX クエリ デザイナーでパラメーターの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
 - Multidimensional Expressions [Reporting Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0ed9044a9d9719ec67cff1f79d21882a7578129f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c46a722ce7f06e816a6625297ab35c9f5548c236
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179579"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Analysis Services の MDX クエリ デザイナーでのパラメーターの定義 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データ ソースに対する MDX クエリをパラメーター化するには、そのクエリにクエリ パラメーターを追加する必要があります。 MDX クエリ デザイナーでは、デザイン モードとクエリ モードの両方で、フィルターを指定することによって、クエリ パラメーターを追加できます。 クエリ パラメーターを使用してクエリを定義すると、Reporting Services によってレポート パラメーターとデータセットが自動的に作成され、有効な値の一覧が示されます。 これにより、クエリに直接渡される値を指定できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "36164960"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>MDX のデザイン モードでクエリ パラメーターを定義するには  
   
-1.  作成されたデータセットを右クリックし、レポート データ ペインで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]データ ソースの種類、およびクリックして**クエリ**です。 MDX クエリ デザイナーがデザイン モードで開きます。  
+1.  作成されたデータセットを右クリックし、レポート データ ペインで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]データ ソースの種類とクリックして**クエリ**します。 MDX クエリ デザイナーがデザイン モードで開きます。  
   
 2.  ディメンションをフィルター領域にドラッグし、 **[ディメンション]** 列の最初のセルにドロップします。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36164960"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>MDX のクエリ モードでクエリ パラメーターを定義するには  
   
-1.  作成されたデータセットを右クリックし、レポート データ ペインで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]データ ソースの種類、およびクリックして**クエリ**です。 MDX クエリ デザイナーがデザイン モードで開きます。  
+1.  作成されたデータセットを右クリックし、レポート データ ペインで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]データ ソースの種類とクリックして**クエリ**します。 MDX クエリ デザイナーがデザイン モードで開きます。  
   
 2.  ツール バーの **[デザイン]** をクリックして、クエリ モードに切り替えます。  
   

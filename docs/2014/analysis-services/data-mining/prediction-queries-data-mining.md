@@ -1,5 +1,5 @@
 ---
-title: 予測クエリ (データ マイニング) |Microsoft ドキュメント
+title: 予測クエリ (データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ccebccb18c4b19061de6dbefe17ac9ae132bfeed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59cf6254c290982e8d9c38cbf1ebb77680f12c13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255054"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
   一般的なデータ マイニング プロジェクトの目標は、マイニング モデルを使用して予測を行うことです。 たとえば、あるサーバーの集まりのダウンタイムを予測したり、顧客区分が広告キャンペーンに反応するかどうかを示すスコアを生成したりする場合があります。 これらすべてを行うには、予測クエリを作成します。  

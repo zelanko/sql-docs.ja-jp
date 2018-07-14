@@ -1,5 +1,5 @@
 ---
-title: PropertyType プロパティ (ServerNetworkProtocolProperty クラス) |Microsoft ドキュメント
+title: PropertyType プロパティ (ServerNetworkProtocolProperty クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyType property
 ms.assetid: d4932eaf-da7c-4b09-8298-ffb6333dfba2
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b9abb0c20817172b01f48bc83a7ef6b353143cd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f57b2404724a13505130dbc0d328e4a7823c55cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266098"
 ---
 # <a name="propertytype-property-servernetworkprotocolproperty-class"></a>PropertyType プロパティ (ServerNetworkProtocolProperty クラス)
   プロパティの型を取得します。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>要素  
  *object*  
- A [ServerNetworkProtocolProperty クラス](servernetworkprotocolproperty-class.md)オブジェクトのインスタンス上のネットワーク プロトコルの属性を表す[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ A [ServerNetworkProtocolProperty クラス](servernetworkprotocolproperty-class.md)オブジェクトのインスタンス上のネットワーク プロトコルの属性を表す[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  プロパティの型を指定する `uint32` 値。  

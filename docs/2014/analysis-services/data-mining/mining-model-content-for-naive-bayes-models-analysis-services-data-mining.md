@@ -1,5 +1,5 @@
 ---
-title: Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - Bayesian classifiers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b6c53452892eb928267b3f04078633274905633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14aa876539bafb265ddac5514d25519b003e646d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216122"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -37,7 +37,7 @@ ms.locfileid: "36164481"
 > [!NOTE]  
 >  Naive Bayes モデルでは、連続するデータ型が許可されないため、入力列のすべての値が不連続値または分離された値として処理されます。 値を分離する方法は指定できます。 詳細については、「 [マイニング モデルでの列の分離の変更](change-the-discretization-of-a-column-in-a-mining-model.md)」を参照してください。  
   
- ![naïve bayes のモデル コンテンツの構造体](../media/modelcontentstructure-nb.gif "naïve bayes のモデル コンテンツの構造")  
+ ![単純ベイズのモデル コンテンツの構造体](../media/modelcontentstructure-nb.gif "単純ベイズのモデル コンテンツの構造")  
   
 ## <a name="model-content-for-a-naive-bayes-model"></a>Naive Bayes モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、Naive Bayes モデルに関連する列についてのみ詳細と例を紹介します。  
@@ -289,7 +289,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Naive Bayes モデルでは、連続属性を含めることはできないため、数値データはすべて不連続値 (VALUE_TYPE = 4) または分離された値 (VALUE_TYPE = 5) として表されます。  
   
- A`Missing`値 (VALUE_TYPE = 1) は、トレーニング データに存在しなかった潜在的な値を表すすべての入力と出力属性に追加します。 「が見つかりません」という文字列と既定値を区別するように注意する必要があります`Missing`値。 詳細については、「[Missing 値 (Analysis Services - データ マイニング)](missing-values-analysis-services-data-mining.md)」を参照してください。  
+ A`Missing`値 (VALUE_TYPE = 1) が、トレーニング データ内に存在しないを潜在的な値を表すすべての入力と出力属性に追加されます。 「が見つかりません」という文字列と既定値を区別するように注意する必要があります`Missing`値。 詳細については、「[Missing 値 (Analysis Services - データ マイニング)](missing-values-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   

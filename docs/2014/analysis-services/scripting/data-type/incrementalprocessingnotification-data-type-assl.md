@@ -1,5 +1,5 @@
 ---
-title: IncrementalProcessingNotification データ型 (ASSL) |Microsoft ドキュメント
+title: IncrementalProcessingNotification データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - IncrementalProcessingNotification data type
 ms.assetid: 66e27f92-65c1-4a34-b9c2-bfbb5aeb7d7c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a913d847e6d328c3fc1289f964170af463a3f5be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ca951d727e32f576e4dc65bc005a5b423e90c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231812"
 ---
 # <a name="incrementalprocessingnotification-data-type-assl"></a>IncrementalProcessingNotification データ型 (ASSL)
-  情報を表す派生データ型を定義、 [ProactiveCaching](../objects/proactivecaching-element-assl.md)増分処理の進行状況を判断するために実行するクエリに関する要素。  
+  情報を表す派生データ型を定義、 [ProactiveCaching](../objects/proactivecaching-element-assl.md)増分処理の進行状況を判断するために実行するクエリの要素。  
   
 ## <a name="syntax"></a>構文  
   

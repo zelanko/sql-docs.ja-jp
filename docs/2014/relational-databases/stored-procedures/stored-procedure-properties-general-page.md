@@ -3,26 +3,24 @@ title: '[ストアド プロシージャのプロパティ] ([全般] ページ)
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spassistededitor.storedprocedure.f1
 - sql12.swb.spproperties.general.f1
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
-caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5336193b8a873e9db17cad2f411ae4e7cc9a1cdd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2f9832df276f2cb1f490ae6694f1849acab246bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194908"
 ---
 # <a name="stored-procedure-properties-general-page"></a>[ストアド プロシージャのプロパティ]\([全般] ページ)
   ストアド プロシージャに関する情報を表示します。 すべての情報は読み取り専用です。  
@@ -40,7 +38,7 @@ ms.locfileid: "36174106"
  **[作成日]**  
  ストアド プロシージャが作成された日付を表示します。  
   
- **Name**  
+ **名前**  
  現在のストアド プロシージャの名前です。  
   
  **[スキーマ]**  

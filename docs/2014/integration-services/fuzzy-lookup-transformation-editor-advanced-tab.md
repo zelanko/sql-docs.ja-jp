@@ -1,5 +1,5 @@
 ---
-title: あいまい参照変換エディター (詳細 タブ) |Microsoft ドキュメント
+title: あいまい参照変換エディター (詳細 タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptransformation.advanced.f1
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: 0a2919be-2ea7-4c06-82b8-0ffad5f0dd83
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 65c7acaab54bbbaa18126e9c1d2ac032e96557da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f46bf5ca32604fd53d8fca9f392c89270c4b91d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245182"
 ---
 # <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>[あいまい参照変換エディター] ([詳細設定] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、あいまい参照のパラメーターを設定できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36085925"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [あいまい参照変換エディター&#40;テーブル タブを参照&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
+ [あいまい参照変換エディター&#40;参照テーブル タブ&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
  [あいまい参照変換エディター&#40;列 タブ&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)  
   
   

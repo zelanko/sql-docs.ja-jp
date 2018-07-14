@@ -1,5 +1,5 @@
 ---
-title: メジャー グループのリンク |Microsoft ドキュメント
+title: リンク メジャー グループ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked measure groups [Analysis Services]
 - referencing measure groups
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f01313ce33a2dca510846a66d34d972540d72d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e67d39b1cafa212b2a43b55d9de58e5df918bd11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251474"
 ---
 # <a name="linked-measure-groups"></a>リンク メジャー グループ
   リンク メジャー グループは、同じデータベースまたは別の Analysis Services データベースにある別のキューブ内の別のメジャー グループに基づいています。 複数のキューブ内にある一連のメジャー、および対応するデータ値を再使用する場合は、リンク メジャー グループを使用することができます。  
   
- 同じサーバー上で実行されるソリューションに、元のメジャー グループとリンク メジャー グループが存在することをお勧めします。 将来のリリースで廃止予定はリモート サーバー上のメジャー グループへのリンク (を参照してください[SQL Server 2014 で非推奨の Analysis Services 機能](../deprecated-analysis-services-features-in-sql-server-2014.md))。  
+ 同じサーバー上で実行されるソリューションに、元のメジャー グループとリンク メジャー グループが存在することをお勧めします。 リモート サーバー上のメジャー グループへのリンクは、将来のリリースで廃止予定が (を参照してください[SQL Server 2014 で非推奨の Analysis Services 機能](../deprecated-analysis-services-features-in-sql-server-2014.md))。  
   
 > [!IMPORTANT]  
 >  リンク メジャー グループは読み取り専用です。 最新の変更内容を取得するには、すべてのリンク メジャー グループを削除し、変更後のソース オブジェクトに基づいてリンク メジャー グループを再作成する必要があります。 したがって、メジャー グループに対して今後変更を加える必要がある場合は、プロジェクト間でメジャー グループのコピーと貼り付けを行うことを、代わりのアプローチとして検討する必要があります。  
@@ -72,7 +72,7 @@ ms.locfileid: "36085534"
 ## <a name="secure-a-linked-measure"></a>リンク メジャーをセキュリティで保護  
  リンクが定義されると、リンク メジャー グループのメジャーへのアクセスは、他のメジャー グループへのアクセスと同じように管理されます。 リンク オブジェクトは、ロール デザイナー内で、リンクされていない対応オブジェクトの横に表示されます。 メジャー グループのセキュリティの管理の詳細については、「[キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)」を参照してください。  
   
- を定義またはリンク メジャー グループを使用するために、Windows 用のサービス アカウント、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスに属している必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を持つデータベース ロール`ReadDefinition`と`Read`ソースのアクセス権[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスを、ソース キューブおよびメジャー グループ、またはに属している必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ソースの管理者ロール[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンス。  
+ を定義またはリンク メジャー グループを使用するには、Windows サービス アカウント、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスに属している、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を持つデータベース ロール`ReadDefinition`と`Read`ソースのアクセス権[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスを、ソース キューブおよびメジャー グループ、またはに属している必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ソースの管理者ロール[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンス。  
   
 ## <a name="see-also"></a>参照  
  [リンク ディメンションの定義](define-linked-dimensions.md)  

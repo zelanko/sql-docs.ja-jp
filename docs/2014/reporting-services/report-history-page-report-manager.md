@@ -1,5 +1,5 @@
 ---
-title: レポート履歴ページ (レポート マネージャー) |Microsoft ドキュメント
+title: レポート履歴ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9a696c8b095281633e0d3b631aa773dad9fdb77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e0a3cc0ce4cb29b34ac67d3becfc966217dfb1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196742"
 ---
 # <a name="report-history-page-report-manager"></a>[レポート履歴] ページ (レポート マネージャー)
   [レポート履歴] ページには、一定期間に生成および保存したレポート スナップショットが表示されます。 レポート サーバーで設定されているオプションによっては、新しいスナップショットのみがレポート ヒストリに保存されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "36174084"
  レポート ヒストリ スナップショットをクリックすると、そのスナップショットが表示されます。 レポート ヒストリに表示されるスナップショットは、作成日時だけで識別されます。 スナップショットがスケジュールの設定を受けて生成されたのか、手動で生成されたのかを識別する表示はありません。  
   
 > [!NOTE]  
->  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 ## <a name="navigation"></a>ナビゲーション  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
@@ -45,7 +45,7 @@ ms.locfileid: "36174084"
 3.  ドロップダウン メニューの **[レポート履歴の表示]** をクリックします。  
   
 ## <a name="options"></a>および  
- **Delete**  
+ **削除**  
  1 つ以上のスナップショットを削除する場合にクリックします。 削除するスナップショットの横のチェック ボックスをオンにしてから、 **[削除]** をクリックします。  
   
  **新しいスナップショット**  
@@ -61,7 +61,7 @@ ms.locfileid: "36174084"
  [表示、またはレポート履歴の削除&#40;レポート マネージャー&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
  [レポート履歴にスナップショットを追加&#40;レポート マネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [全般プロパティ ページ、レポート &#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [レポート マネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
- [[スナップショット オプション] プロパティ ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
+ [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
+ [スナップショット オプション プロパティ ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
   
   

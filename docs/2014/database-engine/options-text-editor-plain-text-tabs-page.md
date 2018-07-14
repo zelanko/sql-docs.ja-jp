@@ -1,5 +1,5 @@
 ---
-title: オプション (プレーン テキストでのテキスト エディターでタブ ページ) |Microsoft ドキュメント
+title: オプション (プレーン テキストのテキスト エディター タブ ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5c27514ea38602885c26733238f2564211d4f43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 6bce8fcc9ea458c3cf2408a3edeb497def4044b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275308"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>[オプション] ([テキスト エディター]/[テキスト形式]/[タブ] ページ)
   特定の開発言語に関連付けられていないドキュメントを編集するときには、テキスト エディターが使用されます。このダイアログ ボックスを使用すると、テキスト エディターのタブの動作を変更できます。 この設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックして、**[テキスト エディター]** フォルダーを展開し、さらに **[テキスト形式]** を展開して、**[タブ]** をクリックします。  
@@ -43,13 +43,13 @@ ms.locfileid: "36164147"
  **[タブ サイズ]**  
  タブ ストップ間の間隔をスペース数で設定します。 既定値は、スペースが 4 つです。  
   
- **[インデント サイズ]**  
+ **インデントのサイズ**  
  自動インデントのサイズをスペース数で設定します。 既定値は、スペースが 4 つです。 指定されたサイズになるように、タブ文字、スペース文字、またはその両方が挿入されます。  
   
  **スペースを挿入します。**  
  タブ文字を使用せずにスペース文字だけを挿入してインデントします。 たとえば **[インデント サイズ]** が 5 に設定されている場合、Tab キーを押すか、**[書式設定]** ツール バーの **[インデント]** ボタンを押すごとに、5 つのスペース文字が挿入されます。  
   
- **タブの保持**  
+ **タブを保持します。**  
  インデントするときにできる限り多くのタブ文字を挿入します。 それぞれのタブ文字が、**[タブ サイズ]** で指定された数のスペースを満たします。 **[インデント サイズ]** が **[タブ サイズ]** 値の倍数でない場合は、その差を埋めるためにスペース文字が追加されます。  
   
   

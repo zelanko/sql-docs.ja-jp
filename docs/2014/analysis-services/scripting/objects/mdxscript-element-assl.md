@@ -1,5 +1,5 @@
 ---
-title: MdxScript 要素 (ASSL) |Microsoft ドキュメント
+title: MdxScript 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MdxScript element
 ms.assetid: 0c59a550-dc95-4d50-948a-bb99348bdd86
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81d83e2d179e5a16d17cc6988b209f348dbc2572
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3aa8d72073f5459a7e260a81ca4bf5c67ad3209b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169476"
 ---
 # <a name="mdxscript-element-assl"></a>MdxScript 要素 (ASSL)
-  関連付けられている多次元式 (MDX) スクリプトに関する情報が含まれています、[キューブ](cube-element-assl.md)要素。  
+  関連付けられている多次元式 (MDX) スクリプトに関する情報を格納する[キューブ](cube-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

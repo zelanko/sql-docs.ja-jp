@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services], formats
 - formats [Reporting Services], script files
@@ -16,13 +16,13 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: fd49c4cb6e16c9bbda6dc970e3bb5b0ceb2ef52d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f54fb06c849655b8fbb7c60fd2b20117dff610f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276048"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Reporting Services スクリプト ファイルを書式設定する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のスクリプトは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET コード ファイルであり、Web サービス記述言語 (WSDL) で構築されたプロキシに対して記述され、Reporting Services SOAP API を定義します。 スクリプト ファイルは、拡張子 .rss が付く Unicode または UTF-8 テキスト ファイルです。  
@@ -50,7 +50,7 @@ End Sub
 ```  
   
 > [!IMPORTANT]  
->  ユーザーの資格情報はスクリプト環境によって管理され、RS.exe の使用によりコマンド プロンプト引数をとおして渡されます。 *rs* 変数を使用して Web サービスの認証を設定できますが、スクリプト環境を使用することをお勧めします。 スクリプト ファイル内自体では Web サービスを認証する必要がありません。 スクリプト環境の認証の詳細については、次を参照してください。 [RS.exe ユーティリティ&#40;SSRS&#41;](rs-exe-utility-ssrs.md)です。  
+>  ユーザーの資格情報はスクリプト環境によって管理され、RS.exe の使用によりコマンド プロンプト引数をとおして渡されます。 *rs* 変数を使用して Web サービスの認証を設定できますが、スクリプト環境を使用することをお勧めします。 スクリプト ファイル内自体では Web サービスを認証する必要がありません。 スクリプト環境の認証の詳細については、次を参照してください。 [RS.exe ユーティリティ&#40;SSRS&#41;](rs-exe-utility-ssrs.md)します。  
   
  スクリプト ファイル内では名前空間を宣言しません。 スクリプト環境では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces available to you: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**, and **System.IO**.  
   

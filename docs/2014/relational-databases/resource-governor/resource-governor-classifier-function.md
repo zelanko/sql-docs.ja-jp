@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, classifier function
 - user-defined functions [SQL Server], classifier function
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f23d63b36222c78c61d77eb101fdf9654f14f1bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 86b2edd5eb48dcf9e03ab949e207e8b016052bce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253744"
 ---
 # <a name="resource-governor-classifier-function"></a>リソース ガバナーの分類子関数
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーの分類プロセスにより、着信セッションがセッションの特性に基づいてワークロード グループに割り当てられます。 分類ロジックは、分類子関数と呼ばれるユーザー定義関数を記述することで調整できます。  

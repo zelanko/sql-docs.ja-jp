@@ -1,5 +1,5 @@
 ---
-title: 互換性モード 90 以上のビューで参照することはできませんの |Microsoft ドキュメント
+title: 互換性モード 90 以上のビューで参照することはできません |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - views [SQL Server], FOR BROWSE clause
 - FOR BROWSE clause
 ms.assetid: 8f49b1c1-d877-4c46-b988-f8cdd8ac0925
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 87a937dafea15fdc9eca3bbbafbacc17275374b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b309f79379bacbca6cfc4d3b134b31ead8e9e506
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247922"
 ---
 # <a name="for-browse-is-not-allowed-in-views-in-90-or-later-compatibility-modes"></a>互換性モードが 90 以上の場合、FOR BROWSE はビューで使用できません
   アップグレード アドバイザーは、ビューで FOR BROWSE 句が使用されているのを検出しました。 データベースの互換性モードが 80 に設定されている場合は、FOR BROWSE 句をビューで使用できます (ただし、無視されます)。 FOR BROWSE 句は、データベース互換性モードが 90 以上に設定されている場合、ビューで使用できません。  

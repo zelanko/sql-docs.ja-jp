@@ -1,5 +1,5 @@
 ---
-title: PowerPivot ブックへの BI セマンティック モデル接続を作成 |Microsoft ドキュメント
+title: PowerPivot ブックへの BI セマンティック モデル接続の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34e81c0f6023b6dee0c9770fdfde89a92eb2afc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab47a88ef1bda109cca1abbe27a975d9df9290ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328482"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>PowerPivot ブックへの BI セマンティック モデル接続の作成
   このトピックでは、同一ファーム内の PowerPivot ブックにリダイレクトする BI セマンティック モデル接続を設定する方法について説明します。  
@@ -41,9 +41,9 @@ ms.locfileid: "36164382"
 ##  <a name="bkmk_prereq"></a> 前提条件の確認  
  BI セマンティック モデル接続ファイルを作成するには、投稿権限以上の権限が必要です。  
   
- BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、次を参照してください。 [BI セマンティック モデル接続のコンテンツ タイプをライブラリに追加&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)です。  
+ BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、次を参照してください。 [BI セマンティック モデル接続のコンテンツ タイプをライブラリに追加&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)します。  
   
- BI セマンティック モデル接続を設定する対象の PowerPivot ブックの URL を知る必要があります (たとえば、 http://adventure-works/shared documents/myworkbook.xlsx)。 ブックは、同一ファーム内にある必要があります。  
+ BI セマンティック モデル接続を設定する対象の PowerPivot ブックの URL を把握する必要があります (たとえば、 http://adventure-works/shared documents/myworkbook.xlsx)。 ブックは、同一ファーム内にある必要があります。  
   
  接続シーケンスに参加しているすべてのコンピューターとユーザーは、同じドメインまたは信頼されたドメイン (双方向の信頼関係) に属している必要があります。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "36164382"
   
 1.  BI セマンティック モデル接続の格納先となるライブラリで、SharePoint リボンの **[ドキュメント]** をクリックします。 [新しいドキュメント] の下矢印をクリックし、 **[BISM 接続ファイル]** を選択して、[新しい BI セマンティック モデル接続] ページを開きます。  
   
-     ![SharePoint ライブラリに新しいドキュメント サブメニュー](../media/ssas-bismconnection-new.gif "SharePoint ライブラリに新しいドキュメント サブメニュー")  
+     ![SharePoint ライブラリ内の新しいドキュメント サブメニュー](../media/ssas-bismconnection-new.gif "SharePoint ライブラリ内の新しいドキュメント サブメニュー")  
   
-2.  設定、**サーバー**プロパティを PowerPivot ブックの SharePoint URL (たとえば、  **http://mysharepoint/shared documents/myWorkbook.xlsx**です。 PowerPivot for SharePoint の配置では、ファーム内の任意のサーバーにデータを読み込むことができます。 このため、PowerPivot データへのデータ ソース接続では、ブックへのパスだけを指定します。 PowerPivot System サービスによって、データを読み込むサーバーが決定されます。  
+2.  設定、 **Server**プロパティに、PowerPivot ブックの SharePoint URL (たとえば、  **http://mysharepoint/shared documents/myWorkbook.xlsx**します。 PowerPivot for SharePoint の配置では、ファーム内の任意のサーバーにデータを読み込むことができます。 このため、PowerPivot データへのデータ ソース接続では、ブックへのパスだけを指定します。 PowerPivot System サービスによって、データを読み込むサーバーが決定されます。  
   
-     使用しないで、**データベース**プロパティは、PowerPivot ブックの場所を指定するときは使用されません。  
+     使用しないでください、**データベース**プロパティは、PowerPivot ブックの場所を指定する場合は使用しません。  
   
      ページは次の図のようになります。  
   

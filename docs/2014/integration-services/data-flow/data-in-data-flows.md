@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data types [Integration Services]
 - comparing data
@@ -20,13 +20,13 @@ ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f43aae0dae9c027dd8c21c91fdd33d55f325afa5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48f253ad9cf95c7a71da714af8c456a5cbf36cbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188579"
 ---
 # <a name="data-in-data-flows"></a>データ フロー内のデータ
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ フローで使用するデータ型のセットが用意されています。  

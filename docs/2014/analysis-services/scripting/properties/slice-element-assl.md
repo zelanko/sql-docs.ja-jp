@@ -1,5 +1,5 @@
 ---
-title: Slice 要素 (ASSL) |Microsoft ドキュメント
+title: Slice 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Slice element
 ms.assetid: 2c8c4107-c641-4724-bfa5-0c47e0ec8888
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3b1f693eddeebc0b4ad88e629eeeac9f76ca1083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 299f84167ec64c4bdd795c56a608e76f61d348b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178889"
 ---
 # <a name="slice-element-assl"></a>Slice 要素 (ASSL)
   パーティションに含まれているスライスを定義する多次元式 (MDX) を格納します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36173332"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `Slice` 要素には、パーティションに情報が格納されるキューブの部分を識別する MDX の組式またはセット式を格納します。 MDX 式がに似ていますが、 [StrToSet](/sql/mdx/strtoset-mdx) MDX の関数、CONSTRAINED キーワードを使用で、式は、MDX またはユーザー定義関数を含めることはできません。  
+ `Slice` 要素には、パーティションに情報が格納されるキューブの部分を識別する MDX の組式またはセット式を格納します。 MDX 式と似ています、 [StrToSet](/sql/mdx/strtoset-mdx) MDX 関数、CONSTRAINED キーワードを使用で、式は、MDX またはユーザー定義関数を含めることはできません。  
   
  親に対応する要素`Slice`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Partition>します。  
   

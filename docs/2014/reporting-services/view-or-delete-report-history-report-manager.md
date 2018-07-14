@@ -1,5 +1,5 @@
 ---
-title: 表示レポート履歴または削除 (レポート マネージャー) |Microsoft ドキュメント
+title: 表示、または (レポート マネージャー) レポート履歴の削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report history [Reporting Services], viewing snapshots
 - report history [Reporting Services], creating snapshots
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], creating
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
 caps.latest.revision: 34
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c32b60bf255351a93771dcc34c9b18de55e652fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a972408c7e21995f9b1c28482bcb74eea1e7f495
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192972"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>レポート履歴を表示または削除する (レポート マネージャー)
   レポート履歴は、その基になっているレポートと共に保持されます。 レポートを表示する権限を持っているすべてのユーザーは、そのレポート履歴を表示できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36165728"
   
 2.  レポート マネージャーで **[コンテンツ]** ページに移動します。 履歴スナップショットを作成または表示するレポートに移動し、そのレポートをクリックして開きます。  
   
-3.  **[履歴]** タブをクリックします。履歴スナップショットが表示されます、**とき実行**列です。  
+3.  **[履歴]** タブをクリックします。履歴スナップショットが表示されます、**実行**列。  
   
 4.  履歴スナップショットを表示するには、スナップショットをクリックします。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "36165728"
   
 1.  レポート マネージャーで **[コンテンツ]** ページに移動します。 履歴スナップショットを作成するレポートに移動し、そのレポートをクリックして開きます。  
   
-2.  **[履歴]** タブをクリックします。履歴スナップショットが表示されます、**とき実行**列です。  
+2.  **[履歴]** タブをクリックします。履歴スナップショットが表示されます、**実行**列。  
   
-3.  削除、およびをクリックする、履歴スナップショットの横にあるチェック ボックスをオンに**削除**です。  
+3.  クリックして、削除する履歴スナップショットの横にあるチェック ボックスをオン**削除**します。  
   
 ## <a name="see-also"></a>参照  
  [レポート履歴にスナップショットを追加&#40;レポート マネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   

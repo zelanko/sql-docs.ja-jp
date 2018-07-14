@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetServiceState method
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7fdcc309eca07c8fc29fa80934e6929054a59b44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f154e0eb7666fd4c8534e701f42a521b4fb70ff8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222532"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>SetServiceState メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバーの Windows サービスおよび Web サービスを開始または停止します。  
@@ -47,7 +47,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>パラメーター  
  *EnableWindowsService*  
- A `Boolean` Windows サービスの状態を示す値。 値`true`レポート サーバーの Windows を起動サービス以外の値の場合は`false`Windows サービスを停止します。  
+ A `Boolean` Windows サービスの状態を示す値。 値`true`開始、レポート サーバー Windows サービス以外の値`false`Windows サービスを停止します。  
   
  *EnableWebService*  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web サービスの状態を示す `Boolean` 値。 値が `true` の場合はレポート サーバー Web サービスを開始し、`false` の場合はレポート サーバー Web サービスを停止します。  

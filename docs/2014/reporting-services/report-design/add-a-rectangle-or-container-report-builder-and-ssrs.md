@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10061"
 - sql12.rtp.rptdesigner.rectangleproperties.general.f1
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d1cac8525b9343cc2719cd38d278f55b89839bbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 474fcf999291f9b26c242a8e1685431bd58297f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255774"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>四角形またはコンテナーの追加 (レポート ビルダーおよび SSRS)
   グラフィック要素によってレポートの領域を分けたり、レポートの領域を強調したり、1 つ以上のレポート アイテムに背景を提供したりするには、レポートに四角形を追加します。 また、四角形をコンテナーとして使用すると、レポートでのデータ領域のレンダリング方法を制御することもできます。 四角形の外観は、背景や罫線の色など、四角形のプロパティを編集することによりカスタマイズできます。 四角形をコンテナーとして使用する方法について詳しくは、「[四角形と線 &#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)」および「[マトリックスとグラフでの同じデータの表示 &#40;レポート ビルダー&#41;](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md)」をご覧ください。  
@@ -54,7 +54,7 @@ ms.locfileid: "36164018"
 2.  **[罫線]** ボタンの横にある矢印をクリックして、四角形のどの辺を変更するかを指定します。  
   
     > [!NOTE]  
-    >  線のスタイルを設定した場合**二重**と線の幅が 1 1/2 ポイントより狭い、行が表示されるか倍精度浮動小数点レポート ビルダー、レポート デザイナーまたはレポート マネージャーでレポートを実行するとします。 レポートを他の形式 (Microsoft Word、Acrobat PDF など) にエクスポートすると、二重に表示されます。  
+    >  線のスタイルを設定した場合**二重**と線の幅が 1 1/2 ポイントより狭いします線が表示されるか double レポート ビルダー、レポート デザイナーまたはレポート マネージャーでレポートを実行するとします。 レポートを他の形式 (Microsoft Word、Acrobat PDF など) にエクスポートすると、二重に表示されます。  
   
 ## <a name="see-also"></a>参照  
  [四角形と線&#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   

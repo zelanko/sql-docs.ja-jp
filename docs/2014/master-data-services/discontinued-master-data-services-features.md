@@ -1,5 +1,5 @@
 ---
-title: 廃止された SQL Server 2014 でマスター データ サービス機能 |Microsoft ドキュメント
+title: 廃止された SQL server 2014 マスター データ サービス機能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 46f5d4de97af6822ba110fe35e81df2d13a526ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f2e9a15b4a0f1441d63ab39a4b65861fcfef099e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167053"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014 で提供が中止されたマスター データ サービス機能
   このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で使用できなくなった [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の機能について説明します。  
@@ -32,11 +32,11 @@ ms.locfileid: "36165272"
 ### <a name="security"></a>Security  
  セキュリティの割り当てを簡単にするために、モデル オブジェクト権限を派生階層、明示的階層、および属性グループの各オブジェクトに割り当てることができなくなりました。  
   
--   派生階層権限は、モデルに基づくようになりました。 たとえば、ユーザーを派生階層に権限を持っている場合は、割り当てる必要があります**更新**モデル オブジェクト。 割り当てることができますし、 **Deny**がアクセスするユーザーをたくない任意のエンティティへのアクセス。  
+-   派生階層権限は、モデルに基づくようになりました。 たとえば、ユーザーを派生階層に対する権限を持っている場合は、割り当てる必要があります**Update**モデル オブジェクトにします。 割り当てることができますし、 **Deny**がアクセスするユーザーをしたくない任意のエンティティへのアクセス。  
   
--   明示的階層権限は、エンティティに基づくようになりました。 たとえば、ユーザーがある**更新**アカウント エンティティへのアクセスを許可し、すべての明示的階層、エンティティを更新可能にします。  
+-   明示的階層権限は、エンティティに基づくようになりました。 たとえば、ユーザーがある**Update**アカウント エンティティにアクセス許可は、エンティティのすべての明示的階層は更新可能になります。  
   
--   属性グループの権限を割り当てられなくなります、**ユーザーとグループ権限**機能領域。 代わりで、**システム管理**機能領域の属性グループを作成する場所、ユーザーおよびグループを指定することができます**更新**属性グループへのアクセス許可。 **読み取り専用**属性グループへのアクセス許可は現在利用できません。  
+-   属性グループの権限を割り当てられなくなります、**ユーザーとグループ権限**機能領域。 代わりで、**システム管理**機能領域の属性グループを作成、ユーザーおよびグループを指定することができます**Update**属性グループへのアクセス許可。 **読み取り専用**属性グループへのアクセス許可が使用できなくします。  
   
 ### <a name="staging-process"></a>ステージング処理  
  新しいステージング処理を使用して、次の操作を実行することはできません。  
@@ -57,17 +57,17 @@ ms.locfileid: "36165272"
  また、パッケージは作成されたエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のみで展開できます。 つまり、 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] で作成されたパッケージを [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]に配置することはできません。 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 環境にパッケージを展開してから、データベースを [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] にアップグレードする必要があります。  
   
 ### <a name="code-generation-business-rules"></a>コード生成のビジネス ルール  
- Code 属性の値を自動的に生成するビジネス ルールを管理する方法が変わりました。 以前は、Code 属性の値を生成する、使用、**生成値に対する既定の属性**アクションで、**システム管理**の機能領域**ビジネス ルール**. **システム管理**、自動的に生成されたコードの値を有効にするエンティティを編集する必要があります。 詳細については、「[コードの自動作成 (マスター データ サービス)](automatic-code-creation-master-data-services.md)」を参照してください。  
+ Code 属性の値を自動的に生成するビジネス ルールを管理する方法が変わりました。 使用して、Code 属性の値を生成するには、以前は、**生成値に対する既定の属性**アクションで、**システム管理**機能領域で**ビジネス ルール**. **システム管理**、自動的に生成されたコードの値を有効にするエンティティを編集する必要があります。 詳細については、「[コードの自動作成 (マスター データ サービス)](automatic-code-creation-master-data-services.md)」を参照してください。  
   
  この種類のルールが格納された [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] モデルの配置パッケージを持っている場合は、データベースを [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] にアップグレードすると、ビジネス ルールが除外されます。  
   
 ### <a name="bulk-updates-and-exporting"></a>一括更新と一括エクスポート  
- [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで、複数のメンバーの属性値を一括更新することができなくなりました。 一括更新プログラムは、ステージング処理を使用して、または[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]です。  
+ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで、複数のメンバーの属性値を一括更新することができなくなりました。 一括更新を実行するには、ステージング処理を使用または[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]します。  
   
- [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで、メンバーを Excel にエクスポートできなくなりました。 Excel でメンバーを操作するには、使用、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]です。  
+ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで、メンバーを Excel にエクスポートできなくなりました。 Excel でメンバーを操作するには、使用、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]します。  
   
 ### <a name="transactions"></a>トランザクション  
- **エクスプ ローラー**機能領域で、ユーザーが不要になったが、独自のトランザクションを元に戻します。 ユーザーが内のデータに対して行った変更を以前は、元に戻す**エクスプ ローラー**です。 管理者は、すべてのユーザーのトランザクションを戻すことができますが、**バージョン管理**機能領域。  
+ **エクスプ ローラー**機能領域で、ユーザーは不要になったが、独自のトランザクションを元に戻します。 ユーザーがデータに加えた変更をこれまでは、元に戻す**エクスプ ローラー**します。 管理者はすべてのユーザーのトランザクションを戻すことができますが、**バージョン管理**機能領域。  
   
  注釈が永続的に保持されるようになり、削除できなくなりました。 以前は、注釈はトランザクションと見なされていて、トランザクションを元に戻すことで削除できました。  
   

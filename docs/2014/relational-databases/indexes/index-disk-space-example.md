@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online index disk space
 - disk space [SQL Server], indexes
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b371198e36cc2e8047ab88275331dab076e0b97b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6e2fc74a9134a03c69e6d436c11de84ef2867b1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182269"
 ---
 # <a name="index-disk-space-example"></a>インデックスのディスク領域の例
   インデックスを作成、再構築、または削除する場合は、古い (基になる) 構造と新しい (対象となる) 構造の両方を格納するディスク領域が、それぞれ適切なファイルとファイル グループで必要になります。 古い構造の割り当ては、インデックス作成トランザクションがコミットされるまで解除されません。 並べ替え操作用に一時ディスク領域が追加で必要になる場合もあります。 詳細については、「 [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)」をご参照ください。  
@@ -100,7 +99,7 @@ ms.locfileid: "36164783"
   
 -   一時マッピング インデックスに必要な領域を判断します。  
   
-     この例では、古いブックマークはヒープ (8 バイト) の行 ID (RID) と、新しいブックマークはクラスター化キー (も含め、24 バイト、 `uniqueifier`)。 古いブックマークと新しいブックマーク間で重複する列はありません。  
+     この例では、古いブックマークはヒープ (8 バイト) の行 ID (RID) と新しいブックマークはクラスター化キー (も含め、24 バイト、 `uniqueifier`)。 古いブックマークと新しいブックマーク間で重複する列はありません。  
   
      一時マッピング インデックスのサイズは、100 万行 * (8 バイト + 24 バイト) / 80% ~ 40 MB です。  
   

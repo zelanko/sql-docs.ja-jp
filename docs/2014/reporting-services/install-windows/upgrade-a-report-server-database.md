@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - report server database
@@ -17,20 +17,20 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 1c27b2bed8932fd5dbb415be7889242c0752b52b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18ee01868f27e12f709ec5784e868eadcdd46f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253580"
 ---
 # <a name="upgrade-a-report-server-database"></a>レポート サーバー データベースのアップグレード
   レポート サーバー データベースは、1 台以上のレポート サーバー インスタンスの記憶域になります。 レポート サーバー データベースのスキーマは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]が新たにリリースされるたびに変更される可能性があります。そのため、使用中のレポート サーバー インスタンスのバージョンとデータベースのバージョンを一致させる必要があります。 ほとんどの場合、レポート サーバー データベースは自動的にアップグレードされます。ユーザーは何も処理する必要がありません。  
   
  **ネイティブ モード:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、実際には、レポート サーバー データベースは、"ReportServer" および "ReportServerTempDB" という既定の名前の付いた 2 つのデータベースで構成されます。  
   
- **SharePoint モード:** で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのレポート サーバー データベースが実際には一連のデータベースの各インスタンスに対して作成された、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービス アプリケーション。  
+ **SharePoint モード:** で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのレポート サーバー データベースは、の各インスタンスに対して作成されたデータベースの集まり実際には、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービス アプリケーション。  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>ネイティブ モードのレポート サーバー データベースをアップグレードする方法  
  次に、レポート サーバー データベースのアップグレード条件を示します。  

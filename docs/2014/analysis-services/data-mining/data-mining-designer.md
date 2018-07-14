@@ -1,5 +1,5 @@
 ---
-title: データ マイニング デザイナー |Microsoft ドキュメント
+title: データ マイニング デザイナー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], structure
 - mining structures [Analysis Services], modifying
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], modifying
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91e69ba979d4b17c1d5197e444d8cc4fed9834b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07f6d732e2c22bd33b6d5df3c6c68a2703f8acfc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247752"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
   データ マイニング デザイナーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のマイニング モデルを操作するための主要な環境です。 データ マイニング デザイナーにアクセスするには、既存のマイニング構造を選択するか、またはデータ マイニング ウィザードを使用して新しいマイニング構造とマイニング モデルを作成します。 データ マイニング デザイナーを使用すると、次の作業を実行できます。  
@@ -74,7 +74,7 @@ ms.locfileid: "36085115"
   
  [テストと検証&#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  
   
- [テストと検証タスク、および操作方法&#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>[マイニング モデル予測] タブ  
  **[マイニング モデル予測]** タブには予測クエリ ビルダーがあり、これを使用してデータ マイニング拡張機能 (DMX) の予測クエリを作成できます。 このタブには、マイニング モデルと入力テーブルの指定、入力テーブル内の列へのマイニング モデル内の列のマッピング、クエリへの機能の追加、および各列の条件の指定を行うためのツールがあります。  

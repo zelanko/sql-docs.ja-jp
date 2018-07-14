@@ -1,5 +1,5 @@
 ---
-title: オプション (SQL Server オブジェクト エクスプ ローラー-スクリプト作成 ページ) |Microsoft ドキュメント
+title: オプション (SQL Server オブジェクト エクスプ ローラー-スクリプト作成 ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74dfa7eec9ed7f014e9baf09cf4ddcf30cd12901
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 094fd9d740501fafee8c75eff162a132c01e08ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170223"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>オプション (SQL Server オブジェクト エクスプ ローラー-スクリプト作成 ページ)
   このページを使用すると、 **オブジェクト エクスプローラー**内にあるオブジェクトのコンテキスト メニューの次の各コマンドに適用されるスクリプト オプションを設定できます。  
@@ -36,20 +36,20 @@ ms.locfileid: "36173852"
 -   このページでは、 **SQL Server スクリプト生成ウィザード**で使用するスクリプト オプションの既定値も設定できます。  
   
 ## <a name="remarks"></a>コメント  
- **編集**と**変更**コマンドとは異なる結果になる、**スクリプト\<オブジェクト > として**コマンド、同じオプション設定をします。 **[編集]** コマンドおよび **[変更]** コマンドは、クエリ エディター セッション中に現在のデータベースでオブジェクトを変更するために設計されています。 **スクリプト\<オブジェクト > として**コマンドがオブジェクトの作成に後で使用できるようにするスクリプトを生成するように設計されています。  
+ **編集**と**変更**コマンドとは異なる結果を生成可能性があります、**スクリプト\<オブジェクト > として**コマンドを同じオプション設定。 **[編集]** コマンドおよび **[変更]** コマンドは、クエリ エディター セッション中に現在のデータベースでオブジェクトを変更するために設計されています。 **スクリプト\<オブジェクト > として**コマンドはスクリプトを生成し、オブジェクトの作成に後で使用できるように設計されています。  
   
 ## <a name="options"></a>および  
  スクリプト オプションを指定するには、各オプションの右にあるリストから、いずれかの設定を選択します。  
   
 ### <a name="general-scripting-options"></a>[全般スクリプト作成オプション]  
  **[各ステートメントを区切る]**  
- バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]**/**[オプション]**/**[クエリ実行]**/**[SQL Server]**/**[全般]**/**[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、次を参照してください。[移動&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)です。  
+ バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]**/**[オプション]**/**[クエリ実行]**/**[SQL Server]**/**[全般]**/**[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、次を参照してください。[移動&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)します。  
   
  **[説明用ヘッダーを含める]**  
- スクリプトをオブジェクトごとのセクションに分割し、説明用のコメントを追加します。 既定値は True です。 詳細については、次を参照してください。[コメント&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql)です。  
+ スクリプトをオブジェクトごとのセクションに分割し、説明用のコメントを追加します。 既定値は True です。 詳細については、次を参照してください。[コメント&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql)します。  
   
  **[VarDecimal オプションを含める]**  
- vardecimal ストレージ オプションを含めます。 既定値は False です。 詳細については、次を参照してください。 および[sp_db_vardecimal_storage_format &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)です。  
+ vardecimal ストレージ オプションを含めます。 既定値は False です。 詳細については、次を参照してください。 および[sp_db_vardecimal_storage_format &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)します。  
   
  **[変更の追跡のスクリプトを作成]**  
  変更の追跡の情報をスクリプトに含めます。  
@@ -58,7 +58,7 @@ ms.locfileid: "36173852"
  選択したバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で実行できるスクリプトを作成します。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の新機能のスクリプトを以前のバージョン用に生成することはできません。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 用に作成したスクリプトには、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で動作しているサーバーや、以前の [データベース互換性レベルの設定](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)が適用されているデータベースに対して実行できないものもあります。  
   
  **[フルテキスト カタログのスクリプトを作成]**  
- フルテキスト カタログのスクリプトを含めます。 既定値は False です。 詳細については、次を参照してください。 [CREATE FULLTEXT CATALOG &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)です。  
+ フルテキスト カタログのスクリプトを含めます。 既定値は False です。 詳細については、次を参照してください。 [CREATE FULLTEXT CATALOG &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)します。  
   
  **スクリプトを使用して\<データベース >**  
  スクリプトに USE &lt;データベース&gt; ステートメントを追加することにより、現在の **オブジェクト エクスプローラー** データベースのコンテキストでデータベース オブジェクトを作成します。 スクリプトが別のデータベースで使用される可能性がある場合は、False を選択して除外します。 既定値は True です。 詳細については、「[USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)」を参照してください。  
@@ -68,7 +68,7 @@ ms.locfileid: "36173852"
  選択したオブジェクトのスクリプトを実行する際に必要な追加オブジェクトのスクリプトを生成します。 既定値は False です。  
   
  **[IF NOT EXISTS 句を含める]**  
- 各オブジェクトを作成する前にデータベースにそのオブジェクトが存在しないことを確認するためのステートメントを含めます。 既定値は False です。 詳細については、次を参照してください[IF しています.。ELSE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/if-else-transact-sql)と[EXISTS &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/exists-transact-sql)です。  
+ 各オブジェクトを作成する前にデータベースにそのオブジェクトが存在しないことを確認するためのステートメントを含めます。 既定値は False です。 詳細については、次を参照してください[IF しています.。ELSE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/if-else-transact-sql)と[EXISTS &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/exists-transact-sql)します。  
   
  **[オブジェクト名を修飾するスキーマ]**  
  オブジェクト名をオブジェクト スキーマで修飾します。 既定値は False です。 詳細については、「 [データベース スキーマの作成](../../relational-databases/security/authentication-access/create-a-database-schema.md)」を参照してください。  
@@ -80,7 +80,7 @@ ms.locfileid: "36173852"
  生成されたスクリプトに所有者を含めます。 既定値は False です。  
   
  **[権限のスクリプトを作成]**  
- データベース オブジェクトに対する権限をスクリプトに含めます。 既定値は True です。 詳細については、次を参照してください。[権限&#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)です。  
+ データベース オブジェクトに対する権限をスクリプトに含めます。 既定値は True です。 詳細については、次を参照してください。[権限&#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)します。  
   
 ### <a name="tableview-options"></a>[テーブル/ビュー オプション]  
  次のオプションは、テーブルまたはビューのスクリプトのみに適用されます。  
@@ -101,7 +101,7 @@ ms.locfileid: "36173852"
  FOREIGN KEY 制約のテーブル参照にスキーマ名を追加します。 既定値は True です。  
   
  **[バインドされた既定値およびルールのスクリプトを作成]**  
- バインド ストアド プロシージャ **sp_bindefault** および **sp_bindrule** の呼び出しを含めます。 既定値は True です。 詳細については、次を参照してください。 [sp_bindefault &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql)と[sp_bindrule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindrule-transact-sql)です。  
+ バインド ストアド プロシージャ **sp_bindefault** および **sp_bindrule** の呼び出しを含めます。 既定値は True です。 詳細については、次を参照してください。 [sp_bindefault &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql)と[sp_bindrule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindrule-transact-sql)します。  
   
  **[CHECK 制約のスクリプトを作成]**  
  スクリプトに [CHECK 制約](../../relational-databases/tables/unique-constraints-and-check-constraints.md) を追加します。 既定値は True です。  
@@ -116,13 +116,13 @@ ms.locfileid: "36173852"
  スクリプトに [FOREIGN KEY 制約](../../relational-databases/tables/primary-and-foreign-key-constraints.md) を含めます。 既定値は False です。  
   
  **[フルテキスト インデックスのスクリプトを作成]**  
- スクリプトにフルテキスト インデックスを含めます。 既定値は False です。 詳細については、次を参照してください。 [CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)です。  
+ スクリプトにフルテキスト インデックスを含めます。 既定値は False です。 詳細については、次を参照してください。 [CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)します。  
   
  **[インデックスのスクリプトを作成]**  
  スクリプトにクラスター化、非クラスター化、および XML インデックスを含めます。 既定値は True です。 詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)」を参照してください。  
   
  **[パーティション構成のスクリプトを作成]**  
- スクリプトにテーブル パーティション分割構成を含めます。 既定値は False です。 詳細については、次を参照してください。 [CREATE PARTITION SCHEME &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)です。  
+ スクリプトにテーブル パーティション分割構成を含めます。 既定値は False です。 詳細については、次を参照してください。 [CREATE PARTITION SCHEME &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)します。  
   
  **[主キーのスクリプトを作成]**  
  スクリプトに [PRIMARY KEY 制約](../../relational-databases/tables/primary-and-foreign-key-constraints.md) を含めます。 既定値は True です。  
@@ -140,7 +140,7 @@ ms.locfileid: "36173852"
  ビュー ヘッダーにビュー列を宣言します。 既定値は False です。 詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)」を参照してください。  
   
  **[ScriptDriIncludeSystemNames]**  
- 宣言参照整合性を適用するために、システムによって生成される制約名を含めます。 既定値は False です。 詳細については、次を参照してください。 [REFERENTIAL_CONSTRAINTS &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-information-schema-views/referential-constraints-transact-sql)です。  
+ 宣言参照整合性を適用するために、システムによって生成される制約名を含めます。 既定値は False です。 詳細については、次を参照してください。 [REFERENTIAL_CONSTRAINTS &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-information-schema-views/referential-constraints-transact-sql)します。  
   
 ## <a name="see-also"></a>参照  
  [スクリプトの生成 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)  

@@ -1,5 +1,5 @@
 ---
-title: トレース データを再生 |Microsoft ドキュメント
+title: トレース データを再生 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a53224c1618434ff9a7db2dda4ffc8a71f2ad1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8be27c06c27688ad38339ea911bbe0f165658e9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220516"
 ---
 # <a name="replay-trace-data"></a>トレース データの再生
   入力トレース データが準備できたら、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能を使用して、分散再生を開始できます。 詳細については、「 [入力トレース データの準備](prepare-the-input-trace-data.md)」を参照してください。  
@@ -47,7 +47,7 @@ ms.locfileid: "36164704"
   
 2.  **イベント再生段階を開始する**: 分散再生を開始するには、 **replay** オプションを使用して、管理ツールを実行する必要があります。 詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](replay-option-distributed-replay-administration-tool.md)」を参照してください。  
   
-    1.  Windows コマンド プロンプト ユーティリティを開く (`CMD.exe`)、Distributed Replay 管理ツールのインストール場所に移動し、(`DReplay.exe`)。  
+    1.  Windows コマンド プロンプト ユーティリティを開きます (`CMD.exe`)、分散再生管理ツールのインストール場所に移動します (`DReplay.exe`)。  
   
     2.  (省略可能) 管理ツールを実行するコンピューターとは別のコンピューター上でコントローラー サービスが実行されている場合、 *controller* パラメーター **-m**を使用して、コントローラーを指定します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36164704"
   
 ## <a name="see-also"></a>参照  
  [分散再生の要件](distributed-replay-requirements.md)   
- [管理ツールのコマンド ライン オプション&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [管理ツール コマンド ライン オプション&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [分散再生の構成](configure-distributed-replay.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.conc.subtopubs.f1
 helpviewer_keywords:
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 715fd5e5e88542b0f70ac0917a0931960f6f9c7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: afb416dad396a55040f8534d76638143bd6dc18d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221342"
 ---
 # <a name="subscribe-to-publications"></a>パブリケーションのサブスクライブ
   サブスクリプションとは、パブリケーションのデータとデータベース オブジェクトのコピーを要求することです。 サブスクリプションでは、受信するパブリケーションおよびパブリケーションの受信場所と受信時間が定義されます。 サブスクリプションを設計する場合は、エージェント処理を実行する場所を考慮してください。 選択するサブスクリプションの種類によって、エージェントが実行される場所が決まります。 プッシュ サブスクリプションではマージ エージェントまたはディストリビューション エージェントがディストリビューターで実行されるのに対し、プル サブスクリプションではサブスクライバーでエージェントが実行されます。 サブスクリプションの作成後にその種類を変更することはできません。  

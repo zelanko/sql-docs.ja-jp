@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ef032c021bb8bdf2a64f63aad8d3eb79da044afb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f8890c0ccab740444845180a328f9753c7a50976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194913"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>データセット フィールド コレクション (レポート ビルダーおよび SSRS)
   データセット フィールドは、データ接続のデータを表します。 フィールドは数値データまたは非数値データを表すことができます。 売上高、売上合計、顧客名、データベース識別子、URL、画像、空間データ、電子メール アドレスなどがその例です。 デザイン画面では、フィールドがテキスト ボックス、テーブル、グラフなどのレポート アイテムの式として表示されます。  
@@ -80,7 +80,7 @@ ms.locfileid: "36173889"
 ##  <a name="DataTypes"></a> フィールド データ型  
  データセットを作成したとき、データ ソースのフィールドのデータ型がレポートで使用される正確なデータ型ではない場合があります。 データ型は、1 つまたは 2 つのマッピング レイヤーを通過することがあります。 データ処理拡張機能またはデータ プロバイダーが、データ ソースのデータ型を共通言語ランタイム (CLR) データ型にマップすることがあります。 データ処理拡張機能によって返されるデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]の共通言語ランタイム (CLR) データ型のサブセットにマップされます。  
   
- データ ソースでは、データは、データ ソースでサポートされるデータ型に格納されます。 たとえば、データを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースはサポートされているいずれかを指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのデータ型`nvarchar`または`datetime`です。 データ ソースからデータを取得するとき、データは、データ ソースの種類に関連付けられているデータ処理拡張機能またはデータ プロバイダーを通過します。 データ処理拡張機能によっては、データは、データ ソースで使用されるデータ型からデータ処理拡張機能でサポートされるデータ型に変換されることがあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]と共にインストールされる共通言語ランタイム (CLR) バージョンでサポートされるデータ型を使用します。 データ プロバイダーは、ネイティブ データ型の結果セットの各列を [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) データ型にマップします。  
+ データ ソースでは、データは、データ ソースでサポートされるデータ型に格納されます。 たとえば、データを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースは、サポートされているいずれかを指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのデータ型`nvarchar`または`datetime`します。 データ ソースからデータを取得するとき、データは、データ ソースの種類に関連付けられているデータ処理拡張機能またはデータ プロバイダーを通過します。 データ処理拡張機能によっては、データは、データ ソースで使用されるデータ型からデータ処理拡張機能でサポートされるデータ型に変換されることがあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]と共にインストールされる共通言語ランタイム (CLR) バージョンでサポートされるデータ型を使用します。 データ プロバイダーは、ネイティブ データ型の結果セットの各列を [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) データ型にマップします。  
   
  各ステージにおいて、データは、次の一覧で説明するデータ型によって表現されます。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36173889"
   
 -   **データ プロバイダーまたはデータ処理拡張機能** データ ソースに接続するときに選択したデータ処理拡張機能のデータ プロバイダーのバージョンによってサポートされるデータ型。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] に基づくデータ プロバイダーは、CLR でサポートされるデータ型を使用します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーのデータ型の詳細については、MSDN の「 [データ型のマッピング (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) 」および「 [基本型の操作](http://go.microsoft.com/fwlink/?LinkId=112177) 」を参照してください。  
   
-     一般的なデータ型のサポートなど、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]含める`Int32`と`String`です。 カレンダー日付および時刻は `DateTime` 構造体でサポートされています。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 が導入されたサポート、`DateTimeOffset`タイム ゾーン オフセットを含む日付構造体。  
+     一般的なデータ型のサポートなど、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]含める`Int32`と`String`します。 カレンダー日付および時刻は `DateTime` 構造体でサポートされています。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 が導入されたサポート、`DateTimeOffset`タイム ゾーン オフセットを含む日付の構造体。  
   
     > [!NOTE]  
     >  レポート サーバーは、レポート サーバー上にインストールされ構成されたデータ プロバイダーを使用します。 プレビュー モードのレポート作成クライアントは、クライアント マシン上にインストールされ構成されたデータ処理拡張機能を使用します。 レポート クライアントとレポート サーバー環境の両方でレポートをテストする必要があります。  
@@ -118,8 +118,8 @@ ms.locfileid: "36173889"
 
   
 ## <a name="see-also"></a>参照  
- [データセットのプロパティ ダイアログ ボックスで、フィールド&#40;レポート ビルダー&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
- [レポート パーツとレポート ビルダーでデータセット](report-parts-and-datasets-in-report-builder.md)   
+ [データセットのプロパティ] ダイアログ ボックスの [フィールド&#40;レポート ビルダー&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
+ [レポート ビルダーのレポート パーツおよびデータセット](report-parts-and-datasets-in-report-builder.md)   
  [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

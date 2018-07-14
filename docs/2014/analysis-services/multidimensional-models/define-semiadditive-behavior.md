@@ -1,5 +1,5 @@
 ---
-title: 準加法の動作を定義 |Microsoft ドキュメント
+title: 準加法の動作の定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8aa76cf01672dec4edde7ded1049efbd2035839f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265418"
 ---
 # <a name="define-semiadditive-behavior"></a>準加法の動作の定義
   すべてのディメンションで一様に集計しない準加法メジャーは、多くのビジネス シナリオでよく見られます。 この問題は、一定期間の残高のスナップショットに基づくすべてのキューブで明らかです。 これらのスナップショットは、証券、口座残高、予算、人事、保険契約と保険金請求、およびその他多くのビジネス ドメインを扱うアプリケーションで見られます。  
@@ -38,7 +38,7 @@ ms.locfileid: "36085313"
  ウィザードの **[準加法の動作の定義]** ページで、次のいずれかのオプションを選択して、準加法の定義方法を決定します。  
   
  **[準加法の動作を無効にする]**  
- 準加法の動作が定義済みのキューブから準加法の動作を削除します。 この選択をリセットするメジャーを`SUM`次の種類の集計関数のいずれかに設定されている場合。  
+ 準加法の動作が定義済みのキューブから準加法の動作を削除します。 このオプションを選択するメジャーをリセットします`SUM`次の種類の集計関数のいずれかに設定されている場合。  
   
 -   By Account  
   
@@ -54,9 +54,9 @@ ms.locfileid: "36085313"
   
 -   なし  
   
- このオプションでは、メジャーの正規の集計関数によって変更されません。 `Sum`、 `Min`、 `Max`、 `Count`、または`Distinct``Count`です。  
+ このオプションでは、メジャーの標準の集計関数によって変更されません。 `Sum`、 `Min`、 `Max`、 `Count`、または`Distinct``Count`します。  
   
- **準加法メンバーを含む 'Account' 勘定科目ディメンションが検出されました。サーバーは、各勘定科目の種類の指定された準加法動作に従って、このディメンションのメンバーに集計されます。**  
+ **準加法メンバーを含む 'Account' 勘定科目ディメンションが検出されました。サーバーは、各アカウントの種類に指定された準加法動作に従って、このディメンションのメンバーで集計されます。**  
  Account 型のディメンションにより次元設定されたメジャー グループのすべてのメジャーが By Account 集計関数に設定され、このディメンションのメンバーは、勘定科目の種類ごとに指定されている準加法動作に従って集計されます。  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: 多次元モデルの翻訳 |Microsoft ドキュメント
+title: 多次元モデルの翻訳 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edb58addda246c716224b578aad3713812708476
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e018bf778a877ed62612e631951ca92258aaec0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275568"
 ---
 # <a name="translations-in-multidimensional-models"></a>多次元モデルの翻訳
-  多言語のサポート[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]翻訳を使用して行われます。 翻訳には、複数の言語で表示可能な [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのプロパティの言語識別子およびバインドが含まれます。 たとえば、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの翻訳を、指定した言語でそのデータベースのキャプションと説明が表示されるように定義できます。 翻訳の詳細については、次を参照してください。[キューブの翻訳](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)です。  
+  複数の言語のサポートで[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]翻訳を使用して行われます。 翻訳には、複数の言語で表示可能な [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのプロパティの言語識別子およびバインドが含まれます。 たとえば、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの翻訳を、指定した言語でそのデータベースのキャプションと説明が表示されるように定義できます。 翻訳の詳細については、次を参照してください。[キューブの翻訳](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)します。  
   
 ## <a name="defining-translations"></a>翻訳の定義  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で翻訳を定義するには、翻訳対象の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに適したデザイナーを使用します。 翻訳を定義すると作成、 `Translation` 、適切なに関連付けられたオブジェクト[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を関連するプロパティを指定した言語で指定した明示的なリテラル値を持つオブジェクト[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクト。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で翻訳を定義するには、翻訳対象の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに適したデザイナーを使用します。 翻訳の定義を作成、`Translation`オブジェクトに関連付けられた、適切な[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトを関連付けられているプロパティの指定した言語で指定された明示的なリテラル値を持つ[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクト。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次のオブジェクトおよびプロパティに翻訳を関連付けることができます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36085322"
 |Hieararchy|`Caption`, `AllMemberName`|[翻訳&#40;ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Level|`Caption`|[翻訳&#40;ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
- <sup>1</sup> 、`CaptionColumn`属性のプロパティのデータ ソース ビュー内の列にバインドすることができ、他の翻訳とは異なり、インスタンスの指定されている以外の Windows 照合順序を使用できます。  
+ <sup>1</sup> 、`CaptionColumn`属性のプロパティのデータ ソース ビュー内の列にバインドできるし、他の翻訳とは異なり、インスタンスの指定されている以外の Windows 照合順序を使用することができます。  
   
 ### <a name="defining-attribute-translations"></a>属性翻訳の定義  
  データベース ディメンション内の属性に関連付けられている翻訳は、他の翻訳とは異なり、次のように処理されます。  
@@ -57,7 +57,7 @@ ms.locfileid: "36085322"
   
 -   インスタンスについて指定されている照合順序以外の Windows 照合順序を使用して、翻訳で指定されている言語に合わせて、属性のメンバーを適切に並べ替えることができます。  
   
- 使用することができます、**属性データの翻訳** ダイアログ ボックスで[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をデータベース ディメンションの属性の翻訳を定義します。 詳細については、**属性データの翻訳**ダイアログ ボックスを参照してください[属性データの翻訳 ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)です。  
+ 使用することができます、**属性データの翻訳** ダイアログ ボックスで[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]データベース ディメンションの属性の翻訳を定義します。 詳細については、**属性データの翻訳**ダイアログ ボックスを参照してください[属性データの翻訳 ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)します。  
   
 ## <a name="resolving-translations"></a>翻訳の解決  
  クライアント アプリケーションが、指定された言語識別子内の情報を要求すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのデータおよびメタデータを、最も近い言語識別子に解決しようとします。 クライアント アプリケーションで既定の言語が指定されていない場合、ニュートラルなロケール識別子 (0) が指定されている場合、または既定の言語識別子 (1024) が処理される場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はインスタンスの既定の言語を使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのデータおよびメタデータを返します。  

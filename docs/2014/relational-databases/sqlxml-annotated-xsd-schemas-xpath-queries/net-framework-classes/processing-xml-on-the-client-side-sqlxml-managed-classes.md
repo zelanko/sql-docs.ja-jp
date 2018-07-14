@@ -1,5 +1,5 @@
 ---
-title: クライアント側の XML の処理 (SQLXML マネージ クラス) |Microsoft ドキュメント
+title: クライアント側の XML の処理 (SQLXML マネージ クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - ClientSideXml property
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2625832716861a5ed2e6819c661245f1ea16ae7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 242e06d72b7a1773235e51c7211b2526af6d4608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201102"
 ---
-# <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>クライアント側での XML の処理 (SQLXML マネージ クラス)
-  この例は、ClientSideXml プロパティの使用方法を示しています。 サーバーで、アプリケーションによってストアド プロシージャが実行されると、 クライアント側でその結果 (2 列の行セット) が処理され、XML ドキュメントが生成されます。  
+# <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>クライアント側での XML の処理 (SQLXML マネージド クラス)
+  この例では、ClientSideXml プロパティの使用を示します。 サーバーで、アプリケーションによってストアド プロシージャが実行されると、 クライアント側でその結果 (2 列の行セット) が処理され、XML ドキュメントが生成されます。  
   
  次の GetContacts、ストアド プロシージャ**FirstName**と**LastName** AdventureWorks データベースの Person.Contact テーブル内の従業員のです。  
   
@@ -43,7 +43,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- この c# アプリケーションでは、ストアド プロシージャを実行し、CommandText 値を指定する FOR XML AUTO オプションを指定します。 アプリケーションでは、ClientSideXml SqlXmlCommand オブジェクトのプロパティが true に設定します。 これにより、前から存在するストアド プロシージャを実行して行セットを返すことができ、クライアント側で XML 変換を適用することができます。  
+ この c# アプリケーションでは、ストアド プロシージャを実行し、CommandText 値を指定するときに、FOR XML AUTO オプションを指定します。 SqlXmlCommand オブジェクトの ClientSideXml プロパティを設定するアプリケーションでは、true に設定します。 これにより、前から存在するストアド プロシージャを実行して行セットを返すことができ、クライアント側で XML 変換を適用することができます。  
   
 > [!NOTE]  
 >  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。  

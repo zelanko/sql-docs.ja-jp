@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default conflict resolver
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6f3a256b58bb2bf93e99a25758bcae5e6abd8dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 63bacbfaee08750811f9a0c2de4fb9c34f629c54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172743"
 ---
 # <a name="choose-a-resolver"></a>競合回避モジュールを選択します。
   競合回避モジュールを選択するときには、アプリケーションでの競合解決の重要性、および既定の優先度ベースの競合回避モジュールを使用できるかどうか、アーティクル競合回避モジュールを使用する必要があるかどうかを考慮します。  

@@ -1,5 +1,5 @@
 ---
-title: SQL トレース コレクション セット (SQL Server Management Studio) を作成する SQL Server Profiler を使用して |Microsoft ドキュメント
+title: SQL Server Profiler を使用して SQL トレース コレクション セット (SQL Server Management Studio) を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5abf2baf12e8ae265020e9d4a5766506e9bcace3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 50754e92bad8bb6241129b53339b173d6d1d1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260858"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>SQL Server Profiler を使用して SQL トレース コレクション セットを作成する (SQL Server Management Studio)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のサーバー側のトレース機能を利用して、ジェネリック SQL トレース コレクター型を使用するコレクション セットを作成するためのトレース定義をエクスポートできます。 このプロセスは 2 つの部分で構成されます。  
@@ -76,7 +76,7 @@ ms.locfileid: "36085254"
   
     1.  フィルター一覧で、 **[実行時間]** をクリックします。  
   
-    2.  ブール演算子ウィンドウで、展開、**より大きいか等しい**ノードで、「`80`クリックして、値として**OK**です。  
+    2.  ブール演算子ウィンドウで、展開、**より大きいか等しい**ノードで、「`80`値、およびクリックとして **[ok]** します。  
   
 9. **[実行]** をクリックしてトレースを開始します。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "36085254"
   
 3.  スクリプトをスクロールし、スクリプトのコメント テキストに示されている次の置換を行います。  
   
-    -   **SQLTrace Collection Set Name Here** をコレクション セットに使用する名前に置換します。 この例では、コレクション セットの名前`SPROC_CollectionSet`です。  
+    -   **SQLTrace Collection Set Name Here** をコレクション セットに使用する名前に置換します。 この例では、コレクション セットの名前`SPROC_CollectionSet`します。  
   
-    -   **SQLTrace Collection Item Name Here** をコレクション アイテムに使用する名前に置換します。 この例では、アイテム名はコレクション`SPROC_Collection_Item`です。  
+    -   **SQLTrace Collection Item Name Here** をコレクション アイテムに使用する名前に置換します。 この例では、名、コレクション アイテム`SPROC_Collection_Item`します。  
   
 4.  **[実行]** をクリックして、クエリを実行してコレクション セットを作成します。  
   

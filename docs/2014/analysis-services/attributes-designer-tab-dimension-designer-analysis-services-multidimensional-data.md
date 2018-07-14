@@ -1,5 +1,5 @@
 ---
-title: 属性 (属性リレーションシップ タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: 属性 (属性リレーションシップ タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.attributes.f1
 ms.assetid: 850a68aa-1d70-4f0f-ba39-aeca834596c1
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f0324d78dd64db1a135a878809a90a8056b95ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff6836db1f179da6c1151d576af20fb210713980
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200602"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>[属性] ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **[属性]** の一覧を使用すると、属性リレーションシップ ダイアグラム内の特定の属性を探したり、新しい属性リレーションシップを定義したりできます。 このペインは、属性リレーションシップ ダイアグラムを含むペインのすぐ下に表示されます。  

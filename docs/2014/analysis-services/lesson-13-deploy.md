@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 14: 配置 |Microsoft ドキュメント'
+title: 'レッスン 14: 配置 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2b9bf4afde77cc0438e097c14f6b3743c7da427d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2973afd208039534048908ca1403fc8154898fc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181039"
 ---
 # <a name="lesson-14-deploy"></a>レッスン 14: 配置
   このレッスンでは、配置プロパティを構成します。具体的には、テーブル モードで実行されている Analysis Services の配置サーバー インスタンスと、配置するモデルの名前を指定します。 その後、そのインスタンスにモデルを配置します。 配置が完了すると、ユーザーはレポート クライアント アプリケーションを使用してモデルに接続できるようになります。 詳細については、[「テーブル モデル ソリューションの配置 (SSAS テーブル)」](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)を参照してください。  
@@ -40,14 +40,14 @@ ms.locfileid: "36165931"
     > [!IMPORTANT]  
     >  配置を行うには、リモート Analysis Services インスタンスに対する管理権限が必要です。  
   
-3.  確認してください、**クエリ モード**プロパティに設定されている**インメモリ**です。  
+3.  確認、**クエリ モード**プロパティに設定されて**インメモリ**します。  
   
     > [!NOTE]  
     >  このチュートリアルを使用して作成されたモデルは、DirectQuery モードではサポートされません。  
   
-4.  **データベース**プロパティで、「`Adventure Works Internet Sales Model`です。  
+4.  **データベース**プロパティに「`Adventure Works Internet Sales Model`します。  
   
-5.  **キューブ**Name プロパティで、「`Adventure Works Internet Sales Model`です。  
+5.  **キューブ**名前プロパティに「`Adventure Works Internet Sales Model`します。  
   
 6.  選択内容を確認し、 **[OK]** をクリックします。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36165931"
      [配置] ダイアログ ボックスが表示され、メタデータの配置状況と、モデルに含まれる各テーブルが表示されます。  
   
 ## <a name="conclusion"></a>まとめ  
- これで、 最初の Analysis Services テーブル モデルの作成と配置が完了しました。 このチュートリアルでは、テーブル モデルを作成する際の、最も一般的なタスクについて説明しました。 Adventure Works Internet Sales Model が配置されたので、SQL Server Management Studio を使用してモデルを管理したり、プロセス スクリプトやバックアップ計画を作成できるようになりました。 ユーザーは、Microsoft Excel や [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] などのレポート クライアント アプリケーションを使用して、モデルに接続できます。  
+ おめでとうございます! 最初の Analysis Services テーブル モデルの作成と配置が完了しました。 このチュートリアルでは、テーブル モデルを作成する際の、最も一般的なタスクについて説明しました。 Adventure Works Internet Sales Model が配置されたので、SQL Server Management Studio を使用してモデルを管理したり、プロセス スクリプトやバックアップ計画を作成できるようになりました。 ユーザーは、Microsoft Excel や [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] などのレポート クライアント アプリケーションを使用して、モデルに接続できます。  
   
 ## <a name="additional-resources"></a>その他のリソース  
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] レポートをサポートするテーブル モデル プロパティの詳細については、[「Power View レポート プロパティ (SSAS テーブル)」](tabular-models/properties-ssas-tabular.md) を参照してください。  

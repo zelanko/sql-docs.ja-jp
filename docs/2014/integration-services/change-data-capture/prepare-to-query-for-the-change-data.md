@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6fc278beec749f8698977a153c30b5c584ea8424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88f2dd6e5caf6cf5b601f07ca826d85808f9e6f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248812"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>変更データのクエリを準備する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、3 番目に行う最後のタスクは、変更データのクエリを準備してデータ フロー タスクを追加することです。  
@@ -128,7 +128,7 @@ ms.locfileid: "36085724"
   
         ```  
   
-5.  既定のコードを返す行のままにして`DtsExecResult.Success`のスクリプトを実行します。  
+5.  既定のコードを返す行のままに`DtsExecResult.Success`スクリプトの操作を実行します。  
   
 6.  スクリプト開発環境と **[スクリプト タスク エディター]** を閉じます。  
   
@@ -174,7 +174,7 @@ ms.locfileid: "36085724"
         ```  
   
         > [!NOTE]  
-        >  `else`このサンプルで句は、開始の日付と時刻の null 値を渡すことによって変更データの初期読み込みのクエリを生成します。 このサンプルは、変更データ キャプチャを有効にする前に行われた変更もデータ ウェアハウスにアップロードする必要があるシナリオには対応していません。  
+        >  `else`このサンプルで句は、開始日時として null 値を渡すことによって変更データの初期読み込みのクエリを生成します。 このサンプルは、変更データ キャプチャを有効にする前に行われた変更もデータ ウェアハウスにアップロードする必要があるシナリオには対応していません。  
   
 3.  **[SQL 実行タスク エディター]** の **[パラメーター マッピング]** ページで、次のマッピングを行います。  
   

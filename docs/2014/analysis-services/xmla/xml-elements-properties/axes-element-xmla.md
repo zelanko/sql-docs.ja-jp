@@ -1,5 +1,5 @@
 ---
-title: 軸の要素 (XMLA) |Microsoft ドキュメント
+title: 軸の要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Axes element
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
 caps.latest.revision: 21
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f508a92ca7ab8aca224c299723adddf3654c167c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b8ac4baded4dd516e12c31ffd701e1c4668d769e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237402"
 ---
 # <a name="axes-element-xmla"></a>Axes 要素 (XMLA)
   コレクションを格納 [Axis](axis-element-xmla.md) 要素に含まれる軸データを表す、[root](root-element-xmla.md) を使用する要素、[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) データ型。  
@@ -67,7 +67,7 @@ ms.locfileid: "36163940"
 |子要素|[Axis](axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
- `Axes` 要素の下には、データセット内の出現順序に従って、0 から始まる複数の `Axis` 要素がリストされます。 XMLA プロパティ設定 `AxisFormat` は、`Axis` 要素の書式を決定します。 詳細については、`AxisFormat`プロパティを参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md)です。  
+ `Axes` 要素の下には、データセット内の出現順序に従って、0 から始まる複数の `Axis` 要素がリストされます。 XMLA プロパティ設定 `AxisFormat` は、`Axis` 要素の書式を決定します。 詳細については、`AxisFormat`プロパティを参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md)します。  
   
  軸は、次元が同じである複数の組から成るセットを表します。 1 つのセットを表す方法はいくつかあり、それぞれの方法に利点があります。 たとえば、次のような 4 つの組から成るセットは、2 次元の組のコレクションとして表すことも、2 つの 1 次元セットのデカルト積として表すこともできます。  
   

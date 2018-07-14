@@ -1,5 +1,5 @@
 ---
-title: リレーショナル マイニング構造を作成 |Microsoft ドキュメント
+title: リレーショナル マイニング構造の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - data mining [Analysis Services], structure
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3622989e4dbc5ba8d954f0f92513820829aaea54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 261936c087c109087c9916513acd45468de55a7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237912"
 ---
 # <a name="create-a-relational-mining-structure"></a>Create a Relational Mining Structure
   ほとんどのデータ マイニング モデルは、リレーショナル データ ソースに基づいています。 リレーショナル データ マイニング モデルを作成する利点は、キューブの作成という複雑な作業をせずに、アドホック データをまとめ、モデルをトレーニングおよび更新できることです。  
@@ -97,7 +97,7 @@ ms.locfileid: "36085784"
   
  マイニング構造のデータは、既存のデータ ソース ビューから取得されます。 データ ソース ビュー内のデータを必要に応じて変更し、基になるリレーショナル データに存在しないリレーションシップや派生列を追加できます。 また、データ ソース ビュー内に名前付き計算または集計を作成することもできます。 これらの機能は、データ ソースでデータの配置を制御できない場合や、データ マイニング モデルに対してデータの異なる集計をテストする場合に非常に便利です。  
   
- 使用可能なすべてのデータを使用する必要はありません。マイニング構造に含める列を選択できます。 として特定の列のフラグを設定することができますし、その構造に基づくすべてのモデルは、これらの列を使用できます、または`Ignore`特定のモデル。 データ マイニング モデルのユーザーがマイニング モデルの結果からドリル ダウンして、マイニング モデル自体に含まれていなかった追加のマイニング構造列を確認できるようにすることができます。  
+ 使用可能なすべてのデータを使用する必要はありません。マイニング構造に含める列を選択できます。 その構造に基づいているすべてのモデルが、これらの列を使用または特定の列にフラグを設定できます`Ignore`特定のモデル。 データ マイニング モデルのユーザーがマイニング モデルの結果からドリル ダウンして、マイニング モデル自体に含まれていなかった追加のマイニング構造列を確認できるようにすることができます。  
   
 ##  <a name="bkmk_ContentDataType"></a> コンテンツの種類とデータ型を指定する方法  
  データ型は、SQL Server などのアプリケーション インターフェイスで指定するデータ型とほぼ同じで、日付/時刻、さまざまなサイズの数値、ブール値、テキスト、およびその他の不連続なデータがあります。  
@@ -132,7 +132,7 @@ ms.locfileid: "36085784"
  [データ マイニング デザイナー](data-mining-designer.md)   
  [データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-analysis-services-data-mining.md)   
  [マイニング モデルのプロパティ](mining-model-properties.md)   
- [マイニング構造列および構造列のプロパティ](properties-for-mining-structure-and-structure-columns.md)   
+ [マイニング構造と構造列のプロパティ](properties-for-mining-structure-and-structure-columns.md)   
  [マイニング構造のタスクと操作方法](mining-structure-tasks-and-how-tos.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ea043eaf389aa87e1162c2321220c4fd7878923a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5cdcdb6edb146393a9daee7221d0a0d979989046
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322383"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>ビジネス ルールを作成しパブリッシュする (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、マスター データの精度を保証するためにビジネス ルールを作成します。 ルールを作成した後、データに適用する前に、そのルールをパブリッシュする必要があります。  
@@ -54,14 +54,14 @@ ms.locfileid: "36164571"
   
 9. **[コンポーネント]** ペインで **[条件]** ノードを展開します。  
   
-10. [条件] をクリックして、ドラッグして、**場合**ペインの**条件**ラベル。  
+10. 条件をクリックしてドラッグ、**場合**ペインの**条件**ラベル。  
   
     > [!TIP]  
-    >  右クリックして、ビジネス ルールからアイテムを削除する**削除**です。  
+    >  右クリックして、ビジネス ルールからアイテムを削除する**削除**します。  
   
-11. **属性** ウィンドウで、属性をクリックしておよびドラッグして、**条件の編集**ペインの**属性の選択**ラベル。  
+11. **属性**ウィンドウで、[属性] をクリックして、ドラッグして、**条件の編集**ペインの**属性の選択**ラベル。  
   
-12. **条件の編集** ウィンドウで、すべての必須フィールドに入力します。  
+12. **条件の編集**ウィンドウで、すべての必須フィールドに入力します。  
   
 13. **[条件の編集]** ペインの **[アイテムの保存]** をクリックします。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36164571"
   
     -   [ビジネス ルールに対して特定のメンバーを検証する&#40;マスター データ サービス&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [ビジネス ルールに対してバージョンを検証する&#40;マスター データ サービス&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [ビジネス ルールに対してバージョンを検証&#40;マスター データ サービス&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
  [通知を送信するビジネス ルールを構成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   

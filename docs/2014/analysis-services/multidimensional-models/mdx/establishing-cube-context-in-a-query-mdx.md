@@ -1,5 +1,5 @@
 ---
-title: クエリ (MDX) 内のキューブ コンテキストを確立 |Microsoft ドキュメント
+title: クエリ (MDX) 内のキューブ コンテキストの確立 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cubes [Analysis Services], MDX
 - MDX [Analysis Services], cube context
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - queries [MDX], cube context
 ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 972b630aea4ebcc427803e226d27d52f919da4a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d42357b197b3a691321a5ffd9d066b787288efe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273448"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>クエリ内のキューブ コンテキストの確立 (MDX)
   各 MDX クエリは、指定したキューブ コンテキスト内で実行されます。 このコンテキストは、クエリ内の式によって評価されるメンバーを定義します。  

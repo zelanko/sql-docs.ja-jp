@@ -1,5 +1,5 @@
 ---
-title: Trend 要素 (ASSL) |Microsoft ドキュメント
+title: Trend 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Trend element
 ms.assetid: d1d92d10-a181-4402-aacb-c0b2adc96bba
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac6d8e30d9ff52ded2708f668c8ab4fc05434225
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63bf8353e2ba801fc743fd4d645316c1e8f51eda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171183"
 ---
 # <a name="trend-element-assl"></a>Trend 要素 (ASSL)
   傾向インジケーターを返す多次元式 (MDX) 式が含まれています、 [Kpi](../objects/kpi-element-assl.md)要素。  

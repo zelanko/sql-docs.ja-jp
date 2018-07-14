@@ -5,24 +5,23 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8af441227c9a584b6252d5d02b7e9989a772d526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f0c12ef425f898b8406884fef8eff27c8c80c3df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329332"
 ---
 # <a name="install-and-configure-semantic-search"></a>セマンティック検索のインストールと構成
   統計的セマンティック検索の前提条件と、これらをインストールまたは確認する方法について説明します。  
@@ -57,7 +56,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> インストール、アタッチ、およびセマンティック言語統計データベースを登録する方法  
+###  <a name="HowToInstallModel"></a> 方法: インストール、アタッチ、および、セマンティック言語統計データベースを登録します。  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセットアップ プログラムでは、セマンティック言語統計データベースはインストールされません。 セマンティック インデックス作成の前提条件であるセマンティック言語統計データベースをセットアップするには、次の作業を実行します。  
   
  **1.セマンティック言語統計データベースをインストールします。**  
@@ -69,7 +68,7 @@ GO
   
 2.  **SemanticLanguageDatabase.msi** Windows インストーラー パッケージを実行して、データベースおよびログ ファイルを抽出します。  
   
-     抽出先のディレクトリは必要に応じて変更できます。 既定では、という名前のフォルダーにファイルが抽出インストーラー **Microsoft Semantic Language Database** 32 ビットまたは 64 ビットの Program Files フォルダーにします。 MSI ファイルには、圧縮データベース ファイルおよびログ ファイルが格納されます。  
+     抽出先のディレクトリは必要に応じて変更できます。 既定では、インストーラーによってという名前のフォルダーにファイルが抽出**Microsoft Semantic Language Database** 32 ビットまたは 64 ビットの Program Files フォルダーにします。 MSI ファイルには、圧縮データベース ファイルおよびログ ファイルが格納されます。  
   
 3.  抽出されたデータベース ファイルとログ ファイルを、ファイル システム内の適切な場所に移動します。  
   
@@ -101,7 +100,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a> 登録解除、デタッチ、およびセマンティック言語統計データベースを削除する方法  
+###  <a name="HowToUnregister"></a> 方法: 登録を解除、デタッチ、およびセマンティック言語統計データベースを削除  
  **セマンティック言語統計データベースの登録を解除します。**  
  ストアド プロシージャ [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql) を呼び出します。 セマンティック言語統計データベースは 1 つのインスタンスにつき 1 つしか存在しないため、データベースの名前を指定する必要はありません。  
   
@@ -124,7 +123,7 @@ GO
  **セマンティック言語統計データベースを削除します。**  
  データベースの登録を解除し、デタッチした後は、データベース ファイルを簡単に削除できます。 アンインストール プログラムはありません。また、コントロール パネルの **[プログラムと機能]** のエントリもありません。  
   
-###  <a name="reqinstall"></a> インストールして、セマンティック言語統計データベースを削除の要件と制限  
+###  <a name="reqinstall"></a> インストールして、セマンティック言語統計データベースの削除の要件と制限  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスでアタッチおよび登録できるセマンティック言語統計データベースは 1 つのみです。  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.ACTIVITYMON.F1
 - sql12.ag.jobactivitymonitor.alljobs.f1
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ed7b4a4efacf7be8431c5de10b2cc9d56a7e3d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4896661e08c340fe9d61861b44f8915332d7b688
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253384"
 ---
 # <a name="job-activity-monitor"></a>[ジョブの利用状況モニター]
   このページでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの現在の利用状況を参照できます。 **[フィルター]** をクリックすると、表示されるジョブが限定されます。 **[エージェント ジョブの利用状況]** グリッドは読み取り専用です。 列ヘッダーをクリックすると、グリッドが並べ替えられます。 ジョブを変更するには、ジョブをダブルクリックして **[ジョブのプロパティ]** ダイアログ ボックスを開きます。 グリッドでジョブを右クリックして表示されるメニューから、すべてのジョブ ステップの実行の開始、特定のジョブ ステップの実行、ジョブの無効化または有効化、ジョブの更新、ジョブの削除、ジョブの履歴の表示、ジョブのプロパティの表示ができます。 **[最新の情報に更新]** をクリックすると、グリッドが現在の情報で更新されます。  
@@ -55,7 +55,7 @@ ms.locfileid: "36085130"
  **[スケジュール]**  
  ジョブがジョブ スケジュールに割り当てられている場合は **[はい]** 、ジョブにスケジュールがない場合は **[いいえ]** になります。  
   
- <sup>1</sup>のメンバーにのみ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 固定サーバー ロールとサーバーの管理者グループを確認できます値をこの列にします。 SQLAgentOperatorRole ロールのメンバーはこの列の値を表示できません。  
+ <sup>1</sup>のメンバーのみ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 固定サーバー ロールとサーバーの管理者グループを参照してください値この列にします。 SQLAgentOperatorRole ロールのメンバーはこの列の値を表示できません。  
   
 #### <a name="to-open-the-job-activity-monitor"></a>[ジョブの利用状況モニター] を開くには  
   

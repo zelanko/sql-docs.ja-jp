@@ -1,5 +1,5 @@
 ---
-title: ServiceName プロパティ (SqlServiceAdvancedProperty クラス) |Microsoft ドキュメント
+title: ServiceName プロパティ (SqlServiceAdvancedProperty クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ServiceName property
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56f24bb05a1dee87d498638809a410b6c8bc963a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2f692589d3817b5e33b8756a457f8c3898ad9108
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201202"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName プロパティ (SqlServiceAdvancedProperty クラス)
-  詳細プロパティに関連付けられたマネージ サービスの名前を取得します。  
+  詳細プロパティに関連付けられたマネージド サービスの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,6 +51,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 486c0e39c34c706128fc5191ecb15394eb584247
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ece1fccdfc4fab42bd2b5cd2913dfcd238e9b40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167013"
 ---
 # <a name="programmatically-monitor-replication"></a>プログラムによるレプリケーションの監視
   レプリケーション モニターは、レプリケーション トポロジを監視するためのグラフィカル ツールです。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] レプリケーション ストアド プロシージャまたはレプリケーション管理オブジェクト (RMO) を使用すると、同じ監視データにプログラムからアクセスできます。 このオブジェクトにより、次のタスクをプログラムできます。  
@@ -132,9 +132,9 @@ ms.locfileid: "36166072"
   
 5.  手順 3. で取得したセッション ID を使用して次のいずれかのメソッドを呼び出し、特定のセッションの詳細情報を取得します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -の配列を返します<xref:Microsoft.SqlServer.Replication.MergeSessionDetail>指定されたオブジェクト*sessionID*です。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -の配列を返します<xref:Microsoft.SqlServer.Replication.MergeSessionDetail>について、 *sessionID*します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -を返します、<xref:System.Data.DataSet>オブジェクトに、指定された情報*sessionID*です。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -を返します、<xref:System.Data.DataSet>オブジェクトに指定した情報*sessionID*します。  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>ディストリビューターですべてのパブリケーションについてレプリケーション プロパティを監視するには  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36166072"
   
 2.  次のいずれかの方法で <xref:Microsoft.SqlServer.Replication.PublisherMonitor> オブジェクトを取得します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor> クラスのインスタンスを作成します。 パブリッシャーの <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を設定します。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`パブリッシャーの名前が正しく定義されていないか、パブリケーションが存在しません。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor> クラスのインスタンスを作成します。 パブリッシャーの <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を設定します。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、発行元名が正しく定義されていないか、パブリケーションが存在しません。  
   
     -   <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> から取得します。このコレクションには、既存の <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> プロパティを使用してアクセスできます。  
   
@@ -272,9 +272,9 @@ ms.locfileid: "36166072"
   
         |値|説明|  
         |-----------|-----------------|  
-        |1|`expiration` -トランザクション パブリケーションに対するサブスクリプションの期限が近づいているを監視します。|  
+        |1|`expiration` -トランザクション パブリケーションに対するサブスクリプションの期限が迫っていないか監視します。|  
         |2|`latency` -トランザクション パブリケーションに対するサブスクリプションのパフォーマンスを監視します。|  
-        |4|`mergeexpiration` -マージ パブリケーションへのサブスクリプションに期限が迫っていないか監視します。|  
+        |4|`mergeexpiration` -マージ パブリケーションへのサブスクリプションが迫っていないか有効期限を監視します。|  
         |5|`mergeslowrunduration` -低帯域 (ダイヤルアップ) 接続でのマージ同期の期間を監視します。|  
         |6|`mergefastrunduration` -高帯域 (LAN) 接続でのマージ同期の期間を監視します。|  
         |7|`mergefastrunspeed` : 高帯域幅 (LAN) 接続経由でのマージ同期の同期速度を監視します。|  

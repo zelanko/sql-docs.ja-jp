@@ -1,5 +1,5 @@
 ---
-title: Power View レポート (SSAS テーブル) のテーブル動作プロパティの構成 |Microsoft ドキュメント
+title: Power View レポート (SSAS テーブル) のテーブル動作プロパティの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cae146a14e85ed1e41a771f6ad97a9589f0fe272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6ca5036b2e3355ba4866096206296538f07bbae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267202"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Power View レポートのテーブル動作プロパティの構成 (SSAS テーブル)
   テーブル モデルを [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] のデータ モデルとして使用している場合は、詳細行をより細かなレベルで公開するテーブル動作プロパティを設定できます。 テーブル動作プロパティの設定により、詳細行のグループ化動作を変更できます。また、タイル、カード、およびグラフのレイアウトを使用して、識別情報 (名前、写真 ID、ロゴ イメージなど) の適切な既定位置を設定できます。  
@@ -96,7 +96,7 @@ ms.locfileid: "36163784"
 ### <a name="images-are-missing"></a>画像がない場合  
  モデルで設定したプロパティによって、レポートに画像が表示されるかどうか、またはレポートにテキスト値が表示されるかどうかが決まります。  
   
- ![レポート内のテキストとして表示される画像 Url](../media/ssas-rptprop-noimageurl.gif "イメージ Url がレポート内のテキストとして表示されます")  
+ ![画像の Url は、レポート内のテキストとして表示](../media/ssas-rptprop-noimageurl.gif "画像の Url は、レポート内のテキストとして表示されます")  
   
  既定では、モデル内のテキストはレポートでテキストとして解釈されます。 テキスト列がレポート画像への URL アドレスの場合は、 **によって画像ファイルが取得されるように** "画像の URL" [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] プロパティを忘れずに設定してください。 バイナリの画像の場合は、 **"行識別子 (ROWID)"** プロパティを忘れずに設定してください。  
   
@@ -105,11 +105,11 @@ ms.locfileid: "36163784"
   
  一方、別の例について考えます。この例では、実際には基になる行に異なるエンティティに関するデータが含まれているため、行の複数のインスタンスを表示する必要があります。 この例では、名前がどちらも **Jon Yang**である 2 人の顧客がいることを想定します。 既定のグループ化動作を使用すると、 **Jon Yang** の 1 つのインスタンスのみレポートに表示されます。 さらに、一覧には 1 つのインスタンスのみ表示されるため、メジャー **Annual Income** は両方の顧客の値の合計になります。  
   
- ![既定のグループが 1 に 2 を統合](../media/ssas-jonyang-norowid.gif "既定のグループが 1 に 2 を統合")  
+ ![既定のグループが 1 に 2 を統合](../media/ssas-jonyang-norowid.gif "既定グループ 2 を 1 に統合します。")  
   
  既定のグループ化動作を変更するには、 **"行識別子 (ROWID)"** プロパティと **"一意の行を保持"** プロパティを設定します。 **"一意の行を保持"** で、[姓] 列を選択して、この値が別の行に存在する場合でも行に対して繰り返されるようにします。 プロパティを変更し、ブックを再発行した後で、同じレポートを作成できます。この時点でのみ、 **Jon Yang**という名前の両方の顧客が表示され、それぞれに **Annual Income** が正しく割り当てられています。  
   
- ![行 ID に基づく重複が格納されたデータを行](../media/ssas-jonyang.gif "行 ID に基づく重複が格納されたデータを行")  
+ ![行 ID に基づく重複が格納されたデータを行](../media/ssas-jonyang.gif "行 ID に基づく重複が格納されたデータの行")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>マトリックスのレイアウトが複雑すぎる場合  
  マトリックスに詳細テーブルを表示する場合、既定のグループ化では各列の値が要約されます。 目的によっては、必要以上に要約されることがあります。 この動作を変更するには、 **[行識別子 (ROWID)]** を設定します。 その他のプロパティを設定する必要はありません。行識別子 (ROWID) のみ設定すれば、一意の行識別子 (ROWID) に基づいて各行の要約が計算されるようにグループ化を変更できます。  
@@ -118,11 +118,11 @@ ms.locfileid: "36163784"
   
  **設定前: マトリックス内のフィールドに基づく既定のグループ化**  
   
- ![マトリックスのレイアウトは、行識別子に基づいてグループ化](../media/ssas-rptprop-matrixrowid.gif "行識別子にグループ化されたマトリックスのレイアウト")  
+ ![マトリックスのレイアウトは、行識別子にグループ化された](../media/ssas-rptprop-matrixrowid.gif "行識別子にグループ化されたマトリックスのレイアウト")  
   
  **設定後: 行識別子 (ROWID) でのグループ化**  
   
- ![マトリックスのレイアウトは、行識別子に基づいてグループ化](../media/ssas-rptprop-matrixrowid.gif "行識別子にグループ化されたマトリックスのレイアウト")  
+ ![マトリックスのレイアウトは、行識別子にグループ化された](../media/ssas-rptprop-matrixrowid.gif "行識別子にグループ化されたマトリックスのレイアウト")  
   
 ### <a name="chart-showing-too-many-items-and-levels-on-the-axis"></a>軸上に表示される項目とレベルが多すぎるグラフ  
  グラフは、詳細データの表示で行識別子 (ROWID) を軸として使用する必要があることをレポートします。 行識別子 (ROWID) がないと軸は不確定になるため、意味がない可能性のある最善の推測によるレイアウトになります。 この動作を変更するには、 **[行識別子 (ROWID)]** を設定します。 その他のプロパティを設定する必要はありません。行識別子 (ROWID) のみ設定すれば、一意の行識別子 (ROWID) に基づいて各行の要約が計算されるようにグループ化を変更できます。  
@@ -131,11 +131,11 @@ ms.locfileid: "36163784"
   
  **設定前: グラフ内のフィールドに基づく既定のグループ化**  
   
- ![既定のフィールド レベルでグループ化に基づいてグラフ](../media/ssas-rptprop-chartfieldgroup.gif "既定のフィールド レベルでグループ化に基づくグラフ")  
+ ![既定のフィールド レベルでグループ化に基づいてグラフ](../media/ssas-rptprop-chartfieldgroup.gif "グラフの基に既定のフィールド レベルでグループ化")  
   
  **設定後: 行識別子 (ROWID) でのグループ化 (行識別子 (ROWID) は軸になります)**  
   
- ![行 ID グループ化に基づいてグラフ](../media/ssas-rptprop-chartrowid.gif "行 ID グループ化に基づく図")  
+ ![行 ID グループ化に基づいてグラフ](../media/ssas-rptprop-chartrowid.gif "グラフの基に行 ID グループ化")  
   
 ## <a name="next-steps"></a>次の手順  
  モデルでテーブルを評価し、常に個別のアイテムとして表示する必要のある詳細行を含むテーブルにテーブル動作プロパティを設定した後で、追加のプロパティまたは設定によってモデルをさらに最適化できます。  

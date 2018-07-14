@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 45a83a7b3e8fe9af8280daca6a24a2686e97bf46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6f879da34541b11cf511c2178c9a9ab8223af549
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233362"
 ---
 # <a name="database-properties-filegroups-page"></a>[データベースのプロパティ] \([ファイル グループ] ページ)
   このページを使用すると、ファイル グループを表示したり、選択したデータベースに新しいファイル グループを追加したりできます。 ファイル グループの種類は、 *Row* ファイル グループ、FILESTREAM データ、およびメモリ最適化ファイル グループに分けられます。  
@@ -35,7 +35,7 @@ ms.locfileid: "36164330"
  データベースに 1 つ以上のメモリ最適化テーブルを含めるには、メモリ最適化ファイル グループが必要です。  
   
 ## <a name="row-and-filestream-data-filegroup-options"></a>ROW および FILESTREAM データ ファイル グループのオプション  
- **Name**  
+ **名前**  
  ファイル グループの名前を入力します。  
   
  **[ファイル]**  
@@ -50,11 +50,11 @@ ms.locfileid: "36164330"
  **[追加]**  
  データベースのファイル グループを一覧表示するグリッドに、新しい空の行を追加します。  
   
- **削除**  
+ **[削除]**  
  選択されたファイル グループ行をグリッドから削除します。  
   
 ## <a name="memory-optimized-data-filegroup-options"></a>メモリ最適化データ ファイル グループのオプション  
- **Name**  
+ **名前**  
  メモリ最適化ファイル グループの名前を入力します。  
   
  **[FILESTREAM ファイル]**  
@@ -63,7 +63,7 @@ ms.locfileid: "36164330"
  **[追加]**  
  データベースのファイル グループを一覧表示するグリッドに、新しい空の行を追加します。  
   
- **削除**  
+ **[削除]**  
  選択されたファイル グループ行をグリッドから削除します。  
   
 ## <a name="see-also"></a>参照  

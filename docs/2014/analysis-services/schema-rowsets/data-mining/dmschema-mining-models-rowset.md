@@ -1,5 +1,5 @@
 ---
-title: DMSCHEMA_MINING_MODELS 行セット |Microsoft ドキュメント
+title: DMSCHEMA_MINING_MODELS 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODELS rowset
 ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8296ddb800b7691936236aa0cdb6550c89c34c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9af1a9817ad116561b57b1d04b2e3df1d7313bb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208032"
 ---
 # <a name="dmschemaminingmodels-rowset"></a>DMSCHEMA_MINING_MODELS 行セット
   現在のカタログ内のデータ マイニング モデルを列挙します。 `DMSCHEMA_MINING_MODELS` 行セットには、各マイニング モデルに関連付けられているモデル名、処理日、マイニング アルゴリズムなどの情報を含めます。  
   
- のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 `DMSCHEMA_MINING_MODELS`スキーマ行セットはよく似ています、 [DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md)スキーマ行セットと同じ方法で使用することができます。  
+ . `DMSCHEMA_MINING_MODELS`スキーマ行セットのとよく似ていますが、 [DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md)スキーマ行セットと同じように使用できます。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  `DMSCHEMA_MINING_MODELS`行セットには、次の列が含まれています。  
@@ -47,7 +47,7 @@ ms.locfileid: "36164662"
 |`MODEL_PROPID`|`DBTYPE_UI4`||モデルのプロパティ ID。 この列は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でサポートされていないため、常に `NULL` が格納されます。|  
 |`DATE_CREATED`|`DBTYPE_DBTIMESTAMP`||モデルの作成日。|  
 |`DATE_MODIFIED`|`DBTYPE_DBTIMESTAMP`||モデル定義の最終変更日。|  
-|`SERVICE_TYPE_ID`|`DBTYPE_UI4`||モデルによって使用されるデータ マイニング アルゴリズムの種類を識別する列挙。 この種類は、次のいずれかの値になります。<br /><br /> -   `DM_SERVICETYPE_CLASSIFICATION` (1)<br />-   `DM_SERVICETYPE_SEGMENTATION`(2)<br />-   `DM_SERVICETYPE_ ASSOCIATION`(4)<br />-   `DM_SERVICETYPE_ DENSITY_ESTIMATE`(8)<br />-   `DM_SERVICETYPE_SEQUENCE`(16)。|  
+|`SERVICE_TYPE_ID`|`DBTYPE_UI4`||モデルによって使用されるデータ マイニング アルゴリズムの種類を識別する列挙。 この種類は、次のいずれかの値になります。<br /><br /> -   `DM_SERVICETYPE_CLASSIFICATION` (1)<br />-   `DM_SERVICETYPE_SEGMENTATION`(2)<br />-   `DM_SERVICETYPE_ ASSOCIATION`(4)<br />-   `DM_SERVICETYPE_ DENSITY_ESTIMATE`(8)<br />-   `DM_SERVICETYPE_SEQUENCE`(16)|  
 |`SERVICE_NAME`|`DBTYPE_WSTR`||モデルによって使用されるデータ マイニング アルゴリズムのプロバイダー固有の名前。|  
 |`CREATION_STATEMENT`|`DBTYPE_WSTR`||マイニング モデルの作成に使用されたステートメント。|  
 |`PREDICTION_ENTITY`|`DBTYPE_WSTR`||予測可能なマイニング列を示すコンマ区切りの一覧。|  
@@ -72,7 +72,7 @@ ms.locfileid: "36164662"
 |`SERVICE_TYPE_ID`|`DBTYPE_UI4`|任意。|  
 |`MINING_STRUCTURE`|`DBTYPE_WSTR`|任意。|  
   
- この行セットのクエリを実行する方法の例については、次を参照してください。[マイニング モデルの作成に使用されるパラメーターをクエリ](../../data-mining/query-the-parameters-used-to-create-a-mining-model.md)です。  
+ この行セットを照会する方法の例については、次を参照してください。[マイニング モデルの作成に使用されたパラメーターをクエリ](../../data-mining/query-the-parameters-used-to-create-a-mining-model.md)します。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング スキーマ行セット](../../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 

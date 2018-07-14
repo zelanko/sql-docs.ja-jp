@@ -1,5 +1,5 @@
 ---
-title: Tuple 要素 (XMLA) |Microsoft ドキュメント
+title: Tuple 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe470d60aa008723034e1bdbf95f3ecf593c8a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e5db226260852207fbcfeb4dc0a071d03d0def7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233692"
 ---
 # <a name="tuple-element-xmla"></a>Tuple 要素 (XMLA)
   親要素 [Tuples](tuples-element-xmla.md) に含まれる、[Member](member-element-xmla.md) 要素のコレクションを含みます。  
@@ -65,10 +65,10 @@ ms.locfileid: "36085738"
 |子要素|[Member](member-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
- クライアント アプリケーションを設定した場合、`AxisFormat`プロパティを*TupleFormat*軸、組のセットとして表されます。 各`Axis`要素が含まれています、`Tuples`その軸上の組のセットを表す要素。 それぞれの組は `Tuple` 要素を使用して表され、この要素には軸上の各階層に属する `Member` 要素が含まれます。  
+ クライアント アプリケーションを設定した場合、`AxisFormat`プロパティを*TupleFormat*軸は組のセットとして表されます。 各`Axis`要素が含まれています、`Tuples`その軸上の組のセットを表す要素。 それぞれの組は `Tuple` 要素を使用して表され、この要素には軸上の各階層に属する `Member` 要素が含まれます。  
   
 ## <a name="example"></a>例  
- 次の例の構造を示しています、`Tuple`クライアントを指定すると要素*TupleFormat*または*CustomFormat*の`AxisFormat`という、XMLA プロパティ軸のメンバー:  
+ 次の例の構造を示しています、`Tuple`要素をクライアントが指定したときに*TupleFormat*または*CustomFormat*の`AxisFormat`次を指定された、XMLA プロパティ軸のメンバー:  
   
 |||||  
 |-|-|-|-|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned indexes [SQL Server], replicating
 - partitioned tables [SQL Server], replicating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transactional replication, partitioned tables
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d38ef8cb96408db96a04184a30d7a803b00a0239
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9764adf620688c4fa5335a65d9cba5d70480ed8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253884"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスのレプリケート
   大きなテーブルやインデックスをパーティション分割すると、データのサブセットに対するアクセスや管理を迅速かつ効率的に行うと同時に、データ コレクションの整合性を維持することができるので、大きなテーブルやインデックスを管理しやすくなります。 詳細については、「 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)」を参照してください。 レプリケーションでは、パーティション テーブルとパーティション インデックスを扱う方法を指定するプロパティ セットによって、パーティション分割をサポートします。  
@@ -41,7 +41,7 @@ ms.locfileid: "36085639"
   
  パーティション分割に関連するプロパティの最初のセットは、パーティション分割するオブジェクトをサブスクライバーにコピーするかどうかを指定するアーティクルのスキーマ オプションです。 これらのスキーマ オプションは次の方法で設定できます。  
   
--   パブリケーションの新規作成ウィザードの **[アーティクルのプロパティ]** ページ、または [パブリケーションのプロパティ] ダイアログ ボックス。 前の表に示したオブジェクトをコピーするには、値を指定`true`プロパティ**テーブル分割構成のコピー**と**インデックス分割構成のコピー**です。 **[アーティクルのプロパティ]** ページへのアクセス方法については、「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
+-   パブリケーションの新規作成ウィザードの **[アーティクルのプロパティ]** ページ、または [パブリケーションのプロパティ] ダイアログ ボックス。 前の表に一覧表示されたオブジェクトをコピーするには、値を指定`true`プロパティ**テーブル分割構成のコピー**と**インデックス分割構成のコピー**します。 **[アーティクルのプロパティ]** ページへのアクセス方法については、「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
 -   次のいずれかのストアド プロシージャの *schema_option* パラメーターの使用。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36085639"
   
 -   **@allow_partition_switch**、に設定すると`true`、パブリケーション データベースに対して SWITCH PARTITION を実行することができます。  
   
--   **@replicate_partition_switch** は、SWITCH PARTITION DDL ステートメントをサブスクライバーにレプリケートするかどうかを決定します。 このオプションは、有効な場合にのみ**@allow_partition_switch**に設定されている`true`です。  
+-   **@replicate_partition_switch** は、SWITCH PARTITION DDL ステートメントをサブスクライバーにレプリケートするかどうかを決定します。 このオプションは、有効な場合にのみ**@allow_partition_switch**に設定されている`true`します。  
   
  これらのプロパティは、パブリケーションの作成時に [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を使用するか、パブリケーションの作成後に [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を使用することによって設定できます。 既に述べたとおり、マージ レプリケーションではパーティション切り替えがサポートされません。 マージ レプリケーションが有効になっているテーブルで SWITCH PARTITION を実行するには、パブリケーションからテーブルを削除します。  
   

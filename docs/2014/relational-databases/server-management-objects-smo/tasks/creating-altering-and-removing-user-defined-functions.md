@@ -1,5 +1,5 @@
 ---
-title: 作成、変更、およびユーザー定義関数の削除 |Microsoft ドキュメント
+title: 作成、変更、およびユーザー定義関数の削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,35 +14,35 @@ helpviewer_keywords:
 - user-defined functions [SMO]
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7bbe1edc3ce68022f990b441b5c06c737d705e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0960e46b83b191745169fde64f68f30fa2fc5c64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246272"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>ユーザー定義関数の作成、変更、および削除
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>オブジェクトは、ユーザーがユーザー定義関数をプログラムで管理できる機能を提供[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 ユーザー定義関数では、入力パラメーターおよび出力パラメーターに加えて、テーブル列への直接参照もサポートされます。  
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>オブジェクトは、ユーザーのユーザー定義関数をプログラムで管理できるようにする機能を提供します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。 ユーザー定義関数では、入力パラメーターおよび出力パラメーターに加えて、テーブル列への直接参照もサポートされます。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] これらの前に、データベース内で登録するアセンブリはストアド プロシージャ内で使用、ユーザー定義関数、トリガー、およびユーザー定義データ型が必要です。 SMO は、<xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> オブジェクトを使用してこの機能をサポートします。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] これらの前に、データベース内で登録するアセンブリは、ストアド プロシージャ内で使用できる、ユーザー定義関数、トリガー、およびユーザー定義データ型が必要です。 SMO は、<xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> オブジェクトを使用してこの機能をサポートします。  
   
- <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>オブジェクト参照を .NET アセンブリ、 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>、 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A>、および<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A>プロパティです。  
+ <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>オブジェクト参照を .NET アセンブリ、 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>、 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A>、および<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A>プロパティ。  
   
- ときに、<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>オブジェクト、.NET アセンブリを参照して、作成することで、アセンブリを登録する必要があります、<xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>オブジェクトとに追加すること、<xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection>が属しているオブジェクト、<xref:Microsoft.SqlServer.Management.Smo.Database>オブジェクト。  
+ ときに、<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>オブジェクトは、.NET アセンブリを参照、作成して、アセンブリを登録する必要があります、<xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>オブジェクトとに追加すること、<xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection>オブジェクトに属する、<xref:Microsoft.SqlServer.Management.Smo.Database>オブジェクト。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Visual Basic でのユーザー定義スカラー関数の作成  
- このコード例は、作成し、入力のあるスカラー ユーザー定義関数を削除する方法を示しています。<xref:System.DateTime>オブジェクト パラメーターおよび整数型を返す[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]です。 ユーザー定義関数が作成された、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、日付引数を取得して ISO 週番号を計算するユーザー定義関数 ISOweek が作成されます。 この関数で正しい計算を行うためには、関数を呼び出す前に、データベースの DATEFIRST オプションが 1 に設定されている必要があります。  
+ このコード例は、作成および入力のあるスカラー ユーザー定義関数を削除する方法を示しています。<xref:System.DateTime>オブジェクト パラメーターおよび整数の型を返す[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]します。 ユーザー定義関数が作成された、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、日付引数を取得して ISO 週番号を計算するユーザー定義関数 ISOweek が作成されます。 この関数で正しい計算を行うためには、関数を呼び出す前に、データベースの DATEFIRST オプションが 1 に設定されている必要があります。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBUserDefFuncs1](SMO How to#SMO_VBUserDefFuncs1)]  -->  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-c"></a>Visual C# でのユーザー定義スカラー関数の作成  
- このコード例は、作成し、入力のあるスカラー ユーザー定義関数を削除する方法を示しています。<xref:System.DateTime>オブジェクト パラメーターおよび整数型を返す[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]です。 ユーザー定義関数が作成された、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、次のユーザー定義関数を作成します。 `ISOweek`。 この関数は、日付引数を受け取って、ISO 週番号を計算します。 この関数で正しい計算を行うためには、関数を呼び出す前に、データベースの `DATEFIRST` オプションが `1` に設定されている必要があります。  
+ このコード例は、作成および入力のあるスカラー ユーザー定義関数を削除する方法を示しています。<xref:System.DateTime>オブジェクト パラメーターおよび整数の型を返す[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]します。 ユーザー定義関数が作成された、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、次のユーザー定義関数を作成します。 `ISOweek`。 この関数は、日付引数を受け取って、ISO 週番号を計算します。 この関数で正しい計算を行うためには、関数を呼び出す前に、データベースの `DATEFIRST` オプションが `1` に設定されている必要があります。  
   
 ```  
 {  
@@ -78,7 +78,7 @@ ms.locfileid: "36163838"
 ```  
   
 ## <a name="creating-a-scalar-user-defined-function-in-powershell"></a>PowerShell でのユーザー定義スカラー関数の作成  
- このコード例は、作成し、入力のあるスカラー ユーザー定義関数を削除する方法を示しています。<xref:System.DateTime>オブジェクト パラメーターおよび整数型を返す[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]です。 ユーザー定義関数が作成された、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、次のユーザー定義関数を作成します。 `ISOweek`。 この関数は、日付引数を受け取って、ISO 週番号を計算します。 この関数で正しい計算を行うためには、関数を呼び出す前に、データベースの `DATEFIRST` オプションが `1` に設定されている必要があります。  
+ このコード例は、作成および入力のあるスカラー ユーザー定義関数を削除する方法を示しています。<xref:System.DateTime>オブジェクト パラメーターおよび整数の型を返す[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]します。 ユーザー定義関数が作成された、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、次のユーザー定義関数を作成します。 `ISOweek`。 この関数は、日付引数を受け取って、ISO 週番号を計算します。 この関数で正しい計算を行うためには、関数を呼び出す前に、データベースの `DATEFIRST` オプションが `1` に設定されている必要があります。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

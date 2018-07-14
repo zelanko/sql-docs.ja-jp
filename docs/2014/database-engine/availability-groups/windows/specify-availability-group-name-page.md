@@ -1,28 +1,27 @@
 ---
-title: 可用性グループ名 ページ (新しい可用性グループ ウィザード/データベース追加ウィザード) を指定 |Microsoft ドキュメント
+title: 指定の可用性グループ名 ページ (新しい可用性グループ ウィザード/データベース追加ウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.adddatabasewizard.specifyagname.f1
 - sql12.swb.newagwizard.specifyagname.f1
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 caps.latest.revision: 12
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 1ef803d5ee1fb81b6ec6fffd0b4c5c529a9310d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3a502b778acb187aa8d894a462ebc06876f195ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202062"
 ---
 # <a name="specify-availability-group-name-page-new-availability-group-wizardadd-database-wizard"></a>[可用性グループ名の指定] ページ (新しい可用性グループ ウィザード/データベース追加ウィザード)
   このトピックでは、**[可用性グループ名の指定]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] の [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] と [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の両方です。  

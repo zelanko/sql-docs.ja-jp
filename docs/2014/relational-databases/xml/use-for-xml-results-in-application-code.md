@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, application code usage
 - XML [SQL Server], FOR XML clause
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73ca2ee9220b73e329ab829f3533274416b1855b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a8cb0fb56cd1715331c5c3f0e09c4319e0b82335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254114"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>アプリケーション コードでの FOR XML の結果の使用
   SQL クエリで FOR XML 句を使用することにより、クエリの結果を XML データで取得したり、XML データにキャストすることができます。 この機能により、FOR XML のクエリの結果を XML アプリケーション コードで使用するときに、次のことが可能になります。  
@@ -39,7 +39,7 @@ ms.locfileid: "36085620"
  このトピックでは、これらの方法を示す例を提供します。  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>ADO と XML データ アイランドによる、FOR XML データの取得  
- ADO`Stream`オブジェクトまたは COM をサポートするその他のオブジェクト`IStream`インターフェイス、Active Server Pages (ASP) など`Request`と`Response`FOR XML クエリを使用しているときに、結果を格納するオブジェクトを使用できます。  
+ ADO`Stream`オブジェクトまたはその他のオブジェクト、COM をサポートする`IStream`インターフェイス、Active Server Pages (ASP) など`Request`と`Response`FOR XML クエリを使用しているときに、結果を格納するオブジェクトを使用できます。  
   
  たとえば、次の ASP コードはクエリ結果を示しています。、`xml`データ型の列、人口統計、AdventureWorks サンプル データベースの Sales.Store テーブルにします。 具体的には、クエリは CustomerID が 3 の行で、この列のインスタンス値を検索します。  
   
@@ -203,15 +203,15 @@ ms.locfileid: "36085620"
 ## <a name="retrieving-for-xml-data-with-aspnet-and-the-net-framework"></a>ASP.NET と .NET Framework を使用した、FOR XML データの取得  
  前述の例と同様に、次の ASP.NET コードは、AdventureWorks サンプル データベースの Sales.Store テーブルにある、`xml` データ型の列である Demographics のクエリ結果を示しています。 前述の例と同様に、クエリは CustomerID が 3 の行で、この列のインスタンス値を検索します。  
   
- この例では、FOR XML のクエリ結果を返して表示するために、次の Microsoft .NET Framework マネージ API が使用されています。  
+ この例では、FOR XML のクエリ結果を返して表示するために、次の Microsoft .NET Framework マネージド API が使用されています。  
   
-1.  `SqlConnection` 指定された接続文字列変数 strConn の内容に基づいて、SQL Server への接続を開くために使用します。  
+1.  `SqlConnection` 指定した接続文字列変数 strConn の内容に基づき、SQL サーバーへの接続を開くために使用します。  
   
 2.  次に、データ アダプターとして `SqlDataAdapter` が使用されます。また、FOR XML クエリを実行するために、SQL 接続および指定した SQL クエリ文字列を使用します。  
   
-3.  クエリが実行された後に、`SqlDataAdapter.Fill`メソッドが呼び出されのインスタンスに渡されました、 `DataSet,` MyDataSet、FOR XML クエリの出力データセットに設定するためにします。  
+3.  クエリが実行された後、`SqlDataAdapter.Fill`メソッドが呼び出されのインスタンスを渡された、`DataSet,`ある MyDataSet が FOR XML クエリの出力データ セットを格納するためにします。  
   
-4.  `DataSet.GetXml` Server によって生成される HTML ページに表示できる文字列としてクエリ結果を返すメソッドが呼び出されます。  
+4.  `DataSet.GetXml` Server によって生成される HTML ページに表示可能な文字列としてクエリ結果を返すにはメソッドが呼び出されます。  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -294,7 +294,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml`データ型のサポートにより、FOR XML クエリの結果として返されることを要求する`xml`データ型の代わりに文字列型または image 型データを指定することによって、 [TYPE ディレクティブ](type-directive-in-for-xml-queries.md)です。 FOR XML クエリに TYPE ディレクティブを使用すると、「[アプリケーションでの XML データの使用](use-xml-data-in-applications.md)」で示したのと同様に、プログラムから FOR XML の結果にアクセスできます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml`データ型の FOR XML クエリの結果として返されることを要求するサポートにより`xml`データ型の代わりに文字列またはイメージとして型指定されたデータを指定することによって、 [TYPE ディレクティブ](type-directive-in-for-xml-queries.md)します。 FOR XML クエリに TYPE ディレクティブを使用すると、「[アプリケーションでの XML データの使用](use-xml-data-in-applications.md)」で示したのと同様に、プログラムから FOR XML の結果にアクセスできます。  
   
 ## <a name="see-also"></a>参照  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  

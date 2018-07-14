@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3646edb01f7bf6e45bbe20c1e6f821b41e9b5969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: aebaa04b6bdf4657f081b6a99b6cb158c144c8d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194862"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS)
   Web ベースの環境では、ユーザーがレポートと対話できるようにするさまざまな機能を追加できます。 ユーザーは、レポート内の値の並べ替え順序を変更したり、レポート内のアイテムの表示と非表示を切り替えたり、リンクをクリックして他のレポートや Web ページを表示したりできます。 また、目次やドキュメント マップを追加することもできます。 レポート ユーザーは、目次またはドキュメント マップ内のアイテムをクリックして、レポート内の領域に直接移動できます。  

@@ -1,5 +1,5 @@
 ---
-title: オブジェクトと操作 (Analysis Services) へのアクセスの承認 |Microsoft ドキュメント
+title: オブジェクトと操作 (Analysis Services) へのアクセスの承認 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.membership.f1
 - sql12.asvs.roledesignerdialog.general.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed4336f15c7bb024e9de1d4a4be7928ebf2c89af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43f0606aebac245a3756db1361ea8f1cf6360358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249182"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>オブジェクトと操作へのアクセスの承認 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のキューブ、ディメンション、マイニング モデルへの管理者以外のユーザー アクセスは、1 つ以上のデータベース ロールのメンバーシップにより許可されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者は、これらのデータベース ロールを作成し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに対する読み取り権限または読み取り/書き込み権限を与え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のユーザーとグループを各ロールに割り当てます。  
@@ -56,7 +56,7 @@ ms.locfileid: "36164385"
   
  **手順 1: サーバーの管理**  
   
- 最初の手順として、サーバー レベルで管理者権限を持つユーザーを決定します。 SQL Server をインストールするローカル管理者は、インストール時に、Analysis Services サーバー管理者として Windows アカウントを 1 つ以上指定するよう求められます。 サーバー管理者には、サーバー上の可能な権限がすべて付与されています。これには、サーバー上の任意のオブジェクトを表示、変更、削除したり、関連付けられているデータを表示したりする権限が含まれます。 インストールが完了したら、サーバー管理者は、アカウントを追加または削除してこのロールのメンバーシップを変更できます。 参照してください[サーバー管理者のアクセス許可を付与&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)このアクセス許可レベルの詳細。  
+ 最初の手順として、サーバー レベルで管理者権限を持つユーザーを決定します。 SQL Server をインストールするローカル管理者は、インストール時に、Analysis Services サーバー管理者として Windows アカウントを 1 つ以上指定するよう求められます。 サーバー管理者には、サーバー上の可能な権限がすべて付与されています。これには、サーバー上の任意のオブジェクトを表示、変更、削除したり、関連付けられているデータを表示したりする権限が含まれます。 インストールが完了したら、サーバー管理者は、アカウントを追加または削除してこのロールのメンバーシップを変更できます。 参照してください[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)詳細については、このアクセス許可レベル。  
   
  **手順 2: データベースの管理**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36164385"
   
  **手順 3: クエリと処理のワークロードへのキューブ アクセスまたはモデル アクセスの有効化**  
   
- 既定では、キューブまたはテーブル モデルにアクセスできるのは、サーバー管理者とデータベース管理者だけです。 指定するアクセス許可を持つ Windows ユーザーおよびグループ アカウントをキューブまたはモデルにマップする追加のロールの割り当て、組織内の他のユーザーにこれらのデータ構造を使用できるようにする必要があります`Read`特権です。 詳細については、「[キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)」を参照してください。  
+ 既定では、キューブまたはテーブル モデルにアクセスできるのは、サーバー管理者とデータベース管理者だけです。 追加のロールの割り当てを指定するアクセス許可を持つ、と共に Windows ユーザーおよびグループ アカウントをキューブまたはモデルをマップする、組織の他のユーザーがこれらのデータ構造を使用できるようにする必要があります`Read`特権。 詳細については、「[キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)」を参照してください。  
   
  処理タスクを他の管理機能と分離することにより、サーバー管理者およびデータベース管理者がこのタスクを他のユーザーに委任したり、スケジュール ソフトウェアを実行するサービス アカウントを指定することによって自動処理を構成したりできるようになります。 詳細については、「[処理権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)」を参照してください。  
   
@@ -95,8 +95,8 @@ ms.locfileid: "36164385"
  このような方法を使用すると、モデル内のロールの定義とメンバーシップへの動きを最小限にし、ロールの割り当てに可視性が加わるため、キューブ権限の実装および保持が簡単になります。  
   
 ## <a name="see-also"></a>参照  
- [サーバーの管理者のアクセス許可を付与&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [ロールと権限&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
+ [サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [ロールとアクセス許可&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Analysis Services でサポートされる認証方法](../instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   

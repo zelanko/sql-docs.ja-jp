@@ -1,5 +1,5 @@
 ---
-title: CellPermissions 要素 (ASSL) |Microsoft ドキュメント
+title: CellPermissions 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CellPermissions element
 ms.assetid: 4a604f2f-f4c3-42bd-a42b-951263942cc6
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe89d1e2de728773d9eaae32023e801676a02bb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dafcaf786d58fd8c1441c0f1df50aa5a7d47be31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176459"
 ---
 # <a name="cellpermissions-element-assl"></a>CellPermissions 要素 (ASSL)
-  セルの関連付けられている権限のコレクションを格納[キューブ](../objects/cube-element-assl.md)要素。  
+  セルに関連付けられているアクセス許可のコレクションを格納[キューブ](../objects/cube-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36165923"
 |子要素|[CellPermission](../objects/cellpermission-element-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
- コレクションには、いずれかに格納できる`CellPermission`許容の値ごとにオブジェクト、[アクセス](../properties/access-element-assl.md)要素。  
+ コレクションに格納できる最大 1 つ`CellPermission`オブジェクトの許容値ごとの[アクセス](../properties/access-element-assl.md)要素。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.CellPermissionCollection>します。  
   

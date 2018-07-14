@@ -1,5 +1,5 @@
 ---
-title: Microsoft シーケンス クラスタ リング アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+title: Microsoft シーケンス クラスター アルゴリズム テクニカル リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_SEQUENCE_STATES parameter
 - MINIMUM_SUPPORT parameter
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7e1e11074e74a228be0d49a5d8c76196bf5c4463
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29cb245c65976e517aad12ecae636df264dda9d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242012"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft シーケンス クラスタリング アルゴリズム テクニカル リファレンス
   Microsoft シーケンス クラスター アルゴリズムは、複合的なアルゴリズムです。このアルゴリズムでは、Markov 連鎖分析を使用して順序付けられたシーケンスを特定し、この分析結果とクラスタリング技法を組み合わせて、シーケンスおよびモデル内のその他の属性に基づいてクラスターを生成します。 このトピックでは、アルゴリズムの実装、アルゴリズムをカスタマイズする方法、およびシーケンス クラスター モデルの特別な要件について説明します。  
@@ -103,7 +103,7 @@ ms.locfileid: "36085549"
  既定値は、64 です。  
   
  MAXIMUM_STATES  
- アルゴリズムによってサポートされる非シーケンス属性用の状態の最大数を指定します。 アルゴリズムが属性の最も一般的な状態を使用し、残りの状態として扱われます非シーケンス属性の状態の数が状態の最大数よりも大きい場合は、`Missing`です。  
+ アルゴリズムによってサポートされる非シーケンス属性用の状態の最大数を指定します。 アルゴリズムが、属性の最も一般的な状態を使用し、残りの状態として扱われます非シーケンス属性の状態の数が状態の最大数よりも大きい場合は、`Missing`します。  
   
  既定値は、100 です。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "36085549"
  マイニング構造列に適用されます。  
   
  MODEL_EXISTENCE_ONLY  
- 2 つの状態を持つものとして扱わ、列であることを示します:`Missing`と`Existing`です。 Null として扱われます、`Missing`値。  
+ 2 つの状態を持つものとして扱わ列があることを示します:`Missing`と`Existing`します。 Null として扱われます、`Missing`値。  
   
  マイニング モデル列に適用されます。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36085549"
 ## <a name="requirements"></a>要件  
  ケース テーブルにはケース ID 列が必要です。 オプションで、ケースに関する属性を格納する他の列をケース テーブルに含めることができます。  
   
- Microsoft シーケンス クラスター アルゴリズムには、入れ子になったテーブルとして格納されるシーケンス情報が必要です。 入れ子になったテーブルには、1 つの Key Sequence 列が必要です。 A`Key Sequence`列は、任意の並べ替えができる文字列データ型を含めたデータ型を含めることができますが、列は、各ケースの一意の値を含める必要があります。 さらに、モデルを処理する前に、ケース テーブルと入れ子になったテーブルの両方が、テーブルを関連付けるキーに基づいて昇順に並べ替えられていることを確認する必要があります。  
+ Microsoft シーケンス クラスター アルゴリズムには、入れ子になったテーブルとして格納されるシーケンス情報が必要です。 入れ子になったテーブルには、1 つの Key Sequence 列が必要です。 A`Key Sequence`列は、任意の並べ替え可能な文字列データ型を含めたデータ型を含めることができますが、列は、各ケースの一意の値を含める必要があります。 さらに、モデルを処理する前に、ケース テーブルと入れ子になったテーブルの両方が、テーブルを関連付けるキーに基づいて昇順に並べ替えられていることを確認する必要があります。  
   
 > [!NOTE]  
 >  Microsoft シーケンス アルゴリズムを使用するがシーケンス列は使用しないモデルを作成する場合、結果として得られるモデルでは、シーケンスが含まれるのではなく、モデルに含まれている他の属性に基づいてケースがクラスター化されるだけです。  
@@ -140,7 +140,7 @@ ms.locfileid: "36085549"
   
 ## <a name="remarks"></a>コメント  
   
--   シーケンスの予測には [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx) 関数を使用します。 各エディションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]シーケンスの予測をサポートするを参照してください[SQL Server 2012 の各エディションでサポートされる機能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)です。  
+-   シーケンスの予測には [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx) 関数を使用します。 各エディションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]シーケンス予測をサポートするを参照してください[機能は、SQL Server 2012 の各エディションでサポートされている](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)します。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムでは、Predictive Model Markup Language (PMML) を使用したマイニング モデルの作成はサポートされていません。  
   

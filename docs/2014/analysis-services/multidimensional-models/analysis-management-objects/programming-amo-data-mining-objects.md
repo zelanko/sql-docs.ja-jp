@@ -1,5 +1,5 @@
 ---
-title: AMO データ マイニング オブジェクトをプログラミング |Microsoft ドキュメント
+title: AMO データ マイニング オブジェクトのプログラミング |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62ef444d7fa112267a4a272553834e24fe5b0df9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 340030bcc2acdc220f6aff4634c6926163862c6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176949"
 ---
 # <a name="programming-amo-data-mining-objects"></a>AMO データ マイニング オブジェクトのプログラミング
   AMO を使用すれば、データ マイニング オブジェクトを簡単にプログラミングできます。 まず、マイニング プロジェクトをサポートするデータ構造モデルを作成します。 次に、マイニング アルゴリズムをサポートするデータ マイニング モデルを作成します。マイニング アルゴリズムは、データに含まれる未知のリレーションシップを予測または検出するために使用します。 構造やアルゴリズムなどのマイニング プロジェクトを作成したら、マイニング モデルを処理することにより、後でクライアント アプリケーションからクエリや予測を行うときに使用するトレーニングされたモデルを取得できます。  
   
- 1 つ覚えておく必要があるのは、AMO ではクエリを実行できないという点です。AMO は、マイニング構造およびマイニング モデルの管理に使用します。 クエリを実行する、データを使用して[ADOMD.NET での開発](../adomd-net/developing-with-adomd-net.md)です。  
+ 1 つ覚えておく必要があるのは、AMO ではクエリを実行できないという点です。AMO は、マイニング構造およびマイニング モデルの管理に使用します。 データを照会するには、使用[ADOMD.NET での開発](../adomd-net/developing-with-adomd-net.md)します。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36173360"
 ##  <a name="MiningStructure"></a> MiningStructure オブジェクト  
  マイニング構造は、すべてのマイニング モデルの作成に使用するデータ構造の定義です。 マイニング構造には、データベースで定義されたデータ ソース ビューへのバインドと、マイニング モデル内のすべての列定義が含まれます。 マイニング構造には複数のマイニング モデルを含めることができます。  
   
- 作成する、<xref:Microsoft.AnalysisServices.MiningStructure>オブジェクトには、次の手順が必要です。  
+ 作成、<xref:Microsoft.AnalysisServices.MiningStructure>オブジェクトには、次の手順が必要です。  
   
 1.  <xref:Microsoft.AnalysisServices.MiningStructure> オブジェクトを作成し、基本属性を設定します。 基本属性には、オブジェクト名、オブジェクト ID (内部 ID)、およびデータ ソース バインドがあります。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36173360"
   
      マイニング構造は処理可能です。マイニング構造を処理すると、子マイニング モデルが処理または再トレーニングされます。  
   
- 次のサンプル コードでは、売り上げを時系列で予測するマイニング構造を作成します。 サンプル コードを実行する前に確認するデータベース*db*のパラメーターとして渡される`CreateSalesForecastingMiningStructure`に含まれています`db.DataSourceViews[0]`ビューへの参照*dbo.vTimeSeries* で[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]サンプル データベース。  
+ 次のサンプル コードでは、売り上げを時系列で予測するマイニング構造を作成します。 サンプル コードを実行する前に必ずデータベース*db*のパラメーターとして渡される`CreateSalesForecastingMiningStructure`に含まれています`db.DataSourceViews[0]`ビューへの参照*dbo.vTimeSeries* で[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]サンプル データベース。  
   
 ```  
 public static MiningStructure CreateSalesForecastingMiningStructure(Database db)  
@@ -94,7 +94,7 @@ public static MiningStructure CreateSalesForecastingMiningStructure(Database db)
 ##  <a name="MiningModel"></a> MiningModel オブジェクト  
  マイニング モデルは、マイニング アルゴリズムで使用されるすべての列および列定義のリポジトリです。  
   
- 作成する、<xref:Microsoft.AnalysisServices.MiningModel>オブジェクトには、次の手順が必要です。  
+ 作成、<xref:Microsoft.AnalysisServices.MiningModel>オブジェクトには、次の手順が必要です。  
   
 1.  <xref:Microsoft.AnalysisServices.MiningModel> オブジェクトを作成し、基本属性を設定します。  
   

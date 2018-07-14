@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3b250b955028e3f0843699688713cb731f00fee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a5048132c50460475ffe9c04f0f03a75cf6368b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166303"
 ---
 # <a name="load-xml-data"></a>XML データの読み込み
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へは、いくつかの方法で XML データを転送できます。 以下に例を示します。  
@@ -31,7 +31,7 @@ ms.locfileid: "36173653"
   
 -   bcp out を使用して別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースからデータの一括コピーを実行し、bcp in を使用して新しいバージョンのデータベースにそのデータの一括挿入を実行できます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのリレーショナル列にデータが含まれている場合、新しいテーブルを作成し、[n]text 型の列や行 ID を保存する主キー列 (任意) を含めます。 クライアント側の FOR XML によりサーバーで生成される XML を取得するプログラミングを使用してに書き込み、`[n]text`列です。 その後で、既に説明した技法により、新しいバージョンのデータベースにデータを転送します。 XML を新しいバージョンのデータベースの XML 列に直接書き込むこともできます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのリレーショナル列にデータが含まれている場合、新しいテーブルを作成し、[n]text 型の列や行 ID を保存する主キー列 (任意) を含めます。 クライアント側の FOR XML でのサーバーで生成される XML を取得するプログラミングを使用し、それを記述、`[n]text`列。 その後で、既に説明した技法により、新しいバージョンのデータベースにデータを転送します。 XML を新しいバージョンのデータベースの XML 列に直接書き込むこともできます。  
   
 ## <a name="bulk-loading-xml-data"></a>XML データの一括読み込み  
  bcp など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の一括読み込み機能によって XML データをサーバーに一括で読み込むことができます。 OPENROWSET を使用すると、ファイルから XML 列にデータを読み込むことができます。 この点について、次の例で説明します。  
@@ -54,10 +54,10 @@ FROM    (SELECT *
   
 -   基になるコード ページの都合で Unicode ではなく、かつ暗黙のエンコードの場合、データベースの文字列のコード ページは読み込むコード ポイントと同一か、互換性がある必要があります。 必要であれば COLLATE を使用します。 サーバーにそのようなコード ページが存在しない場合、エンコードを修正する明示的な XML 宣言を追加する必要があります。  
   
--   明示的なエンコードを使用するには、いずれかを使用、`varbinary()`するコード ページとの対話を持たない入力します。 または、適切なコード ページの文字列型を使用します。 次に、データを XML の列、変数、またはパラメーターに割り当てます。  
+-   明示的なエンコードを使用するいずれかの操作を使用して、`varbinary()`入力する、コード ページとの対話はないか、適切なコード ページの文字列型を使用します。 次に、データを XML の列、変数、またはパラメーターに割り当てます。  
   
 ### <a name="example-explicitly-specifying-an-encoding"></a>例: エンコードの明示的な指定  
- 明示的な XML 宣言が行われていない XML ドキュメント vcdoc を `varchar(max)` として保存しているとします。 次のステートメントが、エンコード「iso8859-1」を含む XML 宣言を追加、XML ドキュメントを連結に結果をキャスト`varbinary(max)`バイト表現を保持し、最後に XML にキャストできるようにします。 その結果、XML プロセッサで、指定したエンコード "iso8859-1" に従ってデータを解析し、対応する文字列値の UTF-16 表現を生成できます。  
+ 明示的な XML 宣言が行われていない XML ドキュメント vcdoc を `varchar(max)` として保存しているとします。 次のステートメント、エンコード「iso8859-1」を含む XML 宣言を追加、XML ドキュメントを連結に結果をキャスト`varbinary(max)`バイト表現は保持され、し、最後に XML にキャストできるようにします。 その結果、XML プロセッサで、指定したエンコード "iso8859-1" に従ってデータを解析し、対応する文字列値の UTF-16 表現を生成できます。  
   
 ```  
 SELECT CAST(   

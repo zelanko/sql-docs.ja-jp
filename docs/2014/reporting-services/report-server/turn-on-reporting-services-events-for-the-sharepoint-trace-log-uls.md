@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7cf717edbf16f8f151bbf278d8bd69aa997c141b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b278a5e71b3954e8d296fd9dc7644b33b99aae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244332"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]以降では、SharePoint モードの [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サーバーから SharePoint 統合ログ サービス (ULS) のトレース ログに [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] イベントを書き込むことができます。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 固有のカテゴリは、SharePoint サーバーの全体管理の [監視] ページで利用できます。  
@@ -105,7 +105,7 @@ Get-SPDiagnosticConfig
 |ローカル モード表示||  
 |SOAP クライアント プロキシ||  
 |UI ページ||  
-|Power View|**LogClientTraceEvents** API に書き込まれたログ エントリ。 これらのエントリのソースを含むクライアント アプリケーションは[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]の機能[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]用アドイン[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。<br /><br /> LogClientTraceEvents API からのすべてのログ エントリは、"SQL Server Reporting Services" の **Category** および "Power View" の **Area** に記録されます。<br /><br /> "Power View" の Area に記録されるエントリの内容は、クライアント アプリケーションによって異なります。|  
+|Power View|**LogClientTraceEvents** API に書き込まれたログ エントリ。 これらのエントリのソースを含む、クライアント アプリケーションは[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]の機能[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]用アドイン[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。<br /><br /> LogClientTraceEvents API からのすべてのログ エントリは、"SQL Server Reporting Services" の **Category** および "Power View" の **Area** に記録されます。<br /><br /> "Power View" の Area に記録されるエントリの内容は、クライアント アプリケーションによって異なります。|  
 |Report Server Alerting Runtime||  
 |レポート サーバー アプリケーション ドメイン マネージャー||  
 |レポート サーバー バッファー済み応答||  

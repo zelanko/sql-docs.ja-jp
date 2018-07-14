@@ -1,5 +1,5 @@
 ---
-title: テーブルのプロパティ |Microsoft ドキュメント
+title: テーブルのプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
 - sql12.SWB.SELECTCOLUMNS.F1
@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.swb.tableproperties.changetracking.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5b9ecfeafbb989f5baae832225475e65137a9ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 858be4ef2443a92f2a2999535714084fe60a67f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181769"
 ---
 # <a name="table-properties"></a>テーブルのプロパティ
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [テーブルのプロパティ] ダイアログ ボックスに表示されるテーブルのプロパティについて説明します。 これらのプロパティの表示方法の詳細については、「 [テーブル定義の表示](view-the-table-definition.md)」を参照してください。  
@@ -53,7 +53,7 @@ ms.locfileid: "36174108"
  **[作成日]**  
  テーブルが作成された日付と時刻です。  
   
- **Name**  
+ **名前**  
  テーブルの名前です。  
   
  **[スキーマ]**  
@@ -85,7 +85,7 @@ ms.locfileid: "36174108"
  ほとんどの場合でロック エスカレーションを禁止します。 テーブルレベルのロックは完全には禁止されません。 たとえば、SERIALIZABLE 分離レベルでクラスター化インデックスがないテーブルをスキャンしている場合は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] でテーブル ロックを実行して、データの整合性を保護します。  
   
  **[レプリケートされるテーブル]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションによってテーブルがいつ別のデータベースにレプリケートされるかを示します。 指定できる値は`True`または`False`です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションによってテーブルがいつ別のデータベースにレプリケートされるかを示します。 指定できる値は`True`または`False`します。  
   
 ##  <a name="ChangeTracking"></a> [変更の追跡] ページ  
  **変更の追跡**  
@@ -139,13 +139,13 @@ ms.locfileid: "36174108"
  設定可能な値は `True` および `False` です。  
   
  **[Filestream ファイル グループ]**  
- テーブルに FILESTREAM データ ファイル グループの名前を指定、 `varbinary(max)` FILESTREAM 属性を持つ列。 既定値は、既定の FILESTREAM データ ファイル グループです。  
+ テーブルに FILESTREAM データ ファイル グループの名前を指定する`varbinary(max)`FILESTREAM 属性を持つ列。 既定値は、既定の FILESTREAM データ ファイル グループです。  
   
  テーブルに FILESTREAM データが含まれていない場合、フィールドは空白です。  
   
 ### <a name="general"></a>全般  
  **[VarDecimal ストレージ形式が有効]**  
- ときに`True`、この読み取り専用の値が示す`decimal`と`numeric`データ型は、vardecimal ストレージ形式を使用して格納します。 このオプションを変更するには、使用、`vardecimal storage format`オプション[sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)です。 Vardecimal ストレージ形式は非推奨とされます。 代わりに行の圧縮を使用してください。  
+ ときに`True`、この読み取り専用の値が示す`decimal`と`numeric`各データ型が vardecimal ストレージ形式を使用して格納します。 このオプションを変更するには、使用、`vardecimal storage format`オプションの[sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)します。 Vardecimal ストレージ形式は非推奨とされます。 代わりに行の圧縮を使用してください。  
   
  **[インデックス領域]**  
  インデックスがテーブル内で占有する領域の容量をメガバイト単位で表示します。 この値には、テーブルの XML インデックスの領域使用状況は含まれません。 テーブルに XML インデックスが含まれている場合は、代わりに [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) を使用してください。  

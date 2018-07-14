@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, upgrading
 - Reporting Services, upgrades
@@ -18,18 +18,18 @@ ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 caps.latest.revision: 97
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2f140a9c83562ff86dc1a890f2d5a7e0ce7a272c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 626e7c922eb2b6126bdec0b2f9e53b3ab4f1d22d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204952"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のアップグレード オプションおよび移行オプションの概要について説明します。 配置された [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアップグレードするには、次の 2 つの一般的な方法があります。  
   
--   **アップグレード:** サーバーと現在インストールされているインスタンスで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをアップグレードします。 これは一般に "インプレース" アップグレードと呼ばれます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーのモード間でのインプレース アップグレードはサポートされていません。 たとえば、ネイティブ モードのレポート サーバーを SharePoint モードのレポート サーバーにアップグレードすることはできません。 レポート アイテムはモード間で移行できます。 詳細については、このドキュメントと関連トピックの後半 'ネイティブなから SharePoint への移行」のセクションを参照して[Sample Reporting Services rs.exe Script to Migrate Content between レポート Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)です。  
+-   **アップグレード:** サーバーと現在インストールされているインスタンスで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをアップグレードします。 これは一般に "インプレース" アップグレードと呼ばれます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーのモード間でのインプレース アップグレードはサポートされていません。 たとえば、ネイティブ モードのレポート サーバーを SharePoint モードのレポート サーバーにアップグレードすることはできません。 レポート アイテムはモード間で移行できます。 詳細については、このドキュメントと関連のトピックの後半 'Native から SharePoint への移行' セクションを参照してください。 [Sample Reporting Services rs.exe Script to Migrate Content between のレポート サーバー](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)します。  
   
 -   **移行**:新しい SharePoint 環境をインストールして構成し、レポート アイテムとリソースを新しい環境にコピーして、既存のコンテンツを使用するよう新しい環境を構成します。 下位レベルの移行形式では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データベース、構成ファイル、および SharePoint コンテンツ データベース (SharePoint モードを使用している場合) をコピーします。  
   
@@ -65,16 +65,16 @@ ms.locfileid: "36163823"
 >   
 >  -   [SQL Server 2014 リリース ノート](http://go.microsoft.com/fwlink/?LinkID=296445).  
 > -   [SQL Server 2014 Reporting Services の役立つヒントおよびトラブルシューティング](http://go.microsoft.com/fwlink/?LinkID=391254)  
-> -   使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アップグレード アドバイザー。 詳細については、次を参照してください。 [Reporting Services のアップグレードに関する問題&#40;アップグレード アドバイザー&#41; ](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)と[する方法: アップグレード アドバイザーのインストール](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)です。  
+> -   使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アップグレード アドバイザー。 詳細については、次を参照してください。 [Reporting Services のアップグレード問題&#40;アップグレード アドバイザー&#41; ](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)と[方法: アップグレード アドバイザーのインストール](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)します。  
   
- ![トップにリンク バックに使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [」を参照します。](#bkmk_top)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
 ##  <a name="bkmk_side_by_side"></a> サイド バイ サイド インストール  
  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] ネイティブ モードは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のネイティブ モードの配置とサイド バイ サイドでインストールできます。  
   
  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint モードと以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのコンポーネントのサイド バイ サイド配置はサポートされていません。  
   
- ![トップにリンク バックに使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [」を参照します。](#bkmk_top)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
 ##  <a name="bkmk_inplace_upgrade"></a> インプレース アップグレード  
  アップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を含む任意またはすべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]コンポーネントをアップグレードできます。 セットアップによって既存のインスタンスが検出され、アップグレードするように求められます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには、コマンド ライン引数またはセットアップ ウィザードで指定できるアップグレード オプションが用意されています。  
@@ -97,7 +97,7 @@ ms.locfileid: "36163823"
 |[アップグレードする SQL Server 2014 のインストール ウィザードを使用して&#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|  
 |[コマンド プロンプトからの SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|  
   
- ![トップにリンク バックに使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [」を参照します。](#bkmk_top)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
 ##  <a name="bkmk_upgrade_checklist"></a> アップグレード前のチェック リスト  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする前に、次の情報を確認してください。  
@@ -108,7 +108,7 @@ ms.locfileid: "36163823"
   
 -   セキュリティのベスト プラクティスと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のためのガイダンスを確認します。 詳細については、「 [Security Considerations for a SQL Server Installation](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)」を参照してください。  
   
--   実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アップグレード アドバイザーをレポート サーバー コンピューターを正常にアップグレードを妨げる可能性のある問題を特定します。 詳細については、「 [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)」を参照してください。  
+-   実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アップグレード アドバイザーをレポート サーバー コンピューターの正常なアップグレードを妨げる可能性のある問題を特定します。 詳細については、「 [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)」を参照してください。  
   
 -   対称キーをバックアップします。 詳細については、「 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36163823"
   
  実稼働環境をアップグレードする前に、必ず実稼働環境と同じ構成をしている実稼動前の環境でアップグレード テストを実行してください。  
   
- ![トップにリンク バックに使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [」を参照します。](#bkmk_top)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
 ## <a name="overview-of-migration-scenarios"></a>移行シナリオの概要  
  サポートされているバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にアップグレードする場合、通常は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ウィザードを実行することで、レポート サーバーのプログラム ファイル、データベース、およびすべてのアプリケーション データをアップグレードできます。  
@@ -135,7 +135,7 @@ ms.locfileid: "36163823"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を配置した SharePoint 2010 を SharePoint 2013 に移行することが求められている。 SharePoint 2013 では、SharePoint 2010 からのインプレース アップグレードがサポートされていません。 詳細については、「[Reporting Services の移行 &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)」を参照してください。  
   
- ![トップにリンク バックに使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [」を参照します。](#bkmk_top)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
 ##  <a name="bkmk_native_scenarios"></a> ネイティブ モードのアップグレードと移行のシナリオ  
  **アップグレード:** ネイティブ モードのインプレース アップグレード手順は、前述のサポートされている各バージョンで共通です。 SQL Server インストール ウィザードまたはコマンド ライン インストールを実行します。 インストールが完了すると、レポート サーバー データベースは自動的に新しいレポート サーバー データベース スキーマにアップグレードされます。 詳細については、このトピックの「 [In-place upgrade](#bkmk_inplace_upgrade) 」を参照してください。  
@@ -148,7 +148,7 @@ ms.locfileid: "36163823"
   
 3.  アップグレードを続行できる場合は、アップグレード処理を進めるように求められます。  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] プログラム ファイルの新しいフォルダーが作成されます。 用のプログラム フォルダー、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインストールに含める MSRS12\< 。*インスタンス名*>。  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] プログラム ファイルの新しいフォルダーが作成されます。 用のプログラム フォルダーを[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]インストール MSRS12 に含まれています\<。*インスタンス名*>。  
   
 5.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバーのプログラム ファイル、構成ツール、およびレポート サーバー機能の一部であるコマンド ライン ユーティリティが追加されます。  
   
@@ -164,13 +164,13 @@ ms.locfileid: "36163823"
   
 7.  IIS の既存の仮想ディレクトリ設定に基づいて新しい URL が予約されます。 IIS の仮想ディレクトリは削除されない場合があるので、アップグレードの完了後に手動で削除してください。  
   
-8.  レポート サーバー データベースが新しいスキーマにアップグレードされ、ロールにデータベース所有者権限を追加することによって `RSExecRole` が変更されます。 この手順からにアップグレードする場合にのみ発生[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SP1 より前です。  
+8.  レポート サーバー データベースが新しいスキーマにアップグレードされ、ロールにデータベース所有者権限を追加することによって `RSExecRole` が変更されます。 この手順からアップグレードする場合にのみ発生[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SP1 より前です。  
   
 9. 構成ファイル内の設定がマージされます。 現在のインストールの構成ファイルが基礎として使用され、新しいエントリが追加されます。 使用されなくなったエントリは削除されませんが、アップグレードの完了後はレポート サーバーによって読み取られなくなります。 アップグレードでは古いログ ファイル、使用されなくなった RSWebApplication.config ファイル、または IIS の仮想ディレクトリ設定は削除されません。 また、SQL Server 2005 のレポート デザイナーや Management Studio などのクライアント ツールは削除されません。 これらのファイルやツールが不要になった場合は、アップグレードの完了後に削除してください。  
   
- **移行:** をネイティブ モードのインストールの以前のバージョンを移行する[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]がすべてサポートされている各バージョンで、このトピックの前半に記載されているのと同じ手順です。 詳細については、「[Reporting Services のインストールの移行 &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)」を参照してください。  
+ **移行:** をネイティブ モードのインストールの以前のバージョンの移行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]はこのトピックで前述されているサポートされているバージョンのすべての同じ手順を実行します。 詳細については、「[Reporting Services のインストールの移行 &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)」を参照してください。  
   
- ![トップにリンク バックに使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [」を参照します。](#bkmk_top)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
 ##  <a name="bkmk_native_scaleout"></a> Reporting Services ネイティブ モードのスケールアウト配置のアップグレード  
  複数のレポート サーバーにスケールアウトされる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードの配置をアップグレードする方法の概要を次に示します。 このプロセスでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置のダウンタイムが発生します。  
@@ -195,7 +195,7 @@ ms.locfileid: "36163823"
     > [!TIP]  
     >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint コマンドレット `Get-SPRSServiceApplicationServers` を使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 共有サービスを現在実行しているためアップグレードが必要なサーバーを SharePoint ファームで特定します。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 製品用アドイン。 詳細については、次を参照してください。[インストールまたは SharePoint 用 Reporting Services アドインをアンインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)です。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 製品用アドイン。 詳細については、次を参照してください。[インストールまたは SharePoint 用 Reporting Services アドインのアンインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)します。  
   
  SharePoint モードのインストールを移行する方法の詳細な手順は、次を参照してください[Reporting Services のインストール &#40; を移行しますSharePoint モード &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
@@ -228,7 +228,7 @@ ms.locfileid: "36163823"
   
      終了環境で SharePoint 2013 も実行する場合は、SharePoint 2010 から SharePoint 2013 へのデータベース アタッチ アップグレードを完了する必要があります。  
   
- ![トップにリンク バックに使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [」を参照します。](#bkmk_top)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2 から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **開始環境:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2、SharePoint 2007。  
@@ -248,7 +248,7 @@ ms.locfileid: "36163823"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードします。 SQL Server インストール ウィザードを実行すると、**[SQL Server Reporting Services SharePoint モード認証]** ダイアログに関するダイアログが表示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスがインストールされ、認証ページの資格情報を使用して新しい SharePoint アプリケーション プールが作成されます。  
   
- ![トップにリンク バックに使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [」を参照します。](#bkmk_top)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
 ### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>SQL Server 2005 SP2 から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **開始環境:** SQL Server 2005 SP2、SharePoint 2007。  
@@ -268,7 +268,7 @@ ms.locfileid: "36163823"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードします。 SQL Server インストール ウィザードを実行すると、[SQL Server Reporting Services SharePoint モード認証] ダイアログに関するダイアログが表示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスがインストールされ、認証ページの資格情報を使用して新しい SharePoint アプリケーション プールが作成されます。  
   
- ![トップにリンク バックに使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [」を参照します。](#bkmk_top)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
 ##  <a name="bkmk_migration_considerations"></a> 移行に関する考慮事項  
  アプリケーション データを移動する際には、次の問題と制限事項に注意する必要があります。  
@@ -284,11 +284,11 @@ ms.locfileid: "36163823"
   
  新しいレポート サーバー コンピューターで元に戻せる暗号化を再設定するには、事前にバックアップしたキーを復元する必要があります。 レポート サーバー データベースに格納されている完全なキーのセットは、対称キーの値、およびキーを格納したレポート サーバー インスタンスのみが使用できるようにキーへのアクセスを制限するための ID 情報で構成されています。 キーを復元するときに、レポート サーバーによって、キーの既存のコピーが新しいバージョンで置き換えられます。 新しいバージョンには、現在のコンピューターで定義されたコンピューター ID とサービス ID の値が含まれています。 詳細については、次の各トピックを参照してください。  
   
--   SharePoint モード: の「キー管理」セクションを参照して[Reporting Services SharePoint サービス アプリケーションの管理](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
+-   SharePoint モード: の「キー管理」を参照してください[Reporting Services SharePoint サービス アプリケーションの管理](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
 -   ネイティブ モード: 「 [Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。  
   
- ![トップにリンク バックに使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [」を参照します。](#bkmk_top)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
 ### <a name="fixed-database-name"></a>固定されたデータベース名  
  レポート サーバー データベースの名前は変更できません。 データベースの ID は、データベース作成時にレポート サーバーのストアド プロシージャで記録されます。 レポート サーバーのプライマリ データベースまたは一時データベースの名前を変更すると、プロシージャ実行時にエラーが発生し、レポート サーバー インストールが無効になります。  
@@ -301,20 +301,20 @@ ms.locfileid: "36163823"
   
 -   アイテム数が少ない場合は、レポート デザイナー、モデル デザイナー、およびレポート ビルダーから新しいレポート サーバーに、レポート、レポート モデル、および共有データ ソースを再パブリッシュできます。 ロールの割り当て、サブスクリプション、共有スケジュール、レポート スナップショット スケジュール、レポートやその他のアイテムに設定したカスタム プロパティ、モデル アイテム セキュリティ、およびレポート サーバーで設定したプロパティを再作成する必要があります。 レポート履歴およびレポート実行ログ データは失われます。  
   
- ![トップにリンク バックに使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [」を参照します。](#bkmk_top)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
 ##  <a name="bkmk_additional_resources"></a> その他のリソース  
   
 > [!NOTE]  
 >  SharePoint データベース アタッチ アップグレードの詳細については、以下を参照してください。  
   
--   [SharePoint 2013 へのアップグレード プロセスの概要](http://go.microsoft.com/fwlink/p/?LinkId=256688)(http://go.microsoft.com/fwlink/p/?LinkId=256688)です。  
+-   [SharePoint 2013 へのアップグレード プロセスの概要](http://go.microsoft.com/fwlink/p/?LinkId=256688)(http://go.microsoft.com/fwlink/p/?LinkId=256688)します。  
   
--   [SharePoint 2013 にアップグレードする前に環境をクリーンアップする](http://go.microsoft.com/fwlink/p/?LinkId=256689)(http://go.microsoft.com/fwlink/p/?LinkId=256689)です。  
+-   [SharePoint 2013 へアップグレードする前に環境をクリーンアップする](http://go.microsoft.com/fwlink/p/?LinkId=256689)(http://go.microsoft.com/fwlink/p/?LinkId=256689)します。  
   
--   [SharePoint 2010 から SharePoint 2013 までデータベースをアップグレード](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690)です。  
+-   [SharePoint 2010 から SharePoint 2013 までデータベースをアップグレード](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690)します。  
   
- ![トップにリンク バックに使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [」を参照します。](#bkmk_top)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
 ## <a name="see-also"></a>参照  
  [レポートのアップグレード](../../reporting-services/install-windows/upgrade-reports.md)   

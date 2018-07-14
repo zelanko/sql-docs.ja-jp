@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stopping jobs
 - disabling jobs
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], disabling
 ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 987f260ea345fad6de3497b47212a736c8265d0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f31f280125b47867a2de5b07c7b7cd5a3c4b4d92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194382"
 ---
 # <a name="disable-or-enable-a-job"></a>ジョブの有効化または無効化
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)]エージェント ジョブを無効にする方法について説明します。 ジョブを無効にしても、ジョブは削除されるわけではなく、必要に応じて再び有効にすることができます。  
@@ -81,6 +81,6 @@ ms.locfileid: "36165722"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_update_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)します。  
   
   

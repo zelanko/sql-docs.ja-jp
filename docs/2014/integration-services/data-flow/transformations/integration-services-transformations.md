@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transformations [Integration Services], listed
 - transformations [Integration Services], types
@@ -24,13 +24,13 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eeaca16577bef1056308d0260fc60a01b6b42ae2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f88f534d36ec72d81527f3e2093660c56ce9e141
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331922"
 ---
 # <a name="integration-services-transformations"></a>Integration Services の変換
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の変換とは、パッケージのデータ フロー内にある、データを集計、マージ、配信、および変更するコンポーネントのことです。 変換では、参照操作を実行してサンプル データセットを生成することもできます。 このセクションでは、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に含まれる変換と、その機能について説明します。  

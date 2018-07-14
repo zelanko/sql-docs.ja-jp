@@ -1,5 +1,5 @@
 ---
-title: データ ソース オブジェクト (Analysis Services) に対するアクセス許可を与える |Microsoft ドキュメント
+title: データ ソース オブジェクト (Analysis Services) に対する権限の付与 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.datasources.f1
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data sources [Analysis Services], security
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7df8a1a87b483d5b63641a8a621eb99a45d08c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbe08e5e23b8c40ddeba9efa99c151314d499916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243722"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>データ ソース オブジェクトに対する権限の付与 (Analysis Services)
   通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のユーザーは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの基になるデータ ソースへのアクセスを必要とすることはほとんどありません。 ユーザーは通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内部のデータを要求するクエリを発行するだけです。 ただし、データ マイニングのコンテキストでは、マイニング モデルに基づいた予測の実行など、マイニング モデルの登録済みデータをユーザーが入力したデータに結合しなければならない場合があります。 ユーザーが入力したデータが含まれているデータ ソースに接続するには、[OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery) 句または [OPENROWSET &#40;DMX&#41;](/sql/dmx/source-data-query-openrowset) 句を含んでいるデータ マイニング拡張機能 (DMX) クエリを使用します。  
@@ -58,11 +58,11 @@ ms.locfileid: "36164183"
      OLE DB またはその他のクライアント コンポーネントの権限借用レベル プロパティを通じての権限借用をクライアントが許可していない場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、基になるデータ ソースに匿名接続しようとします。 リモート データ ソースへの匿名接続が成功することはほとんどありません。これは、大部分のデータ ソースで匿名アクセスが許可されないためです。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル内のデータ ソース](data-sources-in-multidimensional-models.md)   
+ [多次元モデルのデータ ソース](data-sources-in-multidimensional-models.md)   
  [接続文字列プロパティ&#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
  [Analysis Services でサポートされる認証方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [ディメンション データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [キューブまたはモデルのアクセス許可を与える&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [キューブまたはモデル アクセス許可を付与&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [セル データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

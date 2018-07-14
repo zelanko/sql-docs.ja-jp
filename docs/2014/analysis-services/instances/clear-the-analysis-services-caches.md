@@ -1,5 +1,5 @@
 ---
-title: Analysis Services キャッシュのクリア |Microsoft ドキュメント
+title: Analysis Services キャッシュのクリア |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02a7a6620927472b0019cb4d23a3695f02dd7138
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6393e9d52bbe026adcda7db0c451e64a364ecbc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211852"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Analysis Services キャッシュのクリア
   Analysis Services は、クエリのパフォーマンス向上のためにデータをキャッシュします。 このトピックでは、MDX クエリへの応答で作成されたキャッシュを、XMLA ClearCache コマンドを使用してクリアするための推奨事項について説明します。 ClearCache を実行した場合の効果は、テーブル モデルまたは多次元モデルのどちらを使用しているかによって異なります。  
@@ -36,7 +36,7 @@ ms.locfileid: "36085780"
   
  また、ClearCache を実行すると、xVelocity メモリ内分析エンジン (VertiPaq) のメモリ内キャッシュもクリアされます。 xVelocity エンジンは、キャッシュされた小さな結果セットを保持します。 ClearCache を実行すると、xVelocity エンジンのキャッシュも無効化されます。  
   
- 最後に、ClearCache を実行しても削除されます残存データがメモリ内の表形式モデルが再構成された場合に`DirectQuery`モード。 これは、厳密に管理される機密データがモデルに含まれる場合、特に重要です。 この場合、ClearCache の実行は、機密データが想定した場所にのみ存在することを確実にするための予防的なアクションとなります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用してモデルを配置し、クエリ モードを変更する場合、キャッシュは手動でクリアする必要があります。 一方、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用して、モデルに `DirectQuery` を指定した場合、そのクエリ モードを使用するようにモデルを切り替えると、パーティションが自動的にキャッシュをクリアします。  
+ 最後に、ClearCache を実行しているが残存データも削除残っているのメモリ内表形式モデルがの再構成と`DirectQuery`モード。 これは、厳密に管理される機密データがモデルに含まれる場合、特に重要です。 この場合、ClearCache の実行は、機密データが想定した場所にのみ存在することを確実にするための予防的なアクションとなります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用してモデルを配置し、クエリ モードを変更する場合、キャッシュは手動でクリアする必要があります。 一方、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用して、モデルに `DirectQuery` を指定した場合、そのクエリ モードを使用するようにモデルを切り替えると、パーティションが自動的にキャッシュをクリアします。  
   
  多次元モデルのキャッシュをパフォーマンス テスト中にクリアするための推奨事項と比べると、テーブル モデルのキャッシュをクリアするための推奨事項はあまり多くありません。 機密データを含むテーブル モデルの配置を管理していない場合は、キャッシュをクリアするために実施される特定の管理タスクはありません。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36085780"
     ```  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services の管理タスクをスクリプト作成](../script-administrative-tasks-in-analysis-services.md)   
+ [Analysis Services での管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)   
  [Analysis Services インスタンスの監視](monitor-an-analysis-services-instance.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 列のプロパティ (SSAS テーブル) |Microsoft ドキュメント
+title: 列のプロパティ (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.columnprop.f1
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e091df45f6531dfd0922c795105fe8aadd69b4bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 437f225da3d771298a0fcf7af864a45953b194be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169303"
 ---
 # <a name="column-properties-ssas-tabular"></a>Column Properties (SSAS Tabular)
   このトピックでは、テーブル モデルの列のプロパティについて説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "36165097"
 |**列名**||モデルに格納され、レポート クライアントのフィールドの一覧に表示される列の名前。|  
 |**データ形式**|インポート時に自動的に決定します。|この列のデータに使用される表示形式を指定します。 データ形式を定義したら、各形式に固有のプロパティを設定できます。 たとえば、 **[通貨]** 形式を選択した場合は、表示される小数点以下の桁数の設定、桁区切り記号の選択、および通貨記号の選択を行います。 このプロパティには、次のオプションがあります。<br /><br /> **全般**<br /><br /> **10 進数**<br /><br /> **整数**<br /><br /> **Currency**<br /><br /> **[パーセント]**<br /><br /> **[指数]**<br /><br /> 列の値に画像が含まれる場合は、「 **基本画像**」を参照してください。|  
 |**[データ型]**|インポート時に自動的に決定します。|列のすべての値のデータ型を指定します。|  
-|**description**||列の説明文です。<br /><br /> 特定のレポート クライアントで、フィールド一覧のこの列にエンド ユーザーがカーソルを重ねると、ツールヒントとしてこの説明が表示されます。|  
+|**[説明]**||列の説明文です。<br /><br /> 特定のレポート クライアントで、フィールド一覧のこの列にエンド ユーザーがカーソルを重ねると、ツールヒントとしてこの説明が表示されます。|  
 |**[非表示]**|False|レポート クライアント フィールドの一覧で、列を非表示にするかどうかを指定します。<br /><br /> このプロパティを **[True]** に設定すると、この列は非表示になります。 たとえば、識別子またはキーを含む列は、通常はエンド ユーザーにとっては役に立ちません。<br /><br /> レポート クライアントで列を非表示にしても、そのフィールドはモデル データでは非表示にはなりません。 モデルに対するクエリを作成すると、そのフィールドが表示されます。 非表示の列は、引き続きグループ化または並べ替えに使用できます。<br /><br /> **[非表示]** プロパティは、データ セキュリティはまったく考慮されません。 データのセキュリティを確保するため、"ロール" では行フィルターを使用してください。 詳しくは、「[ロール &#40;SSAS テーブル&#41;](roles-ssas-tabular.md)」をご覧ください。|  
 |**列で並べ替え**||この列の値を並べ替えるために使用するもう 1 つの列を指定します。 2 つの列の間にリレーションシップが存在する必要があります。<br /><br /> この値には、既存の列の名前を指定してください。 数式またはメジャーを指定することはできません。|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36165097"
 2.  **[プロパティ]** ウィンドウで、プロパティをクリックして値を入力するか、下矢印をクリックして設定オプションを選択します。  
   
 ## <a name="see-also"></a>参照  
- [レポートのプロパティを表示する電源&#40;SSAS 表形式&#41;](properties-ssas-tabular.md)   
+ [レポートのプロパティを表示する power &#40;SSAS 表形式&#41;](properties-ssas-tabular.md)   
  [非表示にするか、列を固定&#40;SSAS 表形式&#41;](hide-or-freeze-columns-ssas-tabular.md)   
  [テーブルに列を追加&#40;SSAS 表形式&#41;](add-columns-to-a-table-ssas-tabular.md)  
   

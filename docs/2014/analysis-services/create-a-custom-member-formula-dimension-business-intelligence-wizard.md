@@ -1,5 +1,5 @@
 ---
-title: カスタム メンバー式 ([ディメンション]) (ビジネス インテリジェンス ウィザード) を作成 |Microsoft ドキュメント
+title: カスタム メンバー式 (Dimension) (ビジネス インテリジェンス ウィザード) の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.enablecustommemberformula.selectdimension.f1
 ms.assetid: 0bea4831-982e-4848-86cd-e6219c860138
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f2a3abcb59e7f5fa82f71209267aa999e7a31e1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09e21a926e306394b30314a885a5fe394fb36b1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228292"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>[カスタム メンバー式の作成] ([ディメンション]) (ビジネス インテリジェンス ウィザード)
   ビジネス インテリジェンス ウィザードの **[カスタム メンバー式の作成]** ページを使用すると、カスタム メンバー式列を使用して属性に関連付けるディメンションを選択できます。カスタム メンバー式列には、その属性のメンバー値を定義する多次元式 (MDX) ステートメントが格納されます。  

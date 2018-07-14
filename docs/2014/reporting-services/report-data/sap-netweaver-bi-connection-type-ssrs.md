@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cd1548cb8fb22a49900cc916dc1fde610993a05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: b05c961fcd9d3a4a64715f6bc96754000969a6ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216882"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI の接続の種類 (SSRS)
   SAP NetWeaver® Business Intelligence の外部データ ソースのデータをレポートに含めるには、種類が [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]のデータ拡張機能に基づいています。  
   
  このデータ拡張機能を使用すると、 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] の外部データ ソースで定義された InfoCube、MultiProvider (仮想 InfoCube)、および Web 対応クエリから多次元データを取得できます。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[を追加して、データ接続またはデータ ソースを確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)です。  
+ このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)します。  
   
 ##  <a name="support"></a> サポートされているバージョン  
  SAP BW 3.5 および 7.0 に対して、データ プロバイダーが開発され、テストが実施されています。  
@@ -37,7 +37,7 @@ ms.locfileid: "36165762"
   
 -   SAP Portals 6.40 サポート パッケージ 20  
   
--   SAP ポータル 7.0 サポート パッケージ 11  
+-   7.0 のポータル サポート パッケージ 11 を SAP します。  
   
 -   SAP Duet 1.0  
   
@@ -57,7 +57,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  レポートをパブリッシュした後、レポートをレポート サーバーで実行するときに、データを取得するための権限が有効な状態になるように、データ ソースの資格情報を変更する必要が生じる場合があります。  
   
- 詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services に接続文字列が](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)または[レポート ビルダーでの資格情報を指定](../specify-credentials-in-report-builder.md)です。  
+ 詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)または[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)します。  
   
   
   
@@ -75,14 +75,14 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
 ##  <a name="Extended"></a> 拡張フィールド プロパティ  
- [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] データ ソースは、拡張フィールド プロパティをサポートしています。 拡張フィールド プロパティは、プロパティに加え`Value`と`IsMissing`データ処理拡張機能によって、データセット フィールドに定義されます。 拡張プロパティには、定義済みプロパティとカスタム プロパティがあります。 定義済みのプロパティは、複数のデータ ソースに共通のプロパティです。 カスタム プロパティは、各データ ソースの固有のプロパティです。  
+ [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] データ ソースは、拡張フィールド プロパティをサポートしています。 拡張フィールド プロパティに追加するは`Value`と`IsMissing`データ処理拡張機能によってデータセットのフィールド定義されています。 拡張プロパティには、定義済みプロパティとカスタム プロパティがあります。 定義済みのプロパティは、複数のデータ ソースに共通のプロパティです。 カスタム プロパティは、各データ ソースの固有のプロパティです。  
   
 ### <a name="working-with-field-properties"></a>フィールド プロパティの操作  
- 拡張フィールド プロパティは、レポート レイアウトにドラッグすることのできるアイテムとして [レポート データ] ウィンドウには表示されません。 代わりに、プロパティの親フィールドをレポートにドラッグして、既定のプロパティを変更`Value`を使用するプロパティです。 たとえば、MDX クエリ デザイナーで、メタデータ ペインからクエリ ペインにレベルをドロップすることによって **Calendar Year/Month Level 01** というフィールド名を作成した場合、カスタムの拡張プロパティ **Long Name** を式の中で参照するには、次の構文を使用します。  
+ 拡張フィールド プロパティは、レポート レイアウトにドラッグすることのできるアイテムとして [レポート データ] ウィンドウには表示されません。 代わりに、プロパティの親フィールドをレポートにドラッグして、既定のプロパティを変更し、`Value`を使用するプロパティ。 たとえば、MDX クエリ デザイナーで、メタデータ ペインからクエリ ペインにレベルをドロップすることによって **Calendar Year/Month Level 01** というフィールド名を作成した場合、カスタムの拡張プロパティ **Long Name** を式の中で参照するには、次の構文を使用します。  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
- メタデータ ペインでフィールドにカーソルを合わせると、拡張フィールド プロパティの名前がツールヒントに表示されます。 基になるデータを探索に使用できるクエリ デザイナーの詳細については、次を参照してください。 [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md)です。  
+ メタデータ ペインでフィールドにカーソルを合わせると、拡張フィールド プロパティの名前がツールヒントに表示されます。 基になるデータを探索に使用できるクエリ デザイナーの詳細については、次を参照してください。 [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md)します。  
   
 > [!NOTE]  
 >  拡張フィールド プロパティに対応する値が存在するのは、レポートを実行して対応するデータセットのデータを取得する際に、データ ソースによって値が提供された場合のみです。 参照できます`Field`以下に示す構文を使用して任意の式からプロパティ値。 ただし、これらのフィールドはこのデータ プロバイダーに固有であり、レポート定義言語には含まれないため、これらの値に加えた変更はレポート定義には保存されません。  
@@ -102,7 +102,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ### <a name="predefined-field-properties"></a>定義済みフィールド プロパティ  
  次の表に、 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] データ ソースで使用できる定義済みフィールド プロパティの一覧を示します。  
   
-|**プロパティ**|**Type**|**説明/有効値**|  
+|**プロパティ**|**型**|**説明/有効値**|  
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|フィールドのデータ値を指定します。|  
 |`IsMissing`|`Boolean`|フィールドが結果データセットに存在するかどうかを示します。|  
@@ -112,7 +112,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |`Key`|`Object`|レベルのキーを返します。|  
 |`LevelNumber`|`Integer`|親子階層の場合は、レベル番号またはディメンション番号を返します。|  
 |`ParentUniqueName`|`String`|親子階層の場合は、親レベルの完全修飾名を返します。|  
-|`UniqueName`|`String`|レベルの完全修飾名を返します。 たとえば、`UniqueName`従業員可能性があります値 *[0D_Company]. [10D_Department] です。[11]*.|  
+|`UniqueName`|`String`|レベルの完全修飾名を返します。 たとえば、`UniqueName`従業員の値は *[0D_Company]. [10D_Department]。[11]*.|  
   
  フィールドおよびフィールド プロパティを式で使用する方法について詳しくは、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)」をご覧ください。  
   

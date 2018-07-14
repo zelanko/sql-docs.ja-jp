@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -18,13 +18,13 @@ ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ecf22fbf730510c0fbb87dff803ea6b69d4881f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4197e80f29f7add23fcb1ddb7594fe5f7e3173f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327062"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス
   ここでは、SharePoint 統合モードで動作するレポート サーバーに関して、レポート サーバー処理に対するアクセスの許可に使用できる、SharePoint の権限のリファレンス情報を提供します。 このトピックは、カスタム権限レベルを作成する場合に使用する権限を選択するのに役立ちます。  

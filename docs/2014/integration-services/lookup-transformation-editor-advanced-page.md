@@ -1,5 +1,5 @@
 ---
-title: 参照変換エディター (詳細 ページ) |Microsoft ドキュメント
+title: 参照変換エディター (詳細 ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.advanced.f1
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 caps.latest.revision: 41
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4982bd1a964e72d6a7e36d88a6f500d2a3ba5d89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 9b44973dda00e956d25c694c835e7dc1e683eab9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169210"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>[参照変換エディター] ([詳細設定] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用して、部分キャッシュを構成し、参照変換用 SQL ステートメントを変更します。  
@@ -47,7 +47,7 @@ ms.locfileid: "36173559"
  参照データセットを生成するために使用される SQL ステートメントを変更します。  
   
 > [!NOTE]  
->  このページで指定するオプションの SQL ステートメントは、**[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。 詳細については、次を参照してください。[参照変換エディター&#40;接続ページ&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)です。  
+>  このページで指定するオプションの SQL ステートメントは、**[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。 詳細については、次を参照してください。[参照変換エディター&#40;接続ページ&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)します。  
   
  **[パラメーターの設定]**  
  **[クエリ パラメーターの設定]** ダイアログ ボックスを使用して、入力列をパラメーターにマップします。  
@@ -56,7 +56,7 @@ ms.locfileid: "36173559"
  blogs.msdn.com のブログ「 [キャッシュ モードの参照](http://go.microsoft.com/fwlink/?LinkId=219518) 」  
   
 ## <a name="see-also"></a>参照  
- [参照変換エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [参照変換エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [参照変換エディター&#40;接続 ページ&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [[参照変換エディター] &#40;[列] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [参照変換エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   

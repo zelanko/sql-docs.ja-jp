@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
 helpviewer_keywords:
@@ -28,13 +28,13 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4a50b92570ad8cf28c537ce5fe657223058ac7d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d5c49bcf93c7b80ab60341136dbcae4e16c94a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209382"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
   あいまいグループ化変換は、重複部分と考えられるデータの行を識別し、データを標準化するときに使用するデータの正規行を選択することで、データ クリーニング タスクを実行します。  
@@ -73,7 +73,7 @@ ms.locfileid: "36164139"
  この変換は 1 つの入力と 1 つの出力をとります。 エラー出力はサポートされていません。  
   
 ## <a name="row-comparison"></a>行の比較  
- あいまいグループ化変換を構成するときに、変換入力内の行の比較に使用する比較アルゴリズムを指定できます。 Exhaustive プロパティを設定した場合`true`、変換入力内の他のすべての行への入力のすべての行を比較します。 この比較アルゴリズムを使用すると、より正確な結果が生成されますが、入力の行の数が少ない場合を除けば、処理により多くの時間がかかるようになります。 パフォーマンスの問題を回避するのには、Exhaustive プロパティを設定することをお勧め`true`パッケージ開発時のみです。  
+ あいまいグループ化変換を構成するときに、変換入力内の行の比較に使用する比較アルゴリズムを指定できます。 Exhaustive プロパティを設定する場合`true`、変換入力内の他のすべての行に入力されたすべての行を比較します。 この比較アルゴリズムを使用すると、より正確な結果が生成されますが、入力の行の数が少ない場合を除けば、処理により多くの時間がかかるようになります。 パフォーマンスの問題を回避するためには、Exhaustive プロパティを設定することをお勧め`true`パッケージ開発時にのみです。  
   
 ## <a name="temporary-tables-and-indexes"></a>一時テーブルおよびインデックス  
  実行時、あいまいグループ化変換は、テーブルやインデックスなどの一時オブジェクトを接続先の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに作成します。この一時オブジェクトのサイズは、かなり大きくなる可能性があります。 テーブルおよびインデックスのサイズは、変換入力内の行の数およびあいまいグループ化変換によって作成されたトークンの数に比例します。  

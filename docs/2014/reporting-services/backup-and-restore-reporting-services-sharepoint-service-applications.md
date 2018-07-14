@@ -1,5 +1,5 @@
 ---
-title: バックアップし、復元の Reporting Services SharePoint サービス アプリケーション |Microsoft ドキュメント
+title: バックアップし、復元の Reporting Services SharePoint サービス アプリケーション |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 504afebfbe59ef6717bb60e8220600256419f785
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ad72399371d662ee8842dd7f9bf72ce5a72b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212572"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint サービス アプリケーションのバックアップと復元
   このトピックでは、SharePoint サーバーの全体管理または PowerShell を使用して、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションをバックアップおよび復元する方法について説明します。 このトピックの内容は次のとおりです。  
@@ -41,7 +41,7 @@ ms.locfileid: "36085837"
   
 -   SharePoint のバックアップを開始する前に、暗号化キーをバックアップしてください。 暗号化キーをバックアップしなかった場合は、サービス アプリケーションの復元後に、暗号化されたデータへアクセスできなくなります。 その場合、暗号化されたデータを削除する必要が生じます。  
   
--   確認して、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーションがデータベースへのアクセスに UEA または Windows 認証を使用します。 これらのいずれかを使用している場合は、復元プロセス後にサービス アプリケーションを正しく構成できるよう、適切な資格情報を確認してください。  
+-   場合確認、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーションがデータベースへのアクセスに UEA または Windows 認証を使用しています。 これらのいずれかを使用している場合は、復元プロセス後にサービス アプリケーションを正しく構成できるよう、適切な資格情報を確認してください。  
   
 -   SharePoint のバックアップ ログが、バックアップ ファイルと同じフォルダーに作成されていることを確認してください。 このファイルは通常、 **spbackup.log**という名前になります。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36085837"
   
 3.  **[トップ コンポーネント]** ボックスの一覧からサービス アプリケーションのバックアップを選択し、 **[次へ]** をクリックします。  
   
-4.  選択、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]アプリケーションをクリックして**次**です。  
+4.  選択、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]アプリケーションをクリック**次**します。  
   
 5.  **[ログイン名とパスワード]** セクションで、ログイン名のパスワードを入力します。 ログイン名ボックスには、サービス アプリケーションがバックアップ以前に使用していたログインが自動入力されます。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36085837"
  [サービス アプリケーションを復元する (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx)。  
   
 ### <a name="restore-the-encryption-keys-using-central-administration"></a>サーバーの全体管理を使用して暗号化キーを復元する  
- 復元する方法について、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 、暗号化キーの「暗号化キー」セクションを参照して[Reporting Services SharePoint サービス アプリケーションの管理](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)です。  
+ 復元する方法については、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 、暗号化キーは、の「暗号化キー」セクションを参照してください。 [Reporting Services SharePoint サービス アプリケーションの管理](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)します。  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>実行アカウントとデータベース認証の構成  
  **実行アカウント** : サービス アプリケーションが実行アカウントを使用していた場合は、次の手順を実行して実行アカウントを構成します。  

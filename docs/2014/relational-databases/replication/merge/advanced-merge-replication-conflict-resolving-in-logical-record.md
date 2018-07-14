@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logical records [SQL Server replication]
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 59e4970a0a4ace2ba55344f5a2ddae36222d930d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1e12ca76aa43b61eef3b41e4ceadf587ce1f6824
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208852"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>論理レコードの競合の検出および解決
   ここでは、論理レコードの使用時に利用できる、競合検出および競合解決方法のさまざまな組み合わせを紹介します。 マージ レプリケーションでの競合は、複数のノードが同じデータを変更したとき、またはマージ レプリケーションが変更をレプリケートするときに制約違反などの特定の種類のエラーに遭遇したときに発生します。 競合の検出および解決の詳細については、「 [マージ レプリケーションの競合検出および解決の詳細](advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  

@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - myTeam sample table [SQL Server]
 - bulk importing [SQL Server], examples
 - bulk exporting [SQL Server], examples
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c7709226cca36e2173b5c1e47c6e2a3aa20e4d6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 12919f045d5e4295859f70aede7d62ee667a5887
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246818"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam サンプル テーブル (SQL Server)
   「 [一括データのインポートおよびエクスポート](bulk-import-and-export-of-data-sql-server.md) 」のコード例の大部分では、 **myTeam**という名前の特殊なテスト用テーブルが必要になります。 これらのコード例を実行する前に、 **データベースの** HumanResources **スキーマに** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを作成する必要があります。  
@@ -36,7 +35,7 @@ ms.locfileid: "36085881"
 |[列]|データ型|NULL 値の許容|説明|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|不可|行の主キー。 チーム メンバーの従業員 ID。|  
-|**Name**|`nvarchar(50)`|不可|チーム メンバーの名前。|  
+|**名前**|`nvarchar(50)`|不可|チーム メンバーの名前。|  
 |**Title**|`nvarchar(50)`|[可]|チームにおける従業員の肩書き。|  
 |**背景情報**|`nvarchar(50)`|不可|行が最後に更新された日時 (既定値)。|  
   
