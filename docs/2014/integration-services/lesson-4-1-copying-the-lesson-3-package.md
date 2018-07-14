@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 caps.latest.revision: 26
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5a22a848b30e33689cd02b8ea6ce3651539501e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 031c82bb3ebdb3843eb3f9a540728a00cd8cc903
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329502"
 ---
 # <a name="step-1-copying-the-lesson-3-package"></a>手順 1: レッスン 3 のパッケージのコピー
   ここでは、レッスン 3 で作成した Lesson 3.dtsx パッケージのコピーを作成します。 レッスン 3 を終了していない場合は、チュートリアルに含まれている、レッスン 3 を完了した状態のパッケージをプロジェクトに追加し、作業用のコピーを作成することもできます。 レッスン 4 の実習では、このパッケージの新しいコピーを使用します。  
@@ -40,9 +40,9 @@ ms.locfileid: "36174973"
   
 6.  **[制御フロー]** タブの背景上で任意の場所を右クリックし、 **[プロパティ]** をクリックします。  
   
-7.  [プロパティ] ウィンドウでは、更新、`Name`プロパティを`Lesson 4`です。  
+7.  [プロパティ] ウィンドウでは、更新、`Name`プロパティを`Lesson 4`します。  
   
-8.  ボックスをクリックして、 **ID**プロパティ一覧で、クリックして**\<新しい ID の生成 >** です。  
+8.  ボックスをクリックして、 **ID**プロパティ、一覧でクリック **\<Generate New ID >**。  
   
 ### <a name="to-add-the-completed-lesson-3-package"></a>レッスン 3 を完了した状態のパッケージを追加するには  
   

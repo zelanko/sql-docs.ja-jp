@@ -1,5 +1,5 @@
 ---
-title: パッケージ (SSIS サービス) インポートおよびエクスポート |Microsoft ドキュメント
+title: インポートおよびエクスポート パッケージ (SSIS サービス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], importing
 - packages [Integration Services], exporting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - exporting packages
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 caps.latest.revision: 50
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8ee81709bb8f0c9b30ab528d78a21b4ff72c1eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96f87aedbadd6535fc6e82feb92a822a85b49f0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322692"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>パッケージをインポートおよびエクスポートする (SSIS サービス)
     
@@ -43,7 +43,7 @@ ms.locfileid: "36175396"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb データベース。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージをインポートおよびエクスポートする機能を提供し、これによって、ストレージ形式とパッケージの場所を変更します。 インポートおよびエクスポート機能を使用すると、ファイル システム、パッケージ ストア、または msdb データベースにパッケージを追加したり、いずれかの保存形式から別の保存形式にパッケージをコピーしたりできます。 たとえば、msdb に保存されているパッケージをファイル システムにコピーしたり、その逆の操作を行うことができます。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージをインポートおよびエクスポートする機能を提供し、これストレージ形式とパッケージの場所を変更します。 インポートおよびエクスポート機能を使用すると、ファイル システム、パッケージ ストア、または msdb データベースにパッケージを追加したり、いずれかの保存形式から別の保存形式にパッケージをコピーしたりできます。 たとえば、msdb に保存されているパッケージをファイル システムにコピーしたり、その逆の操作を行うことができます。  
   
  **dtutil** コマンド プロンプト ユーティリティ (dtutil.exe) を使用してパッケージを別の形式にコピーすることもできます。 詳細については、「[dtutil ユーティリティ](dtutil-utility.md)」を参照してください。  
   
@@ -137,6 +137,6 @@ ms.locfileid: "36175396"
 8.  **[OK]** をクリックすると、エクスポートが完了します。  
   
 ## <a name="see-also"></a>参照  
- [パッケージの管理&#40;SSIS サービス&#41;](service/package-management-ssis-service.md)  
+ [Package Management &#40;SSIS サービス&#41;](service/package-management-ssis-service.md)  
   
   

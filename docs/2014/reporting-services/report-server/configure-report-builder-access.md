@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, Report Builder
 - Report Builder 1.0, configuring access
@@ -17,13 +17,13 @@ ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 76c13b3c73879e40be793d622ca0918bce39edca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e715595ae4ed8394fc4e30c2819af140eb8e3681
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328898"
 ---
 # <a name="configure-report-builder-access"></a>レポート ビルダーへのアクセスの構成
   レポート ビルダーは、ネイティブ モードまたは SharePoint 統合モード用に構成される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに付属しているカスタム レポート ツールです。  
@@ -39,7 +39,7 @@ ms.locfileid: "36176547"
  レポート ビルダーを使用するには、作業するためのパブリッシュされたレポート モデルが必要です。  
   
 ## <a name="prerequisites"></a>前提条件  
- レポート ビルダーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ レポート ビルダーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
  クライアント コンピューターには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 がインストールされている必要があります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] は、 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] アプリケーションを実行するためのインフラストラクチャを提供します。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "36176547"
  レポート ビルダーは、常に完全信頼モードで実行されます。部分信頼モードで実行されるように構成することはできません。 以前のリリースでは、レポート ビルダーを部分信頼モードで実行できましたが、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンではこのオプションはサポートされていません。  
   
 ## <a name="enabling-and-disabling-report-builder"></a>レポート ビルダーの有効化と無効化  
- レポート ビルダーは既定で有効になっています。 レポート サーバー システム プロパティを設定して、レポート ビルダーの機能を無効にすることがレポート サーバー管理者`EnableReportDesignClientDownload`に`false`です。 このプロパティを設定すると、そのレポート サーバーでレポート ビルダーのダウンロードが無効になります。  
+ レポート ビルダーは既定で有効になっています。 レポート サーバーのシステム プロパティを設定して、レポート ビルダー機能を無効にすることがレポート サーバー管理者`EnableReportDesignClientDownload`に`false`します。 このプロパティを設定すると、そのレポート サーバーでレポート ビルダーのダウンロードが無効になります。  
   
  レポート サーバーのシステム プロパティを設定するには、Management Studio またはスクリプトを使用します。  
   
 -   Management Studio を使用するには、レポート サーバーに接続し、[詳細なサーバー プロパティ] ページを使用して `EnableReportDesignClientDownload` を `false` に設定します。 このページを開く方法の詳細については、「[レポート サーバーのプロパティを設定する &#40;Management Studio&#41;](../tools/set-report-server-properties-management-studio.md)」を参照してください。  
   
--   レポート サーバーのプロパティを設定するサンプル スクリプトを表示するを参照してください。[スクリプトを展開および管理タスク](../tools/script-deployment-and-administrative-tasks.md)です。  
+-   レポート サーバーのプロパティを設定するサンプル スクリプトを表示するを参照してください。[スクリプトを展開および管理タスク](../tools/script-deployment-and-administrative-tasks.md)します。  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーにおけるレポート ビルダーへのアクセスを許可するロールの割り当て  
  ネイティブ モードのレポート サーバーでは、レポート ビルダーを使用するためのタスクを含むユーザー ロールの割り当てを作成します。 アイテムおよびサイト レベルでのロールの定義およびロールの割り当てを作成または変更できるのは、コンテンツ マネージャーとシステム管理者だけです。  
@@ -146,7 +146,7 @@ ms.locfileid: "36176547"
 ## <a name="permissions-granting-report-builder-access-on-a-sharepoint-integrated-mode-report-server"></a>SharePoint 統合モードのレポート サーバーにおけるレポート ビルダーへのアクセスを許可する権限  
  SharePoint 統合モードのレポート サーバーでは、レポート ビルダーへのアクセスは、投稿またはフル コントロールの権限レベルの SharePoint ユーザーに許可されます。  
   
- カスタム権限レベルを使用する場合は、権限レベルにアイテムの追加とアイテムの編集を含める必要があります。 組み込みの権限レベルをレポート ビルダーへのアクセスの詳細については、次を参照してください。[レポート サーバー アイテムに対して Windows SharePoint Services で使用する組み込みのセキュリティ](../security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)です。 カスタム権限レベルのアクセス許可の要件の詳細については、次を参照してください。 [SharePoint Web アプリケーションでレポート サーバー操作に対するアクセス許可の設定](../security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)です。  
+ カスタム権限レベルを使用する場合は、権限レベルにアイテムの追加とアイテムの編集を含める必要があります。 組み込みのアクセス許可レベルをレポート ビルダーへのアクセスの詳細については、次を参照してください。[組み込みのセキュリティをレポート サーバー アイテムに対して Windows SharePoint Services を使用して](../security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)します。 カスタム アクセス許可レベルのアクセス許可の要件の詳細については、次を参照してください。 [SharePoint Web アプリケーションでレポート サーバー操作に対するアクセス許可の設定](../security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)します。  
   
 ## <a name="authentication-considerations-and-credential-reuse"></a>認証に関する注意点と資格情報の再利用  
  レポート ビルダーは、ClickOnce テクノロジを使用して、アプリケーション ファイルをクライアント コンピューターにダウンロードおよびインストールします。 ClickOnce テクノロジは、プログラム ファイルをクライアント コンピューターに配置し、アプリケーションを個別のプロセスとして既定のユーザーの ID で実行する一方向のアプリケーションの配置に使用されます。 アプリケーション ファイルおよびレポート サーバー データを取得するには、レポート ビルダーはレポート サーバーに接続し直す必要があるので、さまざまなシナリオにおける ClickOnce によるセキュリティ コンテキストの設定方法およびリモート コンピューターへの要求の発行方法について理解しておくことが重要です。  
@@ -163,7 +163,7 @@ ms.locfileid: "36176547"
 |---------------------------------------|--------------------------------------------------------------------|  
 |ネゴシエート (既定)<br /><br /> NTLM (既定)|Windows 統合セキュリティでは、クライアントとサーバーが同じドメインに配置されており、ユーザーがレポート ビルダーへのアクセス権を持つドメイン アカウントを使用してクライアント コンピューターにログインしており、レポート サーバーが Windows 認証用に構成されている場合は、通常、ClickOnce とレポート ビルダーからの認証済み要求は成功します。<br /><br /> ClickOnce とブラウザーのレポート サーバーへの接続では同じユーザー ID が使用されるので、要求は成功します。<br /><br /> ユーザーが [実行するアカウント名] で Internet Explorer を開き、既定以外の資格情報を指定した場合、要求は失敗します。 レポート サーバー上のユーザー セッションが特定のアカウントで確立されている場合、ClickOnce を別のアカウントで実行すると、レポート サーバーによってファイルへのアクセスが拒否されます。|  
 |Kerberos|レポート ビルダーを使用するために必要な Internet Explorer では、Kerberos は直接サポートされていません。|  
-|[基本認証]|ClickOnce では基本認証はサポートされていません。 認証ヘッダーで基本認証を指定する要求は作成されません。 資格情報を渡したりユーザーに資格情報の入力を求めたりすることもありません。 これらの問題を回避するには、レポート ビルダーのアプリケーション ファイルへの匿名アクセスを有効にします。<br /><br /> レポート ビルダーのアプリケーション ファイルへの匿名アクセスを有効にすると、レポート サーバーで認証ヘッダーが無視されるので、要求は成功します。 レポート ビルダーへの匿名アクセスを有効にする方法の詳細については、次を参照してください。 [、レポート サーバーで基本認証を構成する](../security/configure-basic-authentication-on-the-report-server.md)です。<br /><br /> ClickOnce がアプリケーション ファイルを取得すると、レポート ビルダーによってレポート サーバーへの個別の接続が開かれます。 ユーザーは、レポート ビルダーからレポート サーバーに接続するために、資格情報を再入力する必要があります。 レポート ビルダーは、Internet Explorer または ClickOnce から資格情報を収集しません。<br /><br /> レポート サーバーが基本認証用に構成されている場合、レポート ビルダーのプログラム ファイルへの匿名アクセスを有効にしないと、要求は失敗します。 ClickOnce は要求で Windows 統合セキュリティを指定するので、要求は失敗します。 レポート サーバーを基本認証用に構成すると、無効なセキュリティ パッケージが指定されること、およびレポート サーバーが想定する資格情報がないことが原因で、サーバーによって要求が拒否されます。<br /><br /> また、SharePoint 統合モードを使用するようにレポート サーバーが構成されている場合に SharePoint サイトで基本認証を使用すると、ClickOnce を使用してレポート ビルダーをクライアント コンピューターにインストールしようとしたときに 401 エラーが発生します。 このような状況が発生するのは、SharePoint ではセッションが継続している間はクッキーを使用してユーザーを認証された状態に維持しておくのに対して、ClickOnce ではクッキーがサポートされないためです。 ユーザーがレポート ビルダーなどの ClickOnce アプリケーションを起動した場合、アプリケーションはクッキーを SharePoint に渡さないため、SharePoint ではアクセスが拒否され、401 エラーが返されます。<br /><br /> この問題は、次のいずれかの方法を使用して回避できます。<br /><br /> 選択、**パスワードを保存する**ユーザー資格情報を指定するオプションを選択します。<br /><br /> SharePoint サイト コレクションへの匿名アクセスを有効にします。<br /><br /> ユーザーが資格情報を指定しないように環境を構成します。 たとえば、イントラネット環境で、ワークグループに属するように SharePoint サーバーを構成してから、ローカル コンピューターでユーザー アカウントを作成します。|  
+|[基本認証]|ClickOnce では基本認証はサポートされていません。 認証ヘッダーで基本認証を指定する要求は作成されません。 資格情報を渡したりユーザーに資格情報の入力を求めたりすることもありません。 これらの問題を回避するには、レポート ビルダーのアプリケーション ファイルへの匿名アクセスを有効にします。<br /><br /> レポート ビルダーのアプリケーション ファイルへの匿名アクセスを有効にすると、レポート サーバーで認証ヘッダーが無視されるので、要求は成功します。 レポート ビルダーへの匿名アクセスを有効にする方法の詳細については、次を参照してください。 [、レポート サーバーで基本認証を構成](../security/configure-basic-authentication-on-the-report-server.md)します。<br /><br /> ClickOnce がアプリケーション ファイルを取得すると、レポート ビルダーによってレポート サーバーへの個別の接続が開かれます。 ユーザーは、レポート ビルダーからレポート サーバーに接続するために、資格情報を再入力する必要があります。 レポート ビルダーは、Internet Explorer または ClickOnce から資格情報を収集しません。<br /><br /> レポート サーバーが基本認証用に構成されている場合、レポート ビルダーのプログラム ファイルへの匿名アクセスを有効にしないと、要求は失敗します。 ClickOnce は要求で Windows 統合セキュリティを指定するので、要求は失敗します。 レポート サーバーを基本認証用に構成すると、無効なセキュリティ パッケージが指定されること、およびレポート サーバーが想定する資格情報がないことが原因で、サーバーによって要求が拒否されます。<br /><br /> また、SharePoint 統合モードを使用するようにレポート サーバーが構成されている場合に SharePoint サイトで基本認証を使用すると、ClickOnce を使用してレポート ビルダーをクライアント コンピューターにインストールしようとしたときに 401 エラーが発生します。 このような状況が発生するのは、SharePoint ではセッションが継続している間はクッキーを使用してユーザーを認証された状態に維持しておくのに対して、ClickOnce ではクッキーがサポートされないためです。 ユーザーがレポート ビルダーなどの ClickOnce アプリケーションを起動した場合、アプリケーションはクッキーを SharePoint に渡さないため、SharePoint ではアクセスが拒否され、401 エラーが返されます。<br /><br /> この問題は、次のいずれかの方法を使用して回避できます。<br /><br /> 選択、**パスワードを保存する**オプション、ユーザーの資格情報を提供する場合。<br /><br /> SharePoint サイト コレクションへの匿名アクセスを有効にします。<br /><br /> ユーザーが資格情報を指定しないように環境を構成します。 たとえば、イントラネット環境で、ワークグループに属するように SharePoint サーバーを構成してから、ローカル コンピューターでユーザー アカウントを作成します。|  
 |Custom|カスタム認証を使用するようにレポート サーバーを構成すると、レポート サーバーで匿名アクセスが有効になり、認証チェックなしで要求が受け付けられます。<br /><br /> ClickOnce がアプリケーション ファイルを取得すると、レポート ビルダーによってレポート サーバーへの個別の接続が開かれます。 ユーザーは、レポート ビルダーからレポート サーバーに接続するために、資格情報を再入力する必要があります。 レポート ビルダーは、Internet Explorer または ClickOnce から資格情報を収集しません。|  
   
 ## <a name="see-also"></a>参照  

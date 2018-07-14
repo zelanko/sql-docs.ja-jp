@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic joins
 - joins [SQL Server], creating
 - joins [SQL Server], automatic
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 373264e421362d29ee00909707abc2be41ce1956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 394aab0fd5726b2a885f0f113cfe1f66c1eac5c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268178"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>テーブルの自動結合 (Visual Database Tools)
   クエリに複数のテーブルを追加すると、 [クエリおよびビュー デザイナー](visual-database-tools.md) により、これらのテーブルが相互に関連しているかどうかの確認が行われます。 関連している場合は、テーブルまたはテーブル構造オブジェクトを示す四角形の間に、結合線が自動的に表示されます。  
@@ -44,8 +44,8 @@ ms.locfileid: "36176074"
  クエリでテーブルが自動的に結合されない場合は、結合を手動で作成できます。 詳しくは、「[手動でのテーブルの結合 (Visual Database Tools)](join-tables-manually-visual-database-tools.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [クエリおよびビュー デザイナーでの結合の表現方法&#40;Visual Database Tools&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
- [クエリおよびビューの操作方法に関するトピックをデザイン&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [クエリおよびビュー デザイナーでの結合の表示方法&#40;Visual Database Tools&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
+ [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [結合を使用したクエリ (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

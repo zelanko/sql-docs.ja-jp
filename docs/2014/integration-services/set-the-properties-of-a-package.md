@@ -1,5 +1,5 @@
 ---
-title: パッケージのプロパティを設定 |Microsoft ドキュメント
+title: パッケージのプロパティを設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
 - properties [Integration Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, properties
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec97db89a74170ee04c9cc23486032958cb16a0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 197dbb96b08d484bce2f5235c106dc3f21433528
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328002"
 ---
 # <a name="set-the-properties-of-a-package"></a>パッケージのプロパティを設定する
   この手順では、**[プロパティ]** ウィンドウを使用してパッケージのプロパティを構成する方法について説明します。  

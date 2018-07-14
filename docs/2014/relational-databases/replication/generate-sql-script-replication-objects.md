@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.generatesqlscript.f1
 helpviewer_keywords:
 - Generate SQL Script dialog box
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 99bd088d8d79da34c00b688380b76eda8b56de08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 06b729ec2c9ff938b09a0faebb6d90d043cdaf0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276698"
 ---
 # <a name="generate-sql-script-replication-objects"></a>[SQL スクリプトの生成] (レプリケーション オブジェクト)
   レプリケーション スクリプトには、パブリケーションやサブスクリプションなど、スクリプト化されたレプリケーション コンポーネントを実装するために必要な [!INCLUDE[tsql](../../includes/tsql-md.md)] システム ストアド プロシージャが含まれます。 トポロジ内のすべてのレプリケーション コンポーンネントは、ディザスター リカバリー計画の一部としてスクリプト化され、スクリプトはタスクの繰り返しの自動化にも使用することができます。 レプリケーションでは、レプリケーション オブジェクトをスクリプト化するための次の 2 つのダイアログ ボックスが用意されています。  

@@ -1,5 +1,5 @@
 ---
-title: クエリ軸 (MDX) の内容を指定する |Microsoft ドキュメント
+title: クエリ軸 (MDX) の内容の指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cellsets [MDX]
 - query axis [MDX]
 ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e540d77db8b6834df4a0cdc00a3b9aad54d9970e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74b091d87c78f27cc6141f076dd4eab4924f0e89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267618"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>クエリ軸の内容の指定 (MDX)
   クエリ軸は、多次元式 (MDX) の SELECT ステートメントから返されるセル セットの範囲を指定します。 セル セットの範囲を指定することで、返されるデータのうち、クライアントで表示するデータを限定できます。  
@@ -119,6 +119,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [スライサー軸の内容を指定する&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [スライサー軸の内容の指定&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

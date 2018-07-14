@@ -1,5 +1,5 @@
 ---
-title: 予測関数をモデルに適用する |Microsoft ドキュメント
+title: モデルに予測関数の適用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: abd75a7a7be7cacc0395af11e02b5dc55828e31d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: a512c4e9f288c0e776b7ac6de91604da39d9f4d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270018"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>モデルへの予測関数の適用
   予測クエリを作成するには、クエリの基になるマイニング モデルを選択する必要があります。 現在のプロジェクトに存在するマイニング モデルを選択できます。  
@@ -72,7 +72,7 @@ ms.locfileid: "36177200"
     |||  
     |-|-|  
     |**\<モデル名 >**|このオプションを選択すると、マイニング モデルの値が結果に含められます。 予測可能な列のみを追加できます。<br /><br /> モデルから列を追加すると、返される結果はその列の値の個別でないリストになります。<br /><br /> このオプションで追加する列は、作成される DMX ステートメントの SELECT 部分に含まれます。|  
-    |**Prediction Function**|このオプションを選択すると、予測関数の一覧を参照できます。<br /><br /> 選択した値または関数は、作成される DMX ステートメントの SELECT 部分に追加されます。<br /><br /> 予測関数の一覧が、選択したモデルの種類によってフィルター処理や制限を受けることはありません。 そのため、現在のモデルの種類で関数がサポートされていることが確実でない場合は、関数を一覧に追加して、エラーが起きないかどうかを確認します。<br /><br /> $ ($AdjustedProbability など) が付きますリスト項目が、関数を使用する場合に出力される入れ子になったテーブルから列を表す`PredictHistogram`です。 これらは、入れ子になったテーブルの代わりに単一の列を返すために使用できるショートカットです。|  
+    |**Prediction Function**|このオプションを選択すると、予測関数の一覧を参照できます。<br /><br /> 選択した値または関数は、作成される DMX ステートメントの SELECT 部分に追加されます。<br /><br /> 予測関数の一覧が、選択したモデルの種類によってフィルター処理や制限を受けることはありません。 そのため、現在のモデルの種類で関数がサポートされていることが確実でない場合は、関数を一覧に追加して、エラーが起きないかどうかを確認します。<br /><br /> リスト項目 ($AdjustedProbability) などの $ が付いているが、関数を使用する場合に出力する入れ子になったテーブルから列を表す`PredictHistogram`します。 これらは、入れ子になったテーブルの代わりに単一の列を返すために使用できるショートカットです。|  
     |**カスタム式**|このオプションを選択すると、カスタム式を入力し、結果に別名を割り当てることができます。<br /><br /> カスタム式は、作成される DMX 予測クエリの SELECT 部分に追加されます。<br /><br /> このオプションは、各行で結果のためのテキストを追加して、VB 関数やカスタム ストアド プロシージャを呼び出す場合に便利です。<br /><br /> DMX から VBA および Excel 関数を使用する方法の詳細については、「 [MDX および DAX での VBA 関数](/sql/mdx/vba-functions-in-mdx-and-dax)」を参照してください。|  
   
 3.  各関数または式の追加後は、DMX ビューに切り替えて、関数がどのように DMX ステートメント内に追加されたかを確認します。  
@@ -96,9 +96,9 @@ ms.locfileid: "36177200"
   
 5.  クエリ グリッドの **[ソース]** で TM_Clustering マイニング モデルを選択し、列の [Bike Buyer] を追加します。  
   
-6.  **ソース****予測関数**、関数を追加および`Cluster`です。  
+6.  **ソース**、**予測関数**、関数を追加および`Cluster`。  
   
-7.  **ソース**[**予測関数**、関数を追加`PredictSupport`、[Bike Buyer] モデル列にドラッグし、**条件と引数**ボックス。 **[別名]** 列に「 **Support** 」と入力します。  
+7.  **ソース**を選択します**予測関数**、関数を追加`PredictSupport`、モデル列 [Bike Buyer] をドラッグし、**条件と引数**ボックス。 **[別名]** 列に「 **Support** 」と入力します。  
   
      予測関数を表す式および列参照を **[条件と引数]** ボックスからコピーします。  
   

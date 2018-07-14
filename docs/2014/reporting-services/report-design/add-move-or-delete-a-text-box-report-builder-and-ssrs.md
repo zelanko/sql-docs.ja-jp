@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2023c9a066d2a9f0e9507fe0c06dcab4fbcc66a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e8f8a614c15ed52465bcfb378749e10acb480c2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270628"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>テキスト ボックスの追加、移動、または削除 (レポート ビルダーおよび SSRS)
   テキスト ボックスはレポート内で最も一般的に使用されるレポート アイテムです。 テキスト ボックスをレポート本文に追加して、タイトル、パラメーターの選択肢、組み込みフィールド、日付などの情報を表示できます。  

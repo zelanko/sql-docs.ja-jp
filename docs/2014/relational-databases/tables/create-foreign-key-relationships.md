@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 254cc2f7bccd634a283412d4b2acbf75f1c0cd84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: baf89a41a42a1ea84e37d103890c3c8ea1ed22db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274558"
 ---
 # <a name="create-foreign-key-relationships"></a>外部キーのリレーションシップの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で外部キーのリレーションシップを作成する方法について説明します。 あるテーブルの行と他のテーブルの行を関連付ける場合は、2 つのテーブル間にリレーションシップを作成します。  
@@ -34,7 +34,7 @@ ms.locfileid: "36176145"
   
      [Security](#Security)  
   
--   **作成して外部キー リレーションシップを使用します。**  
+-   **リレーションシップを作成する外部キーを使用しています。**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

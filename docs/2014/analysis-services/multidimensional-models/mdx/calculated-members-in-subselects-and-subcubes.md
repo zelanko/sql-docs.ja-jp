@@ -1,5 +1,5 @@
 ---
-title: 計算されるメンバーはサブセレクトとサブキューブで |Microsoft ドキュメント
+title: 計算されるメンバーはサブセレクトとサブキューブで |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a073fe9578a877aa840e6a607ca6ae081f97052b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5681806fd4b7530f3d83d54b21aafb3eeb07b09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323192"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>サブセレクトとサブキューブで計算されるメンバー
   以前のリリースでは、計算されるメンバーは、サブセレクトまたはサブキューブで許可されませんでした。 しかし、SQL Server 2008 以降では、接続プロパティによって許可され有効になりました。 さらに、サブセレクトおよびサブキューブにおける計算されるメンバーの新しい動作が、SQL Server 2008 R2 で導入されました。  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>サブセレクトとサブキューブで計算されるメンバー  
- `SubQueries`で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または`DBPROPMSMDSUBQUERIES`プロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)動作または計算されるメンバーの許容量を定義または計算されます。サブセレクトまたはサブキューブで設定します。 このドキュメントのコンテキストでは、特に明記しない限り、サブセレクトはサブセレクトとサブキューブを示します。  
+ `SubQueries`で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または`DBPROPMSMDSUBQUERIES`プロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)動作または許容値計算されるメンバーの定義または計算サブセレクトまたはサブキューブで設定します。 このドキュメントのコンテキストでは、特に明記しない限り、サブセレクトはサブセレクトとサブキューブを示します。  
   
  SubQueries プロパティでは次の値を指定できます。  
   

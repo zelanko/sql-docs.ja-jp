@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tql
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2980ff029352e638dc12169e3e0692fcd60b7c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a679ed1aaf51ff1282976aa7c8c0b509c23a0d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321702"
 ---
 # <a name="create-custom-templates"></a>カスタム テンプレートの作成
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 一般的な作業のためのテンプレートが多数用意されていますが、テンプレートの真価は、頻繁に作成する複雑なスクリプトに適したカスタム テンプレートを作成できる点にあります。 この演習では、2 ～ 3 のパラメーターを使用した簡単なスクリプトを作成しますが、規模が大きく、反復的なスクリプトを作成する場合にもテンプレートが役立ちます。  
@@ -71,7 +70,7 @@ ms.locfileid: "36176751"
   
 10. クエリ エディターに「 **EXECUTE dbo.WorkOrdersForBlade**」と入力し、F5 キーを押してクエリを実行します。 **結果**ペインに、ブレードに対する作業命令の一覧が返されていることを確認します。  
   
-11. テンプレート スクリプト (手順 7. のスクリプト) を編集、製品名 Blade をパラメーターで置き換える ***< * product_name**、 `nvarchar(50)`、**名前*> * * *、4 つの場所にします。  
+11. テンプレート スクリプト (手順 7. のスクリプト) を編集、製品名 Blade をパラメーターに置き換えて ***< * product_name**、 `nvarchar(50)`、**名前*> * * *、4 つの場所にします。  
   
     > [!NOTE]  
     >  パラメーターには、置き換えるパラメーターの名前、パラメーターのデータ型、パラメーターの既定値の 3 つの要素が必要です。  
@@ -107,7 +106,7 @@ ms.locfileid: "36176751"
   
 3.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** をクリックします。  
   
-4.  **テンプレート パラメーターの置換** ダイアログ ボックスの`product_name`値を入力**FreeWheel** (既定の内容を上書きして) をクリックし、 **ok**を閉じる、**テンプレート パラメーターの置換** ダイアログ ボックスし、クエリ エディターでスクリプトを変更します。  
+4.  **テンプレート パラメーターの置換** ダイアログ ボックスの`product_name`値には、入力**FreeWheel** (既定の内容を上書き) 順にクリックします**ok**を閉じる、**テンプレート パラメーターの置換** ダイアログ ボックスし、クエリ エディターでスクリプトを変更します。  
   
 5.  F5&lt;/localizedText&gt; キーを押してクエリを実行し、プロシージャを作成します。  
   

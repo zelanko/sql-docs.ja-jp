@@ -1,5 +1,5 @@
 ---
-title: リモート処理 (Analysis Services) |Microsoft ドキュメント
+title: リモート処理 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e89e3be5679f9e4152eed81ee77d4a5e6bc89628
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eddc902acb9d3e1d2339f9d8efe2c62a9c07ad54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274148"
 ---
 # <a name="remote-processing-analysis-services"></a>リモート処理 (Analysis Services)
   あるコンピューターから発行された処理要求を同じネットワーク上の別のコンピューターで実行する場合、スケジュールされた処理や自動処理をリモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスで実行できます。  
@@ -97,7 +97,7 @@ ms.locfileid: "36176991"
 ## <a name="see-also"></a>参照  
  [SQL Server エージェント コンポーネント](../../ssms/agent/sql-server-agent.md#Components)   
  [SQL Server エージェントで SSAS 管理タスクのスケジュール設定](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [バッチ処理の&#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [バッチ処理&#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)   
  [オブジェクトの処理&#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 88db7af7bbca5a202b79ec42d8cade77e85cd258
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2a6021971575b0a17821e415aaf738ff651e9ec5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323972"
 ---
 # <a name="drop-xml-indexes"></a>XML インデックスの削除
   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用すると、XML インデックスと XML 以外のインデックスの両方を含め、既存のプライマリ インデックスまたはセカンダリ インデックスを削除できます。 ただし、DROP INDEX のオプションは XML インデックスに適用されません。 プライマリ XML インデックスを削除すると、存在するセカンダリ XML インデックスもすべて削除されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "36176565"
  *TableName.IndexName* を指定する DROP 構文は廃止されるので、XML インデックスではサポートされません。  
   
 ## <a name="example-creating-and-dropping-a-primary-xml-index"></a>例 : プライマリ XML インデックスの作成と削除  
- XML インデックスの作成に次の例で、`xml`型の列です。  
+ XML インデックスを作成する次の例では、`xml`型の列。  
   
 ```  
 DROP TABLE T  
@@ -55,7 +55,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  テーブルを削除すると、テーブルのすべての XML インデックスも自動的に削除されます。 ただし、XML 列に XML インデックスが存在する場合、その XML 列はテーブルから削除できません。  
   
- XML インデックスの作成に次の例で、`xml`型の列です。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
+ XML インデックスを作成する次の例では、`xml`型の列。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
 ```  
 CREATE TABLE TestTable(  

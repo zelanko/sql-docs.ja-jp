@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], validate
 - data-tier application [SQL Server], compare
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 438b0b847df6877ada5ba1278d6cf57648439820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 29496d117c1fde896bcf72cc6e485e6b3a1cef62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322292"
 ---
 # <a name="validate-a-dac-package"></a>DAC パッケージの検証
   DAC パッケージを運用環境に配置する前にパッケージの内容を確認し、既存の DAC をアップグレードする前にアップグレード処理を検証するようにしてください。 これは、特に、外部で開発されたパッケージを配置する場合に当てはまります。  
@@ -86,7 +86,7 @@ ms.locfileid: "36176630"
   
 3.  DAC の名前を変数で指定します。  
   
-4.  使用して、`GetDatabaseChanges()`を取得する方法、`ChangeResults`オブジェクト、および、そのオブジェクトを 新規の単純なレポートを生成するテキスト ファイルにパイプが削除され、変更されたオブジェクト。  
+4.  使用して、`GetDatabaseChanges()`を取得するメソッド、`ChangeResults`オブジェクト、およびパイプの簡単なレポートを生成するテキスト ファイルにオブジェクトが削除され、変更されたオブジェクト。  
   
 ### <a name="view-database-changes-example-powershell"></a>データベースの変更の表示の例 (PowerShell)  
  **データベースの変更の表示の例 (PowerShell)**  
@@ -129,11 +129,11 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 2.  開く、`ServerConnection`オブジェクトし、同じインスタンスに接続します。  
   
-3.  使用して`System.IO.File`DAC パッケージ ファイルを読み込めません。  
+3.  使用`System.IO.File`DAC パッケージ ファイルを読み込めません。  
   
 4.  DAC の名前を変数で指定します。  
   
-5.  使用して、`GetIncrementalUpgradeScript()`がアップグレードにより、TRANSACT-SQL ステートメントの一覧を取得するメソッドの実行、および、リストをテキスト ファイルにパイプします。  
+5.  使用して、`GetIncrementalUpgradeScript()`アップグレード TRANSACT-SQL ステートメントの一覧を取得するメソッドが実行され、リストをテキスト ファイルにパイプします。  
   
 6.  DAC パッケージ ファイルの読み取りに使用するファイル ストリームを閉じます。  
   

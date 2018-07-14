@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], item additions
 - adding project items
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: daa12f41cc5fcdc28306578a41cae47f49556c72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: abfaa7ecc5f8535fb36c856a3a4295a0fdc7a545
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325512"
 ---
 # <a name="add-existing-items-to-a-project"></a>既存の項目をプロジェクトに追加する
-  プロジェクトに新しい項目を追加して、アプリケーションの機能を拡張できます。 既存の項目は、クエリやその他のファイルです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトおよび Analysis Services スクリプト プロジェクトという 2 種類のプロジェクトがあります。 プロジェクトの種類によって、プロジェクトに追加できるクエリ ファイルが決まります。 たとえば、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ (拡張子が .sql のファイル) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトには追加できますが、Analysis Services スクリプト プロジェクトには追加できません。 プロジェクトの種類に追加のファイル拡張子を関連付けるを参照してください。[関連付けるファイル拡張子をコード エディターに](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)です。  
+  プロジェクトに新しい項目を追加して、アプリケーションの機能を拡張できます。 既存の項目は、クエリやその他のファイルです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトおよび Analysis Services スクリプト プロジェクトという 2 種類のプロジェクトがあります。 プロジェクトの種類によって、プロジェクトに追加できるクエリ ファイルが決まります。 たとえば、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ (拡張子が .sql のファイル) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトには追加できますが、Analysis Services スクリプト プロジェクトには追加できません。 プロジェクトの種類に追加のファイル拡張子に関連付けるを参照してください。[関連付けるファイル拡張子をコード エディター](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)します。  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>既存のクエリまたはその他のファイルをプロジェクトに追加するには  
   

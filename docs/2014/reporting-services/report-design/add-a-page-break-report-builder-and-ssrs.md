@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f9566d96747bc08636127f3bf350b4b9a121b847
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ef49e2d14953aabd281484fe4f19d814fc8c9793
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266258"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>改ページの追加 (レポート ビルダーおよび SSRS)
   四角形、データ領域、またはデータ領域内のグループに改ページを追加して、各ページの情報量を制御することができます。 改ページを追加すると、レポートを表示する際に各ページのアイテムのみを処理すればよいので、パブリッシュされたレポートのパフォーマンスが向上します。 レポート全体が 1 ページで構成されている場合は、レポートを表示する前にすべてのアイテムを処理する必要があります。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - target servers [SQL Server], polling interval
 - polling master servers [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - polling interval [SQL Server]
 ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efb1c63e6fed68dff7425145aa89f2be1f79ae84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f2d24d20d4101e616496c8322a0250eef162c769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330942"
 ---
 # <a name="poll-servers"></a>サーバーのポーリング
   マルチサーバー管理を実装している場合、対象サーバーからマスター サーバーに定期的にアクセスし、既に実行したジョブの情報をアップロードして新しいジョブをダウンロードします。 マスター サーバーにアクセスする処理は *サーバー ポーリング* と呼ばれ、定期的な *ポーリング間隔*で行われます。  

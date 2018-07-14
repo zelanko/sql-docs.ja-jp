@@ -1,5 +1,5 @@
 ---
-title: テーブル モデル データベースへの BI セマンティック モデル接続を作成 |Microsoft ドキュメント
+title: テーブル モデル データベースへの BI セマンティック モデル接続の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 084de463855ba83051d5d4ceb41e58431ae5e4f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d1bac7c3bc5e328db1bc54908f1d78ad5829c45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269938"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>テーブル モデル データベースへの BI セマンティック モデル接続の作成
   このトピックでは、SharePoint ファーム外の Analysis Services インスタンスで実行しているテーブル モデル データベースにリダイレクトする BI セマンティック モデル接続を設定する方法について説明します。  
@@ -43,7 +43,7 @@ ms.locfileid: "36176053"
 ##  <a name="bkmk_prereq"></a> 前提条件の確認  
  BI セマンティック モデル接続ファイルを作成するには、投稿権限以上の権限が必要です。  
   
- BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、次を参照してください。 [BI セマンティック モデル接続のコンテンツ タイプをライブラリに追加&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)です。  
+ BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、次を参照してください。 [BI セマンティック モデル接続のコンテンツ タイプをライブラリに追加&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)します。  
   
  BI セマンティック モデル接続を設定するサーバーおよびデータベース名を確認しておく必要があります。 Analysis Services は、テーブル モード用に構成する必要があります。 サーバーで実行しているデータベースは、テーブル モデル データベースである必要があります。 サーバー モードを確認する方法については、「 [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)」を参照してください。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36176053"
   
  Management Studio で管理者権限を付与するには、Analysis Services のシステム管理者である必要があります。  
   
- PowerPivot for SharePoint は、クラシック モード認証を使用する Web アプリケーションからアクセスする必要があります。 外部データ ソースへの BI セマンティック モデル接続は、クラシック モード サインインに依存します。 詳細については、次を参照してください。 [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md)です。  
+ PowerPivot for SharePoint は、クラシック モード認証を使用する Web アプリケーションからアクセスする必要があります。 外部データ ソースへの BI セマンティック モデル接続は、クラシック モード サインインに依存します。 詳細については、次を参照してください。 [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md)します。  
   
  接続シーケンスに参加しているすべてのコンピューターとユーザーは、同じドメインまたは信頼されたドメイン (双方向の信頼関係) に属している必要があります。  
   

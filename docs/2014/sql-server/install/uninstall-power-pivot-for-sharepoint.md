@@ -1,5 +1,5 @@
 ---
-title: PowerPivot for SharePoint をアンインストール |Microsoft ドキュメント
+title: PowerPivot for SharePoint をアンインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bbdcc586e92a1ddd4470759a4b44f0f86e420dde
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b45767cde324af3309178182085615ced5153f60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321762"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>PowerPivot for SharePoint のアンインストール
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のアンインストールは、複数の手順で構成されるプロセスです。これには、アンインストールの準備、ファームからの機能およびソリューションの削除、プログラム ファイルおよびレジストリ設定の削除が含まれます。  
@@ -36,7 +36,7 @@ ms.locfileid: "36177238"
   
 -   [手順 3. SQLServer セットアップを実行してローカル コンピューターからプログラムを削除する](#bkmk_uninstall)  
   
--   [手順 4: PowerPivot for SharePoint アドインをアンインストールします。](#bkmk_addin)  
+-   [手順 4: PowerPivot for SharePoint アドインのアンインストールします。](#bkmk_addin)  
   
 -   [手順 5. アンインストールを確認する](#verify)  
   
@@ -116,7 +116,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  既にキューに入っている配置または取り消しジョブを見つけて削除するには、次の操作を行います。  
   
-1.  他のエラーについては、ULS ログを確認します。 詳細については、次を参照してください。[構成し、SharePoint ログ ファイルの表示と診断ログ&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)です。  
+1.  他のエラーについては、ULS ログを確認します。 詳細については、次を参照してください。[構成し、SharePoint ログ ファイルの表示、および診断ログ&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)します。  
   
 2.  SharePoint 管理シェルを管理者として起動し、次のコマンドを実行してキュー内のジョブを表示します。  
   
@@ -126,7 +126,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  既存の配置について、 **[種類]** が "取り消し" または "展開" であり、 **[ファイル]** が powerpivotwebapp.wsp または powerpivotfarm.wsp であることを確認します。  
   
-4.  デプロイまたは取り消しの PowerPivot ソリューションに関連する GUID の値をコピー **JobId**し、次のコマンドに貼り付けます (を使用して、マーク、コピー、および貼り付けのコマンド シェルの編集 メニューから GUID をコピー) します。  
+4.  デプロイまたは取り消しの場合、PowerPivot ソリューションに関連するコピーの GUID 値**JobId**次のコマンドに貼り付けます (GUID をコピーします [シェルの編集] メニュー、マーク、コピー、および貼り付けコマンドを使用)。  
   
     ```  
     Stsadm –o canceldeployment –id “<GUID>”  
@@ -134,7 +134,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 5.  構成ツールで **[検証]** に続けて **[実行]** をクリックして、タスクを再試行します。  
   
- また、PowerShell を使用して、機能とソリューションをファームから削除することもできます。 詳細については、次を参照してください。 [PowerPivot for SharePoint 用 PowerShell リファレンス](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)です。  
+ また、PowerShell を使用して、機能とソリューションをファームから削除することもできます。 詳細については、次を参照してください。 [PowerPivot for SharePoint 用 PowerShell リファレンス](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)します。  
   
 ##  <a name="bkmk_uninstall"></a> 手順 3. SQLServer セットアップを実行してローカル コンピューターからプログラムを削除する  
  プログラム ファイルを削除するには、SQL Server セットアップを実行してソフトウェアをアンインストールする必要があります。 アンインストールを実行すると、ファイルだけでなく、セットアップによって作成されたレジストリ エントリも削除されます。 [プログラムと機能] ページを使用して、ソフトウェアをアンインストールできます。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インストールは、SQL Server インストールの一部です。  
@@ -149,16 +149,16 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      セットアップで **[PowerPivot]** インスタンスを選択してから、 **[Analysis Services]** および **[Analysis Services SharePoint 統合]** を選択して、他のすべてはそのままの状態で、その機能だけを削除できます。  
   
-##  <a name="bkmk_addin"></a> 手順 4: PowerPivot for SharePoint アドインをアンインストールします。  
- [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 配置に 2 台以上のサーバーがあり、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] アドインをインストールした場合は、インストール先の各サーバーから [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] アドインをアンインストールして、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のすべてのファイルを完全にアンインストールします。 詳細については、次を参照してください。[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)です。  
+##  <a name="bkmk_addin"></a> 手順 4: PowerPivot for SharePoint アドインのアンインストールします。  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 配置に 2 台以上のサーバーがあり、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] アドインをインストールした場合は、インストール先の各サーバーから [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] アドインをアンインストールして、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のすべてのファイルを完全にアンインストールします。 詳細については、次を参照してください。[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)します。  
   
 ##  <a name="verify"></a> 手順 5. アンインストールを確認する  
   
 1.  サーバーの全体管理の **[サーバーのサービスの管理]** で、PowerPivot for SharePoint をアンインストールしたサーバーに接続します。  
   
-2.  -   アンインストールした場合[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013、ことを確認**SQL Server PowerPivot System サービス**が一覧に表示されません。  
+2.  -   アンインストールした場合[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013、いることを確認**SQL Server PowerPivot System サービス**が一覧に表示されません。  
   
-    -   アンインストールした場合[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2010、ことを確認**SQL Server Analysis Services**と**SQL Server PowerPivot System サービス**が一覧に表示されません。  
+    -   アンインストールした場合[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2010、いることを確認**SQL Server Analysis Services**と**SQL Server PowerPivot System サービス**が一覧に表示されません。  
   
 3.  ファーム内の最後の PowerPivot for SharePoint サーバーをアンインストールしたら、次の手順を実行します。  
   

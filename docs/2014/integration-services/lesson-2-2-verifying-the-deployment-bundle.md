@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fe8b9d90554840dcb56b90eea5037283b16473b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f43403ee078b66226839ecc934cf83a99751f76a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273428"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>手順 2: 配置バンドルの確認
   レッスン 1 では、Deployment Tutorial プロジェクトを作成し、パッケージと補助ファイルをプロジェクトに追加しました。前のタスクでプロジェクトの配置ユーティリティを構築しました。  
@@ -54,13 +54,13 @@ ms.locfileid: "36176917"
   
      `<?xml version="1.0"?><DTSDeploymentManifest GeneratedBy="Domain\UserName" GeneratedFromProjectName="Deployment Tutorial" GeneratedDate="2006-02-24T13:29:02.6537669-08:00" AllowConfigurationChanges="true"><Package>DataTransfer.dtsx</Package><Package>LoadXMLData.dtsx</Package><ConfigurationFile>datatransferconfig.dtsconfig</ConfigurationFile><ConfigurationFile>loadxmldataconfig.dtsconfig</ConfigurationFile><MiscellaneousFile>Readme.txt</MiscellaneousFile><MiscellaneousFile>orders.xml</MiscellaneousFile><MiscellaneousFile>NewCustomers.txt</MiscellaneousFile><MiscellaneousFile>orders.xsd</MiscellaneousFile></DTSDeploymentManifest>`  
   
-4.  いることを確認の値、`AllowConfigurationChanges`属性は**true**と XML が含まれています、 `Package` 2 つのパッケージの各要素、 `MiscellaneousFile` 4 つのパッケージでないファイルの各要素と`ConfigurationFile`2 つの XML 構成ファイルの各要素です。  
+4.  いることを確認の値、`AllowConfigurationChanges`属性が**true** XML に含まれて、`Package`の 2 つのパッケージの各要素を`MiscellaneousFile`パッケージ以外の 4 つのファイルの各要素と`ConfigurationFile`それぞれの 2 つの XML 構成ファイルの要素です。  
   
 5.  Internet Explorer またはテキスト エディターを終了します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 3: パッケージのインストール](../integration-services/lesson-3-install-ssis-package.md)  
   
-![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
   

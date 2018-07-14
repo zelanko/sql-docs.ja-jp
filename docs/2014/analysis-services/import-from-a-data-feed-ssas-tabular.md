@@ -1,5 +1,5 @@
 ---
-title: データ フィード (SSAS テーブル) からのインポート |Microsoft ドキュメント
+title: データ フィード (SSAS テーブル) からのインポート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7869e07a67e7e3a74ee93ebef495eaba26d55317
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b476ed1641b5db87afefc8bc4787efed01e2a5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325142"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>データ フィードからのインポート (SSAS テーブル)
   データ フィードは、オンライン データ ソースから生成され、宛先のドキュメントやアプリケーションに送信される 1 つ以上の XML データ ストリームです。 テーブルのインポート ウィザードを使用して、データ フィードからモデルにデータをインポートできます。  
@@ -126,7 +126,7 @@ ms.locfileid: "36176515"
   
 3.  **[データ フィードへの接続]** ページに、アクセスするフィードに付けるわかりやすい名前を入力します。 複数のフィードまたはデータ ソースをインポートする場合、接続を表す名前を使用すると、接続の使用方法の識別に役立ちます。  
   
-4.  データ フィードの URL では、リスト データ サービスにアドレスを入力します。 置き換えて\<サーバー名 > を、SharePoint サーバーの実際の名前。  
+4.  データ フィードの URL で、リスト データ サービス アドレスを入力交換\<サーバー名 > を SharePoint サーバーの実際の名前。  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -160,7 +160,7 @@ ms.locfileid: "36176515"
   
 4.  **[参照]** をクリックし、レポート サーバーを選択します。  
   
-     特定のレポート サーバーに関するレポートを定期的に使用している場合は、 **[最近使ったサイトとサーバー]** にそのサーバーが表示される可能性があります。 それ以外の場合は、レポート サーバーのアドレスを [名前] に入力し、 **[開く]** をクリックして、レポート サーバー サイトのフォルダーを参照します。 たとえば、レポート サーバーのアドレスが http:// あります\<コンピューター名 >/reportserver です。  
+     特定のレポート サーバーに関するレポートを定期的に使用している場合は、 **[最近使ったサイトとサーバー]** にそのサーバーが表示される可能性があります。 それ以外の場合は、レポート サーバーのアドレスを [名前] に入力し、 **[開く]** をクリックして、レポート サーバー サイトのフォルダーを参照します。 たとえば、レポート サーバーのアドレスが http:// あります\<computername >/reportserver です。  
   
 5.  レポートを選択し、 **[開く]** をクリックします。 代わりに、 **[名前]** ボックスに完全パスとレポート名を含むレポートへのリンクを貼り付けることもできます。 テーブルのインポート ウィザードによってレポートに接続され、プレビュー領域にそれが表示されます。  
   

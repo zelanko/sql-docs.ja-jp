@@ -1,5 +1,5 @@
 ---
-title: マネージ クラスの SQLXML を使用して、DiffGram の実行 |Microsoft ドキュメント
+title: マネージ クラス SQLXML を使用して、DiffGram の実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - SQLXML, Managed Classes
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5c5837a1709bca49f1d06429d49da67719bfc6fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 79b8446bb09dafdf7eff01380b20b21fdbb9b80e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266274"
 ---
-# <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>SQLXML マネージ クラスを使用した、DiffGram の実行
-  この例で DiffGram ファイルを実行する方法を示しています、[!INCLUDE[msCoName](../../../includes/msconame-md.md)]データを適用する .NET Framework 環境を更新する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQLXML マネージ クラス (Microsoft.Data.SqlXml) を使用するテーブルします。  
+# <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>SQLXML マネージド クラスを使用した、DiffGram の実行
+  この例で DiffGram ファイルを実行する方法を示しています、[!INCLUDE[msCoName](../../../includes/msconame-md.md)]データを適用する .NET Framework 環境に更新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQLXML マネージ クラス (Microsoft.Data.SqlXml) を使用してテーブルします。  
   
  この例では、DiffGram で顧客 ALFKI の顧客情報 (CompanyName と ContactName) を更新します。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "36177052"
 </ROOT>  
 ```  
   
- **\<する前に >** ブロックに含まれる、 **\<顧客 >** 要素 (**diffgr:id ="Customer1"**)。 **\<DataInstance >** ブロックに含まれる、対応する**\<顧客 >** 要素と同じ**id**です。**\<顧客 >** 内の要素、  **\<NewDataSet >** も指定**diffgr:hasChanges ="modified"** です。 これは更新操作であることを示し、Cust テーブルの顧客レコードは指定に従って更新されます。 その場合、 **diffgr:hasChanges**属性が指定されていない、DiffGram の処理ロジックがこの要素は無視され、更新は実行されません。  
+ **\<する前に >** ブロックが含まれています、 **\<顧客 >** 要素 (**diffgr:id ="Customer1"**)。 **\<DataInstance >** ブロックに含まれる、対応する**\<顧客 >** 要素と同じ**id**します。**\<顧客 >** 内の要素、  **\<NewDataSet >** も指定**diffgr:hasChanges ="modified"** します。 これは更新操作であることを示し、Cust テーブルの顧客レコードは指定に従って更新されます。 その場合、 **diffgr:hasChanges**属性が指定されていない、DiffGram の処理ロジックがこの要素は無視されます、および更新は実行されません。  
   
- C# チュートリアル アプリケーション SQLXML マネージ クラスを使用して、上の DiffGram を実行しでも作成する 2 つのテーブル (Cust、Ord) を更新する方法を示すためのコードを次に示します、 **tempdb**データベース。  
+ 次にアプリケーションのコードを c# チュートリアル SQLXML マネージ クラスを使用して、上の DiffGram を実行しで作成することも、2 つのテーブル (Cust、Ord) を更新する方法を示す、 **tempdb**データベース。  
   
 ```  
 using System;  
@@ -170,7 +170,7 @@ class Test
     > [!NOTE]  
     >  接続文字列の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前は、'`MyServer`' の部分を、インストールされている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの実際の名前に更新する必要があります。  
   
-     別のフォルダーにファイルを格納する場合は、コードを編集して、マッピング スキーマの適切なディレクトリ パスを指定する必要があります。  
+     別のフォルダーにファイルを保存する場合は、コードを編集し、マッピング スキーマの適切なディレクトリ パスを指定する必要があります。  
   
 7.  コードをコンパイルします。 コマンド プロンプトでコードをコンパイルするには、次を使用します。  
   

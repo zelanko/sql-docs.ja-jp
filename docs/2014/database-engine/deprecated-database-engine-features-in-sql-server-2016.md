@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 におけるデータベース エンジンの機能を非推奨 |Microsoft ドキュメント
+title: SQL Server 2014 におけるデータベース エンジン機能を非推奨とされます |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 208
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 553d47cd9c9637492fce0fe0a943e8de6cde3eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 05cf9071049947adceaeeccf2e728f1d5045d05d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326402"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 データベース エンジンの非推奨の機能
   このトピックでは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
@@ -63,9 +63,9 @@ ms.locfileid: "36175033"
 |構成|SET ANSI_NULLS OFF および ANSI_NULLS OFF データベース オプション<br /><br /> SET ANSI_PADDING OFF および ANSI_PADDING OFF データベース オプション<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF および CONCAT_NULL_YIELDS_NULL OFF データベース オプション<br /><br /> SET OFFSETS|[なし] :<br /><br /> ANSI_NULLS、ANSI_PADDING、および CONCAT_NULLS_YIELDS_NULL は常に ON に設定されます。 SET OFFSETS は使用できなくなります。|SET ANSI_NULLS OFF<br /><br /> SET ANSI_PADDING OFF<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF<br /><br /> SET OFFSETS<br /><br /> ALTER DATABASE SET ANSI_NULLS OFF<br /><br /> ALTER DATABASE SET ANSI_PADDING OFF<br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF|111<br /><br /> 113<br /><br /> 112<br /><br /> 36<br /><br /> 111<br /><br /> 113<br /><br /> 112|  
 |データ型|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
 |データ型|`timestamp` データ型の `rowversion` 構文|`rowversion` データ型の構文|timestamp|158|  
-|データ型|Null 値を挿入する機能`timestamp`列です。|代わりに DEFAULT を使用してください。|TIMESTAMP 列への INSERT NULL|179|  
-|データ型|'text in row' テーブル オプション|使用して`varchar(max)`、 `nvarchar(max)`、および`varbinary(max)`データ型。 詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)」を参照してください。|Text in row テーブル オプション|9|  
-|データ型|データ型:<br /><br /> `text`<br /><br /> `ntext`<br /><br /> `image`|使用して`varchar(max)`、 `nvarchar(max)`、および`varbinary(max)`データ型。|データ型: `text`、`ntext`、または `image`|4|  
+|データ型|Null 値を挿入する機能`timestamp`列。|代わりに DEFAULT を使用してください。|TIMESTAMP 列への INSERT NULL|179|  
+|データ型|'text in row' テーブル オプション|使用`varchar(max)`、 `nvarchar(max)`、および`varbinary(max)`データ型。 詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)」を参照してください。|Text in row テーブル オプション|9|  
+|データ型|データ型:<br /><br /> `text`<br /><br /> `ntext`<br /><br /> `image`|使用`varchar(max)`、 `nvarchar(max)`、および`varbinary(max)`データ型。|データ型: `text`、`ntext`、または `image`|4|  
 |データベース管理|sp_attach_db<br /><br /> sp_attach_single_file_db|CREATE DATABASE ステートメントで FOR ATTACH オプションを使用します。 複数のログ ファイルを再構築するときに、これらのログ ファイル 1 つ以上に対して新しい場所を指定する場合は、FOR ATTACH_REBUILD_LOG を使用します。|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |データベース オブジェクト|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|CREATE TABLE および ALTER TABLE の DEFAULT キーワード|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |データベース オブジェクト|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CREATE TABLE および ALTER TABLE の CHECK キーワード|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -150,13 +150,13 @@ ms.locfileid: "36175033"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ビュー経由で複数ステートメントのテーブル値関数 (TVF) を呼び出す、テーブル ヒントの間接アプリケーション|[なし] :|間接的な TVF ヒント|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE 構文:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |その他|DB-Library<br /><br /> Embedded SQL for C|[!INCLUDE[ssDE](../includes/ssde-md.md)] では、DB-Library および Embedded SQL API を使用した既存アプリケーションからの接続が引き続きサポートされますが、これらの API を使用するアプリケーションでのプログラミング作業に必要なファイルやドキュメントは含まれません。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の今後のバージョンでは、DB-Library アプリケーションや Embedded SQL アプリケーションからの接続はサポートされなくなります。 新しいアプリケーションの開発には DB-Library や Embedded SQL を使用しないでください。 DB-Library や Embedded SQL への依存関係は、既存アプリケーションを変更するときに削除してください。 これらの API の代わりに、SQLClient 名前空間または ODBC などの API を使用します。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] には、これらのアプリケーションの実行に必要な DB-Library DLL が含まれていません。 DB-Library アプリケーションまたは Embedded SQL アプリケーションを実行するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Version 6.5、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0、または [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]から DB-Library DLL を入手する必要があります。|なし|なし|  
-|ツール|SQL Server Profiler for Trace Capture|SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。<br /><br /> 注: は、Analysis Services のワークロードのトレース キャプチャの SQL Server Profiler を使用して続行します。|SQL Server Profiler|なし|  
-|ツール|SQL Server Profiler for Trace Replay|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 注: は、トレースの再生の SQL Server Profiler を使用して Analysis Services ワークロード用に進みます。|SQL Server Profiler|なし|  
+|ツール|SQL Server Profiler for Trace Capture|SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。<br /><br /> 注: は、Analysis Services のワークロードのトレースのキャプチャの SQL Server Profiler を使用してを続行します。|SQL Server Profiler|なし|  
+|ツール|SQL Server Profiler for Trace Replay|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 注: は、トレース再生の SQL Server Profiler を使用して、Analysis Services ワークロード用に進みます。|SQL Server Profiler|なし|  
 |トレース管理オブジェクト|Microsoft.SqlServer.Management.Trace namespace (SQL Server の Trace および Replay オブジェクト用の API が含まれています)|トレース構成: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> トレース読み取り: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> トレース再生: なし|||  
 |SQL トレースのストアド プロシージャ、関数、およびカタログ ビュー|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[拡張イベント](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   
 > [!NOTE]  
->  Cookie`OUTPUT`パラメーター`sp_setapprole`として記載されている現在`varbinary(8000)`な正しいの最大長。 ただし、現在の実装が返されます`varbinary(50)`です。 開発者が `varbinary(50)` を割り当てると、今後のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションの変更が必要になる可能性があります。 これは廃止の問題ではありませんが、アプリケーションの調整と似ているため、このトピックで説明されています。 詳細については、「[sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)」を参照してください。  
+>  Cookie`OUTPUT`パラメーター`sp_setapprole`が現在として記載されている`varbinary(8000)`な正しいの最大長。 ただし、現在の実装を返します`varbinary(50)`します。 開発者が `varbinary(50)` を割り当てると、今後のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションの変更が必要になる可能性があります。 これは廃止の問題ではありませんが、アプリケーションの調整と似ているため、このトピックで説明されています。 詳細については、「[sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 で廃止されたデータベース エンジンの機能](discontinued-database-engine-functionality-in-sql-server-2016.md)  

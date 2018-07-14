@@ -1,5 +1,5 @@
 ---
-title: Unlock 要素 (XMLA) |Microsoft ドキュメント
+title: Unlock 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Unlock command
 ms.assetid: 46425b33-baa2-41ad-803a-34d2fb4b2cab
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ce0b1512c32ddffd029e9a4704e9afcd5ad7a388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5703789c49d77dc6f95cfdc590f8a8d3586dc000
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328514"
 ---
 # <a name="unlock-element-xmla"></a>Unlock 要素 (XMLA)
-  上の指定されたロックを解除、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
+  上の指定されたロックの解除、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
   
 ## <a name="syntax"></a>構文  
   

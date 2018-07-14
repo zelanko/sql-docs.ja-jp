@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4749151c1f520e655a6302c6f4513e4218ff5365
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e143cbf9540aab467bd57a5c4f923df81d658fb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328418"
 ---
 # <a name="buffer-pool-extension"></a>バッファー プール拡張
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]で導入されたバッファー プール拡張は、不揮発性ランダム アクセス メモリ (ソリッドステート ドライブ) 拡張としての [!INCLUDE[ssDE](../../includes/ssde-md.md)] バッファー プールへのシームレスな統合を実現することで、I/O スループットを大幅に向上させます。 バッファー プール拡張は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一部のエディションでは使用できません。 詳しくは「 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」をご覧ください。  

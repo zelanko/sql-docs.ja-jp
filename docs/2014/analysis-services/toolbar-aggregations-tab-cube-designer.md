@@ -1,5 +1,5 @@
 ---
-title: ツールバー ([集計] タブ、キューブ デザイナー) |Microsoft ドキュメント
+title: ツールバー ([集計] タブ、キューブ デザイナー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8741ff3e-44c3-4bfa-a56a-de590e01576e
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 099af3b9682da4bda2f999641429f1bb78894170
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ae660a175024a52172475451436a5b2bd055982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325002"
 ---
 # <a name="toolbar-aggregations-tab-cube-designer"></a>ツール バー ([集計] タブ、キューブ デザイナー)
   **ツール バー** ペインを使用すると、キューブ デザイナーの **[集計]** タブで一般的な操作を実行できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36176700"
 |**標準ビュー**|クリックすると、集計デザイナーの **標準ビュー** が表示されます。このビューでは、 **集計のデザイン ウィザード** または **使用法に基づく最適化ウィザード**を使用して、集計デザインを作成および変更することができます。|  
 |**詳細ビュー**|クリックすると、集計デザイナーの **詳細ビュー** が表示されます。このビューでは、集計デザインおよび個々の集計を手動で作成および変更することができます。 このビューは、上級ユーザーだけが使用するようにしてください。<br /><br /> 注: **集計のデザイン ウィザード** と **使用法に基づく最適化ウィザード** は、このビューでは使用できません。|  
 |**新しい集計デザイン**|クリックすると、 **[新しい集計デザイン]** ダイアログ ボックスが表示されます。 空の集計デザインを作成するか、既存の集計デザインのコピーを作成できます。<br /><br /> 注: このオプションは、集計デザイナーの詳細ビューにのみ表示されます。|  
-|**Delete**|クリックすると、選択した集計デザインが削除されます。  集計デザイナーの詳細ビューでは、このオプションを使用して集計デザインから集計を削除することもできます。|  
+|**削除**|クリックすると、選択した集計デザインが削除されます。  集計デザイナーの詳細ビューでは、このオプションを使用して集計デザインから集計を削除することもできます。|  
   
 ## <a name="see-also"></a>参照  
  [集計&#40;キューブのデザイン&#41;](aggregations-cube-design.md)  

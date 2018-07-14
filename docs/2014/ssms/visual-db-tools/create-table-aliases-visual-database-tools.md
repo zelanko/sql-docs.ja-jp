@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table aliases [SQL Server]
 - aliases [SQL Server], tables
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 75eaebe7ca2faf459f7f60700b3b2ef1d725db4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a98f093964ae44dbb6bc301585d8a37e3bc3c296
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327022"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>テーブルの別名の作成 (Visual Database Tools)
   別名を使用すると、テーブル名を使った操作が容易になります。 別名は、次の場合に使用すると便利です。  

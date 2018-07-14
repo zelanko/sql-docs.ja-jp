@@ -1,5 +1,5 @@
 ---
-title: Microsoft タイム シリーズ アルゴリズム |Microsoft ドキュメント
+title: Microsoft タイム シリーズ アルゴリズム |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - time series algorithms [Analysis Services]
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 caps.latest.revision: 74
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0291f91ea4432c9bf4a51b617f7e44fe92130d1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 428a6433222c4d6d0aca47e065d85130792b94ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325112"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft タイム シリーズ アルゴリズム
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが時間の経過と共に製品売上など、連続する値を予測するために最適化された回帰アルゴリズムを提供します。 デシジョン ツリーなどの他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、傾向を予測するために新しい情報を含む列を追加する必要がありますが、タイム シリーズ モデルでは必要ありません。 タイム シリーズ モデルでは、モデルの作成に使用された元のデータセットのみを使用して傾向を予測できます。 予測を実行するときに新しいデータをモデルに追加することで、新しいデータを自動的に傾向分析に組み込むこともできます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが時間の経過と共に製品売上などの連続値の予測用に最適化された回帰アルゴリズムを提供します。 デシジョン ツリーなどの他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、傾向を予測するために新しい情報を含む列を追加する必要がありますが、タイム シリーズ モデルでは必要ありません。 タイム シリーズ モデルでは、モデルの作成に使用された元のデータセットのみを使用して傾向を予測できます。 予測を実行するときに新しいデータをモデルに追加することで、新しいデータを自動的に傾向分析に組み込むこともできます。  
   
  次の図は、4 つの販売地域における一定期間の製品売上を予測するための一般的なモデルを示しています。 図に示したモデルでは、各地域の売上が赤、黄、紫、青の線で表されています。 各地域を表す線は、次の 2 つの部分で構成されます。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "36176294"
  この会社では、四半期ごとに最新の売上データを使ってモデルを更新し、予測を更新して、最新の傾向をモデル化することを計画しています。 売上データを正確に更新していない、または一貫して更新していない販売店のデータを修正するために、汎用予測モデルを作成し、それを使用して全地域の予測を作成します。  
   
 ## <a name="how-the-algorithm-works"></a>アルゴリズムの動作  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが ARTXP、1 つのアルゴリズムを使用します。 ARTXP アルゴリズムが短期間の予測に最適化されていましたし、そのため、系列に近い値を予測します。 以降で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが ARTXP アルゴリズムと 2 番目のアルゴリズム、ARIMA の両方を使用します。 ARIMA アルゴリズムは、長期的な予測に適しています。 ARTXP アルゴリズムと ARIMA アルゴリズムの実装の詳細については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが ARTXP、1 つのアルゴリズムを使用します。 ARTXP アルゴリズムは短期的な予測が最適化されていましたし、そのため、一連の次の可能性が高い値を予測します。 以降で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが ARTXP アルゴリズムと 2 番目のアルゴリズム、ARIMA の両方を使用します。 ARIMA アルゴリズムは、長期的な予測に適しています。 ARTXP アルゴリズムと ARIMA アルゴリズムの実装の詳細については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
   
- 既定では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムはアルゴリズムを組み合わせて使用し、パターンの分析と予測を実行します。 同じデータに基づいて 2 つの異なるモデルをトレーニングします。 1 つのモデルは ARTXP アルゴリズムを使用して、1 つのモデルは、ARIMA アルゴリズムを使用します。 この 2 つのモデルの結果を統合して、さまざまな数のタイム スライスに対して最適な予測を出力します。 ARTXP アルゴリズムは短期的な予測に適しているため、予測シリーズの初めのうちに高い割合で使用されます。 一方、さらに将来のタイム スライスを予測対象とするにつれて、ARIMA が使用される割合が高くなります。  
+ 既定では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムはアルゴリズムを組み合わせて使用し、パターンの分析と予測を実行します。 同じデータを 2 つの異なるモデルをトレーニングします。 1 つのモデルは ARTXP アルゴリズムを使用すると、1 つのモデルは、ARIMA アルゴリズムを使用します。 この 2 つのモデルの結果を統合して、さまざまな数のタイム スライスに対して最適な予測を出力します。 ARTXP アルゴリズムは短期的な予測に適しているため、予測シリーズの初めのうちに高い割合で使用されます。 一方、さらに将来のタイム スライスを予測対象とするにつれて、ARIMA が使用される割合が高くなります。  
   
- また、アルゴリズムの組み合わせを調整して、時系列内で短期と長期のどちらの予測を重視するかを指定できます。 以降で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]標準で指定することできます、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムを使用して、次の設定のいずれか。  
+ また、アルゴリズムの組み合わせを調整して、時系列内で短期と長期のどちらの予測を重視するかを指定できます。 以降で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]ことを指定できる、標準、[!INCLUDE[msCoName](../../includes/msconame-md.md)]次の設定のいずれかのタイム シリーズ アルゴリズムの使用。  
   
 -   ARTXP のみを使用し、短期的な予測を行う。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36176294"
   
 -   2 つのアルゴリズムを組み合わせて使用する (既定)。  
   
- 以降で[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]、カスタマイズすることができる方法、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムの予測モデルの組み合わせ。 2 つのアルゴリズムを混用するモデルを使用する場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは次の方法で 2 つのアルゴリズムを組み合わせます。  
+ 以降で[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]、カスタマイズすることができます、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムの予測モデルの組み合わせ。 2 つのアルゴリズムを混用するモデルを使用する場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは次の方法で 2 つのアルゴリズムを組み合わせます。  
   
 -   最初のいくつかの予測は、常に ARTXP のみを使用して作成されます。  
   

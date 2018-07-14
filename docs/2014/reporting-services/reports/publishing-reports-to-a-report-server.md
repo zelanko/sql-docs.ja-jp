@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
 - report projects [Reporting Services]
@@ -26,16 +26,16 @@ ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 30571f0eaa50961fd9d96c3e1c13b4c57da774d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98482f6ad6e2f98120603c28cdc40181e37ef9a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273958"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>レポート サーバーへのレポートのパブリッシュ
-  1 つまたは複数のレポートのデザインおよびテストが完了したら、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の組み込みの配置機能を使用してレポート サーバーにレポートをパブリッシュします。 個々のレポートまたはレポート サーバー プロジェクトをパブリッシュできます。 複数のレポートをパブリッシュする最も簡単な方法は、レポート サーバー プロジェクトをパブリッシュする方法です。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 用語を使用して*展開*、用語ではなく*発行*です。 この 2 つの用語は同義です。  
+  1 つまたは複数のレポートのデザインおよびテストが完了したら、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の組み込みの配置機能を使用してレポート サーバーにレポートをパブリッシュします。 個々のレポートまたはレポート サーバー プロジェクトをパブリッシュできます。 複数のレポートをパブリッシュする最も簡単な方法は、レポート サーバー プロジェクトをパブリッシュする方法です。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 用語を使用して*デプロイ*、用語ではなく*発行*。 この 2 つの用語は同義です。  
   
  レポートをパブリッシュするには、そのための権限が必要です。 この権限は、レポート サーバー管理者が定義するロールベースのセキュリティによって決まります。 パブリッシュ操作は、通常、パブリッシャー ロールを介して許可されます。  
   
@@ -44,12 +44,12 @@ ms.locfileid: "36176543"
 ## <a name="project-configurations"></a>プロジェクトの構成  
  有効なレポート定義のみがレポート サーバーにパブリッシュされるように、レポートはパブリッシュされる前にビルドされます。 プロジェクト構成には、ビルド レポートを一時的に保存するフォルダー、ビルドの問題の対処方法など、レポートをビルドするためのプロパティが含まれます。 構成には、レポート サーバーの場所やバージョン、レポート サーバー上のフォルダーの指定に使用されるプロパティも含まれます。  
   
- 既定では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 3 つのプロジェクト構成を提供します。 [debuglocal]、デバッグ、およびリリースします。 既定の構成は DebugLocal です。 通常、DebugLocal 構成はローカル プレビュー ウィンドウでのレポートの表示に、Debug 構成はテスト サーバーへのレポートのパブリッシュに、Release 構成は実稼働サーバーへのレポートのパブリッシュに使用できます。 標準ツール バーの [ソリューション構成] ドロップダウン リストには、アクティブな構成が表示されます。 別の構成を使用するには、一覧からその構成を選択します。  
+ 既定では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 3 つのプロジェクト構成を提供します。 DebugLocal、Debug、およびリリースします。 既定の構成は DebugLocal です。 通常、DebugLocal 構成はローカル プレビュー ウィンドウでのレポートの表示に、Debug 構成はテスト サーバーへのレポートのパブリッシュに、Release 構成は実稼働サーバーへのレポートのパブリッシュに使用できます。 標準ツール バーの [ソリューション構成] ドロップダウン リストには、アクティブな構成が表示されます。 別の構成を使用するには、一覧からその構成を選択します。  
   
- ご使用のレポート環境に、複数のレポート サーバーが含まれる場合や異なるバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がインストールされている場合は、 複数の構成を作成し、配置シナリオに応じて異なる構成を使用できます。 詳細については、次を参照してください。[展開および SQL Server Data Tools のバージョン サポート&#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)と[配置プロパティを設定&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)です。  
+ ご使用のレポート環境に、複数のレポート サーバーが含まれる場合や異なるバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がインストールされている場合は、 複数の構成を作成し、配置シナリオに応じて異なる構成を使用できます。 詳細については、次を参照してください。[配置およびバージョン サポートでは、SQL Server Data Tools &#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)と[配置プロパティを設定&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)します。  
   
 ## <a name="publishing-reports"></a>レポートのパブリッシュ  
- 単一のレポートだけでなく、複数のレポートが含まれるレポート サーバー プロジェクトをパブリッシュできます。 レポートのパブリッシュ方法については、次を参照してください。[レポートのパブリッシュ](../publish-reports.md)です。  
+ 単一のレポートだけでなく、複数のレポートが含まれるレポート サーバー プロジェクトをパブリッシュできます。 レポートのパブリッシュ方法については、次を参照してください。[レポートのパブリッシュ](../publish-reports.md)します。  
   
 ### <a name="publishing-a-single-report"></a>単一のレポートのパブリッシュ  
  プロジェクト内のすべてのレポートをパブリッシュしない場合、単一のレポートのみのパブリッシュを選択できます。 この操作を行うには、レポートを配置する構成 (たとえば、Release 構成など) を選択し、レポートを右クリックして、 **[配置]** をクリックします。  
@@ -63,7 +63,7 @@ ms.locfileid: "36176543"
   
 ## <a name="see-also"></a>参照  
  [[プロパティ ページ] ダイアログ ボックス](../tools/project-property-pages-dialog-box.md)   
- [レポート サーバーのコンテンツ管理&#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [レポートのアップグレード](../install-windows/upgrade-reports.md)  
   
   

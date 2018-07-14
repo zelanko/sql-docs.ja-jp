@@ -1,5 +1,5 @@
 ---
-title: SetCurrentCertificate メソッド (SInstance クラス) |Microsoft ドキュメント
+title: SetCurrentCertificate メソッド (SInstance クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetCurrentCertificate method
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 325b5a9c07b983cc8c556cf90eafe9e909d9c140
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 04b4d5c90f8f2d9d1ded3e6ee4bb143c41d9f21d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327462"
 ---
 # <a name="setcurrentcertificate-method-sinstance-class"></a>SetCurrentCertificate メソッド (SInstance クラス)
   現在のセキュリティ証明書を設定します。  
@@ -46,7 +46,7 @@ SHA
   
 ## <a name="parts"></a>要素  
  *object*  
- [SInstance クラス](sinstance-class.md)のインスタンス上のサーバー設定を表すオブジェクト[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ [SInstance クラス](sinstance-class.md)のインスタンス上のサーバー設定を表すオブジェクトを[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 #### <a name="parameters"></a>パラメーター  
   

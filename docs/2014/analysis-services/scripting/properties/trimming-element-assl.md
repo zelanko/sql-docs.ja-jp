@@ -1,5 +1,5 @@
 ---
-title: Trimming 要素 (ASSL) |Microsoft ドキュメント
+title: Trimming 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Trimming element
 ms.assetid: 8b3bbf89-8309-4d00-9aea-a5918f0c7027
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a7346e9ae91ca3d70ab2f6cf311ea3b7a8b8a06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d34a2b559dfcace0a8334916f66031b130763182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326542"
 ---
 # <a name="trimming-element-assl"></a>Trimming 要素 (ASSL)
   データ ソースのデータを切り捨てる方法を指定します。  
@@ -71,7 +71,7 @@ ms.locfileid: "36175620"
 |*LeftRight*|データの左側と右側が切り捨てられます。|  
 |*なし*|データは切り捨てられません。|  
   
- 許可される値に対応する列挙`Trimming`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Trimming>します。  
+ 許容された値に対応する列挙体`Trimming`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Trimming>します。  
   
  親に対応する要素`Trimming`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DataItem>します。  
   

@@ -1,5 +1,5 @@
 ---
-title: 文字列ユーティリティ関数サンプル |Microsoft ドキュメント
+title: 文字列ユーティリティ関数サンプル |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bf956d09e957ae963ff2caaadcd61b011080d23d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 892a950795569b87f5a09d4b30aa5b171b26321e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275098"
 ---
 # <a name="string-utility-functions-sample"></a>文字列ユーティリティ関数サンプル
   String Utilities サンプルには、Visual C# と Visual Basic で記述されたストリーミング テーブル値関数が含まれています。この関数は、コンマ区切りの文字列を 1 列のテーブルに分割します。 また、文字列の列をコンマ区切りの文字列に変換する集計関数も含まれています。  さらに、正規表現置換機能と正規表現検索機能を提供するスカラー関数およびテーブル値関数も実装されています。  
@@ -55,7 +55,7 @@ ms.locfileid: "36176461"
      `GO`  
   
     > [!NOTE]  
-    >  CLR 統合を有効にする必要があります`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR 統合を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36176461"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-    -   コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、として保存`test.sql`サンプル ディレクトリにします。  
+    -   コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、保存`test.sql`サンプル ディレクトリにします。  
   
 8.  次のコマンドを使用してテスト スクリプトを実行します。  
   

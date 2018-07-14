@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], push subscriptions
 - subscriptions [SQL Server replication], push
 - push subscriptions [SQL Server replication], synchronizing
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 37d8b2e0c83b120227581239789c55367a97d15c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a3bc18973ae091e04d70fefa3a54a44434983fb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266198"
 ---
 # <a name="synchronize-a-push-subscription"></a>プッシュ サブスクリプションの同期
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [レプリケーション エージェント](agents/replication-agents-overview.md)、またはレプリケーション管理オブジェクト (RMO) を使用して、プッシュ サブスクリプションを同期する方法について説明します。  
@@ -196,7 +196,7 @@ REM -- The following command must be supplied without line breaks.
   
   
 ##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
- レプリケーション管理オブジェクト (RMO) およびマネージ コードを使用してレプリケーション エージェント機能にアクセスすることで、プッシュ サブスクリプションをプログラムから同期できます。 プッシュ サブスクリプションを同期する際に使用するクラスは、サブスクリプションが属しているパブリケーションの種類によって異なります。  
+ レプリケーション管理オブジェクト (RMO) およびマネージド コードを使用してレプリケーション エージェント機能にアクセスすることで、プッシュ サブスクリプションをプログラムから同期できます。 プッシュ サブスクリプションを同期する際に使用するクラスは、サブスクリプションが属しているパブリケーションの種類によって異なります。  
   
 > [!NOTE]  
 >  アプリケーションに影響を及ぼすことなく、自立的に実行される同期を開始するには、エージェントを非同期的に起動します。 ただし、同期処理中に同期の結果を監視し、エージェントからのコールバックを受け取る場合 (たとえば、進行状況バーを表示する場合)、エージェントを同期的に起動する必要があります。 For [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] サブスクライバーの場合、エージェントを同期的に起動する必要があります。  
@@ -221,7 +221,7 @@ REM -- The following command must be supplied without line breaks.
   
 4.  次のいずれかの方法で、ディストリビューターのディストリビューション エージェントを起動します。  
   
-    -   手順 2. で作成した <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> インスタンスの <xref:Microsoft.SqlServer.Replication.TransSubscription> メソッドを呼び出します。 このメソッドは、ディストリビューション エージェントを非同期的に起動するため、エージェント ジョブの実行中、制御が直ちにアプリケーションに返されます。 値は、サブスクリプションが作成された場合は、このメソッドを呼び出すことはできません`false`の<xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>します。  
+    -   手順 2. で作成した <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> インスタンスの <xref:Microsoft.SqlServer.Replication.TransSubscription> メソッドを呼び出します。 このメソッドは、ディストリビューション エージェントを非同期的に起動するため、エージェント ジョブの実行中、制御が直ちにアプリケーションに返されます。 値を持つサブスクリプションが作成された場合は、このメソッドを呼び出すことはできません`false`の<xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>します。  
   
     -   <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> プロパティから <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizationAgent%2A> クラスのインスタンスを取得し、 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> メソッドを呼び出します。 このメソッドにより、エージェントが同期的に起動され、制御は実行中のエージェント ジョブに残ります。 同期実行の間、エージェントの実行中に <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> イベントを処理できます。  
   
@@ -245,7 +245,7 @@ REM -- The following command must be supplied without line breaks.
   
 4.  次のいずれかの方法で、ディストリビューターのマージ エージェントを起動します。  
   
-    -   手順 2. で作成した <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> インスタンスの <xref:Microsoft.SqlServer.Replication.MergeSubscription> メソッドを呼び出します。 このメソッドは、マージ エージェントを非同期的に起動するため、エージェント ジョブの実行中、制御が直ちにアプリケーションに返されます。 値は、サブスクリプションが作成された場合は、このメソッドを呼び出すことはできません`false`の<xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>します。  
+    -   手順 2. で作成した <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> インスタンスの <xref:Microsoft.SqlServer.Replication.MergeSubscription> メソッドを呼び出します。 このメソッドは、マージ エージェントを非同期的に起動するため、エージェント ジョブの実行中、制御が直ちにアプリケーションに返されます。 値を持つサブスクリプションが作成された場合は、このメソッドを呼び出すことはできません`false`の<xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>します。  
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> プロパティから <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> クラスのインスタンスを取得し、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> メソッドを呼び出します。 このメソッドにより、マージ エージェントが同期的に起動され、制御は実行中のエージェント ジョブに残ります。 同期実行の間、エージェントの実行中に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> イベントを処理できます。  
   

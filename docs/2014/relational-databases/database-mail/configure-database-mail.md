@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
 - Sql12.swb.sqlimail.manageexistingaccount.f1
@@ -40,15 +40,15 @@ f1_keywords:
 - Sql12.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a56c620c26a7ef2a7af3dccf59f2f6bcdb0bf3ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5d4b20236528e1908c5012ef6cae19d7fb62e580
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269358"
 ---
 # <a name="configure-database-mail"></a>データベース メールを構成する
   このトピックでは、データベース メール構成ウィザードを使用してデータベース メールを有効化して構成する方法、およびテンプレートを使用してデータベース メール構成スクリプトを作成する方法について説明します。  
@@ -71,7 +71,7 @@ ms.locfileid: "36177129"
   
 2.  **[管理]** ノードを展開します。  
   
-3.  緊密な**データベース メール**、クリックして**データベース メールの構成**です。  
+3.  緊密なクリック**データベース メール**、 をクリックし、**データベース メールの構成**します。  
   
 4.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36177129"
  **アカウント名**  
  新しいアカウントの名前を入力します。  
   
- **description**  
+ **[説明]**  
  アカウントの説明を入力します。 説明はオプションです。  
   
  **[電子メール アドレス]**  
@@ -133,7 +133,7 @@ ms.locfileid: "36177129"
  このアカウントから送信された電子メール メッセージへの返信に使用される電子メール アドレスを入力します。 電子メールの返信はオプションです。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのアカウントへの返信は、データベース管理者 danw@Adventure-Works.com をクリックします。  
   
  **サーバー名**  
- アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 通常、これはのような形式で`smtp.` *< your_company >*`.com`です。 詳細については、電子メールの管理者に問い合わせてください。  
+ アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 通常、これはのような形式で`smtp.` *< your_company >*`.com`します。 詳細については、電子メールの管理者に問い合わせてください。  
   
  **[ポート番号]**  
  このアカウントで使用する SMTP サーバーのポート番号を入力します。 ほとんどの SMTP サーバーでは、ポート 25 が使用されます。  
@@ -167,10 +167,10 @@ ms.locfileid: "36177129"
  **アカウント名**  
  表示、更新、または削除するアカウントを選択します。  
   
- **Delete**  
+ **削除**  
  選択されているアカウントを削除します。 関連付けられたプロファイルからこのアカウントを削除するか、選択したアカウントを削除する前にこのようなプロファイルを削除する必要があります。  
   
- **description**  
+ **[説明]**  
  アカウントの説明を表示または更新します。 説明はオプションです。  
   
  **[電子メール アドレス]**  
@@ -219,7 +219,7 @@ ms.locfileid: "36177129"
  **[プロファイル名]**  
  新しいプロファイルの名前を入力します。 プロファイルはこの名前を使用して作成されます。 既存のプロファイルの名前を使用しないでください。  
   
- **description**  
+ **[説明]**  
  プロファイルの説明を入力します。 説明はオプションです。  
   
  **[SMTP アカウント]**  
@@ -228,7 +228,7 @@ ms.locfileid: "36177129"
  **[追加]**  
  アカウントをプロファイルに追加します。  
   
- **削除**  
+ **[削除]**  
  選択されたアカウントをプロファイルから削除します。  
   
  **[上へ移動]**  
@@ -247,10 +247,10 @@ ms.locfileid: "36177129"
  **[プロファイル名]**  
  管理するプロファイルの名前を選択します。  
   
- **Delete**  
+ **削除**  
  選択されているプロファイルを削除します。 確認のメッセージが表示されます。選択したプロファイルを削除し、未送信のメッセージを破棄する場合は **[はい]** を選択します。未送信のメッセージがないときのみ、選択したプロファイルを削除する場合は **[いいえ]** を選択します。  
   
- **description**  
+ **[説明]**  
  選択されているプロファイルの説明を表示または変更します。 説明はオプションです。  
   
  **[SMTP アカウント]**  
@@ -259,7 +259,7 @@ ms.locfileid: "36177129"
  **[追加]**  
  アカウントをプロファイルに追加します。  
   
- **削除**  
+ **[削除]**  
  選択されたアカウントをプロファイルから削除します。  
   
  **[上へ移動]**  

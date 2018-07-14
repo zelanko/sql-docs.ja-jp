@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQLServer 107 error
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a0404af3870592ad6e03c4264695551480e1a7e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5f8f4ab62d893334cfab9020a7cf301e7b7761f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275788"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>レポート サーバー Windows サービス (MSSQLServer) 107
     
@@ -54,7 +54,7 @@ ms.locfileid: "36176763"
 ## <a name="internal-only"></a>内部使用のみ  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー サービス アカウントを構成する&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [レポート サーバー サービス アカウントの構成&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [レポート サーバー サービスの開始と停止](../report-server/start-and-stop-the-report-server-service.md)  
   

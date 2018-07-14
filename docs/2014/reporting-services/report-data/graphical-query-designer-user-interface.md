@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 - sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 caps.latest.revision: 53
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a0b03b1e797aa61e173dc30c9ae8bd5e335add41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4d554173e6341f4f733cdc3e48af587bb4e544be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327172"
 ---
 # <a name="graphical-query-designer-user-interface"></a>グラフィカル クエリ デザイナーのユーザー インターフェイス
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート デザイナーでレポート データセットのリレーショナル データベースからデータを取得するクエリの作成に使用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB、ODBC の各データ ソースの種類に対して、対話形式でクエリを作成して結果を表示するには、グラフィカル クエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーは、複数の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント、複雑なクエリやコマンド構文、式ベースのクエリを指定する場合に使用します。 詳細については、「 [テキストベースのクエリ デザイナーのユーザー インターフェイス](../text-based-query-designer-user-interface.md)」を参照してください。 特定のデータ ソースの種類の操作の詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)です。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート デザイナーでレポート データセットのリレーショナル データベースからデータを取得するクエリの作成に使用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB、ODBC の各データ ソースの種類に対して、対話形式でクエリを作成して結果を表示するには、グラフィカル クエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーは、複数の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント、複雑なクエリやコマンド構文、式ベースのクエリを指定する場合に使用します。 詳細については、「 [テキストベースのクエリ デザイナーのユーザー インターフェイス](../text-based-query-designer-user-interface.md)」を参照してください。 特定のデータ ソースの種類の使用方法の詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)します。  
   
- のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+ .  
   
 ## <a name="graphical-query-designer"></a>グラフィカル クエリ デザイナー  
  グラフィカル クエリ デザイナーでサポートされているクエリ コマンドの種類は、 **Text**、 **StoredProcedure**、および **TableDirect**の 3 つです。 データセットに対するクエリを作成する前に、 [[データセットのプロパティ]](../dataset-properties-dialog-box-query.md) ダイアログ ボックスの [クエリ] ページにあるコマンドの種類のオプションを選択する必要があります。  

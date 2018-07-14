@@ -1,5 +1,5 @@
 ---
-title: 親子階層 |Microsoft ドキュメント
+title: 親子階層 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], parent-child
 - dimensions [Analysis Services], parent-child
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - parent-child dimensions [Analysis Services]
 ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6f4dea929cc67ca1d44fb2c439947edbdef5bcfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b22ee5d9324b1d1b18d6ff033876d22bc0c1bdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328572"
 ---
 # <a name="parent-child-hierarchy"></a>親子階層
-  親子階層は、親属性を含んでいる標準ディメンションにある階層です。 親属性は、ディメンション メイン テーブル内の *自己参照型リレーションシップ*または *自己結合*を記述します。 親子階層は 1 つの親属性から構築されます。 親子階層に存在するレベルは、親属性に関連付けられているメンバー間の親子リレーションシップに基づいているので、1 つの親子階層に割り当てられるレベルは 1 つのみです。 親子階層のメンバーの位置によって決まり、`KeyColumns`と`RootMemberIf`親のプロパティの属性、レベル内のメンバーの位置はによって決まりますが、`OrderBy`親属性のプロパティです。 属性のプロパティの詳細については、「 [属性と属性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)」を参照してください。  
+  親子階層は、親属性を含んでいる標準ディメンションにある階層です。 親属性は、ディメンション メイン テーブル内の *自己参照型リレーションシップ*または *自己結合*を記述します。 親子階層は 1 つの親属性から構築されます。 親子階層に存在するレベルは、親属性に関連付けられているメンバー間の親子リレーションシップに基づいているので、1 つの親子階層に割り当てられるレベルは 1 つのみです。 親子階層のメンバーの位置によって決まり、`KeyColumns`と`RootMemberIf`、親のプロパティの属性によって決まりますが、レベル内のメンバーの位置は、`OrderBy`親属性のプロパティ。 属性のプロパティの詳細については、「 [属性と属性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)」を参照してください。  
   
  親子階層のレベル間に親子リレーションシップがあることにより、一部の非リーフ メンバーには、子メンバーから集計したデータだけでなく、基になるデータ ソースから派生したデータが含まれる場合もあります。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36175245"
  ただし、親子階層では、一部の非リーフ メンバーに、子メンバーから集計されたデータだけでなく、基になるデータ ソースから派生したデータも含まれている場合があります。 親子階層の非リーフ メンバーの場合、基になるファクト テーブル データを含む特殊なシステム生成の子メンバーを作成できます。 *データ メンバー*と呼ばれるこれらの特殊な子メンバーには、非リーフ メンバーに直接関係付けられた、非リーフ メンバーの子孫から計算される集計値に依存しない値が含まれます。 データ メンバーの詳細については、「 [親子階層の属性](parent-child-dimension-attributes.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [親子階層内の属性](parent-child-dimension-attributes.md)   
+ [親子階層の属性](parent-child-dimension-attributes.md)   
  [データベース ディメンション プロパティ](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   
   

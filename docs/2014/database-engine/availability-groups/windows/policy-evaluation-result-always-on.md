@@ -1,28 +1,27 @@
 ---
-title: ポリシー評価の結果 (AlwaysOn) |Microsoft ドキュメント
+title: ポリシー評価の結果 (AlwaysOn) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.policyeval.f1
 - swb.agdashboard.policyeval.f1
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 caps.latest.revision: 8
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0efad6e52d9d297f42b98c2268daeca46b2d5a14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 68837a04228b90c389cd909190c62915c4bb88db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271628"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>ポリシー評価の結果 (AlwaysOn)
   AlwaysOn ダッシュボードの **[ポリシー評価の結果]** ページは、現在のポリシーの問題を表示するために使用します。  
@@ -38,7 +37,7 @@ ms.locfileid: "36176471"
 |![UI アイコン: エラー](../../../relational-databases/replication/media/repl-icon-error.gif "UI アイコン: エラー")|重大|  
 |![UI アイコン: 警告](../../../relational-databases/replication/media/repl-icon-warn.gif "UI アイコン: 警告")|警告|  
   
- **description**  
+ **[説明]**  
  このグリッドには、選択した問題の簡単な説明が表示されます。  
   
  **その他の情報**  
@@ -48,7 +47,7 @@ ms.locfileid: "36176471"
   
 -   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
--   [AlwaysOn ポリシーを使用して、可用性グループのヘルスを表示&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [AlwaysOn ポリシーを使用して、可用性グループのヘルスを表示する&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 
   

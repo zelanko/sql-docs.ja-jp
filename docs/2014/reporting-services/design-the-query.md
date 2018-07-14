@@ -1,5 +1,5 @@
 ---
-title: クエリをデザイン |Microsoft ドキュメント
+title: クエリの設計 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
 caps.latest.revision: 39
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2ca850de7e8f09f704434910ccf0fa45cbfca726
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be1faf198c38ee9445602aa0e0bcc8ae66b5461a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270308"
 ---
 # <a name="design-the-query"></a>クエリのデザイン
   レポート ウィザードのこのページを使用すると、手動での入力、クエリ ビルダーでの対話的な操作、他のレポートからのインポートのいずれかの手段でクエリを作成できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "36176562"
 SELECT LastName FROM Person.Person;  
 ```  
   
- データ ソースの種類の**Microsoft SQL Server**、次のクエリの実行、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]ストアド プロシージャ`uspGetEmployeeManagers`id の従業員の番号は 1。  
+ データ ソースの種類の**Microsoft SQL Server**、次のクエリの実行、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]ストアド プロシージャ`uspGetEmployeeManagers`従業員 id 番号は 1。  
   
 ```  
 EXEC uspgetEmployeeManagers '1';  

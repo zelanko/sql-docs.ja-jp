@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], modifying
 - modifying jobs
 - SQL Server Agent jobs, modifying
 ms.assetid: dd5e5f20-20c4-4ab9-a19a-db87577dcd43
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: caceadb3d1cc35bc9adb7a1ac97d03dadad76934
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 72c4a103243707fa77216b62e9fb8fd3d067307b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268198"
 ---
 # <a name="modify-a-job"></a>Modify a Job
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのプロパティを変更する方法について説明します。  
@@ -78,9 +78,9 @@ ms.locfileid: "36177447"
   
     -   実行[sp_add_jobstep &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)新しいジョブ ステップを追加します。  
   
-    -   実行[sp_update_jobstep &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)を既存のジョブ ステップを変更します。  
+    -   実行[sp_update_jobstep &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)の既存のジョブ ステップを変更します。  
   
-    -   実行[sp_delete_jobstep &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)をジョブからジョブ ステップを削除します。  
+    -   実行[sp_delete_jobstep &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)ジョブからジョブ ステップを削除します。  
   
     -   任意の SQL Server エージェント マスター ジョブを変更するための追加のストアド プロシージャ:  
   
@@ -88,9 +88,9 @@ ms.locfileid: "36177447"
   
         -   実行[sp_add_jobserver &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)にサーバーを現在のジョブに関連付けます。  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトを使用します。  
+##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **ジョブを変更するには**  
   
- 使用して、 `Job` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラスです。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](http://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
+ 使用して、 `Job` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](http://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
   
   

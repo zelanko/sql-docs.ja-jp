@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
-caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d7e8f09c3fe78738d22da6f7755c7839d353647c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 700d4ea1e3f5e0fc77de052ac9e83a2875f89bd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266768"
 ---
 # <a name="modify-a-partition-function"></a>パーティション関数の変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用してパーティション テーブルまたはパーティション インデックスのパーティション関数で、指定するパーティションの数を 1 つずつ増減させることにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でのテーブルまたはインデックスのパーティション分割方法を変更できます。 パーティションを追加するには、既存のパーティションを 2 つのパーティションに分割し、新しいパーティションの境界を再定義します。 パーティションを削除するには、2 つのパーティションの境界を 1 つのパーティションにマージします。 この最後の操作により、1 つのパーティションが再作成され、もう 1 つのパーティションは未割り当てのままになります。  

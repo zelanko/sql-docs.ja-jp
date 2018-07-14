@@ -1,5 +1,5 @@
 ---
-title: MDX クエリ エディター (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: MDX クエリ エディター (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.startpage.mdx.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - MDX Query Editor
 ms.assetid: 777f2c23-1c1c-4b72-9d19-48a4866551f8
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff0c288919bed3a6e1c13c9a7cb98bc7adbb949c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3fa81db8ca9f6a9ebd490724bf003a81d87c7d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275880"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>MDX クエリ エディター (Analysis Services - 多次元データ)
   MDX クエリ エディターを使用すると、多次元式 (MDX) 言語で記述されたステートメントおよびスクリプトを作成および実行できます。  
@@ -46,7 +46,7 @@ ms.locfileid: "36176282"
   
 |項目|定義|  
 |----------|----------------|  
-|**のインスタンスに接続するときには、**|**インスタンスへの接続を確立するための** [サーバーへの接続] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ダイアログ ボックスを開きます。|  
+|**Connect**|**インスタンスへの接続を確立するための** [サーバーへの接続] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ダイアログ ボックスを開きます。|  
 |**[接続解除]**|MDX クエリ エディターと [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの接続を解除します。|  
 |**[接続の変更]**|別の **インスタンスへの接続を確立するための** [サーバーへの接続] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ダイアログ ボックスを開きます。|  
 |**[新しいクエリを現在の接続で実行]**|現在の MDX クエリ エディター ウィンドウの接続情報を使用して、新しい MDX クエリ エディター ウィンドウを開きます。|  
@@ -60,8 +60,8 @@ ms.locfileid: "36176282"
   
 |項目|定義|  
 |----------|----------------|  
-|**クエリ エディター ウィンドウ**|MDX クエリ エディターで実行される MDX ステートメントおよびスクリプトを入力します。<br /><br /> クエリ エディターのコンテキスト メニューには、次のオプションがあります。<br /><br /> **切り取り**: 現在の選択範囲をクリップボードにコピーし、クエリ エディター ウィンドウから選択範囲を削除します。<br /><br /> **[コピー]**: 現在選択している部分をクリップボードにコピーします。<br /><br /> **貼り付け**: 現在の選択範囲をクリップボードの内容を貼り付けます。<br /><br /> **[接続]**: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続を確立するための **[サーバーへの接続]** ダイアログ ボックスを開きます。<br /><br /> **切断**: 現在のクエリ エディターの接続が切断、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス。<br /><br /> **すべてのクエリの切断**: すべて現在開いているクエリ エディターの接続解除します。<br /><br /> **接続を変更する**: 開きます、**サーバーへの接続**ダイアログ ボックスで、別の接続を確立する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス。<br /><br /> **オブジェクト エクスプ ローラーでサーバーを開く**: 開きます、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]で、現在のクエリ エディターが接続されているインスタンス**オブジェクト エクスプ ローラー**です。<br /><br /> **実行**: 選択したコードの実行またはコードが選択されていない場合は、現在のクエリ エディターでコード全体を実行します。<br /><br /> **[プロパティ] ウィンドウ**: 表示、**プロパティ**ウィンドウ[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の現在のクエリ ウィンドウ。<br /><br /> **クエリ オプション**: 表示、**クエリ オプション** ダイアログ ボックス。|  
-|**メタデータ ウィンドウ**|現在接続されている [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのメタデータを表示します。|  
+|**クエリ エディター ウィンドウ**|MDX クエリ エディターで実行される MDX ステートメントおよびスクリプトを入力します。<br /><br /> クエリ エディターのコンテキスト メニューには、次のオプションがあります。<br /><br /> **切り取り**: 現在の選択範囲をクリップボードにコピーし、クエリ エディター ウィンドウから選択範囲を削除します。<br /><br /> **[コピー]**: 現在選択している部分をクリップボードにコピーします。<br /><br /> **貼り付け**: 現在の選択項目のクリップボードの内容を貼り付けます。<br /><br /> **[接続]**: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続を確立するための **[サーバーへの接続]** ダイアログ ボックスを開きます。<br /><br /> **切断**: 現在のクエリ エディターからの切断、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス。<br /><br /> **すべてのクエリの切断**: すべての現在開いているクエリ エディターの接続解除します。<br /><br /> **接続を変更する**: 開きます、**サーバーへの接続**ダイアログ ボックスで、さまざまなへの接続を確立するために、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス。<br /><br /> **オブジェクト エクスプ ローラーでサーバーを開く**: 開きます、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスで、現在のクエリ エディターが接続されている**オブジェクト エクスプ ローラー**します。<br /><br /> **実行**: 選択したコードの実行またはコードが選択されていない場合は、現在のクエリ エディターでコード全体を実行します。<br /><br /> **[プロパティ] ウィンドウ**: 表示、**プロパティ**ウィンドウ[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の現在のクエリ ウィンドウ。<br /><br /> **クエリ オプション**: 表示、**クエリ オプション** ダイアログ ボックス。|  
+|**[メタデータ] ウィンドウ**|現在接続されている [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのメタデータを表示します。|  
 |**Cube**|現在接続されている [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース内のキューブを選択して、キューブに関連付けられているメタデータを **[メタデータ]** タブに表示します。|  
 |**メタデータ**|**[キューブ]** で選択されているキューブのメタデータ (メジャー グループとメジャー、主要業績評価指標、ディメンション、階層、レベル、メンバー、およびメンバー プロパティなど) を表示します。 オブジェクトの完全修飾キーを取得するには、次のどちらかの操作を行います。<br /><br /> オブジェクトを **[メタデータ]** タブからクエリ ペインにドラッグします。<br /><br /> オブジェクトを右クリックし、 **[コピー]** をクリックします。次に、クエリ ペインを右クリックし、 **[貼り付け]** をクリックします。|  
 |**関数**|MDSCHEMA_FUNCTIONS スキーマ行セットから取得された、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースで使用できる MDX 関数のメタデータを表示します。 関数の構文を取得するには、次のどちらかの操作を行います。<br /><br /> オブジェクトを **[関数]** タブからクエリ ペインにドラッグします。<br /><br /> 関数を右クリックし、 **[コピー]** をクリックします。次に、クエリ ペインを右クリックし、 **[貼り付け]** をクリックします。|  

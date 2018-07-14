@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: a3dc6fa32634a14767bfe58c1d06351cf091fb8c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 996fad627cebc240a39337a0f0ae3a096e53901c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326182"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>クエリ式と Uniform Resource Name
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) モデルおよび [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインでは、XPath 式に似た、2 種類の式文字列が使用されます。 クエリ式は、オブジェクト モデル階層内の 1 つまたは複数のオブジェクトを列挙するための条件のセットを指定する文字列です。 URN (Uniform Resource Name) は、単一のオブジェクトを一意に識別する特定の種類のクエリ式文字列です。  

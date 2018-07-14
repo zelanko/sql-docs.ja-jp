@@ -1,5 +1,5 @@
 ---
-title: ファクト リレーションシップの定義 |Microsoft ドキュメント
+title: ファクト リレーションシップの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 28beac3f919350de1bf030dd9d4478146c28b2a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0dbd387f5b98f5547487df7d3fdba9724e10d0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330792"
 ---
 # <a name="defining-a-fact-relationship"></a>ファクト リレーションシップの定義
   ディメンション メジャーをファクト テーブルのデータ アイテムに関連付けなければならない場合があります。また、特定の販売ファクター (請求番号や受注番号) など、関連している特定の補足情報について、ファクト テーブルから情報を抽出しなければならない場合があります。 このように、ファクト テーブル アイテムに基づいて定義されたディメンションを、 *ファクト ディメンション*と呼びます。 ファクト ディメンションは、逆ディメンションとも呼ばれます。 特定の請求番号に関連するすべての行をグループ化する場合などのように、関連するテーブルの行をまとめてグループ化するには、ファクト ディメンションを使用すると便利です。 この情報は、リレーショナル データベースの個々のディメンション テーブルに格納することができます。しかし、情報ごとに異なるディメンション テーブルを作成してもメリットはありません。ファクト テーブルのサイズに比例してディメンション テーブルが大きくなり、データを複製することによって不要な複雑さを招くことになるからです。  
@@ -73,9 +73,9 @@ ms.locfileid: "36175046"
   
 16. **[データ ソース ビュー]** ペインで、 **InternetSales** テーブルの **SalesOrderNumber** 列をクリックし、 **[属性]** ペインにドラッグします。これにより、 **Sales Order Number** 属性がディメンションに追加されます。  
   
-17. 変更、**名前**新しいプロパティ**Sales Order Number**属性を`Order Number`、変更して、 **OrderBy**プロパティを**キー**.  
+17. 変更、**名前**プロパティの新しい**Sales Order Number**属性を`Order Number`、変更して、 **OrderBy**プロパティを**キー**.  
   
-18. **階層** ウィンドウで、作成、 **Internet Sales Orders**ユーザー階層を含む、`Order Number`と**Item Description**レベル、その順序で。  
+18. **階層**ウィンドウで、作成、 **Internet Sales Orders**ユーザー階層を`Order Number`と**Item Description**をこの順序でのレベル。  
   
 19. **[属性]** ペインで **Internet Sales Order Details**をクリックします。次に、[プロパティ] ウィンドウで、 **StorageMode** プロパティの値を確認します。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36175046"
   
      次の図は、前の手順の結果を示します。  
   
-     ![Internet Sales-sales Amount の領域確保](../../2014/tutorials/media/l5-factrelationship-3.gif "Internet Sales-sales Amount の寸法")  
+     ![Internet Sales-sales Amount の寸法](../../2014/tutorials/media/l5-factrelationship-3.gif "Internet Sales-sales Amount の寸法")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [多対多関係の定義](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  

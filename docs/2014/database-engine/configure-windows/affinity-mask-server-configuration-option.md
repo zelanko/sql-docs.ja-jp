@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default affinity mask option
 - reloading processor cache
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6c0c94785452841642edac541d9c120bfbd7ad14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 41fad115e39068b60f9d1a08b4fcf08b2c3d392a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271968"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask サーバー構成オプション
     
@@ -118,7 +118,7 @@ GO
 |127|01111111|0、1、2、3、4、5、および 6|  
 |255|11111111|0、1、2、3、4、5、6、および 7|  
   
- affinity mask オプションは拡張オプションです。 Sp_configure システム ストアド プロシージャを設定を変更するを使用している場合は、変更`affinity mask`される場合にのみ**オプションの詳細の表示**が 1 に設定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の RECONFIGURE コマンドの実行が完了すると、新しい設定は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動しなくてもすぐに有効になります。  
+ affinity mask オプションは拡張オプションです。 設定を変更する、sp_configure システム ストアド プロシージャを使用する場合は、変更`affinity mask`場合にのみ**詳細オプションの表示**が 1 に設定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の RECONFIGURE コマンドの実行が完了すると、新しい設定は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動しなくてもすぐに有効になります。  
   
 ## <a name="non-uniform-memory-access-numa"></a>NUMA (Non-uniform Memory Access)  
  NUMA (non-uniform memory access) ベースのハードウェアを使用し、affinity mask を設定する場合、ノード内のすべてのスケジューラがそのノードの CPU に関連付けられます。 affinity mask を設定しない場合、各スケジューラは NUMA ノード内の CPU のグループに関連付けられ、NUMA ノード N1 にマップされたスケジューラはノード内の任意の CPU で作業をスケジュールできますが、他のノードに関連付けられた CPU ではスケジュールできません。  

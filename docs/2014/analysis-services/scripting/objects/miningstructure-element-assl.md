@@ -1,5 +1,5 @@
 ---
-title: MiningStructure 要素 (ASSL) |Microsoft ドキュメント
+title: MiningStructure 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningStructure element
 ms.assetid: b943cd92-0ed8-4bd8-8fbc-7dab0534aede
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5298c78f1902ee9a8fb1ed12ecf066092a02d938
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed39aafbe937c637abd7a6ec67fbd7343b62b116
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271828"
 ---
 # <a name="miningstructure-element-assl"></a>MiningStructure 要素 (ASSL)
   マイニング モデルのセットの構造を定義します。  
@@ -88,9 +88,9 @@ ms.locfileid: "36177180"
 >  提示されたプロパティの `HoldoutMaxCases`、`HoldoutMaxPercent`、`HoldoutSeed`、および `HoldoutActualSize` は、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] で導入されました。 これらのプロパティを使用すると、マイニング構造で、その構造に関連するすべてのマイニング モデルのテスト セットとして機能するパーティションを定義できます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では、これらのプロパティはサポートされません。 したがって、これらのプロパティを [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] のインスタンスで使用すると、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でエラーが返されます。  
   
 ## <a name="drillthrough-to-structure-columns"></a>構造列へのドリルスルー  
- [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]に新しい権限要素が追加されて、 [MiningStructurePermissions 要素&#40;ASSL&#41; ](../collections/miningstructurepermissions-element-assl.md)コレクション。 追加する場合`AllowDrillthrough`両方へのアクセス許可、 [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md)と[MiningModelPermission](miningmodelpermission-element-assl.md)ように、構造にマイニング モデルからコレクション、ドリルスルーが有効になっています。持つロールのメンバーが`AllowDrillthrough`モデルに対するアクセス許可が、データ マイニング モデルをクエリおよびモデルに含まれていない構造列を返すことができます。  
+ [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]に新しい権限要素が追加されて、 [MiningStructurePermissions 要素&#40;ASSL&#41; ](../collections/miningstructurepermissions-element-assl.md)コレクション。 追加する場合`AllowDrillthrough`両方へのアクセス許可、 [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md)と[MiningModelPermission](miningmodelpermission-element-assl.md)ような方法で、構造にマイニング モデルのコレクション、ドリルスルーが有効になっています。持つロールのメンバーが`AllowDrillthrough`モデルに対するアクセス許可が、データ マイニング モデルをクエリおよびがモデルに含まれていない構造列を返すことができます。  
   
- したがって、機密データまたは個人情報を保護するため、機密情報をマスクするデータ ソース ビューを構築し、マイニング構造に対する `AllowDrillthrough` 権限は必要な場合にのみ許可する必要があります。 詳細については、次を参照してください。 [AllowDrillThrough 要素&#40;ASSL&#41;](../properties/allowdrillthrough-element-assl.md)です。  
+ したがって、機密データまたは個人情報を保護するため、機密情報をマスクするデータ ソース ビューを構築し、マイニング構造に対する `AllowDrillthrough` 権限は必要な場合にのみ許可する必要があります。 詳細については、次を参照してください。 [AllowDrillThrough 要素&#40;ASSL&#41;](../properties/allowdrillthrough-element-assl.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.MiningStructure>します。  
   
