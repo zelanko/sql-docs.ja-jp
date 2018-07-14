@@ -1,5 +1,5 @@
 ---
-title: アラートのプロパティ-新しい警告 (応答 ページ) |Microsoft ドキュメント
+title: アラートのプロパティ-新しい警告 (応答 ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.response.f1
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f6e8a2f0363d9f772b04fe0b5215ee2d62a72ce4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 326576fc2b8a294a5fa8ebd236810d31b0f114f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274008"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>アラートのプロパティ-新しいアラート ([応答] ページ)
   このページを使用すると、実行するジョブや、オペレーターの一覧を取得するジョブを指定できます。この一覧のオペレーターは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に関する通知を受け取ります。  
@@ -59,7 +59,7 @@ ms.locfileid: "36083768"
   
 ## <a name="see-also"></a>参照  
  [Alerts](alerts.md)   
- [重要度を使用して警告レベルを作成します。](create-an-alert-using-severity-level.md)   
+ [重大度を使用して警告レベルを作成します。](create-an-alert-using-severity-level.md)   
  [Alerts](alerts.md)   
  [警告を編集します。](edit-an-alert.md)   
  [Delete an Alert](delete-an-alert.md)  

@@ -1,5 +1,5 @@
 ---
-title: TrendGraphic 要素 (ASSL) |Microsoft ドキュメント
+title: TrendGraphic 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - TrendGraphic element
 ms.assetid: 7448fd80-3072-4d85-b3a0-6606d1d20885
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8d4030a0936eee85fd32cfc87a4d5b441ef63b74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c42a75f2dcb09b88008ea2776d215153ec7c557b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228162"
 ---
 # <a name="trendgraphic-element-assl"></a>TrendGraphic 要素 (ASSL)
-  傾向の推奨のグラフィカル表示が含まれています、 [Kpi](../objects/kpi-element-assl.md)要素。  
+  傾向の推奨グラフィカル表示が含まれています、 [Kpi](../objects/kpi-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36083957"
 |-----------|-----------------|  
 |*標準の矢印*|標準の矢印|  
 |*状態の矢印 - 昇順*|状態の矢印|  
-|*降順の状態の矢印*|反転した状態の矢印|  
+|*状態の矢印 - 降順*|反転した状態の矢印|  
 |*スマイリー フェイス*|顔マーク|  
   
  親に対応する要素`TrendGraphic`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Kpi>します。  

@@ -1,5 +1,5 @@
 ---
-title: 定義とパースペクティブの表示 |Microsoft ドキュメント
+title: 定義とパースペクティブの表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 461c093bb3b946316cfee37cd531d1492176db9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 642d9a0f80f0efb0bc9d26b9a08ab7a6dbd521e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208192"
 ---
 # <a name="defining-and-browsing-perspectives"></a>パースペクティブの定義と表示
   パースペクティブを使用すれば、特定の目的に従ってキューブの表示を単純化できます。 既定では、ユーザーはアクセスする権限のあるキューブ内のすべての要素を表示できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブ全体の表示時に表示されるものが、キューブの既定のパースペクティブです。 キューブ全体を表示すると、操作が非常に複雑になる可能性があります。特に、ビジネス インテリジェンスやレポートの要件に応じてキューブのごく一部分しか操作する必要のないユーザーにとっては複雑すぎます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36084908"
   
      ![パースペクティブ名 列に新しいパースペクティブ](../../2014/tutorials/media/l9-perspectives-2.gif "パースペクティブ名 列に新しいパースペクティブ")  
   
-3.  パースペクティブ名を変更`Internet Sales`です。  
+3.  パースペクティブ名を変更して`Internet Sales`します。  
   
 4.  次の行で、DefaultMeasure を **[Internet Sales-Sales Amount]** に設定します。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36084908"
   
 1.  **[パースペクティブ]** タブのツール バーの **[新しいパースペクティブ]** ボタンをクリックします。  
   
-2.  新しいパースペクティブの名前を変更`Reseller Sales`です。  
+2.  新しいパースペクティブの名前を変更`Reseller Sales`します。  
   
 3.  既定のメジャーとして **[Reseller Sales-Sales Amount]** を設定します。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36084908"
   
 1.  **[パースペクティブ]** タブのツール バーの **[新しいパースペクティブ]** ボタンをクリックします。  
   
-2.  新しいパースペクティブの名前を変更`Sales Summary`です。  
+2.  新しいパースペクティブの名前を変更`Sales Summary`します。  
   
     > [!NOTE]  
     >  計算されるメジャーを既定のメジャーとして指定することはできません。  
@@ -180,13 +180,13 @@ ms.locfileid: "36084908"
   
      ![Excel でデータ接続ウィザード](../../2014/tutorials/media/l9-perspectives-3b.gif "Excel でデータ接続ウィザード")  
   
-6.  選択`Internet Sales`で、**パースペクティブ**を一覧表示し、メタデータ ペインでディメンションとメジャーを確認します。  
+6.  選択`Internet Sales`で、**パースペクティブ**を一覧表示して、メタデータ ペインでディメンションとメジャーを確認します。  
   
      Internet Sales パースペクティブ用に指定されたオブジェクトだけが表示されます。  
   
 7.  メタデータ ペインで、 **[Measures]** を展開します。  
   
-     通知だけである、`Internet Sales`メジャー グループが表示され、同時に、 **Internet GPM**と**Internet Sales Ratio to All Products**計算されるメンバー。  
+     だけ、`Internet Sales`メジャー グループが表示され、まとめて、 **Internet GPM**と**Internet Sales Ratio to All Products**計算されるメンバー。  
   
 8.  モデルで再度 Excel を選択します。 [ `Sales Summary`] を選択します。  
   

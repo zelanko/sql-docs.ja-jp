@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f81e48f4466bf4f5765273df7c4fa58fbb447f8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff8eccaf0e1c13c63d73eff20e7415c6872c967b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269518"
 ---
 # <a name="cdc-source"></a>CDC ソース
   CDC ソースは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブルから変更データの範囲を読み取り、変更内容を下流の他の SSIS コンポーネントに伝えます。  
@@ -32,7 +32,7 @@ ms.locfileid: "36083461"
   
  CDC ソースは、次の構成を使用します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC データベースにアクセスするための、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 接続マネージャー。 CDC ソース接続を構成する方法の詳細については、次を参照してください。 [CDC ソース エディター&#40;接続マネージャー ページ&#41;](../cdc-source-editor-connection-manager-page.md)です。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC データベースにアクセスするための、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 接続マネージャー。 CDC ソース接続を構成する方法の詳細については、次を参照してください。 [CDC ソース エディター&#40;接続マネージャー ページ&#41;](../cdc-source-editor-connection-manager-page.md)します。  
   
 -   CDC のために有効にされたテーブル。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36083461"
   
 -   **エラー行の列**: エラーの原因となったレコード データ。  
   
- CDC ソースは、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、次を参照してください。 [CDC ソース エディター&#40;エラー出力 ページ&#41;](../cdc-source-editor-error-output-page.md)です。  
+ CDC ソースは、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、次を参照してください。 [CDC ソース エディター&#40;エラー出力 ページ&#41;](../cdc-source-editor-error-output-page.md)します。  
   
 ## <a name="data-type-support"></a>データ型のサポート  
  Microsoft の CDC ソース コンポーネントはすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型をサポートし、SSIS データ型に正確にマッピングします。  

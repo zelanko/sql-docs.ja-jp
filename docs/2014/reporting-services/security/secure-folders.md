@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high-security folders [Reporting Services]
 - low-security folders
@@ -18,13 +18,13 @@ ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: fb5806011f24d6853962b54b172d874829cb65f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4889b0385f3f55b4e0ca220d6b1f5f9ecda356b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238252"
 ---
 # <a name="secure-folders"></a>フォルダーをセキュリティで保護する
   フォルダーのセキュリティは、レポート サーバーのすべてのコンテンツをセキュリティで保護するための基盤となります。 セキュリティはフォルダー階層全体に継承されるので、フォルダー階層の大きさにかかわらず、特定のアクセス権を許可することができます。  
@@ -47,7 +47,7 @@ ms.locfileid: "36084036"
 |アイテムへのセキュリティの設定|フォルダーへのアクセスを制御するロールの割り当てを作成および変更できます。 このタスクは、"フォルダーの表示" または "フォルダーの管理" のいずれかと併用する必要があります。 それ以外の場合、ユーザーがアイテムを選択できないので効果がありません。|  
   
 ## <a name="see-also"></a>参照  
- [セキュリティで保護されたレポート、およびリソース](secure-reports-and-resources.md)   
+ [レポートとリソースを保護します。](secure-reports-and-resources.md)   
  [共有データ ソース アイテムをセキュリティで保護する](secure-shared-data-source-items.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)  
   

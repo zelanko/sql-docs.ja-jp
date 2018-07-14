@@ -1,5 +1,5 @@
 ---
-title: オプション (テキスト エディターで XML - [全般] ページ) |Microsoft ドキュメント
+title: オプション (テキスト エディター - XML/全般 ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.General
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 caps.latest.revision: 20
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5d686db29cd4fe7db3c76be22c67a2aacbec3d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a6a5f53bbccbd0d30aaada30366d01af23a3a5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322782"
 ---
 # <a name="options-text-editor---xml---general-page"></a>[オプション] ([テキスト エディター]/[XML]/[全般] ページ)
   このダイアログ ボックスを使用すると、XML ドキュメントの編集に使用される XML エディターの全般的な編集の動作を変更できます。 これらの設定を変更するには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[XML]** サブフォルダーを展開します。次に、 **[全般]** をクリックします。  
@@ -33,7 +33,7 @@ ms.locfileid: "36084608"
  **自動メンバー表示**  
  このチェック ボックスがオンの場合、エディターでの入力に合わせて、使用できるメンバー、プロパティ、値、またはメソッドの一覧が表示されます。 ポップアップ リストから項目を選択してコードに挿入します。  
   
- **高度なメンバーを非表示します。**  
+ **高度なメンバーを非表示にします。**  
  このチェック ボックスは使用できません。  
   
  **パラメーター情報**  
@@ -52,7 +52,7 @@ ms.locfileid: "36084608"
 > [!NOTE]  
 >  改行インジケーターはコードに追加されているわけではないので、印刷されません。 これは単に表示用です。  
   
- **選択されていない場合は、切り取り/コピー コマンドを空白行に適用します。**  
+ **選択されていない場合は、空白行に切り取り/コピー コマンドを適用します。**  
  このチェック ボックスは、空白行にカーソルを置き、何も選択していない状態で **[コピー]** または **[切り取り]** をクリックしたときのエディターの動作を設定します。  
   
  このチェック ボックスがオンの場合、空白行がコピーまたは切り取られます。 その後で **[貼り付け]** をクリックすると、新しい空白行が挿入されます。  

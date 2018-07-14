@@ -1,5 +1,5 @@
 ---
-title: FormatString 要素 (ASSL) |Microsoft ドキュメント
+title: FormatString 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FormatString element
 ms.assetid: 7b996221-936e-4f36-a3a8-676eb9869c55
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0760432767a8f7fb1dcdec99c2ca7d76722ddb38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a61057708dd430fa6879101cda0dd315bbc82298
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273198"
 ---
 # <a name="formatstring-element-assl"></a>FormatString 要素 (ASSL)
   表示形式について説明します、 [CalculationProperty](../objects/calculationproperty-element-assl.md)要素または[メジャー](../objects/measure-element-assl.md)要素。  
@@ -62,9 +62,9 @@ ms.locfileid: "36075593"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `FormatString` プロパティには多次元式 (MDX) が含まれています。 場合、`CalculationProperty`要素を持つ要素に適用される、 [CalculationType](calculationtype-element-assl.md)の*メンバー*または*セル*です。  
+ `FormatString` プロパティには多次元式 (MDX) が含まれています。 場合に`CalculationProperty`、要素を持つ要素に適用されます、 [CalculationType](calculationtype-element-assl.md)の*メンバー*または*セル*します。  
   
- 親に対応する要素`FormatString`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.CalculationProperty>と<xref:Microsoft.AnalysisServices.Measure>です。  
+ 親に対応する要素`FormatString`分析管理オブジェクト (AMO) オブジェクト モデルは、<xref:Microsoft.AnalysisServices.CalculationProperty>と<xref:Microsoft.AnalysisServices.Measure>します。  
   
 ## <a name="see-also"></a>参照  
  [CalculationProperties 要素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

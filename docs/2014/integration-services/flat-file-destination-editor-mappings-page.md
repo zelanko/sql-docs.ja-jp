@@ -1,5 +1,5 @@
 ---
-title: '[フラット ファイル変換先エディター] ([マッピング] ページ) |Microsoft ドキュメント'
+title: '[フラット ファイル変換先エディター] ([マッピング] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledestadapter.mappings.f1
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d7c94ee04df34919f40a0369d60592fe975b6bc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83d22f24c737a84a55bef27b2150e2032deccb9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213412"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>[フラット ファイル変換先エディター] ([マッピング] ページ)
   **[フラット ファイル変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -45,6 +45,6 @@ ms.locfileid: "36085476"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [[フラット ファイル変換先エディター&#40;接続マネージャー] ページ&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
+ [フラット ファイル変換先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
   
   

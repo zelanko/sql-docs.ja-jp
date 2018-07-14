@@ -1,5 +1,5 @@
 ---
-title: LocalDBFormatMessage 関数 |Microsoft ドキュメント
+title: LocalDBFormatMessage 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d2fbc72ef5f3b54e1a9889150ebc27b08520ba9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a48c5d0ef42c2109aebeadf77a6e666e4407093f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246822"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 関数
   指定した SQL Server Express LocalDB エラーについてのローカライズされた説明テキストを返します。  
@@ -64,7 +64,7 @@ HRESULT LocalDBFormatMessage(
  [出力] LocalDB エラー メッセージを格納するバッファー。  
   
  *lpcchMessage*  
- [入力/出力]入力にはサイズが含まれています、 *wszMessage*文字バッファー。 出力側では、所定のバッファー サイズが小さすぎる場合、末尾の NULL も含め、必要なバッファー サイズ (単位は文字数) を格納します。 関数を正常に実行できた場合、このメッセージ内の文字数を格納します。ただし、末尾の NULL は除外します。  
+ [入力/出力]入力のサイズが含まれています、 *wszMessage*文字バッファー。 出力側では、所定のバッファー サイズが小さすぎる場合、末尾の NULL も含め、必要なバッファー サイズ (単位は文字数) を格納します。 関数を正常に実行できた場合、このメッセージ内の文字数を格納します。ただし、末尾の NULL は除外します。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  
@@ -89,7 +89,7 @@ HRESULT LocalDBFormatMessage(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)です。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

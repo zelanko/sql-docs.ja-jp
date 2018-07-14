@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 59fece6c670c57e5f781affd00ed11490914bdfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: ab4a1941af43e2853d06f72e58baf07dd80a1724
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327902"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Excel 用マスター データ サービス アドインのプロパティの設定
   Excel 用マスター データ サービス アドインの設定では、MDS から Excel アドインにデータを読み込む方法と Excel アドインから MDS にデータをパブリッシュする方法を指定します。  
@@ -33,7 +33,7 @@ ms.locfileid: "36085256"
 |タブとセクション|設定|Description|  
 |設定: [パブリッシュ]|[パブリッシュ時に **[パブリッシュと注釈設定]** ダイアログ ボックスを表示する]|**[パブリッシュ]** をクリックした後に **[パブリッシュと注釈設定]** ダイアログ ボックスが表示されるようにする場合はオンにします。こうすると、すべての変更についての単一の注釈を入力したり、各変更の注釈を個別に入力することができます。<br /><br /> **[パブリッシュと注釈設定]** ダイアログ ボックスを表示せずにパブリッシュ プロセスが開始されるようにする場合はオフにします。 注釈を入力する機会はありません。|  
 |設定: [バージョン]|[バージョンの選択]|Excel アドインに読み込まれるマスター データのバージョンを選択します。 次の値をとります。<br /><br /> **[なし]** : どのバージョンも既定のバージョンにしない場合に選択します。<br /><br /> **[最も古い]** : 最も古いバージョンを既定のバージョンにする場合に選択します。 **[最も新しい]** : 最も新しいバージョンを既定のバージョンにする場合に選択します。|  
-|設定: [ログ記録]|[詳細なログ記録を有効にする]|マスター データを MDS から Excel アドインを読み込むプロセスのログを有効になるよう、サービスのすべてのコマンドの結果がログに記録します。|  
+|設定: [ログ記録]|[詳細なログ記録を有効にする]|マスター データを MDS から Excel アドインを読み込むプロセスのログ記録を有効にするように、サービスのすべてのコマンドの結果が記録されます。|  
 |設定: [バッチ処理のサイズ]|[読み込むセルの数]|MDS サーバーから Excel に読み込まれるバッチで読み込まれるセルの数を示す数値を選択します。 既定値は 50,000 セルです。|  
 |設定: [バッチ処理のサイズ]|[パブリッシュするセルの数]|Excel から MDS サーバーに返されるバッチでパブリッシュされるセルの数を示す数値を選択します。 既定値は 50,000 セルです。|  
 |設定: [セーフ リストに追加されたサーバー]|[すべてクリア]|関連するショートカット クエリ ファイルを開いたときに安全と見なされた接続の一覧をクリアします。|  

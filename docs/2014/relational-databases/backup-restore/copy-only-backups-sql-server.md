@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - copy-only backups [SQL Server]
 - COPY_ONLY option [BACKUP statement]
 - backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e382d3b0bad1a5c43d6fc745280e302c9422ef0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8d5ef086b610402e2c696196b2baae7705c5f920
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248882"
 ---
 # <a name="copy-only-backups-sql-server"></a>コピーのみのバックアップ (SQL Server)
   *コピーのみのバックアップ*は、従来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップのシーケンスから独立した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップです。 通常、バックアップを行うとデータベースが変更され、その後のバックアップの復元方法に影響します。 ただし、データベース全体のバックアップや復元の手順に影響を与えない、特殊な目的にバックアップを行うと役に立つ場合があります。 このため、コピーのみのバックアップが導入されました。  
@@ -56,14 +55,14 @@ ms.locfileid: "36084341"
   
 -   コピーのみの完全バックアップの場合:  
   
-     データベースのバックアップ*database_name* TO \<backup_device*>* しています. WITH COPY_ONLY …  
+     データベースのバックアップ*database_name* TO \<backup_device*>* . WITH COPY_ONLY …  
   
     > [!NOTE]  
     >  COPY_ONLY は、DIFFERENTIAL オプションと共に指定した場合には機能しません。  
   
 -   コピーのみのログ バックアップの場合:  
   
-     BACKUP LOG *database_name* TO *\<* backup_device*>* しています. WITH COPY_ONLY …  
+     BACKUP LOG *database_name* TO *\<* backup_device*>* . WITH COPY_ONLY …  
   
 ###  <a name="PowerShellProcedure"></a> PowerShell の使用  
   

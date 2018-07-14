@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 907ee3eb093f4b240aef2199b0928dab602341ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 21d48953edad8d454f75fa919f9e0facdfb5280b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251324"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>WebForms ReportViewer コントロールの使用
   レポート サーバーに配置されたレポートまたはローカル ファイル システムにあるレポートを表示するには、WebForms ReportViewer コントロールを使用して Web アプリケーションにレポートを表示します。  
@@ -47,7 +47,7 @@ ms.locfileid: "36084525"
   
  レポートをローカル モードで表示する場合は、**[新しいレポートをデザインします]** オプションを選択してレポート デザイナーを起動するか、または既存のプロジェクトに既に含まれているレポートを選択します。 レポートを選択した後、ReportViewer コントロールの **[レポートのパス]** プロパティにレポート RDLC ファイルの名前を入力してください。 このプロパティは、**[プロパティ]** ウィンドウの **[LocalReport]** ノードの下に表示されます。  
   
- レポートを表示するときに ReportViewer ツール バーの項目を隠すことができます。 たとえば、印刷ボタンを隠すことができます。 ツールバー項目を非表示にするには次の ReportViewer プロパティを設定`False`で、**プロパティ**ウィンドウです。  
+ レポートを表示するときに ReportViewer ツール バーの項目を隠すことができます。 たとえば、印刷ボタンを隠すことができます。 ツールバー項目を非表示にするには次の ReportViewer プロパティを設定`False`で、**プロパティ**ウィンドウ。  
   
 -   `ShowBackButton`  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36084525"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>リモート処理モードでのレポートの表示  
  次の例では、レポート サーバーに配置されているレポートの表示方法を示します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル レポート プロジェクトに含まれている Sales Order Detail レポートを使用します。  
   
- この例では統合 Windows 認証を使用するので、最初に権限の借用を有効にする必要があります。 次の行を挿入これを行うには、`web.config`ファイル。  
+ この例では統合 Windows 認証を使用するので、最初に権限の借用を有効にする必要があります。 次の行を挿入これを行う、`web.config`ファイル。  
   
 ```  
 <!-- Web.config file. -->  

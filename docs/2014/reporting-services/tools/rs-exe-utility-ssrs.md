@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
 - rs utility
@@ -21,13 +21,13 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 26e1dccb1d72ac0a743a545e29b175f5e8bb79fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9889c2a14d48a7c2bccd7087c96567e92e1e4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255464"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe ユーティリティは入力ファイル内に指定したスクリプトを処理します。 このユーティリティを使用して、レポート サーバーの配置と管理タスクを自動化します。  
@@ -68,7 +68,7 @@ ms.locfileid: "36083125"
  **-?**  
  (省略可) **rs** の引数の構文を表示します。  
   
- `-i` *input_file*  
+ `-i` *入力ファイル*  
  (必須) 実行する .rss ファイルを指定します。 この値は、.rss ファイルへの相対パスまたは完全修飾パスになります。  
   
  `-s` *serverURL*  
@@ -78,7 +78,7 @@ ms.locfileid: "36083125"
  (省略可) レポート サーバーへの接続に使用するユーザー アカウントを指定します。 `-u` および `-p` を省略した場合、現在の Windows ユーザー アカウントが使用されます。  
   
  `-p` *パスワード*  
- (必要な場合`-u`が指定されている) と共に使用するパスワードを指定します、`-u`引数。 この値は、大文字と小文字が区別されます。  
+ (必要な場合`-u`を指定) で使用するパスワードを指定します、`-u`引数。 この値は、大文字と小文字が区別されます。  
   
  `-e`  
  (省略可) スクリプトを実行する SOAP エンドポイントを指定します。 有効な値は次のとおりです。  
@@ -91,13 +91,13 @@ ms.locfileid: "36083125"
   
 -   Exec2005  
   
- 値が指定されていない場合は、Mgmt2005 エンドポイントが使用されます。 SOAP エンドポイントの詳細については、次を参照してください。[レポート サーバー Web サービス エンドポイント](../report-server-web-service/methods/report-server-web-service-endpoints.md)です。  
+ 値が指定されていない場合は、Mgmt2005 エンドポイントが使用されます。 SOAP エンドポイントの詳細については、次を参照してください。[レポート サーバー Web サービスのエンドポイント](../report-server-web-service/methods/report-server-web-service-endpoints.md)します。  
   
  `-l` *time_out*  
  (省略可) サーバーへの接続がタイムアウトするまでの期間を秒数で指定します。既定値は 60 秒です。 タイムアウト値を指定しない場合、既定値が使用されます。 値が `0` の場合は、接続はタイムアウトしません。  
   
  **-b**  
- (省略可) スクリプト ファイル内のコマンドをバッチで実行します。 いずれかのコマンドが失敗すると、バッチはロールバックされます。 バッチで実行できないコマンドがありますが、それらのコマンドは通常どおり実行されます。 スクリプト内でスローされるが処理されない例外だけが、ロールバックされます。 スクリプトによって例外が処理されから返る`Main`バッチがコミットされます。 このパラメーターを省略した場合、バッチを作成せずにコマンドが実行されます。 詳細については、次を参照してください。 [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md)です。  
+ (省略可) スクリプト ファイル内のコマンドをバッチで実行します。 いずれかのコマンドが失敗すると、バッチはロールバックされます。 バッチで実行できないコマンドがありますが、それらのコマンドは通常どおり実行されます。 スクリプト内でスローされるが処理されない例外だけが、ロールバックされます。 スクリプトによって例外が処理されから返る`Main`、バッチはコミットされます。 このパラメーターを省略した場合、バッチを作成せずにコマンドが実行されます。 詳細については、次を参照してください。 [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md)します。  
   
  `-v` *globalvar*  
  (省略可) スクリプト内で使用するグローバル変数を指定します。 スクリプトでグローバル変数を使用する場合は、この引数を指定する必要があります。 .rss ファイルで定義したグローバル変数に対して有効な値を指定する必要があります。 **–v** 引数ごとに 1 つのグローバル変数を指定できます。  
@@ -106,7 +106,7 @@ ms.locfileid: "36083125"
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 指定した値に設定された名前を使用して、グローバル変数を作成します。 たとえば、 **-v、=**"`1`" **-v b =**"`2`"という名前の変数に結果`a`、値は"`1`"と変数**b**、値は"`2`"です。  
+ 指定した値に設定された名前を使用して、グローバル変数を作成します。 たとえば、 **-v を =**"`1`" **-v b =**"`2`"という名前の変数に結果`a`の値を持つ"`1`"変数と、 **b**の値を持つ"`2`"。  
   
  グローバル変数は、スクリプト内のすべての関数で使用できます。 円記号と引用符 (**\\"**) は、二重引用符と解釈されます。 引用符は、文字列にスペースが含まれている場合のみ必要です。 変数名は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で有効な名前であることが必要です。また変数名は、アルファベットやアンダースコアで始まり、アルファベット文字、数字、およびアンダースコアを含めることができます。 予約語は、変数名として使用できません。 グローバル変数の使用の詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   
@@ -128,7 +128,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  その他の例については、「[Reporting Services スクリプト ファイルを実行する](run-a-reporting-services-script-file.md)」を参照してください。  
   
 ## <a name="remarks"></a>コメント  
- スクリプトを定義して、システム プロパティの設定、レポートのパブリッシュなどが行えます。 作成したスクリプトには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API の任意のメソッドを含めることができます。 詳細については、メソッドとプロパティを使用する、次を参照してください。[レポート サーバー Web サービス](../report-server-web-service/report-server-web-service.md)です。  
+ スクリプトを定義して、システム プロパティの設定、レポートのパブリッシュなどが行えます。 作成したスクリプトには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API の任意のメソッドを含めることができます。 メソッドとプロパティを使用する詳細については、次を参照してください。[レポート サーバー Web サービス](../report-server-web-service/report-server-web-service.md)します。  
   
  スクリプトは、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET のコードで記述し、.rss ファイル名拡張子が付いた Unicode または UTF-8 テキスト ファイルとして保存する必要があります。 **rs** ユーティリティを使用して、スクリプトをデバッグすることはできません。 スクリプトをデバッグするには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]内でコードを実行します。  
   

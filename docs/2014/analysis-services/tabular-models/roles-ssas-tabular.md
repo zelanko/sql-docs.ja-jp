@@ -1,5 +1,5 @@
 ---
-title: ロール (SSAS テーブル) |Microsoft ドキュメント
+title: ロール (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3748f99899990bd46379928b3d524e43e48d277a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ac88882120b588599af625852675e9be95031ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235692"
 ---
 # <a name="roles-ssas-tabular"></a>ロール (SSAS テーブル)
   テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 各ロールには、Windows ユーザー名または Windows グループ別のメンバー、および権限 (読み取り、処理、および管理者) があります。 ロールのメンバーは、ロール権限によって定義されたとおりにモデル上で各種操作を実行できます。 読み取り権限を付与して定義されたロールでは、行レベル フィルターを使用して行レベルでのセキュリティを向上させることもできます。  
@@ -139,7 +139,7 @@ ms.locfileid: "36084204"
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[作成し、ロールの管理&#40;SSAS 表形式&#41;](create-and-manage-roles-ssas-tabular.md)|このトピックのタスクでは、 **[ロール マネージャー]** ダイアログ ボックスを使用して、ロールを作成し管理する方法について説明されています。|  
+|[作成し、管理ロール&#40;SSAS 表形式&#41;](create-and-manage-roles-ssas-tabular.md)|このトピックのタスクでは、 **[ロール マネージャー]** ダイアログ ボックスを使用して、ロールを作成し管理する方法について説明されています。|  
   
 ## <a name="see-also"></a>参照  
  [パースペクティブ&#40;SSAS 表形式&#41;](perspectives-ssas-tabular.md)   

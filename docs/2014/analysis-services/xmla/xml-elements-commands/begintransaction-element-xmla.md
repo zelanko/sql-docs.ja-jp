@@ -1,5 +1,5 @@
 ---
-title: BeginTransaction 要素 (XMLA) |Microsoft ドキュメント
+title: BeginTransaction 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - BeginTransaction command
 ms.assetid: fca122fc-b57c-4ba6-849b-ca8c93cf64e9
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e85979e1e791dcd3c2bb5b19ef5c615f73975e07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1685c1c61c248cf37672cab17ccf3144e7d5e7ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253044"
 ---
 # <a name="begintransaction-element-xmla"></a>BeginTransaction 要素 (XMLA)
-  インスタンスに現在のセッションでトランザクションを開始[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+  インスタンスと現在のセッションでトランザクションを開始[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。  
   
 ## <a name="syntax"></a>構文  
   

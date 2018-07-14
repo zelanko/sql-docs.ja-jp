@@ -1,5 +1,5 @@
 ---
-title: 結果セットで、SQL 実行タスク |Microsoft ドキュメント
+title: 結果セットで、SQL 実行タスク |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0be727ad9370a56de710c0528949398c12050299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1ff4dd56ea104d32a2821bc826ad8919712aea1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217562"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>SQL 実行タスクにおける結果セット
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージでは、タスクが使用する SQL コマンドの種類によって、SQL 実行タスクに結果セットが返されるかどうかが決まります。 たとえば、通常、SELECT ステートメントは結果セットを返しますが、INSERT ステートメントは返しません。  
@@ -35,7 +35,7 @@ ms.locfileid: "36085474"
   
 -   [結果セットによる変数の設定](#Populate_variable_with_result_set)  
   
--   [果セットの構成で、SQL 実行タスク エディター](#Configure_result_sets)  
+-   [セットで、SQL 実行タスク エディターの結果の構成](#Configure_result_sets)  
   
 ##  <a name="Result_set_type"></a> 結果セットの指定の種類  
  SQL 実行タスクでサポートされている結果セットの種類は、次のとおりです。  
@@ -59,9 +59,9 @@ ms.locfileid: "36085474"
   
  結果セットの種類が " **完全な結果セット** " または " **XML**" の場合、結果セット名には 0 を使用する必要があります。  
   
- 結果セットの種類が " **単一行** " の結果セットに変数をマップする場合、変数のデータ型と結果セットに含まれる列のデータ型は互換性がある必要があります。 たとえば、`String` データ型の列を含む結果セットを、数値データ型の変数にマップすることはできません。 設定すると、 **TypeConversionMode**プロパティを`Allowed`、SQL 実行タスクが出力パラメーターの変換を試みるしに割り当てられているクエリの結果は、データ型の変数の結果。  
+ 結果セットの種類が " **単一行** " の結果セットに変数をマップする場合、変数のデータ型と結果セットに含まれる列のデータ型は互換性がある必要があります。 たとえば、`String` データ型の列を含む結果セットを、数値データ型の変数にマップすることはできません。 設定すると、 **TypeConversionMode**プロパティを`Allowed`、SQL 実行タスクが出力パラメーターの変換を試みるしに割り当てられているクエリの結果、変数の結果データを入力します。  
   
- XML 結果セットをマップできるのは、`String` または `Object` データ型の変数のみです。 変数がある場合、`String`データ型、SQL 実行タスクを返します、文字列と、XML ソースには、XML データを使用できます。 変数がある場合、`Object`データ型の場合は、SQL 実行タスクは、ドキュメント オブジェクト モデル (DOM) オブジェクトを返します。  
+ XML 結果セットをマップできるのは、`String` または `Object` データ型の変数のみです。 変数がある場合、 `String` SQL 実行タスクがデータ型、文字列、XML ソースは、XML データを使用できます。 変数がある場合、`Object`データ型の場合は、SQL 実行タスクは、ドキュメント オブジェクト モデル (DOM) オブジェクトを返します。  
   
  A**完全な結果セット**の変数にマップする必要があります、`Object`データ型。 結果は、行セット オブジェクトとして返されます。 Foreach ループ コンテナーを使用して、Object 変数に格納されたテーブル行の値をパッケージ変数に抽出し、その後、スクリプト タスクを使用して、パッケージ変数に格納されたデータをファイルに書き出すことができます。 Foreach ループ コンテナーとスクリプト タスクを使用したこの処理方法のデモについては、msftisprodsamples.codeplex.com の CodePlex サンプル「 [Execute SQL Parameters and Result Sets (SQL 実行パラメーターと結果セット)](http://go.microsoft.com/fwlink/?LinkId=157863)」を参照してください。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "36085474"
 |結果セットの種類|変数のデータ型|オブジェクトの種類|  
 |---------------------|---------------------------|--------------------|  
 |単一行|結果セット内の型列と互換性のあるすべての型|適用なし|  
-|完全な結果セット|`Object`|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含む、ネイティブ接続マネージャーを使用する場合、返されたオブジェクトは ADO`Recordset`です。<br /><br /> タスクがなど、マネージ接続マネージャーを使用するかどうか、[!INCLUDE[vstecado](../includes/vstecado-md.md)]接続マネージャーでは、返されたオブジェクトは、`System.Data.DataSet`です。<br /><br /> アクセスするスクリプト タスクを使用することができます、`System.Data.DataSet`オブジェクトを次の例に示すようにします。<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|完全な結果セット|`Object`|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含む、ネイティブ接続マネージャーを使用する場合、返されたオブジェクトは ADO`Recordset`します。<br /><br /> タスクがなど、マネージ接続マネージャーを使用するかどうか、[!INCLUDE[vstecado](../includes/vstecado-md.md)]接続マネージャーでは、返されるオブジェクトは、`System.Data.DataSet`します。<br /><br /> アクセスするスクリプト タスクを使用することができます、`System.Data.DataSet`オブジェクト、次の例に示すようにします。<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|返されたオブジェクトは、タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含む、ネイティブ接続マネージャーを使用する場合、`MSXML6.IXMLDOMDocument`です。<br /><br /> タスクがなど、マネージ接続マネージャーを使用するかどうか、 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 、返されたオブジェクトは、接続マネージャー、`System.Xml.XmlDocument`です。|  
+|XML|`Object`|タスク、ADO、OLE DB、Excel、および ODBC 接続マネージャーを含む、ネイティブ接続マネージャーを使用する場合、返されたオブジェクトは、`MSXML6.IXMLDOMDocument`します。<br /><br /> タスクがなど、マネージ接続マネージャーを使用するかどうか、[!INCLUDE[vstecado](../includes/vstecado-md.md)]接続マネージャーでは、返されたオブジェクトは、`System.Xml.XmlDocument`します。|  
   
  変数は、SQL 実行タスクまたはパッケージのスコープ内で定義できます。 変数にパッケージ スコープがある場合、結果セットはパッケージ内の他のタスクやコンテナーで利用できます。また、パッケージ実行タスクや DTS 2000 パッケージ実行タスクが実行する任意のパッケージでも利用できます。  
   

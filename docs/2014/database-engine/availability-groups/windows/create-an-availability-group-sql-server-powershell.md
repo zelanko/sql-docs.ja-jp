@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 caps.latest.revision: 39
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 9d02bd4202848c0c22033b00d818c2f0d2554bc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65663e51d915b86a796bb98126c9efeebf74bf14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273508"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>可用性グループの作成 (SQL Server PowerShell)
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の AlwaysOn 可用性グループを PowerShell コマンドレットで作成および構成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
@@ -51,8 +50,8 @@ ms.locfileid: "36083968"
   
 |タスク|PowerShell コマンドレット (利用可能な場合) または Transact SQL ステートメント|タスクを実行する場所**<sup>*</sup>**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
-|データベース ミラーリング エンドポイントを作成する ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスごとに 1 回)|`New-SqlHadrEndPoint`|データベース ミラーリング エンドポイントが欠落している各サーバー インスタンスで実行します。<br /><br /> 注: 既存のデータベース ミラーリング エンドポイントを変更するを使用して`Set-SqlHadrEndpoint`です。|  
-|可用性グループを作成する|まず、`New-SqlAvailabilityReplica` コマンドレットに `-AsTemplate` パラメーターを指定し、可用性グループに追加する予定の 2 つの可用性レプリカのそれぞれについて、インメモリの可用性レプリカ オブジェクトを作成します。<br /><br /> 次を使用して、可用性グループを作成、`New-SqlAvailabilityGroup`コマンドレットと、可用性レプリカ オブジェクトを参照します。|初期プライマリ レプリカをホストするサーバー インスタンスで実行します。|  
+|データベース ミラーリング エンドポイントを作成する ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスごとに 1 回)|`New-SqlHadrEndPoint`|データベース ミラーリング エンドポイントが欠落している各サーバー インスタンスで実行します。<br /><br /> 注: を使用すると、既存のデータベース ミラーリング エンドポイントを変更するには、`Set-SqlHadrEndpoint`します。|  
+|可用性グループを作成する|まず、`New-SqlAvailabilityReplica` コマンドレットに `-AsTemplate` パラメーターを指定し、可用性グループに追加する予定の 2 つの可用性レプリカのそれぞれについて、インメモリの可用性レプリカ オブジェクトを作成します。<br /><br /> 使用して、可用性グループを作成し、`New-SqlAvailabilityGroup`コマンドレットと、可用性レプリカ オブジェクトを参照します。|初期プライマリ レプリカをホストするサーバー インスタンスで実行します。|  
 |セカンダリ レプリカを可用性グループに参加させる|`Join-SqlAvailabilityGroup`|セカンダリ レプリカをホストする各サーバー インスタンスで実行します。|  
 |セカンダリ データベースを準備する|`Backup-SqlDatabase` および `Restore-SqlDatabase`|プライマリ レプリカをホストするサーバー インスタンスでバックアップを作成します。<br /><br /> セカンダリ レプリカをホストする各サーバー インスタンス上で、`NoRecovery` 復元パラメーターを使用してバックアップを復元します。 プライマリ レプリカをホストするコンピューターとターゲット セカンダリ レプリカをホストするコンピューターとでファイル パスが異なる場合は、`RelocateFile` 復元パラメーターも使用します。|  
 |各セカンダリ データベースを可用性グループに参加させてデータ同期を開始する|`Add-SqlAvailabilityDatabase`|セカンダリ レプリカをホストする各サーバー インスタンスで実行します。|  
@@ -68,7 +67,7 @@ ms.locfileid: "36083968"
 ##  <a name="PowerShellProcedure"></a> PowerShell を使用した可用性グループの作成と構成  
   
 > [!NOTE]  
->  表示するには、構文と特定のコマンドレット例を使用して、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+>  構文と特定のコマンドレット例を表示するには、使用、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
 1.  ディレクトリ変更コマンド (`cd`) は、プライマリ レプリカをホストするサーバー インスタンスにします。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "36083968"
   
 7.  新しいセカンダリ データベースをすべて可用性グループに参加させます。 詳細については、「 [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)、または PowerShell を使用して、既存の AlwaysOn 可用性グループにセカンダリ レプリカを追加する方法について説明します。  
   
-8.  オプションを使用して、Windows`dir`コマンドを新しい可用性グループの内容を確認します。  
+8.  Windows を使用して、必要に応じて、`dir`コマンドを新しい可用性グループの内容を確認します。  
   
 > [!NOTE]  
 >  複数のサーバー インスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントが、それぞれ異なるドメイン ユーザー アカウントで実行されている場合、それぞれのサーバー インスタンス上に、もう一方のサーバー インスタンス用のログインを作成し、そのログインにローカルのデータベース ミラーリング エンドポイントへの CONNECT 権限を付与します。  
@@ -183,7 +182,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [条件を制御する自動フェールオーバー (AlwaysOn 可用性グループ) の柔軟なフェールオーバー ポリシーを構成します。](configure-flexible-automatic-failover-policy.md)  
+-   [自動フェールオーバー (AlwaysOn 可用性グループ) の条件を制御する柔軟なフェールオーバー ポリシーを構成します。](configure-flexible-automatic-failover-policy.md)  
   
 -   [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
@@ -215,9 +214,9 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
  **AlwaysOn 可用性グループの構成をトラブルシューティングするには**  
   
--   [AlwaysOn 可用性グループの構成 (SQL Server) は削除のトラブルシューティングします。](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [削除された AlwaysOn 可用性グループ構成 (SQL Server) のトラブルシューティングします。](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
--   [失敗したファイルの追加操作のトラブルシューティング&#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [ファイル追加失敗の操作のトラブルシューティング&#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
@@ -233,13 +232,13 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **ビデオ:**  
   
-     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 1: 概要次世代の高可用性ソリューション](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ、パート 1: 次世代の高可用性ソリューションの概要](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 2: 構築 AlwaysOn を使用したミッション クリティカルな高可用性ソリューション](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ、パート 2: AlwaysOn を使用したミッション クリティカルな高可用性ソリューションの構築](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **ホワイト ペーパー:**  
   
-     [高可用性と災害復旧の Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
   

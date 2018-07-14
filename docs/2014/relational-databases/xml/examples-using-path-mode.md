@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bf9d4775b776c0766e05b39d8cd271bff9fccbd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: acc07be98a39a302cb4d20f9d18ed11c0f85869b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274628"
 ---
 # <a name="examples-using-path-mode"></a>例 : PATH モードの使用
   次の例では、PATH モードで SELECT クエリから XML を生成する方法を示します。 これらのクエリの多くは、ProductModel テーブルの Instructions 列に格納されている、自転車製造手順の XML ドキュメントに対して指定されています。  
@@ -190,7 +190,7 @@ GO
   
  `</Root>`  
   
- 次のクエリは、指定した製品モデルの ID および名前以外に、その製品モデルに対応する製造手順書の場所を返します。 Instructions 列があるため`xml`の種類、`query()`メソッドの`xml`データ型を指定して、場所を取得します。  
+ 次のクエリは、指定した製品モデルの ID および名前以外に、その製品モデルに対応する製造手順書の場所を返します。 Instructions 列であるため`xml`の種類、`query()`メソッドの`xml`場所を取得するデータ型を指定します。  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -248,7 +248,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- `MI` では `WITH XMLNAMESPACES`プレフィックスも定義されています。 その結果、`query()`のメソッド、`xml`指定された型で、クエリ プロローグでのプレフィックスが定義されていません。 結果を次に示します。  
+ `MI` では `WITH XMLNAMESPACES`プレフィックスも定義されています。 結果として、`query()`のメソッド、`xml`指定された型で、クエリのプロローグでのプレフィックスが定義されていません。 結果を次に示します。  
   
  `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   

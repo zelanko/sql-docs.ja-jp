@@ -1,5 +1,5 @@
 ---
-title: SQL Server エージェントで SSAS 管理タスクのスケジュール設定 |Microsoft ドキュメント
+title: SQL Server エージェントで SSAS 管理タスクのスケジュール |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b94fa6a5c38b08d9756581063c497e4440105c62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e02a5f91994d0002873984a6e77db53169d024e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243682"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server エージェントで SSAS 管理タスクのスケジュール設定を行う
   SQL Server エージェント サービスを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理タスクのスケジュールを設定して、必要なときに必要な順序で実行できます。 定期タスクは、一定の周期または指定した周期で実行されるプロセスを自動化するのに役立ちます。 キューブ処理などの管理タスクは、ビジネス活動が盛んでない時間帯に実行されるようにスケジュールできます。 また、SQL Server エージェント ジョブでジョブ ステップを作成することにより、タスクの実行順序を指定できます。 たとえば、キューブを処理した後でバックアップを実行できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "36083549"
 ## <a name="prerequisites"></a>前提条件  
  SQL Server エージェント サービスがインストールされている必要があります。  
   
- 既定では、ジョブはサービス アカウントで実行されます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、SQL Server エージェントの既定のアカウントは NT service \sqlagent$\<instancename > です。 バックアップまたは処理タスクを実行するには、このアカウントが Analysis Services インスタンスのシステム管理者である必要があります。 詳細については、次を参照してください。[サーバー管理者のアクセス許可を付与&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)です。  
+ 既定では、ジョブはサービス アカウントで実行されます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、SQL Server エージェントの既定のアカウントは NT service \sqlagent$\<instancename > です。 バックアップまたは処理タスクを実行するには、このアカウントが Analysis Services インスタンスのシステム管理者である必要があります。 詳細については、次を参照してください。[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)します。  
   
  操作対象のテスト データベースも必要です。 AdventureWorks 多次元サンプル データベースまたはプロジェクトを Analysis Services 多次元チュートリアルから配置して、このチュートリアルで使用できます。 詳細については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../install-sample-data-and-projects.md)」を参照してください。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36083549"
   
 7.  **[サーバー]** で、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスの **localhost** と、名前付きインスタンスの **localhost\\**\<*インスタンス名*> を入力します。  
   
-     リモート コンピューターからジョブを実行する場合は、ジョブが実行されるサーバー名およびインスタンス名を使用します。 形式を使用して\<*サーバー名*> の既定のインスタンス、および\<*サーバー名*>\\<*インスタンス名前*> 名前付きインスタンス。  
+     リモート コンピューターからジョブを実行する場合は、ジョブが実行されるサーバー名およびインスタンス名を使用します。 形式を使用して\<*サーバー名*> 既定のインスタンスと\<*サーバー名*>\\<*インスタンス名前*> 名前付きインスタンス。  
   
 8.  **[種類]** で、 **[SQL Server Analysis Services コマンド]** を選択します。  
   
@@ -227,6 +227,6 @@ ms.locfileid: "36083549"
   
 ## <a name="see-also"></a>参照  
  [処理オプションと設定&#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Analysis Services の管理タスクをスクリプト作成](../script-administrative-tasks-in-analysis-services.md)  
+ [Analysis Services での管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)  
   
   

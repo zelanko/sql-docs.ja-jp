@@ -1,5 +1,5 @@
 ---
-title: クラスターのネットワークの構成 |Microsoft ドキュメント
+title: クラスター ネットワークの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cluster network selection, Setup
 - cluster network selection
 ms.assetid: 579482ef-a023-45b2-9176-b4a4188adf9d
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a57e2e3ccfcbcd6b564056b69778f5082c52d6c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 74d2e7dd3d29777d21a21c4a9b403bc04e6dcb0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274638"
 ---
 # <a name="cluster-network-configuration"></a>クラスター ネットワークの構成
   フェールオーバー クラスター インスタンスのネットワーク リソースを指定するには、 **[クラスター ネットワークの選択]** ページを使用します。  

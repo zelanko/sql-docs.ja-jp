@@ -1,5 +1,5 @@
 ---
-title: アイテム セット タブ (マイニング モデル ビューアー) |Microsoft ドキュメント
+title: アイテム セット タブ (マイニング モデル ビューアー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.itemsets.f1
 ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4fb7491a8c9fd4a3ee4656bac9c45f0f8a365b74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2069f5355629c1ac82889e56b11a9a35023edfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247622"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>[アイテムセット] タブ (マイニング モデル ビューアー)
   **[アイテムセット]** ペインを使用すると、アソシエーション ルール マイニング モデルに含まれる、よく使用されるアイテムセットを表示できます。 アソシエーション モデルには多数のアイテムセットが含まれる可能性があるので、ビューアーには、ビューアーに表示するアイテムセットを絞り込むためのコントロールが用意されています。  

@@ -1,5 +1,5 @@
 ---
-title: KeyErrorLimitAction 要素 (ASSL) |Microsoft ドキュメント
+title: KeyErrorLimitAction 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyErrorLimitAction element
 ms.assetid: a2a01aae-0571-499f-9025-b61c741f3ddb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73c903190a0cc982a75227be6ff1adeb5081c0c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6001901e7613099eff2856905b88452870f7f2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247272"
 ---
 # <a name="keyerrorlimitaction-element-assl"></a>KeyErrorLimitAction 要素 (ASSL)
   アクションを指定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ときいるキー エラー数がで指定された、 [KeyErrorLimit](keyerrorlimit-element-assl.md)要素に到達します。  
@@ -69,7 +69,7 @@ ms.locfileid: "36084164"
 |*StopProcessing*|オブジェクトの処理を停止します。|  
 |*StopLogging*|オブジェクトの処理は継続されますが、処理中に発生したエラーのログ記録を停止します。|  
   
- 許可される値に対応する列挙`KeyErrorLimitAction`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.KeyErrorLimitAction>します。  
+ 許容された値に対応する列挙体`KeyErrorLimitAction`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.KeyErrorLimitAction>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

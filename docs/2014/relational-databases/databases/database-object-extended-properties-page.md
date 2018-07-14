@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.extendedproperties.f1
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 53c9122620b40d827eafd9de74738fd5df72f461
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: efbcf8ccaf28f134ba1d9ec2d5a6c0353d8c7f17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256738"
 ---
 # <a name="database-object-extended-properties-page"></a>データベース オブジェクト ([拡張プロパティ] ページ)
   拡張プロパティによって、カスタム プロパティをデータベース オブジェクトに追加できます。 このページを使用すると、選択されているオブジェクトの拡張プロパティを表示または変更できます。 データベース オブジェクトのすべての種類に対して、同じ **[拡張プロパティ]** ページが表示されます。  
@@ -39,7 +39,7 @@ ms.locfileid: "36082783"
  **[参照] ボタン**  
  **[値]** の後ろにある参照 ([...]) ボタンをクリックすると、 **拡張プロパティの値を設定するための** ダイアログ ボックスが開きます。 ここでは、より大きなテキスト ボックスを使用して拡張プロパティの値を入力または表示できます。  
   
- **Delete**  
+ **削除**  
  選択されている拡張プロパティを削除します。  
   
 ## <a name="see-also"></a>参照  

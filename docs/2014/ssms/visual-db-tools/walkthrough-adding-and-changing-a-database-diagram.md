@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f49bf89391a0863a54cc57858cd5fb9c05fba90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9d3ac48037a5a61bd70179927b3c6de0eba90c9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244024"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>チュートリアル: データベース ダイアグラムの追加と変更
   このチュートリアルでは、データベース ダイアグラムを作成および変更する方法と、データベース ダイアグラム コンポーネントを使用してデータベースを変更する方法について説明します。 ダイアグラムにテーブルを追加する方法、テーブル間のリレーションシップを作成する方法、列に制約とインデックスを作成する方法、およびテーブルごとに表示する情報のレベルを変更する方法を記載しています。  
@@ -74,7 +74,7 @@ ms.locfileid: "36084006"
   
 1.  ダイアグラム デザイナーで、既存のテーブル以外の場所を右クリックし、 **[新しいテーブル]** をクリックします。  
   
-2.  **名前の選択**ダイアログ ボックスで、をクリックして**OK**を既定の名前を受け入れるように`Table1`です。  
+2.  **名前の選択**ダイアログ ボックスで、をクリックして **[ok]** を既定の名前を受け入れる`Table1`。  
   
      新しいテーブル グリッドに **[列名]**、 **[データ型]**、および **[Null を許容]** という 3 つの列が表示されます。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36084006"
   
 5.  **[ファイル]** メニューの **[Diagram1 を保存]** をクリックします。  
   
-6.  **名前の選択**ダイアログ ボックスで、をクリックして**OK**を既定の名前を受け入れるように`Diagram1`です。  
+6.  **名前の選択**ダイアログ ボックスで、をクリックして **[ok]** を既定の名前を受け入れる`Diagram1`。  
   
 7.  **[上書き保存]** ダイアログ ボックスに、 `Table1` がデータベースに保存されることを示すメッセージが表示されます。 **[はい]** をクリックします。  
   
@@ -211,7 +211,7 @@ ms.locfileid: "36084006"
 -   ビットマップへのダイアグラムのコピー  
   
 ## <a name="see-also"></a>参照  
- [ダイアグラムに表示される情報の量をカスタマイズ&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [ダイアグラムに表示される情報の量のカスタマイズ&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [データベース ダイアグラム デザイナー設定&#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
  [ダイアグラムにテーブルを追加&#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
  [ダイアグラムでテーブル間のリレーションシップを作成する&#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   

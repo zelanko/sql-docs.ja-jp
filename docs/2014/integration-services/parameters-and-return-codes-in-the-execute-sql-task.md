@@ -1,5 +1,5 @@
 ---
-title: パラメーターと戻り値のコードは、SQL 実行タスク |Microsoft ドキュメント
+title: パラメーターとリターン コード、SQL 実行タスク |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - return codes [Integration Services]
 - parameters [Integration Services]
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 949fefc6beb432eaee882b3a842279a9531f3fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12739be23eb0a2104f73d9ad1c1240b3c235259c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252334"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>SQL 実行タスクのパラメーターとリターン コード
-  SQL ステートメントおよびストアド プロシージャを頻繁に使用`input`パラメーター、`output`パラメーター、およびリターン コード。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の SQL 実行タスクでは、`Input`、`Output`、および `ReturnValue` という、パラメーターの型がサポートされています。 使用する、 `Input` 、入力パラメーターの型`Output`の出力パラメーター、および`ReturnValue`のリターン コード。  
+  SQL ステートメントおよびストアド プロシージャを頻繁に使用`input`パラメーター、`output`パラメーター、およびリターン コード。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の SQL 実行タスクでは、`Input`、`Output`、および `ReturnValue` という、パラメーターの型がサポートされています。 使用する、 `Input` 、入力パラメーターの型`Output`の出力パラメーター、および`ReturnValue`リターン コード。  
   
 > [!NOTE]  
 >  SQL 実行タスクでは、データ プロバイダーがサポートしている場合のみ、パラメーターを使用できます。  
@@ -79,29 +79,29 @@ ms.locfileid: "36083935"
  接続マネージャーが使用するプロバイダーによっては、一部の OLE DB データ型がサポートされないことがあります。 たとえば、Excel ドライバーは限定されたデータ型のセットしか認識しません。 Excel ドライバーでの Jet プロバイダーの動作の詳細については、「[Excel ソース](data-flow/excel-source.md)」を参照してください。  
   
 #### <a name="using-parameters-with-ole-db-connection-managers"></a>OLE DB 接続マネージャーでのパラメーターの使用  
- SQL 実行タスクが OLE DB 接続マネージャーを使用する場合は、タスクの BypassPrepare プロパティを使用できます。 このプロパティを設定する必要があります`true`SQL 実行タスクは、パラメーターを使用して SQL ステートメントを使用している場合。  
+ SQL 実行タスクが OLE DB 接続マネージャーを使用する場合は、タスクの BypassPrepare プロパティを使用できます。 このプロパティを設定する必要があります`true`SQL 実行タスクは、パラメーターと共に SQL ステートメントを使用する場合。  
   
  OLE DB 接続マネージャーを使用する場合、パラメーター化サブクエリは使用できません。これは、SQL 実行タスクが OLE DB プロバイダーを介してパラメーター情報を取得できないからです。 ただし、式を使用することで、パラメーター値をクエリ文字列に連結したり、タスクの SqlStatementSource プロパティを設定したりできます。  
   
-##  <a name="Date_and_time_data_types"></a> 日付と時刻のデータ型のパラメーターを使用します。  
+##  <a name="Date_and_time_data_types"></a> 日付と時刻のデータ型とパラメーターの使用  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 接続マネージャーおよび ADO 接続マネージャーでの日付と時刻のパラメーターの使用  
- データを読み取るとき、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]型、`time`と`datetimeoffset`、いずれかを使用する SQL 実行タスク、[!INCLUDE[vstecado](../includes/vstecado-md.md)]または ADO 接続マネージャーが、次の追加要件。  
+ データを読み取るときに、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]型、`time`と`datetimeoffset`、いずれかを使用する SQL 実行タスク、[!INCLUDE[vstecado](../includes/vstecado-md.md)]または ADO 接続マネージャーが、次の追加要件。  
   
--   `time`データ、[!INCLUDE[vstecado](../includes/vstecado-md.md)]接続マネージャーは、パラメーターの型がパラメーターに格納するには、このデータを必要と`Input`または`Output`、データ型が`string`です。  
+-   `time` 、データ、[!INCLUDE[vstecado](../includes/vstecado-md.md)]接続マネージャーは、パラメーターの型がパラメーターに格納するには、このデータを必要と`Input`または`Output`、データ型が`string`します。  
   
--   `datetimeoffset`データ、[!INCLUDE[vstecado](../includes/vstecado-md.md)]接続マネージャーは、次のパラメーターのいずれかで格納するには、このデータを必要とします。  
+-   `datetimeoffset` 、データ、[!INCLUDE[vstecado](../includes/vstecado-md.md)]接続マネージャーは、次のパラメーターのいずれかに格納するには、このデータを必要とします。  
   
     -   パラメーターの型が `Input` で、データ型が `string` のパラメーター。  
   
-    -   パラメーターの型がパラメーター`Output`または`ReturnValue`、データ型が`datetimeoffset`、 `string`、または`datetime2`です。 データ型がいずれかのパラメーターを選択したかどうかは`string`または`datetime2`、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] string または datetime2 にデータを変換します。  
+    -   パラメーターの型がパラメーター`Output`または`ReturnValue`、データ型が`datetimeoffset`、 `string`、または`datetime2`します。 データ型がいずれかのパラメーターを選択したかどうかは`string`または`datetime2`、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]でデータが string または datetime2 に変換します。  
   
 -   ADO 接続マネージャーでは、`time` 型または `datetimeoffset` 型のデータを、パラメーターの型が `Input` または `Output` で、データ型が `adVarWchar` のパラメーターに格納する必要があります。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ型の詳細とそれを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] データ型にマッピングする方法については、「[データ型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)」と「[Integration Services のデータ型](data-flow/integration-services-data-types.md)」を参照してください。  
   
 ### <a name="using-date-and-time-parameters-with-ole-db-connection-managers"></a>OLE DB 接続マネージャーでの日付と時刻のパラメーターの使用  
- SQL 実行タスクでのデータの特定の記憶域の要件を持つ、OLE DB 接続マネージャーを使用する場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データ型、 `date`、 `time`、 `datetime`、 `datetime2`、および`datetimeoffset`です。 このデータは、次のいずれかの型のパラメーターに格納する必要があります。  
+ SQL 実行タスクでのデータに関して特定の記憶域の要件を持つ、OLE DB 接続マネージャーを使用する場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データ型、 `date`、 `time`、 `datetime`、 `datetime2`、および`datetimeoffset`します。 このデータは、次のいずれかの型のパラメーターに格納する必要があります。  
   
 -   NVARCHAR データ型の入力パラメーター。  
   
@@ -117,11 +117,11 @@ ms.locfileid: "36083935"
  データが適切な入力パラメーターまたは出力パラメーターに格納されないと、パッケージは失敗します。  
   
 ### <a name="using-date-and-time-parameters-with-odbc-connection-managers"></a>ODBC 接続マネージャーでの日付と時刻のパラメーターの使用  
- SQL 実行タスクのいずれかのデータの特定の記憶域の要件を持つ、ODBC 接続マネージャーを使用する場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データ型、 `date`、 `time`、 `datetime`、 `datetime2`、または`datetimeoffset`です。 このデータは、次のいずれかの型のパラメーターに格納する必要があります。  
+ SQL 実行タスクがのいずれかのデータの特定の記憶域の要件には、ODBC 接続マネージャーを使用する場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データ型、 `date`、 `time`、 `datetime`、 `datetime2`、または`datetimeoffset`します。 このデータは、次のいずれかの型のパラメーターに格納する必要があります。  
   
 -   SQL_WVARCHAR データ型の `input` パラメーター。  
   
--   `output`次の表に記載されている、適切なデータ型のパラメーターです。  
+-   `output`適切なデータ型は、次の表に記載されているパラメーター。  
   
     |`Output` パラメーターの型|Date データ型|  
     |-------------------------------|--------------------|  
@@ -153,7 +153,7 @@ ms.locfileid: "36083935"
   
 -   [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続では、パラメーター名として @parmMinProductID と @parmMaxProductID が使用されます。  
   
-##  <a name="Stored_procedures"></a> ストアド プロシージャでパラメーターの使用  
+##  <a name="Stored_procedures"></a> ストアド プロシージャでパラメーターを使用  
  ストアド プロシージャを実行する SQL コマンドでは、パラメーター マッピングを使用することもできます。 パラメーター マーカーとパラメーター名の使用方法に関する規則は、パラメーター化クエリの規則と同様に、SQL 実行タスクで使用される接続マネージャーの種類によって異なります。  
   
  次の表に、EXEC コマンドの例を接続マネージャーの種類別に示します。 この例では、[!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] の **uspGetBillOfMaterials** ストアド プロシージャを実行します。 このストアド プロシージャでは、`input` パラメーター `@StartProductID` と `@CheckDate` を使用します。  
@@ -170,9 +170,9 @@ ms.locfileid: "36083935"
  Transact-SQL ストアド プロシージャでの入力パラメーターと出力パラメーターの使用の詳細については、「[EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)」を参照してください。  
   
 ##  <a name="Return_codes"></a> リターン コードの値の取得  
- ストアド プロシージャは、リターン コードという整数値を返してプロシージャの実行状態を表すことができます。 パラメーターを使用する SQL 実行タスクにリターン コードを実装する、`ReturnValue`型です。  
+ ストアド プロシージャは、リターン コードという整数値を返してプロシージャの実行状態を表すことができます。 パラメーターを使用する SQL 実行タスクにリターン コードを実装するために、`ReturnValue`型。  
   
- 次の表に、リターン コードを実装する EXEC コマンドの一部の例を接続の種類別に示します。 すべての例で、`input` パラメーターを使用します。 パラメーター マーカーとパラメーター名を使用する方法のルールは、すべてのパラメーター型の同じ —`Input`、 `Output`、および`ReturnValue`です。  
+ 次の表に、リターン コードを実装する EXEC コマンドの一部の例を接続の種類別に示します。 すべての例で、`input` パラメーターを使用します。 パラメーター マーカーとパラメーター名を使用する方法に関する規則はすべてのパラメーター型と同じ-`Input`、 `Output`、および`ReturnValue`します。  
   
  一部の構文では、パラメーターのリテラルがサポートされません。 その場合は、変数を使用してパラメーター値を指定する必要があります。  
   
@@ -181,13 +181,13 @@ ms.locfileid: "36083935"
 |EXCEL および OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC の呼び出し構文の詳細については、MSDN ライブラリの ODBC プログラマ リファレンスにある「 [プロシージャのパラメーター](http://go.microsoft.com/fwlink/?LinkId=89462)」を参照してください。|  
 |ADO (ADO)|IsQueryStoreProcedure に設定されている場合`False`、 `EXEC ? = myStoredProcedure 1`<br /><br /> IsQueryStoreProcedure に設定されている場合`True`、 `myStoredProcedure`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|設定されているセット IsQueryStoreProcedure`True`です。<br /><br /> `myStoredProcedure`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|IsQueryStoreProcedure に設定されている`True`します。<br /><br /> `myStoredProcedure`|  
   
- 前の表に示した構文では、SQL 実行タスクは **[直接入力]** ソース タイプを使用してストアド プロシージャを実行します。 SQL 実行タスクは **[ファイル接続]** ソース タイプを使用してストアド プロシージャを実行することもできます。 SQL 実行タスクを使用しているかどうかに関係なく、**直接入力**または**ファイルへの接続**ソースの種類のパラメーターを使用して、`ReturnValue`リターン コードを実装する型。 SQL 実行タスクで実行される SQL ステートメントのソース タイプの構成方法の詳細については、「[[SQL 実行タスク エディター] &#40;[全般] タブ&#41;](general-page-of-integration-services-designers-options.md)」を参照してください。  
+ 前の表に示した構文では、SQL 実行タスクは **[直接入力]** ソース タイプを使用してストアド プロシージャを実行します。 SQL 実行タスクは **[ファイル接続]** ソース タイプを使用してストアド プロシージャを実行することもできます。 SQL 実行タスクを使用しているかどうかに関係なく、**直接入力**または**ファイル接続**ソース タイプのパラメーターを使用して、`ReturnValue`リターン コードを実装する型。 SQL 実行タスクで実行される SQL ステートメントのソース タイプの構成方法の詳細については、「[[SQL 実行タスク エディター] &#40;[全般] タブ&#41;](general-page-of-integration-services-designers-options.md)」を参照してください。  
   
  Transact-SQL ストアド プロシージャでのリターン コードの使用の詳細については、「[RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql)」を参照してください。  
   
-##  <a name="Configure_parameters_and_return_codes"></a> パラメーターとリターン コードを構成する、SQL 実行タスク  
+##  <a name="Configure_parameters_and_return_codes"></a> 構成パラメーターとリターン コードで、SQL 実行タスク  
  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで設定できる、パラメーターとリターン コードのプロパティの詳細については、次のトピックを参照してください。  
   
 -   [SQL 実行タスク エディター&#40;パラメーター マッピング ページ&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)  

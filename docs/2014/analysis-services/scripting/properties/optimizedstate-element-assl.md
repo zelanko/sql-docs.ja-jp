@@ -1,5 +1,5 @@
 ---
-title: OptimizedState 要素 (ASSL) |Microsoft ドキュメント
+title: OptimizedState 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OptimizedState element
 ms.assetid: 120dcc4c-8fe8-4471-bbd6-99ad534364f0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 665d84185ceab6b907a7acdd3bfc9f600baaaf89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 932ef541a0e9613ad46a032be5c218eccd5276ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224074"
 ---
 # <a name="optimizedstate-element-assl"></a>OptimizedState 要素 (ASSL)
   階層に適用される最適化のレベルを決定します。  
@@ -69,7 +69,7 @@ ms.locfileid: "36085083"
 |*FullyOptimized*|インスタンスは、階層のインデックスを構築し、クエリ パフォーマンスを改善します。|  
 |*NotOptimized*|インスタンスは追加のインデックスを構築しません。|  
   
- 許可される値に対応する列挙`OptimizedState`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.OptimizationType>します。  
+ 許容された値に対応する列挙体`OptimizedState`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.OptimizationType>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

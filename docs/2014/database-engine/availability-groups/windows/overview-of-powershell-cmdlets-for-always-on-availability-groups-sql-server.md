@@ -1,29 +1,28 @@
 ---
-title: AlwaysOn 可用性グループ (SQL Server) の PowerShell コマンドレットの概要 |Microsoft ドキュメント
+title: AlwaysOn 可用性グループ (SQL Server) の PowerShell コマンドレットの概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], PowerShell cmdlets
 - Availability Groups [SQL Server], about
 - PowerShell [SQL Server], cmdlets
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 caps.latest.revision: 35
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 3d3b1715a61ed7711217148a3a42bbcd5340308a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 09fbe31747ef722775a0156939f02fb49103fd22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231972"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性グループの PowerShell コマンドレットの概要 (SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell は、特にシステム管理用に設計されている、タスク ベースのコマンド ライン シェルとスクリプト言語です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で一連の PowerShell コマンドレットを提供しており、それらを使用すると可用性グループ、可用性レプリカ、および可用性データベースの配置、管理、および監視ができます。  
@@ -33,7 +32,7 @@ ms.locfileid: "36085070"
   
  このトピックでは、以下の一連のタスクのためのコマンドレットについて説明します。  
   
--   [AlwaysOn 可用性グループのサーバー インスタンスの構成](#ConfiguringServerInstance)  
+-   [サーバー インスタンスの AlwaysOn 可用性グループの構成](#ConfiguringServerInstance)  
   
 -   [データベースおよびトランザクション ログのバックアップと復元](#BnRcmdlets)  
   
@@ -48,14 +47,14 @@ ms.locfileid: "36085070"
 -   [可用性グループの正常性の監視](#MonitorTblshtAGs)  
   
 > [!NOTE]  
->  各トピックの一覧については[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]コマンドレットを使用して実行する方法について説明しているオンライン ブック[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]、タスクの「関連タスク」セクションを参照して[AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)です。  
+>  トピックの一覧については[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]オンライン ブックの「コマンドレットを使用して実行する方法を説明する[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]、タスクの「関連タスク」セクションを参照してください[AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)します。  
   
-##  <a name="ConfiguringServerInstance"></a> AlwaysOn 可用性グループのサーバー インスタンスの構成  
+##  <a name="ConfiguringServerInstance"></a> サーバー インスタンスの AlwaysOn 可用性グループの構成  
   
 |コマンドレット|説明|サポート対象|  
 |-------------|-----------------|------------------|  
 |`Disable-SqlAlwaysOn`|サーバー インスタンス上の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を無効にします。|`Path`、`InputObject`、または `Name` パラメーターによって指定されるサーバー インスタンス  ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をサポートしている [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のエディションである必要があります)。|  
-|`Enable-SqlAlwaysOn`|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能をサポートしている [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインスタンス上で [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を有効化します。 サポートについては[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[前提条件、制限事項、および AlwaysOn 可用性グループに関する推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)です。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をサポートしている [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の任意のエディション。|  
+|`Enable-SqlAlwaysOn`|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能をサポートしている [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインスタンス上で [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を有効化します。 サポートについて[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)します。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をサポートしている [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の任意のエディション。|  
 |`New-SqlHadrEndPoint`|サーバー インスタンス上に新しいデータベース ミラーリング エンドポイントを作成します。 このエンドポイントは、プライマリ データベースとセカンダリ データベース間のデータ移動のために必要です。|の任意のインスタンス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|既存のデータベース ミラーリング エンドポイントの名前、状態、認証などのプロパティを変更します。|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] をサポートしていて、データベース ミラーリング エンドポイントが存在しないサーバー インスタンス。|  
   
@@ -64,7 +63,7 @@ ms.locfileid: "36085070"
 |コマンドレット|説明|サポート対象|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|データまたはログ バックアップを作成します。|任意のオンライン データベース ( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の場合、プライマリ レプリカをホストしているサーバー インスタンス上のデータベース)|  
-|`Restore-SqlDatabase`|バックアップを復元します。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の任意のインスタンス ( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の場合、セカンダリ レプリカをホストしているサーバー インスタンス)<br /><br /> **\*\* 重要な\* \*** セカンダリ データベースは、次のように準備が整ったときに行う必要があります、`-NoRecovery`内のパラメーターすべて`Restore-SqlDatabase`コマンド。|  
+|`Restore-SqlDatabase`|バックアップを復元します。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の任意のインスタンス ( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の場合、セカンダリ レプリカをホストしているサーバー インスタンス)<br /><br /> **\*\* 重要な\* \*** 使用する必要がありますセカンダリ データベースを準備する際、`-NoRecovery`内のパラメーターすべて`Restore-SqlDatabase`コマンド。|  
   
  これらのコマンドレッドを使用してセカンダリ データベースを準備する方法の詳細については、「[可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)」を参照してください。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "36085070"
   
  * 可用性グループ内のすべての可用性レプリカについての情報を表示するには、プライマリ レプリカをホストするサーバー インスタンスを使用してください。  
   
- 詳細については、次を参照してください。 [AlwaysOn ポリシーを使用して、可用性グループの正常性を確認して&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)です。  
+ 詳細については、次を参照してください。 [AlwaysOn ポリシーを使用して、可用性グループの正常性を表示して&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)します。  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

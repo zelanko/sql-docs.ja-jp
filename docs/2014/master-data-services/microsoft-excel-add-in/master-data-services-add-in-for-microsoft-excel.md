@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 17
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06f20a19801b43a25f3622424aa8ce76d2c34df2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a5d6efd6aa45886aa87fdd5db5f51ae3682e45ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273088"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel 用マスター データ サービス アドイン
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]、参照データのマスター リストは、Excel を使用して、組織内にあるすべてのユーザーに配布できます。 セキュリティによって、ユーザーが表示および更新できるデータを決定します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]、参照データのマスター リストは、Excel を使用して、組織内ですべてのユーザーに配布できます。 セキュリティによって、ユーザーが表示および更新できるデータを決定します。  
   
  フィルター処理したデータ リストを MDS から Excel に読み込んで、そのデータを他のデータと同様に Excel で操作することができます。 完了したら、データをパブリッシュして一元的な格納場所の MDS に戻すことができます。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36083007"
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、Data Quality Services (DQS) を使用して、MDS に読み込む前にデータを照合できます。 これにより、MDS 内のデータの重複を防ぐことができます。  
   
 > [!IMPORTANT]  
->  使用し続けることができます、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]のマスター データ サービス アドインを Excel 用マスター データ サービスと Data Quality Services をアップグレードした後の SP1 バージョン[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]CTP2 です。 ただし、SQL Server 2014 CTP2 にアップグレードした後、以前のバージョンの Excel 用マスター データ サービス アドインは機能しません。 ダウンロードすることができます、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 バージョンのマスター データ サービス アドインを使用して Excel の[ここ](http://go.microsoft.com/fwlink/?LinkId=328664)です。  
+>  使用し続けることができます、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]マスター データ サービス アドインの Excel 用マスター データ サービスおよび Data Quality Services をアップグレードした後の SP1 バージョン[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]CTP2 します。 ただし、SQL Server 2014 CTP2 にアップグレードした後、以前のバージョンの Excel 用マスター データ サービス アドインは機能しません。 ダウンロードすることができます、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 バージョンのマスター データ サービス アドインを使用して Excel の[ここ](http://go.microsoft.com/fwlink/?LinkId=328664)します。  
   
 ## <a name="terms"></a>用語  
  アドインを使用するときに、次の用語を目にすることがあります。  
@@ -58,7 +58,7 @@ ms.locfileid: "36083007"
 |ショートカットを他のユーザーと共有します。|[ショートカット クエリ ファイルの電子メールでの送信 &#40;Excel 用 MDS アドイン&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |メンバーに加えられたすべての変更を表示します。|[メンバーのすべての注釈またはトランザクションの表示 &#40;Excel 用 MDS アドイン&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
 |新しいデータをパブリッシュする前に、重複が存在するかどうかを調べます。|[類似データの照合 &#40;MDS Excel 用 MDS アドイン&#41;](match-similar-data-mds-add-in-for-excel.md)|  
-|ワークシートから MDS リポジトリにデータをパブリッシュします。|[Excel からデータを MDS にパブリッシュ&#40;MDS アドインを Excel 用&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|ワークシートから MDS リポジトリにデータをパブリッシュします。|[Excel からデータを MDS にパブリッシュ&#40;MDS アドインの Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
 |ワークシート内のデータを含む新しいエンティティを作成します (管理者のみ)。|[エンティティの作成 &#40;Excel 用 MDS アドイン&#41;](create-an-entity-mds-add-in-for-excel.md)|  
 |制約リストとも呼ばれるドメイン ベースの属性を作成します (管理者のみ)。|[ドメイン ベースの属性の作成 &#40;Excel 用 MDS アドイン&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
 |Excel 用マスター データ サービス アドインで、データの読み込みとパブリッシングのプロパティを設定します。 (管理者のみ)。|[Excel 用マスター データ サービス アドインのプロパティの設定](setting-properties-for-master-data-services-add-in-for-excel.md)|  
@@ -67,13 +67,13 @@ ms.locfileid: "36083007"
   
 -   [接続 &#40;Excel 用 MDS アドイン&#41;](connections-mds-add-in-for-excel.md)  
   
--   [データの読み込み&#40;MDS アドインを Excel 用&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [データの読み込み&#40;MDS アドインの Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [ショートカット クエリ ファイル &#40;Excel 用 MDS アドイン&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Excel 用 MDS アドインでのデータ品質照合](data-quality-matching-in-the-mds-add-in-for-excel.md)  
   
--   [データのパブリッシュ&#40;MDS アドインを Excel 用&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [データのパブリッシュ&#40;MDS アドインの Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [モデルの構築 &#40;Excel 用 MDS アドイン&#41;](building-a-model-mds-add-in-for-excel.md)  
   

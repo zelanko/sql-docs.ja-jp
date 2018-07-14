@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: 16
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 78da740dfbdaa9976b2a518cbb5b12146e1371f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7ba4bd70c21072d77f4972870fbbee7e27b18b18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218932"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   データセットは、データ接続から使用するデータを指定します。 データセットは、埋め込みデータ ソースまたはレポート サーバーの共有データ ソースへの参照としてレポートに保存されているデータ接続に基づいています。 データセットには、一連のフィールドを指定するクエリが含まれています。 これらのフィールドをデザイン画面にドラッグすると、レポートの実行時に実際のデータを評価する式を作成できます。  
@@ -50,7 +50,7 @@ ms.locfileid: "36084958"
   
 7.  **スキーマのメタデータ** データ プロバイダーで、クエリとは別にスキーマのクエリ コマンドを実行し、データセット フィールド コレクションのメタデータを取得します。 たとえば、[!INCLUDE[tsql](../../../includes/tsql-md.md)] の `SELECT` ステートメントでは、データベース テーブルの列名が返されます。 データセット フィールド コレクションを表示するには、レポート データ ペインを使用してデータセットを展開します。  
   
- 事前定義済みの共有データセットとレポート パーツを使用して、データをレポートに含めることもできます。 これらのアイテムには、必要な接続情報は既に存在します。 詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41; ](report-datasets-ssrs.md)と[レポート パーツ&#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)です。  
+ 事前定義済みの共有データセットとレポート パーツを使用して、データをレポートに含めることもできます。 これらのアイテムには、必要な接続情報は既に存在します。 詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41; ](report-datasets-ssrs.md)と[レポート パーツ&#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)します。  
   
  ビルトイン データ ソースの種類およびデータ拡張機能の詳細については、「[外部データ ソースのデータを追加する &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)」を参照してください。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36084958"
 ##  <a name="Overview"></a> レポート データセットとクエリについて  
  レポート データセットには、外部データ ソースに対して実行されるクエリ コマンドが含まれており、取得するデータを指定します。 クエリ コマンドを構築するには、外部データ ソースのデータ拡張機能に関連付けられているクエリ デザイナーを使用します。 クエリ デザイナーで、クエリ コマンドを実行して結果セットを表示できます。 結果セットは、列名と行を持つ四角形の行セットで、各行の値の数は同じです。 *不規則階層*とも呼ばれる階層データはサポートされていません。 列名は、データセット フィールドの一覧としてレポート定義に保存されます。  
   
- レポートにデータセットを追加すると、レポート データ ペインのフィールド コレクションから、テーブル、グラフ、およびレポート レイアウトのデザインに使用するその他のレポート アイテムにフィールドをドラッグできます。 フィールドの操作の詳細については、次を参照してください。[データセット フィールド コレクション&#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)です。  
+ レポートにデータセットを追加すると、レポート データ ペインのフィールド コレクションから、テーブル、グラフ、およびレポート レイアウトのデザインに使用するその他のレポート アイテムにフィールドをドラッグできます。 フィールドの操作の詳細については、次を参照してください。[データセット フィールド コレクション&#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)します。  
   
 ### <a name="understanding-data-from-a-report-dataset"></a>レポート データセットのデータについて  
  データ拡張機能に応じて、レポート データセットは次の種類のデータで構成されています。  
@@ -81,9 +81,9 @@ ms.locfileid: "36084958"
   
 -   定義済みエンティティ、エンティティ関係、およびフィールドを持つ特定のデータ ソースに指定されたレポート モデルのデータ。 詳細については、**Reporting Services のドキュメント** (SQL Server オンライン ブック) の「データ ソースとしての [レポート モデルの使用](http://go.microsoft.com/fwlink/?linkid=121312) 」を参照してください。  
   
- 実行時にレポートを処理した場合、クエリで返される実際の結果セットに 0 個以上の行があることがあります。 また、クエリで定義された列がデータ ソースに見つからない可能性もあります。 データ ソースから null 値にマップされます、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]値`System.DBNull.Value`です。  
+ 実行時にレポートを処理した場合、クエリで返される実際の結果セットに 0 個以上の行があることがあります。 また、クエリで定義された列がデータ ソースに見つからない可能性もあります。 データ ソースからの null 値にマップされます、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]値`System.DBNull.Value`します。  
   
- データセット フィールドの詳細については、次を参照してください。[データセット フィールド コレクション&#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)です。  
+ データセット フィールドの詳細については、次を参照してください。[データセット フィールド コレクション&#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)します。  
   
 ### <a name="dataset-query"></a>データセット クエリ  
  デザイン時にクエリ デザイナーでデータセット クエリを実行すると、サンプル データを示すデータ ソースの行セットが表示されます。 実行時にユーザーがレポートを表示すると、データ ソースのデータが変更されたためにデータセット クエリで別の値が生成されることがあります。 レポートを処理するたびに、新しいデータが表示される可能性があります。  
@@ -110,7 +110,7 @@ ms.locfileid: "36084958"
   
 -   データベース フィールドに基づいて新しいカスタム フィールドを作成し、カスタム書式を指定します。  
   
- 詳細については、次を参照してください。[データセット フィールド コレクション&#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)です。  
+ 詳細については、次を参照してください。[データセット フィールド コレクション&#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)します。  
   
 ### <a name="importing-existing-queries-for-a-dataset"></a>データセットの既存のクエリのインポート  
  データセットを作成する場合、新しいクエリを作成するか、ファイルまたは別のレポートから既存のクエリをインポートすることができます。 別のレポートからクエリをインポートする場合は、レポートのデータセットの一覧からインポートするクエリを選択できます。  
@@ -209,7 +209,7 @@ ms.locfileid: "36084958"
   
 -   独立したデータ領域を使用して、各データセットのデータを表示します。 詳細については、「[データ領域とマップ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/data-regions-and-maps-report-builder-and-ssrs.md)」を参照してください。  
   
--   複数のデータ領域をデータセットにリンクすることで、同じデータを複数の形式で表示することができます。 詳細については、次を参照してください。 [、同じデータセットに複数のデータ領域のリンク&#40;レポート ビルダーおよび SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)です。  
+-   複数のデータ領域をデータセットにリンクすることで、同じデータを複数の形式で表示することができます。 詳細については、次を参照してください。[同じデータセットへの複数のデータ領域のリンク&#40;レポート ビルダーおよび SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)します。  
   
 -   データセットを使用して、使用可能な値のドロップダウン リスト、またはレポート パラメーターの既定値を表示します。 詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   

@@ -1,5 +1,5 @@
 ---
-title: 型 xs:dateTime、xs:date 型、および xs:time のストレージ形式の変更 |Microsoft ドキュメント
+title: 型 xs:dateTime、xs:date 型、および xs:time のストレージ形式への変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xs:date
 - xs:time
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - DateTime
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56342ff7c7754fb8ef1619fdb1b71e37600192b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1acc25889e693a69e55adc4f5da5ece616bc41a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222522"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>xs:dateTime 型、xs:date 型、および xs:time 型のストレージ形式の変更
   XMLDATETIME ルールでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後に無効になる型指定された XML データがデータベースに含まれているかどうかが確認されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "36084710"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>説明  
- ストレージ形式[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]型 xs:dateTime、xs:date 型、および xs:time が変更された値のタイム ゾーン情報の有無をサポートし、タイム ゾーンの保持されるようにします。  
+ ストレージ形式[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]型 xs:dateTime、xs:date 型、および xs:time が変更された値のタイム ゾーン情報の有無をサポートし、タイム ゾーンの保存を許可します。  
   
  XML スキーマ コレクションがこのいずれかの型を参照している場合は、コレクションに関連付けられているすべての列の XML インデックスが、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後に無効になります。 これらの型に対しては、SELECT または XQUERIES (またはその両方) を使用してクエリを実行できますが、XML インデックスは使用されません。 負の年の値が検出された場合は、実行時エラーが発生します。  
   

@@ -1,5 +1,5 @@
 ---
-title: 通貨型と変換関数 |Microsoft ドキュメント
+title: 通貨型と変換関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0c0adda9b9c1e39e599d33fd0d6462fd675cc9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5f4c3aae27950cdaa6ff2244abdc2de501c0b1f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332482"
 ---
 # <a name="currency-type-and-conversion-function"></a>通貨型と変換関数
   この例では、C# を使用して Currency ユーザー定義データ型を定義します。 このユーザー定義データ型は、価格とカルチャをカプセル化し、そのカルチャの通貨の値で正しい価格を表示する方法を決定するために役立ちます。 この例ではさらに、Currency ユーザー定義データ型のインスタンスを返す通貨換算関数を提供します。 U.S. ドル (USD) を指定のカルチャに関連付けられている通貨に換算するための換算レートが AdventureWorks データベースに含まれている場合、通貨換算関数は、換算済みレートを格納した Currency ユーザー定義データ型と、要求されたカルチャに一致するカルチャを返します。 換算レートがデータベースに含まれていない場合は、USD で表される元の価格を格納した Currency ユーザー定義データ型と、`en-us` カルチャを返します。 この例は、Transact-SQL を使用した共通言語ランタイム (CLR) メソッドとアセンブリの登録解除と登録の方法も示しています。  
@@ -56,11 +56,11 @@ ms.locfileid: "36084612"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要があります`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
--   管理者でない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを使用している、する必要がありますが管理者から付与**CreateAssembly**インストールを完了するアクセス許可。  
+-   管理者でない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを使用して、管理者から付与が必要**CreateAssembly**インストールを完了するためのアクセス許可。  
   
 ## <a name="building-the-sample"></a>サンプルのビルド  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36084612"
   
 3.  c:\MySample で、`Currency.cs` を作成し、C# サンプル コード (下記) をこのファイルにコピーします。  
   
-4.  実行することによって、コマンド ライン プロンプトからのサンプル コードをコンパイルします。  
+4.  実行して、コマンド ライン プロンプトからのサンプル コードをコンパイルします。  
   
     -   `Csc /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll  /target:library Currency.cs`  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36084612"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-8.  コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、として保存`test.sql`サンプル ディレクトリにします。  
+8.  コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、保存`test.sql`サンプル ディレクトリにします。  
   
 9. 次のコマンドを使用してテスト スクリプトを実行します。  
   

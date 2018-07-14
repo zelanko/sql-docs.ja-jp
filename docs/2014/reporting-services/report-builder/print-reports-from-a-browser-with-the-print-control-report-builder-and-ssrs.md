@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f92d638c07d28f424c0e6338f953cd716205f48b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e120229a41ae80490ab1950113c4de6f37b70c9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270338"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS)
   レポートを表示するための最も一般的なクライアント アプリケーションはブラウザーですが、ブラウザーの印刷機能はレポートの印刷には適していません。 ブラウザーの印刷機能は、Web ページを印刷するための機能です。 通常、ブラウザーから印刷したページには、Web ページ上にあるすべての可視要素と、ページまたは Web サイトを識別するヘッダーおよびフッター情報が含まれます。 ブラウザーからの印刷では現在のウィンドウの内容が印刷されるため、 レポートが数ページあっても最初のページしか印刷されません。また、レポート ページのサイズが印刷ページのサイズより大きい場合には、ページの全体を印刷しきれない場合もあります。  
   
  ブラウザーで表示したレポートの印刷品質を向上させ、複数のページを印刷するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で提供されているクライアント側印刷機能を使用します。 クライアント側印刷機能では、標準の **[印刷]** ダイアログ ボックスを使用して、印刷する前に、プリンターの選択、ページと余白の指定、およびレポートのプレビューを行うことができます。 クライアント側印刷機能は、ブラウザーの **[ファイル]** メニューの **[印刷]** コマンドの代わりに使用できます。 クライアント側印刷機能を使用すると、レポートがデザインどおりに印刷され、Web ページの印刷で表示されるような余分な要素は印刷されません。  
   
- クライアント側印刷機能を使用するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX コントロールをインストールする必要があります。 詳細については、次を参照してください。[の有効化と Reporting Services のクライアント側の印刷を無効にする](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)です。  
+ クライアント側印刷機能を使用するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX コントロールをインストールする必要があります。 詳細については、次を参照してください。 [Reporting Services の、無効にするクライアント側印刷機能の有効化と](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

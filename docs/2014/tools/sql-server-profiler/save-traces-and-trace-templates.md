@@ -1,5 +1,5 @@
 ---
-title: トレースとトレース テンプレートの保存 |Microsoft ドキュメント
+title: トレースとトレース テンプレートの保存 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - saving traces
 - traces [SQL Server], saving
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dacc7508addfd5486e4c242a936c172e64f66bde
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 46806b60627ad5f7631bb23d565dc1e36d0ef3b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255834"
 ---
 # <a name="save-traces-and-trace-templates"></a>トレースとトレース テンプレートの保存
   トレース ファイルの保存とトレース テンプレートの保存は、区別して考えることが重要です。 トレース ファイルを保存すると、キャプチャされたイベント データが特定の場所に保存されます。 トレース テンプレートを保存すると、特定のデータ列、イベント クラス、フィルターなどのトレースの定義が保存されます。  
@@ -67,7 +67,7 @@ ms.locfileid: "36076098"
   
 ## <a name="see-also"></a>参照  
  [トレース結果をテーブルに保存&#40;SQL Server Profiler&#41;](save-trace-results-to-a-table-sql-server-profiler.md)   
- [トレース テンプレートの作成&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [トレース テンプレートを作成&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [実行中のトレースからのテンプレートの作成 &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [トレース ファイルまたはトレース テーブルからのテンプレートの作成 &#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [トレース テンプレートのエクスポート &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   

@@ -1,5 +1,5 @@
 ---
-title: StartDate プロパティ (SecurityCertificate クラス) |Microsoft ドキュメント
+title: StartDate プロパティ (SecurityCertificate クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - StartDate property
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4dfef00569a24da2662d38db2ae57807d5d8acf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: d044ca33722ba9075f6adbb35b5a3e03d714917e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323912"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>StartDate プロパティ (SecurityCertificate クラス)
   セキュリティ証明書が有効になる日付を取得します。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>要素  
  *object*  
- [SecurityCertificate クラス] securitycertificate-class.md)、セキュリティ証明書を表すオブジェクト。  
+ [SecurityCertificate クラス] securitycertificate-class.md) セキュリティ証明書を表すオブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  セキュリティ証明書が有効になる日付を指定する uint32 値。  

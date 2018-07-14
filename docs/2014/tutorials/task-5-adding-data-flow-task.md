@@ -1,5 +1,5 @@
 ---
-title: 'タスク 5: データ フロー タスクの追加 |Microsoft ドキュメント'
+title: 'タスク 5: データ フロー タスクの追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,31 +10,31 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: df6bc1e33852258e223d9d02ac69a8dde820d80c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d41ec312bb20e14d1d7adc7d3f834663ebc4950
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325172"
 ---
 # <a name="task-5-adding-data-flow-task"></a>タスク 5: データ フロー タスクを追加する
   ここでは、SSIS パッケージの制御フローにデータ フロー タスクを追加します。  
   
-1.  ドラッグ アンド ドロップ**Data Flow Task**から**SSIS ツールボックス**を**制御フロー** SSIS デザイナーのタブです。 表示されない場合、 **SSIS ツールボックス**、内の任意の場所をクリックして、**制御フロー**  タブで、をクリックして**SSIS**クリックしてメニュー バーで**SSIS ツールボックス**です。  
+1.  ドラッグ アンド ドロップ**Data Flow Task**から**SSIS ツールボックス**を**制御フロー** SSIS デザイナーのタブ。 表示されない場合、 **SSIS ツールボックス**、内をクリックし、**制御フロー** ] タブで [ **SSIS**をクリックし、メニュー バーで**SSIS ツールボックス**します。  
   
-     ![ドラッグ アンド ドロップのデータ フロー タスク SSIS ツールボックスから](../../2014/tutorials/media/et-addingdataflowtask.jpg "ドラッグ アンド ドロップのデータ フロー SSIS ツールボックスからのタスク")  
+     ![ドラッグ アンド ドロップのデータ フロー タスク SSIS ツールボックスから](../../2014/tutorials/media/et-addingdataflowtask.jpg "ドラッグ アンド ドロップのデータ フロー タスク SSIS ツールボックスから")  
   
-2.  右クリックし、 **Data Flow Task**で、**制御フロー**  タブでをクリックし、**の名前を変更**です。  
+2.  右クリックし、 **Data Flow Task**で、**制御フロー**  タブでをクリックし、**の名前を変更**します。  
   
-3.  型**受信、クレンジング、照合、および Curate Supplier Data**とキーを押します**ENTER**です。  
+3.  型**受信、クレンジング、照合、および Curate Supplier Data**キーを押します**ENTER**します。  
   
-4.  ダブルクリックして、 **Data Flow Task**に切り替えるには、**データ フロー**タブです。  
+4.  ダブルクリックして、 **Data Flow Task**に切り替える、**データ フロー**  タブ。  
   
 ## <a name="next-step"></a>次の手順  
  [タスク 6: Excel ソースをデータ フローに追加する](task-6-adding-excel-source-to-the-data-flow.md)  

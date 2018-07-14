@@ -1,5 +1,5 @@
 ---
-title: オプション (テキスト エディターの Transact SQL 全般 ページ) |Microsoft ドキュメント
+title: オプション (テキスト エディター - Transact SQL 全般 ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
 dev_langs:
@@ -17,15 +17,15 @@ ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d25699b25ec9bcde2a2df2bc1115a1e3f752c035
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: c3732baa8de28448b578673ead90e9cbfa62abba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257208"
 ---
-# <a name="options-text-editor---transact-sql--general-page"></a>オプション (テキスト エディターの Transact SQL 全般 ページ)
+# <a name="options-text-editor---transact-sql--general-page"></a>オプション (テキスト エディター - Transact SQL 全般 ページ)
   [オプション] の **[全般]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssDE](../includes/ssde-md.md)] スクリプトの編集に使用される [!INCLUDE[tsql](../includes/tsql-md.md)] クエリ エディターの全般的な編集の動作を変更できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックし、**[Transact-SQL]** サブフォルダーを展開して、**[全般]** をクリックします。  
   
 ## <a name="setting-options-in-multiple-locations"></a>複数の場所でのオプション設定  
@@ -35,7 +35,7 @@ ms.locfileid: "36075783"
  **自動メンバー表示**  
  このチェック ボックスがオンの場合、エディターでの入力に合わせて、使用できるデータベースとスキーマ オブジェクト、列、テーブル値関数、または関数の一覧が表示されます。 ポップアップ リストから項目を選択してコードに挿入します。  
   
- **高度なメンバーを非表示します。**  
+ **高度なメンバーを非表示にします。**  
  このチェック ボックスは使用できません。  
   
  **パラメーター情報**  
@@ -51,7 +51,7 @@ ms.locfileid: "36075783"
  **折り返しの記号を表示します。**  
  このチェック ボックスがオンの場合、長い行が次の行に折り返される場所に改行インジケーターが表示されます。  
   
- **選択されていない場合は、切り取り/コピー コマンドを空白行に適用します。**  
+ **選択されていない場合は、空白行に切り取り/コピー コマンドを適用します。**  
  このチェック ボックスは、空白行にカーソルを置き、何も選択していない状態で **[コピー]** または **[切り取り]** をクリックしたときのエディターの動作を設定します。  
   
  このチェック ボックスがオンの場合、空白行がコピーまたは切り取られます。 その後で **[貼り付け]** をクリックすると、新しい空白行が挿入されます。  

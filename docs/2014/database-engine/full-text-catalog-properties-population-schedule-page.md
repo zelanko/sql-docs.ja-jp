@@ -1,27 +1,26 @@
 ---
-title: フルテキスト カタログのプロパティ ([作成スケジュール] ページ) |Microsoft ドキュメント
+title: フルテキスト カタログのプロパティ ([作成スケジュール] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.schedule.f1
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 04d4cc9c596fa642e895d8d895c1fc1e0a16848c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55ec07c88ab453b0757206d05d4219fad2290ef8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213742"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>[フルテキスト カタログのプロパティ] ([作成スケジュール] ページ)
   このダイアログ ボックスを使用すると、フルテキスト カタログをいつ作成または再作成するかを決定するスケジュールを追加または変更できます。  
@@ -29,7 +28,7 @@ ms.locfileid: "36084610"
 ## <a name="schedules-grid"></a>[スケジュール] グリッド  
  それぞれの行は、カタログを作成または再作成するためにスケジュールされている操作を表します。  
   
- **Name**  
+ **名前**  
  スケジュールの名前を表示します。  
   
  **作成の種類**  
@@ -38,7 +37,7 @@ ms.locfileid: "36084610"
  **Enabled**  
  スケジュールされている操作を有効または無効にするには、このチェック ボックスをオンまたはオフにします。  
   
- **description**  
+ **[説明]**  
  スケジュールされている操作の説明です。  
   
  **[新規作成]**  
@@ -47,7 +46,7 @@ ms.locfileid: "36084610"
  **[編集]**  
  選択されている作成スケジュールを編集するには、このボタンをクリックします。  
   
- **Delete**  
+ **削除**  
  選択されている作成スケジュールを削除するには、このボタンをクリックします。  
   
 ## <a name="see-also"></a>参照  

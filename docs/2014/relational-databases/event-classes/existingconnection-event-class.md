@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - ExistingConnection event class
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 08b213035641d22aae7a9e4b1c3c2fbcbdf5b876
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 845f94a258b237dc571276001647321f505b3708
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329542"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection イベント クラス
   ExistingConnection イベント クラスは、トレースが開始されたときの既存のユーザー接続のプロパティを示します。 サーバーでは、既存のユーザー接続ごとに 1 つの ExistingConnection イベントを起動します。  

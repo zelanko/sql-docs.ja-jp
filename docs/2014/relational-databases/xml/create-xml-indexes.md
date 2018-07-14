@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 18858eb2c692be3bfe4c987dd365ae267d097d43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91dd0d2aefa6128dfdac0a948efe61f0a9334fb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236362"
 ---
 # <a name="create-xml-indexes"></a>XML インデックスの作成
   このトピックでは、プライマリ XML インデックスとセカンダリ XML インデックスの作成方法について説明します。  
@@ -48,9 +48,9 @@ ms.locfileid: "36084270"
   
 -   プライマリ XML インデックスの名前にはビュー名と同じ制限事項が適用されます。  
   
- XML インデックスを作成することはできません、`xml`上のビューの列を入力、**テーブル**値変数`xml`種類の列、または`xml`変数を入力します。  
+ XML インデックスを作成することはできません、`xml`で、ビューの列を入力、**テーブル**を持つ変数の値を持つ`xml`種類の列、または`xml`変数を入力します。  
   
--   変更する、`xml`からに型指定されていない型の列の型指定された XML、またはその逆の場合、ALTER TABLE ALTER COLUMN オプションを使用すると、XML 列のインデックスをする必要がありますが存在します。 XML インデックスが存在する場合は、列の型を変更する前にその XML インデックスを削除する必要があります。  
+-   変更する、`xml`からに型指定されていない型の列の型指定された XML、またはその逆の場合、ALTER TABLE ALTER COLUMN オプションを使用すると、その列に XML インデックスは存在しません。 XML インデックスが存在する場合は、列の型を変更する前にその XML インデックスを削除する必要があります。  
   
 -   XML インデックスを作成する場合は、ARITHABORT オプションが ON に設定されている必要があります。 XML データ型メソッドを使用して XML 列内の値のクエリ、挿入、削除、または更新を行うには、同じオプションがその接続に設定される必要があります。 異なるオプションが設定された場合、XML データ型のメソッドは失敗します。  
   

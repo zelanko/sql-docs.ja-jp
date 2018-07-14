@@ -1,5 +1,5 @@
 ---
-title: 属性は、ツリー、一覧またはディメンション デザイナーでのグリッドで表示 |Microsoft ドキュメント
+title: ツリー、一覧、ディメンション デザイナーのグリッドで属性を表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Attribute pane formats [Analysis Services]
 - attributes [Analysis Services], Dimension Builder Attribute Pane
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - modifying Attribute pane format
 ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 84c5d44b1efea015d2ad547cccb61beb8bd0f537
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f11320a90742a987d1c4daf331219c722cd77ddf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321312"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>ディメンション デザイナーのツリー、一覧、グリッドでの属性の表示
   ここでは、ディメンション デザイナーでの属性の表示方法を変更する手順について説明します。  

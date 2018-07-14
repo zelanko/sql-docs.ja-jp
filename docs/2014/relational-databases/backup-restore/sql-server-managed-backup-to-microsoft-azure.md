@@ -1,52 +1,51 @@
 ---
-title: SQL Server Backup to Windows Azure の管理 |Microsoft ドキュメント
+title: SQL Server Backup to Windows Azure の管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28af03350c7b72292a8af9021efb83634f878b58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b7374cd96dac868ae6d3361ee34e18693c340cff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254324"
 ---
-# <a name="sql-server-managed--backup-to-windows-azure"></a>Windows Azure に SQL Server マネージ バックアップ
+# <a name="sql-server-managed--backup-to-windows-azure"></a>Windows Azure への SQL Server マネージ バックアップ
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は Windows Azure BLOB ストレージ サービスへの SQL Server バックアップを管理および自動化します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]で使用されるバックアップ方法は、データベースの保有期間とトランザクション ワークロードに基づきます。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] では、指定された保有期間の特定の時点への復元がサポートされています。   
-[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、データベース レベルで有効にすることも、インスタンス レベルで有効にして SQL Server インスタンス上のすべてのデータベースを管理することもできます。 SQL Server は、内部設置型で実行することも、Windows Azure 仮想マシンなどの環境でホストすることもできます。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Windows Azure 仮想マシンで実行する SQL Server をお勧めします。  
+[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、データベース レベルで有効にすることも、インスタンス レベルで有効にして SQL Server インスタンス上のすべてのデータベースを管理することもできます。 SQL Server は、内部設置型で実行することも、Windows Azure 仮想マシンなどの環境でホストすることもできます。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Windows Azure Virtual Machines で実行される SQL Server をお勧めします。  
   
 ## <a name="benefits-of-automating-sql-server-backup-using-includesssmartbackupincludesss-smartbackup-mdmd"></a>[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を使用して SQL Server バックアップを自動化する利点  
   
--   現在、複数データベースのバックアップを自動化するには、バックアップ方法の開発、カスタム コードの記述、およびバックアップのスケジュール設定が必要です。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の使用で必要になるのは、保有期間の設定と格納場所の指定のみです。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] スケジュールを行い、バックアップを管理します。  
+-   現在、複数データベースのバックアップを自動化するには、バックアップ方法の開発、カスタム コードの記述、およびバックアップのスケジュール設定が必要です。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の使用で必要になるのは、保有期間の設定と格納場所の指定のみです。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] スケジュール実行し、バックアップを管理します。  
   
-     [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、データベース レベルで構成するか、SQL Server インスタンスの既定の設定を使用して構成することができます。 使用したバックアップを自動化する[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]次の利点があります。  
+     [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、データベース レベルで構成するか、SQL Server インスタンスの既定の設定を使用して構成することができます。 バックアップを使用した自動化[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]次の利点があります。  
   
     -   インスタンス レベルで既定値を設定すると、その後作成されたデータベースにこれらの設定を適用できます。これにより、新しいデータベースがバックアップされずデータが失われるというリスクがなくなります。  
   
     -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にしてデータベース レベルで保有期間を設定すると、インスタンス レベルで設定した既定の設定をオーバーライドできます。 これにより、特定のデータベースの復旧をより細かく制御できます。  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]では、データベースのバックアップの種類や頻度を指定する必要はありません。  保有期間を指定して[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]データベースは Windows Azure Blob ストレージ サービスのバックアップを保存の種類とバックアップの頻度を決定します。 一連の条件の詳細についてを[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]バックアップ ストラテジを作成するために使用を参照してください、[コンポーネントおよび概念](#Concepts)」セクションを参照します。  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]では、データベースのバックアップの種類や頻度を指定する必要はありません。  保有期間を指定して[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]データベース Windows Azure Blob ストレージ サービスでバックアップを格納するは、種類とバックアップの頻度を決定します。 一連の条件の詳細についてを[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]バックアップ ストラテジを作成するために使用を参照してください、[コンポーネントおよび概念](#Concepts)このトピックの「します。  
   
 -   暗号化が使用されるように構成すると、バックアップ データに対するセキュリティを強化できます。 詳細については、次を参照してください[バックアップの暗号化。](backup-encryption.md)  
   
- Windows Azure Blob ストレージを使用する利点の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップを参照してください[SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+ Windows Azure Blob storage を使用する利点の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップを参照してください[SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 ## <a name="terms-and-definitions"></a>用語と定義  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
  データベースのバックアップを自動化し、保有期間に基づいてバックアップを管理する SQL Server 機能です。  
   
  保有期間  
- 保有期間を使用して[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]指定した期間内の特定の時点にデータベースを回復するために記憶域にどのようなバックアップ ファイルを保持する必要がありますを決定します。  1 ～ 30 日の範囲の値がサポートされます。  
+ 保有期間を使って[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]指定した期間内の特定の時点にデータベースを回復するために記憶域にどのようなバックアップ ファイルを保持する必要がありますを決定します。  1 ～ 30 日の範囲の値がサポートされます。  
   
  ログ チェーン  
  ログ バックアップの連続的なシーケンスを、ログ チェーンと呼びます。 ログ チェーンは、データベースの完全バックアップから始まります。  
@@ -55,17 +54,17 @@ ms.locfileid: "36083435"
   
   
 ###  <a name="Security"></a> Permissions  
- Transact-SQL は、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の構成と監視に使用する主なインターフェイスです。 一般に、構成を実行するストアド プロシージャ、 **db_backupoperator**を持つデータベース ロール**ALTER ANY CREDENTIAL**アクセス許可、および`EXECUTE`に対するアクセス許可**sp_deletebackuphistory**ストアド プロシージャが必要です。  情報を確認するために使用するストアド プロシージャと関数には、通常、ストアド プロシージャに対する `Execute` 権限と、関数に対する `Select` 権限がそれぞれ必要です。  
+ Transact-SQL は、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の構成と監視に使用する主なインターフェイスです。 一般に、構成を実行するストアド プロシージャ、 **db_backupoperator**を持つデータベース ロール**ALTER ANY CREDENTIAL**アクセス許可、および`EXECUTE`に対する**sp_deletebackuphistory**ストアド プロシージャが必要です。  情報を確認するために使用するストアド プロシージャと関数には、通常、ストアド プロシージャに対する `Execute` 権限と、関数に対する `Select` 権限がそれぞれ必要です。  
   
 ###  <a name="Prereqs"></a> 前提条件  
  **前提条件:**  
   
- **Windows Azure ストレージ サービス**によって使用される[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]バックアップ ファイルを格納します。    概念、構造、および Windows Azure ストレージ アカウントを作成するための要件で詳しく説明して、 [Introduction to Key Components and Concepts](sql-server-backup-to-url.md#intorkeyconcepts)のセクションで、 **SQL Server Backup to URL**トピックです。  
+ **Windows Azure ストレージ サービス**を使って[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]バックアップ ファイルを格納します。    概念、構造、および Windows Azure ストレージ アカウントを作成するための要件で詳しく説明は、 [Key Components and Concepts 概要](sql-server-backup-to-url.md#intorkeyconcepts)のセクション、 **SQL Server Backup to URL**トピックです。  
   
- **SQL 資格情報**Windows Azure ストレージ アカウントを認証するために必要な情報を格納するために使用します。 SQL 資格情報オブジェクトには、アカウント名とアクセス キー情報が格納されます。 詳細については、次を参照してください。、 [Introduction to Key Components and Concepts](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 」の「、 **SQL Server Backup to URL**トピックです。 Windows Azure ストレージの認証情報を格納する SQL 資格情報を作成する方法のチュートリアルについては、次を参照してください。[レッスン 2: Create a SQL Server Credential](../../tutorials/lesson-2-create-a-sql-server-credential.md)です。  
+ **SQL 資格情報**Windows Azure ストレージ アカウントへの認証に必要な情報を格納するために使用します。 SQL 資格情報オブジェクトには、アカウント名とアクセス キー情報が格納されます。 詳細については、次を参照してください。、 [Key Components and Concepts 概要](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)セクション、 **SQL Server Backup to URL**トピック。 Windows Azure ストレージの認証情報を格納する SQL 資格情報を作成する方法のチュートリアルは、次を参照してください。[レッスン 2: Create a SQL Server Credential](../../tutorials/lesson-2-create-a-sql-server-credential.md)します。  
   
-###  <a name="Concepts_Components"></a> 概念と重要なコンポーネント  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、バックアップ操作を管理する機能です。 内のメタデータを格納、 **msdb**完全なデータベースやトランザクションの作成に使用してデータベースのシステム ジョブのログ バックアップです。  
+###  <a name="Concepts_Components"></a> 概念と主要なコンポーネント  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、バックアップ操作を管理する機能です。 内のメタデータを格納、 **msdb**完全なデータベースとトランザクションの書き込みを使用してデータベースのシステム ジョブ ログのバックアップ。  
   
 #### <a name="components"></a>Components  
  Transact-SQL は、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を操作するためのメイン インターフェイスです。 システム ストアド プロシージャは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の有効化、構成、および監視に使用します。 システム関数は、既存の構成設定、パラメーター値、およびバックアップ ファイル情報を取得するために使用します。 拡張イベントは、エラーと警告を表示するために使用します。 警告メカニズムを有効にするには、SQL エージェント ジョブと SQL Server のポリシー ベースの管理を使用します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に関連するオブジェクトとその機能の説明の一覧を次に示します。  
@@ -77,11 +76,11 @@ ms.locfileid: "36083435"
 |システム オブジェクト|説明|  
 |**MSDB**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]によって作成されたすべてのバックアップに対するメタデータとバックアップ履歴を格納します。|  
 |[smart_admin.set_db_backup &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)|データベースの [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にして構成するためのシステム ストアド プロシージャです。|  
-|[smart_admin.set_instance_backup &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|システム ストアド プロシージャを有効にすると、既定の設定を構成する[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]SQL Server インスタンスにします。|  
+|[smart_admin.set_instance_backup &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|システム ストアド プロシージャを有効にすると、既定の設定を構成する[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]SQL Server インスタンス。|  
 |[smart_admin.sp_ backup_master_switch &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を一時停止および再開するためのシステム ストアド プロシージャです。|  
 |[smart_admin.sp_set_parameter &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の監視を有効にして構成するためのシステム ストアド プロシージャです。 たとえば、拡張イベントの有効化、通知の電子メール設定があります。|  
-|[smart_admin.sp_backup_on_demand &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)|使用を有効になっているデータベースに対してアドホック バックアップを実行するために使用するシステム ストアド プロシージャ[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]ログ チェーンを分断することがなくです。|  
-|[smart_admin.fn_backup_db_config &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql)|システムを返す関数を現在[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]データベース、またはのインスタンス上のすべてのデータベースの状態と構成値。|  
+|[smart_admin.sp_backup_on_demand &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)|使用を有効になっているデータベースのアドホック バックアップを実行するために使用するシステム ストアド プロシージャ[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]ログ チェーンを分断せずします。|  
+|[smart_admin.fn_backup_db_config &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql)|システム関数、現在を返している[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]データベースの場合、またはインスタンス上のすべてのデータベースの状態と構成の値。|  
 |[smart_admin.fn_is_master_switch_on &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-is-master-switch-on-transact-sql)|マスターの切り替えの状態を返すシステム関数です。|  
 |[smart_admin.sp_get_backup_diagnostics &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-get-backup-diagnostics-transact-sql)|拡張イベントによってログに記録されたイベントを返すためのシステム ストアド プロシージャです。|  
 |[smart_admin.fn_get_parameter &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-parameter-transact-sql)|警告の監視やメール設定など、バックアップ システムの設定の現在の値を返すシステム関数です。|  
@@ -95,13 +94,13 @@ ms.locfileid: "36083435"
   
  スケジュールされたバックアップの種類とそのバックアップの頻度は、データベースのワークロードに基づいて決定されます。 保有期間の設定を使用して、バックアップ ファイルをストレージに保持しておく期間と、保有期間内の特定の時点にデータベースを復旧できるかどうかを決定します。  
   
- **コンテナーをバックアップして、ファイルの名前付け規則。**  
+ **バックアップのコンテナーとファイルの名前付け規則。**  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]では、可用性データベース以外のすべてのデータベースについて SQL Server インスタンス名を使用して Windows Azure ストレージ コンテナーの名前が付けられます。  可用性データベースの場合は、可用性グループの GUID を使用して Windows Azure ストレージ コンテナーの名前が付けられます。  
   
  可用性データベース以外のデータベースのバックアップ ファイルについては、データベース名の先頭 40 文字、データベース GUID (‘-‘ を除く)、およびタイムスタンプを使用して、名前が作成されます。 各セグメントの間には、区切り記号としてアンダースコア文字が挿入されます。 完全バックアップにはファイル拡張子として **.bak** が使用され、ログ バックアップには **.log** が使用されます。 可用性グループ データベースでは、前のファイル名前付け規則に加え、40 文字のデータベース名の後に可用性グループ データベース GUID が追加されます。 可用性グループ データベース GUID 値は、sys.databases の group_database_id の値です。  
   
- **データベースの完全バックアップ:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]エージェントは、次のいずれかが当てはまる場合にデータベースの完全バックアップをスケジュールします。  
+ **データベースの完全バックアップ:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]エージェントは、次のいずれかが当てはまる場合に、データベースの完全バックアップをスケジュールします。  
   
 -   データベースで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を初めて有効にしたとき、またはインスタンス レベルで既定の設定を使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効したとき。  
   
@@ -149,7 +148,7 @@ ms.locfileid: "36083435"
 -   復旧モデル: 完全復旧モデルまたは一括ログ復旧モデルに設定されたデータベースのみがサポートされています。  単純復旧モデルに設定されたデータベースはサポートされていません。  
   
 -   
-            [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、バックアップ、高可用性、またはディザスター リカバリーをサポートする他のテクノロジで構成されている場合にいくつかの制限がある場合があります。 詳細については、次を参照してください。 [Windows Azure に SQL Server マネージ バックアップ: 相互運用性と共存](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)です。  
+            [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、バックアップ、高可用性、またはディザスター リカバリーをサポートする他のテクノロジで構成されている場合にいくつかの制限がある場合があります。 詳細については、次を参照してください。 [SQL Server Managed Backup to Windows Azure: 相互運用性と共存](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)します。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
@@ -157,8 +156,8 @@ ms.locfileid: "36083435"
 |-|-|  
 |**タスクの説明**|**トピック**|  
 |データベースの [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成する、インスタンス レベルで既定の設定を構成する、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]をインスタンス レベルまたはデータベース レベルで無効にする、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を一時停止して再起動するなどの基本的なタスク。|[Windows Azure への SQL Server マネージ バックアップ - 保有期間とストレージの設定](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
-|**チュートリアル:** 構成および監視する手順を提要[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]です。|[Windows Azure への SQL Server マネージ バックアップの設定](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
-|**チュートリアル:** 構成および監視する手順を提要[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]可用性グループ内のデータベースです。|[可用性グループに対する Windows Azure への SQL Server マネージ バックアップの設定](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
+|**チュートリアル:** 構成および監視する手順を提要[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。|[Windows Azure への SQL Server マネージ バックアップの設定](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
+|**チュートリアル:** 構成および監視する手順を提要[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]可用性グループ内のデータベース。|[可用性グループに対する Windows Azure への SQL Server マネージ バックアップの設定](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
 |[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の監視に関連するツール、概念、およびタスク。|[Windows Azure への SQL Server マネージ バックアップの監視](sql-server-managed-backup-to-microsoft-azure.md)|  
 |[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]のトラブルシューティングを行うためのツールと手順。|[Windows Azure への SQL Server マネージ バックアップのトラブルシューティング](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   

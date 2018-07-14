@@ -1,5 +1,5 @@
 ---
-title: AttributeTranslation データ型 (ASSL) |Microsoft ドキュメント
+title: AttributeTranslation データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeTranslation data type
 ms.assetid: a0e29941-ef08-42ad-ab9c-b2efd7910895
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e7f5fe2157b407cae3909666329537f85a8b7e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e846e1cdec16388a96f7e0043aa5b0d49235be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267658"
 ---
 # <a name="attributetranslation-data-type-assl"></a>AttributeTranslation データ型 (ASSL)
   関連付けられている翻訳を表す派生データ型を定義、[属性](../objects/attribute-element-assl.md)要素  

@@ -1,5 +1,5 @@
 ---
-title: Properties プロパティ (ServerNetworkProtocolIPAddress クラス) |Microsoft ドキュメント
+title: Properties プロパティ (ServerNetworkProtocolIPAddress クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Properties property
 ms.assetid: 7de217be-50fe-463e-af44-fdd6b79a7045
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2749c2eb418dacd38ef62ecba32c62b794741334
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 68a8d39ae8bc516d40c53cb7c6986ef08aa8d52b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329404"
 ---
 # <a name="properties-property-servernetworkprotocolipaddress-class"></a>Properties プロパティ (ServerNetworkProtocolIPAddress クラス)
   IP アドレスに関連付けられたプロパティを取得します。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>要素  
  *object*  
- A [ServerNetworkProtocolIPAdress クラス](servernetworkprotocolipaddress-class.md)のインスタンス上のネットワーク プロトコルの IP アドレスを表すオブジェクト[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ A [ServerNetworkProtocolIPAdress クラス](servernetworkprotocolipaddress-class.md)のインスタンス上のネットワーク プロトコルの IP アドレスを表すオブジェクトを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  IP アドレスによってサポートされるプロパティを表すオブジェクトの配列。  

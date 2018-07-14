@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - Reporting Services, scripting
@@ -17,27 +17,27 @@ ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d76693f37506cd78a7d198520344cb55f9d142f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b69a9713d015db66945a1c096f8896998459406
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212542"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Reporting Services を使ったスクリプトの作成と PowerShell
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] さまざまなスクリプト、rs.exe コマンド ライン ユーティリティ、SharePoint モード レポート サーバー用の PowerShell コマンドレットを活用することなどを使った開発と管理のシナリオをサポートしている、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]両方のネイティブの PowerShell からのオブジェクト モデルとSharePoint モードです。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] さまざまなスクリプトを rs.exe コマンド ライン ユーティリティ、SharePoint モードのレポート サーバーでは、PowerShell コマンドレットを活用することなどを開発および管理のシナリオをサポートしている、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]両方のネイティブの PowerShell からのオブジェクト モデルとSharePoint モード。  
   
 -   管理者は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] でスクリプトを作成して、レポート サーバーのインストールを配置および管理する方法を自動化できます。 また、レポート サーバー データベースを作成、構成、および更新する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを生成し、実行することもできます。 さらに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でスクリプトの記録機能と再生機能を使用して、定期的なメンテナンス タスクを自動化することもできます。  
   
--   開発者は、スクリプトを含むカスタム アプリケーションを作成して、 レポート サーバー Web サービスを呼び出すスクリプトを実行できます。 マネージ コードで記述できるほとんどすべての操作は、スクリプトで記述することもできます。  
+-   開発者は、スクリプトを含むカスタム アプリケーションを作成して、 レポート サーバー Web サービスを呼び出すスクリプトを実行できます。 マネージド コードで記述できるほとんどすべての操作は、スクリプトで記述することもできます。  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サポートしている[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET スクリプトは RS.exe ユーティリティ、レポート サーバーで実行されるスクリプト ホストで処理可能なスクリプト言語として。  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サポート[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET スクリプトを RS.exe ユーティリティ、レポート サーバーで実行されるスクリプト ホストによって処理できるスクリプト言語として。  
   
 ## <a name="reporting-services-sharepoint-mode-powershell-cmdlets-and-samples"></a>Reporting Services SharePoint モードの PowerShell コマンドレットとサンプル  
  ![PowerShell 関連コンテンツ](../media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint モードを含む[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]レポート サーバーの管理用のコマンドレットです。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint モードを含む[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]レポート サーバー管理用コマンドレット。  
   
 -   [PowerShell cmdlets for Reporting Services SharePoint Mode](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md) には、以下の例が含まれています。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36084229"
   
  コア オブジェクト モデルを呼び出す PowerShell。ほとんどの場合、SharePoint モードとネイティブ モードにも有効です。たとえば、移行作業、サブスクリプション作業、SQL15 でのサブスクリプション作業の関連するサンプルなどです。  
   
--   [Use PowerShell to Change と Reporting Services サブスクリプション所有者を一覧表示 and Run a Subscription](../subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)です。  
+-   [Use PowerShell to Change および Reporting Services サブスクリプション所有者を一覧表示し、サブスクリプションの実行](../subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)します。  
   
 -   [PowerShell を使用したネイティブ モードのレポート サーバーを含む Azure VM の作成](http://msdn.microsoft.com/library/azure/dn449661.aspx)。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8278f24e51e6288eb31f2f8ac4ec941a7f23e3aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8dc356cd9401b28a102124d81af3a6f8dda7a64b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331932"
 ---
 # <a name="xml-task"></a>XML タスク
   XML タスクは、XML データの処理に使用します。 このタスクを使用すると、パッケージは、XML ドキュメントの取得、Extensible Stylesheet Language Transformations (XSLT) スタイル シートや XPath 式の使用によるドキュメントへの操作の適用、複数ドキュメントのマージ、または更新したドキュメントの検証、比較、およびファイルや変数への保存を行うことができます。  
@@ -74,7 +74,7 @@ ms.locfileid: "36085035"
 |オプション|説明|  
 |------------|-----------------|  
 |**[IgnoreComments]**|この値で、コメント ノードを比較するかどうかを指定します。|  
-|**[IgnoreNamespaces]**|この値で、要素名および属性名の名前空間の Uniform Resource Identifier (URI) を比較するかどうかを指定します。 このオプションが設定されている場合`true`をローカル名ですが同じで別の名前空間を持つ 2 つの要素は同一と見なされます。|  
+|**[IgnoreNamespaces]**|この値で、要素名および属性名の名前空間の Uniform Resource Identifier (URI) を比較するかどうかを指定します。 このオプション設定されている場合`true`、別の名前空間が同じローカル名を持つ 2 つの要素は同一であると見なされます。|  
 |**[IgnorePrefixes]**|この値で、要素名および属性名のプレフィックスを比較するかどうかを指定します。 このオプションを `true,` に設定した場合、ローカル名が同じで、異なる名前空間 URI とプレフィックスを持つ 2 つの要素は、同一と見なされます。|  
 |**[IgnoreXMLDeclaration]**|この値で、XML 宣言を比較するかどうかを指定します。|  
 |**IgnoreOrderOfChildElements**|この値で、子要素の順序を比較するかどうかを指定します。 このオプションを `true` に設定した場合、兄弟の一覧での位置だけが異なる子要素は同一と見なされます。|  

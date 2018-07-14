@@ -1,5 +1,5 @@
 ---
-title: 式のスコープの合計、集計、および組み込みコレクション (レポート ビルダーおよび SSRS) |Microsoft ドキュメント
+title: 式のスコープの合計、集計、および組み込みコレクション (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7d5121675cb7448ae939b0442752b33af19dde5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b3347d17fd115e0d9eb8b8d71e672a63f4c0fa5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253514"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)
   式の作成に関して、*スコープ*という用語は、さまざまな文脈で用いられています。 スコープは、式を評価するのに使用するデータ、表示されたページのテキスト ボックスのセット、または表示と非表示を切り替えることのできるレポート アイテムのセットを示します。 *スコープ* という用語は、式の評価、集計関数の構文、条件付き表示に関連したトピックと、これらの領域に関連したエラー メッセージで使用されます。 次の説明を参考にして、どの意味で *スコープ* が適用されているかを区別してください。  
@@ -166,7 +166,7 @@ ms.locfileid: "36083370"
   
   
 ##  <a name="Nulls"></a> セルの NULL 値または 0 の非表示  
- 多くのレポートでは、グループにスコープが設定された計算でゼロ (0) または NULL 値を含むセルが多数生成される場合があります。 レポートを見やすくするためには、集計値が 0 の場合に空白を返す式を追加します。 詳細についてを参照してください「の例を抑制する状況 Null またはゼロの値」[式の例&#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)です。  
+ 多くのレポートでは、グループにスコープが設定された計算でゼロ (0) または NULL 値を含むセルが多数生成される場合があります。 レポートを見やすくするためには、集計値が 0 の場合に空白を返す式を追加します。 詳細についてを参照してください「の例を抑制する Null またはゼロ値」[式の例&#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)します。  
   
   
   

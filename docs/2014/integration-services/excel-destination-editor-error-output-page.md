@@ -1,5 +1,5 @@
 ---
-title: Excel 変換先エディター (エラー出力 ページ) |Microsoft ドキュメント
+title: Excel 変換先エディター ([エラー出力] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1c61d0ea9ed41bf238aa1cfdc05cb7c7615b657
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2199a6f6524e403139dba85c63519773cdceb1e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324642"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>[Excel 変換先エディター] ([エラー出力] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理オプションを指定できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36085266"
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
   
- **description**  
+ **[説明]**  
  エラーの説明を表示します。  
   
  **[選択したセルに設定する値]**  
@@ -57,7 +57,7 @@ ms.locfileid: "36085266"
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Excel 変換先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Excel 変換先エディター &#40;[マッピング] ページ&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Excel 変換先エディター&#40;マッピング ページ&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する](control-flow/foreach-loop-container.md)  
   
   

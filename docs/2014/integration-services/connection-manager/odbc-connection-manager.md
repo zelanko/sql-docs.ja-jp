@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], ODBC
 - ODBC connection manager
@@ -18,20 +18,20 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9453dc6e402fce60e1f4f440d84f882e513abea7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e0b8bb7a7a2b32f2566a725842919f0260c3f78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267138"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 接続マネージャー
   ODBC 接続マネージャーを使用すると、パッケージは Open Database Connectivity (ODBC) の仕様を使用して、さまざまなデータベース管理システムに接続できます。  
   
- ODBC 接続をパッケージに追加の接続マネージャーのプロパティを設定すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続マネージャーを作成し、接続マネージャーを追加、`Connections`パッケージのコレクション。 接続マネージャーは、実行時に物理 ODBC 接続として解決されます。  
+ ODBC 接続をパッケージに追加の接続マネージャーのプロパティを設定すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続マネージャーを作成し、接続マネージャーを追加します、`Connections`パッケージのコレクション。 接続マネージャーは、実行時に物理 ODBC 接続として解決されます。  
   
- `ConnectionManagerType`接続マネージャーのプロパティに設定されて`ODBC`です。  
+ `ConnectionManagerType`接続マネージャーのプロパティに設定されて`ODBC`します。  
   
  ODBC 接続マネージャーは、次の方法で構成できます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36084363"
   
 -   [ODBC 接続マネージャーの UI リファレンス](../odbc-connection-manager-ui-reference.md)  
   
- プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムで接続を追加する](../building-packages-programmatically/adding-connections-programmatically.md)です。  
+ プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41;接続](integration-services-ssis-connections.md)  

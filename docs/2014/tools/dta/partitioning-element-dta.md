@@ -1,5 +1,5 @@
 ---
-title: Partitioning 要素 (DTA) |Microsoft ドキュメント
+title: Partitioning 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Partitioning element
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 379e5dae0c70278b7c0b576190faffea84c8fa19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c6d6ccf9db5904936331c796188ff8858194ab6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272358"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning 要素 (DTA)
   データベース エンジン チューニング アドバイザーでの分析時に使用するパーティション分割構成が含まれます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36083759"
 |**データ型と長さ**|`string`、長さは無制限です。|  
 |**指定できる値**|**NONE**<br /> パーティション分割なし。<br /><br /> **FULL**<br /> 完全パーティション分割 (パフォーマンスが向上します)。<br /><br /> **ALIGNED**<br /> 固定パーティション分割 (管理が容易になります)。<br /><br /> この要素では、上記の値のいずれか 1 つを使用してください。<br /><br /> **ALIGNED** の場合、データベース エンジン チューニング アドバイザーによって生成される推奨設定では、すべての推奨インデックスが、インデックス定義の基になるテーブルとまったく同じ方法で分割されます。 インデックス付きビューの非クラスター化インデックスは、インデックス付きビューに準じます。|  
 |**既定値**|**NONE**|  
-|**個数**|`TuningOptions` 要素につき 1 回の出現が必要です。ただし、`DropOnlyMode` 要素を使用している場合は別です。 場合`DropOnlyMode`は使用できません、`Partitioning`です。 これらの要素を同時に指定することはできません。|  
+|**個数**|`TuningOptions` 要素につき 1 回の出現が必要です。ただし、`DropOnlyMode` 要素を使用している場合は別です。 場合`DropOnlyMode`は使用できません、`Partitioning`します。 これらの要素を同時に指定することはできません。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

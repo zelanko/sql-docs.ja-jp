@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
@@ -16,13 +16,13 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 04a5269f5e809a6e17b5b2f50b122abebec17627
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 423a893fc3586334464d50357626c319d9a27ffe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270318"
 ---
 # <a name="data-driven-subscriptions"></a>データ ドリブン サブスクリプション
   データ ドリブン サブスクリプションでは、実行時に外部データ ソースから取得した動的サブスクリプション データを使用できます。 サブスクリプションの定義時に指定した静的テキストや既定値を使用することもできます。 データ ドリブン サブスクリプションを使用すると、次のようなことが可能になります。  
@@ -50,7 +50,7 @@ ms.locfileid: "36084712"
   
 -   データ ドリブン サブスクリプション機能をサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションについては、「[SQL Server 2012 の各エディションがサポートする機能 ](http://go.microsoft.com/fwlink/?linkid=232473)」(http://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
   
--   サブスクリプション データについては、スキーマ情報をレポート サーバーに提供できるデータ ソースを選択します。 サポートされているデータ ソースの種類としては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データ、Oracle、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ データ、ODBC データ ソース、OLE DB データ ソースなどがあります。 サブスクライバー データ ソースの要件の詳細については、次を参照してください。[サブスクライバー データに対して外部データ ソースを使用して&#40;データ ドリブン サブスクリプション&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)です。  
+-   サブスクリプション データについては、スキーマ情報をレポート サーバーに提供できるデータ ソースを選択します。 サポートされているデータ ソースの種類としては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データ、Oracle、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ データ、ODBC データ ソース、OLE DB データ ソースなどがあります。 サブスクライバー データ ソースの要件の詳細については、次を参照してください。[サブスクライバー データに対して外部データ ソースを使用して&#40;データ ドリブン サブスクリプション&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)します。  
   
 ## <a name="working-with-data-driven-subscriptions"></a>データ ドリブン サブスクリプションの処理  
  以下のトピックでは、データ ドリブン サブスクリプションの詳細について説明します。  

@@ -1,5 +1,5 @@
 ---
-title: Hyperion Essbase クエリ デザイナーのユーザー インターフェイス (レポート ビルダー) |Microsoft ドキュメント
+title: Hyperion Essbase クエリ デザイナーのユーザー インターフェイス (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10013"
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - query designers, Hyperion
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 27dd20fae08317cd58fd9ca9b5084fda000906c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3653c8bf79c3c7527f72d01282fe7af961fbbec8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208592"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Hyperion Essbase クエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、[!INCLUDE[extEssbase](../includes/extessbase-md.md)] データ ソースに対する多次元式 (MDX) クエリを作成するためのグラフィカル クエリ デザイナーが用意されています。 MDX のグラフィカル クエリ デザイナーには、デザイン モードとクエリ モードという 2 つのモードがあります。 いずれのモードにもメタデータ ペインが表示されます。ここから、データ ソースで定義されているキューブのメンバーをドラッグすることによって、MDX クエリを作成できます。レポートの処理時には、このクエリに基づいてデータが取得されます。  
@@ -35,7 +35,7 @@ ms.locfileid: "36084526"
  ここでは、グラフィカル クエリ デザイナーの各モードの、ツール バーのボタンとクエリ デザイナーのペインについて説明します。  
   
 ## <a name="graphical-query-designer-in-design-mode"></a>グラフィカル クエリ デザイナー (デザイン モード)  
- 使用するデータセットの MDX クエリを編集するときに、[!INCLUDE[extEssbase](../includes/extessbase-md.md)]データ ソース、グラフィカル クエリ デザイナーがデザイン モードで開きます。 次の図は、デザイン モードで表示される各ペインの名称を示しています。  
+ 使用するデータセットの MDX クエリを編集するときに、[!INCLUDE[extEssbase](../includes/extessbase-md.md)]データ ソースの場合は、グラフィカル クエリ デザイナーがデザイン モードで開きます。 次の図は、デザイン モードで表示される各ペインの名称を示しています。  
   
  ![Hyperion Essbase データ ソースのクエリ デザイナー](media/rsqd-dshyperionessbase-mdx-designmode.gif "Hyperion Essbase データ ソースのクエリ デザイナー")  
   

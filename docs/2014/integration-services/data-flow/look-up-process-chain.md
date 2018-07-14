@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b3792a55da4ee30d4e3c09a186ca1bf6d32c965
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60ede7801556f50dc59ba3017e3d3fdbd795e04f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221702"
 ---
 # <a name="look-up-process-chain"></a>[プロセス チェーンの参照]
   SAP Netweaver BW システムで定義されたプロセス チェーンを参照する場合、 **[プロセス チェーンの参照]** ダイアログ ボックスを使用します。 使用できるプロセス チェーンの一覧が表示されたら目的のチェーンを選択すると、関連するオプションに必要な値が設定されます。  
@@ -56,7 +56,7 @@ ms.locfileid: "36163898"
  **[プロセス チェーン]**  
  SAP Netweaver BW システムで定義されたプロセス チェーンの名前を表示します。  
   
- **description**  
+ **[説明]**  
  プロセス チェーンの説明を表示します。  
   
  使用できるプロセス チェーンの一覧が表示されたら目的のチェーンを選択すると、関連するオプションに必要な値が設定されます。  

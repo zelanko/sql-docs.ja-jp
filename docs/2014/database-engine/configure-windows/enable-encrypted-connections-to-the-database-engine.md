@@ -1,5 +1,5 @@
 ---
-title: データベース エンジン (SQL Server 構成マネージャー) への暗号化接続を有効にする |Microsoft ドキュメント
+title: データベース エンジン (SQL Server 構成マネージャー) への暗号化接続を有効にする |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], encrypted
 - SSL [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 87550bc2c29485eaa1f4ad10e6ca82b79af19724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6a75c1657624475467df1a367e1830145ac561a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275448"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>データベース エンジンへの暗号化接続の有効化 (SQL Server 構成マネージャー)
   このトピックでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 構成マネージャーを使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] の証明書を指定することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの暗号化接続を有効にする方法について説明します。 サーバー コンピューターには証明書を提供し、クライアント マシンは証明書のルート機関を信頼するように設定する必要があります。 提供は、証明書を Windows にインポートすることでインストールする処理です。  
@@ -47,7 +47,7 @@ ms.locfileid: "36083044"
   
 -   **暗号化された接続を有効にします。**  
   
-     [プロビジョニング サーバーの証明書を (インストール)](#Provision)  
+     [(インストール)、サーバー上の証明書のプロビジョニング](#Provision)  
   
      [サーバー証明書をエクスポートします。](#Export)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36083044"
   
 ###  <a name="Provision"></a> サーバーに証明書を提供 (インストール) するには  
   
-1.  **開始** メニューのをクリックして**実行**、し、、**開く**ボックスに、入力`MMC` をクリック**ok**です。  
+1.  **開始** メニューのをクリックして**実行**、し、**オープン**ボックスに「 `MMC`  をクリック**ok**します。  
   
 2.  MMC コンソールの **[ファイル]** メニューで、 **[スナップインの追加と削除]** をクリックします。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36083044"
   
 1.  **SQL Server 構成マネージャー**で、**[SQL Server ネットワークの構成]** を展開し、**[***\<server instance> のプロトコル]* を右クリックします。次に **[プロパティ]** を選びます。  
   
-2.  **プロトコル * * *\<インスタンス名 >* **プロパティ** ダイアログ ボックスで、**証明書** タブで、下のドロップダウンから必要な証明書の選択**証明書**ボックスをクリックして**OK**です。  
+2.  **プロトコル * * *\<インスタンス名 >* **プロパティ** ダイアログ ボックスで、**証明書** タブで、下のドロップダウンから必要な証明書の選択**証明書**ボックスをクリックして**OK**します。  
   
 3.  **[フラグ]** タブの **[ForceEncryption]** ボックスの一覧の **[はい]** をクリックし、 **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   

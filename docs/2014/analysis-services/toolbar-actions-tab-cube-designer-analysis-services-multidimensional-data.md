@@ -1,5 +1,5 @@
 ---
-title: ツールバー ([アクション] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: ツールバー (キューブ デザイナーの [操作] タブ) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4ef65300-abce-43a6-8119-cb3f962dd564
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3742a1ad0eaa7b5423e6c87577e0d31d364d819c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b1d1c13385660e498961cb697486e6771110735
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275318"
 ---
 # <a name="toolbar-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>ツール バー (キューブ デザイナーの [アクション] タブ) (Analysis Services - 多次元データ)
   **ツール バー** ペインを使用すると、キューブ デザイナーの **[アクション]** タブで一般的な操作を実行できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36083258"
 |**新しいアクション**|クリックすると **アクション フォーム エディター** ペインが表示され、新しいアクションが作成されます。|  
 |**新しいドリルスルー アクション**|クリックすると、 **ドリルスルー アクション フォーム エディター** が表示され、新しいドリルスルー アクションが作成されます。|  
 |**新しいレポート アクション**|クリックすると、 **レポート アクション フォーム エディター** が表示され、新しいレポート アクションが作成されます。|  
-|**Delete**|クリックすると、 **[オブジェクトの削除]** ダイアログ ボックスが表示され、選択したアクションを削除できます。<br /><br /> 注: このオプションは、 **[アクション オーガナイザー]** ペインが選択されている場合にのみ有効になります。|  
+|**削除**|クリックすると、 **[オブジェクトの削除]** ダイアログ ボックスが表示され、選択したアクションを削除できます。<br /><br /> 注: このオプションは、 **[アクション オーガナイザー]** ペインが選択されている場合にのみ有効になります。|  
 |**構文を確認します。**|**[アクション オーガナイザー]** ペインで選択されているアクションの構文を確認できます。|  
   
   

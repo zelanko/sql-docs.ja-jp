@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 caps.latest.revision: 23
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80961e5899162575ae832d5d6a8dd35824b43a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd40a67ecd13dde8c78b38ba0f37d4928b86dd0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324552"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>手順 2: 破損ファイルの作成
   変換エラーの構成と処理を体験するために、コンポーネントの処理が失敗するサンプル フラット ファイルを作成します。  
@@ -38,12 +38,12 @@ ms.locfileid: "36084572"
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip ファイルをクリックします。  
   
-2.  テキスト エディターの検索し、置換機能のすべてのインスタンスを`VEB`に置き換え、`BAD`です。  
+2.  使用して、テキスト エディターの検索と置換機能のすべてのインスタンスを`VEB`に置き換えます`BAD`します。  
   
-3.  他のサンプル データ ファイルと同じフォルダー、として変更されたファイルを保存`Currency_BAD.txt`です。  
+3.  他のサンプル データ ファイルと同じフォルダーで、変更されたファイルとして保存`Currency_BAD.txt`します。  
   
     > [!IMPORTANT]  
-    >  確認して`Currency_BAD.txt`他のサンプル データ ファイルと同じフォルダーに保存されます。  
+    >  必ず`Currency_BAD.txt`他のサンプル データ ファイルと同じフォルダーに保存されます。  
   
 4.  テキスト エディターを閉じます。  
   

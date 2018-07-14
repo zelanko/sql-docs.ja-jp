@@ -1,5 +1,5 @@
 ---
-title: SSMS (SSAS テーブル) を使用してロールの管理 |Microsoft ドキュメント
+title: SSMS (SSAS テーブル) を使用してロールの管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 907b1ea2b655c9da1b9754441be5a933ac8380af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5c1aa9fc419c80bed7ca38e6d0174fb723ca648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226422"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>SSMS を使用したロールの管理 (SSAS テーブル)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、配置したテーブル モデルのロールの作成、編集、および管理を行うことができます。  
@@ -62,12 +62,12 @@ ms.locfileid: "36084635"
   
 6.  メンバーシップ設定ウィンドウで **[追加]** をクリックし、 **[ユーザーまたはグループの選択]** ダイアログ ボックスで、メンバーとして追加する Windows ユーザーまたはグループを選択します。  
   
-7.  作成しているロールに読み取り権限がある場合、DAX 数式を使用してテーブルに行フィルターを追加できます。 行フィルターを追加する、**ロールのプロパティ - \<rolename >** ダイアログ ボックスで、**ページの選択**、をクリックして**行フィルター**です。  
+7.  作成しているロールに読み取り権限がある場合、DAX 数式を使用してテーブルに行フィルターを追加できます。 行フィルターを追加する、**ロールのプロパティ - \<rolename >**  ダイアログ ボックスで**ページの選択**、 をクリックして**行フィルター**します。  
   
-8.  行フィルター ウィンドウで、テーブルを選択し、をクリックして、 **DAX フィルター**フィールド、し、 **DAX フィルター - \<tablename >** フィールドに、DAX の数式を入力します。  
+8.  行フィルター ウィンドウで、テーブルを選択し、をクリックして、 **DAX フィルター**フィールド、し、 **DAX フィルター - \<tablename >** フィールドに、DAX 式を入力します。  
   
     > [!NOTE]  
-    >  DAX フィルター - \<tablename > フィールドが、AutoComplete クエリ エディターを含むまたは関数挿入機能していません。 DAX 数式を作成するときにオートコンプリート機能を使用するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の DAX 数式エディターを使用する必要があります。  
+    >  DAX フィルター - \<tablename > フィールドが、オートコンプリート クエリ エディターまたは関数挿入機能していません。 DAX 数式を作成するときにオートコンプリート機能を使用するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の DAX 数式エディターを使用する必要があります。  
   
 9. **[OK]** をクリックして、ロールを保存します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36084635"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、編集するロールを含むテーブル モデル データベースを展開し、 **[ロール]** を展開してから、ロールを右クリックして **[プロパティ]** をクリックします。  
   
-     **ロール プロパティ** \<rolename > ダイアログ ボックスで、アクセス許可を変更、追加するか、メンバーを削除および追加/編集行フィルターします。  
+     **ロールのプロパティ** \<rolename > ダイアログ ボックスで、アクセス許可を変更、追加またはメンバーの削除、および行フィルターの追加/編集します。  
   
 ###  <a name="bkmk_deletet_role"></a> ロールを削除するには  
   

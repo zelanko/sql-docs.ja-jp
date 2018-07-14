@@ -1,5 +1,5 @@
 ---
-title: Type 要素 (MeasureGroupAttribute) (ASSL) |Microsoft ドキュメント
+title: Type 要素 (MeasureGroupAttribute) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 93740504-297a-4a06-ab3e-b598e466eebb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d06b5df3ba99e54ec62de5c6f274874289cbbc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49155b00ca70c613ffec01e898e7c6f071e24c84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254854"
 ---
 # <a name="type-element-measuregroupattribute-assl"></a>Type 要素 (MeasureGroupAttribute) (ASSL)
   型を含む、 [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md)要素。  
@@ -51,7 +51,7 @@ ms.locfileid: "36084399"
 |特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*通常*|  
+|既定値|*正規表現*|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
@@ -66,15 +66,15 @@ ms.locfileid: "36084399"
   
 |値|説明|  
 |-----------|-----------------|  
-|*通常*|標準属性を表します。|  
+|*正規表現*|標準属性を表します。|  
 |*粒度*|粒度属性を表します。|  
   
- 許可される値に対応する列挙`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MeasureGroupAttributeType>します。  
+ 許容された値に対応する列挙体`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MeasureGroupAttributeType>します。  
   
  親に対応する要素`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MeasureGroupAttribute>します。  
   
 ## <a name="see-also"></a>参照  
- [要素の属性&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
+ [Attributes 要素&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
  [RegularMeasureGroupDimension データ型&#40;ASSL&#41;](../data-type/dimension-data-type-assl.md)   
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  
   

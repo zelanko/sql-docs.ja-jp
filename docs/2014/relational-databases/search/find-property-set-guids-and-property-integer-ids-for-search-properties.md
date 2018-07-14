@@ -5,29 +5,28 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 966ec6aaf9a5cf0367dfc8d1b2e0f7895e4eb46c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: bd3deed243e921ea7c15065b127f455d30cad0a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236692"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得
   このトピックでは、プロパティを検索プロパティ リストに追加してフルテキスト検索で検索できるようにするために事前に必要な値を取得する方法について説明します。 これらの値には、ドキュメント プロパティのプロパティ セット GUID およびプロパティ整数識別子が含まれます。  
   
- ドキュメントの Ifilter で抽出されたバイナリ データに格納されたデータからプロパティを`varbinary`、 `varbinary(max)` (含む`FILESTREAM`)、または`image`データ型の列がフルテキスト検索を可能にすることができます。 抽出されたプロパティを検索できるようにするには、検索プロパティ リストにプロパティを手動で追加する必要があります。 さらに、検索プロパティ リストを 1 つ以上のフルテキスト インデックスに関連付ける必要があります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](search-document-properties-with-search-property-lists.md)」を参照してください。  
+ ドキュメントから抽出された Ifilter でバイナリ データからは、データに格納されているプロパティ、 `varbinary`、 `varbinary(max)` (含む`FILESTREAM`)、または`image`データ型の列をフルテキスト検索に使用できます。 抽出されたプロパティを検索できるようにするには、検索プロパティ リストにプロパティを手動で追加する必要があります。 さらに、検索プロパティ リストを 1 つ以上のフルテキスト インデックスに関連付ける必要があります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](search-document-properties-with-search-property-lists.md)」を参照してください。  
   
  使用可能なプロパティをプロパティ リストに追加する前に、プロパティに関する以下の 2 つの情報を入手する必要があります。  
   

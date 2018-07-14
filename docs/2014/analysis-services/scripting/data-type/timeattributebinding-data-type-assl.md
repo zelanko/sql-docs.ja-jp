@@ -1,5 +1,5 @@
 ---
-title: TimeAttributeBinding データ型 (ASSL) |Microsoft ドキュメント
+title: TimeAttributeBinding データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TimeAttributeBinding data type
 ms.assetid: e8317b1c-a83a-4074-9538-400792500985
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7422bc4f3101b4ecbbb004583fed61801c9dfad7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7e123cad0d54a1512aaa7edac8a230348505b879
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237552"
 ---
 # <a name="timeattributebinding-data-type-assl"></a>TimeAttributeBinding データ型 (ASSL)
   属性のキー列など、サーバー時間ディメンションで生成されたデータ アイテムの "プレースホルダー" バインドを表す派生データ型を定義します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36076064"
 ## <a name="remarks"></a>コメント  
  詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、`Binding`型との継承階層`Binding`型を参照してください[データ型のバインド&#40;ASSL&#41;](binding-data-type-assl.md).  
   
- ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.TimeAttributeBinding>します。  
   

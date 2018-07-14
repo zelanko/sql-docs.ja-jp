@@ -1,5 +1,5 @@
 ---
-title: MoveWithDescendants 要素 (XMLA) |Microsoft ドキュメント
+title: MoveWithDescendants 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - MoveWithDescendants element
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 975044359f2855f8cced46ca2045c2c397e4234b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75fffd4d923b7593f403ae2268b980a5ab6de6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332572"
 ---
 # <a name="movewithdescendants-element-xmla"></a>MoveWithDescendants 要素 (XMLA)
-  属性メンバーの子孫が親によっても更新するかどうかを示す[更新](../xml-elements-commands/update-element-xmla.md)コマンド。  
+  属性メンバーの子孫が親によっても更新するかどうかを示します[Update](../xml-elements-commands/update-element-xmla.md)コマンド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,12 +64,12 @@ ms.locfileid: "36084834"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `MoveWithDescendants`要素を決定するかどうか、`Update`コマンドによって識別される属性メンバーをだけ更新する必要がありますいない、[属性](attributes-element-xmla.md)要素もそれらの属性メンバーの子孫があります。同様に更新します。  
+ `MoveWithDescendants`要素を決定するかどうか、`Update`コマンドによって識別される属性メンバーをのみ更新する必要がありますできません、[属性](attributes-element-xmla.md)要素もするそれらの属性メンバーの子孫の場合は同様に更新します。  
   
 > [!NOTE]  
 >  この要素は、親子階層内の属性メンバーにのみ適用されます。  
   
- メンバーの更新の詳細については、次を参照してください。[挿入、更新、および削除するメンバー &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)です。  
+ メンバーの更新の詳細については、次を参照してください。[挿入、更新、および削除するメンバー &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;XMLA&#41;](xml-elements-properties.md)  

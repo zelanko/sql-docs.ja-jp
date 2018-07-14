@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting derived hierarchies [Master Data Services]
 - derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7565774b80c1722177bb6ccdc5b041759369b9c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e8a66eb7cbc6c81f29a227e95bb1f7397e5b6326
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331822"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>派生階層を削除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、不要になった派生階層を削除します。  
@@ -41,18 +41,18 @@ ms.locfileid: "36084343"
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **モデルビュー**  ページで、メニュー バーのをポイント**管理** をクリック**派生階層**です。  
+2.  **モデル ビュー**  ページで、ポイントして、メニュー バーから**管理** をクリック**派生階層**します。  
   
 3.  **[派生階層のメンテナンス]** ページの **[モデル]** の一覧からモデルを選択します。  
   
 4.  削除する派生階層の行を選択します。  
   
-5.  をクリックして**選択した階層を削除**です。  
+5.  クリックして**選択した階層を削除**します。  
   
 6.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [派生階層を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [派生階層を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [派生階層&#40;マスター データ サービス&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
   

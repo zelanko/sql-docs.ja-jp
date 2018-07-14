@@ -1,30 +1,29 @@
 ---
-title: 最小限のダウンタイムとデータ損失の可用性グループ サーバーのアップグレードおよび更新 |Microsoft ドキュメント
+title: 最小限のダウンタイムとデータ損失の可用性グループ サーバーのアップグレードおよび更新 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 7
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a0e2c87919337ebfec117e4696185b4fe8705218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: db74916aa24c1dcd3f94fa163ae0ef87697a8fa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247030"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>ダウンタイムとデータ損失を最小限に抑えた可用性グループ サーバーのアップグレードおよび更新
   SQL Server 2012 のサーバー インスタンスをサービス パックで更新するとき、または新しいバージョンにアップグレードするときに、順次更新または順次アップグレードを実行することにより、可用性グループのダウンタイムを手動フェールオーバー 1 回分のみに抑えることができます。 SQL Server のバージョンをアップグレードする場合、この操作をローリング アップグレードと呼びます。現在のバージョンの SQL Server に修正プログラムまたはサービス パックを適用して更新する場合、この操作をローリング アップデートと呼びます。  
   
- ここでは、SQL Server のアップグレードまたは更新についてのみ説明します。 オペレーティング システムに関連するアップグレードまたは更新で高可用性では、SQL Server インスタンスが実行されている、次を参照してください[クラスター間での AlwaysOn 可用性グループの移行オペレーティング システムのアップグレード。](http://msdn.microsoft.com/library/jj873730.aspx)  
+ ここでは、SQL Server のアップグレードまたは更新についてのみ説明します。 オペレーティング システム関連のアップグレードまたは更新で、高可用性 SQL Server インスタンスが実行されている、次を参照してください[移行の AlwaysOn 可用性グループのクラスター間オペレーティング システムのアップグレード。](http://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>AlwaysOn 可用性グループのローリング アップグレードおよびローリング アップデートのベスト プラクティス  
  サーバーのアップグレードまたは更新の際に可用性グループのダウンタイムとデータ損失を最小限に抑えるには、次のベスト プラクティスに従ってください。  
