@@ -38,10 +38,10 @@ ms.lasthandoff: 05/04/2018
 |**action_id**|**int**|アクションの識別子。|  
 |**sequence_id**|**int**|アクション内のステップを識別します。|  
 |**instance_id**|**uniqueidentifier**|DAC インスタンスの識別子。 この列に結合できます、 **instance_id**内の列[dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)です。|  
-|**action_type**|**tinyint**|アクションの種類の識別子。<br /><br /> **0** = 展開<br /><br /> **1** = 作成<br /><br /> **2**名前の変更を =<br /><br /> **3** = デタッチ<br /><br /> **4** = delete|  
+|**action_type**|**tinyint**|アクションの種類の識別子。<br /><br /> **0** = 展開<br /><br /> **1** = 作成<br /><br /> **2** = 名前の変更<br /><br /> **3** = デタッチ<br /><br /> **4** = 削除|  
 |**action_type_name**|**varchar(19)**|アクションの種類の名前。<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
-|**dac_object_type**|**tinyint**|アクションの影響を受けるオブジェクトの種類の識別子。<br /><br /> **0** dacpac を =<br /><br /> **1**ログインを =<br /><br /> **2** = データベース|  
-|**dac_object_type_name**|**varchar(8)**|アクションの影響を受けるオブジェクトの種類の名前。<br /><br /> **dacpac** DAC インスタンスを =<br /><br /> **login**<br /><br /> **データベース (database)**|  
+|**dac_object_type**|**tinyint**|アクションの影響を受けるオブジェクトの種類の識別子。<br /><br /> **0** = dacpac<br /><br /> **1** = ログイン<br /><br /> **2** = データベース|  
+|**dac_object_type_name**|**varchar(8)**|アクションの影響を受けるオブジェクトの種類の名前。<br /><br /> **dacpac** = DAC インスタンス<br /><br /> **login**<br /><br /> **データベース (database)**|  
 |**action_status**|**tinyint**|アクションの現在のステータスを識別するコード。<br /><br /> **0** = 保留中<br /><br /> **1** = 成功<br /><br /> **2** = 失敗|  
 |**action_status_name**|**varchar(11)**|アクションの現在のステータス。<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
 |**必須**|**bit**|DAC 操作をロールバックするときに、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって使用されます。|  
