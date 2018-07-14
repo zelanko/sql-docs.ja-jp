@@ -1,5 +1,5 @@
 ---
-title: Error 要素 (XMLA) |Microsoft ドキュメント
+title: Error 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Error element
 ms.assetid: add670cb-cab2-42be-91a3-d0c385f29d16
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 35c3b1ea4ee852365933d5a95d1f7ca822eff0fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 55b63c016f9f2c61cc83563e697a49a0c4970cae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273738"
 ---
 # <a name="error-element-xmla"></a>Error 要素 (XMLA)
-  インスタンスによって返されるエラーについての情報を含む[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+  インスタンスによって返されるエラーについての情報を含む[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -88,11 +88,11 @@ ms.locfileid: "36083501"
   
 |属性|説明|  
 |---------------|-----------------|  
-|ErrorCode|必要な`UnsignedInt`属性 (される場合にのみ`Message`親要素です)。エラーのリターン コード (数値) を含みます。|  
-|Severity|省略可能な`String`属性 (される場合にのみ`Message`親要素です)。エラーの重大度レベルを格納します。|  
-|説明|省略可能な`String`属性 (される場合にのみ`Message`親要素です)。エラーについての説明テキストを含みます。|  
-|Source|省略可能な`String`属性 (される場合にのみ`Message`親要素です)。エラーを生成したコンポーネントの名前を含みます。|  
-|HelpFile|省略可能な`String`属性 (される場合にのみ`Message`親要素です)。エラーについて説明しているヘルプ ファイルまたはトピックのパス、あるいは URL を含みます。|  
+|ErrorCode|必要な`UnsignedInt`属性 (場合にのみ`Message`は親要素です)。エラーのリターン コード (数値) を含みます。|  
+|Severity|省略可能な`String`属性 (場合にのみ`Message`は親要素です)。エラーの重大度レベルを格納します。|  
+|説明|省略可能な`String`属性 (場合にのみ`Message`は親要素です)。エラーについての説明テキストを含みます。|  
+|Source|省略可能な`String`属性 (場合にのみ`Message`は親要素です)。エラーを生成したコンポーネントの名前を含みます。|  
+|HelpFile|省略可能な`String`属性 (場合にのみ`Message`は親要素です)。エラーについて説明しているヘルプ ファイルまたはトピックのパス、あるいは URL を含みます。|  
   
 ## <a name="remarks"></a>コメント  
   

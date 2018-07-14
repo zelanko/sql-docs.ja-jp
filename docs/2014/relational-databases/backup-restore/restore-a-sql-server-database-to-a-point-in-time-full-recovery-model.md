@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - STOPAT clause [RESTORE LOG statement]
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 62676ecbbe57529a2f1eeec4448ef91a4ebf6d4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 504810285ca79879e2442526747d40bbf0ed50bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203562"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースを特定の時点まで復元する方法について説明します。 このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにのみ関連しています。  
@@ -136,9 +135,9 @@ ms.locfileid: "36084417"
   
  **[!INCLUDE[tsql](../../includes/tsql-md.md)] の基本構文**  
   
- RESTORE LOG *database_name* FROM < backup_device > WITH STOPAT  **= *`time`*、** 復旧しています.  
+ RESTORE LOG *database_name* FROM < backup_device > WITH STOPAT  **= *`time`*、** 回復しています.  
   
- 回復ポイントが以前に行われた最後のトランザクション コミット、`datetime`によって指定されている値*時間*です。  
+ 復旧ポイントが以前に行われた最新のトランザクションのコミット、`datetime`値で指定されている*時間*します。  
   
  特定の時点より前に行われた変更のみを復元するには、復元するバックアップごとに WITH STOPAT **=** *time* を指定します。 これにより、目的の時点を過ぎる危険性を回避できます。  
   
@@ -156,7 +155,7 @@ ms.locfileid: "36084417"
   
 3.  差分バックアップが存在する場合、データベースを復旧せずに最新のデータベースの差分バックアップを復元します (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  各トランザクション ログ バックアップを適用で作成された、同じ順序でログの復元を停止する時刻を指定 (データベースの復元*database_name* FROM < backup_device > WITH STOPAT **= *`time`*、** RECOVERY)。  
+4.  ログの復元を停止する時刻を指定することで作成された、同じ順序でトランザクション ログのバックアップの適用 (RESTORE DATABASE *database_name* FROM < backup_device > WITH STOPAT **= *`time`*、** RECOVERY)。  
   
     > [!NOTE]  
     >  RECOVERY オプションと STOPAT オプション。 トランザクション ログ バックアップに、要求した時点の情報が格納されていない場合、たとえば、指定した日時がトランザクション ログに記録されている時点より後の場合などに、警告が生成されます。この場合、データベースは復旧されません。  
@@ -186,7 +185,7 @@ GO
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
--   [データベース バックアップを復元&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [データベースのバックアップを復元&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 接続とセッションを ADOMD.NET での操作 |Microsoft ドキュメント
+title: 接続とセッションを ADOMD.NET での操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - connections [ADOMD.NET]
 ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 07c17333b58d34a99e8d393a1dbc8ec00d75f60e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ef7c679aa0f295c486836763158a89a1f593ff8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176959"
 ---
 # <a name="working-with-connections-and-sessions-in-adomdnet"></a>ADOMD.NET での接続およびセッションの使用
-  XML for Analysis (XMLA) では、分析データにアクセスする際のステートフルな操作をセッションがサポートします。 セッションは、分析データ ソースに対して実行するコマンドおよびトランザクションのスコープとコンテキストを決定します。 セッションを管理するために使用する XMLA 要素は[BeginSession](../xmla/xml-elements-headers/beginsession-element-xmla.md)、[セッション](../xmla/xml-elements-headers/session-element-xmla.md)、および[EndSession](../xmla/xml-elements-headers/endsession-element-xmla.md)です。  
+  XML for Analysis (XMLA) では、分析データにアクセスする際のステートフルな操作をセッションがサポートします。 セッションは、分析データ ソースに対して実行するコマンドおよびトランザクションのスコープとコンテキストを決定します。 セッションを管理するために使用する XMLA 要素は[BeginSession](../xmla/xml-elements-headers/beginsession-element-xmla.md)、[セッション](../xmla/xml-elements-headers/session-element-xmla.md)、および[EndSession](../xmla/xml-elements-headers/endsession-element-xmla.md)します。  
   
  ADOMD.NET はこれらの XMLA セッション要素を使用して、セッションを開始し、クエリの実行やデータの取得を行い、セッションを閉じます。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "36164678"
  セッションが有効な状態で維持されるかどうかは、セッション ID で保証されるわけではありせん。 セッションが期限切れになった場合 (たとえば、タイムアウトが発生するか、接続が失われた場合)、プロバイダーはそのセッションの処理を終了してロールバックすることを選択できます。 その場合、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトが行うそれ以降のすべてのメソッド呼び出しは例外をスローします。 セッションが期限切れになったときではなく、次の要求がプロバイダーに送信されるときのみ例外がスローされるため、アプリケーションは、プロバイダーからデータまたはメタデータを取得するときにはいつでもこれらの例外を処理できる必要があります。  
   
 ## <a name="closing-a-session"></a>セッションの終了  
- 場合、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A>の値を指定せずにメソッドが呼び出されて、 *endSession*パラメーター、または、 *endSession*パラメーターが true の場合、両方への接続、セッションとセッションに設定関連付けられている、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>オブジェクトが閉じられました。 セッションを閉じるために、ADOMD.NET は、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.SessionID%2A> プロパティの値に設定されたセッション ID と共に、XMLA `EndSession` ヘッダーをプロバイダーに送信します。  
+ 場合、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A>の値を指定せずにメソッドを呼び出した、 *endSession*パラメーター、または、 *endSession*パラメーターが true の場合、セッションとセッションへの接続に設定されています。関連付けられている、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>オブジェクトが閉じられます。 セッションを閉じるために、ADOMD.NET は、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.SessionID%2A> プロパティの値に設定されたセッション ID と共に、XMLA `EndSession` ヘッダーをプロバイダーに送信します。  
   
- 場合、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A>メソッドが呼び出された、 *endSession*パラメーターを False に設定に関連付けられているセッション、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>オブジェクトがアクティブなは残りますが、セッションへの接続が閉じられます。  
+ 場合、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A>メソッドを呼び出すと、 *endSession*パラメーターが False に関連付けられているセッションを設定、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>オブジェクトがアクティブなは残りますが、セッションへの接続が閉じられました。  
   
 ## <a name="example-of-managing-a-session"></a>セッション管理の例  
  次の例では、接続を開いてセッションを作成し、セッションを ADOMD.NET で開いた状態で接続を閉じます。  

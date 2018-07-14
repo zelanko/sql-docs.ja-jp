@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - HierarchyID
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c513aa5fb2c1f42b0eb2fa6c82deaac96c49d3ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 86aebcd1b6545782fed51991e3fe25e645c2e6c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321892"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>階層的な手法を使用した階層テーブルの作成
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] のマーケティング部門には 8 人の従業員が勤務しています。 従業員の階層は、次のようになります。  
@@ -68,7 +68,7 @@ ms.locfileid: "36084046"
   
 ### <a name="to-insert-a-subordinate-employee"></a>部下を挿入するには  
   
-1.  **Sariya** は **David**に直属します。 挿入する**Sariya の**ノードを作成する必要が適切な**OrgNode**データ型の値`hierarchyid`です。 次のコードでは、`hierarchyid` データ型の変数を作成して、テーブルのルート OrgNode 値をその変数に代入します。 次に、その変数を [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) メソッドと共に使用して、部下のノードである行を挿入します。 `GetDescendant` は、2 つの引数を受け取ります。 引数値の次のオプションを確認してください。  
+1.  **Sariya** は **David**に直属します。 挿入する**Sariya の**ノードを作成する必要が適切な**OrgNode**データ型の値`hierarchyid`します。 次のコードでは、`hierarchyid` データ型の変数を作成して、テーブルのルート OrgNode 値をその変数に代入します。 次に、その変数を [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) メソッドと共に使用して、部下のノードである行を挿入します。 `GetDescendant` は、2 つの引数を受け取ります。 引数値の次のオプションを確認してください。  
   
     -   parent が NULL の場合、 `GetDescendant` は NULL を返します。  
   

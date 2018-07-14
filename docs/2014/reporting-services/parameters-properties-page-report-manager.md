@@ -1,5 +1,5 @@
 ---
-title: パラメーター プロパティ ページ (レポート マネージャー) |Microsoft ドキュメント
+title: パラメーターのプロパティ ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dae546d2c07e21c8c930c889f8931b683828b055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0f3b3bf5c8d672be964dcd77453f16e7ac9cbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327562"
 ---
 # <a name="parameters-properties-page-report-manager"></a>[パラメーター] プロパティ ページ (レポート マネージャー)
   パラメーター化されたレポートのパラメーター設定を表示または変更するには、[パラメーター] プロパティ ページを使用します。  
@@ -64,12 +64,12 @@ ms.locfileid: "36085602"
   
  レポートにパラメーターを表示する場合は、このチェック ボックスをオフにします。  
   
- **ユーザーの確認**  
+ **ユーザーに促す**  
  テキスト ボックスを表示して、ユーザーにパラメーター値の入力を要求する場合に、このチェック ボックスをオンにします。  
   
  自動実行モードでレポートを実行する場合 (たとえば、レポート ヒストリまたはレポート実行スナップショットを生成する場合)、すべてのユーザーに同じパラメーター値を使用する場合、またはユーザーによる値の入力を要求しない場合は、このチェック ボックスをオフにします。  
   
- **表示テキスト**  
+ **テキストを表示します。**  
  パラメーター テキスト ボックスの隣に表示するテキスト文字列を指定します。 この文字列により、ラベルまたは説明のテキストが表示されます。 文字列の長さに制限はありません。 長いテキスト文字列は、表示領域内で折り返されます。  
   
 ## <a name="see-also"></a>参照  

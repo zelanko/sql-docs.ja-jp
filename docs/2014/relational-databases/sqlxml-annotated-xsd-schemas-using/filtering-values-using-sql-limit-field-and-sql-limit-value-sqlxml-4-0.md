@@ -1,5 +1,5 @@
 ---
-title: 使用した、値をフィルター処理のフィールドと sql:limit-値 (SQLXML 4.0) |Microsoft ドキュメント
+title: Sql:limit の値を使用してフィルター処理、および -(SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6cc802c42db2f688ee7d4cab0876e64ee9becc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d2ae0fe5a6bc85a9c2535b65f1989a8d5cd72904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260558"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field および sql:limit-value を使用した、値のフィルター選択 (SQLXML 4.0)
   データベース クエリから返される行を、一定の制限値に基づいて制限することができます。 制限の対象となるデータベース列を識別し、返されるデータのフィルター選択に使用する制限値を指定するには、`sql:limit-field` 注釈と `sql:limit-value` 注釈を使用します。  
   
  `sql:limit-field` 注釈では、制限の対象となる列を指定します。この注釈は、マップされる要素または属性ごとに使用できます。  
   
- `sql:limit-value` 注釈では、`sql:limit-field` 注釈で指定された列に適用する制限値を指定します。 `sql:limit-value` 注釈は省略可能です。 場合`sql:limit-value`が指定されていない、NULL 値が使用されます。  
+ `sql:limit-value` 注釈では、`sql:limit-field` 注釈で指定された列に適用する制限値を指定します。 `sql:limit-value` 注釈は省略可能です。 場合`sql:limit-value`が指定されていない場合、NULL 値が使用されます。  
   
 > [!NOTE]  
 >  マップされる SQL 列が `sql:limit-field` 型の場合に `real` を指定すると、SQLXML 4.0 では XML スキーマで指定されているとおり、`sql:limit-value` 指定値として `nvarchar` が変換されます。 ここで、10 進数の制限値を完全な科学的表記法で指定する必要があります。 詳細については、後の例 B を参照してください。  
@@ -58,7 +58,7 @@ ms.locfileid: "36084959"
   
  顧客には、発送先住所と請求先住所のいずれかまたは両方が設定されています。 AddressType 列の値は Shipping と Billing です。  
   
- これは、マッピング スキーマで、 **ShipTo**スキーマ属性が Addresses リレーションの StreetAddress 列にマップします。 この属性に対して返される値を指定することによってのみ出荷先住所に限られます、`sql:limit-field`と`sql:limit-value`注釈。 同様に、 **BillTo**スキーマ属性には、顧客の請求先住所だけが返されます。  
+ これは、マッピング スキーマで、 **ShipTo**スキーマ属性が Addresses リレーションの StreetAddress 列にマップされます。 この属性に対して返される値は指定することでのみ出荷先住所に制限されます、`sql:limit-field`と`sql:limit-value`注釈。 同様に、 **BillTo**スキーマ属性が顧客の請求先住所だけを返します。  
   
  スキーマは次のようになります。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36084959"
   
 5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に使用する ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  結果を次に示します。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36084959"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- これは、マッピング スキーマで、 **OrderID**注文の詳細に属性が orders リレーションの OrderID 列にマップします。 この属性に対して返される値 2.0000000 値が設定されているもののみに限られます-001 (0.2) が指定されて、 **Discount**属性を使用して、`sql:limit-field`と`sql:limit-value`注釈。  
+ これは、マッピング スキーマで、 **OrderID**注文の詳細属性が orders リレーションの OrderID 列にマップされます。 この属性に対して返される値は 2.0000000 値を持つもののみに制限されています-001 (0.2) が指定されて、**割引**属性を使用して、`sql:limit-field`と`sql:limit-value`注釈。  
   
  スキーマは次のようになります。  
   

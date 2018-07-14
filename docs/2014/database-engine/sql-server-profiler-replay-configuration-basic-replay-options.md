@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler]-[構成の再生 (基本再生オプション) |Microsoft ドキュメント
+title: SQL Server Profiler の再生の構成 (基本再生オプション) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.generaloptions.f1
 helpviewer_keywords:
 - Replay Configuration dialog box
 ms.assetid: 85a1dec6-9bbc-477a-86c5-b463db9ebb31
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a2d67c2c481c44012a6e6fc63ae9bd560be90264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cef06029d3ac1af86955f7a2df89fbe570c15245
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178379"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - [構成の再生] ([再生オプションの基本設定])
   **[構成の再生]** ダイアログ ボックスの **[再生オプションの基本設定]** ページを使用すると、トレース ファイルまたはテーブルの再生方法を指定できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "36164598"
  **[サーバーへの接続]** ダイアログ ボックスを表示して、別のサーバーへ接続します。  
   
  **[ファイルに保存]**  
- 再生結果をファイルに保存します。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ファイルを保存する場所を指定することができます、標準ファイル ダイアログを表示します。  
+ 再生結果をファイルに保存します。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ファイルを保存する場所を指定する、標準ファイル ダイアログが表示されます。  
   
  **[テーブルに保存]**  
  再生結果をテーブルに保存します。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] により、テーブルを保存する場所を指定するためのテーブル選択ダイアログが表示されます。  

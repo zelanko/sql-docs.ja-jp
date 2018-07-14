@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], creating
 - database diagrams [SQL Server], creating
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72d4217370ab913eb094af946fc5870412ea2023
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f4591615a01d43d0fe2aa6f734f854a24119187d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181179"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>新しいデータベース ダイアグラムの作成 (Visual Database Tools)
   オブジェクト エクスプローラーを使用すると、新しいデータベース ダイアグラムを作成できます。 データベース ダイアグラムは、データベースの構造をグラフィカル表示するツールです。 データベース ダイアグラムを使用すると、テーブル、列、リレーションシップ、キーを作成および変更できます。 また、インデックスや制約を変更することもできます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36085348"
  次に、テーブルの追加や削除、既存のテーブルの変更、テーブル間のリレーションシップの変更などを行い、新しいデータベース ダイアグラムで必要なオブジェクトをすべて設定します。  
   
 ## <a name="see-also"></a>参照  
- [データベース ダイアグラムの操作&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [データベース ダイアグラムを扱う&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [データベース ダイアグラムの所有権について (Visual Database Tools)](understand-database-diagram-ownership-visual-database-tools.md)  
   
   

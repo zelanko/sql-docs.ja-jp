@@ -1,5 +1,5 @@
 ---
-title: サービス アカウント (Analysis Services) の構成 |Microsoft ドキュメント
+title: サービス アカウント (Analysis Services) の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], logon accounts
 - logon accounts [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a5093e78a7f2505588f5362ee0943b3660fc61be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19512299b7eacf0e768ef2a53bd867f05d5cc6d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206542"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>サービス アカウントの構成 (Analysis Services)
   製品全体のアカウントの準備については、 [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)サービスに関する包括的なサービス アカウントの情報を提供するトピック、「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows サービス アカウントと権限の構成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]」を参照してください。 有効なアカウントの種類、セットアップで割り当てられた Windows 特権、ファイル システムの権限、レジストリの権限などについては、前のトピックをご覧ください。  
@@ -49,11 +49,11 @@ ms.locfileid: "36164200"
   
  内部操作の場合、Analysis Services の権限保有者はログオン アカウントではなく、セットアップによって作成された、サービスごとの SID が含まれているローカル Windows セキュリティ グループです。 Analysis Services では、以前のバージョンから一貫して、アクセス許可をセキュリティ グループに割り当てるようになっています。 また、ログオン アカウントは時間の経過と共に変更できますが、サービスごとの SID とローカル セキュリティ グループはサーバーのインストールの有効期間にわたって一定です。 そのため、Analysis Services の場合、アクセス許可を保持するための選択肢として、ログオン アカウントよりもセキュリティ グループの方が優れています。 手動でサービス インスタンスに権限を付与するときには、ファイル システム権限と Windows の特権のどちらであっても、必ずサーバー インスタンスのために作成されたローカル セキュリティ グループにアクセス許可を与えます。  
   
- セキュリティ グループの名前は、一定のパターンに従います。 プレフィックスは常に`SQLServerMSASUser$`コンピューター名、インスタンス名で終わると、その後です。 既定のインスタンスは`MSSQLSERVER`します。 名前付きインスタンスは、セットアップ時に指定した名前です。  
+ セキュリティ グループの名前は、一定のパターンに従います。 プレフィックスは常に`SQLServerMSASUser$`、その後にインスタンス名で終わる、コンピューター名。 既定のインスタンスは`MSSQLSERVER`します。 名前付きインスタンスは、セットアップ時に指定した名前です。  
   
  ローカル セキュリティ設定でこのセキュリティ グループを確認できます。  
   
--   Compmgmt.msc を実行 |**ローカル ユーザーとグループ** | **グループ** | `SQLServerMSASUser$`\<サーバー名 >`$MSSQLSERVER` (の既定のインスタンス)。  
+-   Compmgmt.msc を実行する |**ローカル ユーザーとグループ** | **グループ** | `SQLServerMSASUser$`\<サーバー名 >`$MSSQLSERVER` (の既定のインスタンス)。  
   
 -   セキュリティ グループをダブルクリックして、そのメンバーを表示する。  
   
@@ -72,13 +72,13 @@ ms.locfileid: "36164200"
 |-|-|  
 |**[プロセス ワーキング セットの増加]** (SeIncreaseWorkingSetPrivilege)|この特権は、既定では **[ユーザー]** セキュリティ グループを介してすべてのユーザーが使用可能です。 このグループの特権を削除してサーバーをロックすると、Analysis Services が起動に失敗して、「クライアントには必要な特権がありません」というエラーがログに記録される可能性があります。 このエラーが発生した場合は、特権を適切な Analysis Services セキュリティ グループに付与することで、Analysis Services に特権を復元します。|  
 |**[プロセスに対してメモリ クォータを調整する]** (SeIncreaseQuotaSizePrivilege)|この特権は、プロセスのリソースが十分でないためにプロセスの実行を完了できない場合に、さらに多くのメモリを要求するために使用します (メモリ量は、インスタンス用に設定されたメモリしきい値に依存します)。|  
-|**[メモリ内のページのロック]** (SeLockMemoryPrivilege)|この特権が必要になるのは、ページングが完全にオフになっているときのみです。 既定では、表形式サーバー インスタンスは Windows ページング ファイルを使用しますが、Windows ページングを使用するには回避できます`VertiPaqPagingPolicy`を 0 にします。<br /><br /> `VertiPaqPagingPolicy` 1 (既定)、Windows ページング ファイルを使用して表形式サーバー インスタンスに指示します。 割り当てはロックされないため、必要に応じてページ アウトされます。 ページングが使用されているため、メモリ内のページをロックする必要はありません。 したがっての既定の構成 (ここで`VertiPaqPagingPolicy`= 1) を付与する必要はありません、**メモリ内のページのロック**特権を表形式インスタンス。<br /><br /> `VertiPaqPagingPolicy` 0 を返します。 Analysis Services のページングをオフにした場合は、割り当てがロックされ、 **[メモリ内のページのロック]** 特権が表形式インスタンスに付与されます。 このように設定され、かつ **[メモリ内のページのロック]** 特権がある場合、システムでメモリ不足が発生しているときは、Analysis Services に対して行われたメモリ割り当てをページ アウトできません。 Analysis Services は使用して、**メモリ内のページのロック**によって強制されるアクセス許可`VertiPaqPagingPolicy`0 を = です。 Windows ページングをオフにすることはお勧めしません。 このようにすると、ページングが許可されている場合には正常に処理されるような操作でメモリ不足エラーが発生する率が高まります。 参照してください[Memory Properties](../server-properties/memory-properties.md)の詳細については`VertiPaqPagingPolicy`します。|  
+|**[メモリ内のページのロック]** (SeLockMemoryPrivilege)|この特権が必要になるのは、ページングが完全にオフになっているときのみです。 既定では、表形式サーバー インスタンスは、Windows ページング ファイルを使用して、設定して、Windows ページングを使用することで回避できますが、`VertiPaqPagingPolicy`を 0 にします。<br /><br /> `VertiPaqPagingPolicy` 1 (既定)、Windows ページング ファイルを使用して表形式サーバー インスタンスに指示します。 割り当てはロックされないため、必要に応じてページ アウトされます。 ページングが使用されているため、メモリ内のページをロックする必要はありません。 したがっての既定の構成 (場所`VertiPaqPagingPolicy`= 1)、付与する必要はありません、**メモリ内のページのロック**特権を表形式インスタンス。<br /><br /> `VertiPaqPagingPolicy` 0 を返します。 Analysis Services のページングをオフにした場合は、割り当てがロックされ、 **[メモリ内のページのロック]** 特権が表形式インスタンスに付与されます。 このように設定され、かつ **[メモリ内のページのロック]** 特権がある場合、システムでメモリ不足が発生しているときは、Analysis Services に対して行われたメモリ割り当てをページ アウトできません。 Analysis Services に依存、**メモリ内のページのロック**が適用されているとアクセス許可`VertiPaqPagingPolicy`= 0。 Windows ページングをオフにすることはお勧めしません。 このようにすると、ページングが許可されている場合には正常に処理されるような操作でメモリ不足エラーが発生する率が高まります。 参照してください[メモリ プロパティ](../server-properties/memory-properties.md)の詳細については`VertiPaqPagingPolicy`します。|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>サービス アカウントに対する Windows 特権を表示または追加するには  
   
 1.  GPEDIT.msc を実行し、[ローカル コンピューター ポリシー] | [コンピューターの構成] | [Windows の設定] | [セキュリティの設定] | [ローカル ポリシー] | [ユーザー権利の割り当て] を選択します。  
   
-2.  含む既存のポリシーを確認して`SQLServerMSASUser$`です。 これは、Analysis Services がインストール済みのコンピューター上にあるローカル セキュリティ グループです。 Windows 特権とファイル フォルダー権限の両方が、このセキュリティ グループに付与されています。 **[サービスとしてログオン]** ポリシーをダブルクリックすると、セキュリティ グループがシステムにどのように指定されているかが表示されます。 セキュリティ グループの完全名は、Analysis Services を名前付きインスタンスとしてインストールしたかどうかによって異なります。 アカウントの特権を追加する場合は、実際のサービス アカウントではなく、このセキュリティ グループを使用してください。  
+2.  含まれている既存のポリシーを確認`SQLServerMSASUser$`します。 これは、Analysis Services がインストール済みのコンピューター上にあるローカル セキュリティ グループです。 Windows 特権とファイル フォルダー権限の両方が、このセキュリティ グループに付与されています。 **[サービスとしてログオン]** ポリシーをダブルクリックすると、セキュリティ グループがシステムにどのように指定されているかが表示されます。 セキュリティ グループの完全名は、Analysis Services を名前付きインスタンスとしてインストールしたかどうかによって異なります。 アカウントの特権を追加する場合は、実際のサービス アカウントではなく、このセキュリティ グループを使用してください。  
   
 3.  GPEDIT でアカウントの特権を追加するには、 **[プロセス ワーキング セットの増加]** を右クリックし、 **[プロパティ]** を選択します。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36164200"
   
  データ ファイル、プログラム実行可能ファイル、構成ファイル、ログ ファイル、および一時ファイルの権限保有者は、SQL Server セットアップによって作成されるローカル セキュリティ グループです。  
   
- インストールするインスタンスごとに作成されるセキュリティ グループが 1 つあります。 セキュリティ グループは、インスタンスに基づいてか、名前付き**SQLServerMSASUser$ MSSQLSERVER**既定のインスタンスまたは`SQLServerMSASUser$` \<servername >$\<instancename > 名前付きインスタンス。 セットアップは、サーバー操作に必要なファイル権限をこのセキュリティ グループに準備します。 \MSAS12.MSSQLSERVER\OLAP\BIN ディレクトリのセキュリティ権限をチェックすると、(サービス アカウントまたはサービスごとの SID ではなく) セキュリティ グループが該当ディレクトリの権限保有者であることがわかります。  
+ インストールするインスタンスごとに作成されるセキュリティ グループが 1 つあります。 セキュリティ グループはインスタンスに基づいて付けられます後か、という名前**SQLServerMSASUser$ MSSQLSERVER**既定のインスタンスまたは`SQLServerMSASUser$` \<servername >$\<instancename > 名前付きインスタンス。 セットアップは、サーバー操作に必要なファイル権限をこのセキュリティ グループに準備します。 \MSAS12.MSSQLSERVER\OLAP\BIN ディレクトリのセキュリティ権限をチェックすると、(サービス アカウントまたはサービスごとの SID ではなく) セキュリティ グループが該当ディレクトリの権限保有者であることがわかります。  
   
  このセキュリティ グループには、1 つのメンバー、つまり [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス開始アカウントのサービスごとのセキュリティ識別子 (SID) のみが含まれます。 セットアップによって、サービスごとの SID がローカル セキュリティ グループに追加されます。 SQL Server セットアップが Analysis Services を準備する方法において、SID のメンバーシップと共にローカル セキュリティ グループを使用することは、データベース エンジンと比較した場合に、小さくても顕著な相違となります。  
   
@@ -122,14 +122,14 @@ ms.locfileid: "36164200"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  使用して**コンピューター マネージャー** | **ローカル ユーザーとグループ** | **グループ**SQLServerMSASUser$のメンバーシップを検査する\<servername >$\<instancename > セキュリティ グループです。  
+2.  使用**コンピューター マネージャー** | **ローカル ユーザーとグループ** | **グループ**SQLServerMSASUser$のメンバーシップを検査する\<servername >$\<instancename > セキュリティ グループ。  
   
      メンバーの SID は、手順 1 で示したサービスごとの SID と一致する必要があります。  
   
 3.  **[Windows エクスプローラー]** | **[Program Files]** | **[Microsoft SQL Server]** | Msasxx.mssqlserver | **[OLAP]** | **[bin]** を使用して、フォルダーのセキュリティ プロパティが、手順 2 のセキュリティ グループに付与されていることを確認します。  
   
 > [!NOTE]  
->  SID は削除したり変更したりしないでください。 誤って削除したサービスごとの SID を復元するには、次を参照してください。 [ http://support.microsoft.com/kb/2620201](http://support.microsoft.com/kb/2620201)です。  
+>  SID は削除したり変更したりしないでください。 誤って削除するサービスごとの SID を復元するを参照してください。 [ http://support.microsoft.com/kb/2620201](http://support.microsoft.com/kb/2620201)します。  
   
  **サービスごとの SID の詳細**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "36164200"
 ## <a name="see-also"></a>参照  
  [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server サービス アカウントとサービスごとの SID (ブログ)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server では、サービス SID を使用して、サービスを分離 (サポート技術情報の記事)](http://support.microsoft.com/kb/2620201)   
+ [SQL Server では、サービス SID を使用してサービスを分離 (サポート技術情報の記事)](http://support.microsoft.com/kb/2620201)   
  [アクセス トークン (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
  [セキュリティ識別子 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
  [アクセス トークン (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   

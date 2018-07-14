@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.server.f1
 - sql12.swb.maint.servers.f1
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 339282ab74dac6e77852fa6ecff21f5008e6842b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1d2940db99ffb0defc24761654804c90170e4256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233072"
 ---
 # <a name="maintenance-plan-servers"></a>[メンテナンス プラン] \([サーバー])
   **[サーバー]** ダイアログ ボックスでは、メンテナンス プランを実行するサーバーを選択します。  

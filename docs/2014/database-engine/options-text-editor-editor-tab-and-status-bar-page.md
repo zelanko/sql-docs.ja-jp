@@ -1,5 +1,5 @@
 ---
-title: 'オプション (テキスト エディター: エディターのタブとステータス バー ページ) |Microsoft ドキュメント'
+title: 'オプション (テキスト エディター: エディターのタブとステータス バー ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
@@ -16,13 +16,13 @@ ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bfaef2b11c331416134eba0e7325875f47a014b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fdef7c6b3a72b4c6556ec5d8e6354c837d6be04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267268"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>オプション ([テキスト エディター]: [エディターのタブとステータス バー] ページ)
   **[エディターのタブとステータス バー]** ページでは、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] クエリ エディターによって表示される情報をカスタマイズできます。 クエリ エディター ウィンドウのタブおよびステータス バーに表示される情報のレベル、およびステータス バーをエディター ウィンドウの上部と下部のどちらに表示するかを指定することができます。  
@@ -53,7 +53,7 @@ ms.locfileid: "36084839"
  **ログイン名を含める**  
  ログイン名を含めます。  
   
- **行の数が含まれます**  
+ **行数を含める**  
  現在実行されているスクリプトによって処理された行の数を含めます。  
   
  **サーバー名を含める**  
@@ -62,7 +62,7 @@ ms.locfileid: "36084839"
 ## <a name="status-bar-layout-and-colors"></a>ステータス バーのレイアウトと色  
  クエリ エディターのステータス バーの項目の色を指定します。  
   
- **[グループ接続]**  
+ **グループの接続**  
  クエリ エディターが複数の接続を保持している場合のステータス バーの色を設定します。  
   
  **単一のサーバー接続**  

@@ -1,5 +1,5 @@
 ---
-title: その他のテーブル ダイアログ ボックスでテーブルを置き換えます |Microsoft ドキュメント
+title: その他のテーブル ダイアログ ボックスでテーブルを置き換えます |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.replacetable.f1
 helpviewer_keywords:
 - Replace Table with Other Table dialog box
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a2738bec003a9b94ef90554a5c21b605436d72b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e442c06763be7c357835a1f82148cbbb61095725
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214032"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>[テーブルと他のテーブルとの置換] ダイアログ ボックス
   **の** [テーブルと他のテーブルとの置換] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、データ ソース ビュー内の既存のテーブルを、まだデータ ソース ビューに含まれていない、基になるデータ ソース内のテーブルで置き換えることができます。 **[テーブルと他のテーブルとの置換]** ダイアログ ボックスを表示するには、 **データ ソース ビュー デザイナー** の **[ダイアグラム]** ペインまたは **[テーブル]** ペインでテーブル名を右クリックし、 **[テーブルの置換]** の **[他のテーブルを使用]** をクリックします。  

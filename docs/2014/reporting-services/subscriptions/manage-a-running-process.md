@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], status information
 - jobs [Reporting Services]
@@ -30,13 +30,13 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1c1ff34dde99394f39a9636c6deac3d6c1fbc64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f4571c7e76057339658220075276f7b5a791f4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187719"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート サーバーで実行中のジョブの状態を監視します。 レポート サーバーは、一定の間隔で、実行中のジョブをスキャンし、レポート サーバー データベース (SharePoint モードの場合はサービス アプリケーション データベース) に状態情報を書き込みます。 リモートまたはローカル データベース サーバーでのクエリの実行、レポート処理、およびレポート表示のいずれかが行われている場合、ジョブは実行中です。  
@@ -57,7 +57,7 @@ ms.locfileid: "36164016"
   
 -   個々のユーザーが所有する標準サブスクリプション。  
   
- ジョブのキャンセルでは、レポート サーバーで実行中の処理だけが取り消されます。 レポート サーバーは、他のコンピューター上のデータ処理を管理しないため、他のシステム上で孤立したそれ以降のクエリ処理については、手動で取り消す必要があります。 実行に長時間かかるクエリが自動的にシャットダウンされるようなクエリのタイムアウト値を指定することを検討してください。 詳細については、「[レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)」を参照してください。 レポートの一時停止の詳細については、次を参照してください。 [Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md)です。  
+ ジョブのキャンセルでは、レポート サーバーで実行中の処理だけが取り消されます。 レポート サーバーは、他のコンピューター上のデータ処理を管理しないため、他のシステム上で孤立したそれ以降のクエリ処理については、手動で取り消す必要があります。 実行に長時間かかるクエリが自動的にシャットダウンされるようなクエリのタイムアウト値を指定することを検討してください。 詳細については、「[レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)」を参照してください。 レポートの一時停止の詳細については、次を参照してください。 [Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md)します。  
   
 > [!NOTE]  
 >  まれに、サーバーを再起動して処理を取り消す必要が生じる場合があります。 SharePoint モードの場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションをホストしているアプリケーション プールの再起動が必要になる場合があります。 詳細については、「 [レポート サーバー サービスの開始と停止](../report-server/start-and-stop-the-report-server-service.md)」を参照してください。  
@@ -79,7 +79,7 @@ ms.locfileid: "36164016"
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>レポート処理またはサブスクリプションを取り消す方法  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]からレポート サーバーに接続します。 手順については、次を参照してください。 [Management Studio でのレポート サーバーへの接続](../tools/connect-to-a-report-server-in-management-studio.md)です。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]からレポート サーバーに接続します。 手順については、次を参照してください。 [Management Studio でのレポート サーバーへの接続](../tools/connect-to-a-report-server-in-management-studio.md)します。  
   
 2.  **[ジョブ]** フォルダーを開きます。  
   
@@ -89,20 +89,20 @@ ms.locfileid: "36164016"
   
 1.  テキスト エディターで RSReportServer.config ファイルを開きます。  
   
-2.  検索`IsNotificationService`です。  
+2.  検索`IsNotificationService`します。  
   
-3.  設定`False`です。  
+3.  設定`False`します。  
   
 4.  ファイルを保存します。  
   
 5.  レポート マネージャーで、レポートの [サブスクリプション] タブまたは **[個人用サブスクリプション]** からデータ ドリブン サブスクリプションを削除します。  
   
-6.  RSReportServer.config ファイルに、サブスクリプションを削除したら`IsNotificationService`に設定し、`True`です。  
+6.  RSReportServer.config ファイルで、サブスクリプションを削除したら`IsNotificationService`に設定し、`True`します。  
   
 7.  ファイルを保存します。  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>ジョブ ステータスの取得間隔の設定  
- 実行中のジョブは、レポート サーバーの一時データベースに格納されます。 RSReportServer.config ファイルで構成設定を変更し、レポート サーバーによる実行中のジョブをスキャンする頻度と実行ジョブの状態を新規から実行中に変更するまでの間隔を制御できます。 `RunningRequestsDbCycle`設定では、プロセスを実行するため、レポート サーバーをスキャンする頻度を指定します。 既定では、状態情報は 60 秒ごとに記録されます。 `RunningRequestsAge`からジョブを移行する間隔を指定します。 実行中に新しいです。  
+ 実行中のジョブは、レポート サーバーの一時データベースに格納されます。 RSReportServer.config ファイルで構成設定を変更し、レポート サーバーによる実行中のジョブをスキャンする頻度と実行ジョブの状態を新規から実行中に変更するまでの間隔を制御できます。 `RunningRequestsDbCycle`設定では、プロセスを実行するため、レポート サーバーをスキャンする頻度を指定します。 既定では、状態情報は 60 秒ごとに記録されます。 `RunningRequestsAge`からジョブを移行する間隔を指定します。 新しい実行中にします。  
   
 ##  <a name="bkmk_sharepoint"></a> ジョブの表示とキャンセル (SharePoint モード)  
  SharePoint モードでの配置のジョブの管理は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションごとに、SharePoint サーバーの全体管理を使用して行います。  
@@ -123,7 +123,7 @@ ms.locfileid: "36164016"
  ジョブは、プログラムまたはスクリプトを使用して管理できます。 詳細については、「 <xref:ReportService2010.ReportingService2010.ListJobs%2A>」と「 <xref:ReportService2010.ReportingService2010.CancelJob%2A>の両方を管理できます。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー ジョブを取り消す&#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
+ [レポート サーバー ジョブのキャンセル&#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
  [[ジョブのプロパティ] (Management Studio)](../tools/job-properties-management-studio.md)   
  [Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   

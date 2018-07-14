@@ -1,5 +1,5 @@
 ---
-title: Use PowerShell to Change と Reporting Services サブスクリプション所有者を一覧表示 and Run a Subscription |Microsoft ドキュメント
+title: Use PowerShell to Change および Reporting Services サブスクリプション所有者を一覧表示し、サブスクリプションの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: daed1f77d5e1470f39e8ad2d7afe52e66db7e219
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31bf54cf103a269900ce9edc6caf9ec192a4f4b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323822"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a subscription
-  以降で[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]の所有権をプログラムで転送することができます、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 1 人のユーザーから別のサブスクリプション。 このトピックでは、サブスクリプションの所有権を変更または単純に一覧表示するために使用可能な、いくつかの Windows PowerShell スクリプトを説明します。 各サンプルには、ネイティブ モードと SharePoint モードの両方のサンプル構文が含まれています。 サブスクリプションの所有者を変更した後で、サブスクリプションは新しい所有者のセキュリティ コンテキストで実行され、レポート内の User!UserID フィールドには新しい所有者の値が表示されます。 PowerShell のサンプルが呼び出すオブジェクト モデルの詳細については、「 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+  以降で[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]プログラムでの所有権を転送することができます、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 1 人のユーザーから別のサブスクリプション。 このトピックでは、サブスクリプションの所有権を変更または単純に一覧表示するために使用可能な、いくつかの Windows PowerShell スクリプトを説明します。 各サンプルには、ネイティブ モードと SharePoint モードの両方のサンプル構文が含まれています。 サブスクリプションの所有者を変更した後で、サブスクリプションは新しい所有者のセキュリティ コンテキストで実行され、レポート内の User!UserID フィールドには新しい所有者の値が表示されます。 PowerShell のサンプルが呼び出すオブジェクト モデルの詳細については、「 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  ![PowerShell 関連コンテンツ](../media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36085362"
   
  **ネイティブ モード:**  
   
--   サブスクリプションの一覧表示: (ハイパーリンク"http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx"レポートに対する ReadSubscription、ユーザーがサブスクリプションの所有者) または ReadAnySubscription  
+-   サブスクリプションの一覧: (ハイパーリンク"http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx"レポートに対する ReadSubscription、ユーザーがサブスクリプションの所有者) または ReadAnySubscription  
   
 -   サブスクリプションの変更: ユーザーは、BUILTIN\Administrators グループのメンバーである必要があります。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36085362"
   
  **SharePoint モード:**  
   
--   サブスクリプションの一覧表示: ManageAlerts または (ハイパーリンク"http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx"レポートに対する CreateAlerts、ユーザーがサブスクリプションの所有者と、サブスクリプションが時刻指定のサブスクリプション)。  
+-   サブスクリプションの一覧表示: ManageAlerts OR (HYPERLINK"http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx"レポートに対する CreateAlerts、ユーザーがサブスクリプションの所有者と、サブスクリプションが時刻指定のサブスクリプション)。  
   
 -   サブスクリプションの変更: ManageWeb  
   
@@ -339,7 +339,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  `</Event>`  
   
- 構成ファイルの詳細については、次を参照してください。 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)です。  
+ 構成ファイルの詳細については、次を参照してください。 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)します。  
   
  スクリプトには遅延ロジック`Start-Sleep -s 6`が含まれているので、イベントの起動後に時間があり、更新されたステータスが ListSubscription メソッドによって使用可能になります。  
   

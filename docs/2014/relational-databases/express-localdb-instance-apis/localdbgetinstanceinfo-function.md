@@ -1,5 +1,5 @@
 ---
-title: LocalDBGetInstanceInfo 関数 |Microsoft ドキュメント
+title: LocalDBGetInstanceInfo 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f85efa89aae3df4a8875c865d9e83f2d4d9b91d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 8fe636ca60998baa75b71a6d179d20630bac2f8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205312"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 関数
   指定した SQL Server Express LocalDB インスタンスの情報を返します。たとえば、存在するかどうか、使用する LocalDB バージョン、実行中かどうかなどです。  
@@ -132,11 +132,11 @@ HRESULT LocalDBGetInstanceInfo(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="details"></a>詳細  
- 導入根拠、`struct`サイズ引数 (*lpInstanceInfoSize*) を返す別のバージョンの API を有効にするのには、 **LocalDBInstanceInfostruct**、効果的に上位および下位互換性を有効にします。  
+ 概要の背後にある"the rationale"、`struct`サイズ引数 (*lpInstanceInfoSize*) を返す別のバージョンの API を有効にするのには、 **LocalDBInstanceInfostruct**、効果的に上位および下位互換性を有効にします。  
   
- 場合、`struct`サイズ引数 (*lpInstanceInfoSize*) の既知のバージョンのサイズと一致する、 **LocalDBInstanceInfostruct**、そのバージョンの`struct`が返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
+ 場合、`struct`サイズ引数 (*lpInstanceInfoSize*) の既知のバージョンのサイズに合った、 **LocalDBInstanceInfostruct**、そのバージョンの`struct`が返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
   
- 典型的な例**LocalDBGetInstanceInfo** API の使用率が次のように検索します。  
+ 典型的な例**LocalDBGetInstanceInfo**次のような API の使用量。  
   
 ```  
 LocalDBInstanceInfo ii;  
@@ -144,7 +144,7 @@ LocalDBInstanceInfo(L”Test”, &ii, sizeof(LocalDBInstanceInfo));
   
 ```  
   
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)です。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

@@ -1,28 +1,27 @@
 ---
-title: AlwaysOn 可用性グループ (SQL Server) からの移行の前提条件のログ配布 |Microsoft ドキュメント
+title: AlwaysOn 可用性グループ (SQL Server) のログ配布を移行する前提条件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 caps.latest.revision: 21
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: e01e7b373318e64370cc48ff79002c130bd0838a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 511a8e6425cf49060be396b0737d72943136842d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178369"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>ログ配布から AlwaysOn 可用性グループへの移行の前提条件 (SQL Server)
   このトピックでは、ログ配布プライマリ データベースと 1 つまたは複数のセカンダリ データベースを、AlwaysOn プライマリ データベースとセカンダリ データベースに変換するための前提条件について説明します。  
@@ -75,7 +74,7 @@ ms.locfileid: "36164367"
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **ログ配布**  
   
--   [ログ配布の SQL Server 2014 をアップグレード&#40;TRANSACT-SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [SQL Server 2014 へのログ配布のアップグレード&#40;TRANSACT-SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [ログ配布の削除 &#40;SQL Server&#41;](../../log-shipping/remove-log-shipping-sql-server.md)  
   
@@ -107,7 +106,7 @@ ms.locfileid: "36164367"
   
 -   **ホワイト ペーパー:**  
   
-     [AlwaysOn 可用性グループに移行する移行ガイド: 以前の配置の結合データベース ミラーリングとログ配布から](http://msdn.microsoft.com/library/jj635217)  
+     [AlwaysOn 可用性グループへの移行の移行ガイド: 以前の配置の結合からデータベース ミラーリングとログ配布](http://msdn.microsoft.com/library/jj635217)  
   
      [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
   

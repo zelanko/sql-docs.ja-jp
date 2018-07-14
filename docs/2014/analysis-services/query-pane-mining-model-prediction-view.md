@@ -1,5 +1,5 @@
 ---
-title: クエリ ペイン (マイニング モデル予測 ビュー) |Microsoft ドキュメント
+title: クエリ ペイン (マイニング モデル予測 ビュー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.query.f1
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0f0105796bd4a4903a12dbad0b87b76919ce8b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ede17228e9dc21a170815ecc46900fd38ab7d978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211782"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>[クエリ] ペイン ([マイニング モデル予測] ビュー)
   **[クエリ]** ペインには、予測クエリ ビルダーによって作成されたデータ マイニング式 (DMX) ステートメントが表示されます。 ステートメントを変更してから **[クエリ結果ビューに切り替え]** ボタンをクリックすると、結果が返されます。 **[デザイン]** ビューに戻ると、ステートメントに加えた変更がすべて失われます。  
@@ -38,7 +38,7 @@ ms.locfileid: "36085531"
  **単一クエリ**  
  入力値のテーブルへの参照ではなく、入力データをクエリに直接提供できる、単一クエリを作成できます。 **[入力テーブルの選択]** テーブルは **[単一クエリ入力]** テーブルに置き換わります。 単一クエリに切り替えると、現在の予測クエリは失われます。  
   
- **クエリの結果を更新します。**  
+ **クエリ結果を更新します。**  
  予測クエリを再処理します。 この操作は **[結果]** ペインでのみ行えます。  
   
 ## <a name="see-also"></a>参照  

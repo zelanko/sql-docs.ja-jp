@@ -1,5 +1,5 @@
 ---
-title: 関連する列 (データ マイニング ウィザード) を提示 |Microsoft ドキュメント
+title: 関連する列 (データ マイニング ウィザード) をお勧めします |。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.suggestrelatedcolumns.f1
 ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ccad7814782f69536ff0bfab2244d5ab523e4d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6007ce4d2eef03ad4a1f416c8c8409d13e4a544b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226432"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>[関連列の提示] (データ マイニング ウィザード)
   **[関連列の提示]** ページには、ウィザードの前のページで選択した **[候補検索]** 機能による推奨設定が表示されます。 選択した **[予測可能]** 列と関連している入力列が、あらかじめ選択されています。 このダイアログ ボックスで変更すると、**[トレーニング データの指定]** ページにその変更が反映されます。  

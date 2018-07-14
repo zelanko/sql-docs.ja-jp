@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent]
 - SQL Server Agent jobs
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], about jobs
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b319ced7f40ec9e1bc45b7e1bb3568e7fb8fd7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ba493e130a6aa6910df73526fb3e609326584aad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244152"
 ---
 # <a name="implement-jobs"></a>ジョブの実装
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用すると、定型的な管理作業を自動化して定期的に実行し、管理を効率化できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "36084923"
   
 |||  
 |-|-|  
-|**description**|**トピック**|  
+|**[説明]**|**トピック**|  
 |ジョブの作成と所有権の割り当てについて説明します。|[ジョブの作成](create-jobs.md)|  
 |ジョブをカテゴリごとに編成するための情報を記載しています。|[ジョブの整理](organize-jobs.md)|  
 |ユーザーが作成できるさまざまな種類のジョブ ステップおよびそれらの管理方法について説明します。|[ジョブ ステップの管理](manage-job-steps.md)|  

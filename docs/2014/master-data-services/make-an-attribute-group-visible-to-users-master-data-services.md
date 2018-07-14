@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70dcc1e8f35f288b4693bd87308d7f2abcff0136
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 94507eb6cae0db3206a02b43062871140d5f21c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223644"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>属性グループのユーザーへの表示 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **[エクスプローラー]** 機能領域のグリッドの上部にタブを表示させる場合は、ユーザーまたはグループに対して属性グループを表示します。  
@@ -39,21 +39,21 @@ ms.locfileid: "36163889"
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **モデルビュー**  ページで、メニュー バーのをポイント**管理** をクリック**属性グループ**です。  
+2.  **モデル ビュー**  ページで、ポイントして、メニュー バーから**管理** をクリック**属性グループ**します。  
   
 3.  **[モデル]** ボックスの一覧からモデルを選択します。  
   
 4.  **[エンティティ]** の一覧からエンティティを選択します。  
   
-5.  展開するプラス記号をクリックして**リーフ グループ**、**統合グループ**、または**コレクション グループ**、表示されるようにするグループの種類によって異なります。  
+5.  展開するプラス記号をクリックします。**リーフ グループ**、**統合グループ**、または**コレクション グループ**、表示されるようにするグループの種類によって異なります。  
   
 6.  プラス記号をクリックして、表示するグループを展開します。  
   
 7.  いずれかをクリックして**ユーザー**または**グループ**にするかどうかをグループを表示するユーザーまたはグループに依存します。  
   
-8.  をクリックして**選択した項目を編集**です。  
+8.  クリックして**選択した項目の編集**します。  
   
-9. ユーザーまたはグループをクリックして、**利用可能**ボックス、をクリックし、**追加**矢印です。 すべてを追加するには、 **[すべて追加]** 矢印をクリックします。  
+9. ユーザーまたはグループをクリックして、**利用可能な**ボックス、をクリックし、**追加**矢印。 すべてを追加するには、 **[すべて追加]** 矢印をクリックします。  
   
 10. **[保存]** をクリックします。  
   

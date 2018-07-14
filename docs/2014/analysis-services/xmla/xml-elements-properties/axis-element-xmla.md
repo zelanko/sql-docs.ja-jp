@@ -1,5 +1,5 @@
 ---
-title: Axis 要素 (XMLA) |Microsoft ドキュメント
+title: Axis 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e30ff03b6e1a58a079d35f8e846ed176c42a3a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263228"
 ---
 # <a name="axis-element-xmla"></a>Axis 要素 (XMLA)
-  含まれる多次元データセット内の 1 つの軸を表すために使用する組のセットが含まれています、[軸](axes-element-xmla.md)を使用する要素、 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)によって返されるデータ型、 [Execute](../xml-elements-methods-execute.md)メソッドです。  
+  含まれる多次元データセット内の 1 つの軸を表すために使用する組のセットを含む、[軸](axes-element-xmla.md)を使用する要素、 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)によって返されるデータ型、 [Execute](../xml-elements-methods-execute.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,16 +65,16 @@ ms.locfileid: "36084830"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|[軸](axes-element-xmla.md)|  
-|子要素|[CrossProduct](crossproduct-element-xmla.md)または[組](tuples-element-xmla.md)|  
+|子要素|[CrossProduct](crossproduct-element-xmla.md)または[タプル](tuples-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
  `Axis` 要素の内容は、`AxisFormat` メソッドによって使用される XMLA プロパティ `Execute` の値に応じて異なります。  
   
 ## <a name="tupleformat"></a>TupleFormat  
- クライアント アプリケーションを設定した場合、`AxisFormat`プロパティを*TupleFormat*軸、組のセットとして表されます。 各 `Axis` 要素には、その軸上の組のセットを表す 1 つの `Tuples` 要素が含まれます。 それぞれの組は `Tuple` 要素を使用して表され、この要素には軸上の各階層に属する `Member` 要素が含まれます。  
+ クライアント アプリケーションを設定した場合、`AxisFormat`プロパティを*TupleFormat*軸は組のセットとして表されます。 各 `Axis` 要素には、その軸上の組のセットを表す 1 つの `Tuples` 要素が含まれます。 それぞれの組は `Tuple` 要素を使用して表され、この要素には軸上の各階層に属する `Member` 要素が含まれます。  
   
 ## <a name="clusterformat"></a>ClusterFormat  
- クライアント アプリケーションを設定した場合、`AxisFormat`プロパティを*ClusterFormat*、各軸上のメンバーはこれでは、各クラスターは各階層のメンバーの順序付けされたセットの間のクロス積を表します。 クラスターに分割します。 各 `Axis` 要素は、1 つ以上の `CrossProduct` 要素から成っています。 それぞれの `CrossProduct` 要素には、軸上の各階層に対する 1 つの `Members` 要素が含まれます。  
+ クライアント アプリケーションを設定した場合、`AxisFormat`プロパティを*ClusterFormat*、各軸のメンバーは、各クラスターは各階層のメンバーの順序付けされたセット間のクロス積を表します。 クラスターに分けられます。 各 `Axis` 要素は、1 つ以上の `CrossProduct` 要素から成っています。 それぞれの `CrossProduct` 要素には、軸上の各階層に対する 1 つの `Members` 要素が含まれます。  
   
 ## <a name="customformat"></a>CustomFormat  
  クライアント アプリケーションを設定した場合、`AxisFormat`プロパティを*CustomFormat*、値の処理と同じ、 *TupleFormat* Analysis Services インスタンスによっての値。  
@@ -82,7 +82,7 @@ ms.locfileid: "36084830"
 ## <a name="examples"></a>使用例  
   
 ### <a name="description"></a>説明  
- 次の例の構造を示しています、`Axis`クライアントを指定すると要素*TupleFormat*または*CustomFormat*の`AxisFormat`という、XMLA プロパティ軸のメンバー:  
+ 次の例の構造を示しています、`Axis`クライアントを指定する場合に要素*TupleFormat*または*CustomFormat*の`AxisFormat`次を指定された、XMLA プロパティ軸のメンバー:  
   
 |||||  
 |-|-|-|-|  
@@ -132,7 +132,7 @@ ms.locfileid: "36084830"
 ```  
   
 ### <a name="description"></a>説明  
- 次の例の構造を示しています、`Axis`クライアントを指定すると要素*ClusterFormat*の`AxisFormat`軸の次のメンバーを指定された、XMLA プロパティ。  
+ 次の例の構造を示しています、`Axis`クライアントを指定する場合に要素*ClusterFormat*の`AxisFormat`軸の次のメンバーが指定の XMLA プロパティ。  
   
 ||||||  
 |-|-|-|-|-|  

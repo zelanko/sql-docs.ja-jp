@@ -1,5 +1,5 @@
 ---
-title: メッセージ要素 (XMLA) |Microsoft ドキュメント
+title: メッセージの要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Message element
 ms.assetid: 028911e2-9779-43b1-824d-6d7fb2295885
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b88f9304c8d05863844c171f4c1efe5bcaf8073d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1fbeb2085c41e239e764621a89f34b4f17661584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241272"
 ---
 # <a name="message-element-xmla"></a>Message 要素 (XMLA)
-  インスタンスから返されたメッセージを含む[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]によって、 [Discover](../xml-elements-methods-discover.md)または[Execute](../xml-elements-methods-execute.md)メソッドの呼び出しです。  
+  インスタンスから返されたメッセージを含む[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]によって、 [Discover](../xml-elements-methods-discover.md)または[Execute](../xml-elements-methods-execute.md)メソッドの呼び出し。  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36085500"
 |子要素|[エラー](error-element-xmla.md)、[警告](warning-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
- この要素が使用されるのは、`Discover` メソッド呼び出しあるいは `Execute` メソッド呼び出し内の単一の XMLA コマンドが、正常に完了したもののエラーまたは警告が発生した場合です。 そのような場合、他のすべての要素に続いて `Messages` 要素が root 要素に追加され、その中には 1 つ以上の `Message` 要素が含まれます。 各`Message`を表す 1 つの要素によって返されるメッセージ、エラーまたは警告のいずれか、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
+ この要素が使用されるのは、`Discover` メソッド呼び出しあるいは `Execute` メソッド呼び出し内の単一の XMLA コマンドが、正常に完了したもののエラーまたは警告が発生した場合です。 そのような場合、他のすべての要素に続いて `Messages` 要素が root 要素に追加され、その中には 1 つ以上の `Message` 要素が含まれます。 各`Message`要素が 1 つを表しますによって返されるメッセージ、エラーまたは警告を[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;XMLA&#41;](xml-elements-properties.md)  

@@ -1,5 +1,5 @@
 ---
-title: Type 要素 (アクション) (ASSL) |Microsoft ドキュメント
+title: Type 要素 (アクション) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d71abdd26cea5fa03c8e70f882f893878a70969a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99147acb4b2a1b467913087f4e4df14469de9a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249084"
 ---
 # <a name="type-element-action-assl"></a>Type 要素 (アクション) (ASSL)
   型を含む、[アクション](../objects/action-element-assl.md)要素。  
@@ -69,12 +69,12 @@ ms.locfileid: "36083267"
 |*Url*|インターネット ブラウザーで変数ページを表示します。|  
 |*Html*|インターネット ブラウザーで HTML スクリプトを実行します。|  
 |*ステートメント*|OLE DB コマンドを実行します。|  
-|*ドリル スルー*|ドリルスルーの行セットを取得します。<br /><br /> この値は*行セット*し、ドリルスルー アクションを識別します。 のみを指定できますがアクションで使用される[TargetType](targettype-element-assl.md)に値が設定されている*セル*です。|  
+|*ドリル スルー*|ドリルスルーの行セットを取得します。<br /><br /> この値は*行セット*ドリルスルー アクションを識別します。 できますのみがアクションで使用される[TargetType](targettype-element-assl.md)値に設定されて*セル*。|  
 |*データセット*|データセットを取得します。|  
 |*行セット*|行セットを取得します。|  
 |*コマンドライン*|コマンド プロンプトでコマンドを実行します。|  
 |*独自*|上記以外のインターフェイスを使用して操作を実行します。|  
-|*レポート*|インターネット ブラウザーで変数ページを表示します。<br /><br /> この値は*Url*し、レポートの操作を識別します。|  
+|*レポート*|インターネット ブラウザーで変数ページを表示します。<br /><br /> この値は*Url*レポート アクションを識別します。|  
   
  親に対応する要素`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Action>します。  
   

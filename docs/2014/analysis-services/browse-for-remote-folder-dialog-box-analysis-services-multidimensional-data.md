@@ -1,5 +1,5 @@
 ---
-title: リモートのフォルダ ダイアログ ボックス (Analysis Services - 多次元データ) を参照 |Microsoft ドキュメント
+title: リモート フォルダ ダイアログ ボックス (Analysis Services - 多次元データ) を参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.browseforremotepartition.f1
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a5316d36dc38f41343c9f0dc3afa1638c68b1dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbc311b4c096f5f834141084f705fa8bdf50c3e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085546"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212072"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>[リモート フォルダーの参照] ダイアログ ボックス (Analysis Services - 多次元データ)
   **[リモート フォルダーの参照]** ダイアログ ボックスには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスに定義されている使用可能なログとデータ フォルダーが一覧表示されます。 一覧からフォルダーを選択するか、必要であれば別のフォルダーを指定します。 **[リモート フォルダーの参照]** ダイアログ ボックスを表示するには、次のいずれかの手順を行います。  
@@ -35,7 +35,7 @@ ms.locfileid: "36085546"
 -   データベースの同期ウィザードの **[ローカル パーティションの場所を指定]** または **[リモート パーティションの場所を指定]** ページで、 **[場所]** オプションの **[同期先フォルダー]** 列にある **[...]** ボタンをクリックします。  
   
 ## <a name="options"></a>および  
- **フォルダーを選択します。**  
+ **フォルダーを選択します**  
  フォルダーを選択して、 **[選択したパス]** に目的のパスを設定します。  
   
  **選択したパス**  

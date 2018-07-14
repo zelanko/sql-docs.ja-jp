@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cb02d483de02ba4c9cc65a3e9597f5c04e3bb284
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200832"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
   このチュートリアルでは、詳細レポートとメイン レポートの 2 種類のレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 次の図は、レポートを作成します。  
@@ -31,15 +31,15 @@ ms.locfileid: "36085387"
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
- **ドリルスルー レポートでは学習する方法。**  
+ **ドリルスルー レポートでは、学習する方法。**  
   
-1.  [テーブルまたはマトリックス ウィザードからドリル スルー マトリックス レポートとデータセットを作成します。](#DMatrixAndDataset)  
+1.  [テーブルまたはマトリックス ウィザードから詳細マトリックス レポートとデータセットを作成します。](#DMatrixAndDataset)  
   
     1.  [データ接続を指定します。](#DConnection)  
   
     2.  [MDX クエリを作成します。](#DMDXQuery)  
   
-    3.  [データ グループのスタイルを整理して](#DLayout)  
+    3.  [データをグループ スタイルにまとめる](#DLayout)  
   
     4.  [小計と合計を追加します。](#DTotals)  
   
@@ -47,17 +47,17 @@ ms.locfileid: "36085387"
   
 2.  [データに通貨の形式](#DFormat)  
   
-3.  [スパーク ラインの売上値の表示に列を追加します。](#DSparkline)  
+3.  [スパーク ラインの売上の値を表示する列を追加します。](#DSparkline)  
   
-4.  [製品カテゴリの名前を持つレポート タイトルを追加します。](#DReportTitle)  
+4.  [レポート タイトルの製品カテゴリ名を追加します。](#DReportTitle)  
   
 5.  [パラメーターのプロパティを更新します。](#DParameter)  
   
 6.  [レポートを SharePoint ライブラリに保存します。](#DSave)  
   
- **メイン レポートでは学習する方法。**  
+ **メイン レポートでは、学習する方法。**  
   
-1.  [テーブルまたはマトリックス ウィザードから主なマトリックス レポートとデータセットを作成します。](#MMatrixAndDataset)  
+1.  [テーブルまたはマトリックス ウィザードからメイン マトリックス レポートとデータセットを作成します。](#MMatrixAndDataset)  
   
     1.  [データ接続を指定します。](#MConnection)  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36085387"
   
 2.  [総計行を削除します。](#MGrandTotal)  
   
-3.  [ドリルスルーのテキスト ボックス アクションを構成します。](#MDrillthrough)  
+3.  [ドリルスルーのためのテキスト ボックス アクションを構成します。](#MDrillthrough)  
   
-4.  [インジケーターの数値の値を置き換えます](#MIndicators)  
+4.  [数値インジケーターを置き換える](#MIndicators)  
   
 5.  [パラメーターのプロパティを更新します。](#MParameter)  
   
@@ -93,15 +93,15 @@ ms.locfileid: "36085387"
   
 #### <a name="to-create-a-new-report"></a>新しいレポートを作成するには  
   
-1.  をクリックして**開始**、 をポイント**プログラム**、 をポイント[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**レポート ビルダー**、順にクリック**レポート ビルダー**です。  
+1.  クリックして**開始**、 をポイント**プログラム**、 をポイント[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**レポート ビルダー**、順にクリックします**レポート ビルダー**します。  
   
-     **作業の開始** ダイアログ ボックスが表示されます。 表示されない場合から、**レポート ビルダー**ボタンをクリックし**新規**です。  
+     **Getting Started**  ダイアログ ボックスが表示されます。 表示されない場合から、**レポート ビルダー**ボタン、**新規**します。  
   
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
 3.  右ペインで、 **[テーブルまたはマトリックス ウィザード]** が選択されていることを確認します。  
   
-##  <a name="DConnection"></a> 1a です。 データ接続を指定する  
+##  <a name="DConnection"></a> 1a します。 データ接続を指定する  
  データ接続には、Analysis Services キューブや [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースなどの外部データ ソースに接続するときに必要な情報が含まれます。 データ接続を指定するには、レポート サーバーの共有データ ソースを使用するか、このレポートでのみ使用する埋め込みデータ ソースを作成します。 このチュートリアルでは、埋め込みデータ ソースを使用します。 共有データ ソースの使用方法の詳細については、「[別の方法でデータ接続を取得する (レポート ビルダー)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)」を参照してください。  
   
 #### <a name="to-create-an-embedded-data-source"></a>埋め込みデータ ソースを作成するには  
@@ -147,7 +147,7 @@ ms.locfileid: "36085387"
   
 14. **[次へ]** をクリックします。  
   
-##  <a name="DMDXQuery"></a> 1b です。 MDX クエリを作成する  
+##  <a name="DMDXQuery"></a> 1b します。 MDX クエリを作成する  
  レポートでは、クエリが事前に定義された共有データセットを使用するか、そのレポートでのみ使用する埋め込みデータセットを作成できます。 このチュートリアルでは、埋め込みデータセットを作成します。  
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
@@ -216,7 +216,7 @@ ms.locfileid: "36085387"
   
 7.  **[次へ]** をクリックします。  
   
-##  <a name="DLayout"></a> 1 c です。 データをグループにまとめる  
+##  <a name="DLayout"></a> 1 c。 データをグループにまとめる  
  データをグループ化するフィールドを選択し、詳細データおよび集計データを表示する行と列を含むマトリックスをデザインします。  
   
 #### <a name="to-organize-data-into-groups"></a>データをグループにまとめるには  
@@ -253,12 +253,12 @@ ms.locfileid: "36085387"
   
 2.  **[次へ]** をクリックします。  
   
-##  <a name="DStyle"></a> 1e です。 スタイルを選択する  
+##  <a name="DStyle"></a> 1e します。 スタイルを選択する  
  スタイルは、フォント スタイル、色、および罫線のスタイルを指定します。  
   
 #### <a name="to-specify-a-style"></a>スタイルを指定するには  
   
-1.  **スタイルを選択する** ページのスタイル ペインで、スレートを選択します。  
+1.  **スタイルの選択**] ページの [スタイルのウィンドウで、スレートを選択します。  
   
 2.  **[完了]** をクリックします。  
   
@@ -398,11 +398,11 @@ ms.locfileid: "36085387"
   
 #### <a name="to-create-a-new-report"></a>新しいレポートを作成するには  
   
-1.  をクリックして**開始**、 をポイント**プログラム**、 をポイント[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**レポート ビルダー**、順にクリック**レポート ビルダー**です。  
+1.  クリックして**開始**、 をポイント**プログラム**、 をポイント[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**レポート ビルダー**、順にクリックします**レポート ビルダー**します。  
   
 2.  **[作業の開始]** ダイアログ ボックスで、 **[新しいレポート]** が選択されていることを確認し、 **[テーブルまたはマトリックス ウィザード]** をクリックします。  
   
-##  <a name="MConnection"></a> 1a です。 データ接続を指定する  
+##  <a name="MConnection"></a> 1a します。 データ接続を指定する  
  メイン レポートに埋め込みデータ ソースを追加します。  
   
 #### <a name="to-create-an-embedded-data-source"></a>埋め込みデータ ソースを作成するには  
@@ -441,7 +441,7 @@ ms.locfileid: "36085387"
   
 14. **[次へ]** をクリックします。  
   
-##  <a name="MMDXQuery"></a> 1b です。 MDX クエリを作成する  
+##  <a name="MMDXQuery"></a> 1b します。 MDX クエリを作成する  
  次に、埋め込みデータセットを作成します。 これを行うには、クエリ デザイナーを使用して、フィルター、パラメーター、および計算されるメンバーと、データセット自体を作成します。  
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
@@ -539,7 +539,7 @@ ms.locfileid: "36085387"
   
 6.  **[次へ]** をクリックします。  
   
-##  <a name="MLayout"></a> 1 c です。 データをグループにまとめる  
+##  <a name="MLayout"></a> 1 c。 データをグループにまとめる  
  データをグループ化するフィールドを選択し、詳細データおよび集計データを表示する行と列を含むマトリックスをデザインします。  
   
 #### <a name="to-organize-data-into-groups"></a>データをグループにまとめるには  
@@ -569,12 +569,12 @@ ms.locfileid: "36085387"
   
 2.  **[次へ]** をクリックします。  
   
-##  <a name="MStyle"></a> 1e です。 スタイルを選択する  
+##  <a name="MStyle"></a> 1e します。 スタイルを選択する  
  レポートに "スレート" スタイルを適用します。 これは、詳細レポートで使用されているのと同じスタイルです。  
   
 #### <a name="to-specify-a-style"></a>スタイルを指定するには  
   
-1.  **スタイルを選択する** ページのスタイル ペインで、スレートを選択します。  
+1.  **スタイルの選択**] ページの [スタイルのウィンドウで、スレートを選択します。  
   
 2.  **[完了]** をクリックします。  
   
@@ -722,7 +722,7 @@ ms.locfileid: "36085387"
   
 7.  **[保存]** をクリックします。  
   
-##  <a name="MRunReports"></a> 8 です。メイン レポートと詳細レポートを実行する  
+##  <a name="MRunReports"></a> 8。メイン レポートと詳細レポートを実行する  
  メイン レポートを実行し、製品カテゴリの列の値をクリックして詳細レポートを実行します。  
   
 #### <a name="to-run-the-reports"></a>レポートを実行するには  

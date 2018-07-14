@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - .NET Framework data providers for Reporting Services
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fcfaa1e1459df5bd3a399ce80b29dfd6a721e991
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 94e37e8c947074d23b208ebdfc18f21220c1f0de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200872"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>標準 .NET Framework データ プロバイダーを登録する (SSRS)
   サード パーティの [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート データセット用のデータを取得するには、レポート作成クライアントとレポート サーバーの 2 か所に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー アセンブリを配置し、登録する必要があります。 レポート作成クライアントでは、データ プロバイダーをデータ ソースの種類として登録し、それをクエリ デザイナーに関連付ける必要があります。 これにより、レポート データセットを作成する際に、データ ソースの種類としてこのデータ プロバイダーを選択できるようになります。 関連付けられているクエリ デザイナーが開き、それを利用してこのデータ ソースの種類に対するクエリを作成することができます。 レポート サーバーでは、データ プロバイダーをデータ ソースの種類として登録する必要があります。 そうすることで、このデータ プロバイダーを使用してデータ ソースからデータを取得するパブリッシュ済みレポートを処理することができます。  
@@ -48,7 +48,7 @@ ms.locfileid: "36085164"
   
 1.  bin の親ディレクトリ ReportServer に、RSReportServer.config ファイルのバックアップを作成します。  
   
-2.  RSReportServer.config を開きます。構成ファイルを開くことができます[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]またはメモ帳などの単純なテキスト エディター。  
+2.  RSReportServer.config を開きます。構成ファイルを開く[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]またはメモ帳などの単純なテキスト エディター。  
   
 3.  検索、 `Data` RSReportServer.config ファイル内の要素。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー用のエントリは、次の場所に作成されます。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36085164"
   
 3.  rssrvpolicy.config ファイル内で `CodeGroup` 要素を探します。  
   
-4.  付与するデータ プロバイダー アセンブリのコード グループを追加`FullTrust`権限です。 コード グループは次のようになります。  
+4.  付与するデータ プロバイダー アセンブリのコード グループを追加`FullTrust`権限。 コード グループは次のようになります。  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -162,7 +162,7 @@ ms.locfileid: "36085164"
     </Extensions>  
     ```  
   
-6.  RSReportDesigner.config ファイルの下に次のエントリを追加、`Designer`要素。 のみを交換する必要があります、`Name`前のエントリで指定した名前の属性です。  
+6.  RSReportDesigner.config ファイルで次のエントリを追加、`Designer`要素。 のみに置き換える必要がある、`Name`前のエントリで指定した名前を持つ属性です。  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  
@@ -176,7 +176,7 @@ ms.locfileid: "36085164"
   
 3.  RSPreviewPolicy.config ファイル内で `CodeGroup` 要素を探します。  
   
-4.  コード グループを追加する、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]付与するデータ プロバイダー アセンブリ`FullTrust`権限です。 コード グループは次のようになります。  
+4.  コード グループを追加、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]付与するデータ プロバイダー アセンブリ`FullTrust`権限。 コード グループは次のようになります。  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -195,7 +195,7 @@ ms.locfileid: "36085164"
  URL メンバーシップは、多くのメンバーシップ条件の中からデータ プロバイダー用に選択した 1 つのみになります。  
   
 ### <a name="verifying-the-deployment-and-registration-on-the-report-designer-client"></a>レポート デザイナー クライアントでの配置と登録の検証  
- 配置を検証するには、ローカル コンピューターの [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] のインスタンスをすべて閉じておく必要があります。 現在のすべてのセッションを終了すると後、かどうか、データ プロバイダーが正常に展開レポート デザイナーで新しいレポート プロジェクトを作成することでを確認できます[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]です。 レポートの新しいデータセットを作成するときに、使用可能なデータ ソースの種類にそのデータ プロバイダーが含まれている必要があります。  
+ 配置を検証するには、ローカル コンピューターの [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] のインスタンスをすべて閉じておく必要があります。 かどうか、データ プロバイダーが正常にによってに展開されたレポート デザイナーで新しいレポート プロジェクトの作成を確認するには現在のすべてのセッションを終了したら[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]します。 レポートの新しいデータセットを作成するときに、使用可能なデータ ソースの種類にそのデータ プロバイダーが含まれている必要があります。  
   
 ## <a name="platform-considerations"></a>プラットフォームに関する注意点  
  64 ビット (x64) プラットフォームでは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は 32 ビット WOW モードで動作します。 x64 プラットフォームでレポートを作成する場合、レポートをプレビューするためには、レポート作成クライアントに 32 ビットのデータ プロバイダーをインストールする必要があります。 同じシステムでレポートをパブリッシュした場合、レポート マネージャーでレポートを表示するためには x64 データ プロバイダーが必要になります。  

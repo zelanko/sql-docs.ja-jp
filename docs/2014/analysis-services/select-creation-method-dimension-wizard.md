@@ -1,5 +1,5 @@
 ---
-title: (ディメンション ウィザード) の作成方法の選択 |Microsoft ドキュメント
+title: (ディメンション ウィザード) の作成方法の選択 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensiondefinition.f1
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10d52966956d39f7a495e353bdf6acd595cc51ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d10005b2b689078eb7677547ebfc905fbdcc996
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267158"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>[作成方法の選択] (ディメンション ウィザード)
   **[作成方法の選択]** ページを使用すると、ディメンションの作成方法を選択できます。  
@@ -49,7 +49,7 @@ ms.locfileid: "36084668"
   
  詳細については、「 [Create a Time Dimension by Generating a Time Table](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)」(時間テーブルを生成して時間ディメンションを作成する) を参照してください。  
   
- **データ ソースのない時間テーブルを生成します。**  
+ **データ ソースに時間以外のテーブルを生成します。**  
  基になるリレーショナル データ ソースを使用せずにディメンションをデザインし、データ ソースに必要なスキーマを生成します。 この方法は、トップダウンのモデリングと呼ばれます。  
   
 > [!NOTE]  

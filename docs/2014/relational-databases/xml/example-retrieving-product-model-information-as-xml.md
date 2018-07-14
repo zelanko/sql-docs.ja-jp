@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6c6eead2a8016572cf8fe2491463fb396218e58f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f79b3c047edccbf53a7b5f1ba4b6116703792e1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262258"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>例 : XML での製品モデル情報の取得
   次の クエリでは、出力モデル情報が返されます。 `RAW` モードは、 `FOR XML` 句で指定します。  
@@ -69,7 +69,7 @@ GO
 </row>  
 ```  
   
- 必要に応じて指定することができます、`TYPE`として結果を取得するディレクティブ`xml`型です。 `TYPE` ディレクティブを指定しても、結果の内容は変更されません。 結果のデータ型のみが変更されます。  
+ 必要に応じて指定することができます、`TYPE`として結果を取得するディレクティブ`xml`型。 `TYPE` ディレクティブを指定しても、結果の内容は変更されません。 結果のデータ型のみが変更されます。  
   
 ```  
 USE AdventureWorks2012;  

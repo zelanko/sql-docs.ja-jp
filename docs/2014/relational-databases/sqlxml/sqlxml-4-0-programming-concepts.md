@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 のプログラミング概念 |Microsoft ドキュメント
+title: SQLXML 4.0 のプログラミング概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2ab9bd2ff6cfddcf96e4844eb9ea14eea414b650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5d745284f575feb39f488f0667f5ab976144392e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227075"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 のプログラミング概念
   クライアント側の XML 機能を追加し既存の機能を拡張するため、SQLXML 3.0 が Web リリースとして提供されました。この機能には、注釈付き XSD スキーマ、XML 一括読み込み、Web サービス (SOAP) サポート、アップデートグラムなどが含まれます。  
@@ -47,7 +47,7 @@ ms.locfileid: "36085172"
  [SQLXML の例を実行するための要件](requirements-for-running-sqlxml-examples.md)  
  提供される SQLXML の例から実際のサンプルを作成するための要件について説明します。  
   
- [クライアント側およびサーバー側の書式設定&#40;SQLXML 4.0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [クライアント側とサーバー側の書式設定&#40;SQLXML 4.0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  クライアント側とサーバー側の書式設定について情報を提供し、これらを比較します。XML ドキュメントを構築する FOR XML コマンドに関する情報も提供します。  
   
  [SQLXML 4.0 の注釈付き XSD スキーマ](annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  

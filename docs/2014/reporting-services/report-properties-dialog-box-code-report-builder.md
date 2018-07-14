@@ -1,5 +1,5 @@
 ---
-title: レポートのプロパティ ダイアログ ボックス、コード (レポート ビルダー) |Microsoft ドキュメント
+title: レポートのプロパティ ダイアログ ボックス、コード (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10081"
 ms.assetid: 24a479e4-3084-4442-8692-889895f111ad
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4fddd5933314b22fecbfe3791af209f40c3e02d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 457eb70ec1ce9883a5de4c2032fae60ec664703b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220762"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>[コード] ([レポートのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   **[レポートのプロパティ]** ダイアログ ボックスの **[コード]** を選択すると、レポート内の式によって使用されるカスタム コードを定義できます。  

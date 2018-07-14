@@ -1,5 +1,5 @@
 ---
-title: データ マイニング オブジェクトの処理 |Microsoft ドキュメント
+title: データ マイニング オブジェクトの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processing objects [Analysis Services]
 - mining structures [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining structures [Analysis Services], processing
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52caf01ea2f82b2d566b41ba402fa31b81283638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09f62e8f3b9abcde430557641beb92a1f7566f1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257468"
 ---
 # <a name="processing-data-mining-objects"></a>データ マイニング オブジェクトの処理
   データ マイニング オブジェクトは、処理されるまでは単なる空のコンテナーです。 データ マイニング モデルの*処理* は *トレーニング*とも呼ばれます。  
@@ -37,7 +37,7 @@ ms.locfileid: "36083085"
   
  次の図は、マイニング構造とマイニング モデルの処理時のデータ フローを示しています。  
   
- ![データの処理: ソース モデルに構造を](../media/dmcon-modelarch.gif "データの処理: ソース、モデルの構造")  
+ ![データの処理: ソース、構造モデル、](../media/dmcon-modelarch.gif "データの処理: ソース、モデルの構造")  
   
 ## <a name="viewing-the-results-of-processing"></a>処理結果の表示  
  処理後のマイニング構造には、統計分析に使用できる、簡潔な表現のデータが含まれています。 キャッシュが消去されていない場合、このキャッシュ内のデータには次の方法でアクセスできます。  

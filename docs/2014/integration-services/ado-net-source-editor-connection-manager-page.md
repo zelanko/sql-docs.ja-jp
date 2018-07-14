@@ -1,5 +1,5 @@
 ---
-title: ADO NET ソース エディター (接続マネージャー ページ) |Microsoft ドキュメント
+title: ADO net 変換元エディター ([接続マネージャー] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9ef6c300f4954d776dc3ca6bbb5a0504c56b0c3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83204d50049976aa70f3b35a6223abeb6ab07881
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322702"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>[ADO NET 変換元エディター] ([接続マネージャー] ページ)
   **[ADO NET 変換元エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換元の [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -74,8 +74,8 @@ ms.locfileid: "36085270"
  **[開く]** ダイアログ ボックスを使用して、SQL クエリのテキストが含まれているファイルを指定します。  
   
 ## <a name="see-also"></a>参照  
- [ADO NET 変換元エディター&#40;列 ページ&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [ADO NET 変換元エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [ADO net 変換元エディター&#40;列 ページ&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [ADO net 変換元エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)  
   
   

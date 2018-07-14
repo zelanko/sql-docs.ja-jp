@@ -1,5 +1,5 @@
 ---
-title: 一括挿入タスク エディター (接続 ページ) |Microsoft ドキュメント
+title: 一括挿入タスク エディター ([接続] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.connection.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 04c81b9bd101ec66d0ec1f47fb4c48c2179635ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: ed6ab27e4c60aa398cafe1be0d4bbcb19ce3bb3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201812"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>[一括挿入タスク エディター] ([接続] ページ)
   **[一括挿入タスク エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、一括挿入操作の挿入元と挿入先、および使用するフォーマットを指定できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "36084150"
  一括挿入操作の詳細については、「[Bulk Insert Task](control-flow/bulk-insert-task.md)」(一括挿入タスク) と「[データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
   
 ## <a name="options"></a>および  
- **Connection**  
+ **[接続]**  
  OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...**>] をクリックして新しい接続を作成します。  
   
  **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、[OLE DB 接続マネージャーの構成](../../2014/integration-services/configure-ole-db-connection-manager.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "36084150"
 |ReplTest1|説明|  
 |-----------|-----------------|  
 |**[ファイルを使用]**|フォーマット指定が格納されているファイルを選択します。 このオプションを選択すると、動的オプションの **[FormatFile]** が表示されます。|  
-|**[指定]**|フォーマットを指定します。 このオプションを選択すると、動的オプションが表示されます`RowDelimiter`と`ColumnDelimiter`です。|  
+|**[指定]**|フォーマットを指定します。 このオプションを選択するオプションが表示されます、動的、`RowDelimiter`と`ColumnDelimiter`します。|  
   
  **[最近使ったファイル]**  
  ファイル接続マネージャーまたはフラット ファイル接続マネージャーを一覧から選択するか、[\<**新しい接続...**>] をクリックして新しい接続を作成します。  
@@ -74,7 +74,7 @@ ms.locfileid: "36084150"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [一括挿入タスク エディター] &#40;[全般] ページ&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
+ [一括挿入タスク エディター &#40;[全般] ページ&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
  [一括挿入タスク エディター&#40;オプション ページ&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
  [[式] ページ](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   

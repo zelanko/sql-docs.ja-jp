@@ -1,5 +1,5 @@
 ---
-title: メソッドを呼び出す |Microsoft ドキュメント
+title: メソッドの呼び出し |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - SMO [SQL Server], method calling
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 345e3b217933f544239c849e5a279d8fcc3623e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b2d2cce4fa8bf38e8403af1a783c9b1d85eb14aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264308"
 ---
 # <a name="calling-methods"></a>メソッドの呼び出し
-  メソッドを発行するなど、オブジェクトに関連する特定のタスクの実行、`Checkpoint`データベースまたはのインスタンスのログオンの列挙リストの要求に[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+  メソッドは、発行など、オブジェクトに関連する特定のタスクを実行する`Checkpoint`データベースまたはインスタンスのログオンの列挙リストの要求で[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
  メソッドはオブジェクトに対する操作を実行します。 メソッドはパラメーターを受け取ることができ、多くの場合は戻り値があります。 戻り値には、単純なデータ型、複雑なオブジェクト、複数のメンバーを含んでいる構造のいずれを使用することもできます。  
   
- メソッドが正常に実行されたかどうかを検出するには、例外処理を使用します。 詳細については、次を参照してください。 [Handling SMO Exceptions](handling-smo-exceptions.md)です。  
+ メソッドが正常に実行されたかどうかを検出するには、例外処理を使用します。 詳細については、次を参照してください。 [Handling SMO Exceptions](handling-smo-exceptions.md)します。  
   
 ## <a name="examples"></a>使用例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
@@ -60,7 +60,7 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>Visual Basic でのパラメーターを指定した SMO メソッドの使用  
- <xref:Microsoft.SqlServer.Management.Smo.Table>オブジェクトが呼び出されるメソッド<xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>です。 このメソッドには、 `FillFactor`を指定する数値パラメーターが必要です。  
+ <xref:Microsoft.SqlServer.Management.Smo.Table>オブジェクトが呼び出されるメソッド<xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>します。 このメソッドには、 `FillFactor`を指定する数値パラメーターが必要です。  
   
 ```  
 Dim srv As Server  
@@ -71,7 +71,7 @@ tb.RebuildIndexes(70)
 ```  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-c"></a>Visual C# でのパラメーターを指定した SMO メソッドの使用  
- <xref:Microsoft.SqlServer.Management.Smo.Table>オブジェクトが呼び出されるメソッド<xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>です。 このメソッドには、 `FillFactor`を指定する数値パラメーターが必要です。  
+ <xref:Microsoft.SqlServer.Management.Smo.Table>オブジェクトが呼び出されるメソッド<xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>します。 このメソッドには、 `FillFactor`を指定する数値パラメーターが必要です。  
   
 ```  
 {   
@@ -84,7 +84,7 @@ tb.RebuildIndexes(70);
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>Visual Basic での DataTable オブジェクトを返す列挙メソッドの使用  
- このセクションでは、列挙メソッドを呼び出す方法と、返されたデータを処理する方法について説明します。<xref:System.Data.DataTable>オブジェクト。  
+ このセクションでは、列挙メソッドを呼び出す方法と、返されるデータを処理する方法について説明します。<xref:System.Data.DataTable>オブジェクト。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> メソッドは <xref:System.Data.DataTable> オブジェクトを返します。このオブジェクトでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに関する利用可能な照合順序情報のすべてにアクセスするには、追加の操作を行う必要があります。  
   
@@ -108,9 +108,9 @@ Next
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>Visual C# での DataTable オブジェクトを返す列挙メソッドの使用  
- このセクションでは、列挙メソッドを呼び出す方法と、返されたデータを処理する方法について説明します。<xref:System.Data.DataTable>オブジェクト。  
+ このセクションでは、列挙メソッドを呼び出す方法と、返されるデータを処理する方法について説明します。<xref:System.Data.DataTable>オブジェクト。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A>メソッドは、システムを返します<xref:System.Data.DataTable>オブジェクト。 <xref:System.Data.DataTable>オブジェクトがそれ以降のインスタンスに関するすべての利用可能な照合順序情報にアクセスするナビゲーションで要求[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A>メソッドは、システムを返します<xref:System.Data.DataTable>オブジェクト。 <xref:System.Data.DataTable>それ以降のインスタンスに関するすべての照合順序が使用可能な情報にアクセスするナビゲーションを要求オブジェクト[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 ```  
 //Connect to the local, default instance of SQL Server.   
@@ -161,12 +161,12 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>Visual Basic での SMO オブジェクトのコピー  
- このコード例では、<xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A>のコピーを作成する方法、<xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクト。 <xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクトのインスタンスへの接続を表す[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ このコード例では、<xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A>のコピーを作成する方法、<xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクト。 <xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクトのインスタンスへの接続を表す[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VCMethods6](SMO How to#SMO_VCMethods6)]  -->  
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>Visual C# での SMO オブジェクトのコピー  
- このコード例では、<xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A>のコピーを作成する方法、<xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクト。 <xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクトのインスタンスへの接続を表す[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ このコード例では、<xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A>のコピーを作成する方法、<xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクト。 <xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクトのインスタンスへの接続を表す[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 ```  
 {   
@@ -184,12 +184,12 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString);
 ```  
   
 ## <a name="monitoring-server-processes-in-visual-basic"></a>Visual Basic でのサーバー プロセスの監視  
- インスタンスに関する現在の状態の型情報を取得する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]列挙型のメソッドを使用します。 コード例では、<xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> メソッドを使用して、現在のプロセスに関する情報を検出します。 また、返された <xref:System.Data.DataTable> オブジェクトの列および行を操作する方法も示します。  
+ インスタンスに関する現在の状態の種類の情報を取得できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]列挙メソッドを使用します。 コード例では、<xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> メソッドを使用して、現在のプロセスに関する情報を検出します。 また、返された <xref:System.Data.DataTable> オブジェクトの列および行を操作する方法も示します。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBMethods5](SMO How to#SMO_VBMethods5)]  -->  
   
 ## <a name="monitoring-server-processes-in-visual-c"></a>Visual C# でのサーバー プロセスの監視  
- インスタンスに関する現在の状態の型情報を取得する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]列挙型のメソッドを使用します。 コード例では、<xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> メソッドを使用して、現在のプロセスに関する情報を検出します。 また、返された <xref:System.Data.DataTable> オブジェクトの列および行を操作する方法も示します。  
+ インスタンスに関する現在の状態の種類の情報を取得できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]列挙メソッドを使用します。 コード例では、<xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> メソッドを使用して、現在のプロセスに関する情報を検出します。 また、返された <xref:System.Data.DataTable> オブジェクトの列および行を操作する方法も示します。  
   
 ```  
 //Connect to the local, default instance of SQL Server.   

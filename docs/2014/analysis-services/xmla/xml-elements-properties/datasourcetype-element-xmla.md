@@ -1,5 +1,5 @@
 ---
-title: DataSourceType 要素 (XMLA) |Microsoft ドキュメント
+title: DataSourceType 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSourceType element
 ms.assetid: f5a348b1-911b-4139-832e-4bcb6d80a728
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cc083742521abfe9114ea474fe0987861d12c04e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c911f2a0e224cb8ccc9e7fa5b32a89a972fd1c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207672"
 ---
 # <a name="datasourcetype-element-xmla"></a>DataSourceType 要素 (XMLA)
-  示すかどうか、[場所](location-element-xmla.md)の指定された要素、[復元](../xml-elements-commands/restore-element-xmla.md)または[同期](../xml-elements-commands/synchronize-element-xmla.md)コマンドは、ローカルまたはリモートです。  
+  示すかどうかを[場所](location-element-xmla.md)の指定された要素を[復元](../xml-elements-commands/restore-element-xmla.md)または[同期](../xml-elements-commands/synchronize-element-xmla.md)コマンドは、ローカルまたはリモート。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36084163"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `DataSourceType` 要素は、`Location` 要素によって定義されるデータ ソースにローカル データ ソースとリモート データ ソースのどちらが含まれるかを決定します。 バックアップと、リモート パーティションの復元の詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)です。  
+ `DataSourceType` 要素は、`Location` 要素によって定義されるデータ ソースにローカル データ ソースとリモート データ ソースのどちらが含まれるかを決定します。 バックアップおよびリモート パーティションを復元する詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)します。  
   
  この要素の値は、次の表の一覧に示す文字列のいずれかに限定されています。  
   

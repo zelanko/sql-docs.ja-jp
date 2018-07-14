@@ -1,34 +1,33 @@
 ---
-title: オプション (SQL Server AlwaysOn、ダッシュ ボード ページ) |Microsoft ドキュメント
+title: オプション (SQL Server AlwaysOn、ダッシュ ボード ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Alwayson.Dashboard
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 caps.latest.revision: 6
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 553f76520f9bb292d795fbbd5e13833391d6bdab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d7ab91fe3fac841c11a0e237a9ec44a4f1ad6911
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330512"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>オプション (SQLServer AlwaysOn、ダッシュ ボード ページ)
   使用して、 **SQL Server AlwaysOn ダッシュ ボード**のページ、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**オプション**AlwaysOn ダッシュ ボードを構成するダイアログ ボックス。  
   
  **このページにアクセスするには:**  
   
- **ツール** メニューのをクリックして**オプション**、展開、 **SQL Server AlwaysOn**フォルダー、およびクリック**ダッシュ ボード**です。  
+ **ツール** メニューのをクリックして**オプション**、展開、 **SQL Server AlwaysOn**フォルダー、およびクリック**ダッシュ ボード**します。  
   
 ## <a name="on-this-page"></a>このページの内容  
  **[自動更新を有効にする]**  

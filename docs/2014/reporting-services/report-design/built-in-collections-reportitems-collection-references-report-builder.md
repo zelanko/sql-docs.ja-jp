@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 80d5e835700a6ac411c035856ff7c10b49e0c79b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c0878c78af38a8d8b4d6b5d1c6f17a0188b5a50b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264468"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>ReportItems コレクションの参照 (レポート ビルダーおよび SSRS)
-  組み込みコレクション `ReportItems` は、データ領域の行などのレポート アイテムのテキスト ボックスや、レポート デザイン画面上のテキスト ボックスのセットです。 `ReportItems`コレクションには、ページ ヘッダー、ページ フッターまたはレポート本文の現在のスコープ内にあるテキスト ボックスが用意されています。 このコレクションは、レポート プロセッサおよびレポート レンダラーによって実行時に決定されます。 ユーザーがレポートのページを表示する際には、レポート プロセッサによってレポート データとレポート アイテムのレイアウト要素が連続的に結合されますが、これに伴って現在のスコープが変化します。 使用することができます、`ReportItems`最初と最後の項目の各ページに表示する辞書形式のページのヘッダーを生成する組み込みのコレクション。  
+  組み込みコレクション `ReportItems` は、データ領域の行などのレポート アイテムのテキスト ボックスや、レポート デザイン画面上のテキスト ボックスのセットです。 `ReportItems`ページ ヘッダー、ページ フッター、またはレポート本文の現在のスコープ内にあるテキスト ボックスがコレクションに含まれています。 このコレクションは、レポート プロセッサおよびレポート レンダラーによって実行時に決定されます。 ユーザーがレポートのページを表示する際には、レポート プロセッサによってレポート データとレポート アイテムのレイアウト要素が連続的に結合されますが、これに伴って現在のスコープが変化します。 使用することができます、`ReportItems`各ページの最初と最後の項目を表示する辞書形式のページのヘッダーを生成する組み込みのコレクション。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -36,7 +36,7 @@ ms.locfileid: "36084714"
   
      `=ReportItems!Textbox1.Value`  
   
--   この式内に配置する`ReportItem`が > 0 の値テキスト ボックス カラー プロパティに黒のテキストが表示されます。 それ以外の場合、値が赤で表示されます。  
+-   この式では、内に配置する`ReportItem`が > 0 の値テキスト ボックスの Color プロパティに黒で、テキストが表示されます。 それ以外の場合、値が赤で表示されます。  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36084714"
  ページ ヘッダー セクションやページ フッター セクションでは、`ReportItems` コレクションのメンバーとして使用できるのは、現在のページのテキスト ボックスのみです。 たとえば、 `ReportItems!textboxLastName.Value` が、複数ページにわたるデータ領域の最初のページにしか表示されないテキスト ボックスを参照している場合、最初のページでは値が表示されますが、その他すべてのページでは **#Error** と表示され、式が記述したとおりに評価できなかったことを示します。  
   
 ## <a name="scope-for-the-reportitems-collection"></a>ReportItems コレクションのスコープ  
- レポートが処理されると、レポート本文内またはデータ領域内の各テキスト ボックスは、そのデータセット、データ領域、およびグループの関連付けのコンテキストで評価されます。 参照のスコープ、`ReportItems`コレクションが現在のスコープまたは現在のスコープより上位の場所。  
+ レポートが処理されると、レポート本文内またはデータ領域内の各テキスト ボックスは、そのデータセット、データ領域、およびグループの関連付けのコンテキストで評価されます。 参照のスコープ、`ReportItems`コレクションは、現在のスコープまたは現在のスコープより上位の場所。  
   
  たとえば、親グループの行の中にあるテキスト ボックスには、子グループの行の中にあるテキスト ボックスの名前を参照する式を含めることができません。 このような式は、子行のテキスト ボックスがスコープ外にあるため、レポート内の値に解決されません。 詳細については、「 [集計関数リファレンス (レポート ビルダーおよび SSRS)](report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
   
@@ -58,6 +58,6 @@ ms.locfileid: "36084714"
  [式内で組み込みコレクション&#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [フィルター、グループ、およびデータを並べ替える&#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [フィルター、グループ、およびデータの並べ替え&#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: レポートのページ (レポート ビルダーおよび SSRS) での Tablix データ領域の表示を制御する |Microsoft ドキュメント
+title: レポートのページ (レポート ビルダーおよび SSRS) での Tablix データ領域の表示を制御する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0e0221f8e610b7924c482492f0bc60b86bf8704e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6484cf1a0ed924c740f4235873169c03daacc71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179239"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>レポート ページでの Tablix データ領域の表示の制御 (レポート ビルダーおよび SSRS)
   このトピックでは、レポートに表示されたときの Tablix データ領域の表示方法を変更するために使用する、Tablix データ領域のプロパティについて説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "36165731"
   
 -   **データが存在しない場合にメッセージを表示する。** 実行時にレポート データセットのデータが存在しない場合、データ領域に代わりに表示する独自のメッセージを記述できます。 詳細については、「[データ領域にデータがないことを示すメッセージの設定 &#40;レポート ビルダーおよび SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
--   **条件付きでデータを非表示にする。** 条件付きで表示またはデータ領域またはデータ領域の一部を非表示にするかどうかを制御する非表示 プロパティを設定できます`True`または式にします。 式には、レポート パラメーターへの参照を含めることができます。 詳細データを表示するかどうかをユーザーが決定できるように、切り替えアイテムを指定することもできます。 詳細については、「[ドリルダウン アクション &#40;レポート ビルダーおよび SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)」を参照してください。  
+-   **条件付きでデータを非表示にする。** 条件付きで表示またはデータ領域またはデータ領域の一部を非表示にするかどうかを制御するため非表示 プロパティを設定できます`True`または式にします。 式には、レポート パラメーターへの参照を含めることができます。 詳細データを表示するかどうかをユーザーが決定できるように、切り替えアイテムを指定することもできます。 詳細については、「[ドリルダウン アクション &#40;レポート ビルダーおよび SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)」を参照してください。  
   
 -   **セルを結合する。** テーブル内の複数の連続するセルを 1 つのセルに結合できます。 これは、列の結合またはセルの結合と呼ばれています。 セルは水平方向または垂直方向にのみ結合できます。 セルを結合する場合、最初のセルのデータのみが保持されます。 その他のセル内のデータは削除されます。 結合されたセルは、元の列に分割できます。 詳細については、「[データ領域内のセルの結合 &#40;レポート ビルダーおよび SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -78,8 +78,8 @@ ms.locfileid: "36165731"
 ## <a name="see-also"></a>参照  
  [同じデータセットへの複数のデータ領域のリンク &#40;レポート ビルダーおよび SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](nested-data-regions-report-builder-and-ssrs.md)   
- [式の合計、集計、および組み込みコレクションのスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [見出し、列、および行は、改ページを制御する&#40;レポート ビルダーおよび SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [見出し、列、および行は、改ページの制御&#40;レポート ビルダーおよび SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [テーブル &#40;レポート ビルダーおよび SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [マトリックス &#40;レポート ビルダーおよび SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

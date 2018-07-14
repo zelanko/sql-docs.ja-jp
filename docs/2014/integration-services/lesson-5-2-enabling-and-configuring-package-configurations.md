@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 caps.latest.revision: 39
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd88de02a035e041c887d7505cc8b2f35805e577
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 380676537e0035077e0fd37afda058a98c75c741
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274848"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>手順 2 : パッケージ構成の有効化と構成
   ここでは、パッケージ構成ウィザードを使用することで、プロジェクトをパッケージ配置モデルに変換してパッケージ構成を有効にします。 ここでは、Foreach ループ コンテナーの `Directory` プロパティの構成設定が記述された XML 構成ファイルを生成します。 Directory プロパティの値は、実行時に更新できる新しいパッケージ レベル変数を使って指定します。 また、テスト時に使用する新しいサンプル データを作成します。  
@@ -45,7 +45,7 @@ ms.locfileid: "36084799"
   
 8.  **[Foreach ループ エディター]** の **[コレクション]** ページで、 **[Expressions]** をクリックし、参照ボタン ( **[...]**) をクリックします。  
   
-9. **プロパティ式エディター**でをクリックして、**プロパティ**一覧`Directory`です。  
+9. **プロパティ式エディター**、クリックして、**プロパティ**一覧`Directory`します。  
   
 10. **[式]** ボックスで、参照ボタン (**[...]**) をクリックします。  
   
@@ -96,17 +96,17 @@ ms.locfileid: "36084799"
     > [!NOTE]  
     >  通常、構成ファイルにはパッケージのプロパティに関する複雑な情報が含まれていますが、このチュートリアルでは、次の構成情報のみを使用します:  
     > <Configuration ConfiguredType="Property"  
-    > Path="\Package.Variables[User::varFolderName] です。[値] のプロパティ"ValueType ="String"\>  
+    > Path="\Package.Variables[User::varFolderName]。[値] のプロパティ"ValueType ="String"\>  
     >  \<ConfiguredValue >\</ConfiguredValue >  
-    > \</Configuration >。  
+    > \</構成 >。  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>新しいサンプル データ フォルダーを作成して、データを取り込むには  
   
-1.  Windows エクスプ ローラーで、ドライブのルート レベルで (たとえば、c:\\)、という名前の新しいフォルダーを作成する`New Sample Data`です。  
+1.  Windows エクスプ ローラーで、ドライブのルート レベル (たとえば、c:\\)、という名前の新しいフォルダーを作成`New Sample Data`します。  
   
 2.  コンピューター上でサンプル ファイルを探し、フォルダーから 3 つのファイルをコピーします。  
   
-3.  `New Sample Data`フォルダーで、コピーしたファイルに貼り付けます。  
+3.  `New Sample Data`フォルダーをコピーしたファイルを貼り付けます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 3: Directory プロパティの構成値の変更](lesson-5-3-modifying-the-directory-property-configuration-value.md)  

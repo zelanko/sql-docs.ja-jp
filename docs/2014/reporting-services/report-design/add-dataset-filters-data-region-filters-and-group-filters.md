@@ -1,5 +1,5 @@
 ---
-title: データセット フィルター、データ領域フィルター、およびグループ フィルター (レポート ビルダーおよび SSRS) の追加 |Microsoft ドキュメント
+title: 追加のデータセット フィルター、データ領域フィルター、およびグループ フィルター (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c92a62b97f4f0af7985afbc20c5dd1e9c6a85ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7f133be198e7a141d13f0fded3ec17388308d44c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200812"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダー)
   レポートのフィルターは、レポート内で使用されるデータを制限するために作成したデータセット、データ領域、またはデータ領域グループの一部です。 データセット クエリを変更できない場合 (共有データセットを使用している場合など)、レポート データを制御する方法としてフィルターを使用できます。  
@@ -60,12 +60,12 @@ ms.locfileid: "36085592"
   
 -   **演算子** フィルター式の右辺と左辺をどのように比較するかを定義します。  
   
--   `Value` 比較で使用する式を定義します。  
+-   `Value` 比較に使用する式を定義します。  
   
  以降の各セクションで、フィルター式の各部分について説明します。  
   
 ### <a name="expression"></a>式  
- レポート プロセッサが実行時にフィルター式を評価するためには、式のデータ型と値のデータ型とが一致している必要があります。 **[式]** に対して選択されているフィールドのデータ型は、データ ソースからデータを取得するときに使用されるデータ処理拡張機能またはデータ プロバイダーによって判断されます。 用に入力する式のデータ型`Value`によって決定されます[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の既定値です。 どのデータ型が使用されるかは、レポート定義でサポートされているデータ型によって決まります。 データベースから取得された値は、データ プロバイダーによって CLR 型に変換される場合があります。  
+ レポート プロセッサが実行時にフィルター式を評価するためには、式のデータ型と値のデータ型とが一致している必要があります。 **[式]** に対して選択されているフィールドのデータ型は、データ ソースからデータを取得するときに使用されるデータ処理拡張機能またはデータ プロバイダーによって判断されます。 用に入力した式のデータ型`Value`によって決定されます[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の既定値。 どのデータ型が使用されるかは、レポート定義でサポートされているデータ型によって決まります。 データベースから取得された値は、データ プロバイダーによって CLR 型に変換される場合があります。  
   
 ### <a name="data-type"></a>データ型  
  レポート プロセッサが 2 つの値を比較するためには、データ型が同じであることが条件となります。 次の表は、CLR データ型とレポート定義のデータ型の対応関係を示しています。 データ ソースから取得されたデータが、別のデータ型に変換されてレポート データになる場合もあります。  
@@ -87,7 +87,7 @@ ms.locfileid: "36085592"
 |--------------|------------|  
 |**Equal、Like、NotEqual、GreaterThan、GreaterThanOrEqual、LessThan、LessThanOrEqual**|式と単一の値とを比較します。|  
 |**TopN、BottomN**|式と単一の `Integer` 値とを比較します。|  
-|**TopPercent、BottomPercent**|1 つに式と比較して`Integer`または`Float`値。|  
+|**TopPercent、BottomPercent**|1 つに式を比較します`Integer`または`Float`値。|  
 |**[次の値の間]**|式が 2 つの値の範囲内にあるかどうかを調べます。|  
 |**In**|式が特定の値の集合に含まれるかどうかを調べます。|  
   

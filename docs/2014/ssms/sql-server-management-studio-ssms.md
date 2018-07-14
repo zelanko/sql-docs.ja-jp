@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Studio |Microsoft ドキュメント
+title: SQL Server Management Studio |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e6bb90d0f5aa4c92ac8b92898e65361d745418f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 893b4c108feb62f6cd076090bf4f0506765df819
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178993"
 ---
 # <a name="sql-server-management-studio"></a>[SQL Server Management Studio]
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQL Server インフラストラクチャを管理するため、統合環境です。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] には、SQL Server のインスタンスを構成、監視、および管理するためのツールが備わっています。 さらに、データ層コンポーネント (アプリケーションで使用されるデータベースやデータ ウェアハウス) を配置、監視、およびアップグレードするためのツールのほか、クエリやスクリプトを作成するためのツールも用意されています。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQL Server インフラストラクチャを管理するための統合環境です。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] には、SQL Server のインスタンスを構成、監視、および管理するためのツールが備わっています。 さらに、データ層コンポーネント (アプリケーションで使用されるデータベースやデータ ウェアハウス) を配置、監視、およびアップグレードするためのツールのほか、クエリやスクリプトを作成するためのツールも用意されています。  
   
 ## <a name="benefits-of-sql-server-management-studio"></a>SQL Server Management Studio の利点  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQL Server を管理するための総合ユーティリティ オブジェクトを豊富なスクリプト機能を備えた使いやすいグラフィカル インターフェイスを結合します。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 管理に使用できる[!INCLUDE[ssDE](../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、および[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]です。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQL Server を管理するための包括的なユーティリティ オブジェクトの豊富なスクリプト機能と使いやすいグラフィカル インターフェイスを結合します。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 管理に使用できる[!INCLUDE[ssDE](../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、および[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]します。  
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio のコンポーネント  
   

@@ -1,5 +1,5 @@
 ---
-title: 編集または削除パーティション (Analyisis Services - 多次元) |Microsoft ドキュメント
+title: 編集または削除パーティション (Analyisis Services - 多次元) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying partitions
 - partitions [Analysis Services], modifying
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 693550400db63b73b29d01a7a9d198d5924893dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 333caebbfff1870341696ee9d5a6d215288459bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180929"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>パーティションの編集または削除 (Analysis Services - 多次元)
   キューブ パーティションを変更するには、[!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] でキューブ デザイナーの **[パーティション]** タブを使用します。 **[パーティション]** タブには、キューブのすべてのメジャー グループのパーティションが一覧表示されます。 また、書き戻しが有効な書き戻しパーティションも表示されます。  
@@ -39,7 +39,7 @@ ms.locfileid: "36164381"
 ## <a name="partition-source"></a>パーティション ソース  
  パーティションのソース テーブルまたは名前付きクエリを指定します。 ソース テーブルを変更するには、セルをクリックし、参照ボタン (**[...]**) をクリックします。  
   
- ![[パーティション] ペイン内のソース列](../media/ssas-partitionsource.png "[パーティション] ペイン内のソース列")  
+ ![[パーティション] ペイン内のソース列](../media/ssas-partitionsource.png "パーティション ペイン内の基になる列")  
   
  パーティションがクエリに基づいている場合は、参照ボタン (**[...]**) をクリックしてクエリを編集します。 これにより、パーティションの **[ソース]** プロパティが編集されます。 詳しくは、「 [別のファクト テーブルを使用するためのパーティション ソースの変更](change-a-partition-source-to-use-a-different-fact-table.md)」をご覧ください。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36164381"
  ストレージは、キューブ内の各メジャー グループのパーティションごとに個別に構成できます。 キューブまたはメジャー グループの既定のストレージ設定を構成することもできます。 ストレージは、キューブ ウィザードの **[パーティション]** タブで構成します。  
   
 ## <a name="see-also"></a>参照  
- [作成し、ローカル パーティションを管理&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [作成およびローカル パーティションの管理&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
  [集計のデザイン&#40;Analysis Services - 多次元&#41;](designing-aggregations-analysis-services-multidimensional.md)   
  [Analysis Services でのパーティションをマージ&#40;SSAS - 多次元&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   

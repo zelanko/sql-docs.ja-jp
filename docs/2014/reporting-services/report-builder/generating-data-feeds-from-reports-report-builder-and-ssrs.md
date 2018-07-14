@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7bdab22ae7d649e1915cb31c221bf0f546727513
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9594eca6b955081be5689862d96d1c9d09a6a664
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202662"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]データでは、レポート内の領域をデータからにフィードおよび Atom 表示拡張機能には、レポートから利用できるデータ フィードを一覧表示する Atom サービス ドキュメントが生成されます。 この拡張機能を使用すると、レポートから生成されたデータ フィードを使用できるアプリケーションで読み取りおよび交換が可能な、Atom に準拠したデータ フィードを生成できます。 たとえば、Atom 表示拡張機能を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアントで使用できるデータ フィードを生成できます。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 表示拡張機能は、レポートから利用できるデータ フィードを一覧表示する Atom サービス ドキュメントを生成およびレポートの領域、データ データからをフィードします。 この拡張機能を使用すると、レポートから生成されたデータ フィードを使用できるアプリケーションで読み取りおよび交換が可能な、Atom に準拠したデータ フィードを生成できます。 たとえば、Atom 表示拡張機能を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアントで使用できるデータ フィードを生成できます。  
   
- Atom サービス ドキュメントには、レポート内の各データ領域について 1 つ以上のデータ フィードが一覧表示されます。 データ領域と、データ領域に表示される、データの種類に応じて[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]データ領域から複数のデータ フィードを生成する可能性があります。 たとえば、マトリックスまたはグラフでは、複数のデータ フィードを提供できます。 Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、各データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容にアクセスできます。  
+ Atom サービス ドキュメントには、レポート内の各データ領域について 1 つ以上のデータ フィードが一覧表示されます。 データ領域と、データ領域が表示されるデータの種類に応じて[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]データ領域から複数のデータ フィードを生成する可能性があります。 たとえば、マトリックスまたはグラフでは、複数のデータ フィードを提供できます。 Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、各データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容にアクセスできます。  
   
  Atom 表示拡張機能でデータ フィード用のデータを生成する方法は、コンマ区切り値 (CSV) 表示拡張機能でデータから CSV ファイルを提供する方法に似ています。 CSV ファイルと同様に、データ フィードは、レポート データのフラット化された表現です。 たとえば、グループ内の売上を合計する行グループを含むテーブルでは、すべてのデータ行で合計が繰り返され、合計のみを含む独立した行がありません。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36085165"
 
   
 ##  <a name="DataFeeds"></a> データ フィード  
- データ フィードは、時間が経過しても変化しない一貫した表形式と、レポートを実行するたびに変化する可能性のある可変データから成る、XML ファイルです。 によって生成されるデータ フィード[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]その ADO.NET Data Services によって生成されるものと同じ形式にします。  
+ データ フィードは、時間が経過しても変化しない一貫した表形式と、レポートを実行するたびに変化する可能性のある可変データから成る、XML ファイルです。 によって生成されたデータ フィード[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]は ADO.NET Data Services によって生成されたものと同じ形式です。  
   
  データ フィードには、ヘッダー セクションとデータ セクションの 2 つのセクションが含まれます。 Atom 仕様には、各セクションの要素が定義されています。 ヘッダーには、データ フィードで使用する文字エンコード スキーマなどの情報が含まれています。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36085165"
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 次の XML に示します、<`entry`> からそのレポート データ フィードの要素。 注意して、<`entry`> 要素には、売上およびグループの注文の合計と売上および注文のすべてのグループの合計が含まれています。 <`entry`> 要素には、レポート上のすべての値が含まれます。  
+ 次の XML に示す、<`entry`> データ フィード内のレポートからの要素。 なお、<`entry`> 要素には、売上および注文のすべてのグループの合計と売上および注文の合計が含まれています。 <`entry`> 要素には、レポート上のすべての値が含まれます。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -118,11 +118,11 @@ ms.locfileid: "36085165"
   
  一般に、入れ子になったデータ領域のデータ行は幅が広くなります。入れ子になったテーブルおよびマトリックスにグループや合計が含まれる場合は特にそうです。 期待どおりのデータが生成されるかどうかを確認するには、レポートをデータ フィードにエクスポートした後でデータ フィードを表示すると便利です。  
   
- Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容を確認できます。 上に示した、サンプルの Atom サービス ドキュメントには、URL が含まれています。 http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1"です。 この URL は、レポート (Product Sales Summary)、Atom 表示形式 (ATOM)、およびデータ フィードの名前 (xAx0x1) を識別します。  
+ Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容を確認できます。 上に示した、サンプルの Atom サービス ドキュメントには、URL が含まれています。 http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1"。 この URL は、レポート (Product Sales Summary)、Atom 表示形式 (ATOM)、およびデータ フィードの名前 (xAx0x1) を識別します。  
   
  レポート アイテムの名前には、直感的でなく覚えにくい、レポート アイテムのレポート定義言語 (RDL) 要素の名前が既定で使用されます。 たとえば、レポートに配置された最初のマトリックスの既定の名前は Tablix 1 となります。 データ フィードでは、これらの名前が使用されます。  
   
- データ領域の DataElementName プロパティを使用してわかりやすい名前を付けることで、データ フィードの操作を容易にすることができます。 DataElementName の値を指定する場合、データ フィードのサブ要素 <`d`> が使用するが、既定のデータ領域の名前ではなく、します。 たとえば、データ領域の既定の名前が Tablix1 と DataElementName SalesByTerritoryYear を設定する場合、<`d`> SalesByTerritoryYear を使用して、データ フィードです。 上で説明したマトリックス レポートのようにデータ領域に 2 つのデータ フィードがある場合、データ フィードで使用される名前は、SalesByTerritoryYear _Territory と SalesByTerritoryYear _Year となります。  
+ データ領域の DataElementName プロパティを使用してわかりやすい名前を付けることで、データ フィードの操作を容易にすることができます。 DataElementName の値を指定する場合、データ フィードのサブ要素 <`d`> は使用が既定のデータ領域名の代わりです。 たとえば、データ領域の既定の名前が Tablix1、DataElementName に SalesByTerritoryYear を設定し、<`d`> SalesByTerritoryYear を使用して、データ フィードです。 上で説明したマトリックス レポートのようにデータ領域に 2 つのデータ フィードがある場合、データ フィードで使用される名前は、SalesByTerritoryYear _Territory と SalesByTerritoryYear _Year となります。  
   
  レポート上に表示されたデータとデータ フィード内のデータを比較した場合、いくつかの相違があります。 通常、レポートに表示される数値データや日時データは書式設定されていますが、データ フィードには書式設定されていないデータが含まれます。  
   

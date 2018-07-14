@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 のセキュリティに関する考慮事項 |Microsoft ドキュメント
+title: SQLXML 4.0 のセキュリティに関する考慮事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [SQLXML]
 ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 238f581b636acbd8a659e67b100c911449bfff90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e2f19a8ea2efce2d7f5aee1cea3c5e4514cfd926
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270818"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 のセキュリティに関する注意点
   ここでは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML のセキュリティに関する考慮事項について、情報を提供します。  
@@ -35,7 +35,7 @@ ms.locfileid: "36084948"
  [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](updategram-security-considerations-sqlxml-4-0.md)  
  SQLXML 4.0 でアップデートグラムを使用する場合の、セキュリティに関するガイドラインを提供します。  
   
- [セキュリティの考慮事項のスキーマ注釈が付けられた&#40;SQLXML 4.0&#41;](annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [スキーマのセキュリティに関する考慮事項を注釈が付けられた&#40;SQLXML 4.0&#41;](annotated-schema-security-considerations-sqlxml-4-0.md)  
  SQLXML 4.0 で注釈付きスキーマを使用する場合の、セキュリティに関するガイドラインを提供します。  
   
  [XML のセキュリティに関する考慮事項の&#40;SQLXML 4.0&#41;](for-xml-security-considerations-sqlxml-4-0.md)  

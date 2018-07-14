@@ -1,5 +1,5 @@
 ---
-title: スキーマの制限 ダイアログ ボックス |Microsoft ドキュメント
+title: スキーマの制限 ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.schemarestrictions.f1
 helpviewer_keywords:
 - Schema Restrictions dialog box
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 905e065e26dfe76a4ca7280cc4598796dda7354f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ba0d6cae0d90befcc9620c01ef9e1f33352fc8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176119"
 ---
 # <a name="schema-restrictions-dialog-box"></a>[スキーマの制限] ダイアログ ボックス
   **[スキーマの制限]** ダイアログ ボックスを使用すると、Foreach ADO.NET Schema Rowset 列挙子に適用するスキーマの制限を設定できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36085007"
  制限を定義するテキストを入力します。  
   
 ## <a name="see-also"></a>参照  
- [[Foreach ループ エディター&#40;コレクション] ページ&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
+ [Foreach ループ エディター&#40;コレクション ページ&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Foreach ループ コンテナー](control-flow/foreach-loop-container.md)  
   
   

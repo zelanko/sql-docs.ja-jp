@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.Print
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f4f500ac657ac775277b8d625d3cb3a3d98259c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 01564150ef8ba4ff8834d7bab7dd10f78e79b019
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175081"
 ---
 # <a name="print-dialog-box"></a>[印刷] ダイアログ ボックス
   **[印刷]** ダイアログ ボックスのオプションを選択すると、ドキュメントの印刷方法を指定できます。  
   
 ## <a name="printer"></a>[プリンター]  
- **Name**  
+ **名前**  
  プリンターを指定します。 一覧からプリンターを選択します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を閉じるか別のプリンターを選択するまで、選択したプリンターが既定のプリンターになります。 一覧の下のフィールドに表示される情報が、選択したプリンターに適用されます。  
   
- **Status**  
+ **ステータス**  
  選択したプリンターの状態を表します (ビジーや準備完了など)。  
   
- **Type**  
+ **型**  
  選択したプリンターを識別します。  
   
  **場所**  

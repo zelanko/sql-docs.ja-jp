@@ -1,5 +1,5 @@
 ---
-title: PartitionID 要素 (ASSL) |Microsoft ドキュメント
+title: PartitionID 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - PartitionID element
 ms.assetid: 95e59c73-5ca4-478e-898d-50ffa4bbe794
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d75bc87e5c6546e57c9cf3e3d67053117edffd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6acc27bd3d60a5768a331a117e18ebc7cde2abe3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233762"
 ---
 # <a name="partitionid-element-assl"></a>PartitionID 要素 (ASSL)
-  関連付けます、[パーティション](../objects/partition-element-assl.md)親要素、バインド、または不一致のバインドを持つ要素。  
+  関連付けます、[パーティション](../objects/partition-element-assl.md)親要素、バインド、またはアウトオブ ライン バインドを持つ要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36084165"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- バインドおよび不一致のバインドの詳細については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ バインドとアウトオブ ライン バインドの詳細については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

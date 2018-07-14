@@ -1,5 +1,5 @@
 ---
-title: リレーションシップ表現 (テーブル) |Microsoft ドキュメント
+title: リレーションシップ表現 (表形式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b42c3737ce2369fa6e2e349e377efecc462d0280
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122c09c71985e00792efece956955cd5469562c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187069"
 ---
 # <a name="relationship-representation-tabular"></a>リレーションシップ表現 (テーブル)
   リレーションシップとは、2 つのデータ テーブルの間の接続です。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。  
   
- 参照してください[リレーションシップ表現 (テーブル)](relationship-representation-tabular.md)作成し、リレーションシップ表現を操作する方法の詳細についてはします。  
+ 参照してください[Relationship Representation (Tabular)](relationship-representation-tabular.md)作成し、リレーションシップ表現を操作する方法の詳細についてはします。  
   
 ## <a name="relationship-representation"></a>リレーションシップ表現  
  テーブル モデルでは、2 つのテーブル間に複数のリレーションシップを定義できます。 2 つのテーブル間に複数のリレーションシップを定義する場合、モデルの既定のリレーションシップとして定義できるのは 1 つのみで、アクティブなリレーションシップとして指定されます。その他のリレーションシップはすべて、非アクティブなリレーションシップに指定されます。  

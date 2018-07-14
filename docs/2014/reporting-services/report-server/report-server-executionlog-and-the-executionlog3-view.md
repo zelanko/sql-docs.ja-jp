@@ -1,5 +1,5 @@
 ---
-title: レポート サーバー実行ログと ExecutionLog3 ビュー |Microsoft ドキュメント
+title: レポート サーバー実行ログと ExecutionLog3 ビュー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9059bf91729065342e0013770b7b4b688df6fa17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ffd98216c7943f164ad633603fa51aa717a552
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255694"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>レポート サーバー実行ログと ExecutionLog3 ビュー
   レポート サーバー実行ログには、サーバー上で実行するレポート、またはネイティブ モードのスケールアウト配置や SharePoint ファーム内の複数のサーバー上で実行するレポートに関する情報が含まれます。 レポート実行ログを使用して、レポートを要求する頻度、最も多く使用される出力形式、および各処理フェーズでかかる処理時間 (単位はミリ秒) を調査できます。 このログには、レポートのデータセット クエリの実行にかかった時間とデータの処理にかかった時間に関する情報が記録されます。 レポート サーバー管理者は、ログの情報を確認して実行時間が長いタスクを特定し、レポート作成者に対して改善の余地があるレポートの領域 (データセットや処理) について提案することができます。  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|データの取得にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing|レポートの処理にかかった時間 (単位はミリ秒)。|  
 |TimeRendering|レポートの表示にかかった時間 (単位はミリ秒)。|  
-|Source|レポート実行のソース。 有効値は次のとおりです。<br /><br /> **Live**<br /><br /> **キャッシュ**: キャッシュの実行、たとえば、データセット クエリがライブで実行されませんを示します。<br /><br /> **スナップショット**<br /><br /> **履歴**<br /><br /> **アドホック**: 動的に生成されたレポート モデルに基づくドリルスルー レポート、または処理および表示用にレポート サーバーを使用するクライアントでプレビューされているレポート ビルダーのレポートのいずれかを示します。<br /><br /> **セッション**: 既に確立されているセッション内のフォロー アップ要求を示します。  たとえば、最初の要求がページ 1 の表示であり、フォローアップ要求は現在のセッション状態での Excel へのエクスポートである場合などが考えられます。<br /><br /> **Rdce**: レポート定義カスタマイズ拡張機能を示します。 RDCE カスタム拡張機能では、レポート実行時にレポート定義を処理エンジンに渡す前に動的にカスタマイズできます。|  
+|Source|レポート実行のソース。 有効値は次のとおりです。<br /><br /> **Live**<br /><br /> **キャッシュ**: キャッシュされた実行、たとえば、データセットのクエリはライブで実行しないことを示します。<br /><br /> **スナップショット**<br /><br /> **履歴**<br /><br /> **アドホック**: レポートのドリルスルーに基づくモデル動的に生成されたレポートまたはレポート サーバーの処理とレンダリングを使用するクライアントでプレビューされているレポート ビルダーのレポートのいずれかを示します。<br /><br /> **セッション**: 既に確立されたセッション内のフォロー アップ要求を示します。  たとえば、最初の要求がページ 1 の表示であり、フォローアップ要求は現在のセッション状態での Excel へのエクスポートである場合などが考えられます。<br /><br /> **Rdce**: レポート定義カスタマイズ拡張機能を示します。 RDCE カスタム拡張機能では、レポート実行時にレポート定義を処理エンジンに渡す前に動的にカスタマイズできます。|  
 |Status|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
@@ -228,11 +228,11 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  AdditionalInfo フィールドに表示されるプロパティの一部を次に示します。  
   
--   **ProcessingEngine**: 1 = SQL Server 2005、2 = 新しいオンデマンド処理エンジン。 ほとんどのレポートでこの値が 1 になっている場合は、レポートを設計し直す方法を調べて、効率が向上した新しいオンデマンド処理エンジンを使用することをお勧めします。  
+-   **ProcessingEngine**: 1 = SQL Server 2005、2 = 新しいオンデマンド処理エンジンです。 ほとんどのレポートでこの値が 1 になっている場合は、レポートを設計し直す方法を調べて、効率が向上した新しいオンデマンド処理エンジンを使用することをお勧めします。  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**: 処理エンジンでスケール関連の操作を実行するのに費やされたミリ秒数。 値が 0 の場合は、スケール操作に特に時間はかからず、要求時にメモリ不足にならなかったことを示します。  
+-   **ScalabilityTime**: 処理エンジンでスケール関連の操作を実行に費やされたミリ秒数。 値が 0 の場合は、スケール操作に特に時間はかからず、要求時にメモリ不足にならなかったことを示します。  
   
     ```  
     <ScalabilityTime>  
@@ -240,7 +240,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**: キロバイト、特定の要求中に各コンポーネントで消費されるメモリの最大量の推定値です。  
+-   **EstimatedMemoryUsageKB**: キロバイト単位、特定の要求中に使用して各コンポーネントでのメモリ量のピーク時の推定値です。  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -256,7 +256,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**値は、(ミリ秒単位)。 このデータはパフォーマンスに関する問題の診断に使用できます。 外部 Web サーバーからイメージを取得するのに時間がかかり、レポートの実行全体が遅くなる場合があります。 追加されました[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]です。  
+-   **ExternalImages**値 (ミリ秒) です。 このデータはパフォーマンスに関する問題の診断に使用できます。 外部 Web サーバーからイメージを取得するのに時間がかかり、レポートの実行全体が遅くなる場合があります。 追加される[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]します。  
   
     ```  
     <ExternalImages>  
@@ -266,7 +266,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **接続**: 複数のレベルから成る構造体。 追加されました[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]です。  
+-   **接続**: 複数のレベルから成る構造体。 追加される[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]します。  
   
     ```  
     <Connections>  

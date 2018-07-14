@@ -1,25 +1,25 @@
 ---
-title: 参考資料 (SQL Server 2014) |Microsoft ドキュメント
+title: 参考資料 (SQL Server 2014) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - finding Help topics [SQL Server]
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5697ee9de8311c591bd71a87e8f3361a28b2de04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 44dfb789b8caa90413106655aefb635d0ba7c3db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223663"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>参考資料 (SQL Server 2014)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] に関して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が提供している主な情報ソースは次の 3 つです。  
@@ -43,7 +43,7 @@ ms.locfileid: "36164349"
  製品の機能やユーザー インターフェイスに関するご意見や不具合の報告の送信、ドキュメントに関するフィードバックの送信、エラー レポートや機能の使用状況のデータを分析できるようにするための [!INCLUDE[msCoName](../includes/msconame-md.md)] への自動送信などの方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014 における新機能します。](../sql-server/what-s-new-in-sql-server-2016.md)   
+ [SQL Server 2014 の新機能新機能](../sql-server/what-s-new-in-sql-server-2016.md)   
  [SQL Server 2014 のインストール](../database-engine/install-windows/installation-for-sql-server.md)  
   
   

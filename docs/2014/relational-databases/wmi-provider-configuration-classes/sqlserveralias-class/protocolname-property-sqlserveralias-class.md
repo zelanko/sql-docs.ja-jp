@@ -1,5 +1,5 @@
 ---
-title: ProtocolName プロパティ (SqlServerAlias クラス) |Microsoft ドキュメント
+title: ProtocolName プロパティ (SqlServerAlias クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2973d55a920991b5bc51a47115eb855ce33f20db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2581e0164e12d23f8df50a781a9e60997ab46e35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181569"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>ProtocolName プロパティ (SqlServerAlias クラス)
   サーバー接続別名によって使用されるプロトコルの名前を取得します。  

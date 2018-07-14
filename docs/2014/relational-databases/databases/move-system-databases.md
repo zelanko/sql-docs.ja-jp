@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving system databases
 - disaster recovery [SQL Server], moving database files
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - databases [SQL Server], moving
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c7bf033e015ca982610c126ede29f2936c686bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 45673cbae225dbc796fcc84dbc94b33cfc0dedd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326192"
 ---
 # <a name="move-system-databases"></a>システム データベースの移動
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のシステム データベースを移動する方法について説明します。 システム データベースの移動は、次の状況で便利な場合があります。  
@@ -54,9 +54,9 @@ ms.locfileid: "36085255"
 > [!IMPORTANT]  
 >  システム データベースを移動した後に master データベースを再構築すると、すべてのシステム データベースがそれぞれ既定の場所にインストールされるため、システム データベースを再度移動する必要があります。  
   
-##  <a name="Intro"></a> **このトピックの内容**  
+##  <a name="Intro"></a> **このトピックの「**  
   
--   [計画に従った再配置とスケジュールされたディスク メンテナンスの手順](#Planned)  
+-   [計画的再配置とスケジュールされたディスク メンテナンスの手順](#Planned)  
   
 -   [障害復旧の手順](#Failure)  
   
@@ -213,7 +213,7 @@ ms.locfileid: "36085255"
   
 2.  **[エラー ログ]** を右クリックし、 **[構成]** をクリックします。  
   
-3.  **SQL Server エージェント エラー ログの構成］** ダイアログ ボックスで、SQLAGENT.OUT ファイルの新しい場所を指定します。 既定の場所は C:\Program files \microsoft SQL Server\MSSQL12。 < instance_name > \MSSQL\Log\\です。  
+3.  **SQL Server エージェント エラー ログの構成］** ダイアログ ボックスで、SQLAGENT.OUT ファイルの新しい場所を指定します。 既定の場所は C:\Program files \microsoft SQL Server\MSSQL12。 < instance_name > \MSSQL\Log\\します。  
   
 #### <a name="change-the-database-default-location"></a>データベースの既定の場所の変更  
   

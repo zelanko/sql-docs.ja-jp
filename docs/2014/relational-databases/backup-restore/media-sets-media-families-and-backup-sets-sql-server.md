@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - media sets [SQL Server], about media sets
 - backup media [SQL Server], about backup media
@@ -24,21 +23,21 @@ helpviewer_keywords:
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06ebab2fa2db5be88f30b228d209318469788ff4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b787ab534cc5c38413a7415e8333911590e7647f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231422"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>メディア セット、メディア ファミリ、およびバックアップ セット (SQL Server)
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を初めて使用するユーザーを対象とし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。 ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でバックアップ メディアに使用する形式、バックアップ メディアとバックアップ デバイス間の対応付け、バックアップ メディアでのバックアップの構成、メディア セットとメディア ファミリに関するいくつかの注意点について説明します。 古いメディア セットを新しいメディア セットと交換する前に行うバックアップ メディアの初期化およびフォーマット処理の手順、メディア セット内の古いバックアップ セットを上書きする方法、新しいバックアップ セットをメディア セットに追加する方法についても説明します。  
   
 > [!NOTE]  
->  詳細については、Windows Azure Blob ストレージ サービスへの SQL Server バックアップを参照してください[SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。  
+>  Windows Azure Blob ストレージ サービスへの SQL Server のバックアップの詳細についてを参照してください。 [SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)します。  
   
   
 ##  <a name="TermsAndDefinitions"></a> 用語と定義  
@@ -58,7 +57,7 @@ ms.locfileid: "36083933"
  メディア セットは、バックアップ メディアをフォーマットすることによって、バックアップ操作中にバックアップ メディア上に作成されます。 詳細については、このトピックの「 [新しいメディア セットの作成](#CreatingMediaSet)」をご覧ください。 フォーマットが終了すると、各ファイルまたはテープにメディア セット用のメディア ヘッダーが書き込まれ、バックアップ コンテンツの受け入れ準備が整います。 ヘッダーが書き込まれると、バックアップ操作用に指定されているすべてのバックアップ デバイス上のバックアップ メディアに指定のデータをバックアップする作業に進みます。  
   
 > [!NOTE]  
->  メディア セットは、メディア ボリューム (テープまたはディスク ファイル) の破損に備えてミラー化できます。 詳細については、このトピックの「 [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。  
+>  メディア セットは、メディア ボリューム (テープまたはディスク ファイル) の破損に備えてミラー化できます。 詳細については、「 [ミラー化バックアップ メディア セット &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)」を参照してください。  
   
  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] または、後で、圧縮されたバックアップを読み取ることができます。 詳細については、「[バックアップの圧縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)」を参照してください。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "36083933"
 -   メディアの説明に MTF メディア ラベルまたはメディアの説明が含まれているかどうか。  
   
     > [!NOTE]  
-    >  バックアップまたは復元操作に使用されるすべてのメディアと呼ばれる標準のバックアップ形式を使用して[!INCLUDE[msCoName](../../includes/ssnoversion-md.md)]別のアプリケーションによって書き込まれた MTF メディア ラベルが保持されますが、MTF メディア ラベルの書き込みはありません。  
+    >  バックアップまたは復元操作に使用されるすべてのメディアと呼ばれる標準のバックアップ形式を使用して、[!INCLUDE[msCoName](../../includes/ssnoversion-md.md)]別のアプリケーションによって書き込まれた、MTF メディア ラベルを保持しますが、MTF メディア ラベルは書き込まれません。  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format メディア ラベルまたはメディアの説明 (自由な形式のテキスト)。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "36083933"
 ### <a name="backup-sets"></a>バックアップ セット  
  バックアップ操作が正常に行われると、メディア セットに 1 つの *バックアップ セット* が追加されます。 バックアップ セットは、バックアップが属するメディア セットの観点から表現されます。 バックアップ メディアにメディア ファミリが 1 つしかない場合は、そのファミリにバックアップ セット全体が含まれます。 バックアップ メディアが複数のメディア ファミリで構成されている場合、バックアップ セットはこれらのファミリ間で分散されます。 各メディアのバックアップ セットには、そのバックアップ セットを説明するヘッダーが含まれています。  
   
- 例を次に、[!INCLUDE[tsql](../../includes/tsql-md.md)]というメディア セットを作成するステートメント`MyAdvWorks_MediaSet_1`の[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースのバックアップ デバイスとして 3 つのテープ ドライブを使用します。  
+ 次の例は、[!INCLUDE[tsql](../../includes/tsql-md.md)]というメディア セットを作成するステートメント`MyAdvWorks_MediaSet_1`の[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースのバックアップ デバイスとして 3 つのテープ ドライブを使用します。  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -214,7 +213,7 @@ GO
  Microsoft Windows バックアップと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは同じメディアを共有できますが、同時には使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップは、Windows データをバックアップできません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] またはそれ以降のバージョンは、圧縮されたバックアップを読み取ることができます。 詳細については、「[バックアップの圧縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)」を参照してください。  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] または、以降のバージョンは、圧縮されたバックアップを読み取ることができます。 詳細については、「[バックアップの圧縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)」を参照してください。  
   
   
 ####  <a name="Overwriting"></a> バックアップ セットの上書き  
@@ -223,7 +222,7 @@ GO
  テープ ヘッダーの場合は、ヘッダーをそのまま残すことに意味があります。 ディスク バックアップ メディアの場合、バックアップ操作で指定されたバックアップ デバイスが使用したファイルだけが上書きされます。ディスク上のそれ以外のファイルは上書きされません。 バックアップを上書きする場合、既存のメディア ヘッダーを保持し、新しいバックアップをバックアップ デバイスの初めてのバックアップとして作成できます。 既存のメディア ヘッダーがない場合、関連付けられたメディア名とメディアの説明が入った有効なメディア ヘッダーが自動的に書き込まれます。 既存のメディア ヘッダーが無効な場合、バックアップ操作は終了します。 メディアが空の場合、MEDIANAME、MEDIAPASSWORD、および MEDIADESCRIPTION が指定されていれば、それらを使用して新しいメディア ヘッダーが生成されます。  
   
 > [!IMPORTANT]  
->  以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]バックアップの作成の MEDIAPASSWORD オプションが廃止されました。 ただし、パスワード付きで作成されたバックアップを復元することは、引き続き可能です。  
+>  以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]バックアップを作成するため、MEDIAPASSWORD オプションは廃止されました。 ただし、パスワード付きで作成されたバックアップを復元することは、引き続き可能です。  
   
  次のいずれかの条件が存在する場合、バックアップ メディアは上書きされません。  
   
@@ -301,7 +300,7 @@ GO
   
 -   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
- **バックアップ デバイス上のメディアのメディア ヘッダーを読み取る**  
+ **バックアップ デバイス上のメディアのメディア ヘッダーを読み取れません**  
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)  
   

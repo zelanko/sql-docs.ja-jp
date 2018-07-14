@@ -1,5 +1,5 @@
 ---
-title: シーケンス クラスターのクラスターの識別 タブ (マイニング モデル ビューアー) |Microsoft ドキュメント
+title: シーケンス クラスターのクラスターの識別 タブ (マイニング モデル ビューアー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.discrimination.f1
 ms.assetid: 7dd16479-2633-4f4b-83bf-cf55972a2241
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34ae165b87eed53b68ae4e1bd5264f1b500d0f73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4debc43286ffb3fe4f87115ed15e9b4c3f74b06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187149"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>シーケンス クラスターの [クラスターの識別] タブ (マイニング モデル ビューアー)
   **Microsoft シーケンス クラスター ビューアー**の **[クラスターの識別]** タブでは、シーケンス クラスター モデルから選択した 2 つのクラスターを比較します。  
@@ -43,12 +43,12 @@ ms.locfileid: "36164655"
  **クラスター 1**  
  モデル内のクラスターから、クラスターを 1 つ選択します。  
   
- **Cluster 2**  
+ **クラスター 2**  
  **[クラスター 1]** と比較するために、マイニング モデル内のクラスターをもう 1 つ選択します。  
   
  別のクラスターを選択しなかった場合は、既定により、選択済みのクラスターとその補集合 (クラスター 1 に属さないモデル内のすべてのケース) が比較されます。  
   
- **識別スコア\<cluster 1 > と\<クラスター 2 >**  
+ **識別スコア\<クラスター 1 > と\<クラスター 2 >**  
  選択したクラスターを詳細に比較したグラフを表示します。 通常、1 つのクラスター モデルが単一のクラスターに対して状態と値を排他的に割り当てることはめったにありません。 したがって、ビューアーは、特定の属性または状態が特定のクラスターで *優位である* ことを示すだけです。  
   
  全体的に見て、特定のクラスターに 1 つの状態の大半が含まれることがあります。例として、水筒と水筒ケースの購入というシーケンスの一般的な状態があります。 ただし、より重要な定義特性を持つ他のクラスターにこのシーケンスが存在する場合があります。 たとえば、別のクラスターが非常に短い取引時間によって定義された強力な特性を持っている場合、分析では、「水筒と水関連商品は通常はこのクラスターにグループ化されるが、常にそうであるわけではない」という結果が出る可能性があります。  
@@ -57,7 +57,7 @@ ms.locfileid: "36164655"
 |-----------|-----------------|  
 |**変数**|マイニング モデルの属性です。|  
 |**値**|**[変数]** に一覧表示される属性の状態です。|  
-|**[優先]\<クラスター 1 >**|**[変数]** および **[値]** に示された属性および状態が、**[クラスター 1]** で選択されたクラスターでどの程度優位であるかを示す色つきのバーを表示します。|  
+|**優先\<クラスター 1 >**|**[変数]** および **[値]** に示された属性および状態が、**[クラスター 1]** で選択されたクラスターでどの程度優位であるかを示す色つきのバーを表示します。|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
