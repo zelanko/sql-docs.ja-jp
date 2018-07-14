@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default protocols
 - network protocols [SQL Server], client configuration
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - protocols [SQL Server], client configuration
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5178b2f4559a506d15c868cdf13fef17869f2279
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 293a0cf9104b07f7ca0ef995cf32485a6564f9dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173323"
 ---
 # <a name="configure-client-protocols"></a>クライアント プロトコルの構成
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 構成マネージャーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクライアント アプリケーションによって使用されるクライアント プロトコルを構成する方法について説明します。 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、TCP/IP ネットワーク プロトコルおよび名前付きパイプ プロトコルを介したクライアント通信をサポートしています。 クライアントが、同じコンピューター上で[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続している場合は、共有メモリ プロトコルも使用できます。 プロトコルの選択には、3 つの一般的な方法があります。  

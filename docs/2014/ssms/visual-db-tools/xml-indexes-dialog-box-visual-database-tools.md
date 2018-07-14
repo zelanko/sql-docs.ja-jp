@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.xmlindexes
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 43ca55ebaa5504fb385eb83f4220fb483c0e98d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c03be9c524a2e542dfa4e144a659aee2342719b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172183"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>[XML インデックス] ダイアログ ボックス (Visual Database Tools)
   **[XML インデックス]** ダイアログ ボックスを使用すると、 **[インデックス/キー]** ダイアログ ボックスではできない、データ型が XML の列に対するインデックスの作成を行うことができます。 各 XML 列に複数の XML インデックスを作成できますが、最初に作成したインデックス (プライマリ インデックス) が他のインデックス (セカンダリ インデックス) の基になります。 プライマリ XML インデックスを削除すると、セカンダリ インデックスも削除されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "36085344"
  **[追加]**  
  XML インデックスを新規作成します。  
   
- **Delete**  
+ **削除**  
  **[選択された XML インデックス]** ボックスで選択されている XML インデックスを削除します。 プライマリ XML インデックスを削除すると、セカンダリ インデックスもすべて削除されることを示すメッセージが表示されます。このとき、削除を続行するか取り消すかを選択できます。  
   
  **[全般] カテゴリ**  
@@ -60,7 +60,7 @@ ms.locfileid: "36085344"
  **[オブジェクト名]**  
  XML インデックスの名前を表示します。 新しいキーまたはインデックスを作成した場合、このプロパティには、テーブル デザイナーのアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
- **description**  
+ **[説明]**  
  インデックスの説明を記述します。 より詳細な説明を記述する場合は、 **[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号ボタン (**[...]**) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
   
  **[テーブル デザイナー] カテゴリ**  

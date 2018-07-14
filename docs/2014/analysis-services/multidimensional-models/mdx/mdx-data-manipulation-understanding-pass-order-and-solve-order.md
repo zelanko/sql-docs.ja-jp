@@ -1,5 +1,5 @@
 ---
-title: パス順序と解決順序 (MDX) の理解 |Microsoft ドキュメント
+title: パス順序と解決順序 (MDX) の理解 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - evaluation order [MDX]
 - calculation order [MDX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6275971580e7885d0ccdd92aa128811c07f297bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e62af2057276bf6533753d5c1543e686ddb5e92c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196532"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>パス順序と解決順序の概要 (MDX)
   MDX スクリプトの結果としてキューブが計算される場合、計算に関連するさまざまな機能の使われ方によっては、キューブは多数の計算段階をたどることがあります。 それらの各段階は、計算パスと呼ばれます。  
@@ -127,9 +127,9 @@ FROM [Adventure Works]
  1 番目のクエリと 2 番目のクエリの結果セットの違いは、計算されるメンバーの配置位置の違いによるものです。 1 番目のクエリでは、計算されるメンバーは ROWS 軸の一部ですが、2 番目のクエリの場合は COLUMNS 軸の一部になっています。 次の例で、2 つの計算されるメンバーを 1 つの MDX クエリで組み合わせて使用するときに、この配置位置の違いが重要になります。  
   
 ### <a name="query-3combined-year-difference-and-net-income-calculations"></a>クエリ 3 - 年に関する差と純利益の計算の組み合わせ  
- 最後のクエリでは、前の 2 つの例を 1 つの MDX クエリに結合します。このとき、列と行の両方で計算を行うため、解決順序が重要になります。 計算の正しい順序で行われることを確認するを使用して、計算が発生する順序を定義、`SOLVE_ORDER`キーワード。  
+ 最後のクエリでは、前の 2 つの例を 1 つの MDX クエリに結合します。このとき、列と行の両方で計算を行うため、解決順序が重要になります。 計算が、正しい順序で発生することを確認するを使用して、計算が発生するシーケンスを定義、`SOLVE_ORDER`キーワード。  
   
- `SOLVE_ORDER` キーワードは、MDX クエリまたは `CREATE MEMBER` コマンド内の計算されるメンバーの解決順序を指定します。 と共に使用される整数値、`SOLVE_ORDER`キーワードの相対的な必要はありません必要がある 0 で始まるしないようにして、連続しています。 この値は、より高い値を持つメンバーを計算して得られる値に基づいてそのメンバーを計算するように MDX に指示するだけです。 場合は、計算されるメンバーが定義されていない場合、`SOLVE_ORDER`キーワードで、既定の値を計算メンバーは 0 です。  
+ `SOLVE_ORDER` キーワードは、MDX クエリまたは `CREATE MEMBER` コマンド内の計算されるメンバーの解決順序を指定します。 使用される整数値、`SOLVE_ORDER`キーワードの相対的な必要がありますには 0 から始まりし、でない必要はありません連続しています。 この値は、より高い値を持つメンバーを計算して得られる値に基づいてそのメンバーを計算するように MDX に指示するだけです。 なし、計算されるメンバーが定義されている場合、`SOLVE_ORDER`キーワード、その既定値で計算されるメンバーは 0。  
   
  たとえば、最初の 2 つの例のクエリで使用されている計算を結合すると、計算対象となる 2 つのメンバーである `Year Difference` と `Profit Margin`は、MDX クエリの例の結果データセット内にある 1 つのセルで交差します。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] がこのセルをどのように評価するかを決定する唯一の方法は、解決順序を指定することです。 このセルを作成するために使用する数式は、2 つの計算されるメンバーの解決順序に応じて、異なる結果を作成します。  
   

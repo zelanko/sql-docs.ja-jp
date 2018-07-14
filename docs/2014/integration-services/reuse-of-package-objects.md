@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - GUID regenerating [Integration Services]
 - reusing packages
@@ -19,13 +19,13 @@ ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fe70bf7dd471d11f023adab63f6581bcbb2feb9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2be515df284d420790350c6be6fcc609666bcd56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206082"
 ---
 # <a name="reuse-of-package-objects"></a>パッケージ オブジェクトの再利用
   多くの場合、パッケージには、再利用できるような機能が含まれています。 たとえば、一連のタスクを作成した場合、それらのアイテムを合わせてグループとして再利用したり、別の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトで作成した接続マネージャーのように、1 つのアイテムを再利用したりすることができます。  

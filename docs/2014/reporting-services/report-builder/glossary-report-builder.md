@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 20a5c8a50749e1b7133df76bedb7b3ba2d7c4879
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9841b18565b6c07f88ed075a298cbe87275b5d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197062"
 ---
 # <a name="glossary-report-builder"></a>用語集 (レポート ビルダー)
   
@@ -40,7 +40,7 @@ ms.locfileid: "36083174"
 |アンチエイリアシング (antialiasing)|グラフィックで、曲線に発生する階段状のギザギザ (ジャギ) を目立たなくする技法。|  
 |アプリケーション データベース (application database)|1 つのアプリケーション用にユーザー データやシステム データを格納するデータベース。|  
 |引数 (argument)|アクション、イベント、メソッド、プロパティ、関数、またはプロシージャに情報を提供する値。|  
-|アセンブリ (assembly)|クラスのメタデータやマネージ コードを SQL Server 内のオブジェクトとして持つマネージ アプリケーション モジュール。アセンブリに対して、SQL Server 内のさまざまなオブジェクト (CLR 関数、ストアド プロシージャ、トリガー、ユーザー定義集計、ユーザー定義型など) を作成できます。|  
+|アセンブリ (assembly)|クラスのメタデータやマネージド コードを SQL Server 内のオブジェクトとして持つマネージド アプリケーション モジュール。アセンブリに対して、SQL Server 内のさまざまなオブジェクト (CLR 関数、ストアド プロシージャ、トリガー、ユーザー定義集計、ユーザー定義型など) を作成できます。|  
 |認証 (authentication)|ユーザー、コンピューター、プロセスなどのエンティティから提供された資格情報を検証して、そのエンティティの ID を確認するプロセス。 資格情報の一般的な形式としては、デジタル署名、スマート カード、バイオメトリクス データ、およびユーザー名とパスワードの組み合わせなどがあります。|  
 |承認 (authorization)|1.ユーザーに与えられた権限およびアクセス権を確認する操作。 2. 特定の情報、サービス、または機能へのアクセスを、個人、コンピューター プロセス、またはデバイスに許可する処理。|  
 |軸 (axis)|あるポイントの位置を表示するために使用されるグラフ上の水平および垂直の線。|  
@@ -74,12 +74,12 @@ ms.locfileid: "36083174"
 |CLR ストアド プロシージャ (CLR stored procedure)|SQL Server アセンブリに対して作成されたストアド プロシージャのうち、その実装が .NET Framework 共通言語ランタイムで作成されたアセンブリ内に定義されているもの。|  
 |CLR トリガー (CLR trigger)|SQL Server アセンブリに対して作成されたトリガーのうち、その実装が .NET Framework 共通言語ランタイムで作成されたアセンブリ内に定義されているもの。|  
 |CLR ユーザー定義型 (CLR user-defined type)|SQL Server アセンブリに対して作成されたユーザー定義データ型のうち、その実装が .NET Framework 共通言語ランタイムで作成されたアセンブリ内に定義されているもの。|  
-|コード アクセス セキュリティ (code access security)|共通言語ランタイムによって提供されるメカニズム。このメカニズムでは、マネージ コードにはセキュリティ ポリシーによって権限が付与されます。また、これらの権限が適用されると、コードで実行できる操作を制限できます。|  
+|コード アクセス セキュリティ (code access security)|共通言語ランタイムによって提供されるメカニズム。このメカニズムでは、マネージド コードにはセキュリティ ポリシーによって権限が付与されます。また、これらの権限が適用されると、コードで実行できる操作を制限できます。|  
 |照合順序 (collation)|データの比較、並べ替え、および表示の方法を決定する規則のセット。|  
 |コレクション (collection)|1.他のオブジェクトのセットを格納したオブジェクト。 2. Master Data Services で、明示的階層およびその他のコレクションのメンバーで編成された階層グループ。|  
 |色ルール (color rules)|色をマップ レイヤー上の各マップ要素に自動的に割り当てるアルゴリズム。|  
 |カラー スケール (color scale)|マップ上で表される色の表現に使用される、マップの凡例の一種。|  
-|共通言語ランタイム (common language runtime)|マネージ コードを実行する際に中核となるエンジン。 このランタイムにより、言語間の統合、コード アクセス セキュリティ、オブジェクトの有効期間の管理、デバッグとプロファイルのサポートなどのサービスがマネージ コードに提供されます。|  
+|共通言語ランタイム (common language runtime)|マネージド コードを実行する際に中核となるエンジン。 このランタイムにより、言語間の統合、コード アクセス セキュリティ、オブジェクトの有効期間の管理、デバッグとプロファイルのサポートなどのサービスがマネージド コードに提供されます。|  
 |複合式 (complex expression)|単一の組み込みフィールド参照として表現できず、デザイン画面に <\<Expr>> として表示される式。|  
 |連結 (concatenation)|2 つ以上の文字列や式を結合して、1 つの文字列や式にすること。または、2 つ以上のバイナリ文字列やバイナリ式を結合して、1 つのバイナリ文字列やバイナリ式にすること。|  
 |同時実行 (concurrency)|複数のユーザーが共有データに同時にアクセスや変更を行うことができるようにする処理。 SQL Server ではロックを使用して、複数のユーザーが互いに競合することなく共有データに同時にアクセスや変更を行うことができます。|  
@@ -366,7 +366,7 @@ ms.locfileid: "36083174"
 |可変間隔 (variable interval)|Reporting Services のグラフで指定できるオプションの 1 つ。軸に配置できる最適な数のラベルが、グラフの幅または高さに基づいて自動的に計算されます。|  
 |視覚エフェクト (visualization)|マップ、グラフ、およびゲージで、分析データの視覚化のために選択できる方法。|  
 |Web サービス|Reporting Services において、SOAP (Simple Object Access Protocol) over HTTP を使用し、クライアント プログラムとレポート サーバー間の通信インターフェイスとして機能するサービス。|  
-|Windows Management Instrumentation (Windows Management Instrumentation)|マネージ環境のオブジェクトに関する情報を提供するインターフェイス。|  
+|Windows Management Instrumentation (Windows Management Instrumentation)|マネージド環境のオブジェクトに関する情報を提供するインターフェイス。|  
 |WKB (WKB)|Open Geospatial Consortium (OGC) で指定された Well Known Binary データ表現。|  
 |WKT (WKT)|Open Geospatial Consortium (OGC) で指定された Well Known Text データ表現。|  
 |WMI (WMI)|「Windows Management Instrumentation (Windows Management Instrumentation)」を参照。|  

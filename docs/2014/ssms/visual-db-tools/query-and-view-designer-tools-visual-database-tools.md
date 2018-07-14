@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.querydesigner
 - vdt.pane.diagram
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - View Designer, components
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ec0aafb394d43fa55fa940ca5ce23cca798b3ef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: df346757d4fca96b17b2287fe614d4db95319e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168123"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>クエリおよびビュー デザイナー ツール (Visual Database Tools)
   クエリ、ビュー、インライン関数、または単一ステートメント ストアド プロシージャをデザインするときに使用するデザイナーは、ダイアグラム ペイン、抽出条件ペイン、SQL ペイン、および結果ペインで構成されています。  
@@ -52,7 +52,7 @@ ms.locfileid: "36085570"
  ペインを非表示にする場合、または非表示になっているペインを表示する場合は、デザイン画面を右クリックして **[ペイン]** をポイントし、ペインの名前をクリックします。 クエリおよびビュー デザイナーがクエリ デザイナー モードで開かれている場合、 **[結果]** ペインは使用できません。  
   
 ## <a name="see-also"></a>参照  
- [クエリおよびビューの操作方法に関するトピックをデザイン&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [クエリおよびビュー デザイナーを開く&#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
  [SQL エディター (Visual Database Tools)](sql-editor-visual-database-tools.md)  
   

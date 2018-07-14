@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publisherinfo.publications.f1
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ea246905aa410a8c6d69a9e757ef5ec297601c93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 413478842bce1044749f055e893f73813dbb8df9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167043"
 ---
 # <a name="publisher-information-publications"></a>パブリッシャー情報、[パブリケーション]
   **[パブリケーション]** タブを使用すると、左ペインで選択したパブリッシャーにおけるすべてのパブリケーションに関する要約情報を取得できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "36084534"
   
  フィルター設定は各グリッドに固有です。 列の選択と並べ替えは、各パブリッシャーのパブリケーション グリッドなど、同じ種類のすべてのグリッドに適用されます。  
   
- **Status**  
+ **ステータス**  
  各パブリケーションの状態です。これは、サブスクリプションの最も優先度の高い状態により決定されます。 既定では、パブリケーション情報を表示するグリッドは **[状態]** 列の順序で並べられています。 表示される状態の値と、その値の並べ替え順 (たとえば、エラーは常にグリッドの上部に表示されます) を次に示します。  
   
 -   [エラー]  

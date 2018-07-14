@@ -1,5 +1,5 @@
 ---
-title: '次の機能は、Excel Services でサポートされていないと表示されないか、一部しか表示可能性があります: コメント、図形、またはその他のオブジェクト |Microsoft ドキュメント'
+title: '次の機能は、Excel Services でサポートされていないと表示されないか、一部しか表示可能性があります: コメント、図形、またはその他のオブジェクト |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de9ce6b0d7123cf2156483e6357cef25609ba4fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1bee0273ba256ea6861b4259d48e377528c5e4eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192425"
 ---
 # <a name="the-following-features-are-not-supported-by-excel-services-and-may-not-display-or-may-display-only-partially-comments-shapes-or-other-objects"></a>次の機能は Excel Services でサポートされておらず、表示されないか、一部しか表示されないことがあります: コメント、図形、またはその他のオブジェクト
   このエラーは、PowerPivot フィールドの一覧から PowerPivot ブックにスライサーを追加すると発生します。  
@@ -34,7 +34,7 @@ ms.locfileid: "36085777"
 |メッセージ テキスト|次の機能は Excel Services でサポートされておらず、表示されないか、一部しか表示されないことがあります。<br /><br /> コメント、図形、またはその他のオブジェクト<br /><br /> 外部データのクエリなど、一部の機能では、Microsoft Excel でのみ更新できるキャッシュ データが表示されます。|  
   
 ## <a name="explanation"></a>説明  
- ブラウザーで PowerPivot ブックを開く をクリックすると、このエラーを Excel Web Access では、**詳細**メッセージは、ボタン**サポートされていない機能このブックは意図されたようには表示されません**です。  
+ Excel Web Access をクリックすると、PowerPivot ブックを開くには、ブラウザーでこのエラーが表示されます、**詳細**メッセージは、ボタン**意図したとおり、サポートされていない機能このブックが表示されない場合があります**します。  
   
  このエラーは、Excel の非表示の図形オブジェクトによって制御されるレイアウトを持つスライサーが PowerPivot ブックにある場合に発生します。 図形オブジェクトは、水平配置と垂直配置におけるスライサーの書式設定および位置指定を制御します。  
   

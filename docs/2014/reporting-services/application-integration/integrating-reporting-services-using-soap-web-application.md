@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Web applications [Reporting Services]
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0c3ecc7a4a8b11c09695111c8a99d33c057b99d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: befd0c7215ac2b765e898c440aab8a184626aaa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170123"
 ---
 # <a name="using-the-soap-api-in-a-web-application"></a>Web アプリケーションでの SOAP API の使用
   Reporting Services SOAP API からは、レポート サーバーのすべての機能にアクセスできます。 SOAP API は Web サービスであるため、容易にアクセスし、エンタープライズ レポート機能をカスタム ビジネス アプリケーションに取り入れることができます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーションから SOAP API にアクセスするのと同じように、Web アプリケーションからレポート サーバー Web サービスにアクセスします。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用して、レポート サーバー Web サービスのプロパティとメソッドを公開するプロキシ クラスを生成できます。このクラスにより、使い慣れたインフラストラクチャとツールを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] テクノロジに基づいたビジネス アプリケーションをビルドできます。  

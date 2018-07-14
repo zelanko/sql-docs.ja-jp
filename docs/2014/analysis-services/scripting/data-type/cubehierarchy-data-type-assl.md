@@ -1,5 +1,5 @@
 ---
-title: CubeHierarchy データ型 (ASSL) |Microsoft ドキュメント
+title: CubeHierarchy データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubeHierarchy data type
 ms.assetid: cd633409-0c14-4dd9-97cc-3d30e25df24f
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48176b4096b7fa7ba8e1847750410be0f65da552
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d719b6c841b27df473599514dc12c4e90644610
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176199"
 ---
 # <a name="cubehierarchy-data-type-assl"></a>CubeHierarchy データ型 (ASSL)
-  に関する情報を表すプリミティブ データ型を定義、[階層](../objects/hierarchy-element-assl.md)内の要素、[キューブ](../objects/cube-element-assl.md)要素。  
+  に関する情報を表すプリミティブ データ型を定義、[階層](../objects/hierarchy-element-assl.md)内の要素を[キューブ](../objects/cube-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36163953"
 ## <a name="remarks"></a>コメント  
  このデータ型には制限はなく、いずれの配置モード (0 - 多次元およびデータ マイニング、1 - SharePoint、および 2 - テーブル) でも使用できます。  
   
- [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]、*有効*プロパティに設定することはできません`False`の*CubeHierarchy*です。  
+ [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]、*有効*にプロパティを設定することはできません`False`の*CubeHierarchy*します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.CubeHierarchy>します。  
   

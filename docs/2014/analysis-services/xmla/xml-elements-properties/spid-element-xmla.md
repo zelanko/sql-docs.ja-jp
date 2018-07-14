@@ -1,5 +1,5 @@
 ---
-title: SPID 要素 (XMLA) |Microsoft ドキュメント
+title: SPID 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - SPID element
 ms.assetid: c4a54dcb-a0cd-4255-9e0f-a34eb990854f
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d203225045314115604a8b99d82ab291c5960376
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 27244dab841ac4793d66c6b177d5382ca7cdc7a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167023"
 ---
 # <a name="spid-element-xmla"></a>SPID 要素 (XMLA)
-  親を実行するアクティブ サーバー プロセス識別子 (SPID) を識別[キャンセル](../xml-elements-commands/cancel-element-xmla.md)要素。  
+  親を実行するアクティブ サーバー プロセス識別子 (SPID) を識別する[キャンセル](../xml-elements-commands/cancel-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

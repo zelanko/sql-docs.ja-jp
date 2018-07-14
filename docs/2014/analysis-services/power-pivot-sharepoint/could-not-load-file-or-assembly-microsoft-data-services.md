@@ -1,5 +1,5 @@
 ---
-title: ファイルまたはアセンブリを読み込めませんでした&#39;Microsoft.AnalysisServices.SharePoint.Integration&#39; |Microsoft ドキュメント
+title: ファイルまたはアセンブリを読み込めませんでした&#39;Microsoft.AnalysisServices.SharePoint.Integration&#39; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 59a210726cb772d3f6feadb5e9440f2d09ac4dcf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f7097473a59997eebfa44e043a8d5e4847c34f40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201952"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>ファイルまたはアセンブリを読み込めませんでした&#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
   PowerPivot for SharePoint がある SharePoint 2010 環境で、PowerPivot のアプリケーション レベルのソリューションが正しく配置されていない場合にこのエラーが発生します。  

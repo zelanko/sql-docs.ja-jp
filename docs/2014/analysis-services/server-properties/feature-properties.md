@@ -1,5 +1,5 @@
 ---
-title: フィーチャーのプロパティ |Microsoft ドキュメント
+title: フィーチャーのプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQMSupportEnabled property
 - ComUdfEnabled property
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - UseCachedPageAllocators property
 ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c91c6d037bbb01c47f22159d846b40f8e1bbcca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ae26995283bcfa50a33f78ab55536f8aac75453
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188959"
 ---
 # <a name="feature-properties"></a>機能プロパティ
   機能プロパティは、製品の機能に関連しており、そのほとんどが詳細プロパティです。サーバー インスタンス間のリンクを制御するプロパティが含まれます。  
@@ -54,6 +54,6 @@ ms.locfileid: "36085754"
 ## <a name="see-also"></a>参照  
  [Analysis services サーバーのプロパティを構成します。](server-properties-in-analysis-services.md)   
  [Analysis Services インスタンスのサーバー モードを決定します。](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [動的管理ビューを使用して&#40;Dmv&#41;サービス分析を監視するのには](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [動的管理ビューを使用して&#40;Dmv&#41;サービス モニターは分析するには](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: プロジェクト アイテムをコピー |Microsoft ドキュメント
+title: プロジェクト項目のコピー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], copying
 - packages [Integration Services], copying
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data source views [Integration Services], copying
 ms.assetid: 1606c54d-20f9-49f3-a4ef-caad83a772aa
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 57c3263617b89bfa9ca39f81fb0890b45532a744
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02ddf2965e6bd97d4859cae2ce40a0c96333a74d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193582"
 ---
 # <a name="copy-project-items"></a>プロジェクト アイテムをコピーする
   このトピックでは、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト内のオブジェクトをコピーする方法、または [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト間でオブジェクトをコピーする方法について説明します。 他の種類の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] プロジェクト、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の間でオブジェクトをコピーすることもできます。 プロジェクト間でコピーするには、プロジェクトが同じ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ソリューションに含まれている必要があります。 詳細については、「[Integration Services (SSIS) プロジェクト](integration-services-ssis-projects-and-solutions.md)」を参照してください。  

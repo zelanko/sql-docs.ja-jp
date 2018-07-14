@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.pubproperties.general.f1
 helpviewer_keywords:
 - Publisher Properties dialog box
 ms.assetid: 9055bd4a-89cc-4059-9474-e213d7bcc36d
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11cd7e8c8d4759a9c49c631284622846297e9652
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b50a28dd6faaa4731ec9c0af952b88dce487627c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203009"
 ---
 # <a name="publisher-properties---publisher-general"></a>[パブリッシャーのプロパティ - パブリッシャー]、[全般]
   **[パブリッシャーのプロパティ]** ダイアログ ボックスの **[全般]** ページでは、パブリッシャーが使用するディストリビューターおよびディストリビューション データベースの読み取り専用情報を表示します。 パブリッシャーのディストリビューターまたはディストリビューション データベースを変更するには、次の手順に従います。  

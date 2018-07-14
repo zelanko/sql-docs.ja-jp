@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f40638174ebd432a96ce61ea27805ea77fd5a151
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 65d72bac30b1a531d332e88c4b8e59afc73f7afb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193344"
 ---
 # <a name="altering-memory-optimized-tables"></a>メモリ最適化テーブルの変更
   メモリ最適化テーブルに対する ALTER 操作はサポートされていません。 これには、bucket_count の変更、インデックスの追加または削除、列の追加または削除などが含まれます。 このトピックでは、メモリ最適化テーブルを更新する方法のガイドラインについて説明します。  
@@ -67,13 +67,13 @@ ms.locfileid: "36085678"
     select @permissions  
     ```  
   
-4.  テーブルのコピーを作成し、元のテーブルからテーブルのコピーにデータをコピーします。 以下を使用して、コピーを作成できます[!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>です。  
+4.  テーブルのコピーを作成し、元のテーブルからテーブルのコピーにデータをコピーします。 次を使用して、コピーを作成できます[!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>します。  
   
     ```tsql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     十分なメモリがある場合`T_copy`、そのデータを高速にコピー、メモリ最適化テーブルをする可能性があります<sup>。2</sup>  
+     使用可能なメモリ不足のために場合、`T_copy`データのコピーを高速化は、メモリ最適化テーブルになります<sup>。2</sup>  
   
 5.  元のテーブルを参照するスキーマ バインド オブジェクトを削除します。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36085678"
   
  <sup>1</sup>なお`T_copy`が永続化されるこの例ではディスクにします。 `T` のバックアップが使用可能であれば、`T_copy` に一時的または持続性のないテーブルを指定することもできます。  
   
- <sup>2</sup>十分なメモリを必要がある`T_copy`です。 `DROP TABLE` ではメモリがすぐには解放されません。 `T_copy` がメモリ最適化されている場合は、`T` のコピーを 2 つ作成するための十分なメモリが必要です。 `T_copy` がディスク ベース テーブルの場合は、`T` の古いバージョンを削除した後にガベージ コレクターによって補完されるため、`T` の付加的なコピーを 1 つ作成するためのメモリがあれば問題ありません。  
+ <sup>2</sup>のに十分なメモリが必要があります`T_copy`します。 `DROP TABLE` ではメモリがすぐには解放されません。 `T_copy` がメモリ最適化されている場合は、`T` のコピーを 2 つ作成するための十分なメモリが必要です。 `T_copy` がディスク ベース テーブルの場合は、`T` の古いバージョンを削除した後にガベージ コレクターによって補完されるため、`T` の付加的なコピーを 1 つ作成するためのメモリがあれば問題ありません。  
   
 ## <a name="changing-schema-powershell"></a>スキーマの変更 (PowerShell)  
  次の PowerShell スクリプトは、テーブルや関連する権限のスクリプトを作成することで、スキーマの変更に備えます。  
@@ -112,7 +112,7 @@ ms.locfileid: "36085678"
   
 -   一時テーブルを削除します。  
   
- 目的のスキーマの変更を反映するように、手順 4. のスクリプトを更新する必要があります。 テーブルの列にすべての変更がある場合のスクリプトを手順 5. (一時テーブルからデータをコピーする) と 6 が (ストアド プロシージャの再作成) する必要があります必要に応じて更新します。  
+ 目的のスキーマの変更を反映するように、手順 4. のスクリプトを更新する必要があります。 テーブルの列にすべての変更がある場合 (一時テーブルからデータをコピーする) のスクリプトの手順 5 と 6 (ストアド プロシージャを再作成) する必要がありますが必要に応じて更新されます。  
   
 ```tsql  
 # Prepare for schema changes by scripting out the table, as well as associated permissions  

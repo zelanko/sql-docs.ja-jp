@@ -1,5 +1,5 @@
 ---
-title: プロファイラー トレースの再生 (Analysis Services) の作成 |Microsoft ドキュメント
+title: 再生 (Analysis Services) 用の Profiler トレースの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - traces [Analysis Services]
 ms.assetid: 93b2fc46-7cfb-4ab5-abeb-1475a7d6f0f2
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19b7277c52294d88743af5bf99d099a8df4f2f19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03745df066851279d45d5d6dbd8a536e32025cf4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169713"
 ---
 # <a name="create-profiler-traces-for-replay-analysis-services"></a>再生用のプロファイラー トレースの作成 (Analysis Services)
   ユーザーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で収集する必要があります。 このようなイベントの収集を開始するには、 **[トレースのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブで適切なイベント クラスを選択する必要があります。 たとえば、Query Begin イベント クラスが選択されている場合は、クエリを含んでいるイベントが収集され、再生に使用されます。 また、トレース ファイルには、分散環境におけるサーバー トランザクションを当初のトランザクション シーケンスで再生するための十分な情報が含まれています。  
@@ -48,7 +48,7 @@ ms.locfileid: "36085113"
   
 -   すべてのデータ列が含まれた Audit Login イベント クラス。 このイベント クラスでは、ログインしたユーザーとセッションの設定に関する情報が提供されます。 SPID では、ユーザー セッションに対する参照が提供されます。 詳細については、「 [Security Audit のデータ列](../trace-events/security-audit-data-columns.md)」を参照してください。  
   
--   すべてのデータ列が含まれた Discover Begin イベント クラス。 TextData 列に含まれて、 \<RequestType >、discover 要求と RequestProperties の列の一部を提供、\<プロパティ > 検出要求の一部です。 EventSubclass 列では、検出の種類が提供されます。 詳細については、「 [Discover イベントのデータ列](../trace-events/discover-events-data-columns.md)」を参照してください。  
+-   すべてのデータ列が含まれた Discover Begin イベント クラス。 TextData 列では、 \<RequestType > 検出要求され、RequestProperties 列の部分を提供、\<プロパティ > 検出要求の一部です。 EventSubclass 列では、検出の種類が提供されます。 詳細については、「 [Discover イベントのデータ列](../trace-events/discover-events-data-columns.md)」を参照してください。  
   
 -   すべてのデータ列が含まれた Discover End イベント クラス。 このイベント クラスでは、検出要求の状態が検証されます。 詳細については、「 [Discover イベントのデータ列](../trace-events/discover-events-data-columns.md)」を参照してください。  
   

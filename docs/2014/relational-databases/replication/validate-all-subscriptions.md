@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.validate.allsubscriptions.f1
 helpviewer_keywords:
 - Validate All Subscriptions dialog box
 ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ae84563b45f05fb7df91d2a00cb2ff0ca9cdd852
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a6df15aecb19b61bc5cdb22e587177c0cca71da5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203008"
 ---
 # <a name="validate-all-subscriptions"></a>[すべてのサブスクリプションの検証]
   **[すべてのサブスクリプションの検証]** ダイアログ ボックスを使用すると、各サブスクリプションのマージ エージェントを次に実行するときに、マージ パブリケーションへのサブスクリプションをすべて検証するように指定できます。 検証の結果はレプリケーション モニターに表示されます。 詳細については、「 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)」を参照してください。  

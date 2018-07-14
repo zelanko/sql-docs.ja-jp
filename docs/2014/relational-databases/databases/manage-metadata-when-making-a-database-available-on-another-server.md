@@ -1,5 +1,5 @@
 ---
-title: 別のサーバー インスタンス (SQL Server) でデータベースを使用できるようにするときのメタデータの管理 |Microsoft ドキュメント
+title: データベースを別のサーバー インスタンス (SQL Server) で使用できるようにするメタデータの管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
 - logins [SQL Server], recreating on another server instance
@@ -35,15 +35,15 @@ helpviewer_keywords:
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 caps.latest.revision: 82
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffc720988d80a77e2b540b89c258f2b943d9445e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cbea790b9376f254be6c1de3179cc1057d5f8b7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207212"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 (SQL Server)
   このトピックは、次の状況に関連しています。  
@@ -112,7 +112,7 @@ ms.locfileid: "36083938"
  この機能の詳細については、「[資格情報 &#40;データベース エンジン&#41;](../security/authentication-access/credentials-database-engine.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントは、資格情報を使用します。 プロキシ アカウントの資格情報 ID については、 [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) システム テーブルを使用してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントの資格情報を使用します。 プロキシ アカウントの資格情報 ID については、 [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) システム テーブルを使用してください。  
   
  [&#91;先頭に戻る&#93;](#information_entities_and_objects)  
   

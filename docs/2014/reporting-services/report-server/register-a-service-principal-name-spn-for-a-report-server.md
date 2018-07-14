@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ff0897b618aed7a5d126113bde62f2bd84b8aec5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14735ce5e7f70dbd25e76749c96c3a15916e35de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189889"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>レポート サーバーのサービス プリンシパル名 (SPN) の登録
   相互認証に Kerberos プロトコルを使用するネットワークに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を配置する場合に、レポート サーバー サービスをドメイン ユーザー アカウントとして実行するように構成するには、レポート サーバー サービスのサービス プリンシパル名 (SPN) を作成する必要があります。  
@@ -73,8 +73,8 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
 7.  このセクションの最初のエントリとして `<RSWindowsNegotiate/>` を追加して、NTLM を有効にします。  
   
 ## <a name="see-also"></a>参照  
- [サービス アカウントの構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
- [レポート サーバー サービス アカウントを構成する&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [サービス アカウントを構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [レポート サーバー サービス アカウントの構成&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Reporting Services ネイティブ モードのレポート サーバーの管理](manage-a-reporting-services-native-mode-report-server.md)  
   
   

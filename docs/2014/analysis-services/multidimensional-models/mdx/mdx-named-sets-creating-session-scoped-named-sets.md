@@ -1,5 +1,5 @@
 ---
-title: セッション スコープの作成の名前付きセット (MDX) |Microsoft ドキュメント
+title: 名前付きセット (MDX) のセッション スコープの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE SET statement
 - session-scoped named sets [MDX]
 ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 101109dce04d6a31c4b78a47573ccb54f2c80f0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a3d6a1fd35c91733b32ecc3244f0fd3bafe6a07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167693"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>セッション スコープの名前付きセットの作成 (MDX)
   多次元式 (MDX) セッション全体で使用できる名前付きセットを作成するには、[CREATE SET](/sql/mdx/mdx-data-definition-create-set) ステートメントを使用します。 CREATE SET ステートメントを使用して作成された名前付きセットは、MDX セッションが閉じるまで削除されません。  

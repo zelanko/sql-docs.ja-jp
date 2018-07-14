@@ -1,5 +1,5 @@
 ---
-title: データ ソース (SSAS テーブル) のサポート |Microsoft ドキュメント
+title: データ ソース (SSAS テーブル) のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 360a0d7d556589947d312deab1f2ff485afb85d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b8aac369dd82f75f251df1195ac29c8ccf3b983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185299"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>サポートされているデータ ソース (SSAS テーブル)
   このトピックでは、テーブル モデルで使用できるデータ ソースの種類について説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "36085302"
 |-|-|-|-|  
 |Source|バージョン|ファイルの種類|プロバイダー <sup>1</sup>|  
 |Access データベース|Microsoft Access 2003、2007、2010。|.accdb または .mdb|ACE 14 OLE DB プロバイダー|  
-|SQL Server リレーショナル データベース|Microsoft SQL Server2005、2008、2008 R2 です。SQL Server 2012、Microsoft SQL Azure データベース<sup>2</sup>|(該当なし)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB プロバイダー<br /><br /> SQL Server Native 10.0 Client OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for SQL Client|  
+|SQL Server リレーショナル データベース|Microsoft SQL Server2005、2008、2008 R2、SQL Server 2012、Microsoft SQL Azure データベース<sup>2</sup>|(該当なし)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB プロバイダー<br /><br /> SQL Server Native 10.0 Client OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for SQL Client|  
 |SQL Server 並列データ ウェアハウス (PDW) <sup>3</sup>|2008 R2|(該当なし)|OLE DB provider for SQL Server PDW|  
 |Oracle リレーショナル データベース|Oracle 9i、10g、11g|(該当なし)|Oracle OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata リレーショナル データベース|Teradata V2R6、V12|(該当なし)|TDOLEDB OLE DB プロバイダー<br /><br /> .Net Data Provider for Teradata|  
@@ -56,11 +56,11 @@ ms.locfileid: "36085302"
   
  <sup>1</sup> for ODBC、OLE DB プロバイダーを使用することもできます。  
   
- <sup>2</sup> SQL Azure の詳細については、web サイトを参照してください。 [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856)です。  
+ <sup>2</sup> SQL Azure の詳細については、web サイトを参照してください。 [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856)します。  
   
- <sup>3</sup> SQL Server PDW の詳細については、web サイトを参照してください。 [SQL Server 2008 R2 並列データ ウェアハウス](http://go.microsoft.com/fwlink/?LinkId=150895)です。  
+ <sup>3</sup> SQL Server PDW の詳細については、web サイトを参照してください。 [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895)します。  
   
- <sup>4</sup>場合によっては、MSDAORA OLE DB プロバイダーを使用してが生じることが特に Oracle の新しいバージョンで、接続エラーが発生します。 エラーが生じる場合は、Oracle 用に記載されている他のプロバイダーを使用することをお勧めします。  
+ <sup>4</sup>場合によっては、MSDAORA OLE DB プロバイダーを使用して新しいバージョンの Oracle との接続エラーで結果ことができます。 エラーが生じる場合は、Oracle 用に記載されている他のプロバイダーを使用することをお勧めします。  
   
 ##  <a name="bkmk_unsupported_ds"></a> サポートされていないソース  
  次のデータ ソースは、現在サポートされていません。  

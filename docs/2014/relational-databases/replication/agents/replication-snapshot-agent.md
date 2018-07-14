@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, executables
 - agents [SQL Server replication], Snapshot Agent
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 969cbb384d4cc41afe09f0e49c5d6cd9b7717a8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1fce4a187ffb9887cf56d2ef621cb753ededc833
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190172"
 ---
 # <a name="replication-snapshot-agent"></a>レプリケーション スナップショット エージェント
   レプリケーション スナップショット エージェントは、パブリッシュされたテーブルおよびデータベース オブジェクトのスキーマとデータを含むスナップショット ファイルを作成し、これらのファイルをスナップショット フォルダーに格納し、同期ジョブをディストリビューション データベースに記録する実行可能ファイルです。  
@@ -112,7 +112,7 @@ ms.locfileid: "36085210"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してディストリビューターに接続するときに使用されるログインです。  
   
  **-DistributorPassword** *distributor_password*  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してディストリビューターに接続するときに使用されるパスワードです。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してディストリビューターに接続するときに使用されるパスワードです。 .  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  ディストリビューターのセキュリティ モードを指定します。 値 **0** は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定値) を示し、値 **1** は Windows 認証モードを示します。  
@@ -223,7 +223,7 @@ ms.locfileid: "36085210"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してパブリッシャーに接続するときに使用されるログインです。  
   
  **-PublisherPassword**  *publisher_password*  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してパブリッシャーに接続するときに使用されるパスワードです。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用してパブリッシャーに接続するときに使用されるパスワードです。 .  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  パブリッシャーのセキュリティ モードを指定します。 値 **0** は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定値) を示し、値 **1** は Windows 認証モードを示します。  

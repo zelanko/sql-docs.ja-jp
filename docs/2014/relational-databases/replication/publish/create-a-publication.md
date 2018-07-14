@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
 - articles [SQL Server replication], defining
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dbfa449e19f77b7537232e0fc8689a47f30ea1fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dee016784a438de226877d94d7271048749a859c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170323"
 ---
 # <a name="create-a-publication"></a>パブリケーションの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリケーションを作成する方法について説明します。  
@@ -114,7 +114,7 @@ ms.locfileid: "36084973"
   
     -   結果セットが空の場合は、ログ リーダー エージェント ジョブを作成します。 パブリッシャーで、[sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) を実行します。 エージェントの実行に使用される [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 資格情報を **@job_name** と **@password**を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** 」および「 **@publisher_password**」を参照してください。 手順 3. に進みます。  
   
-3.  パブリッシャーで、[sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。 パブリケーション名を指定 **@publication**との**@repl_freq**パラメーターの値を指定して`snapshot`スナップショット パブリケーションまたはの値の`continuous`のトランザクション パブリケーションです。 必要に応じて、その他のパブリケーション オプションを指定してください。 これにより、パブリケーションが定義されます。  
+3.  パブリッシャーで、[sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。 パブリケーション名を指定**@publication**、あり、さらに、 **@repl_freq**パラメーターの値を指定`snapshot`スナップショット パブリケーションまたはの値の`continuous`のトランザクション パブリケーション。 必要に応じて、その他のパブリケーション オプションを指定してください。 これにより、パブリケーションが定義されます。  
   
     > [!NOTE]  
     >  パブリケーション名に、次の文字を含めることはできません。  
@@ -170,12 +170,12 @@ ms.locfileid: "36084973"
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> プロパティが `false` の場合、これを `true` に設定します。  
   
-4.  トランザクション パブリケーションの場合は、<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> プロパティの値を確認します。 このプロパティが場合`true`、このデータベースのログ リーダー エージェント ジョブが既に存在します。 このプロパティが場合`false`を次の操作します。  
+4.  トランザクション パブリケーションの場合は、<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> プロパティの値を確認します。 このプロパティが場合`true`、このデータベースのログ リーダー エージェント ジョブが既に存在します。 このプロパティが場合`false`次の操作を行います。  
   
-    -   設定、<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>と<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>または<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A>のフィールド<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>の資格情報を提供する、[!INCLUDE[msCoName](../../../includes/msconame-md.md)]ログ リーダー エージェントを実行する Windows アカウントです。  
+    -   設定、<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>と<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>または<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A>フィールドの<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>の資格情報を提供する、[!INCLUDE[msCoName](../../../includes/msconame-md.md)]ログ リーダー エージェントが実行する Windows アカウントします。  
   
         > [!NOTE]  
-        >  設定<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>のメンバー、パブリケーションを作成するときは必要ありません、`sysadmin`固定サーバー ロール。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」を参照してください。  
+        >  設定<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>のメンバー、パブリケーションが作成されたときに必要ありません、`sysadmin`固定サーバー ロール。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」を参照してください。  
   
     -   (省略可) SQL Server 認証を使用してパブリッシャーに接続する場合、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> ) フィールドを設定します。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "36084973"
     -   <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドに、スナップショット エージェントの実行に使用する Windows アカウントの資格情報を指定します。 このアカウントは、Windows 認証を使用している場合に、スナップショット エージェントがローカル ディストリビューターへの接続や任意のリモート接続を行うときにも使用されます。  
   
         > [!NOTE]  
-        >  設定<xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>のメンバー、パブリケーションを作成するときは必要ありません、`sysadmin`固定サーバー ロール。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」を参照してください。  
+        >  設定<xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>のメンバー、パブリケーションが作成されたときに必要ありません、`sysadmin`固定サーバー ロール。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」を参照してください。  
   
     -   (省略可) SQL Server 認証を使用してパブリッシャーに接続する場合、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> ) フィールドを設定します。  
   
@@ -215,7 +215,7 @@ ms.locfileid: "36084973"
   
 2.  パブリケーション データベースに <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> クラスのインスタンスを作成するには、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> インスタンスを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 場合<xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>返します`false`データベースが存在することを確認します。  
   
-3.  場合<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>プロパティは`false`には、設定`true`を呼び出すと<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>です。  
+3.  場合<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>プロパティは`false`に設定`true`、呼び出す<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>します。  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成し、このオブジェクトに次のプロパティを設定します。  
   
@@ -228,7 +228,7 @@ ms.locfileid: "36084973"
     -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> フィールドに、スナップショット エージェントの実行に使用する Windows アカウントの資格情報を指定します。 このアカウントは、Windows 認証を使用している場合に、スナップショット エージェントがローカル ディストリビューターへの接続や任意のリモート接続を行うときにも使用されます。  
   
         > [!NOTE]  
-        >  設定<xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>のメンバー、パブリケーションを作成するときは必要ありません、`sysadmin`固定サーバー ロール。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../security/replication-agent-security-model.md)」を参照してください。  
+        >  設定<xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>のメンバー、パブリケーションが作成されたときに必要ありません、`sysadmin`固定サーバー ロール。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../security/replication-agent-security-model.md)」を参照してください。  
   
     -   (省略可) 包括的論理和演算子 (Visual C# では `|`、Visual Basic では `Or`) および排他的論理和演算子 (Visual C# では `^`、Visual Basic では `Xor`) を使用して、<xref:Microsoft.SqlServer.Replication.PublicationAttributes> プロパティに <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> の値を設定します。  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], Oracle databases
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b989637b5c16d57aaf6d33fc033229fd08028dc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bd46103f4810564317c5072be78b297150c1f17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190059"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Oracle データベースからのパブリケーションの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、Oracle データベースからパブリケーションを作成する方法について説明します。  
@@ -118,7 +118,7 @@ ms.locfileid: "36164313"
   
 2.  リモート ディストリビューターが存在しない場合は、リモート ディストリビューターを構成します。 詳細については、「 [Configure Publishing and Distribution](../configure-publishing-and-distribution.md)」をご参照ください。  
   
-3.  Oracle パブリッシャーが使用するリモート ディストリビューターで、[sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) を実行します。 Oracle データベース インスタンスの TNS Transparent Network Substrate () の名前を指定**@publisher**と値の`ORACLE`または`ORACLE GATEWAY`の **@publisher_type**です。 `Specify` 次のいずれかの方法で、Oracle パブリッシャーからリモート [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターに接続するときに使用されるセキュリティ モードを指定します。  
+3.  Oracle パブリッシャーが使用するリモート ディストリビューターで、[sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) を実行します。 Oracle データベース インスタンスの Transparent Network Substrate (TNS) 名を指定**@publisher**の値と`ORACLE`または`ORACLE GATEWAY`の **@publisher_type**します。 `Specify` 次のいずれかの方法で、Oracle パブリッシャーからリモート [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターに接続するときに使用されるセキュリティ モードを指定します。  
   
     -   既定の Oracle 標準認証を使用するには、 **@security_mode** に **@security_mode**を、 **@login**に Oracle パブリッシャーで構成時に作成したレプリケーション管理ユーザー スキーマを、 **@password**を使用して、Oracle データベースからパブリケーションを作成する方法について説明します。  
   

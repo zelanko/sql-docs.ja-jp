@@ -1,5 +1,5 @@
 ---
-title: AllowDuplicateNames 要素 (ASSL) |Microsoft ドキュメント
+title: AllowDuplicateNames 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllowDuplicateNames element
 ms.assetid: d0a80040-115f-4490-926f-4d64d8977e67
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e6fe55bdf9dde0906a43fa46745e22179dba9e74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9358092125e5be7c7c0ec555cb29db4d7f714c99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180898"
 ---
 # <a name="allowduplicatenames-element-assl"></a>AllowDuplicateNames 要素 (ASSL)
-  重複する名前が使用できるかどうかを決定する[階層](../objects/hierarchy-element-assl.md)要素。  
+  重複する名前を使用するかどうかを決定する[階層](../objects/hierarchy-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

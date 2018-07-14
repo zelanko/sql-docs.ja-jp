@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting tables
 - removing tables
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - queries [SQL Server], tables
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 131a7e5ad9837c795b8a7f3c7360b84f8858177a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 25d995d1049956652a326a3b759f272a5ecfc5e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200612"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>クエリからのテーブルの削除 (Visual Database Tools)
   クエリからテーブルまたはテーブル値オブジェクトを削除できます。  
   
 > [!NOTE]  
->  テーブルまたはテーブル値オブジェクトを削除しても、現在のクエリから削除されるだけです。データベースからは何も削除されません。 詳細については、データベースからテーブルを削除して、次を参照してください。[テーブルの削除&#40;データベース エンジン&#41;](../../relational-databases/tables/delete-tables-database-engine.md)です。  
+>  テーブルまたはテーブル値オブジェクトを削除しても、現在のクエリから削除されるだけです。データベースからは何も削除されません。 データベースからテーブルを削除する方法の詳細については、次を参照してください。[テーブルの削除&#40;データベース エンジン&#41;](../../relational-databases/tables/delete-tables-database-engine.md)します。  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>テーブルまたはテーブル構造オブジェクトを削除するには  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36083570"
   
 ## <a name="see-also"></a>参照  
  [クエリにテーブルを追加する&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [テーブルの別名を作成する&#40;Visual Database Tools&#41;](create-table-aliases-visual-database-tools.md)   
+ [テーブルの別名の作成&#40;Visual Database Tools&#41;](create-table-aliases-visual-database-tools.md)   
  [検索条件を指定&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
  [クエリ結果の要約&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  

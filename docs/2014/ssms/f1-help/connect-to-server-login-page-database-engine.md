@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttosqlserver.login.f1
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5febecdb07be72a154605b7e66bce8f4d9ad87f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7f8c761a052bc3c82789087bb955c760e9a1b49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181239"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>[サーバーへの接続] ([ログイン] ページ) (データベース エンジン)
   このタブを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に接続するときのオプションを表示または指定できます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証で接続するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モードで構成する必要があります。 認証モードの決定および認証モードを変更する方法の詳細については、次を参照してください。[サーバー認証モードの変更](../../database-engine/configure-windows/change-server-authentication-mode.md)です。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証で接続するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モードで構成する必要があります。 認証モードの決定、認証モードを変更する方法の詳細については、次を参照してください。[サーバー認証モードの変更](../../database-engine/configure-windows/change-server-authentication-mode.md)します。  
   
 ## <a name="options"></a>および  
  **サーバーの種類**  

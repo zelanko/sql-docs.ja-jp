@@ -20,13 +20,13 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62c35066634f291eb8fa3e5bc39425d11afe6a1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba52df081b4f40afc7ad32e80c716d96e7bf0c36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192122"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>スクリプト タスクを使用した Excel ファイルの操作
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には Excel 接続マネージャー、Excel ソース、Excel 変換先が用意されており、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ファイル形式のスプレッドシートに保存されているデータを操作できます。 このトピックで説明する方法では、スクリプト タスクを使用して、使用可能な Excel のデータベース (ワークブック ファイル) およびテーブル (ワークシートおよび名前付き範囲) に関する情報を取得します。 これらのサンプルに簡単な変更を加えて、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB プロバイダーによってサポートされる他のすべてのファイルベース データ ソースを操作することができます。  
@@ -84,7 +84,7 @@ ms.locfileid: "36085027"
   
 #### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
   
-1.  パッケージに新しいスクリプト タスクを追加し、名前に変更`ExcelFileExists`です。  
+1.  パッケージに新しいスクリプト タスクを追加し、その名前を変更`ExcelFileExists`します。  
   
 2.  **[スクリプト タスク エディター]** の **[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36085027"
   
          - または -  
   
-    -   省略記号ボタン (**.**) ボタンをクリックし、プロパティ フィールドに、、**変数を選択**ダイアログ ボックスで、選択、`ExcelFile`変数。  
+    -   省略記号をクリックします (**.**) ボタンを次に、プロパティ フィールドを**変数の選択**ダイアログ ボックスで、`ExcelFile`変数。  
   
 3.  **[ReadWriteVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36085027"
   
          - または -  
   
-    -   省略記号ボタン (**.**) ボタンをクリックし、プロパティ フィールドに、、**変数を選択**ダイアログ ボックスで、選択、`ExcelFileExists`変数。  
+    -   省略記号をクリックします (**.**) ボタンを次に、プロパティ フィールドを**変数の選択**ダイアログ ボックスで、`ExcelFileExists`変数。  
   
 4.  **[スクリプトの編集]** をクリックして、スクリプト エディターを開きます。  
   
@@ -154,15 +154,15 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
   
-1.  パッケージに新しいスクリプト タスクを追加し、名前に変更`ExcelTableExists`です。  
+1.  パッケージに新しいスクリプト タスクを追加し、その名前を変更`ExcelTableExists`します。  
   
 2.  **[スクリプト タスク エディター]** の **[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
-    -   型`ExcelTable`と`ExcelFile`コンマで区切って`.`  
+    -   型`ExcelTable`と`ExcelFile`コンマで区切られました。`.`  
   
          - または -  
   
-    -   省略記号ボタン (**.**) ボタンをクリックし、プロパティ フィールドに、、**変数を選択**ダイアログ ボックスで、選択、`ExcelTable`と`ExcelFile`変数。  
+    -   省略記号をクリックします (**.**) ボタンを次に、プロパティ フィールドを**変数の選択**ダイアログ ボックスで、`ExcelTable`と`ExcelFile`変数。  
   
 3.  **[ReadWriteVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
@@ -170,7 +170,7 @@ public class ScriptMain
   
          - または -  
   
-    -   省略記号ボタン (**.**) ボタンをクリックし、プロパティ フィールドに、、**変数を選択**ダイアログ ボックスで、選択、`ExcelTableExists`変数。  
+    -   省略記号をクリックします (**.**) ボタンを次に、プロパティ フィールドを**変数の選択**ダイアログ ボックスで、`ExcelTableExists`変数。  
   
 4.  **[スクリプトの編集]** をクリックして、スクリプト エディターを開きます。  
   
@@ -546,7 +546,7 @@ public class ScriptMain
 }  
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [Excel 接続マネージャー](../connection-manager/excel-connection-manager.md)   

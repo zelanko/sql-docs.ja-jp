@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
 - filters [SQL Server replication], about filtering
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: 49
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03f3d439b4ef4c8d5ea4eb18d634a608ba1ecab6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d1f99411e4cdfceebab0d612f45aa8256719281e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193374"
 ---
 # <a name="filter-published-data"></a>パブリッシュされたデータのフィルター選択
   テーブル アーティクルをフィルター選択すると、パブリッシュされるデータのパーティションを作成できます。 パブリッシュされたデータをフィルター選択することによって、次のことができるようになります。  
@@ -104,7 +104,7 @@ ms.locfileid: "36165047"
 |SQL Server 7.0 マージ パブリケーションのすべての列|SQL Server 7.0 マージ パブリケーションでは、列はフィルター選択できません。|  
 |Timestamp|更新可能なサブスクリプションを許可する SQL Server 7.0 のスナップショットまたはトランザクション パブリケーション|  
   
- <sup>1</sup>場合は、マージ パブリケーションでテーブルをパブリッシュして、そのテーブルが既にデータ型の列を含む`uniqueidentifier`で、`ROWGUIDCOL`プロパティを設定するレプリケーションこの列を使用という列を追加を作成する代わりに**rowguid**です。 この場合、この既存の列をパブリッシュする必要があります。  
+ <sup>1</sup>マージ パブリケーションでテーブルをパブリッシュして、そのテーブルが既にデータ型の列を含む場合`uniqueidentifier`で、`ROWGUIDCOL`プロパティを設定するレプリケーションできますを使用して、この列という追加列を作成する代わりに**rowguid**します。 この場合、この既存の列をパブリッシュする必要があります。  
   
  列フィルターを定義または変更するには、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」の「HOST_NAME() によるフィルター選択」を参照してください。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36165047"
   
 -   トランザクション レプリケーションでは、インデックス付きビューをビューまたはテーブルとしてレプリケートできます。 このビューをテーブルとしてレプリケートする場合、テーブルから列をフィルター選択することはできません。  
   
- 行フィルターは、データベース間で動作するようには設計されていません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 実行が意図的に制限`sp_replcmds`(フィルターが実行) されるデータベースの所有者 (`dbo`)。 `dbo`データベース間の権限はありません。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] に CDC (Change Data Capture) が追加されたことで、`sp_replcmds` のロジックは、ユーザーが戻って照会できる情報を変更追跡テーブルに設定します。 セキュリティ上の理由から、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]このロジックの実行を制限できるように、悪意のある`dbo`この実行パスを乗っ取ることはできません。 たとえば、悪意のある `dbo` が CDC テーブルのトリガーを追加すると、その後、`sp_replcmds` を呼び出すユーザーのコンテキスト (この場合はログ リーダー エージェント) でテーブルが実行されます。  エージェントを実行しているアカウントの権限が高い場合、悪意のある `dbo` は自身の特権を引き上げます。  
+ 行フィルターは、データベース間で動作するようには設計されていません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 実行が意図的に制限されます`sp_replcmds`(フィルターが実行される)、データベース所有者に (`dbo`)。 `dbo`データベース間の権限はありません。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] に CDC (Change Data Capture) が追加されたことで、`sp_replcmds` のロジックは、ユーザーが戻って照会できる情報を変更追跡テーブルに設定します。 セキュリティ上の理由から、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]このロジックの実行を制限できるように、悪意のある`dbo`この実行パスを乗っ取ることができません。 たとえば、悪意のある `dbo` が CDC テーブルのトリガーを追加すると、その後、`sp_replcmds` を呼び出すユーザーのコンテキスト (この場合はログ リーダー エージェント) でテーブルが実行されます。  エージェントを実行しているアカウントの権限が高い場合、悪意のある `dbo` は自身の特権を引き上げます。  
   
 ## <a name="see-also"></a>参照  
  [データとデータベース オブジェクトのパブリッシュ](publish-data-and-database-objects.md)  

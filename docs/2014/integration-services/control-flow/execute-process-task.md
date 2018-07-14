@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b67903b59934fb8d43d8dafe2bfc8392ab56462
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e46bd0278b782c85189416b8d452b5148a3ed63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187175"
 ---
 # <a name="execute-process-task"></a>プロセス実行タスク
   プロセス実行タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部として、アプリケーションまたはバッチ ファイルを実行します。 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] や [!INCLUDE[ofprword](../../includes/ofprword-md.md)]などの標準的なアプリケーションを開くためにプロセス実行タスクを使用することもできますが、一般に、このタスクはデータ ソースを処理対象とするビジネス アプリケーションやバッチ ファイルを実行する場合に使用します。 たとえば、プロセス実行タスクを使用して、圧縮されたテキスト ファイルを展開できます。 さらに、そのテキスト ファイルをパッケージ内のデータ フローのデータ ソースとして使用できます。 その他の例として、プロセス実行タスクを使用し、毎日の売り上げレポートを生成するカスタムの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションを実行することもできます。 その後、このレポートをメール送信タスクに添付し、配信リストに転送できます。  
@@ -64,11 +64,11 @@ ms.locfileid: "36163915"
   
  プロセス実行タスクの各種プロパティを設定する際にも、式を使用できます。  
   
- 使用する場合、 **StandardInputVariable** 、入力を提供するプロセス実行タスクを構成するプロパティを呼び出す、`Console.ReadLine`メソッドから、アプリケーションが、入力を読み取る。 詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリで、[Console.ReadLine メソッド](http://go.microsoft.com/fwlink/?LinkId=129201)のトピックを参照してください。  
+ 使用すると、 **StandardInputVariable**入力を提供するプロセス実行タスクを構成するプロパティを呼び出す、`Console.ReadLine`で入力を読み取るアプリケーションからのメソッド。 詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリで、[Console.ReadLine メソッド](http://go.microsoft.com/fwlink/?LinkId=129201)のトピックを参照してください。  
   
  **Arguments** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、次のいずれかの手順を実行して、引数を取得します。  
   
--   アプリケーションの作成に Microsoft Visual Basic を使用する場合は、設定、`My.Application.CommandLineArgs`プロパティです。 次の例では、`My.Application.CommandLineArgs` プロパティを使用して、2 つの引数を取得しています。  
+-   Microsoft Visual Basic を使用して、アプリケーションを記述する場合は、設定、`My.Application.CommandLineArgs`プロパティ。 次の例では、`My.Application.CommandLineArgs` プロパティを使用して、2 つの引数を取得しています。  
   
     ```  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  

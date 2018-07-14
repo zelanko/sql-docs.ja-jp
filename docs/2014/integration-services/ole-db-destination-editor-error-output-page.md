@@ -1,5 +1,5 @@
 ---
-title: OLE DB 変換先エディター (エラー出力 ページ) |Microsoft ドキュメント
+title: OLE DB 変換先エディター ([エラー出力] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.errorhandling.f1
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 684c16cfa2456d811f1866d2c6e2b805e30362b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac164885aaa3e5d96716946bda912a48181d52d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190722"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>[OLE DB 変換先エディター] ([エラー出力] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36083217"
  **切り捨て**  
  使用されていません。  
   
- **description**  
+ **[説明]**  
  操作の説明を表示します。  
   
  **[選択したセルに設定する値]**  
@@ -57,7 +57,7 @@ ms.locfileid: "36083217"
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB 変換先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [OLE DB 変換先エディター &#40;[マッピング] ページ&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [OLE DB 変換先エディター&#40;マッピング ページ&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [OLE DB 変換先を使用してデータを読み込む](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

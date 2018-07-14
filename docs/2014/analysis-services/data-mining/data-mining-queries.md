@@ -1,5 +1,5 @@
 ---
-title: データ マイニング クエリ |Microsoft ドキュメント
+title: データ マイニング クエリ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - queries [DMX], creating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c7d67cd0b51a8bd2a7219558d1488afebf50651b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e735d73e8bad733c330d0d5134f13905c1ef8e15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170203"
 ---
 # <a name="data-mining-queries"></a>データ マイニング クエリ
   データ マイニング クエリは多くの目的で役立ちます。 可能な代替手段としては以下の方法があります。  
@@ -86,7 +86,7 @@ ms.locfileid: "36084911"
   
  データ マイニング モデル、およびクエリのビルド方法を理解したら、データ マイニング拡張機能 (DMX) を使用してクエリを直接作成することもできます。 DMX は Transact-SQL に似たクエリ言語であり、多数のクライアントから使用できます。 DMX は、カスタムの予測と複雑なクエリの両方を作成するために選ばれるツールです。 DMX の概要については、「[DMX を使用したデータ マイニング モデルの作成とクエリ : チュートリアル &#40;Analysis Services - データ マイニング&#41;](../../tutorials/create-query-data-mining-models-dmx-tutorials.md)」を参照してください。  
   
- DMX エディターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で提供されます。 また、予測クエリ ビルダーを使用してクエリを開始してから、ビューをテキスト エディターに変更し、DMX ステートメントを別のクライアントにコピーすることもできます。 詳細については、次を参照してください。[データ マイニング クエリ インターフェイス](data-mining-query-tools.md)です。  
+ DMX エディターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で提供されます。 また、予測クエリ ビルダーを使用してクエリを開始してから、ビューをテキスト エディターに変更し、DMX ステートメントを別のクライアントにコピーすることもできます。 詳細については、次を参照してください。[データ マイニング クエリ インターフェイス](data-mining-query-tools.md)します。  
   
  DMX ステートメントをプログラムで作成し、AMO または XMLA を使用して、クライアントから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーに送信できます。 ただし、DMX は、マイニング モデルに対するクエリを作成するために使用する必要がある言語です。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36084911"
   
 -   **カスタム予測関数:** 各種のモデルには、そのアルゴリズムで作成されたパターンを処理するための一連の予測関数が用意されています。  
   
-     たとえば、`Lag` 関数はタイム シリーズ モデルのために用意されており、このモデルで使用される履歴データを表示できます。 クラスタ リング モデルなどの関数`ClusterDistance`がさらに重要です。  
+     たとえば、`Lag` 関数はタイム シリーズ モデルのために用意されており、このモデルで使用される履歴データを表示できます。 クラスタ リング モデル、機能など、`ClusterDistance`がさらに重要です。  
   
      各種のモデルでサポートされる関数の詳細については、次のリンクを参照してください。  
   
@@ -122,13 +122,13 @@ ms.locfileid: "36084911"
   
 -   **汎用の統計:** ほとんどすべてのモデルで使用できる関数が多数あります。これらの関数では、標準偏差など説明的な統計情報の標準的なセットが返されます。  
   
-     たとえば、`PredictHistogram`関数を指定した列のすべての状態を一覧表示するテーブルを返します。  
+     たとえば、`PredictHistogram`関数は、指定された列のすべての状態を一覧表示するテーブルを返します。  
   
      詳細については、「[一般的な予測関数 &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx)」を参照してください。  
   
 -   **カスタム統計:** 他に、モデルの種類ごとに補助的な関数が用意されています。このような関数では、特定の分析タスクに関連する統計情報が生成されます。  
   
-     たとえば、クラスタ リング モデルを使用する場合は、関数を使用して`PredictCaseLikelihood`、特定のケースとクラスターに関連付けられている確率スコアを返します。 ただし、線形回帰モデルを作成した場合は、係数と切片を取得することが必要になります。これは、コンテンツ クエリを使用すると実行できます。  
+     たとえば、クラスタ リング モデルを使用する場合は、関数を使用できる`PredictCaseLikelihood`、特定のケースとクラスターに関連付けられている確率スコアを返します。 ただし、線形回帰モデルを作成した場合は、係数と切片を取得することが必要になります。これは、コンテンツ クエリを使用すると実行できます。  
   
 -   **モデル コンテンツ関数:** すべてのモデルの *コンテンツ* は標準化された形式で表され、単純なクエリを使用して取得できます。 DMX を使用して、モデル コンテンツに対するクエリを作成します。 一部のモデル コンテンツは、データ マイニング スキーマ行セットを使用して取得することもできます。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36084911"
   
 |処理手順|リンク|  
 |-----------|-----------|  
-|データ マイニング クエリのチュートリアルの表示|[レッスン 6: の作成と操作の予測&#40;基本的なデータ マイニングのチュートリアル&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)<br /><br /> [時系列予測の DMX のチュートリアル](../../tutorials/time-series-prediction-dmx-tutorial.md)|  
+|データ マイニング クエリのチュートリアルの表示|[レッスン 6: を作成して、予測の操作&#40;基本的なデータ マイニング チュートリアル&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)<br /><br /> [時系列予測の DMX のチュートリアル](../../tutorials/time-series-prediction-dmx-tutorial.md)|  
 |SQL Server Management studio と [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[SQL Server Management Studio で DMX クエリを作成する](create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [予測クエリ ビルダーを使用した予測クエリの作成](create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [モデルへの予測関数の適用](apply-prediction-functions-to-a-model.md)<br /><br /> [手動での予測クエリの編集](manually-edit-a-prediction-query.md)|  
 |予測クエリで使用される外部データの操作|[予測クエリの入力データの選択およびマップ](choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [予測クエリの入力データの選択およびマップ](choose-and-map-input-data-for-a-prediction-query.md)|  
 |クエリ結果の操作|[予測クエリの結果の表示および保存](view-and-save-the-results-of-a-prediction-query.md)|  

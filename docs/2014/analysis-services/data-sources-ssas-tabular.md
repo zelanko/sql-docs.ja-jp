@@ -1,5 +1,5 @@
 ---
-title: データ ソース (SSAS テーブル) |Microsoft ドキュメント
+title: データ ソース (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6908998b-9302-4a90-976e-770106b48d18
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e531a7b6b044a70b9be649b351739d15c5f61ddf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac9efd9de461b6ee605b73ed440233b4a0bea020
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196522"
 ---
 # <a name="data-sources-ssas-tabular"></a>データ ソース (SSAS テーブル)
   データ ソースは、テーブル モデル ソリューションに含まれるデータを提供します。 モデルには、リレーショナル データベース、データ フィード、Analysis Services キューブなどの多次元データ ソース、Microsoft Excel ブックなどのテキスト ファイルなど、さまざまなソースからデータをインポートできます。 このセクションのトピックでは、インポート元のデータ ソースの種類、インポートできるさまざまなデータ型、およびそれらのソースからデータをインポートする方法を記述するタスクについて説明します。  

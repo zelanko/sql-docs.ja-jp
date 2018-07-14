@@ -1,5 +1,5 @@
 ---
-title: 埋め込まれたからのデータ ソースに変換 (レポート ビルダーおよび SSRS) を共有 |Microsoft ドキュメント
+title: データ ソースの変換、埋め込まれた共有 (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], embedded
 - data sources [Reporting Services], shared
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6a56cf7b9f2e087f44166f2ded7cb55ebf95b01c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cfc136c8d41ef3461d378cbe5f5b66064e1de2be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185819"
 ---
 # <a name="convert-a-data-source-from-embedded-to-shared-report-builder-and-ssrs"></a>埋め込みデータ ソースから共有データ ソースへの変換 (レポート ビルダーおよび SSRS)
   レポート データ ペインの各データ ソースは、レポートに固有のものとして埋め込まれている場合と、共有されている場合とがあります。 レポート ビルダーにおける共有データ ソースの参照先は、レポート サーバー上または SharePoint サイト上にパブリッシュされた共有データ ソースです。 レポート デザイナーにおける共有データ ソースの参照先は、ソリューション エクスプローラーの **[共有データ ソース]** フォルダーに表示される共有データ ソースです。  

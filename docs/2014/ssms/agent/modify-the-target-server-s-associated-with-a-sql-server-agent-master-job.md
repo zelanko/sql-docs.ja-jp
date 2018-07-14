@@ -1,5 +1,5 @@
 ---
-title: SQL Server エージェントのマスター ジョブに関連付けられている対象サーバーの変更 |Microsoft ドキュメント
+title: SQL Server エージェントのマスター ジョブに関連付けられている対象サーバーの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f4999c835d85dd06cab2e6ac3f3bef64ed12231
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b6ac1737f7fe4bb4ac7706c5ff83b3ba84b65cfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206522"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modify the Target Server(s) Associated with a SQL Server Agent Master Job
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で SQL Server エージェントのマスター ジョブに関連付けられている対象サーバーを変更する方法について説明します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36076767"
   
 4.  対象サーバーを変更するジョブを右クリックし、 **[プロパティ]** を選択します。  
   
-5.  *[ジョブのプロパティ - <ジョブ名>]* ダイアログ ボックスで、**[ページの選択]** の **[対象サーバー]** を選択します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ: 新しいジョブ&#40;ターゲット ページ&#41;](job-properties-new-job-targets-page.md)です。  
+5.  *[ジョブのプロパティ - <ジョブ名>]* ダイアログ ボックスで、**[ページの選択]** の **[対象サーバー]** を選択します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ: 新しいジョブ&#40;ターゲット ページ&#41;](job-properties-new-job-targets-page.md)します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36076767"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_delete_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_delete_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql)します。  
   
 #### <a name="to-associate-a-target-server-with-the-current-sql-server-agent-master-job"></a>現在の SQL Server エージェントのマスター ジョブに対象サーバーを関連付けるには  
   
@@ -109,6 +109,6 @@ ms.locfileid: "36076767"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)します。  
   
   

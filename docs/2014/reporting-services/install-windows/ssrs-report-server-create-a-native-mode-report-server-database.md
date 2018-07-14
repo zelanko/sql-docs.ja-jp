@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2690d8684bd244ecc671168d9648832a5a2ca9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ff6878b05138bb1ad4c23e57699dd896ab7b441
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198830"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>ネイティブ モード レポート サーバー データベースの作成 (SSRS 構成マネージャー)
   ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースが内部ストレージとして使用されます。 データベースは必須で、パブリッシュされたレポート、モデル、共有データ ソース、セッション データ、リソース、およびサーバー メタデータの格納に使用されます。  
@@ -36,7 +36,7 @@ ms.locfileid: "36164293"
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>レポート サーバー データベースを作成または構成する場合  
  ファイルのみのモードでレポート サーバーをインストールした場合は、レポート サーバー データベースを作成および構成する必要があります。  
   
- インストールした場合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]か既定の構成でネイティブ モードで、レポート サーバー データベースが作成され、レポート サーバー インスタンスのインストール時に自動的に構成します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用すると、セットアップによって自動的に構成された設定を表示または変更できます。  
+ インストールした場合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]か既定の構成でネイティブ モードで、レポート サーバー データベースが作成され、レポート サーバー インスタンスがインストールされている場合に自動的に構成します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用すると、セットアップによって自動的に構成された設定を表示または変更できます。  
   
 ##  <a name="rsdbrequirements"></a> 開始前の準備  
  レポート サーバー データベースの作成または構成は、複数の手順から成るプロセスです。 レポート サーバー データベースを作成する前に、次の項目をどのように指定するかを検討してください。  
@@ -71,7 +71,7 @@ ms.locfileid: "36164293"
   
 4.  インスタンスを選択します。  
   
-5.  右クリック**TCP/IP**  をクリック**有効**です。  
+5.  右クリック**TCP/IP**クリック**有効**します。  
   
 6.  サービスを再起動します。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36164293"
   
 2.  [データベース] ページの **[データベースの変更]** をクリックします。  
   
-3.  をクリックして**新しいレポート サーバー データベースを作成する**、順にクリック **[次へ]** です。  
+3.  クリックして**新しいレポート サーバー データベースを作成**、順にクリックします**次**します。  
   
 4.  レポート サーバー データベースの作成およびホストに使用する [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36164293"
   
     2.  レポート サーバー データベースを作成する目的で [!INCLUDE[ssDE](../../includes/ssde-md.md)] に一度だけ接続するために使用される資格情報を入力します。 この資格情報の使用方法の詳細については、このトピックの「 [開始前の準備](#rsdbrequirements) 」を参照してください。  
   
-    3.  をクリックして**接続のテスト**サーバーへの接続を検証します。  
+    3.  クリックして**Test-connection**サーバーへの接続を検証します。  
   
     4.  **[次へ]** をクリックします。  
   
@@ -117,12 +117,12 @@ ms.locfileid: "36164293"
   
     2.  **[次へ]** をクリックします。  
   
-7.  設定を確認して、正しいをクリックし、[概要] ページで情報を確認**次**です。  
+7.  設定が正しいとクリックを確認する概要 ページで情報を確認して**次**します。  
   
-8.  [レポート サーバー URL] ページまたは [レポート マネージャー URL] ページで URL をクリックし、接続を確認します。 このテストが成功するように URL を定義する必要があります。 レポート サーバー データベースの接続が有効な場合は、ブラウザー ウィンドウにレポート サーバーのフォルダー階層またはレポート マネージャーが表示されます。 詳細については、次を参照してください。 [Verify a Reporting Services Installation](verify-a-reporting-services-installation.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブック。  
+8.  [レポート サーバー URL] ページまたは [レポート マネージャー URL] ページで URL をクリックし、接続を確認します。 このテストが成功するように URL を定義する必要があります。 レポート サーバー データベースの接続が有効な場合は、ブラウザー ウィンドウにレポート サーバーのフォルダー階層またはレポート マネージャーが表示されます。 詳細については、次を参照してください。 [Reporting Services のインストールを確認します。](verify-a-reporting-services-installation.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー データベース接続を構成する&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [データベース&#40;SSRS ネイティブ モード&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
  [Reporting Services ネイティブ モード レポート サーバーを管理します。](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

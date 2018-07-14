@@ -1,5 +1,5 @@
 ---
-title: CellInfo 要素 (XMLA) |Microsoft ドキュメント
+title: CellInfo 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CellInfo element
 ms.assetid: 8b6420f1-e9a7-4975-b580-1439fa11f5ca
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 803640fe83ccc3137b4597b8c1b78850abeb55c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fda3576bb50314c28dd01474e576ff2b5b333cb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176389"
 ---
 # <a name="cellinfo-element-xmla"></a>CellInfo 要素 (XMLA)
   親に含まれるセル メタデータを表す[OlapInfo](olapinfo-element-xmla.md)要素。  
@@ -74,9 +74,9 @@ ms.locfileid: "36085952"
 <CellPropertyDefinition name="string" type"string" />  
 ```  
   
- DISCOVER_PROPERTIES 要求の種類を使用して、使用可能なプロパティとその値を取得できます、`Discover`メソッドです。 `PropertyList` 要素内に一覧表示されるプロパティの順序は任意です。  
+ 要求の種類として DISCOVER_PROPERTIES を使用して、使用可能なプロパティとその値を取得できます、`Discover`メソッド。 `PropertyList` 要素内に一覧表示されるプロパティの順序は任意です。  
   
- オプションで、プロバイダーは `AxisInfo` または `CellInfo` セクション内の個々のメンバーまたはセル プロパティの既定値を指定できます。 プロパティの値が常に同じ、あるいはほとんど同じ場合、既定値を使用すると結果を小さくすることができます。 プロパティの既定値を示すために、`Default`要素は、セル プロパティ定義要素の 1 つの子要素として必要に応じて指定できます。 したがって、結果の中にメンバーまたはセル プロパティが存在しない場合、指定された既定値がセル プロパティの値になります。  
+ オプションで、プロバイダーは `AxisInfo` または `CellInfo` セクション内の個々のメンバーまたはセル プロパティの既定値を指定できます。 プロパティの値が常に同じ、あるいはほとんど同じ場合、既定値を使用すると結果を小さくすることができます。 プロパティの既定値を示すために、`Default`要素は必要に応じてセル プロパティ定義要素の 1 つの子要素として指定できます。 したがって、結果の中にメンバーまたはセル プロパティが存在しない場合、指定された既定値がセル プロパティの値になります。  
   
 ## <a name="example"></a>例  
  次の例は、`CellInfo` 要素内で、セル プロパティ VALUE、FORMATTED_VALUE、および FORMAT_STRING がどのように表されるかを示しています。  

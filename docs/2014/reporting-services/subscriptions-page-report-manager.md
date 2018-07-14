@@ -1,5 +1,5 @@
 ---
-title: '[サブスクリプション] ページ (レポート マネージャー) |Microsoft ドキュメント'
+title: '[サブスクリプション] ページ (レポート マネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6b6a3befb6794327af0fd5fa2ef92a48b67529a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4dce7384470251bf9334e8cd1ed218142161b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181579"
 ---
 # <a name="subscriptions-page-report-manager"></a>[サブスクリプション] ページ (レポート マネージャー)
   [サブスクリプション] ページは、現在のレポートまたは共有データ ソースのサブスクリプションをすべて表示するために使用します。 [すべてのサブスクリプションを管理] での指定により十分な権限を持っている場合、すべてのユーザーのサブスクリプションを表示できます。 それ以外の場合、このページには自分のサブスクリプションのみが表示されます。  
@@ -29,10 +29,10 @@ ms.locfileid: "36077467"
   
  一部のオプションは、既存のサブスクリプションを操作しているときにのみ表示されます。 サブスクリプションが定義されていない場合に、レポートからこのページを表示すると、 **[新しいサブスクリプション]** および **[新しいデータ ドリブン サブスクリプション]** 以外のオプションはこのページに表示されません。  
   
- 新しいサブスクリプションを作成するには、保存されている資格情報がレポートのデータ ソースで使用されていることを確認する必要があります。 資格情報を保存するには [データ ソース] プロパティ ページを使用します。 詳細については、次を参照してください。[データ ソース プロパティ ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)です。  
+ 新しいサブスクリプションを作成するには、保存されている資格情報がレポートのデータ ソースで使用されていることを確認する必要があります。 資格情報を保存するには [データ ソース] プロパティ ページを使用します。 詳細については、次を参照してください。[データ ソース プロパティ ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)します。  
   
 > [!NOTE]  
->  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 ## <a name="navigation"></a>ナビゲーション  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
@@ -48,7 +48,7 @@ ms.locfileid: "36077467"
 4.  **[サブスクリプション]** タブをクリックします。  
   
 ## <a name="options"></a>および  
- **Delete**  
+ **削除**  
  サブスクリプションを削除する場合にクリックします。 削除する各サブスクリプションの隣のチェック ボックスをオンにしてから、サブスクリプションを削除することができます。  
   
  **新しいサブスクリプション**  
@@ -63,7 +63,7 @@ ms.locfileid: "36077467"
  **レポート**  
  共有データ ソースからこのページを開くと、この列でサブスクリプションが定義されているレポートが識別されます。 **[フォルダー]** 列ではレポートの場所が識別されます。  
   
- **description**  
+ **[説明]**  
  サブスクリプションの説明が表示されます。  
   
  **トリガー**  
@@ -75,7 +75,7 @@ ms.locfileid: "36077467"
  **[最終実行]**  
  サブスクリプションを処理した最終日時が表示されます。  
   
- **Status**  
+ **ステータス**  
  サブスクリプションの状態が表示されます。 通常、状態値は "新規" またはサブスクリプションが最後に実行された日時のいずれかとなります。  
   
  "無効なデータ" の状態値は、既に無効となった暗号化された値 (つまり、レポートの実行に使用される保存された資格情報) へのポインターがサブスクリプションに含まれている場合に発生します。 データの暗号化および暗号化の解除に使用される対称キーがレポート サーバー上で再作成されると、既存の暗号化された値は使用できなくなります。  

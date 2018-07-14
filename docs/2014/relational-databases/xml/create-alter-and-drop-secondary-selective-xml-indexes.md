@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 805dc8effdbd93ddddb81dde4203fff7e808cd36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a8139c0bbf423354bd89a413b9fe2f4b13486fb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206752"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>選択的セカンダリ XML インデックスの作成、変更、および削除
   新しい選択的セカンダリ XML インデックスの作成や、既存の選択的セカンダリ XML インデックスの変更または削除を行う方法について説明します。  
@@ -28,7 +28,7 @@ ms.locfileid: "36084917"
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>選択的セカンダリ XML インデックスを作成する方法  
  **Transact-SQL を使用して選択的セカンダリ XML インデックスを作成する**  
- CREATE SELECTIVE XML INDEX ステートメントを呼び出して選択的セカンダリ XML インデックスを作成します。 詳細については、次を参照してください。 [CREATE XML INDEX&#40;選択的 XML インデックス&#41;] (~/t-sql/statements/create-xml-index-selective-xml-indexes です。  
+ CREATE SELECTIVE XML INDEX ステートメントを呼び出して選択的セカンダリ XML インデックスを作成します。 詳細については、次を参照してください。 [CREATE XML INDEX&#40;選択的 XML インデックス&#41;] (~ t-sql/statements/create-xml-index-selective-xml-indexes/。  
   
  **例**  
   
@@ -52,7 +52,7 @@ FOR
  **Transact-SQL を使用して選択的セカンダリ XML インデックスを変更する**  
  1.  DROP INDEX ステートメントを呼び出して既存の選択的セカンダリ XML インデックスを削除します。 詳細については、「[DROP INDEX &#40;選択的 XML インデックス&#41;](../indexes/indexes.md)」を参照してください。  
   
-2.  CREATE XML INDEX ステートメントを呼び出すことによって必要なオプションのインデックスを再作成します。 詳細については、次を参照してください。 [CREATE XML INDEX&#40;選択的 XML インデックス&#41;] (~/t-sql/statements/create-xml-index-selective-xml-indexes です。  
+2.  CREATE XML INDEX ステートメントを呼び出すことによって必要なオプションのインデックスを再作成します。 詳細については、次を参照してください。 [CREATE XML INDEX&#40;選択的 XML インデックス&#41;] (~ t-sql/statements/create-xml-index-selective-xml-indexes/。  
   
  **例**  
   

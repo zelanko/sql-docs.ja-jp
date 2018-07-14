@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], tasks
 - role-based security [Reporting Services], permissions
@@ -21,13 +21,13 @@ ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0740292a3aefe1a9570bd614014c81bc58e11fd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38e0063f336ef7c2cb7a7bcfc33c0026259b4c83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177199"
 ---
 # <a name="tasks-and-permissions"></a>タスクと権限
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]における *タスク* とは、ユーザーまたは管理者が実行できるアクションのことです。 タスクは事前に定義されています。 カスタム タスクを作成したり、プログラムまたはツールから提供されるタスクを変更することはできません。 タスクは全部で 25 種類あります。 これらのタスクにより、ロールベースのセキュリティで実行できる操作の全体が構成されています。 タスクの例としては、"レポートの表示"、"レポートの管理"、"レポート サーバーのプロパティを管理" などがあります。  
@@ -49,7 +49,7 @@ ms.locfileid: "36163802"
   
 ## <a name="see-also"></a>参照  
  [ロールの定義](role-definitions.md)   
- [定義済みのロール](role-definitions-predefined-roles.md)   
+ [定義済みロール](role-definitions-predefined-roles.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)  
   
   

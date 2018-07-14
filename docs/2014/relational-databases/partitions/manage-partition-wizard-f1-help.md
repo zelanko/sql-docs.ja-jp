@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managepartition.getstart.f1
 - sql12.swb.managepartition.selectoutput.f1
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 58fb07069d831020fac201e9a63b12f316105c62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0d07d35db7a6604c98646cc15a9d892bb230407b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083411"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197562"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>パーティションの管理ウィザードの F1 ヘルプ
   **パーティションの管理ウィザード** を使用すると、パーティションの切り替えやスライディング ウィンドウ シナリオの実装によって、既存のパーティション テーブルを管理および変更することができます。 このウィザードによって、パーティションの管理が容易になり、テーブル内外へのデータの通常の移行が簡単になります。  
@@ -41,7 +40,7 @@ ms.locfileid: "36083411"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、データベースを選択し、パーティションを作成するテーブルを右クリックして **[ストレージ]** をポイントし、 **[パーティションの管理]** をクリックします。  
   
-     `Note` 場合**パーティションの管理**は使用できなくなった可能性がありますがテーブルを選択したパーティションが含まれていないこと。 **[ストレージ]** サブメニューの **[パーティションの作成]** をクリックし、 **パーティションの作成ウィザード** を使用してテーブルにパーティションを作成してください。  
+     `Note` 場合**パーティションの管理**は使用できない場合は、選択したパーティションを含まないテーブル。 **[ストレージ]** サブメニューの **[パーティションの作成]** をクリックし、 **パーティションの作成ウィザード** を使用してテーブルにパーティションを作成してください。  
   
  パーティション インデックスについての一般情報については、「 [パーティション テーブルとパーティション インデックス](partitioned-tables-and-indexes.md)」を参照してください。  
   
@@ -182,7 +181,7 @@ ms.locfileid: "36083411"
 ### <a name="options"></a>および  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブに必要なスケジュールの種類を選択します。  
   
- **Name**  
+ **名前**  
  スケジュールの新しい名前を入力します。  
   
  **[スケジュール済みのジョブ]**  
@@ -278,7 +277,7 @@ ms.locfileid: "36083411"
  **操作**  
  各アクションの種類と名前を指定します。  
   
- **Status**  
+ **ステータス**  
  全体としてウィザードのアクションが **[成功]** または **[失敗]** のいずれの値を返したかを示します。  
   
  **メッセージ**  

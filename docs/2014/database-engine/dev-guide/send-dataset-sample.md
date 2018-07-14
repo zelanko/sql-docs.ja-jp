@@ -1,5 +1,5 @@
 ---
-title: Send DataSet サンプル |Microsoft ドキュメント
+title: Send DataSet サンプル |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ffe7f23a8f20a325f84fe68df90778ec321e0885
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03552b94c8a50bea83d1d5e69f589379baf81697
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171363"
 ---
 # <a name="send-dataset-sample"></a>Send DataSet サンプル
   Send `DataSet` サンプルでは、サーバー側の共通言語ランタイム (CLR) ベースのストアド プロシージャ内で、クライアントへの結果セットとして ADO.NET ベースの `DataSet` を返す方法を示します。 この方法は、このようなストアド プロシージャがクエリの結果を使用して `DataSet` にデータを格納し、その `DataSet` に含まれているデータを操作する場合などに役立ちます。 また、ストアド プロシージャによって `DataSet` を新しく作成してデータを設定する場合にも役立ちます。このサンプルは、`DataSetUtilities` および `TestSendDataSet` という 2 つのクラスで構成されています。 `SendDataSet` クラスの `DataSetUtilities` メソッドには、`DataSet` インスタンスのコンテンツをクライアントに送信するための汎用的な手段が実装されています。 `DoTest` クラスで定義されている `TestSendDataSet` メソッドは、`SendDataSet` を作成し、Transact-SQL ストアド プロシージャ `DataSet` から返されたデータを設定することによって、`uspGetTwoBOMTestData` メソッドの動作を検証します。 `uspGetTwoBOMTestData` は、Transact-SQL ストアド プロシージャ `uspGetBillOfMaterials` を 2 回実行し、`usp_GetTwoBOMTestData` ストアド プロシージャへのパラメーターとして指定された 2 つの製品の部品表に対して再帰的にクエリを行います。 データセットに設定されたデータは、`SendDataSet` 呼び出しにより結果セットとしてクライアントへ配信される前に、変更されるのが普通です。 わかりやすくするために、このサンプルではデータを変更せずに返します。  
@@ -53,7 +53,7 @@ ms.locfileid: "36085053"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要があります`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   

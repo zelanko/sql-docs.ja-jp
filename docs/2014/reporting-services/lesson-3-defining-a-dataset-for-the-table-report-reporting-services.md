@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 caps.latest.revision: 50
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 34595ca07e370bb0a66512c839a6843f8c38f5d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 719776a37cae748516d7a4882ea31e9796d01332
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202652"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>レッスン 3 : テーブル レポートのデータセットの定義 (Reporting Services)
   データ ソースを定義した後、データセットを定義する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、レポートで使用するデータは *データセット*に格納されます。 データセットには、データ ソースへのポインターと、レポートで使用されるクエリ、および計算フィールドと変数が含まれています。  
@@ -34,7 +34,7 @@ ms.locfileid: "36083577"
   
 3.  **[レポートに埋め込まれたデータセットを使用します]** をクリックします。  
   
-4.  確認してください、データ ソース AdventureWorks2012 の名前は、**データソース**テキスト ボックスで、**クエリの種類**は**テキスト**です。  
+4.  確認してください、データ ソース AdventureWorks2012 の名前は、**データソース**テキスト ボックスで、**クエリの種類**は**テキスト**します。  
   
 5.  **[クエリ]** ボックスに次の Transact-SQL クエリを入力するか、コピーして貼り付けます。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "36083577"
     HAVING ppc.Name = 'Clothing'  
     ```  
   
-6.  (省略可能) **[クエリ デザイナー]** ボタンをクリックします。 クエリは、テキスト ベースのクエリ デザイナーに表示されます。 **[テキストとして編集]** をクリックすると、グラフィカル クエリ デザイナーに切り替えることができます。 実行 をクリックして、クエリの結果を表示 **(!)** クエリ デザイナーのツールバーでボタンをクリックします。  
+6.  (省略可能) **[クエリ デザイナー]** ボタンをクリックします。 クエリは、テキスト ベースのクエリ デザイナーに表示されます。 **[テキストとして編集]** をクリックすると、グラフィカル クエリ デザイナーに切り替えることができます。 実行 をクリックして、クエリの結果を表示 **(!)** クエリ デザイナーのツールバーのボタンをクリックします。  
   
-     次の 4 つの異なるテーブルの 6 つのフィールドからのデータを参照してください、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。 クエリでは、エイリアスなど Transact-SQL の機能が利用されます。 たとえば、SalesOrderHeader テーブルは soh と呼ばれます。  
+     6 つのフィールドの 4 つの異なるテーブルからデータを参照してください、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。 クエリでは、エイリアスなど Transact-SQL の機能が利用されます。 たとえば、SalesOrderHeader テーブルは soh と呼ばれます。  
   
      **[OK]** をクリックしてクエリ デザイナーを終了します。  
   

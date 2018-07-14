@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [SQL Server replication]
 - merge replication partitions [SQL Server replication], SQL Server Management Studio
 - parameterized filters [SQL Server replication], partition management
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b8b9cc6b2328e24758404cae5a88f21656fb7631
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 805bbfaf66f2f24aac284b94952cd6d881d7c832
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191712"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>パラメーター化されたフィルターによるマージ パブリケーションのパーティションの管理
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パラメーター化されたフィルターを利用し、マージ パブリケーションのパーティションを管理する方法ついて説明します。 パラメーター化された行フィルターを使用して、重複しないパーティションを生成できます。 パーティションを制限することで、特定のパーティションを 1 つのサブスクリプションだけが受け取るようにできます。 このような場合、サブスクリプションの数が多いと多数のパーティションが生成されるため、それと同数のパーティション スナップショットが必要になります。 詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
@@ -141,7 +141,7 @@ ms.locfileid: "36164528"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーション プロパティの定義が正しくなかったか、パブリケーションが存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> メソッドを呼び出して、結果を <xref:Microsoft.SqlServer.Replication.MergePartition> オブジェクトの配列に渡します。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "36164528"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーション プロパティの定義が正しくなかったか、パブリケーションが存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> メソッドを呼び出して、結果を <xref:Microsoft.SqlServer.Replication.MergePartition> オブジェクトの配列に渡します。  
   

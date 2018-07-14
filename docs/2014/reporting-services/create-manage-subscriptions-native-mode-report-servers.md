@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], managing
 ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
 caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 779b22bfbd8a99b5aef05d33725c1cce8364271a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56fb4e61fe7e442247fb9977afc440f13e5276e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186179"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>ネイティブ モード レポート サーバーのサブスクリプションの作成と管理
   このセクションでは、サブスクリプションの処理、管理、および制御について説明します。 サブスクリプションの管理は、標準のサブスクリプションとデータ ドリブン サブスクリプションで異なります。 標準のサブスクリプションは、通常、ユーザーが所有および管理します。 一方、データ ドリブン サブスクリプションは、通常、レポート サーバー管理者が作成およびメンテナンスします。  
@@ -36,11 +36,11 @@ ms.locfileid: "36084725"
 -   "すべてのサブスクリプションを管理" タスクでは、ユーザーがすべてのサブスクリプションにアクセスしてそれらを変更できます。 このタスクは、データ ドリブン サブスクリプションを作成する場合に必要です。 定義済みのロールでは、コンテンツ マネージャー ロールにのみ、このタスクが含まれます。  
   
 ## <a name="disabling-subscriptions"></a>サブスクリプションの無効化  
- ユーザーがサブスクリプションを作成できないようにするには、ロールから "個別のサブスクリプションを管理" タスクをオフにします。 このタスクを削除すると、[サブスクリプション] ページは使用できなくなります。 レポート マネージャーでは、[個人用サブスクリプション] ページには、既にサブスクリプションが含まれていても、何も表示されません (このページは削除できません)。 サブスクリプション関連タスクを削除すると、ユーザーはサブスクリプションを作成および変更できなくなりますが、既存のサブスクリプションは削除されません。 既存のサブスクリプションは、削除するまでの実行を継続します。 サブスクリプションの削除の詳細については、次を参照してください。 [Create, Modify, and 標準のサブスクリプションを削除&#40;Reporting Services ネイティブ モードの&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)です。  
+ ユーザーがサブスクリプションを作成できないようにするには、ロールから "個別のサブスクリプションを管理" タスクをオフにします。 このタスクを削除すると、[サブスクリプション] ページは使用できなくなります。 レポート マネージャーでは、[個人用サブスクリプション] ページには、既にサブスクリプションが含まれていても、何も表示されません (このページは削除できません)。 サブスクリプション関連タスクを削除すると、ユーザーはサブスクリプションを作成および変更できなくなりますが、既存のサブスクリプションは削除されません。 既存のサブスクリプションは、それらを削除するまでの実行を継続します。 サブスクリプションを削除する方法についての詳細については、次を参照してください。 [Create, Modify, and 標準サブスクリプションの削除&#40;Reporting Services ネイティブ モードの&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)します。  
   
- レポート サーバーのサブスクリプション処理を無効にするには、するには設定、`ScheduleEventsAndReportDeliveryEnabled`プロパティを`False`で、 **Reporting Services のセキュリティ構成**のファセット[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ポリシー ベースの管理。 この場合、スケジュールされている処理は一切実行されません。 レポート サーバーのサブスクリプション処理だけを無効にすることはできません。  
+ サブスクリプションのレポート サーバーで処理を無効にするには設定、`ScheduleEventsAndReportDeliveryEnabled`プロパティを`False`で、 **Reporting Services のセキュリティ構成**のファセット[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ポリシー ベースの管理。 この場合、スケジュールされている処理は一切実行されません。 レポート サーバーのサブスクリプション処理だけを無効にすることはできません。  
   
- 手順では、レポート サーバーで処理されるサブスクリプションを取り消す方法については、次を参照してください。[を実行しているプロセスを管理する](subscriptions/manage-a-running-process.md)です。  
+ レポート サーバーで処理されているサブスクリプションをキャンセルする方法については、次を参照してください。[を実行しているプロセスを管理する](subscriptions/manage-a-running-process.md)します。  
   
 ## <a name="disabling-delivery-extensions"></a>配信拡張機能の無効化  
  レポート サーバーにインストールされたすべての配信拡張機能は、特定のレポートのサブスクリプションを作成する権限を持つユーザーが使用できます。 使用できる配信拡張機能は次のとおりです。自動的に構成されます。  
@@ -49,9 +49,9 @@ ms.locfileid: "36084725"
   
 -   SharePoint ライブラリ (SharePoint 統合モードのレポート サーバーと統合されている SharePoint サイトからのみ使用可能)  
   
- 電子メール配信は使用前に構成する必要があります。 構成が済んでいない場合、使用できません。 詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)です。  
+ 電子メール配信は使用前に構成する必要があります。 構成が済んでいない場合、使用できません。 詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)します。  
   
- 特定の拡張機能を無効にするには、RSReportServer.config ファイルから拡張機能のエントリを削除します。 詳細については、次を参照してください。 [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)と[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)です。  
+ 特定の拡張機能を無効にするには、RSReportServer.config ファイルから拡張機能のエントリを削除します。 詳細については、次を参照してください。 [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)と[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)します。  
   
  配信拡張機能の削除後は、この機能はレポート マネージャーまたは SharePoint サイトで使用できなくなります。 配信拡張機能を削除すると、サブスクリプションが無効になることがあります。 配信拡張機能を削除する前に、このようなサブスクリプションを削除するか、または別の配信拡張機能を使用するように構成する必要があります。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36084725"
  [個人用サブスクリプション] ページを使用して、所有するサブスクリプションを管理する方法を説明します。  
   
  [レポートとサブスクリプションの処理を一時停止する](subscriptions/disable-or-pause-report-and-subscription-processing.md)  
- レポート ロールの割り当てを使用して、レポート サーバーのリソースを無効にするなど、処理を一時停止するさまざまな方法について説明します。  
+ レポートのロールの割り当てを使用して、レポート サーバーのリソースを無効にするなど、処理を一時停止するさまざまな方法について説明します。  
   
  [レポートの配信を制御する](../../2014/reporting-services/control-report-distribution.md)  
  レポートの配信を制御するために使用する構成設定および配信オプションについて説明します。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.expressionspage.f1
 helpviewer_keywords:
@@ -17,20 +17,20 @@ ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a266929860877c960c656033c41715154b6e2736
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dff4e712830b39304c6bab51eaf3afded1287180
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176099"
 ---
 # <a name="expressions-page"></a>[式] ページ
   **[式]** ページを使用すると、プロパティ式を編集でき、 **[プロパティ式エディター]** ダイアログ ボックスや **[式ビルダー]** ダイアログ ボックスにアクセスできます。  
   
  プロパティ式は、パッケージが実行されたときに、プロパティの値を更新します。 プロパティ式は、パッケージ、タスク、コンテナー、接続マネージャーに加えて、一部のデータ フロー コンポーネントのプロパティでも使用できます。 式が評価されると、その結果が、パッケージおよびパッケージ オブジェクトの構成時にプロパティに設定した値の代わりに使用されます。 式には、変数と、式の言語で提供されている関数および演算子を含めることができます。 たとえば、文字列 "Weather forecast for " を含む変数の値と、GETDATE() 関数によって返される結果を連結して、文字列 "Weather forecast for 4/5/2006" を作成することにより、メール送信タスクの件名行を生成することができます。  
   
- 式を作成して、プロパティ式の使用に関する詳細についてを参照してください。 [Integration Services &#40;SSIS&#41;式](integration-services-ssis-expressions.md)と[使用 Property Expressions in Packages](use-property-expressions-in-packages.md)です。  
+ 詳細については、式の作成とプロパティ式を使用して、参照してください。 [Integration Services &#40;SSIS&#41;式](integration-services-ssis-expressions.md)と[パッケージでプロパティ式を使用して](use-property-expressions-in-packages.md)します。  
   
 ## <a name="options"></a>および  
  **[Expressions (...)]**  

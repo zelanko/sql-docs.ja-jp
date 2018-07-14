@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: efd8edf59e3faf02ce5833092681f144f820263a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d09b654ccd9a3b73f75aeed3ad5c2651eb11b529
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196642"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>グラフでのグループの追加または削除 (レポート ビルダーおよび SSRS)
-  表示するグラフ データ領域内をクリックして、**グラフ データ**ウィンドウです。 データセット フィールドを **[カテゴリ グループ]** 領域と **[系列グループ]** 領域にドラッグすると、グループが作成されます。 入れ子になったグループを追加するには、複数のフィールドを領域に追加します。  
+  表示するグラフ データ領域内をクリックして、**グラフ データ**ウィンドウ。 データセット フィールドを **[カテゴリ グループ]** 領域と **[系列グループ]** 領域にドラッグすると、グループが作成されます。 入れ子になったグループを追加するには、複数のフィールドを領域に追加します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

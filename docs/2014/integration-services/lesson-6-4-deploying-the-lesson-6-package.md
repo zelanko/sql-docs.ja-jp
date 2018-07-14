@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 caps.latest.revision: 4
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d62dfcc3587cb2abfe28b2bee899ac38167c4748
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6d09da64246aa0fe2d68df3ab75780597affae2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205862"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>手順 4: レッスン 6 のパッケージの展開
   パッケージを配置するには、SQL Server インスタンスの Integration Services の SSISDB カタログにパッケージを追加する必要があります。 このレッスンでは、SSISDB カタログへのレッスン 6 パッケージの追加、パラメーターの設定、パッケージの実行を行います。 このレッスンでは、SQL Server Management Studio を使用して SSISDB カタログにレッスン 6 パッケージを追加し、パッケージを配置します。 パッケージを配置したら、新しい場所を指すようにパラメーターを変更し、パッケージを実行します。  
