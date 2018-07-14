@@ -1,5 +1,5 @@
 ---
-title: ソリューション エクスプ ローラーのソースの管理 |Microsoft ドキュメント
+title: ソリューション エクスプ ローラーのソースの管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual SourceSafe
 - SQL Server Management Studio [SQL Server], source control services
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - VSS [Visual SourceSafe]
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7165143ad238bbbeda14ac91f214f1410082beb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3975c43263e8ad7dc19c5bd8b01c1f32badea35c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213702"
 ---
 # <a name="solution-explorer-source-control"></a>ソリューション エクスプローラーのソース管理
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ソリューション エクスプ ローラーは、別のソース管理システムに統合できます。 ソリューションまたはプロジェクトをソース管理システムに統合すると、プロジェクト内のスクリプトとクエリを対象に、ファイル アクセスとバージョン管理を制御できるようになります。  
@@ -45,7 +45,7 @@ ms.locfileid: "36076901"
   
 2.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]で、 **[ツール]** メニューの **[オプション]** をクリックします。  
   
-3.  **オプション** ダイアログ ボックスで、展開**ソース管理**、をクリックし、**プラグインの選択**ページ。  
+3.  **オプション** ダイアログ ボックスで、展開**ソース管理**、 をクリックし、**プラグインの選択**ページ。  
   
 4.  **現在ソース管理プラグイン**ボックスで、ソース管理プラグインを選択します。  
   

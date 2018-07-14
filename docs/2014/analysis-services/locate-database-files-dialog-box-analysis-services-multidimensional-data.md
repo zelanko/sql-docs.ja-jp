@@ -1,5 +1,5 @@
 ---
-title: ファイルの検索データベース ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: データベース ファイル ダイアログ ボックス (Analysis Services - 多次元データ) の検索 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.localdbfilesdialog.f1
 ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1709d430a92116e3ba5dc1e9be3d33c96eb6bf59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92c2f181638b9c995b01d9a5434e7b004241d6fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192842"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>[データベース ファイルの検索] ダイアログ ボックス (Analysis Services - 多次元データ)
   **[データベース ファイルの検索]** ダイアログ ボックスには、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンス用に定義されたログ フォルダーとデータ フォルダーで利用可能なファイルの一覧が表示されます。 一覧表示されたファイルを選択することも、必要に応じて異なるフォルダーとファイルを指定することもできます。 **[データベース ファイルの検索]** ダイアログ ボックスを表示するには、次の手順に従います。  
@@ -31,7 +31,7 @@ ms.locfileid: "36084437"
 -   **[データベースの復元]** ダイアログ ボックスの **[パーティション]** ページで、 **[バックアップ パーティションの復元]** オプションのグリッドの **[バックアップ ファイル]** 列にある参照ボタン ( **...** ) をクリックします。  
   
 ## <a name="options"></a>および  
- **フォルダーを選択します。**  
+ **フォルダーを選択します**  
  フォルダーを選択して、 **[選択したパス]** に目的のパスを設定します。  
   
  **選択したパス**  

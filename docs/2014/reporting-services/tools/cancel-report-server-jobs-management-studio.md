@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.cancelreportserverjobs.f1
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7c1ebb392ad7a60e28978ea1c29822274ce278d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9995d9df8ee2a4a11dc43a36e1853bbf60667c54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248042"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>[レポート サーバー ジョブのキャンセル] (Management Studio)
   実行中のレポートの表示や実行のキャンセルを行うには、 **[レポート サーバー ジョブのキャンセル]** ダイアログ ボックスを使用します。 このダイアログ ボックスには、レポート サーバーで現在実行中のすべてのジョブが表示されます。 現在処理中のジョブを一時停止または再開することはできませんが、すべてのジョブ、または時間がかかりすぎて完了できない場合は個々のジョブをキャンセルできます。  
@@ -40,10 +40,10 @@ ms.locfileid: "36077261"
 >  この機能は、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services ではサポートされません。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]を実行している場合、このページは表示されません。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  レポートの名前が表示されます。 サブスクリプションは、説明で識別されます。  
   
- **Type**  
+ **型**  
  有効な値は、 **[ユーザー]** または **[システム]** です。  
   
  **Start Time**  
@@ -52,7 +52,7 @@ ms.locfileid: "36077261"
  **[ユーザー名]**  
  ユーザーによって開始されたジョブの場合、この列には処理を開始したユーザーの名前が表示されます。  
   
- **Status**  
+ **ステータス**  
  ジョブの状態が表示されます。 有効な値は、 **[新規]** および **[実行中]** です。 ジョブの開始時の状態は常に **[新規]** です。 60 秒後に、状態は **[実行中]** に変わります。 変更を確認するには、ページを更新する必要があります。  
   
  **[OK]**  

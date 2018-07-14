@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], SMTP
 - SMTP connection manager [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a00a8295904d8fdc5a1ad87c6ac60dbf70ce6fa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b05612ac34e4c2e7eb412d59eb9dcf5f28e99c78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213482"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 接続マネージャー
   SMTP 接続マネージャーを使用すると、パッケージから簡易メール転送プロトコル (SMTP) サーバーに接続できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれるメール送信タスクでは、SMTP 接続マネージャーを使用します。  
@@ -31,7 +31,7 @@ ms.locfileid: "36084364"
  Microsoft Exchange を SMTP サーバーとして使用する場合に、Windows 認証を使用するには SMTP 接続マネージャーの構成を必要とする場合があります。 未認証の SMTP 接続を許可しないように Exchange サーバーを構成できます。  
   
 ## <a name="configuration-the-smtp-connection-manager"></a>SMTP 接続マネージャーの構成  
- SMTP 接続マネージャーをパッケージに追加するときに[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続マネージャーを実行時に SMTP 接続を解決する、接続マネージャーのプロパティを設定する接続マネージャーを追加作成、`Connections`コレクションに、パッケージです。 `ConnectionManagerType`接続マネージャーのプロパティに設定されて`SMTP`です。  
+ SMTP 接続マネージャーをパッケージに追加すると[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続マネージャーの実行時に SMTP 接続を解決するには、接続マネージャーのプロパティを設定、接続マネージャーを追加する作成、`Connections`コレクションに、パッケージです。 `ConnectionManagerType`接続マネージャーのプロパティに設定されて`SMTP`します。  
   
  SMTP 接続マネージャーは、次の方法で構成できます。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "36084364"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [SMTP 接続マネージャー エディター](../smtp-connection-manager-editor.md)」を参照してください。  
   
- プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムで接続を追加する](../building-packages-programmatically/adding-connections-programmatically.md)です。  
+ プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)します。  
   
   

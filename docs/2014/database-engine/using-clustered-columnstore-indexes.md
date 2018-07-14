@@ -1,32 +1,31 @@
 ---
-title: クラスター化列ストア インデックスの使用 |Microsoft ドキュメント
+title: クラスター化列ストア インデックスの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 caps.latest.revision: 6
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 527905bc0b0be07c178c873ae22fd06a0166b963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a439826920b98098d1ed8a30540c39509b7083d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254604"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>クラスター化列ストア インデックスの使用
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクラスター化 columnstore インデックスを使用するタスクです。  
   
- 列ストア インデックスの概要については、次を参照してください。[列ストア インデックスの概念](../relational-databases/indexes/columnstore-indexes-described.md)です。  
+ 列ストア インデックスの概要については、次を参照してください。[列ストア インデックスの概念](../relational-databases/indexes/columnstore-indexes-described.md)します。  
   
- クラスター化列ストア インデックスについては、次を参照してください。[クラスター化列ストア インデックスを使用して](../relational-databases/indexes/indexes.md)です。  
+ クラスター化列ストア インデックスについては、次を参照してください。[クラスター化列ストア インデックスを使用して](../relational-databases/indexes/indexes.md)します。  
   
 ## <a name="contents"></a>目次  
   
@@ -36,14 +35,14 @@ ms.locfileid: "36075571"
   
 -   [クラスター化列ストア インデックスにデータを読み込む](#load)  
   
--   [クラスター化列ストア インデックスにデータを変更します。](#change)  
+-   [クラスター化列ストア インデックスのデータを変更します。](#change)  
   
 -   [クラスター化列ストア インデックスを再構築します。](#rebuild)  
   
 -   [クラスター化列ストア インデックスを再構成します。](#reorganize)  
   
 ##  <a name="create"></a> クラスター化列ストア インデックスを作成します。  
- クラスター化列ストア インデックスを作成するにまず、ヒープまたはクラスター化インデックスは、行ストア テーブルを作成しを使用して、[クラスター化列ストア インデックスの作成&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)テーブルに変換する、クラスター化されたステートメント列ストア インデックスです。 クラスター化 columnstore インデックスにクラスター化インデックスと同じ名前を付ける場合は、DROP_EXISTING オプションを使用します。  
+ クラスター化列ストア インデックスを作成するには、まずヒープまたはクラスター化インデックスとして行ストア テーブルを作成しを使用して、[クラスター化列ストア インデックスの作成&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)クラスター化されたテーブルに変換するステートメント列ストア インデックスです。 クラスター化 columnstore インデックスにクラスター化インデックスと同じ名前を付ける場合は、DROP_EXISTING オプションを使用します。  
   
  この例では、テーブルをヒープとして作成してから、cci_Simple という名前のクラスター化 columnstore インデックスに変換します。 こうすることで、テーブル全体のストレージが行ストアから列ストアに変更されます。  
   
@@ -58,7 +57,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_T1 ON T1;
 GO  
 ```  
   
- 例については、例」セクションを参照してください。 [CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)です。  
+ 例については、例」セクションを参照してください。 [CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)します。  
   
 ##  <a name="drop"></a> クラスター化列ストア インデックスを削除します。  
  使用して、 [DROP INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql)クラスター化列ストア インデックスを削除するステートメント。 この操作は、インデックスを削除し、列ストア テーブルを行ストア ヒープに変換します。  
@@ -68,7 +67,7 @@ GO
   
  クラスター化 columnstore インデックスでは、columnstore の列セグメントの断片化を防ぐためにデルタストアを活用します。  
   
-### <a name="loading-into-a-partitioned-table"></a>パーティション テーブルへの読み込み  
+### <a name="loading-into-a-partitioned-table"></a>パーティション分割されたテーブルへの読み込み  
  パーティション分割されたデータの場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はまずパーティションに各行を割り当て、次にパーティション内のデータの columnstore 処理を実行します。 各パーティションには、独自の行グループと少なくとも 1 つのデルタストアがあります。  
   
 ### <a name="deltastore-loading-scenarios"></a>デルタストアの読み込みのシナリオ  
@@ -101,10 +100,10 @@ SELECT * FROM sys.column_store_row_groups
   
 
   
-##  <a name="change"></a> クラスター化列ストア インデックスにデータを変更します。  
+##  <a name="change"></a> クラスター化列ストア インデックスのデータを変更します。  
  クラスター化 columnstore インデックスでは挿入、更新、および DML 削除操作がサポートされます。  
   
- 使用して[挿入&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/insert-transact-sql)行を挿入します。 行はデルタストアに追加されます。  
+ 使用[挿入&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/insert-transact-sql)行を挿入します。 行はデルタストアに追加されます。  
   
  [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql) を使用して行を削除します。  
   
@@ -119,7 +118,7 @@ SELECT * FROM sys.column_store_row_groups
 -   行がデルタストアにある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、デルタストアの行を更新します。  
   
 ##  <a name="rebuild"></a> クラスター化列ストア インデックスを再構築します。  
- 使用して[CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)または[ALTER INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql)を既存のクラスター化列ストア インデックスの完全リビルドを実行します。 また、ALTER INDEX … REBUILD を使用して特定のパーティションを再構築できます。  
+ 使用[CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)または[ALTER INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql)既存のクラスター化列ストア インデックスの完全な再構築を実行します。 また、ALTER INDEX … REBUILD を使用して特定のパーティションを再構築できます。  
   
 ### <a name="rebuild-process"></a>再構築プロセス  
  クラスター化列ストア インデックスを再構築する際、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は以下のように動作します。  
@@ -150,7 +149,7 @@ SELECT * FROM sys.column_store_row_groups
      これにより、すべてデータが columnstore に格納されます。 複数の負荷が同時に発生した場合は、各パーティションは複数のデルタストアを持つ可能性があります。 再構築すると、すべてのデルタストア行が columnstore に移動されます。  
   
 ##  <a name="reorganize"></a> クラスター化列ストア インデックスを再構成します。  
- クラスター化 columnstore インデックスを再構成すると、すべての CLOSED 行グループが columnstore に移動されます。 実行するには、reorganize を使用して[ALTER INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)REORGANIZE オプションを使用します。  
+ クラスター化 columnstore インデックスを再構成すると、すべての CLOSED 行グループが columnstore に移動されます。 再構成を実行するには使用[ALTER INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)REORGANIZE オプションを使用します。  
   
  再構成は、CLOSED 行グループを columnstore に移動するためには必要はありません。 組ムーバー プロセスでは、最終的にすべての閉じた行グループが発見され移動されます。 ただし、組ムーバーはシングル スレッドであるため、ワークロードに対応できるだけ十分な速度で行グループを移動できない可能性があります。  
   

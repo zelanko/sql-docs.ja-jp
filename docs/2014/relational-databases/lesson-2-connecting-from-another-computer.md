@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d2698cc6ce0bd17b7d9cb079fdc4f4c7c1e70c20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4d131860981e30c6a45d4b7fddbb6d7133d10d6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209172"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2: 別のコンピューターからの接続
   セキュリティを強化するため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer、Express、および Evaluation Editions の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初にインストールした状態では別のコンピューターからアクセスできないようになっています。 このレッスンでは、別のコンピューターから接続するために、プロトコルの有効化、ポートの構成、Windows ファイアウォールの構成を行う方法について学習します。  
@@ -48,7 +48,7 @@ ms.locfileid: "36077320"
     > [!NOTE]  
     >  32 ビットと 64 ビットの両方のオプションが利用できる場合もあります。  
   
-2.  **SQL Server 構成マネージャー**、展開**SQL Server ネットワーク構成**、クリックして**プロトコル**  *\<InstanceName>* です。  
+2.  **SQL Server 構成マネージャー**、展開**SQL Server ネットワーク構成**、 をクリックし、**プロトコル**  *\<InstanceName>* します。  
   
      既定のインスタンス (名前のないインスタンス) は、 **MSSQLSERVER**として一覧表示されます。 名前付きインスタンスをインストールした場合は、指定した名前が表示されます。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] は **SQLEXPRESS**としてしてインストールされます (セットアップ中に名前を変更した場合を除く)。  
   
@@ -71,13 +71,13 @@ ms.locfileid: "36077320"
   
 3.  **[TCP/IP のプロパティ]** ダイアログ ボックスの **[IP アドレス]** タブをクリックします。  
   
-4.  **[IPAll]** セクションの **[TCP ポート]** ボックスで、使用可能なポート番号を入力します。 このチュートリアルでは、使用`49172`です。  
+4.  **[IPAll]** セクションの **[TCP ポート]** ボックスで、使用可能なポート番号を入力します。 このチュートリアルでは使用`49172`します。  
   
 5.  **[OK]** をクリックしてダイアログ ボックスを閉じ、サービスを再起動する必要があるという警告が表示されたら **[OK]** をクリックします。  
   
 6.  左ペインで、 **[SQL Server のサービス]** をクリックします。  
   
-7.  右ペインで、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスを右クリックし、 **[再起動]** をクリックします。 ときに、[!INCLUDE[ssDE](../includes/ssde-md.md)]ポートでリッスンが再起動`49172`です。  
+7.  右ペインで、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスを右クリックし、 **[再起動]** をクリックします。 ときに、[!INCLUDE[ssDE](../includes/ssde-md.md)]ポートでリッスン再起動すると、`49172`します。  
   
 ##  <a name="firewall"></a> ファイアウォールでポートを開く  
  ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールが有効になっている場合、別のコンピューターから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続するには、ファイアウォールでポートを開く必要があります。  
@@ -95,7 +95,7 @@ ms.locfileid: "36077320"
   
 3.  **[規則の種類]** ダイアログ ボックスで、 **[ポート]** をクリックし、 **[次へ]** をクリックします。  
   
-4.  **[プロトコルおよびポート]** ダイアログ ボックスで、 **[TCP]** をクリックします。 **[特定のローカル ポート]** を選択し、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスのポート番号を入力します。 既定のインスタンスの場合は「1433」と入力してください。 型`49172`名前付きインスタンスを構成するし、前のタスクで、固定ポートを構成します。 **[次へ]** をクリックします。  
+4.  **[プロトコルおよびポート]** ダイアログ ボックスで、 **[TCP]** をクリックします。 **[特定のローカル ポート]** を選択し、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスのポート番号を入力します。 既定のインスタンスの場合は「1433」と入力してください。 型`49172`名前付きインスタンスを構成して、前の作業で固定ポートを構成する場合。 **[次へ]** をクリックします。  
   
 5.  **[操作]** ダイアログ ボックスで、 **[接続を許可する]** をクリックし、 **[次へ]** をクリックします。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36077320"
     > [!NOTE]  
     >  **[サーバー名]** ボックスで **tcp:** を省略した場合、クライアントは、有効になっているすべてのプロトコルをクライアント構成に指定された順番で試行します。  
   
-4.  **認証**ボックスで、確認**ウィンドウ認証**、クリックして**接続**です。  
+4.  **認証**ボックスに、確認**ウィンドウ認証**、順にクリックします**Connect**します。  
   
 ##  <a name="browser"></a> SQL Server Browser サービスを使用して接続します。  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser サービスは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各種リソースに関する着信要求を受信し、このコンピューター上にインストールされている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに関する情報を提供します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser サービスが実行されている場合、ユーザーはコンピューター名とポート番号の代わりにコンピューター名とインスタンス名を指定して、名前付きインスタンスに接続できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser は、認証されていない UDP 要求を受信します。したがって、セットアップで有効にしない場合もあります。 サービスの説明と、有効にする場合の説明については、「[SQL Server Browser サービス (データベース エンジンと SSAS)](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)」を参照してください。  

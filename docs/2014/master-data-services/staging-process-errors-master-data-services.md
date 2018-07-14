@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8433ac306fa85c983d959f5678072a51759b9133
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9fc93b6684ee98a641d6f8989f1c77d7aa9b468b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239132"
 ---
 # <a name="staging-process-errors-master-data-services"></a>ステージング処理のエラー (Master Data Services)
   ステージング処理が完了すると、ステージング テーブル内のすべての処理済みレコードの [ErrorCode] 列に値が格納されます。 これらの値を次の表に示します。  
@@ -47,7 +47,7 @@ ms.locfileid: "36082826"
 |210048|**ParentCode** と **ChildCode** を同じにすることはできません。|**ParentCode** の値は **ChildCode** の値と同じです。 これらの値は別にする必要があります。|リレーションシップ|  
   
 ## <a name="see-also"></a>参照  
- [ステージング処理中に発生したエラーを表示する&#40;マスター データ サービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
+ [ステージング処理中に発生するエラーを表示する&#40;マスター データ サービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [データのインポート&#40;マスター データ サービス&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

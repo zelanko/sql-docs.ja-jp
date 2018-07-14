@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookuptrans.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 546acdba2996b4264e946b052af18cf6574868a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b98ce551e69f64a515f58d2b4a0588dabc742ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225832"
 ---
 # <a name="term-lookup-transformation"></a>用語参照変換
   用語参照変換は、変換入力列内のテキストから抽出された用語を、参照テーブルの用語と照合します。 次に、入力データセットで参照テーブル内の用語が検出された回数をカウントし、その数を参照テーブルの用語と共に変換出力の列に書き込みます。 この変換は、単語の使用頻度を示す統計付きのユーザー定義の単語一覧を、入力テキストから作成する場合に便利です。  
@@ -82,7 +82,7 @@ ms.locfileid: "36075548"
   
  変換出力列の InputColumnType プロパティが 0 または 2 に設定されている場合、1 つの列に CustomLineageID プロパティが含まれます。このプロパティには、上流のデータ フロー コンポーネントによって列に割り当てられた、系列 ID が含まれます。  
   
- 用語参照変換では、2 つの列を追加、既定の名前、変換出力に`Term`と`Frequency`です。 `Term` 列には参照テーブルからの用語が含まれ、`Frequency` 列には、入力データセットで参照テーブル内の用語が検出された回数が含まれます。 これらの列には、CustomLineageID プロパティは含まれません。  
+ 用語参照変換は、変換出力に既定の名前に 2 つの列を追加します。`Term`と`Frequency`します。 `Term` 列には参照テーブルからの用語が含まれ、`Frequency` 列には、入力データセットで参照テーブル内の用語が検出された回数が含まれます。 これらの列には、CustomLineageID プロパティは含まれません。  
   
  参照テーブルは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または Access データベースのテーブルである必要があります。 用語抽出変換の出力がテーブルに保存されている場合、このテーブルを参照テーブルとして使用できます。ただし、他のテーブルを使用することもできます。 フラット ファイルのテキスト、Excel ブック、または他の変換元を用語参照変換で使用するには、これらを、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースまたは Access データベースにインポートする必要があります。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36075548"
   
  **[用語参照変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [用語参照変換エディター&#40;テーブル タブを参照&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [用語参照変換エディター&#40;参照テーブル タブ&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [用語参照変換エディター&#40;用語参照 タブ&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   

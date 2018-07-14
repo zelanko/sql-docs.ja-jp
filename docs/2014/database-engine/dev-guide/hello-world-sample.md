@@ -1,5 +1,5 @@
 ---
-title: Hello World サンプル |Microsoft ドキュメント
+title: Hello World サンプル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 05ac9594d985766e48fbd5757dca48bdd47c2aa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 75ac8eafd490dc3a9b7501f7c653bc8aaf99cde4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269928"
 ---
 # <a name="hello-world-sample"></a>Hello World サンプル
   Hello World サンプルでは、共通言語ランタイム (CLR) 統合ベースの単純なストアド プロシージャの作成、展開、およびテストにかかわる基本的な操作について示します。 また、このサンプルでは、ストアド プロシージャによって動的に構築されて呼び出し元に返されるレコードを使用してデータを返す方法についても示します。  
   
- `HelloWorld`ストアド プロシージャは、"Hello world!"という文字列を返します 1 つの行セット結果。 クラスのいくつかの使用例を示します[Microsoft.SqlServer.Server.SqlMetaData](http://go.microsoft.com/fwlink/?LinkID=193572)、 [Microsoft.SqlServer.Server.SqlDataRecord](http://go.microsoft.com/fwlink/?LinkID=193573)と[Microsoft.SqlServer.Server.Pipe](http://go.microsoft.com/fwlink/?LinkID=193571)です。  
+ `HelloWorld`ストアド プロシージャは、"Hello world!"という文字列を返します 1 つの行で構成される結果。 クラスのいくつかの使用例を示します[Microsoft.SqlServer.Server.SqlMetaData](http://go.microsoft.com/fwlink/?LinkID=193572)、 [Microsoft.SqlServer.Server.SqlDataRecord](http://go.microsoft.com/fwlink/?LinkID=193573)と[Microsoft.SqlServer.Server.Pipe](http://go.microsoft.com/fwlink/?LinkID=193571)します。  
   
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
@@ -55,11 +55,11 @@ ms.locfileid: "36076906"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要があります`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
--   管理者でない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを使用している、する必要がありますが管理者から付与**CreateAssembly**インストールを完了するアクセス許可。  
+-   管理者でない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを使用して、管理者から付与が必要**CreateAssembly**インストールを完了するためのアクセス許可。  
   
 ## <a name="building-the-sample"></a>サンプルのビルド  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36076906"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、として保存`test.sql`サンプル ディレクトリにします。  
+7.  コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、保存`test.sql`サンプル ディレクトリにします。  
   
 8.  次のコマンドを使用してテスト スクリプトを実行します。  
   

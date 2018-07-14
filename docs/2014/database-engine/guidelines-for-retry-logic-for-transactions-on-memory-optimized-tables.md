@@ -1,5 +1,5 @@
 ---
-title: メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン |Microsoft ドキュメント
+title: メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3949860a76801061a8ff01f73a417c32c5056dc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b7d4a0799a70a91c99297c3c077100235852cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243142"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン
   メモリ最適化テーブルにアクセスするトランザクションに発生するエラー条件にはさまざまなものがあります。  
@@ -34,7 +34,7 @@ ms.locfileid: "36076907"
   
  このようなエラーの原因としてよくあるのが、同時に実行されたトランザクションの間の競合です。 一般的な対処方法は、トランザクションを再試行するというものです。  
   
- これらのエラー状態の詳細については、競合の検出、検証、およびコミット依存関係の確認のセクションを参照して[メモリ最適化テーブル内のトランザクション](../relational-databases/in-memory-oltp/memory-optimized-tables.md)です。  
+ これらのエラー条件の詳細については、競合の検出、検証、およびコミット依存関係の確認のセクションをご覧ください。[メモリ最適化テーブルでのトランザクション](../relational-databases/in-memory-oltp/memory-optimized-tables.md)です。  
   
  デッドロック (エラー コード 1205) は、メモリ最適化テーブルでは発生しません。 メモリ最適化テーブルではロックを使用しません。 ただし、アプリケーションに既にデッドロックに対する再試行ロジックが含まれている場合には、既存のロジックを拡張して新しいエラー コードを追加することもできます。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36076907"
 ### <a name="considerations-for-read-only-transactions-and-cross-container-transactions"></a>読み取り専用トランザクションと複数コンテナーにまたがるトランザクションに関する注意点  
  読み取り専用で複数コンテナーにまたがるトランザクションは、ネイティブ コンパイル ストアド プロシージャのコンテキスト外で開始されるトランザクションであり、メモリ最適化テーブルがいずれも SNAPSHOT 分離下でアクセスされている場合には、検証を実行しません。 ただし、メモリ最適化テーブルが REPEATABLE READ または SERIALIZABLE 分離下でアクセスされている場合には、コミット時に検証が実行されます。 この場合、再試行ロジックが必要になることがあります。  
   
- 詳細については、のコンテナーにまたがるトランザクションに関するセクションを参照して[トランザクション分離レベル](../../2014/database-engine/transaction-isolation-levels.md)です。  
+ 詳細については、コンテナーにまたがるトランザクションでのセクションをご覧ください。[トランザクション分離レベル](../../2014/database-engine/transaction-isolation-levels.md)します。  
   
 ## <a name="implementing-retry-logic"></a>再試行ロジックの実装  
  メモリ最適化テーブルにアクセスするすべてのトランザクションと同様に、書き込みの競合 (エラー コード 41302) や依存関係の失敗 (エラー コード 41301) など、潜在的なエラーを処理するための再試行ロジックを検討する必要があります。 ほとんどのアプリケーションでは失敗率が低くなりますが、トランザクションの再試行によって問題に対処することが必要です。 再試行ロジックを実装する 2 つの方法をお勧めします。  
@@ -75,7 +75,7 @@ ms.locfileid: "36076907"
   
 -   クライアント アプリケーションには他のエラー コード (1205 など) についての再試行ロジックがあり、拡張することができるため。  
   
--   競合が発生するのはまれであり、準備実行によってエンド ツー エンドの待機時間を減らすことが重要であるため。 ネイティブの実行の詳細については、ストアド プロシージャを直接コンパイルを参照してください。 [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
+-   競合が発生するのはまれであり、準備実行によってエンド ツー エンドの待機時間を減らすことが重要であるため。 ネイティブの実行の詳細については、ストアド プロシージャを直接コンパイルを参照してください。 [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)します。  
   
  次のサンプルでは、ネイティブ コンパイル ストアド プロシージャまたは複数コンテナーにまたがるトランザクションへの呼び出しが含まれている [!INCLUDE[tsql](../includes/tsql-md.md)] の解釈されたストアド プロシージャの再試行ロジックを示します。  
   
@@ -130,8 +130,8 @@ END
 ```  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルに対するトランザクションを理解します。](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [メモリ最適化テーブルのトランザクション](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [メモリ最適化テーブルに対するトランザクションの概要](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [メモリ最適化テーブルでのトランザクション](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [メモリ最適化テーブルのトランザクション分離レベルに関するガイドライン](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
   
   

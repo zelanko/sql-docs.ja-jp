@@ -1,5 +1,5 @@
 ---
-title: テンプレートから単一予測クエリを作成 |Microsoft ドキュメント
+title: テンプレートから単一予測クエリの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91180f533afbbb18472d933891ab607a5ba7f6d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09d7a8b9de92e18646c00b045cb1d55b0eb311d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224592"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>テンプレートからの単一予測クエリの作成
   単一クエリは、予測に使用するモデルがあり、それを外部入力データ セットにマップしたり一括予測を行ったりしない場合に役立ちます。 単一クエリでは、モデルに 1 つまたは複数の値を提供し、予測される値を即時に参照できます。  
@@ -73,30 +73,30 @@ AS [t]
   
 5.  **mining model** 行には、 **オブジェクト エクスプローラー**に表示されるマイニング モデルの一覧からマイニング モデルの名前を入力します。  
   
-     このトピックの冒頭に示したサンプル コードについて、**マイニング モデル**行は、名前に設定された`TM_Decision_Tree`です。  
+     このトピックの冒頭に示したサンプル コードについては、**マイニング モデル**行は、名前に設定された`TM_Decision_Tree`します。  
   
 6.  **value** 行には、予測を行う新しいデータを入力します。  
   
-     このトピックの冒頭に示したサンプル コードについて、**値**行に設定された`2`自転車の購買子供の数に基づく行動を予測します。  
+     このトピックの冒頭に示したサンプル コードについては、**値**行に設定された`2`自転車の購買世帯の子供の数に基づく行動を予測します。  
   
 7.  **column** 行には、新しいデータをマップするマイニング モデルの列名を入力します。  
   
-     このトピックの冒頭に示したサンプル コードについて、**列**行に設定された`Number Children at Home`です。  
+     このトピックの冒頭に示したサンプル コードについては、**列**行に設定された`Number Children at Home`します。  
   
     > [!NOTE]  
     >  **[テンプレート パラメーターの値の指定]** ダイアログ ボックスを使用する場合、列名を角かっこで囲む必要はありません。 角かっこは自動的に追加されます。  
   
-8.  ままにして、**入力の別名**として`t`です。  
+8.  ままに、**入力のエイリアス**として`t`します。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 10. クエリのテキスト ペインで、コンマと省略記号の下に構文エラーを示す赤い波線がある箇所を見つけます。 省略記号を削除し、必要なクエリ条件を追加します。 他の条件を追加しない場合はコンマを削除します。  
   
-     このトピックの冒頭に示したサンプル コード、その他のクエリ条件に設定された`'45' as [Age]`です。  
+     このトピックの冒頭に示したサンプル コードでの追加のクエリ条件に設定されて`'45' as [Age]`します。  
   
 11. **[実行]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [予測の作成&#40;基本的なデータ マイニングのチュートリアル&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [予測の作成&#40;基本的なデータ マイニング チュートリアル&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 702850c72f684c1e9a48871557f89e86da67c2b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6ab017df400de3a9894a64108d97cbd97fd3374c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218982"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>式で使用される演算子 (レポート ビルダーおよび SSRS)
   演算子は、式に含まれる 1 つ以上の項に適用される操作を表す記号です。 式でサポートされている演算子のカテゴリには、算術、比較、連結、論理 (ビット)、およびビット シフトがあります。  
@@ -51,7 +51,7 @@ ms.locfileid: "36083802"
 |>=|以上。|  
 |=|等しい。|  
 |<>|等しくない。|  
-|Like|指定された文字列が指定されたパターンと一致するかどうかを判断します。 パターンは、標準の文字とワイルドカード文字を含むことができます。 パターン検索時に、標準の文字は文字列に指定された文字と正確に一致する必要があります。 しかし、ワイルドカード文字は文字列の任意の部分と一致することができます。 = や != などの文字列比較演算子を使用する場合と比べて、ワイルドカード文字を使用する方がより柔軟に LIKE 演算子を使用できます。<br /><br /> ワイルドカードとして使用できる次のリスト文字:<br /><br /> **%**: 0 個以上の文字任意の文字列。<br /><br /> **_**: 任意の 1 文字です。<br /><br /> **[ ]**: 任意の 1 文字を指定した範囲内で (たとえば、[a ~ f]) またはセット (たとえば [aeiou])。<br /><br /> **[^]**: 任意の 1 文字を指定した範囲内ではなく (たとえば、[^ a ~ f]) 設定または (たとえば、[^ aeiou])。|  
+|Like|指定された文字列が指定されたパターンと一致するかどうかを判断します。 パターンは、標準の文字とワイルドカード文字を含むことができます。 パターン検索時に、標準の文字は文字列に指定された文字と正確に一致する必要があります。 しかし、ワイルドカード文字は文字列の任意の部分と一致することができます。 = や != などの文字列比較演算子を使用する場合と比べて、ワイルドカード文字を使用する方がより柔軟に LIKE 演算子を使用できます。<br /><br /> ワイルドカードとして使用できる次のリスト文字:<br /><br /> **%**: 0 個以上の文字の文字列。<br /><br /> **_**: 任意の 1 文字。<br /><br /> **[ ]**: 任意の 1 文字を指定した範囲内で (たとえば、[a ~ f]) またはセット (たとえば [aeiou])。<br /><br /> **[^]**: 任意の 1 文字を指定した範囲内ではなく (たとえば、[^ a ~ f]) 設定または (たとえば、[^ aeiou])。|  
 |Is|2 つのオブジェクト参照を比較します。|  
   
 ### <a name="string-concatenation"></a>文字列連結  
@@ -83,7 +83,7 @@ ms.locfileid: "36083802"
 |>>|ビット パターン上で算術右シフトを実行します。|  
   
 ## <a name="see-also"></a>参照  
- [式 ダイアログ ボックス](../expression-dialog-box.md)   
+ [[式] ダイアログ ボックス](../expression-dialog-box.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](data-types-in-expressions-report-builder-and-ssrs.md)   

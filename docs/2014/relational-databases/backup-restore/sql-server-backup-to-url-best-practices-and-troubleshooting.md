@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b4da3c1af787d41c7b1b49ba3edc6b2a191d3ac1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f2c7a2cc478659dc3ba50a650a15168b37644619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277078"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
   このトピックには、Windows Azure BLOB サービスとの間の SQL Server のバックアップと復元に関するベスト プラクティスとトラブルシューティングのヒントを示しています。  
@@ -45,14 +44,14 @@ ms.locfileid: "36077123"
   
 ## <a name="handling-large-files"></a>大きなファイルの処理  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ操作では、複数のスレッドを使用して、Windows Azure BLOB ストレージ サービスへのデータ転送を最適化します。  ただし、パフォーマンスは ISV の帯域幅やデータベースのサイズなどのさまざまな要因によって異なります。 内部設置型の SQL Server データベースから大きなデータベースまたはファイル グループをバックアップする場合は、最初にスループットのテストを行うことをお勧めします。 [Windows Azure ストレージ SLA の](http://go.microsoft.com/fwlink/?LinkId=271619)考慮に入れておくことができますの blob の最大処理時間があります。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ操作では、複数のスレッドを使用して、Windows Azure BLOB ストレージ サービスへのデータ転送を最適化します。  ただし、パフォーマンスは ISV の帯域幅やデータベースのサイズなどのさまざまな要因によって異なります。 内部設置型の SQL Server データベースから大きなデータベースまたはファイル グループをバックアップする場合は、最初にスループットのテストを行うことをお勧めします。 [Windows Azure ストレージ SLA](http://go.microsoft.com/fwlink/?LinkId=271619)最大処理時間が blob を考慮に入れることができます。  
   
 -   「**バックアップの管理**」セクションで推奨されているように `WITH COMPRESSION` オプションを使用することは、大きなファイルをバックアップするときに非常に重要です。  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>BACKUP TO URL または RESTORE FROM URL のトラブルシューティング  
  ここでは、Windows Azure BLOB ストレージ サービスへのバックアップまたは Windows Azure BLOB ストレージ サービスからの復元を実行する際に発生するエラーを簡単にトラブルシューティングする方法をいくつか示します。  
   
- サポートされないオプションまたは制限事項によるエラーを回避する、制限事項の一覧を確認しでのバックアップと復元のコマンドについてサポート、 [SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)資料です。  
+ サポートされないオプションまたは制限事項によるエラーを回避する、制限事項の一覧を確認し、サポートでのバックアップと復元のコマンド情報、 [SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)記事。  
   
  **認証エラー:**  
   
@@ -98,7 +97,7 @@ ms.locfileid: "36077123"
 -   圧縮されたバックアップから復元するときに、次のエラーが表示される場合があります。  
   
     -   **SqlException 3284 が発生しました。重大度: 16、状態: 5**  
-        **デバイス 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' が無効です。バックアップセットの作成に使用したのと同じブロック サイズを指定して RESTORE ステートメントを再実行してください。使用した可能性のある値は '65536' です。**  
+        **デバイス上のファイルマークをメッセージ 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' が無効です。バックアップセットの作成に使用したのと同じブロック サイズを指定して RESTORE ステートメントを再実行してください。使用した可能性のある値は '65536' です。**  
   
          このエラーを解決するには、`BACKUP` を指定した `BLOCKSIZE = 65536` ステートメントを再実行してください。  
   
@@ -121,7 +120,7 @@ ms.locfileid: "36077123"
   
  プロキシ サーバーで、1 分あたりの接続数を制限する設定が使用されている場合があります。 Backup to URL プロセスはマルチスレッド プロセスであるため、この制限を超える可能性があります。 制限を超えた場合、プロキシ サーバーは接続を切断します。 この問題を解決するには、プロキシ設定を変更し、SQL Server がプロキシを使用しないようにします。   エラー ログに表示される可能性のある種類またはエラー メッセージの例を次に示します。  
   
--   書き込み"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"が失敗しました: Backup to URL がリモート エンドポイントから例外を受け取りました。 例外メッセージ: 転送接続からデータを読み取ることができません: 接続は閉じられました。  
+-   上の書き込み"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"が失敗しました: Backup to URL がリモート エンドポイントから例外を受け取りました。 例外メッセージ: 転送接続からデータを読み取ることができません: 接続は閉じられました。  
   
 -   ファイル "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" で回復できない I/O エラーが発生しました。リモート エンドポイントからエラーを収集できませんでした。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36077123"
   
      バックアップ データベースが異常終了しています。  
   
--   BackupIoRequest::ReportIoError::reportioerror: バックアップ デバイスhttp://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak' です。 Backup to URL がリモート エンドポイントから例外を受け取ったオペレーティング システム エラーです。 例外メッセージ: 転送接続からデータを読み取ることができません: 接続は閉じられました。  
+-   BackupIoRequest::ReportIoError::reportioerror: バックアップ デバイスhttp://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'。 Backup to URL がリモート エンドポイントから例外を受け取ったオペレーティング システム エラーです。 例外メッセージ: 転送接続からデータを読み取ることができません: 接続は閉じられました。  
   
  トレース フラグ 3051 を使用して詳細ログを有効にすると、ログに次のメッセージが表示される場合もあります。  
   
@@ -155,10 +154,10 @@ ms.locfileid: "36077123"
   
     ```  
   
-2.  SQL Server インスタンスの Binn フォルダーに構成ファイルを配置します。 たとえば、SQL Server がコンピューターの C ドライブにインストールされている場合、構成ファイルをここに配置します*C:\Program files \microsoft SQL Server\MSSQL12。\< 。InstanceName > \MSSQL\Binn*です。  
+2.  SQL Server インスタンスの Binn フォルダーに構成ファイルを配置します。 たとえば、SQL Server は、コンピューターの C ドライブにインストールする場合、構成ファイルをここに配置: *C:\Program files \microsoft SQL Server\MSSQL12\< 。InstanceName > \MSSQL\Binn*します。  
   
-## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>Windows Azure への SQL Server マネージ バックアップのトラブルシューティング  
- SQL Server マネージ バックアップは Backup to URL の上に構築されるので、前のセクションで説明したトラブルシューティングのヒントは、SQL Server マネージ バックアップを使用するデータベースまたはインスタンスに適用されます。  SQL Server Managed Backup to Windows Azure のトラブルシューティングに関する情報がで詳しく説明されている[トラブルシューティング SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)です。  
+## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>Windows Azure への SQL Server マネージド バックアップのトラブルシューティング  
+ SQL Server マネージド バックアップは Backup to URL の上に構築されるので、前のセクションで説明したトラブルシューティングのヒントは、SQL Server マネージド バックアップを使用するデータベースまたはインスタンスに適用されます。  SQL Server Managed Backup to Windows Azure のトラブルシューティングに関する情報がで詳しく説明されている[トラブルシューティング SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Windows Azure に格納されたバックアップからの復元](restoring-from-backups-stored-in-microsoft-azure.md)  

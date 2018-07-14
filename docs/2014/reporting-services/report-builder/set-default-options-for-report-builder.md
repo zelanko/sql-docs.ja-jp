@@ -1,5 +1,5 @@
 ---
-title: レポート ビルダーのオプション ダイアログ ボックスで、設定 (レポート ビルダー) |Microsoft ドキュメント
+title: レポート ビルダーのオプション ダイアログ ボックスで、設定 (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7ae2490cf5dcdc241120c683994e7f46bcf0b6c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 49449391408701c16b7b6da9106913a24d084d66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218842"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>[設定] (レポート ビルダーの [オプション] ダイアログ ボックス) (レポート ビルダー)
-  クリックして、**レポート ビルダー**ボタンをクリックし、をクリックして**オプション**最近使ったファイルとの接続を表示するためのオプションを設定します。 既定のレポート サーバーを変更することも、既定のレポート サーバーがなければ追加することもできます。  
+  をクリックして、**レポート ビルダー**ボタンをクリックし、をクリックし、**オプション**最近使ったファイルとの接続を表示するためのオプションを設定します。 既定のレポート サーバーを変更することも、既定のレポート サーバーがなければ追加することもできます。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **[既定で使用するレポート サーバーまたは SharePoint サイト]**  

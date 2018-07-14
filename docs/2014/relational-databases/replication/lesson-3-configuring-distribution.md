@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ab6c3ab7b14b8e7443b9ac6b39225aa02671fa88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 633e71fd1755746a37c258500d4f98c93db28b4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322222"
 ---
 # <a name="lesson-3-configuring-distribution"></a>レッスン 3 : ディストリビューションの構成
   このレッスンでは、パブリッシャー側のディストリビューションを構成し、パブリケーション データベースとディストリビューション データベースに対して必要な権限を設定します。 ディストリビューターを構成済みの場合は、このレッスンを開始する前に、パブリッシングとディストリビューションを無効にする必要があります。 既存のレプリケーション トポロジを維持する必要がある場合は、このレッスンを実行しないでください。  
@@ -39,7 +39,7 @@ ms.locfileid: "36076864"
   
      ディストリビューション構成ウィザードが起動します。  
   
-3.  **ディストリビューター** ] ページで、[ **'***\<ServerName >***' 独自のディストリビューターとして動作します。SQL Server はディストリビューション データベースとログ作成**、クリックして**次**です。  
+3.  **ディストリビューター**  ページで、 **'***\<ServerName >***' 独自のディストリビューターとして機能します。SQL Server はディストリビューション データベースとログは作成**、 をクリックし、**次**します。  
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されていない場合は、[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**エージェントの起動** ] ページで **[はい]** を選択し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが自動的に起動するように構成します。 **[次へ]** をクリックします。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "36076864"
   
 4.  **[OK]** をクリックすると、ログインが作成されます。  
   
-5.  手順 1. ～ 4. を繰り返して、ローカルの repl_logreader アカウントのログインを作成します。 このログインは、のメンバーであるユーザーにもマップする必要があります、`db_owner`の固定データベース ロール、**配布**と**AdventureWorks**データベース。  
+5.  手順 1. ～ 4. を繰り返して、ローカルの repl_logreader アカウントのログインを作成します。 このログインは、ユーザーのメンバーであるにもマップする必要があります、`db_owner`固定データベース ロール、**配布**と**AdventureWorks**データベース。  
   
-6.  手順 1. ～ 4. を繰り返して、ローカルの repl_distribution アカウントのログインを作成します。 メンバーであるユーザーにこのログインをマップする必要があります、`db_owner`の固定データベース ロール、**配布**データベース。  
+6.  手順 1. ～ 4. を繰り返して、ローカルの repl_distribution アカウントのログインを作成します。 このログインは、のメンバーであるユーザーにマップする必要があります、`db_owner`固定データベース ロール、**配布**データベース。  
   
 7.  手順 1. ～ 4. を繰り返して、ローカルの repl_merge アカウントのログインを作成します。 このログインは、 **ディストリビューション** データベースと **AdventureWorks** データベースのユーザーにマップする必要があります。  
   

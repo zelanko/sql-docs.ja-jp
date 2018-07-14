@@ -1,5 +1,5 @@
 ---
-title: マップ ビューポートのプロパティ ダイアログ ボックス、中心とズーム |Microsoft ドキュメント
+title: マップ ビューポートのプロパティ ダイアログ ボックス、中心とズーム |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c3c75a22ee1a367f752cd310a19aebdb241c90eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 33fb01fb1383edd45200f6d803960ff72c981a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255784"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>[中心とズーム] ([マップ ビューポートのプロパティ] ダイアログ ボックス)
   **[マップ ビューポートのプロパティ]** ダイアログ ボックスの **[中心とズーム]** を選択すると、マップの中心ビューおよび拡大 (縮小) 率を設定できます。 マップのデータ ソースとレポートに含めるマップの境界を指定した後は、ビューの中心および拡大 (縮小) 率を指定して、さらにマップ表示を制御できます。 中心とズーム値の指定方法により、使用できるオプションも異なります。 **式** (*[fx]*) ボタンをクリックし、オプションの値を設定する式を編集します。  
   
 ## <a name="options"></a>および  
- **ビューの中心を設定、およびズーム レベル**  
+ **設定のビューの中心およびズーム レベル**  
  ビューの中心およびズーム レベルのカスタム値を指定します。  
   
  **センター マップのマップ レイヤーを表示するには**  
@@ -56,7 +56,7 @@ ms.locfileid: "36077056"
  **ズーム レベル (%)**  
  拡大 (縮小) 率。 既定値 (100%) は、拡大も縮小も行わないことを示します。  
   
- **このレイヤーの中心ビュー**  
+ **このレイヤーを中心に表示**  
  レイヤー名を指定します。  
   
  **この条件に一致するマップ要素を中心に表示**  

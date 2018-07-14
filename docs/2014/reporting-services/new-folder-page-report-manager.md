@@ -1,5 +1,5 @@
 ---
-title: 新しいフォルダー ページ (レポート マネージャー) |Microsoft ドキュメント
+title: 新しいフォルダー ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5ec855928ab92734695594a79ed23e917b3bb8d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3464ba51b74343fdb7349b7622f08a68b3f25611
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162293"
 ---
 # <a name="new-folder-page-report-manager"></a>[新しいフォルダー] ページ (レポート マネージャー)
   [新しいフォルダー] ページでは、レポート サーバーのフォルダー階層に新しいフォルダーを作成できます。 作成するフォルダーは、レポート サーバー データベースに保存される仮想フォルダーです。 このフォルダーは、コンピューターのファイル システムに作成されるわけではありません。  
@@ -38,10 +38,10 @@ ms.locfileid: "36077477"
 2.  ツール バーの **[新しいフォルダー]** をクリックします。  
   
 ## <a name="options"></a>および  
- **Name**  
- フォルダー名を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよび特定の記号を含めることもできます。 名前を指定するときに、; ? : @ & = +, $/* \< > |"または/名を指定します。  
+ **名前**  
+ フォルダー名を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよび特定の記号を含めることもできます。 名前を指定するときに、; ? : @ & = +, $/* \< > |"または/名前を指定します。  
   
- **description**  
+ **[説明]**  
  フォルダーの内容の説明を入力します。 この説明は、フォルダーへの権限を持つユーザーの [コンテンツ] ページに表示されます。  
   
 ## <a name="see-also"></a>参照  
@@ -49,7 +49,7 @@ ms.locfileid: "36077477"
  [[全般] プロパティ ページ、フォルダー&#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [レポート マネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
+ [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [[全般] プロパティ ページ、フォルダー&#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   
   

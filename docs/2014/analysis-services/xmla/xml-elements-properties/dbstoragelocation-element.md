@@ -1,5 +1,5 @@
 ---
-title: DbStorageLocation 要素 |Microsoft ドキュメント
+title: DbStorageLocation 要素 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - DbStorageLocation element
 ms.assetid: 1f448249-103a-479f-ae86-b0017acd0436
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 651dc0424c492efefa7828ae327f9bdcf837ed77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 055780c9c91817a44dce6dfdaeb6ea3b541c05a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224002"
 ---
 # <a name="dbstoragelocation-element"></a>DbStorageLocation 要素
-  フォルダーを指定場所[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]を作成し、すべてのデータベース データとメタデータ ファイルを管理します。  
+  フォルダーを指定します、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]作成し、すべてのデータベースのデータとメタデータ ファイルを管理します。  
   
 ## <a name="syntax"></a>構文  
   

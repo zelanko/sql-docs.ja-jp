@@ -1,5 +1,5 @@
 ---
-title: 保存パッケージおよび実行 (SQL Server インポートおよびエクスポート ウィザード) |Microsoft ドキュメント
+title: 保存し、実行パッケージ (SQL Server インポートおよびエクスポート ウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6071acee5eb7d888bdf4182a30f433e531754f64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43cd7f780bfb85930b1abfb144f65a2f7e7b02a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169254"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>[パッケージの保存および実行] (SQL Server インポートおよびエクスポート ウィザード)
-  使用して、**パッケージの実行を保存して**パッケージを実行する、すぐに、後で、実行するにまたはその両方を保存 ダイアログ ボックス。  
+  使用して、**実行パッケージの保存および**を後で、実行、または両方を保存、すぐにパッケージを実行する ダイアログ ボックス。  
   
 > [!NOTE]  
->  実行が終了する前にパッケージを停止する場合、パッケージは保存されません、選択した場合でも、**保存**チェック ボックスをオンします。  
+>  実行が終了する前にパッケージを停止した場合、パッケージは保存されません、選択した場合でも、**保存**チェック ボックスをオンします。  
   
- このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)です。 ウィザードを正常に実行するために必要なアクセス許可と同様に、ウィザードを開始するためのオプションの詳細については、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)です。  
+ このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と同様に、ウィザードを開始するためのオプションについては、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
   
  SQL Server インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
 ## <a name="options"></a>および  
- **即時実行します。**  
+ **すぐに実行します。**  
  このオプションを選択すると、すぐにパッケージを実行します。  
   
  **SSIS パッケージの保存**  
@@ -58,7 +58,7 @@ ms.locfileid: "36083667"
  **パッケージの保護レベル**  
  一覧から保護レベルを選択します。  
   
- 保護レベルによって、パッケージ保護の方法、パスワードまたはユーザー キー、適用範囲が決定されます。 保護対象には、すべてのデータを含めることも機密データのみを含めることもできます。 要件とパッケージのセキュリティ オプションを理解するのを参照してください。[パッケージ内の機密データのアクセス制御](../security/access-control-for-sensitive-data-in-packages.md)と[セキュリティの概要&#40;Integration Services&#41;](../security/security-overview-integration-services.md)です。  
+ 保護レベルによって、パッケージ保護の方法、パスワードまたはユーザー キー、適用範囲が決定されます。 保護対象には、すべてのデータを含めることも機密データのみを含めることもできます。 パッケージのセキュリティ オプションと要件についてを参照してください。[パッケージ内の機密データのアクセス制御](../security/access-control-for-sensitive-data-in-packages.md)と[セキュリティの概要&#40;Integration Services&#41;](../security/security-overview-integration-services.md)します。  
   
 > [!NOTE]  
 >  このオプションは選択した場合にのみ使用可能な**SSIS パッケージの保存**オプション。  
@@ -67,13 +67,13 @@ ms.locfileid: "36083667"
  パスワードを入力します。  
   
 > [!NOTE]  
->  このオプションは設定した場合にのみ使用可能な**パッケージの保護レベル**するいずれかのオプション**パスワードを使用して機密データを暗号化**または**パスワードを持つすべてのデータを暗号化**です。  
+>  このオプションは設定した場合にのみ使用可能な**パッケージの保護レベル**にいずれかのオプション**機密データをパスワードで暗号化**または**すべてのデータをパスワードで暗号化**します。  
   
  **パスワードの再入力**  
  パスワードを再度入力します。  
   
 > [!NOTE]  
->  このオプションは設定した場合にのみ使用可能な**パッケージの保護レベル**するいずれかのオプション**パスワードを使用して機密データを暗号化**または**パスワードを持つすべてのデータを暗号化**です。  
+>  このオプションは設定した場合にのみ使用可能な**パッケージの保護レベル**にいずれかのオプション**機密データをパスワードで暗号化**または**すべてのデータをパスワードで暗号化**します。  
   
 ## <a name="see-also"></a>参照  
  [プロジェクトとパッケージの実行](../packages/run-integration-services-ssis-packages.md)   

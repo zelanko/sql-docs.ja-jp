@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a2468e4cfdbbb9a123ac552c301929b9040176d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 86b1356a28f817f96cdd597d748909799c6cce2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247042"
 ---
 # <a name="server-properties-memory-page"></a>[サーバーのプロパティ] ([メモリ] ページ)
   このページを使用すると、サーバーのメモリ オプションを表示または変更できます。 **[最小サーバー メモリ]** を 0 に、 **[最大サーバー メモリ]** を 2,147,483,647 MB に設定しておくと、オペレーティング システムおよび他のアプリケーションによって現在どれだけの量のメモリが使用されているかに応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に最適な量のメモリを利用できます。 コンピューターと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の負荷が変化すると、割り当てメモリも変化します。 この動的メモリ割り当ては、次に示す最小値および最大値に制限できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "36077388"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最小割り当てメモリ以上で起動されること、およびこの値を下回ってメモリを解放しないことを指定します。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのサイズおよび動作に基づいて設定します。 オペレーティング システムが要求する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のメモリが多くなりすぎて Windows パフォーマンスが低下することのないように、このオプションは常に妥当な値に設定しておきます。  
   
  **[最大サーバー メモリ (MB)]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動時および実行時に割り当てることができる最大メモリ量を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同時に複数のアプリケーションを実行し、これらのアプリケーションの実行に十分なメモリを確保する場合、この構成オプションを特定の値に設定できます。 他のアプリケーション (Web サーバー、電子メール サーバーなど) からは、必要なときにのみメモリを要求する場合には、このオプションを設定しないでください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はそれらのアプリケーションに対し、必要に応じてメモリを解放します。 ただし、多くのアプリケーションでは起動時に利用可能なメモリをできるだけ確保し、その後必要に応じてさらに要求することはありません。 このように動作するアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と同時に同じコンピューター上で実行されている場合、アプリケーションの要求するメモリが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に割り当てられないようにするために、このオプションを適切な値に設定します。 指定できるメモリ量が最小**サーバー メモリの最大**は 64 ビット システムの 32 ビット システムと 128 MB にとって 64 メガバイト (MB)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動時および実行時に割り当てることができる最大メモリ量を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同時に複数のアプリケーションを実行し、これらのアプリケーションの実行に十分なメモリを確保する場合、この構成オプションを特定の値に設定できます。 他のアプリケーション (Web サーバー、電子メール サーバーなど) からは、必要なときにのみメモリを要求する場合には、このオプションを設定しないでください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はそれらのアプリケーションに対し、必要に応じてメモリを解放します。 ただし、多くのアプリケーションでは起動時に利用可能なメモリをできるだけ確保し、その後必要に応じてさらに要求することはありません。 このように動作するアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と同時に同じコンピューター上で実行されている場合、アプリケーションの要求するメモリが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に割り当てられないようにするために、このオプションを適切な値に設定します。 指定できるメモリの最小容量**サーバー メモリの最大**64 メガバイト (MB) は、32 ビット システムと 128 MB の 64 ビット システム。  
   
  **[インデックス作成メモリ (KB 単位、0 = 動的メモリ)]**  
  インデックス作成時の並べ替え操作中に使用するメモリの量を KB 単位で指定します。 既定値の 0 は動的割り当てを有効にするもので、特別な調整を必要とすることなくほとんどのケースで使用できます。ユーザーは、704 ～ 2,147,483,647 の範囲内で値を指定できます。  

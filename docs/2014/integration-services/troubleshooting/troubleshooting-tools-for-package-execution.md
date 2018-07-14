@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 37c82e4f4977e9749413a29fd539379476b29c47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b6b76ce027321eb681a2cd6872c1b24050c569f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329912"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>パッケージ実行のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージを完成して配置した後、そのパッケージの実行時のトラブルシューティングに使用できる機能とツールが含まれています。  
@@ -56,13 +56,13 @@ ms.locfileid: "36075314"
   
 -   **関連情報をエラー出力に追加する**。 エラー出力から提供される 2 列の数値識別子だけでなく、説明的な情報を追加すると、エラー出力の分析が容易になります。  
   
-     **エラーの説明を追加**です。 スクリプト コンポーネントを使用することで、エラーの説明を容易に参照できます。 詳細については、次を参照してください。[スクリプト コンポーネントのエラー出力の強化](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)です。  
+     **エラーの説明を追加**します。 スクリプト コンポーネントを使用することで、エラーの説明を容易に参照できます。 詳細については、次を参照してください。[スクリプト コンポーネントのエラー出力の強化](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)します。  
   
-     **エラー列の名前を追加**です。 エラー出力に保存されている列 ID に対応する列名は、スクリプト コンポーネントでは容易に参照できず、追加手順が必要です。 データ フロー内の各列の ID は、データ フロー タスク内では一意で、パッケージのデザイン時に保存されます。 列名をエラー出力に追加する 1 つの方法として、次のような方法があります。 このアプローチを使用する方法の例は、次を参照してください。[エラー列名、エラー出力への追加](http://go.microsoft.com/fwlink/?LinkId=261546)dougbert.com です。  
+     **エラー列の名前を追加**します。 エラー出力に保存されている列 ID に対応する列名は、スクリプト コンポーネントでは容易に参照できず、追加手順が必要です。 データ フロー内の各列の ID は、データ フロー タスク内では一意で、パッケージのデザイン時に保存されます。 列名をエラー出力に追加する 1 つの方法として、次のような方法があります。 このアプローチを使用する方法の例は、次を参照してください。[エラー出力にエラー列名を追加](http://go.microsoft.com/fwlink/?LinkId=261546)dougbert.com します。  
   
     1.  **列名のルックアップ テーブルを作成**です。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API を使用する別のアプリケーションを作成します。保存される各パッケージ、パッケージ内の各データ フロー、データ フロー内の各オブジェクト、データ フロー オブジェクト内の各入出力で、このアプリケーションを繰り返し実行します。 アプリケーションでは、列 ID と参照テーブルでの各列の名前を、親データ フロー タスクとパッケージ ID と共に保存します。  
   
-    2.  **出力に列名を追加**です。 前の手順で作成した参照テーブルの列名を参照する出力に、参照変換を追加します。 参照では、エラー出力の列 ID、パッケージ ID (システム変数 System::PackageID で使用できます)、データ フロー タスクの ID (システム変数 System::TaskID で使用できます) を使用できます。  
+    2.  **出力に列名を追加**します。 前の手順で作成した参照テーブルの列名を参照する出力に、参照変換を追加します。 参照では、エラー出力の列 ID、パッケージ ID (システム変数 System::PackageID で使用できます)、データ フロー タスクの ID (システム変数 System::TaskID で使用できます) を使用できます。  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>操作レポートを使ったパッケージ実行のトラブルシューティング  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの監視に役立つ標準の操作レポートを使用できます。 これらのパッケージ レポートは、パッケージの状態と履歴を確認したり、必要に応じて失敗の原因を特定したりするのに役立ちます。  
@@ -70,7 +70,7 @@ ms.locfileid: "36075314"
  詳細については、「[パッケージ実行のレポートのトラブルシューティング](troubleshooting-reports-for-package-execution.md)」を参照してください。  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>SSISDB ビューを使ったパッケージ実行のトラブルシューティング  
- クエリを実行してパッケージ実行や操作に関するその他の情報を監視するための複数の SSISDB データベース ビューが用意されています。 詳細については、次を参照してください。[パッケージの実行とその他の操作の監視](../performance/monitor-running-packages-and-other-operations.md)です。  
+ クエリを実行してパッケージ実行や操作に関するその他の情報を監視するための複数の SSISDB データベース ビューが用意されています。 詳細については、次を参照してください。[パッケージの実行とその他の操作の監視を](../performance/monitor-running-packages-and-other-operations.md)します。  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>ログ記録を使ったパッケージ実行のトラブルシューティング  
  ログ記録を有効にすることで、実行中のパッケージで発生する多くの現象を追跡できます。 ログ プロバイダーは、後で分析するために特定のイベントに関する情報をキャプチャし、その情報をデータベース テーブル、フラット ファイル、XML ファイルなどのサポートされている出力形式で保存します。  
@@ -97,9 +97,9 @@ ms.locfileid: "36075314"
 ## <a name="troubleshoot-run-time-validation-issues"></a>実行時検証問題のトラブルシューティング  
  パッケージ内の前のタスクの実行が完了するまで、データ ソースに接続できなかったり、パッケージの一部を検証できなかったりすることがあります。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、こうした状況が原因で発生する検証エラーを回避するための以下の機能が備わっています。  
   
--   **パッケージが読み込まれるときには無効になっているパッケージ要素の DelayValidation プロパティを構成する**。 設定することができます`DelayValidation`に`True`パッケージ要素の構成は、パッケージが読み込まれるときに検証エラーを防ぐために、無効にします。 たとえば、SQL 実行タスクが実行時に作成するまで存在しないテーブルを、データ フロー タスクで使用する場合があります。 `DelayValidation`パッケージ レベル、または個々 のタスクと、パッケージに含まれるコンテナーのレベルでプロパティを有効にすることができます。  
+-   **パッケージが読み込まれるときには無効になっているパッケージ要素の DelayValidation プロパティを構成する**。 設定することができます`DelayValidation`に`True`構成が、パッケージが読み込まれるときに検証エラーを防ぐために、有効でないパッケージ要素。 たとえば、SQL 実行タスクが実行時に作成するまで存在しないテーブルを、データ フロー タスクで使用する場合があります。 `DelayValidation`プロパティは、パッケージ レベル、または個々 のタスクと、パッケージに含まれているコンテナーのレベルで有効にできます。  
   
-     `DelayValidation`プロパティを設定できる、データ フロー タスクではなく個々 のデータ フロー コンポーネント。 個別のデータ フロー コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティを `false` に設定すると、同様の効果を得ることができます。 ただし、このプロパティの値は、いつ`false`コンポーネントは外部データ ソースのメタデータへの変更を認識しません。 設定すると`true`、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>プロパティが特にパッケージがトランザクションを使用する場合、データベース内のロックによってブロックの問題を避けるために役立ちます。  
+     `DelayValidation`プロパティを設定できるデータ フロー タスクではなく個々 のデータ フロー コンポーネント。 個別のデータ フロー コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティを `false` に設定すると、同様の効果を得ることができます。 ただし、このプロパティの値は、いつ`false`コンポーネントが外部データ ソースのメタデータへの変更に注意してください。 設定すると`true`、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>プロパティは、特にパッケージがトランザクションを使用する場合、データベースでロックに起因するブロックの問題を回避するのに役立ちます。  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>実行時の権限の問題のトラブルシューティング  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して配置済みパッケージの実行を試みたときにエラーが発生した場合は、エージェントが使用しているアカウントに必要な権限がない可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブから実行するパッケージのトラブルシューティング方法については、「 [SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出すとき、SSIS パッケージが実行されません。](http://support.microsoft.com/kb/918760)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブからパッケージを実行する方法の詳細については、「[パッケージに対する SQL Server エージェント ジョブ](../packages/sql-server-agent-jobs-for-packages.md)」を参照してください。  

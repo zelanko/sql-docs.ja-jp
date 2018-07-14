@@ -1,5 +1,5 @@
 ---
-title: 計算されるメンバーを作成 |Microsoft ドキュメント
+title: 計算されるメンバーの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculated members [Analysis Services]
 - custom measures [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d12f7ef55272960d8e120fd46dec4039ca036cbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b55ab5f489ce9a8b24f6ad39dde643f30c3712f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228362"
 ---
 # <a name="create-calculated-members"></a>計算されるメンバーの作成
   キューブ データ、算術演算子、数値、関数などを組み合わせることによって、「計算されるメンバー」と呼ばれる、カスタマイズされたメジャーまたはディメンション メンバーを作成できます。 たとえば、既存のドル メジャーに換算率を掛けて、ドルをユーロに換算する、Euro という計算されるメンバーを作成できます。 Euro は、別個の行または列に表示されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "36077223"
   
  計算されるメンバーはキューブで作成します。 計算されるメンバーを作成するには、キューブ デザイナーの **[計算]** タブで、ツール バーの **[新しい計算されるメンバー]** アイコンをクリックします。 このコマンドでは、計算されるメンバーの次のオプションを指定するためのフォームが表示されます。  
   
- **Name**  
+ **名前**  
  計算されるメンバーの名前を選択します。 キューブを参照すると、この名前は、計算されるメンバーの値の列または行のヘッダーとして表示されます。  
   
  **親階層**  
@@ -85,6 +85,6 @@ ms.locfileid: "36077223"
 -   計算されるメンバーがメジャー ディメンションで作成された場合、そのメンバーはそのディメンション内でアドレス指定可能です。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルでの計算](calculations-in-multidimensional-models.md)  
+ [多次元モデルの計算](calculations-in-multidimensional-models.md)  
   
   

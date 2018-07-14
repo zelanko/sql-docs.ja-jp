@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -23,13 +23,13 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 125bcb31a9edb23e4ffe3ba05cdc46227da33cac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ecae86e05bc67275d21d0811d3b1abd642a7e62c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201622"
 ---
 # <a name="error-handling-in-data"></a>データのエラー処理
   データ フロー コンポーネントが変換を列データに適用したり、変換元のデータを抽出したり、変換先にデータを読み込んだりするときに、エラーが発生する場合があります。 エラーが発生する原因の主なものは、予期しないデータ値です。 たとえば、数字ではなく文字列が列に含まれる場合、データ変換は失敗します。また、データは日付データであるが列のデータ型は数値の場合、データベース列への挿入は失敗します。あるいは、列の値が 0 の場合に数学的演算の結果が無効となり、それが原因で式の評価が失敗します。  
@@ -72,7 +72,7 @@ ms.locfileid: "36082809"
 ## <a name="adding-the-error-description"></a>エラーの説明の追加  
  既定では、エラー出力により数値エラー コードが提供され、通常、エラー出力にはエラーが発生した列の ID が含まれています。 スクリプト コンポーネントを使用して追加列にエラーの説明を含めることができます。この操作は、1 行のスクリプトを使用して、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを呼び出して行います。  
   
- このスクリプト コンポーネントは、エラーをキャプチャするデータ フロー コンポーネントよりデータ フローの下流にある任意のエラー セグメントに追加できますが、エラー行を出力先に書き込む直前の位置に配置するのが普通です。 これによりスクリプトは、書き込まれたエラー行についてのみ、説明を参照することができます。 たとえば、データ フロー内のエラー セグメントでエラーの一部が修正され、出力先にエラー行が書き込まれないこともあり得るからです。 詳細については、次を参照してください。[スクリプト コンポーネントによるエラー出力の強化](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)です。  
+ このスクリプト コンポーネントは、エラーをキャプチャするデータ フロー コンポーネントよりデータ フローの下流にある任意のエラー セグメントに追加できますが、エラー行を出力先に書き込む直前の位置に配置するのが普通です。 これによりスクリプトは、書き込まれたエラー行についてのみ、説明を参照することができます。 たとえば、データ フロー内のエラー セグメントでエラーの一部が修正され、出力先にエラー行が書き込まれないこともあり得るからです。 詳細については、次を参照してください。[スクリプト コンポーネントによるエラー出力の強化](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)します。  
   
 ### <a name="to-configure-an-error-output"></a>エラー出力を構成するには  
   

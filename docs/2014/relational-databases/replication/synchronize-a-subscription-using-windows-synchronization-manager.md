@@ -1,5 +1,5 @@
 ---
-title: Windows 同期マネージャー (Windows 同期マネージャー) を使用してサブスクリプションを同期する |Microsoft ドキュメント
+title: Windows 同期マネージャー (Windows Synchronization Manager) を使用してサブスクリプションの同期 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], Windows Synchronization Manager
 - Windows Synchronization Manager
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2a51020379a56f56465bb7b252a65de5323e39ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 774399103f4ea92e0415c5a5222c7a74644c9d8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276268"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したサブスクリプションの同期 (Windows 同期マネージャー)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が同期マネージャーと同じコンピューターで実行されている場合には、サブスクリプションを Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションに同期させるためだけに使用できます (オフライン ファイルや Web ページを同期するためにも使用できます)。 同期マネージャーを使用するには、以下の手順を実行します。  
@@ -50,7 +50,7 @@ ms.locfileid: "36077500"
   
     -   **[スタート]** ボタンをクリックし、 **[プログラム]** または **[すべてのプログラム]** をポイントします。 **[アクセサリ]** をポイントし、 **[同期]** をクリックします。  
   
-    -   **[スタート]** メニューの **[ファイル名を指定して実行]** **実行** ダイアログ ボックスで、「`mobsync.exe`で、**開く**フィールドをクリックしてして**ok**です。  
+    -   **[スタート]** メニューの **[ファイル名を指定して実行]** **実行**ダイアログ ボックスに「`mobsync.exe`で、**オープン**フィールドをクリックしてして **[ok]**。  
   
 2.  **[同期する項目]** ダイアログ ボックスで、同期するサブスクリプションを選択します。 サブスクリプションは、そのコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの下に表示されます。  
   

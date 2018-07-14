@@ -1,5 +1,5 @@
 ---
-title: チュートリアル (レポート ビルダー) |Microsoft ドキュメント
+title: チュートリアル (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92d54d4e6f0db25605bf3d59ac7de59953d43d71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d5c422eded8ac3ffb54306790c88a80b0f841736
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266158"
 ---
 # <a name="tutorials-report-builder"></a>チュートリアル (レポート ビルダー)
   以下のレポート ビルダー チュートリアルでは、基本的なレポートを作成する方法について学習できます。  
@@ -29,10 +29,10 @@ ms.locfileid: "36076146"
   
  これらの前提条件については、レポート サーバー管理者に問い合わせてください。  
   
- [別の方法でデータ接続を取得する&#40;レポート ビルダー&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
+ [データ接続を取得する別の方法&#40;レポート ビルダー&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
  これらのチュートリアルのほとんどでは、埋め込みデータ ソースを使用します。 共有データ ソースにアクセスできる場合は、代わりに共有データ ソースを使用できます。 ここでは、共有データ ソースを使用する方法の手順を紹介します。  
   
- [チュートリアル: 基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
+ [チュートリアル: 基本的なテーブル レポートの作成&#40;レポート ビルダー&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
  レポートを初めて作成する場合は、このチュートリアルの手順に従ってください。 このチュートリアルでは、レポート ビルダーを使用してデータ ソース接続を作成する方法、簡単なクエリを定義する方法、データを格納するレイアウトを構築する方法、レポートの書式を設定する方法、およびグループと合計を追加する方法について説明します。  
   
  [チュートリアル: マトリックス レポートの作成&#40;レポート ビルダー&#41;](tutorial-creating-a-matrix-report-report-builder.md)  

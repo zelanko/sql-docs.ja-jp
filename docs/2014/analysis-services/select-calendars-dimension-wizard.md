@@ -1,5 +1,5 @@
 ---
-title: カレンダー (ディメンション ウィザード) の選択 |Microsoft ドキュメント
+title: カレンダー (ディメンション ウィザード) の選択 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.serverSpecialCalendars.f1
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6796c7c3064adc65982b1d5aaec005249e224cae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7166b39dd5cc9d8a2a4cbb6da1c8f44d49181d46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245592"
 ---
 # <a name="select-calendars-dimension-wizard"></a>[カレンダーの選択] (ディメンション ウィザード)
   **[カレンダーの選択]** ページを使用すると、会計カレンダー、レポート カレンダー、製造カレンダー、ISO (国際標準化機構) 8601 カレンダーを表す階層を作成し、時間ディメンションに追加できます。  
@@ -54,7 +54,7 @@ ms.locfileid: "36076918"
 > [!NOTE]  
 >  このオプションは、 **[レポート (またはマーケティング) カレンダー]** が選択されている場合に使用できます。  
   
- **月のパターンが週**  
+ **パターンの月単位の週**  
  レポート カレンダーで使用される月単位の週のパターンを選択します。  
   
 > [!NOTE]  
@@ -77,7 +77,7 @@ ms.locfileid: "36076918"
 > [!NOTE]  
 >  このオプションは、 **[製造カレンダー]** が選択されている場合に使用できます。  
   
- **余分なピリオドを含む四半期**  
+ **追加期間を含む四半期**  
  追加期間を含む四半期を選択するか、入力します。  
   
 > [!NOTE]  

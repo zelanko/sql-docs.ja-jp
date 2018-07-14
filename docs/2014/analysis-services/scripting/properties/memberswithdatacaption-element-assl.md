@@ -1,5 +1,5 @@
 ---
-title: MembersWithDataCaption 要素 (ASSL) |Microsoft ドキュメント
+title: MembersWithDataCaption 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MembersWithDataCaption element
 ms.assetid: a5d59efd-5d67-485b-a360-67d54a1fe394
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ef845a4c77a66ad1c59a0bdad527856a86849de9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd8884d67717267e44751841203ce2f73d07ecfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202302"
 ---
 # <a name="memberswithdatacaption-element-assl"></a>MembersWithDataCaption 要素 (ASSL)
   システムによって生成されるデータ メンバーのキャプションを作成するためのテンプレート文字列を提供します。  
@@ -62,9 +62,9 @@ ms.locfileid: "36083275"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 値、`MembersWithDataCaption`要素は親属性によってのみ使用 (つまり、他の値、[使用状況](usage-element-dimensionattribute-assl.md)の要素、`DimensionAttribute`に設定されている親要素*親*) を決定する、親属性内のデータ メンバーのキャプションです。 データ メンバーの詳細については、「 [親子階層の属性](../../multidimensional-models/parent-child-dimension-attributes.md)」を参照してください。  
+ 値、`MembersWithDataCaption`要素の親属性によってのみ使用されます (つまり、他の値、[使用状況](usage-element-dimensionattribute-assl.md)の要素、`DimensionAttribute`に設定されている親要素*親*) を判断、親属性内のデータ メンバーのキャプション。 データ メンバーの詳細については、「 [親子階層の属性](../../multidimensional-models/parent-child-dimension-attributes.md)」を参照してください。  
   
- 親に対応する要素`MembersWithDataCaption`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.AttributeTranslation>と<xref:Microsoft.AnalysisServices.DimensionAttribute>です。  
+ 親に対応する要素`MembersWithDataCaption`分析管理オブジェクト (AMO) オブジェクト モデルは、<xref:Microsoft.AnalysisServices.AttributeTranslation>と<xref:Microsoft.AnalysisServices.DimensionAttribute>します。  
   
 ## <a name="see-also"></a>参照  
  [MembersWithData 要素&#40;ASSL&#41;](../objects/data-element-assl.md)   

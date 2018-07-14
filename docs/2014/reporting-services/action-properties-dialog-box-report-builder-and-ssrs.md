@@ -1,5 +1,5 @@
 ---
-title: '[アクション プロパティ] ダイアログ ボックス (レポート ビルダーおよび SSRS) |Microsoft ドキュメント'
+title: アクション プロパティ ダイアログ ボックス (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
 - "10413"
@@ -34,15 +34,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4cae7e5c0de408c4a2ed9636e3c941f8e0a32b0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e245d03b32dc48a96b0f1d967cc7c83b684654ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323762"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>[アクション プロパティ] ダイアログ ボックス (レポート ビルダーおよび SSRS)
   **[アクション]** ダイアログ ボックスでは、グラフ、ゲージ、およびリンクをサポートするマップ要素に対してハイパーリンク オプションを有効にできます。 ユーザーがレポート上でクリックして、URL、同じレポート サーバーまたはレポート サーバーと統合されている SharePoint サイト上の他のレポート、または同じレポート内の他の場所にリンクできるようにアクションを定義します。  
@@ -54,7 +54,7 @@ ms.locfileid: "36077273"
  **なし**  
  アイテムに対するアクションがないことを示します。  
   
- **レポートに移動します。**  
+ **レポートに移動するには**  
  レポート サーバー上にある詳細レポートへのリンクを作成します。 **[レポートに移動する]** をクリックすると、次のオプションが表示されます。  
   
  **レポートを指定します。**  
@@ -62,17 +62,17 @@ ms.locfileid: "36077273"
   
  ネイティブ モード用に構成されているレポート サーバーにレポートをパブリッシュする場合は、ファイル名の拡張子を含まない完全パスまたは相対パスを指定します。 レポートが現在のレポートと同じフォルダーに保存されている場合は、レポートの名前のみを使用します。 レポートが、同じレポート サーバー上の別のフォルダーに保存されている場合は、相対パスまたは完全パスを使用します。 相対パスは、現在のフォルダーから始まり、フォルダー階層を上に移動します (例: ../Folder2/Report1)。 完全パスは Home フォルダー「/」から始まります。 たとえば、「/Reports/Report1」のように指定します。  
   
- SharePoint 統合モードで構成されているレポート サーバーにレポートをパブリッシュする場合は、ファイル名の拡張子 (.rdl) を含めた完全修飾 URL を指定します。 たとえば、http://*\<SharePointservername >/\<サイト >*/Documents/Report1.rdl です。 相対パスはサポートされません。  
+ SharePoint 統合モードで構成されているレポート サーバーにレポートをパブリッシュする場合は、ファイル名の拡張子 (.rdl) を含めた完全修飾 URL を指定します。 たとえば、http://*\<SharePointservername >/\<サイト >*/Documents/Report1.rdl します。 相対パスはサポートされません。  
   
  詳細については、msdn.microsoft.com の[レポート ビルダーに関するドキュメント](http://go.microsoft.com/fwlink/?LinkId=154494)の「[外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS)](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
   
- **これらのパラメーターを使用してレポートを実行するには**  
+ **これらのパラメーターを使用して、レポートを実行するには**  
  詳細レポートに渡すパラメーターの一覧を追加します。 パラメーター名は、対象のレポートで定義されているパラメーターと一致する必要があります。 パラメーターを追加または削除するには **[追加]** ボタンまたは **[削除]** ボタンを使用し、パラメーターの一覧の順序を設定するには上矢印および下矢印を使用します。  
   
  **[追加]**  
  詳細レポートに渡す新しいパラメーターを追加します。  
   
- **Delete**  
+ **削除**  
  詳細レポートのパラメーターを削除します。  
   
  **上矢印**  
@@ -81,11 +81,11 @@ ms.locfileid: "36077273"
  **下矢印**  
  パラメーターを一覧内で下に移動します。  
   
- **Name**  
+ **名前**  
  詳細レポートで定義されているパラメーターの名前のテキストを入力します。  
   
- **Value**  
- 詳細レポート内の名前付きパラメーターに渡す値を入力または選択します。 式を編集するには、 **「式」** (*fx*) ボタンをクリックします。  
+ **[値]**  
+ 詳細レポート内の名前付きパラメーターに渡す値を入力または選択します。 式を編集するには、 **[式]** (*[fx]*) ボタンをクリックします。  
   
  **省略します。**  
  パラメーターを実行しないようにする場合にオンにします。 既定では、このチェック ボックスはオフになっており、アクティブではありません。 このチェック ボックスをオンにするには、 **式** (*[fx]*) ボタンをクリックし、「 **True** 」と入力するか式を作成します。 このチェック ボックスは、 **[式]** ダイアログ ボックスで **[OK]** をクリックするとオンになります。  
@@ -98,11 +98,11 @@ ms.locfileid: "36077273"
   
  ブックマークにリンクするには、まずレポート アイテムの Bookmark プロパティを設定する必要があります。 Bookmark プロパティを設定するには、レポート アイテムを選択し、プロパティ ペインでブックマーク ID の値または式 (SalesChart、5TopSales など) を入力します。  
   
- **URL に移動します。**  
+ **URL に移動するには**  
  Web ページへのリンクを定義します。 Web ページの URL、または結果が Web ページの URL になる式を入力または選択します。 式を変更するには、 **式** (*[fx]*) ボタンをクリックします。 この式には、URL が格納されているフィールドを含めることができます。 **[URL に移動する]** をクリックすると、次のオプションが表示されます。  
   
  **URL を選択します。**  
- アイテムの URL を入力します。 ネイティブ モード用に構成されているレポート サーバーにアイテムをパブリッシュする場合は、完全パスまたは相対パスを指定します。 たとえば、http://*\<servername >*/images/image1.jpg です。 アイテムを SharePoint 統合モードで構成されているレポート サーバーにパブリッシュする場合、完全修飾 URL を使用して (たとえば、http://*\<SharePointservername >/\<サイト >* ドキュメント イメージ//image1.jpg)。  
+ アイテムの URL を入力します。 ネイティブ モード用に構成されているレポート サーバーにアイテムをパブリッシュする場合は、完全パスまたは相対パスを指定します。 たとえば、http://*\<servername >*/images/image1.jpg します。 アイテムを SharePoint 統合モードで構成されているレポート サーバーにパブリッシュする、完全修飾 URL を使用 (たとえば、http://*\<SharePointservername >/\<サイト >* ドキュメント/イメージ/image1.jpg)。  
   
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   

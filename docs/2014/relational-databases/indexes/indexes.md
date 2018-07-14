@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b501af28b1c9fbfb8f8fbdca9099aa11d4f2e3db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 007728b4f429cd0857a2131fb25c9de53b2258db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177749"
 ---
 # <a name="indexes"></a>インデックス
   次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるインデックスの種類および追加情報へのリンクを示します。  
@@ -38,7 +37,7 @@ ms.locfileid: "36083918"
 |計算列のインデックス|その他の列の値 (複数可) から、または特定の決定的入力から導かれる列のインデックスです。|[計算列のインデックス](indexes-on-computed-columns.md)|  
 |フィルター選択されたインデックス|最適化された非クラスター化インデックスです。このインデックスは、適切に定義されたデータのサブセットから選択するクエリに対応する際に特に適しています。 フィルター選択されたインデックスは、フィルター述語を使用して、テーブル内の一部の行にインデックスを作成します。 フィルター選択されたインデックスを適切にデザインすると、クエリのパフォーマンスが向上し、インデックスのメンテナンス コストを削減して、テーブル全体のインデックスと比較してインデックスのストレージ コストを削減することができます。|[フィルター選択されたインデックスの作成](create-filtered-indexes.md)|  
 |空間インデックス|空間インデックスを使用すると、*geometry*データ型の列に含まれる空間オブジェクト ( **空間データ** ) に対する一部の操作をより効率的に実行できます。 空間インデックスにより、比較的コストの高い空間操作を適用するオブジェクトの数を減らすことができます。|[空間インデックスの概要](../spatial/spatial-indexes-overview.md)|  
-|XML|XML バイナリ ラージ オブジェクト (Blob) での細分化および永続化表現、`xml`データ型の列です。|[XML インデックス &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
+|XML|XML バイナリ ラージ オブジェクト (Blob) での細分化および永続化表現、`xml`データ型の列。|[XML インデックス &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
 |フルテキスト|Microsoft Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]により構築および管理されるトークンベースの特殊な機能インデックスです。 文字列データに対する高度な単語検索を効率的にサポートします。|[フルテキスト インデックスの作成](../search/populate-full-text-indexes.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  

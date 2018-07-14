@@ -1,5 +1,5 @@
 ---
-title: オプション (テキスト エディター - すべての言語の 全般 ページ) |Microsoft ドキュメント
+title: オプション ([テキスト エディターのすべての言語]/[全般] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.General
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 caps.latest.revision: 28
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f04e097b7dec9d502848c9dc095c40ba8daa1ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39394ea71a428d634bcee27adc2b76a3fca4af02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189079"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>[オプション] ([テキスト エディター]/[すべての言語]/[全般] ページ)
   このダイアログ ボックスを使用すると、全部で 5 つある [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のすべてのエディターの全般的な編集オプションを設定できます。 これらのオプションを表示するには、**[ツール]** メニューの **[オプション]** をクリックします。 **[テキスト エディター]** フォルダーを選択し、**[すべての言語]** フォルダーを展開して、**[全般]** をクリックします。  
@@ -38,7 +38,7 @@ ms.locfileid: "36083038"
  **自動メンバー表示**  
  エディターでの入力に合わせて、使用できるメンバー、プロパティ、または値のポップアップ リストを表示します。 ポップアップ リストから項目を選択してコードに挿入します。 このチェック ボックスをオンにすると、**[メンバーの詳細を非表示]** オプションが有効になります。  
   
- **高度なメンバーを非表示します。**  
+ **高度なメンバーを非表示にします。**  
  最もよく使われる項目だけを一覧に表示して、入力候補のポップアップ リストを簡潔にします。 他の項目は一覧から除外されます。 高度なメンバーとしてマークされているメンバーがない場合、このオプションは使用できません。  
   
  **パラメーター情報**  
@@ -57,7 +57,7 @@ ms.locfileid: "36083038"
 > [!NOTE]  
 >  改行インジケーターはコードに追加されているわけではないので、印刷されません。 これは単に表示用です。 クエリ エディターの種類によっては、この機能が使用できない場合もあります。  
   
- **選択されていない場合は、切り取り/コピー コマンドを空白行に適用します。**  
+ **選択されていない場合は、空白行に切り取り/コピー コマンドを適用します。**  
  空白行にカーソルを置き、何も選択していない状態で **[コピー]** または **[切り取り]** をクリックしたときのエディターの動作を設定します。  
   
  このチェック ボックスがオンの場合、空白行がコピーまたは切り取られます。 その後で **[貼り付け]** をクリックすると、新しい空白行が挿入されます。  

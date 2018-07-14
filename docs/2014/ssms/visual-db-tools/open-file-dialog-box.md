@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.openfile
 - vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8322a69cfcb195be1d7eda558c4daa3a697085aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fa90faefc21d610be9431faa7e4d10a43797d3b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249842"
 ---
 # <a name="open-file-dialog-box"></a>[ファイルを開く] ダイアログ ボックス
   ディスクから既存のファイルを開くには、**[ファイルを開く]** ダイアログ ボックスを使用します。 また、このダイアログ ボックスを使用すると、別の言語エンコード オプションを使用して既に開かれているファイルを開くこともできます。  
@@ -66,7 +66,7 @@ ms.locfileid: "36077244"
  **[Web の検索]**  
  このボタンは使用できません。  
   
- **Delete**  
+ **削除**  
  選択したファイルまたはフォルダーを記憶域から削除します。  
   
  **[新しいフォルダー]**  
@@ -96,7 +96,7 @@ ms.locfileid: "36077244"
 ## <a name="tools"></a>ツール  
  内容ペインで選択した項目に適用するツールを選択します。  
   
- **Delete**  
+ **削除**  
  選択したファイルまたはフォルダーを記憶域から削除します。  
   
  **[ネットワーク ドライブの割り当て]**  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - Windows Server Failover Clustering (WSFC), with SQL Server
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5489a7997f6b4aab1ef61226b90fe4de7cb28473
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d3fa961c07b1a4fbf9d688d31b2451598e5c8ca2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187739"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server
   *Windows Server フェールオーバー クラスタリング* (WSFC) クラスターは、アプリケーションとサービスの可用性を高めるために連携する独立したサーバーのグループです。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] は、WSFC サービスと機能を活用して [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスをサポートします。  
@@ -84,7 +83,7 @@ ms.locfileid: "36083801"
  詳細については、「 [Windows Server 2008 R2 のフェールオーバー クラスター](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)」を参照してください。  
   
 ##  <a name="AlwaysOnWsfcTech"></a> SQL Server AlwaysOn テクノロジと WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn*は、新しい高可用性と災害復旧ソリューションの WSFC を利用します。 AlwaysOn は、アプリケーションの可用性を高め、ハードウェア投資の回収率を上げ、高可用性配置と管理を簡素化する、統合された柔軟なソリューションを提供します。  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn*は、新しい高可用性とディザスター リカバリー ソリューションの WSFC を利用します。 AlwaysOn は、アプリケーションの可用性を高め、ハードウェア投資の回収率を上げ、高可用性配置と管理を簡素化する、統合された柔軟なソリューションを提供します。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と AlwaysOn フェールオーバー クラスター インスタンスのどちらも WSFC をプラットフォーム テクノロジとして使用して、コンポーネントとしてを WSFC クラスター リソースとして登録します。  関連するリソースは *リソース グループ*としてまとめられ、他の WSFC クラスター リソースに依存するように設定できます。 これによって、WSFC クラスター サービスは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを再起動する必要がある場合はこれを検出して通知したり、WSFC クラスター内の他のサーバー ノードに自動的にフェールオーバーしたりします。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "36083801"
 > [!NOTE]  
 >  AlwaysOn フェールオーバー クラスター インスタンスには、ストレージ エリア ネットワーク (SAN)、SMB ファイル共有などの対称的な共有ディスク ストレージが必要です。  共有ディスク ストレージ ボリュームは、WSFC クラスター内のすべてのフェールオーバー ノードで使用できる必要があります。  
   
- 詳細についてを参照してください: [AlwaysOn フェールオーバー クラスター インスタンス](always-on-failover-cluster-instances-sql-server.md)  
+ 詳細については、次を参照してください: [AlwaysOn フェールオーバー クラスター インスタンス。](always-on-failover-cluster-instances-sql-server.md)  
   
 ### <a name="database-level-high-availability-with-includesshadrincludessshadr-mdmd"></a>データベース レベルの高可用性 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
  *可用性グループ* は、共にフェールオーバーするユーザー データベースのセットです。 可用性グループは、1 つのプライマリ *可用性レプリカ* と、共有ストレージを必要としないデータ保護のために SQL Server ログに基づくデータ移動を介して維持される 1 ～ 4 個のセカンダリ レプリカから構成されます。 各レプリカは、WSFC クラスターの別々のノードにある [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスによってホストされます。 可用性グループとこれに対応する仮想ネットワーク名は、WSFC クラスターのリソースとして登録されます。  

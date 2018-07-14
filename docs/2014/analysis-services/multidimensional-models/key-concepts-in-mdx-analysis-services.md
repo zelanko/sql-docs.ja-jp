@@ -1,5 +1,5 @@
 ---
-title: 重要な概念 (Analysis Services) の MDX の |Microsoft ドキュメント
+title: MDX (Analysis Services) での基本概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], about MDX
 - dimensional modeling [MDX]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 060ad452001605ee0df4d0c84381044cb38e6493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5d6e59827b0b816b898322adf729d2299540e38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272018"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX の主な概念 (Analysis Services)
   多次元式 (MDX) を使用して多次元データを照会したり、キューブ内で MDX 式を作成したりするには、多次元の概念と用語を理解しておく必要があります。  
@@ -65,11 +65,11 @@ ms.locfileid: "36075843"
   
  このような集計は、事前に計算され、保存されます。これが、Analysis Services のクエリ パフォーマンスが優れている秘密の一部です。  
   
- ![すべてのメンバーが呼び出されたピボット テーブル](../media/ssas-keyconcepts-pivot2-allmember.png "すべてのメンバーが呼び出されたピボット テーブル")  
+ ![呼び出されたすべてのメンバーを含むピボット テーブル](../media/ssas-keyconcepts-pivot2-allmember.png "が呼び出されたすべてのメンバーを含むピボット テーブル")  
   
  階層を展開すると、最終的に、最下位レベルに到達します。 これは **リーフ メンバー**と呼ばれます。 リーフ メンバーは、子が存在しない階層のメンバーです。 この例では、Australia がリーフ メンバーです。  
   
- ![リーフ メンバーが呼び出されたピボット テーブル](../media/ssas-keyconcepts-pivot3-leafparent.PNG "リーフ メンバーが呼び出されたピボット テーブル")  
+ ![リーフ メンバー呼び出されるれた PivotTable](../media/ssas-keyconcepts-pivot3-leafparent.PNG "リーフ メンバー呼び出されるれた PivotTable")  
   
  上位にあるものは **親メンバー**と呼ばれます。 Pacific は Australia の親です。  
   
@@ -95,13 +95,13 @@ ms.locfileid: "36075843"
   
 |||  
 |-|-|  
-|![均衡階層が呼び出されたピボット テーブル](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "均衡階層が呼び出されたピボット テーブル")|**均衡階層** は、最上位メンバーと任意のリーフ メンバーの間のレベル数が等しい階層です。<br /><br /> **自然階層** は基になるデータから自然に発生する階層です。 一般的な例は、それぞれの下位レベルが予想どおり親から派生する、国/地域/州や年/月/日などのカテゴリ/サブカテゴリ モデルです。<br /><br /> 多次元モデルでは、ほとんどの階層が均衡階層で、その多くが自然階層でもあります。<br /><br /> 別の関連がモデリング用語、`user-defined hierarchy`属性階層と対照的に使用される多くの場合、します。 これは、属性を定義すると Analysis Services によって自動的に生成される属性階層とは対照的に、BI 開発者によって作成される階層を意味します。|  
+|![均衡階層が呼び出されたピボット テーブル](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "均衡階層が呼び出されたピボット テーブル")|**均衡階層** は、最上位メンバーと任意のリーフ メンバーの間のレベル数が等しい階層です。<br /><br /> **自然階層** は基になるデータから自然に発生する階層です。 一般的な例は、それぞれの下位レベルが予想どおり親から派生する、国/地域/州や年/月/日などのカテゴリ/サブカテゴリ モデルです。<br /><br /> 多次元モデルでは、ほとんどの階層が均衡階層で、その多くが自然階層でもあります。<br /><br /> 別の関連モデリング用語、 `user-defined hierarchy`、属性階層と対照的に使用される多くの場合。 これは、属性を定義すると Analysis Services によって自動的に生成される属性階層とは対照的に、BI 開発者によって作成される階層を意味します。|  
   
  **不均衡階層**  
   
 |||  
 |-|-|  
-|![不規則階層が呼び出されたピボット テーブル](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "不規則階層が呼び出されたピボット テーブル")|**不規則階層** または **不均衡階層** は、トップ レベル メンバーとリーフ メンバーの間に存在するレベルの数が一様でない階層です。 これも、BI 開発者によって作成される階層ですが、データが連続していません。<br /><br /> AdventureWorks サンプル モデルでは、United States に他の国には存在しない追加のレベル (Regions) が含まれている Sales Territory が不規則階層を表しています。<br /><br /> 不規則階層は、クライアント アプリケーションでうまく処理されない場合、BI 開発者が対処する必要があります。 Analysis Services モデルでは、複数レベルのデータ間のリレーションシップを明示的に定義することによって、レベル間のあいまいな関係性を排除した **親子階層** を構築できます。 参照してください[親子階層](parent-child-dimension.md)詳細についてはします。|  
+|![不規則階層が呼び出されたピボット テーブル](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "不規則階層が呼び出されたピボット テーブル")|**不規則階層** または **不均衡階層** は、トップ レベル メンバーとリーフ メンバーの間に存在するレベルの数が一様でない階層です。 これも、BI 開発者によって作成される階層ですが、データが連続していません。<br /><br /> AdventureWorks サンプル モデルでは、United States に他の国には存在しない追加のレベル (Regions) が含まれている Sales Territory が不規則階層を表しています。<br /><br /> 不規則階層は、クライアント アプリケーションでうまく処理されない場合、BI 開発者が対処する必要があります。 Analysis Services モデルでは、複数レベルのデータ間のリレーションシップを明示的に定義することによって、レベル間のあいまいな関係性を排除した **親子階層** を構築できます。 参照してください[、親子階層](parent-child-dimension.md)詳細についてはします。|  
   
 ## <a name="key-attributes"></a>キー属性  
  モデルは、キーとインデックスを使って関連付けを示す関連オブジェクトのコレクションです。 Analysis Services モデルについても違いはありません。 ディメンション (リレーショナル モデルのテーブルに相当することを思い出してください) ごとに、キー属性が存在します。 **キー属性** は、ファクト テーブル (メジャー グループ) に対する外部キー リレーションシップで使用されます。 ディメンション内のすべての非キー属性がキー属性に (直接的または間接的に) リンクされます。  
@@ -150,13 +150,13 @@ ms.locfileid: "36075843"
   
 ## <a name="see-also"></a>参照  
  [キューブ空間](mdx/cube-space.md)   
- [組](mdx/tuples.md)   
+ [タプル](mdx/tuples.md)   
  [Autoexists](mdx/autoexists.md)   
- [メンバー、組、およびセット&#40;MDX&#41;](mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [メンバー、組、およびセットの操作&#40;MDX&#41;](mdx/working-with-members-tuples-and-sets-mdx.md)   
  [表示部分の合計と非表示部分の合計](mdx/visual-totals-and-non-visual-totals.md)   
  [MDX クエリの基礎&#40;Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX スクリプティングの基礎&#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [MDX 言語リファレンス&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [多次元式&#40;MDX&#41;参照](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [多次元式&#40;MDX&#41;リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

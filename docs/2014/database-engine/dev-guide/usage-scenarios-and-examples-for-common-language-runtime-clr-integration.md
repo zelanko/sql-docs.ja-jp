@@ -1,5 +1,5 @@
 ---
-title: 使用シナリオと例については、共通言語ランタイム (CLR) 統合 |Microsoft ドキュメント
+title: 共通言語ランタイム (CLR) 統合の使用状況のシナリオと例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,27 +19,27 @@ helpviewer_keywords:
 - managed code [SQL Server], samples
 ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ead4b8976a05e2f27ed4e3f5f44e5de57abfe806
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e2f3ecd38a359da8fa7a3042821742493a82073f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326502"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>CLR (共通言語ランタイム) 統合の使用シナリオと例
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、サンプル アプリケーション、パッケージ サンプル、およびさまざまなコーディング サンプルが含まれています。これらのサンプルを使用することで、CLR (共通言語ランタイム) 統合のプログラミング機能について理解することができます。  
   
- 完全な Visual Studio プロジェクトがこれらのサンプルと追加資料を実装する、次を参照してください。 [Microsoft SQL Server コミュニティ プロジェクト & codeplex サンプル](http://go.microsoft.com/fwlink/?LinkID=193935)です。  
+ 完全な Visual Studio プロジェクトがこれらのサンプルと追加資料を実装する、次を参照してください。 [codeplex のサンプル (&)、Microsoft SQL Server コミュニティのプロジェクト](http://go.microsoft.com/fwlink/?LinkID=193935)します。  
   
 |名前|説明|  
 |----------|-----------------|  
 |[CLR UDF からのネイティブ コードへのアクセス](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|アセンブリ内のユーザー定義関数に含まれるネイティブ (アンマネージ) C++ コードの関数をデータベースから呼び出す方法を紹介します。|  
 |[Array パラメーター サンプル](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|クライアントからサーバー上の CLR 統合ストアド プロシージャに情報の配列を渡すことで、データベース内の一連の行を作成、更新、または削除する方法を例示します。 この処理は、UDT を使って行っています。|  
 |[カレンダー対応の日付と時刻 UDT サンプル](../../../2014/database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md)|日付と時刻のカレンダー対応処理を提供する 2 つの UDT を定義します。|  
-|[CLR Transactions サンプル](../../../2014/database-engine/dev-guide/clr-transactions-sample.md)|System.Transactions 名前空間にあるマネージ API を使用してトランザクションを制御する例を示します。|  
+|[CLR Transactions サンプル](../../../2014/database-engine/dev-guide/clr-transactions-sample.md)|System.Transactions 名前空間にあるマネージド API を使用してトランザクションを制御する例を示します。|  
 |[CLR と XML を使用した連絡先の作成](../../../2014/database-engine/dev-guide/contact-creation-using-clr-and-xml.md)|SQL Server の Contact サンプルは、基礎となる AdventureWorks2012 サンプル データベースに新しい機能の層を追加する便利なユーティリティをいくつか提供します。 1 つ目のユーティリティは、AdventureWorks2012 データベースに関係した、さまざまな人々の連絡先のレコードを作成します。 連絡先の情報は XML を使用して指定され、XML を作成してデータベースの適切なテーブルに配置するための C# ベースのストアド プロシージャまたは VB ストアド プロシージャに渡されます。|  
 |[通貨型と変換関数](../../../2014/database-engine/dev-guide/currency-type-and-conversion-function.md)|C# を使用して Currency ユーザー定義データ型を定義します。|  
 |[CLR を使用したラージ オブジェクトの処理](../../../2014/database-engine/dev-guide/handling-large-objects-using-clr.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と、サーバーからアクセスできるファイル システムとの間で、CLR ストアド プロシージャを使用して LOB (ラージ バイナリ オブジェクト) を転送する例を示します。|  

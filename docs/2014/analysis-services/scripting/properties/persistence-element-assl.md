@@ -1,5 +1,5 @@
 ---
-title: Persistence 要素 (ASSL) |Microsoft ドキュメント
+title: Persistence 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Persistence element
 ms.assetid: dafe3df2-4795-48ea-bebe-33c1a3bf18b6
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1409ee5b58ee0e65aa324bb8009758430ef95224
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44b97b0289b45ca231bc35f0a9690bafcea737e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330292"
 ---
 # <a name="persistence-element-assl"></a>Persistence 要素 (ASSL)
-  調べ、バインドされているソース データのどの部分は動的で指定された頻度を使用して更新プログラムの確認は、 [RefreshPolicy](refreshpolicy-element-assl.md)要素。  
+  バインドされているソース データのどの部分は動的でありで指定された頻度で更新のチェックを決定、 [RefreshPolicy](refreshpolicy-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36083711"
 |*メタデータ*|基になるメタデータは静的ですが、メンバーとデータは動的です。|  
 |*すべて*|基になるメタデータ、メンバー、データはすべて静的です。|  
   
- 許可される値に対応する列挙`Persistence`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.PersistenceType>します。  
+ 許容された値に対応する列挙体`Persistence`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.PersistenceType>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

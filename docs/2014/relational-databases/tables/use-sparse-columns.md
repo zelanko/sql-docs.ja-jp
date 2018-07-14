@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
 - null columns
 - sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f89bf86f17cf274d579ed22d3439f8ec0d7a662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 37706a23164e3948eb139deff9fd1eb14c654e22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204972"
 ---
 # <a name="use-sparse-columns"></a>スパース列の使用
   スパース列は、NULL 値用にストレージが最適化されている通常の列です。 スパース列によって、NULL 以外の値を取得するためのオーバーヘッドは増大しますが、NULL 値に必要となる領域は削減されます。 少なくとも 20 ～ 40% の領域を削減できる場合は、スパース列の使用を検討してください。 スパース列および列セットを定義するには、 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) または [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ステートメントを使用します。  
@@ -124,7 +124,7 @@ ms.locfileid: "36082948"
 ## <a name="restrictions-for-using-sparse-columns"></a>スパース列の使用に関する制限  
  スパース列は、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型にすることができ、他の列と同じように動作しますが、次の制限があります。  
   
--   スパース列は、NULL 値を許容する必要があり、ROWGUIDCOL または IDENTITY プロパティを持つことができません。 スパース列は、次のデータ型にすることはできません: `text`、 `ntext`、 `image`、 `timestamp`、ユーザー定義データ型、 `geometry`、または`geography`; か、FILESTREAM 属性がします。  
+-   スパース列は、NULL 値を許容する必要があり、ROWGUIDCOL または IDENTITY プロパティを持つことができません。 スパース列は、次のデータ型にすることはできません: `text`、 `ntext`、 `image`、 `timestamp`、ユーザー定義データ型、 `geometry`、または`geography`; は FILESTREAM 属性。  
   
 -   スパース列には既定値を設定できません。  
   

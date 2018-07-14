@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.vstahostingui.variablepickermodaldialog.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d78700b3e0d472ff488205dc38809e2727ede903
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a679d04a8c6a39f9bf752eb3a062cb0e5fbd36bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322662"
 ---
 # <a name="select-variables-page"></a>[変数の選択] ページ
   **[変数の選択]** ダイアログ ボックスを使用すると、スクリプト タスクまたはスクリプト コンポーネントを構成するときに、 **ReadOnlyVariables** プロパティおよび **ReadWriteVariables** プロパティで 1 つ以上の変数を選択できます。  
@@ -35,10 +35,10 @@ ms.locfileid: "36082812"
  選択ボックス  
  特定の変数またはすべての変数を選択したり、すべての変数の選択を解除したりします。  
   
- **Name**  
+ **名前**  
  変数の名前を指定します。  
   
- **Type**  
+ **型**  
  変数のデータ型を指定します。  
   
 ## <a name="see-also"></a>参照  

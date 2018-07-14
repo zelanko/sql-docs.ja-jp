@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - XMLSCHEMA option
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8cc6009563ca46e47e40e61c054fbe732ccc401a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e629d7c6e23f5e609f0d6734774d58bbc16f83f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194789"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>インライン XSD スキーマの生成
   FOR XML 句では、クエリからクエリ結果と共にインライン スキーマを返すように要求できます。 XDR スキーマが必要な場合は、FOR XML 句に XMLDATA キーワードを指定します。 XSD スキーマが必要な場合は、XMLSCHEMA キーワードを指定します。  
@@ -69,7 +69,7 @@ ms.locfileid: "36083377"
   
 -   FOR XML クエリの結果の構造が記述されたスキーマ ドキュメント。  
   
- また、型指定された場合`xml`データ型がクエリの結果、型指定されたものに関連付けられているスキーマに含まれる`xml`データ型が含まれています。  
+ また、型指定された場合`xml`データ型がクエリ結果の型指定されたものに関連付けられているスキーマに含まれる`xml`データ型が含まれています。  
   
  FOR XML クエリ結果の構造が記述されたスキーマ ドキュメントの対象の名前空間には、固定部分と自動的に値が増加する数値部分があります。 この名前空間の形式を次に示します。 *n* は正の整数です。 たとえば、上記のクエリでは urn:schemas-microsoft-com:sql:SqlRowSet1 が対象の名前空間です。  
   

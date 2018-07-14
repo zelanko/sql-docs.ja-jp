@@ -1,5 +1,5 @@
 ---
-title: スクリプト変換エディター (入力呼び出し力 ページ) |Microsoft ドキュメント
+title: スクリプト変換エディター (入力と出力 ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.columnproperties.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c3d03826e9259a67ddd113e38ba9b58a9054e067
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 52d82b5ca8010e3343d089281f3f66e85f32864b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077356"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324632"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>[スクリプト変換エディター] ([入力および出力] ページ)
   **[スクリプト変換エディター]** ダイアログ ボックスの **[入力および出力]** ページを使用すると、スクリプト変換の入力および出力を追加、削除、構成できます。  
@@ -56,9 +56,9 @@ ms.locfileid: "36077356"
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [スクリプト コンポーネントの種類を選択します。](../../2014/integration-services/select-script-component-type.md)   
- [[スクリプト変換エディター&#40;入力列] ページ&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [[スクリプト変換エディター &#40;[スクリプト] ページ&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [[スクリプト変換エディター&#40;接続マネージャー] ページ&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [スクリプト変換エディター&#40;入力列 ページ&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [スクリプト変換エディター &#40;[スクリプト] ページ&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [スクリプト変換エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [その他のスクリプト コンポーネントの例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

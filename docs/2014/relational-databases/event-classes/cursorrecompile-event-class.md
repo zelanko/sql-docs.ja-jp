@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorRecompile event class
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f2b0cbd43a0ceb21f7e7ac518450cba5c75e654d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d59c35129a5b032c29b549efbdcdeb95215dcfab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190452"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile イベント クラス
   **CursorRecompile** イベント クラスは、アプリケーション プログラミング インターフェイス (API) のカーソルで発生するカーソルの再コンパイル イベントの詳細を示します。 カーソルの再コンパイル イベントは、スキーマの変更により Transact-SQL カーソルが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって再コンパイルされたときに発生します。  

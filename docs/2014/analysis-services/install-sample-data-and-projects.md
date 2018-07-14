@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 多次元モデリング チュートリアル用サンプル データとプロジェクトのインストール |Microsoft ドキュメント
+title: Analysis Services 多次元モデリング チュートリアル用サンプル データおよびプロジェクトのインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2d1aca34ac45c88452b83444c7287595c22bb453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a015f7827b711bf1eb638638a504fd92d886589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218272"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール
   このトピックに示す手順とリンクを使用して、Analysis Services チュートリアルで使用するすべてのデータとプロジェクト ファイルをインストールします。  
   
 ## <a name="step-1-install-sql-server-software"></a>手順 1: SQL Server ソフトウェアのインストール  
- このチュートリアルのレッスンでは、次のソフトウェアをインストール済みであることを前提としています。 次のソフトウェアはすべて、SQL Server のインストール メディアを使用してインストールされます。 配置を簡単にするために、すべての機能を 1 台のコンピューターにインストールできます。 これらの機能をインストールするには、SQL Server セットアップを実行して [機能の選択] ページから機能を選択します。 詳細については、次を参照してください。[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)です。  
+ このチュートリアルのレッスンでは、次のソフトウェアをインストール済みであることを前提としています。 次のソフトウェアはすべて、SQL Server のインストール メディアを使用してインストールされます。 配置を簡単にするために、すべての機能を 1 台のコンピューターにインストールできます。 これらの機能をインストールするには、SQL Server セットアップを実行して [機能の選択] ページから機能を選択します。 詳細については、次を参照してください。[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)します。  
   
 -   データベース エンジン  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36083748"
  以上の操作で、チュートリアルを使用する準備が整いました。 開始方法の詳細については、「[多次元モデリング (Adventure Works チュートリアル)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [インストール ウィザードによる SQL Server 2014 のインストール&#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
+ [SQL Server 2014 インストール ウィザードからインストール&#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Analysis Services のアクセスを許可するための Windows ファイアウォールを構成します。](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   

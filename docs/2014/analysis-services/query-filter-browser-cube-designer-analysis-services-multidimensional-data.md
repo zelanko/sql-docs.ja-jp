@@ -1,5 +1,5 @@
 ---
-title: クエリとフィルター ([ブラウザー] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: クエリとフィルター ([ブラウザー] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93055c2220f4dfa7b32293ee88178defbf1d0f6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85570891b1af0b102067f9153fe17e7a7b5b21a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250974"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>クエリとフィルター (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[ブラウザー]** タブのこの領域には、参照目的で使用するデータやクエリに使用するデータをキューブから簡単に選択できるクエリ/フィルター領域があります。 キューブ オブジェクトは必要に応じていくつでも追加でき、その結果をデータ領域で確認することができます。また、"Excel で分析" を使用して結果をレポートにエクスポートすることにより、エンド ユーザーから見たデータの体裁を視覚的に確認することができます。  
@@ -43,13 +43,13 @@ ms.locfileid: "36077217"
   
 |値|説明|  
 |-----------|-----------------|  
-|**等しいかどうか**|結果は **[フィルター式]** で定義された設定に制限されます。|  
+|**等しい**|結果は **[フィルター式]** で定義された設定に制限されます。|  
 |**等しくないです。**|結果は **[フィルター式]** で定義された設定によって除外されたメンバーに制限されます。|  
 |**In**|結果は **[フィルター式]** で選択された名前付きセットに制限されます。|  
-|**含まれない**|結果は **[フィルター式]** で選択された名前付きセットによって除外されたメンバーに制限されます。|  
+|**ではありません。**|結果は **[フィルター式]** で選択された名前付きセットによって除外されたメンバーに制限されます。|  
 |**[値を含む]**|結果は **[フィルター式]** にある文字列をメンバー名に含むメンバーに制限されます。|  
 |**始まる**|結果は **[フィルター式]** にある文字列で始まるメンバー名を持つメンバーに制限されます。|  
-|**範囲 (包括)**|結果は **[フィルター式]** で選択された範囲に制限されます。|  
+|**範囲 (包含)**|結果は **[フィルター式]** で選択された範囲に制限されます。|  
 |**範囲 (排他)**|結果は **[フィルター式]** で選択された範囲によって除外されたメンバーに制限されます。|  
 |**MDX**|結果は **[フィルター式]** で設定された多次元式 (MDX) に制限されます。|  
   

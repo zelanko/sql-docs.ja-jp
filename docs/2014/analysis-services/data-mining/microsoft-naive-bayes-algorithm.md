@@ -1,5 +1,5 @@
 ---
-title: Microsoft Naive Bayes アルゴリズム |Microsoft ドキュメント
+title: Microsoft Naive Bayes アルゴリズム |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Bayesian classifiers
 - algorithms [data mining]
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 caps.latest.revision: 55
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43d3851c5a3acd6a33d051eb743797220d06cb7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9abc422430a70a8a4386b55ca0d8d4eb4fb3017b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196612"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes アルゴリズム
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、分類アルゴリズム、Bayes の定理に基づくし、によって提供される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]予測モデリングに使用します。 Naive Bayes (単純ベイズ) という名前の単純 (Naive) という部分は、このアルゴリズムで Bayes の技法が使用されているものの、存在する可能性のある依存関係が考慮されないことに由来しています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、分類アルゴリズム、Bayes の定理に基づくし、によって提供される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]予測モデリングで使用します。 Naive Bayes (単純ベイズ) という名前の単純 (Naive) という部分は、このアルゴリズムで Bayes の技法が使用されているものの、存在する可能性のある依存関係が考慮されないことに由来しています。  
   
  このアルゴリズムは、他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムよりも計算量が少ないので、入力列と予測可能列のリレーションシップを見つけるためのマイニング モデルを短時間で生成できます。 このアルゴリズムを使用してデータの初期調査を行った後、この結果を適用して、計算量が多く精度が高い他のアルゴリズムを使用して追加のマイニング モデルを作成できます。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36077434"
   
  このしくみを理解するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Naive Bayes ビューアー (次の図) を使用すると、アルゴリズムによる状態の分布状況を視覚的に把握できます。  
   
- ![Naive bayes 分布で状態の](../media/naive-bayes.gif "Naive bayes 分布の状態")  
+ ![Naive bayes 分布の状態で](../media/naive-bayes.gif "Naive bayes 分布での状態")  
   
  予測可能列の各状態を指定すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ビューアーには、データセットの各入力列が一覧表示され、各列の状態の分布状況が表示されます。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36077434"
   
 -   **単一キー列** : それぞれのモデルには、各レコードを一意に識別する数値列またはテキスト列が 1 つ含まれている必要があります。 複合キーは使用できません。  
   
--   **入力列**: Naive Bayes のモデルでは、すべての列は不連続または分離された基にする必要があります列です。 列の分離方法の詳細については、次を参照してください。[分離メソッド&#40;データ マイニング&#41;](discretization-methods-data-mining.md)です。  
+-   **入力列**: Naive Bayes のモデルでは、すべての列は不連続または分離されたいずれかにする必要があります列。 列の分離方法の詳細については、次を参照してください。[分離メソッド&#40;データ マイニング&#41;](discretization-methods-data-mining.md)します。  
   
      Naive Bayes モデルでは、入力属性を互いに独立させることも重要です。 これは、予測のためにモデルを使用する場合に特に重要です。  
   

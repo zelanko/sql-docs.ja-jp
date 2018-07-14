@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 28c5f5063aa7e1c6e6fabe68405eb08a31feaad4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9bf84f3d8cd8e0c1b00c4a2e891d6a727b9b91a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220800"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>レポート パーツのパブリッシュおよび再パブリッシュ (レポート ビルダーおよび SSRS)
   レポート パーツを既定の設定を使用して既定の場所でパブリッシュすることも、名前や説明などのレポート パーツのメタデータを編集し、レポート サーバー上に保存することもできます。 適切な権限があれば、レポート サーバーと統合された SharePoint サイトに保存することもできます。  
@@ -62,9 +62,9 @@ ms.locfileid: "36083790"
   
 ## <a name="see-also"></a>参照  
  [レポート パーツ&#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [レポート パーツとレポート ビルダーでデータセット](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [レポート ビルダーのレポート パーツおよびデータセット](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [レポート パーツのトラブルシューティング&#40;レポート ビルダーおよび SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [更新プログラムまたは更新をチェック&#40;レポート ビルダーおよび SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [レポート パーツの参照し、既定のフォルダーを設定&#40;レポート ビルダーおよび SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [更新プログラムまたは更新のチェック&#40;レポート ビルダーおよび SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [レポート パーツの参照し、既定のフォルダーの設定&#40;レポート ビルダーおよび SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

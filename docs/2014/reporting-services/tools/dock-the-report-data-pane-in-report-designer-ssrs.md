@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0792825135920bff993088c00bf5eec1694a342d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3d682f7018261e967729a26db201bef5a3b6e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220722"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>レポート デザイナーのレポート データ ペインをドッキングする (SSRS)
   レポート デザイナーで[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、レポート データ ペインには、データ ソース、データセット、フィールド、パラメーター、およびイメージなど、レポートで使用できるデータ オブジェクトの階層ビューが表示されます。 このビューのデータ ソースは、埋め込みデータ ソースである場合と、ソリューション エクスプローラーに表示される共有データ ソースのデータ ソース参照である場合があります。  
   
 ### <a name="to-display-the-report-data-pane"></a>レポート データ ペインを表示するには  
   
--   デザイン ビューでの**ビュー**メニューの **レポート データ**です。  
+-   デザイン ビューでの**ビュー**メニューの **レポート データ**します。  
   
 ### <a name="to-dock-the-report-data-pane"></a>レポート データ ペインをドッキングするには  
   
@@ -38,11 +38,11 @@ ms.locfileid: "36083569"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>レポート データ ペインをドッキング ウィンドウからタブ付きウィンドウに変更するには  
   
--   レポート データ ペインのタイトル バーを右クリックし、をクリックして**タブ付きドキュメント**です。  
+-   レポート データ ペインのタイトル バーを右クリックし、をクリックし、**タブ付きドキュメント**します。  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>レポート データ ペインをタブ付きウィンドウからドッキング ウィンドウに変更するには  
   
--   レポート データ タブを右クリックし、をクリックして**ドッキング可能**です。  
+-   レポート データ タブを右クリックし、をクリックし、**ドッキング可能**します。  
   
      最後の 2 つの表示状態の間で切り替えるには、レポート データ ペインのタイトル バーをダブルクリックします。  
   

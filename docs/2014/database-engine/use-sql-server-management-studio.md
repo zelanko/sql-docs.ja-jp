@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Management Studio [SQL Server]
 - Enterprise Manager (See SQL Server Management Studio [Analysis Services])
 - SQL Server Management Studio [SQL Server], about SQL Server Management Studio
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df674c3d4cb72bb9a6e320719e97534a0aa5c931
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c7ca5884a90b3e6e94eca1bc98988417e7b8a8bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169353"
 ---
 # <a name="use-sql-server-management-studio"></a>SQL Server Management Studio の使用 [SQL Server]
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) はへのアクセス、構成、管理、管理、およびのすべてのコンポーネントを開発するための統合環境[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。 SSMS では、さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターが用意されており、これらを使用して、あらゆるスキル レベルの開発者や管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にアクセスできます。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) はへのアクセス、構成、管理、管理、および開発するためのすべてのコンポーネントの統合環境[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 SSMS では、さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターが用意されており、これらを使用して、あらゆるスキル レベルの開発者や管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にアクセスできます。  
   
  SSMS では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の以前のリリースに含まれていた Enterprise Manager、クエリ アナライザー、分析マネージャーの機能が 1 つの環境に統合されています。 さらに、SSMS は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のあらゆるコンポーネント ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]など) ともスムーズに連携できます。 この環境を使用して、開発者は使い慣れた操作で作業ができ、データベース管理者も、使いやすいグラフィック ツールと豊富なスクリプト機能を統合した 1 つの総合ユーティリティで作業できます。  
   
- ダウンロードしてから SSMS をインストール、 [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx)です。  
+ ダウンロードしてから SSMS をインストール、 [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [SQL Server Management Studio の機能](features-in-sql-server-management-studio.md)  

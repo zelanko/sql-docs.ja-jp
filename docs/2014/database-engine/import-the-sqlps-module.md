@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 8c20daf51270931609fb876b9a7035da343d19f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c64ba9da7884b1ccb82dd31480d60638c8d952ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192474"
 ---
 # <a name="import-the-sqlps-module"></a>SQLPS モジュールのインポート
   PowerShell から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を管理する方法としては、`sqlps` モジュールを Windows PowerShell 2.0 環境にインポートする方法を推奨します。 このモジュールによって、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のスナップインと管理アセンブリが読み込まれ、登録されます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36084374"
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の管理オブジェクト モデル (Microsoft.SqlServer.Management.Smo など) を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のオブジェクトを管理する。  
   
 > [!NOTE]  
->  2 つの SQL Server コマンドレット (`Encode-Sqlname` および `Decode-Sqlname`) の名前で使用されている動詞は、Windows PowerShell 2.0 で承認されている動詞と一致しません。 これは、コマンドレットの操作に影響を与えませんが、Windows PowerShell によって警告が発生時に、`sqlps`モジュールがセッションにインポートされます。  
+>  2 つの SQL Server コマンドレット (`Encode-Sqlname` および `Decode-Sqlname`) の名前で使用されている動詞は、Windows PowerShell 2.0 で承認されている動詞と一致しません。 、操作に影響を与えませんが、Windows PowerShell によって警告が発生時に、`sqlps`モジュールがセッションにインポートします。  
   
 ###  <a name="Security"></a> セキュリティ  
  既定では、Windows PowerShell 実行時のスクリプト実行ポリシーは **[Restricted]** に設定されます。これにより、Windows PowerShell スクリプトの実行が防止されます。 `sqlps` モジュールを読み込む際は、`Set-ExecutionPolicy` コマンドレットを使用すると、署名されたスクリプトまたは任意のスクリプトの実行を有効化できます。 信頼できるソースからのスクリプト以外は実行しないでください。また、適切な NTFS 権限を使用して、すべての入力ファイルと出力ファイルのセキュリティを保護してください。 Windows PowerShell スクリプトの有効化の詳細については、「 [Windows PowerShell スクリプトの実行](http://www.microsoft.com/technet/scriptcenter/topics/winpsh/manual/run.mspx)」を参照してください。  
@@ -52,7 +52,7 @@ ms.locfileid: "36084374"
   
 1.  使用して、`Set-ExecutionPolicy`コマンドレットを適切なスクリプト実行ポリシーを設定します。  
   
-2.  使用して、 `Import-Module` sqlps モジュールをインポートするコマンドレットです。 指定して、`DisableNameChecking`パラメーターに関する警告を抑制する場合は、`Encode-Sqlname`と`Decode-Sqlname`です。  
+2.  使用して、 `Import-Module` sqlps モジュールをインポートするコマンドレットです。 指定、`DisableNameChecking`についての警告を抑制する場合は、パラメーター`Encode-Sqlname`と`Decode-Sqlname`します。  
   
 ### <a name="example-powershell"></a>例 (PowerShell)  
  この例は `sqlps` モジュールを読み込み、名前のチェックを無効にします。  

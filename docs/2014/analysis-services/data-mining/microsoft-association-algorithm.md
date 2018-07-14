@@ -1,5 +1,5 @@
 ---
-title: Microsoft アソシエーション アルゴリズム |Microsoft ドキュメント
+title: Microsoft アソシエーション アルゴリズム |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
 - itemsets [Analysis Services]
@@ -31,22 +31,22 @@ helpviewer_keywords:
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 caps.latest.revision: 53
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4dfed3abb4cff8826c42770996a2ea78ab4b324a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fffd2e560cc8b9aaace349fefbcc4da1fe3fb0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165673"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft アソシエーション アルゴリズム
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で提供されているアソシエーション アルゴリズムであり、推奨エンジンで使用できます。 推奨エンジンでは、顧客が既に購入した製品または興味を示した製品に基づいて、顧客に製品が推奨されます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析にも使用できます。 マーケット バスケット分析の例は、次を参照してください。[レッスン 3: マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)データ マイニング チュートリアル」です。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で提供されているアソシエーション アルゴリズムであり、推奨エンジンで使用できます。 推奨エンジンでは、顧客が既に購入した製品または興味を示した製品に基づいて、顧客に製品が推奨されます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析にも使用できます。 マーケット バスケット分析の例は、次を参照してください。[レッスン 3: マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)データ マイニング チュートリアル」。  
   
  アソシエーション モデルは、個々のケースの識別子とケース内のアイテムの識別子を含んでいるデータセットに基づいて作成されています。 ケース内のアイテムのグループは、 *アイテムセット*と呼ばれます。 アソシエーション モデルは、一連のアイテムセットと、ケース内でアイテムをグループ化する方法を示すルールで構成されています。 アルゴリズムによって識別されるルールは、顧客の買い物かごに既に存在する製品に基づいて、顧客の将来の購入を予測するために使用できます。 次の図は、アイテムセットの一連のルールを示しています。  
   
- ![アソシエーション モデルのルール セット](../media/association.gif "アソシエーション モデルのルール セット")  
+ ![アソシエーション モデルの規則のセット](../media/association.gif "一連のアソシエーション モデルのルール")  
   
  図のように、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムによって、データセット内で多数のルールが検出される可能性があります。 このアルゴリズムでは、アルゴリズムで生成されるアイテムセットおよびルールを示すためにサポートと確率という 2 つのパラメーターが使用されます。 たとえば、X と Y が、買い物かごにある 2 つの製品を表す場合、サポート パラメーターは X と Y というアイテムの組み合わせを含んでいるデータセット内のケースの数になります。サポート パラメーターをユーザー定義パラメーターの *MINIMUM_SUPPORT* および *MAXIMUM_SUPPORT* と組み合わせて使用することによって、アルゴリズムは生成されるアイテムセットの数を制御します。 確率パラメーターは、" *信頼度*" とも呼ばれ、X と Y を含んでいるデータセット内のケースの割合を表します。確率パラメーターを *MINIMUM_PROBABILITY* パラメーターと組み合わせて使用することによって、アルゴリズムは生成されるルールの数を制御します。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36083308"
  データ マイニング モデルに対するクエリの作成方法については、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。  
   
 ## <a name="performance"></a>[パフォーマンス]  
- アイテムセットを作成して相関関係をカウントするというプロセスには時間がかかる場合があります。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)]アソシエーション ルール アルゴリズムは最適化の手法を使用して領域を節約し、高速に処理を行う、次のような状況でパフォーマンスの問題が発生することがわかって必要があります。  
+ アイテムセットを作成して相関関係をカウントするというプロセスには時間がかかる場合があります。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)]アソシエーション ルール アルゴリズムは、領域を節約し、処理の高速化のための最適化手法を使用して、パフォーマンスの問題は、次の条件下で発生する可能性があるとわかっている必要があります。  
   
 -   多数のアイテムを含む大きなデータセットを使用する場合。  
   

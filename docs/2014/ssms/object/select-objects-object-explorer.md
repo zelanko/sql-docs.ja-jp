@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.selectobjects.f1
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2ffeac246442f3ee291975902bcacd12104e77f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cd13264cfe88799c50eec23bab8e06d52feb399f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265678"
 ---
 # <a name="select-objects-object-explorer"></a>[オブジェクトの選択]\(オブジェクト エクスプローラー)
   **[オブジェクトの選択]** ダイアログ ボックスを使用すると、オブジェクトを別のダイアログ ボックスの一覧に追加できます。 ダイアログ ボックスを開いた方法に応じて、ダイアログ ボックスのタイトルおよび使用できるオプションが異なります。 利用可能なオプションだけが表示されます。たとえば、新しいオブジェクトの所有者を選択する場合は、利用可能なログインだけが表示されます。  

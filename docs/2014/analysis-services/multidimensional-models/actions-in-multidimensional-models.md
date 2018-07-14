@@ -1,5 +1,5 @@
 ---
-title: 多次元モデル内のアクション |Microsoft ドキュメント
+title: 多次元モデルのアクション |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services], creating
 - report actions [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: adf4fe01f2bf85bf4cf13e828f62eced3696a4ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6576d805e7352133bffb97ad4612cc5114764ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196542"
 ---
 # <a name="actions-in-multidimensional-models"></a>多次元モデルのアクション
   アクションは、選択したキューブまたはキューブの一部でエンド ユーザーが行う操作です。 この操作では、選択されているアイテムをパラメーターとして設定してアプリケーションを起動したり、選択されているアイテムに関する情報を取得したりすることができます。 アクションの詳細については、「[アクション &#40;Analysis Services - 多次元データ&#41;](actions-analysis-services-multidimensional-data.md)」を参照してください。  
   
  キューブのアクションを作成するには、キューブ デザイナーの **[アクション]** タブを使用します。 次の指定を行います。  
   
- **Name**  
+ **名前**  
  アクションを識別する名前を選択します。  
   
  **[アクションの対象]**  
@@ -56,7 +56,7 @@ ms.locfileid: "36083081"
  対象になるオブジェクトの種類を選択したら、指定した種類のキューブ オブジェクトを **[対象になるオブジェクト]** から選択します。  
   
  **[条件 (省略可能)]**  
- ブール値に解決される多次元式 (MDX) を指定します。省略可能です。 値が場合`True`、指定されたターゲットでアクションを実行します。 値が場合`False`アクションは実行されません。  
+ ブール値に解決される多次元式 (MDX) を指定します。省略可能です。 値の場合`True`、指定された対象で、アクションを実行します。 値が場合`False`アクションは実行されません。  
   
  **[アクションの内容]**  
  アクションの種類を選択します。 次の表は、使用できる種類をまとめたものです。  
@@ -78,9 +78,9 @@ ms.locfileid: "36083081"
 |--------------|-----------------|  
 |**[呼び出し]**|アクションを実行する方法を指定します。 既定の [インタラクティブ] を指定すると、アクションはユーザーがオブジェクトにアクセスしたときに実行されます。 次の設定が可能です。<br /><br /> [バッチ]<br /><br /> Interactive<br /><br /> [オープン時]|  
 |**アプリケーション**|アクションのアプリケーションについて説明します。|  
-|**description**|アクションについて説明します。|  
-|**Caption**|アクションに関して表示されるキャプションを指定します。 キャプションが MDX の場合は、指定`True`の**キャプションに MDX**です。|  
-|**True**|指定`True`場合は、キャプションが MDX または`False`されていない場合。|  
+|**[説明]**|アクションについて説明します。|  
+|**Caption**|アクションに関して表示されるキャプションを指定します。 キャプションが MDX の場合は、指定`True`の**キャプションに MDX**します。|  
+|**True**|指定`True`場合は、キャプションが MDX または`False`でない場合。|  
   
 > [!NOTE]  
 >  HTML およびコマンド ラインのアクションの種類を定義するには、Analysis Services スクリプト言語 (ASSL) または分析管理オブジェクト (AMO) を使用する必要があります。 詳細については、「[アクション要素 &#40;ASSL&#41;](../scripting/objects/action-element-assl.md)」「[Type 要素 &#40;アクション&#41; &#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md)」、および「[高度な AMO OLAP オブジェクトのプログラミング](analysis-management-objects/programming-amo-olap-advanced-objects.md)」を参照してください。  

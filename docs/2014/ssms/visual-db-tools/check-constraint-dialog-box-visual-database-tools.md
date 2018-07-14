@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraint
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a3dc13f77788f46796c274d43d5dea920167033f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e4908c1ea2bb110c176e07e5fe8a0ffc8a0ad496
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202252"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>[制約のチェック] ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスは、テーブル デザイナーのテーブル定義グリッドを右クリックし、 **[制約のチェック]** をクリックすると表示されます。 このダイアログ ボックスには、データベースのテーブルに関連付けられた、一意でない制約のプロパティ セットが含まれています。 UNIQUE 制約に適用されるプロパティは、 **[インデックス/キー]** ダイアログ ボックスに表示されます。  
@@ -36,7 +36,7 @@ ms.locfileid: "36077450"
  **[追加]**  
  選択したデータベース テーブルの制約を新しく作成し、その制約に既定の名前と他の値を割り当てます。 制約は、その制約用の式を入力するまで、有効にできません。  
   
- **Delete**  
+ **削除**  
  選択した制約をテーブルから削除します。 追加した CHECK 制約を取り消すには、このボタンを使用して制約を削除します。  
   
  **[全般] カテゴリ**  
@@ -68,6 +68,6 @@ ms.locfileid: "36077450"
   
 ## <a name="see-also"></a>参照  
  [Unique 制約と Check 制約](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
- [インデックスを作成し、ダイアログ ボックスのキー &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [インデックスを作成し、[キー] ダイアログ ボックス&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

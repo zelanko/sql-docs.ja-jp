@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 070a39e8ef8d4010ac423fefa39baa39fc3a8304
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d64d6e7fa360bc66324cfbaaaf97548144234e0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172363"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>フルテキスト クエリのパフォーマンスの向上
   フルテキスト クエリのパフォーマンスを向上させるための推奨事項を次に示します。  
@@ -30,7 +29,7 @@ ms.locfileid: "36075932"
   
 -   [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)を使用して、フルテキスト カタログを再構成します。 このステートメントを実行するとそのカタログのフルテキスト インデックスがマスター マージされるため、この作業はパフォーマンス テストの前に行うようにしてください。  
   
--   フルテキスト キー列として、サイズの小さい列を選択します。 900 バイトの列がサポートされていますが、フルテキスト インデックスでは比較的小さいキー列を使用することをお勧めします。 `int` および`bigint`最適なパフォーマンスを提供します。  
+-   フルテキスト キー列として、サイズの小さい列を選択します。 900 バイトの列がサポートされていますが、フルテキスト インデックスでは比較的小さいキー列を使用することをお勧めします。 `int` `bigint`最適なパフォーマンスを提供します。  
   
 -   整数型のフルテキスト キーを使用すると、 **docid** マッピング テーブルとの結合が回避されます。 したがって、整数型のフルテキスト キーにより、クエリのパフォーマンスが大幅に向上し、クロールのパフォーマンスも向上します。 フルテキスト キーがクラスター化インデックス キーでもある場合、パフォーマンスがさらに向上する可能性があります。  
   

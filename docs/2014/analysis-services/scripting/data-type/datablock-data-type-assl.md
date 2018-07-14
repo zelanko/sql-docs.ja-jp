@@ -1,5 +1,5 @@
 ---
-title: DataBlock データ型 (ASSL) |Microsoft ドキュメント
+title: DataBlock データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataBlock data type
 ms.assetid: 4192b388-613a-472b-881c-f9c02215aa81
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12cbd6c1a2723cfc0d9e5b68ff4a484878c82a74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 167af587de6f06d283ec29f8afbc0fedb2ebc99e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211962"
 ---
 # <a name="datablock-data-type-assl"></a>DataBlock データ型 (ASSL)
   バイナリ コンテンツを格納するために使用するデータ ブロックのコレクションを表すプリミティブ データ型を定義、 [ClrAssemblyFile](clrassemblyfile-data-type-assl.md)要素。  

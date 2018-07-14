@@ -1,5 +1,5 @@
 ---
-title: 多次元モデル データベース (SSAS) |Microsoft ドキュメント
+title: 多次元モデル データベース (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [Analysis Services], databases
 - SQL Server Analysis Services, databases
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
 caps.latest.revision: 55
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 97d7364cd9a0fe7901e2357f916d8683dc3b147c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08a5d383d9c46b01c52e1fc888c8d692470fd619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241682"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>多次元モデル データベース (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースは、データ ソース、データ ソース ビュー、キューブ、ディメンション、およびロールのコレクションです。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースには、データ マイニング用の構造、およびユーザー定義の関数をデータベースに追加するために使用されるカスタム アセンブリをオプションで含めることができます。  
@@ -55,17 +55,17 @@ ms.locfileid: "36075621"
   
  [多次元データベースの名前変更&#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
   
- [互換性多次元データベースのレベルを設定&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
+ [互換性レベルの多次元データベースの設定&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [多次元データベースのプロパティを設定&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [多次元データベースのプロパティ設定&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
  [Analysis Services データベースの同期](synchronize-analysis-services-databases.md)  
   
  [Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services データベースにオンライン モードでの接続します。](connect-in-online-mode-to-an-analysis-services-database.md)   
- [Analysis Services プロジェクトを作成する&#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
+ [Analysis Services データベースへのオンライン モードでの接続します。](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Analysis Services プロジェクトの作成&#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
  [MDX による多次元データのクエリ](mdx/querying-multidimensional-data-with-mdx.md)  
   
   

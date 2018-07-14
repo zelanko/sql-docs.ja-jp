@@ -1,5 +1,5 @@
 ---
-title: CustomRollupPropertiesColumn 要素 (ASSL) |Microsoft ドキュメント
+title: CustomRollupPropertiesColumn 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CustomRollupPropertiesColumn element
 ms.assetid: 7f4a9825-c768-4523-acb3-511a5160fd44
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c9452dbc1d6c3104fe76760ad4460e636fdd45fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92125569eec6b0642efea7c9164e41c7740ded66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180839"
 ---
 # <a name="customrolluppropertiescolumn-element-assl"></a>CustomRollupPropertiesColumn 要素 (ASSL)
   カスタム ロールアップ式のプロパティを指定する列の詳細を定義します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36083719"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 詳細については、`DataItem`の Analysis Services スクリプト言語 (ASSL) オブジェクトおよびプロパティのテーブルを含む、型、`DataItem`を入力しを参照してください[DataItem データ型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)です。  
+ 詳細については、`DataItem`の Analysis Services スクリプト言語 (ASSL) オブジェクトおよびプロパティのテーブルを含む、型、`DataItem`入力を参照してください[DataItem データ型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)します。  
   
  親に対応する要素`CustomRollupPropertiesColumn`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DimensionAttribute>します。  
   

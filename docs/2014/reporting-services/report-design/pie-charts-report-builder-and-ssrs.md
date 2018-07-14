@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3c3a358c9403d6bf14bede017380fbf4872a51b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 578042b4ce8b5892b62916f5d41f271e5081271e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175071"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>円グラフ (レポート ビルダーおよび SSRS)
   円グラフおよびドーナツ グラフは、データを全体に対する比率として表示します。 円グラフは、主に、グループ間の比較を示すために使用されます。 円グラフとドーナツ グラフは、ピラミッド グラフやじょうごグラフと同様、図形グラフの一種です。 図形グラフには軸がありません。 図形グラフに数値フィールドをドロップすると、それぞれの値の全体に占める比率が計算されます。 図形グラフの詳細については、「[図形グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)」を参照してください。  
@@ -57,7 +57,7 @@ ms.locfileid: "36083799"
   
 -   円グラフで値の割合を効果的に比較するためには、少なくとも 2 つの値が必要です。 円グラフに 1 色しか存在しない場合は、グループ化のためのカテゴリ フィールドが追加されていることを確認します。 円グラフにカテゴリが存在しない場合、値がデータ フィールドから集計され、単一の値として表示されます。  
   
--   その他すべての種類のグラフと同様、円グラフでは、既定のパレットに存在する色値に基づいて、色が生成されます。 このアプローチでは、レポートに複数の円グラフが使用されているときに、データ ポイントに対する色付けが変わってくる場合があります。 レポートに複数の円グラフが存在する場合、グラフ間で色を一定に保つためには、各カテゴリ グループに対する色を手動で設定する必要があります。 グラフの色を定義する方法の詳細については、次を参照してください。[グラフの系列の色の書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)です。  
+-   その他すべての種類のグラフと同様、円グラフでは、既定のパレットに存在する色値に基づいて、色が生成されます。 このアプローチでは、レポートに複数の円グラフが使用されているときに、データ ポイントに対する色付けが変わってくる場合があります。 レポートに複数の円グラフが存在する場合、グラフ間で色を一定に保つためには、各カテゴリ グループに対する色を手動で設定する必要があります。 グラフの色を定義する方法の詳細については、次を参照してください。[グラフの系列の色を書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)します。  
   
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>円グラフに対する描画スタイルの適用  
  円グラフに特殊な描画スタイルを追加して、視覚的な効果を高めることができます。 描画スタイルには、面取り効果や凹型効果などがあります。 これらの効果は 2-D 円グラフでのみ利用できます。 次の図は、円グラフに面取りと凹型の描画スタイルを適用した例です。  
@@ -67,7 +67,7 @@ ms.locfileid: "36083799"
  詳細については、「[グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 (レポート ビルダーおよび SSRS)](chart-effects-add-bevel-emboss-or-texture-report-builder.md)」を参照してください。  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>円グラフへのパーセンテージの表示  
- 他の図形グラフと同様、円グラフは、全体に占める割合 (パーセント) を表します。 そのため、円グラフのラベルは、パーセンテージで表記するのが一般的です。 他の種類のグラフとの一貫性を保つ関係上、既定では、円グラフにパーセンテージ ラベルが表示されません。 グラフにパーセンテージの値を表示する方法の詳細については、次を参照してください。[円グラフの割合の値を表示&#40;レポート ビルダーおよび SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)です。 レポートで数値の書式をパーセンテージとして設定する方法については、「[Formatting Numbers and Dates (Report Builder and SSRS)](formatting-numbers-and-dates-report-builder-and-ssrs.md)」(数値と日付の書式設定 (レポート ビルダーおよび SSRS)) を参照してください。  
+ 他の図形グラフと同様、円グラフは、全体に占める割合 (パーセント) を表します。 そのため、円グラフのラベルは、パーセンテージで表記するのが一般的です。 他の種類のグラフとの一貫性を保つ関係上、既定では、円グラフにパーセンテージ ラベルが表示されません。 グラフにパーセンテージの値を表示する方法の詳細については、次を参照してください。[円グラフの割合の値を表示&#40;レポート ビルダーおよび SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)します。 レポートで数値の書式をパーセンテージとして設定する方法については、「[Formatting Numbers and Dates (Report Builder and SSRS)](formatting-numbers-and-dates-report-builder-and-ssrs.md)」(数値と日付の書式設定 (レポート ビルダーおよび SSRS)) を参照してください。  
   
  ![データ ポイント ラベルがパーセンテージ形式の円グラフ](../media/rs-piechartpercentages.gif "データ ポイント ラベルがパーセンテージ形式の円グラフ")  
   

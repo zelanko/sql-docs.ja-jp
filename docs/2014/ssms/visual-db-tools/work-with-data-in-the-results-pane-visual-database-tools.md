@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - queries [Visual Database Tools]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 65172c670d13b1cf38f3017d3477c5a3888014fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 56c05c3d2b67c7e468fbf66930b3321de742c90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249512"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>結果ペインのデータの操作 (Visual Database Tools)
   クエリまたはビューを実行すると、その結果が結果ペインに表示されます。 この結果に対して操作を行うことができます。 たとえば、行の追加や削除、データの入力や変更ができるだけでなく、多数の結果セット間を簡単に移動できます。  
@@ -119,12 +119,12 @@ ms.locfileid: "36077033"
 ### <a name="what-can-not-be-represented-fully"></a>完全に表現できないもの  
  データベースから結果ペインに返される内容は、使用しているデータ ソースのプロバイダーに大きく影響されます。 結果ペインでは、必ずしもすべてのデータベース管理システムからのデータを解釈できるわけではありません。 結果ペインでデータを解釈できないケースを以下に示します。  
   
--   結果ペインで作業する場合、binary データ型は不便な場合が多く、ダウンロードに長時間かかる場合があります。 これらで表されますが、 *\<バイナリ データ >* または*Null*です。  
+-   結果ペインで作業する場合、binary データ型は不便な場合が多く、ダウンロードに長時間かかる場合があります。 によって表されるように*\<バイナリ データ >* または*Null*します。  
   
--   有効桁数と小数点以下桁数が保持されない場合があります。 たとえば、結果ペインに表示できる有効桁数は 27 桁です。 データが切り捨てられることがによって表される可能性がありますまたはデータが大きい有効桁数を持つデータ型の場合は、 *\<データを読み取れません >* です。  
+-   有効桁数と小数点以下桁数が保持されない場合があります。 たとえば、結果ペインに表示できる有効桁数は 27 桁です。 データが大きい有効桁数を持つデータ型の場合は、データが切り捨てられる可能性がありますまたはで表すことができます*\<データを読み取れません >* します。  
   
 ## <a name="see-also"></a>参照  
- [クエリで基本的な操作を実行&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
+ [クエリに関する基本操作を実行&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
  [検索基準の指定 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

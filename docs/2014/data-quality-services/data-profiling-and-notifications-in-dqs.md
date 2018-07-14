@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5b58b355967a87844bfaf30b3f74c7bb0962864d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e9bef6462a15b2093a16a9fb305ac33575d50e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193912"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS のデータ プロファイルと通知
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ プロファイルは、既存のデータ ソースのデータを分析し、DQS のアクティビティでデータに関する統計情報を表示するプロセスです。 このプロセスでは、データ品質が自動的に測定されます。 DQS のプロファイルは、DQS のナレッジ マネージメントおよびデータ品質プロジェクトに統合されており、 動的に調整が可能です。 プロファイルの主な目的は、一連のデータ品質プロセスを通じて意思決定を支援すること、およびプロセスの有効性を評価することの 2 つです。 DQS のプロファイル プロセスには次の利点があります。  
@@ -77,7 +77,7 @@ ms.locfileid: "36084643"
 -   [照合プロジェクトを実行する](../../2014/data-quality-services/run-a-matching-project.md)  
   
 ##  <a name="Monitoring"></a> アクティビティ監視のプロファイル データ  
- ナレッジ検出、照合ポリシー、照合、およびクレンジングのアクティビティに対するプロファイル情報は、Data Quality Client のアクティビティのページだけでなく、アクティビティ監視でも確認できます。 アクティビティ監視には、現在と過去のアクティビティの概要が表示されます。 アクティビティのプロパティおよび関連する計算プロセスに加え、各アクティビティに対して生成されるプロファイル情報を 1 か所で確認することができます。 アクティビティのテーブルでアクティビティを選択すると、下のテーブルにプロファイル結果が表示されます。 プロファイル結果はエクスポートすることもできます。 詳細については、次を参照してください。 [DQS 管理](../../2014/data-quality-services/dqs-administration.md)です。  
+ ナレッジ検出、照合ポリシー、照合、およびクレンジングのアクティビティに対するプロファイル情報は、Data Quality Client のアクティビティのページだけでなく、アクティビティ監視でも確認できます。 アクティビティ監視には、現在と過去のアクティビティの概要が表示されます。 アクティビティのプロパティおよび関連する計算プロセスに加え、各アクティビティに対して生成されるプロファイル情報を 1 か所で確認することができます。 アクティビティのテーブルでアクティビティを選択すると、下のテーブルにプロファイル結果が表示されます。 プロファイル結果はエクスポートすることもできます。 詳細については、次を参照してください。 [DQS 管理](../../2014/data-quality-services/dqs-administration.md)します。  
   
 ##  <a name="Notifications"></a> 通知  
  DQS では、プロファイルによって重要な統計情報や基準を収集して表示することに加え、表示されるプロファイル統計情報に基づいて推奨される操作がある場合に、そのことを示す通知が生成されます (有効にしている場合)。 通知は、データ ソースについての重要な情報を強調すると共に、現在のアクティビティの実行された目的に対する有効性を示すために使用されます。 通知で提供されるヒントや推奨事項には、現在の状況を示す情報と、ナレッジ検出、データ クレンジング、またはデータ照合のアクティビティを改善するための推奨される方法が示されます。  

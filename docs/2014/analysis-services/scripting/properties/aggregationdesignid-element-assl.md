@@ -1,5 +1,5 @@
 ---
-title: AggregationDesignID 要素 (ASSL) |Microsoft ドキュメント
+title: AggregationDesignID 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationDesignID element
 ms.assetid: e7f1f7ae-3169-4c0c-aadb-f7465155d652
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0548685e81b7c98b80e49ea67bdb754cb0dfe887
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 373f77f8195f0e8d9c3000f9e55e0f1395c91b67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194282"
 ---
 # <a name="aggregationdesignid-element-assl"></a>AggregationDesignID 要素 (ASSL)
-  識別、 [AggregationDesign](../objects/aggregationdesign-element-assl.md)要素に関連付けられた、[パーティション](../objects/partition-element-assl.md)要素。  
+  識別、 [AggregationDesign](../objects/aggregationdesign-element-assl.md)要素に関連付けられている、[パーティション](../objects/partition-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36084878"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 親に対応する要素`AggregationDesignID`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Partition>します。 関連項目<xref:Microsoft.AnalysisServices.AggregationDesign>です。  
+ 親に対応する要素`AggregationDesignID`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Partition>します。 参照してください<xref:Microsoft.AnalysisServices.AggregationDesign>します。  
   
 ## <a name="see-also"></a>参照  
  [AggregationDesign 要素&#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)   

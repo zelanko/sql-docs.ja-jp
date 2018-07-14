@@ -1,5 +1,5 @@
 ---
-title: ProcessingQuery 要素 (ASSL) |Microsoft ドキュメント
+title: ProcessingQuery 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProcessingQuery element
 ms.assetid: d18e6f4b-c24c-4f73-8b85-4b6e8a82a695
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4ade6950de95029d3eea4105bd34f636fd3632a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01d9ccc0e5e5c376e0d5e7ee08aa42eb0e062b97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250892"
 ---
 # <a name="processingquery-element-assl"></a>ProcessingQuery 要素 (ASSL)
   増分処理ステータスの通知のために実行するクエリのパラメーター化されたテキストを格納します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36076916"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 内のテーブル、 [DataSourceView](../objects/datasourceview-element-assl.md)によって参照される、 `ProcessingQuery` 、兄弟要素によって識別される[TableID](id-element-assl.md)です。  
+ 内のテーブル、 [DataSourceView](../objects/datasourceview-element-assl.md)によって参照される、 `ProcessingQuery` 、兄弟要素で識別される[TableID](id-element-assl.md)します。  
   
  親に対応する要素`ProcessingQuery`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>します。  
   

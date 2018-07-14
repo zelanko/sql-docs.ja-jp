@@ -1,5 +1,5 @@
 ---
-title: CalculationType 要素 (ASSL) |Microsoft ドキュメント
+title: CalculationType 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalculationType element
 ms.assetid: b974b3d3-fbf7-4d77-8f6e-4e05a258fe84
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 434d0151009119a5e05d49180c6a9d1eb9519d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24e8f95af2ab7eb8be754eb2d1c7de96fee91ea7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275938"
 ---
 # <a name="calculationtype-element-assl"></a>CalculationType 要素 (ASSL)
-  関連付けられたで定義されている計算の種類を表します[CalculationProperty](../objects/calculationproperty-element-assl.md)要素。  
+  関連付けられているで定義されている計算の種類について説明します[CalculationProperty](../objects/calculationproperty-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36076311"
 |*設定*|計算プロパティは名前付きセットの定義に適用されます。|  
 |*セル*|計算プロパティは計算されるセルの定義に適用されます。|  
   
- 許可される値に対応する列挙`CalculationType`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.CalculationType>します。  
+ 許容された値に対応する列挙`CalculationType`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.CalculationType>します。  
   
 ## <a name="see-also"></a>参照  
  [CalculationProperties 要素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

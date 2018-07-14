@@ -1,5 +1,5 @@
 ---
-title: '[スナップショット オプション] プロパティ ページ (レポート マネージャー) |Microsoft ドキュメント'
+title: スナップショット オプション プロパティ ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b89de53a1e17413f8ebe6869122ea9d4b61af6dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a221095f73da5d68256f91298e3bb0d35ee4121b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218874"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>[スナップショット オプション] プロパティ ページ (レポート マネージャー)
   [スナップショット オプション] プロパティ ページを使用すると、レポート スナップショットをレポート履歴に追加するスケジュールを設定したり、レポート履歴に保存するレポート スナップショットの件数の上限を設定したりできます。  
   
 > [!NOTE]  
->  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[データベースの追加サービス](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices)です。  
+>  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[データベースの追加サービス](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices)します。  
   
 ## <a name="navigation"></a>ナビゲーション  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
@@ -44,10 +44,10 @@ ms.locfileid: "36083795"
  **レポート履歴の手動作成を許可します。**  
  このチェック ボックスをオンにすると、必要に応じてレポートの履歴にスナップショットを追加できます。 このチェック ボックスをオンにすると、[履歴] ページに **[新しいスナップショット]** ボタンが表示されます。  
   
- **レポート履歴にすべてのレポート実行スナップショットを格納します。**  
+ **レポート履歴でのすべてのレポート実行スナップショットを格納します。**  
  このチェック ボックスをオンにすると、レポート実行プロパティを基に生成したレポート スナップショットがレポート ヒストリにコピーされます。 生成したスナップショットからレポートを実行するようにレポート実行プロパティを設定できます。 このレポート ヒストリのプロパティを設定すると、一定期間に生成されたすべてのレポート スナップショットのコピーをレポート ヒストリに配置することで、その記録を保存できます。  
   
- **次のスケジュールを使用してスナップショットをレポート履歴に追加するには**  
+ **次のスケジュールを使用して、レポート履歴にスナップショットを追加するには**  
  このチェック ボックスをオンにすると、スケジュールを基にしてスナップショットがレポート履歴に追加されます。 この目的にのみ使用されるスケジュールを作成することも、また、定義済みの共有スケジュールのうち、必要な情報が含まれているものがあればそれを選択することもできます。  
   
  **保持するスナップショット数を選択します**  
@@ -67,7 +67,7 @@ ms.locfileid: "36083795"
 ## <a name="see-also"></a>参照  
  [レポート履歴にスナップショットを追加&#40;レポート マネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [作成、変更、およびレポート履歴のスナップショットを削除](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [作成、変更、およびレポート履歴にスナップショットを削除します。](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

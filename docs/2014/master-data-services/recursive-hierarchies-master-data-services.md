@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - recursive hierarchies [Master Data Services]
 - hierarchies [Master Data Services], recursive hierarchies
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 956c12641ab5159232bc053f7bc48d6136ffddbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 57e7dac5316ae64bbe4ae931707f56abbcc78799
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260888"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>再帰型階層 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の再帰型階層は、再帰リレーションシップを含む派生階層です。 再帰リレーションシップは、エンティティ自体に基づくドメインベースの属性がエンティティにある場合に存在します。  
@@ -58,7 +58,7 @@ ms.locfileid: "36075750"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|派生階層を作成する。|[派生階層を作成する&#40;マスター データ サービス&#41;](create-a-derived-hierarchy-master-data-services.md)|  
+|派生階層を作成する。|[派生階層を作成&#40;マスター データ サービス&#41;](create-a-derived-hierarchy-master-data-services.md)|  
 |既存の派生階層の名前を変更する。|[派生階層名を変更する&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |既存の派生階層を削除する。|[派生階層を削除&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   

@@ -1,5 +1,5 @@
 ---
-title: tablediff ユーティリティ |Microsoft ドキュメント
+title: tablediff ユーティリティ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - comparing data
 - tablediff utility
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 851ba198020abf234c793ad65acf3f5dbbcd8e2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6d073e95d896429e1827009c249b940ade2e7b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180969"
 ---
 # <a name="tablediff-utility"></a>tablediff ユーティリティ
   **tablediff** ユーティリティは、2 つのテーブル内のデータを比較して非収束の発生を調べる場合に使用されます。これは、レプリケーション トポロジ内の非収束に対するトラブルシューティングを行うときに特に便利です。 このユーティリティは、コマンド プロンプトから、またはバッチ ファイル内で使用して、次のタスクを実行することができます。  
@@ -129,7 +129,7 @@ ms.locfileid: "36077240"
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、対象テーブルがロックされます。  
   
  **-b** *large_object_bytes*  
- 含まれるラージ オブジェクト データ型の列に対して比較するバイト数です。 `text`、 `ntext`、 `image`、 `varchar(max)`、`nvarchar(max)`と`varbinary(max)`です。 *large_object_bytes* の既定値は、列のサイズです。 *large_object_bytes* を超えるデータは比較されません。  
+ ラージ オブジェクト データ型の列に対して比較するバイトの番号が含まれています: `text`、 `ntext`、 `image`、 `varchar(max)`、`nvarchar(max)`と`varbinary(max)`します。 *large_object_bytes* の既定値は、列のサイズです。 *large_object_bytes* を超えるデータは比較されません。  
   
  **-bf**  *number_of_statements*  
  [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] オプションを使用する場合に、現在の **スクリプト ファイルに書き込む** ステートメントの数を指定します。 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの数が *number_of_statements*で指定した値を超えると、新しい [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト ファイルが作成されます。  
@@ -175,7 +175,7 @@ ms.locfileid: "36077240"
 ## <a name="remarks"></a>コメント  
  **tablediff** ユーティリティは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以外のサーバーでは使用できません。  
   
- テーブル`sql_variant`データ型の列はサポートされていません。  
+ 含むテーブル`sql_variant`データ型の列はサポートされていません。  
   
  **tablediff** ユーティリティでは、既定により、ソース列と対象列の間で次のデータ型のマッピングがサポートされます。  
   

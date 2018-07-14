@@ -1,5 +1,5 @@
 ---
-title: PowerPivot for SharePoint (SSAS) |Microsoft ドキュメント
+title: PowerPivot for SharePoint (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1caed8888e1307950971914f48887facac409741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11ee7e6690c0937477374337d80a4b239bdb7f3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224852"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
-  PowerPivot for SharePoint は、SharePoint モードで実行される [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーです。 PowerPivot for SharePoint は、SharePoint ファーム内の PowerPivot データのサーバー ホスティングを実現します。 PowerPivot データは、次のいずれかを使用してビルドする分析データ モデルです。  
+  PowerPivot for SharePoint は、SharePoint モードで実行される [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーです。 PowerPivot for SharePoint は、SharePoint ファーム内の PowerPivot データのサーバー ホスティングを実現します。 PowerPivot データを使用して、次のいずれかをビルドする分析データ モデルです。  
   
 -   PowerPivot for Excel 2010 アドイン  
   
@@ -93,6 +93,6 @@ ms.locfileid: "36083281"
   
 ## <a name="see-also"></a>参照  
  [PowerPivot の計画と展開](http://go.microsoft.com/fwlink/?linkID=220972)   
- [PowerPivot for SharePoint の災害復旧](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [Powerpivot for SharePoint の災害復旧](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

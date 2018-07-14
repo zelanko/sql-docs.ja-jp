@@ -1,5 +1,5 @@
 ---
-title: 要素 (ASSL) の状態 |Microsoft ドキュメント
+title: 要素 (ASSL) の状態 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - State element
 ms.assetid: b6ee1144-89f7-4ced-bc87-c2e33ca25f73
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 391babe6cba3330c0a072739c01748d618aec3e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 507dab440db095f844b4fad9dcdd96e29d18d487
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206032"
 ---
 # <a name="state-element-assl"></a>State 要素 (ASSL)
   親要素の現在の処理状態を記述する読み取り専用の値を格納します。  
@@ -68,9 +68,9 @@ ms.locfileid: "36082852"
 |-----------|-----------------|  
 |*処理*|要素は完全に処理されました。|  
 |*Partiallyprocessed であります。*|要素の一部が処理されました ([キューブ](../objects/cube-element-assl.md)と[MeasureGroup](../objects/group-element-assl.md)のみ)。|  
-|*まだ処理されていません*|要素は処理されませんでした。|  
+|*未処理*|要素は処理されませんでした。|  
   
- 許可される値に対応する列挙`State`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AnalysisState>します。  
+ 許容された値に対応する列挙体`State`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AnalysisState>します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで `State` の親に対応する要素は、<xref:Microsoft.AnalysisServices.Cube>、<xref:Microsoft.AnalysisServices.Dimension>、<xref:Microsoft.AnalysisServices.MeasureGroup>、<xref:Microsoft.AnalysisServices.MiningModel>、<xref:Microsoft.AnalysisServices.MiningStructure>、および <xref:Microsoft.AnalysisServices.Partition> です。  
   

@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_CONNECTIONS 行セット |Microsoft ドキュメント
+title: DISCOVER_CONNECTIONS 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - DISCOVER_CONNECTIONS rowset
 ms.assetid: e4703970-c31d-448c-ab68-503303c91aa4
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f2165f1c5f8c39d8a2259507824152599473207b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02c834a399f2dc6056831f2d4f84b65deb5ba503
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194302"
 ---
 # <a name="discoverconnections-rowset"></a>DISCOVER_CONNECTIONS 行セット
   現在サーバー上で開いている接続について、リソースの使用状況とアクティビティに関する情報を提供します。  
   
- **適用されます:** 表形式モデル、多次元モデル  
+ **適用対象:** 表形式モデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
  `DISCOVER_CONNECTIONS`行セットには、次の列が含まれています。  
@@ -41,7 +41,7 @@ ms.locfileid: "36085310"
 |`CONNECTION_HOST_APPLICATION`|`DBTYPE_WSTR`||接続を開始したアプリケーションの名前。|  
 |`CONNECTION_START_TIME`|`DBTYPE_DBTIMESTAMP`||接続が開始されたときのサーバーの UTC 日時。|  
 |`CONNECTION_ELAPSED_TIME_MS`|`DBTYPE_I8`|はい|接続が開始されてからの経過時間 (ミリ秒単位)。|  
-|`CONNECTION_LAST_COMMAND_START_TIME`|`DBTYPE_DBTIMESTAMP`||サーバーの UTC 日付と時刻最後のコマンドが実行を開始したときにします。|  
+|`CONNECTION_LAST_COMMAND_START_TIME`|`DBTYPE_DBTIMESTAMP`||サーバーの UTC 日付と最後のコマンドの実行が開始時刻。|  
 |`CONNECTION_LAST_COMMAND_END_TIME`|`DBTYPE_DBTIMESTAMP`||最後のコマンドが実行を完了したときのサーバーの UTC 日時。|  
 |`CONNECTION_LAST_COMMAND_ELAPSED_TIME_MS`|`DBTYPE_I8`|はい|最後に実行されたコマンドが終了してからの経過時間 (ミリ秒単位)。|  
 |`CONNECTION_IDLE_TIME_MS`|`DBTYPE_I8`|はい|接続が開始されてからのアイドル時間 (ミリ秒単位)。|  

@@ -1,5 +1,5 @@
 ---
-title: 接続およびセッション (XMLA) の管理 |Microsoft ドキュメント
+title: 接続およびセッション (XMLA) の管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sessions [XML for Analysis]
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39051880aa27e6f81cce4ca3a41e1af203c1b257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16efaf9be9db55935cc7b6a3df0349f81d170b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192518"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>接続およびセッションの管理 (XMLA)
-  *状態保持*id とメソッドの呼び出しの間のクライアントのコンテキスト、サーバーを保持する状態します。 *状態を保持しない*をサーバーが保存されていません id およびクライアントのコンテキストをメソッド呼び出しの完了後に、条件は、します。  
+  *状態保持*は id およびコンテキストをメソッド呼び出しの間でのクライアントのサーバーを保持する条件です。 *状態を保持しない*は、サーバーは覚えていない id とクライアントのコンテキスト メソッドの呼び出しが完了したら条件です。  
   
- XML for Analysis (XMLA) をサポートしている状態を保持する場合は、*セッション*一連のステートメントをまとめて実行するための使用が許可されます。 そのような一連のステートメントの例としては、後続のクエリで使用するための計算されるメンバーの作成があります。  
+ XML for Analysis (XMLA) のサポート状態保持を提供する*セッション*一連のステートメントをまとめて実行できるようにします。 そのような一連のステートメントの例としては、後続のクエリで使用するための計算されるメンバーの作成があります。  
   
  一般に、XMLA のセッションは、OLE DB 2.6 の仕様で概説されている以下の動作に従います。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36084689"
   
 -   複数のコマンドを単一のセッションのコンテキストで実行できます。  
   
--   経由で送信されるプロバイダー固有のコマンドは、XMLA のコンテキストにおけるトランザクションのサポート、 [Execute](../xmla/xml-elements-methods-execute.md)メソッドです。  
+-   XMLA のコンテキストにおけるトランザクションのサポートはプロバイダー固有のコマンドで送信される、 [Execute](../xmla/xml-elements-methods-execute.md)メソッド。  
   
  XMLA は、Distributed Authoring and Versioning (DAV) プロトコルが疎結合環境でロックを実装するために使用しているアプローチと同様の手法で、Web 環境のセッションをサポートする方法を定義します。 この実装は、プロバイダーがさまざまな理由 (たとえば、タイムアウトや接続エラーなど) でセッションの有効期限を終了させることができるという点で、DAV と類似しています。 セッションがサポートされる場合、Web サービスは、中断されて再開が必要なコマンドのセットを認識し、処理する準備を整えている必要があります。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36084689"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  プロバイダーからの SOAP 応答メッセージが含まれています、セッション ID には、戻り値のヘッダー領域で、XMLA ヘッダー タグを使用して\<SessionId >。  
+2.  プロバイダーからの SOAP 応答メッセージは XMLA ヘッダー タグを使用しての戻り値のヘッダー領域で、セッション ID を含む\<SessionId >。  
   
     ```  
     <SOAP-ENV:Header>  
@@ -98,7 +98,7 @@ ms.locfileid: "36084689"
     </SOAP-ENV:Header>  
     ```  
   
-4.  セッションの完了時に、 \<EndSession > タグを使用すると、関連するセッション ID 値を格納します。  
+4.  セッションが完了すると、 \<EndSession > タグを使用すると、関連するセッション ID 値を格納します。  
   
     ```  
     <SOAP-ENV:Header>  

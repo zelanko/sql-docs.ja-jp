@@ -1,5 +1,5 @@
 ---
-title: マトリックスのデザイン |Microsoft ドキュメント
+title: マトリックスのデザイン |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designmatrix.f1
 ms.assetid: ecd8cae0-3f19-4f3e-90d9-4ddfe1d0eec8
 caps.latest.revision: 22
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d533fdfcaeaf26629fb7da1c88f1b90cf8282da5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f68a47d9b905861b5a2068db3a8a93b1e1d5be2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247972"
 ---
 # <a name="design-the-matrix"></a>マトリックスのデザイン
   レポート ウィザードのこのページでは、レポートのフィールドを選択します。  
   
 ## <a name="options"></a>および  
- **使用できるフィールド**  
+ **使用可能なフィールド**  
  マトリックスの上のページに、行グループ、列グループ、または詳細として表示されるフィールドを選択します。 **[フィールド]** から **[ページ]**、 **[列]**、 **[行]**、または **[詳細]** にフィールドを移動するには、フィールドを選択してから、 **[ページ]**、 **[列]**、 **[行]**、または **[詳細]** ボタンをクリックします。 または、適切なボックスにフィールドをドラッグします。  
   
  **表示されるフィールド**  

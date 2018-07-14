@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked reports [Reporting Services], creating
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 87e95389a4571162e07efce30c4bcd933309bef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 971f07256e5f8b678d62f3a9b75e13299fad3ed3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191332"
 ---
 # <a name="create-a-linked-report"></a>リンク レポートを作成する
   リンク レポートは、既存のレポートへのアクセス ポイントとなるレポート サーバー アイテムです。 概念的には、プログラムを実行したりファイルを開くのに使用する、プログラム ショートカットに似ています。  
@@ -38,7 +38,7 @@ ms.locfileid: "36082915"
   
 2.  新規リンク レポートの名前を入力します。 必要に応じて、説明を入力します。  
   
-3.  レポートを別のフォルダーに保存するには、 **[場所の変更]** をクリックします。 保存先のフォルダーをクリックするか、または **[場所]** ボックスにフォルダー名を入力します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 別のフォルダーを選択しない場合、現在のフォルダー (基にして、レポートの保存場所)、リンク レポートが作成されます。  
+3.  レポートを別のフォルダーに保存するには、 **[場所の変更]** をクリックします。 保存先のフォルダーをクリックするか、または **[場所]** ボックスにフォルダー名を入力します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 別のフォルダーを選択しない場合は、(基にして、レポートの保存先) 現在のフォルダーで、リンク レポートが作成されます。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] リンク レポートが開きます。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36082915"
      ![リンク レポート アイコン](../media/hlp-16linked.gif "リンク レポート アイコン")  
   
 ## <a name="see-also"></a>参照  
- [レポートを開いたり、閉じたりする&#40;レポート マネージャー&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [レポートを開閉&#40;レポート マネージャー&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [新しいリンク レポート ページ &#40;レポート マネージャー&#41;](../new-linked-report-page-report-manager.md)   
  [アイテムの場所の選択 ページ &#40;レポート マネージャー&#41;](../choose-item-location-page-report-manager.md)   
  [全般プロパティ ページ、レポート &#40;レポート マネージャー&#41;](../general-properties-page-reports-report-manager.md)   

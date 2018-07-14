@@ -1,5 +1,5 @@
 ---
-title: PauseService メソッド (SqlService クラス) |Microsoft ドキュメント
+title: PauseService メソッド (SqlService クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PauseService method
 ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 538266bbfdc097792be4043fdc62716a7a9cd9aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 4372b51553f2aff11908ddac5dc639b076dca408
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325602"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>PauseService メソッド (SqlService クラス)
   サービスを一時停止状態にする動作を試行します。  
@@ -52,6 +52,6 @@ object
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

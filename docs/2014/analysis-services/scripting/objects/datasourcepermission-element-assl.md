@@ -1,5 +1,5 @@
 ---
-title: DataSourcePermission 要素 (ASSL) |Microsoft ドキュメント
+title: DataSourcePermission 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DataSourcePermission element
 ms.assetid: 6dc6fb13-034e-479a-902e-27f3fb78c33f
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ca326118ce782962b0100c310ddb308af91f21b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d88f18a752e96e5081462056d831bc968dc605df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241362"
 ---
 # <a name="datasourcepermission-element-assl"></a>DataSourcePermission 要素 (ASSL)
-  既定のアクセス許可を定義、[データソース](../data-type/datasource-data-type-assl.md)、特定のデータ型[ロール](role-element-assl.md)要素。  
+  既定の権限を定義、 [DataSource](../data-type/datasource-data-type-assl.md) 、特定のデータ型[ロール](role-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

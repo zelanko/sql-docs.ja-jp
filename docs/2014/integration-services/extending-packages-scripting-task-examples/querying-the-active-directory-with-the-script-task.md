@@ -21,13 +21,13 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d118ff880ad3209cd348794b90aeac8ad76318aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03a12904a08c964a122f0658ccb53a4f5f0bd4ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245192"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>スクリプト タスクによる Active Directory へのクエリの実行
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージなどの企業データ処理アプリケーションでは、Active Directory に格納されている従業員の階級、役職、またはその他の特性に基づいて、個別にデータを処理する必要性が頻繁に生じます。 Active Directory は [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ディレクトリ サービスで、ユーザーに関するメタデータだけでなく、コンピューターやプリンターなどの他の組織資産に関するメタデータも集中して格納します。 Microsoft .NET Framework の `System.DirectoryServices` 名前空間では、Active Directory を使用して作業するためのクラスが用意されており、これを使用すると Active Directory が格納している情報に基づくデータ処理のワークフローを送信できます。  
@@ -42,13 +42,13 @@ ms.locfileid: "36075537"
   
 1.  `email`、`name`、および `title` という 3 つの文字列変数を作成します。 `email` 変数の値に企業の有効な電子メール アドレスを入力します。  
   
-2.  **スクリプト**のページ、**スクリプト タスク エディター**、追加、`email`変数を`ReadOnlyVariables`プロパティです。  
+2.  **スクリプト**のページ、**スクリプト タスク エディター**、追加、`email`変数を`ReadOnlyVariables`プロパティ。  
   
 3.  `name` および `title` 変数は、`ReadWriteVariables` プロパティに追加します。  
   
 4.  このスクリプト プロジェクトでは、参照を `System.DirectoryServices` 名前空間に追加します。  
   
-5.  のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 実際のコードでは、`Imports` ステートメントを使用し、`DirectoryServices` 名前空間をインポートしてください。  
+5.  . 実際のコードでは、`Imports` ステートメントを使用し、`DirectoryServices` 名前空間をインポートしてください。  
   
 > [!NOTE]  
 >  このスクリプトを正しく実行するには、組織のネットワーク上で Active Directory が使用され、この例で使用される従業員の情報が格納されている必要があります。  
@@ -115,6 +115,6 @@ public void Main()
   
 -   social.technet.microsoft.com の技術記事「[SSIS での Active Directory 情報の処理](http://go.microsoft.com/fwlink/?LinkId=199588)」  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 534bbcada8b7db3d6a96d57b4f2d4be867676469
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c3763ac1fa89ae69d905510944e75ec2a10116d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217992"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Data Quality Client で Integration Services プロジェクトを開く
   [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]クレンジング プロジェクトをバッチ モードで実行することができます。 しかし、DQS のデータ品質プロジェクト内のクレンジング アクティビティの **[結果の管理と表示]** タブでクレンジング結果を確認するのと同様の方法で、Integration Services パッケージ内でクレンジング結果を確認したい場合があります。 DQS では、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] [プロジェクトを開く] **画面から他のデータ品質プロジェクトを開くのと同様に、** で Integration Services プロジェクトを開くことができ、Integration Services プロジェクト内のクレンジング結果について、インタラクティブなクレンジングを操作できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36084410"
 ####  <a name="Permissions"></a> Permissions  
  Integration Services プロジェクトを開くためには、DQS_MAIN データベースに対する dqs_kb_editor または dqs_kb_operator ロールが必要です。  
   
- ![トップにリンク バックに使用される矢印アイコン](../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン")[でこのトピック](#Intro)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[でこのトピック](#Intro)  
   
 ##  <a name="Open"></a> Integration Services プロジェクトを開く  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36084410"
   
 6.  データをエクスポートした後で **[完了]** をクリックして Integration Services プロジェクトを閉じます。  
   
- ![トップにリンク バックに使用される矢印アイコン](../2014-toc/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン")[でこのトピック](#Intro)  
+ ![上部のリンクに戻る で使用される矢印アイコン](../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[でこのトピック](#Intro)  
   
 ## <a name="see-also"></a>参照  
  [DQS クレンジング変換](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   

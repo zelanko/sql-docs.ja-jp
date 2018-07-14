@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee64eeed2e6508fc31cac544e6ba4f2617b8a24b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48075a70eba052e6996fa096cde9f8f3b5f946e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213542"
 ---
 # <a name="data-profiling-task"></a>データ プロファイル タスク
   データ プロファイル タスクでは、データ ソースについて詳細に理解し、解決する必要があるデータの問題を特定するために役立つさまざまなプロファイルが計算されます。  
@@ -58,7 +58,7 @@ ms.locfileid: "36084602"
 |列長分布プロファイル|選択された列に含まれる文字列値の長さごとに、その長さと、テーブル内におけるその長さの行の比率を報告します。<br /><br /> このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、2 文字の米国州コードの列をプロファイルし、3 文字以上の値を検出できます。|  
 |列の NULL 比プロファイル|選択した列の NULL 値の比率を報告します。<br /><br /> このプロファイルを使用すると、列の NULL 値の比率が予想外に高いなどのデータの問題を特定できます。 たとえば、郵便番号列をプロファイルすると、許容範囲を超える欠落した郵便番号の比率を検出できます。|  
 |列パターン プロファイル (Column Pattern Profile)|文字列型の列に含まれる指定された比率の値に対応する一連の正規表現を報告します。<br /><br /> このプロファイルを使用すると、無効な文字列などのデータの問題を特定できます。 また、このプロファイルには、新しい値を検証するために将来使用できる正規表現も提示されます。 たとえば、米国郵便番号列のパターン プロファイルでは、\d{5}-\d{4}、\d{5}、\d{9} という正規表現が生成されます。 その他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれている可能性があります。|  
-|列統計プロファイル|最小値、最大、平均値、および標準偏差数値列は、最小、最大などの統計を報告`datetime`列です。<br /><br /> このプロファイルを使用すると、無効な日付などのデータの問題を特定できます。 たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。|  
+|列統計プロファイル|最小値、最大、平均値、および数値の列、および最低限の標準偏差、最大などの統計を報告`datetime`列。<br /><br /> このプロファイルを使用すると、無効な日付などのデータの問題を特定できます。 たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。|  
 |列の値分布プロファイル|選択された列に含まれる値ごとに、その値と、テーブル内におけるその値の行の比率を報告します。 また、テーブル内の指定された比率を超えている行の値も報告できます。<br /><br /> このプロファイルを使用すると、列に含まれる個別の値の数が正しくないなどのデータの問題を特定できます。 たとえば、米国の州を想定している列をプロファイルし、50 個を超える個別の値を検出できます。|  
   
  次の 3 つのプロファイルで、複数の列または列とテーブル間のリレーションシップを分析できます。  
@@ -86,15 +86,15 @@ ms.locfileid: "36084602"
 |FunctionalDependencyProfile|列の`integer`型、`char`型、および`datetime`型|  
 |InclusionProfile|列の`integer`型、`char`型、および`datetime`型|  
   
- \* 有効なデータ型の前の表に、 `integer`、 `char`、 `datetime`、および`numeric`型は、次の特定のデータ型を含めます。  
+ \* 有効なデータ型の場合は、前の表に、 `integer`、 `char`、`datetime`と`numeric`型が次の特定のデータ型が含まれます。  
   
  整数型には `bit`、`tinyint`、`smallint`、`int`、および `bigint` が含まれます。  
   
- 文字型に`char`、 `nchar`、 `varchar`、および`nvarchar,`は含めない`varchar(max)`と`nvarchar(max)`です。  
+ 文字型を含める`char`、 `nchar`、 `varchar`、および`nvarchar,`は含まれませんが`varchar(max)`と`nvarchar(max)`します。  
   
  日付/時刻型には `datetime`、`smalldatetime`、および `timestamp` が含まれます。  
   
- 数値型を含める`integer`型 (を除く`bit`)、 `money`、 `smallmoney`、 `decimal`、 `float`、 `real`、および`numeric`です。  
+ 数値型を含める`integer`型 (を除く`bit`)、 `money`、 `smallmoney`、 `decimal`、 `float`、 `real`、および`numeric`します。  
   
  \*\* `image`、 `text`、 `XML`、 `udt`、および`variant`列の Null 比プロファイル以外のプロファイルの種類はサポートされていません。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36084602"
  [プロファイル要求 ページ](data-profiling-task-editor-profile-requests-page.md)  
  **[プロファイル要求]** ページでは、データ ソースを指定して、計算するデータ プロファイルを選択および構成します。 構成できる各種プロファイルの詳細については、次のトピックを参照してください。  
   
--   [候補キー プロファイル要求オプション&#40;データ プロファイル タスク&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [候補キー プロファイル要求 のオプション&#40;データ プロファイル タスク&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
 -   [列長分布プロファイル要求オプション&#40;データ プロファイル タスク&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
@@ -150,12 +150,12 @@ ms.locfileid: "36084602"
   
 -   [列パターン プロファイル要求オプション&#40;データ プロファイル タスク&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [列統計プロファイル要求オプション&#40;データ プロファイル タスク&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [列統計プロファイル要求 のオプション&#40;データ プロファイル タスク&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
 -   [列の値分布プロファイル要求オプション&#40;データ プロファイル タスク&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [機能依存プロファイル要求オプション&#40;データ プロファイル タスク&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [機能依存プロファイル要求 のオプション&#40;データ プロファイル タスク&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [値包含プロファイル要求オプション&#40;データ プロファイル タスク&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [値包含プロファイル要求 のオプション&#40;データ プロファイル タスク&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

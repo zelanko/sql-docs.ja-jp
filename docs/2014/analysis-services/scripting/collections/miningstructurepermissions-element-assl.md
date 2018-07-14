@@ -1,5 +1,5 @@
 ---
-title: MiningStructurePermissions 要素 (ASSL) |Microsoft ドキュメント
+title: MiningStructurePermissions 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningStructurePermissions element
 ms.assetid: 4db9a9b2-8525-441f-a202-fd253282f540
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4771102a81dfae1e4a0e62ea1527a5ad6d19199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91beb4cef1679150255283621403b53abeadfa7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324862"
 ---
 # <a name="miningstructurepermissions-element-assl"></a>MiningStructurePermissions 要素 (ASSL)
-  権限のコレクションが含まれています、 [MiningStructure](../objects/miningstructure-element-assl.md)要素。  
+  アクセス許可のコレクションが含まれています、 [MiningStructure](../objects/miningstructure-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36077211"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|子要素|[MiningStructurePermission](../objects/miningstructurepermission-element-assl.md)型の[権限](../data-type/permission-data-type-assl.md)|  
+|子要素|[MiningStructurePermission](../objects/miningstructurepermission-element-assl.md)型の[アクセス許可](../data-type/permission-data-type-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.MiningStructurePermissionCollection>します。  

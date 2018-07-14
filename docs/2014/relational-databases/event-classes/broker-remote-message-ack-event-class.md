@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Remote Message Ack event class
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7bd0cef1327e32dd5a773c3e422ec546014a0ef1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 49d5fba08da2929217252096ca8c2335a1f627d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177809"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **がメッセージの受信確認を送信または受信するときに、** Broker:Remote Message Ack [!INCLUDE[ssSB](../../includes/sssb-md.md)] イベントが生成されます。  
@@ -39,7 +39,7 @@ ms.locfileid: "36083923"
 |**DatabaseID**|**int**|USE *database* ステートメントで指定されているデータベースの ID。 特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |**EventClass**|**int**|キャプチャされたイベント クラスの種類。 **Broker:Message Ack** の場合は、常に **149**です。|27|いいえ|  
 |**EventSequence**|**int**|このイベントのシーケンス番号。|51|いいえ|  
-|**EventSubClass**|**nvarchar**|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列は次の値を含むことができます。<br /><br /> **受信確認が送信メッセージ**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、通常のシーケンス番号付きメッセージの一部として受信確認を送信しました。<br /><br /> **受信確認が送信**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、通常のシーケンス番号付きメッセージとは別に受信確認を送信しました。<br /><br /> **受信確認で受信したメッセージ**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、通常のシーケンス番号付きメッセージの一部として受信確認を受信しました。<br /><br /> **受信された受信確認**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、シーケンス番号付きメッセージとは別に受信確認を受信しました。|21|はい|  
+|**EventSubClass**|**nvarchar**|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列は次の値を含むことができます。<br /><br /> **受信確認の送信とメッセージ**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、通常のシーケンス番号付きメッセージの一部として受信確認を送信しました。<br /><br /> **受信確認の送信**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、通常のシーケンス番号付きメッセージとは別に受信確認を送信しました。<br /><br /> **確認を受信したメッセージ**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、通常のシーケンス番号付きメッセージの一部として受信確認を受信しました。<br /><br /> **確認を受信しました。**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、シーケンス番号付きメッセージとは別に受信確認を受信しました。|21|はい|  
 |**GUID**|**uniqueidentifier**|ダイアログのメッセージ交換 ID。 この ID はメッセージの一部として転送され、メッセージ交換の両側で共有されます。|54|いいえ|  
 |**HonorBrokerPriority**|**Int**|データベースの HONOR_BROKER_PRIORITY オプションの現在の値。0 = オフ、1 = オン。|32|はい|  
 |**HostName**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  

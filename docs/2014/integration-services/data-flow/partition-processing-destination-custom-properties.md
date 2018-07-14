@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2724682cebfcae1e5c6a14b9c7cd815c96ad4a7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c8eda0dd112471cdc156a530cf750a55fabd3b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195622"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>パーティション処理変換先のカスタム プロパティ
   パーティション処理変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
@@ -29,16 +29,16 @@ ms.locfileid: "36084140"
 |プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスへの接続文字列。|  
-|KeyDuplicate|Integer (列挙)|UseDefaultConfiguration が場合`False`、重複キー エラーを処理する方法を示す値。 指定できる値は`IgnoreError`(0)、 `ReportAndContinue` (1) と`ReportAndStop`(2)。 このプロパティの既定値は`IgnoreError`(0) です。|  
-|KeyErrorAction|Integer (列挙)|UseDefaultConfiguration が場合`False`、キー エラーを処理する方法を示す値。 有効な値は、`ConvertToUnknown` (0) および `DiscardRecord` (1) です。 このプロパティの既定値は`ConvertToUnknown`(0) です。|  
-|KeyErrorLimit|Integer|UseDefaultConfiguration が場合`False`、許可されているキー エラーの数の上限。|  
-|KeyErrorLimitAction|Integer (列挙)|UseDefaultConfiguration がある場合`False`、ときに実行するアクションを示す値`KeyErrorLimit`に到達します。 有効な値は、`StopLogging` (1) および `StopProcessing` (0) です。 このプロパティの既定値は`StopProcessing`(0) です。|  
-|KeyErrorLogFile|String|UseDefaultConfiguration が場合`False`、エラー ログ ファイルのパスとファイル名。|  
-|KeyNotFound|Integer (列挙)|UseDefaultConfiguration が場合`False`、存在しないというキー エラーを処理する方法を示す値。 指定できる値は`IgnoreError`(0)、 `ReportAndContinue` (1) と`ReportAndStop`(2)。 このプロパティの既定値は`ReportAndContinue`(1)。|  
-|NullKeyConvertedToUnknown|Integer (列挙)|UseDefaultConfiguration が場合`False`、null キーを処理する方法を示す値を不明な値に変換します。 指定できる値は`IgnoreError`(0)、 `ReportAndContinue` (1) と`ReportAndStop`(2)。 このプロパティの既定値は`IgnoreError`(0) です。|  
-|NullKeyNotAllowed|Integer (列挙)|UseDefaultConfiguration が場合`False`、許可されていない null を処理する方法を示す値。 指定できる値は`IgnoreError`(0)、 `ReportAndContinue` (1) と`ReportAndStop`(2)。 このプロパティの既定値は`ReportAndContinue`(1)。|  
+|KeyDuplicate|Integer (列挙)|UseDefaultConfiguration が`False`、重複キー エラーを処理する方法を示す値。 指定できる値は`IgnoreError`(0)、 `ReportAndContinue` (1) と`ReportAndStop`(2)。 このプロパティの既定値は`IgnoreError`(0)。|  
+|KeyErrorAction|Integer (列挙)|UseDefaultConfiguration が`False`、キーのエラーを処理する方法を示す値。 有効な値は、`ConvertToUnknown` (0) および `DiscardRecord` (1) です。 このプロパティの既定値は`ConvertToUnknown`(0)。|  
+|KeyErrorLimit|Integer|UseDefaultConfiguration が`False`、許可されているキー エラーの上限値。|  
+|KeyErrorLimitAction|Integer (列挙)|UseDefaultConfiguration が`False`、ときに実行するアクションを示す値`KeyErrorLimit`に到達します。 有効な値は、`StopLogging` (1) および `StopProcessing` (0) です。 このプロパティの既定値は`StopProcessing`(0)。|  
+|KeyErrorLogFile|String|UseDefaultConfiguration が`False`、エラー ログ ファイルのパスとファイル名。|  
+|KeyNotFound|Integer (列挙)|UseDefaultConfiguration が`False`、見つからないキーのエラーを処理する方法を示す値。 指定できる値は`IgnoreError`(0)、 `ReportAndContinue` (1) と`ReportAndStop`(2)。 このプロパティの既定値は`ReportAndContinue`(1)。|  
+|NullKeyConvertedToUnknown|Integer (列挙)|UseDefaultConfiguration が`False`、不明な値に変換された null キーを処理する方法を示す値。 指定できる値は`IgnoreError`(0)、 `ReportAndContinue` (1) と`ReportAndStop`(2)。 このプロパティの既定値は`IgnoreError`(0)。|  
+|NullKeyNotAllowed|Integer (列挙)|UseDefaultConfiguration が`False`、許容されない null の処理方法を示す値。 指定できる値は`IgnoreError`(0)、 `ReportAndContinue` (1) と`ReportAndStop`(2)。 このプロパティの既定値は`ReportAndContinue`(1)。|  
 |ProcessType|Integer (列挙)|変換が使用するパーティション処理の種類。 有効な値は、`ProcessAdd` (1) (インクリメンタル)、`ProcessFull` (0)、および `ProcessUpdate` (2) です。|  
-|UseDefaultConfiguration|ブール値|変換が既定のエラー構成を使用するかどうかを指定する値。 このプロパティは、する場合`False`変換が KeyDuplicate、KeyErrorAction など、この表に示したエラー処理のカスタム プロパティの値を使用します。|  
+|UseDefaultConfiguration|ブール値|変換が既定のエラー構成を使用するかどうかを指定する値。 場合、このプロパティは`False`変換は、KeyDuplicate や具合を含めて、このテーブルに表示されているエラー処理のカスタム プロパティの値を使用します。|  
   
  パーティション処理変換先の入力および入力列には、カスタム プロパティはありません。  
   

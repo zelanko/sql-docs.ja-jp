@@ -1,5 +1,5 @@
 ---
-title: データ (Master Data Services) のエクスポート |Microsoft ドキュメント
+title: エクスポートのデータ (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exporting data [Master Data Services]
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 656578a35e70b8371056330e0edec69073816687
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2d42511c3e7fecfba3f1a8fd92e9f8633564bf17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332162"
 ---
 # <a name="exporting-data-master-data-services"></a>データのエクスポート (Master Data Services)
   エクスポートすることができます[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]サブスクリプション ビューを作成してサブスクライブ システムへのデータ。 これにより、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースにパブリッシュされたデータを任意のサブスクライブ システムで表示できます。 ビューの詳細については、「 [ビュー](../relational-databases/views/views.md)」を参照してください。  
@@ -51,7 +51,7 @@ ms.locfileid: "36083212"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |マスター データのサブスクリプション ビューを作成する。|[サブスクリプション ビューを作成&#40;マスター データ サービス&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
-|既存のサブスクリプション ビューを削除する。|[サブスクリプション ビューを削除する&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
+|既存のサブスクリプション ビューを削除する。|[サブスクリプション ビューを削除&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   

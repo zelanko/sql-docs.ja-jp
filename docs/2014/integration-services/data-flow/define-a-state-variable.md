@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9eedf55aae8fe87da589d7fccb5e53456d70039
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efe8941ee77c9dbfd8ee335e9e1a2ed2931d1503
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322682"
 ---
 # <a name="define-a-state-variable"></a>状態変数の定義
   この手順では、CDC 状態が格納されるパッケージ変数を定義する方法について説明します。  
@@ -53,10 +53,10 @@ ms.locfileid: "36075323"
 |-----------|-----------------|  
 |(INITIAL)|現在の CDC グループでパッケージが実行される前の初期状態です。 CDC 状態が空のときの状態でもあります。|  
 |ILSTART (Initial Load Started)|CDC 制御タスクに対する `MarkInitialLoadStart` 操作の呼び出し後、初期読み込みパッケージが開始したときの状態です。|  
-|ILEND (Initial Load Ended)|これは、初期読み込みパッケージが正常に終了したときの状態後、 `MarkInitialLoadEnd` CDC 制御タスクに対する操作の呼び出しです。|  
-|ILUPDATE (Initial Load Update)|初期読み込みの後にトリクル フィード更新パッケージが実行され、まだ初期処理範囲を処理しているときの状態です。 これは、後に、 `GetProcessingRange` CDC 制御タスクに対する操作の呼び出しです。<br /><br /> __$reprocessing 列を使用している場合は、既にターゲットに存在する行をパッケージが再処理している可能性があることを示す 1 に設定されます。|  
+|ILEND (Initial Load Ended)|これは、初期読み込みパッケージが正常に終了したときの状態後、 `MarkInitialLoadEnd` CDC 制御タスクに対する操作の呼び出し。|  
+|ILUPDATE (Initial Load Update)|初期読み込みの後にトリクル フィード更新パッケージが実行され、まだ初期処理範囲を処理しているときの状態です。 これは、後に、 `GetProcessingRange` CDC 制御タスクに対する操作の呼び出し。<br /><br /> __$reprocessing 列を使用している場合は、既にターゲットに存在する行をパッケージが再処理している可能性があることを示す 1 に設定されます。|  
 |TFEND (Trickle-Feed Update Ended)|定期的な CDC の実行で期待される状態です。 前の実行が正常に完了していることと、新しい実行を新しい処理範囲で開始できることを表します。|  
-|TFSTART|これは、トリクル フィード更新パッケージの非初期実行時に状態が続く、 `GetProcessingRange` CDC 制御タスクに対する操作の呼び出しです。<br /><br /> 定期的な CDC の実行が開始されたは完了していないかはまだ終了して、クリーンに (`MarkProcessedRange`)。|  
+|TFSTART|これは、後、トリクル フィード更新パッケージの非初期実行時に状態、 `GetProcessingRange` CDC 制御タスクに対する操作の呼び出し。<br /><br /> 定期的な CDC の実行が開始されたが、完了していないか、まだ完了していない、正常に (`MarkProcessedRange`)。|  
 |TFREDO (Reprocessing Trickle-Feed Updates)|TFSTART の後に `GetProcessingRange` が行われたときの状態です。 前の実行が正常に完了しなかったことを表します。<br /><br /> __$reprocessing 列を使用している場合は、既にターゲットに存在する行をパッケージが再処理している可能性があることを示す 1 に設定されます。|  
 |ERROR|CDC グループはエラー状態です。|  
   

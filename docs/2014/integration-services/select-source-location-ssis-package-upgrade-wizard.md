@@ -1,5 +1,5 @@
 ---
-title: ソースの場所 (SSIS パッケージ アップグレード ウィザード) を選択して |Microsoft ドキュメント
+title: ソースの場所 (SSIS パッケージ アップグレード ウィザード) を選択します |。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectsourcelocation.f1
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72e37065325a80f2f487101a1b8f936bb903dc04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2794712f3817b3cf4d63aac7451a817cf55338b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266928"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>[ソースの場所を選択] (SSIS パッケージ アップグレード ウィザード)
   **[ソースの場所を選択]** ページを使用すると、パッケージのアップグレード元を指定できます。  

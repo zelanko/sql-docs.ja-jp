@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
 - Transact-SQL debugger, supported versions
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33509006a58d65cb87c106572b6e68ba3621cca5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1c8ab80ff9c697ac3f7a9a7eaa466e11d003adfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162213"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL デバッガーの実行
   [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウを開いた後に起動できます。 次に、デバッガーを停止するまで、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードをデバッグ モードで実行できます。 オプションを設定して、デバッガーの実行方法をカスタマイズできます。  
@@ -37,7 +37,7 @@ ms.locfileid: "36083611"
 ## <a name="starting-and-stopping-the-debugger"></a>デバッガーの起動と停止  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを起動するための要件は次のとおりです。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが別のコンピューターの [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続されている場合、デバッガーはリモート デバッグ用に構成されています。 詳細については、次を参照してください。 [TRANSACT-SQL デバッガーを構成する](configure-firewall-rules-before-running-the-tsql-debugger.md)です。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが別のコンピューターの [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続されている場合、デバッガーはリモート デバッグ用に構成されています。 詳細については、次を参照してください。 [TRANSACT-SQL デバッガーを構成する](configure-firewall-rules-before-running-the-tsql-debugger.md)します。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] が、sysadmin 固定サーバー ロールのメンバーである Windows アカウントで実行されている必要があります。  
   

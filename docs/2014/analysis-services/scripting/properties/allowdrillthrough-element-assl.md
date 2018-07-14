@@ -1,5 +1,5 @@
 ---
-title: AllowDrillThrough 要素 (ASSL) |Microsoft ドキュメント
+title: AllowDrillThrough 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllowDrillThrough element
 ms.assetid: 53c9e4a3-a376-447d-a13f-80d845cc9789
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e5ee132903b98c616ce756b423455302ca6e65f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f98b16569c3a7f4ab136be291d7bfd45698b5b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178869"
 ---
 # <a name="allowdrillthrough-element-assl"></a>AllowDrillThrough 要素 (ASSL)
   親要素に対してドリルスルーが許可されているかどうかを指定します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36083516"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 親に対応する要素`AllowDrillThrough`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.MiningModel>、 <xref:Microsoft.AnalysisServices.MiningModelPermission>、および<xref:Microsoft.AnalysisServices.MiningStructurePermission>です。  
+ 親に対応する要素`AllowDrillThrough`分析管理オブジェクト (AMO) オブジェクト モデルは、 <xref:Microsoft.AnalysisServices.MiningModel>、 <xref:Microsoft.AnalysisServices.MiningModelPermission>、および<xref:Microsoft.AnalysisServices.MiningStructurePermission>します。  
   
 ## <a name="drillthrough-on-mining-structures"></a>マイニング構造でのドリルスルー  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を定義できます`AllowDrillthrough`マイニング構造とマイニング モデルのアクセス許可。 この権限をロールに割り当てると、そのロールのメンバーはデータ マイニング モデルにクエリを実行し、モデルに含まれていない構造列を返すことができます。 たとえば、顧客キー、顧客の収入、および顧客が購入した製品の列のみを使用するモデルを作成します。 モデルでドリルスルーを有効にすると、ユーザーは、顧客の電子メールや名前など、マイニング構造の他の列の情報を返すことができます。  

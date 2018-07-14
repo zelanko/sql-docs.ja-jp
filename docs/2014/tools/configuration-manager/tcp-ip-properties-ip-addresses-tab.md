@@ -1,5 +1,5 @@
 ---
-title: TCP/IP プロパティ ([IP アドレス] タブ) |Microsoft ドキュメント
+title: TCP/IP のプロパティ (IP アドレス タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8325999f00f7b5b84bc01d1de188802c27dba7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cb09573cd77f74044647925bd43310223c4ce67e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187595"
 ---
-# <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP/IP プロパティ ([IP アドレス] タブ)
+# <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP/IP のプロパティ (IP アドレス タブ)
   **[TCP/IP のプロパティ]** ダイアログ ボックス ([IP アドレス] タブ) では、TCP/IP プロトコルの特定の IP アドレスに関するオプションを構成します。 **[TCP 動的ポート]** と **[TCP ポート]** だけは、**[IP All]** を選択することですべてのアドレスを一度に構成できます。  
   
  変更を有効にするには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があります。 SQL Server Browser サービスの開始と停止の詳細については、オンライン ブックの「SQL Server Browser サービスを開始および停止する方法」を参照してください。  
@@ -58,10 +58,10 @@ ms.locfileid: "36077241"
  1 つの IP アドレスを複数のポートでリッスンするように構成する場合は、**[TCP/IP のプロパティ]** ダイアログ ボックスの **[プロトコル]** タブで **[すべて受信待ち]** パラメーターも **[いいえ]** に設定する必要があります。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「複数の TCP ポートでリッスンするようにデータベース エンジンを構成する方法」を参照してください。  
   
 ## <a name="adding-or-removing-ip-addresses"></a>IP アドレスの追加または削除  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager には、使用可能になった時に IP アドレスが表示されます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。 使用可能な IP アドレスは、ネットワーク カードが追加または削除された場合、動的に割り当てられた IP アドレスが期限切れになった場合、ネットワーク構造が再構成された場合、あるいはコンピューターの物理的な場所が変わった場合 (ラップトップ コンピューターが別の建物でネットワークに接続するときなど) に、変わることがあります。 IP アドレスを変更するには、**[IP アドレス]** ボックスを編集し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager は、使用可能になった時に IP アドレスを表示します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。 使用可能な IP アドレスは、ネットワーク カードが追加または削除された場合、動的に割り当てられた IP アドレスが期限切れになった場合、ネットワーク構造が再構成された場合、あるいはコンピューターの物理的な場所が変わった場合 (ラップトップ コンピューターが別の建物でネットワークに接続するときなど) に、変わることがあります。 IP アドレスを変更するには、**[IP アドレス]** ボックスを編集し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動します。  
   
 ## <a name="see-also"></a>参照  
- [ネットワーク プロトコルを選択します。](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
+ [ネットワーク プロトコルの選択](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [TCP/IP を使用した有効な接続文字列の作成](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [SQL Server Browser サービス](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   

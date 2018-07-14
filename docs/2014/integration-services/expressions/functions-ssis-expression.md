@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
 - expressions [Integration Services], functions
@@ -19,13 +19,13 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 65c272c738877eef0d8f931c7ed3a9262eeeae72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b67a495d92d0bfc59288533d5f7c21e0f86d645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171033"
 ---
 # <a name="functions-ssis-expression"></a>関数 (SSIS 式)
   式言語には、式で使用するための関数セットが含まれています。 式で 1 つの関数を使用することもできますが、通常、式は関数と演算子を組み合わせて使用したり、複数の関数を使用します。  
@@ -50,8 +50,8 @@ ms.locfileid: "36083934"
 |[FLOOR &#40;SSIS 式&#41;](floor-ssis-expression.md)|数値式以下で最大の整数を返します。|  
 |[LN &#40;SSIS 式&#41;](ln-ssis-expression.md)|数値式の自然対数を返します。|  
 |[ログ&#40;SSIS 式&#41;](log-ssis-expression.md)|数値式の常用対数を返します。|  
-|[電源&#40;SSIS 式&#41;](power-ssis-expression.md)|指定された数値式の結果をべき乗値で返します。|  
-|[ROUND &#40;SSIS 式&#41;](round-ssis-expression.md)|指定された長さまたは有効桁数に丸めた数値式を返します。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|  
+|[POWER &#40;SSIS 式&#41;](power-ssis-expression.md)|指定された数値式の結果をべき乗値で返します。|  
+|[ROUND &#40;SSIS 式&#41;](round-ssis-expression.md)|指定された長さまたは有効桁数に丸めた数値式を返します。 .|  
 |[サインオン&#40;SSIS 式&#41;](sign-ssis-expression.md)|数値式の符号として正 (+)、負 (-)、ゼロ (0) のいずれかを返します。|  
 |[正方形&#40;SSIS 式&#41;](square-ssis-expression.md)|数値式の 2 乗値を返します。|  
 |[SQRT &#40;SSIS 式&#41;](sqrt-ssis-expression.md)|数値式の平方根を返します。|  
@@ -67,13 +67,13 @@ ms.locfileid: "36083934"
 |[左&#40;SSIS 式&#41;](left-ssis-expression.md)|指定された文字式の一番左の部分から指定された数の文字を返します。|  
 |[低い&#40;SSIS 式&#41;](lower-ssis-expression.md)|大文字が小文字に変換された状態の文字式を返します。|  
 |[LTRIM &#40;SSIS 式&#41;](trim-ssis-expression.md)|先頭のスペースを削除した後の文字式を返します。|  
-|[置き換える&#40;SSIS 式&#41;](replace-ssis-expression.md)|式に含まれている文字列を別の文字列または空の文字列で置き換えた文字式を返します。|  
+|[置換&#40;SSIS 式&#41;](replace-ssis-expression.md)|式に含まれている文字列を別の文字列または空の文字列で置き換えた文字式を返します。|  
 |[レプリケート&#40;SSIS 式&#41;](replicate-ssis-expression.md)|指定された回数だけレプリケートされた文字式を返します。|  
 |[反転&#40;SSIS 式&#41;](reverse-ssis-expression.md)|文字式を逆に並べ替えたものを返します。|  
 |[右&#40;SSIS 式&#41;](right-ssis-expression.md)|指定された文字式の一番右の部分から指定された数の文字を返します。|  
 |[RTRIM &#40;SSIS 式&#41;](rtrim-ssis-expression.md)|末尾のスペースを削除した後の文字式を返します。|  
 |[部分文字列&#40;SSIS 式&#41;](substring-ssis-expression.md)|文字式の一部を返します。|  
-|[TRIM &#40;SSIS 式&#41;](trim-ssis-expression.md)|先頭および末尾のスペースを削除した後の文字式を返します。|  
+|[トリミング&#40;SSIS 式&#41;](trim-ssis-expression.md)|先頭および末尾のスペースを削除した後の文字式を返します。|  
 |[上限&#40;SSIS 式&#41;](upper-ssis-expression.md)|小文字が大文字に変換された状態の文字式を返します。|  
   
  式エバリュエーターには、次の日付と時刻関数が用意されています。  
@@ -86,7 +86,7 @@ ms.locfileid: "36083934"
 |[1 日&#40;SSIS 式&#41;](day-ssis-expression.md)|指定された日付の日を整数で返します。|  
 |[GETDATE &#40;SSIS 式&#41;](getdate-ssis-expression.md)|システムの現在の日付を返します。|  
 |[GETUTCDATE &#40;SSIS 式&#41;](getutcdate-ssis-expression.md)|システムの現在の日付を UTC 時刻 (協定世界時またはグリニッジ標準時) で返します。|  
-|[月&#40;SSIS 式&#41;](month-ssis-expression.md)|指定された日付の月を表す整数を返します。|  
+|[1 か月&#40;SSIS 式&#41;](month-ssis-expression.md)|指定された日付の月を表す整数を返します。|  
 |[年&#40;SSIS 式&#41;](year-ssis-expression.md)|指定された日付の年を表す整数を返します。|  
   
  式エバリュエーターには、次の NULL 関数が用意されています。  

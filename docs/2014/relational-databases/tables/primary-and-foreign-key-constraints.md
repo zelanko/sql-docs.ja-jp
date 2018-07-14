@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - foreign keys [SQL Server], cascading referential integrity
 - FOREIGN KEY constraints
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 30a0d2f23c814c9ff1c963c1a5d430cb6d711cbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 95825200426f9fc2f5989a2667b5504f6c4d6f3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268818"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主キー制約と外部キー制約
   主キーと外部キーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
@@ -82,7 +82,7 @@ ms.locfileid: "36076583"
  NO ACTION を指定すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラーが発生し、親テーブルでの行の削除操作または更新操作がロールバックされます。  
   
  CASCADE  
- 親テーブルで行が更新または削除された場合に、参照元のテーブルでも対応する行が更新または削除されます。 場合、CASCADE を指定することはできません、`timestamp`列が外部キーまたは参照先キーの一部です。 INSTEAD OF DELETE トリガーが設定されているテーブルには、ON DELETE CASCADE を指定できません。 INSTEAD OF UPDATE トリガーが設定されているテーブルには、ON UPDATE CASCADE を指定できません。  
+ 親テーブルで行が更新または削除された場合に、参照元のテーブルでも対応する行が更新または削除されます。 場合、CASCADE を指定することはできません、`timestamp`列は、外部キーまたは参照されるキーのいずれかの一部です。 INSTEAD OF DELETE トリガーが設定されているテーブルには、ON DELETE CASCADE を指定できません。 INSTEAD OF UPDATE トリガーが設定されているテーブルには、ON UPDATE CASCADE を指定できません。  
   
  SET NULL  
  親テーブルの対応する行が更新または削除された場合、外部キーを形成するすべての値が NULL に設定されます。 この制約を実行するには、外部キー列が NULL 値を使用できる必要があります。 INSTEAD OF UPDATE トリガーが設定されているテーブルには指定できません。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 42f5ca4942dc6d4a3e1d25805fffc2cd3e959860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 1248a6f7bb78fcea96cad08f379a30502e45f8a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175379"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>レポートのスクロール時にヘッダーを表示したままにする (レポート ビルダーおよび SSRS)
   レポートを表示した後に、スクロールによって行ラベルや列ラベルが隠れないようにするために、行見出しまたは列見出しを固定できます。  
@@ -64,7 +64,7 @@ ms.locfileid: "36083804"
   
      ![Tablix メンバー プロパティ](../media/grouppane-tablixmember-updated.png "Tablix メンバー プロパティ")  
   
-4.  プロパティ ウィンドウで、次のように設定します。 **FixedData**に`True`です。  
+4.  プロパティ ウィンドウで、設定**FixedData**に`True`します。  
   
 5.  スクロール中も表示したままにするすべての隣接するメンバーに対して、この手順を繰り返します。  
   

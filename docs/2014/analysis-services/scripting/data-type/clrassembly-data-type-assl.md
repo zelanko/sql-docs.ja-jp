@@ -1,5 +1,5 @@
 ---
-title: ClrAssembly データ型 (ASSL) |Microsoft ドキュメント
+title: ClrAssembly データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ClrAssembly data type
 ms.assetid: 3f5dc5a1-ebd6-41b8-ac04-91d4de137eb4
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e17992a5d15113ec0de5dd75978f932cb83d11c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63809f3dd903878baf5eabf1642430fbe0d9aa8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235582"
 ---
 # <a name="clrassembly-data-type-assl"></a>ClrAssembly データ型 (ASSL)
-  表す派生データ型を定義、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]アセンブリに関連付けられている、[データベース](../objects/database-element-assl.md)または[サーバー](../objects/server-element-assl.md)要素  
+  表す派生データ型を定義、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]アセンブリに関連付けられている、[データベース](../objects/database-element-assl.md)または[Server](../objects/server-element-assl.md)要素  
   
 ## <a name="syntax"></a>構文  
   
@@ -59,10 +59,10 @@ ms.locfileid: "36076318"
 |------------------|-------------|  
 |親要素|なし (抽象型)|  
 |子要素|[ファイル](../collections/files-element-assl.md)、 [PermissionSet](../properties/permissionset-element-assl.md)|  
-|派生要素|参照してください[アセンブリ](../objects/assembly-element-assl.md)([アセンブリ](../collections/assemblies-element-assl.md)のコレクション[データベース](../objects/database-element-assl.md)または[サーバー](../objects/server-element-assl.md))|  
+|派生要素|参照してください[アセンブリ](../objects/assembly-element-assl.md)([アセンブリ](../collections/assemblies-element-assl.md)のコレクション[データベース](../objects/database-element-assl.md)または[Server](../objects/server-element-assl.md))|  
   
 ## <a name="remarks"></a>コメント  
- `ClrAssembly`要素には、再作成に必要なファイルが含まれています、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]アセンブリでは、いずれかのインスタンスに関連付けられている[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]またはインスタンス上の特定のデータベースと[!INCLUDE[ssAS](../../../includes/ssas-md.md)]、だけでなく、アセンブリを実行するアクセス許可が必要です。  
+ `ClrAssembly`要素には再作成に必要なファイルが含まれています、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]アセンブリでは、いずれかのインスタンスに関連付けられている[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]またはインスタンス上の特定のデータベースと[!INCLUDE[ssAS](../../../includes/ssas-md.md)]、だけでなくアセンブリを実行するアクセス許可が必要です。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.ClrAssembly>します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36076318"
  [ClrAssemblyFile データ型&#40;ASSL&#41;](clrassemblyfile-data-type-assl.md)   
  [データ要素&#40;ASSL&#41;](../objects/data-element-assl.md)   
  [DataBlock データ型&#40;ASSL&#41;](datablock-data-type-assl.md)   
- [要素はブロック&#40;ASSL&#41;](../collections/blocks-element-assl.md)   
+ [要素のブロック&#40;ASSL&#41;](../collections/blocks-element-assl.md)   
  [要素のブロック&#40;ASSL&#41;](../objects/block-element-assl.md)   
  [ComAssembly データ型&#40;ASSL&#41;](assembly-data-type-assl.md)   
  [Analysis Services スクリプト言語の XML データ型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

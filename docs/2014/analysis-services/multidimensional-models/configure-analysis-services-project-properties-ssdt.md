@@ -1,5 +1,5 @@
 ---
-title: Analysis Services プロジェクトのプロパティ (SSDT) の構成 |Microsoft ドキュメント
+title: Analysis Services プロジェクトのプロパティ (SSDT) の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
 helpviewer_keywords:
 - projects [Analysis Services], properties
 ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b5c6062d07c10b171da7b3bc534836ddfe7752b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d75eff8c794c18a296a9d26850af87618af028a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167723"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Analysis Services プロジェクトのプロパティの構成 (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの構築と配置に影響する既定のプロパティで定義されています。  
@@ -54,7 +54,7 @@ ms.locfileid: "36075840"
  構成が追加されるまでは、全開発者がこの共通構成を使用します。 ただし、プロジェクト開発のさまざまな段階 (プロジェクトの初期開発中やテスト中) で、各開発者がいろいろなデータ ソースを使用して、異なる目的で別のサーバーにプロジェクトを配置する可能性があります。 構成を使用すると、このような異なる設定を別々の構成ファイルで維持できます。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services プロジェクトをビルド&#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
+ [Analysis Services プロジェクトのビルド&#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
  [Analysis Services プロジェクトの配置&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

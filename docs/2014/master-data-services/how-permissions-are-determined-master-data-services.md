@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 49929fedf5b7d1e44a300919f2c9d903efca5bc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd396e077ba63369d256c39ba104427f595f4df4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324402"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>権限の決定方法 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でセキュリティを構成する最も簡単な方法は、ユーザーが属しているグループにモデル オブジェクト権限を割り当てることです。  
@@ -48,9 +48,9 @@ ms.locfileid: "36076613"
   
 -   エンティティと同じレベルのオブジェクトは、暗黙的に拒否される。  
   
--   上位レベルのオブジェクトには、ナビゲーション アクセスが与えられる。 ナビゲーション アクセスの詳細については、次を参照してください。[ナビゲーション アクセス&#40;Master Data Services&#41;](navigational-access-master-data-services.md)です。  
+-   上位レベルのオブジェクトには、ナビゲーション アクセスが与えられる。 ナビゲーション アクセスの詳細については、次を参照してください。[ナビゲーション アクセス&#40;Master Data Services&#41;](navigational-access-master-data-services.md)します。  
   
- この例では**読み取り専用**エンティティへのアクセス許可が割り当てられているし、モデル構造内の下位レベルにある属性によってそのアクセス許可を継承します。 モデルでは、このエンティティとその属性に対するナビゲーション アクセスが提供されています。 モデル内のその他のエンティティは、明示的な権限が割り当てられておらず、権限の継承もしていないため、暗黙的に拒否されます。  
+ この例で**読み取り専用**エンティティへのアクセス許可が割り当てられているし、そのアクセス許可は、モデル構造内の下位レベルにある属性によって継承されます。 モデルでは、このエンティティとその属性に対するナビゲーション アクセスが提供されています。 モデル内のその他のエンティティは、明示的な権限が割り当てられておらず、権限の継承もしていないため、暗黙的に拒否されます。  
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36076613"
   
 -   権限が割り当てられていない上位レベルのノードは、暗黙的に拒否される。  
   
- この例では**読み取り専用**アクセス許可が、階層の 1 つのノードに割り当てられ、権限は、階層構造内の下位レベルにあるノードによって継承されています。 ルートは、権限が割り当てられていないため、暗黙的に拒否されます。 階層構造内のその他のノードは、明示的な権限が割り当てられておらず、権限の継承もしていないため、暗黙的に拒否されます。  
+ この例で**読み取り専用**アクセス許可は、階層の 1 つのノードに割り当てられているし、階層構造内の下位レベルにあるノードによってそのアクセス許可が継承されます。 ルートは、権限が割り当てられていないため、暗黙的に拒否されます。 階層構造内のその他のノードは、明示的な権限が割り当てられておらず、権限の継承もしていないため、暗黙的に拒否されます。  
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   

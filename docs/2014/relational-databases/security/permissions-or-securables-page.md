@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.permissions.f1
 - sql12.swb.SecurableAndEffectPermissions.f1
@@ -17,15 +16,15 @@ f1_keywords:
 - sql12.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3de33a268022b777476a9b05145da144ed87fb26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8f925690ea8d8c008a2ebffa0dda2f39c7118563
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186209"
 ---
 # <a name="permissions-or-securables-page"></a>[権限] ページまたは [セキュリティ保護可能なリソース] ページ
   **[権限]** ページまたは **[セキュリティ保護可能なリソース]** ページを使用すると、セキュリティ保護可能なリソースに対する権限を表示または設定できます。 このページは、さまざまな場面で開くことができます。 このページの内容は、ページを開くときの状況やページに含まれているアイテムによって多少異なる場合があります。 ページの先頭にあるグリッドは、ページを開いたときに設定されます。それ以外では、空になる場合があります。 アイテムを上のグリッドに追加するには、 **[検索]** をクリックします。 上のグリッドでアイテムを選択した後、 **[明示的]** タブで適切な権限を設定します。集計された権限を表示するには、**[有効]** タブを使用します。  
@@ -38,10 +37,10 @@ ms.locfileid: "36084086"
 ## <a name="upper-grid"></a>上のグリッド  
  上のグリッドには、権限を設定できるアイテムが 1 つ以上表示されます。 このダイアログ ボックスには、上のグリッドに追加するオブジェクトまたはプリンシパルを選択するための **[検索]** ボタンがあります。 グリッドの名前には、 **[セキュリティ保護可能なリソース]** 、または 1 つ以上の種類のセキュリティ保護可能なリソースやプリンシパルが表示される場合があります。 上のグリッドに表示される列は、プリンシパルまたはセキュリティ保護可能なリソースによって異なります。  
   
- **Name**  
+ **名前**  
  グリッドに追加される各プリンシパルまたはセキュリティ保護可能なリソースの名前です。  
   
- **Type**  
+ **型**  
  各アイテムの種類について説明します。  
   
 ## <a name="explicit-tab"></a>[明示的] タブ  

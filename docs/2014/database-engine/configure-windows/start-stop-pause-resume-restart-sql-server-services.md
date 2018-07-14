@@ -1,5 +1,5 @@
 ---
-title: 開始、停止、一時停止、再開、データベース エンジン、SQL Server エージェント、または SQL Server Browser サービスを再起動して |Microsoft ドキュメント
+title: 開始、停止、一時停止、再開、データベース エンジン、SQL Server エージェント、または SQL Server Browser サービスを再起動 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, start and stop services
 - stopping SQL Server Agent
@@ -41,18 +41,18 @@ helpviewer_keywords:
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 22a7d3321cfdcbcbd07e5771fd908f409002999a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 760ad35b8212ab8b38e441a3f5db332bce9f2bec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326282"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動
-  このトピックの内容が開始、停止、一時停止、再開、または再開する方法について説明します、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser サービスを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 **net**コマンド プロンプトでコマンド[!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell。  
+  このトピックでは、開始、停止、一時停止、再開、または再起動する方法を説明します、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser サービスを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 **net**コマンド プロンプトでコマンド[!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell。  
   
 -   **作業を開始する準備:**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36083050"
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]である実行可能プロセスです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、既定のインスタンス (1 台のコンピューターにつき 1 つのみ) にすることも、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の多数の名前付きインスタンスの 1 つにすることもできます。 コンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを判別するには、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 構成マネージャーを使用します。 既定のインスタンス (インストールした場合) は、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)]** として表示されます。 名前付きインスタンス (インストールした場合) は、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<instance_name>)]** として表示されます。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** としてインストールされます。  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス**  
- ジョブおよび警告と呼ばれる管理タスクをスケジュールに従って実行する Windows サービスです。 詳しくは、「 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)」をご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ ジョブおよび警告と呼ばれる管理タスクをスケジュールに従って実行する Windows サービスです。 詳しくは、「 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)」をご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービス**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種リソースに関する着信要求を受信し、コンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関するクライアント情報を提供する Windows サービスです。 コンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのインスタンスに対して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスのインスタンスが 1 つ使用されます。  
@@ -268,7 +268,7 @@ ms.locfileid: "36083050"
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- 詳細については、`SHUTDOWN`ステートメントを参照してください[シャット ダウン&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql)です。  
+ 詳細については、`SHUTDOWN`ステートメントを参照してください[シャット ダウン&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql)します。  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
   

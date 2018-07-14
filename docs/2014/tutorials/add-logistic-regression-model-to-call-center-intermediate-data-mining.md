@@ -1,5 +1,5 @@
 ---
-title: コール センター構造 (中級者向けデータ マイニング チュートリアル) へのロジスティック回帰モデルの追加 |Microsoft ドキュメント
+title: コール センター構造 (中級者向けデータ マイニング チュートリアル) へのロジスティック回帰モデルの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 97abb77a-346c-44fa-8959-688dee1af6a8
 caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: ccadf7665b112b6ba1055fdcf69aeb99609c3ab3
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: deeb55b64b8053aefd130891fb114ea174e2b7cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261838"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>コール センター構造へのロジスティック回帰モデルの追加 (中級者向けデータ マイニング チュートリアル)
   コール センターの業務に影響する可能性のある要因を分析すると共に、スタッフのサービス品質を向上させるための具体的な改善案を提出するように求められました。 ここでは、調査モデルの構築に使用したものと同じマイニング構造を使用し、予測作成用のマイニング モデルを追加します。  
@@ -32,47 +32,47 @@ ms.locfileid: "36312431"
   
 ### <a name="to-add-a-new-mining-model-to-the-call-center-mining-structure"></a>コール センターのマイニング構造に新しいマイニング モデルを追加するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、ソリューション エクスプ ローラーで、マイニング構造を右クリックして**Call Center Binned**を選択して**デザイナーを開く**です。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、ソリューション エクスプ ローラーで、マイニング構造を右クリックして**Call Center Binned**、選び**デザイナーを開く**します。  
   
-2.  データ マイニング デザイナーで、をクリックして、**マイニング モデル**タブです。  
+2.  データ マイニング デザイナーでクリックして、**マイニング モデル**タブ。  
   
-3.  をクリックして**関連マイニング モデルを作成する**です。  
+3.  クリックして**関連マイニング モデル作成**です。  
   
-4.  **新しいマイニング モデル** ダイアログ ボックスの**モデル名**、型`Call Center - LR`です。  **アルゴリズム名** **Microsoft ロジスティック回帰**です。  
+4.  **マイニング モデルの新しい** ダイアログ ボックスの**モデル名**、型`Call Center - LR`します。  **アルゴリズム名**、 **Microsoft ロジスティック回帰**します。  
   
 5.  **[OK]** をクリックします。  
   
-     新しいマイニング モデルが表示されます、**マイニング モデル**タブです。  
+     新しいマイニング モデルを表示、**マイニング モデル**タブ。  
   
 ### <a name="to-customize-the-logistic-regression-model"></a>ロジスティック回帰モデルをカスタマイズするには  
   
-1.  新しいマイニング モデルの列に`Call Center - LR`、Fact CallCenter ID、キーとしてのままにします。  
+1.  新しいマイニング モデルの列に`Call Center - LR`、キーとしてファクト CallCenter ID のままにします。  
   
-2.  ServiceGrade とレベルを 2 つの演算子の値を変更**Predict**です。  
+2.  ServiceGrade とレベルを 2 つの演算子の値を変更**Predict**します。  
   
      これらの列は、入力および予測の両方に使用されます。 本質的には、同じデータについて、2 つの別個のモデルを作成していることになります。ここでは、オペレーターの数を予測するモデルとサービス グレードを予測するモデルを作成しています。  
   
-3.  他のすべての列を変更する**入力**です。  
+3.  その他のすべての列を変更**入力**します。  
   
 ### <a name="to-specify-the-seed-and-process-the-models"></a>シードを指定してモデルを処理するには  
   
-1.  **マイニング モデルの**] タブで、名前付き Call Center - LR、モデルの列を右クリックし、選択 **[アルゴリズム パラメーターの**します。  
+1.  **マイニング モデルの** タブで、名前付き Call Center - LR、モデルの場合は、列を右クリックし、選択**アルゴリズム パラメーターの設定**します。  
   
-2.  HOLDOUT_SEED パラメーターの行の下の空のセルをクリックして**値**、および種類`1`です。 **[OK]** をクリックします。  
+2.  HOLDOUT_SEED パラメーターの行で、空のセルをクリックします。**値**、および種類`1`します。 **[OK]** をクリックします。  
   
     > [!NOTE]  
     >  関連するすべてのモデルで同じシードを使用する限り、シードとしてどのような値を選択するかは特に重要ではありません。  
   
-3.  **マイニング モデル**メニューの **および全モデルのマイニング構造の処理**です。 をクリックして**はい**サーバーに更新されたデータ マイニング プロジェクトを配置します。  
+3.  **マイニング モデル**メニューの **マイニング構造の処理とすべてのモデル**します。 クリックして**はい**サーバーに更新されたデータ マイニング プロジェクトを配置します。  
   
-4.  **マイニング モデルの処理**ダイアログ ボックスで、をクリックして**実行**です。  
+4.  **マイニング モデルの処理**ダイアログ ボックスで、をクリックして**実行**します。  
   
-5.  をクリックして**閉じる**を閉じる、**処理の進行状況**クリックしてダイアログ ボックスで、**閉じる**で再度、**マイニング モデルの処理** ダイアログ ボックス。  
+5.  をクリックして**閉じます**を閉じる、**処理の進行状況** ダイアログ ボックスをクリック**閉じます**で再度、**マイニング モデルの処理** ダイアログ ボックス。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [コール センター モデルの予測の作成&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
+ [コール センター モデルの予測の作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [処理の要件および考慮事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [処理の要件および注意事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DimensionBinding データ型 (ASSL) |Microsoft ドキュメント
+title: DimensionBinding データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DimensionBinding data type
 ms.assetid: 6163d86b-0f6c-4237-b07b-47bc7e2962c4
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac0dfce6e5c21ee901e065561b161c2d66cdd8c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6da2c5696654bf019ac139f8de6ff11507f3701a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252904"
 ---
 # <a name="dimensionbinding-data-type-assl"></a>DimensionBinding データ型 (ASSL)
   データ ソースの間のバインドを表す派生データ型を定義し、[ディメンション](../objects/dimension-element-assl.md)要素。  
@@ -67,7 +67,7 @@ ms.locfileid: "36075597"
 ## <a name="remarks"></a>コメント  
  詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、`Binding`型との継承階層`Binding`型を参照してください[&#40;ASSL&#41; ](binding-data-type-assl.md)要素。  
   
- ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.DimensionBinding>します。  
   

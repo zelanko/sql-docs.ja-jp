@@ -1,5 +1,5 @@
 ---
-title: Groups 要素 (ASSL) |Microsoft ドキュメント
+title: Groups 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Groups element
 ms.assetid: 62196435-83a8-4a0a-8be1-7dfc986dc6c5
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cf89c9f0f5970bcc00d82cab42c0f759e5acb6c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c79062d6ef250c6c5d90d5a4ed147a309556d03a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167543"
 ---
 # <a name="groups-element-assl"></a>Groups 要素 (ASSL)
   属性にバインドされるメンバーのグループのコレクションを格納します。  

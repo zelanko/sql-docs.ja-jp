@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precomputed partitions [SQL Server replication]
 - filters [SQL Server replication], parameterized
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - parameterized filters [SQL Server replication], optimizing
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 13c5a3ca9324b79c6c8844534ce5eff8b495eeed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 95cd675d8c774b7b0321eb3ffc15e1c15a213f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242262"
 ---
 # <a name="optimize-parameterized-row-filters"></a>パラメーター化された行フィルターの最適化
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、パラメーター化された行フィルターを最適化する方法について説明します。  
@@ -124,7 +124,7 @@ ms.locfileid: "36075491"
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>新しいパブリケーションを作成するときにマージ フィルターの最適化を指定するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)を実行します。 指定**@publication**と値の`true`のいずれか、次のパラメーター。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)を実行します。 指定**@publication**の値と`true`のいずれか、次のパラメーター。  
   
     -   **@use_partition_groups**- アーティクルが事前計算済みパーティションの要件を満たしている場合、パフォーマンスが最も最適化されます。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
   
@@ -152,9 +152,9 @@ ms.locfileid: "36075491"
   
 1.  (省略可) パブリッシャー側のパブリケーション データベースに対して [@publication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)を指定して **@publication**を使用して、パラメーター化された行フィルターを最適化する方法について説明します。 結果セットの **keep_partition_changes** および **use_partition_groups** の値を調べます。  
   
-2.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。 値を指定して**use_partition_groups**の**@property** 、`true`または`false`の **@value**です。  
+2.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。 値を指定**use_partition_groups**の**@property** 、`true`または`false`の **@value**します。  
   
-3.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。 値を指定して**keep_partition_changes**の**@property** 、`true`または`false`の **@value**です。  
+3.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。 値を指定**keep_partition_changes**の**@property** 、`true`または`false`の **@value**します。  
   
     > [!NOTE]  
     >  **keep_partition_changes** を有効にする場合、まず **use_partition_groups** を無効にして、**@force_reinit_subscription** に **1** を指定します。  

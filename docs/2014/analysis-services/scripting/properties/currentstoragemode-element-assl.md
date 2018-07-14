@@ -1,5 +1,5 @@
 ---
-title: CurrentStorageMode 要素 (ASSL) |Microsoft ドキュメント
+title: CurrentStorageMode 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CurrentStorageMode element
 ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cce7bfd399c0c986a79e919c6227ee604e9ff470
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b26d26138e7752b6b41f147f0cc1fd1051e5afc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233822"
 ---
 # <a name="currentstoragemode-element-assl"></a>CurrentStorageMode 要素 (ASSL)
   親要素の現在のストレージ モードを指定します。  
@@ -68,7 +68,7 @@ ms.locfileid: "36082857"
 |-----------|-----------------|  
 |*MOLAP*|親は多次元 OLAP (MOLAP) ストレージを使用します。|  
 |*ROLAP*|親はリレーショナル OLAP (ROLAP) ストレージを使用します。|  
-|*HOLAP*|親はハイブリッド OLAP (HOLAP) ストレージを使用します。 **注:** この値に対してのみ有効です[パーティション](../objects/partition-element-assl.md)要素の親です。|  
+|*HOLAP*|親はハイブリッド OLAP (HOLAP) ストレージを使用します。 **注:** この値はのみ有効です[パーティション](../objects/partition-element-assl.md)要素の親。|  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで `CurrentStorageMode` の許容値に対応する列挙型は、<xref:Microsoft.AnalysisServices.StorageMode> です。  
   

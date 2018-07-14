@@ -1,5 +1,5 @@
 ---
-title: Visibility 要素 (ASSL) |Microsoft ドキュメント
+title: Visibility 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Visibility element
 ms.assetid: 59372ebf-af52-4d60-bf9b-bb1644ae9865
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a434fe35437c049f5ec16c474695a67cfb102ffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e4580071cefc21035ba36c645019b4c768e4a1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185199"
 ---
 # <a name="visibility-element-assl"></a>Visibility 要素 (ASSL)
   可視性を定義、[注釈](../objects/annotation-element-assl.md)要素。  
@@ -69,7 +69,7 @@ ms.locfileid: "36077409"
 |*SchemaRowset*|注釈はスキーマ行セット内で表示されます。|  
 |*なし*|注釈は表示されません。|  
   
- 許可される値に対応する列挙`Visibility`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Annotation>します。  
+ 許容された値に対応する列挙体`Visibility`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Annotation>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

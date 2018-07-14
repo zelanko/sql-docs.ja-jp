@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -20,25 +20,25 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8b8de78b135245c36d11f4dfb96a993fd0bbc4dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd6b99c23bd2a8ef82597025c402f0f881c13982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170993"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] および[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]機能には内の制御フローのトラブルシューティングに使用できるツールが含まれて、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]パッケージです。  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]機能と制御フローのトラブルシューティングに使用できるツールが含まれて、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]パッケージ。  
   
--   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] コンテナーやタスクでブレークポイントをサポートします。  
+-   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] コンテナーおよびタスク上のブレークポイントをサポートしています。  
   
 -   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、実行時の進行状況レポートが用意されています。  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] では、デバッグ ウィンドウが用意されています。  
   
 ## <a name="breakpoints"></a>ブレークポイント  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーは、提供、**ブレークポイントの設定**ダイアログ ボックスで、ブレークの条件を有効にしてブレークポイントを設定することができ、ブレークポイントは、パッケージの実行前に発生する可能性が回数を指定することが中断されています。 ブレークポイントは、パッケージ レベル、または個別のコンポーネントのレベルで有効にできます。 タスクまたはコンテナー レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのデザイン画面上にあるタスクまたはコンテナーの隣に、ブレークポイントのアイコンが表示されます。パッケージ レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのラベル上にブレークポイントのアイコンが表示されます。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで用意されて、**ブレークポイントの設定**ダイアログ ボックスで、ブレークの条件を有効にすると、ブレークポイントを設定することができ、中断は、ブレークポイントがパッケージの実行前に出現回数の数を指定します。 ブレークポイントは、パッケージ レベル、または個別のコンポーネントのレベルで有効にできます。 タスクまたはコンテナー レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのデザイン画面上にあるタスクまたはコンテナーの隣に、ブレークポイントのアイコンが表示されます。パッケージ レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのラベル上にブレークポイントのアイコンが表示されます。  
   
  ブレークポイントにヒットすると、ブレークポイントのアイコンが変化し、ブレークポイントの発生元を識別できます。 ブレークポイントは、パッケージの実行時に追加、削除、および変更できます。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36076000"
 |タスクまたはコンテナーが受信すると、`OnTaskFailed`イベント。|タスク ホストが失敗したとき、タスク ホストによって呼び出されます。|  
 |タスクまたはコンテナーが受信すると、`OnProgress`イベント。|タスクの実行の進行状況を更新するために呼び出されます。|  
 |タスクまたはコンテナーが受信すると、`OnQueryCancel`イベント。|タスク処理の実行をキャンセルできる場合、任意のタイミングで呼び出されます。|  
-|タスクまたはコンテナーが受信すると、`OnVariableValueChanged`イベント。|変数の値が変更されたとき、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 変数の RaiseChangeEvent に設定する必要があります`true`をこのイベントを発生させます。<br /><br /> **\*\* 警告 \*\*** このブレークポイントに関連付けられている変数は、 **コンテナー** スコープで定義する必要があります。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|  
+|タスクまたはコンテナーが受信すると、`OnVariableValueChanged`イベント。|変数の値が変更されたとき、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 変数の RaiseChangeEvent に設定する必要があります`true`このイベントを発生させる。<br /><br /> **\*\* 警告 \*\*** このブレークポイントに関連付けられている変数は、 **コンテナー** スコープで定義する必要があります。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|  
 |タスクまたはコンテナーが受信すると、`OnCustomEvent`イベント。|タスクによって定義されたカスタム イベントを起動するため、タスクによって呼び出されます。|  
   
  一部のタスクとコンテナーには、すべてのタスクとコンテナーで使用できるブレークの条件以外に、ブレークポイントを設定するための特殊なブレーク条件が含まれています。 たとえば、For ループ コンテナーでは、ループの各反復処理の開始点で実行を中断するブレークポイントを設定するための、ブレークの条件を有効にできます。  
@@ -81,7 +81,7 @@ ms.locfileid: "36076000"
 -   [タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
   
 ## <a name="progress-reporting"></a>進行状況レポート  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーには、進行状況レポートの 2 種類が含まれています: のデザイン画面でコードの色分け表示、**制御フロー** ] タブと [進行状況メッセージ、**進行状況**タブです。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーには 2 種類進行状況レポートにはが含まれています: デザイン サーフェイスの色分け、**制御フロー**  タブとで進行状況メッセージ、**進行状況**タブ。  
   
  パッケージを実行すると、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、各タスクまたはコンテナーが実行状態を示す色で表示され、進行状況を確認できます。 この色により、要素が実行の待機中か、現在実行中か、正常に完了したか、または正しく終了しなかったか、などがわかります。 パッケージの実行を停止すると、表示は色分けされなくなります。  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 86aeaad34575eec0a411cb84c17950b479a3169b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a076691f045a5e9270a51b3500ea84f6b8756836
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177829"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>メモリ最適化テーブルのクエリ処理のガイド
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、インメモリ OLTP によってメモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャが導入されています。 ここでは、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャの両方に対するクエリ処理の概要について説明します。  
@@ -83,7 +83,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Order テーブルのデータは、CustomerID 列の非クラスター化インデックスを使用して取得されます。 このインデックスには、結合に使用される CustomerID 列と、ユーザーに返す主キー列 OrderID の両方が含まれています。 Order テーブルから追加の列を返す場合は、Order テーブルのクラスター化インデックス内の参照が必要です。  
   
--   `Inner Join` 論理操作は、`Merge Join` 物理操作により実装されます。 その他の物理結合の種類は、`Nested Loops` と `Hash Join` です。 `Merge Join`両方のインデックスが結合列 CustomerID で並べ替えられているファクトの演算子を活用します。  
+-   `Inner Join` 論理操作は、`Merge Join` 物理操作により実装されます。 その他の物理結合の種類は、`Nested Loops` と `Hash Join` です。 `Merge Join`両方のインデックスが結合列 CustomerID で並べ替えられているファクトの演算子を利用します。  
   
  これを少し変えたバリエーションとして、OrderID だけでなく、Order テーブルのすべての行を返すクエリを検討します。  
   
@@ -96,7 +96,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![ディスク ベース テーブルのハッシュ結合のクエリ プラン。](../../database-engine/media/hekaton-query-plan-2.gif "ディスク ベース テーブルのハッシュ結合のクエリ プラン。")  
 ディスク ベース テーブルのハッシュ結合のクエリ プラン。  
   
- このクエリでは、Orders テーブルの行はクラスター化インデックスを使用して取得されます。 `Hash Match`物理操作は、今後の使用、`Inner Join`です。 Order のクラスター化インデックスは CustomerID で並べ替えられていないため、 `Merge Join` sort 演算子、パフォーマンスに影響を与える必要があります。 前の例の `Hash Match` 操作のコスト (46%) と比較して、`Merge Join` 操作 (75%) の相対コストを確認してください。 オプティマイザーで考慮、`Hash Match`演算子も前の例がの結果、`Merge Join`演算子の方のパフォーマンスが向上します。  
+ このクエリでは、Orders テーブルの行はクラスター化インデックスを使用して取得されます。 `Hash Match`物理演算子の使用、`Inner Join`します。 Order のクラスター化インデックスは CustomerID で並べ替えられていないため、`Merge Join`パフォーマンスに影響を与えるソート演算子が必要になります。 前の例の `Hash Match` 操作のコスト (46%) と比較して、`Merge Join` 操作 (75%) の相対コストを確認してください。 オプティマイザーと判断されて、`Hash Match`演算子も前の例で検討したうえで、`Merge Join`演算子は、パフォーマンスの向上を指定します。  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディスク ベース テーブルに対するクエリ処理  
  次の図は、アドホック クエリに対する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のクエリ処理フローの概要を示しています。  
@@ -209,7 +209,7 @@ END
   
  この処理は次のとおりです。  
   
-1.  ユーザーの問題、`CREATE PROCEDURE`ステートメントを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+1.  ユーザーの問題、`CREATE PROCEDURE`ステートメント[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 2.  パーサーと algebrizer は、プロシージャの処理フロー、およびストアド プロシージャ内の [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリのクエリ ツリーを作成します。  
   
@@ -226,11 +226,11 @@ END
   
  ネイティブ コンパイル ストアド プロシージャの呼び出しは、次のとおりです。  
   
-1.  ユーザーの問題、 `EXEC` *usp_myproc*ステートメントです。  
+1.  ユーザーの問題、 `EXEC` *usp_myproc*ステートメント。  
   
 2.  パーサーは、名前とストアド プロシージャのパラメーターを抽出します。  
   
-     ステートメントが準備されている場合、たとえばを使用して`sp_prep_exec`パーサーはプロシージャ名と実行時にパラメーターを抽出する必要はありません。  
+     場合は、例を使用して、ステートメントが準備`sp_prep_exec`パーサーはプロシージャ名と実行時にパラメーターを抽出する必要はありません。  
   
 3.  インメモリ OLTP ランタイムがストアド プロシージャに対する DLL エントリ ポイントを特定します。  
   
@@ -240,7 +240,7 @@ END
   
  解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャは最初の実行時にコンパイルされますが、ネイティブ コンパイル ストアド プロシージャは作成時にコンパイルされます。 解釈されたストアド プロシージャが呼び出し時にコンパイルされる場合、この呼び出しに指定されたパラメーターの値が、実行プランの生成時にオプティマイザーによって使用されます。 コンパイル時にパラメーターをこのように使用することを、"パラメーターを見つけ出す" と表現します。  
   
- パラメーターを見つけ出すことは、ネイティブ コンパイル ストアド プロシージャのコンパイルには使用されません。 ストアド プロシージャに対するすべてのパラメーターは、UNKNOWN 値があると見なされます。 解釈されたストアド プロシージャと同様に、ネイティブ コンパイル ストアド プロシージャもサポート、`OPTIMIZE FOR`ヒント。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)」を参照してください。  
+ パラメーターを見つけ出すことは、ネイティブ コンパイル ストアド プロシージャのコンパイルには使用されません。 ストアド プロシージャに対するすべてのパラメーターは、UNKNOWN 値があると見なされます。 このような解釈されたストアド プロシージャ、ネイティブ コンパイル ストアド プロシージャもサポート、`OPTIMIZE FOR`ヒント。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)」を参照してください。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランの取得  
  ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランは、 **の** 推定実行プラン [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]または [!INCLUDE[tsql](../../../includes/tsql-md.md)]の SHOWPLAN_XML オプションを使用して取得できます。 以下に例を示します。  

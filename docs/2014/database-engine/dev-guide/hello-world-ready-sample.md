@@ -1,5 +1,5 @@
 ---
-title: Hello World Ready サンプル |Microsoft ドキュメント
+title: Hello World Ready サンプル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4fed72859ff91a9a0056529893c7f5664fe6254
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7d94ed99238f6e4a38b92059ad7cd5571abd47e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235602"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready サンプル
   Hello World Ready サンプルでは、国際化対応の、CLR (共通言語ランタイム) 統合ベースの単純なストアド プロシージャの作成、配置、およびテストにかかわる基本的な操作を示しています。 国際化対応コンポーネントは、コンポーネントのソース コードを変更することなく、世界中の市場に向けて、異なる言語へのローカライズを簡単に行うことができます。 また、このサンプルでは、ストアド プロシージャによって動的に構築されてクライアントに返されるレコードおよび出力パラメーターを使用してデータを返す方法についても示します。このサンプルは、Hello World サンプルとほぼ同じですが、このアプリケーションのローカライズをより簡単かつ安全に行うことができます。 ローカライズ済みテキストを変更するには、次の作業を実行する必要があります。  
   
-1.  (、XML ファイルを変更します。`resx` resources ディレクトリで特定のカルチャ用ファイル)  
+1.  (します XML ファイルを変更します。`resx` resources ディレクトリでは、特定のカルチャのファイル)  
   
 2.  `resgen` を使用して、カルチャに応じたリソース ファイルをビルドします。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36075578"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要があります`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "36075578"
   
 3.  c:\MySample で、`HelloWorld.vb` (Visual Basic サンプル) または `HelloWorld.cs` (C# サンプル) を作成し、適切な Visual Basic または C# のサンプル コード (下記) をこのファイルにコピーします。  
   
-4.  C:\MySample で、ファイルの作成`messages.resx`サンプル コードをファイルにコピーします。  
+4.  C:\MySample でファイルを作成`messages.resx`サンプル コードをファイルにコピーします。  
   
-5.  C:\MySample で、ファイルの作成`messages.de.resx`ファイルを保存することによって`messages.resx`として`messages.de.resx`行を変更した後  
+5.  C:\MySample でファイルを作成`messages.de.resx`ファイルを保存することによって`messages.resx`として`messages.de.resx`行を変更した後  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36075578"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  C:\MySample で、ファイルの作成`messages.es.resx`ファイルを保存することによって`messages.resx`として`messages.es.resx`行を変更した後  
+6.  C:\MySample でファイルを作成`messages.es.resx`ファイルを保存することによって`messages.resx`として`messages.es.resx`行を変更した後  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36075578"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  C:\MySample で、ファイルの作成`messages.fr.resx`ファイルを保存することによって`messages.resx`として`messages.fr.resx`行を変更した後  
+7.  C:\MySample でファイルを作成`messages.fr.resx`ファイルを保存することによって`messages.resx`として`messages.fr.resx`行を変更した後  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36075578"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  C:\MySample で、ファイルの作成`messages.fr-FR.resx`ファイルを保存することによって`messages.resx`として`messages.fr-FR.resx`行を変更した後  
+8.  C:\MySample でファイルを作成`messages.fr-FR.resx`ファイルを保存することによって`messages.resx`として`messages.fr-FR.resx`行を変更した後  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36075578"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. C:\MySample で、ファイルの作成`messages.it.resx`ファイルを保存することによって`messages.resx`として`messages.it.resx`行を変更した後  
+9. C:\MySample でファイルを作成`messages.it.resx`ファイルを保存することによって`messages.resx`として`messages.it.resx`行を変更した後  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36075578"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. C:\MySample で、ファイルの作成`messages.ja.resx`ファイルを保存することによって`messages.resx`として`messages.ja.resx`行を変更した後  
+10. C:\MySample でファイルを作成`messages.ja.resx`ファイルを保存することによって`messages.resx`として`messages.ja.resx`行を変更した後  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36075578"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-16. コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、として保存`test.sql`サンプル ディレクトリにします。  
+16. コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、保存`test.sql`サンプル ディレクトリにします。  
   
 17. 次のコマンドを使用してテスト スクリプトを実行します。  
   

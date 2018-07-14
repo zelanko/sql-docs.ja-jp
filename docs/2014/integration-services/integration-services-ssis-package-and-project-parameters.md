@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) パラメーター |Microsoft ドキュメント
+title: Integration Services (SSIS) パラメーター |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d477f12cdce1063f765c9b6be2f39ba1fe30a505
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cd87c7c7b64b9adda2a49bf892004502d951665
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172953"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS) パラメーター
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) パラメーターを使用すると、パッケージの実行時にパッケージ内のプロパティに値を割り当てることができます。 " *プロジェクト パラメーター* " はプロジェクト レベル、" *パッケージ パラメーター* " はパッケージ レベルで作成できます。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。  
   
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[Project.params]** ウィンドウを使用して、プロジェクト パラメーターを作成、変更、または削除します。 **デザイナーの** [パラメーター] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用して、パッケージ パラメーターを作成、変更、および削除します。 **[パラメーター化]** ダイアログ ボックスを使用して、新規または既存のパラメーターをタスクのプロパティと関連付けます。 使用に関する詳細情報、 **Project.params**ウィンドウおよび**パラメーター**  タブを参照してください[作成パラメーター](create-parameters.md)です。 詳細については、**パラメーター化**ダイアログ ボックスを参照してください[ ダイアログ ボックスのパラメーター化](parameterize-dialog-box.md)です。  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[Project.params]** ウィンドウを使用して、プロジェクト パラメーターを作成、変更、または削除します。 **デザイナーの** [パラメーター] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用して、パッケージ パラメーターを作成、変更、および削除します。 **[パラメーター化]** ダイアログ ボックスを使用して、新規または既存のパラメーターをタスクのプロパティと関連付けます。 使用方法の詳細、 **[project.params]** ウィンドウと**パラメーター**  タブを参照してください[作成パラメーター](create-parameters.md)します。 詳細については、**パラメーター化**ダイアログ ボックスを参照してください[Parameterize Dialog Box](parameterize-dialog-box.md)します。  
   
 ## <a name="parameters-and-package-deployment-model"></a>パラメーターとパッケージ配置モデル  
  通常、パッケージ配置モデルを使用してパッケージを配置する場合、パラメーターではなく構成を使用する必要があります。  
@@ -84,14 +84,14 @@ ms.locfileid: "36075760"
  [catalog.set_execution_parameter_value &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログの実行のインスタンスにパラメーターの値を設定します。  
   
- **の** [パッケージの実行] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用してパラメーター値を変更することもできます。 詳細については、次を参照してください。[パッケージ ダイアログ ボックスの実行](../../2014/integration-services/execute-package-dialog-box.md)です。  
+ **の** [パッケージの実行] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用してパラメーター値を変更することもできます。 詳細については、次を参照してください。 [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md)します。  
   
  Dtexec を使用することもできます。`/Parameter`パラメーター値を変更するにはオプションです。 詳しくは、「 [dtexec Utility](packages/dtexec-utility.md)」をご覧ください。  
   
 ### <a name="parameter-validation"></a>パラメーターの検証  
  パラメーター値を解決できない場合、対応するパッケージ実行は失敗します。 失敗を回避するために、 **の** [検証] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ダイアログ ボックスを使用してプロジェクトとパッケージを検証できます。 検証を使用すると、すべてのパラメーター値に必要な値が設定されているか、または特定の環境参照で必要な値を解決できるかを確認できます。 検証では、その他の一般的なパッケージの問題も確認されます。  
   
- 詳細については、次を参照してください。 [ ダイアログ ボックスの検証](catalog/validate-dialog-box.md)です。  
+ 詳細については、次を参照してください。 [Validate Dialog Box](catalog/validate-dialog-box.md)します。  
   
 ### <a name="parameter-example"></a>パラメーターの例  
  この例では、 **pkgOptions** という名前のパラメーターについて説明します。これは、このパラメーターが存在するパッケージのオプションを指定するために使用されます。  

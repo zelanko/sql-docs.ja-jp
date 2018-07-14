@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50b8ca15207eaa89726ed2abe90bb8d862b2f266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ecc113b3ed38461a277996497f73bca7cd83a4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267238"
 ---
 # <a name="specify-an-interval-of-change-data"></a>変更データの間隔を指定する
-  変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、最初のタスクは、変更間隔のエンドポイントを計算することです。 これらのエンドポイントは`datetime`値であり、パッケージで後で使用するためにパッケージ変数に格納されます。  
+  変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、最初のタスクは、変更間隔のエンドポイントを計算することです。 これらのエンドポイントは`datetime`値し、は、パッケージで後で使用するためのパッケージ変数に格納されます。  
   
 > [!NOTE]  
 >  制御フローをデザインするプロセス全体の説明については、「[変更データ キャプチャ &#40;SSIS&#41;](change-data-capture-ssis.md)」を参照してください。  
@@ -38,11 +38,11 @@ ms.locfileid: "36076899"
   
 2.  **[変数]** ウィンドウで、次の変数を作成します。  
   
-    1.  変数を作成、`datetime`間隔の開始位置を格納するデータ型。  
+    1.  変数を作成、`datetime`間隔の開始点を格納するデータ型。  
   
          この例では、ExtractStartTime という名前の変数を使用します。  
   
-    2.  別の変数を作成、`datetime`間隔の終了時点を格納するデータ型。  
+    2.  もう 1 つの変数を作成、`datetime`間隔の終了点を格納するデータ型。  
   
          この例では、ExtractEndTime という名前の変数を使用します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36076899"
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>変更データの開始時点と終了時点の計算  
  間隔のエンドポイントのパッケージ変数を設定したら、そのエンドポイントの実際の値を計算し、対応するパッケージ変数にマップできるようになります。 このエンドポイントは `datetime` 値なので、`datetime` 値を計算または操作できる関数を使用する必要があります。 両方の[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]式言語と TRANSACT-SQL を使用する関数がある`datetime`値。  
   
- 機能、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]式言語で動作する`datetime`値  
+ 関数、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]式言語で動作する`datetime`値  
  -   [DATEADD &#40;SSIS 式&#41;](../expressions/dateadd-ssis-expression.md)  
   
 -   [DATEDIFF &#40;SSIS 式&#41;](../expressions/datediff-ssis-expression.md)  
@@ -64,7 +64,7 @@ ms.locfileid: "36076899"
   
 -   [GETUTCDATE &#40;SSIS 式&#41;](../expressions/getutcdate-ssis-expression.md)  
   
--   [月&#40;SSIS 式&#41;](../expressions/month-ssis-expression.md)  
+-   [1 か月&#40;SSIS 式&#41;](../expressions/month-ssis-expression.md)  
   
 -   [年&#40;SSIS 式&#41;](../expressions/year-ssis-expression.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36076899"
   
  変更間隔が一定かランダムかを把握したら、エンドポイントを計算できます。  
   
--   **開始日時の計算**。 前の読み込みの終了日時を現在の開始日時として使用します。 使用してこの値を計算するには、一定の間隔を使用して増分読み込みの場合、`datetime`または TRANSACT-SQL の関数、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]式言語です。 一定でない場合は、実行のたびにエンドポイントを保存し、SQL 実行タスクまたはスクリプト タスクを使用して前のエンドポイントを読み込むことが必要になる場合があります。  
+-   **開始日時の計算**。 前の読み込みの終了日時を現在の開始日時として使用します。 使用してこの値を計算するには一定の間隔の増分読み込みを使用する場合、`datetime`または TRANSACT-SQL の関数、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]式言語です。 一定でない場合は、実行のたびにエンドポイントを保存し、SQL 実行タスクまたはスクリプト タスクを使用して前のエンドポイントを読み込むことが必要になる場合があります。  
   
 -   **終了日時の計算**。 増分読み込みの間隔が一定である場合は、現在の終了日時を開始日時からのオフセットとして計算します。 使用して、この値を計算する、もう一度、`datetime`または TRANSACT-SQL の関数、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]式言語です。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36076899"
  **次のトピック:** [データの変更の準備ができているかどうかを判断する](determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>参照  
- [パッケージの変数を使用します。](../use-variables-in-packages.md)   
+ [パッケージで変数を使用します。](../use-variables-in-packages.md)   
  [Integration Services &#40;SSIS&#41; 式](../expressions/integration-services-ssis-expressions.md)   
  [SQL 実行タスク](../control-flow/execute-sql-task.md)   
  [スクリプト タスク](../control-flow/script-task.md)  

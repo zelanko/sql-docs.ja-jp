@@ -1,5 +1,5 @@
 ---
-title: PendingValue 要素 (ASSL) |Microsoft ドキュメント
+title: PendingValue 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PendingValue element
 ms.assetid: 386b2ec6-3d83-42d2-b83a-83e375fbdcbd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 120c98d128698331a054a89be97ffa1513bb0191
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef24ae229f879adc15fa9f2ecfd8cb10a19d09ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263398"
 ---
 # <a name="pendingvalue-element-assl"></a>PendingValue 要素 (ASSL)
-  読み取り専用の関連付けられた保留値を含む[ServerProperty](../objects/serverproperty-element-assl.md)要素。  
+  読み取り専用保留中の関連付けられている値を含む[ServerProperty](../objects/serverproperty-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36077199"
   
 ## <a name="see-also"></a>参照  
  [ServerProperties 要素&#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [サーバー要素&#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Server 要素&#40;ASSL&#41;](../objects/server-element-assl.md)   
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Integration Services への接続 |Microsoft ドキュメント
+title: Integration Services への接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2effee7d-16bc-46e1-913c-28470faea345
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6c8ff19d233fbc213c002f5200f16d6c24582fcb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbcd3eb0e9d189fb88f66889bf2019e0621be843
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176479"
 ---
 # <a name="connect-to-integration-services"></a>Integration Services に接続する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスに接続する前に、管理者からこのサービスに対するアクセス権を付与してもらう必要があります。 詳細については、「 [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md)」を参照してください。  
@@ -32,7 +32,7 @@ ms.locfileid: "36084359"
   
 3.  [オブジェクト エクスプローラー] のツール バーの **[接続]** をクリックし、 **[Integration Services]** をクリックします。  
   
-4.  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名を指定します。 (Local)、ピリオド (.) を使用することができますか`localhost`ローカル サーバーを示します。  
+4.  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名を指定します。 (Local)、ピリオド (.) を使用するまたは`localhost`をローカル サーバーを指定します。  
   
 5.  **[接続]** をクリックします。  
   

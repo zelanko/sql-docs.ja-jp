@@ -1,5 +1,5 @@
 ---
-title: '新しいスケジュール: スケジュールの編集 ページ (レポート マネージャー) |Microsoft ドキュメント'
+title: '新しいスケジュール: スケジュールの編集 ページ (レポート マネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 019cb1a12e25ac3c347d1dbdb72296c2f2a888f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2772db639b664724ee6d594d061f6c9ccdc847cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262008"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>新しいスケジュール: 編集スケジュール ページ (レポート マネージャー)
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>新しいスケジュール: スケジュール ページ (レポート マネージャー) を編集します。
   [新しいスケジュール] ページまたは [スケジュールの編集] ページを使用すると、レポートのスケジュールを作成できます。 スケジュールはサブスクリプションで使用されます。その用途は、キャッシュされたレポートを更新、スナップショットをスタンドアロン アイテムとして作成、スナップショットをレポート履歴で作成することです。  
   
 > [!NOTE]  
->  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
- 自動的に実行されるレポートに対してのみ、スケジュールを作成できます。 レポートを自動的に実行するには、レポート サーバー データベースにレポート データ ソース資格情報を保存しておく必要があります。 詳細については、次を参照してください。[データ ソース プロパティ ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)です。  
+ 自動的に実行されるレポートに対してのみ、スケジュールを作成できます。 レポートを自動的に実行するには、レポート サーバー データベースにレポート データ ソース資格情報を保存しておく必要があります。 詳細については、次を参照してください。[データ ソース プロパティ ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)します。  
   
  1 つのスケジュールの中で、複数の頻度を組み合わせて使用することができない場合があります。 たとえば、毎週金曜日の正午と 午後 4 時 00 分まで レポートを実行する場合、実行日を金曜日に指定した日単位のスケジュールを 2 つ作成し、1 つは開始時刻を正午に、 もう 1 つは開始時刻を午後 4 時に設定する必要があります。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36076564"
   
 -   **[時間]** では、1 時間ごとに実行されるスケジュールを定義します。 **[開始日および終了日]** セクションを使用して、スケジュールを実行する日を指定します。  
   
--   **[日]** では、選択した日の指定した時刻に実行されるスケジュールを定義します。 次の方法で日を指定することができます: すべて\<*日*>、毎平日の業務とすべて\<*数*> 日。 いずれかのオプションを選択すると、それ以外のオプションは表示されていても無効になります。  
+-   **[日]** では、選択した日の指定した時刻に実行されるスケジュールを定義します。 次の方法で日を指定することができます: すべて\<*日*>、すべての平日、毎回\<*数*> 日。 いずれかのオプションを選択すると、それ以外のオプションは表示されていても無効になります。  
   
 -   **[週]** では、1 週間ごとの指定した時刻に実行されるスケジュールを定義します。 実行間隔は、2 週間ごとのようにちょうど 1 週間を単位としているものでも、週の複数の曜日を指定するものでもかまいません。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36076564"
   
 -   **[一度だけ]** は、一度だけ実行されるスケジュールを定義します。 **[開始日および終了日]** セクションを使用して、スケジュールを実行する日を指定します。 このスケジュールは、処理が終了すると失効します。  
   
- **開始日と終了日**  
+ **開始と終了日**  
  スケジュール タスクが発効する日を確定する開始日、およびスケジュールが失効する日を確定する終了日を指定します。  
   
  スケジュールは予告なく失効します。 終了日を過ぎると、スケジュールは実行されません。 期限切れのスケジュールは削除されません。 スケジュールの削除は、手動によってのみ可能です。 したがって、スケジュールを続行することにした場合、終了日を延長できます。  

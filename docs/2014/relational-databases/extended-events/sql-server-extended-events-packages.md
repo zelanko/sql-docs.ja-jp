@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a341b5aa6ced85e6d96a886cfe5944c4b32f960
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 43e08fb5675fc5b393d5346564a1241288cda055
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256451"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 拡張イベント パッケージ
   パッケージは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 拡張イベント オブジェクトのコンテナーです。 拡張イベント パッケージには、次の 3 種類があります。  
@@ -83,7 +83,7 @@ ms.locfileid: "36075733"
 |管理|管理イベントの対象は、主にエンド ユーザー、管理者、およびサポートです。 管理チャネルのイベントは、管理者が対応できる明確な解決策が存在する問題を示します。 たとえば、アプリケーションがプリンターに接続できなかった場合に発生するイベントなどがあります。 これらのイベントには、詳しい解説が付属するか、問題の解決方法をユーザーに伝えるメッセージが関連付けられています。|  
 |運用|運用イベントは、問題や事象の分析および診断のために使用されます。 問題や事象に応じたツールまたはタスクを起動する目的で使用できます。 たとえば、プリンターがシステムに追加されたり、システムから削除された場合に発生するイベントなどがあります。|  
 |分析|非常に多くの分析イベントが公開されています。 プログラムの動作を説明するもので、主にパフォーマンス調査に用いられます。|  
-|デバッグ|デバッグ イベントは、開発者がデバッグ時に問題を診断する目的でのみ使用されます。<br /><br /> 注: デバッグ チャネルのイベントには、実装に固有の内部状態データが返されます。 スキーマ、およびこのイベントによって返されるデータは、SQL Server の将来のバージョンで変更または無効化される可能性があります。 そのため、デバッグ チャネルのイベントは、SQL Server の将来のバージョンで予告なしに変更または削除されることがあります。|  
+|デバッグ|デバッグ イベントは、開発者がデバッグ時に問題を診断する目的でのみ使用されます。<br /><br /> 注: デバッグ チャネルのイベントには、内部の実装に固有の状態データが返されます。 スキーマ、およびこのイベントによって返されるデータは、SQL Server の将来のバージョンで変更または無効化される可能性があります。 そのため、デバッグ チャネルのイベントは、SQL Server の将来のバージョンで予告なしに変更または削除されることがあります。|  
   
  **Keyword**  
   

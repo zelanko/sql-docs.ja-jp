@@ -1,5 +1,5 @@
 ---
-title: Analysis Services スクリプト言語の XML 要素 (ASSL) |Microsoft ドキュメント
+title: Analysis Services スクリプト言語の XML 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ASSL, elements
 ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ceb9c779556bfe05384ca8993a74ea28b8dae2df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84ab700589ac454605aa2128b7057e3aa07c6de9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323082"
 ---
 # <a name="analysis-services-scripting-language-xml-elements-assl"></a>Analysis Services スクリプト言語の XML 要素 (ASSL)
   Analysis Services スクリプト言語 (ASSL) のスキーマには XML 要素のみが含まれますが、開発者にとって、これらの要素は次の概念に対応します。  
@@ -40,7 +40,7 @@ ms.locfileid: "36077198"
 -   子要素および他のオブジェクトのプロパティを定義するデータ型。`Binding`、`Permission` など。  
   
     > [!NOTE]  
-    >  このセクションでは、データ型要素について説明しません。 詳細についてを参照してください、 [Analysis Services スクリプト言語の XML データ型&#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md)です。  
+    >  このセクションでは、データ型要素について説明しません。 詳細についてを参照してください、 [Analysis Services スクリプト言語の XML データ型&#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -52,6 +52,6 @@ ms.locfileid: "36077198"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services スクリプト言語の XML 要素階層&#40;ASSL&#41;](analysis-services-scripting-language-xml-element-hierarchy-assl.md)   
- [Analysis Services スクリプト言語&#40;ASSL&#41;参照](analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](analysis-services-scripting-language-assl-for-xmla.md)  
   
   

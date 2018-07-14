@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aaeb492e40a17d274fa706431ee49243c88976da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c9e05afd85b4a16d97885d52cf35d96b54462f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180895"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services のインストール
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) には、 **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** および **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** の 2 つのコンポーネントが含まれています。  
@@ -44,14 +44,14 @@ ms.locfileid: "36084189"
 -   [インストール後の作業](#PostInstallationTasks): SQL Server セットアップを完了して DQS のインストールを終了した後、これらのタスクを実行します。  
   
 > [!NOTE]  
->  コマンド ラインからのセットアップの実行の手順については、ここでは扱いません。 インストールするためのコマンド ライン オプションについては[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]とクライアントを参照してください[機能パラメーター](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature)で[コマンド プロンプトから SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)です。  
+>  コマンド ラインからのセットアップの実行の手順については、ここでは扱いません。 インストールするためのコマンド ライン オプションについて[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]とクライアントを参照してください[機能パラメーター](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature)で[コマンド プロンプトから SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)します。  
   
 ##  <a name="PreInstallationTasks"></a> インストール前の作業  
  DQS をインストールする前に、コンピューターが最小システム要件を満たしていることを確認します。 次の表は、DQS コンポーネントの最小システム要件に関する情報を示しています。  
   
 |DQS コンポーネント|最小システム要件|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|メモリ (RAM):<br />最小値: 2 GB<br />推奨: 4 GB 以上<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース エンジン。 詳細については、次を参照してください。[について、SQL Server データベース エンジン](../../database-engine/sql-server-database-engine-overview.md)です。|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|メモリ (RAM):<br />最小値: 2 GB<br />推奨: 4 GB 以上<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース エンジン。 詳細については、次を参照してください。[に関する SQL Server データベース エンジンの](../../database-engine/sql-server-database-engine-overview.md)します。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (インストールされていない場合は、 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] のインストール時にインストールされます)<br /><br /> Internet Explorer 6.0 SP1 以降|  
   
 > [!IMPORTANT]  
@@ -59,7 +59,7 @@ ms.locfileid: "36084189"
 > -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の現在または以前のバージョンと、DQS クレンジング変換を使用して、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] の [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] バージョンに接続できます。 既存のバージョンの DQS を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする方法の詳細については、「 [Data Quality Services のアップグレード](../../database-engine/install-windows/upgrade-data-quality-services.md)」を参照してください。  
 > -   Microsoft Excel は Data Quality Client のインストールの前提条件ではありませんが、Excel ファイルからのドメイン値のインポートやナレッジ検出のための Excel ファイル内のソース データへのマッピング、クレンジング、照合アクティビティなどのさまざまな操作をクライアント アプリケーションで実行するには、Microsoft Excel 2003 以降が Data Quality Client コンピューターにインストールされている必要があります。  
   
- インストールするための最小システム要件に関する詳細情報の[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を参照してください[Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)です。  
+ インストールするための最小システム要件に関する詳細情報の[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を参照してください[Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)します。  
   
 ##  <a name="DQSInstallation"></a> Data Quality Services のインストールの作業  
  DQS のコンポーネントをインストールするには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップを使用する必要があります。 SQL Server セットアップを実行するときは、インストール ウィザードの一連のページに従いながら、要件に基づいて適切なオプションを選択する必要があります。 インストール ウィザードのページのうち、選択するオプションによって DQS のインストールに影響するページのみを次の表に示します。  
@@ -74,8 +74,8 @@ ms.locfileid: "36084189"
   
 |操作|説明|関連項目|  
 |------------|-----------------|--------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを実行する|DQSInstaller.exe ファイルを実行します。 DQSInstaller.exe ファイルを実行すると、次の操作が行われます。<br /><br /> DQS_MAIN, DQS_PROJECTS, および DQS_STAGING_DATA データベースが作成されます。<br /><br /> ##MS_dqs_db_owner_login## ログインと ##MS_dqs_service_login## ログインが作成されます。<br /><br /> DQS_MAIN データベースに dqs_administrator, dqs_kb_editor ロールと dqs_kb_operator ロールが作成されます。<br /><br /> DQInitDQS_MAIN ストアド プロシージャがマスター データベースに作成されます。<br /><br /> DQS_install.log ファイルは通常 C:\Program files \microsoft SQL Server\MSSQL12 で作成されます。*< Instance_name >* \MSSQL\Log フォルダーです。 このファイルには、DQSInstaller.exe ファイルの実行時に行われた操作に関する情報が含まれます。<br /><br /> マスター データ サービス データベースが [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]と同じ SQL Server インスタンス上に存在する場合は、マスター データ サービス ログインにマップされたユーザーが作成され、DQS_MAIN データベースに対する dqs_administrator ロールが付与されます。<br /><br /> <br /><br /> これにより [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールが完了します。|[DQS サーバーのインストールを完了するための DQSInstaller.exe の実行](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)|  
-|ユーザーに DQS ロールを付与する|ログオン[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]を使用して[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]、ユーザーは、DQS_MAIN データベースに対する次の 3 つのロールのいずれかをいる必要があります: **dqs_administrator**、 **dqs_kb_editor**、または**dqs_kb_演算子**です。 既定では、ユーザー アカウントが sysadmin 固定サーバー ロールのメンバーである場合、DQS ロールがユーザー アカウントに付与されていない場合でも [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] を使用して [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] にログオンできます。 3 つの DQS ロールの詳細については、「 [DQS のセキュリティ](../dqs-security.md)」を参照してください。<br /><br /> 注: 次の 3 つの DQS ロールは DQS_PROJECTS および DQS_STAGING_DATA データベースを使用できません。|[ユーザーに DQS ロールを付与する](grant-dqs-roles-to-users.md)|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを実行する|DQSInstaller.exe ファイルを実行します。 DQSInstaller.exe ファイルを実行すると、次の操作が行われます。<br /><br /> DQS_MAIN, DQS_PROJECTS, および DQS_STAGING_DATA データベースが作成されます。<br /><br /> ##MS_dqs_db_owner_login## ログインと ##MS_dqs_service_login## ログインが作成されます。<br /><br /> DQS_MAIN データベースに dqs_administrator, dqs_kb_editor ロールと dqs_kb_operator ロールが作成されます。<br /><br /> DQInitDQS_MAIN ストアド プロシージャがマスター データベースに作成されます。<br /><br /> DQS_install.log ファイルは通常 C:\Program files \microsoft の SQL Server\MSSQL12 で作成されます。*< Instance_name >* \MSSQL\Log フォルダー。 このファイルには、DQSInstaller.exe ファイルの実行時に行われた操作に関する情報が含まれます。<br /><br /> マスター データ サービス データベースが [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]と同じ SQL Server インスタンス上に存在する場合は、マスター データ サービス ログインにマップされたユーザーが作成され、DQS_MAIN データベースに対する dqs_administrator ロールが付与されます。<br /><br /> <br /><br /> これにより [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールが完了します。|[DQS サーバーのインストールを完了するための DQSInstaller.exe の実行](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)|  
+|ユーザーに DQS ロールを付与する|ログオンする[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]を使用して[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]、ユーザーは、DQS_MAIN データベースに対する次の 3 つのロールのいずれかをいる必要があります: **dqs_administrator**、 **dqs_kb_editor**、または**dqs_kb_演算子**します。 既定では、ユーザー アカウントが sysadmin 固定サーバー ロールのメンバーである場合、DQS ロールがユーザー アカウントに付与されていない場合でも [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] を使用して [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] にログオンできます。 3 つの DQS ロールの詳細については、「 [DQS のセキュリティ](../dqs-security.md)」を参照してください。<br /><br /> 注: 次の 3 つの DQS ロールは DQS_PROJECTS および DQS_STAGING_DATA のデータベースを使用できません。|[ユーザーに DQS ロールを付与する](grant-dqs-roles-to-users.md)|  
 |データに対する DQS 操作を可能にする|ソース データにアクセスして DQS 操作を実行できることと、処理後のデータをデータベース内のテーブルにエクスポートできることを確認します。|[DQS 操作のためのデータへのアクセス](access-data-for-the-dqs-operations.md)|  
   
 ## <a name="see-also"></a>参照  

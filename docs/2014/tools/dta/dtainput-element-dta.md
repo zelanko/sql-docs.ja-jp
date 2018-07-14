@@ -1,5 +1,5 @@
 ---
-title: DTAInput 要素 (DTA) |Microsoft ドキュメント
+title: DTAInput 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DTAInput element
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7b414d14cf69815086973849d5e0f6b3badb6b3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a754e81ea8fe094bb840cb57851685b3b6626521
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179021"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 要素 (DTA)
   データベース エンジン チューニング アドバイザーに対する XML 入力の定義が含まれます。  
@@ -51,7 +51,7 @@ ms.locfileid: "36083557"
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |**親要素**|[DTAXML 要素&#40;DTA&#41;](dtaxml-element-dta.md)|  
-|**子要素**|[サーバー要素&#40;DTA&#41;](server-element-dta.md)<br /><br /> [Workload 要素&#40;DTA&#41;](workload-element-dta.md)<br /><br /> [TuningOptions 要素&#40;DTA&#41;](tuningoptions-element-dta.md)<br /><br /> [構成要素&#40;DTA&#41;](configuration-element-dta.md)|  
+|**子要素**|[Server 要素&#40;DTA&#41;](server-element-dta.md)<br /><br /> [Workload 要素&#40;DTA&#41;](workload-element-dta.md)<br /><br /> [TuningOptions 要素&#40;DTA&#41;](tuningoptions-element-dta.md)<br /><br /> [構成要素&#40;DTA&#41;](configuration-element-dta.md)|  
   
 ## <a name="remarks"></a>コメント  
  この要素は、データベース エンジン チューニング アドバイザーの入力スキーマ階層のルートです。 データベース エンジン チューニング アドバイザーへの入力としては、チューニング対象のデータベースのサーバー、ワークロード、チューニング オプション、ユーザー指定の構成などを指定した引数を使用できます。  

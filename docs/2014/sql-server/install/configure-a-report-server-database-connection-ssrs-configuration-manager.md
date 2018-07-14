@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8eb2cc1bcfa9528eccd2764af954fb165b74daa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43cf572cca1062471e73ab47be5e687fee40c1db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208552"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)
   レポート サーバーの各インスタンスには、レポート サーバーの管理対象であるレポート、レポート モデル、共有データ ソース、リソース、およびメタデータが保存された、レポート サーバー データベースへの接続が必要です。 既定の構成をインストールする場合、最初の接続はレポート サーバーのインストール中に作成することができます。 ほとんどの場合は、セットアップの完了後に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して接続を構成します。 この接続は、いつでも変更して、アカウントの種類を変更したり資格情報をリセットしたりできます。 データベースを作成し、接続を構成する方法の詳しい手順については、「[ネイティブ モード レポート サーバー データベース &#40; を作成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "36077257"
   
 -   レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。  
   
--   レポート サーバー データベースの名前。 接続を初めて作成する場合、新しいレポート サーバー データベースを作成することも、既存のデータベースを選択することもできます。 詳細については、次を参照してください。[レポート サーバー データベースの作成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)です。  
+-   レポート サーバー データベースの名前。 接続を初めて作成する場合、新しいレポート サーバー データベースを作成することも、既存のデータベースを選択することもできます。 詳細については、次を参照してください。[レポート サーバー データベースの作成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)します。  
   
 -   資格情報の種類。 サービス アカウント、Windows ドメイン アカウント、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを使用できます。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36077257"
 ### <a name="storing-database-connection-information"></a>データベース接続情報の保存  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 次の RSreportserver.config 設定に接続情報が格納され暗号化されています。 これらの設定の暗号化された値を作成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは rsconfig ユーティリティを使用する必要があります。  
   
- すべての値がどの種類の接続に対しても設定されるとは限りません。 (つまり、アカウントを使用して、サービス接続を確立する)、既定値を使用して接続を構成する場合は、<`LogonUser`>、<`LogonDomain`>、および <`LogonCred`> は次のように空になります。  
+ すべての値がどの種類の接続に対しても設定されるとは限りません。 (つまり、接続するためにサービス アカウントを使用して)、既定値を使用して接続を構成する場合は、<`LogonUser`>、<`LogonDomain`>、および <`LogonCred`> 次のように、空になります。  
   
 ```  
 <Dsn></Dsn>  

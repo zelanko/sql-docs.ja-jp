@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 caps.latest.revision: 50
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2594ecdb53df53413f3851203ae110c1de754dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ae14ea283a7558b854481f435d6c9a62e5b51e52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225902"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>可用性グループ リスナーの作成または構成 (SQL Server)
   このトピックでは、 *で* 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループに対して 1 つの [!INCLUDE[tsql](../../../includes/tsql-md.md)]可用性グループ リスナー [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を作成または構成する方法について説明します。  
@@ -132,7 +131,7 @@ ms.locfileid: "36075589"
  **[追加]**  
  選択したサブネットまたはこのリスナーの別のサブネットに静的 IP アドレスを追加する場合にクリックします。 クリックすると、 **[IP アドレスの追加]** ダイアログ ボックスが開きます。 詳細については、「[[IP アドレスの追加] ダイアログ ボックス &#40;SQL Server Management Studio&#41;](add-ip-address-dialog-box-sql-server-management-studio.md)」ヘルプ トピックを参照してください。  
   
- **削除**  
+ **[削除]**  
  選択したサブネットをこのリスナーから削除する場合にクリックします。  
   
  **[OK]**  
@@ -164,7 +163,7 @@ ms.locfileid: "36075589"
      `New-SqlAvailabilityGroupListener`  
      新しい可用性グループ リスナーを作成して、既存の可用性グループにアタッチします。  
   
-     たとえば、次`New-SqlAvailabilityGroupListener`コマンドは、という名前の可用性グループ リスナーを作成します。 `MyListener` 、可用性グループの`MyAg`します。 このリスナーに渡された IPv4 アドレスを使用して、`-StaticIp`仮想 IP アドレスとしてのパラメーターです。  
+     たとえば、次`New-SqlAvailabilityGroupListener`コマンドでは、という名前の可用性グループ リスナーを作成します。 `MyListener` 、可用性グループの`MyAg`します。 このリスナーに渡された IPv4 アドレスを使用して、`-StaticIp`仮想 IP アドレスとしてパラメーター。  
   
     ```  
     New-SqlAvailabilityGroupListener -Name MyListener `   
@@ -207,14 +206,14 @@ ms.locfileid: "36075589"
 ###  <a name="ADQuotas"></a> Active Directory クォータが原因で可用性グループ リスナーの作成が失敗する問題  
  新しい可用性グループ リスナーの作成は、参加しているクラスター ノード マシン アカウントの Active Directory クォータに達したため、失敗する場合があります。  詳細については、次の各資料を参照してください。  
   
--   [ハイパーリンク"http://support.microsoft.com/kb/307532"コンピューター オブジェクト変更時に、クラスター サービス アカウントをトラブルシューティングする方法](http://support.microsoft.com/kb/307532)  
+-   [HYPERLINK"http://support.microsoft.com/kb/307532"コンピューター オブジェクト変更時に、クラスター サービス アカウントをトラブルシューティングする方法](http://support.microsoft.com/kb/307532)  
   
--   [ハイパーリンク"http://technet.microsoft.com/library/cc904295(WS.10).aspx"Active Directory クォータ](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [HYPERLINK"http://technet.microsoft.com/library/cc904295(WS.10).aspx"Active Directory クォータ](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> 補足情報: 可用性グループ リスナーの作成後  
   
 ###  <a name="MultiSubnetFailover"></a> MultiSubnetFailover のキーワードおよび関連機能  
- `MultiSubnetFailover` AlwaysOn 可用性グループと SQL Server 2012 AlwaysOn フェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効にするのには、新しい接続文字列キーワードが使用されます。 接続文字列で `MultiSubnetFailover=True` が設定されていると、次の 3 つのサブ機能が有効になります。  
+ `MultiSubnetFailover` AlwaysOn 可用性グループと SQL Server 2012 の AlwaysOn フェールオーバー クラスター インスタンスの高速フェールオーバーを有効にするために使用する新しい接続文字列キーワードです。 接続文字列で `MultiSubnetFailover=True` が設定されていると、次の 3 つのサブ機能が有効になります。  
   
 -   AlwaysOn 可用性グループまたはフェールオーバー クラスター インスタンスに対する複数サブネット リスナーへのより高速なマルチサブネット フェールオーバー。  
   
@@ -242,14 +241,14 @@ ms.locfileid: "36075589"
   
      **長所:** クライアント接続のタイムアウト値を大きくする必要がありません。  
   
-     **短所:** クロス サブネット フェールオーバーが発生した場合、クライアントの復旧時間は 15 分をする可能性がありますかによって、`HostRecordTTL`設定およびクロスサイト DNS/AD レプリケーション スケジュールの設定。  
+     **短所:** クロス サブネット フェールオーバーが発生した場合は、クライアントの復旧時間は 15 分になりますかによって、`HostRecordTTL`設定およびクロスサイト DNS/AD レプリケーション スケジュールの設定。  
   
 ###  <a name="RegisterAllProvidersIP"></a> RegisterAllProvidersIP の設定  
- 使用すると[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を可用性グループ リスナー、クライアント アクセス ポイントを作成するが、wsfc に作成された、`RegisterAllProvidersIP`プロパティが 1 (true) に設定します。 このプロパティ値の効果は、次に示すように、クライアント接続文字列によって異なります。  
+ 使用すると[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または wsfc に可用性グループ リスナー、クライアント アクセス ポイントを作成する PowerShell が作成された、`RegisterAllProvidersIP`プロパティが 1 (true) に設定します。 このプロパティ値の効果は、次に示すように、クライアント接続文字列によって異なります。  
   
 -   `MultiSubnetFailover` を true に設定する接続文字列  
   
-     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 設定、`RegisterAllProvidersIP`プロパティをクライアントがクライアント接続文字列を指定のフェールオーバー後の再接続時間を短縮するために 1 `MultiSubnetFailover = True`、ことをお勧めします。 リスナーのマルチサブネット機能を活用するには、クライアントに `MultiSubnetFailover` キーワードをサポートするデータ プロバイダーが必要な場合があります。 マルチサブネット フェールオーバーのドライバー サポートについては、「[AlwaysOn クライアント接続 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)」を参照してください。  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 設定、`RegisterAllProvidersIP`プロパティがクライアント接続文字列を指定するクライアントのフェールオーバー後の再接続時間を短縮するために 1 を`MultiSubnetFailover = True`をお勧めします。 リスナーのマルチサブネット機能を活用するには、クライアントに `MultiSubnetFailover` キーワードをサポートするデータ プロバイダーが必要な場合があります。 マルチサブネット フェールオーバーのドライバー サポートについては、「[AlwaysOn クライアント接続 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)」を参照してください。  
   
      マルチサブネット クラスタリングについては、「[SQL Server マルチサブネット クラスタリング &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)」を参照してください。  
   
@@ -265,13 +264,13 @@ ms.locfileid: "36075589"
      `RegisterAllProvidersIP = 1`の場合、接続文字列で `MultiSubnetFailover = True`を使用しないクライアントは、接続の待機時間が長くなります。 これが発生するのは、このようなクライアントはすべての IP への接続を順に試行するためです。 これに対し、`RegisterAllProvidersIP` を 0 に変更すると、WSFC クラスターのクライアント アクセス ポイントにアクティブな IP アドレスが登録され、レガシ クライアントの待機時間が短縮されます。 したがって、可用性グループ リスナーに接続する必要があるが、`MultiSubnetFailover` プロパティを使用できないレガシ クライアントがある場合は、`RegisterAllProvidersIP` を 0 に変更することをお勧めします。  
   
     > [!IMPORTANT]  
-    >  WSFC クラスター (フェールオーバー クラスター マネージャーの GUI) を通して可用性グループ リスナーを作成するときに`RegisterAllProvidersIP`は既定では 0 (false) になります。  
+    >  WSFC クラスター (フェールオーバー クラスター マネージャーの GUI) を通して可用性グループ リスナーを作成するときに`RegisterAllProvidersIP`は既定で 0 (false) になります。  
   
 ###  <a name="HostRecordTTL"></a> HostRecordTTL の設定  
- 既定では、クライアントは 20 分間、クラスター DNS レコードをキャッシュします。  減らすことによって`HostRecordTTL`時間 (TTL)、キャッシュするレコードのレガシ クライアントはよりすばやく再接続します。  ただし、`HostRecordTTL`設定月も結果、DN サーバーへのトラフィックが増加します。  
+ 既定では、クライアントは 20 分間、クラスター DNS レコードをキャッシュします。  減らすことで`HostRecordTTL`、Time to Live (TTL)、キャッシュするレコードのレガシ クライアントはよりすばやく再接続します。  ただし、`HostRecordTTL`月もの結果を設定する、DN サーバーへのトラフィックが増加します。  
   
 ###  <a name="SampleScript"></a> RegisterAllProvidersIP を無効にし、TTL を短縮する PowerShell サンプル スクリプト  
- 次の PowerShell の例は、両方を構成する方法を示します、`RegisterAllProvidersIP`と`HostRecordTTL`クラスター リスナー リソースに対するパラメーター。  DNS レコードは、既定の 20 分間ではなく、5 分間キャッシュされます。  両方のクラスター パラメーターを変更すると、`MultiSubnetFailover` パラメーターを使用できないレガシ クライアントのフェールオーバーが発生した後に、適切な IP アドレスに接続する時間が短縮される可能性があります。  `yourListenerName` は、変更対象のリスナーの名前に置き換えてください。  
+ 次の PowerShell の例は、両方を構成する方法を示します、`RegisterAllProvidersIP`と`HostRecordTTL`クラスター、リスナー リソース用のパラメーター。  DNS レコードは、既定の 20 分間ではなく、5 分間キャッシュされます。  両方のクラスター パラメーターを変更すると、`MultiSubnetFailover` パラメーターを使用できないレガシ クライアントのフェールオーバーが発生した後に、適切な IP アドレスに接続する時間が短縮される可能性があります。  `yourListenerName` は、変更対象のリスナーの名前に置き換えてください。  
   
 ```  
 Import-Module FailoverClusters  
@@ -331,7 +330,7 @@ Start-ClusterResource yourAGResource
   
 -   [同じ可用性グループの複数のリスナーを作成する方法](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
   
--   [SQL Server AlwaysOn チームのブログ: 公式 SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ: 公式 SQL Server AlwaysOn チーム ブログ](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

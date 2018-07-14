@@ -1,5 +1,5 @@
 ---
-title: Hierarchy 要素 (CSDLBI) |Microsoft ドキュメント
+title: Hierarchy 要素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f2846424fdf7104c95cb4a56ac836b57583bf0cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: be67c3059f09beefae68d0264fd0316579344d64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250792"
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 要素 (CSDLBI)
   Hierarchy 要素はテーブル内のフィールドの論理的なコンテナーであり、相互にリンクして階層を形成できます。 Hierarchy 要素は CSDL Member 要素から派生し、ビジネス インテリジェンス データ モデルで作成される階層をサポートするように拡張されています。  
@@ -87,7 +87,7 @@ ms.locfileid: "36076911"
   
 ## <a name="see-also"></a>参照  
  [表形式オブジェクト モデルをについてください。](../representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [DAX の親子階層を扱う関数をについてください。](https://msdn.microsoft.com/library/gg492192(v=sql.120).aspx)   
+ [DAX の親子階層の機能の理解](https://msdn.microsoft.com/library/gg492192(v=sql.120).aspx)   
  [構成、&#40;すべて&#41;属性階層のレベル](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

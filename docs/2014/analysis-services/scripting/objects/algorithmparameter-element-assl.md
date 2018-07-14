@@ -1,5 +1,5 @@
 ---
-title: AlgorithmParameter 要素 (ASSL) |Microsoft ドキュメント
+title: AlgorithmParameter 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AlgorithmParameter element
 ms.assetid: 73211495-065c-43c6-a486-be6044617263
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70e9e3619eb5f96ff2e64c87855b2bd33063aaf0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd5ee9ceb1c8d2455d7e9c087e12e2f59625b5ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178859"
 ---
 # <a name="algorithmparameter-element-assl"></a>AlgorithmParameter 要素 (ASSL)
   使用されるアルゴリズムのパラメーターを定義、 [MiningModel](miningmodel-element-assl.md)要素。  
@@ -65,7 +65,7 @@ ms.locfileid: "36084875"
 ## <a name="remarks"></a>コメント  
  `AlgorithmParameter` はマイニング モデル アルゴリズムのパラメーターです。 `AlgorithmParameter` では名前と値のペアとしてこのパラメーターを表します。 `AlgorithmParameter` で表すことのできる適用可能なパラメーターのセットは、アルゴリズムによって異なります。 特定のアルゴリズムのアルゴリズム パラメーターの詳細については、そのアルゴリズムに関するドキュメントを参照してください。  
   
- 検証や表示の情報を含む使用可能なアルゴリズム パラメーターから取得できる、 [DMSCHEMA_MINING_SERVICE_PARAMETERS](../../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md)スキーマ行セット。  
+ 取得できる使用可能なアルゴリズム パラメーターを検証および表示情報を含む、 [DMSCHEMA_MINING_SERVICE_PARAMETERS](../../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md)スキーマ行セット。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.AlgorithmParameter>します。  
   

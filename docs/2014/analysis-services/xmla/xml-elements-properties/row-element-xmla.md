@@ -1,5 +1,5 @@
 ---
-title: row 要素 (XMLA) |Microsoft ドキュメント
+title: row 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - row element
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: de6460bc6d51c4205752b7db186412e420438145
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 17bc202bb7e1d2c0701b478409b02f4bbb160958
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223992"
 ---
 # <a name="row-element-xmla"></a>row 要素 (XMLA)
-  データの 1 つの行が含まれています、[ルート](root-element-xmla.md)によって返される表形式のデータを含む要素、 [Discover](../xml-elements-methods-discover.md)または[Execute](../xml-elements-methods-execute.md)メソッドの呼び出しです。  
+  データの 1 つの行が含まれています、[ルート](root-element-xmla.md)によって返される表形式のデータを含む要素、 [Discover](../xml-elements-methods-discover.md)または[Execute](../xml-elements-methods-execute.md)メソッドの呼び出し。  
   
 ## <a name="syntax"></a>構文  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36076292"
 </row>  
 ```  
   
- 詳細とスキーマについては表形式のデータの列の名前付けに関する詳細については、次を参照してください。[行セットのデータ型&#40;XMLA&#41;](../xml-data-types/rowset-data-type-xmla.md)です。  
+ 詳細とスキーマについては、表形式のデータの列の名前付けについては、次を参照してください。[行セットのデータ型&#40;XMLA&#41;](../xml-data-types/rowset-data-type-xmla.md)します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;XMLA&#41;](xml-elements-properties.md)  

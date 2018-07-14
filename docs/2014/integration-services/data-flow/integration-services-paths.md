@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], about paths
 - data flow [Integration Services], paths
@@ -19,13 +19,13 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 33ce96096c0675b16d58532a351c20d897afb46a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2775a35efd26f8132ef2b103ad546a92872d915a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248592"
 ---
 # <a name="integration-services-paths"></a>Integration Services のパス
   パスは、データ フロー コンポーネントの出力を別のコンポーネントの入力に連結することにより、データ フロー内の 2 つのコンポーネントを連結します。 パスには連結元と連結先があります。 たとえば、パスが OLE DB ソースと並べ替え変換を連結する場合、OLE DB ソースはパスの連結元であり、並べ替え変換はパスの連結先になります。 連結元とはパスが開始するコンポーネントで、連結先とはパスが終了するコンポーネントのことです。  
@@ -47,7 +47,7 @@ ms.locfileid: "36077369"
   
 -   [データ フロー パス エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [データ フロー パス エディター &#40;[メタデータ] ページ&#41;](../data-flow-path-editor-metadata-page.md)  
+-   [データ フロー パス エディター&#40;メタデータ ページ&#41;](../data-flow-path-editor-metadata-page.md)  
   
 -   [データ フロー パス エディター&#40;データ ビューアー ページ&#41;](../data-flow-path-editor-data-viewers-page.md)  
   

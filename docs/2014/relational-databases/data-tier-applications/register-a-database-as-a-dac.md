@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerdacwizard.registerdac.f1
 - sql12.swb.registerdacwizard.summary.f1
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7b197a130a1caa9ec467d529b36373b8aa648b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 76cea4cf690481d4253b582f681b29b577d71877
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197202"
 ---
 # <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
-  いずれかを使用して、**登録データ層アプリケーションのウィザード**または Windows PowerShell スクリプトを既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義をビルドして、のDAC定義を登録`msdb`システム データベース (**マスター**で[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
+  いずれかを使用して、**登録データ層アプリケーションのウィザード**または既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成するスクリプトを作成し、にDAC定義が登録は、WindowsPowerShell`msdb`システム データベース (**マスター**で[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -82,9 +82,9 @@ ms.locfileid: "36085018"
   
  **[アプリケーション名]** : DAC 定義を識別するための名前。このフィールドには、選択したデータベースの名前が自動的に入力されます。  
   
- **[バージョン]** : DAC のバージョンを表す数値。 DAC のバージョンは、開発者が操作している DAC のバージョンを特定するために Visual Studio で使用します。 バージョンが格納されている DAC を配置するときに、`msdb`データベースし、後で下に表示できます、**データ層アプリケーション**内のノード[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
+ **[バージョン]** : DAC のバージョンを表す数値。 DAC のバージョンは、開発者が操作している DAC のバージョンを特定するために Visual Studio で使用します。 バージョンが格納されている DAC をデプロイするとき、`msdb`データベースし、後で下に表示できます、**データ層アプリケーション**内のノード[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
- **説明** : 省略可。 この DAC の目的についての説明。 格納されて、説明で DAC を配置するときに、`msdb`データベースし、後で下に表示できます、**データ層アプリケーション**内のノード[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]です。  
+ **説明** : 省略可。 この DAC の目的についての説明。 説明が格納されている DAC をデプロイするとき、`msdb`データベースし、後で下に表示できます、**データ層アプリケーション**内のノード[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。  
   
  **\< 以前**-に戻り、**概要**ページ。  
   

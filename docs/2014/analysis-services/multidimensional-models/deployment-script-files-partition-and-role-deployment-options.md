@@ -1,5 +1,5 @@
 ---
-title: パーティションおよびロールの配置オプションを指定する |Microsoft ドキュメント
+title: パーティションおよびロールの配置オプションの指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input files [Analysis Services]
 - partitions [Analysis Services], deployment options
@@ -23,24 +23,24 @@ helpviewer_keywords:
 - modifying partition deployments
 ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ce6d214b20e2c10775b542fb3d466a305aaddf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28be72efd82f72662bada57062d2e69e558793e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253104"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>パーティションおよびロールの配置オプションの指定
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]配置ウィザードからのパーティションおよびロールの配置オプションを読み取り、 \<*プロジェクト名*> >.deploymentoptions ファイル。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成時にこのファイルを作成します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用して、パーティションおよびロール プロジェクトの配置オプション、現在のときに、 \<*プロジェクト名*> >.deploymentoptions ファイルを作成します。 構成設定の詳細については、「[配置スクリプトを作成するための入力ファイルについて](deployment-script-files-input-used-to-create-deployment-script.md)」を参照してください。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]展開ウィザードからのパーティションおよびロールの配置オプションを読み取り、 \<*プロジェクト名*> >.deploymentoptions ファイル。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成時にこのファイルを作成します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用して、現在のパーティションおよびロールの配置オプション時にプロジェクト、 \<*プロジェクト名*> >.deploymentoptions ファイルを作成します。 構成設定の詳細については、「[配置スクリプトを作成するための入力ファイルについて](deployment-script-files-input-used-to-create-deployment-script.md)」を参照してください。  
   
 ## <a name="reviewing-the-partition-and-role-deployment-options"></a>パーティションおよびロールの配置オプションの確認  
- 配置オプション、 \<*プロジェクト名*> >.deploymentoptions ファイルの次のとおりです。  
+ 配置オプション、 \<*プロジェクト名*> >.deploymentoptions ファイルには、次が含まれます。  
   
  **パーティション配置オプション**  
- \<*プロジェクト名*> >.deploymentoptions ファイルは、コピー先データベースに既存のパーティションを保持するかどうか、または上書きする (既定) を指定します。 既存のパーティションを保持する場合、新しいパーティションのみが配置され、既存のすべてのメジャー グループのパーティションおよび集計デザインはそのまま残されます。  
+ \<*プロジェクト名*> >.deploymentoptions ファイルは、転送先データベースで既存のパーティションを保持するかどうか、または上書きする (既定) を指定します。 既存のパーティションを保持する場合、新しいパーティションのみが配置され、既存のすべてのメジャー グループのパーティションおよび集計デザインはそのまま残されます。  
   
 > [!NOTE]  
 >  パーティションが含まれているメジャー グループを削除すると、パーティションも自動的に削除されます。  
@@ -57,9 +57,9 @@ ms.locfileid: "36075382"
 -   **注** 既存のロールおよびメンバーが保持される場合、これらのロールに関連付けられた権限はリセットされてなくなります。 セキュリティ権限は、オブジェクトが関連付けられているセキュリティ ロールではなく、オブジェクト自体に含まれています。 Analysis Services 配置ウィザードを使用してこの動作を操作する方法については、Microsoft サポート技術情報の「ロールとメンバーの保持」を参照してください。  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>パーティションおよびロールの配置オプションの変更  
- 展開する必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトに保存されているものの別のパーティションおよびロール オプションを使用して、 \<*プロジェクト名*> >.deploymentoptions ファイル。 たとえば、既存のパーティション、ロール、およびで指定されているすべての既存のパーティション、ロール、およびメンバーを置換ではなく、ロールのメンバーを保持することがあります、 \<*プロジェクト名*> >.deploymentoptions ファイル。  
+ 展開する必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトに保存されているものの別のパーティションおよびロール オプションを使用して、 \<*プロジェクト名*> >.deploymentoptions ファイル。 たとえば、既存のパーティション、ロール、およびに記載されているすべての既存のパーティション、ロール、およびメンバーを置換ではなく、ロールのメンバーを保持するたい場合があります、 \<*プロジェクト名*> >.deploymentoptions ファイル。  
   
- パーティションおよびロールの配置を変更する、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクト、ため、プロジェクト内のパーティションおよびロールの設定を変更することはできません、 *\<プロジェクト名 >* **プロパティ ページ**  ダイアログ ボックスで[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]これらのオプションは表示されません。 ロールおよびパーティションの配置オプションを変更する場合は、内でこの情報を変更する必要があります、 \<*プロジェクト名*> >.deploymentoptions ファイル自体です。 次の手順を内のパーティションおよびロールの配置オプションを変更する方法を説明する、 \<*プロジェクト名*> >.deploymentoptions ファイル。  
+ パーティションおよびロールの配置を変更する、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクト、プロジェクト内のパーティションおよびロールの設定を変更することはできませんので、 *\<プロジェクト名 >* **プロパティ ページ**  ダイアログ ボックスで[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]これらのオプションは表示されません。 ロールおよびパーティションの配置オプションを変更する場合は、内のこの情報を変更する必要があります、 \<*プロジェクト名*> >.deploymentoptions ファイル。 次の手順の説明内のパーティションおよびロールの配置オプションを変更する方法、 \<*プロジェクト名*> >.deploymentoptions ファイル。  
   
 #### <a name="to-change-the-deployment-of-partitions-or-roles-after-the-input-files-have-been-generated"></a>入力ファイルの生成後にパーティションまたはロールの配置を変更するには  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36075382"
   
 ## <a name="see-also"></a>参照  
  [インストール先の指定](deployment-script-files-specifying-the-installation-target.md)   
- [ソリューションの配置の構成設定の指定](deployment-script-files-solution-deployment-config-settings.md)   
+ [ソリューションの配置に関する構成設定を指定します。](deployment-script-files-solution-deployment-config-settings.md)   
  [処理オプションの指定](deployment-script-files-specifying-processing-options.md)  
   
   

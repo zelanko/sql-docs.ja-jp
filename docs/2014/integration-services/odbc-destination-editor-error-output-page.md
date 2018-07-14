@@ -1,5 +1,5 @@
 ---
-title: ODBC 変換先エディター (エラー出力 ページ) |Microsoft ドキュメント
+title: Odbc 入力先エディター ([エラー出力] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a064b82360706ad943deb816ed54c32e34e568cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7906ba748e55b238cfc5ca074190d687be5f96bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256788"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 変換先エディター ([エラー出力] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択できます。  
@@ -75,6 +75,6 @@ ms.locfileid: "36076002"
   
 ## <a name="see-also"></a>参照  
  [Odbc 入力先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
- [Odbc 入力先エディター &#40;[マッピング] ページ&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
+ [Odbc 入力先エディター&#40;マッピング ページ&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
   
   

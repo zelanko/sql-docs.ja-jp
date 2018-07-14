@@ -1,5 +1,5 @@
 ---
-title: ソース管理の基本事項 |Microsoft ドキュメント
+title: ソース管理の基本事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], providers
 - source controls [SQL Server Management Studio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - source controls [SQL Server Management Studio], clients
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5da8bd18f4ae5e62e5b9177a3ba76ac446bc1a6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1c70c039fd32643dc69c12e76109f5a7fc900379
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217852"
 ---
 # <a name="source-control-basics"></a>ソース管理の基礎
   ソース管理とは、サーバー ソフトウェアの主要部分がファイルのバージョンを格納および追跡し、ファイルへのアクセスを制御するシステムです。 標準的なソース管理システムは、1 つのソース管理プロバイダー、および 2 つ以上のソース管理クライアントで構成されます。  
@@ -57,7 +57,7 @@ ms.locfileid: "36076037"
 |-|-|  
 |**タスク**|**トピック**|  
 |ソース管理オプションの設定|[ソース管理のオプションの設定](../../2014/database-engine/set-source-control-options.md)|  
-|ソース管理接続を変更します。|[ソース管理接続の変更](../../2014/database-engine/change-source-control-connections.md)|  
+|ソース管理接続の変更|[ソース管理接続の変更](../../2014/database-engine/change-source-control-connections.md)|  
 |ソース管理からファイルを除外します。|[ソース管理からのファイルの除外](../../2014/database-engine/exclude-files-from-source-control.md)|  
   
   

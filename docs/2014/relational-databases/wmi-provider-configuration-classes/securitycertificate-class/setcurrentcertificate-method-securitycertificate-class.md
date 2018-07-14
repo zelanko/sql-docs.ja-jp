@@ -1,5 +1,5 @@
 ---
-title: SetCurrentCertificate メソッド (SecurityCertificate クラス) |Microsoft ドキュメント
+title: SetCurrentCertificate メソッド (SecurityCertificate クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetCurrentCertificate method
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6dbc39c89311681026b190eb3032ce6a1ecc5981
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b406ecc02bcdf0466903beb71de9e633cc2d985c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191772"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate メソッド (SecurityCertificate クラス)
   現在のセキュリティ証明書を設定します。  
@@ -46,7 +46,7 @@ SHA , SQLInstance
   
 ## <a name="parts"></a>要素  
  *object*  
- [SecurityCertificate クラス] securitycertificate-class.md)、セキュリティ証明書を表すオブジェクト。  
+ [SecurityCertificate クラス] securitycertificate-class.md) セキュリティ証明書を表すオブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
   

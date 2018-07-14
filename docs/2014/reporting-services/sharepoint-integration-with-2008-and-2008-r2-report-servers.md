@@ -1,5 +1,5 @@
 ---
-title: SharePoint 統合 2008 および 2008 R2 レポート サーバー |Microsoft ドキュメント
+title: SharePoint 統合は 2008 および 2008 R2 レポート サーバー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9f51c37-b071-45d0-baec-f82fa6db366f
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 807978ec516f065f8bb2e219c33863e89c7fa2c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05f67d9ab20df69a7d2232cbbad49f7a16b9db5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168073"
 ---
-# <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>SharePoint 統合 2008 および 2008 R2 レポート サーバー
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] リリースの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、新しいアーキテクチャが導入され、SharePoint モードが SharePoint 共有サービスに基づくようになりました。 SharePoint サーバーの全体管理で、新しい機能の管理が完了した、**サービス管理**と**マネージャー サービス アプリケーション**ページ。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]と SharePoint 統合用の以前のアーキテクチャがサポートされても、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]以前のバージョンのレポート サーバーと SharePoint 2010 を統合できるように、SharePoint 2010 製品用アドインです。  
+# <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>SharePoint 統合は 2008 および 2008 R2 レポート サーバー
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] リリースの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、新しいアーキテクチャが導入され、SharePoint モードが SharePoint 共有サービスに基づくようになりました。 SharePoint サーバーの全体管理での新しい機能の管理が完了した、**サービスの管理**と**マネージャー サービス アプリケーション**ページ。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]と SharePoint 統合用の以前のアーキテクチャがサポートされても、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]以前のバージョンのレポート サーバーと SharePoint 2010 を統合できるため、SharePoint 2010 製品用アドイン。  
   
  古いアーキテクチャの管理に使用する SharePoint サーバーの全体管理ページへは、次の方法でアクセスできます。  
   
-1.  SharePoint サーバーの全体管理 をクリックして**アプリケーションの全般設定**です。  
+1.  SharePoint サーバーの全体管理 をクリックして**アプリケーションの全般設定**します。  
   
-2.  グループ**SQL Server Reporting Services (2008 および 2008 R2)** へのリンクと、古いアーキテクチャ用の管理ページが含まれています  
+2.  グループ**SQL Server Reporting Services (2008 および 2008 R2)** リンクと、古いアーキテクチャ用の管理ページが含まれています  
   
 ## <a name="server-integration-architecture"></a>サーバー統合のアーキテクチャ  
  レポート サーバーを SharePoint の製品のインスタンスと統合すると、アイテムとプロパティは SharePoint コンテンツ データベースに格納されます。 これによって、コンテンツの格納、セキュリティ保護、アクセスの方法を決めるサーバー テクノロジどうしをより深いレベルで統合できます。  

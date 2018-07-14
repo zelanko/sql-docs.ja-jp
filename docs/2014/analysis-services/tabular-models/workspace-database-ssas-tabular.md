@@ -1,5 +1,5 @@
 ---
-title: ワークスペース データベース (SSAS テーブル) |Microsoft ドキュメント
+title: ワークスペース データベース (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a52eb01f176eddd8e69dcdc14609c3776bd54a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 54a56f1339a3a81385afc9b41fa4b202fed22cd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271588"
 ---
 # <a name="workspace-database-ssas-tabular"></a>ワークスペース データベース (SSAS テーブル)
   モデルの作成時に使用されるテーブル モデル ワークスペース データベースは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で新しいテーブル モデル プロジェクトを作成したときに作成されます。 ワークスペース データベースはテーブル モードで実行されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのメモリ内に存在します。通常は、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] と同じコンピューター上です。  
@@ -69,7 +69,7 @@ ms.locfileid: "36077400"
 |--------------|---------------------|-----------------|  
 |**ワークスペース データベース**|プロジェクト名、アンダースコア、ユーザー名、アンダースコア、GUID がこの順序で含まれています。|インメモリ モデル プロジェクトを格納および編集する際に使用されるワークスペース データベースの名前です。 テーブル モデル プロジェクトの作成後、このデータベースは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [ワークスペース サーバー] **プロパティに指定された** インスタンスに表示されます。 このプロパティを [プロパティ] ウィンドウで設定することはできません。|  
 |**ワークスペースの保有期間**|メモリ内でアンロード|モデル プロジェクトが閉じられた後でワークスペース データベースを保持する方法を指定します。 ワークスペース データベースには、モデル メタデータとインポートされたデータが含まれています。 場合によっては、ワークスペース データベースは非常に大きくなり、大量のメモリを消費することがあります。 既定では、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でモデル プロジェクトを閉じると、ワークスペース データベースはメモリからアンロードされます。 この設定を変更するときには、使用可能なメモリ リソースと、モデル プロジェクトに対する作業を行う頻度を考慮することが重要です。 このプロパティの設定には、以下のオプションがあります。<br /><br /> **メモリに保持** - モデル プロジェクトを閉じた後もワークスペース データベースをメモリ内に保持するように指定します。 このオプションはより多くのメモリを消費しますが、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でモデル プロジェクトを開くときのリソース消費が少なくて済み、ワークスペース データベースの読み込みも高速になります。<br /><br /> **メモリからアンロード** - モデル プロジェクトを閉じた後、ワークスペース データベースをディスク上に保持し、メモリには残さないように指定します。 このオプションはメモリの消費量は比較的少なくて済みますが、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でモデル プロジェクトを開くときにワークスペース データベースを再度接続する必要があるため、リソース消費が増え、ワークスペース データベースをメモリ内に保持した場合と比べて、モデル プロジェクトの読み込みにも時間がかかるようになります。 メモリ内のリソースが制限されている場合、またはリモートのワークスペース データベースで作業する場合に、このオプションを使用します。<br /><br /> **ワークスペースの削除** - モデル プロジェクトを閉じた後、メモリからワークスペース データベースを削除し、ディスク上にもワークスペース データベースを保持しないように指定します。 このオプションはメモリとストレージ領域の消費量が比較的少なくて済みますが、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でモデル プロジェクトを開くときのリソース消費が増え、ワークスペース データベースをメモリ内やディスク上に保持した場合と比べて、モデル プロジェクトの読み込みにも時間がかかるようになります。 このオプションは、モデル プロジェクトの使用時、必要な場合にのみ使用してください。<br /><br /> <br /><br /> このプロパティの既定の設定は、[ツール] メニューから開く [オプション] ダイアログ ボックスで、 **[分析サーバー]** 設定の **[データ モデリング]** ページを使用して変更できます。|  
-|**ワークスペース サーバー**|localhost|このプロパティは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でモデル プロジェクトが作成されるときにワークスペース データベースをホストするのに使用される既定のサーバーを指定します。 ローカル コンピューターで実行されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の使用可能なすべてのインスタンスが、このボックスの一覧に表示されます。<br /><br /> テーブル モードで実行されている別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを指定するには、サーバー名を入力します。 ログオンするユーザーは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーの管理者である必要があります。<br /><br /> 注ことは、ローカルを指定するをお勧め[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ワークスペース サーバーとしてのサーバー。 リモート サーバー上のワークスペース データベースでは、PowerPivot からのインポートはサポートされておらず、データはローカルにバックアップされず、クエリ中にユーザー インターフェイスで遅延が発生する場合があります。<br /><br /> なお、このプロパティの既定の設定は、データ モデリング ページで変更できます[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)][オプション] ダイアログ ボックスで設定します。|  
+|**ワークスペース サーバー**|localhost|このプロパティは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でモデル プロジェクトが作成されるときにワークスペース データベースをホストするのに使用される既定のサーバーを指定します。 ローカル コンピューターで実行されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の使用可能なすべてのインスタンスが、このボックスの一覧に表示されます。<br /><br /> テーブル モードで実行されている別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを指定するには、サーバー名を入力します。 ログオンするユーザーは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーの管理者である必要があります。<br /><br /> 注ことは、ローカルの指定をお勧め[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ワークスペース サーバーとしてのサーバー。 リモート サーバー上のワークスペース データベースでは、PowerPivot からのインポートはサポートされておらず、データはローカルにバックアップされず、クエリ中にユーザー インターフェイスで遅延が発生する場合があります。<br /><br /> [データ モデリング] ページで、このプロパティの既定の設定を変更できることにも注意してください[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)][オプション] ダイアログ ボックスで設定します。|  
   
 ##  <a name="bkmk_use_ssms"></a> SSMS を使用したワークスペース データベースの管理  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) を使用して、ワークスペース データベースをホストする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーに接続できます。 通常、ワークスペース データベースは必ずしも管理されません。例外は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から実行する必要のあるワークスペース データベースのデタッチまたは削除です。  

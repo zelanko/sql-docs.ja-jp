@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c814b8d89686c635fd0479576eeda982a8b7b957
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 9a1696168c72bf65c3a1771c0a54c51d9080d091
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266838"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>[データ ソースの選択] (SQL Server インポートおよびエクスポート ウィザード)
-  使用して、**データ ソースを選択**ページをコピーするデータのソースを指定します。  
+  使用して、**データ ソースの選択**ページをコピーするデータのソースを指定します。  
   
- このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)です。 について、ウィザードを起動するオプションおよびウィザードが正常に実行するための権限については、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)です。  
+ このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と、ウィザードを起動するオプションについて説明しますを参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
   
- 目的、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードはデータ ソースからの保存先にコピーします。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
+ 目的、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードは、先のソースからデータをコピーします。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
 ## <a name="options"></a>および  
  **Data Source**  
- ソースのデータ保存形式に対応したデータ プロバイダーを選択します。 データ ソースに使用できるプロバイダーが複数存在する可能性があります。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client で、.NET Framework Data Provider for SQL Server、または、Microsoft OLE DB Provider for SQL Server。  
+ ソースのデータ保存形式に対応したデータ プロバイダーを選択します。 データ ソースに使用できるプロバイダーが複数存在する可能性があります。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、.NET Framework Data Provider for SQL Server、または、Microsoft OLE DB Provider for SQL Server。  
   
- **データソース**プロパティには、可変個のオプションは、コンピューターにインストールされているプロバイダーに依存します。 次の表に、使用頻度の高いプロバイダーのオプションを一覧表示します。 他のプロバイダーについては、プロバイダー固有のマニュアルを参照してください。  
+ **データソース**プロパティは、さまざまなオプションは、コンピューターにインストールされているプロバイダーに依存します。 次の表に、使用頻度の高いプロバイダーのオプションを一覧表示します。 他のプロバイダーについては、プロバイダー固有のマニュアルを参照してください。  
   
 ## <a name="dynamic-options"></a>動的オプション  
  以下では、いくつかのデータ ソースで利用可能なオプションを示します。 [データ ソース] のドロップダウンで利用可能なすべてのデータ ソースが、ここに一覧表示されているわけではありません。  
@@ -47,7 +47,7 @@ ms.locfileid: "36324616"
  データベースへのログインに、パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証を使用するかどうかを指定します。 より高いセキュリティのためには Windows 認証をお勧めします。  
   
  **[SQL Server 認証を使用する]**  
- パッケージを使用するかどうか指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースへのログインを認証します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
+ パッケージを使用するかどうかを指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースへのログインを認証します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
   
  **ユーザー名**  
  使用しているときに、データベース接続のユーザー名を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
@@ -71,7 +71,7 @@ ms.locfileid: "36324616"
  ソース データベース名を入力します。  
   
  **統合セキュリティ**  
- 指定`True`推奨は、Windows 統合認証を使用して接続するまたは`False`を使用して接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 `False` を指定した場合は、ユーザー ID とパスワードを入力する必要があります。 既定値は `False` です。  
+ 指定`True`お勧めしますが、Windows 統合認証を使用して接続または`False`を使用して接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 `False` を指定した場合は、ユーザー ID とパスワードを入力する必要があります。 既定値は `False` です。  
   
  **User ID**  
  使用しているときに、データベース接続のユーザー名を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
@@ -79,15 +79,15 @@ ms.locfileid: "36324616"
  **Password**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合に、データベース接続用のパスワードを指定します。  
   
- このプロバイダーを選択したときに一覧表示される追加オプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース データベースに正しく接続するために必須というわけではありません。 これらの追加オプションについては、ドキュメントを参照して、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]ソフトウェア開発キットです。  
+ このプロバイダーを選択したときに一覧表示される追加オプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース データベースに正しく接続するために必須というわけではありません。 これらの追加オプションについては、ドキュメントを参照してください、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Software Development Kit。  
   
 ### <a name="data-source--microsoft-excel"></a>[データ ソース] = [Microsoft Excel]  
   
 > [!NOTE]  
->  選択**Excel** Excel 2003 を使用するデータ ソースに接続する場合にのみ、またはそれ以前です。 Excel 2007 を使用するデータ ソースに接続するには、選択**Microsoft Office 12.0 Access Database Engine OLE DB Provider**をクリックして**プロパティ**、し、**すべて**のタブ、**データ リンク プロパティ** ダイアログ ボックスで、入力`Excel 12.0`の値として**Extended Properties**です。  
+>  選択**Excel** Excel 2003 を使用するデータ ソースに接続する場合にのみ、またはそれ以前。 Excel 2007 を使用するデータ ソースに接続するには、選択**Microsoft Office 12.0 Access Database Engine OLE DB Provider**、 をクリックして**プロパティ**、し、**すべて**のタブ、**データ リンク プロパティ** ダイアログ ボックスに、入力`Excel 12.0`の値として**拡張プロパティ**します。  
   
  **[Excel ファイル パス]**  
- データをインポートするスプレッドシートのパスとファイル名を指定します。 たとえば、 **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**です。 または、**[参照]** をクリックします。  
+ データをインポートするスプレッドシートのパスとファイル名を指定します。 たとえば、 **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**します。 または、**[参照]** をクリックします。  
   
  **[参照]**  
  **[ファイルを開く]** ダイアログ ボックスを使用して、ワークシートを検索します。  
@@ -101,7 +101,7 @@ ms.locfileid: "36324616"
 ### <a name="data-source--microsoft-access"></a>[データ ソース] = [Microsoft Access]  
   
 > [!NOTE]  
->  選択**Access** Access 2003 を使用するデータベースに接続する場合にのみ、またはそれ以前です。 Access 2007 を使用するデータベースに接続するには、選択**Microsoft Office 12.0 Access Database Engine OLE DB Provider**代わりにします。  
+>  選択**Access** Access 2003 を使用するデータベースに接続する場合にのみ、またはそれ以前。 Access 2007 を使用するデータベースに接続するには、選択**Microsoft Office 12.0 Access Database Engine OLE DB Provider**代わりにします。  
   
  **[ファイル名]**  
  データをインポートするデータベース ファイルのパスとファイル名を指定します。 たとえば、**C:\MyData.mdb、\\\Sales\Database\Northwind.mdb** などです。 または、**[参照]** をクリックします。  
@@ -113,10 +113,10 @@ ms.locfileid: "36324616"
  ワークグループの情報ファイルがデータベースに関連付けられている場合は、データベース接続のために有効なユーザー名を指定します。  
   
  **Password**  
- ワークグループの情報ファイルがデータベースに関連付けられている場合は、データベース接続のためにユーザーのパスワードを指定します。 ただし、データベースがすべてのユーザーに対して 1 つのパスワードで保護されている場合でこの値を指定する必要があります、**データ リンク プロパティ** ダイアログ ボックスをクリックしてアクセス**詳細**です。  
+ ワークグループの情報ファイルがデータベースに関連付けられている場合は、データベース接続のためにユーザーのパスワードを指定します。 ただし、データベースがすべてのユーザーに対して 1 つのパスワードで保護する場合は、この値を指定する必要があります、**データ リンク プロパティ** ダイアログ ボックスをクリックしてアクセスされる**詳細**します。  
   
  **詳細設定**  
- 使用して、データベースのパスワードや既定以外のワークグループ情報ファイルなどの高度なオプションを指定することも、**データ リンク プロパティ** ダイアログ ボックス。 OLE DB プロバイダーのプロパティの詳細については、の [データ アクセス] セクションで検索、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/?linkid=62553)です。  
+ 使用してデータベースのパスワードや既定以外のワークグループ情報ファイルなどの高度なオプションを指定する、**データ リンク プロパティ** ダイアログ ボックス。 OLE DB プロバイダーのプロパティの詳細については、の [データ アクセス] セクションで検索、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/?linkid=62553)します。  
   
 ### <a name="data-source--flat-file-source"></a>[データ ソース] = [フラット ファイル ソース]  
  フラット ファイル ソースのオプションの詳細については、次のトピックを参照してください。  

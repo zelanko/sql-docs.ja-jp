@@ -1,5 +1,5 @@
 ---
-title: データセットのプロパティ ダイアログ ボックスでは、クエリ |Microsoft ドキュメント
+title: データセットのプロパティ] ダイアログ ボックスの [クエリ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10160"
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
 caps.latest.revision: 37
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 56030cb08b8197958436e46438e1561165776101
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db00bf6e36f20da59e548acef394c786a70d40fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208562"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>[クエリ] ([データセットのプロパティ] ダイアログ ボックス)
-  選択**クエリ**上、**データセットのプロパティ**データ ソースを選択し、クエリを作成する ダイアログ ボックス。  
+  選択**クエリ**で、**データセットのプロパティ** ダイアログ ボックスに、データ ソースを選択し、クエリを作成します。  
   
  **[データセットのプロパティ]** ダイアログ ボックスには、次のカテゴリがあります。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36082928"
 -   [[フィルター] ([データセットのプロパティ] ダイアログ ボックス)](report-data/dataset-properties-dialog-box-filters.md)  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  データセットの名前を入力します。 名前は、レポートのすべてのデータ領域名またはグループ名と異なっている必要があります。  
   
  **Data Source**  

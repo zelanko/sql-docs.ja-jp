@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 13: Excel で分析 |Microsoft ドキュメント'
+title: 'レッスン 13: Excel で分析 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: b1dea62cbd78ca375a52adb7f1e6fd2285ff35e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b9e50bda2a6168d54be78fd178d3d1d9161eff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200362"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>レッスン 13: Excel での分析
   このレッスンでは、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で "Excel で分析" 機能を使用して Microsoft Excel を開き、モデル ワークスペースへのデータ ソース接続を自動的に作成して、ワークシートにピボットテーブルを自動的に追加します。 "Excel で分析" 機能を使用すると、モデルを配置する前に、モデル デザインの有効性をすばやく簡単にテストできます。 このレッスンでは、データの分析は行いません。 このレッスンの目的は、モデル作成者が、モデル デザインのテストに使用できるツールに慣れることです。 モデル作成者向けの "Excel で分析" 機能を使用する場合とは異なり、エンド ユーザーは Excel や [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] などのクライアント レポート アプリケーションを使用して、配置済みのモデル データへの接続と参照を行います。  
@@ -42,7 +42,7 @@ ms.locfileid: "36083307"
   
      Excel で新しいブックが開きます。 現在のユーザー アカウントを使用してデータ ソース接続が作成され、既定のパースペクティブを使用して表示可能なフィールドが定義されます。 ピボットテーブルがワークシートに自動的に追加されます。  
   
-3.  Excel で、**ピボット テーブル フィールド リスト**に注意してください、**日付**と**Internet Sales**メジャーが表示されます、だけでなく**顧客**、 **日付**、 **Geography**、**製品**、 **Product Category**、 **Product Subcategory**、および**Internet Sales**すべて、それぞれの列のテーブルが表示されます。  
+3.  Excel で、**ピボット テーブル フィールド リスト**に注意してください、**日付**と**Internet Sales**メジャーが表示されるだけでなく**顧客**、 **日付**、 **Geography**、**製品**、 **Product Category**、 **Product Subcategory**、および**Internet Sales**それぞれの列のすべてのテーブルが表示されます。  
   
 4.  ブックを保存せずに Excel を閉じます。  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9367e4715022afcff7c988cbe877a1565f41cab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c8eec2498cace997c8f67493772c9ac23d374bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217832"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>変更データを取得する関数を作成する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローが完了したので、次の作業では、変更データを取得するテーブル値関数を作成します。 この関数は、最初の増分読み込みの前に一度作成するだけで済みます。  
@@ -145,7 +145,7 @@ deallocate #hfunctions
 ## <a name="writing-your-own-table-value-function"></a>独自のテーブル値関数の作成  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用すると、変更データ キャプチャのクエリ関数を呼び出す独自のテーブル値ラッパー関数を作成して、そのテーブル値ラッパー関数を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納することもできます。 Transact-SQL 関数の作成方法の詳細については、「[CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql)」をご覧ください。  
   
- 次の例では、指定した変更間隔の Customer テーブルから変更を取得するテーブル値関数を定義します。 この関数は変更データ キャプチャ関数にマップする、`datetime`値をバイナリのログ シーケンス番号 (LSN) 値、変更テーブルを内部的に使用します。 また、この関数では、次の特殊な条件も処理されます。  
+ 次の例では、指定した変更間隔の Customer テーブルから変更を取得するテーブル値関数を定義します。 この関数は、変更データ キャプチャ関数にマップする、`datetime`バイナリ ログへの値のシーケンス番号 (LSN) 値を変更テーブルは内部的に使用します。 また、この関数では、次の特殊な条件も処理されます。  
   
 -   開始時刻に NULL 値が渡されると、この関数では、使用可能な最も早い時刻値が使用されます。  
   

@@ -1,5 +1,5 @@
 ---
-title: Columns 要素 (ASSL) |Microsoft ドキュメント
+title: Columns 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Columns element
 ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e635738dddc7eabda62f0c35df860db3d9a10b60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad5104e3b0fc0b6b34c7b0a4aa3eed9b18336aab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231912"
 ---
 # <a name="columns-element-assl"></a>Columns 要素 (ASSL)
   親要素に関連付けられた列のコレクションを格納します。  
@@ -80,9 +80,9 @@ ms.locfileid: "36083279"
 |[MiningStructure](../objects/miningstructure-element-assl.md)、 [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
- `DrillThroughAction` 、要素、`Columns`コレクションは、アクションが実行されるときに返されるデータを含む列を識別します。  
+ `DrillThroughAction` 、要素、`Columns`コレクションは、アクションは実行時に返されるデータを含む列を識別します。  
   
- `TableMiningStructureColumn` 、要素、`Columns`の再帰レベルを 1 つだけのコレクションを使用します。 つまり、`TableMiningStructureColumn`このコレクションに含まれる要素を含めることはできません`TableMiningStructureColumn`内の要素の`Columns`コレクション。  
+ `TableMiningStructureColumn` 、要素、`Columns`の再帰レベルを 1 つだけのコレクションを使用します。 つまり、`TableMiningStructureColumn`このコレクションに含まれる要素は、いずれかを含めることはできません`TableMiningStructureColumn`内の要素の`Columns`コレクション。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する一部の要素は、<xref:Microsoft.AnalysisServices.TraceColumnCollection>、<xref:Microsoft.AnalysisServices.MiningModelColumnCollection>、および <xref:Microsoft.AnalysisServices.MiningStructureColumnCollection> です。  
   

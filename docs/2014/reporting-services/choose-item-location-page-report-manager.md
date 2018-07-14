@@ -1,5 +1,5 @@
 ---
-title: '[選択項目の場所] ページ (レポート マネージャー) |Microsoft ドキュメント'
+title: '[選択項目の場所] ページ (レポート マネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bf08188225c10d72230eea781ac9ebbff3d7c5f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3e0f94a0785aa13fc4c83c304e207b8775e58b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260519"
 ---
 # <a name="choose-item-location-page-report-manager"></a>[アイテムの場所の選択] ページ (レポート マネージャー)
   新しいリンク レポートまたは新しいモデル用のフォルダーを選択するには、[アイテムの場所の選択] ページを使用します。 特定のユーザー グループ用のリンク レポートまたはモデルを作成している場合、それらのユーザーが使用する他のレポートおよびモデルと同じフォルダーにそのアイテムを配置できます。 既に存在し、コンテンツを追加する権限があるフォルダーを選択する必要があります。  

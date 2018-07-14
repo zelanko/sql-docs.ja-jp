@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 caps.latest.revision: 13
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 639202717573abdbd0ec6424c92039e37c042875
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: c89d7c7baf7422ba3bc6a457509ea7e8ac37a001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331728"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの作成
-  ネイティブ コンパイル ストアド プロシージャには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のプログラミングとクエリのセキュリティ構成が完全には実装されていません。 ネイティブ コンパイル ストアド プロシージャ内部で使用できない特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] 構造が存在します。 詳細については、次を参照してください。[ネイティブ コンパイル ストアド プロシージャでサポートされる構造](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md)です。  
+  ネイティブ コンパイル ストアド プロシージャには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のプログラミングとクエリのセキュリティ構成が完全には実装されていません。 ネイティブ コンパイル ストアド プロシージャ内部で使用できない特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] 構造が存在します。 詳細については、次を参照してください。[ネイティブ コンパイル ストアド プロシージャでサポートされる構造](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md)します。  
   
  ただし、ネイティブ コンパイル ストアド プロシージャに対してのみサポートされる [!INCLUDE[tsql](../../includes/tsql-md.md)] 機能がいくつかあります。  
   
@@ -55,11 +55,11 @@ end
 go  
 ```  
   
- サンプルでは、コード、`NATIVE_COMPILATION`を示しますこの[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャがネイティブ コンパイル ストアド プロシージャです。 以下のオプションは必須です。  
+ コード サンプルで`NATIVE_COMPILATION`を示しますこの[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャは、ネイティブ コンパイル ストアド プロシージャ。 以下のオプションは必須です。  
   
 |オプション|説明|  
 |------------|-----------------|  
-|`SCHEMABINDING`|ネイティブ コンパイル ストアド プロシージャは、参照先のオブジェクトのスキーマにバインドする必要があります。 これは、プロシージャによるテーブル参照を削除できないことを意味します。 プロシージャで参照されるテーブルは、そのスキーマ名、およびワイルドカードを含める必要があります (\*) クエリでは許可されません。 `SCHEMABINDING` このバージョンのネイティブ コンパイル ストアド プロシージャに対してのみサポート[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。|  
+|`SCHEMABINDING`|ネイティブ コンパイル ストアド プロシージャは、参照するオブジェクトのスキーマにバインドする必要があります。 つまり、プロシージャによってテーブル参照を削除することはできません。 プロシージャで参照されるテーブルは、そのスキーマ名、およびワイルドカードを含める必要があります (\*) クエリでは許可されません。 `SCHEMABINDING` このバージョンのネイティブ コンパイル ストアド プロシージャに対してのみサポートされますが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。|  
 |`EXECUTE AS`|ネイティブ コンパイル ストアド プロシージャでは、既定の実行コンテキストである `EXECUTE AS CALLER` はサポートされません。 したがって、実行コンテキストの指定は必須です。 オプション`EXECUTE AS OWNER`、 `EXECUTE AS`*ユーザー*、および`EXECUTE AS SELF`はサポートされています。|  
 |`BEGIN ATOMIC`|ネイティブ コンパイル ストアド プロシージャの本体は、厳密に 1 つの ATOMIC ブロックで構成されている必要があります。 ATOMIC ブロックでは、ストアド プロシージャのアトミック実行が保証されます。 プロシージャをアクティブなトランザクションのコンテキストの外部で呼び出した場合、新しいトランザクションが開始され、ATOMIC ブロックの末尾でコミットされます。 ネイティブ コンパイル ストアド プロシージャの ATOMIC ブロックには、次の 2 つの必須オプションがあります。<br /><br /> `TRANSACTION ISOLATION LEVEL`。 参照してください[トランザクション分離レベル](../../database-engine/transaction-isolation-levels.md)の分離レベルをサポートします。<br /><br /> `LANGUAGE`。 ストアド プロシージャの言語は、使用可能な言語または言語の別名の 1 つに設定されている必要があります。|  
   
@@ -69,11 +69,11 @@ go
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスの Windows ユーザーと同じドメインからのアカウントを使用します。  
   
--   場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は Windows ユーザーを含むドメインを Network Service や Local System、コンピューターなどのコンピューター アカウントを信頼する必要がありますを使用しています。  
+-   場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は Network Service や Local System、コンピューターなどのコンピューター アカウントを信頼する必要がありますを使用して、Windows ユーザーが含まれるドメインによって。  
   
--   使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]認証します。  
+-   使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]認証します。  
   
- ネイティブ コンパイル ストアド プロシージャを作成するときに、エラー 15517 が発生することもあります。 詳細については、次を参照してください。 [MSSQLSERVER_15517](../errors-events/mssqlserver-15517-database-engine-error.md)です。  
+ ネイティブ コンパイル ストアド プロシージャを作成するときに、エラー 15517 が発生することもあります。 詳細については、次を参照してください。 [MSSQLSERVER_15517](../errors-events/mssqlserver-15517-database-engine-error.md)します。  
   
 ## <a name="updating-a-natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャの更新  
  ネイティブ コンパイル ストアド プロシージャに対する変更操作はサポートされていません。 ネイティブ コンパイル ストアド プロシージャを変更する方法の 1 つは、ストアド プロシージャを削除してから再作成することです。  
