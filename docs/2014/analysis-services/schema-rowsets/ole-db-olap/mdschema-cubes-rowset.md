@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_CUBES 行セット |Microsoft ドキュメント
+title: MDSCHEMA_CUBES 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_CUBES rowset
 ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0044c9943b2f2819ea216c735f298b7e30de7a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 441f83b4b5bec1a2340fbf6e8a3b14da77363162
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243402"
 ---
 # <a name="mdschemacubes-rowset"></a>MDSCHEMA_CUBES 行セット
   データベース内のキューブの構造について記述します。  
@@ -47,7 +47,7 @@ ms.locfileid: "36174250"
 |`LAST_DATA_UPDATE`|`DBTYPE_DBTIMESTAMP`||キューブの最終処理時刻。|  
 |`DATA_UPDATED_BY`|`DBTYPE_WSTR`||サポートされていません。|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||キューブについてのわかりやすい説明。|  
-|`IS_DRILLTHROUGH_ENABLED`|`DBTYPE_BOOL`||ブール値を常に true を返します。|  
+|`IS_DRILLTHROUGH_ENABLED`|`DBTYPE_BOOL`||ブール値は常に true を返します。|  
 |`IS_LINKABLE`|`DBTYPE_BOOL`||キューブをリンク キューブ内で使用できるかどうかを示すブール値。|  
 |`IS_WRITE_ENABLED`|`DBTYPE_BOOL`||キューブが書き込み許可されているかどうかを示すブール値。|  
 |`IS_SQL_ENABLED`|`DBTYPE_BOOL`||SQL をキューブで使用できるかどうかを示すブール値。|  
@@ -65,7 +65,7 @@ ms.locfileid: "36174250"
 |`CATALOG_NAME`|`DBTYPE_WSTR`|任意。|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`|任意。|  
 |`CUBE_NAME`|`DBTYPE_WSTR`|任意。|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。 <br /><br /> -1 のキューブ<br />2 つのディメンション<br /><br /> 既定の制限の値は 1 です。|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。 <br /><br /> -1 のキューブ<br />-2 つのディメンション<br /><br /> 既定の制限の値は 1 です。|  
 |`Base Cube_Name`|`DBTYPE_WSTR`|任意。|  
   
 ## <a name="see-also"></a>参照  

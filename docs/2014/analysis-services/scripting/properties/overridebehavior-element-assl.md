@@ -1,5 +1,5 @@
 ---
-title: OverrideBehavior 要素 (ASSL) |Microsoft ドキュメント
+title: OverrideBehavior 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - OverrideBehavior element
 ms.assetid: 6a5b361a-6061-4b73-b1a7-1237fb77606c
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e36223c59306b158812d9bdc18fccd3660c54f0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aecabbb04cefa1abf706c5f725c3a7f8e41aad07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241372"
 ---
 # <a name="overridebehavior-element-assl"></a>OverrideBehavior 要素 (ASSL)
-  記述されるリレーションシップのオーバーライド動作を示す、 [AttributeRelationship](../objects/attributerelationship-element-assl.md)要素。  
+  記述されるリレーションシップのオーバーライド動作を示します、 [AttributeRelationship](../objects/attributerelationship-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36173801"
 |*厳密な*|AttributeRelationship 要素で記述されるリレーションシップのオーバーライド動作を示します。 一方の属性での配置がもう一方の配置にどのように影響するかを指定します。|  
 |*なし*|影響しません。|  
   
- 許可される値に対応する列挙`OverrideBehavior`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.OverrideBehavior>します。  
+ 許容された値に対応する列挙体`OverrideBehavior`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.OverrideBehavior>します。  
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](../../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

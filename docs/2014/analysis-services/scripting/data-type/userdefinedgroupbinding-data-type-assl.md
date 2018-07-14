@@ -1,5 +1,5 @@
 ---
-title: UserDefinedGroupBinding データ型 (ASSL) |Microsoft ドキュメント
+title: UserDefinedGroupBinding データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UserDefinedGroupBinding data type
 ms.assetid: 70149929-0ff7-4a67-84bf-e94908ae7611
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ebbc22ff9a9ff2d38e36b53d5e1e2e382739ca0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a31c1867296ff00d8000b24640dfb44bef034a00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194322"
 ---
 # <a name="userdefinedgroupbinding-data-type-assl"></a>UserDefinedGroupBinding データ型 (ASSL)
   属性のユーザー定義のグループ化を表す派生データ型を定義します。  
@@ -62,11 +62,11 @@ ms.locfileid: "36175837"
 |派生要素|参照してください[バインド](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
- `UserDefinedGroupBinding` として自動的に処理されて、 [AttributeBinding](attributebinding-data-type-assl.md)が[型](../properties/type-element-binding-assl.md)要素に設定されている*すべて*です。  
+ `UserDefinedGroupBinding` 自動的に処理されますが、 [AttributeBinding](attributebinding-data-type-assl.md)が[型](../properties/type-element-binding-assl.md)要素に設定されて*すべて*します。  
   
  詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、`Binding`型との継承階層`Binding`型を参照してください[データ型のバインド&#40;ASSL&#41;](binding-data-type-assl.md).  
   
- ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.UserDefinedGroupBinding>します。  
   

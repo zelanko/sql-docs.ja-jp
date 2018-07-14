@@ -1,5 +1,5 @@
 ---
-title: デシジョン ツリー モデルのクエリ例 |Microsoft ドキュメント
+title: デシジョン ツリー モデルのクエリ例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - content queries [DMX]
 - decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56763f6e1b207e0f676c08e5bbca7066b680dcda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 734402a21381ef6bf60eec5860b887ae3e0a73f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261518"
 ---
 # <a name="decision-trees-model-query-examples"></a>デシジョン ツリー モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、デシジョン ツリー モデルでコンテンツ クエリを使用すると、ツリーの各レベルのケースの数に関する統計や、ケースを区別するルールを取得できます。 一方、予測クエリを使用すると、モデルを新しいデータにマップして、提案や分類などを生成することができます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
@@ -70,7 +70,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  このクエリでは、種類が 2 のノード (特定の予測可能な属性を表すツリーの最上位のノード) がすべて返されます。  
   
 > [!NOTE]  
->  列、 `CHILDREN_CARDINALITY`、同じ名前の MDX の予約されたキーワードと区別するために角かっこで囲む必要があります。  
+>  この列では、 `CHILDREN_CARDINALITY`、同じ名前の MDX の予約されたキーワードと区別するために角かっこで囲む必要があります。  
   
 ```  
 SELECT MODEL_NAME, NODE_NAME, NODE_CAPTION,   
@@ -87,10 +87,10 @@ WHERE NODE_TYPE = 2
   
  この結果からわかることは何でしょうか。 デシジョン ツリー モデルの特定のノードのカーディナリティは、そのノードの直接の子の数を表します。 このノードのカーディナリティは 5 なので、このモデルでは、対象になる母集団 (自転車を購入する可能性がある顧客) が 5 つのサブグループに分割されていることがわかります。  
   
- 次の関連するクエリは、この 5 つのサブグループの子を、子ノードの属性と値の分布と共に返します。 サポート、確率、および分散などの統計情報が、入れ子になったテーブルに格納されているため`NODE_DISTRIBUTION`、この例では、`FLATTENED`キーワードを入れ子になったテーブルの列を出力します。  
+ 次の関連するクエリは、この 5 つのサブグループの子を、子ノードの属性と値の分布と共に返します。 サポート、確率、分散などの統計情報は、入れ子になったテーブルに格納されているため、 `NODE_DISTRIBUTION`、この例では、`FLATTENED`キーワードを入れ子になったテーブル列を出力します。  
   
 > [!NOTE]  
->  入れ子になったテーブル列`SUPPORT`同名の予約済みキーワードと区別するために角かっこで囲む必要があります。  
+>  入れ子になったテーブルの列で`SUPPORT`同名の予約済みキーワードと区別するために角かっこで囲む必要があります。  
   
 ```  
 SELECT FLATTENED NODE_NAME, NODE_CAPTION,  
@@ -111,7 +111,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
   
- これらの結果からわかります、顧客の自転車を購入者 (`[Bike Buyer]` = 1)、1067 顧客は車にあり、473 顧客 3 車の所有台数。  
+ これらの結果からことがわかります顧客の自転車の購入者 (`[Bike Buyer]` = 1)、1067 人の顧客が車および 473 顧客は車を 3 を必要があります。  
   
 ###  <a name="bkmk_Query3"></a> サンプル クエリ 3: モデルからサブツリーを取得する  
  実際に自転車を購入した顧客についてさらに調査する場合は、 次の例のようにクエリで [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) 関数を使用すると、任意のサブツリーについて追加の詳細を表示することができます。 次のクエリは、42 歳以上の顧客を含むツリーのリーフ ノード (NODE_TYPE = 4) を取得して、自転車を購入した顧客の数を返します。 このクエリでは、入れ子になったテーブルの行が Bike Buyer = 1 の行のみに制限されています。  
@@ -185,7 +185,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
  既定では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、入れ子になったテーブルを列ラベル **[Expression]** を使用して返します。 このラベルを変更するには、返される列に別名を付けます。 その別名 (この例の場合は **Results**) は、列見出しと、入れ子になったテーブルの値の両方に使用されます。 結果を表示するには、入れ子になったテーブルを展開する必要があります。  
   
- 例の結果は、Bike Buyer = 1。  
+ 例の結果、Bike Buyer = 1。  
   
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  

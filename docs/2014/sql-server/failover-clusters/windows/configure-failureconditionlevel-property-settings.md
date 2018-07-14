@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 caps.latest.revision: 29
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: d4f3796c0e6145e2dc24110e805971fb88058484
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8a0a6c8fb4b87ca1bbb51947b722fc4238a1c187
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161863"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>FailureConditionLevel プロパティ設定の構成
   FailureConditionLevel プロパティを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) がフェールオーバーまたは再起動するための状態を設定します。 このプロパティへの変更はすぐに適用され、Windows Server フェールオーバー クラスター サービス (WSFC) または FCI リソースの再起動を必要としません。  
@@ -46,7 +45,7 @@ ms.locfileid: "36175885"
   
 2.  `FailoverClusters` モジュールをインポートしてクラスター コマンドレットを有効にします。  
   
-3.  使用して、`Get-ClusterResource`を検索するコマンドレット、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]リソースを使用して`Set-ClusterParameter`コマンドレットを設定、 **FailureConditionLevel**フェールオーバー クラスター インスタンスのプロパティです。  
+3.  使用して、`Get-ClusterResource`コマンドレットを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]リソースを使用して`Set-ClusterParameter`を設定するコマンドレット、 **FailureConditionLevel**フェールオーバー クラスター インスタンスのプロパティ。  
   
 > [!TIP]  
 >  新しい PowerShell ウィンドウを開くたびにインポートする必要があります、`FailoverClusters`モジュール。  

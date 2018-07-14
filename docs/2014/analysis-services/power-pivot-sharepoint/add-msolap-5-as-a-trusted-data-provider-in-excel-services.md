@@ -1,5 +1,5 @@
 ---
-title: Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加 |Microsoft ドキュメント
+title: Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86686f5ba9ffcdb6e640ce8328d11f600b3bf36c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 319ef37cd831d7bcce3d428e6c82624147b175e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167623"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加
   MSOLAP.5 は、SQL Server 2012 用の Analysis Services OLE DB プロバイダーです。 Excel Services は、サーバー上の PowerPivot データを利用可能とする接続要求を行う前に、このプロバイダーを信頼する必要があります。  
@@ -40,7 +40,7 @@ ms.locfileid: "36176498"
   
 4.  表示されない場合は、 **[信頼できるデータ プロバイダーの追加]** をクリックします。  
   
-5.  プロバイダー id を入力`MSOLAP.5`です。  
+5.  プロバイダー id では、次のように入力します。`MSOLAP.5`します。  
   
 6.  [プロバイダーの種類] では、OLE DB が選択されていることを確認します。  
   

@@ -1,5 +1,5 @@
 ---
-title: Discover イベントのデータ列 |Microsoft ドキュメント
+title: Discover イベントのデータ列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Discover Events event category
 ms.assetid: 10ec598e-5b51-4767-b4f7-42e261d96a40
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dae80d01a62d7462287c1a3251da4f780079296a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3437445c242c2e6ab759119ceb644807eea0cfd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265388"
 ---
 # <a name="discover-events-data-columns"></a>Discover イベントのデータ列
   Discover イベント カテゴリには、次のイベント クラスがあります。  

@@ -1,5 +1,5 @@
 ---
-title: AMO データ マイニング クラス |Microsoft ドキュメント
+title: AMO データ マイニング クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 091d68fedffc16d57834a02cfcbd8ef3a6c2d087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbea4d55066e2de5061d75c2b40092b84e8008ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171643"
 ---
 # <a name="amo-data-mining-classes"></a>AMO データ マイニング クラス
   データ マイニング クラスは、データ マイニング オブジェクトの作成、変更、削除、および処理を行うのに役立ちます。 データ マイニング オブジェクトでの作業には、データ マイニング構造の作成、データ マイニング モデルの作成、およびモデルの処理が含まれます。  
   
- 詳細方法については、環境を設定して約<xref:Microsoft.AnalysisServices.Server>、 <xref:Microsoft.AnalysisServices.Database>、 <xref:Microsoft.AnalysisServices.DataSource>、および<xref:Microsoft.AnalysisServices.DataSourceView>、オブジェクトを参照してください[AMO 基礎クラス](amo-fundamental-classes.md)です。  
+ 詳細については、バージョン情報、環境をセットアップする方法についての<xref:Microsoft.AnalysisServices.Server>、 <xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource>と<xref:Microsoft.AnalysisServices.DataSourceView>、オブジェクトを参照してください[AMO 基礎クラス](amo-fundamental-classes.md)します。  
   
  分析管理オブジェクト (AMO) でオブジェクトを定義するには、各オブジェクトで多くのプロパティを設定し、正しいコンテキストを設定する必要があります。 OLAP やデータ マイニング オブジェクトなどの複雑なオブジェクトには、長くて詳細なコーディングが必要となります。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36175042"
   
  <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn> を作成するには、親 <xref:Microsoft.AnalysisServices.MiningStructureCollection> に新しいオブジェクトを追加した後、Update メソッドを使用して、サーバー上で親 <xref:Microsoft.AnalysisServices.MiningStructure> オブジェクトを更新します。  
   
- 削除する、 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>、親のコレクションから削除する必要があります<xref:Microsoft.AnalysisServices.MiningStructure>、および親<xref:Microsoft.AnalysisServices.MiningStructure>オブジェクトは、Update メソッドを使用して、サーバーに更新する必要があります。  
+ 削除する、 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>、それは、親のコレクションから除外する必要があります<xref:Microsoft.AnalysisServices.MiningStructure>とその親<xref:Microsoft.AnalysisServices.MiningStructure>オブジェクトは、Update メソッドを使用して、サーバーに更新する必要があります。  
   
 #### <a name="tableminingstructurecolumn"></a>TableMiningStructureColumn  
  簡単な <xref:Microsoft.AnalysisServices.TableMiningStructureColumn> オブジェクトは、基本情報とスカラー列で構成されます。  

@@ -1,5 +1,5 @@
 ---
-title: AggregationDimension データ型 (ASSL) |Microsoft ドキュメント
+title: AggregationDimension データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationDimension data type
 ms.assetid: 697e0e09-3210-4a56-882f-80726abc4c68
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e289e1ea6f5c91fc362f309eb73cf5586d6295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b67d679a9ade4986f2c9aab11ff3c758c3b7c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251434"
 ---
 # <a name="aggregationdimension-data-type-assl"></a>AggregationDimension データ型 (ASSL)
-  ディメンションの間のリレーションシップを表すプリミティブ データ型を定義し、[集計](../objects/aggregation-element-assl.md)要素。  
+  ディメンション間のリレーションシップを表すプリミティブ データ型を定義し、[集計](../objects/aggregation-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36174019"
 |派生要素|[ディメンション](../objects/dimension-element-assl.md)([ディメンション](../collections/dimensions-element-assl.md)のコレクション[集計](../objects/aggregation-element-assl.md))|  
   
 ## <a name="remarks"></a>コメント  
- 分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は[AggregationDimension](dimension-data-type-assl.md)です。  
+ 分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は[AggregationDimension](dimension-data-type-assl.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services スクリプト言語の XML データ型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

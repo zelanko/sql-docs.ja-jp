@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33e05c5d9e4e400ddc240bfd5bd4630801765164
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b1519c49181be681fa6ced527d1db14f488aaf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176519"
 ---
 # <a name="database-mirroring-operating-modes"></a>データベース ミラーリングの動作モード
   このトピックでは、データベース ミラーリング セッションの同期動作モードおよび非同期動作モードについて説明します。  
@@ -50,7 +49,7 @@ ms.locfileid: "36175609"
  ここでは、非同期データベース ミラーリングのしくみ、高パフォーマンス モードの使用に適した状況、およびプリンシパル サーバーで障害が発生した場合の対処法について説明します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のほとんどのエディションでは、同期データベース ミラーリングのみ (安全性レベルが FULL の場合のみ) をサポートしています。 データベース ミラーリングを完全にサポートするエディションについては、「高可用性 (AlwaysOn)」を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のほとんどのエディションでは、同期データベース ミラーリングのみ (安全性レベルが FULL の場合のみ) をサポートしています。 データベース ミラーリングを完全にサポートするエディションについては、「高可用性 (AlwaysOn)」を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
  トランザクションの安全性が OFF に設定されていると、データベース ミラーリング セッションが非同期に動作します。 非同期動作は、高パフォーマンス モードという動作モードのみでサポートされています。 このモードでは高可用性という点を譲歩してパフォーマンスが強化されています。 高パフォーマンス モードでは、プリンシパル サーバーおよびミラー サーバーのみを使用します。 ミラー サーバーで発生した問題がプリンシパル サーバーに影響を及ぼすことはありません。 プリンシパル サーバーが停止した場合、ミラー データベースは DISCONNECTED になりますがウォーム スタンバイ状態で利用できます。  
   
@@ -226,7 +225,7 @@ ms.locfileid: "36175609"
   
  <sup>1</sup>ミラーリング監視サーバー インスタンスが使用可能になるまでは、WITNESS を OFF 設定することをお勧め、ミラーリング監視サーバーが切断された場合。  
   
- <sup>2</sup>ミラーリング監視サーバーが高パフォーマンス モードで存在する場合、ミラーリング監視サーバーがセッションに関与しません。 ただし、データベースを使用できるようにするには、少なくとも 2 つのサーバー インスタンスが接続された状態にしておく必要があります。 そのため、高パフォーマンス モードのセッションでは、WITNESS プロパティを OFF に設定しておくことをお勧めします。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+ <sup>2</sup>ミラーリング監視サーバーが高パフォーマンス モードで存在する場合は、ミラーリング監視サーバーがセッションに関与しません。 ただし、データベースを使用できるようにするには、少なくとも 2 つのサーバー インスタンスが接続された状態にしておく必要があります。 そのため、高パフォーマンス モードのセッションでは、WITNESS プロパティを OFF に設定しておくことをお勧めします。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
 ###  <a name="ViewWitness"></a> 安全性設定とミラーリング監視サーバーの状態の表示  
  安全性設定やデータベースのミラーリング監視サーバーの状態を表示するには、 **sys.database_mirroring** カタログ ビューを使用します。 関連する列は次のとおりです。  

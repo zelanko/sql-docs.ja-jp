@@ -1,5 +1,5 @@
 ---
-title: Microsoft Surface デバイスと Apple iOS デバイスでの Reporting Services レポートの表示 |Microsoft ドキュメント
+title: Microsoft Surface デバイスと Apple iOS デバイスでの Reporting Services レポートの表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - iPad
 - Safari
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
 caps.latest.revision: 21
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2766644db67f3f677060c90a2addd2123276f1e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 683a20afc442b7e10a64cac86aa0502c57dabbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166323"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Microsoft Surface デバイスと Apple iOS デバイスでの Reporting Services レポートの表示
   このトピックでは、Microsoft Surface デバイス、Apple iOS 6 と Apple Safari を搭載したデバイス (iPad など) でサポートされる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の機能とワークフローについて説明します。  
   
 ## <a name="view-and-interact-with-reports"></a>レポートの表示および操作  
- 以降で[!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Microsoft Surface デバイス、および Apple iOS 6 と Apple Safari ブラウザーを iPad などのデバイスでのレポートの表示と基本的な対話機能をサポートしています。 Microsoft Surface デバイスを使用してレポートをパブリッシュすることもできます。  
+ 以降で[!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Microsoft Surface デバイス、および Apple iOS 6 および Apple Safari ブラウザー、iPad などのデバイスの表示と基本的なレポート対話機能をサポートしています。 Microsoft Surface デバイスを使用してレポートをパブリッシュすることもできます。  
   
  ![IPad デスクトップ](media/videothumbnail.jpg "IPad デスクトップ")  
 iPad でレポートを表示する方法の例をご覧ください。  
@@ -42,11 +42,11 @@ iPad でレポートを表示する方法の例をご覧ください。
   
 -   ネイティブ モードのレポート サーバーの場合は、[!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] 以降のバージョンをインストールします。  
   
-     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] ダウンロードできますが、 [Microsoft ダウンロード センター](http://www.microsoft.com/download/details.aspx?id=35575)です。  
+     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] ダウンロードできますが、 [Microsoft ダウンロード センター](http://www.microsoft.com/download/details.aspx?id=35575)します。  
   
--   SharePoint モードのレポート サーバー インストール[!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]またはそれ以降の[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 製品用アドインです。  
+-   SharePoint モードのレポート サーバー インストール[!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]またはそれ以降の[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 製品用アドイン。  
   
- **IPad デバイスまたは Microsoft Surface デバイスでレポートを表示して操作するには**  
+ **IPad デバイスまたは Microsoft Surface デバイスに関するレポートを表示して操作するには**  
   
 1.  レポートが存在するレポート サーバーまたは SharePoint サイトに接続できることを確認します。  
   
@@ -61,9 +61,9 @@ iPad でレポートを表示する方法の例をご覧ください。
         > [!IMPORTANT]  
         >  iPad の場合は、Safari の **[プライベート ブラウズ]** プロパティがオフになっていることを確認します。  
   
-    -   **SharePoint web パーツ:** 表示することができる場合は、web パーツが SharePoint ページに追加されて、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポートします。  
+    -   **SharePoint web パーツ:** web パーツが SharePoint ページに追加されている場合は表示できます[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポートします。  
   
-3.  Microsoft Surface デバイスでは、レポート マネージャーを使用してレポートを開くこともできます。 ディレクトリを参照[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート マネージャー、およびレポートを開くレポート名をタップします。  
+3.  Microsoft Surface デバイスでは、レポート マネージャーを使用してレポートを開くこともできます。 ディレクトリを参照[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート マネージャーとレポートを開くレポート名をタップします。  
   
     > [!IMPORTANT]  
     >  iPad では、レポート マネージャーでのレポートの表示はサポートされていません。  
@@ -111,11 +111,11 @@ iPad でレポートを表示する方法の例をご覧ください。
         -   iPad でレポートを表示している場合は、TIFF ファイルまたは PDF ファイルとしてエクスポートできます。  
   
 ## <a name="authentication"></a>[認証]  
- RSWindowsNTLM 認証および RSWindowsBasic 認証の使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ネイティブ モードと iPad でします。  
+ RSWindowsNTLM 認証と RSWindowsBasic 認証の使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ネイティブ モードと iPad でします。  
   
  一般に、この種類の認証は転送資格認証に機密性を提供しないため、RSWindowsBasic は HTTPS 環境以外では使用しないことをお勧めします。  
   
- RSWindowsNTLM 認証と RSWindowsBasic 認証の詳細については、次を参照してください。[レポート サーバーで認証](security/authentication-with-the-report-server.md)です。  
+ RSWindowsNTLM 認証と RSWindowsBasic 認証の詳細については、次を参照してください。[レポート サーバーでの認証](security/authentication-with-the-report-server.md)します。  
   
 ## <a name="uploading-reports"></a>レポートのアップロード  
  適切な権限がある場合は、次のどちらかの方法を使用して Microsoft Surface デバイスからレポートをパブリッシュできます。  
@@ -134,13 +134,13 @@ iPad でレポートを表示する方法の例をご覧ください。
   
  Microsoft Business Intelligence およびモバイル デバイスの詳細については、以下を参照してください。  
   
--   [モバイル デバイスと SharePoint 2013 の概要](http://technet.microsoft.com/library/fp161351\(v=office.15\).aspx)(http://technet.microsoft.com/library/fp161351(v=office.15).aspx)です。  
+-   [モバイル デバイスと SharePoint 2013 の概要](http://technet.microsoft.com/library/fp161351\(v=office.15\).aspx)(http://technet.microsoft.com/library/fp161351(v=office.15).aspx)します。  
   
--   [SharePoint 2013 でサポートされているモバイル デバイス ブラウザー](http://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (http://technet.microsoft.com/library/fp161353(v=office.15).aspx)です。  
+-   [SharePoint 2013 でサポートされているモバイル デバイス ブラウザー](http://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (http://technet.microsoft.com/library/fp161353(v=office.15).aspx)します。  
   
--   [Apple iPad デバイス (SharePoint Server 2010) でのレポートとスコアカードの表示](http://technet.microsoft.com/library/hh697482.aspx)(http://technet.microsoft.com/library/hh697482.aspx)です。  
+-   [Apple iPad デバイス (SharePoint Server 2010) でレポートとスコアカードの表示](http://technet.microsoft.com/library/hh697482.aspx)(http://technet.microsoft.com/library/hh697482.aspx)します。  
   
--   [(ビデオ) iPad で Reporting Services レポートを表示](http://technet.microsoft.com/sqlserver/jj873792.aspx)(http://technet.microsoft.com/sqlserver/jj873792.aspx)です。  
+-   [IPad (ビデオ) で Reporting Services レポートの表示](http://technet.microsoft.com/sqlserver/jj873792.aspx)(http://technet.microsoft.com/sqlserver/jj873792.aspx)します。  
   
 -   [Microsoft Surface RT デバイスの (ビデオ) で Reporting Services レポートを表示します。](http://technet.microsoft.com/sqlserver/dn146017)  
   

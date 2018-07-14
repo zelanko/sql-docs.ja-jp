@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheHit event class
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 34a0a8beba7b9d8f0ac667777ce0d7c0b8587294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 466caff52f0b715cc5a0d9ee491abc1ae095f9d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162803"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit イベント クラス
   SP:CacheHit イベント クラスは、ストアド プロシージャがプラン キャッシュに格納されていることを示します。  
@@ -38,7 +38,7 @@ ms.locfileid: "36177097"
 |DatabaseName|`nvarchar`|ストアド プロシージャが実行されているデータベースの名前。|35|はい|  
 |EventClass|`int`|イベントの種類 = 38。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
-|EventSubClass|`int`|イベント サブクラスの種類です。<br /><br /> 1 = 実行コンテキスト ヒット: プラン キャッシュ内にフリー実行プランが見つかりました。<br /><br /> 2 = コンパイル済みプラン ヒット: プラン キャッシュ内にコンパイル済みプランが見つかりました。|21|はい|  
+|EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 1 = 実行コンテキスト ヒット: プラン キャッシュ内にフリー実行プランが見つかりました。<br /><br /> 2 = コンパイル済みプラン ヒット: プラン キャッシュ内にコンパイル済みプランが見つかりました。|21|はい|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  

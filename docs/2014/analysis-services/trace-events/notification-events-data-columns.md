@@ -1,5 +1,5 @@
 ---
-title: 通知 Events Data Columns |Microsoft ドキュメント
+title: 通知イベントのデータ列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d45ee223def50ee90b078cab7274a30901ac5165
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a436f613b39f5beb18a7dea40349ce24ded1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204072"
 ---
 # <a name="notification-events-data-columns"></a>Notification イベントのデータ列
   Notification イベントとは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のユーザーが直接発生させるものではないイベントのことです。 たとえば、ユーザーがプロアクティブ キャッシュの基になるテーブルを更新すると、通知が発生します。  
@@ -40,7 +40,7 @@ ms.locfileid: "36174027"
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。 有効なサブクラス Id/サブクラス名のペアを次に示します。<br /><br /> 0: Proactive Caching Begin<br />1: Proactive Caching End<br />2: Flight Recorder Started<br />3: Flight Recorder Stopped<br />4: Configuration Properties Updated<br />5: SQL Trace<br />6: Object Created<br />7: Object Deleted<br />8: Object Altered<br />9: Proactive Caching Polling Begin<br />10: Proactive Caching Polling End<br />11: Flight Recorder Snapshot Begin<br />12: Flight Recorder Snapshot End<br />13: Proactive Caching: notifiable object updated<br />14: Lazy Processing: start processing<br />15: Lazy Processing: processing complete<br />16: SessionOpened Event Begin<br />17: SessionOpened Event End<br />18: SessionClosing Event Begin<br />19: SessionClosing Event End<br />20: CubeOpened Event Begin<br />21: CubeOpened Event End<br />22: CubeClosing Event Begin<br />23: CubeClosing Event End<br />24: Transaction abort requested|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。 以下は、有効なサブクラス Id/サブクラス名のペアです。<br /><br /> 0: Proactive Caching Begin<br />1: Proactive Caching End<br />2: Flight Recorder Started<br />3: Flight Recorder Stopped<br />4: Configuration Properties Updated<br />5: SQL Trace<br />6: Object Created<br />7: Object Deleted<br />8: Object Altered<br />9: Proactive Caching Polling Begin<br />10: Proactive Caching Polling End<br />11: Flight Recorder Snapshot Begin<br />12: Flight Recorder Snapshot End<br />13: Proactive Caching: notifiable object updated<br />14: Lazy Processing: start processing<br />15: Lazy Processing: processing complete<br />16: SessionOpened Event Begin<br />17: SessionOpened Event End<br />18: SessionClosing Event Begin<br />19: SessionClosing Event End<br />20: CubeOpened Event Begin<br />21: CubeOpened Event End<br />22: CubeClosing Event Begin<br />23: CubeClosing Event End<br />24: Transaction abort requested|  
 |CurrentTime|2|5|Notification イベントの現在の時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントが開始された時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントが終了した時刻を表します。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  

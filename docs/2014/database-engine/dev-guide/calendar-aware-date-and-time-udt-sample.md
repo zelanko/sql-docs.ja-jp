@@ -1,5 +1,5 @@
 ---
-title: カレンダー対応の日付と時刻 UDT サンプル |Microsoft ドキュメント
+title: カレンダー対応の日付と時刻 UDT サンプル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a324a9b0f5ce90c7990bdc44c352df1e7a48c206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 161395e5c57e8355c75f952f0ea0998feb487c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330462"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>カレンダー対応の日付と時刻 UDT サンプル
   使用されているカレンダー システムを把握していないと日付は意味を持たないため、日付を文字列として格納すると混乱が生じる可能性があります。`CADatetime` サンプルでは、日付と時刻のカレンダー対応処理を行う `CADatetime` と `CADate` という 2 つのユーザー定義データ型を定義しています。  
@@ -53,7 +53,7 @@ ms.locfileid: "36173776"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要があります`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36173776"
   
 3.  c:\MySample で、`CalendarAware.cs` を作成し、C# サンプル コード (下記) をこのファイルにコピーします。  
   
-4.  C:\MySample で、ファイルの作成`calendars.txt`サンプル コードをファイルにコピーします。  
+4.  C:\MySample でファイルを作成`calendars.txt`サンプル コードをファイルにコピーします。  
   
 5.  c:\MySample で、ファイル `calendars.ar-SA.txt` を作成し、以下のコードをこのファイルにコピーします。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36173776"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-14. コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、として保存`test.sql`サンプル ディレクトリにします。  
+14. コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、保存`test.sql`サンプル ディレクトリにします。  
   
 15. 次のコマンドを使用してテスト スクリプトを実行します。  
   

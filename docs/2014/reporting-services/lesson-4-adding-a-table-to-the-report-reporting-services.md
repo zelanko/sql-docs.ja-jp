@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 caps.latest.revision: 60
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a34a6efad3223ec4d38133571a7c081364f28fea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a8a4c0fb1fe9128b40ee00e29c243ede617501f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224702"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>レッスン 4 : レポートへのテーブルの追加 (Reporting Services)
   データセットを定義したら、レポートのデザインを開始できます。 レポートのレイアウトを作成するには、データ領域、テキスト ボックス、画像、およびレポートに含めるその他のアイテムを、デザイン画面にドラッグ アンド ドロップします。  
@@ -33,15 +33,15 @@ ms.locfileid: "36165750"
     > [!NOTE]  
     >  **[レポート データ]** ペインの左側に **[ツールボックス]** タブが表示されます。 **[ツールボックス]** を開くには、ポインターを **[ツールボックス]** タブの上に移動させます。**[ツールボックス]** が表示されない場合は、**[表示]** メニューの **[ツールボックス]** をクリックします。  
   
-2.  **レポート データ** ウィンドウで、展開、 **AdventureWorksDataset**データセット フィールドを表示します。  
+2.  **レポート データ**ウィンドウで、展開、 **AdventureWorksDataset**データセット フィールドを表示します。  
   
-3.  日付フィールドをドラッグ、**レポート データ**テーブル内の最初の列にウィンドウです。  
+3.  日付フィールドをドラッグして、**レポート データ**ウィンドウで、テーブル内の最初の列にします。  
   
      フィールドを最初の列にドラッグすると、2 つの処理が行われます。 1 つは、 *フィールド式*と呼ばれるフィールド名が `[Date]`のように角かっこで囲まれてデータ セルに表示されます。 2 つ目は、列ヘッダー値が [ヘッダー] 行 (フィールド式のすぐ上) に自動的に追加されます。 既定では、この列がフィールド名になります。 ヘッダー行のテキストを選択し、新しい名前を入力することができます。  
   
-4.  [順序] フィールドをドラッグして、**レポート データ**テーブルの 2 列目にウィンドウです。  
+4.  注文フィールドをドラッグして、**レポート データ**ウィンドウで、テーブル内の 2 番目の列にします。  
   
-5.  製品のフィールドをドラッグして、**レポート データ**テーブルの 3 列目にウィンドウです。  
+5.  Product フィールドをドラッグして、**レポート データ**ウィンドウで、テーブル内の 3 番目の列にします。  
   
 6.  [Qty] フィールドを、3 番目の列の右端沿いに、垂直方向のカーソルとマウス ポインターが正符号 [+] になるまでドラッグします。 マウス ボタンを離すと `[Qty]`の 4 番目の列が作成されます。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36165750"
   
      次の図は、[Date]、[Order]、[Product]、[Qty]、および [Line Total] の各フィールドを使用して作成したテーブル データ領域を示しています。  
   
-     ![デザイン、テーブル ヘッダー行および詳細行と共に](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "デザイン、ヘッダー行および詳細行を持つテーブル")  
+     ![デザイン、ヘッダー行および詳細行を持つテーブル](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "デザイン、ヘッダー行および詳細行を持つテーブル")  
   
 ## <a name="preview-your-report"></a>レポートをプレビューする  
  レポートをプレビューすると、最初にレポート サーバーにパブリッシュする必要なしに、表示レポートを表示できます。 デザイン時にレポートを頻繁にプレビューできます。 レポートをプレビューするとデザインとデータ接続の検証が実行されるため、エラーと問題を修正した後にレポートをレポート サーバーにパブリッシュできます。  

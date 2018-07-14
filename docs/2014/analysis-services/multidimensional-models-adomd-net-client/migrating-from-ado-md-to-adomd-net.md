@@ -1,5 +1,5 @@
 ---
-title: ADO MD から ADOMD.NET への移行 |Microsoft ドキュメント
+title: ADO MD から ADOMD.NET への移行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - ADO MD migration [ADOMD.NET]
 ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca9b4ba7dae762dead880c39c228391898e36e27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc10312f8e4a19c334c0eeba7284d7af0eabd0df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245732"
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>ADO MD から ADOMD.NET への移行
-  ADOMD.NET ライブラリは、ActiveX Data Objects (ADO) ライブラリを機能拡張した ActiveX Data Objects Multidimensional (ADO MD) ライブラリに似ています。このライブラリは、COM (Component Object Model) ベースのクライアント アプリケーションで多次元データへアクセスするときに使用されます。 ADO MD を使用すると、C++ や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic などのアンマネージ言語から多次元データへ簡単にアクセスできます。 ADOMD.NET では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] C# や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET などのマネージ言語から、分析データ (多次元データとデータ マイニングの両方) へ簡単にアクセスできます。 また、ADOMD.NET は、高度な機能を備えたメタデータ オブジェクト モデルでもあります。  
+  ADOMD.NET ライブラリは、ActiveX Data Objects (ADO) ライブラリを機能拡張した ActiveX Data Objects Multidimensional (ADO MD) ライブラリに似ています。このライブラリは、COM (Component Object Model) ベースのクライアント アプリケーションで多次元データへアクセスするときに使用されます。 ADO MD を使用すると、C++ や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic などのアンマネージ言語から多次元データへ簡単にアクセスできます。 ADOMD.NET では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] C# や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET などのマネージド言語から、分析データ (多次元データとデータ マイニングの両方) へ簡単にアクセスできます。 また、ADOMD.NET は、高度な機能を備えたメタデータ オブジェクト モデルでもあります。  
   
  既存のクライアント アプリケーションを ADO MD から ADOMD.NET へ移行するのは容易ですが、移行時には、次の重要な相違点に注意してください。  
   
@@ -46,12 +46,12 @@ ms.locfileid: "36165932"
  **クエリを実行し、セルセット オブジェクトの取得**  
  |ADO MD (ADO MD)|ADOMD.NET|  
 |------------|---------------|  
-|セルセット クラスを使用します。|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> クラスを使用します。|  
+|セル セット クラスを使用します。|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> クラスを使用します。|  
   
  **セルセットの表示に使用されるメタデータにアクセスするには**  
  |ADO MD (ADO MD)|ADOMD.NET|  
 |------------|---------------|  
-|位置クラスを使用します。|<xref:Microsoft.AnalysisServices.AdomdClient.Set> オブジェクトおよび <xref:Microsoft.AnalysisServices.AdomdClient.Tuple> オブジェクトを使用します。|  
+|位置のクラスを使用します。|<xref:Microsoft.AnalysisServices.AdomdClient.Set> オブジェクトおよび <xref:Microsoft.AnalysisServices.AdomdClient.Tuple> オブジェクトを使用します。|  
   
 > [!NOTE]  
 >  <xref:Microsoft.AnalysisServices.AdomdClient.Position> クラスは、旧バージョンとの互換性を維持するためにサポートされています。  
@@ -67,7 +67,7 @@ ms.locfileid: "36165932"
  この例に示す既存の ADO MD と同等の ADOMD.NET コードは、どちらも同じ一連の操作 (接続の作成、多次元式 (MDX) ステートメントの実行、メタデータとデータの取得) を実行します。 ただし、これらの 2 つのコードは、これらのタスクの実行に異なるオブジェクトを使用します。  
   
 ### <a name="existing-ado-md-code"></a>既存の ADO MD コード  
- ADO MD 2.8 ドキュメントから抽出された、次のコード例で記述された[!INCLUDE[msCoName](../../includes/msconame-md.md)]に接続し、クエリを実行する方法を示すには、Visual Basic® 6.0 および ADO MD を使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソース。 この ADO MD の例では、次のオブジェクトを使用します。  
+ ADO MD 2.8 ドキュメントから抽出された、次のコード例で記述された[!INCLUDE[msCoName](../../includes/msconame-md.md)]への接続し、クエリを実行する方法を示すには、Visual Basic® 6.0 と ADO MD を使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソース。 この ADO MD の例では、次のオブジェクトを使用します。  
   
 -   接続を作成、`Catalog`オブジェクト。  
   

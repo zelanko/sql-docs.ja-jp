@@ -1,5 +1,5 @@
 ---
-title: インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成 |Microsoft ドキュメント
+title: インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b394ce90c7629da5f52034570b2cc71451db036d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2494008022e095cebe40c0436d47a5e933bbde62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204472"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成
   この記事では、Analysis Services インスタンスにアクセスするために HTTP エンドポイントを設定する方法について説明します。 HTTP アクセスを有効にするには、MSMDPUMP.dll を構成します。MSMDPUMP.dll は、インターネット インフォメーション サービス (IIS) で実行され、クライアント アプリケーションと Analysis Services サーバーの間で双方向にデータをポンプする ISAPI 拡張機能です。 この方法は、BI ソリューションが次の機能を必要とする場合に、Analysis Services への接続の代わりに使用できます。  
@@ -65,7 +65,7 @@ ms.locfileid: "36173370"
   
  MSMDPUMP が Analysis Services に接続するときには、Windows のユーザー ID を使用して接続を行います。 このアカウントは、仮想ディレクトリが匿名接続用に構成されている場合は匿名アカウント、それ以外の場合は Windows のユーザー アカウントになります。 アカウントには、Analysis Services サーバーとデータベースでの適切なデータ アクセス権限が与えられている必要があります。  
   
- ![コンポーネント間の接続を示す図](../media/ssas.gif "コンポーネント間の接続の表示をダイアグラム")  
+ ![コンポーネント間の接続を示す図](../media/ssas.gif "コンポーネント間の接続を示す図")  
   
  次の表には、さまざまなシナリオで HTTP アクセスを有効にするときに検討する必要がある追加の検討事項が示されています。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36173370"
   
 2.  **[Web サーバー]**  |  **[アプリケーション開発]** を開き、**[CGI]** と **[ISAPI 拡張機能]** を選択します。  
   
-     ![Web サーバーの役割のページの 機能の追加](../media/ssas-httpaccess-isapicgi.png "Web サーバーの役割のページの 機能の追加")  
+     ![機能の追加は、Web サーバーの役割のページ](../media/ssas-httpaccess-isapicgi.png "Web サーバーの役割のページの機能の追加")  
   
  **IIS がリモート サーバーにある場合**  
   
@@ -116,11 +116,11 @@ ms.locfileid: "36173370"
   
  ドライブは、NTFS ファイル システム用にフォーマットされている必要があります。 作成するフォルダーへのパスには、スペースを使用することはできません。  
   
-1.  次のファイルをコピーで見つかった\<ドライブ >: \Program Files\Microsoft SQL Server\\< インスタンス\>\OLAP\bin\isapi: MSMDPUMP です。DLL、MSMDPUMP です。INI、および Resources フォルダーです。  
+1.  次のファイルをコピー\<ドライブ >: \Program Files\Microsoft SQL Server\\< インスタンス\>\OLAP\bin\isapi: MSMDPUMP です。DLL、MSMDPUMP です。INI、および Resources フォルダー。  
   
-     ![ファイル エクスプ ローラーを表示ファイルをコピーする](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "ファイルを示すエクスプ ローラー ファイルをコピーするには")  
+     ![ファイルをコピーするファイルを示すエクスプ ローラー](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "をコピーする ファイル エクスプ ローラー ファイルの表示")  
   
-2.  Web サーバーに新しいフォルダーを作成します\<ドライブ >: \inetpub\wwwroot\\**OLAP。**  
+2.  Web サーバーで新しいフォルダーを作成します\<ドライブ >: \inetpub\wwwroot\\**OLAP。**  
   
 3.  この新しいフォルダーに、コピーしておいたファイルを貼り付けます。  
   
@@ -139,9 +139,9 @@ ms.locfileid: "36173370"
   
 1.  IIS マネージャーを起動します。  
   
-2.  サーバーのフォルダーを開き、 **[アプリケーション プール]** を右クリックし、 **[アプリケーション プールの追加]** をクリックします。 マネージ パイプライン モードを **[クラシック]** に設定し、.NET Framework を使用して、 **OLAP**という名前のアプリケーション プールを作成します。  
+2.  サーバーのフォルダーを開き、 **[アプリケーション プール]** を右クリックし、 **[アプリケーション プールの追加]** をクリックします。 マネージド パイプライン モードを **[クラシック]** に設定し、.NET Framework を使用して、 **OLAP**という名前のアプリケーション プールを作成します。  
   
-     ![スクリーン ショットのアプリケーション プールの追加 ダイアログ](../media/ssas-httpaccess.PNG "スクリーン ショットのアプリケーション プールの追加 ダイアログ")  
+     ![スクリーン ショットのアプリケーション プールの追加ダイアログ](../media/ssas-httpaccess.PNG "スクリーン ショットのアプリケーション プールの追加 ダイアログ")  
   
 3.  既定では、IIS はセキュリティ ID として **ApplicationPoolIdentity** を使用してアプリケーション プールを作成します (これは、Analysis Services への HTTP アクセスの有効な選択肢です)。 ID を変更しなければならない特別な理由があれば、 **[OLAP]** を右クリックし **[詳細設定]** を選択します。 **[ApplicationPoolIdentity]** を選択します。 このプロパティの **[変更]** をクリックして、ビルトイン アカウントを目的のカスタム アカウントに置き換えます。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "36173370"
   
 1.  IIS マネージャで、**[サイト]** を開き、**[既定の Web サイト]** を開きます。 **Olap**という名前のフォルダーが表示されます。 これは \inetpub\wwwroot の下に作成した OLAP フォルダーへの参照です。  
   
-     ![既定の web サイトの下の OLAP フォルダー](../media/ssas-httpaccess-convertfolderbefore.png "既定の web サイトの下の OLAP フォルダー")  
+     ![既定の web サイトの下の OLAP フォルダー](../media/ssas-httpaccess-convertfolderbefore.png "既定 web サイトでの OLAP フォルダー")  
   
 2.  フォルダーを右クリックし、 **[アプリケーションに変換]** を選択します。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "36173370"
   
 3.  Windows 統合セキュリティを使用している場合は、 **[Windows 認証]** を有効にします。  
   
-     ![スクリーン ショット Vdir 認証設定の](../media/ssas-httpaccess-iisauth.png "スクリーン ショットの Vdir 認証設定")  
+     ![スクリーン ショットの Vdir 認証設定](../media/ssas-httpaccess-iisauth.png "スクリーン ショットの Vdir 認証設定")  
   
 4.  または、クライアント アプリケーションとサーバー アプリケーションが異なるドメインにある場合、 **[基本認証]** を有効にします。 このモードでは、ユーザーがユーザー名とパスワードを入力する必要があります。 ユーザー名とパスワードは HTTP 接続経由で IIS に送信されます。 IIS は MSMDPUMP に接続するときに、指定された資格情報を使用してユーザーの権限を借用しようとしますが、その資格情報は Analysis Services に委任されません。 代わりに、このドキュメントの手順 6. で説明するように、接続の有効なユーザー名とパスワードを渡す必要があります。  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36173370"
   
 8.  ISAPI 拡張機能を許可するように求めるメッセージが表示されたら、 **[はい]** をクリックします。  
   
-     ![ISAPI 拡張機能を追加する確認のスクリーン ショット](../media/ssas-httpaccess-isapiprompt.png "ISAPI 拡張機能を追加する確認のスクリーン ショット")  
+     ![ISAPI 拡張機能の追加確認のスクリーン ショット](../media/ssas-httpaccess-isapiprompt.png "ISAPI 拡張機能の追加確認のスクリーン ショット")  
   
 ##  <a name="bkmk_edit"></a> 手順 4: MSMDPUMP.INI ファイルを編集して対象サーバーを設定する  
  MSMDPUMP.INI ファイルを使用して、MSMDPUMP.DLL が接続する Analysis Services インスタンスを指定します。 これには、ローカルまたはリモートの、既定のインスタンスまたは名前付きのインスタンスとしてインストールされているインスタンスを指定できます。  
@@ -241,11 +241,11 @@ ms.locfileid: "36173370"
   
 ```  
   
- HTTP アクセスを構成している Analysis Services インスタンスがローカル コンピューター上にあり、既定のインスタンスとしてインストールされている場合は、この設定を変更する理由はありません。 それ以外の場合、サーバー名を指定する必要があります (たとえば、 \<ServerName > ADWRKS SRV01\</ServerName >)。 名前付きインスタンスとしてインストールされているサーバーの場合、インスタンス名を追加することを確認する (たとえば、 \<ServerName > ADWRKS srv01 \tabular\</ServerName >)。  
+ HTTP アクセスを構成している Analysis Services インスタンスがローカル コンピューター上にあり、既定のインスタンスとしてインストールされている場合は、この設定を変更する理由はありません。 それ以外の場合、サーバー名を指定する必要があります (たとえば、 \<ServerName > ADWRKS SRV01\</ServerName >)。 名前付きインスタンスとしてインストールされているサーバーの場合は、インスタンス名を追加することを確認する (たとえば、 \<ServerName > ADWRKS srv01 \tabular\</ServerName >)。  
   
- Analysis Services の既定のインスタンスは TCP/IP ポート 2383 をリッスンします。 既定のインスタンスとして Analysis Services をインストールした場合は内の任意のポートを指定する必要はありません\<ServerName > Analysis Services が自動的にポート 2383 でリッスンする方法を認識しているためです。 ただし、Windows ファイアウォールでそのポートへの着信接続を許可する必要があります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
+ Analysis Services の既定のインスタンスは TCP/IP ポート 2383 をリッスンします。 既定のインスタンスとして Analysis Services をインストールした場合は 任意のポートを指定する必要はありません\<ServerName > Analysis Services が自動的にポート 2383 でリッスンする方法を知っているためです。 ただし、Windows ファイアウォールでそのポートへの着信接続を許可する必要があります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
   
- 名前付きのように構成した場合、または既定の固定ポートでリッスンするように Analysis Services のインスタンスの場合は、サーバー名にポート番号を追加する必要があります (たとえば、 \<ServerName > AW-SRV01:55555\</ServerName >) を許可する必要がありますと受信Windows ファイアウォールでそのポートに接続します。  
+ 既定の固定ポートでリッスンするように Analysis Services のインスタンスまたは名前付き構成しているの場合は、サーバー名にポート番号を追加する必要があります (たとえば、 \<ServerName > AW-SRV01:55555\</ServerName >) し、許可する必要があります受信Windows ファイアウォールでそのポートに接続します。  
   
 ## <a name="step-5-grant-data-access-permissions"></a>手順 5: データ アクセス権限を付与する  
  前に説明したように、Analysis Services インスタンスの権限を付与する必要があります。 各データベース オブジェクトには特定レベルの権限 (読み取り、または読み取り/書き込み) を付与するロールがあり、各ロールに Windows ユーザー ID で構成されるメンバーが割り当てられます。  
@@ -258,14 +258,14 @@ ms.locfileid: "36173370"
 |-|-|  
 |匿名|IIS の **[匿名認証資格情報の編集]** で指定されたアカウントをメンバーシップ一覧に追加します。 詳細については、「 [匿名認証](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)」を参照してください。|  
 |Windows 認証|借用または委任によって Analysis Services データを要求する Windows ユーザー アカウントまたはグループ アカウントをメンバーシップ一覧に追加します。<br /><br /> Kerberos の制約付き委任を使用し、権限が必要なアカウントは、アクセスを要求する Windows ユーザー アカウントとグループ アカウントのみであることを想定しています。 アプリケーション プール ID のために必要な権限はありません。|  
-|[基本認証]|接続文字列で渡される Windows ユーザー アカウントまたはグループ アカウントをメンバーシップ一覧に追加します。<br /><br /> また、接続文字列で `EffectiveUserName` を使用して資格情報を渡している場合、アプリケーション プール ID には、Analysis Services インスタンスでの管理者権限が必要になります。 SSMS では、インスタンスを右クリックして&#124;**プロパティ** &#124; **セキュリティ** &#124; **追加**です。 アプリケーション プール ID を入力します。 組み込みの既定の id を使用した場合、アカウント名を指定は**IIS apppool \defaultapppool**です。<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
+|[基本認証]|接続文字列で渡される Windows ユーザー アカウントまたはグループ アカウントをメンバーシップ一覧に追加します。<br /><br /> また、接続文字列で `EffectiveUserName` を使用して資格情報を渡している場合、アプリケーション プール ID には、Analysis Services インスタンスでの管理者権限が必要になります。 SSMS では、インスタンスを右クリックして&#124;**プロパティ** &#124; **セキュリティ** &#124; **追加**します。 アプリケーション プール ID を入力します。 組み込みの既定の id を使用した場合、アカウントは指定**IIS apppool \defaultapppool**します。<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
   
  アクセス許可の設定の詳細については、「[オブジェクトと操作へのアクセスの承認 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)」を参照してください。  
   
 ##  <a name="bkmk_test"></a> 手順 6: 構成をテストする  
  MSMDPUMP の接続文字列構文は、MSMDPUMP.dll ファイルへの URL です。  
   
- Web アプリケーションが固定ポートでリッスンしている場合は、サーバー名または IP アドレスにポート番号を追加 (たとえば、http://my-web-srv01:8080/OLAP/msmdpump.dllまたはhttp://123.456.789.012:8080/OLAP/msmdpump.dllです。  
+ Web アプリケーションは、固定ポートでリッスンしているが場合に、サーバー名または IP アドレスにポート番号を追加 (たとえば、http://my-web-srv01:8080/OLAP/msmdpump.dllまたはhttp://123.456.789.012:8080/OLAP/msmdpump.dllします。  
   
  接続をすばやくテストするために、Microsoft Excel または SQL Server Management Studio を使用して接続を開くことができます。  
   
@@ -275,7 +275,7 @@ ms.locfileid: "36173370"
   
      オブジェクト エクスプ ローラーには、次の HTTP 接続が表示されます:  
   
-     ![オブジェクト エクスプ ローラーの SSAS を http 接続を示した](../media/ssas-httpaccess-ssms.PNG "SSAS を http 接続を示したオブジェクト エクスプ ローラー")  
+     ![オブジェクト エクスプ ローラーの SSAS への http 接続を示す](../media/ssas-httpaccess-ssms.PNG "SSAS への http 接続を示したオブジェクト エクスプ ローラー")  
   
 2.  認証には Windows 認証を使用し、Management Studio を使用するユーザーが Analysis Services 管理者であることが必要です。 管理者は、さらに権限を付与して、他のユーザーがアクセスできるようにすることができます。  
   

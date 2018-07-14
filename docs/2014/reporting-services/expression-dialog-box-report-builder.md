@@ -1,5 +1,5 @@
 ---
-title: 式 ダイアログ ボックス (レポート ビルダー) |Microsoft ドキュメント
+title: 式 ダイアログ ボックス) (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10040"
 helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 caps.latest.revision: 16
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9625b461128b1aa9785edbe92b4defa47e85bc55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 130d436ceb8080e6e7d70adc41196f3e76b07edb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244502"
 ---
 # <a name="expression-dialog-box-report-builder"></a>[式] ダイアログ ボックス (レポート ビルダー)
-  使用して、**式**書き込む ダイアログ ボックス[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]式のレポート アイテムのプロパティです。 式を使用して、色、フォント、罫線など多数のプロパティを設定できます。 実行時に、レポート プロセッサによって式が評価され、その結果がプロパティの値に置き換えられます。  
+  使用して、**式**書き込む ダイアログ ボックス[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]の式のレポート アイテムのプロパティ。 式を使用して、色、フォント、罫線など多数のプロパティを設定できます。 実行時に、レポート プロセッサによって式が評価され、その結果がプロパティの値に置き換えられます。  
   
- **[式]** ダイアログ ボックスには、コード ウィンドウ、カテゴリ ツリー、カテゴリ アイテム、説明ペイン、およびサンプル ペインが含まれています。 **式** ダイアログ ボックスは状況に依存を使用する式カテゴリに応じてカテゴリ アイテムおよび説明を変更します。 詳細については、次を参照してください[式の例&#40;レポート ビルダーおよび SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)、[式&#40;レポート ビルダーおよび SSRS。&#41;](report-design/expressions-report-builder-and-ssrs.md)  
+ **[式]** ダイアログ ボックスには、コード ウィンドウ、カテゴリ ツリー、カテゴリ アイテム、説明ペイン、およびサンプル ペインが含まれています。 **式** ダイアログ ボックスは状況依存; を使用する式カテゴリに応じてカテゴリ アイテムおよび説明を変更します。 詳細については、次を参照してください[式の例&#40;レポート ビルダーおよび SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)、[式&#40;レポート ビルダーおよび SSRS。&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   
 ## <a name="expression-constructs"></a>式の構成  
  式は等号 (=) で始まり、定数、リテラル、演算子に加え、組み込みフィールド、組み込みコレクション、組み込み関数、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ランタイム ライブラリ関数、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 共通言語ランタイム クラス、およびカスタム関数への参照を含むことができます。 式に追加できるカテゴリおよび値を次に示します。  
@@ -37,7 +37,7 @@ ms.locfileid: "36173651"
  式を定義するプロパティの名前です。 このプロパティは、[プロパティ] ペインで名前を指定して設定することもできます。  
   
  **定数**  
- 定数に基づくプロパティに有効な定義済みの値の一覧を、このプロパティに提供します。 たとえば、色に基づいたプロパティでは、有効な色の名前が表示されます。 Boolean データ型であるプロパティ、値は`True`と`False`です。  
+ 定数に基づくプロパティに有効な定義済みの値の一覧を、このプロパティに提供します。 たとえば、色に基づいたプロパティでは、有効な色の名前が表示されます。 Boolean データ型は、プロパティ、値は`True`と`False`します。  
   
  式をサポートするすべてのアイテムに定数を設定できるとは限りません。 プロパティに定数値を設定できない場合は、その情報が説明ペインに表示されます。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36173651"
  関数名に続けて左かっこを入力すると、パラメーターと関数の戻り値に関する情報を提供するツールヒントが表示されます。  
   
  **カテゴリ**  
- 式のカテゴリを表示します。 カテゴリを選択すると、式を作成するためのコンテキストが確立され、[アイテム] ペインで有効な値の一覧が変更されます。 やなどのテキスト ボックスの値の式を共通の関数の展開を表示する集計関数を選択`Avg`、 `Count`、およびその他の関数で、**項目**ウィンドウです。  
+ 式のカテゴリを表示します。 カテゴリを選択すると、式を作成するためのコンテキストが確立され、[アイテム] ペインで有効な値の一覧が変更されます。 の式のテキスト ボックスの値、共通の関数を展開し、表示する集計関数を選択します。 `Avg`、 `Count`、およびその他の関数で、**項目**ウィンドウ。  
   
  **アイテム**  
  選択したカテゴリに有効な値の一覧を表示します。 アイテムをダブルクリックすると、コード ウィンドウ内のカーソルの位置に、このアイテムの式のテキストが追加されます。  

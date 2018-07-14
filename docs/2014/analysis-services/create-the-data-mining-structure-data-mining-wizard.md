@@ -1,5 +1,5 @@
 ---
-title: データ マイニング構造 (データ マイニング ウィザード) を作成 |Microsoft ドキュメント
+title: データ マイニング構造 (データ マイニング ウィザード) の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectminingtechnique.f1
 ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7f857256c2c8ab55b3ae35f48dce8ac3448baa3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 638fa1cef33676b35415d29c1ff47602d3e1e56b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241832"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>データ マイニング構造の作成 (データ マイニング ウィザード)
   **[データ マイニング構造の作成]** ページを使用すると、データ マイニング構造および必要に応じて関連するマイニング モデルを作成できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36173822"
  **マイニング モデルを含むマイニング構造を作成します。**  
  マイニング構造を作成してから関連するモデルを作成する場合に選択します。  
   
- **データ マイニング技法を使用するか。**  
+ **使用するデータ マイニング技法を指定**  
  このモデルで使用するデータ マイニング アルゴリズムを選択します。  
   
 > [!NOTE]  
@@ -43,12 +43,12 @@ ms.locfileid: "36173822"
  **モデルを含まないマイニング構造を作成します。**  
  マイニング構造だけを作成する場合に選択します。  
   
- **description**  
+ **[説明]**  
  選択したアルゴリズムの説明が表示されます。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [データ ソース ビューを選択&#40;データ マイニング ウィザード&#41;](select-data-source-view-data-mining-wizard.md)   
+ [データ ソース ビューを選択します&#40;データ マイニング ウィザード。&#41;](select-data-source-view-data-mining-wizard.md)   
  [定義方法の選択&#40;データ マイニング ウィザード&#41;](select-the-definition-method-data-mining-wizard.md)  
   
   

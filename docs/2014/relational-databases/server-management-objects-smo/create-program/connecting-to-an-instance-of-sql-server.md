@@ -1,5 +1,5 @@
 ---
-title: SQL Server のインスタンスへの接続 |Microsoft ドキュメント
+title: SQL Server のインスタンスに接続する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - SMO [SQL Server], connections
 ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d502fa0dd2af5f4a9114f61bec3faea87d919af6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6b20b4c1f45e6c2032ef8ae7fe980103344c42c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253644"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>SQL Server のインスタンスへの接続
-  最初のプログラミングのステップで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) アプリケーションがのインスタンスを作成するには、<xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクトのインスタンスへの接続を確立するために、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+  最初のプログラミングのステップを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) アプリケーションがのインスタンスを作成するには、<xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクトのインスタンスへの接続を確立するために、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトのインスタンスを作成し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへの接続を確立するには、3 つの方法があります。 1 つは、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を使用して接続情報を提供する方法です。 2 つ目は、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト プロパティを明示的に設定することで接続情報を提供する方法です。 3 つ目は、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト コンストラクターに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前を渡す方法です。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36165769"
   
  別の方法として、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト変数を宣言して、既定のコンストラクターを呼び出すこともできます。 <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトは、すべての既定の接続設定で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定インスタンスに接続しようとします。  
   
- **サーバー オブジェクトのコンス トラクターで SQL Server インスタンスの名前を指定します。**  
+ **サーバー オブジェクトのコンス トラクターで SQL Server インスタンス名を指定します。**  
   
  <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト変数を宣言し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を文字列パラメーターとしてコンストラクターに渡します。 <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトは、既定の接続設定で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスとの接続を確立します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36165769"
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Visual Basic で Windows 認証を使用して SQL Server のローカル インスタンスに接続する  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のローカル インスタンスへの接続に必要なコードは多くありません。 ただし、認証方法とサーバーの既定の設定によってコードが異なります。 接続は、データの取得を必要とする操作が初めて発生する際に作成します。  
   
- この例は[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]のローカル インスタンスに接続する .NET コード[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Windows 認証を使用します。  
+ この例は[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]のローカル インスタンスに接続する .NET コード[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Windows 認証を使用しています。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VB1](SMO How to#SMO_VB1)]  -->  
   
@@ -94,7 +94,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Visual Basic で Windows 認証を使用して SQL Server のリモート インスタンスに接続する  
  Windows 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続する場合、認証の種類を指定する必要はありません。 既定は Windows 認証です。  
   
- この例は[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].NET コードのリモート インスタンスに接続する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Windows 認証を使用します。 文字列変数*strServer*リモート インスタンスの名前が含まれています。  
+ この例は[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]のリモート インスタンスに接続する .NET コード[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Windows 認証を使用しています。 文字列変数*strServer*リモート インスタンスの名前が含まれています。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VB2](SMO How to#SMO_VB2)]  -->  
   
@@ -118,7 +118,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-basic"></a>Visual Basic で SQL Server 認証を使用して SQL Server のインスタンスに接続する  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続する場合、認証の種類を指定する必要があります。 この例では、もう 1 つの方法として、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を宣言する方法を示します。この方法では、接続情報の再利用が可能になります。  
   
- この例は、 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 、リモート インスタンスに接続する方法を示す .NET コードと*vPassword*はログインとパスワードが含まれて。  
+ 例は、 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 、リモート インスタンスに接続する方法については、.NET コードと*vPassword*はログインとパスワードを含めることができます。  
   
 ```  
 ' compile with:   
@@ -166,7 +166,7 @@ End Class
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-c"></a>Visual C# で SQL Server 認証を使用して SQL Server のインスタンスに接続する  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続する場合、認証の種類を指定する必要があります。 この例では、もう 1 つの方法として、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を宣言する方法を示します。この方法では、接続情報の再利用が可能になります。  
   
- 例は、リモート インスタンスに接続する方法を示す Visual c# .NET コードと*vPassword*はログインとパスワードが含まれています。  
+ 例は、リモート インスタンスに接続する方法については、Visual c# .NET コードと*vPassword*はログインとパスワードを含めることができます。  
   
 ```  
 // compile with:   

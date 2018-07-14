@@ -1,5 +1,5 @@
 ---
-title: PermissionSet 要素 (ASSL) |Microsoft ドキュメント
+title: PermissionSet 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PermissionSet element
 ms.assetid: da5a9175-48e4-4b5e-a780-3e0077939974
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6246058af826a73b589f1854b0236de946a4d65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 471ef43aea9fadcca7ab8a4a36870a3bdddee22f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263468"
 ---
 # <a name="permissionset-element-assl"></a>PermissionSet 要素 (ASSL)
   関連付けられているアクセス許可セットを識別、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework アセンブリ。  
@@ -51,7 +51,7 @@ ms.locfileid: "36165918"
 |特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*セーフ*|  
+|既定値|*Safe*|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
@@ -66,17 +66,17 @@ ms.locfileid: "36165918"
   
 |値|説明|  
 |-----------|-----------------|  
-|*セーフ*|内部計算およびローカル データ アクセスのみ可能です。 *安全な*最も制限の厳しい権限セットです。 持つアセンブリによって実行されるコード*セーフ*アクセス許可がファイル、ネットワーク、環境変数、レジストリなどの外部システム リソースにアクセスできません。|  
-|*Externalaccess です。*|*安全な*ファイル、ネットワーク、環境変数、レジストリなどの外部システム リソースにアクセスする追加機能を使用します。|  
-|*制限なし*|制限のない内部および外部のリソースに無制限のアクセスを許可[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 コードを内から実行する、 *Unrestricted*アセンブリはアンマネージ コードを呼び出すことができます。|  
+|*Safe*|内部計算およびローカル データ アクセスのみ可能です。 *安全な*は最も制限の厳しい権限セットです。 持つアセンブリによって実行されるコード*セーフ*アクセス許可がファイル、ネットワーク、環境変数、またはレジストリなどの外部システム リソースにアクセスできません。|  
+|*Externalaccess です。*|*安全な*ファイル、ネットワーク、環境変数、レジストリなどの外部システム リソースにアクセスを追加できます。|  
+|*無制限*|無制限内外両方のリソースに無制限のアセンブリへのアクセス許可[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。 内から実行されるコード、 *Unrestricted*アセンブリはアンマネージ コードを呼び出すことができます。|  
   
- 許可される値に対応する列挙`PermissionSet`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.PermissionSet>します。  
+ 許容された値に対応する列挙体`PermissionSet`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.PermissionSet>します。  
   
 ## <a name="see-also"></a>参照  
  [ComAssembly データ型&#40;ASSL&#41;](../data-type/comassembly-data-type-assl.md)   
  [Assemblies 要素&#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [Database 要素&#40;ASSL&#41;](../objects/database-element-assl.md)   
- [サーバー要素&#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Server 要素&#40;ASSL&#41;](../objects/server-element-assl.md)   
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  
   
   

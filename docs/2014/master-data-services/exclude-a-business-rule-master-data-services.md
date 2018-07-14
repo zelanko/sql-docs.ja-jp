@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], excluding
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d64a01cf9df6865790b39510ad5c6222d8d6fd87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a51bf291ebdf7904fbce836cfaddb3cceb5e17cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172949"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>ビジネス ルールを除外する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、ビジネス ルールを完全に削除せずにそのルールに対するデータの検証が行われないようにする場合は、ビジネス ルールを除外します。  
@@ -43,18 +43,18 @@ ms.locfileid: "36175367"
   
 4.  **[エンティティ]** の一覧からエンティティを選択します。  
   
-5.  **メンバー型**一覧で、メンバーの種類を選択します。  
+5.  **メンバーの種類**一覧で、メンバーの種類を選択します。  
   
 6.  **[属性]** の一覧で、属性を選択するか、 **[すべて]** の既定値のままにします。  
   
-7.  ビジネス ルールの行で、グリッド内のチェック ボックスを選択、**除外**列です。 値、**ステータス**列は**除外の保留中**です。  
+7.  グリッドで、ビジネス ルールの行のチェック ボックスをオン、**除外**列。 値、**状態**列が**除外の保留中**します。  
   
 8.  **[ビジネス ルールのパブリッシュ]** をクリックします。  
   
-9. 確認のダイアログ ボックスで **[OK]** をクリックします。 値、**ステータス**列は**除外**です。  
+9. 確認のダイアログ ボックスで **[OK]** をクリックします。 値、**状態**列が**除外**します。  
   
 ## <a name="see-also"></a>参照  
- [ビジネス ルールの削除&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)   
+ [ビジネス ルールを削除&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)   
  [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [ビジネス ルール (マスター データ サービス)](../../2014/master-data-services/business-rules-master-data-services.md)  
   

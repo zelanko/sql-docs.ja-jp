@@ -1,5 +1,5 @@
 ---
-title: AccountType 要素 (ASSL) |Microsoft ドキュメント
+title: AccountType 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AccountType element
 ms.assetid: 4fdf17d3-cd84-4bf6-9baf-21e15d4bf71e
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff7203d2882689b21a6ab3171880c26a8d385f7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b79eec0531cf2ab9451a93df2e5f1bf0eb2adf0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243432"
 ---
 # <a name="accounttype-element-assl"></a>AccountType 要素 (ASSL)
   定義されている勘定科目の種類の名前を含む、[データベース](../objects/database-element-assl.md)要素。  
@@ -67,14 +67,14 @@ ms.locfileid: "36173804"
 |値|説明|  
 |-----------|-----------------|  
 |*収入*|勘定科目は収益勘定です。|  
-|*経費*|勘定科目は費用勘定です。|  
+|*経費精算*|勘定科目は費用勘定です。|  
 |*フロー*|勘定科目はキャッシュ フロー勘定です。|  
 |*残高*|勘定科目は残高勘定です。|  
 |*資産*|勘定科目は資産勘定です。|  
-|*責任*|勘定科目は負債勘定です。|  
+|*賠償責任*|勘定科目は負債勘定です。|  
 |*統計*|勘定科目は統計勘定です。|  
   
- 許可される値に対応する列挙`AccountType`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AccountTypes>します。  
+ 許容された値に対応する列挙`AccountType`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AccountTypes>します。  
   
 ## <a name="see-also"></a>参照  
  [要素をアカウント&#40;ASSL&#41;](../collections/accounts-element-assl.md)   

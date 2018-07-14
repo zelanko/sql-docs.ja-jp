@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
 - data truncation [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e735659fb2898c2ab6bc428d7ad6fc0f5759f17c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5f80a51df610040e18dbdae7b1552c56d81cb084
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328094"
 ---
 # <a name="data-truncation-ssis"></a>データの切り捨て (SSIS)
   式により誤ってデータが切り捨てられる場合があります。 データの切り捨ては次の環境で発生する可能性があります。  
@@ -38,6 +38,6 @@ ms.locfileid: "36173760"
  式エバリュエーターは切り捨てが発生する可能性のある明示的なキャストを識別し、式が解析されるときに警告を発生します。 たとえば、30 文字の文字列が 20 文字の文字列にキャストされる場合、式エバリュエーターで警告が発生します。  
   
 > [!NOTE]  
->  切り捨ては実行時にはチェックされません。データは警告なしで切り捨てられます。 ただし、ほとんどのデータ アダプターおよび変換では、エラー行の処理を実行できるエラー出力がサポートされています。 データの切り詰め処理の詳細については、次を参照してください。 [Error Handling in Data](../data-flow/error-handling-in-data.md)です。  
+>  切り捨ては実行時にはチェックされません。データは警告なしで切り捨てられます。 ただし、ほとんどのデータ アダプターおよび変換では、エラー行の処理を実行できるエラー出力がサポートされています。 データの切り詰め処理の詳細については、次を参照してください。[データのエラー処理](../data-flow/error-handling-in-data.md)します。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DMX テンプレート |Microsoft ドキュメント
+title: DMX テンプレート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0f29e0c000477ec705111f433c31370edc0d973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a02f00df965362c1c8702403b06df8b0883ead
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194362"
 ---
 # <a name="dmx-templates"></a>[DMX テンプレート]
   データ マイニング テンプレートは、高度なクエリをすばやく作成するのに役立ちます。 DMX クエリの一般的な構文は詳しく解説されており、テンプレートを使用すると、引数とデータ ソースをクリックおよびポイントする方法でクエリを簡単に作成できます。  
   
-## <a name="using-the-templates"></a>テンプレートの使用方法  
+## <a name="using-the-templates"></a>テンプレートを使用します。  
   
-1.  Excel 用データ マイニング クライアントでクリックして**クエリ**です。  
+1.  Excel 用データ マイニング クライアントで次のようにクリックします。**クエリ**します。  
   
-2.  ウィザードで**開始** ページで、をクリックして**次**です。  
+2.  ウィザードで**開始**] ページで [**次**します。  
   
-3.  ページで、**モデルの選択**をクリックして**詳細**です。  
+3.  ページで、**モデルの選択**、 をクリックして**詳細**します。  
   
-     **ヒント:** モデルに対する予測クエリを作成しようとする場合は、最初に、モデルを選択し、をクリックして**詳細**モデルの名前のテンプレートを事前に設定します。  
+     **ヒント:** モデルに対する予測クエリを作成しようとする場合は、モデルを最初に、選択し、順にクリックします**詳細**モデルの名前のテンプレートを事前に設定します。  
   
-4.  **データ マイニング詳細クエリ エディター**をクリックして**DMX テンプレート**テンプレートを選択します。  
+4.  **データ マイニング詳細クエリ エディター**、 をクリックして**DMX テンプレート**テンプレートを選択します。  
   
 5.  Enter キーを押して、DMX クエリ ペインにテンプレートを読み込みます。  
   
@@ -42,16 +42,16 @@ ms.locfileid: "36176728"
   
      予測クエリの場合、最初に入力データセットを選択し、次に列をマップします。  
   
-7.  をクリックして**クエリの編集**テキスト エディターのビューに切り替えて、クエリを手動で変更します。  
+7.  クリックして**クエリの編集**テキスト エディターのビューに切り替えるし、クエリを手動で変更します。  
   
      ただし、クエリ エディターでの作業中にビューを切り替えた場合、それまでのビューに表示されていた情報はすべて消去されることに注意してください。 ビューを切り替える前に、DMX ステートメントをコピーして別のファイルに貼り付けて、作業を保存してください。  
   
 8.  **[完了]** をクリックします。 **先の選択** ダイアログ ボックスで、結果を保存する場所を指定します。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
->  ステートメントが正常に実行された場合、サーバーに送信された DMX ステートメント記録は、**トレース**ウィンドウです。 トレース機能を使用する方法の詳細については、次を参照してください。[トレース&#40;Excel 用データ マイニング クライアント&#41;](trace-data-mining-client-for-excel.md)です。  
+>  サーバーに送信された DMX ステートメントにも記録ステートメントが正常に実行された場合、**トレース**ウィンドウ。 トレース機能を使用する方法の詳細については、次を参照してください。[トレース&#40;Excel 用データ マイニング クライアント&#41;](trace-data-mining-client-for-excel.md)します。  
   
- データ マイニング詳細クエリ エディターを使用する方法の詳細については、次を参照してください。[クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)と[データ マイニング クエリ エディターの高度な](advanced-data-mining-query-editor.md)です。  
+ データ マイニング詳細クエリ エディターを使用する方法の詳細については、次を参照してください。[クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)と[データ マイニングのクエリ エディターの高度な](advanced-data-mining-query-editor.md)します。  
   
 ## <a name="list-of-dmx-templates"></a>DMX テンプレートの一覧  
  次の DMX テンプレートは、Excel 用のデータ マイニング クライアントに含まれています。  
@@ -108,7 +108,7 @@ ms.locfileid: "36176728"
   
 -   マイニング モデルの消去  
   
--   明確な構造およびモデル  
+-   構造消去およびモデル  
   
 -   マイニング構造の消去  
   

@@ -1,5 +1,5 @@
 ---
-title: インストールの SQL Server 2014 の構成ファイルを使用して |Microsoft ドキュメント
+title: Sql Server 2014 の構成ファイルの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33039ca7f957614e4c17d6dbff7a9f68aa21404e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9536c674f9bf5733fb6d20109ee03206a50570c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231862"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>構成ファイルを使用した SQL Server 2014 のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには、システムの既定値および実行時入力に基づいて構成ファイルを生成する機能が用意されています。 構成ファイルを使用すると、同じ構成の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を企業全体に配置できます。 また、Setup.exe を起動するバッチ ファイルを作成して、企業全体で手動によるインストールを標準化することもできます。  
@@ -60,7 +60,7 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  ウィザードに従って **[インストールの準備完了]** ページまで進みます。 構成ファイルのパスは、 **[インストールの準備完了]** ページの [構成ファイルのパス] セクションで指定します。 インストールする方法の詳細についての[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](install-sql-server-from-the-installation-wizard-setup.md)です。  
+2.  ウィザードに従って **[インストールの準備完了]** ページまで進みます。 構成ファイルのパスは、 **[インストールの準備完了]** ページの [構成ファイルのパス] セクションで指定します。 インストールする方法の詳細についての[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](install-sql-server-from-the-installation-wizard-setup.md)します。  
   
 3.  INI ファイルを生成するには、インストールを実際に完了しなくてもセットアップを取り消します。  
   

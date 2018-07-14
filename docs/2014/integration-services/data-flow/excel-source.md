@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsource.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c0b27e464fc28ed85d3b3c3b33eaf4b1d05a38e2
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: ed8d16bc5c9d9d653404a5c049ac10cedc9f129a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199682"
 ---
 # <a name="excel-source"></a>Excel ソース
   Excel ソースは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック内のワークシートまたは範囲からデータを抽出します。  
@@ -55,7 +55,7 @@ ms.locfileid: "36324666"
   
 -   **データ ソース**。 Excel ブックの変換元データには、ワークシートまたは名前付き範囲 (MyRange など) を使用できます。ワークシート名には $ 記号を付加する必要があります (Sheet1$ など)。 SQL ステートメントでは、$ 記号による構文エラーを回避するため、ワークシートの名前を [Sheet1$] などのように区切る必要があります。 クエリ ビルダーは、これらの区切り記号を自動的に付加します。 ワークシートまたは範囲を指定した場合、ドライバーは、ワークシートまたは範囲の左上の空でない最初のセルから、連続したセルのブロックを読み取ります。 したがって、ソース データには、タイトル行またはヘッダー行とデータ行との間に空の行を入れることはできません。  
   
--   **不足している値**。 Excel ドライバーは、指定した変換元の特定の行数 (既定では 8 行) を読み取り、各列のデータ型を推測します。 1 つの列に複数のデータ型が混在している可能性がある場合、特に数値データとテキスト データが混合している場合に、Excel ドライバーは数が多い方のデータ型を優先して判定し、それ以外のデータ型のデータが含まれるセルについては NULL 値を返します  (同数の場合は、数値型が優先されます)。Excel ワークシートでのセル書式のほとんどのオプションは、このデータ型の判定に影響しません。 Excel ドライバーのこの動作を変更するには、インポート モードを指定します。 インポート モードを指定するには追加`IMEX=1`で Excel 接続マネージャーの接続文字列内の拡張プロパティの値を**プロパティ**ウィンドウです。 詳細については、「 [[PRB] DAO の OpenRecordset を使用すると Excel の値として NULL が返される](http://support.microsoft.com/kb/194124)」をご覧ください。  
+-   **不足している値**。 Excel ドライバーは、指定した変換元の特定の行数 (既定では 8 行) を読み取り、各列のデータ型を推測します。 1 つの列に複数のデータ型が混在している可能性がある場合、特に数値データとテキスト データが混合している場合に、Excel ドライバーは数が多い方のデータ型を優先して判定し、それ以外のデータ型のデータが含まれるセルについては NULL 値を返します  (同数の場合は、数値型が優先されます)。Excel ワークシートでのセル書式のほとんどのオプションは、このデータ型の判定に影響しません。 Excel ドライバーのこの動作を変更するには、インポート モードを指定します。 インポート モードを指定する追加`IMEX=1`で Excel 接続マネージャーの接続文字列の拡張プロパティの値に、**プロパティ**ウィンドウ。 詳細については、「 [[PRB] DAO の OpenRecordset を使用すると Excel の値として NULL が返される](http://support.microsoft.com/kb/194124)」をご覧ください。  
   
 -   **切り捨てられたテキスト**。 Excel の列にテキスト データが含まているとドライバーが判定した場合、ドライバーはサンプリングした最も長い値に基づいて、データ型 (文字列またはメモ) を選択します。 ドライバーがサンプリングした行で 255 文字より長い値が検出されなかった場合、その列はメモ列ではなく、255 文字の文字列の列として扱われます。 このため、255 文字より長い値があると、切り捨てられる場合があります。 切り捨てを発生させずにメモ列からデータをインポートするには、サンプリングされた行のうち 1 行以上のメモ列に、255 文字より長い値が含まれている状態にする必要があります。または、そのような行が含まれるように、ドライバーがサンプリングする行数を増やす必要があります。 サンプリングする行数を増やすには、 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** レジストリ キーの **TypeGuessRows** の値を増やします。 詳細については、「 [[PRB] DTS: Jet 4.0 OLEDB からの転送がバッファーのオーバーフロー エラーで失敗](http://support.microsoft.com/kb/281517)」をご覧ください。  
   
@@ -86,11 +86,11 @@ ms.locfileid: "36324666"
   
  **[Excel ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Excel ソース エディター&#40;接続マネージャー ページ&#41;](../excel-source-editor-connection-manager-page.md)  
+-   [[Excel ソース エディター&#40;接続マネージャー] ページ&#41;](../excel-source-editor-connection-manager-page.md)  
   
--   [Excel ソース エディター&#40;列 ページ&#41;](../excel-source-editor-columns-page.md)  
+-   [[Excel ソース エディター&#40;列] ページ&#41;](../excel-source-editor-columns-page.md)  
   
--   [Excel ソース エディター&#40;エラー出力 ページ&#41;](../excel-source-editor-error-output-page.md)  
+-   [[Excel ソース エディター&#40;エラー出力] ページ&#41;](../excel-source-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるすべてのプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
@@ -122,6 +122,6 @@ ms.locfileid: "36324666"
   
 -   dougbert.com のブログ「 [Integration Services における Excel (パート 3/3): 問題点と対処法](http://go.microsoft.com/fwlink/?LinkId=217676)」  
   
--   ブログ エントリ「 [SSIS での使用の XLSX ファイル](http://go.microsoft.com/fwlink/?LinkId=233704)、sqlservergeeks.com のブログ「します。  
+-   ブログ エントリ「 [SSIS での使用の XLSX ファイル](http://go.microsoft.com/fwlink/?LinkId=233704)、sqlservergeeks.com します。  
   
   

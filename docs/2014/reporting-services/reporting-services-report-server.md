@@ -1,5 +1,5 @@
 ---
-title: Reporting Services レポート サーバー |Microsoft ドキュメント
+title: Reporting Services レポート サーバー |Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2015
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -29,13 +29,13 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a1f0a11c1443126487ed49bd1489655e4e69368b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9aff1bba090ec29cad3eef94453858e1f2b0029
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189839"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   このトピックでは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インストールの中心となるコンポーネントである [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーの概要を説明します。 処理エンジンのペアと、認証、データ処理、表示、配信の各操作を行う用途別拡張機能の集合で構成されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブ モードと SharePoint モードという 2 種類の配置モードのいずれかで動作します。 機能の比較については、「 [SharePoint モードとネイティブ モードの機能の比較](#bkmk_featuresupport) 」セクションを参照してください。  
@@ -64,16 +64,16 @@ ms.locfileid: "36177473"
   
 -   [SharePoint モード](#bkmk_sharepointmode)  
   
--   [レポート処理およびスケジュールと配信のプロセス](#bkmk_reportprocessor)  
+-   [レポートのプロセスとスケジュールおよび配信処理](#bkmk_reportprocessor)  
   
 -   [レポート サーバー データベース](#bkmk_reportdatabase)  
   
--   [認証、表示、データ、および配信拡張機能](#bkmk_authentication)  
+-   [認証、レンダリング、データ、および配信拡張機能](#bkmk_authentication)  
   
 -   [関連タスク](#bkmk_relatedtasks)  
   
 ##  <a name="bkmk_overview"></a> レポート サーバー モードの概要  
- 処理エンジン (プロセッサ) はレポート サーバーの中核となります。 プロセッサはレポート システムの整合性をサポートし、変更したり拡張したりすることはできません。 拡張機能もプロセッサですが、これらはきわめて限られた機能を実行します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サポートされる拡張機能の種類ごとに 1 つまたは複数の既定の拡張子が含まれます。 レポート サーバーにはカスタム拡張機能を追加できます。 これにより、レポート サーバーを拡張し、もともとサポートされていなかった機能を使用できるようにすることができます。たとえば、シングル サインオン テクノロジのサポート、既定の表示拡張機能では処理できないアプリケーション形式でのレポート出力、プリンターやアプリケーションへのレポート配信などのカスタム機能が考えられます。  
+ 処理エンジン (プロセッサ) はレポート サーバーの中核となります。 プロセッサはレポート システムの整合性をサポートし、変更したり拡張したりすることはできません。 拡張機能もプロセッサですが、これらはきわめて限られた機能を実行します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サポートされる拡張機能の種類ごとに 1 つまたは複数の既定の拡張子が含まれています。 レポート サーバーにはカスタム拡張機能を追加できます。 これにより、レポート サーバーを拡張し、もともとサポートされていなかった機能を使用できるようにすることができます。たとえば、シングル サインオン テクノロジのサポート、既定の表示拡張機能では処理できないアプリケーション形式でのレポート出力、プリンターやアプリケーションへのレポート配信などのカスタム機能が考えられます。  
   
  レポート サーバーの個々のインスタンスは、プロセッサと拡張機能の完全な集合によって定義されます。この集合によって、最初の要求の処理から完成したレポートの表示まで、エンド ツー エンドの処理が行われます。 レポート サーバーは、サブコンポーネントを利用してレポート要求を処理し、要求時アクセスまたはスケジュールされた配布でレポートを利用できるようにします。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36177473"
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーでは、レポート サーバー インスタンス用に次の 2 つの配置モードがサポートされています。  
   
--   **ネイティブ モード**: ネイティブ モード レポート サーバーがすべて処理機能と管理機能のみを通じてを提供するアプリケーション サーバーとして実行されている SharePoint Web パーツを含む[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]コンポーネントです。 ネイティブ モードのレポート サーバーは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーと SQL Server Management Studio を使って構成します。  
+-   **ネイティブ モード**: レポート サーバーがすべて処理を通じて機能と管理機能のみを提供するアプリケーション サーバーとして実行されている SharePoint Web パーツ対応ネイティブ モードを含む[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]コンポーネント。 ネイティブ モードのレポート サーバーは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーと SQL Server Management Studio を使って構成します。  
   
 -   **SharePoint モード**。レポート サーバーは SharePoint サーバー ファームの一部としてインストールされます。  SharePoint モードの配置と構成には、PowerShell コマンドまたは SharePoint コンテンツ管理ページを使用します。  
   
@@ -92,14 +92,14 @@ ms.locfileid: "36177473"
 |機能またはコンポーネント|ネイティブ モード|SharePoint モード|  
 |--------------------------|-----------------|---------------------|  
 |**URL アドレス指定**|はい|SharePoint 統合モードでは URL アドレスの利用が異なります。 レポート、レポート モデル、共有データ ソース、およびリソースの参照には SharePoint URL が使用されます。 レポート サーバーのフォルダー階層は使用されません。 ネイティブ モードのレポート サーバー上でサポートされる URL アクセスに依存するカスタム アプリケーションでは、レポート サーバーが SharePoint 統合用に構成されると、この機能が動作しなくなります。<br /><br /> URL アクセスの詳細については、「 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)」を参照してください。|  
-|**カスタム セキュリティ拡張機能**|はい|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] カスタム セキュリティ拡張機能の配置またはレポート サーバーで使用できません。 レポート サーバーには特別な用途のセキュリティ拡張機能が用意されており、SharePoint 統合モードで動作するようにレポート サーバーを構成するときは常に使用されます。 このセキュリティ拡張機能は内部コンポーネントで、統合操作に必要です。|  
+|**カスタム セキュリティ拡張機能**|はい|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] カスタム セキュリティ拡張機能をデプロイまたはレポート サーバーで使用されることはできません。 レポート サーバーには特別な用途のセキュリティ拡張機能が用意されており、SharePoint 統合モードで動作するようにレポート サーバーを構成するときは常に使用されます。 このセキュリティ拡張機能は内部コンポーネントで、統合操作に必要です。|  
 |**構成マネージャー**|はい|**\*\* 重要 \*\*** 構成マネージャーは、SharePoint モードのレポート サーバーの管理には使用できません。 代わりに、SharePoint サーバーの全体管理を使用してください。|  
 |**レポート マネージャー**|はい|レポート マネージャーは、SharePoint モードの管理には使用できません。 SharePoint アプリケーション ページを使用してください。 詳細については、「 [Reporting Services の SharePoint サービスとサービス アプリケーション](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)｣を参照してください。|  
 |**リンク レポート**|はい|No.|  
 |**個人用レポート**|はい|いいえ|  
 |**個人用サブスクリプション** とバッチ処理方式|はい|いいえ|  
 |**データ警告**|いいえ|はい|  
-|**Power View**|いいえ|はい<br /><br /> クライアント ブラウザーに Silverlight が必要です。 ブラウザーの要件の詳細については、次を参照してください[Reporting Services と Power View のブラウザー サポートの計画&#40;Services 2014 のレポート。&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Power View**|いいえ|はい<br /><br /> クライアント ブラウザーに Silverlight が必要です。 ブラウザーの要件の詳細については、次を参照してください[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014。&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**.RDL レポート**|はい|はい<br /><br /> .RDL レポートは、ネイティブ モードまたは SharePoint モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーで実行できます。|  
 |**.RDLX レポート**|いいえ|はい<br /><br /> Power View .RDLX レポートは、SharePoint モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーでのみ実行できます。|  
 |**SharePoint リストの拡張機能用の SharePoint ユーザー トークン資格情報**|いいえ|はい|  
@@ -110,7 +110,7 @@ ms.locfileid: "36177473"
 ##  <a name="bkmk_nativemode"></a> ネイティブ モード  
  ネイティブ モードでは、レポート サーバーはスタンドアロンのアプリケーション サーバーとして、レポートとレポート モデルの表示、管理、処理、配信の機能をすべて提供します。 これはレポート サーバー インスタンスの既定のモードです。 セットアップ時にネイティブ モードのレポート サーバーを構成してインストールすることも、セットアップの完了後にレポート サーバーを構成してネイティブ モードで操作できるようにすることもできます。  
   
- 次の図の 3 層アーキテクチャ、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ネイティブ モードの配置。 ここでは、データ層のレポート サーバー データベースとデータ ソース、中間層のレポート サーバー コンポーネント、およびプレゼンテーション層のクライアント アプリケーションと組み込みツールまたはカスタム ツールを示しています。 また、サーバー コンポーネント間での要求およびデータの流れと、データ ストアからコンテンツを送信および取得するコンポーネントも示しています。  
+ 次の図の 3 層アーキテクチャを示しています、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ネイティブ モードの配置。 ここでは、データ層のレポート サーバー データベースとデータ ソース、中間層のレポート サーバー コンポーネント、およびプレゼンテーション層のクライアント アプリケーションと組み込みツールまたはカスタム ツールを示しています。 また、サーバー コンポーネント間での要求およびデータの流れと、データ ストアからコンテンツを送信および取得するコンポーネントも示しています。  
   
  ![Reporting Services のアーキテクチャ](media/reporting-serv-arch.gif "Reporting Services のアーキテクチャ")  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36177473"
  サード パーティの開発者は、追加の拡張機能を作成して、レポート サーバーの処理能力を置き換えたり、拡張したりできます。 アプリケーション開発者が利用できるプログラマティック インターフェイスの詳細については、「 [テクニカル リファレンス](../../2014/reporting-services/technical-reference-ssrs.md)」を参照してください。  
   
 ###  <a name="bkmk_nativewithwebparts"></a> SharePoint Web パーツ対応ネイティブ モード  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インスタンスにインストールして登録した 2 つの Web パーツを提供[!INCLUDE[winSPServ](../includes/winspserv-md.md)]2.0 以降、または[!INCLUDE[spPortalServ](../includes/spportalserv-md.md)]2003 以降。 SharePoint サイトからは、Web パーツを使用して、ネイティブ モードで動作するレポート サーバーに格納され処理されているレポートを検索し表示できます。 これらの Web パーツは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の前のリリースで導入されたものです。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インスタンスにインストールし、登録する 2 つの Web パーツを提供します。 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 以降、または[!INCLUDE[spPortalServ](../includes/spportalserv-md.md)]2003 またはそれ以降。 SharePoint サイトからは、Web パーツを使用して、ネイティブ モードで動作するレポート サーバーに格納され処理されているレポートを検索し表示できます。 これらの Web パーツは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の前のリリースで導入されたものです。  
   
 ##  <a name="bkmk_sharepointmode"></a> SharePoint モード  
  SharePoint モードでは、レポート サーバーが SharePoint サーバー ファーム内で実行される必要があります。 レポート サーバーの処理、レンダリング、および管理機能が実行されている SharePoint アプリケーション サーバーによって表される、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービスと 1 つ以上[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。 レポート サーバーのコンテンツや操作へのフロントエンド アクセスを、SharePoint サイトが提供します。  
@@ -143,15 +143,15 @@ ms.locfileid: "36177473"
 |**(3)**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスを実行しているアプリケーション サーバー。 レポート処理のスケールアウトは SharePoint ファームの一部として管理され、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスを追加のアプリケーション サーバーに追加することによって実行されます。|  
 |**(4)**|権限、電子メール、プロキシ、サブスクリプションを含むさまざまな構成を持つ、1 つ以上の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成できます。|  
 |**(5)**|レポート、データ ソース、および他のアイテムが SharePoint コンテンツ データベースに格納されます。|  
-|**(6)**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションは、レポート サーバー、temp、およびデータ警告機能の 3 つのデータベースを作成します。 すべての SSRS サービス アプリケーションに適用される構成設定は **RSReportserver.config** ファイルに格納されます。|  
+|**(6)**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションは、レポート サーバー、一時、およびデータ警告機能の 3 つのデータベースを作成します。 すべての SSRS サービス アプリケーションに適用される構成設定は **RSReportserver.config** ファイルに格納されます。|  
   
-##  <a name="bkmk_reportprocessor"></a> レポート処理およびスケジュールと配信のプロセス  
+##  <a name="bkmk_reportprocessor"></a> レポートのプロセスとスケジュールおよび配信処理  
  レポート サーバーには 2 つの処理エンジンがあります。これらは、事前および中間のレポート処理と、スケジュールおよび配信の処理を行います。 レポート プロセッサは、レポートの定義またはモデルを取得し、データ処理拡張機能からのデータにレイアウト情報を結合して、それを要求された形式で表示します。 スケジュールおよび配信プロセスでは、スケジュールによって起動されたレポートを処理し、目的の配信先にレポートを配信します。  
   
 ##  <a name="bkmk_reportdatabase"></a> レポート サーバー データベース  
  レポート サーバーは、すべてのプロパティ、オブジェクト、およびメタデータを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースに格納する、ステートレス サーバーです。 格納されるデータには、パブリッシュされたレポート、コンパイル済みレポート、レポート モデル、およびレポート サーバーが管理するすべてのアイテムへのアクセスを提供するフォルダー階層が含まれます。 レポート サーバー データベースは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の単一のインストール用、またはスケールアウト配置に含まれる複数のレポート サーバー用の内部記憶域を提供します。 SharePoint 製品またはテクノロジの大規模な配置内で実行されるようにレポート サーバーを構成すると、レポート サーバーでは、レポート サーバー データベースに加えて SharePoint データベースも使用されます。 Reporting Services インストールで使用されるデータ ストアの詳細については、「[レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](report-server/report-server-database-ssrs-native-mode.md)」を参照してください。  
   
-##  <a name="bkmk_authentication"></a> 認証、表示、データ、および配信拡張機能  
+##  <a name="bkmk_authentication"></a> 認証、レンダリング、データ、および配信拡張機能  
  レポート サーバーでサポートされる拡張機能の種類は、認証拡張機能、データ処理拡張機能、レポート処理拡張機能、表示拡張機能、および配信拡張機能です。 レポート サーバーには、少なくとも 1 つの認証拡張機能、データ処理拡張機能、および表示拡張機能が必要です。 配信拡張機能とカスタム レポート処理拡張機能は省略可能ですが、レポートの配信またはカスタム コントロールをサポートする場合は必須です。  
   
  Reporting Services が提供する既定の拡張機能を使用すると、カスタム コンポーネントを開発することなく、すべてのサーバー機能を使用できます。 次の表に示す既定の拡張機能は、完全なレポート サーバー インスタンスの一部であり、すぐに使用できる機能を提供します。  
@@ -171,14 +171,14 @@ ms.locfileid: "36177473"
   
 |タスク|リンク|  
 |----------|----------|  
-|ハードウェアおよびソフトウェアの要件を確認します。|[Reporting Services SharePoint モードのハードウェアおよびソフトウェア](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)です。|  
+|ハードウェアおよびソフトウェアの要件を確認します。|[Reporting Services SharePoint モードでのハードウェアおよびソフトウェア](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)します。|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールします。|[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |Web 開発者、またはカスケード スタイル シート作成に関する専門知識を持つユーザーであれば、各自の責任で既定のスタイルを変更し、色、フォント、およびツール バーやレポート マネージャーのレイアウトを変えることができます。 このリリースでは、既定のスタイル シートについても、そのスタイル シートの変更手順についても説明していません。|[HTML ビューアーおよびレポート マネージャーのスタイル シートをカスタマイズする](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
 |HTML のスタイルやカスケード スタイル シート (CSS) の知識があれば、このトピックの情報を利用して、どのファイルを変更するとレポート マネージャーの外観をカスタマイズできるのかを判断できます。|[カスタム認証クッキーを送信するようにレポート マネージャーを構成する](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 |レポート サーバー Web サービスおよび Windows サービスに対するメモリ設定を調整する方法について説明します。|[レポート サーバー アプリケーションで利用可能なメモリの構成](report-server/configure-available-memory-for-report-server-applications.md)|  
 |リモート管理用にレポート サーバーを構成するための推奨されている手順について説明します。|[リモート管理用のレポート サーバーの構成](report-server/configure-a-report-server-for-remote-administration.md)|  
 |ネイティブのレポート サーバー インスタンスで **個人用レポート** を使用できるかどうかを構成する方法について説明します。|[個人用レポートの有効化と無効化](report-server/enable-and-disable-my-reports.md)|  
-|サポートされているブラウザーから、印刷機能を実現する RSClientPrint コントロールを設定する方法について説明します。 ブラウザーの要件の詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)です。|[Reporting Services のクライアント側印刷機能の有効化と無効化](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
+|サポートされているブラウザーから、印刷機能を実現する RSClientPrint コントロールを設定する方法について説明します。 ブラウザーの要件の詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)します。|[Reporting Services のクライアント側印刷機能の有効化と無効化](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services の拡張機能](extensions/reporting-services-extensions.md)   

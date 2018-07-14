@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
 - permissions [Master Data Services], model and member overlaps
 - members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd9706ee95376500993089a496f216c2fe113b27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 468d23a4bddd0df301d263e6c2fd6e22a167ef27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219682"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>モデル権限とメンバー権限の重複 (Master Data Services)
   メンバーに割り当てられている権限は、モデル オブジェクトに割り当てられている権限と重複している可能性があります。 重複が発生すると、より制限の厳しい権限が有効になります。  
@@ -33,7 +33,7 @@ ms.locfileid: "36175976"
 -   
   **拒否** が他のどの権限をオーバーライドします。  
   
--   **読み取り専用**オーバーライド**更新**です。  
+-   **読み取り専用**オーバーライド**Update**します。  
   
  次の図は、属性の権限がメンバーの権限とは異なる場合に、個々の属性値に対して有効な権限を示しています。  
   
@@ -55,16 +55,16 @@ ms.locfileid: "36175976"
   
  **[モデル]** タブで、Subcategory 属性に **更新** 権限が割り当てられています。  
   
- **階層メンバー**  タブで、派生階層の Mountain Bikes サブカテゴリ ノードが明示的に割り当てられている**読み取り専用**権限です。  
+ **階層メンバー**  タブで、派生階層の Mountain Bikes サブカテゴリ ノードが割り当てられて明示的に**読み取り専用**権限。  
   
- : 結果**エクスプ ローラー**、ユーザーが**読み取り専用**Mountain Bikes ノード内のメンバーについて、Subcategory 属性値を許可します。 その他のメンバーと属性は、すべて非表示になります。  
+ : 結果**エクスプ ローラー**、ユーザーが**読み取り専用**Mountain Bikes ノード内のメンバーについて、Subcategory 属性値にアクセスを許可します。 その他のメンバーと属性は、すべて非表示になります。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="example-3"></a>例 3  
  ![mds_conc_overlap_model_3](../../2014/master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
- **モデル** タブで、Subcategory 属性に**読み取り専用**権限が割り当てられています。  
+ **モデル**タブで、Subcategory 属性に**読み取り専用**権限が割り当てられています。  
   
  **[階層メンバー]** タブで、派生階層の Mountain Bikes サブカテゴリに **更新** 権限が明示的に割り当てられています。  
   

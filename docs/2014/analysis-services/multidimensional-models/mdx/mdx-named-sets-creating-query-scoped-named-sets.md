@@ -1,5 +1,5 @@
 ---
-title: 名前付きセット (MDX) のクエリ スコープを作成 |Microsoft ドキュメント
+title: 名前付きセット (MDX) のクエリ スコープの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query-scoped named sets [MDX]
 - WITH keyword
 ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0b81f9403e103f6354d7b996ee07cca1f01d8498
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86eb0725bb67df8af8244f587b45fbfbcc7d06b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237662"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>クエリ スコープの名前付きセットの作成 (MDX)
   1 つの多次元式 (MDX) クエリでのみ名前付きセットが必要な場合は、WITH キーワードを使用してその名前付きセットを定義できます。 WITH キーワードを使用して作成した名前付きセットは、そのクエリの実行が終了した時点で存在しなくなります。  
@@ -98,6 +98,6 @@ FROM Sales
   
 ## <a name="see-also"></a>参照  
  [SELECT ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [セッション スコープの作成の名前付きセット&#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [セッション スコープを作成する名前付きセット&#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ComAssembly データ型 (ASSL) |Microsoft ドキュメント
+title: ComAssembly データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ComAssembly data type
 ms.assetid: 23c0f4b3-b6ac-4ec8-9254-74d2f84f5244
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bfe3a7791d02d97b4283b63a1aedd3b6702fe563
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 824fb508bb392f6ef84ede39645a5bac0da645e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171553"
 ---
 # <a name="comassembly-data-type-assl"></a>ComAssembly データ型 (ASSL)
-  関連付けられた COM ライブラリを表す派生データ型を定義、[サーバー](../objects/server-element-assl.md)または[データベース](../objects/database-element-assl.md)要素。  
+  関連付けられた COM ライブラリを表す派生データ型を定義、 [Server](../objects/server-element-assl.md)または[データベース](../objects/database-element-assl.md)要素。  
   
 > [!IMPORTANT]  
 >  COM アセンブリにより、セキュリティ上のリスクが生じる可能性があります。 このリスクやその他の考慮事項により、[!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)] では、COM アセンブリが非推奨とされました。 COM アセンブリは、今後のリリースではサポートされない可能性があります。  
@@ -61,7 +61,7 @@ ms.locfileid: "36175823"
 |------------------|-------------|  
 |親要素|なし|  
 |子要素|[Source](../properties/source-element-comassembly-assl.md)|  
-|派生要素|参照してください[アセンブリ](../objects/assembly-element-assl.md)([アセンブリ](../collections/assemblies-element-assl.md)のコレクション[データベース](../objects/database-element-assl.md)または[サーバー](../objects/server-element-assl.md))|  
+|派生要素|参照してください[アセンブリ](../objects/assembly-element-assl.md)([アセンブリ](../collections/assemblies-element-assl.md)のコレクション[データベース](../objects/database-element-assl.md)または[Server](../objects/server-element-assl.md))|  
   
 ## <a name="remarks"></a>コメント  
  `ComAssembly` 要素は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスに関連付けられた COM ライブラリ、または [!INCLUDE[ssAS](../../../includes/ssas-md.md)] のインスタンス上の特定のデータベースに関連付けられた COM ライブラリへの参照 (完全修飾ファイル名またはプログラム識別子) を格納します。  

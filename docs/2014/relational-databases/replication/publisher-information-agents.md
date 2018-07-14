@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 21fcf883455c738ecb042d0b6bfc5d20cef5ed4a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 84403d87fac40506b244931fd967504d2a18e78c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266800"
 ---
 # <a name="publisher-information-agents"></a>パブリッシャー情報、[エージェント]
   **[エージェント]** タブには、パブリッシャーに関連するエージェントおよびメンテナンス ジョブに関する詳細情報が表示されます。  
@@ -64,7 +64,7 @@ ms.locfileid: "36174451"
  この後のセクションでは、このタブでエージェントまたはジョブごとに表示されるデータについて説明します。  
   
 ### <a name="snapshot-agent"></a>スナップショット エージェント  
- **Status**  
+ **ステータス**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
 -   [エラー]  
@@ -97,7 +97,7 @@ ms.locfileid: "36174451"
  エージェントが最後に実行されたときにディストリビューション データベースでコミットされたコマンドの数です。 更新などのデータ変更がコマンドに相当します。  
   
 ### <a name="log-reader-agent"></a>ログ リーダー エージェント (Log Reader Agent)  
- **Status**  
+ **ステータス**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
 -   [エラー]  
@@ -136,7 +136,7 @@ ms.locfileid: "36174451"
  エージェントが最後に実行されたときの 1 トランザクションあたりの平均コマンド数です。  
   
 ### <a name="queue-reader-agent"></a>キュー リーダー エージェント (Queue Reader Agent)  
- **Status**  
+ **ステータス**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
 -   [エラー]  
@@ -175,7 +175,7 @@ ms.locfileid: "36174451"
  エージェントが最後に実行されたときの 1 トランザクションあたりの平均コマンド数です。  
   
 ### <a name="maintenance-jobs"></a>メンテナンス ジョブ  
- **Status**  
+ **ステータス**  
  それぞれのジョブの状態。 表示される状態の種類を、次に示します。  
   
 -   [エラー]  

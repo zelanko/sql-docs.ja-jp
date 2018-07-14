@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 のインストールのクイック スタート |Microsoft ドキュメント
+title: SQL Server 2014 のインストールのクイック スタート |Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - quick start installation [SQL Server]
 - installation [SQL Server]
 - installing SQL Server, quick start installations
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7567675dffc0395da5152a98700f8fd19a1b3e12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b1b7b5a6a8d763c2773e048f2302f874806a8c27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231802"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 のクイック スタート インストール
     
@@ -53,13 +53,13 @@ ms.locfileid: "36174024"
   
 -   接続コンポーネント  
   
- 各コンポーネントを個別にインストールするか、上記のコンポーネントを組み合わせて選択できます。 最適なエディションおよびコンポーネントで利用できるようにする[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]を参照してください[エディションと SQL Server 2014 のコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)です。  
+ 各コンポーネントを個別にインストールするか、上記のコンポーネントを組み合わせて選択できます。 最適なエディションおよびコンポーネントで使用できるようにする[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]を参照してください[エディションと SQL Server 2014 のコンポーネントの](../sql-server/editions-and-components-of-sql-server-2016.md)します。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には 32 ビット版と 64 ビット版があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップでは、次のインストール方法がサポートされています。  
   
 -   **インストール ウィザードからの SQL Server&2016; のインストール (セットアップ)**  
   
-     参照してください[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)インストール手順について[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インストール ウィザードを使用しています。  
+     参照してください[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)インストールの詳細については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インストール ウィザードを使用しています。  
   
 -   **コマンド プロンプト**  
   
@@ -71,19 +71,19 @@ ms.locfileid: "36174024"
   
 -   **SysPrep**  
   
-     参照してください[SQL Server 2014 を使用して SysPrep インストール](../database-engine/install-windows/install-sql-server-using-sysprep.md)インストール手順について[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SysPrep を使用しています。  
+     参照してください[SQL Server 2014 を使用して SysPrep インストール](../database-engine/install-windows/install-sql-server-using-sysprep.md)インストールの詳細については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SysPrep を使用しています。  
   
 -   **Server Core インストール**  
   
-     参照してください[Server Core での SQL Server 2014 のインストール](../database-engine/install-windows/install-sql-server-on-server-core.md)インストール手順について[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Windows Server Core でします。  
+     参照してください[Server Core での SQL Server 2014 のインストール](../database-engine/install-windows/install-sql-server-on-server-core.md)インストールの詳細については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Windows Server Core でします。  
   
 -   **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] BI 機能のインストール**  
   
-     参照してください[SQL Server 2014 BI の機能をインストール](../sql-server/install/install-sql-server-business-intelligence-features.md)が含まれる、Microsoft BI プラットフォームの一部である機能をインストールする方法の詳細については、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、およびいくつか分析データの作成または操作に使用するクライアント アプリケーション。  
+     参照してください[SQL Server 2014 BI の機能をインストール](../sql-server/install/install-sql-server-business-intelligence-features.md)が含まれるは、Microsoft BI プラットフォームの一部である機能のインストールについては、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、および複数分析データの作成または操作に使用されるクライアント アプリケーション。  
   
 -   **フェールオーバー クラスター インストール**  
   
-     参照してください[SQL Server フェールオーバー クラスター インストール](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)インストール手順について[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]フェイル オーバー クラスター。  
+     参照してください[SQL Server フェールオーバー クラスター インストール](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)インストールの詳細については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]フェイル オーバー クラスター。  
   
  既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベースとサンプル コードはインストールされません。 Express 以外のエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のサンプル データベースとサンプル コードをインストールするには、[CodePlex Web サイト](http://go.microsoft.com/fwlink/?LinkId=87843)をご覧ください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のサンプル データベースと [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] のサンプル コードのサポートについては、「[データベースとサンプルの概要](http://go.microsoft.com/fwlink/?LinkId=110391)」をご覧ください。  
   
@@ -92,11 +92,11 @@ ms.locfileid: "36174024"
   
 -   インストール要件、システム構成チェック、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールに関するセキュリティ上の考慮事項を確認します。  詳細については、「[SQL Server のインストール計画](quick-start-installation-of-sql-server-2014.md#BKMK_BeforeYouInstall)」を参照してください。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既存のバージョンを [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードします。 詳細については、次を参照してください。 [SQL Server 2014 にアップグレードする](#BKMK_Upgrading)です。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既存のバージョンを [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードします。 詳細については、次を参照してください。 [SQL Server 2014 にアップグレードする](#BKMK_Upgrading)します。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行して、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の新しいインスタンスをインストールします。 詳細については、次を参照してください。 [Installing SQL Server 2014](#BKMK_Install)です。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行して、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の新しいインスタンスをインストールします。 詳細については、次を参照してください。 [Installing SQL Server 2014](#BKMK_Install)します。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールが完了したら、次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とそのコンポーネントを構成します。これは重要な手順です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を構成します。 詳細については、次を参照してください。[を構成する SQL Server 2014](#BKMK_Configure)です。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールが完了したら、次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とそのコンポーネントを構成します。これは重要な手順です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を構成します。 詳細については、次を参照してください。[を構成する SQL Server 2014](#BKMK_Configure)します。  
   
  次のセクションでは、これらのタスクについて詳しく説明します。  
   
@@ -108,13 +108,13 @@ ms.locfileid: "36174024"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |ハードウェアとソフトウェアの要件、オペレーティング システムのサポート、ネットワークとインターネットに関する考慮事項、および必要なハード ディスク領域について確認します。|[インストールの前提条件](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
-|セキュリティに関する考慮事項を確認、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インストールします。|[セキュリティに関する考慮事項](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
+|セキュリティに関する考慮事項を確認して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インストールします。|[セキュリティに関する考慮事項](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
 |[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のさまざまなエディションでサポートされる機能の詳細を確認します。|[機能とエディション](features-supported-by-the-editions-of-sql-server-2014.md)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の最適なエディションおよびコンポーネントを決定します。|[SQL Server 2014 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)|  
 |ハードウェア構成を確認し、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールの準備について学習します。|[フェールオーバー クラスタリングをインストールする前に](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
   
 ###  <a name="BKMK_Upgrading"></a> アップグレード [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] の既存のインスタンスを [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードできます。 詳細については、次を参照してください。 [SQL Server 2014 にアップグレード](../database-engine/install-windows/upgrade-sql-server.md)です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行して [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードする前に、アップグレード プロセスに関する以下のトピックを参照してください。  
+ [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] の既存のインスタンスを [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードできます。 詳細については、次を参照してください。 [SQL Server 2014 にアップグレード](../database-engine/install-windows/upgrade-sql-server.md)します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行して [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードする前に、アップグレード プロセスに関する以下のトピックを参照してください。  
   
 |説明|トピック|  
 |-----------------|-----------|  
@@ -163,6 +163,6 @@ ms.locfileid: "36174024"
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 の製品仕様](sql-server-2014-product-specifications.md)   
- [SQL Server の製品ドキュメントを使い始める](../2014-toc/books-online-for-sql-server-2014.md)[旧バージョンとの互換性](backward-compatibility.md)  
+ [SQL Server の製品ドキュメントの概要](../2014-toc/books-online-for-sql-server-2014.md)[旧バージョンとの互換性](backward-compatibility.md)  
   
   

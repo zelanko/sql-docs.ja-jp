@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server], setting the refresh interval
 - refresh interval for Activity Monitor
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - opening Activity Monitor
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c2f067d5efbf5b8e3262311e3b351e0443920287
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8b1910e465e9f2f5d8341c5dd51596d5a6710bb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262438"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>利用状況モニターを開く方法 (SQL Server Management Studio)
-  このトピックを開くには、利用状況モニターに関する情報を取得する方法について説明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセスおよびこれらのプロセスの現在のインスタンスに与える影響[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 また、利用状況モニターの更新間隔の設定方法についても説明します。  
+  このトピックでは、に関する情報を取得、利用状況モニターを開く方法を説明します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセスおよびこれらのプロセスの現在のインスタンスに与える影響[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 また、利用状況モニターの更新間隔の設定方法についても説明します。  
   
  **このトピックの内容**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36174155"
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>SQL Server Management Studio で利用状況モニターを開くには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]標準 ツールバーでをクリックして**利用状況モニター**です。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]標準ツールバーで、をクリックして**の利用状況モニター**します。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名と認証モードを選択して **[接続]** をクリックします。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36174155"
   
 #### <a name="to-open-activity-monitor-in-object-explorer"></a>オブジェクト エクスプローラーで利用状況モニターを開くには  
   
--   オブジェクト エクスプ ローラーでインスタンス名を右クリックし、**利用状況モニター**です。  
+-   オブジェクト エクスプ ローラーで、インスタンス名を右クリックし、**の利用状況モニター**します。  
   
 #### <a name="to-open-activity-monitor-when-opening-sql-server-management-studio"></a>SQL Server Management Studio を開くときに利用状況モニターを開くには  
   

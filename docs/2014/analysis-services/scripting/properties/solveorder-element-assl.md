@@ -1,5 +1,5 @@
 ---
-title: SolveOrder 要素 (ASSL) |Microsoft ドキュメント
+title: SolveOrder 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - SolveOrder element
 ms.assetid: ec43e055-97dd-4f2a-9a7c-2df2e1119e56
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed5092f93494162179dc2ee142a6769eddd5d6da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: defbaca134f92df4cf765dda68ad2fb30c848800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173293"
 ---
 # <a name="solveorder-element-assl"></a>SolveOrder 要素 (ASSL)
-  解決順序を示す、 [CalculationProperty](../objects/calculationproperty-element-assl.md)要素は、計算されるメンバーまたは計算されるセル定義に適用します。  
+  解決順序を示す、 [CalculationProperty](../objects/calculationproperty-element-assl.md)要素は、計算されるメンバーまたは計算されるセル定義に適用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36176703"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `SolveOrder`プロパティに適用されます`CalculationProperty`要素を[CalculationType](calculationtype-element-assl.md)の*メンバー*または*セル*です。  
+ `SolveOrder`プロパティに適用される`CalculationProperty`を持つ要素を[CalculationType](calculationtype-element-assl.md)の*メンバー*または*セル*します。  
   
  親に対応する要素`SolveOrder`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.CalculationProperty>します。  
   

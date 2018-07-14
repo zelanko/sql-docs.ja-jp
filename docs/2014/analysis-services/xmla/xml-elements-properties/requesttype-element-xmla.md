@@ -1,5 +1,5 @@
 ---
-title: RequestType 要素 (XMLA) |Microsoft ドキュメント
+title: RequestType 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - RequestType element
 ms.assetid: 54270a57-e327-4233-b4b2-d85b44652ac5
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b1b2bcc4bf6f97659239a9e53d4adac52d7794a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d73bcac80918bc79064e0b6e1a4eabf315cdcd9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171193"
 ---
 # <a name="requesttype-element-xmla"></a>RequestType 要素 (XMLA)
-  によって返されるメタデータの種類を決定、 [Discover](../xml-elements-methods-discover.md)メソッドです。  
+  によって返されるメタデータの種類を判断、 [Discover](../xml-elements-methods-discover.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -60,11 +60,11 @@ ms.locfileid: "36176247"
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[検出します。](../xml-elements-methods-discover.md)|  
+|親要素|[検出](../xml-elements-methods-discover.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `RequestType` 要素は、`Discover` メソッドがデータを返す基となるスキーマ行セットを決定します。 この列挙体はでサポートされているスキーマ行セットの名前に制限されて[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 スキーマ行セットの詳細については、次を参照してください。 [Analysis Services のスキーマ行セット](../../schema-rowsets/analysis-services-schema-rowsets.md)です。  
+ `RequestType` 要素は、`Discover` メソッドがデータを返す基となるスキーマ行セットを決定します。 この列挙体をサポートするスキーマ行セットの名前に制限は[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。 スキーマ行セットの詳細については、次を参照してください。 [Analysis Services のスキーマ行セット](../../schema-rowsets/analysis-services-schema-rowsets.md)します。  
   
 > [!NOTE]  
 >  `RequestType` 要素は、スキーマ行セットの名前だけを列挙します。 スキーマ行セット GUID が使用された場合、エラーが発生します。  

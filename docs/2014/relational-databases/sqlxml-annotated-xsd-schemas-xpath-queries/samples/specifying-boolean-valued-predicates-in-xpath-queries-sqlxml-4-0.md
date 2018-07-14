@@ -1,5 +1,5 @@
 ---
-title: ブール値述語を指定する XPath クエリ (SQLXML 4.0) |Microsoft ドキュメント
+title: XPath クエリ (SQLXML 4.0) でのブール値述語の指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - multiple predicates
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22c104784dfda86645a869736927367217ab5ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b6ab1ec725924479a30f2f8df43e1c0ccd4c6e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225172"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>XPath クエリでのブール値述語の指定 (SQLXML 4.0)
-  以下の例では、XPath クエリにブール値述語を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプル スキーマについては、次を参照してください。 [XPath の例のサンプル注釈付き XSD スキーマ&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)です。  
+  以下の例では、XPath クエリにブール値述語を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプル スキーマについては、次を参照してください。 [XPath の例のサンプル注釈付き XSD スキーマ&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36166046"
 /child::Customer[attribute::CustomerID="1"]/child::Order[attribute::OrderID="Ord-43860"]  
 ```  
   
- ショートカットを`attribute`軸 (@)、指定できるためと、`child`軸は、既定値、クエリから省略することができます。  
+ ショートカット、`attribute`軸 (@) を指定できますので、`child`軸は既定のクエリから省略できます。  
   
 ```  
 /Customer[@CustomerID="1"]/Order[@SalesOrderID="Ord-43860"]  
@@ -50,7 +50,7 @@ ms.locfileid: "36166046"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)し、テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  コピー、[サンプル スキーマ コード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (BooleanValuedPredicatesA.xml) を作成し、SampleSchema1.xml を保存したディレクトリに保存します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36166046"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
      結果を次に示します。  
   
@@ -94,21 +94,21 @@ ms.locfileid: "36166046"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 連続する述語を入れ子で指定する  
- 次のクエリでは、述語を連続して使用しています。 クエリでは、すべてを返します、 **\<顧客 >** 両方がある、コンテキスト ノードの子要素、 **SalesPersonID** 277 の値を持つ属性と**TerritoryID**3 の値を持つ属性。  
+ 次のクエリでは、述語を連続して使用しています。 クエリでは、すべてを返します、 **\<顧客 >** 両方があるコンテキスト ノードの子要素を**SalesPersonID** 277 の値を持つ属性と**TerritoryID**属性値は 3 です。  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- クエリを返します、 **\<顧客 >** を述語で指定された両方の条件を満たす要素。  
+ クエリが返す、 **\<顧客 >** を述語で指定された両方の条件を満たす要素。  
   
- ショートカットを`attribute`軸 (@)、指定できるためと、`child`軸は、既定値、クエリから省略することができます。  
+ ショートカット、`attribute`軸 (@) を指定できますので、`child`軸は既定のクエリから省略できます。  
   
 ```  
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 次の XPath クエリでは、述語を入れ子にして使用しています。 クエリでは、すべてを返します、 **\<顧客 >** コンテキスト ノードの子要素を含む**\<順序 >** に少なくとも 1 つの子要素 **\<順序 >** を持つ要素を**SalesPersonID**属性の値は 2 です。  
+ 次の XPath クエリでは、述語を入れ子にして使用しています。 クエリでは、すべてを返します、 **\<顧客 >** コンテキスト ノードの子要素が含まれる**\<順序 >** に少なくとも 1 つの子要素 **\<順序 >** を持つ要素を**SalesPersonID**属性 2 の値。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -116,7 +116,7 @@ ms.locfileid: "36166046"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)し、テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  コピー、[サンプル スキーマ コード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (nestedSuccessive.xml) を作成し、SampleSchema1.xml を保存したディレクトリに保存します。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36166046"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  次は結果の一部です。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36166046"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 最上位の述語を指定する  
- 次のクエリを返します、 **\<顧客 >** がコンテキスト ノードの子要素ノード**\<順序 >** 子要素です。 このクエリでは、ロケーション パスを最上位の述語としてテストします。  
+ 次のクエリを返します、 **\<顧客 >** を持つコンテキスト ノードの子の要素ノード**\<順序 >** 子要素。 このクエリでは、ロケーション パスを最上位の述語としてテストします。  
   
 ```  
 /child::Customer[child::Order]  
@@ -185,7 +185,7 @@ ms.locfileid: "36166046"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)し、テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  コピー、[サンプル スキーマ コード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (TopLevelPredicate.xml) を作成し、SampleSchema1.xml を保存したディレクトリに保存します。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "36166046"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  結果の一部を次に示します。  
   

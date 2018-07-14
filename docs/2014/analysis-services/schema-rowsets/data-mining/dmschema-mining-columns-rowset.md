@@ -1,5 +1,5 @@
 ---
-title: DMSCHEMA_MINING_COLUMNS 行セット |Microsoft ドキュメント
+title: DMSCHEMA_MINING_COLUMNS 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_COLUMNS rowset
 ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d53285b088b471ad7a5fca87536cc897db8126d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60dc2e773b93f27fe96489bcb55fdfe22c3168d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232062"
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>DMSCHEMA_MINING_COLUMNS 行セット
-  すべてのデータ マイニング モデルの個々 の列について説明します[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 この行セットは、現在のカタログに制限されます。  
+  すべてのデータ マイニング モデルの個々 の列について説明します[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。 この行セットは、現在のカタログに制限されます。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  `DMSCHEMA_MINING_COLUMNS`行セットには、次の列が含まれています。  
@@ -43,13 +43,13 @@ ms.locfileid: "36165933"
 |`COLUMN_GUID`|`DBTYPE_GUID`||列の GUID。 この列は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でサポートされていないため、常に `NULL` が格納されます。|  
 |`COLUMN_PROPID`|`DBTYPE_UI4`||列のプロパティ ID。 この列は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でサポートされていないため、常に `NULL` が格納されます。|  
 |`ORDINAL_POSITION`|`DBTYPE_UI4`||列の位置を表す序数。 列には 1 から始まる連番が付けられます。 列に安定した序数が付けられていない場合、この列には `NULL` が格納されます。|  
-|`COLUMN_HAS_DEFAULT`|`DBTYPE_BOOL`||列に既定値があるかどうかを示すブール値。<br /><br /> 列に既定値がある場合は `TRUE`、それ以外の場合は `FALSE` になります。|  
-|`COLUMN_DEFAULT`|`DBTYPE_WSTR`||列の既定値です。<br /><br /> 既定値が `NULL` 値である場合、`COLUMN_HASDEFAULT` には `TRUE` が格納され、この列には `NULL` が格納されます。|  
-|`COLUMN_FLAGS`|`DBTYPE_UI4`||列の特性を記述するビットマスク。 `DBCOLUMNFLAGS` の列挙型は、ビットマスク内のビットを指定します。 この列が空になることはありません。|  
+|`COLUMN_HAS_DEFAULT`|`DBTYPE_BOOL`||列が既定値を持つかどうかを示すブール値。<br /><br /> 列に既定値がある場合は `TRUE`、それ以外の場合は `FALSE` になります。|  
+|`COLUMN_DEFAULT`|`DBTYPE_WSTR`||列の既定値。<br /><br /> 既定値が `NULL` 値である場合、`COLUMN_HASDEFAULT` には `TRUE` が格納され、この列には `NULL` が格納されます。|  
+|`COLUMN_FLAGS`|`DBTYPE_UI4`||列の特性を記述するビットマスクです。 `DBCOLUMNFLAGS` の列挙型は、ビットマスク内のビットを指定します。 この列が空になることはありません。|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||列で NULL 値が許容されるかどうかを示すブール値。<br /><br /> 列で NULL 値が許容されないことがわかっている場合は `FALSE`、それ以外の場合は `TRUE` になります。|  
 |`DATA_TYPE`|`DBTYPE_UI2`||列のデータ型のインジケーターです。 次の一覧に、返されるインジケーターの種類の例を示します。<br /><br /> "`TABLE`" は `DBTYPE_HCHAPTER` を返します。<br /><br /> "`TEXT`" は `DBTYPE_WCHAR` を返します。<br /><br /> "`LONG`" は `DBTYPE_I8` を返します。<br /><br /> "`DOUBLE`" は `DBTYPE_R8` を返します。<br /><br /> "`DATE`" は `DBTYPE_DATE` を返します。|  
 |`TYPE_GUID`|`DBTYPE_GUID`||列のデータ型の GUID。 この列は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でサポートされていないため、常に `VT_NULL` が格納されます。|  
-|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||列に格納できる値の最大の長さ。 文字、バイナリ、またはビットの列の場合、これは次のいずれかになります。<br /><br /> 文字、バイト、またはビット単位の長さが定義されている場合、型の列にそれぞれの列の最大長。 たとえば、SQL テーブルの `CHAR(5)` 列は、最大の長さが 5 になります。<br />文字、バイト、またはビット列の長さが定義されていない場合、型の列にそれぞれのデータ型の最大長。<br />-ゼロ (0) 場合は、列でも、データ型がある定義されている最大長。<br />-   `NULL` その他のすべての型の列|  
+|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||列に格納できる値の最大の長さ。 文字、バイナリ、またはビットの列の場合、これは次のいずれかになります。<br /><br /> 文字、バイト、またはビット単位の長さが定義されている場合、型の列にそれぞれの列の最大長。 たとえば、SQL テーブルの `CHAR(5)` 列は、最大の長さが 5 になります。<br />-の文字、バイト、またはビット列の長さが定義されていない場合、型の列にそれぞれのデータ型の最大長。<br />ゼロ (0) がある定義されている最大長の列も、データ型でもない場合。<br />-   `NULL` その他のすべての型の列|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||列の型が文字またはバイナリである場合は、列の最大の長さ (単位はオクテット (バイト))。 ゼロ (0) の値は、列に最大の長さがないことを意味します。 その他の種類の列の場合、この列には `NULL` が格納されます。|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||列のデータ型が `VARNUMERIC` 以外の数値データ型である場合は、列の最大有効桁数。<br /><br /> 列のデータ型が数値でないか、`NULL` である場合は、`VARNUMERIC` になります。<br /><br /> データ型が `DBTYPE_DECIMAL` または `DBTYPE_NUMERIC` である列の有効桁数は、列の定義によって異なります。|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||列の型インジケーターが `DBTYPE_DECIMAL`、`DBTYPE_NUMERIC`、または `DBTYPE_VARNUMERIC` である場合は、小数点以下の桁数になります。 それ以外の場合、この列には `VT_NULL` が格納されます。|  
@@ -68,7 +68,7 @@ ms.locfileid: "36165933"
 |`CONTENT_TYPE`|`DBTYPE_WSTR`||列のコンテンツの記述。 この列の値は次のいずれかになります。<br /><br /> -   "`KEY`"<br />-   "`DISCRETE`"<br />-   "`CONTINUOUS`"<br />-"`DISCRETIZED(`[引数]`)`"<br />-   "`ORDERED`"<br />-   "`KEY TIME`"<br />-   "`CYCLICAL`"<br />-   "`PROBABILITY`"<br />-   "`VARIANCE`"<br />-   "`STDEV`"<br />-   "`SUPPORT`"<br />-   "`PROBABILITY_VARIANCE`"<br />-   "`PROBABILITY_STDEV`"<br />-   `"KEY SEQUENCE`"|  
 |`MODELING_FLAG`|`DBTYPE_WSTR`||フラグのコンマ区切りの一覧。 定義済みフラグには次のものがあります。<br /><br /> -   "`MODEL_EXISTENCE_ONLY`"<br />-   "`REGRESSOR`"<br /><br /> アルゴリズムに固有のモデリング フラグがこの列に格納されることもあります。|  
 |`IS_RELATED_TO_KEY`|`DBTYPE_BOOL`||列がキーに関連するかどうかを示すブール値。<br /><br /> この列がキーに関連している場合は `TRUE` になります。 キーが 1 つの列である場合、必要に応じてその列名を `RELATED_ATTRIBUTE` フィールドに格納することができます。|  
-|`RELATED_ATTRIBUTE`|`DBTYPE_WSTR`||対象の列を現在の列が関連するかが特殊なプロパティの名前。|  
+|`RELATED_ATTRIBUTE`|`DBTYPE_WSTR`||現在の列に関連またはのいずれか、特殊なプロパティは、ターゲット列の名前。|  
 |`IS_INPUT`|`DBTYPE_BOOL`||列が入力列であるかどうかを示すブール値。<br /><br /> これが入力列である場合は `VARIANT_TRUE` になります。|  
 |`IS_PREDICTABLE`|`DBTYPE_BOOL`||列が予測可能列であるかどうかを示すブール値。<br /><br /> 列が予測可能である場合は `TRUE` になります。|  
 |`CONTAINING_COLUMN`|`DBTYPE_WSTR`||この列を格納する `TABLE` 列の名前。 この列が別の列に格納されない場合、この列には `NULL` が格納されます。|  

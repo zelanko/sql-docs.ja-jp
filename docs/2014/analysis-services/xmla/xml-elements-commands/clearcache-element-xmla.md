@@ -1,5 +1,5 @@
 ---
-title: ClearCache 要素 (XMLA) |Microsoft ドキュメント
+title: ClearCache 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ClearCache command
 ms.assetid: e154b489-e443-469a-9490-43c62da62e11
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: abf566bd7be4f1a0aaba504acc299d266f3fe2ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 37b43439705b3288530a919f77da7b0ead461b35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188969"
 ---
 # <a name="clearcache-element-xmla"></a>ClearCache 要素 (XMLA)
-  指定したオブジェクトのメモリ キャッシュをクリア、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
+  指定したオブジェクトのメモリ キャッシュをクリアする[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36176481"
 |子要素|[Object](../xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
- `ClearCache`コマンドでは、指定されたデータベース、ディメンション、キューブ、メジャー グループ、またはパーティションのキャッシュをフラッシュ上、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。 データベース、ディメンション、キューブ、メジャー グループ、またはパーティション以外のオブジェクトが `Object` 要素で指定された場合、エラーが発生します。  
+ `ClearCache`コマンドでは、指定したデータベース、ディメンション、キューブ、メジャー グループ、またはパーティションのキャッシュをフラッシュで、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。 データベース、ディメンション、キューブ、メジャー グループ、またはパーティション以外のオブジェクトが `Object` 要素で指定された場合、エラーが発生します。  
   
 ## <a name="see-also"></a>参照  
  [コマンド&#40;XMLA&#41;](xml-elements-commands.md)  

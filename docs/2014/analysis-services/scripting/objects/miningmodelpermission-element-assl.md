@@ -1,5 +1,5 @@
 ---
-title: MiningModelPermission 要素 (ASSL) |Microsoft ドキュメント
+title: MiningModelPermission 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningModelPermission element
 ms.assetid: 4bd2f7e7-ff0d-404e-96fb-7e2c4eeb91e9
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42a02eedcc2c054269872e4c0f9523ab63632eda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb714eb08fac3a6611669d48bf10aaee3580ee8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176439"
 ---
 # <a name="miningmodelpermission-element-assl"></a>MiningModelPermission 要素 (ASSL)
-  アクセス許可のメンバーを定義、[ロール](role-element-assl.md)、個別の要素がある[MiningModel](miningmodel-element-assl.md)要素。  
+  メンバーのアクセス許可を定義、[ロール](role-element-assl.md)要素は、個々 のケースが[MiningModel](miningmodel-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,13 +64,13 @@ ms.locfileid: "36175240"
 |子要素|[AllowBrowsing](../properties/allowbrowsing-element-assl.md)、 [AllowDrillThrough](../properties/allowdrillthrough-element-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、追加することによってマイニング構造でドリルスルーを有効にすることができます、`AllowDrillthrough`するアクセス許可、 [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md)コレクション。 場合`AllowDrillthrough`がマイニング構造とマイニング モデルを持つロールのメンバーの両方で有効になって[AllowDrillThrough 要素&#40;ASSL&#41; ](../properties/allowdrillthrough-element-assl.md)モデルに対するアクセス許可が、データ マイニング モデルをクエリおよびを返すことができます次の構文を使用して、モデルに含まれていない構造列:  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、追加することによってマイニング構造でドリルスルーを有効にすることができます、`AllowDrillthrough`へのアクセス許可、 [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md)コレクション。 場合`AllowDrillthrough`がマイニング構造とマイニング モデルを持つロールのメンバーの両方で有効になって[AllowDrillThrough 要素&#40;ASSL&#41; ](../properties/allowdrillthrough-element-assl.md)モデルに対する権限は、データ マイニング モデルを照会し、返す含まれていないモデルでは、次の構文を使用して構造列:  
   
 ```  
 SELECT StructureColumn('<column name>') FROM <model>.CASES  
 ```  
   
- したがって、機密データまたは個人情報を保護するために、必要な場合は、マイニング モデルのみに `AllowDrillthrough` 権限を許可する必要があります。 詳細については、次を参照してください。 [AllowDrillThrough 要素&#40;ASSL&#41;](../properties/allowdrillthrough-element-assl.md)です。  
+ したがって、機密データまたは個人情報を保護するために、必要な場合は、マイニング モデルのみに `AllowDrillthrough` 権限を許可する必要があります。 詳細については、次を参照してください。 [AllowDrillThrough 要素&#40;ASSL&#41;](../properties/allowdrillthrough-element-assl.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.MiningModelPermission>します。  
   

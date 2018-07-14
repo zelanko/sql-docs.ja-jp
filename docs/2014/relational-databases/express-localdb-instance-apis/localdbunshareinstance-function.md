@@ -1,5 +1,5 @@
 ---
-title: LocalDBUnshareInstance 関数 |Microsoft ドキュメント
+title: LocalDBUnshareInstance 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3c69e0192e7a6a7688aa1ccac75390ede0173d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: fb600b6dfb2d6432cdb320e036459210aba69cd9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221272"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 関数
   指定した SQL Server Express LocalDB インスタンスの共有を停止します。  
@@ -72,7 +72,7 @@ HRESULT LocalDBUnShareInstance(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)です。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

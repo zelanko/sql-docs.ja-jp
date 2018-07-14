@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 030b8563ac272b0594697048169ade487c2321bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: afcc00e0f6bcc3341f7aafc23aeddfee5e8e8dff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170763"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>解釈された Transact-SQL を使用したメモリ最適化テーブルへのアクセス
   いくつかの例外を除き、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリまたは DML 操作 (SELECT、INSERT、UPDATE、または DELETE)、アドホック バッチ、および SQL モジュール (ストアド プロシージャ、テーブル値関数、トリガー、ビューなど) を使用して、メモリ最適化テーブルにアクセスできます。  
@@ -57,7 +57,7 @@ ms.locfileid: "36177304"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用した明示的または暗黙的なトランザクションからメモリ最適化テーブルにアクセスする場合は、SNAPSHOT、REPEATABLEREAD、SERIALIZABLE などの分離レベルのテーブル ヒントを含める必要があります。あるいは、MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT を使用することもできます。 詳細については、次を参照してください。[メモリ最適化テーブルでのトランザクション分離レベルに関するガイドライン](memory-optimized-tables.md)と[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)です。  
+ 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用した明示的または暗黙的なトランザクションからメモリ最適化テーブルにアクセスする場合は、SNAPSHOT、REPEATABLEREAD、SERIALIZABLE などの分離レベルのテーブル ヒントを含める必要があります。あるいは、MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT を使用することもできます。 詳細については、次を参照してください。[メモリ最適化テーブルでのトランザクション分離レベルに関するガイドライン](memory-optimized-tables.md)と[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)します。  
   
 > [!NOTE]  
 >  自動コミット モードで実行されるクエリでアクセスするメモリ最適化テーブルの場合、分離レベルのテーブル ヒントは必要ありません。  

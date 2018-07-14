@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], events
 - events [SQL Server], filters
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23d93e00dde20ef9d97fd707dbb938907e9ef7a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 367a9669c11cb1841a4af3801abb98e385571388
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212832"
 ---
 # <a name="filter-a-trace"></a>トレースへのフィルターの適用
   フィルターを使用すると、トレースに出力するイベントを制限することができます。 フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。 たとえば、トレースに出力する Windows ユーザーとして特定のユーザー名を指定すると、それらのユーザーのデータのみが出力されます。  
@@ -137,11 +137,11 @@ ms.locfileid: "36174690"
 |**TargetUserName**|LIKE、NOT LIKE|  
 |**TextData** <sup>1</sup>|LIKE、NOT LIKE|  
 |**TransactionID**|=、<>、>=、<=|  
-|**Type**|=、<>、>=、<=|  
+|**型**|=、<>、>=、<=|  
 |**Writes**|=、<>、>=、<=|  
 |**XactSequence**|=、<>、>=、<=|  
   
- <sup>1</sup>からのイベントをトレースしている場合、 **osql**ユーティリティ、または**sqlcmd**ユーティリティ、常に追加**%** でフィルターする、 **TextData**データ列です。  
+ <sup>1</sup>からイベントをトレースしている場合、 **osql**ユーティリティまたは**sqlcmd**ユーティリティでは、常に追加**%** でフィルターする、 **TextData**データ列。  
   
  セキュリティ対策として、SQL トレースは、パスワードに影響を与えるセキュリティ関連ストアド プロシージャの情報をトレースの対象から自動的に除外します。 このセキュリティ メカニズムは変更不可能で、常に有効な状態になっています。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上でのすべての動作状況をトレースする権限を持たないユーザーがパスワードを取得するのを防ぎます。  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e8bd5260d3da017c5bd401d8322eebbfa6a3b0eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c1dfbb97a7b02ebaaa82369f7d1883ad4d2eb299
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321752"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>データ領域の表示 (レポート ビルダーおよび SSRS)
   データ領域には、すべてのレポート アイテムに適用される一般的な表示動作に加えて、そのデータ領域が従う改ページ動作および表示動作があります。 データ領域固有の表示規則には、データ領域の拡張方法、特殊なセル (コーナーのセルやヘッダー セルなど) の表示方法、およびデータ領域を右から左に記述して表示する方法が含まれます。 ここでは、データ領域のさまざまな部分の表示方法について説明します。  
@@ -28,7 +28,7 @@ ms.locfileid: "36164516"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="tablix-data-regions"></a>Tablix データ領域  
- Tablix データ領域では、テーブル、マトリックス、および一覧を作成でき、列と行で構成されたグリッドとして表示されます。 行と列の交差部分がセルになります。 表示されると、このセルには、データや他のレポート アイテム (画像、四角形、テキスト ボックス、サブレポートなど) が含まれます。 Tablix データ領域は、縦方向にも横方向にも拡張可能です。 さらに、コーナーのセル、データ領域のヘッダー セル、およびデータ領域の本文セルも、その内容に基づいて拡張できます。 データ領域が複数ページにわたる場合、データ領域で繰り返し使用するように設定されているレポート アイテムは、データ領域が表示される各ページに表示されます。 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)です。  
+ Tablix データ領域では、テーブル、マトリックス、および一覧を作成でき、列と行で構成されたグリッドとして表示されます。 行と列の交差部分がセルになります。 表示されると、このセルには、データや他のレポート アイテム (画像、四角形、テキスト ボックス、サブレポートなど) が含まれます。 Tablix データ領域は、縦方向にも横方向にも拡張可能です。 さらに、コーナーのセル、データ領域のヘッダー セル、およびデータ領域の本文セルも、その内容に基づいて拡張できます。 データ領域が複数ページにわたる場合、データ領域で繰り返し使用するように設定されているレポート アイテムは、データ領域が表示される各ページに表示されます。 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)します。  
   
 ### <a name="right-to-left"></a>右から左  
  右から左に表示するように設定された Tablix データ領域は、左から右に表示された場合のデータ領域のミラー イメージのような構造で表示されます。 データ領域のコーナーは、右上隅に表示されます。 動的な列がレポートに存在する場合、その列は左に展開されます。 右から左方向の設定は、データ領域内のデータの順序には影響しません。単純に、列の順序が異なります。  
@@ -45,7 +45,7 @@ ms.locfileid: "36164516"
  左上隅は、Tablix コーナーと呼ばれます。 Tablix コーナーでは、その中に他のレポート アイテムを含めることができます。ただし、論理的な改ページがコーナーに挿入されている場合は、Tablix データ領域が表示されるときにその改ページは無視されます。  
   
 ### <a name="tablix-body"></a>Tablix 本体  
- Tablix 本体は、Tablix セルで構成されます。 Tablix 本体は、レポート アイテムの改ページ規則および表示動作に基づいて表示されます。 詳細については、次を参照してください。[レポート アイテムのレンダリング&#40;レポート ビルダーおよび SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)です。  
+ Tablix 本体は、Tablix セルで構成されます。 Tablix 本体は、レポート アイテムの改ページ規則および表示動作に基づいて表示されます。 詳細については、次を参照してください。[レポート アイテムのレンダリング&#40;レポート ビルダーおよび SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)します。  
   
 ## <a name="chart-gauge-and-map-data-regions"></a>グラフ、ゲージ、およびマップのデータ領域  
  グラフ、ゲージ、およびマップのデータ領域は、レポート本文に描画および表示されると、画像のように動作します。 データ領域内の値には、別のレポートへのリンクやブックマークへの移動などのアクションを関連付けることができます。また、こうしたアクションは、レンダラーでサポートされる場合に同様に表示できます。  

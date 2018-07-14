@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 における Analysis Services の機能が廃止されました |Microsoft ドキュメント
+title: SQL Server 2014 における Analysis Services 機能の廃止 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, backward compatibility
 - SSAS, backward compatibility
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - unsupported features [Analysis Services]
 ms.assetid: 39406be1-9819-4629-9c29-b32fb20bab2e
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52b6dbe4ed746b151a6d9bae3a606c2f0e117df4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5a2a17f11d4fd1470c25c4280bda370d49c054a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332492"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>SQL Server 2014 で提供が中止された Analysis Services の機能
   このトピックでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で使用できなくなった [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。  
@@ -34,10 +34,10 @@ ms.locfileid: "36174028"
   
 |カテゴリ|非推奨の機能|代替|  
 |--------------|------------------------|-----------------|  
-|ローカル キューブ|InsertInto 接続文字列プロパティ|ローカル キューブを設定するための元の接続文字列の構文は、CREATE GLOBAL CUBE ステートメントに置き換えられました。 詳細については、次を参照してください。[グローバル キューブの作成ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)です。|  
-|ローカル キューブ|CreateCube 接続文字列プロパティ|ローカル キューブを設定するための元の接続文字列の構文は、CREATE GLOBAL CUBE ステートメントに置き換えられました。 詳細については、次を参照してください。[グローバル キューブの作成ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)です。|  
+|ローカル キューブ|InsertInto 接続文字列プロパティ|ローカル キューブを設定するための元の接続文字列の構文は、CREATE GLOBAL CUBE ステートメントに置き換えられました。 詳細については、次を参照してください。[グローバル キューブの作成ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)します。|  
+|ローカル キューブ|CreateCube 接続文字列プロパティ|ローカル キューブを設定するための元の接続文字列の構文は、CREATE GLOBAL CUBE ステートメントに置き換えられました。 詳細については、次を参照してください。[グローバル キューブの作成ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)します。|  
 |データ マイニング|SQL Server 2000 PMML|SQL Server 2000 PMML 機能は、PMML 仕様では使用できなかったデータ マイニング アルゴリズムによって提供される独自の機能をサポートする専用の拡張機能がある PMML の形式を生成します。 SQL Server 2005 では、Analysis Services によって PMML 機能が新しい PMML 2. 1 標準に更新されました。 そのため、SQL Server 2000 で追加された専用の拡張機能は必要なくなりましたが、このリリースでもサポートされています。|  
-|MDX ステートメント|CREATE ACTION ステートメント|このステートメントは、旧バージョンとの互換性のために用意されています。 このステートメントは、Action オブジェクトに置き換えられました。 最新バージョンでアクションを作成する方法について[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を参照してください[アクション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)です。|  
+|MDX ステートメント|CREATE ACTION ステートメント|このステートメントは、旧バージョンとの互換性のために用意されています。 このステートメントは、Action オブジェクトに置き換えられました。 最近のバージョンのアクションを作成する方法の詳細についての[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を参照してください[アクション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)します。|  
   
 ## <a name="discontinued-features-in-previous-releases"></a>以前のリリースで廃止された機能  
  SQL Server 2000 Analysis Services データベースを新しいバージョンに移行する際に使用された移行ウィザードは、SQL Server 2000 がサポートされなくなったため、提供が中止されました。  

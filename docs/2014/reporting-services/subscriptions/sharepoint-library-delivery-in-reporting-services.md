@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], report delivery
 - delivering reports [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e26aab503c41cbd64f16708c8b420bf3ae93af1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf32579a40b3290e0126b3a1a92665643ae8c3cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264198"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services での SharePoint ライブラリへの配信
   SharePoint 統合用に構成されているレポート サーバーでは、レポートを SharePoint ライブラリに送信する配信拡張機能を使用できます。  
@@ -75,10 +75,10 @@ ms.locfileid: "36174081"
  対象ライブラリでレポートが表示されるときのファイル名と拡張子を指定します。 ファイル拡張子を指定しなければ、レポートの出力形式に基づいてレポート サーバーで拡張子が作成されます。 この値は必須です。 ファイル名に使用できない文字は、: \ / * ? " < > | # { } % です。 " \< > |# { } %  
   
  [タイトル]  
- 省略可能な指定`Title`ターゲット ライブラリ内のレポートのプロパティです。 これは、ライブラリに格納されているすべてのアイテムに対する標準プロパティです。 ユーザーは、SharePoint サイトでライブラリ コンテンツを表示するときに、このプロパティを表示するか非表示にするかを指定できます。  
+ 省略可能な指定`Title`対象ライブラリ内のレポートのプロパティ。 これは、ライブラリに格納されているすべてのアイテムに対する標準プロパティです。 ユーザーは、SharePoint サイトでライブラリ コンテンツを表示するときに、このプロパティを表示するか非表示にするかを指定できます。  
   
  [パス]  
- SharePoint ライブラリへの完全修飾 URL (SharePoint Web アプリケーションおよびサイトを含む) を指定します。 例:http://mySharePointWeb/MySite/MyDocLib以外の場合は、"http://mySharePointWeb"Web アプリケーションを示す"MySite"は、SharePoint サイトと、"MyDocLib"は、SharePoint ライブラリ、レポートが配信されます。  
+ SharePoint ライブラリへの完全修飾 URL (SharePoint Web アプリケーションおよびサイトを含む) を指定します。 例:http://mySharePointWeb/MySite/MyDocLibが"http://mySharePointWeb"は Web アプリケーションでは、"MySite"は、SharePoint サイトと、"MyDocLib"は、レポートを配信する SharePoint ライブラリです。  
   
  ページ、サイト、またはリストを指定することはできません。 対象コンテナーは、同じサイトまたはファームにあるライブラリであることが必要です。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36174081"
  同じファイル名と拡張子を持つファイルは、サブスクリプションの処理時に新しい方のバージョンに置き換えられます。 既存のファイルを新しいバージョンに置き換える場合、 **[上書き]** を選択します。 サブスクリプションでファイルを置き換えない場合には、 **[なし]** を選択します。 この場合、対象ファイルと名前と拡張子が同じであるファイルが存在すると、配信が実行されません。 ファイル名の末尾に数値を付加して、同じファイルの連続するバージョンを追加する場合は、 **[自動増分]** を選択します。  
   
  [自動コピー]  
- [自動コピー] 機能を使用して、最新バージョンのファイルを複数の場所に自動コピーする場合、 **[上書き]** が有効な場合にのみファイルがコピーされます。 使用した場合**Autoincrement**または**None**、配信が失敗し、`rsDeliveryError`エラーが発生します。  
+ [自動コピー] 機能を使用して、最新バージョンのファイルを複数の場所に自動コピーする場合、 **[上書き]** が有効な場合にのみファイルがコピーされます。 使用した場合**Autoincrement**または**なし**、配信が失敗し、`rsDeliveryError`エラーが発生します。  
   
 ## <a name="see-also"></a>参照  
  [SharePoint モードのレポート サーバーのサブスクリプション作成し、管理](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   

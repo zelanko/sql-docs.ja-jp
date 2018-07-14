@@ -1,5 +1,5 @@
 ---
-title: RelationalDataSource データ型 (ASSL) |Microsoft ドキュメント
+title: RelationalDataSource データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RelationalDataSource data type
 ms.assetid: 2b99d7d0-731d-4506-8c37-678a5dc29c8a
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2928f86dd45538cc1507718008113522d02f80a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0739648e7e843bbfce62953a1bae543be4f2f9c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204132"
 ---
 # <a name="relationaldatasource-data-type-assl"></a>RelationalDataSource データ型 (ASSL)
-  表す派生データ型を定義、[データソース](../objects/datasource-element-assl.md)要素は、リレーショナル データ ソースに基づきます。  
+  表す派生データ型を定義、 [DataSource](../objects/datasource-element-assl.md)要素は、リレーショナル データ ソースに基づきます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36174018"
 |------------------|-------------|  
 |親要素|なし|  
 |子要素|なし|  
-|派生要素|[DataSource](../objects/datasource-element-assl.md) ([DataSources](../collections/datasources-element-assl.md)のコレクション[データベース](../objects/database-element-assl.md))|  
+|派生要素|[DataSource](../objects/datasource-element-assl.md) ([データソース](../collections/datasources-element-assl.md)のコレクション[データベース](../objects/database-element-assl.md))|  
   
 ## <a name="remarks"></a>コメント  
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.RelationalDataSource>します。  

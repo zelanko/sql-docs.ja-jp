@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.tablix.visibility.f1
 - sql12.rtp.rptdesigner.groupproperties.advanced.f1
@@ -36,15 +36,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.tablix.filter.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 80661ab558038af26a9b98fef925c2ec24df83ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8579071257a3f4026a111aaf16d7898bbd28cbb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323902"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)
   テーブル、マトリックス、および一覧は、行と列で構成されたセルにレポート データを表示するデータ領域です。 セルには通常、テキスト、日付、数字などのテキスト データが含まれていますが、ゲージ、グラフ、または画像などのレポート アイテムも含めることができます。 テーブル、マトリックス、および一覧をまとめて Tablix データ領域と呼ぶことがあります。  
@@ -91,7 +91,7 @@ ms.locfileid: "36173421"
   
  ドリルダウン トグルを含めて、最初は詳細データを非表示にすることもできます。ユーザーは、トグルをクリックすることにより、表示するデータの量を調整できます。  
   
- 詳細については、次を参照してください。[マトリックス&#40;レポート ビルダーおよび SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)です。  
+ 詳細については、次を参照してください。[マトリックス&#40;レポート ビルダーおよび SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)します。  
   
 
   
@@ -100,7 +100,7 @@ ms.locfileid: "36173421"
   
  ![ツールボックスから追加された新しい一覧、選択](../media/rs-listtemplatenewselected.gif "ツールボックスから追加された新しい一覧、選択")  
   
- 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)です。  
+ 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)します。  
   
 
   
@@ -138,23 +138,23 @@ ms.locfileid: "36173421"
   
 -   [グループまたは Tablix データ領域に合計を追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [セル内のアイテムを変更&#40;レポート ビルダーおよび SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [セル内のアイテムの変更&#40;レポート ビルダーおよび SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
 -   [行の高さまたは列の幅を変更する&#40;レポート ビルダーおよび SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
--   [挿入または列を削除する&#40;レポート ビルダーおよび SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
+-   [挿入または列の削除&#40;レポート ビルダーおよび SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
--   [挿入または行を削除する&#40;レポート ビルダーおよび SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
+-   [挿入または削除行&#40;レポート ビルダーおよび SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
   
--   [データ領域内のセルをマージ&#40;レポート ビルダーおよび SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
+-   [データ領域のセルを結合&#40;レポート ビルダーおよび SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [再帰型階層グループを作成する&#40;レポート ビルダーおよび SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+-   [再帰型階層グループの作成&#40;レポート ビルダーおよび SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
--   [追加またはデータ領域のグループを削除&#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+-   [追加またはデータ領域でグループを削除する&#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
 -   [グループ ヘッダーとフッターを表示&#40;レポート ビルダーおよび SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
--   [階段状レポートを作成する&#40;レポート ビルダーおよび SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
+-   [階段状レポート作成&#40;レポート ビルダーおよび SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
 -   [追加、移動、または削除、テーブル、マトリックス、または一覧&#40;レポート ビルダーおよび SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   

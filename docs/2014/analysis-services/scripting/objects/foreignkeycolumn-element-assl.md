@@ -1,5 +1,5 @@
 ---
-title: ForeignKeyColumn 要素 (ASSL) |Microsoft ドキュメント
+title: ForeignKeyColumn 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ForeignKeyColumn element
 ms.assetid: 6c00dcc6-8d5b-4293-8b72-c7a22e298c8d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb037ad571884c6bd5cbc6936d3072078f2decc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 824589905f1acf1834e971b8a049005ef1465c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207882"
 ---
 # <a name="foreignkeycolumn-element-assl"></a>ForeignKeyColumn 要素 (ASSL)
   リレーショナル データ ソースの親テーブルへの結合を識別します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36174801"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 詳細については、`DataItem`の Analysis Services スクリプト言語 (ASSL) オブジェクトおよびプロパティのテーブルを含む、型、`DataItem`を入力しを参照してください[DataItem データ型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)です。  
+ 詳細については、`DataItem`の Analysis Services スクリプト言語 (ASSL) オブジェクトおよびプロパティのテーブルを含む、型、`DataItem`入力を参照してください[DataItem データ型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで `ForeignKeyColumns` コレクションの親に対応する要素は、<xref:Microsoft.AnalysisServices.TableMiningStructureColumn> です。  
   

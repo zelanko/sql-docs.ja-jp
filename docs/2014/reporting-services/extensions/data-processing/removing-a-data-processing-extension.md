@@ -16,15 +16,15 @@ helpviewer_keywords:
 - removing data processing extensions
 ms.assetid: 1d89e32b-0631-44f6-8178-a57fb791d26d
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0ea72edfcea9935b858631a639ec51f67a3feeac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4327b8f9f6c3d517625f7f6a8e51ded0f90850cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268468"
 ---
 # <a name="removing-a-data-processing-extension"></a>データ処理拡張機能の削除
   データ処理拡張機能を削除する場合は、データ処理拡張機能の **Extension** 要素を構成ファイルから削除するだけです。 レポート サーバーに加えてレポート デザイナーにもエントリを作成した場合は、RSReportServer.config ファイルと RSReportDesigner.config ファイルの両方から **Extension** 要素を削除します。 構成情報を削除すると、そのコンポーネントではデータ処理拡張機能を使用できなくなります。  

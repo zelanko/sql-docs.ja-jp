@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dc.collectionsetprop.uploads.f1
 - sql12.swb.dc.collectionsetprop.general.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0c92ce1b7ce29e2994ed1ab24feee9d1eca35f4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9521e31437d5b5840fe051e97c506a959bf8f06f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252274"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>コレクション セットのスケジュールの表示または変更 (SQL Server Management Studio)
   コレクション セットのスケジュールは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して表示または変更できます。  
@@ -108,7 +108,7 @@ ms.locfileid: "36165564"
   
  このページを使用すると、データの収集方法とアップロード方法を構成し、スケジュールを構成し、管理データ ウェアハウスでのデータ保持期間を構成できます。 このページでは、コレクター型や収集頻度などコレクション セットに関する情報や、コレクション セットに使用される入力パラメーターの情報も提供します。  
   
- **Name**  
+ **名前**  
  このページが参照するコレクション セットの名前を表示します。  
   
  **[データの収集およびアップロード]**  
@@ -122,7 +122,7 @@ ms.locfileid: "36165564"
  **[収集頻度 (秒)]**  
  コレクション セット内のコレクション アイテムを表示します。 コレクション アイテムごとに次の情報が提供されます。  
   
--   **Name**  
+-   **名前**  
   
 -   **[コレクターの種類]**  
   

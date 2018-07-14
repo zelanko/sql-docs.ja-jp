@@ -1,5 +1,5 @@
 ---
-title: CLR 統合のカスタム属性の概要 |Microsoft ドキュメント
+title: CLR 統合のカスタム属性の概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - building database objects [CLR integration], custom attributes
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1b80a18cd026645fd036741d45794a12880f36b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2153277cbb0592b808fde3e0a8bec3a8ca582455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324942"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 統合のカスタム属性の概要
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の CLR (共通言語ランタイム) では、属性という説明用のキーワードを使用できます。 これらの属性は、メソッドやクラスなどの多くの要素に関する追加情報を提供します。 属性はオブジェクトのメタデータと共にアセンブリに保存され、記述したコードを他の開発ツールに説明したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部での実行時の動作に影響することを説明するために使用できます。  
   
- CLR ルーチンを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録すると、そのルーチンに関する一連のプロパティが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により抽出されます。 これらのプロパティによって、ルーチンにインデックスを作成できるかどうかなど、そのルーチンの機能が決まります。 たとえば、`DataAccess` プロパティを `DataAccessKind.Read` に設定すると、CLR 関数内から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー テーブルのデータにアクセスできるようになります。 次の例を単純な例を示しています、`DataAccess`ユーザー テーブルからのデータ アクセスを容易にするためにプロパティが設定されている**table1**です。  
+ CLR ルーチンを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録すると、そのルーチンに関する一連のプロパティが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により抽出されます。 これらのプロパティによって、ルーチンにインデックスを作成できるかどうかなど、そのルーチンの機能が決まります。 たとえば、`DataAccess` プロパティを `DataAccessKind.Read` に設定すると、CLR 関数内から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー テーブルのデータにアクセスできるようになります。 次の例を単純なケースを示しています、`DataAccess`ユーザー テーブルからのデータ アクセスを容易に設定されて**table1**します。  
   
 ```csharp  
 using System;  

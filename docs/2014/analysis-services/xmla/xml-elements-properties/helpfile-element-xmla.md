@@ -1,5 +1,5 @@
 ---
-title: HelpFile 要素 (XMLA) |Microsoft ドキュメント
+title: HelpFile 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - HelpFile element
 ms.assetid: 537ea7a8-5064-4a31-b0cd-ab7e891fef09
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6dbaa94570fd865cef79eeff4b13e51f3f8403e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6ccf47f3e47e6521dd9c3909b71315ae4d9768de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195982"
 ---
 # <a name="helpfile-element-xmla"></a>HelpFile 要素 (XMLA)
-  ヘルプ ファイルまたは親を説明するトピックへのパスまたは URL を含む[エラー](error-element-xmla.md)要素。  
+  ヘルプ ファイルまたは親について説明するトピックへのパスまたは URL が含まれています[エラー](error-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

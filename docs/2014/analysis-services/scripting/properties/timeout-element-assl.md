@@ -1,5 +1,5 @@
 ---
-title: Timeout 要素 (ASSL) |Microsoft ドキュメント
+title: Timeout 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Timeout element
 ms.assetid: 7694872b-bd05-459f-b5dc-3cfbd92a9664
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 07aeb620045b3b53bb04369abfd16b0a500f9172
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9069f5ec57d313b89342533d79e66f8c021604e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269558"
 ---
 # <a name="timeout-element-assl"></a>Timeout 要素 (ASSL)
   データの取得を試みたときにタイムアウトをレポートするまでの時間を指定します (秒単位)。  

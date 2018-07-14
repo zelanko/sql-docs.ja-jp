@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c5efc1697e9911a667872f7293ab971b75a1398
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a4249f87cf7a8361056caf6c49b3775848d7dfe5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250192"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
   後で別のプログラムで使われるテキスト ファイルにデータを一括エクスポートする場合や、別のプログラムにより生成されたテキスト ファイルからデータを一括インポートする場合は、文字形式の使用をお勧めします。  
@@ -46,21 +45,21 @@ ms.locfileid: "36173730"
   
 -   変換中に拡張文字が失われないようにするには、Unicode 文字形式を使用するか、コード ページを指定します。  
   
--   `sql_variant` データが文字形式ファイルに保存される場合は、メタデータなしで保存されます。 各データ値に変換されます`char`暗黙的なデータ変換の規則に従って、書式設定します。 `sql_variant` 型の列にインポートされるときは、`char` 型のデータとしてインポートされます。 以外のデータ型の列にインポートするとき`sql_variant`からデータを変換`char`暗黙的な変換を使用しています。 詳細については、「[データ型の変換 &#40;データベース エンジン&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)」を参照してください。  
+-   `sql_variant` データが文字形式ファイルに保存される場合は、メタデータなしで保存されます。 各データ値に変換されます`char`暗黙的なデータ変換の規則に従って、書式設定します。 `sql_variant` 型の列にインポートされるときは、`char` 型のデータとしてインポートされます。 以外のデータ型の列にインポートすると`sql_variant`からデータを変換`char`暗黙的な変換を使用しています。 詳細については、「[データ型の変換 &#40;データベース エンジン&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)」を参照してください。  
   
--   **Bcp**ユーティリティ エクスポート`money`コンマを区切り記号などの任意の桁区切り記号のされず、小数点後以下 4 桁の文字形式データ ファイルとしての値。 たとえば、値 1,234,567.123456 を含む `money` 型の列は、文字列 1234567.1235 としてデータ ファイルに一括エクスポートされます。  
+-   **Bcp**ユーティリティ エクスポート`money`コンマの区切り記号などの任意の桁区切り記号のされず、小数点後以下 4 桁の文字形式データ ファイルとしての値。 たとえば、値 1,234,567.123456 を含む `money` 型の列は、文字列 1234567.1235 としてデータ ファイルに一括エクスポートされます。  
   
 ## <a name="command-options-for-character-format"></a>文字形式のコマンド オプション  
- 使用してテーブルに文字形式のデータをインポートすることができます**bcp**、BULK INSERT または INSERT.SELECT \* FROM OPENROWSET(BULK...)。**bcp** コマンドまたは BULK INSERT ステートメントの場合は、コマンド ラインでデータ形式を指定できます。 INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
+ 使用してテーブルに文字形式のデータをインポートできます**bcp**、BULK INSERT または INSERT.SELECT \* FROM OPENROWSET(BULK...)。**bcp** コマンドまたは BULK INSERT ステートメントの場合は、コマンド ラインでデータ形式を指定できます。 INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
   
  文字形式は、次のコマンド ライン オプションでサポートされています。  
   
 |コマンド|オプション|説明|  
 |-------------|------------|-----------------|  
-|**bcp**|**-c**|により、 **bcp**ユーティリティが文字データを使用します<sup>。1</sup>|  
+|**bcp**|**-c**|により、 **bcp**ユーティリティが文字データを使用する<sup>。1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|データの一括インポート時に文字形式を使用します。|  
   
- <sup>1</sup>文字読み込む (**-c**) の旧バージョンと互換性のある形式にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントを使用して、 **-v**スイッチします。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
+ <sup>1</sup>文字を読み込めません (**-c**) の旧バージョンと互換性のある形式にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントを使用して、 **-v**スイッチします。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
   
  詳細については、[bcp ユーティリティ](../../tools/bcp-utility.md)、「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」、または「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
   

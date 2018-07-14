@@ -1,5 +1,5 @@
 ---
-title: 集計オプションの設定 (集計のデザイン ウィザード) |Microsoft ドキュメント
+title: 集計オプションの設定 (集計のデザイン ウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.setaggregateoptions.f1
 ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 29a9334ebe2f098c805d7093a739ecbf29d18d72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e99f96de2f9b75fb49b0de5a73ef611bb7d991c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190892"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>[集計オプションの設定] (集計のデザイン ウィザード)
   **[集計オプションの設定]** ページを使用すると、集計のデザイン プロセスを開始したり、生成する集計のストレージ制限やパフォーマンス制限を指定したりできます。  
@@ -30,10 +30,10 @@ ms.locfileid: "36175232"
  **ストレージの到達見積もり**  
  集計の生成に使用できるメガバイト (MB) またはギガバイト (GB) の最大値を指定することにより、集計デザインを制限します。  
   
- **パフォーマンスの到達**  
+ **パフォーマンスを到達します。**  
  集計のデザインによって実現できると推定される、最大のパフォーマンスの到達率を指定することで、集計のデザインを制限します。  
   
- **停止 をクリックしました。**  
+ **停止 をクリックします。**  
  デザイン プロセス中に **[停止]** をクリックすることにより、集計デザインを制限します。  
   
  **(0%) の集計をデザインしません。**  
@@ -49,7 +49,7 @@ ms.locfileid: "36175232"
  このページにある集計のオプションをすべて既定値にリセットします。  
   
 ## <a name="see-also"></a>参照  
- [集計のデザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   
+ [集計デザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   
  [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

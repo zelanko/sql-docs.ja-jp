@@ -1,5 +1,5 @@
 ---
-title: PropertyName プロパティ (ClientNetworkProtocolProperty クラス) |Microsoft ドキュメント
+title: PropertyName プロパティ (ClientNetworkProtocolProperty クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyName property
 ms.assetid: 25c3b5e7-0301-4f7b-9635-b3db06dad1e4
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3eab57077970f3d60b6a7e5e0739096ea7dda4c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 1b510448ea22de77e47080f658ad7c81fb9c51eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197192"
 ---
 # <a name="propertyname-property-clientnetworkprotocolproperty-class"></a>PropertyName プロパティ (ClientNetworkProtocolProperty クラス)
   によって参照される現在のプロパティの名前を取得、 [PropertyIdx プロパティ (ClientNetworkProtocolProperty クラス)](clientnetworkprotocolproperty-class.md)プロパティの値。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>要素  
  *object*  
- A [ClientNetworkProtocolProperty クラス](clientnetworkprotocolproperty-class.md)によって使用されるネットワーク プロトコルの属性を表すオブジェクト、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント。  
+ A [ClientNetworkProtocolProperty クラス](clientnetworkprotocolproperty-class.md)によって使用されるネットワーク プロトコルの属性を表すオブジェクトを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  現在のプロパティの名前を指定する文字列値。  

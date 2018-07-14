@@ -1,5 +1,5 @@
 ---
-title: SQL Server 拡張イベント (Xevent) を使用して、Analysis Services の監視を |Microsoft ドキュメント
+title: SQL Server 拡張イベント (Xevent) を使用して、Analysis Services の監視 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb67c1eca2b803c01a3716708f73afbb3861476a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4aa591ff08106f7af8946d6725d8894c52149634
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332802"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>SQL Server 拡張イベント (XEvent) を使用した Analysis Services の監視
-  Analysis Services の使用を通じてトレース機能を提供する[拡張イベント](../../relational-databases/extended-events/extended-events.md)です。  
+  Analysis Services の使用を通じてトレース機能を提供する[拡張イベント](../../relational-databases/extended-events/extended-events.md)します。  
   
  拡張イベントは、高い拡張性と柔軟な構成を備えた、サーバー システムのためのイベント インフラストラクチャです。 拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースはごくわずかです。  
   
- すべてのイベントをキャプチャする Analysis Services とに定義されている、特定のコンシューマーをターゲット[拡張イベント](../../relational-databases/extended-events/extended-events.md)、Xevent を通じてします。  
+ すべてのイベントをキャプチャする Analysis Services とに定義されている、特定のコンシューマーにターゲット[拡張イベント](../../relational-databases/extended-events/extended-events.md)、Xevent を通じてします。  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Analysis Services での拡張イベントの開始  
  拡張イベントのトレースは、以下のような XMLA のオブジェクト作成スクリプト コマンドを使用して有効にします。  

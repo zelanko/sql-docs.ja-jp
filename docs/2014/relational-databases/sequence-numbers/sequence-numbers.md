@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sequence number object, overview
 - sequence [Database Engine]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3576cf9ce9df0d5d75f9657f4e0f70378b29fc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 92a8365fe780da67a408ae1aa776ae97d0b4fa2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162313"
 ---
 # <a name="sequence-numbers"></a>シーケンス番号
   シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて繰り返されます。 ID 列とは異なり、シーケンスはテーブルには関連付けられていません。 アプリケーションは、シーケンス オブジェクトを参照して、次の値を受け取ります。 シーケンスとテーブルの関係は、アプリケーションによって制御されます。 ユーザー アプリケーションは、シーケンス オブジェクトを参照し、複数の行およびテーブルにわたって値キーを調整できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36175679"
   
  行の挿入時に生成される ID 列値とは異なり、アプリケーションは、 [NEXT VALUE FOR](/sql/t-sql/functions/next-value-for-transact-sql) 関数を呼び出すことにより、行を挿入する前に次のシーケンス番号を取得できます。 番号がテーブルに挿入されない場合でも、シーケンス番号は、NEXT VALUE FOR が呼び出されたときに割り当てられます。 NEXT VALUE FOR 関数は、テーブル定義内の列の既定値として使用できます。 一度に複数のシーケンス番号の範囲を取得するには、 [sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql) を使用します。  
   
- シーケンスは、任意の整数データ型として定義できます。 データ型が指定されていない場合、シーケンス既定`bigint`です。  
+ シーケンスは、任意の整数データ型として定義できます。 データ型が指定されていない場合、シーケンス既定`bigint`します。  
   
 ## <a name="using-sequences"></a>シーケンスの使用  
  シーケンスは、次のシナリオで ID 列の代わりに使用します。  

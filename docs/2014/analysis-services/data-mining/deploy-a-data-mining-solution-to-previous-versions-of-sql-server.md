@@ -1,5 +1,5 @@
 ---
-title: SQL Server の以前のバージョンにデータ マイニング ソリューションの配置 |Microsoft ドキュメント
+title: 以前のバージョンの SQL Server にデータ マイニング ソリューションの配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [Analysis Services]
 - holdout [data mining]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28bb6c9ffd7f51c322e1e01d1c60cb40feb20492
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b56e7e62c0717c94edfb4c8aaf7183f8e3e1f88b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177239"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>SQL Server の以前のバージョンへのデータ マイニング ソリューションの配置
   ここでは、 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] のインスタンスで作成されたデータ マイニング モデルまたはデータ マイニング構造を、SQL Server 2005 Analysis Services を使用するデータベースに配置しようとする際、または SQL Server 2005 で作成されたモデルを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスに配置する際に発生する可能性のある、互換性に関する既知の問題について説明します。  
@@ -64,7 +64,7 @@ ms.locfileid: "36176056"
   
  SQL Server 2005 Analysis Services でマイニング構造を開くと、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でエラーが発生し、提示されたパーティションを削除するためにそのマイニング構造が再生成されます。  
   
- プロパティ ウィンドウに、提示されたパーティションのサイズが使用可能なで不要になった構造が再構築された後にただし、値\</ddl100_100:holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >)、ASSL スクリプト ファイルである可能性があります。  
+ プロパティ ウィンドウに、提示されたパーティションのサイズを使用可能なで不要になった構造が再構築した後ただし、値\<ddl100_100:HoldoutMaxPercent > 30\</ddl100_100:HoldoutMaxPercent >)、ASSL スクリプト ファイルに存在する可能性があります。  
   
 ##  <a name="bkmk_Filter"></a> フィルターを使用するモデルの配置  
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] で、マイニング モデルにフィルターを適用する場合、モデルを SQL Server 2005 インスタンスに配置できますが、フィルターは適用されません。  

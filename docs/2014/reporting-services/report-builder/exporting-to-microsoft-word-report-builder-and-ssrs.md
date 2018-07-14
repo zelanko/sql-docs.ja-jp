@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2720d4e3a767a66768909bccad6cf1a7fdf78722
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9aa5b777f8e05b9a3bd8784c15ae8294e9caa8bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264279"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
-  Word 表示拡張機能のネイティブな形式にレポートを表示する[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007-2010。 形式は、Office Open XML です。  
+  Word 表示拡張機能のネイティブ形式にレポートを表示する[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007-2010。 形式は、Office Open XML です。  
   
  Word レンダラーはインストールされている Word/Excel/PowerPoint 用 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 互換機能パックによって、[!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 および [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 と互換性があります。 互換機能パックの詳細については、「 [Word、Excel、および PowerPoint 2007 用ファイル形式互換機能パック](http://go.microsoft.com/fwlink/?LinkID=205622)」を参照してください。  
   
@@ -140,14 +140,14 @@ ms.locfileid: "36173441"
   
 -   レポートのエクスポート後、Word によって改ページ位置の自動修正が再度実行されます。 これにより、レンダリングされたレポートに余分な改ページが追加される場合があります。  
   
--   Word が 2 番目のページにヘッダー行が繰り返されないと tablix (テーブル、マトリックス、または一覧) の静的なヘッダー行の RepeatOnNewPage プロパティを設定するが、大きい`True`です。 新しいページにヘッダー行を表示するには、レポートで明示的な改ページを定義することができます。 ただし、Word では、独自の改ページ位置の自動修正が、Word にエクスポートされた表示レポートに適用されるため、結果は異なる可能性があり、ヘッダー行が予測どおりに表示されない場合があります。 静的なヘッダー行とは、列見出しを含む行のことです。  
+-   Word には、2 ページ目にヘッダー行は繰り返しません以上で、tablix (テーブル、マトリックス、または一覧) の静的なヘッダー行の RepeatOnNewPage プロパティを設定するは`True`します。 新しいページにヘッダー行を表示するには、レポートで明示的な改ページを定義することができます。 ただし、Word では、独自の改ページ位置の自動修正が、Word にエクスポートされた表示レポートに適用されるため、結果は異なる可能性があり、ヘッダー行が予測どおりに表示されない場合があります。 静的なヘッダー行とは、列見出しを含む行のことです。  
   
 -   改行をしないスペースが含まれている場合、テキスト ボックスが大きくなります。  
   
 -   テキストを Word にエクスポートした際に、一部のフォントについては、フォント装飾付きテキストによって、レンダリング後のレポートに予期しないグリフや存在しないグリフが生成される場合があります。  
   
 ##  <a name="WordBenefits"></a> Word レンダラーを使用する利点  
- 導入された機能をするだけでなく[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007-2010 のエクスポートに使用できるレポート、エクスポートされたレポートの *.docx ファイルが小さくなる傾向があります。 Word レンダラーを使用してエクスポートされたレポートは通常、Word 2003 レンダラーを使用してエクスポートされた同じレポートよりもサイズがかなり小さくなります。  
+ 新機能を行うだけでなく[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007-2010 のエクスポートに使用可能なレポート、エクスポートされたレポートの *.docx ファイルが小さくなる傾向があります。 Word レンダラーを使用してエクスポートされたレポートは通常、Word 2003 レンダラーを使用してエクスポートされた同じレポートよりもサイズがかなり小さくなります。  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>エクスポートされたレポートの下位互換性  
  Word 互換性モードを選択し、互換性オプションを設定できます。 Word レンダラーでは互換性モードをオンにしてドキュメントが作成されます。 互換性モードをオフにしてドキュメントを再度保存すると、ドキュメントのレイアウトに影響する場合があります。  
@@ -155,7 +155,7 @@ ms.locfileid: "36173441"
  互換性モードをオフにしてレポートを再度保存すると、レポートのレイアウトが予期しない方法で変更される場合があります。  
   
 ##  <a name="AvailabilityWord"></a> Word 2003 レンダラーの可用性  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、既定の Word レンダラーは、ネイティブ形式を表示するバージョン[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007-2010。 これは、レポート マネージャーおよび SharePoint リストの **[エクスポート]** メニューに用意されている **[Word]** オプションです。 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 のみと互換性のある以前のバージョンは、Word 2003 という名前になり、この名前がメニューに表示されます。 **[Word 2003]** メニュー オプションは、既定では表示されません。このメニュー オプションを表示するには、管理者が RSReportServer 構成ファイルを更新する必要があります。 Word 2003 レンダラーを使用して [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からレポートをエクスポートするには、RSReportDesigner 構成ファイルを更新します。 ただし、Word 2003 レンダラーを表示するように設定しても、Word 2003 レンダラーがすべてのシナリオで使用できるわけではありません。 RSReportServer 構成ファイルはレポート サーバー上に存在しているため、レポートをエクスポートするツールまたは製品が構成ファイルを読み取るためにレポート サーバーに接続されている必要があります。 ツールまたは製品を切断モードまたはローカル モードで使用している場合、Word 2003 レンダラーを表示する設定は効果がありません。 **[Word 2003]** メニュー オプションは使用可能になりません。 RSReportDesigner 構成ファイルで Word 2003 レンダラーを表示するように設定した場合、 **のレポート プレビューで** [Word 2003] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] メニュー オプションが常に使用可能になります。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、既定の Word レンダラーは、ネイティブ形式を表示するバージョンです[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007-2010。 これは、レポート マネージャーおよび SharePoint リストの **[エクスポート]** メニューに用意されている **[Word]** オプションです。 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 のみと互換性のある以前のバージョンは、Word 2003 という名前になり、この名前がメニューに表示されます。 **[Word 2003]** メニュー オプションは、既定では表示されません。このメニュー オプションを表示するには、管理者が RSReportServer 構成ファイルを更新する必要があります。 Word 2003 レンダラーを使用して [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からレポートをエクスポートするには、RSReportDesigner 構成ファイルを更新します。 ただし、Word 2003 レンダラーを表示するように設定しても、Word 2003 レンダラーがすべてのシナリオで使用できるわけではありません。 RSReportServer 構成ファイルはレポート サーバー上に存在しているため、レポートをエクスポートするツールまたは製品が構成ファイルを読み取るためにレポート サーバーに接続されている必要があります。 ツールまたは製品を切断モードまたはローカル モードで使用している場合、Word 2003 レンダラーを表示する設定は効果がありません。 **[Word 2003]** メニュー オプションは使用可能になりません。 RSReportDesigner 構成ファイルで Word 2003 レンダラーを表示するように設定した場合、 **のレポート プレビューで** [Word 2003] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] メニュー オプションが常に使用可能になります。  
   
  **[Word 2003]** メニュー オプションは、次の状況では表示されません。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36173441"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でレポートをプレビューする場合。  
   
--   レポート ビルダーがレポート サーバーに接続されている場合。 これは、[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]またはレポート ビルダーのスタンドアロン バージョンです。  
+-   レポート ビルダーがレポート サーバーに接続されている場合。 これを[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]またはレポート ビルダーのスタンドアロン バージョンです。  
   
 -   リモート モードのレポート ビューアー Web パーツ。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "36173441"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- WORDOPENXML 拡張機能は [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 用の Word レンダラーを定義します。 WORD 拡張機能は、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 バージョンを定義します。 `Visible = “false”` は、Word 2003 レンダラーが非表示であることを示します。 詳細については、次を参照してください。 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)と[RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)です。  
+ WORDOPENXML 拡張機能は [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 用の Word レンダラーを定義します。 WORD 拡張機能は、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 バージョンを定義します。 `Visible = “false”` は、Word 2003 レンダラーが非表示であることを示します。 詳細については、次を参照してください。 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)と[RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)します。  
   
 ##  <a name="Differences"></a> Word レンダラーと Word 2003 レンダラーの違い  
  Word レンダラーまたは Word 2003 レンダラーを使用して表示されたレポートは、見た目では区別できない傾向にあります。 ただし、Word または Word 2003 の 2 つの形式の間で若干の違いが見つかる場合があります。  

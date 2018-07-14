@@ -1,5 +1,5 @@
 ---
-title: Excel での BI セマンティック モデル接続を使用するか、Reporting Services |Microsoft ドキュメント
+title: Excel での BI セマンティック モデル接続を使用するか、Reporting Services |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00ee95942a8022ee8d299ab400d36676b51467ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b1ff3dfedd5dce6a4db551cc6fdb180e4d723d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219972"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Excel または Reporting Services での BI セマンティック モデル接続の使用
-  このトピックでは、他のトピックの手順に従って作成した BI セマンティック モデル接続の使用方法について説明します。 BI セマンティック モデルを作成がない場合は、次を参照してください。 [PowerPivot ブックへの BI セマンティック モデル接続を作成する](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)と[表形式モデル データベースへの BI セマンティック モデル接続を作成する](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)です。  
+  このトピックでは、他のトピックの手順に従って作成した BI セマンティック モデル接続の使用方法について説明します。 BI セマンティック モデルを作成していない場合は、次を参照してください。 [PowerPivot ブックへの BI セマンティック モデル接続を作成する](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)と[表形式モデル データベースへの BI セマンティック モデル接続を作成する](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)します。  
   
 ##  <a name="bkmk_connect"></a> Excel からの接続  
  BI セマンティック モデル接続は、Analysis Services テーブル モデル データを使用する Excel などのビジネス アプリケーションでデータ ソースとして指定できます。 ここでは、Excel を使用して BI セマンティック モデル データに接続する 2 つの方法を説明します。  
@@ -43,15 +43,15 @@ ms.locfileid: "36175622"
   
 2.  **[Analysis Services から]** をクリックし、データ接続ウィザードを使用して、データをインポートします。  
   
-3.  BI セマンティック モデル接続ファイルの SharePoint URL を入力してください (たとえば、  **http://mysharepoint/shared : documents/myData.bism**)。 既定のログオン資格情報オプション **[Windows 認証を使用する]** を受け入れます。 **[次へ]** をクリックします。  
+3.  BI セマンティック モデル接続ファイルの SharePoint URL を入力します (たとえば、  **http://mysharepoint/shared : documents/myData.bism**)。 既定のログオン資格情報オプション **[Windows 認証を使用する]** を受け入れます。 **[次へ]** をクリックします。  
   
 4.  次のページで **[次へ]** を再度クリックします。 データベースを選択するように求められますが、使用できるのは BI セマンティック モデル接続で指定されている 1 つのデータベースのみです。  
   
 5.  最後のページで、表示名と説明を入力できます。 **[完了]** をクリックし、[データのインポート] ダイアログ ボックスで **[OK]** をクリックして、データをインポートします。  
   
- 接続を成功させるには、クライアント コンピューターに Excel 2010 および MSOLAP.5.dll をインストールする必要があります。 Analysis Services OLE DB プロバイダーのみをダウンロードするプロバイダーを取得するには、現在このリリースでは、Excel 用 PowerPivot のバージョンをインストールすることも、 [Feature Pack ダウンロード ページ](http://go.microsoft.com/fwlink/?linkid=214066)です。  
+ 接続を成功させるには、クライアント コンピューターに Excel 2010 および MSOLAP.5.dll をインストールする必要があります。 このリリースの現在の Excel 用 PowerPivot のバージョンをインストールすることで、プロバイダーを取得するかから Analysis Services OLE DB プロバイダーをダウンロードすることができます、 [Feature Pack ダウンロード ページ](http://go.microsoft.com/fwlink/?linkid=214066)します。  
   
- MSOLAP.5.dll が現在のバージョンになっていることを確認するには確認`HKEY_CLASSES_ROOT\MSOLAP`レジストリにします。 `CurVer` MSOLAP.5 に設定する必要があります。  
+ MSOLAP.5.dll が現在のバージョンであることを確認、確認`HKEY_CLASSES_ROOT\MSOLAP`レジストリにします。 `CurVer` MSOLAP.5 に設定する必要があります。  
   
  また、SharePoint の BI セマンティック モデル ファイルに対する読み取り権限も必要です。 読み取り権限には、ダウンロード権限が含まれます。 Excel によって、SharePoint から BI セマンティック モデル接続情報がダウンロードされ、`HTTP Get` を介してデータベースへの直接接続が開かれます。 BI セマンティック モデル接続情報がローカルに保存された後は、接続要求が SharePoint に送信されることはありません。  
   

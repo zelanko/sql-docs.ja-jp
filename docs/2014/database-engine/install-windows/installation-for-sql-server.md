@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 のインストール |Microsoft ドキュメント
+title: SQL Server 2014 のインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.portal.Installation.f1
 helpviewer_keywords:
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - initial installation [SQL Server]
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c6eb94e86633e5bff588993ac1b71cd52bde3ae3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8c25f5057c6e1cd5b877376e67634946ef489276
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224462"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 のインストール
  ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ SQL Server 2014 Express をダウンロードします。 ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **お送りいただきありがとうございます[Scott Hanselman](http://www.hanselman.com/)すべて 1 か所でインストーラー パッケージへのリンクを収集するためです。**
+  **よろしくお願いする[Scott Hanselman](http://www.hanselman.com/)すべてのインストーラー パッケージ リンクを 1 か所に収集するためです。**
   
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの 1 つの機能ツリーから、次のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをインストールできます。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "36175225"
   
 -   接続コンポーネント  
   
- 各コンポーネントを個別にインストールするか、上記のコンポーネントを組み合わせて選択できます。 最適なエディションおよびコンポーネントで利用できるようにする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[エディションと SQL Server 2014 のコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)と[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には 32 ビット版と 64 ビット版があります。
+ 各コンポーネントを個別にインストールするか、上記のコンポーネントを組み合わせて選択できます。 最適なエディションおよびコンポーネントで使用できるようにする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[エディションと SQL Server 2014 のコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)と[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には 32 ビット版と 64 ビット版があります。
  
  **お試しください:**  
   
--   Azure アカウントをすでにお持ちですか?  次いで**[ここ](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** に既にインストールされている SQL Server 2014 Service Pack 1 (SP1) を持つバーチャル マシンを動かします。 SQL Server 2014 (SP1) の詳細については、次を参照してください。 [SQL Server 2014 Service Pack 1 リリース情報](https://support.microsoft.com/en-us/kb/3058865)です。  
+-   Azure アカウントをすでにお持ちですか?  やがて**[ここ](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 既にインストールされている SQL Server 2014 Service Pack 1 (SP1) の仮想マシンを作成します。 SQL Server 2014 (SP1) の詳細については、次を参照してください。 [SQL Server 2014 Service Pack 1 リリース情報](https://support.microsoft.com/en-us/kb/3058865)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを使用する場合でも、コマンド プロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールする場合でも、セットアップ時には以下の手順を実行する必要があります。  

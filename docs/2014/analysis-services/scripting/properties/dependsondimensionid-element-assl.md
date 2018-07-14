@@ -1,5 +1,5 @@
 ---
-title: DependsOnDimensionID 要素 (ASSL) |Microsoft ドキュメント
+title: DependsOnDimensionID 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DependsOnDimensionID element
 ms.assetid: 66ec20dd-b475-4895-a92c-7ac0e7e1c675
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91af48b0b912a290798dead33c82f4bb2729c950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bda178f067cb8bf1a3cfe4bf7341c6916659a65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171403"
 ---
 # <a name="dependsondimensionid-element-assl"></a>DependsOnDimensionID 要素 (ASSL)
   親ディメンションが依存する別のディメンションの識別子 (ID) を格納します。  

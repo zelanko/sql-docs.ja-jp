@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], large reports
 - page breaks [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5f261d0fcb2af1ffd6b58e09723167d760e0c93f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fe2bf439a3ba9da5d2f486ec93bf63f909f43db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275968"
 ---
 # <a name="process-large-reports"></a>サイズの大きなレポートの処理
   サイズの大きなレポートは、処理が困難となる場合があり、正常に実行するには特定の構成が必要です。 サイズの大きなレポートは、ページ割り当てをサポートするように構成されている場合以外は、要求時に実行しないでください。  
@@ -42,7 +42,7 @@ ms.locfileid: "36174650"
 ## <a name="configuration-recommendations"></a>構成に関する推奨事項  
  レポートの実行、レポートの表示、およびレポートのアクセスに関する推奨事項としては、次の事項が挙げられます。  
   
--   ページ割り当てをサポートするようにレポートをデザインします。 レポート サーバーはレポートを一度に 1 ページずつ送信します。 レポートにページ割り当てがある場合は、ブラウザーにストリーム送信されるデータ量を制御できます。 詳細については、次を参照してください。[キャッシュの事前読み込み&#40;レポート マネージャー&#41;](preload-the-cache-report-manager.md)です。  
+-   ページ割り当てをサポートするようにレポートをデザインします。 レポート サーバーはレポートを一度に 1 ページずつ送信します。 レポートにページ割り当てがある場合は、ブラウザーにストリーム送信されるデータ量を制御できます。 詳細については、次を参照してください。[キャッシュの事前読み込み&#40;レポート マネージャー&#41;](preload-the-cache-report-manager.md)します。  
   
 -   レポートは、要求時に実行されることを防ぐため、スケジュールされたレポート スナップショットとして実行するように構成します。 レポートの実行にタイムアウト値は設定しないでください。 レポートは、オフピーク時間中に実行してください。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36174650"
  [サブスクリプションと配信&#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [レポート処理プロパティを設定します。](set-report-processing-properties.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [レポート サーバーのコンテンツ管理&#40;SSRS ネイティブ モード&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](report-server-content-management-ssrs-native-mode.md)   
  [キャッシュの事前読み込み &#40;レポート マネージャー&#41;](preload-the-cache-report-manager.md)  
   
   

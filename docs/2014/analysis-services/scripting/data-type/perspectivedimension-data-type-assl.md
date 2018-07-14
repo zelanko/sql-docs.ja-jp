@@ -1,5 +1,5 @@
 ---
-title: PerspectiveDimension データ型 (ASSL) |Microsoft ドキュメント
+title: PerspectiveDimension データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveDimension data type
 ms.assetid: c4bc56de-4f42-4ceb-a68d-a4fec92fdfa9
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2ec6ecb714ad87b32683f667514fe4badcabeda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 305219e524868a2dc036c07bedcff5876699e560
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323262"
 ---
 # <a name="perspectivedimension-data-type-assl"></a>PerspectiveDimension データ型 (ASSL)
   パースペクティブ内のディメンションに関する情報を表すプリミティブ データ型を定義します。  

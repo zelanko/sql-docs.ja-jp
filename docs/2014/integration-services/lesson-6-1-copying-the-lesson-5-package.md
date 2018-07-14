@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 caps.latest.revision: 6
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bed4f06e073d370b10be04e614a18b041f0d1dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 042dde7beeff33dd988f5d21d0d5975e4ee88aa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190762"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>手順 1: レッスン 5 のパッケージのコピー
   ここでは、レッスン 5 で作成した Lesson 5.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 5 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 6 の実習では、このパッケージの新しいコピーを使用します。  
@@ -42,7 +42,7 @@ ms.locfileid: "36176001"
   
 7.  [プロパティ] ウィンドウで、[Name] プロパティを「Lesson 6」に変更します。  
   
-8.  ID プロパティのボックスをクリックし、ドロップダウンの矢印をクリックして、をクリックして\<新しい ID の生成 >。  
+8.  ID プロパティのボックスをクリックし、ドロップダウン矢印をクリックして、順にクリックします\<Generate New ID >。  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>レッスン 5 を完了した状態のパッケージを追加するには  
   

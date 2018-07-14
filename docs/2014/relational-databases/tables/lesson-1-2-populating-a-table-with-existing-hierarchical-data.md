@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73a61c2af9d178911f206e2e5006dabd8620329e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ded697f41f68e26e677fe5054e7e4f59955fc74c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186119"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>既存の階層データを使用したテーブルの設定
   ここでは、新しいテーブルを作成して、そのテーブルに **EmployeeDemo** テーブルのデータを設定します。 この作業には、次の手順があります。  
@@ -155,7 +155,7 @@ ms.locfileid: "36174894"
   
     ```  
   
-     **LogicalNode**列に変換、`hierarchyid`列階層を表す読みやすいテキスト形式に挿入します。 残りの作業では、`ToString()` メソッドを使用して、`hierarchyid` 列の論理形式を表示します。  
+     **LogicalNode**列変換、`hierarchyid`列階層を表す読みやすいテキスト形式にします。 残りの作業では、`ToString()` メソッドを使用して、`hierarchyid` 列の論理形式を表示します。  
   
 5.  不要になった一時テーブルを削除します。  
   

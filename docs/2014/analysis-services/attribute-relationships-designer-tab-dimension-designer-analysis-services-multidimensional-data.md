@@ -1,5 +1,5 @@
 ---
-title: 属性リレーションシップ (属性リレーションシップ デザイナー タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: 属性リレーションシップ (属性リレーションシップ タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.attributerelationships.f1
 ms.assetid: abc8af00-5389-456d-b0f1-ec3e7403d4f9
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ea9c91e9584f2b5e7f561e9982ef1427340c470d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b362285a6ac8cee1551ad9c4bed36e6d9b5e5d0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253214"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>[属性リレーションシップ] ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **[属性リレーションシップ]** の一覧を使用すると、属性リレーションシップ ダイアグラム内の特定の属性リレーションシップを探したり、そのリレーションシップを管理したりできます。 このペインは、属性リレーションシップ ダイアグラムを含むペインのすぐ下に表示されます。  
@@ -53,7 +53,7 @@ ms.locfileid: "36165938"
  **リレーションシップの種類**  
  リレーションシップの種類を **[可変]** または **[固定]** に設定します。 可変のリレーションシップでは、メンバー間のリレーションシップが時間の経過と共に変化します。 固定のリレーションシップでは、メンバー間のリレーションシップが時間の経過と共に変化しません。  
   
- **Delete**  
+ **削除**  
  選択した属性リレーションシップを削除します。  
   
  **Properties**  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8589086db4f176080bbddc1dab257b4931a059f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20886efdda6ef944331d2bc619cd9324ad0adb3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185219"
 ---
 # <a name="manage-a-knowledge-base"></a>ナレッジ ベースの管理
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ ベースに対して管理機能を実行する方法について説明します。 ナレッジ ベースの削除、ロック解除、作業の破棄、名前の変更、およびプロパティの表示を行うことができます。  
@@ -46,9 +46,9 @@ ms.locfileid: "36175819"
   
     1.  **[開く]**: クリックすると、 **[アクティビティの選択]** ペインで選択したアクティビティでナレッジ ベースが開きます。  
   
-    2.  **[ロック解除]**: ドメイン管理、ナレッジ検出、およびポリシー照合の各アクティビティのいずれかの手順でナレッジ ベースを操作していて、それを閉じたユーザーである場合は、ナレッジ ベースのロックを解除できます。 ナレッジ ベースをアンロードすると、別のユーザーがナレッジ ベースを開いて操作できるようになります。 このコマンドは、ナレッジ ベースがアクティビティの状態でない場合には使用できません。 詳細については、次を参照してください。[ナレッジ ベースを開く](../../2014/data-quality-services/open-a-knowledge-base.md)です。  
+    2.  **[ロック解除]**: ドメイン管理、ナレッジ検出、およびポリシー照合の各アクティビティのいずれかの手順でナレッジ ベースを操作していて、それを閉じたユーザーである場合は、ナレッジ ベースのロックを解除できます。 ナレッジ ベースをアンロードすると、別のユーザーがナレッジ ベースを開いて操作できるようになります。 このコマンドは、ナレッジ ベースがアクティビティの状態でない場合には使用できません。 詳細については、次を参照してください。[ナレッジ ベースを開く](../../2014/data-quality-services/open-a-knowledge-base.md)します。  
   
-    3.  **[作業の破棄]**: ナレッジ ベースが作業中の状態になっている場合にクリックします。ナレッジ ベースの状態は、テーブルの [状態] フィールドのエントリで示されます。 このコマンドは、ナレッジ ベースがアクティビティの状態でない場合、およびナレッジ ベースがロックされている場合には使用できません。 詳細については、次を参照してください。[ナレッジ ベースを開く](../../2014/data-quality-services/open-a-knowledge-base.md)です。  
+    3.  **[作業の破棄]**: ナレッジ ベースが作業中の状態になっている場合にクリックします。ナレッジ ベースの状態は、テーブルの [状態] フィールドのエントリで示されます。 このコマンドは、ナレッジ ベースがアクティビティの状態でない場合、およびナレッジ ベースがロックされている場合には使用できません。 詳細については、次を参照してください。[ナレッジ ベースを開く](../../2014/data-quality-services/open-a-knowledge-base.md)します。  
   
     4.  **[名前の変更]**: クリックすると、右クリックしたナレッジ ベースについて、テーブルの [ナレッジ ベース] フィールドが編集可能になります。 名前を変更し、そのナレッジ ベースとフィールド内の別のナレッジ ベースをクリックして名前の変更を受け入れます。  
   

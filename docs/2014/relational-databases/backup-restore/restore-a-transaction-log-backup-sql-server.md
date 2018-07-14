@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoretlog.options.f1
 - sql12.swb.restoretlog.general.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e688a81d1a555efcad659b6b89ef4f21f116191d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85c4008e1872a48126c67e47cc8d68ed0867828d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237022"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>トランザクション ログ バックアップの復元 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、トランザクション ログ バックアップを復元する方法について説明します。  
@@ -103,7 +102,7 @@ ms.locfileid: "36174193"
     |[ヘッダー]|値|  
     |------------|-----------|  
     |**復元**|チェック ボックスをオンにしたバックアップ セットが復元されます。|  
-    |**Name**|バックアップ セットの名前。|  
+    |**名前**|バックアップ セットの名前。|  
     |**コンポーネント**|バックアップされるコンポーネント。**[データベース]**、**[ファイル]**、[\<空白>]\(トランザクション ログ用) のいずれかを指定します。|  
     |**[データベース]**|バックアップ操作に関係するデータベース名。|  
     |**[開始日]**|バックアップ操作の開始日時 (クライアントの地域設定に準拠)。|  
@@ -137,7 +136,7 @@ ms.locfileid: "36174193"
         |\<空白>|マークを選択するためのチェック ボックスを表示します。|  
         |**トランザクション マーク**|トランザクションがコミットされたときにユーザーによって指定された、マークされたトランザクションの名前。|  
         |**日付**|トランザクションがコミットされた日時。 トランザクションの日付と時刻は、クライアント コンピューターの日付と時刻ではなく、 **msdbgmarkhistory** テーブルに記録されたとおりに表示されます。|  
-        |**description**|トランザクションがコミットされたときにユーザーが指定したマークされたトランザクションの説明 (該当する場合)。|  
+        |**[説明]**|トランザクションがコミットされたときにユーザーが指定したマークされたトランザクションの説明 (該当する場合)。|  
         |**LSN (LSN)**|マークされたトランザクションのログ シーケンス番号。|  
         |**[データベース]**|マークされたトランザクションがコミットされたデータベースの名前。|  
         |**[ユーザー名]**|マークされたトランザクションをコミットしたデータベース ユーザーの名前。|  
@@ -150,9 +149,9 @@ ms.locfileid: "36174193"
   
          パブリッシュされたデータベースを、そのデータベースが作成されたサーバー以外のサーバーに復元するときに、レプリケーションの設定を保存します。  
   
-         このオプションでのみ使用可能な**データベース状態のまま使用できる様態にコミットされていないトランザクションをロールバックしています.** オプション (後述)、バックアップの復元と同じである、`RECOVERY`オプション。  
+         このオプションでのみ使用可能な**コミットされていないトランザクションをロールバックして使用できるように、データベースのままにしています.** オプション (後述)、これはバックアップの復元に相当、`RECOVERY`オプション。  
   
-         使用すると、このオプションを確認していますが、`KEEP_REPLICATION`オプション、 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`ステートメントです。  
+         このオプションをオンの場合を使用すると、`KEEP_REPLICATION`オプション、 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`ステートメント。  
   
     -   **[各バックアップを復元する前に確認する]**  
   
@@ -166,19 +165,19 @@ ms.locfileid: "36174193"
   
          復元するデータベースの使用を、 **db_owner**、 **dbcreator**、または **sysadmin**のメンバーだけに制限します。  
   
-         このオプションをオンを使用することと同じ、`RESTRICTED_USER`オプション、 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`ステートメントです。  
+         このオプションをオンの場合を使用すると、`RESTRICTED_USER`オプション、 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`ステートメント。  
   
 10. **[復旧状態]** オプションでは、復元操作後のデータベースの状態を指定します。  
   
     -   **[コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にする。別のトランザクション ログは復元できません。(RESTORE WITH RECOVERY)]**  
   
-         データベースを復旧します。 このオプションは、`RECOVERY`オプション、 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`ステートメントです。  
+         データベースを復旧します。 このオプションは、`RECOVERY`オプション、 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`ステートメント。  
   
          このオプションは、復元するログ ファイルがない場合にのみ選択します。  
   
     -   **[データベースは操作不可状態のままで、コミットされていないトランザクションはロールバックしない。別のトランザクション ログは復元できます。(RESTORE WITH NORECOVERY)]**  
   
-         データベースを `RESTORING` 状態で未復旧のままにします。 このオプションを使用すると、`NORECOVERY`オプション、 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`ステートメントです。  
+         データベースを `RESTORING` 状態で未復旧のままにします。 このオプションを使用すると、`NORECOVERY`オプション、 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`ステートメント。  
   
          このオプションを選択した場合は、 **[レプリケーションの設定を保存する]** オプションは使用できません。  
   
@@ -187,7 +186,7 @@ ms.locfileid: "36174193"
   
     -   **[データベースを読み取り専用モードにする。コミットされていないトランザクションは元に戻されますが、復旧結果を元に戻せるように元に戻す操作をファイルに保存します。(RESTORE WITH STANDBY)]**  
   
-         データベースをスタンバイ状態のままにします。 このオプションを使用すると、`STANDBY`オプション、 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`ステートメントです。  
+         データベースをスタンバイ状態のままにします。 このオプションを使用すると、`STANDBY`オプション、 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`ステートメント。  
   
          このオプションを選択した場合は、スタンバイ ファイルを指定する必要があります。  
   
@@ -295,7 +294,7 @@ GO
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
--   [データベース バックアップを復元&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [データベースのバックアップを復元&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [完全復旧モデルで障害発生時点までデータベースを復元する &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
   

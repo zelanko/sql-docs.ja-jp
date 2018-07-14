@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5784837d47e1cc20afd617a1e97bda1f4fd1999f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 19f0ec63f3f2f2372e9f7803b5256692910f6242
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222512"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>オブジェクト エクスプローラーからインスタンスへの接続
   オブジェクト エクスプローラーを使用してオブジェクトを管理するには、まず、オブジェクトを含むインスタンスにオブジェクト エクスプローラーを接続する必要があります。 オブジェクト エクスプローラーは複数のインスタンスに同時に接続できます。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 417bb9c891d4fec3393f94cf9ccbdda0bf9d4bbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b16fd6b9ce9d89a730f64c5cadd7a67553cb6dd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166913"
 ---
 # <a name="create-the-finance-name-policy"></a>Finance の名前ポリシーの作成
   ここでは、Finance という名前のデータベースを作成し、すべてのテーブルが文字列 **fintbl** で始まることを必須とする条件を作成します。 さらに、Finance データベース内のテーブルに名前付け基準を適用するためのポリシーとポリシー カテゴリを作成します。  
@@ -78,7 +78,7 @@ ms.locfileid: "36176376"
   
 1.  オブジェクト エクスプローラーで **[管理]** を展開し、 **[ポリシー管理]** を右クリックして、 **[カテゴリの管理]** をクリックします。  
   
-2.  **ポリシー カテゴリの管理**ダイアログ ボックスで、**名前**、型`Finance`、空白のボックスと、クリア テキストで**データベースのサブスクリプション**です。 **[データベースのサブスクリプションの要求]** では、インスタンス内のすべてのデータベースは、このポリシー カテゴリに属するポリシーをサブスクライブします。 このレッスンでは、Finance の名前ポリシーをサブスクライブするのは Finance データベースだけです。  
+2.  **ポリシー カテゴリの管理**ダイアログ ボックスで、**名前**、型`Finance`、空白のボックスと、クリア テキストで**データベースのサブスクリプション**します。 **[データベースのサブスクリプションの要求]** では、インスタンス内のすべてのデータベースは、このポリシー カテゴリに属するポリシーをサブスクライブします。 このレッスンでは、Finance の名前ポリシーをサブスクライブするのは Finance データベースだけです。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

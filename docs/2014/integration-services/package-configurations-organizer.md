@@ -1,5 +1,5 @@
 ---
-title: パッケージ構成オーガナイザー |Microsoft ドキュメント
+title: パッケージ構成オーガナイザー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.packageconfigurationorganizer.f1
 helpviewer_keywords:
 - Package Configurations Organizer dialog box
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 474a79d94d08aa477bc30241a3309c7b9f5dfed3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83911534bc17b9b453f6b67f92f6bf463ead9037
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217742"
 ---
 # <a name="package-configurations-organizer"></a>[パッケージ構成オーガナイザー]
   **[パッケージ構成オーガナイザー]** ダイアログ ボックスを使用すると、パッケージ構成を有効にし、現在のパッケージの構成の一覧を表示して、構成の優先読み込み順序を指定できます。  
@@ -63,7 +63,7 @@ ms.locfileid: "36174757"
  **[編集]**  
  パッケージ構成ウィザードを再実行することにより、既存の構成を編集します。  
   
- **削除**  
+ **[削除]**  
  構成を選択してから、 **[削除]** をクリックします。  
   
  **矢印**  

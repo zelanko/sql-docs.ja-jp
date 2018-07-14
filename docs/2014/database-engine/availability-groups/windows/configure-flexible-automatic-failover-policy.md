@@ -1,29 +1,28 @@
 ---
-title: 条件を制御する (Always On 可用性グループ) の自動フェールオーバー用の柔軟なフェールオーバー ポリシーの構成 |Microsoft ドキュメント
+title: 条件を制御する (Always On 可用性グループ) の自動フェールオーバーの柔軟なフェールオーバー ポリシーの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 caps.latest.revision: 22
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: c789865b92b628c30e0f634e529027ad26de23eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4868c07427230de655fc8a1742458f4b4c72cfbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193982"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>自動フェールオーバーの条件を制御する柔軟なフェールオーバー ポリシーの構成 (AlwaysOn 可用性グループ)
   このトピックでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] で [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]または PowerShell を使用して AlwaysOn 可用性グループの柔軟なフェールオーバー ポリシーを構成する方法について説明します。 柔軟なフェールオーバー ポリシーを使用すると、可用性グループの自動フェールオーバーを実行する条件をきめ細かく制御できます。 自動フェールオーバーを実行するエラー条件および正常性チェックの頻度を変更することで、自動フェールオーバーの確率値を増減して高可用性の SLA をサポートできます。  
@@ -98,7 +97,7 @@ ms.locfileid: "36177161"
   
 2.  可用性グループに可用性レプリカを追加する場合は、`New-SqlAvailabilityGroup` コマンドレットを使用します。 既存の可用性レプリカを変更する場合は、`Set-SqlAvailabilityGroup` コマンドレットを使用します。  
   
-    -   フェールオーバー条件レベルを設定するには、使用、 `FailureConditionLevel`*レベル*パラメーター、場所、*レベル*は、次の値のいずれか。  
+    -   フェールオーバー条件レベルを設定するには使用、 `FailureConditionLevel`*レベル*パラメーター、どこで、*レベル*は、次の値の 1 つです。  
   
         |値|レベル|自動フェールオーバーが開始される条件|  
         |-----------|-----------|-------------------------------------------|  
@@ -118,7 +117,7 @@ ms.locfileid: "36177161"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   正常性チェック タイムアウトしきい値を設定するには、使用、 `HealthCheckTimeout` *n*パラメーター、場所、 *n*は 15000 ミリ秒 (15 秒) ~ 4294967295 ミリ秒の整数。 既定値は 30000 ミリ秒 (30 秒) です。  
+    -   正常性チェックのタイムアウトしきい値を設定するには、使用、 `HealthCheckTimeout` *n*パラメーター、どこで、 *n*は 15000 ミリ秒 (15 秒) ~ 4294967295 ミリ秒の整数。 既定値は 30000 ミリ秒 (30 秒) です。  
   
          たとえば、次のコマンドでは、既存の可用性グループ `AG1`の正常性チェックのタイムアウトしきい値が 120,000 ミリ秒 (2 分) に変更されます。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36177161"
         ```  
   
 > [!NOTE]  
->  表示するには、コマンドレットの構文を使用して、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+>  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   

@@ -1,5 +1,5 @@
 ---
-title: CalendarEndDate 要素 (ASSL) |Microsoft ドキュメント
+title: CalendarEndDate 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CalendarEndDate element
 ms.assetid: abedd074-9a28-4169-85b5-49ea57f10fb6
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2702e10f6b772ff072212d1fc9ac3097b50e9308
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd23c1747f25eb092a1c1e9a6d6ccd1029380d5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332562"
 ---
 # <a name="calendarenddate-element-assl"></a>CalendarEndDate 要素 (ASSL)
   カレンダー期間の終了日を定義、 [TimeBinding](../data-type/binding-data-type-assl.md)要素。  

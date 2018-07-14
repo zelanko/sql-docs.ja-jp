@@ -1,5 +1,5 @@
 ---
-title: マイニング構造の処理 |Microsoft ドキュメント
+title: マイニング構造の処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], processing
 ms.assetid: 4162f33e-c23f-4293-8905-271781e45fa4
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99bb84e9af06ddb6238f4d2283734a0b18f13bdd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da6309109cfdc29a2000f0a30f84c910c71d12ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247322"
 ---
 # <a name="process-a-mining-structure"></a>マイニング構造の処理
   マイニング構造に関連付けられているマイニング モデルを参照したり使用したりする前に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを配置してマイニング構造とマイニング モデルを処理する必要があります。 また、マイニング構造またはマイニング モデルに変更を加えると、それらを再配置し、処理するように求められます。 **のデータ マイニング デザイナーの** [マイニング構造] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブで構造を処理すると、関連するモデルもすべて処理されます。  
@@ -42,13 +42,13 @@ ms.locfileid: "36174032"
   
      マイニング構造に変更を加えた場合は、マイニング モデルを処理する前にマイニング構造を再配置するよう求められます。 **[はい]** をクリックします。  
   
-2.  をクリックして**実行**で、**マイニング構造の処理 -\<構造 >**  ダイアログ ボックス。  
+2.  クリックして**実行**で、**マイニング構造の処理 -\<構造 >**  ダイアログ ボックス。  
   
      **[処理の進行状況]** ダイアログ ボックスが開き、モデル処理の詳細が表示されます。  
   
 3.  モデルの処理が完了したら、 **[処理の進行状況]** ダイアログ ボックスの **[閉じる]** をクリックします。  
   
-4.  をクリックして**閉じる**で、**マイニング構造の処理 -\<構造 >**  ダイアログ ボックス。  
+4.  クリックして**閉じる**で、**マイニング構造の処理 -\<構造 >**  ダイアログ ボックス。  
   
 ## <a name="see-also"></a>参照  
  [マイニング構造のタスクと操作方法](mining-structure-tasks-and-how-tos.md)  

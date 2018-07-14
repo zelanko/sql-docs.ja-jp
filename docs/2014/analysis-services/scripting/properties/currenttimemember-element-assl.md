@@ -1,5 +1,5 @@
 ---
-title: CurrentTimeMember 要素 (ASSL) |Microsoft ドキュメント
+title: CurrentTimeMember 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CurrentTimeMember element
 ms.assetid: 2e73009c-9f2b-441c-bdf0-ca19b160da4f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48fc08b2d45ed75c2a57154efbc154cd9b1b0496
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 804b68d36d75741869595232fd09cd67959caa70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204102"
 ---
 # <a name="currenttimemember-element-assl"></a>CurrentTimeMember 要素 (ASSL)
   ディメンションに関連付けられている時間の現在のメンバーを定義、 [Kpi](../objects/kpi-element-assl.md)要素。  

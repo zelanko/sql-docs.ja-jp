@@ -1,5 +1,5 @@
 ---
-title: Action 要素 (ASSL) |Microsoft ドキュメント
+title: Action 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Action element
 ms.assetid: aaee06a2-91c6-4007-b787-79cb08d63c77
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dcabe0b31b44b293fe54e24699d25dc340e3302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfc51d797852e80cf7bf501cf3f1d93f2f52c9d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196012"
 ---
 # <a name="action-element-assl"></a>Action 要素 (ASSL)
-  使用できるアクションに関する情報が含まれています、[キューブ](cube-element-assl.md)要素または[パースペクティブ](perspective-element-assl.md)要素。  
+  使用できるアクションに関する情報を格納する[キューブ](cube-element-assl.md)要素または[パースペクティブ](perspective-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

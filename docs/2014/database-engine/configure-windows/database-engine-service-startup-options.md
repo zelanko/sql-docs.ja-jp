@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
 - overriding default startup options
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - starting SQL Server, options
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 caps.latest.revision: 75
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 66aa5a32ddc527ccde99fcf990eb73046123d65f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 373f9493ac9effd62bb0c7178fca09289f70b4bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219832"
 ---
 # <a name="database-engine-service-startup-options"></a>データベース エンジン サービスのスタートアップ オプション
   スタートアップ オプションは、起動時に必要な特定のファイルの場所およびサーバー全体の状態を指定します。 通常は、スタートアップ オプションを指定する必要はありません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のトラブルシューティングを行う場合や、特殊な問題が発生し、スタートアップ オプションの使用を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カスタマー サポートから指示された場合のみ指定します。  
@@ -52,7 +52,7 @@ ms.locfileid: "36176020"
 |---------------------------|-----------------|  
 |**-c**|コマンド プロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動する場合に、起動時間を短縮します。 通常、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、サービス コントロール マネージャーを呼び出すことにより、サービスとして起動します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、コマンド プロンプトから起動した場合はサービスとして起動しないため、 **-c** を使用してこの手順を省略します。|  
 |**-f**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを最小構成で起動します。 設定値によりサーバーが起動できないとき (たとえば使用できるメモリが不足している場合) などに便利です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を最小構成モードで起動すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシングル ユーザー モードになります。 詳細については、後の **-m** の説明を参照してください。|  
-|**-g**  *memory_to_reserve*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ プール外の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス内にメモリ割り当てに使用できる領域として残すメモリ容量を整数 (MB 単位) で指定します。 メモリ プール外のメモリは、拡張プロシージャ .dll ファイル、分散クエリによって参照される OLE DB プロバイダー、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントで参照されるオートメーション オブジェクトなどのアイテムを読み込むために、 [!INCLUDE[tsql](../../includes/tsql-md.md)] によって使用される領域です。 既定値は 256 MB です。<br /><br /> このオプションを使用すると、メモリ割り当てを調整するうえで役に立つ場合がありますが、これは、アプリケーションが使用できる仮想メモリに対してオペレーティング システムが設定する制限値よりも物理メモリが多い場合だけです。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に必要なメモリ容量が通常より多い大容量メモリ構成で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの仮想アドレス空間全体が使用される場合に効果があります。 このオプションを誤って使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動しないことや、実行時エラーが発生することがあります。<br /><br /> **エラー ログに次の警告が記録されない限り、** -g [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パラメーターの既定値を使用してください。<br /><br /> -"仮想 Allocate バイトに失敗しました: FAIL_VIRTUAL_RESERVE\<サイズ >"<br /><br /> -"仮想 Allocate バイトに失敗しました: FAIL_VIRTUAL_COMMIT\<サイズ >"<br /><br /> これらのメッセージは、拡張ストアド プロシージャ .dll ファイルやオートメション オブジェクトなどのアイテムの格納領域を確保するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ プールの一部を解放しようとしていることを示している場合があります。 その場合は、 **-g** スイッチによって確保するメモリ量を増やすことを検討してください。<br /><br /> 既定値より小さい値を使用すると、SQL Server Memory Manager によって管理されるメモリ プールおよびスレッド スタックが利用できる容量が増えます。その結果、拡張ストアド プロシージャ、分散クエリ、またはオートメーション オブジェクトを多用しないシステムの、メモリ負荷の高い作業のパフォーマンスが向上することがあります。|  
+|**-g**  *memory_to_reserve*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ プール外の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス内にメモリ割り当てに使用できる領域として残すメモリ容量を整数 (MB 単位) で指定します。 メモリ プール外のメモリは、拡張プロシージャ .dll ファイル、分散クエリによって参照される OLE DB プロバイダー、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントで参照されるオートメーション オブジェクトなどのアイテムを読み込むために、 [!INCLUDE[tsql](../../includes/tsql-md.md)] によって使用される領域です。 既定値は 256 MB です。<br /><br /> このオプションを使用すると、メモリ割り当てを調整するうえで役に立つ場合がありますが、これは、アプリケーションが使用できる仮想メモリに対してオペレーティング システムが設定する制限値よりも物理メモリが多い場合だけです。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に必要なメモリ容量が通常より多い大容量メモリ構成で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの仮想アドレス空間全体が使用される場合に効果があります。 このオプションを誤って使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動しないことや、実行時エラーが発生することがあります。<br /><br /> **エラー ログに次の警告が記録されない限り、** -g [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パラメーターの既定値を使用してください。<br /><br /> -"仮想割り当てバイト数を失敗しました: FAIL_VIRTUAL_RESERVE\<サイズ >"<br /><br /> -"仮想割り当てバイト数を失敗しました: FAIL_VIRTUAL_COMMIT\<サイズ >"<br /><br /> これらのメッセージは、拡張ストアド プロシージャ .dll ファイルやオートメション オブジェクトなどのアイテムの格納領域を確保するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ プールの一部を解放しようとしていることを示している場合があります。 その場合は、 **-g** スイッチによって確保するメモリ量を増やすことを検討してください。<br /><br /> 既定値より小さい値を使用すると、SQL Server Memory Manager によって管理されるメモリ プールおよびスレッド スタックが利用できる容量が増えます。その結果、拡張ストアド プロシージャ、分散クエリ、またはオートメーション オブジェクトを多用しないシステムの、メモリ負荷の高い作業のパフォーマンスが向上することがあります。|  
 |**-m**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動する場合、接続できるユーザーは 1 ユーザーのみで、CHECKPOINT プロセスは起動されません。 CHECKPOINT は、完了したトランザクションがディスク キャッシュからデータベース デバイスに定期的に書き込まれることを保証する機能です。 一般的に、システム データベースを修復する必要がある問題が発生したときに、このオプションを使用します。sp_configure allow updates オプションが有効になります。 既定では、allow updates は無効になっています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動すると、コンピューターのローカル Administrators グループのメンバーはすべて、固定サーバー ロール sysadmin のメンバーとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続できるようになります。 詳細については、「 [システム管理者がロックアウトされた場合の SQL Server への接続](connect-to-sql-server-when-system-administrators-are-locked-out.md)」を参照してください。シングル ユーザー モードの詳細については、「 [シングル ユーザー モードでの SQL Server の起動](start-sql-server-in-single-user-mode.md)」を参照してください。|  
 |**-m「クライアント アプリケーション名」**|**SQLCMD** または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **-m** オプションを使用すると、接続を特定のクライアント アプリケーションに限定できます。 たとえば、**-m"SQLCMD"** を使用すると、接続が、**SQLCMD** クライアント プログラムとして識別される必要がある単一の接続に限定されます。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動するときに、その唯一の接続を不明なクライアント アプリケーションによって使用されていた場合に使用します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のクエリ エディターを使用して接続するには、 **-m"Microsoft SQL Server Management Studio - Query"** を使用します。<br /><br /> クライアント アプリケーション名では大文字と小文字が区別されます。<br /><br /> **\*\* セキュリティに関する注意 \*\*** このオプションをセキュリティ機能として使用しないでください。 クライアント アプリケーションの名前はクライアント アプリケーションによって接続文字列の一部として指定されるため、本当の名前が指定されるとは限りません。|  
 |**-n**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントを記録する際に、Windows アプリケーション ログを使用しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -n **を使用して**のインスタンスを起動する場合は、 **-e** スタートアップ オプションも使用することをお勧めします。 このオプションを指定しないと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントはログに記録されません。|  

@@ -1,5 +1,5 @@
 ---
-title: 処理クエリ ダイアログ ボックス (Analysis Services - 多次元データ) の作成 |Microsoft ドキュメント
+title: 処理クエリ ダイアログ ボックス (Analysis Services - 多次元データ) の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 01633f8b8ce57d3b8953c1694a250cfdb9a64cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0744aae90a9d3995d5803bca2ccdff31012b5eeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244102"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>[処理クエリの作成] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の **[処理クエリの作成]** ダイアログ ボックスを使用すると、**[ストレージのオプション]** ダイアログ ボックスの **[通知]** タブで処理クエリを作成できます。 処理クエリは、オブジェクトの多次元 OLAP (MOLAP) キャッシュを増分更新するため、最後にテーブルがポーリングされた後に、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトに関連付けられたテーブルへの変更を含む行セットを返すクエリです。 Analysis Services は、ポーリング クエリとして参照される他のクエリを使用して、オブジェクトに関連付けられたテーブルをポーリングし、テーブルが変更されたかどうかを判断します。 処理クエリは、オブジェクトの MOLAP キャッシュを完全に更新する場合には不要です。  
@@ -65,7 +65,7 @@ ms.locfileid: "36173365"
   
 |値|説明|  
 |-----------|-----------------|  
-|**汎用クエリ ビルダーに切り替えます**|選択すると、汎用クエリ ビルダーのビューで使用されるオプションのみが表示されます。 次のオプションのみが表示されます。<br /><br /> **SQL ペイン**<br /><br /> **[結果] ペイン**<br /><br /> **[ツール バー]**。 **[VDT クエリ ビルダーに切り替えます]** と **[実行]**<br /><br /> 注: このオプションは、**[VDT クエリ ビルダーに切り替えます]** が選択されている場合にのみ表示されます。|  
+|**汎用クエリ ビルダーに切り替えます**|選択すると、汎用クエリ ビルダーのビューで使用されるオプションのみが表示されます。 次のオプションのみが表示されます。<br /><br /> **SQL ペイン**<br /><br /> **結果ペイン**<br /><br /> **[ツール バー]**。 **[VDT クエリ ビルダーに切り替えます]** と **[実行]**<br /><br /> 注: このオプションは、**[VDT クエリ ビルダーに切り替えます]** が選択されている場合にのみ表示されます。|  
 |**VDT クエリ ビルダーに切り替えます**|選択すると、Visual Database Tools (VDT) クエリ ビルダーのビューで使用できるオプションがすべて表示されます。<br /><br /> 注: このオプションは、 **[汎用クエリ ビルダーに切り替えます]** が選択されている場合にのみ表示されます。|  
 |**[ダイアグラム ペインの表示/非表示]**|**[ダイアグラム]** ペインの表示と非表示を切り替えます。<br /><br /> **注** このオプションは、 **[VDT クエリ ビルダーに切り替えます]** が選択されている場合にのみ表示されます。|  
 |**[グリッド ペインの表示/非表示]**|**[グリッド]** ペインの表示と非表示を切り替えます。<br /><br /> 注: このオプションは、**[VDT クエリ ビルダーに切り替えます]** が選択されている場合にのみ表示されます。|  
@@ -92,7 +92,7 @@ ms.locfileid: "36173365"
 > [!IMPORTANT]  
 >  クエリの種類の変更は、ダイアログ ボックスではサポートされません。  
   
- **[グリッド] ペイン**  
+ **グリッド ペイン**  
  クエリから参照されるオブジェクトをグリッドに表示します。 このペインを使用して、クエリに列を追加したり、列を削除したりできます。また、各列の設定の変更も変更できます。  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ ms.locfileid: "36173365"
 > [!NOTE]  
 >  **ダイアグラム ペイン**、 **グリッド ペイン**、および **SQL ペイン** の内容は同期しているため、1 つのペインで加えた変更は他の 2 つのペインにも反映されます。  
   
- **[結果] ペイン**  
+ **結果ペイン**  
  **ツール バー** ペインで **[実行]** をクリックしたときに、クエリの結果を表示します。  
   
 ## <a name="see-also"></a>参照  

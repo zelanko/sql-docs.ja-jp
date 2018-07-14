@@ -1,5 +1,5 @@
 ---
-title: Synchronize 要素 (XMLA) |Microsoft ドキュメント
+title: Synchronize 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Synchronize command
 ms.assetid: 9401323c-feff-409a-a9da-94aee47e0563
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 367d237cab7ea63b85e000433742d866466b3f62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3f88b07721d391c1f834ed93d21039753728081d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187099"
 ---
 # <a name="synchronize-element-xmla"></a>Synchronize 要素 (XMLA)
-  同期、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]別の既存のデータベースとデータベースです。  
+  同期、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]を別の既存のデータベースのデータベース。  
   
 ## <a name="syntax"></a>構文  
   
@@ -79,10 +79,10 @@ ms.locfileid: "36175224"
   
  `Synchronize` コマンドの実行中に、同期元データベースに読み取りロックが設定され、同期先データベースに書き込みロックが設定されます。 `Synchronize` コマンドが完了した後、両者のロックは解放されます。  
   
- データベースの同期の詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)です。  
+ データベースの同期の詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)します。  
   
 ## <a name="see-also"></a>参照  
- [要素をバックアップ&#40;XMLA&#41;](backup-element-xmla.md)   
+ [バックアップ要素&#40;XMLA&#41;](backup-element-xmla.md)   
  [要素をバッチ&#40;XMLA&#41;](batch-element-xmla.md)   
  [要素を並列&#40;XMLA&#41;](../xml-elements-properties/parallel-element-xmla.md)   
  [Restore 要素&#40;XMLA&#41;](restore-element-xmla.md)   

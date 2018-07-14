@@ -1,5 +1,5 @@
 ---
-title: 全般 (Restore Database ダイアログ ボックス) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: 全般 (復元データベース ダイアログ ボックス) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.f1
 ms.assetid: 319e7ef5-c9c7-4e50-8690-02a90aed006f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4969ceb840f6c3d80b4d0854d582e695c109806b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95e8ba4b11509b73dfc1b529e89b612549de7308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321322"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>[全般] ([データベースの復元] ダイアログ ボックス) (Analysis Services - 多次元データ)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[データベースの復元]** ダイアログ ボックスの **[全般]** ページを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースの復元に使用するバックアップ ファイルおよび全般設定を指定できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "36174050"
 > [!NOTE]  
 >  既存のデータベースを復元すると、データベースを復元したユーザーは、復元されたデータベースにアクセスできなくなる可能性があります。 バックアップの実行時に、ユーザーがサーバー ロールのメンバー、またはフル コントロール (管理者) 権限を持つデータベース ロールのメンバーではなかった場合、このようにアクセスできなくなることがあります。  
   
- **データベースの復元 ダイアログ ボックスで、全般 ページを表示するには**  
+ **データベースの復元 ダイアログ ボックスの 全般 ページを表示**  
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の **オブジェクト エクスプローラー** で、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの **[データベース]** フォルダー、またはデータベースを右クリックし、 **[データベースの復元]** をクリックします。次に、 **[ページの選択]** で **[全般]** をクリックします。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36174050"
   
 |オプション|説明|  
 |------------|-----------------|  
-|**すべてをコピーします。**|バックアップ ファイルに格納されたデータベース ロール、およびロールに関連付けられたユーザー アカウントを復元します。|  
+|**すべてコピーします。**|バックアップ ファイルに格納されたデータベース ロール、およびロールに関連付けられたユーザー アカウントを復元します。|  
 |**メンバーシップをスキップします。**|バックアップ ファイルに格納されたデータベース ロールを復元しますが、ロールに関連付けられたユーザー アカウントは復元しません。|  
   
  **Password**  

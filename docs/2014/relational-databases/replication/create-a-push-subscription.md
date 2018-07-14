@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - push subscriptions [SQL Server replication], creating
 - merge replication subscribing [SQL Server replication], push subscriptions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 841236b9f31f5b3bbf9703a9b4695e3c13630702
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e30ea044e434c5dd08336a964f587dcb07ebd88d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268728"
 ---
 # <a name="create-a-push-subscription"></a>プッシュ サブスクリプションの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、プッシュ サブスクリプションを作成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの詳細については、「[SQL Server 以外のサブスクライバーのサブスクリプションの作成](create-a-subscription-for-a-non-sql-server-subscriber.md)」を参照してください。  
@@ -95,9 +95,9 @@ ms.locfileid: "36173924"
   
     -   **allow_push** の値が **1**の場合、プッシュ サブスクリプションがサポートされます。  
   
-    -   場合の値**allow_push**は**0**、実行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を指定して、 **allow_push**の **@property**と`true`の **@value**です。  
+    -   場合の値**allow_push**は**0**、実行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を指定して**allow_push**の **@property**と`true`の **@value**します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)を実行します。 **@publication**、 **@subscriber**、および **@destination_db**を指定します。 **@subscription_type** に **push** を指定します。 サブスクリプションを更新する方法については、次を参照してください[トランザクション パブリケーションに対する更新可能なサブスクリプションを作成します。](create-updatable-subscription-transactional-publication-transact-sql.md)  
+2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)を実行します。 **@publication**、 **@subscriber**、および **@destination_db**を指定します。 **@subscription_type** に **push** を指定します。 サブスクリプションを更新する方法については、次を参照してください[Create an Updatable Subscription to Transactional Publication。](create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)を実行します。 次の指定を行います。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36173924"
   
     -   **allow_push** の値が **1**の場合、パブリケーションでプッシュ サブスクリプションがサポートされます。  
   
-    -   場合の値**allow_push**は**1**、実行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を指定して、 **allow_push**の**@property** と`true`の **@value**です。  
+    -   場合の値**allow_push**ない**1**、実行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を指定して**allow_push**の**@property** と`true`の **@value**します。  
   
 2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)を実行します。次のパラメーターを指定します。  
   
@@ -172,9 +172,9 @@ ms.locfileid: "36173924"
   
 2.  手順 1. のパブリッシャー接続を使用して、 <xref:Microsoft.SqlServer.Replication.TransPublication> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>、および <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>を指定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが戻る場合`false`、手順 2. で指定したプロパティが正しくないか、パブリケーションがサーバー上に存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが戻る場合`false`、手順 2. で指定したプロパティが正しくないか、パブリケーションがサーバーに存在していません。  
   
-4.  ビットごとの論理 AND を実行 (`&` Visual C# の場合と`And`Visual Basic で) の間、<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>プロパティおよび<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>です。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None> の場合、<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> のビットごとの論理和演算 (Visual C# では `|`、Visual Basic では `Or`) の結果を <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> に設定します。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
+4.  ビットごとの論理 AND を実行 (`&` Visual c# と`And`Visual Basic で) の間、<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>プロパティと<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None> の場合、<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> のビットごとの論理和演算 (Visual C# では `|`、Visual Basic では `Or`) の結果を <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> に設定します。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
   
 5.  サブスクリプション データベースが存在しない場合は、 <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを使用して作成します。 詳細については、「[データベースの作成、変更、および削除](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)」を参照してください。  
   
@@ -212,9 +212,9 @@ ms.locfileid: "36173924"
   
 2.  手順 1. のパブリッシャー接続を使用して、 <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>、および <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>を指定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが戻る場合`false`、手順 2. で指定したプロパティが正しくないか、パブリケーションがサーバー上に存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが戻る場合`false`、手順 2. で指定したプロパティが正しくないか、パブリケーションがサーバーに存在していません。  
   
-4.  ビットごとの論理 AND を実行 (`&` Visual C# の場合と`And`Visual Basic で) の間、<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>プロパティおよび<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>です。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None> の場合、<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> のビットごとの論理和演算 (Visual C# では `|`、Visual Basic では `Or`) の結果を <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> に設定します。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
+4.  ビットごとの論理 AND を実行 (`&` Visual c# と`And`Visual Basic で) の間、<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>プロパティと<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None> の場合、<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> のビットごとの論理和演算 (Visual C# では `|`、Visual Basic では `Or`) の結果を <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> に設定します。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
   
 5.  サブスクリプション データベースが存在しない場合は、 <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを使用して作成します。 詳細については、「[データベースの作成、変更、および削除](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)」を参照してください。  
   
@@ -232,7 +232,7 @@ ms.locfileid: "36173924"
   
     -   パブリケーション名を <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>に指定します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>と<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>または<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A>のフィールド<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>の資格情報を提供する、[!INCLUDE[msCoName](../../includes/msconame-md.md)]マージ エージェントをディストリビューターで実行する Windows アカウントです。 このアカウントは、ディストリビューターとのローカル接続を確立したり、Windows 認証を使用したリモート接続を確立するときに使用されます。  
+    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>と<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>または<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A>フィールドの<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>の資格情報を提供する、[!INCLUDE[msCoName](../../includes/msconame-md.md)]マージ エージェントがディストリビューターで実行する Windows アカウント。 このアカウントは、ディストリビューターとのローカル接続を確立したり、Windows 認証を使用したリモート接続を確立するときに使用されます。  
   
         > [!NOTE]  
         >  サブスクリプションが `sysadmin` 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> の設定は必須ではありませんが、推奨されます。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](security/replication-agent-security-model.md)」を参照してください。  

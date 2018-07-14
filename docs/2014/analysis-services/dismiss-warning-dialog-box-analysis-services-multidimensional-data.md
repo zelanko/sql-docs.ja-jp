@@ -1,5 +1,5 @@
 ---
-title: 警告の消去 ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: 警告の消去 ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dismisswarningdialog.f1
 ms.assetid: 66d853e0-1b57-4b17-a7d1-a25899411684
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 135fe44e1edee6be816ea2192f3ab9153487b12f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 00ef76ad911516ee8f2c2d73911fb4a7fd9fe949
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228312"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>[警告の消去] ダイアログ ボックス (Analysis Services - 多次元データ)
   **[警告の消去]** ダイアログ ボックスを使用すると、警告の特定のインスタンスを消去できます。  
@@ -33,7 +33,7 @@ ms.locfileid: "36174590"
 2.  **ソリューション エクスプローラー**で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを右クリックし、 **[データベースの編集]** をクリックして、 **[警告]** タブをクリックします。  
   
 ## <a name="options"></a>および  
- **description**  
+ **[説明]**  
  消去されている警告が表示されます。  
   
  **コメント (オプション)**  

@@ -1,5 +1,5 @@
 ---
-title: Autoexists |Microsoft ドキュメント
+title: Autoexists |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8fdb4d1cf175d88a6437f2efab269b4ecbf2e236
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5587d26a8c5df5f343f43b64b692d477ea07a015
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194372"
 ---
 # <a name="autoexists"></a>Autoexists
   *autoexists* の概念を導入すると、このキューブ空間を、同じ階層から属性階層メンバーの可能なすべての組み合わせを作成した結果として存在するセルでなく、実際に存在するセルのみに限定できます。 これは、1 つの属性階層のメンバーは、同じディメンション内の別の属性階層のメンバーと共存できないためです。 SELECT ステートメントに同じディメンションの属性階層を複数使用した場合、こうした属性のメンバーは、Analysis Services が属性の式を評価する際、それ以外のすべての属性の条件を満たすよう、適切に絞り込まれます。  
@@ -66,7 +66,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  このクエリでは、列軸を表す axis(0) の略記である 0 を使用して、列軸を指定しています。  
   
- 上のクエリを実行すると、クエリ内の各属性階層から、共存できるメンバーのセルのみが返されます。 上記のクエリは、新しいを使用して書き込むこともできます * のバリアント、 [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx)関数。  
+ 上のクエリを実行すると、クエリ内の各属性階層から、共存できるメンバーのセルのみが返されます。 前のクエリは、新しいを使用して書き込むこともできます * のバリアント、 [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx)関数。  
   
 ```  
 SELECT   
@@ -92,7 +92,7 @@ WHERE (Measures.[Internet Sales Amount],
  これら 3 つのクエリはいずれも、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の autoexist の効果を示しています。  
   
 ## <a name="deep-and-shallow-autoexists"></a>Deep および Shallow Autoexists  
- Autoexists は、式に対して深く (deep) または浅く (shallow) 適用できます。 `Deep Autoexists` では、スライサーの式、軸の下位選択式などを適用した後、可能な限り深い場所に到達するように、すべての式が評価されます。 `Shallow Autoexists` 現在の式より前に外部の式が評価され、それらの結果は、現在の式に渡されることを意味します。 既定の設定は deep autoexists です。  
+ Autoexists は、式に対して深く (deep) または浅く (shallow) 適用できます。 `Deep Autoexists` では、スライサーの式、軸の下位選択式などを適用した後、可能な限り深い場所に到達するように、すべての式が評価されます。 `Shallow Autoexists` 外部の式は、現在の式の前に評価され、その結果が現在の式に渡されますことを意味します。 既定の設定は deep autoexists です。  
   
  以下のシナリオとサンプルでは、さまざまな種類の Autoexists について説明します。 この例では 2 つのセットを 1 つは計算式として、もう 1 つは定数式として作成します。  
   
@@ -312,15 +312,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists の動作は、AUTOEXISTS を使用して変更できます = [1 | 2 | 3] パラメーター、接続文字列です。参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。  
+ Autoexists の動作は、AUTOEXISTS を使用して変更できます = [1 | 2 | 3] パラメーター、接続文字列。参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。  
   
 ## <a name="see-also"></a>参照  
  [MDX の主な概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [キューブ空間](cube-space.md)   
- [組](tuples.md)   
- [メンバー、組、およびセット&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [タプル](tuples.md)   
+ [メンバー、組、およびセットの操作&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [表示部分の合計と非表示部分の合計](visual-totals-and-non-visual-totals.md)   
  [MDX 言語リファレンス&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [多次元式&#40;MDX&#41;参照](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [多次元式&#40;MDX&#41;リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: AMO クラスの概要 |Microsoft ドキュメント
+title: AMO クラスの概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ helpviewer_keywords:
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3e525dec6972d68ce8695bc7fab6aa6ab177e0a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb4e3761642f8b03e5853ae99e00cc4bc2f4a46f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328532"
 ---
 # <a name="introducing-amo-classes"></a>AMO クラスの概要
-  分析管理オブジェクト (AMO) のインスタンスを管理するためのクラスのライブラリは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]クライアント アプリケーションからです。 AMO クラスは、データベース、ディメンション、キューブ、マイニング構造およびマイニング モデル、ロールおよび権限、例外などの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクトを管理するために使用されるクラスです。  
+  分析管理オブジェクト (AMO) は、クラスのインスタンスを管理するためのライブラリ[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]クライアント アプリケーションから。 AMO クラスは、データベース、ディメンション、キューブ、マイニング構造およびマイニング モデル、ロールおよび権限、例外などの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクトを管理するために使用されるクラスです。  
   
  次の図は、このトピックで説明するクラスの関係を示しています。  
   
- ![クラスは、AMO の概念説明のトピックで確認](../../../analysis-services/dev-guide/media/amo-reviewedclasses.gif "クラスは、AMO の概念トピックのレビュー")  
+ ![クラスは、AMO の概念説明のトピックで取り上げられて](../../../analysis-services/dev-guide/media/amo-reviewedclasses.gif "クラスは、AMO の概念説明トピックの確認")  
   
  AMO ライブラリは、特定のタスクの実行に使用される、論理的に関連したオブジェクトのグループとして考えることができます。 AMO クラスは次の方法で分類できます。 このセクションの内容は次のとおりです。  
   

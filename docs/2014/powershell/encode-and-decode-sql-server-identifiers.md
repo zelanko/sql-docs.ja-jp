@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: f7651c43569003862f41a62f5e2a9917f3d534a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c2a997ec2df79b600b73be0bd5a33f7144fe119
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195362"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 識別子のエンコードとデコード
   SQL Server の区切られた識別子には、Windows PowerShell パスでサポートされない文字が含まれる場合があります。 これらの文字は、16 進数値にエンコードすることによって指定できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36176852"
  **Encode-SqlName** コマンドレットは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子を入力として受け取ります。 また、Windows PowerShell 言語ではサポートされないすべての文字が "%xx" でエンコードされた文字列を出力します。 **Decode-SqlName** コマンドレットは、エンコードされた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子を入力として受け取り、元の識別子を返します。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
- `Encode-Sqlname`と`Decode-Sqlname`のみ、このコマンドレットではエンコードまたは SQL Server の区切られた識別子で許可されるが PowerShell パスでサポートされていない文字をデコードします。 **Encode-SqlName** によってエンコードされ、 **Decode-sqlname**によってデコードされる文字を次に示します。  
+ `Encode-Sqlname`と`Decode-Sqlname`コマンドレットでエンコードまたはデコードする SQL Server の区切られた識別子では許可されますが、PowerShell パスでサポートされていない文字のみです。 **Encode-SqlName** によってエンコードされ、 **Decode-sqlname**によってデコードされる文字を次に示します。  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
@@ -66,7 +66,7 @@ Set-Location (Encode-SqlName "Table:Test")
 ##  <a name="DecodeIdent"></a> 識別子のデコード  
  **PowerShell パスの SQL Server 識別子をデコードするには**  
   
- 使用して、`Decode-Sqlname`エンコードで表される文字の 16 進数エンコードを置換するコマンドレットです。  
+ 使用して、`Decode-Sqlname`コマンドレットを 16 進数エンコードをエンコードが表す文字に置き換えます。  
   
 ### <a name="examples-decoding"></a>例 (デコード)  
  次の例は、"Table:Test" を返します。  

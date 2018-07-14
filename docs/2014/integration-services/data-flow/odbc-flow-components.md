@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa28260303bc7be87ac166ce3e22aa55c32a2a0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e13fa57378ac9dac263cb89d48da84b94739a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213672"
 ---
 # <a name="odbc-flow-components"></a>ODBC フロー コンポーネント
   このトピックでは、SQL Server 2016 Integration Services (SSIS) を使用して ODBC データ フローを作成するために必要な概念について説明します。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
@@ -114,8 +114,8 @@ ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされませ�
 |SQL_DOUBLE|DT_R8|  
 |SQL_FLOAT|DT_R8|  
 |SQL_REAL|DT_R4|  
-|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|P が 38 以上 S が 0 以上で、P. に等しいまたはそれよりも小さい場合、数値データ型は DT_NUMERIC にマップします。次の少なくとも 1 つが true の場合、数値データ型は DT_R8 にマッピングされます。<br /><br />有効桁数が 38 より大きい<br /><br />小数点以下桁数が 0 より小さい<br /><br />小数点以下桁数が 38 より大きい<br /><br />小数点以下桁数が有効桁数より大きい<br /><br /><br /><br />Money データ型として宣言されている場合、数値データ型は DT_CY にマップされるに注意してください。|  
-|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|P が 38 以上 S が 0 以上で、P. に等しいまたはそれよりも小さい場合、decimal データ型は DT_NUMERIC にマップします。次の少なくとも 1 つが true の場合、decimal データ型は DT_R8 にマッピングされます。<br /><br />有効桁数が 38 より大きい<br /><br />小数点以下桁数が 0 より小さい<br /><br />小数点以下桁数が 38 より大きい<br /><br />小数点以下桁数が有効桁数より大きい<br /><br />Money データ型として宣言されている場合、10 進データ型は DT_CY にマップされるに注意してください。|  
+|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|P が 38 以上 S が 0 以上で、P. に等しいまたはそれよりも小さい場合、数値データ型は DT_NUMERIC にマッピングされます。次の少なくとも 1 つが true の場合、数値データ型は DT_R8 にマッピングします。<br /><br />有効桁数が 38 より大きい<br /><br />小数点以下桁数が 0 より小さい<br /><br />小数点以下桁数が 38 より大きい<br /><br />小数点以下桁数が有効桁数より大きい<br /><br /><br /><br />Money データ型として宣言されている場合、DT_CY に数値データ型をマップすることに注意してください。|  
+|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|P が 38 以上 S が 0 以上で、P. に等しいまたはそれよりも小さい場合に、decimal データ型は DT_NUMERIC にマッピングします。次の少なくとも 1 つが true の場合、decimal データ型は DT_R8 にマッピングします。<br /><br />有効桁数が 38 より大きい<br /><br />小数点以下桁数が 0 より小さい<br /><br />小数点以下桁数が 38 より大きい<br /><br />小数点以下桁数が有効桁数より大きい<br /><br />Money データ型として宣言されている場合、DT_CY に 10 進データ型をマップすることに注意してください。|  
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|小数点以下桁数が 3 より大きい場合、SQL_TIMESTAMP データ型は DT_DBTIMESTAMP2 にマッピングされます。 それ以外の場合は、DT_DBTIMESTAMP にマッピングされます。|  

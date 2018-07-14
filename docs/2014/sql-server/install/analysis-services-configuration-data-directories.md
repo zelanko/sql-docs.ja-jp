@@ -1,5 +1,5 @@
 ---
-title: Analysis Services の構成 - データ ディレクトリ |Microsoft ドキュメント
+title: Analysis Services の構成 - データ ディレクトリ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef732855-b7af-4f40-a619-5573c1c354bb
 caps.latest.revision: 20
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: b3b945938c0ffd8a5059f8b2c53546538ea97eee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 64eb317972d33f2fc2957f40c74b0bdea9aac152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204622"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Analysis Services の構成 - データ ディレクトリ
   次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 これらのファイルにアクセスする権限は、ローカル管理者と、セットアップ中に作成されて準備される SQLServerMSASUser$\<インスタンス> セキュリティ グループのメンバーに付与されます。  
@@ -28,10 +28,10 @@ ms.locfileid: "36174104"
   
 |説明|既定のディレクトリ|推奨事項|  
 |-----------------|-----------------------|---------------------|  
-|データ ルート ディレクトリ|C:\Program files \microsoft SQL Server\MSAS12 です。\<InstanceID > \OLAP\Data\|\Program files\Microsoft SQL server \ フォルダーが権限の制限により保護されていることを確認します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパフォーマンスは、多くの構成で、データ ディレクトリが配置されているストレージのパフォーマンスに依存します。 このディレクトリは、システムに割り当てられている中でパフォーマンスが最も高いストレージに配置してください。 フェールオーバー クラスターのインストールの場合は、データ ディレクトリが共有ディスク上に配置されるようにしてください。|  
-|ログ ファイル ディレクトリ|C:\Program files \microsoft SQL Server\MSAS12 です。\<InstanceID > \OLAP\Log\|これは、ディレクトリの[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ログ ファイル、および、FlightRecorder ログが含まれています。 フライト レコーダーの時間を増加する場合、ログ ディレクトリに十分な容量があることを確認してください。|  
-|Temp ディレクトリ|C:\Program files \microsoft SQL Server\MSAS12 です。\<InstanceID > \OLAP\Temp\|Temp ディレクトリを高パフォーマンス記憶域サブシステムに配置します。|  
-|バックアップ ディレクトリ|C:\Program files \microsoft SQL Server\MSAS12 です。\<InstanceID > \OLAP\Backup\|これは、ディレクトリの[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]既定のバックアップ ファイル。 PowerPivot for SharePoint のインストールでは、ここは PowerPivot System サービスが PowerPivot データ ファイルをキャッシュする場所でもあります。<br /><br /> データの損失を防ぐために適切な権限を設定し、バックアップ ディレクトリに書き込むための適切な権限が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスのユーザー グループに付与されるようにしてください。 マップされたドライブをバックアップ ディレクトリに使用することはサポートされていません。|  
+|データ ルート ディレクトリ|C:\Program files \microsoft SQL Server\MSAS12 します。\<InstanceID > \OLAP\Data\|\Program files\Microsoft の SQL server \ フォルダーが権限の制限により保護されていることを確認します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパフォーマンスは、多くの構成で、データ ディレクトリが配置されているストレージのパフォーマンスに依存します。 このディレクトリは、システムに割り当てられている中でパフォーマンスが最も高いストレージに配置してください。 フェールオーバー クラスターのインストールの場合は、データ ディレクトリが共有ディスク上に配置されるようにしてください。|  
+|ログ ファイル ディレクトリ|C:\Program files \microsoft SQL Server\MSAS12 します。\<InstanceID > \OLAP\Log\|これは、ディレクトリの[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ログ ファイル、およびその FlightRecorder ログが含まれています。 フライト レコーダーの時間を増加する場合、ログ ディレクトリに十分な容量があることを確認してください。|  
+|Temp ディレクトリ|C:\Program files \microsoft SQL Server\MSAS12 します。\<InstanceID > \OLAP\Temp\|Temp ディレクトリは、高パフォーマンス記憶域サブシステムに配置します。|  
+|バックアップ ディレクトリ|C:\Program files \microsoft SQL Server\MSAS12 します。\<InstanceID > \OLAP\Backup\|これは、ディレクトリの[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]既定のバックアップ ファイル。 PowerPivot for SharePoint のインストールでは、ここは PowerPivot System サービスが PowerPivot データ ファイルをキャッシュする場所でもあります。<br /><br /> データの損失を防ぐために適切な権限を設定し、バックアップ ディレクトリに書き込むための適切な権限が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスのユーザー グループに付与されるようにしてください。 マップされたドライブをバックアップ ディレクトリに使用することはサポートされていません。|  
   
 ## <a name="notes"></a>注  
   

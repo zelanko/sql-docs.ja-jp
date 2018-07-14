@@ -1,5 +1,5 @@
 ---
-title: 書式設定要素 (ASSL) |Microsoft ドキュメント
+title: 要素 (ASSL) を書式設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Format element
 ms.assetid: 881ea707-52a7-46f7-ba16-ac2ec44eca22
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7434ba5d6e2db8d2a2e665fa333799b6b2e9eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8b5fdae50b38c81ad29143887717b412084c2c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169503"
 ---
 # <a name="format-element-assl"></a>Format 要素 (ASSL)
   要求の形式が含まれています、 [DataItem](../data-type/dataitem-data-type-assl.md)要素。  
@@ -62,7 +62,7 @@ ms.locfileid: "36176497"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 使用できる値、`Format`要素は、Microsoft Office Excel 形式および文字列*TrimRight*、 *TrimLeft*、 *TrimAll*、および*TrimNone*です。 トリミングの*TrimRight*既定値です。  
+ 使用できる値、`Format`要素は、Microsoft Office Excel 形式および文字列*TrimRight*、 *TrimLeft*、 *TrimAll*、および*TrimNone*します。 トリミングの*TrimRight*既定値です。  
   
  この要素の値は、次の表のいずれかの文字列に制限されます。  
   

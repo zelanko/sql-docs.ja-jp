@@ -1,5 +1,5 @@
 ---
-title: データ マイニングの概念 |Microsoft ドキュメント
+title: データ マイニングの概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data mining
 - cleaning data
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 296ef0bf077c7d28e7288e1c7cae999de592b8e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1236bc9b0c7e18331d2a3dea660f38d81408176b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212012"
 ---
 # <a name="data-mining-concepts"></a>データ マイニングの概念
   データ マイニングとは、大規模なデータ セットから実用的な情報を検出するプロセスです。 データ マイニングでは、数学的分析を使用して、データに内在するパターンおよび傾向を抽出します。 通常、これらのパターンは、従来のデータ探索では検出できません。これは、リレーションシップが非常に複雑であるか、またはデータ量が多すぎるためです。  
@@ -66,7 +66,7 @@ ms.locfileid: "36165947"
   
  次の図では、プロセスの各手順の関係と、各手順の実行に使用できる [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテクノロジについて説明します。  
   
- ![データ マイニング プロセスの主なステップ](../media/data-mining-process.gif "データ マイニング プロセスの主なステップ")  
+ ![データ マイニング プロセスの主なステップ](../media/data-mining-process.gif "データ マイニング プロセスの主な手順")  
   
  図ではプロセスが循環的であることが示されています。これはデータ マイニング モデルの作成が、動的かつ反復的なプロセスであることを意味します。 データを探索した後、適切なマイニング モデルを作成するためにデータが不十分であることがわかれば、さらに多くのデータを探索する必要があります。 また、いくつかのモデルを作成した後で、定義した問題がそれらのモデルで適切に解決されないことがわかれば、問題を再定義する必要があります。 モデルを配置した後、より多くのデータが使用可能になったために、モデルを更新することが必要になる場合があります。 適切なモデルを作成するためには、プロセスの各手順を何度も繰り返すことが必要になる場合もあります。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36165947"
   
 -   [Data Quality Services](../../data-quality-services/data-quality-services.md)  
   
- データ マイニングに使用するデータは、オンライン分析処理 (OLAP) キューブまたはリレーショナル データベースに格納されている必要はないという点に注意する必要があります。ただし、これらは両方ともデータ ソースとして使用できます。 データ マイニングは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースとして定義されている任意のデータ ソースを使用して行うことができます。 これには、テキスト ファイル、Excel ブック、他の外部プロバイダーからのデータなどが含まれます。 詳細については、次を参照してください。[サポートされるデータ ソース&#40;SSAS 多次元&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)です。  
+ データ マイニングに使用するデータは、オンライン分析処理 (OLAP) キューブまたはリレーショナル データベースに格納されている必要はないという点に注意する必要があります。ただし、これらは両方ともデータ ソースとして使用できます。 データ マイニングは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースとして定義されている任意のデータ ソースを使用して行うことができます。 これには、テキスト ファイル、Excel ブック、他の外部プロバイダーからのデータなどが含まれます。 詳細については、次を参照してください。[サポートされるデータ ソース&#40;SSAS 多次元&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)します。  
   
 ##  <a name="ExploringData"></a> データの探索  
  次の図で強調されているように、データ マイニング プロセスの 3 番目の手順では、準備されたデータを探索します。  

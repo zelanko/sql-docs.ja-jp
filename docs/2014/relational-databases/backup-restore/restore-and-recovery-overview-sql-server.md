@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring tables [SQL Server]
 - backups [SQL Server], restore scenarios
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b360f5817d74461d41ce47da47afbea8e4095649
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 72c827235057c77fe42de062dc2c09050dd1a698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197492"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>復元と復旧の概要 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをエラーから復旧するには、データベース管理者が論理的に正しく意味のある復元シーケンスで一連の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを復元する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の復元および復旧では、次に示すように、データベース全体、データ ファイル、またはデータ ページの各バックアップからのデータの復元をサポートしています。  
@@ -46,7 +45,7 @@ ms.locfileid: "36176643"
   
      完全復旧モデルまたは一括ログ復旧モデルでは、個々のデータベースを復元できます。 ページ復元は、ファイル グループの数に関係なく、どのデータベースでも実行できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元は、64 ビット システムか 32 ビット システムかに関係なく、サポートされるすべてのオペレーティング システムで機能します。 サポートされているオペレーティング システムについては、次を参照してください。 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)です。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのバックアップに対するサポートの情報については、「 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」の「互換性サポート」のセクションを参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元は、64 ビット システムか 32 ビット システムかに関係なく、サポートされるすべてのオペレーティング システムで機能します。 サポートされるオペレーティング システムについては、次を参照してください。 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)します。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのバックアップに対するサポートの情報については、「 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」の「互換性サポート」のセクションを参照してください。  
   
  **このトピックの内容**  
   

@@ -1,5 +1,5 @@
 ---
-title: (集計のデザイン ウィザード) を変更するパーティションの選択 |Microsoft ドキュメント
+title: (集計のデザイン ウィザード) を変更するパーティションを選択します |。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.aggregationdesignwizard.selectpartition.f1
 ms.assetid: 0da64d58-6e03-45f3-8443-6b94d4158891
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0284e94f94231f19d0034586d1ba2ca002893a36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf185daee0369212dd94d2aa0844640cbc2e3783
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197832"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>[変更するパーティションの選択] (集計のデザイン ウィザード)
   **[変更するパーティションの選択]** ページを使用すると、集計をデザインするパーティションを選択できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36177600"
  パーティションで使用される集計デザインを説明する文字列が表示されます。  
   
 ## <a name="see-also"></a>参照  
- [集計のデザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   
+ [集計デザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   
  [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

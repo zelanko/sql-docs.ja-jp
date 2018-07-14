@@ -1,5 +1,5 @@
 ---
-title: Excel (SQL Server データ マイニング アドイン) 内でモデルを参照 |Microsoft ドキュメント
+title: Excel (SQL Server データ マイニング アドイン) におけるモデルの参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - browse models
 - mining models, viewing
 ms.assetid: a8cca1d7-602a-449a-875c-99da564965bc
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c2badba8baf8abad2c366c6b21a28e2e2a236e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5204d7f7084d6efd457a7928132048a8c1597eec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214362"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>Excel におけるモデルの参照 (SQL Server データ マイニング アドイン)
-  ![参照データ マイニング リボンでモデル ボタン](media/dmc-browse.gif "データ マイニング リボンで、モデルの参照 ボタン")  
+  ![データ マイニング リボンのボタンをモデルの参照](media/dmc-browse.gif "データ マイニング リボンで、モデルの参照 ボタン")  
   
  視覚的にモデルを調査すると、通常は、分析で発見されたルールおよびリレーションシップを最も速く最も容易に理解することができます。 Excel 用のデータ マイニング クライアントを使用すると、Excel の現在のセッションで作成された一時モデル、および、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに格納されたモデルの両方を参照できます。  
   
@@ -34,16 +34,16 @@ ms.locfileid: "36174281"
   
 ## <a name="using-the-browse-model-wizard"></a>モデル参照ウィザードの使用  
   
-1.  クリックして、**データ マイニング**タブです。  
+1.  をクリックして、**データ マイニング**タブ。  
   
-2.  **モデルの使用法**グループで、**参照**です。  
+2.  **モデルの使用法**グループで、**参照**します。  
   
-3.  **モデルの選択**ダイアログ ボックスで、一覧からマイニング モデルを選択し、をクリックして**次**です。  
+3.  **モデルの選択** ダイアログ ボックスで、一覧からマイニング モデルを選択し、**次**します。  
   
-4.  ウィザードが開きます、**参照**に選択したモデルの種類に適したウィンドウです。  
+4.  ウィザードが開きます、**参照**は選択したモデルの種類に適したウィンドウ。  
   
 ## <a name="list-of-data-mining-viewers"></a>データ マイニング ビューアーの一覧  
- モデルを作成するときに使用したデータ マイニング アルゴリズムに応じて、**参照**ウィンドウは少し異なるになります。 結果の解釈に役立つグラフ、追加の詳細を含む凡例、データを操作するコントロールなどが表示されます。  
+ モデルを作成するときに使用したデータ マイニング アルゴリズムに応じて、**参照**ウィンドウの見かけは少し異なります。 結果の解釈に役立つグラフ、追加の詳細を含む凡例、データを操作するコントロールなどが表示されます。  
   
  以下のトピックでは、複雑なグラフを解釈するためのヒントも含めて、ビューアーそれぞれの使用方法や、結果の変更、コピー、操作を行う方法に関するガイダンスを示します。  
   

@@ -1,5 +1,5 @@
 ---
-title: Microsoft アソシエーション アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+title: Microsoft アソシエーション アルゴリズム テクニカル リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE parameter
 - MAXIMUM_SUPPORT parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1179752b5a1870af925463687056f3f767318aac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4f787b070c72c2cc8c1f071fee9cc6bcdd3d96e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171993"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft アソシエーション アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、よく知られている Apriori アルゴリズムの直接的な実装です。  
@@ -77,7 +77,7 @@ ms.locfileid: "36175859"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるいくつかのパラメーターがサポートされています。  
   
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
- マイニング モデルのパラメーターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーを使用していつでも変更できます。 プログラムでは使用してもパラメーターを変更することができます、<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>コレクション AMO、またはを使用して、 [MiningModels 要素&#40;ASSL&#41; ](../scripting/collections/miningmodels-element-assl.md) XMLA でします。 次の表では、各パラメーターについて説明します。  
+ マイニング モデルのパラメーターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーを使用していつでも変更できます。 プログラムでを使用してもパラメーターを変更することができます、 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> AMO、またはを使用して、コレクション、 [MiningModels 要素&#40;ASSL&#41; ](../scripting/collections/miningmodels-element-assl.md) XMLA でします。 次の表では、各パラメーターについて説明します。  
   
 > [!NOTE]  
 >  DMX ステートメントを使用して既存のモデルのパラメーターを変更することはできません。パラメーターは、モデルを作成するときに DMX CREATE MODEL または ALTER STRUCTURE… ADD MODEL で指定する必要があります。  
@@ -147,7 +147,7 @@ ms.locfileid: "36175859"
  マイニング構造列に適用されます。  
   
  MODEL_EXISTENCE_ONLY  
- 2 つの状態を持つものとして扱わ、列であることを示します:`Missing`と`Existing`です。 NULL は Missing 値になります。  
+ 2 つの状態を持つものとして扱わ列があることを示します:`Missing`と`Existing`します。 NULL は Missing 値になります。  
   
  マイニング モデル列に適用されます。  
   

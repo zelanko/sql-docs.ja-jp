@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Reporting Services, RDL
 - Reporting Services, RDL
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: 52
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cb0ac41fef9a28a5023e122963f59fa6d9720a19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 93fa1ac42172b4750db5e5dd385925f657fdfdd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262048"
 ---
 # <a name="report-definition-language-ssrs"></a>レポート定義言語 (SSRS)
   レポート定義言語 (RDL) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート定義の XML 表現です。 レポート定義には、レポートのデータ取得とレイアウトの情報が含まれます。 RDL は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用に作成された XML 文法に準拠する XML 要素で構成されます。 レポート定義ファイル内のコード アセンブリにアクセスすることによって、レポート アイテムの値、スタイル、および書式設定を制御するために独自のカスタム機能を追加できます。  
@@ -47,7 +47,7 @@ ms.locfileid: "36173416"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML スキーマ定義  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のレポート定義言語 (RDL) ファイルは、XML スキーマ定義 (XSD) ファイルを使用して検証されます。 スキーマでは、.rdl ファイル内で RDL 要素を使用できる場所に関する規則を定義しています。 要素には、データ型とカーディナリティ (要素を使用できる回数) が含まれます。 要素には、単純なものも複雑なものもあります。 単純な要素には、子要素または属性がありません。 複雑な要素には、子要素のほか、必要に応じて属性を指定できます。  
   
- たとえば、スキーマには、RDL 要素が含まれます。 `ReportParameters`、複合型である`ReportParametersType`です。 慣例により、要素の複合型は、word によって要素の次の名前`Type`です。 A`ReportParameters`要素に含まれること、`Report`要素 (複合型) を含めることができると`ReportParameter`要素。 `ReportParameterType` は単純型で、`Boolean`、`DateTime`、`Integer`、`Float`、または `String` のいずれかの値のみを指定できます。 XML スキーマ データ型の詳細については、「 [XML スキーマ第 2 部: データ型 (第 2 版)](http://go.microsoft.com/fwlink/?linkid=4871)」を参照してください。  
+ たとえば、スキーマには、RDL 要素が含まれます。 `ReportParameters`、複雑な型である`ReportParametersType`します。 通常、要素の複合型は、word で要素の次の名前`Type`します。 A`ReportParameters`要素に含まれること、`Report`要素 (複合型) を含めることができます`ReportParameter`要素。 `ReportParameterType` は単純型で、`Boolean`、`DateTime`、`Integer`、`Float`、または `String` のいずれかの値のみを指定できます。 XML スキーマ データ型の詳細については、「 [XML スキーマ第 2 部: データ型 (第 2 版)](http://go.microsoft.com/fwlink/?linkid=4871)」を参照してください。  
   
  RDL XSD は、ReportDefinition.xsd ファイルから入手できます。このファイルは製品 CD-ROM の Extras フォルダーにあります。 また、次の URL からレポート サーバーで入手することもできます: http://servername/reportserver/reportdefinition.xsd  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36173416"
 |Type|説明|  
 |----------|-----------------|  
 |`Binary`|base-64 でエンコードされたバイナリ値を持つプロパティです。|  
-|`Boolean`|オブジェクトの値として `true` または `false` を持つプロパティです。 省略すると、オプションのブール値オブジェクトの値は、特に指定しない限り、`False`です。|  
+|`Boolean`|オブジェクトの値として `true` または `false` を持つプロパティです。 省略可能なブール値オブジェクトを省略した場合の値は、未指定の場合、`False`します。|  
 |`Date`|ISO8601 の日付形式 (YYYY-MM-DD[THH:MM[:SS[.S]]]) で指定した、完全指定の日付または datetime の値を持つプロパティです。|  
 |`Enum`|文字列テキストの値を持つプロパティです。値は指定値の一覧のうちのいずれかである必要があります。|  
 |`Float`|浮動小数点数値を持つプロパティです。 オプションの 10 進区切り記号として、ピリオド (.) が使用されます。|  

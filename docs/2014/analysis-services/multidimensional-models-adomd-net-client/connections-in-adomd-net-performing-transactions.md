@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET でトランザクションを実行する |Microsoft ドキュメント
+title: ADOMD.NET でトランザクションの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - AdomdTransaction object
 ms.assetid: 7978c28b-c255-43c0-ad05-f38604d4d8fe
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b37257b647dc9c1675e36c0f0b6a9b06bbf08d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 04157786e3a3d9349c2f1e324291a3a0bda5928d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167598"
 ---
 # <a name="performing-transactions-in-adomdnet"></a>ADOMD.NET でのトランザクションの実行
   ADOMD.NET では、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> オブジェクトを使用して、特定の <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトのトランザクション コンテキストを管理できます。 この機能を使用すると、同じコンテキスト内で複数のコマンドを実行できます。 各コマンドは同じデータを読み込みます。各コマンドの実行間で読み込まれるデータは変更されません。  
@@ -51,7 +51,7 @@ AdomdTransaction objTransaction = objConnection.BeginTransaction();
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.BeginTransaction%2A> メソッドを呼び出してトランザクションを開始した後で、トランザクションを完了するには、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction.Commit%2A> オブジェクトの <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> メソッドを呼び出します。 既存の完了したトランザクションに対してこのメソッドを呼び出すと、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
- [ADOMD.NET で接続を確立します。](connections-in-adomd-net.md)   
+ [ADOMD.NET での接続を確立します。](connections-in-adomd-net.md)   
  [ADOMD.NET クライアント プログラミング](adomd-net-client-programming.md)  
   
   

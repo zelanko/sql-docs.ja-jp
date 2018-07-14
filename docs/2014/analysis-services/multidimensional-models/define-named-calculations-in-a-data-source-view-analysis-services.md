@@ -1,5 +1,5 @@
 ---
-title: データ ソース ビュー (Analysis Services) で名前付き計算の定義 |Microsoft ドキュメント
+title: データ ソース ビュー (Analysis Services) で名前付き計算の定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying named calculations
 - data source views [Analysis Services], named calculations
 - named calculations [Analysis Services]
 ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0f69097c4047950823e51e9450e1bfb3114cf1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b22519994be250c7dc435228265685842f258198
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226442"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの名前付き計算の定義 (Analysis Services)
   名前付き計算は、計算される列として表現されている SQL 式です。 この式は、テーブル内の列として表示され動作します。 名前付き計算を使用すると、基になるデータ ソースのテーブルやビューを変更しなくても、データ ソース ビュー内の既存のテーブルまたはビューのリレーショナル スキーマを拡張できます。 次の例を考えてみます。  
@@ -67,7 +67,7 @@ FROM
   
 3.  **[テーブル]** ペインまたは **[ダイアグラム]** ペインで、名前付き計算を定義するテーブルを右クリックし、 **[新しい名前付き計算]** をクリックします。 必ず、属性ではなくテーブル名を右クリックします。 メニューは以下のようになります。  
   
-     ![ダイアグラム ワークスペースのスクリーン ショットの右クリック メニュー](../media/ssas-olapdsv-diagram.gif "スクリーン ショット ダイアグラム ワークスペースのショートカット メニュー")  
+     ![ダイアグラムのワークスペースのスクリーン ショットの右クリック メニュー](../media/ssas-olapdsv-diagram.gif "ダイアグラム ワークスペースのスクリーン ショットの右クリック メニュー")  
   
     > [!NOTE]  
     >  テーブルまたはビューを検索する場合は、 **[データ ソース ビュー]** メニューをクリックするか、 **[テーブル]** ペインまたは **[ダイアグラム]** ペインの空いている領域を右クリックすることで、 **[テーブルの検索]** オプションを使用できます。  

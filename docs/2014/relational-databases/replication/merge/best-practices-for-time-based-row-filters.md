@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 718615cbe81c5238d6d16cff1806d14a019920e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8dd38a60a64738535d65931d40aac5182e331e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331342"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>時間ベースの行フィルターの推奨事項
   アプリケーションのユーザーは、テーブルに対して時間ベースのデータ サブセットを要求することがよくあります。 たとえば、販売員が先週の注文データを必要としたり、イベント プランナーが次週のイベントのデータを必要とする場合などです。 多くの場合、アプリケーションでは、`GETDATE()` 関数を含むクエリを使用して、この処理を実行します。 次の行フィルター ステートメントについて考えてみましょう。  
@@ -53,13 +53,13 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 ## <a name="recommendations-for-using-time-based-row-filters"></a>時間ベースの行フィルターを使用するための推奨事項  
  次に示す方法は、時間に基づいてフィルター処理を行う際の強力でわかりやすいアプローチです。  
   
--   データ型のテーブルに列を追加`bit`です。 この列は、行をレプリケートするかどうかを示すために使用します。  
+-   データ型のテーブルに列を追加`bit`します。 この列は、行をレプリケートするかどうかを示すために使用します。  
   
 -   時間ベースの列ではなく新しい列を参照する行フィルターを使用する。  
   
 -   スケジュールでマージ エージェントが実行される前に列を更新する SQL Server エージェント ジョブ (または別のメカニズムでスケジュールされたジョブ) を作成する。  
   
- このアプローチを使用する場合の欠点に対処`GETDATE()`または別の時間ベースのメソッドのパーティションのフィルターが評価されるタイミングを決定する必要が問題を回避できます。 **Events** テーブルの次の例を考えてみましょう。  
+ このアプローチを使用しての欠点を補い、`GETDATE()`または別の時間ベースのメソッドをパーティションに対してフィルターが評価されるタイミングを判断する必要がある問題を回避できます。 **Events** テーブルの次の例を考えてみましょう。  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**[レプリケート]**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  

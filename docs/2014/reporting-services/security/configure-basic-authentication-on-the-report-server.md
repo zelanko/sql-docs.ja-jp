@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
@@ -16,13 +16,13 @@ ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2611f683ee02180bc5b90b0b08fe961d049e9aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bc51edfd6e7ba2aeff58a230ad29ce800fffd79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189829"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>レポート サーバーで基本認証を構成する
   Reporting Services は、既定では、ネゴシエート認証および NTLM 認証を指定する要求を受け入れます。 基本認証を使用するクライアント アプリケーションやブラウザーが配置に含まれる場合は、サポートされる種類の一覧に基本認証を追加する必要があります。 また、レポート ビルダーを使用する場合は、レポート ビルダーのファイルへの匿名アクセスを有効にする必要もあります。  
@@ -42,7 +42,7 @@ ms.locfileid: "36175893"
   
 1.  テキスト エディターで RSReportServer.config を開きます。  
   
-     ファイルはある*\<ドライブ >:* \Program Files\Microsoft SQL Server\MSRS12 です。MSSQLSERVER\Reporting services \reportserver にあります。  
+     ファイルがある*\<ドライブ >:* \Program Files\Microsoft SQL Server\MSRS12 します。MSSQLSERVER\Reporting services \reportserver にあります。  
   
 2.  検索 <`Authentication`>。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "36175893"
           </AuthenticationTypes>  
     ```  
   
-4.  既存のエントリを <`Authentication`>。  
+4.  既存のエントリを貼り付けます <`Authentication`>。  
   
-     複数の認証の種類を使用している場合は、追加、`RSWindowsBasic`要素のエントリを削除しないように`RSWindowsNegotiate`、 `RSWindowsNTLM`、または`RSWindowsKerberos`です。  
+     複数の認証の種類を使用している場合は、追加、`RSWindowsBasic`要素のエントリを削除しないように`RSWindowsNegotiate`、 `RSWindowsNTLM`、または`RSWindowsKerberos`します。  
   
      Safari ブラウザーをサポートする場合は、複数の認証の種類を使用できるようにレポート サーバーを構成することはできません。 のみを指定する必要があります`RSWindowsBasic`およびその他のエントリを削除します。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36175893"
   
 |要素|必須|有効な値|  
 |-------------|--------------|------------------|  
-|LogonMethod|はい<br /><br /> 値を指定しない場合は 3 が使用されます。|`2` = ネットワーク ログオンでプレーン テキスト パスワードを認証する高パフォーマンス サーバー向けです。<br /><br /> `3` = クリア テキスト ログオンは、各 HTTP 要求と一緒に送信される認証パッケージにログオン資格情報を保持するには、ネットワークの他のサーバーに接続するときにユーザーを偽装するサーバーを許可します。 (既定値)。<br /><br /> 注: 値 0 (対話型ログオン) と値 1 (バッチ ログオン) は、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]ではサポートされません。|  
+|LogonMethod|はい<br /><br /> 値を指定しない場合は 3 が使用されます。|`2` = プレーン テキスト パスワードを認証する高パフォーマンス サーバー向けネットワーク ログオン。<br /><br /> `3` = クリア テキスト ログオンは、各 HTTP 要求と一緒に送信される認証パッケージにログオン資格情報を保持するには、ネットワークの他のサーバーに接続するときにユーザーを偽装するサーバーを許可します。 (既定値)。<br /><br /> 注: 値 0 (対話型ログオン) と値 1 (バッチ ログオン) は、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]ではサポートされません。|  
 |Realm|省略可|組織内の保護されたリソースへのアクセスを制御するための承認機能や認証機能を含んだリソース パーティションを指定します。|  
 |DefaultDomain|省略可|サーバーがユーザーを認証する際のドメインを指定します。 この値はオプションです。ただし、省略した場合、レポート サーバーでは、コンピューター名がドメインとして使用されます。 コンピューターがドメインのメンバーになっている場合は、そのドメインが既定のドメインです。 レポート サーバーをドメイン コントローラーにインストールした場合、そのコンピューターによって制御されるドメインを指定します。|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36175893"
   
 -   RSReportServer.config に `IsReportBuilderAnonymousAccessEnabled` 要素を追加して、`True` に設定します。 ファイルを保存すると、レポート ビルダーへの新しいエンドポイントがレポート サーバーによって作成されます。 このエンドポイントは、プログラム ファイルにアクセスするために内部で使用されるものであり、コードで使用できるプログラマティック インターフェイスはありません。 別のエンドポイントを使用することにより、レポート サーバー サービス プロセス境界内の独自のアプリケーション ドメインでレポート ビルダーを実行することが可能になります。  
   
--   必要に応じて最小特権のアカウントを指定して、レポート サーバーとは別のセキュリティ コンテキストで要求を処理することもできます。 このアカウントは、レポート サーバー上のレポート ビルダー ファイルにアクセスするための匿名アカウントになります。 このアカウントによって ASP.NET ワーカー プロセスのスレッドの ID が設定され、 そのスレッドで実行される要求は認証チェックなしでレポート サーバーに渡されます。 このアカウントは、iusr _\<コンピューター > アカウントでインターネット インフォメーション サービス (IIS)、ASP.NET のワーカーのセキュリティ コンテキストを設定するために使用処理への匿名アクセスおよび権限借用が有効にするとします。 アカウントを指定するには、レポート ビルダーの Web.config ファイルにそのアカウントを追加します。  
+-   必要に応じて最小特権のアカウントを指定して、レポート サーバーとは別のセキュリティ コンテキストで要求を処理することもできます。 このアカウントは、レポート サーバー上のレポート ビルダー ファイルにアクセスするための匿名アカウントになります。 このアカウントによって ASP.NET ワーカー プロセスのスレッドの ID が設定され、 そのスレッドで実行される要求は認証チェックなしでレポート サーバーに渡されます。 このアカウントは、iusr _\<machine > アカウントでインターネット インフォメーション サービス (IIS)、ASP.NET のワーカーのセキュリティ コンテキストを設定するために使用する処理の匿名アクセスと権限借用が有効にするとします。 アカウントを指定するには、レポート ビルダーの Web.config ファイルにそのアカウントを追加します。  
   
  レポート ビルダーのプログラム ファイルへの匿名アクセスを有効にする場合は、レポート サーバーが基本認証用に構成されている必要があります。 レポート サーバーが基本認証用に構成されていない場合、匿名アクセスを有効にしようとするとエラーが発生します。  
   
@@ -141,15 +141,15 @@ ms.locfileid: "36175893"
   
      認証モードを設定する必要があります`Windows`Web.config ファイルを含める場合。  
   
-     `Identity impersonate` 指定できます`True`または`False`です。  
+     `Identity impersonate` `True`または`False`します。  
   
-    -   設定`False`を ASP.NET で、セキュリティ トークンを読み取るしたくない場合。 この場合、要求はレポート サーバー サービスのセキュリティ コンテキストで実行されます。  
+    -   設定`False`ASP.NET セキュリティ トークンを読み取るしたくない場合。 この場合、要求はレポート サーバー サービスのセキュリティ コンテキストで実行されます。  
   
-    -   設定`True`ASP.NET がホスト層からセキュリティ トークンの読み取りに使用する場合。 `True` に設定した場合は、`userName` と `password` を指定して匿名アカウントを指定する必要もあります。 指定する資格情報により、要求が発行されるセキュリティ コンテキストが決まります。  
+    -   設定`True`ASP.NET ホスト層からセキュリティ トークンを読み取るようにする場合。 `True` に設定した場合は、`userName` と `password` を指定して匿名アカウントを指定する必要もあります。 指定する資格情報により、要求が発行されるセキュリティ コンテキストが決まります。  
   
 5.  Web.config ファイルを ReportBuilder\bin フォルダーに保存します。  
   
-6.  RSReportServer.config ファイルを開き、Services セクションで、検索`IsReportManagerEnabled`し、下にある次の設定を追加します。  
+6.  RSReportServer.config ファイルを開き、[サービス] セクションの検索`IsReportManagerEnabled`し、その下の次の設定を追加します。  
   
     ```  
     <IsReportBuilderAnonymousAccessEnabled>True</IsReportBuilderAnonymousAccessEnabled>  
@@ -161,6 +161,6 @@ ms.locfileid: "36175893"
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー アプリケーションのアプリケーション ドメイン](../report-server/application-domains-for-report-server-applications.md)   
- [Reporting Services のセキュリティと保護](reporting-services-security-and-protection.md)  
+ [Reporting Services セキュリティと保護](reporting-services-security-and-protection.md)  
   
   

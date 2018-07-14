@@ -1,5 +1,5 @@
 ---
-title: Storage 要素 (XMLA) |Microsoft ドキュメント
+title: Storage 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Storage element
 ms.assetid: c3590af8-a24b-4fd3-b846-17edbd399b6d
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 8bccf119846d699d653a480f6479412b46dcc4f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 65a301134d245cc419c762a139e81b05010dbdcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195972"
 ---
 # <a name="storage-element-xmla"></a>Storage 要素 (XMLA)
-  (バイト単位) で使用されるストレージの最大時間を指定、 [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md)集計をデザインするコマンド。  
+  バイト単位で使用される、記憶域の最大の容量を指定します、 [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md)集計をデザインするコマンド。  
   
 ## <a name="syntax"></a>構文  
   

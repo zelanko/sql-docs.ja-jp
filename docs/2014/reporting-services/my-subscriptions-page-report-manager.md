@@ -1,5 +1,5 @@
 ---
-title: 個人用サブスクリプション ページ (レポート マネージャー) |Microsoft ドキュメント
+title: 個人用サブスクリプション ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5f75d31ab49d706200ff90d49295d18bc9ba6487
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e973ec6a3c50c43f6ee6bdee4ecfd70f2e2c9b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177619"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>[個人用サブスクリプション] ページ (レポート マネージャー)
-  [個人用サブスクリプション] ページでは、各自のサブスクリプションをすべて参照できます。 このページから所有している任意のサブスクリプションにアクセスし、サブスクリプションを変更または削除できます。 所有できるサブスクリプションは、自分で作成したサブスクリプションだけです。 他のユーザーのサブスクリプションにはアクセスできません。また、使用していても所有していないサブスクリプション (たとえば、他のユーザーが定義して、自分の名前が追加されている既存のサブスクリプション) にもアクセスできません。 また、このページからサブスクリプションを作成することはできません。 サブスクリプションの作成の詳細については、次を参照してください。、[新しいサブスクリプションまたはサブスクリプションの編集 ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)です。  
+  [個人用サブスクリプション] ページでは、各自のサブスクリプションをすべて参照できます。 このページから所有している任意のサブスクリプションにアクセスし、サブスクリプションを変更または削除できます。 所有できるサブスクリプションは、自分で作成したサブスクリプションだけです。 他のユーザーのサブスクリプションにはアクセスできません。また、使用していても所有していないサブスクリプション (たとえば、他のユーザーが定義して、自分の名前が追加されている既存のサブスクリプション) にもアクセスできません。 また、このページからサブスクリプションを作成することはできません。 サブスクリプションの作成についての詳細については、次を参照してください。、[新しいサブスクリプションまたはサブスクリプションの編集 ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)します。  
   
  既定では、サブスクリプションはレポート名のアルファベット順に格納されます。 別の列見出しをクリックすると、サブスクリプションの格納方法を変更できます。 サブスクリプションが存在しない場合、またはサブスクリプションを作成または管理する権限が無効の場合、このページにサブスクリプションは表示されません。  
   
 > [!NOTE]  
->  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 ## <a name="navigation"></a>ナビゲーション  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
@@ -42,7 +42,7 @@ ms.locfileid: "36175112"
     >  サブスクリプションを作成する権限がない場合でも、[個人用サブスクリプション] は常に有効です。  
   
 ## <a name="options"></a>および  
- **Delete**  
+ **削除**  
  削除する各サブスクリプションの横にあるチェック ボックスをオンにして、 **[削除]** をクリックします。  
   
  **[編集]**  
@@ -51,7 +51,7 @@ ms.locfileid: "36175112"
  **レポート**  
  サブスクリプションに指定されたレポートを表示します。 レポート名をクリックして、レポートを表示します。  
   
- **description**  
+ **[説明]**  
  サブスクリプションの説明が表示されます。 レポートのサブスクリプション情報を表示または編集するには、説明をクリックします。  
   
  **フォルダー**  
@@ -63,7 +63,7 @@ ms.locfileid: "36175112"
  **[最終実行]**  
  サブスクリプションを処理した最終日時が表示されます。  
   
- **Status**  
+ **ステータス**  
  サブスクリプションの状態が表示されます。 通常、状態値は "新規" か、サブスクリプションを最後に実行した日時です。  
   
  "無効なデータ" の状態値は、既に無効となった暗号化された値 (つまり、レポートの実行に使用される保存された資格情報) へのポインターがサブスクリプションに含まれている場合に発生します。 データの暗号化および暗号化の解除に使用される対称キーがレポート サーバー上で再作成されると、既存の暗号化された値は使用できなくなります。  

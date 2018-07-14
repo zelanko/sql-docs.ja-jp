@@ -1,5 +1,5 @@
 ---
-title: UnknownMemberTranslation 要素 (ASSL) |Microsoft ドキュメント
+title: UnknownMemberTranslation 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - UnknownElementTranslation element
 ms.assetid: a4b8cdac-b065-4a44-b251-c5ac1cfe5e6f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38b04dad97f6c61a884d4ba4234083bbc60bc260
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68270cff61daace55131454b549f12880f3b5e6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220302"
 ---
 # <a name="unknownmembertranslation-element-assl"></a>UnknownMemberTranslation 要素 (ASSL)
-  キャプションの翻訳が含まれています、 [UnknownMember](member-element-assl.md)要素を[ディメンション](dimension-element-assl.md)要素。  
+  キャプションの翻訳が含まれています、 [UnknownMember](member-element-assl.md)の要素を[ディメンション](dimension-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

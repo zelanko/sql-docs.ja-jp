@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
 - packages [Integration Services], about packages
@@ -23,13 +23,13 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85eeb75badeed90812c657b9dbdc64e261947e20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99a414e27b9fb470d8e7ee07589c42e0184b283e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252384"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージ
   パッケージは、接続、制御フロー要素、データ フロー要素、イベント ハンドラー、変数、パラメーター、および構成の組み合わせとして構成されています。パッケージは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に用意されているグラフィカル デザイン ツールを使用して作成するか、プログラムによって構築します。  完成したパッケージは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、またはファイル システムに保存します。または、ssISnoversion プロジェクトを [!INCLUDE[ssIS](../includes/ssis-md.md)] サーバーに配置することができます。 パッケージとは、取得、実行、および保存の対象となる作業単位のことです。  
@@ -54,9 +54,9 @@ ms.locfileid: "36173759"
 ## <a name="package-templates"></a>パッケージ テンプレート  
  パッケージは、基本的な共通した機能を持つパッケージを構築する際の基になるテンプレートとして使用されることがよくあります。 基本パッケージを構築してそれをコピーすることも、パッケージをテンプレートとして指定することもできます。 たとえば、ファイルをダウンロードおよびコピーしてからデータを抽出するパッケージでは、フォルダー内のファイルを列挙する ForEach ループに FTP タスクおよびファイル システム タスクを含めることができます。 また、データにアクセスするためのフラット ファイル接続マネージャーや、データを抽出するためのフラット ファイル ソースを含めることもできます。 データの抽出先はそれぞれ異なるので、基本パッケージからコピーした後、それぞれの新しいパッケージに抽出先を追加します。 パッケージを作成してから、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに追加する新しいパッケージのテンプレートとしてそれらのパッケージを使用することもできます。 詳細については、「 [SQL Server データ ツールでのパッケージの作成](create-packages-in-sql-server-data-tools.md)」を参照してください。  
   
- GUID が追加されたパッケージの作成時に最初に、プログラムまたは SSIS デザイナーを使用してその`ID`プロパティと名前をその`Name`プロパティです。 既存のパッケージをコピーするかテンプレート パッケージを使用して新しいパッケージを作成した場合は、そのパッケージの名前および GUID もコピーされます。 この動作は、ログ記録を使用する場合に問題となることがあります。これは、ログに記録された情報が属するパッケージを識別するために、そのパッケージの GUID および名前がログに記録されるためです。 したがって、新しいパッケージをコピー元のパッケージと区別したり、ログ データ内でパッケージを正しく区別できるようにするには、新しいパッケージの名前と GUID を更新する必要があります。  
+ GUID を追加するパッケージの作成時に最初に、プログラムまたは SSIS デザイナーを使用してその`ID`プロパティおよび名をその`Name`プロパティ。 既存のパッケージをコピーするかテンプレート パッケージを使用して新しいパッケージを作成した場合は、そのパッケージの名前および GUID もコピーされます。 この動作は、ログ記録を使用する場合に問題となることがあります。これは、ログに記録された情報が属するパッケージを識別するために、そのパッケージの GUID および名前がログに記録されるためです。 したがって、新しいパッケージをコピー元のパッケージと区別したり、ログ データ内でパッケージを正しく区別できるようにするには、新しいパッケージの名前と GUID を更新する必要があります。  
   
- GUID を再生成するパッケージの GUID を変更する、`ID`で [プロパティ] ウィンドウでプロパティ[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]です。 パッケージの名前を変更するには、値を更新することができます、`Name`プロパティ ウィンドウでプロパティです。 また、 **dtutil** コマンド プロンプトを使用したり、プログラムを使用して GUID と名前を更新したりすることもできます。 詳細については、「[パッケージのプロパティを設定する](set-package-properties.md)」と「[dtutil ユーティリティ](dtutil-utility.md)」を参照してください。  
+ GUID を再生成するパッケージの GUID を変更する、`ID`プロパティ ウィンドウでプロパティ[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]します。 パッケージ名を変更するには、値を更新することができます、`Name`プロパティ ウィンドウでプロパティ。 また、 **dtutil** コマンド プロンプトを使用したり、プログラムを使用して GUID と名前を更新したりすることもできます。 詳細については、「[パッケージのプロパティを設定する](set-package-properties.md)」と「[dtutil ユーティリティ](dtutil-utility.md)」を参照してください。  
   
 ## <a name="objects-that-extend-package-functionality"></a>パッケージ機能を拡張するオブジェクト  
  パッケージには、イベント ハンドラー、構成、ログ記録、変数など、拡張機能を提供したり既存の機能を拡張するためのオブジェクトを追加できます。  
@@ -119,7 +119,7 @@ ms.locfileid: "36173759"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [Microsoft Dynamics Mobile に SQL Server Integration Services を実装します。](http://msdn.microsoft.com/library/cc563950)  
+-   [Microsoft Dynamics Mobile での SQL Server Integration Services を実装します。](http://msdn.microsoft.com/library/cc563950)  
   
 -   [方法: Microsoft Dynamics AX 用 SQL Server Integration Services パッケージを構成します。](http://msdn.microsoft.com/library/bb986852)  
   

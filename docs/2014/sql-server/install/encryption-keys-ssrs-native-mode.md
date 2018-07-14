@@ -1,5 +1,5 @@
 ---
-title: 暗号化キー (SSRS ネイティブ モード) |Microsoft ドキュメント
+title: 暗号化キー (SSRS ネイティブ モード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 43c1935debbb7ef5f26579c2a526b177d14d38d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a494ca4f59abb618c9cbfbffd36bc57e481a71e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328913"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>暗号化キー (SSRS ネイティブ モード)
   [暗号化キー] ページを使用すると、レポート サーバーでデータの暗号化と暗号化解除に使用される対称キーを管理できます。 暗号化キーの管理は、レポート サーバーの構成で重要な位置を占めています。 対称キーはレポート サーバー データベースを作成する際に自動的に作成されて適用されますが、 定期的なメンテナンス操作を実行できるように、対称キーのバックアップ コピーを作成しておく必要があります。 次に示すメンテナンス タスクを実行するには、対称キーの有効なコピーが必要です。  
@@ -46,7 +46,7 @@ ms.locfileid: "36164708"
 > [!IMPORTANT]  
 >  対称キーの削除と再作成の操作は、取り消したり元に戻したりすることはできません。 キーを削除または再作成すると、現在のインストールに重大な影響を及ぼす可能性があります。 対称キーを削除すると、その対称キーを使用して暗号化されている既存のデータも削除されます。 たとえば、外部のレポート データ ソースへの接続文字列、保存されている接続文字列、サブスクリプション情報の一部が削除されることがあります。  
   
- このページを開くを起動、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager とナビゲーション ウィンドウでリンクを選択します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+ このページを開くには、開始、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager とナビゲーション ウィンドウで、リンクを選択します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
 ## <a name="options"></a>および  
  **バックアップ**  
@@ -55,7 +55,7 @@ ms.locfileid: "36164708"
  **復元**  
  以前に保存された対称キーのコピーを、レポート サーバー データベースに適用します。 ファイルのロックを解除するパスワードを入力する必要があります。  
   
- 現在接続しているレポート サーバー インスタンスの以前の対称キーは、復元された対称キーによって上書きされます。 対称キーを復元した後、そのレポート サーバー データベースを利用するレポート サーバーをすべて初期化する必要があります。 レポート サーバーの初期化の詳細については、次を参照してください。[レポート サーバーの初期化&#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)です。  
+ 現在接続しているレポート サーバー インスタンスの以前の対称キーは、復元された対称キーによって上書きされます。 対称キーを復元した後、そのレポート サーバー データベースを利用するレポート サーバーをすべて初期化する必要があります。 レポート サーバーの初期化の詳細については、次を参照してください。[レポート サーバーの初期化&#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)します。  
   
  **変更**  
  対称キーを再作成し、レポート サーバー データベース内の暗号化された値を再暗号化します。 対称キーを再作成する前に、レポート サーバー サービスを必ず停止してください。  
@@ -64,7 +64,7 @@ ms.locfileid: "36164708"
   
  データ ソースとサブスクリプションが多数存在する場合、対称キーの再作成に長い時間がかかることがあります。  
   
- **Delete**  
+ **削除**  
  接続文字列や保存されている資格情報を含むすべての暗号化コンテンツと、対称キーを削除します。 対称キーは、復元できない場合にのみ削除してください。  
   
  対称キーを削除すると、レポートおよび共有データ ソース内に接続文字列や保存されている資格情報が存在しなくなるため、その値を再入力する必要があります。 さらに、暗号化データを保存する配信拡張機能が使用されるサブスクリプションをすべて更新する必要があります。 これには、ファイル共有配信拡張機能や、暗号化された値を使用するサード パーティの拡張機能が含まれます。  

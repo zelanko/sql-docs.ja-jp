@@ -1,5 +1,5 @@
 ---
-title: どのような&#39;マイニング アドインを Office 用データに含まれています |Microsoft ドキュメント
+title: どのような&#39;マイニング Office 用アドインのデータに含まれる s |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 282155ff681830e3b6c1b3f0bc0d4f281a6435e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5630c67926713b997adfe85fe0fd9f8da10e03e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232002"
 ---
-# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>どのような&#39;マイニング アドインを Office 用データに含まれています
-  Office 2013 用データ マイニング アドインをインストールするすべてのインストール オプションを選択して、次のツールバーとテンプレートが追加されます。  
+# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>どのような&#39;マイニング Office 用アドインのデータに含まれる s
+  Office 2013 用データ マイニング アドインをインストールし、すべてのインストール オプションを選択して、ときに、次のツールバーとテンプレートが追加されます。  
   
 -   [Excel 用テーブル分析ツール](table-analysis-tools-for-excel.md)  
   
@@ -42,11 +42,11 @@ ms.locfileid: "36174554"
   
      これらの図形を Visio ページにドラッグするだけでダイアグラムが作成され、これらのダイアグラムはマイニング モデルにリンクされていますが、Visio でカスタマイズして外観と対話性を高めることができます。  
   
--   [サーバー構成ユーティリティ&#40;アドイン Excel 用データ マイニング&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+-   [サーバー構成ユーティリティ&#40;データ マイニング Excel 用アドイン&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
-     モデルを構築するには、データ マイニング サーバーに接続している必要があります。 ヘルプの設定を取得する場合は、単にをクリックして**ヘルプ**構成ウィザードの各ページに、指示に従います。 問題を自力で解決すること、またはウィザードから提供される情報を社内のシステム管理者に送信し、支援を受けてセットアップを正常に実行することができます。  
+     モデルを構築するには、データ マイニング サーバーに接続している必要があります。 ヘルプの設定を取得する場合は、単にクリックして**ヘルプ**構成ウィザードの各ページに、指示に従います。 問題を自力で解決すること、またはウィザードから提供される情報を社内のシステム管理者に送信し、支援を受けてセットアップを正常に実行することができます。  
   
--   [データを選択して、サンプル データの使用](choosing-data-for-data-mining.md)  
+-   [データの選択とサンプル データの使用](choosing-data-for-data-mining.md)  
   
      使用するデータを特定し、そのデータを準備する方法を理解することは、データ分析にとって重要です。 このトピックでは、考えられる中で最善のモデルを作成できるようにデータを準備する方法に関するヒントを示します。  
   
@@ -65,6 +65,6 @@ ms.locfileid: "36174554"
     -   \<ドライブ >: \Program Files (x86) \Microsoft SQL Server 2014 DM アドイン  
   
 ## <a name="see-also"></a>参照  
- [データ マイニングの概要&#40;アドイン Excel 用データ マイニング&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
+ [データ マイニングの概要&#40;データ マイニング Excel 用アドイン&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
   
   

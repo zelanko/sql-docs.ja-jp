@@ -1,5 +1,5 @@
 ---
-title: パッケージ実行タスク エディター |Microsoft ドキュメント
+title: パッケージ実行タスク エディター |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.parameter.F1
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45d295035ecd4b01b481fc40573336a0fc5a0109
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91e6903528380735fde050decace5903e0a55c9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271718"
 ---
 # <a name="execute-package-task-editor"></a>パッケージ実行タスク エディター
   パッケージ実行タスクを構成するには、パッケージ実行タスク エディターを使用します。 パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
@@ -45,13 +45,13 @@ ms.locfileid: "36174754"
 2.  SSIS デザイナーでタスクを右クリックし、 **[編集]** をクリックします。  
   
 ##  <a name="general"></a> [全般] ページのオプションを設定する  
- **Name**  
+ **名前**  
  パッケージ実行タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **description**  
+ **[説明]**  
  パッケージ実行タスクの説明を入力します。  
   
 ##  <a name="package"></a> [パッケージ] ページのオプションを設定する  
@@ -65,7 +65,7 @@ ms.locfileid: "36174754"
  子パッケージがパスワードで保護されている場合は、子パッケージのパスワードを入力するか、参照ボタン ([...]) をクリックして子パッケージの新しいパスワードを作成します。  
   
  `ExecuteOutOfProcess`  
- 子パッケージが親パッケージのプロセス内で実行するか、または別のプロセスで実行するかを指定します。 既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティに設定が`False`、し、親パッケージと同じプロセスで子パッケージを実行します。 このプロパティを `true` に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 また、プロパティを `true` に設定した場合、ツールのみのインストールではパッケージをデバッグできません。[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 製品をインストールする必要があります。 詳細については、「 [Integration Services のインストール](install-windows/install-integration-services.md)」を参照してください。  
+ 子パッケージが親パッケージのプロセス内で実行するか、または別のプロセスで実行するかを指定します。 既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティに設定が`False`、子パッケージが親パッケージと同じプロセスで実行するとします。 このプロパティを `true` に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 また、プロパティを `true` に設定した場合、ツールのみのインストールではパッケージをデバッグできません。[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 製品をインストールする必要があります。 詳細については、「 [Integration Services のインストール](install-windows/install-integration-services.md)」を参照してください。  
   
 ### <a name="referencetype-dynamic-options"></a>[ReferenceType] の動的オプション  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36174754"
 |**SQL Server**|場所を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに設定します。|  
 |**ファイル システム**|場所をファイル システムに設定します。|  
   
- **Connection**  
+ **[接続]**  
  子パッケージの格納場所の種類を選択します。  
   
  **PackageNameReadOnly**  
@@ -91,7 +91,7 @@ ms.locfileid: "36174754"
 ### <a name="location-dynamic-options"></a>[Location] の動的オプション  
   
 #### <a name="location--sql-server"></a>Location = SQL Server  
- **Connection**  
+ **[接続]**  
  OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...>**] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、[OLE DB 接続マネージャーの構成](../../2014/integration-services/configure-ole-db-connection-manager.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "36174754"
  子パッケージの名前を入力するか、[...] をクリックし、パッケージを指定します。  
   
 #### <a name="location--file-system"></a>Location = ファイル システム  
- **Connection**  
+ **[接続]**  
  ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
@@ -122,7 +122,7 @@ ms.locfileid: "36174754"
  **[追加]**  
  パラメーターまたは変数を子パッケージのパラメーターにマップする場合にクリックします。  
   
- **削除**  
+ **[削除]**  
  パラメーターまたは変数と子パッケージのパラメーターの間のマッピングを削除する場合にクリックします。  
   
   

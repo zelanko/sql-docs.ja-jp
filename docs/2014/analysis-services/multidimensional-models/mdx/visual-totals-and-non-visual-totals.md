@@ -1,5 +1,5 @@
 ---
-title: 表示部分の合計と非表示部分の合計 |Microsoft ドキュメント
+title: 表示部分の合計と非表示部分の合計 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae51861e90628621e776b7153b6d23ec0c44a047
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b211305babfee92a85469257795b6124f2ab4b54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253034"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>表示部分の合計と非表示部分の合計
   表示部分の合計とは、列または行の最後に表示される合計で、列または行内に表示されるすべてのアイテムを加算したものです。 これは、ほとんどのテーブルが表示されるときの既定の動作です。 ただし、非表示の行を含む行全体の合計を維持しながら、テーブル内の特定の列のみを表示する場合もあります。 これらは、合計が表示部分と非表示部分の両方の値から取得されることから `Non Visual Totals` と呼ばれます。  
@@ -103,10 +103,10 @@ ms.locfileid: "36173588"
 ## <a name="see-also"></a>参照  
  [MDX の主な概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Autoexists](autoexists.md)   
- [メンバー、組、およびセット&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [メンバー、組、およびセットの操作&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [MDX クエリの基礎&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [MDX の基本的なクエリ&#40;MDX&#41;](mdx-query-the-basic-query.md)   
- [クエリ軸とスライサー軸とクエリを制限する&#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
- [クエリ内のキューブ コンテキストを確立&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
+ [クエリ軸とスライサー軸によるクエリの制限&#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [クエリ内のキューブ コンテキストの確立&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
   
   

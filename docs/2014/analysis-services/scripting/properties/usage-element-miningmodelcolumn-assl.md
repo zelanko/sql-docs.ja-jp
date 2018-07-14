@@ -1,5 +1,5 @@
 ---
-title: Usage 要素 (MiningModelColumn) (ASSL) |Microsoft ドキュメント
+title: Usage 要素 (MiningModelColumn) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a4e4c2b11a9a9281f64062390257bf5ddf3145b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6767c4c5ac535ac603cc6182cbe645088c8ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265303"
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Usage 要素 (MiningModelColumn) (ASSL)
-  について説明する方法の親に関連付けられた列[MiningStructure](../objects/miningstructure-element-assl.md)を使用します。  
+  について説明しますどの親に関連付けられている列[MiningStructure](../objects/miningstructure-element-assl.md)使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -70,9 +70,9 @@ ms.locfileid: "36174244"
 |*入力*|列は入力列です。|  
 |*Predict*|列は予測列です。|  
 |*PredictOnly*|列は予測列のみです。|  
-|*なし*|列はモデルによって使用されません。 **警告:** 使用状況の値が「なし」の場合は、Analysis Services 送信しません任意の値をサーバーに既定以外の場合はそのため、使用法 属性は、要求/応答に含まれていません。|  
+|*なし*|列はモデルによって使用されません。 **警告:** 使用状況の値が"None"の場合は、Analysis Services は値を送信サーバーに既定ではそのため、使用法 属性を要求/応答に含まれません。|  
   
- 許可される値に対応する列挙`Usage`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MiningModelColumnUsages>します。  
+ 許容された値に対応する列挙体`Usage`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MiningModelColumnUsages>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Algorithm 要素 (ASSL) |Microsoft ドキュメント
+title: Algorithm 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Algorithm element
 ms.assetid: 188bf7ce-c5c9-406a-af75-5a026c92a569
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86e44cf8069d9ed78a414cad5ac5079f8f2faa22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ca7406538a81768e8cab8d0c24142c8105c963
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218492"
 ---
 # <a name="algorithm-element-assl"></a>Algorithm 要素 (ASSL)
-  によって使用されるアルゴリズムを定義、 [MiningModel](../objects/miningmodel-element-assl.md)要素。  
+  使用されるアルゴリズムを定義、 [MiningModel](../objects/miningmodel-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36175025"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `Algorithm` 要素の値は、アルゴリズムを識別する文字列です。 たとえば、文字列がなります*Microsoft_Naive_Bayes*、 *Microsoft_Decision_Trees*、または*Microsoft_Clustering です。* によって提供されるアルゴリズムを識別する、文字列[!INCLUDE[msCoName](../../../includes/msconame-md.md)]と、ユーザーが指定したカスタム アルゴリズムです。 使用できる値を`Algorithm`の SERVICE_NAME 列から要素を取得できる、 [DMSCHEMA_MINING_SERVICES](../../schema-rowsets/data-mining/dmschema-mining-services-rowset.md)スキーマ行セット。  
+ `Algorithm` 要素の値は、アルゴリズムを識別する文字列です。 たとえば、文字列になります*Microsoft_Naive_Bayes*、 *Microsoft_Decision_Trees*、または*Microsoft_Clustering します。* 文字列によって指定されたアルゴリズムを識別する[!INCLUDE[msCoName](../../../includes/msconame-md.md)]と、ユーザーが指定したカスタム アルゴリズム。 使用可能な値の`Algorithm`の SERVICE_NAME 列から要素を取得できる、 [DMSCHEMA_MINING_SERVICES](../../schema-rowsets/data-mining/dmschema-mining-services-rowset.md)スキーマ行セット。  
   
  親に対応する要素`Algorithm`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MiningModel>します。 AMO オブジェクト モデルの中で、関連性の高い要素は <xref:Microsoft.AnalysisServices.MiningModelAlgorithms> です。  
   

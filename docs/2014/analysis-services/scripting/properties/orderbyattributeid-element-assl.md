@@ -1,5 +1,5 @@
 ---
-title: OrderByAttributeID 要素 (ASSL) |Microsoft ドキュメント
+title: OrderByAttributeID 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OrderByAttributeID element
 ms.assetid: 41d7b650-ac40-4f1a-850d-2f81a19b28cb
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42d8e9246340b72fad871e92bc30008c68ce786a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c336d9c210c9e6fb5ffa44e5f1d37a445e0e5694
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235612"
 ---
 # <a name="orderbyattributeid-element-assl"></a>OrderByAttributeID 要素 (ASSL)
   メンバーの順序付けに使用する別の属性を識別、[ディメンション](../data-type/dimensionattribute-data-type-assl.md)属性。  
@@ -62,7 +62,7 @@ ms.locfileid: "36173564"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `OrderByAttributeID`要素が使用されている場合にのみの値、 [OrderBy](orderby-element-assl.md)要素を`DimensionAttribute`に設定されている*AttributeKey*または*AttributeName*です。  
+ `OrderByAttributeID`要素が使用されている場合にのみの値、 [OrderBy](orderby-element-assl.md)の要素、`DimensionAttribute`に設定されている*AttributeKey*または*AttributeName*します。  
   
  親に対応する要素`OrderByAttributeID`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DimensionAttribute>します。  
   

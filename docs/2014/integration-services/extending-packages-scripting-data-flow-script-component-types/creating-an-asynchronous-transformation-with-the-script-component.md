@@ -20,13 +20,13 @@ ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 660524626e7120f21d5e420526f0634f3155f2b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f63101c71ada32768139c075dd98122bac5ca75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329942"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>スクリプト コンポーネントによる非同期変換の作成
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フロー内で変換コンポーネントを使用することにより、変換元から変換先にデータが受け渡される過程で、データを修正または分析できます。 同期出力型の変換では、各入力列はコンポーネントを通過するたびに処理されます。 非同期出力型の変換では、変換が入力行をすべて受け取るまで処理の実行を待機する場合と、変換が入力行をすべて受け取る前に一部の行を出力する場合があります。 このトピックでは、非同期変換について説明します。 処理で同期変換が必要な場合は、「[スクリプト コンポーネントによる同期変換の作成](../data-flow/transformations/script-component.md)」を参照してください。 同期コンポーネントと非同期コンポーネントの相違点の詳細については、「[同期変換と非同期変換について](../understanding-synchronous-and-asynchronous-transformations.md)」を参照してください。  
@@ -75,7 +75,7 @@ ms.locfileid: "36174755"
 ### <a name="adding-variables"></a>変数の追加  
  値をスクリプト内で使用する既存の変数がある場合は、**[スクリプト変換エディター]** の **[スクリプト]** ページで、ReadOnlyVariables および ReadWriteVariables プロパティ フィールドに追加できます。  
   
- プロパティ フィールドに複数の変数を追加する場合は、各変数名をコンマで区切ります。 省略記号ボタンをクリックして、複数の変数を選択することもできます (**.**) ボタンを`ReadOnlyVariables`と`ReadWriteVariables`プロパティ フィールド内の変数をクリックして、**変数を選択** ダイアログ ボックス。  
+ プロパティ フィールドに複数の変数を追加する場合は、各変数名をコンマで区切ります。 省略記号をクリックして、複数の変数を選択することもできます (**.**) ボタンの横に、`ReadOnlyVariables`と`ReadWriteVariables`プロパティ フィールドでは、および内の変数を選択し、**変数の選択** ダイアログ ボックス。  
   
  スクリプト コンポーネントで変数を使用する方法に関する一般情報については、「[スクリプト コンポーネントでの変数の使用](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。  
   
@@ -87,11 +87,11 @@ ms.locfileid: "36174755"
  スクリプト コンポーネントを使用して作成されたすべての種類のコンポーネントに適用される重要な情報については、「[スクリプト コンポーネントのコーディングおよびデバッグ](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)」を参照してください。  
   
 ### <a name="understanding-the-auto-generated-code"></a>自動生成されたコードについて  
- 作成と編集可能な変換コンポーネントを構成した後で VSTA IDE を開くときに`ScriptMain`クラスが、ProcessInputRow および CreateNewOutputRows メソッド スタブのコード エディターに表示されます。 ScriptMain クラスはカスタム コードを記述する場所であり、ProcessInputRow は変換コンポーネントの最重要メソッドです。 `CreateNewOutputRows` メソッドは変換元コンポーネントで一般的に使用され、両方のコンポーネントが独自の出力行を作成する必要のある、非同期変換と似ています。  
+ 作成し、編集可能な変換コンポーネントを構成した後で VSTA IDE を開くと`ScriptMain`クラスは、ProcessInputRow および CreateNewOutputRows メソッド スタブのコード エディターで表示されます。 ScriptMain クラスはカスタム コードを記述する場所であり、ProcessInputRow は変換コンポーネントの最重要メソッドです。 `CreateNewOutputRows` メソッドは変換元コンポーネントで一般的に使用され、両方のコンポーネントが独自の出力行を作成する必要のある、非同期変換と似ています。  
   
- VSTA を開く場合**プロジェクト エクスプ ローラー**ウィンドウで、スクリプト コンポーネントが、読み取り専用生成も確認できます`BufferWrapper`と`ComponentWrapper`プロジェクト項目です。 ScriptMain クラスで UserComponent クラスから継承、`ComponentWrapper`プロジェクト項目です。  
+ VSTA を開く場合**プロジェクト エクスプ ローラー**ウィンドウに、スクリプト コンポーネントが読み取り専用に生成も表示できる`BufferWrapper`と`ComponentWrapper`プロジェクト項目。 ScriptMain クラス内の UserComponent クラスから継承、`ComponentWrapper`プロジェクト アイテム。  
   
- データ フロー エンジンがで PrimeOutput メソッドを呼び出し、実行時に、`UserComponent`クラスが優先、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A>のメソッド、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>クラスの親です。 その後、PrimeOutput メソッドは CreateNewOutputRows メソッドを呼び出します。  
+ 実行時に、データ フロー エンジンはで PrimeOutput メソッドを呼び出す、`UserComponent`クラスでオーバーライドされます、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A>のメソッド、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>クラスの親。 その後、PrimeOutput メソッドは CreateNewOutputRows メソッドを呼び出します。  
   
  次に、データ フロー エンジンが UserComponent クラスの ProcessInput メソッドを呼び出します。これにより、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 親クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> メソッドがオーバーライドされます。 ProcessInput メソッドは、入力バッファーの行を順にループし、各行で 1 回ずつ ProcessInputRow メソッドを呼び出します。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36174755"
   
  非同期変換では、AddRow メソッドを使用して、ProcessInputRow または ProcessInput メソッド内から必要に応じて行を出力に追加できます。 CreateNewOutputRows メソッドを使用する必要はありません。 集計結果などの結果の単一行を特定の出力に書き込んでいる場合は、CreateNewOutputRows メソッドを使用してあらかじめ出力行を作成し、その値をすべての入力行を処理した後に入力できます。 ただし、スクリプト コンポーネントでは入力または出力で現在の行のみを使用できるため、CreateNewOutputRows メソッドで複数の行を作成しても役に立ちません。 CreateNewOutputRows メソッドは、処理する入力行のない変換元コンポーネントでより重要になります。  
   
- また、ProcessInput メソッド自体をオーバーライドし、入力バッファー内をループして各行で ProcessInputRow を呼び出す前後に、準備処理や終了処理を追加することもできます。 たとえば、行を ProcessInputRow ループとして特定の市区町村内のアドレスの数をカウントする ProcessInput をオーバーライドこのトピックのコード例のいずれかの`.`例では、集計値を 2 番目の出力に出力されているすべての行処理されます。 この例で出力の終了処理が ProcessInput で行われているのは、PostExecute が呼び出される時点では、出力バッファーが既に使用できなくなっているためです。  
+ また、ProcessInput メソッド自体をオーバーライドし、入力バッファー内をループして各行で ProcessInputRow を呼び出す前後に、準備処理や終了処理を追加することもできます。 ProcessInputRow 各行をループとしての特定の都市の住所の数をカウントする ProcessInput をオーバーライド コード例では、このトピックのいずれかなど、`.`例がすべての行が追加されました後に、2 番目の出力に集計値を書き込む処理されます。 この例で出力の終了処理が ProcessInput で行われているのは、PostExecute が呼び出される時点では、出力バッファーが既に使用できなくなっているためです。  
   
  必要に応じて、ScriptMain クラスで使用できる PreExecute メソッドや PostExecute メソッドにもスクリプトを記述して、準備処理や終了処理を行う場合もあります。  
   
@@ -234,7 +234,7 @@ public class ScriptMain:
   
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [同期変換と非同期変換について](../understanding-synchronous-and-asynchronous-transformations.md)   

@@ -1,5 +1,5 @@
 ---
-title: SharePoint モード (SSRS) のレポート サーバーでパブリッシュ済みレポート アイテムの URL の例 |Microsoft ドキュメント
+title: SharePoint モード (SSRS) レポート サーバーにパブリッシュされたレポート アイテムの URL の例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd98a2e64ca72e0e9b39328620b88732606e98af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ce1e34688069063cde47849d00497a056c964431
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174408"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214732"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 (SSRS)
   レポートおよび関連アイテムを SharePoint ライブラリにパブリッシュするには、レポート デザイナーなどの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作成ツールを使用してコンテンツをパブリッシュするか、SharePoint サイトのアクションを使用してコンテンツをアップロードします。  
@@ -79,7 +79,7 @@ ms.locfileid: "36174408"
  レポート定義には、外部ファイルとして保存されている画像ファイルを含めることができます。 レポート定義内に画像ファイルの参照情報として、ファイルへの完全修飾 URL を設定します。 画像ファイルは、SharePoint サイトまたはリモート コンピューターに保存できます。  
   
 > [!IMPORTANT]  
->  外部 URL が SharePoint サイト上の画像を指している場合、レポート ビルダーでレポートをプレビューすると壊れた画像アイコンが表示されます。 のみがある場合に、壊れた画像アイコンが表示されます、SharePoint サイトにレポートをアップロード接続モードでレポートを表示すると、`View Items`アクセス許可。  
+>  外部 URL が SharePoint サイト上の画像を指している場合、レポート ビルダーでレポートをプレビューすると壊れた画像アイコンが表示されます。 のみがある場合に、壊れた画像アイコンが表示されます、SharePoint サイトにレポートをアップロードし、接続モードでレポートを表示すると、`View Items`アクセス許可。  
   
  レポート内の外部画像ファイルへの参照は、レポート サーバーのモードに関係なく、完全修飾 URL にする必要があります。 また、外部画像ファイルを参照する場合、通常は自動レポート処理アカウントを構成する必要があります。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36174408"
 ### <a name="file-names"></a>ファイル名  
  レポート アイテムに対して URL 内に指定するファイル名にはファイル名拡張子が必要です。 ファイル名拡張子によってファイルの種類が識別されます。 レポート アイテムをレポート作成ツールからパブリッシュする場合は、ファイル名拡張子が自動的に含まれます。 レポート アイテムを SharePoint ライブラリにアップロードする場合は、ファイル名拡張子を含める必要があります。  
   
- SharePoint サイトにアップロードするアイテムにファイル名拡張子を指定しないと、`rsInvalidDataSourceReference` エラーが発生します。 SharePoint アプリケーションで有効なファイル名文字として認識されない文字を、ファイル名に含めることはできません。 次の文字を含めないでください: # % & *: \< > ですか? / { | } は、使わないでください。  
+ SharePoint サイトにアップロードするアイテムにファイル名拡張子を指定しないと、`rsInvalidDataSourceReference` エラーが発生します。 SharePoint アプリケーションで有効なファイル名文字として認識されない文字を、ファイル名に含めることはできません。 次の文字を含めないでください: # % & *: \< > でしょうか。 / { | } は、使わないでください。  
   
 ## <a name="differences-between-uploading-and-publishing"></a>アップロードとパブリッシュの相違点  
  レポート デザイナーまたはレポート ビルダーを使用してレポートと関連ファイルをライブラリにパブリッシュする場合、ファイルは検証されてから追加されます。 SharePoint ライブラリで **[アップロード]** アクションを使用してレポートと関連ファイルをアップロードする場合、検証チェックは行われません。 ファイルが有効かどうかは、管理、編集、または実行のためにレポートにアクセスするまで知ることができません。  

@@ -1,5 +1,5 @@
 ---
-title: データ マイニング ツール |Microsoft ドキュメント
+title: データ マイニング ツール |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tools [Analysis Services]
 - mining models [Analysis Services], tools
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], development
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 caps.latest.revision: 47
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3bde9cb83ca06208573b88bbfdc06a8e86f676ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 810210c6c04cc0830c8c1586d82cb18c0ed5a02e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179089"
 ---
 # <a name="data-mining-tools"></a>データ マイニング ツール
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、データ マイニング ソリューションの作成に使用できる次のツールが用意されています。  
@@ -65,7 +65,7 @@ ms.locfileid: "36175054"
   
 -   既存のマイニング モデルに対する予測とコンテンツ クエリの作成。 1 回限りのクエリの作成、または外部データのテーブル全体の予測を生成するクエリの設定。  
   
- **詳細:** [データ マイニング デザイナー](data-mining-designer.md)  
+ **詳細情報:** [データ マイニング デザイナー](data-mining-designer.md)  
   
 ## <a name="sql-server-management-studio"></a>[SQL Server Management Studio]  
  マイニング モデルを作成してサーバーに配置したら、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、データ マイニング オブジェクトをホストする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを管理できます。 また、モデルの調査、新しいデータの処理、予測の作成など、モデルを使用するタスクの実行を続けることもできます。  
@@ -94,7 +94,7 @@ ms.locfileid: "36175054"
  **詳細:** [データ マイニング ソリューションの関連プロジェクト](data-mining-solutions.md)  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能&#40;DMX&#41;参照](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [データ マイニング拡張機能&#40;DMX&#41;リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)   
  [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
  [マイニング モデル ビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
  [データ マイニング ソリューション](data-mining-solutions.md)  

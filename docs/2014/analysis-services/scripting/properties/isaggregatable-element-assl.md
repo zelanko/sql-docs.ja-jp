@@ -1,5 +1,5 @@
 ---
-title: IsAggregatable 要素 (ASSL) |Microsoft ドキュメント
+title: IsAggregatable 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IsAggregatable element
 ms.assetid: ed7dbe89-259c-4c5c-9660-b965c3af1573
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d167c7c2cf8ce6e1f8092a6378d543ee0ab0d1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c19be225b4a0deadbd618e6012dc17ce2d2f9aa8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252924"
 ---
 # <a name="isaggregatable-element-assl"></a>IsAggregatable 要素 (ASSL)
   指定するかどうかの値、 [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)要素を集計することができます。  

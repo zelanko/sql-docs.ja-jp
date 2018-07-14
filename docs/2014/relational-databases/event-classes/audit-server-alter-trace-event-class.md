@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Server Alter Trace event class
 ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7f739d8c9d441d328bab6121921de661cabce49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 791410e55eaec2c89410c04fe047ed92570bec0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182329"
 ---
 # <a name="audit-server-alter-trace-event-class"></a>Audit Server Alter Trace イベント クラス
   **Audit Server Alter Trace** イベント クラスは、ALTER TRACE 権限をチェックするすべてのステートメントで発生します。 ALTER TRACE をチェックするステートメントには、トレースの作成や構成、またはトレースへのフィルターの設定に使用するステートメントがあります。  

@@ -3,26 +3,24 @@ title: ストアド プロシージャからデータを返す | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b8120714aba03f2be632d19e846daea3789dba54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd21d239fb1a4a947e5f6d17120cc6a63feb575b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249692"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>ストアド プロシージャからデータを返す
   結果セットやプロシージャからのデータを呼び出し元のプログラムに返す手段には、出力パラメーターとリターン コードの 2 つがあります。 このトピックでは、両方のアプローチについて説明します。  
@@ -75,13 +73,13 @@ GO
  プロシージャを呼び出す際にパラメーターに OUTPUT を指定した場合は、そのパラメーターがプロシージャの定義で OUTPUT を使用して定義されていないと、エラー メッセージが表示されます。 ただし、プロシージャに出力パラメーターを定義しておき、OUTPUT を指定せずにこのプロシージャを実行することも可能です。 エラーは返されませんが、呼び出し側のプログラムで出力値を使用することはできません。  
   
 ### <a name="using-the-cursor-data-type-in-output-parameters"></a>OUTPUT パラメーターでの cursor データ型の使用  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] プロシージャが使用できる、 `cursor` OUTPUT パラメーターにのみデータを入力します。 場合、`cursor`プロシージャの定義でそのパラメーターに対して VARYING と出力の両方のキーワードを指定する必要があります、パラメーターのデータ型を指定します。 パラメーターは OUTPUT としてしか指定することができますが、パラメーターの宣言で VARYING キーワードを指定する場合、データ型があります`cursor`OUTPUT キーワードを指定することも必要があります。  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] プロシージャが使用できる、`cursor`のみ出力パラメーターのデータ型します。 場合、`cursor`プロシージャの定義でそのパラメーターに対して VARYING と出力の両方のキーワードを指定する必要があります、パラメーターのデータ型が指定されています。 パラメーターは OUTPUT としてしか指定できますが、パラメーターの宣言で VARYING キーワードが指定されている場合、データ型がある必要があります`cursor`と OUTPUT キーワードも指定する必要があります。  
   
 > [!NOTE]  
->  `cursor`データ型は、OLE DB、ODBC、ADO、Db-library などのデータベース Api からアプリケーション変数にバインドすることはできません。 アプリケーションは、プロシージャのプロシージャを実行するには、出力パラメーターをバインドする必要があるため`cursor`出力パラメーターは、データベース Api から呼び出すことができません。 これらのプロシージャを呼び出すことが[!INCLUDE[tsql](../../../includes/tsql-md.md)]バッチ、プロシージャ、トリガーが起動される場合にのみまたは、`cursor`に出力変数を割り当て、[!INCLUDE[tsql](../../../includes/tsql-md.md)]ローカル`cursor`変数。  
+>  `cursor`データ型は、OLE DB、ODBC、ADO、Db-library などのデータベース Api からアプリケーション変数にバインドすることはできません。 アプリケーションは、プロシージャを使用したプロシージャを実行するには、出力パラメーターをバインドする必要がありますので`cursor`出力パラメーターは、データベース Api から呼び出すことができません。 これらのプロシージャを呼び出すことが[!INCLUDE[tsql](../../../includes/tsql-md.md)]バッチ、プロシージャ、またはトリガーの場合にのみ、`cursor`出力変数に代入する、[!INCLUDE[tsql](../../../includes/tsql-md.md)]ローカル`cursor`変数。  
   
 ### <a name="rules-for-cursor-output-parameters"></a>cursor 出力パラメーターに関する規則  
- 次の規則に限定`cursor`プロシージャを実行すると、出力パラメーター。  
+ 次の規則に関連する`cursor`プロシージャを実行すると、出力パラメーター。  
   
 -   順方向専用カーソルの場合、カーソルの結果セットとして返される行は、プロシージャの実行が終了したときにカーソルがあった位置以降の行に限られます。たとえば、次のようになります。  
   
@@ -108,7 +106,7 @@ GO
     >  カーソルがクローズしているかどうかが問題になるのは、結果セットが返される時点のみです。 たとえば、プロシージャの途中でカーソルを閉じ、その後で再び開いて、そのカーソルの結果セットを呼び出し元のバッチ、プロシージャ、またはトリガーに返すのは有効な操作です。  
   
 ### <a name="examples-of-cursor-output-parameters"></a>cursor 出力パラメーターの例  
- 次の例では、プロシージャが作成される出力パラメーターで指定されている`@currency`_`cursor`を使用して、`cursor`データ型。 作成したプロシージャはバッチで呼び出します。  
+ 次の例では、プロシージャが作成、出力パラメーターが指定されている`@currency`_`cursor`を使用して、`cursor`データ型。 作成したプロシージャはバッチで呼び出します。  
   
  まず、Currency テーブルに対してカーソルを宣言し、そのカーソルを開くプロシージャを作成します。  
   
@@ -149,7 +147,7 @@ GO
 ```  
   
 ## <a name="returning-data-using-a-return-code"></a>リターン コードを使用してデータを返す処理  
- プロシージャは、リターン コードという整数値を返してプロシージャの実行状態を表すことができます。 プロシージャのリターン コードを指定するには、RETURN ステートメントを使用します。 OUTPUT パラメーターと同様に、呼び出し元のプログラムでリターン コード値を使用するには、プロシージャの実行時にリターン コードを変数に保存する必要があります。 代入変数など、`@result`データ型の`int`プロシージャからのリターン コードの格納に使用`my_proc`など。  
+ プロシージャは、リターン コードという整数値を返してプロシージャの実行状態を表すことができます。 プロシージャのリターン コードを指定するには、RETURN ステートメントを使用します。 OUTPUT パラメーターと同様に、呼び出し元のプログラムでリターン コード値を使用するには、プロシージャの実行時にリターン コードを変数に保存する必要があります。 代入変数など、`@result`データ型の`int`プロシージャからリターン コードを格納するために使用`my_proc`など。  
   
 ```  
 DECLARE @result int;  

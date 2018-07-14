@@ -1,5 +1,5 @@
 ---
-title: パーティションと DirectQuery モード (SSAS テーブル) |Microsoft ドキュメント
+title: パーティションと DirectQuery モード (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6153a5975dd342bfabb00b7f964ee04d6941a363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c928bbc87c39f76e8995c7c2d171d4f731b3171
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269688"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>パーティションと DirectQuery モード (SSAS テーブル)
   ここでは、DirectQuery モデルでのパーティションの使用方法について説明します。 テーブル モデルでのパーティションに関する一般的な情報については、「[パーティション (SSAS テーブル)](partitions-ssas-tabular.md)」を参照してください。  
   
- パーティションに関する情報の表示や、使用されるパーティションを変更する方法に関する手順については、次を参照してください。 [DirectQuery パーティションの変更&#40;SSAS 表形式&#41;](../change-the-directquery-partition-ssas-tabular.md)です。  
+ パーティションに関する情報を表示または、使用されるパーティションを変更する方法については、次を参照してください。 [DirectQuery パーティションを変更する&#40;SSAS 表形式&#41;](../change-the-directquery-partition-ssas-tabular.md)します。  
   
 ## <a name="using-partitions-in-directquery-mode"></a>DirectQuery モードでのパーティションの使用  
  テーブルごとに、DirectQuery データ ソースとして使用する 1 つのパーティションを指定する必要があります。  複数のパーティションがある場合は、モデルを切り替えて DirectQuery モードを有効にすると、テーブル内に作成された最初のパーティションに DirectQuery パーティションのフラグが既定で設定されます。 この設定は、後で [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のパーティション マネージャーを使用して変更できます。  

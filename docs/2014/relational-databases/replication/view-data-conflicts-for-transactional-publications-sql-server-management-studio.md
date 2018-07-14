@@ -1,5 +1,5 @@
 ---
-title: (SQL Server Management Studio) のトランザクション パブリケーション用のデータの競合の表示 |Microsoft ドキュメント
+title: トランザクション パブリケーション (SQL Server Management Studio) のデータの競合を表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
 - queued updating subscriptions [SQL Server replication]
 - viewing conflict information
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 280b9cb6a8842b218a040e64742a7c685b7d2024
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a4dc4c42c18429c5fa05cfe42fc72c5b511e488b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179769"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>トランザクション パブリケーションのデータの競合の表示 (SQL Server Management Studio)
   ピア ツー ピア トランザクション レプリケーション、およびキュー更新サブスクリプションを使用するトランザクション レプリケーションでの競合を、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] レプリケーション競合表示モジュールで表示できます。 競合の検出と解決方法については、「[ピア ツー ピア レプリケーションにおける競合検出](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」と「[キュー更新の競合解決オプションの設定 &#40;SQL Server Management Studio&#41;](publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)」をご覧ください。  
@@ -36,7 +36,7 @@ ms.locfileid: "36176365"
   
     -   @conflict_retention sp_addpublication [の](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)パラメーターに保有期間の値を指定します。  
   
-    -   値を指定して`'conflict_retention'`の@propertyパラメーターと、保有期間の値を@valueのパラメーター [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)です。  
+    -   値を指定`'conflict_retention'`の@propertyパラメーターし、保有期間の値、@valueパラメーターの[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)します。  
   
 ### <a name="to-view-conflicts"></a>競合を表示するには  
   

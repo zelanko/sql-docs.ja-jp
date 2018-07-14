@@ -1,5 +1,5 @@
 ---
-title: Analysis Services インスタンスに対する SPN の登録 |Microsoft ドキュメント
+title: Analysis Services インスタンスに対する SPN の登録 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb4397780a5e0d3a77b5feabe37e69b421ec8342
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b615640efe6529808652a10413d66d0fb2159e36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267628"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Analysis Services インスタンスの SPN 登録
   クライアントとサービス ID の相互認証に Kerberos が使用されている場合、サービス プリンシパル名 (SPN) は、Active Directory ドメイン内のサービス インスタンスを一意に識別します。 SPN は、サービス インスタンスを実行するログオン アカウントに関連付けられます。  
@@ -80,7 +80,7 @@ ms.locfileid: "36175642"
 |ホスト名|サービスが実行されているコンピューターを識別します。 完全修飾ドメイン名にすることも、NetBIOS 名にすることもできます。 どちらも SPN の登録が必要です。<br /><br /> サーバーの NetBIOS 名の SPN を登録する際は必ず、登録の重複がないか `SetupSPN –S` を使ってご確認ください。 フォレストでは NetBIOS 名の一意性が保証されません。重複する SPN が登録されていると接続エラーが発生します。<br /><br /> 負荷分散された Analysis Services クラスターの場合、ホスト名はクラスターに割り当てられた仮想名にする必要があります。<br /><br /> IP アドレスを使用して SPN を作成しないでください。 Kerberos は、ドメインの DNS 解決機能を使用します。 IP アドレスを指定すると、この機能がバイパスされます。|  
 |ポート番号|ポート番号は SPN 構文の一部ですが、Analysis Services SPN を登録する際にポート番号を指定することはありません。 通常は標準 SPN 構文でポート番号を提供するために使用されるコロン (:) 文字が、Analysis Services によってインスタンス名を指定するために使用されます。 Analysis Services インスタンスでは、ポートは既定のポート (TCP 2383) であるか、SQL Server Browser サービスによって割り当てられるポート (TCP 2382) であると見なされます。|  
 |インスタンス名|Analysis Services は、同じコンピューター上に複数回インストールできる、レプリケート可能なサービスです。 各インスタンスは、インスタンス名によって識別されます。<br /><br /> インスタンス名の先頭には、コロン (:) 文字が付いています。 たとえば、ホスト コンピューター名が SRV01 で、名前付きインスタンスが SSAS-Tabular である場合、SPN は SRV01:SSAS-Tabular になります。<br /><br /> 名前付き Analysis Services インスタンスを指定するための構文は、他の SQL Server インスタンスによって使用される構文とは異なることに注意してください。 他のサービスは、SPN にインスタンス名を追加するために、円記号 (\) を使用します。|  
-|サービス アカウント|これは、 **MSSQLServerOLAPService** Windows サービスの開始アカウントです。 アカウントには、Windows ドメイン ユーザー アカウント、仮想アカウント、管理されたサービス アカウント (MSA)、またはサービスごとの SID、NetworkService、LocalSystem などのビルトイン アカウントを使用できます。 Windows ドメイン ユーザー アカウントは domain \user として書式設定することができますかuser@domainです。|  
+|サービス アカウント|これは、 **MSSQLServerOLAPService** Windows サービスの開始アカウントです。 アカウントには、Windows ドメイン ユーザー アカウント、仮想アカウント、管理されたサービス アカウント (MSA)、またはサービスごとの SID、NetworkService、LocalSystem などのビルトイン アカウントを使用できます。 Windows ドメイン ユーザー アカウントを domain \user として書式設定できますかuser@domainします。|  
   
 ##  <a name="bkmk_virtual"></a> 仮想アカウントに対する SPN の登録  
  仮想アカウントは、SQL Server サービスの既定のアカウント タイプです。 仮想アカウントは**NT service \msolapservice**の既定のインスタンスと**NT service \msolap$**\<インスタンス名 >、名前付きインスタンス。  
@@ -100,7 +100,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **NT service \msolap$ として実行されている名前付きインスタンスの構文例\<インスタンス名 >**  
   
- この例に示した **setspn** の構文は、名前付きインスタンスが既定の仮想アカウントで実行されていることを想定しています。 この例のコンピューターのホスト名は **AW-SRV02**、インスタンス名は **AW-FINANCE** です。 仮想アカウントではなく、spn が指定されているマシン アカウント**NT service \msolap$**\<インスタンス名 >。  
+ この例に示した **setspn** の構文は、名前付きインスタンスが既定の仮想アカウントで実行されていることを想定しています。 この例のコンピューターのホスト名は **AW-SRV02**、インスタンス名は **AW-FINANCE** です。 仮想アカウントではなく、spn に指定されているマシン アカウント**NT service \msolap$**\<インスタンス名 >。  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -120,7 +120,7 @@ Setspn –s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service
 ```  
   
 > [!TIP]  
->  Analysis Services サーバーに対して SPN が作成されたかどうかは、SPN の登録方法に応じて `Setspn -L <domain account>` または `Setspn -L <machinename>`を実行してご確認ください。 MSOLAPSVC.3/はず\<ホスト名 > 一覧にします。  
+>  Analysis Services サーバーに対して SPN が作成されたかどうかは、SPN の登録方法に応じて `Setspn -L <domain account>` または `Setspn -L <machinename>`を実行してご確認ください。 MSOLAPSVC.3/を表示する必要があります\<ホスト名 > 一覧にします。  
   
 ##  <a name="bkmk_builtin"></a> ビルトイン アカウントに対する SPN の登録  
  この方法はお勧めできませんが、従来の Analysis Services インストールは、Network Service、Local Service、Local System などのビルトイン アカウントで実行されるように構成されていることもあります。  
@@ -179,7 +179,7 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  [サービス アカウントのステップ バイ ステップ ガイド](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [インターネット インフォメーション サービスでホストされている Web アプリケーションを構成するときに Spn を使用する方法](http://support.microsoft.com/kb/929650)   
- [サービス アカウントの新機能](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
+ [サービス アカウントの新機能新機能](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
  [SharePoint 2010 製品 (ホワイト ペーパー) 用の Kerberos 認証を構成します。](http://technet.microsoft.com/library/ff829837.aspx)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 caps.latest.revision: 4
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 914a9b9d74c360e466919770b2b749a0f0c00920
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a1d2a85cc2409820165b151542dc1152eda83e44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166803"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL コード スニペット
   [!INCLUDE[tsql](../../includes/tsql-md.md)]コード スニペットは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のステートメントまたはブロックの基本構造を含んだテンプレートです。 スニペットは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでステートメントを追加する際のひな形として使用できます。 SQL Server に付属の定義済みのスニペットを挿入できるほか、独自のスニペットを作成することもできます。  

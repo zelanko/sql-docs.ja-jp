@@ -1,5 +1,5 @@
 ---
-title: Integration Services サーバーのレポートの表示 |Microsoft ドキュメント
+title: Integration Services サーバーのレポートの表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
 caps.latest.revision: 8
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d868930792e1d381e8f476d6be5c83cdfc05e1f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f379b41d4620197db75ffdd29b80295ee5dc67d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190562"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートの表示
-  現在のリリースで[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、標準のレポートで使用できる[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]監視に役立つ[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に配置されたプロジェクト、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]サーバー。  レポートの詳細については、「 [Integration Services サーバーのレポート](../../2014/integration-services/reports-for-the-integration-services-server.md)」を参照してください。  
+  現在のリリースで[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、標準のレポートが表示されます。[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]監視に役立つ[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に配置されたプロジェクト、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]サーバー。  レポートの詳細については、「 [Integration Services サーバーのレポート](../../2014/integration-services/reports-for-the-integration-services-server.md)」を参照してください。  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートを表示するには  
   

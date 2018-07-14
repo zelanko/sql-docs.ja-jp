@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b0d22fd13abf68cd9eea1c21b135427161fbf8be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a8a8c2fc949755b5cc3fea644a5b08ee3990c541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207102"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>メモリ最適化テーブルのメモリ必要量の推定
   新しいメモリ最適化テーブルを作成するか、既存のディスク ベース テーブルを [!INCLUDE[hek_2](../../includes/hek-2-md.md)] メモリ最適化テーブルに移行するかに関係なく、各テーブルのメモリ必要量に関する適切な推定を実施することは重要であり、その結果、サーバーで十分なメモリを準備することができます。 ここでは、メモリ最適化テーブルのデータを保持するために必要とされるメモリの量を推定する方法について説明します。  
@@ -119,11 +119,11 @@ SELECT COUNT(DISTINCT [Col2])
   
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] メモリ最適化テーブル内でのハッシュ インデックスの動作方法の詳細については、「 [Hash Indexes](../../database-engine/hash-indexes.md)」(ハッシュ インデックス) を参照してください。  
   
- **注:** を即座にハッシュ インデックスの配列サイズを変更することはできません。 ハッシュ インデックスの配列サイズを変更するには、テーブルを削除して bucket_count の値を変更し、そのテーブルを再作成する必要があります。  
+ **注:** 実行時に、ハッシュ インデックスの配列サイズを変更することはできません。 ハッシュ インデックスの配列サイズを変更するには、テーブルを削除して bucket_count の値を変更し、そのテーブルを再作成する必要があります。  
   
  **ハッシュ インデックスの配列サイズの設定**  
   
- ハッシュ配列サイズを設定`(bucket_count= <value>)`場所\<値 > 整数値を 0 より大きい値です。 場合\<値 > 累乗 2 の実際の bucket_count は切り上げ、最も近い 2 のべき乗にします。  この例のテーブルで (bucket_count = 5000000)、実際のバケット数が最大 8,388, 608 を丸めます 5,000,000 は 2 のべき乗ではないため (2<sup>23</sup>)。  ハッシュ配列が必要とするメモリを計算するときは、5,000,000 ではなく、この数値を使用する必要があります。  
+ ハッシュの配列のサイズがによって設定されます`(bucket_count= <value>)`場所\<値 > 整数値を 0 より大きいです。 場合\<値 > が累乗でない 2 に、実際の bucket_count は切り上げ、最も近い 2 のべき乗にします。  この例のテーブルで (bucket_count = 5000000)、実際のバケット数が最大 8,388, 608 を丸めます 5,000,000 は 2 のべき乗ではないので (2<sup>23</sup>)。  ハッシュ配列が必要とするメモリを計算するときは、5,000,000 ではなく、この数値を使用する必要があります。  
   
  したがって、この例の各ハッシュ配列で必要とされるメモリは次のようになります。  
   
@@ -165,7 +165,7 @@ SELECT * FROM t_hk
   
  `rowVersions = durationOfLongestTransactionInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
- 古い行に関するメモリ必要はメモリ最適化テーブルの行のサイズよりも古い行の数を乗算して見積もられます (を参照してください[テーブルのメモリ](#bkmk_MemoryForTable)上)。  
+ 古い行に関するメモリ必要量をメモリ最適化テーブルの行サイズよりも古い行の数を乗算して推定は (を参照してください[テーブルのメモリ](#bkmk_MemoryForTable)上)。  
   
  `memoryForRowVersions = rowVersions * rowSize`  
   

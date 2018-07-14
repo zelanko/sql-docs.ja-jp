@@ -1,5 +1,5 @@
 ---
-title: Translation 要素 (XMLA) |Microsoft ドキュメント
+title: Translation 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Translation element
 ms.assetid: ce962d4b-dda9-4a16-a56c-ff7a5275c48a
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 63072fae7d585f18fdc3b3bc1da5ffbef5bb9b8c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 2ce94966eae0cb1088ff462f551bdd27ad4304ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180789"
 ---
 # <a name="translation-element-xmla"></a>Translation 要素 (XMLA)
   属性メンバーに対する翻訳を定義します。  
@@ -67,7 +67,7 @@ ms.locfileid: "36176473"
 |子要素|[言語](language-element-xmla.md)、[名](name-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
- A`Translation`要素中に特定の属性に対して定義されている翻訳を属性メンバーを関連付けに必要な情報を定義する、[挿入](../xml-elements-commands/insert-element-xmla.md)または[更新](../xml-elements-commands/update-element-xmla.md)コマンド。  
+ A`Translation`要素が属性メンバーへの中に、指定された属性に対して定義されている変換の関連付けに必要な情報を定義、[挿入](../xml-elements-commands/insert-element-xmla.md)または[Update](../xml-elements-commands/update-element-xmla.md)コマンド。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;XMLA&#41;](xml-elements-properties.md)  

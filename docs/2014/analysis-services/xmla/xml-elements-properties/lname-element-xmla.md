@@ -1,5 +1,5 @@
 ---
-title: LName 要素 (XMLA) |Microsoft ドキュメント
+title: LName 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - LName element
 ms.assetid: 2c8c2fa9-cb2d-44ea-b253-5e6ff61f1b66
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: aa8dbe634d876527cc23112e96740c5ebcbf9cb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 13eb12010ab201067494cb04c598301f4f8c44e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255194"
 ---
 # <a name="lname-element-xmla"></a>LName 要素 (XMLA)
   親の一意のレベル名に関する情報を格納[HierarchyInfo](hierarchyinfo-element-xmla.md)または[メンバー](member-element-xmla.md)要素。  

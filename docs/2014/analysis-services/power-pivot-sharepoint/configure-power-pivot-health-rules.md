@@ -1,5 +1,5 @@
 ---
-title: PowerPivot の正常性ルール - 構成 |Microsoft ドキュメント
+title: PowerPivot の正常性ルール - 構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f22cf615d32ebe0d784aa71f3169f4ce9b9e9125
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 853dc9e66b42830f241715f2283b75f1983e2433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265429"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot の正常性ルール - 構成
   PowerPivot for SharePoint には、サーバーの可用性と構成に関する問題を監視および解決するのに役立つ SharePoint 正常性ルールが含まれています。 PowerPivot for SharePoint に適用される正常性ルールは、[ルール定義の確認] ページに表示されます。  
@@ -32,7 +32,7 @@ ms.locfileid: "36174570"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **注 :** 正常性ルールの設定は、SQL Server Analysis Services インスタンスと PowerPivot サービス アプリケーションに対して別々に構成されます。 各サービスの正常性ルールを構成するには、このトピックで示されている手順に従ってください。 SharePoint 2013 配置の場合、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] はサービス アプリケーションを使用するだけです。 そのため、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] によってインストールされる正常性ルール セットは、SharePoint のバージョンに応じて異なります。 トピックの「バージョン」列を参照してください[正常性ルールのリファレンス&#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)、インストールされたルールを表示する次の Windows PowerShell コマンドを実行することもできます。  
+ **注 :** 正常性ルールの設定は、SQL Server Analysis Services インスタンスと PowerPivot サービス アプリケーションに対して別々に構成されます。 各サービスの正常性ルールを構成するには、このトピックで示されている手順に従ってください。 SharePoint 2013 配置の場合、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] はサービス アプリケーションを使用するだけです。 そのため、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] によってインストールされる正常性ルール セットは、SharePoint のバージョンに応じて異なります。 トピックの「バージョン」列を参照してください。[正常性ルールのリファレンス&#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)、または、インストールされたルールを表示する次の Windows PowerShell コマンドを実行することができます。  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
@@ -68,7 +68,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  ページの上部で、Analysis Services のインスタンスを持つ SharePoint ファーム内のサーバーを選択します (次の図では、サーバー名は AW-SRV033 です)。 サービスの一覧に **[SQL Server Analysis Services]** が表示されます。  
   
-     ![スクリーン ショットのサービスの管理サーバー ページで](../media/ssas-centraladmin-servicesonserver.gif "スクリーン ショットのサービスの管理サーバー ページ")  
+     ![スクリーン ショットのサービスの管理サーバーのページ](../media/ssas-centraladmin-servicesonserver.gif "スクリーン ショットのサービスの管理サーバー ページ")  
   
 3.  **[SQL Server Analysis Services]** をクリックします。  
   
@@ -95,7 +95,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      この構成設定は、 **[問題とソリューションの確認]** ページの **[PowerPivot: 大量の接続は、現在の負荷を処理するにはより多くのサーバーを配置する必要があることを示しています。]** というルールの定義に対応しています。  
   
      ディスク領域の不足 (既定値は 5%)  
-     ディスク領域は、データベースへの要求が行われるたびに、PowerPivot データをキャッシュするために使用されます。 このルールは、ディスク領域が不足している場合に、そのことを通知します。 既定では、バックアップ フォルダーが置かれているディスク ドライブ上のディスク領域が 5% 未満になると、この正常性ルールがトリガーされます。 ディスク使用量の詳細については、次を参照してください。[ディスク領域の使用率を構成する&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)です。  
+     ディスク領域は、データベースへの要求が行われるたびに、PowerPivot データをキャッシュするために使用されます。 このルールは、ディスク領域が不足している場合に、そのことを通知します。 既定では、バックアップ フォルダーが置かれているディスク ドライブ上のディスク領域が 5% 未満になると、この正常性ルールがトリガーされます。 ディスク使用量の詳細については、次を参照してください。[ディスク使用領域の構成&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)します。  
   
      この構成設定は、 **[問題とソリューションの確認]** ページの **[PowerPivot: データがキャッシュされるドライブのディスク領域が不足しています。]** というルールの定義に対応しています。  
   
@@ -108,11 +108,11 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  [サービス アプリケーション] ページで、 **[既定の PowerPivot サービス アプリケーション]** をクリックします。  
   
-     ![サービス アプリケーションのスクリーン ショット ページ](../media/ssas-centraladmin-app.gif "スクリーン ショットの [サービス アプリケーション] ページ")  
+     ![サービス アプリケーションのスクリーン ショット ページ](../media/ssas-centraladmin-app.gif "ページの サービス アプリケーションのスクリーン ショット")  
   
 3.  PowerPivot 管理ダッシュボードが表示されます。 **[アクション]** ボックスの一覧の **[サービス アプリケーションの設定の構成]** をクリックして、サービス アプリケーションの設定ページを開きます。  
   
-     ![ダッシュ ボードのスクリーン ショットは、アクションの一覧に集中](../media/ssas-centraladmin-actionslist.gif "操作 一覧の焦点をダッシュ ボードのスクリーン ショット")  
+     ![ダッシュ ボードのスクリーン ショットは、アクションの一覧に集中](../media/ssas-centraladmin-actionslist.gif "ダッシュ ボードのスクリーン ショットは、アクションの一覧に集中")  
   
 4.  [正常性ルールの設定] で、次の設定を変更します。  
   
@@ -127,12 +127,12 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      PowerPivot 管理ダッシュボード .xlsx の更新の確認 (既定値は 5 日)  
      PowerPivot 管理ダッシュボード .xlsx ファイルは、PowerPivot 管理ダッシュボードのレポートによって使用されるデータ ソースです。 既定のサーバー構成では、SharePoint および PowerPivot System サービスによって収集された使用状況データを使用して、.xlsx ファイルは毎日更新されます。 ファイルが更新されない場合は、正常性ルールによって問題として報告されます。 既定では、ファイルのタイムスタンプが 5 日間変更されない場合、ルールがトリガーされます。  
   
-     使用状況データ収集の詳細については、次を参照してください。[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)です。  
+     使用状況データ収集の詳細については、次を参照してください。[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。  
   
      この構成設定は、 **[問題とソリューションの確認]** ページの **[PowerPivot: 使用状況データが必要な頻度で更新されていません。]** というルールの定義に対応しています。  
   
 ## <a name="see-also"></a>参照  
- [ディスク領域使用率を構成する&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)   
+ [ディスク使用量を構成する&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)   
  [PowerPivot 管理ダッシュボードと使用状況データ](power-pivot-management-dashboard-and-usage-data.md)  
   
   

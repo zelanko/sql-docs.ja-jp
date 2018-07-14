@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 96841d12896ed3bdb414fa1db1825cf5c07ba0cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 030f950d9b18452e415fa23b1a1d43bf13eabdce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196822"
 ---
 # <a name="planning-a-report-report-builder"></a>レポートの計画 (レポート ビルダー)
   レポート ビルダーでは、さまざまな種類のレポートを作成できます。 たとえば、売上データの概要または詳細、マーケティングと売上の傾向、経営報告、またはダッシュボードを示すレポートを作成できます。 また、販売注文、製品カタログ、定型書簡などの高度な書式付きテキストを利用したレポートも作成できます。 これらのレポートはすべて、レポート ビルダーの同じ基本的な構成要素をさまざまに組み合わせて作成されます。 便利でわかりやすいレポートを作成するには、まず計画を立てることが役立ちます。 開始する前に検討すると役立ついくつかの事項を次に示します。  
   
 -   **どの形式でレポートを表示するか**  
   
-     レポート マネージャーなどのブラウザーでレポートをオンラインで表示したり、Excel、Word、PDF などの他の形式にレポートをエクスポートしたりすることができます。 エクスポート形式によっては一部の機能を使用できないので、レポートの最終的な形式を検討することは重要です。 詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)です。  
+     レポート マネージャーなどのブラウザーでレポートをオンラインで表示したり、Excel、Word、PDF などの他の形式にレポートをエクスポートしたりすることができます。 エクスポート形式によっては一部の機能を使用できないので、レポートの最終的な形式を検討することは重要です。 詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)します。  
   
 -   **どのような構造を使用してレポートのデータを表すか**  
   
-     テーブル、マトリックス (クロス集計レポートや PivotTable レポートに似ています)、グラフ、自由形式の構造を選択するか、これらの構造を組み合わせてデータを表します。 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41; ](tables-matrices-and-lists-report-builder-and-ssrs.md)と[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)です。  
+     テーブル、マトリックス (クロス集計レポートや PivotTable レポートに似ています)、グラフ、自由形式の構造を選択するか、これらの構造を組み合わせてデータを表します。 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41; ](tables-matrices-and-lists-report-builder-and-ssrs.md)と[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)します。  
   
 -   **レポートをどのように表示するか**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36177243"
   
 -   **どのようにしてレポートを配信するか**  
   
-     レポートをローカル コンピューターに保存して、引き続き操作したり、独自の情報に関してローカルで実行したりすることができます。 ただし、レポートを他のユーザーと共有するには、ネイティブ モードで構成されたレポート サーバーまたは SharePoint 統合モードのレポート サーバーにレポートを保存する必要があります。 サーバーに保存すると、他のユーザーが必要なときにいつでも実行できます。 または、レポート サーバー管理者がレポートのサブスクリプションを設定したり、他のユーザーへのレポートの電子メール配信を設定したりすることができます。 必要に応じて、レポートを特定のエクスポート形式で配信できます。 詳細については、次を参照してください。[検索、表示、およびレポートの管理&#40;レポート ビルダーおよび SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)です。  
+     レポートをローカル コンピューターに保存して、引き続き操作したり、独自の情報に関してローカルで実行したりすることができます。 ただし、レポートを他のユーザーと共有するには、ネイティブ モードで構成されたレポート サーバーまたは SharePoint 統合モードのレポート サーバーにレポートを保存する必要があります。 サーバーに保存すると、他のユーザーが必要なときにいつでも実行できます。 または、レポート サーバー管理者がレポートのサブスクリプションを設定したり、他のユーザーへのレポートの電子メール配信を設定したりすることができます。 必要に応じて、レポートを特定のエクスポート形式で配信できます。 詳細については、次を参照してください。[検索、表示、およびレポートの管理&#40;レポート ビルダーおよび SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 のレポート ビルダー](../report-builder/report-builder-in-sql-server-2016.md)   

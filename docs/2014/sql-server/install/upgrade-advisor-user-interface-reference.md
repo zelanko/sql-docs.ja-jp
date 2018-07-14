@@ -1,5 +1,5 @@
 ---
-title: アップグレード アドバイザーのユーザー インターフェイス リファレンス |Microsoft ドキュメント
+title: アップグレード アドバイザーのユーザー インターフェイス リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Analysis Wizard
 - analyzing system [Upgrade Advisor], options
@@ -20,28 +20,28 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, user interface reference
 ms.assetid: 9375e3d0-c193-4714-96bb-7effd8f4bf18
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 78ce2fc9f443e4edbc1d009e455c46e4d2ff808d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 09cc0df077b51e02cc65edc244dfac8c03518fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257738"
 ---
 # <a name="upgrade-advisor-user-interface-reference"></a>アップグレード アドバイザーのユーザー インターフェイス リファレンス
-  このセクションには、ヘルプ トピックが含まれています。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー。 これらのトピックは、アップグレード アドバイザー ウィザードから F1 キーを押すかをクリックして**ヘルプ**ウィザードのページやダイアログ ボックス。  
+  このセクションには、ヘルプ トピックが含まれています。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー。 これらのトピックは、F1 キーを押すかをクリックして、アップグレード アドバイザー ウィザードから使用可能な**ヘルプ**ウィザード ページおよびダイアログ ボックス。  
   
 |トピック|説明|  
 |-----------|-----------------|  
 |[SQL Server のコンポーネント](../../../2014/sql-server/install/sql-server-components.md)|サーバー、および特定の種類のサーバーとコンポーネントの組み合わせを指定し、アップグレード分析に送信します。|  
 |[接続パラメーター](../../../2014/sql-server/install/connection-parameters.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]など、特定の種類のサーバーをアップグレード分析する場合、分析対象のサーバーを選択する必要があります。 このページでは、情報を入力して、アップグレード アドバイザーで分析する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース インスタンスに接続できるようにします。|  
-|[SQL Server パラメーター](../../../2014/sql-server/install/sql-server-parameters.md)|[!INCLUDE[ssDE](../../includes/ssde-md.md)]の分析で使用するパラメーターを設定します。 分析するデータベース、トレース ファイル、または SQL バッチ ファイルを指定できます。 この手順は含まれず、および関連するダイアログのすべての要素が無効になっていないを選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で分析[SQL Server コンポーネント](../../../2014/sql-server/install/sql-server-components.md)です。|  
-|[Analysis Services パラメーター](../../../2014/sql-server/install/analysis-services-parameters.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を分析するには、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の特定のインスタンスを選択する必要があります。 この手順は含まれていません。 関連するすべての選択しない場合、ユーザー インターフェイス要素が無効になります[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で分析[SQL Server コンポーネント](../../../2014/sql-server/install/sql-server-components.md)です。|  
-|[Reporting Services パラメーター](../../../2014/sql-server/install/reporting-services-parameters.md)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を分析するには、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の特定のインスタンスを選択する必要があります。 この手順は含まれずとを選択しない場合、すべての関連ユーザー インターフェイス要素が無効になります[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で分析[SQL Server コンポーネント](../../../2014/sql-server/install/sql-server-components.md)です。|  
-|[Integration Services パラメーター](../../../2014/sql-server/install/integration-services-parameters.md)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を分析するために、コンピューターまたはファイル システムに格納された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを分析するオプションが用意されています。 この手順は含まれていません。 関連するすべての選択しない場合、ユーザー インターフェイス要素が無効になります[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]で分析[SQL Server コンポーネント](../../../2014/sql-server/install/sql-server-components.md)です。|  
-|[アップグレード アドバイザーの設定を確認します。](../../../2014/sql-server/install/confirm-upgrade-advisor-settings.md)|アップグレード分析を実行する前に、選択したオプションとパラメーターを確認します。|  
+|[SQL Server パラメーター](../../../2014/sql-server/install/sql-server-parameters.md)|[!INCLUDE[ssDE](../../includes/ssde-md.md)]の分析で使用するパラメーターを設定します。 分析するデータベース、トレース ファイル、または SQL バッチ ファイルを指定できます。 この手順が含まれているではありませんし、選択していない場合、関連するダイアログのすべての要素を無効に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で分析[SQL Server コンポーネント](../../../2014/sql-server/install/sql-server-components.md)します。|  
+|[Analysis Services パラメーター](../../../2014/sql-server/install/analysis-services-parameters.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を分析するには、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の特定のインスタンスを選択する必要があります。 この手順は含まれていません。 すべての関連を選択しない場合、ユーザー インターフェイス要素が無効になります[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で分析[SQL Server コンポーネント](../../../2014/sql-server/install/sql-server-components.md)します。|  
+|[Reporting Services パラメーター](../../../2014/sql-server/install/reporting-services-parameters.md)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を分析するには、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の特定のインスタンスを選択する必要があります。 この手順は含まれていますとを選択しない場合、すべての関連ユーザー インターフェイス要素が無効になります[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で分析[SQL Server コンポーネント](../../../2014/sql-server/install/sql-server-components.md)します。|  
+|[Integration Services パラメーター](../../../2014/sql-server/install/integration-services-parameters.md)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を分析するために、コンピューターまたはファイル システムに格納された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを分析するオプションが用意されています。 この手順は含まれていません。 すべての関連を選択しない場合、ユーザー インターフェイス要素が無効になります[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]で分析[SQL Server コンポーネント](../../../2014/sql-server/install/sql-server-components.md)します。|  
+|[アップグレード アドバイザーの設定を確認](../../../2014/sql-server/install/confirm-upgrade-advisor-settings.md)|アップグレード分析を実行する前に、選択したオプションとパラメーターを確認します。|  
 |[アップグレード アドバイザーの進行状況](../../../2014/sql-server/install/upgrade-advisor-progress.md)|コンポーネントが分析されると、進行状況のダイアログ ボックスに全体の進行状況が表示されます。|  
   
 ## <a name="see-also"></a>参照  
