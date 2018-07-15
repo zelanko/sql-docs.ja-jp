@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 40bda40f2ed8114f77a28e8a7b0b382107cecdd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 171af425cfa479dcf9be3f555250de9a246daa1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248502"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>実証: インメモリ OLTP によるパフォーマンスの向上
   この例では、インメモリ OLTP を使用した場合のパフォーマンスの向上を取り上げます。メモリ最適化テーブルと従来のディスク ベースのテーブルとに対してまったく同じ Transact-SQL クエリを実行したときの応答時間の違いを比較します。 応答時間は一般に、ネイティブ コンパイル ストアド プロシージャでメモリ最適化テーブルを照会したときに最短となります。そこで、ネイティブにコンパイルされたストアド プロシージャも (同じクエリに基づいて) 作成、実行して、その点を実証することにします。 このサンプルを通じて証明されるのは、メモリ最適化テーブルのデータにアクセスしたときに得られるパフォーマンス向上の一面 (挿入操作時のデータ アクセス効率) だけです。 このサンプルはシングル スレッドで、インメモリ OLTP の同時実行の利点を利用していません。 同時実行を使用するワークロードでは、さらにパフォーマンスが向上します。  
   
 > [!NOTE]  
->  メモリ最適化テーブルを示す別のサンプルについては、「 [SQL Server 2014 のインメモリ OLTP のサンプル](https://msftdbprodsamples.codeplex.com/releases/view/114491)です。  
+>  メモリ最適化テーブルを示す別のサンプルについては、「 [SQL Server 2014 のインメモリ OLTP のサンプル](https://msftdbprodsamples.codeplex.com/releases/view/114491)します。  
   
  このサンプルを実行するために、次の作業を行います。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36178889"
   
 3.  各種のクエリを実行して、クエリごとの応答時間を表示します。  
   
- セットアップ、 **imoltp**データベースの例では、まず空のフォルダーを作成: **c:\imoltp_data**、し、次のコードを実行します。  
+ セットアップに、 **imoltp**例では、データベースは、まず空のフォルダーを作成: **c:\imoltp_data**、し、次のコードを実行します。  
   
 ```tsql  
 USE master  

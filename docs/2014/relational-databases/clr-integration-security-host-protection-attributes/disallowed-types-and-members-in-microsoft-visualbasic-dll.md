@@ -1,13 +1,11 @@
 ---
-title: Microsoft.VisualBasic.dll の型およびメンバーを使用できない |Microsoft ドキュメント
+title: Microsoft.VisualBasic.dll の型およびメンバーが許可されていません |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,21 +13,21 @@ helpviewer_keywords:
 - common language runtime [SQL Server], host protection attributes
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b425265ccb6309d655341a341770fcb2578b5475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 148f43eb0f401d5f633e181fcc5225e7ec86cac0
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070513"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351794"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll の許可されない型およびメンバー
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共通言語統合 (CLR) プログラミングには、型またはメンバーを持つの使用が許可されていません、`HostProtectionAttribute`を指定する、`System.Security.Permissions.HostProtectionResource`列挙の値が`ExternalProcessMgmt`、 `ExternalThreading`、 `MayLeakOnAbort`、 `SecurityInfrastructure`、 `SelfAffectingProcessMgmnt`、`SelfAffectingThreading`、 **SharedState**、 `Synchronization`、または`UI`です。 次の表は、ホスト保護属性 (HPA) 値が許可されない `Microsoft.VisualBasic.dll` アセンブリのメンバーおよび型を示しています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共通言語統合 (CLR) のプログラミングには、型またはメンバーを持つの使用が許可されない、`HostProtectionAttribute`を指定する、`System.Security.Permissions.HostProtectionResource`列挙の値を持つ`ExternalProcessMgmt`、 `ExternalThreading`、 `MayLeakOnAbort`、 `SecurityInfrastructure`、 `SelfAffectingProcessMgmnt`、`SelfAffectingThreading`、 **SharedState**、 `Synchronization`、または`UI`します。 次の表は、ホスト保護属性 (HPA) 値が許可されない `Microsoft.VisualBasic.dll` アセンブリのメンバーおよび型を示しています。  
   
 > [!NOTE]  
->  この一覧は、サポートされているアセンブリから作成されたものです。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../clr-integration/database-objects/supported-net-framework-libraries.md)です。  
+>  この一覧は、サポートされているアセンブリから作成されたものです。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../clr-integration/database-objects/supported-net-framework-libraries.md)します。  
   
 |**型またはメンバー**|**HPA 値**|  
 |------------------------|------------------------|  

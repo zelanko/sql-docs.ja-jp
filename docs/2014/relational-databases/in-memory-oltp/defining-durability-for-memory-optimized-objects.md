@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
 caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 80897eb2c4744a2dfd1253067f65eb0fd6429f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0f569def0dafcf0f185905a004685b14156079d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303972"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>メモリ最適化オブジェクトの持続性の定義
   インメモリ OLTP では、完全な原子性、一貫性、分離性、および完全な持続性 (ACID) の各プロパティが保証されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] およびメモリ最適化テーブルのコンテキストにおける持続性では、次の事項が保証されます。  
@@ -47,7 +47,7 @@ ms.locfileid: "36084547"
   
  持続性のあるメモリ最適化テーブル内のデータは、データ ファイルとデルタ ファイルのペアに保存されます。  
   
- メモリ最適化テーブルで定義されているインデックスは、記憶域ではなく、メタデータにのみ保持されます。 インデックス構造は、メモリ最適化テーブル読み込みの一部として生成されます。  
+ メモリ最適化テーブルで定義されているインデックス ストレージではなく、メタデータにのみ保持されます。 インデックス構造は、メモリ最適化テーブル読み込みの一部として生成されます。  
   
  行は、DELETE ステートメントによって明示的に、または UPDATE ステートメントによって間接的に削除されます。 UPDATE 操作は削除として実行され、その後に挿入が続きます。 行を削除しても、データ ファイルに対して変更は行われませんが、削除された行を識別する新しい行が対応するデルタ ファイルに追加されます。  
   

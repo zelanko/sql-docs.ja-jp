@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rounding expressions
 - ROUND function [SSIS]
@@ -16,13 +16,13 @@ ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 76773d66166d2030b4970fab740660525f26e25d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ece0f01fe74340ae96b087204ec36c0cb6ef9fff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246811"
 ---
 # <a name="round-ssis-expression"></a>ROUND (SSIS 式)
   指定された長さまたは有効桁数に丸めた数値式を返します。 length パラメーターは整数に評価される必要があります。  
@@ -42,7 +42,7 @@ ROUND(numeric_expression,length)
  整数式です。 *numeric_expression* の丸め結果とする有効桁数です。  
   
 ## <a name="result-types"></a>戻り値の型  
- *numeric*_*expression.* と同じ型。  
+  *numeric*_*expression.* と同じ型。  
   
 ## <a name="remarks"></a>コメント  
  *length* 引数は正の整数または 0 に評価される必要があります。  

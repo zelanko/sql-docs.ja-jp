@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-notifications
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e52a31296cee16b8580d08bc4eaf016f9d0cc3e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f26d6b4622d11ae9a620d5cbdb03eed737de1645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305112"
 ---
 # <a name="event-notifications"></a>イベント通知
   イベント通知を使用すると、イベントについての情報を [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスに送信できます。 イベント通知は、さまざまな [!INCLUDE[tsql](../../includes/tsql-md.md)] データ定義言語 (DDL) ステートメントおよび SQL トレースのイベントに応答して実行されます。イベント通知は、これらのイベントに関する情報を [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスに送信することで実行されます。  
@@ -55,7 +54,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>イベント通知の概念  
  イベント通知が作成されると、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] のインスタンスと指定した対象サービスの間で、1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージ交換が開かれます。 メッセージ交換は通常、イベント通知がサーバー インスタンス上のオブジェクトとして存在する限り、開いたままになります。 一部のエラーでは、イベント通知が削除される前にメッセージ交換が終了する場合があります。 このようなメッセージ交換がイベント通知間で共有されることはありません。 イベント通知ごとに、独自の排他的なメッセージ交換が確立されます。 メッセージ交換を明示的に終了すると、対象のサービスがこれ以上メッセージを受信しなくなります。また、次回イベント通知が起動されてもメッセージ交換は再度開かれません。  
   
- イベント情報に配信される、[!INCLUDE[ssSB](../../includes/sssb-md.md)]サービス型の変数として`xml`イベントが発生したときに、情報、影響を受けるデータベース オブジェクトについての情報を提供する、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ ステートメント、およびその他の情報です。 イベント通知によって生成された XML スキーマの詳細については、「[EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)」を参照してください。  
+ イベント情報に配信される、[!INCLUDE[ssSB](../../includes/sssb-md.md)]サービス型の変数として`xml`、影響を受けるデータベース オブジェクトの情報、イベントの発生に関する情報を提供する、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ ステートメント、関連するその他の情報。 イベント通知によって生成された XML スキーマの詳細については、「[EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)」を参照してください。  
   
 ### <a name="event-notifications-vs-triggers"></a>イベント通知とトリガー  
  次の表では、トリガーとイベント通知の比較対照を示します。  
@@ -63,7 +62,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |トリガー|イベント通知|  
 |--------------|-------------------------|  
 |DML トリガーは DML (データ操作言語) イベントに応答します。 DDL トリガーは DDL (データ定義言語) イベントに応答します。|イベント通知は、DDL イベントと SQL トレース イベントのサブセットに応答します。|  
-|トリガーでは、Transact-SQL または CLR (共通言語ランタイム) マネージ コードを実行できます。|イベント通知ではコードは実行されません。 代わりに、送信`xml`Service Broker サービスへのメッセージ。|  
+|トリガーでは、Transact-SQL または CLR (共通言語ランタイム) マネージド コードを実行できます。|イベント通知ではコードは実行されません。 代わりに、送信`xml`Service Broker サービスへのメッセージ。|  
 |トリガーを起動させるトランザクションのスコープ内では、トリガーは同期的に処理されます。|イベント通知は非同期に処理され、イベント通知を発生させるトランザクションのスコープ内では実行されません。|  
 |トリガーのコンシューマーは、トリガーを起動させるイベントに緊密に結び付けられます。|イベント通知のコンシューマーは、イベント通知を起動させるイベントからは切り離されます。|  
 |トリガーは、ローカル サーバーで処理される必要があります。|イベント通知はリモート サーバーで処理できます。|  
@@ -71,7 +70,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |DML トリガー名はスキーマ スコープです。 DDL トリガー名は、データベースまたはサーバーによってスコープが設定されます。|イベント通知名は、サーバーまたはデータベースによってスコープが設定されます。 QUEUE_ACTIVATION イベントのイベント通知は、特定のキューにスコープが設定されます。|  
 |DML トリガーは、トリガーが適用されるテーブルと同じ所有者に所有されます。|キュー上のイベント通知の所有者は、イベント通知が適用されるオブジェクトとは所有者が異なる場合があります。|  
 |トリガーでは、EXECUTE AS 句がサポートされます。|イベント通知では、EXECUTE AS 句はサポートされません。|  
-|返すの EVENTDATA 関数を使用して、DDL トリガー イベント情報をキャプチャすることができます、`xml`データ型。|イベント通知を送信`xml`Service Broker サービスにイベント情報です。 情報は、EVENTDATA 関数と同じスキーマにフォーマットされます。|  
+|DDL トリガー イベント情報のキャプチャは、返す EVENTDATA 関数を使用して、`xml`データ型。|イベント通知を送信する`xml`イベント情報が Service Broker サービス。 情報は、EVENTDATA 関数と同じスキーマにフォーマットされます。|  
 |**sys.triggers** カタログ ビューと **sys.server_triggers** カタログ ビューに、トリガーに関するメタデータがあります。|**sys.event_notifications** カタログ ビューと **sys.server_event_notifications** カタログ ビューに、イベント通知に関するメタデータがあります。|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>イベント通知とSQL トレース (SQL Trace)  

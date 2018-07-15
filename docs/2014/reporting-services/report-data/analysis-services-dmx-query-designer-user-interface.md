@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 - sql12.rtp.rptdesigner.dataview.asquerydesigner.f1
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - query designers [DMX]
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 69ac2db218c6c33ae7477874e6817da77ce9d591
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d8b4d662cb54e827f8810695c4945f2eee25d327
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286708"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはグラフィカル クエリ デザイナーが用意されており、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データ ソースに対するデータ マイニング式 (DMX) クエリおよび多次元式 (MDX) クエリの作成に使用できます。 このトピックでは、DMX クエリ デザイナーについて説明します。 MDX クエリ デザイナーの詳細については、次を参照してください。 [Analysis Services MDX クエリ デザイナーのユーザー インターフェイス](analysis-services-mdx-query-designer-user-interface.md)です。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはグラフィカル クエリ デザイナーが用意されており、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データ ソースに対するデータ マイニング式 (DMX) クエリおよび多次元式 (MDX) クエリの作成に使用できます。 このトピックでは、DMX クエリ デザイナーについて説明します。 MDX クエリ デザイナーの詳細については、次を参照してください。 [Analysis Services MDX クエリ デザイナーのユーザー インターフェイス](analysis-services-mdx-query-designer-user-interface.md)します。  
   
  DMX のグラフィカル クエリ デザイナーには、デザイン モード、クエリ モード、結果モードという 3 つのモードがあります。 モードを切り替えるには、クエリ デザイン ペインで右クリックして、モードを選択します。 すべてのモードにはメタデータ ペインが表示され、選択したキューブからメンバーをドラッグすることによって DMX クエリを作成できます。レポートの処理時には、このクエリに基づいてデータが取得され、データセットに格納されます。  
   
@@ -90,10 +90,10 @@ ms.locfileid: "36072493"
 ## <a name="see-also"></a>参照  
  [Analysis Services の MDX クエリ デザイナーでパラメーターを定義&#40;レポート ビルダーおよび SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Analysis Services 接続の種類の DMX の&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Analysis Services 接続の種類の DMX のため&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [データ マイニング モデル &#40;DMX&#41; からデータを取得する &#40;SSRS&#41;](retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
  [RSReportDesigner 構成ファイル](../report-server/rsreportdesigner-configuration-file.md)   
  [Analysis Services の MDX のための接続の種類&#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
- [Analysis Services 接続の種類の DMX の&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Analysis Services 接続の種類の DMX のため&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
   
   

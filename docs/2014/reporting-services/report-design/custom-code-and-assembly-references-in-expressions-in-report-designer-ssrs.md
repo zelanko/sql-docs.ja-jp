@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
 - data [Reporting Services], expressions
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 76
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9a313408046919de0c3a07739792d36b88eafa4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6a239f80c3b560e60ca0b60b9a9fa7deb68a20a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220852"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)
   レポート内に埋め込まれたカスタム コードや、ビルドして自分のコンピューターに保存 (またはレポート サーバーに配置) したカスタム アセンブリは、レポート内から参照することができます。 カスタム定数、複雑な関数、または 1 レポート内で何度も使用される関数には、埋め込みコードを使用します。 コードを 1 か所で管理し、そのコードを複数のレポートで共有する場合は、カスタム コード アセンブリを使用します。 カスタム コードには、新しいカスタム定数、変数、関数、またはサブルーチンを含めることができます。 Parameters コレクションなど、組み込みコレクションへの読み取り専用の参照を含めることが可能です。 ただし、レポート データ値セットをカスタム関数に渡すことはできません。特に、カスタム集計はサポートされていません。  
@@ -71,7 +71,7 @@ ms.locfileid: "36178616"
 ##  <a name="Embedded"></a> 埋め込みコードの追加  
  埋め込みコードをレポートに追加するには、 **[レポートのプロパティ]** ダイアログ ボックスの [コード] タブを使用します。 作成したコード ブロックでは、複数のメソッドを使用できます。 埋め込みコード内のメソッドは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で記述されており、インスタンス ベースである必要があります。 レポート プロセッサは、System.Convert 名前空間および System.Math 名前空間の参照を自動的に追加します。 他のアセンブリ参照を追加するには、 **[レポートのプロパティ]** ダイアログ ボックスの **[参照]** ページを使用します。 詳細については、「[レポートにアセンブリへの参照を追加する (SSRS)](add-an-assembly-reference-to-a-report-ssrs.md)」を参照してください。  
   
- 埋め込みコード内のメソッドは、グローバルに定義されている `Code` メンバーを介して利用できます。 参照することで、これらにアクセスする、`Code`メンバーとメソッド名。 次の例は、メソッドを呼び出して`ToUSD`の値に変換、`StandardCost`フィールド値が米ドル単位に。  
+ 埋め込みコード内のメソッドは、グローバルに定義されている `Code` メンバーを介して利用できます。 参照することでこれらにアクセスする、`Code`メンバーとメソッド名。 次の例は、メソッドを呼び出して`ToUSD`の値を変換する、`StandardCost`フィールド値が米ドル単位に。  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
@@ -92,7 +92,7 @@ Public Dim  MyVersion As String = "123.456"
 Public Dim MyDoubleVersion As Double = 123.456  
 ```  
   
- **[式]** ダイアログ ボックスの **[定数]** カテゴリにはカスタム定数が表示されませんが (組み込み定数のみが表示されます)、次の例に示すように、任意の式からカスタム定数への参照を追加できます。 式では、カスタム定数として扱われます、`Variant`です。  
+ **[式]** ダイアログ ボックスの **[定数]** カテゴリにはカスタム定数が表示されませんが (組み込み定数のみが表示されます)、次の例に示すように、任意の式からカスタム定数への参照を追加できます。 式ではカスタム定数として扱われます、`Variant`します。  
   
 ```  
 =Code.MyNote  
@@ -101,11 +101,11 @@ Public Dim MyDoubleVersion As Double = 123.456
 =Code.MyDoubleVersion  
 ```  
   
- 次の例には、コード参照および関数のコードの実装の両方が含まれています`FixSpelling`、テキストを置換する`"Bicycle"`すべてのテキストの"bike"で、`SubCategory`フィールドです。  
+ 次の例には、コード参照および関数のコードの実装の両方が含まれています`FixSpelling`、テキストが置き換えられます`"Bicycle"`すべてテキストの"bike"で、`SubCategory`フィールド。  
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
- レポート定義コード ブロックに埋め込んで使用する次のコードは、`FixSpelling` メソッドの実装を示しています。 この例では、完全修飾参照を使用する、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `StringBuilder`クラスです。  
+ レポート定義コード ブロックに埋め込んで使用する次のコードは、`FixSpelling` メソッドの実装を示しています。 この例は、完全修飾参照を使用する方法を示します、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `StringBuilder`クラス。  
   
 ```vb  
 Public Function FixSpelling(ByVal s As String) As String  
@@ -121,7 +121,7 @@ End Function
  組み込みのオブジェクト コレクションと初期化の詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)」および「[カスタム アセンブリ オブジェクトの初期化](../custom-assemblies/initializing-custom-assembly-objects.md)」を参照してください。  
   
 ##  <a name="Parameters"></a> パラメーターへの参照の追加 (コード経由)  
- レポート定義のコード ブロックまたはユーザーが指定したカスタム アセンブリのカスタム コードを経由してグローバル パラメーター コレクションを参照できます。 パラメーター コレクションは読み取り専用で、パブリック反復子がありません。 使用することはできません、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `For Each`コレクションのステップ実行を構築します。 レポート定義内で定義されたパラメーターの名前をコード内で参照する前に、その名前を確認しておく必要があります。 ただし、複数の値を持つパラメーターのすべての値は、繰り返し処理することができます。  
+ レポート定義のコード ブロックまたはユーザーが指定したカスタム アセンブリのカスタム コードを経由してグローバル パラメーター コレクションを参照できます。 パラメーター コレクションは読み取り専用で、パブリック反復子がありません。 使用することはできません、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `For Each`コレクションのステップ実行を作成します。 レポート定義内で定義されたパラメーターの名前をコード内で参照する前に、その名前を確認しておく必要があります。 ただし、複数の値を持つパラメーターのすべての値は、繰り返し処理することができます。  
   
  次の表には、カスタム コードから組み込みコレクション `Parameters` を参照する例を示しています。  
   
@@ -133,15 +133,15 @@ End Function
 ##  <a name="Custom"></a> コードへの参照の追加 (カスタム アセンブリ経由)  
  レポートでカスタム アセンブリを使用するには、まずアセンブリを作成して、これをレポート デザイナーが利用できるようにし、アセンブリへの参照をレポートに追加してから、レポート内の式を使用してこのアセンブリ内のメソッドを参照します。 レポートがレポート サーバーに配置される場合は、カスタム アセンブリもレポート サーバーに配置する必要があります。  
   
- カスタム アセンブリを作成して、使用できるようにする方法について[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を参照してください[レポートでカスタム アセンブリを使用して](../custom-assemblies/using-custom-assemblies-with-reports.md)です。  
+ カスタム アセンブリを作成して、利用できるようにする方法について[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を参照してください[レポートでカスタム アセンブリを使用して](../custom-assemblies/using-custom-assemblies-with-reports.md)します。  
   
- 式の中でカスタム コードを参照するには、アセンブリ内のクラスのメンバーを呼び出す必要があります。 呼び出す方法は、メソッドが静的であるかインスタンス ベースであるかにより異なります。 カスタム アセンブリ内の静的メソッドは、レポート内でグローバルに利用できます。 静的メソッドには、名前空間、クラス、メソッド名を指定することによって、式からアクセスできます。 次の例は、メソッドを呼び出して`ToGBP`の値を変換する、 **StandardCost**値をドルからポンドに。  
+ 式の中でカスタム コードを参照するには、アセンブリ内のクラスのメンバーを呼び出す必要があります。 呼び出す方法は、メソッドが静的であるかインスタンス ベースであるかにより異なります。 カスタム アセンブリ内の静的メソッドは、レポート内でグローバルに利用できます。 静的メソッドには、名前空間、クラス、メソッド名を指定することによって、式からアクセスできます。 次の例は、メソッドを呼び出して`ToGBP`の値に変換、 **StandardCost**値をドルから英ポンドに換算に。  
   
 ```  
 =CurrencyConversion.DollarCurrencyConversion.ToGBP(Fields!StandardCost.Value)  
 ```  
   
- インスタンスベースのメソッドは、グローバルに定義されている `Code` メンバーを介して利用できます。 まず `Code` メンバーを参照し、続いてインスタンスとメソッド名を参照することで、これらのメソッドにアクセスできます。 次の例は、インスタンス メソッドを呼び出します`ToEUR`の値を変換する**StandardCost**をドル ユーロから。  
+ インスタンスベースのメソッドは、グローバルに定義されている `Code` メンバーを介して利用できます。 まず `Code` メンバーを参照し、続いてインスタンスとメソッド名を参照することで、これらのメソッドにアクセスできます。 次の例は、インスタンス メソッドを呼び出します`ToEUR`の値に変換**StandardCost**をドル ユーロから。  
   
 ```  
 =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  

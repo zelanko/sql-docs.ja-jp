@@ -1,5 +1,5 @@
 ---
-title: WMI プロバイダーを使用してサービスとネットワークの設定を管理する |Microsoft ドキュメント
+title: WMI プロバイダーを使用してサービスとネットワーク設定の管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,25 +17,25 @@ helpviewer_keywords:
 - monitoring [SMO]
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54c441653fd1116aa9061d143aa63ae353a43585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9f0f9c249ac1a494a3dd965386da7160dd373818
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280628"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>WMI プロバイダーを使用したサービスの管理とネットワーク設定
-  WMI プロバイダーが公開されているインターフェイスで使用される[!INCLUDE[msCoName](../../../includes/msconame-md.md)]を管理する管理コンソール (MMC)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスとネットワーク プロトコルです。 SMO では、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>オブジェクトは、WMI プロバイダーを表します。  
+  WMI プロバイダーが公開されたインターフェイスで使用される[!INCLUDE[msCoName](../../../includes/msconame-md.md)]を管理する管理コンソール (MMC)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスおよびネットワーク プロトコル。 SMO では、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>オブジェクトは、WMI プロバイダーを表します。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>で確立された接続とは独立して動作するオブジェクト、<xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクトのインスタンスに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、し、Windows 資格情報を使用して、WMI サービスに接続します。  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>で確立された接続とは独立して動作するオブジェクト、<xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクトのインスタンスに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、WMI サービスに接続する Windows 資格情報を使用します。  
   
 ## <a name="example"></a>例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- プログラムを使用する、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI プロバイダーを含める必要があります、 `Imports` WMI 名前空間を修飾するステートメント。 アプリケーションの宣言の前、かつ他の `Imports` ステートメントの後に、次のようにステートメントを挿入します。  
+ プログラムを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]含める必要があります、WMI プロバイダー、 `Imports` WMI 名前空間を修飾するステートメント。 アプリケーションの宣言の前、かつ他の `Imports` ステートメントの後に、次のようにステートメントを挿入します。  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

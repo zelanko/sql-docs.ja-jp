@@ -1,5 +1,5 @@
 ---
-title: ニューラル ネットワーク モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: ニューラル ネットワーク モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - output neurons [Analysis Services]
 - neural network algorithms [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d85b7b9ce95b0dc5a24ece14aa3a1e1203f49b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d90c182f664a6b89232a74da8d9ca5294dea465e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280458"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   このトピックでは、Microsoft ニューラル ネットワーク アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -43,7 +43,7 @@ ms.locfileid: "36164205"
   
 -   後続のノードには、それぞれ異なる *サブネットワーク* (NODE_TYPE = 17) が含まれています。 各サブネットワークには、そのサブネットワークの非表示層 (NODE_TYPE = 19) と出力層 (NODE_TYPE = 20) が常に含まれます。  
   
- ![ニューラル ネットワークのモデル コンテンツの構造体](../media/modelcontentstructure-nn.gif "ニューラル ネットワークのモデル コンテンツの構造")  
+ ![ニューラル ネットワーク モデルのコンテンツの構造](../media/modelcontentstructure-nn.gif "ニューラル ネットワーク モデルのコンテンツの構造")  
   
  入力層の情報は簡単です。各入力層の最初のノード (NODE_TYPE = 18) は、入力ノード (NODE_TYPE = 21) のコレクションのオーガナイザーの役割を果たします。 次の表では、入力ノードの内容について説明します。  
   

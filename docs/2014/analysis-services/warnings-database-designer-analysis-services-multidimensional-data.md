@@ -1,5 +1,5 @@
 ---
-title: 警告 (データベース デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: 警告 (データベース デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.warnings.f1
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e00890be8fac0fb97f0887034d5c7b04c049ebd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44fddc4c62bc9d0fddc71cf2b4249c3fab8d0d68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233852"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>[警告] (データベース デザイナー) (Analysis Services - 多次元データ)
   **[警告]** タブを使用すると、ルールをグローバルに表示および消去したり、消去された警告の特定のインスタンスを表示して再度有効にしたりできます。 **[警告]** タブには、 **[デザイン警告ルール]** および **[消去された警告]** という 2 つのグリッドが表示されます。  
@@ -37,7 +37,7 @@ ms.locfileid: "36084160"
   
  **[デザイン警告ルール]** グリッドには、次の列があります。  
   
- **description**  
+ **[説明]**  
  ルールの名前が表示されます。 ルールはカテゴリ別にグループ化されています。  
   
  **重要度**  
@@ -54,10 +54,10 @@ ms.locfileid: "36084160"
  **Object**  
  オブジェクトの種類とオブジェクト名を表すアイコンが表示されます。  
   
- **Type**  
+ **型**  
  オブジェクトの種類が表示されます。  
   
- **description**  
+ **[説明]**  
  ルールの名前が表示されます。  
   
  **重要度**  

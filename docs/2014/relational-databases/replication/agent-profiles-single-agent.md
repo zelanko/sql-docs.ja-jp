@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.perfprofileagentname.f1
 helpviewer_keywords:
 - Agent Profile dialog box
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ca8f1684e7f6c6ea369292c7ca8ce259196afe7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 33d8a5564d6153a48da93da9b9a89ec3892a25a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284958"
 ---
 # <a name="agent-profiles-single-agent"></a>[エージェント プロファイル]\(単独のエージェント)
   **[エージェント プロファイル]** ダイアログ ボックスを使用すると、エージェントのプロファイルを管理できます。 エージェント プロファイルを利用すると、各エージェントの実行時パラメーターを容易に管理できます。 それぞれのエージェントは既定のプロファイルを持ちます。一部のエージェントには、追加の定義済みプロファイルが用意されています。 たとえば、マージ エージェントには、低帯域幅接続の "低速リンク" プロファイルが用意されています。 ほとんどのアプリケーションでは定義済みのプロファイルで十分ですが、ユーザー定義プロファイルを作成して、エージェントの動作をカスタマイズすることもできます。  
@@ -32,10 +32,10 @@ ms.locfileid: "36176163"
  **[新規の既定]**  
  特定の種類のエージェントに対してジョブを作成するときに使用するプロファイルを選択します。 たとえば、マージ パブリケーションに対していくつかのサブスクリプションを作成する場合、選択されたプロファイルが各サブスクリプションのマージ エージェント ジョブで使用されます。 既存のジョブのプロファイルを変更するには、プロファイルを選択し、 **[既存のエージェントの変更]** をクリックします。  
   
- **Name**  
+ **名前**  
  プロファイルの名前。  
   
- **Type**  
+ **型**  
  プロファイルの種類です。 **[ユーザー]** \(ユーザー定義) または **[システム]** (定義済み) を選択します。  
   
  **[プロパティ] (...)**  
@@ -44,7 +44,7 @@ ms.locfileid: "36176163"
  **[新規作成]**  
  クリックすると、新しいプロファイルを作成できます。  
   
- **Delete**  
+ **削除**  
  ユーザー定義プロファイルを削除するには、プロファイルを選択し、 **[削除]** をクリックします。 定義済みのプロファイルは削除できません。  
   
  **[既存のエージェントの変更]**  

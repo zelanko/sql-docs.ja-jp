@@ -1,5 +1,5 @@
 ---
-title: AggregationDesignAttribute データ型 (ASSL) |Microsoft ドキュメント
+title: AggregationDesignAttribute データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationDesignAttribute data type
 ms.assetid: 03d29d76-e4bd-4035-92cc-35149d83fbf9
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6d65f5cbd6173218b4d33448ec442002290aad6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d723011d0342923e4020ab8655f45abb9a764396
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188919"
 ---
 # <a name="aggregationdesignattribute-data-type-assl"></a>AggregationDesignAttribute データ型 (ASSL)
-  属性の間の関連付けを表すプリミティブ データ型を定義し、 [AggregationDesignDimension](dimension-data-type-assl.md)要素。  
+  属性間の関連付けを表すプリミティブ データ型を定義し、 [AggregationDesignDimension](dimension-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

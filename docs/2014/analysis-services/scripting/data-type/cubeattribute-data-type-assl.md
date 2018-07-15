@@ -1,5 +1,5 @@
 ---
-title: CubeAttribute データ型 (ASSL) |Microsoft ドキュメント
+title: CubeAttribute データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeAttribute data type
 ms.assetid: 114ffb44-460b-4971-b31b-dd844e960b81
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dce594145db99d7edfa991c2e975f62e55d3ef34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1df72c234fe7835d739e2b1835b01041aa9cbe6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319352"
 ---
 # <a name="cubeattribute-data-type-assl"></a>CubeAttribute データ型 (ASSL)
   関連付けられている属性を表すプリミティブ データ型を定義、[キューブ](../objects/cube-element-assl.md)要素。  
@@ -65,11 +65,11 @@ ms.locfileid: "36077415"
 |派生要素|[属性](../objects/attribute-element-assl.md)([属性](../collections/attributes-element-assl.md)のコレクション[CubeDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>コメント  
- *AttributeHierarchyOptimizedState* DeploymentMode 構成プロパティの値を 1 または 2 (SharePoint モードまたは表形式モード、PowerPivot とテーブル モデル データベースを実行するために使用) でサービスを実行するときに、要素がサポートされていません。  
+ *AttributeHierarchyOptimizedState* DeploymentMode 構成プロパティの値 1 または 2 (SharePoint モードまたは表形式モード、PowerPivot とテーブル モデル データベースを実行するために使用) でサービスを実行するときに、要素がサポートされていません。  
   
- 階層のレベルとして属性を追加することはできませんとプロパティは、 *AtttributeHierarchyEnabled*FALSE に設定されている DeploymentMode 1 または 2 (SharePoint モードまたは表形式サーバー モード) インスタンスが動作しています。  
+ 階層のレベルとして属性を追加することはできませんと、プロパティ*AtttributeHierarchyEnabled*FALSE に設定されている DeploymentMode 1 または 2 (SharePoint または表形式サーバー モード) インスタンスが動作しているとします。  
   
- 属性で、 [CubeDimension](dimension-data-type-assl.md)要素で明示的に含まれていない、[属性](../collections/attributes-element-assl.md)に割り当てられる既定値を使用して、コレクションの一部をコレクションになります。 属性によって返される属性をコレクションに追加したら、 [Discover](../../xmla/xml-elements-methods-discover.md)メソッドです。  
+ 属性、 [CubeDimension](dimension-data-type-assl.md)要素に明示的に含まれていない、[属性](../collections/attributes-element-assl.md)割り当てられている既定値を持つコレクションの一部をコレクションになります。 によって返される属性、属性を追加するコレクションの後、 [Discover](../../xmla/xml-elements-methods-discover.md)メソッド。  
   
  [AggregationUsage](../properties/aggregationusage-element-assl.md)要素コントロール方法[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]自動的に、属性の集計をデザインします。 `AggregationUsage` 要素では、キューブに対して手動で作成する集計が制限されません。  
   

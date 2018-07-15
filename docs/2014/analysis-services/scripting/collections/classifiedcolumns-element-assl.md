@@ -1,5 +1,5 @@
 ---
-title: ClassifiedColumns 要素 (ASSL) |Microsoft ドキュメント
+title: ClassifiedColumns 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ClassifiedColumns element
 ms.assetid: f16b4f51-c38d-4601-98b8-1497dbf12d02
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 95c00f4863223caaacfb7cc7554ec9b48a82922d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38436c97f74adef2af6d5645aea6547682740894
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286048"
 ---
 # <a name="classifiedcolumns-element-assl"></a>ClassifiedColumns 要素 (ASSL)
-  によって分類される関連列のコレクションを格納、 [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)要素。  
+  により分類される関連列のコレクションを格納、 [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

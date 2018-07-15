@@ -1,5 +1,5 @@
 ---
-title: CLR を使用したラージ オブジェクトの処理 |Microsoft ドキュメント
+title: CLR を使用したラージ オブジェクトの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3cb48a2c342d24bd4d7df12dc3fd7759ffb06e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9408351a786192be62ca9c7c5e0cd8305effc3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310352"
 ---
 # <a name="handling-large-objects-using-clr"></a>CLR を使用したラージ オブジェクトの処理
   SQL Server の `HandlingLOBUsingCLR` サンプルでは、共通言語ランタイム (CLR) ストアド プロシージャを使用して、サーバーで使用可能なファイル システムと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間でラージ オブジェクト (LOB) を転送する方法を示します。 このサンプルでは、サーバー側コード内のファイルへのアクセス方法を示し、CLR ベースのストアド プロシージャから動的クエリとストアド プロシージャの両方を呼び出します。 また、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用した、CLR メソッドとアセンブリの登録解除と登録を行う方法も示します。  
@@ -53,7 +53,7 @@ ms.locfileid: "36083251"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要があります`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -578,7 +578,7 @@ END  -- END of sp_InsertDocument
 GO  
 ```  
   
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)](`test.sql`) ストアド プロシージャを実行することによって、例をテストします。  
+ 次[!INCLUDE[tsql](../../includes/tsql-md.md)](`test.sql`) ストアド プロシージャを使用することにより、例をテストします。  
   
 ```  
 USE AdventureWorks  

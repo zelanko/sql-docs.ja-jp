@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG024070 error
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 583603105c6c5ce4a7c24dc09ef50b56ccf77173
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c1d2141f51c0434fb0c03dee6c1a07875b8150f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305412"
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
     
@@ -39,7 +39,7 @@ ms.locfileid: "36174734"
 ## <a name="explanation"></a>説明  
  このエラーは、レプリケーションが使用されたかどうかにかかわらず発生する一般エラーです。 一般に、レプリケーション トポロジ内のサーバーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーではなく [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows サービス コントロール マネージャーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントが変更された場合に、このエラーが発生します。 サービス アカウントの変更後にエージェント ジョブを実行しようとすると、次のようなエラー メッセージが表示されてジョブが失敗する場合があります。  
   
- "ユーザーとして実行: \<UserAccount >。 レプリケーション-レプリケーション スナップショット サブシステム: エージェント\<AgentName > できませんでした。 ユーザーとして実行: \<UserAccount >。 クライアントには必要な特権がありません。 ステップは失敗しました。 `[SQLSTATE 42000] (Error 14151)`。 ステップは失敗しました。"  
+ "ユーザーとして実行: \<UserAccount >。 レプリケーション-レプリケーション スナップショット サブシステム: エージェント\<AgentName > が失敗しました。 ユーザーとして実行: \<UserAccount >。 クライアントには必要な特権がありません。 ステップは失敗しました。 `[SQLSTATE 42000] (Error 14151)`。 ステップは失敗しました。"  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの新しいサービス アカウントに必要な権限を Windows サービス コントロール マネージャーが付与できないので、この問題が発生します。  
   

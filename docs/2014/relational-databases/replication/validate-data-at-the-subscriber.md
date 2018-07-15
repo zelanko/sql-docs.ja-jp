@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Subscribers [SQL Server replication], data validation
 - replication [SQL Server], validating data
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - merge replication data validation [SQL Server replication], SQL Server Management Studio
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 399bf86dc105495c3c1d16721e669fa8e3ed622f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d900cb88e99963fd57c7192d0f2934312434bc37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282988"
 ---
 # <a name="validate-data-at-the-subscriber"></a>サブスクライバーでのデータの検証
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、サブスクライバーでデータを検証する方法について説明します。  
@@ -316,7 +316,7 @@ ms.locfileid: "36165227"
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定します。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに、手順 1. の接続を設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーション プロパティの定義が正しくなかったか、パブリケーションが存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> メソッドを呼び出します。 次のパラメーターを指定します。  
   
@@ -336,7 +336,7 @@ ms.locfileid: "36165227"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定します。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに、手順 1. の接続を設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーション プロパティの定義が正しくなかったか、パブリケーションが存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> メソッドを呼び出します。 必要な <xref:Microsoft.SqlServer.Replication.ValidationOption>を指定します。  
   
@@ -348,7 +348,7 @@ ms.locfileid: "36165227"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定します。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに、手順 1. の接続を設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーション プロパティの定義が正しくなかったか、パブリケーションが存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> メソッドを呼び出します。 サブスクライバーの名前、検証対象のサブスクリプション データベース、および、必要な <xref:Microsoft.SqlServer.Replication.ValidationOption>を指定します。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server のプロパティ ([AlwaysOn 高可用性] タブ) |Microsoft ドキュメント
+title: SQL Server のプロパティ ([AlwaysOn 高可用性] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 caps.latest.revision: 12
-author: MikeRayMSFT
+author: mikeraymsft
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c19735c4cdae900f9d9d05b911e37224a31ddf96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24f1a371cf69c825d9ec251fa4271c5c8d596210
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303162"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>SQL Server のプロパティ ([AlwaysOn 高可用性] タブ)
   **構成マネージャーの** [SQL Server のプロパティ] **ダイアログ ボックスの** [AlwaysOn 高可用性] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] タブを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の AlwaysOn 可用性グループを有効または無効にします。 AlwaysOn 可用性グループの有効化は、高可用性およびディザスター リカバリー ソリューションとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが可用性グループを使用するための前提条件です。  

@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b665facc060663abe56d65f88b38288d9ca6ea7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: a94da30fb0e52fdf75b58c1139b8d32a2fe80aa8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320792"
 ---
 # <a name="dtexec-utility"></a>dtexec ユーティリティ
-  `dtexec`コマンド プロンプト ユーティリティを使用して構成および実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージです。 `dtexec` ユーティリティを使用すると、パラメーター、接続、プロパティ、変数、ログ記録、進行状況インジケーターなど、パッケージの構成と実行に関するすべての機能にアクセスできます。 `dtexec`ユーティリティでは、これらのソースからパッケージを読み込むことができます。[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー、.ispac プロジェクト ファイルでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージ ストア、およびファイル システム。  
+  `dtexec`コマンド プロンプト ユーティリティを使用して、構成および実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージ。 `dtexec` ユーティリティを使用すると、パラメーター、接続、プロパティ、変数、ログ記録、進行状況インジケーターなど、パッケージの構成と実行に関するすべての機能にアクセスできます。 `dtexec`ユーティリティでは、これらのソースからパッケージを読み込むことができます。[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー、.ispac プロジェクト ファイルを[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データベース、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージ ストア、およびファイル システム。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] に付属するバージョンの `dtexec` ユーティリティを使用して [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] パッケージまたは [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] パッケージを実行すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によってパッケージが一時的に [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] にアップグレードされます。 ただし、`dtexec` ユーティリティを使用して、このようなアップグレードによる変更を保存することはできません。 パッケージを完全にアップグレードする方法の詳細についての[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]を参照してください[Integration Services パッケージのアップグレード](../install-windows/upgrade-integration-services-packages.md)です。  
+>  [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] に付属するバージョンの `dtexec` ユーティリティを使用して [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] パッケージまたは [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] パッケージを実行すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によってパッケージが一時的に [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] にアップグレードされます。 ただし、`dtexec` ユーティリティを使用して、このようなアップグレードによる変更を保存することはできません。 詳細については、パッケージを完全にアップグレードする方法についての[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]を参照してください[Integration Services パッケージのアップグレード](../install-windows/upgrade-integration-services-packages.md)します。  
   
  このトピックのセクションは次のとおりです。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36174986"
 -   [使用例](#example)  
   
 ##  <a name="server"></a> Integration Services サーバーとプロジェクト ファイル  
- 使用すると`dtexec`でパッケージを実行、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー、`dtexec`呼び出し、 [catalog.create_execution &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database)、 [catalog.set_execution_parameter_値&#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)と[catalog.start_execution &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) 、実行を作成するストアド プロシージャがパラメーター値を設定し、開始します実行します。 すべての実行ログは、関連するビューでサーバーから確認できます。また、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で利用可能な標準レポートを使用して確認することもできます。 レポートの詳細については、「 [Integration Services サーバーのレポート](../reports-for-the-integration-services-server.md)」を参照してください。  
+ 使用すると`dtexec`パッケージで実行する、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー`dtexec`呼び出し、 [catalog.create_execution &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database)、 [catalog.set_execution_parameter_値&#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)と[catalog.start_execution &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) 、実行を作成するストアド プロシージャは、パラメーター値を設定し、開始します実行します。 すべての実行ログは、関連するビューでサーバーから確認できます。また、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で利用可能な標準レポートを使用して確認することもできます。 レポートの詳細については、「 [Integration Services サーバーのレポート](../reports-for-the-integration-services-server.md)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでのパッケージの実行例を次に示します。  
   
@@ -62,12 +62,12 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  `dtexec` を使用して .ispac プロジェクト ファイルからパッケージを実行する場合の関連オプションは、/Proj[ect] と /Pack[age] です。これらは、プロジェクトのパスとパッケージのストリーム名を指定するために使用されます。 **から** Integration Services プロジェクト変換ウィザード [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を実行してプロジェクトをプロジェクト配置モデルに変換する場合、ウィザードは .ispac プロジェクト ファイルを生成します。 詳細については、「 [Integration Services サーバーへのプロジェクトの配置](../deploy-projects-to-integration-services-server.md)」を参照してください。  
   
- 使用することができます`dtexec`サードパーティのスケジューリングに配置されているパッケージのスケジュールを設定するツール、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー。  
+ 使用することができます`dtexec`とサードパーティのスケジューリングに配置されているパッケージをスケジュールするツール、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー。  
   
 ##  <a name="bit"></a> 64 ビット コンピューターでのインストールに関する注意点  
  64 ビット コンピューターには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって 64 ビット版の `dtexec` ユーティリティ (dtexec.exe) がインストールされます。 特定のパッケージを 32 ビット モードで実行する必要がある場合は、32 ビット版の `dtexec` ユーティリティをインストールする必要があります。 32 ビット版の `dtexec` ユーティリティをインストールするには、セットアップ中に [クライアント ツール] または [[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]] を選択する必要があります。  
   
- 既定では、64 ビットと 32 ビットの両方のバージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コマンド プロンプト ユーティリティがインストールされている 64 ビット コンピューターでは、コマンド プロンプトで 32 ビット バージョンが実行されます。 これは、PATH 環境変数で、32 ビット バージョンのディレクトリ パスが 64 ビット バージョンのディレクトリ パスより前に配置されているためです (通常、32 ビットのディレクトリ パスは *\<ドライブ>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn で、64 ビットのディレクトリ パスは *\<ドライブ>*:\Program Files\Microsoft SQL Server\110\DTS\Binn です)。  
+ 既定では、64 ビットと 32 ビットの両方のバージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コマンド プロンプト ユーティリティがインストールされている 64 ビット コンピューターでは、コマンド プロンプトで 32 ビット バージョンが実行されます。 これは、PATH 環境変数で、32 ビット バージョンのディレクトリ パスが 64 ビット バージョンのディレクトリ パスより前に配置されているためです  (通常、32 ビットのディレクトリ パスは *\<ドライブ>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn で、64 ビットのディレクトリ パスは *\<ドライブ>*:\Program Files\Microsoft SQL Server\110\DTS\Binn です)。  
   
 > [!NOTE]  
 >  SQL Server エージェントを使用してユーティリティを実行する場合は、SQL Server エージェントによって 64 ビット バージョンのユーティリティが自動的に使用されます。 SQL Server エージェントでは、PATH 環境変数ではなくレジストリを使用してユーティリティの適切な実行可能ファイルが特定されます。  
@@ -88,7 +88,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="phases"></a> 実行のフェーズ  
  このユーティリティの実行には、4 つのフェーズがあります。 それらのフェーズを次に示します。  
   
-1.  コマンド初期フェーズ: コマンド プロンプトによって、指定されたオプションおよび引数のリストが読み取られます。 **/?** オプション または **/HELP** オプションが指定されている場合、後続のフェーズはすべてスキップされます。  
+1.  コマンド初期フェーズ: コマンド プロンプトによって、指定されたオプションおよび引数のリストが読み取られます。  **/?** オプション または **/HELP** オプションが指定されている場合、後続のフェーズはすべてスキップされます。  
   
 2.  パッケージ読み込みフェーズ: によって指定されたパッケージ、 `/SQL`、 **/file**、または`/DTS`オプションが読み込まれます。  
   
@@ -162,9 +162,9 @@ dtexec /option [value] [/option [value]]...
                   任意。 パッケージ実行の追加情報を指定します。 SQL Server エージェントを使用してパッケージを実行する場合、エージェントはこの引数を設定して、パッケージ実行が SQL Server エージェントによって呼び出されることを示します。 `dtexec` ユーティリティがコマンド ラインから実行される場合、このパラメーターは無視されます。  
   
 -   **/Checkf [ile]** *filespec*:   
-                  任意。 セット、`CheckpointFileName`でパスとファイルの指定にパッケージのプロパティ*filespec*です。 このファイルは、パッケージが再起動されたときに使用されます。 このオプションが指定されていて、ファイル名の値が指定されていない場合、パッケージの `CheckpointFileName` には空の文字列が設定されます。 このオプションが指定されない場合、パッケージの値は保持されます。  
+                  任意。 セット、`CheckpointFileName`プロパティのパスとファイルの指定にパッケージの*filespec*します。 このファイルは、パッケージが再起動されたときに使用されます。 このオプションが指定されていて、ファイル名の値が指定されていない場合、パッケージの `CheckpointFileName` には空の文字列が設定されます。 このオプションが指定されない場合、パッケージの値は保持されます。  
   
--   **/Checkp [ointing]** *{on\off}*:   
+-   **/Checkp [ointing]** *{on \off}*:   
                   任意。 パッケージの実行時にパッケージがチェックポイントを使用するかどうかを決定する値を設定します。 値 **on** を指定すると、失敗したパッケージが再実行されます。 失敗したパッケージが再実行される場合、ランタイム エンジンは、障害点からパッケージを再起動するためにチェックポイント ファイルを使用します。  
   
      オプションが値なしで宣言されている場合、既定値は on です。 値が on に設定されていて、チェックポイント ファイルが見つからない場合、パッケージの実行は失敗します。 このオプションが指定されない場合、パッケージの値セットは保持されます。 詳細については、「 [チェックポイントを使用してパッケージを再開する](restart-packages-by-using-checkpoints.md)」を参照してください。  
@@ -178,17 +178,17 @@ dtexec /option [value] [/option [value]]...
   
      **/ConfigFile** オプションを使用すると、デザイン時に指定しなかった追加の構成を実行時に読み込むことができますが、 **/ConfigFile** オプションを使用しても、デザイン時に指定した構成値を置き換えることはできません。 パッケージ構成が適用されるしくみについては、「 [Package Configurations](../package-configurations.md)」を参照してください。  
   
--   **/Conn [ection]** *id_or_name; connection_string [; id_or_name; connection_string]...]*:   
+-   **/Conn [ection]** *id_or_name; connection_string [; id_or_name; connection_string]…]*:   
                   任意。 指定した名前または GUID の接続マネージャーがパッケージ内にあり、接続文字列が指定されていることを示します。  
   
      このオプションでは、接続マネージャーの名前または GUID を指定する *id_or_name* 引数と、有効な接続文字列を指定する *connection_string* 引数の両方のパラメーターが必須です。 詳細については、「[Integration Services (SSIS) の接続](../connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
-     実行時に **/Connection** オプションを使用すると、デザイン時に指定した場所とは別の場所からパッケージ構成を読み込むことができます。 デザイン時に指定した値は、それらの構成の値で置き換えられます。 ただし、 **/Connection** オプションを使用できるのは、接続マネージャーを使用する構成 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成など) だけです。 パッケージの構成を適用する方法を理解するのを参照してください。[パッケージ構成](../package-configurations.md)と[SQL Server 2014 Integration Services 機能の動作変更](../behavior-changes-to-integration-services-features-in-sql-server-2014.md)です。  
+     実行時に **/Connection** オプションを使用すると、デザイン時に指定した場所とは別の場所からパッケージ構成を読み込むことができます。 デザイン時に指定した値は、それらの構成の値で置き換えられます。 ただし、 **/Connection** オプションを使用できるのは、接続マネージャーを使用する構成 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成など) だけです。 パッケージの構成を適用する方法については、次を参照してください。[パッケージ構成](../package-configurations.md)と[SQL Server 2014 Integration Services 機能の動作の変更](../behavior-changes-to-integration-services-features-in-sql-server-2014.md)します。  
   
 -   **/Cons [oleLog]** [*displayoptions*]; [*list_options*;*src_name_or_guid*]...]: 省略可能です。 パッケージの実行中に、指定されたログ エントリをコンソールに表示します。 このオプションを省略した場合、ログ エントリはコンソールに表示されません。 表示を制限するパラメーターなしでオプションが指定された場合、すべてのログ エントリが表示されます。 コンソールに表示されるエントリを制限するには、 *displayoptions* パラメーターを使用して表示する列を指定し、 *list_options* パラメーターを使用してログ エントリの種類を制限します。  
   
     > [!NOTE]  
-    >  パッケージを実行すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバーを使用して、`/ISSERVER`パラメーター、コンソール出力が制限されほとんどの **/cons [oleLog]** オプションは適用されません。 すべての実行ログは、関連するビューでサーバーから確認できます。また、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で利用可能な標準レポートを使用して確認することもできます。 レポートの詳細については、「 [Integration Services サーバーのレポート](../reports-for-the-integration-services-server.md)」を参照してください。  
+    >  パッケージを実行すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバーを使用して、`/ISSERVER`パラメーター、コンソール出力が制限され大部分、 **/cons [oleLog]** オプションは適用されません。 すべての実行ログは、関連するビューでサーバーから確認できます。また、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で利用可能な標準レポートを使用して確認することもできます。 レポートの詳細については、「 [Integration Services サーバーのレポート](../reports-for-the-integration-services-server.md)」を参照してください。  
   
      *displayoptions* の値は次のとおりです。  
   
@@ -224,10 +224,10 @@ dtexec /option [value] [/option [value]]...
   
     -   包含一覧がコマンド ラインに指定されている場合、すべての包含一覧の集合に対して除外一覧が適用されます。  
   
-     例については、 **/ConsoleLog**オプションを参照してください、**解説**セクションです。  
+     例については、 **/ConsoleLog**オプションを参照してください、**解説**セクション。  
   
 -   **/D [ts]** *package_path*:   
-                  任意。 SSIS パッケージ ストアからパッケージを読み込みます。 SSIS パッケージ ストアに格納されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 配置されているパッケージを実行する、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用して、プロジェクト配置モデルを使用してサーバーを`/ISServer`オプション。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+                  任意。 SSIS パッケージ ストアからパッケージを読み込みます。 SSIS パッケージ ストアに格納されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 配置されているパッケージを実行する、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]プロジェクト配置モデルを使用してを使用してサーバーを`/ISServer`オプション。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
      *package_path* 引数には、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの相対パスを指定します。このパスは SSIS パッケージ ストアのルートから始まり、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの名前を含むパスです。 *package_path* 引数に指定するパスまたはファイル名に空白文字を含める場合は、 *package_path* 引数を引用符で囲む必要があります。  
   
@@ -236,7 +236,7 @@ dtexec /option [value] [/option [value]]...
 -   **/De [crypt]***パスワード*: 省略可能です。   パスワードが暗号化されているパッケージを読み込むときに使用する暗号化解除用パスワードを設定します。  
   
 -   **/Dump** *エラー コード*:  
-                  省略可能なダンプを作成、デバッグ ファイル、.mdmp および .tmp、パッケージの実行中に、1 つまたは複数の指定したイベントが発生したとき。 *error code* 引数では、システムによるデバッグ ダンプ ファイル作成のトリガーとなるイベント コードの種類 (エラー、警告、または情報) を指定します。 イベント コードを複数指定するには、各 *error code* 引数をセミコロン (;) で区切ります。 *error code* 引数に引用符を含めないでください。  
+                  省略可能なデバッグ ダンプを作成しますファイル、.mdmp および .tmp、パッケージの実行中に、1 つまたは複数の指定したイベントが発生したとき。 *error code* 引数では、システムによるデバッグ ダンプ ファイル作成のトリガーとなるイベント コードの種類 (エラー、警告、または情報) を指定します。 イベント コードを複数指定するには、各 *error code* 引数をセミコロン (;) で区切ります。 *error code* 引数に引用符を含めないでください。  
   
      次の例では、DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER のエラーが発生したときにデバッグ ダンプ ファイルが生成されます。  
   
@@ -244,12 +244,12 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     既定では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]フォルダーで、デバッグ ダンプ ファイルを格納*\<ドライブ >*: \Program Files\Microsoft SQL server \110\shared\errordumps です。  
+     既定では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]フォルダーで、デバッグ ダンプ ファイルを格納*\<ドライブ >*: SQL server \110\shared\errordumps \Program Files\Microsoft します。  
   
     > [!NOTE]  
     >  デバッグ ダンプ ファイルには機密情報が含まれている場合があります。 アクセス制御リスト (ACL) を使用してファイルへのアクセスを制限するか、アクセスが制限されたフォルダーにファイルをコピーしてください。 たとえば、デバッグ ファイルを Microsoft サポート サービスに送信する前には、機密性の高い情報をすべて削除することをお勧めします。  
   
-     パッケージには、このオプションをすべてに適用する、`dtexec`ユーティリティで実行を追加、 **DumpOnCodes** hkey_local_machine \software\microsoft\microsoft SQL server \110\ssis\setup\dtspath レジストリ キーに REG_SZ 値。 **DumpOnCodes** のデータ値では、システムによるデバッグ ダンプ ファイル作成のトリガーとなるエラー コードを指定します。 複数のエラー コードは、セミコロン (;) で区切る必要があります。  
+     パッケージにこのオプションをすべてに適用する、`dtexec`ユーティリティで実行、追加、 **DumpOnCodes** hkey_local_machine \software\microsoft\microsoft SQL server \110\ssis\setup\dtspath のレジストリ キーに REG_SZ 値。 **DumpOnCodes** のデータ値では、システムによるデバッグ ダンプ ファイル作成のトリガーとなるエラー コードを指定します。 複数のエラー コードは、セミコロン (;) で区切る必要があります。  
   
      **DumpOnCodes** 値をレジストリ キーに追加し、 **/Dump** オプションも使用した場合、両方の設定に基づくデバッグ ダンプ ファイルが作成されます。  
   
@@ -263,11 +263,11 @@ dtexec /option [value] [/option [value]]...
     > [!NOTE]  
     >  デバッグ ダンプ ファイルには機密情報が含まれている場合があります。 アクセス制御リスト (ACL) を使用してファイルへのアクセスを制限するか、アクセスが制限されたフォルダーにファイルをコピーしてください。 たとえば、デバッグ ファイルを Microsoft サポート サービスに送信する前には、機密性の高い情報をすべて削除することをお勧めします。  
   
-     パッケージには、このオプションをすべてに適用する、`dtexec`ユーティリティで実行を追加、 **DumpOnError** REG_DWORD 値を hkey_local_machine \software\microsoft\microsoft SQL server \110\ssis\setup\dtspath レジストリ キー。 値、 **DumpOnError** REG_DWORD 値を決定するかどうか、 **/DumpOnError**オプションで使用する必要があります、`dtexec`ユーティリティ。  
+     パッケージにこのオプションをすべてに適用する、`dtexec`ユーティリティで実行、追加、 **DumpOnError** REG_DWORD 値を hkey_local_machine \software\microsoft\microsoft SQL server \110\ssis\setup\dtspath レジストリ キー。 値、 **DumpOnError** REG_DWORD 値を決定するかどうか、 **/DumpOnError**オプションで使用する必要がある、`dtexec`ユーティリティ。  
   
-    -   ゼロ以外のデータ値は、使用するかどうかにかかわらず、エラーが発生したときに、システムがデバッグ ダンプ ファイルを作成することを示します、 **/DumpOnError**オプションは、`dtexec`ユーティリティです。  
+    -   0 以外のデータ値は、使用するかどうかにかかわらず、エラーが発生したときに、システムがデバッグ ダンプ ファイルを作成することを示します、 **/DumpOnError**オプションは、`dtexec`ユーティリティ。  
   
-    -   ゼロのデータ値があるシステム ファイルは作成されません、デバッグ ダンプを使用する場合を除きを示す、 **/DumpOnError**オプションは、`dtexec`ユーティリティです。  
+    -   ゼロのデータ値を示すことは作成されません、デバッグ ダンプ ファイルを使用しない限り、 **/DumpOnError**オプションは、`dtexec`ユーティリティ。  
   
      デバッグ ダンプ ファイルの詳細については、「 [Generating Dump Files for Package Execution](../troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。  
   
@@ -279,7 +279,7 @@ dtexec /option [value] [/option [value]]...
      このパラメーターは SQL Server エージェントによって使用されます。  
   
 -   **/F [ile]** *filespec*:   
-                  任意。 ファイル システムに保存されているパッケージを読み込みます。 ファイル システムに保存されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 配置されているパッケージを実行する、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用して、プロジェクト配置モデルを使用してサーバーを`/ISServer`オプション。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+                  任意。 ファイル システムに保存されているパッケージを読み込みます。 ファイル システムに保存されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 配置されているパッケージを実行する、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]プロジェクト配置モデルを使用してを使用してサーバーを`/ISServer`オプション。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
      *filespec* 引数には、パッケージのパスとファイル名を指定します。 汎用名前付け規則 (UNC) 形式のパス、またはローカル パスのどちらかでパスを指定できます。 *filespec* 引数に指定するパスまたはファイル名に空白文字を含める場合は、 *filespec* 引数を引用符で囲む必要があります。  
   
@@ -399,7 +399,7 @@ dtexec /option [value] [/option [value]]...
   
      **V** 詳細がレポートされます。  
   
-     V および N の引数は、他のすべての引数と同時には使用できないため、単独で指定する必要があります。 場合、 **]、[Reporting**既定のレベルは、オプションが指定されていない`E`(エラー)、 **W** (警告)、および**P** (進行状況)。  
+     V および N の引数は、他のすべての引数と同時には使用できないため、単独で指定する必要があります。 場合、 **]、[Reporting** 、既定のレベルは、オプションが指定されていない`E`(エラー)、 **W** (警告)、および**P** (進行状況)。  
   
      すべてのイベントの先頭には、"YY/MM/DD HH:MM:SS" の形式のタイムスタンプが付きます。また使用可能な場合は、GUID または表示名も付加されます。  
   
@@ -407,7 +407,7 @@ dtexec /option [value] [/option [value]]...
   
      既定でログに記録されないイベントは、除外する必要はありません。  
   
--   **/Res [tart]** {*拒否 | 強制 | ifPossible*}: 省略可能です。 パッケージの <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> プロパティの新しい値を指定します。 パラメーターの意味は次のとおりです。  
+-   **/Res [tart]** {*拒否 | 強制的 | ifPossible*}: 省略可能です。 パッケージの <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> プロパティの新しい値を指定します。 パラメーターの意味は次のとおりです。  
   
      *deny* ： <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> プロパティを <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_NEVER>」を参照してください。  
   
@@ -419,7 +419,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Set** [$Sensitive::]*propertyPath; 値*: 省略可能です。 パッケージ内のパラメーター、変数、プロパティ、コンテナー、ログ プロバイダー、Foreach 列挙子、または接続の構成をオーバーライドします。 このオプションを指定すると、 **/Set** は *propertyPath* 引数を、指定された値に変更します。 複数の **/Set** オプションを指定できます。  
   
-     使用するだけでなく、 **/設定**オプションは、 **/F [ile]** オプションを使用することも、 **/set**オプションは、`/ISServer`オプションまたは`/Project`オプション。 使用する場合 **/set**で`/Project`、 **/set**パラメーター値を設定します。 使用すると **/設定**で`/ISServer`、 **/set**プロパティのオーバーライドを設定します。 さらに、使用 **/set**で`/ISServer`、オプションの $Sensitive プレフィックスを使用するには、プロパティが機密情報としてに扱われることを[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー。  
+     使用しただけでなく、 **/set**オプションを **/F [ile]** オプションを使用することも、 **/set**オプションは、`/ISServer`オプションまたは`/Project`オプション。 使用すると **/set**で`/Project`、 **/set**パラメーターの値を設定します。 使用すると **/set**で`/ISServer`、 **/set**プロパティのオーバーライドが設定されます。 さらに、使用 **/set**で`/ISServer`、オプションの $Sensitive プレフィックスを使用して、機密情報としてのプロパティが扱われる、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー。  
   
      パッケージ構成ウィザードを実行して、 *propertyPath* の値を確認できます。 最後の **[ウィザードの完了]** ページに選択したアイテムのパスが表示されるので、これをコピーして貼り付けることができます。 この操作のみが目的でウィザードを使用した場合は、パスをコピーした後、ウィザードを取り消してください。  
   
@@ -431,15 +431,15 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     **/Set** オプションを使用すると、パッケージ構成を読み込む場所を変更することができます。 ただし、**/Set** オプションを使用しても、デザイン時の構成で指定した値をオーバーライドすることはできません。 パッケージの構成を適用する方法を理解するのを参照してください。[パッケージ構成](../package-configurations.md)と[SQL Server 2014 Integration Services 機能の動作変更](../behavior-changes-to-integration-services-features-in-sql-server-2014.md)です。  
+     **/Set** オプションを使用すると、パッケージ構成を読み込む場所を変更することができます。 ただし、**/Set** オプションを使用しても、デザイン時の構成で指定した値をオーバーライドすることはできません。 パッケージの構成を適用する方法については、次を参照してください。[パッケージ構成](../package-configurations.md)と[SQL Server 2014 Integration Services 機能の動作の変更](../behavior-changes-to-integration-services-features-in-sql-server-2014.md)します。  
   
--   `/Ser[ver]` *サーバー*:  
+-   `/Ser[ver]` *server*:  
                   任意。 `/SQL` オプションまたは `/DTS` オプションが指定されている場合、このオプションにはパッケージを取得するサーバーの名前を指定します。 `/Server` オプションを省略して `/SQL` または `/DTS` オプションを指定した場合、ローカル サーバーに対してパッケージの実行が試行されます。 *server_instance* 値は引用符で囲むことができます。  
   
      `/Ser[ver]` オプションが指定されている場合、`/ISServer` オプションは必須です。  
   
 -   **/SQ [L]** *package_path*:  
-                  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `msdb` データベースに格納されているパッケージを読み込みます。 格納されているパッケージ、`msdb`データベース、パッケージ配置モデルを使用して展開します。 配置されているパッケージを実行する、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用して、プロジェクト配置モデルを使用してサーバーを`/ISServer`オプション。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+                  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `msdb` データベースに格納されているパッケージを読み込みます。 格納されているパッケージ、`msdb`データベース、パッケージ配置モデルを使用して展開します。 配置されているパッケージを実行する、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]プロジェクト配置モデルを使用してを使用してサーバーを`/ISServer`オプション。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
      *package_path* 引数には、取得するパッケージの名前を指定します。 パス名を指定する場合、パス内のフォルダーの最後には円記号 ("\\") を指定します。 *Package_path* 値は引用符で囲むことができます。 *package_path* 引数に指定するパスまたはファイル名に空白文字を含める場合は、 *package_path* 引数を引用符で囲む必要があります。  
   
@@ -465,9 +465,9 @@ dtexec /option [value] [/option [value]]...
     >  [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
 -   **/Va [lidate]**:  
-                  任意。 検証フェーズ後、パッケージの実行を停止します。パッケージは実際には実行されません。 使用の検証中に、 **/WarnAsError**オプションを指定`dtexec`は警告をエラーとして処理するため、パッケージが失敗する検証中に警告が発生します。  
+                  任意。 検証フェーズ後、パッケージの実行を停止します。パッケージは実際には実行されません。 使用して、検証中に、 **/WarnAsError**オプションにより`dtexec`は警告をエラーとして処理を検証中に警告が発生した場合、パッケージが失敗したためです。  
   
--   **/Verifyb [uild]** *メジャー*[*マイナー;*[*; ビルド*]: 省略可能です。 検証フェーズ中に、パッケージのビルド番号を、 *major*、 *minor*、および *build* 引数に指定されたビルド番号に対して検証します。 不一致が発生した場合、パッケージは実行されません。  
+-   **/Verifyb [uild]** *メジャー*[*; minor*[*; ビルド*]: 省略可能です。 検証フェーズ中に、パッケージのビルド番号を、 *major*、 *minor*、および *build* 引数に指定されたビルド番号に対して検証します。 不一致が発生した場合、パッケージは実行されません。  
   
      値は長整数型です。 引数は次の 3 つの形式のいずれかになります。 *major* の値は必須です。  
   
@@ -487,7 +487,7 @@ dtexec /option [value] [/option [value]]...
     >  パッケージの署名を確認するように構成した場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって確認されるのは、デジタル署名が存在するかどうか、有効かどうか、および信頼関係のある発行元の署名であるかどうかのみです。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、パッケージが変更されたかどうかは確認されません。  
   
     > [!NOTE]  
-    >  省略可能な**BlockedSignatureStates**レジストリ値で設定されたデジタル署名オプションより限定的な設定を指定できます[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]または、`dtexec`コマンドライン。 この場合、制限が厳しい方のレジストリ設定が他の設定をオーバーライドします。  
+    >  省略可能な**BlockedSignatureStates**レジストリ値で設定されたデジタル署名オプションよりもより制限の厳しい設定を指定できます[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]見たり、`dtexec`コマンドライン。 この場合、制限が厳しい方のレジストリ設定が他の設定をオーバーライドします。  
   
 -   **/Verifyv [ersionID]** *versionID*: 省略可能です。 パッケージの検証フェーズ中に、実行されるパッケージのバージョン GUID を *version_id* 引数に指定された値と比較して検証します。  
   
@@ -518,7 +518,7 @@ dtexec /option [value] [/option [value]]...
 -   **/Set** オプションと **/ConfigFile** オプションは、指定されている順に処理されます。  
   
 ##  <a name="example"></a> 使用例  
- 次の例を使用する方法を示します、`dtexec`コマンド プロンプト ユーティリティを構成および実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージです。  
+ 次の例では、使用する方法、`dtexec`コマンド プロンプト ユーティリティを構成および実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージ。  
   
  **パッケージの実行**  
   
@@ -647,7 +647,7 @@ dtexec /f "c:\pkgOne.dtsx" /conf "c:\pkgOneConfig.cfg"
 /Project c:\project.ispac /Package Package1.dtsx  
 ```  
   
- 次の例を使用する方法を示しています、`/Project`と`/Package`オプション、およびパッケージとプロジェクト パラメーターを設定します。  
+ 次の例は、使用する方法を示します、`/Project`と`/Package`オプション、およびパッケージとプロジェクト パラメーターを設定します。  
   
 ```  
 /Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1  
@@ -662,7 +662,7 @@ dtexec /f "c:\pkgOne.dtsx" /conf "c:\pkgOneConfig.cfg"
 dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."  
 ```  
   
- 次の例を使用する方法を示しています、`/ISServer`オプションを選択し、プロジェクトと接続マネージャーのパラメーターを設定します。  
+ 次の例は、使用する方法を示します、`/ISServer`オプションを選択し、プロジェクトと接続マネージャーのパラメーターを設定します。  
   
 ```  
 /Server localhost /ISServer “\SSISDB\MyFolder\Integration Services Project1\Package.dtsx” /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  

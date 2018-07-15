@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - GeomCollection geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1a5c21c01ab776a17d3e160fee51167c426dfa0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3a0f4ad36d9664d6627d02edfc401af9ed3d8b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307522"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  A `GeometryCollection` 0 個以上のコレクションは、`geometry`または`geography`インスタンス。 A`GeometryCollection`空にすることができます。  
+  A `GeometryCollection` 0 個以上のコレクションである`geometry`または`geography`インスタンス。 A`GeometryCollection`空にすることができます。  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection インスタンス  
   
@@ -38,7 +38,7 @@ DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
- 次の例をスロー、`System.FormatException`ため、`LinesString`インスタンス、`GeometryCollection`インスタンスは許容されません。  
+ 次の例では、スロー、`System.FormatException`ため、`LinesString`インスタンス、`GeometryCollection`インスタンスは許容されません。  
   
 ```  
 DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  

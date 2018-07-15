@@ -1,5 +1,5 @@
 ---
-title: ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9846361e76eac9f4ad61edde10c0fda20f4f546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6af2d4d2e3f5007cbe0721fe734073e7306b95a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328938"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、Microsoft ロジスティック回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -144,7 +144,7 @@ ms.locfileid: "36070850"
  親ノードからノードに到達する確率です。 ロジスティック回帰モデルでは常に 0 です。  
   
  NODE_DISTRIBUTION  
- ノードの統計情報を含む入れ子になったテーブル。 このテーブルの各ノードの種類のコンテンツに関する詳細についてを参照してくださいで、NODE_DISTRIBUTION テーブルの理解[マイニング モデル コンテンツのニューラル ネットワーク モデル&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ ノードの統計情報を含む入れ子になったテーブル。 このテーブルの各ノードの種類のコンテンツに関する詳細についてで、NODE_DISTRIBUTION テーブルの理解、セクションを参照してください[ニューラル ネットワーク モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;。](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
  NODE_SUPPORT  
  ロジスティック回帰モデルでは常に 0 です。  

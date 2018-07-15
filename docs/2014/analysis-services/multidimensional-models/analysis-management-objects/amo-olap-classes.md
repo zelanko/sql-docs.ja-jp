@@ -1,5 +1,5 @@
 ---
-title: AMO OLAP クラス |Microsoft ドキュメント
+title: AMO OLAP クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6db043eff86d0cd1675674cefee6aa74508e33f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1fcf669d63554c9a57dc927cb0071fbc17a9f2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280408"
 ---
 # <a name="amo-olap-classes"></a>AMO OLAP クラス
   分析管理オブジェクト (AMO) OLAP クラスは、キューブやディメンションに加えて、主要業績評価指標 (KPI)、アクション、プロアクティブ キャッシュなどの関連オブジェクトを作成、変更、削除、および処理する際に役立ちます。  
   
- AMO プログラミング環境の設定に関する詳細については、どのサーバー、データベースへのアクセスやデータの定義との接続を確立するためにソースし、データ ソース ビューを参照してください[AMO 基礎クラス](amo-fundamental-classes.md)です。  
+ AMO プログラミング環境のセットアップに関する詳細については、どのサーバー、データベースへのアクセスまたはデータの定義との接続を確立するためにソースし、データ ソース ビューを参照してください[AMO 基礎クラス](amo-fundamental-classes.md)します。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "36177429"
   
  次の図は、このトピックで説明するクラスの関係を示しています。  
   
- ![AMO の OLAP クラス](../../../analysis-services/dev-guide/media/amo-olapclasses.gif "AMO の OLAP クラス")  
+ ![Amo OLAP クラス](../../../analysis-services/dev-guide/media/amo-olapclasses.gif "amo OLAP クラス")  
   
 ## <a name="basic-classes"></a>基本クラス  
   
-###  <a name="Dimensions"></a> Dimension オブジェクト  
+###  <a name="Dimensions"></a> ディメンション オブジェクト  
  ディメンションの作成は、親データベースのディメンション コレクションにこれを追加し、Update メソッドを使用してサーバーに対して <xref:Microsoft.AnalysisServices.Dimension> オブジェクトを更新することにより行われます。  
   
  ディメンションを削除するには、<xref:Microsoft.AnalysisServices.Dimension> の Drop メソッドを使用してこれを削除する必要があります。 Remove メソッドを使用して、データベースのディメンション コレクションから <xref:Microsoft.AnalysisServices.Dimension> を削除した場合、AMO オブジェクト モデル内では削除されますが、サーバー上では削除されません。  
@@ -71,7 +71,7 @@ ms.locfileid: "36177429"
  利用可能なメソッドおよびプロパティの詳細については、「<xref:Microsoft.AnalysisServices.Dimension>」の「<xref:Microsoft.AnalysisServices>」を参照してください。  
   
 ###  <a name="Cubes"></a> キューブ オブジェクト  
- キューブを作成するには、データベースのキューブ コレクションに新しいキューブを追加した後、Update メソッドを使用して、サーバー上の <xref:Microsoft.AnalysisServices.Cube> オブジェクトを更新します。 キューブの Update メソッドは、パラメーターが変更された、キューブ内のすべてのオブジェクトは、この更新アクション内のサーバーに更新されます UpdateOptions.ExpandFull を含めることができます。  
+ キューブを作成するには、データベースのキューブ コレクションに新しいキューブを追加した後、Update メソッドを使用して、サーバー上の <xref:Microsoft.AnalysisServices.Cube> オブジェクトを更新します。 キューブの Update メソッドは、パラメーター UpdateOptions.ExpandFull で、変更された、キューブ内のすべてのオブジェクトは、この更新アクション内のサーバーに更新されますを含めることができます。  
   
  キューブを削除するには、<xref:Microsoft.AnalysisServices.Cube> の Drop メソッドを使用してこれを削除する必要があります。 コレクションからキューブを削除しても、サーバーには影響を与えません。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36177429"
 ###  <a name="Action"></a> Action オブジェクト  
  <xref:Microsoft.AnalysisServices.Action> オブジェクトを作成するには、キューブのアクション コレクションに新しいオブジェクトを追加した後、Update メソッドを使用して、サーバー上で <xref:Microsoft.AnalysisServices.Cube> オブジェクトを更新します。 キューブの更新メソッドには、パラメーター UpdateOptions.ExpandFull を含めることができます。このパラメーターでは、この更新アクションによって、キューブ内で変更されたすべてのオブジェクトがサーバーに対して更新されます。  
   
- 削除する、<xref:Microsoft.AnalysisServices.Action>オブジェクトをコレクションから削除する必要があり、親キューブを更新する必要があります。  
+ 削除する、<xref:Microsoft.AnalysisServices.Action>オブジェクトをコレクションからこれを削除し、親キューブを更新する必要があります。  
   
  キューブを更新して処理するまで、アクションはクライアントから使用できません。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36177429"
 ###  <a name="KPI"></a> Kpi オブジェクト  
  <xref:Microsoft.AnalysisServices.Kpi> オブジェクトを作成するには、キューブの KPI コレクションに新しいオブジェクトを追加した後、Update メソッドを使用して、サーバー上で <xref:Microsoft.AnalysisServices.Cube> オブジェクトを更新します。 キューブの Update メソッドには、パラメーター UpdateOptions.ExpandFull を含めることができます。このパラメーターでは、この更新アクションによって、キューブ内で変更されたすべてのオブジェクトがサーバーに対して更新されます。  
   
- 削除する、<xref:Microsoft.AnalysisServices.Kpi>オブジェクト、し、コレクションから削除する必要があり、親キューブを更新する必要があります。  
+ 削除する、<xref:Microsoft.AnalysisServices.Kpi>オブジェクト、これをコレクションから削除し、親キューブを更新する必要があります。  
   
  キューブを更新して処理するまで、KPI は使用できません。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36177429"
  <xref:Microsoft.AnalysisServices>   
  [AMO クラスの概要](amo-classes-introduction.md)   
  [AMO OLAP 基本オブジェクトのプログラミング](programming-amo-olap-basic-objects.md)   
- [プログラミング AMO OLAP オブジェクトの詳細](programming-amo-olap-advanced-objects.md)   
+ [高度なオブジェクトをプログラミング AMO OLAP](programming-amo-olap-advanced-objects.md)   
  [論理アーキテクチャ&#40;Analysis Services - 多次元データ&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [データベース オブジェクト&#40;Analysis Services - 多次元データ&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

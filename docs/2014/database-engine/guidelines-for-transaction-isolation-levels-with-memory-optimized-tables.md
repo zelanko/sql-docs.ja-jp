@@ -1,5 +1,5 @@
 ---
-title: メモリ最適化テーブルでのトランザクション分離レベルに関するガイドライン |Microsoft ドキュメント
+title: メモリ最適化テーブルでのトランザクション分離レベルのガイドライン |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f21b7340b4c2d0cc3457cf0a2169d0a7fe17b311
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d4c515d6eb3c86143e1344b342b8ee29a781358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163775"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320732"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>メモリ最適化テーブルのトランザクション分離レベルに関するガイドライン
   多くのシナリオでは、トランザクション分離レベルを指定する必要があります。 メモリ最適化テーブルのトランザクション分離は、ディスク ベース テーブルとは異なります。  
@@ -28,7 +28,7 @@ ms.locfileid: "36163775"
   
 -   トランザクション分離レベルは、ネイティブ コンパイル ストアド プロシージャの中身を構成する ATOMIC ブロックに必要なオプションです。  
   
--   複数のコンテナーにまたがるトランザクションで分離レベルを使用することには制約があるため、解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] でメモリ最適化テーブルを使用する場合には、そのテーブルへのアクセスに使用する分離レベルを指定するテーブル ヒントを併用するのが一般的です。 分離レベル ヒントと複数コンテナーにまたがるトランザクションに関する詳細については、次を参照してください。[トランザクション分離レベル](../../2014/database-engine/transaction-isolation-levels.md)です。  
+-   複数のコンテナーにまたがるトランザクションで分離レベルを使用することには制約があるため、解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] でメモリ最適化テーブルを使用する場合には、そのテーブルへのアクセスに使用する分離レベルを指定するテーブル ヒントを併用するのが一般的です。 分離レベル ヒントとコンテナーにまたがるトランザクションの詳細については、次を参照してください。[トランザクション分離レベル](../../2014/database-engine/transaction-isolation-levels.md)します。  
   
 -   必要なトランザクション分離レベルは、明示的に宣言する必要があります。 ロック ヒント (XLOCK など) を使用してトランザクションの特定の行またはテーブルの分離を保証することはできません。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36163775"
   
 -   実行時間の長いトランザクションは、メモリ最適化テーブルでは避ける必要があります。 このようなトランザクションによって、競合とその後のトランザクション終了の可能性が高まります。 実行時間が長いトランザクションは、ガベージ コレクションが遅延する原因にもなります。 トランザクションの実行時間が長くなるほど、最近削除された行のバージョンがインメモリ OLTP で保持される時間も長くなります。これにより、新しいトランザクションの参照パフォーマンスが低下する場合があります。  
   
- ディスク ベース テーブルでは通常、トランザクションの分離にロックおよびブロックを使用しています。 メモリ最適化テーブルでは、複数バージョン管理および競合検出を使用して分離を確実なものにしています。 詳細については、競合の検出、検証、およびコミット依存関係の確認のセクションを参照してください。[メモリ最適化テーブル内のトランザクション](../relational-databases/in-memory-oltp/memory-optimized-tables.md)です。  
+ ディスク ベース テーブルでは通常、トランザクションの分離にロックおよびブロックを使用しています。 メモリ最適化テーブルでは、複数バージョン管理および競合検出を使用して分離を確実なものにしています。 詳細についてには、競合の検出、検証、およびコミット依存関係の確認に関するセクションを参照[メモリ最適化テーブルでのトランザクション](../relational-databases/in-memory-oltp/memory-optimized-tables.md)です。  
   
  ディスク ベース テーブルでは、SNAPSHOT および READ_COMMITTED_SNAPSHOT の 2 つの分離レベルによる複数バージョン管理が可能です。 メモリ最適化テーブルでは、REPEATABLE READ と SERIALIZABLE も含め、すべての分離レベルが複数バージョン ベースになっています。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36163775"
   
  SNAPSHOT 分離レベル (メモリ最適化テーブルでサポートされる分離レベルのうち、最も低いレベル) による保証には、READ COMMITTED の保証が含まれています。 トランザクションの各ステートメントでは、同一で一貫性のあるバージョンのデータベースを読み取ります。 トランザクションによって読み取られる行がいずれもデータベースにコミットされるだけでなく、すべての読み取り操作で同じトランザクションによって変更が実行されます。  
   
- **ガイドライン**: ネイティブ コンパイル ストアド プロシージャを使用しを使用してメモリ最適化テーブルにアクセスするために、使用するスナップショット分離が解釈 READ COMMITTED 分離の保証が必要な場合のみ[!INCLUDE[tsql](../includes/tsql-md.md)]です。  
+ **ガイドライン**: READ COMMITTED 分離の保証が必要な場合にのみ使用してスナップショット分離では、ネイティブ コンパイル ストアド プロシージャとによって、メモリ最適化テーブルにアクセスするための解釈[!INCLUDE[tsql](../includes/tsql-md.md)]します。  
   
  自動コミット トランザクションでは、分離レベル READ COMMITTED が暗黙的にメモリ最適化テーブルの SNAPSHOT にマッピングされています。 このため、TRANSACTION ISOLATION LEVEL セッションの設定が READ COMMITTED に設定されている場合には、メモリ最適化テーブルにアクセスするときにテーブル ヒントを使用して分離レベルを指定する必要はありません。  
   
@@ -95,7 +95,7 @@ COMMIT
   
      一部のアプリケーションでは、書き込み側がコミットするまでの間、読み取り側が常に待機することが想定されています。特に、アプリケーション層で 2 つのトランザクションを同期させる場合です。  
   
-     **ガイドライン:** アプリケーションがブロック動作に依存できません。 アプリケーションでは、同時実行トランザクション間の同期を必要とする場合このようなロジックを実装できます層では、データベース、またはアプリケーション層でを通じて[sp_getapplock &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql)です。  
+     **ガイドライン:** アプリケーションは、ブロックの動作に依存できません。 アプリケーションでは、同時実行トランザクション間の同期を必要とする場合このようなロジックまたは実装できますアプリケーション層で、データベース層を介して[sp_getapplock &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql)します。  
   
 -   READ COMMITTED 分離を使用するトランザクションでは、各ステートメントでデータベースの行の最新のバージョンが使用されます。 このため、以降のステートメントでは、データベースの状態が変化することになります。  
   
@@ -127,15 +127,15 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>ロックに関するテーブル ヒント  
- ロック ヒント ([テーブル ヒント&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)) など、HOLDLOCK および XLOCK で使えるディスク ベース テーブルが[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]分離レベルを指定に必要な多くのロックを取得します。  
+ ロック ヒント ([テーブル ヒント&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)) など、HOLDLOCK および XLOCK で使えるディスク ベース テーブルが[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]分離レベルを指定するために必要な多くのロックを取得します。  
   
  メモリ最適化テーブルではロックは使用しません。 REPEATABLE READ や SERIALIZABLE など、高度な分離レベルを使用して必要な保証を宣言できます。  
   
  ロック ヒントはサポートされていません。 代わりに、トランザクション分離レベルを使用して必要な保証を宣言します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではメモリ最適化テーブルにロックを使用しないため、NOLOCK がサポートされます。 ディスク ベース テーブルとは異なり、NOLOCK は、メモリ最適化テーブルに対する READ UNCOMMITTED 動作を示すわけではないことに注意してください。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルに対するトランザクションを理解します。](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
+ [メモリ最適化テーブルに対するトランザクションの概要](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [メモリ最適化テーブルでのトランザクションの再試行ロジックをするためのガイドライン](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
  [トランザクション分離レベル](../../2014/database-engine/transaction-isolation-levels.md)  
   
   

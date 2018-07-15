@@ -1,5 +1,5 @@
 ---
-title: FeatureSet 要素 (DTA) |Microsoft ドキュメント
+title: FeatureSet 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - FeatureSet element
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1a3da0184ab2cbb6c94d94429dc4e9640a597fe3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fb596ca38310bce4b9be6f1061952ebc2756fc73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226512"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 要素 (DTA)
   データベース エンジン チューニング アドバイザーでの分析時に使用する物理設計構造 (インデックス、インデックス付きビュー) が含まれます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36177892"
 |**データ型と長さ**|`string`、長さは無制限です。|  
 |**指定できる値**|**IDX_IV**<br /> インデックスおよびインデックス付きビュー。<br /><br /> **IDX**<br /> インデックスのみ。<br /><br /> **IV**<br /> インデックス付きビューのみ。<br /><br /> **NCL_IDX**<br /> 非クラスター化インデックスのみ。<br /><br /> この要素では、上記の値のいずれか 1 つを使用してください。|  
 |**既定値**|**IDX**|  
-|**個数**|1 回につき必要`TuningOptions`要素、しない限り、`DropOnlyMode`要素を使用します。 場合`DropOnlyMode`は使用できません、`FeatureSet`です。 これらの要素を同時に指定することはできません。|  
+|**個数**|ごとに 1 回行えば済む`TuningOptions`要素、しない限り、`DropOnlyMode`要素を使用します。 場合`DropOnlyMode`は使用できません、`FeatureSet`します。 これらの要素を同時に指定することはできません。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

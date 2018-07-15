@@ -1,5 +1,5 @@
 ---
-title: 要素 (ASSL) の読み取り |Microsoft ドキュメント
+title: 要素 (ASSL) の読み取り |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Read element
 ms.assetid: 2e2c1173-72ca-4e8a-a6cd-fd348ef96d78
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1e7f26c9064f754633420cd58a0f15197189d1ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5d4d8b256e29f3f4e4998fdc029f0d9eb3e1a893
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321202"
 ---
 # <a name="read-element-assl"></a>Read 要素 (ASSL)
-  データまたはメタデータの機能を読み取れるかどうかを判断、指定された[CubeDimensionPermission](../data-type/permission-data-type-assl.md)または[権限](../data-type/permission-data-type-assl.md)要素。  
+  データまたはメタデータの読み取りができるかどうかを決定を指定した[CubeDimensionPermission](../data-type/permission-data-type-assl.md)または[権限](../data-type/permission-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36085957"
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[CubeDimensionPermission](../objects/cubepermission-element-assl.md)、[権限](../data-type/permission-data-type-assl.md)|  
+|親要素|[CubeDimensionPermission](../objects/cubepermission-element-assl.md)、[アクセス許可](../data-type/permission-data-type-assl.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
@@ -68,11 +68,11 @@ ms.locfileid: "36085957"
 |*許可されています。*|親オブジェクトのデータおよびメタデータへの読み取りアクセスが許可されています。|  
   
 ## <a name="remarks"></a>コメント  
- 親に対応する要素`Read`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.CubeDimensionPermission>と<xref:Microsoft.AnalysisServices.Permission>です。  
+ 親に対応する要素`Read`分析管理オブジェクト (AMO) オブジェクト モデルは、<xref:Microsoft.AnalysisServices.CubeDimensionPermission>と<xref:Microsoft.AnalysisServices.Permission>します。  
   
 ## <a name="see-also"></a>参照  
  [キューブ要素&#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [要素の寸法&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [ディメンション要素&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [CubePermission 要素&#40;ASSL&#41;](../objects/cubepermission-element-assl.md)   
  [Permission データ型&#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: ディメンションを定義する |Microsoft ドキュメント
+title: ディメンションの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: df62cff6aa47c37371d6a3ad6f52f120ad3f740b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c2c40d27d4dc9310ee54d4211efe88777b8c62f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246732"
 ---
 # <a name="defining-a-dimension"></a>ディメンションの定義
   この実習では、ディメンション ウィザードを使用して Date ディメンションを構築します。  
@@ -39,7 +39,7 @@ ms.locfileid: "36178096"
   
 5.  **[メイン テーブル]** ボックスの一覧で、 **[Date]** を選択します。  
   
-6.  **[次へ]** をクリックします。  
+6.  [**次へ**] をクリックします。  
   
 7.  **[ディメンション属性の選択]** ページで、次の属性の横にあるチェック ボックスをオンにします。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36178096"
   
     -   **Calendar Semester**  
   
-8.  **Full Date Alternate Key** 属性の **[属性の型]** 列の設定を **Regular** から **Date**に変更します。 これを行うには、 **[属性の型]** 列で **[Regular]** をクリックします。 次に、矢印をクリックしてオプションを展開し、 **[Date]** > **[Calendar]** > **[Date]** の順にクリックします。 **[OK]** をクリックします。 次の属性について同じ手順を繰り返し、属性の型を次のように変更します。  
+8.  **Full Date Alternate Key** 属性の **[属性の型]** 列の設定を **Regular** から **Date**に変更します。 これを行うには、 **[属性の型]** 列で **[Regular]** をクリックします。 次に、矢印をクリックしてオプションを展開し、 **[Date]** > **[Calendar]** > **[Date]** の順にクリックします。 [**OK**] をクリックします。 次の属性について同じ手順を繰り返し、属性の型を次のように変更します。  
   
     -   **English Month Name** から **Month**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36178096"
   
     -   **Calendar Semester** から **Half Year**  
   
-9. **[次へ]** をクリックします。  
+9. [**次へ**] をクリックします。  
   
 10. **[ウィザードの完了]** ページの [プレビュー] ペインで、 **Date** ディメンションとその属性を確認できます。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36178096"
   
 ## <a name="see-also"></a>参照  
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [既存のテーブルを使用して、ディメンションを作成します。](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
+ [既存のテーブルを使用したディメンションを作成します。](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [ディメンション ウィザードを使用したディメンションの作成](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
   
   

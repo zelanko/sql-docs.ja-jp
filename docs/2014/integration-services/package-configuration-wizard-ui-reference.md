@@ -1,5 +1,5 @@
 ---
-title: パッケージの構成ウィザードの UI リファレンス |Microsoft ドキュメント
+title: パッケージ構成ウィザードの UI リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.configwizard.selectobjects.f1
 - sql12.dts.configwizard.selecconfigtype.f1
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e88427ce2a7450e2e03638254da720d0c464fb8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a95f28077a06d52d8b597cae8d6a36d5cd1d502
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322432"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>パッケージ構成ウィザードの UI リファレンス
   **パッケージ構成ウィザード**を使用すると、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。 このウィザードは、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスで新しい構成を追加するか既存の構成を変更するときに実行されます。 **[パッケージ構成オーガナイザー]** ダイアログ ボックスを開くには、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で **[SSIS]** メニューの **[パッケージ構成]** をクリックします。 詳細については、「[パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)」を参照してください。  
@@ -122,7 +122,7 @@ ms.locfileid: "36179154"
   
 |値|説明|  
 |-----------|-----------------|  
-|**Connection**|一覧から接続を選択するか、 **[新規作成]** をクリックし、新しい接続を作成します。|  
+|**[接続]**|一覧から接続を選択するか、 **[新規作成]** をクリックし、新しい接続を作成します。|  
 |**[構成テーブル]**|既存のテーブルを選択するか、 **[新規作成]** をクリックし、新しいテーブルを作成する SQL ステートメントを記述します。|  
 |**[構成フィルター]**|既存の構成名を選択するか、新しい名前を入力します。<br /><br /> 多くの SQL Server の構成は同じテーブルに格納でき、各構成には複数の構成アイテムを含むことができます。<br /><br /> このユーザー定義の値はテーブルに格納され、特定の構成に属する構成アイテムの識別に使用されます。|  
   

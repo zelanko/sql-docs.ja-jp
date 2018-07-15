@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1ce88458add3922b5626a3d883a3df414d76221e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3c619ec718e3471eb6518f6604a65c97cb367508
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304992"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>軸の間隔の指定 (レポート ビルダーおよび SSRS)
   軸の間隔により、軸上のラベルおよび付随する目盛りの数が定義されます。 値軸では、軸の間隔により、グラフ上のデータ ポイントに一貫性のある基準が提供されます。 ただしカテゴリ軸では、この機能により、軸ラベルなしでカテゴリが表示されることがあります。 軸の Interval プロパティで、必要な間隔の数を指定できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、実行時に、結果セットのデータに基づいて間隔の数が計算されます。 軸の間隔を計算する方法の詳細については、「[グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
   
- このトピックは、カテゴリ軸の日付または時刻の値には適用されません。 既定では、`DateTime`日として値が表示されます。 月や期間など、別の日付または期間を指定するには、軸ラベルの書式を設定し、`DateTime` 型ではなく `String` 型のインスタンスが表示されるように軸を設定する必要があります。 また、Interval プロパティを設定する必要があります。 詳細については、「[日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)」を参照してください。  
+ このトピックは、カテゴリ軸の日付または時刻の値には適用されません。 既定では、`DateTime`値は日として表示されます。 月や期間など、別の日付または期間を指定するには、軸ラベルの書式を設定し、`DateTime` 型ではなく `String` 型のインスタンスが表示されるように軸を設定する必要があります。 また、Interval プロパティを設定する必要があります。 詳細については、「[日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)」を参照してください。  
   
  このトピックは、円グラフ、ドーナツ グラフ、じょうごグラフ、ピラミッド グラフなど、軸のないグラフには当てはまりません。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36173657"
   
 1.  カテゴリ軸を右クリックし、 **[軸のプロパティ]** をクリックします。 **[軸のプロパティ]** ダイアログ ボックスが表示されます。  
   
-2.  **軸のオプション**設定、`Interval`に**1**です。 すべてのカテゴリ グループのラベルが表示されます。 X 軸でカテゴリ グループのラベルを交互に表示する場合は、「 **2**」と入力します。  
+2.  **軸のオプション**設定`Interval`に**1**します。 すべてのカテゴリ グループのラベルが表示されます。 X 軸でカテゴリ グループのラベルを交互に表示する場合は、「 **2**」と入力します。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36173657"
   
 1.  変更するグラフ軸を右クリックし、 **[軸のプロパティ]** をクリックします。 **[軸のプロパティ]** ダイアログ ボックスが表示されます。  
   
-2.  **軸のオプション**設定、`Interval`に**自動**です。軸に収まる最適な数のカテゴリ ラベルがグラフに表示されます。  
+2.  **軸のオプション**設定`Interval`に**自動**します。軸に収まる最適な数のカテゴリ ラベルがグラフに表示されます。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

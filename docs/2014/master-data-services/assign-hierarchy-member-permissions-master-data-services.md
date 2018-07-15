@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], assigning member permissions
 - members [Master Data Services], assigning permissions
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 79ed00e101c252cff63e8978ef55a27e6c5c8258
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e18ee83a164659904864b84dc80fb21e7f07f463
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305998"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限を割り当てる (マスター データ サービス)
   階層メンバーに権限を割り当てて、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域にあるデータを表示するためのアクセス権をユーザーまたはグループに付与します。  
@@ -56,7 +56,7 @@ ms.locfileid: "36164824"
   
 9. ツリーを展開して、権限を割り当てる階層ノードをクリックします。  
   
-10. メニューから、次のように選択します。**読み取り専用**、**更新**、または**Deny**です。  
+10. メニューから、次のように選択します。**読み取り専用**、 **Update**、または**Deny**します。  
   
 11. **[保存]** をクリックします。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36164824"
     >  階層メンバーの権限は、すぐには有効になりません。 詳細については、「[メンバー権限を直ちに適用する (マスター データ サービス)](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [階層メンバー権限を削除する&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
+ [階層メンバー権限を削除&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
  [モデル オブジェクト権限を割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [階層メンバーの権限&#40;マスター データ サービス&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
   

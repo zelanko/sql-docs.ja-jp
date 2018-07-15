@@ -20,13 +20,13 @@ ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 669b8868113c0cf38eec6a8f628be415eb400452
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd0ba6f5043eb05120638b7bc93f82a2d816dc05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302252"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>データ フロー コンポーネントの実行時のメソッド
   実行時に、データ フロー タスクは、コンポーネントの順序の確認、実行プランの準備、および作業プランを実行するワーカー スレッドのプールの管理を行います。 タスクは、データの行を変換元から読み込み、変換を使用して処理し、変換先に保存します。  
@@ -213,7 +213,7 @@ End Sub
   
  入力バッファー内の行を受け取るコンポーネントの開発の詳細については、「[カスタム変換先コンポーネントの開発](../../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)」および「[同期出力型のカスタム変換コンポーネントの開発](../../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)」を参照してください。  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。  **<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [データ フロー コンポーネントのデザイン時のメソッド](design-time-methods-of-a-data-flow-component.md)  

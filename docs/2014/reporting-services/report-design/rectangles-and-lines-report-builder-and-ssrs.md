@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b1e24758c8746494c861e11b100d6fc4000e93d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ec70c7151ffe02978117c46e06abd3fa20ad4da6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306962"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>四角形と線 (レポート ビルダーおよび SSRS)
   四角形と線は、レポートに視覚効果を与えることができます。 [ホーム] タブの [罫線] セクションでこれらのレポート アイテムの表示プロパティを設定し、プロパティ ペインを使用してその他のプロパティを設定できます。 背景色、背景画像、ツールヒント、ブックマークなどの機能を、四角形に追加できます。  
@@ -52,11 +52,11 @@ ms.locfileid: "36174631"
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  [レポートに罫線を追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
- [四角形またはコンテナーを追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [四角形またはコンテナーの追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
- [追加し、行を変更&#40;レポート ビルダーおよび SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
+ [追加および変更行&#40;レポート ビルダーおよび SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>参照  
- [四角形またはコンテナーを追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [四角形またはコンテナーの追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

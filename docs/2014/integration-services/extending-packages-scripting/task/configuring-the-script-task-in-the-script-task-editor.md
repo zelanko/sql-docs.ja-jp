@@ -20,13 +20,13 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0e7b894400b6342064aac4762fc6707eca04962f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 827721e691e197faf0b786db5999b0061e42c516
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263198"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>スクリプト タスク エディターでのスクリプト タスクの構成
   スクリプト タスクにカスタム コードを記述する前に、**[スクリプト タスク エディター]** の 3 つのページで、主要なプロパティを設定します。 スクリプト タスクに対して一意でない追加のタスク プロパティは、[プロパティ] ウィンドウを使用して設定できます。  
@@ -64,7 +64,7 @@ ms.locfileid: "36177556"
 ## <a name="expressions-page-of-the-script-task-editor"></a>[スクリプト タスク エディター] の [式] ページ  
  **[スクリプト タスク エディター]** の **[式]** ページでは、式を使用して、上に挙げたスクリプト タスクのプロパティ、およびそれ以外の多くのプロパティに値を指定できます。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> 最新のダウンロード、アーティクル、サンプル、およびビデオの[!INCLUDE[msCoName](../../../includes/msconame-md.md)]は、コミュニティで選択したソリューションを参照してください、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] MSDN のページ。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。  **<br /> 最新のダウンロード、アーティクル、サンプル、およびビデオの[!INCLUDE[msCoName](../../../includes/msconame-md.md)]、およびコミュニティで選択されたソリューションを参照してください、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] msdn ページ。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [スクリプト タスクのコーディングおよびデバッグ](coding-and-debugging-the-script-task.md)  

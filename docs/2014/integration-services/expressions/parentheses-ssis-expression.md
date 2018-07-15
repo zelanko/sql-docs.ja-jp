@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - () (parentheses operator)
 - evaluation order [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6daec07c75ccc9b6c2a04c7604c18261f979eb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a70b4f0ced51cd5427a64fdd730969d97e067726
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281708"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (かっこ) (SSIS 式)
   式の評価順序を特定します。 かっこで囲まれた式は、評価の優先順位が最も高くなります。 かっこで囲まれ、入れ子になっている式は、内側から外側の順に評価されます。  

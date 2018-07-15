@@ -1,5 +1,5 @@
 ---
-title: 選択テーブルおよびビュー (データ ソース ビュー ウィザード) (Analysis Services) |Microsoft ドキュメント
+title: テーブルとビュー (データ ソース ビュー ウィザード) を選択 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selecttablesandviews.f1
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8bf3897fe2466b00c0346590147884696b632b7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0ec6553114e5a6a5a0700a852c56d4be51eba39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279508"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>[テーブルとビューの選択] (データ ソース ビュー ウィザード) (Analysis Services)
   **[テーブルとビューの選択]** ページを使用すると、データ ソース ビューに含めるテーブルまたはビューをデータ ソースから選択できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "36084178"
   
  昇順または降順でリストを並べ替えるには、 **[名前]** または **[種類]** をクリックします。  
   
- **含まれているオブジェクト**  
+ **含まれるオブジェクト**  
  データ ソース ビューに含めるテーブルとビューを一覧表示します。  
   
  昇順または降順でリストを並べ替えるには、 **[名前]** または **[種類]** をクリックします。  

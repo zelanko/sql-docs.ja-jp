@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing server groups
 - Registered Servers [SQL Server], server groups
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - groups [SQL Server], server
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72d74cd2af13f46e043a4a10ed17dc11f79be10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c03ba44ba409e79f98ce12d865646356e59ed8e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288288"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>サーバー グループの削除 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、登録済みサーバーからサーバー グループを削除する方法について説明します。 サーバー グループはいつでも削除できます。 サーバー グループが空でない場合は、削除するサーバー グループ内のサーバーまたはサーバー グループもすべて削除されます。 残しておくサーバーまたはサーバー グループがあれば、サーバー グループを削除する前に、別のサーバー グループに移動します。  

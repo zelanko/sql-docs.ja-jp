@@ -1,5 +1,5 @@
 ---
-title: 拡張機能 (ビジネス インテリジェンス ウィザード) の選択 |Microsoft ドキュメント
+title: 拡張機能 (ビジネス インテリジェンス ウィザード) の選択 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.bienhancement.f1
 ms.assetid: 39e2f36c-2c02-4a71-af8f-5dbd373190dc
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1377e93214ff5d9e459698946551ffaed6723390
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35634d3094647cd7698ec1961b94cb2b6b5744e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243982"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>[拡張機能の選択] (ビジネス インテリジェンス ウィザード)
   **[拡張機能の選択]** ページを使用すると、キューブまたはディメンションに追加するビジネス インテリジェンス拡張機能を選択できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36177878"
 |**準加法の動作を定義します。**|勘定科目の種類の属性のメジャーまたはメンバーについて、個々の集計方法を手動で定義します。 キューブに勘定科目ディメンションが含まれている場合、 **[勘定科目インテリジェンスの定義]** オプションを使用して、準加法の動作を勘定科目の種類に基づいて自動的に設定できます。<br /><br /> 注: このオプションは、キューブに対してのみ使用できます。|  
 |**通貨換算を定義します。**|キューブ内の多国籍データの変換と分析に使用するルールを定義します。 変換ルールは、ビジネス インテリジェンス ウィザードで生成した多次元式 (MDX) スクリプトを使用して、キューブに適用されます。<br /><br /> 注: このオプションは、キューブに対してのみ使用できます。|  
   
- **description**  
+ **[説明]**  
  選択したビジネス インテリジェンス拡張機能の簡単な説明が表示されます。  
   
 ## <a name="see-also"></a>参照  

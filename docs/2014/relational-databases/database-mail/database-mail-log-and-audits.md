@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - auditing [SQL Server]
 - Database Mail [SQL Server], auditing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], logging
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: aa41082daa7b0a80e613158b83c7dddb313502a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 437e1875de9e3dd95431a0bd0e104850e3d7c0d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294772"
 ---
 # <a name="database-mail-log-and-audits"></a>データベース メールのログ記録と監査
   データベース メールのログ記録機能は、問題の特定および修正の手段を提供する目的でデザインされました。 データベース メールは、 **msdb** データベースにログ情報を格納します。 データベース メールの電子メールの内容、電子メールの状態、エラーなどの受信メッセージがデータベース メールによってログに記録され、トラブルシューティングや監査のために使用できます。  

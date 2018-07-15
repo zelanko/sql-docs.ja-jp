@@ -1,5 +1,5 @@
 ---
-title: Verify a PowerPivot for SharePoint のインストール |Microsoft ドキュメント
+title: Verify a PowerPivot for SharePoint のインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 caps.latest.revision: 10
-author: HeidiSteen
-ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 84457199c37eea8445911e25706928305db0d380
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7116c698e987ca86da83763dd1994c098a99026d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189379"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>PowerPivot for SharePoint インストールの確認
   SharePoint ファームにインストールした PowerPivot for SharePoint インスタンスは、SharePoint サーバーの全体管理から管理されます。 PowerPivot のサーバー コンポーネントと機能が使用可能になっているかどうかは、少なくとも、サーバーの全体管理および SharePoint サイトのページを調べれば確認できます。 インストールを完全に確認するには、SharePoint にパブリッシュでき、ライブラリからアクセスできる PowerPivot ブックが必要になります。 テストの際には、既に PowerPivot データが含まれているサンプル ブックをパブリッシュし、それを使用して SharePoint 統合が正しく構成されているかどうかを確認できます。  
@@ -27,7 +27,7 @@ ms.locfileid: "36071575"
 ##  <a name="verifyinstall"></a> 全体管理統合の確認  
  PowerPivot のサーバーの全体管理との統合を確認するには、次の操作を行います。  
   
-1.  [スタート] メニューをクリックして**すべてのプログラム**Microsoft SharePoint 2010 製品を開き、をクリックして**SharePoint 2010 サーバーの全体管理**です。  
+1.  [スタート] メニューで、次のようにクリックします。**すべてのプログラム**Microsoft SharePoint 2010 製品では、を開き、[] をクリック**SharePoint 2010 サーバーの全体管理**します。  
   
 2.  ユーザー名とパスワードを入力し、 **[OK]** をクリックします。  
   
@@ -56,20 +56,20 @@ ms.locfileid: "36071575"
   
 7.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
-8.  をクリックして**Default PowerPivot Service Application**をこのアプリケーションの PowerPivot 管理ダッシュ ボードを開きます。 最初に使用するときは、ダッシュボードの読み込みに数分かかります。  
+8.  クリックして**Default PowerPivot Service Application**をこのアプリケーションの PowerPivot 管理ダッシュ ボードを開きます。 最初に使用するときは、ダッシュボードの読み込みに数分かかります。  
   
-     または、横に空白部分をクリックして**Default PowerPivot Service Application** 、行を選択して **プロパティ**をこのサービス アプリケーションの構成設定を表示します。 構成設定とアプリケーション プロパティの両方を修正して、サーバーの構成を変更できます。 これらの設定の詳細については、次を参照してください。[を作成し、サーバーの全体管理で PowerPivot サービス アプリケーションを構成する](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)です。  
+     代わりに、横に空白部分をクリックして**Default PowerPivot Service Application** 、行を選択して **プロパティ**このサービス アプリケーションの構成設定を表示します。 構成設定とアプリケーション プロパティの両方を修正して、サーバーの構成を変更できます。 これらの設定の詳細については、次を参照してください。[を作成し、サーバーの全体管理で PowerPivot サービス アプリケーションを構成する](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)します。  
   
 ## <a name="verify-integration-at-the-site-level"></a>サイト レベルでの統合の確認  
  PowerPivot の SharePoint サイトとの統合を確認するには、次の操作を行います。  
   
-1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、http:// を指定できます\<コンピューター名 >、URL アドレスにします。  
+1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、http:// を指定できます\<コンピューター名 >、URL アドレス。  
   
 2.  PowerPivot データ アクセス機能と PowerPivot データ処理機能がアプリケーションで使用可能になっていることを確認します。 そのためには、PowerPivot によって提供されるライブラリ テンプレートがあるかどうかを確認します。  
   
-    1.  サイトのアクションで、をクリックして**詳細オプション.**.  
+    1.  サイトの操作をクリックします**オプション。**.  
   
-    2.  ライブラリでは、表示されるはず**データ フィード ライブラリ**と**PowerPivot ギャラリー**です。 これらのライブラリ テンプレートは PowerPivot 機能によって提供されるものであり、PowerPivot 機能が正しく統合されている場合に [ライブラリ] に表示されます。  
+    2.  ライブラリでは、表示する必要があります**データ フィード ライブラリ**と**PowerPivot ギャラリー**します。 これらのライブラリ テンプレートは PowerPivot 機能によって提供されるものであり、PowerPivot 機能が正しく統合されている場合に [ライブラリ] に表示されます。  
   
 ## <a name="verify-data-access-on-the-server"></a>サーバーでのデータ アクセスの確認  
  サーバーで PowerPivot データ アクセスを確認するには、次の操作を行います。  
@@ -90,12 +90,12 @@ ms.locfileid: "36071575"
   
 7.  [サーバーの種類] で **[Analysis Services]** を選択します。  
   
-8.  サーバー名を入力**\<サーバー名 > \powerpivot**ここで、 **\<サーバー名 >** PowerPivot for SharePoint のインストールをしたコンピューターの名前を指定します。  
+8.  サーバー名 で次のように入力します。 **\<サーバー名 > \powerpivot**ここで、 **\<サーバー名 >** 、PowerPivot for SharePoint のインストールをしたコンピューターの名前を指定します。  
   
 9. **[接続]** をクリックします。 これにより、Analysis Services サーバーが使用可能であることを確認します。  
   
-10. オブジェクト エクスプ ローラーでクリックする**データベース**読み込まれる PowerPivot データ ファイルの一覧を表示します。  
+10. オブジェクト エクスプ ローラーでクリックすることができます**データベース**読み込まれる PowerPivot データ ファイルの一覧を表示します。  
   
-11. コンピューターのファイル システムのフォルダーで、ファイルがディスクにキャッシュされているかどうかを確認します。 キャッシュされたファイルが存在していれば、配置が機能していることの確認になります。 ファイル キャッシュを表示するには、\<ドライブ >: \Program Files\Microsoft SQL Server\MSAS11 です。POWERPIVOT\OLAP\Backup\Sandboxes\Default PowerPivot サービス アプリケーションのフォルダーです。 キャッシュされた各データベースは、名前が一意になるように、GUID ベースの名前付け規則を使用してそれぞれのフォルダーに格納されます。  
+11. コンピューターのファイル システムのフォルダーで、ファイルがディスクにキャッシュされているかどうかを確認します。 キャッシュされたファイルが存在していれば、配置が機能していることの確認になります。 ファイル キャッシュを表示するには、\<ドライブ >: \Program Files\Microsoft SQL Server\MSAS11 します。POWERPIVOT\OLAP\Backup\Sandboxes\Default PowerPivot サービス アプリケーションのフォルダーです。 キャッシュされた各データベースは、名前が一意になるように、GUID ベースの名前付け規則を使用してそれぞれのフォルダーに格納されます。  
   
   

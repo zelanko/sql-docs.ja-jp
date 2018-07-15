@@ -5,22 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- docset-sql-devref
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
-caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8ed53ccfb601cf12c55de44027b22f7d5f0f41d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 25e0bdf059d1fec6c0716a809c54dd63153defca
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165057"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351524"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Web サービス操作の分類 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サービスには、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] がユーザー インターフェイスを通じて行うすべての機能をコード記述で制御できるようにするための操作が、完全なセットとして含まれています。 Web サービス操作は、<xref:Microsoft.MasterDataServices.IService> インターフェイスによって定義され、<xref:Microsoft.MasterDataServices.ServiceClient> クラスのメソッドとして実装されます。 このトピックでは、Web サービス API の使用方法を理解しやすくするために、Web サービス操作を概念ごとのカテゴリに分類します。  
@@ -142,7 +139,7 @@ ms.locfileid: "36165057"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>データ エクスポートの操作  
- これらの操作は、サブスクリプション ビューを使用してデータをエクスポートするために使用されます。 詳細については、次を参照してください。[データのエクスポート&#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)です。  
+ これらの操作は、サブスクリプション ビューを使用してデータをエクスポートするために使用されます。 詳細については、次を参照してください。[データのエクスポート&#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)します。  
   
 ||  
 |-|  

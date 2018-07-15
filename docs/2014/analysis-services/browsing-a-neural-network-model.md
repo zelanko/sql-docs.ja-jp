@@ -1,5 +1,5 @@
 ---
-title: ニューラル ネットワーク モデルを参照 |Microsoft ドキュメント
+title: ニューラル ネットワーク モデルの参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1eecb17419c6b0f89f9049bf7d9269b2d1ec32c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ddfa179c57082eec38e14f0693cd707922f0812a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286368"
 ---
 # <a name="browsing-a-neural-network-model"></a>ニューラル ネットワーク モデルの参照
   **[参照]** を使用してニューラル ネットワークまたはロジスティック回帰モデルを開くと、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のニューラル ネットワーク モデル ビューアーに似た対話型ビューアーにモデルが表示されます。 ビューアーは、相関関係の調査、およびモデルと基になるデータのパターンに関する情報の取得に役立ちます。  
@@ -46,7 +46,7 @@ ms.locfileid: "36176054"
   
  このビューアーを使用すると、顧客が自転車購入者と非購入者のどちらのカテゴリに属する可能性が高いか判断する際に最も重要な要因を調査できます。  
   
- ![選択した属性の結果に対する影響のテスト](media/dm13-neuralnet-agebuyer1.gif "選択した属性の結果に対する影響のテスト")  
+ ![選択した属性の結果に対する影響をテスト](media/dm13-neuralnet-agebuyer1.gif "選択した属性の結果に対する影響のテスト")  
   
 ##### <a name="explore-variables"></a>変数の調査  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36176054"
   
      Income 列の場合、78.4-154.06 (最上位の収入範囲) のようなグループに細分されています。  
   
-     ![変数がビン分割方法を表示する並べ替え](media/dm13-nn-bucketing-variables.gif "変数がビン分割方法を表示する並べ替え")  
+     ![変数がどのようにビン分割されたかを表示する並べ替え](media/dm13-nn-bucketing-variables.gif "並べ替え変数がどのようにビン分割されたかを表示するには")  
   
      異なるグループ分けが必要な場合は、[ラベルの変更 &#40;SQL Server データ マイニング アドイン&#41;](relabel-sql-server-data-mining-add-ins.md) ツールまたは Excel 関数を使用して、モデルを構築する前に新しい収入カテゴリを作成する必要があります。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36176054"
   
 1.  特定のグループを対象として、そのグループで購入に最も大きく影響する要因を確認するとします。  
   
-     **入力** ウィンドウで、をクリックして、 **\<すべて >** セルの下にある**属性**を選択し、 **Age**です。  
+     **入力**ウィンドウで、をクリックして、 **\<すべて >** セルの下で**属性**を選択し、**年齢**。  
   
      **[値]** で、最も若い年齢のカテゴリを選択します。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36176054"
   
      たとえば、入力属性として **[Gender]** (性別) を追加し、値として **[Female]** (女性) を選択します。  
   
-     ![選択した属性の結果に対する影響のテスト](media/dm13-neuralnet-agebuyer2.gif "選択した属性の結果に対する影響のテスト")  
+     ![選択した属性の結果に対する影響をテスト](media/dm13-neuralnet-agebuyer2.gif "選択した属性の結果に対する影響のテスト")  
   
      変数の一覧がどのように変化するか確認してください。 現在は **[Income]** が、目標の結果を予測するうえで最も重要な変数です。  
   

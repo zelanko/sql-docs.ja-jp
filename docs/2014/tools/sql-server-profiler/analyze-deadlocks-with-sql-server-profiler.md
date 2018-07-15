@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler を使用したデッドロックの分析 |Microsoft ドキュメント
+title: SQL Server Profiler を使用したデッドロックの分析 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
 - Profiler [SQL Server Profiler], deadlocks
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30ac6e2bf9ecade850ef28169ce1e4c9ebdb8ce8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: afc7eb593d226a71e761b1197fb1bab6eeb13517
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308902"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler を使用したデッドロックの分析
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、デッドロックの原因を特定します。 デッドロックは、SQL Server 内のリソースの集合に対して複数のスレッド間またはプロセス間で相互に依存関係があるときに発生します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用すると、分析用にデッドロック イベントを記録、再生、および表示するトレースを作成できます。  
@@ -51,7 +51,7 @@ ms.locfileid: "36085568"
  テーブル、インデックス、行などのデータベース オブジェクト。  
   
  エッジ  
- プロセスとリソース間の関係。 A`request`エッジは、プロセスがリソースを待機しているときに発生します。 `owner`エッジは、リソースがプロセスを待機しているときに発生します。 ロック モードは、エッジの記述に含まれます。 たとえば、" **モード: X**" などです。  
+ プロセスとリソース間の関係。 A `request` edge は、プロセスがリソースを待機しているときに発生します。 `owner` Edge は、リソースがプロセスを待機しているときに発生します。 ロック モードは、エッジの記述に含まれます。 たとえば、" **モード: X**" などです。  
   
 ## <a name="deadlock-process-node"></a>デッドロック プロセス ノード  
  Deadlock Wait-for Graph には、プロセス ノードにプロセスに関する情報が含まれています。 次の表で、プロセスの構成要素について説明します。  

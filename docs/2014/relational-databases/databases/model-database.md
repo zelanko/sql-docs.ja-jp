@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f8fd67f968701440b06274bbd40600be94c00b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 729c2d4ea6f89a8b97917d6b22ca885342618018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242882"
 ---
 # <a name="model-database"></a>model データベース
   **model** データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに作成するすべてのデータベースのテンプレートとして使用されるデータベースです。 **tempdb** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動するたびに作成されるので、 **model** データベースが常に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムに存在する必要があります。 **model** データベースの内容全体 (データベース オプションを含む) が新しいデータベースにコピーされます。 **model** の設定の一部は、スタートアップ中に新しい **tempdb** を作成するためにも使用されます。このため、 **model** データベースは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムに常に存在する必要があります。  
@@ -39,7 +39,7 @@ ms.locfileid: "36083427"
  **model** データベースを変更すると、変更後に作成したすべてのデータベースにその変更が継承されます。 たとえば、権限やデータベース オプションを設定したり、テーブル、関数、ストアド プロシージャなどのオブジェクトを追加できます。 **model** データベースのファイル プロパティは例外で、データ ファイルの初期サイズを除き、無視されます。  
   
 ## <a name="physical-properties-of-model"></a>model データベースの物理プロパティ  
- **model** データベースのデータ ファイルとログ ファイルの初期構成値を次の表に示します。 各エディションのこれらのファイルのサイズが多少異なることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ **model** データベースのデータ ファイルとログ ファイルの初期構成値を次の表に示します。 各エディションのこれらのファイルのサイズが多少異なることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 |ファイル|論理名|物理名|ファイル拡張|  
 |----------|------------------|-------------------|-----------------|  
@@ -77,12 +77,12 @@ ms.locfileid: "36083427"
 |PARAMETERIZATION|SIMPLE|はい|  
 |QUOTED_IDENTIFIER|OFF|はい|  
 |READ_COMMITTED_SNAPSHOT|OFF|はい|  
-|RECOVERY|依存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディション<sup>1</sup>|はい|  
+|RECOVERY|依存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]edition<sup>1</sup>|はい|  
 |RECURSIVE_TRIGGERS|OFF|はい|  
 |Service Broker のオプション|DISABLE_BROKER|いいえ|  
 |TRUSTWORTHY|OFF|いいえ|  
   
- <sup>1</sup>データベースの現在の復旧モデルを確認するを参照してください[を表示または変更するデータベースの復旧モデル&#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)または[sys.databases &#40;TRANSACT-SQL&#41; 。](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup>データベースの現在の復旧モデルを確認するを参照してください[表示または変更、データベースの復旧モデル&#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)または[sys.databases &#40;TRANSACT-SQL&#41; 。](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)」を参照してください。  
   

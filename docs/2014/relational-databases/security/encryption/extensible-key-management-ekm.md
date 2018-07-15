@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Key Management
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02590440104caba60d6e102ece0844f9424595ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: c0537173f3b3750c56ef7e4ef2b582df162f54df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288668"
 ---
 # <a name="extensible-key-management-ekm"></a>拡張キー管理 (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *拡張キー管理* (EKM) を含むデータ暗号化機能が用意されています。暗号化とキーの生成には *Microsoft Cryptographic API* (MSCAPI) が使用されます。 データとキーの暗号化のための暗号化キーは一時的なキー コンテナーに作成され、それらをデータベースに格納するには、まずプロバイダーからエクスポートする必要があります。 この方法により、暗号化キー階層とキーのバックアップを含むキー管理を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で処理できるようになります。  
@@ -39,7 +38,7 @@ ms.locfileid: "36076861"
  Azure 仮想マシンで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521401)に格納されたキーを使用できます。 詳細については、「 [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)で処理できるようになります。  
   
 ## <a name="ekm-configuration"></a>EKM の構成  
- 拡張キー管理は [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションでサポートされているわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ 拡張キー管理は [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションでサポートされているわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
  既定では、拡張キー管理は無効です。 この機能を有効にするには、次のオプションと値を使用して sp_configure コマンドを実行します。  
   

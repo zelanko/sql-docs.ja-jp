@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e01b13d7d8f4d7abc5e57a7bb7ebf23457bfe83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 45b6a7ccfb2a6d19fb85fc016cbcf66995976fc2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238482"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>アイテムへの展開または折りたたみアクションの追加 (レポート ビルダーおよび SSRS)
   レポート アイテムの展開と折りたたみや、グループと関連付けられているテーブルやマトリックスの行と列の展開と折りたたみを、ユーザーが対話形式で行うようにできます。 アイテムの展開と折りたたみをユーザーが行うようにするには、アイテムの表示プロパティを設定します。 表示の設定は HTML レポート ビューアーで行い、 *ドリルダウン* アクションと呼ばれることがあります。  
@@ -48,7 +48,7 @@ ms.locfileid: "36177918"
     > [!NOTE]  
     >  プロパティ ペインが表示されない場合は、リボンの **[表示]** をクリックしてから **[プロパティ]** をクリックします。  
   
-4.  `Hidden`、初めてレポートを実行するときにこのレポート アイテムの表示を設定する次のオプションのいずれかを選択します。  
+4.  `Hidden`、初めてレポートを実行するこのレポート アイテムの表示を設定するのには、次のオプションのいずれかを選択します。  
   
     -   選択`False`レポート アイテムを表示します。  
   

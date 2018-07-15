@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - property pages [SQL Server Management Studio]
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: acf93e98116b42808a9ed93321fbe57f5976f8b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b72b3a0391753d7f2af138baab8f05f103937d29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308852"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio のプロパティ ページ
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のプロパティ ページのダイアログ ボックスでは、項目で展開や折りたたみのできる共通の形式で情報が表示されます。 表示されるフィールドは、プロパティごとに異なります。 淡色で表示されているプロパティは変更できません。 [項目別] および [アルファベット順] ボタンはプロパティ ページの上部にあります。  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のプロパティ ページのダイアログ ボックスでは、項目で展開や折りたたみのできる共通の形式で情報が表示されます。 表示されるフィールドは、プロパティごとに異なります。 淡色で表示されているプロパティは変更できません。 [項目別] および [アルファベット順] ボタンはプロパティ ページの上部にあります。  
   
  以下の表に、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のプロパティ ページのダイアログ ボックスで使用される共通の要素について示します。  
   

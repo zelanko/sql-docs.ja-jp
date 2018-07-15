@@ -1,5 +1,5 @@
 ---
-title: コマンド プロンプトから PowerPivot のインストール |Microsoft ドキュメント
+title: コマンド プロンプトから PowerPivot のインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 7adf6dfa581d10626c6513ecb2ee30d58c3bb6d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60949c1ff0431daf988e2fd5d4a1d2b8ad41b524
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210792"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>コマンド プロンプトからの PowerPivot のインストール
   コマンド ラインからセットアップを実行して、SQL Server PowerPivot for SharePoint をインストールすることができます。 コマンドには `/ROLE` パラメーターを含め、`/FEATURES` パラメーターを除外する必要があります。  
@@ -42,10 +42,10 @@ ms.locfileid: "36177916"
   
  既存のファーム オプションでは、SharePoint ファームが既に存在することが想定されます。 新しいファーム オプションでは、ユーザーが新しいファームを作成することが想定されます。コマンド ライン構文でデータベース エンジン インスタンスの追加がサポートされているため、データベース エンジン インスタンスをファームのデータベース サーバーとして使用できます。  
   
- 以前のリリースとは異なり、すべてのサーバー構成タスクはインストール後のタスクとして実行されます。 インストールと構成の手順を自動化している場合は、PowerShell を使用してサーバーを構成できます。 詳細については、次を参照してください。 [Windows PowerShell を使用して、PowerPivot 構成](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)です。  
+ 以前のリリースとは異なり、すべてのサーバー構成タスクはインストール後のタスクとして実行されます。 インストールと構成の手順を自動化している場合は、PowerShell を使用してサーバーを構成できます。 詳細については、次を参照してください。 [Windows PowerShell を使用して、PowerPivot 構成](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)します。  
   
 ## <a name="example-commands"></a>コマンドの例  
- 次の例では、各オプションの使用方法を示します。 例 1 に示す`SPI_AS_ExistingFarm`です。  
+ 次の例では、各オプションの使用方法を示します。 例 1 に示す`SPI_AS_ExistingFarm`します。  
   
 ```  
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -57,7 +57,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_Existing
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a> コマンドの構文を変更します。  
+##  <a name="Join"></a> コマンド構文の変更  
  次の手順に従って、コマンド構文の例を変更します。  
   
 1.  次のコマンドをコピーして、メモ帳に貼り付けます。  
@@ -86,21 +86,21 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
     ```  
   
-3.  用のプレース ホルダーを置換\<domain \username > および\<StrongPassword > を有効なユーザー アカウントとパスワード。  
+3.  プレース ホルダー \<domain \username > および\<StrongPassword > を有効なユーザー アカウントとパスワード。  
   
-     `/assvaccount`と **/assvcpassword**パラメーター構成を使用して、[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]アプリケーション サーバー上のインスタンス。 これらのプレースホルダーを有効なアカウント情報に置き換えます。  
+     `/assvaccount`と **/assvcpassword**の構成にパラメーターを使用、[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]アプリケーション サーバー上のインスタンス。 これらのプレースホルダーを有効なアカウント情報に置き換えます。  
   
      **/Assysadminaccounts**パラメーターは、SQL Server セットアップを実行しているユーザーの id を設定する必要があります。 システム管理者を少なくとも 1 人指定する必要があります。 SQL Server セットアップでは、あらかじめ登録された Administrators グループのメンバーに対して sysadmin 権限が自動的に付与されなくなったことに注意してください。  
   
 4.  改行を削除します。  
   
-5.  コマンド全体を選択し、クリックして**コピー**編集 メニュー上。  
+5.  コマンド全体を選択し、クリックして**コピー** [編集] メニュー。  
   
-6.  管理者のコマンド プロンプトを開きます。 これを行うには、をクリックして**開始**をコマンド プロンプトを右クリックし、**管理者として実行**です。  
+6.  管理者のコマンド プロンプトを開きます。 これを行うには、次のようにクリックします。**開始**をコマンド プロンプトを右クリックし**管理者として実行**します。  
   
 7.  SQL Server のインストール メディアを含むドライブまたは共有フォルダーに移動します。  
   
-8.  編集済みのコマンドをコマンド ラインに貼り付けます。 これを行うには、コマンド プロンプト ウィンドウの左上隅にあるアイコンをクリックし、**編集**、クリックして**貼り付け**です。  
+8.  編集済みのコマンドをコマンド ラインに貼り付けます。 これを行うには、コマンド プロンプト ウィンドウの左上隅のアイコンをクリックをポイントして**編集**、 をクリックし、**貼り付け**します。  
   
 9. キーを押して**Enter**コマンドを実行します。 セットアップが完了するまで待ちます。 コマンド プロンプト ウィンドウでセットアップの進行状況を監視できます。  
   

@@ -18,16 +18,16 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6201ec5007c3f7e09c2713d45bdd86badb2addfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 0d2c2c37e0f9c5485b530483b60da08d8da06173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316822"
 ---
 # <a name="understanding-the-script-component-object-model"></a>スクリプト コンポーネントのオブジェクト モデルについて
-  [コーディングとスクリプト コンポーネントのデバッグ] に説明したように (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md、スクリプト コンポーネント プロジェクト格納 3 つのプロジェクト項目。  
+  [コーディングとスクリプト コンポーネントのデバッグ] で説明したように (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md、スクリプト コンポーネント プロジェクトには、3 つのプロジェクト項目。  
   
 1.  `ScriptMain` アイテム。`ScriptMain` クラスを含み、ここにカスタム コードを記述します。 `ScriptMain` クラスは `UserComponent` クラスから継承されます。  
   
@@ -129,7 +129,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>プロジェクト アイテム ComponentWrapper が提供する機能  
  プロジェクト アイテム ComponentWrapper には、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> から派生する `UserComponent` という名前のクラスがあります。 また、カスタム コードを記述する `ScriptMain` クラスは、`UserComponent` から派生します。 `UserComponent` クラスには次のメソッドが含まれています。  
   
--   `ProcessInput` メソッドをオーバーライドして実装したメソッド。 これは、データ フロー エンジンが実行時に `PreExecute` メソッドの次に呼び出すメソッドで、繰り返し呼び出される場合があります。 `ProcessInput` 処理をする渡します、  **\<inputbuffer > _ProcessInput**メソッドです。 次に `ProcessInput` メソッドは入力バッファーが末尾に達しているかどうかを確認し、達している場合は、オーバーライド可能な `FinishOutputs` メソッドと private メソッド `MarkOutputsAsFinished` を呼び出します。 `MarkOutputsAsFinished` メソッドは、次に最後の出力バッファーの `SetEndOfRowset` を呼び出します。  
+-   `ProcessInput` メソッドをオーバーライドして実装したメソッド。 これは、データ フロー エンジンが実行時に `PreExecute` メソッドの次に呼び出すメソッドで、繰り返し呼び出される場合があります。 `ProcessInput` 処理を** \<inputbuffer > _ProcessInput**メソッド。 次に `ProcessInput` メソッドは入力バッファーが末尾に達しているかどうかを確認し、達している場合は、オーバーライド可能な `FinishOutputs` メソッドと private メソッド `MarkOutputsAsFinished` を呼び出します。 `MarkOutputsAsFinished` メソッドは、次に最後の出力バッファーの `SetEndOfRowset` を呼び出します。  
   
 -   **\<inputbuffer>_ProcessInput** メソッドのオーバーライド可能な実装。 この既定の実装では、単に各入力行の間をループし、**\<inputbuffer>_ProcessInputRow** を呼び出します。  
   
@@ -154,7 +154,7 @@ public override void PreExecute()
   
 -   各出力列の、名前付きで型指定された、書き込み専用のアクセサー プロパティ。  
   
--   書き込み専用**\<列 > _IsNull**列値に設定を使用できる各選択されている出力列のプロパティを`null`です。  
+-   書き込み専用**\<列 > _IsNull**プロパティに、列の値を設定するために使用できる各選択されている出力列の`null`します。  
   
 -   空の新しい行を出力バッファーに追加するための `AddRow` メソッド。  
   
@@ -180,7 +180,7 @@ public override void PreExecute()
  データの行を処理した後に 1 回だけ実行する必要のある処理がある場合は、基本クラス <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドします。 たとえば、変換元でデータをデータ フローに読み込むために使用した `System.Data.SqlClient.SqlDataReader` を閉じることができます。  
   
 > [!IMPORTANT]  
->  `ReadWriteVariables` のコレクションは、`PostExecute` メソッド内でのみ使用できます。 したがって、データ行を処理するたびにパッケージ変数の値を直接増やすことはできません。 代わりに、ローカル変数の値をインクリメントし、内のローカル変数の値をパッケージ変数の値を設定、`PostExecute`メソッドのすべてのデータの処理が完了します。  
+>  `ReadWriteVariables` のコレクションは、`PostExecute` メソッド内でのみ使用できます。 したがって、データ行を処理するたびにパッケージ変数の値を直接増やすことはできません。 代わりに、ローカル変数の値をインクリメントし、内のローカル変数の値にパッケージ変数の値を設定、`PostExecute`メソッドは、すべてのデータの処理が完了します。  
   
 ## <a name="releaseconnections-method"></a>ReleaseConnections メソッド  
  通常、変換元および変換先は外部データ ソースに接続する必要があります。 基本クラス <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドして、以前に <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A> メソッドで開いた接続を閉じ、解放します。  
@@ -206,10 +206,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。  **<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
- [スクリプト コンポーネントの構成、スクリプト コンポーネント エディター]((configuring-the-script-component-in-the-script-component-editor.md)   
+ [スクリプト コンポーネントで、スクリプト コンポーネント エディターの構成]((configuring-the-script-component-in-the-script-component-editor.md)   
  [コーディングとスクリプト コンポーネントのデバッグ](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
   
   

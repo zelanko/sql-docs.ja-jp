@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e99859dcdfcc2061622e955399b6d7bdac8bcbf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e15f7e75f8967fb49b33b6b8a8eb6720b92131d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295022"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy を使用したモデルの配置パッケージの配置
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、MDSModelDeploy ツールを使用して、次のどちらかを含むパッケージを配置します。  
@@ -50,7 +50,7 @@ ms.locfileid: "36072357"
   
 2.  コマンド プロンプトを開き、MDSModelDeploy.exe のある場所に移動します。  
   
-    -   MDS が既定の場所にインストールされている場合、ツールは*ドライブ*: \Program Files\Microsoft SQL server \120\master データ Services\Configuration\MDSModelDeploy.exe  
+    -   MDS を既定の場所にインストールする場合、ツールは*ドライブ*: SQL server \120\master Data Services\Configuration\MDSModelDeploy.exe \Program Files\Microsoft  
   
     -   MDS を既定の場所にインストールしなかった場合は、ローカル コンピューター内で MDSModelDeploy.exe を検索します。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36072357"
   
  **注**  
   
--   としてビューが作成された場合は、パッケージ内のサブスクリプション ビューでは、既存のモデルに同じ名前のサブスクリプション ビューが含まれる*modelname.subscriptionviewname*です。 この名前が既に使用されている場合、サブスクリプション ビューは作成されません。  
+-   としてビューを作成する場合は、パッケージ内のサブスクリプション ビューでは、既存のモデルにサブスクリプション ビューと同じ名前が含まれる*modelname.subscriptionviewname*します。 この名前が既に使用されている場合、サブスクリプション ビューは作成されません。  
   
 -   配置プロセスには、次の 4 つの手順があります。  
   

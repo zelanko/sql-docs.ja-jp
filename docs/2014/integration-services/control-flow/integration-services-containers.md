@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
 - containers [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c1cdd3b3a75560d1ced61684e1063f4571115833
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06ba65f48edc9434eb1cec485e0f219958e52a1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283628"
 ---
 # <a name="integration-services-containers"></a>Integration Services コンテナー
   コンテナーとは、パッケージに構造を提供し、タスクにサービスを提供する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクトのことです。 コンテナーは、パッケージ内の制御フローの反復をサポートし、タスクおよびコンテナーを意味のある作業単位にグループ化します。 コンテナーには、タスクの他に別のコンテナーを含めることができます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36179368"
   
 -   フォルダー内のファイル、スキーマ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトなど、コレクション内の各要素に対してタスクを繰り返します。 たとえば、複数ファイル内に含まれる Transact-SQL ステートメントをパッケージで実行できます。  
   
--   指定された式が評価されるまで、タスクを繰り返します`false`です。 たとえば、パッケージは各種電子メール メッセージを各曜日に 1 回、週に合計 7 回送信できます。  
+-   指定された式が評価されるまで、タスクを繰り返します`false`します。 たとえば、パッケージは各種電子メール メッセージを各曜日に 1 回、週に合計 7 回送信できます。  
   
 -   ある単位として処理の成否を評価する必要のあるタスクおよびコンテナーをグループ化します。 たとえば、パッケージはデータベース テーブルの行を削除および追加するタスクをグループ化し、1 つのタスクが失敗したときにタスク全体をコミットまたはロールバックできます。  
   
@@ -61,17 +61,17 @@ ms.locfileid: "36179368"
 |`DisableEventHandlers`|コンテナーに関連付けられているイベント ハンドラーを実行するかどうかを示すブール値です。 このプロパティの既定値は`False`します。|  
 |`FailPackageOnFailure`|コンテナーでエラーが発生した場合、パッケージが失敗するかどうかを示すブール値です。 このプロパティの既定値は`False`します。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>」を参照してください。|  
 |`FailParentOnFailure`|コンテナーでエラーが発生した場合、親コンテナーが失敗するかどうかを示すブール値です。 このプロパティの既定値は`False`します。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>」を参照してください。|  
-|`ForcedExecutionValue`|場合`ForceExecutionValue`に設定されている`True`コンテナーのオプションの実行値を含むオブジェクト。 このプロパティの既定値は **0**です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>」を参照してください。|  
-|`ForcedExecutionValueType`|データ型`ForcedExecutionValue`です。 このプロパティの既定値は`Int32`します。|  
-|`ForceExecutionResult`|パッケージまたはコンテナーの強制実行結果を示す値です。 値は、 `None`、 `Success`、 `Failure`、および`Completion`です。 このプロパティの既定値は`None`します。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>」を参照してください。|  
+|`ForcedExecutionValue`|場合`ForceExecutionValue`に設定されている`True`コンテナーのオプションの実行値を格納しているオブジェクト。 このプロパティの既定値は **0**です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>」を参照してください。|  
+|`ForcedExecutionValueType`|データ型`ForcedExecutionValue`します。 このプロパティの既定値は`Int32`します。|  
+|`ForceExecutionResult`|パッケージまたはコンテナーの強制実行結果を示す値です。 値は、 `None`、 `Success`、 `Failure`、および`Completion`します。 このプロパティの既定値は`None`します。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>」を参照してください。|  
 |`ForceExecutionValue`|コンテナーのオプションの実行値に特定の値を適用する必要があるかどうかを示すブール値です。 このプロパティの既定値は`False`します。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>」を参照してください。|  
 |`ID`|コンテナー GUID です。パッケージの作成時に割り当てられます。 このプロパティは読み取り専用です。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>。|  
 |`IsolationLevel`|コンテナー トランザクションの分離レベルです。 値は、`Unspecified`、`Chaos`、`ReadUncommitted`、`ReadCommitted`、`RepeatableRead`、`Serializable`、および `Snapshot` です。 このプロパティの既定値は`Serializable`します。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>」を参照してください。|  
 |`LocaleID`|Microsoft Win32 ロケールです。 このプロパティの既定値は、ローカル コンピューター上のオペレーティング システムのロケールです。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>」を参照してください。|  
-|`LoggingMode`|コンテナーのログ記録の動作を指定する値です。 値は、 `Disabled`、 `Enabled`、および`UseParentSetting`です。 このプロパティの既定値は`UseParentSetting`します。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>」を参照してください。|  
+|`LoggingMode`|コンテナーのログ記録の動作を指定する値です。 値は、 `Disabled`、 `Enabled`、および`UseParentSetting`します。 このプロパティの既定値は`UseParentSetting`します。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>」を参照してください。|  
 |`MaximumErrorCount`|コンテナーが実行を停止するまでに発生が許可される、最大エラー数を示します。 このプロパティの既定値は **1**です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>」を参照してください。|  
 |`Name`|コンテナーの名前です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>」を参照してください。|  
-|`TransactionOption`|コンテナーに対するトランザクションの関与を示します。 値は、 `NotSupported`、 `Supported`、`Required`です。 このプロパティの既定値は`Supported`します。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>」を参照してください。|  
+|`TransactionOption`|コンテナーに対するトランザクションの関与を示します。 値は、 `NotSupported`、 `Supported`、`Required`します。 このプロパティの既定値は`Supported`します。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>」を参照してください。|  
   
  Foreach ループ、For ループ、シーケンス、およびタスク ホストの各コンテナーをプログラムで構成する際に使用できるすべてのプロパティの詳細については、以下の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API のトピックを参照してください。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36179368"
  コンテナーには実行可能ファイルおよび優先順位制約で構成される制御フローが含まれ、場合によってはイベント ハンドラーおよび変数が使用されています。 ただし、タスク ホスト コンテナーは単一タスクをカプセル化し、優先順位制約を使用しない、例外的なコンテナーです。  
   
 ### <a name="executables"></a>実行可能ファイル  
- 実行可能ファイルは、コンテナー レベルのタスクおよびコンテナー内の任意のコンテナーを参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供するタスクおよびコンテナーのいずれか、またはカスタム タスクを実行ファイルとすることができます。 詳細については、次を参照してください。 [Integration Services タスク](integration-services-tasks.md)と[Integration Services コンテナー](integration-services-containers.md)です。  
+ 実行可能ファイルは、コンテナー レベルのタスクおよびコンテナー内の任意のコンテナーを参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供するタスクおよびコンテナーのいずれか、またはカスタム タスクを実行ファイルとすることができます。 詳細については、次を参照してください。 [Integration Services タスク](integration-services-tasks.md)と[Integration Services コンテナー](integration-services-containers.md)します。  
   
 ### <a name="precedence-constraints"></a>優先順位制約  
  優先順位制約は、同じ親コンテナー内のコンテナーとタスクを連結して、順序付けられた制御フローを作成します。 優先順位制約の詳細については、「 [優先順位制約](precedence-constraints.md)」を参照してください。  

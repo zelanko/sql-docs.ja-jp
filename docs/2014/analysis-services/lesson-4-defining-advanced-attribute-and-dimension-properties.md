@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 4: 定義する高度な属性およびディメンション プロパティ |Microsoft ドキュメント'
+title: 'レッスン 4: を定義する高度な属性およびディメンションのプロパティ |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 853ce6e8fbbc559e690c46fda0ae1d7db02d2eb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dd26e1f755f655dd5757c35c3232ce34981da6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279814"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>レッスン 4 : 高度な属性およびディメンションのプロパティの定義
   このレッスンでは、属性、属性階層、およびディメンションの高度なプロパティをいくつか取り上げ、その使用方法を学習します。  
@@ -33,7 +33,7 @@ ms.locfileid: "36176716"
  ここでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの修正バージョンを開き、内容を確認して、配置します。このプロジェクトには、複数のメジャー グループと追加ディメンションが含まれています。  
   
  [親子階層の親属性プロパティの定義](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
- ここでは、親子ディメンションのレベル名を定義し、親メンバーに関連付けられているデータの表示、または非表示を指定します。 詳細については、次を参照してください。[親子階層](multidimensional-models/parent-child-dimension.md)と[、親子階層内の属性](multidimensional-models/parent-child-dimension-attributes.md)です。  
+ ここでは、親子ディメンションのレベル名を定義し、親メンバーに関連付けられているデータの表示、または非表示を指定します。 詳細については、次を参照してください。 [、親子階層](multidimensional-models/parent-child-dimension.md)と[、親子階層の属性](multidimensional-models/parent-child-dimension-attributes.md)します。  
   
  [属性メンバーの自動的なグループ化](lesson-4-3-automatically-grouping-attribute-members.md)  
  ここでは、属性階層内のメンバーの配置に基づいて、属性メンバーのグループを自動的に作成します。 詳細については、[「属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  

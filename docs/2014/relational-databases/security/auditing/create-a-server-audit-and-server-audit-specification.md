@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SQLAUDIT.FILTER.F1
 - sql12.swb.sqlaudit.srvaudit.general.f1
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 366904b4db0836df83daf49b30771f8c5b5c4b54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: e05a1d985e287b1ff9d0a767b293cbf29c67bbc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280798"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>サーバー監査およびサーバー監査の仕様を作成する方法
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、サーバー監査またはサーバー監査仕様を作成する方法について説明します。 *のインスタンスや* データベースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムで発生するイベントの追跡およびログ記録が行われます。 *SQL Server Audit* オブジェクトは、監視するサーバー レベルまたはデータベース レベルのアクションおよびアクションのグループの 1 つのインスタンスを収集します。 監査は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス レベルで行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに複数の監査を使用できます。 *サーバー監査の仕様* オブジェクトは監査に属しています。 サーバー監査の仕様は監査ごとに 1 つ作成できます。これは、サーバー監査の仕様も監査も [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのスコープで作成されるためです。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](sql-server-audit-database-engine.md)」を参照してください。  
@@ -84,7 +83,7 @@ ms.locfileid: "36085632"
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 **[続行]** オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許すおそれがあります。 完全な監査を維持することより、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] の操作を続行することの方が重要である場合に、このオプションを選択します。 これは既定値です。  
   
      **[サーバーのシャットダウン]**  
-     監査対象に書き込みを行うサーバー インスタンスが監査対象にデータを書き込むことができない場合に、サーバーを強制的にシャットダウンします。 これを発行するログインを持っている、`SHUTDOWN`権限です。 ログオンにこの権限がない場合、この機能は失敗し、エラー メッセージが表示されます。 監査イベントは発生しません。 監査エラーによってシステムのセキュリティまたは整合性が阻害される可能性がある場合に、このオプションを選択します。  
+     監査対象に書き込みを行うサーバー インスタンスが監査対象にデータを書き込むことができない場合に、サーバーを強制的にシャットダウンします。 これを発行するログインする必要がありますが、`SHUTDOWN`権限。 ログオンにこの権限がない場合、この機能は失敗し、エラー メッセージが表示されます。 監査イベントは発生しません。 監査エラーによってシステムのセキュリティまたは整合性が阻害される可能性がある場合に、このオプションを選択します。  
   
      **[失敗の操作]**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit が監査ログを出力できないとき、そのままではデータベース アクションが原因で、監査イベントが発生する場合、そのデータベース アクションを失敗させます。 監査イベントは発生しません。 監査イベントを発生させないアクションは続行できます。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]へのフル アクセスより、完全な監査の維持の方が重要である場合に、このオプションを選択します。  
@@ -132,7 +131,7 @@ ms.locfileid: "36085632"
   
      **[サーバー監査の仕様の作成]** ダイアログ ボックスで、次のオプションを使用できます。  
   
-     **Name**  
+     **名前**  
      サーバー監査の仕様の名前。 この名前は、新しいサーバー監査の仕様を作成すると自動的に生成されますが、編集可能です。  
   
      **監査**  

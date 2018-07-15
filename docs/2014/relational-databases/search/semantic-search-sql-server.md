@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server]
 - semantic search [SQL Server], overview
@@ -16,22 +15,22 @@ helpviewer_keywords:
 - statistical semantic search [SQL Server], overview
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8746a7f7a7fb8c1dfc84f3f50a09476f77b3c78a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9f00453d8540953beb1db7978c80a807a235a620
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250102"
 ---
 # <a name="semantic-search-sql-server"></a>セマンティック検索 (SQL Server)
   統計的セマンティック検索では、統計的に関連性がある*キー フレーズ*を抽出してインデックスを作成することにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納されている非構造化ドキュメントを深く解釈することができます。 次に、これらのキー フレーズを使用して、 *類似または関連ドキュメント*を特定してインデックスを作成することもできます。  
   
  3 つの Transact-SQL 行セット関数を使用することにより、これらのセマンティック インデックスに対してクエリを実行して、結果を構造化データとして取得することができます。  
   
-##  <a name="whatcanido"></a> セマンティック検索では、どうすればよいですか  
+##  <a name="whatcanido"></a> セマンティック検索では、どうすればでしょうか。  
  セマンティック検索は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既存のフルテキスト検索機能を基にして構築されていますが、キーワード検索を超える新しいシナリオにも対応できます。 フルテキスト検索ではドキュメントの *単語* に対してクエリを実行しますが、セマンティック検索ではドキュメントの *意味* に対してクエリを実行します。 これによって、自動タグ抽出、関連性のあるコンテンツの検出、類似コンテンツにまたがる階層的なナビゲーションなどのソリューションが可能になりました。 たとえば、キー フレーズのインデックスに対してクエリを実行して、ドキュメントの編成またはコーパスに関する分類を作成することができます。 また、ドキュメントの類似性のインデックスに対してクエリを実行して、ジョブの説明に一致するレジュメを特定できます。  
   
  以降の例に、セマンティック検索の機能を示します。  
@@ -74,7 +73,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
   
   
-###  <a name="find3"></a> 類似または関連ドキュメントを構成するキー フレーズを見つける  
+###  <a name="find3"></a> 類似または関連ドキュメントを示すキー フレーズを検索します。  
  次のクエリは、2 つのサンプル ドキュメント間の類似性または関連性を示すキー フレーズを取得します。 結果は、各キー フレーズの重みを順位付けするスコアの降順で表されます。 このクエリは、[semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) 関数を呼び出します。  
   
 ```tsql  

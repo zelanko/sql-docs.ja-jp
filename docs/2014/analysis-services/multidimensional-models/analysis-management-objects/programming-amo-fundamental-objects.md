@@ -1,5 +1,5 @@
 ---
-title: AMO 基本オブジェクトのプログラミング |Microsoft ドキュメント
+title: AMO 基本オブジェクトのプログラミング |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c85b48c62e271dff6a4db582527c68a7735f0dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d85bbc23bd016f2e1dd1d4842a5bd66645035ec2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321302"
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 基本オブジェクトのプログラミング
   基本オブジェクトは、一般に、単純で簡単なオブジェクトです。 これらのオブジェクトは、通常、作成およびインスタンス化され、その後、必要がなくなると、ユーザーによって切断されます。 基礎クラスには、<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource>、<xref:Microsoft.AnalysisServices.DataSourceView> などのオブジェクトが含まれます。 AMO 基本オブジェクトの中で唯一の複雑なオブジェクトは、<xref:Microsoft.AnalysisServices.DataSourceView> です。これは、データ ソース ビューを表す抽象モデルを構築するために詳細を必要とします。  
@@ -83,9 +83,9 @@ static Server ServerConnect( String strStringConnection)
   
  接続文字列の構造は、次のとおりです。  
   
- "**データ ソース =**\<サーバー名 >"です。  
+ "**データ ソース =**\<サーバー名 >"。  
   
- 接続文字列の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Management.Common.OlapConnectionInfo.ConnectionString%2A>です。  
+ 接続文字列の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Management.Common.OlapConnectionInfo.ConnectionString%2A>します。  
   
 ### <a name="validating-the-connection"></a>接続の検証  
  <xref:Microsoft.AnalysisServices.Server> オブジェクトをプログラミングする前に、サーバーに接続されていることを検証する必要があります。 次のコード サンプルは、この方法を示します。 このサンプルでは、`svr` がコード内に存在する <xref:Microsoft.AnalysisServices.Server> オブジェクトであることを前提としています。  
@@ -108,7 +108,7 @@ if ( (svr != null) && ( svr.Connected))
 ```  
   
 ###  <a name="AMO"></a> AmoException 例外オブジェクト  
- AMO は、さまざまな問題が検出されるたびに例外をスローします。 例外の詳細については、次を参照してください。 [AMO のその他のクラスとメソッド](amo-other-classes-and-methods.md)です。 次のサンプル コードは、AMO 内の例外をキャプチャするための正しい方法を示します。  
+ AMO は、さまざまな問題が検出されるたびに例外をスローします。 例外の詳細については、次を参照してください。 [AMO のその他のクラスとメソッド](amo-other-classes-and-methods.md)します。 次のサンプル コードは、AMO 内の例外をキャプチャするための正しい方法を示します。  
   
 ```  
 try  
@@ -181,7 +181,7 @@ static Database CreateDatabase(Server svr, String DatabaseName)
 ### <a name="processing-a-database"></a>データベースの処理  
  <xref:Microsoft.AnalysisServices.Database> オブジェクトには Process メソッドが含まれるため、すべての子オブジェクトを使用したデータベースの処理は非常に単純です。  
   
- Process メソッドにはパラメーターを含めることができますが、パラメーターは必要ありません。 パラメーターを指定しない場合、すべての子オブジェクトは、それぞれの `ProcessDefault` オプションを使用して処理されます。 処理オプションの詳細については、次を参照してください。<xref:Microsoft.AnalysisServices.Database>です。  
+ Process メソッドにはパラメーターを含めることができますが、パラメーターは必要ありません。 パラメーターを指定しない場合、すべての子オブジェクトは、それぞれの `ProcessDefault` オプションを使用して処理されます。 処理オプションの詳細については、次を参照してください。<xref:Microsoft.AnalysisServices.Database>します。  
   
 1.  次のサンプル コードは、既定値を使用してデータベースを処理します。  
   

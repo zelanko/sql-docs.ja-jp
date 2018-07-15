@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
 - clocks [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - target servers [SQL Server], clock synchronization
 ms.assetid: 4fb80502-d271-4d06-bcbc-bfbbceb5f2a2
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cd04b668e7d85bb17fb86b712789b267b48e0b7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: df6882d1424990ab746e45e299d2cb3ce205b100
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297817"
 ---
 # <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>対象サーバーのクロックの同期 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]の対象サーバーのクロックとマスター サーバーのクロックの同期をとる方法について説明します。 これらのシステム クロックの同期をとると、ジョブのスケジュールを効果的に管理できます。  
@@ -88,6 +88,6 @@ ms.locfileid: "36070651"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_resync_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_resync_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)します。  
   
   

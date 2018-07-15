@@ -1,5 +1,5 @@
 ---
-title: 再生結果の確認 |Microsoft ドキュメント
+title: 再生結果の確認 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ecfcf05a685543e22d9ea9bf3b2889fcb8098064
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 03149886d49a86656aca73f80685e711c3ca9b77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308962"
 ---
 # <a name="review-the-replay-results"></a>再生結果の確認
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能が分散再生を完了した後は、各クライアントの再生アクティビティをキャプチャし、クライアントごとに結果トレース ファイルに保存できます。 このアクティビティをキャプチャするには、**replay** オプションを使って管理ツールを実行するときに **-o** パラメーターを使用する必要があります。 replay オプションの詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](replay-option-distributed-replay-administration-tool.md)」を参照してください。  
@@ -81,9 +81,9 @@ ms.locfileid: "36174847"
 |ApplicationName|`nvarchar`|キャプチャ中に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 接続を作成したクライアント アプリケーションの名前。|17|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [SQL Server 分散再生](sql-server-distributed-replay.md)   
  [分散再生の要件](distributed-replay-requirements.md)   
- [管理ツールのコマンド ライン オプション&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [管理ツール コマンド ライン オプション&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [分散再生の構成](configure-distributed-replay.md)  
   
   

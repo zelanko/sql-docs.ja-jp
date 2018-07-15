@@ -1,5 +1,5 @@
 ---
-title: 名前付き MDX (MDX) のセットを構築 |Microsoft ドキュメント
+title: 名前付き MDX (MDX) のセットの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], named sets
 - named sets [MDX]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - set expressions [MDX]
 ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a05b343150cf72a760ba5eb9de24651f0f5db9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f990def60c377ca84b5dde593470634f3927b496
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297462"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>MDX での名前付きセットの作成 (MDX)
   セット式は、長く複雑な宣言になることがあり、そのような場合は読みにくく、理解するのが難しい式になります。 また、同じセット式を頻繁に使用する場合に、その同じセットを繰り返し定義しなければならないのは面倒です。 長く複雑な式や頻繁に使用する式の取り扱いを簡略化するために、多次元式 (MDX) では、そのような式を *名前付きセット*として定義できるようになっています。  

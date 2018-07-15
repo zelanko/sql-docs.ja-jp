@@ -1,5 +1,5 @@
 ---
-title: '[コンテンツ] ページ (レポート マネージャー) |Microsoft ドキュメント'
+title: '[コンテンツ] ページ (レポート マネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 32054fea94b8786fca74ecca9c223d4af9c9d6d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e7f592527e237798618b8af08cf471759d8786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224822"
 ---
 # <a name="contents-page-report-manager"></a>[コンテンツ] ページ (レポート マネージャー)
   [コンテンツ] ページを使用すると、現在のフォルダーのコンテンツを表示、表示するアイテムを選択、または他のフォルダーへ移動できます。 フォルダーを選択すると、このページが開きます。 このページは、レポート マネージャーのホーム ページでもあります。  
@@ -52,7 +52,7 @@ ms.locfileid: "36178827"
   
  選択したアイテムのプロパティの表示と構成に使用するドロップダウン メニューを開くには、アイテムの上にマウス ポインターを移動し、下矢印をクリックします。  
   
- **Delete**  
+ **削除**  
  フォルダーまたは他のアイテムを削除する場合にクリックします。 削除する各アイテムの横のチェック ボックスをオンにしてから、 **[削除]** をクリックします。  
   
  **Move**  
@@ -60,7 +60,7 @@ ms.locfileid: "36178827"
   
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [レポート サーバーのコンテンツ管理&#40;SSRS ネイティブ モード&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

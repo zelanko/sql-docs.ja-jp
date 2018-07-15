@@ -1,5 +1,5 @@
 ---
-title: SetValue メソッド (ClientSettingsGeneralFlag クラス) |Microsoft ドキュメント
+title: SetValue メソッド (ClientSettingsGeneralFlag クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetValue method
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3548492e83a9e9273901d9107ec2a1cd6fc8e80b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 668da5e97862fb27b9051e71be60d74713951d9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297872"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>SetValue メソッド (ClientSettingsGeneralFlag クラス)
   参照されたフラグのすべての値を設定します。  
@@ -52,7 +52,7 @@ Value
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|*Value*|フラグの値を指定するブール値|  
+|*[値]*|フラグの値を指定するブール値|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  

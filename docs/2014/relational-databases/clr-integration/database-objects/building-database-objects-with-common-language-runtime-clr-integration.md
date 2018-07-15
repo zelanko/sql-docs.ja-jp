@@ -1,13 +1,11 @@
 ---
-title: 共通言語ランタイム (CLR) 統合によるデータベース オブジェクトの構築 |Microsoft ドキュメント
+title: 共通言語ランタイム (CLR) 統合によるデータベース オブジェクトの構築 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - .NET Framework routines [SQL Server]
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 070e9df2a42cbed665de1b076600d333926f6ea1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 72d68e213d240e3c6182f99e8c1637c1f1ebedfb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174509"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351014"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>共通言語ランタイム (CLR) 統合を使用したデータベース オブジェクトの構築
   使用してデータベース オブジェクトを構築することができます、 [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 「CLR ルーチン」と呼びます CLR ルーチンには、次のものがあります。  
@@ -40,14 +38,14 @@ ms.locfileid: "36174509"
   
 -   ユーザー定義トリガー  
   
- CLR ルーチンは、マネージ コード内ではそれぞれ同じ構造になります。 CLR ルーチンは、クラスの public static ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET では shared) メソッドにマップされます。 ルーチン以外に、.NET Framework を使用して UDT (ユーザー定義型) やユーザー定義集計関数を定義することもできます。 UDT とユーザー定義集計は、.NET Framework クラス全体にマップされます。  
+ CLR ルーチンは、マネージド コード内ではそれぞれ同じ構造になります。 CLR ルーチンは、クラスの public static ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET では shared) メソッドにマップされます。 ルーチン以外に、.NET Framework を使用して UDT (ユーザー定義型) やユーザー定義集計関数を定義することもできます。 UDT とユーザー定義集計は、.NET Framework クラス全体にマップされます。  
   
- .NET Framework ルーチンの種類ごとに、[!INCLUDE[tsql](../../../includes/ssnoversion-md.md)]を[!INCLUDE[tsql](../../../includes/tsql-md.md)]該当するショートカットを使用することができます。 たとえば、スカラー UDF は任意のスカラー式で使用できます。 また、TVF は任意の FROM 句で使用できます。 プロシージャは、EXEC ステートメントやクライアント アプリケーションから呼び出すことができます。  
+ 各種類の .NET Framework ルーチンには、[!INCLUDE[tsql](../../../includes/ssnoversion-md.md)]を[!INCLUDE[tsql](../../../includes/tsql-md.md)]と同じことができます。 たとえば、スカラー UDF は任意のスカラー式で使用できます。 また、TVF は任意の FROM 句で使用できます。 プロシージャは、EXEC ステートメントやクライアント アプリケーションから呼び出すことができます。  
   
 > [!NOTE]  
 >  効果的であるとクエリ オプティマイザーで判断された場合は、共通言語ランタイムでの CLR オブジェクト (ユーザー定義関数、ユーザー定義型、またはトリガー) の実行を複数のスレッドで行うことができます (並列プラン)。 ただし、ユーザー定義関数がデータにアクセスする場合は、直列プランで実行されます。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] よりも前のサーバー バージョンで実行したときに、ユーザー定義関数に LOB パラメーターが含まれていたり、ユーザー定義関数から値が返される場合も、直列プランで実行する必要があります。  
   
- 次の表は、このセクションで説明されているトピックを一覧表示します。  
+ 次の表は、このセクションで説明するトピックを一覧表示します。  
   
  [CLR 統合の概要](getting-started-with-clr-integration.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と CLR との統合を使用したオブジェクトのコンパイルに必要なライブラリと名前空間の概要について説明します。 また、例として "Hello World" CLR ストアド プロシージャを紹介します。  
@@ -77,6 +75,6 @@ ms.locfileid: "36174509"
  CLR トリガーの実装方法と使用方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [共通言語ランタイム&#40;CLR&#41;の統合の概要](../common-language-runtime-integration-overview.md)  
+ [共通言語ランタイム&#40;CLR&#41;統合の概要](../common-language-runtime-integration-overview.md)  
   
   

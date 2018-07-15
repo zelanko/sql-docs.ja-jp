@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: OData ソース [SSIS] の使用 |Microsoft ドキュメント'
+title: 'チュートリアル: OData ソースの [SSIS] の使用 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a9a680d00867de1a82a1ead0837961ce0492e466
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99695cbfb50a74488a2525544e892d5878e4392e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318805"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>チュートリアル: OData ソースの使用 [SSIS]
   このチュートリアルでは、サンプルの **Northwind** OData サービス (http://services.odata.org/V3/Northwind/Northwind.svc/)) から **Employees** (従業員) コレクションを抽出し、フラット ファイルに読み込むプロセスについて説明します。  
@@ -48,7 +48,7 @@ ms.locfileid: "36076640"
   
 5.  接続に対応する **[新規]** をクリックし、新しい OData 接続マネージャーを追加します。  
   
-6.  **[サービス ドキュメントの場所]** に対応する OData サービスの URL を入力します。 サービス ドキュメントに対応する URL、または特定のフィードかエンティティに対応する URL を指定できます。 このチュートリアルでは、次のように入力します。 [ http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)です。  
+6.  **[サービス ドキュメントの場所]** に対応する OData サービスの URL を入力します。 サービス ドキュメントに対応する URL、または特定のフィードかエンティティに対応する URL を指定できます。 このチュートリアルでは、「 [ http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)します。  
   
 7.  OData サービスにアクセスするために、 **[認証]** で **[Windows 認証]** が選択されていることを確認します。 既定では、**[Windows 認証]** が選択されています。 基本認証を使用するには、 **[次のユーザー名とパスワードを使用]** を選択します。  
   

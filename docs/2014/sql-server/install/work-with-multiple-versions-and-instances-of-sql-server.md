@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - concurrent installations [SQL Server]
 - versions [SQL Server], multiple
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abff13ee6139d74dbe0da10d37ff318d10b47f6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 920e7295d56f3b7bfadf91a9532f638911535d44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246372"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>SQL Server の複数のバージョンおよびインスタンスの使用
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同じコンピューター上で [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の複数のインスタンスをサポートします。 また、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップグレードしたり、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が既にインストールされているコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールすることもできます。 サポートされるアップグレード シナリオについては、「 [サポートされるバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。  
@@ -74,7 +74,7 @@ ms.locfileid: "36178794"
   
  例: Microsoft Sync Framework、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact  
   
- 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact のインストールは、「[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact のアンインストール方法の詳細については、「[SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)」を参照してください。  
+ 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact のインストールは、「[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact のアンインストール方法の詳細については、「[SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)」を参照してください。  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-side-by-side-with-previous-versions-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と以前のバージョンの並列使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを既に実行しているコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールすることができます。 既定のインスタンスが既にコンピューターに存在する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は名前付きインスタンスとしてインストールする必要があります。  
@@ -82,7 +82,7 @@ ms.locfileid: "36178794"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep では、以前のバージョンの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] と同じコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスをサイド バイ サイドでインストールすることはサポートされていません。 たとえば、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスと共に [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の準備済みインスタンスをサイド バイ サイドで準備することはできません。 ただし、同じメジャー バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数の準備済みインスタンスを、同じコンピューターにサイド バイ サイドでインストールできます。 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。  
 >   
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Windows Server 2008 R2 Server Core SP1 を搭載するコンピューターに、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とサイド バイ サイドでインストールすることはできません。 Server Core インストールの詳細については、次を参照してください。 [Server Core での SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)です。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Windows Server 2008 R2 Server Core SP1 を搭載するコンピューターに、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とサイド バイ サイドでインストールすることはできません。 Server Core インストールの詳細については、次を参照してください。 [Server Core での SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)します。  
   
  次の表に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のサイド バイ サイドのサポートを示します。  
   
@@ -96,10 +96,10 @@ ms.locfileid: "36178794"
   
 ## <a name="see-also"></a>参照  
  [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
- [インストール ウィザードによる SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
+ [SQL Server 2014 インストール ウィザードからインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [SQL Server 2014 へのアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)   
- [SQL Server 2014 の各エディションでサポートされる機能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [SQL Server 2014 のエディションでサポートされる機能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [旧バージョンとの互換性](../../../2014/getting-started/backward-compatibility.md)   
  [アップグレード アドバイザーを使用したアップグレードの準備](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   

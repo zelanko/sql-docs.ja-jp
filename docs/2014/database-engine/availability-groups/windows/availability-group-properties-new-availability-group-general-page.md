@@ -1,27 +1,26 @@
 ---
-title: 可用性グループのプロパティおよび新しい可用性グループ ([全般] ページ) |Microsoft ドキュメント
+title: 可用性グループのプロパティおよび新しい可用性グループ ([全般] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 caps.latest.revision: 14
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: d47dc448cb0662d3324eaaa61d257a10caa69e74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cb98cf3bdc1a0e4f021a5b82116dba1f390b0fd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283998"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>[可用性グループのプロパティ] と [新しい可用性グループ] ([全般] ページ)
   このトピックは、**[新しい可用性グループ]** ダイアログ ボックスと **[可用性グループのプロパティ]** ダイアログ ボックスの **[全般]** タブに該当します。  **[新しい可用性グループ]** ダイアログ ボックスでは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を使用せずに新しい可用性グループを作成できます。 **[可用性グループのプロパティ]** ダイアログ ボックスでは、既存の可用性グループの構成を表示、変更できます。  
@@ -69,7 +68,7 @@ ms.locfileid: "36163782"
  **[同期コミット]**  
  プライマリ レプリカは、セカンダリ レプリカがトランザクションをディスクに書き込むまで、特定のトランザクションのコミットを待機します。  
   
- 詳細については、次を参照してください。[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)です。  
+ 詳細については、次を参照してください。[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)します。  
   
  **フェールオーバー モード**  
  レプリカのフェールオーバー モード。次のいずれかです。  

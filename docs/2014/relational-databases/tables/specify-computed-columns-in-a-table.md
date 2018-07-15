@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc44d75cd4ab87623c84eff94f6569872038c1a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0e70c9c5e8060e4cd2daace9c4997ea324533106
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234902"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>テーブルの計算列の指定
   計算列は、PERSISTED とマークされていない限り、テーブルに物理的に保存されない仮想列です。 計算列の式は、他の列のデータを使用して値を計算し、それを自身の列に格納します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して計算列に式を指定できます。  
@@ -66,7 +66,7 @@ ms.locfileid: "36173905"
 4.  **[(数式)]** 子プロパティで、列の式を右側のグリッド セルに入力します。 たとえば、 `SalesTotal` 列に `SubTotal+TaxAmt+Freight`という数式を入力した場合、テーブル内の各行のこれらの列の値が加算されます。  
   
     > [!IMPORTANT]  
-    >  数式でデータ型が異なる 2 つの式を結合すると、データ型の優先順位の規則によって、優先順位の低いデータ型を優先順位の高いデータ型に変換することが指定されます。 暗黙的な変換がサポートされていない場合は、「`Error validating the formula for column column_name.`」というエラーが返されます。 データ型の競合を解決するには、CAST 関数または CONVERT 関数を使用します。 たとえば、型の列`nvarchar`型の列と結合`int`、整数型に変換する必要があります`nvarchar`この数式で示すように`('Prod'+CONVERT(nvarchar(23),ProductID))`です。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。  
+    >  数式でデータ型が異なる 2 つの式を結合すると、データ型の優先順位の規則によって、優先順位の低いデータ型を優先順位の高いデータ型に変換することが指定されます。 暗黙的な変換がサポートされていない場合は、「`Error validating the formula for column column_name.`」というエラーが返されます。 データ型の競合を解決するには、CAST 関数または CONVERT 関数を使用します。 たとえば、型の列`nvarchar`型の列と組み合わせて使用`int`、整数型に変換する必要があります`nvarchar`この数式で示すように`('Prod'+CONVERT(nvarchar(23),ProductID))`します。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。  
   
 5.  **[Is Persisted]** 子プロパティのドロップダウンの **[はい]** または **[いいえ]** をクリックし、データを永続化するかどうかを指定します。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36173905"
   
 1.  **オブジェクト エクスプローラー**で、変更する列が含まれているテーブルを右クリックし、 **[列]** フォルダーを展開します。  
   
-2.  計算列の数式を指定する列を右クリックし、 **[削除]** をクリックします。 **[OK]** をクリックします。  
+2.  計算列の数式を指定する列を右クリックし、 **[削除]** をクリックします。 [**OK**] をクリックします。  
   
 3.  前の手順に従って、新しい列を追加し、計算列の数式を指定して、新しい計算列を追加します。  
   

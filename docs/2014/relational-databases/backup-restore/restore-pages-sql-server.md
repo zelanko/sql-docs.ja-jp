@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restorepage.general.f1
 helpviewer_keywords:
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 caps.latest.revision: 65
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d13ed1c3e6ca12ae0ba61fdb4f8ce0126a1b3614
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6dcda45c3aa53bfe6e3e73338e2a37f207b3007d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279718"
 ---
 # <a name="restore-pages-sql-server"></a>ページ復元 (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してページを復元する方法について説明します。 ページ復元の目的は、データベース全体を復元することなく 1 つ以上の損傷したページを復元することです。 通常、復元候補のページは、そのページにアクセスする際に発生したエラーによって、"問題あり" に設定されています。 問題ありに設定されているページは、 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) データベースの **suspect_pages** テーブルで特定できます。  
@@ -136,9 +135,9 @@ ms.locfileid: "36176014"
   
     |[ヘッダー]|値|  
     |------------|------------|  
-    |**Name**|バックアップ セットの名前です。|  
+    |**名前**|バックアップ セットの名前です。|  
     |**コンポーネント**|バックアップされるコンポーネント。**[データベース]**、**[ファイル]**、または **[\<空白>]** \(トランザクション ログ用) のいずれかを指定します。|  
-    |**Type**|実行するバックアップの種類です。 **[完全]**、 **[差分]**、または **[トランザクション ログ]** のいずれかを指定します。|  
+    |**型**|実行するバックアップの種類です。 **[完全]**、 **[差分]**、または **[トランザクション ログ]** のいずれかを指定します。|  
     |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  
     |**[Position]**|ボリューム内でのバックアップ セットの位置。|  
@@ -159,7 +158,7 @@ ms.locfileid: "36176014"
     > [!WARNING]  
     >  破損していない特定のページを復元するには、 **[追加]** をクリックし、復元するページの **[ファイル ID]** と **[ページ ID]** を入力します。  
   
-5.  ページ グリッドを使用して、復元対象のページを特定します。 最初、このグリッドには、 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) システム テーブルから取得されたデータが表示されます。 このグリッドにページを追加したりグリッドからページを削除したりするには、 **[追加]** または **[削除]** をクリックします。 詳細については、「 [suspect_pages テーブルの管理 &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)を使用してページを復元する方法について説明します。  
+5.  ページ グリッドを使用して、復元対象のページを特定します。 最初、このグリッドには、 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) システム テーブルから取得されたデータが表示されます。 このグリッドにページを追加したりグリッドからページを削除したりするには、 **[追加]** または **[削除]** をクリックします。 詳細については、「[suspect_pages テーブルの管理 &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)」を参照してください。  
   
 6.  **[バックアップ セット]** グリッドに、既定の復元プランのバックアップ セットが一覧表示されます。 必要に応じて **[確認]** をクリックし、バックアップが読み取り可能かどうか、また、バックアップ セットに不備がないかどうかを、実際には復元せずに確認します。 詳細については、「[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)」をご覧ください。  
   

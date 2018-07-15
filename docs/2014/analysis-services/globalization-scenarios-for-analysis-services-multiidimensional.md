@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 多次元のグローバリゼーションのシナリオ |Microsoft ドキュメント
+title: Analysis Services 多次元のグローバリゼーションのシナリオ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple language support [Analysis Services]
 - languages [Analysis Services]
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - Analysis Services, international considerations
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d45b44c6536a7fc95543bebdbc9468c61fdf75b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c8aeb19e6773b3f772ae0a62e7d72f647ee365e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185399"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 多次元のグローバル化のシナリオ
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 格納して、多言語データおよび両方のテーブルと多次元データ モデル内のメタデータを操作できます。 データは Unicode (UTF-16) で格納され、Unicode エンコードの文字セットを使用します。 データ モデルに ANSI データを読み込むと、文字は Unicode の等価なコード ポイントを使用して格納されます。  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 格納して、多言語データおよびメタデータの両方のテーブルと多次元データ モデルを操作できます。 データは Unicode (UTF-16) で格納され、Unicode エンコードの文字セットを使用します。 データ モデルに ANSI データを読み込むと、文字は Unicode の等価なコード ポイントを使用して格納されます。  
   
  Unicode をサポートしているということは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が、Windows のクライアント/サーバー オペレーティング システムによってサポートされている任意の言語でデータを格納できることを意味します。Windows コンピューターで使用されるどの文字セットでも読み取り、書き込み、並べ替え、およびデータ比較が可能です。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データを使用する BI クライアント アプリケーションは、その言語でモデル内にデータが存在すれば、ユーザーの選択した任意の言語でデータを表現できます。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "36179218"
   
      多次元モデルの場合にのみ、キャプションと属性メンバーを翻訳で表現できます。 1 つまたは複数の翻訳を定義し、クライアントに返される翻訳をロケール識別子で決定できます。 詳細については、この後の「 [機能](#bkmk_features) 」を参照してください。  
   
--   エラー、警告、および情報メッセージから返される、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]エンジン (msmdsrv) は、Office および Office 365 でサポートされる 43 の言語にローカライズされます。 特定の言語でメッセージを取得するために、特別な構成は必要ありません。 クライアント アプリケーションのロケールにより、どの言語で文字列が返されるかが決まります。  
+-   エラー、警告、およびから返された情報メッセージ、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]エンジン (msmdsrv) は、Office および Office 365 でサポートされる 43 の言語にローカライズされます。 特定の言語でメッセージを取得するために、特別な構成は必要ありません。 クライアント アプリケーションのロケールにより、どの言語で文字列が返されるかが決まります。  
   
 -   構成ファイル (msmdsrv.ini) および AMO PowerShell は英語のみです。  
   
 -   Analysis Services が実行される Windows サーバーに言語パックをインストールした場合、ログ ファイルには英語とローカライズされたメッセージが混在します。  
   
--   ドキュメントとツール ( [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 、 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]など) は、中国語 (簡体字)、中国語 (繁体字)、フランス語、ドイツ語、イタリア語、日本語、韓国語、ポルトガル語 (ブラジル)、ロシア語、およびスペイン語に翻訳されます。 言語固有のバージョンのツールを使用するには、言語固有のバージョンの SQL Server をインストール (たとえば、ドイツ語で Management Studio を取得する SQL Server のドイツ語版をインストールする) の対象言語でスタンドアロン セットアップを実行または[!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]です。  
+-   ドキュメントとツール ( [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 、 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]など) は、中国語 (簡体字)、中国語 (繁体字)、フランス語、ドイツ語、イタリア語、日本語、韓国語、ポルトガル語 (ブラジル)、ロシア語、およびスペイン語に翻訳されます。 言語固有のバージョンのツールを使用する言語固有のバージョンの SQL Server をインストールします (たとえば、ドイツ語で Management Studio を取得する SQL Server のドイツ語版をインストールする) の対象言語でスタンドアロンのセットアップを実行または[!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]します。  
   
  Analysis Services では、言語、照合順序、および翻訳をオブジェクト階層全体で独立して設定できます。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "36179218"
 ##  <a name="bkmk_features"></a> グローバル化された多次元ソリューションを構築するための機能  
  [!INCLUDE[applies](../includes/applies-md.md)] 多次元データ モデルの場合のみ  
   
- クライアント レベルで使用または操作するアプリケーションをグローバル化された[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多次元データは、多言語および複数カルチャ機能を使用できます[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
+ クライアント レベルでは、使用または操作するアプリケーションをグローバル化された[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多次元データは、多言語および多文化の機能を使用して[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
--   [翻訳&#40;Analysis Services&#41; ](translations-analysis-services.md)各翻訳された文字列が他の翻訳と共存できる場所を 1 つのオブジェクトの複数のキャプションを埋め込むには使用されます。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用して、キューブ、メジャー、ディメンション、および属性のキャプション、説明、およびアカウントの種類に翻訳を定義できます。 翻訳が自動的に定義された [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトのデータおよびメタデータは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続時にロケール識別子を指定することによって取得できます。  
+-   [翻訳&#40;Analysis Services&#41; ](translations-analysis-services.md)各翻訳された文字列が他の翻訳と共に存在できる複数のキャプションを 1 つのオブジェクトに埋め込むに使用します。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用して、キューブ、メジャー、ディメンション、および属性のキャプション、説明、およびアカウントの種類に翻訳を定義できます。 翻訳が自動的に定義された [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトのデータおよびメタデータは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続時にロケール識別子を指定することによって取得できます。  
   
      この機能を使用する方法のレッスンは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] チュートリアルの「[レッスン 9 : パースペクティブと翻訳の定義](lesson-9-defining-perspectives-and-translations.md)」をご覧ください。  
   
@@ -74,14 +74,14 @@ ms.locfileid: "36179218"
 |トピック|説明|  
 |-----------|-----------------|  
 |[言語および照合順序&#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに対して既定の言語と Windows 照合順序を指定します。 選択内容に応じて、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によって管理されるデータおよびメタデータに影響が及びます。|  
-|[翻訳&#40;Analysis Services&#41;](translations-analysis-services.md)|翻訳を定義、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベースとデータベースに含まれるオブジェクト。 このトピックでは、クライアント アプリケーションからの翻訳済みデータおよびメタデータの要求を [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が解決する方法について説明しています。|  
+|[翻訳&#40;Analysis Services&#41;](translations-analysis-services.md)|翻訳を定義、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベースと、データベースに含まれるオブジェクト。 このトピックでは、クライアント アプリケーションからの翻訳済みデータおよびメタデータの要求を [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が解決する方法について説明しています。|  
 |[通貨換算&#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|ビジネス インテリジェンス ウィザードを使用して通貨換算を定義します。|  
 |[グローバリゼーションのヒントし、ベスト プラクティス&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|多言語データに関連した問題を回避するために役立ついくつかの設計およびコーディング手法について説明しています。|  
   
 ## <a name="see-also"></a>参照  
  [Windows アプリケーションの国際化](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
  [グローバル デベロッパー センターを参照してください。](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [ロケールに基づくアダプティブ デザインによる書き込みの Windows ストア アプリ](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Windows ストア アプリの作成では、ロケールに基づくアダプティブ デザイン](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [C# と XAML によるユニバーサル Windows アプリの開発](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

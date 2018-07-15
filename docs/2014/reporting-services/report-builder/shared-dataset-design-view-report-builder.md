@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 387db446f8fc0f3c5ac90ab31466ae8c8597ce1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 874137b75fbade0468a284f28397b30334936bd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249752"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共有データセット デザイン ビュー (レポート ビルダー)
   共有データセット デザイン ウィンドウは、他のユーザーと共有できるデータセット クエリの作成に役立ちます。 このウィンドウで、共有データ ソースの選択、共有データセットのプロパティの指定、およびクエリ デザイナーによるクエリの作成を行います。  
   
  ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- レポート内のデータ処理の詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)です。  
+ レポート内のデータの使用方法の詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)します。  
   
 ##  <a name="Ribbon"></a> リボン  
  リボンを使用すると、タスクの実行に必要なコマンドを簡単に見つけることができます。 コマンドは、接続、データセット、クエリ デザイナーの各論理グループに分類されています。  
@@ -35,9 +35,9 @@ ms.locfileid: "36083816"
  レポートで共有データ ソースを選択するか、レポート サーバーで共有データ ソースを参照するには、接続グループの **[選択]** ボタンを使用します。  
   
 > [!NOTE]  
->  共有データセットは共有データ ソースに基づく必要があります。 必要なデータ ソースを使用できない場合は、レポート サーバー上にデータ ソースを作成する必要があります。 詳細については、次を参照してください。[作成、削除、または共有データ ソースの変更&#40;レポート マネージャー&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)です。  
+>  共有データセットは共有データ ソースに基づく必要があります。 必要なデータ ソースを使用できない場合は、レポート サーバー上にデータ ソースを作成する必要があります。 詳細については、次を参照してください。[作成、削除、または共有データ ソースを変更&#40;レポート マネージャー&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?linkid=121312)します。  
   
- 詳細については、次を参照してください。[データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)です。  
+ 詳細については、次を参照してください。[データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)します。  
   
 ### <a name="dataset"></a>データセット  
  共有データセット プロパティを設定するには、 **[オプションの設定]** ボタンを使用します。 その一部を次に示します。  
@@ -56,7 +56,7 @@ ms.locfileid: "36083816"
   
  詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   
- キャッシュ更新計画の詳細については、次を参照してください。[共有データセットのキャッシュ&#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)です。  
+ キャッシュ更新計画の詳細については、次を参照してください。[共有データセットのキャッシュ&#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?linkid=121312)します。  
   
 ### <a name="query-designer"></a>[クエリ デザイナー]  
  クエリ デザイナー ツール バーを使用すると、データ接続から取得するデータを指定するクエリを作成できます。 データ接続のデータ ソースの種類に関連付けられているクエリ デザイナーによって、表示されるツール バーが異なります。  
@@ -72,7 +72,7 @@ ms.locfileid: "36083816"
   
  一部のデータ ソースの種類では、テキスト ベースのクエリ デザイナーがサポートされています。テキスト ベースのクエリ デザイナーを使用すると、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]などの他のツールで作成したクエリを貼り付けることができます。  
   
- 外部データ ソースに対して使用できるクエリに関しては、データ ソースの種類ごとに特定の要件があります。 詳細については、データ ソースの種類に対応するトピックを参照してください[外部データ ソースからのデータの追加&#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md)と[Reporting Services によってサポートされるデータ ソース&#40;SSRS&#41; 。](../create-deploy-and-manage-mobile-and-paginated-reports.md) Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)です。  
+ 外部データ ソースに対して使用できるクエリに関しては、データ ソースの種類ごとに特定の要件があります。 詳細については、データ ソースの種類に対応するトピックを参照してください[外部データ ソースからのデータの追加&#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md)と[Reporting Services でサポートされるデータ ソース&#40;SSRS&#41; 。](../create-deploy-and-manage-mobile-and-paginated-reports.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?linkid=121312)します。  
   
 
   

@@ -1,5 +1,5 @@
 ---
-title: LocalDBStartInstance 関数 |Microsoft ドキュメント
+title: LocalDBStartInstance 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e484d362d5bc25a5aeddd6ed2ad9fee417837f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 4e2ecc8dbf59ddf108b8090bbcb5ad784b09fe67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242822"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 関数
   指定した名前の SQL Server Express LocalDB インスタンスを起動します。  
@@ -55,7 +55,7 @@ HRESULT LocalDBStartInstance(
  [出力] LocalDB インスタンスへの接続文字列を格納するバッファー。  
   
  *lpcchSqlConnection*  
- [入力/出力]入力にはサイズが含まれています、 *wszSqlConnection*など、末尾の null 文字バッファー。 出力では、指定したバッファー サイズが小さすぎる場合に、必要なバッファー サイズ文字を含む、末尾の null 文字にはが含まれています。  
+ [入力/出力]入力のサイズが含まれています、 *wszSqlConnection*文字、末尾の null を含むバッファー。 出力では、指定したバッファー サイズが小さすぎる場合に、文字、末尾の null を含む必要なバッファー サイズが含まれています。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  
@@ -77,7 +77,7 @@ HRESULT LocalDBStartInstance(
  指定したバッファー *wszSqlConnection*が小さすぎます。  
   
  [LOCALDB_ERROR_WAIT_TIMEOUT](../express-localdb-error-messages/localdb-error-wait-timeout.md)  
- 同期ロックを取得しようとしているときにタイムアウトが発生しました。  
+ 同期ロックを取得中にタイムアウトが発生しました。  
   
  [LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG](../express-localdb-error-messages/localdb-error-instance-folder-path-too-long.md)  
  インスタンスを格納するパスの長さが MAX_PATH を超過しています。  
@@ -98,7 +98,7 @@ HRESULT LocalDBStartInstance(
  SQL Server のプロセスを作成できません。  
   
  [LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED](../express-localdb-error-messages/localdb-error-sql-server-startup-failed.md)  
- SQL Server プロセスが開始しましたが、SQL Server の起動に失敗しました。  
+ SQL Server プロセスが開始されたが、SQL Server の起動に失敗しました。  
   
  [LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT](../express-localdb-error-messages/localdb-error-instance-configuration-corrupt.md)  
  インスタンス構成が破損しました。  
@@ -119,7 +119,7 @@ HRESULT LocalDBStartInstance(
 |存在|NULL|許可されていません。入力に誤りがあります。|返される結果は、LOCALDB_ERROR_INVALID_PARAMETER です。|  
 |存在|存在|ユーザーはインスタンスを起動する必要があり、起動後に接続するパイプ名が必要です。|バッファー サイズを確認し、インスタンスを起動し、バッファーにあるパイプ名を返します。 <br />バッファー サイズ引数は、"server=" 文字列の長さを返します。末尾の NULL は除外されます。|  
   
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)です。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

@@ -1,5 +1,5 @@
 ---
-title: インストール、アンインストール、およびレポート ビルダーのサポート |Microsoft ドキュメント
+title: インストール、アンインストール、およびレポート ビルダーのサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administering Report Builder
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 caps.latest.revision: 29
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ad374db45d6c106cef7ab2f3ff150143f0aa3029
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f6a75e3f558b13b1bd068341249c73649699256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311442"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>レポート ビルダーのインストール、アンインストール、およびサポート
-  レポート ビルダーは、レポート、レポート パーツ、および共有データセットの作成、更新、および共有に使用できるレポート作成ツールです。 レポート ビルダーは、2 つのバージョンで使用できます: スタンドアロンおよび[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]です。 スタンドアロン バージョンは、ユーザーまたは管理者によってコンピューターにインストールされます。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]でバージョンが自動的にインストールされている[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]され、レポート マネージャーまたは統合された SharePoint サイトからお使いのコンピューターにダウンロード[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]です。  
+  レポート ビルダーは、レポート、レポート パーツ、および共有データセットの作成、更新、および共有に使用できるレポート作成ツールです。 レポート ビルダーは 2 つのバージョンで使用できます: スタンドアロンと[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]します。 スタンドアロン バージョンは、ユーザーまたは管理者によってコンピューターにインストールされます。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]でバージョンが自動的にインストールされている[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]レポート マネージャーまたは統合された SharePoint サイトからコンピューターにダウンロードおよび[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]します。  
   
- レポート ビルダーのスタンドアロン バージョンがインストールされていない[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]です。 [Microsoft® SQL Server® 2012 レポート ビルダー](http://go.microsoft.com/fwlink/?LinkId=401502)から個別にダウンロードしてインストールする必要があります。  
+ レポート ビルダーのスタンドアロン バージョンがインストールされていない[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]します。 [Microsoft® SQL Server® 2012 レポート ビルダー](http://go.microsoft.com/fwlink/?LinkId=401502)から個別にダウンロードしてインストールする必要があります。  
   
 > [!NOTE]  
 >  レポート ビルダーは、Itanium ベースのコンピューターにはインストールできません。 これに適用されます、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]およびレポート ビルダーのスタンドアロン バージョンです。  
   
- 管理者は、通常、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストールと構成、レポート ビルダーの [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] バージョンを使用するための権限の許可、フォルダーの管理とレポート サーバーに保存されたレポート、レポート パーツ、および共有データセットに対する権限の管理を行います。 詳細については[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]管理を参照してください[Reporting Services レポート サーバー&#40;ネイティブ モード&#41;](report-server/reporting-services-report-server-native-mode.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=154888)msdn.microsoft.com の「します。  
+ 管理者は、通常、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストールと構成、レポート ビルダーの [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] バージョンを使用するための権限の許可、フォルダーの管理とレポート サーバーに保存されたレポート、レポート パーツ、および共有データセットに対する権限の管理を行います。 詳細については[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]管理を参照してください[Reporting Services レポート サーバー&#40;ネイティブ モード&#41;](report-server/reporting-services-report-server-native-mode.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com します。  
   
 ##  <a name="Installing"></a> レポート ビルダーのインストール  
- レポート ビルダーは、スタンドアロンと[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]バージョン。 ユーザーや管理者のスタンドアロン バージョンをコンピューターにインストールされ、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]でバージョンがインストールされている[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]です。 レポート ビルダーは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=186083)からダウンロードできます。  
+ レポート ビルダーは、スタンドアロンと[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]バージョン。 スタンドアロン バージョンをコンピューターにインストールされ、管理者、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]でバージョンがインストールされている[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]します。 レポート ビルダーは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=186083)からダウンロードできます。  
   
 > [!NOTE]  
 >  レポート ビルダーは、Itanium 64 ベースのコンピューターにはインストールできません。 これに適用されます、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]およびレポート ビルダーのスタンドアロン バージョンです。  
@@ -42,7 +42,7 @@ ms.locfileid: "36075470"
  レポート ビルダーのいずれかのバージョンをインストールする場合は、事前にシステム要件を確認し、必須コンポーネントをすべてインストールしてください。  
   
 ### <a name="system-requirements"></a>システム要件  
- レポート ビルダーでは、する必要があります、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]バージョン 3.5 がローカル コンピューターにインストールされています。 場合、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]がインストールされていないローカル コンピューターにインストールするときにレポート ビルダーを求められますを続行してインストールを完了する前にインストールします。  
+ レポート ビルダーである必要があります、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]バージョン 3.5 がローカル コンピューターにインストールされています。 場合、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]がインストールされていないローカル コンピューターにインストールするときにレポート ビルダーで求められます続行してインストールを完了する前にインストールします。  
   
  .NET Framework 3.5 は無償です。 .NET Framework 3.5 は、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=110520)からダウンロードできます。  
   
@@ -55,21 +55,21 @@ ms.locfileid: "36075470"
   
  また、コマンド ラインからインストールを実行して、サイレント インストールの実行、インストールのログ ファイルの書き込みなどのオプションを含めることもできます。 使用可能なオプションについては、.msi ファイルを実行する Windows インストーラーのマニュアルを参照してください。  
   
- 詳細については、次を参照してください。[レポート ビルダーのスタンドアロン バージョンをインストールする&#40;レポート ビルダー&#41;](install-windows/install-report-builder.md)です。  
+ 詳細については、次を参照してください。[レポート ビルダーのスタンドアロン バージョンをインストール&#40;レポート ビルダー&#41;](install-windows/install-report-builder.md)します。  
   
  管理者は、Microsoft Systems Management Server (SMS) などのソフトウェアを使用してユーザーのコンピューターにプログラムをプッシュすることもできます。 特定のソフトウェアを使用してレポート ビルダーをインストールする方法については、そのソフトウェアのマニュアルを参照してください。   
   
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>コンピューターへの ClickOnce バージョンのレポート ビルダーのインストール  
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]でレポート ビルダーのバージョンがインストールされている[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]です。 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] のネイティブでのインストールと SharePoint 統合でのインストールの両方でインストールされます。  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]でレポート ビルダーのバージョンがインストールされている[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]します。 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] のネイティブでのインストールと SharePoint 統合でのインストールの両方でインストールされます。  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] は、Windows アプリケーションを配置するための Microsoft テクノロジです。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] では、Web ページ上でリンクをクリックすることによって、レポート ビルダーのような Windows アプリケーションをインストールおよび実行することができます。 展開の詳細については[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]を適用するアプリケーション[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションのセキュリティ、または実行中の[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]インターネット ゾーンでのアプリケーションは、「ClickOnce 展開の Windows フォーム アプリケーション」、"セキュリティでを参照してください。Windows フォームの概要"、または「信頼されたアプリケーション展開の概要」の記事、[!INCLUDE[msCoName](../includes/msconame-md.md)]開発者ネットワーク Web サイトで[www.microsoft.com/msdn](http://www.microsoft.com/msdn)です。  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] は、Windows アプリケーションを配置するための Microsoft テクノロジです。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] では、Web ページ上でリンクをクリックすることによって、レポート ビルダーのような Windows アプリケーションをインストールおよび実行することができます。 展開の詳細については[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]を適用するアプリケーション[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションのセキュリティ、または実行中の[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]インターネット ゾーン内のアプリケーションは、「ClickOnce 展開 Windows フォーム アプリケーションの」、"セキュリティを参照してください。Windows Forms Overview"または「Trusted Application Deployment Overview」の記事で、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network Web サイトで[www.microsoft.com/msdn](http://www.microsoft.com/msdn)します。  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]バージョンのレポート ビルダーがレポート サーバー上にあり をクリックすると、コンピューターにインストールされます、**レポート ビルダー**レポート マネージャーでをクリックするかをクリックして、**レポート ビルダー レポート**オプションを**新しいドキュメント**SharePoint ライブラリ内のメニュー。  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]バージョンのレポート ビルダーは、レポート サーバー上にありをクリックすると、コンピューターにインストール、**レポート ビルダー**レポート マネージャーでのボタンまたはをクリックして、**レポート ビルダー レポート**オプションを**新しいドキュメント**SharePoint ライブラリ内のメニュー。  
   
 > [!NOTE]  
 >  **[新しいドキュメント]** メニューに **[レポート ビルダー レポート]** オプション、 **[レポート ビルダーのモデル]** オプション、および **[レポート データ ソース]** オプションが表示されない場合、それらのコンテンツの種類を SharePoint ライブラリに追加する必要があります。   
   
- レポート ビルダーは、レポート マネージャーまたは SharePoint ライブラリから開くことができます。 レポート ビルダーを開く方法の詳細については、次を参照してください。[レポート ビルダーの起動&#40;レポート ビルダー&#41;](report-builder/start-report-builder.md)です。  
+ レポート ビルダーは、レポート マネージャーまたは SharePoint ライブラリから開くことができます。 レポート ビルダーを開く方法の詳細については、次を参照してください。[レポート ビルダーの起動&#40;レポート ビルダー&#41;](report-builder/start-report-builder.md)します。  
   
 ### <a name="report-builder-languages"></a>レポート ビルダーの言語  
  レポート ビルダーは、英語に加えて 21 か国語で使用できます。 レポート ビルダーのスタンドアロン バージョンをダウンロードする場合は、インストールする言語バージョンを選択します。 使用する言語バージョンごとにダウンロードを繰り返す必要があります。  
@@ -104,10 +104,10 @@ ms.locfileid: "36075470"
 |3082|スペイン語 (スペイン)|es-ES|  
   
   
-##  <a name="Uninstalling"></a> レポート ビルダーのアンインストール  
- スタンドアロン バージョンのレポート ビルダーは、コントロール パネルまたはコマンド ラインからアンインストールできます。 これは、スタンドアロン バージョンのレポート ビルダーのみです。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]レポート ビルダーのアンインストールできないとは別にします。 これは常にと共にインストールおよびアンインストール[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]です。  
+##  <a name="Uninstalling"></a> レポート ビルダーをアンインストールします。  
+ スタンドアロン バージョンのレポート ビルダーは、コントロール パネルまたはコマンド ラインからアンインストールできます。 これは、スタンドアロン バージョンのレポート ビルダーのみです。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]レポート ビルダーのアンインストールできないとは別にします。 これがインストールおよびアンインストールを常に[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]します。  
   
- 詳細については、次を参照してください。[レポート ビルダーのスタンドアロン バージョンをアンインストールする&#40;レポート ビルダー&#41;](install-windows/uninstall-report-builder.md)です。  
+ 詳細については、次を参照してください。[レポート ビルダーのスタンドアロン バージョンをアンインストール&#40;レポート ビルダー&#41;](install-windows/uninstall-report-builder.md)します。  
   
   
 ##  <a name="Supporting"></a> レポート ビルダーのサポート  
@@ -130,7 +130,7 @@ ms.locfileid: "36075470"
   
 -   背景画像やロゴなどの画像。複数のレポートで使用でき、簡単に管理できるようにレポートの外部に保存されます。  
   
- 詳細については、次を参照してください。[レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](report-server/report-server-content-management-ssrs-native-mode.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=154888)msdn.microsoft.com の「します。  
+ 詳細については、次を参照してください。[レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](report-server/report-server-content-management-ssrs-native-mode.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com します。  
   
 ### <a name="permissions"></a>アクセス許可  
  レポート サーバーに対する権限は管理者が付与します。 レポート ビルダーのユーザーがレポート サーバーのコンテンツや機能にアクセスするには、レポート サーバーに対する権限が必要です。 たとえば、レポート サーバーに保存されているレポート パーツの使用、レポートの更新と更新したレポートのレポート サーバーへの再保存、レポート マネージャーでのレポートの実行などが必要になる場合があります。 ニーズや実行するタスクに応じて、低い権限または高い権限を許可します。 たとえば、共有レポートを開くことだけが必要なユーザーには、共有レポートを変更する必要があるユーザーに比べて低い特権が設定された権限を許可します。  
@@ -149,14 +149,14 @@ ms.locfileid: "36075470"
   
 -   既定でメンバー グループに許可されている投稿権限レベルを使用して、ユーザーがパブリック フォルダー内のレポートおよび共有データ ソースを管理できるようにします。 このレベルの権限は、経験豊富なユーザーに許可します。  
   
- アクセス許可と作成および使用ロールの詳細については、次を参照してください。、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]ドキュメント[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=154888)msdn.microsoft.com の「します。  
+ アクセス許可の作成とロールの使用に関する概要については、次を参照してください。、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]ドキュメント[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com します。  
   
 ### <a name="configuration-of-report-server"></a>レポート サーバーの構成  
  レポート ビルダーでレポートを作成し、Windows Vista、Windows Server 2008、または Windows 7 にインストールされている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続する場合、レポートを開くか保存するためにレポート サーバーにアクセスしようとすると、アクセス拒否エラーが発生する可能性があります。 これは、Windows Vista、Windows Server 2008、および Windows 7 のユーザー アカウント制御 (UAC) というセキュリティ機能が原因です。この機能では、高度な権限の乱用を防ぐために、アプリケーションにアクセスする際に管理者権限が削除されます。  
   
  ただし、追加の構成を行うことによって、レポート ビルダーのユーザーはレポート サーバーを使用できるようになります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の URL を信頼済みサイトに追加できます。 既定では、Windows Vista、Windows Server 2008、および Windows 7 の Internet Explorer 7.0 以降は保護モードで実行されます。 保護モードとは、同じコンピューターで実行されている高レベルのプロセスにブラウザーの要求が到達するのを防ぐ機能です。 レポート サーバー アプリケーションを信頼済みサイトに追加することで、それらのアプリケーションに対して保護モードを無効にすることができます。 この変更を行うには、管理者権限が必要です。  
   
- 構成の詳細については[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を参照してください[Reporting Services 構成マネージャー &#40;del&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)で、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)msdn.microsoft.com の「します。  
+ 構成の詳細については[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を参照してください[Reporting Services 構成マネージャー &#40;del&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)で、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)msdn.microsoft.com します。  
   
   
 ##  <a name="SampleDatabases"></a> SQL Server サンプル データベース  
@@ -170,9 +170,9 @@ ms.locfileid: "36075470"
   
 -   [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] プロジェクトは、ビジネス インテリジェンスのシナリオ用の AS データベースを構築するために使用できます。  
   
- サンプル データベースに含まれていない[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をインストールするときにインストールされていないと[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]またはレポート ビルダーのスタンドアロン バージョンです。 サンプル データベースは、 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843)からダウンロードしてください。 サンプル データベースのすべてのバージョンが一緒にダウンロードされます。 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、および [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] と共にリリースされた以前のバージョンのデータベースをダウンロードすることもできます。  
+ サンプル データベースは付属しない[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をインストールすると、インストールされていないと[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]またはレポート ビルダーのスタンドアロン バージョンです。 サンプル データベースは、 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843)からダウンロードしてください。 サンプル データベースのすべてのバージョンが一緒にダウンロードされます。 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、および [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] と共にリリースされた以前のバージョンのデータベースをダウンロードすることもできます。  
   
- 前提条件および手順については、ダウンロードとインストール、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]サンプル データベースは、「 [SQL Server 2008 サンプル データベース インストールの前提条件](http://go.microsoft.com/fwlink/?LinkId=166648)と[サンプル データベースのインストール](http://go.microsoft.com/fwlink/?LinkId=166649) CodePlex で公開します。  
+ 前提条件とダウンロードとインストールに関する手順については、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]サンプル データベースは、「 [SQL Server 2008 サンプル データベースのインストール前提条件](http://go.microsoft.com/fwlink/?LinkId=166648)と[サンプル データベースのインストール](http://go.microsoft.com/fwlink/?LinkId=166649) CodePlex でします。  
   
   
 ##  <a name="HowTo"></a> 操作方法に関するトピック  

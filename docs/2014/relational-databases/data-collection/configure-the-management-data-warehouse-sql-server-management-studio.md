@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dc.datacollection.wizard_finish.f1
 - sql12.swb.dc.datacollection.wizard_maploginuser.f1
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f178be9c57ce162cb8f3a15034a5c817f30d1dfb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f9114f2fea8daa3c7ee38d123e4a34d55ed4a2c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326272"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>管理データ ウェアハウスの構成 (SQL Server Management Studio)
   このトピックでは、データ コレクターを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つまたは複数のインスタンスのデータ ストレージをサポートするように管理データ ウェアハウスを構成する方法について説明します。 対象のインスタンスは、同じサーバーまたは別々のサーバーのどちらに配置されていてもかまいません。 このトピックでは、 [管理データ ウェアハウス構成ウィザード](#Wizard) のユーザー インターフェイスについても説明します。 データ コレクターの構成の詳細については、「 [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md)」を参照してください。  

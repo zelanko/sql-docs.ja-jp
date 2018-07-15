@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 9:  Windows Azure ストレージからデータベースを復元 |Microsoft ドキュメント'
+title: 'レッスン 9:  Windows Azure ストレージからデータベースを復元 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b8ff5ec90f80262aae76abfb01ef6c737d13369c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 380ceeabb5a91dffafe0624e073856a837a99f14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175919"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>レッスン 9:  Windows Azure ストレージからデータベースを復元する
   このレッスンでは、Windows Azure ストレージにあるデータベース バックアップ ファイルを内部設置型または Windows Azure の仮想マシンに存在するデータベースに復元する方法を学習します。 このレッスンを続行するには、レッスン 4、5、6、7 および 8 を実行する必要はありません。  
   
- このレッスンでは、次の手順を完了することを前提としています。  
+ このレッスンでは、次の手順が既に完了したことを前提としています。  
   
 -   ソース コンピューターにデータベースを作成しました。  
   
--   使用して Windows Azure ストレージにデータベース (.bak) のバックアップを作成しました、 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)機能します。 この手順では、SQL Server 資格情報をもう 1 つ作成する必要があることに注意してください。 この資格情報はストレージ アカウント キーを使用します。  
+-   使用して Windows Azure ストレージ (.bak)、データベースのバックアップを作成して、 [SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)機能します。 この手順では、SQL Server 資格情報をもう 1 つ作成する必要があることに注意してください。 この資格情報はストレージ アカウント キーを使用します。  
   
 -   Windows Azure ストレージ アカウントを入手しました。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "36178892"
   
 1.  [SQL Server Management Studio] を起動します。 既定のインスタンスに接続します。  
   
-2.  をクリックして**新しいクエリ**[標準] ツールバー。  
+2.  クリックして**新しいクエリ**[標準] ツールバー。  
   
 3.  次の完全なスクリプトをコピーして、クエリ ウィンドウに貼り付けます。 必要に応じて、スクリプトを変更します。  
   
-     **注:** を実行する、`RESTORE`を別のコンピューターのデータベース インスタンスに Windows Azure ストレージにデータベースのバックアップ (.bak) を復元するステートメント。  
+     **注:** を実行する、`RESTORE`別のコンピューターのデータベース インスタンスを Windows Azure ストレージにデータベースのバックアップ (.bak) を復元するステートメント。  
   
     ```tsql  
   
@@ -99,6 +99,6 @@ ms.locfileid: "36178892"
   
     ```  
   
- **チュートリアルの終了: Windows Azure ストレージ サービスでは、SQL Server データ ファイル**  
+ **チュートリアルの末尾: Windows Azure ストレージ サービスでは、SQL Server データ ファイル**  
   
   

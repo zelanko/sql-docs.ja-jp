@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - aggregate values [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21f4e4749518036a1c2c40496102617c556f6aec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: ab590e5016b7230124aa88a4a7fa73b0fcd7f4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180389"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>集計変換を使用してデータセットの値を集計する
   集計変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -58,7 +58,7 @@ ms.locfileid: "36175803"
     > [!NOTE]  
     >  個別の値を正確な数または概数で指定することにより、変換作業に適したメモリ量が事前に割り当てられるので、パフォーマンスを最適化できます。  
   
-12. 必要に応じ、 **[詳細設定]** をクリックして集計変換出力の名前を更新します。 集計を含める場合、`Group By`操作内のキー値をグループ化のカウントの概数を選択することができます、**キー スケール**列内のキー値をグループ化の正確な数の指定や、**キー**列です。  
+12. 必要に応じ、 **[詳細設定]** をクリックして集計変換出力の名前を更新します。 集計が含まれる場合、`Group By`操作内のキー値をグループ化のカウントの概数を選択することができます、**キー スケール**列内のキー値をグループ化の正確な数を指定または、**キー**列です。  
   
     > [!NOTE]  
     >  個別の値を正確な数または概数で指定することにより、変換作業に適したメモリ量が事前に割り当てられるので、パフォーマンスを最適化できます。  

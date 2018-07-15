@@ -1,5 +1,5 @@
 ---
-title: Role 要素 (ASSL) |Microsoft ドキュメント
+title: Role 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Role element
 ms.assetid: 56f52462-a7fd-4b51-a7fb-4311134439e9
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ce56ee33ea5e79fcd5390e392c52506e2a270676
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0486e6f0f8cc5886c5bcab5ea389440c8d26523b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285978"
 ---
 # <a name="role-element-assl"></a>Role 要素 (ASSL)
   セキュリティ ロールに関する情報を格納します。  
@@ -74,7 +74,7 @@ ms.locfileid: "36175615"
   
 ## <a name="see-also"></a>参照  
  [Database 要素&#40;ASSL&#41;](database-element-assl.md)   
- [サーバー要素&#40;ASSL&#41;](server-element-assl.md)   
+ [Server 要素&#40;ASSL&#41;](server-element-assl.md)   
  [オブジェクト&#40;ASSL&#41;](objects-assl.md)  
   
   

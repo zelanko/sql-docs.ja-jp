@@ -1,11 +1,11 @@
 ---
-title: ユーザー定義型を作成する |Microsoft ドキュメント
+title: ユーザー定義型を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -18,18 +18,18 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0f0f9599e5a529011528307b97e39dc68009852
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 62bcb175cebbfa4848bbc49ac21710d58bfafcc8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702613"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349484"
 ---
-# <a name="creating-user-defined-types"></a>ユーザー定義型を作成します。
+# <a name="creating-user-defined-types"></a>ユーザー定義型の作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインストールできる UDT (ユーザー定義型) を作成するには、まず、サポートされるいずれかの .NET Framework プログラミング言語 (Visual C# や Visual Basic など) のクラスを作成する必要があります。これは、UDT の作成に関する仕様に準拠しています。 その後、クラスを DLL (ダイナミック リンク ライブラリ) にコンパイルできます。この DLL は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むことができます。 また、Visual Studio を使用して UDT を作成し、配置することもできます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 使用して CLR を有効にすることができます、 **sp_configure** 、次に示すように、システム ストアド プロシージャ、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 使用して、CLR を有効にすることができます、 **sp_configure** 、次に示すように、システム ストアド プロシージャ、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -44,9 +44,9 @@ Reconfigure
  ユーザー定義型の作成に関連するコーディング技法について説明します。  
   
 ## <a name="example"></a>例  
- 次のコード リストの定義で詳しく説明されている Point UDT [Coding User-Defined 型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)です。  
+ 次のコード リストはで詳しく説明されている Point UDT の定義[Coding User-Defined 型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)します。  
   
- このセクションで説明している他の例の完全なコード リストは、CLR サンプルをインストールして入手できます。 これらのサンプルをインストールする方法の詳細については、次を参照してください。 [SQL Server データベース エンジン サンプル](http://msftengprodsamples.codeplex.com/)です。  
+ このセクションで説明している他の例の完全なコード リストは、CLR サンプルをインストールして入手できます。 これらのサンプルをインストールする方法の詳細については、次を参照してください。 [SQL Server データベース エンジン サンプル](http://msftengprodsamples.codeplex.com/)します。  
   
  C#  
   

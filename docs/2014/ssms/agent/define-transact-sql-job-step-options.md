@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL job step
 - job steps [Transact-SQL]
 - SQL Server Agent jobs, Transact-SQL step
 ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa6f7b5724901e5d0e4750bad2a22ac175874e3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4b014c06b4a19d6c710ab7fb60c90dcfbe5bf130
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301690"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Define Transact-SQL Job Step Options
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] エージェントの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ジョブ ステップのオプションを定義する方法について説明します。  
@@ -73,9 +73,9 @@ ms.locfileid: "36175081"
   
 9. **sysadmin** 固定サーバー ロールのメンバーで、このジョブ ステップを別の SQL ログインで実行する場合は、 **[実行時のユーザー]** ボックスで SQL ログインを選択します。  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトを使用します。  
+##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **Transact-SQL ジョブ ステップのオプションを定義するには**  
   
- 使用して、 `JobStep` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラスです。  
+ 使用して、 `JobStep` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。  
   
   

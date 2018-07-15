@@ -1,14 +1,13 @@
 ---
-title: 自動フェールオーバー、可用性グループ (SQL Server) のための柔軟なフェールオーバー ポリシー |Microsoft ドキュメント
+title: 自動フェールオーバー、可用性グループ (SQL Server) のための柔軟なフェールオーバー ポリシー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 caps.latest.revision: 28
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 7ffd60a301d21862d275a95f69f47e18b0d80ded
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 122b48613f0eabe85b18539e594db5602b0c6abd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293182"
 ---
 # <a name="flexible-failover-policy-for-automatic-failover-of-an-availability-group-sql-server"></a>可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー (SQL Server)
   柔軟なフェールオーバー ポリシーを使用すると、可用性グループの [自動フェールオーバー](failover-and-failover-modes-always-on-availability-groups.md) を実行する条件をきめ細かく制御できます。 自動フェールオーバーを実行するエラー条件および正常性チェックの頻度を変更することで、自動フェールオーバーの確率値を増減して高可用性の SLA をサポートできます。  
@@ -68,7 +67,7 @@ ms.locfileid: "36075124"
   
 -   [可用性レプリカのフェールオーバー モードの変更 &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [条件を制御する自動フェールオーバー (AlwaysOn 可用性グループ) の柔軟なフェールオーバー ポリシーを構成します。](configure-flexible-automatic-failover-policy.md)  
+-   [自動フェールオーバー (AlwaysOn 可用性グループ) の条件を制御する柔軟なフェールオーバー ポリシーを構成します。](configure-flexible-automatic-failover-policy.md)  
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   

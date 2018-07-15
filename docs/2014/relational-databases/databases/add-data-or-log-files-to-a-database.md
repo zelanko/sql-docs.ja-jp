@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], files
 - adding data files
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data additions [SQL Server]
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f244d8e0c5180fd1df5eba067a5e1e0a8bd1fc29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5f9fedbd50e4b9440a3c4e532668ab63b2b35cb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215322"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>データベースに対するデータ ファイルまたはログ ファイルの追加
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースにデータ ファイルまたはログ ファイルを追加する方法について説明します。  
@@ -103,7 +103,7 @@ ms.locfileid: "36178009"
     > [!NOTE]  
     >  データ ファイルとトランザクション ログ ファイルは、既定では単一ディスクのシステムに適合するように、同じドライブおよびパスに配置されますが、実稼働環境ではこれが最適ではない場合があります。 詳細については、「 [Database Files and Filegroups](database-files-and-filegroups.md)」を参照してください。  
   
-12. **[OK]** をクリックします。  
+12. [**OK**] をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

@@ -1,5 +1,5 @@
 ---
-title: テーブル (SSAS テーブル) 内のデータをフィルター処理 |Microsoft ドキュメント
+title: テーブル (SSAS テーブル) 内のデータをフィルター処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.customfilterdb.f1
 - sql12.asvs.bidtoolset.autofiltermenu.f1
 - sql12.asvs.bidtoolset.notallitemsshowing.f1
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d58f376d4d7fde1ccd38eab1a1662fb7ad2605cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5232c34c8fdb8a76d24a623103d30863e7e9c21c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306412"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>テーブル内のデータのフィルター処理 (SSAS テーブル)
   テーブルに読み込む行を制御するには、データをインポートする際にフィルターを適用します。 データをインポートした後、行を個別に削除することはできません。 ただし、カスタム フィルターを適用して行の表示方法を制御することは可能です。 フィルター条件を満たしていない行は非表示になります。 1 行以上の列を基準にしてフィルター処理を行うことができます。 フィルター処理は追加型です。つまり、新しいフィルターによる処理は、前のフィルター処理の結果に対して行われます。したがって、フィルターを適用するごとにデータのサブセットは減っていきます。  
@@ -47,7 +47,7 @@ ms.locfileid: "36164872"
   
 1.  フィルターをクリアする列の見出しの矢印をクリックします。  
   
-2.  をクリックして**からフィルターをクリア\<列名 >** です。  
+2.  クリックして**フィルターをクリア\<列名 >** します。  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>テーブルのすべてのフィルターをクリアするには  
   
