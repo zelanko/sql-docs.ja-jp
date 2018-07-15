@@ -1,5 +1,5 @@
 ---
-title: AggregationPrefix 要素 (ASSL) |Microsoft ドキュメント
+title: AggregationPrefix 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationPrefix element
 ms.assetid: 1581e0df-ae8e-41ce-9c92-f0f7cac487f2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 84f7b086e1cdc2516f0912a4580d0b3eb45132ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7f7fe7ad16c8949116edb13c7d2c9b5144443dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293282"
 ---
 # <a name="aggregationprefix-element-assl"></a>AggregationPrefix 要素 (ASSL)
   関連する親要素全体にわたって集計名に使用する共通のプレフィックスを定義します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36178316"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 集計プレフィックス集計名が生成[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、し、またリレーショナル OLAP (ROLAP) パーティションに格納された集計用のリレーショナル データベースでテーブル名を生成します。  
+ 集計プレフィックス集計名が生成[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]もリレーショナル OLAP (ROLAP) パーティションに格納された集計用のリレーショナル データベースでテーブル名を生成します。  
   
  完全に展開された集計名は、次の部分で構成されています。  
   
@@ -70,15 +70,15 @@ ms.locfileid: "36178316"
   
  集計名の最初の 4 つの部分が集計プレフィックスを構成しています。 最初の 4 つの部分はユーザーが指定します。  
   
--   *DatabasePrefix*の値を表す、`AggregationPrefix`要素に関連付けられた、`Database`要素。  
+-   *DatabasePrefix*の値を表す、`AggregationPrefix`要素に関連付けられている、`Database`要素。  
   
--   *CubePrefix*の値を表す、`AggregationPrefix`要素に関連付けられた、`Cube`要素。  
+-   *CubePrefix*の値を表す、`AggregationPrefix`要素に関連付けられている、`Cube`要素。  
   
--   *MeasureGroupPrefix*の値を表す、`AggregationPrefix`要素に関連付けられた、`MeasureGroup`要素。  
+-   *MeasureGroupPrefix*の値を表す、`AggregationPrefix`要素に関連付けられている、`MeasureGroup`要素。  
   
--   *PartitionPrefix*の値を表す、`AggregationPrefix`要素に関連付けられた、`Partition`要素。  
+-   *PartitionPrefix*の値を表す、`AggregationPrefix`要素に関連付けられている、`Partition`要素。  
   
- 名前の 5 番目の部分*AggregationID*、システム定義の ID では、されユーザーがない、名前のこの部分を制御します。  
+ 5 番目の部分の名前、 *AggregationID*、システム定義の id では、あり、ユーザーには名前のこの部分はありません。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで `AggregationPrefix` の親に対応する要素は、<xref:Microsoft.AnalysisServices.Cube>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.MeasureGroup>、および <xref:Microsoft.AnalysisServices.Partition> です。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Distributed Replay |Microsoft ドキュメント
+title: SQL Server Distributed Replay |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,38 +8,38 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 63974e86420e347d66b36e361e9b68fc0f54c318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 20ea880286578872964ffe88123c41ee4201f573
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232632"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能を使用すると、将来の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のアップグレードによる影響を評価できます。 また、ハードウェアとオペレーティング システムのアップグレード、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のチューニングの影響を評価する場合にも使用できます。  
+   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能を使用すると、将来の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のアップグレードによる影響を評価できます。 また、ハードウェアとオペレーティング システムのアップグレード、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のチューニングの影響を評価する場合にも使用できます。  
   
 ## <a name="benefits-of-distributed-replay"></a>Distributed Replay の利点  
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]と同様に、Distributed Replay を使用して、アップグレードされたテスト環境に対してキャプチャしたトレースを再生できます。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]と異なるのは、Distributed Replay は 1 台のコンピューターからのワークロードの再生に限定されないことです。  
   
- Distributed Replay では、 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]よりもスケーラブルなソリューションが提供されます。 Distributed Replay を使用すると、複数のコンピューターからのワークロードを再生し、ミッションクリティカルなワークロードをより正確にシミュレートできます。  
+ Distributed Replay では、[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] よりもスケーラブルなソリューションが提供されます。 Distributed Replay を使用すると、複数のコンピューターからのワークロードを再生し、ミッションクリティカルなワークロードをより正確にシミュレートできます。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能では、複数のコンピューターを使用してトレース データを再生し、ミッションクリティカルなワークロードをシミュレートできます。 Distributed Replay は、アプリケーション互換性テスト、パフォーマンス テスト、またはキャパシティ プランニングに使用できます。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能では、複数のコンピューターを使用してトレース データを再生し、ミッションクリティカルなワークロードをシミュレートできます。 Distributed Replay は、アプリケーション互換性テスト、パフォーマンス テスト、またはキャパシティ プランニングに使用できます。  
   
 ## <a name="when-to-use-distributed-replay"></a>Distributed Replay を使用する状況  
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] Distributed Replay 機能が一部重複して、提供します。  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] Distributed Replay 機能が一部重複してを提供します。  
   
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] を使用して、アップグレードされたテスト環境に対してキャプチャしたトレースを再生できます。 また、再生結果を分析して、潜在的な機能とパフォーマンスの非互換性を調べることができます。 ただし、 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] で再生できるのは、1 台のコンピューターからのワークロードのみです。 アクティブな同時接続が多数あるか、またはスループットが高い集中型の OLTP アプリケーションを再生すると、 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] ではリソースのボトルネックが発生する可能性があります。  
   
- Distributed Replay では、 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]よりもスケーラブルなソリューションが提供されます。 Distributed Replay を使用すると、複数のコンピューターからのワークロードを再生し、ミッションクリティカルなワークロードをより正確にシミュレートできます。  
+ Distributed Replay では、[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] よりもスケーラブルなソリューションが提供されます。 Distributed Replay を使用すると、複数のコンピューターからのワークロードを再生し、ミッションクリティカルなワークロードをより正確にシミュレートできます。  
   
  次の表では、各ツールを使用する状況について説明します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36074101"
 ## <a name="distributed-replay-concepts"></a>Distributed Replay の概念  
  Distributed Replay 環境は次のコンポーネントで構成されます。  
   
--   **Distributed Replay 管理ツール**: コンソール アプリケーション、 `DReplay.exe`、distributed replay controller と通信するために使用します。 Distributed Replay を制御するには管理ツールを使用します。  
+-   **Distributed Replay 管理ツール**: コンソール アプリケーションでは、`DReplay.exe`分散再生コント ローラーとの通信に使用されます。 Distributed Replay を制御するには管理ツールを使用します。  
   
 -   **Distributed Replay Controller**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Controller という名前の Windows サービスを実行するコンピューター。 分散再生コントローラーは、分散再生クライアントのアクションを統制します。 各分散再生環境には、コントローラーのインスタンスを 1 つだけ置くことができます。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36074101"
 |入力トレース データを準備する方法について説明します。|[入力トレース データの準備](prepare-the-input-trace-data.md)|  
 |トレース データを再生する方法について説明します。|[トレース データの再生](replay-trace-data.md)|  
 |Distributed Replay トレース データの結果を確認する方法について説明します。|[再生結果の確認](review-the-replay-results.md)|  
-|管理ツールを使用して、コントローラー上の操作を開始、監視、取り消す方法について説明します。|[管理ツールのコマンド ライン オプション&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|  
+|管理ツールを使用して、コントローラー上の操作を開始、監視、取り消す方法について説明します。|[管理ツール コマンド ライン オプション&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Distributed Replay フォーラム](http://social.technet.microsoft.com/Forums/sl/sqldru/)   

@@ -1,5 +1,5 @@
 ---
-title: キューブのストレージ (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: キューブのストレージ (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - storage [Analysis Services], cubes
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e0e586c404575c0e7fe3b8b04641d8dba06b0f14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e88e2987bf456a3746b7c50fc986f10f6573ba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295932"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>キューブのストレージ (Analysis Services - 多次元データ)
   ストレージには、キューブのメタデータのみが含まれている場合も、ファクト テーブルのすべてのソース データだけでなく、メジャー グループに関連付けられたディメンションによって定義されている集計も含まれている場合もあります。 格納されているデータ量は、選択したストレージ モードおよび集計の数によって異なります。 格納されているデータの量は、クエリのパフォーマンスに直接影響を与えます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブ データおよび集計の格納に必要な領域を最小限に抑えるためには、いくつかの手法を使用します。  
@@ -38,7 +38,7 @@ ms.locfileid: "36179211"
   
 -   空のセルにはストレージ領域を割り当てない。  
   
- ストレージは、パーティションごとに定義され、キューブ内の各メジャー グループに対して少なくとも 1 つのパーティションが存在します。 詳細については、次を参照してください[パーティション&#40;Analysis Services - 多次元データ&#41;](partitions-analysis-services-multidimensional-data.md)、[パーティションのストレージ モードと処理](partitions-partition-storage-modes-and-processing.md)、[メジャーおよびメジャー グループ。](../multidimensional-models/measures-and-measure-groups.md)、および[多次元モデル内のメジャーおよびメジャー グループの作成](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)です。  
+ ストレージは、パーティションごとに定義され、キューブ内の各メジャー グループに対して少なくとも 1 つのパーティションが存在します。 詳細については、次を参照してください[パーティション&#40;Analysis Services - 多次元データ&#41;](partitions-analysis-services-multidimensional-data.md)、[パーティション ストレージ モードおよび処理](partitions-partition-storage-modes-and-processing.md)、[メジャーおよびメジャー グループ。](../multidimensional-models/measures-and-measure-groups.md)、および[多次元モデル内のメジャーおよびメジャー グループの作成](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)です。  
   
 ## <a name="partition-storage"></a>パーティション ストレージ  
  メジャー グループのストレージは、複数のパーティションに分割できます。 パーティションに分割すると、メジャー グループを 1 台のサーバー上または複数のサーバーにまたがる個別のセグメントに分散し、ストレージやクエリのパフォーマンスを最適化できます。 メジャー グループ内の各パーティションは、異なるデータ ソースを基にして、異なるストレージ設定を使用して格納できます。  
@@ -50,7 +50,7 @@ ms.locfileid: "36179211"
  キューブのパーティションは、ユーザーからは見えません。 ただし、各種パーティションに対するストレージ設定の選択内容は、データの即時性、使用されるディスク領域の量、およびクエリのパフォーマンスに影響を及ぼすことがあります。 パーティションは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の複数のインスタンスに格納できます。 これにより、キューブ ストレージをクラスター化して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー間でワークロードを分散できます。 詳細については、次を参照してください[パーティションのストレージ モードと処理](partitions-partition-storage-modes-and-processing.md)、[リモート パーティション](partitions-remote-partitions.md)、および[パーティション&#40;Analysis Services - 多次元データ&#41;](partitions-analysis-services-multidimensional-data.md)。  
   
 ## <a name="linked-measure-groups"></a>リンク メジャー グループ  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の異なるインスタンスにキューブの複数のコピーを格納するために非常に大きなディスク領域が必要になる場合がありますが、メジャー グループのコピーをリンク メジャー グループに置き換えることで、必要な領域を大幅に削減できます。 リンク メジャー グループは、同じまたは異なる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス上の別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内にあるキューブのメジャー グループに基づいています。 リンク メジャー グループは、同じソース キューブのリンク ディメンションと共に使用することもできます。 リンク ディメンションとリンク メジャー グループでは、ソース キューブの集計が使用され、独自のデータのストレージ容量はありません。 このため、1 つのデータベースで基になるメジャー グループとディメンションを維持し、他のデータベースのキューブでリンク キューブとリンク ディメンションを作成すると、ストレージとして使用されるディスク領域を節約できます。 詳細については、次を参照してください。 [Linked Measure Groups](../multidimensional-models/linked-measure-groups.md)です。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の異なるインスタンスにキューブの複数のコピーを格納するために非常に大きなディスク領域が必要になる場合がありますが、メジャー グループのコピーをリンク メジャー グループに置き換えることで、必要な領域を大幅に削減できます。 リンク メジャー グループは、同じまたは異なる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス上の別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内にあるキューブのメジャー グループに基づいています。 リンク メジャー グループは、同じソース キューブのリンク ディメンションと共に使用することもできます。 リンク ディメンションとリンク メジャー グループでは、ソース キューブの集計が使用され、独自のデータのストレージ容量はありません。 このため、1 つのデータベースで基になるメジャー グループとディメンションを維持し、他のデータベースのキューブでリンク キューブとリンク ディメンションを作成すると、ストレージとして使用されるディスク領域を節約できます。 詳細については、次を参照してください。 [Linked Measure Groups](../multidimensional-models/linked-measure-groups.md)します。  
   
 ## <a name="see-also"></a>参照  
  [集計と集計デザイン](aggregations-and-aggregation-designs.md)  

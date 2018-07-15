@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.listeners.f1
 - sql12.swb.newagwizard.specifyreplicas.f1
 - sql12.swb.addreplicawizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 caps.latest.revision: 33
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 878e1a5df6e67129c9146b1ff0c47e4167b54950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a25a08e57395ca8523b29f976b93179e0989a8ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279638"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>[レプリカの指定] ページ (新しい可用性グループ ウィザード: レプリカの追加ウィザード)
   このトピックでは、 **[レプリカの指定]** ページのオプションについて説明します。 このページの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 **[レプリカの指定]** ページを使用して、1 つまたは複数の可用性レプリカを指定および構成して可用性グループを追加します。 このページには、次の表に示す 4 つのタブが含まれます。 この表でタブの名前をクリックすると、このトピックの対応するセクションに移動します。  
@@ -47,12 +46,12 @@ ms.locfileid: "36084171"
  **自動フェールオーバー (上限 2)**  
  この可用性レプリカを自動フェールオーバー パートナーにする場合のみ、このチェック ボックスをオンにします。 自動フェールオーバーを構成するには、最初のプライマリ レプリカと 1 つのセカンダリ レプリカに対してこのオプションを選択する必要があります。 どちらのレプリカでも同期コミット可用性モードが使用されます。 2 つのレプリカのみが自動フェールオーバーをサポートできます。  
   
- 同期コミット可用性モードについては、次を参照してください。[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)です。 自動フェールオーバーの詳細については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)」を参照してください。  
+ 同期コミット可用性モードの詳細については、次を参照してください。[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)します。 自動フェールオーバーの詳細については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)」を参照してください。  
   
  **[同期コミット (上限 3)]**  
  レプリカに **[自動フェールオーバー (最大 2)]** を選択した場合、**[同期コミット (最大 3)]** も選択されます。 このチェック ボックスがオフになっている場合は、このレプリカで同期コミット モードを計画的な手動フェールオーバーでのみ使用する場合に限り、オンにしてください。 3 つのレプリカのみが同期コミット モードを使用できます。  
   
- このレプリカで非同期コミット可用性モードを使用する場合、このチェック ボックスはオフのままにします。 レプリカは、強制手動フェールオーバー (データ損失の可能性あり) のみをサポートします。 非同期コミット可用性モードについては、次を参照してください。[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)です。 計画的な手動フェールオーバーと強制手動フェールオーバーの詳細については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)」を参照してください。  
+ このレプリカで非同期コミット可用性モードを使用する場合、このチェック ボックスはオフのままにします。 レプリカは、強制手動フェールオーバー (データ損失の可能性あり) のみをサポートします。 非同期コミット可用性モードの詳細については、次を参照してください。[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)します。 計画的な手動フェールオーバーと強制手動フェールオーバーの詳細については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)」を参照してください。  
   
  **[読み取り可能セカンダリ ロール]**  
  **[読み取り可能セカンダリ]** ボックスの一覧から値を選択します。値は次のとおりです。  
@@ -126,7 +125,7 @@ ms.locfileid: "36084171"
  バックアップを実行するレプリカを選択するときにバックアップ ジョブが可用性レプリカのロールを無視するように指定します。 バックアップ ジョブは、動作状態および接続状態と組み合わせて、各可用性レプリカのバックアップ優先順位などの他の要素を評価する場合があります。  
   
 > [!IMPORTANT]  
->  バックアップに関するユーザー設定は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 詳細については、次を参照してください。[アクティブなセカンダリ: セカンダリ レプリカ (AlwaysOn 可用性グループ) でバックアップ](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)です。  
+>  バックアップに関するユーザー設定は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 詳細については、次を参照してください。[アクティブなセカンダリ: セカンダリ レプリカ (AlwaysOn 可用性グループ) でバックアップ](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)します。  
   
 ### <a name="replica-backup-priorities-grid"></a>[レプリカのバックアップの優先順位] グリッド  
  **[レプリカのバックアップの優先順位]** グリッドを使用して、可用性グループのレプリカごとに、バックアップの優先順位を指定します。 このグリッドに含まれる列は、次のとおりです。  
@@ -178,7 +177,7 @@ ms.locfileid: "36084171"
  **[追加]**  
  このリスナーにサブネットを追加する場合にクリックします。 クリックすると、 **[IP アドレスの追加]** ダイアログ ボックスが開きます。 詳細については、「[[IP アドレスの追加] ダイアログ ボックス &#40;SQL Server Management Studio&#41;](add-ip-address-dialog-box-sql-server-management-studio.md)」ヘルプ トピックを参照してください。  
   
- **削除**  
+ **[削除]**  
  グリッド内で現在選択されているサブネットを削除する場合にクリックします。  
   
  **[DHCP]**  
@@ -215,6 +214,6 @@ ms.locfileid: "36084171"
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
- [前提条件、制限事項、および AlwaysOn 可用性グループに関する推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

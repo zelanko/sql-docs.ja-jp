@@ -1,5 +1,5 @@
 ---
-title: RootMemberIf 要素 (ASSL) |Microsoft ドキュメント
+title: RootMemberIf 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RootMemberIf element
 ms.assetid: b695e271-c748-4abc-a09f-acb1014f768f
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a923b08efc636d2635d60b00f85c42dc00a312e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7ac45d2111b8d3631160ce78f131f98d53230e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280298"
 ---
 # <a name="rootmemberif-element-assl"></a>RootMemberIf 要素 (ASSL)
   親属性のルート メンバーまたはメンバーを識別する方法を指定します。  
@@ -62,18 +62,18 @@ ms.locfileid: "36075352"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 値、`RootMemberIf`要素は親属性によってのみ使用 (つまり、他の値、[使用状況](usage-element-dimensionattribute-assl.md)の要素、`DimensionAttribute`に設定されている親要素*親*)、ルート (を決定するには親子階層の最上位) メンバー。  
+ 値、`RootMemberIf`要素の親属性によってのみ使用されます (つまり、他の値、[使用状況](usage-element-dimensionattribute-assl.md)の要素、`DimensionAttribute`に設定されている親要素*親*) ルート (を判断するには親子階層の最上位) メンバー。  
   
  この要素の値は、次の表の一覧に示す文字列のいずれかに限定されています。  
   
 |値|説明|  
 |-----------|-----------------|  
-|*ParentIsBlankSelfOrMissing*|説明の条件の 1 つ以上満たすメンバーだけ*ParentIsBlank*、 *ParentIsSelf*、または*ParentIsMissing*ルート メンバーとして扱われます。|  
-|*ParentIsBlank*|Null、0、または空の文字列で表されるキー列でのメンバーのみ、 [KeyColumns](../collections/columns-element-assl.md)のコレクション`DimensionAttribute`ルート メンバーとして扱われます。|  
+|*ParentIsBlankSelfOrMissing*|説明されている条件の 1 つ以上満たすメンバーのみ*ParentIsBlank*、 *ParentIsSelf*、または*ParentIsMissing*がルート メンバーとして扱われます。|  
+|*ParentIsBlank*|Null、0、または空の文字列で表されるキー列を持つメンバーのみ、 [KeyColumns](../collections/columns-element-assl.md)のコレクション`DimensionAttribute`がルート メンバーとして扱われます。|  
 |*ParentIsSelf*|自分自身が親であるメンバーのみがルート メンバーとして扱われます。|  
 |*ParentIsMissing*|親が見つからないメンバーのみがルート メンバーとして扱われます。|  
   
- 許可される値に対応する列挙`RootMemberIf`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.RootIfValue>します。  
+ 許容された値に対応する列挙体`RootMemberIf`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.RootIfValue>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

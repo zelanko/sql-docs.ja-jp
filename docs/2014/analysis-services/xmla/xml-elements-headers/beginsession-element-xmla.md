@@ -1,5 +1,5 @@
 ---
-title: BeginSession 要素 (XMLA) |Microsoft ドキュメント
+title: BeginSession 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - BeginSession element
 ms.assetid: 49873a97-58d7-42a9-ab7f-e045e2856737
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2982709512433e5a6b87929f3a4efba4f77138b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cf272ae8221b66f7ac8390fab900d22d6b8aaf87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285828"
 ---
 # <a name="beginsession-element-xmla"></a>BeginSession 要素 (XMLA)
-  インスタンスで新しいセッションを開始する SOAP 要求メッセージの SOAP ヘッダーを使用して[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+  インスタンスで新しいセッションを開始する、SOAP 要求メッセージの SOAP ヘッダーを使用して[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。  
   
- **Namespace** urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql} の分析  
+ **Namespace** urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-分析  
   
 ## <a name="syntax"></a>構文  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36083049"
 ## <a name="remarks"></a>コメント  
  `BeginSession` ヘッダー要素は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスに送信される SOAP 要求の一部分で、インスタンス上で新しいセッションを明示的に開始します。 SOAP 応答によって返される SOAP ヘッダーが含まれています、[セッション](session-element-xmla.md)新しいセッションを識別する要素。 この新しいセッション識別子は保存され、後続の SOAP 要求内で `Session` ヘッダー要素を使用して送信されます。  
   
- `BeginSession` ヘッダー要素が送信されない場合、セッションは明示的に開始されません。 セッションが明示的に開始されない場合、そのセッション上のトランザクションを管理することはできません。 つまり、Analysis (XMLA) コマンドを次の XML を使用することはできません: [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md)、 [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md)、および[RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md)です。 暗黙的に開始されたセッションで実行されるすべての XMLA メソッドおよびコマンドは、アトミックなトランザクションと見なされます。  
+ `BeginSession` ヘッダー要素が送信されない場合、セッションは明示的に開始されません。 セッションが明示的に開始されない場合、そのセッション上のトランザクションを管理することはできません。 つまり、for Analysis (XMLA) コマンドを次の XML を使用することはできません: [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md)、 [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md)、および[RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md)します。 暗黙的に開始されたセッションで実行されるすべての XMLA メソッドおよびコマンドは、アトミックなトランザクションと見なされます。  
   
 ## <a name="see-also"></a>参照  
  [EndSession 要素&#40;XMLA&#41;](endsession-element-xmla.md)   

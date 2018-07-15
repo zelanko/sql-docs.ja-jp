@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c1b01246166c6d7e75f1083fc23b9bd15502c731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72d19e915fc937eb18ca1713e190d077f2e92d5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286718"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>レッスン 1 : サンプル サブスクライバー データベースの作成
   データ ドリブン サブスクリプションを定義するには、その前に、サブスクリプション データを提供するデータ ソースを用意する必要があります。 ここでは、このチュートリアル用のサブスクリプション データを格納する簡単なデータベースを作成します。 後でサブスクリプションを処理する際、このデータがレポート サーバーにより取得され、レポート出力、配信オプション、およびレポート表示形式のカスタマイズに使用されます。  
   
- このレッスンでは、使用するいると仮定[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を作成する、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]データベース。  
+ このレッスンでは、使用していることと[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を作成する、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]データベース。  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>サンプル サブスクライバー データベースを作成するには  
   
@@ -32,7 +32,7 @@ ms.locfileid: "36073916"
   
 2.  [データベース] を右クリックして **[新しいデータベース]** をクリックします。  
   
-3.  新しいデータベース] ダイアログ ボックスの [データベース名入力*サブスクライバー*です。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  新しいデータベース] ダイアログ ボックスの [データベース名入力*サブスクライバー*します。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  ツール バーの **[新しいクエリ]** ボタンをクリックします。  
   

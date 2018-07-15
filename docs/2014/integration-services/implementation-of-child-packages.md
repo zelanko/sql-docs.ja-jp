@@ -1,5 +1,5 @@
 ---
-title: 子パッケージの実装 |Microsoft ドキュメント
+title: 子パッケージの実装 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85a9e6c93f0b1c3157f9814508ee4fb9263cd444
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbf5d3d4142c543f5bd0ab3cebae72eeea3bb432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287588"
 ---
 # <a name="implementation-of-child-packages"></a>子パッケージの実装
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を使用して負荷分散を実装すると、子パッケージが他のサーバーにインストールされ、利用可能な CPU 時間またはサーバー時間を活用することができます。 子パッケージを作成および実行するには、次の手順を実行します。  
@@ -45,7 +45,7 @@ ms.locfileid: "36179168"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用してパッケージをエクスポートします。  
   
--   パッケージを配置します。パッケージを配置するには、配置するパッケージを含むプロジェクトの配置ユーティリティをビルドした後、パッケージ インストール ウィザードを実行し、パッケージをファイル システムまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスにインストールします。 詳細については、次を参照してください。[パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)です。  
+-   パッケージを配置します。パッケージを配置するには、配置するパッケージを含むプロジェクトの配置ユーティリティをビルドした後、パッケージ インストール ウィザードを実行し、パッケージをファイル システムまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスにインストールします。 詳細については、次を参照してください。[パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)します。  
   
  この配置は、使用する各リモート サーバーに対してそれぞれ行う必要があります。  
   
@@ -71,8 +71,8 @@ ms.locfileid: "36179168"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   ブログ エントリ「 [SSIS: 親パッケージ変数にアクセスする](http://go.microsoft.com/fwlink/?LinkId=257729)、consultingblogs.emc.com です。  
+-   ブログ エントリ「 [SSIS: 親パッケージ変数にアクセスする](http://go.microsoft.com/fwlink/?LinkId=257729)、consultingblogs.emc.com します。  
   
--   ブログ エントリ「 [SSIS: インプロセスまたはアウト プロセスの子パッケージを実行する必要がありますか。](http://go.microsoft.com/fwlink/?LinkId=220819)、consultingblogs.emc.com です。  
+-   ブログ エントリ「 [SSIS: 子パッケージのインプロセスまたはアウト プロセスを実行する必要がありますか?](http://go.microsoft.com/fwlink/?LinkId=220819)、consultingblogs.emc.com。  
   
   

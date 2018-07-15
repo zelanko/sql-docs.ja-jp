@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93794bc4f692f84b7c44b9e8b6ccca36fb43afe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2bbe45e006930798396c13136f999c8152c4f48b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286904"
 ---
 # <a name="linestring"></a>LineString
   `LineString` は、一連の点と、それらを結ぶ線分を表す 1 次元のオブジェクトです。  
@@ -36,7 +36,7 @@ ms.locfileid: "36082941"
   
 -   図 1 は、単純な閉じていない `LineString` インスタンスです。  
   
--   図 2 は、単純でない、閉じていない`LineString`インスタンス。  
+-   図 2 は単純でない、閉じていない`LineString`インスタンス。  
   
 -   図 3 は、閉じている単純な `LineString` インスタンスです。したがって、このインスタンスはリングです。  
   
@@ -60,13 +60,13 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ```  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
- `LineString`する、次の条件を満たす必要がある有効なインスタンス。  
+ `LineString`インスタンスを有効に、次の条件を満たす必要があります。  
   
 1.  `LineString`インスタンスが許容する必要があります。  
   
 2.  `LineString` インスタンスが空でない場合は、2 つ以上の異なる点が含まれていること。  
   
-3.  `LineString`インスタンスできません間隔に重ねる自体の 2 つ以上の連続する点です。  
+3.  `LineString`インスタンスは 2 つ以上の連続する点の特定の期間自体を重ねることはできません。  
   
  次に示す `LineString` インスタンスは有効です。  
   
@@ -79,7 +79,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 ```  
   
- 次`LineString`インスタンスは無効です。  
+ 次`LineString`インスタンスが無効です。  
   
 ```  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  

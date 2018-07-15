@@ -1,5 +1,5 @@
 ---
-title: サービスのサービス (SSIS サービス) を統合の構成 |Microsoft ドキュメント
+title: 統合を構成するサービスのサービス (SSIS サービス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - configuration files [Integration Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - default configuration files
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 caps.latest.revision: 70
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4d934191b491d4e8d348b7bd91004afc8f8f9545
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71a0436edf57e820b7e6b559814f65823d4390eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283678"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Integration Services サービスの構成 (SSIS サービス)
     
 > [!IMPORTANT]  
 >  このトピックでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] では、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] との互換性を維持するために、このサービスをサポートしています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以降では、Integration Services サーバー上のパッケージなどのオブジェクトを管理できます。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスの設定は、構成ファイルに基づきます。 既定では、この構成ファイルの名前は MsDtsSrvr.ini.xml、および、ファイルは %ProgramFiles%\Microsoft SQL server \120\dts\binn フォルダーにあります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスの設定は、構成ファイルに基づきます。 既定では、この構成ファイルの名前は msdtssrvr.ini.xml ですと、ファイルは %ProgramFiles%\Microsoft SQL server \120\dts\binn、フォルダーにあります。  
   
  通常は、この構成ファイルに変更を加える必要も、この構成ファイルの既定の場所を変更する必要もありません。 ただし、パッケージが [!INCLUDE[ssDE](../includes/ssde-md.md)]の名前付きインスタンスまたはリモート インスタンス、あるいは [!INCLUDE[ssDE](../includes/ssde-md.md)]の複数のインスタンスに格納されている場合は、構成ファイルを変更する必要があります。 また、構成ファイルを既定の場所とは別の場所に移動する場合は、ファイルの場所を指定するレジストリ キーを変更する必要があります。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36083940"
   
 -   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のオブジェクト エクスプローラー内の [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] に表示するルート フォルダーは、[MSDB] および [ファイル システム] フォルダーです。  
   
--   ファイル システム内のパッケージを[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]サービスは管理 %ProgramFiles%\Microsoft SQL Server\120\DTS\Packages にあります。  
+-   ファイル システム内のパッケージを[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]サービス管理 %ProgramFiles%\Microsoft SQL Server\120\DTS\Packages にあります。  
   
  この構成ファイルは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが管理するパッケージを含む msdb データベースも指定します。 既定では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] と同時にインストールされる [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]のインスタンスの msdb データベース内にあるパッケージを管理するように構成されます。 [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスが同時にインストールされない場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のローカルの既定インスタンスの msdb データベース内にあるパッケージを管理するように構成されます。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36083940"
 ```  
   
 ## <a name="modification-of-the-configuration-file-location"></a>構成ファイルの場所の変更  
-レジストリ キー **hkey_local_machine \software\microsoft\microsoft SQL Server\120\SSIS\ServiceConfigFile**するファイル、構成の名前と場所を指定[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]サービスで使用します。 レジストリ キーの既定値は**C:\Program files \microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**です。 レジストリ キーの値を更新すると、構成ファイルに別の名前と場所を使用することができます。 注意してください、パスのバージョン番号 (SQL Server の 120 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]) は SQL Server のバージョンによって異なります。 
+レジストリ キー **hkey_local_machine \software\microsoft\microsoft SQL Server\120\SSIS\ServiceConfigFile**するファイルの場所と、構成の名前を指定します。[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]サービスで使用します。 レジストリ キーの既定値は**C:\Program files \microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**します。 レジストリ キーの値を更新すると、構成ファイルに別の名前と場所を使用することができます。 パスにバージョン番号 (SQL Server の 120 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]) は SQL Server のバージョンによって異なります。 
   
   
 > [!CAUTION]  

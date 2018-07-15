@@ -1,5 +1,5 @@
 ---
-title: トレース結果の表示の変更 |Microsoft ドキュメント
+title: トレース結果の表示の変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5bb647bb704bee1b33eee00c9b13903d48140ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c1e9c9c2d0041e2e09156e4f33744ea1964812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302762"
 ---
 # <a name="modify-the-trace-results-view"></a>トレース結果の表示の変更
   このトピックでは、次のタスクを実行して [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の拡張イベント セッションのトレース結果ビューを変更する方法について説明します。  
   
-1.  [追加または列を削除します。](#AddRemoveColumns)  
+1.  [追加または列の削除](#AddRemoveColumns)  
   
-2.  [作成、編集、または結合列を削除](#ChangeColumns)  
+2.  [作成、編集、またはマージされた列の削除](#ChangeColumns)  
   
 3.  [結果を並べ替え](#SortResults)  
   
-4.  [結果のグループ化](#GroupResults)  
+4.  [結果をグループ化します。](#GroupResults)  
   
-5.  [結果を集計します。](#AggregateResults)  
+5.  [集計結果](#AggregateResults)  
   
 6.  [結果をフィルター処理します。](#Filter)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36074228"
   
 8.  [表示設定を変更します。](#ChangeDisplay)  
   
-##  <a name="AddRemoveColumns"></a> 追加または列を削除します。  
+##  <a name="AddRemoveColumns"></a> 追加または列の削除  
   
 1.  .XEL ファイルを開いてトレース結果を表示します  
   
@@ -58,9 +58,9 @@ ms.locfileid: "36074228"
   
 4.  列の表示順序を変更するには、 **[選択した列]** セクションで **[上へ移動]** または **[下へ移動]** をクリックします。 複数行を移動することはできません。  
   
-5.  **[OK]** をクリックします。  
+5.  [**OK**] をクリックします。  
   
-##  <a name="ChangeColumns"></a> 作成、編集、または結合列を削除  
+##  <a name="ChangeColumns"></a> 作成、編集、またはマージされた列の削除  
   
 #### <a name="to-create-merged-columns"></a>結合列を作成するには  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36074228"
     > [!NOTE]  
     >  拡張イベントは最大 5 列までの結合をサポートします。  
   
-6.  **[OK]** をクリックします。  
+6.  [**OK**] をクリックします。  
   
 #### <a name="to-edit-merged-columns"></a>結合列を編集するには  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36074228"
   
      グループ化から列を削除するには、 **[次の条件でグループ化される列]** ボックスで、削除する列を選択し、左矢印をクリックします。  
   
-4.  **[OK]** をクリックします。  
+4.  [**OK**] をクリックします。  
   
 ##  <a name="AggregateResults"></a> 集計結果  
  拡張イベントは次の 5 つの集計関数をサポートします。  
@@ -186,7 +186,7 @@ ms.locfileid: "36074228"
   
 6.  集計結果を降順に並べ替えるには、 **[降順]** をクリックします。  
   
-7.  **[OK]** をクリックします。  
+7.  [**OK**] をクリックします。  
   
 ##  <a name="Filter"></a> 結果をフィルター処理します。  
  フィルターを適用することで、トレース ウィンドウに表示されるトレース結果を絞り込むことができます。 表示フィルターには、時間フィルターと高度なフィルターが含まれています。 時間フィルターではトレース結果をイベントのタイムスタンプでフィルター処理し、高度なフィルターではイベントのフィールドとアクションを使用してフィルター条件を作成します。 時間フィルターと高度なフィルターとの間には論理 AND 関係があります。  
@@ -233,7 +233,7 @@ ms.locfileid: "36074228"
   
     -   **[詳細]**。 **[拡張イベントで検索]** ダイアログ ボックスを開く前に選択したトレース ウィンドウのすべての (昇格および未昇格の) 列を検索するには、このオプションを使用します。  
   
-    -   **\<イベント列の名前 >** です。 ドロップダウン リストから特定のイベント列で検索するには、このオプションを使用します。  
+    -   **\<イベント列の名前 >** します。 ドロップダウン リストから特定のイベント列で検索するには、このオプションを使用します。  
   
 5.  検索の定義方法を指定するには、次のオプションを使用します。  
   

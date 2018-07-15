@@ -1,5 +1,5 @@
 ---
-title: データ ソース (SSAS 多次元) を作成 |Microsoft ドキュメント
+title: データ ソース (SSAS 多次元) を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcedesigner.f1
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4077a7a0df6fe7575a7844a85917c107aacac07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b0275daece83f64726f7b5dd50618d68d7c6e6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310852"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>データ ソースの作成 (SSAS 多次元)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の多次元モデルでは、データ ソース オブジェクトが、処理 (またはインポート) するデータを持つデータ ソースへの接続を表します。 多次元モデルには少なくとも 1 つのデータ ソース オブジェクトが含まれている必要がありますが、複数のデータ ウェアハウスのデータを結合するために、データ ソース オブジェクトをさらに追加することもできます。 このトピックで説明する手順に従って、モデルのデータ ソース オブジェクトを作成します。 このオブジェクトのプロパティの設定の詳細については、「[データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](set-data-source-properties-ssas-multidimensional.md)」を参照してください。  
@@ -47,7 +47,7 @@ ms.locfileid: "36179008"
  [モデルへの複数のデータ ソースの追加](#bkmk_multipleDS)  
   
 ##  <a name="bkmk_provider"></a> データ プロバイダーの選択  
- マネージ [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework またはネイティブ OLE DB プロバイダーを使用して接続できます。 SQL Server データ ソースでは、通常、SQL Server Native Client を使用するとパフォーマンスが向上するため、このデータ プロバイダーを使用することをお勧めします。  
+ マネージド [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework またはネイティブ OLE DB プロバイダーを使用して接続できます。 SQL Server データ ソースでは、通常、SQL Server Native Client を使用するとパフォーマンスが向上するため、このデータ プロバイダーを使用することをお勧めします。  
   
  Oracle や他のサードパーティのデータ ソースの場合、そのサードパーティがネイティブ OLE DB プロバイダーを提供しているかどうかを確認し、まずそのプロバイダーを使用してみます。 エラーが発生した場合は、接続マネージャーで一覧に示されている他の .NET プロバイダーまたはネイティブ OLE DB プロバイダーを試してみます。 使用するデータ プロバイダーが、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションの開発と実行に使用するすべてのコンピューターにインストールされていることを確認してください。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36179008"
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の既定では、接続文字列と共にパスワードは保存されません。 パスワードが保存されていない場合は、必要に応じてパスワードを入力するよう [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] から求められます。 パスワードを保存するように選択した場合、パスワードは暗号化形式でデータ接続文字列に保存されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、データ ソースを含むデータベースの暗号化キーを使用して、データ ソースのパスワード情報が暗号化されます。 接続情報が暗号化されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービス アカウントまたはパスワードを変更する必要があります。これを行わないと、暗号化された情報を復元できません。 詳細については、「 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)」を参照してください。  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>データ マイニング オブジェクト用の権限借用情報の定義  
- データ マイニング クエリは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービス アカウントのコンテキストで実行できますが、クエリを送信するユーザーのコンテキスト、または指定されたユーザーのコンテキストでも実行できます。 クエリが実行されるコンテキストは、クエリの結果に影響する場合があります。 データ マイニング用`OPENQUERY`操作を入力、データ マイニング クエリをサービス アカウントのコンテキストではなく、(クエリを実行するユーザー) に関係なく、指定したユーザーのコンテキストで現在のユーザーのコンテキストで実行することができます。 これにより、限られたセキュリティ資格情報でクエリを実行することができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で現在のユーザーまたは指定されたユーザーの権限を借用するには、 **[特定のユーザー名とパスワードを使用する]** または **[現在のユーザーの資格情報を使用する]** オプションを選択します。  
+ データ マイニング クエリは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービス アカウントのコンテキストで実行できますが、クエリを送信するユーザーのコンテキスト、または指定されたユーザーのコンテキストでも実行できます。 クエリが実行されるコンテキストは、クエリの結果に影響する場合があります。 データ マイニング`OPENQUERY`タイプのオペレーション、データ マイニングのクエリをサービス アカウントのコンテキストではなく、(クエリを実行するユーザー) に関係なく、指定したユーザーのコンテキストでは、現在のユーザーのコンテキストでを実行する可能性があります。 これにより、限られたセキュリティ資格情報でクエリを実行することができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で現在のユーザーまたは指定されたユーザーの権限を借用するには、 **[特定のユーザー名とパスワードを使用する]** または **[現在のユーザーの資格情報を使用する]** オプションを選択します。  
   
 ##  <a name="bkmk_steps"></a> データ ソース ウィザードによるデータ ソースの作成  
   
@@ -86,11 +86,11 @@ ms.locfileid: "36179008"
   
      新しい接続の既定のプロバイダーは、ネイティブ OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client プロバイダーです。 このプロバイダーは、OLE DB を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのインスタンスに接続するために使用します。 SQL Server リレーショナル データベースに接続する場合、通常は、Native OLE DB\SQL Server Native Client 11.0 を使用する方が、代替プロバイダーを使用するより高速です。  
   
-     他のデータ ソースにアクセスするために、別のプロバイダーを選択できます。 プロバイダーおよびでサポートされているリレーショナル データベースの一覧については[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を参照してください[サポートされるデータ ソース&#40;SSAS 多次元&#41;](supported-data-sources-ssas-multidimensional.md)です。  
+     他のデータ ソースにアクセスするために、別のプロバイダーを選択できます。 プロバイダーとでサポートされているリレーショナル データベースの一覧については[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を参照してください[サポートされるデータ ソース&#40;SSAS 多次元&#41;](supported-data-sources-ssas-multidimensional.md)します。  
   
 5.  選択したプロバイダーから要求される情報を入力して、基になるデータ ソースに接続します。 **[ネイティブ OLE DB\SQL Server Native Client]** プロバイダーを選択した場合は、次の情報を入力します。  
   
-    1.  **[サーバー名]** は、データベース エンジン インスタンスのネットワーク名です。 IP アドレス、コンピューターの NETBIOS 名、または完全修飾ドメイン名として指定できます。 サーバーが名前付きインスタンスとしてインストールされている場合は、インスタンス名を含める必要があります (たとえば、 \<computername >\\< instancename\>)。  
+    1.  **[サーバー名]** は、データベース エンジン インスタンスのネットワーク名です。 IP アドレス、コンピューターの NETBIOS 名、または完全修飾ドメイン名として指定できます。 場合は、サーバーを名前付きインスタンスとしてインストールすると、インスタンス名を含める必要があります (たとえば、 \<computername >\\< instancename\>)。  
   
     2.  **[サーバー ログオン]** は、接続の認証方法を指定します。 **[Windows 認証を使用する]** では、Windows 認証が使用されます。 **[SQL Server 認証を使用する]** では、Windows Azure SQL データベース、または混合モード認証をサポートする SQL Server インスタンスのデータベース ユーザー ログインを指定します。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36179008"
   
          データ ソース ウィザードの **[接続の定義方法を選択します]** ページにある **[データ接続]** ペインに新しい接続が表示されます。  
   
-6.  **[次へ]** をクリックします。  
+6.  [**次へ**] をクリックします。  
   
 7.  **[権限借用情報]** で、Analysis Services が外部データ ソースに接続する際に使用する Windows 資格情報またはユーザー ID を指定します。 データベース認証を使用する場合、接続でこれらの設定は無視されます。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36179008"
   
      指定するアカウントは、データ ソースに対する読み取り権限を持っている必要があります。  
   
-8.  **[次へ]** をクリックします。  **[ウィザードの完了]** で、データ ソースの名前を入力するか、既定の名前を使用します。 既定の名前は、接続で指定されたデータベース名になっています。 この新しいデータ ソースの接続文字列が **[プレビュー]** ペインに表示されます。  
+8.  [**次へ**] をクリックします。  **[ウィザードの完了]** で、データ ソースの名前を入力するか、既定の名前を使用します。 既定の名前は、接続で指定されたデータベース名になっています。 この新しいデータ ソースの接続文字列が **[プレビュー]** ペインに表示されます。  
   
 9. **[完了]** をクリックします。  ソリューション エクスプローラーの **[データ ソース]** フォルダーに、新しいデータ ソースが表示されます。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "36179008"
  追加のデータ ソースへの接続をサポートするために、複数のデータ ソース オブジェクトを作成できます。 各データ ソースには、リレーションシップを作成するために使用できる列が必要です。  
   
 > [!NOTE]  
->  複数のデータ ソースが定義され、1 つのクエリで複数のソースからデータが照会された場合など、スノーフレーク ディメンションの必要がありますソースを定義するデータを使用したリモート クエリをサポートする`OpenRowset`です。 通常、これは Microsoft SQL Server データ ソースになります。  
+>  複数のデータ ソースが定義され、1 つのクエリで複数のソースからデータがクエリされた場合など、スノーフレーク ディメンションの必要がありますソースを定義するデータを使用してリモート クエリをサポートする`OpenRowset`します。 通常、これは Microsoft SQL Server データ ソースになります。  
   
  複数のデータ ソースを使用するための要件には、次のようなものがあります。  
   

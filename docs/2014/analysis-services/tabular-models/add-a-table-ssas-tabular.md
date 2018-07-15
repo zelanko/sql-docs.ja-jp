@@ -1,5 +1,5 @@
 ---
-title: テーブルの追加 (SSAS 表形式) |Microsoft ドキュメント
+title: テーブル (SSAS テーブル) の追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c75d304514a3f08c7c3df94f47a66abc7ad436ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 82167dfaa3de6d9312cb3115849aac7a9beaf07b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281898"
 ---
 # <a name="add-a-table-ssas-tabular"></a>テーブルの追加 (SSAS テーブル)
   このトピックでは、以前にデータをモデルにインポートしたときのデータ ソースからテーブルを追加する方法について説明します。 同じデータ ソースからテーブルを追加するには、既存のデータ ソース接続を使用できます。 1 つのデータ ソースから任意の数のテーブルをインポートする場合は、常に 1 つの接続を使用することをお勧めします。  
@@ -44,6 +44,6 @@ ms.locfileid: "36077401"
   
 ## <a name="see-also"></a>参照  
  [データをインポート&#40;SSAS 表形式&#41;](../import-data-ssas-tabular.md)   
- [テーブルの削除&#40;SSAS 表形式&#41;](delete-a-table-ssas-tabular.md)  
+ [テーブルを削除する&#40;SSAS 表形式&#41;](delete-a-table-ssas-tabular.md)  
   
   

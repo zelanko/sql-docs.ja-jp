@@ -1,14 +1,13 @@
 ---
-title: フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ) |Microsoft ドキュメント
+title: フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], failover
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 71
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a2bff986de8e70cca18a5dc978ed05db9cc42061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310442"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ)
   一般的に、可用性グループのコンテキスト内で、可用性レプリカのプライマリ ロールとセカンダリ ロールが *フェールオーバー*と呼ばれるプロセスで交換されることがあります。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および " *強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータが保持されます。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 つまり、可用性グループはセカンダリ レプリカのいずれか (現在の " *フェールオーバー ターゲット*") にフェールオーバーされます。  
@@ -72,7 +71,7 @@ ms.locfileid: "36178973"
 |計画的な手動フェールオーバー|いいえ|はい|はい|  
 |強制フェールオーバー|はい|はい|うん**<sup>*</sup>**|  
   
- **<sup>*</sup>**  同期されたセカンダリ レプリカ上で強制フェールオーバー コマンドを発行した場合、セカンダリ レプリカは手動フェールオーバーの場合と同様は動作します。  
+ **<sup>*</sup>**  同期されたセカンダリ レプリカ上で強制フェールオーバー コマンドを発行した場合、セカンダリ レプリカが手動フェールオーバーの場合と同様に動作します。  
   
  フェールオーバー中にデータベースが使用できなくなる時間の長さは、フェールオーバーの種類および原因によって異なります。  
   
@@ -239,7 +238,7 @@ ms.locfileid: "36178973"
   
 1.  プライマリ レプリカに接続します。  
   
-2.  クエリ、 `last_commit_lsn` (最後にコミットされたトランザクションの LSN) と`last_commit_time`(最終コミット時間) 列、 [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)動的管理ビュー。  
+2.  クエリ、 `last_commit_lsn` (最後のコミットされたトランザクションの LSN) と`last_commit_time`(最終コミット時間) 列、 [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)動的管理ビュー。  
   
 3.  各プライマリ データベースとその各セカンダリ データベースに返された値を比較します。 最後にコミットした LSN の差異は、遅延の程度を示します。  
   
@@ -311,15 +310,15 @@ ms.locfileid: "36178973"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性と災害復旧の Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn チームのブログ: 公式 SQL Server AlwaysOn チーム ブログ](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ: 正式な SQL Server AlwaysOn チームのブログ](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性モード&#40;AlwaysOn 可用性グループ&#41;](availability-modes-always-on-availability-groups.md)   
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [データベース ミラーリングまたは AlwaysOn 可用性グループはサポートされない複数データベースにまたがるトランザクション&#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
+ [データベース ミラーリングまたは AlwaysOn 可用性グループのサポートされない複数データベースにまたがるトランザクション&#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
  [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md)  
   

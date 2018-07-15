@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - user-defined variables [Integration Services]
@@ -21,13 +21,13 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6a5737635ffd69a7d09a93ac1104a1ee65b8277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7352ff51810a16f2c3e81b5362bad764955f67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283618"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
   変数には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージと、パッケージに含まれるコンテナー、タスク、およびイベント ハンドラーで、実行時に使用できる値が格納されます。 スクリプト タスクおよびスクリプト コンポーネント内のスクリプトも、変数を使用できます。 タスクとコンテナーにワークフロー内での順位を付ける優先順位制約では、制約の定義に式を含める場合に変数を使用できます。  
@@ -90,7 +90,7 @@ ms.locfileid: "36077132"
  変数の説明を指定します。  
   
  EvaluateAsExpression  
- プロパティを設定すると`True`、指定した式を使用して変数の値を設定します。  
+ プロパティを設定すると`True`、指定された式を使用して変数の値を設定します。  
   
  式  
  変数に割り当てられる式を指定します。  
@@ -118,17 +118,17 @@ ms.locfileid: "36077132"
  [IncludeInDebugDump]  
  変数値がデバッグ ダンプ ファイルに含まれるかどうかを示します。  
   
- ユーザー定義変数とシステム変数は、既定値、 **[inclueindebugdump]** オプションは`true`します。  
+ ユーザー定義変数とシステム変数は、既定の値を **[inclueindebugdump]** オプションは`true`します。  
   
- ただし、ユーザー定義変数の場合、システムがリセットされ、 **[includeindebugdump]** オプションを`false`次の条件を満たしている場合に。  
+ ただし、ユーザー定義変数の場合、システムがリセットされ、 **IncludeInDebugDump**オプションを`false`次の条件が満たされたとき。  
   
--   場合、 **EvaluateAsExpression**変数のプロパティに設定されている`true`、リセット、 **[includeindebugdump]** オプションを`false`です。  
+-   場合、 **EvaluateAsExpression**変数のプロパティに設定されて`true`、リセット、 **IncludeInDebugDump**オプションを`false`。  
   
-     デバッグ ダンプ ファイルには、変数の値として式のテキストを含める、設定、 **[includeindebugdump]** オプションを`true`です。  
+     変数の値として式のテキストをデバッグ ダンプ ファイルに含めるには、設定、 **IncludeInDebugDump**オプションを`true`します。  
   
--   変数のデータ型を文字列に変更する場合に、システムがリセット、 **[includeindebugdump]** オプションを`false`です。  
+-   変数のデータ型を文字列に変更する場合、システムがリセット、 **IncludeInDebugDump**オプションを`false`します。  
   
- システムをリセットすると、 **[includeindebugdump]** オプションを`false`、このユーザーが選択されている値を上書きすることがあります。  
+ システムをリセットすると、 **IncludeInDebugDump**オプションを`false`、このユーザーが選択した値をオーバーライドする可能性があります。  
   
  値  
  ユーザー定義変数の値には、リテラルまたは式を設定できます。 変数には、変数値および変数のデータ型を設定するオプションが含まれています。 この 2 つのプロパティには互換性が必要です。たとえば、文字列の値を整数データ型に使用することはできません。  
@@ -146,7 +146,7 @@ ms.locfileid: "36077132"
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「[[変数] ウィンドウ](../../2014/integration-services/variables-window.md)」を参照してください。  
   
- 詳細については、プログラムによってこれらのプロパティを設定、変数のプロパティに関する詳細についてを参照してください<xref:Microsoft.SqlServer.Dts.Runtime.Variable>です。  
+ 詳細については、プログラムによってこれらのプロパティを設定および変数のプロパティについての詳細についてを参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.Variable>します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

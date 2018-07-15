@@ -1,5 +1,5 @@
 ---
-title: ReadDefinition 要素 (ASSL) |Microsoft ドキュメント
+title: ReadDefinition 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReadDefinition element
 ms.assetid: 1f250129-13b2-41b9-b083-b5aacddf0060
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdb505ff02917259b71d5f5b1ee803a5982217b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fed91c75bd717e67dd624fc16f7091be24fb030c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297232"
 ---
 # <a name="readdefinition-element-assl"></a>ReadDefinition 要素 (ASSL)
   メンバーがデータベースの定義やデータベース内のオブジェクトの定義を読み取ることができるかどうかを指定します。  
@@ -58,7 +58,7 @@ ms.locfileid: "36178558"
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[CubePermission](../objects/cubepermission-element-assl.md)、 [DatabasePermission](../objects/databasepermission-element-assl.md)、 [DimensionPermission](../objects/dimensionpermission-element-assl.md)、 [MiningModelPermission](../objects/miningmodelpermission-element-assl.md)、 [MiningStructurePermission](../objects/miningstructurepermission-element-assl.md)、[権限](../data-type/permission-data-type-assl.md)|  
+|親要素|[CubePermission](../objects/cubepermission-element-assl.md)、 [DatabasePermission](../objects/databasepermission-element-assl.md)、 [DimensionPermission](../objects/dimensionpermission-element-assl.md)、 [MiningModelPermission](../objects/miningmodelpermission-element-assl.md)、 [MiningStructurePermission](../objects/miningstructurepermission-element-assl.md)、[アクセス許可](../data-type/permission-data-type-assl.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
@@ -67,7 +67,7 @@ ms.locfileid: "36178558"
 |値|説明|  
 |-----------|-----------------|  
 |*なし*|オブジェクト定義へのアクセスは許可されません。|  
-|*基本*|オブジェクト定義への基本アクセスが許可されます。 **注:** このアクセス許可はローカル キューブを作成する、リンク メジャー グループ、およびディメンションをリンクが必要です。|  
+|*基本*|オブジェクト定義への基本アクセスが許可されます。 **注:** このアクセス許可がローカル キューブを作成する、リンク メジャー グループ、およびディメンションのリンクが必要です。|  
 |*許可されています。*|オブジェクト定義への完全アクセスが許可されます。 **注:** このアクセス許可を実行するために必要な[Discover](../../xmla/xml-elements-methods-discover.md) XML for Analysis (XMLA) の呼び出し、DISCOVER_XML_METADATA パラメーターを使用します。|  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで `ReadDefinition` の親に対応する要素は、<xref:Microsoft.AnalysisServices.CubePermission>、<xref:Microsoft.AnalysisServices.DatabasePermission>、<xref:Microsoft.AnalysisServices.DimensionPermission>、<xref:Microsoft.AnalysisServices.MiningModelPermission>、<xref:Microsoft.AnalysisServices.MiningStructurePermission>、および <xref:Microsoft.AnalysisServices.Permission> です。  

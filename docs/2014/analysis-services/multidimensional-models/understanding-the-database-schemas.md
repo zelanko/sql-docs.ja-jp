@@ -1,5 +1,5 @@
 ---
-title: データベース スキーマの理解 |Microsoft ドキュメント
+title: データベース スキーマの理解 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, database schema
 - database schema [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf611a2ae8e2c2275fc59d3abc124d8fa202d388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef75cf2773781f94bd02a26c5c94958b9f4dfe3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282248"
 ---
 # <a name="understanding-the-database-schemas"></a>データベース スキーマの理解
   スキーマ生成ウィザードでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のディメンションおよびメジャー グループに基づいて、サブジェクト領域のデータベース用の非正規化されたリレーショナル スキーマを生成します。 このウィザードでは、ディメンション データを格納するための各ディメンション用のリレーショナル テーブル (ディメンション テーブル)、およびファクト データを格納するための各メジャー グループ用のリレーショナル テーブル (ファクト テーブル) が生成されます。 このウィザードを使用してこれらのリレーショナル テーブルを生成する場合、リンク ディメンション、リンク メジャー グループ、およびサーバー時間ディメンションは無視されます。  
@@ -48,7 +48,7 @@ ms.locfileid: "36083525"
  各ディメンションに対して、スキーマ生成ウィザードによって、サブジェクト領域データベースに含まれるディメンション テーブルが生成されます。 ディメンション テーブルの構造は、基になるディメンションをデザイン中に行った選択によって異なります。  
   
  [列]  
- ウィザードは、基になるディメンション テーブルがバインドなど、ディメンション内の各属性に関連付けられているバインディングの 1 つの列を生成、 `KeyColumns`、 `NameColumn`、 `ValueColumn`、 `CustomRollupColumn`、 `CustomRollupPropertiesColumn`、および`UnaryOperatorColumn`各属性のプロパティです。  
+ ウィザードは、ディメンション テーブルは、基になるバインドなど、ディメンション内の各属性に関連付けられているバインディングの 1 つの列を生成、 `KeyColumns`、 `NameColumn`、 `ValueColumn`、 `CustomRollupColumn`、 `CustomRollupPropertiesColumn`、および`UnaryOperatorColumn`の各属性のプロパティ。  
   
  リレーションシップ  
  このウィザードでは、各親属性の列とディメンション テーブルの主キーの間のリレーションシップが生成されます。  
@@ -68,7 +68,7 @@ ms.locfileid: "36083525"
  キューブ内の各メジャー グループに対して、スキーマ生成ウィザードによって、サブジェクト領域データベースに含まれるファクト テーブルが生成されます。 ファクト テーブルの構造は、基になるメジャー グループのデザイン中に行われた選択と、メジャー グループと含まれるディメンションの間のリレーションシップによって異なります。  
   
  [列]  
- ウィザードの各メジャーに使用するメジャー以外の 1 つの列を生成する、`Count`集計関数。 これらのメジャーは、ファクト テーブルに対応する列を必要としません。  
+ ウィザードの各メジャーに使用するメジャー以外の 1 つの列の生成、`Count`集計関数。 これらのメジャーは、ファクト テーブルに対応する列を必要としません。  
   
  さらに、必要に応じて、メジャー グループ上の標準のディメンション リレーションシップごとの各粒度属性列に 1 つの列が生成され、このテーブルの基になるメジャー グループへのファクト ディメンション リレーションシップがあるディメンションの各属性に関連付けられたバインドに 1 つまたは複数の列が生成されます。  
   

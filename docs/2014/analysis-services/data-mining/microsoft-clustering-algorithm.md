@@ -1,5 +1,5 @@
 ---
-title: Microsoft クラスタ リング アルゴリズム |Microsoft ドキュメント
+title: Microsoft クラスタ リング アルゴリズム |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - nearest neighbor [Data Mining]
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 caps.latest.revision: 61
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74e1a00c89050b632ca01a5f67f734484bff8de7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d42992680de6772d305c425d1f921fea44cd584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308792"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft クラスタリング アルゴリズム
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]クラスタ リング アルゴリズムはによって提供される分割アルゴリズム[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 このアルゴリズムは、反復的な手法を使用して、類似の特性を持つクラスターにデータセット内のケースをグループ化します。 このグループ化は、データの探索、データの異常の特定、および予測の作成に役立ちます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]クラスタ リング アルゴリズムによって提供される分割アルゴリズムは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 このアルゴリズムは、反復的な手法を使用して、類似の特性を持つクラスターにデータセット内のケースをグループ化します。 このグループ化は、データの探索、データの異常の特定、および予測の作成に役立ちます。  
   
  クラスタリング モデルでは、一般レベルの観察では論理的に推論できないデータセット内の関係が識別されます。 たとえば、自転車で通勤している従業員は、一般的に勤め先から遠くないところに住んでいることは、だれでも明確に理解できます。 しかし、このアルゴリズムでは、それほど明確でない自転車通勤者に関する他の特性を見つけることができます。 次の図では、クラスター A は勤め先に車で通勤する従業員に関するデータを表し、クラスター B は勤め先に自転車で通勤する従業員に関するデータを表しています。  
   
- ![通勤者の傾向を示すクラスター パターン](../media/clustering-example.gif "通勤者の傾向を示すクラスター パターン")  
+ ![通勤者のクラスター パターン](../media/clustering-example.gif "通勤者のクラスター パターン")  
   
  クラスタリング アルゴリズムは、クラスタリング モデルを作成するために予測可能列を指定する必要がないという点において、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムなどの他のデータ マイニング アルゴリズムと異なります。 クラスタリング アルゴリズムでは、データに存在する関係と、アルゴリズムで識別されたクラスターからのみモデルをトレーニングします。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36074279"
   
 -   **入力列** : 各モデルには、クラスターの作成に使用される値が含まれた入力列が 1 つ以上必要です。 入力列はいくつあってもかまいませんが、各列内の値の数によっては、列を追加するとモデルのトレーニングにかかる時間が長くなる場合があります。  
   
--   **省略可能な予測可能列** : このアルゴリズムでモデルを作成するために予測可能列は必要ありません。しかし、ほぼすべてのデータ型の予測可能列を追加することができます。 予測可能列の値は、クラスタリング モデルへの入力として扱うことも、予測のみに使用するよう指定することもできます。 たとえば、地域や年齢などの人口統計のクラスタ リングによって顧客の収入を予測する場合を指定するとして income`PredictOnly`し、入力としてのすべての列、地域や年齢などを追加します。  
+-   **省略可能な予測可能列** : このアルゴリズムでモデルを作成するために予測可能列は必要ありません。しかし、ほぼすべてのデータ型の予測可能列を追加することができます。 予測可能列の値は、クラスタリング モデルへの入力として扱うことも、予測のみに使用するよう指定することもできます。 たとえば、地域や年齢などの人口統計に対してクラスタ リングによって顧客の収入を予測する場合は、として収入を指定は`PredictOnly`し、他すべての列、地域や年齢などを入力として追加します。  
   
  クラスタリング モデルでサポートされるコンテンツの種類とデータ型の詳細については、「 [Microsoft クラスタリング アルゴリズム テクニカル リファレンス](microsoft-clustering-algorithm-technical-reference.md)」の「必要条件」を参照してください。  
   

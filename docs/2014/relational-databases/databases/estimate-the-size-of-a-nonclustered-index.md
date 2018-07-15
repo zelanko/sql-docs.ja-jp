@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
 - size [SQL Server], tables
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 102701a984c6f35d38194c0d8a46c4ed63438936
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d2fb15614dbb72fd9e76bf62174f6b435429d4e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296652"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>非クラスター化インデックスのサイズの算出
   非クラスター化インデックスを格納するために必要な領域を算出するには、次の手順に従います。  
@@ -121,7 +121,7 @@ ms.locfileid: "36178462"
     >  インデックス キー列の他に非キー列を含めることにより、非クラスター化インデックスを拡張できます。 このように追加された列は、非クラスター化インデックスのリーフ レベルにしか格納されません。 詳細については、「 [付加列インデックスの作成](../indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
     > [!NOTE]  
-    >  組み合わせることができます`varchar`、 `nvarchar`、 `varbinary`、または`sql_variant`定義されているテーブルの合計幅が 8,060 バイトを超えることになる列。 この場合も、`varchar`、`varbinary`、または `sql_variant` 列の場合は 8,000 バイト、`nvarchar` 列の場合は 4,000 バイトの制限内に、各列のサイズを収める必要があります。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。 これは、既に付加列を含んでいる非クラスター化インデックスのリーフ行にも当てはまります。  
+    >  組み合わせることができます`varchar`、 `nvarchar`、 `varbinary`、または`sql_variant`8,060 バイトを超える定義されているテーブルの合計幅となる列にします。 この場合も、`varchar`、`varbinary`、または `sql_variant` 列の場合は 8,000 バイト、`nvarchar` 列の場合は 4,000 バイトの制限内に、各列のサイズを収める必要があります。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。 これは、既に付加列を含んでいる非クラスター化インデックスのリーフ行にも当てはまります。  
   
      非クラスター化インデックスに付加列が含まれていない場合は、手順 1.3. での変更を含め、手順 1. の値を使用します。  
   
@@ -220,13 +220,13 @@ ms.locfileid: "36178462"
   
 2.  次の式で、インデックス内の非リーフ ページ数を計算します。  
   
-     ***Num_Index_Pages*** = ∑ (***num_leaf_pages/index_rows_per_page***<sup>レベル</sup>) ここで、1 < = レベル < =***レベル***  
+     ***Num_Index_Pages*** = ∑Level (***num_leaf_pages/index_rows_per_page***<sup>レベル</sup>) 場合、1 < = レベル < =***レベル***  
   
      それぞれの値を最も近い整数に切り上げます。 簡単な例として、 ***Num_Leaf_Pages*** = 1000、 ***Index_Rows_Per_Page*** = 25 のインデックスを例に取ります。 リーフ レベルより上位の最初のインデックス レベルでは、1000 行のインデックス行が格納されます。リーフ ページあたり 1 行のインデックス行で、1 ページあたり 25 行のインデックス行を納めることができます。 つまり、1,000 行のインデックス行を格納するために 40 ページが必要になります。 次のレベルのインデックスでは、40 行のインデックス行を格納する必要があります。 つまり、2 ページが必要になります。 最上位レベルのインデックスでは、2 行のインデックス行を格納する必要があります。 つまり、1 ページが必要になります。 その結果、非リーフ インデックス ページは 43 ページとなります。 このような数値を前の式で使用すると、次のような結果になります。  
   
      ***Non-leaf_levels*** = 1 + log25 (1000/25) = 3  
   
-     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43 はの例で説明したページ数。  
+     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43、これは、例で説明したページ数。  
   
 3.  次の式で、インデックスのサイズを計算します (1 ページあたりの総バイト数は 8,192 です)。  
   
@@ -249,7 +249,7 @@ ms.locfileid: "36178462"
   
 -   ラージ オブジェクト (LOB) の値  
   
-     LOB データ型の格納に使用される領域の量を正確に特定するアルゴリズム`varchar(max)`、 `varbinary(max)`、 `nvarchar(max)`、 `text`、 `ntext`、 `xml`、および`image`値が複雑です。 LOB データ型の値で使用される領域の計算は、想定される LOB 値の平均サイズを合計し、 ***Num_Rows***で乗算し、非クラスター化インデックスの合計サイズに加算するだけで十分です。  
+     LOB データ型を格納する領域の量を使用する正確に特定するアルゴリズム`varchar(max)`、 `varbinary(max)`、 `nvarchar(max)`、 `text`、 `ntext`、 `xml`、および`image`値は複雑です。 LOB データ型の値で使用される領域の計算は、想定される LOB 値の平均サイズを合計し、 ***Num_Rows***で乗算し、非クラスター化インデックスの合計サイズに加算するだけで十分です。  
   
 -   圧縮  
   

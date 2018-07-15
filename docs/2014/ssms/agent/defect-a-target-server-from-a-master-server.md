@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], defecting
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - defecting target servers
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 07433af48c259d0f2654f01b3a6bc3a43c808c0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 35f113cfd0e038940c00b710b31f254da6343805
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305042"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Defect a Target Server from a Master Server
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクト (SMO) を使用して、マスター サーバーから対象サーバーの参加を解除する方法について説明します。 この手順は対象サーバーから実行します。  
@@ -75,10 +75,10 @@ ms.locfileid: "36073887"
 sp_msx_defect ;  
 ```  
   
- 詳細については、次を参照してください。 [sp_msx_defect &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_msx_defect &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql)します。  
   
 ##  <a name="PowerShellProcedure"></a> SQL Server 管理オブジェクト (SMO) の使用  
- 使用して、`MsxDefect Method`です。  
+ 使用して、`MsxDefect Method`します。  
   
 ## <a name="see-also"></a>参照  
  [マルチサーバー環境の作成](create-a-multiserver-environment.md)   

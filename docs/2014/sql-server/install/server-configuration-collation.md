@@ -1,5 +1,5 @@
 ---
-title: サーバーの構成 - 照合順序 |Microsoft ドキュメント
+title: サーバーの構成 - 照合順序 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collation configuration, SQL Server
 - collation configuration, Setup
 - collation configuration
 ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ee24c8f9234069526780db72457e178d50d5c824
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: abd57940e3caf8af66cb58fdeceebc802e877f6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290178"
 ---
 # <a name="server-configuration---collation"></a>サーバーの構成 - 照合順序
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [サーバーの構成 - 照合順序] ページでは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で並べ替えに使用される照合順序の設定を変更できます。 インストールされている別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、または別のコンピューターと照合順序設定を一致させるにはこのオプションを選択します。  
   
 ## <a name="options"></a>および  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のカスタマイズ  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序の 2 つのグループを提供: Windows 照合順序と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]照合順序。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に異なる照合順序の設定を指定できます。また、両方に同じ照合順序を指定することもできます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序の 2 つのグループを提供します。 Windows の照合順序と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]照合順序。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に異なる照合順序の設定を指定できます。また、両方に同じ照合順序を指定することもできます。  
   
  既定では、英語 (米国) システム ロケールには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序が選択されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他言語バージョンの既定の照合順序は、使用しているコンピューターの Windows システム ロケール設定によって決まります。  
   

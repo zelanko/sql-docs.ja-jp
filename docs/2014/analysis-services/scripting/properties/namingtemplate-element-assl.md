@@ -1,5 +1,5 @@
 ---
-title: NamingTemplate 要素 (ASSL) |Microsoft ドキュメント
+title: NamingTemplate 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8eb2589b0b33a0b3268e6104b51c3e3612ad894
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ba346be8664cf26992143c15789684c503fdf2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300842"
 ---
 # <a name="namingtemplate-element-assl"></a>NamingTemplate 要素 (ASSL)
-  構築された親子階層におけるレベルの名前付け方法を定義、 [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)親要素です。  
+  構築された親子階層におけるレベルの名前付け方法を定義、 [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)親要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36084397"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 値、`NamingTemplate`要素は親属性によってのみ使用 (つまり、他の値、[使用状況](usage-element-dimensionattribute-assl.md)の要素、`DimensionAttribute`に設定されている親要素*親*)。  
+ 値、`NamingTemplate`要素の親属性によってのみ使用されます (つまり、他の値、[使用状況](usage-element-dimensionattribute-assl.md)の要素、`DimensionAttribute`に親要素が設定されている*親*)。  
   
  親属性を使用して階層を構築する際、階層のレベルは親属性に含まれるメンバー間の親子関係により決まります。 したがって、他のディメンションとは異なり、階層に使用されている属性名からレベル名を得ることはできません。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36084397"
   
  一覧に含まれる名前は、レベル名の一意性を確保するためのテンプレートとして扱われます。 たとえば、`Manager;Team Lead;Manager;Team Lead;Worker *` を使用すると、レベル名 `Manager`、`Team Lead`、`Manager 01`、`Team Lead 01`、`Worker 05`、`Worker 06` が生成されます。  
   
- 2 つのアスタリスク (*) を使用して、アスタリスクを含める (\*) レベルの名前、名前付けテンプレートの一部として文字です。  
+ 2 つのアスタリスク (*) を使用して、アスタリスクが含まれます (\*) 名前付けテンプレートの一部としてのレベル名の文字。  
   
  親に対応する要素`NamingTemplate`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DimensionAttribute>します。  
   

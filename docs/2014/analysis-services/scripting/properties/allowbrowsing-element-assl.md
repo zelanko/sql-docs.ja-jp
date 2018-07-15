@@ -1,5 +1,5 @@
 ---
-title: AllowBrowsing 要素 (ASSL) |Microsoft ドキュメント
+title: AllowBrowsing 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllowBrowsing element
 ms.assetid: e5d09f8c-080b-4013-8c6a-0c9775e6ab25
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 722923cff6a839b6882c5a44de67ca075d0ea46f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26c93ea360fb7036179375ff62aa6f182c9b790f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282008"
 ---
 # <a name="allowbrowsing-element-assl"></a>AllowBrowsing 要素 (ASSL)
   定義するかどうかのメンバー、[ロール](../objects/role-element-assl.md)要素参照権限を持って、 [MiningModel](../objects/miningmodel-element-assl.md)要素。  

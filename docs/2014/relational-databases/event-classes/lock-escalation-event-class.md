@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - lock escalation [SQL Server], event class
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a94bcf40a3a87571d0d79584585a5c9945ca51b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8ad2b7025a97d4f5d3ec585531b786c437b8e453
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280168"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation イベント クラス
   **Lock:Escalation** イベント クラスは、細かい単位のロックが大きな単位のロックに変換されたことを示します。たとえば、行ロックがオブジェクト ロックに変換された場合です。 Escalation イベント クラスは、イベント ID 60 です。  
@@ -62,7 +62,7 @@ ms.locfileid: "36077102"
 |**StartTime**|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |**TextData**|`ntext`|ロックのエスカレーションの原因となった [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのテキスト。|1|はい|  
 |**TransactionID**|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
-|**Type**|`int`|ロックのエスカレーション粒度。<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT (テーブル レベル)<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13=ALLOCATION_UNIT|57|はい|  
+|**型**|`int`|ロックのエスカレーション粒度。<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT (テーブル レベル)<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13=ALLOCATION_UNIT|57|はい|  
   
 ## <a name="examples"></a>使用例  
  次の例では、 `sp_trace_create` プロシージャを使用してトレースを作成し、 `sp_trace_setevent` を使用してロックのエスカレーション列をそのトレースに追加してから、 `sp_trace_setstatus` を使用してトレースを開始します。 `EXEC sp_trace_setevent @TraceID, 60, 22, 1`などのステートメントでは、番号 `60` は Escalation イベント クラスを示し、番号 `22` は **ObjectID** 列を示し、 `1` はトレース イベントを ON に設定します。  

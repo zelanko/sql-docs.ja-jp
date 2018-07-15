@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_MEASUREGROUP_DIMENSIONS 行セット |Microsoft ドキュメント
+title: MDSCHEMA_MEASUREGROUP_DIMENSIONS 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_MEASUREGROUP_DIMENSIONS rowset
 ms.assetid: c731c06a-7382-4e50-ba0e-d8cee3ab4f28
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f607b966099f71acee460a5a343c557e2a81857e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ae41cad794f31443dfa2fbfc2951f0b611d5766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308452"
 ---
 # <a name="mdschemameasuregroupdimensions-rowset"></a>MDSCHEMA_MEASUREGROUP_DIMENSIONS 行セット
   メジャー グループのディメンションを列挙します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36074678"
 |`CUBE_NAME`|`DBTYPE_WSTR`|任意。|  
 |`MEASUREGROUP_NAME`|`DBTYPE_WSTR`|任意。|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`|任意。|  
-|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 の表示<br />-2 not 表示<br />-既定の制限は、1 の値です。|  
+|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 の表示<br />-2 の非表示<br />-既定の制限は、1 の値です。|  
   
 ## <a name="see-also"></a>参照  
  [OLE DB for OLAP Schema 行セット](ole-db-for-olap-schema-rowsets.md)  

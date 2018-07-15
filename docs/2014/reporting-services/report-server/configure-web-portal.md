@@ -1,5 +1,5 @@
 ---
-title: レポート マネージャー (ネイティブ モード) の構成 |Microsoft ドキュメント
+title: レポート マネージャー (ネイティブ モード) の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7af188d6f1adf097de20bf08ef8343c9e075c073
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9156e229188621fb6c5524f1b6bf9e25c72570c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299762"
 ---
 # <a name="configure-report-manager-native-mode"></a>レポート マネージャーの構成 (ネイティブ モード)
   レポート マネージャーは、Web フロント エンド アプリケーションであり、レポートの表示、レポート サーバー コンテンツの管理、およびネイティブ モードのレポート サーバーへのアクセス権の付与に使用されます。 レポート マネージャーは、レポート サーバー Web サービスと共に、同じレポート サーバー インスタンス内にインストールされます。また、セットアップ時に **[ネイティブ モードの既存の構成をインストールする]** を選択した場合は、必要に応じて構成できます。 レポート マネージャーはインストール後のタスクとしても構成できます。 このトピックでは、次のレポート マネージャーの構成シナリオについて説明します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36077049"
   
 -   レポート サーバーはネイティブ モードで動作する必要があります。 レポート マネージャーは、SharePoint 統合モード用に構成されているレポート サーバーと併用できません。 SQL Server 2012 では、レポート サーバーを別のモードに切り替えることはできません。 環境で使用しているレポート サーバーの種類を変更するには、目的のモードのレポート サーバーをインストールした後、新しいレポート サーバーにレポート アイテムをコピーまたは移動する必要があります。 このプロセスは、一般的には "移行" と呼ばれます。 移行に必要な手順は、移行先のモードと移行元のバージョンによって異なります。 詳細については、「 [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。  
   
--   また、Internet Explorer 7.0 以降 (スクリプト機能オン) も必要です。 詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)です。  
+-   また、Internet Explorer 7.0 以降 (スクリプト機能オン) も必要です。 詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)します。  
   
 ##  <a name="ConfigureRMURL"></a> 既定の URL を使用するレポート マネージャーの構成  
  既定では、レポート マネージャーの URL は一意の仮想ディレクトリ名に加えて、同じインスタンスで実行されているレポート サーバー Web サービス用に定義されているポートとホスト名で構成されます。 ほとんどの場合、ホスト名はレポート サーバー コンピューターのネットワーク名ですが、そのコンピューターを解決する IP アドレスまたはホスト ヘッダーである場合もあります。 既定の URL を使用するようにレポート マネージャーを構成するには、 **構成ツールの** [レポート マネージャー URL] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用します。  
@@ -84,13 +84,13 @@ ms.locfileid: "36077049"
   
 1.  テキスト エディターで **RSReportServer.config** ファイルを開きます。 既定では、\Program Files\Microsoft SQL Server\MSRS12.\<*instancename*>\Reporting Services\ReportServer にあります。  
   
-2.  検索`ReportServerURL`です。  
+2.  検索`ReportServerURL`します。  
   
 3.  レポート サーバー インスタンスの URL に置き換えます。  
   
 4.  変更を保存してファイルを閉じます。  
   
- 構成ファイルの詳細については、次を参照してください。 [Reporting Services の構成ファイルを変更&#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md)と[RSReportServer Configuration File](rsreportserver-config-configuration-file.md)です。  
+ 構成ファイルの詳細については、次を参照してください。 [Reporting Services の構成ファイルを変更&#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md)と[RSReportServer Configuration File](rsreportserver-config-configuration-file.md)します。  
   
 ##  <a name="ConfigureRemoteRS"></a> リモート レポート サーバーを使用するレポート マネージャーの構成  
  レポート マネージャーとレポート サーバーを異なるコンピューターに配置する配置構成では、2 つの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を個別にインストールする必要があります。 レポート マネージャーは、レポート サーバー サービスに組み込まれているため、単独でインストールすることはできません。 レポート マネージャーを別のコンピューター上で独自のプロセス内で実行する場合は、2 番目のレポート サーバーをインストールする必要があります。 両方のサーバー インスタンスは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバーであることが必要です。  
@@ -117,9 +117,9 @@ ms.locfileid: "36077049"
   
 4.  レポート マネージャーのコンピューター上で、リモート レポート サーバー インスタンスを指すように RSReportServer.config 内の構成設定を変更します。 起動時に、レポート マネージャーは構成ファイルを読み取り、レポート サーバーの URL を取得します。  
   
-    1.  テキスト エディターで RSReportServer.config を開きます。 既定では、\Program Files\Microsoft SQL Server\MSRS11 になります。\< *instancename*> \reporting です。  
+    1.  テキスト エディターで RSReportServer.config を開きます。 既定では、SQL Server\MSRS11 \Program Files\Microsoft になります。\< *instancename*> \reporting します。  
   
-    2.  検索`ReportServerURL`です。  
+    2.  検索`ReportServerURL`します。  
   
     3.  リモート レポート サーバー インスタンスの URL に置き換えます。  
   
@@ -134,9 +134,9 @@ ms.locfileid: "36077049"
   
 8.  使用していないサーバー機能を無効にします。  
   
-    -   レポート マネージャーのコンピューターでオフに`WebServiceAndHTTPAccessEnabled`と`ScheduleEventsAndReportDeliveryEnabled`です。  
+    -   レポート マネージャーのコンピューターをオフに`WebServiceAndHTTPAccessEnabled`と`ScheduleEventsAndReportDeliveryEnabled`します。  
   
-    -   レポート サーバーのコンピューターでオフに`ReportManagerEnabled`です。  
+    -   レポート サーバーのコンピューターをオフに`ReportManagerEnabled`します。  
   
  機能を無効にするには、「 [Reporting Services 機能の有効化と無効化](turn-reporting-services-features-on-or-off.md)」を参照してください。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "36077049"
   
 #### <a name="to-turn-off-report-manager"></a>レポート マネージャーを無効にするには  
   
-1.  テキスト エディターで RSReportServer.config ファイルを開きます。 既定では、\Program Files\Microsoft SQL Server\MSRS11 になります。\< *instancename*> \reporting です。  
+1.  テキスト エディターで RSReportServer.config ファイルを開きます。 既定では、SQL Server\MSRS11 \Program Files\Microsoft になります。\< *instancename*> \reporting します。  
   
 2.  **IsReportManagerEnabled**を探します。  
   
@@ -178,11 +178,11 @@ ms.locfileid: "36077049"
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
  [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [URL の構成&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Reporting Services のインストールを確認してください。](../install-windows/verify-a-reporting-services-installation.md)   
+ [Reporting Services のインストールを確認します。](../install-windows/verify-a-reporting-services-installation.md)   
  [HTML ビューアーおよびレポート マネージャーのスタイル シートをカスタマイズします。](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
  [Reporting Services の機能をオンまたはオフにします。](turn-reporting-services-features-on-or-off.md)   
  [Reporting Services ネイティブ モード レポート サーバーを管理します。](manage-a-reporting-services-native-mode-report-server.md)   
  [RSReportServer 構成ファイル](rsreportserver-config-configuration-file.md)   
- [ローカル管理用のネイティブ モード レポート サーバーを構成する&#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+ [ローカル管理用のネイティブ モードのレポート サーバーの構成&#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   
   

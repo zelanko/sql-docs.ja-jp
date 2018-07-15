@@ -1,5 +1,5 @@
 ---
-title: 値の要素 (Parameter) (XMLA) |Microsoft ドキュメント
+title: 要素 (Parameter) (XMLA) の値 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Value element
 ms.assetid: e590d189-91aa-40c7-8669-09c87812f4ce
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 37e0ac55da5c8bae13fcddcaad52aeb8cf51da22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 05535bb119ce20334b5681ea001e4e8528a507f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302702"
 ---
 # <a name="value-element-parameter-xmla"></a>Value 要素 (Parameter) (XMLA)
   によって表されるパラメーターの値を含む、[パラメーター](parameter-element-xmla.md)要素。  
@@ -64,7 +64,7 @@ ms.locfileid: "36075139"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `Value`要素を格納できます任意の単純な XML 型だけでなく、XML for Analysis (XMLA)`Rowset`データ型は、内の XMLA コマンドによって使用されるパラメーター、 [Execute](../xml-elements-methods-execute.md)メソッドです。  
+ `Value`要素格納できる任意の単純な XML 型と、XML for Analysis (XMLA) `Rowset` XMLA コマンドで使用するパラメーターのデータ型、 [Execute](../xml-elements-methods-execute.md)メソッド。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;XMLA&#41;](xml-elements-properties.md)  

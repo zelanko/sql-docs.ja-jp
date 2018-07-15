@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_KPIS 行セット |Microsoft ドキュメント
+title: MDSCHEMA_KPIS 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_KPIS rowset
 ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28a5f4af179c058f822a773dc691383dbee028fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 391c27165b9b4482160b2a8396e64e46650aa87e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314772"
 ---
 # <a name="mdschemakpis-rowset"></a>MDSCHEMA_KPIS 行セット
   データベース内の主要業績評価指標 (KPI) について記述します。  
@@ -39,11 +39,11 @@ ms.locfileid: "36177854"
 |`CATALOG_NAME`|`DBTYPE_WSTR`||ソース データベース。|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`||サポートされていません。|  
 |`CUBE_NAME`|`DBTYPE_WSTR`||KPI の親キューブ。|  
-|`MEASUREGROUP_NAME`|`DBTYPE_WSTR`||KPI の関連メジャー グループ。<br /><br /> この列を使用して、KPI の次元を決定できます。 場合"**\<NULL >**"、KPI のすべてのメジャー グループでディメンションになります。<br /><br /> 既定値は"**\<NULL >**"です。|  
+|`MEASUREGROUP_NAME`|`DBTYPE_WSTR`||KPI の関連メジャー グループ。<br /><br /> この列を使用して、KPI の次元を決定できます。 場合"**\<NULL >**"、KPI はすべてのメジャー グループでディメンション化されます。<br /><br /> 既定値は"**\<NULL >**"。|  
 |`KPI_NAME`|`DBTYPE_WSTR`||KPI の名前。|  
 |`KPI_CAPTION`|`DBTYPE_WSTR`||KPI に関連付けられたラベルまたはキャプション。 主に表示のために使用されます。 キャプションが存在しない場合`KPI_NAME`が返されます。|  
 |`KPI_DESCRIPTION`|`DBTYPE_WSTR`||KPI に関して人が認識できる説明。|  
-|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||メンバーを表示するためにクライアント アプリケーションが使用する、表示フォルダーのパスを識別する文字列です。 フォルダー レベルの区切り記号は、クライアント アプリケーションによって定義されます。 ツールおよびクライアントによって提供される[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、円記号 (\\) は、レベルの区切り記号。 複数の表示フォルダーを指定するには、セミコロン (;) を使用して、フォルダーを区切ります。|  
+|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||メンバーを表示するためにクライアント アプリケーションが使用する、表示フォルダーのパスを識別する文字列です。 フォルダー レベルの区切り記号は、クライアント アプリケーションによって定義されます。 ツールおよびクライアントによって提供される[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、円記号 (\\) レベルの区切り記号です。 複数の表示フォルダーを指定するには、セミコロン (;) を使用して、フォルダーを区切ります。|  
 |`KPI_VALUE`|`DBTYPE_WSTR`||KPI 値のメジャー ディメンションに含まれるメンバーの一意の名前。|  
 |`KPI_GOAL`|`DBTYPE_WSTR`||KPI 目標のメジャー ディメンションに含まれるメンバーの一意の名前。<br /><br /> 目標が定義されていない場合は、`NULL` を返します。|  
 |`KPI_STATUS`|`DBTYPE_WSTR`||KPI 状態のメジャー ディメンションに含まれるメンバーの一意の名前。<br /><br /> 状態が定義されていない場合は、`NULL` を返します。|  

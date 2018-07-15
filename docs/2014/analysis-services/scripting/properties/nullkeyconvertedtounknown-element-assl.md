@@ -1,5 +1,5 @@
 ---
-title: NullKeyConvertedToUnknown 要素 (ASSL) |Microsoft ドキュメント
+title: NullKeyConvertedToUnknown 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullKeyConvertedToUnknown element
 ms.assetid: 1a6cde33-01ba-4095-b464-16d1ad3c6905
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e11f7de1b3fa7b11774a960351a1b3c974ce4f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cebeef3421533b429a38f6c5696780cb008eca69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316922"
 ---
 # <a name="nullkeyconvertedtounknown-element-assl"></a>NullKeyConvertedToUnknown 要素 (ASSL)
   NULL 変換エラーが発生した場合の動作を指定します。  
@@ -62,17 +62,17 @@ ms.locfileid: "36178978"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- NULL 変換エラーは、NULL 値がキー列で検出され、`Unknown` メンバーとして解釈された場合に発生します。 場合にのみ、ただし、このエラーが発生、 [NullProcessing](nullprocessing-element-assl.md)要素を[DataItem](../data-type/dataitem-data-type-assl.md)の先祖、`ErrorConfiguration`に設定されている親要素*UnknownMember*です。  
+ NULL 変換エラーは、NULL 値がキー列で検出され、`Unknown` メンバーとして解釈された場合に発生します。 場合にのみ、ただし、このエラーが発生、 [NullProcessing](nullprocessing-element-assl.md)の要素、 [DataItem](../data-type/dataitem-data-type-assl.md)の先祖である、`ErrorConfiguration`に親要素が設定されている*UnknownMember*します。  
   
  この要素の値は、次の表の一覧に示す文字列のいずれかに限定されています。  
   
 |値|説明|  
 |-----------|-----------------|  
 |*IgnoreError*|処理は、エラーを無視し、続行します。|  
-|*[Reportandcontinue]*|処理は、エラーを報告し、続行します。|  
+|*ReportAndContinue*|処理は、エラーを報告し、続行します。|  
 |*ReportAndStop*|処理は、停止、エラーを報告します。|  
   
- 許可される値に対応する列挙`NullKeyConvertedToUnknown`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ErrorOption>します。  
+ 許容された値に対応する列挙体`NullKeyConvertedToUnknown`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ErrorOption>します。  
   
 ## <a name="see-also"></a>参照  
  [ErrorConfiguration 要素&#40;ASSL&#41;](../objects/errorconfiguration-element-assl.md)   

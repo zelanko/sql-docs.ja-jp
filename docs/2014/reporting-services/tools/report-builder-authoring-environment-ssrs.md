@@ -1,5 +1,5 @@
 ---
-title: レポート ビルダー (SSRS) |Microsoft ドキュメント
+title: レポート ビルダー (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ebcb4995b834051b3fd8a5a96599b20874984f0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 1dcdbebf197c15eb091a7d982ce0e4e17b4f1a24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290204"
 ---
 # <a name="report-builder-ssrs"></a>レポート ビルダー (SSRS)
-  レポート ビルダーはレポート作成環境の作業を好むビジネス ユーザーに、[!INCLUDE[msCoName](../../includes/msconame-md.md)]オフィス環境。 レポートをデザインする際には、データの取得場所、取得するデータ、およびデータの表示方法を指定します。 レポートを実行すると、指定した情報がすべてレポート プロセッサに渡されます。レポート プロセッサは、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。  
+  レポート ビルダーは、レポート作成環境で作業を好むビジネス ユーザー向け、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 環境。 レポートをデザインする際には、データの取得場所、取得するデータ、およびデータの表示方法を指定します。 レポートを実行すると、指定した情報がすべてレポート プロセッサに渡されます。レポート プロセッサは、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。  
   
 ## <a name="benefits-of-report-builder"></a>レポート ビルダーの利点  
  レポート ビルダーでは、次の操作が可能です。  
@@ -45,7 +45,7 @@ ms.locfileid: "36179461"
   
 -   レポートおよび関連アイテムを SharePoint ライブラリ、レポート サーバー、またはローカル コンピューターに保存します。  
   
- レポート ビルダーとレポート デザイナーは、多くの機能を共有します。 レポート ビルダーの詳細については、次を参照してください。[レポート ビルダーに関するドキュメント](http://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com の「します。  
+ レポート ビルダーとレポート デザイナーは、多くの機能を共有します。 レポート ビルダーの詳細については、次を参照してください。[レポート ビルダーに関するドキュメント](http://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com します。  
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーへのアクセスを構成します。](../report-server/configure-report-builder-access.md)   

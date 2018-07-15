@@ -1,5 +1,5 @@
 ---
-title: AggregationFunction 要素 (ASSL) |Microsoft ドキュメント
+title: AggregationFunction 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationFunction element
 ms.assetid: 40cfc7f9-1089-45f9-be90-a29770ed9682
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c8b28c740e82d661c2664eac576f0e079fd3d46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90908001138f59d4270811376ac44025148889cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308442"
 ---
 # <a name="aggregationfunction-element-assl"></a>AggregationFunction 要素 (ASSL)
   勘定科目の種類に使用する集計関数を格納します。  
@@ -78,7 +78,7 @@ ms.locfileid: "36074264"
 |*FirstNonEmpty*|メジャーはその最初の空でないメンバーを返すことによって集計されます。|  
 |*LastNonEmpty*|メジャーはその最後の空でないメンバーを返すことによって集計されます。|  
   
- 許可される値に対応する列挙`AggregationFunction`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AggregationFunction>します。  
+ 許容された値に対応する列挙体`AggregationFunction`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AggregationFunction>します。  
   
 ## <a name="see-also"></a>参照  
  [要素をアカウント&#40;ASSL&#41;](../collections/accounts-element-assl.md)   

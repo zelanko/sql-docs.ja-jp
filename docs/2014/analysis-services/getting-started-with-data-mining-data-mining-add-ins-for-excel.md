@@ -1,5 +1,5 @@
 ---
-title: データ マイニング (データ マイニング アドインを Excel 用) の概要 |Microsoft ドキュメント
+title: データ マイニング (データ マイニング アドインを Excel 用) の概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2d82f4569dbdf2c9e6c686c1235300de40bf445
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0faa8178d535fa5cd493f65e002e27e5565059c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303132"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>データ マイニングの概要 (Excel 用データ マイニング アドイン)
   データ マイニングとは、"データ内で有意なパターンを見つけるプロセス" を指しています。 データ マイニングは、従来の BI を使用してデータの探索と理解を深めるプロセスに対する、自然な補足手段です。 コンピューター アルゴリズムでは、大量のデータを処理し、その中に隠れたパターンや傾向を見つけ出すことができます。  
   
- データ マイニングには、"ユーザーは自社の顧客"など、特定の質問に関連するデータを収集します。 「どの製品が購入されたか」または データ内の統計的相関関係を検索するためのアルゴリズムを適用します。 分析によって検出されたパターンと傾向は、マイニング モデルとして保存されます。 その後、次のようなビジネス シナリオで、新しいデータに対してマイニング モデルを適用することができます。  
+ データ マイニングには、「である顧客ですか?」など、特定の質問に関連するデータを収集します。 「どのような製品が購入されたか」または データ内の統計的相関関係を検索するためのアルゴリズムを適用します。 分析によって検出されたパターンと傾向は、マイニング モデルとして保存されます。 その後、次のようなビジネス シナリオで、新しいデータに対してマイニング モデルを適用することができます。  
   
 -   過去のトレンドを使用して、次の四半期の売上、必要な在庫、または顧客満足度を予測します。  
   
@@ -90,12 +90,12 @@ ms.locfileid: "36083548"
   
  モデルが完成した後、ある程度の時間を費やして結果を検討し、より良い結果を得るためにデータに変更を加えるいくつかの方法を識別します。 最初のモデルであらゆる答えが得られることはめったにありません。 一般に、データ マイニングは反復的なプロセスです。  
   
- データのさまざまな方法をビン分割を再試行してください。 または、を使用して新しい列を追加してください、**ドキュメント モデル**各モデルのメタデータと結果のスナップショットをキャプチャするウィザード。 記録を作成しておくと、探索の進行状況を追跡しやすくなります。  
+ データのさまざまな方法をビン分割を試すことも使用して、忘れず、新しい列を追加すると、**ドキュメント モデル**各モデルのメタデータと結果のスナップショットをキャプチャするウィザード。 記録を作成しておくと、探索の進行状況を追跡しやすくなります。  
   
  [データの探索とクリーニング](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>モデルの検証  
- 各ウィザードまたはツールを実行すると、アルゴリズムによってデータの内容が分析され、統計的に有効なパターンが存在するかどうかが示されます。 アルゴリズムが、有効なパターンを見つけることができない場合は、エラー メッセージが表示されます。 ただし、モデルが正常に作成された場合でも、モデルをテストして、想定が正しく検証されているかどうかを確認する必要があります。 などのツールを使用することができます、[精度チャート&#40;SQL Server データ マイニング アドイン&#41;](accuracy-chart-sql-server-data-mining-add-ins.md)または[クロス検証&#40;SQL Server データ マイニング アドイン&#41;](cross-validation-sql-server-data-mining-add-ins.md)統計を生成するにはモデルの品質のメジャーです。  
+ 各ウィザードまたはツールを実行すると、アルゴリズムによってデータの内容が分析され、統計的に有効なパターンが存在するかどうかが示されます。 アルゴリズムが、有効なパターンを見つけることができない場合は、エラー メッセージが表示されます。 ただし、モデルが正常に作成された場合でも、モデルをテストして、想定が正しく検証されているかどうかを確認する必要があります。 などのツールを使用することができます、[精度チャート&#40;SQL Server データ マイニング アドイン&#41;](accuracy-chart-sql-server-data-mining-add-ins.md)または[クロス検証&#40;SQL Server データ マイニング アドイン&#41;](cross-validation-sql-server-data-mining-add-ins.md)統計を生成するにはモデルの品質を測定します。  
   
  最初のモデルから得られた結果を評価する際に、次の点を自問してください。  
   
@@ -126,12 +126,12 @@ ms.locfileid: "36083548"
   
  データ マイニング モデルの重要な用途は、予測や提案を作成することです。 Excel 用データ マイニング アドインには、洞察を実用的な結果に変換するために、複雑な予測クエリでも簡単に生成できるツールが含まれています。 これらのツールはすべて Excel に完全に統合されています。  
   
- [モデルの参照&#40;アドイン Office 用データ マイニング&#41;](viewing-models-data-mining-add-ins-for-office.md)  
+ [モデルの参照&#40;データ マイニング Office 用アドイン&#41;](viewing-models-data-mining-add-ins-for-office.md)  
   
- [モデルの検証と予測用モデルの使用&#40;アドイン Excel 用データ マイニング&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [モデルの検証と予測用モデルの使用&#40;データ マイニング Excel 用アドイン&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
 ## <a name="see-also"></a>参照  
  [含まれるもので、データ マイニング アドイン for Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
- [テクニカル リファレンス&#40;アドイン Excel 用データ マイニング&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
+ [テクニカル リファレンス&#40;データ マイニング Excel 用アドイン&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   
   

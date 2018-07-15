@@ -1,5 +1,5 @@
 ---
-title: RowBinding データ型 (ASSL) |Microsoft ドキュメント
+title: RowBinding データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RowBinding data type
 ms.assetid: 5a49a6e3-25f3-43c8-8529-bcf245b02415
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e6859f7627be5a9b3ff6ab108962fa71a0d12642
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 599632bd6dd93b05a12a5c7b95facea85ea8c6c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297422"
 ---
 # <a name="rowbinding-data-type-assl"></a>RowBinding データ型 (ASSL)
-  内のテーブルの行へのバインディングを表す派生データ型を定義、 [DataSourceView](../objects/datasourceview-element-assl.md)要素。  
+  内のテーブルの行にバインドを表す派生データ型を定義、 [DataSourceView](../objects/datasourceview-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36178746"
 ## <a name="remarks"></a>コメント  
  詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、`Binding`型との継承階層`Binding`型を参照してください[データ型のバインド&#40;ASSL&#41;](binding-data-type-assl.md).  
   
- ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.RowBinding>します。  
   

@@ -1,5 +1,5 @@
 ---
-title: 線形回帰モデルのクエリ例 |Microsoft ドキュメント
+title: 線形回帰モデルのクエリ例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dafee7e0aa5a95076c00f6aff9043014066c5da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 481774670258050b111820e88333a8354cfb14ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303182"
 ---
 # <a name="linear-regression-model-query-examples"></a>線形回帰モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえばコンテンツ クエリを使用すると、回帰式に関する追加情報を取得できるのに対し、予測クエリを使用すると、新しいデータ ポイントがモデルに適合するかどうかを調べることができます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
@@ -116,7 +116,7 @@ FROM LR_PredictIncome.CONTENT
 |9 (Statistics: 統計)|  
 |11 (Intercept: 切片)|  
   
- 回帰モデルの各値の型の意味の詳細については、次を参照してください。[マイニング モデル コンテンツの線形回帰モデル&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)です。  
+ 各値は、回帰モデルの種類の意味の詳細については、次を参照してください。[線形回帰モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)します。  
   
  [トップに戻る](#bkmk_top)  
   
@@ -150,7 +150,7 @@ FROM LR_PredictIncome.CONTENT
  [トップに戻る](#bkmk_top)  
   
 ###  <a name="bkmk_Query4"></a> サンプル クエリ 4: 単一クエリを使用して収入を予測する  
- 回帰モデルで単一クエリを作成する最も簡単な方法は、 **[単一クエリ入力]** ダイアログ ボックスを使用することです。 たとえば、適切な回帰モデルを選択して次の DMX クエリをビルドすることができますを選択する**シングルトン クエリ**、」と入力し、`20`の値として**Age**です。  
+ 回帰モデルで単一クエリを作成する最も簡単な方法は、 **[単一クエリ入力]** ダイアログ ボックスを使用することです。 など、適切な回帰モデルを選択して次の DMX クエリを作成する選択**単一クエリ**、」と入力し、`20`の値として**年齢**します。  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  

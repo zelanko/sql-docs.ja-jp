@@ -1,5 +1,5 @@
 ---
-title: Microsoft 線形回帰アルゴリズム |Microsoft ドキュメント
+title: Microsoft 線形回帰アルゴリズム |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - linear regression algorithms [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a249f0c1a4ffde7e14841d53c01a9bdf6790931
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6efc2b76fe6a6c4b53a2b108a776f2104b02318d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315091"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 線形回帰アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムの一種であり、従属変数と独立変数の間の線形の関係を計算し、その関係を予測に使用するのに役立ちます。  
   
  この関係は、一連のデータを最もよく表す直線の式の形になります。 たとえば、次の図の直線は、データの最適な線形表現です。  
   
- ![一連のデータをモデル化するための行](../media/linear-regression.gif "一連のデータをモデル化するための行")  
+ ![一連のデータをモデル化した直線](../media/linear-regression.gif "一連のデータをモデル化した直線")  
   
  図の各データ ポイントには、回帰直線からの距離に関する誤差があります。 回帰式の係数 a および b により、回帰直線の角度と位置が調整されます。 すべてのデータ ポイントに関する誤差の合計が最小になるまで、a および b を調整して、回帰式を取得できます。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36178774"
   
  式の詳細を調べる場合は、 [Microsoft 汎用コンテンツ ツリー ビューアー](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)で係数およびその他の詳細を参照することもできます。  
   
- 線形回帰モデルの場合、モデル コンテンツには、メタデータ、回帰式、および入力値の分布に関する統計が含まれます。 詳細については、次を参照してください。[マイニング モデル コンテンツの線形回帰モデル&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)です。  
+ 線形回帰モデルの場合、モデル コンテンツには、メタデータ、回帰式、および入力値の分布に関する統計が含まれます。 詳細については、次を参照してください。[線形回帰モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)します。  
   
 ## <a name="creating-predictions"></a>予測の作成  
  モデルの処理後、結果が統計のセットとして線形回帰式と共に保存されます。これを使用して、将来の傾向を計算することができます。 線形回帰モデルで使用するクエリの例については、「 [線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: OLE DB for OLAP スキーマ行セット |Microsoft ドキュメント
+title: OLE DB for OLAP スキーマ行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,23 +17,23 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB for OLAP
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 898749e17cb5b85e61a2b2c3a94b7247a7ab219b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 406451b0e8e6edce92d69cde493888f70813f4de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306482"
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>OLE DB for OLAP スキーマ行セット
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーでは、次の OLE DB for OLAP スキーマ行セットがサポートされています。  
   
 > [!NOTE]  
->  特定のデータ ソース プロバイダーが行セットをサポートしているかどうかを確認するには、使用、`DISCOVER_ENUMERATIONS`を含む行セット、 [Discover](../../xmla/xml-elements-methods-discover.md)メソッドです。  
+>  特定のデータ ソース プロバイダーが行セットをサポートしているかどうかを確認するには、使用、`DISCOVER_ENUMERATIONS`を含む行セット、 [Discover](../../xmla/xml-elements-methods-discover.md)メソッド。  
   
- MSDN ライブラリで、トピック、「OLAP スキーマ行セット"を検索することでこれらの行セットに関する詳細情報を見つけることができますも[Microsoft Web サイト](http://go.microsoft.com/fwlink/?LinkId=15426)です。  
+ MSDN ライブラリで「OLAP スキーマ行セット」のトピックでは、検索することによりこれらの行セットに関する詳細情報を検索することもできます[Microsoft Web サイト](http://go.microsoft.com/fwlink/?LinkId=15426)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36083541"
 |[MDSCHEMA_PROPERTIES 行セット](mdschema-properties-rowset.md)|データベース内のメンバーのプロパティについて説明します。|  
 |[MDSCHEMA_SETS 行セット](mdschema-sets-rowset.md)|データベースで現在定義されているセットについて記述します。セッション スコープのセットも含まれます。|  
   
- <sup>1</sup>の MSOLAP データ ソース プロバイダーによっては、ここに表示されているすべてのスキーマ行セットがサポートされている、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA プロバイダー。  
+ <sup>1</sup>の MSOLAP データ ソース プロバイダーで次のとおり、すべてのスキーマ行セットがサポートされている、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA プロバイダー。  
   
 ## <a name="see-also"></a>参照  
  [DISCOVER_ENUMERATORS 行セット](../xml/discover-enumerators-rowset.md)   

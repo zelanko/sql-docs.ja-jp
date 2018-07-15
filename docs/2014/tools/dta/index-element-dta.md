@@ -1,5 +1,5 @@
 ---
-title: インデックスの要素 (DTA) |Microsoft ドキュメント
+title: インデックスの要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6f9391fb8b85e551f2f1904e164c7d86f2dcacc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a9f2efa4761248c94a6db7a2747184808ffce3d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299362"
 ---
 # <a name="index-element-dta"></a>Index 要素 (DTA)
   ユーザー指定の構成のために作成したり削除したりするインデックスの情報が含まれます。  
@@ -49,7 +49,7 @@ ms.locfileid: "36083324"
 |`Online`|`boolean`|任意。 サーバーがオンラインのときに操作を実行できるインデックスを指定します (そのためには、一時ディスク領域が必要になります)。 「true」か「false」のいずれかに設定します。以下はその例です。<br /><br /> `<Index Online="true">`<br /><br /> 既定では、この属性は「false」に設定されます。<br /><br /> 詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。|  
 |`IndexSizeInMB`|`double`|任意。 インデックスの最大サイズを MB 単位で指定します。以下はその例です。<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> 既定の設定はありません。|  
 |`NumberOfRows`|`integer`|任意。 インデックス サイズを変更した場合のシミュレーションを行います。これにより、異なるテーブル サイズの有効なシミュレーションを行えます。以下はその例です。<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> 既定の設定はありません。|  
-|`QUOTED_IDENTIFIER`|`boolean`|任意。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対して、識別子とリテラル文字列を区切る引用符に関して、ISO 規格に従うことを指定します。 計算列またはビューを対象とするインデックスの場合は、この属性をオンにする必要があります。 たとえば、以下の構文では、この属性をオンに設定しています。<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> 既定では、この属性はオフに設定されます。<br /><br /> 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)」をご覧ください。|  
+|`QUOTED_IDENTIFIER`|`boolean`|任意。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対して、識別子とリテラル文字列を区切る引用符に関して、ISO 規格に従うことを指定します。 計算列またはビューを対象とするインデックスの場合は、この属性をオンにする必要があります。 たとえば、以下の構文では、この属性をオンに設定しています。<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> 既定では、この属性はオフに設定されます。<br /><br /> 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)」をご覧ください。|  
 |`ARITHABORT`|`boolean`|任意。 クエリ実行中にオーバーフローまたは 0 除算エラーが発生した場合に、クエリを終了します。 計算列またはビューを対象とするインデックスの場合は、この属性をオンにする必要があります。 たとえば、以下の構文では、この属性をオンに設定しています。<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> 既定では、この属性はオフに設定されます。<br /><br /> 詳細については、「[SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)」をご覧ください。|  
 |`CONCAT_NULL_YIELDS_`<br /><br /> `NULL`|`boolean`|任意。 連結の結果を NULL として取り扱うのか、空文字列として取り扱うのかを制御します。 計算列またはビューを対象とするインデックスの場合は、この属性をオンにする必要があります。 たとえば、以下の構文では、この属性をオンに設定しています。<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> 既定では、この属性はオフに設定されます。<br /><br /> 詳細については、「[SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)」をご覧ください。|  
 |`ANSI_NULLS`|`boolean`|任意。 等号 (=) 比較演算子と不等号 (<>) 比較演算子を NULL 値に対して使用した場合に ISO に準拠した動作をすることを指定します。 計算列またはビューを対象とするインデックスの場合は、この属性をオンにする必要があります。 たとえば、以下の構文では、この属性をオンに設定しています。<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> 既定では、この属性はオフに設定されます。<br /><br /> 詳細については、「[SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)」をご覧ください。|  
@@ -69,8 +69,8 @@ ms.locfileid: "36083324"
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[要素を作成する&#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。|  
-|**子要素**|[インデックスの要素の名前を付けます&#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Index の column 要素&#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> `PartitionColumn` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> [Index の Filegroup 要素&#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> `PercentUsage` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。|  
+|**親要素**|[要素作成&#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。|  
+|**子要素**|[インデックスの要素を名前&#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Index の column 要素&#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> `PartitionColumn` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> [Index の Filegroup 要素&#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> `PercentUsage` 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。|  
   
 ## <a name="example"></a>例  
  この要素の使用例については、「[ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)」を参照してください。  

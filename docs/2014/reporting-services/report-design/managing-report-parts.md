@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c74ae6ba5a8f69a0fef8f5fce9f4a18828867c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8b08d19493528f1c93cea4752f548040fb47322
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286698"
 ---
 # <a name="managing-report-parts"></a>レポート パーツの管理
-  以降で[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、レポート パーツをレポート サーバーにパブリッシュおよび適切なアクセス許可がある場合に、その他のレポートおよび他のユーザーによってを再利用できます。  
+  以降で[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、レポート パーツをレポート サーバーにパブリッシュおよび適切なアクセス許可がある場合に、その他のレポートおよび他のユーザーを再利用できます。  
   
  レポート パーツは、複数のユーザーが複数のレポート内で再利用できます。 ユーザーはサーバー上のレポート パーツを検索し、それらをレポートに追加できます。  また、ユーザーはサーバー上のレポート パーツの更新について通知を受け、レポート パーツの新しいバージョンを再パブリッシュすることもできます。 これらのレポート作成アクションは、Reporting Services のセキュリティ権限によって管理および制御されます。  このトピックでは、既にサーバー上に配置されているレポート パーツのプロパティと動作について説明します。  
   
 ## <a name="managing-report-parts"></a>レポート パーツの管理  
- レポート パーツを管理するには、ネイティブ モードまたは SharePoint 統合モードでレポート サーバー用のアプリケーション ページを使用して、レポート サーバーのレポート マネージャーを使用することができます。  
+ レポート パーツを管理するには、ネイティブ モードまたは SharePoint 統合モードでレポート サーバー用のアプリケーション ページで、レポート サーバーにレポート マネージャーを使用することができます。  
   
 ### <a name="server-side-interaction-and-search"></a>サーバー側における操作と検索  
  レポート パーツは、ネイティブ モードまたは SharePoint 統合モードのレポート サーバーにパブリッシュできます。 ユーザーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レポート ビルダーなどのレポート作成アプリケーションでレポート パーツ ギャラリー機能を使用して、レポート パーツを検索し、それらを各自のレポートに追加できます。 ユーザーがレポート パーツを検索する場合は、レポート サーバーがインストールされたモードにかかわらず、レポート サーバー カタログでパーツが検索されます。  
@@ -95,10 +95,10 @@ ms.locfileid: "36083800"
 -   レポート パーツでは、既存のアイテムの種類である "リソース" と同じ権限ポリシーが使用されます。 フォルダー内では、セキュリティ継承の観点からは、従来のリソース アイテムとレポート パーツとの区別はありません。 レポート パーツは、同じフォルダー内にある画像と同じ権限ポリシーを継承します。 この区別が必要な場合は、レポート パーツに対してアイテム レベルのセキュリティを構成できます。 または、適切な権限が構成されている別々のフォルダーにレポート パーツを保存することができます。  
   
 ## <a name="see-also"></a>参照  
- [レポート パーツとレポート ビルダーでデータセット](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [レポート ビルダーのレポート パーツおよびデータセット](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [[全般] プロパティ ページ、レポート パーツ&#40;レポート マネージャー&#41;](../general-properties-page-report-parts-report-manager.md)   
- [アイテム ページの移動&#40;レポート マネージャー&#41;](../move-items-page-report-manager.md)   
- [レポート サーバーのコンテンツ管理&#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [[アイテム] ページの移動&#40;レポート マネージャー&#41;](../move-items-page-report-manager.md)   
+ [レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [レポート パーツのトラブルシューティング&#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [レポート デザイナーでのレポート パーツ &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   

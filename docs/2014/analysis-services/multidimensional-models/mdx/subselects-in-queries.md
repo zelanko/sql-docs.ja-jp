@@ -1,5 +1,5 @@
 ---
-title: クエリのサブセレクト |Microsoft ドキュメント
+title: クエリのサブセレクト |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f5f616181a6fffe42fa04e3978142c48375adb0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce3ca1202c5e20676a4dbf1fa972f5bdfa52e9b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299182"
 ---
 # <a name="subselects-in-queries"></a>クエリのサブセレクト
   サブセレクト式とは、入れ子になった SELECT 式です。この式は、外側にある外部の SELECT が評価されているキューブ空間を制限するために使用されます。 サブセレクトにより、すべての計算が評価される新しい空間を定義できます。  
@@ -353,6 +353,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   HAVING 句は軸句では使用できません。代わりに [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx) 関数式を使用します。  
   
--   既定では計算されるメンバーでは許可されませんサブセレクトです。ただし、この制限は、セッション単位でに値を割り当てることによって、`SubQueries`で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または`DBPROP_MSMD_SUBQUERIES`プロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 参照してください[サブセレクトおよびサブキューブにおける計算されるメンバー](calculated-members-in-subselects-and-subcubes.md)の値によって計算されるメンバーの動作の詳細については、の`SubQueries`または`DBPROP_MSMD_SUBQUERIES`です。  
+-   既定で、計算されるメンバーはサブセレクト; で許可されませんただし、この制限は、セッション単位で値を割り当てることで、`SubQueries`で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または`DBPROP_MSMD_SUBQUERIES`プロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 参照してください[サブセレクトとサブキューブで計算されるメンバー](calculated-members-in-subselects-and-subcubes.md)の値によって計算されるメンバーの動作の詳細については`SubQueries`または`DBPROP_MSMD_SUBQUERIES`します。  
   
   

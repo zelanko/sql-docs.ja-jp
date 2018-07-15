@@ -1,5 +1,5 @@
 ---
-title: Azure Feature Pack |Microsoft ドキュメント
+title: Azure Feature Pack |Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
@@ -16,13 +16,13 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43ddc105e442e510b54a70ed22ef27336f1497bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c2e496c8fb9aebff66d998f742d8604558112e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281738"
 ---
 # <a name="azure-feature-pack"></a>Azure Feature Pack
 SQL Server Integration Services (SSIS) Feature Pack for Azure は、このページにリストされている SSIS のコンポーネントを提供して、Azure サービスへの接続、Azure とオンプレミスのデータ ソース間でのデータ転送、および Azure に格納されたデータの処理を行うための拡張機能です。
@@ -75,7 +75,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
 ## <a name="download-the-feature-pack"></a>Feature Pack のダウンロード  
 SQL Server Integration Services (SSIS) Feature Pack for Azure をダウンロードします。  
   
--   [Microsoft SQL Server 2014 Integration Services Feature for Azure Pack](https://www.microsoft.com/download/details.aspx?id=47366)  
+-   [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)  
 
 ## <a name="prerequisites"></a>前提条件  
 この機能パックをインストールする前に、次の前提条件をインストールする必要があります。  
@@ -98,7 +98,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure をダウンロー
   
 5.  Azure HDInsight Blob Download Task を使用して、Azure Blob ストレージから Pig/Hive の出力データをダウンロードします。  
   
- ![SSIS AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "SSIS AzureConnector-BigDataScenario")  
+ ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "BigDataScenario AzureConnector-SSIS-")  
   
 ### <a name="cloud-data-archiving"></a>クラウド データのアーカイブ  
  SSIS パッケージ内の Azure Blob Destination を使用して、出力データを Azure Blob ストレージに書き込みむか、または Azure Blob Source を使用して、Azure Blob ストレージからデータを読み取ります。  

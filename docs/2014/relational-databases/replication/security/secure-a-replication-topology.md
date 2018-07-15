@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], security
 ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f18e04757068a33456f442648fe5f49ff29bbb65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a097c43f6081e024b0c7f06e0df9fe88234b5bce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311372"
 ---
 # <a name="secure-a-replication-topology"></a>レプリケーション トポロジのセキュリティ保護
   レプリケーションに必要なセキュリティ アカウント、ログイン、およびパスワードは、レプリケーションの構成時とパブリケーションおよびサブスクリプションの作成時に指定します。 これらのセキュリティ設定は、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、レプリケーション ストアド プロシージャ、レプリケーション管理オブジェクト (RMO) を使用して、後から変更することもできます。 次のトピックでは、レプリケーションのセキュリティ設定を変更する方法について説明します。  

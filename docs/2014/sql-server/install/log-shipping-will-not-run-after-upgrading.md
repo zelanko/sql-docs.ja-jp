@@ -1,5 +1,5 @@
 ---
-title: ログ配布はアップグレード後に実行されません |Microsoft ドキュメント
+title: ログ配布はアップグレード後に実行されません |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server]
 ms.assetid: 6727cb7d-ac01-4972-a730-dbb7cdc29705
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3187edcc72fca15e22644bcce107bf161dd0c645
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: df9616830fb9aed775640eb784909c1a8ef0fee4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305062"
 ---
 # <a name="log-shipping-will-not-run-after-upgrading"></a>アップグレード後にログ配布が実行されない
   アップグレード アドバイザーによって、ログ配布を使用していることが検出されました。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] のログ配布は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のログ配布と互換性がなく、直接アップグレードできません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードした後、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] またはストアド プロシージャを使用してログ配布を再構成します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server エージェント ログ配布ジョブ カテゴリが原因でアップグレードが失敗するには](../../../2014/sql-server/install/sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail.md)   
- [アップグレード、SQL Server エージェント ユーザー プロキシ アカウントが一時的な UpgradedProxyAccount に変更されます。](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)   
+ [アップグレードと SQL Server エージェント ユーザー プロキシ アカウントが一時的な UpgradedProxyAccount に変更されます。](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)   
  [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   

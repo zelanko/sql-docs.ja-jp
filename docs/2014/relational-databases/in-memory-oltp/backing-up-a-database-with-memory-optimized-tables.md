@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6d9f0a4fd663cfcd6bf3e3bad827429bc2f0133b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 38a2dbeed7220f0300015ba8741795603856f898
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279398"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>メモリ最適化テーブルが含まれるデータベースのバックアップ
   メモリ最適化されたテーブルは、通常のデータベースのバックアップの一部としてバックアップされます。 ディスク ベース テーブルについては、ストレージの破損を検出するために、データベース バックアップの一部としてデータのチェックサムおよびデルタ ファイルのペアが検証されます。  
@@ -43,7 +43,7 @@ ms.locfileid: "36077093"
 |IN TRANSITION TO TOMBSTONE|ファイルのメタデータのみ|  
 |TOMBSTONE|ファイルのメタデータのみ|  
   
- 1 つ以上のメモリ最適化テーブルでデータベース バックアップのサイズは通常メモリ内のサイズより大きく、ディスク上ストレージよりも小さいです。 追加のサイズは、削除された行の数と、ワークロードに間接的に依存する Merge source および REQUIRED FOR BACKUP/HA という状態にあるチェックポイント ファイル ペアの数によって異なります。 チェックポイント ファイル ペアの状態の詳細については、次を参照してください。 [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)です。  
+ データベースのバックアップと 1 つ以上のメモリ最適化テーブルのサイズはメモリ内のサイズより大きく、ディスク上ストレージよりも小さい。 追加のサイズは、削除された行の数と、ワークロードに間接的に依存する Merge source および REQUIRED FOR BACKUP/HA という状態にあるチェックポイント ファイル ペアの数によって異なります。 チェックポイント ファイル ペアの状態の説明については、次を参照してください。 [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)します。  
   
 ### <a name="estimating-size-of-full-database-backup"></a>データベースの完全バックアップの推計サイズ  
   

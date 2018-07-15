@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.chooseitems.maintenance_tasks
 - VS.ToolboxPages.Maintenance_Tasks
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Customize Toolbox dialog box
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b35d7e5bc36dec9dce01cbd22d07d5f4a46676d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 58b44f220715654a3a9d37271aeb7ff017355ffa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286568"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>[ツールボックス アイテムの選択] \([メンテナンス タスク] ページ)
   **[ツールボックス アイテムの選択]** ダイアログ ボックスのこのタブには、コンピューターに登録されているメンテナンス タスク コンポーネントがすべて一覧表示され、ツールボックスに表示されているメンテナンス タスクを変更できます。 **[ツールボックス アイテムの選択]** ダイアログ ボックスは、 **[ツール]** メニューから開けます。 コンポーネントの一覧を並べ替えるには、列見出しを選択します。  
@@ -32,7 +32,7 @@ ms.locfileid: "36077245"
 ## <a name="options"></a>および  
  **[メンテナンス タスク]** タブには次の列が表示されます。  
   
- **Name**  
+ **名前**  
  使用可能なコンポーネントの名前が表示されます。 それぞれの名前の前に、チェック ボックスがあります。 このチェック ボックスがオンの場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] がコンピューターのレジストリでそのコンポーネントのエントリを検出したことを示します。 そのコンポーネントはアクティブな **[ツールボックス]** タブに既に表示されているか、 **[OK]** をクリックすると追加されます。 このチェック ボックスがオフの場合、コンポーネントが現在 **[ツールボックス]** に表示されていないか、 **[OK]** をクリックすると **[ツールボックス]** から削除されます。  
   
  **[パス]**  

@@ -1,5 +1,5 @@
 ---
-title: Invocation 要素 (ASSL) |Microsoft ドキュメント
+title: Invocation 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Invocation element
 ms.assetid: f6bf64ad-ae57-4d46-bf92-1d07a65378bb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bd9d04f677049a932e3f974c22d7e2fb7cb8aade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62f6b15f8aa8426930fdc3572bbd37bfb033afd6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312242"
 ---
 # <a name="invocation-element-assl"></a>Invocation 要素 (ASSL)
   指定する方法、[アクション](../objects/action-element-assl.md)呼び出す必要があります。  
@@ -69,10 +69,10 @@ ms.locfileid: "36178305"
 |値|説明|  
 |-----------|-----------------|  
 |*対話型*|ユーザーが対話形式で起動します。|  
-|*OnOpen*|クライアント アプリケーションがオブジェクトを開いたときに起動します。|  
+|*Onopen です。*|クライアント アプリケーションがオブジェクトを開いたときに起動します。|  
 |*バッチ*|バッチ処理コマンドによって起動します。|  
   
- 許可される値に対応する列挙`Invocation`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Action>します。  
+ 許容された値に対応する列挙体`Invocation`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Action>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

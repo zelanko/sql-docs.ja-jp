@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2ccf39ac0ed4a45f7163d5be6b45ad7201bce47b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8d4695edc8d87c9462ea0cc94aa538e0108fd2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284628"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>グループについて (レポート ビルダーおよび SSRS)
   レポート ビルダーでは、グループは、データ領域にバインドされたレポート データセットの名前付きセットです。 グループは基本的に、レポート データセットのビューを整理します。 データ領域のグループはすべて、同じレポート データセットの異なるビューを指定します。  
@@ -75,7 +75,7 @@ ms.locfileid: "36084250"
      詳細グループでは基本的に、クエリ デザイナーでデータセット クエリを実行したときに表示されるデータを指定します。 たとえば、販売注文テーブルのすべての列を取得するクエリがあるとします。 この詳細グループのデータには、テーブルのすべての列のあらゆる行の値がすべて含まれています。 この詳細グループのデータには、作成した計算データセット フィールドのすべての値も含まれます。  
   
     > [!NOTE]  
-    >  詳細グループのデータには、データ ソースを計算してクエリに取得した集計であるサーバー集計も含まれます。 既定では、集計関数を使用する式がレポートに含まれていない限り、サーバー集計は、レポート ビルダーおよびレポート デザイナーで詳細データとして扱われます。 詳細については、次を参照してください。[集計](report-builder-functions-aggregate-function.md)です。  
+    >  詳細グループのデータには、データ ソースを計算してクエリに取得した集計であるサーバー集計も含まれます。 既定では、集計関数を使用する式がレポートに含まれていない限り、サーバー集計は、レポート ビルダーおよびレポート デザイナーで詳細データとして扱われます。 詳細については、次を参照してください。[集計](report-builder-functions-aggregate-function.md)します。  
   
      既定では、テーブルまたは一覧をレポートに追加すると、レポート ビルダーおよびレポート デザイナーによって詳細グループが自動的に作成され、詳細データを表示する行が追加されます。 既定では、データセット フィールドをこの行のセルに追加すると、[Sales] などのようなフィールドの単純式が表示されます。 データ領域を表示すると、結果セットの各値について詳細行が 1 回繰り返されます。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36084250"
   
  グループを追加すると、行と列でグループのメンバーシップを反映するようにデータ領域の変更が処理されます。 グループを削除する場合、グループ定義のみを削除する方法と、グループおよび関連付けられているすべての行および列を削除する方法があります。 詳細については、「[Tablix データ領域のセル、行、および列 &#40;レポート ビルダーおよび SSRS&#41;](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)」を参照してください。  
   
- 詳細またはグループ データの計算で表示または使用するデータを制限するには、グループにフィルターを設定します。 詳細については、次を参照してください。[データセット フィルターを追加、データ領域フィルター、およびグループ フィルター&#40;レポート ビルダーおよび SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)です。  
+ 詳細またはグループ データの計算で表示または使用するデータを制限するには、グループにフィルターを設定します。 詳細については、次を参照してください。[データセット フィルターの追加、データ領域フィルター、およびグループ フィルター&#40;レポート ビルダーおよび SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)します。  
   
  既定では、グループを作成すると、グループの並べ替え式はグループ式と同じです。 並べ替え順を変更するには、並べ替え式を変更します。 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36084250"
  Tablix データ領域の行または列のセルは、複数の行グループおよび列グループに属することができます。 集計関数 ( `=Sum(Fields!FieldName.Value`など) を使用するセルのテキスト ボックスで式を定義すると、セルの既定のグループ スコープは所属する最も内側の子グループになります。 セルが行グループと列グループの両方に属する場合、スコープは両方とも最も内側のグループになります。 また、別のデータ セットのグループにスコープを設定した集計された小計を計算する式を記述することもできます。 たとえば、データ領域の列グループ、またはすべてのデータを基準にグループのパーセントを計算することができます ( `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`など)。 詳細については、「[Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)」と「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [追加またはデータ領域のグループを削除&#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [追加またはデータ領域でグループを削除する&#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
  [グループまたは Tablix データ領域への合計の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
  [データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [ドリルダウン アクション&#40;レポート ビルダーおよび SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   

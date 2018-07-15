@@ -1,5 +1,5 @@
 ---
-title: カスタマイズ (Visual Database Tools) をダイアグラムに表示される情報量 |Microsoft ドキュメント
+title: カスタマイズ (Visual Database Tools) をダイアグラムに表示される情報量 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], information displayed
 - table views in database diagrams [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - custom table views [SQL Server]
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 73feb0102b3f83927012a6517b5f0f4475cf36ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 18288e60d5fd3fe276ac900eb6c7d11aa54caf8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301372"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>ダイアグラムに表示される情報の量のカスタマイズ (Visual Database Tools)
   データベース ダイアグラムにテーブルを追加すると、設定した数のプロパティが表示されます。 表示する情報の量をメニューから選択するか、プロパティのカスタム セットを作成できます。  
