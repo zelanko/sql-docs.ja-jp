@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.addpublisher.f1
 helpviewer_keywords:
 - Add Publisher dialog box
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4507609049c5cda2ca8163bc7506884f588a9a37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 25ae8b6ad22f2c12d6292237b196792216d2210c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298132"
 ---
 # <a name="add-publisher"></a>[パブリッシャーの追加]
   **[パブリッシャーの追加]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに 1 つまたは複数のパブリッシャーを追加できます。 パブリッシャーを追加した後、左ペインでパブリッシャーを選択すると、そのパブリッシャーに関する情報が右ペインに表示されます。  
@@ -38,7 +38,7 @@ ms.locfileid: "36164305"
   
 -   **[Oracle パブリッシャーの追加]**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ダイアログ ボックスを使用して、Oracle パブリッシャーに関連付けられている **[サーバーへの接続]** ダイアログ ボックスが表示されます。  
+      [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ダイアログ ボックスを使用して、Oracle パブリッシャーに関連付けられている **[サーバーへの接続]** ダイアログ ボックスが表示されます。  
   
 -   **[ディストリビューターを指定し、そのパブリッシャーを追加する]**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36164305"
 > [!NOTE]  
 >  通常はディストリビューターとパブリッシャーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の同一インスタンス上で実行しますが、ディストリビューターを別のインスタンス上で実行することもできます (この構成をリモート ディストリビューターと呼びます)。  
   
- **削除**  
+ **[削除]**  
  ダイアログ ボックスの上部のグリッドでパブリッシャーを選択し、 **[削除]** をクリックすると、追加対象のパブリッシャーの一覧からパブリッシャーを削除できます。  
   
 > [!NOTE]  

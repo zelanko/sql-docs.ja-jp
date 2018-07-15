@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
 caps.latest.revision: 32
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 524654c4eccca8c581d9d3e3e0c119034122b9fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6b20ae20933ce6315b7d64a805f55371e3c8854f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288315"
 ---
 # <a name="reporting-services-soapexception-class"></a>Reporting Services SoapException クラス
   発生が予想される [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のエラーには、対処が必要です。 たとえば、ユーザーにフォルダーの作成を要求するアプリケーションでは、ユーザーが既に存在するフォルダーを作成する可能性があります。 開発者としては、アプリケーションのフォルダー名フィールドとパス フィールドにユーザーが入力する内容を制限することはできません。ただし、既に存在するアイテムをユーザーが誤って作成しようとしたとき、どのように対処するかを指定することは可能です。  

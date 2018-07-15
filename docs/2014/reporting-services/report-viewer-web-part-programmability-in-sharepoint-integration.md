@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43c0988abc3ea5043873421054fc370a58ed9347
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 57edecff9fbebb062381e9d236d24ee329facd75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313162"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>SharePoint 統合でのレポート ビューアー Web パーツのプログラミング
   レポート ビューアー Web パーツは、`T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` サーバー コントロールです。このサーバー コントロールには、開発者がカスタム SharePoint アプリケーションを作成するためのパブリック アプリケーション プログラミング インターフェイス (API) のセットが含まれています。 Web パーツ接続を使用し、レポート ビューアー Web パーツにレポートのパスとパラメーターを指定するカスタム Web パーツを作成できます。 Web パーツをカスタム SharePoint Web パーツ ページに埋め込み、パブリック API を使用してカスタマイズすることもできます。  
   
 ## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>レポート ビューアー Web パーツとカスタム Web パーツとの接続  
- レポート ビューアー Web パーツは、<xref:System.Web.UI.WebControls.WebParts.IWebPartRow> または `T:Microsoft.SharePoint.WebPartPages.IFilterValues` を実装する SharePoint Web パーツに接続するコンシューマーです。 **ドキュメント** Web パーツなどの <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web パーツを同じ Web パーツ ページにレポート ビューアー Web パーツとして配置すると、レポート ビューアー Web パーツにレポート パスを指定できます。 同様に、 `T:Microsoft.SharePoint.WebPartPages.IFilterValues` Web パーツなど、**テキスト フィルター**または**フィルターの選択**、レポート ビューアー Web と同じ Web パーツ ページに配置されたレポート ビューアー Web パーツにレポート パラメーターを指定できます部分。  
+ レポート ビューアー Web パーツは、<xref:System.Web.UI.WebControls.WebParts.IWebPartRow> または `T:Microsoft.SharePoint.WebPartPages.IFilterValues` を実装する SharePoint Web パーツに接続するコンシューマーです。 **ドキュメント** Web パーツなどの <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web パーツを同じ Web パーツ ページにレポート ビューアー Web パーツとして配置すると、レポート ビューアー Web パーツにレポート パスを指定できます。 同様に、 `T:Microsoft.SharePoint.WebPartPages.IFilterValues` Web パーツなど、**テキスト フィルター**または**フィルターの選択**、レポート ビューアー Web パーツ、レポート ビューアー Web と同じ Web パーツ ページに配置する場合にレポート パラメーターを指定することができます部分。  
   
 ### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>レポート パス プロバイダーと IWebPartRow の実装  
  Web パーツ接続を通じてレポート ビューアー Web パーツにレポートのパスを指定するには、次の手順に従います。  

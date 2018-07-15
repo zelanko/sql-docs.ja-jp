@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
 - keyboard shortcuts [SQL Server Management Studio]
@@ -21,17 +21,18 @@ helpviewer_keywords:
 - accelerator keys
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 caps.latest.revision: 82
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d2e3cf3a6f71cc38ee6c1705c00bea8e84227eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a50cf7d5cf3ef1a99e8d10fa22263f0590f08250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317592"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio のキーボード ショートカット
+  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、2 つのキーボード スキームが用意されています。 既定のスキームは [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] スキームであり、そのキーボード ショートカットの基になっているのは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 です。 また、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] では、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] の標準スキームに似たキーボード スキームも提供されています。 キーボード スキームの変更やキーボード ショートカットの追加を行うには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[環境]** の **[キーボード]** ページで目的のキーボード スキームを選択できます。  
   
 > [!NOTE]  
@@ -375,10 +376,10 @@ ms.locfileid: "36163824"
 |現在選択しているテキストの前の出現箇所を検索する|Ctrl + Shift + F3|Ctrl + Shift + F3|  
 |**[フォルダーを指定して置換]** ダイアログ ボックスを表示する|Ctrl + Shift + H|Ctrl + Shift + H|  
 |インクリメンタル検索を反転して、ファイルの末尾から上に向かって検索する|Ctrl + Shift + I|Ctrl + Shift + I|  
-|**[検索と置換]** の **[上へ検索]** オプションをオンまたはオフにする|Alt + F3、B|Alt + F3、B|  
+| **[検索と置換]** の **[上へ検索]** オプションをオンまたはオフにする|Alt + F3、B|Alt + F3、B|  
 |**[フォルダーを指定して検索]** による検索を停止する|Alt + F3、S|Alt + F3、S|  
-|**[検索と置換]** の **[単語単位]** オプションをオンまたはオフにする|Alt + F3、W|Alt + F3、W|  
-|**[検索と置換]** の **[ワイルドカード]** オプションをオンまたはオフにする|Alt + F3、P|Alt + F3、P|  
+| **[検索と置換]** の **[単語単位]** オプションをオンまたはオフにする|Alt + F3、W|Alt + F3、W|  
+| **[検索と置換]** の **[ワイルドカード]** オプションをオンまたはオフにする|Alt + F3、P|Alt + F3、P|  
 |[標準] ツール バーの [検索/コマンド] ボックスにキャレットを配置する|Ctrl + /|該当するショートカットはありません|  
   
 ## <a name="cut-and-paste-keyboard-shortcuts"></a>切り取りと貼り付けのキーボード ショートカット  
@@ -439,13 +440,13 @@ ms.locfileid: "36163824"
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |現在実行中のクエリを取り消すか停止する|Ctrl + T|Ctrl + T|  
-|**クエリ デザイナー**のダイアグラム ペインを表示する|Ctrl + 1|Ctrl + 1|  
-|**クエリ デザイナー**の条件ペインを表示する|Ctrl + 2|Ctrl + 2|  
-|**クエリ デザイナー**の SQL ペインを表示する|Ctrl + 3|Ctrl + 3|  
-|**クエリ デザイナー**の結果ペインを表示する|Ctrl + 4|Ctrl + 4|  
-|**クエリ デザイナー**で指定されているクエリを実行する|Ctrl + R|Ctrl + R|  
+| **クエリ デザイナー**のダイアグラム ペインを表示する|Ctrl + 1|Ctrl + 1|  
+| **クエリ デザイナー**の条件ペインを表示する|Ctrl + 2|Ctrl + 2|  
+| **クエリ デザイナー**の SQL ペインを表示する|Ctrl + 3|Ctrl + 3|  
+| **クエリ デザイナー**の結果ペインを表示する|Ctrl + 4|Ctrl + 4|  
+| **クエリ デザイナー**で指定されているクエリを実行する|Ctrl + R|Ctrl + R|  
 |結果ペインで、デザイナーの下部にドッキングされているツール ストリップにフォーカスを移動する|Ctrl + G|Ctrl + G|  
-|**クエリ デザイナー**で JOIN モードを有効にする|Ctrl + Shift + J|Ctrl + Shift + J|  
+| **クエリ デザイナー**で JOIN モードを有効にする|Ctrl + Shift + J|Ctrl + Shift + J|  
   
 ## <a name="designer-keyboard-shortcuts"></a>デザイナーのキーボード ショートカット  
   

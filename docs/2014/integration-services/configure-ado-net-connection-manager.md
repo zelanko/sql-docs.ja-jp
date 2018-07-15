@@ -1,5 +1,5 @@
 ---
-title: ADO.NET 接続マネージャーの構成 |Microsoft ドキュメント
+title: ADO.NET 接続マネージャーの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetconnection.f1
 helpviewer_keywords:
 - Configure ADO.NET Connection Manager dialog box
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c6ea398365e4c612876216e1abebbbd682f545b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b938f3ab316f63caadb59ba8aa886a453b148a7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297032"
 ---
 # <a name="configure-adonet-connection-manager"></a>[ADO.NET の接続マネージャーの構成]
   **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスでは、SqlClient プロバイダーなど、.NET Framework データ プロバイダーを使用してアクセスできるデータ ソースへの接続を追加できます。 接続マネージャーでは、既存の接続を使用することも、新しく接続を作成することもできます。  
@@ -40,7 +40,7 @@ ms.locfileid: "36085485"
  **[新規作成]**  
  **[接続マネージャー]** ダイアログ ボックスを使用して、ADO.NET データ接続を作成します。  
   
- **Delete**  
+ **削除**  
  接続を選択し、 **[削除]** ボタンを使用して削除します。  
   
 ## <a name="see-also"></a>参照  

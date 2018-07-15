@@ -18,13 +18,13 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7df311ba9078e95ce842bab3eb455b7026dffe57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33f40a80731ddf2884bf42648a46135416f9738f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289168"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>プログラムによる使用可能なパッケージの列挙
   プログラムにより [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを操作する際に、個々のパッケージまたはフォルダーが存在するかどうかを判断したり、読み込みと実行が可能な保存済みパッケージを列挙したりする必要がある場合があります。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスは、これらの要件を満たすさまざまなメソッドを提供します。  
@@ -243,9 +243,9 @@ namespace EnumeratePackagesSql_CS
   
  [トップに戻る](#top)  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。  **<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
- [パッケージの管理&#40;SSIS サービス&#41;](../service/package-management-ssis-service.md)  
+ [Package Management &#40;SSIS サービス&#41;](../service/package-management-ssis-service.md)  
   
   

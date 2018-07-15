@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.reorganizeindextask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
 caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d14a348e0cf86c04e66afb1d008085877b63ab19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a05f0a6e43ff36258d665c351b32565f89bd492
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314212"
 ---
 # <a name="reorganize-index-task"></a>インデックスの再編成タスク
   インデックスの再編成タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルおよびビューのインデックスを再編成します。 インデックスの管理の詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  

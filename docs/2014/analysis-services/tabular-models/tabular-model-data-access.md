@@ -1,5 +1,5 @@
 ---
-title: 表形式モデルのデータ アクセス |Microsoft ドキュメント
+title: 表形式モデルのデータ アクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 47494073312225884997c2ca89ccfd84ed6968c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e5a92c5f71f670fe8e592087a8826217a0fd6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316982"
 ---
 # <a name="tabular-model-data-access"></a>テーブル モデル データ アクセス
   Analysis Services のテーブル モデル データベースは、多次元モデルからデータまたはメタデータを取得するときとほぼ同じクライアント、インターフェイス、および言語でアクセスできます。 詳細については、「[Multidimensional Model Data Access (Analysis Services - Multidimensional Data)](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)」(多次元モデルのデータ アクセス (Analysis Services - 多次元データ)) を参照してください。  
@@ -35,7 +35,7 @@ ms.locfileid: "36164178"
  また、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でテーブル モデルを参照する用途にも Excel は適しています。 このツールには、 **[Excel で分析]** というオプションがあります。このオプションを選択すると、新しい Excel インスタンスが起動して Excel ブックが作成され、そのブックからモデル ワークスペース データベースへのデータ接続が開きます。 Excel でテーブル モデル データを参照する際は、モデルに対するクエリが、Excel PivotTable クライアントを使用して実行される点に注意してください。 したがって、Excel ブック内の操作は、DAX クエリではなく、MDX クエリとしてワークスペース データベースに送信されます。 SQL Profiler などの監視ツールを使用してクエリを監視したとき、プロファイラー トレースに表示されるのは DAX ではなく MDX です。 "Excel で分析" 機能の詳細については、「[Excel で分析 (SSAS テーブル)](analyze-in-excel-ssas-tabular.md)」を参照してください。  
   
 ### <a name="power-view"></a>Power View  
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、Reporting Services のレポート クライアント アプリケーションであり、SharePoint 2010 環境で動作します。 データ探索、クエリ デザイン、プレゼンテーション レイアウトが、アドホック レポート環境に統合されています。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、テーブル モデルをデータ ソースとして使用することができます。そのモデルが、テーブル モードで動作する Analysis Services のインスタンスにホストされているか、DirectQuery モードを使用してリレーショナル データ ストアから取得されるかは関係ありません。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]でテーブル モデルに接続するには、サーバーの場所とデータベース名を格納する接続ファイルを作成する必要があります。 Reporting Services の共有データ ソースまたは BI Semantic Model の接続ファイルは SharePoint で作成することができます。 BI セマンティック モデル接続の詳細については、次を参照してください。 [PowerPivot BI セマンティック モデル接続&#40;.bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)です。  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、Reporting Services のレポート クライアント アプリケーションであり、SharePoint 2010 環境で動作します。 データ探索、クエリ デザイン、プレゼンテーション レイアウトが、アドホック レポート環境に統合されています。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、テーブル モデルをデータ ソースとして使用することができます。そのモデルが、テーブル モードで動作する Analysis Services のインスタンスにホストされているか、DirectQuery モードを使用してリレーショナル データ ストアから取得されるかは関係ありません。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]でテーブル モデルに接続するには、サーバーの場所とデータベース名を格納する接続ファイルを作成する必要があります。 Reporting Services の共有データ ソースまたは BI Semantic Model の接続ファイルは SharePoint で作成することができます。 BI セマンティック モデル接続の詳細については、次を参照してください。 [PowerPivot BI セマンティック モデル接続&#40;.bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)します。  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] クライアントは特定のモデルの構造を判断する際、指定されたデータ ソースに要求を送信し、データ ソースからスキーマを取得します。このスキーマを使用することで、データ ソースとしてのモデルに対するクエリを作成し、そのデータを基に処理を実行することができます。 以後、データのフィルター処理、計算や集計、関連付けられたデータの表示など、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ユーザー インターフェイスで実行される操作はクライアントによって制御され、プログラムから操作することはできません。  
   
@@ -83,17 +83,17 @@ ms.locfileid: "36164178"
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テーブル モデルを操作する際の要となるインターフェイスには、スキーマ行セットと XMLA のほか、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]に備わっているクエリ クライアントとクエリ ツールがあります。  
   
 ### <a name="data-and-metadata"></a>データとメタデータ  
- マネージ アプリケーションでは、ADOMD.NET を使用して、テーブル モデルからデータおよびメタデータを取得できます。 テーブル モデルでオブジェクトを作成したり変更したりするアプリケーションの例については、次のリソースを参照してください。  
+ マネージド アプリケーションでは、ADOMD.NET を使用して、テーブル モデルからデータおよびメタデータを取得できます。 テーブル モデルでオブジェクトを作成したり変更したりするアプリケーションの例については、次のリソースを参照してください。  
   
 -   Codeplex のテーブル モデル AMO サンプル  
   
--   [動的管理ビューを使用して&#40;Dmv&#41;サービス分析を監視するのには](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [動的管理ビューを使用して&#40;Dmv&#41;サービス モニターは分析するには](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  アンマネージ クライアント アプリケーションでは Analysis Services 9.0 OLE DB プロバイダーを使用して、テーブル モデルに対する OLE DB アクセスをサポートできます。 テーブル モデル アクセスを有効にするには、最新バージョンの Analysis Services OLE DB プロバイダーが必要です。 テーブル モデルで使用するプロバイダーの詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 」を参照してください。  
   
  XML ベース形式のデータを Analysis Services インスタンスから直接取得することもできます。 テーブル モデルのスキーマは DISCOVER_CSDL_METADATA 行セットを使用して取得できます。また、EXECUTE コマンドまたは DISCOVER コマンドを既存の ASSL 要素、オブジェクト、またはプロパティと組み合わせて使用することもできます。 詳細については、次のリソースを参照してください。  
   
--   [ビジネス インテリジェンス向けの CSDL 注釈&#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+-   [ビジネス インテリジェンス向け CSDL 注釈&#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
 ### <a name="manipulate-analysis-services-objects"></a>Analysis Services オブジェクトの操作  
  テーブル モデルとそこに含まれるオブジェクト (テーブル、列、パースペクティブ、メジャー、パーティションなど) の作成、変更、削除、処理は、XMLA コマンドまたは AMO を使用して行うことができます。 AMO と XMLA は、テーブル モデルで使用される追加のプロパティをサポートするために更新され、レポートとモデリングの機能が強化されています。  
@@ -104,7 +104,7 @@ ms.locfileid: "36164178"
   
 -   CodePlex の AdventureWorks サンプル  
   
- PowerShell を使用して、Analysis Services のインスタンスを管理、監視できるほか、テーブル モデル アクセスに必要なセキュリティを形成、監視することができます。 詳細については、次を参照してください。 [Analysis Services PowerShell](../analysis-services-powershell.md)です。  
+ PowerShell を使用して、Analysis Services のインスタンスを管理、監視できるほか、テーブル モデル アクセスに必要なセキュリティを形成、監視することができます。 詳細については、次を参照してください。 [Analysis Services PowerShell](../analysis-services-powershell.md)します。  
   
 ### <a name="schema-rowsets"></a>スキーマ行セット  
  クライアント アプリケーションは、スキーマ行セットを使用してテーブル モデルのメタデータを分析し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーからサポート情報および監視情報を取得することができます。 このリリースの SQL Server では、テーブル モデルに関連した機能をサポートし、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]全体の監視とパフォーマンス分析を強化するために、新しいスキーマ行セットが追加され、既存のスキーマ行セットが拡張されています。  
@@ -119,7 +119,7 @@ ms.locfileid: "36164178"
   
 -   [DISCOVER_XEVENT_TRACE_DEFINITION 行セット](../dev-guide/discover-xevent-trace-definition-rowset.md)  
   
-     SQL Server 拡張イベントを監視するための新しいスキーマ行セット。 詳細については、次を参照してください。[を使用して SQL Server 拡張イベント&#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)です。  
+     SQL Server 拡張イベントを監視するための新しいスキーマ行セット。 詳細については、次を参照してください。[使用して SQL Server 拡張イベント&#40;Xevent&#41; Analysis Services の監視に](../instances/monitor-analysis-services-with-sql-server-extended-events.md)します。  
   
 -   [DISCOVER_TRACES 行セット](../schema-rowsets/xml/discover-traces-rowset.md)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36164178"
   
 -   [MDSCHEMA_HIERARCHIES 行セット](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     新しい`STRUCTURE_TYPE`列挙体は、表形式モデルで作成されるユーザー定義階層の id をサポートしています。 詳細については、「[階層 (SSAS テーブル)](hierarchies-ssas-tabular.md)」を参照してください。  
+     新しい`STRUCTURE_TYPE`列挙体は、表形式モデルで作成されたユーザー定義階層の id をサポートしています。 詳細については、「[階層 (SSAS テーブル)](hierarchies-ssas-tabular.md)」を参照してください。  
   
  このリリースでは、データ マイニング スキーマ行セットの OLE DB に対する更新はありません。  
   

@@ -3,28 +3,26 @@ title: ストアド プロシージャの定義の表示 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], viewing
 - definition of stored procedure
 - viewing stored procedures
 - displaying stored procedures
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
-caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3b63ca5ff5b5373ea56c0df355c519d23054d07f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 09737f1b9764680e67dbb0bbefb2d0ec86df71e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288408"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>ストアド プロシージャの定義の表示
     
@@ -74,7 +72,7 @@ ms.locfileid: "36084947"
   
 2.  ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  使用して、次のステートメントを入力してクエリ ウィンドウで、`sp_helptext`システム ストアド プロシージャです。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
+3.  クエリ ウィンドウで使用する、次のステートメントを入力、`sp_helptext`システム ストアド プロシージャ。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
   
     ```  
     USE AdventureWorks2012;  
@@ -100,7 +98,7 @@ ms.locfileid: "36084947"
   
 2.  ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  使用して、次のステートメントを入力してクエリ ウィンドウで、`sys.sql_modules`カタログ ビューです。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
+3.  クエリ ウィンドウで入力を使用して、次のステートメント、`sys.sql_modules`カタログ ビューです。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
   
     ```  
     USE AdventureWorks2012;  

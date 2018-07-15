@@ -1,5 +1,5 @@
 ---
-title: Microsoft デシジョン ツリー アルゴリズム |Microsoft ドキュメント
+title: Microsoft デシジョン ツリー アルゴリズム |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], discrete attributes
 - predictions [Analysis Services], continuous attributes
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 caps.latest.revision: 70
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc3f7cac98736fe558bf19ce00fc57115cade782
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff4f1b4bb2311231e09e6e150592c6a2dabb3d19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310782"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft デシジョン ツリー アルゴリズム
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]デシジョン ツリー アルゴリズムは、によって提供される分類および回帰アルゴリズム[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]両方不連続属性と連続属性の予測モデリングに使用します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]デシジョン ツリー アルゴリズムは、分類と回帰アルゴリズムのによって提供される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]両方不連続値と連続属性の予測モデリングで使用します。  
   
  不連続属性の場合、予測はデータセットの入力列間のリレーションシップに基づいて行われます。 アルゴリズムでは、これらの列の値 (状態) を使用して、予測可能として指定した列の状態が予測されます。 具体的には、予測可能列に相関している入力列が識別されます。 たとえば、どのような顧客が自転車を購入する確率が高いかを予測するシナリオにおいて、若い顧客は 10 人のうち 9 人が自転車を購入するのに対し、中高年の顧客は 10 人のうち 2 人しか購入しない場合、アルゴリズムによって、年齢が自転車購入の適切な予測子であると推定されます。 デシジョン ツリーでは、特定の結果に対するこの傾向に基づいて予測が行われます。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "36084693"
 ## <a name="how-the-algorithm-works"></a>アルゴリズムの動作  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、一連の分割をツリー内に作成することによって、データ マイニング モデルが作成されます。 これらの分割は *ノード*として表されます。 ノードは、入力列が予測可能列に密接に相関していることが認識されるたびに、アルゴリズムによってモデルに追加されます。 アルゴリズムで分割が決定される方法は、連続列と不連続列のどちらを予測するかによって異なります。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムの *機能の選択* を使用すると、最も役に立つ属性を選択できます。 機能の選択はすべて使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]パフォーマンスと分析の質を向上させるためにデータ マイニング アルゴリズム。 機能の選択は、重要でない属性によってプロセッサ時間が使用されるのを防ぐために重要です。 データ マイニング モデルの設計時に入力属性または予測可能属性を多用しすぎると、モデルの処理に非常に時間がかかったり、メモリが不足する場合があります。 ツリーを分割するかどうかの判断方法には、*エントロピ*およびベイジアン ネットワーク*に関する業界標準の基準があります。* 重要な属性の選択、スコア計算、および順位付けの方法の詳細については、「[機能の選択 &#40;データ マイニング&#41;](feature-selection-data-mining.md)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムの *機能の選択* を使用すると、最も役に立つ属性を選択できます。 特徴選択を使用してすべて[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]パフォーマンスと分析の質を向上させるために、データ マイニング アルゴリズム。 機能の選択は、重要でない属性によってプロセッサ時間が使用されるのを防ぐために重要です。 データ マイニング モデルの設計時に入力属性または予測可能属性を多用しすぎると、モデルの処理に非常に時間がかかったり、メモリが不足する場合があります。 ツリーを分割するかどうかの判断方法には、*エントロピ*およびベイジアン ネットワーク*に関する業界標準の基準があります。* 重要な属性の選択、スコア計算、および順位付けの方法の詳細については、「[機能の選択 &#40;データ マイニング&#41;](feature-selection-data-mining.md)」を参照してください。  
   
- データ マイニング モデルでの一般的な問題は、そのモデルがトレーニング データに若干の違いに過度に反映は、これはあると言われます*オーバー フィット*または*オーバー トレーニング*です。 オーバーフィット モデルは、他のデータセットに一般化することができません。 特定のデータセットへのオーバーフィットを回避するため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、ツリーの拡大を制御する手法が使用されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムのしくみの詳細については、「 [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](microsoft-decision-trees-algorithm-technical-reference.md)」を参照してください。  
+ データ マイニング モデルにおける一般的な問題は、モデルにトレーニング データ内の小さな違いに過度に反映なる、場合は、あると言われます*過剰適合*または*オーバー トレーニング*します。 オーバーフィット モデルは、他のデータセットに一般化することができません。 特定のデータセットへのオーバーフィットを回避するため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、ツリーの拡大を制御する手法が使用されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムのしくみの詳細については、「 [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](microsoft-decision-trees-algorithm-technical-reference.md)」を参照してください。  
   
 ### <a name="predicting-discrete-columns"></a>不連続列の予測  
  不連続の予測可能列に対して [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムがツリーを作成する方法は、ヒストグラムで示すことができます。 次の図は、予測可能列の "Bike Buyers" を入力列の "Age" と相関させてプロットしたヒストグラムを示しています。 このヒストグラムは、ある顧客が自転車を購入するかどうかは、その人の年齢からある程度判断できることを示しています。  
@@ -65,11 +65,11 @@ ms.locfileid: "36084693"
 ### <a name="predicting-continuous-columns"></a>連続列の予測  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムが連続する予測可能列に基づいてツリーを作成するとき、各ノードには回帰式が含まれます。 分割は、回帰式内の非線形性のポイントで発生します。 たとえば、次の図について検討します。  
   
- ![複数の回帰の行を示す非線形](../media/regression-tree1.gif "線を示す非線形の複数の回帰")  
+ ![複数の回帰の行が表示された非線形](../media/regression-tree1.gif "行が表示された非線形を複数の回帰")  
   
  この図には、1 本の線または 2 本の接続された線を使用してモデル化できるデータが含まれています。 ただし、1 本の線ではデータを的確に表すことができません。 代わりに 2 本の線を使用すると、モデルはデータをさらに的確に表すことができます。 2 本の線が交差するポイントは非線形性のポイントで、これはデシジョン ツリー モデルのノードが分割されるポイントになります。 たとえば、前のグラフで非線形性のポイントに対応しているノードは、次の図で表すことができます。 2 つの式は、2 本の線の回帰式を表します。  
   
- ![非線形性のポイントを表す数式](../media/regression-tree2.gif "非線形性のポイントを表す式")  
+ ![非直線性のポイントを表す式](../media/regression-tree2.gif "非直線性のポイントを表す式")  
   
 ## <a name="data-required-for-decision-tree-models"></a>デシジョン ツリー モデルに必要なデータ  
  デシジョン ツリー モデルで使用するデータを用意する際には、必要なデータ量やデータの使用方法など、このアルゴリズムにおける要件を把握しておいてください。  

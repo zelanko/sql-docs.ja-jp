@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a43c85e5bfc36927b5374d8fb5e2165c01482c41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e2dbeac74a4640102ea6a8ccc41f6fc33ca6eec3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301852"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>式を使用したインジケーターのサイズの指定 (レポート ビルダーおよび SSRS)
   インジケーターは、色、方向、形状のほか、サイズを変更して、視覚的効果を高めることができます。  
@@ -33,7 +33,7 @@ ms.locfileid: "36070885"
   
  **プロパティ** ペインでは、インジケーターの IndicatorStates コレクションのプロパティにアクセスできます。 アイコンを異なるサイズになるように構成するには、式を使用して IndicatorStates コレクション メンバーの ScaleFactor プロパティを設定します。 詳細については、「[式 (レポート ビルダーおよび SSRS)](expressions-report-builder-and-ssrs.md)」を参照してください。  
   
- この手順で使用される式に示すように、インジケーターのサイズが異なると、レポートの生成に使用されたも[インジケーター&#40;レポート ビルダーおよび SSRS&#41;](indicators-report-builder-and-ssrs.md)です。  
+ この手順で使用されている式に示すように、インジケーターのさまざまなサイズでレポートを生成するでも使用されていました[インジケーター&#40;レポート ビルダーおよび SSRS&#41;](indicators-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

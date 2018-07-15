@@ -1,5 +1,5 @@
 ---
-title: Sp_helptrigger 出力の新しい列がアプリケーションへの影響 |Microsoft ドキュメント
+title: Sp_helptrigger 出力の列を新しいアプリケーションに影響を与える可能性があります |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sp_helptrigger
 ms.assetid: b7c42a8f-f2e0-4fa3-b046-3cf39c854c47
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2d62b9b9546fa113557bf962d68876d8c55a71ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8d8cb7b6623cd15e2e7617a1ae63baeaebe4e375
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306992"
 ---
 # <a name="new-column-in-output-of-sphelptrigger-may-impact-applications"></a>sp_helptrigger 出力の新しい列がアプリケーションに影響を与える可能性がある
-  trigger_schemaias sp_helptrigger システムによって返される結果セットの最後の列には、プロシージャが格納されます。  
+  結果セットの最後の列は、sp_helptrigger システムによって返される trigger_schemaias はストアド プロシージャです。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]特定のテーブルで定義されるトリガーに関する情報を入手するには、sys.triggers カタログ ビューをクエリしてください。  

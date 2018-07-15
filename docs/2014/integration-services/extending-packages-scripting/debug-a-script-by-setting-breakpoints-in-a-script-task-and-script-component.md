@@ -17,13 +17,13 @@ ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e171650a4f3fa04644bf87303cf26caf4eb172dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6327983f42efbf0b8d891495c9048d1ab963d0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306212"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>スクリプト タスクとスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグする
   この手順では、スクリプト タスクとスクリプト コンポーネントで使用するスクリプトに、ブレークポイントを設定する方法について説明します。  
@@ -31,7 +31,7 @@ ms.locfileid: "36070745"
  スクリプトにブレークポイントを設定すると、**[ブレークポイントの設定 - \<オブジェクト名>]** ダイアログ ボックスに、組み込みブレークポイントと共に、設定したブレークポイントの一覧が表示されるようになります。  
   
 > [!IMPORTANT]  
->  状況によっては、スクリプト タスクおよびスクリプト コンポーネント内のブレークポイントは無視されます。 詳細については、次を参照してください、**スクリプト タスクのデバッグ**」の「[コーディングし、スクリプト タスクのデバッグ](../control-flow/script-task.md)と**スクリプト コンポーネントのデバッグ**[コーディング」セクション。およびスクリプト コンポーネントのデバッグ] (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md します。  
+>  状況によっては、スクリプト タスクおよびスクリプト コンポーネント内のブレークポイントは無視されます。 詳細については、次を参照してください、**スクリプト タスクのデバッグ**セクション[のコーディングおよびデバッグ スクリプト タスク](../control-flow/script-task.md)と**スクリプト コンポーネントのデバッグ**[コーディング」セクション。およびスクリプト コンポーネントのデバッグ] (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md です。  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>スクリプトにブレークポイントを設定するには  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36070745"
   
 7.  **[ファイル]** メニューの **[終了]** をクリックします。  
   
-8.  **[OK]** をクリックします。  
+8.  [**OK**] をクリックします。  
   
 9. パッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   

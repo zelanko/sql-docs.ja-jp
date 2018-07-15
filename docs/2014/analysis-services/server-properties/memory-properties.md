@@ -1,5 +1,5 @@
 ---
-title: メモリのプロパティ |Microsoft ドキュメント
+title: メモリのプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LowMemoryLimit property
 - MinimumAllocatedMemory property
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c80e57803c1635cf6688ac8d8a562aa7e40f8818
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77902cfe21cf2f486007f802c0556bd410f46d4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286378"
 ---
 # <a name="memory-properties"></a>メモリのプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー メモリ プロパティがサポートされています。 これらのプロパティの設定方法については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
@@ -51,7 +51,7 @@ ms.locfileid: "36076063"
  `TotalMemoryLimit` は常に、`HardMemoryLimit` より小さくする必要があります。  
   
  `HardMemoryLimit`  
- インスタンスが、メモリ使用量を減らすために、アクティブなユーザー セッションを積極的に終了し始めるメモリのしきい値を指定します。 終了されたすべてのセッションには、メモリ不足によって使用中止となった旨のエラーが送信されます。 既定値はゼロ (0) の意味、`HardMemoryLimit`間の値に設定されます`TotalMemoryLimit`とシステム プロセス、し、仮想アドレスの仮想アドレス空間よりも大きい場合は、システムの物理メモリの合計物理メモリ使用する領域を代わりに計算する`HardMemoryLimit`です。  
+ インスタンスが、メモリ使用量を減らすために、アクティブなユーザー セッションを積極的に終了し始めるメモリのしきい値を指定します。 終了されたすべてのセッションには、メモリ不足によって使用中止となった旨のエラーが送信されます。 既定値、ゼロ (0) の意味、`HardMemoryLimit`間の値に設定されます`TotalMemoryLimit`とシステム プロセス、し、仮想アドレスの仮想アドレス空間よりも大きい場合は、システムの物理メモリの合計物理メモリ領域が計算する代わりに使用`HardMemoryLimit`します。  
   
  `VirtualMemoryLimit`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
@@ -63,9 +63,9 @@ ms.locfileid: "36076063"
   
  **1** が既定値です。 このプロパティを指定した場合、オペレーティング システムのページング ファイル (pagefile.sys) を使用してディスクへのページングが行われます。  
   
- ときに`VertiPaqPagingPolicy`設定は 1、処理はサーバーが指定したメソッドを使用してディスクへのページングを試行するために、メモリ制約によって失敗する可能性は低くします。 `VertiPaqPagingPolicy` プロパティを設定しても、メモリ エラーが発生しないことが保証されるわけではありません。 以下の状況では、メモリ不足エラーが発生する可能性があります。  
+ ときに`VertiPaqPagingPolicy`設定は 1、処理は、サーバーが指定したメソッドを使用してディスクへのページングを試行ので、メモリ制約が原因で失敗する可能性を低減します。 `VertiPaqPagingPolicy` プロパティを設定しても、メモリ エラーが発生しないことが保証されるわけではありません。 以下の状況では、メモリ不足エラーが発生する可能性があります。  
   
--   すべての辞書のための十分なメモリがない。 処理中に、Analysis Services は、メモリ内の各列の辞書をロックし、それらすべてのする指定された値を超えることはできません`VertiPaqMemoryLimit`です。  
+-   すべての辞書のための十分なメモリがない。 処理中に、Analysis Services の各列の辞書をメモリにロックをそれらすべての値は指定された値を超える`VertiPaqMemoryLimit`します。  
   
 -   処理に対応するための十分な仮想アドレス空間がない。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36076063"
  `VertiPaqMemoryLimit`  
  ディスクへのページングを許可した場合に、ページングが開始されるメモリ消費レベル (メモリの合計に対する割合) をこのプロパティで指定します。 既定値は 60 です。 メモリ消費量が 60% 未満の場合、ディスクへのページングは実行されません。  
   
- このプロパティによって異なります、 `VertiPaqPagingPolicyProperty`、ページングを有効にするために 1 に設定する必要があります。  
+ このプロパティによって異なります、 `VertiPaqPagingPolicyProperty`、ページングを有効にするために 1 に設定する必要がある必要があります。  
   
  テーブル サーバー モードにのみ適用されます。  
   

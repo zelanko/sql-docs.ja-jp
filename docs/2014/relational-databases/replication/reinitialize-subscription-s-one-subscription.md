@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.reinit.single.f1
 helpviewer_keywords:
 - Reinitialize Subscription(s) dialog box
 ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fa3c4afcdcf50bc34dd9fd507cea0420277ff2b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5a980ebeed4cb3570928e2c0b76c00c93a1e302f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313682"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>[サブスクリプションの再初期化] - 1 つのサブスクリプション
   **[サブスクリプションの再初期化]** ダイアログ ボックスを使用すると、サブスクリプションに再初期化を設定できます。 再初期化には、サブスクライバーへのスナップショットの適用が含まれています。トランザクション パブリケーションに対するサブスクリプションの場合はディストリビューション エージェントによって実行され、マージ パブリケーションに対するサブスクリプションの場合はマージ エージェントによって実行されます。  

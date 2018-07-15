@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, performance
 - tracer tokens [SQL Server replication]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - monitoring performance [SQL Server replication], tracer tokens
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cee723effa7edf573c71fa1783b4fce720ade23e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c313792beb9f07438f13a169d7502f631bab25b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294732"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>トランザクション レプリケーションの待機時間の計測および接続の検証
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] でレプリケーション モニター、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用し、トランザクション レプリケーションの待機時間を計測して接続を検証する方法について説明します。 トランザクション レプリケーションには、トレーサー トークン機能が用意されており、これによって簡単にトランザクション レプリケーション トポロジにおける待機時間を計測したり、パブリッシャー、ディストリビューター、およびサブスクライバーの間の接続を検証したりすることができます。 トークン (小さなデータ) は、通常のレプリケートされたトランザクションのようにマークが付けられてパブリケーション データベースのトランザクション ログに書き込まれ、システムを介して送信されることで、次の計算が可能になります。  
@@ -146,7 +146,7 @@ ms.locfileid: "36085428"
   
 3.  パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した接続を設定します。  
   
-4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 3. でパブリケーション プロパティの定義が正しくなかったか、パブリケーションが存在しません。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 3. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
   
 5.  <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> メソッドを呼び出します。 このメソッドは、トレーサー トークンをパブリケーションのトランザクション ログに挿入します。  
   

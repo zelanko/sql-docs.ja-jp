@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - media errors [SQL Server]
 - CONTINUE_AFTER_ERROR option
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 914748480202ed69dd95e9796d48eb450093717d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9887d5f158e39ddae24bda31db0fbb76cb5e3482
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298522"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>バックアップ中および復元中に発生する可能性があるメディア エラー (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、エラーが検出されてもデータベースを復旧するオプションを選択できるようになりました。 エラー検出の重要なメカニズムとして、バックアップ チェックサムを任意で作成できるようになりました。バックアップ チェックサムは、バックアップ操作で生成して、復元操作で検証できます。 操作中にエラーを検出するかどうかと、エラー発生時に操作を停止するか続行するかを制御できます。 バックアップにバックアップ チェックサムが含まれている場合、RESTORE ステートメントおよび RESTORE VERIFYONLY ステートメントでエラーを検査できます。  

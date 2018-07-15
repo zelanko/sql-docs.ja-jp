@@ -1,5 +1,5 @@
 ---
-title: レポートをコンピューターに保存 (レポート ビルダー) |Microsoft ドキュメント
+title: レポート コンピューターに保存 (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 caps.latest.revision: 5
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 367fcdacc7172a79155b1865464e92d0596a38ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 765dbc5fc274146cfc6cd660acb2278c8e46b4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309232"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>自分のコンピューターへのレポートの保存 (レポート ビルダー)
   レポート ビルダーでは、レポート定義を自分のコンピューターに保存できます。 ただし、コンピューターに保存した場合、他のユーザーはそのレポートを表示できません。また、共有データ ソースを参照したり、画像やサブレポートなどのレポート アイテムを外部に格納するレポートは実行できない場合があります。 レポートは、レポート サーバーまたは SharePoint サイトに保存することをお勧めします。  
@@ -31,7 +31,7 @@ ms.locfileid: "36071111"
     > [!NOTE]  
     >  レポートを再保存すると、自動的に以前の場所に再保存されます。 場所を変更するには、 **[名前を付けて保存]** を使用します。  
   
-2.  必要に応じて、をクリックして**デスクトップ**、**マイ ドキュメント**、または**マイ コンピューター**をそれらのフォルダーのいずれかに、レポートを保存します。  
+2.  必要に応じて、をクリックして**デスクトップ**、 **My Documents**、または**マイ コンピューター**レポートをそれらのフォルダーのいずれかに保存します。  
   
 3.  レポートを保存するコンピューター上の場所を参照します。 **[名前]** ボックスに、レポートの名前を入力します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36071111"
   
 2.  レポートを保存するコンピューター上の場所を参照します。  
   
-3.  **[名前]** ボックスに、レポートの名前を入力します。 必要に応じて、をクリックして**デスクトップ**、**マイ ドキュメント**、または**マイ コンピューター**をそれらのフォルダーのいずれかに、レポートを保存します。  
+3.  **[名前]** ボックスに、レポートの名前を入力します。 必要に応じて、をクリックして**デスクトップ**、 **My Documents**、または**マイ コンピューター**レポートをそれらのフォルダーのいずれかに保存します。  
   
 4.  **[アイテムの種類]** で、保存するレポート アイテムの種類を選択します。 レポートの種類はレポート (*.rdl) です。  
   

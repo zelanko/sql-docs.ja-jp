@@ -1,5 +1,5 @@
 ---
-title: 通貨換算 (Analysis Services) |Microsoft ドキュメント
+title: 通貨換算 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple currency conversions
 - monetary data [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe7eb5df9c2f25912d95aa9b0d72a6effaf06f2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d2a439a5ef4d422b69b95d1c76dbeefa39b658a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289828"
 ---
 # <a name="currency-conversions-analysis-services"></a>通貨換算 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  多次元のみ  
@@ -72,7 +72,7 @@ ms.locfileid: "36085553"
   
 -   時間ディメンションとレート メジャー グループ間に標準のディメンション リレーションシップが存在する。  
   
--   必要に応じて、`Type` プロパティが ExchangeRate に設定される。 ビジネス インテリジェンス ウィザードでは、通貨と時間ディメンションのリレーションシップを使用して、考えられるレート メジャー グループを指定して、設定、`Type`プロパティを ExchangeRate に、クライアントをより簡単にレート メジャーを特定のアプリケーショングループ。  
+-   必要に応じて、`Type` プロパティが ExchangeRate に設定される。 ビジネス インテリジェンス ウィザードでは、通貨ディメンションおよび時間ディメンションのリレーションシップを使用して、可能性の高いレート メジャー グループを識別するために、設定、`Type`プロパティを ExchangeRate にレート メジャーをより簡単に識別するためにアプリケーションをクライアントに許可グループ。  
   
 -   レート メジャー グループに含まれている換算レートを表す 1 つまたは複数のメジャー。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36085553"
   
 -   `Type`ディメンションのキー属性のプロパティが CurrencyName に設定します。  
   
--   `Type`ディメンション内の 1 つの属性のプロパティは CurrencyDestination に設定、および属性にバインドされている列には、通貨換算用のレポートの通貨を表す通貨識別子が含まれています。  
+-   `Type`ディメンション内の 1 つの属性のプロパティは CurrencyDestination に設定され、属性にバインドされている列には、通貨換算用のレポートの通貨を表す通貨識別子が含まれています。  
   
 ## <a name="defining-currency-conversions"></a>通貨換算の定義  
  ビジネス インテリジェンス ウィザードを使用すると、キューブの通貨換算機能を定義できます。また、MDX スクリプトを使用して通貨換算を手動で定義することもできます。  

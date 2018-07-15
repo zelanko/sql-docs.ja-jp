@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 231143d7b7fb90f8da6a614d047b98f9da22dbb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 33cf862e752618b35c56d2e5c58f534ca03a347d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280818"
 ---
 # <a name="list-job-category-information"></a>ジョブ カテゴリ情報の一覧の表示
   ジョブ カテゴリ情報を一覧表示する方法[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用して[!INCLUDE[tsql](../../includes/tsql-md.md)]または SQL Server 管理オブジェクト。  
@@ -49,13 +49,13 @@ ms.locfileid: "36070664"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_help_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_help_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql)します。  
   
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトを使用します。  
+##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **ジョブ カテゴリ情報の一覧を表示するには**  
   
- 使用して、 `JobCategory` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス. 詳細については、次を参照してください。 [SQL Server 管理オブジェクト&#40;SMO&#41;プログラミング ガイド](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)です。  
+ 使用して、 `JobCategory` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス. 詳細については、次を参照してください。 [SQL Server 管理オブジェクト&#40;SMO&#41;プログラミング ガイド](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)します。  
   
   
   

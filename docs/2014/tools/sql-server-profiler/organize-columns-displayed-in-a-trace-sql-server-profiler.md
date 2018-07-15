@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - organizing trace columns displayed [SQL Server]
 - arranging trace columns displayed
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4f247a5cbbdcbeb723c0fa9bc0abd1265c516459
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0aefc0500cd57bedc266401a7a987ea979b7c99c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301272"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>トレースに表示される列の構成 (SQL Server Profiler)
   トレース テーブルまたは **[トレース ファイルのプロパティ]** ダイアログ ボックスで **[列の構成]** をクリックするか、またはトレースを定義するときに、トレースのデータ列をグループ化できます。 データ列をグループ化すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース出力を分析しやすくなります。 詳細については、「 [SQL Server Profiler を使用したトレースの表示と分析](view-and-analyze-traces-with-sql-server-profiler.md)」を参照してください。  
@@ -87,7 +87,7 @@ ms.locfileid: "36075416"
 7.  トレース データの通常のビューに戻すには、 **[表示]** メニューの **[集計ビュー]** をクリックし、選択を取り消します。 集計ビューに戻す場合は、 **[表示]** メニューの **[集計ビュー]** を再びクリックします。 **[表示]** メニューの **[グループ化ビュー]** をクリックして、グループ化されたトレース イベントを折りたたまずに表示することもできます。  
   
 ## <a name="see-also"></a>参照  
- [トレースの作成&#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
+ [トレースを作成する&#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
  [トレース テーブルを開く &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)   
  [トレース ファイルを開く &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md)  
   

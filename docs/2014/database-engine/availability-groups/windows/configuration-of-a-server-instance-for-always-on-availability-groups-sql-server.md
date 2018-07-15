@@ -1,28 +1,27 @@
 ---
-title: Always On 可用性グループ (SQL Server) のサーバー インスタンスの構成 |Microsoft ドキュメント
+title: Always On 可用性グループ (SQL Server) のサーバー インスタンスの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
 - Availability Groups [SQL Server], about
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 caps.latest.revision: 16
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a602a94d8830ce8d059c3d1f8b3a290f94bd244a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7299c2b22e06ee572a6ff41f556528b4c4d32b3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319312"
 ---
 # <a name="configuration-of-a-server-instance-for-always-on-availability-groups-sql-server"></a>Always On 可用性グループのためのサーバー インスタンスの構成 (SQL Server)
   このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] でサポートするために [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインスタンスを構成する際の要件について説明します。  
@@ -78,13 +77,13 @@ ms.locfileid: "36085071"
   
 -   **ビデオ:**  
   
-     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 1: 概要次世代の高可用性ソリューション](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ、パート 1: 次世代の高可用性ソリューションの概要](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 2: 構築 AlwaysOn を使用したミッション クリティカルな高可用性ソリューション](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ、パート 2: AlwaysOn を使用したミッション クリティカルな高可用性ソリューションの構築](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **ホワイト ペーパー:**  
   
-     [高可用性と災害復旧の Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -92,7 +91,7 @@ ms.locfileid: "36085071"
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [前提条件、制限事項、および AlwaysOn 可用性グループに関する推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [AlwaysOn 可用性グループ: 相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   

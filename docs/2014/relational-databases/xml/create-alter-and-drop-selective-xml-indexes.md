@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e642c3d8a325e2e0a73234b359ba09fc33a10dce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4494302f761a98278ae7f4b24db51cdf15906ab1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301808"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>選択的 XML インデックスの作成、変更、および削除
   新しい選択的 XML インデックスの作成や、既存の選択的 XML インデックスの変更または削除を行う方法について説明します。  

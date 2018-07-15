@@ -1,5 +1,5 @@
 ---
-title: ユーザー インターフェイス リファレンス (Analysis Services) |Microsoft ドキュメント
+title: ユーザー インターフェイス リファレンス (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3e6ac4b-1435-459e-8678-ee2c8abdfad9
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76525abd06f07520ae08520e84889d7ea85528fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30af448de7f7db1338e6d29396bb79965a35d678
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312252"
 ---
 # <a name="user-interface-reference-analysis-services"></a>ユーザー インターフェイス リファレンス (Analysis Services)
   ここでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のヘルプ トピックについて紹介します。 これらのトピックは、ウィザードのページ、デザイナー、およびダイアログ ボックスで、F1 キーを押すか、 **[ヘルプ]** をクリックすることにより、ユーザー インターフェイスから表示することもできます。  

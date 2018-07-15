@@ -1,5 +1,5 @@
 ---
-title: AMO の概念とオブジェクト モデル |Microsoft ドキュメント
+title: AMO の概念とオブジェクト モデル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -21,28 +21,28 @@ helpviewer_keywords:
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 623caca0bf51815328bc24992a8f2d2928b9cab2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f692a0b5d66cc52107b93480bdf9d4541a84603
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310722"
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO の概念とオブジェクト モデル
-  このトピックは、分析管理オブジェクト (AMO) の定義を提供 AMO が他のツールとのアーキテクチャで提供されるライブラリに関連するどの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]AMO 内のすべての主要なオブジェクトの概念について説明します。  
+  このトピックでは、分析管理オブジェクト (AMO) の定義を提供します。 どの AMO に関連するその他のツールとライブラリのアーキテクチャで提供される[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、および AMO 内のすべての主要なオブジェクトに関する概念について説明します。  
   
- AMO は、マネージ環境において、<xref:Microsoft.AnalysisServices> の名前空間のプログラムで使用できる、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の管理クラスの完全なコレクションです。 クラスは、where が通常見つかる AnalysisServices.dll ファイルに含まれる、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フォルダー \100\SDK\Assemblies 下で、ファイルがインストール\\です。 AMO クラスを使用するには、このアセンブリへの参照をプロジェクト内に含めてください。  
+ AMO は、マネージド環境において、<xref:Microsoft.AnalysisServices> の名前空間のプログラムで使用できる、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の管理クラスの完全なコレクションです。 Where が見つかる通常 AnalysisServices.dll ファイル内のクラスが含まれている、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フォルダー \100\SDK\Assemblies 下で、ファイルがインストール\\します。 AMO クラスを使用するには、このアセンブリへの参照をプロジェクト内に含めてください。  
   
- 作成することができる AMO を使用すると、変更、およびキューブ、ディメンション、マイニング構造などのオブジェクトを削除し、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]データベース; に対してこれらすべてのオブジェクト、.NET Framework のアプリケーションから、操作を実行できます。 また、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データベースに格納された情報を処理したり、更新したりできます。  
+ 作成するのには、AMO を使用して、変更、およびキューブ、ディメンション、マイニング構造などのオブジェクトを削除し、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database の上これらすべてのオブジェクト、.NET framework アプリケーションから操作を実行できます。 また、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データベースに格納された情報を処理したり、更新したりできます。  
   
- AMO を使用して、データに対するクエリを実行することはできません。 クエリを実行する、データを使用して[ADOMD.NET での開発](../adomd-net/developing-with-adomd-net.md)です。  
+ AMO を使用して、データに対するクエリを実行することはできません。 データを照会するには、使用[ADOMD.NET での開発](../adomd-net/developing-with-adomd-net.md)します。  
   
  このトピックには、次のセクションが含まれます。  
   
- [Analysis Services のアーキテクチャの AMO](#AMOintheAnalysisServicesArchitecture)  
+ [AMO では、Analysis Services のアーキテクチャ](#AMOintheAnalysisServicesArchitecture)  
   
  [AMO のアーキテクチャ](#AMOArchitecture)  
   
@@ -50,11 +50,11 @@ ms.locfileid: "36084206"
   
  [AMO による管理タスクを自動化します。](#AutomatingAdministrativeTaskswithAMO)  
   
-##  <a name="AMOintheAnalysisServicesArchitecture"></a> Analysis Services のアーキテクチャの AMO  
- AMO はオブジェクト管理のみを用途として設計されており、データのクエリは用途外です。 ユーザーが必要な場合のクエリ[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]クライアント アプリケーションからデータをクライアント アプリケーションで使用する必要があります[ADOMD.NET での開発](../adomd-net/developing-with-adomd-net.md)です。  
+##  <a name="AMOintheAnalysisServicesArchitecture"></a> AMO では、Analysis Services のアーキテクチャ  
+ AMO はオブジェクト管理のみを用途として設計されており、データのクエリは用途外です。 ユーザーが必要な場合のクエリ[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]クライアント アプリケーションで使用する必要があります、クライアント アプリケーションからデータを[ADOMD.NET での開発](../adomd-net/developing-with-adomd-net.md)します。  
   
 ##  <a name="AMOArchitecture"></a> AMO のアーキテクチャ  
- AMO のインスタンスを管理するためのクラスの完全なライブラリ[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]は .NET Framework version 2.0 でマネージ コードでクライアント アプリケーションからです。  
+ AMO クラスのインスタンスを管理するための完全なライブラリは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .NET Framework version 2.0 のマネージ コードでクライアント アプリケーションから。  
   
  AMO クラス ライブラリの設計上、クラス間に階層関係があり、コードを記述する際、一部のクラスをインスタンス化してからその他のクラスを使用する必要があります。 また、コード内でいつでもインスタンス化できる補助クラスもあります。ただし、多くの場合、いずれかの補助クラスを使用する前に、1 つ以上の階層クラスが既にインスタンス化されています。  
   
@@ -62,13 +62,13 @@ ms.locfileid: "36084206"
   
  ![AMO クラスの上位レベル ビュー](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "AMO クラスの上位レベル ビュー")  
   
- A*の主要なオブジェクト*エンティティ全体とは別のオブジェクトの一部ではなく、完全なオブジェクトを表すクラスです。 主要オブジェクトには、<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Cube>、<xref:Microsoft.AnalysisServices.Dimension>、<xref:Microsoft.AnalysisServices.MiningStructure> が含まれます。これらはいずれも独立したエンティティです。 しかし、<xref:Microsoft.AnalysisServices.Level> は <xref:Microsoft.AnalysisServices.Dimension> の構成要素なので、主要オブジェクトではありません。 主要オブジェクトは、他のオブジェクトに関係なく、作成、削除、変更、または処理できます。 副次オブジェクトは、親である主要オブジェクトを作成する際に、その一部としてのみ作成できるオブジェクトです。 通常、副次オブジェクトは、主要オブジェクトの作成時に作成されます。 副次オブジェクトの値は作成時に定義してください。副次オブジェクトには既定値が作成されないためです。  
+ A*の主要なオブジェクト*は別のオブジェクトの一部ではなく、エンティティが全体としては、完全なオブジェクトを表すクラスです。 主要オブジェクトには、<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Cube>、<xref:Microsoft.AnalysisServices.Dimension>、<xref:Microsoft.AnalysisServices.MiningStructure> が含まれます。これらはいずれも独立したエンティティです。 しかし、<xref:Microsoft.AnalysisServices.Level> は <xref:Microsoft.AnalysisServices.Dimension> の構成要素なので、主要オブジェクトではありません。 主要オブジェクトは、他のオブジェクトに関係なく、作成、削除、変更、または処理できます。 副次オブジェクトは、親である主要オブジェクトを作成する際に、その一部としてのみ作成できるオブジェクトです。 通常、副次オブジェクトは、主要オブジェクトの作成時に作成されます。 副次オブジェクトの値は作成時に定義してください。副次オブジェクトには既定値が作成されないためです。  
   
  次の図は、<xref:Microsoft.AnalysisServices.Server> オブジェクトに含まれる主要なオブジェクトを示しています。  
   
  ![強調表示された AMO の主なオブジェクト](../../../analysis-services/dev-guide/media/amo-majorobjects.gif "強調表示された AMO の主なオブジェクト")  
   
- ![(2) が強調表示された AMO の主なオブジェクト](../../../analysis-services/dev-guide/media/amo-majorobjects-02.gif "(2) が強調表示された AMO の主なオブジェクト")  
+ ![AMO の主なオブジェクトには、(2) が強調表示されている](../../../analysis-services/dev-guide/media/amo-majorobjects-02.gif "AMO の主なオブジェクトには、(2) が強調表示されます")  
   
  AMO を使用してプログラミングする場合、クラスと、含まれているクラスの関連付けには、コレクションの種類の属性 (<xref:Microsoft.AnalysisServices.Server> や <xref:Microsoft.AnalysisServices.Dimension> など) を使用します。 含まれているクラスのインスタンスを使用するには、まず、そのクラスが含まれているか、含まれている可能性のあるコレクション オブジェクトへの参照を取得します。 次に、必要とするオブジェクトをコレクション内で特定し、オブジェクトへの参照を取得すれば、これを使用できるようになります。  
   
@@ -118,6 +118,6 @@ ms.locfileid: "36084206"
  自動バックアップ管理を行うには、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] タスクを使用するか、自動実行される特別な AMO アプリケーションを作成します。 AMO を使用すると、オペレーターの日常業務を支援するバックアップ インターフェイスを開発できます。  
   
 ##### <a name="tasks-amo-is-not-intended-for"></a>AMO を使用しないタスク  
- データのクエリには、AMO を使用できません。 キューブやマイニング モデルなどの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データにクエリを実行するには、ユーザー アプリケーションから ADOMD.NET を使用してください。 詳細については、次を参照してください。 [ADOMD.NET での開発](../adomd-net/developing-with-adomd-net.md)です。  
+ データのクエリには、AMO を使用できません。 キューブやマイニング モデルなどの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データにクエリを実行するには、ユーザー アプリケーションから ADOMD.NET を使用してください。 詳細については、次を参照してください。 [ADOMD.NET での開発](../adomd-net/developing-with-adomd-net.md)します。  
   
   

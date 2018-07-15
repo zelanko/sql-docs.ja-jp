@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.watch
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4c2cc64072bdf0d902499a162b7ac7c87629026d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8e1135f8f565f0fcff10c994878caea33091e34f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301882"
 ---
 # <a name="watch-window"></a>[ウォッチ] ウィンドウ
   **[ウォッチ]** ウィンドウには、選択した式に関する情報が表示されます。 最大で 4 つの [ウォッチ] ウィンドウ ( **[ウォッチ 1]**、 **[ウォッチ 2]、[ウォッチ 3]**、および **[ウォッチ 4]**) を表示できます。 式は、 **[呼び出し履歴]** ウィンドウで選択された現在の呼び出し履歴フレームのスコープ内で評価されます。 変数と式を確認するには、デバッグ モードである必要があります。  
@@ -38,7 +38,7 @@ ms.locfileid: "36075478"
 -   式を右クリックし、 **[値の編集]** を選択します。  
   
 ## <a name="columns"></a>[列]  
- **Name**  
+ **名前**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーによって一覧表示される式です。 次の式がサポートされています。  
   
 -   変数。  
@@ -51,14 +51,14 @@ ms.locfileid: "36075478"
   
 -   単一の値を返す Transact-SQL ステートメント (SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1 など)。  
   
- **Value**  
+ **[値]**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] [名前] **で指定した式が**デバッガーによって評価された後に返される値が表示されます。  
   
  式の長さが **[値]** 列の幅よりも長い場合は、その式の **[値]** セルにポインターを移動するとツールヒントに完全な値が表示されます。  
   
  **[値]** セルの虫眼鏡アイコンは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガー ビジュアライザーが使用可能であることを示します。 一覧では、 **[テキスト ビジュアライザー]**、 **[XML ビジュアライザー]**、または **[HTML ビジュアライザー]** を指定できます。 デバッガー ビジュアライザーを開始するには、虫眼鏡アイコンをクリックします。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーによりダイアログ ボックスが開き、データがそのデータ型に適した形式で表示されます。  
   
- **Type**  
+ **型**  
  式のデータ型を表示します。  
   
 ## <a name="see-also"></a>参照  

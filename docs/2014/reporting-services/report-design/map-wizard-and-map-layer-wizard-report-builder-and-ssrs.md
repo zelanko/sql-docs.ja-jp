@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a840b5b3cc60e10a95f1cf7b2c4a473ee8fd0c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7232850d053d238b81b8db9ef6f5eaeec581ab72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299822"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
   マップ ウィザードおよびマップ レイヤー ウィザードは、マップの作成、マップ レイヤーの追加、既存のレイヤーのマップ レイヤー オプションの変更などのタスクを自動化します。  
@@ -56,7 +56,7 @@ ms.locfileid: "36071387"
   
  ウィザード ページのタイトルをクリックすると、対応するヘルプ コンテンツが表示されます。 表示されるページは、選択したマップの種類、空間データのソース、および分析データのソースによって異なります。  
   
-1.  [[空間データのソースを選択]](#SpatialDataSource): 空間データはマップ ギャラリー、Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの場合、またはの空間データを取得、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]リレーショナル データベースです。  
+1.  [[空間データのソースを選択]](#SpatialDataSource): 空間データはマップ ギャラリー、Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの場合、または空間データを取得、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]リレーショナル データベース。  
   
     -   [空間データとは](#SpatialData)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36071387"
   
     -   [基本マップ、バブル マップ、および分析マップの違い](#MapType)  
   
-    -   **マップの視覚エフェクトを選択します多角形。**  
+    -   **マップの視覚エフェクトの選択: 多角形**  
   
     -   **マップの視覚エフェクトの選択: 線**  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36071387"
   
  マップまたはマップ レイヤーを追加してレポートをプレビューした後、ウィザードで設定したマップ オプションおよびマップ レイヤー オプションを変更できます。 詳細については、「[マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS)](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
- マップの詳細については、次を参照してください。[マップ&#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)です。 マップをレポートに追加する手順については、「[チュートリアル: マップ レポート (レポート ビルダー)](../tutorial-map-report-report-builder.md)」を参照してください。  
+ マップの詳細については、次を参照してください。[マップ&#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)します。 マップをレポートに追加する手順については、「[チュートリアル: マップ レポート (レポート ビルダー)](../tutorial-map-report-report-builder.md)」を参照してください。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36071387"
   
  タイルの詳細については、「 [Bing Maps のタイル システム](http://go.microsoft.com/fwlink/?LinkId=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](http://go.microsoft.com/fwlink/?LinkId=151371) 」および「 [プライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=151372)」を参照してください。  
   
- デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、次を参照してください[レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)と"マップの計画」での、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server オンライン ブック.  
+ デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、次を参照してください[レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)と"マップの計画内で、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server オンライン ブックの「。.  
   
  タイル レイヤーをカスタマイズするためのその他の方法については、「[マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   

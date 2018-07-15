@@ -1,5 +1,5 @@
 ---
-title: Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス (レポート ビルダー) |Microsoft ドキュメント
+title: Analysis Services MDX クエリ デザイナーのユーザー インターフェイス (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 helpviewer_keywords:
 - query designers, Analysis Services
 ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
 caps.latest.revision: 18
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7e2939c45b18fe567f860902122344ff84a991a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 691fc1b8ec1a0e32be5d3f1bf201e6fc5259e221
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288518"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   レポート ビルダーには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データ ソースに対する多次元式 (MDX) クエリを作成するためのグラフィカル クエリ デザイナーが用意されています。 MDX のグラフィカル クエリ デザイナーには、デザイン モードとクエリ モードという 2 つのモードがあります。 どちらのモードにもメタデータ ペインが表示され、選択したキューブからメンバーをドラッグすることによって MDX クエリを作成できます。レポートの処理時には、このクエリに基づいてデータが取得されます。  
@@ -48,7 +48,7 @@ ms.locfileid: "36174879"
 |メタデータ ペイン|選択されたキューブで定義されているメジャー、主要業績評価指標 (KPI)、およびディメンションの階層リストを表示します。|  
 |計算されるメンバー ペイン|現在定義されている、クエリに使用することのできる計算されるメンバーを表示します。|  
 |フィルター ペイン|ディメンションおよび関連する階層を選択することにより、ソースのデータをフィルター処理し、レポートに返されるデータを制限できます。|  
-|データ ペイン|メタデータ ペインや計算されるメンバー ペインからアイテムをドラッグすると、結果セットの列見出しが表示されます。 **[自動実行]** ボタンが選択されている場合、結果セットは自動的に更新されます。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|  
+|データ ペイン|メタデータ ペインや計算されるメンバー ペインからアイテムをドラッグすると、結果セットの列見出しが表示されます。 **[自動実行]** ボタンが選択されている場合、結果セットは自動的に更新されます。 .|  
   
  データ ペインには、メタデータ ペインからディメンション、メジャー、KPI をドラッグしたり、計算されるメンバー ペインから計算されるメンバーをドラッグしたりできます。 フィルター ペインでは、ディメンションや関連する階層を選択し、フィルター式を設定することによって、クエリに利用可能なデータを制限できます。 **[自動実行]** (![クエリの自動実行](../analysis-services/media/rsqdicon-autoexecute.gif "クエリの自動実行")) 切り替えボタンがオンになっている場合、データ ペインにメタデータ オブジェクトをドロップするたびに、クエリが自動的に実行されます。 クエリを手動で実行するには、ツール バーの **[実行]** (![クエリの実行](../analysis-services/media/rsqdicon-run.gif "クエリの実行")) ボタンを使用します。  
   

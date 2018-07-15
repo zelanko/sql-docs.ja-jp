@@ -1,5 +1,5 @@
 ---
-title: データ マイニング オブジェクトの移動 |Microsoft ドキュメント
+title: データ マイニング オブジェクトの移動 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
 - data mining editor [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], modifying
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dff20b2b3e273ec0aac653346084f6c2854a8330
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e538d9769991772b66050cf97e458de86a16830a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234322"
 ---
 # <a name="moving-data-mining-objects"></a>データ マイニング オブジェクトの移動
   データ マイニング オブジェクトを移動する最も一般的なシナリオは、テスト環境または分析環境から運用環境にモデルを配置する方法、または他のユーザーとモデルを共有する方法です。  

@@ -1,5 +1,5 @@
 ---
-title: SQLXML における Diffgram のガイドラインと制限 |Microsoft ドキュメント
+title: SQLXML における Diffgram のガイドラインと制限 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DiffGrams [SQLXML], about DiffGrams
 ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b4bf82fc2761435b9ea6afe293477077172362f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dbfbf7661184dce2c1e4ab957622e95361950cb1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296622"
 ---
 # <a name="guidelines-and-limitations-of-diffgrams-in-sqlxml"></a>SQLXML における DiffGram のガイドラインと制限
   SQLXML 4.0 で DiffGram を使用するときには、次の点に注意してください。  

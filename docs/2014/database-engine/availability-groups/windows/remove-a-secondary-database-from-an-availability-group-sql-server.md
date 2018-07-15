@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.unjoindb.f1
 helpviewer_keywords:
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 caps.latest.revision: 21
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 294e6c2ba9909fa0f9934722b8fa83f8c8f3166c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4b03f73eda6a16aeac540c536dec864bbc426395
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306132"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>可用性グループからのセカンダリ データベースの削除 (SQL Server)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからセカンダリ データベースを削除する方法について説明します。  
@@ -110,7 +109,7 @@ ms.locfileid: "36071534"
     ```  
   
     > [!NOTE]  
-    >  表示するには、コマンドレットの構文を使用して、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   

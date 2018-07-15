@@ -1,5 +1,5 @@
 ---
-title: Permission データ型 (ASSL) |Microsoft ドキュメント
+title: Permission データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Permission data type
 ms.assetid: 5f309544-59f8-4432-b1eb-b7c1a049f8df
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff5fb67e4f7989fb329e60a106ea8e6d0c734c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c570ae1b3f2e2dbf65a4037f96e515d6667863a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233952"
 ---
 # <a name="permission-data-type-assl"></a>Permission データ型 (ASSL)
   個別の権限についての情報を表す抽象プリミティブ データ型を定義します。  
@@ -66,21 +66,21 @@ ms.locfileid: "36071266"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|なし|  
-|子要素|[注釈](../collections/annotations-element-assl.md)、 [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)、[説明](../properties/description-element-assl.md)、 [ID](../properties/id-element-assl.md)、 [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)、[名前](../properties/name-element-assl.md)、[プロセス](../properties/process-element-assl.md)、[読み取り](../properties/read-element-assl.md)、 [ReadDefinition](../properties/readdefinition-element-assl.md)、 [RoleID](../properties/roleid-element-assl.md)、[書き込み](../properties/write-element-assl.md)|  
+|子要素|[注釈](../collections/annotations-element-assl.md)、 [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)、[説明](../properties/description-element-assl.md)、 [ID](../properties/id-element-assl.md)、 [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)、 [名](../properties/name-element-assl.md)、[プロセス](../properties/process-element-assl.md)、[読み取り](../properties/read-element-assl.md)、 [ReadDefinition](../properties/readdefinition-element-assl.md)、 [RoleID](../properties/roleid-element-assl.md)、[書き込み](../properties/write-element-assl.md)|  
 |派生要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `Permission` インスタンスで使用される権限の派生型の数の抽象基本型の役割を果たす[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+ `Permission` 多くのインスタンスで使用されるアクセス許可の派生型の抽象基本型として機能[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。  
   
  DeploymentMode の値が 2 (テーブル サーバー モード) の場合、このデータ型には次の検証が適用されます。  
   
--   *プロセス*に属性の既定値が設定されている`False`、ユーザーが持っている場合を除き、**更新**権限です。 持つユーザー、**更新**権限、*プロセス*に属性値が設定されている`True`です。  
+-   *プロセス*属性の既定値に設定されます`False`、ユーザーが持っている場合を除き、**更新**権限。 持つユーザー、**更新**アクセス許可、*プロセス*属性の値に設定されて`True`します。  
   
--   *ReadDefinition*に属性値が設定されている`None`; その他の値、エラーが発生します。  
+-   *ReadDefinition*属性の値に設定されて`None`; その他の値には、エラーが生成されます。  
   
--   *読み取り*に属性値が設定されている`Allowed`を持つユーザー、**ユーザー**権限および`None`にユーザーが割り当てられるとき、**更新**権限以外の場合は、ユーザーが、両方を持つかどうか**ユーザー**と**更新**アクセス権、その属性に設定されている`Allowed`です。 管理者権限を持つユーザーの属性値は `Allowed` に設定されます。  
+-   *読み取り*属性の値に設定されて`Allowed`を持つユーザー、**ユーザー**権限および`None`に、ユーザーが割り当てられるとき、**更新**アクセス許可はどちらもユーザーが持っています。**ユーザー**と**更新**アクセス許可は、その属性が設定されている場合`Allowed`します。 管理者権限を持つユーザーの属性値は `Allowed` に設定されます。  
   
--   *書き込む*に属性値が設定されている`None`; その他の値、エラーが発生します。  
+-   *書き込み*属性の値に設定されて`None`; その他の値には、エラーが生成されます。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.Permission>します。  
   

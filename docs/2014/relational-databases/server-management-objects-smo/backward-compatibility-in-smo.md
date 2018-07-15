@@ -1,5 +1,5 @@
 ---
-title: SMO の旧バージョンとの互換性 |Microsoft ドキュメント
+title: SMO の旧バージョンとの互換性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 65f779631e0671a00fedb9442dbe1e372e7a7db2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a1406eaa3d8d9a82f28b1c813f08a3a570c8eefe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313479"
 ---
 # <a name="backward-compatibility-in-smo"></a>SMO の旧バージョンとの互換性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンを使用して記述されている SMO アプリケーションは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の SMO を使用して再コンパイルできます。  
@@ -61,6 +61,6 @@ Imports Microsoft.SqlServer.Management.Common
   
  コードで Transfer オブジェクトを直接使用している場合は、Microsoft.SqlServer.Management.SmoExtended 名前空間へのリンクが必要になります。  
   
- コードを移行するときに、コードの修正が必要になる場合があります。 これは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ではいくつかの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 機能および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 機能が非推奨とされているためです。 非推奨機能の詳細については、次を参照してください。 [SQL Server 2014 におけるデータベース エンジン機能を非推奨](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)で[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]オンライン ブック。  
+ コードを移行するときに、コードの修正が必要になる場合があります。 これは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ではいくつかの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 機能および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 機能が非推奨とされているためです。 非推奨の機能の詳細については、次を参照してください。 [SQL Server 2014 におけるデータベース エンジン機能を非推奨とされます](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)で[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]オンライン ブックの「します。  
   
   

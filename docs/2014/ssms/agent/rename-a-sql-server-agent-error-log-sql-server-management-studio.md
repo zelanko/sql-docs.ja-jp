@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
 - renaming SQL Server Agent error log
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - errors [SQL Server Agent]
 ms.assetid: dee2b199-48af-44cb-9177-d029a5edb169
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb195793732393788f698b2e8dca904bf1e5e8ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 751c97828e5c113bb825f19f3b85a0fe5c3be8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293982"
 ---
 # <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>SQL Server エージェントのエラー ログの名前の変更 (SQL Server Management Studio)
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント エラーが書き込まれるファイルの名前を変更する方法について説明します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36164497"
   
 -   プロセスに対してメモリ クォータを調整する (SeIncreaseQuotaPrivilege)  
   
- 必要な Windows 権限の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービス アカウントを参照してください[SQL Server エージェント サービスのアカウントを選択](select-an-account-for-the-sql-server-agent-service.md)と[Windows サービス アカウントの構成とアクセス許可](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)です。  
+ 必要な Windows 権限の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービス アカウントを参照してください[のアカウント、SQL Server エージェント サービスの選択](select-an-account-for-the-sql-server-agent-service.md)と[Windows サービス アカウントの構成とアクセス許可](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)します。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   

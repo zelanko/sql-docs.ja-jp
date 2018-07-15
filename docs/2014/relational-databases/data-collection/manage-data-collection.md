@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1bd9b3d11069fd035c9a96fcba8d2114f6df0eeb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a682e89cb0c6f419b29d36faa3970730baf4b22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296522"
 ---
 # <a name="manage-data-collection"></a>データ コレクションの管理
-  使用することができます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャと、データ コレクションのさまざまな側面を管理する関数を有効または無効にデータを収集するコレクションを変更するセットなどの構成、管理データ ウェアハウスにデータを表示します.  
+  使用することができます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]の有効化またはコレクションを変更するデータの収集を無効にする設定の構成、または管理データ ウェアハウスのデータの表示などに、プロシージャと、データ コレクションのさまざまな側面を管理する関数を格納します。.  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用したデータ コレクションの管理  
- オブジェクト エクスプ ローラーを使用して、次のデータ コレクター関連のタスクを行うことができます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+ オブジェクト エクスプ ローラーを使用して次のデータ コレクター関連のタスクを実行する[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [管理データ ウェアハウスの構成 &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36163773"
 > [!IMPORTANT]  
 >  通常のストアド プロシージャとは異なり、データ コレクターで使用するストアド プロシージャではパラメーターのデータ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
   
- 使用することができます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を作成し、提供されているコード サンプルを実行します。 詳細については、「 [オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)」を参照してください。 また、任意のエディターでクエリを作成し、.sql というファイル名拡張子を持つテキスト ファイルに保存することもできます。 Windows コマンド プロンプトを使用して、クエリを実行することができます、`sqlcmd`ユーティリティです。 詳細については、「 [sqlcmd Utility の使用](../scripting/sqlcmd-use-the-utility.md)」を参照してください。  
+ 使用することができます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を作成して、付属のコード サンプルを実行します。 詳細については、「 [オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)」を参照してください。 また、任意のエディターでクエリを作成し、.sql というファイル名拡張子を持つテキスト ファイルに保存することもできます。 クエリを実行するには、Windows コマンド プロンプトを使用してから、`sqlcmd`ユーティリティ。 詳細については、「 [sqlcmd Utility の使用](../scripting/sqlcmd-use-the-utility.md)」を参照してください。  
   
 ### <a name="stored-procedures-and-views"></a>ストアド プロシージャとビュー  
  **データ コレクターの操作**  

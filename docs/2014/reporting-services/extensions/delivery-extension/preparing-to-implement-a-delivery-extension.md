@@ -15,15 +15,15 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], implementing
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1f03d017d7e154a77baa1da47905c8badf256bbb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a6a93d48d1962800b4fba7598019561a83dcc5b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307392"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>配信拡張機能を実装する準備
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配信拡張機能を実装する前に、実装するインターフェイスを定義しておく必要があります。 最初に配信拡張機能の使用方法、配信拡張機能に必要な設定、およびレポート通知を配信するために実装が必要な特定の機能を決定する必要があります。  

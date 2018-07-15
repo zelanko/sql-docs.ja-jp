@@ -5,10 +5,9 @@ ms.date: 11/11/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustered indexes, online operations
 - online index operations
@@ -18,25 +17,25 @@ helpviewer_keywords:
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 62
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0a7ea8359dfaff23a2d3926c1cfa7ccc41065a2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e027535f9b70acc518bd6fa3e3f4324007021311
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316132"
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
   インデックス操作をオンラインで実行するときは、次のガイドラインに従ってください。  
   
--   クラスター化インデックスを作成する再構築、または削除オフライン基になるテーブルには、次のラージ オブジェクト (LOB) データ型が含まれている場合: `image`、 **ntext**、および`text`です。  
+-   クラスター化インデックスを作成または削除は再構築、オフライン基になるテーブルには、次のラージ オブジェクト (LOB) データ型が含まれている場合: `image`、 **ntext**、および`text`します。  
   
 -   ローカル一時テーブルのインデックスの作成、再構築、または削除は、オンラインでは実行できません。 この制限は、グローバル一時テーブルのインデックスには当てはまりません。  
   
 > [!NOTE]  
->  オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
  次の表に、オンラインで実行可能なインデックス操作と、これらのオンライン操作対象から除外されるインデックスを示します。 また、その他の制限についても記載します。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "36173933"
   
  オンラインでの操作を推奨しますが、実際の環境と特定の要件を評価してください。 オフラインでインデックス操作を実行することが最適な場合もあります。 この場合、操作中にユーザーからのデータ アクセスは制限されますが、操作をより短時間で完了でき、使用するリソースも軽減できます。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を実行するマルチプロセッサ コンピューターでは、他のクエリと同様に、インデックスのステートメントがこのステートメントに関連付けられているスキャン操作や並べ替え操作の実行に、より多くのプロセッサを使用する場合があります。 MAXDOP インデックス オプションを使用して、オンラインでのインデックス操作専用に使用するプロセッサ数を制御できます。 このようにすることで、インデックス操作が使用するリソースと他の同時実行ユーザーが使用するリソースのバランスをとることができます。 詳細については、「 [並列インデックス操作の構成](configure-parallel-index-operations.md)」を参照してください。 サポート並列インデックス操作をする SQL Server のエディションの詳細については、次を参照してください。 [SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を実行するマルチプロセッサ コンピューターでは、他のクエリと同様に、インデックスのステートメントがこのステートメントに関連付けられているスキャン操作や並べ替え操作の実行に、より多くのプロセッサを使用する場合があります。 MAXDOP インデックス オプションを使用して、オンラインでのインデックス操作専用に使用するプロセッサ数を制御できます。 このようにすることで、インデックス操作が使用するリソースと他の同時実行ユーザーが使用するリソースのバランスをとることができます。 詳細については、「 [並列インデックス操作の構成](configure-parallel-index-operations.md)」を参照してください。 サポート並列インデックス操作をする SQL Server のエディションの詳細については、次を参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
  S-Lock または Sch-M ロックはインデックス操作の最後のフェーズで保持されるので、BEGIN TRANSACTION...COMMIT ブロックなど、明示的なユーザー トランザクション内でのオンラインのインデックス操作を実行する場合は十分に注意してください。 この場合、ロックがトランザクションの最後まで保持され、その結果ユーザーの同時実行性が損なわれます。  
   

@@ -1,5 +1,5 @@
 ---
-title: マイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: マイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - standard deviation
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 418b4eb1e4e3d6dcc188a139ad3552fba5038e1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a701907535b7c0f5103cf1e98276f5573e9678f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282428"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   基になるマイニング構造のデータを使用してマイニング モデルをデザインおよび処理したら、マイニング モデルが完成し、そのモデルには *マイニング モデル コンテンツ*が含まれます。 このコンテンツを使用して、予測やデータの分析を行うことができます。  
@@ -164,9 +164,9 @@ ms.locfileid: "36075395"
   
  属性名が列の場合、最も簡単な例では、ATTRIBUTE_VALUE にはその列の不連続値のいずれかが格納されます。  
   
- どのアルゴリズムによる値の処理に応じて、ATTRIBUTE_VALUE を含めることも、属性の値が存在するかどうかを示すフラグ (`Existing`)、または値が null かどうか (`Missing`)。  
+ アルゴリズムによる値の処理方法、によって、ATTRIBUTE_VALUE も含めることができます、属性の値が存在するかどうかを示すフラグ (`Existing`)、または値が null かどうか (`Missing`)。  
   
- たとえば場合は、モデルの特定の項目を 1 回以上購入した顧客を検索する設定、ATTRIBUTE_NAME 列属性と値のペアが格納など、目的の項目を定義する`Model = 'Water bottle'`、列と ATTRIBUTE_VALUE 列キーワードのみが含まれます`Existing`または`Missing`です。  
+ たとえばの特定のアイテムを 1 回以上購入した顧客を検索し、モデルを設定する場合、ATTRIBUTE_NAME 列属性と値のペアが格納などの目的の品目を定義する`Model = 'Water bottle'`、され、ATTRIBUTE_VALUE 列キーワードのみを含めるよう`Existing`または`Missing`します。  
   
  SUPPORT  
  この属性と値のペアを含むケースまたはこのアイテムセットまたはルールを含むケースの数。  
@@ -218,7 +218,7 @@ ms.locfileid: "36075395"
   
 |VALUE_TYPE ID|値のラベル|値の型名|  
 |--------------------|-----------------|---------------------|  
-|1|Missing|ケース データにこの属性の値が含まれていないことを示します。 `Missing`状態は、値を持つ属性から個別に計算されます。|  
+|1|Missing|ケース データにこの属性の値が含まれていないことを示します。 `Missing`状態が値を持つ属性から個別に計算されます。|  
 |2|Existing|ケース データにこの属性の値が含まれていることを示します。|  
 |3|Continuous|属性の値が連続する数値であるため、分散および標準偏差と共に平均で表すことができることを示します。|  
 |4|Discrete|不連続値として扱われる値 (数値またはテキスト) を示します。<br /><br /> **注** 不連続値は不足値にすることもできます。ただし、計算時の処理方法は異なります。 詳細については、「[Missing 値 &#40;Analysis Services - データ マイニング&#41;](missing-values-analysis-services-data-mining.md)」をご覧ください。|  
@@ -305,7 +305,7 @@ SELECT * FROM [<mining model name>].CONTENT
   
  マイニング モデル コンテンツに対するクエリは、データ マイニング スキーマ行セットを使用して実行することもできます。 スキーマ行セットは、マイニング構造およびモデルに関する情報の検出、参照、およびクエリのためにクライアントで使用される標準の構造です。 スキーマ行セットに対するクエリは、XMLA、Transact-SQL、または DMX ステートメントを使用して実行することができます。  
   
- また、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を開き、システム テーブルにクエリを実行することにより、データ マイニング スキーマ行セットの情報にアクセスできます。 詳細については、次を参照してください。[データ マイニング スキーマ行セットのクエリを実行する&#40;Analysis Services - データ マイニング&#41;](data-mining-schema-rowsets-ssas.md)です。  
+ また、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を開き、システム テーブルにクエリを実行することにより、データ マイニング スキーマ行セットの情報にアクセスできます。 詳細については、次を参照してください。[データ マイニング スキーマ行セットのクエリを実行する&#40;Analysis Services - データ マイニング&#41;](data-mining-schema-rowsets-ssas.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Microsoft 汎用コンテンツ ツリー ビューアー&#40;データ マイニング&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   

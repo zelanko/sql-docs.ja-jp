@@ -1,5 +1,5 @@
 ---
-title: MiningStructurePermission 要素 (ASSL) |Microsoft ドキュメント
+title: MiningStructurePermission 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningStructurePermission element
 ms.assetid: 4ba2bfd2-9003-4eed-8049-a74d452894ea
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c74423bfbf199825dc707d80e21c5b5a4555cc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f3789cd5b5b72048b9c9163c11bebf4fe5a77d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295492"
 ---
 # <a name="miningstructurepermission-element-assl"></a>MiningStructurePermission 要素 (ASSL)
-  メンバーがアクセス権を定義、[ロール](role-element-assl.md)、個別の要素がある[MiningStructure](miningstructure-element-assl.md)要素。  
+  そのメンバーのアクセス許可を定義、[ロール](role-element-assl.md)要素は、個々 のケースが[MiningStructure](miningstructure-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -78,7 +78,7 @@ SELECT <structure column list> FROM <structure>.CASES
 SELECT StructureColumn('<structure column name>' FROM <model>.CASES  
 ```  
   
- たとえば、顧客キー、顧客の収入の列のみを使用してモデルを作成して、顧客が購入します。 ユーザーは、ドリルスルーを使用して、顧客の連絡先情報など、マイニング モデルに含まれていないその他の構造列を返すことができます。  
+ たとえば、顧客キー、顧客の収入の列のみを使用して、モデルを作成して、顧客が購入します。 ユーザーは、ドリルスルーを使用して、顧客の連絡先情報など、マイニング モデルに含まれていないその他の構造列を返すことができます。  
   
  したがって、機密データまたは個人情報を保護するため、個人情報をマスクするデータ ソース ビューを構築し、構造に対する `AllowDrillthrough` 権限は必要な場合にのみ許可する必要があります。  
   

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services スクリプト言語 (ASSL) リファレンス |Microsoft ドキュメント
+title: Analysis Services スクリプト言語 (ASSL) のリファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - object definition language [Analysis Services Scripting Language]
 ms.assetid: ca0e852e-9002-4224-a0f0-bd96f2fc5c65
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99ae3057baf60cda23fdce68289d07c213e89d3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd9fbcce8769deb49168e734542fe5296c5672f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234242"
 ---
 # <a name="analysis-services-scripting-language-assl-reference"></a>Analysis Services スクリプト言語 (ASSL) のリファレンス
-  アプリケーションと通信[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XML コマンドやオブジェクトの説明を使用します。 この XML 言語のオブジェクト定義言語部分は、Analysis Services スクリプト言語 (ASSL) で表現します。  
+  アプリケーションが通信[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XML コマンドとオブジェクトの説明を使用します。 この XML 言語のオブジェクト定義言語部分は、Analysis Services スクリプト言語 (ASSL) で表現します。  
   
  このリファレンスのセクションには、ASSL スキーマでの各要素の構文および使用法に関する情報が記載されています。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36071970"
 |[Analysis Services スクリプト言語の XML データ型&#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md)|ASSL スキーマでの各データ型の構文リファレンスです。|  
   
 ## <a name="see-also"></a>参照  
- [Services スクリプト言語の分析の使用による開発&#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Services スクリプト言語の分析を使用した開発&#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [分析管理オブジェクトを使用した開発&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
   

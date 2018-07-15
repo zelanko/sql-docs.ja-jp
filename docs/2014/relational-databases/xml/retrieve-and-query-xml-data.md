@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2bab6f72c83cc681443ee526a35fb4368db7ea6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 42311763fddcec6403494c82dca02c29480f7235
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313282"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML データの取得および XML データに対するクエリの実行
   このトピックでは、XML データのクエリを実行するために指定する必要があるクエリ オプションについて説明します。 また、XML インスタンスをデータベースに格納するときに保持されない部分についても説明します。  
@@ -44,7 +44,7 @@ FROM T1
   
  結果は `<doc/>`です。  
   
- `<?xml version='1.0'?>` などの XML 宣言は、XML データを `xml` データ型インスタンスに格納するときに保持されません。 これは仕様です。 XML 宣言 () とその属性 (バージョン/エンコード/スタンドアロン) が失われるデータ型に変換されます`xml`です。 XML 宣言は、XML パーサーが使用するディレクティブとして扱われます。 XML データは、ucs-2 として内部的に保存されます。 XML インスタンスのその他すべての PI は保持されます。  
+ `<?xml version='1.0'?>` などの XML 宣言は、XML データを `xml` データ型インスタンスに格納するときに保持されません。 これは仕様です。 XML 宣言 () とその属性 (バージョン/エンコード/スタンドアロン) が失われるデータは、型に変換されます`xml`します。 XML 宣言は、XML パーサーが使用するディレクティブとして扱われます。 XML データは、ucs-2 として内部的に保存されます。 XML インスタンスのその他すべての PI は保持されます。  
   
   
 ### <a name="order-of-attributes"></a>属性の順序  
@@ -91,7 +91,7 @@ GO
   
   
 ##  <a name="query"></a> 必要なクエリ オプションの設定  
- クエリを実行するときに`xml`型の列や変数を使用して`xml`ように、データ型のメソッドを次のオプションを設定する必要があります。  
+ クエリを実行するときに`xml`型の列または変数を使用して`xml`示すように、データ型のメソッドを次のオプションを設定する必要があります。  
   
 |SET オプション|設定する値|  
 |-----------------|---------------------|  
@@ -103,7 +103,7 @@ GO
 |NUMERIC_ROUNDABORT|OFF|  
 |QUOTED_IDENTIFIER|ON|  
   
- 上のように、クエリと変更オプションが設定されていない場合`xml`データ型のメソッドは失敗します。  
+ ように、クエリと変更のオプションが設定されていない場合`xml`データ型のメソッドは失敗します。  
   
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え |Microsoft ドキュメント
+title: Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ReadOnly property
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 184a674d03e6c8fb6b30d10b91b2a58225894ba2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb0d9ae239d33cd55d50e0e876df1584ff2fe965
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286108"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え
-  多くの場合、状況もある場合に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース管理者 (dba) が、表形式または多次元データベースの読み取り/書き込みモードを変更します。 こうした状況は、ユーザーが操作しやすくなるように一連の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー間でデータベースを共有するなどのビジネス上のニーズによって頻繁に発生します。  
+  多くの場合、状況があるときに、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース管理者 (dba) が、表形式または多次元データベースの読み取り/書き込みモードを変更します。 こうした状況は、ユーザーが操作しやすくなるように一連の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー間でデータベースを共有するなどのビジネス上のニーズによって頻繁に発生します。  
   
- データベースのモードは、さまざまな方法で切り替えることができます。 このドキュメントでは、次の一般的なシナリオについて説明します。  
+ さまざまな方法でデータベースのモードを切り替えることができます。 このドキュメントでは、次の一般的なシナリオについて説明します。  
   
 -   の対話的な使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36071054"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の左側または右側のペインで切り替えるデータベースを指定します。  
   
-2.  データベースを右クリックし **プロパティ**です。 データベース フォルダーを検索し、場所を確認します。 データベースのストレージの場所が空の場合は、データベース フォルダーがサーバー データ フォルダー内にあることを示しています。  
+2.  データベースを右クリックして**プロパティ**します。 データベース フォルダーを検索し、場所を確認します。 データベースのストレージの場所が空の場合は、データベース フォルダーがサーバー データ フォルダー内にあることを示しています。  
   
     > [!IMPORTANT]  
     >  データベースがデタッチされるとすぐに、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、データベースの位置を取得できなくなります。  
@@ -51,7 +51,7 @@ ms.locfileid: "36071054"
   
 4.  デタッチするデータベースにパスワードを割り当て、 **[OK]** をクリックしてデタッチ コマンドを実行します。  
   
-5.  検索、**データベース**の左側または右側のウィンドウでフォルダ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]です。  
+5.  検索、**データベース**フォルダーの左側または右側のペインで[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。  
   
 6.  右クリックし、**データベース**フォルダーと選択**アタッチしています.**  
   
@@ -131,7 +131,7 @@ ms.locfileid: "36071054"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の左側または右側のペインで切り替えるデータベースを指定します。  
   
-2.  データベースを右クリックし **プロパティ**です。 データベース フォルダーを検索し、場所を確認します。 データベースのストレージの場所が空の場合は、データベース フォルダーがサーバー データ フォルダー内にあることを示しています。  
+2.  データベースを右クリックして**プロパティ**します。 データベース フォルダーを検索し、場所を確認します。 データベースのストレージの場所が空の場合は、データベース フォルダーがサーバー データ フォルダー内にあることを示しています。  
   
     > [!IMPORTANT]  
     >  データベースがデタッチされるとすぐに、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、データベースの位置を取得できなくなります。  

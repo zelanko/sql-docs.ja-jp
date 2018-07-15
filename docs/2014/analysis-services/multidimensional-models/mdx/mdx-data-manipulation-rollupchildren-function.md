@@ -1,5 +1,5 @@
 ---
-title: RollupChildren 関数 (MDX) の操作 |Microsoft ドキュメント
+title: RollupChildren 関数 (MDX) の操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], RollupChildren function
 - RollupChildren function
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7776ad0bf70060912e4ad8d3e612b04bbcd4183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d864ea4e9d71928823b7de4d5b539594783d8ba2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314988"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>RollupChildren 関数の操作 (MDX)
-  多次元式 (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [スクリプトの検索と置換] 関数は、それぞれの子に異なる単項演算子を適用する、メンバーの子がロールアップされ、数値としてこのプログラムのロールアップの値を返します。 単項演算子は、子メンバーに関連付けられたメンバー プロパティによって提供されるか、関数に直接指定される文字列式の場合もあります。  
+  多次元式 (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [検索と置換用スクリプト] 関数は、それぞれの子に異なる単項演算子を適用するメンバーの子のロールアップし、数値としてこのプログラムのロールアップの値を返します。 単項演算子は、子メンバーに関連付けられたメンバー プロパティによって提供されるか、関数に直接指定される文字列式の場合もあります。  
   
 ## <a name="rollupchildren-function-examples"></a>RollupChildren 関数の例  
  `RollupChildren` 関数を多次元式 (MDX) ステートメントで使用する方法は簡単に説明できますが、この関数が MDX クエリに与える影響は広範囲にわたります。  
@@ -68,7 +68,7 @@ RollupChildren([Net Sales], [Net Sales].CurrentMember.Properties("SALES_OPERATOR
  関数が呼び出されると、それぞれの子の値は、メンバー プロパティに格納されている演算子を使用して合計に算入されます。 国内と国外の返品のメンバーは無視され、`RollupChildren` 関数によって返されるロールアップ合計に 1.1 が乗算されます。  
   
 ### <a name="using-the-iif-function"></a>IIf 関数の使用  
- 例の操作が一般的でない場合、または操作が 1 つの MDX クエリにのみ適用される場合、 [IIf](/sql/mdx/iif-mdx)で関数を使用できます、`RollupChildren`同じ結果を提供する関数。 次の MDX クエリでは、前の例の MDX クエリと同じ結果を返します。ただし、カスタム メンバー プロパティは使用していません。  
+ 操作の例が一般的でない場合、または操作が 1 つの MDX クエリのみに適用される場合、 [IIf](/sql/mdx/iif-mdx)関数で使用できる、`RollupChildren`同じ結果を提供する関数。 次の MDX クエリでは、前の例の MDX クエリと同じ結果を返します。ただし、カスタム メンバー プロパティは使用していません。  
   
 ```  
 RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPERATOR") = "-", "~", [Net Sales].CurrentMember.Properties("UNARY_OPERATOR))) * 1.1  

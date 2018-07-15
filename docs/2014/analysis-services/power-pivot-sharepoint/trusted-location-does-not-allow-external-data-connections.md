@@ -1,5 +1,5 @@
 ---
-title: 'ブックが保存されている信頼できる場所で、外部データ接続が許可されていません。 次の接続の更新に失敗しました: PowerPivot データ |Microsoft ドキュメント'
+title: 'ブックが保存されている信頼できる場所で、外部データ接続が許可されていません。 次の接続の更新に失敗しました: PowerPivot データ |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc0cedfd-a7d0-40ef-bdd6-ea508130640a
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 449ac77f0eaff4a5d3550711b18ec57751460918
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dfe65034f58640f913374db2b4daad2de681d405
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234232"
 ---
 # <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>ブックが保存されている信頼できる場所で、外部データ接続が許可されていません。 次の接続は更新に失敗しました: PowerPivot データ
   PowerPivot データを含む Excel ブックで、Excel Services は、埋め込みデータ ソースに接続できない場合にこのエラーを返します。  
@@ -49,7 +49,7 @@ ms.locfileid: "36071762"
   
 5.  [外部データ] の [外部データの許可] で、 **[信頼できるデータ接続ライブラリと、埋め込まれている接続]** をクリックします。  
   
-6.  **[OK]** をクリックします。  
+6.  [**OK**] をクリックします。  
   
  または、PowerPivot ブックが含まれるサイト用に新しく信頼できる場所を作成し、そのサイトの構成設定だけを変更することもできます。 詳細については、「 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
   

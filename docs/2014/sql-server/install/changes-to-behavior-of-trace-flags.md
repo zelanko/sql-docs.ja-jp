@@ -1,5 +1,5 @@
 ---
-title: トレース フラグの動作の変更 |Microsoft ドキュメント
+title: トレース フラグの動作の変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - trace flags [SQL Server], behavior changes
 ms.assetid: d739df96-2659-4383-8e10-194657632526
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f03a9db47c6296e7d1c4ab764488c44d343393c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3eacd213cd113cb6f96e4a23d1208b6e7b21b760
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297802"
 ---
 # <a name="changes-to-behavior-of-trace-flags"></a>トレース フラグの動作が変更された
   あるセッションによって設定されたグローバル トレース フラグは他のセッションですぐに有効になります。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] には、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の一部のトレース フラグが存在しません。  
@@ -30,7 +30,7 @@ ms.locfileid: "36085587"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>説明  
- アップグレードする前に、すべてのトレース フラグを無効にすることをお勧めします。 データベースの可用性または復旧モードを変更するトレース フラグを妨げる可能性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスを正常にアップグレードした[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 トレース フラグが必要になり、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でも有効であることを確認した後、トレース フラグを有効にできます。 トレース フラグを再び有効にするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで追加テストを実行する必要があります。  
+ アップグレードする前に、すべてのトレース フラグを無効にすることをお勧めします。 データベースの可用性または復旧モードを変更するトレース フラグができない場合があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスを正常にアップグレードした[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 トレース フラグが必要になり、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でも有効であることを確認した後、トレース フラグを有効にできます。 トレース フラグを再び有効にするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで追加テストを実行する必要があります。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、グローバル トレース フラグとセッション レベルのトレース フラグをサポートしています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の場合、DBCC TRACEON コマンドに引数 (-1) を追加することによって、ローカル、グローバルのいずれでもトレース フラグを指定できます。 この引数を指定しない場合、既定値はローカルになります。  
   

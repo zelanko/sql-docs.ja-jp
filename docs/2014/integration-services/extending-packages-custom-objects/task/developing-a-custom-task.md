@@ -27,13 +27,13 @@ ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5c6d91b076c350bef430c42ec0e3d801a6af6615
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 53838bc555747fe34dd1d04f2b7a0e0a6e3b3891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283498"
 ---
 # <a name="developing-a-custom-task"></a>カスタム タスクの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] は、作業単位を実行するタスクを使用して、データの抽出、変換、および読み込みをサポートします。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、SQL ステートメントの実行から、FTP サイトからのファイルのダウンロードまで、頻繁に使用される操作を実行するためのさまざまなタスクが用意されています。 用意されているタスクとサポートされている操作が、要件を完全には満たない場合は、カスタム タスクを作成できます。  
@@ -90,7 +90,7 @@ ms.locfileid: "36070975"
  [カスタム データ フロー コンポーネントの開発](../data-flow/developing-a-custom-data-flow-component.md)  
  カスタム データ フローの変換元、変換、変換先のプログラム方法について説明します。  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。  **<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [スクリプト タスクによるパッケージの拡張](../../extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   

@@ -1,5 +1,5 @@
 ---
-title: AttributeBinding データ型 (ASSL) |Microsoft ドキュメント
+title: AttributeBinding データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeBinding data type
 ms.assetid: 24d511a9-d0eb-4150-9f78-541e03963d67
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 796e20c3047914ca65e7d48be26fbc951695e583
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e475cb0ecb867daec6864fb5d078835e8fe95688
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279748"
 ---
 # <a name="attributebinding-data-type-assl"></a>AttributeBinding データ型 (ASSL)
   バインドを表す派生データ型を定義、[属性](../objects/attribute-element-assl.md)要素。  
@@ -62,9 +62,9 @@ ms.locfileid: "36076069"
 |派生要素|参照してください[バインド](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
- 詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトから派生したテーブルを含む、データ型、`Binding`データ型を参照してください[データ型のバインド&#40;ASSL&#41;](binding-data-type-assl.md)です。  
+ 詳細については、`Binding`から派生した Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルなどのデータ型、`Binding`データ型を参照してください[データ型のバインド&#40;ASSL&#41;](binding-data-type-assl.md)します。  
   
- ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.AttributeBinding>します。  
   

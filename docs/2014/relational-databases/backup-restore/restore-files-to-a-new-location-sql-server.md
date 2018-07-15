@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring files [SQL Server], how-to topics
 - restoring databases [SQL Server], moving
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - restoring filegroups [SQL Server]
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd67993b78c936b5749c7c8f77a4a4e51bfdd2f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: be770b24a45302a835583725527e9cf8ae9efa9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294872"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>新しい場所へのファイルの復元 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で新しい場所にファイルを復元する方法について説明します。  
@@ -91,9 +90,9 @@ ms.locfileid: "36163884"
     |列見出し|値|  
     |-----------------|------------|  
     |**[復元]**|このチェック ボックスをオンにすると、バックアップ セットが復元されます。|  
-    |**Name**|バックアップ セットの名前です。|  
+    |**名前**|バックアップ セットの名前です。|  
     |**[ファイルの種類]**|バックアップに含まれるデータの種類として、 **データ**、 **ログ**、 **FILESTREAM データ**のいずれかを指定します。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、 **FILESTREAM データ** ファイルです。|  
-    |**Type**|実行するバックアップの種類です。 **[完全]**、 **[差分]**、または **[トランザクション ログ]** のいずれかを指定します。|  
+    |**型**|実行するバックアップの種類です。 **[完全]**、 **[差分]**、または **[トランザクション ログ]** のいずれかを指定します。|  
     |**[サーバー]**|バックアップ操作を実行するデータベース エンジン インスタンスの名前です。|  
     |**[ファイルの論理名]**|ファイルの論理名です。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  
@@ -169,7 +168,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース バックアップを復元&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
+ [データベースのバックアップを復元&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [バックアップと復元によるデータベースのコピー](../databases/copy-databases-with-backup-and-restore.md)   
  [ファイルおよびファイル グループの復元 &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  

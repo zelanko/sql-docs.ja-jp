@@ -1,5 +1,5 @@
 ---
-title: 作成して、プロパティ値 (MDX) を使用して |Microsoft ドキュメント
+title: 作成して、プロパティ値 (MDX) を使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - property values [MDX]
 - queries [MDX], property values
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], property values
 ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c16f2505b5abc3ff876df1cedf93ca7570334d38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b615fcec15421e46157c3d1c4485ca2668b52e8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286464"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>プロパティ値の作成および使用 (MDX)
   多次元式 (MDX) では、ディメンション、レベル、メンバー、およびセルの固有プロパティとユーザー定義プロパティがサポートされています。 固有プロパティでは、一意な名前、キャプション、および書式やフォント サイズを、個別のセルに対して設定できます。 一方、ユーザー定義プロパティを使用すると、ほぼどんな属性でもメンバーに追加指定できます。  

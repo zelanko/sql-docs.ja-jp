@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a2351bd03a362e555ba285d81ff3660ef8058eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 986819015191d7fbb1f07738d25b3dab489e185b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290638"
 ---
 # <a name="monitor-sql-server-components"></a>SQL Server コンポーネントの監視
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では動的な環境でサービスを提供しているため、監視することは重要です。 アプリケーションのデータは変化します。 ユーザーが必要とするアクセスの種類は変化します。 ユーザーの接続方法も変化します。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアクセスするアプリケーションの種類が変わる可能性もあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、手動によるシステム レベルのチューニングを必要最低限に抑えるために、メモリやディスク領域などシステム レベルのリソースが自動的に管理されています。 管理者は、SQL Server を監視することにより、パフォーマンスの傾向を特定して、変更が必要かどうかを判断することができます。  

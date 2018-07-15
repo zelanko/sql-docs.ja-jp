@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPADLSCM.F1
 - SQL11.DTS.DESIGNER.AFPADLSCM.F1
 ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 caps.latest.revision: 5
 author: yualan
-ms.author: yual
-manager: jhubbard
-ms.openlocfilehash: 00854154db97d5ee2cbc8d6f301f4d043bc26167
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7786055b26bdc1ef2706dc54a9f74f975b42dafe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314312"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 接続マネージャー
   **Azure Data Lake Store 接続マネージャー** では、SSIS パッケージを 2 種類の認証 (Azure AD のユーザー ID および Azure AD のサービス ID) を使用して Azure Data Lake Store サービスに接続することができます。  
@@ -31,7 +31,7 @@ ms.locfileid: "36085722"
   
 1.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[AzureDataLake]** を選択し、 **[追加]** をクリックします。   
   
-2.  Azure Data Lake Store 接続マネージャー エディター ダイアログ ボックスの **[ADLS ホスト]** フィールドに、Azure Data Lake Store ホストの URL を入力します。 例:https://test.azuredatalakestore.netまたは test.azuredatalakestore.net です。
+2.  Azure Data Lake Store 接続マネージャー エディター ダイアログ ボックスの **[ADLS ホスト]** フィールドに、Azure Data Lake Store ホストの URL を入力します。 例:https://test.azuredatalakestore.netまたは test.azuredatalakestore.net します。
   
 3.  Azure Data Lake Store データにアクセスするための該当する認証の種類を選択します。
 

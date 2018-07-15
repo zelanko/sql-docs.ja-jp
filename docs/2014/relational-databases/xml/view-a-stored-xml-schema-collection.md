@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schema collections [SQL Server], viewing
 - XML schemas [SQL Server], viewing
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 164b207ab8191486005491eaf64323fed83aaee6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1560eb844657d806862d6a4e85bb9a52682b77d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301789"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>格納されている XML スキーマ コレクションの表示
   [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)を使用して XML スキーマ コレクションをインポートすると、メタデータにスキーマ コンポーネントが格納されます。 固有の関数 [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)を使用して、XML スキーマ コレクションを再構築できます。 この関数を返します、`xml`データ型のインスタンス。  
@@ -39,7 +39,7 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
- XML スキーマ コレクションからスキーマを 1 つだけを表示する場合は、に対して XQuery を指定できます、`xml`によって返される結果の入力`xml_schema_namespace`です。  
+ XML スキーマ コレクションからスキーマを 1 つだけを表示する場合は、に対して XQuery を指定できます、`xml`によって返される結果の入力`xml_schema_namespace`します。  
   
 ```  
 SELECT xml_schema_namespace(N'RelationalSchemaName',N'XmlSchemaCollectionName').query('  

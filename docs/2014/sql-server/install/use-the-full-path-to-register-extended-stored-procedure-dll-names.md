@@ -1,5 +1,5 @@
 ---
-title: 登録する完全なパスを使用して拡張ストアド プロシージャ DLL 名 |Microsoft ドキュメント
+title: 登録する完全なパスを使用して拡張ストアド プロシージャ DLL 名 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - registering DLL names
 - extended stored procedures [SQL Server], registering
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - full path DLL name registration [SQL Server]
 ms.assetid: f648d57c-af32-4c71-9882-47b6766f3c2b
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5735e7cc66f269a03ba37fc33dd59e1bdc46c7d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cf09e25eb1a07e7714969fb3838859586cf6d763
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303662"
 ---
 # <a name="use-the-full-path-to-register-extended-stored-procedure-dll-names"></a>完全なパスを使用して、拡張ストアド プロシージャ DLL の名前を登録する
   DLL 名の完全なパスを使用せずに登録されていた拡張ストアド プロシージャは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で機能しない可能性があります。  

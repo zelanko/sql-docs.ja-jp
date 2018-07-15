@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bbb9817ac5e9ef4c779dd8a283223622b28c9119
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 138ab7faa61857de9f130b9feffe7879095a32c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287569"
 ---
 # <a name="security-master-data-services"></a>セキュリティ (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、セキュリティを使用して、仕事を行うのに必要な特定のマスター データにユーザーがアクセスできるようにすると同時に、利用を許可しないデータにはアクセスできないようにします。  
@@ -42,9 +42,9 @@ ms.locfileid: "36085014"
   
 -   [機能領域のアクセス権](../../2014/master-data-services/functional-area-permissions-master-data-services.md)。ユーザー インターフェイスの 5 つの機能領域のうち、ユーザーがアクセスできる領域を決定します。  
   
--   [モデル オブジェクト権限](../../2014/master-data-services/model-object-permissions-master-data-services.md)ユーザーがアクセスできる、属性と、アクセスの種類 (読み取りまたは更新) をユーザーがそれらの属性に対するが決定します。  
+-   [モデル オブジェクト権限](../../2014/master-data-services/model-object-permissions-master-data-services.md)ユーザーがアクセスできる、属性と、ユーザーがこれらの属性にアクセス (読み取りまたは更新) の種類を決定します。  
   
--   必要に応じて、[階層メンバーの権限](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)、どのユーザーがアクセスできますが、メンバーを判断し、それらのメンバーにアクセス (読み取りまたは更新) の種類、ユーザーがします。  
+-   必要に応じて、[階層メンバーの権限](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)、どのユーザーがアクセスできるメンバーを判断し、それらのメンバーにアクセス (読み取りまたは更新) の種類、ユーザーがいます。  
   
  属性およびメンバーに権限を割り当てる場合、権限の共通部分とルールによってどの権限が優先されるかが決まります。 詳細については、「[権限の決定方法 (マスター データ サービス)](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)」を参照してください。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "36085014"
   
  次の図では、スタイル エンティティの派生階層と、選択したユーザーのスタイル メンバー権限を示します。 更新権限は、M {Men's} と U {Unisex} のメンバーに割り当てられており、読み取り専用権限は女性スタイルのメンバーに割り当てられます。 つまり、ユーザーは男性とユニセックスの製品レコードを更新できますが、女性スタイルの製品レコードについては読取り専用になります。  
   
- ![派生階層とメンバーのアクセス許可をスタイル](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "スタイルの派生階層とメンバー権限")  
+ ![スタイルの派生階層とメンバーのアクセス許可](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "スタイルの派生階層とメンバーの権限")  
   
- 階層を作成する方法については、次を参照してください。[明示的階層を作成&#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)と[派生階層を作成する&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)です。  
+ 階層を作成する方法については、次を参照してください。[明示的階層を作成&#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)と[派生階層を作成&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)します。  
   
  メンバー権限を割り当てる方法については、次を参照してください[階層メンバーの権限を割り当てる&#40;マスター データ サービス。&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
@@ -67,9 +67,9 @@ ms.locfileid: "36085014"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|モデルに対して完全な権限を持つユーザーを作成する。|[モデル管理者を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)|  
+|モデルに対して完全な権限を持つユーザーを作成する。|[モデル管理者を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)|  
 |Active Directory グループを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]に追加する。これは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web アプリケーションでグループにデータへのアクセス権を付与するときの最初の手順です。|[グループを追加する&#40;マスター データ サービス&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web アプリケーションの機能領域に権限を割り当てる。|[機能領域権限を割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web アプリケーションの機能領域に権限を割り当てる。|[機能領域アクセス許可を割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)|  
 |モデル オブジェクトに権限を割り当てることで、属性値に権限を割り当てる。|[モデル オブジェクト権限を割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
 |階層ノードに権限を割り当てることで、メンバー値に権限を割り当てる。|[階層メンバー権限を割り当てる&#40;マスター データ サービス&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   

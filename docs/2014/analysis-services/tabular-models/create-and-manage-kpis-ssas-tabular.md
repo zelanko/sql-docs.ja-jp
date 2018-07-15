@@ -1,5 +1,5 @@
 ---
-title: 作成および管理 Kpi (SSAS テーブル) |Microsoft ドキュメント
+title: 作成して、Kpi (SSAS テーブル) の管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.kpi.f1
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5eabccab4bcb43175ea9da5813c75d5a4f890d80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 735d471cdfb847a56cb4b30857a097d8acd7e8b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302812"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>KPI の作成および管理 (SSAS テーブル)
   このトピックでは、テーブル モデルで KPI (主要業績評価指標) を作成、編集、または削除する方法を説明します。 KPI を作成するには、評価結果が KPI のベース値になるメジャーを選択します。 次に、[主要業績評価指標] ダイアログ ボックスで、評価結果が対象の値になる 2 番目のメジャーまたは絶対値を選択します。 ベース メジャーと対象のメジャーの間のパフォーマンスを測定する、状態のしきい値を定義します。  
@@ -39,7 +39,7 @@ ms.locfileid: "36071543"
 ## <a name="tasks"></a>処理手順  
   
 > [!IMPORTANT]  
->  KPI を作成する前に、値を評価するベース メジャーを作成する必要があります。 次に、ベース メジャーを KPI に拡張します。 メジャーを作成する方法が他のトピックで説明されている[作成と管理メジャー &#40;SSAS 表形式&#41;](measures-ssas-tabular.md)です。 KPI には対象の値も必要です。 この値には事前定義された別のメジャーまたは絶対値を使用できます。 ベース メジャーを KPI に拡張すると、[主要業績評価指標] ダイアログ ボックスで対象の値を選択し、状態のしきい値を定義できます。  
+>  KPI を作成する前に、値を評価するベース メジャーを作成する必要があります。 次に、ベース メジャーを KPI に拡張します。 メジャーを作成する方法が、別のトピックで説明されている[の作成と管理のメジャー &#40;SSAS 表形式&#41;](measures-ssas-tabular.md)します。 KPI には対象の値も必要です。 この値には事前定義された別のメジャーまたは絶対値を使用できます。 ベース メジャーを KPI に拡張すると、[主要業績評価指標] ダイアログ ボックスで対象の値を選択し、状態のしきい値を定義できます。  
   
 ###  <a name="bkmk_create_KPI"></a> KPI を作成するには  
   
@@ -89,6 +89,6 @@ ms.locfileid: "36071543"
 ## <a name="see-also"></a>参照  
  [Kpi &#40;SSAS 表形式&#41;](kpis-ssas-tabular.md)   
  [メジャー &#40;SSAS 表形式&#41;](measures-ssas-tabular.md)   
- [作成および管理メジャー &#40;SSAS 表形式&#41;](create-and-manage-measures-ssas-tabular.md)  
+ [作成し、管理メジャー &#40;SSAS 表形式&#41;](create-and-manage-measures-ssas-tabular.md)  
   
   

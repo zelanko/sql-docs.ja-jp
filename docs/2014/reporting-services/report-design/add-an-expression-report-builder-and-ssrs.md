@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a60ee091-b4ed-41e1-9b6a-032c316cd03f
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8defd1a842253d429629538361153cc0cdff8faf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 072af31ff2207822e7e9f1aa63e7d5582550d0dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317962"
 ---
 # <a name="add-an-expression-report-builder-and-ssrs"></a>式の追加 (レポート ビルダーおよび SSRS)
   レポート アイテムのプロパティ、フィルター、グループ、並べ替え順、接続文字列、パラメーター値などを定義するために、レポートには随所に式が使用されます。 式は等号 (=) で始まり、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]に書き込まれます。 式は、評価結果とレポート レイアウト要素を組み合わせるレポート プロセッサによって実行時に評価されます。  

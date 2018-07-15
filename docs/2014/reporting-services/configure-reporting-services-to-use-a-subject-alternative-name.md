@@ -1,5 +1,5 @@
 ---
-title: サブジェクト代替名を使用する Reporting Services の構成 |Microsoft ドキュメント
+title: サブジェクト代替名を使用する Reporting Services の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 caps.latest.revision: 4
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3826590033cfd21bc12fa623633f88d9fa11d76b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2890cea5f4c39d27ce89d4d9c5bcc3efe7384039
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284788"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>サブジェクト代替名を使用するように Reporting Services を構成する
   このトピックでは、rsreportserver.config ファイルを変更し、Netsh.exe ツールを使用することによって、サブジェクト代替名 (SAN) を使用するように [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) を構成する方法について説明します。  
@@ -34,7 +34,7 @@ ms.locfileid: "36070686"
   
  内の Url [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SSL 証明書を使用するように構成できます。 通常、証明書にはサブジェクト名のみが記載されているため、SSL (Secure Sockets Layer) セッションに対して許可される URL は 1 つだけです。 SAN は、SSL サービスがリッスンでき、多数の URL 対して有効化され、SSL ポートを他のアプリケーションと共有できるようにするための証明書の追加フィールドです。 SAN は、www.s2.com のようになります。  
   
- SSL 設定の詳細については[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を参照してください[ネイティブ モードのレポート サーバーで SSL 接続の構成](security/configure-ssl-connections-on-a-native-mode-report-server.md)です。  
+ SSL 設定の詳細については[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を参照してください[ネイティブ モード レポート サーバーで SSL 接続の構成](security/configure-ssl-connections-on-a-native-mode-report-server.md)します。  
   
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>サブジェクト代替名を Web サービス URL に使用するように SSRS を構成します。  
   

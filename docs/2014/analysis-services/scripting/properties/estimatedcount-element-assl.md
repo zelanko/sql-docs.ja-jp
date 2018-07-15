@@ -1,5 +1,5 @@
 ---
-title: EstimatedCount 要素 (ASSL) |Microsoft ドキュメント
+title: EstimatedCount 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EstimatedCount element
 ms.assetid: ce84b54a-8ab2-42f4-a7dd-e10a3d41cb4d
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c865a89d1c67bcb4155aa771ee6709a0068a7bbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a69d67554d0090e0e586421986bc97ba556c84a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300852"
 ---
 # <a name="estimatedcount-element-assl"></a>EstimatedCount 要素 (ASSL)
   ユーザーによって定義された属性のメンバーの推定数を格納します。  
@@ -62,9 +62,9 @@ ms.locfileid: "36071261"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- この値がユーザーによって割り当てられるし、によって使用される、 [AggregationDesign 要素&#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)です。  
+ この値は、ユーザーによって割り当てられるし、によって使用されます、 [AggregationDesign 要素&#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)します。  
   
- 親に対応する要素`EstimatedCount`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.AggregationDesignAttribute>と<xref:Microsoft.AnalysisServices.DimensionAttribute>です。  
+ 親に対応する要素`EstimatedCount`分析管理オブジェクト (AMO) オブジェクト モデルは、<xref:Microsoft.AnalysisServices.AggregationDesignAttribute>と<xref:Microsoft.AnalysisServices.DimensionAttribute>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

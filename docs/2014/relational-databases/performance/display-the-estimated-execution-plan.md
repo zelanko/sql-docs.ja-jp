@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - zoom [SQL Server]
 - estimated execution plan [SQL Server]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - custom zoom [SQL Server]
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9cca6bf131c3bb15bd482869dd982e989de21285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6b8fe5d5f733592ae51f91b4e8b9956b8489e1a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280865"
 ---
 # <a name="display-the-estimated-execution-plan"></a>推定実行プランの表示
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、グラフィカルな推定実行プランを生成する方法について説明します。 推定実行プランを生成するときには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のクエリやバッチは実行されません。 代わりに、クエリが実際に実行された場合に [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によって使用される可能性が最も高いクエリ実行プランが、生成された実行プランに表示されます。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [XML in SQL Server]
 - XML [SQL Server], ADO
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c4dbf8007297478af88784b183089db9d4774c7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 13440d6941d05fd02c1c98c8a75d538adbf749de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293952"
 ---
 # <a name="use-xml-data-in-applications"></a>アプリケーションでの XML データの使用
-  このトピックの内容を操作するために使用できるオプションの説明、`xml`アプリケーションでのデータ型。 このトピックには、次の項目に関する情報が含まれています。  
+  このトピックでは、使用するために使用できるオプションを説明します、`xml`アプリケーションでのデータ型。 このトピックには、次の項目に関する情報が含まれています。  
   
 -   ADO および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用した、`xml` 型の列に含まれている XML の操作  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36165043"
 ## <a name="handling-xml-from-an-xml-type-column-by-using-ado-and-sql-server-native-client"></a>ADO および SQL Server Native Client を使用した、xml 型の列に含まれている XML の操作  
  MDAC コンポーネントを使用して、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]に導入された型や機能にアクセスするためには、DataTypeCompatibility 初期化プロパティを ADO 接続文字列で設定する必要があります。  
   
- たとえば、次の Visual Basic Scripting Edition (VBScript) サンプルがクエリ結果を示しています、`xml`データ型の列、`Demographics`で、`Sales.Store`のテーブル、`AdventureWorks2012`サンプル データベース。 具体的には、クエリは `CustomerID` が `3`と等しい行のこの列のインスタンス値を検索します。  
+ たとえば、次の Visual Basic Scripting Edition (VBScript) サンプルはクエリ結果を示しています。、`xml`データ型の列、`Demographics`の、`Sales.Store`のテーブル、`AdventureWorks2012`サンプル データベース。 具体的には、クエリは `CustomerID` が `3`と等しい行のこの列のインスタンス値を検索します。  
   
 ```  
 Const DS = "MyServer"  
@@ -92,7 +92,7 @@ Set objRs = Nothing
 Set objConn = Nothing  
 ```  
   
- この例は、DataTypeCompatibility を設定する方法を示しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用している場合、このプロパティには既定値の 0 が設定されています。 値を 80 に設定した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client プロバイダーにより、`xml`としてユーザー定義型の列が表示されると[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]データ型。 それぞれのデータ型は、DBTYPE_WSTR および DBTYPE_BYTES になります。  
+ この例は、DataTypeCompatibility を設定する方法を示しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用している場合、このプロパティには既定値の 0 が設定されています。 値が 80 に設定する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client プロバイダーにより、`xml`としてユーザー定義型の列の表示と[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]データ型。 それぞれのデータ型は、DBTYPE_WSTR および DBTYPE_BYTES になります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client はクライアント コンピューターにもインストールし、データ プロバイダーとして使用するために、"`Provider=SQLNCLI11;...`" を含む接続文字列を指定する必要があります。  
   
@@ -149,12 +149,12 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>ADO.NET を使用した、xml 型の列に含まれている XML の操作  
- ADO.NET および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用して、`xml` データ型の列に含まれている XML を操作するには、`SqlCommand` クラスの標準の動作を使用します。 たとえば、`xml`データを使用して SQL 列方向が取得されるものと同じでは、型の列とその値を取得できるか、`SqlDataReader`です。ただしの内容を操作する場合、`xml`データ型の列、XML としては最初を割り当てる必要がウィンドウの内容を`XmlReader`型です。  
+ ADO.NET および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用して、`xml` データ型の列に含まれている XML を操作するには、`SqlCommand` クラスの標準の動作を使用します。 たとえば、`xml`データを使用して SQL 列方法が取得されるものと同じ型の列とその値を取得できる、`SqlDataReader`します。ただしの内容を操作する場合、`xml`データ型の列、XML として、まずを割り当てる必要がウィンドウの内容を`XmlReader`型。  
   
  詳細とコード例については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK のマニュアルの「XML Column Values in a Data Reader」を参照してください。  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>ADO.NET を使用した、パラメーター内の xml 型の列の操作  
- ADO.NET および [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] でパラメーターとして渡された xml データ型を操作するには、`SqlXml` データ型のインスタンスとして値を指定することができます。 特別な処理は必要ありません、ため`xml`データ型の列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]できるパラメーター値を受け取るその他の列とデータ型と同じ方法でなど`string`または`integer`です。  
+ ADO.NET および [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] でパラメーターとして渡された xml データ型を操作するには、`SqlXml` データ型のインスタンスとして値を指定することができます。 特別な処理は必要ありません、ため`xml`データ型の列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]できるパラメーター値を受け取るその他の列とデータ型と同じ方法でなど`string`または`integer`します。  
   
  詳細とコード例については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK のマニュアルの「XML Values as Command Parameters」を参照してください。  
   

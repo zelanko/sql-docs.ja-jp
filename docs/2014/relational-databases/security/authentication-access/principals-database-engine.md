@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.roleproperties.selectroll.f1
 - sql12.swb.databaseuser.permissions.user.f1--May use common.permissions
@@ -29,15 +28,15 @@ helpviewer_keywords:
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 54
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1023de7c9ba97728ce23057172ec419c81f9b812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 55f86aa023d1c5ddfb03c24d9c97797b22a93973
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318042"
 ---
 # <a name="principals-database-engine"></a>プリンシパル (データベース エンジン)
   *プリンシパル* は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースを要求できるエンティティです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の承認モデルの他のコンポーネントと同様に、プリンシパルは階層内に配置できます。 プリンシパルの効力のスコープは、プリンシパルの定義のスコープ (Windows、サーバー、データベース) と、プリンシパルが分割できないアイテムであるかコレクションであるかによって異なります。 分割できないプリンシパルの例には Windows ログインがあり、コレクションであるプリンシパルの例には Windows グループがあります。 各プリンシパルには、1 つのセキュリティ識別子 (SID) があります。  
@@ -89,10 +88,10 @@ ms.locfileid: "36085626"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>guest ユーザー  
- 各データベースには、 **guest**が含まれます。 データベースにはアクセスできるが、データベース内のユーザー アカウントは持っていないユーザーは、 **guest** ユーザーに許可された権限を継承します。 **ゲスト**ユーザーを削除することはできませんが、取り消すことで無効にすることができますの`CONNECT`権限です。 `CONNECT`を実行するアクセス許可を失効できます`REVOKE CONNECT FROM GUEST`master または tempdb 以外のデータベースでします。  
+ 各データベースには、 **guest**が含まれます。 データベースにはアクセスできるが、データベース内のユーザー アカウントは持っていないユーザーは、 **guest** ユーザーに許可された権限を継承します。 **ゲスト**ユーザーを削除することはできませんを取り消すことで無効にすることができますの`CONNECT`権限。 `CONNECT`を実行するためのアクセス許可を失効できます`REVOKE CONNECT FROM GUEST`master または tempdb 以外のデータベースでします。  
   
 ## <a name="client-and-database-server"></a>クライアントとデータベース サーバー  
- 定義上、クライアントとデータベース サーバーはセキュリティ プリンシパルであり、セキュリティで保護できます。 これらのエンティティは、安全なネットワーク接続が確立される前に相互に認証できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サポートしている、 [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758)認証プロトコルであり、クライアントがネットワーク認証サービスと対話する方法を定義します。  
+ 定義上、クライアントとデータベース サーバーはセキュリティ プリンシパルであり、セキュリティで保護できます。 これらのエンティティは、安全なネットワーク接続が確立される前に相互に認証できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サポート、 [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758)認証プロトコルは、クライアントがネットワーク認証サービスとやり取りする方法を定義します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックのこのセクションの内容は次のとおりです。  

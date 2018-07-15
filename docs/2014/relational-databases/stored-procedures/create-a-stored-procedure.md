@@ -3,27 +3,25 @@ title: ストアド プロシージャの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - new stored procedures
 - stored procedures [SQL Server], creating
 - creating stored procedures
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 41ead15315cc99233650426ac1f04d74ba69a922
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 377826ef88a295764672a9f58cea3b696bac2362
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318022"
 ---
 # <a name="create-a-stored-procedure"></a>ストアド プロシージャの作成
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の CREATE PROCEDURE ステートメントを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを作成する方法について説明します。  
@@ -69,7 +67,7 @@ ms.locfileid: "36085394"
     |@Datatype_For_Param2|`nvarchar`(50)|  
     |[Default_Value_For_Param2]|NULL|  
   
-6.  **[OK]** をクリックします。  
+6.  [**OK**] をクリックします。  
   
 7.  **クエリ エディター**で、SELECT ステートメントを次のステートメントに置き換えます。  
   

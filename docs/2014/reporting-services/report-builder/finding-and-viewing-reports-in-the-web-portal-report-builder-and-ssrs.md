@@ -1,5 +1,5 @@
 ---
-title: 検索して、レポート マネージャーでの表示レポート (レポート ビルダーおよび SSRS) |Microsoft ドキュメント
+title: 検索して、レポート マネージャーでの表示レポート (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fca55f69bcd97e0b3ac2199383cf28c0ad327313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fed7c8d79acf9f02620e6f11ac6eaee08113a819
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313199"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>レポート マネージャーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)
-  レポート マネージャーは、レポートの表示機能および管理機能を備えた Web ベースのツールです。 これは、レポート サーバー インストールの一部です。 レポート マネージャーを開くとき、ブラウザー ウィンドウにレポート マネージャーの URL を入力します。 ブラウザーの要件については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)です。 レポート サーバーでのレポート マネージャー URL の構成方法の詳細については、システム管理者に問い合わせてください。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](../report-server/configure-web-portal.md)」を参照してください。  
+  レポート マネージャーは、レポートの表示機能および管理機能を備えた Web ベースのツールです。 これは、レポート サーバー インストールの一部です。 レポート マネージャーを開くとき、ブラウザー ウィンドウにレポート マネージャーの URL を入力します。 ブラウザーの要件については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)します。 レポート サーバーでのレポート マネージャー URL の構成方法の詳細については、システム管理者に問い合わせてください。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](../report-server/configure-web-portal.md)」を参照してください。  
   
- レポート マネージャーを使用するときに表示される内容は、レポート サーバーに対してシステム管理者が設定した権限によって決まります。 権限はロールの割り当てによって与えられます。 レポートを検索および表示するには、ロールの割り当てに "レポートの表示" タスクが含まれている必要があります。 レポート サーバーでレポートを検索するには、名前または説明からレポートを検索するか、レポート サーバーのフォルダーを参照します。 検索または参照できるのは、レポート サーバーにパブリッシュまたはアップロードされたレポートのみです。 レポートを検索する方法の詳細については、次を参照してください。[レポートおよびその他の項目の検索&#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)です。  
+ レポート マネージャーを使用するときに表示される内容は、レポート サーバーに対してシステム管理者が設定した権限によって決まります。 権限はロールの割り当てによって与えられます。 レポートを検索および表示するには、ロールの割り当てに "レポートの表示" タスクが含まれている必要があります。 レポート サーバーでレポートを検索するには、名前または説明からレポートを検索するか、レポート サーバーのフォルダーを参照します。 検索または参照できるのは、レポート サーバーにパブリッシュまたはアップロードされたレポートのみです。 レポートを検索する方法の詳細については、次を参照してください。[レポートおよびその他の項目を検索する&#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -48,7 +48,7 @@ ms.locfileid: "36085398"
   
  フォルダー階層で表示されているすべてのレポートにすぐアクセスできるとは限りません。 レポートによっては、ユーザー名とパスワードがユーザーに要求され、そのレポートのデータ ソースへのアクセス権がユーザーにあるかどうか、検証が行われるものもあります。 レポート マネージャーでレポートを開く方法の詳細については、「[レポートを開閉する (レポート マネージャー)](../reports/open-and-close-a-report-report-manager.md)」を参照してください。  
   
- レポート ビルダーからレポート サーバーのレポートを直接参照したり開いたりすることもできます。 詳細については、次を参照してください。[レポートおよびその他の項目の検索&#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)です。  
+ レポート ビルダーからレポート サーバーのレポートを直接参照したり開いたりすることもできます。 詳細については、次を参照してください。[レポートおよびその他の項目を検索する&#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)します。  
   
 ## <a name="to-search-for-a-items"></a>アイテムを検索するには  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36085398"
 -   レポート内の特定のテキストを検索するには、レポートの最上部にあるツール バーを使用します。  
   
 ## <a name="see-also"></a>参照  
- [レポートおよびその他の項目の検索&#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [レポートおよびその他の項目を検索する&#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

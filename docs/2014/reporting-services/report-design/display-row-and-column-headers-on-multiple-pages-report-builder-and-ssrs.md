@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 51a549b7fbea2bc4b1c5e41114e831ff3f68550b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ef91743d7a5a4106b51761901ba6f18b9f24d5a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303672"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS)
   Tablix データ領域が複数のページにわたる場合、各ページで行ヘッダーおよび列ヘッダーを繰り返すかどうかを制御できます。 Tablix データ領域は、テーブル、マトリックス、または一覧のいずれかです。  
@@ -74,7 +74,7 @@ ms.locfileid: "36075184"
 ## <a name="see-also"></a>参照  
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [見出し、列、および行は、改ページを制御する&#40;レポート ビルダーおよび SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [見出し、列、および行は、改ページの制御&#40;レポート ビルダーおよび SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [グループ単位でのヘッダーとフッターの表示 &#40;レポート ビルダーおよび SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [レポートのスクロール時にヘッダーを表示したまま&#40;レポート ビルダーおよび SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   

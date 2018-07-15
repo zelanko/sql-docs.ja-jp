@@ -1,5 +1,5 @@
 ---
-title: CubeAttributeBinding データ型 (ASSL) |Microsoft ドキュメント
+title: CubeAttributeBinding データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeAttributeBinding data type
 ms.assetid: 04e3d619-1de8-4fc8-a089-9a44ac0f930c
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2cfde783ea648fde31b3d5c098e21f7e49550566
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0991e2e25f20e41462fe445ca93e8d84db0c7e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286008"
 ---
 # <a name="cubeattributebinding-data-type-assl"></a>CubeAttributeBinding データ型 (ASSL)
   アクションまたはマイニング構造列に対するキューブ ディメンションの属性のバインドを表す派生データ型を定義します。  
@@ -65,9 +65,9 @@ ms.locfileid: "36071974"
 |派生要素|参照してください[バインド](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
- 詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、`Binding`型との継承階層`Binding`型を参照してください[&#40;ASSL&#41;](binding-data-type-assl.md)です。  
+ 詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む、型、`Binding`型との継承階層`Binding`型を参照してください[&#40;ASSL&#41;](binding-data-type-assl.md)します。  
   
- ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.CubeAttributeBinding>します。  
   

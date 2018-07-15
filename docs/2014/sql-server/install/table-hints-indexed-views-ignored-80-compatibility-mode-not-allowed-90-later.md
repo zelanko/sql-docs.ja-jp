@@ -1,5 +1,5 @@
 ---
-title: テーブル ヒントにインデックス付きビューの定義は互換性モード 80 では無視され、モードが 90 またはそれ以降は許可されません |Microsoft ドキュメント
+title: 内のテーブル ヒントにインデックス付きビューの定義は、互換性モード 80 では無視され、モードが 90 以上では許可されません |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query hints [SQL Server]
 - indexed views [SQL Server], query hints
 ms.assetid: 405dfcff-a3a6-4e6d-a53a-ed77bbacdd13
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b56e965ecfcfc802457bfa3b5a78118afae5c531
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 93159a8c32f484fd9c734b4847dfd1e7fca854a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317432"
 ---
 # <a name="table-hints-in-indexed-view-definitions-are-ignored-in-80-compatibility-mode-and-are-not-allowed-in-90-mode-or-later"></a>インデックス付きビュー定義のテーブル ヒントが互換性モード 80 では無視され、互換性モード 90 以上では許可されない
   互換性モード 90 以上では、インデックス付きビューの定義のテーブル ヒントは使用できません。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「インデックス付きビューのデザイン」、「インデックス付きビューの作成」、および「クエリ ヒント ([!INCLUDE[tsql](../../includes/tsql-md.md)])」を参照してください。  

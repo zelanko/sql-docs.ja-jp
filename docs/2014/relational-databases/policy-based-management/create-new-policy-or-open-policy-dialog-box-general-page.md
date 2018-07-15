@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.newgroup.f1
 - sql12.swb.dmf.policy.f1
 - sql12.swb.dmf.policy.filter.f1
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b753425a0fc3b2a8439d2048158e158e229d8f88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5ec53eafaf8c3b44816adbd807ecc6d281e1dfd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215352"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーを新規作成したり、既存のポリシーを変更したりできます。 ポリシーの適用対象を一部のサーバーに制限するには、 **[対象]** 領域と **[サーバーの制限]** 領域をフィルターとして使用します。 対象フィルターとして使用する条件は、物理ファセットで定義する必要があり、関数や LIKE 演算子をその条件に含めることはできません。 ポリシーのオブジェクト セットをシステムが計算する際、既定ではシステム オブジェクトが除外されます。  たとえば、ポリシーのオブジェクト セットがすべてのテーブルを参照する場合、システム テーブルにはそのポリシーが適用されません。 システム オブジェクトに対してポリシーを評価する必要がある場合は、ユーザーが、それらのオブジェクト セットに対し、システム オブジェクトを明示的に追加できます。 **"スケジュールに基づいて確認"** の評価モードではすべてのポリシーがサポートされますが、パフォーマンス上の理由により、 **"変更時に確認"** の評価モードでは、任意のオブジェクト セットを含んだポリシーは、必ずしもすべてサポートされるとは限りません。 詳細については、[http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx) を参照してください。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  新しいポリシーの場合は、新しいポリシー名を入力します。 既存のポリシーの場合は、その名前が表示されます。  
   
  **Enabled**  

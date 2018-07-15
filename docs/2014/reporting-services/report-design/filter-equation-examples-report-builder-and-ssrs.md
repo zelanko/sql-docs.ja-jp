@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filtering data [Reporting Services], filter equation examples
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a8958e8b06a2df1ce31447a0faa694831239b6cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5bcb1e50fbc615a95c202035e2e6c5d7320f5df9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317874"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>フィルター式の例 (レポート ビルダーおよび SSRS)
   フィルターを作成するには、1 つ以上のフィルター式を指定する必要があります。 フィルター式には、式、データ型、演算子、および値が含まれます。 ここでは、一般的に使用されるフィルターの例を示します。  

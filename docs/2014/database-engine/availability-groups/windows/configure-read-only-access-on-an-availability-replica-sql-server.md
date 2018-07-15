@@ -5,10 +5,9 @@ ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
 - Availability Groups [SQL Server], readable secondary replicas
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 caps.latest.revision: 31
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 03111a596ba59bd22e2c6c4811ab37c93a9bf138
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9c6da139e873434bec21e7dd053094ff0a5eeff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302742"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>可用性レプリカでの読み取り専用アクセスの構成 (SQL Server)
   既定では、プライマリ レプリカへの読み取り/書き込みアクセスと読み取りを目的としたアクセスの両方が許可され、AlwaysOn 可用性グループのセカンダリ レプリカへの接続は許可されません。 このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の AlwaysOn 可用性グループの可用性レプリカに対して接続アクセスを構成する方法について説明します。  
@@ -146,7 +145,7 @@ GO
   
 2.  可用性グループに可用性レプリカを追加する場合は、`New-SqlAvailabilityReplica` コマンドレットを使用します。 既存の可用性レプリカを変更する場合は、`Set-SqlAvailabilityReplica` コマンドレットを使用します。 関連するパラメーターは次のとおりです。  
   
-    -   セカンダリ ロールの接続アクセスを構成するのには、指定、 `ConnectionModeInSecondaryRole` *secondary_role_keyword*パラメーター、場所*secondary_role_keyword*次の値のいずれかの。  
+    -   セカンダリ ロールの接続アクセスを構成するには、指定、 `ConnectionModeInSecondaryRole` *secondary_role_keyword*パラメーター、場所*secondary_role_keyword*値は次のいずれかの。  
   
          `AllowNoConnections`  
          セカンダリ レプリカのデータベースに対する直接接続は許可されず、データベースに対して読み取りアクセスを実行できません。 これが既定の設定です。  
@@ -157,7 +156,7 @@ GO
          `AllowAllConnections`  
          読み取り専用アクセスに限り、セカンダリ レプリカのデータベースに対するすべての接続が許可されます。  
   
-    -   プライマリ ロールに対して接続アクセスを構成するには指定`ConnectionModeInPrimaryRole` *primary_role_keyword*ここで、 *primary_role_keyword*次の値のいずれかの。  
+    -   プライマリ ロールに対して接続アクセスを構成するには指定`ConnectionModeInPrimaryRole` *primary_role_keyword*ここで、 *primary_role_keyword*値は次のいずれかの。  
   
          `AllowReadWriteConnections`  
          Application Intent 接続プロパティが ReadOnly に設定されている接続は許可されません。 Application Intent プロパティが ReadWrite に設定されている場合、または Application Intent 接続プロパティが設定されていない場合は、接続が許可されます。 "アプリケーションの目的" 接続プロパティの詳細については、「 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
@@ -166,14 +165,14 @@ GO
          プライマリ レプリカのデータベースに対するすべての接続が許可されます。 これが既定の設定です。  
   
     > [!NOTE]  
-    >  表示するには、コマンドレットの構文を使用して、`Get-Help`コマンドレット、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
 -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="PSExample"></a> 例 (PowerShell)  
- 次の例では、設定、どちらも、`ConnectionModeInSecondaryRole`と`ConnectionModeInPrimaryRole`パラメーター`AllowAllConnections`です。  
+ 次の例では、両方を設定、`ConnectionModeInSecondaryRole`と`ConnectionModeInPrimaryRole`パラメーター`AllowAllConnections`します。  
   
 ```  
 Set-Location SQLSERVER:\SQL\PrimaryServer\default\AvailabilityGroups\MyAg  
@@ -189,7 +188,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ##  <a name="FollowUp"></a> 補足情報: 可用性レプリカに対する読み取り専用アクセスの構成後  
  **読み取り可能なセカンダリ レプリカに対する読み取り専用アクセス**  
   
--   使用する場合、 [bcp ユーティリティ](../../../tools/bcp-utility.md)または[sqlcmd ユーティリティ](../../../tools/sqlcmd-utility.md)、読み取り専用アクセスを有効になっている任意のセカンダリ レプリカに読み取り専用のアクセスを指定して指定できます、`-K ReadOnly`スイッチします。  
+-   使用する場合、 [bcp ユーティリティ](../../../tools/bcp-utility.md)または[sqlcmd ユーティリティ](../../../tools/sqlcmd-utility.md)、読み取り専用アクセスを有効になっている任意のセカンダリ レプリカに読み取り専用のアクセスを指定するには指定することによって、`-K ReadOnly`スイッチします。  
   
 -   読み取り可能なセカンダリ レプリカに接続するクライアント アプリケーションを有効にするには:  
   
@@ -218,23 +217,23 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [AlwaysOn: 読み取り可能なセカンダリの利点](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
+-   [読み取り可能セカンダリの AlwaysOn: 価値提案](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
   
--   [AlwaysOn: 読み取りワークロードのセカンダリ レプリカを有効にする 2 つのオプションがある理由。](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
+-   [AlwaysOn: 読み取りワークロードのためのセカンダリ レプリカを有効にする 2 つのオプションがある理由ですか?](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
   
--   [AlwaysOn: 読み取り可能なセカンダリ レプリカを設定します。](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
+-   [AlwaysOn: 読み取り可能なセカンダリ レプリカのセットアップ](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
   
--   [AlwaysOn: だけ有効にしました読み取り可能なセカンダリ、マイ クエリがブロックされているか。](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
+-   [AlwaysOn: だけ有効した読み取り可能なセカンダリが、クエリがブロックされるか。](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   
--   [AlwaysOn: が読み取り可能なセカンダリ、読み取り専用データベースとデータベース スナップショットで使用可能な最新の統計情報を行う](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [AlwaysOn: が読み取り可能なセカンダリ、読み取り専用のデータベースおよびデータベース スナップショットで使用可能な最新の統計情報を行う](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
   
--   [データベース スナップショット、セカンダリ レプリカの読み取り専用データベースで統計を含む AlwaysOn: 課題](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [データベース スナップショット、セカンダリ レプリカで読み取り専用のデータベースの統計に関する課題を AlwaysOn:](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
   
--   [AlwaysOn: セカンダリ レプリカでレポート ワークロードを実行する場合の主要なワークロードへの影響](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [AlwaysOn: セカンダリ レプリカでレポート ワークロードを実行するときの主要なワークロードへの影響](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
   
 -   [AlwaysOn: 読み取り可能なセカンダリ上のレポート ワークロードをスナップショット分離にマップへの影響](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
   
--   [AlwaysOn: セカンダリ レプリカでレポート ワークロードを実行しているときに再実行スレッドのブロッキングを最小限に抑える](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
+-   [AlwaysOn: セカンダリ レプリカでレポート ワークロードを実行する場合に、再実行スレッドのブロッキングを最小限に抑える](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
   
 -   [AlwaysOn: 読み取り可能なセカンダリとデータ待機時間](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
   

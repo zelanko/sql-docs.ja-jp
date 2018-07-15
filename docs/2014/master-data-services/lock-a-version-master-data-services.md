@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], locking
 - locking versions [Master Data Services]
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ad21e9b1503e1a352215632a5190267efa48f752
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: bd611f0593aa1a99e075e3ea6cd506c48f705513
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302382"
 ---
 # <a name="lock-a-version-master-data-services"></a>バージョンをロックする (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルのバージョンをロックして、モデルのメンバーおよびメンバーの属性に対する変更を防止します。  
@@ -51,7 +51,7 @@ ms.locfileid: "36074850"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [ビジネス ルールに対してバージョンを検証する&#40;マスター データ サービス&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [ビジネス ルールに対してバージョンを検証&#40;マスター データ サービス&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   [バージョンをコミットする&#40;マスター データ サービス&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   

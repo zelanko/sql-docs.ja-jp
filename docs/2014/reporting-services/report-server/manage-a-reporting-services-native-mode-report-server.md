@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 63291b62b946e733dbcc48359b06e1f3e33abc15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c63f642cd5028bd227c6f6bf59e53de6339a5faa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305012"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーの管理
   ここでは、Reporting Services 構成マネージャーを使用してネイティブ モードのレポート サーバー インスタンスを構成する手順について説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "36071127"
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
  Reporting Services の構成ツールを開始するための手順を説明します。  
   
- [サービス アカウントの構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)  
+ [サービス アカウントを構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)  
  レポート サーバー サービス用のアカウントとパスワードの情報を指定する方法について説明します。  
   
  [サービス プリンシパル名の登録&#40;SPN&#41;レポート サーバーの場合](register-a-service-principal-name-spn-for-a-report-server.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "36071127"
  レポート サーバー データベースを作成するための手順を説明します。 この手順は、Reporting Services のインストールの配置に必要です。  
   
 ### <a name="advanced-or-optional-configuration"></a>詳細な構成または省略可能な構成  
- [ネイティブ モード レポート サーバー スケール アウト配置の構成&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [ネイティブ モード レポート サーバーのスケール アウト配置構成&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  レポート サーバー データベースを共有するための複数のレポート サーバーの構成手順を説明します。  
   
  [レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
@@ -57,7 +57,7 @@ ms.locfileid: "36071127"
  [レポート サーバー アクセスに対するファイアウォールの構成](configure-a-firewall-for-report-server-access.md)  
  レポート サーバーの要求の受信と応答の送信に使用されるポートを開く方法について説明します。  
   
- [ローカル管理用のネイティブ モード レポート サーバーを構成する&#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+ [ローカル管理用のネイティブ モードのレポート サーバーの構成&#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
  http://localhost を使用してレポート マネージャーまたはレポート サーバーに接続するために必要な追加手順について説明します。  
   
  [リモート管理用のレポート サーバーの構成](configure-a-report-server-for-remote-administration.md)  

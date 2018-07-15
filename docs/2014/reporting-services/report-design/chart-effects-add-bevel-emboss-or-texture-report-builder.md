@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a8b3a780db49bc34d0060a33f934ea7169cae3bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f9fac39f0b11bdc2bbf14b054bfe8947bf767906
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309292"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 (レポート ビルダーおよび SSRS)
   特定のグラフの種類を使用する場合、グラフの視覚的な効果を高めるために、描画効果を指定できます。 このような描画効果を適用できるのは、グラフの系列だけです。 その他のグラフ要素には影響しません。  
@@ -28,7 +28,7 @@ ms.locfileid: "36071812"
   
  横棒グラフまたは縦棒グラフの一種を使用する場合、円柱、くさび形、グラデーションなどのテクスチャのスタイルを、個々の横棒および縦棒に適用できます。  
   
- 多くのグラフ要素では、これらの描画スタイルに加え、罫線および影を追加することで、奥行を持たせることができます。 グラフの書式設定する他の方法の詳細については、次を参照してください。[グラフの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)です。  
+ 多くのグラフ要素では、これらの描画スタイルに加え、罫線および影を追加することで、奥行を持たせることができます。 グラフの書式設定するには、他の方法の詳細については、次を参照してください。[グラフの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

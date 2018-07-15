@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, opening
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1afe5405cfd73adcc957e83b6231d6c5364f4d7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 457d30086bf8be4f44c002ab1fd54c38f92f8031
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281568"
 ---
 # <a name="open-log-file-viewer"></a>[ログ ファイルの表示] を開く
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [ログ ファイルの表示] を使用すると、次のログに記録されたエラーおよびイベントに関する情報にアクセスできます。  

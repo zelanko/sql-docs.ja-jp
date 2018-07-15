@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - replication [SQL Server], database mirroring and
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9310c5d093cd4912a8a330d86bd1088c2c478ca6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: da5968f28c8e5e37934ac0a77f8609a847542e7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285808"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>データベース ミラーリングとレプリケーション (SQL Server)
   データベース ミラーリングとレプリケーションを組み合わせて使用すると、パブリケーション データベースの可用性を高めることができます。 データベース ミラーリングでは単一データベースの 2 つのコピーを使用します。通常、これらのコピーは異なるコンピューターに配置されます。 クライアントが任意の時点において使用できるデータベースのコピーは 1 つだけです。 このコピーはプリンシパル データベースと呼ばれます。 クライアントがプリンシパル データベースに対して加えた更新は、ミラー データベースと呼ばれるもう一方のコピー データベースに適用されます。 プリンシパル データベースに対して行われた挿入、更新、および削除はすべてトランザクション ログに記録され、ミラーリングによってこのトランザクション ログがミラー データベースに適用されます。  

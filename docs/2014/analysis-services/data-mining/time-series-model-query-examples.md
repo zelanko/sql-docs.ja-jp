@@ -1,5 +1,5 @@
 ---
-title: タイム シリーズ モデルのクエリ例 |Microsoft ドキュメント
+title: タイム シリーズ モデルのクエリ例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - MISSING_VALUE_SUBSTITUTION
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8b6c0f25f4d5694d678e51acc0ecb4ccbf98f8a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ec5161fab123b9a0b251cfc570318f58fd57ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319305"
 ---
 # <a name="time-series-model-query-examples"></a>Time Series Model Query Examples
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、時系列モデルでコンテンツ クエリを使用すると、検出された周期的構造に関する追加情報を取得できます。一方、予測クエリを使用すると、次の 5 ～ 10 のタイム スライスの予測などを取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
@@ -70,7 +70,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY 0.1、MINIMUM_SUPPORT の = = 10、PERIODICITY_HINT ={1,3}、.|  
+|COMPLEXITY_PENALTY = 0.1、MINIMUM_SUPPORT = 10、PERIODICITY_HINT ={1,3}、.|  
   
  既定の周期性のヒントである {1} は、すべてのモデルで表示されます。このサンプル モデルでは、そのほかにもう 1 つ追加のヒントが作成時に使用されています。これは、最終的なモデルには存在しない可能性があります。  
   
@@ -134,7 +134,7 @@ AND NODE_TYPE = 15
   
 -   `PREDICTION JOIN` を使用してトレーニング データに外部ソースのデータを結合します。  
   
--   単一予測クエリを使用してデータにスライスを 1 つずつ指定します。 単一予測クエリを作成する方法については、次を参照してください。[データ マイニング クエリ インターフェイス](data-mining-query-tools.md)です。  
+-   単一予測クエリを使用してデータにスライスを 1 つずつ指定します。 単一予測クエリを作成する方法については、次を参照してください。[データ マイニング クエリ インターフェイス](data-mining-query-tools.md)します。  
   
 ###  <a name="bkmk_ReplaceExtend"></a> 置換および拡張操作の動作について  
  時系列モデルに新しいデータを追加するときは、トレーニング データを拡張するか置換するかを指定できます。  
@@ -160,7 +160,7 @@ AND NODE_TYPE = 15
   
  たとえば、既存のモデルに 6 か月分のデータがあるとします。 過去 3 か月間の販売成績を追加してこのモデルを拡張し、 同時に、次の 3 か月間の予測も作成したいと考えています。 新しいデータを追加したときの新しい予測のみを取得するには、開始位置をタイム スライス 4、終了位置をタイム スライス 7 に指定します。 また、合計 6 つの予測を要求することもできますが、最初の 3 つのタイム スライスは追加した新しいデータと重複します。  
   
- クエリの例と構文を使用するための詳細についての`REPLACE_MODEL_CASES`と`EXTEND_MODEL_CASES`を参照してください[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)です。  
+ クエリの例と詳細を使用する構文については`REPLACE_MODEL_CASES`と`EXTEND_MODEL_CASES`を参照してください[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)します。  
   
 ###  <a name="bkmk_EXTEND"></a> EXTEND_MODEL_CASES を使用した予測の作成  
  予測動作は、モデル ケースを拡張するか置換するかによって異なります。 モデルを拡張するときは、新しいデータは系列の末尾に追加され、トレーニング セットのサイズは増加します。 ただし、予測クエリに使用されるタイム スライスは常に元の系列の末尾から開始されます。 このため、3 つの新しいデータ ポイントを追加し、6 つの予測を要求した場合、返される最初の 3 つの予測は新しいデータと重複します。 この場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はすべての新しいデータ ポイントをすべて使用するまで予測を作成せずに実際の新しいデータ ポイントを返します。 その後、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は複合系列に基づいて予測を作成します。  
@@ -182,7 +182,7 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_REPLACE"></a> REPLACE_MODEL_CASES を使用した予測の作成  
  モデルのケースを置換するときは、モデルのサイズは同じですが、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によってモデルの個々のケースが置換されます。 これは、トレーニング データ セットを一定のサイズに保持することが重要なクロス予測およびシナリオに便利です。  
   
- たとえば、ストアの 1 つの販売データが不十分であるとします。 特定の地域のすべてのストアの販売を平均し、モデルをトレーニングして、汎用モデルを作成できます。 次に、予測を行うための十分な販売データ ストアの作成、`PREDICTION JOIN`そのストアだけの新しい売上データにします。 このようにするとき、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では地域モデルから派生するパターンは保持されますが、既存のトレーニング ケースは個々のストアのデータで置換されます。 その結果、予測値は個々のストアの傾向を示す線に近づきます。  
+ たとえば、ストアの 1 つの販売データが不十分であるとします。 特定の地域のすべてのストアの販売を平均し、モデルをトレーニングして、汎用モデルを作成できます。 作成する十分な販売データを使用しないでストアの予測には、次に、`PREDICTION JOIN`そのストアだけの新しい販売データ。 このようにするとき、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では地域モデルから派生するパターンは保持されますが、既存のトレーニング ケースは個々のストアのデータで置換されます。 その結果、予測値は個々のストアの傾向を示す線に近づきます。  
   
  `REPLACE_MODEL_CASES` 引数を使用すると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって継続して新しいケースがケース セットの末尾に追加され、対応する数がケース セットの先頭から削除されます。 新しいデータを元のトレーニング セットよりも多く追加する場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって最も古いデータが破棄されます。 新しい値が十分に提供された場合は、完全に新しいデータに基づいて予測を行うことができます。  
   
@@ -202,10 +202,10 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  REPLACE_MODEL_CASES では、タイムスタンプ 1 から開始すると、古いトレーニング データを置換する新しいデータに基づく新しい予測が取得されます。  
   
- クエリの例と構文を使用するための詳細についての`REPLACE_MODEL_CASES`と`EXTEND_MODEL_CASES`を参照してください[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)です。  
+ クエリの例と詳細を使用する構文については`REPLACE_MODEL_CASES`と`EXTEND_MODEL_CASES`を参照してください[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)します。  
   
 ###  <a name="bkmk_MissingValues"></a> 時系列モデルで不足値を置換する  
- `PREDICTION JOIN` ステートメントを使用して時系列モデルに新しいデータを追加するとき、新しいデータセットに不足値があってはいけません。 系列が不完全である場合、モデルでは NULL、数値平均、特定の数値平均、予測値のいずれかを使用して不足値を指定する必要があります。 `EXTEND_MODEL_CASES` を指定する場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって不足値が元のモデルに基づく予測で置換されます。 使用する場合`REPLACE_MODEL_CASES`、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]欠損値で指定した値に置き換え、 *MISSING_VALUE_SUBSTITUTION*パラメーター。  
+ `PREDICTION JOIN` ステートメントを使用して時系列モデルに新しいデータを追加するとき、新しいデータセットに不足値があってはいけません。 系列が不完全である場合、モデルでは NULL、数値平均、特定の数値平均、予測値のいずれかを使用して不足値を指定する必要があります。 `EXTEND_MODEL_CASES` を指定する場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって不足値が元のモデルに基づく予測で置換されます。 使用する場合`REPLACE_MODEL_CASES`、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]欠損値で指定した値に置換、 *MISSING_VALUE_SUBSTITUTION*パラメーター。  
   
 ## <a name="list-of-prediction-functions"></a>予測関数の一覧  
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、共通の関数セットがサポートされています。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、次の表のような追加の関数がサポートされています。  

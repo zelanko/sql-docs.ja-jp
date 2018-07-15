@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, resource pool
 - resource pool [SQL Server], overview
 - resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28ba9512021e149bc5861e968ad2f4a977dd7644
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 062ac00c7bf4e884f3f066549bed39dc938d1209
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280878"
 ---
 # <a name="resource-governor-resource-pool"></a>リソース ガバナー リソース プール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーのリソース プールは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスの物理リソースのサブセットを表します。 リソース ガバナーを使用すると、受信するアプリケーション要求がリソース プール内で使用できる CPU、物理 IO、およびメモリの量に制限を指定できます。 各リソース プールは、1 つまたは複数のワークロード グループを含めることができます。 セッションの起動時に、リソース ガバナーの分類子によって、セッションは指定されたワークロード グループに割り当てられます。セッションの実行にはワークロード グループに割り当てられたリソースを使用する必要があります。  

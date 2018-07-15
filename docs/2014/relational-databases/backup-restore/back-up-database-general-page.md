@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7300b9be81e07a922079bc8e1b56aa02266d9b99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 025d5eac30815b6d9110dcca7214e7e88412a23d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290958"
 ---
 # <a name="back-up-database-general-page"></a>[データベースのバックアップ] \([全般] ページ)
   **[データベースのバックアップ]** ダイアログ ボックスの **[全般]** ページでは、データベースのバックアップ操作の設定を表示または変更できます。  
@@ -115,7 +114,7 @@ ms.locfileid: "36085687"
  Windows Azure ストレージへの認証に使用する SQL 資格情報を選択します。 使用できる既存の SQL 資格情報がない場合は、 **[作成]** ボタンをクリックして新しい SQL 資格情報を作成します。  
   
 > [!IMPORTANT]  
->  **[作成]** をクリックすると開くダイアログでは、サブスクリプションの管理証明書または公開プロファイルが求められます。 管理証明書または公開プロファイルにアクセスできない場合は、Transact-SQL または SQL Server Management Studio を使用してストレージ アカウント名とアクセス キーの情報を指定し、SQL 資格情報を作成することができます。 サンプル コードを参照してくださいで、[資格情報を作成する](../security/authentication-access/create-a-credential.md#Credential)トピック Transact SQL を使用して資格情報を作成します。 または SQL Server Management Studio を使用して、データベース エンジン インスタンスから、 **[セキュリティ]** を右クリックし、 **[新規作成]**、 **[資格情報]** の順にクリックします。 **[ID]** にストレージ アカウント名、 **[パスワード]** にアクセス キーを指定します。  
+>  **[作成]** をクリックすると開くダイアログでは、サブスクリプションの管理証明書または公開プロファイルが求められます。 管理証明書または公開プロファイルにアクセスできない場合は、Transact-SQL または SQL Server Management Studio を使用してストレージ アカウント名とアクセス キーの情報を指定し、SQL 資格情報を作成することができます。 サンプル コードを参照してくださいで、[資格情報を作成する](../security/authentication-access/create-a-credential.md#Credential)Transact SQL を使用して資格情報を作成するトピック。 または SQL Server Management Studio を使用して、データベース エンジン インスタンスから、 **[セキュリティ]** を右クリックし、 **[新規作成]**、 **[資格情報]** の順にクリックします。 **[ID]** にストレージ アカウント名、 **[パスワード]** にアクセス キーを指定します。  
   
  **[Azure ストレージ コンテナー]**  
  Windows Azure ストレージ コンテナーの名前を指定します。  

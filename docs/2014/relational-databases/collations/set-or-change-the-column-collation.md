@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
 - collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3de84f26e894f00760a45d5e65769c0db8d4b009
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e215539e97e09fd7512f7673015d07f32e956730
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298512"
 ---
 # <a name="set-or-change-the-column-collation"></a>列の照合順序の設定または変更
-  データベースの照合順序をオーバーライドする`char`、 `varchar`、 `text`、 `nchar`、 `nvarchar`、および`ntext`テーブルの特定の列に異なる照合順序を指定し、次のいずれかを使用してデータ。  
+  データベース照合順序をオーバーライドする`char`、 `varchar`、 `text`、 `nchar`、 `nvarchar`、および`ntext`別のテーブルの特定の列の照合順序を指定し、次のいずれかを使用してデータ。  
   
 -   [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) と [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)の COLLATE 句。 以下に例を示します。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36071437"
  **tempdb**を操作する場合、 [COLLATE](/sql/t-sql/statements/collations) 句に *database_default* オプションを指定することで、一時テーブルの列で、接続の現在のユーザー データベースでの既定の照合順序を **tempdb**の照合順序の代わりに使用するように指定することもできます。  
   
 ## <a name="collations-and-text-columns"></a>照合順序と text 列  
- 挿入または内の値を更新することができます、`text`その照合順序がデータベースの既定の照合順序のコード ページから別の列です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、値がこの列の照合順序に暗黙的に変換されます。  
+ 挿入する値を更新、`text`列の照合順序は、データベースの既定の照合順序のコード ページと異なる。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、値がこの列の照合順序に暗黙的に変換されます。  
   
 ## <a name="collations-and-tempdb"></a>照合順序と tempdb  
  **tempdb** データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動されるたびに作成され、 **model** データベースと同じ既定の照合順序が設定されます。 これは、通常、インスタンスの既定の照合順序と同じになります。 ユーザー データベースを作成して、 **model**と異なる既定の照合順序を指定すると、そのユーザー データベースでは **tempdb**と異なる既定の照合順序が使用されます。 一時ストアド プロシージャや一時テーブルは、すべて **tempdb**内に作成および格納されます。 その結果、一時テーブル内のすべての暗黙の列、および一時ストアド プロシージャ内で強制的に適用されるすべての既定の定数、変数、パラメーターでは、パーマネント テーブルやストアド プロシージャで作成される同等のオブジェクトとは異なる照合順序が指定されます。  

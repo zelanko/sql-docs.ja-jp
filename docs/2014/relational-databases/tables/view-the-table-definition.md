@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - showing table properties
 - displaying table properties
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - viewing table properties
 ms.assetid: 1865fb7c-f480-4100-9007-df5364cd002a
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2d8ae43c8d7a9c509aac25a73b597655c6a35d8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7b41275480fb2ae4adcc6f5e92c7e5c41ce9137f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290340"
 ---
 # <a name="view-the-table-definition"></a>テーブルの定義の表示
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブルのプロパティを表示できます。  

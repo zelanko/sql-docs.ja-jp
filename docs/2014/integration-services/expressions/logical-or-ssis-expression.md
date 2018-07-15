@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OR operator
 - logical OR (||)
@@ -17,13 +17,13 @@ ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 271de03eb56cc6195c15045dcd44637600c37ef9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f69d71354db0c658a644c0cd4068e894b3fb94fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316972"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (論理 OR) (SSIS 式)
   論理 OR 演算を実行します。 一方または両方の条件が TRUE の場合、式は TRUE に評価されます。  
@@ -68,7 +68,7 @@ StandardCost < @SPrice || ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>参照  
- [&#124;&#40;ビット演算子包含的 OR&#41; &#40;SSIS 式&#41;](bitwise-inclusive-or-ssis-expression.md)   
+ [&#124;&#40;ビット演算包含的 OR&#41; &#40;SSIS 式&#41;](bitwise-inclusive-or-ssis-expression.md)   
  [^ &#40;ビット演算子排他的 OR&#41; &#40;SSIS 式&#41;](bitwise-exclusive-or-ssis-expression.md)   
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
  [演算子&#40;SSIS 式&#41;](operators-ssis-expression.md)  

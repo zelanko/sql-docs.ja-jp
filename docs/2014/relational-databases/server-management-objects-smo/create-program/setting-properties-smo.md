@@ -1,5 +1,5 @@
 ---
-title: プロパティの設定 |Microsoft ドキュメント
+title: プロパティの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d372a0c777e8b4f345b821c3d2c7c864f0f5229c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f24590f0e8f496c5ac5620153cdbfd3459bc6557
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309472"
 ---
 # <a name="setting-properties"></a>プロパティの設定
-  プロパティとは、オブジェクトに関する説明情報を格納する値のことです。 たとえば、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]構成オプションがによって表される、<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>オブジェクトのプロパティです。 プロパティは、直接、またはプロパティ コレクションを使用して間接的にアクセスすることができます。 プロパティへの直接アクセス時には、次の構文を使用します。  
+  プロパティとは、オブジェクトに関する説明情報を格納する値のことです。 たとえば、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]構成オプションがによって表される、<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>オブジェクトのプロパティ。 プロパティは、直接、またはプロパティ コレクションを使用して間接的にアクセスすることができます。 プロパティへの直接アクセス時には、次の構文を使用します。  
   
  `objInstance.PropertyName`  
   
  プロパティ値は、そのプロパティが読み取り/書き込みアクセスまたは読み取り専用アクセスのどちらであるかに応じて、変更または取得を行うことができます。 また、オブジェクトを作成する前に、特定のプロパティを設定する必要もあります。 詳細については、SMO 参考資料で特定のオブジェクトを参照してください。  
   
 > [!NOTE]  
->  子オブジェクトのコレクションは、オブジェクトのプロパティとして表現されます。 たとえば、`Tables`コレクションのプロパティは、`Server`オブジェクト。 詳細については、次を参照してください。[コレクションの使用](using-collections.md)です。  
+>  子オブジェクトのコレクションは、オブジェクトのプロパティとして表現されます。 たとえば、`Tables`コレクションのプロパティである、`Server`オブジェクト。 詳細については、次を参照してください。[を使用してコレクション](using-collections.md)します。  
   
  オブジェクトのプロパティは、Properties コレクションのメンバーです。 Properties コレクションを使用して、オブジェクトの各プロパティを反復処理することができます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36085177"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の以前のバージョンで、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能を表すプロパティにアクセスしようとするなど、サーバーのバージョンがプロパティをサポートしていない場合。  
   
--   サーバーはデータを提供しません、プロパティの場合にしようとするなどを表すプロパティにアクセスする、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コンポーネントがインストールされていません。  
+-   サーバーはデータを提供しません、プロパティの場合にしようとするなどを表すプロパティにアクセスする、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コンポーネントがインストールされていないです。  
   
  <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> および <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException> の SMO 例外をキャッチすることによって、これらの状況に対処することができます。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "36085177"
   
 3.  大量のメモリを使用するプロパティ。 使用できないその他のプロパティが大量のメモリを使用していて、<xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A>プロパティ値が true の (など<xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A>)。 これらのプロパティは、明示的に参照された場合にのみ読み込まれます。  
   
- 部分的に読み込まれた状態で提供されたプロパティだけでなく、それ以外のプロパティもアプリケーションによってフェッチされる場合、これらの追加のプロパティを取得するクエリが送信され、完全に読み込まれた状態にスケール アップされます。 これにより、クライアントとサーバーの間に不要なトラフィックが発生する場合があります。 さらに最適化を呼び出すことで実現できる、<xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A>メソッドです。 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドを使用すると、オブジェクトの初期化時に読み込まれるプロパティを指定することができます。  
+ 部分的に読み込まれた状態で提供されたプロパティだけでなく、それ以外のプロパティもアプリケーションによってフェッチされる場合、これらの追加のプロパティを取得するクエリが送信され、完全に読み込まれた状態にスケール アップされます。 これにより、クライアントとサーバーの間に不要なトラフィックが発生する場合があります。 さらに最適化を呼び出すことで実現できる、<xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A>メソッド。 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドを使用すると、オブジェクトの初期化時に読み込まれるプロパティを指定することができます。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドでは、アプリケーションの残り部分に対して、またはリセットされるまでの、プロパティの読み込み動作を設定することができます。 使用して元の動作を保存することができます、<xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A>メソッドと必要に応じて復元されます。  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドでは、アプリケーションの残り部分に対して、またはリセットされるまでの、プロパティの読み込み動作を設定することができます。 使用して、元の動作を保存することができます、<xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A>メソッドと、必要に応じて復元されます。  
   
 ## <a name="examples"></a>使用例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
@@ -123,14 +123,14 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Visual Basic でのオブジェクトのすべてのプロパティの反復処理  
- このコード例を反復処理、`Properties`のコレクション、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>オブジェクトをで表示する、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]出力画面。  
+ このコード例を反復処理、`Properties`のコレクション、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>オブジェクトし、で表示する、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]出力画面。  
   
- この例で、<xref:Microsoft.SqlServer.Management.Smo.Property>オブジェクトはでもあるために、角かっこで囲まれています、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]キーワード。  
+ 例では、<xref:Microsoft.SqlServer.Management.Smo.Property>オブジェクトが設定されている角かっこでもあるため、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]キーワード。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBProperties3](SMO How to#SMO_VBProperties3)]  -->  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Visual C# でのオブジェクトのすべてのプロパティの反復処理  
- このコード例を反復処理、`Properties`のコレクション、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>オブジェクトをで表示する、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]出力画面。  
+ このコード例を反復処理、`Properties`のコレクション、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>オブジェクトし、で表示する、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]出力画面。  
   
 ```  
 {   

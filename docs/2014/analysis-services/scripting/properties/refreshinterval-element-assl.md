@@ -1,5 +1,5 @@
 ---
-title: RefreshInterval 要素 (ASSL) |Microsoft ドキュメント
+title: RefreshInterval 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RefreshInterval element
 ms.assetid: 2761d26a-5fb0-452c-9a89-12f8dc658c33
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60dbb6d89483305d971488209b8e13f85e7c2840
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3fecbe3eef6eb68af256dfcc0a94ddef1ba3aee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315052"
 ---
 # <a name="refreshinterval-element-assl"></a>RefreshInterval 要素 (ASSL)
   親要素に関連付けられたバインド データの更新間隔を指定します。  
@@ -53,7 +53,7 @@ ms.locfileid: "36085305"
 |データ型と長さ|XML Duration|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
 |既定値|[ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md)または[ProactiveCachingQueryBinding](../data-type/querybinding-data-type-assl.md) PT 1 を =|  
-|既定値|その他のすべて PT1m を =|  
+|既定値|他のすべて PT1m を =|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

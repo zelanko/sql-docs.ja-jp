@@ -1,5 +1,5 @@
 ---
-title: HoldoutActualSize 要素 |Microsoft ドキュメント
+title: HoldoutActualSize 要素 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - HoldoutActualSize element
 ms.assetid: 606a6674-cedb-4cee-82d0-26589f084dd9
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe781b9e3381a97d9ad75440dac40e281881419f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f74b11b9032285bf45bc8b7705953adf6d58f04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297282"
 ---
 # <a name="holdoutactualsize-element"></a>HoldoutActualSize 要素
   テスト セットを含む、提示されたパーティションの処理後の実際のサイズを示す、 [MiningStructure](../objects/miningstructure-element-assl.md)要素。 データ セット内の残りのケースは、トレーニングに使用されます。 このプロパティは読み取り専用です。  
@@ -58,7 +58,7 @@ ms.locfileid: "36085303"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 値は、`HoldoutActualSize`の値とソース データに依存[HoldoutMaxCases](holdoutmaxcases-element.md)、 [HoldoutMaxPercent](holdoutmaxpercent-element.md)、および[HoldoutSeed](holdoutseed-element.md)です。 このため、`HoldoutActualSize` の値は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でマイニング構造が処理されるまで使用できません。  
+ 値は、`HoldoutActualSize`はの値と、ソース データに依存[HoldoutMaxCases](holdoutmaxcases-element.md)、 [HoldoutMaxPercent](holdoutmaxpercent-element.md)、および[HoldoutSeed](holdoutseed-element.md)します。 このため、`HoldoutActualSize` の値は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でマイニング構造が処理されるまで使用できません。  
   
  親に対応する要素`HoldoutActualSize`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MiningStructure>します。  
   

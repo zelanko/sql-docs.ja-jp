@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], Distributors
 - Distributors [SQL Server replication], security
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f4378be21503d0885774f630dcf0d0d8460389c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8e5dadadffd2703dc3d2f3feab081be946c1c8ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290398"
 ---
 # <a name="secure-the-distributor"></a>ディストリビューターのセキュリティ保護
   レプリケーション エージェントのうち、ログ リーダー エージェント、スナップショット エージェント、キュー リーダー エージェント、ディストリビューション エージェント、およびマージ エージェントは、ディストリビューターに接続します。 最低限必要な権限のみを与え、かつすべてのパスワードの格納を保護するという原則に従って、これらの各エージェントに対し適切なログインを指定することは重要です。  

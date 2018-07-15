@@ -1,5 +1,5 @@
 ---
-title: データ定義クエリ (データ マイニング) |Microsoft ドキュメント
+title: データ定義クエリ (データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 01a4385f97f7edcb6771d122c1ab90d5ce633e3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f521923f6fb94bda3465ff8d85ef93d91bceef8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234342"
 ---
 # <a name="data-definition-queries-data-mining"></a>データ定義クエリ (データ マイニング)
   データ マイニングの *データ定義クエリ* というカテゴリは、次の処理を実行する DMX ステートメントまたは XMLA コマンドを意味します。  
@@ -88,7 +88,7 @@ ms.locfileid: "36070588"
 |DMX クエリ用のテンプレートの使用|[SQL Server Management Studio での Analysis Services テンプレートの使用](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |予測クエリ ビルダーを使用した、あらゆる種類のクエリの設計|[予測クエリ ビルダーを使用した予測クエリの作成](create-a-prediction-query-using-the-prediction-query-builder.md)|  
 |SQLServer Profiler を使用したクエリ定義のキャプチャ、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を監視するためのトレースの使用|[SQL Server Profiler を使用した Analysis Services の監視](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で提供されるスクリプト言語やプログラム言語の詳細|[XML for Analysis &#40;XMLA&#41;参照](../xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [分析管理オブジェクトを使用した開発&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で提供されるスクリプト言語やプログラム言語の詳細|[XML for Analysis &#40;XMLA&#41;リファレンス](../xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [分析管理オブジェクトを使用した開発&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でのモデルの管理の詳細。|[データ マイニング オブジェクトのエクスポートおよびインポート](export-and-import-data-mining-objects.md)<br /><br /> [エクスポート&AMP;#40;DMX&AMP;#41;](/sql/dmx/export-dmx)<br /><br /> [インポート&AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)|  
 |OPENROWSET、および外部データへのクエリのための他の方法の詳細|[<ソース データ クエリ>](/sql/dmx/source-data-query)|  
   
