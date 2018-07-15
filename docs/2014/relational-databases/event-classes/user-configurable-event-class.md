@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - User-Configurable event class
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7bf1ce2159300b790042ac7979cdc63adae3e05b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8bc28433c9d54f3563bb635cbdbb12590f985a40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300462"
 ---
 # <a name="user-configurable-event-class"></a>User configurable イベント クラス
   ユーザー定義のイベントを監視するには、User configurable イベント カテゴリを使用します。 ユーザー定義のイベント クラスを作成して、他のイベント カテゴリにあるシステム提供のイベント クラスでは監視できないイベントを監視します。 たとえば、ユーザー定義のイベントを作成して、テスト中のアプリケーションの進行状況を監視できます。 アプリケーションを実行すると、あらかじめ定義したポイントでイベントが生成され、アプリケーションの現在の実行ポイントを特定できます。  

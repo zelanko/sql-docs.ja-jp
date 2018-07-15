@@ -1,5 +1,5 @@
 ---
-title: 埋め込みデータ ソースと共有データ接続またはデータ ソース (レポート ビルダーおよび SSRS) |Microsoft ドキュメント
+title: 埋め込みし、共有データ接続またはデータ ソース (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - embedded data sources
 - shared data sources
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6c75ca2d608e54df537ec5bc37f7f84312d5955c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f83f7b150fb709e4b6716f8a49d802949a62e9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282638"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)
   クエリが実行されるとき、またはレポートが処理されるとき、レポートはデータを取得するためにデータ接続を使用します。 ユーザーは、そのデータ接続を、リレーショナル データベース、多次元データベース、Web サービスなどのデータ ソースに接続する組み込みのデータ接続の種類の一覧から選択します。 データ接続の説明では、次の用語を使用します。  
@@ -48,16 +48,16 @@ ms.locfileid: "36077058"
 ## <a name="shared-data-sources"></a>共有データ ソース  
  共有データ ソースは、よく使用するデータ ソースがある場合に役立ちます。 可能な限り共有データ ソースを使用することをお勧めします。 レポートやレポートへのアクセスが管理しやすくなり、レポートやレポートからアクセスするデータ ソースの安全性を高めることができます。 共有データ ソースが必要な場合は、システム管理者に依頼して作成してもらってください。  
   
- レポート ビルダーで共有データ ソースを作成することはできません。 共有データ ソースはレポート サーバーで参照し、選択できます。 詳細については、次を参照してください。[データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)です。  
+ レポート ビルダーで共有データ ソースを作成することはできません。 共有データ ソースはレポート サーバーで参照し、選択できます。 詳細については、次を参照してください。[データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)します。  
   
  レポート デザイナーでは、レポート サーバー上の共有データ ソースを参照できません。 共有データ ソースは、ソリューション エクスプローラーでプロジェクトの一部として作成し、レポート サーバーに配置するかどうかを選択できます。 使用しているコンピューターとレポート サーバーの資格情報の相違のため、これらをローカルでのみ使用するように選択する場合もあります。 詳細については、「[Reporting Services でのデータ接続、データ ソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)」を参照してください。  
   
- 次のアイコンがレポート サーバーのフォルダー階層内の共有データ ソース アイテムを示します:![共有データ ソース アイコン](media/hlp-16datasource.png "共有データ ソースのアイコン")  
+ 次のアイコンは、レポート サーバー フォルダー階層内の共有データ ソース アイテムを示します:![共有データ ソースのアイコン](media/hlp-16datasource.png "共有データ ソースのアイコン")  
   
 ## <a name="embedded-data-sources"></a>埋め込みデータ ソース  
  埋め込みデータ ソースは、レポート定義に保存されるデータ接続です。 埋め込まれたデータ ソースの接続情報は、その情報が埋め込まれたレポートでのみ使用できます。 埋め込みデータ ソースを定義および管理するには、 **[データ ソースのプロパティ]** ダイアログ ボックスを使用します。  
   
-##  <a name="Comparing"></a> 埋め込みデータ ソースと共有データ ソースの比較  
+##  <a name="Comparing"></a> 埋め込みし、共有データ ソースの比較  
  次の表は、埋め込みデータ ソースと共有データ ソースの違いをまとめたものです。  
   
 |説明|埋め込み<br /><br /> [データ ソース]|Shared<br /><br /> [データ ソース]|  
@@ -69,7 +69,7 @@ ms.locfileid: "36077058"
 |コンポーネントに必要||![使用可能](media/greencheck.gif "使用可能")|  
   
 ## <a name="data-source-credentials"></a>データ ソースの資格情報  
- 資格情報は、埋め込みデータ ソースの作成、クエリの実行、またはレポート処理時のデータ取得のために使用されます。 データ ソースの所有者が、データへのアクセスに使用する必要がある資格情報の種類を決定します。 資格情報は、データ接続とは別に、レポート作成環境内のレポート サーバー、SharePoint サイト、またはローカル コンピューターで管理されます。 データ ソースの種類に応じて、資格情報を保存して各ユーザーに入力を求めないようにすることも、入力を求めるように設定することもできます。 必要とされる資格情報は、データ ソースへの接続に、自分のコンピューターを使用しているかレポート サーバーを使用しているかに応じて異なる場合があります。 詳細については、次を参照してください。[レポート ビルダーでの資格情報を指定](../../2014/reporting-services/specify-credentials-in-report-builder.md)と[データ接続、データ ソース、および Reporting Services に接続文字列が](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)です。  
+ 資格情報は、埋め込みデータ ソースの作成、クエリの実行、またはレポート処理時のデータ取得のために使用されます。 データ ソースの所有者が、データへのアクセスに使用する必要がある資格情報の種類を決定します。 資格情報は、データ接続とは別に、レポート作成環境内のレポート サーバー、SharePoint サイト、またはローカル コンピューターで管理されます。 データ ソースの種類に応じて、資格情報を保存して各ユーザーに入力を求めないようにすることも、入力を求めるように設定することもできます。 必要とされる資格情報は、データ ソースへの接続に、自分のコンピューターを使用しているかレポート サーバーを使用しているかに応じて異なる場合があります。 詳細については、次を参照してください。[レポート ビルダーでの資格情報の指定](../../2014/reporting-services/specify-credentials-in-report-builder.md)と[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
   
 ## <a name="see-also"></a>参照  
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)   

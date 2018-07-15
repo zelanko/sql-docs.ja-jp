@@ -1,5 +1,5 @@
 ---
-title: データ プロファイル ビューアーの F1 ヘルプ |Microsoft ドキュメント
+title: データ プロファイル ビューアーの F1 ヘルプ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dataprofileviewer.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 41f29fae6a9f9284bd35b2779029d7b3f176bcd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27869a87ed10056517806bd872ef1e48d572690b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302392"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Data Profile Viewer の F1 ヘルプ
   Data Profile Viewer を使用すると、データ プロファイル タスクの出力を表示できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "36073533"
  Data Profile Viewer の使用方法の詳細については、「 [Data Profile Viewer](control-flow/data-profile-viewer.md)」を参照してください。 データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](control-flow/data-profiling-task.md)」を参照してください。データ プロファイル タスクを使用すると、Data Profile Viewer で分析するプロファイル出力を作成できます。  
   
 ## <a name="static-options"></a>静的オプション  
- **Open**  
+ **[ファイル]**  
  データ プロファイル タスクの出力を含む保存済みファイルを参照する場合にクリックします。  
   
  **[プロファイル]** ペイン  
@@ -58,10 +58,10 @@ ms.locfileid: "36073533"
  この列の最大の長さが表示されます。  
   
  **[先頭のスペースを無視する]**  
- このプロファイルを使って計算されたかどうかが表示されます、 `IgnoreLeadingSpaces` True または False の値。 このプロパティは、[データ プロファイル タスク エディター] の **[プロファイル要求]** ページで設定されています。  
+ このプロファイルが計算されたかどうかが表示されます、 `IgnoreLeadingSpaces` True または False の値。 このプロパティは、[データ プロファイル タスク エディター] の **[プロファイル要求]** ページで設定されています。  
   
  **[末尾のスペースを無視する]**  
- このプロファイルを使って計算されたかどうかが表示されます、 `IgnoreTrailingSpaces` True または False の値。 このプロパティは、[データ プロファイル タスク エディター] の **[プロファイル要求]** ページで設定されています。  
+ このプロファイルが計算されたかどうかが表示されます、 `IgnoreTrailingSpaces` True または False の値。 このプロパティは、[データ プロファイル タスク エディター] の **[プロファイル要求]** ページで設定されています。  
   
  **行数**  
  テーブルまたはビューの行数が表示されます。  
@@ -126,7 +126,7 @@ ms.locfileid: "36073533"
  テーブルまたはビューの行数が表示されます。  
   
 #### <a name="detailed-value-distribution-pane"></a>[詳細な値分布] ペイン  
- **Value**  
+ **[値]**  
  プロファイルされた列の個別の値が表示されます。  
   
  **Count**  

@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) サーバー |Microsoft ドキュメント
+title: Integration Services (SSIS) サーバー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
 - managing packages [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 69598f8ca412e32a76ea841f9a234d01c6847718
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea60bbdac3df4cd1130ba4afee83f882f138d33d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289398"
 ---
 # <a name="integration-services-ssis-server"></a>Integration Services (SSIS) サーバー
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でパッケージをデザインしてテストしたら、パッケージを含むプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "36177810"
  SSISDB カタログの機能の概要については、「[SSIS カタログ](ssis-catalog.md)」を参照してください。  
   
 ## <a name="high-availability"></a>高可用性  
- 他のユーザー データベースと同様に、`SSISDB`データベースは、データベース ミラーリングとレプリケーションをサポートします。 ミラーリングとレプリケーションの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
+ などの他のユーザー データベース、`SSISDB`データベースでデータベース ミラーリングとレプリケーションはサポートされます。 ミラーリングとレプリケーションの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
  SSIS と AlwaysOn 可用性グループを利用して SSISDB とそのコンテンツの高可用性を実現することもできます。 詳細については、Matt Masson による blogs.msdn.com のブログ記事「 [SSIS と AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)」を参照してください。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36177810"
   
 -   **SSISDB データベース**  
   
-     `SSISDB`下にあるデータベースが表示される、**データベース**オブジェクト エクスプ ローラー内のノードです。 ビューに対してクエリを実行し、ストアド プロシージャを呼び出して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーとサーバーに格納されているオブジェクトを管理できます。  
+     `SSISDB`データベースのもと、**データベース**オブジェクト エクスプ ローラーでノード。 ビューに対してクエリを実行し、ストアド プロシージャを呼び出して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーとサーバーに格納されているオブジェクトを管理できます。  
   
 -   **統合サービス カタログ**  
   

@@ -1,5 +1,5 @@
 ---
-title: ActionID 要素 (ASSL) |Microsoft ドキュメント
+title: ActionID 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ActionID element
 ms.assetid: 2c9c66b2-a7ea-4874-a0ed-020ce3feab20
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 13e83d3a022416de56cba7bbf6693ea408b51562
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7405b3b6dd7f673b199509388d43164f47dd90eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304552"
 ---
 # <a name="actionid-element-assl"></a>ActionID 要素 (ASSL)
-  名前を含む、[アクション](../objects/action-element-assl.md)要素で定義されている、[キューブ](../objects/cube-element-assl.md)要素で使用できるようにした、[パースペクティブ](../objects/perspective-element-assl.md)要素として、 [PerspectiveAction](../data-type/action-data-type-assl.md)要素。  
+  名前を含む、[アクション](../objects/action-element-assl.md)要素で定義されている、[キューブ](../objects/cube-element-assl.md)要素で使用可能になる、[パースペクティブ](../objects/perspective-element-assl.md)要素として、 [PerspectiveAction](../data-type/action-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

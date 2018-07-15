@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1b92e520492b579009c0f68e07592b7c2916fd75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e1e100be7ab60e98b53681cf11a811b9627cfb57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309982"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>[エクスプローラー] 機能領域 (マスター データ マネージャー)
   [エクスプローラー] 機能領域では、データを更新し、階層とコレクションを操作できます。  
@@ -27,7 +27,7 @@ ms.locfileid: "36177121"
 ## <a name="data-management"></a>データ管理  
  [属性&#40;マスター データ サービス&#41;](attributes-master-data-services.md)  
   
- [属性の型を変更する&#40;MDS アドインを Excel 用&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
+ [属性の型を変更する&#40;MDS アドインの Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
   
  [メンバー&#40;マスター データ サービス&#41;](../../2014/master-data-services/members-master-data-services.md)  
   

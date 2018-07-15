@@ -1,5 +1,5 @@
 ---
-title: HoldoutMaxCases 要素 |Microsoft ドキュメント
+title: HoldoutMaxCases 要素 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - HoldoutMaxCases element
 ms.assetid: 58d94d10-e11e-4368-b3b8-dff23e1947cd
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 083ff97f8d739f4f970a6fec8a5c7353b43b5763
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6eb53625e7f1fd7f595871bf505481cad4145866
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314742"
 ---
 # <a name="holdoutmaxcases-element"></a>HoldoutMaxCases 要素
-  テスト セットを含む、提示されたパーティションに使用するデータ ソース内のケースの最大数を指定、 [MiningStructure](../objects/miningstructure-element-assl.md)要素。 データ セット内の残りのケースは、トレーニングに使用されます。 値が 0 の場合、テスト セットとして提示できるケースの数は制限されません。  
+  テスト セットを含む、提示されたパーティションに使用するデータ ソース内のケースの最大数を指定します、 [MiningStructure](../objects/miningstructure-element-assl.md)要素。 データ セット内の残りのケースは、トレーニングに使用されます。 値が 0 の場合、テスト セットとして提示できるケースの数は制限されません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36176708"
   
  `HoldoutMaxCases` が既定値の 0 に設定され、`HoldoutMaxPercent` に値が設定されていない場合、データ セット全体がトレーニングに使用されます。  
   
- 新しいプロパティ`HoldoutMaxCases`、 `HoldoutMaxPercent`、 `HoldoutSeed`、または`HoldoutActualSize`でのみ使用可能な[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]以降のバージョン。 構文の説明に示すように、これらのプロパティを新しい名前空間を付ける必要がありますので、または[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]はエラーを返します。  
+ 新しいプロパティ`HoldoutMaxCases`、 `HoldoutMaxPercent`、 `HoldoutSeed`、または`HoldoutActualSize`でのみ使用可能な[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]以降のバージョン。 構文の説明に示すように、これらのプロパティを新しい名前空間を付ける必要があります、または[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]はエラーを返します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] はマイニング構造での提示されたパーティションの使用をサポートしていませんでした。 したがって、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、提示されたパラメーター (`HoldoutMaxCases`、`HoldoutMaxPercent`、`HoldoutSeed`、または `HoldoutActualSize`) のいずれかを含む [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] スクリプト言語 (ASSL) ステートメントは使用できません。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] の ASSL ステートメントでこれらの提示されたパラメーターのいずれかを使用すると、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でエラーが返されます。  

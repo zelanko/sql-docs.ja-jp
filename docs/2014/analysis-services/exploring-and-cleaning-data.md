@@ -1,5 +1,5 @@
 ---
-title: 探索とデータのクリーニング |Microsoft ドキュメント
+title: 探索とデータのクリーニング |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c39eaa58152fd1a75eeaefdc79bae93ccd36b98
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0200bb66afa6728f3bd5587774dc9f80fb10c5fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304722"
 ---
 # <a name="exploring-and-cleaning-data"></a>データの探索とクリーニング
   データの準備は、データのクレンジングよりはるかに大きな概念です。 データの準備方法によって、最終的な結果の解釈も影響を受けることを忘れないでください。 データの準備には、次のようなタスクがあります。  
@@ -104,7 +104,7 @@ ms.locfileid: "36071797"
   
 ## <a name="see-also"></a>参照  
  [データ マイニング モデルを作成します。](creating-a-data-mining-model.md)   
- [モデルの検証と予測用モデルの使用&#40;アドイン Excel 用データ マイニング&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
- [展開して、マイニング モデルをスケーリング&#40;アドイン Excel 用データ マイニング&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+ [モデルの検証と予測用モデルの使用&#40;データ マイニング Excel 用アドイン&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+ [展開して、マイニング モデルのスケーリング&#40;データ マイニング Excel 用アドイン&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

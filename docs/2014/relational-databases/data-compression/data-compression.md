@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-compression
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
 - indexes [SQL Server], compressed
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 986f0e94559804539889eeb1e7618327eee68165
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d76a9fa3b31b90890ae261ccce89acbc9829cc14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320412"
 ---
 # <a name="data-compression"></a>Data Compression
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 行ストア テーブルおよびインデックス、行とページの圧縮をサポートし、列ストア テーブルおよびインデックスの列ストア インデックスと列ストアの保存用圧縮をサポートしています。  
@@ -67,7 +66,7 @@ ms.locfileid: "36176195"
   
 -   圧縮を使用すると、ページに格納できる行数が増えますが、テーブルまたはインデックスの最大行サイズは変更されません。  
   
--   最大行サイズに圧縮のオーバーヘッドを加えると最大行サイズが 8,060 バイトを超える場合、テーブルで圧縮を有効にすることはできません。 たとえば、列 c1 のあるテーブル`char(8000)`および c2`char(53)`追加の圧縮のオーバーヘッドが原因で圧縮できません。 vardecimal ストレージ形式を使用する場合は、この形式が有効になると行サイズのチェックが実行されます。 行とページの圧縮の場合は、オブジェクトが最初に圧縮されるときに行サイズのチェックが実行され、各行が挿入または変更されるときにもチェックされます。 圧縮では、次の 2 つのルールが適用されます。  
+-   最大行サイズに圧縮のオーバーヘッドを加えると最大行サイズが 8,060 バイトを超える場合、テーブルで圧縮を有効にすることはできません。 たとえば、列 c1 のあるテーブル`char(8000)`および c2`char(53)`追加の圧縮のオーバーヘッドが原因で圧縮することはできません。 vardecimal ストレージ形式を使用する場合は、この形式が有効になると行サイズのチェックが実行されます。 行とページの圧縮の場合は、オブジェクトが最初に圧縮されるときに行サイズのチェックが実行され、各行が挿入または変更されるときにもチェックされます。 圧縮では、次の 2 つのルールが適用されます。  
   
     -   固定長の型に対する更新が常に成功する必要があります。  
   
@@ -118,7 +117,7 @@ ms.locfileid: "36176195"
 ### <a name="basics"></a>の基本操作  
  列ストア テーブルおよび列ストア インデックスは常に列ストア圧縮を使用して格納されます。 保存用圧縮と呼ばれる追加の圧縮機能を構成するによって、列ストアのデータ サイズをさらに小さくすることができます。  保存用圧縮を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータに対して Microsoft Xpress 圧縮アルゴリズムを実行します。 次の種類のデータ圧縮を使用して、保存用圧縮を追加または削除します。  
   
--   使用して`COLUMNSTORE_ARCHIVE`保存用圧縮で列ストア データを圧縮するデータ圧縮します。  
+-   使用`COLUMNSTORE_ARCHIVE`保存用圧縮で列ストア データを圧縮するデータ圧縮。  
   
 -   保存用圧縮を解凍するには、 **COLUMNSTORE** データ圧縮を使用します。 この結果として生成されるデータは、引き続き列データの圧縮を使用して圧縮できます。  
   
@@ -172,9 +171,9 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>メタデータ  
  次のシステム ビューには、クラスター化インデックスのデータ圧縮に関する情報が含まれています。  
   
--   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -`type`と`type_desc`列には、CLUSTERED COLUMNSTORE と NONCLUSTERED COLUMNSTORE が含まれます。  
+-   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -`type`と`type_desc`列に CLUSTERED COLUMNSTORE と NONCLUSTERED COLUMNSTORE が含まれています。  
   
--   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) –`data_compression`と`data_compression_desc`列には、COLUMNSTORE と COLUMNSTORE_ARCHIVE が含まれます。  
+-   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) –`data_compression`と`data_compression_desc`列には、COLUMNSTORE と COLUMNSTORE_ARCHIVE が含まれています。  
   
  プロシージャ [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) は、列ストア インデックスに適用されません。  
   

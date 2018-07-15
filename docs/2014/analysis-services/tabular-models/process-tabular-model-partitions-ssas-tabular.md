@@ -1,5 +1,5 @@
 ---
-title: テーブル モデル パーティション (SSAS テーブル) の処理 |Microsoft ドキュメント
+title: テーブル モデル パーティション (SSAS テーブル) の処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3329eb6e7f003f3e43407aa6948b844c3bfda27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e8e8622ec7b278b5e00f43d9a9c0fe1fc26efe1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291368"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>テーブル モデル パーティションの処理 (SSAS テーブル)
   パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 このトピックのタスクでは、 **で** [パーティションの処理] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して、モデル データベースでパーティションを処理する方法について説明します。  
@@ -44,6 +44,6 @@ ms.locfileid: "36177388"
   
 ## <a name="see-also"></a>参照  
  [テーブル モデル パーティション&#40;SSAS 表形式&#41;](partitions-ssas-tabular.md)   
- [表形式モデルのパーティション作成し、管理&#40;SSAS 表形式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [テーブル モデル パーティション作成し、管理&#40;SSAS 表形式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

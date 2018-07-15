@@ -1,5 +1,5 @@
 ---
-title: 作成、変更、およびスキーマの削除 |Microsoft ドキュメント
+title: 作成、変更、およびスキーマの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a9d25849fe2882c8d9fe249e1146297c07f3eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7bfbd8aa8265fd0cdc4615cb8a5ed2065e559138
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290348"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>スキーマの作成、変更、および削除
   <xref:Microsoft.SqlServer.Management.Smo.Schema> オブジェクトは、データベース オブジェクトの所有権コンテキストを表現します。 <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Database> プロパティは、<xref:Microsoft.SqlServer.Management.Smo.Schema> オブジェクトのコレクションを表現します。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="creating-altering-and-removing-a-schema-in-visual-basic"></a>Visual Basic でのスキーマの作成、変更、および削除  
  このコード例では、スキーマを作成してデータベース オブジェクトに割り当てる方法を示します。 その後、ユーザーに権限を許可し、スキーマに新しいテーブルを作成します。  

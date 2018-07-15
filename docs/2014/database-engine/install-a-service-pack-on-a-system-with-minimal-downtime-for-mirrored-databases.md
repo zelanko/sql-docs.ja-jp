@@ -1,14 +1,13 @@
 ---
-title: 最小限のダウンタイムでのシステム上のミラー化データベースの Service Pack のインストール |Microsoft ドキュメント
+title: ミラー化されたデータベースの最小限のダウンタイムでのシステム サービス パックをインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
 - database mirroring [SQL Server], upgrading system
@@ -18,18 +17,18 @@ helpviewer_keywords:
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e15b15020dcf28ad83bfbc50ab18e0005c71a4d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296922"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>ミラー化されたデータベースのダウンタイムを最小限に抑えた Service Pack のシステムへのインストール
-  このトピックでは、Service Pack および修正プログラムをインストールする際に、ミラー化されたデータベースのダウンタイムを最小限に抑える方法について説明します。 このプロセスには、データベース ミラーリングに参加している [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のインスタンスを順次アップグレードする処理が伴います。 このようなアップデート形態と呼ばれる、*ローリング アップデート*フェールオーバーを 1 回だけにダウンタイムを短縮します。 ミラー サーバーが、プリンシパル サーバーから地理的に離れている高パフォーマンス モード セッションでは、ローリング アップデート適しませんに注意してください。  
+  このトピックでは、Service Pack および修正プログラムをインストールする際に、ミラー化されたデータベースのダウンタイムを最小限に抑える方法について説明します。 このプロセスには、データベース ミラーリングに参加している [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のインスタンスを順次アップグレードする処理が伴います。 この形式と呼ばれる更新プログラムの*ローリング アップデート*、単一のフェールオーバーのダウンタイムを短縮します。 ただし、ミラー サーバーがプリンシパル サーバーを地理的に離れている高パフォーマンス モード セッションでは、ローリング アップデートを適切です。  
   
  ローリング アップデートは、次の複数の段階から成るプロセスです。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36176957"
   
     -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページで、 [[動作モード]](../relational-databases/databases/database-properties-mirroring-page.md) オプションを **[高パフォーマンス (非同期)]** に変更します。  
   
-    -   [!INCLUDE[tsql](../includes/tsql-md.md)]: 使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)をトランザクションの安全性を OFF に設定します。  
+    -   [!INCLUDE[tsql](../includes/tsql-md.md)]: 使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)トランザクションの安全性を OFF に設定します。  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>ミラーリング セッションにミラーリング監視サーバーを返す  
   

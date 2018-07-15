@@ -1,5 +1,5 @@
 ---
-title: 主要業績評価指標表現 (テーブル) |Microsoft ドキュメント
+title: 主要業績評価指標表現 (表形式) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4673e33ba3b6ecce58d8d4c06a12d7311b98cde0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cdb38afa672655dbb0a644783e7dc3fadb180b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295412"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>主要業績評価指標表現 (テーブル)
-  KPI は、対象の値に対するベース メジャーによって定義された、値のパフォーマンスを測定に使用されます。  
+  KPI は、対象の値に対するベース メジャーによって定義される値のパフォーマンスを測定に使用されます。  
   
 ## <a name="key-performance-indicator-representation"></a>主要業績評価指標表現  
  テーブル オブジェクト モデルにおける主要業績評価指標 (KPI) とは、クライアント アプリケーションでグラフィカルに表示するための追加情報を含むメジャーです。 通常、KPI には、取得する目標に関する情報、目標と比較するメジャーの状態、クライアント ツールで状態をグラフィカルに表示する方法に関する情報が含まれています。  
@@ -226,6 +226,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular サンプル  
- 表現は、AMO を使用して作成し、主要業績評価指標を操作する方法を理解するには、AMO to Tabular サンプル; のソース コードを参照してください。具体的には次のソース ファイルで確認してください: AddKPIs.cs です。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
+ AMO を使用して作成し、主要業績評価指標を操作する方法を理解しておくには、表現は、AMO to Tabular サンプル; のソース コードを参照してください。具体的には、次のソース ファイルをチェックイン: AddKPIs.cs します。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
   
   

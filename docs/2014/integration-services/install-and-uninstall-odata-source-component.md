@@ -1,5 +1,5 @@
 ---
-title: インストールし、OData ソース コンポーネントをアンインストール |Microsoft ドキュメント
+title: インストールして、OData ソース コンポーネントのアンインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ae48af3dec0be31d329548cbc0d7cd76007dacaf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 039e8dd4f77c0593dcdceb69fbcd53138bc50b91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281328"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>OData ソース コンポーネントのインストールと、アンインストール
   このトピックでは、コンピューターに OData ソース コンポーネントをインストールまたは削除する手順について説明します。  
@@ -41,6 +41,6 @@ ms.locfileid: "36073044"
 >  64 ビット インストーラーは、OData ソース コンポーネントの 32 ビット版と 64 ビット版の両方をインストールします。 32 ビット インストーラーを実行する必要があるのは、32 ビット OS を使用している場合のみです。  
   
 ## <a name="uninstallation"></a>アンインストール  
- OData ソース コンポーネントをアンインストールしてから、**プログラムと機能**メニュー。 検索、 **Microsoft SQL Server SSIS OData ソース コンポーネント (x64)** エントリとクリック**アンインストール**です。  
+ OData ソース コンポーネントをアンインストールしてから、**プログラムと機能**メニュー。 検索、 **Microsoft SQL Server SSIS OData ソース コンポーネント (x64)** エントリをクリックします**アンインストール**します。  
   
   

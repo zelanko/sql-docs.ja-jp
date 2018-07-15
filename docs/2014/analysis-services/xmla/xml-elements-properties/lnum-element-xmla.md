@@ -1,5 +1,5 @@
 ---
-title: LNum 要素 (XMLA) |Microsoft ドキュメント
+title: LNum 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - LNum element
 ms.assetid: 7b9cc143-0c5e-4a8c-a288-8921bfcfd103
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: affdefb04b94d863faa9a9fb6a9eed8ea5b07606
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e19f8f362fad80ce7940eccb59d8170b393abc28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306104"
 ---
 # <a name="lnum-element-xmla"></a>LNum 要素 (XMLA)
   親のレベルの序数位置に関する情報を格納[HierarchyInfo](hierarchyinfo-element-xmla.md)または[メンバー](member-element-xmla.md)要素。  

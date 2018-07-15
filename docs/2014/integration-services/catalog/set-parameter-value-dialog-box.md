@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f79c0ceeb0f1fba931ab4b781a677c85ccc99933
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e63d0d9968ceebd2cb48f770b237a9e71004e61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316872"
 ---
 # <a name="set-parameter-value-dialog-box"></a>[パラメーター値の設定] ダイアログ ボックス
   プロジェクトとパッケージのパラメーターと接続マネージャーのプロパティの値を設定するには、 **[パラメーター値の設定]** ダイアログ ボックスを使用します。  
@@ -46,10 +46,10 @@ ms.locfileid: "36177581"
  **パラメーター**  
  パラメーター名を一覧表示します。  
   
- **Type**  
+ **型**  
  パラメーター値のデータ型を一覧表示します。  
   
- **description**  
+ **[説明]**  
  パラメーターのオプションの説明を表示します。  
   
  **値の編集**  

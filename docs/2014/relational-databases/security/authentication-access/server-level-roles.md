@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.Security.BUILTIN.administrators
 - sql12.Security.NT_AUTHORITY.SYSTEM
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffccb6ce3fcf80441a953f86fc74ec71aac9ab40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8c2878ee1142dfb7069febb652dac6a3aceaba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301902"
 ---
 # <a name="server-level-roles"></a>サーバー レベルのロール
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、サーバー上の権限を管理するためのサーバー レベルのロールを提供します。 これらのロールは、他のプリンシパルをグループ化するセキュリティ プリンシパルです。 サーバー レベルのロールは、その権限のスコープがサーバー全体に及びます (*ロール* は、Windows オペレーティング システムの *グループ* に似ています)。  
@@ -49,7 +48,7 @@ ms.locfileid: "36072754"
 |------------------------------|-----------------|  
 |sysadmin|sysadmin 固定サーバー ロールのメンバーは、サーバーに対するすべての操作を実行できます。|  
 |serveradmin|serveradmin 固定サーバー ロールのメンバーは、サーバー全体の構成オプションを変更したり、サーバーをシャットダウンしたりできます。|  
-|securityadmin|securityadmin 固定サーバー ロールのメンバーは、ログインとログインのプロパティを管理します。 このメンバーは、サーバー レベルの権限を許可、拒否、および禁止できます。 また、データベースにアクセスできる場合は、データベース レベルの権限も許可、拒否、および禁止できます。 また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインのパスワードをリセットできます。<br /><br /> **\*\* セキュリティに関する注意 \*\*** セキュリティ管理者は、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] へのアクセスを許可する権限およびユーザー権限を構成する権限を使用して、ほとんどのサーバー権限を割り当てることができます。 `securityadmin`ロールが扱う必要がありますと同じよう、`sysadmin`ロール。|  
+|securityadmin|securityadmin 固定サーバー ロールのメンバーは、ログインとログインのプロパティを管理します。 このメンバーは、サーバー レベルの権限を許可、拒否、および禁止できます。 また、データベースにアクセスできる場合は、データベース レベルの権限も許可、拒否、および禁止できます。 また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインのパスワードをリセットできます。<br /><br /> **\*\* セキュリティに関する注意 \*\*** セキュリティ管理者は、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] へのアクセスを許可する権限およびユーザー権限を構成する権限を使用して、ほとんどのサーバー権限を割り当てることができます。 `securityadmin`ロールを扱う必要がありますに相当する、`sysadmin`ロール。|  
 |processadmin|processadmin 固定サーバー ロールのメンバーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス内で実行中のプロセスを終了できます。|  
 |setupadmin|setupadmin 固定サーバー ロールのメンバーは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用して、リンク サーバーを追加および削除できます。 (sysadmin メンバーシップは、 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]を使用するときに必要になります)。|  
 |bulkadmin|bulkadmin 固定サーバー ロールのメンバーは、BULK INSERT ステートメントを実行できます。|  
@@ -61,7 +60,7 @@ ms.locfileid: "36072754"
  各固定サーバー ロールには、特定の権限が割り当てられます。 サーバー ロールに割り当てられる権限のチャートについては、「 [データベース エンジンの固定サーバー ロールおよび固定データベース ロール](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)」を参照してください。  
   
 > [!IMPORTANT]  
->  `CONTROL SERVER`権限は似ていますと一致しない、`sysadmin`固定サーバー ロール。 権限があることはロールのメンバーシップを意味せず、ロールのメンバーシップによって権限は付与されません。 (例: `CONTROL SERVER` は `sysadmin` 固定サーバー ロールのメンバーシップを意味しません)。ただし、ロールと同等の権限の間で借用が可能な場合があります。 ほとんどの `DBCC` コマンドと多くのシステム プロシージャには、`sysadmin` 固定サーバー ロールのメンバーシップが必要です。 ストアド プロシージャを必要とする 171 のシステムの一覧について`sysadmin`、メンバーシップ、によるブログ投稿「Andreas Wolter を参照してください[CONTROL SERVER と sysadmin/sa: 権限、システム プロシージャ DBCC、自動スキーマ作成、および権限エスカレーション - 注意事項](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)です。  
+>  `CONTROL SERVER`権限は似ていますが同一ではない、`sysadmin`固定サーバー ロール。 権限があることはロールのメンバーシップを意味せず、ロールのメンバーシップによって権限は付与されません。 (例: `CONTROL SERVER` は `sysadmin` 固定サーバー ロールのメンバーシップを意味しません)。ただし、ロールと同等の権限の間で借用が可能な場合があります。 ほとんどの `DBCC` コマンドと多くのシステム プロシージャには、`sysadmin` 固定サーバー ロールのメンバーシップが必要です。 ストアド プロシージャを必要とする 171 のシステムの一覧について`sysadmin`メンバーシップ、ブログの投稿では、Andreas Wolter を参照してください[CONTROL SERVER と sysadmin/sa: 権限、システム プロシージャ、DBCC、自動スキーマ作成および権限。エスカレーション - 注意事項](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)します。  
   
 ## <a name="server-level-permissions"></a>サーバーレベルの権限  
  ユーザー定義のサーバー ロールに追加できるのは、サーバー レベルの権限のみです。 サーバー レベルの権限の一覧を表示するには、次のステートメントを実行します。 サーバー レベルの権限は、次のとおりです。  

@@ -1,5 +1,5 @@
 ---
-title: 多次元データベース (Analysis Services) の名前変更 |Microsoft ドキュメント
+title: 多次元データベース (Analysis Services) の名前変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - renaming databases
 ms.assetid: 15fdaec7-f3e4-44d9-9b78-1a1d78c484e0
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 94b3adfb8c85509e05bf9df8f69cfef715bbe417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 192582ec7724e16b0c02d499fac89798c4c17cd6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312662"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>多次元データベース名の変更 (Analysis Services)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの名前を変更する方法は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースへの接続方法によって異なります。 既存のデータベースの名前を変更するには、オンライン モードでデータベースに接続する必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト内のオブジェクトがインスタンス化されるデータベースの名前を変更するには、プロジェクト モードで接続する必要があります。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの名前を変更する方法は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースへの接続方法によって異なります。 既存のデータベースの名前を変更するには、オンライン モードでデータベースに接続する必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト内のオブジェクトがインスタンス化されるデータベースの名前を変更するには、プロジェクト モードで接続する必要があります。  
   
 ### <a name="to-change-the-database-name-in-online-mode"></a>オンライン モードでデータベース名を変更するには  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36175835"
   
 ## <a name="see-also"></a>参照  
  [Analysis services サーバーのプロパティを構成します。](../server-properties/server-properties-in-analysis-services.md)   
- [多次元データベースのプロパティを設定&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
+ [多次元データベースのプロパティ設定&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
  [Analysis Services プロジェクトのプロパティを構成する&#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
  [Analysis Services プロジェクトの配置&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   

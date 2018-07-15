@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ce067977a12b0ebb7a0c3e7f03b9fa5fa0794781
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 131c2a7618493d1b48758f653ab2e2d2e22ed2dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313692"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle パブリッシャーのデータ型マッピング
   Oracle のデータ型と [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型は、正確に一致するとは限りません。 Oracle のテーブルをパブリッシュするときは、可能な限り、一致するデータ型が自動的に選択されます。 単一のデータ型マッピングが明らかでない場合は、代替のデータ型マッピングが提供されます。 代替マッピングの選択方法の詳細については、以下の「代替データ型マッピングの指定」を参照してください。  

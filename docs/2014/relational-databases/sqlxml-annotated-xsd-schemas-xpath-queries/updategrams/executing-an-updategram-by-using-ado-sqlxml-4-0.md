@@ -1,5 +1,5 @@
 ---
-title: ADO (SQLXML 4.0) を使用してアップデート グラムを実行 |Microsoft ドキュメント
+title: ADO (SQLXML 4.0) を使用してアップデート グラムの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,30 +16,30 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37a8cb3f06152ac2bc7dc682ae8d06e54d33ef6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ad4ed1723cc8ad49ed18304c106b0849e6bc2fb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319972"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO を使用した、アップデートグラムの実行 (SQLXML 4.0)
   この [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic アプリケーションでは、ADO を使用して Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立した後、アップデートグラムを実行します。 このアップデートグラムでは、特定の従業員の名前が更新されます。 この例では、AdventureWorks サンプル データベースを使用します。  
   
  サンプル アプリケーションの処理は次のとおりです。  
   
--   **Conn**オブジェクト (**ADODB です。接続**) の実行中のインスタンスへの接続を確立[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定のサーバー コンピューターにします。  
+-   **Conn**オブジェクト (**ADODB します。接続**) の実行中のインスタンスへの接続を確立[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定のサーバー コンピューターにします。  
   
--   **Cmd**オブジェクト (**ADODB.Command**) 確立された接続で実行します。  
+-   **Cmd**オブジェクト (**ADODB.Command**) で確立された接続を実行します。  
   
 -   コマンド言語が DBGUID_MSSQLXML に設定されます。  
   
 -   アップデート グラムがコマンド ストリームにコピーされます (**strmIn**)。  
   
--   コマンドの出力ストリームに設定されている、 **StrmOut**オブジェクト (**ADODB です。ストリーム**) が表示されるデータが返されました。  
+-   設定されているコマンドの出力ストリーム、 **StrmOut**オブジェクト (**ADODB します。Stream**) が表示されるデータが返されます。  
   
 -   最後にコマンド (アップデートグラム) が実行されます。  
   

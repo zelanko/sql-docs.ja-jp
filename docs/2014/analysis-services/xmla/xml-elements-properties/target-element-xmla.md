@@ -1,5 +1,5 @@
 ---
-title: ターゲット要素 (XMLA) |Microsoft ドキュメント
+title: Target 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Target element
 ms.assetid: 9a69a777-5f34-4e94-b470-6bab2a98df8b
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd34f3102d477d9a2e89af8c8ba7e5ff2d37ef62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 08c231b16e6f61f2aa42770ee06832b99a0de5dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287868"
 ---
 # <a name="target-element-xmla"></a>Target 要素 (XMLA)
-  中にマージする先のパーティションを表す、 [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)コマンド。  
+  中にマージする対象のパーティションを表す、 [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)コマンド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36165683"
 |子要素|[CubeID](id-element-xmla.md)、 [DatabaseID](databaseid-element-xmla.md)、 [MeasureGroupID](measuregroupid-element-xmla.md)、 [PartitionID](partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
- `Target`要素は、これには、ソース パーティションの内容がで指定された 1 つのパーティションへのオブジェクト参照、[ソース](sources-element-xmla.md)の親要素`MergePartitions`要素をマージします。  
+ `Target`要素は、先になるパーティションの内容がで指定された 1 つのパーティションへのオブジェクト参照、[ソース](sources-element-xmla.md)の親要素`MergePartitions`要素をマージします。  
   
 ## <a name="example"></a>例  
  次の例は、Internet Sales メジャー グループの 4 つのパーティションすべてを、マージ先パーティション `Internet_Sales_2004` に結合します。 この例では、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] のサンプル データベース [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] の、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] キューブを参照しています。  

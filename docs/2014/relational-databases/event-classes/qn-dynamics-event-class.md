@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Dynamics
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0187f27bd7375b22cd703c6e7caa818cc3a7dd38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 83a51fb2449bce6f671ad8ba73d4c6dd4cd79714
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300472"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics イベント クラス
   QN:Dynamics イベント クラスでは、クエリ通知をサポートするために [!INCLUDE[ssDE](../../includes/ssde-md.md)] が実行するバックグラウンドの利用状況に関する情報が報告されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]内部では、バックグラウンド スレッドでサブスクリプションのタイムアウト、実行を待機しているサブスクリプション、およびパラメーター テーブルの破棄が監視されています。  
@@ -38,7 +38,7 @@ ms.locfileid: "36076888"
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |EventClass|`int`|イベントの種類 = 202。|27|いいえ|  
 |EventSequence|`int`|このイベントのシーケンス番号。|51|いいえ|  
-|EventSubClass|`nvarchar`|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> 実行開始時刻: ことを示しますのバック グラウンド スレッド、[!INCLUDE[ssDE](../../includes/ssde-md.md)]スケジュールでは、クリーンアップが開始されたために、パラメーター テーブルが期限が切れたことです。<br /><br /> 実行が終了時刻: ことを示しますのバック グラウンド スレッド、[!INCLUDE[ssDE](../../includes/ssde-md.md)]スケジュールでは、クリーンアップが終了したため、パラメーター テーブルが期限が切れたことです。<br /><br /> マスターのクリーンアップ タスクが開始されました: 有効期限が切れたクエリ通知サブスクリプションのデータを削除するクリーンアップ (ガベージ コレクション) を開始することを示します。<br /><br /> マスターのクリーンアップ タスクが完了しました: 有効期限が切れたクエリ通知サブスクリプションのデータを削除するクリーンアップ (ガベージ コレクション) が終了したときを示します。<br /><br /> マスターのクリーンアップ タスクがスキップされました: ことを示します、[!INCLUDE[ssDE](../../includes/ssde-md.md)]有効期限が切れたクエリ通知サブスクリプションのデータを削除するクリーンアップ (ガベージ コレクション) を実行しませんでした。|21|はい|  
+|EventSubClass|`nvarchar`|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> 実行開始時刻: ことを示します、バック グラウンド スレッドで、[!INCLUDE[ssDE](../../includes/ssde-md.md)]スケジュールでは、クリーンアップが開始されたために、パラメーター テーブルが有効期限切れにします。<br /><br /> クロックの実行が完了しました: ことを示します、バック グラウンド スレッドで、[!INCLUDE[ssDE](../../includes/ssde-md.md)]スケジュールでは、クリーンアップが終了したため、パラメーター テーブルが有効期限切れにします。<br /><br /> マスターのクリーンアップ タスクが開始されました。 有効期限が切れたクエリ通知サブスクリプションのデータを削除するクリーンアップ (ガベージ コレクション) の開始時を示します。<br /><br /> マスターのクリーンアップ タスクが完了しました: 有効期限が切れたクエリ通知サブスクリプションのデータを削除するクリーンアップ (ガベージ コレクション) が終了したときを示します。<br /><br /> マスターのクリーンアップ タスクがスキップされました: ことを示します、[!INCLUDE[ssDE](../../includes/ssde-md.md)]有効期限が切れたクエリ通知サブスクリプションのデータを削除するクリーンアップ (ガベージ コレクション) が実行されなかった。|21|はい|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  

@@ -1,5 +1,5 @@
 ---
-title: プログラミング サンプルへのリンク |Microsoft ドキュメント
+title: プログラミング サンプルへのリンク |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - SQL Server Management Objects, samples
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df2b9636b3edb5ebb9ef45530204db543e204312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c516bfd0f4086f9ec91974205e546e686612d2f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215012"
 ---
 # <a name="link-to-programming-samples"></a>プログラミング サンプルへのリンク
-  次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO ディレクトリにある、[!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理オブジェクト (SMO) のプログラミング サンプルを示します。 これらのサンプルは両方で使用できる[!INCLUDE[csprcs](../../includes/csprcs-md.md)]と[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET です。  
+  次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO ディレクトリにある、[!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理オブジェクト (SMO) のプログラミング サンプルを示します。 これらのサンプルは両方で使用できる[!INCLUDE[csprcs](../../includes/csprcs-md.md)]と[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET。  
   
- サンプルをインストールする方法の詳細については、次を参照してください。 [SQL Server 2012 用 AdventureWorks](http://msftdbprodsamples.codeplex.com/releases/view/55330)です。  
+ サンプルをインストールする方法の詳細については、次を参照してください。 [SQL Server 2012 用 AdventureWorks](http://msftdbprodsamples.codeplex.com/releases/view/55330)します。  
   
 |[タイトル]|説明|  
 |-----------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "36071393"
 |DatabaseSearch|データベース内のすべてのオブジェクトを表示します。|  
 |DependencyExplorer|依存関係ツリーとプロパティ表示ウィンドウを実装します。|  
 |IndexSizes|選択されたデータベースのインデックス名およびサイズを表示します。|  
-|LoadRegAssembly |読み込みし、登録する方法を示します、[!INCLUDE[msCoName](../../includes/msconame-md.md)]に .NET アセンブリ[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 UtilityConversion アセンブリを使用します。|  
+|LoadRegAssembly |読み込みし、登録する方法を示します、[!INCLUDE[msCoName](../../includes/msconame-md.md)]に .NET アセンブリ[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 UtilityConversion アセンブリを使用します。|  
 |ManageDatabases|データベースの作成、変更、および削除を行う方法を示します。 新しいファイル グループとログ ファイルの追加を含みます。|  
 |ManageDatabaseUsers|ユーザーの追加、変更、および削除を行う方法を示します。|  
 |ManageTables|テーブルの作成、変更、および削除を行う方法を示します。|  
@@ -48,7 +48,7 @@ ms.locfileid: "36071393"
 |ServerConnect |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムへの接続方法を示します。|  
 |ServerInfo |選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバーと接続のプロパティのリストを表示します。|  
 |SMOPing |選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへ接続し、選択したプロパティをダンプするコンソール アプリケーションです。 確認に使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続します。|  
-|SQLServerList|使用可能なインスタンスの一覧を列挙[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
+|SQLServerList|使用可能なインスタンスの一覧を列挙します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |SQLService |開始、停止、一時停止、および再開が可能な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスを表示します。|  
 |Tracer|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからトレース情報の読み込みと表示を行います。|  
 |トリガー|データベース トリガーが表示されます。|  

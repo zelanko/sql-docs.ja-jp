@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
 - variables [Integration Services], expressions
@@ -23,13 +23,13 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17236ca6698b1daf947d4364b38eb3ef0e9a60b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84a20b15390463d19577ab6ae800bcb7f0579bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295052"
 ---
 # <a name="identifiers-ssis"></a>識別子 (SSIS)
   識別子とは、式の内部で演算に使用できる列および変数のことです。 式では、標準識別子と修飾された識別子を使用できます。  
@@ -116,9 +116,9 @@ ms.locfileid: "36165672"
 > [!IMPORTANT]  
 >  名前空間の組み合わせおよび修飾された変数名は、式エバリュエーターが変数を認識できるよう、角かっこで囲む必要があります。  
   
- 場合の値**カウント**で、**ユーザー**名前空間が 10 の値**カウント**で**MyNamespace** 式の評価結果が2の場合`true`式エバリュエーターが 2 つの異なる変数を認識するためです。  
+ 場合の値**カウント**で、**ユーザー**名前空間は 10 の値**カウント**で**MyNamespace** 式の評価結果が2の場合`true`式エバリュエーターが 2 つの異なる変数を認識したためです。  
   
- 変数名が一意でない場合でもエラーは発生せず、 式エバリュエーターは、変数のインスタンスを 1 つのみ使用して式を評価し、間違った結果を返します。 たとえば、次の式を意図的に 2 つの個別の値 (10 および 2) は比較**カウント**に変数が式評価`false`式エバリュエーターが、の同じインスタンスを使用するため**カウント**変数 2 倍です。  
+ 変数名が一意でない場合でもエラーは発生せず、 式エバリュエーターは、変数のインスタンスを 1 つのみ使用して式を評価し、間違った結果を返します。 たとえば、次の式のものを 2 つの個別の値 (10 および 2) を比較する**カウント**に変数が式の評価`false`式エバリュエーターは、の同じインスタンスを使用するため**カウント**変数 2 回です。  
   
 ```  
 @Count > @Count  

@@ -1,5 +1,5 @@
 ---
-title: Type 要素 (DimensionAttribute) (ASSL) |Microsoft ドキュメント
+title: Type 要素 (DimensionAttribute) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 450f25e039a4efbc2a6ae4175faf396bfbfa9ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b84675dbc0b13d7d73823126e7bc11fb75ad05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293472"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type 要素 (DimensionAttribute) (ASSL)
   属性の型を示します。  
@@ -51,7 +51,7 @@ ms.locfileid: "36176047"
 |特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*通常*|  
+|既定値|*正規表現*|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
@@ -111,7 +111,7 @@ ms.locfileid: "36176047"
 |*DayOfTrimester*|三半期の通算日を表す属性です。|  
 |*DayOfWeek*|週の通算日を表す属性です。|  
 |*DayOfYear*|年の通算日を表す属性です。|  
-|*日数*|日を表す属性です。|  
+|*日*|日を表す属性です。|  
 |*DaysOfTenDays*|10 日間の通算日を表す属性です。|  
 |*FiscalDay*|会計カレンダーにおける日を表す属性です。|  
 |*FiscalDayOfHalfYears*|会計カレンダーにおける半期の通算日を表す属性です。|  
@@ -141,7 +141,7 @@ ms.locfileid: "36176047"
 |*FiscalYear*|会計カレンダーにおける年を表す属性です。|  
 |*FormattingColor*|書式設定で使用される色を表す属性です。|  
 |*FormattingFont*|書式設定で使用されるフォントを表す属性です。|  
-|*FormattingFontEffects*|書式設定で使用されるフォントの文字飾りを表す属性です。|  
+|*FormattingFontEffects*|書式設定に使用するフォントの文字飾りを表す属性です。|  
 |*FormattingFontSize*|書式設定で使用されるフォント サイズを表す属性です。|  
 |*FormattingOrder*|書式設定で使用される並べ替え順序を表す属性です。|  
 |*FormattingSubtotal*|小計を表す属性です。|  
@@ -166,7 +166,7 @@ ms.locfileid: "36176047"
 |*ISO8601Week*|ISO 8601 カレンダーにおける週を表す属性です。|  
 |*ISO8601WeekOfYear*|ISO 8601 カレンダーにおける年の通算週を表す属性です。|  
 |*ISO8601Year*|ISO 8601 カレンダーにおける年を表す属性です。|  
-|*IsWeekDay*|平日かどうかを表す属性です。|  
+|*[Isweekday]*|平日かどうかを表す属性です。|  
 |*IsWorkingDay*|営業日かどうかを表す属性です。|  
 |*ManufacturingDay*|製造カレンダーにおける日を表す属性です。|  
 |*ManufacturingDayOfHalfYears*|製造カレンダーにおける半期の通算日を表す属性です。|  
@@ -241,7 +241,7 @@ ms.locfileid: "36176047"
 |*レート*|レートを表す属性です。|  
 |*RateType*|レートの種類を表す属性です。|  
 |*Region*|顧客によって定義された領域を表す属性です。|  
-|*通常*|標準属性を表す属性です。|  
+|*正規表現*|標準属性を表す属性です。|  
 |*RelationToParent*|親へのリレーションを表す属性です。|  
 |*ReportingDay*|レポート カレンダーにおける日を表す属性です。|  
 |*ReportingDayOfHalfYears*|レポート カレンダーにおける半期の通算日を表す属性です。|  
@@ -287,7 +287,7 @@ ms.locfileid: "36176047"
 |*Utility*|ユーティリティを表す属性です。|  
 |*バージョン*|バージョンを表す属性です。|  
 |*WebHtml*|HTML コンテンツを表す属性です。|  
-|*WebMailAlias*|電子メールの別名を表す属性です。|  
+|*WebMailAlias*|電子メール エイリアスを表す属性です。|  
 |*WebUrl*|URL アドレスを表す属性です。|  
 |*WebXmlOrXsl*|XML または XSL コンテンツを表す属性です。|  
 |*WeekOfHalfYears*|半期の通算週を表す属性です。|  
@@ -298,13 +298,13 @@ ms.locfileid: "36176047"
 |*週*|週を表す属性です。|  
 |*年*|年を表す属性です。|  
   
- 許可される値に対応する列挙`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AttributeType>します。  
+ 許容された値に対応する列挙体`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AttributeType>します。  
   
  親に対応する要素`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DimensionAttribute>します。  
   
 ## <a name="see-also"></a>参照  
- [要素の属性&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
- [要素の寸法&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [Attributes 要素&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
+ [ディメンション要素&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  
   
   

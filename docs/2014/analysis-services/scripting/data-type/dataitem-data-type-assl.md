@@ -1,5 +1,5 @@
 ---
-title: DataItem データ型 (ASSL) |Microsoft ドキュメント
+title: DataItem データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataItem data type
 ms.assetid: f4f5155f-9c3d-49a1-a390-a9c734fafbce
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d5622ca2cdda5a08bdcfdfd486e44b6fcd8fbf7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2646dcce64672d98d33ecff3575016269379325
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300892"
 ---
 # <a name="dataitem-data-type-assl"></a>DataItem データ型 (ASSL)
   列や属性などのデータ アイテムのデータ関連の特性を表すプリミティブ データ型を定義します。  
@@ -87,7 +87,7 @@ ms.locfileid: "36073580"
 |[メジャー](../objects/measure-element-assl.md)|[Source](../properties/source-element-binding-assl.md)|`Source` 要素、`DataItem`型でなければなりません[RowBinding](rowbinding-data-type-assl.md)、 [ColumnBinding](binding-data-type-assl.md)、 [MeasureBinding](measurebinding-data-type-assl.md)、または[CubeDimensionBinding](dimensionbinding-data-type-assl.md)|  
 |[MeasureGroupAttribute](measuregroupattribute-data-type-assl.md)|[KeyColumn](../objects/keycolumn-element-assl.md)|`Source` 要素、`DataItem`型でなければなりません[ColumnBinding](binding-data-type-assl.md)、 [AttributeBinding](attributebinding-data-type-assl.md)または[InheritedBinding](inheritedbinding-data-type-assl.md)|  
 |[ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md)|[KeyColumn](../objects/keycolumn-element-assl.md)|`Source` 要素、`DataItem`型でなければなりません[ColumnBinding](binding-data-type-assl.md)|  
-|[ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md)|[[Namecolumn]](../objects/namecolumn-element-assl.md)|`Source` 要素、`DataItem`型でなければなりません[ColumnBinding](binding-data-type-assl.md)|  
+|[ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md)|[NameColumn](../objects/namecolumn-element-assl.md)|`Source` 要素、`DataItem`型でなければなりません[ColumnBinding](binding-data-type-assl.md)|  
 |[TableMiningStructureColumn](../objects/foreignkeycolumn-element-assl.md)|`Source` 要素、`DataItem`型でなければなりません[ColumnBinding](binding-data-type-assl.md)|  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.DataItem>します。  

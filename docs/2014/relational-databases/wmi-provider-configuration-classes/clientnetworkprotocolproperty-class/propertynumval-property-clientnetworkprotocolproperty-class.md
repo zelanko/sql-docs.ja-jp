@@ -1,5 +1,5 @@
 ---
-title: PropertyNumVal プロパティ (ClientNetworkProtocolProperty クラス) |Microsoft ドキュメント
+title: PropertyNumVal プロパティ (ClientNetworkProtocolProperty クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyNumVal property
 ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0e737aaa1d5b224e096a7ae6f3f70b81884ba9f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: d43ef33a5ab4a1d516910edf62fd44017b4eee19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309352"
 ---
 # <a name="propertynumval-property-clientnetworkprotocolproperty-class"></a>PropertyNumVal プロパティ (ClientNetworkProtocolProperty クラス)
   によって参照される現在のプロパティの数値の値を取得、 [PropertyIdx プロパティ (ClientNetworkProtocolProperty クラス)](clientnetworkprotocolproperty-class.md)値。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>要素  
  *object*  
- A [ClientNetworkProtocolProperty クラス](clientnetworkprotocolproperty-class.md)によって使用されるネットワーク プロトコルの属性を表すオブジェクト、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント。  
+ A [ClientNetworkProtocolProperty クラス](clientnetworkprotocolproperty-class.md)によって使用されるネットワーク プロトコルの属性を表すオブジェクトを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  現在のプロパティの数値を指定する `int32` 値。  

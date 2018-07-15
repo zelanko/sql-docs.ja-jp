@@ -21,13 +21,13 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5ac2d2c8c45e359dafbed4d33dc26c3470fc13d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 7299359d6535a9a3378dc898fa61da62a969d438
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292892"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成
   スクリプト コンポーネント内でカスタム コードを記述する前に、作成するデータ フロー コンポーネントの種類 (変換元、変換、または変換先) を選択し、**[スクリプト変換エディター]** でスクリプト コンポーネントのメタデータおよびプロパティを構成する必要があります。  
@@ -54,7 +54,7 @@ ms.locfileid: "36175213"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [入力列] ページ  
  変換および変換先では、**[スクリプト変換エディター]** の **[入力列]** ページが表示されます。変換元では表示されません。 このページでは、使用できる入力列から、使用するカスタム スクリプトを選択し、その入力列に読み取り専用でアクセスするか、または読み取り/書き込みでアクセスするかを指定します。  
   
- このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力のクラスが含まれます。このクラスには、選択した各入力列用の型指定されたアクセサー プロパティが含まれています。 たとえば、整数値を選択する**CustomerID**列と文字列**CustomerName**という名前の入力からの列`CustomerInput`、BufferWrapper プロジェクト アイテムが含まれます、`CustomerInput`クラス派生した<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>、および`CustomerInput`クラスが名前付き整数のプロパティを公開**CustomerID**およびという名前の文字列プロパティ**CustomerName**です。 この規則により、次のような型チェック付きのコードが記述できます。  
+ このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力のクラスが含まれます。このクラスには、選択した各入力列用の型指定されたアクセサー プロパティが含まれています。 たとえば、整数値を選択する**CustomerID**列と文字列**CustomerName**という名前の入力からの列`CustomerInput`、BufferWrapper プロジェクト アイテムが含まれます、`CustomerInput`クラス派生した<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>、および`CustomerInput`クラスが名前付き整数のプロパティを公開**CustomerID**という名前の文字列プロパティと**CustomerName**します。 この規則により、次のような型チェック付きのコードが記述できます。  
   
 ```vb  
 Dim currentCustomerID as Integer = CustomerInput.CustomerID  
@@ -87,7 +87,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  `SynchronousInputID` プロパティは、同期出力型の変換でのみ、0 以外の値になります。 このプロパティの値が 0 の場合、出力が非同期型であることを示します。 同期出力では、新しい行を追加せず、選択した出力に行が渡されます。このプロパティには、コンポーネントの入力の `ID` が含まれている必要があります。  
   
 > [!NOTE]  
->  ときに、**スクリプト変換エディター**最初の出力では、エディターのセットを作成、`SynchronousInputID`する出力のプロパティ、`ID`コンポーネントの入力のです。 しかし、その後の出力時には、出力の `SynchronousInputID` プロパティが 0 に設定されます。  
+>  ときに、**スクリプト変換エディター**最初の出力では、エディターのセットを作成、`SynchronousInputID`への出力のプロパティ、`ID`コンポーネントの入力。 しかし、その後の出力時には、出力の `SynchronousInputID` プロパティが 0 に設定されます。  
 >   
 >  同期出力型コンポーネントを作成する場合、各出力の `SynchronousInputID` プロパティを、コンポーネントの入力の `ID` に設定する必要があります。 このため、最初の出力後は、エディターで出力を作成するたびに、`SynchronousInputID` 値を 0 からコンポーネントの入力の `ID` に変更する必要があります。  
 >   
@@ -96,7 +96,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  スクリプト コンポーネントで 2 つの同期出力のうちのいずれかに行を送信する例については、「[スクリプト コンポーネントによる同期変換の作成](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)」を参照してください。  
   
 ### <a name="object-names-in-generated-script"></a>生成されたスクリプトのオブジェクト名  
- スクリプト コンポーネントは、入力と出力の名前を解析し、入力と出力内の列の名前を解析します。次に、これらの名前に基づいて、BufferWrapper プロジェクト アイテムにクラスとプロパティを生成します。 見つかった名前に、Unicode カテゴリの `UppercaseLetter`、`LowercaseLetter`、`TitlecaseLetter`、`ModifierLetter`、`OtherLetter`、または `DecimalDigitLetter` に属していない文字が含まれている場合、無効な文字は生成された名前から削除されます。 たとえば、スペースは削除されるため、**FirstName** と **[First Name]** という名前の 2 つの入力列は、どちらも列名 **FirstName** を持つと解釈され、予期しない結果が生じます。 このような状況を防ぐには、スクリプト コンポーネントで使用される入力と出力の名前、および入力と出力の列の名前には、このセクションで一覧表示されている Unicode カテゴリに属する文字のみが含まれるようにする必要があります。  
+ スクリプト コンポーネントは、入力と出力の名前を解析し、入力と出力内の列の名前を解析します。次に、これらの名前に基づいて、BufferWrapper プロジェクト アイテムにクラスとプロパティを生成します。 見つかった名前に、Unicode カテゴリの `UppercaseLetter`、`LowercaseLetter`、`TitlecaseLetter`、`ModifierLetter`、`OtherLetter`、または `DecimalDigitLetter` に属していない文字が含まれている場合、無効な文字は生成された名前から削除されます。 たとえば、スペースは削除されるため、**FirstName** と [**First Name**] という名前の 2 つの入力列は、どちらも列名 **FirstName** を持つと解釈され、予期しない結果が生じます。 このような状況を防ぐには、スクリプト コンポーネントで使用される入力と出力の名前、および入力と出力の列の名前には、このセクションで一覧表示されている Unicode カテゴリに属する文字のみが含まれるようにする必要があります。  
   
 ### <a name="script-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [スクリプト] ページ  
  **[スクリプト変換エディター]** の **[スクリプト]** ページでは、スクリプト タスクに一意の名前および説明を割り当てます。 また、次のプロパティの値を割り当てることができます。  
@@ -108,7 +108,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  `ValidateExternalMetadata` プロパティのブール値は、コンポーネントがデザイン時に外部データ ソースに対する検証を実行するかどうか、または実行時まで検証を延期するかどうかを指定します。 既定では、このプロパティの値は `True` です。つまり、外部メタデータはデザイン時と実行時の両方で検証されます。 外部データ ソースをデザイン時に使用しない場合、たとえば、パッケージの実行時にのみ外部データ ソースをダウンロードしたり、変換先を作成する場合には、このプロパティの値を `False` に設定できます。  
   
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables プロパティおよび ReadWriteVariables プロパティ  
- 既存の変数をコンマ区切りリストとして、これらのプロパティの値に入力すると、スクリプト コンポーネントのコード内で、その変数に読み取り専用アクセスまたは読み取り/書き込みアクセスできるようになります。 変数には、自動生成された基本クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> プロパティを介して、コード内でアクセスします。 詳細については、[変数を使ったスクリプト Component]((using-variables-in-the-script-component.md) を参照してください。  
+ 既存の変数をコンマ区切りリストとして、これらのプロパティの値に入力すると、スクリプト コンポーネントのコード内で、その変数に読み取り専用アクセスまたは読み取り/書き込みアクセスできるようになります。 変数には、自動生成された基本クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> プロパティを介して、コード内でアクセスします。 詳細については、[スクリプト Component]((using-variables-in-the-script-component.md) で変数を使用を参照してください。 します。  
   
 > [!NOTE]  
 >  変数名の大文字と小文字は区別されます。  
@@ -117,7 +117,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  スクリプト コンポーネントのプログラミング言語として、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# を選択できます。  
   
 #### <a name="edit-script-button"></a>[スクリプトの編集] ボタン  
- **[スクリプトの編集]** ボタンをクリックすると [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE が開き、カスタム スクリプトを記述できます。 詳細については、「[コーディングとデバッグ スクリプト Component]((coding-and-debugging-the-script-component.md) の使用」を参照してください。  
+ **[スクリプトの編集]** ボタンをクリックすると [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE が開き、カスタム スクリプトを記述できます。 詳細については、[コーディングおよびデバッグ スクリプト Component]((coding-and-debugging-the-script-component.md) 参照してください。  
   
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [接続マネージャー] ページ  
  **[スクリプト変換エディター]** の **[接続マネージャー]** ページでは、カスタム スクリプトで使用する接続マネージャーを追加および削除します。 通常、変換元または変換先コンポーネントを作成する場合は、接続マネージャーを参照する必要があります。  
@@ -129,9 +129,9 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
     Me.Connections.MyADONETConnection  
 ```  
   
- 詳細については、[スクリプト Component]((connecting-to-data-sources-in-the-script-component.md) 内のデータ ソースに接続していますを参照してください。  
+ 詳細については、[スクリプト Component]((connecting-to-data-sources-in-the-script-component.md) 内のデータ ソースへの接続を参照してください。。  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。  **<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [コーディングとスクリプト コンポーネントのデバッグ]((coding-and-debugging-the-script-component.md)  

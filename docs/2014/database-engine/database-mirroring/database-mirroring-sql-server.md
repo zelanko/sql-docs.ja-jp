@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server]
 - standby servers [SQL Server]
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - mirror server [SQL Server] See database mirroring
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 caps.latest.revision: 121
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f70a95e9ef5bf0bc01687728fd5cac7641867759
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b760a12e436a9d6f6eebf96bcfeaea8459171a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233892"
 ---
 # <a name="database-mirroring-sql-server"></a>データベース ミラーリング (SQL Server)
     
@@ -61,7 +60,7 @@ ms.locfileid: "36073324"
   
 -   アップグレード中の実稼働データベースの可用性が向上します。  
   
-     ミラー化されたデータベースのダウンタイムを最小限に抑えるために、フェールオーバー パートナーをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを順次アップグレードできます。 これにより、ダウンタイムはフェールオーバー 1 回分のみになります。 このようなアップグレード形態を *ローリング アップグレード*と呼びます。 詳細については、次を参照してください。[最小限のダウンタイムでのシステムでミラー化されたデータベースの Service Pack をインストール](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)です。  
+     ミラー化されたデータベースのダウンタイムを最小限に抑えるために、フェールオーバー パートナーをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを順次アップグレードできます。 これにより、ダウンタイムはフェールオーバー 1 回分のみになります。 このようなアップグレード形態を *ローリング アップグレード*と呼びます。 詳細については、次を参照してください。[最小限のダウンタイムでのシステム上でミラー化データベースの Service Pack をインストール](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)します。  
   
 ##  <a name="TermsAndDefinitions"></a> データベース ミラーリングの用語と定義  
  自動フェールオーバー (automatic failover)  
@@ -331,7 +330,7 @@ ms.locfileid: "36073324"
   
 ## <a name="see-also"></a>参照  
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [ページの自動修復&#40;の可用性グループとデータベース ミラーリング&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [ページの自動修復&#40;可用性グループとデータベース ミラーリング&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [データベース ミラーリング構成のトラブルシューティング &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [データベース ミラーリング: 相互運用性と共存 &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [データベース ミラーリングの前提条件、制限事項、推奨事項](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   

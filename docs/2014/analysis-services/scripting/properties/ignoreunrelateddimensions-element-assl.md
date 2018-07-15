@@ -1,5 +1,5 @@
 ---
-title: IgnoreUnrelatedDimensions 要素 (ASSL) |Microsoft ドキュメント
+title: IgnoreUnrelatedDimensions 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IgnoreUnrelatedDimensions element
 ms.assetid: c7d7a1cd-a8e0-4ae7-9464-a1d2a55a86ab
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a85e4c3b5d113b6e122f699425a8b0ffaf88a091
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c278a3109180dbd058bc7ed8212c7b05782ce3d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295463"
 ---
 # <a name="ignoreunrelateddimensions-element-assl"></a>IgnoreUnrelatedDimensions 要素 (ASSL)
   メジャー グループに関連付けられていないディメンションのメンバーがクエリに含まれているときに、関連付けられていないディメンションをトップ レベルに強制するかどうかを指定します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36174797"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `IgnoreUnrelatedDimensions` が `true` である場合、関連付けられていないディメンションはトップ レベルに強制されます。値が `false` である場合、関連付けられていないディメンションはトップ レベルに強制されません。 このプロパティは、同様に、多次元式 (MDX) [ValidMeasure](/sql/mdx/validmeasure-mdx)関数。  
+ `IgnoreUnrelatedDimensions` が `true` である場合、関連付けられていないディメンションはトップ レベルに強制されます。値が `false` である場合、関連付けられていないディメンションはトップ レベルに強制されません。 このプロパティは、多次元式 (MDX) に似ています[ValidMeasure](/sql/mdx/validmeasure-mdx)関数。  
   
  親に対応する要素`IgnoreUnrelatedDimensions`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MeasureGroup>します。  
   

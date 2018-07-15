@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CHANGE_TRACKING_CLEANUP_VERSION
 - change_tracking_databases
@@ -34,18 +34,18 @@ helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fd525b56e4fcd793fbf0d4ae3f63b5670a5d1e64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: af4d06242048038bd73429a2f10e517e30d77e9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307552"
 ---
 # <a name="track-data-changes-sql-server"></a>データ変更の追跡 (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースのデータに対する変更を追跡する [変更データ キャプチャ](#Capture) および [変更の追跡](#Tracking)という 2 つの機能が用意されています。 これらの機能では、データベース内のユーザー テーブルに対して行われた DML の変更 (挿入操作、更新操作、および削除操作) をアプリケーションで特定できます。 変更データ キャプチャと変更の追跡は、同じデータベースに対して有効にすることができます。特別な配慮は必要ありません。 エディションの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で変更データ キャプチャし、変更の追跡、サポートを参照して[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースのデータに対する変更を追跡する [変更データ キャプチャ](#Capture) および [変更の追跡](#Tracking)という 2 つの機能が用意されています。 これらの機能では、データベース内のユーザー テーブルに対して行われた DML の変更 (挿入操作、更新操作、および削除操作) をアプリケーションで特定できます。 変更データ キャプチャと変更の追跡は、同じデータベースに対して有効にすることができます。特別な配慮は必要ありません。 エディションの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変更データ キャプチャし、変更の追跡、サポートを参照してください、[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>変更データ キャプチャまたは変更の追跡を使用する利点  
  データベースで変更されたデータをクエリする機能は、一部のアプリケーションの効率を高めるための重要な要件です。 一般に、データ変更を確認するには、アプリケーション開発者がトリガー、timestamp 列、および追加のテーブルを組み合わせて使用することで、カスタムの追跡方法をアプリケーションに実装する必要があります。 通常、このようなアプリケーションを作成するには実装に非常に手間がかかり、スキーマの更新も必要になり、多くの場合、パフォーマンスのオーバーヘッドが増加します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36073440"
   
 -   DML 操作のオーバーヘッドが低減します。 同期変更追跡では、オーバーヘッドが常に若干発生します。 しかし、変更の追跡を使用すると、オーバーヘッドを最小限に抑えることができます。 多くの場合、オーバーヘッドは、代わりのソリューション (特にトリガーを使用する必要があるソリューション) を使用する場合よりも少なくなります。  
   
--   コミットされたトランザクションに基づいた変更の追跡 変更の順序は、トランザクションのコミット時間に基づきます。 このため、実行時間の長いトランザクションや重複するトランザクションが存在する場合でも、信頼性が高い結果を取得できます。 使用するカスタム ソリューション`timestamp`値は、これらのシナリオを処理する具体的に設計しなければなりません。  
+-   コミットされたトランザクションに基づいた変更の追跡 変更の順序は、トランザクションのコミット時間に基づきます。 このため、実行時間の長いトランザクションや重複するトランザクションが存在する場合でも、信頼性が高い結果を取得できます。 使用するカスタム ソリューション`timestamp`値は、これらのシナリオを処理するために具体的には設計する必要があります。  
   
 -   構成および管理に使用できる標準的なツールがあります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 標準の DDL ステートメント、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、カタログ ビュー、およびセキュリティ権限を利用できます。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36073440"
  ここでは、変更データ キャプチャのセキュリティ モデルについて説明します。  
   
  **構成と管理**  
- 有効または無効に変更データ キャプチャをデータベースの呼び出し元[sys.sp_cdc_enable_db &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)または[sys.sp_cdc_disable_db &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)固定サーバーのメンバーである必要があります`sysadmin`ロール。 呼び出し元の条件を有効にして、テーブル レベルで変更データ キャプチャを無効化[sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)と[sys.sp_cdc_disable_table &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql)するか、sysadmin ロールのメンバーまたはデータベースのメンバーである`database db_owner`ロール。  
+ 有効にするか、変更を無効にするデータのキャプチャ データベースの場合、呼び出し元の[sys.sp_cdc_enable_db &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)または[sys.sp_cdc_disable_db &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)固定のサーバーのメンバーである必要があります`sysadmin`ロール。 有効にして、テーブル レベルで変更データ キャプチャを無効化の呼び出し元が必要です[sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)と[sys.sp_cdc_disable_table &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql)するか、sysadmin ロールのメンバーまたはデータベースのメンバーである`database db_owner`ロール。  
   
  変更データ キャプチャ ジョブの管理をサポートするストアド プロシージャの使用は、サーバーのメンバーに制限`sysadmin`ロールとメンバーの`database db_owner`ロール。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36073440"
  データベース ミラーリングの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
 #### <a name="transactional-replication"></a>トランザクション レプリケーション  
- 変更データ キャプチャとトランザクション レプリケーションは、同じデータベースで共存できます。ただし、両方の機能が有効になっている場合、変更テーブルが異なる方法で作成されます。 変更データ キャプチャとトランザクション レプリケーションでは、トランザクション ログから変更を読み取る際に、常に同じプロシージャ ( [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)) が使用されます。 、それ自体に変更データ キャプチャが有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブによって`sp_replcmds`です。 同じデータベースでは、両方の機能が有効な場合、ログ リーダー エージェントを呼び出す`sp_replcmds`です。 このエージェントは、変更テーブルとディストリビューション データベース テーブルの両方を作成します。 詳細については、「 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)」を参照してください。  
+ 変更データ キャプチャとトランザクション レプリケーションは、同じデータベースで共存できます。ただし、両方の機能が有効になっている場合、変更テーブルが異なる方法で作成されます。 変更データ キャプチャとトランザクション レプリケーションでは、トランザクション ログから変更を読み取る際に、常に同じプロシージャ ( [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)) が使用されます。 自身で変更データ キャプチャが有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブによって`sp_replcmds`します。 同じデータベースでは、両方の機能が有効な場合、ログ リーダー エージェントを呼び出す`sp_replcmds`します。 このエージェントは、変更テーブルとディストリビューション データベース テーブルの両方を作成します。 詳細については、「 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)」を参照してください。  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで変更データ キャプチャが有効になっており、2 つのテーブルでキャプチャが有効になっているシナリオについて考えてみます。 変更テーブルを作成するために、キャプチャ ジョブによって `sp_replcmds` が呼び出されます。 データベースでトランザクション レプリケーションが有効になり、パブリケーションが作成されます。 次に、ログ リーダー エージェントがデータベースに対して作成され、キャプチャ ジョブが削除されます。 ログ リーダー エージェントは、変更テーブルにコミットされた最後のログ シーケンス番号からログのスキャンを続行します。 これにより、変更テーブル内のデータの一貫性が確保されます。 このデータベースでトランザクション レプリケーションが無効になっている場合、ログ リーダー エージェントが削除され、キャプチャ ジョブが再作成されます。  
   
@@ -143,11 +143,11 @@ ms.locfileid: "36073440"
   
 -   データベースを別のサーバーに復元した場合、既定では変更データ キャプチャが無効になり、関連するメタデータがすべて削除されます。  
   
-     変更データ キャプチャを保持するには、`KEEP_CDC`データベースを復元するオプションを選択します。 このオプションの詳細については、「 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
+     変更データ キャプチャを保持するには使用、`KEEP_CDC`データベースを復元するときのオプションします。 このオプションの詳細については、「 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
   
 -   データベースをデタッチしてから、同じサーバーまたは別のサーバーにアタッチした場合、変更データ キャプチャは有効のままです。  
   
--   データベースがアタッチまたは復元の場合、`KEEP_CDC`変更データ キャプチャが必要であるため、操作を Enterprise 以外のエディションにオプションがブロックされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise。 エラー メッセージ 932 が表示されます。  
+-   データベースをアタッチまたは復元、`KEEP_CDC`変更データ キャプチャが必要なため、操作、エンタープライズ以外のエディションにオプションがブロックされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise。 エラー メッセージ 932 が表示されます。  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   

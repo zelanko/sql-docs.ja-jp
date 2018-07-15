@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
 - Integration Services packages, expressions
@@ -19,13 +19,13 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8bd434ee91f53e747b6291d6c718f9e073f8af5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbd5e04688dcea2b43d7093a73b828ba58ff1460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292832"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) の式
   式は、単一のデータ値が得られる、識別子、リテラル、関数、演算子などの記号の組み合わせです。 単純式には、1 つの定数、変数、または関数を指定できます。 より頻繁に使用されるのは複雑な式で、複数の演算子や関数を使用し、複数の列や変数を参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、CASE ステートメントの条件の定義、データ列値の生成および更新、変数への値の代入、実行時のプロパティの更新および作成、優先順位制約の制約の定義、および For ループ コンテナーでの利用に式を使用できます。  
@@ -47,7 +47,7 @@ ms.locfileid: "36176204"
   
 -   変数に値を設定するために式を使用します。 たとえば、GETDATE() を使用すると、変数の値として現在の日付が設定されます。  
   
--   優先順位制約では、式を使用して、パッケージ内の制約付きタスクまたはコンテナーを実行するかどうか判断する条件を指定します。 優先順位制約で使用される式を評価する必要があります`true`または`false`です。 たとえば、@A > @B という式は 2 つのユーザー定義変数を比較して、制約付きタスクを実行するかどうかを判断します。  
+-   優先順位制約では、式を使用して、パッケージ内の制約付きタスクまたはコンテナーを実行するかどうか判断する条件を指定します。 優先順位制約で使用される式を評価する必要があります`true`または`false`します。 たとえば、@A > @B という式は 2 つのユーザー定義変数を比較して、制約付きタスクを実行するかどうかを判断します。  
   
 -   For ループ コンテナーでは、式を使用して、ループ構造で使用する初期化ステートメント、評価ステートメント、および増分ステートメントを作成します。 たとえば、@Counter = 1 という式はループ カウンターを初期化します。  
   

@@ -1,5 +1,5 @@
 ---
-title: データ フィード ライブラリ (PowerPivot for SharePoint) のカスタマイズを作成または |Microsoft ドキュメント
+title: 作成またはデータ フィード ライブラリ (PowerPivot for SharePoint) のカスタマイズ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa955fd27e0edde1da50fe608034a98b2107eca4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 865bb5cc87364b4d5240f0365cedb854038fb460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308505"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>データ フィード ライブラリの作成またはカスタマイズ (PowerPivot for SharePoint)
   *データ フィード ライブラリ* は、特殊な用途の SharePoint ライブラリです。このライブラリでは、Atom データ サービス ドキュメント (.atomsvc) を登録して共有できます。 これらのドキュメントは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックまたは Atom データ フィード形式をサポートするその他のクライアント アプリケーションに XML データ フィードを提供します。 データ フィード ライブラリは、以下を実行できる点で他の SharePoint ライブラリとは異なります。  
@@ -31,7 +31,7 @@ ms.locfileid: "36073126"
   
 -   集中管理された場所でデータ サービス ドキュメントを共有および管理できます。  
   
--   視覚的に、同じライブラリに格納されているその他のドキュメントからサービス ドキュメントを簡単に区別できるように、アイコンでデータ サービス ドキュメントを識別します![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed。")  
+-   同じライブラリに格納されている他のドキュメントからサービス ドキュメントを簡単に区別できるように、アイコンでデータ サービス ドキュメントを視覚的に識別: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  データ フィード ライブラリには、データ フィード自体ではなく、常にデータ サービス ドキュメント (.atomsvc) ファイルが格納されます。 静的な XML データで構成されるデータ フィードとは異なり、データ サービス ドキュメントでは、要求時にフィードを生成するサービスまたはアプリケーションの URL を指定します。そのため、反復可能なインポート操作で接続情報を再利用できます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36073126"
  [任意のライブラリへのデータ フィード コンテンツ タイプの追加](#addtolib)  
   
 ##  <a name="prereq"></a> 前提条件  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能の統合を、データ フィード ライブラリを作成するサイトに対してアクティブ化する必要があります。 データ フィード ライブラリ テンプレート タイプが使用できない場合、この前提条件を満たしていないことが考えられます。 詳細については、次を参照してください。[サーバーの全体管理のサイト コレクションの PowerPivot 機能統合をアクティブ化](activate-power-pivot-integration-for-site-collections-in-ca.md)です。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能の統合を、データ フィード ライブラリを作成するサイトに対してアクティブ化する必要があります。 データ フィード ライブラリ テンプレート タイプが使用できない場合、この前提条件を満たしていないことが考えられます。 詳細については、次を参照してください。 [PowerPivot 機能の統合サーバーの全体管理のサイト コレクション用にアクティブ化](activate-power-pivot-integration-for-site-collections-in-ca.md)します。  
   
  ライブラリを作成するには、サイト所有者である必要があります。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36073126"
   
  データ フィード ライブラリへのリンクが、現在のサイトのナビゲーションのクイック起動ペインに表示されます。  
   
- ライブラリを作成した後、そのライブラリを使用してデータ サービス ドキュメントを作成できます。 詳細については、次を参照してください。[データ フィードを使用して&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)です。  
+ ライブラリを作成した後、そのライブラリを使用してデータ サービス ドキュメントを作成できます。 詳細については、次を参照してください。[データ フィードの使用&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)します。  
   
 ##  <a name="addtolib"></a> 任意のライブラリへのデータ フィード コンテンツ タイプの追加  
  専用のデータ フィード ライブラリは作成せずに、SharePoint サイトからデータ サービス ドキュメントを作成して管理する場合は、データ サービス ドキュメント (.atomsvc) ファイルの共有に使用する任意のライブラリ用にデータ サービス ドキュメント コンテンツ タイプを手動で追加して構成できます。  
@@ -88,7 +88,7 @@ ms.locfileid: "36073126"
   
 6.  [コンテンツ タイプ] の [コンテンツ タイプの管理を許可する] セクションで **[はい]** をクリックします。  
   
-7.  **[OK]** をクリックします。  
+7.  [**OK**] をクリックします。  
   
 #### <a name="step-2-add-the-data-service-document-content-type"></a>手順 2: データ サービス ドキュメント コンテンツ タイプを追加する  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36073126"
   
 4.  [利用可能なサイト コンテンツ タイプ] で **[データ サービス ドキュメント]** をクリックしてから **[追加]** をクリックし、選択したコンテンツ タイプを [追加するコンテンツ タイプ] ボックスの一覧に追加します。  
   
-5.  **[OK]** をクリックします。  
+5.  [**OK**] をクリックします。  
   
 #### <a name="step-3-verify-data-service-document-configuration"></a>手順 3: データ サービス ドキュメントの構成を確認する  
   

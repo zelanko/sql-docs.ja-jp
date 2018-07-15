@@ -1,5 +1,5 @@
 ---
-title: VisualTotals 要素 (ASSL) |Microsoft ドキュメント
+title: VisualTotals 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - VisualTotals element
 ms.assetid: 352a05b1-846c-4d58-ac36-1f5ad418ba7d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73d5bb9579c078fab44a04d173edc2f606c856a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf4eb3a172571ee7456f0da1cb0df60852132e03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319288"
 ---
 # <a name="visualtotals-element-assl"></a>VisualTotals 要素 (ASSL)
   この属性のメンバーに対して表示部分の合計を表示するかどうかを決定する多次元式 (MDX) を格納します。  

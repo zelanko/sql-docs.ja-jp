@@ -1,5 +1,5 @@
 ---
-title: データベース アクセス許可 (Analysis Services) |Microsoft ドキュメント
+title: データベース アクセス許可 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], full control
 - full control permissions [Analysis Services]
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37022a42bc8e5347551a49c24ffc0ae9f8b8dbf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49e677c7c0a452b5b465d2a82c0bd3477dcc3b5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286168"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>データベース権限の付与 (Analysis Services)
   リレーショナル データベースのバックグラウンドを持つ方が Analysis Services データベース管理を始める場合に、まず理解する必要があることは、データ アクセスの観点で、データベースは Analysis Services の主要なセキュリティ保護可能なオブジェクトではないということです。  
@@ -33,7 +33,7 @@ ms.locfileid: "36072630"
   
  Analysis Services にはログインがありません。 単にロールを作成し、 **[メンバーシップ]** ペインで Windows アカウントを割り当てるだけです。 管理者も含めてすべてのユーザーが、Windows アカウントを使用して Analysis Services に接続します。  
   
- ![データベースの作成のロール ダイアログを表示権限](../media/ssas-permsdbrole.png "ロール ダイアログを示すデータベースのアクセス許可の作成")  
+ ![ロールを作成するには、ダイアログが表示されたデータベースのアクセス許可](../media/ssas-permsdbrole.png "ロールを作成するには、ダイアログが表示されたデータベースのアクセス許可")  
   
  データベース レベルで指定される権限には、3 つの種類があります。  
   
@@ -42,9 +42,9 @@ ms.locfileid: "36072630"
 > [!NOTE]  
 >  サーバー管理者 (サーバー管理者ロールのメンバー) も、サーバー上のすべてのデータベースに対して、暗黙的にフル コントロールがあります。  
   
- `Process Database` このアクセス許可は、データベース レベルで処理を委任するために使用するようにします。 管理者は、別のユーザーまたはサービスにデータベース内の任意のオブジェクトに対する処理操作の呼び出しを許可するロールを作成して、このタスクの負担を軽減できます。 また、特定のオブジェクトに対する処理を可能にするロールも作成できます。 詳細については、「[権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)」を参照してください。  
+ `Process Database` それぞれがこのアクセス許可は、データベース レベルで処理を委任するために使用します。 管理者は、別のユーザーまたはサービスにデータベース内の任意のオブジェクトに対する処理操作の呼び出しを許可するロールを作成して、このタスクの負担を軽減できます。 また、特定のオブジェクトに対する処理を可能にするロールも作成できます。 詳細については、「[権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)」を参照してください。  
   
- `Read Definition` この権限によって、オブジェクト メタデータを読み取るように関連付けられているデータを表示することです。 通常、この権限は専用の処理用に作成されたロールで使用され、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] や [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] などのツールを使用してデータベースを対話的に処理できるようにします。 `Read Definition`がない場合、`Process Database`権限はスクリプト化されたシナリオでのみ有効になります。 持つロールを作成する可能性がありますする SSIS または別のスケジューラに処理を自動化する予定の場合`Process Database`せず`Read Definition`です。 それ以外の場合は、2 つのプロパティを同じロールに結合することで、ユーザー インターフェイスにデータ モデルを視覚化する SQL Server ツールを使用して自動処理と対話型処理の両方をサポートすることを検討してください。  
+ `Read Definition` このアクセス許可には、オブジェクトのメタデータを読み取る権限が付与されます。 それぞれ-関連付けられているデータを表示する機能。 通常、この権限は専用の処理用に作成されたロールで使用され、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] や [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] などのツールを使用してデータベースを対話的に処理できるようにします。 `Read Definition`がない場合、`Process Database`権限はスクリプト化されたシナリオでのみ有効になります。 持つロールを作成する目的で SSIS や他のスケジューラに処理を自動化する予定の場合おそらく`Process Database`せず`Read Definition`します。 それ以外の場合は、2 つのプロパティを同じロールに結合することで、ユーザー インターフェイスにデータ モデルを視覚化する SQL Server ツールを使用して自動処理と対話型処理の両方をサポートすることを検討してください。  
   
 ## <a name="full-control-administrator-permissions"></a>フル コントロール (管理者) 権限  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、データベース管理者はフル コントロール (管理者) 権限が含まれているロールに割り当てられた Windows ユーザー ID です。 データベース管理者は、データベース内で次のようなタスクを実行できます。  
@@ -59,30 +59,30 @@ ms.locfileid: "36072630"
   
 -   データベースのアセンブリ (またはストアド プロシージャ) を登録します。  
   
- データベース管理者は、サーバー上でデータベースを追加または削除したり、同じサーバー上の他のデータベースに管理者権限を付与したりすることはできません。 その特権は、サーバー管理者にのみ属します。 参照してください[サーバー管理者のアクセス許可を付与&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)このアクセス許可レベルの詳細についてはします。  
+ データベース管理者は、サーバー上でデータベースを追加または削除したり、同じサーバー上の他のデータベースに管理者権限を付与したりすることはできません。 その特権は、サーバー管理者にのみ属します。 参照してください[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)このアクセス許可レベルの詳細についてはします。  
   
  すべてのロールがユーザー定義であるため、この目的専用のロール (たとえば、"dbadmin" という名前のロール) を作成し、適切な Windows ユーザー アカウントおよびグループ アカウントを割り当てることをお勧めします。  
   
 #### <a name="create-roles-in-ssms"></a>SSMS でのロールの作成  
   
-1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]のインスタンスに接続[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]を開き、**データベース**フォルダー、データベースを選択し、右クリック**ロール** | **新しいロール**.  
+1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]のインスタンスに接続[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、オープン、**データベース**フォルダー、データベースを選択し、右クリック**ロール** | **新しいロール**.  
   
 2.  **[全般]** ペインで、DBAdmin などのような名前を入力します。  
   
-3.  キューブの **[フル コントロール (管理者)]** チェック ボックスをオンにします。 `Process Database`および`Read Definition`は、自動的にオンになります。 含むロールに含まれるこれらのアクセス許可の両方が常に`Full Control`です。  
+3.  キューブの **[フル コントロール (管理者)]** チェック ボックスをオンにします。 `Process Database`および`Read Definition`は、自動的にオンになります。 含むロールに含まれるこれらのアクセス許可の両方が常に`Full Control`します。  
   
 4.  **[メンバーシップ]** ペインで、このロールを使用して Analysis Services に接続する Windows ユーザー アカウントおよびグループ アカウントを追加します。  
   
 5.  **[OK]** をクリックして、ロールの作成を終了します。  
   
 ## <a name="process-database"></a>[データベースの処理]  
- データベースのアクセス許可を付与するロールを定義するときにスキップできます`Full Control`のみを選択して`Process Database`です。 この権限はデータベース レベルで設定され、データベース内のすべてのオブジェクトに対する処理を許可します。 「[処理権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)」を参照してください。  
+ データベースのアクセス許可を付与するロールを定義するときにスキップできます`Full Control`だけを選択および`Process Database`します。 この権限はデータベース レベルで設定され、データベース内のすべてのオブジェクトに対する処理を許可します。 「[処理権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)」を参照してください。  
   
 ## <a name="read-definition"></a>[定義の読み取り]  
- 同様に`Process Database`、設定`Read Definition`データベース レベルのアクセス許可が、データベース内の他のオブジェクトに連鎖的に影響します。 よりきめ細かいレベルで定義の読み取り権限を設定する場合は、[全般] ペインでデータベース プロパティとして [定義の読み取り] をオフにする必要があります。 詳細については、「[オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)」を参照してください。  
+ ような`Process Database`設定`Read Definition`データベース レベルのアクセス許可が、データベース内の他のオブジェクトに連鎖的に影響します。 よりきめ細かいレベルで定義の読み取り権限を設定する場合は、[全般] ペインでデータベース プロパティとして [定義の読み取り] をオフにする必要があります。 詳細については、「[オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [サーバーの管理者のアクセス許可を付与&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [プロセスのアクセス許可を与える&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [プロセスのアクセス許可を付与&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

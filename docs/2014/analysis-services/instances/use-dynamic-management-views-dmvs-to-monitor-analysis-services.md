@@ -1,5 +1,5 @@
 ---
-title: Analysis Services の監視を動的管理ビュー (Dmv) を使用して |Microsoft ドキュメント
+title: 動的管理ビュー (Dmv) を使用して、Analysis Services の監視 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ef037d3d2745a5cfce8949ca7ac14e0d5743326
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 789811d4588efe47848d7a6045342d506e1975ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288568"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>動的管理ビュー (DMV) を使用した Analysis Services の監視
   Analysis Services 動的管理ビュー (DMV) は、ローカル サーバーの操作やサーバーの正常性に関する情報を公開するクエリ構造です。 クエリ構造は、Analysis Services インスタンスのメタデータと監視情報を返すためのスキーマ行セットへのインターフェイスです。  
   
- ほとんどの DMV クエリを使用する、`SELECT`ステートメントおよび`$System`XML/A スキーマ行セットを含むスキーマ。  
+ 使用するほとんどの DMV クエリを`SELECT`ステートメントおよび`$System`xml/a スキーマ行セットを含むスキーマ。  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
@@ -102,7 +102,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  サーバーが、次のエラーを返す DMV が指定された行セットは利用できない場合は、:"、 \<schemarowset > 要求の種類は、サーバーで認識されませんでした"。 他のすべてのエラーは、構文の問題を示します。  
+>  DMV が指定された行セットは利用できない場合、サーバーは、次のエラーを返します:"、 \<schemarowset > サーバーで要求の種類が認識されませんでした"。 他のすべてのエラーは、構文の問題を示します。  
   
 |[行セット]|説明|  
 |------------|-----------------|  

@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - default full-text language option
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 195ba7dac5e1561805b3e694f28939e12303a182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 12542af785a220858ca151ce1e64a2199436852c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308152"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>default full-text language サーバー構成オプションの構成
-  このトピックの内容を構成する方法を説明します、`default full-text language`サーバー構成オプション[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]です。 `default full-text language`オプションは、フルテキスト インデックスの既定言語値を指定します。 言語分析は、フルテキスト インデックスが作成されるすべてのデータに対して実行され、データの言語に依存します。 このオプションの既定値は、サーバーの言語です。 ローカライズされたバージョン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットをセットアップ、`default full-text language`適切な一致が存在する場合は、サーバーの言語にオプションです。 ローカライズされていないバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、`default full-text language`オプションは英語です。  
+  このトピックでは、構成する方法を説明します、`default full-text language`サーバー構成オプション[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]します。 `default full-text language`オプションは、フルテキスト インデックスの既定の言語の値を指定します。 言語分析は、フルテキスト インデックスが作成されるすべてのデータに対して実行され、データの言語に依存します。 このオプションの既定値は、サーバーの言語です。 ローカライズされたバージョン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットのセットアップ、`default full-text language`適切な一致が存在する場合に、サーバーの言語オプションします。 ローカライズされていないバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、`default full-text language`オプションは英語です。  
   
  **このトピックの内容**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36073085"
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   値、 `default full-text language` 、言語を使用して列の言語が指定されていない場合、フルテキスト インデックスのオプションを使用**language_term** CREATE FULLTEXT INDEX または ALTER FULLTEXT INDEX ステートメントでオプションです。 既定のフルテキスト言語がサポートされていない場合や、言語分析パッケージがない場合は、CREATE または ALTER 操作に失敗し、指定した言語が有効でないというエラー メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって表示されます。  
+-   値、 `default full-text language` 、言語を使用して列の言語が指定されていない場合は、フルテキスト インデックスにオプションを使用**language_term** CREATE FULLTEXT INDEX または ALTER FULLTEXT INDEX ステートメントのオプション。 既定のフルテキスト言語がサポートされていない場合や、言語分析パッケージがない場合は、CREATE または ALTER 操作に失敗し、指定した言語が有効でないというエラー メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって表示されます。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   

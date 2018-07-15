@@ -1,5 +1,5 @@
 ---
-title: SourceColumnID 要素 (ASSL) |Microsoft ドキュメント
+title: SourceColumnID 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - SourceColumnID element
 ms.assetid: 715c0be7-aa07-4dff-a909-9738224941ec
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d1ad5aecbf77103ae3e06b932dd0da678fbaa83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 523977b881e9e8357b32cd606252d0a758d3b46a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281778"
 ---
 # <a name="sourcecolumnid-element-assl"></a>SourceColumnID 要素 (ASSL)
-  先祖である基になるマイニング構造列の識別子 (ID) を含む[MiningStructure](../objects/miningstructure-element-assl.md)要素。  
+  先祖であるソース マイニング構造列の識別子 (ID) を含む[MiningStructure](../objects/miningstructure-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36076655"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- 値、`SourceColumnID`要素内のマイニング構造列の識別子が一致する、[列](../collections/columns-element-assl.md)親のコレクション`MiningStructure`です。  
+ 値、`SourceColumnID`要素内のマイニング構造列の識別子に一致する、[列](../collections/columns-element-assl.md)の親コレクション`MiningStructure`します。  
   
  親に対応する要素`SourceColumnID`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MiningModelColumn>します。  
   

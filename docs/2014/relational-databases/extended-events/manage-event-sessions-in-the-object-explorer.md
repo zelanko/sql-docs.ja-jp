@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a72a02bf0568a393aa9510b2982c13b02086ead2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d13b3e167d4b8d5d8c099536d85669591658dffe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279708"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>オブジェクト エクスプローラーでのイベント セッションの管理
   このトピックでは、拡張イベントに影響する **オブジェクト エクスプローラー** で実行できる操作について説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "36072783"
  拡張イベント セッションの作成の詳細については、「 [拡張イベント セッションの作成](../../database-engine/create-an-extended-events-session.md)」を参照してください。  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>拡張イベント セッションの開始または停止  
- 開始または使用して、拡張イベント セッションを停止することができます、**クエリ エディター**を使用して、`ALTER EVENT SESSION`ステートメント、またはを使用して、**拡張イベント**のノード**オブジェクト エクスプ ローラー**.  
+ 開始または使用の拡張イベント セッションを停止することができます、**クエリ エディター**を使用して、`ALTER EVENT SESSION`ステートメント、またはを使用して、**拡張イベント**のノード**オブジェクト エクスプ ローラー**.  
   
  イベント セッションを停止すると、以後そのセッションは、sys.dm_xe_sessions 動的管理ビュー (DMV) にアクティブなセッションとして表示されません。 ただし、セッションの定義は一切変更されず、セッションを再開することもできます。 セッションの定義を完全に削除するには、セッションを削除する必要があります。  
   
@@ -86,7 +86,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>拡張イベント セッション テンプレートのインポート  
  **オブジェクト エクスプローラー**を使用して、拡張イベント セッションのテンプレートをインポートすることができます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の別のインスタンスからエクスポートされたテンプレートからセッションを作成する場合に、この操作を行うことができます。  
   
- 拡張イベント セッションをインポートする必要があります、必要な`ALTER ANY EVENT SESSION`アクセス許可。  
+ 拡張イベント セッションにインポートするには、必要ないる必要があります`ALTER ANY EVENT SESSION`アクセス許可。  
   
  テンプレート ファイルをインポートする前に、ファイルが信頼できるソースからであるかどうかを確認します。 テンプレート ファイルは、NTFS ファイル システムを使用し、その情報を表示する権限を持つユーザーのみにアクセスが制限されている場所に保存する必要があります。  
   
@@ -132,7 +132,7 @@ STATE = STOP
  イベント セッションを削除すると、すべての構成情報が削除され、以後、セッションの定義は sys.server_event_sessions カタログ ビューに表示されません。  
   
 > [!NOTE]  
->  system_health および AlwaysOn_health が付属[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 削除しないでください。 system_health は既定で有効です (詳細については、「 [system_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照)。 AlwaysOn_health は既定では off です。 パフォーマンスの問題を診断する際に役立つデータがこれらのセッションによって収集されます。  
+>  system_health および AlwaysOn_health に含まれている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 削除しないでください。 system_health は既定で有効です (詳細については、「 [system_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照)。 AlwaysOn_health は既定で無効にします。 パフォーマンスの問題を診断する際に役立つデータがこれらのセッションによって収集されます。  
   
  拡張イベント セッションを削除するには、ALTER ANY EVENT SESSION 権限が必要です。  
   

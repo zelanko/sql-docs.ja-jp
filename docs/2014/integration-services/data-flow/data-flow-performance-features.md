@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - Integration Services packages, performance
@@ -26,13 +26,13 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e812b0f249749c51e482bd27760fa1d5fb7f882f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ef48d82f71441381fca8f8bb2e3d52fee8ea8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287666"
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
   このトピックでは、パフォーマンスに関する一般的な問題を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデザイン時に回避するための考え方を示します。 また、パッケージのパフォーマンスのトラブルシューティングに使用できる機能やツールについての情報も提供します。  
@@ -76,15 +76,15 @@ ms.locfileid: "36176444"
  ディスクへのページングが開始される大きさにまでバッファー サイズを増やさないでください。 ディスクへのページングが行われると、バッファー サイズが最適化されていない場合よりもパフォーマンスが低下します。 ページングが行われているかどうかを判断するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) のパフォーマンス スナップインで "Buffers spooled" パフォーマンス カウンターを監視します。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>並列実行用のパッケージの構成  
- 並列実行を行うと、複数の物理プロセッサまたは論理プロセッサが搭載されているコンピューターのパフォーマンスが向上します。 パッケージ内に、さまざまなタスクの並列実行をサポートするために[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]2 つのプロパティを使用して:`MaxConcurrentExecutables`と`EngineThreads`です。  
+ 並列実行を行うと、複数の物理プロセッサまたは論理プロセッサが搭載されているコンピューターのパフォーマンスが向上します。 パッケージ内に、さまざまなタスクの並列実行をサポートするために[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]2 つのプロパティを使用して:`MaxConcurrentExecutables`と`EngineThreads`します。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables プロパティ  
- `MaxConcurrentExecutables`プロパティは、パッケージ自体のプロパティです。 このプロパティによって、同時に実行できるタスクの数が定義されます。 既定値は -1 です。これは、物理プロセッサまたは論理プロセッサの数に 2 を加えた数を示します。  
+ `MaxConcurrentExecutables`プロパティは、パッケージ自体のプロパティ。 このプロパティによって、同時に実行できるタスクの数が定義されます。 既定値は -1 です。これは、物理プロセッサまたは論理プロセッサの数に 2 を加えた数を示します。  
   
  このプロパティの動作を理解するために、3 つのデータ フロー タスクを含むサンプル パッケージについて考えてみます。 設定した場合`MaxConcurrentExecutables`3、3 つのデータ フロー タスクを同時に実行できます。 ただし、各データ フロー タスクに 10 個の変換元から変換先への実行ツリーが含まれているとすると、 `MaxConcurrentExecutables` を 3 に設定しても、各データ フロー タスク内の実行ツリーが並列実行されるかどうかは保証されません。  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads プロパティ  
- `EngineThreads` プロパティは、各データ フロー タスクのプロパティです。 このプロパティによって、データ フロー エンジンが作成および並列実行できるスレッドの数が定義されます。 `EngineThreads`プロパティに適用されます両方のソース スレッド、データ フロー エンジンがソースと、変換および変換先用に作成するワーカー スレッドを作成します。 したがって、`EngineThreads` を 10 に設定すると、エンジンはソース スレッドとワーカー スレッドをそれぞれ 10 個まで作成できます。  
+ `EngineThreads` プロパティは、各データ フロー タスクのプロパティです。 このプロパティによって、データ フロー エンジンが作成および並列実行できるスレッドの数が定義されます。 `EngineThreads`プロパティに当てはまります、両方のソース スレッドは、データ フロー エンジンがソースと変換および変換先用に作成するワーカー スレッドを作成します。 したがって、`EngineThreads` を 10 に設定すると、エンジンはソース スレッドとワーカー スレッドをそれぞれ 10 個まで作成できます。  
   
  このプロパティの動作を理解するために、3 つのデータ フロー タスクを含むサンプル パッケージについて考えてみます。 各データ フロー タスクには、10 個の変換元から変換先への実行ツリーが含まれています。 各データ フロー タスクで EngineThreads を 10 に設定すると、30 個すべての実行ツリーを同時に実行できます。  
   
@@ -103,14 +103,14 @@ ms.locfileid: "36176444"
  クエリを作成するには、手動で入力するか、クエリ ビルダーを使用することができます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを実行すると、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの [進行状況] タブに警告が表示されます。 これには、データ フローで利用できるが、それに続く下流のデータ フロー コンポーネントでは使用されないデータ列を示す警告も含まれます。 使用することができます、`RunInOptimizedMode`これらの列を自動的に削除するプロパティです。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを実行すると、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの [進行状況] タブに警告が表示されます。 これには、データ フローで利用できるが、それに続く下流のデータ フロー コンポーネントでは使用されないデータ列を示す警告も含まれます。 使用することができます、`RunInOptimizedMode`これらの列を自動的に削除するプロパティ。  
   
 #### <a name="avoid-unnecessary-sorting"></a>不必要な並べ替えの回避  
  並べ替えは本質的に低速な処理であり、不必要な並べ替えを回避することで、パッケージのデータ フローのパフォーマンスを向上させることができます。  
   
  ソース データは、下流コンポーネントで使用される前に既に並べ替えられている場合があります。 このような状況は、SELECT クエリで ORDER BY 句を使用した場合、またはデータが並べ替え順でソースに挿入された場合に発生することがあります。 このようにソース データが事前に並べ替えられている場合、データが並べ替え済みである旨のヒントを示すことで、並べ替え変換の使用を回避し、特定の下流変換の並べ替え要件を満たすことができます (たとえば、マージ変換およびマージ結合変換では、並べ替え済みの入力が必要です)。データが並べ替え済みである旨のヒントを示すには、次の作業を行う必要があります。  
   
--   設定、`IsSorted`プロパティに上流データ フロー コンポーネントの出力を`True`です。  
+-   設定、`IsSorted`プロパティに、アップ ストリームのデータ フロー コンポーネントの出力を`True`します。  
   
 -   データを並べ替える並べ替えキー列を指定します。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36176444"
  このセクションの推奨事項に従うと、集計変換、あいまい参照変換、あいまいグループ化変換、参照変換、マージ結合変換、および緩やかに変化するディメンション変換のパフォーマンスが向上します。  
   
 #### <a name="aggregate-transformation"></a>集計変換  
- 集計変換には、`Keys`、`KeysScale`、`CountDistinctKeys`、および `CountDistinctScale` プロパティがあります。 これらのプロパティを使用すると、変換時にキャッシュされるデータに必要な量のメモリが事前に割り当てられるようになるため、パフォーマンスが向上します。 結果として予想されるグループ数の真数または概数がわかっている場合、 **Group by**操作で、設定、`Keys`と`KeysScale`プロパティ、それぞれします。 結果として予想される個別の値の真数または概数値の数を把握している場合、**個別のカウント**操作で、設定、`CountDistinctKeys`と`CountDistinctScale`プロパティ、それぞれします。  
+ 集計変換には、`Keys`、`KeysScale`、`CountDistinctKeys`、および `CountDistinctScale` プロパティがあります。 これらのプロパティを使用すると、変換時にキャッシュされるデータに必要な量のメモリが事前に割り当てられるようになるため、パフォーマンスが向上します。 真数または概数値の結果として予想されるグループ数がわかっている場合、 **Group by**操作、設定、`Keys`と`KeysScale`プロパティ、それぞれします。 結果として予想される個別の値の真数または概数値の数がわかっている場合、**個別のカウント**操作、設定、`CountDistinctKeys`と`CountDistinctScale`プロパティ、それぞれします。  
   
  データ フロー内に複数の集計を作成する必要がある場合は、複数の変換を作成する代わりに、1 つの集計変換を使用した複数の集計を作成することを検討してください。 この方法は、集計が別の集計のサブセットである場合にパフォーマンスを向上させます。変換により内部ストレージを最適化でき、入力データのスキャンを一度だけ行えば済むためです。 たとえば、集計で GROUP BY 句と AVG 集計を使用する場合は、それらを 1 つの変換に結合することでパフォーマンスを向上させることができます。 ただし、1 つの集計変換内で複数の集計を実行すると集計操作がシリアル化されるので、複数の集計を個別に計算する必要がある場合は、パフォーマンスが向上しない可能性があります。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36176444"
  必要な列のみを参照する SELECT ステートメントを入力することによって、メモリ内の参照データのサイズを最小限に抑えます。 この方法は、テーブルまたはビュー全体を選択して大量の不要なデータを返す場合に比べてパフォーマンスに優れています。  
   
 #### <a name="merge-join-transformation"></a>Merge Join Transformation  
- 値を構成する必要が不要になった、`MaxBuffersPerInput`プロパティ マイクロソフトが行った変更をマージ結合変換が過度にメモリが消費されるリスクを軽減するためです。 この問題は、マージ結合の複数の入力からデータが不均一なレートで生成される場合に発生することがありました。  
+ 値を構成する必要が不要になった、`MaxBuffersPerInput`プロパティ マイクロソフトが行った変更がマージ結合変換で過剰なメモリを消費することのリスクを軽減するためです。 この問題は、マージ結合の複数の入力からデータが不均一なレートで生成される場合に発生することがありました。  
   
 #### <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換  
  緩やかに変化するディメンション ウィザードおよび緩やかに変化するディメンション変換は、ほとんどのユーザーのニーズを満たす汎用ツールです。 ただし、ウィザードで生成されるデータ フローは、パフォーマンスのために最適化されていません。  
@@ -201,7 +201,7 @@ ms.locfileid: "36176444"
 -   technet.microsoft.com のビデオ「 [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
   
 ## <a name="see-also"></a>参照  
- [パッケージの開発のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [パッケージ開発のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

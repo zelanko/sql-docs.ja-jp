@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3491f444347d57273cd86914e21c4d7b46ad02b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 35bd6647459cff188ff90553fdaa824d85ac9459
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300362"
 ---
 # <a name="toolbox-component-f1-help"></a>ツールボックス コンポーネントの F1 ヘルプ
   **[ツールボックス]** には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] プロジェクトで使用するさまざまなアイテムが表示されます。 **[ツールボックス]** は、 **[表示]** メニューから開くことができます。このウィンドウは自由にドッキングできます。 ドッキングするときに、 **[ツールボックス]** を固定して開くように設定したり、使用していないときは **[自動的に隠す]** を適用したりできます。  
   
- **ツールボックス**またはアイコンをドラッグし、削除またはコピーし、コード エディターに貼り付け、デザイン ビュー画面に内[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
+ **ツールボックス**内ビュー画面設計にアイコンをドラッグし、削除、またはコピーしコード エディターに貼り付けるか[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
 ## <a name="using-the-toolbox"></a>ツールボックスの使用  
  [ツールボックス] はスライド式のツリー コントロールで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows エクスプローラーの動作と似ていますが、グリッド線や接続線はありません。 **[ツールボックス]** の複数のセグメント (タブ) を同時に展開し、ツリー全体をスクロールして **[ツールボックス]** ウィンドウ内を移動することができます。 **[ツールボックス]** のタブを展開するには、名前の横のプラス記号 (**[+]**) をクリックします。 展開したタブを折りたたむには、名前の横のマイナス記号 (**[-]**) をクリックします。  

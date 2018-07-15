@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.distdbproperties.f1
 helpviewer_keywords:
 - Distribution Database Properties dialog box
 ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 00103d953ea8b7c68050ca18afc41b4d59b149a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ee22646a0054db4ce7ee41a1e8faa25cfcf9c6e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287068"
 ---
 # <a name="distribution-database-properties"></a>[ディストリビューション データベースのプロパティ]
   **[ディストリビューション データベースのプロパティ]** ダイアログ ボックスを使用すると、多数のプロパティを表示でき、データベースにおけるトランザクションの保有期間と履歴の保有期間を設定できます。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  ディストリビューション データベースの名前です。既定の名前は "distribution" です (読み取り専用)。  
   
  **[ファイルの場所]**  
@@ -52,7 +52,7 @@ ms.locfileid: "36070485"
   
 -   サブスクリプションの新規作成ウィザードの [ディストリビューション エージェント]。エージェントは、ここで指定された資格情報を使用してサブスクライバーに接続します。  
   
- 詳細については、次を参照してください。 \\ [Replication Agent Security Model](security/replication-agent-security-model.md)です。  
+ 詳細については、次を参照してください。 \\ [Replication Agent Security Model](security/replication-agent-security-model.md)します。  
   
 ## <a name="see-also"></a>参照  
  [[ディストリビューションの構成]](configure-distribution.md)   

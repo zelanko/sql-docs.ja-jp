@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aae2fac11aab58193883c43e1062e12be837e065
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4ee6252daa58a5e99b8fdd5be6099e8e9de936d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320682"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>パッケージ開発のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開発する際にトラブルシューティングを実行できる機能とツールが用意されています。  
@@ -45,11 +45,11 @@ ms.locfileid: "36174511"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、検証エラーを回避するための以下の追加機能が備わっています。  
   
--   **データ ソースが使用できないときは、オフラインで動作するようにすべてのパッケージとすべての接続を設定します**。 **[SSIS]** メニューの **[オフライン作業]** を有効にできます。 異なり、 `DelayValidation` 、プロパティ、**オフライン作業**オプションは、パッケージを開く前でもに、使用できます。 また、 **[オフライン作業]** を有効にしてデザイナーでの操作を高速化し、パッケージを検証するときだけこのオプションを無効にすることもできます。  
+-   **データ ソースが使用できないときは、オフラインで動作するようにすべてのパッケージとすべての接続を設定します**。 **[SSIS]** メニューの **[オフライン作業]** を有効にできます。 異なり、`DelayValidation`プロパティ、**オフライン作業**オプションは、パッケージを開く前でもに、使用できます。 また、 **[オフライン作業]** を有効にしてデザイナーでの操作を高速化し、パッケージを検証するときだけこのオプションを無効にすることもできます。  
   
--   **実行時まで無効なパッケージ要素の DelayValidation プロパティを構成する**。 デザイン時には構成が有効でないパッケージ要素の `DelayValidation` を `True` に設定すると、検証エラーが発生するのを防ぐことができます。 たとえば、SQL 実行タスクが実行時に作成するまで存在しないテーブルを、データ フロー タスクで使用する場合があります。 `DelayValidation`パッケージ レベル、または個々 のタスクと、パッケージに含まれるコンテナーのレベルでプロパティを有効にすることができます。 このプロパティ設定しておく必要があります通常`True`実行時に同じ検証エラーを防ぐために、パッケージを展開するときに、同一のパッケージ要素上です。  
+-   **実行時まで無効なパッケージ要素の DelayValidation プロパティを構成する**。 デザイン時には構成が有効でないパッケージ要素の `DelayValidation` を `True` に設定すると、検証エラーが発生するのを防ぐことができます。 たとえば、SQL 実行タスクが実行時に作成するまで存在しないテーブルを、データ フロー タスクで使用する場合があります。 `DelayValidation`プロパティは、パッケージ レベル、または個々 のタスクと、パッケージに含まれているコンテナーのレベルで有効にできます。 このプロパティ設定しておく必要があります通常`True`実行時に同じ検証エラーを防ぐために、パッケージを配置するときは、同じパッケージ要素にします。  
   
-     `DelayValidation`プロパティを設定できる、データ フロー タスクではなく個々 のデータ フロー コンポーネント。 個別のデータ フロー コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティを `false` に設定すると、同様の効果を得ることができます。 ただし、このプロパティの値は、いつ`false`コンポーネントは外部データ ソースのメタデータへの変更を認識しません。  
+     `DelayValidation`プロパティを設定できるデータ フロー タスクではなく個々 のデータ フロー コンポーネント。 個別のデータ フロー コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティを `false` に設定すると、同様の効果を得ることができます。 ただし、このプロパティの値は、いつ`false`コンポーネントが外部データ ソースのメタデータへの変更に注意してください。  
   
  検証の発生時に、パッケージによって使用されるデータベース オブジェクトがロックされている場合、検証プロセスが応答しなくなる可能性があります。 このような状況では、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーも応答しなくなります。 検証を再開するには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内の関連するセッションを閉じます。 また、このセクションで説明した設定を使用することによって、この問題を回避することもできます。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36174511"
     > [!NOTE]  
     >  複数のスクリプト タスクを含むパッケージをデバッグする場合、デバッガーは 1 つのスクリプト タスクにあるブレークポイントのみにヒットし、他のスクリプト タスクにあるブレークポイントを無視します。 スクリプト タスクが Foreach ループ コンテナーまたは For ループ コンテナーの一部である場合、デバッガーは、ループの最初の繰り返し後にスクリプト タスクにあるブレークポイントを無視します。  
   
- 詳細については、「 [スクリプトのデバッグ](debugging-script.md)」を参照してください。 スクリプト コンポーネントをデバッグする方法に関する推奨事項は、「[コーディングとスクリプト コンポーネントのデバッグ] の使用」を参照してください。 (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md します。  
+ 詳細については、「 [スクリプトのデバッグ](debugging-script.md)」を参照してください。 スクリプト コンポーネントをデバッグする方法に関する推奨事項は、[コーディングとスクリプト コンポーネントのデバッグ] を参照してください (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md です。  
   
 ## <a name="troubleshooting-errors-without-a-description"></a>説明のないエラーのトラブルシューティング  
  パッケージ開発中、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラー番号に対応する説明のないエラーが発生した場合は、その説明を「 [Integration Services のエラーおよびメッセージのリファレンス](../integration-services-error-and-message-reference.md)」で確認できます。 現時点では、この一覧にトラブルシューティング情報は含まれていません。  

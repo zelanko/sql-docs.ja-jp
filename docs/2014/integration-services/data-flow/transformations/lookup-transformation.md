@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
 helpviewer_keywords:
@@ -22,13 +22,13 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f7a4d4a05d738ee844b6eb63ab5c762fb84f6194
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0dcebe1fa634678fa754b74be04d1dd5e1bcac5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298812"
 ---
 # <a name="lookup-transformation"></a>参照変換
   参照変換は、入力列のデータを参照データセットの列と結合することにより参照を実行します。 参照を使用すると、共通の列の値に基づいている関連テーブル内の追加情報にアクセスできます。  
@@ -78,7 +78,7 @@ ms.locfileid: "36082829"
 -   不一致出力。 不一致出力は、参照データセット内の 1 つ以上のエントリと一致しない入力内の行を処理します。 一致エントリがない行をエラーとして扱うように参照変換を構成している場合、これらの行はエラー出力にリダイレクトされます。 それ以外の場合、これらの行は不一致出力にリダイレクトされます。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] の参照変換の出力は 1 つだけでした。 作成された参照変換を実行する方法の詳細についての[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]を参照してください[参照変換のアップグレード](../../../sql-server/install/upgrade-lookup-transformations.md)です。  
+    >  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] の参照変換の出力は 1 つだけでした。 作成された参照変換を実行する方法の詳細についての[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]を参照してください[参照変換のアップグレード](../../../sql-server/install/upgrade-lookup-transformations.md)します。  
   
 -   エラー出力。  
   

@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: ポリシー ベースの管理を使用して、ベスト プラクティスの評価 |Microsoft ドキュメント'
+title: 'チュートリアル: ポリシー ベースの管理を使用して、ベスト プラクティスの評価 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - best practices analyzer
 - Policy-Based Management, best practices policies
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Policy-Based Management, tutorials
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abcb108fc5f19bba718173674fccb08fc0aa29d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 129fdbd715df234c05319ab02b15fcb99b19ac08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315062"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>チュートリアル : ポリシー ベースの管理を使用したベスト プラクティスの評価
   「ポリシー ベースの管理を使用したベスト プラクティスの評価」チュートリアルへようこそ。 このチュートリアルは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] について理解しており、ポリシー ベースの管理を初めて使用するユーザーを対象としています。 ポリシー ベースの管理は、サイト管理の基準を適用するために使用できるポリシーを定義するためのシステムです。 ポリシー ベースの管理には一連のベスト プラクティス ポリシーが含まれており、これらを使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを分析し、インスタンスがベスト プラクティスのガイドラインと推奨事項に適合しているかどうかを判断できます。  

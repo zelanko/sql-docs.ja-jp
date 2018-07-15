@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies
 - hierarchies [Master Data Services], derived hierarchies
 - derived hierarchies, about derived hierarchies
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d35fcd33da67623a27cf8027e499c2ba9bbca429
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 810d91175bdfd8e8c31eb42dfbab1c36b0dcce65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313952"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>派生階層 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の派生階層は、モデル内のエンティティ間に既に存在するドメインベースの属性のリレーションシップから派生します。  
@@ -74,7 +74,7 @@ ms.locfileid: "36175990"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|新しい派生階層を作成する。|[派生階層を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|新しい派生階層を作成する。|[派生階層を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |既存の派生階層のレベルを非表示にするか、または削除する。|[非表示または派生階層のレベルを削除&#40;マスター データ サービス&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
 |既存の派生階層の名前を変更する。|[派生階層名を変更する&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |既存の派生階層を削除する。|[派生階層を削除&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  

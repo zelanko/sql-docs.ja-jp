@@ -1,5 +1,5 @@
 ---
-title: ユーザー定義ロールを作成 |Microsoft ドキュメント
+title: ユーザー定義ロールの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b8405be955cdfd4f0d8b9665665f8817c98b9d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcd15f49067a9c6a1091f98e6b361ab11baf2a0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295122"
 ---
 # <a name="create-a-user-defined-role"></a>ユーザー定義ロールを作成する
     
@@ -31,7 +31,7 @@ ms.locfileid: "36177341"
   
 3.  オブジェクト エクスプローラー ツール バーで **[接続]** をクリックし、 **[データベース エンジン]** をクリックします。  
   
-4.  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名を指定し、認証モードを選択します。 (Local)、ピリオド (.) を使用することができますか`localhost`ローカル サーバーを示します。  
+4.  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名を指定し、認証モードを選択します。 (Local)、ピリオド (.) を使用するまたは`localhost`をローカル サーバーを指定します。  
   
 5.  **[接続]** をクリックします。  
   
@@ -45,6 +45,6 @@ ms.locfileid: "36177341"
   
 10. 必要に応じて、 **[拡張プロパティ]** をクリックし、任意の拡張プロパティを構成します。  
   
-11. **[OK]** をクリックします。  
+11. [**OK**] をクリックします。  
   
   

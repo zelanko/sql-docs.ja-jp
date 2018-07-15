@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackagevalidate.f1
 - sql12.ssis.ssms.isprojectvalidate.f1
@@ -16,13 +16,13 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4b426080f2c76e8abc4bcaff26d2d5f0d53bfcc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b05f4658cd6741e1b90bd6300d477782b1173b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291128"
 ---
 # <a name="validate-dialog-box"></a>[検証] ダイアログ ボックス
   **のプロジェクトまたはパッケージの一般的な問題を確認するには、** [検証] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。  
@@ -64,7 +64,7 @@ ms.locfileid: "36176006"
  **パラメーター**  
  パラメーターの名前を一覧表示します。  
   
- **Value**  
+ **[値]**  
  パラメーター値を一覧表示します。  
   
  **[接続マネージャー]** タブには、プロジェクトまたはパッケージの検証に使用する接続マネージャーのプロパティ値が表示されます。  
@@ -74,13 +74,13 @@ ms.locfileid: "36176006"
  **コンテナー**  
  接続マネージャーを含むオブジェクトを一覧表示します。  
   
- **Name**  
+ **名前**  
  接続マネージャーの名前を一覧表示します。  
   
  **プロパティ名**  
  接続マネージャーのプロパティの名前を一覧表示します。  
   
- **Value**  
+ **[値]**  
  接続マネージャーのプロパティに割り当てられた値を一覧表示します。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: リレーショナル クエリ デザイナーのユーザー インターフェイス |Microsoft ドキュメント
+title: リレーショナル クエリ デザイナーのユーザー インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 99cb45aa3f0709fe9d7360938b37133317ea2c8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47fd572aad6fd135aa4563fda63fa4f36c32e45f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301878"
 ---
 # <a name="relational-query-designer-user-interface"></a>リレーショナル クエリ デザイナーのユーザー インターフェイス
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のレポート デザイナーにはグラフィカル クエリ デザイナーとテキストベースのクエリ デザイナーが用意されており、レポート データセット用に [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] および [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] から取得するデータを指定するクエリの作成に使用できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -87,7 +87,7 @@ ms.locfileid: "36070681"
   
  集計ではデータの要約が返されます。データは、要約データを提供する集計をサポートするためにグループ化されます。 クエリで集計を使用すると、そのクエリによって返される他のフィールドは自動的にグループ化され、クエリには SQL の GROUP BY 句が含まれます。 **[グループ化と集計]** ボックスの一覧では、 **[グループ化]** オプションだけを使用することによって、集計を追加せずにデータを要約できます。 多くの集計には、DISTINCT キーワードを使用するバージョンが含まれています。 DISTINCT を含めることで値の重複を排除できます。  
   
- [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 使用して[!INCLUDE[tsql](../includes/tsql-md.md)]と[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[DWsql](../includes/dwsql-md.md)]です。 いずれの SQL 言語構文でも、クエリ デザイナーに用意されている句、キーワード、および集計がサポートされます。  
+ [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 使用して[!INCLUDE[tsql](../includes/tsql-md.md)]と[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[DWsql](../includes/dwsql-md.md)]します。 いずれの SQL 言語構文でも、クエリ デザイナーに用意されている句、キーワード、および集計がサポートされます。  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=141687)にある「[Transact-SQL リファレンス (データベース エンジン)](/sql/t-sql/language-reference)」を参照してください。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36070681"
 -   **自動検出** : テーブル間のリレーションシップを自動的に作成する自動検出機能を切り替えます。 自動検出をオンにすると、クエリ デザイナーによって、テーブル内の外部キーからリレーションシップが作成されます。自動検出をオフにすると、リレーションシップを手動で作成する必要があります。 **データベース ビュー** ペインでテーブルを選択する際、自動検出によってリレーションシップが自動的に作成されます。 結合を手動で作成した後に自動検出をオンにすると、これらの結合は破棄されます。  
   
     > [!IMPORTANT]  
-    >  使用すると[!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]結合の作成に必要なメタデータが指定されていないと、リレーションシップを自動的に検出できません。 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] からデータを取得するクエリの場合は、すべてのテーブル結合を手動で作成する必要があります。  
+    >  使用すると[!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]結合を作成するために必要なメタデータが指定されていないと、リレーションシップを自動的に検出できません。 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] からデータを取得するクエリの場合は、すべてのテーブル結合を手動で作成する必要があります。  
   
 -   **リレーションシップの追加** : **[リレーションシップ]** ボックスの一覧にリレーションシップを追加します。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "36070681"
   
 -   **左テーブル** : 結合リレーションシップの一部である最初のテーブルの名前を表示します。  
   
--   **結合の種類** : 自動的に生成されるクエリで使用される SQL の JOIN ステートメントの種類を表示します。 既定では、外部キー制約が検出された場合は INNER JOIN が使用されます。 その他の結合の種類は LEFT JOIN または RIGHT JOIN です。 これらのいずれの結合の種類も該当しない場合は、 **[結合の種類]** 列に **[リレーションシップなし]** と表示されます。 リレーションシップのないテーブルには CROSS JOIN 結合は作成されません。代わりに、左テーブルと右テーブル内の列を結合することでリレーションシップを手動で作成する必要があります。 結合の種類の詳細についてを参照してください「結合の基礎」 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=141687)msdn.microsoft.com の「.  
+-   **結合の種類** : 自動的に生成されるクエリで使用される SQL の JOIN ステートメントの種類を表示します。 既定では、外部キー制約が検出された場合は INNER JOIN が使用されます。 その他の結合の種類は LEFT JOIN または RIGHT JOIN です。 これらのいずれの結合の種類も該当しない場合は、 **[結合の種類]** 列に **[リレーションシップなし]** と表示されます。 リレーションシップのないテーブルには CROSS JOIN 結合は作成されません。代わりに、左テーブルと右テーブル内の列を結合することでリレーションシップを手動で作成する必要があります。 結合の種類に関する詳細については、「結合の基礎」を参照してください[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?LinkId=141687) msdn.microsoft.com.  
   
 -   **右テーブル** : 結合リレーションシップの 2 番目のテーブルの名前を表示します。  
   

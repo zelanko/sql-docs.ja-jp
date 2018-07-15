@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connection.login.analysisserver.f1
 ms.assetid: 7e277d22-8d4b-422e-8882-7c5dd7a6d915
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 070c275a8ab5a04ed4188a157858169968a63765
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d56b14a628e2002550f239ab8388dbd46cad57f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312272"
 ---
 # <a name="connect-to-server-analysis-services"></a>[サーバーへの接続] \(Analysis Services)
   このダイアログを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] に接続するときのオプションを表示または指定できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36177362"
  **Password**  
  このオプションは、このリリースでは使用できません。 ログインのパスワードを入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合のみ編集できます。  
   
- **のインスタンスに接続するときには、**  
+ **Connect**  
  クリックすると、上記で選択したサーバーに接続します。  
   
  **[オプション]**  

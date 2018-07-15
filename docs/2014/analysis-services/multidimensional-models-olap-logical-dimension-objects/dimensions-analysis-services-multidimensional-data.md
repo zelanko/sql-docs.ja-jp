@@ -1,5 +1,5 @@
 ---
-title: ディメンション (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: ディメンション (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Analysis Services objects, dimensions
 ms.assetid: 2b114135-2572-4479-8c81-3ccf0cfeb9f7
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bfe683915d9cacfa21bdd5f32533024da7a7ee34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48cba502e905c1f83503ac8955184116971316c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301152"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>ディメンション (Analysis Services - 多次元データ)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ディメンションはキューブの基本的なコンポーネントです。 ディメンションは、顧客、店舗、従業員など、ユーザーが関心のある分野に関するデータを編成します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションには、ディメンション テーブルの列に対応する属性が含まれています。 これらの属性は属性階層として表現されます。またこれらの属性は、ユーザー定義階層に編成したり、基になるディメンション テーブルの列に基づいた親子階層として定義できます。 階層は、キューブに含まれるメジャーを編成するために使用されます。 次のトピックでは、ディメンション、属性、および階層の概要について説明します。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
 - expression-level collations [SQL Server]
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f7ba7721287907142e7966b6d4e298afa07a89f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0547ac482e5dc56ec3b5e207b5776f5c8fbdab4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287338"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 使用される照合順序の文字データ型`char`と`varchar`ディクテーション コード ページと対応する文字をそのデータ型で表すことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用可能な照合順序の一覧については、「 [sys」を参照してください。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)」を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 使用される照合順序の文字データ型`char`と`varchar`ディクテーション コード ページおよびそのデータ型を表すことができる、対応する文字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用可能な照合順序の一覧については、「 [sys」を参照してください。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)」を参照してください。  
   
  サーバー、データベース、列、または式の照合順序を選択すると、データベースのさまざまな操作の結果に影響を与える特定の特性がデータに割り当てられます。 たとえば、ORDER BY を使用してクエリを構築する場合、結果セットの並べ替え順序は、データベースに適用される照合順序、またはクエリの式レベルで COLLATE 句に指定される照合順序に依存します。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36178014"
   
  サーバーの照合順序を変更すること以外に、システム データベースの照合順序を変更する方法はありません。  
   
- データベースの照合順序は、データベース内のすべてのメタデータで使用され、データベース内で使用されるすべての文字列型の列、一時オブジェクト、変数名、およびその他のすべての文字列の既定値になります。 ユーザー データベースの照合順序を変更する場合は、データベースのクエリが一時テーブルにアクセスするときに照合順序が競合する可能性があります。 一時テーブルは常に保存、`tempdb`システム データベースは、インスタンスの照合順序が使用されます。 ユーザー データベースと `tempdb` の文字データを比較するクエリは、文字データの評価で照合順序が競合すると、失敗します。 この問題は、クエリに COLLATE 句を指定することで解決できます。 詳細については、「[COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)」を参照してください。  
+ データベースの照合順序は、データベース内のすべてのメタデータで使用され、データベース内で使用されるすべての文字列型の列、一時オブジェクト、変数名、およびその他のすべての文字列の既定値になります。 ユーザー データベースの照合順序を変更する場合は、データベースのクエリが一時テーブルにアクセスするときに照合順序が競合する可能性があります。 一時テーブルが常に格納されている、`tempdb`システム データベースは、インスタンスの照合順序が使用されます。 ユーザー データベースと `tempdb` の文字データを比較するクエリは、文字データの評価で照合順序が競合すると、失敗します。 この問題は、クエリに COLLATE 句を指定することで解決できます。 詳細については、「[COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)」を参照してください。  
   
  列レベルの照合順序  
  テーブルを作成または変更するときに、COLLATE 句を使用して、文字列型の各列に対して照合順序を指定できます。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。  
@@ -117,7 +117,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Unicode_Defn"></a> Unicode のサポート  
- Unicode は、コード ポイントを文字にマップするための標準です。 Unicode は世界中のすべての言語のすべての文字を処理できるようにデザインされているので、異なる文字のセットを扱うために他のコード ページを必要とすることがありません。 複数の言語を反映する文字データを格納する場合は常に Unicode データ型を使用 (`nchar`、 `nvarchar`、および`ntext`) 非 Unicode データ型ではなく (`char`、 `varchar`、および`text`)。  
+ Unicode は、コード ポイントを文字にマップするための標準です。 Unicode は世界中のすべての言語のすべての文字を処理できるようにデザインされているので、異なる文字のセットを扱うために他のコード ページを必要とすることがありません。 複数の言語を反映する文字データを格納する場合は常に Unicode データ型を使用 (`nchar`、 `nvarchar`、および`ntext`)、Unicode 以外のデータ型ではなく (`char`、 `varchar`、および`text`)。  
   
  非 Unicode データ型には、多くの制限が関連付けられています。 これは、Unicode に対応していないコンピューターではコード ページの使用が 1 つに制限されているためです。 Unicode コードを使用すると、必要なコード ページ変換が少なくなるので、パフォーマンスの向上が期待できます。 Unicode 照合順序は、サーバー レベルではサポートされないため、データベース、列、式の各レベルで個別に選択する必要があります。  
   
@@ -148,7 +148,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Supplementary_Characters"></a> 補助文字  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などのデータ型を提供`nchar`と`nvarchar`Unicode データを格納します。 これらのデータ型は、 *UTF-16*と呼ばれる形式でテキストをエンコードします。 Unicode コンソーシアムは、各文字に一意のコード ポイント (0x0000 から 0x10FFFF の範囲の値) を割り当てています。 最もよく使用される一連の文字にはメモリとディスク上で 16 ビット ワードに収まるコード ポイント値がありますが、コード ポイント値が 0xFFFF を超える文字は、連続した 2 つの 16 ビット ワードを必要とします。 これらの文字は *補助文字*と呼ばれ、2 つの連続する 16 ビット ワードは *サロゲート ペア*と呼ばれます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などのデータ型を提供します`nchar`と`nvarchar`Unicode データを格納します。 これらのデータ型は、 *UTF-16*と呼ばれる形式でテキストをエンコードします。 Unicode コンソーシアムは、各文字に一意のコード ポイント (0x0000 から 0x10FFFF の範囲の値) を割り当てています。 最もよく使用される一連の文字にはメモリとディスク上で 16 ビット ワードに収まるコード ポイント値がありますが、コード ポイント値が 0xFFFF を超える文字は、連続した 2 つの 16 ビット ワードを必要とします。 これらの文字は *補助文字*と呼ばれ、2 つの連続する 16 ビット ワードは *サロゲート ペア*と呼ばれます。  
   
  補助文字を使用する場合は、以下の点に注意してください。  
   
@@ -198,7 +198,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
 -   タイ語など、単語間に区切りがないため、単語を識別するための内部辞書を必要とする言語。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を操作するデータベース アプリケーションは、複雑な文字表記をサポートするコントロールを使用する必要があります。 マネージ コードで作成される標準の Windows フォーム コントロールは、複雑な文字表記を使用できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を操作するデータベース アプリケーションは、複雑な文字表記をサポートするコントロールを使用する必要があります。 マネージド コードで作成される標準の Windows フォーム コントロールは、複雑な文字表記を使用できます。  
   
   
 ##  <a name="Related_Tasks"></a> 関連タスク  

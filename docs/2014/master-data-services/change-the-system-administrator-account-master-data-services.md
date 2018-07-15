@@ -1,5 +1,5 @@
 ---
-title: システム管理者アカウント (Master Data Services) の変更 |Microsoft ドキュメント
+title: システム管理者アカウント (マスター データ サービス) の変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], changing
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0e9a79120b4f184fb7acf07eeaf46101740a173
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6d15bf7b140445ca80f23fe22e058a78d6fdce0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298612"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>システム管理者アカウントの変更 (マスター データ サービス)
   として指定されているユーザー アカウントを変更することができます、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]システム管理者です。  
@@ -32,7 +32,7 @@ ms.locfileid: "36076618"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   新しい管理者のユーザー名を[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]のユーザーの一覧に追加する必要があります。 詳細については、次を参照してください。[ユーザーを追加&#40;Master Data Services&#41;](add-a-user-master-data-services.md)です。  
+-   新しい管理者のユーザー名を[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]のユーザーの一覧に追加する必要があります。 詳細については、次を参照してください。[ユーザーを追加&#40;Master Data Services&#41;](add-a-user-master-data-services.md)します。  
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースで mdm.tblUser を表示して mdm.udpSecurityMemberProcessRebuildModel ストアド プロシージャを実行するための権限が必要です。 詳細については、「[データベース オブジェクト セキュリティ (マスター データ サービス)](../../2014/master-data-services/database-object-security-master-data-services.md)」を参照してください。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "36076618"
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssDE](../includes/ssde-md.md)] データベースの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンスに接続します。  
   
-2.  Mdm.tblUser で、新しい管理者しの値をコピーするユーザーを見つけ、`SID`列です。  
+2.  Mdm.tbluser で、新しい管理者である値をコピーしたユーザーを検索、`SID`列。  
   
 3.  新しいクエリを作成します。  
   
-4.  次のテキストを入力交換*domain \user_name*新しい管理者のユーザー名を持つと*SID*手順 2. でコピーした値を使用します。  
+4.  次のテキスト入力交換*domain \user_name*を新しい管理者のユーザー名と*SID*手順 2. でコピーした値を持つ。  
   
     ```  
     EXEC [mdm].[udpSecuritySetAdministrator] @UserName='DOMAIN\user_name', @SID = 'SID', @PromoteNonAdmin = 1  

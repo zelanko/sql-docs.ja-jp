@@ -1,5 +1,5 @@
 ---
-title: 予約済みキーワードを削除コロン次 |Microsoft ドキュメント
+title: 削除のコロンの次の予約済みキーワード |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reserved keywords
 ms.assetid: 4f23f7e4-7b4d-4e19-86c9-7527bb8b107d
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ae83b0d45ea08a7087bafbd7ee9d1c063e9cf7d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5969fdcd95f0168dad587552bc114f874a3feeef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282578"
 ---
 # <a name="remove-colon-following-reserved-keyword"></a>予約されたキーワードの後のコロンを削除する
   アップグレード アドバイザーは、予約されたキーワードの後にコロン (:) が含まれたスクリプトを検出しました。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この構文は無視され、ステートメントが正常に実行されます。 現在、データベース互換性モードが 100 以上に設定されていると、この構文が原因でステートメントが失敗します。  

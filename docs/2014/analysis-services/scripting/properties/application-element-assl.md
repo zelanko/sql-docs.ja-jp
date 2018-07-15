@@ -1,5 +1,5 @@
 ---
-title: Application 要素 (ASSL) |Microsoft ドキュメント
+title: Application 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Application element
 ms.assetid: dfd780ad-f643-4a1c-b58b-34271ae91240
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 363f72b39a48e1606861168461abc3e19cb8b5bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e04ce46a9fc2797885e3c8dff0acd697a782b95a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279498"
 ---
 # <a name="application-element-assl"></a>Application 要素 (ASSL)
   関連付けられているアプリケーションを識別、[アクション](../objects/action-element-assl.md)要素。  

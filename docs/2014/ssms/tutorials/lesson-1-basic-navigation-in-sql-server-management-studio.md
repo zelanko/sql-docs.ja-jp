@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cab5279-86fd-482d-a690-de24bbc25299
-caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7ae7f0bfae887834f0e1cd619f5abe135a3b5a53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5c5fc0c3734f65518715e02a5213fc14c62d2fcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306922"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>レッスン 1 : SQL Server Management Studio での基本操作
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は強力で柔軟なツールです。 しかし、Microsoft Visual Studio を初めて使用するユーザーは、必要な機能をすぐに見つけられない可能性があります。 このレッスンでは、設計を容易に行えるようにするため、各ウィンドウがどのように機能し、どのように連携しているかについて説明します。 ここでは、不要なウィンドウを非表示にする方法、必要な情報をウィンドウにすばやく表示する方法、頻繁に行う作業に合わせて画面を構成する方法を学習します。  
@@ -36,7 +34,7 @@ ms.locfileid: "36073158"
   
 -   オブジェクト エクスプ ローラーの詳細ページの表示  
   
--   キーボード ショートカット スキームを選択します。  
+-   キーボード ショートカット スキームの選択  
   
 -   起動オプションの設定  
   

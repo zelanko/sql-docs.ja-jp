@@ -1,5 +1,5 @@
 ---
-title: SetDefaults メソッド (ServerSettings クラス) |Microsoft ドキュメント
+title: SetDefaults メソッド (ServerSettings クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetDefaults method
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0b3bdeab96cbbc5ff142970f1ecf6598e11a589a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7f42f7149b20dc51149dcece77bb076e32b4109b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297952"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults メソッド (ServerSettings クラス)
   インスタンスのすべての既定値を設定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]既存のデータを上書きするオプションを使用します。  
@@ -46,7 +46,7 @@ OverwriteAll
   
 ## <a name="parts"></a>要素  
  *object*  
- A [ServerSettings クラス](serversettings-class.md)を表すオブジェクト、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント インスタンス。  
+ A [ServerSettings クラス](serversettings-class.md)を表すオブジェクトを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント インスタンス。  
   
 #### <a name="parameters"></a>パラメーター  
   

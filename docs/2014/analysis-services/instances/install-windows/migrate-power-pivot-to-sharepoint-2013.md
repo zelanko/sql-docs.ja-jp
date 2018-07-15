@@ -1,5 +1,5 @@
 ---
-title: SharePoint 2013 への PowerPivot の移行 |Microsoft ドキュメント
+title: SharePoint 2013 への PowerPivot の移行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 caps.latest.revision: 13
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 1d817e1bf9b0e09479a15619eae9f25293d8461e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c975ffc274853aee6bd74ce15079626c6cb17a7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280008"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>SharePoint 2013 への PowerPivot の移行
   
@@ -56,11 +56,11 @@ ms.locfileid: "36072656"
   
 2.  新しい SharePoint Server 2013 ファームをインストールします。  
   
-3.  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーのインスタンスを SharePoint モードでインストールします。 詳細については、次を参照してください。 [PowerPivot for SharePoint 2013 インストール](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)です。  
+3.   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーのインスタンスを SharePoint モードでインストールします。 詳細については、次を参照してください。 [PowerPivot for SharePoint 2013 インストール](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)します。  
   
-4.  SharePoint ファーム内の各サーバーで [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 のインストール パッケージ **spPowerPivot.msi** を実行します。 詳細については、次を参照してください。[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)です。  
+4.  SharePoint ファーム内の各サーバーで [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 のインストール パッケージ **spPowerPivot.msi** を実行します。 詳細については、次を参照してください。[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)します。  
   
-5.  SharePoint 2013 サーバーの全体管理で、前の手順で作成した SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーを使用するように Excel Services サービス アプリケーションを構成します。 詳細については、の基本的な Analysis Services SharePoint 統合の構成」セクションを参照してください。 [PowerPivot for SharePoint 2013 インストール](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)です。  
+5.  SharePoint 2013 サーバーの全体管理で、前の手順で作成した SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーを使用するように Excel Services サービス アプリケーションを構成します。 詳細については、の基本的な Analysis Services SharePoint 統合の構成」セクションを参照してください。 [PowerPivot for SharePoint 2013 インストール](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)します。  
   
 ##  <a name="bkmk_backup_restore"></a> 2) データベースをバックアップ、コピー、および復元する  
  "SharePoint のデータベース アタッチ アップグレード" プロセスとは、PowerPivot 関連のコンテンツとサービス アプリケーション データベースを SharePoint 2013 ファームにバックアップ、コピー、および復元する一連の手順です。  
@@ -76,7 +76,7 @@ ms.locfileid: "36072656"
 5.  **データベースを読み取り/書き込み用に設定する** : **[読み取り専用データベース]** を **[False]** に設定します。  
   
 ##  <a name="bkmk_prepare_mount_databases"></a> 3) Web アプリケーションを準備して、コンテンツ データベースをマウントする  
- 次の手順の詳細については、次を参照してください。 [SharePoint 2010 から SharePoint 2013 にデータベースをアップグレード](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690)です。  
+ 次の手順の詳細については、次を参照してください。 [SharePoint 2010 から SharePoint 2013 にデータベースをアップグレード](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690)します。  
   
 1.  **データベースをオフラインにする**  
   
@@ -94,13 +94,13 @@ ms.locfileid: "36072656"
   
 -   **コンテンツ データベースをマウントする:**  
   
-     移行したコンテンツ データベースをマウントするには、SharePoint 2013 管理シェルで PowerShell コマンドレットを使用します。 サービス アプリケーション データベースがマウントする必要はありません、コンテンツ データベースのみ: ![PowerShell 関連コンテンツ](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
+     移行したコンテンツ データベースをマウントするには、SharePoint 2013 管理シェルで PowerShell コマンドレットを使用します。 サービス アプリケーション データベースは、マウントする必要はありません、コンテンツ データベースのみ: ![PowerShell 関連コンテンツ](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
   
     ```  
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     詳細については、次を参照してください。[アタッチ/デタッチするコンテンツ データベース (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx)です。  
+     詳細については、次を参照してください。[アタッチまたはデタッチ コンテンツ データベース (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx)します。  
   
      **手順の完了後の状態**  : マウント操作が完了すると、前のコンテンツ データベースに格納されていたファイルが表示されます。 そのため、ユーザーはドキュメント ライブラリのブックを表示して開くことができます。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36072656"
   
 1.  **認証エラー** : 認証関連のエラーが発生する場合は、元の Web アプリケーションで使用している認証モードを確認します。 エラーは、SharePoint 2013 と SharePoint 2010 の Web アプリケーション間の認証の不一致によって発生する可能性があります。 詳細については、「 [1) SharePoint 2013 ファームを準備する](#bkmk_prepare_sharepoint2013) 」を参照してください。  
   
-2.  **不足:** PowerPivot の .dll ファイルの不足に関連するエラーが発生する場合、 **spPowerPivot.msi**がインストールされていない、または[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]構成ツールが PowerPivot の構成に使用されていません。  
+2.  **不足:** PowerPivot の .dll の不足に関連するエラーが発生する場合、 **spPowerPivot.msi**がインストールされていない、または[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]PowerPivot を構成する構成ツールが使用されていません。  
   
 ##  <a name="bkmk_upgrade_powerpivot_schedules"></a> 4) PowerPivot のスケジュールをアップグレードします。  
  ここでは、PowerPivot のスケジュールの移行に関する詳細とオプションについて説明します。 スケジュールを移行するには、2 つの手順を実行します。 まず、移行したサービス アプリケーション データベースを使用するように PowerPivot サービス アプリケーションを構成し、 次に、スケジュールを移行する 2 つの方法のうちいずれかを選択します。  
@@ -133,7 +133,7 @@ ms.locfileid: "36072656"
   
 -   **スケジュールを移行するオプション 1: SharePoint ファームの管理者**  
   
-    1.  SharePoint 2013 の管理の実行で、`Set-PowerPivotServiceApplication`コマンドレットと、`-StartMigratingRefreshSchedules`自動デマンド スケジュールの移行を有効にするスイッチ![PowerShell 関連コンテンツ](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ"). 次の Windows PowerShell スクリプトは、PowerPivot サービス アプリケーションが 1 つだけであることを前提としています。  
+    1.  SharePoint 2013 の管理の実行で、`Set-PowerPivotServiceApplication`コマンドレットと、`-StartMigratingRefreshSchedules`必要に応じてスケジュールを移行に自動で有効にするスイッチ![PowerShell 関連コンテンツ](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ"). 次の Windows PowerShell スクリプトは、PowerPivot サービス アプリケーションが 1 つだけであることを前提としています。  
   
         ```  
         $app=Get-PowerPivotServiceApplication  
@@ -175,10 +175,10 @@ ms.locfileid: "36072656"
   
 -   [ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
--   [SharePoint 2013 へのアップグレード プロセスの概要](http://go.microsoft.com/fwlink/p/?LinkId=256688)(http://go.microsoft.com/fwlink/p/?LinkId=256688)です。  
+-   [SharePoint 2013 へのアップグレード プロセスの概要](http://go.microsoft.com/fwlink/p/?LinkId=256688)(http://go.microsoft.com/fwlink/p/?LinkId=256688)します。  
   
--   [SharePoint 2013 にアップグレードする前に環境をクリーンアップする](http://go.microsoft.com/fwlink/p/?LinkId=256689)(http://go.microsoft.com/fwlink/p/?LinkId=256689)です。  
+-   [SharePoint 2013 へアップグレードする前に環境をクリーンアップする](http://go.microsoft.com/fwlink/p/?LinkId=256689)(http://go.microsoft.com/fwlink/p/?LinkId=256689)します。  
   
--   [SharePoint 2010 から SharePoint 2013 までデータベースをアップグレード](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690)です。  
+-   [SharePoint 2010 から SharePoint 2013 までデータベースをアップグレード](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690)します。  
   
   

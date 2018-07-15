@@ -5,25 +5,24 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b8af5e825fb72ce47c7612b0c1c56af9bce4369
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6c2c5e8841a866eb82d9c844b1eccf60c09555ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287298"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ベースのアプリケーションで非構造化データ (ドキュメントやイメージなど) をファイル システムに格納できます。 これにより、ファイル システムの豊富なストリーミング API と高いパフォーマンスをアプリケーションで活用できるほか、非構造化データとそれに対応する構造化データの間でトランザクションの一貫性も維持されます。  
@@ -32,12 +31,12 @@ ms.locfileid: "36174739"
   
  FILESTREAM では、NT システム キャッシュを使用してファイル データをキャッシュします。 これにより、FILESTREAM データが [!INCLUDE[ssDE](../../includes/ssde-md.md)] のパフォーマンスに与える影響を軽減できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバッファー プールは使用されないため、そのメモリはクエリの処理に使用できます。  
   
- FILESTREAM は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールまたはアップグレードしたときに自動的には有効になりません。 FILESTREAM は、SQL Server 構成マネージャーと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して有効にする必要があります。 FILESTREAM を使用するには、特殊なファイル グループを格納するためにデータベースを作成または変更する必要があります。 次に、作成、テーブルまたは変更が含まれているように、 `varbinary(max)` FILESTREAM 属性を持つ列。 これらの手順を完了すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] および Win32 を使用して FILESTREAM データを管理できるようになります。  
+ FILESTREAM は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールまたはアップグレードしたときに自動的には有効になりません。 FILESTREAM は、SQL Server 構成マネージャーと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して有効にする必要があります。 FILESTREAM を使用するには、特殊なファイル グループを格納するためにデータベースを作成または変更する必要があります。 次に、作成または格納できるようにテーブルを変更、 `varbinary(max)` FILESTREAM 属性を持つ列。 これらの手順を完了すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] および Win32 を使用して FILESTREAM データを管理できるようになります。  
   
- インストールして、FILESTREAM の使用に関する詳細については、の一覧を参照してください。[関連タスク](#reltasks)です。  
+ インストールして、FILESTREAM の使用の詳細については、の一覧を参照してください。[関連タスク](#reltasks)します。  
   
 ##  <a name="whentouse"></a> FILESTREAM を使用する場合  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Blob は、標準で指定できます`varbinary(max)`テーブル、または FILESTREAM データを格納するデータ`varbinary(max)`ファイル システムにデータを格納するオブジェクト。 データベース ストレージとファイル システム ストレージのどちらを使用するかは、データのサイズと用途によって決まります。 次の条件が true の場合は、FILESTREAM を使用することを検討する必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Blob は、標準的な`varbinary(max)`テーブル、または FILESTREAM データが格納されるデータ`varbinary(max)`ファイル システムにデータを格納するオブジェクト。 データベース ストレージとファイル システム ストレージのどちらを使用するかは、データのサイズと用途によって決まります。 次の条件が true の場合は、FILESTREAM を使用することを検討する必要があります。  
   
 -   格納するオブジェクトの平均的なサイズが 1 MB より大きい。  
   
@@ -49,9 +48,9 @@ ms.locfileid: "36174739"
   
   
 ##  <a name="storage"></a> FILESTREAM ストレージ  
- FILESTREAM ストレージを実装すると、`varbinary(max)`データがファイル システムに Blob として格納された列。 BLOB のサイズはファイル システムのボリューム サイズによってのみ制限されます。 標準`varbinary(max)`ファイル システムに格納される Blob にファイル サイズ 2 GB の制限は適用されません。  
+ FILESTREAM ストレージを実装すると、`varbinary(max)`データがファイル システムに Blob として格納された列。 BLOB のサイズはファイル システムのボリューム サイズによってのみ制限されます。 標準`varbinary(max)`ファイル システムに格納されている Blob にファイル サイズ 2 GB の制限は適用されません。  
   
- 列がファイル システム上のデータを格納することを指定するには、上、FILESTREAM 属性を指定、`varbinary(max)`列です。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、これにより、その列のすべてのデータがファイル システム (データベース ファイル以外の場所) に格納されるようになります。  
+ 列がファイル システムにデータを格納する必要がありますを指定するで FILESTREAM 属性を指定する`varbinary(max)`列。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、これにより、その列のすべてのデータがファイル システム (データベース ファイル以外の場所) に格納されるようになります。  
   
  FILESTREAM データは FILESTREAM ファイル グループに格納する必要があります。 FILESTREAM ファイル グループは特殊なファイル グループで、ファイルそのものではなくファイル システム ディレクトリが含まれます。 これらのファイル システム ディレクトリは、 *データ コンテナー*と呼ばれます。 データ コンテナーは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ストレージとファイル システム ストレージの間のインターフェイスです。  
   

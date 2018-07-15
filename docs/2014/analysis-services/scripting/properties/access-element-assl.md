@@ -1,5 +1,5 @@
 ---
-title: 要素 (ASSL) にアクセス |Microsoft ドキュメント
+title: 要素 (ASSL) へのアクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Access element
 ms.assetid: 6ad99010-fac5-48e9-a099-ecbca380e127
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1eea0d7e8b0d26692c2cc6e0400d4ceaf7aa8ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ba7c322fdd7c48a7a61262ea7aa891ae5fe4167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314732"
 ---
 # <a name="access-element-assl"></a>Access 要素 (ASSL)
-  与えられるアクセス レベルを示す、 [CellPermission](../objects/cellpermission-element-assl.md)要素。  
+  与えられるアクセス レベルを示します、 [CellPermission](../objects/cellpermission-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,11 +66,11 @@ ms.locfileid: "36174245"
   
 |値|説明|  
 |-----------|-----------------|  
-|*読み取り*|読み取り専用のアクセスが許可されます。|  
+|*読み取り*|読み取り専用アクセスが許可されます。|  
 |*ReadContingent*|条件付き読み取りアクセスが許可されます。|  
-|*読み取り/書き込み*|読み取り/書き込みアクセスが許可されます。|  
+|*ReadWrite*|読み取り/書き込みアクセスが許可されます。|  
   
- 許可される値に対応する列挙`Access`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.CellPermissionAccess>します。  
+ 許容された値に対応する列挙体`Access`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.CellPermissionAccess>します。  
   
 ## <a name="see-also"></a>参照  
  [Role 要素&#40;ASSL&#41;](../objects/role-element-assl.md)   

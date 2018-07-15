@@ -1,5 +1,5 @@
 ---
-title: ビジネス インテリジェンス ウィザードを使用してタイム インテリジェンス計算の定義 |Microsoft ドキュメント
+title: ビジネス インテリジェンス ウィザードを使用してタイム インテリジェンス計算の定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - period over period growth [Analysis Services]
 - parallel period comparisons [Analysis Services]
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - time intelligence [Analysis Services]
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 54d0e5cf5562049ee239d21a2d7fdeae8d46fed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 319408b079ce5be4a381e02f47f5189edbde3ed0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295982"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>ビジネス インテリジェンス ウィザードを使用したタイム インテリジェンス計算の定義
   タイム インテリジェンス拡張機能は、選択した階層に時間計算 (または時間ビュー) を追加するキューブ拡張機能です。 この拡張機能では、次の計算のカテゴリがサポートされています。  
@@ -45,14 +45,14 @@ ms.locfileid: "36176280"
   
 -   並列期間比較  
   
- 時間ディメンションを持つキューブにタイム インテリジェンスを適用します (時間ディメンションは、`Type` プロパティが `Time` に設定されているディメンションです)。 また、そのディメンションの時間属性には、`Type` プロパティの適切な設定 (Years や Months など) も指定する必要があります。 `Type`時間ディメンションを作成するディメンション ウィザードを使用する場合、ディメンションとその属性の両方のプロパティを正しく設定されます。  
+ 時間ディメンションを持つキューブにタイム インテリジェンスを適用します (時間ディメンションは、`Type` プロパティが `Time` に設定されているディメンションです)。 また、そのディメンションの時間属性には、`Type` プロパティの適切な設定 (Years や Months など) も指定する必要があります。 `Type`時間ディメンションを作成するディメンション ウィザードを使用する場合に、ディメンションとその属性の両方のプロパティを正しく設定されます。  
   
  タイム インテリジェンスをキューブに追加するには、ビジネス インテリジェンス ウィザードを使用して、 **[拡張機能の選択]** ページの **[タイム インテリジェンスの定義]** オプションを選択します。 このウィザードでは、タイム インテリジェンスの追加先となる階層を選択し、その階層内でタイム インテリジェンスを適用するメンバーを指定する手順が示されます。 ウィザードの最後のページでは、選択したタイム インテリジェンスを追加するために [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに対して行われる変更内容を表示できます。  
   
 ## <a name="selecting-a-time-hierarchy"></a>時間階層の選択  
  **[対象となる階層と計算の選択]** ページで、タイム インテリジェンス拡張機能の適用先となる時間階層を選択します。 タイム インテリジェンス拡張機能は、ビジネス インテリジェンス ウィザードを実行するたびに 1 つの時間階層にのみ適用できます。 複数の時間階層に拡張機能を適用する場合は、ウィザードをもう一度実行します。  
   
- 時間階層を選択したら、 **[使用できる時間の計算]** の一覧で、階層に適用する計算を選択します。 記載されている計算は、階層では、上のレベルによって異なります、`Type`各レベルの属性のプロパティの設定。 たとえば、Years 階層では年度累計と前年比成長率がサポートされますが、Quarters 階層ではサポートされません。  
+ 時間階層を選択したら、 **[使用できる時間の計算]** の一覧で、階層に適用する計算を選択します。 レベルと、階層内に記載されている計算が依存して、`Type`の各レベルの属性のプロパティの設定。 たとえば、Years 階層では年度累計と前年比成長率がサポートされますが、Quarters 階層ではサポートされません。  
   
 > [!NOTE]  
 >  Timeintelligence.xml テンプレート ファイルでは、 **[使用できる時間の計算]** に一覧表示される時間計算を定義します。 一覧表示された計算がニーズに合わない場合は、既存の計算を変更するか、Timeintelligence.xml ファイルに新しい計算を追加できます。  

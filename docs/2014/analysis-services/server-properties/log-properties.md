@@ -1,5 +1,5 @@
 ---
-title: ログ プロパティ |Microsoft ドキュメント
+title: ログのプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - QueryLogFileSize property
 - QueryLogTableName property
@@ -54,15 +54,15 @@ helpviewer_keywords:
 - LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76a7f70754f211add486783019c1cd7bc7f5e24f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aee6f05c7d572f38c90754d2cf1996661d10f89d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295512"
 ---
 # <a name="log-properties"></a>ログのプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すログ サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
@@ -80,7 +80,7 @@ ms.locfileid: "36165324"
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
 ## <a name="error-log"></a>エラー ログ  
- 次のプロパティをサーバー インスタンス レベルで設定し、他のツールとデザイナーに表示されるエラーの構成の既定値を変更できます。 参照してください[キューブ、パーティション、およびディメンション処理のエラー構成&#40;SSAS - 多次元&#41;](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)と<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>詳細についてはします。  
+ 次のプロパティをサーバー インスタンス レベルで設定し、他のツールとデザイナーに表示されるエラーの構成の既定値を変更できます。 参照してください[キューブ、パーティション、およびディメンションの処理のエラー構成&#40;SSAS - 多次元&#41;](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)と<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>詳細についてはします。  
   
  **ErrorLog\ErrorLogFileName**  
  サーバーによる処理操作の実行時に既定値として使用されるプロパティです。  
@@ -89,11 +89,11 @@ ms.locfileid: "36165324"
  サーバーによる処理操作の実行時に既定値として使用されるプロパティです。  
   
  **ErrorLog\KeyErrorAction**  
- サーバーによって実行されるアクションを指定するときに、`KeyNotFound`エラーが発生しました。 このエラーへの有効な応答は次のとおりです。  
+ サーバーによって実行されるアクションを指定します。 ときに、`KeyNotFound`エラーが発生します。 このエラーへの有効な応答は次のとおりです。  
   
 -   `ConvertToUnknown` 不明なメンバーにエラーのキー値を割り当てるようにサーバーに指示します。  
   
--   `DiscardRecord` レコードを除外するようにサーバーに指示します。  
+-   `DiscardRecord` レコードを除外するサーバーに指示します。  
   
  **ErrorLog\KeyErrorLogFile**  
  サービス アカウントが読み取り/書き込み権限を持つフォルダーにある、.log ファイル拡張子を持つ必要があるユーザー定義のファイル名です。 このログ ファイルには、処理中に生成されたエラーのみが含まれます。 詳細情報が必要な場合はフライト レコーダーを使用します。  
@@ -109,22 +109,22 @@ ms.locfileid: "36165324"
 -   `StopLogging` は、エラーの上限に到達した場合にエラーの記録を停止するものの、処理を継続するようにサーバーに指示します。  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
- サーバーによって実行されるアクションを指定するときに、`KeyNotFound`エラーが発生しました。 このエラーへの有効な応答は次のとおりです。  
+ サーバーによって実行されるアクションを指定します。 ときに、`KeyNotFound`エラーが発生します。 このエラーへの有効な応答は次のとおりです。  
   
--   `IgnoreError` 続行するサーバーに指示せずに、エラーを記録するか、キー エラーの上限に達するまでカウント処理します。 エラーを無視すると、エラー カウントに追加したり画面またはログ ファイルに記録することなく、処理を継続します。 レコードにデータの整合性の問題があり、データベースに追加できません。 レコードがある破棄されるかによって決定される、不明なメンバーを集計、`KeyErrorAction`プロパティです。  
+-   `IgnoreError` 続行するサーバーに指示せず、エラーを記録するか、キー エラーの上限に達するまでカウントを処理します。 エラーを無視すると、エラー カウントに追加したり画面またはログ ファイルに記録することなく、処理を継続します。 レコードにデータの整合性の問題があり、データベースに追加できません。 レコードを破棄するか、不明なメンバーに集計されますによって決定される、`KeyErrorAction`プロパティ。  
   
 -   `ReportAndContinue` は、エラーを記録して、キー エラーの上限に達するまでカウントし、処理を継続するようにサーバーに指示します。 エラーをトリガーするレコードは、破棄されるか、不明メンバーに変換されます。  
   
 -   `ReportAndStop` は、エラーを記録し、キー エラーの上限に関係なく処理を直ちに停止するようにサーバーに指示します。 エラーをトリガーするレコードは、破棄されるか、不明メンバーに変換されます。  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
- 重複したキーが見つかった場合に、サーバーが実行するアクションを指定します。 有効な値は`IgnoreError`、エラーが発生しなかったかのように処理を続行する`ReportAndContinue`エラーを記録して、処理を続行して`ReportAndStop`エラーを記録し、エラーの数が、エラーの上限未満の場合も、すぐに処理を停止します。  
+ 重複したキーが見つかった場合に、サーバーが実行するアクションを指定します。 有効な値は`IgnoreError`、エラーが発生しなかったかのように処理を続行する`ReportAndContinue`、エラーを記録し、処理を続行して`ReportAndStop`エラーを記録し、エラーの数が、エラーの上限未満の場合でも直ちに処理を停止します。  
   
  **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
- NULL キーが不明なメンバーに変換された場合にサーバーが実行する操作を指定します。 有効な値は`IgnoreError`、エラーが発生しなかったかのように処理を続行する`ReportAndContinue`エラーを記録して、処理を続行して`ReportAndStop`エラーを記録し、エラーの数が、エラーの上限未満の場合も、すぐに処理を停止します。  
+ NULL キーが不明なメンバーに変換された場合にサーバーが実行する操作を指定します。 有効な値は`IgnoreError`、エラーが発生しなかったかのように処理を続行する`ReportAndContinue`、エラーを記録し、処理を続行して`ReportAndStop`エラーを記録し、エラーの数が、エラーの上限未満の場合でも直ちに処理を停止します。  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- サーバーが行うアクションを指定するとき`NullProcessing`に設定されている`Error`ディメンション属性。 エラーは、指定された属性で NULL 値が許可されていない場合に生成されます。 このエラー構成プロパティは、次の手順を通知します。つまり、エラーを報告してエラーの上限に達するまで処理を継続します。 有効な値は`IgnoreError`、エラーが発生しなかったかのように処理を続行する`ReportAndContinue`エラーを記録して、処理を続行して`ReportAndStop`エラーを記録し、エラーの数が、エラーの上限未満の場合も、すぐに処理を停止します。  
+ サーバーによって実行されるアクションを指定します。 ときに`NullProcessing`に設定されている`Error`ディメンション属性。 エラーは、指定された属性で NULL 値が許可されていない場合に生成されます。 このエラー構成プロパティは、次の手順を通知します。つまり、エラーを報告してエラーの上限に達するまで処理を継続します。 有効な値は`IgnoreError`、エラーが発生しなかったかのように処理を続行する`ReportAndContinue`、エラーを記録し、処理を続行して`ReportAndStop`エラーを記録し、エラーの数が、エラーの上限未満の場合でも直ちに処理を停止します。  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  サーバーによる処理操作の実行時に既定値として使用されるプロパティです。  

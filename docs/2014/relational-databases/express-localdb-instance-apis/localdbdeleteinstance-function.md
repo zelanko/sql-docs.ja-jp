@@ -1,5 +1,5 @@
 ---
-title: LocalDBDeleteInstance 関数 |Microsoft ドキュメント
+title: LocalDBDeleteInstance 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 64bba7808c533a140891b4c3c5be7795f81fc93d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a3daa2c8b2d6d5ff3bb7af25283b13fc7a38a694
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318402"
 ---
 # <a name="localdbdeleteinstance-function"></a>LocalDBDeleteInstance 関数
   指定した SQL Server Express LocalDB インスタンスを削除します。  
@@ -96,7 +96,7 @@ HRESULT LocalDBDeleteInstance(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)です。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

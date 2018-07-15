@@ -1,5 +1,5 @@
 ---
-title: バッチ要素 (XMLA) |Microsoft ドキュメント
+title: バッチ要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Batch command
 ms.assetid: 818f3212-9605-4e34-8623-1154d9fae1f0
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 76fcd68ca71db298bc66dc63a3fa20c394c196c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 269eedd9a48d1bf7bde43d0294bac7a81b9f90ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291238"
 ---
 # <a name="batch-element-xmla"></a>Batch 要素 (XMLA)
-  1 つまたは複数の XML for Analysis (XMLA) コマンドとして実行バッチ操作では、順番またはのインスタンスに同時に[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+  実行します 1 つまたは複数の XML for Analysis (XMLA) コマンド、バッチ操作として順次またはのインスタンスに同時に[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36176698"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|子要素|[バインド](../xml-elements-properties/bindings-element-xmla.md)、[データソース](../xml-elements-properties/source-element-xmla.md)、 [DataSourceView](../xml-elements-properties/datasourceview-element-xmla.md)、 [ErrorConfiguration](../../scripting/objects/errorconfiguration-element-assl.md)、[並列](../xml-elements-properties/parallel-element-xmla.md)<br /><br /> One or more of the following XMLA commands: [Alter](alter-element-xmla.md), [Backup](backup-element-xmla.md), [BeginTransaction](begintransaction-element-xmla.md), [ClearCache](clearcache-element-xmla.md), [CommitTransaction](committransaction-element-xmla.md), [Create](create-element-xmla.md), [Delete](delete-element-xmla.md), [DesignAggregations](designaggregations-element-xmla.md), [Drop](drop-element-xmla.md), [Insert](insert-element-xmla.md), [Lock](lock-element-xmla.md), [MergePartitions](mergepartitions-element-xmla.md), [NotifyTableChange](notifytablechange-element-xmla.md), [Process](process-element-xmla.md), [Restore](restore-element-xmla.md), [RollbackTransaction](rollbacktransaction-element-xmla.md), [SetPasswordEncryptionKey](http://msdn.microsoft.com/en-us/fb262737-f0f4-4441-985e-3b2a94d00a9e), [Statement](statement-element-xmla.md), [Subscribe](subscribe-element-xmla.md), [Synchronize](synchronize-element-xmla.md), [Unlock](unlock-element-xmla.md), [Update](update-element-xmla.md), [UpdateCells](drop-element-xmla.md)|  
+|子要素|[バインド](../xml-elements-properties/bindings-element-xmla.md)、 [DataSource](../xml-elements-properties/source-element-xmla.md)、 [DataSourceView](../xml-elements-properties/datasourceview-element-xmla.md)、 [ErrorConfiguration](../../scripting/objects/errorconfiguration-element-assl.md)、[並列](../xml-elements-properties/parallel-element-xmla.md)<br /><br /> 1 つ以上の次の XMLA コマンド: [Alter](alter-element-xmla.md)、[バックアップ](backup-element-xmla.md)、 [BeginTransaction](begintransaction-element-xmla.md)、 [ClearCache](clearcache-element-xmla.md)、 [CommitTransaction](committransaction-element-xmla.md)、[作成](create-element-xmla.md)、[削除](delete-element-xmla.md)、 [DesignAggregations](designaggregations-element-xmla.md)、[ドロップ](drop-element-xmla.md)、 [挿入](insert-element-xmla.md)、[ロック](lock-element-xmla.md)、 [MergePartitions](mergepartitions-element-xmla.md)、 [NotifyTableChange](notifytablechange-element-xmla.md)、[プロセス](process-element-xmla.md)、 [復元](restore-element-xmla.md)、 [RollbackTransaction](rollbacktransaction-element-xmla.md)、 [SetPasswordEncryptionKey](http://msdn.microsoft.com/en-us/fb262737-f0f4-4441-985e-3b2a94d00a9e)、[ステートメント](statement-element-xmla.md)、[サブスクライブ](subscribe-element-xmla.md)、[同期](synchronize-element-xmla.md)、[のロックを解除](unlock-element-xmla.md)、 [Update](update-element-xmla.md)、 [UpdateCells](drop-element-xmla.md)|  
   
 ## <a name="attributes"></a>属性  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36176698"
 > [!WARNING]  
 >  バッチ操作内でのコマンド/実行/ステートメントは現在サポートされません。  
   
- XMLA におけるバッチ操作の実行の詳細については、次を参照してください。[バッチ操作の実行&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)です。  
+ XMLA におけるバッチ操作の実行の詳細については、次を参照してください。[バッチ操作の実行&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)します。  
   
 ## <a name="see-also"></a>参照  
  [コマンド&#40;XMLA&#41;](xml-elements-commands.md)  

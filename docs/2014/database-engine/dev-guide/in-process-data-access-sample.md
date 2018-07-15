@@ -1,5 +1,5 @@
 ---
-title: インプロセス データ アクセス サンプル |Microsoft ドキュメント
+title: インプロセス データ アクセス サンプル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c6f90e5ba1dd6c90f5d941dfcb2ccaa42c8d9c07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f74adfc254b0606fb62a93b72b2c8b5a038f2a7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285798"
 ---
 # <a name="in-process-data-access-sample"></a>インプロセス データ アクセス サンプル
   `InProcessDataAccess` サンプルには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR インプロセス データ アクセス プロバイダーのさまざまな機能を示す、多数の単純な関数が含まれています。  
@@ -53,11 +53,11 @@ ms.locfileid: "36076650"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要があります`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
--   管理者でない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを使用している、する必要がありますが管理者から付与**CreateAssembly**インストールを完了するアクセス許可。  
+-   管理者でない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを使用して、管理者から付与が必要**CreateAssembly**インストールを完了するためのアクセス許可。  
   
 ## <a name="building-the-sample"></a>サンプルのビルド  
   
@@ -360,7 +360,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)](`test.sql`) このサンプルで定義されている関数、ストアド プロシージャを実行することによって、例をテストします。  
+ 次[!INCLUDE[tsql](../../includes/tsql-md.md)](`test.sql`) このサンプルで定義されている関数、ストアド プロシージャを使用することにより、例をテストします。  
   
 ```  
 USE AdventureWorks;  
