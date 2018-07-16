@@ -1,13 +1,11 @@
 ---
-title: SqlPipe オブジェクト |Microsoft ドキュメント
+title: SqlPipe オブジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - tabular results
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b67acce373f412ef4adca2c9957f4f5046f35a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 61ece1402c9675f4f737098580283f1a6e777b76
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177105"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350854"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe オブジェクト
   以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、結果や出力パラメーターを呼び出し側のクライアントに送信するストアド プロシージャ (または拡張ストアド プロシージャ) を作成することがごく一般的でした。  
@@ -42,16 +40,16 @@ ms.locfileid: "36177105"
   
 -   `void Send(SqlDataRecord record)`  
   
- `Send` メソッドでは、データがそのままクライアントまたは呼び出し元に送信されます。 通常、`SqlPipe` の出力を使用するのはクライアントですが、入れ子になった CLR ストアド プロシージャの場合、ストアド プロシージャが出力のコンシューマーになる可能性もあります。 たとえば、Procedure1 がコマンド テキスト "EXEC Procedure2" の SqlCommand.ExecuteReader() を呼び出すとします。 Procedure2 もマネージ ストアド プロシージャです。 ここで Procedure2 が SqlPipe.Send( SqlDataRecord ) を呼び出すと、行はクライアントではなく、Procedure1 のリーダーに送信されます。  
+ `Send` メソッドでは、データがそのままクライアントまたは呼び出し元に送信されます。 通常、`SqlPipe` の出力を使用するのはクライアントですが、入れ子になった CLR ストアド プロシージャの場合、ストアド プロシージャが出力のコンシューマーになる可能性もあります。 たとえば、Procedure1 がコマンド テキスト "EXEC Procedure2" の SqlCommand.ExecuteReader() を呼び出すとします。 Procedure2 もマネージド ストアド プロシージャです。 ここで Procedure2 が SqlPipe.Send( SqlDataRecord ) を呼び出すと、行はクライアントではなく、Procedure1 のリーダーに送信されます。  
   
  `Send` メソッドは、クライアントで情報メッセージとして表示される文字列メッセージを送信します。これは、[!INCLUDE[tsql](../../includes/tsql-md.md)] の PRINT と同等です。 また、`SqlDataRecord` を使用して単一行の結果セットを送信することも、`SqlDataReader` を使用して複数行の結果セットを送信することもできます。  
   
- `SqlPipe` オブジェクトには、`ExecuteAndSend` メソッドもあります。 このメソッドは、(`SqlCommand` オブジェクトで渡された) コマンドを実行し、その結果を直接呼び出し側に返送するために使用できます。 送信されたコマンドにエラーがある場合、パイプに例外が送信されますが、呼び出し元のマネージ コードにもコピーが送信されます。 呼び出し元コードが例外をキャッチしない場合は、履歴を伝わり [!INCLUDE[tsql](../../includes/tsql-md.md)] コードに反映され、2 度出力に表示されます。 呼び出し元コードが例外をキャッチした場合、パイプ コンシューマーにはまだエラーが表示されますが、重複するエラーはありません。  
+ `SqlPipe` オブジェクトには、`ExecuteAndSend` メソッドもあります。 このメソッドは、(`SqlCommand` オブジェクトで渡された) コマンドを実行し、その結果を直接呼び出し側に返送するために使用できます。 送信されたコマンドにエラーがある場合、パイプに例外が送信されますが、呼び出し元のマネージド コードにもコピーが送信されます。 呼び出し元コードが例外をキャッチしない場合は、履歴を伝わり [!INCLUDE[tsql](../../includes/tsql-md.md)] コードに反映され、2 度出力に表示されます。 呼び出し元コードが例外をキャッチした場合、パイプ コンシューマーにはまだエラーが表示されますが、重複するエラーはありません。  
   
  このメソッドは、コンテキスト接続に関連付けられた `SqlCommand` だけを受け取ります。コンテキスト接続以外に関連付けられたコマンドを受け取ることはできません。  
   
 ## <a name="returning-custom-result-sets"></a>カスタム結果セットを返す  
- マネージ ストアド プロシージャでは、`SqlDataReader` 以外からの結果セットを送信できます。 `SendResultsStart` メソッドでは、`SendResultsRow` や `SendResultsEnd` と同様に、ストアド プロシージャからクライアントにカスタム結果セットを送信できます。  
+ マネージド ストアド プロシージャでは、`SqlDataReader` 以外からの結果セットを送信できます。 `SendResultsStart` メソッドでは、`SendResultsRow` や `SendResultsEnd` と同様に、ストアド プロシージャからクライアントにカスタム結果セットを送信できます。  
   
  `SendResultsStart` は、`SqlDataRecord` を入力として受け取ります。 さらに、結果セットの先頭にマークを付け、レコード メタデータを使用して、結果セットを説明するメタデータを生成します。 `SendResultsStart` を使ってレコードの値が送信されることはありません。 以降、`SendResultsRow` を使用して送信されるすべての行は、そのメタデータ定義に一致する必要があります。  
   
@@ -59,7 +57,7 @@ ms.locfileid: "36177105"
 >  `SendResultsStart` メソッドを呼び出した後に呼び出せるのは、`SendResultsRow` と `SendResultsEnd` のみです。 `SqlPipe` の同じインスタンスで他のどのメソッドを呼び出しても、`InvalidOperationException` が発生することになります。 `SendResultsEnd` は、`SqlPipe` を初期状態に戻し、他のメソッドを呼び出せるようにします。  
   
 ### <a name="example"></a>例  
- `uspGetProductLine` ストアド プロシージャは、指定した製品ライン内のすべての製品の名前、製品番号、色、および表示価格を返します。 このストアド プロシージャでは、完全に一致する*prodLine*です。  
+ `uspGetProductLine` ストアド プロシージャは、指定した製品ライン内のすべての製品の名前、製品番号、色、および表示価格を返します。 このストアド プロシージャでは、完全に一致する*prodLine*します。  
   
  C#  
   

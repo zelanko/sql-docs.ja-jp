@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying constraints
 - UNIQUE constraints [SQL Server], modifying
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - constraints [SQL Server], unique
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2f0898fdbc52d964834f39f6365f0a74efd97728
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e195529fd339d6449ded94064076430aff9f1214
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317972"
 ---
 # <a name="modify-unique-constraints"></a>UNIQUE 制約の変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して UNIQUE 制約を変更できます。  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.logshipping.settings.monitor.f1
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 534e14c32317b60633c14634910c63a026112fa5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8485174c8880e90ac609cef9060bb194aae875c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311852"
 ---
 # <a name="log-shipping-monitor-settings"></a>[ログ配布モニターの設定]
   このページを使用すると、ログ配布監視サーバーのプロパティを構成および変更できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "36071211"
  **[監視サーバー インスタンス]**  
  ログ配布構成の監視サーバーとして現在構成されているサーバー インスタンスの名前を表示します。  
   
- **のインスタンスに接続するときには、**  
+ **Connect**  
  監視サーバーとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択して接続します。 接続に使用するアカウントは、セカンダリ サーバーのインスタンスの sysadmin 固定サーバー ロールのメンバーである必要があります。  
   
  **[ジョブのプロキシ アカウントを借用する]**  

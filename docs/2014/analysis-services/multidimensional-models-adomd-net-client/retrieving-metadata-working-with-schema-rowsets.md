@@ -1,5 +1,5 @@
 ---
-title: Working with Schema Rowsets in ADOMD.NET |Microsoft ドキュメント
+title: Working with Schema Rowsets in ADOMD.NET |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c6acc3ffe3a0f0b7ae5523833cbb85f0c152cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e77a3a4c7d38779da149f63644ad9a3106034f51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310752"
 ---
 # <a name="working-with-schema-rowsets-in-adomdnet"></a>ADOMD.NET でのスキーマ行セットの操作
   ADOMD.NET オブジェクト モデルで使用可能なメタデータよりも多くのメタデータが必要な場合のために、ADOMD.NET には、XML for Analysis (XMLA)、OLE DB、OLE DB for OLAP、および OLE DB for Data Mining のすべてのスキーマ行セットを取得する機能が用意されています。  
@@ -75,7 +75,7 @@ ms.locfileid: "36164901"
  これらの各メソッドは、スキーマ情報を使用して作成された `DataSet` オブジェクトのインスタンスを返します。 `DataSet` オブジェクトは、Microsoft .NET Framework クラス ライブラリの `System.Data` 名前空間にあります。  
   
 ## <a name="example"></a>例  
- 次の例では、GetActions 関数は、接続、キューブ名、座標、座標の種類を受け取ります、取得して、 [MDSCHEMA_ACTIONS 行セット](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)、し、選択した座標に利用可能なアクションを返します。  
+ 次の例では、GetActions 関数接続、キューブ名、座標、および座標の種類を取得、 [MDSCHEMA_ACTIONS 行セット](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)、選択した座標で使用可能なアクションを返します。  
   
  [!code-csharp[Adomd.NetClient#GetActions](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#getactions)]  
   

@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - full-text search [SQL Server], properties
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 caps.latest.revision: 49
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3aec36dc9ba7771cd83cea8ddc1deafe3bf1a648
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f107485b73df58e8d2da53f111cb522e1d3846bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292302"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>検索プロパティ リストを使用したドキュメント プロパティの検索
   以前のバージョンでは、ドキュメント プロパティの内容はドキュメントの本文の内容と区別できませんでした。 この制限により、フルテキスト クエリは、ドキュメント全体に対する汎用検索に制限されていました。 しかし、現在のバージョンでは、`varbinary`、`varbinary(max)` (`FILESTREAM` を含む)、または `image` バイナリ データ列がサポートされているドキュメントの種類については、フルテキスト インデックスを構成することで、Author や Title などの特定のプロパティに対するプロパティ スコープの検索をサポートすることができます。 この形式の検索を、 *プロパティ検索*と呼びます。  
@@ -65,7 +64,7 @@ ms.locfileid: "36083851"
 ##  <a name="impact"></a> プロパティ検索を有効にした場合の影響  
  1 つまたは複数のプロパティを対象とした検索をサポートするようにフルテキスト インデックスを構成すると、検索プロパティ リストに指定したプロパティの数および各プロパティの内容に応じて、インデックスのサイズが増加します。  
   
- 典型的なコーパスのテスト Microsoft Word<sup>®</sup>、Excel<sup>®</sup>、および PowerPoint<sup>®</sup>ドキュメントでは、フルテキスト インデックスにインデックスの一般的な検索プロパティを構成しました。 これらのプロパティのインデックスを作成した結果、フルテキスト インデックスのサイズは約 5% 増加しました。 サイズの増加に関するこの概算値は、ほとんどのドキュメント コーパスに当てはまると考えられます。 ただし、最終的には、サイズの増加量は、全体的なデータ量に関連する特定のドキュメント コーパス内のプロパティ データの量に依存します。  
+ Microsoft Word の一般的なコーパスのテストで<sup>®</sup>、Excel<sup>®</sup>、および PowerPoint<sup>®</sup>ドキュメント、フルテキスト インデックスにインデックスの一般的な検索プロパティを構成しました。 これらのプロパティのインデックスを作成した結果、フルテキスト インデックスのサイズは約 5% 増加しました。 サイズの増加に関するこの概算値は、ほとんどのドキュメント コーパスに当てはまると考えられます。 ただし、最終的には、サイズの増加量は、全体的なデータ量に関連する特定のドキュメント コーパス内のプロパティ データの量に依存します。  
   
   
   
@@ -119,7 +118,7 @@ ms.locfileid: "36083851"
   
      プロパティ名として、次のいずれかを指定できます。  
   
-    -   Windows の正規名、プロパティのように`System.Author`または`System.Contact.HomeAddress`です。  
+    -   Windows の正規名、プロパティのなど`System.Author`または`System.Contact.HomeAddress`します。  
   
     -   ユーザーにとって覚えやすくわかりやすい名前。 いくつかのプロパティは "Author" や "Home Address" などの一般的なわかりやすい名前に関連付けられていますが、ユーザーにとって最も適した任意の名前を指定できます。  
   

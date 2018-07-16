@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.report.f1
 - sql12.swb.summary.general.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45c9e3808bb3d546441060431c0d311f22c95904
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a24c1f4e695b86d27737dc09df33a7a91f2bdac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313140"
 ---
 # <a name="object-explorer-details-pane"></a>[オブジェクト エクスプローラーの詳細] ペイン
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のコンポーネントである [オブジェクト エクスプローラーの詳細] は、サーバーのすべてのオブジェクトを表形式で表示し、それらのオブジェクトを管理するためのユーザー インターフェイスを提供します。 オブジェクト エクスプローラーの機能は、サーバーの種類によって多少異なりますが、データベースの開発機能と管理機能は、基本的にサーバーの種類にかかわりなく用意されています。  
@@ -91,7 +91,7 @@ ms.locfileid: "36073888"
 ## <a name="sql-server-object-search"></a>SQL Server オブジェクトの検索  
  ワイルドカード  
   
--   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、次を参照してください。[ワイルドカードを使用した検索文字列](../../relational-databases/scripting/search-text-with-wildcards.md)です。  
+-   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、次を参照してください。[ワイルドカードを使用した検索テキスト](../../relational-databases/scripting/search-text-with-wildcards.md)します。  
   
  検索範囲  
   

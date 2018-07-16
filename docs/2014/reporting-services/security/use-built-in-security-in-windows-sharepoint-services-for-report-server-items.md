@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -17,13 +17,13 @@ ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4d9231800ea1cf583ae554fe10ecc217fa1e9a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80c3ca9a6ca7b966ba3af54e096d839314158082
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294142"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する
   SharePoint は、SharePoint のサイトおよびライブラリにあるレポート サーバー アイテムへのアクセスに使用できる、組み込みのセキュリティ機能を提供します。 サイトおよびリストに対する権限がユーザーに割り当て済みである場合は、SharePoint とレポート サーバーの間の統合設定を構成すると、直ちにそのユーザーがレポート サーバーのアイテムおよび操作にアクセスできるようになります。  
@@ -54,7 +54,7 @@ ms.locfileid: "36083126"
 |**メンバー**|投稿|メンバーは、新しいアイテムを作成し、アイテムのレポートおよびモデルをデザイン ツールから SharePoint ライブラリにパブリッシュすることができます。|レポートなどのアイテムをライブラリに追加します。 レポートなどのドキュメントに使用するアイテム プロパティを編集します。 レポートなどのアイテムを削除します。 データ探索にレポート モデルを使用するレポートなど、レポートを表示します。 レポート履歴スナップショットなど、ドキュメントの過去のバージョンを表示します (ユーザーには、レポート履歴が作成された元のレポートを開く権限が必要)。 レポートのパラメーターを設定します。 レポートの処理オプションを設定します。 レポート モデルを生成します。 レポート ビルダーでレポートを作成します。 共有データ ソースを作成および管理します。 そのユーザーが所有するサブスクリプションを作成、変更、および削除します。 サブスクリプションで共有スケジュールを使用します。 レポート履歴など、ドキュメントのバージョンを作成および管理します。 レポート定義またはレポート モデルのソース ファイルをダウンロードします。 レポート定義、レポート モデル、共有データ ソース、またはリソースを置き換えます (アイテムのプロパティおよび権限は維持)。|  
 |**閲覧者**と**ビューアー**|Read|閲覧者はレポートを表示できます。|データ探索にレポート モデルを使用するレポートなど、レポートを表示します。|  
   
- 組み込みのグループおよび権限レベルを使用しない場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能にアクセスするには、特定の権限が必要になります。 詳細については、次を参照してください。 [SharePoint Web アプリケーションでレポート サーバー操作に対するアクセス許可の設定](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)です。  
+ 組み込みのグループおよび権限レベルを使用しない場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能にアクセスするには、特定の権限が必要になります。 詳細については、次を参照してください。 [SharePoint Web アプリケーションでレポート サーバー操作に対するアクセス許可の設定](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

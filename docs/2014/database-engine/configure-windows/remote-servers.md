@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], remote servers
 - remote servers [SQL Server], configuring
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9a75d5e665654acca7a1748a6ad54fa05d1c2dec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 254dc9a0160527be50654ac00cac30d02152abab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328202"
 ---
 # <a name="remote-servers"></a>リモート サーバー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、旧バージョンとの互換性を保つ目的でのみ、リモート サーバーがサポートされています。 新しいアプリケーションでは、リモート サーバーではなく、リンク サーバーを使用してください。 詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。  
@@ -97,7 +97,7 @@ GO
 ```  
   
 ## <a name="viewing-local-or-remote-server-properties"></a>ローカル サーバーまたはリモート サーバーのプロパティの表示  
- **xp_msver** 拡張ストアド プロシージャを使用すると、ローカル サーバーまたはリモート サーバーのサーバー属性を確認できます。 これらの属性には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョン番号、コンピューターのプロセッサの種類と数、およびオペレーティング システムのバージョンが格納されています。 リモート サーバーのデータベース、ファイル、ログイン、およびツールを、ローカル サーバーで表示できます。 詳細については、次を参照してください。 [xp_msver &#40;TRANSACT-SQL&#41;] (~/relational-databases/system-stored-procedures/xp-msver-transact-sql.md です。  
+ **xp_msver** 拡張ストアド プロシージャを使用すると、ローカル サーバーまたはリモート サーバーのサーバー属性を確認できます。 これらの属性には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョン番号、コンピューターのプロセッサの種類と数、およびオペレーティング システムのバージョンが格納されています。 リモート サーバーのデータベース、ファイル、ログイン、およびツールを、ローカル サーバーで表示できます。 詳細については、次を参照してください。 [xp_msver &#40;TRANSACT-SQL&#41;] (~ relational-databases/system-stored-procedures/xp-msver-transact-sql.md/。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  

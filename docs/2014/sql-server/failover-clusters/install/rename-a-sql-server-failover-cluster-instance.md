@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
 - renaming virtual servers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: defb9efed51b1739f35d7dc8f1bdfbae12decb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 006abb7b37e67938a060ed05ced726c3699dfbd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294012"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server のフェールオーバー クラスター インスタンスの名前変更
   フェールオーバー クラスターに含まれる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの場合、仮想サーバーの名前を変更する手順は、スタンドアロン インスタンスでの手順とは異なります。 詳細については、 [SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)を参照してください。  
@@ -48,7 +48,7 @@ ms.locfileid: "36071590"
 ## <a name="verify-the-renaming-operation"></a>名前の変更操作の確認  
  仮想サーバーの名前を変更したら、このサーバーの古い名前を使用している接続は、新しい名前を使用して接続するように変更する必要があります。  
   
- 名前の変更操作が完了したことを確認するには、いずれかから情報を選択`@@servername`または`sys.servers`です。 `@@servername` 関数は新しい仮想サーバー名を返し、`sys.servers` テーブルには新しい仮想サーバー名が表示されます。 また、フェールオーバー処理が新しい名前を使って正常に機能していることを確認するには、他のノードに対する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースのフェールオーバーが発生するように試行します。  
+ 名前の変更操作が完了したことを確認するには、いずれかから情報を選択`@@servername`または`sys.servers`します。 `@@servername` 関数は新しい仮想サーバー名を返し、`sys.servers` テーブルには新しい仮想サーバー名が表示されます。 また、フェールオーバー処理が新しい名前を使って正常に機能していることを確認するには、他のノードに対する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースのフェールオーバーが発生するように試行します。  
   
  クラスター内のノードからの接続については、新しい名前を直ちに使用できます。 ただし、クライアント コンピューターから新しい名前を使用して接続する場合は、クライアント コンピューターが新しい名前を認識できるようにならないと、新しい名前を使用してサーバーに接続することはできません。 新しい名前がネットワーク全体に伝達されるのに必要な時間は、ネットワークの構成により異なり、数秒で済むことも、3 ～ 5 分かかることもあります。ネットワークから古い仮想サーバー名が消去されるには、さらに時間がかかる場合があります。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36071590"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>名前変更操作後のその他の考慮事項  
  フェールオーバー クラスターのネットワーク名を変更した後は、以下の点を検証および実行して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントと [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]のすべてのシナリオを有効にする必要があります。  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Windows クラスター アドミニストレーター ツールを使用して [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] フェールオーバー クラスターの名前を変更した後にアップグレードまたはアンインストールを実行すると、処理が失敗する場合があります。 この問題の更新を解決するのには、 **ClusterName**レジストリ エントリの「解決方法」の指示に従って[この](http://go.microsoft.com/fwlink/?LinkId=244002)(http://go.microsoft.com/fwlink/?LinkId=244002)です。  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Windows クラスター アドミニストレーター ツールを使用して [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] フェールオーバー クラスターの名前を変更した後にアップグレードまたはアンインストールを実行すると、処理が失敗する場合があります。 この問題の更新を解決するのには、 **ClusterName**の解決方法」の指示に従い、レジストリ エントリ[この](http://go.microsoft.com/fwlink/?LinkId=244002)(http://go.microsoft.com/fwlink/?LinkId=244002)します。  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービス:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスに推奨される以下の追加事項を検証および実行します。  
   

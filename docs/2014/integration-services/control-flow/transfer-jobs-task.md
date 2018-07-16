@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b4bd6884ed4994f55fb9edd816505796ea47c60b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef0ed6a2af2d48010550997d7ba216a91f2728f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296992"
 ---
 # <a name="transfer-jobs-task"></a>ジョブ転送タスク
   ジョブ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブを転送します。  
@@ -47,7 +47,7 @@ ms.locfileid: "36074918"
  ジョブ転送タスクでは、転送されたジョブの数を報告する情報イベントと、ジョブが上書きされた場合の警告イベントが発生します。 ジョブの転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
   
 ## <a name="execution-value"></a>実行値  
- タスクの `ExecutionValue` プロパティで定義される実行値は、転送されたジョブの数を返します。 ユーザー定義変数を割り当てることによって、`ExecValueVariable`ジョブ転送タスク、ジョブの転送に関する情報のプロパティが利用できるその他のオブジェクトをパッケージにします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../use-variables-in-packages.md)」をご覧ください。  
+ タスクの `ExecutionValue` プロパティで定義される実行値は、転送されたジョブの数を返します。 ユーザー定義変数を割り当てることで、`ExecValueVariable`ジョブ転送タスク、ジョブの転送に関する情報のプロパティが利用できるその他のオブジェクトをパッケージにします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../use-variables-in-packages.md)」をご覧ください。  
   
 ## <a name="log-entries"></a>ログ エントリ  
  ジョブ転送タスクには、次のようなカスタム ログ エントリがあります。  

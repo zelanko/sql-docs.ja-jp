@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 caps.latest.revision: 137
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 262d4eb283d8149e5a339fe2e95954d4558b26a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0e4ec4708141badd4f215484cf746633f8a670eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268158"
 ---
 # <a name="before-installing-failover-clustering"></a>フェールオーバー クラスタリングをインストールする前に
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールする前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行するハードウェアとオペレーティング システムを選択する必要があります。 また、Windows Server フェールオーバー クラスタリング (WSFC) を構成し、ネットワーク、セキュリティ、およびフェールオーバー クラスターで実行するその他のソフトウェアに関する考慮事項を見直す必要があります。  
@@ -47,7 +47,7 @@ ms.locfileid: "36179470"
   
 -   前提条件となるソフトウェアをインストールします。 セットアップで [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のインストールまたはアップグレードを行う前に、以下に示す前提条件となるソフトウェアをインストールすると、インストール時間を短縮できます。 各フェールオーバー クラスター ノードでの前提条件となるソフトウェアのインストール、およびその後のノードの再起動は、セットアップを実行する前に 1 回だけ行います。  
   
-    -   Windows PowerShell は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりました。 Windows PowerShell 2.0 をインストールするための前提条件は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]コンポーネントと[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]です。 Windows PowerShell 2.0 がコンピューターで表示されない場合は、「[Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214)」の手順に従って有効にすることができます。  
+    -   Windows PowerShell は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりました。 Windows PowerShell 2.0 のインストールの前提条件は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]コンポーネントと[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]します。 Windows PowerShell 2.0 がコンピューターで表示されない場合は、「[Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214)」の手順に従って有効にすることができます。  
   
     -   .NET Framework 3.5 SP1 は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりましたが、古い Windows オペレーティング システムに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールする際に必要になる場合があります。 詳細については、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][リリース ノート](http://go.microsoft.com/fwlink/?LinkId=296445)をインストールするには、Windows PowerShell が必要です。  
   

@@ -1,5 +1,5 @@
 ---
-title: SetServiceAccount メソッド (SqlService クラス) |Microsoft ドキュメント
+title: SetServiceAccount メソッド (SqlService クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetServiceAccount method
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74f296fd52640c950d7d2c4b227a1c3aedb17df7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7186220ae32ceb8faa3fd5bdd906712d844d88e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317942"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount メソッド (SqlService クラス)
   サーバー インスタンスの実行環境に対応するユーザー名およびパスワードを変更します。  
@@ -56,7 +56,7 @@ ServiceStartName , ServiceStartPassword
   
 -   NULL が指定されている場合、サービスとしてログオンする、 **LocalSystem**アカウント。  
   
- カーネルまたはシステム レベルのドライバーの*StartName*ドライバー オブジェクト名を含む \FileSystem\Rdr または \Driver\Xns、I/O システムが、デバイス ドライバーの読み込みに使用します。 NULL が指定された場合、ドライバーは、I/O システムがサービス名に基づいて作成した既定のオブジェクト名 (たとえば、DWDOM\Admin) で実行されます。  
+ カーネルまたはシステム レベルのドライバーの*StartName*ドライバー オブジェクト名を含む \FileSystem\Rdr または \Driver\Xns の I/O システムが、デバイス ドライバーの読み込みに使用します。 NULL が指定された場合、ドライバーは、I/O システムがサービス名に基づいて作成した既定のオブジェクト名 (たとえば、DWDOM\Admin) で実行されます。  
   
  *ServiceStartPassword*  
  アカウント名のパスワードを指定する文字列値、 *StartName*パラメーター。 パスワードを変更しない場合は NULL を指定します。 サービスがパスワードを持っていない場合は、空の文字列を指定します。  
@@ -67,6 +67,6 @@ ServiceStartName , ServiceStartPassword
 ## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>参照  
- [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始とサービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

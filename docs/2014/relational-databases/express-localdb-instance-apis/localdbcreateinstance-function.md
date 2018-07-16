@@ -1,5 +1,5 @@
 ---
-title: LocalDBCreateInstance 関数 |Microsoft ドキュメント
+title: LocalDBCreateInstance 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2e413b18e76ab94b81df9ae0a3722f0669a49ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 51596ed8b3c8cc0e140b0dbb424f1b7cf1390be0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320262"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 関数
   新しい SQL Server Express LocalDB インスタンスを作成します。  
@@ -107,7 +107,7 @@ HRESULT LocalDBCreateInstance(
   
  既存のインスタンスが破損した場合、`LocalDBCreateInstance` API メソッドのそれ以降の呼び出しは失敗します。 破損したインスタンスは、手動で修正するか明示的に削除しないと、再度使用できるようになりません。  
   
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)です。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

@@ -1,5 +1,5 @@
 ---
-title: EventColumn データ型 (ASSL) |Microsoft ドキュメント
+title: EventColumn データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EventColumn data type
 ms.assetid: c0009f1d-d136-4155-9a1b-7baacda4b552
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4e64defcd407e49b4f8e28d9034a2efeb440924
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f99484bdc41228dee28f6437631e0c05a542d9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293322"
 ---
 # <a name="eventcolumn-data-type-assl"></a>EventColumn データ型 (ASSL)
   キャプチャされる情報の列を表すプリミティブ データ型を定義、[イベント](../objects/event-element-assl.md)要素の一部として、[トレース](../objects/trace-element-assl.md)要素。  

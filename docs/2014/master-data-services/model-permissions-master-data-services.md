@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], permissions
 - permissions [Master Data Services], models
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e92f595bcf701e20378fe94dfde6c91d8c57bee1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: b83229221afc84634689c70e29311fba7b2c1374
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289108"
 ---
 # <a name="model-permissions-master-data-services"></a>モデル権限 (Master Data Services)
   モデル権限は、モデル内に存在するすべてのエンティティ、派生階層、明示的階層、およびコレクションに適用されます。 モデルに割り当てられる権限は、個々のオブジェクトでオーバーライドすることができます。  
@@ -32,8 +32,8 @@ ms.locfileid: "36074405"
   
 |権限|説明|  
 |----------------|-----------------|  
-|**読み取り専用です。**|**エクスプ ローラー**モデルが表示されますが、ユーザーを追加できません、またはメンバーの削除、および属性値、階層メンバーシップ、またはコレクション メンバーシップを更新することはできません。|  
-|**Update**|**エクスプ ローラー**にモデルが表示され、ユーザーを追加したり、メンバーを削除する属性値、階層メンバーシップ、およびコレクションのメンバーシップを更新します。|  
+|**読み取り専用です。**|**エクスプ ローラー**モデルが表示されますが、ユーザーを追加できません、またはメンバーの削除、および属性値、階層メンバーシップ、またはコレクションのメンバーシップを更新することはできません。|  
+|**Update**|**エクスプ ローラー**モデルを表示、およびユーザーが追加され、メンバーの削除、属性値、階層メンバーシップ、およびコレクションのメンバーシップを更新します。|  
 |**Deny**|モデルが表示されません。|  
   
  モデルに権限を割り当てると、ユーザーはすべてのバージョンのモデルにアクセスできるようになります。 個々のバージョンに権限を割り当てることはできません。  

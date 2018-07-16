@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef3d71e52b29895111378ad26973f819bcf14076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1c020e8c27a7e4e2e7d22eb5a89308ddab5b8112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296692"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>データベースの作成ウィザード (マスター データ サービス構成マネージャー)
   **データベースの作成** ウィザードを使用して、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを作成します。  
@@ -50,7 +50,7 @@ ms.locfileid: "36074624"
   
 |コントロール名|説明|  
 |------------------|-----------------|  
-|**ユーザー名**|あるドメイン ユーザー アカウントを指定、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]システム管理者です。 すべての[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]このユーザーは、このデータベースに関連付けられている Web アプリケーションは、すべてのモデルおよびすべての機能領域のすべてのデータを更新できます。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。|  
+|**ユーザー名**|ドメイン ユーザー アカウントの指定、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]システム管理者です。 すべての[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]このデータベースでは、このユーザーに関連付けられている Web アプリケーションには、すべてのモデルとすべての機能領域のすべてのデータを更新できます。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。|  
   
 ## <a name="summary"></a>まとめ  
  選択したオプションの概要を表示します。 選択内容を確認して **[次へ]** をクリックすると、指定した設定でデータベースの作成が開始されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "36074624"
   
 ## <a name="see-also"></a>参照  
  [[データベース構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [マスター データ サービスのデータベースと web サイトを設定します。](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [データベースの要件&#40;マスター データ サービス&#41;](install-windows/database-requirements-master-data-services.md)  
+ [マスター データ サービスのデータベースと web サイトの設定します。](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [データベース要件&#40;マスター データ サービス&#41;](install-windows/database-requirements-master-data-services.md)  
   
   

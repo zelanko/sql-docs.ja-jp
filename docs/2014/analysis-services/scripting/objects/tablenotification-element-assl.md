@@ -1,5 +1,5 @@
 ---
-title: TableNotification 要素 (ASSL) |Microsoft ドキュメント
+title: TableNotification 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - TableNotification element
 ms.assetid: 3afd075a-74f9-428c-b527-ee497cbe71e7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12dec839000f56e8d82a3f5b0e6398f20ccfb35f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e952acc38173462440ec94c050fb27e7a96cce89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321132"
 ---
 # <a name="tablenotification-element-assl"></a>TableNotification 要素 (ASSL)
-  情報が含まれています、 [ProactiveCaching](proactivecaching-element-assl.md)テーブルまたはビューが変更されているデータ ソース内の要素。  
+  情報が含まれています、 [ProactiveCaching](proactivecaching-element-assl.md)テーブルまたはビューが変更されたデータ ソース内の要素。  
   
 ## <a name="syntax"></a>構文  
   

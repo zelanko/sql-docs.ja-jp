@@ -1,5 +1,5 @@
 ---
-title: マイニング構造 (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: マイニング構造 (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining structures [Analysis Services], about mining structures
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 caps.latest.revision: 76
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd363ece9193f05bf3cb9026b8520b027023b015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c51246efc1e93c596ad18aec7ba4e72e1399e2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288498"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>マイニング構造 (Analysis Services - データ マイニング)
   マイニング構造には、マイニング モデルの作成元となる、データ ソース ビュー、列の数と型、トレーニング セットとテスト セットに分ける省略可能なパーティションなどのデータを定義します。 1 つのマイニング構造は、同じドメインを共有する複数のマイニング モデルをサポートできます。 次の図は、データ マイニング構造とデータ ソースの関係、およびデータ マイニング構造とそれを構成するデータ マイニング モデルの関係を示しています。  
   
- ![データの処理: ソース モデルに構造を](../media/dmcon-modelarch.gif "データの処理: ソース、モデルの構造")  
+ ![データの処理: ソース、構造モデル、](../media/dmcon-modelarch.gif "データの処理: ソース、モデルの構造")  
   
  図内のマイニング構造は、CustomerID フィールドで結合された複数のテーブルまたはビューを含むデータ ソースを基にしています。 1 つのテーブルには顧客に関する情報 (地理的な領域、年齢、収入、性別など) が格納され、入れ子になった関連テーブルには各顧客の追加情報 (顧客が購入した製品など) を含む複数の行が格納されます。 この図は、同じマイニング構造から複数のモデルを作成し、それぞれのモデルに構造からさまざまな列を採用できることを示しています。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36075149"
 ### <a name="processing-mining-structures"></a>マイニング構造の処理  
  マイニング構造は、処理されるまでは単なるメタデータ コンテナーです。 マイニング構造を処理する際、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、データに関する統計値、連続属性を分離する方法に関する情報、および後でマイニング モデルが使用するその他の情報を格納するキャッシュを作成します。 マイニング モデル自体には、このサマリー情報は保存されませんが、代わりに、マイニング構造の処理時にキャッシュに保存された情報が参照されます。 したがって、既存の構造に新しいモデルを追加するたびに構造を再処理する必要はなく、モデルのみを処理できます。  
   
- キャッシュが非常に大きい場合や詳細データを削除したい場合は、処理後にこのキャッシュを破棄することもできます。 データをキャッシュしない場合は、マイニング構造の `CacheMode` プロパティを `ClearAfterProcessing` に変更できます。 これにより、モデルを処理した後にキャッシュが破棄されます。 設定、`CacheMode`プロパティを`ClearAfterProcessing`マイニング モデルからドリルスルーが無効になります。  
+ キャッシュが非常に大きい場合や詳細データを削除したい場合は、処理後にこのキャッシュを破棄することもできます。 データをキャッシュしない場合は、マイニング構造の `CacheMode` プロパティを `ClearAfterProcessing` に変更できます。 これにより、モデルを処理した後にキャッシュが破棄されます。 設定、`CacheMode`プロパティを`ClearAfterProcessing`マイニング モデルからのドリルスルーが無効になります。  
   
  ただし、キャッシュを破棄した後は、マイニング構造に新しいモデルを追加することはできません。 新しいマイニング モデルを追加したり、既存のモデルのプロパティを変更した場合は、マイニング構造を最初に再処理する必要があります。 詳細については、「[処理の要件および注意事項 (データ マイニング)](processing-requirements-and-considerations-data-mining.md)」を参照してください。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36075149"
 ## <a name="using-data-mining-models-with-mining-structures"></a>データ マイニング モデルとマイニング構造の使用  
  データ マイニング モデルは、マイニング構造によって表されるデータにマイニング モデル アルゴリズムを適用します。 マイニング モデルは特定のマイニング構造に属するオブジェクトで、マイニング構造によって定義されるプロパティのすべての値を継承します。 マイニング モデルは、マイニング構造に含まれているすべての列またはその一部を使用することができます。 構造列の複数のコピーを構造に追加できます。 構造列の複数のコピーをモデルに追加し、モデルの各構造列に異なる名前、つまり *別名*を割り当てることもできます。 構造列の別名定義の詳細については、「 [モデル列の別名の作成](create-an-alias-for-a-model-column.md) 」および「 [マイニング モデルのプロパティ](mining-model-properties.md)」を参照してください。  
   
- データ マイニング モデルのアーキテクチャの詳細については、次を参照してください。[マイニング モデル&#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)です。  
+ データ マイニング モデルのアーキテクチャの詳細については、次を参照してください。[マイニング モデル&#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  マイニング構造の定義、管理、使用の詳細については、次のリンクを使用してください。  

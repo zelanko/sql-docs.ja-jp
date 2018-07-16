@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c7721c5cc57392f1e9968b4b59cb01ba07916f00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 05fe44b16818d52b861fe63dd657e60fef5793fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311252"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 関数 (レポート ビルダーおよび SSRS)
   名前と値のペアを含むデータセットから、指定された名前に対応する一連の値を返します  
@@ -42,7 +42,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、 `=Fields!CustomerID.Value`のようにします。  
   
  *result_expression*  
- (`Variant`) データセット内の各行に対して評価される式を*source_expression* = *destination_expression*、取得する値を指定します。 たとえば、 `=Fields!PhoneNumber.Value`のようにします。  
+ (`Variant`) データセット内の行に対して評価される式を*source_expression* = *destination_expression*、取得する値を指定します。 たとえば、 `=Fields!PhoneNumber.Value`のようにします。  
   
  *データセット (dataset)*  
  レポート内のデータセットの名前を指定する定数。 たとえば、"ContactInformation" のように指定します。  
@@ -51,9 +51,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  返します、 `VariantArray`、または`Nothing`一致が存在しない場合。  
   
 ## <a name="remarks"></a>コメント  
- 使用して`LookupSet`名前/値ペアの指定されたデータセットから値を取得するために、1 対多リレーションシップがある場合。 たとえば、テーブル内の顧客識別子に対して行うこともできます`LookupSet`をデータ領域にバインドされていないデータセットからその顧客のすべての関連付けられている電話番号を取得します。  
+ 使用`LookupSet`名前/値ペアの指定したデータセットから一連の値を取得する 1 対多のリレーションシップがある場合。 たとえば、テーブル内の顧客識別子を使用できます`LookupSet`をデータ領域にバインドされていないデータセットからその顧客のすべての関連付けられている電話番号を取得します。  
   
- `LookupSet` 次のとおり  
+ `LookupSet` 次を行います。  
   
 -   ソースの式を現在のスコープ内で評価します。  
   
@@ -63,7 +63,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   結果式の一連の値を返します。  
   
- 指定した名前に対応する、名前と値のペアを含むデータセットに 1 対 1 のリレーションシップが存在する場合、このデータセットから 1 つの値を取得するには、[Lookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-lookup-function.md) を使用します。 呼び出す`Lookup`一連の値を使用して[Multilookup 関数&#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-multilookup-function.md)です。  
+ 指定した名前に対応する、名前と値のペアを含むデータセットに 1 対 1 のリレーションシップが存在する場合、このデータセットから 1 つの値を取得するには、[Lookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-lookup-function.md) を使用します。 呼び出す`Lookup`一連の値を使用して[Multilookup 関数&#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-multilookup-function.md)します。  
   
  次の制限があります。  
   
@@ -75,7 +75,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   変換元、変換先、結果の式には、レポート変数またはグループ変数への参照を含めることができません。  
   
--   `LookupSet` 次のレポート アイテムの式として使用することはできません。  
+-   `LookupSet` 次のレポート アイテムの式として使用できません。  
   
     -   データ ソースの動的な接続文字列。  
   
@@ -101,11 +101,11 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="example"></a>例  
- `LookupSet`コレクションを返します、オブジェクトのテキスト ボックスに直接、結果式を表示することはできません。 コレクション内の各オブジェクトの値を文字列として連結することはできます。  
+ `LookupSet`コレクションを返します、オブジェクトのテキスト ボックスに直接結果式を表示することはできません。 コレクション内の各オブジェクトの値を文字列として連結することはできます。  
   
- 使用して、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]関数`Join`オブジェクトのセットから、区切られた文字列を作成します。 コンマを区切り記号として使用し、オブジェクトを 1 行に結合します。 レンダラーによっては、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の改行 (`vbCrLF`) を区切り記号として使用し、各値を新しい 1 つの行に表示することもできます。  
+ 使用して、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]関数`Join`オブジェクトのセットから区切られた文字列を作成します。 コンマを区切り記号として使用し、オブジェクトを 1 行に結合します。 レンダラーによっては、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の改行 (`vbCrLF`) を区切り記号として使用し、各値を新しい 1 つの行に表示することもできます。  
   
- 次の式をテキスト ボックスの値のプロパティとして使用する場合は`Join`リストを作成します。  
+ 次の式をテキスト ボックスの Value プロパティとして使用する場合は`Join`リストを作成します。  
   
 ```  
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
@@ -154,6 +154,6 @@ End Function
  [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [式の合計、集計、および組み込みコレクションのスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

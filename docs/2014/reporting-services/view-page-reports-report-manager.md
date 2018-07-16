@@ -1,5 +1,5 @@
 ---
-title: '[表示] ページ、レポート (レポート マネージャー) |Microsoft ドキュメント'
+title: ページで、表示レポート (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 582855613306e0a0660f16708baec0a670706360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ff8af0b8badf1bc1bbee5e864f825af9d0ab03c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311232"
 ---
 # <a name="view-page-reports-report-manager"></a>[表示] ページ、レポート (レポート マネージャー)
   レポートの [表示] ページではレポートを参照できます。 レポートをレポート マネージャーで最初に開くと、HTML で書式設定されます。 HTML レポートの場合、レポートの一番上に [レポート] ツール バーが表示されます。このツール バーを使用すると、レポート ページ間の移動、レポート内の検索、または異なる形式でのレポートの表示が可能になります。 次の図は、[レポート] ツール バーを示しています。  

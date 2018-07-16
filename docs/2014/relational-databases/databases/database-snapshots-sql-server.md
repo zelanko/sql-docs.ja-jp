@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - static database views
 - snapshots [SQL Server database snapshots]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e7c3cb27b119505d015d8725262d017ab6d9c1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4c478f8a5d60d2604b95146fc1a712742e3f3420
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320402"
 ---
 # <a name="database-snapshots-sql-server"></a>データベース スナップショット (SQL Server)
   データベース スナップショットは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース (*ソース データベース*) の読み取り専用の静的ビューです。 データベース スナップショットには、そのスナップショットを作成した時点でのソース データベースに対するトランザクションが反映されています。 データベース スナップショットは、常にそのソース データベースと同じサーバー インスタンス上に存在します。 ソース データベースが更新されると、データベース スナップショットが更新されます。 したがって、データベース スナップショットが長期間にわたって存在するほど、使用可能なディスク領域が使い尽くされる可能性が高くなります。  

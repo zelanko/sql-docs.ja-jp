@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bf4626b3-4d6b-4795-bb01-df335fb9c09a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 798fa10d608db06da3a45041df25c11047dc7a7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f4dc209f985cafe804f81fa54fa68c56655d3e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310742"
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>DISCOVER_PARTITION_DIMENSION_STAT 行セット
   パーティションに関連付けられているディメンションについての統計を返します。  
   
- **適用されます:** 表形式モデル、多次元モデル  
+ **適用対象:** 表形式モデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
  `DISCOVER_PARTITION_DIMENSION_STAT`行セットには、次の列が含まれています。  

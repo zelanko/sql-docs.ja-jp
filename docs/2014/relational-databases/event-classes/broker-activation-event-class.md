@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Activation event class
 ms.assetid: 481d5b13-657e-4b51-8783-ccac3595bd45
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8449de73e5cb4f45d954774fd8a6b49d63d0d7e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f95424242f62c946dc5d0787e54c8095e2f71a1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250202"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で **Broker:Activation** イベントが生成されるのは、キュー モニターがアクティブ化ストアド プロシージャを開始して QUEUE_ACTIVATION 通知を送信するとき、またはキュー モニターによって開始されたアクティブ化ストアド プロシージャが終了するときです。  

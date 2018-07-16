@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
 - creating domain-based attributes [Master Data Services]
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5323072d5c58fcbe37becd00daacaac6ed3fb161
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fd6e0a992dd4f23b6da24ed70cb884025c969537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320452"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>ドメイン ベースの属性を作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でドメイン ベースの属性を作成して、属性の値にエンティティのメンバーを設定します。  
@@ -65,7 +65,7 @@ ms.locfileid: "36074416"
   
 9. **[ピクセル幅の表示]** ボックスに、 **[エクスプローラー]** グリッドに表示する属性列の幅を入力します。  
   
-10. **エンティティ**一覧で、属性値を設定するために使用するエンティティを選択します。  
+10. **エンティティ**一覧で、属性値の設定に使用するエンティティを選択します。  
   
 11. 任意。 **[変更の追跡を有効化]** を選択して、属性のグループに対する変更を追跡します。 詳細については、「[変更の追跡グループに属性を追加する方法 (マスター データ サービス)](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)」を参照してください。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36074416"
   
 ## <a name="see-also"></a>参照  
  [ドメイン ベース属性&#40;マスター データ サービス&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
- [派生階層を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [派生階層を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [属性名を変更&#40;マスター データ サービス&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [属性を削除する&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)  
   

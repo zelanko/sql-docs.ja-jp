@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, components
 - deploying [Reporting Services], component options
@@ -21,36 +21,36 @@ ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d5a004993ab886151ce9e3f5e3f7b2a2970f60d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 296bc51f6a3793d0a37e3b730152f4292c799be1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295822"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>レポート サーバーを構成および管理する (SSRS ネイティブ モード)
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を構成するための方法について説明します。 また、特定のコンポーネント、機能、サーバー機能の構成方法について説明しているトピックへのリストも記載されています。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]は次の方法で構成できます。  
   
 -   Reporting Services 構成マネージャーを使用します。 このセクションの多くのトピックでは、このツールを使用して特定の機能を構成する方法について説明しています。  
   
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、サーバーのプロパティのカスタマイズ、個人用レポートの有効化、トレース ログの有効化、および、サイト全体に対する既定値の設定を行います。 サイトの設定の詳細については、次を参照してください。 [Reporting Services レポート サーバー&#40;ネイティブ モード&#41;](reporting-services-report-server-native-mode.md) Management Studio のです。 サーバーのプロパティをプログラムから設定するスクリプトを作成して実行できます。 詳細については、次を参照してください。[スクリプトを展開および管理タスク](../tools/script-deployment-and-administrative-tasks.md)と[レポート サーバーのシステム プロパティ](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)です。  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、サーバーのプロパティのカスタマイズ、個人用レポートの有効化、トレース ログの有効化、および、サイト全体に対する既定値の設定を行います。 サイト設定の詳細については、次を参照してください。 [Reporting Services レポート サーバー&#40;ネイティブ モード&#41;](reporting-services-report-server-native-mode.md) Management studio。 サーバーのプロパティをプログラムから設定するスクリプトを作成して実行できます。 詳細については、次を参照してください。[スクリプトを展開および管理タスク](../tools/script-deployment-and-administrative-tasks.md)と[レポート サーバーのシステム プロパティ](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)します。  
   
 -   レポート マネージャー使用して、レポート サーバーにアクセスするための権限を与えます。 権限は、各ユーザーまたはグループ アカウントに対して定義したロールの割り当てを通じて付与されます。 詳細については、「[ロールと権限 (Reporting Services)](../security/roles-and-permissions-reporting-services.md)」を参照してください。  
   
--   必要に応じて、構成ファイルを修正し、アプリケーションの設定を変更します。 各ファイルおよびそれらの変更に関するガイドラインの詳細については、次を参照してください。 [Reporting Services の構成ファイル](reporting-services-configuration-files.md)です。  
+-   必要に応じて、構成ファイルを修正し、アプリケーションの設定を変更します。 各ファイルおよびそれらの修正のガイドラインの詳細については、次を参照してください。 [Reporting Services 構成ファイル](reporting-services-configuration-files.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  レポート サーバーおよびレポート マネージャーへのアクセスに使用する URL の定義方法について説明します。  
   
- [レポート サーバー サービス アカウントを構成する&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
+ [レポート サーバー サービス アカウントの構成&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  サービスのアカウントとパスワードを変更する方法の推奨事項と手順について説明します。  
   
  [レポート サーバー データベースの作成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
  サーバーのメタデータやオブジェクトの格納に必要なレポート サーバー データベースを作成する方法について説明します。  
   
- [レポート サーバー データベース接続を構成する&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  レポート サーバーからレポート サーバー データベースへの接続に使用する接続文字列を変更する方法について説明します。  
   
  [レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  

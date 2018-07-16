@@ -1,5 +1,5 @@
 ---
-title: ドキュメントを SharePoint ライブラリ (Reporting Services の SharePoint モード) にアップロード |Microsoft ドキュメント
+title: SharePoint ライブラリ (Reporting Services の SharePoint モード) のドキュメントのアップロード |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - SharePoint integration [Reporting Services], content management
@@ -17,13 +17,13 @@ ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4dbac694b3c91cb75ba0bb5ffe54919ceee90437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 65f3388137c4fe26e1fcc51c11711944c89bd0c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295882"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード)
   レポート定義やレポート モデルを SharePoint ライブラリにアップロードすることができます。 レポート サーバー アイテムをアップロードするときには、ライブラリまたはライブラリ内のフォルダーを選択する必要があります。 レポート サーバー アイテムを一覧やページにアップロードすることはできません。  

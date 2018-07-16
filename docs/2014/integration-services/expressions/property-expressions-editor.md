@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.propertyexpressionseditor.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 82bad8b23883081df36f23872db9c37957f99668
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27e6ddae711763ef6e28dcc00ccc8baff52f17db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287664"
 ---
 # <a name="property-expressions-editor"></a>[プロパティ式エディター]
   **[プロパティ式エディター]** ダイアログ ボックスを使用すると、プロパティ値を更新するプロパティ式の作成、編集、または削除ができます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36176660"
  **[式] (...)**  
  [...] をクリックすると、 **[式ビルダー]** ダイアログ ボックスが表示されます。 詳細については、「 [[式ビルダー]](expression-builder.md)」を参照してください。  
   
- **Delete**  
+ **削除**  
  プロパティを選択してから、 **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  

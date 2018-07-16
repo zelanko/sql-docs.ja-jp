@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - reports [Reporting Services], distributing
@@ -24,13 +24,13 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 083cadfe123af29861e4bfccd8ed6182705003c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa14730ce105b17e3eb016effd2c409fc4a37851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268608"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>サブスクリプションと配信 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サブスクリプションは、特定の時刻で、またはイベントへの応答として、指定されたファイル形式でレポートを配信する構成です。 たとえば、毎週水曜日に、MonthlySales.rdl レポートを Microsoft Word 文書としてファイル共有に保存します。 サブスクリプションを使用して、レポート配信のスケジュールや自動化を設定したり、レポート パラメーターの特定の値セットを指定したりすることができます。  
@@ -39,16 +39,16 @@ ms.locfileid: "36179060"
   
  ![ssrs サブスクリプション フローの例](../media/ssrs-subscription-example-flow.png "ssrs サブスクリプション フローの例")  
   
- サブスクリプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ サブスクリプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 > [!NOTE]  
->  以降で[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]サブスクリプションの所有権をプログラムによって転送できます。 サブスクリプションの所有権の転送に使用できるユーザー インターフェイスはありません。 詳細については、次を参照してください。<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>と[PowerShell による変更と一覧 Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md)です。  
+>  以降で[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]プログラムでサブスクリプションの所有権を転送することができます。 サブスクリプションの所有権の転送に使用できるユーザー インターフェイスはありません。 詳細については、次を参照してください。<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>と[List Reporting Services Subscription Owners と Run a Subscription を変更し、PowerShell を使用して](manage-subscription-owners-and-run-subscription-powershell.md)します。  
   
  **このトピックの内容:**  
   
 -   [サブスクリプションおよび配信のシナリオ](#bkmk_subscription_scenarios)  
   
--   [標準サブスクリプションとデータ ドリブン サブスクリプション](#bkmk_standard_and_datadriven)  
+-   [標準およびデータ ドリブン サブスクリプション](#bkmk_standard_and_datadriven)  
   
 -   [サブスクリプションの要件](#bkmk_subscription_requirements)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36179060"
 |キャッシュを事前に読み込む|パラメーター化されたレポートの複数のインスタンスがあったり、レポートを表示するレポート ユーザーが多数存在したりする場合は、レポートをキャッシュに事前に読み込むことで、レポートの表示に必要な処理時間を短縮できます。|  
 |レポートをデータ ドリブンにする|データ ドリブン サブスクリプションを使用して、実行時にレポート出力、配信オプション、およびレポート パラメーター設定をカスタマイズします。 サブスクリプションでは、クエリを使用して、実行時にデータ ソースから入力値を取得します。 データ ドリブン サブスクリプションを使用すると、サブスクリプションの処理時に決定されるサブスクライバーの一覧にレポートを送信する、文書の差し込み操作を実行できます。|  
   
-##  <a name="bkmk_standard_and_datadriven"></a> 標準サブスクリプションとデータ ドリブン サブスクリプション  
+##  <a name="bkmk_standard_and_datadriven"></a> 標準およびデータ ドリブン サブスクリプション  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、 **標準** および **データ ドリブン**の 2 種類のサブスクリプションをサポートします。 標準のサブスクリプションは、各ユーザーが作成して管理します。 標準のサブスクリプションは、サブスクリプションの処理中には変化しない静的な値で構成されます。 標準のサブスクリプションごとに、レポート表示オプション、配信オプション、およびレポート パラメーターのセットが 1 つ用意されます。  
   
  データ ドリブン サブスクリプションでは、外部のデータ ソースをクエリすることによって、サブスクリプション情報が実行時に取得されます。受信者、レポート パラメーター、またはアプリケーション形式を指定する値は、この外部のデータ ソースが提供します。 データ ドリブン サブスクリプションは、受信者の一覧が非常に大きい場合、または受信者ごとにレポートの出力を変更する場合に使用できます。 データ ドリブン サブスクリプションを使用するには、クエリの作成に関する専門知識を持っていて、パラメーターの使用方法を理解していることが必要です。 通常、レポート サーバー管理者が、これらのサブスクリプションを作成して管理します。 詳細については、以下を参照してください。  
@@ -107,8 +107,8 @@ ms.locfileid: "36179060"
 |要件|説明|  
 |-----------------|-----------------|  
 |アクセス許可|レポートへのアクセス権は必須です。 レポートをサブスクライブするには、レポートを表示する権限が必要です。<br /><br /> ロールの割り当てには、"個別のサブスクリプションを管理" タスクを含める必要があります。|  
-|格納された資格情報|サブスクリプションを作成するには、レポートが保存された資格情報を使用するか、または実行時にデータを取得するために資格情報を使用しないことが必要です。 現在のユーザーの資格情報の権限借用や委任を使用して外部データ ソースに接続するように構成されているレポートは、サブスクライブすることはできません。 保存された資格情報は、Windows アカウントまたはデータベース ユーザー アカウントのいずれかです。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。<br /><br /> レポートを閲覧するための権限のほか、各サブスクリプションを作成するための権限を所有していることが必要です。 レポート サーバーでは、**[定期的なイベントおよびレポート配信]** が有効になっている必要があります。 詳細については、次を参照してください。 [Create and Manage Subscriptions for ネイティブ モード レポート サーバー](../create-manage-subscriptions-native-mode-report-servers.md)です。|  
-|レポート内のユーザー依存の値|標準的なサブスクリプションに限り、ユーザー アカウント情報をフィルターに組み込んだレポートや、レポートに表示されるテキストとしてのレポートのサブスクリプションを作成できます。 レポート内で、ユーザー アカウント名を指定、`User!UserID`現在のユーザーに解決される式。 サブスクリプションを作成する時点では、サブスクリプションを作成するユーザーが現在のユーザーとして想定されます。|  
+|格納された資格情報|サブスクリプションを作成するには、レポートが保存された資格情報を使用するか、または実行時にデータを取得するために資格情報を使用しないことが必要です。 現在のユーザーの資格情報の権限借用や委任を使用して外部データ ソースに接続するように構成されているレポートは、サブスクライブすることはできません。 保存された資格情報は、Windows アカウントまたはデータベース ユーザー アカウントのいずれかです。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。<br /><br /> レポートを閲覧するための権限のほか、各サブスクリプションを作成するための権限を所有していることが必要です。 レポート サーバーでは、**[定期的なイベントおよびレポート配信]** が有効になっている必要があります。 詳細については、次を参照してください。[ネイティブ モード レポート サーバーの管理のサブスクリプションを作成および](../create-manage-subscriptions-native-mode-report-servers.md)します。|  
+|レポート内のユーザー依存の値|標準的なサブスクリプションに限り、ユーザー アカウント情報をフィルターに組み込んだレポートや、レポートに表示されるテキストとしてのレポートのサブスクリプションを作成できます。 レポートでは、ユーザー アカウント名がで指定された、`User!UserID`現在のユーザーに解決される式です。 サブスクリプションを作成する時点では、サブスクリプションを作成するユーザーが現在のユーザーとして想定されます。|  
 |モデル アイテム セキュリティは無効|モデルにモデル アイテム セキュリティの設定が含まれている場合、データ ソースとしてモデルを使用するレポート ビルダー レポートをサブスクライブすることはできません。 この制限は、モデル アイテム セキュリティを使用するレポートのみが対象となります。|  
 |パラメーターの値|レポートでパラメーターを使用する場合、レポート自体または定義するサブスクリプションでパラメーター値を指定する必要があります。 レポートで既定値が定義されている場合は、パラメーター値でその既定値を使用するように設定できます。|  
   
@@ -178,7 +178,7 @@ ms.locfileid: "36179060"
  [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [[スケジュール]](schedules.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](../report-server/reporting-services-report-server-native-mode.md)   
- [ネイティブ モードのレポート サーバーのサブスクリプション作成し、管理](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [サブスクリプションがネイティブ モード レポート サーバーの作成し、管理](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Reporting Services のサブスクリプションを監視する](monitor-reporting-services-subscriptions.md)  
   
   

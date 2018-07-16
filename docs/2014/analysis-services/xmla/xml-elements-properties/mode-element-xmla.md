@@ -1,5 +1,5 @@
 ---
-title: Mode 要素 (XMLA) |Microsoft ドキュメント
+title: Mode 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Mode element
 ms.assetid: 43a54181-6494-48c3-b14b-376d8939fa9f
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5634e273e1708f9de213436e20008cc6874f50a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c90d67995e6775c035265db57c2b55380ad0fe76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267648"
 ---
 # <a name="mode-element-xmla"></a>Mode 要素 (XMLA)
-  親によって使用されるモードを示す[ロック](../xml-elements-commands/lock-element-xmla.md)要素を指定したオブジェクトのロックを作成するとき。  
+  親で使用されるモードを示す[ロック](../xml-elements-commands/lock-element-xmla.md)要素が指定されたオブジェクトに対するロックを作成するときにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,12 +68,12 @@ ms.locfileid: "36179396"
   
 |値|説明|  
 |-----------|-----------------|  
-|*CommitShared*|指定されたオブジェクトに対して共有ロックが設定されます。 同じオブジェクトに対して他の共有ロックを作成できます。<br /><br /> 共有ロックなどの書き込み操作を含むトランザクションを使用する、 [Execute](../xml-elements-methods-execute.md)メソッドの呼び出しを実行している、 [Alter](../xml-elements-commands/alter-element-xmla.md)コマンドを共有ロックが解除されるまでにコミットしてから、指定されたオブジェクトでします。 共有ロックは、読み取り操作をなどを含むトランザクションを妨げません、 [Discover](../xml-elements-methods-discover.md)メソッドの呼び出しまたは`Execute`メソッドの呼び出しを実行している、[ステートメント](../xml-elements-commands/statement-element-xmla.md)コマンドをコミットします。|  
+|*CommitShared*|指定されたオブジェクトに対して共有ロックが設定されます。 同じオブジェクトに対して他の共有ロックを作成できます。<br /><br /> 共有ロックによりトランザクションなど、書き込み操作を含む、 [Execute](../xml-elements-methods-execute.md)メソッドの呼び出しを実行している、 [Alter](../xml-elements-commands/alter-element-xmla.md)コマンドは、共有ロックが解除されるまでコミットできませんから、指定されたオブジェクトをします。 共有ロックができないなど、読み取り操作を伴うトランザクション、 [Discover](../xml-elements-methods-discover.md)メソッドの呼び出しまたは`Execute`メソッドの呼び出しを実行している、[ステートメント](../xml-elements-commands/statement-element-xmla.md)をコミットしてから、コマンド。|  
 |*CommitExclusive*|指定されたオブジェクトに対して排他ロックが設定されます。 同じオブジェクトに対して、他の共有ロックまたは排他ロックを作成することはできません。<br /><br /> 排他ロックを使用すると、指定されたオブジェクトに対する読み取り操作または書き込み操作を伴うトランザクションは、排他ロックが解除されるまでコミットできません。|  
   
 ## <a name="see-also"></a>参照  
  [ID 要素&#40;XMLA&#41;](id-element-xmla.md)   
- [オブジェクトの要素&#40;XMLA&#41;](object-element-xmla.md)   
+ [要素をオブジェクト&#40;XMLA&#41;](object-element-xmla.md)   
  [プロパティ&#40;XMLA&#41;](xml-elements-properties.md)  
   
   

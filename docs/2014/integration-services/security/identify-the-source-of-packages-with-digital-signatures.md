@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e1657156b61b3f87fb639394b6624f8e0a209207
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b744fb7d966fc7079cf05072f94f425d79e2b34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320662"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>デジタル署名を使用してパッケージのソースを特定する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、そのソースを識別するために、デジタル証明書を使用して署名できます。 パッケージがデジタル証明書を使用して署名されたら、パッケージを読み込む前に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] でデジタル署名を確認できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で署名を確認するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または **dtexec** ユーティリティ (dtexec.exe) でオプションを設定するか、オプションのレジストリ値を設定します。  
@@ -38,7 +38,7 @@ ms.locfileid: "36176196"
   
 -   デザイン時にすべてのパッケージのデジタル署名を確認してからパッケージを読み込むには、 **で** [パッケージの読み込み時にデジタル署名を確認する] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]チェック ボックスをオンにします。 このオプションは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でのすべてのパッケージに対するグローバルな設定です。 詳細については、「 [General Page](../general-page-of-integration-services-designers-options.md)」を参照してください。  
   
--   個々 のパッケージのデジタル署名を確認するには、指定、`/VerifyS[igned]`オプションを使用すると、 **dtexec**ユーティリティでパッケージを実行します。 詳しくは、「 [dtexec Utility](../packages/dtexec-utility.md)」をご覧ください。  
+-   個々 のパッケージのデジタル署名を確認するには、指定、`/VerifyS[igned]`オプションを使用する場合、 **dtexec**ユーティリティでパッケージを実行します。 詳しくは、「 [dtexec Utility](../packages/dtexec-utility.md)」をご覧ください。  
   
 ## <a name="setting-a-registry-value-to-check-the-package-signature"></a>パッケージの署名を確認するレジストリ値の設定  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、オプションのレジストリ値である **BlockedSignatureStates**もサポートされています。このレジストリ値を使用すると、署名付きパッケージと署名がないパッケージの読み込みに関する組織のポリシーを管理できます。 このレジストリ値により、パッケージが署名されていない場合、または無効な署名や信頼できない署名が含まれている場合に、パッケージが読み込まれないようにすることができます。 このレジストリ値を設定する方法の詳細については、「[レジストリ値を設定して署名ポリシーを実装する](../implement-a-signing-policy-by-setting-a-registry-value.md)」を参照してください。  

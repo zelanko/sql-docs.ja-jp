@@ -1,13 +1,11 @@
 ---
-title: UDT テーブルと列の定義 |Microsoft ドキュメント
+title: UDT テーブルと列の定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -24,21 +22,21 @@ helpviewer_keywords:
 - indexes [CLR integration]
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 802ebd32f1df4a51aca9dde80f0951d3ed9df491
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 360715f3b239347aedcae2b50a0e21f7a2943125
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178914"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351804"
 ---
 # <a name="defining-udt-tables-and-columns"></a>UDT テーブルと UDT 列の定義
-  ユーザー定義型 (UDT) を含むアセンブリの定義が登録されるは[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース、列定義で使用できます。  
+  ユーザー定義型 (UDT) を含むアセンブリの定義に登録されていると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース、列定義で使用できます。  
   
 ## <a name="creating-tables-with-udts"></a>UDT を含むテーブルの作成  
- テーブルに UDT 列を作成するために特別な構文は用意されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のデータ型であるかのように、列定義に UDT の名前を使用できます。 次の CREATE TABLE[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントがという名前のテーブルを作成**ポイント**、という列を持つ**ID、** として定義されている、 `int` id 列と \ テーブルの主キー。 2 番目の列の名前は**PointValue**、データ型の**ポイント**です。 この例では使用されているスキーマ名**dbo**です。 この操作には、スキーマ名を指定する権限が必要です。 スキーマ名を省略すると、データベース ユーザーの既定のスキーマが使用されます。  
+ テーブルに UDT 列を作成するために特別な構文は用意されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のデータ型であるかのように、列定義に UDT の名前を使用できます。 次の CREATE TABLE[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントでは、という名前のテーブルを作成します。**ポイント**、という名前の列で**ID、** として定義されている、 `int` id 列と \、テーブルの主キー。 2 番目の列の名前は**PointValue**のデータ型を持つ**ポイント**します。 この例で使用するスキーマ名が**dbo**します。 この操作には、スキーマ名を指定する権限が必要です。 スキーマ名を省略すると、データベース ユーザーの既定のスキーマが使用されます。  
   
 ```  
 CREATE TABLE dbo.Points   

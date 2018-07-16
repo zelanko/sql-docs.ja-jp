@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b9c9b3cc1259ca1c905cd25e9d8379eb7ecc4f87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fb341cb36e97fbd06f38363c84d87f975d23eed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329962"
 ---
 # <a name="transaction-isolation-levels"></a>トランザクション分離レベル
   メモリ最適化テーブルにアクセスするトランザクションでは、次の分離レベルはサポートされます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36179600"
   
  トランザクション分離レベルは、ネイティブ コンパイル ストアド プロシージャの ATOMIC ブロックの一部として指定できます。 詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)」を参照してください。 解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] からメモリ最適化テーブルにアクセスするときに、テーブル レベルのヒントを使用して分離レベルを指定することもできます。  
   
- ネイティブ コンパイル ストアド プロシージャを定義する際には、トランザクション分離レベルを指定する必要があります。 解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] のユーザー トランザクションからメモリ最適化テーブルにアクセスするときは、テーブル ヒントで分離レベルを指定する必要があります。 詳細については、次を参照してください。[メモリ最適化テーブルでのトランザクション分離レベルに関するガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)です。  
+ ネイティブ コンパイル ストアド プロシージャを定義する際には、トランザクション分離レベルを指定する必要があります。 解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] のユーザー トランザクションからメモリ最適化テーブルにアクセスするときは、テーブル ヒントで分離レベルを指定する必要があります。 詳細については、次を参照してください。[メモリ最適化テーブルでのトランザクション分離レベルに関するガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)します。  
   
  自動コミット トランザクションを使用するメモリ最適化テーブルでは、READ COMMITTED 分離レベルがサポートされます。 READ COMMITTED は、ユーザー トランザクションまたは ATOMIC ブロックでは無効です。 READ COMMITTED は、明示的または暗黙的なユーザー トランザクションではサポートされません。 自動コミット トランザクションを使用するメモリ最適化テーブルについては、クエリがどのディスク ベース テーブルにもアクセスできない場合にのみ、分離レベル READ_COMMITTED_SNAPSHOT がサポートされます。 また、解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] を使用して SNAPSHOT 分離で開始されるトランザクションでは、メモリ最適化テーブルにアクセスできません。 REPEATABLE READ 分離または SERIALIZABLE 分離が指定された、解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] を使用するトランザクションでは、SNAPSHOT 分離を使用してメモリ最適化テーブルにアクセスする必要があります。 このシナリオの詳細については、次を参照してください。[コンテナーにまたがるトランザクション](cross-container-transactions.md)です。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36179600"
   
 -   メモリ最適化テーブルにアクセスするためにより高い分離レベルのヒントを明示的に指定する (WITH (SNAPSHOT) など)。  
   
--   `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 設定オプションを指定する。これにより、(各メモリ最適化テーブルに WITH(SNAPSHOT) ヒントを含めた場合のように) メモリ最適化テーブルの分離レベルが SNAPSHOT に設定されます。 詳細については`MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`を参照してください[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)です。  
+-   `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 設定オプションを指定する。これにより、(各メモリ最適化テーブルに WITH(SNAPSHOT) ヒントを含めた場合のように) メモリ最適化テーブルの分離レベルが SNAPSHOT に設定されます。 詳細については`MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`を参照してください[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)します。  
   
  または、セッションの分離レベルが READ COMMITTED である場合は、自動コミット トランザクションを使用できます。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36179600"
  エラー 41325 です。 現在のトランザクションは、SERIALIZABLE の検証の失敗が原因でコミットされませんでした。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルに対するトランザクションを理解します。](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [メモリ最適化テーブルに対するトランザクションの概要](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [メモリ最適化テーブルでのトランザクション分離レベルに関するガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Databases object
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 94f2795b084a7e55db3cf09f3e5f7729460be264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b96163a102c57c238a4b6e4ce4574dfcb46a54ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318412"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases オブジェクト
   SQL Server の **SQLServer:Databases** オブジェクトには、一括コピー操作、バックアップと復元のスループット、およびトランザクション ログの利用状況を監視するためのカウンターがあります。 トランザクションとトランザクション ログを監視すると、データベースで発生しているユーザーの利用状況と、トランザクション ログの空き容量を調べることができます。 ユーザーの利用状況は、データベースのパフォーマンスを決定し、ログ サイズ、ロック、およびレプリケーションに影響を与えます。 下位レベルのログの利用状況を監視して、ユーザーの利用状況やリソースの利用状況を計測すると、パフォーマンスのボトルネックを突き止めるのに役立ちます。  

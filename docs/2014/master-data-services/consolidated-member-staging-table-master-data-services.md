@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], attributes staging table
 - attributes staging table [Master Data Services]
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 caps.latest.revision: 13
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 925f20d61f4638041b7606df584147446ba28d65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 15a47c1e8e1785b9b9b63c0a2dd8d17558898434
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320632"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>統合メンバー ステージング テーブル (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの統合メンバー ステージング テーブル (stg.name_Consolidated) を使用して、統合メンバーを作成、更新、非アクティブ化、および削除します。 このテーブルを使用して、統合メンバーの属性値を更新することも可能です。  
@@ -40,15 +40,15 @@ ms.locfileid: "36070516"
 |**HierarchyName**<br /><br /> 必須|明示的階層の名前。 各統合メンバーは、1 つの階層にのみ所属することができます。|  
 |**ErrorCode**|エラー コードを表示します。 **ImportStatus_ID** が **2** のすべてのレコードについては、「[ステージング処理のエラー (マスター データ サービス)](staging-process-errors-master-data-services.md)」を参照してください。|  
 |**コード**<br /><br /> 必須。**ImportType1** や **2** でコードが自動的に生成される場合は除きます。詳しくは、「[コードの自動作成 (マスター データ サービス)](../../2014/master-data-services/automatic-code-creation-master-data-services.md)」を参照してください。|メンバーの一意コード。|  
-|**Name**<br /><br /> 省略可|メンバーの名前。|  
+|**名前**<br /><br /> 省略可|メンバーの名前。|  
 |**NewCode**|メンバー コードを変更する場合にのみ使用します。|  
 |\<属性名>|エンティティ内の属性ごとに列が存在します。 **ImportType** が **0** または **2**の場合に、これを使用します。 自由形式属性の場合、属性の新しいテキストまたは文字列値を指定します。 ドメイン ベース属性の場合は、属性となるメンバーのコードを指定します。 リンク属性の場合、URL は **http://** で始まる必要があります。<br /><br /> 注: ファイル属性をステージングすることはできません。|  
   
 ## <a name="see-also"></a>参照  
  [読み込むか、ステージング処理を使用してマスター データ サービス内のメンバーを更新します。](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
- [ステージング処理を使用した明示的階層メンバーの移動&#40;マスター データ サービス&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [ステージング処理を使用して明示的階層メンバーの移動&#40;マスター データ サービス&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
  [データのインポート&#40;マスター データ サービス&#41;](overview-importing-data-from-tables-master-data-services.md)   
- [ステージング処理中に発生したエラーを表示する&#40;マスター データ サービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
- [ステージング プロセス エラー&#40;マスター データ サービス&#41;](staging-process-errors-master-data-services.md)  
+ [ステージング処理中に発生するエラーを表示する&#40;マスター データ サービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
+ [ステージング処理のエラー&#40;マスター データ サービス&#41;](staging-process-errors-master-data-services.md)  
   
   

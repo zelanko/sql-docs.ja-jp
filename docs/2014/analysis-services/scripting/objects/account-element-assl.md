@@ -1,5 +1,5 @@
 ---
-title: アカウントの要素 (ASSL) |Microsoft ドキュメント
+title: 要素 (ASSL) のアカウント |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Account element
 ms.assetid: 0bb7d06c-0158-4ab2-b2b1-cb50ba24f7c0
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0a99dbaee6e1eaec95385295cf1842ffcc336adf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d763b75cfb357554948565a59f5348d7fd3b725a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321174"
 ---
 # <a name="account-element-assl"></a>Account 要素 (ASSL)
-  内の勘定科目の種類に関する詳細を含む、[データベース](database-element-assl.md)要素。  
+  内で勘定科目の種類に関する詳細を含む、[データベース](database-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,9 +65,9 @@ ms.locfileid: "36177853"
 |子要素|[AccountType](../properties/accounttype-element-assl.md)、 [AggregationFunction](../properties/aggregationfunction-element-assl.md)、[エイリアス](../collections/aliases-element-assl.md)、[注釈](../collections/annotations-element-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
- ディメンションが[型](../properties/type-element-dimension-assl.md)要素に設定されている*アカウント、* ディメンションのメンバーによって表される、収益や費用などのアカウントの種類を指定する属性を持つことができます。 勘定科目の種類を使用して[メジャー](measure-element-assl.md)要素が[AggregationFunction](../properties/aggregatefunction-element-assl.md)要素に設定されている*ByAccount*、ときに使用する集計関数が決定そのディメンションのメンバーを集計します。 `Account` 要素は、1 つの勘定科目の種類と、このようなメジャーで使用する必要のある集計関数を表します。  
+ ディメンションが[型](../properties/type-element-dimension-assl.md)要素に設定されて*アカウント、* ディメンションのメンバーに、収入、経費などのアカウントの種類を指定し、表される属性を持つことができます。 は、アカウントの種類を使用して[メジャー](measure-element-assl.md)要素が[AggregationFunction](../properties/aggregatefunction-element-assl.md)要素に設定されて*ByAccount*、ときに使用する集計関数が決定するにはそのディメンションのメンバーを集計します。 `Account` 要素は、1 つの勘定科目の種類と、このようなメジャーで使用する必要のある集計関数を表します。  
   
- 集計関数がによって使用される既定値と異なる場合は、勘定科目の種類を表示されている必要があります[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]各アカウントの種類。  
+ 集計関数がで使用される既定値と異なる場合は、勘定科目の種類を表示する必要があります[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]各アカウントの種類。  
   
  有効な勘定科目の種類のセットは固定されています。  
   

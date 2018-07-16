@@ -1,5 +1,5 @@
 ---
-title: Analysis Services インスタンスの管理 |Microsoft ドキュメント
+title: Analysis Services インスタンスの管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b4bbcc49f28b0f8cd75d8d00e6935559d50c44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11f18bd8c1c72bcaf93b74529e604c69440506c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289788"
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services インスタンス管理
   Analysis Services のインスタンスは、オペレーティング システム サービスとして実行される `msmdsrv.exe` 実行可能ファイルのコピーです。 各インスタンスは同じサーバー上の他のインスタンスから完全に独立しており、固有の構成設定、権限、ポート、開始アカウント、ファイル ストレージ、およびサーバー モード プロパティを持ちます。  
@@ -44,7 +44,7 @@ ms.locfileid: "36071996"
  原則として、実行する必要のある管理タスクの大部分はモードによって異なりません。 Analysis Services システム管理者は、インストール方法にかかわらず同じ手順とスクリプトを使用して、ネットワーク上で任意の Analysis Services インスタンスを管理できます。  
   
 > [!NOTE]  
->  PowerPivot for SharePoint は例外です。 PowerPivot の配置のサーバー管理は、常に SharePoint ファームのコンテキスト内で行われます。 PowerPivot は、常に単一インスタンスであり、常に SharePoint サーバーの全体管理または PowerPivot 構成ツールを使用して管理されるという点が他のサーバー モードと異なります。 SQL Server Management Studio での SharePoint の PowerPivot に接続することはできますが、または[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、操作は望ましくありません。 SharePoint ファームには、サーバーの状態を同期し、サーバーの可用性を監視するインフラストラクチャが含まれます。 他のツールを使用すると、これらの操作と競合する可能性があります。 PowerPivot サーバーの管理の詳細については、次を参照してください。 [PowerPivot for SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)です。  
+>  PowerPivot for SharePoint は例外です。 PowerPivot の配置のサーバー管理は、常に SharePoint ファームのコンテキスト内で行われます。 PowerPivot は、常に単一インスタンスであり、常に SharePoint サーバーの全体管理または PowerPivot 構成ツールを使用して管理されるという点が他のサーバー モードと異なります。 PowerPivot for SharePoint SQL Server Management Studio を接続することはできますが、または[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、ことは望ましくありません。 SharePoint ファームには、サーバーの状態を同期し、サーバーの可用性を監視するインフラストラクチャが含まれます。 他のツールを使用すると、これらの操作と競合する可能性があります。 PowerPivot サーバーの管理の詳細については、次を参照してください。 [PowerPivot for SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -53,12 +53,12 @@ ms.locfileid: "36071996"
 |[インストール後の構成&#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)|Analysis Services のインストールを完了または変更する必須のタスクとオプションのタスクについて説明します。|  
 |[Analysis Services への接続](connect-to-analysis-services.md)|接続を確立またはクリアするための接続文字列プロパティ、クライアント ライブラリ、認証方法、および手順について説明します。|  
 |[Analysis Services インスタンスの監視](monitor-an-analysis-services-instance.md)|パフォーマンス モニターと SQL Server Profiler の使用方法など、サーバー インスタンスの監視のためのツールと手法について説明します。|  
-|[Analysis Services の管理タスクをスクリプト作成](../script-administrative-tasks-in-analysis-services.md)|処理などの多くの管理タスクを自動化する方法について説明します。|  
+|[Analysis Services での管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)|処理などの多くの管理タスクを自動化する方法について説明します。|  
 |[Analysis Services 多次元のグローバリゼーションのシナリオ](../globalization-scenarios-for-analysis-services-multiidimensional.md)|言語と照合順序のサポート、両方のプロパティの変更手順、および言語と照合順序の動作の設定とテストのヒントについて説明します。|  
 |[Analysis Services でのログ操作](log-operations-in-analysis-services.md)|ログについて説明し、その構成方法について解説します。|  
   
 ## <a name="see-also"></a>参照  
- [テーブル ソリューションと多次元ソリューションの比較&#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
+ [テーブルと多次元ソリューションのソリューションの比較&#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [PowerPivot 構成ツール](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [サーバーの全体管理で PowerPivot サーバーの管理と構成](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Analysis Services インスタンスのサーバー モードの決定](determine-the-server-mode-of-an-analysis-services-instance.md)  

@@ -1,5 +1,5 @@
 ---
-title: 定義の準加法の動作 (ビジネス インテリジェンス ウィザード) |Microsoft ドキュメント
+title: 定義の準加法の動作 (ビジネス インテリジェンス ウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.semiadditivememberdetection.f1
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 79ee4ffdb89c4ee8ccb13f4a4985f6d545f573ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 201a5a24e8bafa2f2f919f6ad0b072ca801a694e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075408"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310812"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>[準加法の動作の定義] (ビジネス インテリジェンス ウィザード)
   **[準加法の動作の定義]** ページを使用すると、メジャーに対する準加法の動作を有効または無効にできます。 準加法の動作によって、キューブに含まれるメジャーが時間ディメンションで集計される方法が決まります。  
@@ -33,12 +33,12 @@ ms.locfileid: "36075408"
  **[準加法の動作を無効にする]**  
  キューブに含まれるすべてのメジャーで準加法の動作を無効にします。  
   
- **ウィザードが検出された、\<ディメンション名 > 勘定科目ディメンションが準加法メンバーを含むです。サーバーは、各勘定科目の種類の指定された準加法動作に従って、このディメンションのメンバーに集計されます。**  
- 準加法メンバーを含む勘定科目ディメンションの準加法の動作を有効にします。 勘定科目ディメンションを参照するメジャー グループ内のすべてのメジャーの集計関数を設定は、このオプションを選択すると`ByAccount`です。  
+ **ウィザードが検出された、\<ディメンション名 > 勘定科目ディメンションが準加法メンバーを含むです。サーバーは、各アカウントの種類に指定された準加法動作に従って、このディメンションのメンバーで集計されます。**  
+ 準加法メンバーを含む勘定科目ディメンションの準加法の動作を有効にします。 勘定科目ディメンションを参照するメジャー グループ内のすべてのメジャーの集計関数を設定するこのオプションを選択する`ByAccount`します。  
   
  勘定科目ディメンションの詳細については、「 [親子型ディメンションの財務アカウントの作成](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)」を参照してください。  
   
- **個々 のメンバーに準加法の動作を定義します。**  
+ **個々 のメンバーの準加法の動作を定義します。**  
  準加法の動作を有効にして、特定のメジャーに対して準加法集計関数を指定します。 集計関数は、メジャーを含むメジャー グループによって参照されるすべてのディメンションに対して適用されます。  
   
  **メジャー**  

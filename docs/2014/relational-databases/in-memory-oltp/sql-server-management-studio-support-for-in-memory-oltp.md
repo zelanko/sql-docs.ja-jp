@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 caps.latest.revision: 31
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e5dcdb4cbe4691b397997f24118e9da5f91ba0e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 85dd4c829a05bd051fcf57f1ea299916080251a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313774"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio によるインメモリ OLTP のサポート
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インフラストラクチャを管理するための統合環境です。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを構成、監視、および管理するためのツールが備わっています。 詳細については、「 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)」を参照してください。  
@@ -157,7 +157,7 @@ ms.locfileid: "36074389"
 ## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>でサポートされない機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  インメモリ OLTP オブジェクトに対して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、データベース エンジンでもサポートされない機能と操作はサポートしていません。  
   
- 詳細についてはサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能を参照してください[SQL Server 機能のサポートされている](unsupported-sql-server-features-for-in-memory-oltp.md)です。  
+ サポートされていないの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]については、「 [SQL Server でサポートされる機能](unsupported-sql-server-features-for-in-memory-oltp.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server によるインメモリ OLTP のサポート](sql-server-support-for-in-memory-oltp.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up encryption keys [Reporting Services]
 - restoring encryption keys [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 26b64626126f331b5ca9dcc893a7ecb73a7bce38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26c71d0d4f3811d4204e83f465c47a6a78f7532f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331302"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Reporting Services の暗号化キーのバックアップと復元
   レポート サーバー構成で重要なのは、機密情報の暗号化に使用される対称キーのバックアップ コピーの作成です。 キーのバックアップ コピーは多くのルーチン処理で必要とされ、キーのバックアップ コピーにより新しいインストールで既存のレポート サーバー データベースを再利用できます。  
@@ -104,13 +104,13 @@ ms.locfileid: "36179471"
   
 ####  <a name="bkmk_restore_rskeymgmt"></a> 暗号化キーの復元 - rskeymgmt (ネイティブ モード)  
   
-1.  レポート サーバーをホストするコンピューターのローカルで **rskeymgmt.exe** を実行します。 使用して、`-a`キーの復元に渡す引数。 完全修飾ファイル名を入力し、パスワードを指定する必要があります。 指定する必要がある引数の例を次に示します。  
+1.  レポート サーバーをホストするコンピューターのローカルで **rskeymgmt.exe** を実行します。 使用して、`-a`キーを復元する引数。 完全修飾ファイル名を入力し、パスワードを指定する必要があります。 指定する必要がある引数の例を次に示します。  
   
     ```  
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  
     ```  
   
 ## <a name="see-also"></a>参照  
- [構成し、暗号化キーを管理&#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
+ [構成し、暗号化キーの管理&#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

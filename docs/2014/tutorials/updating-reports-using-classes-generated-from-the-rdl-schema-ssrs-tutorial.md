@@ -1,5 +1,5 @@
 ---
-title: (SSRS チュートリアル) RDL スキーマから生成されたクラスを使用してレポートの更新 |Microsoft ドキュメント
+title: (SSRS チュートリアル) RDL スキーマから生成されたクラスを使用してレポートの更新 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RDL [Reporting Services], generating
 - RDL [Reporting Services], tutorials
 - RDL [Reporting Services], serializing
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
 caps.latest.revision: 26
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a13d94965eebf99c401159c86e5fed065f5ec7ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96d125a3d69b564c94b64d23f825778c55068991
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297562"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>RDL スキーマから生成されたクラスを使ったレポートの更新 (SSRS チュートリアル)
-  このチュートリアルで、XML スキーマ定義ツール (Xsd.exe) クラスを生成するようにすると、およびレポート定義ファイル (.rdl、.rdlc) を逆シリアル化を使用する方法を示しています、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer>クラスです。  
+  このチュートリアルで、およびレポート定義ファイル (.rdl、.rdlc) を逆シリアル化するための XML スキーマ定義ツール (Xsd.exe) クラスを生成するを使用する方法を示しています、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer>クラス。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
- このチュートリアルの中は、次の作業を行います。  
+ このチュートリアルの中は、次のアクティビティを行います。  
   
 -   使用して、アプリケーションを作成、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]コンソール アプリケーション プロジェクト テンプレート。  
   
--   使用して、レポート定義言語 (RDL) スキーマからクラスを生成、 **xsd**ツールです。  
+-   使用して、レポート定義言語 (RDL) スキーマからクラスを生成、 **xsd**ツール。  
   
 -   レポート サーバーに接続し、レポート定義を取得する。  
   
@@ -57,12 +57,12 @@ ms.locfileid: "36071080"
   
 -   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] のインスタンスにインストールされた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サンプル データベース。  
   
--   レポート サーバーにインストールされているレポート。 このチュートリアルでは、サンプル レポート Company Sales 2012 を使用します。 サンプル レポートの詳細については、次を参照してください。 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)です。  
+-   レポート サーバーにインストールされているレポート。 このチュートリアルでは、サンプル レポート Company Sales 2012 を使用します。 サンプル レポートの詳細については、次を参照してください。 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)します。  
   
 > [!NOTE]  
->  サンプルはセットアップ中に自動的にインストールされませんが、いつでもインストールできます。 サンプルについては、次を参照してください。 [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887)です。  
+>  サンプルはセットアップ中に自動的にインストールされませんが、いつでもインストールできます。 サンプルについては、次を参照してください。 [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887)します。  
   
- **このチュートリアルを完了する時間を推定:** 30 分  
+ **このチュートリアルを完了するまでに時間を推定:** 30 分  
   
 ## <a name="tasks"></a>処理手順  
  [レッスン 1: RDL スキーマ Visual Studio プロジェクトの作成](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  

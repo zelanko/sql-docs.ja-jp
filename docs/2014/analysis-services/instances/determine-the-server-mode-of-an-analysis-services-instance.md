@@ -1,5 +1,5 @@
 ---
-title: Services インスタンスのサーバー モードの Analysis の決定 |Microsoft ドキュメント
+title: Services インスタンスのサーバー モードの分析の決定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec5ec0ebab56cd5e836385a26fc60a1c5cf1a0d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bca31a21dda5f03b29456f842afb2d4d7504c608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297432"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services インスタンスのサーバー モードの決定
   Analysis Services は、多次元およびデータ マイニング (既定)、PowerPivot for SharePoint、テーブルの 3 つのサーバー モードのいずれかでインストールできます。 Analysis Services インスタンスのサーバー モードは、セットアップ時にサーバーのインストール オプションを選択するときに決定します。  
@@ -31,13 +31,13 @@ ms.locfileid: "36173820"
 ## <a name="server-icons-in-object-explorer"></a>オブジェクト エクスプローラーでのサーバー アイコン  
  サーバー モードを判別する最も簡単な方法は、SQL Server Management Studio でサーバーに接続し、オブジェクト エクスプローラーのサーバー名の横にあるアイコンを確認する方法です。 次の図に、多次元、テーブル、および PowerPivot の各モードで配置された Analysis Services の 3 つのインスタンスを示します。  
   
- ![オブジェクト エクスプ ローラーのアイコン上の各サーバー モード](../media/ssas-ssms-servermodes.gif "サーバー モードごとのオブジェクト エクスプ ローラー アイコン")  
+ ![オブジェクト エクスプ ローラーのアイコンの各サーバー モード](../media/ssas-ssms-servermodes.gif "サーバー モードごとのオブジェクト エクスプ ローラーのアイコン")  
   
 ## <a name="viewing-deploymentmode-property-in-msmdsrvini-file"></a>MSMDSRV.INI ファイルの DeploymentMode プロパティの表示  
  すべての Analysis Services インスタンスに含まれる msmdsrv.ini ファイルで `DeploymentMode` プロパティをチェックすることもできます。 このプロパティの値によってサーバー モードが示されます。 有効な値は、0 (多次元)、1 (SharePoint)、または 2 (テーブル) です。 msmdsrv.ini ファイルを開くには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者 (つまり、サーバー ロールのメンバー) である必要があります。 このファイルには、構造化された XML が含まれています。 メモ帳または他のテキスト エディターでファイルを閲覧できます。  
   
 > [!CAUTION]  
->  値を変更しない、`DeploymentMode`プロパティです。 サーバーのインストール後の手動でのプロパティ変更はサポートされていません。  
+>  値を変更しないで、`DeploymentMode`プロパティ。 サーバーのインストール後の手動でのプロパティ変更はサポートされていません。  
   
 ## <a name="about-the-deploymentmode-property"></a>DeploymentMode プロパティについて  
  `DeploymentMode` プロパティは、Analysis Services サーバー インスタンスの操作コンテキストを指定します。 このプロパティは、ダイアログ ボックス、メッセージ、およびドキュメントで "サーバー モード" と呼ばれます。 このプロパティは、Analysis Services のインストール方法に基づいてセットアップによって初期化されます。 このプロパティは内部使用のみと見なしてください。常にセットアップによって指定された値が使用されます。  
@@ -56,7 +56,7 @@ ms.locfileid: "36173820"
  [表形式モードで Analysis Services をインストールします。](install-windows/install-analysis-services.md)   
  [多次元モードおよびデータ マイニング モードでの Analysis Services のインストール](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [PowerPivot for SharePoint 2010 のインストール](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Analysis Services に接続します。](connect-to-analysis-services.md)   
+ [Analysis Services への接続します。](connect-to-analysis-services.md)   
  [テーブル モデル ソリューション&#40;SSAS 表形式&#41;](../tabular-model-solutions-ssas-tabular.md)   
  [多次元モデル ソリューション&#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [マイニング モデル&#40;Analysis Services - データ マイニング&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  

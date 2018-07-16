@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], adding
 - adding users [Master Data Services]
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9846928c838869dead6f323d9fa5116e50793ce7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 8ac2ea33acb750b030bf75b39ba420ee90eb8784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295062"
 ---
 # <a name="add-a-user-master-data-services"></a>ユーザーを追加する (マスター データ サービス)
   ユーザーを **の** [ユーザー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] の一覧に追加して、Web アプリケーションに権限を割り当てるプロセスを開始します。 一覧に含まれるユーザーが [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスするには、ユーザーの権限を 1 つまたは複数の機能領域およびモデル オブジェクトに付与する必要があります。  
@@ -42,11 +42,11 @@ ms.locfileid: "36083442"
   
 4.  必要に応じて、 **[名前の確認]** をクリックします。  
   
-5.  **[OK]** をクリックします。  
+5.  [**OK**] をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
   
--   [機能領域権限を割り当てる&#40;マスター データ サービス&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [機能領域アクセス許可を割り当てる&#40;マスター データ サービス&#41;](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
  [セキュリティ &#40;マスター データ サービス&#41;](../../2014/master-data-services/security-master-data-services.md)  

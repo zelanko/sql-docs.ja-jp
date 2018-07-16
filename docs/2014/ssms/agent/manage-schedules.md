@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.manageschedules.f1
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a838deb1a138d7553d79285c027500668bd9228f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b238d3fc794c9da2e232eb6131bb3e1b031f9bc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317474"
 ---
 # <a name="manage-schedules"></a>[スケジュールの管理]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ スケジュールのプロパティを表示および変更できます。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ スケジュールのプロパティを表示および変更できます。  
   
 ## <a name="options"></a>および  
  **[利用可能なスケジュール]**  
  このユーザーが利用可能なスケジュールの一覧を表示します。 ジョブの所有者とスケジュールの所有者は同じである必要があります。 したがって、この一覧には、このジョブの所有者によって所有されているスケジュールだけが表示されます。  
   
- **Name**  
+ **名前**  
  スケジュールの名前を表示します。  
   
  **Enabled**  
  スケジュールを有効にするには、このオプションを選択します。  
   
- **description**  
+ **[説明]**  
  ジョブを実行するスケジュールの条件を説明します。  
   
  **[スケジュール済みのジョブ]**  
@@ -45,7 +45,7 @@ ms.locfileid: "36076106"
  **新規**  
  新しいスケジュールを作成するには、このボタンをクリックします。  
   
- **Delete**  
+ **削除**  
  選択されているスケジュールを削除するには、このボタンをクリックします。  
   
  **プロパティ**  

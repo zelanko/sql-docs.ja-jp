@@ -1,5 +1,5 @@
 ---
-title: テーブルまたはデータ ソース ビュー (Analysis Services) の名前付きクエリを置換 |Microsoft ドキュメント
+title: テーブルまたはデータ ソース ビュー (Analysis Services) の名前付きクエリの置換 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replacing tables
 - data source views [Analysis Services], tables
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - partitions [Analysis Services], named queries
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17928764bbeb2b13df0763d653cf98d3933bb7d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc6b16c98f438a02309a2509e0d070f7718b0c97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295802"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>データ ソース ビュー内のテーブルまたは名前付きクエリの置換 (Analysis Services)
   データ ソース ビュー デザイナーでは、データ ソース ビュー (DSV) 内のテーブル、ビュー、または名前付きクエリを、同じデータ ソースまたは異なるデータ ソースの別のテーブルやビュー、あるいは DSV で定義されている名前付きクエリに置換できます。 テーブルを置換した場合、DSV 内のテーブルのオブジェクト ID は変更されないので、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースまたはプロジェクト内でそのテーブルを参照している他のすべてのオブジェクトは、引き続きそのテーブルを参照します。 名前や列の型の一致に基づいて、引き続き関連のあるリレーションシップは維持されます。 これに対して、テーブルを削除して追加した場合、参照とリレーションシップは失われるので、再作成する必要があります。  
@@ -63,7 +63,7 @@ ms.locfileid: "36076743"
   
     2.  テーブルまたは名前付きクエリを置換するテーブルを選択します。  
   
-5.  **[OK]** をクリックします。  
+5.  [**OK**] をクリックします。  
   
 6.  変更したデータ ソース ビューを保存します。  
   

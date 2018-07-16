@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 54ed1dcca5d1e690990953cd2c02d4ad4e1b7879
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b9e18fe47a84785d7450a481c1eb6f1173b8bcf9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292132"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>凡例アイテムのテキストの変更 (レポート ビルダーおよび SSRS)
   グラフの [値] 領域にフィールドを配置すると、このフィールドの名前を含む凡例アイテムが自動的に生成されます。 すべての凡例アイテムは、グラフ上の個々の系列に接続されています。ただし、図形グラフの場合は例外で、凡例は個々の系列ではなく個々のデータ ポイントに接続されています。  
   
- 図形グラフで、凡例アイテムのテキストを変更して個々のデータ ポイントの詳細を表示できます。 たとえば、データ ポイントの値を凡例にパーセンテージで表示する場合は、するキーワードなど、使用できる`#PERCENT`です。 .NET Framework 形式のコードをキーワードと組み合わせて追加し、数値と日付の形式を適用できます。 キーワードの詳細については、「[グラフでのデータ ポイントの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
+ 図形グラフで、凡例アイテムのテキストを変更して個々のデータ ポイントの詳細を表示できます。 たとえば、データ ポイントの値を凡例にパーセンテージで表示する場合は、するキーワードを使用できますよう`#PERCENT`します。 .NET Framework 形式のコードをキーワードと組み合わせて追加し、数値と日付の形式を適用できます。 キーワードの詳細については、「[グラフでのデータ ポイントの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
   
  ![シャープ チャート](../media/sharpchart.png "シャープ チャート")  
   

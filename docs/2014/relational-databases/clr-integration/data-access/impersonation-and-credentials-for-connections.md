@@ -1,13 +1,11 @@
 ---
-title: 権限借用と接続の資格情報 |Microsoft ドキュメント
+title: 権限借用と接続の資格情報 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - database objects [CLR integration], security
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f2cc3fc4695c9e0b2a723668f09fc1bf388dabaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 9af64be53b702dfded163a06562e4f6bdf7e5a61
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176624"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350880"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>接続の権限借用と資格情報
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR (共通言語ランタイム) 統合では、複雑な Windows 認証を使用する方が、SQL Server 認証を使用するよりもセキュリティが向上します。 Windows 認証を使用する場合には、次の点を考慮してください。  
@@ -38,7 +36,7 @@ ms.locfileid: "36176624"
   
  場合によっては、サービス アカウントで実行する代わりに、`SqlContext.WindowsIdentity` プロパティを使用して呼び出し元の権限を借用することもあります。 `WindowsIdentity` インスタンスは、呼び出し元のコードを実行するクライアントの ID を表し、クライアントで Windows 認証を使用する場合のみ入手できます。 `WindowsIdentity` インスタンスを取得すると、`Impersonate` を呼び出してスレッドのセキュリティ トークンを変更し、その後でクライアントの代わりに ADO.NET 接続を開くことができます。  
   
- SQLContext.WindowsIdentity.Impersonate を呼び出した後は、ローカル データにアクセスすることはできませんし、システム データにアクセスすることはできません。 もう一度、データにアクセスするには、WindowsImpersonationContext.Undo を呼び出す必要があります。  
+ SQLContext.WindowsIdentity.Impersonate を呼び出した後は、ローカル データにアクセスすることはできませんし、システム データにアクセスすることはできません。 ここでも、データにアクセスするには、WindowsImpersonationContext.Undo を呼び出す必要があります。  
   
  次の例では、`SqlContext.WindowsIdentity` プロパティを使用して呼び出し元の権限を借用します。  
   
@@ -76,9 +74,9 @@ catch
 ```  
   
 > [!NOTE]  
->  権限借用の動作変更については、次を参照してください。 [SQL Server 2014 におけるデータベース エンジン機能の重大な変更](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)です。  
+>  権限借用の動作の変更については、次を参照してください。 [SQL Server 2014 におけるデータベース エンジン機能の重大な変更](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)します。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ID インスタンスを取得した場合、既定では、そのインスタンスを別のコンピューターに反映できません。既定では、Windows セキュリティ インフラストラクチャによりこの操作が制限されます。 ただし、"委任" というメカニズムを使用すると、信頼関係のある複数のコンピューターに Windows ID を反映できるようになります。 TechNet の記事で委任の詳細については、"[Kerberos プロトコル遷移および制約付き委任](http://go.microsoft.com/fwlink/?LinkId=50419)"です。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ID インスタンスを取得した場合、既定では、そのインスタンスを別のコンピューターに反映できません。既定では、Windows セキュリティ インフラストラクチャによりこの操作が制限されます。 ただし、"委任" というメカニズムを使用すると、信頼関係のある複数のコンピューターに Windows ID を反映できるようになります。 TechNet 記事では、委任の詳細については、"[Kerberos プロトコル遷移および制約付き委任](http://go.microsoft.com/fwlink/?LinkId=50419)"。  
   
 ## <a name="see-also"></a>参照  
  [SqlContext オブジェクト](../../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

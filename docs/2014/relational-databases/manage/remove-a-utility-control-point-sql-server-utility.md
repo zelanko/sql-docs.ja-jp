@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c048a416-900e-4c77-8243-e0f0d8b94068
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9bc8b7b1ca0f80389b3d617f5178f587719dd143
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9620394788729b28eb040d6e5293d39e188e2763
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290928"
 ---
 # <a name="remove-a-utility-control-point-sql-server-utility"></a>ユーティリティ コントロール ポイントの削除 (SQL Server ユーティリティ)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスから [!INCLUDE[tsql](../../includes/tsql-md.md)]ユーティリティ コントロール ポイント (UCP) を削除する方法について説明します。  
@@ -50,7 +50,7 @@ ms.locfileid: "36165854"
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
- 持つユーザーがこのプロシージャを実行する必要があります`sysadmin`アクセス許可と権限は、UCP を作成するために必要な権限と同じです。  
+ ユーザーがこのプロシージャを実行する必要があります`sysadmin`アクセス許可と権限は、UCP を作成するために必要な権限と同じです。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

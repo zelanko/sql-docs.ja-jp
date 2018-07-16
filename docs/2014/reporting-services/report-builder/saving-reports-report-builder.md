@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5f14bd16fa44247508ef04bf68d2d02c0503394
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c34c0764e0dd8b8eb64c9bf776a8ed071310fae3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290228"
 ---
 # <a name="saving-reports-report-builder"></a>レポートの保存 (レポート ビルダー)
   レポート ビルダーでは、自分が書き込み権限を持っているレポート サーバー、SharePoint ライブラリ、またはファイル共有、あるいは自分のコンピューターにレポートを保存できます。 レポートは、レポートを開いた場所に保存することも、別の場所に保存することもできます。また、新しい名前を付けてそれらの場所に保存することもできます。 既定では、レポートは、レポートを開いた場所に再保存されます。 レポートを保存する場合、実際に保存されるのは、レポート レイアウトを記述したレポート定義です。 データは保存されません。 レポートを実行するたびにレポート データは更新され、ほとんどの場合、前回の実行時とは異なります。  
@@ -56,7 +56,7 @@ ms.locfileid: "36084263"
 
   
 ##  <a name="ExportingAndSavingReports"></a> レポートのエクスポートと保存  
- アーカイブするレポートの数が少ない場合、レポートをエクスポートしてファイルとして保存することを検討してください。 レポートをアプリケーション (PDF や Excel など) にエクスポートしたら、そのレポートをファイルとして保存し、ネットワーク上の保護された共有ディレクトリに配置できます。 また、形式にかかわらず、レポート サーバー データベースにレポートのすべてのコピーを保存する場合、リソース アイテムとして保存した PDF または Excel ファイルをアップロードできます。 レポートのエクスポートの詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41; ](export-reports-report-builder-and-ssrs.md)と[ファイルまたはレポートをアップロード&#40;レポート マネージャー&#41;](../reports/upload-a-file-or-report-report-manager.md)です。  
+ アーカイブするレポートの数が少ない場合、レポートをエクスポートしてファイルとして保存することを検討してください。 レポートをアプリケーション (PDF や Excel など) にエクスポートしたら、そのレポートをファイルとして保存し、ネットワーク上の保護された共有ディレクトリに配置できます。 また、形式にかかわらず、レポート サーバー データベースにレポートのすべてのコピーを保存する場合、リソース アイテムとして保存した PDF または Excel ファイルをアップロードできます。 レポートのエクスポートの詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41; ](export-reports-report-builder-and-ssrs.md)と[ファイルまたはレポートをアップロード&#40;レポート マネージャー&#41;](../reports/upload-a-file-or-report-report-manager.md)します。  
   
 
   
@@ -74,7 +74,7 @@ ms.locfileid: "36084263"
   
 -   [レポート サーバーにレポートを保存&#40;レポート ビルダー&#41;](save-reports-to-a-report-server-report-builder.md)  
   
--   [レポートを SharePoint ライブラリに保存&#40;レポート ビルダー&#41;](save-a-report-to-a-sharepoint-library-report-builder.md)  
+-   [SharePoint ライブラリにレポートを保存&#40;レポート ビルダー&#41;](save-a-report-to-a-sharepoint-library-report-builder.md)  
   
 -   [お使いのコンピューターにレポートを保存&#40;レポート ビルダー&#41;](../save-reports-to-your-computer-report-builder.md)  
   

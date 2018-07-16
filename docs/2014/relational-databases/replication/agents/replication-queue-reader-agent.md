@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], Queue Reader Agent
 - command prompt [SQL Server replication]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Queue Reader Agent, executables
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 84fd65a92213b18dfa7bf8fb85d6ca6dbe66322c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e4d77806809ce3b7306d9f7560b126ff32980ca2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309552"
 ---
 # <a name="replication-queue-reader-agent"></a>Replication Queue Reader Agent
   レプリケーション キュー リーダー エージェントは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のキューまたは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] のメッセージ キューに格納されたメッセージを読み取り、これらのメッセージをパブリッシャーに適用する実行可能ファイルです。 キュー リーダー エージェントは、スナップショット、およびキュー更新を許可するトランザクション パブリケーションで使用されます。  

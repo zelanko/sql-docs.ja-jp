@@ -1,5 +1,5 @@
 ---
-title: Assemblies 要素 (ASSL) |Microsoft ドキュメント
+title: Assemblies 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Assemblies element
 ms.assetid: 8c9be991-0717-4fcf-97d9-13df0f27da05
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 777a1125d36f0d874ef85645c688ececffc2c869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2990946d1e124027cf653db3148c55d4c828a3e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314812"
 ---
 # <a name="assemblies-element-assl"></a>Assemblies 要素 (ASSL)
-  コレクションを格納[アセンブリ](../objects/assembly-element-assl.md)要素に関連付けられた、[サーバー](../objects/server-element-assl.md)または[データベース](../objects/database-element-assl.md)要素。  
+  コレクションを格納[アセンブリ](../objects/assembly-element-assl.md)要素に関連付けられた、 [Server](../objects/server-element-assl.md)または[データベース](../objects/database-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

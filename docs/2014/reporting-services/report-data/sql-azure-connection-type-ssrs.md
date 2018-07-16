@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
 caps.latest.revision: 16
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8a33d72f5f2ab562bb06a2442a4aa0de09bfba08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5b5a7195afbe40d6eeae2c6c68a6c935bf7eece7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313304"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure の接続の種類 (SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ホスト型クラウド ベースのリレーショナル データベースの中で構築された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テクノロジです。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] からのデータをレポートに含めるには、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の種類のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データ拡張機能に基づいています。 このデータ ソースの種類を使用して、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]からのデータに接続し、そのデータを取得します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上に構築されたクラウド ベースでホストされているリレーショナル データベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テクノロジ。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] からのデータをレポートに含めるには、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の種類のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データ拡張機能に基づいています。 このデータ ソースの種類を使用して、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]からのデータに接続し、そのデータを取得します。  
   
  このデータ拡張機能は、接続文字列とは個別に管理される、複数の値を持つパラメーター、サーバー集計、および資格情報をサポートしています。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "36072738"
   
  詳細については、MSDN の「 [Windows Azure SQL データベースの概要](http://go.microsoft.com/fwlink/?LinkId=206770)」を参照してください。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[を追加して、データ接続またはデータ ソースを確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)です。  
+ このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)します。  
   
 ##  <a name="Connection"></a> 接続文字列  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に接続する場合、クラウド内のデータベース オブジェクトに接続します。 オンサイトのデータベースと同様に、ホストされているデータベースには、複数のテーブル、ビュー、およびストアド プロシージャを含むスキーマが複数存在している場合があります。 クエリ デザイナーで、使用するデータベース オブジェクトを指定します。 接続文字列でデータベースを指定しない場合は、管理者によって割り当てられた既定のデータベースに接続されます。  
@@ -59,7 +59,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 -   資格情報を必要としない。 このオプションを使用するには、レポート サーバーで自動実行アカウントを構成しておく必要があります。 詳細については、msdn.microsoft.com で [Reporting Services に関するドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)の「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
- 詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services に接続文字列が](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)または[レポート ビルダーでの資格情報を指定](../specify-credentials-in-report-builder.md)です。  
+ 詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)または[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)します。  
   
  
   

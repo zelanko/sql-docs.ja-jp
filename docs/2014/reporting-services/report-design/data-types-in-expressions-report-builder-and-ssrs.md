@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bffff032f51c1a349db6ab384c8f6b49e66ed206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b9dfb573605f8e859f8db4b991e2eb19a73d4606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319952"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>式で使用されるデータ型 (レポート ビルダーおよび SSRS)
   データを効率よく格納し、処理できるように、さまざまなデータの種類を表すデータ型が用意されています。 代表的なデータ型としては、テキスト (文字列) 型、数値型 (小数点以下桁数を含む)、数値型 (小数点以下桁数を含まない)、日付/時刻型、イメージ型などがあります。 レポート内の値は、レポート定義言語 (RDL) データ型である必要があります。 値は、レポートに表示する場合に目的に応じて書式設定できます。 たとえば、通貨を表すフィールドの場合、データを浮動小数点数としてレポート定義に格納しておき、実際には、指定した書式設定プロパティに従ってさまざまな形式で表示することができます。  
@@ -60,7 +60,7 @@ ms.locfileid: "36072945"
 -   データ ソースから取得した値を別のデータ型に変換する。  
   
 ## <a name="determining-the-data-type-of-report-data"></a>レポート データのデータ型を調べる  
- レポート アイテムのデータ型を調べるには、そのアイテムのデータ型を返す式を作成します。 たとえば、 `MyField`というフィールドのデータ型を確認するには、テーブルのセルに `=Fields!MyField.Value.GetType().ToString()`という式を追加します。 結果を表す CLR データ型を表示する`MyField`など、`System.String`または`System.DateTime`です。  
+ レポート アイテムのデータ型を調べるには、そのアイテムのデータ型を返す式を作成します。 たとえば、 `MyField`というフィールドのデータ型を確認するには、テーブルのセルに `=Fields!MyField.Value.GetType().ToString()`という式を追加します。 結果には、CLR データ型を表すために使用が表示されます。 `MyField`、たとえば、`System.String`または`System.DateTime`します。  
   
 ## <a name="converting-dataset-fields-to-a-different-data-type"></a>データセット フィールドを異なるデータ型に変換する  
  レポートで使用するデータセット フィールドを事前に変換することもできます。 既存のデータセット フィールドを変換するには、次のような方法があります。  
@@ -108,7 +108,7 @@ ms.locfileid: "36072945"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- この例では、日付 (July 1, 2008) に続けて、小数点以下 7 桁の時刻値 (6:05:07.9999999 A.M.) と UTC タイム ゾーン オフセット (+8 時間、0 分) が続きます。 次の例については、この値が配置されている、`String`というフィールド`MyDateTime.Value`です。  
+ この例では、日付 (July 1, 2008) に続けて、小数点以下 7 桁の時刻値 (6:05:07.9999999 A.M.) と UTC タイム ゾーン オフセット (+8 時間、0 分) が続きます。 次の例については、この値が配置されている、`String`という名前のフィールド`MyDateTime.Value`します。  
   
  次のいずれかの方法を使用することで、このデータを 1 つまたは複数の CLR 値に変換できます。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36072945"
   
          `MyDateTime.Value` の文字列に UTC オフセットが含まれている場合、まず、 `DateTime.Parse` 関数によって UTC オフセットの調整が行われます (ここでは、午前 7 時から [`+08:00`] を差し引いて、前日の午後 11 時という UTC 時刻が 求められます)。 次に、 `DateTime.Parse` 関数は、レポート サーバーのローカル UTC オフセットを適用し、必要に応じて夏時間のために再度時刻調整を行います。 たとえば、ワシントン州レドモンドの場合、夏時間調整後のローカル時刻オフセットは `[-07:00]`(午後 11 時の 7 時間前) になります。 したがって、`2007-07-06 04:07:07 PM` (2007 年 7 月 6 日午後 4 時 07 分) という `DateTime` 値が得られます。  
   
- 文字列の変換の詳細については`DateTime`データ型を参照してください[解析の日付と時刻文字列](http://go.microsoft.com/fwlink/?LinkId=89703)、 [、特定のカルチャの書式の日付と時刻](http://go.microsoft.com/fwlink/?LinkId=89704)、および[を選択します。DateTime、DateTimeOffset、および TimeZoneInfo 間](http://go.microsoft.com/fwlink/?linkid=110652)msdn です。  
+ 文字列の変換の詳細については`DateTime`、データ型を参照してください[解析の日付と時刻文字列](http://go.microsoft.com/fwlink/?LinkId=89703)、 [、特定のカルチャの書式設定の日付と時刻](http://go.microsoft.com/fwlink/?LinkId=89704)、および[を選択します。DateTime、DateTimeOffset、TimeZoneInfo 間](http://go.microsoft.com/fwlink/?linkid=110652)msdn です。  
   
 -   レポート データセットに、文字列の一部分を抽出する式を使った新しい計算フィールドを追加します。 詳細については、「[レポート データ ペインでのフィールドの追加、編集、更新 &#40;レポート ビルダーおよび SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)」を参照してください。  
   

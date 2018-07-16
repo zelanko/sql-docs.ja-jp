@@ -1,5 +1,5 @@
 ---
-title: EventString 要素 (DTA) |Microsoft ドキュメント
+title: EventString 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - EventString element
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6155627f60694cf1a21d39893e40b106b9df0886
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: db55d1d2451ab8febf984deb9e5bcb6d4718353f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291698"
 ---
 # <a name="eventstring-element-dta"></a>EventString 要素 (DTA)
   [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ワークロードを XML 入力ファイルで直接指定します。  
@@ -49,9 +49,9 @@ ms.locfileid: "36073151"
   
 |特性|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|`string`、長さが制限されません。|  
+|**データ型と長さ**|`string`、長さは制限されます。|  
 |**既定値**|[なし] :|  
-|**個数**|他の種類のワークロードが指定されていない場合は、1 回の出現が必要です。 指定する必要があります、 `EventString`、 `File`、または`Database`の子要素、`Workload`親は 1 種類だけを使用することができます。 たとえば、ワークロードを指定する場合、`EventString`要素できませんも指定するワークロードを`File`同じ XML 入力ファイル内の要素。|  
+|**個数**|他の種類のワークロードが指定されていない場合は、1 回の出現が必要です。 指定する必要があります、 `EventString`、 `File`、または`Database`の子要素、`Workload`親が 1 つだけの型を使用できます。 たとえば、ワークロードを指定する場合、`EventString`要素を使用してワークロードは指定できません、`File`同じ XML 入力ファイル内の要素。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

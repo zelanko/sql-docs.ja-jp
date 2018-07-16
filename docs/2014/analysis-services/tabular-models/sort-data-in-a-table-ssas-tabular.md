@@ -1,5 +1,5 @@
 ---
-title: テーブル (SSAS テーブル) 内のデータを並べ替える |Microsoft ドキュメント
+title: テーブル (SSAS テーブル) 内のデータを並べ替える |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5fa6ad56-bf68-4aac-a226-52556173b7e2
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 156f75856c371914c41519a1ce577c02e4773679
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0038e15b9fceef897e117a3f2bb9d2f895cf234e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287948"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>テーブル内のデータの並べ替え (SSAS テーブル)
   データは、1 つ以上の列のテキスト (A から Z、または Z から A) または数値 (小さい数値から大きい数値、または大きい数値から小さい数値) の順で並べ替えることができます。  

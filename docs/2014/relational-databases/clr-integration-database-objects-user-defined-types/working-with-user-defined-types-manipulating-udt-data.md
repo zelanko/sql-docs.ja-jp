@@ -1,13 +1,11 @@
 ---
-title: UDT データの操作 |Microsoft ドキュメント
+title: UDT データを操作する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -31,21 +29,21 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f618cb1faa8c1b5682e069bd7568ad9d856cdc52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b9d8d594b60b5e9ed9716d8aa3c0eed322db98fd
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175359"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349894"
 ---
 # <a name="manipulating-udt-data"></a>UDT データの操作
   [!INCLUDE[tsql](../../includes/tsql-md.md)] には、UDT (ユーザー定義型) 列のデータを変更する際に特別な INSERT、UPDATE、または DELETE ステートメント構文は用意されていません。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の CAST 関数または CONVERT 関数を使用して、ネイティブ データ型を UDT 型にキャストします。  
   
 ## <a name="inserting-data-in-a-udt-column"></a>UDT 列へのデータの挿入  
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントにサンプル データの 3 つの行を挿入、**ポイント**テーブル。 **ポイント**データ型は X と Y の整数値、UDT のプロパティとして公開されます。 CAST または CONVERT のいずれかの関数をコンマ区切りのキャストを使用する必要があります X と Y 値を**ポイント**型です。 最初の 2 つのステートメントでは、CONVERT 関数を使用して、文字列値を変換、**ポイント**型、および 3 番目のステートメントは、CAST 関数を使用します。  
+ 次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントにサンプル データの 3 つの行を挿入、**ポイント**テーブル。 **ポイント**データ型は X と Y の整数値、UDT のプロパティとして公開されます。 CAST または CONVERT のいずれかの関数を使用して、コンマ区切りをキャストする必要があります X と Y 値を**ポイント**型。 最初の 2 つのステートメントでは、CONVERT 関数を使用して、文字列値を変換、**ポイント**型、および 3 番目のステートメントは、CAST 関数を使用します。  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -60,7 +58,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- 読み取り可能な形式で表示される出力を表示するには、呼び出し、`ToString`のメソッド、**ポイント**UDT で、値を文字列形式に変換します。  
+ 読みやすい形式で表示される出力を表示するを呼び出して、`ToString`のメソッド、**ポイント**UDT では、値を文字列表現に変換します。  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -87,7 +85,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- **ポイント**UDT の X 座標と Y 座標、プロパティとして公開することができますしを個別に選択します。 次の、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、X 座標と Y 座標を個別に選択します。  
+ **ポイント**UDT が個別に選択し、プロパティとして、X と Y 座標を公開します。 次の、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、X 座標と Y 座標を個別に選択します。  
   
 ```  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -133,8 +131,8 @@ SELECT @PointValue.ToString() AS PointValue;
   
  変数の代入に SELECT ステートメントを使用した場合と SET ステートメントを使用した場合には異なる点が 1 つあります。SELECT ステートメントでは 1 つのステートメントで複数の変数に代入できますが、SET 構文では、1 つ変数に代入するごとに 1 つの SET ステートメントが必要になります。  
   
-## <a name="comparing-data"></a>データの比較  
- クラスを定義する際に、`IsByteOrdered` プロパティに `true` を設定すると、比較演算子を使用して、UDT の値を比較できます。 詳細については、次を参照してください。[ユーザー定義型を作成する](creating-user-defined-types.md)です。  
+## <a name="comparing-data"></a>データを比較します。  
+ クラスを定義する際に、`IsByteOrdered` プロパティに `true` を設定すると、比較演算子を使用して、UDT の値を比較できます。 詳細については、次を参照してください。[ユーザー定義型を作成する](creating-user-defined-types.md)します。  
   
 ```  
 SELECT ID, PointValue.ToString() AS Points   
@@ -161,7 +159,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>UDT メソッドの呼び出し  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] でも、UDT で定義されているメソッドを呼び出すことができます。 **ポイント**クラスには、3 つのメソッドが含まれています。 `Distance`、 `DistanceFrom`、および`DistanceFromXY`です。 コード リストは、これら 3 つのメソッドを定義する、次を参照してください。 [Coding User-Defined 型](creating-user-defined-types-coding.md)です。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] でも、UDT で定義されているメソッドを呼び出すことができます。 **ポイント**クラスには、3 つのメソッドが含まれています。 `Distance`、 `DistanceFrom`、および`DistanceFromXY`します。 これら 3 つのメソッドを定義するコード リストを参照してください。 [Coding User-Defined 型](creating-user-defined-types-coding.md)します。  
   
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、`PointValue.Distance` メソッドを呼び出します。  
   

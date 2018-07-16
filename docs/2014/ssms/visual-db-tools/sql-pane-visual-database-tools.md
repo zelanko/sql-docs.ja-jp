@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], SQL pane
 - View Designer, SQL pane
 - SQL pane [Visual Database Tools]
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3d6261a52d4ff41923e87402327b98ff60622af7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1894d321f6dc8321f4c2b53369d7140f500ce003
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310872"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL ペイン (Visual Database Tools)
   SQL ペインでは、任意の SQL ステートメントを作成できます。抽出条件ペインおよびダイアグラム ペインでも SQL ステートメントを作成できますが、どちらの場合も SQL ステートメントは SQL ペインに作成されます。 クエリを作成すると、SQL ペインは自動的に更新され、読みやすいように書式が変更されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "36077445"
 ## <a name="see-also"></a>参照  
  [クエリを作成する&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [クエリを実行して&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [クエリおよびビューの操作方法に関するトピックをデザイン&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [ダイアグラム ペイン&#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
  [抽出条件ペイン&#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [結果ペイン (Visual Database Tools)](results-pane-visual-database-tools.md)  

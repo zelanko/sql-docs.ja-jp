@@ -1,5 +1,5 @@
 ---
-title: 実行アカウント (SSRS ネイティブ モード) |Microsoft ドキュメント
+title: 実行アカウント (SSRS ネイティブ モード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.executionaccount.F1
 ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 578316ae59b1c8abfbc77a74b48edad4b907a2b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e18c8c37eba48fa2732a07f4906137cdd299fdd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312812"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>実行アカウント (SSRS ネイティブ モード)
   このページを使用すると、自動処理に使用するアカウントを構成できます。 このアカウントは、他に使用できる資格情報のソースがないという特殊な状況で使用されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36070880"
 > [!NOTE]  
 >  [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] を使用しているときは、レポートで外部画像を参照していて、その画像ファイルにアクセスする権限が必要な場合のみ、このアカウントを構成する必要があります。 SQL Server Express は、リモート サーバーへのデータ ソース接続をサポートしていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2012 の各エディションがサポートする機能](http://go.microsoft.com/fwlink/?linkid=232473)」を参照してください。  
   
- このページを開くを起動、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager と選択**実行アカウント**ナビゲーション ウィンドウで、します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+ このページを開くには、開始、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager と選択**実行アカウント**ナビゲーション ウィンドウでします。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
 ## <a name="options"></a>および  
  **[実行アカウントの指定]**  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f94a5c1ad255b9caec8e004318b45f8be21afae0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8969c9caaa0e92aefeee4a3024c9044b65861870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294162"
 ---
 # <a name="security-considerations-for-extensions"></a>拡張機能のセキュリティに関する考慮事項
   共通言語ランタイム (CLR) をターゲットとするすべてのアプリケーションは、CLR セキュリティ システムと対話する必要があります。 このようなアプリケーションを実行すると、CLR によってアプリケーションが自動的に評価され、権限のセットが付与されます。 アプリケーションに付与された権限に応じて、実行が継続されるかセキュリティ例外が生成されます。 特定のレポート サーバーのセキュリティ ポリシー構成ファイルのローカル セキュリティ設定とポリシーによって、アセンブリが受け取るコード権限が定義されます。  

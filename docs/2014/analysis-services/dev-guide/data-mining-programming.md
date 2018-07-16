@@ -1,5 +1,5 @@
 ---
-title: データ マイニングのプログラミング |Microsoft ドキュメント
+title: データ マイニングのプログラミング |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 1ad8f0d8e066fde6f199af26c977b5a9ba3d8917
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: fce4bd16cdc64aeabb2367d757b0b68a5cab6144
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297372"
 ---
 # <a name="data-mining-programming"></a>データ マイニングのプログラミング
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の組み込みのツールやビューアーが要件を満たしていない場合は、独自の拡張機能をコーディングすることによって [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の機能を拡張できます。 この方法では、次の 2 つのオプションがあります。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の組み込みのツールやビューアーが要件を満たしていない場合は、独自の拡張機能をコーディングすることによって [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の機能を拡張できます。 この方法では、2 つのオプションがあります。  
   
 -   **XMLA**  
   
@@ -66,11 +66,11 @@ ms.locfileid: "36313290"
  [分析管理オブジェクトを使用した開発&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  AMO プログラミング ライブラリについて説明します。  
   
- [Services スクリプト言語の分析の使用による開発&#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Services スクリプト言語の分析を使用した開発&#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  XML for Analysis (XMLA) とその拡張機能について説明します。  
   
 ## <a name="see-also"></a>参照  
- [開発者ガイド 』 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [データ マイニング拡張機能&#40;DMX&#41;参照](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

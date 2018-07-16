@@ -1,5 +1,5 @@
 ---
-title: 優先順位制約で式を使用して |Microsoft ドキュメント
+title: 優先順位制約で式を使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], adding expressions
 - expressions [Integration Services], adding
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
 caps.latest.revision: 44
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9752ccb8a925f144abc256db01a6eab683e7d6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31e3e002996d523aa225e0d0bb607d1772d8b0e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273068"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>優先順位制約で式を使用する
   この手順では、**[優先順位制約エディター]** ダイアログ ボックスを使用して、優先順位制約に式を追加する方法について説明します。 優先順位制約に式を追加する場合、タスクまたはコンテナーのいずれかである実行可能ファイルを 2 つ以上含め、それらが優先順位制約によって連結される必要があります。  

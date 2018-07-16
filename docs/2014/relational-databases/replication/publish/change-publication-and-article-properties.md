@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying article properties
 - modifying publication properties
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], properties
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bfde181b8376c5f19f7f13ac37f85a44e6be5396
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c89fc300fded846216250928852d4ac3721fa950
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296602"
 ---
 # <a name="change-publication-and-article-properties"></a>パブリケーションおよびアーティクルのプロパティの変更
   パブリケーションが作成された後は、ほとんどのパブリケーションおよびアーティクルのプロパティを変更できますが、スナップショットの再生成およびサブスクリプションの再初期化、またはそのいずれかが必要になる場合もあります。 このトピックでは、変更された場合に、これらの操作のいずれかまたは両方を必要とするすべてのプロパティについて説明します。  
@@ -75,9 +75,9 @@ ms.locfileid: "36073709"
 |結合フィルターまたは論理レコードを追加します。|**sp_addmergefilter**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |結合フィルターまたは論理レコードを削除します。|**sp_dropmergefilter**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |結合フィルターまたは論理レコードを変更します。|**sp_changemergefilter**|**@property**<br /><br /> **@value**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
-|パラメーター化されたフィルターの使用を無効にします (パラメーター化されたフィルターを有効にする場合は、特別な操作は不要です)。|**sp_changemergepublication**|**false** の値を **false**に設定。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
+|パラメーター化されたフィルターの使用を無効にします (パラメーター化されたフィルターを有効にする場合は、特別な操作は不要です)。|**sp_changemergepublication**| **false** の値を **false**に設定。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |事前計算済みパーティションの使用を有効または無効にします。|**sp_changemergepublication**|**use_partition_groups**|新しいスナップショット。|  
-|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] のパーティションの最適化を有効または無効にします。|**sp_changemergepublication**|**keep_partition_changes**|サブスクリプションを再初期化します。|  
+| [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] のパーティションの最適化を有効または無効にします。|**sp_changemergepublication**|**keep_partition_changes**|サブスクリプションを再初期化します。|  
 |サブスクライバーのパーティションの検証を有効または無効にします。|**sp_changemergepublication**|**validate_subscriber_info**|サブスクリプションを再初期化します。|  
 |パブリケーションの互換性レベルを 80sp3 以下に変更します。|**sp_changemergepublication**|**publication_compatibility_level**|新しいスナップショット。|  
   
@@ -91,9 +91,9 @@ ms.locfileid: "36073709"
 |それまでにパブリッシュされていなかった列フィルターを含めます。|**sp_mergearticlecolumn**|**@column**<br /><br /> **@operation**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |行フィルターを追加、削除、または変更します。|**sp_changemergearticle**|**subset_filterclause**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。<br /><br /> パラメーター化フィルターを追加、削除、変更する場合は、再初期化の際、サブスクライバーで保留中の変更をパブリッシャーにアップロードできません。 保留中の変更をアップロードしたい場合は、フィルターを変更する前にすべてのサブスクリプションを同期してください。<br /><br /> アーティクルがどの結合フィルターにも含まれていない場合は、そのアーティクルを削除し、別の行フィルターと共に追加することができます。この場合、サブスクリプション全体を再初期化する必要はありません。 アーティクルの追加と削除の詳細については、「[既存のパブリケーションでのアーティクルの追加および削除](add-articles-to-and-drop-articles-from-existing-publications.md)」を参照してください。|  
 |スキーマ オプションを変更します。|**sp_changemergearticle**|**schema_option**|新しいスナップショット。|  
-|追跡を列レベルから行レベルに変更します (行レベルの追跡から列レベルの追跡に変更する場合は、特別な操作は不要です)。|**sp_changemergearticle**|**false** の値を **false**に設定。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
+|追跡を列レベルから行レベルに変更します (行レベルの追跡から列レベルの追跡に変更する場合は、特別な操作は不要です)。|**sp_changemergearticle**| **false** の値を **false**に設定。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |サブスクライバーで作成されたステートメントをパブリッシャーで適用する前に権限を確認するかどうかについて変更を行います。|**sp_changemergearticle**|**check_permissions**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
-|ダウンロード専用サブスクリプションを有効または無効にします (その他のアップロード オプションへの変更、またはその他のアップロード オプションからの変更を行う場合は、特別な操作は不要です)。|**sp_changemergearticle**|**2** の値を **2**に設定、または別の値に変更。|サブスクリプションを再初期化します。|  
+|ダウンロード専用サブスクリプションを有効または無効にします (その他のアップロード オプションへの変更、またはその他のアップロード オプションからの変更を行う場合は、特別な操作は不要です)。|**sp_changemergearticle**| **2** の値を **2**に設定、または別の値に変更。|サブスクリプションを再初期化します。|  
 |レプリケーション先のテーブルの所有者を変更します。|**sp_changemergearticle**|**destination_owner**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
   
 ## <a name="see-also"></a>参照  

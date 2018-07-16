@@ -1,5 +1,5 @@
 ---
-title: トレーニング データ (データ マイニング ウィザード) を指定する |Microsoft ドキュメント
+title: トレーニング データ (データ マイニング ウィザード) の指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytrainingdata.f1
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6c6239831cc1e53ba1925b022d310f5cef907e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f32fe8718acdfbb16e549154ff030ca493f2768c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291428"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>[トレーニング データの指定] (データ マイニング ウィザード)
   **[トレーニング データの指定]** ページを使用すると、マイニング構造に含める列を指定できます。 構造に含める列をすべてのモデルで使用するとは限らない場合でも、それらの列を選択できます。 たとえば、マイニング モデルから列にドリルスルーする場合は、それらの列をモデルには含めずに構造に含めることができます。  
@@ -62,7 +62,7 @@ ms.locfileid: "36173787"
   
  **メモ** : この列を使用できるのは、マイニング モデルをマイニング構造と共に作成する場合のみです。  
   
- **提案**  
+ **お勧めします**  
  クリックすると、 **[関連列の提示]** ダイアログ ボックスが開きます。ここで、サンプル データに基づいて分析を実行し、選択した **[予測可能]** 列に対してエントロピに基づく最大のリレーションシップを持つ入力列を識別します。 この分析は、OLAP ソースに基づく入れ子になったテーブル列またはマイニング構造にも適用されます。  
   
  **メモ** : この列を使用できるのは、マイニング モデルをマイニング構造と共に作成する場合のみです。  
@@ -71,6 +71,6 @@ ms.locfileid: "36173787"
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [関連列の提示&#40;データ マイニング ウィザード&#41;](suggest-related-columns-data-mining-wizard.md)   
  [テーブル型を指定&#40;データ マイニング ウィザード&#41;](specify-table-types-data-mining-wizard.md)   
- [列のコンテンツおよびデータ型を指定して&#40;データ マイニング ウィザード&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [列のコンテンツおよびデータ型の指定&#40;データ マイニング ウィザード&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: マスターと一致するデータベースおよび model データベースの照合順序のユーザー定義データベースの設定 |Microsoft ドキュメント
+title: マスターのものと一致し、model データベースの照合順序のユーザー定義データベースの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b437463c35face45918e567cbf42d31f63161cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c6cbe79e2af21444e39fb7da7546122cd273ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314582"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>ユーザー定義データベースの照合順序が master データベースおよび model データベースの照合順序と一致するように設定
   このルールでは、ユーザー定義データベースの定義に使用されたデータベース照合順序と master または model の照合順序が一致しているかどうかを確認します。  
@@ -33,7 +33,7 @@ ms.locfileid: "36070531"
   
 -   データをユーザー データベースからエクスポートし、照合順序が master データベースおよび model データベースと同じ新しいテーブルにインポートします。  
   
--   ユーザー データベースの照合順序と一致する照合順序を使用するようにシステム データベースを再構築します。 システム データベースを再構築する方法の詳細については、次を参照してください。[システム データベースの再構築](../relational-databases/databases/system-databases.md)です。  
+-   ユーザー データベースの照合順序と一致する照合順序を使用するようにシステム データベースを再構築します。 システム データベースを再構築する方法の詳細については、次を参照してください。[システム データベースの再構築](../relational-databases/databases/system-databases.md)します。  
   
 -   ユーザー テーブルを tempdb 内のテーブルに結合するストアド プロシージャを、ユーザー データベースの照合順序を使用して tempdb にテーブルを作成するように変更します。 これを行うには、次の例に示すように、一時テーブルの列定義に `COLLATE database_default` 句を追加します。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36070531"
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Microsoft サポート技術情報の記事 325335](http://go.microsoft.com/fwlink/?linkid=117751)  
+ [マイクロソフト サポート技術情報の記事 325335](http://go.microsoft.com/fwlink/?linkid=117751)  
   
  [方法: コマンド プロンプトから SQL Server 2008 のインストール](http://go.microsoft.com/fwlink/?LinkId=81585)  
   

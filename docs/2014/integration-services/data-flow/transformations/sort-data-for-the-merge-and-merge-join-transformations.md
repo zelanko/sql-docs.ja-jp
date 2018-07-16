@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 375f268eecba7c519941f4743d7396346a863f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 21b60f8b5007ae574ab48bdd46e2e8f430b299cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316062"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>マージ変換およびマージ結合変換用にデータを並べ替える
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]のマージ変換およびマージ結合変換では、入力データが並べ替えられている必要があります。 入力データは物理的に並べ替える必要があります。さらに、変換元の出力および出力列、または上流の変換の出力および出力列に対して、並べ替えオプションを設定する必要があります。 並べ替えオプションでデータの並べ替えを設定していても、実際にデータの並べ替えが行われない場合、マージ操作やマージ結合操作で予測できない結果が発生します。  
@@ -52,14 +52,14 @@ ms.locfileid: "36176218"
 ## <a name="setting-sort-options-on-the-data"></a>データに対する並べ替えオプションの設定  
  マージ変換およびマージ結合変換にデータを提供する変換元または上流の変換に対して、設定する必要のある重要な並べ替えプロパティが 2 つあります。  
   
--   データが並べ替えられているかどうかを示す、出力の `IsSorted` プロパティ。 このプロパティに設定する必要があります`True`です。  
+-   データが並べ替えられているかどうかを示す、出力の `IsSorted` プロパティ。 このプロパティに設定する必要があります`True`します。  
   
     > [!IMPORTANT]  
-    >  値を設定、`IsSorted`プロパティを`True`データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。  
+    >  値を設定、`IsSorted`プロパティを`True`もデータは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。  
   
--   `SortKeyPosition`出力列の列が並べ替えられるかどうか、列の並べ替え順序、および複数の列が並べ替えられたシーケンスを示すプロパティです。 このプロパティは、並べ替えられるデータの各列に対して設定する必要があります。  
+-   `SortKeyPosition`列を並べ替えるかどうか、列の並べ替え順序、および複数の列が並べ替えられる順序を示す出力列のプロパティ。 このプロパティは、並べ替えられるデータの各列に対して設定する必要があります。  
   
- 並べ替え変換を使用してデータを並べ替える場合、並べ替え変換によって、これらの両方のプロパティが、マージ変換またはマージ結合変換の必要に応じて設定されます。 並べ替え変換の設定は、`IsSorted`プロパティにその出力の`True`、設定と、`SortKeyPosition`その出力列のプロパティです。  
+ 並べ替え変換を使用してデータを並べ替える場合、並べ替え変換によって、これらの両方のプロパティが、マージ変換またはマージ結合変換の必要に応じて設定されます。 並べ替え変換の設定は、`IsSorted`その出力のプロパティ`True`、設定と、`SortKeyPosition`その出力列のプロパティ。  
   
  ただし、データの並べ替えに並べ替え変換を使用しない場合は、変換元または上流の変換でこれらの並べ替えプロパティを手動で設定する必要があります。 変換元または上流の変換で並べ替えプロパティを手動で設定するには、次の手順を実行します。  
   
@@ -75,14 +75,14 @@ ms.locfileid: "36176218"
   
 5.  **[入力プロパティと出力プロパティ]** タブをクリックします。  
   
-6.  をクリックして**\<コンポーネント名 > 出力**、設定と、`IsSorted`プロパティを`True`です。  
+6.  クリックして**\<コンポーネント名 > 出力**、設定、`IsSorted`プロパティを`True`します。  
   
     > [!NOTE]  
-    >  手動で設定する場合、`IsSorted`プロパティへの出力の`True`とデータが並べ替えられていないがない可能性がありますデータまたは不良データの比較、ダウン ストリーム マージ変換またはマージ結合変換で、パッケージを実行するときにします。  
+    >  手動で設定した場合、`IsSorted`プロパティへの出力の`True`データが並べ替えられていないとがありますに欠落データまたは下流の結合またはマージ結合変換の変換で不良データの比較、パッケージを実行するときにします。  
   
 7.  **[出力列]** を展開します。  
   
-8.  クリックすることを示す列が並べ替えられ、設定、`SortKeyPosition`プロパティ 0 以外の整数値を次のガイドライン。  
+8.  指定する列が並べ替えられ、設定をクリックしてその`SortKeyPosition`プロパティを次のガイドラインに従って、0 以外の整数値に。  
   
     -   整数値は、1 から始まって 1 ずつ増加する連続した数字を表す必要があります。  
   
@@ -96,17 +96,17 @@ ms.locfileid: "36176218"
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
-     このステートメントの設定、`SortKeyPosition`次のように各列のプロパティ。  
+     このステートメントでは、設定、`SortKeyPosition`次のように各列のプロパティ。  
   
     -   ColumnA の `SortKeyPosition` プロパティを 1 に設定します。 これは、ColumnA が最初に並べ替えられる列で、並べ替えが昇順で行われることを示します。  
   
     -   ColumnB の `SortKeyPosition` プロパティを -2 に設定します。 これは、ColumnB が 2 番目に並べ替えられる列で、並べ替えが降順で行われることを示します。  
   
-    -   設定、 `SortKeyPosition` ColumnC のプロパティを 3 です。 これは、ColumnC が 3 番目に並べ替えられる列で、並べ替えが昇順で行われることを示します。  
+    -   設定、 `SortKeyPosition` ColumnC のプロパティを 3。 これは、ColumnC が 3 番目に並べ替えられる列で、並べ替えが昇順で行われることを示します。  
   
 9. 並べ替える列ごとに、手順 8. を繰り返します。  
   
-10. **[OK]** をクリックします。  
+10. [**OK**] をクリックします。  
   
 11. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   

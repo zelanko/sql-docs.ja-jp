@@ -1,5 +1,5 @@
 ---
-title: Banyan VINES Sequenced Packet Protocol (SPP)、Multiprotocol、AppleTalk、または NWLink IPX/SPX ネットワーク プロトコルを使用する接続の変更 |Microsoft ドキュメント
+title: Banyan VINES Sequenced Packet Protocol (SPP)、Multiprotocol、AppleTalk、または NWLink IPX/SPX ネットワーク プロトコルを使用する接続の変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - network protocols [SQL Server], modifying connections
 - SPP [SQL Server]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - RPC [SQL Server]
 ms.assetid: 5c5ae453-cc5b-4898-95c7-ad34157b1f60
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0167af6c11abb12e8aa38a52a77707b81aecbe78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5b2b8e2d6ead66108b76d03bbfc020d9345afcd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296012"
 ---
 # <a name="modify-connections-that-use-banyan-vines-sequenced-packet-protocol-spp-multiprotocol-appletalk-or-nwlink-ipx-spx-network-protocols"></a>Banyan VINES Sequenced Packet Protocol (SPP)、Multiprotocol、AppleTalk、または NWLink IPX/SPX ネットワーク プロトコルを使用する接続を変更します。
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされていないクライアント サーバー接続プロトコルをアップグレード アドバイザーが検出しました。 Banyan VINES Sequenced Packet Protocol (SPP)、Multiprotocol (RPC)、AppleTalk、または NWLink IPX/SPX ネットワーク プロトコルを使用するクライアント接続は、サポート対象のプロトコルを使用して接続する必要があります。  
@@ -45,7 +45,7 @@ ms.locfileid: "36075447"
 ## <a name="corrective-action"></a>修正措置  
  サポートされているプロトコルを使用してサーバーに接続するように、クライアント アプリケーションを変更します。 サポートされていないプロトコルを使用するように別名を設定している場合は、サポートされるいずれかのプロトコルを使用するように別名を変更する必要があります。  
   
- アプリケーションの接続文字列のプロトコルのいずれかの読み込みまたは使用して具体的には、いずれかを指定するネットワークによって = DBMSRPCN RPC、ネットワークの Appletalk、またはネットワーク = DBMSADSN、Banyan VINES プロパティまたはなどの明示的なプレフィックスを使用して、DBMSVINN を ="spx:*server \instance*"、SPX に"bv:*サーバー*"Banyan の VINES の場合"adsp:*サーバー*"appletalk、または"rpc:*サーバー*"forマルチ プロトコル、し、必要があります変更するアプリケーションでサポートされるプロトコルのいずれかを使用します。  
+ 指定するかネットワークでの RPC、ネットワークの DBMSRPCN = アプリケーションの接続文字列の使用または次のいずれかのプロトコルの負荷具体的には場合、= Appletalk、またはネットワーク用に DBMSADSN、Banyan VINES プロパティにまたは明示的なプレフィックスを使用して、DBMSVINN を ="spx:*server \instance*"SPX などの"bv:*サーバー*"の Banyan VINES、"adsp:*サーバー*"appletalk の場合または"rpc:*サーバー*"forマルチ プロトコル、しする必要がありますを変更するアプリケーションでサポートされているプロトコルのいずれかを使用します。  
   
  詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「ネットワーク プロトコルの選択」を参照してください。  
   

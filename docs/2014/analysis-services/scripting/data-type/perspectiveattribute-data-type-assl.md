@@ -1,5 +1,5 @@
 ---
-title: PerspectiveAttribute データ型 (ASSL) |Microsoft ドキュメント
+title: PerspectiveAttribute データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveAttribute data type
 ms.assetid: bf4d45c1-e48d-4ada-bbab-49c3ac74948d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4e6125aa11dedf6fe1eda706e136caf989e3d4c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2f27d082f4d0ff13f736d00a3f6d521e830c402
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295562"
 ---
 # <a name="perspectiveattribute-data-type-assl"></a>PerspectiveAttribute データ型 (ASSL)
   内の属性に関する情報を表すプリミティブ データ型を定義、 [PerspectiveDimension](dimension-data-type-assl.md)要素。  

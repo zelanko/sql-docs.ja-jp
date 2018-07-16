@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring [SQL Server], log backups
 - transaction log backups [SQL Server], applying backups
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab3a27eea48c0d34d2cf994c29fff99f91f3ef37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 287fbe416b7e0b824f9a6287b85e8dcb7aa17aa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289118"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>トランザクション ログ バックアップの適用 (SQL Server)
   このトピックは完全復旧モデルと一括ログ復旧モデルのみに関連します。  
@@ -38,7 +37,7 @@ ms.locfileid: "36073768"
   
 -   [復旧とトランザクション ログ](#RecoveryAndTlogs)  
   
--   [ログのバックアップを使用して障害発生時点に復元するには](#PITrestore)  
+-   [ログ バックアップを使用して障害発生時点に復元するには](#PITrestore)  
   
 -   [関連タスク](#RelatedTasks)  
   
@@ -62,7 +61,7 @@ ms.locfileid: "36073768"
 > [!NOTE]  
 >  状況によっては、ログの復元中にファイルを明示的に追加できます。  
   
-##  <a name="PITrestore"></a> ログのバックアップを使用して障害発生時点に復元するには  
+##  <a name="PITrestore"></a> ログ バックアップを使用して障害発生時点に復元するには  
  次のような一連のイベントが発生したとします。  
   
 |[時刻]|イベント|  

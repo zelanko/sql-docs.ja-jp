@@ -1,5 +1,5 @@
 ---
-title: PowerPivot BI セマンティック モデル接続 (.bism) |Microsoft ドキュメント
+title: PowerPivot BI セマンティック モデル接続 (.bism) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2015
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac5edd8e03f7094bec05298057f081053ef13640
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8f10f53f09848971eee5773d2875d238b0033c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253014"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>PowerPivot BI セマンティック モデル接続 (.bism)
-  BI セマンティック モデル接続 (.bism) は、Excel に接続する移植可能な接続または[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]にレポートを[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]テーブル モデル データベースまたは[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多次元モードのインスタンス。 Office データ接続 (.odc) ファイルに精通している場合は、.bism 接続ファイルの定義方法と使用方法が類似していることがわかります。  
+  BI セマンティック モデル接続 (.bism) は、Excel を接続する移植可能な接続または[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]にレポートを[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表形式モデル データベースまたは[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多次元モードでのインスタンス。 Office データ接続 (.odc) ファイルに精通している場合は、.bism 接続ファイルの定義方法と使用方法が類似していることがわかります。  
   
  BI セマンティック モデル接続は、SharePoint 経由で作成およびアクセスされます。 BI セマンティック モデル接続を作成すると、ライブラリの BI セマンティック モデル接続でサイド リンク バー コマンドが有効になります。 サイド リンク バー コマンドは、新しい Excel ブックまたは接続ファイルを編集するためのオプションを開きます。 場合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]がインストールされているも表示されますを作成するコマンド、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]レポートします。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "36179201"
   
 -   表形式サーバー モードのスタンドアロン Analysis Services インスタンスで実行されている表形式モデル データベース。 スタンドアロン Analysis Services インスタンスは、ファーム外部に配置されます。 ファーム外部のデータ ソースにアクセスするには、追加の権限が必要です。追加の権限については、「 [テーブル モデル データベースへの BI セマンティック モデル接続の作成](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
   
--   SharePoint に保存された PowerPivot ブック。 Excel ブックに埋め込まれた PowerPivot データベースが、スタンドアロン Analysis Services 表形式モード サーバーで実行される表形式モデル データベースに相当します。 既にを使用する PowerPivot for Excel と PowerPivot for SharePoint の場合は、SharePoint ライブラリおよびビルドでの PowerPivot ブックを参照する BI セマンティック モデル接続を定義することができます[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]既存の PowerPivot データを使用してレポートします。  SQL Server 2008 R2 または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] バージョンの PowerPivot for Excel で作成されたブックを使用できます。  
+-   SharePoint に保存された PowerPivot ブック。 Excel ブックに埋め込まれた PowerPivot データベースが、スタンドアロン Analysis Services 表形式モード サーバーで実行される表形式モデル データベースに相当します。 SharePoint ライブラリのビルドでの PowerPivot ブックを参照する BI セマンティック モデル接続を定義することができる場合、既に使用して PowerPivot for Excel と PowerPivot for SharePoint、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]既存の PowerPivot データを使用してレポートします。  SQL Server 2008 R2 または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] バージョンの PowerPivot for Excel で作成されたブックを使用できます。  
   
 -   上の多次元データ モデル、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンス。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36179201"
   
  次の図は、この接続シーケンスを示しています。 .bism 接続の要求で始まり、クライアントに接続情報がダウンロードされて、最後にデータベースへのシングルホップ接続が行われます。 接続は、Analysis Services データベースに対する読み取り権限を持つ Excel ユーザーの Windows 資格情報を使用して作成されます。 シングルホップであるため、Kerberos が有効になっていても、このシナリオでは必要とされません。  
   
- ![Excel からテーブル モデル データベースへの接続](../media/ssas-powerpivotbismconnection-1.gif "Excel からテーブル モデル データベースへの接続")  
+ ![Excel から表形式モデル データベースへの接続](../media/ssas-powerpivotbismconnection-1.gif "Excel から表形式モデル データベースへの接続")  
   
  **Power View からネットワーク上の表形式データへの接続**  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36179201"
   
  Power View とテーブル モデル データベースとの接続は、ダブルホップ認証シーケンスに従って行われ、ユーザーの ID はクライアントから SharePoint に送られてから、SharePoint からファーム外で実行されるバックエンド Analysis Services テーブル モデル データベースに送られます。 接続要求を処理する ADOMD.NET クライアント ライブラリは常に、最初の試行で Kerberos を利用しようとします。 Kerberos が構成されていると、テーブル モデル データベースへの接続に対してユーザー ID の権限が借用され、接続は成功します。  
   
- Kerberos が構成されておらず、要求が失敗した場合は、Reporting Services が 2 度目の試行を行います。 このシナリオでは、クライアント ライブラリが Reporting Services のサービス ID と NTLM 認証を使用して、Analysis Services に接続します。 接続文字列を使用して、Power View ユーザーの id が渡される、`effectiveusername`パラメーター。  
+ Kerberos が構成されておらず、要求が失敗した場合は、Reporting Services が 2 度目の試行を行います。 このシナリオでは、クライアント ライブラリが Reporting Services のサービス ID と NTLM 認証を使用して、Analysis Services に接続します。 Power View ユーザーの id が使用して、接続文字列で渡される、`effectiveusername`パラメーター。  
   
  Analysis Services インスタンス上のシステム管理者ロールのメンバーだけが、`effectiveusername` パラメーターを使用して接続を作成し、サーバー インスタンスの他のユーザーの権限を借用する権限を持っています。 そのため、Reporting Services 共有サービスの実行アカウントは、Analysis Services インスタンスに対する管理権限を持っている必要があります。  サービス アカウントに管理権限を付与する手順は、このトピックの「 [テーブル モデル データベースへの BI セマンティック モデル接続の作成](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」に示されています。  
   
- 次の図は、各接続に同じ Windows ユーザー ID を使用する接続シーケンスを示しています。 Analysis Services の最後の接続では、Reporting Services サービス アプリケーション id、Windows ユーザーを使用して id を渡すことで、接続が作成`effectiveusername`です。  
+ 次の図は、各接続に同じ Windows ユーザー ID を使用する接続シーケンスを示しています。 Analysis Services の最後の接続に使用して Windows ユーザーの id を渡して、Reporting Services サービス アプリケーションの id によって接続が確立`effectiveusername`します。  
   
  ![表形式 db に対する借用の接続](../media/ssas-powerpivotbismconnection-2.gif "表形式 db に対する借用の接続")  
   

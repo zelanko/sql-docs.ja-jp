@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB connection manager
 - data sources [Integration Services], connections
@@ -18,13 +18,13 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c6d2fd657b3fa7cd91f00f98242aed0e959dd5e9
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 11b88bd8144651abfed39fb5b68316abc23f09a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295142"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 接続マネージャー
   OLE DB 接続マネージャーを使用すると、パッケージは OLE DB プロバイダーを使用してデータ ソースに接続できます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する OLE DB 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。  
@@ -36,9 +36,9 @@ ms.locfileid: "36324606"
   
  OLE DB 接続マネージャーは、C++ などの言語を使用するアンマネージ コードで記述されたカスタム タスク内で、OLE DB データ ソースにアクセスするためにも使用されます。  
   
- OLE DB 接続マネージャーをパッケージに追加するときに[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続マネージャーを実行時に、OLE DB 接続を解決する、接続マネージャーのプロパティを設定する接続マネージャーを追加作成、`Connections`コレクションに、パッケージです。  
+ パッケージに OLE DB 接続マネージャーを追加するときに[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続マネージャーを実行時に、OLE DB 接続を解決するを接続マネージャーのプロパティを設定し、接続マネージャーを追加作成、`Connections`コレクションに、パッケージです。  
   
- `ConnectionManagerType`接続マネージャーのプロパティに設定されて`OLEDB`です。  
+ `ConnectionManagerType`接続マネージャーのプロパティに設定されて`OLEDB`します。  
   
  OLE DB 接続マネージャーは、次の方法で構成できます。  
   

@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_DIMENSION_STAT 行セット |Microsoft ドキュメント
+title: DISCOVER_DIMENSION_STAT 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 639f8cd7-3b43-40d5-8b84-552daf60d484
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c00442ffcc7af38a24ce0fcb035aad515d9942f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d70382117367762dc35a6d02663f54436ea63bb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289739"
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT 行セット
   ディメンションに関する情報を提供します。これには、ディメンションを含むデータベースの名前、ディメンション名、その属性、および各属性のメンバーの数が含まれます。 テーブル モデルでは、これはテーブルの列および各列の値の数に相当します。  
   
- **適用されます:** 表形式モデル、多次元モデル  
+ **適用対象:** 表形式モデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
  `DISCOVER_DIMENSION_STAT`行セットには、次の列が含まれています。  

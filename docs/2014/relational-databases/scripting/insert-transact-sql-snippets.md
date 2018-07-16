@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [SQL Server], snippets
 - Transact-SQL snippets, code
 - snippets [Transact-SQL], how to insert
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 42550fa2943c8b4599df0e1d4d8f8ad15a30ba80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 342f997acd1b9b8ea5937a24b670678d76d6eb59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311342"
 ---
 # <a name="insert-transact-sql-snippets"></a>Transact-SQL スニペットの挿入
   [!INCLUDE[tsql](../../includes/tsql-md.md)] コード スニペットは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターで [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントを新規作成するときの開始位置として使用できるテンプレートです。  

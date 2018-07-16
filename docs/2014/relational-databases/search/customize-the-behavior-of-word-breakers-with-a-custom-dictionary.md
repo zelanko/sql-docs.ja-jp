@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8e278d1-aeaa-48f1-a0c6-5de232c983e4
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 57a31544150f34d3f8d48c419bb91d4f9622c225
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2f4fb4134dd17efa37a169265e53af9910a8d153
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288558"
 ---
 # <a name="customize-the-behavior-of-word-breakers-with-a-custom-dictionary"></a>ユーザー辞書によるワード ブレーカーの動作のカスタマイズ
   言語固有のユーザー辞書ファイルを作成することで、特定の言語のワード ブレーカーの動作をカスタマイズできます。 たとえば、特定の用語やパターンがワード ブレーカーによって区切られないようにすることができます。  

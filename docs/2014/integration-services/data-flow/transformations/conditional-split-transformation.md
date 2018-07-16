@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittrans.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 780227fc93e78bfda0d6e1612dc315b904ffe929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42886c47618dd1aae0ac90e54ae3e7ec9c8d6193
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287648"
 ---
 # <a name="conditional-split-transformation"></a>条件分割変換
   条件分割変換では、データ行をデータの内容に応じた別の出力にルートできます。 条件分割変換の実装は、プログラミング言語の CASE 決定構造と同様です。 この変換は式を評価し、その結果に基づいて、データ行を指定された出力に送信します。 この変換には既定の出力も用意されているため、行が式に一致しない場合は既定の出力に送信されます。  
@@ -50,7 +50,7 @@ ms.locfileid: "36074018"
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、入力データを評価して出力データを出力する式を作成するために使用できる、関数と演算子が含まれます。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
- 条件分割変換には、`FriendlyExpression`カスタム プロパティです。 このプロパティは、パッケージの読み込み時にプロパティ式で更新できます。 詳細については、「 [パッケージでプロパティ式を使用する](../../expressions/use-property-expressions-in-packages.md) 」および「 [変換のカスタム プロパティ](transformation-custom-properties.md)」を参照してください。  
+ 条件分割変換には、`FriendlyExpression`カスタム プロパティ。 このプロパティは、パッケージの読み込み時にプロパティ式で更新できます。 詳細については、「 [パッケージでプロパティ式を使用する](../../expressions/use-property-expressions-in-packages.md) 」および「 [変換のカスタム プロパティ](transformation-custom-properties.md)」を参照してください。  
   
  この変換は、1 つの入力、1 つ以上の出力、および 1 つのエラー出力をとります。  
   

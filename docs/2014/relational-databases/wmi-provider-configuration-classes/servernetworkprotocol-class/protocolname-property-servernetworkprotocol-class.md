@@ -1,5 +1,5 @@
 ---
-title: ProtocolName プロパティ (ServerNetworkProtocol クラス) |Microsoft ドキュメント
+title: ProtocolName プロパティ (ServerNetworkProtocol クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 5894a32b-c2d8-4bba-8f9d-d09e5cd65f71
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ae941a2b181d27c5d059793c320f1cb0498bfe3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 09b4e19323a68bc1bb78e171be5f2dc933019aa9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318032"
 ---
 # <a name="protocolname-property-servernetworkprotocol-class"></a>ProtocolName プロパティ (ServerNetworkProtocol クラス)
   サーバー ネットワーク プロトコルの名前を取得します。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>要素  
  *object*  
- A [ServerNetworkProtocol クラス](servernetworkprotocol-class.md)のインスタンスによって使用されるネットワーク プロトコルを表すオブジェクト[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ A [ServerNetworkProtocol クラス](servernetworkprotocol-class.md)のインスタンスによって使用されるネットワーク プロトコルを表すオブジェクトを[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サーバー ネットワーク プロトコルの名前を指定する文字列。  

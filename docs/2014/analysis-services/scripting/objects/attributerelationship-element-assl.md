@@ -1,5 +1,5 @@
 ---
-title: AttributeRelationship 要素 (ASSL) |Microsoft ドキュメント
+title: AttributeRelationship 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeRelationship element
 ms.assetid: 2e786109-b8bf-4295-b0fe-9c1997349993
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c85c63d69b413239d9bbacc074b1f6f5f0d3b864
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a13dcac8fd37e16e90888e904cc6f0ae3587c8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310702"
 ---
 # <a name="attributerelationship-element-assl"></a>AttributeRelationship 要素 (ASSL)
   2 つの属性間のリレーションシップに関する詳細を提供します。  
@@ -67,7 +67,7 @@ ms.locfileid: "36083277"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|[AttributeRelationships](../collections/relationships-element-assl.md)|  
-|子要素|[注釈](../collections/annotations-element-assl.md)、 [AttributeID](../properties/id-element-assl.md)、[基数](../properties/cardinality-element-assl.md)、[名前](../properties/name-element-assl.md)、 [Optionality](../properties/optionality-element-assl.md)、 [OverrideBehavior](../properties/overridebehavior-element-assl.md)、 [RelationshipType](../properties/relationshiptype-element-assl.md)、[翻訳](../collections/translations-element-assl.md)、[表示](../properties/visible-element-assl.md)|  
+|子要素|[注釈](../collections/annotations-element-assl.md)、 [AttributeID](../properties/id-element-assl.md)、[カーディナリティ](../properties/cardinality-element-assl.md)、[名前](../properties/name-element-assl.md)、 [Optionality](../properties/optionality-element-assl.md)、 [OverrideBehavior](../properties/overridebehavior-element-assl.md)、 [RelationshipType](../properties/relationshiptype-element-assl.md)、[翻訳](../collections/translations-element-assl.md)、[表示](../properties/visible-element-assl.md)|  
   
 ## <a name="remarks"></a>コメント  
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.AttributeRelationship>します。  
