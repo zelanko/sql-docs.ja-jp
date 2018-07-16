@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3cd11409f4194e6eaa63c03d4ca211fe633a721a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 268fc3b35408c144d1eda570d92b9b166b96769e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239062"
 ---
 # <a name="create-an-encrypted-backup"></a>暗号化されたバックアップの作成
   このトピックでは、暗号化されたバックアップを Transact-SQL で作成するために必要な手順について説明します。  
@@ -76,7 +75,7 @@ ms.locfileid: "36176199"
  EKM で保護されているバックアップの暗号化の例については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」を参照してください。  
   
 ### <a name="backup-to-windows-azure-storage-with-encryption"></a>暗号化の使用による Windows Azure ストレージへのバックアップ  
- **[SQL Server Backup to URL]** オプションを使用して Windows Azure ストレージへのバックアップを作成する場合、暗号化の手順は同じですが、バックアップ先として URL を使用し、Windows Azure ストレージへの認証用に SQL 資格情報を指定する必要があります。 構成する場合[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]暗号化オプションで、次を参照してください[SQL Server Managed Backup to Windows Azure を設定する](enable-sql-server-managed-backup-to-microsoft-azure.md)と[SQL Server Managed Backup to Windows Azure の可用性グループの設定](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+ **[SQL Server Backup to URL]** オプションを使用して Windows Azure ストレージへのバックアップを作成する場合、暗号化の手順は同じですが、バックアップ先として URL を使用し、Windows Azure ストレージへの認証用に SQL 資格情報を指定する必要があります。 構成する場合[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]暗号化のオプションを使用して、次を参照してください[を設定する SQL Server Managed Backup to Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)と[の可用性グループを設定するSQLServerManagedBackuptoWindowsAzure](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
  **前提条件:**  
   

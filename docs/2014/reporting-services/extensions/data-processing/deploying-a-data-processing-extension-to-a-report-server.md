@@ -15,15 +15,15 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 caps.latest.revision: 44
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 87409bbf8d057e30b458f79b4746e7048e51f363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 47092d05e9908e68722dbebea88e110f58170000
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160073"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>データ処理拡張機能をレポート サーバーに配置する方法
   レポート サーバーは、表示レポートのデータを取得および処理するためにデータ処理拡張機能を使用します。 データ処理拡張機能のアセンブリは、プライベート アセンブリとしてレポート サーバーに配置してください。 また、レポート サーバーの構成ファイル RSReportServer.config にエントリを作成する必要もあります。  

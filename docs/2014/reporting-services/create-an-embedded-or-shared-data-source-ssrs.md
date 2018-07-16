@@ -1,5 +1,5 @@
 ---
-title: 埋め込みまたは共有データ ソース (SSRS) を作成 |Microsoft ドキュメント
+title: 埋め込みまたは共有データ ソース (SSRS) を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
 caps.latest.revision: 40
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 28609edfbfc504d3949abb6a19f7f04098fde07b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cd820de9b6710e4524b39323bcc9837fad820b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230733"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>埋め込みデータ ソースまたは共有データ ソースを作成する (SSRS)
-  レポートのデータ ソースは名前と接続情報を指定します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、"埋め込み" と "共有" の 2 種類のデータ ソースをサポートしています。 埋め込みデータ ソースは、レポート定義内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、個別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、次を参照してください。[埋め込みと共有データ接続またはデータ ソース&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)です。  
+  レポートのデータ ソースは名前と接続情報を指定します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、"埋め込み" と "共有" の 2 種類のデータ ソースをサポートしています。 埋め込みデータ ソースは、レポート定義内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、個別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、次を参照してください。[埋め込みと共有のデータ接続またはデータ ソース&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)します。  
   
  レポート ビルダーで、レポート サーバーまたは SharePoint サイト上の保存先を参照してデータ ソースを選択するか、または埋め込みデータ ソースを作成します。 共有データ ソースをレポート ビルダーで作成することはできません。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "36074772"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
- レポート サーバー上または SharePoint サイト上で共有データ ソースを直接作成することもできます。 詳細については、次を参照してください[作成、削除、または共有データ ソースの変更&#40;レポート マネージャー&#41; ](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)または[作成および共有データ ソースの管理&#40;Reporting Services の SharePoint 統合モード&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).  
+ レポート サーバー上または SharePoint サイト上で共有データ ソースを直接作成することもできます。 詳細については、次を参照してください[作成、削除、または共有データ ソースを変更&#40;レポート マネージャー&#41; ](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)または[の作成と共有データ ソースの管理&#40;Reporting Services の SharePoint 統合モード&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).  
   
 ### <a name="to-create-an-embedded-or-shared-data-source"></a>埋め込みデータ ソースまたは共有データ ソースを作成するには  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36074772"
   
 2.  **[名前]** ボックスにデータ ソースの名前を入力するか、既定値をそのまま使用します。 データ ソース名は、レポートの内部で使用されます。 判別がつきやすいように、データ ソース名には、接続文字列に指定するデータベース名を含めることをお勧めします。  
   
-3.  埋め込みデータ ソース、いることを確認**埋め込まれた接続**が選択されています。  
+3.  埋め込みデータ ソースのことを確認します**埋め込み接続**が選択されています。  
   
     1.  **[種類]** ボックスの一覧から、データ ソースの種類 ( **[Microsoft SQL Server]** や **[OLE DB]** など) を選択します。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36074772"
   
          データ ソースの種類に合わせて **[接続のプロパティ]** ダイアログ ボックスのフィールドに入力します。 接続のプロパティには、データ ソースの種類、データ ソースの名前、および使用する資格情報が含まれます。 このダイアログ ボックスで値を指定した後、 **[接続テスト]** をクリックして、データ ソースが使用可能であること、および指定した資格情報が正しいことを確認します。 特定のデータ ソースの種類の詳細については、「[外部データ ソースのデータを追加する (SSRS)](report-data/add-data-from-external-data-sources-ssrs.md)」のトピックを参照してください。  
   
-4.  共有データ ソース、いることを確認**共有データ ソースの参照を使用する**が選択されています。  
+4.  共有データ ソースのことを確認します**共有データ ソースの参照を使用する**が選択されています。  
   
     1.  **[新規]** をクリックします。 **[共有データ ソース]** のプロパティ ダイアログ ボックスで、手順 2. および 3. を実行して新規データ ソースを作成します。  
   
@@ -80,19 +80,19 @@ ms.locfileid: "36074772"
   
 ### <a name="to-convert-an-embedded-data-source-to-a-shared-data-source-in-report-designer"></a>レポート デザイナーで埋め込みデータ ソースを共有データ ソースに変換するには  
   
--   レポート データ ペインでデータ ソースを右クリックし、をクリックして**共有データ ソースへの変換**です。  
+-   レポート データ ペインで、データ ソースを右クリックし、**共有データ ソースに変換**します。  
   
 ### <a name="to-convert-a-shared-data-source-to-an-embedded-data-source-in-report-builder"></a>レポート ビルダーで共有データ ソースを埋め込みデータ ソースに変換するには  
   
--   レポート データ ペインで、データ ソースを右クリックして開きます**データ ソースのプロパティ**です。  
+-   レポート データ ペインでデータ ソースを右クリックし、開く**データ ソースのプロパティ**します。  
   
--   をクリックして**埋め込まれた接続**し、前の手順」の説明に従って、埋め込みデータ ソースの作成を完了します。  
+-   クリックして**埋め込まれた接続**前述の手順」の説明に従って、埋め込みデータ ソースの作成を完了します。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services データ ソースに資格情報を保存する](report-data/store-credentials-in-a-reporting-services-data-source.md)   
- [埋め込みデータ ソースとデータ接続またはデータ ソースを共有&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [埋め込みし、共有データ接続またはデータ ソース&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [共有データ ソースからデータ ソースが埋め込まれた変換&#40;レポート ビルダーおよび SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
- [レポートまたはモデル、共有データ ソースをバインド&#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [レポートまたはモデルを共有データ ソースにバインド&#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [レポートのデータ ソースのプロパティを構成する (レポート マネージャー)](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
  [Reporting Services でサポートされるデータ ソース&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

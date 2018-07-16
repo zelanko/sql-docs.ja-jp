@@ -1,5 +1,5 @@
 ---
-title: パッケージの変数の使用 |Microsoft ドキュメント
+title: パッケージで変数を使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined variables [Integration Services]
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 81678b498e9c4eca48a0d9de2b5f7070693e7d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0cc23cf94eef3998e1079a09be5978e4c594ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285418"
 ---
 # <a name="use-variables-in-packages"></a>パッケージで変数を使用する
   変数は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージに追加できる便利で柔軟な機能です。変数を使用すると、パッケージのオブジェクト間、および親パッケージと子パッケージとの間で情報を交換できます。 また、変数は式やスクリプトでも使用できます。  

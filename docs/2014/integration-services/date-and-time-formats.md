@@ -1,5 +1,5 @@
 ---
-title: 日付と時刻の書式 |Microsoft ドキュメント
+title: 日付と時刻の形式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time data types [Integration Services]
 - fast parse [Integration Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
 caps.latest.revision: 52
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c5c223189964ee9c9bdcd471d64275838ba65d70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7c54b3ee399043d752efb9e55ce9c2f8fed488d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289388"
 ---
 # <a name="date-and-time-formats"></a>日付および時刻の形式
   高速解析は、データを解析するための高速で単純なルーチンのセットです。 高速解析では、日付および時刻のデータ型に対し次の形式がサポートされています。  

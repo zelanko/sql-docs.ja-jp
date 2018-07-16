@@ -1,12 +1,12 @@
 ---
-title: SqlPipe オブジェクト |Microsoft ドキュメント
+title: SqlPipe オブジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,20 +18,20 @@ caps.latest.revision: 54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab26172d585be0a7ffd4d6d3b77630bdecf384ce
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 27e9b16848cb214c0ba7502beb878ab9cde061c3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702123"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354314"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、結果や出力パラメーターを呼び出し側のクライアントに送信するストアド プロシージャ (または拡張ストアド プロシージャ) を作成することがごく一般的でした。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]任意のストアド プロシージャ、**選択**0 個以上の行を返すステートメントが接続されている呼び出し元の「パイプ」に、その結果を送信  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]任意のストアド プロシージャ、**選択**0 個以上の行を返すステートメントが接続されている呼び出し元の「パイプ」に、結果を送信します  
   
- 共通言語ランタイム (CLR) データベースで実行されているオブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して接続しているパイプに結果を送信することができます、**送信**のメソッド、 **SqlPipe**オブジェクト。 アクセス、**パイプ**のプロパティ、 **SqlContext**を取得するオブジェクト、 **SqlPipe**オブジェクト。 **SqlPipe**クラスは、概念的に似ています、**応答**クラスは、ASP.NET で見つかりました。 詳細については、.NET Framework Software Development Kit の SqlPipe クラスのリファレンス ドキュメントを参照してください。  
+ 共通言語ランタイム (CLR) データベースで実行されているオブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して、接続されているパイプに結果を送信することができます、**送信**のメソッド、 **SqlPipe**オブジェクト。 アクセス、**パイプ**のプロパティ、 **SqlContext**オブジェクトを取得する、 **SqlPipe**オブジェクト。 **SqlPipe**クラスは、概念的に似ています、**応答**クラスは ASP.NET です。 詳細については、.NET Framework Software Development Kit の SqlPipe クラスのリファレンス ドキュメントを参照してください。  
   
 ## <a name="returning-tabular-results-and-messages"></a>表形式の結果とメッセージを返す  
  **SqlPipe**が、**送信**メソッドで、次の 3 つのオーバー ロードがあります。 これらは次のとおりです。  
@@ -42,24 +42,24 @@ ms.locfileid: "35702123"
   
 -   `void Send(SqlDataRecord record)`  
   
- **送信**メソッドは、クライアントまたは呼び出し元に直接データを送信します。 出力を使用するクライアントでは通常、 **SqlPipe**、入れ子になった CLR ストアド プロシージャの場合、出力のコンシューマーこともできます、ストアド プロシージャです。 たとえば、Procedure1 がコマンド テキスト "EXEC Procedure2" の SqlCommand.ExecuteReader() を呼び出すとします。 Procedure2 もマネージ ストアド プロシージャです。 ここで Procedure2 が SqlPipe.Send( SqlDataRecord ) を呼び出すと、行はクライアントではなく、Procedure1 のリーダーに送信されます。  
+ **送信**メソッドは、クライアントまたは呼び出し元に直接データを送信します。 出力を使用するクライアントでは、通常は、 **SqlPipe**、CLR ストアド プロシージャの入れ子になった場合出力のコンシューマーもストアド プロシージャをできます。 たとえば、Procedure1 がコマンド テキスト "EXEC Procedure2" の SqlCommand.ExecuteReader() を呼び出すとします。 Procedure2 もマネージド ストアド プロシージャです。 ここで Procedure2 が SqlPipe.Send( SqlDataRecord ) を呼び出すと、行はクライアントではなく、Procedure1 のリーダーに送信されます。  
   
- **送信**メソッドの PRINT と同等の情報メッセージとしてクライアントに表示される文字列メッセージを送信[!INCLUDE[tsql](../../includes/tsql-md.md)]です。 単一行の結果セットを使用しても送信できる**SqlDataRecord**、または複数行の結果セットを使用して、 **SqlDataReader**です。  
+ **送信**メソッドの PRINT と情報メッセージとしてクライアントに表示される文字列メッセージを送信[!INCLUDE[tsql](../../includes/tsql-md.md)]します。 単一行の結果セットを使用しても送信できる**SqlDataRecord**、または複数行の結果セットを使用して、 **SqlDataReader**します。  
   
- **SqlPipe**オブジェクトもあります、 **ExecuteAndSend**メソッドです。 このメソッドは、コマンドを実行するために使用できます (として渡される、 **SqlCommand**オブジェクト) と、呼び出し元に直接の結果を送信します。 送信されたコマンドにエラーがある場合、パイプに例外が送信されますが、呼び出し元のマネージ コードにもコピーが送信されます。 呼び出し元コードが例外をキャッチしない場合は、履歴を伝わり [!INCLUDE[tsql](../../includes/tsql-md.md)] コードに反映され、2 度出力に表示されます。 呼び出し元コードが例外をキャッチした場合、パイプ コンシューマーにはまだエラーが表示されますが、重複するエラーはありません。  
+ **SqlPipe**オブジェクトも、 **ExecuteAndSend**メソッド。 このメソッドは、コマンドを実行するために使用できます (として渡される、 **SqlCommand**オブジェクト) し、呼び出し元に直接の結果を送信します。 送信されたコマンドにエラーがある場合、パイプに例外が送信されますが、呼び出し元のマネージド コードにもコピーが送信されます。 呼び出し元コードが例外をキャッチしない場合は、履歴を伝わり [!INCLUDE[tsql](../../includes/tsql-md.md)] コードに反映され、2 度出力に表示されます。 呼び出し元コードが例外をキャッチした場合、パイプ コンシューマーにはまだエラーが表示されますが、重複するエラーはありません。  
   
- だけを受け取ります、 **SqlCommand**コンテキスト接続に関連付けられている以外の場合は、コンテキスト接続以外に関連付けられているコマンドを実行できません。  
+ かかるのみ、 **SqlCommand**コンテキスト接続に関連付けられている; 非コンテキスト接続に関連付けられているコマンドがかかることはできません。  
   
 ## <a name="returning-custom-result-sets"></a>カスタム結果セットを返す  
- マネージ ストアド プロシージャから付属していない結果セットを送信できる、 **SqlDataReader**です。 **SendResultsStart**メソッドと共に**SendResultsRow**と**SendResultsEnd**、ストアド プロシージャをクライアントにカスタム結果セットを送信します。  
+ マネージ ストアド プロシージャから提供されない結果セットを送信できる、 **SqlDataReader**します。 **SendResultsStart**メソッドと共に**SendResultsRow**と**SendResultsEnd**、により、ストアド プロシージャに独自の結果セットをクライアントに送信します。  
   
- **SendResultsStart**受け取り、 **SqlDataRecord**の入力として。 さらに、結果セットの先頭にマークを付け、レコード メタデータを使用して、結果セットを説明するメタデータを生成します。 レコードの値を送信しません**SendResultsStart**です。 それ以降、すべての行を使用して送信**SendResultsRow**、そのメタデータ定義に一致する必要があります。  
+ **SendResultsStart**は、 **SqlDataRecord**として入力します。 さらに、結果セットの先頭にマークを付け、レコード メタデータを使用して、結果セットを説明するメタデータを生成します。 レコードの値を送信しません**SendResultsStart**します。 その後すべての行を使用して送信**SendResultsRow**、そのメタデータの定義に一致する必要があります。  
   
 > [!NOTE]  
->  呼び出した後、 **SendResultsStart**メソッドのみ**SendResultsRow**と**SendResultsEnd**呼び出すことができます。 同じインスタンスで他のメソッドを呼び出して**SqlPipe**により、 **InvalidOperationException**です。 **SendResultsEnd**設定**SqlPipe**他のメソッドを呼び出すことができます、初期状態にします。  
+>  呼び出した後、 **SendResultsStart**メソッドのみ**SendResultsRow**と**SendResultsEnd**呼び出すことができます。 同じインスタンス内の他のメソッドの呼び出し**SqlPipe**により、 **InvalidOperationException**します。 **SendResultsEnd**設定**SqlPipe**他のメソッドを呼び出すことができます、初期状態に戻す。  
   
 ### <a name="example"></a>例  
- **UspGetProductLine**ストアド プロシージャ名、製品番号、色、および指定した製品ライン内のすべての製品の表示価格を返します。 このストアド プロシージャでは、完全に一致する*prodLine*です。  
+ **UspGetProductLine**ストアド プロシージャ名、製品番号、色、および指定した製品ラインに含まれるすべての製品の表示価格を返します。 このストアド プロシージャでは、完全に一致する*prodLine*します。  
   
  C#  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: db481a9a35cd55ecef08cf86802196d2a1c94b45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 19e238919a00bf022cd924be7a66a4d990d8f7c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227098"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
   Sales Orders レポートに 1 つのデータ領域といくつかのフィールドを追加した後、日付および通貨のフィールド、および列ヘッダーを書式設定できます。  
@@ -30,7 +30,7 @@ ms.locfileid: "36177680"
   
 -   [通貨の書式設定します。](#bkmk_format_currency)  
   
--   [テキスト スタイルおよび列幅を変更します。](#bkmk_change_textstyle)  
+-   [テキストのスタイルおよび列幅を変更します。](#bkmk_change_textstyle)  
   
 ##  <a name="bkmk_format_date"></a> 日付の書式設定します。  
  日付フィールドには、既定では日付と時刻の情報が表示されます。 このフィールドを書式設定して、日付のみを表示できます。  
@@ -39,9 +39,9 @@ ms.locfileid: "36177680"
   
 1.  **[デザイン]** タブをクリックします。  
   
-2.  `[Date]` フィールド式が入力されているセルを右クリックし、**[テキスト ボックスのプロパティ]** をクリックします。  
+2.  `[Date]` フィールド式が入力されているセルを右クリックし、[ **テキスト ボックスのプロパティ**] をクリックします。  
   
-3.  をクリックして**数**、し、**カテゴリ**フィールドで、`Date`です。  
+3.  クリックして**数**、し、**カテゴリ**フィールドで、`Date`します。  
   
 4.  **[型]** ボックスで **[2000 年 1 月 31 日]** を選択します。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36177680"
   
 #### <a name="to-format-a-currency-field"></a>通貨フィールドを書式設定するには  
   
-1.  `[LineTotal]` フィールド式が入力されているセルを右クリックし、**[テキスト ボックスのプロパティ]** をクリックします。  
+1.  `[LineTotal]` フィールド式が入力されているセルを右クリックし、[ **テキスト ボックスのプロパティ**] をクリックします。  
   
 2.  **[数値]** をクリックし、 **[Category]** フィールドで **[通貨]** を選択します。  
   
@@ -74,14 +74,14 @@ ms.locfileid: "36177680"
   
 6.  レポートをプレビューして `[LineTotal]` フィールドに対する変更を確認し、デザイン ビューに戻ります。  
   
-##  <a name="bkmk_change_textstyle"></a> テキスト スタイルおよび列幅を変更します。  
+##  <a name="bkmk_change_textstyle"></a> テキストのスタイルおよび列幅を変更します。  
  ヘッダー行の書式を変更して、レポートのデータの行と区別することもできます。 最後に、列の幅を調整します。  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>ヘッダー行およびテーブル列を書式設定するには  
   
 1.  テーブルをクリックし、列ハンドルおよび行ハンドルをテーブルの上部および横に表示します。  
   
-     ![デザイン、テーブル ヘッダー行および詳細行と共に](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "デザイン、ヘッダー行および詳細行を持つテーブル")  
+     ![デザイン、ヘッダー行および詳細行を持つテーブル](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "デザイン、ヘッダー行および詳細行を持つテーブル")  
   
      テーブルの上と横のグレーのバーは、列および行ハンドルです。  
   

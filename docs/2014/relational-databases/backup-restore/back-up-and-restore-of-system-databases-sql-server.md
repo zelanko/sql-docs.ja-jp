@@ -5,10 +5,9 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server], backing up and restoring
 - restoring system databases [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39266ab9ca20c174ee61a1ed2e52c33fb0d4b5ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 81645730d3a854eff8b318ef04ee234f6206b4d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197552"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>システム データベースのバックアップと復元 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、システムレベルのデータベースのセットである*システム データベース*が管理されています。これらのデータベースは、サーバー インスタンスの運用に不可欠です。 いくつかのシステム データベースは、重大な更新が行われるたびにバックアップする必要があります。 常にバックアップする必要があるシステム データベースには、 **msdb**、 **master**、および **model**があります。 サーバー インスタンス上のいずれかのデータベースでレプリケーションが使用されている場合は、 **distribution** システム データベースもバックアップする必要があります。 これらのシステム データベースをバックアップすることで、ハード ディスク障害などのシステム障害時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムの復元と復旧を行うことができます。  
@@ -41,11 +40,11 @@ ms.locfileid: "36071444"
 |[tempdb](../databases/tempdb-database.md)|一時的な結果セットや生成途中の結果セットを保存するためのワークスペース。 このデータベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを起動するたびに作成し直されます。 サーバー インスタンスをシャットダウンするとき、 **tempdb** 内のすべてのデータは完全に削除されます。|いいえ|Simple|**tempdb** システム データベースはバックアップできません。|  
 |[ディストリビューションの構成](../replication/configure-distribution.md)|サーバーをレプリケーション ディストリビューターとして構成している場合に限り存在するデータベース。 あらゆる種類のレプリケーションのメタデータや履歴、およびトランザクション レプリケーションのトランザクションが保存されます。|はい|Simple|**distribution** データベースをバックアップするタイミングの詳細については、「[レプリケートされたデータベースのバックアップと復元](../replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。|  
   
- <sup>1</sup>モデルの現在の復旧モデルについては、次を参照してください[を表示または変更するデータベースの復旧モデル&#40;SQL Server&#41; ](view-or-change-the-recovery-model-of-a-database-sql-server.md)または[sys.databases &#40;TRANSACT-SQL&#41; 。](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup>モデルの現在の復旧モデルについては、次を参照してください[表示または変更、データベースの復旧モデル&#40;SQL Server&#41; ](view-or-change-the-recovery-model-of-a-database-sql-server.md)または[sys.databases &#40;TRANSACT-SQL&#41; 。](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
 ## <a name="limitations-on-restoring-system-databases"></a>システム データベースの復元に関する制限  
   
--   システム データベースは、サーバー インスタンスが現在実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンで作成されたバックアップからのみ復元できます。 たとえばで実行されているサーバー インスタンス上のシステム データベースを復元する[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1。  
+-   システム データベースは、サーバー インスタンスが現在実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンで作成されたバックアップからのみ復元できます。 たとえば、システムで実行されているサーバー インスタンスでデータベースを復元する[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1。  
   
 -   データベースを復元するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行している必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを起動するには、 **master** データベースにアクセスでき、かつ少なくとも一部は使用できる必要があります。 **master** が使用できない状態になった場合、このデータベースを次のいずれかの方法で使用できる状態に戻すことができます。  
   

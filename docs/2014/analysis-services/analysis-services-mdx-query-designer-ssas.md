@@ -1,5 +1,5 @@
 ---
-title: Analysis Services の MDX クエリ デザイナー (SSAS) |Microsoft ドキュメント
+title: Analysis Services MDX クエリ デザイナー (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.asmdxquerydes.f1
 ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 252c4623149c4a96ccab9ded6ff76788e436d544
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1bbe57da905e12d644de39eff98216bd2d0f1218
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282228"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Analysis Services MDX クエリ デザイナー (SSAS)
   Analysis Services 多次元式 (MDX) クエリ デザイナーには、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データ ソースに対する MDX クエリの作成に役立つグラフィカル ユーザー インターフェイスが用意されています。 MDX のグラフィカル クエリ デザイナーには、デザイン モードとクエリ モードという 2 つのモードがあります。 どちらのモードでもメタデータ ペインが表示されます。このペインから、選択したキューブのメンバーをドラッグすることによって、使用するデータを取得する MDX クエリを作成できます。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dad9f1cd63cce73ae298e4608806487b09aceab4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 211b17fc963df0da8e6f8e2ecdde6fac64a4e64f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285078"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーに説明と詳細情報を追加できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "36176160"
  **カテゴリ**  
  新しいポリシーを作成する場合は、ポリシー カテゴリを選択します。  
   
- **description**  
+ **[説明]**  
  ポリシーの説明を入力します。  
   
  **[追加のヘルプ ハイパーリンク: 表示するテキスト]**  

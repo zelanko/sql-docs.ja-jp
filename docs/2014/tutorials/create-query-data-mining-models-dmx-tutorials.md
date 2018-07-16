@@ -1,5 +1,5 @@
 ---
-title: '作成して、dmx データ マイニング モデルのクエリ: チュートリアル (Analysis Services - データ マイニング) |Microsoft ドキュメント'
+title: '作成して、DMX を使用したデータ マイニング モデルのクエリ: チュートリアル (Analysis Services - データ マイニング) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 46a60e6fc75613b2f763a31185f3e3861b125fc5
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 93bdf0ee8ed305e9e3843b011ce8057894b8b287
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234408"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>DMX を使用したデータ マイニング モデルの作成とクエリ : チュートリアル (Analysis Services - データ マイニング)
-  使用してデータ マイニング ソリューションを作成した後に[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]傾向を予測、データのパターンを取得、およびマイニング モデルの精度を測定するデータ マイニング モデルに対してクエリを作成することができます。  
+  使用してデータ マイニング ソリューションを作成した後[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]傾向を予測し、データのパターンを取得して、マイニング モデルの精度を測定するデータ マイニング モデルに対するクエリを作成することができます。  
   
- 次の一覧のステップバイ ステップ チュートリアルを使用して、ビルドおよびを使用してデータ マイニング クエリを実行する方法について役立つ[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データを最大限に取得できます。  
+ ステップ バイ ステップ チュートリアルは、次の一覧を使用して、ビルドして使用してデータ マイニング クエリを実行、する方法について役立つ[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データを最大限に活用できるようにします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36312400"
 ## <a name="reference"></a>リファレンス  
  [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [データ マイニング拡張機能&#40;DMX&#41;参照](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [データ マイニング拡張機能&#40;DMX&#41;リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>関連項目  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36312400"
   
      このチュートリアルでは、プロジェクトの作成方法、マイニング構造とマイニング モデルの作成方法など基本的な概念について説明します。  
   
--   [データ マイニング チュートリアルを中間&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+-   [中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
      このチュートリアルは複数の個別のレッスンをまとめたもので、それぞれのレッスンで異なる種類のモデルについて説明します。 各レッスンで、モデルを作成し、そのモデルを検証してから、モデルをカスタマイズして予測クエリを作成するまでの一連の手順について説明します。  
   

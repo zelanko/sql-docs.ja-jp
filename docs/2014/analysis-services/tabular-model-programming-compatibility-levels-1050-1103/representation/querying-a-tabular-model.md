@@ -1,5 +1,5 @@
 ---
-title: 表形式モデルの照会 |Microsoft ドキュメント
+title: 表形式モデルのクエリ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 396685b9b6a4ffbfa46db64a16ee3e401b0b9042
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5936ef813b8533d72c8ebdd3d801f1ccfb6d3a7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188819"
 ---
 # <a name="querying-a-tabular-model"></a>テーブル モデルのクエリ
   テーブル モデルのクエリを実行することは、テーブル データベースからデータを取得することを意味します。この目的を達成する方法は 2 つあります。DAX 内の表形式クエリを使用する方法と、MDX を使用して、キューブから取得するような形でデータを取得する方法です。 ただし、テーブル モデルの基になるモードによっては、DAX 表形式クエリしか使用できない場合があります。DirectQuery モードでは、DAX 表形式クエリを使用する必要があります。  

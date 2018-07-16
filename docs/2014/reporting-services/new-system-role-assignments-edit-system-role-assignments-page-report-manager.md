@@ -1,5 +1,5 @@
 ---
-title: '新しいシステム ロールの割り当て: 編集システム ロールの割り当て ページ (レポート マネージャー) |Microsoft ドキュメント'
+title: '新しいシステム ロールの割り当て: 編集システム ロールの割り当て ページ (レポート マネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4cc3521561aac3e91e2af2dd8f45eea77b74b58e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 6b580fc8ab1a2558d8c356372d6ccbd4f40ebb95
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331272"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>[新しいシステム ロールの割り当て]: [システム ロールの割り当てを編集] ページ (レポート マネージャー)
   レポート サーバーのセキュリティを定義する場合には、[システム ロールの新規割り当て] ページまたは [システム ロールの割り当てを編集] ページを使用します。 すべてのセキュリティはロールの割り当てによって定義され、この割り当てを通じて、実行できるタスクに特定のユーザーまたはグループがマップされます。 タスク リストは、ロールの割り当ての作成時に選択するロールの定義を示します。  
@@ -47,7 +47,7 @@ ms.locfileid: "36174080"
   
 ## <a name="options"></a>および  
  **グループまたはユーザー**  
- ドメインのグループ アカウント名またはユーザー アカウント名を入力します。 レポート サーバーがローカル アカウントで実行されている場合は、ローカルのグループまたはユーザーを指定する必要があります。 レポート サーバーがドメイン アカウントで実行されている場合は、ドメイン グループまたはドメイン ユーザーを指定する必要があります。 この形式でアカウントを入力してください:\<ドメイン >\\< アカウント\>です。  
+ ドメインのグループ アカウント名またはユーザー アカウント名を入力します。 レポート サーバーがローカル アカウントで実行されている場合は、ローカルのグループまたはユーザーを指定する必要があります。 レポート サーバーがドメイン アカウントで実行されている場合は、ドメイン グループまたはドメイン ユーザーを指定する必要があります。 この形式でアカウントを入力します:\<ドメイン >\\< アカウント\>します。  
   
 > [!NOTE]  
 >  このボックスは、[新しいロールの割り当て] ページでのみ使用できます。  
@@ -55,9 +55,9 @@ ms.locfileid: "36174080"
  **Roles**  
  他のユーザーに割り当てることができるシステム レベルのロールを指定します。 1 つのロールの割り当てに複数のロールを指定できます。  
   
- レポート マネージャーでは、各ロールのタスクは表示されず、タスクを追加または変更することもできません。 ロールは定義されているとおりに使用する必要があります。 作成、変更、またはロールの削除を使用して[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]です。 詳細については、次を参照してください。[作成、削除、またはロールを変更&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)です。  
+ レポート マネージャーでは、各ロールのタスクは表示されず、タスクを追加または変更することもできません。 ロールは定義されているとおりに使用する必要があります。 作成、変更、またはロールの削除を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]します。 詳細については、次を参照してください。[作成、削除、またはロールを変更&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)します。  
   
- 使用している場合は、 [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services には、提供されている既定のロールを使用する必要があります。  
+ 使用している場合[!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)]with Advanced Services では、提供される既定のロールを使用する必要があります。  
   
  **説明**  
  ロールに関する詳細を表示します。 システム ユーザーやシステム管理者などの定義済みロールに関しては、各ロールでサポートされているタスクの要約が説明として提供されます。  
@@ -69,7 +69,7 @@ ms.locfileid: "36174080"
 >  このボタンは、[ロールの割り当てを編集] ページでのみ使用できます。  
   
 ## <a name="see-also"></a>参照  
- [レポート マネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
+ [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [ロールの割り当て](security/role-assignments.md)   
  [ロールの定義](security/role-definitions.md)  
   

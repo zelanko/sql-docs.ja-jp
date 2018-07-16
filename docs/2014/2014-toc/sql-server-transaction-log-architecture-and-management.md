@@ -1,25 +1,24 @@
 ---
-title: SQL Server トランザクション ログのアーキテクチャと管理 |Microsoft ドキュメント
+title: SQL Server トランザクション ログのアーキテクチャと管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 15e0b458e74df9e40a05a4abbeeeb730b0bc0cea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301342"
 ---
 # SQL Server トランザクション ログのアーキテクチャと管理
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "36175643"
   
  論理ログの末尾が物理ログ ファイルの末尾に達すると、新しいログ レコードはまた物理ログ ファイルの先頭から記録されていきます。  
   
- ![ログに記録ログ ファイルの先頭には約ラップ](media/tranlog4.gif "ログ レコードがログ ファイルの先頭には約ラップ")  
+ ![ログ レコードのログ ファイルの先頭に約ラップ](media/tranlog4.gif "ログ レコードがログ ファイルの先頭に約ラップ")  
   
  このサイクルは、論理ログの末尾が論理ログの先頭に達しない限り、無限に繰り返されます。 古いログ レコードが頻繁に切り捨てられ、次のチェックポイントで作成されるすべての新規ログ レコードを格納するのに必要な領域が常に確保されている場合、論理ログがいっぱいになることはありません。 ただし、論理ログの末尾が論理ログの先頭に達した場合には、次のいずれかの処理が発生します。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "36175643"
   
  次の図は、切り捨てを行う前と後のトランザクション ログを示しています。 最初の図は、切り捨てが行われていないトランザクション ログを示しています。 現在、4 つの仮想ログ ファイルが論理ログで使用されています。 この論理ログは最初の仮想ログ ファイルの先頭から始まり、仮想ログ 4 で終了します。 MinLSN レコードは仮想ログ 3 にあります。 仮想ログ 1 および仮想ログ 2 には、非アクティブなログ レコードのみが含まれています。 これらのレコードは切り捨てることができます。 仮想ログ 5 はまだ使用されていないので、現在の論理ログには含まれていません。  
   
- ![次の 4 つの仮想ログがあるトランザクション ログ](media/tranlog2.gif "と 4 つの仮想ログとトランザクション ログ")  
+ ![次の 4 つの仮想ログがあるトランザクション ログ](media/tranlog2.gif "4 つの仮想ログがあるトランザクション ログ")  
   
  2 番目の図は、切り捨て後のログの状態を示しています。 仮想ログ 1 および仮想ログ 2 は再利用のために解放されています。 この時点で、論理ログは仮想ログ 3 の先頭から始まっています。 仮想ログ 5 はまだ使用されていないので、現在の論理ログには含まれていません。  
   

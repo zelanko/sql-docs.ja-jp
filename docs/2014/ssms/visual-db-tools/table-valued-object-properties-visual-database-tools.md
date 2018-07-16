@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.TVO
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6489472e8af5448bc6e35d94219c6c0228507a6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 64cbcbdcf358ac8a653ccb424f8405731cfe4280
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284308"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>テーブル値オブジェクトのプロパティ (Visual Database Tools)
   これらのプロパティは、 **クエリおよびビュー デザイナー**でテーブル値オブジェクトを選択したときに、[プロパティ] ウィンドウに表示されます。 テーブル値オブジェクトは、ビュー、シノニム、派生テーブル、またはテーブル値関数です。 特に指定しない限り、 **[プロパティ]** ウィンドウのこれらのプロパティは読み取り専用です。  
@@ -35,7 +35,7 @@ ms.locfileid: "36164925"
  **[IDENTITY] カテゴリ**  
  展開すると、 **[オブジェクト名]** プロパティと **[TVO 型]** プロパティが表示されます。  
   
- **Name**  
+ **名前**  
  選択されたテーブル値オブジェクトの名前を表示します。  
   
  **[TVO 型]**  

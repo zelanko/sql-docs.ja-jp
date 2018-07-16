@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10170"
 - sql12.rtp.rptdesigner.datasetproperties.filters.f1
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b5dcb40980612d0198c6407e19bcc0986c06609
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e6bff1d3c5d9a687fd01ccd179c86dddde9a8e1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280238"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>[フィルター] ([データセットのプロパティ] ダイアログ ボックス)
   **[データセットのプロパティ]** ダイアログ ボックスの **[フィルター]** を選択すると、データセットに対するフィルターを作成できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "36175285"
  **[追加]**  
  一覧に新しいフィルター句を追加します。  
   
- **Delete**  
+ **削除**  
  選択したフィルター句を一覧から削除します。  
   
  **上矢印**  

@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルおよび構造体をカスタマイズする |Microsoft ドキュメント
+title: マイニング モデルとマイニング構造のカスタマイズ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining models [Analysis Services], properties
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 595e914741361fa0922da59a2e0fdc699d96054c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79790404f11ffc40ca3e4826217ab331fec92a85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286358"
 ---
 # <a name="customize-mining-models-and-structure"></a>マイニング モデルとマイニング構造のカスタマイズ
   現在のビジネス ニーズに合ったアルゴリズムを選択した後、マイニング モデルを次の方法でカスタマイズできます。モデルをカスタマイズすると、より良い結果を得られる場合があります。  
@@ -65,11 +65,11 @@ ms.locfileid: "36164917"
 ### <a name="creating-aliases-for-model-columns"></a>モデル列の別名の作成  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でマイニング モデルを作成すると、マイニング構造内の列と同じ名前が使用されます。 マイニング モデルのすべての列に、別名を追加できます。 こうすると、列の内容や使用法がわかりやすくなったり、名前が短くなるためクエリを作成しやすくなったりします。 別名は、列のコピーを作成し、わかりやすい名前を付ける場合にも便利です。  
   
- 編集することによって別名を作成する、`Name`マイニング モデル列のプロパティです。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 元の名前を入力して新しい値の列の ID として使用する継続`Name`列の別名になり、グリッド列の使用法の横にあるかっこ内に表示されます。  
+ 編集して別名を作成する、`Name`マイニング モデル列のプロパティ。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 元の名前を入力して新しい値の列の ID として使用するには引き続き`Name`列の別名になり、グリッドの列の使用法の横にかっこが表示されます。  
   
- ![エイリアスのマイニング モデル列](../media/modelcolumnalias-income.gif "エイリアスのマイニング モデル列")  
+ ![エイリアスのマイニング モデル列](../media/modelcolumnalias-income.gif "エイリアスでは、マイニング モデル列")  
   
- この図には、すべて収入に関連したマイニング構造列の複数のコピーを持つ関連モデルを示しています。 構造列のコピーは、それぞれ異なる方法で分離されています。 図のモデルでは、それぞれ異なる列をマイニング構造から使用していますが、モデル間で列を比較しやすくするため、各モデルの列名を **[収入]** に変更しました。  
+ この図には、すべて収入に関連したマイニング構造列の複数のコピーを持つ関連モデルを示しています。 構造列のコピーは、それぞれ異なる方法で分離されています。 図のモデルでは、それぞれ異なる列をマイニング構造から使用していますが、モデル間で列を比較しやすくするため、各モデルの列名を [**収入**] に変更しました。  
   
 ### <a name="adding-filters"></a>フィルターの追加  
  マイニング モデルにはフィルターを追加できます。 フィルターは、モデル ケース内のデータをあるサブセットに制限する一連の WHERE 条件です。 フィルターは、モデルのトレーニング時に使用します。必要に応じて、モデルのテスト時や、精度チャートの作成時にも使用できます。  

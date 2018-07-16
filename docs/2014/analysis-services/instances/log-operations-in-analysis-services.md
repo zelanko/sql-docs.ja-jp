@@ -1,5 +1,5 @@
 ---
-title: Analysis Services での操作をログ |Microsoft ドキュメント
+title: Analysis Services での操作を記録 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2748496ead805834f0b6051f159dcca551b0b178
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 332f1ff5bff2379f3d11fa61bf3423a9d8e06347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228373"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services でのログ操作
   Analysis Services インスタンスは、msmdsrv.log ファイルにサーバーの通知、エラー、および警告のログを記録します。インストールするインスタンスごとに実行します。 管理者は、ルーチンのイベントと異常なイベントのどちらの情報を得る場合でも、このログを参照します。 最近のリリースにおいては、ログ記録が機能拡張され、さらに多くの情報が含まれるようになりました。 ログ レコードには、製品のバージョンおよびエディション情報だけでなく、プロセッサ、メモリ、接続、およびブロック イベントも含まれるようになりました。 [ログ記録の機能強化](http://support.microsoft.com/kb/2965035)に関するページで、全体的な変更の一覧を確認できます。  
@@ -59,16 +59,16 @@ ms.locfileid: "36177628"
   
  可能であれば、Management Studio の [サーバーのプロパティ] ページにあるログ記録のプロパティを設定することをお勧めします。 ただし、場合によっては、管理ツールに表示されていない設定を構成するため、msmdsrv.ini ファイルを直接編集する必要があります。  
   
- ![ログ設定が表示された構成ファイルのセクション](../media/ssas-logfilesettings.png "ログ設定が表示された構成ファイルのセクション")  
+ ![ログ設定を示した構成ファイルのセクション](../media/ssas-logfilesettings.png "ログ設定を示した構成ファイルのセクション")  
   
 ##  <a name="bkmk_msmdsrv"></a> MSMDSRV サービス ログ ファイル  
  Analysis Services は、サーバーの操作のログを msmdsrv.log ファイルにインスタンスごとに記録します。このログ ファイルの場所は \program files\Microsoft SQL Server\\<instance\>\Olap\Log です。  
   
  このログ ファイルは、サービスを再起動するたびに空になります。 以前のリリースでは、ログ ファイルが使用できなくなるほど肥大化する事態を避けるためだけに、管理者がサービスを再起動してログ ファイルをフラッシュするということも行われていました。 これはもう不要です。 SQL Server 2012 SP2 以降で導入された構成設定では、ログ ファイルとその履歴のサイズを制御できます。  
   
--   `MaxFileSizeMB` は、ログ ファイルの最大サイズを MB 単位で指定します。 既定値は 256 です。 置き換える有効な値は正の整数である必要があります。 ときに`MaxFileSizeMB`に達すると、Analysis Services は msmdsrv {現在のタイムスタンプ} .log ファイルと現在のファイルの名前を変更し、新しい msmdsrv.log ファイルを開始します。  
+-   `MaxFileSizeMB` は、ログ ファイルの最大サイズを MB 単位で指定します。 既定値は 256 です。 置き換える有効な値は正の整数である必要があります。 ときに`MaxFileSizeMB`に達すると、Analysis Services は msmdsrv {現在のタイムスタンプ} .log ファイルでは、現在のファイルの名前を変更し、新しい msmdsrv.log ファイルを開始します。  
   
--   `MaxNumberFiles` 古いログ ファイルの保有期間を指定します。 既定値は 0 (無効) です。 ログ ファイルのバージョンを維持するには、正の整数に変更します。 ときに`MaxNumberFiles`に達すると、Analysis Services は、名前の最も古いタイムスタンプを使用してファイルを削除します。  
+-   `MaxNumberFiles` 古いログ ファイルの保有期間を指定します。 既定値は 0 (無効) です。 ログ ファイルのバージョンを維持するには、正の整数に変更します。 ときに`MaxNumberFiles`は Analysis Services に達すると、その名前の最も古いタイムスタンプを使用してファイルを削除します。  
   
  これらの設定を使用するには、以下を実行します。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36177628"
   
  クエリ ログの設定は、サーバー全体に適用します。 指定した設定は、このサーバーで実行されているすべてのデータベースで使用されます。  
   
- ![Management Studio でのログ設定を照会](../media/ssas-querylogsettings.png "Management Studio でのクエリ ログの設定")  
+ ![Management Studio でのログ設定の照会](../media/ssas-querylogsettings.png "Management Studio でのクエリ ログの設定")  
   
  構成設定を指定したら、MDX クエリを複数回実行します。 サンプリングを 10 に設定している場合は、クエリを 11 回実行します。テーブルが作成されていることを確認します。 Management Studio で、リレーショナル データベース エンジンに接続し、データベース フォルダーを開きます。 **Tables** フォルダーを開き、 **OlapQueryLog** が存在していることを確認します。 テーブルがすぐに表示されない場合は、フォルダーの情報を更新して内容への変更を取得します。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36177628"
   
  特に Microsoft サポートから指示がない限り、ほとんどの管理者は既定の設定を使用します。 このサポート技術情報「 [メモリ ダンプ ファイルを生成するように Analysis Services を構成する方法](http://support.microsoft.com/kb/919711)」は古いものですが、ダンプ ファイルの構成手順として今も使用されています。  
   
- 構成設定を変更する最も可能性の高いは、`CreateAndSendCrashReports`設定は、メモリ ダンプ ファイルを生成するかどうかを決定するために使用します。  
+ 最も頻繁に変更される設定の構成は、`CreateAndSendCrashReports`設定、メモリ ダンプ ファイルを生成するかどうかを決定するために使用します。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -164,7 +164,7 @@ ms.locfileid: "36177628"
   
  `CrashReportsFolder` はダンプ ファイルの場所です。 既定では、.mdmp ファイルと関連付けられているログ レコードは \Olap\Log フォルダー内にあります。  
   
- `SQLDumperFlagsOn` 完全ダンプの生成に使用されます。 既定では、完全ダンプは無効です。 このプロパティを設定することができます`0x34`です。  
+ `SQLDumperFlagsOn` 完全ダンプの生成に使用されます。 既定では、完全ダンプは無効です。 このプロパティを設定することができます`0x34`します。  
   
  次のリンクに詳しい背景情報があります。  
   

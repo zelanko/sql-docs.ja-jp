@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e2a663799a6f4559d3720638b1383b648562cdec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: db831f0a92962eaa12d220d31d762d2c591e0d45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309382"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>レポートへのグラフの追加 (レポート ビルダーおよび SSRS)
   データをビジュアル形式でまとめるには、グラフ データ領域を使用します。 表示するデータの種類に対して適切な種類のグラフを選択することが重要です。 これにより、データをグラフ形式にした場合にどの程度わかりやすくなるかが決まります。 グラフ要素の詳細については、「[グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)」を参照してください。  
@@ -46,7 +46,7 @@ ms.locfileid: "36175655"
   
 ### <a name="to-add-a-chart-to-a-report"></a>レポートにグラフを追加するには  
   
-1.  レポートを作成し、データセットを定義します。 詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)です。  
+1.  レポートを作成し、データセットを定義します。 詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)します。  
   
 2.  **[挿入]** タブの **[グラフ]** をクリックし、次に **[グラフの挿入]** をクリックします。  
   

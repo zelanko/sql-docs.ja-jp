@@ -1,5 +1,5 @@
 ---
-title: マージ結合変換エディター |Microsoft ドキュメント
+title: マージ結合変換エディター |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointransformation.f1
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1f548972d99242a4bc3d3423eeed748de2c31704
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 209b6b64e200503144fb47e80d2f4e7c783e1db5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300482"
 ---
 # <a name="merge-join-transformation-editor"></a>マージ結合変換エディター
   **[マージ結合変換エディター]** ダイアログ ボックスを使用すると、結合の種類、結合列、および結合によって組み合わされた 2 つの入力をマージするための出力列を指定できます。  

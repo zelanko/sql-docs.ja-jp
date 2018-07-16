@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.reports.f1
 - sql12.dta.sessionmonitor.f1
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7474f3ca2ae832a343c2b356a1bccd7d0947a92a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 83b44addd88b83b424e9cd956dcc4bd7621ee118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167103"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーからの出力の表示および操作
   データベース エンジン チューニング アドバイザーによってデータベースをチューニングすると、サマリー、推奨設定、レポート、およびチューニング ログが作成されます。 チューニング ログ出力を使用すると、データベース エンジン チューニング アドバイザーのチューニング セッションをトラブルシューティングできます。 サマリー、推奨設定、およびレポートを使用すると、チューニングに関する推奨設定を実装するか、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に必要なクエリのパフォーマンスを向上させるまでチューニングを継続するかを判断できます。 データベース チューニング アドバイザーを使用してワークロードを作成およびデータベースをチューニングする方法については、「 [データベース エンジン チューニング アドバイザーの起動および使用](database-engine-tuning-advisor.md)」を参照してください。  
@@ -46,7 +46,7 @@ ms.locfileid: "36179308"
  また、GUI を使用して、 **dta** コマンド ライン ユーティリティによって生成したチューニング出力を表示できます。  
   
 > [!NOTE]  
->  **dta** コマンド ライン ユーティリティを使用し、 **-ox** 引数を使用して出力を XML ファイルに書き込むように指定した場合は、 **の** [ファイル] **メニューの** [ファイルを開く] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]をクリックすると、XML 出力ファイルを開いて表示できます。 詳細については、「 [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)」を参照してください。 **dta** コマンド ライン ユーティリティの詳細については、「 [dta ユーティリティ](../../tools/dta/dta-utility.md)」を参照してください。  
+>  **dta** コマンド ライン ユーティリティを使用し、 **-ox** 引数を使用して出力を XML ファイルに書き込むように指定した場合は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ファイル]** メニューから **[ファイルを開く]** をクリックすると、XML 出力ファイルを開いて表示できます。 詳細については、「 [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)」を参照してください。 **dta** コマンド ライン ユーティリティの詳細については、「 [dta ユーティリティ](../../tools/dta/dta-utility.md)」を参照してください。  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>データベース エンジン チューニング アドバイザーの GUI を使用してチューニングに関する推奨設定を表示するには  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36179308"
   
 2.  **[ファイル]** メニューで **[セッション結果のエクスポート]** をクリックし、XML ファイルとして保存します。  
   
-3.  使い慣れた XML エディター、テキスト エディター、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、手順 2. で作成した XML ファイルを開きます。 下方向にスクロール、`Configuration`要素。 コピーし、貼り付け、`Configuration`要素セクションを xml 入力の後にファイル テンプレート、`TuningOptions`要素。 この XML 入力ファイルを保存します。  
+3.  使い慣れた XML エディター、テキスト エディター、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、手順 2. で作成した XML ファイルを開きます。 下へスクロールして、`Configuration`要素。 コピーして貼り付け、 `Configuration` 、xml 要素のセクションの入力後のファイルのテンプレート、`TuningOptions`要素。 この XML 入力ファイルを保存します。  
   
 4.  手順 3. で作成した新しい XML 入力ファイルで、`TuningOptions` 要素にチューニング オプションを指定し、`Configuration` 要素セクションを編集し (分析に応じて適宜、物理デザイン構造を追加または削除)、ファイルを保存して、データベース エンジン チューニング アドバイザー XML スキーマに対する検証を行います。 この XML ファイルの編集方法については、「[XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)」を参照してください。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36179308"
   
 2.  [ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) をコピーして、XML エディターまたはテキスト エディターに貼り付けます。 このサンプルを使用して、チューニング セッションの XML 入力ファイルを作成します。 このタスクの実行については、「 [データベース エンジン チューニング アドバイザーの起動および使用](database-engine-tuning-advisor.md)」の「XML 入力ファイルの作成」を参照してください。  
   
-3.  編集、`TuningOptions`と`Configuration`サンプルの XML 入力ファイル内の要素。 `TuningOptions`要素、データベース エンジン チューニング アドバイザーがチューニング セッション中に考慮する物理デザイン構造を指定します。 `Configuration` 要素で、データベース エンジン チューニング アドバイザーで分析される、物理データベース デザイン構造の仮定の構成に一致する物理デザイン構造を指定します。 については、どのような属性と子要素で使用できる、`TuningOptions`と`Configuration`要素の親を参照してください[XML 入力ファイル リファレンス&#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)です。  
+3.  編集、`TuningOptions`と`Configuration`サンプルの XML 入力ファイル内の要素。 `TuningOptions`要素、データベース エンジン チューニング アドバイザーのチューニング セッション中に考慮するされる物理デザイン構造を指定します。 `Configuration` 要素で、データベース エンジン チューニング アドバイザーで分析される、物理データベース デザイン構造の仮定の構成に一致する物理デザイン構造を指定します。 使用できる属性と子要素の詳細については、`TuningOptions`と`Configuration`要素の親を参照してください[XML 入力ファイル リファレンス&#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)します。  
   
 4.  **.xml** 拡張子を付けて、入力ファイルを保存します。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "36179308"
   
      データベース エンジン チューニング アドバイザーの XML スキーマは、[http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta) から入手することもできます。  
   
-6.  ワークロードと XML 入力ファイルの作成後、分析用に **dta** コマンド ライン ユーティリティに入力ファイルを送信できます。 ユーティリティの **-ox** 引数には、XML 出力ファイル名を指定します。 これにより、XML 出力ファイルがで指定した推奨構成で、`Configuration`要素。 データベース エンジン チューニング アドバイザーの出力に基づいた他の仮定の構成を確認するには、もう一度実行する場合は、コピーして貼り付ける、`Configuration`新しい出力ファイルまたは元の XML 入力ファイルから要素の内容。 **dta** ユーティリティでの XML 入力ファイルの使用の詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](database-engine-tuning-advisor.md)」の dta ユーティリティを使用してデータベースをチューニングする方法に関するセクションを参照してください。  
+6.  ワークロードと XML 入力ファイルの作成後、分析用に **dta** コマンド ライン ユーティリティに入力ファイルを送信できます。 ユーティリティの **-ox** 引数には、XML 出力ファイル名を指定します。 これにより、XML 出力ファイルがで指定した推奨構成で、`Configuration`要素。 データベース エンジン チューニング アドバイザーの出力に基づいている他の仮定の構成を確認するには、もう一度実行する場合は、コピーし、貼り付け、`Configuration`を新しい出力ファイルまたは元の XML 入力ファイルからの要素の内容。 **dta** ユーティリティでの XML 入力ファイルの使用の詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](database-engine-tuning-advisor.md)」の dta ユーティリティを使用してデータベースをチューニングする方法に関するセクションを参照してください。  
   
      チューニング終了後、データベース エンジン チューニング アドバイザー GUI を使用してチューニング レポートを表示するか、または XML 出力ファイルを開いて `TuningSummary` 要素や `Configuration` 要素を表示し、データベース エンジン チューニング アドバイザーの推奨設定を表示します。 チューニング セッションの結果の表示については、このトピックの「 [チューニング出力の表示](#View) 」を参照してください。 XML 出力ファイルには、データベース エンジン チューニング アドバイザーの分析レポートも含まれる場合があります。  
   
@@ -273,7 +273,7 @@ ms.locfileid: "36179308"
  **[推奨される対象]** の定義です。 列をクリックすると [SQL スクリプトのプレビュー] ダイアログ ボックスが開き、推奨される操作を実行するスクリプトが表示されます。  
   
 ##### <a name="index-recommendations"></a>[推奨インデックス]  
- **Database Name**  
+ **データベース名**  
  変更が推奨されたオブジェクトを含むデータベースです。  
   
  **[オブジェクト名]**  

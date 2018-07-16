@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65538
 - vdt.ppg.relationships
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9f0dc0db49ce458eab0eedb5da96647aa6500ae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: eb80883da9e078dd55dd2beb3c34bb5debe30815
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294532"
 ---
 # <a name="modify-foreign-key-relationships"></a>外部キー リレーションシップの変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、リレーションシップの外部キー側を変更できます。 テーブルの外部キーを変更すると、主キー テーブルの列に関連付けられる列が変更されます。  
@@ -103,10 +103,10 @@ ms.locfileid: "36072304"
      **[IDENTITY] カテゴリ**  
      展開して **[オブジェクト名]** および **[説明]** のプロパティ フィールドを表示します。  
   
-     **Name**  
+     **名前**  
      リレーションシップの名前を表示します。 新しいリレーションシップを作成した場合、このプロパティには、 **テーブル デザイナー**のアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
-     **description**  
+     **[説明]**  
      リレーションシップの説明です。 より詳細な説明を記述する場合は、 **[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号 ( **[...]** ) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
   
      **[テーブル デザイナー] カテゴリ**  

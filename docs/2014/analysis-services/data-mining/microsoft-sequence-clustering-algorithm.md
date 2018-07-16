@@ -1,5 +1,5 @@
 ---
-title: Microsoft シーケンス クラスター アルゴリズム |Microsoft ドキュメント
+title: Microsoft シーケンス クラスター アルゴリズム |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
 - algorithms [data mining]
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8c5a8a0b921ed59f40206a05326f4f4025c2bc6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be5171c376b9f454e0474400e8bab2c55692f3bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306582"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>「Microsoft シーケンス クラスター アルゴリズム」
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]シーケンス クラスター アルゴリズムは、によって提供されるシーケンス分析アルゴリズム[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 このアルゴリズムを使用すると、次のパスにリンクするイベントを含むデータを調べるまたは*シーケンス*です。 このアルゴリズムは、同一の複数のシーケンスをグループ化またはクラスター化することによって、最も一般的なシーケンスを見つけます。 次に、シーケンスを含むデータの例をいくつか示します。このようなシーケンスはデータ マイニングで使用して、一般的な問題やビジネス シナリオの理解を深めることができます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]シーケンス クラスター アルゴリズムは、によって提供されるシーケンス分析アルゴリズム[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 このアルゴリズムを使用するには、次のパスによってリンクできるイベントを含んでいるデータを探索または*シーケンス*します。 このアルゴリズムは、同一の複数のシーケンスをグループ化またはクラスター化することによって、最も一般的なシーケンスを見つけます。 次に、シーケンスを含むデータの例をいくつか示します。このようなシーケンスはデータ マイニングで使用して、一般的な問題やビジネス シナリオの理解を深めることができます。  
   
 -   ユーザーによる Web サイト閲覧時に作成されるクリック パス  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36175247"
  このアルゴリズムは、多くの点で [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスター アルゴリズムに似ています。 ただし [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムでは、類似する属性を含むケースのクラスターを検索する代わりに、シーケンス内の類似するパスを含むケースのクラスターを検索します。  
   
 ## <a name="example"></a>例  
- [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] Web サイトがサイト ユーザーのアクセスのどのページおよびページが表示した注文に関する情報を収集します。 顧客は、サイトにログインしてオンラインで注文することができます。 これにより、各顧客プロファイルに対するクリック情報が得られます。 このデータに対して [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用することによって、類似したクリックのパターンまたはシーケンスを持つ顧客のグループ (クラスター) を検出できます。 次に、これらのクラスターを使用して、顧客の Web サイト内での移動状況の分析、特定の製品の売上に最も密接に関連しているページの識別、次に閲覧される可能性が高いページの予測などが実行できます。  
+ [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] Web サイトはどのようなページのサイト アクセスするユーザー、および閲覧は、ページの順序に関する情報を収集します。 顧客は、サイトにログインしてオンラインで注文することができます。 これにより、各顧客プロファイルに対するクリック情報が得られます。 このデータに対して [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用することによって、類似したクリックのパターンまたはシーケンスを持つ顧客のグループ (クラスター) を検出できます。 次に、これらのクラスターを使用して、顧客の Web サイト内での移動状況の分析、特定の製品の売上に最も密接に関連しているページの識別、次に閲覧される可能性が高いページの予測などが実行できます。  
   
 ## <a name="how-the-algorithm-works"></a>アルゴリズムの動作  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムは、クラスタリング技法と Markov 連鎖分析を組み合わせた複合アルゴリズムであり、クラスターとそのシーケンスを特定します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムの特徴の 1 つは、シーケンス データを使用することです。 このデータは通常、特定ユーザーによる一連の製品購入や Web でのクリックなど、データセット内の一連のイベントや状態間の遷移を表します。 クラスタリング用の入力として使用するのに適したシーケンスを判断するために、アルゴリズムはすべての遷移の確率を調べ、データセット内の有効なすべてのシーケンス間の差異または距離を測定します。 候補となるシーケンスの一覧がアルゴリズムによって作成された後、クラスタリングの EM 手法の入力としてシーケンス情報が使用されます。  
@@ -82,7 +82,7 @@ ms.locfileid: "36175247"
   
 ## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft シーケンス クラスタ リング アルゴリズム テクニカル リファレンス](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Microsoft シーケンス クラスター アルゴリズム テクニカル リファレンス](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [シーケンス クラスター モデルのクエリ例](clustering-model-query-examples.md)   
  [Microsoft シーケンス クラスター ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   

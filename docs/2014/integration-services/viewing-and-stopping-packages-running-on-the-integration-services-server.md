@@ -1,5 +1,5 @@
 ---
-title: サービス サーバーの表示との統合の実行中のパッケージを停止 |Microsoft ドキュメント
+title: サービス サーバーの表示と、統合で実行中のパッケージの停止 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
 - managing running packages [Integration Services]
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - running package [Integration Services], managing
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ce4fd750986269c0e92ae2ea764f02e1bd642cb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cef267dbb770c0ccb39ea40143ce9591f915db5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215832"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Integration Services サーバーで実行中のパッケージの表示と停止
-  `SSISDB`データベースがユーザーに表示されない内部テーブルに実行履歴を格納します。 ただし、必要な情報は、パブリック ビューに対してクエリを実行することで公開されます。 また、パッケージに関連した一般的なタスクを実行するために呼び出すことができるストアド プロシージャも用意されています。  
+  `SSISDB`データベースは、ユーザーに表示されない内部テーブルで実行履歴を格納します。 ただし、必要な情報は、パブリック ビューに対してクエリを実行することで公開されます。 また、パッケージに関連した一般的なタスクを実行するために呼び出すことができるストアド プロシージャも用意されています。  
   
- 通常、サーバー上の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクトは [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で管理します。 また、データベース ビューに対してクエリを実行し、ストアド プロシージャを直接呼び出すことや、マネージ API を呼び出すカスタム コードを記述することもできます。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] およびマネージ API は、ビューに対してクエリし、多くのタスクを実行するストアド プロシージャを呼び出します。 たとえば、サーバーで現在実行中の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの一覧を表示し、必要に応じてパッケージの停止を要求できます。  
+ 通常、サーバー上の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクトは [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で管理します。 また、データベース ビューに対してクエリを実行し、ストアド プロシージャを直接呼び出すことや、マネージド API を呼び出すカスタム コードを記述することもできます。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] およびマネージ API は、ビューに対してクエリし、多くのタスクを実行するストアド プロシージャを呼び出します。 たとえば、サーバーで現在実行中の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの一覧を表示し、必要に応じてパッケージの停止を要求できます。  
   
 ## <a name="viewing-the-list-of-running-packages"></a>実行中のパッケージの一覧の表示  
  **[アクティブな操作]** ダイアログ ボックスでは、サーバーで現在実行中のパッケージの一覧を表示できます。 詳しくは、「 [Active Operations Dialog Box](../../2014/integration-services/active-operations-dialog-box.md)」をご覧ください。  
@@ -39,7 +39,7 @@ ms.locfileid: "36165894"
  [!INCLUDE[tsql](../includes/tsql-md.md)] アクセス  
  サーバーで実行中のパッケージの一覧を表示するには、ステータスが 2 のパッケージに対してビュー [catalog.executions (SSISDB データベース)](/sql/integration-services/system-views/catalog-executions-ssisdb-database) をクエリします。  
   
- マネージ API を使用したプログラムによるアクセス  
+ マネージド API を使用したプログラムによるアクセス  
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間とそのクラスのトピックをご覧ください。  
   
 ## <a name="stopping-a-running-package"></a>実行中のパッケージの停止  
@@ -50,7 +50,7 @@ ms.locfileid: "36165894"
  [!INCLUDE[tsql](../includes/tsql-md.md)] アクセス  
  サーバーで実行中のパッケージを停止するには、ストアド プロシージャ [catalog.stop_operation (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database) を呼び出します。  
   
- マネージ API を使用したプログラムによるアクセス  
+ マネージド API を使用したプログラムによるアクセス  
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間とそのクラスのトピックをご覧ください。  
   
 ## <a name="viewing-the-history-of-packages-that-have-run"></a>実行したパッケージの履歴の表示  
@@ -61,7 +61,7 @@ ms.locfileid: "36165894"
  [!INCLUDE[tsql](../includes/tsql-md.md)] アクセス  
  実行したパッケージに関する情報を表示するには、ビュー [catalog.executions (SSISDB データベース)](/sql/integration-services/system-views/catalog-executions-ssisdb-database) をクエリします。  
   
- マネージ API を使用したプログラムによるアクセス  
+ マネージド API を使用したプログラムによるアクセス  
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間とそのクラスのトピックをご覧ください。  
   
 ## <a name="see-also"></a>参照  

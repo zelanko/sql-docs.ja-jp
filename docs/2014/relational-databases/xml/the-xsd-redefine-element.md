@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4ca94410d7011c30de0a5481451337d11fa57120
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 21f11e1d27ce94c62e2d3115134bf714c918a5d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175164"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 要素
-  W3C XSD の **redefine** 要素は、スキーマ コンポーネントの再定義をサポートします。 ただし、このディレクティブは、パフォーマンス コストがかかる可能性があるともする必要がありますのサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのインスタンスを再検証、`xml`再定義されたスキーマに関連付けられているデータ型。 このため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれらの要素をサポートしません。 **\<xsd:redefine>** 要素を含む XML スキーマはサーバーに拒否されます。  
+  W3C XSD の **redefine** 要素は、スキーマ コンポーネントの再定義をサポートします。 ただし、このディレクティブは、パフォーマンス コストがかかる可能性があるともする必要がありますをサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのインスタンスを再検証、`xml`再定義されたスキーマに関連付けられているデータ型。 このため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれらの要素をサポートしません。 **\<xsd:redefine>** 要素を含む XML スキーマはサーバーに拒否されます。  
   
  スキーマまたはスキーマ コンポーネントを更新するには、代わりに次の方法を使用できます。  
   

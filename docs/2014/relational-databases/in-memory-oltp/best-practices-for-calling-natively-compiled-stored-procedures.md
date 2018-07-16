@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5439f539e126a64cff92065e049da359e89345b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f28a62753f2ce6b5474e87be95276b0f464d4314
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298342"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの呼び出しに関するベスト プラクティス
   ネイティブ コンパイル ストアド プロシージャの特徴:  
@@ -52,9 +52,9 @@ ms.locfileid: "36175341"
   
  ネイティブ コンパイル ストアド プロシージャでの (非効率的な) 名前付きパラメーターの使用は、XEvent の `hekaton_slow_parameter_passing` を `reason=named_parameters` と共に使用して検出できます。  
   
- 同様に、同じ xevent が一致しない型の使用を検出できます`hekaton_slow_parameter_passing`で`reason=parameter_conversion`です。  
+ 同様に、同じ xevent の一致しない型の使用を検出できます`hekaton_slow_parameter_passing`で`reason=parameter_conversion`します。  
   
- メモリ最適化テーブルを使用するときは (多くのシナリオで) 再試行ロジックを実装する必要があり、特定の機能制限に対処する必要があるため、インタープリターによって処理されるラッパー形式の [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを作成する必要が生じることがあります。 例については、次を参照してください。[メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン](memory-optimized-tables.md)です。  
+ メモリ最適化テーブルを使用するときは (多くのシナリオで) 再試行ロジックを実装する必要があり、特定の機能制限に対処する必要があるため、インタープリターによって処理されるラッパー形式の [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを作成する必要が生じることがあります。 例については、次を参照してください。 [Retry Logic for Transactions on Memory-Optimized Tables に関するガイドライン](memory-optimized-tables.md)します。  
   
 ## <a name="see-also"></a>参照  
  [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)  

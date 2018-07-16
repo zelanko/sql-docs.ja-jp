@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f8982e0f600d48680283507dc7ef3d6fba274520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 58fe8e149a4152399738def5401a7a976cea827f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218712"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseRightsScript メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースおよびレポート サーバーの実行に必要なその他のデータベースに対してユーザー権限を付与する際に使用できる、SQL スクリプトを生成します。 呼び出し元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース サーバーに接続して、スクリプトを実行する必要があります。  
@@ -71,11 +71,11 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>コメント  
  *DatabaseName* が空の場合、 *IsRemote* は無視され、レポート サーバーの構成ファイルの値がデータベース名に使用されます。  
   
- 場合*IsWindowsUser*に設定されている`true`、 *UserName*形式である必要があります\<ドメイン >\\< ユーザー名\>です。  
+ 場合*IsWindowsUser*に設定されている`true`、 *UserName*形式にする必要があります\<ドメイン >\\< ユーザー名\>します。  
   
- ときに*IsWindowsUser*に設定されている`true`、生成されたスクリプトへのユーザーのログイン権限を付与する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、既定のデータベース、および許可として、レポート サーバー データベースを設定、 **RSExec** 、レポート サーバー データベース、レポート サーバー一時データベース、master データベースおよび MSDB システム データベースのロール。  
+ ときに*IsWindowsUser*に設定されている`true`、生成されるスクリプトのユーザーへのログイン権限を付与する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、許可が既定のデータベースとして、レポート サーバー データベースを設定、 **RSExec** 、レポート サーバー データベース、レポート サーバー一時データベース、master データベースおよび MSDB システム データベースの役割。  
   
- ときに*IsWindowsUser*に設定されている`true`メソッドは入力として標準 Windows Sid を受け入れます。 標準 Windows SID またはサービス アカウント名が指定されると、ユーザー名文字列に変換されます。 データベースがローカルである場合、アカウントはアカウントのローカライズされた正しい表現に変換されます。 データベースがリモートである場合、アカウントはコンピューターのアカウントとして表されます。  
+ ときに*IsWindowsUser*に設定されている`true`メソッドは入力として標準 Windows Sid を受け取ります。 標準 Windows SID またはサービス アカウント名が指定されると、ユーザー名文字列に変換されます。 データベースがローカルである場合、アカウントはアカウントのローカライズされた正しい表現に変換されます。 データベースがリモートである場合、アカウントはコンピューターのアカウントとして表されます。  
   
  次の表は、変換されるアカウントとそのリモート表現を示しています。  
   
@@ -92,7 +92,7 @@ out Int32 HRESULT);
   
  [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]では、組み込みアカウントを使用し、レポート サーバー データベースがリモートである場合、エラーが返されます。  
   
- 場合、`LocalService`組み込みアカウントを指定し、レポート サーバー データベースがリモートでエラーが返されます。  
+ 場合、`LocalService`組み込みアカウントを指定し、レポート サーバー データベースがリモート、エラーが返されます。  
   
  *IsWindowsUser* が true であり、 *UserName* に指定した値を変換する必要がある場合、WMI プロバイダーはレポート サーバー データベースが同じコンピューターにあるかリモート コンピューターにあるかを確認します。 インストールがローカルであるかどうかを確認するため、WMI プロバイダーは以下の値一覧に対して DatabaseServerName プロパティを評価します。 一致が見つかった場合、データベースはローカルです。 見つからなかった場合、リモートです。 比較では大文字小文字を区別しません。  
   
@@ -106,9 +106,9 @@ out Int32 HRESULT);
 |\<MachineFQDN>|example.redmond.microsoft.com|  
 |\<IPAddress>|180.012.345,678|  
   
- ときに*IsWindowsUser*に設定されている`true`、WMI プロバイダーは、アカウントの SID を取得する LookupAccountName してからに名前を取得する LookupAccountSID、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スクリプト。 このようにすると、使用するアカウント名は必ず [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 検証に合格します。  
+ ときに*IsWindowsUser*に設定されている`true`、WMI プロバイダーは、アカウントの SID を取得する LookupAccountName の呼び出しし、に配置する名前を取得する LookupAccountSID を呼び出して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スクリプト。 このようにすると、使用するアカウント名は必ず [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 検証に合格します。  
   
- ときに*IsWindowsUser*に設定されている`false`では、スクリプトの付与を生成、 **RSExec**レポート サーバー データベース、レポート サーバー一時データベースおよび MSDB データベースのロール。  
+ ときに*IsWindowsUser*に設定されている`false`、付与のスクリプトを生成、 **RSExec**レポート サーバー データベース、レポート サーバー一時データベースおよび MSDB データベース ロール。  
   
  ときに*IsWindowsUser*に設定されている`false`、SQL Server のユーザーに既に存在する必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スクリプトを正常に実行します。  
   

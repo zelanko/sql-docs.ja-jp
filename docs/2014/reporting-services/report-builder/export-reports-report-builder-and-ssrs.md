@@ -1,5 +1,5 @@
 ---
-title: (レポート ビルダーおよび SSRS) レポートをエクスポートする |Microsoft ドキュメント
+title: (レポート ビルダーおよび SSRS) レポートのエクスポート |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 54625bc927cd187b40c146b7bfdc4093645711c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f4760d57cec11c6955e1ad87d4278d6c22a55ee7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255804"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>レポートのエクスポート (レポート ビルダーおよび SSRS)
   レポートを実行した後は、Excel や PDF など、別の形式にレポートをエクスポートできます。また、レポートから利用できる Atom 準拠のデータ フィードを一覧表示する Atom サービス ドキュメントを生成してエクスポートすることもできます。  
@@ -40,7 +40,7 @@ ms.locfileid: "36164297"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、さまざまな表示拡張機能が用意されており、一般的なファイル形式へのレポートのエクスポートがサポートされます。 これらの表示拡張機能では、ソフト改ページを含むファイル形式 (Word や Excel など)、ハード改ページを含むファイル形式 (PDF や TIFF など)、またデータのみのファイル形式 (CSV や Atom 準拠の XML など) がサポートされます。  
   
- すぐにするレポートのエクスポートとレポートから Atom 準拠のデータ フィードを生成すると、次を参照してください[別のファイルの種類としてレポートをエクスポート&#40;レポート ビルダーおよび SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)と[からのデータ フィードの生成、。レポート&#40;レポート ビルダーおよび SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md)です。  
+ すぐにするレポートのエクスポートとレポートから Atom 準拠のデータ フィードを生成すると、次を参照してください[別のファイルの種類としてレポートをエクスポート&#40;レポート ビルダーおよび SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)と[からのデータ フィードを生成します。レポート&#40;レポート ビルダーおよび SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -68,8 +68,8 @@ ms.locfileid: "36164297"
 |形式|表示拡張機能の種類|説明|  
 |------------|------------------------------|-----------------|  
 |CSV|data|CSV (コンマ区切り) 表示拡張機能では、レポートのデータを平面的に表して、標準化されたプレーンテキスト形式でレポートを表示します。プレーンテキスト形式のレポートは、多くのアプリケーションで簡単に読み取ったり変換したりすることができます。<br /><br /> 詳細については、「[CSV ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)」を参照してください。|  
-|[エクスポート]|ソフト改ページ|Excel 表示拡張機能と互換性のある Excel 文書としてレポートを表示[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]2007-2010 および[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]2003、Microsoft Office Compatibility Pack for Word、Excel、PowerPoint がインストールされているとします。 レポートを Excel ワークシートにエクスポートすると、一部のレイアウトと元のデザイン要素が除去されます。レポートおよびレポート内のグループのプロパティを設定して、Excel へのエクスポート時にワークシート タブの名前を指定できます。 このレンダラーで生成されるファイル名の拡張子は xlsx です。<br /><br /> 詳細については、「[Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md)」を参照してください。<br /><br /> メモ: Excel 2003 表示拡張機能のネイティブ形式を表示する[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]2003 では、一部のレポート シナリオで使用できます。|  
-|Word|ソフト改ページ|Word 表示拡張機能と互換性がある Word 文書としてレポートを表示する[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007-2010 および[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2003、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack for Word、Excel、PowerPoint がインストールされています。 レポートを Word 文書にエクスポートした後は、レポートの内容を変更したり、宛名ラベル、発注書、手紙など、文書形式のレポートをデザインしたりできます。 このレンダラーによって生成されるファイルの拡張子は docx です。<br /><br /> 詳細については、「[Microsoft Word へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md)」を参照してください。<br /><br /> 注: Word 2003 表示拡張機能のネイティブ形式を表示する[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2003 では、一部のレポート シナリオで使用できます。|  
+|[エクスポート]|ソフト改ページ|Excel 表示拡張機能と互換性がある Excel 文書としてレポートを表示します[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]2007-2010 および[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]2003、Microsoft Office Compatibility Pack for Word、Excel、および PowerPoint がインストールされているとします。 レポートを Excel ワークシートにエクスポートすると、一部のレイアウトと元のデザイン要素が除去されます。レポートおよびレポート内のグループのプロパティを設定して、Excel へのエクスポート時にワークシート タブの名前を指定できます。 このレンダラーで生成されるファイル名の拡張子は xlsx です。<br /><br /> 詳細については、「[Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md)」を参照してください。<br /><br /> 注: Excel 2003 表示拡張機能のネイティブ形式で表示する[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]2003 は、一部のレポート シナリオで使用できます。|  
+|Word|ソフト改ページ|Word 表示拡張機能と互換性がある Word 文書としてレポートを表示します[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007-2010 および[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2003、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack for Word、Excel、および PowerPoint がインストールされています。 レポートを Word 文書にエクスポートした後は、レポートの内容を変更したり、宛名ラベル、発注書、手紙など、文書形式のレポートをデザインしたりできます。 このレンダラーによって生成されるファイルの拡張子は docx です。<br /><br /> 詳細については、「[Microsoft Word へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md)」を参照してください。<br /><br /> 注: Word 2003 表示拡張機能のネイティブ形式で表示する[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2003 は、一部のレポート シナリオで使用できます。|  
 |Web アーカイブ|ソフト改ページ|HTML 表示拡張機能では、HTML 形式でレポートを表示します。 また、完全な HTML ページを生成することも、他の HTML ページに埋め込むための HTML の一部分を生成することもできます。 すべての HTML は、UTF-8 エンコードで生成されます。<br /><br /> HTML 表示拡張機能は、レポート マネージャーで実行する場合など、レポート ビルダーでプレビューされ、ブラウザーで表示されるレポートの既定の表示拡張機能です。<br /><br /> 詳細については、「[HTML での表示 &#40;レポート ビルダーおよび SSRS&#41;](rendering-to-html-report-builder-and-ssrs.md)」を参照してください。|  
 |Acrobat (PDF) ファイル|ハード改ページ|PDF 表示拡張機能を使用すると、Adobe Acrobat および PDF 1.3 をサポートするその他のサードパーティ製 PDF ビューアーで開くことのできるファイルとしてレポートが表示されます。 PDF 1.3 は Adobe Acrobat 4 以降のバージョンと互換性がありますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では Adobe Acrobat 6 以降がサポートされています。 この表示拡張機能では、レポートの表示処理に Adobe 製のソフトウェアは必要ありません。 ただし、レポートを PDF 形式で表示または印刷するには、Adobe Acrobat などの PDF ビューアーが必要です。<br /><br /> 詳細については、「[PDF ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](exporting-to-a-pdf-file-report-builder-and-ssrs.md)」を参照してください。|  
 |TIFF ファイル|ハード改ページ|画像表示拡張機能では、レポートがビットマップまたはメタファイルとして表示されます。 画像表示拡張機能では、既定でレポートの TIFF ファイルが生成されます。このファイルは、複数のページに表示することもできます。 クライアントは、受信した画像をイメージ ビューアーで表示したり、印刷したりできます。<br /><br /> 画像表示拡張機能では、 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]でサポートされている形式 (BMP、EMF、EMFPlus、GIF、JPEG、PNG、TIFF) でファイルを生成できます。<br /><br /> 詳細については、「[画像ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md)」を参照してください。|  
@@ -77,7 +77,7 @@ ms.locfileid: "36164297"
 |Atom|data|Atom 表示拡張機能では、Atom 準拠のデータ フィードがレポートから生成されます。 データ フィードは、Atom 準拠のデータ フィードを使用するアプリケーション ( [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアントなど) で読み取りと交換が可能です。<br /><br /> 出力は、レポートで使用可能なデータ フィードを一覧表示する Atom サービス ドキュメントです。 レポート内の各データ領域について、少なくとも 1 つのデータ フィードが作成されます。 データ領域の種類およびデータ領域に表示されるデータによっては、複数のデータ フィードが生成される場合があります。<br /><br /> 詳細については、「[複数のレポートからのデータ フィードの生成 &#40;レポート ビルダーおよび SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)」を参照してください。|  
   
 ##  <a name="ExportingReport"></a> レポートをエクスポートします。  
- レポートをエクスポートするには、レポート マネージャーまたはレポート ビルダーでレポートを実行した後、[エクスポート] ドロップダウン リストから形式を選択します。 ファイルを保存するか、開くかを選択するメッセージが表示されます。 **[開く]** を選択すると、選択した表示形式に関連付けられているアプリケーションでレポートが開きます。 たとえば、 **[Excel]** を選択した場合は、レポートが Excel で開きます。 **[保存]** を選択すると、レポートが保存されます。 たとえば、Excel にエクスポートする場合は、.xls ファイルとしてレポートが保存されます。 ローカル コンピューターで定義されているファイルの関連付けにより、特定の表示形式に使用されるアプリケーションが決まります。 詳細については、次を参照してください。[別のファイルの種類としてレポートをエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)です。  
+ レポートをエクスポートするには、レポート マネージャーまたはレポート ビルダーでレポートを実行した後、[エクスポート] ドロップダウン リストから形式を選択します。 ファイルを保存するか、開くかを選択するメッセージが表示されます。 **[開く]** を選択すると、選択した表示形式に関連付けられているアプリケーションでレポートが開きます。 たとえば、 **[Excel]** を選択した場合は、レポートが Excel で開きます。 **[保存]** を選択すると、レポートが保存されます。 たとえば、Excel にエクスポートする場合は、.xls ファイルとしてレポートが保存されます。 ローカル コンピューターで定義されているファイルの関連付けにより、特定の表示形式に使用されるアプリケーションが決まります。 詳細については、次を参照してください。[別のファイルの種類としてレポートをエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)します。  
   
  レポート サーバーでは、現在のユーザー セッションに存在するレポートがエクスポートされます。 レポートが開いている間、またはレポートに表示されているデータが変更されている間に、更新されたバージョンがパブリッシュされても、エクスポート後のレポートは更新されません。  
   
@@ -111,15 +111,15 @@ ms.locfileid: "36164297"
   
 -   [Microsoft Word へのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md)  
   
--   [HTML に表示する&#40;レポート ビルダーおよび SSRS&#41;](rendering-to-html-report-builder-and-ssrs.md)  
+-   [HTML にレンダリング&#40;レポート ビルダーおよび SSRS&#41;](rendering-to-html-report-builder-and-ssrs.md)  
   
--   [PDF ファイルにエクスポートする&#40;レポート ビルダーおよび SSRS&#41;](exporting-to-a-pdf-file-report-builder-and-ssrs.md)  
+-   [PDF ファイルへのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](exporting-to-a-pdf-file-report-builder-and-ssrs.md)  
   
--   [イメージ ファイルにエクスポート&#40;レポート ビルダーおよび SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md)  
+-   [イメージ ファイルへのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md)  
   
 -   [XML へのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](exporting-to-xml-report-builder-and-ssrs.md)  
   
--   [データ フィードの生成のレポートから&#40;レポート ビルダーおよび SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
+-   [レポートからのフィード データを生成する&#40;レポート ビルダーおよび SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、他の形式でも適切に動作するレポートを作成できるように、次の追加機能が用意されています。 Tablix データ領域 (テーブル、マトリックス、一覧) の改ページ、グループ、四角形により、レポートのページ割り当てをより適切に制御できます。 改ページで区切られたレポートのページに、さまざまなページ名を付け、ページ番号をリセットできます。 式を使用すると、レポートの実行時にページ名とページ番号を動的に更新できます。 詳細については、「[Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36164297"
 ##  <a name="OtherWaysExportingReports"></a> レポートをエクスポートするその他の方法  
  レポートのエクスポートは、レポート マネージャーまたはレポート ビルダーでレポートを開くときに必要に応じて実行するタスクです。 エクスポート操作を自動化する場合は (レポートを、定期的なスケジュールで特定のファイルの種類として共有フォルダーにエクスポートする場合など)、レポートを共有フォルダーに配信するサブスクリプションを作成します。 詳細については、「 [File Share Delivery in Reporting Services](../subscriptions/file-share-delivery-in-reporting-services.md)」を参照してください。  
   
- レポート ツールでプレビューしたレポート、またはレポート マネージャーなどのブラウザー アプリケーションで開いたレポートは常に、まず HTML でレンダリングされます。 表示の既定として別の表示拡張機能を指定することはできません。 ただし、後から電子メールの受信ボックスや共有フォルダーに配信する際に必要な表示形式でレポートを生成するサブスクリプションを作成できます。 詳細については、次を参照してください。 [Create, Modify, and 標準のサブスクリプションを削除&#40;Reporting Services ネイティブ モードの&#41;](../subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)と[作成、変更、およびデータ ドリブン サブスクリプションを削除](../subscriptions/data-driven-subscriptions.md)です。  
+ レポート ツールでプレビューしたレポート、またはレポート マネージャーなどのブラウザー アプリケーションで開いたレポートは常に、まず HTML でレンダリングされます。 表示の既定として別の表示拡張機能を指定することはできません。 ただし、後から電子メールの受信ボックスや共有フォルダーに配信する際に必要な表示形式でレポートを生成するサブスクリプションを作成できます。 詳細については、次を参照してください。 [Create, Modify, and 標準サブスクリプションの削除&#40;Reporting Services ネイティブ モードの&#41;](../subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)と[作成、変更、およびデータ ドリブン サブスクリプションを削除](../subscriptions/data-driven-subscriptions.md)します。  
   
  また、URL パラメーターとして表示拡張機能を指定する URL を使用してレポートにアクセスし、最初に HTML でレポートをレンダリングすることなく、指定した形式に直接レンダリングすることもできます。 次の例は、Excel 形式でレポートを表示します。  
   
@@ -139,7 +139,7 @@ http://<Server Name>/reportserver?/Sales/YearlySalesSummary&rs:Format=Excel&rs:C
  詳細については、「 [URL アクセスを使用してレポートをエクスポートする](../export-a-report-using-url-access.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [見出し、列、および行は、改ページを制御する&#40;レポート ビルダーおよび SSRS&#41;](../report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [見出し、列、および行は、改ページの制御&#40;レポート ビルダーおよび SSRS&#41;](../report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
  [レポートの保存&#40;レポート ビルダー&#41;](saving-reports-report-builder.md)  

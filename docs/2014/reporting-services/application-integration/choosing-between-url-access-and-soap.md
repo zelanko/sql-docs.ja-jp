@@ -1,5 +1,5 @@
 ---
-title: URL アクセスと SOAP の選択 |Microsoft ドキュメント
+title: URL アクセスと SOAP の選択 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], application integration
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 caps.latest.revision: 39
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ddeb463427f159717d899f73031306f05fb424e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7d8d60cd6b91e93dbf0fcd71e8cc995a405af88b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280538"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>URL アクセスまたは SOAP の選択
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をカスタム アプリケーションへ統合するのは、必ずしも容易な作業ではありません。 ただし、その原因はプログラミング モデルや API が複雑なためではなく、統合方法が多数存在することです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はもともと開発者向けプラットフォームとして設計されているので、プログラミングを柔軟に行えるようになっています。 柔軟性を得るには、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のレポート ナビゲーション機能と管理機能を既存ビジネス アプリケーションに統合することに関して重要な意思決定を行う必要があります。  
@@ -46,7 +46,7 @@ Reporting Services のプログラミングは、幅広いシナリオをサポ�
   
  レポート ツール バーの詳細については、「[HTML Viewer and the Report Toolbar](../html-viewer-and-the-report-toolbar.md)」(HTML ビューアーとレポート ツール バー) を参照してください。  
   
- URL アクセスの詳細については、次を参照してください。 [URL アクセス&#40;SSRS&#41;](../url-access-ssrs.md)です。  
+ URL アクセスの詳細については、次を参照してください。 [URL アクセス&#40;SSRS&#41;](../url-access-ssrs.md)します。  
   
  URL アクセスはレポートの表示に便利ですが、エンタープライズ レポート機能に不可欠なレポートと名前空間の管理機能はありません。 このような場合は、Reporting Services SOAP API の幅広く豊富な機能をお勧めします。 SOAP API を使用すると、レポートの管理と配置、スケジュールの作成、サーバーのプロパティの構成、レポート サーバー名前空間の管理、サブスクリプションの作成などが可能です。 SOAP API は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の管理機能の完全なセットを提供します。 SOAP API では、API の <xref:ReportExecution2005.ReportExecutionService.Render%2A> メソッドを通してレポートを表示およびナビゲートすることもできます。 ただし、SOAP API を通してレポートを表示する場合は、レポート ツール バーの組み込み表示機能を使用できず、URL アクセスのようなレポート対話機能も自動的に処理されません。  
   

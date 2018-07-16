@@ -1,5 +1,5 @@
 ---
-title: ReportFormatParameters 要素 (ASSL) |Microsoft ドキュメント
+title: ReportFormatParameters 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportFormatParameters element
 ms.assetid: f2e677bf-7b6b-4ce4-b0ec-75a4999306c9
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e76ba9b70c485a938910eef7a7285520163b1bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b11bab41072f558af5ecbea86852f129853ed6e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234212"
 ---
 # <a name="reportformatparameters-element-assl"></a>ReportFormatParameters 要素 (ASSL)
-  コレクションを格納[ReportFormatParameter](../objects/reportformatparameter-element-asl.md)用の要素、 [ReportAction](../data-type/action-data-type-assl.md)要素。  
+  コレクションを格納[ReportFormatParameter](../objects/reportformatparameter-element-asl.md)の要素を[ReportAction](../data-type/action-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

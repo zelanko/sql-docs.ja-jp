@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multicasttrans.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eab69a8c4aafc5f7103a1fd8a8d2649f7d6a7bc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ead69f8be189f80fedb30493a7c8be64178d3e39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231442"
 ---
 # <a name="multicast-transformation"></a>マルチキャスト変換
   マルチキャスト変換は、入力を 1 つ以上の出力に配信します。 この変換は条件分割変換と似ています。 いずれの変換も、1 つの入力を複数の出力に送信します。 この 2 つの変換の違いは、マルチキャスト変換は各行を各出力に送信するのに対し、条件分割変換は 1 行を単一の出力に送信する点です。 詳細については、「 [Conditional Split Transformation](conditional-split-transformation.md)」を参照してください。  

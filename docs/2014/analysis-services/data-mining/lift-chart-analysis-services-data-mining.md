@@ -1,5 +1,5 @@
 ---
-title: リフト チャート (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: リフト チャート (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - accuracy, charting
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 53
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a18f752d0435a3ba840e484ff00bf42efb523b79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a90b1bf1103627b95a1b289c1dced1257e523580
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301252"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>リフト チャート (Analysis Services - データ マイニング)
-  A**リフト チャート**視覚的に、マイニング モデルと比較した場合は、ランダムな推測に対する改善を表しの観点で変化を測定、*リフト*スコア。 データ セットのさまざまな部分のリフト スコアとさまざまなモデルのリフト スコアを比較することにより、どのモデルが最適であるか、またデータ セットのケースの何パーセントがモデルの予測の適用から利点を得るかを調べることができます。  
+  A**リフト チャート**グラフィカルにマイニング モデルと比較した場合は、ランダムな推測に対する改善し、の観点で変化を測定する*リフト*スコア。 データ セットのさまざまな部分のリフト スコアとさまざまなモデルのリフト スコアを比較することにより、どのモデルが最適であるか、またデータ セットのケースの何パーセントがモデルの予測の適用から利点を得るかを調べることができます。  
   
  リフト チャートにより、同じ予測属性を含む複数のモデルの予測の精度を比較できます。 また、1 つの結果 (予測属性の 1 つの値) またはすべての結果 (指定された属性のすべての値) のどちらかの予測精度を評価することもできます。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36176517"
   
  このグラフには、同じデータに基づく複数のモデルが含まれています。 これらのモデルの 1 つは、特定の顧客をターゲットとするようにカスタマイズされています。 モデルのトレーニングで使用するデータにフィルターを追加して、マイニング モデルをカスタマイズできます。 このフィルターは、トレーニングと評価の両方に使用するケースを、30 歳未満の顧客に制限します。 フィルターの 1 つの影響は、基本モデルとフィルターされたモデルとでは異なるデータ セットを使用するため、リフト チャートの評価に使用されるケースの数も異なることであることに注意してください。 予測結果やその他の統計情報を解釈する際は、この点に留意する必要があります。  
   
- ![グラフを示す 2 つのモデルのリフト](../media/newliftchart-tm30-30.gif "リフト チャートを示す 2 つのモデル")  
+ ![グラフが表示された 2 つのモデルのリフト](../media/newliftchart-tm30-30.gif "グラフが表示された 2 つのモデルのリフト")  
   
  チャートの X 軸は、予測を比較するために使用されるテスト データセットの割合を示します。 チャートの Y 軸は、予測される値の割合を示します。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36176517"
   
  X 軸は予測可能な列を指定するチャートの場合と同じですが、Y 軸は今度は適正な予測の割合を示しています。 よって、ここでは理想線が斜めの線です。50% のデータで、50% のケースをモデルが適正に予測し、これが予想され得る最大値であることを表しています。  
   
- ![リフト チャートを表示の適正な予測](../media/lift1.gif "適正な予測を示すリフト チャート")  
+ ![グラフが表示された正しい予測のリフト](../media/lift1.gif "正しい予測を示すリフト チャート")  
   
  チャート内をクリックすると灰色の縦棒を移動でき、 **[マイニング凡例]** には、ケース全体の割合と、適正に予測されたケースの割合が表示されます。 たとえば、灰色のスライダー バーを 50% の印に合わせると、 **[マイニング凡例]** に次の精度スコアが表示されます。 これらの数値は、「基本的なデータ マイニング チュートリアル」で作成した TM_Decision Tree モデルに基づいています。  
   

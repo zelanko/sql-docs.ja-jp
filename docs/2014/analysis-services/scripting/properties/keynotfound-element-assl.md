@@ -1,5 +1,5 @@
 ---
-title: KeyNotFound 要素 (ASSL) |Microsoft ドキュメント
+title: KeyNotFound 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KeyNotFound element
 ms.assetid: 2a93bbfa-2409-4e94-8b68-926532895a4c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 545ae163b4dda53adb60f5300e7f8b75cf926d52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58228d8f4029fecf22062a3e3c5c0c9adf3eafe1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281808"
 ---
 # <a name="keynotfound-element-assl"></a>KeyNotFound 要素 (ASSL)
-  指定方法[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]参照整合性エラーが発生したときに応答します。  
+  指定する方法[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]参照整合性エラーが発生したときに応答します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36175239"
 |特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*[Reportandcontinue]*|  
+|既定値|*ReportAndContinue*|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
@@ -69,10 +69,10 @@ ms.locfileid: "36175239"
 |値|説明|  
 |-----------|-----------------|  
 |*IgnoreError*|エラーを無視し、処理を続行します。|  
-|*[Reportandcontinue]*|エラーを報告し、処理を続行します。|  
+|*ReportAndContinue*|エラーを報告し、処理を続行します。|  
 |*ReportAndStop*|エラーを報告し、処理を停止します。|  
   
- 許可される値に対応する列挙`KeyNotFound`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ErrorOption>します。  
+ 許容された値に対応する列挙体`KeyNotFound`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ErrorOption>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

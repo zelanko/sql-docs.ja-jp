@@ -1,5 +1,5 @@
 ---
-title: 既存のマイニング構造にマイニング モデルを追加 |Microsoft ドキュメント
+title: 既存のマイニング構造にマイニング モデルの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], adding
 - mining structures [Analysis Services], mining models
 - adding mining models
 ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 708d03cac04dc8c3574c40398c005fd17faf4bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5140aa597e6ed1fea65ba3358fb5c493ffdaa5c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295912"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>既存のマイニング構造へのマイニング モデルの追加
   初期モデルを追加した後、マイニング構造にマイニング モデルを追加できます。 各モデルには構造内に存在する列が含まれている必要がありますが、列の使用法はマイニング モデルごとにそれぞれ定義できます。 マイニング モデルの列を定義する方法の詳細については、「 [マイニング モデル列](mining-model-columns.md)」を参照してください。  
@@ -38,7 +38,7 @@ ms.locfileid: "36072917"
   
 3.  **[アルゴリズム名]** で、マイニング モデルを作成するアルゴリズムを選択します。  
   
-4.  **[OK]** をクリックします。  
+4.  [**OK**] をクリックします。  
   
  新しいマイニング モデルが **[マイニング モデル]** タブに表示されます。モデルでは、構造内に存在する既定の列が使用されます。 列を変更する方法については、「 [マイニング モデルのプロパティの変更](change-the-properties-of-a-mining-model.md)」を参照してください。  
   

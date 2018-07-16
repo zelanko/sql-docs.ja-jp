@@ -1,5 +1,5 @@
 ---
-title: データ ソース (SSAS 多次元) のサポート |Microsoft ドキュメント
+title: データ ソース (SSAS 多次元) のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data sources
 - data sources [Analysis Services], about data sources
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - SSAS, data sources
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 caps.latest.revision: 59
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 130e0e904dcd60b8dc7838cfc8e57f7589739857
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c4d8c3c37b63568da63d65e9548b50c44bcc455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301172"
 ---
-# <a name="data-sources-supported-ssas-multidimensional"></a>データ ソースのサポート対象の (SSAS 多次元)
+# <a name="data-sources-supported-ssas-multidimensional"></a>データ ソースのサポートの (SSAS 多次元)
   このトピックでは、多次元モデルで使用できるデータ ソースの種類について説明します。  
   
 ##  <a name="bkmk_supported_ds"></a> サポートされるデータ ソース  
@@ -50,17 +50,17 @@ ms.locfileid: "36175629"
   
  <sup>1</sup>多次元ソリューションの ODBC データ ソースはサポートされていません。 Analysis Services 自体が接続を処理しますが、MSDASQL ドライバーを使用している場合でも、ソリューションの作成に使用される [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] のデザイナーは ODBC データ ソースには接続できません。 ビジネス要件に ODBC データ ソースが含まれている場合は、代わりに表形式のソリューションを作成することを検討してください。  
   
- <sup>2</sup>詳細については、次を参照してください。[!INCLUDE[ssSDS](../../includes/sssds-md.md)]の[azure.microsoft.com](http://go.microsoft.com/fwlink/?LinkID=157856)です。  
+ <sup>2</sup>詳細については、次を参照してください。[!INCLUDE[ssSDS](../../includes/sssds-md.md)]の[azure.microsoft.com](http://go.microsoft.com/fwlink/?LinkID=157856)します。  
   
- <sup>3</sup>の詳細については[!INCLUDE[ssSDS](../../includes/sssds-md.md)]PDW を参照してください[SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895)です。  
+ <sup>3</sup>の詳細については[!INCLUDE[ssSDS](../../includes/sssds-md.md)]PDW を参照してください[SQL Server 並列データ ウェアハウス](http://go.microsoft.com/fwlink/?LinkId=150895)します。  
   
- <sup>4</sup>場合によっては、MSDAORA OLE DB プロバイダーを使用してが生じることが特に Oracle の新しいバージョンで、接続エラーが発生します。 エラーが生じる場合は、Oracle 用に記載されている他のプロバイダーを使用することをお勧めします。  
+ <sup>4</sup>場合によっては、MSDAORA OLE DB プロバイダーを使用して新しいバージョンの Oracle との接続エラーで結果ことができます。 エラーが生じる場合は、Oracle 用に記載されている他のプロバイダーを使用することをお勧めします。  
   
- <sup>5</sup>いくつかの機能は、オンプレミスで実行する SQL Server リレーショナル データベースを必要とします。 具体的には、書き戻しと ROLAP ストレージでは、基になるデータ ソースが SQL Server リレーショナル データベースであることが必要です。  
+ <sup>5</sup>一部の機能がオンプレミスで実行する SQL Server リレーショナル データベースが必要です。 具体的には、書き戻しと ROLAP ストレージでは、基になるデータ ソースが SQL Server リレーショナル データベースであることが必要です。  
   
 ## <a name="see-also"></a>参照  
  [サポートされるデータ ソース&#40;SSAS 表形式&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   
- [多次元モデル内のデータ ソース](data-sources-in-multidimensional-models.md)   
+ [多次元モデルのデータ ソース](data-sources-in-multidimensional-models.md)   
  [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)  
   
   

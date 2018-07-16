@@ -1,5 +1,5 @@
 ---
-title: SQL Server、ブローカーと DBM トランスポート オブジェクト |Microsoft ドキュメント
+title: SQL Server、ブローカーおよび DBM トランスポート オブジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Broker / DBM Transport object
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac5a560f328de972dc40675d83e93c69447e6938
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 278e3776c19c9220b77347a0360e337184c4fd1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253924"
 ---
-# <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server、ブローカーと DBM トランスポート オブジェクト
+# <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server、ブローカーおよび DBM トランスポート オブジェクト
   **Broker / DBM Transport** パフォーマンス オブジェクトには、Service Broker とデータベース ミラーリングに関するネットワーク情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
   
 |SQL Server: Broker / DBM Transport カウンター|説明|  
@@ -54,7 +54,7 @@ ms.locfileid: "36177500"
 |**Receive I/O Bytes Total**|Service Broker のエンドポイントとデータベース ミラーリングのエンドポイントで、ネットワーク経由で受信した合計バイト数を報告します。|  
 |**Receive I/O bytes/sec**|Service Broker のエンドポイントとデータベース ミラーリングのエンドポイントで、ネットワーク経由で 1 秒あたりに受信したバイト数を報告します。|  
 |**Receive I/O Len Avg**|トランスポート受信操作の平均バイト数を報告します。|  
-|**受信 i/o 数/秒**|Service Broker / DBM トランスポート層が 1 秒あたりに完了したトランスポート受信 I/O 操作の数を報告します。 1 つのトランスポート受信操作には、複数のメッセージ フラグメントが含まれている可能性があることに注意してください。|  
+|**受信 I/o 数/秒**|Service Broker / DBM トランスポート層が 1 秒あたりに完了したトランスポート受信 I/O 操作の数を報告します。 1 つのトランスポート受信操作には、複数のメッセージ フラグメントが含まれている可能性があることに注意してください。|  
 |**Send I/O Bytes Total**|Service Broker のエンドポイントとデータベース ミラーリングのエンドポイントで、ネットワーク経由で送信した合計バイト数を報告します。|  
 |**Send I/O bytes/sec**|Service Broker のエンドポイントとデータベース ミラーリングのエンドポイントで、ネットワーク経由で 1 秒あたりに送信したバイト数を報告します。|  
 |**Send I/O Len Avg**|各トランスポート送信操作の平均サイズをバイト単位で報告します。 1 つのトランスポート送信操作には、複数のメッセージ フラグメントが含まれている可能性があることに注意してください。|  

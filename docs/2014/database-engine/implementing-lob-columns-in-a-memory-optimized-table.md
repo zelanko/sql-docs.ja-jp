@@ -1,5 +1,5 @@
 ---
-title: メモリ最適化テーブルでの LOB 列を実装する |Microsoft ドキュメント
+title: メモリ最適化テーブルに LOB 列を実装する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 2af703360aa56e48658fc7b76098eb5db0cdc2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 733183e50a631e86f391070ae45b1e70d179a643
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283838"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの LOB 列の実装
   メモリ最適化テーブルには行外またはラージ オブジェクト (LOB) ストレージがなく、行サイズの上限は 8060 バイトです。 大きなバイナリ値または文字列値を格納するには、次の 2 とおりの方法で行うことができます。  

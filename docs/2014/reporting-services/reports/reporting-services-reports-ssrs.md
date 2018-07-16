@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: 52
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2d9c3d3bbae3d7c267a6196eef0d7d0660c4302b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2e80c45aeab9b9ea762b56640d68d46df0d4d4fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307002"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services レポート (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポートは、レポート データ要素とレポート レイアウト要素を含む XML ベースのレポート定義です。 クライアント ファイル システムでは、レポート定義に .rdl というファイル拡張子が付きます。 レポートがパブリッシュされると、レポート サーバーまたは SharePoint サイトに格納されたレポート アイテムです。 レポートは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によって提供されるサーバー ベースのレポート プラットフォームの一部です。  
@@ -99,7 +99,7 @@ ms.locfileid: "36174655"
   
     -   **データとレイアウトをカスタマイズします。** レポート レイアウトをデザインします。 レポート定義には、レポート本文、データ ソース、データセット、データ領域、テキスト ボックス、線、および画像があります。 四角形はレイアウトおよび視覚的要素のコンテナーとして使用されます。 データのフィルター、グループ化、並べ替え、書式、および表示を制御するための式を作成することで、各データ領域をカスタマイズします。 レポート名、場所、および数十または数百単位のレポートの管理に役立つその他の識別情報を追加します。 ページのレイアウト要素をまとめるために、視覚的要素およびコンテナーを追加します。 詳細については、次の各トピックを参照してください。  
   
-        -   [フィルター、グループ、およびデータを並べ替える&#40;レポート ビルダーおよび SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [フィルター、グループ、およびデータの並べ替え&#40;レポート ビルダーおよび SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
         -   [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36174655"
 ##  <a name="bkmk_SecureReportsSummary"></a> レポートのセキュリティ保護  
  レポートのセキュリティを保護するには:  
   
--   レポート サーバー管理者に、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のインストールに使用されている承認システムと認証システムを確認します。 既定では、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]パブリッシュされたレポートへのアクセスを制御する Windows 認証、統合セキュリティ、およびロールの割り当てを使用します。 詳細については、「[ロールとアクセス許可 (Reporting Services)](../security/roles-and-permissions-reporting-services.md)」と「[Reporting Services のセキュリティと保護](../security/reporting-services-security-and-protection.md)」を参照してください。  
+-   レポート サーバー管理者に、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のインストールに使用されている承認システムと認証システムを確認します。 既定では、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]パブリッシュされたレポートのアクセスを制御する Windows 認証、統合セキュリティ、およびロールの割り当てを使用します。 詳細については、「[ロールとアクセス許可 (Reporting Services)](../security/roles-and-permissions-reporting-services.md)」と「[Reporting Services のセキュリティと保護](../security/reporting-services-security-and-protection.md)」を参照してください。  
   
 ## <a name="create-notifications-based-on-report-data"></a>レポート データに基づく通知の作成  
  SharePoint サイトにパブリッシュされたレポートのデータ警告を作成できます。 データ警告は、レポートのデータ領域からのデータ フィードに基づきます。 既定では、データ領域に自動的に名前が付けられます。 レポート作成者は、ビジネス用途に基づいてデータ領域に名前を付けることで、レポートのデータ警告を作成しやすくすることができます。 データ警告を作成すると、データが指定した条件を満たす場合に、電子メールで通知を受信します。 詳細については、「[Generating Data Feeds from Reports (Report Builder and SSRS)](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」(複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS))、「[データ警告デザイナーでのデータ警告の作成](../create-a-data-alert-in-data-alert-designer.md)」、「[Reporting Services Data Alerts](../reporting-services-data-alerts.md)」を参照してください。  

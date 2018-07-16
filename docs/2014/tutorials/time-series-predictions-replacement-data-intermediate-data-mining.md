@@ -1,5 +1,5 @@
 ---
-title: 置き換え後のデータ (中級者向けデータ マイニング チュートリアル」) を使用して時系列予測 |Microsoft ドキュメント
+title: 置き換え後のデータ (中級者向けデータ マイニング チュートリアル) を使用して時系列予測 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: d5639aa63affadcdf79acc6029840e7025081245
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: c170fab7f4f6711e81e07603302839430404aa3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267758"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>時系列予測での置き換え後のデータの使用 (中級者向けデータ マイニング チュートリアル)
   ここでは、全世界の売上データに基づく新しいモデルを作成します。 その後、全世界の売上モデルを個々の地域のいずれかに適用する予測クエリを作成します。  
@@ -36,7 +36,7 @@ ms.locfileid: "36312470"
 ## <a name="performing-cross-prediction-with-a-time-series-model"></a>時系列モデルでのクロス予測の実行  
  ある系列のデータを使用して別の系列の傾向を予測するプロセスのことをクロス予測と呼びます。 クロス予測はさまざまなシナリオで使用できます。たとえば、テレビの売上が経済活動全般の適切な予測子であると特定できれば、テレビの売上でトレーニングしたモデルを全般的な経済データに適用できます。  
   
- SQL Server データ マイニングで、関数の引数に REPLACE_MODEL_CASES パラメーターを使用してクロス予測を実行する[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)です。  
+ SQL Server データ マイニングでの関数の引数に REPLACE_MODEL_CASES パラメーターを使用してクロス予測を実行する[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)します。  
   
  次の作業では、REPLACE_MODEL_CASES の使用方法について学習します。 マージした全世界の売上データを使用してモデルを作成し、汎用モデルを置き換え後のデータにマップする予測クエリを作成します。  
   
@@ -44,21 +44,21 @@ ms.locfileid: "36312470"
   
 #### <a name="to-build-a-mining-structure-and-mining-model-using-the-aggregated-data"></a>集計データを使用してマイニング構造とマイニング モデルを作成するには  
   
-1.  **ソリューション エクスプ ローラー**を右クリックして**マイニング構造**、し、**新しいマイニング構造**データ マイニング ウィザードを開始します。  
+1.  **ソリューション エクスプ ローラー**を右クリックして**マイニング構造**、し、**新しいマイニング構造の**データ マイニング ウィザードを起動します。  
   
 2.  データ マイニング ウィザードで、以下の選択を行います。  
   
     -   [アルゴリズム]: [Microsoft タイム シリーズ]  
   
-    -   モデルのソースとして、この高度なレッスンで既に作成したデータ ソースを使用する。 参照してください[時系列予測での高度な&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)です。  
+    -   モデルのソースとして、この高度なレッスンで既に作成したデータ ソースを使用する。 参照してください[タイム シリーズ予測を高度な&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)します。  
   
          データ ソース ビュー: `AllRegions`  
   
     -   系列キーおよび時間キーの列として、次の列を選択する。  
   
-         キーの時間: ReportingDate  
+         キー時刻: ReportingDate  
   
-         キー: 地域  
+         キー: リージョン  
   
     -   `Input` および `Predict` の列として、次の列を選択する。  
   
@@ -78,23 +78,23 @@ ms.locfileid: "36312470"
   
 #### <a name="to-build-the-prediction-query-and-map-the-replacement-data"></a>予測クエリを作成して置き換え後のデータをマップするには  
   
-1.  モデルがまだ開いていない場合、AllRegions 構造をダブルクリックし、データ マイニング デザイナーで、をクリックして、**マイニング モデル予測**タブです。  
+1.  モデルがまだ開いていない場合、AllRegions 構造をダブルクリックし、データ マイニング デザイナーでクリックして、**マイニング モデル予測**タブ。  
   
 2.  **マイニング モデルの**ペインで、モデル AllRegions が選択されている必要があります。 選択されていない場合はクリックして**モデルの選択**、モデル AllRegions を選択します。  
   
-3.  **入力テーブルの選択**] ウィンドウで、をクリックして **[ケース テーブルの**します。  
+3.  **入力テーブルの選択**ウィンドウで、をクリックして**ケース テーブルの**します。  
   
-4.  **テーブルの選択**ダイアログ ボックスで、変更データを T1000 Pacific Region にソース をクリックし、 **OK**です。  
+4.  **テーブルの選択**ダイアログ ボックスで、変更データをソースを T1000 Pacific Region、 をクリックし、 **OK**します。  
   
-5.  マイニング モデルと入力データ間の結合線を右クリックし **接続の変更**です。 次のように、データ ソース ビューのデータをモデルにマップします。  
+5.  マイニング モデルと入力データ間の結合線を右クリックして**接続の変更**します。 次のように、データ ソース ビューのデータをモデルにマップします。  
   
     1.  マイニング モデルの ReportingDate 列が入力データの ReportingDate 列にマップされていることを確認します。  
   
-    2.  **マッピングの変更**ダイアログ ボックスの AvgQty、モデル列の行では、をクリックして**テーブル列**T1000 Pacific.Quantity を選択します。 **[OK]** をクリックします。  
+    2.  **マッピングの変更**AvgQty、モデル列の行で、ダイアログ ボックスの **テーブル列**T1000 Pacific.Quantity を選択するとします。 **[OK]** をクリックします。  
   
          この手順によって、平均数量を予測するモデルで作成した列が T1000 系列の販売数量の実際のデータにマップされます。  
   
-    3.  モデル内の列の領域をどの入力列にマップできません。  
+    3.  どの入力列には、モデルの列領域はマップできません。  
   
          モデルはすべての系列にわたってデータを集計しているので、T1000 Pacific などの系列値に一致するものはなく、予測クエリが実行されるとエラーが発生します。  
   
@@ -102,35 +102,35 @@ ms.locfileid: "36312470"
   
      まず、モデルから予測と共に AllRegions ラベルを出力する列を結果に追加します。 これにより、汎用モデルに基づく結果であることがわかるようになります。  
   
-    1.  グリッドで、場合は、下にある最初の空白行をクリックして**ソース**、AllRegions マイニング モデルを選択します。  
+    1.  グリッドの場合は、最初の空白行をクリックします**ソース**、し AllRegions マイニング モデルを選択します。  
   
     2.  **フィールド**リージョンを選択します。  
   
-    3.  **エイリアス**、型**Model Used**です。  
+    3.  **エイリアス**、型**モデルが使用される**します。  
   
 7.  次に、予測がどの系列に対するものかを表す別のラベルを結果に追加します。  
   
-    1.  空の行をクリックし、**ソース****カスタム式**です。  
+    1.  空の行をクリックし、**ソース**を選択します**カスタム式**します。  
   
-    2.  **エイリアス**列に「 **ModelRegion**です。  
+    2.  **エイリアス**列に「 **ModelRegion**します。  
   
-    3.  **条件と引数**列に「`'T1000 Pacific'`です。  
+    3.  **条件と引数**列に「`'T1000 Pacific'`します。  
   
 8.  ここで、クロス予測関数を設定します。  
   
-    1.  空の行をクリックし、**ソース****予測関数**です。  
+    1.  空の行をクリックし、**ソース**を選択します**予測関数**します。  
   
-    2.  **フィールド**列をオン**PredictTimeSeries**です。  
+    2.  **フィールド**列で、 **PredictTimeSeries**します。  
   
-    3.  **エイリアス**、型**Predicted Values**です。  
+    3.  **エイリアス**、型**Predicted Values**します。  
   
-    4.  フィールド AvgQty をドラッグしてから、**マイニング モデルの**ペイン、**条件と引数**ドラッグ アンド ドロップ操作を使用して列です。  
+    4.  フィールド AvgQty をドラッグしてから、**マイニング モデルの**ペイン、**条件と引数**ドラッグ アンド ドロップ操作を使用して列。  
   
-    5.  **条件と引数** 列のフィールド名の後に、次のテキストを入力します。 `,5, REPLACE_MODEL_CASES`  
+    5.  **条件と引数**列で、フィールド名の後に次のテキストを入力します。 `,5, REPLACE_MODEL_CASES`  
   
-         完全なテキスト、**条件と引数**テキスト ボックスは次のようにする必要があります。 `[AllRegions].[AvgQty],5,REPLACE_MODEL_CASES`  
+         テキストの全文、**条件と引数**テキスト ボックスに次のようにする必要があります。 `[AllRegions].[AvgQty],5,REPLACE_MODEL_CASES`  
   
-9. をクリックして**結果**です。  
+9. クリックして**結果**します。  
   
 ## <a name="creating-the-cross-prediction-query-in-dmx"></a>DMX でのクロス予測クエリの作成  
  既にお気付きかもしれませんが、クロス予測で別のデータ系列 (北米地域の T1000 製品モデルなど) に汎用モデルを適用するには、系列ごとに異なるクエリを作成し、それぞれの入力セットをモデルにマップできるようにする必要があります。  
@@ -162,7 +162,7 @@ AND
  たとえば、'Pacific' を 'North America' に置き換えてフィルター条件と列ラベルを変更すると、汎用モデル内のパターンに基づく北米の T1000 製品の予測を取得できます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [予測モデルの予測の比較&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
+ [予測モデルの予測を比較する&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
  [タイム シリーズ モデルのクエリ例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   

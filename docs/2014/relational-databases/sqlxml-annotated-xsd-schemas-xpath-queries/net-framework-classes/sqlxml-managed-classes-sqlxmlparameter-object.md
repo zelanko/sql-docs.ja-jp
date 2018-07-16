@@ -1,5 +1,5 @@
 ---
-title: SqlXmlParameter オブジェクト (SQLXML マネージ クラス) |Microsoft ドキュメント
+title: SqlXmlParameter オブジェクト (SQLXML マネージ クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - Name property
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b8f787d8a3242fcaa5d2bf34d21484a8a2b74e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 59dd9b66e08c821d2603d6d21eb9d837890471f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282918"
 ---
-# <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter オブジェクト (SQLXML マネージ クラス)
+# <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter オブジェクト (SQLXML マネージド クラス)
   SqlXmlParameter オブジェクトには、これらのプロパティがサポートされています。  
   
  名前  
  パラメーターの名前。 コマンドをパラメーターとして渡すことができます。 SqlXmlCommand オブジェクトの CreateParameter メソッドを呼び出すと、パラメーター オブジェクトが作成されます。  
   
  値  
- パラメーターの値。 作業用サンプルについては、次を参照してください。 [SQL クエリを実行する&#40;SQLXML マネージ クラス&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)です。  
+ パラメーターの値。 実際のサンプルでは、次を参照してください。 [SQL クエリの実行&#40;SQLXML マネージ クラス&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SqlXmlCommand オブジェクト&#40;SQLXML マネージ クラス&#41;](sqlxml-managed-classes-sqlxmlcommand-object.md)   

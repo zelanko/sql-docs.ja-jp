@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c0cece8fb2a7fa52d3185080e34c8b1425470aae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f322ed88e8e9bdf6eea23799e533f124165f1bb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236052"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>[空間インデックス] ダイアログ ボックス (Visual Database Tools)
   **[インデックス/キー]** ダイアログ ボックスを使用してインデックスを作成できない **geometry** データ型や **geography** データ型の列 (*空間列*) のインデックスを作成するには、 **[空間インデックス]** を使用します。 各空間列に複数の空間インデックスを作成できますが、空間インデックスは一度に 1 つずつ作成する必要があります。  
@@ -35,7 +35,7 @@ ms.locfileid: "36177640"
  **[追加]**  
  新しい空間インデックスを作成します。  
   
- **Delete**  
+ **削除**  
  **[選択された空間インデックス]** ボックスの一覧で選択した空間インデックスを削除します。  
   
  **[オブジェクトごとのセル数]**  
@@ -70,7 +70,7 @@ ms.locfileid: "36177640"
   
 -   geography 列の場合は **[地理グリッド]** になります。  
   
- **Type**  
+ **型**  
  空間インデックスが選択されていることを示します。  
   
  **[X の最大値]**  
@@ -113,7 +113,7 @@ ms.locfileid: "36177640"
  **[ページのロックを許可]**  
  該当するインデックスでページレベルのロックを許可するかどうかを指定します。 ページレベル ロックの許可、非許可はデータベースのパフォーマンスに影響を与えます。  
   
- **再計算****統計**   
+ **再計算する****統計情報  **  
  インデックスの作成時に、統計情報を新たに計算するかどうかを指定します。 統計情報の再計算により、インデックスの構築には前よりも時間がかかりますが、通常はクエリのパフォーマンスが向上します。  
   
  **[行のロックを許可]**  

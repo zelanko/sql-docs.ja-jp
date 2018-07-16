@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a513f196b0dc099f890225048e4e96adab51d285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db88be22f9bb3e92739957bfaf0f4b827e49f61d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277358"
 ---
 # <a name="use-a-recordset-destination"></a>レコードセット変換先を使用する
   レコードセット変換先では、データは外部データ ソースに保存されません。 代わりに、レコードセット変換先では、`Object` データ型の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 レコードセット変換先でデータが保存されたら、通常、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子によって、現在の行の各列の値が個別のパッケージ変数に保存されます。 その後、Foreach ループ コンテナー内で構成したタスクによって変数から値が読み取られ、その値を使用してアクションが実行されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36072366"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成または開きます。  
   
-2.  レコード セット変換先でメモリに保存されたレコード セットを格納変数の型が設定される変数を作成する`Object`です。  
+2.  レコード セット変換先でメモリに保存されたレコード セットを格納変数の型が設定される変数を作成する`Object`します。  
   
 3.  使用するレコードセットの各列の値を格納するために、適切な型の追加の変数を作成します。  
   
@@ -72,19 +72,19 @@ ms.locfileid: "36072366"
   
 3.  **[変数]** ウィンドウで、レコードセットと現在の行の列値を格納する変数を作成します。  
   
-    1.  という名前の変数を作成する`BonusRecordset`、その型に設定および`Object`です。  
+    1.  という名前の変数を作成する`BonusRecordset`、その型に設定し、`Object`します。  
   
          `BonusRecordset`変数は、レコード セットを保持します。  
   
-    2.  という名前の変数を作成する`EmailAddress`、その型に設定および`String`です。  
+    2.  という名前の変数を作成する`EmailAddress`、その型に設定し、`String`します。  
   
          `EmailAddress`変数は販売員の電子メール アドレスを保持します。  
   
-    3.  という名前の変数を作成する`FirstName`、その型に設定および`String`です。  
+    3.  という名前の変数を作成する`FirstName`、その型に設定し、`String`します。  
   
          `FirstName`変数は販売員の名を保持します。  
   
-    4.  という名前の変数を作成する`Bonus`、その型に設定および`Double`です。  
+    4.  という名前の変数を作成する`Bonus`、その型に設定し、`Double`します。  
   
          `Bonus`変数は販売員のボーナス額を保持します。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36072366"
   
 5.  **[レコードセット変換先エディター]** を開いて、次の設定を使用して変換先を構成します。  
   
-    1.  **コンポーネントのプロパティ** タブの`VariableName`プロパティで、`User::BonusRecordset`です。  
+    1.  **コンポーネントのプロパティ** タブの`VariableName`プロパティで、`User::BonusRecordset`します。  
   
     2.  **[入力列]** タブで、使用可能な 3 つすべての列を選択します。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36072366"
   
 2.  **[Foreach ループ エディター]** を開いて、次の設定を使用してコンテナーを構成します。  
   
-    1.  **コレクション**] ページの**列挙子**[ **Foreach ADO 列挙子**、および**ADO オブジェクト ソース変数**を選択`User::BonusRecordset`.  
+    1.  **コレクション** ページの**列挙子**を選択します**Foreach ADO 列挙子**、および**ADO オブジェクト ソース変数**を選択します。`User::BonusRecordset`.  
   
     2.  **変数のマッピング**ページで、マップ`User::EmailAddress`をインデックス 0、`User::FirstName`をインデックス 1、および`User::Bonus`インデックス 2 にします。  
   

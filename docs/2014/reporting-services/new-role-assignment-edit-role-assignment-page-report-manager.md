@@ -1,5 +1,5 @@
 ---
-title: '新しいロールの割り当て: 編集ロールの割り当て ページ (レポート マネージャー) |Microsoft ドキュメント'
+title: 新しいロールの割り当ての編集の役割の割り当て ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4c60917a0b4107b52d6573e87932eab9bab63799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 0d1635c6b9c801b5a2ad9a2eff107c3bf35cf23a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179649"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>[新しいロールの割り当て]: [ロールの割り当てを編集] ページ (レポート マネージャー)
   レポート サーバーのアイテムと操作に対する権限を与えるには、[新しいロールの割り当て] ページまたは [ロールの割り当てを編集] ページを使用します。 レポート サーバーへのアクセスを必要とするユーザーごとに、アクセスのレベルを定義するロールの割り当てが必要です。 ロールの割り当ては、ルート ノードか、特定のレポート、モデル、フォルダー、リソース、または共有データ ソースに作成できます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のセキュリティは、アイテムに適用するロールの割り当てによって設定されます。 ロールの割り当てにより、グループまたはユーザーをロールの定義と適合させます。各ロールの定義により、特定のアイテムに対してグループまたはユーザーが実行できるタスクが識別されます。  
@@ -43,16 +43,16 @@ ms.locfileid: "36072280"
     >  アイテムが現在、親アイテムからセキュリティを継承している場合は、ツール バーの **[アイテムのセキュリティを編集]** をクリックしてセキュリティの設定を変更します。  
   
 ## <a name="options"></a>および  
- **グループまたはユーザー名**  
- ロールの割り当てが作成されるグループ アカウントまたはユーザー アカウントの名前を入力します。 グループ名またはユーザー名は、有効な Windows ドメイン アカウントである必要があります。 この形式でアカウントを入力してください:\<ドメイン >\\< アカウント\>です。  
+ **グループ名またはユーザー名**  
+ ロールの割り当てが作成されるグループ アカウントまたはユーザー アカウントの名前を入力します。 グループ名またはユーザー名は、有効な Windows ドメイン アカウントである必要があります。 この形式でアカウントを入力します:\<ドメイン >\\< アカウント\>します。  
   
 > [!NOTE]  
 >  このボックスは、[新しいロールの割り当て] ページでのみ使用できます。  
   
  **ロール**  
- アイテムのセキュリティの定義に使用できる、レポート サーバーで定義されているすべてのロールを表示します。 レポートやフォルダーへのロールの割り当てを作成または変更する場合、1 つ以上のロールを選択して、ユーザーが実行する必要のある操作が一連のタスクとして記述されるようにします。 表示するには、一連の各ロールでサポートされているタスクを使用して[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]です。 レポート マネージャーでロールを表示、作成、変更、または削除することはできません。 手順については、次を参照してください。[作成、削除、またはロールを変更&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)です。  
+ アイテムのセキュリティの定義に使用できる、レポート サーバーで定義されているすべてのロールを表示します。 レポートやフォルダーへのロールの割り当てを作成または変更する場合、1 つ以上のロールを選択して、ユーザーが実行する必要のある操作が一連のタスクとして記述されるようにします。 各ロールでサポートされているタスクのセットを表示する使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]します。 レポート マネージャーでロールを表示、作成、変更、または削除することはできません。 手順については、次を参照してください。[作成、削除、またはロールを変更&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)します。  
   
- **description**  
+ **[説明]**  
  ロールに関する詳細を表示します。 **閲覧者** や **コンテンツ マネージャー**などの定義済みロールに関しては、各ロールでサポートされているタスクの要約が説明として提供されます。  
   
  **ロールの割り当てを削除します。**  
@@ -65,8 +65,8 @@ ms.locfileid: "36072280"
  [ロールを作成、削除、または変更する (Management Studio)](security/role-definitions-create-delete-or-modify.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](security/granting-permissions-on-a-native-mode-report-server.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [レポート マネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
+ [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [ロールの割り当て](security/role-assignments.md)   
- [ユーザー アクセスの許可、レポート サーバーに&#40;レポート マネージャー&#41;](security/grant-user-access-to-a-report-server.md)  
+ [レポート サーバーへのアクセスを与えるユーザー&#40;レポート マネージャー&#41;](security/grant-user-access-to-a-report-server.md)  
   
   

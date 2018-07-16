@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], deleting
 - deleting report items
@@ -17,16 +17,16 @@ ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 581a4e446b6ade328f0593b2815cd2eb66d6d51e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a589eb72661c699db4c913dd0ba08093a2b74a7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286658"
 ---
 # <a name="delete-an-item-management-studio"></a>アイテムの削除 (Management Studio)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のレポート サーバー インスタンスに接続している場合は、ロールの定義や共有スケジュールを削除できます。 レポートやモデルなどのアイテムをレポート サーバーから削除することはできません。 レポート サーバーのコンテンツを削除するには、代わりにレポート マネージャーを使用します。 また、レポート サーバーが SharePoint 統合モード用に構成されている場合は、コンテンツが格納されている SharePoint ライブラリのアイテム管理機能を使用します。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のレポート サーバー インスタンスに接続している場合は、ロールの定義や共有スケジュールを削除できます。 レポートやモデルなどのアイテムをレポート サーバーから削除することはできません。 レポート サーバーのコンテンツを削除するには、代わりにレポート マネージャーを使用します。 また、レポート サーバーが SharePoint 統合モード用に構成されている場合は、コンテンツが格納されている SharePoint ライブラリのアイテム管理機能を使用します。  
   
 ### <a name="to-delete-an-item-in-the-report-server-folder-namespace"></a>レポート サーバー フォルダーの名前空間でアイテムを削除するには  
   

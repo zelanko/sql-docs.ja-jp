@@ -1,14 +1,13 @@
 ---
-title: オブジェクト エクスプ ローラーの詳細を使用して可用性グループ (SQL Server Management Studio) を監視する |Microsoft ドキュメント
+title: オブジェクト エクスプ ローラーの詳細を使用して、可用性グループ (SQL Server Management Studio) の監視 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.OEdetails.f1
 helpviewer_keywords:
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: 28
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 29e86a6914ced21ac6c5941c2f728b18da2c7f9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ffadee68a6990a193d794a9af714fd7cd7f5ea08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282205"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 (SQL Server Management Studio)
   このトピックでは、 **の** [オブジェクト エクスプローラーの詳細] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ペインを使用して、既存の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースを監視および管理する方法について説明します。  
@@ -74,7 +73,7 @@ ms.locfileid: "36173308"
 ##  <a name="AvGroupsDetails"></a> 可用性グループの詳細  
  **[可用性グループ]** の詳細画面には、次の列が表示されます。  
   
- **Name**  
+ **名前**  
  選択した可用性グループの **[可用性レプリカ]**、 **[可用性データベース]**、および **[可用性グループ]** リスナー フォルダーが表示されます。  
   
 ##  <a name="AvReplicaDetails"></a> 可用性レプリカの詳細  
@@ -121,7 +120,7 @@ ms.locfileid: "36173308"
 ##  <a name="AvDbDetails"></a> 可用性データベースの詳細  
  **[可用性データベース]** の詳細画面には、可用性グループ内の可用性データベースの次のプロパティが表示されます。  
   
- **Name**  
+ **名前**  
  可用性データベースの名前です。  
   
  **[同期状態]**  
@@ -148,7 +147,7 @@ ms.locfileid: "36173308"
   
 ## <a name="see-also"></a>参照  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
- [AlwaysOn ダッシュ ボードを使用して&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [AlwaysOn ダッシュ ボードを使用して、 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [可用性グループのプロパティの表示 &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)   
  [可用性レプリカのプロパティの表示 &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   

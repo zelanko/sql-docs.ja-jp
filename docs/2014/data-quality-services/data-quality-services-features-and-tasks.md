@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5d42579174d9bad39c5558bc299f4cd1d7785a59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 485c176956e89368f80a64fe746f8e5a7b0dfdf8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269738"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services の機能とタスク
   データ スチュワード、Data Quality Services 管理者、または SQL Server 管理者がデータ品質プロジェクトを準備して実行するために必要とする情報を検索します。  

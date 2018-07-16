@@ -1,11 +1,11 @@
 ---
-title: UDT テーブルと列の定義 |Microsoft ドキュメント
+title: UDT テーブルと列の定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -25,19 +25,19 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6f6952ca421734b02b410a006b13304d144f0d6e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0225bb7be9cc100e05f3c5119a0b87db6b2d7be7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700003"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358184"
 ---
-# <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>UDT テーブルと列を定義する、ユーザー定義の型の使用
+# <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>ユーザー定義型の使用 - UDT テーブルと列の定義
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  ユーザー定義型 (UDT) を含むアセンブリの定義が登録されるは[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース、列定義で使用できます。  
+  ユーザー定義型 (UDT) を含むアセンブリの定義に登録されていると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース、列定義で使用できます。  
   
 ## <a name="creating-tables-with-udts"></a>UDT を含むテーブルの作成  
- テーブルに UDT 列を作成するために特別な構文は用意されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のデータ型であるかのように、列定義に UDT の名前を使用できます。 次の CREATE TABLE[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントがという名前のテーブルを作成**ポイント**、という列を持つ**ID、** として定義されている、 **int** id 列とテーブルの主キー。 2 番目の列の名前は**PointValue**、データ型の**ポイント**です。 この例では使用されているスキーマ名**dbo**です。 この操作には、スキーマ名を指定する権限が必要です。 スキーマ名を省略すると、データベース ユーザーの既定のスキーマが使用されます。  
+ テーブルに UDT 列を作成するために特別な構文は用意されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のデータ型であるかのように、列定義に UDT の名前を使用できます。 次の CREATE TABLE[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントでは、という名前のテーブルを作成します**ポイント**、という名前の列で**ID、** として定義されている、 **int** id 列と、。テーブルの主キー。 2 番目の列の名前は**PointValue**のデータ型を持つ**ポイント**します。 この例で使用するスキーマ名が**dbo**します。 この操作には、スキーマ名を指定する権限が必要です。 スキーマ名を省略すると、データベース ユーザーの既定のスキーマが使用されます。  
   
 ```  
 CREATE TABLE dbo.Points   

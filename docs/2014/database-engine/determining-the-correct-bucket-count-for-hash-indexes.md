@@ -1,5 +1,5 @@
 ---
-title: ハッシュ インデックスの適切なバケット数を決定する |Microsoft ドキュメント
+title: ハッシュ インデックスの適切なバケット数を決定する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4fa6a93a3f66a3db6c2cc7f74b11fb66073a4013
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5dbb50c928f066e595b48737da2cc2fc6b9f45eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306175"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>ハッシュ インデックスの適切なバケット数の決定
-  値を指定する必要があります、`BUCKET_COUNT`パラメーターは、メモリ最適化テーブルを作成する場合。 このトピックは、適切な値を決定するための推奨事項、`BUCKET_COUNT`パラメーター。 適切なバケット数を決定できない場合は、代わりに非クラスター化インデックスを使用してください。  `BUCKET_COUNT` の値が不適切な場合 (特に小さすぎる場合)、ワークロードのパフォーマンス、およびデータベースの復旧時間に大きな影響を与えることがあります。 バケット数は大きめに設定することをお勧めします。  
+  値を指定する必要があります、`BUCKET_COUNT`パラメーター、メモリ最適化テーブルを作成するときにします。 このトピックでは、適切な値を決定するための推奨事項、`BUCKET_COUNT`パラメーター。 適切なバケット数を決定できない場合は、代わりに非クラスター化インデックスを使用してください。  `BUCKET_COUNT` の値が不適切な場合 (特に小さすぎる場合)、ワークロードのパフォーマンス、およびデータベースの復旧時間に大きな影響を与えることがあります。 バケット数は大きめに設定することをお勧めします。  
   
  重複したインデックス キーは、複数のキーが同じバケットにハッシュされることが原因でバケットのチェーンの増加を引き起こし、ハッシュ インデックスのパフォーマンス低下につながる可能性があります。  
   
- 非クラスター化ハッシュ インデックスの詳細については、次を参照してください。[ハッシュ インデックス](hash-indexes.md)と[を使用してメモリ最適化テーブルのインデックスのガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)です。  
+ 非クラスター化ハッシュ インデックスの詳細については、次を参照してください。[ハッシュ インデックス](hash-indexes.md)と[Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)します。  
   
- メモリ最適化テーブルの各ハッシュ インデックスに対して 1 個のハッシュ テーブルが割り当てられます。 指定されたが、インデックスに割り当てられるハッシュ テーブルのサイズ、`BUCKET_COUNT`パラメーター [CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql)または[CREATE TYPE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). バケット数は内部的に、最も近い 2 のべき乗に切り上げられます。 たとえば、バケット数に 300,000 を指定すると、実際のバケット数は 524,288 になります。  
+ メモリ最適化テーブルの各ハッシュ インデックスに対して 1 個のハッシュ テーブルが割り当てられます。 インデックスがで指定された割り当てられるハッシュ テーブルのサイズ、`BUCKET_COUNT`パラメーター [CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql)または[CREATE TYPE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). バケット数は内部的に、最も近い 2 のべき乗に切り上げられます。 たとえば、バケット数に 300,000 を指定すると、実際のバケット数は 524,288 になります。  
   
  バケット数に関する記事とビデオへのリンクについては、「 [ハッシュ インデックス (インメモリ OLTP) に正しいバケット数を指定する方法](http://go.microsoft.com/fwlink/p/?LinkId=525853)」を参照してください。  
   
 ## <a name="recommendations"></a>推奨事項  
  ほとんどの場合、バケット数はインデックス キーにおける別個の値の数の 1 倍から 2 倍の範囲に設定する必要があります。 インデックス キーに重複する値が多数含まれている場合 (平均して各インデックス キー値に対して 10 を超える行がある場合) は、代わりに非クラスター化インデックスを使用します。  
   
- 特定のインデックス キーに値がどれぐらいあるかは、予測できないこともあります。 パフォーマンスは容認できる場合、`BUCKET_COUNT`値内では 5 回のキー値の実際の数。  
+ 特定のインデックス キーに値がどれぐらいあるかは、予測できないこともあります。 パフォーマンスは許容できる場合、`BUCKET_COUNT`値内では 5 回のキー値の実際の数。  
   
  既存のデータの一意なインデックス キーの数を判断するには、次の例のようなクエリを使用します。  
   
@@ -147,7 +147,7 @@ GO
   
 -   主キー インデックス (PK__SalesOrder...): バケットの 36% が空で、適切です。 また、平均チェーン長さも 1 で、適切です。 変更は不要です。  
   
- メモリ最適化ハッシュ インデックスを使用して問題のトラブルシューティングに関する詳細については、次を参照してください。 [with Memory-Optimized Hash Indexes の一般的なパフォーマンス問題のトラブルシューティング](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)です。  
+ メモリ最適化ハッシュ インデックスの問題のトラブルシューティングの詳細については、次を参照してください。 [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)します。  
   
 ## <a name="detailed-considerations-for-further-optimization"></a>さらに最適化するための詳細な検討  
  このセクションでは、バケット数を最適化するための考慮事項について概説します。  
@@ -156,7 +156,7 @@ GO
   
 -   バケット数が大きくなると、インデックス内の空のバケットの数が増えることになります。 このことは、各バケットをテーブル スキャンの一部としてスキャンするときに、メモリ使用量 (バケットごとに 8 バイト) とテーブル スキャンのパフォーマンスに影響を与えます。  
   
--   バケット数が小さくなると、単一のバケットにより多くの値が割り当てられます。 これは、ため、ポイント参照や挿入のパフォーマンスが低下[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]検索述語で指定された値を検索する単一のバケットで複数の値を走査する必要があります。  
+-   バケット数が小さくなると、単一のバケットにより多くの値が割り当てられます。 ポイント参照や挿入、パフォーマンスが低下この[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]検索述語で指定された値を検索する単一のバケットでいくつかの値を走査する必要があります。  
   
  バケット数が一意のインデックス キーの数を大幅に下回る場合、多くの値が各バケットにマップされます。 これによって、ポイント参照 (個々のインデックス キーの参照) や挿入操作などほとんどの DML 操作でパフォーマンスが低下します。 たとえば、WHERE 句でインデックス キー列を照合するための等値述語が含まれた SELECT クエリ、UPDATE 操作、および DELETE 操作で、パフォーマンスが低下する可能性があります。 データベースの起動時にインデックスが再作成されるため、バケット数が少ないと、データベースの復旧時間にも影響があります。  
   
@@ -181,7 +181,7 @@ GO
 -   パフォーマンス クリティカルな操作がフル インデックス スキャンである場合は、実際のインデックス キー値の数に近いバケット数を使用します。  
   
 ### <a name="big-tables"></a>大きいテーブル  
- 大きいテーブルの場合は、メモリ使用量が問題になることがあります。 たとえば、それぞれ 10億の場合、バケット数が 4 つのハッシュ インデックスのある 2億5千万行のテーブルで、ハッシュ テーブルのオーバーヘッドは、4 つのインデックス * 10億バケット\*は 8 バイト = 32 ギガバイトのメモリ使用率。 インデックスごとのバケット数に 2 億 5 千万個を選択すると、ハッシュ テーブルの合計オーバーヘッドは 8 GB です。 このシナリオでは 8 ギガバイト単位である個々 の行に各インデックスはメモリ使用量の 8 バイトだけでなく、これを追加 (4 つのインデックス\*8 バイト\*2億5千万行)。  
+ 大きいテーブルの場合は、メモリ使用量が問題になることがあります。 たとえば、10億の場合のバケット数はそれぞれ、4 つのハッシュ インデックスのある 2億5千万行のテーブルと、ハッシュ テーブルのオーバーヘッドは、4 つのインデックス * 10億バケット\*8 バイト = 32 ギガバイトのメモリ使用率。 インデックスごとのバケット数に 2 億 5 千万個を選択すると、ハッシュ テーブルの合計オーバーヘッドは 8 GB です。 各インデックスはメモリ使用量の 8 バイトだけでなく、これは、このシナリオでは 8 ギガバイトである個々 の行を追加します (4 つのインデックス\*8 バイト\*2億5千万行の行)。  
   
  OLTP ワークロードのパフォーマンス クリティカル パスでは、フル テーブル スキャンは一般的ではありません。 そのため、メモリ使用量とポイント参照および挿入操作のパフォーマンスの間での選択になります。  
   
