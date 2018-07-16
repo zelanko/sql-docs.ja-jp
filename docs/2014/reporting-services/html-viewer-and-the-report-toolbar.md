@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 caps.latest.revision: 32
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9671f72321630dc53243d695dca7f943e4685e7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: eb889f5f518aa5371afb2604950ba0813f5c9c92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319799"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML ビューアーとレポート ツール バー
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート サーバーからの要求に応じてレポートを表示するために使用される HTML ビューアーが用意されています。 HTML ビューアーには、HTML でレポートを表示するためのフレームワークが提供されます。 これには、レポート ツール バー、パラメーター セクション、資格情報セクション、およびドキュメント マップが含まれます。 HTML ビューアーのレポート ツール バーには、HTML 以外の形式でレポートを表示できるエクスポート オプションなど、レポートに関する作業に使用できる機能が用意されています。 パラメーター セクションとドキュメント マップは、パラメーターまたはドキュメント マップ コントロールを使用するように構成されているレポートを開いた場合のみ表示されます。  
   
 > [!NOTE]  
->  レポート ツール バーを変更することはできませんが、レポート URL でパラメーターを構成して、ツール バーがレポートに表示されないようにすることができます。 レポート ツールバーを非表示の詳細については、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)です。  
+>  レポート ツール バーを変更することはできませんが、レポート URL でパラメーターを構成して、ツール バーがレポートに表示されないようにすることができます。 レポート ツールバーを非表示の詳細については、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。  
   
 ## <a name="report-toolbar"></a>レポート ツール バー  
  レポート ツール バーでは、HTML 表示拡張機能で表示されたレポートに対して、ページ ナビゲーション、拡大または縮小、更新、検索、エクスポート、印刷、およびデータ フィード機能が提供されます。  
@@ -44,7 +44,7 @@ ms.locfileid: "36175916"
 |使用するアイコンまたはコントロール||変換先|  
 |------------------------------|-|--------|  
 |![ページ ナビゲーション コントロール](media/htmlviewer-pagenav.gif "ページ ナビゲーション コントロール")|**ページ ナビゲーション コントロール**|レポートの最初または最後のページを開き、レポートをページごとにスクロールし、レポートの特定のページを開きます。 特定のページを表示するには、ページ番号を入力して Enter キーを押します。|  
-|![ページ表示コントロール](media/htmlviewer-pagesize.gif "ページ コントロールの表示")|**ページ表示コントロール**|レポート ページのサイズを拡大または縮小します。 パーセンテージ ベースの変更以外に、 **[ページの幅]** を選択してレポート ページの幅をブラウザー ウィンドウに合わせるか、 **[ページ全体]** を選択してレポートの高さをブラウザー ウィンドウに合わせることができます。 **[ズーム]** オプションは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 以降のバージョンでサポートされています。|  
+|![ページ表示コントロール](media/htmlviewer-pagesize.gif "ページ表示コントロール")|**ページ表示コントロール**|レポート ページのサイズを拡大または縮小します。 パーセンテージ ベースの変更以外に、 **[ページの幅]** を選択してレポート ページの幅をブラウザー ウィンドウに合わせるか、 **[ページ全体]** を選択してレポートの高さをブラウザー ウィンドウに合わせることができます。 **[ズーム]** オプションは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 以降のバージョンでサポートされています。|  
 |![検索フィールド](media/htmlviewer-search.gif "検索フィールド")|**検索フィールド**|検索する語または句を入力してレポートの内容を検索します (最大文字数は、256 文字です)。 検索は大文字と小文字を区別せず、現在選択されているページまたはセクションから開始されます。 検索対象は、表示可能な内容だけです。 同じ値で引き続き検索を続ける場合は、 **[次へ]** をクリックします。|  
 |![エクスポート形式](media/htmlviewer-export.GIF "エクスポート形式")|**エクスポート形式**|新しいブラウザー ウィンドウを開いて、選択した形式でレポートを表示します。 レポート サーバーにインストールされている表示拡張機能によって、使用可能な形式が決まります。 印刷には、TIFF を使用することをお勧めします。 選択した形式でレポートを表示するには、 **[エクスポート]** をクリックします。|  
 |![ドキュメント マップ アイコン](media/htmlviewer-docmap.GIF "ドキュメント マップ アイコン")|**ドキュメント マップ アイコン**|ドキュメント マップを含んだレポート内のドキュメント マップ ペインの表示と非表示を切り替えます。 ドキュメント マップは、Web サイトのナビゲーション ウィンドウに類似したレポート ナビゲーション コントロールです。 ドキュメント マップ内のアイテムをクリックして、特定のグループ、ページ、またはサブレポートに移動することができます。|  

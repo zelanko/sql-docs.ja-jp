@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], solutions
 - projects [SQL Server Management Studio], about projects
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - items [SQL Server]
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 79c59077bf93110bc92f36a0d52307929c850534
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 57c7271167585be8cc3bd2f863c99f5e03e3d25d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297682"
 ---
 # <a name="solution-explorer"></a>ソリューション エクスプローラー
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のソリューション エクスプローラー ペインには、データベースのスクリプト、クエリ、データ接続、ファイルなどの項目を管理するための "プロジェクト" と呼ばれるコンテナーが用意されています。 互いに関連する 1 つまたは複数のプロジェクトは、"ソリューション" と呼ばれるコンテナーにまとめることができます。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のソリューション エクスプローラー ペインには、データベースのスクリプト、クエリ、データ接続、ファイルなどの項目を管理するための "プロジェクト" と呼ばれるコンテナーが用意されています。 互いに関連する 1 つまたは複数のプロジェクトは、"ソリューション" と呼ばれるコンテナーにまとめることができます。  
   
  ソリューションには、1 つ以上のプロジェクトと、ソリューションを全体として定義するためのファイルおよびメタデータが含まれています。 プロジェクトとは、一式のファイルに、接続情報などの関連メタデータを加えたもののことです。 ソリューションおよびプロジェクトには項目が含まれています。項目とは、データベース ソリューションの作成に必要なスクリプト、クエリ、接続情報、およびファイルを表しています。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36075871"
   
 |||  
 |-|-|  
-|**description**|**トピック**|  
+|**[説明]**|**トピック**|  
 |ソリューション内の 1 つまたは複数のプロジェクトを収集する方法について説明します。|[ソリューション (SQL Server Management Studio)](solutions-sql-server-management-studio.md)|  
 |プロジェクトを作成し、スクリプトや接続などの項目を追加する方法について説明します。|[プロジェクト (SQL Server Management Studio)](projects-sql-server-management-studio.md)|  
 |ソリューションまたは個々のプロジェクトをソース コード管理システムに統合する方法について説明します。|[ソリューション エクスプローラーのソース管理](../../database-engine/solution-explorer-source-control.md)|  

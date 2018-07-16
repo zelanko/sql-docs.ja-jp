@@ -14,18 +14,18 @@ helpviewer_keywords:
 - authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e84bc4ca13d6352b90aa51b172db095fb06f4063
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4a764394b02379459dcf5b3a77396210c1e3f060
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284678"
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services での承認
-  承認は、レポート サーバー データベースの特定のリソースに対して要求された種類のアクセスに、ID を付与するかどうかを判断する処理です。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、ロールベースの承認アーキテクチャを使用します。つまり、そのアプリケーションでユーザーに割り当てられているロールに基づいて、各リソースにユーザー アクセス権を付与します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のセキュリティ拡張機能には、レポート サーバーでユーザーが認証された後、そのユーザーにアクセス権を付与するための承認コンポーネントが実装されています。 SOAP API および URL アクセスを使用して、ユーザーがシステムまたはレポート サーバー アイテムに対して操作を実行しようとすると、承認が呼び出されます。 これは、操作を行うセキュリティ拡張機能インターフェイス**IAuthorizationExtension**です。 前に説明したように、すべての拡張機能は、配置した拡張機能の基本インターフェイスである **IExtension** から継承されます。 **IExtension**と**IAuthorizationExtension**のメンバーである、 **Microsoft.ReportingServices.Interfaces**名前空間。  
+  承認は、レポート サーバー データベースの特定のリソースに対して要求された種類のアクセスに、ID を付与するかどうかを判断する処理です。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、ロールベースの承認アーキテクチャを使用します。つまり、そのアプリケーションでユーザーに割り当てられているロールに基づいて、各リソースにユーザー アクセス権を付与します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のセキュリティ拡張機能には、レポート サーバーでユーザーが認証された後、そのユーザーにアクセス権を付与するための承認コンポーネントが実装されています。 SOAP API および URL アクセスを使用して、ユーザーがシステムまたはレポート サーバー アイテムに対して操作を実行しようとすると、承認が呼び出されます。 これは可能になります、セキュリティ拡張機能インターフェイス**IAuthorizationExtension**します。 前に説明したように、すべての拡張機能は、配置した拡張機能の基本インターフェイスである **IExtension** から継承されます。 **IExtension**と**IAuthorizationExtension**のメンバーである、 **Microsoft.ReportingServices.Interfaces**名前空間。  
   
 ## <a name="checking-access"></a>アクセスのチェック  
  承認でカスタム セキュリティの実装に不可欠なのはアクセス チェックです。これは、<xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> メソッドに実装されています。 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> は、ユーザーがレポート サーバーに対する操作を試行するたびに呼び出されます。 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> メソッドは、操作の種類ごとにオーバーロードされます。 フォルダー操作の場合、アクセス チェックの例は次のようになります。  

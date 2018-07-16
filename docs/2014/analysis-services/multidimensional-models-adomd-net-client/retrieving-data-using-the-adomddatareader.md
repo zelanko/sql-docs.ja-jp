@@ -1,5 +1,5 @@
 ---
-title: AdomdDataReader を使用してデータを取得する |Microsoft ドキュメント
+title: AdomdDataReader を使用してデータの取得 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ed47d13aab29ea47c5f1d041705029844e359e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5631238b78804bb593e8db90f910aec0ddebb933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321232"
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>AdomdDataReader を使用したデータの取得
   <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトは、オーバーヘッドと対話性のバランスがとれた分析データ取得方法です。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトは、分析データ ソースから、読み取り専用かつ順方向専用のフラットなデータ ストリームを取得します。 このようにデータ ストリームがバッファリングされないことで、手順ロジックにより、分析データソースから取得した結果を順次効率的に処理することができます。 大量のデータを取得して表示する場合は、データがメモリ キャッシュに格納されない <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> が適しています。  
   
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> では、返されるクエリの完全な結果を待たずに、使用可能になったデータをすぐに取得できるので、アプリケーションのパフォーマンスも向上します。 また、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> は、既定では一度に 1 つの行のみをメモリに格納するため、システムのオーバーヘッドが軽減されます。  
   
- パフォーマンスが最適化される代わりに、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトの場合、取得したデータに関する情報は他のデータ取得方法より少なくなります。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトは、データやメタデータを表す大規模オブジェクト モデルをサポートしていません。また、セルの書き戻しなど、複雑な分析機能も実行できません。 その代わり、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトには、セルセットのデータを取得するための厳密に型指定されたメソッド セットと、セルセットのメタデータを表形式で取得するためのメソッドが用意されています。 さらに、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>を実装する、 **IDbDataReader**データ バインディングをサポートするインターフェイスを使用してデータを取得するため、`SelectCommand`メソッドから、 **System.Data**の名前空間、Microsoft .NET Framework クラス ライブラリです。  
+ パフォーマンスが最適化される代わりに、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトの場合、取得したデータに関する情報は他のデータ取得方法より少なくなります。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトは、データやメタデータを表す大規模オブジェクト モデルをサポートしていません。また、セルの書き戻しなど、複雑な分析機能も実行できません。 その代わり、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトには、セルセットのデータを取得するための厳密に型指定されたメソッド セットと、セルセットのメタデータを表形式で取得するためのメソッドが用意されています。 さらに、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>実装、 **IDbDataReader**データ バインドをサポートしを使用してデータを取得するためのインターフェイス、`SelectCommand`メソッドから、 **System.Data**の名前空間、Microsoft .NET Framework クラス ライブラリ。  
   
 ## <a name="retrieving-data-from-the-adomddatareader"></a>AdomdDataReader からのデータの取得  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトを使用してデータを取得するには、次の手順を実行します。  
@@ -88,7 +88,7 @@ objReader.Close();
 ```  
   
 ## <a name="retrieving-metadata-from-the-adomddatareader"></a>AdomdDataReader からのメタデータの取得  
- <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトのインスタンスが開いている場合、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A> メソッドを使用して現在のレコードセットに関するスキーマ情報 (メタデータ) を取得できます。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A>返します、`DataTable`オブジェクトを現在のレコード セットのスキーマ情報が格納されます。 `DataTable` は、レコードセットの各列に対して 1 つの行を含みます。 スキーマ テーブル行の各列は、セルセットに返される列のプロパティにマップされます。ここで、`ColumnName` はプロパティの名前で、列の値はプロパティの値です。  
+ <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトのインスタンスが開いている場合、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A> メソッドを使用して現在のレコードセットに関するスキーマ情報 (メタデータ) を取得できます。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A>返します、`DataTable`オブジェクトを現在のレコード セットのスキーマ情報が表示されます。 `DataTable` は、レコードセットの各列に対して 1 つの行を含みます。 スキーマ テーブル行の各列は、セルセットに返される列のプロパティにマップされます。ここで、`ColumnName` はプロパティの名前で、列の値はプロパティの値です。  
   
 ### <a name="example-of-retrieving-metadata-from-the-adomddatareader"></a>AdomdDataReader からのメタデータ取得の例  
  次のコード例では、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトのスキーマ情報を書き出しています。  

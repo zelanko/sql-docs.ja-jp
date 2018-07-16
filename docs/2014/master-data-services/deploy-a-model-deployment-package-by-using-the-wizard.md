@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], deploying
 - models [Master Data Services], deploying a package
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd437c11712872df22ecadbf7f0ae0521c09c696
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2a058012e450dbb763e26bd7f9efb3ac45b8ec00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237172"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>ウィザードを使用したモデルの配置パッケージの展開
   モデル オブジェクトのみが含まれているパッケージを配置するには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のモデル配置ウィザードを使用します。 データを含むパッケージを配置する必要がある場合は、「 [MDSModelDeploy を使用したモデルの配置パッケージの配置](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)」を参照してください。  
@@ -51,7 +51,7 @@ ms.locfileid: "36179539"
   
 5.  配置パッケージ (.pkg ファイル) を見つけて **[開く]** をクリックします。  
   
-6.  **[次へ]** をクリックします。  
+6.  [**次へ**] をクリックします。  
   
 7.  パッケージが読み込まれたら **[次へ]** をクリックします。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36179539"
   
  **注**  
   
--   としてビューが作成された場合は、パッケージ内のサブスクリプション ビューでは、既存のモデルに同じ名前のサブスクリプション ビューが含まれる*modelname.subscriptionviewname*です。 この名前が既に使用されている場合、サブスクリプション ビューは作成されません。  
+-   としてビューを作成する場合は、パッケージ内のサブスクリプション ビューでは、既存のモデルにサブスクリプション ビューと同じ名前が含まれる*modelname.subscriptionviewname*します。 この名前が既に使用されている場合、サブスクリプション ビューは作成されません。  
   
 -   配置プロセスには、次の 4 つの手順があります。  
   

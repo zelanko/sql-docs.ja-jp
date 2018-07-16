@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - dropping articles
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fa5cfaec81c0e2b22e7b66a36907daf57e443bdb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9b4b452f37f06610ccccd042fd1aae6d616bac2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305452"
 ---
 # <a name="delete-an-article"></a>アーティクルの削除
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)] またはレプリケーション管理オブジェクト (RMO) を使用して、アーティクルを削除する方法について説明します。 アーティクルを削除できる条件と、アーティクルを削除するために新しいスナップショットやサブスクリプションの再初期化が必要かどうかについては、「[Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md)」(既存のパブリケーションでのアーティクルの追加と削除) をご覧ください。  
@@ -72,7 +72,7 @@ ms.locfileid: "36175670"
   
 4.  手順 1. で作成した接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに設定します。  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> プロパティを調べて、アーティクルが存在していることを確認します。 このプロパティの値が場合`false`、手順 3. でアーティクルのプロパティの定義が正しくなかったか、アーティクルが存在しません。  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> プロパティを調べて、アーティクルが存在していることを確認します。 このプロパティの値が場合`false`、手順 3. でアーティクルのプロパティが正しく定義されていないか、アーティクルが存在しません。  
   
 6.  <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> メソッドを呼び出します。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36175670"
   
 4.  手順 1. で作成した接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに設定します。  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> プロパティを調べて、アーティクルが存在していることを確認します。 このプロパティの値が場合`false`、手順 3. でアーティクルのプロパティの定義が正しくなかったか、アーティクルが存在しません。  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> プロパティを調べて、アーティクルが存在していることを確認します。 このプロパティの値が場合`false`、手順 3. でアーティクルのプロパティが正しく定義されていないか、アーティクルが存在しません。  
   
 6.  <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> メソッドを呼び出します。  
   

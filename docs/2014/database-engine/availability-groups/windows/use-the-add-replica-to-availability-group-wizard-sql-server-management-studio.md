@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 caps.latest.revision: 20
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 29b5dbd44e02515cc2bdab7445bacb0e61d1dcca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8abea104cf6d59ba0558489a387ae35af7b6e7cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291398"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>可用性グループへのレプリカ追加ウィザードの使用 (SQL Server Management Studio)
   可用性グループへのレプリカの追加ウィザードを使用して、既存の AlwaysOn 可用性グループに新しいセカンダリ レプリカを追加できます。  
@@ -35,7 +34,7 @@ ms.locfileid: "36076049"
 
   
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
- 可用性グループに可用性レプリカを追加しない場合、「サーバー インスタンス」および「可用性グループとレプリカ」のセクションを参照してください。[前提条件、制限事項、および AlwaysOn 可用性グループ&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)です。  
+ 可用性グループにない可用性レプリカを追加した場合、「サーバー インスタンス」と「可用性グループとレプリカ」セクションを参照してください[前提条件、制限事項、および AlwaysOn 可用性グループ&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)します。  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
@@ -79,14 +78,14 @@ ms.locfileid: "36076049"
   
 3.  セカンダリ レプリカを追加する可用性グループを右クリックし、 **[レプリカの追加]** をクリックします。 可用性グループへのレプリカ追加ウィザードが起動します。  
   
-4.  **[既存のセカンダリ レプリカへの接続]** ページで、可用性グループのすべてのセカンダリ レプリカに接続します。 詳細については、次を参照してください。[既存のセカンダリ レプリカ ページへの接続&#40;のレプリカ追加ウィザードとデータベースの追加ウィザード&#41;](connect-to-existing-secondary-replicas-page.md)です。  
+4.  **[既存のセカンダリ レプリカへの接続]** ページで、可用性グループのすべてのセカンダリ レプリカに接続します。 詳細については、次を参照してください。[既存のセカンダリ レプリカ ページへの接続&#40;のレプリカ追加ウィザードおよびデータベース追加ウィザード&#41;](connect-to-existing-secondary-replicas-page.md)します。  
   
 5.  **[レプリカの指定]** ページで、可用性グループの 1 つまたは複数の新しいセカンダリ レプリカを指定し、構成します。 このページには、3 つのタブがあります。 次の表では、これらのタブについて説明します。 詳細については、「[[レプリカの指定] ページ &#40;新しい可用性グループウィザード/レプリカの追加ウィザード&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)」を参照してください。  
   
     |タブ|簡単な説明|  
     |---------|-----------------------|  
     |**レプリカ**|このタブを使用して、新しいセカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを指定します。|  
-    |**エンドポイント**|このタブを使用して、新しいセカンダリ レプリカに対する既存のデータベース ミラーリング エンドポイントを検証します (存在する場合)。 サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合、ウィザードは、エンドポイントの自動作成を試行します。 **注:** 任意のサーバー インスタンスがドメイン以外のユーザー アカウントで実行されている場合、手動で変更を加える、サーバー インスタンスに、ウィザードを続行する前にする必要があります。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。|  
+    |**エンドポイント**|このタブを使用して、新しいセカンダリ レプリカに対する既存のデータベース ミラーリング エンドポイントを検証します (存在する場合)。 サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合、ウィザードは、エンドポイントの自動作成を試行します。 **注:** 任意のサーバー インスタンスが非ドメイン ユーザー アカウントで実行している場合を加える必要があります手動で変更をサーバー インスタンスに、ウィザードを続行する前にします。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。|  
     |**バックアップの設定**|このタブを使用して、可用性グループ全体のバックアップ設定を指定し (現在の設定を変更する場合)、各可用性レプリカのバックアップの優先順位を指定します。|  
   
 6.  **[最初のデータの同期を選択]** ページで、新しいセカンダリ データベースを作成して可用性グループに参加させる方法を選択します。 次のいずれかのオプションを選択します。  
@@ -135,7 +134,7 @@ ms.locfileid: "36076049"
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [前提条件、制限事項、および AlwaysOn 可用性グループに関する推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [可用性グループへのセカンダリ レプリカの追加 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ScriptCacheProcessingMode 要素 (ASSL) |Microsoft ドキュメント
+title: ScriptCacheProcessingMode 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ScriptCacheProcessingMode element
 ms.assetid: 95c0723c-69a4-43e7-b743-f712180a7681
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0566ea0411eb3f6574d03e738017d8ca6a5bdf2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de4bac4bfbfa0ab7a6471f107c594194023292a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253074"
 ---
 # <a name="scriptcacheprocessingmode-element-assl"></a>ScriptCacheProcessingMode 要素 (ASSL)
   サーバーがスクリプト キャッシュを処理中または処理後のどちらに構築するかを指定します。  
@@ -51,7 +51,7 @@ ms.locfileid: "36179400"
 |特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*通常*|  
+|既定値|*正規表現*|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
@@ -66,10 +66,10 @@ ms.locfileid: "36179400"
   
 |値|説明|  
 |-----------|-----------------|  
-|*通常*|サーバーは、処理中にスクリプト キャッシュを構築します。|  
-|*レイジー*|サーバーは、処理後にスクリプト キャッシュを構築します。|  
+|*正規表現*|サーバーは、処理中にスクリプト キャッシュを構築します。|  
+|*遅延*|サーバーは、処理後にスクリプト キャッシュを構築します。|  
   
- 許可される値に対応する列挙`ScriptCacheProcessingMode`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ScriptCacheProcessingMode>します。  
+ 許容された値に対応する列挙体`ScriptCacheProcessingMode`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ScriptCacheProcessingMode>します。  
   
  親に対応する要素`ScriptCacheProcessingMode`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Cube>します。  
   

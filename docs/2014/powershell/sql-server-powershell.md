@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e66e94d1b49ecb275ba1422a6c7ee16c1eddc3f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f605305a86295f8b2e91aa7300086c5827e683d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271138"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] は、Windows PowerShell をサポートしています。これは、管理者および開発者がサーバー管理やアプリケーション配置を自動化できる強力なスクリプティング シェルです。 Windows PowerShell 言語では [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトよりも複雑なロジックがサポートされ、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理者は堅牢な管理スクリプトを構築できます。 Windows PowerShell スクリプトは他の [!INCLUDE[msCoName](../includes/msconame-md.md)] サーバー製品の管理にも使用できます。 そのため、管理者はサーバー間で共通のスクリプト言語を使用できるようになります。  
@@ -40,10 +40,10 @@ ms.locfileid: "36178916"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|実行するための推奨メカニズムについて説明します、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell コンポーネントを開くには、PowerShell セッションと負荷、`sqlps`モジュール。 `sqlps` モジュールは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell プロバイダーおよびコマンドレットと、それらによって使用される SQL Server 管理オブジェクト (SMO) アセンブリを読み込みます。|[SQLPS モジュールのインポート](../database-engine/import-the-sqlps-module.md)|  
+|実行するための推奨メカニズムについて説明します、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell コンポーネントを PowerShell セッションと負荷を開く、`sqlps`モジュール。 `sqlps` モジュールは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell プロバイダーおよびコマンドレットと、それらによって使用される SQL Server 管理オブジェクト (SMO) アセンブリを読み込みます。|[SQLPS モジュールのインポート](../database-engine/import-the-sqlps-module.md)|  
 |プロバイダーもコマンドレットも読み込まず、SMO アセンブリだけを読み込む方法について説明します。|[Windows PowerShell への SMO アセンブリの読み込み](load-the-smo-assemblies-in-windows-powershell.md)|  
-|**オブジェクト エクスプローラー**でノードを右クリックすることによって Windows PowerShell セッションを実行する方法について説明します。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Windows PowerShell セッションを起動すると、ロード、`sqlps`モジュール、および SQL Server プロバイダー パスを選択したオブジェクトに設定します。|[SQL Server Management Studio からの Windows PowerShell の実行](run-windows-powershell-from-sql-server-management-studio.md)|  
-|Windows PowerShell スクリプトを実行する SQL Server エージェントのジョブ ステップを作成する方法について説明します。 ジョブは、特定の時刻に実行したり、イベントに応答して実行したりするように設定できます。|[SQL Server エージェントの Windows PowerShell ステップの実行](run-windows-powershell-steps-in-sql-server-agent.md
+|**オブジェクト エクスプローラー**でノードを右クリックすることによって Windows PowerShell セッションを実行する方法について説明します。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Windows PowerShell セッションを起動すると、読み込み、`sqlps`モジュール、および選択したオブジェクトに、SQL Server プロバイダー パスを設定します。|[SQL Server Management Studio からの Windows PowerShell の実行](run-windows-powershell-from-sql-server-management-studio.md)|  
+|Windows PowerShell スクリプトを実行する SQL Server エージェントのジョブ ステップを作成する方法について説明します。 ジョブは、特定の時刻に実行したり、イベントに応答して実行したりするように設定できます。|[SQL Server エージェントの Windows PowerShell の手順を実行する](run-windows-powershell-steps-in-sql-server-agent.md
 )|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの階層を移動するために [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーを使用する方法について説明します。|[SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スクリプトの実行などの [!INCLUDE[ssDE](../includes/ssde-md.md)] 操作を指定する [!INCLUDE[tsql](../includes/tsql-md.md)] コマンドレットを使用する方法について説明します。|[データベース エンジン コマンドレットの使用](../database-engine/use-the-database-engine-cmdlets.md)|  

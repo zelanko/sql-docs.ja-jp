@@ -1,5 +1,5 @@
 ---
-title: Calculations 要素 (ASSL) |Microsoft ドキュメント
+title: Calculations 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Calculations element
 ms.assetid: 03e5e91c-1f66-4dc7-8aad-4d9876928df0
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12d1ad22a305c6adb198348a1cd7fe6b858e72cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 130288eb3a628a746d3b7b19b1635a31250cdb8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319289"
 ---
 # <a name="calculations-element-assl"></a>Calculations 要素 (ASSL)
   コレクションを格納[PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)要素に関連付けられた、[パースペクティブ](../objects/perspective-element-assl.md)要素。  

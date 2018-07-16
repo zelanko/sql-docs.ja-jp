@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0fab127f224ba313e37e0bde49a0677514bb203
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63014b261a38078a209fc6fb08585b7aa1b7182b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233872"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>データの変更の準備ができているかどうかを判断する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、2 番目のタスクは、選択した間隔の変更データが準備できていることを確認することです。 選択したエンドポイントまでの変更が非同期キャプチャ プロセスでまだ一部処理されていない可能性があるため、この手順が必要となります。  
@@ -203,7 +203,7 @@ ms.locfileid: "36085721"
         > [!NOTE]  
         >  `Thread.Sleep` メソッドは、ミリ秒単位で指定される引数を想定しています。  
   
-7.  既定のコードを返す行のままにして`DtsExecResult.Success`のスクリプトを実行します。  
+7.  既定のコードを返す行のままに`DtsExecResult.Success`スクリプトの操作を実行します。  
   
 8.  スクリプト開発環境と **[スクリプト タスク エディター]** を閉じます。  
   
@@ -279,7 +279,7 @@ ms.locfileid: "36085721"
   
 6.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックしてスクリプト開発環境を開きます。  
   
-7.  Main プロシージャに呼び出すことによって、エラーを記録するコードを入力、`Dts.Log`メソッド、またはイベントを発生させる方法の 1 つを呼び出して、`Dts.Events`インターフェイスです。 `Dts.TaskResult = Dts.Results.Failure`を返すことによってエラーをパッケージに通知します。  
+7.  Main プロシージャに、呼び出すことによって、エラー ログに記録するコードを入力します。、`Dts.Log`メソッド、またはいずれかのメソッドを呼び出してイベントを発生させる、`Dts.Events`インターフェイス。 `Dts.TaskResult = Dts.Results.Failure`を返すことによってエラーをパッケージに通知します。  
   
      次の例は、メッセージをログに書き込む方法を示しています。 詳細については、「 [スクリプト タスクでのログ記録](../extending-packages-scripting/task/logging-in-the-script-task.md)」、「 [スクリプト タスクでのイベントの発生](../extending-packages-scripting/task/raising-events-in-the-script-task.md)」、「 [スクリプト タスクから結果を返す](../extending-packages-scripting/task/returning-results-from-the-script-task.md)」を参照してください。  
   

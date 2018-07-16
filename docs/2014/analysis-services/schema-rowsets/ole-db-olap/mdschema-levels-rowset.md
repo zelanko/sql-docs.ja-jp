@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_LEVELS 行セット |Microsoft ドキュメント
+title: MDSCHEMA_LEVELS 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_LEVELS rowset
 ms.assetid: 4313e268-33f4-4e99-96d7-2ec26775c580
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 51aced8c191943330b6df9f08fc65292b1a77d81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff9d359bb82c0197c4ebdc1b9c088ca50556b9d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312442"
 ---
 # <a name="mdschemalevels-rowset"></a>MDSCHEMA_LEVELS 行セット
   特定の階層内の各レベルについて記述します。  
@@ -49,8 +49,8 @@ ms.locfileid: "36083282"
 |`LEVEL_CARDINALITY`|`DBTYPE_UI4`||レベル内のメンバーの数。|  
 |`LEVEL_TYPE`|`DBTYPE_I4`||レベルの種類。<br /><br /> -   `MDLEVEL_TYPE_GEO_CONTINENT` (`0x2001`)<br />-   `MDLEVEL_TYPE_GEO_REGION` (`0x2002`)<br />-   `MDLEVEL_TYPE_GEO_COUNTRY` (`0x2003`)<br />-   `MDLEVEL_TYPE_GEO_STATE_OR_PROVINCE` (`0x2004`)<br />-   `MDLEVEL_TYPE_GEO_COUNTY` (`0x2005`)<br />-   `MDLEVEL_TYPE_GEO_CITY` (`0x2006`)<br />-   `MDLEVEL_TYPE_GEO_POSTALCODE` (`0x2007`)<br />-   `MDLEVEL_TYPE_GEO_POINT` (`0x2008`)<br />-   `MDLEVEL_TYPE_ORG_UNIT` (`0x1011`)<br />-   `MDLEVEL_TYPE_BOM_RESOURCE` (`0x1012`)<br />-   **MDLEVEL_TYPE_QUANTITATIVE** (`0x1013`)<br />-   `MDLEVEL_TYPE_ACCOUNT` (`0x1014`)<br />-   `MDLEVEL_TYPE_CUSTOMER` (`0x1021`)<br />-   `MDLEVEL_TYPE_CUSTOMER_GROUP` (`0x1022`)<br />-   `MDLEVEL_TYPE_CUSTOMER_HOUSEHOLD` (`0x1023`)<br />-   `MDLEVEL_TYPE_PRODUCT` (`0x1031`)<br />-   `MDLEVEL_TYPE_PRODUCT_GROUP` (`0x1032`)<br />-   `MDLEVEL_TYPE_SCENARIO` (`0x1015`)<br />-   `MDLEVEL_TYPE_UTILITY` (`0x1016`)<br />-   `MDLEVEL_TYPE_PERSON` (`0x1041`)<br />-   `MDLEVEL_TYPE_COMPANY` (`0x1042`)<br />-   `MDLEVEL_TYPE_CURRENCY_SOURCE` (`0x1051`)<br />-   `MDLEVEL_TYPE_CURRENCY_DESTINATION` (`0x1052`)<br />-   `MDLEVEL_TYPE_CHANNEL` (`0x1061`)<br />-   `MDLEVEL_TYPE_REPRESENTATIVE` (`0x1062`)<br />-   `MDLEVEL_TYPE_PROMOTION` (`0x1071`)|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||レベルに関して人が認識できる説明。 説明が存在しない場合は NULL になります。|  
-|`CUSTOM_ROLLUP_SETTINGS`|`DBTYPE_I4`||カスタム ロールアップ オプションを指定するビットマップ。<br /><br /> -   `MDLEVELS_CUSTOM_ROLLUP_EXPRESSION` (`0x01`) 式は、このレベルが存在することを示します。 (非推奨)<br />-   `MDLEVELS_CUSTOM_ROLLUP_COLUMN` (`0x02`) このレベルのカスタム ロールアップ列があることを示します。<br />-   `MDLEVELS_SKIPPED_LEVELS` (`0x04`) このレベルのメンバーに関連付けられているスキップされたレベルがあることを示します。<br />-   `MDLEVELS_CUSTOM_MEMBER_PROPERTIES` (`0x08`) レベルのメンバーは、カスタム メンバー プロパティであることを示します。<br />-   `MDLEVELS_UNARY_OPERATOR` (`0x10`) レベルのメンバーに単項演算子があることを示します。|  
-|`LEVEL_UNIQUE_SETTINGS`|`DBTYPE_I4`||レベルに一意の名前またはキーを持つメンバーのみが含まれている場合に、一意の値を含んでいる列を示すビットマップ。 Msmd.h ファイルは、このビットマップに対して次のビット値定数を定義します。<br /><br /> -   `MDDIMENSIONS_MEMBER_KEY_UNIQUE` (`1`)<br />-   `MDDIMENSIONS_MEMBER_NAME_UNIQUE` (`2`)<br /><br /> キーが内で一意では常に[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 名前は、属性の設定が `UniqueInDimension` または `UniqueInAttribute` である場合に一意になります。|  
+|`CUSTOM_ROLLUP_SETTINGS`|`DBTYPE_I4`||カスタム ロールアップ オプションを指定するビットマップ。<br /><br /> -   `MDLEVELS_CUSTOM_ROLLUP_EXPRESSION` (`0x01`) 式がこのレベルが存在することを示します。 (非推奨)<br />-   `MDLEVELS_CUSTOM_ROLLUP_COLUMN` (`0x02`) このレベルのカスタム ロールアップ列があることを示します。<br />-   `MDLEVELS_SKIPPED_LEVELS` (`0x04`) がこのレベルのメンバーに関連付けられているスキップされたレベルがあることを示します。<br />-   `MDLEVELS_CUSTOM_MEMBER_PROPERTIES` (`0x08`) レベルのメンバーがカスタム メンバー プロパティを使用することを示します。<br />-   `MDLEVELS_UNARY_OPERATOR` (`0x10`) レベルのメンバーに単項演算子があることを示します。|  
+|`LEVEL_UNIQUE_SETTINGS`|`DBTYPE_I4`||レベルに一意の名前またはキーを持つメンバーのみが含まれている場合に、一意の値を含んでいる列を示すビットマップ。 Msmd.h ファイルは、このビットマップに対して次のビット値定数を定義します。<br /><br /> -   `MDDIMENSIONS_MEMBER_KEY_UNIQUE` (`1`)<br />-   `MDDIMENSIONS_MEMBER_NAME_UNIQUE` (`2`)<br /><br /> キーは常に内で一意で[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。 名前は、属性の設定が `UniqueInDimension` または `UniqueInAttribute` である場合に一意になります。|  
 |`LEVEL_IS_VISIBLE`|`DBTYPE_BOOL`||レベルが表示されるかどうかを示すブール値。<br /><br /> 常に True を返します。 レベルが表示されていない場合は、スキーマ行セットに含まれません。|  
 |`LEVEL_ORDERING_PROPERTY`|`DBTYPE_WSTR`||レベルの並べ替えに使用する属性の ID。|  
 |`LEVEL_DBTYPE`|`DBTYPE_I4`||レベル属性に使用されるメンバー キー列の `DBTYPE` 列挙。<br /><br /> 連結されたキーをメンバー キー列として使用する場合は NULL になります。|  
@@ -77,8 +77,8 @@ ms.locfileid: "36083282"
 |`LEVEL_NAME`|`DBTYPE_WSTR`|任意。|  
 |`LEVEL_UNIQUE_NAME`|`DBTYPE_WSTR`|任意。|  
 |`LEVEL_ORIGIN`|`DBTYPE_UI2`|(省略可) 既定の制限は、`MD_USER_DEFINED` と `MD_SYSTEM_ENABLED` で有効です。|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 のキューブ<br />2 つのディメンション<br /><br /> 既定の制限の値は 1 です。|  
-|`LEVEL_VISIBILITY`|`DBTYPE_UI2`|(省略可) 次のいずれかの値を含むビットマップ。 <br /><br /> -1 の表示<br />-2 not 表示<br /><br /> 既定の制限の値は 1 です。|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 のキューブ<br />-2 つのディメンション<br /><br /> 既定の制限の値は 1 です。|  
+|`LEVEL_VISIBILITY`|`DBTYPE_UI2`|(省略可) 次のいずれかの値を含むビットマップ。 <br /><br /> -1 の表示<br />-2 の非表示<br /><br /> 既定の制限の値は 1 です。|  
   
 ## <a name="see-also"></a>参照  
  [OLE DB for OLAP Schema 行セット](ole-db-for-olap-schema-rowsets.md)  

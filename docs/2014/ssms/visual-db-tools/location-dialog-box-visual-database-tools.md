@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.getdirectoryname
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 243dc99dcb7ea50a6894665f3dbf46d542572ee8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 55bdf0e85a80793c3e16b92337f10b6c1d54aa0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234452"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>場所ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスを使用すると、必要なファイルが含まれているフォルダーを見つけて、選択できます。 選択したフォルダーのパスが、このダイアログ ボックスから呼び出し元のダイアログに返されます。 次の方法でこのダイアログ ボックスにアクセスできます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36085127"
  **[フォルダー名]**  
  選択されているフォルダーのパスを表示します。  
   
- **Open**  
+ **[ファイル]**  
  **[フォルダー名]** フィールドで選択されているフォルダーのパスを呼び出し元のダイアログ ボックスに返します。  
   
 ## <a name="toolbar"></a>[ツール バー]  
@@ -55,7 +55,7 @@ ms.locfileid: "36085127"
  **[1 つ上のフォルダーへ移動]**  
  階層内で次に高い位置にあるフォルダーに移動します。  
   
- **Delete**  
+ **削除**  
  選択したファイルまたはフォルダーを記憶域から削除します。  
   
  **[新しいフォルダーの作成]**  

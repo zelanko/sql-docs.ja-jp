@@ -1,5 +1,5 @@
 ---
-title: 作成またはクライアント (SQL Server 構成マネージャー) で使用するためのサーバーの別名の削除 |Microsoft ドキュメント
+title: 作成またはクライアント (SQL Server 構成マネージャー) で使用するサーバーの別名を削除する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - server alias
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - aliases [SQL Server], creating
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8043f455177b3a34736b9d0d83d13411adfb8bfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ad94dc1af7f5725e0f32f5a3d6789122f1ca129c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312282"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client-sql-server-configuration-manager"></a>クライアントが使用するサーバーの別名の作成または削除 (SQL Server 構成マネージャー)
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server 構成マネージャーを使用して、サーバー別名を作成または削除する方法について説明します。 別名は、接続のために使用できる代替名です。 別名は、接続文字列の必須要素をカプセル化したものであり、ユーザーが選択した名前でそれらの要素を公開できます。 別名は、任意のクライアント アプリケーションで使用できます。 サーバーの別名を作成すると、クライアント コンピューターはさまざまなネットワーク プロトコルを使用して複数のサーバーに接続できます。プロトコルおよび接続の詳細をそれぞれ指定する必要はありません。 また、さまざまなネットワーク プロトコルを、たとえ頻繁に使用する必要がないプロトコルであっても常に有効にしておくことができます。 既定以外のポート番号または名前付きパイプで受信するようにサーバーを構成し、SQL Server Browser サービスを無効にした場合は、新しいポート番号または名前付きパイプを指定する別名を作成してください。  

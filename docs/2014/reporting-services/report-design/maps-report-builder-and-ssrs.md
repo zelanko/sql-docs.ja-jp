@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
 - "10508"
@@ -18,15 +18,15 @@ f1_keywords:
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b73b5364e4ccd9cdb86210a25a8ee281dc6ad85c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 801c4ef8ce4c07491d45577224726167c86b0250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313305"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>マップ (レポート ビルダーおよび SSRS)
   レポートにマップを追加すると、地理的背景に対してビジネス データを視覚化することができます。 選択するマップの種類は、レポートでどのような情報を伝えるかによって異なります。 追加できるマップの種類としては、単に場所を表示するマップのほか、バブル サイズが領域内の世帯数に応じて変化するバブル マップ、店舗ごとの最も利益率の高い製品に基づいてマーカーのスタイルが変わるマーカー マップ、店舗間の経路を表示するライン マップがあります。  
@@ -92,7 +92,7 @@ ms.locfileid: "36084533"
   
      クエリ デザイナーに表示される結果セットでは、空間データの各行が 1 単位として扱われ、1 つのマップ要素に格納されます。 たとえば、結果セットの 1 つの行に複数のポイントが定義されている場合、そのマップ要素のすべてのポイントに表示プロパティが適用されます。  
   
--   **独自に作成した場所** 埋め込まれたポイント レイヤーに対して、埋め込まれたポイントとして場所を手動で追加することができます。 詳細については、次を参照してください。[マップにカスタムの場所を追加&#40;レポート ビルダーおよび SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)です。  
+-   **独自に作成した場所** 埋め込まれたポイント レイヤーに対して、埋め込まれたポイントとして場所を手動で追加することができます。 詳細については、次を参照してください。[マップにカスタムの場所の追加&#40;レポート ビルダーおよび SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)します。  
   
 #### <a name="spatial-data-in-design-view"></a>デザイン ビューでの空間データ  
  デザイン ビューには、マップ レイヤーをデザインしやすくするためのサンプル空間データがレポート プロセッサによって表示されます。 表示されるデータは、空間データが利用できるかどうかによって異なります。  
@@ -175,7 +175,7 @@ ms.locfileid: "36084533"
   
 -   Bing Maps Web サービスからタイルを取得する際にセキュリティで保護された接続を使用するかどうか。  
   
- 手順については、次を参照してください。[を追加、変更、またはマップまたはマップ レイヤーを削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)です。  
+ 手順については、次を参照してください。[追加、変更、またはマップまたはマップ レイヤーの削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)します。  
   
  タイルの詳細については、「 [Bing Maps のタイル システム](http://go.microsoft.com/fwlink/?linkid=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](http://go.microsoft.com/fwlink/?LinkId=151371) 」および「 [プライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=151372)」を参照してください。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "36084533"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- マップ レイヤーの詳細については、次を参照してください。[を追加、変更、またはマップまたはマップ レイヤーを削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)です。  
+ マップ レイヤーの詳細については、次を参照してください。[追加、変更、またはマップまたはマップ レイヤーの削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)します。  
   
 ### <a name="varying-display-properties-for-points-lines-and-polygons"></a>ポイント、線、および多角形の表示プロパティを変更する  
  マップ要素の表示オプションは、レイヤーのルールを使用してレイヤー レベルで設定するか、または個々の要素レベルで設定できます。 たとえば、レイヤーに対するすべてのポイントの表示プロパティを設定 (または、埋め込まれているかどうかに関係なく、レイヤーに対するすべてのポイントの表示プロパティを制御するルールを設定) できるほか、埋め込まれている特定のポイントに対する表示プロパティの設定をオーバーライドすることもできます。  
@@ -254,7 +254,7 @@ ms.locfileid: "36084533"
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  レポートでマップやマップ レイヤーを扱う際の詳細な手順を紹介しているトピックの一覧を次に示します。  
   
--   [追加、変更、またはマップまたはマップ レイヤーを削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [追加、変更、またはマップまたはマップ レイヤーの削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
 -   [変更するマップの凡例、カラー スケール、および関連付けられているルール&#40;レポート ビルダーおよび SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
@@ -267,16 +267,16 @@ ms.locfileid: "36084533"
   
  [マップ ウィザードおよびマップ レイヤー ウィザードのページ &#40;レポート ビルダーおよび SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [データとマップまたはマップ レイヤーの表示をカスタマイズ&#40;レポート ビルダーおよび SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [データとマップまたはマップ レイヤーの表示のカスタマイズ&#40;レポート ビルダーおよび SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [追加、変更、またはマップまたはマップ レイヤーを削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [追加、変更、またはマップまたはマップ レイヤーの削除&#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [変更するマップの凡例、カラー スケール、および関連付けられているルール&#40;レポート ビルダーおよび SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
  [マップにカスタムの場所を追加&#40;レポート ビルダーおよび SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [レポートのトラブルシューティング: レポートにマップ&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

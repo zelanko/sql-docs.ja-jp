@@ -1,5 +1,5 @@
 ---
-title: root 要素 (XMLA) |Microsoft ドキュメント
+title: root 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - root element
 ms.assetid: ecd9d6e8-b16c-4d62-9a87-107c413a0056
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481947e1d58fe5da34b29f43405bfff48583b8c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 11045be6946a5a73f0ad86fdcfcc53610800a6c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321082"
 ---
 # <a name="root-element-xmla"></a>root 要素 (XMLA)
-  によって返される結果を含む、 [Discover](../xml-elements-methods-discover.md)メソッドまたは、XML for Analysis (XMLA) コマンドを使用して実行、 [Execute](../xml-elements-methods-execute.md)メソッドです。  
+  によって返される結果が含まれています、 [Discover](../xml-elements-methods-discover.md)メソッドまたは XML for Analysis (XMLA) コマンドの実行を使用して、 [Execute](../xml-elements-methods-execute.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36173317"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `root`要素には、いずれかで返される情報が含まれています、 [DiscoverResponse](../xml-elements-objects-discoverresponse.md) 、1 つによって返される要素`Discover`メソッドの呼び出し、または、 [ExecuteResponse](../xml-elements-objects-executeresponse.md)要素1 つで実行される単一の XMLA コマンドによって返される`Execute`メソッドの呼び出しです。  
+ `root`要素には、いずれかで返される情報が含まれています、 [DiscoverResponse](../xml-elements-objects-discoverresponse.md) 、1 つによって返される要素`Discover`メソッドの呼び出し、または、 [ExecuteResponse](../xml-elements-objects-executeresponse.md)要素1 つで実行される単一 XMLA コマンドによって返される`Execute`メソッドの呼び出し。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;XMLA&#41;](xml-elements-properties.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
 - "10256"
@@ -21,18 +21,18 @@ f1_keywords:
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd6084c7d426693abbaa29c60aa2c5ad0b0011ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 33e11e05c4678fbbde7c97175498f94e092ffe43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280478"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>グラフ (レポート ビルダーおよび SSRS)
-  データをビジュアル形式でまとめるには、グラフ データ領域を使用します。 グラフを使用すると、大量の集計情報がひとめでわかります。 グラフを作成する前に、データを慎重に準備および理解することが重要です。これにより、グラフをすばやく効率的にデザインできます。 詳細については、「[レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)」を参照してください。 グラフをすぐに使用を開始するには、バー、列、スパーク ライン、および円グラフのチュートリアルを参照してください[チュートリアル&#40;レポート ビルダー&#41; ](../report-builder-tutorials.md)バーや円グラフのチュートリアル[Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)です。  
+  データをビジュアル形式でまとめるには、グラフ データ領域を使用します。 グラフを使用すると、大量の集計情報がひとめでわかります。 グラフを作成する前に、データを慎重に準備および理解することが重要です。これにより、グラフをすばやく効率的にデザインできます。 詳細については、「[レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)」を参照してください。 グラフをすぐに使用を開始するには、バー、列、スパーク ライン、および円グラフのチュートリアルを参照してください[チュートリアル&#40;レポート ビルダー&#41; ](../report-builder-tutorials.md)または横棒グラフおよび円グラフのチュートリアル[Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)します。  
   
  次の図は、グラフで使用されるさまざまな要素を示しています。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36076140"
  [グラフの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  全体の見た目を向上させる書式設定を使用し、グラフの主要なデータ ポイントを強調表示します。  
   
- [空にして、グラフ内のデータ ポイントは Null&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [空にして、Null データ ポイントのグラフで&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
  空の値または NULL 値を持つフィールドに基づくグラフを操作する際の考慮事項について説明します。  
   
  [グラフ上で複数のデータ範囲を持つ系列の表示&#40;レポート ビルダーおよび SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
@@ -142,7 +142,7 @@ ms.locfileid: "36076140"
  [同じデータセットに複数のデータ領域のリンク&#40;レポート ビルダーおよび SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
  同じレポート データセットのデータをさまざまな形式で表示することができます。  
   
- [追加またはグラフのグループを削除する&#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [追加またはグラフでのグループを削除&#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
  グループや入れ子構造のグループをグラフに追加する方法について説明します。  
   
  [移動平均をグラフに追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], nested FOR XML
 - XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af69cc7956717388f9a8f97a8220e7ffe02db76a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1c970d2472b304e3dbc2591019f7d70a9405cfd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234792"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>入れ子になった FOR XML クエリを使用した XML の構造化
   次の例では、`Production.Product` テーブルにクエリを実行し、特定の製品の `ListPrice` 値と `StandardCost` 値を取得します。 ここでは、例示を目的として、両方の価格を <`Price`> 要素に返します。各 <`Price`> 要素には、`PriceType` 属性があります。  
@@ -90,7 +90,7 @@ WHERE ProductID = 520
 FOR XML AUTO, TYPE  
 ```  
   
- 前の例では、`query()`のメソッド、`xml`データが内側の FOR XML クエリによって返される XML に対してクエリを入力し、予期される結果を構築します。  
+ 前の例では、`query()`のメソッド、`xml`データが内側の FOR XML クエリによって返される XML に対してクエリを入力し、予想される結果を構築します。  
   
  結果を次に示します。  
   

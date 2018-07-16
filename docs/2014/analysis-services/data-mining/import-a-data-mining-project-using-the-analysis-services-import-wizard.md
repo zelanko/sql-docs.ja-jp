@@ -1,5 +1,5 @@
 ---
-title: Analysis Services インポート ウィザードを使用してデータ マイニング プロジェクトのインポート |Microsoft ドキュメント
+title: Analysis Services インポート ウィザードを使用してデータ マイニング プロジェクトのインポート |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 79bd5b8fb8e81b20b810fdec88db5c2bdda958f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb48edb7b991a92e17e3c1c8d7b70cce54d1c938
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319342"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Analysis Services インポート ウィザードを使用したデータ マイニング プロジェクトのインポート
   このトピックでは、別のサーバーにある既存のデータ マイニング プロジェクトからメタデータをインポートすることによって新しいデータ マイニング プロジェクトを作成する方法を説明します。インポートには、 **の "** サーバーからインポート (多次元およびデータ マイニング) プロジェクト [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]" というテンプレートを使用します。  
@@ -56,7 +56,7 @@ ms.locfileid: "36073341"
     > [!WARNING]  
     >  インポートするオブジェクトを指定することはできません。既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを選択すると、多次元オブジェクトとデータ マイニング オブジェクトがすべてインポートされます。  
   
-     **[次へ]** をクリックします。  
+     [**次へ**] をクリックします。  
   
 5.  **[ウィザードの完了]** ページに、インポート処理の進行状況が表示されます。 処理をキャンセルしたり、インポート対象のオブジェクトを変更したりすることはできません。 終了したら **[完了]** をクリックします。  
   

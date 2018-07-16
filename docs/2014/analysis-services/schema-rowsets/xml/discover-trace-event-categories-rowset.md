@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_TRACE_EVENT_CATEGORIES 行セット |Microsoft ドキュメント
+title: DISCOVER_TRACE_EVENT_CATEGORIES 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1ad74fd2-4740-469d-85b5-abf0171737fd
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f447e0acbdc2f5e5cbcbf7d3773330cfc9cd39e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 085e5a58105b2fecd20a603d9adb735ff79b63ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316882"
 ---
 # <a name="discovertraceeventcategories-rowset"></a>DISCOVER_TRACE_EVENT_CATEGORIES 行セット
   トレース プロバイダーによってサポートされているイベント カテゴリの一覧を表示します。  
   
- **適用されます:** 表形式モデル、多次元モデル  
+ **適用対象:** 表形式モデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
  `DISCOVER_TRACE_EVENT_CATEGORIES`行セットには、次の列が含まれています。  

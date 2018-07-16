@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpsubscrconn.f1
 - sql11.dts.designer.afpsubscrconn.f1
@@ -16,16 +16,16 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 878f8fc674659d91a732549fcd68da134cdf5fc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fa0589e7ac68f3662929c6316cdd0ddf427911d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306112"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure サブスクリプション接続マネージャー
-  Azure HDInsight 接続マネージャーを使用してプロパティを指定する値を使用して、Azure サブスクリプションに接続する SSIS パッケージ: Azure サブスクリプション ID と管理証明書。  
+  Azure HDInsight 接続マネージャーにより、SSIS パッケージのプロパティを指定する値を使用して、Azure サブスクリプションに接続する: Azure サブスクリプション ID と管理証明書。  
   
 1.  上記の **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[Azure サブスクリプション]** を選択し、 **[追加]** をクリックします。  次の **[Azure Subscription Connection Manager Editor]** (Azure サブスクリプション接続マネージャー エディター) ダイアログ ボックスが表示されます。  
   

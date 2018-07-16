@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャを呼び出して |Microsoft ドキュメント
+title: ストアド プロシージャの呼び出し |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed6cad7159c7ef8873c7fd1d9d9ba153380e2c33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb799a4e366c0301998b46d7244438aabd2c4411
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299152"
 ---
 # <a name="calling-stored-procedures"></a>ストアド プロシージャの呼び出し
   ストアド プロシージャは、サーバーまたはクライアント アプリケーションから呼び出すことができます。 どちらの場合も、ストアド プロシージャはサーバーまたはデータベースのコンテキストで常にサーバー上で実行します。 ストアド プロシージャを実行するのに特別なアクセス権は不要です。 ストアド プロシージャがアセンブリによってサーバーまたはデータベースのコンテキストに追加されると、ストアド プロシージャが行う処理がユーザーのロールで許可されている限り、どのユーザーでもストアド プロシージャを実行できます。  

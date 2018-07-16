@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
 - administrators [Master Data Services]
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11abfb4949bdd7917066ed785dd1014efc026e9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fcad38283e902b305afc5db3e47671b12e91b41f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304122"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] には、モデル管理者と [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者の 2 種類の管理者があります。  
   
 ## <a name="model-administrators"></a>モデル管理者  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、モデル管理者を持つユーザーは、**更新**で最上位のモデル オブジェクトに割り当てられている権限、**モデル オブジェクト**] タブおよびないその他のアクセス許可を割り当てます。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、モデル管理者を持つユーザーは、**更新**で最上位のモデル オブジェクトに割り当てられた権限、**モデル オブジェクト**タブとしないアクセス許可を割り当てられます。  
   
 -   ユーザーに **[エクスプローラー]** 機能領域へのアクセス権がある場合、ユーザーはこのデータ領域のすべてのマスター データを追加、削除、および更新できます。  
   
@@ -46,19 +46,19 @@ ms.locfileid: "36076250"
   
 -   すべての機能領域に対するアクセス権が自動的に付与されます。  
   
--   追加、削除、およびすべてのモデルのすべてのマスター データを更新することができます、**エクスプ ローラー**機能領域。  
+-   追加、削除、およびすべてのモデルのすべてのマスター データを更新、**エクスプ ローラー**機能領域。  
   
- システム管理者として割り当てられているユーザーを変更できます。 詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)です。  
+  システム管理者として割り当てられているユーザーを変更できます。 詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
   
 ## <a name="comparing-administrator-types"></a>管理者の種類の比較  
   
 |管理者の種類|説明|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] で割り当てられている権限は、管理者のアクセス権に影響を与えません。<br /><br /> 自動的に**更新**すべてのモデルにアクセスを許可します。<br /><br /> すべての機能領域に対するアクセス権が自動的に付与されます。<br /><br /> Mdm.tbluser の値、 **ID**列は**1**です。|  
-|モデル管理者|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で割り当てられた権限によって、ユーザーがモデル管理者であるかどうかが決まります。<br /><br /> 明示的に割り当てられている権限、またはグループから継承した権限に基づいてモデル管理者になる場合があります。<br /><br /> モデルに対してのみ管理者**更新**最上位のモデル オブジェクトに割り当てられた権限とアクセス権なし。<br /><br /> アクセス権が付与された機能領域だけにアクセスできます。<br /><br /> Mdm.tbluser の値、 **ID**列がない**1**です。|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] で割り当てられている権限は、管理者のアクセス権に影響を与えません。<br /><br /> 自動的に**Update**すべてのモデルにアクセスを許可します。<br /><br /> すべての機能領域に対するアクセス権が自動的に付与されます。<br /><br /> Mdm.tbluser で、値、 **ID**列が**1**します。|  
+|モデル管理者|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で割り当てられた権限によって、ユーザーがモデル管理者であるかどうかが決まります。<br /><br /> 明示的に割り当てられている権限、またはグループから継承した権限に基づいてモデル管理者になる場合があります。<br /><br /> モデルに対してのみ管理者**Update** 、最上位のモデル オブジェクトに割り当てられた権限とアクセス許可がありません。<br /><br /> アクセス権が付与された機能領域だけにアクセスできます。<br /><br /> Mdm.tbluser で、値、 **ID**列がない**1**します。|  
   
 ## <a name="see-also"></a>参照  
- [モデル管理者を作成する&#40;マスター データ サービス&#41;](create-a-model-administrator-master-data-services.md)   
+ [モデル管理者を作成&#40;マスター データ サービス&#41;](create-a-model-administrator-master-data-services.md)   
  [システム管理者アカウントを変更&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)   
  [マスター データ サービス データベースの作成](install-windows/create-a-master-data-services-database.md)   
  [通知&#40;マスター データ サービス&#41;](../../2014/master-data-services/notifications-master-data-services.md)  

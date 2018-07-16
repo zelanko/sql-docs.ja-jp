@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 89829997447453f336065dd1e9c94ca48c53607e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: de3df0aa4e66f882f618fc4db13bcce544ce6fab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307512"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Oracle の権限を許可するためのスクリプト
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーションを使用してデータをパブリッシュする Oracle データベースを構成する際には、このトピックに示すスクリプトを使用します。 このスクリプトは、インストール後に、*\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql ディレクトリで使用することもできます。 Oracle データベースの構成の詳細については、「[Oracle パブリッシャーの構成](configure-an-oracle-publisher.md)」を参照してください。  
+   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーションを使用してデータをパブリッシュする Oracle データベースを構成する際には、このトピックに示すスクリプトを使用します。 このスクリプトは、インストール後に、*\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql ディレクトリで使用することもできます。 Oracle データベースの構成の詳細については、「[Oracle パブリッシャーの構成](configure-an-oracle-publisher.md)」を参照してください。  
   
 > [!NOTE]  
 >  このスクリプトには、ステートメント `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`が含まれています。これは、トランザクション レプリケーションで使用するトリガーで必要です。 スナップショット レプリケーションしか使用しない場合は、スクリプトからこの行を削除してください。  

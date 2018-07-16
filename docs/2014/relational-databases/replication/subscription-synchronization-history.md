@@ -1,5 +1,5 @@
 ---
-title: サブスクリプションの場合、同期の履歴 (マージ サブスクリプション、SQL Server 2005 以降) |Microsoft ドキュメント
+title: サブスクリプションの場合、同期の履歴 (マージ サブスクリプション、SQL Server 2005 以降) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.synchhistory.f1
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cff5533e7db8ebdc6f8fd2ca03ae5c8aa8059360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7ba7d36d0289f6de4d3767591d669074e19ad703
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299982"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>サブスクリプション、[同期の履歴] (マージ サブスクリプション、SQL Server 2005 以降)
   **[同期の履歴]** タブには、マージ エージェントの状態、アーティクル統計、履歴、情報メッセージ、エラー メッセージなど詳細情報が表示されます。  
@@ -32,7 +32,7 @@ ms.locfileid: "36075686"
  **[表示]**  
  表示するマージ エージェント セッションを選択します。  
   
- **Status**  
+ **ステータス**  
  セッションの最後のマージ エージェントの状態です。 表示される状態の種類を、次に示します。  
   
 -   [エラー]  

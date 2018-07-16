@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackageprop.general.f1
 - sql12.ssis.ssms.packageproperties.f1
@@ -16,13 +16,13 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 66e98b169091b40ff24926ffef55f3687275b007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a85a05d5a0b18701ed9b8a480ef0bb7c05e873d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304212"
 ---
 # <a name="package-properties-dialog-box"></a>[パッケージのプロパティ] ダイアログ ボックス
   **[パッケージのプロパティ]** ダイアログ ボックスでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに格納されているパッケージのプロパティを表示できます。  
@@ -54,18 +54,18 @@ ms.locfileid: "36075776"
   
  **[全般]** ページに表示されるすべてのプロパティは読み取り専用です。  
   
- **Name**  
+ **名前**  
  パッケージの名前が表示されます。  
   
  **[Identifier]**  
  パッケージ ID を一覧表示します。  
   
  **エントリ ポイント**  
- 値`True`パッケージが直接開始されていることを示します。 値`False`パッケージ実行タスクを使用して別のパッケージによって、パッケージが開始されたことを示します。 既定値は `True` です。  
+ 値`True`パッケージが直接起動されることを示します。 値`False`パッケージがパッケージ実行タスクを使用して別のパッケージによって開始されたことを示します。 既定値は `True` です。  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で親パッケージと子パッケージの両方に対してこのプロパティを設定するには、ソリューション エクスプローラーでパッケージを右クリックし、 **[エントリ ポイント パッケージ]** をクリックします。  
   
- **description**  
+ **[説明]**  
  省略可能なパッケージの説明が表示されます。  
   
   

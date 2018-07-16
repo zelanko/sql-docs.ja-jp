@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dad1a88d32ee0356ad669c638abc552470af6383
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1c5fa2f1dab88852bb5d6039b0017370c9a46966
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302202"
 ---
 # <a name="filter-table-rows"></a>[テーブル行のフィルター選択]
   **[テーブル行のフィルター選択]** ページでは、次のことを行うことができます。  
@@ -70,7 +70,7 @@ ms.locfileid: "36075949"
  **[編集]**  
  フィルター ペインで行フィルターまたは結合フィルターを選択し、 **[編集]** をクリックすると、 **[フィルターの編集]** ダイアログ ボックスまたは **[結合の編集]** ダイアログ ボックスが表示されます。  
   
- **Delete**  
+ **削除**  
  フィルター ペインで行フィルターまたは結合フィルターを選択し、 **[削除]** をクリックすると、フィルターを削除できます。  
   
  **[テーブルの検索]**  

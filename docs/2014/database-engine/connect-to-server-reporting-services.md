@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connection.login.reportserver.f1
 ms.assetid: ef81b658-8eb5-4636-ac81-eead10cc7b9f
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 500624fbf81bc4ffc98ed3342878c2bf811005d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f98d7d47820765e4e4920c95f92d1154350af278
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293192"
 ---
 # <a name="connect-to-server-reporting-services"></a>[サーバーへの接続] \(Reporting Services)
   このダイアログを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に接続するときのオプションを表示または指定できます。  
@@ -33,9 +33,9 @@ ms.locfileid: "36074224"
  **サーバー名**  
  接続するレポート サーバー インスタンスのサーバー モードによって、入力する必要がある値が決まります。  
   
- ネイティブ モードで実行されているレポート サーバーの場合、接続するレポート サーバー インスタンスを指定します。 既定のインスタンスを使用する場合、サーバー名はコンピューターの名前であるのが一般的です。 名前付きインスタンスをインストールした場合は、この形式でサーバー名にインスタンス名を付加: \<servername >\\< InstanceName\>です。 Reporting Services では、円記号を使用してインスタンス名を区切ります。  
+ ネイティブ モードで実行されているレポート サーバーの場合、接続するレポート サーバー インスタンスを指定します。 既定のインスタンスを使用する場合、サーバー名はコンピューターの名前であるのが一般的です。 名前付きインスタンスをインストールする場合は、次の形式でサーバー名にインスタンス名を追加: \<servername >\\< InstanceName\>します。 Reporting Services では、円記号を使用してインスタンス名を区切ります。  
   
- SharePoint 統合モードで実行されているレポート サーバーの場合、SharePoint サイトを指定する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]と統合されているサイト コレクション内の任意のサイトを指定できます。 指定する URL には、HTTP プレフィックスまたは HTTPS プレフィックスを含める必要があります。 Management Studio で SharePoint サイトに接続するには、SharePoint サイトにアクセスする権限が必要です。 割り当てられている権限レベルによって、表示および管理できるアイテムが決まります。 詳細については、次を参照してください。 [Management Studio でのレポート サーバーへの接続](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)です。  
+ SharePoint 統合モードで実行されているレポート サーバーの場合、SharePoint サイトを指定する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]と統合されているサイト コレクション内の任意のサイトを指定できます。 指定する URL には、HTTP プレフィックスまたは HTTPS プレフィックスを含める必要があります。 Management Studio で SharePoint サイトに接続するには、SharePoint サイトにアクセスする権限が必要です。 割り当てられている権限レベルによって、表示および管理できるアイテムが決まります。 詳細については、次を参照してください。 [Management Studio でのレポート サーバーへの接続](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)します。  
   
  **[認証]**  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を、指定したカスタム認証拡張機能によって処理する Windows 認証要求またはフォーム認証要求を受け入れるように構成できます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]に接続する際に、次のいずれかの認証モードを選択します。  
@@ -55,14 +55,14 @@ ms.locfileid: "36074224"
  **Password**  
  ユーザー名に対応するパスワードを入力します。 このオプションは、 **[基本認証]** または **[フォーム認証]** を選択した場合にのみ編集できます。  
   
- **のインスタンスに接続するときには、**  
+ **Connect**  
  クリックすると、上記で選択したサーバーに接続します。  
   
  **[オプション]**  
  クリックすると、サーバーの登録やパスワードの保存など、追加のサーバー接続オプションが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー データベース接続を構成する&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Management Studio でレポート サーバーに接続する](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [レポート サーバーでの認証](../reporting-services/security/authentication-with-the-report-server.md)  
   

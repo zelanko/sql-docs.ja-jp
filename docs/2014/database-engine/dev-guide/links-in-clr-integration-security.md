@@ -1,5 +1,5 @@
 ---
-title: CLR 統合のセキュリティへのリンク |Microsoft ドキュメント
+title: CLR 統合のセキュリティへのリンク |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - gated links [CLR integration]
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: edd8600e3c8e577ef020d732cce3924252393ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 58f1d4ada74d7d64b9a5c44060f0cdd0fce8fcce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243102"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 統合のセキュリティのリンク
-  ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはいずれかのマネージ言語で、[!INCLUDE[tsql](../../includes/tsql-md.md)] 内のユーザー コードが相互に呼び出すしくみを説明します。 このようなオブジェクト間のリレーションシップをリンクと呼びます。  
+  ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはいずれかのマネージド言語で、[!INCLUDE[tsql](../../includes/tsql-md.md)] 内のユーザー コードが相互に呼び出すしくみを説明します。 このようなオブジェクト間のリレーションシップをリンクと呼びます。  
   
 ## <a name="invocation-links"></a>呼び出しリンク  
  呼び出しリンクは、オブジェクトを呼び出すユーザーからのコード呼び出し (ストアド プロシージャを呼び出す [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチなど)、または共通言語ランタイム (CLR) ストアド プロシージャや関数からのコード呼び出しのいずれかに対応しています。 呼び出しリンクにより、呼び出し先の `EXECUTE` 権限がチェックされます。  
@@ -37,7 +37,7 @@ ms.locfileid: "36178273"
  テーブル アクセス リンクは、テーブル、ビュー、またはテーブル値関数の値の取得や変更に対応します。 テーブル アクセス リンクは、SELECT 権限、INSERT 権限、UPDATE 権限、および DELETE 権限に関してアクセス制御の粒度が細かいという点を除いて、呼び出しリンクと同じです。  
   
 ## <a name="gated-links"></a>ゲート リンク  
- ゲート リンクは、一度確立されると、実行されている間、オブジェクトのリレーションシップ間で権限がチェックされることはありません。 2 つのオブジェクト間にゲート リンクがある場合 (たとえば、オブジェクト**x**とオブジェクト**y**)、オブジェクトに対するアクセス許可**y**オブジェクトからアクセスされるその他のオブジェクトと**y**オブジェクトの作成時にのみチェック**x**です。 オブジェクトの作成時に**x**、`REFERENCE`上権限がチェック**y**の所有者に対して**x**です。 実行時に (たとえば、オブジェクトを呼び出す他のユーザーと**x**)、に対する権限チェックはありません**y**または静的に参照するその他のオブジェクト。 オブジェクトに対して、実行時に適切なアクセス許可がチェックされます**x**自体です。  
+ ゲート リンクは、一度確立されると、実行されている間、オブジェクトのリレーションシップ間で権限がチェックされることはありません。 2 つのオブジェクトの間にゲート リンクがある場合 (たとえば、オブジェクト**x**とオブジェクト**y**)、オブジェクトに対するアクセス許可**y** オブジェクトからアクセスされるその他のオブジェクトと**y**オブジェクトの作成時にのみチェック**x**します。 オブジェクトの作成時に**x**、`REFERENCE`権限がチェックされます**y**の所有者に対して**x**します。 実行時に、(たとえば、オブジェクトを呼び出すユーザー **x**)、に対する権限チェックがない**y**または静的に参照するその他のオブジェクト。 オブジェクトに対して、実行時に適切な権限がチェックされます**x**自体。  
   
  ゲート リンクは、2 つのオブジェクト間のメタデータの依存関係と常に組み合わせて使用されます。 このメタデータの依存関係とは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カタログで確立されるリレーションシップです。このリレーションシップにより、別のオブジェクトが依存しているオブジェクトの削除が回避されます。  
   

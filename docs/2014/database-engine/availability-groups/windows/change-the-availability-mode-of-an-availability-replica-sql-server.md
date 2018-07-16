@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], availability modes
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 caps.latest.revision: 35
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 548411ee63320a34739ba32ec484bd15ea8df43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9d9a742003107a2416e55f7c4f3a473c430e04eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310422"
 ---
 # <a name="change-the-availability-mode-of-an-availability-replica-sql-server"></a>可用性レプリカの可用性モードの変更 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の AlwaysOn 可用性グループでの可用性レプリカの可用性モードを変更する方法について説明します。 可用性モードは、レプリカによるコミットが非同期か同期かを制御するレプリカ プロパティです。 *非同期コミット モード* は、高可用性を犠牲にしてパフォーマンスを最大限に高めるものであり、 *強制フェールオーバー*と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) のみをサポートしています。 *同期コミット モード* は、パフォーマンスよりも高可用性を重視し、セカンダリ レプリカの同期後は手動でのフェールオーバーをサポートします (必要に応じて、自動フェールオーバーもサポートします)。  
@@ -91,7 +90,7 @@ ms.locfileid: "36165700"
   
 1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (`cd`) します。  
   
-2.  使用して、`Set-SqlAvailabilityReplica`コマンドレットと、`AvailabilityMode`パラメーターし、必要に応じて、`FailoverMode`パラメーター。  
+2.  使用して、`Set-SqlAvailabilityReplica`コマンドレットと、`AvailabilityMode`パラメーターと、オプションで、`FailoverMode`パラメーター。  
   
      たとえば、次のコマンドは、可用性グループ `MyReplica` のレプリカ `MyAg` を、同期コミット可用性モードを使用し、自動フェールオーバーをサポートするように変更します。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "36165700"
     ```  
   
     > [!NOTE]  
-    >  表示するには、コマンドレットの構文を使用して、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   

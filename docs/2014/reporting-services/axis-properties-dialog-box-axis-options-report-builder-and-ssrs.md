@@ -1,5 +1,5 @@
 ---
-title: 軸のプロパティ ダイアログ ボックス、軸のオプション (レポート ビルダーおよび SSRS) |Microsoft ドキュメント
+title: 軸のプロパティ] ダイアログ ボックス、[軸のオプション (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 947b985ef25eec47ec8f064c752c5dad49fdf30b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2b769fd686ba2bd32611b073cfe08a71e224d89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315452"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>[軸のオプション] ([軸のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
-  選択**軸のオプション**で、**水平**または**VerticalAxis プロパティ**ダイアログ ボックスをグラフの指定した軸の外観を定義します。 以前のバージョンの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、既定でグラフの X 軸上にすべてのラベルが表示されていました。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 では、グラフ内の画像を見やすくし、ラベルの重なりを回避するために、ラベルは省略されます。 詳細については、「[グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
+  選択**軸のオプション**で、**水平**または **[縦軸のプロパティ**] ダイアログ ボックスで、グラフの指定された軸の外観を定義します。 以前のバージョンの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、既定でグラフの X 軸上にすべてのラベルが表示されていました。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 では、グラフ内の画像を見やすくし、ラベルの重なりを回避するために、ラベルは省略されます。 詳細については、「[グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="options"></a>および  
  **スケール区切りを有効にします。**  

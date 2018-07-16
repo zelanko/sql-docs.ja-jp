@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 0d742a0985177d9a6c860c6dedcb34eba128c930
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: ece469ea1140265ef70ecbd720bad350ca04905b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290878"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>メモリ最適化テーブルの持続性
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] により、メモリ最適化テーブルには完全な持続性が提供されます。 メモリ最適化テーブルを変更したトランザクションがコミットされると、基になるストレージが使用可能な場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、(ディスク ベース テーブルの場合と同様に) この変更が永続的である (データベースの再起動後も保持される) ことが保証されます。 持続性には、トランザクション ログとディスク上ストレージでのデータ変更の保持という、2 つの主なコンポーネントがあります。  
@@ -28,7 +28,7 @@ ms.locfileid: "36076607"
  ディスク ベース テーブルまたは持続性のあるメモリ最適化テーブルに対するすべての変更は、1 つ以上のトランザクション ログ レコードにキャプチャされます。 トランザクションのコミット時に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、トランザクションに関連付けられているログ レコードをディスクに書き込んだ後、トランザクションによってコミットされたアプリケーションまたはユーザー セッションと通信します。 これにより、トランザクションによる変更が持続可能であることが保証されます。 メモリ最適化テーブルのトランザクション ログは、ディスク ベース テーブルで使用されている同じログ ストリームと完全に統合されています。 この統合によって、既存のトランザクション ログ バックアップ、復旧、および復元操作は引き続き機能し、追加の手順は必要ありません。 ただし、[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] によりワークロードのトランザクションのスループットを大幅に向上できるため、トランザクション ログ ストレージが高くなった IO 要件を処理するよう正しく構成されていることを確認する必要があります。  
   
 ## <a name="data-and-delta-files"></a>データ ファイルとデルタ ファイル  
- メモリ最適化テーブルのデータは、1 つ以上のメモリ内インデックスでリンクされる自由形式のデータ行としてメモリに格納されます。 ディスク ベース テーブルで使用されるような、データ行のページ構造はありません。 アプリケーションでトランザクションをコミットの準備ができたら、[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]トランザクションのログ レコードが生成されます。 メモリ最適化テーブルの永続化は、バックグラウンド スレッドを使用して一連のデータ ファイルおよびデルタ ファイルで実行されます。 データ ファイルとデルタ ファイルは 1 つ以上のコンテナーにあります (FILESTREAM データで使用される同様のメカニズムを使用しています)。 これらのコンテナーは、メモリ最適化ファイル グループと呼ばれる、新しい種類のファイル グループにマップされます。  
+ メモリ最適化テーブルのデータは、1 つ以上のメモリ内インデックスでリンクされる自由形式のデータ行としてメモリに格納されます。 ディスク ベース テーブルで使用されるような、データ行のページ構造はありません。 アプリケーションが、トランザクションをコミットする準備ができたとき、[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]トランザクションのログ レコードが生成されます。 メモリ最適化テーブルの永続化は、バックグラウンド スレッドを使用して一連のデータ ファイルおよびデルタ ファイルで実行されます。 データ ファイルとデルタ ファイルは 1 つ以上のコンテナーにあります (FILESTREAM データで使用される同様のメカニズムを使用しています)。 これらのコンテナーは、メモリ最適化ファイル グループと呼ばれる、新しい種類のファイル グループにマップされます。  
   
  データはこれらのファイルに厳密な順次形式で書き込まれるため、スピン メディアの場合のディスク待機時間が最小限に抑えられます。 異なるディスクにある複数のコンテナーを使用して、I/O 動作を分散することもできます。 異なるディスクにある複数のコンテナーにデータ ファイルとデルタ ファイルを配置すると、復旧時に、ディスク上のデータ ファイルとデルタ ファイルからメモリにデータが読み込まれるときのパフォーマンスが向上します。  
   
@@ -112,12 +112,12 @@ ms.locfileid: "36076607"
   
  空き領域のある CFP がすべてマージに適合するとは限りません。 たとえば、2 つの隣接する CFP の入力率が 60% の場合、これらはマージの対象にならないため、各 CFP の 40% のストレージは未使用になります。 最悪のケースは、すべての CFP の入力率が 50% になり、ストレージが 50% しか使用されない場合です。 CFP がマージ対象にならず、削除済みの行がストレージに存在していても、それらの削除済みの行は、インメモリ ガベージ コレクションによって既にメモリからは削除されている場合があります。 ストレージとメモリの管理は、ガベージ コレクションから独立しています。 アクティブな CFP (すべての CFP が更新されるわけではありません) から取得されたストレージは、最大でメモリ内の持続性のあるテーブルのサイズの 2 倍になる可能性があります。  
   
- 呼び出して、手動マージを明示的に実行が必要な場合[sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)です。  
+ 手動マージを呼び出すことによって明示的に実行することができます必要な場合、 [sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)します。  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP のライフ サイクル  
  CPF は、割り当てが解除されるまでにいくつかの状態を遷移します。 どの時点でも、CFP は次のフェーズのいずれかにあります。PRECREATED、UNDER CONSTRUCTION、ACTIVE、MERGE TARGET、MERGED SOURCE、REQUIRED FOR BACKUP/HA、IN TRANSITION TO TOMBSTONE、および TOMBSTONE。 これらのフェーズの説明については、「[sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)」を参照してください。  
   
- さまざまな状態にある CFP によって取得されるストレージを考慮に入れると、持続性のあるメモリ最適化テーブルによって取得されるストレージ全体のサイズは、メモリ内のテーブルのサイズの 2 倍を大きく超える可能性があります。 DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)をフェーズと共に、メモリ最適化ファイルグループ内のすべての Cfp を一覧表示するクエリを実行できます。 CFP を MERGE SOURCE 状態から TOMBSTONE に移行すると、ガベージ コレクションが最終的に 5 個のチェックポイントを使用する可能性があり、データベースが完全復旧モデルまたは一括ログ復旧モデルを使用するように構成されている場合は、各チェックポイントの後にトランザクション ログ バックアップが続きます。  
+ さまざまな状態にある CFP によって取得されるストレージを考慮に入れると、持続性のあるメモリ最適化テーブルによって取得されるストレージ全体のサイズは、メモリ内のテーブルのサイズの 2 倍を大きく超える可能性があります。 DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)をフェーズは、メモリ最適化ファイルグループ内のすべての Cfp を一覧表示するクエリを実行できます。 CFP を MERGE SOURCE 状態から TOMBSTONE に移行すると、ガベージ コレクションが最終的に 5 個のチェックポイントを使用する可能性があり、データベースが完全復旧モデルまたは一括ログ復旧モデルを使用するように構成されている場合は、各チェックポイントの後にトランザクション ログ バックアップが続きます。  
   
  手動でチェックポイントとログのバックアップを強制してガベージ コレクションを早めることもできますが、その場合は 5 つの空の CFP (データ ファイルとデルタ ファイルのペアが 5 つ、各データ ファイルのサイズは 128 MB) が追加されます。 実稼動環境のシナリオでは、バックアップ方法の一環として実行される自動チェックポイントとログ バックアップにより、CFP はこれらのフェーズをシームレスに移行し、手動による操作は必要ありません。 ガベージ コレクション プロセスが実行されると、その影響として、メモリ最適化テーブルのあるデータベースのストレージ サイズがメモリ内のサイズに比べて大きくなる可能性があります。 CFP にとって、持続性のあるメモリ最適化テーブルのサイズがメモリ内サイズの 4 倍までになるのは珍しいことではありません。  
   

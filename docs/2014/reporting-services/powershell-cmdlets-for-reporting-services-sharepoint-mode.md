@@ -1,5 +1,5 @@
 ---
-title: Reporting Services SharePoint モード用の PowerShell コマンドレット |Microsoft ドキュメント
+title: Reporting Services SharePoint モード用の PowerShell コマンドレット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3a9ced7cb304b5cec0e329adc43f6572b45ebf19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29a9177685d94be437574e90a44a46a2391bcba7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311368"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モードの PowerShell コマンドレット
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードをインストールすると、SharePoint モードのレポート サーバーをサポートするために PowerShell コマンドレットがインストールされます。 コマンドレットは 3 つのカテゴリの機能をサポートしています。  
+   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードをインストールすると、SharePoint モードのレポート サーバーをサポートするために PowerShell コマンドレットがインストールされます。 コマンドレットは 3 つのカテゴリの機能をサポートしています。  
   
--   インストール、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービスおよびプロキシです。  
+-   インストール、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービスとプロキシ。  
   
--   プロビジョニングと管理[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]アプリケーションおよび関連付けられたプロキシ サービスを提供します。  
+-   プロビジョニングと管理の[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]アプリケーションおよび関連付けられたプロキシ サービスを提供します。  
   
 -   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能 (拡張機能や暗号化キーなど) の管理。  
   
@@ -52,14 +52,14 @@ ms.locfileid: "36166034"
   
     -   [確認し、Reporting Services 配信拡張機能の更新](#bkmk_example_delivery_extension)  
   
-    -   [取得および Reporting Servicea アプリケーション データベース、データベース タイムアウトなどのプロパティを設定します。](#bkmk_example_db_properties)  
+    -   [取得およびレポートというアプリケーションのデータベース、データベース タイムアウトなどのプロパティを設定します。](#bkmk_example_db_properties)  
   
-    -   [リストの reporting services データ拡張機能: SharePoint モード](#bkmk_example_list_data_extensions)  
+    -   [リストの reporting services データ拡張機能-SharePoint モード](#bkmk_example_list_data_extensions)  
   
     -   [変更し、サブスクリプションの所有者を一覧表示](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> コマンドレットの概要  
- コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、次を参照してください。 [Windows サーバー上の Windows PowerShell の開始](http://technet.microsoft.com/library/hh847814.aspx)(http://technet.microsoft.com/library/hh847814.aspx)です。 次のコマンドレット概要では、サービス アプリケーション "データベース" への参照は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションによって作成および使用されたすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
+ コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、次を参照してください。 [Windows Server での Windows PowerShell の開始](http://technet.microsoft.com/library/hh847814.aspx)(http://technet.microsoft.com/library/hh847814.aspx)します。 次のコマンドレット概要では、サービス アプリケーション "データベース" への参照は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションによって作成および使用されたすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
   
  PowerShell の例を入力すると、次のようなエラー メッセージが表示されます。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36166034"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 詳細については、次を参照してください。 [SharePoint 2013 を管理する Windows PowerShell を使用して](http://technet.microsoft.com/library/ee806878.aspx)(http://technet.microsoft.com/library/ee806878.aspx)です。  
+ 詳細については、次を参照してください。 [SharePoint 2013 を管理する Windows PowerShell を使用して](http://technet.microsoft.com/library/ee806878.aspx)(http://technet.microsoft.com/library/ee806878.aspx)します。  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 管理シェルを開いてコマンドレットを実行するには  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36166034"
   
 |コマンドレット|説明|  
 |------------|-----------------|  
-|Install-SPRSService|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスをインストールして登録するか、アンインストールします。 この操作は、SharePoint モードの SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされているコンピューター上でのみ行うことができます。 インストールの場合は、以下の 2 つの操作が行われます。<br /><br /> 1)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービスがファームにインストールします。<br /><br /> 2)、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス インスタンスが現在のコンピューターにインストールされています。<br /><br /> アンインストールの場合は、以下の 2 つの操作が行われます。<br />1)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービスが現在のコンピューターからアンインストールします。<br />2)、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービスがファームからアンインストールします。<br /><br /> <br /><br /> 注: が、ファーム内の他のコンピューターがあるかどうか、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービスがインストールされてが存在する場合または[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーションがファームで実行されている、警告メッセージが表示されます。|  
+|Install-SPRSService|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスをインストールして登録するか、アンインストールします。 この操作は、SharePoint モードの SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされているコンピューター上でのみ行うことができます。 インストールの場合は、以下の 2 つの操作が行われます。<br /><br /> 1)、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービスがファームにインストールします。<br /><br /> 2)、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス インスタンスが現在のコンピューターにインストールされます。<br /><br /> アンインストールの場合は、以下の 2 つの操作が行われます。<br />1)、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービスが現在のコンピューターからアンインストールされます。<br />2)、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービスがファームからアンインストールされます。<br /><br /> <br /><br /> 注: が、ファーム内の他のコンピューターがあるかどうか、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 、インストールされているサービスが存在する場合、または[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーションがファームで実行されている、警告メッセージが表示されます。|  
 |Install-SPRSServiceProxy|SharePoint ファーム内で Reporting Services サービス プロキシをインストールして登録するか、アンインストールします。|  
 |Get-SPRSProxyUrl|アクセスするための URL を取得、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス。|  
 |Get-SPRSServiceApplicationServers|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスのインストールを含む、ローカル SharePoint ファーム内のすべてのサーバーを取得します。 このコマンドレットは、どのサーバーで共有サービスを実行していてアップグレードする必要があるかを調べる目的に適しており、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のアップグレードに役立ちます。|  
@@ -110,15 +110,15 @@ ms.locfileid: "36166034"
 |Remove-SPRSServiceApplication|指定した Reporting Services サービス アプリケーションを削除します。 これを実行すると、関連付けられたデータベースも削除されます。|  
 |Set-SPRSServiceApplication|既存の Reporting Services サービス アプリケーションのプロパティを編集します。|  
 |New-SPRSServiceApplicationProxy|新しい Reporting Services サービス アプリケーション プロキシを作成します。|  
-|Get-SPRSServiceApplicationProxy|1 つまたは複数取得[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション プロキシ。|  
+|Get-SPRSServiceApplicationProxy|1 つ以上取得[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]アプリケーション プロキシ サービスを提供します。|  
 |Dismount-SPRSDatabase|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーション用のサービス アプリケーション データベースをマウント解除します。|  
-|Remove-SPRSDatabase|用のサービス アプリケーション データベースを削除、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。|  
+|Remove-SPRSDatabase|用のサービス アプリケーション データベースを削除する[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。|  
 |Set-SPRSDatabase|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションに関連付けられたデータベースのプロパティを設定します。|  
-|Mount-SPRSDatabase|データベースをマウント、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。|  
-|New-SPRSDatabase|指定したサービス アプリケーション データベースを新しい作成[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。|  
+|Mount-SPRSDatabase|用のデータベースをマウント、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。|  
+|New-SPRSDatabase|指定した、新しいサービス アプリケーション データベースを作成[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。|  
 |Get-SPRSDatabaseCreationScript|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーション用に、データベース作成スクリプトを画面に出力します。 その後、SQL Server Management Studio でスクリプトを実行できます。|  
-|Get-SPRSDatabase|1 つ以上の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーション データベースを取得します。 Set-SPRSDatabase コマンドレットを使用して `querytimeout`などのプロパティを変更できるように、コマンドを使用してサービス アプリケーション データベースの ID を取得します。 このトピックの例を参照してください[取得 Reporting Servicea アプリケーション データベースのプロパティのセットしはたとえばデータベースのタイムアウト、](#bkmk_example_db_properties)です。|  
-|Get-SPRSDatabaseRightsScript|データベース権限スクリプトを画面に出力する[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。 これを実行すると、対象のユーザーとデータベースの入力を求めるプロンプトが表示され、権限を変更するための Transact-SQL が返されます。 その後、SQL Server Management Studio でこのスクリプトを実行できます。|  
+|Get-SPRSDatabase|1 つ以上の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーション データベースを取得します。 Set-SPRSDatabase コマンドレットを使用して `querytimeout`などのプロパティを変更できるように、コマンドを使用してサービス アプリケーション データベースの ID を取得します。 このトピックで例を参照してください。[を取得し、Reporting というアプリケーションのデータベースのプロパティを設定、たとえばデータベースのタイムアウト](#bkmk_example_db_properties)します。|  
+|Get-SPRSDatabaseRightsScript|画面に、データベース権限スクリプトを出力する[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。 これを実行すると、対象のユーザーとデータベースの入力を求めるプロンプトが表示され、権限を変更するための Transact-SQL が返されます。 その後、SQL Server Management Studio でこのスクリプトを実行できます。|  
 |Get-SPRSDatabaseUpgradeScript|データベース アップグレード スクリプトを画面に出力します。 このスクリプトは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーション データベースを、現在の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インストールのデータベース バージョンにアップグレードします。|  
   
 ###  <a name="bkmk_ssrsfeatures_cmdlets"></a> Reporting Services カスタム機能コマンドレット  
@@ -132,7 +132,7 @@ ms.locfileid: "36166034"
 |New-SPRSExtension|新しい拡張機能を Reporting Services サービス アプリケーションに登録します。|  
 |Set-SPRSExtension|既存の Reporting Services 拡張機能のプロパティを設定します。|  
 |Remove-SPRSExtension|Reporting Services サービス アプリケーションから拡張機能を削除します。|  
-|Get-SPRSExtension|1 つまたは複数取得[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]用の拡張機能、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。<br /><br /> 有効な値は、<br /><br /> **配信**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **Security**<br /><br /> **[認証]**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **Reportdefinitioncustomization です。**|  
+|Get-SPRSExtension|1 つ以上取得[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]用の拡張機能、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。<br /><br /> 有効な値は、<br /><br /> **配信**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **Security**<br /><br /> **[認証]**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **Reportdefinitioncustomization です。**|  
 |Get-SPRSSite|"ReportingService" 機能が有効になっているかどうかに基づいて SharePoint サイトを取得します。 既定では、"ReportingService" 機能が有効になっているサイトが返されます。|  
   
 ##  <a name="bkmk_basic_samples"></a> 基本的なサンプル  
@@ -233,7 +233,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server 
 get-sprsserviceapplication –Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
-###  <a name="bkmk_example_db_properties"></a> 取得および Reporting Servicea アプリケーション データベース、データベース タイムアウトなどのプロパティを設定します。  
+###  <a name="bkmk_example_db_properties"></a> 取得およびレポートというアプリケーションのデータベース、データベース タイムアウトなどのプロパティを設定します。  
  次の例では、set コマンドに指定するデータベースの GUID (ID) を確認できるように、最初にデータベースとプロパティの一覧を返します。 プロパティの一覧については、「 `Get-SPRSDatabase | format-list`」を参照してください。  
   
 ```  
@@ -264,7 +264,7 @@ Set-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 
 Get-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
 ```  
   
-###  <a name="bkmk_example_list_data_extensions"></a> リストの reporting services データ拡張機能: SharePoint モード  
+###  <a name="bkmk_example_list_data_extensions"></a> リストの reporting services データ拡張機能-SharePoint モード  
  次の例では、各 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションの間をループし、それぞれの現在のデータ拡張機能を一覧表示します。  
   
 ```  

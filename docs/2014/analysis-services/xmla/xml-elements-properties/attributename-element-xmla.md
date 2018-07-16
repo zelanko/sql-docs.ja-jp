@@ -1,5 +1,5 @@
 ---
-title: AttributeName 要素 (XMLA) |Microsoft ドキュメント
+title: AttributeName 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - AttributeName element
 ms.assetid: 4dc8260b-522e-46d9-9bd8-22a5a0068982
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1251de0a3f81a0b3a25d44de5bfbe2e41fa0f90a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 528bd232e9b49bfab5376b6dee16d22c6e6677d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306151"
 ---
 # <a name="attributename-element-xmla"></a>AttributeName 要素 (XMLA)
   親によって表される属性の名前を含む[属性](attribute-element-xmla.md)要素。  

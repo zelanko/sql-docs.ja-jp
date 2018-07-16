@@ -1,5 +1,5 @@
 ---
-title: SharePoint サイト (Reporting Services の SharePoint 統合モード) のレポート サーバー アイテムに対する権限を設定 |Microsoft ドキュメント
+title: SharePoint サイト (Reporting Services SharePoint 統合モードで) 上のレポート サーバー アイテムに対する権限の設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -16,13 +16,13 @@ ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6d66fc292fe1af7f20e55eee6b8d1fdf9e6151a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a0f1e98fc1837acbf995a2a68376cd4dd8bd02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282608"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)
   既定のセキュリティ設定では必要なレベルのアクセスが提供されない場合は、新しい権限レベルを作成して、特定のレポート サーバー アイテムまたは処理に対するアクセスを提供できます。 カスタム セキュリティ設定は、アクセスを特定のレポートに制限する場合に便利です。  
@@ -61,7 +61,7 @@ ms.locfileid: "36076138"
   
 5.  **[アクション]** をクリックします。  
   
-6.  **[権限を編集]** をクリックします。 **[OK]** をクリックします。  
+6.  **[権限を編集]** をクリックします。 [**OK**] をクリックします。  
   
 7.  **[新規]** をクリックします。  
   
@@ -73,10 +73,10 @@ ms.locfileid: "36076138"
   
 11. **[フル コントロール]** をクリックします。  
   
-12. **[OK]** をクリックします。 特定のモデルの権限の管理権限が与えられたユーザーは、モデルを開いて、モデル内の権限を編集できます。  
+12. [**OK**] をクリックします。 特定のモデルの権限の管理権限が与えられたユーザーは、モデルを開いて、モデル内の権限を編集できます。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー アイテムに対して Windows SharePoint Services での組み込みのセキュリティを使用します。](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
+ [レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用します。](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [SharePoint Web アプリケーションのレポート サーバー操作に対するアクセス許可を設定する](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [SQL Server Reporting Services と SharePoint グループの役割とタスクの比較とアクセス許可](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [SharePoint サイトとレポート サーバー アイテムのリスト権限のリファレンス](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   

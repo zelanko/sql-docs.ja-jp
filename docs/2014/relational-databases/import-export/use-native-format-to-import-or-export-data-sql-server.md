@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 81bfb6671a5c504505de34d368c972de98e21b8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4f71b4d7955c874fcff2efdd69ed14c12745dea3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300412"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)
   ネイティブ形式は、拡張文字や 2 バイト文字セット (DBCS) の文字を含まないデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送する場合に推奨します。  
@@ -68,9 +67,9 @@ ms.locfileid: "36084120"
   
 -   `sql_variant` データ  
   
-     場合`sql_variant`データがネイティブ形式のデータ ファイルに SQLVARIANT として格納されている、データでは、すべての特性が保持されます。 各データ値のデータ型を記録するメタデータが、そのデータ値と一緒に格納されます。 このメタデータは、先に同じデータ型を持つデータ値を再作成に使用`sql_variant`列です。  
+     場合`sql_variant`データがネイティブ形式のデータ ファイルに SQLVARIANT として格納されている、データでは、すべての特性が保持されます。 各データ値のデータ型を記録するメタデータが、そのデータ値と一緒に格納されます。 このメタデータは、先に同じデータ型を持つデータ値を再作成に使用`sql_variant`列。  
   
-     かどうか、変換先列のデータ型は`sql_variant`、各データ値が暗黙的なデータ変換の通常の規則に従って、変換先列のデータ型に変換します。 データ変換中にエラーが発生すると、現在のバッチがロールバックされます。 `char` 列間で転送される `varchar` 値と `sql_variant` 値で、コード ページの変換問題が生じている可能性があります。  
+     変換先列のデータ型でないかどうか`sql_variant`、各データ値が暗黙的なデータ変換の通常の規則に従って、変換先列のデータ型に変換されます。 データ変換中にエラーが発生すると、現在のバッチがロールバックされます。 `char` 列間で転送される `varchar` 値と `sql_variant` 値で、コード ページの変換問題が生じている可能性があります。  
   
      詳細については、「[データ型の変換 &#40;データベース エンジン&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)」を参照してください。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "36084120"
   
 |コマンド|オプション|説明|  
 |-------------|------------|-----------------|  
-|**bcp**|**-n**|により、 **bcp**ユーティリティ、データのネイティブ データ型を使用するようにします<sup>。1</sup>|  
+|**bcp**|**-n**|により、 **bcp**データのネイティブ データ型を使用するためのユーティリティ<sup>。1</sup>|  
 |BULK INSERT|DATAFILETYPE **='** native **'**|ネイティブ データ型またはワイド ネイティブ データ型のデータが使用されます。 フォーマット ファイルでデータ型を指定している場合、DATAFILETYPE は必要ありません。|  
   
  <sup>1</sup>ネイティブ読み込めません (**-n**) の旧バージョンと互換性のある形式にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントを使用して、 **-v**スイッチします。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  

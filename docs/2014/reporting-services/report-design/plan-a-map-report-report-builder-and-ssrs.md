@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 025d087a662fbf641d60e42314a7116df4632bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fd3b765bff38ea006a1dd1a60fe861373715ee80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309422"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>マップ レポートの計画 (レポート ビルダーおよび SSRS)
   優れたレポートは、具体的な行動や洞察につながる情報をもたらします。 地理的背景上に売上合計や人口統計などの分析データを表現するには、レポートにマップを追加します。 マップには、複数のレイヤーを含めることができます。各レイヤーには、特定の種類の空間データ (場所を表すポイント、ルートを表す線、または領域を表す多角形) によって定義されたマップ要素が表示されます。 各レイヤー上でマップ要素に分析データを関連付けることができます。  
@@ -168,6 +168,6 @@ ms.locfileid: "36074764"
  [マップまたはマップ レイヤーのデータと表示のカスタマイズ &#40;レポート ビルダーおよび SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [チュートリアル: マップ レポート &#40;レポート ビルダー&#41;](../tutorial-map-report-report-builder.md)   
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [レポートのトラブルシューティング: レポートにマップ&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

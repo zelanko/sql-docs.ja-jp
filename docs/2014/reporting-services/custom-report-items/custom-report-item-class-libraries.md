@@ -15,18 +15,18 @@ helpviewer_keywords:
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 caps.latest.revision: 27
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b45b9db6304df41d14f30ca226346ff73ef2a9f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 34c755a1f4152d2c710d2c8794f39590fc075f1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290258"
 ---
 # <a name="custom-report-item-class-libraries"></a>カスタム レポート アイテムのクラス ライブラリ
-  カスタム レポート アイテムは、`Microsoft.ReportDesigner` 名前空間のクラスを使用します。 カスタム レポート アイテムを実装する際に使用するクラスは、2 つの主なカテゴリに分類できます。1 つは、カスタム レポート アイテム インフラストラクチャをサポートするためにデザインされた独自のクラス、もう 1 つは、関連するレポート定義言語 (RDL) 要素の機能をカプセル化するマネージ ラッパー クラスです。 これらのクラスの使用方法のコード サンプルについては、「[SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services の製品サンプル) を参照してください。  
+  カスタム レポート アイテムは、`Microsoft.ReportDesigner` 名前空間のクラスを使用します。 カスタム レポート アイテムを実装する際に使用するクラスは、2 つの主なカテゴリに分類できます。1 つは、カスタム レポート アイテム インフラストラクチャをサポートするためにデザインされた独自のクラス、もう 1 つは、関連するレポート定義言語 (RDL) 要素の機能をカプセル化するマネージド ラッパー クラスです。 これらのクラスの使用方法のコード サンプルについては、「[SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services の製品サンプル) を参照してください。  
   
 ## <a name="custom-report-item-infrastructure-classes"></a>カスタム レポート アイテム インフラストラクチャのクラス  
  以下のクラスは、カスタム レポート アイテムを実装するために使用されます。  
@@ -51,7 +51,7 @@ ms.locfileid: "36077271"
 |`AltReportItem`|カスタム レポート アイテムの実行時コントロールがサポートされていない場合に使用される代替レポート アイテム オブジェクト|  
 |`Style`|カスタム レポート アイテムのスタイルのプロパティ|  
 |`Adornment`|コントロールのインタラクティブな編集のために使用される装飾ウィンドウ|  
-|`Site`|`ISite`のコンポーネントです。|  
+|`Site`|`ISite`のコンポーネント。|  
 |`DesignerVerbCollection`|コントロールのショートカット メニューのカスタム動詞の配列|  
   
 #### <a name="public-methods"></a>パブリック メソッド  

@@ -1,5 +1,5 @@
 ---
-title: データ マイニング サービスとデータ ソース |Microsoft ドキュメント
+title: データ マイニング サービスおよびデータ ソース |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d6ff58773c90a1fa5f70e638666ac92c3a2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3289ecf95c61c21942ba075b8eb20e3db074e870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297472"
 ---
 # <a name="data-mining-services-and-data-sources"></a>データ マイニング サービスおよびデータ ソース
   データ マイニングでは、SQL Server Analysis Services のインスタンスへの接続が必要になります。 キューブからのデータは、データ マイニングには必須ではなく、リレーショナル ソースの使用をお勧めします。ただし、データ マイニングでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エンジンによって提供されるコンポーネントが使用されます。  
@@ -27,7 +27,7 @@ ms.locfileid: "36173364"
  このトピックには、データ マイニング モデルの作成、処理、配置、またはクエリのために SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続する際に知っておく必要がある情報が含まれています。  
   
 ## <a name="data-mining-services"></a>データ マイニング サービス  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のサーバー コンポーネントは、msmdsrv.exe アプリケーションです。このアプリケーションは、通常、Windows サービスとして実行されます。 このアプリケーションは、セキュリティ コンポーネント、XML for Analysis (XMLA) リスナー コンポーネント、クエリ プロセッサ コンポーネント、および次の機能を実行するその他多くの内部コンポーネントで構成されています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のサーバー コンポーネントは、msmdsrv.exe アプリケーションです。このアプリケーションは、通常、Windows サービスとして実行されます。 このアプリケーションは、セキュリティ コンポーネント、XML for Analysis (XMLA) リスナー コンポーネント、クエリ プロセッサ コンポーネント、および次の機能を実行するその他多くの内部コンポーネントで構成されています。  
   
 -   クライアントから受信したステートメントの解析  
   
@@ -52,9 +52,9 @@ ms.locfileid: "36173364"
   
 |Port|説明|  
 |----------|-----------------|  
-|2383|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の既定のインスタンスです。|  
-|2382|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の他のインスタンスのリダイレクターです。|  
-|サーバーの起動時に動的に割り当てられます。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の名前付きインスタンスです。|  
+|2383| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の既定のインスタンスです。|  
+|2382| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の他のインスタンスのリダイレクターです。|  
+|サーバーの起動時に動的に割り当てられます。| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の名前付きインスタンスです。|  
   
  このサービスが使用するポートを制御する方法の詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
   
@@ -74,14 +74,14 @@ ms.locfileid: "36173364"
 ## <a name="configuring-permissions-and-server-properties"></a>権限とサーバー プロパティの構成  
  データ マイニングには、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに対する追加の権限が必要です。 ほとんどのデータ マイニング プロパティは、[[分析サーバーのプロパティ] ダイアログ ボックス &#40;Analysis Services&#41;](../analysis-server-properties-dialog-box-analysis-services.md) を使用して設定できます。  
   
- 構成できるプロパティの詳細については、次を参照してください。 [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md)です。  
+ 構成できるプロパティの詳細については、次を参照してください。 [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md)します。  
   
  データ マイニングに関連するサーバー プロパティを以下に示します。  
   
 -   `AllowAdHocOpenRowsetQueries` サーバーのメモリ領域に直接読み込まれる OLE DB プロバイダーへのアドホック アクセスを制御します。  
   
     > [!IMPORTANT]  
-    >  セキュリティを強化するため、このプロパティは `false` に設定することをお勧めします。 既定値は `false` です。 ただし、この場合でもプロパティが`false`ユーザーは、シングルトン クエリの作成を続行でき、許可されているデータ ソースに対して OPENQUERY を使用することができます。  
+    >  セキュリティを強化するため、このプロパティは `false` に設定することをお勧めします。 既定値は `false` です。 ただし、この場合でもプロパティに設定`false`ユーザーは、単一クエリを作成することが引き続きし、許可されているデータ ソースに対して OPENQUERY を使用できます。  
   
 -   **AllowedProvidersInOpenRowset** アドホック アクセスが有効な場合にプロバイダーを指定します。 ProgID のコンマ区切りのリストを入力することにより、複数のプロバイダーを指定できます。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36173364"
  そのほか、サーバーをチューニングしたりクライアントの利用に関するセキュリティを制御したりするためのプロパティを設定することもできます。 詳細については、「 [機能プロパティ](../server-properties/feature-properties.md)」を参照してください。  
   
 > [!NOTE]  
->  各エディションによるプラグイン アルゴリズムのサポートの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2012 の各エディションでサポートされる機能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)です。  
+>  各エディションによるプラグイン アルゴリズムのサポートの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2012 の各エディションでサポートされている](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)します。  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>データ マイニング オブジェクトへのプログラムによるアクセス  
  以下のオブジェクト モデルを使用して、Analysis Services データベースへの接続を作成し、データ マイニング オブジェクトを操作できます。  
@@ -101,7 +101,8 @@ ms.locfileid: "36173364"
   
  **ADO.NET** 特に SQL Server プロバイダーとのやり取りに適しています。 データ アダプターを使用して動的な行セットを格納したり、 データセット オブジェクトを使用したりできます。データセット オブジェクトは、XML として更新したり保存したりできるデータ テーブルとして格納されるサーバー データのキャッシュです。  
   
- **ADOMD.NET** データ マイニングと OLAP の操作に最適化されたマネージ データ プロバイダーです。 ADOMD.NET は ADO.NET より高速で、メモリ効率も ADO.NET より優れています。 サーバー オブジェクトに関するメタデータを取得することもできます。 クライアント アプリケーションでは、.NET が使用できない場合以外は ADOMD.NET を使用することをお勧めします。  
+ 
+  **ADOMD.NET** データ マイニングと OLAP の操作に最適化されたマネージド データ プロバイダーです。 ADOMD.NET は ADO.NET より高速で、メモリ効率も ADO.NET より優れています。 サーバー オブジェクトに関するメタデータを取得することもできます。 クライアント アプリケーションでは、.NET が使用できない場合以外は ADOMD.NET を使用することをお勧めします。  
   
  **Server ADOMD** サーバー上で直接 Analysis Services オブジェクトにアクセスするためのオブジェクト モデルです。 Analysis Services ストアド プロシージャで使用されます。クライアントでは使用しません。  
   

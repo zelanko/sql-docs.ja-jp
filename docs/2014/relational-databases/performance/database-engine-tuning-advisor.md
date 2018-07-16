@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dc51cc2f2211238213ed6f25e18b907d16b08f10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9c64c9382e760374c0870e6ec1ef1b4d0dd2b607
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303782"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] データベース エンジン チューニング アドバイザー (DTA) は、データベースを分析し、クエリ パフォーマンスを最適化する手助けをします。 データベース エンジン チューニング アドバイザーを使用すると、データベースの構造や [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の内部構造に関する専門的な知識がなくても、インデックス、インデックス付きビュー、テーブル パーティション分割の最適な組み合わせを選択して作成することができます。 DTA を使用して、次の作業を実行できます。  
@@ -113,7 +113,7 @@ ms.locfileid: "36075708"
 ## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>xp_msver 拡張ストアド プロシージャへの依存性  
  データベース エンジン チューニング アドバイザーは、 **xp_msver** 拡張ストアド プロシージャに依存してすべての機能を提供します。 この拡張ストアド プロシージャは既定でオンになっています。 データベース エンジン チューニング アドバイザーはこの拡張ストアド プロシージャを使用して、チューニングするデータベースがあるコンピューター上のプロセッサの数および利用可能なメモリをフェッチします。 **xp_msver** が使用できない場合は、データベース エンジン チューニング アドバイザーを実行しているコンピューターのハードウェア特性を推定します。 データベース エンジン チューニング アドバイザーを実行しているコンピューターのハードウェア特性を推定できない場合は、1 つのプロセッサと 1,024 MB のメモリがあると仮定します。  
   
- 推奨パーティションの数はこれらの 2 つの値 (プロセッサ数と利用可能なメモリ) によって変わるので、この依存性によって、パーティション分割に関する推奨設定が影響を受けます。 また、テスト サーバーを使用して本番運用サーバーをチューニングする場合は、依存性によってチューニング結果にも影響があります。 この場合、データベース エンジン チューニング アドバイザーは、 **xp_msver** を使用して運用サーバーからハードウェア属性をフェッチします。 テスト サーバー上でワークロードをチューニングした後に、データベース エンジン チューニング アドバイザーはこれらのハードウェア属性を使用して推奨設定を生成します。 詳細については、次を参照してください。 [xp_msver &#40;TRANSACT-SQL&#41;] (~/relational-databases/system-stored-procedures/xp-msver-transact-sql.md です。  
+ 推奨パーティションの数はこれらの 2 つの値 (プロセッサ数と利用可能なメモリ) によって変わるので、この依存性によって、パーティション分割に関する推奨設定が影響を受けます。 また、テスト サーバーを使用して本番運用サーバーをチューニングする場合は、依存性によってチューニング結果にも影響があります。 この場合、データベース エンジン チューニング アドバイザーは、 **xp_msver** を使用して運用サーバーからハードウェア属性をフェッチします。 テスト サーバー上でワークロードをチューニングした後に、データベース エンジン チューニング アドバイザーはこれらのハードウェア属性を使用して推奨設定を生成します。 詳細については、次を参照してください。 [xp_msver &#40;TRANSACT-SQL&#41;] (~ relational-databases/system-stored-procedures/xp-msver-transact-sql.md/。  
   
 ## <a name="database-engine-tuning-advisor-tasks"></a>データベース エンジン チューニング アドバイザーのタスク  
  次の表に、データベース エンジン チューニング アドバイザーの一般的なタスクと、その実行方法を説明するトピックを示します。  

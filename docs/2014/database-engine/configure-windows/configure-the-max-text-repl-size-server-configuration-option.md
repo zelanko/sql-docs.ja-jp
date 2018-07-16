@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - max text repl size option
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 78f0bd4fd322294c4c3a1d15efeaac64ca19e8c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 667daf9415d808ec76ab43938da6373aca3a7380
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296972"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>max text repl size サーバー構成オプションの構成
-  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **最大テキスト レプリケーション サイズ**オプションは、最大のサイズ (バイト単位) を指定`text`、 `ntext`、 `varchar(max)`、 `nvarchar(max)`、 `varbinary(max)`、 `xml`、および`image`に追加できるデータレプリケートされた列またはキャプチャ対象列、単一の INSERT、UPDATE、WRITETEXT、または UPDATETEXT ステートメントでします。 既定値は 65536 バイトです。 値 -1 は、データ型で許容されるサイズの範囲内であれば、サイズ制限がないことを示します。  
+  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **Max text repl サイズ**オプションの指定の最大サイズ (バイト単位) で`text`、 `ntext`、 `varchar(max)`、 `nvarchar(max)`、 `varbinary(max)`、 `xml`、および`image`に追加できるデータレプリケート対象列または単一の INSERT、UPDATE、WRITETEXT、または UPDATETEXT ステートメントでキャプチャ対象列。 既定値は 65536 バイトです。 値 -1 は、データ型で許容されるサイズの範囲内であれば、サイズ制限がないことを示します。  
   
  **このトピックの内容**  
   

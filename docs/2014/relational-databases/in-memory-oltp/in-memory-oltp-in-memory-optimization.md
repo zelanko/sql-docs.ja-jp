@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 caps.latest.revision: 98
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a7ee2a4a5a9bb56eee68aab349ff65ca811356cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1a1df515a5a88c94e52d376394905a819d361281
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316202"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>インメモリ OLTP (インメモリ最適化)
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]の新機能である [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] では、OLTP データベース アプリケーションのパフォーマンスを大幅に向上させることができます。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エンジンに統合されたメモリ最適化データベース エンジンで、OLTP 用に最適化されています。  
   
 |||  
 |-|-|  
-|![Azure の仮想マシン](../../master-data-services/media/azure-virtual-machine.png "Azure の仮想マシン")|SQL Server 2016 をお試しになりますか? Microsoft Azure にサインアップし、 **[ここ](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** に移動して、SQL Server 2016 がインストール済みの仮想マシンを起動します。 完了後、仮想マシンは削除できます。|  
+|![Azure 仮想マシン](../../master-data-services/media/azure-virtual-machine.png "Azure 仮想マシン")|SQL Server 2016 をお試しになりますか? Microsoft Azure にサインアップし、 **[ここ](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** に移動して、SQL Server 2016 がインストール済みの仮想マシンを起動します。 完了後、仮想マシンは削除できます。|  
   
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]を使用するには、頻繁にアクセスされるテーブルをメモリ最適化として定義します。 メモリ最適化テーブルは完全にトランザクション型であり、持続性があり、ディスク ベース テーブルと同じ方法で [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用してアクセスされます。 クエリでは、メモリ最適化テーブルとディスク ベース テーブルの両方を参照できます。 トランザクションでは、メモリ最適化テーブルおよびディスク ベース テーブル内のデータを更新できます。 メモリ最適化テーブルのみを参照するストアド プロシージャは、パフォーマンスをさらに向上させるために、マシン語コードにネイティブ コンパイルできます。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンは、高度にスケールアウトされた中間層によって、OLTP タイプのトランザクションで発生する、非常に高いセッション同時実行性に対応するように設計されています。 このことを実現するために、ラッチ フリー データ構造と複数のバージョンから成るオプティミスティック同時実行制御が使用されます。 結果は、予測可能なミリ秒未満の低待機時間と、データベース トランザクションの線形スケールによる高いスループットです。 実際にパフォーマンスがどの程度向上するかは多くの要因によって異なりますが、一般的にはパフォーマンスが 5 ～ 20 倍向上します。  
   

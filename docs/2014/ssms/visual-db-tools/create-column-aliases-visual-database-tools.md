@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], aliases
 - aliases [SQL Server], columns
 ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c317fd581c97d8c48a5ccd92a0010c45be24493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 942279e0c731439f013bee345b5202fb7fed5960
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291932"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>列の別名の作成 (Visual Database Tools)
   列名に別名を作成すると、列名、計算、および集計値を簡単に操作できるようになります。 たとえば、列の別名を作成するのは次の場合です。  

@@ -1,5 +1,5 @@
 ---
-title: 分散再生の要件 |Microsoft ドキュメント
+title: 分散再生の要件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f38f09e4b9c5bcf2d3d6611f4a6d5e8bdc9534d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: bc0ae7de69ac9887e7bb3e75acfc97a1ae9be822
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312732"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を使用する前に、このトピックで説明する製品の要件を検討してください。  
@@ -129,7 +129,7 @@ ms.locfileid: "36073635"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>必要なオペレーティング システム  
- 管理ツールおよびコントローラーとクライアント サービスを実行するためにサポートされるオペレーティング システムは、使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスと同じです。 用のオペレーティング システムのサポートについての詳細、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスは、「 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)です。  
+ 管理ツールおよびコントローラーとクライアント サービスを実行するためにサポートされるオペレーティング システムは、使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスと同じです。 サポートされるオペレーティング システムに関する詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスは、「 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)します。  
   
  分散再生機能は、x86 ベースおよび x64 ベースの両方のオペレーティング システムでサポートされています。 x64 ベース オペレーティング システムでは、Windows on Windows (WOW) モードのみがサポートされます。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "36073635"
  失われたログインや不正なログインに関連付けられたイベントを再生すると、再生エラーとなります。ただし、再生の処理は継続されます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [SQL Server 分散再生](sql-server-distributed-replay.md)   
  [分散再生のセキュリティ](distributed-replay-security.md)   
  [分散再生のインストール](install-distributed-replay-overview.md)  
   

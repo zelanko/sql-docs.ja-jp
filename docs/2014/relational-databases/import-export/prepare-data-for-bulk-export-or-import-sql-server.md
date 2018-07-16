@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], planning
 - bulk importing [SQL Server], from a CSV file
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - quoted fields in CSV files [SQL Server]
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6e8c73ee58adca043b3630501137285012bf3e31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 474f771b73e5e3ce6f7a5d567d491edb740f94f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302462"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>一括エクスポートまたは一括インポートのデータの準備 (SQL Server)
   ここでは、一括エクスポート操作の計画に関する考慮事項と一括インポート操作の要件について説明します。  
@@ -56,7 +55,7 @@ ms.locfileid: "36085213"
   
 -   **bcp** コマンド、BULK INSERT ステートメント、または INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントを使用してデータをインポートするには、インポート先のテーブルが既に存在している必要があります。  
   
--   データ ファイルの各フィールドは、インポート先テーブルの対応する列と互換性がある必要があります。 たとえば、`int`にフィールドを読み込むことはできません、`datetime`列です。 詳細については、「[一括インポートまたは一括エクスポートのデータ形式 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)」および「[bcp を使用した互換性のためのデータ形式の指定 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)」を参照してください。  
+-   データ ファイルの各フィールドは、インポート先テーブルの対応する列と互換性がある必要があります。 たとえば、`int`にフィールドを読み込むことはできません、`datetime`列。 詳細については、「[一括インポートまたは一括エクスポートのデータ形式 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)」および「[bcp を使用した互換性のためのデータ形式の指定 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)」を参照してください。  
   
     > [!NOTE]  
     >  ファイル全体をインポートするのではなく、データ ファイルからインポートする行のサブセットを指定するには、**bcp** コマンドと **-F** *first_row* スイッチまたは **-L** *last_row* スイッチ、あるいは両方のスイッチを組み合わせて使用します。 詳細については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  

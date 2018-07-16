@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - maintenance plans [SQL Server], creating
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cce3b394ad2f2522a7a16c69dc7e4849623ef239
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 3d72b6d102dde3bdde34dcf621aafe7e1e84a276
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310063"
 ---
 # <a name="create-a-maintenance-plan"></a>メンテナンス プランの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でメンテナンス プランを作成する方法には、メンテナンス プラン ウィザードを使用する方法とデザイン画面を使用する方法の 2 とおりがあります。 基本的なメンテナンス プランを作成する場合は、ウィザードが最適です。それに対して、デザイン画面を使用してプランを作成すると、高度なワークフローを利用できます。  

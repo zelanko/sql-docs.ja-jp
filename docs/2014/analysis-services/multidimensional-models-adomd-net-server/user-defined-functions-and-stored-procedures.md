@@ -1,5 +1,5 @@
 ---
-title: ユーザー定義関数およびストアド プロシージャ |Microsoft ドキュメント
+title: ユーザー定義関数およびストアド プロシージャ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - ADOMD.NET, stored procedures
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba07911e050fc4b2430957cc45beea55d2f8094d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 719929ec255f29da6477788d4feff1162609f993
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253024"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>ユーザー定義関数およびストアド プロシージャ
-  ユーザー定義関数 (UDF) または用のストアド プロシージャを作成する、ADOMD.NET サーバー オブジェクトと[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]あり、サーバーからメタデータとデータと対話します。 これらのインプロセス メソッドは、ネットワーク通信に関連する待機時間を伴わず、追加機能を提供する多次元式 (MDX) ステートメントまたはデータ マイニング拡張機能 (DMX) ステートメントを通して呼び出されます。  
+  ユーザー定義関数 (UDF) またはストアド プロシージャを作成する、ADOMD.NET サーバー オブジェクトと[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]であり、サーバーからメタデータとデータと対話します。 これらのインプロセス メソッドは、ネットワーク通信に関連する待機時間を伴わず、追加機能を提供する多次元式 (MDX) ステートメントまたはデータ マイニング拡張機能 (DMX) ステートメントを通して呼び出されます。  
   
 ## <a name="udf-examples"></a>UDF の例  
  UDF は、MDX ステートメントまたは DMX ステートメントのコンテキスト内で呼び出すことができます。また、任意の数のパラメーターを取り、任意の型のデータを返します。  
