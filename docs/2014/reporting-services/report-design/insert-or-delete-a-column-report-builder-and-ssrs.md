@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b451497fce19920ed229e921cb96d90152688e92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 68e62139ecdb6c3a7fe3547add9a0332b5792372
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234762"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>列の挿入または削除 (レポート ビルダーおよび SSRS)
   Tablix データ領域では、列を追加したり削除したりできます。 Tablix データ領域は、テーブル、マトリックス、一覧のいずれかです。 次の手順は、グラフおよびゲージのデータ領域には適用されません。  
@@ -33,13 +33,13 @@ ms.locfileid: "36072944"
   
 -   [デザイン] ビューで、Tablix データ領域の左上隅をクリックすると、その上部および横に列ハンドルと行ハンドルが表示されます。  
   
-     データ領域部分についての詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)です。  
+     データ領域部分についての詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)します。  
   
 ### <a name="to-insert-a-column-in-a-selected-data-region"></a>選択したデータ領域に列を挿入するには  
   
 -   列の挿入位置にある列ハンドルを右クリックし、 **[列の挿入]** をクリックして、 **[左]** または **[右]** をクリックします。  
   
-     -- または --  
+     または  
   
 -   データ領域で、行の挿入位置にあるセルを右クリックし、 **[列の挿入]** をクリックして、 **[左]** または **[右]** をクリックします。  
   

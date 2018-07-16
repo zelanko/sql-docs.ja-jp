@@ -1,5 +1,5 @@
 ---
-title: LogFileRollover 要素 (ASSL) |Microsoft ドキュメント
+title: LogFileRollover 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileRollover element
 ms.assetid: 5484e167-b891-431a-bbae-946ea6eb4a3c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4ecaf972c701175d388ab71fa61d94de1c6f2cad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12ed8df0217baeb5f760273ad6998e2344f4fbb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299022"
 ---
 # <a name="logfilerollover-element-assl"></a>LogFileRollover 要素 (ASSL)
-  指定のログ記録するかどうか[トレース](../objects/trace-element-assl.md)出力は新しいファイルにロール オーバーするかまたは停止されている最大ログ ファイル サイズとがで指定する必要があります[LogFileSize](logfilesize-element-assl.md)に到達します。  
+  指定のログ記録するかどうか[トレース](../objects/trace-element-assl.md)出力は、新しいファイルにロール オーバーする必要がありますまたはで指定されている最大ログ ファイル サイズときに停止してください[LogFileSize](logfilesize-element-assl.md)に到達します。  
   
 ## <a name="syntax"></a>構文  
   

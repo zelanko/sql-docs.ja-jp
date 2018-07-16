@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 38dccbf58c4e0cbfee98b10c7cd8974198bceabc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 111a6cddaae54f05bb751e569487c4b94542bf07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300002"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services のエラーおよびメッセージのリファレンス
   次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で事前定義されているエラー メッセージ、警告メッセージ、および情報メッセージの一覧を示します。この一覧では、数値コードおよびシンボル名と共に、メッセージをカテゴリごとに昇順の番号順に示します。 ここに示す各エラーは、 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスのフィールドとして定義されています。  
@@ -48,7 +48,7 @@ ms.locfileid: "36073185"
 -   [データ フロー コンポーネントのエラー メッセージ (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> エラー メッセージ  
- シンボル名は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]エラー メッセージが始まる`DTS_E_`です。  
+ シンボル名は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]エラー メッセージが始まる`DTS_E_`します。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -166,7 +166,7 @@ ms.locfileid: "36073185"
 |0xC0014028|-1073659864|DTS_E_CANTFINDCERTBYHASH|ハッシュで指定された証明書が "MY" ストアに見つかりません (エラー: %1)。 このエラーは、CPackage::LoadUserCertificateByHash で発生します。|  
 |0xC0014029|-1073659863|DTS_E_INVALIDCERTHASHFORMAT|ハッシュ値はバイトの 1 次元配列ではありません (エラー: %1)。 このエラーは、CPackage::LoadUserCertificateByHash で発生します。|  
 |0xC001402A|-1073659862|DTS_E_CANTACCESSARRAYDATA|配列のデータにアクセスできません (エラー: %1)。 このエラーは、GetDataFromSafeArray が呼び出されるたびに発生する可能性があります。|  
-|0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|エラー 0x%1!8.8X! "%2" により、SSIS マネージ ヘルパー オブジェクトの作成中に失敗しました 。 このエラーは、CoCreateInstance CLSID_DTSManagedHelper が失敗するたびに発生します。|  
+|0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|エラー 0x%1!8.8X! "%2" により、SSIS マネージド ヘルパー オブジェクトの作成中に失敗しました 。 このエラーは、CoCreateInstance CLSID_DTSManagedHelper が失敗するたびに発生します。|  
 |0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|エラー 0x%1!8.8X! "%2" により、SSIS ランタイムは OLE DB 接続を分散トランザクションに参加させることができませんでした 。|  
 |0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|エラー 0x%1!8.8X! "%2" により、パッケージに署名できませんでした 。 このエラーは、ManagedHelper.SignDocument メソッドが失敗した場合に発生します。|  
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|エラー 0x%1!8.8X! "%2" により、パッケージ XML の XML 署名エンベロープを確認できませんでした 。 このエラーは、CPackage::LoadFromXML で発生します。|  
@@ -398,7 +398,7 @@ ms.locfileid: "36073185"
 |0xC002910A|-1073573622|DTS_E_AXTASKUTIL_SCRIPT_PARSING_FAILED|スクリプト テキストを解析中に致命的なエラーが発生しました。 選択した言語のスクリプト エンジンが正しくインストールされていることを確認してください。|  
 |0xC002910B|-1073573621|DTS_E_AXTASKUTIL_MSG_BAD_FUNCTION|入力した関数名が無効です。 有効な関数名を指定したかどうかを確認してください。|  
 |0xC002910C|-1073573620|DTS_E_AXTASKUTIL_EXECUTION_FAILED|スクリプトを実行中にエラーが発生しました。 選択した言語のスクリプト エンジンが正しくインストールされていることを確認してください。|  
-|0xC002910D|-1073573619|DTS_E_AXTASKUTIL_ADDTYPELIB_FAILED|マネージ タイプ ライブラリをスクリプト ホストに追加中にエラーが発生しました。 DTS 2000 ランタイムがインストールされていることを確認してください。|  
+|0xC002910D|-1073573619|DTS_E_AXTASKUTIL_ADDTYPELIB_FAILED|マネージド タイプ ライブラリをスクリプト ホストに追加中にエラーが発生しました。 DTS 2000 ランタイムがインストールされていることを確認してください。|  
 |0xC002910E|-1073573618|DTS_E_BITASK_INITIALIZATION_WITH_WRONG_XML_ELEMENT|正しくない XML 要素を使用して、一括挿入タスクが開始されました。|  
 |0xC002910F|-1073573617|DTS_E_BITASK_DATA_FILE_NOT_SPECIFIED|データ ファイル名が指定されていません。|  
 |0xC0029110|-1073573616|DTS_E_BITASK_HANDLER_NOT_FOUND|ハンドラーが見つかりませんでした。|  
@@ -597,7 +597,7 @@ ms.locfileid: "36073185"
 |0xC00291DD|-1073573411|DTS_E_SQLTASK_INDESNOTINCOLLECTION|このコレクションにはインデックスが割り当てられていません。|  
 |0xC00291DE|-1073573410|DTS_E_SQLTASK_ROVARINOUTPARAMETER|変数 "%1" は読み取り専用なので、パラメーターのバインドで "out" パラメーターまたは戻り値としては使用できません。|  
 |0xC00291DF|-1073573409|DTS_E_SQLTASK_OBJECTNOTINCOLLECTION|このコレクションにはオブジェクトが存在しません。|  
-|0xC00291E0|-1073573408|DTS_E_SQLTASK_UNABLETOACQUIREMANAGEDCONN|マネージ接続を取得できません。|  
+|0xC00291E0|-1073573408|DTS_E_SQLTASK_UNABLETOACQUIREMANAGEDCONN|マネージド接続を取得できません。|  
 |0xC00291E1|-1073573407|DTS_E_UNABLETOPOPRESULT|単一行の結果の種類に結果列を作成できません。 クエリから空の結果セットが返されました。|  
 |0xC00291E2|-1073573406|DTS_E_SQLTASK_INVALIDNUMOFRESULTBINDINGS|ResultSetType に返された結果バインドの数が無効です: "%1"。|  
 |0xC00291E3|-1073573405|DTS_E_SQLTASK_RESULTBINDTYPEFORROWSETXML|完全な結果セットおよび XML の結果に対する結果バインド名を 0 に設定する必要があります。|  
@@ -983,7 +983,7 @@ ms.locfileid: "36073185"
 |0xC004705F|-1073450913|DTS_E_ALREADYATTACHED|%1 は既にアタッチされているので、再度アタッチすることはできません。  デタッチしてから再度アタッチしてください。|  
 |0xC0047060|-1073450912|DTS_E_OUTPUTCOLUMNNAMECONFLICT|出力 "%2" の列名 "%1" は、同期入力 "%3" の同じ名前の列と競合するので使用できません。|  
 |0xC0047061|-1073450911|DTS_E_EOFANNOUNCEMENTFAILED|データ フロー タスクは、行セットの末尾を設定するためのバッファーを作成できません。|  
-|0xC0047062|-1073450910|DTS_E_USERCOMPONENTEXCEPTION|マネージ ユーザー コンポーネントにより例外 "%1" がスローされました。|  
+|0xC0047062|-1073450910|DTS_E_USERCOMPONENTEXCEPTION|マネージド ユーザー コンポーネントにより例外 "%1" がスローされました。|  
 |0xC0047063|-1073450909|DTS_E_SCHEDULERMEMORY|データ フロー エンジン スケジューラの実行構造に十分なメモリを割り当てられません。 実行を開始する前に、システムのメモリが不足していました。|  
 |0xC0047064|-1073450908|DTS_E_BUFFERNOOBJECTMEMORY|メモリ不足の状態により、バッファー オブジェクトを作成できませんでした。|  
 |0xC0047065|-1073450907|DTS_E_BUFFERNOMAPMEMORY|メモリ不足の状態により、バッファーの系列 ID を DTP_HCOL インデックスにマップできません。|  
@@ -1239,7 +1239,7 @@ ms.locfileid: "36073185"
 |0xC00490E8|-1073442584|DTS_E_XMLSRCERRORSETTINGERROROUTPUTCOLUMNDATA|%1 はデータを %2 (%3 上) に書き込めませんでした。 %4|  
 |0xC00490F5|-1073442571|DTS_E_TXLOOKUP_CANCEL_REQUESTED|参照変換がユーザーからキャンセル要求を受け取りました。|  
 |0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|4 GB の制限に達したため、文字またはバイナリ ラージ オブジェクト (LOB) の処理が停止しました。|  
-|0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|マネージ パイプライン コンポーネント "%1" を読み込めませんでした。  例外: %2。|  
+|0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|マネージド パイプライン コンポーネント "%1" を読み込めませんでした。  例外: %2。|  
 |0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|SSIS エラー コード DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: 64 ビット バージョンの SSIS では OLE DB プロバイダーを使用できないため、Excel 接続マネージャーがサポートされません。|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|キャッシュ ファイルが破損しているか、ファイルがキャッシュ接続マネージャーを使用して作成されませんでした。  有効なキャッシュ ファイルを指定してください。|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|SQL コマンドが正しく設定されていません。 SQLCommand プロパティを確認してください。|  
@@ -1530,7 +1530,7 @@ ms.locfileid: "36073185"
 |0xC020801C|-1071611876|DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|SSIS エラー コード DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER。  エラー コード 0x%2!8.8X! により、接続マネージャー "%1" に対する AcquireConnection メソッドの呼び出しが失敗しました。  このエラーの前に、AcquireConnection メソッドの呼び出しが失敗した理由の詳細が記載されたエラー メッセージが報告されている可能性があります。|  
 |0xC020801D|-1071611875|DTS_E_ACQUIREDCONNECTIONISINVALID|接続マネージャー "%1" から取得した接続は無効です。|  
 |0xC020801E|-1071611874|DTS_E_INCORRECTCONNECTIONMANAGERTYPE|接続マネージャー "%1" は種類が正しくありません。  必要な種類は "%2" です。 コンポーネントに使用できる種類は "%3" です。|  
-|0xC020801F|-1071611873|DTS_E_CANNOTACQUIREMANAGEDCONNECTIONFROMCONNECTIONMANAGER|ランタイム接続マネージャーからマネージ接続を取得できません。|  
+|0xC020801F|-1071611873|DTS_E_CANNOTACQUIREMANAGEDCONNECTIONFROMCONNECTIONMANAGER|ランタイム接続マネージャーからマネージド接続を取得できません。|  
 |0xC0208020|-1071611872|DTS_E_CANTINITINPUT|入力のコレクションを初期化するために入力を作成できません。|  
 |0xC0208021|-1071611871|DTS_E_CANTINITOUTPUT|出力のコレクションを初期化するために出力を作成できません。|  
 |0xC0208023|-1071611869|DTS_E_EXTRACTORCANTWRITE|エラー コード 0x%2!8.8X! により、ファイル "%1" に書き込めませんでした。|  
@@ -1828,7 +1828,7 @@ ms.locfileid: "36073185"
 |0xC0208450|-1071610800|DTS_E_ADODESTEXECUTEREADEREXCEPTION|tSQL コマンドを実行すると例外がスローされます。メッセージは次のとおりです: %1|  
 |0xC0208451|-1071610799|DTS_E_ADODESTDATATYPENOTSUPPORTED|列 "%2" のデータ型 "%1" は、%3 に対してはサポートされていません。|  
 |0xC0208452|-1071610798|DTS_E_ADODESTFAILEDTOACQUIRECONNECTION|ADO NET 変換先では、接続 %1 を取得できませんでした。 接続が壊れている可能性があります。|  
-|0xC0208453|-1071610797|DTS_E_ADODESTNOTMANAGEDCONNECTION|指定した接続 %1 が管理されていません。ADO NET 変換先にマネージ接続を使用してください。|  
+|0xC0208453|-1071610797|DTS_E_ADODESTNOTMANAGEDCONNECTION|指定した接続 %1 が管理されていません。ADO NET 変換先にマネージド接続を使用してください。|  
 |0xC0208454|-1071610796|DTS_E_ADODESTNOERROROUTPUT|変換先コンポーネントにはエラー出力がありません。 コンポーネントが壊れている可能性があります。|  
 |0xC0208455|-1071610795|DTS_E_ADODESTNOLINEAGEID|外部列 %2 に関連付けられている lineageID %1 は実行時に存在しません。|  
 |0xC0208456|-1071610794|DTS_E_ADODESTEXTERNALCOLNOTEXIST|%1 はデータベースに存在しません。 削除または名前が変更された可能性があります。|  
@@ -1950,8 +1950,8 @@ ms.locfileid: "36073185"
 |0xC02090E7|-1071607577|DTS_E_XMLSRCFAILEDTOCREATEREADER|%1 は XML データを読み取れませんでした。 %2|  
 |0xC02090F0|-1071607568|DTS_E_TXLOOKUP_REINITMETADATAFAILED|参照変換メソッド ReinitializeMetadata への呼び出しに失敗しました。|  
 |0xC02090F1|-1071607567|DTS_E_TXLOOKUP_NOJOINS|参照変換では、参照列に結合された少なくとも 1 つの入力列が必要ですが、指定されていませんでした。 少なくとも 1 つの結合列を指定する必要があります。|  
-|0xC02090F2|-1071607566|DTS_E_MANAGEDERR_BADFORMATSPECIFICATION|マネージ エラー インフラストラクチャによって通知されているメッセージ文字列に、正しくない書式が含まれています。 これは内部エラーです。|  
-|0xC02090F3|-1071607565|DTS_E_MANAGEDERR_UNSUPPORTEDTYPE|マネージ エラー インフラストラクチャを使用してメッセージ文字列の書式を設定中に、サポートされていない書式であるバリアント型が見つかりました。 これは内部エラーです。|  
+|0xC02090F2|-1071607566|DTS_E_MANAGEDERR_BADFORMATSPECIFICATION|マネージド エラー インフラストラクチャによって通知されているメッセージ文字列に、正しくない書式が含まれています。 これは内部エラーです。|  
+|0xC02090F3|-1071607565|DTS_E_MANAGEDERR_UNSUPPORTEDTYPE|マネージド エラー インフラストラクチャを使用してメッセージ文字列の書式を設定中に、サポートされていない書式であるバリアント型が見つかりました。 これは内部エラーです。|  
 |0xC02090F5|-1071607563|DTS_E_DATAREADERSRCUNABLETOPROCESSDATA|%1 はデータを処理できませんでした。 %2|  
 |0xC02090F6|-1071607562|DTS_E_XMLSRCEMPTYPROPERTY|%2 のプロパティ "%1" が空でした。|  
 |0xC02090F7|-1071607561|DTS_E_XMLSRCINVALIDOUTPUTNAME|パス "%2" の XML テーブルに名前 "%1" の出力を作成しようとしましたが、この名前は無効なので作成できませんでした。|  
@@ -2267,7 +2267,7 @@ ms.locfileid: "36073185"
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|OLE DB 変換先 "%1" の挿入コミット サイズの最大値プロパティは 0 に設定されています。 このプロパティの設定により、実行中のパッケージは応答を停止する可能性があります。 詳細については、[OLE DB 変換先エディター] ([接続マネージャー] ページ) の F1 ヘルプ トピックを参照してください。|  
   
 ##  <a name="msgGeneral"></a> 一般的なメッセージおよびイベント メッセージ  
- シンボル名は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]エラー メッセージが始まる`DTS_MSG_`です。  
+ シンボル名は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]エラー メッセージが始まる`DTS_MSG_`します。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2306,7 +2306,7 @@ ms.locfileid: "36073185"
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|イベント名: %1<br /><br /> メッセージ: %9<br /><br /> 演算子: %2<br /><br /> ソース名: %3<br /><br /> ソース ID: %4<br /><br /> 実行 ID: %5<br /><br /> 開始時刻: %6<br /><br /> 終了時刻: %7<br /><br /> データ コード: %8|  
   
 ##  <a name="msgSuccess"></a> 成功時のメッセージ  
- シンボル名は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]成功メッセージが始まる`DTS_S_`です。  
+ シンボル名は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]成功メッセージが始まる`DTS_S_`します。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  

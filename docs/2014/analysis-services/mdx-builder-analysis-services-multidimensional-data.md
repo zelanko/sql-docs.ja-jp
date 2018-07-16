@@ -1,5 +1,5 @@
 ---
-title: MDX ビルダー (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: MDX ビルダー (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.mdxbuilderdialof.f1
 helpviewer_keywords:
 - MDX Builder dialog box
 ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1df3416ee7b7016cbc6db8a1d694eadfdbc33a5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26bc55eb874f0d404c1d4f330e0c0841a8183157
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308542"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX ビルダー (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[MDX ビルダー]** ダイアログ ボックスを使用すると、多次元式 (MDX) を作成できます。 **[MDX ビルダー]** ダイアログ ボックスを表示するには、 **ロール デザイナー** の **[セル データ]** ページで、 **[キューブ コンテンツの読み取りを許可する]** オプション、 **[セルのセキュリティでセル コンテンツの条件の読み取りを許可する]** オプション、または **[キューブ コンテンツの読み取りと書き込みを許可する]** オプションの **[MDX の編集]** の参照ボタン ( **[...]**) をクリックします。  
