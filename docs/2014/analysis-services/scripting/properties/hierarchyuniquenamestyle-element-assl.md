@@ -1,5 +1,5 @@
 ---
-title: HierarchyUniqueNameStyle 要素 (ASSL) |Microsoft ドキュメント
+title: HierarchyUniqueNameStyle 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - HierarchyUniqueNameStyle element
 ms.assetid: 2ac57825-e9e5-4ec4-9856-fa2326d2c43f
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4948cc104e39c6d7aec7e2822594e891c52b112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d19fa53581241686d68179162762a0909fcc69f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304292"
 ---
 # <a name="hierarchyuniquenamestyle-element-assl"></a>HierarchyUniqueNameStyle 要素 (ASSL)
-  一意の名前が決定内に含まれている階層に対して生成される、 [CubeDimension](../data-type/dimension-data-type-assl.md)です。  
+  一意の名前が決定内に含まれる階層に対して生成される、 [CubeDimension](../data-type/dimension-data-type-assl.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36084666"
   
 ## <a name="see-also"></a>参照  
  [キューブ要素&#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [要素の寸法&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [ディメンション要素&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  
   
   

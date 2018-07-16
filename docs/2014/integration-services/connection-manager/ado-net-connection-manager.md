@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
 - ADO.NET connection manager [Integration Services]
@@ -17,20 +17,20 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 44b07e26877a4d53d87cabb2ce48894f067a2802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a94c611a8c200f5b7b8211b6a1d69b3f147b7a37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195662"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 接続マネージャー
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用すると、パッケージは .NET プロバイダーを使用してデータ ソースにアクセスできます。 この接続マネージャーは通常、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのデータ ソースへのアクセスに使用されます。また、C# などの言語を使用してマネージ コードに記述されたカスタム タスク内で、OLE DB や XML を介して公開されているデータ ソースにもアクセスできます。  
+  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用すると、パッケージは .NET プロバイダーを使用してデータ ソースにアクセスできます。 この接続マネージャーは通常、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのデータ ソースへのアクセスに使用されます。また、C# などの言語を使用してマネージド コードに記述されたカスタム タスク内で、OLE DB や XML を介して公開されているデータ ソースにもアクセスできます。  
   
- 追加すると、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 、パッケージへの接続マネージャー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続として解決されるマネージャーを作成、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 、実行時に接続を選択し、マネージャーのプロパティを接続を設定する接続マネージャーを追加します`Connections`パッケージのコレクション。  
+ 追加すると、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 、パッケージでは、接続マネージャーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続として解決されたマネージャーを作成、[!INCLUDE[vstecado](../../includes/vstecado-md.md)]実行時に、接続、接続マネージャーのプロパティを設定し、接続マネージャーを追加します`Connections`パッケージのコレクション。  
   
- `ConnectionManagerType`接続マネージャーのプロパティに設定されて`ADO.NET`です。 値`ConnectionManagerType`は接続マネージャーを使用する .NET プロバイダーの名前を修飾します。  
+ `ConnectionManagerType`接続マネージャーのプロパティに設定されて`ADO.NET`します。 値`ConnectionManagerType`を接続マネージャーを使用する .NET プロバイダーの名前を含めることができます。  
   
 ## <a name="adonet-connection-manager-troubleshooting"></a>ADO.NET 接続マネージャーのトラブルシューティング  
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーによる外部データ ソースへの接続に関するトラブルシューティングを行うことができます。 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーによる外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択する必要があります。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
@@ -64,7 +64,7 @@ ms.locfileid: "36179595"
   
 -   [[ADO.NET の接続マネージャーの構成]](../configure-ado-net-connection-manager.md)  
   
- プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムで接続を追加する](../building-packages-programmatically/adding-connections-programmatically.md)です。  
+ プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41;接続](integration-services-ssis-connections.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UAC
 - installing Reporting Services
@@ -20,16 +20,16 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 80cdb989ed49604f2b860cf8d01ae15ae799f432
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 660a96d968410c2035ff194d83abb3e00c78d35d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273968"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成
-  レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 インストールされていないか、レポート サーバーを構成が場合に、次を参照してください[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)と[Reporting Services ネイティブ モード レポート サーバーの管理](manage-a-reporting-services-native-mode-report-server.md).  
+  レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 インストールまたは、レポート サーバーの構成がされていないを参照してください[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)と[Reporting Services ネイティブ モード レポート サーバーの管理](manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -59,7 +59,7 @@ ms.locfileid: "36165995"
   
 -   [ローカル レポート サーバー管理を行う目的で SQL Server Management Studio (SSMS) を構成するには](#bkmk_configure_ssms)  
   
--   [SQL Server データ ツール BI (SSDT) をローカル レポート サーバーにパブリッシュを構成するには](#bkmk_configure_ssdt)  
+-   [SQL Server Data Tools BI (SSDT) をローカル レポート サーバーへの発行を構成するには](#bkmk_configure_ssdt)  
   
 -   [追加情報](#bkmk_addiitonal_informaiton)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36165995"
   
  これで、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開くときに **[管理者として実行]** を明示的に選択しなくても、レポート サーバーのプロパティにアクセスできるようになりました。  
   
-##  <a name="bkmk_configure_ssdt"></a> SQL Server データ ツール BI (SSDT) をローカル レポート サーバーにパブリッシュを構成するには  
+##  <a name="bkmk_configure_ssdt"></a> SQL Server Data Tools BI (SSDT) をローカル レポート サーバーへの発行を構成するには  
  [!INCLUDE[SSDTDev11](../../includes/ssdtdev11-md.md)] を、このトピックの最初のセクションに記載したオペレーティング システムのいずれかにインストールした状況で、SSDT を使用してローカルのネイティブ モード レポート サーバーを操作する場合は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を高度な権限で開くか、レポート サービス ロールを構成しない限り、権限エラーが発生します。 たとえば、十分な権限がない場合には次のような問題が発生します。  
   
 -   ローカル レポート サーバーにレポート アイテムを配置しようとすると、 **[エラー一覧]** ウィンドウに次のようなエラー メッセージが表示されます。  
@@ -170,7 +170,7 @@ ms.locfileid: "36165995"
   
  **SSDT を開くときに高度な権限を毎回使用するには:**  
   
-1.  スタート画面から「`sql server`し、右クリックし、 **SQL Server Data Tools for Visual Studio**です。 **[管理者として実行]** をクリックします  
+1.  スタート画面から「`sql server`し、右クリックし、 **for Visual Studio の SQL Server Data Tools**します。 **[管理者として実行]** をクリックします  
   
      **または**、それ以前のオペレーティング システムで次のように操作します。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "36165995"
 -   このトピックの「 [レポート マネージャーのフォルダーの設定](#bkmk_configure_folder_settings) 」および「 [レポート マネージャーのサイトの設定](#bkmk_configure_site_settings) 」を参照してください。  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> 追加情報  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の管理に関連する追加の一般的な手順は、Windows ファイアウォールでポート 80 を開いてレポート サーバー コンピューターへのアクセスを許可することです。 手順については、次を参照してください。[レポート サーバー アクセスに対してファイアウォールを構成する](configure-a-firewall-for-report-server-access.md)です。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の管理に関連する追加の一般的な手順は、Windows ファイアウォールでポート 80 を開いてレポート サーバー コンピューターへのアクセスを許可することです。 手順については、次を参照してください。[レポート サーバーへのアクセスのファイアウォールを構成する](configure-a-firewall-for-report-server-access.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services ネイティブ モードのレポート サーバーの管理](manage-a-reporting-services-native-mode-report-server.md)  

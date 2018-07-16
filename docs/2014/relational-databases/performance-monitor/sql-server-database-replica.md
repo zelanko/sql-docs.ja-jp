@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - SQLServer:Database Replica
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 09191b6e0a783e3aa27ddcb3e6f03f3b7945f022
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ff7159adceda1953433b2869fd5d5e05a0b91b94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233112"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server、データベース レプリカ
   **SQLServer:Database Replica** パフォーマンス オブジェクトには、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の AlwaysOn 可用性グループのセカンダリ データベースに関する情報を報告するパフォーマンス カウンターが含まれています。 このオブジェクトは、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでのみ有効です。  

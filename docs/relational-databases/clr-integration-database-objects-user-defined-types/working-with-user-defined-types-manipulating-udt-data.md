@@ -1,11 +1,11 @@
 ---
-title: UDT データの操作 |Microsoft ドキュメント
+title: UDT データを操作する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -32,19 +32,19 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3eeab65950cf19e967ad9bb0fbd082a879cead8a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: baf3dad1ff4db835e825eacf9a411d56c7d72923
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702073"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354274"
 ---
-# <a name="working-with-user-defined-types---manipulating-udt-data"></a>ユーザー定義型の UDT データの操作の使用
+# <a name="working-with-user-defined-types---manipulating-udt-data"></a>ユーザー定義型の使用 - UDT データを操作します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] には、UDT (ユーザー定義型) 列のデータを変更する際に特別な INSERT、UPDATE、または DELETE ステートメント構文は用意されていません。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の CAST 関数または CONVERT 関数を使用して、ネイティブ データ型を UDT 型にキャストします。  
   
 ## <a name="inserting-data-in-a-udt-column"></a>UDT 列へのデータの挿入  
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントにサンプル データの 3 つの行を挿入、**ポイント**テーブル。 **ポイント**データ型は X と Y の整数値、UDT のプロパティとして公開されます。 CAST または CONVERT のいずれかの関数をコンマ区切りのキャストを使用する必要があります X と Y 値を**ポイント**型です。 最初の 2 つのステートメントでは、CONVERT 関数を使用して、文字列値を変換、**ポイント**型、および 3 番目のステートメントは、CAST 関数を使用します。  
+ 次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントにサンプル データの 3 つの行を挿入、**ポイント**テーブル。 **ポイント**データ型は X と Y の整数値、UDT のプロパティとして公開されます。 CAST または CONVERT のいずれかの関数を使用して、コンマ区切りをキャストする必要があります X と Y 値を**ポイント**型。 最初の 2 つのステートメントでは、CONVERT 関数を使用して、文字列値を変換、**ポイント**型、および 3 番目のステートメントは、CAST 関数を使用します。  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -59,7 +59,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- 読み取り可能な形式で表示される出力を表示するには、呼び出し、 **ToString**のメソッド、**ポイント**UDT で、値を文字列形式に変換します。  
+ 読みやすい形式で表示される出力を表示するを呼び出して、 **ToString**のメソッド、**ポイント**UDT では、値を文字列表現に変換します。  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -86,7 +86,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- **ポイント**UDT の X 座標と Y 座標、プロパティとして公開することができますしを個別に選択します。 次の、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、X 座標と Y 座標を個別に選択します。  
+ **ポイント**UDT が個別に選択し、プロパティとして、X と Y 座標を公開します。 次の、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、X 座標と Y 座標を個別に選択します。  
   
 ```  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -104,7 +104,7 @@ IDxValyVal
 ```  
   
 ## <a name="working-with-variables"></a>変数を使用した作業  
- 変数を使用するには、DECLARE ステートメントを使用して、UDT 型にその変数を割り当てます。 次のステートメントを使用して値を割り当てる、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを設定し、UDT を呼び出すことによって、結果を表示**ToString**メソッド、変数を。  
+ 変数を使用するには、DECLARE ステートメントを使用して、UDT 型にその変数を割り当てます。 次のステートメントを使用して値を割り当てる、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを設定し、UDT を呼び出すことによって、結果を表示**ToString**変数メソッド。  
   
 ```  
 DECLARE @PointValue Point;  
@@ -132,8 +132,8 @@ SELECT @PointValue.ToString() AS PointValue;
   
  変数の代入に SELECT ステートメントを使用した場合と SET ステートメントを使用した場合には異なる点が 1 つあります。SELECT ステートメントでは 1 つのステートメントで複数の変数に代入できますが、SET 構文では、1 つ変数に代入するごとに 1 つの SET ステートメントが必要になります。  
   
-## <a name="comparing-data"></a>データの比較  
- 設定した場合、UDT の値を比較する比較演算子を使用することができます、 **IsByteOrdered**プロパティを**true**クラスを定義するときにします。 詳細については、次を参照してください。[ユーザー定義型を作成する](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)です。  
+## <a name="comparing-data"></a>データを比較します。  
+ 設定した場合、UDT の値を比較する比較演算子を使用することができます、 **IsByteOrdered**プロパティを**true**クラスを定義するときにします。 詳細については、次を参照してください。[ユーザー定義型を作成する](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)します。  
   
 ```  
 SELECT ID, PointValue.ToString() AS Points   
@@ -141,7 +141,7 @@ FROM dbo.Points
 WHERE PointValue > CONVERT(Point, '2,2');  
 ```  
   
- 関係なく、UDT の内部値を比較することができます、 **IsByteOrdered**値自体が比較可能な場合は、設定します。 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、X の値が Y の値よりも大きい行を選択します。  
+ 関係なく、UDT の内部の値を比較することができます、 **IsByteOrdered**自体の値が比較可能な場合に設定します。 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、X の値が Y の値よりも大きい行を選択します。  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -160,7 +160,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>UDT メソッドの呼び出し  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] でも、UDT で定義されているメソッドを呼び出すことができます。 **ポイント**クラスには、3 つのメソッドが含まれています。**距離**、 **DistanceFrom**、および**DistanceFromXY**です。 コード リストは、これら 3 つのメソッドを定義する、次を参照してください。 [Coding User-Defined 型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)です。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] でも、UDT で定義されているメソッドを呼び出すことができます。 **ポイント**クラスには、3 つのメソッドが含まれています。**距離**、 **DistanceFrom**、および**DistanceFromXY**します。 これら 3 つのメソッドを定義するコード リストを参照してください。 [Coding User-Defined 型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)します。  
   
  次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントの呼び出し、 **PointValue.Distance**メソッド。  
   
@@ -189,7 +189,7 @@ SELECT ID, PointValue.ToString() AS Pnt,
 FROM dbo.Points;  
 ```  
   
- 結果表示の結果、 **DistanceFrom**テーブルの各行のメソッド。  
+ 結果の結果を表示する、 **DistanceFrom**テーブルの各行のメソッド。  
   
 ```  
 ID PntDistanceFromPoint  
@@ -207,7 +207,7 @@ PointValue.DistanceFromXY(1, 99) AS DistanceFromXY
 FROM dbo.Points  
 ```  
   
- 同じ結果セットが、 **DistanceFrom**メソッドです。  
+ 結果セットが同じ、 **DistanceFrom**メソッド。  
   
 ## <a name="updating-data-in-a-udt-column"></a>UDT 列のデータの更新  
  UDT 列のデータを更新するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] の UPDATE ステートメントを使用します。 また、UDT のメソッドを使用して、オブジェクトの状態を更新することもできます。 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、テーブルの単一行を更新します。  
@@ -226,7 +226,7 @@ SET PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- UDT をバイトに設定する順序で定義されているかどうかは**true**、 [!INCLUDE[tsql](../../includes/tsql-md.md)] WHERE 句で UDT 列を評価できます。  
+ バイト オーダーに設定すると、UDT が定義されてかどうか**true**、 [!INCLUDE[tsql](../../includes/tsql-md.md)] WHERE 句で UDT 列を評価することができます。  
   
 ```  
 UPDATE dbo.Points  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorOpen event class
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3bd0d597556c1dfbfff60b4b5f169e6185dd02d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 34e17451a11446f484705b11aaeab984eb5678e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221472"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen イベント クラス
   **CursorOpen** イベント クラスでは、アプリケーション プログラミング インターフェイス (API) のカーソルで発生する、カーソルを開くイベントが示されます。 カーソルを開くイベントは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が、カーソルやカーソル オプションに関連する SQL ステートメントを定義し、カーソルを作成した時点で発生します。  

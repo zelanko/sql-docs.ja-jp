@@ -1,37 +1,36 @@
 ---
-title: どのような&#39;CLR 統合の |Microsoft ドキュメント
+title: どのような&#39;CLR 統合の新 |Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: reference
+ms.technology: clr
 ms.topic: conceptual
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
 caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 88796ef0cf870764b50d691b5eacc0205afba390
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 55cb6537db540fb5d916b72cb1b469dc3846f419
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697103"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356214"
 ---
-# <a name="clr-integration---what39s-new"></a>CLR 統合の新機能&#39;s New
+# <a name="clr-integration---what39s-new"></a>CLR 統合 - 何&#39;s New
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の CLR 統合で新しくなった点は次のとおりです。  
   
--   CLR のバージョン 4 では、破損状態の例外を CLR データベース オブジェクトはキャッチしません。 これらの例外は、CLR 統合ホスト層でキャッチされるようになりました。 これらの例外を引き続きキャッチできますが、CLR データベース コンポーネント コード属性を設定して ([\<legacyCorruptedStateExceptionsPolicy > 要素](http://go.microsoft.com/fwlink/?LinkId=204954))。 ただし、破損状態の例外が発生した場合の結果には信頼性がないため、この設定はお勧めできません。  
+-   CLR のバージョン 4 では、破損状態の例外を CLR データベース オブジェクトはキャッチしません。 これらの例外は、CLR 統合ホスト層でキャッチされるようになりました。 コード属性を設定して、CLR データベース コンポーネントによってこれらの例外がキャッチもできます ([\<legacyCorruptedStateExceptionsPolicy > 要素](http://go.microsoft.com/fwlink/?LinkId=204954))。 ただし、破損状態の例外が発生した場合の結果には信頼性がないため、この設定はお勧めできません。  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] には厳しいセキュリティ要件があるため、CLR データベース コンポーネントには、今後も CLR バージョン 2.0 で定義されたコード アクセス セキュリティ モデルが使用されます。  
   
--   CLR バージョン 4 に形式エラーで、 **System.TimeSpan**値が生成されます、 **System.FormatExceptions**です。 形式エラー、CLR の version 4 より前、 **System.TimeSpan**値は無視されました。 データベースの互換性レベルに、CLR の version 4 より前の動作に依存するデータベース アプリケーションを実行する必要があります (**ALTER DATABASE 互換性レベル**) を 100 以下です。 詳細については、次を参照してください。 [< TimeSpan_LegacyFormatMode > 要素](http://go.microsoft.com/fwlink/?LinkId=205109)です。  
+-   CLR バージョン 4 の形式エラーで、 **System.TimeSpan**値が生成されます、 **System.FormatExceptions**します。 形式エラーは、CLR の version 4 より前、 **System.TimeSpan**値は無視されました。 CLR の version 4 より前の動作に依存するデータベース アプリケーションは、データベースの互換性レベルで実行する必要があります (**ALTER DATABASE 互換性レベル**) を 100 以下。 詳細については、次を参照してください。 [< TimeSpan_LegacyFormatMode > 要素](http://go.microsoft.com/fwlink/?LinkId=205109)します。  
   
--   CLR のバージョン 4 は、Unicode 5.1 をサポートします。 アクセントや記号を含んだ並べ替えの処理が改善されます。 従来の並べ替え動作に依存したアプリケーションでは、互換性の問題が生じる場合があります。 従来の並べ替え、データベースの互換性レベルを有効にする (**ALTER DATABASE 互換性レベル**) を 100 以下に設定する必要があります。 この点をサポートするために、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、.NET Framework 4 ディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.30319) に sort00001000.dll がインストールされます。 詳細については、次を参照してください。 [ \<CompatSortNLSVersion > 要素](http://go.microsoft.com/fwlink/?LinkId=205110)です。  
+-   CLR のバージョン 4 は、Unicode 5.1 をサポートします。 アクセントや記号を含んだ並べ替えの処理が改善されます。 従来の並べ替え動作に依存したアプリケーションでは、互換性の問題が生じる場合があります。 従来のデータベースの互換性レベルの並べ替え動作を有効にする (**ALTER DATABASE 互換性レベル**) を 100 以下に設定する必要があります。 この点をサポートするために、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、.NET Framework 4 ディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.30319) に sort00001000.dll がインストールされます。 詳細については、次を参照してください。 [ \<CompatSortNLSVersion > 要素](http://go.microsoft.com/fwlink/?LinkId=205110)します。  
   
--   次の列が追加されて[sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md): **total_processor_time_ms**、 **total_allocated_memory_kb**、および**survived_memory_kb**です。  
+-   次の列が追加されている[sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md): **total_processor_time_ms**、 **total_allocated_memory_kb**、および**survived_memory_kb**します。  
   
   

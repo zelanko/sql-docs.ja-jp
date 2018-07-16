@@ -1,5 +1,5 @@
 ---
-title: インストールまたは PowerPivot をアンインストール for SharePoint アドイン (SharePoint 2013) |Microsoft ドキュメント
+title: インストールまたは PowerPivot の SharePoint アドインのアンインストール (SharePoint 2013) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
 caps.latest.revision: 22
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: a7b7d33522ac7cfcd34ef464751e3547b52294cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f44944ff9255fc8010b0751b6389f3f1febb3bb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275518"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>PowerPivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2013)
   [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)][!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ファームでの [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] データ アクセスを提供するアプリケーション サーバー コンポーネントとバックエンド サービスのコレクションです。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerpivot.msi**) は、アプリケーション サーバー コンポーネントのインストールに使用されるインストーラー パッケージです。  
   
 -   このアドインは、SharePoint 2010 の配置に必須ではありません。  
   
--   このアドインは、SharePoint 2013 と SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が含まれるシングル サーバー配置では必須ではありません。 アドインによってインストールされたコンポーネントは、SharePoint モードで [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーをインストールするときに含まれます。 追加で展開の例の図は、次を参照してください。 [SQL Server BI Features in SharePoint の配置トポロジ](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)です。  
+-   このアドインは、SharePoint 2013 と SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が含まれるシングル サーバー配置では必須ではありません。 アドインによってインストールされたコンポーネントは、SharePoint モードで [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーをインストールするときに含まれます。 アドインを使用した配置例の図は、次を参照してください。 [SharePoint での SQL Server BI 機能の配置トポロジ](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)します。  
   
- **注** : このトピックでは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ソリューション ファイルと [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成ツールのインストールについて説明します。 インストールの後、構成ツールと追加機能については、次のトピックを参照してください。 [PowerPivot の構成とソリューションの配置&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)です。  
+ **注** : このトピックでは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ソリューション ファイルと [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成ツールのインストールについて説明します。 インストール後、構成ツールと追加の機能には、次のトピックを参照してください。 [PowerPivot の構成とソリューションの配置&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)します。  
   
  **spPowerPivot.msi**をダウンロードする方法の詳細については、「 [Microsoft® SQL Server® 2014 PowerPivot® for Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854)」を参照してください。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36178106"
   
 -   [要件と前提条件](#bkmk_prereq)  
   
--   [PowerPivot for SharePoint をインストール](#bkmk_install)  
+-   [PowerPivot for SharePoint をインストールするには](#bkmk_install)  
   
 -   [For SharePoint 2013 構成ツール、PowerPivot での SharePoint ソリューション ファイルを展開します。](#bkmk_deploy_solution)  
   
@@ -84,14 +84,14 @@ ms.locfileid: "36178106"
   
 -   SharePoint 製品およびテクノロジの要件に従い、**spPowerPivot.msi** は 64 ビットのみです。  
   
--   A [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] PowerPivot モードのサーバーにします。 Excel Services では、PowerPivot サーバーとして SQL Server Analysis Services インスタンスを使用します。 Analysis Services は、ローカル コンピューターでもリモート コンピューターでも実行できます。  
+-   A [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] PowerPivot モードのサーバー。 Excel Services では、PowerPivot サーバーとして SQL Server Analysis Services インスタンスを使用します。 Analysis Services は、ローカル コンピューターでもリモート コンピューターでも実行できます。  
   
 -   **権限:** [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)]をインストールするには、現在のユーザーがコンピューターの管理者であり、SharePoint ファーム管理者グループのメンバーである必要があります。  
   
--   詳細については[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]要件と前提条件を参照してください。 [SharePoint モードで Analysis Services サーバーのハードウェアおよびソフトウェア&#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)です。  
+-   詳細については[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]要件と前提条件を参照してください。 [Hardware and Software Requirements の SharePoint モードで Analysis Services サーバー &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)します。  
   
-##  <a name="bkmk_install"></a> PowerPivot for SharePoint をインストール  
- **spPowerpivot.msi** インストーラー パッケージは、グラフィカル ユーザー インターフェイスとコマンド ライン モードの両方をサポートしています。 どちらのインストール方法でも、管理者特権で .msi を実行する必要があります。 インストールの後、構成ツールと追加機能については、次のトピックを参照してください。 [PowerPivot の構成とソリューションの配置&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)です。  
+##  <a name="bkmk_install"></a> PowerPivot for SharePoint をインストールするには  
+ **spPowerpivot.msi** インストーラー パッケージは、グラフィカル ユーザー インターフェイスとコマンド ライン モードの両方をサポートしています。 どちらのインストール方法でも、管理者特権で .msi を実行する必要があります。 インストール後、構成ツールと追加の機能には、次のトピックを参照してください。 [PowerPivot の構成とソリューションの配置&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)します。  
   
 ### <a name="user-interface-installation"></a>ユーザー インターフェイスを使用したインストール  
  グラフィカル ユーザー インターフェイスを使用して [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] をインストールするには、次の手順を実行します。  
@@ -104,7 +104,7 @@ ms.locfileid: "36178106"
   
 4.  **[機能の選択]** ページでは、すべての機能が既定で選択されています。  
   
-5.  **[次へ]** をクリックします。  
+5.  [**次へ**] をクリックします。  
   
 6.  **[インストール]** をクリックしてインストールを実行し、インストールを終了します。  
   
@@ -183,7 +183,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
 4.  **[PowerPivot for SharePoint 2013 の構成]** をクリックします。  
   
- 構成ツールの詳細については、次を参照してください。 [PowerPivot 構成ツール](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)です。  
+ 構成ツールの詳細については、次を参照してください。 [PowerPivot 構成ツール](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)します。  
   
 ##  <a name="bkmk_remove_addin"></a> アドインのアンインストールまたは修復  
   

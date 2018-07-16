@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], WMI
 - connection managers [Integration Services], WMI
@@ -17,18 +17,18 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 199cea31baaee58c25b50a8ef0aefed15dfab387
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c014af5509091585a4aa73f6c5e900cad069ffe6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269418"
 ---
 # <a name="wmi-connection-manager"></a>WMI 接続マネージャー
-  WMI 接続マネージャーを使用すると、パッケージは Windows Management Instrumentation (WMI) を使用して、企業環境の情報を管理できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクでは、WMI 接続マネージャーを使用します。  
+  WMI 接続マネージャーを使用すると、パッケージは Windows Management Instrumentation (WMI) を使用して、企業環境の情報を管理できます。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクでは、WMI 接続マネージャーを使用します。  
   
- WMI 接続マネージャーをパッケージに追加するときに[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続マネージャーを作成、実行時に WMI 接続を解決する接続マネージャーのプロパティを設定し、接続マネージャーを追加、`Connections`コレクションに、パッケージです。 `ConnectionManagerType`接続マネージャーのプロパティに設定されて`WMI`です。  
+ WMI 接続マネージャーをパッケージに追加すると[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続マネージャーを作成、実行時に WMI 接続を解決する、接続マネージャーのプロパティを設定し、接続マネージャーを追加します、`Connections`コレクションに、パッケージです。 `ConnectionManagerType`接続マネージャーのプロパティに設定されて`WMI`します。  
   
 ## <a name="configuration-of-the-wmi-connection-manager"></a>WMI 接続マネージャーの構成  
  WMI 接続マネージャーは、次の方法で構成できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "36178481"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [[WMI 接続マネージャー エディター]](../wmi-connection-manager-editor.md)」を参照してください。  
   
- プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムで接続を追加する](../building-packages-programmatically/adding-connections-programmatically.md)です。  
+ プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Web サービス タスク](../control-flow/web-service-task.md)   

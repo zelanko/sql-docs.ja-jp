@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
 - clearing job history log
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - historical information [SQL Server], jobs
 ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 813f4090b95266f924f7c17bd359658136f0012f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 951b5ed4f298d1c2fefdae4ec6e5b3346fdcecaf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317402"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
@@ -87,9 +87,9 @@ ms.locfileid: "36071819"
     GO  
     ```  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトを使用します。  
+##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **ジョブ履歴ログを消去するには**  
   
- 使用して、`PurgeJobHistory`のメソッド、 `JobServer` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラスです。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](http://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
+ 使用して、`PurgeJobHistory`のメソッド、 `JobServer` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](http://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
   
   

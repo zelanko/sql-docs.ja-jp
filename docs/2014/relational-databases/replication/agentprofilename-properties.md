@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.perfprofileprops.f1
 helpviewer_keywords:
 - Agent Profile Properties dialog box
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f4429026539096e5ad1c5b835aded9a383115e91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5f810dff0d2dad97cc58bafa993658cd80666638
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186559"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; プロパティ
   **[&lt;AgentProfileName&gt; のプロパティ]** ダイアログ ボックスを使用すると、プロファイル内の各エージェント パラメーターに対して指定された値を表示したり、ユーザー定義のプロファイルの値を変更したりできます。  
@@ -32,7 +32,7 @@ ms.locfileid: "36179099"
  **名前**  
  プロファイルの名前。  
   
- **description**  
+ **[説明]**  
  プロファイルの説明です。  
   
  **パラメーター**  
@@ -51,7 +51,7 @@ ms.locfileid: "36179099"
  **既定値**  
  各エージェント パラメーターの既定値です。  
   
- **Value**  
+ **[値]**  
  プロファイル内のパラメーターに対して指定された値です。 このフィールドは、ユーザー定義のプロファイルに対して編集可能です。  
   
  **[このプロファイルに使用されているパラメーターのみ表示する]**  

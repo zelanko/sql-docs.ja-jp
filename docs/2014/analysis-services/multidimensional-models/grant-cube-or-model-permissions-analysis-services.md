@@ -1,5 +1,5 @@
 ---
-title: 権限の付与キューブまたはモデル (Analysis Services) |Microsoft ドキュメント
+title: キューブまたはモデル アクセス許可 (Analysis Services) を与える |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.cubes.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f3c50f06e71d69b893e5bbebc1ca9870da04f54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c2602f95332f48b71f56ce1fb3028c22c51d2ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306562"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>キューブ権限またはモデル権限の付与 (Analysis Services)
   キューブまたは表形式モデルは、Analysis Services データ モデルの主要なクエリ オブジェクトです。 アドホック データ探索のために Excel から多次元データまたは表形式データに接続する場合、ユーザーは、通常、最初に、ピボット レポート オブジェクトの基礎となるデータ構造として、特定のキューブまたは表形式モデルを選択します。 このトピックでは、キューブまたは表形式データへのアクセスに必要な権限を付与する方法について説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "36176713"
  後続のソリューション配置でもロール定義を保持するには、モデルの不可欠な要素として [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] にロールを定義し、データベースがパブリッシュされた後、データベース管理者が [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にロール メンバーシップを割り当てることがベスト プラクティスとなります。 ただし、どちらのツールも両方のタスクに使用できます。 手順を簡素化するため、ロール定義とメンバーシップの両方に [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用します。  
   
 > [!NOTE]  
->  サーバー管理者、またはフル コントロール権限を持つデータベース管理者のみが、ソース ファイルからサーバーへのキューブの配置や、ロールの作成とメンバーへの割り当てを実行できます。 参照してください[サーバー管理者のアクセス許可を付与&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)と[データベース権限の付与&#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md)これらのアクセス許可の詳細についてレベル。  
+>  サーバー管理者、またはフル コントロール権限を持つデータベース管理者のみが、ソース ファイルからサーバーへのキューブの配置や、ロールの作成とメンバーへの割り当てを実行できます。 参照してください[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)と[データベース アクセス許可を付与&#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md)詳細については、これらのアクセス許可レベル。  
   
 #### <a name="step-1-create-the-role"></a>手順 1: ロールの作成  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36176713"
   
 #### <a name="step-3-set-cube-permissions"></a>手順 3: キューブ権限の設定  
   
-1.  **キューブ** ウィンドウで、キューブを選択し、をクリックして`Read`または**読み取り/書き込み**アクセスします。  
+1.  **キューブ**ウィンドウは、キューブを選択し、クリックして`Read`または**読み取り/書き込み**アクセスします。  
   
      `Read` アクセスは、ほとんどの操作で十分です。 **[読み取り/書き込み]** は、処理ではなく書き戻しにのみ使用します。 この機能の詳細については、「 [パーティションの書き戻しの設定](set-partition-writeback.md) 」をご覧ください。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36176713"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services でサポートされる認証方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [データ マイニング構造およびモデルに対する権限を与える&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [データ ソース オブジェクトに対する権限を与える&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [データ マイニング構造およびモデルに対する権限の付与&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [データ ソース オブジェクトに対する権限の付与&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

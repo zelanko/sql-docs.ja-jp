@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ab449fa419e273b09801b966d01d4b920af451df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5705838a12d5f8f7518cb2726a4151a71c4a067f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226404"
 ---
 # <a name="set-domain-properties"></a>ドメインのプロパティの設定
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインのプロパティを設定する方法について説明します。  
@@ -38,9 +38,9 @@ ms.locfileid: "36178737"
   
 ##  <a name="Set"></a> ドメインのプロパティの設定  
   
-1.  ドメイン管理アクティビティでナレッジ ベースを開くことによって、既存のドメインのプロパティを設定 (を参照してください[ナレッジ ベースを開く](../../2014/data-quality-services/open-a-knowledge-base.md)) で適切なドメインを選択し、**ドメイン** ボックスの一覧です。 [ドメインのプロパティ] ページは、既定で表示されます。  
+1.  ドメイン管理アクティビティでナレッジ ベースを開くことで、既存のドメインのプロパティを設定 (を参照してください[ナレッジ ベースを開く](../../2014/data-quality-services/open-a-knowledge-base.md)) で適切なドメインを選択し、**ドメイン**一覧。 [ドメインのプロパティ] ページは、既定で表示されます。  
   
-2.  」の説明に従って作成した後、新しいドメインのプロパティを設定[ドメインを作成する](../../2014/data-quality-services/create-a-domain.md)です。  
+2.  」の説明に従って作成した後、新しいドメインのプロパティを設定[ドメインを作成する](../../2014/data-quality-services/create-a-domain.md)します。  
   
 3.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](../../2014/data-quality-services/end-the-domain-management-activity.md)」の説明に従ってドメイン管理アクティビティを完了します。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36178737"
 ###  <a name="Speller"></a> [スペル チェックを有効にする]  
  データ型が **[String]** の場合は、このチェック ボックスをオンにして、ドメインの DQS スペル チェックを有効にします。 スペル チェックは、string データ型のドメインでのみ機能します。 **[スペル チェックを有効にする]** チェック ボックスでは、チェック ボックスに関連付けられている単一ドメインでのみスペル チェックが有効になります。 このチェック ボックスは、複合ドメインには適用されません。  
   
- スペル チェック時に、ドメインの値に対する構文と検証の修正が提案されます。 詳細については、次を参照してください。 [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md)です。  
+ スペル チェック時に、ドメインの値に対する構文と検証の修正が提案されます。 詳細については、次を参照してください。 [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md)します。  
   
 ###  <a name="Syntax"></a> [構文エラーのアルゴリズムを無効にする]  
  データ型が **[String]** の場合は、このチェック ボックスをオンにして、クレンジング中にドメイン内の構文エラーが DQS で識別されないことを指定します。 このチェック ボックスは、そのドメインで構文エラーの識別が無関係の場合にオンにします。 たとえば、シリアル番号では構文エラーの識別は重要でない場合があります。 このコントロールは、string データ型でのみ使用できます。 DQS では、string 以外のデータ型について構文エラーはチェックされません。  

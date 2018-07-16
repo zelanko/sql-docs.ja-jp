@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 381abbb4ce34272a87f9b9a569fd6c869d0d7152
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1aabe7b98174ea420e9944c4a195a2fe3b15870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301712"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 予約の構文 (SSRS 構成マネージャー)
   このトピックでは、レポート サーバー Web サービスとレポート マネージャーの URL 文字列の各部分について説明します。 内部的に格納される URL 文字列の構造は、ブラウザー ウィンドウのアドレス バーに入力する URL の構造とは異なります。 URL 予約文字列は、URL の構成時の Reporting Services 構成ツールの [結果] ウィンドウおよび RSReportServer.config ファイルに示されます。 URL 文字列の定義方法を理解しておくと、URL 予約の問題のトラブルシューティングや、サーバーで定義されている内部 URL 予約を表示するための HTTP.SYS に対するクエリを実行する場合に役立ちます。  
   
 ## <a name="url-syntax"></a>URL 構文  
- レポート サーバーの URL は、`UrlString` 要素と `VirtualDirectory` 要素に格納されます。 分離する理由`UrlString`と`VirtualDirectory`個別の要素には、ごとに 1 つだけの仮想ディレクトリ名が、複数の URL 文字列をとります[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アプリケーションです。  
+ レポート サーバーの URL は、`UrlString` 要素と `VirtualDirectory` 要素に格納されます。 分離する理由`UrlString`と`VirtualDirectory`個別の要素にはそれぞれ 1 つだけの仮想ディレクトリ名が、複数の URL 文字列には[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アプリケーション。  
   
  HTTP.SYS では、URL 予約に `UrlString` と `VirtualDirectory` の両方が含まれます。 URL 予約の構文は、次の各部で構成されます。  
   

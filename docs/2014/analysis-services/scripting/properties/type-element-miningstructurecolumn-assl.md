@@ -1,5 +1,5 @@
 ---
-title: Type 要素 (MiningStructureColumn) (ASSL) |Microsoft ドキュメント
+title: Type 要素 (MiningStructureColumn) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: ce999716-9487-4348-bc42-270a2026a452
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bac190fcde3dfb4a5e0768e42c7cf0e1b7b6659f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30ce9327fb28e9f452e643ded604f2a8dd72a084
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304242"
 ---
 # <a name="type-element-miningstructurecolumn-assl"></a>Type 要素 (MiningStructureColumn) (ASSL)
   型を含む、 [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)要素。  
@@ -69,11 +69,11 @@ ms.locfileid: "36175029"
 |*Long*|64 ビットの符号付き整数です。 このデータ型は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework の `Int64` データ型と、OLE DB の DBTYPE_I8 データ型にマップされます。|  
 |*ブール値*|ブール値です。 このデータ型は、.NET Framework の `Boolean` データ型と、OLE DB の DBTYPE_BOOL データ型にマップされます。|  
 |*テキスト*|Unicode 文字の NULL 終了ストリームです。 このデータ型は、.NET Framework の `String` データ型と、OLE DB の DBTYPE_WSTR データ型にマップされます。|  
-|*double 型*|範囲内で倍精度浮動小数点数-1.79 e +308 ~ 1.79 です。 このデータ型は、.NET Framework の `Double` データ型と、OLE DB の DBTYPE_R8 データ型にマップされます。|  
+|*Double 型*|範囲の倍精度浮動小数点数-1.79 e +308 ~ 1.79 e +308 します。 このデータ型は、.NET Framework の `Double` データ型と、OLE DB の DBTYPE_R8 データ型にマップされます。|  
 |*日付*|倍精度浮動小数点数として保存される日付データ。 整数部分は 1899 年 12 月 30 日からの日数で、小数部分は日の端数です。 このデータ型は、.NET Framework の `DateTime` データ型と、OLE DB の DBTYPE_DATE データ型にマップされます。|  
-|*Table*|入れ子になったテーブル。 このデータ型は、OLE DB の DBTYPE_HCHAPTER データ型にマップされます。 **注:** 、.NET Framework でのテーブル列が、同等の組み込みデータ型はありませんでサポートされる代わりに、`DataReader`クラスです。|  
+|*Table*|入れ子になったテーブル。 このデータ型は、OLE DB の DBTYPE_HCHAPTER データ型にマップされます。 **注:** 、.NET Framework でのテーブル列が、同等の組み込みデータ型はありませんでサポートされる代わりに、`DataReader`クラス。|  
   
- 許可される値に対応する列挙`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MiningStructureColumnTypes>します。  
+ 許容された値に対応する列挙体`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MiningStructureColumnTypes>します。  
   
  親に対応する要素`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MiningStructureColumn>します。  
   

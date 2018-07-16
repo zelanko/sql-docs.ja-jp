@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
 - Merge Agent, parameter reference
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 caps.latest.revision: 63
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bacb2a50002dedd449d7060e0335d064645f8572
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8234986c27b6bffc593d8eb7cc6c21c8988d7d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287148"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   レプリケーション マージ エージェントは、データベース テーブルに保持された初期スナップショットをサブスクライバーに適用するユーティリティ実行可能ファイルです。 さらに、初期スナップショットの作成後にパブリッシャーで発生したデータの増分変更をマージし、ユーザーが構成したルールに従って、またはユーザーが作成したカスタム競合回避モジュールを使用して、競合を調整します。  
@@ -177,7 +177,7 @@ ms.locfileid: "36175347"
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] アップロードを制限するを使用して、`@subscriber_upload_options`の`sp_addmergearticle`代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] アップロードを制限するには、使用、`@subscriber_upload_options`の`sp_addmergearticle`代わりにします。  
   
  同期中のデータ交換の種類を指定します。次のいずれかを指定できます。  
   
@@ -226,7 +226,7 @@ ms.locfileid: "36175347"
 |**0**|エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーをログに記録します。|  
 |**1**|各セッションの状態における増分セッションの詳細をログに記録します。エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーに加えて、進行状況が含まれます。|  
 |**2**|既定値です。 各セッションの状態における増分セッションの詳細、およびアーティクル レベルのセッションの詳細をログに記録します。エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーに加えて、進行状況が含まれます。 エージェントの状態のメッセージもログに記録されます。|  
-|**3**|**-HistoryVerboseLevel** = **2**と同じですが、より多くのエージェント進行状況メッセージがログに記録されます。|  
+|**3**| **-HistoryVerboseLevel** = **2**と同じですが、より多くのエージェント進行状況メッセージがログに記録されます。|  
   
  **-Hostname** *host_name*  
  ローカル コンピューターのネットワーク名です。 既定値は、ローカル コンピューターの名前になります。  
@@ -354,7 +354,7 @@ ms.locfileid: "36175347"
  **-SubscriptionType**[ **0**| **1**| **2**]  
  ディストリビューションのサブスクリプションの種類を指定します。 値 **0** は、プッシュ サブスクリプション (既定値) を示します。値 **1** はプル サブスクリプションを示し、値 **2** は匿名サブスクリプションを示します。  
   
- **-SyncToAlternate** **[0|1]**  
+ **-SyncToAlternate** [ **0|1**]  
  マージ エージェントがサブスクリプションと代替パブリッシャー間での同期を実行しているかどうかを指定します。 値 **1** は、これが代替パブリッシャーであることを示します。 既定値は **0**です。  
   
  **-UploadGenerationsPerBatch** *upload_generations_per_batch*  

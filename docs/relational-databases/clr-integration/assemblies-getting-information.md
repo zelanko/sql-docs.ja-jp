@@ -1,9 +1,8 @@
 ---
-title: アセンブリに関する情報の取得 |Microsoft ドキュメント
+title: アセンブリに関する情報の取得 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -19,14 +18,14 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b7cbf238a71c25d8cc24b106007db6acba73698b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 7b01592ad65a6db4acc8dee1c7f417096c6a6265
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697463"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352624"
 ---
-# <a name="assemblies---getting-information"></a>アセンブリの情報を取得します。
+# <a name="assemblies---getting-information"></a>アセンブリ - 情報の取得
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   次のカタログ ビューや関数により、アセンブリに関するメタデータにクエリを行うことができます。  
   
@@ -38,11 +37,11 @@ ms.locfileid: "35697463"
   
 -   [sys.assemblies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   
- **アセンブリに関する情報を取得するには、ファイル、アセンブリ バイナリを含むソース ファイル、およびファイルのデバッグ**  
+ **アセンブリのバイナリを含む、アセンブリ ファイルに関する情報を取得するには、ソース ファイル、およびファイルをデバッグします。**  
   
 -   [sys.assembly_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
   
- **アセンブリ間の参照情報を取得するには**  
+ **アセンブリ間参照についての情報を取得するには**  
   
 -   [sys.assembly_references &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
   
@@ -56,7 +55,7 @@ ms.locfileid: "35697463"
   
 -   [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)  
   
- **非 CLR オブジェクトに関する情報を取得するには**  
+ **CLR 以外のオブジェクトに関する情報を取得するには**  
   
 -   [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [Integration Services]
 - Data Transformation Services, support for
@@ -20,16 +20,16 @@ ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 caps.latest.revision: 81
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6a8de4f8b3b3864be9fdcb3884fecd25ab263372
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc9a286ce00e5c84082a6ff0d1ac792e73fa7c59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209262"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services の旧バージョンとの互換性
-  このセクションのバージョン間の変更をについて説明[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]です。 使用できなくなる機能や、将来のリリースで削除される予定の機能の情報を提供します。 また、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 機能を含む既存のアプリケーションが使用できなくなったり動作が変わったりするような、製品の変更についても説明します。  
+  このセクションのバージョン間の変更を説明します[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]します。 使用できなくなる機能や、将来のリリースで削除される予定の機能の情報を提供します。 また、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 機能を含む既存のアプリケーションが使用できなくなったり動作が変わったりするような、製品の変更についても説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

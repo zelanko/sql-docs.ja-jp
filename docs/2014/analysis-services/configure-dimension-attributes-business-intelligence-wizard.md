@@ -1,5 +1,5 @@
 ---
-title: ディメンション属性 (ビジネス インテリジェンス ウィザード) を構成する |Microsoft ドキュメント
+title: ディメンション属性 (ビジネス インテリジェンス ウィザード) を構成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.selectattributes.f1
 ms.assetid: 3d046e63-bcb1-4ab1-9c37-652463fa68c3
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9ce0f7535f111d5c9152304a4e27315f73e5087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae547b6182cdef585668c6888957ea89ef0db519
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299322"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>[ディメンションの属性の構成] (ビジネス インテリジェンス ウィザード)
-  **[ディメンションの属性の構成]** ページでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で勘定科目ディメンションの属性の識別に使用される属性の種類に、ディメンションの属性をマップできます。  
+   **[ディメンションの属性の構成]** ページでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で勘定科目ディメンションの属性の識別に使用される属性の種類に、ディメンションの属性をマップできます。  
   
 ## <a name="options"></a>および  
  **ディメンションの種類**  
  選択したディメンションの種類が表示されます。  
   
 > [!NOTE]  
->  このオプションは使用できませんので、`Type`ディメンションのプロパティを以外の値に変更できません*アカウント*勘定科目ディメンションにします。  
+>  このオプションは使用しないため、 `Type` 、ディメンションのプロパティを以外の値に変更できません*アカウント*勘定科目ディメンションの。  
   
  **ディメンションの属性**  
  ディメンションに含まれる既存のディメンションの属性にマップできる、有効な属性の型が表示されます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36085781"
  **ディメンションの属性**  
  対応する属性の型にマップするディメンションの属性を選択します。  
   
- **勘定科目の種類に基づいた準加法となるメジャーの設定**  
+ **アカウントの種類に基づいた準加法となるメジャーの設定**  
  これをオンにすると、このディメンションに関連付けられているメジャーがすべて変更され、勘定科目の種類によって集計されるようになります。  
   
 > [!NOTE]  

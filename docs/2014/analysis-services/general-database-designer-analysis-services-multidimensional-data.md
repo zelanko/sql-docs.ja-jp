@@ -1,5 +1,5 @@
 ---
-title: '[全般] (データベース デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント'
+title: '[全般] (データベース デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.dbconfigurationpane.f1
 helpviewer_keywords:
 - Database Designer
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 435817b44643ddf1d3e6703ca2872dd5afe407c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a2af00d2dcdb6d28ab311067172e808e49539a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234272"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>[全般] (データベース デザイナー) (Analysis Services - 多次元データ)
-  **[全般]** タブを使用して、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのプロパティを変更します。  
+   **[全般]** タブを使用して、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのプロパティを変更します。  
   
  **[全般] タブを表示するには**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36174832"
 > [!NOTE]  
 >  データベースの名前を変更するには、 **ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[プロパティ]** をクリックします。 データベースの **[プロパティ ページ]** ダイアログ ボックスの **[配置]** ページで、 **[データベース]** プロパティの値を新しいデータベース名に変更します。  
   
- **description**  
+ **[説明]**  
  データベースの説明を入力します。  
   
 ## <a name="translations-options"></a>[翻訳] オプション  
@@ -52,7 +52,7 @@ ms.locfileid: "36174832"
  **言語**  
  指定したトランザクションの言語を選択します。  
   
- グリッドに、新しい翻訳を追加するには、クリックして**\<新しい翻訳の追加 >** です。  
+ 新しい翻訳をグリッドに追加するには、クリックして**\<新しい翻訳の追加 >** します。  
   
  **キャプションの翻訳**  
  データベースのキャプションを適切な翻訳言語で入力します。 空白の場合は、データベースの既定のキャプションが使用されます。  
@@ -68,10 +68,10 @@ ms.locfileid: "36174832"
   
  ここでは、次の列を持つグリッドについて説明します。  
   
- **Name**  
+ **名前**  
  勘定科目の種類の名前を入力します。  
   
- 新しいアカウントの種類を追加するには、クリックして**\<新しいアカウントの種類の追加 >** です。  
+ 新しいアカウントの種類を追加するには、クリックして**\<新しいアカウントの種類の追加 >** します。  
   
  **[エイリアス]**  
  ビジネス インテリジェンス ウィザードで使用するための、勘定科目の種類の既定名を設定します。 この列を空にすると、 **[名前]** 列での既定の設定が使用されます。  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replicationutilities.selectdistributor.f1
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d5a2f5c5d7f70624baa9b3f55d732e54642708c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a482479689ebfbbb81f79ae7d3b71ede1039d834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296482"
 ---
 # <a name="distributor"></a>ディストリビューター
   **[ディストリビューター]** ページは、ディストリビューションの構成ウィザードとパブリケーションの新規作成ウィザードで表示されます。 ディストリビューターは、ディストリビューション データベースを備え、あらゆる種類のレプリケーションのメタデータおよび履歴データを格納するサーバーです。 ディストリビューターは、トランザクション レプリケーションのトランザクションも格納します。 ディストリビューターは、パブリッシャーと同じサーバーであっても、別のサーバーであってもかまいません。前者の場合はローカル ディストリビューターで、後者の場合はリモート ディストリビューターになります。 ディストリビューターの役割は、実装するレプリケーションの種類によって異なります。 一般に、マージ レプリケーションやスナップショット レプリケーションに比べて、トランザクション レプリケーションに対するディストリビューターの役割は大きくなります。 マージ レプリケーションおよびスナップショット レプリケーションではローカル ディストリビューターを使用するのが一般的です。ただし、非常に稼働率が高いシステムでのトランザクション レプリケーションの場合は、リモート ディストリビューターを利用すると効果的です。  

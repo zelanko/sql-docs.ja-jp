@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - field terminators [SQL Server]
 - bulk importing [SQL Server], data formats
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ef7ed95cce28904377f0aa9fd1b446c89fb0db1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 957ca45730f0f16febff3c86d2c459965069bd3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303932"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)
     
-##  <a name="top"></a> XML ドキュメントをインポートする一括できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースまたは一括エクスポートしてから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 このトピックではその両方の例を示します。  
+##  <a name="top"></a> 一括インポートの XML ドキュメントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースまたは一括エクスポートしてから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 このトピックではその両方の例を示します。  
   
  データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはパーティション分割されていないビューにデータを一括インポートする場合、次の機能を使用できます。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "36174170"
   
 -   INSERT ...SELECT * FROM OPENROWSET(BULK...)  
   
- 詳細については、次を参照してください[bcp ユーティリティを使用しての一括データのエクスポートとインポート&#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)と[を使用しての BULK INSERT または OPENROWSET でのデータを一括インポート&#40;一括しています.。&#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)です。  
+ 詳細については、次を参照してください[インポートおよび bcp ユーティリティを使用した一括データのエクスポート&#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)と[を使用して BULK INSERT または OPENROWSET の一括データのインポート&#40;一括しています.。&#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)します。  
   
 ## <a name="examples"></a>使用例  
  次に例を示します。  
@@ -52,17 +51,17 @@ ms.locfileid: "36174170"
   
 -   B. [既存の行に XML データの一括インポート](#existing_row)  
   
--   C. [XML データ ファイルから一括インポート、DTD を含む](#file_contains_dtd)  
+-   C. [一括を DTD を含むファイルから XML データのインポート](#file_contains_dtd)  
   
 -   D. [フォーマット ファイルを使用して明示的にフィールド ターミネータを指定します。](#field_terminator_in_format_file)  
   
 -   E. [XML データの一括エクスポート](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. バイナリ バイト ストリームとして XML の一括インポートを行う  
- 適用するエンコード宣言が含まれているファイルから XML データの一括インポートを行うときは、OPENROWSET(BULK...) 句で SINGLE_BLOB オプションを指定します。 SINGLE_BLOB オプションにより、XML パーサーで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]XML 宣言に指定されたエンコード体系に従ってデータをインポートします。  
+ 適用するエンコード宣言が含まれているファイルから XML データの一括インポートを行うときは、OPENROWSET(BULK...) 句で SINGLE_BLOB オプションを指定します。 SINGLE_BLOB オプションにより、XML パーサー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 宣言に指定されたエンコード体系に従ってデータをインポートします。  
   
 #### <a name="sample-table"></a>サンプル テーブル  
- 例 A をテストするには、サンプル テーブルを作成する必要があります`T`です。  
+ 例 A をテストするには、サンプル テーブルを作成する必要があります`T`します。  
   
 ```  
 USE tempdb  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cursor threshold option
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6eff4633d9c293fc7ea4b951b9856cd979c351e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ab41319b0db861a230baf60346e32edcf47834da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298962"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>cursor threshold サーバー構成オプションの構成
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cursor threshold [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **cursor threshold** オプションは、カーソル キーセットが非同期に生成されるカーソル セット内の行数を指定します。 カーソルが結果セットのキーセットを生成するとき、その結果セットに返される行数をクエリ オプティマイザーが予測します。 返される行数がこのしきい値を超えていると予測された場合、カーソルは非同期に生成されます。これにより、ユーザーはカーソルの作成が続行されている間に行を取り出すことができます。 返される行数がこのしきい値以下と予測された場合、カーソルは同期をとって生成され、すべての行が返されるまでクエリが待機します。  

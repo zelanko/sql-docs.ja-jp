@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 178ca5746ee5c7936d8a2cab6c4d0d08ad227364
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8f87139ed82025b35173465f346709e384a858c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299772"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>SQL Server の接続の種類 (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータをレポートに含めるには、種類が [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ拡張機能に基づいています。 現在のバージョンと以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続してデータを取得するには、このデータ ソースの種類を使用します。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータをレポートに含めるには、種類が [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ拡張機能に基づいています。 現在のバージョンと以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続してデータを取得するには、このデータ ソースの種類を使用します。  
   
  このデータ拡張機能は、複数の値を持つパラメーター、サーバー集計、および接続文字列とは別に管理される資格情報をサポートしています。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[を追加して、データ接続またはデータ ソースを確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)です。  
+ このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)します。  
   
 ##  <a name="Connection"></a> 接続文字列  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続する場合は、サーバー上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータベース オブジェクトに接続します。 データベースには、複数のテーブル、ビュー、およびストアド プロシージャを含むスキーマが複数存在している場合があります。 クエリ デザイナーで、使用するデータベース オブジェクトを指定します。 接続文字列でデータベースを指定しない場合は、データベース管理者によって割り当てられた既定のデータベースに接続されます。  
@@ -54,7 +54,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   資格情報を必要としない。 このオプションを使用するには、レポート サーバーで自動実行アカウントを構成しておく必要があります。 詳細については、msdn.microsoft.com で [Reporting Services に関するドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)の「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
- 詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services に接続文字列が](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)または[レポート ビルダーでの資格情報を指定](../specify-credentials-in-report-builder.md)です。  
+ 詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)または[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)します。  
   
   
 ##  <a name="Query"></a> クエリ  
@@ -134,7 +134,7 @@ WHERE EmployeeID = (@EmpID)
   
 -   各レポート パラメーターの既定のデータ型は **Text**です。 基になるデータのデータ型が異なる場合は、パラメーターのデータ型を変更する必要があります。  
   
--   複数値パラメーターのオプションを選択した場合は、値を使用して、セットの一部であるかどうかをテストするクエリを手動で変更する必要があります、`IN`演算子、たとえば、`WHERE EmployeeID IN (@EmpID)`です。  
+-   複数値パラメーターのオプションを選択した場合は、値を使用して、セットの一部であるかどうかをテストするクエリを手動で変更する必要があります、`IN`演算子、たとえば、`WHERE EmployeeID IN (@EmpID)`します。  
   
  詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   

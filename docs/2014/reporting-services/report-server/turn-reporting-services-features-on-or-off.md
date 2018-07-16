@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
@@ -16,13 +16,13 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1362919f44915616d244364cee116c8fab376831
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6521a2bcdf080eb4a22c9540d965d0b5829d74fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282598"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 機能の有効化と無効化
   運用レポート サーバーに対する外部からの攻撃の危険性を低減するためのロックダウン ストラテジには含まれないレポート サーバー機能を無効にできます。 ほとんどの場合は、複数の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能を同時に実行して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で提供される機能をすべて利用します。 ただし、配置モデルによっては、不要な機能を無効にすることができます。 たとえば、すべてのレポート処理をスケジュールに従って実行するように構成すると、バックグラウンド処理だけを有効にすることもできます。 同様に、対話型の要求時レポートだけが必要な場合は、レポート サーバー Web サービスだけを実行することもできます。  
@@ -69,9 +69,9 @@ ms.locfileid: "36174414"
   
 4.  **[ファセットのプロパティ]** で次の操作を行います。  
   
-    -   レポート サーバー Web サービスを有効にするには設定**WebServiceAndHTTPAccessEnabled**に`True`です。  
+    -   レポート サーバー Web サービスを有効にするには設定**WebServiceAndHTTPAccessEnabled**に`True`します。  
   
-    -   レポート サーバー Web サービスを無効にするには、次のように設定します。 **WebServiceAndHTTPAccessEnabled**に`False`です。  
+    -   レポート サーバー Web サービスを無効にするには、次のように設定します。 **WebServiceAndHTTPAccessEnabled**に`False`します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -112,9 +112,9 @@ ms.locfileid: "36174414"
   
 4.  **[ファセットのプロパティ]** で次の操作を行います。  
   
-    -   定期的なイベントおよび配信をオンに設定**ScheduleEventsAndReportDeliveryEnabled**に`True`です。  
+    -   スケジュールされたイベントおよび配信を有効にするのには、設定**ScheduleEventsAndReportDeliveryEnabled**に`True`します。  
   
-    -   定期的なイベントおよび配信を無効にするには、次のように設定します。 **ScheduleEventsAndReportDeliveryEnabled**に`False`です。  
+    -   スケジュールされたイベントおよび配信を無効にするには、次のように設定します。 **ScheduleEventsAndReportDeliveryEnabled**に`False`します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -127,13 +127,13 @@ ms.locfileid: "36174414"
   
 1.  テキスト エディターで RsReportServer.config ファイルを開きます。 手順については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」をご覧ください。  
   
-2.  レポート マネージャーにするには、次のように設定します`IsReportManagerEnabled`に`true`:。  
+2.  レポート マネージャーを有効にするには設定`IsReportManagerEnabled`に`true`:  
   
     ```  
     <IsReportManagerEnabled>true</IsReportManagerEnabled>  
     ```  
   
-3.  レポート マネージャーを無効にして、設定`IsReportManagerEnabled`に`false`:  
+3.  レポート マネージャーをオフにして、次のように設定します`IsReportManagerEnabled`に`false`:。  
   
     ```  
     <IsReportManagerEnabled>false</IsReportManagerEnabled>  
@@ -151,9 +151,9 @@ ms.locfileid: "36174414"
   
 4.  **[ファセットのプロパティ]** で次の操作を行います。  
   
-    -   レポート マネージャーにするには、次のように設定します。 **[reportmanagerenabled]** に`True`です。  
+    -   レポート マネージャーを有効にするには設定**ReportManagerEnabled**に`True`します。  
   
-    -   レポート マネージャーを無効にして、設定 **[reportmanagerenabled]** に`False`です。  
+    -   レポート マネージャーをオフにして、次のように設定します。 **ReportManagerEnabled**に`False`します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

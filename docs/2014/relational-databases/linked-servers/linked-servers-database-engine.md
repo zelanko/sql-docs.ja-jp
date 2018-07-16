@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB, linked servers
 - OLE DB provider, linked servers
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - linked servers [SQL Server], about linked servers
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c18f75059e9021c7e654d22cc97092f60e8210f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bcb1df0fdccee488bfdfeaae99f16f567618afd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256658"
 ---
 # <a name="linked-servers-database-engine"></a>リンク サーバー (データベース エンジン)
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスの外に存在する OLE DB データ ソースに対し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]からコマンドを実行できるようにするには、リンク サーバーを構成します。 通常、リンク サーバーを構成する目的は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の別のインスタンスまたは別のデータベース製品 (Oracle など) のテーブルを含んだ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]から実行できるようにすることです。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] の Access や Excel など、さまざまな種類の OLE DB データ ソースをリンク サーバーとして構成できます。 リンク サーバーには次の利点があります。  
@@ -50,7 +50,7 @@ ms.locfileid: "36177515"
   
  *OLE DB プロバイダー* は、特定のデータ ソースを管理し、相互運用する DLL です。 *OLE DB データ ソース* は、OLE DB を使用してアクセスできる特定のデータベースを識別します。 リンク サーバーの定義を使用してクエリが行われるデータ ソースは通常はデータベースですが、さまざまなファイルやファイル形式用の OLE DB プロバイダーが存在します。 これには、テキスト ファイル、ワークシートのデータ、およびフルテキスト検索の結果が含まれます。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー (PROGID: SQLNCLI11) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の公式の OLE DB プロバイダーです。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー (PROGID: SQLNCLI11) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の公式の OLE DB プロバイダーです。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散クエリは、必要な OLE DB インターフェイスを実装しているすべての OLE DB プロバイダーで処理できるように設計されています。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーなど、特定のプロバイダーに対してのみテストが行われています。  
@@ -82,7 +82,7 @@ ms.locfileid: "36177515"
   
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して、リンク サーバーを定義することもできます。 オブジェクト エクスプローラーで **[サーバー オブジェクト]** を右クリックし、 **[新規作成]** をポイントして、 **[リンク サーバー]** をクリックします。 リンク サーバー名を右クリックして **[削除]** をクリックすると、リンク サーバーの定義を削除できます。  
   
- リンク サーバーに対して分散クエリを実行する場合は、クエリを実行するデータ ソースごとに 4 つの部分で構成される完全修飾テーブル名を指定します。 この 4 部構成の名前は、という形式にする必要があります*linked_server_name.catalog**** 。`schema` *. * * * object_name*です。  
+ リンク サーバーに対して分散クエリを実行する場合は、クエリを実行するデータ ソースごとに 4 つの部分で構成される完全修飾テーブル名を指定します。 この 4 部構成の名前を形式にする必要があります*linked_server_name.catalog**** 。`schema` *. * * * object_name*します。  
   
 > [!NOTE]  
 >  リンク サーバーは、どのサーバーで定義されたかを示す (ループ バックする) ように定義することができます。 ループバック サーバーは、単一のサーバー ネットワークで分散クエリを使用するアプリケーションをテストする際に最も有効です。 ループバック リンク サーバーはテスト用であり、分散トランザクションなどの多くの操作ではサポートされていません。  

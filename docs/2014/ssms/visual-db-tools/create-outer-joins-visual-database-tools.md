@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - outer joins
 - joins [SQL Server], outer
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbde6fbf96809a3ab05ecf1814ce90437436a503
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ef4e658ffd8af66ec8b3ad7e43eba8dade79bf85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306872"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>外部結合の作成 (Visual Database Tools)
   [クエリおよびビュー デザイナー](visual-database-tools.md) の既定では、テーブル間に内部結合が作成されます。 つまり、内部結合では、他方のテーブルの行と一致しない行は除外されます。 これに対し、外部結合からは、FROM 句で指定された少なくとも 1 つのテーブルまたはビューにあり、任意の WHERE 検索条件または HAVING 検索条件を満たしているすべての行が返されます。 結合テーブルに一致しないデータ行を結果セットに含める場合は、外部結合を作成します。  
@@ -33,7 +33,7 @@ ms.locfileid: "36075875"
   
 1.  結合を自動または手動で作成します。 詳細については、「[テーブルの自動結合 (Visual Database Tools)](join-tables-automatically-visual-database-tools.md)」または「[手動でのテーブルの結合 (Visual Database Tools)](join-tables-manually-visual-database-tools.md)」を参照してください。  
   
-2.  ダイアグラム ペインからに結合線を選択、**クエリ デザイナー** ] メニューの [選択**からのすべての行を選択して\<tablename >** を選択すると、テーブルを含むコマンドを追加含める行です。  
+2.  ダイアグラム ペインからに結合線を選択、**クエリ デザイナー** ] メニューの [選択**からのすべての行を選択\<tablename >** テーブルを含んでいるコマンドの追加を選択します。行が含まれます。  
   
     -   左外部結合を作成するには、最初のテーブルを選択します。  
   
@@ -62,7 +62,7 @@ WHERE (jobs.job_id IS NULL)
 ```  
   
 ## <a name="see-also"></a>参照  
- [クエリの結合で&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
+ [結合を使用したクエリ&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
  [[結合] ダイアログ ボックス (Visual Database Tools)](join-dialog-box-visual-database-tools.md)  
   
   

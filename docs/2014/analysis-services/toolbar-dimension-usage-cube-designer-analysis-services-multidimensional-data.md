@@ -1,5 +1,5 @@
 ---
-title: ツールバー ([ディメンションの使用法] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: ツールバー ([ディメンションの使用法] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 23cb6106-8799-4157-ba5e-408b4fbd8fbb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 026e5d8335b4353abdd208e3a21fe46687ee920b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 9246e554097ebd46e13eb9eeee218a3b319b0928
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189169"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>ツール バー (キューブ デザイナーの [ディメンションの使用法] タブ) (Analysis Services - 多次元データ)
   ツール バー ペインを使用すると、キューブ デザイナーの **[ディメンションの使用法]** タブでキューブ **ディメンションの追加**やキューブの処理などの一般的な操作を実行できます。   

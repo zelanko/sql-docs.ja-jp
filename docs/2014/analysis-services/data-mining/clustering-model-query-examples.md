@@ -1,5 +1,5 @@
 ---
-title: クラスタ リング モデルのクエリ例 |Microsoft ドキュメント
+title: クラスタ リング モデルのクエリ例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cee82332d6098544df5db02a223efc23b19d8820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200632"
 ---
 # <a name="clustering-model-query-examples"></a>クラスタリング モデルのクエリ例
   データ マイニング モデルに対するクエリを作成すると、モデルに関するメタデータを取得できます。また、分析で検出されたパターンに関する詳細を取得するためのコンテンツ クエリも作成できます。 モデル内のパターンを使用して新しいデータの予測を行う予測クエリを作成することもできます。 取得できる情報は、クエリの種類によって異なります。 たとえばコンテンツ クエリを使用すると、検出されたクラスターに関する追加情報を取得できるのに対し、予測クエリを使用すると、新しいデータ ポイントが所属する可能性が高いクラスターを調べることができます。  
@@ -256,12 +256,12 @@ WHERE IsInNode('001')
 ## <a name="making-predictions-using-the-model"></a>モデルを使用して予測を行う  
  クラスターは、データの説明や把握のために使用されるのが一般的ですが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の実装では、クラスター メンバーシップに関する予測を行って、その予測に関連する確率を取得することもできます。 ここでは、クラスター モデルに対する予測クエリを作成する方法の例を紹介します。 表形式のデータ ソースを指定して複数のケースの予測を行うことも、単一クエリを作成して一度に 1 つずつ新しい値を渡すこともできます。 このセクションの例は、わかりやすくするためにすべて単一クエリになっています。  
   
- DMX を使用して予測クエリを作成する方法の詳細については、次を参照してください。[データ マイニング クエリ インターフェイス](data-mining-query-tools.md)です。  
+ DMX を使用して予測クエリを作成する方法の詳細については、次を参照してください。[データ マイニング クエリ インターフェイス](data-mining-query-tools.md)します。  
   
  [トップに戻る](#bkmk_top2)  
   
 ###  <a name="bkmk_Query8"></a> サンプル クエリ 8: クラスター モデルの結果を予測する  
- 作成したクラスター モデルに予測可能な属性が含まれている場合は、そのモデルを使用して結果に関する予測を行うことができます。 ただし、モデルは処理を予測可能列を設定するかどうかに応じて異なる方法で予測可能な属性`Predict`または`PredictOnly`です。 列の使用法を設定した場合`Predict`、その属性の値は、クラスタ リング モデルに追加され、完成したモデルでの属性として表示されます。 一方、列の使用法を `PredictOnly` に設定すると、その値はクラスターの作成には使用されません。 代わりに、モードが完了したら、クラスタ リング アルゴリズムを作成の新しい値、`PredictOnly`が各ケースが属するクラスターに基づいて属性。  
+ 作成したクラスター モデルに予測可能な属性が含まれている場合は、そのモデルを使用して結果に関する予測を行うことができます。 ただし、予測可能列に設定するかどうかに応じて、異なる予測可能な属性の処理モデル`Predict`または`PredictOnly`します。 列の使用法を設定した場合`Predict`、その属性の値は、クラスタ リング モデルに追加され、完成したモデルの属性として表示されます。 一方、列の使用法を `PredictOnly` に設定すると、その値はクラスターの作成には使用されません。 代わりに、モデルが完成した後、クラスタ リング アルゴリズムは作成の新しい値、`PredictOnly`属性は、各ケースが所属するクラスターに基づいています。  
   
  次のクエリでは、モデルに新しいケースを 1 つ渡しています。このケースに関する情報は Age と Gender だけです。 SELECT ステートメントでは、関心のある予測可能な属性と値のペアを指定しています。 [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) 関数は、それらの属性を持つケースの結果が対象の結果になる確率を返します。  
   
@@ -275,7 +275,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- 使用法に設定されている場合の結果例`Predict`:  
+ 使用状況に設定されている場合の結果例`Predict`:  
   
 |Bike Buyer|式|  
 |----------------|----------------|  
@@ -287,7 +287,7 @@ NATURAL PREDICTION JOIN
 |----------------|----------------|  
 |1|0.55843544003102|  
   
- この例ではモデルに大きな違いはありませんが、 値の実際の分布とモデルの予測との違いを検出することが重要になる場合もあります。 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 関数を使用できます。この関数は、特定のモデルについてケースの確率を返します。  
+ この例ではモデルに大きな違いはありませんが、 値の実際の分布とモデルの予測との違いを検出することが重要になる場合もあります。  [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 関数を使用できます。この関数は、特定のモデルについてケースの確率を返します。  
   
  PredictCaseLikelihood 関数によって返される数値は確率であるため、常に 0 と 1 の間になります。値 .5 はランダムな結果を表します。 したがって、スコアが .5 より小さい場合は、予測されたケースがそのモデルではあり得そうにないことを示し、.5 より大きい場合は、おそらくモデルに収まることを示します。  
   
@@ -332,7 +332,7 @@ NATURAL PREDICTION JOIN
 |--------------|----------------|  
 |Cluster 2|0.397918596951617|  
   
- **注**既定では、`ClusterProbability`関数が最も高いクラスターの確率を返します。 ただし、 `ClusterProbability('cluster name')`という構文を使用して別のクラスターを指定することもできます。 その場合は、この 2 つの予測関数の結果は互いに無関係であるため、 2 番目の列の確率スコアが、1 番目の列のクラスターとは別のクラスターのものになる場合もあることに注意してください。  
+ **注**既定で、`ClusterProbability`関数は、最も可能性の高いクラスターの確率を返します。 ただし、 `ClusterProbability('cluster name')`という構文を使用して別のクラスターを指定することもできます。 その場合は、この 2 つの予測関数の結果は互いに無関係であるため、 2 番目の列の確率スコアが、1 番目の列のクラスターとは別のクラスターのものになる場合もあることに注意してください。  
   
  [トップに戻る](#bkmk_top2)  
   
@@ -364,7 +364,7 @@ NATURAL PREDICTION JOIN
   
  既定では、結果は確率で順位付けされます。 この結果から、Cluster 2 は、確率はかなり低いとはいえ、新しいデータ ポイントに最適なクラスターであることがわかります。  
   
- **注:** 追加の列の `$DISTANCE`は、データ ポイントからクラスターまでの距離を表します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムでは、既定でスケーラブル EM クラスタリングが使用されます。スケーラブル EM クラスタリングでは、各データ ポイントに複数のクラスターが割り当てられて、可能なクラスターが順位付けされます。  一方、K-Means アルゴリズムを使用してクラスター モデルを作成した場合は、各データ ポイントに 1 つしかクラスターを割り当てることができないため、このクエリで返される行は 1 行だけになります。 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 関数を使用して、基になる構造の列を含めることもできます。 EM クラスタリングと K-Means クラスタリングの相違点の詳細については、「 [Microsoft クラスタリング アルゴリズム テクニカル リファレンス](microsoft-clustering-algorithm-technical-reference.md)」を参照してください。  
+ **注:** 追加の列の `$DISTANCE`は、データ ポイントからクラスターまでの距離を表します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムでは、既定でスケーラブル EM クラスタリングが使用されます。スケーラブル EM クラスタリングでは、各データ ポイントに複数のクラスターが割り当てられて、可能なクラスターが順位付けされます。  一方、K-Means アルゴリズムを使用してクラスター モデルを作成した場合は、各データ ポイントに 1 つしかクラスターを割り当てることができないため、このクエリで返される行は 1 行だけになります。  [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 関数を使用して、基になる構造の列を含めることもできます。 EM クラスタリングと K-Means クラスタリングの相違点の詳細については、「 [Microsoft クラスタリング アルゴリズム テクニカル リファレンス](microsoft-clustering-algorithm-technical-reference.md)」を参照してください。  
   
  [トップに戻る](#bkmk_top2)  
   

@@ -1,27 +1,26 @@
 ---
-title: SQL Server 2014 (TRANSACT-SQL) へのログ配布のアップグレード |Microsoft ドキュメント
+title: SQL Server 2014 (Transact SQL) へのログ配布のアップグレード |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 854b4da34daf031c4233a69fd67c4aa96cedfd8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 96179ecc9f49bde6b27e2d2bf8dab86835054f0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310402"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>SQL Server 2014 へのログ配布のアップグレード (Transact-SQL)
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードする際には、ログ配布構成を保持することができます。 このトピックでは、ログ配布構成のアップグレードの複数のシナリオとベスト プラクティスについて説明します。  
@@ -46,7 +45,7 @@ ms.locfileid: "36173307"
   
  監視サーバーのアップグレード中もログ配布構成は引き続き機能しますが、その状態は監視テーブルに記録されません。 また、監視サーバーをアップグレードしている間は、構成されている警告がトリガーされません。 アップグレードの完了後、[sp_refresh_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql) システム ストアド プロシージャを実行して監視テーブルの情報を更新できます。  
   
-##  <a name="UpgradeSingleSecondary"></a> 単一のセカンダリ サーバーを含むログ配布構成のアップグレード  
+##  <a name="UpgradeSingleSecondary"></a> ログ配布構成を 1 つのセカンダリ サーバーのアップグレード  
  ここでは、プライマリ サーバーと単一のセカンダリ サーバーから成る構成のアップグレード プロセスについて説明します。 次の図はこの構成を表しています。図の A がプライマリ サーバー インスタンス、B が単一のセカンダリ サーバー インスタンスです。  
   
  ![1 つのセカンダリ サーバーと監視サーバーはなし](../media/ls-2-wayconfig-nomonitor.gif "1 つのセカンダリ サーバーと監視サーバーはなし")  
@@ -55,7 +54,7 @@ ms.locfileid: "36173307"
  
   
 ###  <a name="UpgradeSecondary"></a> セカンダリ サーバー インスタンスのアップグレード  
- アップグレード プロセスでは、セカンダリ サーバー インスタンスの[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のログ配布構成に[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]プライマリ サーバー インスタンスをアップグレードする前にします。 常にセカンダリ サーバー インスタンスを先にアップグレードします。 セカンダリ サーバーの前に、プライマリ サーバーがアップグレードされた場合に、新しいバージョンのバックアップが作成されるためにログ配布が失敗[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の古いバージョンでは復元できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ アップグレードのプロセスでは、セカンダリ サーバー インスタンスのアップグレードでは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のログ配布構成に[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]プライマリ サーバー インスタンスをアップグレードする前にします。 常にセカンダリ サーバー インスタンスを先にアップグレードします。 セカンダリ サーバーの前に、プライマリ サーバーがアップグレードされた場合に、新しいバージョンのバックアップが作成されるためにログ配布が失敗[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の以前のバージョンには復元できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
  アップグレードされたセカンダリ サーバーでは引き続き [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のプライマリ サーバーからログ バックアップの復元が行われるため、アップグレード プロセスの間もログ配布は継続されます。 セカンダリ サーバー インスタンスのアップグレード プロセスの一部は、ログ配布構成にセカンダリ サーバーが複数あるかどうかによって異なります。 詳細については、このトピックの「 [複数のセカンダリ サーバー インスタンスのアップグレード](#MultipleSecondaries)」を参照してください。  
   
@@ -67,12 +66,12 @@ ms.locfileid: "36173307"
 >  サーバーのアップグレード中に、セカンダリ データベースにアップグレードされませんが、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]データベース。 データベースのアップグレードが行われるのは、データベースがオンラインになってからです。  
   
 > [!IMPORTANT]  
->  アップグレードが必要なデータベースに対しては RESTORE WITH STANDBY オプションはサポートされません。 アップグレードされたセカンダリ データベースが RESTORE WITH STANDBY を使用して構成されている場合、アップグレード後にトランザクション ログを復元できなくなります。 そのセカンダリ データベースでのログ配布を再開するには、そのスタンバイ サーバーでもう一度ログ配布を設定する必要があります。 STANDBY オプションの詳細については、次を参照してください。 [RESTORE の引数&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)です。  
+>  アップグレードが必要なデータベースに対しては RESTORE WITH STANDBY オプションはサポートされません。 アップグレードされたセカンダリ データベースが RESTORE WITH STANDBY を使用して構成されている場合、アップグレード後にトランザクション ログを復元できなくなります。 そのセカンダリ データベースでのログ配布を再開するには、そのスタンバイ サーバーでもう一度ログ配布を設定する必要があります。 STANDBY オプションの詳細については、次を参照してください。 [RESTORE の引数&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)します。  
   
 ###  <a name="UpgradePrimary"></a> プライマリ サーバー インスタンスのアップグレード  
  アップグレードの計画では、データベースを使用できなくなる時間が重要な考慮事項になります。 最も単純なシナリオでは、プライマリ サーバーをアップグレードする間、データベースを使用できなくなります (下のシナリオ 1)。  
   
- アップグレード プロセスはより複雑度がフェールオーバーによって、データベースの可用性を最大化、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]を以降のプライマリ サーバー、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]元のプライマリ サーバーをアップグレードする前にセカンダリ サーバー (シナリオ 2、下)。 フェールオーバーのシナリオは 2 種類あります。 1 つは、元のプライマリ サーバーにスイッチ バックして、元のログ配布構成を引き続き使用するシナリオ。 もう 1 つは、元のログ配布構成を削除してから元のプライマリ サーバーをアップグレードし、その後、新しいプライマリ サーバーを使用して新しい構成を作成するシナリオです。 ここでは、この両方のシナリオについて説明します。  
+ アップグレード プロセスはより複雑ななりますがフェールオーバーして、データベースの可用性を最大化できます、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]を以降のプライマリ サーバー、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]元のプライマリ サーバーをアップグレードする前にセカンダリ サーバー (シナリオ 2 下の)。 フェールオーバーのシナリオは 2 種類あります。 1 つは、元のプライマリ サーバーにスイッチ バックして、元のログ配布構成を引き続き使用するシナリオ。 もう 1 つは、元のログ配布構成を削除してから元のプライマリ サーバーをアップグレードし、その後、新しいプライマリ サーバーを使用して新しい構成を作成するシナリオです。 ここでは、この両方のシナリオについて説明します。  
   
 > [!IMPORTANT]  
 >  必ず、プライマリ サーバー インスタンスをアップグレードする前にセカンダリ サーバー インスタンスをアップグレードしてください。 詳細については、このトピックの「 [セカンダリ サーバー インスタンスのアップグレード](#UpgradeSecondary)」を参照してください。  
@@ -89,13 +88,13 @@ ms.locfileid: "36173307"
  フェールオーバーを使用したプライマリ サーバー インスタンスのアップグレードには 3 つの一般的な手順が含まれます。セカンダリ サーバーへの制御されたフェールオーバーの実行、元のプライマリ サーバー インスタンスの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード、および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] プライマリ サーバー インスタンスでのログ配布の設定の 3 つです。 ここではこれらの手順について説明します。  
   
 > [!IMPORTANT]  
->  セカンダリ サーバー インスタンスを新しいプライマリ サーバー インスタンスとして使用する場合は、ログ配布構成を削除し、 元のプライマリ サーバー インスタンスをアップグレードしてからログ配布 (新しいプライマリから新しいセカンダリへのログ配布) を再構成する必要があります。 詳細については、次を参照してください。[ログ配布の削除&#40;SQL Server&#41;](remove-log-shipping-sql-server.md)です。  
+>  セカンダリ サーバー インスタンスを新しいプライマリ サーバー インスタンスとして使用する場合は、ログ配布構成を削除し、 元のプライマリ サーバー インスタンスをアップグレードしてからログ配布 (新しいプライマリから新しいセカンダリへのログ配布) を再構成する必要があります。 詳細については、次を参照してください。[ログ配布の削除&#40;SQL Server&#41;](remove-log-shipping-sql-server.md)します。  
   
   
 #####  <a name="Procedure1"></a> 手順 1: セカンダリ サーバーへの制御されたフェールオーバーを実行します。  
  セカンダリ サーバーへの制御されたフェールオーバー:  
   
-1.  手動で行う、[ログ末尾のバックアップ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)WITH NORECOVERY を指定してプライマリ データベースでのトランザクション ログのです。 このログ バックアップは、まだバックアップされていないログ レコードをキャプチャし、データベースをオフラインにします。 データベースがオフラインの間は、ログ配布バックアップ ジョブは失敗します。  
+1.  手動で実行、[ログ末尾のバックアップ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)WITH NORECOVERY を指定して、プライマリ データベースのトランザクション ログの。 このログ バックアップは、まだバックアップされていないログ レコードをキャプチャし、データベースをオフラインにします。 データベースがオフラインの間は、ログ配布バックアップ ジョブは失敗します。  
   
      プライマリ サーバーの `AdventureWorks` データベースのログ末尾のバックアップを作成する例を次に示します。 バックアップ ファイルの名前は、 `Failover_AW_20080315.trn`です。  
   
@@ -110,9 +109,9 @@ ms.locfileid: "36173307"
   
 2.  セカンダリ サーバーで次の手順を実行します。  
   
-    1.  ログ配布バックアップ ジョブによって自動的に作成されたバックアップがすべて適用されていることを確認します。 バックアップ ジョブが適用されていることを確認するには、使用、 [sp_help_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql)監視サーバーまたはプライマリおよびセカンダリ サーバーで、システム ストアド プロシージャです。 同じファイルを表示する必要があります、 **last_backup_file**、 **last_copied_file**、および**last_restored_file**列です。 コピーおよび復元されていないバックアップ ファイルがあった場合は、ログ配布構成のコピーと復元のエージェント ジョブを手動で呼び出します。  
+    1.  ログ配布バックアップ ジョブによって自動的に作成されたバックアップがすべて適用されていることを確認します。 バックアップ ジョブが適用されていることを確認するには、使用、 [sp_help_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql)監視サーバーまたはプライマリおよびセカンダリ サーバー上のシステム ストアド プロシージャ。 同じファイルに記載する必要があります、 **last_backup_file**、 **last_copied_file**、および**last_restored_file**列。 コピーおよび復元されていないバックアップ ファイルがあった場合は、ログ配布構成のコピーと復元のエージェント ジョブを手動で呼び出します。  
   
-         ジョブを開始する方法については、次を参照してください。[ジョブを開始する](../../ssms/agent/start-a-job.md)です。  
+         ジョブを開始する方法の詳細については、次を参照してください。[ジョブを開始する](../../ssms/agent/start-a-job.md)します。  
   
     2.  ステップ 1. で作成した最後のログ バックアップ ファイルを、ファイル共有から、セカンダリ サーバーでログ配布に使用されるローカルの場所にコピーします。  
   
@@ -144,7 +143,7 @@ ms.locfileid: "36173307"
   
 -   フェールオーバーの前にログ配布構成を削除した場合は、元のセカンダリ サーバー インスタンスを新しいプライマリ サーバー インスタンスにする新しいログ配布構成を作成します。 詳細については、このセクションの「 [古いセカンダリ サーバー インスタンスを新しいプライマリ サーバー インスタンスとして保持するには](#KeepOldSecondaryAsNewPrimary)」を参照してください。  
   
-######  <a name="SwitchToOrigPrimary"></a> 元のプライマリ サーバー インスタンスに戻る  
+######  <a name="SwitchToOrigPrimary"></a> 元のプライマリ サーバー インスタンスに戻す  
   
 1.  暫定プライマリ サーバー (サーバー B) で、WITH NORECOVERY を使用してログの末尾をバックアップします。ログ末尾のバックアップが作成され、データベースがオフラインになります。 ログ末尾のバックアップには `Switchback_AW_20080315.trn`という名前が付けられます。以下に例を示します。  
   
@@ -155,7 +154,7 @@ ms.locfileid: "36173307"
     GO  
     ```  
   
-2.  暫定プライマリ データベースでトランザクション ログ バックアップ (ステップ 1. で作成したログ末尾のバックアップを除く) を実行した場合は、WITH NORECOVERY を使用してそれらのログ バックアップを元のプライマリ サーバー (サーバー A) 上のオフライン データベースに復元します。 データベースのアップグレードに[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]最初のログ バックアップを復元するときに書式を設定します。  
+2.  暫定プライマリ データベースでトランザクション ログ バックアップ (ステップ 1. で作成したログ末尾のバックアップを除く) を実行した場合は、WITH NORECOVERY を使用してそれらのログ バックアップを元のプライマリ サーバー (サーバー A) 上のオフライン データベースに復元します。 データベースをアップグレードする[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]最初のログ バックアップが復元されるときに書式を設定します。  
   
 3.  WITH RECOVERY を使用してログ末尾のバックアップ (`Switchback_AW_20080315.trn`) を元のプライマリ データベース (サーバー A 上) で復元します。データベースがオンラインになります。  
   
@@ -173,7 +172,7 @@ ms.locfileid: "36173307"
   
 2.  新しいプライマリ データベース (サーバー B 上) のログをバックアップします。  
   
-3.  WITH NORECOVERY を使用してログ バックアップを新しいセカンダリ サーバー インスタンス (サーバー A) に復元します。 最初の復元操作には、データベースが更新され[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。  
+3.  WITH NORECOVERY を使用してログ バックアップを新しいセカンダリ サーバー インスタンス (サーバー A) に復元します。 最初の復元操作には、データベースが更新され[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。  
   
 4.  以前のセカンダリ サーバー (サーバー B) をプライマリ サーバー インスタンスとするログ配布を構成します。  
   
@@ -197,7 +196,7 @@ ms.locfileid: "36173307"
 > [!IMPORTANT]  
 >  常に、セカンダリ サーバー インスタンスをすべてアップグレードしてからプライマリ サーバーをアップグレードします。  
   
- **フェールオーバーを使用し、切り替えるが元のプライマリ サーバーへのバックアップにアップグレードするには**  
+ **フェールオーバーの使用としをその後で元のプライマリ サーバーにバックアップをアップグレードするには**  
   
 1.  すべてのセカンダリ サーバー インスタンス (サーバー B およびサーバー C) をアップグレードします。  
   
@@ -220,10 +219,10 @@ ms.locfileid: "36173307"
   
 9. WITH RECOVERY を使用して、暫定プライマリ サーバー (サーバー B) のトランザクション ログを元のプライマリ データベース (サーバー A 上) に復元します。  
   
-##  <a name="Redeploying"></a> ログ配布の再配置  
+##  <a name="Redeploying"></a> ログ配布を再デプロイします。  
  ログ配布構成を移行するときに上記のいずれの方法も使用したくない場合、プライマリ データベースの完全バックアップおよび復元によってセカンダリ データベースを初期化し直すことで、ログ配布を始めから再配置できます。 使用しているデータベースが小さい場合、またはアップグレード中は高い可用性が必要ない場合、この方法が適しています。  
   
- ログ配布を有効にする方法については、次を参照してください。[ログ配布の構成&#40;SQL Server&#41;](configure-log-shipping-sql-server.md)です。  
+ ログ配布を有効にする方法については、次を参照してください。[ログ配布の構成&#40;SQL Server&#41;](configure-log-shipping-sql-server.md)します。  
   
 ## <a name="see-also"></a>参照  
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   

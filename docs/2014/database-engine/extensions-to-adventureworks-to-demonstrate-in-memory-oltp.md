@@ -1,5 +1,5 @@
 ---
-title: インメモリ OLTP を実証する adventureworks の拡張機能 |Microsoft ドキュメント
+title: インメモリ OLTP を実証する adventureworks の拡張機能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6bc04894a372f4391c12622158673e4ba4068098
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: f8135f70466ecef4fb77a876a38823af7dd8c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312332"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>インメモリ OLTP を実証する AdventureWorks の拡張
     
 ## <a name="overview"></a>概要  
- このサンプルは、新しい紹介[!INCLUDE[hek_2](../includes/hek-2-md.md)]含まれている機能の[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]します。 新しいメモリ最適化テーブルとストアド プロシージャのネイティブ コンパイルで示しのパフォーマンスの利点を示すために使用できる[!INCLUDE[hek_2](../includes/hek-2-md.md)]です。  
+ このサンプルでは、新しい紹介[!INCLUDE[hek_2](../includes/hek-2-md.md)]機能で、一部の[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]します。 新しいメモリ最適化テーブルとストアド プロシージャのネイティブ コンパイルを示していて、パフォーマンス上の利点を示すために使用できる[!INCLUDE[hek_2](../includes/hek-2-md.md)]します。  
   
 > [!NOTE]  
 >  SQL Server 2016 のこのトピックを表示するには、「 [メモリ内 OLTP を実証する AdventureWorks の拡張](https://msdn.microsoft.com/en-US/library/mt465764.aspx)」をご覧ください。  
@@ -37,7 +37,7 @@ ms.locfileid: "36082862"
   
 -   サンプルをインストールしてデモ ワークロードを実行するための[前提条件](#Prerequisites)   
   
--   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)する手順  
+-    [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)する手順  
   
 -   [サンプル テーブルおよびプロシージャの説明](#Descriptionofthesampletablesandprocedures) – [!INCLUDE[hek_2](../includes/hek-2-md.md)] サンプルによって AdventureWorks に追加されるテーブルおよびプロシージャの説明、オリジナルの AdventureWorks テーブルをメモリ最適化テーブルに移行する際の考慮事項が記載されています。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36082862"
   
 1.  AdventureWorks2014 データベースの完全バックアップのアーカイブをダウンロードします。  
   
-    1.  次を開きます: [ http://msftdbprodsamples.codeplex.com/downloads/get/880661](http://msftdbprodsamples.codeplex.com/downloads/get/880661)です。  
+    1.  次を開く: [ http://msftdbprodsamples.codeplex.com/downloads/get/880661](http://msftdbprodsamples.codeplex.com/downloads/get/880661)します。  
   
     2.  メッセージが表示されたら、ファイルをローカル フォルダーに保存します。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36082862"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  サンプル スクリプトをダウンロード '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' から[SQL Server 2014 RTM のインメモリ OLTP のサンプル](http://go.microsoft.com/fwlink/?LinkID=396372)をローカル フォルダーにします。  
+5.  サンプル スクリプトをダウンロード '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' から[SQL Server 2014 RTM のインメモリ OLTP のサンプル](http://go.microsoft.com/fwlink/?LinkID=396372)ローカル フォルダーにします。  
   
 6.  "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" スクリプトで、[!INCLUDE[hek_2](../includes/hek-2-md.md)] チェックポイント ファイルの対象の場所を指すように、変数 "checkpoint_files_location" の値を更新します。 チェックポイント ファイルは、シーケンシャル IO パフォーマンスに優れたドライブに配置します。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36082862"
   
 -   *計算列* - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である SalesOrderNumber および TotalDue は省略されます。 新しい Sales.vSalesOrderHeader_extended_inmem ビューには、SalesOrderNumber 列と TotalDue 列が反映されています。 したがって、これらの列が必要な場合は、このビューを使用します。  
   
--   *外部キー制約*のメモリ最適化テーブルではサポートされていません[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]です。 また、SalesOrderHeader_inmem はサンプル ワークロードのホット テーブルであり、外部キー制約には、すべての DML 操作に対して追加の処理が必要です。これは、このテーブルには、この制約で参照される他のすべてのテーブル内の参照が必要だからです。 したがって、アプリによって参照整合性が確保されているものと見なされ、行の挿入時には参照整合性は検証されません。 このテーブルのデータの参照整合性は、ストアド プロシージャ dbo.usp_ValidateIntegrity を使用して、次のスクリプトで確認できます。  
+-   *外部キー制約*メモリ最適化テーブルではサポートされていません[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]します。 また、SalesOrderHeader_inmem はサンプル ワークロードのホット テーブルであり、外部キー制約には、すべての DML 操作に対して追加の処理が必要です。これは、このテーブルには、この制約で参照される他のすべてのテーブル内の参照が必要だからです。 したがって、アプリによって参照整合性が確保されているものと見なされ、行の挿入時には参照整合性は検証されません。 このテーブルのデータの参照整合性は、ストアド プロシージャ dbo.usp_ValidateIntegrity を使用して、次のスクリプトで確認できます。  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -227,7 +227,7 @@ ms.locfileid: "36082862"
   
 -   *エイリアス UDT* – 元のテーブルでは、ユーザー定義データ型 dbo.Flag が使用されます。これは、システム データ型 bit と同じです。 移行したテーブルでは、代わりに bit データ型が使用されます。  
   
--   *BIN2 照合順序*– 名前と ProductNumber 列がインデックス キーに含まれ、BIN2 照合順序であるため[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]です。 ここでは、アプリケーションが、照合順序の詳細 (大文字と小文字を区別など) に依存しないものと見なされます。  
+-   *BIN2 照合順序*– 名前と ProductNumber 列は、インデックス キーに含まれ、BIN2 照合順序であるため[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]します。 ここでは、アプリケーションが、照合順序の詳細 (大文字と小文字を区別など) に依存しないものと見なされます。  
   
 -   *Rowguid* - rowguid 列は省略されます。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
   
@@ -466,7 +466,7 @@ END
  ostress ツールを使って、複数の同時接続を使用してスクリプトを実行します。 "- n" パラメーターで接続数を制御し、"r" パラメーターで各接続のスクリプト実行回数を制御します。  
   
 #### <a name="functional-validation-of-the-workload"></a>ワークロードの機能検証  
- すべてが正しく動作するには、サンプルのテストでは、まずを確認が、同時実行の 10 を使用して接続し、合計で 10 * 5 を挿入する 5 個の繰り返し\*20 = 1000 販売注文します。  
+ 動作しますが、サンプルのテストで開始することを確認するを同時に 10 を使用して接続と 10 * 5 の合計を挿入する 5 つのイテレーション\*20 = 1000 の販売注文します。  
   
  次のコマンドでは、既定のインスタンスがローカル コンピューターで使用されていることを前提としています。 名前付きインスタンスまたはリモート サーバーを使用している場合は、- S パラメーターを使用してサーバー名を適宜変更します。  
   

@@ -1,5 +1,5 @@
 ---
-title: レポート サーバー電子メール配信用構成 (SSRS 構成マネージャー) |Microsoft ドキュメント
+title: レポート サーバー電子メール配信用構成 (SSRS 構成マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], distributing
 - report servers [Reporting Services], e-mail delivery
@@ -25,13 +25,13 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5a8954f5ea5c2e38991868734a6347596883bd7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e189890845bad34153ebef4231465c260b538848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179199"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には電子メール配信拡張機能があり、電子メールを使用してレポートを配布できます。 電子メール サブスクリプションをどのように定義するかに応じて、配信は、通知、リンク、添付ファイル、または埋め込みレポートから構成されます。 電子メール配信拡張機能は、既存のメール サーバー テクノロジと連携して動作します。 メール サーバーは、SMTP サーバーまたはフォワーダーである必要があります。 レポート サーバーは、オペレーティング システムに用意されている Collaboration Data Objects (CDO) ライブラリ (cdosys.dll) を通じて SMTP サーバーに接続します。  
@@ -67,9 +67,9 @@ ms.locfileid: "36073901"
   
  電子メール配信用にレポート サーバーを構成するには、次の操作を行います。  
   
--   SMTP サーバーと、電子メールを送信する権限のあるユーザー アカウントを指定するだけの場合は、Reporting Services 構成マネージャーを使用します。 これらは、レポート サーバーの電子メール配信拡張機能を構成するために最低限必要な設定です。 詳細については、次を参照してください。[電子メールの設定 - Configuration Manager &#40;SSRS ネイティブ モード&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)と[Reporting Services での電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)です。  
+-   SMTP サーバーと、電子メールを送信する権限のあるユーザー アカウントを指定するだけの場合は、Reporting Services 構成マネージャーを使用します。 これらは、レポート サーバーの電子メール配信拡張機能を構成するために最低限必要な設定です。 詳細については、次を参照してください。[電子メールの設定 - Configuration Manager &#40;SSRS ネイティブ モード&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)と[Reporting Services での電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)します。  
   
--   (省略可能) テキスト エディターを使用して、RSreportserver.config ファイルで追加の設定を指定します。 このファイルには、レポート サーバーの電子メール配信の構成設定がすべて含まれています。 ローカル SMTP サーバーを使用する場合や、電子メールの配信を特定のホストに限定する場合は、これらのファイルで追加の設定を指定する必要があります。 検索して、構成ファイルの変更に関する詳細については、次を参照してください。 [Reporting Services の構成ファイルを変更&#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) SQL Server オンライン ブック。  
+-   (省略可能) テキスト エディターを使用して、RSreportserver.config ファイルで追加の設定を指定します。 このファイルには、レポート サーバーの電子メール配信の構成設定がすべて含まれています。 ローカル SMTP サーバーを使用する場合や、電子メールの配信を特定のホストに限定する場合は、これらのファイルで追加の設定を指定する必要があります。 検索と構成ファイルの変更の詳細については、次を参照してください。 [Reporting Services の構成ファイルを変更&#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) SQL Server オンライン ブックの「します。  
   
 > [!NOTE]  
 >  レポート サーバーの電子メール設定は CDO に基づいています。 特定の設定に関する詳細については、CDO の製品マニュアルを参照してください。  
@@ -77,7 +77,7 @@ ms.locfileid: "36073901"
 
   
 ##  <a name="bkmk_example_config_file"></a> レポート サーバー電子メール構成の例  
- 次の例は、リモート SMTP サーバーに対する RSreportserver.config ファイルでの設定を示しています。 読み取るには、設定の説明と有効な値は、次を参照してください。 [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックまたは CDO の製品マニュアル。  
+ 次の例は、リモート SMTP サーバーに対する RSreportserver.config ファイルでの設定を示しています。 設定の説明と有効な値については、次を参照してください。 [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または CDO の製品マニュアルのオンライン ブックの「します。  
   
 ```  
 <RSEmailDPConfiguration>  
@@ -109,7 +109,7 @@ ms.locfileid: "36073901"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> 設定の構成オプションに: メッセージ内のフィールド  
+##  <a name="bkmk_setting_TO_field"></a> 設定の構成オプションに: メッセージのフィールド  
  **"個別のサブスクリプションを管理"** タスクで与えられる権限に従って作成されたユーザー定義サブスクリプションには、ドメイン ユーザー アカウントに基づく定義済みのユーザー名が含まれます。 ユーザーがサブスクリプションを作成すると、**[宛先]** フィールドの受信者名は、サブスクリプションの作成者のドメイン ユーザー アカウントを使用して自動的に指定されます。  
   
  使用している SMTP サーバーまたはフォワーダーで、ドメイン ユーザー アカウントとは別の電子メール アカウントを利用している場合、SMTP サーバーからそのユーザーにレポートの配信が試行されたときに配信が失敗します。  
@@ -118,9 +118,9 @@ ms.locfileid: "36073901"
   
 1.  テキスト エディターで RSReportServer.config を開きます。  
   
-2.  設定`SendEmailToUserAlias`に`False`です。  
+2.  設定`SendEmailToUserAlias`に`False`します。  
   
-3.  設定`DefaultHostName`をドメイン ネーム システム (DNS) 名または SMTP サーバーまたはフォワーダーの IP アドレス。  
+3.  設定`DefaultHostName`SMTP サーバーまたはフォワーダーの IP アドレス、ドメイン ネーム システム (DNS) 名にします。  
   
 4.  ファイルを保存します。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36073901"
   
 -   `SMTPServer` リモート SMTP サーバーまたはフォワーダーを指定します。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。  
   
--   `From` 表示される値の設定、**から:** 電子メール メッセージの行にします。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。  
+-   `From` 表示される値の設定、**から:** 電子メール メッセージの行。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。  
   
  リモート SMTP サービスで使用する他の値としては、次のものがあります (既定値を変更するのでない限り、これらの値をオーバーライドする必要はありません)。  
   
@@ -150,18 +150,18 @@ ms.locfileid: "36073901"
   
  レポート サーバーとローカル SMTP サーバーまたはフォワーダーの間の接続は、次の構成設定によって決まります。  
   
--   `SendUsing` 設定されている**1**です。  
+-   `SendUsing` 設定されている**1**します。  
   
 -   **SMTPServerPickupDirectory** には、ローカル ドライブのフォルダーを設定します。  
   
     > [!NOTE]  
     >  設定しないことを必ず`SMTPServer`ローカル SMTP サーバーを使用している場合。  
   
--   `From` 表示される値の設定、**から:** 電子メール メッセージの行にします。 この値は必須です。  
+-   `From` 表示される値の設定、**から:** 電子メール メッセージの行。 この値は必須です。  
   
  
   
-##  <a name="bkmk_use_configuration_manager"></a> Reporting Services 構成マネージャーを使用してレポート サーバー電子メールを構成するには  
+##  <a name="bkmk_use_configuration_manager"></a> Reporting Services 構成マネージャーを使用してレポート サーバーの電子メールを構成するには  
   
 1.  レポート サーバー Windows サービスが SMTP サーバー上で `Send As` 権限を保持していることを確認します。  
   
@@ -175,13 +175,13 @@ ms.locfileid: "36073901"
   
 
   
-##  <a name="bkmk_confiugre_remote_SMTP"></a> レポート サーバーのリモート SMTP サービスを構成するには  
+##  <a name="bkmk_confiugre_remote_SMTP"></a> レポート サーバー用のリモート SMTP サービスを構成するには  
   
 1.  レポート サーバー Windows サービスが SMTP サーバー上で `Send As` 権限を保持していることを確認します。  
   
 2.  テキスト エディターで RSReportServer.config ファイルを開きます。  
   
-3.  いることを確認 <`UrlRoot`> はレポート サーバーの URL アドレスに設定します。 この値はレポート サーバーを構成するときに設定されるため、既に設定されているはずです。 設定されていない場合は、レポート サーバーの URL アドレスを入力します。  
+3.  いることを確認 <`UrlRoot`> レポート サーバーの URL アドレスに設定されます。 この値はレポート サーバーを構成するときに設定されるため、既に設定されているはずです。 設定されていない場合は、レポート サーバーの URL アドレスを入力します。  
   
 4.  Delivery セクションで、<`ReportServerEmail`> を検索します。  
   
@@ -193,11 +193,11 @@ ms.locfileid: "36073901"
   
 8.  ファイルを保存します。  
   
-     レポート サーバーは新しい設定を自動的に使用します。サービスを再起動する必要はありません。 追加の SMTP 設定を指定し、レポート サーバー電子メール配信で SMTP サーバーを使用する方法をさらに細かく構成することもできます。 詳細については、次を参照してください。[電子メール配信用にレポート サーバーを構成](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)と[RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブック。  
+     レポート サーバーは新しい設定を自動的に使用します。サービスを再起動する必要はありません。 追加の SMTP 設定を指定し、レポート サーバー電子メール配信で SMTP サーバーを使用する方法をさらに細かく構成することもできます。 詳細については、次を参照してください。[電子メール配信用のレポート サーバーを構成する](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)と[RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 
   
-##  <a name="bkmk_confiugre_local_SMTP"></a> レポート サーバーのローカル SMTP サービスを構成するには  
+##  <a name="bkmk_confiugre_local_SMTP"></a> レポート サーバーにローカル SMTP サービスを構成するには  
   
 1.  コントロール パネルを開き、 **[プログラムの追加と削除]** をクリックします。  
   

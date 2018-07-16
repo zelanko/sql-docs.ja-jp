@@ -15,15 +15,15 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f95040735e7ec8987bfdfd194ef1d7f0933df3ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 25b6bfa824f6004fbd35b3a31e7268ff388fab6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216732"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>データ処理拡張機能をレポート デザイナーに配置する方法
   レポートを設計する際、レポート デザイナーは、データ処理拡張機能を使用してデータを取得し、処理します。 データ処理拡張機能アセンブリは、プライベート アセンブリとしてレポート デザイナーに配置する必要があります。 さらに、レポート デザイナー構成ファイル RSReportDesigner.config にエントリを作成する必要があります。  
@@ -44,13 +44,13 @@ ms.locfileid: "36073404"
     </Extensions>  
     ```  
   
-4.  エントリが含まれているデータ処理拡張機能を追加、**拡張子**要素の値を`Name`、 `Type`、および`Visible`属性。 このエントリは、次のようになります。  
+4.  含む、データ処理拡張機能のエントリを追加、**拡張子**要素の値、 `Name`、 `Type`、および`Visible`属性。 このエントリは、次のようになります。  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     `Name` の値は、データ処理拡張機能の一意な名前です。 `Type` の値は、<xref:Microsoft.ReportingServices.Interfaces.IExtension> インターフェイスおよび <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> インターフェイスを実装するクラスの完全修飾名前空間のエントリを含むコンマ区切りの一覧であり、その後にアセンブリの名前が続きます.dll ファイル拡張子は付けません。 既定では、データ処理拡張機能が表示されます。 レポート デザイナーなどのユーザー インターフェイスで拡張機能を非表示にするには追加、`Visible`属性を**拡張子**要素に設定し、`false`です。  
+     `Name` の値は、データ処理拡張機能の一意な名前です。 `Type` の値は、<xref:Microsoft.ReportingServices.Interfaces.IExtension> インターフェイスおよび <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> インターフェイスを実装するクラスの完全修飾名前空間のエントリを含むコンマ区切りの一覧であり、その後にアセンブリの名前が続きます.dll ファイル拡張子は付けません。 既定では、データ処理拡張機能が表示されます。 レポート デザイナーなどのユーザー インターフェイスで拡張機能を非表示にするには追加、`Visible`属性を**拡張子**要素に設定し、 `false`。  
   
 5.  最後に、拡張機能の **FullTrust** アクセス許可を与えるカスタム アセンブリのコード グループを追加します。 これを行うには、既定では C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies にある rspreviewpolicy.config ファイルにコード グループを追加します。 このコード グループは、次のようになります。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36073404"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>カスタム拡張機能で汎用クエリ デザイナーを有効にするには  
   
--   RSReportDesigner.config ファイルの下に次のエントリを追加、**デザイナー**要素、置換、`Name`前のエントリで指定した名前の属性です。  
+-   RSReportDesigner.config ファイルで次のエントリを追加、**デザイナー**要素、置換、`Name`前のエントリで指定した名前を持つ属性です。  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  

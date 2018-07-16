@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.findinfiles
 - vs.findinfiles
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Find in Files dialog box
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f68fbf06da0cb46af12c1beaf73aea86e8ba6daf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 56fd7e36c7ceee6d3a257bc1b5ad2d71d46d689a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287078"
 ---
 # <a name="find-in-files"></a>[フォルダーを指定して検索]
   **[検索と置換]** ウィンドウの [フォルダーを指定して検索] タブでは、指定したファイルのセットのコードで文字列や式を検索できます。 検出された項目および実行するアクションは、 **[結果オプション]** で選択された検索結果ウィンドウに表示されます。  

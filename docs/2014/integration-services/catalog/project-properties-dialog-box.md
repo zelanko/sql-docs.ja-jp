@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isprojectprop.general.f1
 - sql12.ssis.ssms.isprojectprop.permissions.f1
@@ -16,13 +16,13 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 564ea56b167f5fd478daac07a36e655486704697
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7411d1e809aad6ae777faed73a3bc8c5c63b91d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236982"
 ---
 # <a name="project-properties-dialog-box"></a>[プロジェクトのプロパティ] ダイアログ ボックス
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトは、配置の 1 単位です。 各プロジェクトには、パッケージ、パラメーター、および環境の参照を含めることができます。 プロジェクトはセキュリティ保護可能なオブジェクトであり、データベース プリンシパルの権限を定義できます。 プロジェクトを再配置するときに、以前のバージョンのプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログに保存できます。  
@@ -54,13 +54,13 @@ ms.locfileid: "36177815"
 ##  <a name="general"></a> [全般] ページのオプションの設定  
  プロジェクトのプロパティを表示するには、[全般] ページを使用します。  
   
- **Name**  
+ **名前**  
  プロジェクト名を一覧表示します。  
   
  **[Identifier]**  
  プロジェクト ID を一覧表示します。  
   
- **description**  
+ **[説明]**  
  プロジェクトの説明を表示します (省略可)。  
   
  **プロジェクトのバージョン**  
@@ -75,10 +75,10 @@ ms.locfileid: "36177815"
  参照  
  **[参照]** をクリックすると、 **[すべてのプリンシパルを参照]** ダイアログ ボックスを使用して、権限を設定するユーザーおよびロールを選択できます。  
   
- **Name**  
+ **名前**  
  ユーザーまたはロールの名前を一覧表示します。  
   
- **Type**  
+ **型**  
  ユーザーまたはロールの種類を一覧表示します。  
   
  **権限**  

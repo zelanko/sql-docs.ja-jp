@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: acf958a7ffa9044b7cd432a5d08ae9197315aa51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: adc7d7a6700373227d5508cbd77e4101a0051ba9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268988"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template イベント クラス
   QN:Template イベントでは、クエリ テンプレートの内部使用に関する情報が報告されます。 クエリ テンプレートは、通知用のクエリ定義を共有するために [!INCLUDE[ssDE](../../includes/ssde-md.md)] で使用されるメカニズムです。 これらのテンプレートは、パラメーター テーブルと共に作成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、クエリ テンプレートの作成時、使用時、または破棄時にこの型のイベントが作成されます。  

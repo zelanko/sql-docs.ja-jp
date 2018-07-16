@@ -1,5 +1,5 @@
 ---
-title: OLE DB 接続マネージャーを使用してフル キャッシュ モードで参照変換を実装 |Microsoft ドキュメント
+title: OLE DB 接続マネージャーを使用してフル キャッシュ モードで参照変換を実装する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f7932404b80694629176c5c65b3e17fcc5b83eb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb6751b8f6cb3ebd982e53d4735c1aad940eb00f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280378"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>OLE DB 接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する
   フル キャッシュ モードおよび OLE DB 接続マネージャーを使用するように参照変換を構成できます。 フル キャッシュ モードでは、参照変換の実行前に参照データセットがキャッシュに読み込まれます。  

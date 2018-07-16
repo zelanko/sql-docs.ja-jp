@@ -1,64 +1,73 @@
 ---
-title: 'Analytics Platform System: スケール アウト データ ウェアハウスの新機能'
-description: Microsoft® Analytics Platform System、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト、内部設置型アプライアンスの新機能を参照してください。
+title: 'Analytics Platform System: スケール アウト データ ウェアハウスの新機能新機能'
+description: 新機能 Microsoft® Analytics Platform System、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト オンプレミス アプライアンスの新機能を参照してください。
 author: mzaman1
 manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/24/2018
+ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c2408e84e7ff81f54ad00a98f85cd8dce7b04131
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: b1eee6b3ca692c7935b061696b37842cda0f8326
+ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137891"
 ---
-# <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System、スケール アウト MPP データ ウェアハウスの新機能
-最新のアプライアンス更新プログラム Microsoft® Analytics Platform System (APS) の新機能を参照してください。 AP は、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト、内部設置型アプライアンスです。 
+# <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System、スケール アウトの MPP データ ウェアハウスの新機能新機能
+新機能については最新のアプライアンスの更新プログラム Microsoft® Analytics Platform System (APS) を参照してください。 アクセス ポイントは、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト オンプレミス アプライアンスです。 
 
+::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 
 ## <a name="aps-au7"></a>APS AU7
-APS2016 は AU7 へのアップグレードの前提条件です。 APS AU7 の新機能を次に示します。
+APS 2016 を AU7 にアップグレードしてください。 次に、AP AU7 の新機能。
 
 ### <a name="auto-create-and-auto-update-statistics"></a>自動作成] および [統計の自動更新
-APS AU7 は、作成し、既定では、自動的に統計を更新します。 統計情報の設定を更新するには、管理者がの新しい機能のスイッチのメニュー項目を使用できます、 [Configuration Manager](appliance-configuration.md#CMTasks)です。 [機能スイッチ](appliance-feature-switch.md)られた、自動更新、および統計の非同期更新の動作を制御します。 統計情報の設定を更新することも、 [ALTER DATABASE (並列データ ウェアハウス)](/sql/t-sql/statements/alter-database-parallel-data-warehouse)ステートメントです。
+APS AU7 は作成し、既定では、自動的に統計を更新します。 統計情報の設定を更新するには、管理者がの新しい機能のスイッチのメニュー項目を使用できます、 [Configuration Manager](appliance-configuration.md#CMTasks)します。 [機能スイッチ](appliance-feature-switch.md)られた、自動更新、および統計の非同期更新の動作を制御します。 統計情報の設定を更新することも、 [ALTER DATABASE (並列データ ウェアハウス)](/sql/t-sql/statements/alter-database-parallel-data-warehouse)ステートメント。
 
 ### <a name="t-sql"></a>T-SQL
-選択@varがサポートされています。 詳細については、[ローカル変数の選択] を参照してください (/sql/t-sql/language-elements/select-local-variable-transact-sql) 
+選択@varがサポートされています。 詳細については、[ローカル変数を選択します] を参照してください (/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
 ハッシュと ORDER GROUP クエリ ヒントはサポートされています。 詳細については、[Hints(Transact-SQL) - クエリ] を参照してください (/sql/t-sql/クエリ/ヒント-transact-sql クエリ)
 
 ### <a name="feature-switch"></a>機能スイッチ
-APS AU7 で機能スイッチが導入されています[Configuration Manager](launch-the-configuration-manager.md)です。 AutoStatsEnabled と DmsProcessStopMessageTimeoutInSeconds が管理者によって変更できる構成可能なオプションではようになりました。
+APS AU7 で機能スイッチが導入されています[Configuration Manager](launch-the-configuration-manager.md)します。 AutoStatsEnabled と DmsProcessStopMessageTimeoutInSeconds が管理者によって変更できる構成可能なオプションではようになりました。
 
 ### <a name="known-issues"></a>既知の問題
-APS AU7 ソフトウェアはパッケージ化と (別名「サイド チャネル攻撃を予測の実行」を修正する Intel BIOS 更新プログラムを提供します。 Spectre およびメルトダウンの脆弱性) です。 パッケージにまとめ、BIOS 更新プログラムを手動でインストールし、AP AU7 ソフトウェアの一部ではないをインストールします。 Microsoft では、BIOS の更新をインストールするすべてのお客様が示されます。 Microsoft がさまざまな環境でさまざまな SQL ワークロードでのカーネル仮想アドレス シャドウ (KVAS)、カーネル ページ テーブルの間接参照 (KPTI) および間接のブランチ予測の軽減 (IBP) の影響を測定し、いくつかが大幅に低下を検出ワークロード。 実稼働環境で展開する前に、BIOS の更新プログラムを有効化のパフォーマンスに与える影響をテストすることをお勧めします。 これらの機能を有効化のパフォーマンスに与える影響が既存のアプリケーションに対して高すぎる場合は、信頼されていないコードを実行してから、AP アプライアンスを分離するが、アプリケーションがより緩和であるかどうかを検討することができます。 SQL Server のガイダンスを参照してください[ここ](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)です。
+として記載されている問題を修正する Intel BIOS の更新プログラムを提供、AP AU7 ソフトウェアと*予測実行のサイド チャネル攻撃*します。 攻撃と呼ばれるものを悪用することを目指します*Spectre や Meltdown の脆弱性*します。 BIOS の更新プログラムが手動でインストールが、AP と共にパッケージ化、および APS AU7 ソフトウェアのインストールの一部ではなく。
+
+Microsoft では、BIOS の更新をインストールするすべての顧客が表示されます。 Microsoft には、さまざまな環境でさまざまな SQL ワークロードに対するカーネル仮想アドレス シャドウ (KVAS)、カーネル ページ テーブルの間接参照 (KPTI) および間接のブランチ予測の軽減策 (IBP) の効果が測定されます。 測定値には、一部のワークロードで大幅に低下が検出されました。 推奨事項の結果に基づいての運用環境で展開する前に、BIOS の更新プログラムを有効にすると、パフォーマンスに与える影響をテストすることは。 SQL Server のガイダンスを参照してください。[ここ](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)します。
+
+::: moniker-end
+::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
 
 ## <a name="aps-2016"></a>APS 2016
-APS 2016 の新機能を次に示します。
+このセクションでは、APS 2016 AU6 の新機能について説明します。
 
 ### <a name="sql-server-2016"></a>SQL Server 2016
 
-APS 2016 では、最新の SQL Server 2016 リリースで実行し、既定のデータベース互換性レベル 130 を使用します。  SQL Server 2016 では、PolyBase のクラスター化列ストア インデックスと Kerberos のセカンダリ インデックスなどの新機能の一部をサポートすることです。 
+APS AU6 では、最新の SQL Server 2016 リリースでは実行され、既定のデータベース互換性レベル 130 を使用します。 SQL Server 2016 などの新機能のサポートが有効にします。
 
+- クラスター化列ストア インデックスのセカンダリ インデックス。
+- Polybase Kerberos。
 
 ### <a name="t-sql"></a>T-SQL
-APS 2016 では、それらの改良の T-SQL の互換性をサポートします。  これらの追加の言語要素容易にできるように SQL Server およびその他のデータ ソースからの移行します。 
+APS AU6 では、これらの T-SQL での互換性の改善をサポートします。  これらの追加の言語要素を簡単に SQL Server と他のデータ ソースから移行します。 
 
-- [列レベルの SQL 照合順序][]に加えて Windows 照合順序がサポートされています。
-- [クラスター化列ストア インデックスの非クラスター化インデックス][]クラスター化列ストア インデックスに特定の値を検索するクエリのパフォーマンスが向上します。 
+- [列レベルの SQL 照合順序][]Windows 照合順序だけでなく、サポートされています。
+- [クラスター化列ストア インデックスに非クラスター化インデックス][]クラスター化列ストア インデックスで特定の値を検索するクエリのパフォーマンスが向上します。 
 - [SELECT...INTO][] 
-- [sp_spaceused()][]ディスク領域が使用されるか、テーブルまたはデータベースで予約されていますが表示されます。
-- [幅の広いテーブル][]サポートは SQL Server 2016 と同じです。 行サイズの 32 K の以前の制限は存在しません。 
+- [sp_spaceused()][]ディスク領域が、テーブルまたはデータベース内で予約されたまたは使用が表示されます。
+- [幅の広いテーブル][]サポートは、SQL Server 2016 の場合と同じです。 行のサイズの 32 K の以前の上限が存在しません。 
 
 **データ型**
 
-- [Varchar (max)][]、 [NVARCHAR(MAX)][]と[varbinary (max)][]です。 これらの LOB データ型では、2 GB の最大サイズがあります。 オブジェクトによって使用されるこれらの読み込みに[bcp ユーティリティ][]です。 Polybase と dwloader は、これらのデータ型を現在サポートされません。 
+- [Varchar (max)][]、 [NVARCHAR(MAX)][]と[varbinary (max)][]します。 これらの LOB データ型では、2 GB の最大サイズがあります。 オブジェクトによって使用されるこれらの読み込みに[bcp ユーティリティ][]します。 Polybase と dwloader は、これらのデータ型を現在サポートされません。 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
-- [NUMERIC][]および DECIMAL データ型。
+- [NUMERIC][]と 10 進データ型。
 
 **ウィンドウ関数**
 
@@ -80,36 +89,43 @@ APS 2016 では、それらの改良の T-SQL の互換性をサポートしま�
 
 ### <a name="polybasehadoop-enhancements"></a>PolyBase/Hadoop の機能強化
 
-- Hortonworks HDP 2.4 と HDP 2.5 との互換性
+- Hortonworks HDP 2.4 および HDP 2.5 との互換性
 - データベース スコープ資格情報を使用して Kerberos をサポートします。
-- Azure ストレージ Blob の資格情報のサポート
+- Azure Storage Blob を使用した資格情報のサポート
 
 ### <a name="install-and-upgrade-enhancements"></a>インストールとアップグレードの機能強化
 
-**エンタープライズ アーキテクチャの更新プログラム**最新のファームウェアとドライバーの更新プログラム、セキュリティ修正プログラムを含む、既存のアプライアンスを APS 2016 にアップグレードがインストールされます。 
+**エンタープライズ アーキテクチャの更新プログラム**最新のファームウェアとドライバーの更新プログラム、セキュリティ修正プログラムを含むインストール AP AU6 に、既存のアプライアンスをアップグレードします。 
 
-HPE または DELL から新しいアプライアンスに、最新の更新プログラムが含まれていますとします。
+HPE または DELL から新しいアプライアンスには、最新の更新プログラムが含まれていますと。
 
-- 最新世代プロセッサのサポート (Broadwell)
-- DDR4 Dimm への更新
+- 最新世代のプロセッサ サポート (Broadwell)
+- DDR4 Dimm に更新
 - DIMM スループットの向上
 
 **統合**
 
-- 完全修飾ドメイン名 (FQDN) をサポートできるようになりますアプライアンスにドメインの信頼関係をセットアップします。 
-- FQDN を使用するのには、完全なアップグレードを行うと、アップグレード中にオプトインする必要があります。 
+- 完全修飾ドメイン名 (FQDN) のサポートにより、アプライアンスにドメインの信頼関係をセットアップすることにします。 
+- FQDN を使用するには、完全なアップグレードを行うと、アップグレード中にオプトインする必要があります。 
 
-**ダウンタイムの短縮**APS 2016 へのアップグレードのインストールまたは高速で、以前のリリースよりも少ないダウンタイムが必要です。 ダウンタイムをインストールまたはアップグレードを減らします。 
+**ダウンタイムを短縮**AP AU6 へのアップグレードのインストールまたは高速で、以前のリリースよりも少ないダウンタイムが必要です。 ダウンタイム、インストールまたはアップグレードを減らします。 
 
- - 2016 年 6 月経由のすべての更新プログラムを含むイメージを使用して WSUS 更新プログラムを適用する効率化
- - ドライバーおよびファームウェアの更新とセキュリティ更新プログラムを適用します。
- - ダウンロードする必要はありませんでをインストールする準備ができるように、アプライアンス上で最新の修正プログラムとアプライアンス検証ユーティリティ (PAV) を配置します。
+ - 2016 年 6 月からすべての更新プログラムを含むイメージを使用して WSUS 更新プログラムの適用を効率化
+ - ドライバーとファームウェアの更新プログラムがセキュリティ更新プログラムを適用します。
+ - ダウンロードする必要なくインストールする準備ができたために、アプライアンス上で最新の修正プログラムとアプライアンス検証ユーティリティ (PAV) を配置します。
 
+::: moniker-end
 
-<!--MSDN references-->
-[database compatibility level 130]:/sql/t-sql/statements/alter-database-transact-sql-compatibility-level
-[列レベルの SQL 照合順序]:/sql/relational-databases/collations/collation-and-unicode-support
-[クラスター化列ストア インデックスの非クラスター化インデックス]:/sql/t-sql/statements/create-index-transact-sql
+<!--
+Link references to other articles in this same GitHub repo.
+
+The link format that starts with '/sql/what-ever/my-artlcle' is not appropriate for common links within the same repo (as most of these link are).  The first couple links have been edited to show the proper syntax, but all other links in this article need to be similarly edited.
+The proper formats have at least two big advantages.  One big advantage is that the proper formats enable the OPS Build system to detect broken links at Pull Request build time, instead of only later during run time.
+-->
+[database compatibility level 130]: ../t-sql/statements/alter-database-transact-sql-compatibility-level.md
+[列レベルの SQL 照合順序]: ~/relational-databases/collations/collation-and-unicode-support.md
+
+[クラスター化列ストア インデックスに非クラスター化インデックス]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR (MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
 [NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
 [VARBINARY (MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql

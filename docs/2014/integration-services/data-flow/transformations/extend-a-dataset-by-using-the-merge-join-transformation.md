@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Merge Join transformation
 - datasets [Integration Services], joining
@@ -18,13 +18,13 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 27d88e5105ddbbdbc8e9f8b5826b658921db2a1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 8bd70921524de8124b9fd65d5d02f60de3f26ab9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322642"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>マージ結合変換を使用してデータセットを拡張する
   マージ結合変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと、マージ結合変換への入力を提供する 2 つのデータ フロー コンポーネントがあらかじめ含まれている必要があります。  

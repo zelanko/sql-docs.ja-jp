@@ -1,5 +1,5 @@
 ---
-title: データ型のサポート (SSAS テーブル) |Microsoft ドキュメント
+title: データ型 (SSAS テーブル) のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee05d2f7d3526aafd180e9eda5372668f164cb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57bf1633f05f9692c3e5cc132bce6585734830a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237632"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>サポートされているデータ型 (SSAS 表形式)
   このトピックでは、テーブル モデルで使用できるデータ型について説明し、データが計算される場合または Data Analysis Expressions (DAX) の数式で使用される場合の暗黙的な変換についても解説します。  
@@ -52,9 +52,9 @@ ms.locfileid: "36177852"
   
  <sup>1</sup> DAX の数式は、表に示したものよりも小さいデータ型をサポートしていません。  
   
- <sup>2</sup>を非常に大きい数値を持つデータをインポートしようとすると、インポートが次のエラーで失敗可能性があります。  
+ <sup>2</sup>を非常に大きい数値を持つデータをインポートしようとすると、インポートが次のエラーで失敗します。  
   
- メモリ内のデータベース エラー: '\<列名 >' の列、'\<テーブル名 >' テーブルには、値が含まれています。' 1.7976931348623157 e + 308' はサポートされていません。 操作は取り消されました。  
+ インメモリ データベース エラー: '\<列名 >' の列、'\<テーブル名 >' テーブルには、値が含まれています。' 1.7976931348623157 e + 308' はサポートされていません。 操作は取り消されました。  
   
  このエラーは、モデル デザイナーがこの値を使用して NULL を表すために発生します。 次の一覧の値は、上で説明した NULL 値のシノニムです。  
   

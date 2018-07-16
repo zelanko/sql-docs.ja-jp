@@ -1,5 +1,5 @@
 ---
-title: Power View レポートのレポート プロパティの構成 |Microsoft ドキュメント
+title: Power View レポートのレポート プロパティの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 0f2e5e76b9779ce2cc8362d93ebe2389db8fb8da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee7bcbbb5294047c2499cabd4c094e15563883d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304372"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Power View レポートのレポート プロパティの構成
   この補足のレッスンでは、Adventure Works Internet Sales Model プロジェクトのレポートのプロパティを設定します。 レポートのプロパティを使用すると、Power View 内のモデル データの選択や表示をエンド ユーザーが簡単にできるようになります。 また、プロパティを設定して、特定の列やテーブルの非表示や、グラフで使う新しいデータの作成を行います。  
@@ -108,7 +108,7 @@ ms.locfileid: "36163786"
   
 6.  **Geography** テーブルでも同じ手順を実行し、次のフィールドをこの順序に並べます。  
   
-     **市区町村**、 **State Province Code**、**状態地域コード**です。  
+     **市区町村**、 **State Province Code**、**状態リージョン コード**します。  
   
 7.  最後に、 **Product** テーブルについても同じ手順を実行し、次のフィールドをこの順序に並べます。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], deleting
 - result sets [SQL Server], queries
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 24f72c0da16bb9c0fe7500e6381eba63fc40859c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dab0c64711da6e8e975920aa3c584f76a0713881
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301312"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>クエリ結果からの列の削除 (Visual Database Tools)
   選択クエリで使用する列を結果セットには表示しない場合、つまりクエリの選択リストにはその列が必要ない場合、出力から列を削除できます。 クエリ出力から列を削除した後でも、検索条件や並べ替えフィールドとしてその列を使用できます。  

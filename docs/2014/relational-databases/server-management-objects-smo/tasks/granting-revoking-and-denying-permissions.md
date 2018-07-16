@@ -1,5 +1,5 @@
 ---
-title: 許可、取り消し、および権限の拒否 |Microsoft ドキュメント
+title: 許可、取り消し、および権限の拒否 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cdf6703e67b9c9c53c4b266154ea8a6cb0ed65d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d088fbddb4c3e293a0ba98de0eb2a7c6eba17dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321812"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>権限の許可、取り消し、および拒否
   <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> オブジェクトに対して権限のセットや個別のサーバー権限を割り当てるには、<xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> オブジェクトを使用します。 サーバー レベルの権限については、ログオンが参照されます。 Windows によって認証されたログオンは、Windows ユーザー名としてリストされます。 このコード例を実行すると、権限付与対象ユーザーから権限が取り消され、<xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> メソッドを使用してこの権限が削除されたことが確認されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "36177701"
  データベース権限およびデータベース オブジェクト権限は、<xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> オブジェクトを使用して、同じように割り当てることができます。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Visual Basic でのサーバー権限の付与  
  このコード例では、指定されたログインへの Create Endpoint 権限および Alter Any Endpoint 権限を許可し、これらの権限の列挙および表示を行います。 これらの権限のうちの 1 つが呼び出されて、権限が再び列挙されます。 この例では、指定されたログインには、当初に必要な指定の権限があることを前提としています。  

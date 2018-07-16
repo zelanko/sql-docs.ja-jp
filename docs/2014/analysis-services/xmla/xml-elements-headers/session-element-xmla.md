@@ -1,5 +1,5 @@
 ---
-title: Session 要素 (XMLA) |Microsoft ドキュメント
+title: Session 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - Session element
 ms.assetid: 884ed090-968e-41d3-97e5-6d12787467da
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4be4778be16da0271e2f46643a165864d679e8ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 74ce499ba167c7c0d439fba4e4099638f4e98db6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310372"
 ---
 # <a name="session-element-xmla"></a>Session 要素 (XMLA)
-  インスタンス上の既存の明示的なセッションを識別する、SOAP 要求メッセージの SOAP ヘッダーを使用して[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+  インスタンス上の既存の明示的なセッションを識別するために、SOAP 要求メッセージの SOAP ヘッダーを使用して[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。  
   
- **Namespace** urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql} の分析  
+ **Namespace** urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-分析  
   
 ## <a name="syntax"></a>構文  
   
@@ -81,9 +81,9 @@ ms.locfileid: "36084639"
 ## <a name="remarks"></a>コメント  
  `Session` ヘッダー要素は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンス上の、明示的に開始された既存のセッションを識別します。 `Session` 要素は、次の種類のメッセージ内の SOAP ヘッダーに含まれます。  
   
--   含む SOAP 応答、 [BeginSession](session-element-xmla.md) SOAP ヘッダー要素。  
+-   含む SOAP 応答を[BeginSession](session-element-xmla.md) SOAP ヘッダー要素。  
   
--   実行する対象のセッションを識別する SOAP 要求、 [Discover](../xml-elements-methods-discover.md)または[Execute](../xml-elements-methods-execute.md)メソッドです。  
+-   実行するセッションを識別するために SOAP 要求、 [Discover](../xml-elements-methods-discover.md)または[Execute](../xml-elements-methods-execute.md)メソッド。  
   
  セッション識別子は、そのセッションが引き続き有効であることを保証するものではありません。 `Session` 要素で指定されたセッションは有効期限切れになる可能性があります。 たとえば、セッションがタイムアウトになるか、セッションに関連した接続が切断された場合には、セッションが有効期限切れになることがあります。 セッションが有効期限切れになり、有効でなくなった場合、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] はそのセッションを終了して、現在処理中のすべてのトランザクションをロールバックします。 無効なセッション識別子を使用して送信された SOAP メッセージは失敗し、指定されたセッションが見つからないことを示す SOAP エラーが報告されます。  
   

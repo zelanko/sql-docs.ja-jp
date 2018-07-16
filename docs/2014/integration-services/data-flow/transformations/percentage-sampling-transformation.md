@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.percentagesamplingtrans.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3125fb6e57bfae1f9df6590ac431475702f0f037
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4fcd0b5154175ec74f86ecaea4ad96439b7ea8b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296912"
 ---
 # <a name="percentage-sampling-transformation"></a>比率サンプリング変換
   比率サンプリング変換は、変換入力行の比率を選択することにより、サンプル データセットを作成します。 サンプル データセットとは、変換入力からランダムに行を選択し、その結果、入力のサンプルとなるデータセットのことです。  

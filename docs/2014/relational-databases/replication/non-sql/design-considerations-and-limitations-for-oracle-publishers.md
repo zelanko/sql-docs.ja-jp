@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 385c9fcbf98c30646c91694669cc13984e111cda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 326460795e7b1d72c1e894c80265401f5bfd882c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287088"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle パブリッシャーの設計上の注意点および制限
   Oracle データベースからのパブリッシュは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースからのパブリッシュとほぼ同じように機能するように設計されています。 ただし、以下の制限および問題に注意してください。  
@@ -141,7 +141,8 @@ ms.locfileid: "36165796"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。 Oracle パブリッシャーでは、行数検証をサポートしています。 詳細については、「[Validate Replicated Data](../validate-replicated-data.md)」 (レプリケートされたデータの検証) を参照してください。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 Oracle パブリッシャーでは、キャラクター モード スナップショットをサポートしています。  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 Oracle パブリッシャーでは、キャラクター モード スナップショットをサポートしています。  
   
 -   パブリッシュされた Oracle テーブルへのスキーマ変更はサポートされていません。 スキーマ変更を行うには、まずパブリケーションを削除し、変更を行ってから、パブリケーションおよびサブスクリプションを再作成します。  
   

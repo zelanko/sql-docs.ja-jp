@@ -1,5 +1,5 @@
 ---
-title: サービス アカウント (SSRS 構成マネージャー) の構成 |Microsoft ドキュメント
+title: サービス アカウント (SSRS 構成マネージャー) の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Web service, accounts
 - service accounts [Reporting Services]
@@ -18,18 +18,18 @@ ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2f680cf4f291bed7a82bb3b7aadd0e8c1871ef17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8f16a73e32557345086a3363e619e56891f1c65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234492"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>サービス アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がインストールされた環境では、レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションが 1 つのサービス内で実行されます。 サービスの実行に使用するアカウントは、セットアップ時に [サービス ID] ページでアカウントを指定するときに定義されますが、使用するアカウントの変更やパスワードの更新を行う場合は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用できます。  
   
- SharePoint 統合モードを使用して構成されているレポート サーバーがあるし、を使用して、サービス アカウントを変更するかどうか、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]構成ツールも SharePoint サーバーの全体管理を開くし、使用する必要があります、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **データベース アクセスの許可**ページ、レポート サーバーとインスタンスの設定を再適用します。 この手順は、新しいサービス アカウント アクセスが許可に SharePoint データベースへ統合するために必要な[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]または[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]です。  
+ SharePoint 統合モードを使用するように構成されているレポート サーバーがあり、使用して、サービス アカウントを変更するかどうか、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]構成ツールも SharePoint サーバーの全体管理を開くし、使用する必要があります、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **データベース アクセスの許可**ページ、レポート サーバーとインスタンスの設定を再適用します。 この手順は、新しいサービス アカウント アクセスを許可、SharePoint データベースに統合するために必要な[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]または[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]します。  
   
  サービス アカウントを更新する際には、そのサービス ID に依存する他の設定も同時に更新できるように、必ず [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用してください。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36084513"
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、レポート サーバーに接続します。  
   
-2.  [サービス アカウント] ページで、使用するアカウントの種類を示すオプションを選択します。 参照を指定するアカウントの種類に関する推奨事項について[、レポート サーバー サービス アカウントを構成する&#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)です。  
+2.  [サービス アカウント] ページで、使用するアカウントの種類を示すオプションを選択します。 参照を指定するアカウントの種類に関する推奨事項について[レポート サーバー サービス アカウントの構成&#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)します。  
   
 3.  Windows ユーザー アカウントを選択した場合は、新しいアカウントとパスワードを指定します。 アカウントは 20 文字以下にする必要があります。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36084513"
   
 5.  対称キーをバックアップするかどうかを確認するメッセージが表示されたら、対称キーのバックアップ用のファイル名と場所を入力し、ファイルをロックおよびロック解除するためのパスワードを入力して **[OK]** をクリックします。  
   
-6.  レポート サーバーがサービス アカウントを使用してレポート サーバー データベースに接続する場合は、新しいアカウントまたはパスワードを使用するように接続情報が更新されます。 接続情報を更新するには、データベースに接続する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[データベース接続]** ダイアログ ボックスが表示されたら、データベースに接続する権限を持つ資格情報を入力し、 **[OK]** などのビルトイン アカウントで実行できます。  
+6.  レポート サーバーがサービス アカウントを使用してレポート サーバー データベースに接続する場合は、新しいアカウントまたはパスワードを使用するように接続情報が更新されます。 接続情報を更新するには、データベースに接続する必要があります。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[データベース接続]** ダイアログ ボックスが表示されたら、データベースに接続する権限を持つ資格情報を入力し、 **[OK]** などのビルトイン アカウントで実行できます。  
   
 7.  対称キーを復元するかどうかを確認するメッセージが表示されたら、手順 5. で指定したパスワードを入力し、 **[OK]** をクリックします。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36084513"
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [レポート サーバー データベース接続を構成する&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [サービス アカウント&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

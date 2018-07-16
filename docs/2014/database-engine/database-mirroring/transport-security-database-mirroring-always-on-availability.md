@@ -1,14 +1,13 @@
 ---
-title: データベース ミラーリングと AlwaysOn 可用性グループ (SQL Server) のトランスポート セキュリティ |Microsoft ドキュメント
+title: トランスポート セキュリティをデータベース ミラーリングと AlwaysOn 可用性グループ (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sessions [SQL Server], database mirroring
 - cryptography [SQL Server], database mirroring
@@ -22,13 +21,13 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: fdcfc0b7d7ce374f65fac8dca13dc7136b129e57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3f2a6d5dfcba21cea89802a29eec7a56a58936c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291408"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ (SQL Server)
   トランスポート セキュリティには認証が必要です。状況によっては、複数のデータベース間で交換されるメッセージの暗号化も必要になります。 データベース ミラーリングおよび [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、認証と暗号化はデータベース ミラーリング エンドポイントで構成します。 データベース ミラーリング エンドポイントの概要については、「 [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)」を参照してください。  

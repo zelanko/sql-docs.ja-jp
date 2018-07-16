@@ -1,5 +1,5 @@
 ---
-title: 論理アーキテクチャ (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: 論理アーキテクチャ (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], about mining structures
 - logical architecture [Data Mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4505a89b4ea9e815b2fedbe8dbfddbfe70bff6c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0314d921a69b20286b9c525d3de9a1fa898b74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299302"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>論理アーキテクチャ (Analysis Services - データ マイニング)
   データ マイニングは、複数のコンポーネントの相互作用を伴うプロセスです。  
@@ -45,7 +45,7 @@ ms.locfileid: "36165139"
 ##  <a name="bkmk_SourceData"></a> データ マイニング ソース データ  
  データ マイニングで使用するデータは、データ マイニング ソリューションに格納されません。バインドのみが格納されます。 データは前のバージョンの SQL Server、CRM システム、またはフラット ファイルで作成されたデータベースにも存在する場合があります。 処理によって構造またはモデルをトレーニングすると、データの統計サマリーが作成され、キャッシュに格納されます。そのサマリーは、後の操作で使用するために保持することも、処理後に削除することもできます。 詳細については、「[マイニング構造 (Analysis Services - データ マイニング)](mining-structures-analysis-services-data-mining.md)」を参照してください。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソース ビュー (DSV) オブジェクト内のさまざまなデータを組み合わせることで、データ ソースの上に抽象化レイヤーが提供されます。 テーブル間の結合を指定できます。また、多対一のリレーションシップを持つテーブルを追加して、入れ子になったテーブル列を作成することができます。 これらのオブジェクト (データ ソースおよびデータ ソース ビュー) の定義は、*.ds および \*.dsv というファイル名拡張子でソリューション内に保存されます。 作成と使用の詳細については[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データ ソースおよびデータ ソース ビューを参照してください。[サポートされるデータ ソース&#40;SSAS 多次元&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)です。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソース ビュー (DSV) オブジェクト内のさまざまなデータを組み合わせることで、データ ソースの上に抽象化レイヤーが提供されます。 テーブル間の結合を指定できます。また、多対一のリレーションシップを持つテーブルを追加して、入れ子になったテーブル列を作成することができます。 これらのオブジェクト (データ ソースおよびデータ ソース ビュー) の定義は、*.ds および \*.dsv というファイル名拡張子でソリューション内に保存されます。 作成と使用の詳細については[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データ ソースおよびデータ ソース ビューを参照してください。[サポートされるデータ ソース&#40;SSAS 多次元&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)します。  
   
  AMO または XMLA を使用して、データ ソースおよびデータ ソース ビューを定義および変更することもできます。 プログラムによってこれらのオブジェクトを操作する方法の詳細については、「[論理アーキテクチャの概要 (Analysis Services - 多次元データ)](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md)」を参照してください。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36165139"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  データ マイニング構造は、マイニング モデルの作成元のデータ ドメインを定義する論理データ コンテナーです。 1 つのマイニング構造で複数のマイニング モデルをサポートできます。  
   
- データ マイニング ソリューションでデータを使用する必要がある場合、Analysis Services ではソースからデータを読み込み、集計およびその他の情報のキャッシュを生成します。 既定では、トレーニング データを再利用して追加のモデルをサポートできるように、このキャッシュは保持されます。 キャッシュを削除する必要がある場合は、変更、`CacheMode`プロパティの値をマイニング構造オブジェクトを`ClearAfterProcessing`です。 詳細については、「 [AMO データ マイニング クラス](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)」を参照してください。  
+ データ マイニング ソリューションでデータを使用する必要がある場合、Analysis Services ではソースからデータを読み込み、集計およびその他の情報のキャッシュを生成します。 既定では、トレーニング データを再利用して追加のモデルをサポートできるように、このキャッシュは保持されます。 キャッシュを削除する必要がある場合は、変更、`CacheMode`プロパティの値に、マイニング構造オブジェクトを`ClearAfterProcessing`します。 詳細については、「 [AMO データ マイニング クラス](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)」を参照してください。  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] には、データをトレーニングおよびテスト データ セットに分割する機能もあります。この機能を使用して、代表的な、ランダムに選択したデータのセットでマイニング モデルをテストできます。 データは、実際には別々に格納されません。構造キャッシュ内のケース データには、その特定のケースがトレーニングに使用されるかテストに使用されるかを示すプロパティが設定されます。 キャッシュを削除すると、その情報を取得できなくなります。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36165139"
  詳細については、「 [多次元モデルのアセンブリの管理](../multidimensional-models/multidimensional-model-assemblies-management.md)」を参照してください。  
   
  **カスタム ストアド プロシージャ**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニングには、データ マイニング オブジェクトを使用するストアド プロシージャの使用がサポートされています。 独自のストアド プロシージャを作成して、機能を拡張し、予測クエリおよびコンテンツ クエリから返されるデータをより簡単に操作できます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニングでは、データ マイニング オブジェクトを使用するストアド プロシージャの使用をサポートします。 独自のストアド プロシージャを作成して、機能を拡張し、予測クエリおよびコンテンツ クエリから返されるデータをより簡単に操作できます。  
   
  [ストアド プロシージャの定義](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36165139"
  また、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、内部でデータ マイニングに使用されるシステム ストアド プロシージャが多数用意されています。 システム ストアド プロシージャは内部で使用するためのものですが、それらを応用することもできます。 これらのストアド プロシージャは、マイクロソフトによって随時変更される場合があります。そのため、実際の運用では、DMX、AMO、または XMLA を使用してクエリを作成することをお勧めします。  
   
  **カスタム プラグイン アルゴリズム**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 独自のアルゴリズムを作成し、追加するアルゴリズムは、新しいデータ マイニング サービスとして、サーバー インスタンスのメカニズムを提供します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 独自のアルゴリズムを作成すると、新しいデータ マイニング サービスとしてサーバー インスタンスに、アルゴリズムを追加するメカニズムを提供します。  
   
  Analysis Services では、COM インターフェイスを使用して、プラグイン アルゴリズムと通信します。 新しいアルゴリズムの実装方法の詳細については、「 [プラグイン アルゴリズム](plugin-algorithms.md)」を参照してください。  
   
@@ -107,6 +107,6 @@ ms.locfileid: "36165139"
   
 ## <a name="see-also"></a>参照  
  [多次元モデル オブジェクトの処理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [データ マイニング拡張機能&#40;DMX&#41;参照](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [データ マイニング拡張機能&#40;DMX&#41;リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

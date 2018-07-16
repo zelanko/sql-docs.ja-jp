@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
 - operators [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8ce3f4c37d7c590166beb53879c624ae70d9a3e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fec3425d4382c19e93b0317db4d338173a9bb1b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314272"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Integration Services 式の詳細の例
   このセクションでは、複数の演算子と関数を組み合わせた詳細な式の例について説明します。 式が優先順位制約または条件分割変換で使用される場合、式はブール型に評価される必要があります。 ただしこの制限は、プロパティ式、変数、派生列変換、または For ループ コンテナーで使用される式には適用されません。  

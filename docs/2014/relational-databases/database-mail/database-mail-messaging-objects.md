@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], host databases
 - Database Mail [SQL Server], messaging objects
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7af2b7d227bb534f012fd542ade699cea29e6b10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 95839d9c8a8f617363ed31b49bef2f2fc1dc3e2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271258"
 ---
 # <a name="database-mail-messaging-objects"></a>データベース メール メッセージング オブジェクト
   **msdb** データベースはデータベース メール ホスト データベースです。 このデータベースには、データベース メールのストアド プロシージャやメッセージング オブジェクトが格納されます。 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にはデータベース メール構成ウィザードが付属していて、データベース メールの有効化、プロファイルとアカウントの作成と管理、およびデータベース メール オプションの構成をこのウィザードから行うことができます。  

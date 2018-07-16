@@ -1,5 +1,5 @@
 ---
-title: エラーと警告 Events Data Columns |Microsoft ドキュメント
+title: エラーと警告イベントのデータ列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Errors and Warnings event category [SQL Server]
 ms.assetid: f375d303-7aab-4c51-a955-05a2762cc4d1
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8d1af0dc17026c5003444a9d626708a0a86056b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 712bb661c95b659b741374312370b352a3a1e2f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298992"
 ---
 # <a name="errors-and-warnings-events-data-columns"></a>Errors and Warnings イベントのデータ列
   セキュリティ監査イベント カテゴリには、次のイベント クラスがあります。  

@@ -1,5 +1,5 @@
 ---
-title: Update 要素 (XMLA) |Microsoft ドキュメント
+title: Update 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Update command [XMLA]
 ms.assetid: 324dcc16-865d-4d0a-b393-2b06c18ac807
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 68eb54e24daccb08a77cc88b2396d31114a29b25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 75dda4a163ce6551246e11aa9eba6b57fcd9fb25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283960"
 ---
 # <a name="update-element-xmla"></a>Update 要素 (XMLA)
   ディメンション内の属性メンバーを更新します。  
@@ -69,7 +69,7 @@ ms.locfileid: "36164876"
 ## <a name="remarks"></a>コメント  
  `Update` コマンドは、書き込み許可ディメンション内の属性メンバーを移動します。  
   
- メンバーの更新の詳細については、次を参照してください。[挿入、更新、および削除するメンバー &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)です。  
+ メンバーの更新の詳細については、次を参照してください。[挿入、更新、および削除するメンバー &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Drop 要素&#40;XMLA&#41;](drop-element-xmla.md)   

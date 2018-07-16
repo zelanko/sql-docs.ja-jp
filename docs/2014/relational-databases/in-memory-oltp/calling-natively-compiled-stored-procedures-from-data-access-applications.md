@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 517208d1fa790739a2008cd5e149147cbf91643c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 458fa987ee31f024534b184b2729667cea3597c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287228"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出し
   このトピックでは、データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出しに関するガイダンスを示します。  
@@ -40,7 +40,7 @@ ms.locfileid: "36173936"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client で ODBC ドライバーを使用したネイティブ コンパイル ストアド プロシージャの呼び出しに関して、次の推奨事項が適用されます。  
   
- ストアド プロシージャを 1 回呼び出しに最も効率的な方法は、直接の呼び出しを使用して RPC を`SQLExecDirect`と ODBC CALL 句。 使用しないで、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE`ステートメントです。 ストアド プロシージャを複数回呼び出す場合は、準備実行が効率的です。  
+ ストアド プロシージャを 1 回呼び出すを最も効率的な方法は、RPC 呼び出しを使用して直接発行する、`SQLExecDirect`と ODBC CALL 句。 使用しないでください、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE`ステートメント。 ストアド プロシージャを複数回呼び出す場合は、準備実行が効率的です。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアド プロシージャを複数回呼び出すのに最も効率的な方法は、準備された RPC プロシージャ呼び出しを使用する方法です。 準備された RPC 呼び出しは、次のように、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーを使用して実行されます。  
   

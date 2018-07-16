@@ -1,5 +1,5 @@
 ---
-title: StorageMode 要素 (ASSL) |Microsoft ドキュメント
+title: StorageMode 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StorageMode element
 ms.assetid: 197e8153-1ab6-43ba-a7e9-ae9be19ac511
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d65d778e54a712e3fce18bdac5b3a0e31426863
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d61633743b4ce7e7b72f868b280e1bb376f1846
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299012"
 ---
 # <a name="storagemode-element-assl"></a>StorageMode 要素 (ASSL)
   親要素のストレージ モードを指定します。  
@@ -58,7 +58,7 @@ ms.locfileid: "36164658"
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[キューブ要素&#40;ASSL&#41;](../objects/cube-element-assl.md)、[要素の寸法&#40;ASSL&#41;](../objects/dimension-element-assl.md)、 [MeasureGroup 要素&#40;ASSL&#41;](../objects/group-element-assl.md)、[パーティション要素&#40;ASSL&#41;](../objects/partition-element-assl.md)|  
+|親要素|[キューブ要素&#40;ASSL&#41;](../objects/cube-element-assl.md)、[ディメンション要素&#40;ASSL&#41;](../objects/dimension-element-assl.md)、 [MeasureGroup 要素&#40;ASSL&#41;](../objects/group-element-assl.md)、[パーティション要素&#40;ASSL&#41;](../objects/partition-element-assl.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
@@ -68,10 +68,10 @@ ms.locfileid: "36164658"
 |-----------|-----------------|  
 |*MOLAP*|親は多次元 OLAP (MOLAP) ストレージを使用します。|  
 |*ROLAP*|親はリレーショナル OLAP (ROLAP) ストレージを使用します。|  
-|*HOLAP*|親はハイブリッド OLAP (HOLAP) ストレージを使用します。 **注:** この値が無効の[ディメンション](../objects/dimension-element-assl.md)要素の親です。|  
+|*HOLAP*|親はハイブリッド OLAP (HOLAP) ストレージを使用します。 **注:** この値は無効です[ディメンション](../objects/dimension-element-assl.md)要素の親。|  
 |*InMemory*|親は IMBI ストレージを使用します。|  
   
- 許可される値に対応する列挙`StorageMode`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.StorageMode>します。  
+ 許容された値に対応する列挙体`StorageMode`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.StorageMode>します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで `StorageMode` の親に対応する要素は、<xref:Microsoft.AnalysisServices.Cube>、<xref:Microsoft.AnalysisServices.Dimension>、<xref:Microsoft.AnalysisServices.MeasureGroup>、および <xref:Microsoft.AnalysisServices.Partition> です。  
   

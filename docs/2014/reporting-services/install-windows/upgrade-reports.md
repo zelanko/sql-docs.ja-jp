@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], upgrading
 - published reports [Reporting Services], upgrades
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 caps.latest.revision: 65
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d3c6611c05fc90afcdbeae689f650bf476b2019b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1ba06e961245cf1fe9ae5802abc26b575fe7683c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244512"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
   レポート定義 (.rdl) ファイルは、次の方法で開いたときに自動的にアップグレードされます。  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーでレポートを開くと、レポート定義は現在サポートされている RDL スキーマにアップグレードされます。 指定すると、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]または[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]プロジェクト プロパティで、レポート サーバー、レポート定義のターゲットのサーバーと互換性のあるスキーマに保存します。  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーでレポートを開くと、レポート定義は現在サポートされている RDL スキーマにアップグレードされます。 指定した場合、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]または[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]レポート サーバー プロジェクトのプロパティで、レポート定義は、ターゲット サーバーと互換性のあるスキーマに保存されます。  
   
 -   既にインストールされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] にアップグレードすると、レポート サーバーにパブリッシュされている既存のレポートとスナップショットは、最初に処理されるときにコンパイルされ、新しいスキーマへと自動的にアップグレードされます。 レポートを自動的にアップグレードできない場合、レポートは下位互換性モードを使用して処理されます。 レポート定義は元のスキーマのまま残ります。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36177051"
   
  レポートをローカルでアップグレードした後、またはレポート サーバーでアップグレードした後で、エラー、警告、およびメッセージがさらに通知される場合があります。 これは、内部のレポート オブジェクト モデルと処理コンポーネントが変更されたために、レポートに潜んでいた問題が検出され、メッセージが出力されるようになったものです。 詳細については、「 [Reporting Services Backward Compatibility](../reporting-services-backward-compatibility.md)」をご参照ください。  
   
- 新機能の詳細については[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]を参照してください[新&#40;Reporting Services&#41;](../what-s-new-reporting-services.md)です。  
+ 新機能の詳細については[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]を参照してください[新&#40;Reporting Services&#41;](../what-s-new-reporting-services.md)します。  
   
  このトピックの内容  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36177051"
  既存のパブリッシュされたレポートおよびレポートのスナップショットは、初めて使用するときに、レポート サーバーによって新しいレポート定義スキーマへのアップグレードが試行されます。ユーザーは何も処理する必要はありません。 ユーザーがレポートまたはレポートのスナップショットを表示するか、レポート サーバーがサブスクリプションを処理すると、アップグレードが試行されます。 レポート定義は置き換えられませんが、元のスキーマのまま [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバーに格納されます。 レポートをアップグレードできない場合、レポートは下位互換性モードで実行されます。  
   
 ##  <a name="bkmk_backcompat"></a> 下位互換性モード  
- 正常にアップグレードされたレポートは、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート プロセッサによって処理されます。 アップグレードできないレポートは処理、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート プロセッサとの下位互換性モードでします。 レポートを両方のレポート プロセッサで処理することはできません。 レポートは、初めて使用するときに、正常にアップグレードされるか、下位互換性モードの対象としてマークされます。  
+ 正常にアップグレードされたレポートは、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート プロセッサによって処理されます。 アップグレードできないレポートは処理、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート プロセッサでは、下位互換性モード。 レポートを両方のレポート プロセッサで処理することはできません。 レポートは、初めて使用するときに、正常にアップグレードされるか、下位互換性モードの対象としてマークされます。  
   
  新しい機能をサポートするのは、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート プロセッサのみです。 レポートをアップグレードできない場合でも表示レポートは表示できますが、新しい機能は利用できません。 新しい機能を利用するには、レポートが正常にアップグレードされる必要があります。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36177051"
 ##  <a name="bkmk_CRIs"></a> カスタム レポート アイテムを含むレポートのアップグレード  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートには、サードパーティのソフトウェア ベンダーによって提供され、システム管理者によってレポート作成コンピューターおよびレポート サーバーにインストールされたカスタム レポート アイテム (CRI) が含まれている場合があります。 CRI を含むレポートは次の方法でアップグレードできます。  
   
--   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]にレポート サーバーをアップグレード、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]レポート サーバー。 レポート サーバー上のパブリッシュされたレポートが、初めて使用するときに自動的にアップグレードされます。  
+-   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]はレポート サーバーをアップグレードする[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]レポート サーバー。 レポート サーバー上のパブリッシュされたレポートが、初めて使用するときに自動的にアップグレードされます。  
   
 -   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]にレポートをアップロード、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]レポート サーバー。 レポートが、初めて使用するときに自動的にアップグレードされます。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36177051"
  レポート サーバー、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]、またはレポートの現在の RDL 名前空間を確認する方法については、「[レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>レポート サーバー上のレポートのアップグレード  
- 最初に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]にアップグレードされているレポート サーバーでレポートが実行される、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]レポート サーバー、レポートがレポート サーバーでサポートされている現在のレポート定義名前空間に自動的にアップグレードします。 レポートは、アップグレード前に、レポート サーバーに存在していた可能性がありますかがレポート マネージャーを使用してアップロードまたはレポート デザイナーからレポート サーバーにパブリッシュされたレポートがでした[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]です。  
+ 最初に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]にアップグレードされたレポート サーバーでレポートを実行、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]レポート サーバー、レポートがレポート サーバーでサポートされている現在のレポート定義名前空間に自動的にアップグレードします。 レポートが、アップグレードする前に、レポート サーバーに存在していた可能性がありますが、またはがレポート マネージャーを使用してアップロードまたはレポート デザイナーからレポート サーバーにパブリッシュされたレポートがでした[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]します。  
   
  次の表に、レポート内の CRI の種類ごとに、レポート サーバーで実行されるアップグレード操作を示します。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36177051"
 |サポートされていない機能を含む Dundas 2005 のゲージ CRI|アップグレードは実行されません。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサで処理されます。|  
   
 ###  <a name="OpeningaReport"></a> レポート デザイナーで CRI を含むレポートを開く  
- 開くと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のレポート デザイナーで Cri を含むレポート[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]レポートは、新しいレポート定義スキーマにアップグレードされます。 レポートに含まれる CRI に応じて、次のいずれかの操作が実行されます。  
+ 開くと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポートのレポート デザイナーで cri を含む[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]レポートは、新しいレポート定義スキーマにアップグレードされます。 レポートに含まれる CRI に応じて、次のいずれかの操作が実行されます。  
   
 -   サードパーティの CRI が検出された。 レポート作成コンピューターにインストールされた CRI のバージョンが新しい RDL スキーマと互換性がない場合、デザイン画面に赤い X マークのテキスト ボックスが表示されます。システム管理者に相談して、新しい RDL スキーマと互換性がある新しいバージョンのサードパーティ ベンダーの CRI をインストールする必要があります。  
   
@@ -195,9 +195,9 @@ ms.locfileid: "36177051"
 > [!NOTE]  
 >  システム管理者は、レポート サーバーでカスタム レポートをサポートするかどうかを選択します。 レポートで CRI を表示するには、CRI コンポーネントをレポートのプレビューのためにレポート作成クライアントに、およびパブリッシュまたはアップロードされたレポートを表示するためにレポート サーバーにインストールする必要があります。 詳細については、次を参照してください。[カスタム レポート アイテム](../custom-report-items/custom-report-items.md)とサード パーティのソフトウェア ベンダーのマニュアルをします。  
   
- 新しいレポート定義形式のレポート アイテムに変換できる CRI もあります。 変換できる Cri の一覧で、次を参照してください。 [Upgrading Reports](upgrade-reports.md)です。 次の一覧に従って、このレポートの CRI を変換するかどうかを決定します。  
+ 新しいレポート定義形式のレポート アイテムに変換できる CRI もあります。 変換できる Cri の一覧で、次を参照してください。[レポートのアップグレード](upgrade-reports.md)します。 次の一覧に従って、このレポートの CRI を変換するかどうかを決定します。  
   
--   **[する]** 可能であればレポート内のすべての CRI を変換する場合に、 **[する]** を選択します。 CRI でサポートされていない機能はアップグレードできません。レポート定義ファイルから削除されます。 サポートされていない機能の一覧で、次を参照してください。 [Upgrading Reports](upgrade-reports.md)です。 レポートを表示すると、CRI がレポートに表示される方法に違いが見られます。  
+-   **[する]** 可能であればレポート内のすべての CRI を変換する場合に、 **[する]** を選択します。 CRI でサポートされていない機能はアップグレードできません。レポート定義ファイルから削除されます。 サポートされていない機能の一覧で、次を参照してください。[レポートのアップグレード](upgrade-reports.md)します。 レポートを表示すると、CRI がレポートに表示される方法に違いが見られます。  
   
 -   **[しない]** レポートの CRI を変換しない場合に **[しない]** を選択します。 現在のバージョンでは、レポート プロセッサはこれらの CRI を表示できません。 システム管理者が、サードパーティのソフトウェア ベンダーから新しいレポート定義形式と互換性のある CRI の新しいバージョンのインストールを計画している場合、 **しない**を選択する必要があります。 新しいバージョンが使用可能になるまで、CRI はレポート内で赤い X のある空白テキスト ボックスとして表示されます。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "36177051"
 ## <a name="see-also"></a>参照  
  [Reporting Services のアップグレードと移行](upgrade-and-migrate-reporting-services.md)   
  [SQL Server 2014 における SQL Server Reporting Services における重大な変更](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
- [SQL Server 2014 における SQL Server Reporting services の動作の変更します。](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+ [SQL Server 2014 における SQL Server Reporting Services の動作変更します。](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
  [SQL Server Reporting Services SQL Server 2014 で廃止された機能](../discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
  [カスタム レポート アイテム](../custom-report-items/custom-report-items.md)   
  [レポート サーバー データベースのアップグレード](upgrade-a-report-server-database.md)  

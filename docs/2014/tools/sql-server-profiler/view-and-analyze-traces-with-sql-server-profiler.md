@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], viewing traces
 - SQL Server Profiler, viewing traces
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 68f437a636e9b6385d1a797114111210c5d30fd7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9f6d3051af96c963c65496f1e10dabd8ae035d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286451"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>SQL Server Profiler を使用したトレースの表示と分析
   トレースにキャプチャされたイベント データを表示するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、定義されたトレース プロパティに基づいてデータが表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータを分析するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーなどの別のプログラムにデータをコピーする方法があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーは、 **Text** データ列がトレースに含まれている場合、SQL バッチおよびリモート プロシージャ コール (RPC) のイベントを含んだトレース ファイルを使用できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーで使用する適切なイベントと列がキャプチャされるようにするには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]に付属の定義済みチューニング テンプレートを使用します。  

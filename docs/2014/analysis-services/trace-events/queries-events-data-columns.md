@@ -1,5 +1,5 @@
 ---
-title: イベントのデータ列を照会 |Microsoft ドキュメント
+title: イベントのデータ列のクエリ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 174fa26fd7ed7105c14514b216f02d85224fcf82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0577680218a6059a0a14a5232fd328131e0f69c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310462"
 ---
 # <a name="queries-events-data-columns"></a>Queries イベントのデータ列
   Queries イベントのイベント カテゴリには、次のイベント クラスがあります。  
@@ -38,7 +38,7 @@ ms.locfileid: "36071545"
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|1|1|次のイベント サブクラスは、各イベント クラスに関する追加情報を提供します。<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
+|EventSubclass|1|1|次のイベント サブクラスでは、各イベント クラスに関する追加情報を提供します。<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
 |CurrentTime|2|5|イベントの現在の時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントが開始された時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |ConnectionID|25|1|Query イベントに関連付けられた一意の接続 ID を表します。|  
@@ -60,7 +60,7 @@ ms.locfileid: "36071545"
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|1|1|次のイベント サブクラスは、各イベント クラスに関する追加情報を提供します。<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
+|EventSubclass|1|1|次のイベント サブクラスでは、各イベント クラスに関する追加情報を提供します。<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
 |CurrentTime|2|5|イベントの現在の時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントが開始された時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントが終了した時刻を表します。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  

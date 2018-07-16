@@ -1,5 +1,5 @@
 ---
-title: データ ソース ビュー (Analysis Services) でプロパティを変更 |Microsoft ドキュメント
+title: データ ソース ビュー (Analysis Services) のプロパティの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - friendly names [Analysis Services]
 - names [Analysis Services], data source views
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c740690921e496cffc70959e0494bcdfb190b16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f264928a8abde5e20738b0fb60d712aa9bef2320
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332512"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>データ ソース ビューのプロパティの変更 (Analysis Services)
   データ ソース ビュー ウィザードを使用してデータ ソース ビューを定義し、テーブル、ビュー、名前付き計算、および名前付きクエリをデータ ソース ビューに追加した後、以下の項目に関するプロパティを変更できます。  
@@ -84,7 +84,7 @@ ms.locfileid: "36177620"
 |名前|基になる列の名前、または名前付き計算の名前を指定します。 **Name** プロパティは、名前付き計算を基にして属性を定義するときに、OLAP およびデータ マイニング オブジェクトによって使用されます。 このプロパティは、名前付き計算に対してのみ編集できます。|  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル内のデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
- [データ ソース ビュー デザイナーでのダイアグラムの作業&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
+ [データ ソース ビュー デザイナーのダイアグラムの使用&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

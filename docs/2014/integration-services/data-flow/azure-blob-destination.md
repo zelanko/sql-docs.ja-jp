@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpblobdest.f1
 - sql11.dts.designer.afpblobdest.f1
@@ -16,16 +16,16 @@ ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7ba7b3a14fcd6942865033772bf065c8e3215285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55ea235280d398cbbac0d585f3f155252ea5e993
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281938"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob Destination
-  **Azure Blob Destination** コンポーネントは、SSIS パッケージが Azure Blob にデータを書き込めるようにします。 サポートされるファイル形式は、CSV および AVRO です。 ドラッグ アンド ドロップ**Azure Blob Destination**をデータ フロー デザイナーをダブルクリックし、エディターを参照してください)。  
+  **Azure Blob Destination** コンポーネントは、SSIS パッケージが Azure Blob にデータを書き込めるようにします。 サポートされるファイル形式は、CSV および AVRO です。 ドラッグ アンド ドロップ**Azure Blob Destination**をデータ フロー デザイナーとをダブルクリックしてエディターを参照してください)。  
   
 1.  **[Azure storage connection manager]** (Azure Storage 接続マネージャー) フィールドに、既存の Azure Storage 接続マネージャーを指定するか、または Azure Storage アカウントを参照する新しい Azure Storage 接続マネージャーを作成します。  
   

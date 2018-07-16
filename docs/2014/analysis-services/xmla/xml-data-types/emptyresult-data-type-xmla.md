@@ -1,5 +1,5 @@
 ---
-title: EmptyResult データ型 (XMLA) |Microsoft ドキュメント
+title: EmptyResult データ型 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - EmptyResult data type
 ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bba727b2d7d612fa59c99665bd16d936da137fb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea04f2f170a61bafed2fa06cdb3260668120899c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257158"
 ---
 # <a name="emptyresult-data-type-xmla"></a>EmptyResult データ型 (XMLA)
-  表す派生データ型を定義、[ルート](../xml-elements-properties/root-element-xmla.md)要素からデータを返さない、 [Discover](../xml-elements-methods-discover.md)または[Execute](../xml-elements-methods-execute.md)メソッドの呼び出しです。  
+  表す派生データ型を定義、[ルート](../xml-elements-properties/root-element-xmla.md)からデータを返さない要素、 [Discover](../xml-elements-methods-discover.md)または[Execute](../xml-elements-methods-execute.md)メソッドの呼び出し。  
   
- **Namespace** urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql}-分析: 空  
+ **Namespace** urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-分析: 空  
   
 ## <a name="syntax"></a>構文  
   

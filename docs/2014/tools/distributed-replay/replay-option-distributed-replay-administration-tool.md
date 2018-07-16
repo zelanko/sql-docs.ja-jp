@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e9829a1b3df098be4637921bb9b779635d24376b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d45768608e170a4fe11b2279232c9479f02bad20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308942"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>replay オプション (Distributed Replay 管理ツール)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 管理ツール、 `DReplay.exe`、distributed replay controller と通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **replay** コマンド ライン オプションとそれに対応する構文について説明します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 管理ツール、 `DReplay.exe`、分散再生コント ローラーとの通信に使用できるコマンド ライン ツールです。 このトピックでは、 **replay** コマンド ライン オプションとそれに対応する構文について説明します。  
   
  **replay** オプションはイベント再生段階を開始します。ここでは、コントローラーは、指定されたクライアントに再生データをディスパッチし、分散再生を開始して、クライアントを同期します。 必要に応じて、再生に参加している各クライアントは再生アクティビティを記録し、結果トレース ファイルをローカルに保存できます。  
   
@@ -161,7 +161,7 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 ## <a name="see-also"></a>参照  
  [トレース データの再生](replay-trace-data.md)   
  [再生結果の確認](review-the-replay-results.md)   
- [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [SQL Server 分散再生](sql-server-distributed-replay.md)   
  [分散再生の構成](configure-distributed-replay.md)   
  [SQL Server Distributed Replay フォーラム](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
  [分散再生を使用した SQL Server のロード テスト – パート 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   

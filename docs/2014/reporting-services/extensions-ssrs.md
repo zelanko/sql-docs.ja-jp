@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17b923177aed9583b3757baadce00b6a1aa01038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9f51af9131329a37be6772310dd2817e4f62fd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282938"
 ---
 # <a name="extensions-ssrs"></a>拡張機能 (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート サーバーでは、拡張機能を使用して、認証、データ処理、レポート表示、およびレポート配信で使用できる入力または出力の種類をモジュール化します。 これにより、既存の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インストールで、業界の新しいソフトウェア標準 (新しい認証方法やカスタム データ ソースの種類など) を簡単に利用できます。 レポート サーバーは、カスタム認証拡張機能、データ処理拡張機能、レポート処理拡張機能、表示拡張機能、配信拡張機能、およびユーザーが RSReportServer.config 構成ファイルで構成できる拡張機能をサポートします。 たとえば、レポート ビューアーで使用できるエクスポート形式を制限できます。 レポート サーバーには、少なくとも 1 つの認証拡張機能、データ処理拡張機能、および表示拡張機能が必要です。 配信拡張機能とレポート処理拡張機能は省略可能ですが、レポートの配信またはカスタム コントロールをサポートする場合は必須です。  
@@ -59,7 +59,7 @@ ms.locfileid: "36177936"
 ## <a name="rendering-extensions"></a>表示拡張機能  
  表示拡張機能は、レポート プロセッサのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTML、Excel、CSV、XML、Image、PDF、および [!INCLUDE[msCoName](../includes/msconame-md.md)] Word の 7 つの表示拡張機能が含まれています。  
   
--   **HTML 表示拡張機能** Web ブラウザーを使用してレポート サーバーのレポートを要求すると、レポート サーバーは HTML 表示拡張機能を使用してレポートを表示します。 HTML 表示拡張機能では、すべての HTML が UTF-8 エンコードを使用して生成されます。 詳細については、次を参照してください[HTML に表示する&#40;レポート ビルダーおよび SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md)と[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+-   **HTML 表示拡張機能** Web ブラウザーを使用してレポート サーバーのレポートを要求すると、レポート サーバーは HTML 表示拡張機能を使用してレポートを表示します。 HTML 表示拡張機能では、すべての HTML が UTF-8 エンコードを使用して生成されます。 詳細については、次を参照してください[HTML にレンダリング&#40;レポート ビルダーおよび SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md)と[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)。.  
   
 -   **Excel 表示拡張機能** Excel 表示拡張機能は、 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 以降のバージョンで表示および変更可能なレポートを表示します。 この表示拡張機能は、バイナリ交換ファイル形式 (BIFF) でファイルを作成します。 BIFF は、Excel データのネイティブなファイル形式です。 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] で表示されたレポートは、スプレッドシートで利用できる機能をすべてサポートします。 詳細については、「[Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」を参照してください。  
   

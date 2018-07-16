@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
 - Windows Event log provider [Integration Services]
@@ -27,13 +27,13 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9611d78d6b94038511b29577aca5aaefb36366d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2656998d20bec2d0133a7158a3695f4163943181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291048"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージ、コンテナー、およびタスクにログ記録を実装するために使用できる、ログ プロバイダーが含まれています。 ログ記録を行うと、パッケージに関する実行時の情報をキャプチャできるので、パッケージを実行するたびに監査やトラブルシューティングに役立ちます。 たとえば、パッケージを実行した演算子の名前と、パッケージの開始および完了時刻をログにキャプチャできます。  
@@ -56,7 +56,7 @@ ms.locfileid: "36166109"
     > [!NOTE]  
     >  64 ビット モードで実行されているパッケージでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のログ プロバイダーを使用できません。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ プロバイダーは、ログ エントリを書き込みます、`sysssislog`テーブルに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ エントリを書き込むログ プロバイダー、`sysssislog`テーブルに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
   
 -   Windows イベント ログのログ プロバイダー。エントリを、ローカル コンピューター上にある Windows イベント ログのアプリケーション ログに書き込みます。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "36166109"
 ### <a name="configuration-of-log-provider"></a>ログ プロバイダーの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- ログ プロバイダーは、パッケージにログ記録を実装する手順の中で作成して構成します。 詳細については、次を参照してください。 [Integration Services のログ記録](integration-services-ssis-logging.md)です。  
+ ログ プロバイダーは、パッケージにログ記録を実装する手順の中で作成して構成します。 詳細については、次を参照してください。 [Integration Services のログ記録](integration-services-ssis-logging.md)します。  
   
  ログ プロバイダーを作成した後にプロパティを表示および変更するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のプロパティ ウィンドウを使用します。  
   

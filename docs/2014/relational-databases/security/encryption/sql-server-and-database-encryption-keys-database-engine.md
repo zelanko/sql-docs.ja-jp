@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03e1b85250115c3deb8b1615782c3e64c896bed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7a7e5c9979dfe42b956a90eb61d1a03a9ef65181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234892"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server とデータベースの暗号化キー (データベース エンジン)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、暗号化キーを使用して、サーバー データベースに格納されているデータ、資格情報、および接続情報のセキュリティを保護します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *対称* と *非対称*の 2 種類のキーがあります。 対称キーでは、データの暗号化と暗号化解除に同じパスワードが使用されます。 非対称キーでは、データを暗号化するパスワード ( *公開* キー) とデータの暗号化を解除するパスワード ( *秘密* キー) が使い分けられます。  
@@ -35,9 +34,9 @@ ms.locfileid: "36164525"
   
  データベース マスター キーは対称キーで、証明書の秘密キーやデータベース内にある非対称キーを保護するときに使用されます。 このキーはデータの暗号化にも使用できますが、長さに制限があるため、対称キーに比べるとデータに対する実用性は低くなります。  
   
- このマスター キーは、その作成時に、トリプル DES アルゴリズムとユーザー指定のパスワードを使用して暗号化されます。 マスター キーの暗号化を自動的に解除できるように、SMK を使用してこのキーのコピーが暗号化されます。 使用される場所とは、両方のデータベースに格納されて、`master`システム データベースです。  
+ このマスター キーは、その作成時に、トリプル DES アルゴリズムとユーザー指定のパスワードを使用して暗号化されます。 マスター キーの暗号化を自動的に解除できるように、SMK を使用してこのキーのコピーが暗号化されます。 これが使用される場合とは、データベースの両方に格納されて、`master`システム データベースです。  
   
- 格納された DMK のコピー、`master`システム データベースは、DMK が変更されるたびに暗黙的に更新します。 ただし、この既定値を使用して、`DROP ENCRYPTION BY SERVICE MASTER KEY`のオプション、`ALTER MASTER KEY`ステートメントです。 サービス マスター キーで暗号化されていない DMK を開くには、`OPEN MASTER KEY` ステートメントとパスワードを使用する必要があります。  
+ 格納された DMK のコピー、`master`システム データベースは、DMK が変更されるたびに暗黙的に更新します。 ただし、この既定値を使用して変更できます、`DROP ENCRYPTION BY SERVICE MASTER KEY`のオプション、`ALTER MASTER KEY`ステートメント。 サービス マスター キーで暗号化されていない DMK を開くには、`OPEN MASTER KEY` ステートメントとパスワードを使用する必要があります。  
   
 ## <a name="managing-sql-server-and-database-keys"></a>SQL Server およびデータベースのキーの管理  
  暗号化キーの管理は、新しいデータベース キーの作成、サーバーおよびデータベースのキーのバックアップ作成、およびキーの復元、削除、変更のタイミングと方法を把握することによって行われます。  

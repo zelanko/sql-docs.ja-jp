@@ -1,5 +1,5 @@
 ---
-title: BackupRemotePartitions 要素 (XMLA) |Microsoft ドキュメント
+title: BackupRemotePartitions 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - BackupRemotePartitions element
 ms.assetid: bd68bcf9-b324-4fa8-b6e5-1f5531f9992c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c32fd50514e96fee8de289666d8e559a78fe985b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d7cc7ccb441995d1c4aa3b22cccefcdc5224e486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200072"
 ---
 # <a name="backupremotepartitions-element-xmla"></a>BackupRemotePartitions 要素 (XMLA)
-  決定するかどうか、親[バックアップ](../xml-elements-commands/backup-element-xmla.md)コマンドは、オブジェクトに関連付けられているリモート パーティションをバックアップします。  
+  決定かどうか、親[バックアップ](../xml-elements-commands/backup-element-xmla.md)コマンドは、オブジェクトに関連付けられているリモート パーティションをバックアップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36178296"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `BackupRemotePartitions` が `True` に設定されている場合、1 つ以上の `Locations` 要素を含む `Location` 要素が `Backup` コマンド内に含まれている必要があります。そうでない場合、エラーが発生します。 バックアップと、リモート パーティションの復元の詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)です。  
+ `BackupRemotePartitions` が `True` に設定されている場合、1 つ以上の `Locations` 要素を含む `Location` 要素が `Backup` コマンド内に含まれている必要があります。そうでない場合、エラーが発生します。 バックアップおよびリモート パーティションを復元する詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Locations 要素&#40;XMLA&#41;](locations-element-xmla.md)   

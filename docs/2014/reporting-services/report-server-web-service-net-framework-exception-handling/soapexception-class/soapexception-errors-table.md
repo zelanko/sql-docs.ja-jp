@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9c7b436618a036e59c5ddbf6f2f435092d01111
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fcb2e8e6b515fceedf106fd7cbf9ce3773e0c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176354"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280518"
 ---
 # <a name="soapexception-errors-table"></a>SoapException エラー テーブル
   レポート サーバーでは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] で発生するエラーに基づいて、SOAP 例外のエラーとエラー メッセージが生成されます。 次の表は、レポート サーバー Web サービスの **SoapException** を使用してメソッドからアクセスできるエラーを示します。 例外をスローする 1 つまたは複数のメソッド別に分類されています。  

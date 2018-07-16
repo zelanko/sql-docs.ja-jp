@@ -1,11 +1,11 @@
 ---
-title: .NET Framework での SQL Server データ型 |Microsoft ドキュメント
+title: .NET Framework での SQL Server データ型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,16 +22,16 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fe3a5c99e2c1e9bf569ecdbb1ab31d683d340206
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ed5a1608807d1a05638ee1854ff6676c4cdc7db6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702053"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350194"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework での SQL Server データ型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **SqlTypes**ライブラリの基底クラス ライブラリの一部である、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET フレームワークです。 このライブラリには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータ型と同じセマンティクスと有効桁数を備えたデータ型が用意されています。 このトピックは、.NET Framework プログラマにとっては新しいセマンティクスについて説明し、実装されている型が導入されています、 **System.Data.SqlTypes**に含まれている名前空間、 **System.Data**ライブラリです。  
+  **SqlTypes**ライブラリの基本クラス ライブラリの一部である、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework です。 このライブラリには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータ型と同じセマンティクスと有効桁数を備えたデータ型が用意されています。 このトピックでは、.NET Framework のプログラマにとって新しいセマンティクスについて説明し、実装の種類が導入されて、 **System.Data.SqlTypes**名前空間に含まれている、 **System.Data**ライブラリ。  
   
  このセクションのトピックでは、次の内容について説明します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "35702053"
  [照合順序と CLR 統合データ型](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  CLR 統合での照合順序の扱い方について説明します。  
   
- [ラージ オブジェクトを処理&#40;LOB&#41; 、CLR でのパラメーター](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [ラージ オブジェクトを処理&#40;LOB&#41; CLR でのパラメーター](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と CLR の間で LOB 型を渡す方法について説明します。  
   
  [CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  

@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62f1bd69d60fb7a0c919b07a8582d28a08e666e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3c7b01d8238c4e82fd66dd7bba85d47ae2bbe83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309392"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML データ型の変数と列の作成
-  `xml`データ型は、組み込みのデータ型で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などと他の組み込み型に類似したおよび`int`と`varchar`です。 他の組み込み型にも使用できるように、`xml`変数の型、パラメーターの型、関数の戻り値の型、またはテーブルを作成するときに、データ型列の型として[CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)です。  
+  `xml`データ型は組み込みのデータ型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などの他の組み込み型に少し似ていますが、`int`と`varchar`します。 他の組み込み型で使用できるように、`xml`変数の型、パラメーターの型、関数の戻り値の型、またはテーブルを作成するときに、データ型列の型として[CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)します。  
   
 ## <a name="creating-columns-and-variables"></a>列と変数の作成  
  テーブルの一部として `xml` 型の列を作成するには、 `CREATE TABLE` ステートメントを使用します。次に例を示します。  
@@ -57,7 +57,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 ## <a name="assigning-defaults"></a>既定の XML の割り当て  
  テーブル内で、`xml` 型の列に、既定の XML インスタンスを割り当てることができます。 既定の XML を割り当てるには、XML 定数を使用する方法と、`xml` 型への明示的なキャストを使用する方法の 2 つがあります。  
   
- 既定の XML を XML 定数として割り当てるには、次の例の構文を使用します。 文字列は暗黙的にキャスト注`xml`型です。  
+ 既定の XML を XML 定数として割り当てるには、次の例の構文を使用します。 注、文字列は暗黙的にキャストされる`xml`型。  
   
 ```  
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
@@ -95,7 +95,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- ラップするラッパー、ユーザー定義関数を作成するのには、制約を使用する代わりに、`xml`データがメソッドを入力し、次の例で示すように、check 制約でユーザー定義関数を指定します。  
+ 制約を使用する代わりに、ラップするラッパー、ユーザー定義関数を作成する、`xml`データは、メソッドを入力し、次の例に示すように、check 制約で、ユーザー定義関数を指定します。  
   
  次の例では、 `Col2` 列に対して、保存する各 XML インスタンスには `<ProductDescription>` 属性を持つ `ProductID` 要素が必要であるという制約を指定します。 この制約は、次のユーザー定義関数によって適用されます。  
   
@@ -131,7 +131,7 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>同じテーブルと別のテーブル  
- `xml`を他のリレーショナル列を含むテーブルまたは別のテーブルと、メインのテーブルに外部キー リレーションシップには、データ型の列を作成することができます。  
+ `xml`他にリレーショナル列を含むテーブルで、またはメイン テーブルに外部キー リレーションシップを持つ別のテーブルで、データ型の列を作成できます。  
   
  作成、`xml`次の条件のいずれかが true の場合は、同じテーブル内のデータ型の列。  
   
@@ -139,9 +139,9 @@ INSERT INTO T values(1,'<Product />')
   
 -   `xml` データ型の列に XML インデックスを作成するときに、メイン テーブルの主キーがクラスター化キーと同一である場合。 詳細については、「[XML インデックス &#40;SQL Server&#41;](xml-indexes-sql-server.md)」をご覧ください。  
   
- 作成、`xml`場合は、次の条件に該当する別のテーブルにデータ型の列。  
+ 作成、`xml`次の条件に該当する場合、別のテーブルにデータ型の列。  
   
--   XML インデックスを作成する、`xml`メイン テーブルの主キーですが、データ型の列がクラスター化キーと異なるかメイン テーブルには、主キーがありませんかメイン テーブルがヒープ (クラスター化キーがありません)。 メイン テーブルが既に存在する場合、これに該当している可能性があります。  
+-   XML インデックスを作成する、`xml`メイン テーブルの主キーのデータ型の列は、クラスター化キーと異なるまたはメイン テーブルには、主キーではありません。 または、メイン テーブルがヒープ (クラスター化キーがありません)。 メイン テーブルが既に存在する場合、これに該当している可能性があります。  
   
 -   テーブルに XML 列が存在することでテーブル スキャンが遅くなるのを避ける場合。 テーブル スキャンは、XML が行内に保存されていても行外に保存されていても領域を消費します。  
   

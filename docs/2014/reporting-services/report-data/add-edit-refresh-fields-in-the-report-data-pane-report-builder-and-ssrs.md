@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4aaf0727bdd7a41de570080751a4b93cfaccc89e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e082a4fa3062ffff5fd4ee46460d4f7ec8020561
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307032"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>レポート データ ペインでのフィールドの追加、編集、更新 (レポート ビルダーおよび SSRS)
   データセット フィールドは、外部データ ソースにデータセット クエリを実行するときに返されるデータを表すフィールド名の組み込みのコレクションです。  

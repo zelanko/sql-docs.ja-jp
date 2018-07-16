@@ -1,12 +1,11 @@
 ---
-title: CLR 統合のセキュリティ |Microsoft ドキュメント
+title: CLR 統合のセキュリティ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - security [CLR integration]
@@ -18,12 +17,12 @@ caps.latest.revision: 55
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 73a8fbad7022a68f74d2c25c21bc9867c9953083
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8cef01a53327a0487119dd8c450da26f9fd0111c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700033"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352124"
 ---
 # <a name="clr-integration-security"></a>CLR 統合のセキュリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +30,9 @@ ms.locfileid: "35700033"
   
  CLR 統合のセキュリティ モデルは、次のことを目標にしています。  
   
--   既定で、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に対するマネージ ユーザー コードの実行によって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の整合性や安定性が損なわれることのないようにする。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の堅牢性を侵害する可能性のある操作の実行は、レベルの高い適切な権限によって保護されるようにする。  
+-   既定で、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に対するマネージド ユーザー コードの実行によって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の整合性や安定性が損なわれることのないようにする。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の堅牢性を侵害する可能性のある操作の実行は、レベルの高い適切な権限によって保護されるようにする。  
   
--   マネージ ユーザー コードは、データベース内のユーザー データや他のユーザー コードに対して、未承認のアクセスを行わない。 ユーザー定義コードは、そのコードを呼び出したユーザー セッションのセキュリティ コンテキストで実行する。実行には、そのセキュリティ コンテキストにおける適切な特権を使用する。  
+-   マネージド ユーザー コードは、データベース内のユーザー データや他のユーザー コードに対して、未承認のアクセスを行わない。 ユーザー定義コードは、そのコードを呼び出したユーザー セッションのセキュリティ コンテキストで実行する。実行には、そのセキュリティ コンテキストにおける適切な特権を使用する。  
   
 -   ユーザー コードからサーバー外部のリソースへのアクセスを禁止するための制御機能を備える。ユーザー コードの使用は、ローカル データのアクセスおよびコンピューティングに限定する。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "35700033"
  次の表は、このセクションのトピックを一覧表示します。  
   
  [CLR 統合のコード アクセス セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
- マネージ コードのコード アクセス セキュリティ (CAS) モデルについて説明します。  
+ マネージド コードのコード アクセス セキュリティ (CAS) モデルについて説明します。  
   
  [ホスト保護属性と CLR 統合プログラミング](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  SAFE アセンブリと EXTERNAL_ACCESS アセンブリで許可されていないホスト保護属性 (HPA) の値に関する情報を提供します。  
@@ -53,10 +52,10 @@ ms.locfileid: "35700033"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内のユーザー コードが相互に呼び出すしくみを説明します。  
   
  [権限借用と CLR 統合のセキュリティ](http://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
- 権限借用を使用してマネージ コードが外部リソースにアクセスするしくみを説明します。  
+ 権限借用を使用してマネージド コードが外部リソースにアクセスするしくみを説明します。  
   
  [部分的に信頼される呼び出し元の許容](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
- マネージ メソッドが別のアセンブリに含まれるクラスのメソッドを起動する際に生じる問題について説明します。  
+ マネージド メソッドが別のアセンブリに含まれるクラスのメソッドを起動する際に生じる問題について説明します。  
   
  [アプリケーション ドメインと CLR 統合のセキュリティ](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
  アセンブリがアプリケーション ドメインに読み込まれるしくみを説明します。  

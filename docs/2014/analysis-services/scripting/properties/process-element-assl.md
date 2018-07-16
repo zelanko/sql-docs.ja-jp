@@ -1,5 +1,5 @@
 ---
-title: 要素 (ASSL) の処理 |Microsoft ドキュメント
+title: 要素 (ASSL) の処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Process element
 ms.assetid: 4aa08718-be44-4781-92cf-7b32b20f862c
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ede9cf389f5aa559f3372b3f859819d7057d3f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1217cb2ba18a7eaad4b948821b1403e02274fbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289448"
 ---
 # <a name="process-element-assl"></a>Process 要素 (ASSL)
   ユーザーが親要素の所有者を処理できるかどうかを決定します。  
@@ -58,7 +58,7 @@ ms.locfileid: "36075588"
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[CubePermission](../objects/cubepermission-element-assl.md)、 [DatabasePermission](../objects/databasepermission-element-assl.md)、 [DimensionPermission](../objects/dimensionpermission-element-assl.md)、 [MiningModelPermission](../objects/miningmodelpermission-element-assl.md)、 [MiningStructurePermission](../objects/miningstructurepermission-element-assl.md)、[権限](../data-type/permission-data-type-assl.md)|  
+|親要素|[CubePermission](../objects/cubepermission-element-assl.md)、 [DatabasePermission](../objects/databasepermission-element-assl.md)、 [DimensionPermission](../objects/dimensionpermission-element-assl.md)、 [MiningModelPermission](../objects/miningmodelpermission-element-assl.md)、 [MiningStructurePermission](../objects/miningstructurepermission-element-assl.md)、[アクセス許可](../data-type/permission-data-type-assl.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  

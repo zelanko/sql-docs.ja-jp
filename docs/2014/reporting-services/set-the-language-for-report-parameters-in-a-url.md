@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - overriding report language settings
 - report servers [Reporting Services], language settings
@@ -20,13 +20,13 @@ ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bf842f016b7e442666bdf8e85f7a80693ef084e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7aefa58ba7e190df3656a13243a8133839c3b954
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306974"
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>URL でレポート パラメーターの言語を設定する
   *rs:ParameterLanguage* URL アクセス パラメーターは、カルチャが特定されたレポート パラメーター (日付、時刻、通貨、数値など) がブラウザーの言語を使用して解釈されるという問題を軽減します。 *rs:ParameterLanguage*を使用すると、URL はブラウザーとは無関係に解釈されるようになります。 たとえば、レポート サーバーの地域がドイツ語に設定されている場合、ユーザーが [英語 (U.S.)] に設定されているブラウザーを使用してレポートの URL にアクセスすると、レポート サーバーに渡されるパラメーター値は間違って解釈されます。  

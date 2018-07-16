@@ -1,13 +1,11 @@
 ---
-title: SqlContext オブジェクト |Microsoft ドキュメント
+title: SqlContext オブジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,26 +14,26 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea7cd3ca105fd599f3b157f64189210b539de4ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 46ff059b14d5937d1214e0d97ad9aa13083e7fd3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166090"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354014"
 ---
 # <a name="sqlcontext-object"></a>SqlContext オブジェクト
-  プロシージャや関数の呼び出し時、CLR (共通言語ランタイム) ユーザー定義型のメソッドの呼び出し時、または任意の [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 言語で定義されたトリガーの起動時には、サーバーのマネージ コードを呼び出します。 このコードの実行はユーザー接続の一環として要求されるので、サーバーで実行しているコードから呼び出し元のコンテキストにアクセスできる必要があります。 また、特定のデータ アクセス操作には、コードが呼び出し元のコンテキストで実行されている場合にしか有効にならないものもあります。 たとえば、トリガー操作で使用される inserted 擬似テーブルや deleted 擬似テーブルにアクセスするには、コードが呼び出し元のコンテキストで実行されている必要があります。  
+  プロシージャや関数の呼び出し時、CLR (共通言語ランタイム) ユーザー定義型のメソッドの呼び出し時、または任意の [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 言語で定義されたトリガーの起動時には、サーバーのマネージド コードを呼び出します。 このコードの実行はユーザー接続の一環として要求されるので、サーバーで実行しているコードから呼び出し元のコンテキストにアクセスできる必要があります。 また、特定のデータ アクセス操作には、コードが呼び出し元のコンテキストで実行されている場合にしか有効にならないものもあります。 たとえば、トリガー操作で使用される inserted 擬似テーブルや deleted 擬似テーブルにアクセスするには、コードが呼び出し元のコンテキストで実行されている必要があります。  
   
  呼び出し側のコンテキストは、`SqlContext` オブジェクト内で抽象化されています。 `SqlTriggerContext` メソッドおよびプロパティの詳細については、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK の `Microsoft.SqlServer.Server.SqlTriggerContext` クラスのリファレンス ドキュメントを参照してください。  
   
  `SqlContext` は、次のコンポーネントへのアクセスを提供します。  
   
--   `SqlPipe`: 結果をクライアントに送信するのに使用する "パイプ" を表す `SqlPipe` オブジェクト。 詳細については、`SqlPipe`オブジェクトを参照してください[SqlPipe オブジェクト](sqlpipe-object.md)です。  
+-   `SqlPipe`: 結果をクライアントに送信するのに使用する "パイプ" を表す `SqlPipe` オブジェクト。 詳細については、`SqlPipe`オブジェクトを参照してください[SqlPipe オブジェクト](sqlpipe-object.md)します。  
   
--   `SqlTriggerContext`: `SqlTriggerContext` オブジェクトは、CLR トリガー内でしか取得できません。 このオブジェクトでは、トリガーを起動した操作や、更新された列のマップについての情報を提供します。 詳細については、`SqlTriggerContext`オブジェクトを参照してください[SqlTriggerContext オブジェクト](sqltriggercontext-object.md)です。  
+-   `SqlTriggerContext`: `SqlTriggerContext` オブジェクトは、CLR トリガー内でしか取得できません。 このオブジェクトでは、トリガーを起動した操作や、更新された列のマップについての情報を提供します。 詳細については、`SqlTriggerContext`オブジェクトを参照してください[SqlTriggerContext オブジェクト](sqltriggercontext-object.md)します。  
   
 -   `IsAvailable`: `IsAvailable` プロパティはコンテキスト可用性を判断するために使用されます。  
   

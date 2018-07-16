@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], full
 - troubleshooting [SQL Server], full transaction log
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - full transaction logs [SQL Server]
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0adfc6e8f46a916244ddbaf81383ed8c3c169f1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b3fa89db4f8fb95ca1f2e912c6ee1d131808f42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254034"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>満杯になったトランザクション ログのトラブルシューティング (SQL Server エラー 9002)
   このトピックでは、トランザクション ログが満杯になった場合の対処法について説明し、今後トランザクション ログが満杯になるのを防ぐ方法を示します。 トランザクション ログが満杯になると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]から 9002 エラーが発行されます。 データベースがオンラインまたは復旧中の場合、ログが満杯になることがあります。 データベースがオンラインの時にログが満杯になると、データベースはオンラインのままですが、読み取り専用になり、更新できません。 復旧中にログが満杯になった場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりデータベースが RESOURCE PENDING としてマークされます。 いずれの場合も、ログ領域を使用可能にするためのユーザー操作が必要です。  
@@ -36,7 +35,7 @@ ms.locfileid: "36178437"
  トランザクション ログが満杯になった状況によっては、適切な対処法が異なる場合があります。 特定の条件でログの切り捨てができなくなっている原因を見つけるには、**sys.database** カタログ ビューの **log_reuse_wait** 列と **log_reuse_wait_desc** 列を使用します。 詳細については、「[sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)」を参照してください。 ログの切り捨てが遅れる要因については、「[トランザクション ログ &#40;SQL Server&#41;](the-transaction-log-sql-server.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  データベースの復旧中に、問題を解決したら、9002 エラーが発生した場合は、ALTER DATABASE を使用して、データベースを復旧*database_name*をオンラインに設定します。  
+>  場合は、データベースの復旧、問題を解決したら、9002 エラーが発生したときに、ALTER DATABASE を使用して、データベースを回復*database_name*をオンラインに設定します。  
   
  満杯になったトランザクション ログのその他の対処法には、以下があります。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "36178437"
 ### <a name="increasing-the-size-of-a-log-file"></a>ログ ファイルのサイズの拡張  
  ログ ディスク上に使用可能な領域がある場合、ログ ファイルのサイズを増やすことができます。 各ログ ファイルの最大サイズは、2 テラバイト (TB) です。  
   
- **ファイルのサイズを増やします**  
+ **ファイル サイズを大きくには**  
   
  自動拡張が無効に設定されており、データベースがオンラインで、ディスク上に十分な空き領域がある場合、次のいずれかを実行します。  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3476bc4e683fe254b2e2760220910a24445108c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0988cccd7bed4112c901c3d5b5954fb7e4a991b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318842"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>[機能依存プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[機能依存プロファイル要求]** のオプションを設定できます。 機能依存プロファイルは、ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているかを報告します。 また、このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 このプロファイルでは、郵便番号によって州が一意に決定されますが、依存関係の違反を検出できます。  

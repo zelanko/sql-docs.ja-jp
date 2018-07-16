@@ -1,5 +1,5 @@
 ---
-title: サービスのドメイン コント ローラーで、SQL Server 2008 にアップグレードするためのアカウントの要件 |Microsoft ドキュメント
+title: サービスのドメイン コント ローラー上の SQL Server 2008 にアップグレードするためのアカウントの要件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - domain controllers
 - service accounts
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - local service accounts
 ms.assetid: 574245b6-11e2-4849-b0ca-836d673ecd0d
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06b1143fc205b7afc933369abeed32d9599c7d5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9cc2ec39bee7f9a64d75ccf4753220f69693155b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301662"
 ---
 # <a name="service-account-requirements-for-upgrading-to-sql-server-2008-on-a-domain-controller"></a>ドメイン コントローラーで SQL Server 2008 へのアップグレードを実行するためのサービス アカウント要件
-  インスタンスを検出しました[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で Network Service や Local Service アカウントで実行されている、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]ドメイン コント ローラー。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ドメイン コントローラーに [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] がインストールされている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを Local Service アカウントまたは Network Service アカウントの特権を使用して実行することはできません。  
+  アップグレード アドバイザーのインスタンスを検出する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で Network Service や Local Service アカウントで実行されている、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]ドメイン コント ローラー。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ドメイン コントローラーに [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] がインストールされている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを Local Service アカウントまたは Network Service アカウントの特権を使用して実行することはできません。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

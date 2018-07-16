@@ -1,5 +1,5 @@
 ---
-title: アップグレード プロセスの概要 |Microsoft ドキュメント
+title: アップグレード プロセスの概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server
 - Upgrade Advisor [SQL Server], process description
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - upgrade process [Upgrade Advisor]
 ms.assetid: f77ffbab-a195-4124-acce-9c538f7ca9ce
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1cab41d5ec522964887237decdf426da3cf833d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cb54124a1646b65632a74db6d8c4cc9630e30046
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288258"
 ---
 # <a name="upgrade-process-overview"></a>アップグレード プロセスの概要
   ここでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] アップグレード アドバイザーのベスト プラクティス情報、および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするための推奨プロセスの概要について説明します。  
@@ -58,7 +58,7 @@ ms.locfileid: "36072261"
   
 ## <a name="see-also"></a>参照  
  [アップグレード アドバイザーを実行している&#40;ユーザー インターフェイス&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
- [レポートを使用します。](../../../2014/sql-server/install/using-reports.md)   
+ [レポートの使用](../../../2014/sql-server/install/using-reports.md)   
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

@@ -1,12 +1,11 @@
 ---
-title: CLR データベース オブジェクトのデータにアクセス |Microsoft ドキュメント
+title: CLR データベース オブジェクトからのデータ アクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], data access
@@ -26,19 +25,19 @@ caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1ff4b57fc7557fd2fd339e08b1529605d505cd44
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 590c5ec05efbb59c59cf307d98e589b42d69da47
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701843"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357674"
 ---
 # <a name="data-access-from-clr-database-objects"></a>CLR データベース オブジェクトからのデータ アクセス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  共通言語ランタイム (CLR) のルーチンは、のインスタンスに格納されたデータに簡単にアクセスが[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]でこれを実行する、リモート インスタンスに格納されているデータだけでなくです。 ルーチンからどのデータにアクセスできるかは、コードが実行されているユーザー コンテキストによって決まります。 .NET Framework Data Provider for を使用して CLR データベース オブジェクト内からデータにアクセス[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]も呼ばれるとして**SqlClient**です。 これは、開発者がマネージ クライアント アプリケーションや中間層アプリケーションから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データにアクセスする際に使用するプロバイダーと同じです。 このため、ADO.NET の知識を活用することができ、 **SqlClient**クライアントや中間層アプリケーションでします。  
+  共通言語ランタイム (CLR) のルーチンのインスタンスに格納されているデータにアクセスする簡単に[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]でこれを実行する、リモート インスタンスに格納されているデータだけでなく。 ルーチンからどのデータにアクセスできるかは、コードが実行されているユーザー コンテキストによって決まります。 .NET Framework Data Provider for を使用して CLR データベース オブジェクトからのデータにアクセス[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]とも呼ば**SqlClient**します。 これは、開発者がマネージド クライアント アプリケーションや中間層アプリケーションから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データにアクセスする際に使用するプロバイダーと同じです。 このため、ADO.NET の知識を活用することができますと**SqlClient**クライアントと中間層アプリケーション。  
   
 > [!NOTE]  
->  ユーザー定義型メソッドとユーザー定義関数では、既定ではデータ アクセスの実行が許可されていません。 設定する必要があります、 **DataAccess**プロパティ**SqlMethodAttribute**または**SqlFunctionAttribute**に**DataAccessKind.Read**を有効にするにはユーザー定義型 (UDT) のメソッドやユーザー定義関数からの読み取り専用データ アクセスします。 UDT またはユーザー定義関数によるデータ変更操作は許可されません。この操作を実行しようとすると、実行時に例外がスローされます。  
+>  ユーザー定義型メソッドとユーザー定義関数では、既定ではデータ アクセスの実行が許可されていません。 設定する必要があります、 **DataAccess**プロパティの**SqlMethodAttribute**または**SqlFunctionAttribute**に**DataAccessKind.Read**有効にするにはユーザー定義型 (UDT) のメソッドまたはユーザー定義関数からの読み取り専用データ アクセス。 UDT またはユーザー定義関数によるデータ変更操作は許可されません。この操作を実行しようとすると、実行時に例外がスローされます。  
   
  ここでは、CLR データベース オブジェクト内からデータにアクセスする際の機能や動作の具体的な違いについて説明します。 ADO.NET の機能の詳細については、.NET Framework SDK に付属の ADO.NET のドキュメントを参照してください。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "35701843"
  接続の権限借用および接続の資格情報について説明します。  
   
  [ADO.NET に対する SQL Server インプロセス固有の拡張機能](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
- プロセス内の固有の説明**SqlPipe**、 **SqlContext**、 **SqlTriggerContext**、および**SqlDataRecord**オブジェクト。  
+ プロセス内の特定について説明します**SqlPipe**、 **SqlContext**、 **SqlTriggerContext**、および**SqlDataRecord**オブジェクト。  
   
  [CLR 統合とトランザクション](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
  System.Transactions 名前空間で提供される新しいトランザクション フレームワークを ADO.NET および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 統合と統合する方法について説明します。  

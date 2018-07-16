@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 99a350febe4166293664e51a17978e66d7d25f97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ebbdf3a5f3f4402cca8da92295d5f9632d1e1e8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202552"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>グラフへの 3D 効果の追加 (レポート ビルダーおよび SSRS)
   3 次元 (3D) 効果を使用すると、グラフに奥行を与え、グラフの視覚的な効果を高めることができます。 たとえば、分割円グラフの特定のスライスを強調する場合は、そのスライスが最初に目に留まるように、グラフのパースペクティブを回転および変更することができます。 グラフに 3D 効果を適用すると、グラデーションの色および陰影のスタイルはすべて無効になります。  
@@ -33,15 +33,15 @@ ms.locfileid: "36178809"
   
 2.  **[3D オプション]** で、 **[3D の有効化]** チェック ボックスをオンにします。  
   
-3.  (省略可) **[3D オプション]** では、3D の角度とシーンのオプションに関連するさまざまなプロパティを設定できます。 これらのプロパティの詳細については、次を参照してください。 [3 d、傾斜、およびその他の効果グラフ&#40;レポート ビルダーおよび SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)です。  
+3.  (省略可) **[3D オプション]** では、3D の角度とシーンのオプションに関連するさまざまなプロパティを設定できます。 これらのプロパティの詳細については、次を参照してください。 [3 d、傾斜、およびその他の効果をグラフ&#40;レポート ビルダーおよび SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)します。  
   
-4.  **[OK]** をクリックします。  
+4.  [**OK**] をクリックします。  
   
 ### <a name="to-apply-3d-effects-to-a-funnel-chart"></a>じょうごグラフに 3D 効果を適用するには  
   
 1.  グラフ領域内の任意の場所を右クリックし、 **[3D 効果]** をクリックします。 **[グラフ領域のプロパティ]** ダイアログ ボックスが表示されます。  
   
-2.  **[3D オプション]** で、 **[3D の有効化]** チェック ボックスをオンにします。 **[OK]** をクリックします。  
+2.  **[3D オプション]** で、 **[3D の有効化]** チェック ボックスをオンにします。 [**OK**] をクリックします。  
   
 3.  (省略可) じょうごグラフの外観をカスタマイズするには、[プロパティ] ペインに移動し、じょうごグラフ固有のプロパティを変更できます。  
   
@@ -59,23 +59,23 @@ ms.locfileid: "36178809"
   
 1.  グラフ領域内の任意の場所を右クリックし、[3D 効果] をクリックします。 **[グラフ領域のプロパティ]** ダイアログ ボックスが表示されます。  
   
-2.  **[3D オプション]** で、 **[3D の有効化]** チェック ボックスをオンにします。 **[OK]** をクリックします。  
+2.  **[3D オプション]** で、 **[3D の有効化]** チェック ボックスをオンにします。 [**OK**] をクリックします。  
   
 3.  (省略可) **[回転]** ボックスに、円グラフの左右反転を表す整数値を入力します。  
   
 4.  (省略可) **[傾斜]** ボックスに、円グラフの上下反転の傾斜を表す整数値を入力します。  
   
-5.  **[OK]** をクリックします。  
+5.  [**OK**] をクリックします。  
   
 ### <a name="to-apply-3d-effects-to-a-bar-or-column-chart"></a>横棒グラフまたは縦棒グラフに 3D 効果を適用するには  
   
 1.  グラフ領域内の任意の場所を右クリックし、 **[3D 効果]** をクリックします。 **[グラフ領域のプロパティ]** ダイアログ ボックスが表示されます。  
   
-2.  **[3D の有効化]** オプションをオンにします。 **[OK]** をクリックします。  
+2.  **[3D の有効化]** オプションをオンにします。 [**OK**] をクリックします。  
   
 3.  (省略可) **[系列のクラスタリングを有効にする]** チェック ボックスをオンにします。 グラフに横棒グラフまたは縦棒グラフの系列が複数含まれている場合、このチェック ボックスをオンにすると系列がクラスター化されて表示されます。 既定では、横棒グラフまたは縦棒グラフの複数の系列は並んで表示されます。  
   
-4.  **[OK]** をクリックします。  
+4.  [**OK**] をクリックします。  
   
 5.  (省略可) 横棒グラフまたは縦棒グラフに円柱の効果を追加するには、次の手順を実行します。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36178809"
     4.  **[DrawingStyle]** プロパティで、値に **[Cylinder]** を指定します。  
   
 ## <a name="see-also"></a>参照  
- [3 D、傾斜、およびその他のグラフ効果&#40;レポート ビルダーおよび SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [3 D、傾斜、およびその他の効果をグラフ&#40;レポート ビルダーおよび SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
   

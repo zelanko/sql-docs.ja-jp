@@ -1,5 +1,5 @@
 ---
-title: MSRS 2014 Web Service と MSRS 2014 Windows Service パフォーマンス オブジェクト (ネイティブ モード) のパフォーマンス カウンター |Microsoft ドキュメント
+title: MSRS 2014 Web Service と MSRS 2014 Windows Service パフォーマンス オブジェクト (ネイティブ モード) のパフォーマンス カウンター |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - Report Server Web service, performance counters
@@ -20,16 +20,16 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2606c760b03225a5cbb9d82db0aecd18ef4753ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99e19d3cf5ead97dca19e982b6d9255b296c8d93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150123"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>MSRS 2014 Web Service と MSRS 2014 Windows Service パフォーマンス オブジェクト (ネイティブ モード) のパフォーマンス カウンター
-  このトピックはパフォーマンス カウンターについて説明、`MSRS 2014 Web Service`と`MSRS 2014 Windows Service`パフォーマンス オブジェクト  
+  このトピックでのパフォーマンス カウンターの説明、`MSRS 2014 Web Service`と`MSRS 2014 Windows Service`パフォーマンス オブジェクト  
   
 > [!NOTE]  
 >  これらのパフォーマンス オブジェクトは、ローカル レポート サーバー上のイベントを監視します。 スケールアウト配置でレポート サーバーを実行している場合、カウントはスケールアウト配置ではなく、現在のサーバーに適用されます。  
@@ -49,7 +49,7 @@ ms.locfileid: "36176115"
 -   [PowerShell コマンドレットを使用して一覧を取得する](#bkmk_powershell)  
   
 ##  <a name="bkmk_webservice"></a> MSRS 2014 Web Service パフォーマンス カウンター  
- `MSRS 2014 Web Service` パフォーマンス オブジェクトは、レポート サーバーのパフォーマンスを監視します。 このパフォーマンス オブジェクトには複数のカウンターが含まれ、主に対話的なレポート表示操作によって開始されるレポート サーバー処理の追跡に使用されます。 すべてのインスタンスに、カウンターを適用するには、このカウンターをセットアップするときに[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]または特定のインスタンスを選択することができます。 これらのカウンターをリセットするたびに[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]レポート サーバー Web サービスを停止します。  
+ `MSRS 2014 Web Service` パフォーマンス オブジェクトは、レポート サーバーのパフォーマンスを監視します。 このパフォーマンス オブジェクトには複数のカウンターが含まれ、主に対話的なレポート表示操作によって開始されるレポート サーバー処理の追跡に使用されます。 すべてのインスタンスに、カウンターを適用するには、このカウンターをセットアップするときに[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]または特定のインスタンスを選択できます。 これらのカウンターがリセットされるたびに[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]レポート サーバー Web サービスを停止します。  
   
  次の表に含まれているカウンターの一覧、`MSRS 2014 Web Service`パフォーマンス オブジェクトです。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36176115"
 |`Memory Cache Misses/Sec`|メモリ内キャッシュからレポートを取得できなかった 1 秒あたりの回数。|  
 |`Next Session Requests/Sec`|既存のセッション内 (セッション スナップショットから表示されるレポートなど) で開いているレポートに対する 1 秒あたりの要求の数。|  
 |`Report Requests`|現在アクティブで、レポート サーバーで管理されているレポートの数。|  
-|`Reports Executed/Sec`|レポート実行に成功した 1 秒あたりの回数。 このカウンターでは、レポートのボリュームに関する統計を取得できます。 このカウンターを使用して`Request/Sec`キャッシュから返されるレポート要求をレポートの実行を比較します。|  
+|`Reports Executed/Sec`|レポート実行に成功した 1 秒あたりの回数。 このカウンターでは、レポートのボリュームに関する統計を取得できます。 このカウンターを使用して、`Request/Sec`キャッシュから返される要求をレポートにレポートの実行を比較します。|  
 |`Requests/Sec`|レポート サーバーに対して行われる 1 秒あたりの要求数。 このカウンターでは、レポート サーバーによって管理されるすべての種類の要求を追跡します。|  
 |`Total Cache Hits`|サービスの開始後に行われたキャッシュからのレポート要求の総数。 このカウンターは、 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] によってレポート サーバー Web サービスが停止すると必ずリセットされます。|  
 |`Total Cache Hits (Semantic Models)`|サービスの開始後に行われたキャッシュからのモデル要求の総数。 このカウンターは、ASP.NET によってレポート サーバー Web サービスが停止すると必ずリセットされます。|  
@@ -79,7 +79,7 @@ ms.locfileid: "36176115"
 |`Total Requests`|サービスの開始後、レポート サーバーに対して行われたすべての要求の総数。 このカウンターは、 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] によってレポート サーバー Web サービスが停止すると必ずリセットされます。|  
   
 ##  <a name="bkmk_windowsservice"></a> MSRS 2014 Windows Service パフォーマンス カウンター  
- `MSRS 2014 Windows Service`パフォーマンス オブジェクトは、レポート サーバー Windows サービスを監視します。 このパフォーマンス オブジェクトには複数のカウンターが含まれ、スケジュールされた操作を介して開始されるレポート処理の追跡に使用されます。 スケジュールされた操作には、サブスクリプションと配信、レポート実行スナップショット、およびレポート履歴を含めることができます。 すべてのインスタンスに、カウンターを適用するには、このカウンターをセットアップするときに[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]または特定のインスタンスを選択することができます。  
+ `MSRS 2014 Windows Service`パフォーマンス オブジェクトは、レポート サーバー Windows サービスを監視します。 このパフォーマンス オブジェクトには複数のカウンターが含まれ、スケジュールされた操作を介して開始されるレポート処理の追跡に使用されます。 スケジュールされた操作には、サブスクリプションと配信、レポート実行スナップショット、およびレポート履歴を含めることができます。 すべてのインスタンスに、カウンターを適用するには、このカウンターをセットアップするときに[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]または特定のインスタンスを選択できます。  
   
  次の表に含まれているカウンターの一覧、`MSRS 2014 Windows Service`パフォーマンス オブジェクトです。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36176115"
 |`Cache Misses/Sec`|キャッシュからレポートを返すことに失敗した 1 秒あたりの要求数。 このカウンターは、キャッシュに使用するリソース (ディスクまたはメモリ) が十分であるかどうかを判断する場合に使用します。|  
 |`Cache Misses/Sec (Semantic Models)`|キャッシュからモデルを返すことに失敗した 1 秒あたりの要求数。 このカウンターは、キャッシュに使用するリソース (ディスクまたはメモリ) が十分であるかどうかを判断する場合に使用します。|  
 |`Delivers/Sec`|1 秒間に任意の配信拡張機能からレポートが配信される回数です。|  
-|`Events/Sec`|1 秒間に処理されるイベントの数です。 イベントを監視するには、`SnapshotUpdated`と`TimedSubscription`です。|  
+|`Events/Sec`|1 秒間に処理されるイベントの数です。 監視されているイベントが含まれます`SnapshotUpdated`と`TimedSubscription`します。|  
 |`First Session Requests/Sec`|1 秒あたりに作成された新しいレポート実行セッションの数。|  
 |`Memory Cache Hits/Sec`|メモリ内キャッシュからレポートが取得される 1 秒あたりの回数。 *メモリ内キャッシュ* は、CPU メモリにレポートを格納するキャッシュの一部です。 メモリ内キャッシュが使用されると、レポート サーバーでは、キャッシュ済みコンテンツに対して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのクエリが実行されません。|  
 |`Memory Cache Misses/Sec`|メモリ内キャッシュからレポートが取得できない 1 秒あたりの回数です。|  
@@ -102,10 +102,10 @@ ms.locfileid: "36176115"
 |`Requests/Sec`|1 秒間にレポート サーバー サービスが正常に処理した要求の総数。|  
 |`Snapshot Updates/Sec`|1 秒あたりのレポート実行スナップショットの更新回数の合計。|  
 |`Total App Domain Recycles`|レポート サーバー Windows サービス開始後のアプリケーション ドメイン サイクルの合計数です。|  
-|**Total Cache Flushes**|サービスの開始後に、レポート サーバーのキャッシュが更新された合計回数です。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。 参照してください`Cache Flushes/Sec`です。|  
-|`Total Cache Hits`|レポート サーバー Windows サービス開始後にキャッシュから直接処理されたレポートの要求の合計数です。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。 参照してください`Cache Hits/Sec`です。|  
-|`Total Cache Hits (Semantic Models)`|レポート サーバー Windows サービス開始後にキャッシュから直接処理されたモデルの要求の合計数です。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。 参照してください`Cache Hits/Sec`です。|  
-|`Total Cache Misses`|レポート サーバー Windows サービスの開始後に、レポートがキャッシュから返されなかった合計回数です。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。 参照してください`Cache Misses/Sec`です。|  
+|**Total Cache Flushes**|サービスの開始後に、レポート サーバーのキャッシュが更新された合計回数です。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。 参照してください`Cache Flushes/Sec`します。|  
+|`Total Cache Hits`|レポート サーバー Windows サービス開始後にキャッシュから直接処理されたレポートの要求の合計数です。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。 参照してください`Cache Hits/Sec`します。|  
+|`Total Cache Hits (Semantic Models)`|レポート サーバー Windows サービス開始後にキャッシュから直接処理されたモデルの要求の合計数です。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。 参照してください`Cache Hits/Sec`します。|  
+|`Total Cache Misses`|レポート サーバー Windows サービスの開始後に、レポートがキャッシュから返されなかった合計回数です。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。 参照してください`Cache Misses/Sec`します。|  
 |`Total Cache Misses (Semantic Models)`|レポート サーバー Windows サービスの開始後に、モデルがキャッシュから返されなかった合計回数。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。|  
 |`Total Deliveries`|すべての配信拡張機能に対して、スケジュールおよび配信のプロセッサによって配信されたレポートの総数です。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。|  
 |`Total Events`|レポート サーバー Windows サービス開始後のイベントの合計数です。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。|  
