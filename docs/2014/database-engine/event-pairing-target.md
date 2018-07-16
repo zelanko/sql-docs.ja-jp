@@ -1,5 +1,5 @@
 ---
-title: イベント ペアリング ターゲット |Microsoft ドキュメント
+title: イベント ペアリング ターゲット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pairing target [SQL Server extended events]
 - event pairing target
 - targets [SQL Server extended events], pairing target
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b2bff842462e0ab77ecd30373df00746260cea5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e67507452104e8bef8d82d86e78c0ebbdf80609
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291338"
 ---
 # <a name="event-pairing-target"></a>イベント ペアリング ターゲット
   イベント ペアリング ターゲットは、各イベントに存在する単一列または複数列のデータを使って 2 つのイベントを照合します。 ロックの取得とロックの解放など、対で発生するイベントが数多く存在します。 イベント シーケンスが対で発生した後は、両方のイベントが破棄されます。 一対のイベントを破棄することによって、取得されたまま解放されていないロックを容易に検出できます。  
@@ -47,7 +47,7 @@ ms.locfileid: "36071948"
   
  イベントに関連付けられているすべてのデータはキャプチャされて、その後のペアリングに備えて保存されます。 また、アクションによって追加されたデータも収集されます。 収集されたイベント データはメモリに格納されるため、格納できるサイズには上限があります。 この制限は、システムの容量とアクティビティに依存します。 使用メモリ量は利用可能なシステム リソースに基づくため、使用可能な最大メモリ量をパラメーターとして指定することはありません。 システム リソースが不足した場合、それまで保持されていた、対になっていないイベントは破棄されます。 イベントが対になっておらず破棄された場合、照合イベントは、対になっていないイベントとして発生します。  
   
- 対になっていないイベントは、ペアリング ターゲットによって XML 形式にシリアル化されます。 この形式は、いずれのスキーマにも準拠しません。 この形式に含まれる要素は 2 種類だけです。 **\<対になっていない >** 要素はルート、後に 1 つです。 **\<イベント >** 現在追跡されている各ペアになっていないイベントの要素。 **\<イベント >** 要素には、対になっていないイベントの名前を含む 1 つの属性が含まれています。  
+ 対になっていないイベントは、ペアリング ターゲットによって XML 形式にシリアル化されます。 この形式は、いずれのスキーマにも準拠しません。 この形式に含まれる要素は 2 種類だけです。 **\<対になっていない >** 要素は 1 が続く、ルートになります。 **\<イベント >** 現在追跡されている各ペアになっていないイベントの要素。 **\<イベント >** 要素には、対になっていないイベントの名前を含む 1 つの属性が含まれています。  
   
 ## <a name="adding-the-target-to-a-session"></a>セッションへのターゲットの追加  
  ペア照合ターゲットを拡張イベント セッションに追加するには、イベント セッションの作成時または変更時に次のステートメントを含める必要があります。  

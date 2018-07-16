@@ -1,5 +1,5 @@
 ---
-title: EventID 要素 (ASSL) |Microsoft ドキュメント
+title: EventID 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - EventID element
 ms.assetid: a6b2ee50-1753-496c-af5c-206d63f2542b
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5ee579bd4bc20bea12b1dbb9490a7f9c93fde32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79fd7c49c9749430bc5e73518d2f7eeb4fc450f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310712"
 ---
 # <a name="eventid-element-assl"></a>EventID 要素 (ASSL)
-  一意に識別、[イベント](../objects/event-element-assl.md)の一部としてキャプチャされる要素、[トレース](../objects/trace-element-assl.md)要素。  
+  一意に識別する、[イベント](../objects/event-element-assl.md)の一部としてキャプチャされる要素を[トレース](../objects/trace-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

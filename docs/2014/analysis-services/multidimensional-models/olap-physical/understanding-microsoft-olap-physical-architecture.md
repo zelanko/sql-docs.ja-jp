@@ -1,5 +1,5 @@
 ---
-title: 物理アーキテクチャ (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: 物理アーキテクチャ (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Analysis Services, architecture
 ms.assetid: 7109fad3-65d3-4971-87db-31194bc85e05
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 011dbd41f47c93cdc7007862b4e978b74267359c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3023ef3c36409716292e7cd077bb28f6c03f23dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312512"
 ---
 # <a name="physical-architecture-analysis-services---multidimensional-data"></a>物理アーキテクチャ (Analysis Services - 多次元データ)
     
 ## <a name="in-this-section"></a>このセクションの内容  
- 次のトピックでは、アーキテクチャの詳細について、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ソリューションです。  
+ 次のトピックの説明のアーキテクチャの詳細について、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ソリューション。  
   
 |トピック|説明|  
 |-----------|-----------------|  

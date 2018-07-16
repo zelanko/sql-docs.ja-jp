@@ -1,5 +1,5 @@
 ---
-title: TRANSACT-SQL デバッガーの構成 |Microsoft ドキュメント
+title: TRANSACT-SQL デバッガーの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
 - vs.debug.error.sqlde_accessdenied
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 747165efe7f5493263da0deec3ec5b2ebcdbad04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 79bb9e677f078f4ee1f4a18142fa3068f61349b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262518"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Transact-SQL デバッガーの構成
   [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターとは別のコンピューター上で動作する [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続するときに [!INCLUDE[ssDE](../../includes/ssde-md.md)] デバッグを有効にするように Windows ファイアウォール規則を構成する必要があります。  
@@ -60,7 +60,7 @@ ms.locfileid: "36179285"
   
     2.  **[規則の種類]** ダイアログで、 **[プログラム]** をクリックし、 **[次へ]** をクリックします。  
   
-    3.  **[プログラム]** ダイアログで、 **[このプログラムのパス:]** をクリックし、このインスタンスの sqlservr.exe の完全なパスを入力します。 既定では、sqlservr.exe は C:\Program files \microsoft SQL Server\MSSQL12 でインストールされます。*InstanceName*\MSSQL\Binn 場所*InstanceName* MSSQLSERVER が、既定のインスタンスと名前付きインスタンスのいずれかのインスタンス名。  
+    3.  **[プログラム]** ダイアログで、 **[このプログラムのパス:]** をクリックし、このインスタンスの sqlservr.exe の完全なパスを入力します。 既定では、sqlservr.exe は C:\Program files \microsoft SQL Server\MSSQL12 でインストールします。*InstanceName*\MSSQL\Binn 場所*InstanceName*は、既定のインスタンスの場合は MSSQLSERVER、名前付きインスタンスのいずれかのインスタンス名。  
   
     4.  **[操作]** ダイアログで、 **[接続を許可する]** をクリックし、 **[次へ]** をクリックします。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36179285"
   
 * [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 2 (SP2) 以降の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインスタンスに接続されている必要があります。 クエリ エディター ウィンドウがシングル ユーザー モードのインスタンスに接続されているときは、デバッガーを実行できません。
 
-* サーバーとクライアントが RPC 経由で通信をしている必要があります。 サービスが実行されている SQL Server である必要があるアカウントは、クライアントへのアクセス許可を認証します。  
+* サーバーとクライアントが RPC 経由で通信をしている必要があります。 サービスが実行されている SQL Server が実行がアカウントでは、クライアントへのアクセス許可を認証します。  
   
 ## <a name="see-also"></a>参照  
  [Transact-SQL デバッガー](transact-sql-debugger.md)   

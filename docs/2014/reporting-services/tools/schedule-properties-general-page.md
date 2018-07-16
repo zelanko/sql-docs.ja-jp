@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.scheduleproperties.general.f1
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b5fda0fffe612b0dcd5c2178d0ef93fda31008ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56a6a698b941369d80bed200d64e236eb87ecfa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305002"
 ---
 # <a name="schedule-properties-general-page"></a>[スケジュールのプロパティ]\([全般] ページ)
   このページを使用すると、共有スケジュールを表示したり変更したりできます。 共有スケジュールは、レポート固有のスケジュールやサブスクリプション固有のスケジュールの代わりに使用できます。 スケジュールに対する変更は、スケジュールを保存した後に適用されます。 スケジュールを編集しても、現在実行中のジョブには影響しません。 使用中のスケジュールを編集すると、そのスケジュールからトリガーされた現在処理中のレポートおよびサブスクリプションはすべて終了できるようになります。  
@@ -30,13 +30,13 @@ ms.locfileid: "36176093"
   
  スケジュールは、そのスケジュールをホストおよび処理するレポート サーバーのローカル時間に基づいて処理されます。  
   
- このページを開くを起動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、開いているレポート サーバーへの接続、**共有スケジュール**フォルダー、共有スケジュールを右クリックして**プロパティ**です。  
+ このページを開くには、開始[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、開いているレポート サーバーに接続する、**共有スケジュール**フォルダーは、共有スケジュールを右クリックし、選択**プロパティ**します。  
   
 > [!NOTE]  
 >  この機能は、すべてのエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるわけではなく、この機能がないエディションを実行している場合は、このページが表示されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2012 の各エディションがサポートする機能](http://go.microsoft.com/fwlink/?linkid=232473)」(http://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  共有スケジュールの名前を指定します。  
   
  **[このスケジュールの実行開始日]**  
@@ -45,7 +45,7 @@ ms.locfileid: "36176093"
  **[このスケジュールの終了日]**  
  このスケジュールの終了日を指定します。  
   
- **Type**  
+ **型**  
  定期的なパターンが主に時間、日、週、月のどの単位に基づくか、または一度だけ実行するかを指定します。  
   
  **[時間]\([定期的なパターン])**  

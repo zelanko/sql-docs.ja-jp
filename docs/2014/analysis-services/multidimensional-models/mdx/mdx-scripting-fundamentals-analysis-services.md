@@ -1,5 +1,5 @@
 ---
-title: MDX スクリプティングの基礎 (Analysis Services) |Microsoft ドキュメント
+title: MDX スクリプティングの基礎 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cubes [Analysis Services], scripts
 - calculations [Analysis Services], scripts
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], scripts
 ms.assetid: fdecb3ce-7c87-4bab-8000-532ba7a29f96
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4cdd712fff0de36e051f371cae58a3ff8543628
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01f105ab8cd05029ac4dc7d747f5b0c016745962
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325192"
 ---
 # <a name="mdx-scripting-fundamentals-analysis-services"></a>MDX スクリプティングの基礎 (Analysis Services)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の多次元式 (MDX) スクリプトは、計算結果をキューブに格納する 1 つまたは複数の MDX 式またはステートメントから構成されます。  
+   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の多次元式 (MDX) スクリプトは、計算結果をキューブに格納する 1 つまたは複数の MDX 式またはステートメントから構成されます。  
   
  MDX スクリプトはキューブの計算プロセスを定義します。 また、MDX スクリプト自体がキューブの一部分だと考えることもできます。 したがって、キューブに関連した MDX スクリプトの内容を変更すると、即座にキューブの計算プロセスが変更されることになります。  
   
@@ -42,10 +42,10 @@ ms.locfileid: "36178559"
 |トピック|説明|  
 |-----------|-----------------|  
 |[基本的な MDX スクリプト&#40;MDX&#41;](the-basic-mdx-script-mdx.md)|MDX スクリプトの基礎を詳しく説明します。各キューブに付属している既定の MDX スクリプトについて、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]のキューブ内で MDX スクリプトが一般的にどのように機能するかについての説明が含まれます。|  
-|[スコープとコンテキストを管理する&#40;MDX&#41;](managing-scope-and-context-mdx.md)|MDX スクリプト内でコンテキストとスコープを管理するために [CALCULATE](/sql/mdx/mdx-scripting-calculate) ステートメント、[SCOPE](/sql/mdx/mdx-scripting-scope) ステートメント、および [This](/sql/mdx/this-mdx) 関数を使用する方法について説明します。|  
+|[スコープとコンテキストの管理&#40;MDX&#41;](managing-scope-and-context-mdx.md)|MDX スクリプト内でコンテキストとスコープを管理するために [CALCULATE](/sql/mdx/mdx-scripting-calculate) ステートメント、[SCOPE](/sql/mdx/mdx-scripting-scope) ステートメント、および [This](/sql/mdx/this-mdx) 関数を使用する方法について説明します。|  
 |[変数とパラメーターを使用して&#40;MDX&#41;](using-variables-and-parameters-mdx.md)|MDX スクリプト内で変数やパラメーターを使用する方法について説明します。|  
 |[エラー処理&#40;MDX&#41;](error-handling-mdx.md)|MDX スクリプト内でのエラー処理について説明します。|  
-|[サポートされる MDX &#40;MDX&#41;](supported-mdx-mdx.md)|MDX スクリプト内でサポートされる MDX 演算子、ステートメント、関数の一覧を示します。|  
+|[MDX のサポート&#40;MDX&#41;](supported-mdx-mdx.md)|MDX スクリプト内でサポートされる MDX 演算子、ステートメント、関数の一覧を示します。|  
   
 ## <a name="see-also"></a>参照  
  [MDX 言語リファレンス&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)  

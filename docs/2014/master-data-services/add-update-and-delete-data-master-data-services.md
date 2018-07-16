@@ -1,5 +1,5 @@
 ---
-title: 追加、データ更新および削除 (Master Data Services) |Microsoft ドキュメント
+title: 追加、データ更新および削除 (マスター データ サービス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 caps.latest.revision: 6
-author: douglaslM
+author: leolimsft
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 665925f4d9298b3bfaf1dcc5841b78993978a94e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd14b50e3b883a92aa611b13553a6ecc5647f32c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311992"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>データの追加、更新、および削除 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のモデルに一括でデータの追加および変更を行えます。  
@@ -44,11 +44,11 @@ ms.locfileid: "36076893"
   
     -   明示的階層内のメンバーの位置を移動する場合、テーブルは stg.\<名前>_Relationship になります。 必須フィールドの詳細については、「[リレーションシップ ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)」を参照してください。  
   
-         明示的階層内のメンバーの移動の詳細については、次を参照してください。[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)です。  
+         明示的階層内のメンバーの移動の概要については、次を参照してください。[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)します。  
   
     -   **[ImportType]** フィールドの値を使用して、メンバーの新規作成、メンバーの非アクティブ化、またはメンバーの削除を行っていることを指定します。 値の詳細については、「[リーフ メンバー ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)」および「[統合メンバー ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)」を参照してください。  
   
-         非アクティブ化して、メンバーの削除の概要については、次を参照してください。[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)です。  
+         非アクティブ化とメンバーの削除の概要については、次を参照してください。[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)します。  
   
 2.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのデータベース エンジン インスタンスに接続します。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36076893"
   
     -   データの移動先のステージング テーブルに対応するステージング ストアド プロシージャを実行します。  
   
-         ステージング ストアド プロシージャとステージング テーブルの概要については、次を参照してください。[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)です。 ステージング ストアド プロシージャのパラメーターの詳細およびコード例については、「[ステージング ストアド プロシージャ (マスター データ サービス)](../../2014/master-data-services/staging-stored-procedure-master-data-services.md)」を参照してください。  
+         ステージング ストアド プロシージャとステージング テーブルの概要については、次を参照してください。[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)します。 ステージング ストアド プロシージャのパラメーターの詳細およびコード例については、「[ステージング ストアド プロシージャ (マスター データ サービス)](../../2014/master-data-services/staging-stored-procedure-master-data-services.md)」を参照してください。  
   
     -   マスター データ管理の **[統合管理]** 機能領域 を使用します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36076893"
   
          ステージング処理は、 **の** [ステージング バッチの間隔] [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]設定に定められた間隔で開始されます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../../2014/master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
-5.  ステージング中に発生したエラーを表示します。 詳細については、次を参照してください。[ステージング処理中に発生したエラーの表示&#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md)と[ステージング処理のエラー &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)です。  
+5.  ステージング中に発生したエラーを表示します。 詳細については、次を参照してください。[ステージング処理中に発生したエラーの表示&#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md)と[ステージング処理のエラー &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)します。  
   
 6.  ビジネス ルールに対してデータを検証します。  
   

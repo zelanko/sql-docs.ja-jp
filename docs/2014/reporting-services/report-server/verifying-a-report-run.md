@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - auditing [Reporting Services]
 - verifying report execution
@@ -21,13 +21,13 @@ ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6ed7df4dc1c9bb9af8aa48a8b53506ebeab767ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be05b7ef8ffde732d6bdd85fb17be6aa25683134
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319852"
 ---
 # <a name="verifying-a-report-run"></a>レポート実行の確認
   レポート処理の状態に関する情報を表示するには、ログ ファイルを使用するか、またはレポート マネージャーでレポートと共に表示される状態の情報を参照します。  
@@ -44,7 +44,7 @@ ms.locfileid: "36075181"
   
 |レポートの種類|日時情報の参照先|情報の表示に必要な操作|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|レポート スナップショットとして実行するレポート|[コンテンツ] ページにあります。 詳細については、「[[コンテンツ] ページ &#40;レポート マネージャー&#41;](../contents-page-report-manager.md)」を参照してください。|1) レポートが含まれているフォルダーを見つけます。<br />2) フォルダーを詳細表示にします。<br />3) 3) 日時を記録して、時間、**とき実行**列です。|  
+|レポート スナップショットとして実行するレポート|[コンテンツ] ページにあります。 詳細については、「[[コンテンツ] ページ &#40;レポート マネージャー&#41;](../contents-page-report-manager.md)」を参照してください。|1) レポートが含まれているフォルダーを見つけます。<br />2) フォルダーを詳細表示にします。<br />3) 3)、日付を記録、**実行**列。|  
 |レポート履歴のスナップショット|[履歴] プロパティ ページにあります。 詳細については、「[[スナップショット オプション] プロパティ ページ &#40;レポート マネージャー&#41;](../snapshot-options-properties-page-report-manager.md)」を参照してください。|1) レポートを開きます。<br />2) **[プロパティ]** ページをクリックします。<br />3) **[履歴]** タブをクリックします。<br />4) **[実行時]** 列の日時を記録します。|  
 |キャッシュされたレポート|キャッシュされたレポートの作成および更新に使用するスケジュールに含まれています。|1) レポートを開きます。<br />2) **[プロパティ]** ページをクリックします。<br />3) **[実行]** タブをクリックします。<br />4) スケジュールを開きます。|  
   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 757cb2570c163ceaa184d15a7e97a253129d05cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 85832491b5129111b44daa724475749086588bfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294062"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>図形グラフ (レポート ビルダーおよび SSRS)
   図形グラフでは、全体に占める割合 (パーセント) として値データが表示されます。 図形グラフは、通常、セット内の異なる値間での相対的な比較を示すために使用されます。 カテゴリは、図形の個々のセグメントによって表されます。 セグメントのサイズは、値によって決まります。 図形グラフは円グラフに用途が似ていますが、カテゴリは大きい方から順に並べられます。  
   
- じょうごグラフでは、徐々に面積が小さくなるように値が表示されます。 領域のサイズは、系列値がすべての値の合計に占める割合で決まります。 たとえば、じょうごグラフを使用して、Web サイト閲覧者の傾向を表示できます。 じょうごグラフでは、最上部に広い領域が表示されてホームページのヒット数を示し、他の領域はそれに比例して小さくなります。 じょうごグラフにデータを追加する方法の詳細については、次を参照してください。[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)です。  
+ じょうごグラフでは、徐々に面積が小さくなるように値が表示されます。 領域のサイズは、系列値がすべての値の合計に占める割合で決まります。 たとえば、じょうごグラフを使用して、Web サイト閲覧者の傾向を表示できます。 じょうごグラフでは、最上部に広い領域が表示されてホームページのヒット数を示し、他の領域はそれに比例して小さくなります。 じょうごグラフにデータを追加する方法の詳細については、次を参照してください。[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)します。  
   
  次の図は、じょうごグラフの例を示しています。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36071595"
   
 -   図形グラフは、全体に占める比率を整然とした順序で表現したときに最も効果を発揮します。 ただし、一貫性を維持するために、既定では、データセット内の値の並べ替えが行われません。 じょうごグラフやピラミッド グラフでデータをできるだけ正確に表現するには、大きい方から順に値を並べ替えることを検討してください。 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
--   比率を計算する場合、NULL、空、負、および 0 の各値は無効です。 このため、これらの値は図形グラフに表示されません。 このような値をグラフ上に表示する必要がある場合は、グラフの種類を図形グラフ以外のグラフに変更してください。 図形以外のグラフに空のポイントを追加する方法の詳細については、次を参照してください。[グラフに追加の空のポイント&#40;レポート ビルダーおよび SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)です。  
+-   比率を計算する場合、NULL、空、負、および 0 の各値は無効です。 このため、これらの値は図形グラフに表示されません。 このような値をグラフ上に表示する必要がある場合は、グラフの種類を図形グラフ以外のグラフに変更してください。 図形以外のグラフに空のポイントを追加する方法の詳細については、次を参照してください。[グラフに空のポイントを追加&#40;レポート ビルダーおよび SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)します。  
   
 -   図形グラフでカスタム パレットを使用して独自の色を定義している場合は、各データ ポイントを独自の色で強調表示するのに十分な色がパレットにあることを確認します。 詳細については、「 [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)をクリックします。  
   

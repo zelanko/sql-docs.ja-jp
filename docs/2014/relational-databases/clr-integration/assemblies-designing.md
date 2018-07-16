@@ -1,13 +1,11 @@
 ---
-title: アセンブリのデザイン |Microsoft ドキュメント
+title: アセンブリのデザイン |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 486c6ad507682db3bd7ab06c674164b1d31f34bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: de9b80a9406078a6f5d4ad3a16add7c02f4bde5a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176416"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351024"
 ---
 # <a name="designing-assemblies"></a>アセンブリのデザイン
   このトピックでは、アセンブリをデザインするときに考慮する必要がある次の項目について説明します。  
@@ -39,12 +37,12 @@ ms.locfileid: "36176416"
   
  コードをアセンブリにパッケージ化しているときは、次のことを考慮する必要があります。  
   
--   CLR ユーザー定義関数に依存する CLR ユーザー定義型とインデックスにより、アセンブリに依存する持続データがデータベースに格納される可能性があります。 多くの場合、アセンブリに依存する持続データがデータベースに存在すると、アセンブリのコードを変更することが複雑になることがあります。 そのため、一般に、持続データの依存関係があるコード (ユーザー定義関数を使用するユーザー定義型やインデックスなど) とそのような持続データの依存関係がないコードは切り離した方が適切です。 詳細については、次を参照してください。[を実装するアセンブリ](assemblies-implementing.md)と[ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)です。  
+-   CLR ユーザー定義関数に依存する CLR ユーザー定義型とインデックスにより、アセンブリに依存する持続データがデータベースに格納される可能性があります。 多くの場合、アセンブリに依存する持続データがデータベースに存在すると、アセンブリのコードを変更することが複雑になることがあります。 そのため、一般に、持続データの依存関係があるコード (ユーザー定義関数を使用するユーザー定義型やインデックスなど) とそのような持続データの依存関係がないコードは切り離した方が適切です。 詳細については、次を参照してください。[を実装するアセンブリ](assemblies-implementing.md)と[ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)します。  
   
--   マネージ コードの一部分で上位の権限が必要な場合、そのコードは、上位の権限を必要としないコードとは別のアセンブリにパッケージ化することをお勧めします。  
+-   マネージド コードの一部分で上位の権限が必要な場合、そのコードは、上位の権限を必要としないコードとは別のアセンブリにパッケージ化することをお勧めします。  
   
 ## <a name="managing-assembly-security"></a>アセンブリのセキュリティ管理  
- アセンブリでマネージ コードが実行されるときに、.NET コード アクセス セキュリティによって保護されているリソースにアセンブリがアクセスできる程度を制御できます。 この制御は、アセンブリを作成または変更するときに、SAFE、EXTERNAL_ACCESS、または UNSAFE の 3 つの中のいずれかの権限セットを指定して行います。  
+ アセンブリでマネージド コードが実行されるときに、.NET コード アクセス セキュリティによって保護されているリソースにアセンブリがアクセスできる程度を制御できます。 この制御は、アセンブリを作成または変更するときに、SAFE、EXTERNAL_ACCESS、または UNSAFE の 3 つの中のいずれかの権限セットを指定して行います。  
   
 ### <a name="safe"></a>SAFE  
  SAFE は既定の権限セットであり、最も強い制限です。 SAFE 権限を指定したアセンブリによって実行されるコードでは、ファイル、ネットワーク、環境変数、またはレジストリなどの外部システム リソースにアクセスできません。 SAFE コードでは、ローカルの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのデータにアクセスしたり、ローカル データベースの外部にあるリソースへのアクセスを必要としない計算やビジネス ロジックを実行したりすることができます。  
@@ -59,10 +57,11 @@ ms.locfileid: "36176416"
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE を使用すると、アセンブリでは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の内外を問わずどちらのリソースにも無制限にアクセスできます。 UNSAFE アセンブリの内部で実行されているコードで、アンマネージ コードを呼び出すことができます。  
   
- また、UNSAFE を指定すると、CLR 検証機能によってタイプ セーフではないと見なされる操作をアセンブリのコードで実行できます。 これらの操作により、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロセス空間のメモリ バッファーに制御なしにアクセスされる可能性があります。 UNSAFE アセンブリでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または共通言語ランタイムのいずれかのセキュリティ システムが妨害されるおそれもあります。 UNSAFE 権限は、経験豊かな開発者や管理者によって信頼性の高いアセンブリにのみ与えるようにする必要があります。 メンバーにのみ、 **sysadmin**固定サーバー ロールは、UNSAFE アセンブリを作成できます。  
+ また、UNSAFE を指定すると、CLR 検証機能によってタイプ セーフではないと見なされる操作をアセンブリのコードで実行できます。 これらの操作により、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロセス空間のメモリ バッファーに制御なしにアクセスされる可能性があります。 UNSAFE アセンブリでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または共通言語ランタイムのいずれかのセキュリティ システムが妨害されるおそれもあります。 UNSAFE 権限は、経験豊かな開発者や管理者によって信頼性の高いアセンブリにのみ与えるようにする必要があります。 メンバーのみ、 **sysadmin**固定サーバー ロールは、UNSAFE アセンブリを作成できます。  
   
 ## <a name="restrictions-on-assemblies"></a>アセンブリに関する制限事項  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、アセンブリのマネージ コードに特定の制限を設けて、これらのコードを信頼性および拡張性の高い方法で実行できるようにしています。 つまり、SAFE アセンブリと EXTERNAL_ACCESS アセンブリでは、サーバーの堅牢性を侵害する可能性のある操作を実行できません。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、アセンブリのマネージド コードに特定の制限を設けて、これらのコードを信頼性および拡張性の高い方法で実行できるようにしています。 つまり、SAFE アセンブリと EXTERNAL_ACCESS アセンブリでは、サーバーの堅牢性を侵害する可能性のある操作を実行できません。  
   
 ### <a name="disallowed-custom-attributes"></a>禁止されているカスタム属性  
  アセンブリには次のカスタム属性で注釈を付けることができません。  
@@ -88,7 +87,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>禁止されている .NET Framework API  
- どの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 、許可されていないのいずれかの注釈が付けられる API **HostProtectionAttributes** SAFE と EXTERNAL_ACCESS アセンブリから呼び出すことができません。  
+ すべて[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]注釈が付けられた、許可されていないのいずれかの API **HostProtectionAttributes** SAFE と EXTERNAL_ACCESS アセンブリから呼び出すことはできません。  
   
 ```  
 eSelfAffectingProcessMgmt  

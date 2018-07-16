@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pager addresses [SQL Server]
 - SQL Server Agent, alerts
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - alerts [SQL Server], pager addresses
 ms.assetid: a9797d01-1050-442c-9038-ed4bfee1e76a
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0ab8b9ea34298eab2f8639975bc4871c288c936f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 83ece1b0392f303d10b7f431789c6829abb87bdf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256044"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告で使用するポケットベル アドレスの形式を設定する方法について説明します。  
@@ -54,7 +54,7 @@ ms.locfileid: "36179249"
   
 1.  **オブジェクト エクスプローラー**で、ポケットベルに送信する警告を含むサーバーをプラス記号をクリックして展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。  
+2.   **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。  
   
 3.  **[ページの選択]** の **[警告システム]** を選択します。  
   

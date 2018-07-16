@@ -5,30 +5,29 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], document similarity queries
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b4158ae5c5647516c309f43bc5fa5e49caed4f5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b38cdb3e37ff8dca8a1fb206513c69a826ce91c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319892"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>セマンティック検索による類似および関連したドキュメントの取得
   統計的セマンティック インデックス作成用に構成されている列での、類似性または関連性のあるドキュメントやテキスト値の検索方法と、どのように類似または関連しているかという情報の検索方法について説明します。  
   
-##  <a name="BasicsQuerySimilar"></a> 類似または関連ドキュメントを検索します。  
+##  <a name="BasicsQuerySimilar"></a> 類似または関連ドキュメントの検索  
   
-###  <a name="HowToQuerySimilar"></a> 方法: 類似または関連ドキュメントを SEMANTICSIMILARITYTABLE で見つける  
+###  <a name="HowToQuerySimilar"></a> 方法: 類似または関連ドキュメントを SEMANTICSIMILARITYTABLE での検索  
  特定の列で類似または関連したドキュメントを識別するには、[semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql) 関数を使用してクエリを実行します。  
   
  **SEMANTICSIMILARITYTABLE** は、指定されたドキュメントに意味が似ているコンテンツを指定された列に持っている行 (0 行、1 行、または複数の行) から成るテーブルを返します。 この行セット関数は、標準のテーブル名のように、SELECT ステートメントの FROM 句で参照できます。  
@@ -40,7 +39,7 @@ ms.locfileid: "36084089"
 > [!IMPORTANT]  
 >  対象の列では、フルテキスト インデックスとセマンティック インデックスが有効になっている必要があります。  
   
-###  <a name="HowToIdentifySimilar"></a> 例: が別のドキュメントに類似する上位のドキュメントを見つける  
+###  <a name="HowToIdentifySimilar"></a> 例: は、別のドキュメントに類似する上位のドキュメントを見つける  
  次の例では、AdventureWorks2012 サンプル データベースの HumanResources.JobCandidate テーブルから、 *@CandidateID* で指定した候補に類似する上位 10 件の候補を取得します。  
   
 ```scr  
@@ -57,7 +56,7 @@ GO
   
 ##  <a name="BasicsQuerySimilarity"></a> ドキュメントが類似または関連する方法に関する情報の入手  
   
-###  <a name="HowToQuerySimilarity"></a> 方法: ドキュメントが類似または関連 semanticsimilaritydetailstable のいずれかの方法に関する情報を検索します。  
+###  <a name="HowToQuerySimilarity"></a> 方法: ドキュメントは、類似または関連 semanticsimilaritydetailstable の各使用方法に関する情報を見つける  
  ドキュメントが類似または関連する原因となっているキー フレーズに関する情報を表示するには、[semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) 関数を使用してクエリを実行します。  
   
  **SEMANTICSIMILARITYDETAILSTABLE** は、意味が似たコンテンツを持つ 2 つのドキュメント (ソース ドキュメントと一致するドキュメント) に共通するキー フレーズの 0 行、1 行、または複数の行から成るテーブルを返します。 この行セット関数は、標準のテーブル名のように、SELECT ステートメントの FROM 句で参照できます。  

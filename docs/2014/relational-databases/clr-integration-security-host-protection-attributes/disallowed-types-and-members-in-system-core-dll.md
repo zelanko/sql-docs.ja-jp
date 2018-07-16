@@ -1,32 +1,30 @@
 ---
-title: 許可されない System.Core.dll の型およびメンバー |Microsoft ドキュメント
+title: System.Core.dll の型およびメンバーが許可されていません |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 20553fb461eded79042048318e6a913aa39ed513
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b2efa260f0680b079d6a3b768be7098ba0af0f87
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178720"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354354"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>System.Core.dll の許可されない型およびメンバー
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共通言語統合 (CLR) プログラミングには、型またはメンバーを持つの使用が許可されていません、`HostProtectionAttribute`を指定する、`System.Security.Permissions.HostProtectionResource`列挙の値が`ExternalProcessMgmt`、 `ExternalThreading`、 `MayLeakOnAbort`、 `SecurityInfrastructure`、 `SelfAffectingProcessMgmnt`、`SelfAffectingThreading`、 **SharedState**、 `Synchronization`、または`UI`です。 次の表は、ホスト保護属性 (HPA) 値が許可されない System.Core.dll アセンブリのメンバーおよび型を示しています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共通言語統合 (CLR) のプログラミングには、型またはメンバーを持つの使用が許可されない、`HostProtectionAttribute`を指定する、`System.Security.Permissions.HostProtectionResource`列挙の値を持つ`ExternalProcessMgmt`、 `ExternalThreading`、 `MayLeakOnAbort`、 `SecurityInfrastructure`、 `SelfAffectingProcessMgmnt`、`SelfAffectingThreading`、 **SharedState**、 `Synchronization`、または`UI`します。 次の表は、ホスト保護属性 (HPA) 値が許可されない System.Core.dll アセンブリのメンバーおよび型を示しています。  
   
 > [!NOTE]  
->  この一覧は、サポートされているアセンブリから作成されたものです。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../clr-integration/database-objects/supported-net-framework-libraries.md)です。  
+>  この一覧は、サポートされているアセンブリから作成されたものです。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../clr-integration/database-objects/supported-net-framework-libraries.md)します。  
   
 |型またはメンバー|HPA 値|  
 |--------------------|--------------------|  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: 86
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6589261f0ad1a800bcf88d11abe2ebe6314a4855
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eda7d98c6c90cf53f8b788a52717db01bcc8fae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307592"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Web 同期用の IIS の構成
   ここでは、マージ レプリケーション用に Web 同期を構成する 2 番目の手順を説明します。 この手順は、Web 同期用にパブリケーションを有効にした後に実行します。 構成プロセスの概要については、「 [[Web 同期の構成]](configure-web-synchronization.md)」を参照してください。 ここでの手順を完了したら、続いて、Web 同期が使用されるようにサブスクリプションを構成する 3 番目の手順を実行してください。 3 番目の手順については、次のトピックで説明します。  
@@ -72,7 +72,7 @@ ms.locfileid: "36178425"
   
     1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。  
   
-    2.  **開いている**ボックスに、入力`inetmgr`、順にクリック**OK**です。  
+    2.  **オープン**ボックスに「 `inetmgr`、順にクリックします**OK**します。  
   
 3.  IIS 証明書ウィザードを実行します。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36178425"
   
     4.  Web サーバー証明書ウィザードを実行します。  
   
-4.  **[OK]** をクリックします。  
+4.  [**OK**] をクリックします。  
   
  CA からサーバー証明書を取得できない場合は、テスト用に証明書を指定できます。 テスト用に IIS 6.0 を構成するには、SelfSSL ユーティリティを使用して証明書をインストールします。 このユーティリティは、IIS 6.0 リソース キットで使用できます。 ツールは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=30958)からダウンロードできます。 IIS 5.0 の場合は、 [Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink/?LinkId=46229)を参照してください。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36178425"
         > [!NOTE]  
         >  SelfSSL を使用してインストールした証明書の既定の有効期限は 7 日間です。  
   
-    -   1 つ以上のパラメーターの値を指定するには、 **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **開いている**ボックスに、入力`cmd`、順にクリック**OK**です。 SelfSSL のインストール ディレクトリに移動して「 `SelfSSL`」と入力し、1 つ以上のパラメーターの値を指定します。 パラメーターの一覧を確認する場合は、「 `SelfSSL -?`」と入力します。  
+    -   1 つ以上のパラメーターの値を指定するには、 **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **オープン**ボックスに、入力`cmd`、順にクリックします**OK**します。 SelfSSL のインストール ディレクトリに移動して「 `SelfSSL`」と入力し、1 つ以上のパラメーターの値を指定します。 パラメーターの一覧を確認する場合は、「 `SelfSSL -?`」と入力します。  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>接続コンポーネントと SQL Server Management Studio のインストール  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36178425"
   
 1.  IIS を実行しているコンピューターに管理者としてログオンします。  
   
-2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] インストール ディスクから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを起動します。 詳細については、このウィザードを使用して、次を参照してください。[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)です。  
+2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] インストール ディスクから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを起動します。 詳細については、このウィザードを使用して、次を参照してください。[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)します。  
   
 3.  **[機能の選択]** ページで、 **[クライアント ツール接続]** を選択します。  
   
@@ -159,9 +159,9 @@ ms.locfileid: "36178425"
   
     1.  **[別名]** ボックスに仮想ディレクトリの別名を入力します。  
   
-    2.  **[パス]** ボックスに、仮想ディレクトリのパスを入力します。 たとえば、入力した`websync1`で、**エイリアス**ボックスに、入力`C:\Inetpub\wwwroot\websync1`で、**パス**ボックス。 **[次へ]** をクリックします。  
+    2.  **[パス]** ボックスに、仮想ディレクトリのパスを入力します。 たとえば、入力した`websync1`で、**エイリアス**ボックスに、入力`C:\Inetpub\wwwroot\websync1`で、**パス**ボックス。 [**次へ**] をクリックします。  
   
-    3.  両方のダイアログ ボックスで **[はい]** をクリックします。 これにより、新しいフォルダーを作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISAPI (インターネット サーバー API) の DLL をコピーします。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+    3.  両方のダイアログ ボックスで **[はい]** をクリックします。 これにより、新しいフォルダーを作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISAPI (インターネット サーバー API) の DLL をコピーします。 .  
   
 7.  **[認証済みアクセス]** ページで以下の操作を行います。  
   
@@ -183,11 +183,11 @@ ms.locfileid: "36178425"
   
 11. IIS を実行しているコンピューターで、64 ビット バージョンの Windows を実行している場合、replisapi.dll を適切なディレクトリにコピーする必要があります。  
   
-    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **開いている**ボックスに、入力`iisreset`、順にクリック**OK**です。  
+    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **オープン**ボックスに、入力`iisreset`、順にクリックします**OK**します。  
   
     2.  IIS が停止して再起動したら、 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi から手順 6b. で指定したディレクトリに replisapi.dll をコピーします。  
   
-    3.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **開いている**ボックスに、入力`cmd`、順にクリック**OK**です。  
+    3.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **オープン**ボックスに、入力`cmd`、順にクリックします**OK**します。  
   
     4.  手順 6b. で指定したディレクトリで、次のコマンドを実行します。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36178425"
   
 3.  次の手順に従って replisapi.dll を登録します。  
   
-    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **開いている**ボックスに、入力`cmd`、順にクリック**OK**です。  
+    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **オープン**ボックスに、入力`cmd`、順にクリックします**OK**します。  
   
     2.  手順 1. で作成したディレクトリで、次のコマンドを実行します。  
   
@@ -274,13 +274,13 @@ ms.locfileid: "36178425"
   
     6.  ディレクトリにアクセスする必要がないユーザーまたはグループを選択し、 **[削除]** をクリックします。  
   
-    7.  **[OK]** をクリックします。  
+    7.  [**OK**] をクリックします。  
   
 4.  **インターネット インフォメーション サービス (IIS) マネージャー**でアプリケーション プールを作成します。  
   
     1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。  
   
-    2.  **開いている**ボックスに、入力`inetmgr`、順にクリック**OK**です。  
+    2.  **オープン**ボックスに「 `inetmgr`、順にクリックします**OK**します。  
   
     3.  **インターネット インフォメーション サービス (IIS) マネージャー**で、 **[ローカル コンピューター]** ノードを展開します。  
   
@@ -298,7 +298,7 @@ ms.locfileid: "36178425"
   
     4.  **[ユーザー名]** および **[パスワード]** フィールドに、手順 1. で作成したアカウントとパスワードを入力します。  
   
-    5.  **[OK]** をクリックします。  
+    5.  [**OK**] をクリックします。  
   
 6.  Web 同期に使用する仮想ディレクトリにアプリケーション プールを関連付けます。  
   
@@ -308,7 +308,7 @@ ms.locfileid: "36178425"
   
     3.  **[\<VirtualDirectoryName> のプロパティ]** ダイアログ ボックスの **[仮想ディレクトリ]** タブで、手順 5. で作成したアプリケーション プールを **[アプリケーション プール]** ボックスから選択します。  
   
-    4.  **[OK]** をクリックします。  
+    4.  [**OK**] をクリックします。  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>replisapi.dll への接続のテスト  
  診断モードで Web 同期を実行すると、IIS を実行しているコンピューターへの接続をテストして、SSL (Secure Sockets Layer) 証明書が正しくインストールされているかどうかを確認できます。 診断モードで Web 同期を実行するには、IIS を実行しているコンピューターの管理者である必要があります。  
@@ -325,7 +325,7 @@ ms.locfileid: "36178425"
   
     4.  プロキシ サーバーを使用している場合は、 **[LAN にプロキシ サーバーを使用する]** と **[ローカル アドレスにはプロキシ サーバーを使用しない]** チェック ボックスをオンにします。  
   
-    5.  **[OK]** をクリックします。  
+    5.  [**OK**] をクリックします。  
   
 2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 たとえば、「 https://server.domain.com/directory/replisapi.dll?diag」のように入力します。  
   

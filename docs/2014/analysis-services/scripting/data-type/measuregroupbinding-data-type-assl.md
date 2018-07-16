@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupBinding データ型 (ASSL) |Microsoft ドキュメント
+title: MeasureGroupBinding データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupBinding data type
 ms.assetid: 47e83eec-e0bc-4118-9a0f-5bfdd6218297
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12c54f8a61d75afd7689f19b2936bb6aefa3b4c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 530ed80199c0bc607016a1b34a1a830dfaabee5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324912"
 ---
 # <a name="measuregroupbinding-data-type-assl"></a>MeasureGroupBinding データ型 (ASSL)
   バインドを表す派生データ型を定義、 [MeasureGroup](../objects/group-element-assl.md)要素。  
@@ -69,7 +69,7 @@ ms.locfileid: "36178311"
 ## <a name="remarks"></a>コメント  
  詳細については、`Binding`型、バインディングの種類の Analysis Services スクリプト言語 (ASSL) オブジェクトとの継承階層のテーブルを含む`Binding`型を参照してください[データ型のバインド&#40;ASSL&#41;](binding-data-type-assl.md).  
   
- ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.MeasureGroupBinding>します。  
   

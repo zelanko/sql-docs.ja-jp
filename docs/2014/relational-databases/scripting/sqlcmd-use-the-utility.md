@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22c724f9dbbe5f381e5ab71927f70411ef147c4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a8f481d395f05a50884a0ff2c03d89eb4dc1c622
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309542"
 ---
 # <a name="use-the-sqlcmd-utility"></a>sqlcmd ユーティリティの使用
   `sqlcmd` ユーティリティは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびスクリプトを対話形式でアドホック実行したり、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト タスクを自動化したりするためのコマンドライン ユーティリティです。 `sqlcmd` を対話形式で使用したり、`sqlcmd` を使用して実行できるスクリプト ファイルを作成したりするには、ユーザーが [!INCLUDE[tsql](../../includes/tsql-md.md)] を理解している必要があります。 `sqlcmd` ユーティリティは一般的に次のように使用されます。  
   
--   コマンド プロンプトでの操作と同様、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを対話形式で入力します。 結果はコマンド プロンプトに表示されます。 コマンド プロンプト ウィンドウを開くには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントします。次に **[アクセサリ]** をポイントし、 **[コマンド プロンプト]** をクリックします。 コマンド プロンプトで次のように入力します。`sqlcmd`するオプションのリストが続きます。 サポートされているオプションの完全な一覧について`sqlcmd`を参照してください[sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)です。  
+-   コマンド プロンプトでの操作と同様、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを対話形式で入力します。 結果はコマンド プロンプトに表示されます。 コマンド プロンプト ウィンドウを開くには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントします。次に **[アクセサリ]** をポイントし、 **[コマンド プロンプト]** をクリックします。 コマンド プロンプトで「`sqlcmd`必要なオプション リストが続きます。 サポートされているオプションの完全な一覧については`sqlcmd`を参照してください[sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)します。  
   
 -   実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを 1 つ指定するか、実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの入ったテキスト ファイルをユーティリティに指定して、`sqlcmd` ジョブを実行します。 出力先はコマンド プロンプトにすることもできますが、通常はテキスト ファイルに出力されます。  
   
@@ -44,16 +44,16 @@ ms.locfileid: "36072761"
 ## <a name="typically-used-sqlcmd-options"></a>一般的な sqlcmd オプション  
  最もよく使用されるオプションを次に示します。  
   
--   サーバー オプション (**-s**) のインスタンスを識別する[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する`sqlcmd`接続します。  
+-   サーバー オプション (**-s**) のインスタンスを識別する[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を`sqlcmd`接続します。  
   
--   認証オプション (**-e**、 **-u**、および **-p**) の資格情報を指定するを`sqlcmd`はのインスタンスに接続を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+-   認証オプション (**-e**、 **-u**、および **-p**) 資格情報を指定するを`sqlcmd`はのインスタンスに接続を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
     > [!NOTE]  
     >  **-E** オプションは既定値なので、指定する必要はありません。  
   
--   入力オプション (**-q**、 **-q**、および **-i**) への入力の場所を識別する`sqlcmd`です。  
+-   入力オプション (**-q**、 **-q**、および **-i**) への入力場所を識別する`sqlcmd`します。  
   
--   出力オプション (**-o**) ファイルを指定する`sqlcmd`は、その出力を格納します。  
+-   出力オプション (**-o**) でファイルを指定する`sqlcmd`その出力を設定することができます。  
   
 ## <a name="connecting-to-the-sqlcmd-utility"></a>sqlcmd ユーティリティへの接続  
  次に、`sqlcmd` ユーティリティの一般的な使用法を示します。  
@@ -65,7 +65,7 @@ ms.locfileid: "36072761"
     ```  
   
     > [!NOTE]  
-    >  前の例では、 **-e**既定値になっているためにが指定されていないと`sqlcmd`は Windows 認証を使用して、既定のインスタンスに接続します。  
+    >  前の例では、 **-e**既定となっているが指定されていないと`sqlcmd`Windows 認証を使用して既定のインスタンスに接続します。  
   
 -   Windows 認証を使用して名前付きインスタンスに接続し、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを対話的に実行します。  
   
@@ -107,17 +107,17 @@ ms.locfileid: "36072761"
     >  `sqlcmd` ユーティリティでサポートされているオプションの一覧を表示するには、`sqlcmd -?` を実行してください。  
   
 ## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>sqlcmd を使用した Transact-SQL ステートメントの対話的な実行  
- コマンド プロンプト ウィンドウでは、`sqlcmd` ユーティリティを対話的に使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行できます。 対話的に実行する[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してステートメント`sqlcmd`を使用せず、ユーティリティを実行、 **-q**、 **-q**、 **-z**、または **-i**いずれかを指定するオプションがファイルまたはクエリを入力します。 以下に例を示します。  
+ コマンド プロンプト ウィンドウでは、`sqlcmd` ユーティリティを対話的に使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行できます。 対話的に実行する[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してステートメント`sqlcmd`を使用せず、ユーティリティを実行、 **-q**、 **-q**、 **-z**、または **-i**オプションを指定する入力ファイルまたはクエリ。 以下に例を示します。  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
  入力ファイルやクエリを指定せずにこのコマンドを実行すると、`sqlcmd` は指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続した後、新しい行に `1>` と表示し、その隣でアンダースコアを点滅させます。これを `sqlcmd` プロンプトと呼びます。 `1` は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの最初の行であることを示します。この `sqlcmd` プロンプトが [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの入力開始位置になります。  
   
- `sqlcmd` プロンプトでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと、`sqlcmd` や `GO` などの `EXIT` コマンドの両方を入力できます。 各 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、ステートメント キャッシュと呼ばれるバッファーに格納されます。 これらのステートメントに送信される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を入力した後、`GO`コマンドし、ENTER キーを押します。 終了する`sqlcmd`、型`EXIT`または`QUIT`新しい行の開始時にします。  
+ `sqlcmd` プロンプトでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと、`sqlcmd` や `GO` などの `EXIT` コマンドの両方を入力できます。 各 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、ステートメント キャッシュと呼ばれるバッファーに格納されます。 これらのステートメントに送信される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を入力した後、`GO`コマンドし、ENTER キーを押します。 終了する`sqlcmd`、型`EXIT`または`QUIT`新しい行の先頭。  
   
- ステートメント キャッシュをクリアするには、次のように入力します。`:RESET`です。 入力`^C`により`sqlcmd`を終了します。 `^C` は、`GO` コマンドが実行された後に、ステートメント キャッシュの実行を停止するためにも使用できます。  
+ ステートメント キャッシュをクリアするには、入力`:RESET`します。 入力`^C`により`sqlcmd`を終了します。 `^C` は、`GO` コマンドが実行された後に、ステートメント キャッシュの実行を停止するためにも使用できます。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 対話型セッションでは、入力したステートメントが入力することで編集可能、 **: ED**コマンドおよび`sqlcmd`プロンプトです。 起動したエディターで [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを編集して、エディターを終了すると、変更された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがコマンド ウィンドウに表示されます。 入力`GO`therevised を実行する[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 入力して、対話型セッションでは、入力したステートメントを編集できる、 **: ED**コマンドと`sqlcmd`プロンプト。 起動したエディターで [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを編集して、エディターを終了すると、変更された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがコマンド ウィンドウに表示されます。 入力`GO`therevised を実行する[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
   
 ## <a name="quoted-strings"></a>引用符で囲まれた文字列  
  引用符で囲まれた文字列は、前処理がまったく行われずそのまま使用されます。ただし、例外として、2 つの連続する引用符を入力することで、引用符自体を文字列に挿入できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この文字の並びを 1 つの引用符として扱います (ただし、この変換はサーバーで行われます)。スクリプト変数が文字列内に存在する場合は展開されません。  
@@ -160,7 +160,7 @@ ms.locfileid: "36072761"
   
  `1> _`  
   
- これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続が確立され、 `sqlcmd` で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと `sqlcmd` コマンドを実行できるようになったことを示しています。 `1>` の隣で点滅しているアンダースコアは、入力したステートメントやコマンドが表示される位置を示す `sqlcmd` プロンプトです。 ここで、「`USE AdventureWorks2012`し、enter キーを押しながらし、入力`GO`ENTER キーを押します。 コマンド プロンプト ウィンドウの内容は次のようになります。  
+ これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続が確立され、 `sqlcmd` で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと `sqlcmd` コマンドを実行できるようになったことを示しています。 `1>` の隣で点滅しているアンダースコアは、入力したステートメントやコマンドが表示される位置を示す `sqlcmd` プロンプトです。 ここで、「`USE AdventureWorks2012`し、ENTER キーを押してし、入力`GO`ENTER キーを押します。 コマンド プロンプト ウィンドウの内容は次のようになります。  
   
  `sqlcmd`  
   
@@ -211,7 +211,7 @@ ms.locfileid: "36072761"
  行 `3> GO` の後の行は、 `SELECT` ステートメントの出力です。 出力の生成後、 `sqlcmd` により `sqlcmd` プロンプトがリセットされ、 `1>`が表示されます。 行 `EXIT` で「 `1>`」と入力すると、最初にコマンド プロンプト ウィンドウを開いたときと同じ行が表示されます。 これは、 `sqlcmd` のセッションを終了したことを示します。 その状態で再度 `EXIT` コマンドを入力すると、コマンド プロンプト ウィンドウを閉じることができます。  
   
 ## <a name="running-transact-sql-script-files-by-using-sqlcmd"></a>sqlcmd を使用した Transact-SQL スクリプト ファイルの実行  
- `sqlcmd` を使用してデータベース スクリプト ファイルを実行できます。 スクリプト ファイルの混在したテキスト ファイルは、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、`sqlcmd`コマンド、およびスクリプト変数です。 変数をスクリプト化する方法の詳細については、「 [sqlcmd でのスクリプト変数の使用](sqlcmd-use-with-scripting-variables.md)」をご覧ください。 スクリプト ファイル内のステートメント、コマンド、およびスクリプト変数に対して `sqlcmd` で行われる処理は、対話的に入力したステートメントやコマンドの処理と似ています。 `sqlcmd` が対話入力の場合と大きく異なる点は、ユーザーがステートメント、コマンド、およびスクリプト変数を入力するまで待機するのではなく、入力ファイルを最後まで中断することなく読み取るという点です。  
+ `sqlcmd` を使用してデータベース スクリプト ファイルを実行できます。 スクリプト ファイルの組み合わせを含むテキスト ファイルは、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、`sqlcmd`コマンド、およびスクリプト変数です。 変数をスクリプト化する方法の詳細については、「 [sqlcmd でのスクリプト変数の使用](sqlcmd-use-with-scripting-variables.md)」をご覧ください。 スクリプト ファイル内のステートメント、コマンド、およびスクリプト変数に対して `sqlcmd` で行われる処理は、対話的に入力したステートメントやコマンドの処理と似ています。 `sqlcmd` が対話入力の場合と大きく異なる点は、ユーザーがステートメント、コマンド、およびスクリプト変数を入力するまで待機するのではなく、入力ファイルを最後まで中断することなく読み取るという点です。  
   
  データベース スクリプト ファイルの作成方法はいくつかあります。  
   
@@ -394,7 +394,7 @@ ms.locfileid: "36072761"
  `Syed Abbas, Catherine Abel, Kim Abercrombie,`  
   
 ### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>F. Windows スクリプト ファイルでの sqlcmd の使用  
- A`sqlcmd`などコマンド`sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,`.bat ファイルで VBScript と共に実行することができます。 この場合、対話型のオプションは使用しないでください。 また、.bat ファイルを実行するコンピューターには `sqlcmd` がインストールされている必要があります。  
+ A`sqlcmd`などコマンド`sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,`.bat ファイルで VBScript と共に実行できます。 この場合、対話型のオプションは使用しないでください。 また、.bat ファイルを実行するコンピューターには `sqlcmd` がインストールされている必要があります。  
   
  最初に、次の 4 つのファイルを作成します。  
   
@@ -484,7 +484,7 @@ ms.locfileid: "36072761"
  `SQLCMD returned 100 to the command shell`  
   
 ### <a name="g-using-sqlcmd-to-set-encryption-on-windows-azure-sql-database"></a>G. sqlcmd を使用した Windows Azure SQL データベースでの暗号化の設定  
- A`sqlcmd`への接続に対して実行できる[!INCLUDE[ssSDS](../../includes/sssds-md.md)]にデータ暗号化と証明書の信頼を指定します。 2 つ 'sqlcmd' ' オプションを使用できます。  
+ A`sqlcmd`への接続で実行できる[!INCLUDE[ssSDS](../../includes/sssds-md.md)]にデータの暗号化と証明書の信頼を指定します。 2 つ 'sqlcmd' ' オプションを使用できます。  
   
 -   暗号化された接続を要求するには、クライアント側で -N スイッチを使用します。 このオプションは、ADO.net オプションの `ENCRYPT = true`と同等です。  
   

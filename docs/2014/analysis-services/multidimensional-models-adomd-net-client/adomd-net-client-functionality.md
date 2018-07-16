@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET クライアント機能 |Microsoft ドキュメント
+title: ADOMD.NET クライアントの機能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,33 +15,33 @@ helpviewer_keywords:
 - ADOMD.NET, functionality
 ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5fa854ebf8a67878d17b6e01b5cf8e70fe869d88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85e9ff2d42c61b97822e4715af7b8be3f87b7d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261538"
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET のクライアント機能
   ADOMD.NET は、他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework データ プロバイダーと同様、アプリケーションとデータ ソースの間の仲介役となります。 ただし、分析データを扱うという点で、他の .NET Framework データ プロバイダーとは異なります。 分析データを操作する ADOMD.NET では、サポートされている機能が他の .NET Framework データ プロバイダーとは大きく違っています。 データを取得するだけでなく、メタデータを取得したり、分析データ ストアの構造を変更したりすることができます。  
   
  **メタデータの取得**  
- スキーマ行セットまたはオブジェクト モデルを使用してメタデータを取得することにより、データ ソースから取得できるデータについてアプリケーションでより多くの情報を得ることができます。 たとえば、利用可能な各主要業績評価指標 (KPI) の型、キューブのディメンション、マイニング モデルで必要とされるパラメーターなどの情報を入手できます。 メタデータは、最も重要な*動的*を取得するには、型、深さ、およびデータのスコープを決定するユーザー入力を必要とするアプリケーション。 たとえば、クエリ アナライザー、Microsoft Excel、その他のクエリ ツールがこれに該当します。 メタデータを重要度の低い*静的*定義済みの一連の操作を実行するアプリケーション。  
+ スキーマ行セットまたはオブジェクト モデルを使用してメタデータを取得することにより、データ ソースから取得できるデータについてアプリケーションでより多くの情報を得ることができます。 たとえば、利用可能な各主要業績評価指標 (KPI) の型、キューブのディメンション、マイニング モデルで必要とされるパラメーターなどの情報を入手できます。 メタデータは、最も重要な*動的*を取得するには、型、深さ、およびデータのスコープを決定するユーザー入力を必要とするアプリケーション。 たとえば、クエリ アナライザー、Microsoft Excel、その他のクエリ ツールがこれに該当します。 メタデータがする重要度の低い*静的*定義済みの一連のアクションを実行するアプリケーション。  
   
- 詳細については:[分析データ ソースからメタデータを取得する](retrieving-metadata-from-an-analytical-data-source.md)です。  
+ 詳細については:[分析データ ソースからメタデータを取得する](retrieving-metadata-from-an-analytical-data-source.md)します。  
   
  **データの取得**  
  データの取得とは、データ ソースに格納されている情報を実際に取得することです。 データ ソースの構造がわかっている "静的" アプリケーションでは、データの取得が主要な機能になります。 また、データの取得は "動的" アプリケーションの最終結果でもあります。 たとえば、特定の時刻の KPI の値、この 1 時間の間に各店舗で販売された自転車の数、従業員の年間の業績を左右する要因などのデータを取得できます。 データの取得は、クエリを実行するすべてのアプリケーションにとって不可欠です。  
   
- 詳細については:[分析データ ソースからのデータの取得](retrieving-data-from-an-analytical-data-source.md)です。  
+ 詳細については:[分析データ ソースからのデータの取得](retrieving-data-from-an-analytical-data-source.md)します。  
   
  **分析データの構造を変更します。**  
  ADOMD.NET を使用すると、分析データ ストアの構造を実際に変更することもできます。 この操作は、分析管理オブジェクト (AMO) オブジェクト モデルを通じて行われるのが一般的ですが、ADOMD.NET を使用すると、Analysis Services Scripting Language (ASSL) コマンドを送信してサーバーのオブジェクトを作成、変更、または削除できます。  
   
- 詳細については:[を実行するコマンドに対して、分析データ ソース](executing-commands-against-an-analytical-data-source.md)、 [Analysis Management Objects を使用した開発&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)、 [Analysis Services スクリプト言語&#40;ASSL&#41;参照](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ 詳細については:[を実行するコマンドに対して、分析データ ソース](executing-commands-against-an-analytical-data-source.md)、 [Analysis Management Objects を使用した開発&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)、 [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
  メタデータの取得、データの取得、およびデータ構造の変更は、それぞれ一般的な ADOMD.NET アプリケーションのワークフローの特定の段階で行われます。  
   

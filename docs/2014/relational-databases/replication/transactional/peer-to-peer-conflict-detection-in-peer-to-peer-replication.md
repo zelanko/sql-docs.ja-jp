@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 01cc02c299d4a5fc617a8177efe141ea4916babe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 750781b73012b6815a3ad9c432ef83d1b02a7b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318132"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>ピア ツー ピア レプリケーションにおける競合検出
   ピア ツー ピア トランザクション レプリケーションを使用すると、トポロジ内の任意のノードでデータの挿入、更新、または削除を実行し、データ変更をその他のノードに反映させることができます。 どのノードでもデータを変更できるので、さまざまなノードで行われたデータ変更が相互に競合する場合があります。 行が複数のノードで変更されると、他のノードに反映される際に競合が発生したり、場合によっては更新データが失われたりする可能性があります。  
@@ -90,7 +90,7 @@ ms.locfileid: "36076581"
   
 -   ディストリビューション エージェントが引き続き変更を適用できるようにすることで、ノードの同期を再試行します。  
   
-    1.  実行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): '@p2p_continue_onconflict' に指定、@propertyパラメーターと`true`の@valueパラメーター。  
+    1.  実行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): 'p2p_continue_onconflict' を指定、@propertyパラメーターと`true`の@valueパラメーター。  
   
     2.  ディストリビューション エージェントを再起動します。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36076581"
         > [!NOTE]  
         >  この手順の実行後にデータに一貫性がない場合は、最も優先度の高いノードの行を手動で更新して、そのノードから変更を反映する必要があります。 競合する変更がトポロジ内になくなると、すべてのノードが一貫性のある状態になります。  
   
-    5.  実行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): '@p2p_continue_onconflict' に指定、@propertyパラメーターと`false`の@valueパラメーター。  
+    5.  実行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): 'p2p_continue_onconflict' を指定、@propertyパラメーターと`false`の@valueパラメーター。  
   
 ## <a name="see-also"></a>参照  
  [@loopback_detection](peer-to-peer-transactional-replication.md)  

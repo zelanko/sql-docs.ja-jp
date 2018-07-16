@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_MEMBERS 行セット |Microsoft ドキュメント
+title: MDSCHEMA_MEMBERS 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_MEMBERS rowset
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2473797ef34c0fd204c878da8c6044a307cc1ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d36a065ea73f249ce5c4d9dc37cc047ac864cb84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280018"
 ---
 # <a name="mdschemamembers-rowset"></a>MDSCHEMA_MEMBERS 行セット
   データベース内のメンバーについて記述します。  
@@ -46,7 +46,7 @@ ms.locfileid: "36177417"
 |`MEMBER_ORDINAL`|`DBTYPE_UI4`||(非推奨) 常に `0` を返します。|  
 |`MEMBER_NAME`|`DBTYPE_WSTR`||メンバーの名前。|  
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`||メンバーの一意な名前。|  
-|`MEMBER_TYPE`|`DBTYPE_I4`||メンバーの種類:<br /><br /> -   `MDMEMBER_TYPE_REGULAR` (`1`)<br />-   `MDMEMBER_TYPE_ALL` (`2`)<br />-   `MDMEMBER_TYPE_MEASURE` (`3`)<br />-   `MDMEMBER_TYPE_FORMULA` (`4`)<br />-   `MDMEMBER_TYPE_UNKNOWN` (`0`)<br />-   `MDMEMBER_TYPE_FORMULA` も優先`MDMEMBER_TYPE_MEASURE`です。 たとえば、メジャー ディメンションに式 (計算される) メンバーがある場合、そのメンバーは `MDMEMBER_TYPE_FORMULA` として示されます。|  
+|`MEMBER_TYPE`|`DBTYPE_I4`||メンバーの種類:<br /><br /> -   `MDMEMBER_TYPE_REGULAR` (`1`)<br />-   `MDMEMBER_TYPE_ALL` (`2`)<br />-   `MDMEMBER_TYPE_MEASURE` (`3`)<br />-   `MDMEMBER_TYPE_FORMULA` (`4`)<br />-   `MDMEMBER_TYPE_UNKNOWN` (`0`)<br />-   `MDMEMBER_TYPE_FORMULA` も優先`MDMEMBER_TYPE_MEASURE`します。 たとえば、メジャー ディメンションに式 (計算される) メンバーがある場合、そのメンバーは `MDMEMBER_TYPE_FORMULA` として示されます。|  
 |`MEMBER_GUID`|`DBTYPE_GUID`||メンバーの GUID。 GUID が存在しない場合は、`NULL` です。|  
 |`MEMBER_CAPTION`|`DBTYPE_WSTR`||メンバーに関連付けられたラベルまたはキャプション。 主に表示のために使用されます。 キャプションが存在しない場合`MEMBER_NAME`が返されます。|  
 |`CHILDREN_CARDINALITY`|`DBTYPE_UI4`||メンバーが持つ子の数。 子の数は推定値の場合があります。したがって、この数値を正確な数として使用しないでください。 プロバイダーは、正確な数に最も近い推定値を返します。|  
@@ -79,8 +79,8 @@ ms.locfileid: "36177417"
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`|任意。|  
 |`MEMBER_CAPTION`|`DBTYPE_WSTR`|任意。|  
 |`MEMBER_TYPE`|`DBTYPE_I4`|任意。|  
-|`TREE_OP`|`DBTYPE_I4`|(省略可) 1 つのメンバーにのみ適用されます。<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) すべての先祖を返します。<br />-   `MDTREEOP_CHILDREN` (`0x01`) 直接の子のみを返します。<br />-   `MDTREEOP_SIBLINGS` (`0x02`) と同じレベルにメンバーを返します。<br />-   `MDTREEOP_PARENT` (`0x04`) 直接の親のみを返します。<br />-   `MDTREEOP_SELF` (`0x08`) 返される行の一覧でそれ自体を返します。<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) すべての子孫を返します。|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 のキューブ<br />2 つのディメンション<br /><br /> 既定の制限の値は 1 です。|  
+|`TREE_OP`|`DBTYPE_I4`|(省略可) 1 つのメンバーにのみ適用されます。<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) すべての先祖を返します。<br />-   `MDTREEOP_CHILDREN` (`0x01`) 直下の子のみを返します。<br />-   `MDTREEOP_SIBLINGS` (`0x02`) と同じレベルのメンバーを返します。<br />-   `MDTREEOP_PARENT` (`0x04`) 直接の親のみを返します。<br />-   `MDTREEOP_SELF` (`0x08`) 返された行の一覧で、それ自体を返します。<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) すべての子孫を返します。|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(省略可) 次のいずれかの有効値を含むビットマップ。<br /><br /> -1 のキューブ<br />-2 つのディメンション<br /><br /> 既定の制限の値は 1 です。|  
   
 ## <a name="see-also"></a>参照  
  [OLE DB for OLAP Schema 行セット](ole-db-for-olap-schema-rowsets.md)  

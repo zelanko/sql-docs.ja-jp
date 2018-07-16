@@ -1,5 +1,5 @@
 ---
-title: サーバーの全体管理を実行している Web フロント エンド サーバーに ADOMD.NET をインストール |Microsoft ドキュメント
+title: サーバーの全体管理を実行している Web フロント エンド サーバーに ADOMD.NET をインストールする |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: ccedd48fcebab07eeb7b27821917b684d98a11d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fd8c345a0f5b1cafdf675fa5ed57b857d9714b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317542"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>サーバーの全体管理を実行している Web フロント エンド サーバーに ADOMD.NET をインストールします。
   Excel Services または PowerPivot for SharePoint がインストールされていない、サーバーの全体管理のトポロジを持つファームに PowerPivot for SharePoint をインストールするときに、PowerPivot 管理ダッシュボードの組み込みレポートへのフル アクセスが必要な場合は、Microsoft ADOMD.NET クライアント ライブラリをダウンロードしてインストールしてください。 ダッシュボードの一部のレポートでは、ADOMD.NET を使用して、ファームの PowerPivot クエリ処理およびサーバーの状態に関するレポート データを提供する内部データにアクセスします。  
@@ -34,19 +34,19 @@ ms.locfileid: "36077251"
   
 2.  `SQL_AS_ADOMD.msi` インストール プログラムの x64 パッケージをダウンロードします。  
   
-3.  .Msi を実行してライブラリをインストールします。  
+3.  ライブラリをインストールする .msi を実行します。  
   
-4.  インストールの完了後、IIS をリセットします。 開き、管理コマンド プロンプトの種類**IISRESET**です。  
+4.  インストールの完了後、IIS をリセットします。 管理者のコマンド プロンプトを開き**IISRESET**します。  
   
 ### <a name="verify-installation"></a>インストールの確認  
   
 1.  Windows\Assembly に移動します。  
   
-2.  Microsoft.AnalysisServices.AdomdClient を右クリックし **プロパティ**です。  
+2.  Microsoft.AnalysisServices.AdomdClient を右クリックして**プロパティ**します。  
   
 3.  **[バージョン]** をクリックします。  
   
-4.  バージョンには 12.00 が含まれていることを確認します。\<ビルド番号 > および説明が microsoft.analysisservice.adomdclient になっています。  
+4.  バージョンには 12.00 が含まれていることを確認します。\<ビルド番号 >、説明が microsoft.analysisservice.adomdclient になっているとします。  
   
 ## <a name="see-also"></a>参照  
  [PowerPivot 管理ダッシュボードと使用状況データ](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  

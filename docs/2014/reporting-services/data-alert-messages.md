@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: df5c57bdf3138dbecf23ece011b1dad56f8e9b13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2227a89a3e44934550a828dc9bc47db97b83e28c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331352"
 ---
 # <a name="data-alert-messages"></a>データ警告メッセージ
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ警告は、2 種類のデータ警告メッセージを電子メールで配信します。データ警告結果を含むメッセージと、エラー説明を含むメッセージです。 結果を含むメッセージは、すべての受信者に共通して関係し、かつ業務意思決定にとって重要なレポート データの変更について情報を提供します。 何かの理由でエラーが発生し、結果情報が取得できない場合は、代わりにエラー メッセージが送信されます。  

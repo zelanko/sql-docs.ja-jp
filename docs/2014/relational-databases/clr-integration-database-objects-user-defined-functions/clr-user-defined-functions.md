@@ -1,13 +1,11 @@
 ---
-title: CLR ユーザー定義関数 |Microsoft ドキュメント
+title: CLR ユーザー定義関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dd7a5d10a15b7072aced0c20b31193e3370488b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: fbdb8fad94b76b0f9f30dde59896caebd8603c10
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073498"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349234"
 ---
 # <a name="clr-user-defined-functions"></a>CLR ユーザー定義関数
   ユーザー定義関数は、パラメーターを受け取り、計算やその他の操作を実行し、その結果を返すことができるルーチンです。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# などの [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework プログラミング言語でユーザー定義関数を記述できます。  

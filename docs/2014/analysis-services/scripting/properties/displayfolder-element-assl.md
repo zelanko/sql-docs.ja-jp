@@ -1,5 +1,5 @@
 ---
-title: DisplayFolder 要素 (ASSL) |Microsoft ドキュメント
+title: DisplayFolder 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DisplayFolder element
 ms.assetid: 55184c02-03e7-4d6c-b87a-d4d34bc11d0e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c959f1c2fe298217b46849c6a13d3e0f313f6803
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 646a98170e24c36841ab445bf87897a0b4e9686f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293202"
 ---
 # <a name="displayfolder-element-assl"></a>DisplayFolder 要素 (ASSL)
-  親要素を一覧表示するフォルダーを指定します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 開発者および管理者向けのアプリケーションでは、複数の要素を視覚的に分類する表示フォルダーの使用をサポート可能性があります。  
+  親要素を一覧表示するフォルダーを指定します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 開発者と管理者向けのアプリケーションでは、複数の要素を視覚的に分類する表示フォルダーの使用をサポート可能性があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,9 +68,9 @@ ms.locfileid: "36077414"
   
 -   単一のフォルダー名を含んでいる - 同じ名前のフォルダーに所属するものとしてメジャーを表示する必要があることを示します。  
   
--   円記号で区切られた複数のフォルダー名が含まれます (\\)、埋め込みのフォルダー階層を示すです。  
+-   円記号で区切られた複数のフォルダー名が含まれます (\\)、フォルダー階層が埋め込まを示します。  
   
- `DisplayFolder`プロパティに適用されます`CalculationProperty`場合にのみ、要素の値[CalculationType](calculationtype-element-assl.md)に設定されている*メンバー*です。  
+ `DisplayFolder`プロパティに適用される`CalculationProperty`場合にのみ、要素の値[CalculationType](calculationtype-element-assl.md)に設定されている*メンバー*します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで `DisplayFolder` の親に対応する要素は、<xref:Microsoft.AnalysisServices.CalculationProperty>、<xref:Microsoft.AnalysisServices.Hierarchy>、<xref:Microsoft.AnalysisServices.Kpi>、<xref:Microsoft.AnalysisServices.Measure>、および <xref:Microsoft.AnalysisServices.Translation> です。  
   

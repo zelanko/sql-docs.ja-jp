@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f46357975476ac301c28f639a3508edc992e5e5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a3eb895440cc6680acd719b47a88200d6c92eff4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289058"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>データの一括インポートでのフォーマット ファイルの使用 (SQL Server)
   このトピックでは、一括インポート操作でのフォーマット ファイルの使用方法について説明します。 フォーマット ファイルでは、データ ファイルのフィールドがテーブルの列にマップされます。  XML 以外のフォーマット ファイルまたは XML フォーマット ファイルを使用して、データを一括インポートできます。この操作には、**bcp** コマンド、または[!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドの BULK INSERT か INSERT ... SELECT * FROM OPENROWSET(BULK...) を使用します。  
@@ -31,7 +30,7 @@ ms.locfileid: "36084318"
 >  Unicode 文字データ ファイルを操作するフォーマット ファイルの場合、すべての入力フィールドが Unicode テキスト文字列 (つまり、固定サイズの Unicode 文字列または終端文字が指定された Unicode 文字列) でなければなりません。  
   
 > [!NOTE]  
->  フォーマット ファイルに慣れていない場合は、次を参照してください。 [XML 以外のフォーマット ファイル&#40;SQL Server&#41; ](xml-format-files-sql-server.md)と[XML フォーマット ファイル&#40;SQL Server&#41;](xml-format-files-sql-server.md)です。  
+>  フォーマット ファイルに慣れていない場合は、次を参照してください。 [XML 以外のフォーマット ファイル&#40;SQL Server&#41; ](xml-format-files-sql-server.md)と[XML フォーマット ファイル&#40;SQL Server&#41;](xml-format-files-sql-server.md)します。  
   
 ## <a name="format-file-options-for-bulk-import-commands"></a>一括インポート コマンドのフォーマット ファイル オプション  
  次の表は、各一括インポート コマンドのフォーマット ファイル オプションを示しています。  

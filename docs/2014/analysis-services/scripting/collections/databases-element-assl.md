@@ -1,5 +1,5 @@
 ---
-title: データベースの要素 (ASSL) |Microsoft ドキュメント
+title: Databases 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Databases element
 ms.assetid: 2806a074-d47e-4434-9599-04888783770f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 55063b20e5a98c2fc9d716083eebaf6e92d96ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fadc9be7e7abc588c83515a6a199a37161075916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289648"
 ---
 # <a name="databases-element-assl"></a>Databases 要素 (ASSL)
-  コレクションを格納[データベース](../objects/database-element-assl.md)要素に関連付けられた、[サーバー](../objects/server-element-assl.md)要素。  
+  コレクションを格納[データベース](../objects/database-element-assl.md)要素に関連付けられた、 [Server](../objects/server-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

@@ -1,5 +1,5 @@
 ---
-title: ドメイン管理アクティビティの終了 |Microsoft ドキュメント
+title: ドメイン管理アクティビティの終了 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab6505ad-3090-453b-bb01-58435e7fa7c0
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8f273f10c5e37c7b6fa3cd16f28b2ad95adc90ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b7e67308da4240f223f414ddf5e6080f0b5726e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328462"
 ---
 # <a name="end-the-domain-management-activity"></a>ドメイン管理アクティビティの終了
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のドメイン管理アクティビティを完了、終了、またはキャンセルする方法について説明します。 ドメイン管理はウィザードで実行されないため、以下で説明する制御はドメイン管理アクティビティのどのページからでも使用できます。  

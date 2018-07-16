@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - disabling publishing
 - publishing [SQL Server replication], disabling
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - disabling distribution
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2b1cb0af2c8082ba7ba649c6d6f21b53d9b96c7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ec2381b96818d038c7e40b71a4e56b1c4d415af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313492"
 ---
 # <a name="disable-publishing-and-distribution"></a>パブリッシングおよびディストリビューションの無効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリッシングとディストリビューションを無効にする方法について説明します。  
@@ -65,7 +65,7 @@ ms.locfileid: "36075709"
   
 #### <a name="to-disable-publishing-and-distribution"></a>パブリッシングおよびディストリビューションを無効化するには  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で無効化するパブリッシャーまたはディストリビューターに接続して、サーバー ノードを展開します。  
+1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で無効化するパブリッシャーまたはディストリビューターに接続して、サーバー ノードを展開します。  
   
 2.  **[レプリケーション]** フォルダーを右クリックし、 **[パブリッシングとディストリビューションの無効化]** をクリックします。  
   
@@ -114,13 +114,13 @@ ms.locfileid: "36075709"
   
 4.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> プロパティを指定し、手順 3. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを渡します。  
   
-5.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得し、パブリッシャーが存在することを確認します。 このメソッドが戻る場合`false`手順 4 で設定したパブリッシャーの名前が正しく、またはこのディストリビューターでパブリッシャーが使用されていません。  
+5.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得し、パブリッシャーが存在することを確認します。 このメソッドが戻る場合`false`手順 4 で設定したパブリッシャーの名前が正しく、または、パブリッシャーがディストリビューターで使用されていません。  
   
-6.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> メソッドを呼び出します。 値を渡す`true`の*強制的*パブリケーションが存在しないことを最初に確認せずにディストリビューターでパブリッシャーをアンインストールして、パブリッシャーとディストリビューターが別々 のサーバー上にある場合、パブリッシャーです。  
+6.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> メソッドを呼び出します。 値を渡す`true`の*強制*でパブリケーションが存在しなくなった最初に確認せずにディストリビューターでパブリッシャーをアンインストールして、パブリッシャーとディストリビューターが、異なるサーバー上にある場合、パブリッシャーです。  
   
 7.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> クラスのインスタンスを作成します。 手順 3 の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを渡します。  
   
-8.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> メソッドを呼び出します。 値を渡す`true`の*強制的*を最初に確認せずにディストリビューターですべてのローカル パブリケーション データベースを無効になっているし、ディストリビューション データベースがアンインストールされているすべてのレプリケーション オブジェクトを削除します。  
+8.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> メソッドを呼び出します。 値を渡す`true`の*強制*最初に確認せずにディストリビューターですべてのローカル パブリケーション データベースを無効になっているし、ディストリビューション データベースがアンインストールされているすべてのレプリケーション オブジェクトを削除します。  
   
 ###  <a name="PShellExample"></a> 例 (RMO)  
  次の例では、ディストリビューターのパブリッシャーの登録を削除し、ディストリビューション データベースを削除して、ディストリビューターをアンインストールします。  

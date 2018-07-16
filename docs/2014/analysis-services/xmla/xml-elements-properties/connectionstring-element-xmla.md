@@ -1,5 +1,5 @@
 ---
-title: ConnectionString 要素 (XMLA) |Microsoft ドキュメント
+title: ConnectionString 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: 3b0575aa-79ed-4f14-ae7e-dd587af4cdb1
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 12d69bfe2b8dc8bda91bc873167bb3208203d728
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e7345d2a35d80a2ce4d72875c4afb082b57ec1a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293212"
 ---
 # <a name="connectionstring-element-xmla"></a>ConnectionString 要素 (XMLA)
-  親によって使用される接続文字列を含む[場所](location-element-xmla.md)または[ソース](source-element-xmla.md)要素。  
+  親で使用される接続文字列を含む[場所](location-element-xmla.md)または[ソース](source-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36072420"
 |--------------------|-----------------|  
 |データ型と長さ|String|  
 |既定値|なし|  
-|基数の先祖または親|Cardinality|  
+|カーディナリティの先祖または親|Cardinality|  
 |[[場所]](location-element-xmla.md)|1-1 : 必須要素で、1 回だけ出現します|  
 |[Source](source-element-xmla.md)|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36072420"
   
  `Source` 要素の場合、`ConnectionString` 要素は、同期元インスタンスへの接続のために `Synchronize` コマンドで使用される接続文字列を含みます。  
   
- バックアップと復元のオブジェクトの詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)です。  
+ バックアップと復元のオブジェクトの詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Restore 要素&#40;XMLA&#41;](../xml-elements-commands/restore-element-xmla.md)   

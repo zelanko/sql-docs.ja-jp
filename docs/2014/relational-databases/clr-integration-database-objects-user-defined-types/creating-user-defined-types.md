@@ -1,13 +1,11 @@
 ---
-title: ユーザー定義型を作成する |Microsoft ドキュメント
+title: ユーザー定義型を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b832d8191cd153f5f11af88263f4ecbeb1021ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4446d468738ea9db533488de62705c548e777f0a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075747"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350978"
 ---
 # <a name="creating-a-user-defined-type"></a>ユーザー定義型を作成します。
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインストールできる UDT (ユーザー定義型) を作成するには、まず、サポートされるいずれかの .NET Framework プログラミング言語 (Visual C# や Visual Basic など) のクラスを作成する必要があります。これは、UDT の作成に関する仕様に準拠しています。 その後、クラスを DLL (ダイナミック リンク ライブラリ) にコンパイルできます。この DLL は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むことができます。 また、Visual Studio を使用して UDT を作成し、配置することもできます。  
@@ -45,9 +43,9 @@ Reconfigure
  ユーザー定義型の作成に関連するコーディング技法について説明します。  
   
 ## <a name="example"></a>例  
- 次のコード リストの定義で詳しく説明されている Point UDT [Coding User-Defined 型](creating-user-defined-types-coding.md)です。  
+ 次のコード リストはで詳しく説明されている Point UDT の定義[Coding User-Defined 型](creating-user-defined-types-coding.md)します。  
   
- このセクションで説明している他の例の完全なコード リストは、CLR サンプルをインストールして入手できます。 これらのサンプルをインストールする方法の詳細については、次を参照してください。 [SQL Server データベース エンジン サンプル](http://msftengprodsamples.codeplex.com/)です。  
+ このセクションで説明している他の例の完全なコード リストは、CLR サンプルをインストールして入手できます。 これらのサンプルをインストールする方法の詳細については、次を参照してください。 [SQL Server データベース エンジン サンプル](http://msftengprodsamples.codeplex.com/)します。  
   
  C#  
   

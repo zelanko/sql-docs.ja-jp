@@ -1,5 +1,5 @@
 ---
-title: XPath クエリ (SQLXMLOLEDB プロバイダー) を含むテンプレートを実行 |Microsoft ドキュメント
+title: XPath クエリ (SQLXMLOLEDB プロバイダー) を含むテンプレートの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML templates [SQLXML]
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c51d8b0480a7a6dc86e1b878fef153604405266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: eef3ff7d70d3287d70becd45d73b24d715440c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202832"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>XPath クエリを含むテンプレートの実行 (SQLXMLOLEDB プロバイダー)
   この例では、次の SQLXMLOLEDB プロバイダー固有のプロパティについて、使用法を示します。  
@@ -39,16 +39,16 @@ ms.locfileid: "36179280"
   
 -   マッピング スキーマ  
   
- このサンプル ADO アプリケーションでは、XPath クエリ (root) で構成される XML テンプレートに記載されている XSD マッピング スキーマ (MySchema.xml) に対して指定されて[XPath クエリを実行する&#40;SQLXMLOLEDB プロバイダー&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
+ このサンプル ADO アプリケーションでは、XPath クエリ (root) で構成される XML テンプレートに記載されている XSD マッピング スキーマ (MySchema.xml) に対して指定されて[XPath クエリの実行&#40;SQLXMLOLEDB プロバイダー&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
   
- マッピング スキーマ プロパティは、XPath クエリの実行対象の XSD マッピング スキーマを提供します。 Base Path プロパティは、マッピング スキーマへのファイル パスを提供します。  
+ マッピング スキーマのプロパティは、XPath クエリの実行対象の XSD マッピング スキーマを提供します。 Base Path プロパティは、マッピング スキーマへのファイル パスを提供します。  
   
  ClientSideXML プロパティが True に設定します。 つまり、XML ドキュメントはクライアントで生成されます。  
   
  このアプリケーションでは、XPath クエリを直接指定します。 したがって、言語 {5d531cb2-e6ed-11d2-b252-00c04f681b71} を含める必要があります。  
   
 > [!NOTE]  
->  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例で指定の使用、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]追加ネットワーク クライアント ソフトウェアをインストールする必要がありますデータ プロバイダー用の Native Client (SQLNCLI11)。 詳細については、次を参照してください。 [SQL Server Native Client のシステム要件](../../native-client/system-requirements-for-sql-server-native-client.md)です。  
+>  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例で指定の使用、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) データ プロバイダー追加ネットワーク クライアント ソフトウェアをインストールする必要があります。 詳細については、次を参照してください。 [SQL Server Native Client のシステム要件](../../native-client/system-requirements-for-sql-server-native-client.md)します。  
   
 ```  
 Option Explicit  

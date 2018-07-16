@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
 - Integration Services packages, expressions
@@ -22,13 +22,13 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9cb824a3e2c0321b8fcb782d8f7827e395afc2b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4d8718e8a30fdc55da6601ad24e54923d9ae526
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289378"
 ---
 # <a name="use-property-expressions-in-packages"></a>パッケージでプロパティ式を使用する
   プロパティ式とは、実行時にプロパティの動的更新を可能にするためにプロパティに割り当てられた式のことです。 たとえば、プロパティ式を使用して、変数に格納された電子メール アドレスを挿入して、メール送信タスクで使用される [宛先] 行を更新できます。  
@@ -56,10 +56,10 @@ ms.locfileid: "36075320"
   
  1 つのプロパティで使用できるプロパティ式は 1 つだけであり、1 つのプロパティ式は 1 つのプロパティだけに適用できます。 ただし、同じプロパティ式を複数個作成し、それらを異なるプロパティに割り当てることができます。  
   
- プロパティによっては、列挙子の値を使用して設定するものもあります。 プロパティ式で列挙子メンバーを参照するときは、その列挙子メンバーの表示名に相当する数値を使用する必要があります。 たとえば、プロパティ式を設定、`LoggingMode`から値を使用して、プロパティ、`DTSLoggingMode`列挙型、プロパティ式はフレンドリ名ではなく 0、1、または 2 を使用する必要があります`Enabled`、 `Disabled`、または`UseParentSetting`です。 詳細については、「 [Enumerated Constants in Property Expressions](enumerated-constants-in-property-expressions.md)」(プロパティ式における列挙定数) を参照してください。  
+ プロパティによっては、列挙子の値を使用して設定するものもあります。 プロパティ式で列挙子メンバーを参照するときは、その列挙子メンバーの表示名に相当する数値を使用する必要があります。 たとえば、プロパティ式が設定されている場合、`LoggingMode`プロパティから値を使用する、`DTSLoggingMode`列挙型、プロパティ式は、フレンドリ名ではなく 0、1、または 2 を使用する必要があります`Enabled`、 `Disabled`、または`UseParentSetting`。 詳細については、「 [Enumerated Constants in Property Expressions](enumerated-constants-in-property-expressions.md)」(プロパティ式における列挙定数) を参照してください。  
   
 ## <a name="property-expression-user-interface"></a>プロパティ式のユーザー インターフェイス  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 構築と管理のプロパティ式には、一連のツールを提供します。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] プロパティ式を管理するためには、一連のツールを提供します。  
   
 -   タスク、For ループ コンテナー、および Foreach コンテナーのカスタム エディターにある **[式]** ページ。 **[式]** ページでは、式を編集したり、タスク、Foreach ループ、または For ループで使用されるプロパティ式のリストを表示できます。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36075320"
  プロパティ式は、パッケージ構成が読み込まれた後に読み込まれます。 たとえば変数は、対応する構成でまず更新されてから、その変数を使用するプロパティ式が評価され読み込まれます。 つまり、プロパティ式が使用する変数の値は常に、構成によって設定された値です。  
   
 > [!NOTE]  
->  使用することはできません、`Set`のオプション、 **dtexec**ユーティリティ プロパティ式を設定します。  
+>  使用することはできません、`Set`のオプション、 **dtexec**プロパティ式を設定するためのユーティリティ。  
   
  次の表に、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のプロパティ式が評価され読み込まれるタイミングをまとめます。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "36075320"
 |Foreach 列挙子|構成の読み込み後<br /><br /> 検証前<br /><br /> 実行前<br /><br /> ループの各列挙前|  
   
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Foreach ループでのプロパティ式の使用  
- 多くの場合、Foreach ループ コンテナー内部で使用される接続マネージャーの `ConnectionString` プロパティ値を設定するには、プロパティ式の実装が役立ちます。 この変数の値を使用して、プロパティ式がの値を更新して、列挙子は、ループの反復ごとに変数をその現在の値をマップした後、`ConnectionString`プロパティ動的にします。  
+ 多くの場合、Foreach ループ コンテナー内部で使用される接続マネージャーの `ConnectionString` プロパティ値を設定するには、プロパティ式の実装が役立ちます。 この変数の値を使用して、プロパティ式がの値を更新、列挙子は、その現在の値をループの各反復処理での変数にマップ、された後、`ConnectionString`プロパティに動的にします。  
   
- Foreach ループで使用されるファイル、複数のファイル、フラット ファイル、および複数フラット ファイル接続マネージャーの `ConnectionString` プロパティでプロパティ式を使用する場合は、いくつかの点について考慮する必要があります。 `MaxConcurrentExecutables` プロパティを 1 より大きな値または -1 に設定することにより、複数の実行可能ファイルが同時に実行されるようにパッケージを構成できます。 値が -1 の場合は、同時に実行できる実行可能ファイルの最大数が、プロセッサの総数に 2 を加えた数と等しいことを意味します。 実行可能ファイルを並列実行することに起因する不適切な結果を回避するには、値 `MaxConcurrentExecutables` を 1 に設定することをお勧めします。 場合`MaxConcurrentExecutables`がの値を 1 に設定されていない、`ConnectionString`プロパティを保証できず、結果は予測できません。  
+ Foreach ループで使用されるファイル、複数のファイル、フラット ファイル、および複数フラット ファイル接続マネージャーの `ConnectionString` プロパティでプロパティ式を使用する場合は、いくつかの点について考慮する必要があります。 `MaxConcurrentExecutables` プロパティを 1 より大きな値または -1 に設定することにより、複数の実行可能ファイルが同時に実行されるようにパッケージを構成できます。 値が -1 の場合は、同時に実行できる実行可能ファイルの最大数が、プロセッサの総数に 2 を加えた数と等しいことを意味します。 実行可能ファイルを並列実行することに起因する不適切な結果を回避するには、値 `MaxConcurrentExecutables` を 1 に設定することをお勧めします。 場合`MaxConcurrentExecutables`の値を 1 に設定されていない、`ConnectionString`プロパティを保証できず、結果は予測できません。  
   
  たとえば、フォルダー内のファイルを列挙し、ファイル名を取得し、SQL 実行タスクを使用してテーブルに各ファイル名を挿入する Foreach ループを考えます。 `MaxConcurrentExecutables` を 1 に設定しないと、SQL 実行タスクの 2 つのインスタンスが同時にテーブルへの書き込みを行う場合、書き込みが競合する可能性があります。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36075320"
  プロパティ式でのシステム変数、演算子、関数、および文字列リテラルの使い方を次のサンプル式に示します。  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>パッケージの LoggingMode プロパティ用のプロパティ式  
- 次のプロパティ式を使用すると、パッケージの LoggingMode プロパティを設定できます。 この式では、DAY 関数と GETDATE 関数を使用して、ある日付の日要素を表す整数を取得します。 日要素が 1 日または 15 日の場合、ログ記録が有効です。それ以外の場合は、ログ記録が無効です。 値 1 は整数 LoggingMode 列挙子メンバーのと同じ`Enabled`、値 2 は整数とメンバーのと同じ`Disabled`です。 式では、列挙子のメンバー名ではなく、数値を使用する必要があります。  
+ 次のプロパティ式を使用すると、パッケージの LoggingMode プロパティを設定できます。 この式では、DAY 関数と GETDATE 関数を使用して、ある日付の日要素を表す整数を取得します。 日要素が 1 日または 15 日の場合、ログ記録が有効です。それ以外の場合は、ログ記録が無効です。 値 1 は、整数 LoggingMode 列挙子メンバーの同等`Enabled`、値 2 は、整数とメンバーの同等`Disabled`します。 式では、列挙子のメンバー名ではなく、数値を使用する必要があります。  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   

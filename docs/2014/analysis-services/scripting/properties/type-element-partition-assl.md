@@ -1,5 +1,5 @@
 ---
-title: Type 要素 (Partition) (ASSL) |Microsoft ドキュメント
+title: Type 要素 (Partition) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 61c022fe-8c41-4f62-9808-c386e05eb547
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 29401c702cce49ed46415a1708da5fec9138fa9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f51966789f33cd535ff0322ec2f50caa392f5ccc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332792"
 ---
 # <a name="type-element-partition-assl"></a>Type 要素 (Partition) (ASSL)
   型を含む、[パーティション](../objects/partition-element-assl.md)要素。  
@@ -69,7 +69,7 @@ ms.locfileid: "36178969"
 |*データ*|パーティションにファクト テーブル データがあります。|  
 |*書き戻し*|パーティションに書き戻しテーブル データがあります。|  
   
- 許可される値に対応する列挙`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.PartitionType>します。  
+ 許容された値に対応する列挙体`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.PartitionType>します。  
   
  親に対応する要素`Type`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Partition>します。  
   

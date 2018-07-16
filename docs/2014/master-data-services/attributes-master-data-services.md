@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - free-form attributes [Master Data Services]
 - attributes [Master Data Services], about attributes
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3818434134bc03c335c8811ade391ec61824db35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5c9974eced9ec643c38fd8d3d535800456c1796d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331852"
 ---
 # <a name="attributes-master-data-services"></a>属性 (マスター データ サービス)
   属性とは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] エンティティに含まれるオブジェクトです。 属性値はエンティティのメンバーを表します。 属性を使用してリーフ メンバー、統合メンバー、またはコレクションを表すことができます。  
@@ -82,10 +82,10 @@ ms.locfileid: "36179553"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|新しい自由形式のテキスト属性を作成する。|[テキスト属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
-|新しい自由形式の数値属性を作成する。|[数値属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|新しい自由形式のリンク属性を作成する。|[リンク属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
-|新しいファイル属性を作成する。|[ファイル属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
+|新しい自由形式のテキスト属性を作成する。|[テキスト属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
+|新しい自由形式の数値属性を作成する。|[数値属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
+|新しい自由形式のリンク属性を作成する。|[リンク属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
+|新しいファイル属性を作成する。|[ファイル属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
 |新しいドメインベース属性を作成する。|[ドメイン ベースの属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |既存の属性の名前を変更する。|[属性名を変更&#40;マスター データ サービス&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
 |変更の追跡グループに既存の属性を追加する。|[変更の追跡グループに属性を追加&#40;マスター データ サービス&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
@@ -100,7 +100,7 @@ ms.locfileid: "36179553"
   
 -   [メンバー&#40;マスター データ サービス&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [アクセス許可は、リーフ&#40;マスター データ サービス&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [リーフ アクセス許可&#40;マスター データ サービス&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
 -   [アクセス許可を統合&#40;マスター データ サービス&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   

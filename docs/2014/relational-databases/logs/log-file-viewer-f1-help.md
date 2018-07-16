@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.configurelogs.errorlog.f1
 helpviewer_keywords:
 - Log File Viewer
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6567e82fb59ebcad2464310811ccd97e6f67de6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cb208e39b64a619315c1d33947e86876990f3a17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316152"
 ---
 # <a name="log-file-viewer-f1-help"></a>[ログ ファイルの表示] の F1 ヘルプ
   [ログ ファイルの表示] には、さまざまなコンポーネントのログ情報が表示されます。 [ログ ファイルの表示] が開いているときに **[ログの選択]** ペインを使用して、表示するログを選択します。 各ログには、そのログの種類に適した列が表示されます。  

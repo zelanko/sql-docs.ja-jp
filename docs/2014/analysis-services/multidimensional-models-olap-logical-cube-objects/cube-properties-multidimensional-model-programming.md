@@ -1,5 +1,5 @@
 ---
-title: プロパティをキューブ |Microsoft ドキュメント
+title: キューブのプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,15 +33,15 @@ helpviewer_keywords:
 - ProactiveCaching property
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: beae78f264c9ac0ce3aef5690f4e11e51ef191c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 785bc878c238b1fbba5acbd7ba3bc0525b8d6cc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312482"
 ---
 # <a name="cube-properties"></a>キューブ プロパティ
   キューブには、キューブ全体の動作に影響するように設定できる多数のプロパティがあります。 次の表は、これらのプロパティについてまとめたものです。  
@@ -49,7 +49,7 @@ ms.locfileid: "36073861"
 > [!NOTE]  
 >  キューブの作成時に自動的に設定され、変更できないプロパティもあります。  
   
- キューブのプロパティを設定する方法の詳細については、次を参照してください。[キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](../cube-designer-analysis-services-multidimensional-data.md)です。  
+ キューブのプロパティを設定する方法の詳細については、次を参照してください。[キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](../cube-designer-analysis-services-multidimensional-data.md)します。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
@@ -63,9 +63,9 @@ ms.locfileid: "36073861"
 |`Language`|キューブの既定の言語識別子を指定します。|  
 |`Name`|キューブの表示名を指定します。|  
 |`ProactiveCaching`|キューブのプロアクティブ キャッシュ設定を定義します。|  
-|`ProcessingMode`|インデックス作成と集計を処理中に行うか、処理後に行うかを指定します。 オプションは**正規**または`lazy`です。|  
+|`ProcessingMode`|インデックス作成と集計を処理中に行うか、処理後に行うかを指定します。 オプションは**正規**または`lazy`します。|  
 |`ProcessingPriority`|レイジー集計やインデックス作成など、バックグラウンド操作中のキューブの処理の優先度を決定します。 既定値は **0**です。|  
-|`ScriptCacheProcessingMode`|スクリプト キャッシュのビルドを処理中に行うか、処理後に行うかを指定します。 オプションは**正規**と`lazy`です。|  
+|`ScriptCacheProcessingMode`|スクリプト キャッシュのビルドを処理中に行うか、処理後に行うかを指定します。 オプションは**正規**と`lazy`します。|  
 |`ScriptErrorHandlingMode`|エラー処理を決定します。 オプションは`IgnoreNone`または `IgnoreAll`|  
 |`Source`|キューブに使用するデータ ソース ビューを表示します。|  
 |`StorageLocation`|キューブのファイル システムでのストレージ場所を指定します。 指定しない場合は、キューブ オブジェクトが含まれているデータベースから場所が継承されます。|  
@@ -73,7 +73,7 @@ ms.locfileid: "36073861"
 |`Visible`|キューブを表示するかどうかを決定します。|  
   
 > [!NOTE]  
->  Null 値やその他のデータ整合性の問題を操作するとき、ErrorConfiguration プロパティの値の設定の詳細については、次を参照してください。 [Analysis Services 2005 でのデータの整合性問題の処理](http://go.microsoft.com/fwlink/?LinkId=81891)です。  
+>  Null 値やその他のデータ整合性の問題を使用する場合は、ErrorConfiguration プロパティの値を設定する方法についての詳細については、次を参照してください。 [Analysis Services 2005 でのデータの整合性問題の処理](http://go.microsoft.com/fwlink/?LinkId=81891)します。  
   
 ## <a name="see-also"></a>参照  
  [プロアクティブ キャッシュ&#40;パーティション&#41;](partitions-proactive-caching.md)  

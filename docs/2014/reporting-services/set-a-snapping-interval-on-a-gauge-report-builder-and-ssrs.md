@@ -1,5 +1,5 @@
 ---
-title: ゲージ (レポート ビルダーおよび SSRS) へのスナップ間隔の設定 |Microsoft ドキュメント
+title: ゲージ (レポート ビルダーおよび SSRS) へのスナップ間隔の設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0ece7297-6e2f-47fb-835d-b9e9cce53fe2
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4ce2f81ddb04c088c909e07f6d842f53c35b3974
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48dc33f7bf80aacb757e990987a58c86f932ccb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296022"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>ゲージへのスナップ間隔の設定 (レポート ビルダーおよび SSRS)
   スナップ間隔とは、値を丸める際の倍数を定義するものです。 既定では、ゲージは、データ ペインで指定したフィールドの正確な値を指し示します。 ただし必要であれば、事前に設定した間隔に合わせて、正確な値を切り上げたり、切り捨てたりすることができます。 たとえば、ゲージの値が 34.2 であるとき、スナップ間隔として 5 を指定した場合、ゲージ ポインターが指し示す値は 35 になります。 ゲージの値が 31.2 であるとき、スナップ間隔として 5 を指定した場合、ゲージ ポインターが指し示す値は 30 になります。  
@@ -34,13 +34,13 @@ ms.locfileid: "36084516"
 2.  プロパティ ペインを開きます。  
   
     > [!NOTE]  
-    >  プロパティ ペインが表示されない、クリックして、**ビュー**タブをクリックし、**プロパティ**チェック ボックスをオンします。  
+    >  プロパティ ペインが表示されない場合に、クリックして、**ビュー**タブを選び、**プロパティ**チェック ボックスをオンします。  
   
 3.  **ポインター**プロパティ ([...]) ボタンをクリックします。 ポインター コレクション エディターが開きます。  
   
-4.  設定、 **SnappingEnabled**プロパティを`True`です。  
+4.  設定、 **SnappingEnabled**プロパティを`True`します。  
   
-5.  設定、 **SnappingInterval**をスナップ間隔を表す値にします。 実際の値を指定の倍数に丸めた位置までポインターがスナップされます。  
+5.  設定、 **SnappingInterval**をスナップ間隔を表す値です。 実際の値を指定の倍数に丸めた位置までポインターがスナップされます。  
   
 ## <a name="see-also"></a>参照  
  [ゲージのスケールの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

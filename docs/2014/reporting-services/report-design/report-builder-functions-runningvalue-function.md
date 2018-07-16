@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 41f2345cf31347fba98448a02d4d3014b8883d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: be8b75318aec2bd921a7d995f63e722f38881426
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319862"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 関数 (レポート ビルダーおよび SSRS)
   式で指定された NULL 以外のすべての数値の実行中の集計を、指定されたスコープに対して評価して返します。  
@@ -39,20 +39,20 @@ RunningValue(expression, function, scope)
  この集計関数の実行対象の式です ( `[Quantity]`など)。  
   
  *function*  
- (`Enum`)、式に適用する集計関数の名前`Sum`です。 この関数にすることはできません`RunningValue`、 `RowNumber`、または`Aggregate`です。  
+ (`Enum`)、式に適用する集計関数の名前`Sum`します。 この関数にすることはできません`RunningValue`、 `RowNumber`、または`Aggregate`します。  
   
  *スコープ (scope)*  
- (`String`) 集計を評価するコンテキストを示すデータセット、データ領域、またはグループの名前である文字列定数か、NULL ([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] では `Nothing`) です。 `Nothing` 最も外側のコンテキストでは、通常はレポート データセットを指定します。  
+ (`String`) 集計を評価するコンテキストを示すデータセット、データ領域、またはグループの名前である文字列定数か、NULL ([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] では `Nothing`) です。 `Nothing` 最も外側のコンテキストでは、通常は、レポート データセットを指定します。  
   
 ## <a name="return-type"></a>戻り値の型  
  *function* パラメーターに指定された集計関数によって決まります。  
   
 ## <a name="remarks"></a>コメント  
- 値は、`RunningValue`をスコープの新しいインスタンスごとに 0 にリセットします。 グループが指定された場合は、累計値はグループ式の変更時にリセットされます。 データ領域が指定された場合は、累計値はデータ領域の新しいインスタンスごとにリセットされます。 データセットが指定された場合は、累計値はデータセット全体にわたってリセットされません。  
+ 値は、`RunningValue`スコープの新しいインスタンスごとの場合は 0 にリセットされます。 グループが指定された場合は、累計値はグループ式の変更時にリセットされます。 データ領域が指定された場合は、累計値はデータ領域の新しいインスタンスごとにリセットされます。 データセットが指定された場合は、累計値はデータセット全体にわたってリセットされません。  
   
  `RunningValue` は、フィルター式または並べ替え式では使用できません。  
   
- 実行中の値が計算される一連のデータは、同じデータ型である必要があります。 同じデータ型に複数の数値データ型を持つデータを変換するなどの変換関数を使用して`CInt`、`CDbl`または`CDec`です。 詳細については、「 [データ型変換関数](http://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
+ 実行中の値が計算される一連のデータは、同じデータ型である必要があります。 同じデータ型に複数の数値データ型を持つデータを変換するなどの変換関数を使用して、 `CInt`、`CDbl`または`CDec`します。 詳細については、「 [データ型変換関数](http://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
   
  *Scope* には、式を指定することはできません。  
   
@@ -62,7 +62,7 @@ RunningValue(expression, function, scope)
   
 -   入れ子集計のスコープには、データセット名は使用できません。  
   
--   *式*含めないで`First`、 `Last`、 `Previous`、または`RunningValue`関数。  
+-   *式*する必要がありますが含まれていない`First`、 `Last`、 `Previous`、または`RunningValue`関数。  
   
 -   *Expression* には、 *recursive*を指定する入れ子集計を含めることができません。  
   
@@ -95,6 +95,6 @@ RunningValue(expression, function, scope)
  [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [式の合計、集計、および組み込みコレクションのスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_CSDL_METADATA 行セット |Microsoft ドキュメント
+title: DISCOVER_CSDL_METADATA 行セット |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3bac193969cb4f5392944a79351b44390b013596
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29f94bd307f0e863e6ff8e54b7b0ec54281f20b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293534"
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 行セット
   CSDLBI 形式 (BI 注釈付き概念スキーマ定義言語) でモデル定義を提供しながら、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データ モデル (テーブル モデルまたは多次元) に関する情報を返します。 CSDLBI は、Entity Data Framework によって使用される XML スキーマである CSDL に基づくもので、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーと [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] クライアントの間の通信に使用されます。 ビジネス インテリジェンス (BI) 注釈は、テーブル モデルとテーブル モデル内のオブジェクトに関する追加のメタデータを提供します。 テーブル データ モデルの詳細については、「[ビジネス インテリジェンス向け CSDL 注釈 &#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)」を参照してください。  
@@ -32,7 +32,7 @@ ms.locfileid: "36083971"
 ## <a name="rowset-columns"></a>行セットの列  
  `DISCOVER_CSDL_METADATA`行セットには、次の列が含まれています。  
   
-|**列名**|**型インジケーター**|**制限**|**description**|  
+|**列名**|**型インジケーター**|**制限**|**[説明]**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |`CATALOG_NAME`|`DBTYPE_WSTR`|はい|CSDLBI 記述の要求対象となるデータベースの名前を指定します。 省略した場合は、現在のデータベースが使用されます。<br /><br /> この制限は、すべての種類のモデルに対して必要です。|  
 |`PERSPECTIVE_ID`|`DBTYPE_WSTR`|はい|CATALOG_NAME によって指定されたモデルに定義されているパースペクティブの ID を指定します。<br /><br /> 省略可能な制限。 すべての種類のモデルに適用されます。|  
@@ -127,6 +127,6 @@ ms.locfileid: "36083971"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のスキーマ行セット](../analysis-services-schema-rowsets.md)   
- [ビジネス インテリジェンス向けの CSDL 注釈&#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [ビジネス インテリジェンス向け CSDL 注釈&#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   

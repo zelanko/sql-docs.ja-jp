@@ -1,5 +1,5 @@
 ---
-title: InstanceName プロパティ (ClientSettingsGeneralFlag クラス) |Microsoft ドキュメント
+title: InstanceName プロパティ (ClientSettingsGeneralFlag クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: 7de3c043-6c5a-4663-b960-a80492444a99
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7a60ffba25d8ab41577d906afe3d5be7abfd913
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f55d49012a056067f69dc4eba9b86b3081dc9528
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313352"
 ---
 # <a name="instancename-property-clientsettingsgeneralflag-class"></a>InstanceName プロパティ (ClientSettingsGeneralFlag クラス)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クライアントのインスタンスの名前を取得します。  
+   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クライアントのインスタンスの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d681a7b5e9c72283d924970d843582bb82b8522c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: bafdcf47836f05248d6820622ce12905a87637f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280488"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 常にではありません、データを効果的に表しているし、配信されたレポートでは機能可能性がある事前構成済みのインジケーター セットを提供します。 このトピックでは、インジケーター アイコンの外観を変更する手順と、インジケーター セットを変更して別のインジケーター アイコンを含めたり、インジケーター アイコンの数を増減したりする手順について説明します。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 常にではありません、データを効果的に表したり、配信されたレポートで正しく機能可能性がある、事前構成済みのインジケーター セットを提供します。 このトピックでは、インジケーター アイコンの外観を変更する手順と、インジケーター セットを変更して別のインジケーター アイコンを含めたり、インジケーター アイコンの数を増減したりする手順について説明します。  
   
  色などのオプションは、式を使用して設定できます。 詳細については、「[式 (レポート ビルダーおよび SSRS)](expressions-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36179255"
   
      **[その他の色]** をクリックした場合は、 **[色の選択]** ダイアログ ボックスが表示され、さまざまな色から選択できます。 各オプションの詳細については、「[[色の選択] ダイアログ ボックス &#40;レポート ビルダーおよび SSRS&#41;](../select-color-dialog-box-report-builder-and-ssrs.md)」を参照してください。 **[OK]** をクリックして、 **[色の選択]** ダイアログ ボックスを閉じます。  
   
-4.  **[OK]** をクリックします。  
+4.  [**OK**] をクリックします。  
   
 ### <a name="to-change-the-icon"></a>アイコンを変更するには  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36179255"
   
      必要に応じて、 **式** (*[fx]*) ボタンをクリックし、 **[アイコン]** オプションの値を設定する式を編集します。  
   
-4.  **[OK]** をクリックします。  
+4.  [**OK**] をクリックします。  
   
 ### <a name="to-use-a-custom-image-as-an-indicator-icon"></a>カスタム イメージをインジケーター アイコンとして使用するには  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36179255"
   
     -   データベースにある画像を使用するには、 **[次のフィールドを使用]** の一覧から フィールドを選択し、 **[次の MIME の種類を使用]** の一覧から画像の MIME の種類を選択します。  
   
-6.  **[OK]** をクリックします。  
+6.  [**OK**] をクリックします。  
   
 ### <a name="to-add-an-icon-to-the-indicator-set"></a>インジケーター セットにアイコンを追加するには  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36179255"
   
      指定したアイコンと色を使用するようにインジケーターを構成します。 手順については、このトピックの前半で説明しています。  
   
-4.  **[OK]** をクリックします。  
+4.  [**OK**] をクリックします。  
   
 ### <a name="to-delete-an-icon-to-the-indicator-set"></a>インジケーター セットからアイコンを削除するには  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36179255"
   
 3.  削除するアイコンを選択し、 **[削除]** をクリックします。  
   
-4.  **[OK]** をクリックします。  
+4.  [**OK**] をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](indicators-report-builder-and-ssrs.md)  

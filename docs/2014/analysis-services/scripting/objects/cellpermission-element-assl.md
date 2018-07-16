@@ -1,5 +1,5 @@
 ---
-title: CellPermission 要素 (ASSL) |Microsoft ドキュメント
+title: CellPermission 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CellPermission element
 ms.assetid: 54a6afc0-1fcb-4b24-851a-6d81e1fe0efc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8fcf84072db28684b2cdda195bf2f31ccb2d1e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f763ee90f4812ef86cae0cd24e96e5fb02b05087
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293372"
 ---
 # <a name="cellpermission-element-assl"></a>CellPermission 要素 (ASSL)
-  メンバーがアクセス許可を示します、[ロール](role-element-assl.md)要素が個々 のセル内にある、[キューブ](cube-element-assl.md)要素。  
+  そのメンバーのアクセス許可を示します、[ロール](role-element-assl.md)内の各セルに要素がある、[キューブ](cube-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

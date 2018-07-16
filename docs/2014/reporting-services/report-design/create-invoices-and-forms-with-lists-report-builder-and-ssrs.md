@@ -1,5 +1,5 @@
 ---
-title: 一覧 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント
+title: 一覧 (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0fcc8632285b80b2b4ba00310b8718650e39d99b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 43558261eff0d22d597cdfe63f7d01137aa467a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296032"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>一覧 (レポート ビルダーおよび SSRS)
   一覧データ領域は、レポート データセットのグループまたは行ごとに繰り返されます。 一覧は、他のデータ領域と関連付けて自由形式レポートや、請求書などのフォームを作成するために使用できます。 任意の数のレポート アイテムを含んでいる一覧を定義できます。 一覧を他の一覧内に入れ子にして、複数のデータ グループを作成することもできます。  

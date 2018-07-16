@@ -1,5 +1,5 @@
 ---
-title: 日付型ディメンションの作成 |Microsoft ドキュメント
+title: 日付型ディメンションの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - dimensions [Analysis Services], time
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f57269c2f2400b9ccf2e090fd0c0a97a21c9efc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1e38812dbdff6ecf36bd0c1398ce733d29af6e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315095"
 ---
 # <a name="create-a-date-type-dimension"></a>日付型ディメンションの作成
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、時間ディメンションとは、属性が年、半期、四半期、月、日などの時間間隔を表すディメンションの種類を指します。 時間ディメンションの期間は、分析やレポートの粒度を時間ベースで指定します。 時間ディメンションの属性は階層化され、粒度は履歴データのビジネス要件とレポート要件によって主に決定されます。 たとえば、ビジネス インテリジェンス アプリケーションの財務データと販売データでは、ほとんどの場合、月または四半期の粒度が使用されます。  
@@ -72,7 +72,7 @@ ms.locfileid: "36083524"
 >  ビジネス インテリジェンス ウィザードを使用して、タイム インテリジェンスをサーバー時間ディメンションに追加することはできません。 ビジネス インテリジェンス ウィザードによってタイム インテリジェンスをサポートする階層が追加されたら、この階層を時間ディメンション テーブルの列にバインドする必要があります。 サーバー時間ディメンションは、対応する時間ディメンション テーブルを持たないため、この追加の階層をサポートできません。  
   
 ## <a name="see-also"></a>参照  
- [時間テーブルを生成することによって時間ディメンションを作成します。](create-a-time-dimension-by-generating-a-time-table.md)   
+ [時間テーブルの生成による時間ディメンションを作成します。](create-a-time-dimension-by-generating-a-time-table.md)   
  [ビジネス インテリジェンス ウィザードの F1 ヘルプ](../business-intelligence-wizard-f1-help.md)   
  [ディメンションの種類](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   

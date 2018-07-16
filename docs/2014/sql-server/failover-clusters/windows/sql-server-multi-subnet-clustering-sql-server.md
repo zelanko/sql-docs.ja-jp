@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stretch cluster
 - Availability Groups [SQL Server], WSFC clusters
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2238da7a6eae3e4374f899d8f7c667bc163f1e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65f8cb55f16372e5b0d70298fc3b3d5bb52ce2a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317552"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server マルチサブネット クラスタリング (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターとは、各フェールオーバー クラスター ノードが異なるサブネットに接続されているか、異なるサブネットのセットに接続されている構成のことです。 これらのサブネットには、同じ場所や地理的に分散したサイトを指定できます。 地理的に分散したサイトのクラスタリングは、拡張クラスターと呼ばれることがあります。 すべてのノードがアクセスできる共有ストレージがないため、複数のサブネットのデータ ストレージ間でデータをレプリケートする必要があります。 データをレプリケートすることで、使用可能なデータのコピーが複数存在することになります。 そのため、マルチサブネット フェールオーバー クラスターによって、高可用性に加えてディザスター リカバリー ソリューションも実現します。  
@@ -71,9 +70,9 @@ ms.locfileid: "36072266"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の FCI が [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]のスタンドアロン インスタンスとサイド バイ サイドでインストールされている場合は、IP アドレスで TCP ポート番号が競合しないように注意してください。 競合は通常、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] の 2 つのインスタンスが両方とも既定の TCP ポート (1433) を使用するように構成されている場合に発生します。 競合を回避するには、一方のインスタンスが既定以外の固定ポートを使用するように構成します。 通常、固定ポートの構成は、スタンドアロン インスタンスに対して行うのが最も簡単です。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] で異なるポートが使用されるように構成すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の FCI がノードのスタンバイに失敗した場合に、予期しない IP アドレス/TCP ポート競合によってインスタンスの起動がブロックされる問題を回避できます。  
   
 ##  <a name="DNS"></a> フェールオーバー中のクライアント回復待機時間  
- 複数サブネットの FCI 既定で RegisterAllProvidersIP のクラスター リソースのネットワーク名を有効にします。 マルチサブネット構成では、ネットワーク名のオンラインおよびオフライン両方の IP アドレスが DNS サーバーに登録されます。 クライアント アプリケーションは、すべての登録済み IP アドレスを DNS サーバーから取得し、受信した順序または並列で使用してアドレスへの接続を試みます。 つまり、マルチサブネット フェールオーバーのクライアント回復時間は DNS 更新の待機時間に依存しません。 既定では、クライアントは IP アドレスを順番に試行します。 クライアントが新しいオプションの `MultiSubnetFailover=True` パラメーターを接続文字列で使用している場合、IP アドレスを同時に試し、最初に応答したサーバーに接続します。 これにより、フェールオーバー発生時のクライアント回復待機時間を最小限に抑えることができます。 詳細については、次を参照してください。 [AlwaysOn クライアント接続 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)と[可用性グループ リスナーの構成を作成または&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)です。  
+ 複数サブネットの FCI 既定で RegisterAllProvidersIP のクラスター リソースのネットワーク名を有効にします。 マルチサブネット構成では、ネットワーク名のオンラインおよびオフライン両方の IP アドレスが DNS サーバーに登録されます。 クライアント アプリケーションは、すべての登録済み IP アドレスを DNS サーバーから取得し、受信した順序または並列で使用してアドレスへの接続を試みます。 つまり、マルチサブネット フェールオーバーのクライアント回復時間は DNS 更新の待機時間に依存しません。 既定では、クライアントは IP アドレスを順番に試行します。 クライアントが新しいオプションの `MultiSubnetFailover=True` パラメーターを接続文字列で使用している場合、IP アドレスを同時に試し、最初に応答したサーバーに接続します。 これにより、フェールオーバー発生時のクライアント回復待機時間を最小限に抑えることができます。 詳細については、次を参照してください。 [AlwaysOn クライアント接続 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)と[可用性グループ リスナーの構成を作成または&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)します。  
   
- レガシ クライアント ライブラリまたはサードパーティ データ プロバイダーでは、使用することはできません、`MultiSubnetFailover`接続文字列内のパラメーターです。 クライアント アプリケーションが [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のマルチサブネット FCI と最適な状態で連携して動作するように、クライアント接続文字列の接続タイムアウトを追加の IP アドレスごとに 21 秒で調整を試みてください。 これにより、クライアントの再接続の試みは、マルチサブネット FCI のすべての IP アドレスへの切り替えができるまでタイムアウトしません。  
+ レガシ クライアント ライブラリまたはサードパーティ データ プロバイダーで使用することはできません、`MultiSubnetFailover`の接続文字列パラメーター。 クライアント アプリケーションが [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のマルチサブネット FCI と最適な状態で連携して動作するように、クライアント接続文字列の接続タイムアウトを追加の IP アドレスごとに 21 秒で調整を試みてください。 これにより、クライアントの再接続の試みは、マルチサブネット FCI のすべての IP アドレスへの切り替えができるまでタイムアウトしません。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio および **sqlcmd** の既定のクライアント接続タイムアウト期間は 15 秒です。  
   
