@@ -1,5 +1,5 @@
 ---
-title: 主要業績評価指標 (Kpi) 多次元モデルの |Microsoft ドキュメント
+title: 主要業績評価指標 (Kpi) では、多次元モデル |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing Key Performance Indicators
 - Key Performance Indicators [Analysis Services]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 514fa1de69baefeb6c05d8145be71b4f201b953b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d9d138805673defca5c1910b32ebeb9c998f7e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304712"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多次元モデルの主要業績評価指標 (KPI)
   ビジネス用語では、主要業績評価指標 (KPI) とは、ビジネスの成功度を判断するための測定値のことです。  
@@ -41,7 +41,7 @@ ms.locfileid: "36164893"
   
  ビジネス用語では、主要業績評価指標 (KPI) とは、ビジネスの成功度を判断するための測定値のことです。 KPI は一定期間中頻繁に評価されます。 たとえば、組織の営業部門では KPI として月間売上総利益を使用できます。一方、同じ組織の人事部門では、四半期単位の従業員離職率を使用できます。 これらはそれぞれ KPI の一例です。 企業幹部は、グループにまとめて事業のスコアカードに記録した KPI を頻繁に使用し、事業の成功度の履歴要約をすばやく正確に取得します。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]における KPI は、キューブ内のメジャー グループに関連付けられた、ビジネスの成功を評価するために使用する計算のコレクションです。 これらの計算は通常、多次元式 (MDX) および計算されるメンバーの組み合わせです。 KPI には、KPI の計算結果をクライアント アプリケーションでどのように表示するかについての情報を提供する追加のメタデータもあります。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]における KPI は、キューブ内のメジャー グループに関連付けられた、ビジネスの成功を評価するために使用する計算のコレクションです。 これらの計算は通常、多次元式 (MDX) および計算されるメンバーの組み合わせです。 KPI には、KPI の計算結果をクライアント アプリケーションでどのように表示するかについての情報を提供する追加のメタデータもあります。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] での KPI の主要な利点の 1 つは、別々のクライアント アプリケーションによって使用できる、サーバー ベースの KPI であることです。 サーバー ベースの KPI では、個別のクライアント アプリケーションで別々のバージョンのデータを管理するのではなく、単一の実稼働バージョンがサポートします。 さらに、複雑な計算を各クライアント コンピューターではなくサーバー上で実行するので、パフォーマンス上の利点も期待できます。  
   

@@ -14,13 +14,13 @@ ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 10c2ff8df0fbcc1b9bc491a1c6a32787d0cdac55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5db0cc5bccaf05cf18aa3a7459eecfead5cd13b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285678"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>複数の入力を持つデータ フロー コンポーネントの開発
   複数の入力によってデータが不均一なレートで生成される場合に、複数の入力があるデータ フローコンポーネントによって過度にメモリが消費されることがあります。 複数の入力をサポートするカスタム データ フロー コンポーネントを開発するときは、Microsoft.SqlServer.Dts.Pipeline 名前空間の次のメンバーを使用してこのメモリの負荷を管理できます。  
@@ -59,9 +59,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> メソッドの実装では、基本クラスで実装を呼び出す必要はありません。 基本クラスでのこのメソッドの既定の実装では、`NotImplementedException` を発生させるだけです。  
   
- このメソッドを実装し、コンポーネントの各入力に対して Boolean 型の *canProcess* 配列で要素の状態を設定します  (入力は *inputIDs* 配列内の ID 値によって識別されます)。内の要素の値を設定すると、 *canProcess*配列`true`、入力データ フロー エンジンは、コンポーネントを呼び出して<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>メソッド、指定された入力に対して複数のデータを提供します。  
+ このメソッドを実装し、コンポーネントの各入力に対して Boolean 型の *canProcess* 配列で要素の状態を設定します  (入力は *inputIDs* 配列内の ID 値によって識別されます)。内の要素の値を設定すると、 *canProcess*配列`true`入力に対して、データ フロー エンジンによってコンポーネントの<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>メソッドと、指定した入力に対してより多くのデータを提供します。  
   
- 追加の上流データが使用中の値、 *canProcess*配列要素には、少なくとも 1 つの入力を必ず`true`、処理が停止します。  
+ アップ ストリーム データが使用中の値、 *canProcess*の少なくとも 1 つの入力配列の要素は常にあります`true`、処理が停止します。  
   
  データ フロー エンジンは、データの各バッファーを送信する前に <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> メソッドを呼び出して、追加データの受信を待機している入力を判断します。 入力がブロックされていることが戻り値によって示された場合、データ フロー エンジンは、バッファーをコンポーネントに送信する代わりに、入力データの追加バッファーを一時的にキャッシュします。  
   
@@ -75,9 +75,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
   
 -   コンポーネントが、受信済みのバッファーで入力に対して処理できるデータを現在持っていない (`inputBuffers[inputIndex].CurrentRow() == null`)。  
   
- 入力がより多くのデータの受信を待機している場合、データ フロー コンポーネントを示しますこのに設定した`true`内の要素の値、 *canProcess*その入力に対応する配列。  
+ 入力がより多くのデータを受信するを待機している場合、データ フロー コンポーネントを示しますこの設定することによって`true`内の要素の値、 *canProcess*入力に対応している配列。  
   
- 逆に、コンポーネントが入力に対して処理できるデータを持っている場合、この例では入力の処理を中断します。 例に設定することで`false`内の要素の値、 *canProcess*その入力に対応する配列。  
+ 逆に、コンポーネントが入力に対して処理できるデータを持っている場合、この例では入力の処理を中断します。 この例では設定することによってこの`false`内の要素の値、 *canProcess*入力に対応している配列。  
   
 ```csharp  
 public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)  
@@ -92,7 +92,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 }  
 ```  
   
- 前の例は、Boolean 型の `inputEOR` 配列を使用して、各入力で追加のアップストリーム データを使用できるかどうかを示します。 配列名の `EOR` は "行セットの末尾 (end of rowset)" を示し、データ フロー バッファーの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> プロパティを参照します。 ここに含まれていない例の部分では、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドを使用して、受信するデータの各バッファーに対して <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> プロパティの値を確認します。 値 `true` によって、入力でこれ以上のアップストリーム データを利用できないことが示された場合、その入力の `inputEOR` 配列要素の値を `true` に設定します。 この例の<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>メソッド内の対応する要素の値を設定、 *canProcess*配列を`false`、入力時の値、`inputEOR`配列の要素が示される上流以上ありません入力を使用できるデータ。  
+ 前の例は、Boolean 型の `inputEOR` 配列を使用して、各入力で追加のアップストリーム データを使用できるかどうかを示します。 配列名の `EOR` は "行セットの末尾 (end of rowset)" を示し、データ フロー バッファーの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> プロパティを参照します。 ここに含まれていない例の部分では、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドを使用して、受信するデータの各バッファーに対して <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> プロパティの値を確認します。 値 `true` によって、入力でこれ以上のアップストリーム データを利用できないことが示された場合、その入力の `inputEOR` 配列要素の値を `true` に設定します。 この例の<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>メソッドの対応する要素の値を設定、 *canProcess*配列を`false`入力の場合の値、`inputEOR`配列の要素ことを示していないアップ ストリームデータの入力を利用できません。  
   
 ## <a name="implementing-the-getdependentinputs-method"></a>GetDependentInputs メソッドの実装  
  カスタム データ フロー コンポーネントが複数の入力をサポートしている場合は、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> メソッドも実装する必要があります。  
@@ -100,7 +100,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> メソッドの実装では、基本クラスで実装を呼び出す必要はありません。 基本クラスでのこのメソッドの既定の実装では、`NotImplementedException` を発生させるだけです。  
   
- データ フロー エンジンは、ユーザーが 3 つ以上の入力をコンポーネントにアタッチする場合に、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> メソッドを呼び出すだけです。 コンポーネントの 2 つの入力であるときに、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>メソッドでは、1 つの入力がブロックされていることを示します (*canProcess* = `false`)、データ フロー エンジンが、一方の入力がより多くのデータを待っていることを認識しています。 ただし、入力が 2 つより多い場合に、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> メソッドによって 1 つの入力がブロックされていることが示されたときは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> の追加のコードはどの入力が追加データの受信を待機しているかを示します。  
+ データ フロー エンジンは、ユーザーが 3 つ以上の入力をコンポーネントにアタッチする場合に、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> メソッドを呼び出すだけです。 コンポーネントの 2 つの入力であるときに、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>メソッドでは、1 つの入力がブロックされていることを示します (*canProcess* = `false`)、データ フロー エンジンは、他の入力データの受信を待機していることを認識します。 ただし、入力が 2 つより多い場合に、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> メソッドによって 1 つの入力がブロックされていることが示されたときは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> の追加のコードはどの入力が追加データの受信を待機しているかを示します。  
   
 > [!NOTE]  
 >  独自に記述するコード内で、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> または <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> メソッドは呼び出しません。 データ フロー エンジンはコンポーネントを実行するとき、これらのメソッドやオーバーライドする `PipelineComponent` クラスのその他のメソッドを呼び出します。  

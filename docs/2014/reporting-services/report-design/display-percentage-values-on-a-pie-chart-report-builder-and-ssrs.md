@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 744cfd4600c58d0c5f9508243e2635d108f7fd73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d8c4cc67ad7a3719db277840e4ca535a373e8b44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287018"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>円グラフへのパーセンテージの表示 (レポート ビルダーおよび SSRS)
   既定では、それぞれの値を識別するために、カテゴリが凡例に表示されます。 カテゴリ ラベルを使用して円グラフにラベルを付けた場合、凡例にパーセンテージを表示できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "36175895"
   
 1.  デザイン画面で、円グラフを右クリックし、 **[系列のプロパティ]** をクリックします。 **[系列のプロパティ]** ダイアログ ボックスが表示されます。  
   
-2.  **凡例**、型`#PERCENT`の**カスタムの凡例テキスト**プロパティです。  
+2.  **凡例**、型`#PERCENT`の**カスタムの凡例テキスト**プロパティ。  
   
 ## <a name="see-also"></a>参照  
  [円グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   

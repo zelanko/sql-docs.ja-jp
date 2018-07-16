@@ -17,20 +17,20 @@ ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f07749d44644071bb5e7aab2a5f33759ce96cdb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 719e734aeccc505253c75280e06895048ccff4fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283548"
 ---
 # <a name="managing-running-packages-programmatically"></a>プログラムによるパッケージの実行の管理
   プログラムによって [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを操作する際に、現在実行中のパッケージを特定することが必要な場合があります。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスは、これらの要件を満たすメソッドとクラスを提供します。  
   
  パッケージの監視の詳細については、「[パッケージの管理 &#40;SSIS サービス&#41;](../service/package-management-ssis-service.md)」を参照してください。  
   
- このトピックで説明するすべてのメソッドには、`Microsoft.SqlServer.ManagedDTS` アセンブリへの参照が必要です。 新しいプロジェクトで、参照を追加すると、インポート、<xref:Microsoft.SqlServer.Dts.Runtime>を持つ名前空間、`using`または`Imports`ステートメントです。  
+ このトピックで説明するすべてのメソッドには、`Microsoft.SqlServer.ManagedDTS` アセンブリへの参照が必要です。 新しいプロジェクトに参照を追加した後は、インポート、<xref:Microsoft.SqlServer.Dts.Runtime>を持つ名前空間、`using`または`Imports`ステートメント。  
   
 > [!IMPORTANT]  
 >  SSIS パッケージ ストアを操作するための <xref:Microsoft.SqlServer.Dts.Runtime.Application> クラスのメソッドでは、"."、localhost、またはローカル サーバーのサーバー名のみがサポートされます。 "(local)" は使用できません。  
@@ -64,7 +64,7 @@ ms.locfileid: "36177544"
 ### <a name="stopping-a-running-package"></a>実行中のパッケージの停止  
  <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackage.Stop%2A> オブジェクトの <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackage> メソッドを呼び出して、そのパッケージを停止するように要求できます。 停止要求が発行されてからパッケージが実際に停止するまでの間に遅延が発生する場合があります。  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。  **<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [パッケージの管理 &#40;SSIS サービス&#41;](../service/package-management-ssis-service.md)   

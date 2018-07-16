@@ -1,5 +1,5 @@
 ---
-title: LocalDBStopInstance 関数 |Microsoft ドキュメント
+title: LocalDBStopInstance 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d17ccc37d7e181e32ee5dde7706bae73fe9c847
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6c18afbf238fde8b7a713cb8830a89b6193b6aa2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302302"
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance 関数
   指定した SQL Server Express LocalDB インスタンスの実行を停止します。  
@@ -80,7 +80,7 @@ HRESULT LocalDBStopInstance(
  インスタンスは存在しません。  
   
  [LOCALDB_ERROR_WAIT_TIMEOUT](../express-localdb-error-messages/localdb-error-wait-timeout.md)  
- 同期ロックを取得しようとしているときにタイムアウトが発生しました。  
+ 同期ロックを取得中にタイムアウトが発生しました。  
   
  [LOCALDB_ERROR_INSTANCE_STOP_FAILED](../express-localdb-error-messages/localdb-error-instance-stop-failed.md)  
  停止操作は、指定された時間内に完了できませんでした。  
@@ -107,7 +107,7 @@ HRESULT LocalDBStopInstance(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)です。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

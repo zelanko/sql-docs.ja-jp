@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4c0c38e2aa12991ead24a0ba162462504d28e60d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f1a262a52bdc610da81c5b42785fa555967e8bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239352"
 ---
 # <a name="odata-connection-manager"></a>OData 接続マネージャー
-  OData 接続マネージャーを使用すると、パッケージは OData ソースに接続できます。 OData ソース コンポーネントは OData 接続マネージャーを使用して OData ソースに接続し、サービスから取得したデータを使用します。 参照してください[OData ソース](../data-flow/odata-source.md)詳細これらのコンポーネントのインストール手順などについてセクションです。  
+  OData 接続マネージャーを使用すると、パッケージは OData ソースに接続できます。 OData ソース コンポーネントは OData 接続マネージャーを使用して OData ソースに接続し、サービスから取得したデータを使用します。 参照してください[OData ソース](../data-flow/odata-source.md)これらのコンポーネントのインストール手順などの詳細セクション。  
   
 ## <a name="adding-connection-manager-to-an-ssis-package"></a>SSIS パッケージへの接続マネージャーの追加  
  次の 3 とおりの方法で、SSIS パッケージに新しい OData 接続マネージャーを追加できます。  
   
 -   **[OData ソース エディター]** の **[新規]**  
   
--   右クリック**接続マネージャー**内のフォルダー、**ソリューション エクスプ ローラー**  をクリック**新しい接続マネージャー**です。 **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
+-   右クリック**接続マネージャー**フォルダーで、**ソリューション エクスプ ローラー**  をクリック**新しい接続マネージャー**します。 **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
   
--   右クリックし、**接続マネージャー**パッケージ デザイナー、および select の下部のペインに**新しい接続しています.**. **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
+-   右クリックし、**接続マネージャー**パッケージ デザイナー、および select の下部にあるウィンドウ**新しい接続.**. **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
   
 ## <a name="connection-manager-authentication"></a>接続マネージャーの認証  
  OData 接続マネージャーでは、2 つの認証モードがサポートされています。  
@@ -43,7 +43,7 @@ ms.locfileid: "36164145"
  匿名アクセスを使用するには、[Windows 認証] オプションを選択します。  
   
 ### <a name="specifying-and-securing-credentials"></a>資格情報の指定とセキュリティ保護  
- ユーザー名とパスワードを指定することができます、OData サービスは、基本認証を必要とする場合、 [OData 接続マネージャー エディター](../odata-connection-manager-editor.md)です。 エディターに入力した値は、パッケージ内に保存されます。 パスワードの値は、パッケージの保護レベルに応じて暗号化されます。  
+ OData サービスは、基本認証を必要とする場合に、ユーザー名とパスワードを指定できます、 [OData 接続マネージャー エディター](../odata-connection-manager-editor.md)します。 エディターに入力した値は、パッケージ内に保存されます。 パスワードの値は、パッケージの保護レベルに応じて暗号化されます。  
   
  ユーザー名とパスワードの値を外部化またはパラメーター化する複数の方法があります。 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] でこの作業を実行する 2 つの主要な方法は、パラメーターを使用するか、SQL Server Management Studio を使用してパッケージを実行するときに接続マネージャーのプロパティを直接設定することです。  
   

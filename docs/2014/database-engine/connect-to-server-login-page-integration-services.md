@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttodtsserver.login.f1
 - sql12.swb.connecttodts.login.f1
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e41104462b18f9d236a289dbea0196f981006f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 703a4f062d327da13b1b75d519c70884a9228978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241262"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>[サーバーへの接続]\([ログイン] ページ) (Integration Services)
   このタブは、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に接続するときに以下のオプションを表示または指定する場合に使用します。  
@@ -35,7 +35,7 @@ ms.locfileid: "36174011"
  接続するサーバーを選択します。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
   
 > [!NOTE]  
->  使用しないでください *\<servername >*\\*\<instancename >* ので、[!INCLUDE[ssIS](../includes/ssis-md.md)]コンピューターで複数のインスタンスをサポートしていません。  
+>  使用しない *\<servername >*\\*\<instancename >* ため、[!INCLUDE[ssIS](../includes/ssis-md.md)]コンピューターに複数のインスタンスをサポートしていません。  
   
  **[認証]**  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] では [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows 認証だけを使用できます。 Windows 認証モードを使用すると、ユーザーは Windows ユーザー アカウントを使用して接続できます。  
@@ -49,7 +49,7 @@ ms.locfileid: "36174011"
  **[パスワードを保存する]**  
  [!INCLUDE[ssIS](../includes/ssis-md.md)]では Windows 認証しか使用できないため、このオプションは使用できません。  
   
- **のインスタンスに接続するときには、**  
+ **Connect**  
  上で選択したサーバーに接続します。  
   
  **[オプション]**  

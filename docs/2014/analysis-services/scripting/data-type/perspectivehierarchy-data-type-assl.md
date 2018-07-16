@@ -1,5 +1,5 @@
 ---
-title: PerspectiveHierarchy データ型 (ASSL) |Microsoft ドキュメント
+title: PerspectiveHierarchy データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveHierarchy data type
 ms.assetid: 30366bd0-ee1c-4940-8c1f-ca5e0dd5fe4b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dddceea6ee82d02ef1a68953bd16d6fc728537ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 134b49fe8aa942dee63feae717a1ff1aa89a06dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208062"
 ---
 # <a name="perspectivehierarchy-data-type-assl"></a>PerspectiveHierarchy データ型 (ASSL)
-  内の階層に関する情報を表すプリミティブ データ型を定義、 [PerspectiveDimension](dimension-data-type-assl.md)要素。  
+  階層に関する情報を表すプリミティブ データ型を定義、 [PerspectiveDimension](dimension-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

@@ -1,5 +1,5 @@
 ---
-title: '[増分更新] ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft ドキュメント'
+title: '[増分更新] ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.incrementalupdate.f1
 ms.assetid: d5a5ae27-44e7-4179-b9e2-efbf21d6c5f5
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 51fb9898eb2d43fd56cbefb6f08120669dcd6f0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22d7038fa3d8f07c5b32e35c5cb39e0d8db95766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284168"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>[増分更新] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] および [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[増分更新]** ダイアログ ボックスを使用すると、メジャー グループおよびパーティションの増分更新の際に使用される設定を定義できます。 **[増分更新]** ダイアログ ボックスを表示するには、 **[処理]** ダイアログ ボックスで **[オブジェクト一覧]** グリッドの **[設定]** 列にある **[構成]** をクリックします。  
@@ -41,6 +41,6 @@ ms.locfileid: "36163971"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [処理 ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+ [[プロセス] ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

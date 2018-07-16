@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpdelcltask.f1
 - sql11.dts.designer.afpdelcltask.f1
@@ -16,13 +16,13 @@ ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 42a7a3d89d4f8c939e097cdb9016f2be7b0e35d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d2f794259991c73b8dfa90e689fe12bbf35e0cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322672"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight クラスターの削除タスク
 **Azure HDInsight クラスターの削除タスク**を使用すると、指定された Azure サブスクリプションとリソース グループの Azure HDInsight クラスターを SSIS パッケージで削除できます。
@@ -36,7 +36,7 @@ ms.locfileid: "36177344"
   
 |||  
 |-|-|  
-|**フィールド**|**description**|  
+|**フィールド**|**[説明]**|  
 |AzureResourceManagerConnection|既存の Azure Resource Manager 接続マネージャーを選択するか、HDInsight クラスターを削除するために使用する新しいものを作成します。|
 |SubscriptionId|HDInsight クラスターが存在するサブスクリプションの ID を指定します。|
 |ResourceGroup|HDInsight クラスターが存在する Azure リソース グループを指定します。|

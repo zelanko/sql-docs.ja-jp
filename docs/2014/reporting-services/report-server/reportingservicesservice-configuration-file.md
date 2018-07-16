@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [Reporting Services]
 - Report Server Windows service, ReportingServicesService configuration file
@@ -17,13 +17,13 @@ ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a3a4e7c39c487830a2368c00b37292d14fc8aecc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3bd7b26e51233a042c4d693012b577103718faea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323732"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 構成ファイル
   ReportingServicesService.exe.config ファイルには、トレースを構成する設定が含まれています。  
@@ -32,7 +32,7 @@ ms.locfileid: "36177921"
  このファイルは、\Reporting Services\Report Server\Bin フォルダーにあります。  
   
 ## <a name="editing-guidelines"></a>編集のガイドライン  
- このファイルを変更して、ログ ファイル名を変更したり、トレース レベルを増減させることができます。 その他の設定は変更しないでください。 手順については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 トレース ログの詳細については、次を参照してください。 [Report Server Service Trace Log](report-server-service-trace-log.md)です。  
+ このファイルを変更して、ログ ファイル名を変更したり、トレース レベルを増減させることができます。 その他の設定は変更しないでください。 手順については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 トレース ログの詳細については、次を参照してください。 [Report Server Service Trace Log](report-server-service-trace-log.md)します。  
   
 ## <a name="example-configuration"></a>構成例  
  ReportingServicesService.exe.config ファイルにある設定および既定値の例を次に示します。  

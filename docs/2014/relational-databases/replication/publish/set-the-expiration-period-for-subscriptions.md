@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], expiration
 - expiration [SQL Server replication]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deactivating subscriptions
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 612345f692ae80907fa562e6a539bc7a91f12646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 95cdae09ead5238e8a48d3797f2b1f9a32b483f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268928"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>サブスクリプションの有効期限の設定
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、サブスクリプションの有効期限を設定する方法について説明します。 サブスクリプションの期限が切れて削除されるまでの時間は、サブスクリプションの有効期限によって決定されます。 詳しくは、「 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)」をご覧ください。  

@@ -1,5 +1,5 @@
 ---
-title: ConnectionStringSecurity 要素 (ASSL) |Microsoft ドキュメント
+title: ConnectionStringSecurity 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ConnectionStringSecurity element
 ms.assetid: f25c4448-bb0d-4945-bc84-9c015eefa0eb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fce202b78364b4a3de68a33416922b929521727c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9479865bd2e3f10570418ee33064bc30f4b7b786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300872"
 ---
 # <a name="connectionstringsecurity-element-assl"></a>ConnectionStringSecurity 要素 (ASSL)
   セキュリティ上の目的で、ユーザーのパスワードをデータ ソースの接続文字列から取り除くかどうかを指定します。  
@@ -67,9 +67,9 @@ ms.locfileid: "36165701"
 |値|説明|  
 |-----------|-----------------|  
 |*PasswordRemoved*|パスワードは、接続文字列から取り除かれています。|  
-|*変更されません。*|接続文字列は変更されていません。|  
+|*変更なし*|接続文字列は変更されていません。|  
   
- 許可される値に対応する列挙`ConnectionStringSecurity`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ConnectionStringSecurity>します。  
+ 許容された値に対応する列挙`ConnectionStringSecurity`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ConnectionStringSecurity>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

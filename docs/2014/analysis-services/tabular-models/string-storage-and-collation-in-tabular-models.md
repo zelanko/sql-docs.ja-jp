@@ -1,5 +1,5 @@
 ---
-title: 文字列ストレージとテーブル モデルでの照合順序 |Microsoft ドキュメント
+title: 文字列ストレージとテーブル モデルでの照合順序 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6312157544413369574248a06477946a6a45bd71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b61d01e59aa99e6ed97a328d14cee8ab82c3427a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280548"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>テーブル モデルの文字列ストレージと照合順序
   文字列 (テキスト値) は高度に圧縮された形式でテーブル モデルに格納されます。この圧縮により、文字列の全体または一部を取得するときに予期しない結果を取得することがあります。 文字列のロケールと照合順序は最も近い親プロジェクトから階層的に継承されるため、文字列の言語が明示的に定義されていない場合、親のロケールと照合順序は、文字列の格納方法、および文字列が一意であるか親の照合順序の定義に従って同様の文字列と結合されるかに影響することがあります。  

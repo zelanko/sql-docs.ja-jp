@@ -1,5 +1,5 @@
 ---
-title: Excel から MDS (MDS アドインを Excel 用) へのデータを発行 |Microsoft ドキュメント
+title: Excel から MDS (MDS アドインを Excel 用) へのデータの発行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f32226602413b1d2a7851d9f66ed0f8395f82e95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: b80221892fe4f55866e5197f76038057205b06ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180049"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Excel から MDS へのデータのパブリッシュ (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、Excel での作業が終わったときに、変更を保存して他のユーザーがアクセスできるようにするには、MDS リポジトリにデータをパブリッシュします。  
@@ -51,10 +51,10 @@ ms.locfileid: "36179348"
 >  新しいメンバー (行) をワークシートに追加する場合、MDS リポジトリに正常にパブリッシュできないときは、ワークシートのすべての属性に対する **更新** 権限がない可能性があります。 **[校閲]** タブの **[変更]** グループの **[シート保護の解除]** をクリックし、再度パブリッシュしてください。  
   
 ## <a name="next-steps"></a>次の手順  
- [ビジネス ルールを適用&#40;MDS アドインを Excel 用&#41;](apply-business-rules-mds-add-in-for-excel.md)  
+ [ビジネス ルールの適用&#40;MDS アドインの Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>参照  
- [データのパブリッシュ&#40;MDS アドインを Excel 用&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
+ [データのパブリッシュ&#40;MDS アドインの Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
  [データの検証 &#40;Excel 用 MDS アドイン&#41;](validating-data-mds-add-in-for-excel.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], configuration files
 - configuration options [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c00a5798cffb73a862aa3d7e8b636b25c2cf3c43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4ec9a10af6160682df84e112d7ab1fb5a07d787
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251274"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 構成ファイル
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レジストリと構成ファイルにコンポーネント情報が格納されます。この構成ファイルは、セットアップ時にファイル システムへコピーされます。 構成ファイルには、内部専用値とユーザー定義値を組み合わせたものが含まれています。 ユーザー定義値は、セットアップ、構成ツール、コマンド ライン ユーティリティを通じて指定するか、構成ファイルを手動で編集して指定します。  
@@ -32,7 +32,7 @@ ms.locfileid: "36177923"
  構成ファイルの変更が必要になるのは、詳細設定を追加したり構成したりする場合だけです。 構成設定は、XML 要素または XML 属性のいずれかとして指定されます。 XML ファイルおよび構成ファイルを理解している場合は、テキスト エディターまたはコード エディターを使用して、ユーザーが定義可能な設定を変更できます。 構成ファイルをどのように変更するか、または、レポート サーバーが最新の構成設定をどのように読み取るかの詳細については、「[Reporting Services の構成ファイル (rsreportserver.config) の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
   
 > [!NOTE]  
->  以前のリリースでは、RSWebApplication.config という名前の独自の構成ファイルが使用されていました。今後、このファイルは使用されません。 以前の環境からアップグレードした場合、このファイルは削除されませんが、レポート サーバーは、このファイルから一切設定を読み取りません。 このファイルがコンピューターに存在する場合は、削除してください。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、レポート マネージャーのすべての構成設定は RSReportServer.config ファイルに格納され、このファイルから読み取られます。 これの設定が削除または移動された一覧を確認するには、次を参照してください。 [SQL Server 2014 における SQL Server Reporting Services における重大な変更](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)です。  
+>  以前のリリースでは、RSWebApplication.config という名前の独自の構成ファイルが使用されていました。今後、このファイルは使用されません。 以前の環境からアップグレードした場合、このファイルは削除されませんが、レポート サーバーは、このファイルから一切設定を読み取りません。 このファイルがコンピューターに存在する場合は、削除してください。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、レポート マネージャーのすべての構成設定は RSReportServer.config ファイルに格納され、このファイルから読み取られます。 これの設定が削除または移動された一覧を確認するには、次を参照してください。 [SQL Server 2014 における SQL Server Reporting Services における重大な変更](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)します。  
   
  このトピックの内容  
   
@@ -49,7 +49,7 @@ C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER
   
 |格納先|説明|場所|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|レポート サーバー サービスの機能領域 (レポート マネージャー、レポート サーバー Web サービス、バックグラウンド処理) の構成設定が格納されます。 各設定に関する詳細については、次を参照してください。 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)です。|\<インストール ディレクトリ> \Reporting Services \ReportServer|  
+|RSReportServer.config|レポート サーバー サービスの機能領域 (レポート マネージャー、レポート サーバー Web サービス、バックグラウンド処理) の構成設定が格納されます。 各設定の詳細については、次を参照してください。 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)します。|\<インストール ディレクトリ> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|サーバー拡張機能のコード アクセス セキュリティ ポリシーが格納されます。 このファイルの詳細については、「 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。|\<インストール ディレクトリ> \Reporting Services \ReportServer|  
 |RSMgrPolicy.config|レポート マネージャーのコード アクセス セキュリティ ポリシーが格納されます。 このファイルの詳細については、「 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。|\<インストール ディレクトリ> \Reporting Services \ReportManager|  
 |レポート サーバー Web サービスの Web.config|ASP.NET に必要な設定のみが含まれています。|\<インストール ディレクトリ> \Reporting Services \ReportServer|  
@@ -70,7 +70,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |格納先|説明|場所|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|レポート サーバー サービスの機能領域 (レポート マネージャー、レポート サーバー Web サービス、バックグラウンド処理) の構成設定が格納されます。 各設定に関する詳細については、次を参照してください。 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)です。|\<インストール ディレクトリ> \Reporting Services \ReportServer|  
+|RSReportServer.config|レポート サーバー サービスの機能領域 (レポート マネージャー、レポート サーバー Web サービス、バックグラウンド処理) の構成設定が格納されます。 各設定の詳細については、次を参照してください。 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)します。|\<インストール ディレクトリ> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|サーバー拡張機能のコード アクセス セキュリティ ポリシーが格納されます。 このファイルの詳細については、「 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。|\<インストール ディレクトリ> \Reporting Services \ReportServer|  
 |レポート サーバー Web サービスの Web.config|ASP.NET に必要な設定のみが含まれています。|\<インストール ディレクトリ> \Reporting Services \ReportServer|  
 |レジストリ設定|構成状態のほか、Reporting Services をアンインストールするための設定が格納されます。 各 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションに関する情報も格納されます。<br /><br /> これらの設定を直接変更することは避けてください。環境に不具合が生じる可能性があります。|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<InstanceID\> \Setup<br /><br /> インスタンス ID の例: MSSQL12.MSSQLSERVER<br /><br /> **- および -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  

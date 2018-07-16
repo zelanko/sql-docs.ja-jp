@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7c92354681c797588a0d1bd3b569cdd50bf9c765
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0942c2d0f60c4ee93ad5636178d885d5972c1c1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177799"
 ---
 # <a name="secure-the-snapshot-folder"></a>スナップショット フォルダーのセキュリティ保護
   スナップショット フォルダーは、スナップショット ファイルが格納されるディレクトリです。このディレクトリは、スナップショットの格納専用に使用することをお勧めします。 スナップショット エージェントにこのフォルダーへの書き込み権限を許可し、マージ エージェントまたはディストリビューション エージェントがこのフォルダーへのアクセスに使用する Windows アカウントにのみ読み取り権限を許可します。 リモート コンピューターのスナップショット フォルダーにアクセスするには、エージェントに関連付けられている Windows アカウントがドメイン アカウントである必要があります。  

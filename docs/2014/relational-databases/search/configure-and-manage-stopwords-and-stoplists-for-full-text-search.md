@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stoplists [full-text search]
 - full-text search [SQL Server], stoplists
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f1d32fea4b5d9995628c187d39c7482c6694e828
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3ea419224478d1c4c45117795fe5a67ebfcaf5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284838"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>フルテキスト検索に使用するストップワードとストップリストの構成と管理
   フルテキスト インデックスが肥大化するのを防ぐため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、頻繁に出現する、検索に役立たない文字列を破棄するメカニズムがあります。 破棄されるこのような文字列を *ストップワード*と呼びます。 インデックスの作成中、Full-Text Engine により、フルテキスト インデックスからストップワードが除外されます。 つまり、フルテキスト クエリでは、ストップワードが検索されません。  
@@ -99,14 +98,14 @@ ms.locfileid: "36164050"
 -   [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   
-##  <a name="queries"></a> フルテキスト クエリでのストップ リストの使用  
+##  <a name="queries"></a> フルテキスト クエリでストップ リストの使用  
  ストップリストをクエリで使用するには、ストップリストをフルテキスト インデックスに関連付ける必要があります。 インデックスの作成時にストップリストをフルテキスト インデックスにアタッチしたり、後でインデックスを変更してストップリストを追加したりできます。  
   
- **フルテキスト インデックスを作成してストップ リストを関連付ける**  
+ **フルテキスト インデックスを作成し、ストップ リストを関連付ける**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
- **関連付けるか、既存のフルテキスト インデックスにストップ リストの関連付けを解除するには**  
+ **関連付けるか、既存のフルテキスト インデックス ストップ リストの関連付けを解除するには**  
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36164050"
 -   [transform noise words サーバー構成オプション](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
   
-##  <a name="viewing"></a> ストップ リストとストップ リスト メタデータの表示  
+##  <a name="viewing"></a> ストップ リストとストップ リストのメタデータを表示します。  
  **ストップ リストのすべてのストップ ワードを表示するには**  
   
 -   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
@@ -131,8 +130,8 @@ ms.locfileid: "36164050"
 -   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="change"></a> ストップ リストにストップ ワードを変更します。  
- **追加またはストップ リストからストップ ワードを削除するには**  
+##  <a name="change"></a> ストップ リストのストップ ワードを変更します。  
+ **追加するか、ストップ リストからストップ ワードを削除**  
   
 -   [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
   

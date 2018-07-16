@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 1: 分析結果内のデータ ソース ビューを定義するサービス プロジェクト |Microsoft ドキュメント'
+title: 'レッスン 1: 分析内のデータ ソース ビューを定義するサービスのプロジェクト |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 56b27476650b88a77be4f00b62e76b742fc3774f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f64787a50373e2bb958d0c3851ff3f762a6eb83c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303092"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>レッスン 1 : Analysis Services プロジェクト内でのデータ ソース ビューの定義
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でビジネス インテリジェンス アプリケーションを設計するには、まず、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクトを作成します。 このプロジェクト内で、ソリューションに必要なすべての要素を定義します。最初に定義するのはデータ ソース ビューです。  
@@ -44,9 +44,9 @@ ms.locfileid: "36174372"
  [レッスン 2: キューブの定義と配置](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services プロジェクトを作成する&#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
+ [Analysis Services プロジェクトの作成&#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [サポートされるデータ ソース&#40;SSAS 多次元&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [多次元モデル内のデータ ソース ビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [多次元モデルのデータ ソース ビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Analysis Services のチュートリアル シナリオ](analysis-services-tutorial-scenario.md)   
  [多次元モデリング&#40;Adventure Works チュートリアル&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], e-mail
 - e-mail [Reporting Services]
@@ -17,18 +17,18 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9af13376bd8dfe6fc182b784c250c286fcabdf6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de8849902a313391f414367ca6e51fb64c6dffdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303542"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services の電子メール配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、個別のユーザーまたはグループに電子メールでレポートを送信するための電子メール配信拡張機能があります。 電子メール配信拡張機能を構成するには、Reporting Services 構成マネージャーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ファイルを編集します。  
   
- 電子メールでレポートを配信または受信するには、標準のサブスクリプションまたはデータ ドリブン サブスクリプションのいずれかを定義します。 サブスクライブまたは配信は、一度に 1 つのレポートに対してのみ実行できます。 1 通の電子メール メッセージで複数のレポートを配信するサブスクリプションを作成することはできません。 サブスクリプションの詳細については、次を参照してください。 [Create, Modify, and 標準のサブスクリプションを削除&#40;Reporting Services ネイティブ モードの&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)です。  
+ 電子メールでレポートを配信または受信するには、標準のサブスクリプションまたはデータ ドリブン サブスクリプションのいずれかを定義します。 サブスクライブまたは配信は、一度に 1 つのレポートに対してのみ実行できます。 1 通の電子メール メッセージで複数のレポートを配信するサブスクリプションを作成することはできません。 サブスクリプションの詳細については、次を参照してください。 [Create, Modify, and 標準サブスクリプションの削除&#40;Reporting Services ネイティブ モードの&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)します。  
   
 ||  
 |-|  
@@ -81,7 +81,7 @@ ms.locfileid: "36176761"
   
  SharePoint モード レポート サーバーの構成方法については、次のトピックを参照してください。  
   
--   [サービス アプリケーション、Reporting Services の電子メールを構成する&#40;SharePoint 2010 および SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [電子メール、Reporting Services サービス アプリケーションの構成&#40;SharePoint 2010 および SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>参照  
  [タスクと権限](../security/tasks-and-permissions.md)   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - failover modes [SQL Server]
 - Availability Groups [SQL Server], deploying
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 caps.latest.revision: 26
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 6a3b16ef9e881332bc6aab301ccf1defdd4cc86a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fa3771b373292278ac3131dfd7f8484b6f4b8601
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304252"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>可用性レプリカのフェールオーバー モードの変更 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の AlwaysOn 可用性グループでの可用性レプリカのフェールオーバー モードを変更する方法について説明します。 フェールオーバー モードは、同期コミット可用性モードで実行されるレプリカのフェールオーバー モードを決定するレプリカ プロパティです。 詳細については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)」および「[可用性モード &#40;AlwaysOn 可用性グループ&#41;](availability-modes-always-on-availability-groups.md)」を参照してください。  
@@ -105,7 +104,7 @@ ms.locfileid: "36175223"
   
 1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (`cd`) します。  
   
-2.  使用して、`Set-SqlAvailabilityReplica`コマンドレットと、`FailoverMode`パラメーター。 レプリカを自動フェールオーバーに設定するときは、使用する必要があります、`AvailabilityMode`レプリカを同期コミット可用性モードに変更するパラメーターです。  
+2.  使用して、`Set-SqlAvailabilityReplica`コマンドレットと、`FailoverMode`パラメーター。 レプリカに automatic フェールオーバーに設定するときは、使用する必要があります、`AvailabilityMode`レプリカを同期コミット可用性モードに変更するパラメーター。  
   
      たとえば、次のコマンドは、可用性グループ `MyReplica` のレプリカ `MyAg` を、同期コミット可用性モードを使用し、自動フェールオーバーをサポートするように変更します。  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36175223"
     ```  
   
     > [!NOTE]  
-    >  表示するには、コマンドレットの構文を使用して、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   

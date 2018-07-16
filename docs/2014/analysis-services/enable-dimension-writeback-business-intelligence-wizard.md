@@ -1,5 +1,5 @@
 ---
-title: ディメンションの書き戻し (ビジネス インテリジェンス ウィザード) を有効にする |Microsoft ドキュメント
+title: ディメンションの書き戻し (ビジネス インテリジェンス ウィザード) を有効にする |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.setdimensionwritebackcapability.f1
 ms.assetid: b01aa630-0b70-42a5-a743-f45a030cf26b
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b701311b12931e246a64b934f5fc3644148ecd46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1923378acf208274662638ceb50b4088ea641537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261508"
 ---
 # <a name="enable-dimension-writeback-business-intelligence-wizard"></a>[ディメンションの書き戻しの有効化] (ビジネス インテリジェンス ウィザード)
   **[ディメンションの書き戻しの有効化]** ページを使用すると、選択したディメンションの書き戻し機能を有効または無効にできます。  

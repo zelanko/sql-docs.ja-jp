@@ -1,5 +1,5 @@
 ---
-title: Restore 要素 (XMLA) |Microsoft ドキュメント
+title: Restore 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Restore command
 ms.assetid: bb5a0c92-3927-4fa4-975b-6e4d79e0a912
 caps.latest.revision: 26
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e8eca537c61be64de403b4ad08bb0e64040937c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 682806680604606d54c133617b2150b975cf8c03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275658"
 ---
 # <a name="restore-element-xmla"></a>Restore 要素 (XMLA)
-  復元、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]データベース バックアップ ファイルからです。  
+  復元を[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]データベース バックアップ ファイルから。  
   
 ## <a name="syntax"></a>構文  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36177598"
 |子要素|[AllowOverwrite](../xml-elements-properties/allowoverwrite-element-xmla.md)、 [DatabaseName](../xml-elements-properties/name-element-xmla.md)、 [DatabaseID](../xml-elements-properties/id-element-xmla.md)、[ファイル](../xml-elements-properties/file-element-xmla.md)、[場所](../xml-elements-properties/locations-element-xmla.md)、[パスワード](../xml-elements-properties/password-element-xmla.md)、[セキュリティ](../xml-elements-properties/security-element-xmla.md)、 [DbStorageLocation](../xml-elements-properties/dbstoragelocation-element.md)|  
   
 ## <a name="remarks"></a>コメント  
- `Restore`復元のコマンド、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]で指定されたデータベース、`DatabaseName`の要素をバックアップ ファイルと、必要に応じてリモート バックアップ ファイルからリモート パーティションを復元します。  
+ `Restore`コマンドは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]で指定されたデータベース、`DatabaseName`要素からバックアップ ファイルと、必要に応じてリモート バックアップ ファイルからリモート パーティションを復元します。  
   
- バックアップ ファイルに格納されているオブジェクトによって使用されるストレージ モードに応じて、`Restore`コマンドは、次の表に示すように情報を復元します。  
+ バックアップのファイルに格納されているオブジェクトによって使用されるストレージ モードに応じて、`Restore`コマンドは、次の表に示すように情報を復元します。  
   
 |[ストレージ モード]|[情報]|  
 |------------------|-----------------|  
@@ -81,9 +81,9 @@ ms.locfileid: "36177598"
 |ハイブリッド OLAP (HOLAP)|集計とメタデータ|  
 |リレーショナル OLAP (ROLAP)|メタデータ|  
   
- 中に、`Restore`コマンド、排他ロックが配置されて、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]で指定されたデータベース、`DatabaseName`要素。 後に、ロックが解放される、`Restore`コマンドが完了しました。  
+ 中に、`Restore`コマンドに対して、排他ロックが設定されます、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]で指定されたデータベース、`DatabaseName`要素。 ロックが解放した後、`Restore`コマンドが完了しました。  
   
- バックアップと復元、データベースの詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)です。  
+ バックアップして、データベースの復元の詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)します。  
   
 > [!IMPORTANT]  
 >  バックアップ ファイルごとに、復元コマンドを実行するユーザーは、各ファイルに指定されたバックアップ場所から読み取る権限を持っている必要があります。 サーバーにインストールされていない [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データベースを復元する場合、ユーザーは、その [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーであることも必要です。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データベースを上書きするには、ユーザーは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーか、復元するデータベースに対してフル コントロール (管理者) 権限を持つデータベース ロールのメンバーのいずれかである必要があります。  
@@ -92,7 +92,7 @@ ms.locfileid: "36177598"
 >  既存のデータベースを復元すると、データベースを復元したユーザーは、復元されたデータベースにアクセスできなくなる可能性があります。 バックアップの実行時に、ユーザーがサーバー ロールのメンバー、またはフル コントロール (管理者) 権限を持つデータベース ロールのメンバーではなかった場合、このようにアクセスできなくなることがあります。  
   
 ## <a name="see-also"></a>参照  
- [要素をバックアップ&#40;XMLA&#41;](backup-element-xmla.md)   
+ [バックアップ要素&#40;XMLA&#41;](backup-element-xmla.md)   
  [要素をバッチ&#40;XMLA&#41;](batch-element-xmla.md)   
  [要素を並列&#40;XMLA&#41;](../xml-elements-properties/parallel-element-xmla.md)   
  [Synchronize 要素&#40;XMLA&#41;](synchronize-element-xmla.md)   

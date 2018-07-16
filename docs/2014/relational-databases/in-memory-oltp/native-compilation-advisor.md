@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.nativecompilationwizard.f1
 - swb.nativecompilationwizard.f1
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 caps.latest.revision: 10
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a3aef7b96a5cd15f8bb22340cc2feeaf025b4072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1f156bee0da5d94043fa0ab04e5b74acdcd7f4f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256371"
 ---
 # <a name="native-compilation-advisor"></a>ネイティブ コンパイル アドバイザー
-  トランザクション パフォーマンス レポート ツール (を参照してください[決める場合は、テーブルまたはストアド プロシージャに移植する、インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) ネイティブを使用するように移植したが、データベース内の解釈されたストアド プロシージャは効果が得が場合に通知コンパイルします。 ネイティブ コンパイルを使用するように移植するストアド プロシージャを特定した後に、ネイティブ コンパイル アドバイザーを使用すると、解釈されたストアド プロシージャをネイティブ コンパイルに移行する際に役立ちます。 ネイティブ コンパイル ストアド プロシージャの詳細については、「 [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)」をご覧ください。  
+  トランザクション パフォーマンス レポート ツール (を参照してください[Determining if テーブルまたはストアド プロシージャ Should Be Ported to インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) ネイティブを使用するポートをデータベース内の解釈されたストアド プロシージャが得られる場合に通知コンパイルします。 ネイティブ コンパイルを使用するように移植するストアド プロシージャを特定した後に、ネイティブ コンパイル アドバイザーを使用すると、解釈されたストアド プロシージャをネイティブ コンパイルに移行する際に役立ちます。 ネイティブ コンパイル ストアド プロシージャの詳細については、「 [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)」をご覧ください。  
   
  まず、解釈されたストアド プロシージャが格納されているインスタンスに接続します。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインスタンスに接続できます。 ただし、アドバイザーを使用して移行操作を実行する場合は、インメモリ OLTP 機能が有効になっている [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] インスタンスに接続する必要があります。 インメモリ OLTP の要件の詳細については、「 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)」を参照してください。  
   

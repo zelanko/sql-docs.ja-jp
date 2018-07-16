@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -20,13 +20,13 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0f4f4e80a193b1a9cb2f492bf2deab88af1d0f47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 317abe3278784d5328df02ec96c6f126a40d100e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234502"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する
   SharePoint 統合モードで動作しているレポート サーバーの場合、レポート、レポート モデル、および共有データ ソースの表示と管理の方法は、SharePoint サイトで定義されたセキュリティ設定で決定されます。 既定の SharePoint グループ、権限レベル、および権限の割り当てを使用している場合は、現在のセキュリティ設定を使用して、レポートやその他のドキュメントを操作できます。  
@@ -85,7 +85,7 @@ ms.locfileid: "36164295"
   
 |タスク|権限|  
 |----------|----------------|  
-|レポート ビルダーを起動する。|レポート ビルダーへのアクセスを制御するために明示的に使用される権限はありません。 レポート サーバー統合が構成されており、アイテムをライブラリに追加する権限があれば、レポート ビルダーは利用可能です。 レポート ビルダーをライブラリの **[新規作成]** メニューから起動するには、コンテンツの種類としてレポート ビルダーを登録する必要があります。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)です。|  
+|レポート ビルダーを起動する。|レポート ビルダーへのアクセスを制御するために明示的に使用される権限はありません。 レポート サーバー統合が構成されており、アイテムをライブラリに追加する権限があれば、レポート ビルダーは利用可能です。 レポート ビルダーをライブラリの **[新規作成]** メニューから起動するには、コンテンツの種類としてレポート ビルダーを登録する必要があります。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)します。|  
 |モデルまたは共有データ ソースをアップロードする。|ファイルの格納先となるライブラリに対する "**アイテムの追加** "。|  
 |モデルまたは依存する共有データ ソースを表示する。|ファイルが含まれているライブラリに対する "**アイテムの表示** "。<br /><br /> モデルにモデル アイテム セキュリティが含まれている場合、ユーザーには対象モデルに対する " **権限の列挙** " 権限も必要になります。|  
 |モデルを共有データ ソースから生成する。|モデルを生成する基になる共有データ ソース (.rsds) ファイルが含まれているライブラリに対する "**アイテムの追加** "。|  
@@ -124,7 +124,7 @@ ms.locfileid: "36164295"
   
 |処理手順|権限|  
 |-----------|----------------|  
-|共有データ ソースを作成する。|共有データ ソースが含まれているライブラリに対する "**アイテムの追加** "。 ライブラリの [新規作成] メニューから新しい共有データ ソースを作成できます。 そのためには、コンテンツの種類としてレポート データ ソースをライブラリに登録する必要があります。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)です。|  
+|共有データ ソースを作成する。|共有データ ソースが含まれているライブラリに対する "**アイテムの追加** "。 ライブラリの [新規作成] メニューから新しい共有データ ソースを作成できます。 そのためには、コンテンツの種類としてレポート データ ソースをライブラリに登録する必要があります。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)します。|  
 |共有データ ソースを編集する。|共有データ ソースが含まれているライブラリまたは共有データ ソース自体に対する "**アイテムの編集** "。|  
 |共有データ ソースを削除する。|共有データ ソースが含まれているライブラリまたは共有データ ソース自体に対する "**アイテムの削除** "。|  
 |レポートに共有データ ソース (.rsds) を使用する。|レポート、またはレポートが含まれているライブラリに対する "**アイテムの編集** "。 レポートのデータ ソース プロパティを設定する一環として、共有データ ソースを選択します。|  

@@ -1,5 +1,5 @@
 ---
-title: TableBinding データ型 (ASSL) |Microsoft ドキュメント
+title: TableBinding データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TableBinding data type
 ms.assetid: 3195dca4-82bf-46b7-a31f-5383586e3573
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0790fe5d8567c8ab23e3aaf39430d46675dcbdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 475044a0bcad3c90ffaffa71eeeb6735a37f96c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220252"
 ---
 # <a name="tablebinding-data-type-assl"></a>TableBinding データ型 (ASSL)
   テーブルへのバインドを表す派生データ型を定義します。  
@@ -77,11 +77,11 @@ SELECT Date, Product ID, Qty, Price, Qty * Price AS Amount
    WHERE Year(Sales.Date) = 97  
 ```  
   
- 計算される式は、修飾されたテーブル名 (Sales.Qty など) を使用する場合にも適用されます。 代わりにテーブルは、いくつかのクエリ「SELECT...」に置き換えられた場合にも適用します。 上記の FROM 句になります"FROM SELECT.As Sales" になります。  
+ 計算される式は、修飾されたテーブル名 (Sales.Qty など) を使用する場合にも適用されます。 これは、テーブルが "SELECT..." で始まるクエリに置換される場合にも適用されます。上の例の FROM 句は、"FROM SELECT ...As Sales" になります。  
   
- 詳細については、`Binding`の Analysis Services スクリプト言語 (ASSL) オブジェクトの種類のテーブルを含む型`Binding`との継承の階層`Binding`型を参照してください[データ型のバインド&#40;ASSL&#41;](binding-data-type-assl.md).  
+ 詳細については、`Binding`型、型の Analysis Services スクリプト言語 (ASSL) オブジェクトのテーブルを含む`Binding`の継承階層し`Binding`型を参照してください[データ型のバインド&#40;ASSL&#41;](binding-data-type-assl.md).  
   
- ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
+ ASSL でのデータ バインドの概要については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.TableBinding>します。  
   

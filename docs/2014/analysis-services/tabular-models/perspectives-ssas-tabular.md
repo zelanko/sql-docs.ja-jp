@@ -1,5 +1,5 @@
 ---
-title: パースペクティブ (SSAS テーブル) |Microsoft ドキュメント
+title: パースペクティブ (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f15ca3035759717de251f6d300ace3182430ac7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ad07ccba62df7054f4ec19e0713192154ad62db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304302"
 ---
 # <a name="perspectives-ssas-tabular"></a>パースペクティブ (SSAS テーブル)
   テーブル モデルでパースペクティブを使用すると、ビジネス固有またはアプリケーション固有のビューポイントをモデルに対して的を絞って作成するための、表示可能なサブセットを定義できます。  
@@ -48,7 +48,7 @@ ms.locfileid: "36178550"
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[作成および管理パースペクティブ&#40;SSAS 表形式&#41;](perspectives-ssas-tabular.md)|モデル デザイナーで [パースペクティブ] ダイアログ ボックスを使用して、パースペクティブを作成し管理する方法を説明します。|  
+|[作成し、管理のパースペクティブ&#40;SSAS 表形式&#41;](perspectives-ssas-tabular.md)|モデル デザイナーで [パースペクティブ] ダイアログ ボックスを使用して、パースペクティブを作成し管理する方法を説明します。|  
   
 ## <a name="see-also"></a>参照  
  [ロール&#40;SSAS 表形式&#41;](roles-ssas-tabular.md)   

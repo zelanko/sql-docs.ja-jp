@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.configuresnapshotagent.f1
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b267a3a7b0b271f4777724b8ee6ec44248df1409
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 342cbeb0e746090fd6a74cd897eb83a99f8d871d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305532"
 ---
 # <a name="snapshot-agent-new-publication-wizard"></a>[スナップショット エージェント] (パブリケーションの新規作成ウィザード)
   [スナップショット エージェント] では、新しいサブスクリプションの初期化に使用されるパブリケーション スキーマおよびデータを含んでいるファイルを作成します。 既定では、スナップショット エージェントは、パブリケーションの新規作成ウィザードでパブリケーションが作成されるとすぐに実行されます。 続いて、エージェントが指定したスケジュールに従って実行されます。 エージェントが実行されるたびに新しいスナップショット ファイルが作成されるかどうかは、選択したレプリケーションおよびオプションの種類によって異なります。 詳細については、「[スナップショットの作成および適用](create-and-apply-the-snapshot.md)」を参照してください。  

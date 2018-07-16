@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 1: プロジェクトと基本パッケージの作成 |Microsoft ドキュメント'
+title: 'レッスン 1: プロジェクトと基本パッケージの作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 caps.latest.revision: 36
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0d586d6f62db9b4def299a506538b9d729773762
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c429f832ec89abe78b77dd1e8ece10082aeb0026
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331952"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>レッスン 1: プロジェクトと基本パッケージの作成
   このレッスンでは、簡単な ETL パッケージを作成します。このパッケージは、1 つのフラット ファイル ソースからデータを抽出し、2 つの参照変換コンポーネントを使用してそのデータを変換します。さらに、変換したデータを、 **AdventureWorksDW2012** の **FactCurrency**ファクト テーブルに書き込みます。 ここでは、新しいパッケージを作成する方法、データの変換元と変換先の接続を追加、構成する方法、新しい制御フロー コンポーネントとデータ フロー コンポーネントを操作する方法を学習します。  

@@ -1,5 +1,5 @@
 ---
-title: CellData 要素 (XMLA) |Microsoft ドキュメント
+title: CellData 要素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - CellData element
 ms.assetid: 0ebfb5e1-a674-4b9b-bd8c-c529da105f61
 caps.latest.revision: 27
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ce445127e78f7f503bf3b81a640047f0d1f1d87f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 370837c78fe1fa49396a5209dd94dd0e7cb4f69d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330412"
 ---
 # <a name="celldata-element-xmla"></a>CellData 要素 (XMLA)
-  含まれるセル データを表すセル要素のコレクションを格納、[ルート](root-element-xmla.md)を使用する要素、 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)データ型。  
+  含まれるセルのデータを表すセル要素のコレクションを格納する[ルート](root-element-xmla.md)を使用する要素、 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)データ型。  
   
 ## <a name="syntax"></a>構文  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36177179"
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|[root](root-element-xmla.md)|  
-|子要素|[セル](cell-element-mddataset-xmla.md)|  
+|子要素|[たとえば、マトリックスでは、列ヘッダーに並べ替えボタンを追加してマトリックスにバインドされているデータセットの名前として、コンテナー スコープを指定します。](cell-element-mddataset-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
  親の root 要素の中では、`Axes` 要素の後に `CellData` 要素が続きます。これは、多次元データセットで返される各セルのセル プロパティ値を含む `Cell` 要素のコレクションです。  

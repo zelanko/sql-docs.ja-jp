@@ -1,5 +1,5 @@
 ---
-title: トレースの再生 |Microsoft ドキュメント
+title: トレースの再生 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, replaying traces
 - Run to Cursor option
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], replaying traces
 ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4e6f0b2068faf1fb5282eb0effd348cb01d4ac91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 76ef0ddde1f23d68e198854466a8b0abbbecc427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325282"
 ---
 # <a name="replay-traces"></a>トレースの再生
   再生とは、トレースでキャプチャされたアクティビティを再現する機能です。 トレースの作成または編集を行うときに、そのトレースをファイルに保存して後で再生できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、1 つのコンピューターからのトレース アクティビティを再生できます。 ワークロードが大きい場合、Distributed Replay Utility を使用して複数のコンピューターからのトレース データを再生できます。  
@@ -46,7 +46,7 @@ ms.locfileid: "36177896"
 |トピック|説明|  
 |-----------|-----------------|  
 |[再生を実行するための必要条件](replay-requirements.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で再生できるようにトレース定義に含める必要があるイベントについて説明します。|  
-|[[再生オプション] &#40;SQL Server Profiler&#41;](replay-options-sql-server-profiler.md)|**の** [構成の再生] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ダイアログ ボックスで設定できるオプションについて説明します。|  
+|[再生オプション&#40;SQL Server Profiler&#41;](replay-options-sql-server-profiler.md)|**の** [構成の再生] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ダイアログ ボックスで設定できるオプションについて説明します。|  
 |[トレースの再生に関する注意点&#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で再生できないトレース イベント、およびトレースの再生によるサーバー パフォーマンスへの影響について説明します。|  
   
 ## <a name="see-also"></a>参照  

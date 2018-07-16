@@ -1,5 +1,5 @@
 ---
-title: トランザクションを継承 |Microsoft ドキュメント
+title: トランザクションの継承 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], inherited
 - child packages
 - inherited transactions [Integration Services]
 ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0df0ba113b23e9b5cc582b1795299a0befee4bae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b2a4010ccdf7ec3138e180d5d90f6e779aa0529
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215492"
 ---
 # <a name="inherited-transactions"></a>トランザクションの継承
   パッケージでパッケージ実行タスクを使用して、別のパッケージを実行できます。 パッケージ実行タスクで実行される子パッケージでは、独自のパッケージ トランザクションを作成する場合もあれば、親パッケージのトランザクションを継承する場合もあります。  

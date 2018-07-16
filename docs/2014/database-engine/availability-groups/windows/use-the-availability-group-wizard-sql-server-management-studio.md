@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.f1
 - sql12.swb.newavgroupwiz.f1
@@ -18,18 +17,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 caps.latest.revision: 41
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 79cdbd700e1eda482b02902a23de66eb92652fdf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f021d637b04a67dccde5d3428edd0b033f0bf297
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300902"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>可用性グループ ウィザードの使用 (SQL Server Management Studio)
-  このトピックの内容が、新しい可用性グループ ウィザードを使用する方法について説明します (で[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) を作成し、AlwaysOn 可用性グループを構成する[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
+  このトピックでは、新しい可用性グループ ウィザードを使用する方法を説明します (で[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) での AlwaysOn 可用性グループの構成を作成し[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
   
 > [!NOTE]  
 >  可用性グループの概要については、「[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
@@ -120,7 +119,7 @@ ms.locfileid: "36165691"
     |タブ|簡単な説明|  
     |---------|-----------------------|  
     |**レプリカ**|このタブを使用して、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを指定します。 現在接続しているサーバー インスタンスでプライマリ レプリカをホストする必要があることに注意してください。|  
-    |**エンドポイント**|このタブを使用して、既存の任意のデータベース ミラーリング エンドポイントを検証します。また、サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合は、エンドポイントを自動的に作成します。 **注:** 任意のサーバー インスタンスがドメイン以外のユーザー アカウントで実行されている場合、手動で変更を加える、サーバー インスタンスに、ウィザードを続行する前にする必要があります。 詳細については、このトピックの「 [前提条件](#PrerequisitesRestrictions)」をご覧ください。|  
+    |**エンドポイント**|このタブを使用して、既存の任意のデータベース ミラーリング エンドポイントを検証します。また、サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合は、エンドポイントを自動的に作成します。 **注:** 任意のサーバー インスタンスが非ドメイン ユーザー アカウントで実行している場合を加える必要があります手動で変更をサーバー インスタンスに、ウィザードを続行する前にします。 詳細については、このトピックの「 [前提条件](#PrerequisitesRestrictions)」をご覧ください。|  
     |**バックアップの設定**|このタブを使用して、可用性グループ全体についてバックアップの設定を指定し、各可用性レプリカのバックアップ優先順位を指定します。|  
     |**リスナー**|このタブを使用して、可用性グループ リスナーを作成します。 既定では、ウィザードによってリスナーは作成されません。|  
   
@@ -194,7 +193,7 @@ ms.locfileid: "36165691"
   
 -   [AlwaysOn 可用性グループの構成のトラブルシューティングを行う&#40;SQL Server&#41;削除](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
--   [失敗したファイルの追加操作のトラブルシューティング&#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [ファイル追加失敗の操作のトラブルシューティング&#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
@@ -208,13 +207,13 @@ ms.locfileid: "36165691"
   
 -   **ビデオ:**  
   
-     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 1: 概要次世代の高可用性ソリューション](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ、パート 1: 次世代の高可用性ソリューションの概要](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 2: 構築 AlwaysOn を使用したミッション クリティカルな高可用性ソリューション](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ、パート 2: AlwaysOn を使用したミッション クリティカルな高可用性ソリューションの構築](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **ホワイト ペーパー:**  
   
-     [高可用性と災害復旧の Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -223,6 +222,6 @@ ms.locfileid: "36165691"
 ## <a name="see-also"></a>参照  
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [前提条件、制限事項、および AlwaysOn 可用性グループに関する推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

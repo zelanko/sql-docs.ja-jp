@@ -1,5 +1,5 @@
 ---
-title: InstanceSelection 要素 (ASSL) |Microsoft ドキュメント
+title: InstanceSelection 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - InstanceSelection element
 ms.assetid: 908a2da9-274c-40d2-87dc-4641cb8d77e6
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b36f0c3c5d29c88c499dea6e70ab4dd0cee1b42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9babb9e5066d00b8a396d52dfb2dbdfc2f0b4cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279768"
 ---
 # <a name="instanceselection-element-assl"></a>InstanceSelection 要素 (ASSL)
   クライアント アプリケーションにヒントを提供し、一覧の予期されたアイテム数に基づいて、アイテムの一覧の表示方法を提案します。  
@@ -70,7 +70,7 @@ ms.locfileid: "36085759"
 |*FilteredList*|アイテム数が多すぎるので、ユーザーはアイテムを表示できるようにフィルターする必要があります。|  
 |*MandatoryFilter*|アイテム数が多すぎるので、表示を常にフィルターする必要があります。|  
   
- 許可される値に対応する列挙`InstanceSelection`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.InstanceSelection>します。  
+ 許容された値に対応する列挙体`InstanceSelection`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.InstanceSelection>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: テーブルおよびインデックスのパーティション分割の使用 |Microsoft ドキュメント
+title: テーブルおよびインデックスのパーティション分割の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,36 +17,36 @@ helpviewer_keywords:
 - partitioned indexes [SQL Server], SMO
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bdd2f053895704484019c7771c8eab4689402992
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: db31f674605b1cf1c75351e6241ff6aed2b282c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221035"
 ---
 # <a name="using-table-and-index-partitioning"></a>テーブルおよびインデックスのパーティション分割の使用
-  によって提供される格納アルゴリズムを使用してデータを格納できる[Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)です。 パーティション分割により、大規模なテーブルとインデックスの管理の可能性と拡張性が向上します。  
+  によって提供される格納アルゴリズムを使用してデータを格納できる[Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)します。 パーティション分割により、大規模なテーブルとインデックスの管理の可能性と拡張性が向上します。  
   
 ## <a name="index-and-table-partitioning"></a>インデックスとテーブルのパーティション分割  
  この機能によって、インデックス データおよびテーブル データを、パーティション内の複数のファイル グループに分散させることができます。 パーティション関数は、パーティション分割列と呼ばれる特定の列の値に基づいて、テーブルまたはインデックスの行を一連のパーティションにどのようにマップするかを定義します。 パーティション構成は、パーティション関数によって指定された各パーティションをファイル グループにマップします。 これにより、複数のファイル グループにまたがってテーブルを拡張できるような、したがって物理デバイスもまたがって拡張できるような、アーカイブ戦略を開発することができます。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database>オブジェクトのコレクションを格納する<xref:Microsoft.SqlServer.Management.Smo.PartitionFunction>実装されたパーティション関数およびのコレクションを表すオブジェクト<xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>ファイル グループにデータをマップする方法を記述するオブジェクト。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database>オブジェクトのコレクションを格納する<xref:Microsoft.SqlServer.Management.Smo.PartitionFunction>実装されたパーティション関数とのコレクションを表すオブジェクトを<xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>ファイル グループにデータをマップする方法を説明するオブジェクト。  
   
  各 <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.Index> オブジェクトは、どのパーティション構成を使用するかを <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> プロパティで指定し、列を <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> で指定します。  
   
 ## <a name="example"></a>例  
- 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)と[Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)と[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-basic"></a>Visual Basic でのテーブルのパーティション構成の設定  
- コード例は、パーティション関数およびのパーティション構成を作成する方法を示します、`TransactionHistory`テーブルに、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]サンプル データベース。 これらのパーティションは、古いレコードを `TransactionHistoryArchive` テーブルに分割する目的で、日付によって分割されます。  
+ コード例は、パーティション関数とパーティション構成を作成する方法を示しています、`TransactionHistory`テーブルに、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]サンプル データベース。 これらのパーティションは、古いレコードを `TransactionHistoryArchive` テーブルに分割する目的で、日付によって分割されます。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBPartition1](SMO How to#SMO_VBPartition1)]  -->  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Visual C# でのテーブルのパーティション構成の設定  
- コード例は、パーティション関数およびのパーティション構成を作成する方法を示します、`TransactionHistory`テーブルに、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]サンプル データベース。 これらのパーティションは、古いレコードを `TransactionHistoryArchive` テーブルに分割する目的で、日付によって分割されます。  
+ コード例は、パーティション関数とパーティション構成を作成する方法を示しています、`TransactionHistory`テーブルに、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]サンプル データベース。 これらのパーティションは、古いレコードを `TransactionHistoryArchive` テーブルに分割する目的で、日付によって分割されます。  
   
 ```  
 {   
@@ -94,7 +94,7 @@ ps.Create();
 ```  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-powershell"></a>PowerShell でのテーブルのパーティション構成の設定  
- コード例は、パーティション関数およびのパーティション構成を作成する方法を示します、`TransactionHistory`テーブルに、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]サンプル データベース。 これらのパーティションは、古いレコードを `TransactionHistoryArchive` テーブルに分割する目的で、日付によって分割されます。  
+ コード例は、パーティション関数とパーティション構成を作成する方法を示しています、`TransactionHistory`テーブルに、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]サンプル データベース。 これらのパーティションは、古いレコードを `TransactionHistoryArchive` テーブルに分割する目的で、日付によって分割されます。  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

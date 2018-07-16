@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
 - database restores [SQL Server], creating new databases
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 caps.latest.revision: 64
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e3f9f8ad10a31fa7af4b6a517c0c36fcc817494
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a2894baa94f9787a38d2c7c49f0f6e330a3537c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215562"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>データベースを新しい場所に復元する (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)]データベースを新しい場所に復元し、必要に応じてデータベースの名前を変更する方法について説明します。 新しいディレクトリ パスにデータベースを移動できるほか、同じサーバー インスタンスまたは別のサーバー インスタンスにデータベースのコピーを作成できます。  
@@ -45,7 +44,7 @@ ms.locfileid: "36164122"
   
      [Security](#Security)  
   
--   **新しい場所に、データベースを復元し、必要に応じて、データベースの名前を変更に使用します。**  
+-   **データベースを新しい場所に復元して、必要に応じて、データベースの名前を変更するを使用します。**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -61,7 +60,7 @@ ms.locfileid: "36164122"
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
--   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、データベースを復元する前に、アクティブ トランザクション ログをバックアップする必要があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)と呼ばれる) をバックアップする必要がある場合があります。  
+-   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、データベースを復元する前に、アクティブ トランザクション ログをバックアップする必要があります。 詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)」を参照してください。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -110,7 +109,7 @@ ms.locfileid: "36164122"
   
 5.  **[復元先]** ボックスで、既定値の **[最後に作成されたバックアップ]** のままにするか、 **[タイムライン]** をクリックして、 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスし、具体的にどの時点で復旧アクションを停止するかを手動で選択します。 特定の時点を指定する方法の詳細については、「 [Backup Timeline](backup-timeline.md) 」を参照してください。  
   
-6.  **[復元するバックアップ セット]** グリッドで、復元するバックアップを選択します。 このグリッドには、指定された場所に対して使用可能なバックアップが表示されます。 既定では、復旧計画が推奨されています。 推奨された復元計画をオーバーライドするには、グリッドの選択を変更します。 以前のバックアップの選択を解除すると、以前のバックアップの復元に依存するバックアップは自動的に選択が解除されます。  
+6.  **[復元するバックアップ セット]** グリッドで、復元するバックアップを選択します。 このグリッドには、指定された場所に対して使用可能なバックアップが表示されます。 既定では、復旧計画が推奨されています。 推奨された復元計画を変更するには、グリッドの選択を変更します。 以前のバックアップの選択を解除すると、以前のバックアップの復元に依存するバックアップは自動的に選択が解除されます。  
   
      **[復元するバックアップ セット]** グリッドの列の詳細については、「[データベースの復元 &#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)」を参照してください。  
   
@@ -168,7 +167,7 @@ ms.locfileid: "36164122"
   
      {ディスク |テープ} `=` *physical_backup_device_name*  
   
-     詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。  
+     詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)」を参照してください。  
   
      { **RECOVERY** | NORECOVERY }  
      データベースで完全復旧モデルを使用している場合は、データベースの復元後にトランザクション ログ バックアップを適用しなければならない場合があります。 この場合は、NORECOVERY オプションを指定します。  
@@ -220,7 +219,7 @@ GO
   
 -   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [データベース バックアップを復元&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [データベースのバックアップを復元&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   

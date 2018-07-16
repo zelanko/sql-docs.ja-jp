@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d90a6d3162c90ce80281d53d8fe73c8ce2da4a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 243f5f15535a785e544c6b4e081d3404fb7ad26c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187619"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で SQL Server エージェントのマスター ジョブのステップに変更を加える方法について説明します。  
@@ -62,7 +62,7 @@ ms.locfileid: "36176758"
   
 5.  *[ジョブのプロパティ - <ジョブ名>]* ダイアログ ボックスで、**[ページの選択]** の **[ステップ]** を選択します。  
   
-6.  **[編集]** をクリックし、*[ジョブ ステップのプロパティ - <ジョブ ステップ名>]* ダイアログ ボックスを開きます。 このダイアログ ボックスで使用可能なオプションの詳細については、次を参照してください[ジョブ ステップのプロパティ: 新しいジョブ ステップ&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)と[ジョブ ステップのプロパティ: 新しいジョブ ステップ&#40;詳細設定 ページ&#41;。](job-step-properties-new-job-step-advanced-page.md).  
+6.  **[編集]** をクリックし、*[ジョブ ステップのプロパティ - <ジョブ ステップ名>]* ダイアログ ボックスを開きます。 このダイアログ ボックスで使用可能なオプションの詳細については、次を参照してください[ジョブ ステップのプロパティ: 新しいジョブ ステップ&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)と[ジョブ ステップのプロパティ: 新しいジョブ ステップ&#40;高度なページ&#41;。](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  完了したら、 **[OK]** をクリックします。  
   
@@ -91,6 +91,6 @@ ms.locfileid: "36176758"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_update_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)します。  
   
   

@@ -25,13 +25,13 @@ ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3e19f5934781060e7aad9886d8da78aa50680fca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c56b46060a48cad8745d1653801c359be348626
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215472"
 ---
 # <a name="selecting-input-columns-programmatically"></a>プログラムによる入力列の選択
   プログラムによってコンポーネントを接続したら、変換する列または下流コンポーネントに渡す列を上流コンポーネントから選択します。 コンポーネント用の入力列を選択しないと、コンポーネントはデータ フロー タスクから行を受信しません。  
@@ -215,7 +215,7 @@ Module Module1
 End Module  
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。  **<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [プログラムによるパッケージの保存](../building-packages-programmatically/saving-a-package-programmatically.md)  

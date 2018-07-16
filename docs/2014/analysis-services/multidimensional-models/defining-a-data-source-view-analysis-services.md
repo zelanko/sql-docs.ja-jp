@@ -1,5 +1,5 @@
 ---
-title: 定義、データ ソース ビュー (Analysis Services) |Microsoft ドキュメント
+title: 定義、データ ソース ビュー (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
 - name matching criteria [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90c3085f0dde8ba5fd317ce8768926787ac5f585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46e84e7a5f546dc90bf3ffbe141dcf5bec4b2792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308552"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>データ ソース ビューの定義 (Analysis Services)
   データ ソース ビューには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多次元データベース オブジェクト (つまり、キューブ、ディメンション、およびマイニング構造) で使用されるスキーマの論理モデルが含まれます。 データ ソース ビューとは、XML 形式で格納されている、統合ディメンショナル モデル (UDM) とマイニング構造で使用されるこれらのスキーマ要素のメタデータ定義です。 データ ソース ビューには、次の特徴があります。  
@@ -111,7 +111,7 @@ ms.locfileid: "36178329"
 ##  <a name="bkmk_secondaryDS"></a> セカンダリ データ ソースの追加  
  複数のデータ ソースに属するテーブル、ビュー、または列を含むデータ ソース ビューを定義するとき、データ ソース ビューに追加するオブジェクトの最初のデータ ソースはプライマリ データ ソースとして指定されます (定義後にプライマリ データ ソースを変更することはできません)。 1 つのデータ ソースのオブジェクトに基づいてデータ ソース ビューを定義した後に、他のデータ ソースのオブジェクトを追加することはできます。  
   
- プライマリ データ ソースを使用したリモート クエリをサポートする必要があります OLAP 処理またはデータ マイニング クエリは、単一のクエリで複数のデータ ソースからデータを必要とする場合`OpenRowset`です。 通常、これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースになります。 たとえば、複数のデータ ソースの列にバインドされている属性を含む OLAP ディメンションを設計する場合は、処理中にこのディメンションを作成する `OpenRowset` クエリが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって作成されます。 ただし、OLAP オブジェクトを作成できるか、データ マイニング クエリは、1 つのデータ ソースから解決済み、`OpenRowset`クエリは作成されません。 特定の状況では、属性間の属性リレーションシップを定義して、`OpenRowset` クエリを必要なくすることができます。 属性リレーションシップの詳細については、次を参照してください[属性リレーションシップ](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)、[追加または削除するテーブルまたはビューのデータ ソース ビューで&#40;Analysis Services&#41; ](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)と[。属性リレーションシップを定義](attribute-relationships-define.md)です。  
+ OLAP 処理またはデータ マイニング クエリは、1 つのクエリで複数のデータ ソースからデータを必要とする場合、プライマリ データ ソースを使用してリモート クエリをサポートする必要があります`OpenRowset`します。 通常、これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースになります。 たとえば、複数のデータ ソースの列にバインドされている属性を含む OLAP ディメンションを設計する場合は、処理中にこのディメンションを作成する `OpenRowset` クエリが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって作成されます。 ただし、OLAP オブジェクトを作成するか、データ マイニング クエリは、1 つのデータ ソースから解決される、`OpenRowset`クエリは作成されません。 特定の状況では、属性間の属性リレーションシップを定義して、`OpenRowset` クエリを必要なくすることができます。 属性リレーションシップの詳細については、次を参照してください[属性リレーションシップ](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)、[追加または削除するテーブルまたはビューのデータ ソース ビューで&#40;Analysis Services&#41; ](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)と[。属性リレーションシップを定義](attribute-relationships-define.md)します。  
   
  セカンダリ データ ソースからテーブルおよび列を追加するには、ソリューション エクスプローラーで DSV をダブルクリックしてデータ ソース ビュー デザイナーで開いた後、[テーブルの追加と削除] ダイアログ ボックスを使用して、プロジェクトで定義した他のデータ ソースからオブジェクトを追加します。 詳細については、「[データ ソース ビューでのテーブルまたはビューの追加または削除 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)」をご覧ください。  
   
@@ -135,14 +135,14 @@ ms.locfileid: "36178329"
 >  データ ソース ビュー ウィザードを完了したら、データ ソース ビュー デザイナーのスキーマ ペインでリレーションシップを追加または削除できます。 詳細については、「[データ ソース ビューでの論理リレーションシップの定義 (Analysis Services)](define-logical-relationships-in-a-data-source-view-analysis-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [追加または削除のテーブルまたはビュー、データ ソース ビュー &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
+ [ソース ビューのテーブルまたはデータ ビューの追加または削除&#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [データ ソース ビューで論理主キーの定義&#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [データ ソース ビューで名前付き計算の定義&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [データ ソース ビューで名前付きクエリの定義&#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
- [テーブルまたはデータ ソース ビューの名前付きクエリを置換&#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [データ ソース ビュー デザイナーでのダイアグラムの作業&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [データ ソース ビューでデータを探索&#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
+ [テーブルまたはデータ ソース ビューの名前付きクエリの置換&#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [データ ソース ビュー デザイナーのダイアグラムの使用&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [データ ソース ビュー内のデータを探索&#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
  [データ ソース ビューの削除&#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
- [データ ソース ビュー内のスキーマの更新&#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューでスキーマを更新&#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

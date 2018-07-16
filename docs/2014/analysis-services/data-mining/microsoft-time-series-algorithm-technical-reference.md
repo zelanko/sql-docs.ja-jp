@@ -1,5 +1,5 @@
 ---
-title: Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+title: Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - HISTORICAL_MODEL_GAP parameter
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ab83d1cefec896835d8ecb0c9baa49d4ea44b68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 78a54bc173a3d3b780e57752d86aebc33249066a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323622"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムには、時系列を分析するための 2 つの異なるアルゴリズムが含まれています。  
@@ -71,7 +71,7 @@ ms.locfileid: "36085788"
   
  Microsoft タイム シリーズ アルゴリズムでは、時系列内の値を取得し、そのデータを一定のパターンに近づけようとする処理が行われます。 データ系列がまだ定常化されていない場合、アルゴリズムは差分の次数を使用します。 差分の次数が増加するたびに、タイム シリーズがより定常化します。  
   
- たとえば、(z1、z2、…、zn)、タイム シリーズ、差分の次数を 1 つを使用して計算を実行すると、場所に新しい系列 (y1, y2,..., yn-1) を入手するに*イ語 = zi + 1 zi*です。 差分の次数が 2 の場合、アルゴリズムには、別の系列 (x1, x2,..., xn 2)、1 次方程式から派生した y 系列に基づいてが生成されます。 正しい差分の量はデータによって異なります。 差分の次数 1 は、傾向が一定のモデルで非常によく使われます。差分の次数 2 は、時間と共に変化する傾向を示すことができます。  
+ たとえば、タイム シリーズ (z1、z2、…、zn) がある相違点の 1 つの順序を使用して計算を実行して場合、ここに新しい系列 (y1, y2,..., yn-1) を入手するに*イ語 = zi + 1 zi*します。 差分の次数が 2 の場合、アルゴリズムが別の系列 (x1、x2、…、xn-2)、1 次方程式から派生した y 系列に基づいて生成されます。 正しい差分の量はデータによって異なります。 差分の次数 1 は、傾向が一定のモデルで非常によく使われます。差分の次数 2 は、時間と共に変化する傾向を示すことができます。  
   
  既定では、Microsoft タイム シリーズ アルゴリズムで使用される差分の次数は -1 です。つまり、最適な差分の次数がアルゴリズムによって自動的に検出されます。 通常、(差分が必要な場合の) 最適な値は 1 ですが、状況によってはアルゴリズムが最大 2 までこの値を増やします。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36085788"
   
  ARIMA_AR_ORDER の値が 1 を超える場合、アルゴリズムは時系列に多項式の項を乗算します。 多項式の 1 つの項が 1 または 1 に近い値のルートに解決された場合、アルゴリズムはこの項を削除し、差分の次数を 1 増やして、モデルの安定性を維持しようとします。 差分の次数が既に最大の場合、項が削除され、差分の次数は変化しません。  
   
- たとえば場合、AR の値 = 2、AR 多項式の項が次のようになります: 1 – 1.4B + .45B ^2 = (1-.9B) (1 - 0.5B)。 約 0.9 のルートを持つ用語 (1-.9B) に注意してください。 アルゴリズムはこの項を多項式から除外しますが、差分の次数が既に 2 であるため、差分の次数を 1 つ上げることができません。  
+ たとえば場合、AR の値 = 2、AR 多項式のようになります: 1 – 1.4B + .45B ^2 = (1-.9B) (1 - 0.5B)。 用語 (1-.9B) 約 0.9 のルートに注意してください。 アルゴリズムはこの項を多項式から除外しますが、差分の次数が既に 2 であるため、差分の次数を 1 つ上げることができません。  
   
  ここで、差分の次数を **強制的に** 変更するための唯一の方法が、サポートされていないパラメーターである ARIMA_DIFFERENCE_ORDER の使用であることは重要です。 この非表示のパラメーターは、時系列上でアルゴリズムが差分を実行する回数を制御し、カスタムのアルゴリズム パラメーターを入力して設定できます。 ただし、適切な値が見つかるまで何度か値を調整する準備があり、必要な計算を熟知している場合を除いて、この値を変更することはお勧めできません。 また、差分次数が増加するしきい値を制御できるようなメカニズムは、非表示パラメーターも含めて、現時点では存在しない点に注意してください。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36085788"
 >  周期性のヒントは、ARTXP アルゴリズムと ARIMA アルゴリズムの両方に大きく影響します。 したがって、不適切なヒントを指定すると、結果に悪影響を与える可能性があります。  
   
 ### <a name="choosing-an-algorithm-and-specifying-the-blend-of-algorithms"></a>アルゴリズムの選択と、アルゴリズムの組み合わせの指定  
- 既定では (または MIXED オプションをオンにした場合は)、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって両方のアルゴリズムが同じ重み付けで組み合わされます。 ただし、 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]、特定のアルゴリズムを指定するか、結果には、各アルゴリズムの割合をカスタマイズするには、パラメーター、結果で重視、短期または長期的な予測のいずれかを設定します。 *FORECAST_METHOD* パラメーターは、既定では MIXED に設定されています。この場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は両方のアルゴリズムを使用して、各アルゴリズムの強みを最大限に活かすようにそれぞれの値に重みを付けます。  
+ 既定では (または MIXED オプションをオンにした場合は)、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって両方のアルゴリズムが同じ重み付けで組み合わされます。 ただし、 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]、特定のアルゴリズムを指定するか、各アルゴリズムの結果における割合をカスタマイズするには、短期または長期的な予測のいずれかの方向に結果を重みパラメーターを設定します。 *FORECAST_METHOD* パラメーターは、既定では MIXED に設定されています。この場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は両方のアルゴリズムを使用して、各アルゴリズムの強みを最大限に活かすようにそれぞれの値に重みを付けます。  
   
 -   アルゴリズムの選択を制御するには、 *FORECAST_METHOD* パラメーターを設定します。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36085788"
   
 -   長期予測の精度を高める場合は、 *FORECAST_METHOD* を ARIMA に設定します。  
   
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]、カスタマイズすることも方法[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ARIMA と ARTXP アルゴリズムの組み合わせを合成します。 *PREDICTION_SMOOTHING* パラメーターを設定することにより、組み合わせの開始点と変化率の両方を制御できます。  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]、カスタマイズすることも方法[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ARIMA と ARTXP アルゴリズムの組み合わせが混在します。 *PREDICTION_SMOOTHING* パラメーターを設定することにより、組み合わせの開始点と変化率の両方を制御できます。  
   
 -   *PREDICTION_SMOOTHING* を 0 に設定すると、モデルは ARTXP だけを使用します。  
   
@@ -124,11 +124,11 @@ ms.locfileid: "36085788"
   
  次の図は、 *PREDICTION_SMOOTHING* を既定値の 0.5 に設定した場合にモデルで 2 つのアルゴリズムがどのように組み合わされるのかを示しています。 最初は ARIMA と ARTXP の重みが均等ですが、予測期間の値が増えるにつれて ARIMA の重みが増加しています。  
   
- ![タイム シリーズ アルゴリズムの組み合わせのための既定曲線](../media/time-series-mixing-default.gif "タイム シリーズ アルゴリズムの組み合わせのための既定曲線")  
+ ![タイム シリーズ アルゴリズムの組み合わせの既定曲線](../media/time-series-mixing-default.gif "タイム シリーズ アルゴリズムの組み合わせの既定曲線")  
   
  一方、次の図は、 *PREDICTION_SMOOTHING* を 0.2 に設定した場合のアルゴリズムの組み合わせを示しています。 期間 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]では、ARIMA の重みが 0.2、ARTXP の重みが 0.8 です。 その後、ARIMA の重みが指数関数的に増加し、ARTXP の重みも同じように減少します。  
   
- ![タイム シリーズ モデルを混在させるための減衰曲線](../media/time-series-blending-curve.gif "タイム シリーズ モデルを混在させるための減衰曲線")  
+ ![タイム シリーズ モデルの組み合わせの減衰曲線](../media/time-series-blending-curve.gif "タイム シリーズ モデルの組み合わせの減衰曲線")  
   
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
  次の表は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムで使用できるパラメーターを示しています。  
@@ -144,9 +144,9 @@ ms.locfileid: "36085788"
 |*MAXIMUM_SERIES_VALUE*|予測に使用する最大値を指定します。 このパラメーターを *MINIMUM_SERIES_VALUE*と共に使用すると、予測が所定の範囲内に制約されます。 たとえば、日次の予測販売数量が製品の在庫数を超えないように指定することができます。<br /><br /> 注: このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。|  
 |*MINIMUM_SERIES_VALUE*|予測できる最小値を指定します。 このパラメーターを *MAXIMUM_SERIES_VALUE*と共に使用すると、予測が所定の範囲内に制約されます。 たとえば、販売数量の予測が負の値にならないように指定できます。<br /><br /> 注: このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。|  
 |*MINIMUM_SUPPORT*|各タイム シリーズ ツリーで分割を生成するために必要なタイム スライスの最小数を指定します。 既定値は 10 です。|  
-|*MISSING_VALUE_SUBSTITUTION*|履歴データのギャップを埋める方法を指定します。 既定では、データ内のギャップは許可されません。 データに複数のシリーズが含まれている場合は、シリーズの端を揃える必要もあります。 つまり、すべてのシリーズの開始点と終了点が同じである必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 実行すると、新しいデータのギャップを埋めるにこのパラメーターの値を使用しても、`PREDICTION JOIN`タイム シリーズ モデルにします。 このパラメーターに指定できる値の一覧を次の表に示します。<br /><br /> [なし]: 既定値です。 トレーニング済みモデルの曲線に沿ってプロットされた値で不足値を置き換えます。<br /><br /> : 前に、前のタイム スライスの値が繰り返されます。<br /><br /> 平均: は、トレーニングに使用されたタイム スライスの移動平均を使用します。<br /><br /> 数値定数: 指定した数値を使用してすべての不足値を置き換えます。|  
+|*MISSING_VALUE_SUBSTITUTION*|履歴データのギャップを埋める方法を指定します。 既定では、データ内のギャップは許可されません。 データに複数のシリーズが含まれている場合は、シリーズの端を揃える必要もあります。 つまり、すべてのシリーズの開始点と終了点が同じである必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] またこのパラメーターの値を使用して、実行すると、新しいデータのギャップを埋める、`PREDICTION JOIN`タイム シリーズ モデルにします。 このパラメーターに指定できる値の一覧を次の表に示します。<br /><br /> [なし]: 既定値します。 トレーニング済みモデルの曲線に沿ってプロットされた値で不足値を置き換えます。<br /><br /> 前:、前のタイム スライスの値が繰り返されます。<br /><br /> 平均: は、トレーニングに使用されたタイム スライスの移動平均を使用します。<br /><br /> 数値定数: 指定した数値を使用してすべての不足値を置き換えます。|  
 |*PERIODICITY_HINT*|データの周期性に関して、アルゴリズムにヒントを提供します。 たとえば、売上が年ごとに異なり、シリーズの単位が月である場合、周期性は 12 です。 このパラメーターの形式は {n [, n]} です。ここで、n には正の値を指定します。<br /><br /> 角かっこ ([]) 内の n は省略可能で、必要なだけ繰り返すことができます。 たとえば、毎月提供されるデータに対して複数の周期性のヒントを指定して、年、四半期、および月のパターンを検出するには、「{12, 3, 1}」と入力します。 ただし、周期性はモデルの品質に大きな影響を与えるので注意してください。 指定したヒントが実際の周期性と異なると、結果が悪影響を受けることがあります。<br /><br /> 既定値は {1} です。<br /><br /> 注: 中かっこが必要です。 また、このパラメーターは文字列データ型です。 したがって、このパラメーターをデータ マイニング拡張機能 (DMX) ステートメントの一部として入力する場合は、数字と中かっこを引用符で囲む必要があります。|  
-|*PREDICTION_SMOOTHING*|予測を最適化するためにモデルを組み合わせる方法を指定します。 このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] だけで使用できます。 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] ～ 1 の任意の値を入力するか、次のいずれかの値を使用します。<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: 予測を使用する ARTXP のみを指定します。 少数の予測に最適化されます。<br /><br /> 0.5: (既定値) は、予測の両方のアルゴリズムを使用して、結果を統合を指定します。<br /><br /> 1: 予測に ARIMA のみを使用するように指定します。 多数の予測に最適化されます。<br /><br /> <br /><br /> 注: を使用して、 *FORECAST_METHOD*パラメーター トレーニングを制御します。|  
+|*PREDICTION_SMOOTHING*|予測を最適化するためにモデルを組み合わせる方法を指定します。 このパラメーターは、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] だけで使用できます。 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] ～ 1 の任意の値を入力するか、次のいずれかの値を使用します。<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: 予測を使用する ARTXP のみを指定します。 少数の予測に最適化されます。<br /><br /> 0.5: 予測の両方のアルゴリズムを使用して、結果を統合、(既定値) を指定します。<br /><br /> 1: 予測に ARIMA のみを使用するように指定します。 多数の予測に最適化されます。<br /><br /> <br /><br /> 注: を使用して、 *FORECAST_METHOD*パラメーター トレーニングを制御します。|  
   
 ### <a name="modeling-flags"></a>ModelingFlags  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、次のモデリング フラグがサポートされています。 モデリング フラグは、マイニング構造やマイニング モデルを作成するときに定義し、分析時に各列の値をどのように処理するかを指定します。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)」を参照してください。  
