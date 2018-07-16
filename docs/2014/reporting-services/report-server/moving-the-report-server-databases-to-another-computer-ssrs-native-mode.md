@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3745d2334f8b8abf4c60c292bba1a820432d088e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d1883651cc37b93383792b94f94695e0775436a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319832"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)
   インストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] で使用されているレポート サーバー データベースは、別のコンピューター上のインスタンスに移動できます。 reportserver と reportservertempdb データベースは、一緒に移動またはコピーする必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の使用環境には、両方のデータベースが必要です。reportservertempdb データベースは、移動する reportserver プライマリ データベースに名前を関連付ける必要があります。  
@@ -50,7 +50,7 @@ ms.locfileid: "36164949"
   
 2.  レポート サーバー サービスを停止します。 サービスは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して停止できます。  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、レポート サーバー データベースをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続を開きます。  
+3.   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、レポート サーバー データベースをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続を開きます。  
   
 4.  レポート サーバー データベースを右クリックし、[タスク] をポイントして **[デタッチ]** をクリックします。 レポート サーバーの一時データベースに対しても、この手順を行います。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36164949"
   
 8.  **[追加]** をクリックして、アタッチするレポート サーバー データベースの .mdf ファイルおよび .ldf ファイルを選択します。 レポート サーバーの一時データベースに対しても、この手順を行います。  
   
-9. データベースをアタッチすると、後にあることを確認、`RSExecRole`は、レポート サーバー データベースと一時データベースのデータベース ロール。 `RSExecRole` 必要があります、select、insert、update、delete、および参照権限をレポート サーバー データベースのテーブルであるし、ストアド プロシージャに対する execute 権限。 詳細については、「 [RSExecRole の作成](../security/create-the-rsexecrole.md)」をご覧ください。  
+9. データベースが接続されると、ことを確認します。、`RSExecRole`がデータベース ロール、レポート サーバー データベースと一時データベースにします。 `RSExecRole` 必要があります、レポート サーバー データベースのテーブルに select、insert、update、delete、および参照を行う権限があるし、ストアド プロシージャに対する execute 権限。 詳細については、「 [RSExecRole の作成](../security/create-the-rsexecrole.md)」をご覧ください。  
   
 10. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動して、レポート サーバー インスタンスへの接続を開きます。  
   
@@ -205,29 +205,29 @@ GO
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動して、レポート サーバー インスタンスへの接続を開きます。  
   
-2.  [データベース] ページの **[データベースの変更]** をクリックします。 **[次へ]** をクリックします。  
+2.  [データベース] ページの **[データベースの変更]** をクリックします。 [**次へ**] をクリックします。  
   
-3.  **[既存のレポート サーバー データベースを選択する]** をクリックします。 **[次へ]** をクリックします。  
+3.  **[既存のレポート サーバー データベースを選択する]** をクリックします。 [**次へ**] をクリックします。  
   
-4.  現在レポート サーバー データベースをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択し、 **[接続テスト]** をクリックします。 **[次へ]** をクリックします。  
+4.  現在レポート サーバー データベースをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択し、 **[接続テスト]** をクリックします。 [**次へ**] をクリックします。  
   
-5.  [データベース名] で、使用するレポート サーバー データベースを選択します。 **[次へ]** をクリックします。  
+5.  [データベース名] で、使用するレポート サーバー データベースを選択します。 [**次へ**] をクリックします。  
   
-6.  レポート サーバーがレポート サーバー データベースに接続するときに使用する資格情報を [資格情報] に指定します。 **[次へ]** をクリックします。  
+6.  レポート サーバーがレポート サーバー データベースに接続するときに使用する資格情報を [資格情報] に指定します。 [**次へ**] をクリックします。  
   
 7.  **[次へ]** 、 **[完了]** の順にクリックします。  
   
 > [!NOTE]  
->  A[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]インストールでは、する必要があります、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]インスタンスに含まれる、`RSExecRole`ロール。 ロールの作成、ログインの登録、およびロールの割り当ては、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールでレポート サーバー データベースの接続を設定する際に行います。 別の方法 (特に、rsconfig.exe コマンド プロンプト ユーティリティを使用する場合) で接続を構成する場合は、レポート サーバーが非動作状態になります。 場合によっては、レポート サーバーを利用可能な状態にするための WMI コードを作成する必要があります。 詳細については、「 [Reporting Service WMI プロバイダーへのアクセス](../tools/access-the-reporting-services-wmi-provider.md)」を参照してください。  
+>  A[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]インストールが必要ですが、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]インスタンスに含まれる、`RSExecRole`ロール。 ロールの作成、ログインの登録、およびロールの割り当ては、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールでレポート サーバー データベースの接続を設定する際に行います。 別の方法 (特に、rsconfig.exe コマンド プロンプト ユーティリティを使用する場合) で接続を構成する場合は、レポート サーバーが非動作状態になります。 場合によっては、レポート サーバーを利用可能な状態にするための WMI コードを作成する必要があります。 詳細については、「 [Reporting Service WMI プロバイダーへのアクセス](../tools/access-the-reporting-services-wmi-provider.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [RSExecRole を作成します。](../security/create-the-rsexecrole.md)   
- [起動し、レポート サーバー サービスを停止します](start-and-stop-the-report-server-service.md)   
- [レポート サーバー データベース接続を構成する&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバーのサービス開始および停止](start-and-stop-the-report-server-service.md)   
+ [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [自動実行アカウントを構成する&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [rsconfig ユーティリティ &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)   
- [構成し、暗号化キーを管理&#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [構成し、暗号化キーの管理&#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [レポート サーバー データベース&#40;SSRS ネイティブ モード&#41;](report-server-database-ssrs-native-mode.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], copying objects
 - copying package objects [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17d8bf1d2297ac9ddbee9a4d393fa84cd3ee1236
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e9ba66baccbaa7278766c0464851cbc9224e6dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296962"
 ---
 # <a name="copy-package-objects"></a>パッケージ オブジェクトをコピーする
   このトピックでは、制御フロー アイテム、データ フロー アイテム、および接続マネージャーをパッケージ内またはパッケージ間でコピーする方法について説明します。  

@@ -1,5 +1,5 @@
 ---
-title: 多次元モデルの Power View を理解する |Microsoft ドキュメント
+title: 多次元モデルの Power View の理解 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a252c89adfe34f849e6fe2bd538ddf22b044c7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df50d1ac785e58bf3136f6d8777a01c98a81d568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288058"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>多次元モデルの Power View について
-  この記事は、Microsoft SQL Server 2014 での多次元モデル機能の Power View について説明し、BI プロフェッショナルと管理者の多次元モデルでの Power View を実装する向けの重要な情報を提供、組織。  
+  この記事では、Power View では、Microsoft SQL Server 2014 では、多次元モデル機能について説明し、BI プロフェッショナルと管理者向けの多次元モデルでの Power View を実装するために重要な情報を提供します、組織。  
   
  多次元モデルには、業界最高レベルの OLAP データ モデリング、ストレージ、および分析ソリューションが用意されています。 Microsoft SQL Server 2014 の多次元モデルでは、Microsoft Power View を使用したアドホック データ分析、探索、およびビジュアル化がサポートされます。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36071788"
   
  **クライアントの要件**  
   
--   Power View クライアント機能には、Microsoft Silverlight 5 が必要です。 詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)です。  
+-   Power View クライアント機能には、Microsoft Silverlight 5 が必要です。 詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)します。  
   
 ## <a name="features"></a>[機能]  
  **Power View のネイティブ サポート**  
@@ -80,7 +80,7 @@ ms.locfileid: "36071788"
   
  **Power View のフィールド リスト内のメジャー グループ**  
   
- ![フィールドの Power View で一覧](../media/daxmd-powerviewfieldlist.gif "フィールドの Power View での一覧")  
+ ![フィールドの一覧で、Power View](../media/daxmd-powerviewfieldlist.gif "フィールドの Power View での一覧")  
   
  メジャー グループ内のメジャーは、メジャーとして表示されます。 メジャー グループに関連付けられていない計算されるメジャーがある場合、そのメジャーは Measures と呼ばれる特殊なテーブルでグループ化されます。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36071788"
   
  **計算されるメンバーを含む Power View レポート**  
   
- ![計算されるメンバーは Power View で](../media/daxmd-calcmembersinpowerview.gif "計算されるメンバーの Power view")  
+ ![計算されるメンバーは Power View で](../media/daxmd-calcmembersinpowerview.gif "計算されるメンバーは Power View")  
   
 ### <a name="default-members"></a>既定メンバー  
  多次元モデルでは、ディメンション属性の既定のメンバーがサポートされています。 既定のメンバーは、クエリのデータ集計時に Analysis Services によって使用されます。 ディメンション属性の既定のメンバーは、表形式のメタデータで対応する列の既定値または既定のフィルターとして公開されます。  
@@ -151,7 +151,7 @@ ms.locfileid: "36071788"
   
  **SSDT でのディメンション属性の ImageURL 型**  
   
- ![ディメンションの属性のプロパティ](../media/daxmd-dimattribute-properties.gif "ディメンションの属性のプロパティ")  
+ ![ディメンション属性プロパティ](../media/daxmd-dimattribute-properties.gif "ディメンション属性のプロパティ")  
   
 ## <a name="parent-child-hierarchies"></a>親子階層  
  多次元モデルでは、表形式のメタデータの階層として公開される親子階層がサポートされています。 親子階層の各レベルは、非表示の列として公開されます。 親子ディメンションのキー属性は、表形式のメタデータでは公開されません。  

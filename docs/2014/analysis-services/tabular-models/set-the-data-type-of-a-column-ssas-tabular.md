@@ -1,5 +1,5 @@
 ---
-title: 列 (SSAS テーブル) のデータ型を設定 |Microsoft ドキュメント
+title: 列 (SSAS テーブル) のデータ型の設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6c0c55e44192b348b9ae1510d9ee90731185b70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0871dbef7b9b9a053a7c79688ec7073d2d8fdcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312232"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>列のデータ型の設定 (SSAS テーブル)
   モデルにデータをインポートするか、データを貼り付けると、モデル デザイナーによってデータ型の検出と適用が自動的に行われます。 データをモデルに追加したら、列のデータ型を手動で変更してデータの格納方法を変更できます。 代わりに、データの格納方法を変更せずに表示形式だけを変更することもできます。  
@@ -69,7 +69,7 @@ ms.locfileid: "36165685"
   
  そのデータ型がサポートされていても、新しいデータ型の範囲でサポートされていない値が見つかった場合は、モデル デザイナーによって別のエラーが表示されます。この場合は、続行する前にデータ値を修正する必要があります。  
   
- Business intelligence semantic model で使用されるデータ型の詳細については、暗黙的に変換、およびさまざまなデータ型ではどのように式で使用するを参照してください[データ型はサポートされて&#40;SSAS 表形式&#41;](data-types-supported-ssas-tabular.md).  
+ Business intelligence semantic model で使用されるデータ型の詳細については、暗黙的に変換、およびさまざまなデータ型がどのような数式で使用しを参照してください[型でサポートされているデータ&#40;SSAS 表形式&#41;](data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>参照  
  [サポートされるデータ型&#40;SSAS 表形式&#41;](data-types-supported-ssas-tabular.md)  

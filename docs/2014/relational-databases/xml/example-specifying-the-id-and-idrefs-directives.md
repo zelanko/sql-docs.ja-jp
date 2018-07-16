@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: efaa7da1a6e198f4e8fc122df0b7fe0360f625b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 48bb2922f8f86712a838de95b31a3be2b08c3150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282898"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>例 : ID ディレクティブと IDREFS ディレクティブの指定
-  要素の属性として指定できます、 `ID` type 属性と`IDREFS`属性を参照し、使用できます。 これにより、ドキュメント内のリンク作成が可能になります。これは、リレーショナル データベースにおける主キーと外部キーのリレーションシップに似ています。  
+  要素の属性として指定できます、`ID`型の属性と`IDREFS`属性を参照し、使用できます。 これにより、ドキュメント内のリンク作成が可能になります。これは、リレーショナル データベースにおける主キーと外部キーのリレーションシップに似ています。  
   
  この例では、`ID` ディレクティブと `IDREFS` ディレクティブを使用して、`ID` 型と `IDREFS` 型の属性を作成する方法を示します。 ID は整数値にできないので、この例では ID 値を変換します。 つまり、型キャストを行っています。 ID 値にはプレフィックスを使用します。  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 caps.latest.revision: 11
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 9f1dc6c0ff421909a672fe9abe1ccd94efe6c3b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 30707ed1e70c37fee37c4c84369853ef1fba5c12
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311842"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視
   このトピックでは、ネイティブ コンパイル ストアド プロシージャのパフォーマンスを監視する方法を説明します。  
@@ -33,7 +33,7 @@ ms.locfileid: "36175963"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- 詳細については、`sp_statement_completed`イベントを拡張するを参照してください[イベントの原因となったステートメントを取得する方法について](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)です。  
+ 詳細については、`sp_statement_completed`イベントを拡張するを参照してください[イベントの原因となったステートメントを取得する方法](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)します。  
   
 ## <a name="using-data-management-views"></a>データ管理ビューの使用  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、プロシージャ レベルとクエリ レベルの両方で、ネイティブ コンパイル ストアド プロシージャに関する実行の統計の収集をサポートしています。 パフォーマンスに与える影響が原因で、実行の統計の収集は既定では有効になっていません。  

@@ -1,13 +1,11 @@
 ---
-title: SQL Server インプロセス固有の拡張 ado.net |Microsoft ドキュメント
+title: SQL Server のインプロセス固有の拡張 ADO.NET |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,22 +17,22 @@ helpviewer_keywords:
 - extensions [CLR integration]
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b72ecf75f7c696e21fc14e73b42d1d192320679e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: bd625f2b09f70e7356c169248953786c70dd1ad9
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076244"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354944"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>ADO.NET に対する SQL Server インプロセス固有の拡張機能
   ADO.NET には、特にインプロセスで使用する、4 つの主要な拡張機能があります。 次のトピックでは、これらの拡張機能の詳細について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [SqlContext オブジェクト](sqlcontext-object.md)  
- このクラスでは、インプロセスでマネージ コードを実行する SQL Server ルーチンの呼び出し元のコンテキストが抽象化され、他の拡張機能へのアクセスを提供します。  
+ このクラスでは、インプロセスでマネージド コードを実行する SQL Server ルーチンの呼び出し元のコンテキストが抽象化され、他の拡張機能へのアクセスを提供します。  
   
  [SqlPipe オブジェクト](sqlpipe-object.md)  
  このクラスには、表形式の結果とメッセージをクライアントに送信するためのルーチンが含まれています。  

@@ -1,5 +1,5 @@
 ---
-title: FontName 要素 (ASSL) |Microsoft ドキュメント
+title: FontName 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontName element
 ms.assetid: 5560a852-9745-4abb-93d8-9cebe8a9897c
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a58b048255bd0f079f6fc8d22d4666a3f4ced29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1b179415e7b64c4d64090df6168fcc492ab1c30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289528"
 ---
 # <a name="fontname-element-assl"></a>FontName 要素 (ASSL)
-  フォントに関連する表示特性を記述、 [CalculationProperty](../objects/calculationproperty-element-assl.md)または[メジャー](../objects/measure-element-assl.md)親要素です。  
+  フォント関連の表示特性について説明します、 [CalculationProperty](../objects/calculationproperty-element-assl.md)または[メジャー](../objects/measure-element-assl.md)親要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36173548"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- `FontName`プロパティは多次元式 (MDX) 式を含みに適用されます`CalculationProperty`を持つ要素を[CalculationType](calculationtype-element-assl.md)の*メンバー*または*セル*.  
+ `FontName`プロパティが多次元式 (MDX) 式が含まれていますとに適用されます`CalculationProperty`を持つ要素を[CalculationType](calculationtype-element-assl.md)の*メンバー*または*セル*.  
   
- 親に対応する要素`FontName`分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.CalculationProperty>と<xref:Microsoft.AnalysisServices.Measure>です。  
+ 親に対応する要素`FontName`分析管理オブジェクト (AMO) オブジェクト モデルは、<xref:Microsoft.AnalysisServices.CalculationProperty>と<xref:Microsoft.AnalysisServices.Measure>します。  
   
 ## <a name="see-also"></a>参照  
  [CalculationProperties 要素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

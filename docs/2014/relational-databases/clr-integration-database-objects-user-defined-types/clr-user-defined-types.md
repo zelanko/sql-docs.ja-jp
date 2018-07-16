@@ -1,13 +1,11 @@
 ---
-title: CLR ユーザー定義型 |Microsoft ドキュメント
+title: CLR ユーザー定義型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -34,21 +32,21 @@ helpviewer_keywords:
 - indexes [CLR integration]
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 caps.latest.revision: 66
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45f3107a7b57fd50891e147878474da9ee1484c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ee6c24bbf6017604d4999964478d3d19a763fb64
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077339"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352544"
 ---
 # <a name="clr-user-defined-types"></a>CLR ユーザー定義型
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、.NET Framework CLR (共通言語ランタイム) で作成されているアセンブリでプログラミングしたデータベース オブジェクトを作成できます。 CLR で用意された豊富なプログラミング モデルを使用できるデータベース オブジェクトには、トリガー、ストアド プロシージャ、関数、集計関数、型などがあります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CLR コードを実行する機能が既定で無効になっています。 使用して CLR を有効にすることができます、 **sp_configure**システム ストアド プロシージャです。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CLR コードを実行する機能が既定で無効になっています。 使用して、CLR を有効にすることができます、 **sp_configure**システム ストアド プロシージャ。  
   
  以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]で CLR オブジェクトのストレージを有効にすると、サーバーのスカラー型システムを拡張するユーザー定義型 (Udt) を使用することができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型で構成される従来の別名データ型とは異なり、UDT には複数の要素や複数の動作を含めることができます。  
   
@@ -69,9 +67,9 @@ ms.locfileid: "36077339"
 3.  **SQL Server で UDT を作成します。** アセンブリがホスト データベースに読み込まれた後、[!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TYPE ステートメントを使用して UDT を作成し、UDT のメンバーとしてクラスまたは構造体のメンバーを公開します。 UDT は 1 つのデータベースのコンテキストにのみ存在します。UDT はいったん登録されると、作成時のベースとなっていた外部ファイルに対する依存関係がなくなります。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンでは、.NET Framework アセンブリから作成された UDT がサポートされていませんでした。 ただし、引き続き使用できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]別名データ型を使用して**sp_addtype**です。 CREATE TYPE 構文を使用すると、ネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー定義データ型と UDT の両方を作成できます。  
+    >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンでは、.NET Framework アセンブリから作成された UDT がサポートされていませんでした。 ただし、引き続き使用できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して別名データ型**sp_addtype**します。 CREATE TYPE 構文を使用すると、ネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー定義データ型と UDT の両方を作成できます。  
   
-4.  **テーブル、変数、または UDT を使用してパラメーターを作成する**で始まる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、ユーザー定義型の変数として、テーブルの列の定義として使用できます、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、またはの引数として、[!INCLUDE[tsql](../../includes/tsql-md.md)]関数またはストアドプロシージャです。  
+4.  **テーブル、変数、または UDT を使用してパラメーターを作成**以降[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、ユーザー定義型の変数として、テーブルの列の定義として使用できます、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、またはの引数として、[!INCLUDE[tsql](../../includes/tsql-md.md)]関数またはストアドプロシージャです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ユーザー定義型を作成する](creating-user-defined-types.md)  

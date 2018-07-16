@@ -1,5 +1,5 @@
 ---
-title: RequiresRestart 要素 (ASSL) |Microsoft ドキュメント
+title: RequiresRestart 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RequiresRestart element
 ms.assetid: 9e98f956-c41e-4e15-a7bd-e17c10ee6fc6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cde3c22439c06e254191a2a732e7030fab36cc7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7790c12c0b5889ef89991de042db8d8a6a93a7e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295422"
 ---
 # <a name="requiresrestart-element-assl"></a>RequiresRestart 要素 (ASSL)
-  関連付けられている読み取り専用の値が含まれています、 [ServerProperty](../objects/serverproperty-element-assl.md)サーバー プロパティの値を変更するには、変更を反映するため、インスタンスを再起動することが必要とするかどうかを決定する要素。  
+  関連付けられている読み取り専用の値が含まれています、 [ServerProperty](../objects/serverproperty-element-assl.md)サーバー プロパティの値を変更するには、変更を反映するため、インスタンスを再起動するが必要かどうかを決定する要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36072159"
   
 ## <a name="see-also"></a>参照  
  [ServerProperties 要素&#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [サーバー要素&#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Server 要素&#40;ASSL&#41;](../objects/server-element-assl.md)   
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  
   
   
