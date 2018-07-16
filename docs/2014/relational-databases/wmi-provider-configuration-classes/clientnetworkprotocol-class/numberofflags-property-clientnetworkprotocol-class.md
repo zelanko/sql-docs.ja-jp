@@ -1,5 +1,5 @@
 ---
-title: NumberOfFlags プロパティ (ClientNetworkProtocol クラス) |Microsoft ドキュメント
+title: NumberOfFlags プロパティ (ClientNetworkProtocol クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - NumberOfFlags property
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0e2d483fc4916be6175093cd68470a57819544ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 10a3ca3269b07206ef9d67f28de4e490e77140b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256104"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>NumberOfFlags プロパティ (ClientNetworkProtocol クラス)
-  によって指定されたクライアント ネットワーク プロトコルに必要なフラグ オプションの数を取得、 [SetOrderValue メソッド (ClientNetworkProtocol クラス)](clientnetworkprotocol-class.md)です。  
+  によって指定されたクライアント ネットワーク プロトコルに必要なフラグ オプションの数を取得、 [SetOrderValue メソッド (ClientNetworkProtocol クラス)](clientnetworkprotocol-class.md)します。  
   
 ## <a name="syntax"></a>構文  
   

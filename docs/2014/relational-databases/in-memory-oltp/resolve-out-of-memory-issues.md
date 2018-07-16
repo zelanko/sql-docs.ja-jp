@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 caps.latest.revision: 15
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b57ae0faef29326a510dddbbfe049c1c9b4a9b3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2e866c2899ff4172e969cba97e4b10f1ce0fac3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253984"
 ---
 # <a name="resolve-out-of-memory-issues"></a>メモリ不足の問題の解決
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] では、さまざまな形で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]より多くのメモリが使用されます。 インストールして [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 用に割り当てたメモリ量が、ニーズの拡大に合わなくなる場合があります。 その場合は、メモリが不足する可能性があります。 このトピックでは、OOM 状態から回復する方法について説明します。 多数の OOM 状態を回避するのに役立つガイドについては、「 [メモリ使用量の監視とトラブルシューティング](monitor-and-troubleshoot-memory-usage.md) 」を参照してください。  
@@ -88,7 +88,7 @@ ms.locfileid: "36178221"
 #### <a name="free-up-existing-memory"></a>既存メモリを解放する  
   
 ##### <a name="delete-non-essential-memory-optimized-table-rows-and-wait-for-garbage-collection"></a>メモリ最適化テーブルの不要な行を削除し、ガベージ コレクションを待機する  
- メモリ最適化テーブルから、不要な行を削除できます。 ガベージ コレクターによって、これらの行で使用されていたメモリが使用可能メモリに返されます。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 インメモリ OLTP エンジンは、ガベージ行を積極的に回収します。 ただし、実行時間が長いトランザクションではガベージ コレクションが行われないことがあります。 たとえば、5 分間実行されているトランザクションの場合、トランザクションがアクティブな状態で更新操作または削除操作によって作成された行バージョンは、ガベージ コレクションで回収することができません。  
+ メモリ最適化テーブルから、不要な行を削除できます。 ガベージ コレクターによって、これらの行で使用されていたメモリが使用可能メモリに返されます。 . インメモリ OLTP エンジンは、ガベージ行を積極的に回収します。 ただし、実行時間が長いトランザクションではガベージ コレクションが行われないことがあります。 たとえば、5 分間実行されているトランザクションの場合、トランザクションがアクティブな状態で更新操作または削除操作によって作成された行バージョンは、ガベージ コレクションで回収することができません。  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>1 つ以上の行をディスク ベース テーブルに移動する  
  TechNet の次の資料では、メモリ最適化テーブルからディスク ベース テーブルに行を移動する方法について説明しています。  

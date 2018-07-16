@@ -1,5 +1,5 @@
 ---
-title: '[マイニング凡例] ダイアログ ボックス (マイニング モデル ビューアー) |Microsoft ドキュメント'
+title: '[マイニング凡例] ダイアログ ボックス (マイニング モデル ビューアー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.nodelegend.f1
 helpviewer_keywords:
 - Mining Legend dialog box
 ms.assetid: 9040e213-a6fd-420e-be3e-37cc3a17c111
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1eca2bab6a052919229d1c3eee46e779ea99c14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 10a2fd0221f238d8b022482a7a0c3fe2b214c771
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306612"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>[マイニング凡例] ダイアログ ボックス (マイニング モデル ビューアー)
   マイニング モデル ビューアーで選択したノードまたはアイテムの詳細情報を取得するには、 **[マイニング凡例]** ダイアログ ボックスを使用します。  

@@ -5,23 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-compression
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data compression [SQL Server], disabling
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
-caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6746848a17f943b90540b22cb053fa37ef882c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9178ec5c24f1077c5e4a76a4429a2d34684b8162
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254304"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮の無効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルまたはインデックスで圧縮を無効にする方法について説明します。  
@@ -152,7 +149,7 @@ ms.locfileid: "36178459"
   
     6.  **[概要]** の **[説明]** で、すべてのジョブ スケジュール設定が適切であることを確認します。  
   
-    7.  **[OK]** をクリックします。  
+    7.  [**OK**] をクリックします。  
   
      このページを完了したら、 **[次へ]** をクリックします。  
   
@@ -168,7 +165,7 @@ ms.locfileid: "36178459"
      **操作**  
      各アクションの種類と名前を指定します。  
   
-     **Status**  
+     **ステータス**  
      全体としてウィザードのアクションが **[成功]** または **[失敗]** のいずれの値を返したかを示します。  
   
      **メッセージ**  

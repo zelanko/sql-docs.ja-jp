@@ -1,5 +1,5 @@
 ---
-title: Analysis Services スクリプト言語 XML 要素階層 (ASSL) |Microsoft ドキュメント
+title: Analysis Services スクリプト言語の XML 要素階層 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: 343dbab9-4c2c-49b9-8f35-efc65f2216f1
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0811c567582c3bc241a6abae6c2be2405afa68ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab6bcc89947c051dff31f566820e9fa9cdd5077a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274268"
 ---
 # <a name="analysis-services-scripting-language-xml-element-hierarchy-assl"></a>Analysis Services スクリプト言語の XML 要素の階層 (ASSL)
   次の表は、Analysis Services スクリプト言語 (ASSL) のオブジェクトの階層を示しています。  
@@ -1942,6 +1942,6 @@ ms.locfileid: "36178976"
 ## <a name="see-also"></a>参照  
  [Analysis Services スクリプト言語の XML 要素&#40;ASSL&#41;](analysis-services-scripting-language-xml-elements-assl.md)   
  [Analysis Services スクリプト言語の XML データ型階層&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)   
- [Analysis Services スクリプト言語&#40;ASSL&#41;参照](analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](analysis-services-scripting-language-assl-for-xmla.md)  
   
   

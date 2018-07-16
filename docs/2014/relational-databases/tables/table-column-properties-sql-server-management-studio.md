@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65558
 - vdtsql.chm:69657
 - vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 710511c2c11eaaa7599a060015279ea3155ea29f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4c84cca055d927dc617fea1aebce6c6401eaa991
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215162"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>テーブル列のプロパティ (SQL Server Management Studio)
   これらのプロパティは、テーブル デザイナーの下部ペインに表示されます。 特に断りのない限り、列が選択されているときにこれらのプロパティを [プロパティ] ウィンドウで編集できます。 **[列のプロパティ]** は、カテゴリ別またはアルファベット順に表示できます。 多くのプロパティは表示されるだけであり、変更できるのは特定のデータ型についてのみです。  
@@ -34,7 +34,7 @@ ms.locfileid: "36174673"
  **全般**  
  展開すると、 **[オブジェクト名]**、 **[Null を許容]**、 **[データ型]**、 **[既定値またはバインド]**、 **[長さ]**、 **[有効桁数]**、 **[小数点以下桁数]** が表示されます。  
   
- **Name**  
+ **名前**  
  選択した列の名前を表示します。  
   
  **[Null を許容]**  

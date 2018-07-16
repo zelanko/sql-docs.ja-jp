@@ -1,5 +1,5 @@
 ---
-title: Hierarchies 要素 (ASSL) |Microsoft ドキュメント
+title: Hierarchies 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Hierarchies element
 ms.assetid: dc844eea-869c-4217-b9be-e543a76f5e92
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a53cc41d7373bcd60268bd64247eea6caf56753a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe89bade8e70b6812dddca1a6e20d274acea3526
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308462"
 ---
 # <a name="hierarchies-element-assl"></a>Hierarchies 要素 (ASSL)
-  コレクションを格納[階層](../objects/hierarchy-element-assl.md)親要素に関連付けられている要素です。  
+  コレクションを格納[階層](../objects/hierarchy-element-assl.md)親要素に関連付けられた要素。  
   
 ## <a name="syntax"></a>構文  
   

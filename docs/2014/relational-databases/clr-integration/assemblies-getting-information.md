@@ -1,13 +1,11 @@
 ---
-title: アセンブリに関する情報の取得 |Microsoft ドキュメント
+title: アセンブリに関する情報の取得 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - metadata [SQL Server], assemblies
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e9940c597e176542fbfcbd7968ce96b496651f88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 592d0e86353179377a73c24da84ed8f21a8e48e7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070960"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349494"
 ---
 # <a name="getting-information-about-assemblies"></a>アセンブリについての情報の取得
   次のカタログ ビューや関数により、アセンブリに関するメタデータにクエリを行うことができます。  
@@ -37,11 +35,11 @@ ms.locfileid: "36070960"
   
 -   [sys.assemblies &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql)  
   
- **アセンブリに関する情報を取得するには、ファイル、アセンブリ バイナリを含むソース ファイル、およびファイルのデバッグ**  
+ **アセンブリのバイナリを含む、アセンブリ ファイルに関する情報を取得するには、ソース ファイル、およびファイルをデバッグします。**  
   
 -   [sys.assembly_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)  
   
- **アセンブリ間の参照情報を取得するには**  
+ **アセンブリ間参照についての情報を取得するには**  
   
 -   [sys.assembly_references &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-references-transact-sql)  
   
@@ -55,7 +53,7 @@ ms.locfileid: "36070960"
   
 -   [sys.assembly_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-modules-transact-sql)  
   
- **非 CLR オブジェクトに関する情報を取得するには**  
+ **CLR 以外のオブジェクトに関する情報を取得するには**  
   
 -   [sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)  
   

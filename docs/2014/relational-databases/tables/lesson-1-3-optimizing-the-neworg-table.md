@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 549ebbb55faa6debf772c654dd3c51fcf6beadf1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0146a68973f7a80c6166e1dd91a0a4852d40f35c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236562"
 ---
 # <a name="optimizing-the-neworg-table"></a>NewOrg テーブルの最適化
-  **NewOrd**で作成したテーブル、[したテーブルの既存の階層データと設定](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)タスクのすべての従業員情報が含まれています、を使用して、階層構造を表す`hierarchyid`データ型。 ここでは、`hierarchyid` 列の検索をサポートする新しいインデックスを追加します。  
+  **NewOrd**で作成したテーブル、[テーブルの既存の階層データで設定](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)タスクを選択し、すべての従業員情報が含まれています、を使用して、階層構造を表します`hierarchyid`データ型。 ここでは、`hierarchyid` 列の検索をサポートする新しいインデックスを追加します。  
   
 ## <a name="clustered-index"></a>クラスター化インデックス  
- `hierarchyid`列 (**OrgNode**) の主キー、 **NewOrg**テーブル。 **OrgNode** 列に一意性を持たせるため、このテーブルには作成時に **PK_NewOrg_OrgNode** という名前のクラスター化インデックスが格納されています。 このクラスター化インデックスは、テーブルの深さ優先検索もサポートしています。  
+ `hierarchyid`列 (**OrgNode**) の主キーには、 **NewOrg**テーブル。 **OrgNode** 列に一意性を持たせるため、このテーブルには作成時に **PK_NewOrg_OrgNode** という名前のクラスター化インデックスが格納されています。 このクラスター化インデックスは、テーブルの深さ優先検索もサポートしています。  
   
 ## <a name="nonclustered-index"></a>非クラスター化インデックス  
  この手順では、一般的な検索をサポートする 2 つの非クラスター化インデックスを作成します。  

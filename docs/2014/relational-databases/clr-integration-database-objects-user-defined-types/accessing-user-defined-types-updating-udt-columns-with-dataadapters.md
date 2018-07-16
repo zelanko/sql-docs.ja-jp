@@ -1,13 +1,11 @@
 ---
-title: Dataadapter による UDT 列の更新 |Microsoft ドキュメント
+title: Dataadapter による UDT 列の更新 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -25,21 +23,21 @@ helpviewer_keywords:
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 683e1f82aaf76a21f20fed02b6be1c39347d7302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 7a69065a293d5ffedba91308c9b4ac7c6d02b7c7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071682"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354874"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>データ アダプターによる UDT 列の更新
   UDT (ユーザー定義型) は、データの取得や変更を行う `System.Data.DataSet` と `System.Data.SqlClient.SqlDataAdapter` を使用することでサポートされます。  
   
 ## <a name="populating-a-dataset"></a>Dataset の読み込み  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントを使用して UDT 列の値を選択すれば、データ アダプターを使用してデータセットにデータを設定できます。 次の例であるか、**ポイント**次の構造とサンプル データで定義されているテーブル。 次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを作成、**ポイント**テーブルが表示され、いくつかの行を挿入します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントを使用して UDT 列の値を選択すれば、データ アダプターを使用してデータセットにデータを設定できます。 次の例であること、**ポイント**次の構造と一部のサンプル データで定義されたテーブル。 次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを作成、**ポイント**テーブルが表示され、いくつかの行を挿入します。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -51,7 +49,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 次の ADO.NET コード フラグメントは、有効な接続文字列を取得、新たに作成`SqlDataAdapter`、取り込んで、`System.Data.DataTable`からのデータの行を含む、**ポイント**テーブル。  
+ ADO.NET コードを次の有効な接続文字列を取得、新たに作成します`SqlDataAdapter`、し、設定、`System.Data.DataTable`からのデータの行を含む、**ポイント**テーブル。  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -90,9 +88,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  次の ADO.NET の例には 2 つのメソッドが含まれています。  
   
--   `UserProvidedCommands`、を指定する方法を例示`InsertCommand`、 `UpdateCommand`、および`DeleteCommand`オブジェクトを更新するため、`Point`で UDT、**ポイント**テーブル (を含まない、`timestamp`列)。  
+-   `UserProvidedCommands`、を指定する方法を示しています`InsertCommand`、 `UpdateCommand`、および`DeleteCommand`オブジェクトを更新するため、`Point`で UDT、**ポイント**テーブル (が含まれていない、`timestamp`列)。  
   
--   `CommandBuilder`を使用する方法を例示、`SqlCommandBuilder`で、 **Points_ts**を含むテーブル、`timestamp`列。  
+-   `CommandBuilder`を使用する方法を示しています、`SqlCommandBuilder`で、 **Points_ts**を含むテーブル、`timestamp`列。  
   
 ```vb  
 Imports System  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - MSReportServer_ConfigurationSetting Class
 api_location:
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6e09e954cb842a25a1e20453dec816479061c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fbc5fb6155840f6c64003f1e1dd38dc7914a0f04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280138"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting クラス
   レポート サーバー インスタンスのインストール パラメーターとランタイム パラメーターを表します。 これらのパラメーターはレポート サーバーの構成ファイルに格納されています。  
   
- この種類のすべてのメンバーの一覧は、次を参照してください。 [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)です。  
+ この種類の全メンバーの一覧は、次を参照してください。 [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ public class MSReportServer_ConfigurationSetting
  この型の public static (**では** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) のすべてのメンバーは、マルチスレッド操作で安全に使用できます。 インスタンスのメンバーは、スレッドセーフであるとは限りません。  
   
 ## <a name="example"></a>例  
- このコードを実行するには、\<*servername*> を実際のサーバー名に置き換えます。 インストールの場所が既定でない場合は、その場所を指すようにパスを更新します。 次のコード例は、内の各プロパティを反復処理、 [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)クラス、各プロパティと、コンソールにその値の名前を出力します。  
+ このコードを実行するには、\<*servername*> を実際のサーバー名に置き換えます。 インストールの場所が既定でない場合は、その場所を指すようにパスを更新します。 次のコード例は、内の各プロパティを反復処理、 [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)クラスは、各プロパティと、コンソールには、その値の名前を出力します。  
   
 ```vb  
 Imports System  

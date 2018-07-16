@@ -1,5 +1,5 @@
 ---
-title: 更新のスケジュール データ (PowerPivot for SharePoint) |Microsoft ドキュメント
+title: データ更新 (PowerPivot for SharePoint) のスケジュール |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 822f4a825e359c2e6e8ed69711bfd95fd3bd4eab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbabf680ed67f1b2e144287764d16447d9467a43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325152"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>データ更新のスケジュール (PowerPivot for SharePoint)
   データ更新をスケジュールすると、SharePoint サイトにパブリッシュした Excel ブック内の PowerPivot データが自動更新されるようになります。  
@@ -36,7 +36,7 @@ ms.locfileid: "36178997"
   
  [データ更新の概要](#intro)  
   
- [データ更新を有効化とスケジュール](#drenablesched)  
+ [データ更新の有効化とスケジュール](#drenablesched)  
   
  [データ更新を確認します。](#drverify)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36178997"
   
  個々のデータ ソースに対して詳細なスケジュールを作成することで、外部データ ソースでの変動に合わせた更新スケジュールを作成できます。 たとえば、1 日をとおして生成されるトランザクション データが含まれる外部データ ソースに対しては、更新された情報を毎晩取得するようなデータ更新スケジュールを個別に作成できます。  
   
-##  <a name="drenablesched"></a> データ更新を有効化とスケジュール  
+##  <a name="drenablesched"></a> データ更新の有効化とスケジュール  
  SharePoint ライブラリにパブリッシュした Excel ブック内の PowerPivot データ用にデータ更新をスケジュールするには、次の手順に従ってください。  
   
 1.  ブックが含まれているライブラリで、ブックを選択して下矢印をクリックし、コマンドの一覧を表示します。  
@@ -110,7 +110,7 @@ ms.locfileid: "36178997"
   
     3.  使用する保存済みの資格情報を含んでいる対象アプリケーションの ID がわかっている場合は、 **[Secure Store Service で保存した資格情報を使用して接続する]** を選択します。  
   
-     これらのオプションの詳細については、次を参照してください[格納されている資格情報の構成の PowerPivot データ更新&#40;PowerPivot for SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)と[PowerPivot 自動データ更新アカウントを構成する。&#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)です。  
+     これらのオプションの詳細については、次を参照してください[格納されている資格情報の構成の PowerPivot データ更新&#40;PowerPivot for SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)と[PowerPivot 自動データ更新アカウントを構成する。&#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)します。  
   
 9. データ更新で更新前のすべてのデータ ソースに対してクエリを再実行する場合は、[データ ソース] の **[すべてのデータ ソース]** チェック ボックスをオンにします。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36178997"
   
     -   データ ソースは、データ更新時に指定の場所に存在し、使用可能になっている必要があります。 元のデータ ソースが、ブックを作成したユーザーのローカル ディスク ドライブにある場合は、そのデータ ソースをデータ更新操作から除外するか、何らかの方法でそのデータ ソースをネットワーク接続経由でアクセス可能な場所にパブリッシュする必要があります。 データ ソースをネットワーク上の場所に移動する場合は、[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] でブックを開いて、データ ソースの接続情報を更新します。 この操作は、PowerPivot ブックに格納された接続情報を再確立するために必要です。  
   
-    -   データ ソースへのアクセスには、PowerPivot ブックに埋め込まれている資格情報、またはスケジュールに指定されている資格情報を使用する必要があります。 埋め込みの資格情報は、PowerPivot for Excel を使用してデータをインポートするときに、PowerPivot ブックに格納されます。 通常、埋め込みの資格情報は SSPI=IntegratedSecurity または SSPI=TrustedConnection です。これは、現在のユーザーの資格情報を使用して、データ ソースに接続することを表します。 データ更新スケジュールの資格情報をオーバーライドする場合は、定義済みの保存された資格情報を指定できます。 詳細については、次を参照してください。[格納されている資格情報の構成の PowerPivot データ更新&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)です。  
+    -   データ ソースへのアクセスには、PowerPivot ブックに埋め込まれている資格情報、またはスケジュールに指定されている資格情報を使用する必要があります。 埋め込みの資格情報は、PowerPivot for Excel を使用してデータをインポートするときに、PowerPivot ブックに格納されます。 通常、埋め込みの資格情報は SSPI=IntegratedSecurity または SSPI=TrustedConnection です。これは、現在のユーザーの資格情報を使用して、データ ソースに接続することを表します。 データ更新スケジュールの資格情報をオーバーライドする場合は、定義済みの保存された資格情報を指定できます。 詳細については、次を参照してください。[格納されている資格情報の構成の PowerPivot データ更新&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)します。  
   
     -   データ更新は、指定したすべてのデータ ソースに対して成功する必要があります。 成功しなかった場合、更新されたデータは破棄され、最後に保存したバージョンのブックが維持されます。 確実でないデータ ソースは除外してください。  
   
@@ -160,11 +160,11 @@ ms.locfileid: "36178997"
  データ更新の問題の解決方法については、TechNet wiki の PowerPivot データ更新のトラブルシューティングのページをご確認ください。 詳細については、「 [PowerPivot データ更新のトラブルシューティング](http://go.microsoft.com/fwlink/?LinkId=251594)」をご覧ください。  
   
 > [!NOTE]  
->  SharePoint 管理者は、サーバーの全体管理で PowerPivot 管理ダッシュボードにある統合データ更新レポートを表示して、データ更新の問題をトラブルシューティングできます。 詳細については、次を参照してください。 [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)です。  
+>  SharePoint 管理者は、サーバーの全体管理で PowerPivot 管理ダッシュボードにある統合データ更新レポートを表示して、データ更新の問題をトラブルシューティングできます。 詳細については、次を参照してください。 [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SharePoint 2010 で PowerPivot データ更新](powerpivot-data-refresh-with-sharepoint-2010.md)   
- [データ更新履歴の表示&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
- [PowerPivot データ更新用の保存された資格情報を構成する&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
+ [データ更新履歴表示&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
+ [PowerPivot データ更新用の保存された資格情報の構成&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
   
   

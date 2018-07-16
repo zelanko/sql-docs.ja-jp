@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7963860153e90a24879b51e47c67bed3423510fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9b063510595a4c80f31433a1f793857ca35dd0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322732"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC インスタンス
   Oracle CDC インスタンスは、単一の Oracle ソース データベースからキャプチャされた変更を処理するために、Oracle CDC Service によって作成されたプロセスです。 Oracle CDC インスタンスは、その構成を **cdc.xdbcdc_config** テーブルから取得し、その状態を **cdc.xdbcdc_state** テーブルで維持します。 これらのテーブルは、Oracle CDC インスタンスを定義する CDC データベースの一部です。 xdbcdc データベースおよびテーブルの詳細については、「 [The CDC Databases](the-oracle-cdc-service.md)」を参照してください。  
@@ -32,7 +32,8 @@ ms.locfileid: "36177571"
   
 -   **Oracle の変更のキャプチャ**: Oracle CDC インスタンスは、Oracle LogMiner 機能を利用して Oracle の変更をプールし、トランザクションのコミットに従ってそれらを並べ替え、トランザクションの時刻を変更して CDC データベースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変更テーブルに書き込みます。  
   
--   **サービスのシャットダウンの処理**: Oracle CDC インスタンスのライフ サイクルは、Oracle CDC Service によって管理されます。 シャットダウンを要求された場合、Oracle CDC インスタンスは次のタスクを実行します。  
+-   
+  **サービスのシャットダウンの処理**: Oracle CDC インスタンスのライフ サイクルは、Oracle CDC Service によって管理されます。 シャットダウンを要求された場合、Oracle CDC インスタンスは次のタスクを実行します。  
   
     -   Oracle トランザクション ログからの読み取りを停止します。  
   

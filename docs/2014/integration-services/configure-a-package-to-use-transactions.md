@@ -1,5 +1,5 @@
 ---
-title: トランザクションを使用するパッケージの構成 |Microsoft ドキュメント
+title: トランザクションを使用するパッケージの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], configuring packages to use
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8637409c0248506de68fa6615dcd6b9edbf7a5bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e443740244e6e70336eb6c711e4e7ade7d2b698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306170"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>トランザクションを使用するようにパッケージを構成する
   トランザクションを使用するようにパッケージを構成する場合、次の 2 つのオプションがあります。  
@@ -33,9 +33,9 @@ ms.locfileid: "36178942"
  次の手順では、これらの 2 つのオプションを構成する方法について説明します。  
   
 ## <a name="configuring-a-single-transaction"></a>1 つのトランザクションの構成  
- このオプションでは、パッケージ自体が 1 つのトランザクションを開始します。 パッケージの TransactionOption プロパティを設定して、このトランザクションを開始するパッケージを構成する`Required`です。  
+ このオプションでは、パッケージ自体が 1 つのトランザクションを開始します。 パッケージの TransactionOption プロパティを設定して、このトランザクションを開始するパッケージを構成する`Required`します。  
   
- 次に、この 1 つのトランザクションに特定のタスクやコンテナーを参加させます。 そのタスクまたはコンテナーの TransactionOption プロパティを設定するタスクまたはコンテナーをトランザクションに参加させ、`Supported`です。  
+ 次に、この 1 つのトランザクションに特定のタスクやコンテナーを参加させます。 そのタスクまたはコンテナーの TransactionOption プロパティを設定する、タスクまたはコンテナーがトランザクションに参加させる`Supported`します。  
   
 #### <a name="to-configure-a-package-to-use-a-single-transaction"></a>1 つのトランザクションを使用するようにパッケージを構成するには  
   
@@ -47,11 +47,11 @@ ms.locfileid: "36178942"
   
 4.  制御フローのデザイン画面の背景で任意の場所を右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **プロパティ**ウィンドウ、TransactionOption プロパティを設定`Required`です。  
+5.  **プロパティ**ウィンドウ、TransactionOption プロパティを設定`Required`します。  
   
 6.  **[制御フロー]** タブのデザイン画面で、トランザクションに登録するタスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
   
-7.  **プロパティ**ウィンドウ、TransactionOption プロパティを設定`Supported`です。  
+7.  **プロパティ**ウィンドウ、TransactionOption プロパティを設定`Supported`します。  
   
     > [!NOTE]  
     >  トランザクションに接続を登録するには、トランザクションで接続を使用するタスクを登録します。 詳細については、「[Integration Services (SSIS) の接続](connection-manager/integration-services-ssis-connections.md)」を参照してください。  
@@ -59,9 +59,9 @@ ms.locfileid: "36178942"
 8.  トランザクションに登録する各タスクおよびコンテナーに対して、手順 6. と 7. を繰り返します。  
   
 ## <a name="configuring-multiple-transactions"></a>複数のトランザクションの構成  
- このオプションでは、パッケージでトランザクションがサポートされますが、パッケージ自体はトランザクションを開始しません。 パッケージの TransactionOption プロパティを設定してトランザクションをサポートするためにパッケージを構成する`Supported`です。  
+ このオプションでは、パッケージでトランザクションがサポートされますが、パッケージ自体はトランザクションを開始しません。 パッケージの TransactionOption プロパティを設定してトランザクションをサポートするためにパッケージを構成する`Supported`します。  
   
- 次に、トランザクションを開始するかトランザクションに参加するように、パッケージ内の目的のタスクおよびコンテナーを構成します。 そのタスクまたはコンテナーの TransactionOption プロパティを設定するタスクまたはトランザクションを開始するためのコンテナーを構成するのに`Required`です。  
+ 次に、トランザクションを開始するかトランザクションに参加するように、パッケージ内の目的のタスクおよびコンテナーを構成します。 そのタスクまたはコンテナーの TransactionOption プロパティを設定するタスクまたはトランザクションを開始するためのコンテナーを構成する`Required`します。  
   
 #### <a name="to-configure-a-package-to-use-multiple-transactions"></a>複数のトランザクションを使用するようにパッケージを構成するには  
   
@@ -73,18 +73,18 @@ ms.locfileid: "36178942"
   
 4.  制御フローのデザイン画面の背景で任意の場所を右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **プロパティ**ウィンドウ、TransactionOption プロパティを設定`Supported`です。  
+5.  **プロパティ**ウィンドウ、TransactionOption プロパティを設定`Supported`します。  
   
     > [!NOTE]  
     >  パッケージでトランザクションがサポートされますが、トランザクションは、パッケージ内のタスクまたはコンテナーによって開始されます。  
   
 6.  **[制御フロー]** タブのデザイン画面で、トランザクションを開始するパッケージ内のタスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
   
-7.  **プロパティ**ウィンドウ、TransactionOption プロパティを設定`Required`です。  
+7.  **プロパティ**ウィンドウ、TransactionOption プロパティを設定`Required`します。  
   
 8.  トランザクションがコンテナーによって開始される場合、トランザクションに登録するタスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
   
-9. **プロパティ**ウィンドウ、TransactionOption プロパティを設定`Supported`です。  
+9. **プロパティ**ウィンドウ、TransactionOption プロパティを設定`Supported`します。  
   
     > [!NOTE]  
     >  トランザクションに接続を登録するには、トランザクションで接続を使用するタスクを登録します。 詳細については、「[Integration Services &#40;SSIS&#41; の接続](connection-manager/integration-services-ssis-connections.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: SQL Server データ ファイルを Windows Azure ストレージ サービス |Microsoft ドキュメント'
+title: 'チュートリアル: Windows Azure ストレージ サービスでの SQL Server データ ファイル |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cd793aad219d8e65a787dd3d872046df00cca414
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f805d7a9b0997d9f5a7cecbf61b5120bdf09f3cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323862"
 ---
 # <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル
   Windows Azure ストレージ サービス内の SQL Server データ ファイルのチュートリアルにようこそ。 このチュートリアルにより、Windows Azure BLOB ストレージ サービスに SQL Server データ ファイルを直接格納する方法について把握できます。  
   
- Windows Azure BLOB ストレージ サービスに対する SQL Server 統合のサポートは、SQL Server 2014 の拡張機能です。 この機能を使用する利点と機能の概要についてを参照してください[Windows Azure で SQL Server データ ファイル](databases/sql-server-data-files-in-microsoft-azure.md)です。  
+ Windows Azure BLOB ストレージ サービスに対する SQL Server 統合のサポートは、SQL Server 2014 の拡張機能です。 この機能を使用する利点と機能の概要については、次を参照してください。 [Windows Azure での SQL Server データ ファイル](databases/sql-server-data-files-in-microsoft-azure.md)します。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
  このチュートリアルでは、複数のレッスンに分けて、Windows Azure ストレージ サービスに SQL Server データ ファイルを格納する方法を説明します。 各レッスンでは特定のタスクに重点を置きます。 まず、Windows Azure でストレージ アカウントおよびコンテナーを作成する方法を学習します。 次に、SQL Server を Windows Azure ストレージと統合できるようにするために SQL Server 資格情報を作成する方法を学習します。 その後、Windows Azure ストレージにデータベースを直接作成します。 さらに、暗号化、移行、およびバックアップと復元のシナリオを示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "36177483"
  **[レッスン 1: Windows Azure ストレージ アカウントとコンテナーを作成します。](../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md)**  
  このレッスンでは、Windows Azure ストレージ アカウントおよびコンテナーを作成します。  
   
- **[レッスン 2 です。コンテナーのポリシーを作成し、Shared Access Signature を生成する&#40;SAS&#41;キー](lesson-1-create-stored-access-policy-and-shared-access-signature.md)**  
+ **[レッスン 2。コンテナーのポリシーを作成し、Shared Access Signature の生成&#40;SAS&#41;キー](lesson-1-create-stored-access-policy-and-shared-access-signature.md)**  
  このレッスンでは、BLOB コンテナーのポリシーを作成し、Shared Access Signature を生成します。  
   
  **[レッスン 3: SQL Server 資格情報を作成します。](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)**  
@@ -43,10 +43,10 @@ ms.locfileid: "36177483"
  **[レッスン 4: Windows Azure ストレージにデータベースを作成します。](../relational-databases/lesson-3-database-backup-to-url.md)**  
  このレッスンでは、CREATE Database FILENAME オプションを使用して、Windows Azure ストレージにデータベースを作成します。  
   
- **[レッスン 5 です。&#40;オプション&#41;TDE を使用して、データベースの暗号化](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
+ **[レッスン 5。&#40;(省略可能)&#41; TDE を使用して、データベースの暗号化](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
  このレッスンでは、透過的なデータ暗号化 (TDE) およびサーバー証明書を使用してデータベースを暗号化します。  
   
- **[レッスン 6: ソースからのデータベースの移行のターゲット コンピューターに Windows Azure をオンプレミスのコンピューター](lesson-5-backup-database-using-file-snapshot-backup.md)**  
+ **[レッスン 6: ソースからのデータベースの移行のターゲット コンピューターに Windows Azure にオンプレミスのマシン](lesson-5-backup-database-using-file-snapshot-backup.md)**  
  このレッスンでは、CREATE DATABASE FOR ATTACH オプションを使用して、データベースを内部設置型から Windows Azure の仮想マシンに移行します。  
   
  **[レッスン 7: Windows Azure ストレージへのデータ ファイルを移動します。](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)**  

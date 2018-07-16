@@ -1,5 +1,5 @@
 ---
-title: CLR データベース オブジェクトからの XML シリアル化 |Microsoft ドキュメント
+title: CLR データベース オブジェクトからの XML シリアル化 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XmlSerializer class
 ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ad6b9ebaba9f05b0a927cd65f788cdbdb672a6d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8b59c013a9a21aaa50465acd5a565eda5c1e0653
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279828"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>CLR データベース オブジェクトからの XML シリアル化
   XML シリアル化は、次の 2 つのシナリオで必要になります。  
@@ -34,13 +34,13 @@ ms.locfileid: "36179374"
   
 -   UDT (ユーザー定義型) を XML に変換する場合。  
   
- `XmlSerializer` クラスを呼び出して XML シリアル化を実行すると、通常、新たにシリアル化アセンブリが生成され、シリアル化の基になるアセンブリを含むプロジェクトにオーバーロードされます。 ただし、セキュリティ上の理由から、CLR ではこのオーバーロードが無効になります。 そのため、web サービスを呼び出したり、UDT から内の XML への変換を実行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と呼ばれるツールを使用して手動でアセンブリを作成する必要があります**Sgen.exe**必要なを生成する .NET Framework で提供されています。シリアル化アセンブリ。 `XmlSerializer` を呼び出す場合は、次の手順に従って、シリアル化アセンブリを手動で作成する必要があります。  
+ `XmlSerializer` クラスを呼び出して XML シリアル化を実行すると、通常、新たにシリアル化アセンブリが生成され、シリアル化の基になるアセンブリを含むプロジェクトにオーバーロードされます。 ただし、セキュリティ上の理由から、CLR ではこのオーバーロードが無効になります。 そのため、web サービスを呼び出したり、UDT から内の XML への変換を実行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と呼ばれるツールを使用して手動でアセンブリを作成する必要があります**Sgen.exe**のために必要なを生成する .NET Framework に付属シリアル化アセンブリ。 `XmlSerializer` を呼び出す場合は、次の手順に従って、シリアル化アセンブリを手動で作成する必要があります。  
   
-1.  実行、 **Sgen.exe**を基になるアセンブリ用の XML シリアライザーを含むアセンブリを作成する .NET Framework SDK に付属するツールです。  
+1.  実行、 **Sgen.exe**はソース アセンブリ用の XML シリアライザーを格納しているアセンブリを作成する .NET Framework SDK に付属するツール。  
   
 2.  `CREATE ASSEMBLY` ステートメントを使用して、生成したアセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録します。  
   
- エラーに関する情報が表示されるときに XML シリアル化を実行するを参照してください、次の Microsoft サポート記事: [「動的に生成されたシリアル化アセンブリを読み込むことができません」](http://support.microsoft.com/kb/913668)です。  
+ エラーに関する情報が表示されるときに XML シリアル化を実行する次のマイクロソフトのサポート資料を参照: [「動的に生成されたシリアル化アセンブリを読み込むことができません」](http://support.microsoft.com/kb/913668)します。  
   
  XMLSerializer でサポートされないデータ型については、.NET Framework のドキュメントで、.NET Framework の XML スキーマ バインディング サポートに関する情報を参照してください。  
   

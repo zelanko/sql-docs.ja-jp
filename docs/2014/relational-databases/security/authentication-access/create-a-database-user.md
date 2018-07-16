@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.GENERAL.F1
 - sql12.swb.user.securables.f1
@@ -24,18 +23,18 @@ helpviewer_keywords:
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 201d314b1f89b518559465c36736c2ab16ad7f18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: b71bfa8857cb754cbab2fa983dea96cb45ea4ae0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299972"
 ---
 # <a name="create-a-database-user"></a>データベース ユーザーの作成
-  このトピックで、ログインにマップされるデータベース ユーザーを作成する方法について説明[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../../includes/tsql-md.md)]です。 データベース ユーザーは、ログインの ID として、データベースへの接続時に使用されます。 データベース ユーザーとログインには同じ名前を使用できますが、必ずしもその必要はありません。 このトピックは、既存のログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に存在することを前提としています。 ログインを作成する方法については、次を参照してください。[ログイン作成](create-a-login.md)です。  
+  このトピックでは、ログインにマップされるデータベース ユーザーを作成する方法を説明します[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../../includes/tsql-md.md)]します。 データベース ユーザーは、ログインの ID として、データベースへの接続時に使用されます。 データベース ユーザーとログインには同じ名前を使用できますが、必ずしもその必要はありません。 このトピックは、既存のログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に存在することを前提としています。 ログインを作成する方法については、次を参照してください。[ログインを作成する](create-a-login.md)します。  
   
  **このトピックの内容**  
   
@@ -91,7 +90,8 @@ ms.locfileid: "36178185"
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>追加オプション  
- **[データベース ユーザー - 新規]** ダイアログ ボックスでは、 **[所有されているスキーマ]**、 **[メンバーシップ]**、 **[セキュリティ保護可能なリソース]**、 **[拡張プロパティ]** という 4 つの追加ページにもオプションが提供されます。  
+ 
+  **[データベース ユーザー - 新規]** ダイアログ ボックスでは、 **[所有されているスキーマ]**、 **[メンバーシップ]**、 **[セキュリティ保護可能なリソース]**、 **[拡張プロパティ]** という 4 つの追加ページにもオプションが提供されます。  
   
 -   **[所有されているスキーマ]** ページには、新しいデータベース ユーザーが所有できるすべてのスキーマが一覧表示されます。 データベース ユーザーのスキーマを追加または削除するには、 **[このユーザーが所有するスキーマ]** で、スキーマの横のチェック ボックスをオンまたはオフにします。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36178185"
      **省略記号 [...]**  
      **[値]** の後ろにある省略記号 **[...]** をクリックすると、 **[拡張プロパティの値]** ダイアログ ボックスが開きます。 ここでは、より大きなテキスト ボックスを使用して拡張プロパティの値を入力または表示できます。 詳細については、「 [拡張プロパティの値ダイアログ ボックス](http://msdn.microsoft.com/library/ms189353.aspx)」を参照してください。  
   
-     **Delete**  
+     **削除**  
      選択されている拡張プロパティを削除します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  

@@ -1,5 +1,5 @@
 ---
-title: テーブル モデル デザイナー (SSAS テーブル) |Microsoft ドキュメント
+title: テーブル モデル デザイナー (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7d0fc5ae763542c5f46bdcdb474a71f71250733c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20beaf68692cfecbdc047752ff873921cce6a740
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263348"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>テーブル モデル デザイナー (SSAS テーブル)
-  テーブル モデル デザイナーの一部である[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]に統合された Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 以降、プロフェッショナルなテーブル モデル ソリューションを開発するには、具体的には追加のプロジェクトの種類のテンプレートにします。  
+  テーブル モデル デザイナーの一部は、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、Microsoft と統合された[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]2010 またはそれ以降、プロフェッショナルなテーブル モデル ソリューションを開発するには、具体的には追加のプロジェクトの種類のテンプレートとします。  
   
  このトピックのセクション:  
   
@@ -32,7 +32,7 @@ ms.locfileid: "36178306"
   
 -   [プロジェクト テンプレート](#bkmk_proj_temp)  
   
--   [ウィンドウおよびメニュー](#bkmk_wind_men)  
+-   [Windows とメニュー](#bkmk_wind_men)  
   
 -   [Visual Studio の統合](#bkmk_vsint)  
   

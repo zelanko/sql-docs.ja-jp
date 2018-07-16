@@ -1,5 +1,5 @@
 ---
-title: タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグ |Microsoft ドキュメント
+title: タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], breakpoints
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 caps.latest.revision: 33
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6535657a5b193b92b76fd32fee9497e8ef76580e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b063089105af1de7656387be8cc12639498e7c37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308112"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする
   この手順では、パッケージ、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーにブレークポイントを設定する方法について説明します。  
@@ -49,9 +49,9 @@ ms.locfileid: "36178036"
 6.  パッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [パッケージの開発のトラブルシューティング ツール](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [パッケージ開発のトラブルシューティング ツール](troubleshooting/troubleshooting-tools-for-package-development.md)   
  [スクリプト タスクおよびスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグします。](data-flow/transformations/script-component.md)   
- [コーディングおよびスクリプト タスクのデバッグ](control-flow/script-task.md)   
+ [コーディングとスクリプト タスクのデバッグ](control-flow/script-task.md)   
  [スクリプト コンポーネントのコーディングおよびデバッグ](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

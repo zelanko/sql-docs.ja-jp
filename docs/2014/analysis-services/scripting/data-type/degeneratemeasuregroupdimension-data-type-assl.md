@@ -1,5 +1,5 @@
 ---
-title: DegenerateMeasureGroupDimension データ型 (ASSL) |Microsoft ドキュメント
+title: DegenerateMeasureGroupDimension データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DegenerateMeasureGroupDimension data type
 ms.assetid: a64fe908-154d-4fea-b435-afb6ee37a6fa
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45a3d778580c344e0251e271415ff729b61520b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 343668137e77f53f94df2b6bc1324c3a67d94256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321159"
 ---
 # <a name="degeneratemeasuregroupdimension-data-type-assl"></a>DegenerateMeasureGroupDimension データ型 (ASSL)
   逆ディメンション (つまり、ファクト ディメンション) とメジャー グループとの間のリレーションシップを表す派生データ型を定義します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36074262"
 |派生要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- ファクト ディメンションの詳細については、次を参照してください。[ディメンション リレーションシップ](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)です。  
+ ファクト ディメンションの詳細については、次を参照してください。[ディメンション リレーションシップ](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)します。  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.DegenerateMeasureGroupDimension>します。  
   

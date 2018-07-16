@@ -1,5 +1,5 @@
 ---
-title: セルの要素 (MDDataSet) (XMLA) |Microsoft ドキュメント
+title: セル要素 (MDDataSet) (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Cell element
 ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 47d4449fd47cbb3da8e516a593cb8711e2bc2331
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3f07798a28c59597575de08bf5d0f3ea1d7087c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269508"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Cell 要素 (MDDataSet) (XMLA)
-  1 つの親が含まれているセルに関する情報を格納[CellData](celldata-element-xmla.md)要素。  
+  親に含まれる 1 つのセルに関する情報を格納[CellData](celldata-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36179190"
 ```  
   
 ## <a name="calculating-cell-ordinal-values"></a>セルの序数値の計算  
- セルの軸参照は、`CellOrdinal` 属性値に基づいて計算することができます。 概念的には、セルの番号付けはデータセット内にデータセットが、 *p*の次元の配列を*p*軸の数です。 セルは、行優先順で指定されます。  
+ セルの軸参照は、`CellOrdinal` 属性値に基づいて計算することができます。 概念的には、セルの番号付けは、データセット内のデータセットが、 *p*の次元の配列を*p*軸の数です。 セルは、行優先順で指定されます。  
   
  たとえば、列に関して 4 つのメジャーと、行に関して 3 つの州と 4 つの四半期のクロス積を要求するクエリがあるとします。 以下のデータセットの結果では、結果セットのうち太字で示した部分の `CellOrdinal` プロパティは、{9, 10, 11, 13, 14, 15, 17, 18, 19} というセットになります。 これは、セルの番号付けが、左上のセルの `CellOrdinal` を 0 として行優先順で行われるためです。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36179190"
   
  図に示されている公式を適用する場合、軸 k = 0 のメンバーの数は Uk = 4 で、軸 k = 1 の組の数は Uk = 8 です。 クエリ内の軸の総数は P = 2 です。 {California, Q3, Store Cost} のセルを S0 とすると、最初の合計は i = 0 ～ 1 です。 i = 0 の場合、軸 0 の組 {Store Cost} の序数は 1 です。 i = 1 の場合、組 {CA, Q3} の序数は 2 です。  
   
- I = 0、Ei = 1、そのためすれば = 0 合計が 1 * 1 = 1 とのすれば = 1, 合計は 2 (組の序数) 4 時間 (Ei の値は 1 として計算\*4)、または 8 です。 1 + 8 の合計は 9 であり、これが目的のセルの序数になります。  
+ 0、Ei = = 1、ためは 0 を = 合計が 1 * 1 = 1 とは = 1、合計は 4 回 2 (組の序数) (1 として計算された Ei の値\*4)、または 8。 1 + 8 の合計は 9 であり、これが目的のセルの序数になります。  
   
 ## <a name="example"></a>例  
  次の例は、各セルの VALUE、FORMATTED_VALUE、および FORMAT_STRING セル プロパティ値を含む `Cell` 要素の構造を示しています。  

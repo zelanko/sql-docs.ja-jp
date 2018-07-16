@@ -1,5 +1,5 @@
 ---
-title: RelationshipType 要素 (ASSL) |Microsoft ドキュメント
+title: RelationshipType 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RelationshipType element
 ms.assetid: 72e1ab0e-a95d-4ebe-857d-21de1bf9fe03
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e5b5ec9e9591a45a80f099397ed6568a986313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21ddd4506a2c2a6168779aa40735eb7177406597
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271598"
 ---
 # <a name="relationshiptype-element-assl"></a>RelationshipType 要素 (ASSL)
-  示すかどうかのメンバー リレーションシップ、 [AttributeRelationship](../objects/attributerelationship-element-assl.md)変更できます。  
+  示すかどうかのメンバー リレーションシップを[AttributeRelationship](../objects/attributerelationship-element-assl.md)変更できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,12 +66,12 @@ ms.locfileid: "36177607"
   
 |値|説明|  
 |-----------|-----------------|  
-|*固定*|属性と関連属性の間のメンバー リレーションシップは変更できません。|  
+|*柔軟性に欠ける*|属性と関連属性の間のメンバー リレーションシップは変更できません。|  
 |*柔軟です*|属性と関連属性の間のメンバー リレーションシップは変更できます。|  
   
- たとえば場合、`ZipCode`から 1 つを変更することはできません`City`間のリレーションシップ`ZipCode`に`City`マークが付いている*Rigid*です。  
+ たとえば場合、`ZipCode`から 1 つを変更することはできません`City`間のリレーションシップを`ZipCode`に`City`としてマークされて*固定*します。  
   
- 許可される値に対応する列挙`RelationshipType`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.RelationshipType>します。  
+ 許容された値に対応する列挙体`RelationshipType`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.RelationshipType>します。  
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](../../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

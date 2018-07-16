@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 787c9bac7f1eb1f07b22df3296a61afd1c10f70f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0b910c73b09b2ebb5018c762fdd44c9da17c7924
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212182"
 ---
 # <a name="viewing-tuning-reports"></a>チューニング レポートの表示
   このレッスンの前の実習では、MySession チューニング セッションの結果として生成されたデータベース エンジン チューニング アドバイザーの推奨設定内で、データベース オブジェクトを作成または削除する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを表示しました。 MySession チューニング セッションは「 [ワークロードのチューニング](lesson-1-1-tuning-a-workload.md)」で作成しました。  
@@ -40,7 +40,7 @@ ms.locfileid: "36179010"
   
 4.  **[チューニング レポート]** ペインで、 **[レポートの選択]** ボックスの一覧から **[ステートメント コスト レポート]** を選択します。 レポートを表示するためのスペースがさらに必要な場合は、 **[セッション モニター]** ペインの境界を左方向にドラッグします。 データベース内のテーブルに対して実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのパフォーマンス コストは、ステートメントによって異なります。 テーブル内で、アクセス頻度の高い列に有効なインデックスを作成することによって、このパフォーマンス コストを軽減できます。 このレポートは、ワークロードでの元のステートメント実行コストと、チューニング推奨設定の実装後のコストを比較し、予測向上率を示します。 このレポートに表示される情報量は、ワークロードの規模と複雑さに左右されます。  
   
-5.  グリッド領域で **ステートメント コスト レポート** を右クリックし、 **[ファイルへエクスポート]** をクリックします。 レポートを保存`MyReport`です。 ファイル名には、拡張子 .xml が自動的に付加されます。 使い慣れた XML エディターまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で MyReport.xml を開き、レポートの内容を表示できます。  
+5.  グリッド領域で **ステートメント コスト レポート** を右クリックし、 **[ファイルへエクスポート]** をクリックします。 レポートを保存`MyReport`します。 ファイル名には、拡張子 .xml が自動的に付加されます。 使い慣れた XML エディターまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で MyReport.xml を開き、レポートの内容を表示できます。  
   
 6.  データベース エンジン チューニング アドバイザーの **[レポート]** タブに戻り、再び **ステートメント コスト レポート** 右クリックします。 使用できるその他のオプションを確認してください。 表示しているレポートのフォントを変更することも可能です。 ここでフォントを変更すると、他のタブ付きページのフォントも変更されます。  
   

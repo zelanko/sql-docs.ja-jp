@@ -1,5 +1,5 @@
 ---
-title: トレース テンプレートの変更 |Microsoft ドキュメント
+title: トレース テンプレートの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Profiler
 - Profiler [SQL Server Profiler], templates
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 08c08bd8838380ce1054e13697aa6873a8e98860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 131c10dde4557fd7f462a1dd2324819c58bbf1d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200652"
 ---
 # <a name="modify-trace-templates"></a>トレース テンプレートの変更
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を実行しているローカル コンピューター上のファイルに保存されたテンプレートは変更することができます。 また、それらのファイルから派生したテンプレートも変更できます。 既存のテンプレートを変更する場合は、 **[トレースのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブで、最初にプロパティを設定したときと同じ順序で、イベント クラスやデータ列などのテンプレートのプロパティを編集します。 イベント クラスとデータ列は追加または削除することができ、フィルターは変更することができます。 テンプレートを変更すると、ユーザー固有のテンプレートが作成されます。元のシステム テンプレートは変更されません。 詳細については、「 [トレースとトレース テンプレートの保存](save-traces-and-trace-templates.md)」を参照してください。  
@@ -42,13 +42,13 @@ ms.locfileid: "36179438"
   
  **トレース テンプレートを変更するには**  
   
- [SQL Server Profiler の使用](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
+ [SQL Server Profiler を使用します。](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
  [Transact-SQL の使用](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
   
  **トレース テンプレートまたはトレース ファイルからイベントを追加または削除するには**  
   
- [SQL Server Profiler の使用](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+ [SQL Server Profiler を使用します。](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
  [Transact-SQL の使用](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 27410ba1fa02fac7b2db9f0404db450b6a6463d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a44dd79a67fe38735d54d1d91a9a37fdeb32e0e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209622"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード)
-  使用して、**を実行する操作**ページ進行状況と、インポート/エクスポート操作の結果を表示して、必要な場合は、操作を中断します。  
+  使用して、**操作を実行して**ページで、進行状況と、インポート/エクスポート操作の結果を表示し、必要な場合は、操作を中断します。  
   
- このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)です。 ウィザードを正常に実行するために必要なアクセス許可と同様に、ウィザードを開始するためのオプションの詳細については、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)です。  
+ このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と同様に、ウィザードを開始するためのオプションについては、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
   
  SQL Server インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
@@ -34,17 +34,17 @@ ms.locfileid: "36178703"
  **操作**  
  操作の一部であるそれぞれのアクションを表示します。  
   
- **Status**  
+ **ステータス**  
  各アクションが成功したか、失敗したかを表示します。  
   
  **メッセージ**  
  アクションによって生成された表示メッセージおよびエラー メッセージを表示します。  
   
  **Assert**  
- エラー、警告、または成功したアクションのみを表示するかどうかを選択します。 選択して、既定の表示に戻すことができます**すべてのアクションを表示**です。  
+ エラー、警告、または成功したアクションのみを表示するかどうかを選択します。 選択して、既定の表示に戻すことができます**すべてのアクションを表示**します。  
   
  **[停止]**  
- 使用して、必要に応じて、操作を中断、**停止**ボタンをクリックします。  
+ 使用して、操作を必要に応じて、中断、**停止**ボタンをクリックします。  
   
  **レポート**  
  結果レポートを表示したり、ファイルに保存することができます。さらに、レポートをクリップボードにコピーすることも、電子メールで送信することもできます。  

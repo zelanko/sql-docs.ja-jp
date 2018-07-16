@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.passwordexpired.f1
 helpviewer_keywords:
 - Password Expired dialog box
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b065bcf5e973c00b24398226510801e333181f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fabcfd609f5463cea9012ee779a41b87cf143f2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224142"
 ---
 # <a name="password-expired"></a>[パスワードの有効期限が切れました]
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用してサーバー接続するときに、入力したパスワードが正しくてもそのパスワードの有効期限が切れている場合に表示されます。 また、 **[ユーザーは次回ログイン時にパスワードを変更する]** オプションを使用して作成された新しいアカウントでサーバーに接続した場合にも表示されます。 **[パスワードの有効期限が切れました]** ダイアログ ボックスを使用すると、この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証ログインのパスワードを変更できます。  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用してサーバー接続するときに、入力したパスワードが正しくてもそのパスワードの有効期限が切れている場合に表示されます。 また、 **[ユーザーは次回ログイン時にパスワードを変更する]** オプションを使用して作成された新しいアカウントでサーバーに接続した場合にも表示されます。 **[パスワードの有効期限が切れました]** ダイアログ ボックスを使用すると、この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証ログインのパスワードを変更できます。  
   
 ## <a name="options"></a>および  
  **Login**  

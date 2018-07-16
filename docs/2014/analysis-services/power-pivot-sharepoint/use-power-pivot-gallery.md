@@ -1,5 +1,5 @@
 ---
-title: PowerPivot ギャラリーを使用して |Microsoft ドキュメント
+title: PowerPivot ギャラリーを使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ae0f4d1c8fea1e5e320ea0131575c01bf44008
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6864e7144ce3a1098e7733924e02978b13c744c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321262"
 ---
 # <a name="use-powerpivot-gallery"></a>PowerPivot ギャラリーの使用
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーは、特殊な用途の SharePoint ドキュメント ライブラリです。PowerPivot データを含むパブリッシュ済みの Excel ブックおよび Reporting Services レポートを対象とする、豊富なプレビュー機能とドキュメント管理機能を提供します。  
@@ -33,13 +33,13 @@ ms.locfileid: "36071569"
   
 -   [PowerPivot ギャラリーに Excel ブックを保存します。](#add)  
   
--   [新しいレポートまたはブックがパブリッシュされた PowerPivot ブックに基づいて作成します。](#newdocs)  
+-   [新しいレポートまたはブックがパブリッシュされた PowerPivot ブックに基づく作成します。](#newdocs)  
   
 -   [ブックまたはレポートをページ全体モードで開く](#view)  
   
--   [PowerPivot ギャラリーの PowerPivot ブックの定期データ更新](#newdr)  
+-   [PowerPivot ギャラリーで PowerPivot ブックの定期データ更新](#newdr)  
   
--   [ブックまたは PowerPivot ギャラリーでレポートを削除します。](#delete)  
+-   [ブックまたは PowerPivot ギャラリーのレポートを削除します。](#delete)  
   
 -   [サムネイル画像を更新する](#image)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36071569"
 > 既定のビューを変更するには、 **[ライブラリ]** タブをクリックしてから、[ビューの変更] をクリックします。 [このビューを既定のビューにする] をクリックし、[OK] をクリックして既定のビューを保存します。  
 >  Microsoft Edge のサポート対象について詳しくは、Windows ブログ「 [過去からの離別、第 2 部: ActiveX、VBScript... に別れを告げる](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)」をご覧ください。  
   
- 前提条件の一覧については、次を参照してください。[作成およびカスタマイズ PowerPivot ギャラリー](create-and-customize-power-pivot-gallery.md)です。  
+ 前提条件の一覧については、次を参照してください。 [PowerPivot ギャラリーのカスタマイズの作成と](create-and-customize-power-pivot-gallery.md)します。  
   
 ##  <a name="icons"></a> PowerPivot ギャラリーのアイコン  
  アイコンは、コンテンツを使用できるかどうか、およびコンテンツの状態を視覚的に示すインジケーターです。  
@@ -104,7 +104,7 @@ ms.locfileid: "36071569"
   
 3.  **[ドキュメントのアップロード]** で、アップロード オプションを選択し、アップロードするファイルの名前と場所を入力します。 ライブラリの設定によってドキュメントの表示位置が決まります。 ブラウザー ウィンドウを更新しないと、直前に追加したドキュメントが表示されないことがあります。  
   
-##  <a name="newdocs"></a> 新しいレポートまたはブックがパブリッシュされた PowerPivot ブックに基づいて作成します。  
+##  <a name="newdocs"></a> 新しいレポートまたはブックがパブリッシュされた PowerPivot ブックに基づく作成します。  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックをパブリッシュすると、そのブックを接続先データ ソースとして使用する追加のブックまたは Reporting Services レポートを作成できます。  
   
 |||  
@@ -122,14 +122,14 @@ ms.locfileid: "36071569"
   
  ブックをブラウザーで表示する代わりに、クライアント ワークステーション上で Excel を使用して開く方法もあります。 ファイルを表示するには、Excel 2013 または Excel 2010 と [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] アドインが必要です。 Excel 2007 では、ファイルを開くことはできても、データをピボットすることができません。 このため、PowerPivot データの表示と作成には、Excel 2013 または Excel 2010 をお勧めします。 必要なアプリケーションがない場合は、SharePoint からブラウザーでブックを表示する必要があります。  
   
-##  <a name="newdr"></a> PowerPivot ギャラリーの PowerPivot ブックの定期データ更新  
+##  <a name="newdr"></a> PowerPivot ギャラリーで PowerPivot ブックの定期データ更新  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データは、スケジュール設定された間隔で更新できます。  
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|接続されているデータ ソースから更新されたデータを取得するスケジュールを作成または表示するには、[データ更新の管理] ボタンをクリックします。 スケジュールを作成する方法については、次を参照してください。[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)です。|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|接続されているデータ ソースから更新されたデータを取得するスケジュールを作成または表示するには、[データ更新の管理] ボタンをクリックします。 スケジュールを作成する方法の詳細については、次を参照してください。[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)します。|  
   
-##  <a name="delete"></a> ブックまたは PowerPivot ギャラリーでレポートを削除します。  
+##  <a name="delete"></a> ブックまたは PowerPivot ギャラリーのレポートを削除します。  
  ライブラリからドキュメントを削除するには、最初に [すべてのドキュメント] ビューに切り替えます。  
   
 1.  SharePoint サイトで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを開きます。  
@@ -166,7 +166,7 @@ ms.locfileid: "36071569"
   
 ## <a name="see-also"></a>参照  
  [サーバーの全体管理で PowerPivot サイト用の信頼できる場所を作成します。](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot ギャラリーを削除します。](delete-power-pivot-gallery.md)   
+ [PowerPivot ギャラリーの削除](delete-power-pivot-gallery.md)   
  [作成し、PowerPivot ギャラリーのカスタマイズ](create-and-customize-power-pivot-gallery.md)   
  [データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   

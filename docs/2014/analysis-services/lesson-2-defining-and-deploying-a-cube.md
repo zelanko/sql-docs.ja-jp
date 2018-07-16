@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: 定義して、キューブの展開 |Microsoft ドキュメント'
+title: 'レッスン 2: を定義して、キューブの展開 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 527781bac1cdab44c0fd750bfb939ec80ae145a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 077d422f47fa62083420713b580100afcccf1712
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284128"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>レッスン 2 : キューブの定義と配置
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトでデータ ソース ビューを定義すると、最初の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブをいつでも定義できるようになります。  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトでデータ ソース ビューを定義すると、最初の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブをいつでも定義できるようになります。  
   
  キューブ ウィザードでは、キューブとそのディメンションを一度に定義できます。 1 つ以上のディメンションを定義してから、キューブ ウィザードを使用して、そのディメンションを使用するキューブを定義することもできます。 複雑なソリューションを設計する場合は、通常、ディメンションの定義から始めます。 詳細については、[「多次元モデル内のディメンション」](multidimensional-models/dimensions-in-multidimensional-models.md) または [「多次元モデルのキューブ」](multidimensional-models/cubes-in-multidimensional-models.md) を参照してください。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36179001"
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Analysis Services プロジェクトのプロパティを構成する&#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [Analysis Services プロジェクトをビルド&#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [Analysis Services プロジェクトのビルド&#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Analysis Services プロジェクトの配置&#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5912a29ddfd19ef5e191be6c4d102117d125421d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f6a3c90fe0df58b27f99df2f1e37d66c1ff523b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268634"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services データベースに対する拡張フィールド プロパティ (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、拡張フィールド プロパティがサポートされています。 拡張フィールド プロパティとは、データ ソースにありデータ処理拡張機能でサポートされるフィールド プロパティ `Value` および `IsMissing` に加えて使用するプロパティです。 拡張プロパティは、レポート データセットのフィールド コレクションの一部としてレポート データ ペインには表示されません。 組み込みを使用して名前でそれらを指定する式を記述して、レポート内の拡張フィールド プロパティの値を含めることができます`Fields`コレクション。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、拡張フィールド プロパティがサポートされています。 拡張フィールド プロパティとは、データ ソースにありデータ処理拡張機能でサポートされるフィールド プロパティ `Value` および `IsMissing` に加えて使用するプロパティです。 拡張プロパティは、レポート データセットのフィールド コレクションの一部としてレポート データ ペインには表示されません。 組み込みの名を指定する式を記述することで、レポートの拡張フィールド プロパティの値を含めることができます`Fields`コレクション。  
   
- 拡張プロパティには、定義済みプロパティとカスタム プロパティがあります。 定義済みのプロパティは、特定のフィールド プロパティ名にマップして、組み込み経由でアクセスできる複数のデータ ソースに共通するプロパティ`Fields`名のコレクション。 カスタム プロパティは、各データ プロバイダーに固有であり、拡張プロパティ名を文字列として扱う構文のみを使用して、組み込み `Fields` コレクションを介してアクセスできます。  
+ 拡張プロパティには、定義済みプロパティとカスタム プロパティがあります。 定義済みのプロパティは、特定のフィールド プロパティ名にマップされ、組み込みを介してアクセスできる複数のデータ ソースに共通するプロパティ`Fields`名前のコレクション。 カスタム プロパティは、各データ プロバイダーに固有であり、拡張プロパティ名を文字列として扱う構文のみを使用して、組み込み `Fields` コレクションを介してアクセスできます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリ デザイナーをグラフィカル モードで使用してクエリを定義する場合、定義済みの一連のセル プロパティおよびディメンション プロパティが自動的に MDX クエリに追加されます。 レポート内では、MDX クエリに明記されている拡張プロパティのみを使用できます。 レポートによっては、既定の MDX コマンド テキストを変更して、キューブに定義されている他のディメンションまたはカスタム プロパティを含めることができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースで使用できる拡張フィールドの詳細については、「[プロパティ値の作成および使用 (MDX)](../../analysis-services/creating-and-using-property-values-mdx.md)」を参照してください。  
   
 ## <a name="working-with-field-properties-in-a-report"></a>レポートのフィールド プロパティの操作  
- 拡張フィールド プロパティには、定義済みプロパティとデータ プロバイダー固有のプロパティがあります。 フィールド プロパティは、データセット用に作成されたクエリに存在しますが、 **レポート データ** ペインのフィールド一覧に表示されません。したがって、フィールド プロパティをレポートのデザイン画面にドラッグすることはできません。 代わりに、レポートにフィールドをドラッグし、変更、`Value`を使用する場合、プロパティ フィールドのプロパティです。 たとえば、キューブからのセル データが既に書式設定されている場合は、 `=Fields!FieldName.FormattedValue`の式を使用することで、FormattedValue フィールド プロパティを使用できます。  
+ 拡張フィールド プロパティには、定義済みプロパティとデータ プロバイダー固有のプロパティがあります。 フィールド プロパティは、データセット用に作成されたクエリに存在しますが、 **レポート データ** ペインのフィールド一覧に表示されません。したがって、フィールド プロパティをレポートのデザイン画面にドラッグすることはできません。 代わりに、レポートにフィールドをドラッグして、変更、`Value`プロパティに使用するフィールドのプロパティ。 たとえば、キューブからのセル データが既に書式設定されている場合は、 `=Fields!FieldName.FormattedValue`の式を使用することで、FormattedValue フィールド プロパティを使用できます。  
   
  事前に定義されていない拡張プロパティを参照するには、式で次の構文を使用します。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "36178152"
   
  次の表に、使用できる定義済みフィールド プロパティの一覧を示します。  
   
-|**プロパティ**|**Type**|**説明/有効値**|  
+|**プロパティ**|**型**|**説明/有効値**|  
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|フィールドのデータ値を指定します。|  
 |`IsMissing`|`Boolean`|フィールドが結果データセットに存在するかどうかを示します。|  
-|`UniqueName`|`String`|レベルの完全修飾名を返します。 たとえば、`UniqueName`従業員可能性があります値 *[Employee]. [従業員部門] です。[部門]. [売上] &。 (& a) [北米地域の販売責任者] です。 [272] &* です。|  
+|`UniqueName`|`String`|レベルの完全修飾名を返します。 たとえば、`UniqueName`従業員の値は *[Employee]. [Employee Department]。[Department]. .& [Sales] です。 (& a) [北米の営業マネージャー]。 [272] &* します。|  
 |`BackgroundColor`|`String`|データベースで定義されたフィールドの背景色を返します。|  
 |`Color`|`String`|データベースで定義されたアイテムの前景色を返します。|  
 |`FontFamily`|`String`|データベースで定義されたアイテムのフォント名を返します。|  
@@ -130,7 +130,7 @@ CELL PROPERTIES
 |March|2,749|  
 |April|2,739|  
   
- プロパティは MDX の SELECT ステートメントに含まれていますが、結果セット列には表示されません。 そこで、拡張プロパティ機能を使用すると、データをレポートに使用することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の MDX クエリ結果ペインで、セルをダブルクリックすると、セルのプロパティ値が表示されます (キューブ内で設定されている場合)。 1,379 という値が格納されている最初の Order Count セルをダブルクリックすると、ポップアップ ウィンドウに次のセル プロパティが表示されます。  
+ プロパティは MDX の SELECT ステートメントに含まれていますが、結果セット列には表示されません。 そこで、拡張プロパティ機能を使用すると、データをレポートに使用することができます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の MDX クエリ結果ペインで、セルをダブルクリックすると、セルのプロパティ値が表示されます (キューブ内で設定されている場合)。 1,379 という値が格納されている最初の Order Count セルをダブルクリックすると、ポップアップ ウィンドウに次のセル プロパティが表示されます。  
   
 |プロパティ|値|  
 |--------------|-----------|  
@@ -144,7 +144,7 @@ CELL PROPERTIES
 |FONT_SIZE|(null)|  
 |FONT_FLAGS|(null)|  
   
- このクエリを使用してレポート データセットを作成し、データセットをテーブルにバインドすると、フィールドの既定の VALUE プロパティが表示されます (たとえば `=Fields!Month_of_Year!Value`)。 値フィールドを使用するため、月単位でテーブルをアルファベット順に並べ替えるの結果になります、テーブルの並べ替え式としてこの式を設定した場合、`String`データ型。 月がカレンダー順に並ぶ (つまり、January が先頭に来て December が最後に来る) ようにテーブルを並べ替えるには、次の式を使用します。  
+ このクエリを使用してレポート データセットを作成し、データセットをテーブルにバインドすると、フィールドの既定の VALUE プロパティが表示されます (たとえば `=Fields!Month_of_Year!Value`)。 テーブルの並べ替え式としてこの式を設定した場合、結果は [値] フィールドを使用するため、月単位で、テーブルをアルファベット順に並べ替える、`String`データ型。 月がカレンダー順に並ぶ (つまり、January が先頭に来て December が最後に来る) ようにテーブルを並べ替えるには、次の式を使用します。  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  

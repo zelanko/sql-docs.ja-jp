@@ -1,5 +1,5 @@
 ---
-title: コンテンツ クエリ (データ マイニング) |Microsoft ドキュメント
+title: コンテンツ クエリ (データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5371a5a0198c6f5f2f77fa6891875712f1814cbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 441ad05289df13e34954553db27810406341d77d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222602"
 ---
 # <a name="content-queries-data-mining"></a>コンテンツ クエリ (データ マイニング)
   コンテンツ クエリは、マイニング モデルの内部の統計および構造に関する情報を抽出するための手段です。 コンテンツ クエリを使用すると、ビューアーでは簡単に得られない詳細な情報がわかる場合があります。 また、コンテンツ クエリの結果を利用して、他の用途のためにプログラムで情報を抽出できます。  
@@ -200,7 +200,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  階層的な行セットの操作方法の詳細については、MSDN で OLEDB の仕様を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [DMX の Select ステートメントを理解します](/sql/dmx/understanding-the-dmx-select-statement)   
+ [DMX 選択ステートメントをについてください。](/sql/dmx/understanding-the-dmx-select-statement)   
  [データ マイニング クエリ](data-mining-queries.md)  
   
   

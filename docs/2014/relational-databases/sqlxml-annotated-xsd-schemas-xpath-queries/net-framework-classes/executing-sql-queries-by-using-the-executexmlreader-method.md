@@ -1,5 +1,5 @@
 ---
-title: ExecuteXMLReader メソッドを使用して SQL クエリの実行 |Microsoft ドキュメント
+title: ExecuteXMLReader メソッドを使用して SQL クエリの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - SQL queries [SQLXML]
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 707364644cab1f2f025b0e735f531753637fb815
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1acabdc04e8ac24efb5e16858defb2649e52ac43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247892"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>ExecuteXMLReader メソッドを使用した、SQL クエリの実行
-  ExecuteToStream メソッドを使用する代わりにコマンドを実行するのに SqlXmlCommand オブジェクトの ExecuteXmlReader メソッドを使用することができます。 このメソッドは、さらに、結果は (この例では、要素または属性の名前と値の印刷) の処理のために使用する XmlReader オブジェクトを返します。  
+  ExecuteToStream メソッドを使用せずにコマンドを実行するのに SqlXmlCommand オブジェクトの ExecuteXmlReader メソッドを使用することができます。 このメソッドは、さらに、結果は (この例では、要素や属性の名前と値の出力) の処理に使用できる XmlReader オブジェクトを返します。  
   
 > [!NOTE]  
 >  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。  
@@ -74,7 +74,7 @@ using System.Xml;
   
 1.  コンピューターに [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework がインストールされていることを確認します。  
   
-2.  フォルダー内には、このトピックの c# コード (DocSample.cs) が指定されているを保存します。  
+2.  フォルダー内には、このトピックでは、c# コード (DocSample.cs) されているを保存します。  
   
 3.  コードをコンパイルします。 コマンド プロンプトでコードをコンパイルするには、次を使用します。  
   

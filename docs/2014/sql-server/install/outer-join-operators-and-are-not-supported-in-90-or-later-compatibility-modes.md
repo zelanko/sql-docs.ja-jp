@@ -1,5 +1,5 @@
 ---
-title: 外部結合演算子 *= および =* 互換性モード 90 以上でサポートされていません |Microsoft ドキュメント
+title: 外部結合演算子 *= および =* 互換性モード 90 以上でサポートされていません |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - outer joins
 - =* join
@@ -16,24 +16,24 @@ helpviewer_keywords:
 - joins [SQL Server]
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 47a58b60ecd303b893e001663134d9b510bbabfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 579565320855694166f57039402e3fbef14183d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255444"
 ---
 # <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>外部結合演算子 *= および =* 互換性モード 90 以上でサポートされていません
-  アップグレード アドバイザーを検出しました、外部結合演算子 * = および =\*です。 このような演算子は互換性モード 90 以上ではサポートされません。 アップグレードすると、ユーザー データベースでは互換性モードが維持されます。 これらの演算子を使用するステートメントは失敗します。  
+  アップグレード アドバイザーには、外部結合演算子の使用が検出しました * = および =\*します。 このような演算子は互換性モード 90 以上ではサポートされません。 アップグレードすると、ユーザー データベースでは互換性モードが維持されます。 これらの演算子を使用するステートメントは失敗します。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>修正措置  
- データベース互換性モード 90 以上に変更すると、前に変更して、外部結合演算子を使用するステートメント * = および =\*と同等の OUTER JOIN キーワードを使用します。 次の例では、`*=` 演算子を使用するクエリと、`LEFT OUTER JOIN` キーワードを使用する同等のクエリを示しています。  
+ データベース互換性モード 90 以上に変更すると、前に、外部結合演算子を使用するステートメントを変更 * = および =\*同等の OUTER JOIN キーワードを使用します。 次の例では、`*=` 演算子を使用するクエリと、`LEFT OUTER JOIN` キーワードを使用する同等のクエリを示しています。  
   
 ```  
 -- This query uses an old-style outer join operator.  

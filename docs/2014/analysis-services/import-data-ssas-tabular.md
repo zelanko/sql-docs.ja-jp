@@ -1,5 +1,5 @@
 ---
-title: データのインポート (SSAS テーブル) |Microsoft ドキュメント
+title: データのインポート (SSAS 表形式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc8728c2a4e023fb03e0e2de8e3c457e0f15fd72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35312647eeb1b452c155c05d7f4392fa540aa156
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253564"
 ---
 # <a name="import-data-ssas-tabular"></a>データのインポート (SSAS テーブル)
   テーブル モデルにはさまざまなソースからデータをインポートできます。 このセクションの各トピックでは、データ インポート ウィザードを使用してデータ ソースに接続し、モデル プロジェクトにインポートするデータを選択する方法について説明します。  
@@ -29,7 +29,7 @@ ms.locfileid: "36178767"
   
  テーブルのインポート ウィザードを使用すると、次のデータ ソースからデータをインポートできます。  
   
-|**Data Source**|**description**|  
+|**Data Source**|**[説明]**|  
 |---------------------|---------------------|  
 |**リレーショナル データベース**|リレーショナル データ ソースには以下が含まれます。<br /><br /> Microsoft SQL Server<br /><br /> Microsoft SQL Azure<br /><br /> Microsoft SQL Server 並列データ ウェアハウス<br /><br /> Microsoft Access<br /><br /> [Oracle]<br /><br /> Teradata<br /><br /> Sybase<br /><br /> Informix<br /><br /> IBM DB2<br /><br /> OLEDB/ODBC|  
 |**多次元ソース**|Microsoft SQL Server Analysis Services キューブ|  
@@ -44,7 +44,7 @@ ms.locfileid: "36178767"
 |-----------|-----------------|  
 |[リレーショナル データ ソースからのインポート&#40;SSAS 表形式&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Microsoft SQL Server、Oracle、Teradata データベースなどのリレーショナル データ ソースからデータをインポートする方法について説明します。|  
 |[多次元データ ソースからのインポート&#40;SSAS 表形式&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|多次元の SQL Server Analysis Services キューブからデータをインポートする方法について説明します。|  
-|[データ フィードからインポート&#40;SSAS 表形式&#41;](import-from-a-data-feed-ssas-tabular.md)|Microsoft Reporting Services レポートや Azure Data Market データセットなどのデータ フィードからデータをインポートする方法について説明します。|  
+|[データ フィードからのインポート&#40;SSAS 表形式&#41;](import-from-a-data-feed-ssas-tabular.md)|Microsoft Reporting Services レポートや Azure Data Market データセットなどのデータ フィードからデータをインポートする方法について説明します。|  
 |[テキスト ファイルからインポート&#40;SSAS 表形式&#41;](import-from-a-text-file-ssas-tabular.md)|Microsoft Excel ブックやテキスト ファイルからデータをインポートする方法について説明します。|  
 |[データ コピーして貼り付け&#40;SSAS 表形式&#41;](copy-and-paste-data-ssas-tabular.md)|モデル デザイナーで [貼り付け] および [貼り付け追加] を使用し既存のテーブルにデータを追加する方法について説明します。|  
   

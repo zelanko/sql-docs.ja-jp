@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6a76fc29f234418e5f44586f4fb7e121c3395264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 629dd979c00c9a40915c94c5bfe79d28b746f44a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238762"
 ---
 # <a name="polygon"></a>Polygon
-  A`Polygon`は外部境界リングと 0 個以上の内部リングを定義するポイントのシーケンスとして格納される 2 次元表面です。  
+  A`Polygon`は一連の外部境界リングと 0 個以上の内部リングを定義する点として格納される 2 次元表面です。  
   
 ## <a name="polygon-instances"></a>Polygon インスタンス  
- A`Polygon`インスタンスには、少なくとも 3 つの異なる点を持つリングで形成されることができます。 A`Polygon`インスタンスが空にすることもできます。  
+ A`Polygon`インスタンスから少なくとも 3 つの異なる点を持つリングで形成できます。 A`Polygon`インスタンスが空にすることもできます。  
   
- 外部および内部のリング、`Polygon`その境界を定義します。 リング内の空間は `Polygon` の内部を定義します。  
+ 外部および内部のリングの`Polygon`その境界を定義します。 リング内の空間は `Polygon` の内部を定義します。  
   
  次の図の例を示します`Polygon`インスタンス。  
   
@@ -38,14 +38,14 @@ ms.locfileid: "36179282"
   
  この図は次のことを示しています。  
   
-1.  図 1 は、`Polygon`の境界が、外部リングによって定義されているインスタンス。  
+1.  図 1 は、`Polygon`外部リングによって境界が定義されているインスタンス。  
   
 2.  図 2 は、1 つの外部リングと 2 つの内部リングによって境界が定義されている `Polygon` インスタンスです。 内部リングの内側の領域は、`Polygon` インスタンスの外部の一部です。  
   
 3.  図 3 の `Polygon` インスタンスは、内部リングが 1 つの接点で交差しているため有効です。  
   
 ### <a name="accepted-instances"></a>許容されるインスタンス  
- 許容される `Polygon` インスタンスとは、例外をスローすることなく  `geometry` 変数または `geography` 変数に格納できるインスタンスです。 次が受け入れられます`Polygon`インスタンス。  
+ 許容される `Polygon` インスタンスとは、例外をスローすることなく  `geometry` 変数または `geography` 変数に格納できるインスタンスです。 次が受け入れられる`Polygon`インスタンス。  
   
 -   空`Polygon`インスタンス  
   
@@ -85,7 +85,7 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
- 内部リング、`Polygon`そのもの接することができ、他の 1 つの接点でポイントしている場合は、内部リング、`Polygon`交差、インスタンスが無効です。  
+ 内部リングを`Polygon`両方自体をタッチし、1 つの接点で相互がの内部リングが、 `Polygon` 、クロス インスタンスが無効です。  
   
  次の例は有効な`Polygon`インスタンス。  
   
@@ -108,7 +108,7 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` 内部リングが 2 か所で外部リングに接しているため、無効です。 `@g2` 2 つ目の内部リングが 1 つ目の内部リングの内側にあるため、無効です。 `@g3` 有効ではないため、複数の連続する点で接し、2 つの内部リングします。 `@g4` 2 つの内部リングの内部が交差しているため、無効です。 `@g5` 外部リングが 1 つ目のリングでないため、無効です。 `@g6` リングが 3 つ以上の異なる点を持たないため、無効です。  
+ `@g1` 内部リングが 2 か所で外部リングに接しているため、無効です。 `@g2` 2 つ目の内部リングが 1 つ目の内部リングの内側にあるため、無効です。 `@g3` 有効でないため、2 つの内部リングが連続する複数の点で接しています。 `@g4` 2 つの内部リングの内部が交差しているため、無効です。 `@g5` 外部リングが 1 つ目のリングでないため、無効です。 `@g6` リングが 3 つ以上の異なる点を持たないため、無効です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、1 つの穴を持つ単純な `geometry``Polygon` インスタンスを作成しています。このインスタンスの SRID は 10 です。  

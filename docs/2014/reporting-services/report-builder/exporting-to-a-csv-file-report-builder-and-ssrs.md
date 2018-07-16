@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 82b27a6c90694626a5afc1f2256f1b10868f723f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2c6bcbf4ce4a3bb3121bd55b8df95070de817f93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232692"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   CSV (コンマ区切り) 表示拡張機能では、レポートのデータを平面的に表して、標準化されたプレーンテキスト形式でレポートを表示します。プレーンテキスト形式のレポートは、多くのアプリケーションで簡単に読み取ったり変換したりすることができます。  
   
- CSV 表示拡張機能は、文字による区切り記号を使用してフィールドと行を分けます。この区切り記号には、コンマ以外の文字を使用するように構成できます。 エクスポートされたファイルは、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] などのスプレッドシート プログラムで開いたり、他のプログラムのインポート形式として使用できます。 エクスポートしたレポートが、.csv ファイルになりの MIME の種類を返します`text/csv`です。  
+ CSV 表示拡張機能は、文字による区切り記号を使用してフィールドと行を分けます。この区切り記号には、コンマ以外の文字を使用するように構成できます。 エクスポートされたファイルは、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] などのスプレッドシート プログラムで開いたり、他のプログラムのインポート形式として使用できます。 エクスポートされたレポートが .csv ファイルになりの MIME の種類を返します`text/csv`します。  
   
  グラフ、データ バー、スパークライン、ゲージ、インジケーターに関連するデータを [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]で操作する場合は、レポートを CSV ファイルにエクスポートし、そのファイルを [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel で開きます。  
   

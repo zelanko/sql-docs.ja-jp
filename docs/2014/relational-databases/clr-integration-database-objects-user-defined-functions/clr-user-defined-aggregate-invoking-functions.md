@@ -1,13 +1,11 @@
 ---
-title: CLR ユーザー定義集計関数の呼び出し |Microsoft ドキュメント
+title: CLR ユーザー定義集計関数の呼び出し |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96aaaeda1fd22044c5a4f86c11051966f3d8b341
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b648c81da85be1214dc8b1c7b78235cd23ab525a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070512"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355054"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>CLR ユーザー定義集計関数の呼び出し
   [!INCLUDE[tsql](../../includes/tsql-md.md)] の SELECT ステートメントでは、CLR (共通言語ランタイム) ユーザー定義集計を呼び出すことができます。CLR ユーザー定義集計には、システム集計関数に適用されるすべての規則が適用されます。  
@@ -37,11 +35,11 @@ ms.locfileid: "36070512"
   
 -   現在のユーザーは、ユーザー定義集計に `EXECUTE` 権限を所持する必要があります。  
   
--   ユーザー定義集計は、の形式で 2 部構成の名前を使用して呼び出す必要がある*schema_name.udagg_name*です。  
+-   ユーザー定義集計は、の形式で 2 つの部分名を使用して呼び出す必要がある*schema_name.udagg_name*します。  
   
--   ユーザー定義集計の引数の型が一致か、暗黙的に変換する必要があります、 *input_type*で定義されているように、集計の`CREATE AGGREGATE`ステートメントです。  
+-   ユーザー定義集計の引数の型が一致かに暗黙的に変換する必要があります、 *input_type*で定義されているように、集計の`CREATE AGGREGATE`ステートメント。  
   
--   ユーザー定義集計の戻り値の型が一致する必要があります、 *return_type*で、`CREATE AGGREGATE`ステートメントです。  
+-   ユーザー定義集計の戻り値の型が一致する必要があります、 *return_type*で、`CREATE AGGREGATE`ステートメント。  
   
 ## <a name="example-1"></a>例 1  
  次の例は、テーブルの列から取得した一連の文字列値を連結するユーザー定義集計関数を示します。  

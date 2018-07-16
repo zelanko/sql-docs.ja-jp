@@ -1,5 +1,5 @@
 ---
-title: プロセスのデータベース権限を付与 |Microsoft ドキュメント
+title: 処理のデータベース権限の許可 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: c309ca3781bea3594c6d7e8d1b912730371635e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f3cce413fa5a5c47afa5ea9a97b142a75d23472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306522"
 ---
 # <a name="granting-process-database-permissions"></a>データベースの処理権限の許可
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスをインストールすると、そのインスタンス内の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバー管理者ロールのすべてのメンバーは、サーバー全体について [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンス内で任意のタスクを実行する権限を与えられます。 既定では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス内のオブジェクトを管理および表示する権限は他のユーザーに一切与えられません。  
@@ -34,7 +34,7 @@ ms.locfileid: "36177004"
   
 2.  **[データベースの処理]** チェック ボックスをオンにします。  
   
-3.  [プロパティ] ウィンドウで変更、**名前**をこの新しいロールのプロパティ`Process Database Objects Role`です。  
+3.  [プロパティ] ウィンドウで変更、**名前**この新しいロールのプロパティ`Process Database Objects Role`します。  
   
      ![ロール デザイナー](../../2014/tutorials/media/l10-security-1.png "ロール デザイナー")  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36177004"
   
      次の図に示すとおり、このロールのメンバーにはこのデータベースを処理する権限が与えられていますが、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブ内のデータへのアクセス権がなく、ローカル キューブ/ドリルスルー アクセスを行うことができません。  
   
-     ![ロール デザイナーの [キューブ] タブ](../../2014/tutorials/media/l10-security-2.png "ロール デザイナーの [キューブ] タブ")  
+     ![ロール デザイナーのタブにキューブ](../../2014/tutorials/media/l10-security-2.png "ロール デザイナーの [キューブ] タブ")  
   
 7.  ロール デザイナーの **[ディメンション]** タブに切り替えます。  
   
@@ -60,6 +60,6 @@ ms.locfileid: "36177004"
 >  レッスン 10 の操作内容が反映されたプロジェクトを入手するには、サンプルをダウンロードしてインストールしてください。 詳細については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](install-sample-data-and-projects.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ロールと権限&#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [ロールとアクセス許可&#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

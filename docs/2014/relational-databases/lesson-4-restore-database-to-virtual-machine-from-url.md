@@ -1,5 +1,5 @@
 ---
-title: レッスン 5 です。 (省略可能)TDE を使用して、データベースの暗号化 |Microsoft ドキュメント
+title: レッスン 5。 (省略可能)TDE を使用して、データベースの暗号化 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c8ef2e904c197822721a5c48f811a2a895b5ca59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c73078a44d45d10fae144eb0d15db8995b556ed8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275168"
 ---
-# <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>レッスン 5 です。 (省略可) TDE を使用してデータベースを暗号化する
-  省略可能な手順として、新しく作成したデータベースを暗号化できます。 透過的なデータ暗号化 (TDE) では、データとログ ファイルの暗号化と暗号化解除がリアルタイムの I/O で実行されます。 この種の暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 詳細については、次を参照してください。 [Transparent Data Encryption &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md)と[TDE で保護されているデータベースを別の SQL Server に移動](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)です。  
+# <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>レッスン 5。 (省略可) TDE を使用してデータベースを暗号化する
+  省略可能な手順として、新しく作成したデータベースを暗号化できます。 透過的なデータ暗号化 (TDE) では、データとログ ファイルの暗号化と暗号化解除がリアルタイムの I/O で実行されます。 この種の暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 詳細については、次を参照してください。 [Transparent Data Encryption &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md)と[TDE で保護されたデータベースを別の SQL Server に移動](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)します。  
   
  このレッスンは、次の手順を完了済みであることを前提としています。  
   
@@ -91,7 +91,7 @@ GO
   
 ```  
   
- For detailed information the Transact-SQL statements that have been used in this lesson, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql), [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql), [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql), and [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).  
+ このレッスンで使用されている詳細情報: TRANSACT-SQL ステートメントでは、次を参照してください[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)、 [ALTER DATABASE &#40;TRANSACT-SQL&#41; 。](/sql/t-sql/statements/alter-database-transact-sql)、 [CREATE MASTER KEY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)、[証明書の作成&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)、および[sys.dm_database_encryption_keys &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)します。  
   
  **次のレッスン:**  
   

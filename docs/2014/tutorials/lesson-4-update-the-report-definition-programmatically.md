@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 4: レポート定義をプログラムで更新する |Microsoft ドキュメント'
+title: 'レッスン 4: レポート定義をプログラムで更新する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
 caps.latest.revision: 20
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb51cfc7677f60d729efeb1e878c4d4709943860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18fc88beee15b995c3f705e9b6582d695d94d703
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286498"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>レッスン 4 : プログラムによるレポート定義の更新
   前のレッスンでは、レポート サーバーからレポート定義を読み込み、レポート フィールドにその参照を指定しました。次は、レポート定義を更新する必要があります。 この例では、レポートの `Description` プロパティを更新します。  
   
 ### <a name="to-update-the-report-definition"></a>レポート定義を更新するには  
   
-1.  Program.cs ファイルに UpdateReportDefinition() メソッドのコードに置き換えます (の場合は Module1.vb [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) を次のコード。  
+1.  Program.cs ファイルで UpdateReportDefinition() メソッドのコードに置き換えます (Module1.vb [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) を次のコード。  
   
     ```csharp  
     private void UpdateReportDefinition()  
@@ -92,9 +92,9 @@ ms.locfileid: "36177007"
     ```  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、更新したレポート定義をもう一度レポート サーバーに保存します。 参照してください[レッスン 5: レポート定義、レポート サーバーにパブリッシュ](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)です。  
+ 次のレッスンでは、更新したレポート定義をもう一度レポート サーバーに保存します。 参照してください[レッスン 5: レポート サーバーにレポート定義のパブリッシュ](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)します。  
   
 ## <a name="see-also"></a>参照  
- [RDL スキーマから生成されたクラスを使用してレポートの更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+ [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
   
   

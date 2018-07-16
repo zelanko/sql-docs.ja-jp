@@ -1,5 +1,5 @@
 ---
-title: キューブ空間 |Microsoft ドキュメント
+title: キューブ空間 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a8be8107b3d18aca49cf8b670131ef695d5901f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07011d823f4bede671c3ee4a465d27c413d04e9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282188"
 ---
 # <a name="cube-space"></a>キューブ空間
   キューブ空間は、そのキューブのメジャーを伴った、キューブの属性階層のメンバーから構成されます。 したがって、キューブ空間はキューブ内のすべての属性階層のメンバーとキューブのメジャーの組み合わせによって決まり、キューブの最大サイズを定義します。 重要なのは、この空間には属性階層メンバーで考えられるすべての組み合わせが含まれるということです。現実世界において不可能と考えられるような組み合わせ (たとえば、都市を Paris、国を England、Spain、Japan、India などに指定する) も含まれます。  
@@ -116,7 +116,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  注意して、`WITH`でキーワードを使用して、 [CurrentMember (MDX)](/sql/mdx/current-mdx)と[Name (MDX)](/sql/mdx/members-string-mdx)クエリで使用するための計算されるメンバーを作成する関数。 詳細については、「[MDX の基本的なクエリ &#40;MDX&#41;](mdx-query-the-basic-query.md)」を参照してください。  
+>  注意、`WITH`でキーワードを使用して、 [CurrentMember (MDX)](/sql/mdx/current-mdx)と[Name (MDX)](/sql/mdx/members-string-mdx)クエリで使用するための計算されるメンバーを作成する関数。 詳細については、「[MDX の基本的なクエリ &#40;MDX&#41;](mdx-query-the-basic-query.md)」を参照してください。  
   
  上のクエリでは、State 属性階層の各メンバーに関連付けられた Country 属性階層のメンバーの名前が返されます。 City 属性と Country 属性の間には属性リレーションシップが定義されているので、予測どおりに Country メンバーが返されます。 ところが、次のクエリで示すように、同一ディメンションの属性階層間に属性リレーションシップが定義されていない場合は、(All) メンバーが返されます。  
   
@@ -134,11 +134,11 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [MDX の主な概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [組](tuples.md)   
+ [タプル](tuples.md)   
  [Autoexists](autoexists.md)   
- [メンバー、組、およびセット&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [メンバー、組、およびセットの操作&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [表示部分の合計と非表示部分の合計](visual-totals-and-non-visual-totals.md)   
  [MDX 言語リファレンス&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [多次元式&#40;MDX&#41;参照](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [多次元式&#40;MDX&#41;リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

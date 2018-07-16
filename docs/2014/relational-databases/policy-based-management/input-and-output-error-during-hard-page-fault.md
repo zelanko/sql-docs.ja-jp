@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8328bd708c537cb65062d24735b6214650f576aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ab939579b57656e2b67fe4ff578f96f387d1ae6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299852"
 ---
 # <a name="input-and-output-error-during-hard-page-fault"></a>ハード ページ フォールト中の I/O エラー
   このルールでは、システム イベント ログの EventId 51 を確認します。 このエラーは、ハード ページ フォールト中のエラーが原因で発生します。  

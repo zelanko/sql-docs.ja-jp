@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
@@ -17,13 +17,13 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b585849d6bb585a2d7008894c874b84d0a87f17e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02aa88c80200ece060204fc339e84560a069cc17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260988"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>チェックポイントを使用してパッケージを再開する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、失敗したパッケージ全体を再実行する代わりに、失敗した時点から再開することができます。 パッケージがチェックポイントを使用するように設定されている場合、パッケージの実行に関する情報がチェックポイント ファイルに書き込まれます。 失敗したパッケージを再実行する場合、チェックポイント ファイルを使用して、失敗した時点からパッケージを再開します。 パッケージの実行が成功するとチェックポイント ファイルは削除され、次にパッケージが実行されるときに再度作成されます。  
@@ -63,7 +63,7 @@ ms.locfileid: "36178470"
 |CheckpointUsage|チェックポイントを使用するかどうかを指定します。|  
 |SaveCheckpoints|パッケージでチェックポイントを保存するかどうかを示します。 失敗した時点からパッケージを再開するには、このプロパティを True に設定する必要があります。|  
   
- またに FailPackageOnFailure プロパティを設定する必要があります`true`を識別する、パッケージ内のすべてのコンテナーの再開ポイントとして。  
+ さらに、FailPackageOnFailure プロパティ設定する必要があります`true`を識別するパッケージ内のすべてのコンテナーの再開ポイントとして。  
   
  ForceExecutionResult プロパティを使用して、パッケージのチェックポイントの使用をテストできます。 タスクまたはコンテナーの ForceExecutionResult を Failure に設定すると、実行時の障害を擬似的に実現できます。 パッケージを再実行すると、失敗したタスクとコンテナーが再実行されます。  
   

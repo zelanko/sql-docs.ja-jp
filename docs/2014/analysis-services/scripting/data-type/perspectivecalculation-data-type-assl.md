@@ -1,5 +1,5 @@
 ---
-title: PerspectiveCalculation データ型 (ASSL) |Microsoft ドキュメント
+title: PerspectiveCalculation データ型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveCalculation data type
 ms.assetid: 5a5173d2-c96d-4a55-a35c-0cbfd5b0e599
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1214bc349c09f02f522569b26dd48e82d5e42b99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bec56d06fe2e2957f9409a43be3502b4e0196427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185149"
 ---
 # <a name="perspectivecalculation-data-type-assl"></a>PerspectiveCalculation データ型 (ASSL)
-  計算間のリレーションシップを表すプリミティブ データ型を定義し、[パースペクティブ](../objects/perspective-element-assl.md)要素。  
+  計算の間のリレーションシップを表すプリミティブ データ型を定義し、[パースペクティブ](../objects/perspective-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

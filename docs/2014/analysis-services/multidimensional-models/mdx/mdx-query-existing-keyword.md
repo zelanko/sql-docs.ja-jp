@@ -1,5 +1,5 @@
 ---
-title: EXISTING キーワード (MDX) |Microsoft ドキュメント
+title: EXISTING キーワード (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - EXISTING
 helpviewer_keywords:
 - Existing keyword
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d7205cad36bbeb5adee16ca10bd881280b59d98f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a781fb58f45c478b6a3611132a210b14012ffb72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228392"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING キーワード (MDX)
   指定されたセットを現在のコンテキストで評価するように設定します。  
@@ -40,10 +40,10 @@ Existing Set_Expression
  有効な多次元式 (MDX) セット式です。  
   
 ## <a name="remarks"></a>コメント  
- 既定では、セットの評価は、そのセットのメンバーを含むキューブのコンテキストで実行されます。 `Existing`キーワードと、指定されたセットの代わりに、現在のコンテキスト内で評価されます。  
+ 既定では、セットの評価は、そのセットのメンバーを含むキューブのコンテキストで実行されます。 `Existing`キーワードには、代わりに、現在のコンテキスト内で評価される指定されたセットが行われます。  
   
 ## <a name="example"></a>例  
- 次の例では、`Aggregate`  関数を使用して評価された、ユーザー選択の State-Province メンバー値に基づいて、1 つ前の期よりも売上が減少した再販業者の数を返します。 [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) 関数および [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 関数を使用しています。 `Existing`キーワード、セットで、 `Filter` State-province 属性階層の Washington および Oregon メンバーの現在のコンテキスト内では、評価する関数。  
+ 次の例では、`Aggregate`  関数を使用して評価された、ユーザー選択の State-Province メンバー値に基づいて、1 つ前の期よりも売上が減少した再販業者の数を返します。  [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) 関数および [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 関数を使用しています。 `Existing`キーワード力のセット、 `Filter` State-province 属性階層の Washington および Oregon メンバーには、現在のコンテキストで評価する関数。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  

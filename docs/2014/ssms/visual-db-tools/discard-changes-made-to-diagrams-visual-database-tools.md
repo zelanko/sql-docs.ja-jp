@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - discarding database diagram changes
 - database diagrams [SQL Server], discarding changes
 - diagrams [SQL Server], discarding changes
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c873ca272b9fb2700a7b9dda54a2db094af60358
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6e896e93a07e56cb26b2a83e3cd8f7290f60e847
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253424"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>ダイアグラムに加えた変更の破棄 (Visual Database Tools)
   データベース ダイアグラムで加えた変更のうち、データベースに保存しない変更は破棄できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "36177895"
     >  同じデータベースに接続されている他のデータベース ダイアグラムまたはテーブル デザイン ウィンドウがあれば、それらも同じように保存しないで閉じます。  
   
 ## <a name="see-also"></a>参照  
- [データベース ダイアグラムの操作&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [データベース ダイアグラムを扱う&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [データベース ダイアグラムでのテーブルの使用 (Visual Database Tools)](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

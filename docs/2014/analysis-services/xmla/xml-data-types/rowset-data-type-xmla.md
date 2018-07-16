@@ -1,5 +1,5 @@
 ---
-title: 行セットのデータ型 (XMLA) |Microsoft ドキュメント
+title: 行セットのデータ型 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 554217fe6d660040b51788d82a63f11ea0b7ce7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279448"
 ---
 # <a name="rowset-data-type-xmla"></a>Rowset データ型 (XMLA)
-  表す派生データ型を定義、[ルート](../xml-elements-properties/root-element-xmla.md)要素から表形式のデータを返す、 [Discover](../xml-elements-methods-discover.md)または[Execute](../xml-elements-methods-execute.md)メソッドの呼び出しです。  
+  表す派生データ型を定義、[ルート](../xml-elements-properties/root-element-xmla.md)から表形式のデータを返す要素を[Discover](../xml-elements-methods-discover.md)または[Execute](../xml-elements-methods-execute.md)メソッドの呼び出し。  
   
- **Namespace** urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql} の解析: 行セット  
+ **Namespace** urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema' の解析: 行セット  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36178972"
 |派生要素|[root](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
- XML には、要素名および属性名として使用できない文字があります。 この名前付けの制約を解決するには、XML for Analysis (XMLA) をサポートしていますで定義されたエンコード[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 XML 1.0 仕様に従った無効な XML 名の文字が含まれている列名、に対しては、XMLA は、無効な Unicode 文字のエンコードに対応する 16 進値を使用します。 16 進数の値は _x としてエスケープ*HHHH*\_ここで、 *HHHH*最上位ビットの最初の注文の文字の 4 桁の 16 進数 ucs-2 コードを表します。 たとえば、XMLA では "Order Details" という名前が Order_x0020_Details とエンコードされます。この場合、空白文字が対応する 16 進数コードに置換されています。  
+ XML には、要素名および属性名として使用できない文字があります。 定義されたエンコードを XML for Analysis (XMLA) この名前付けの制約に対処するためサポート[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。 XML 1.0 仕様に従って無効な XML 名の文字が含まれている列名には、XMLA は、無効な Unicode 文字をエンコードするのに、対応する 16 進値を使用します。 16 進数の値は _x としてエスケープされます*HHHH*\_ここで、 *HHHH*は最上位ビットから順に文字の 4 桁の 16 進 ucs-2 コードを表します。 たとえば、XMLA では "Order Details" という名前が Order_x0020_Details とエンコードされます。この場合、空白文字が対応する 16 進数コードに置換されています。  
   
- エンコードのために Extensible Stylesheet Language (XSL) 変換が難しくなる可能性があります。 実際、クイック検索をサポートするために、列名をエンコードされていない、追加、`sql:field`次の例で示すように、行セットの XML スキーマの列ごとに属性します。  
+ エンコードのために Extensible Stylesheet Language (XSL) 変換が難しくなる可能性があります。 実際のクイック検索をサポートするために、列名をエンコードされていない、追加、`sql:field`の次の例に示すように、各列の XML 行セット スキーマに属性します。  
   
 ```  
 <xsd:element name="Order_x0020_Details" type="string" sql:field="Order Details" />  
