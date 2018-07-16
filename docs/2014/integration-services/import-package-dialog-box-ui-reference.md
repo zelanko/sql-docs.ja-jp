@@ -1,5 +1,5 @@
 ---
-title: '[パッケージ] ダイアログ ボックスの UI リファレンスのインポート |Microsoft ドキュメント'
+title: インポート パッケージ ダイアログ ボックスの UI リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.importpackage.f1
 helpviewer_keywords:
 - Import Package dialog box
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bc1c4ab12c5617d8c60e898587b664f552709299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e34f7c697df4b7c9ba183adfdf71753e47bf6619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245562"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>[パッケージのインポート] ダイアログ ボックスの UI リファレンス
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[パッケージのインポート]** ダイアログ ボックスを使用すると、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージをインポートしたり、パッケージの保護レベルの設定や変更を行ったりできます。  
@@ -67,7 +67,7 @@ ms.locfileid: "36177326"
   
 ## <a name="see-also"></a>参照  
  [パッケージのコピーを保存します。](../../2014/integration-services/save-copy-of-package.md)   
- [[パッケージ] ダイアログ ボックスの UI リファレンスをエクスポートします。](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ [エクスポート パッケージ ダイアログ ボックスの UI リファレンス](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [パッケージを保存する](save-packages.md)   
  [パッケージ インポートおよびエクスポート&#40;SSIS サービス&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   

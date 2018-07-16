@@ -1,5 +1,5 @@
 ---
-title: Annotation 要素 (ASSL) |Microsoft ドキュメント
+title: Annotation 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Annotation element
 ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5dfe8ea881948de8ed53cea0ddcff1e1325a96d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0453688aab37831c54bad3080a34409b078740bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304502"
 ---
 # <a name="annotation-element-assl"></a>Annotation 要素 (ASSL)
   Analysis Services スクリプト言語 (ASSL) スキーマを拡張するために使用される要素を格納します。  

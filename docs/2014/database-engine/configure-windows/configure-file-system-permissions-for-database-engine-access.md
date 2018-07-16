@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file system permissions
 - service account [SQL Server], file system permissions
 - permissions [SQL Server], file system
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02a84ea92555c74c0fed76b4f90b2d9c2337f46f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d16d2580775cde3c1b87c934c1bd69133501d3ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260956"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>データベース エンジン アクセスのファイル システム権限の構成
   このトピックでは [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]にデータベース ファイルの格納場所へのファイル システム アクセス権を付与する方法について説明します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスには、データベース ファイルが格納されているファイル フォルダーにアクセスするための Windows ファイル システム権限が必要です。 既定の場所への権限は、セットアップ中に構成されます。 別の場所にデータベース ファイルを配置した場合は、次の手順に従って、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] にその場所へのフル コントロール権限を付与する必要がある場合があります。  
@@ -38,15 +38,15 @@ ms.locfileid: "36178946"
   
 3.  **[ユーザー、コンピューター、サービス アカウント、またはグループの選択]** ダイアログ ボックスで、場所の一覧の上部にある **[場所]** をクリックし、コンピューター名を選択して、 **[OK]** をクリックします。  
   
-4.  **を選択するオブジェクト名の入力**ボックスで、サービスごとの SID の名前は、オンライン ブックのトピックに示した型**Windows サービス アカウントの構成とアクセス許可**です。 (用、[!INCLUDE[ssDE](../../includes/ssde-md.md)]サービスごとの SID を使用して**NT service \mssqlserver**の既定のインスタンス、または**NT service \mssql$ InstanceName**名前付きインスタンスです)。  
+4.  **を選択するオブジェクト名の入力**ボックスで、サービスごとの SID の名前、オンライン ブックのトピックに記載する「 **Windows サービス アカウントの構成とアクセス許可**します。 (の[!INCLUDE[ssDE](../../includes/ssde-md.md)]サービスごとの SID を使用して**NT service \mssqlserver**の既定のインスタンス、または**NT service \mssql$ InstanceName**名前付きインスタンスです)。  
   
 5.  **[名前の確認]** をクリックして、このエントリを検証します。 検証は多くの場合に失敗し、名前が見つからないことが示される場合があります。 **[OK]** をクリックすると、 **[複数の名前が見つかりました]** ダイアログ ボックスが表示されます。  
   
-6.  サービスごとの SID を選択するか、 **MSSQLSERVER**または**NT service \mssql$ InstanceName**、順にクリック**OK**です。  
+6.  か、サービスごとの SID を選択**MSSQLSERVER**または**NT service \mssql$ InstanceName**、 をクリックし、 **OK**。  
   
-7.  をクリックして**OK**に戻るには、もう一度、**アクセス許可** ダイアログ ボックス。  
+7.  をクリックして**OK**に戻るにもう一度、**アクセス許可** ダイアログ ボックス。  
   
-8.  **グループまたはユーザー**名前ボックスで、サービスごとの SID を選択し、**のアクセス許可**\<名 > ボックスで、選択、**許可**のチェックボックス**フル コントロール**です。  
+8.  **グループまたはユーザー**名ボックスで、サービスごとの SID を選択し、**のアクセス許可**\<名 > ボックスで、選択、**許可**のチェックボックス**フル コントロール**します。  
   
 9. **[適用]** をクリックし、 **[OK]** を 2 回クリックして終了します。  
   

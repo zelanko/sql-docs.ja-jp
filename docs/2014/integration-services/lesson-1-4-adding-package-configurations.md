@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11d97017f27634c5c6f3f913cd41447780b68199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29da6dedad91566c0d111acfeb18b3778d2da4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308122"
 ---
 # <a name="step-4-adding-package-configurations"></a>手順 4: パッケージ構成の追加
   ここでは、各パッケージに構成を追加します。 パッケージ プロパティとパッケージ オブジェクトの値は、構成によって実行時に更新されます。  
@@ -46,7 +46,7 @@ ms.locfileid: "36074630"
   
 5.  パッケージ構成ウィザードの初期画面で、 **[次へ]** をクリックします。  
   
-6.  [構成の種類の選択] ページで、 **XML 構成ファイル**で、**構成の種類**一覧で、選択、**構成の場所がの環境変数に格納されています。** オプション、および種類`DataTransfer,`かを選択して、 **DataTransfer**リスト内の環境変数。  
+6.  構成の種類の選択 ページで、次のように選択します**XML 構成ファイル**で、**構成の種類**一覧で、選択、**構成の場所がの環境変数に格納されている。** オプション、および種類`DataTransfer,`か、選択、 **DataTransfer**一覧で環境変数。  
   
     > [!NOTE]  
     >  環境変数を一覧で選択できるようにするには、変数を追加した後でコンピューターを再起動する必要があります。 コンピューターの再起動を避けたい場合は、環境変数の名前を入力してください。  
@@ -97,7 +97,7 @@ ms.locfileid: "36074630"
   
 5.  パッケージ構成ウィザードの初期画面で、 **[次へ]** をクリックします。  
   
-6.  [構成の種類の選択] ページで、 **XML 構成ファイル**で、**構成の種類**一覧で、選択、**構成の場所がの環境変数に格納されています。** オプションで、入力`LoadXMLData`かを選択して、`LoadXMLData`リスト内の環境変数。  
+6.  構成の種類の選択 ページで、次のように選択します**XML 構成ファイル**で、**構成の種類**一覧で、選択、**構成の場所がの環境変数に格納されている。** オプション、入力`LoadXMLData`か、選択、`LoadXMLData`一覧で環境変数。  
   
     > [!NOTE]  
     >  環境変数を一覧で選択できるようにするには、変数を追加した後でコンピューターを再起動する必要があります。  
@@ -135,7 +135,7 @@ ms.locfileid: "36074630"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 5: 更新したパッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [パッケージの構成](../../2014/integration-services/package-configurations.md)   

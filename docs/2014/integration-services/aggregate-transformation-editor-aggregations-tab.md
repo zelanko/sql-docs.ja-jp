@@ -1,5 +1,5 @@
 ---
-title: 集計変換エディター (集計 タブ) |Microsoft ドキュメント
+title: 集計変換エディター ([集計] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.aggregations.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4aba29b60491e5f16bf262f2ae7fc5616c827ecd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4383522d6dd3f829222b0edf119e53bfd298ac43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221852"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>[集計変換エディター] ([集計] タブ)
   **[集計変換エディター]** ダイアログ ボックスの **[集計]** タブを使用すると、集計列および集計プロパティを指定できます。 複数の集計を適用することができます。 この変換ではエラー出力を生成しません。  
@@ -84,7 +84,7 @@ ms.locfileid: "36178952"
  **[グループ化]** を選択する場合、チェック ボックスを使用して、変換により比較がどのように実行されるかを制御します。 文字列比較オプションについては、「 [文字列データの比較](data-flow/comparing-string-data.md)」を参照してください。  
   
  **Count Distinct Scale**  
- 集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 両方`CountDistinctScale`と**CountDistinctKeys**指定すると、 **CountDistinctKeys**が優先されます。  
+ 集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 両方`CountDistinctScale`と**CountDistinctKeys**が指定されて**CountDistinctKeys**が優先されます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -94,7 +94,7 @@ ms.locfileid: "36178952"
 |高|集計では 25,000,000 を超える個別の値を書き込むことができます。|  
   
  **Count Distinct Keys**  
- 集計によって書き込むことのできる個別の値の正確な数をオプションで指定します。 両方`CountDistinctScale`と**CountDistinctKeys**指定すると、 **CountDistinctKeys**が優先されます。  
+ 集計によって書き込むことのできる個別の値の正確な数をオプションで指定します。 両方`CountDistinctScale`と**CountDistinctKeys**が指定されて**CountDistinctKeys**が優先されます。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   

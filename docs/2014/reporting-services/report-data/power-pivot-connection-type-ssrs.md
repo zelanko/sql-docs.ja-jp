@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 接続の種類 (SSRS) |Microsoft ドキュメント
+title: PowerPivot 接続の種類 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,37 +8,37 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf22b7c44d554f4e82eb330752d8580102469cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234752"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot の接続の種類 (SSRS)
   SQL Server Analysis Services データ処理拡張機能を使用すると、SharePoint の PowerPivot ギャラリーにパブリッシュされた PowerPivot ブックからデータを取得することができます。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[を追加して、データ接続またはデータ ソースを確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)です。  
+ このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)します。  
   
 ## <a name="prerequisites"></a>前提条件  
  PowerPivot データ ソースは、SharePoint サイトの PowerPivot ギャラリーにパブリッシュされている必要があります。  
   
- レポート ビルダーから PowerPivot ブックへの接続をサポートするには、ワークステーション コンピューターに SQL Server 2008 R2 ADOMD.NET が必要です。 Excel 用 PowerPivot でこのクライアント ライブラリがインストールされているが、このアプリケーションがないコンピューターを使用している場合は、ダウンロードして、ページから ADOMD.NET をインストールする必要があります、 [SQL Server 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565)です。  
+ レポート ビルダーから PowerPivot ブックへの接続をサポートするには、ワークステーション コンピューターに SQL Server 2008 R2 ADOMD.NET が必要です。 Excel 用 PowerPivot でこのクライアント ライブラリがインストールされているが、このアプリケーションがないコンピューターを使用している場合は、ダウンロードして、ページから ADOMD.NET をインストールする必要があります、 [SQL Server 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565)します。  
   
 ## <a name="data-source-type"></a>データ ソースの種類  
  使用するレポート データ ソースの種類は **Microsoft SQL Server Analysis Services**です。  
   
 ## <a name="connection-string"></a>[接続文字列]  
- 接続文字列は、SharePoint の PowerPivot ギャラリーまたはその他のライブラリにパブリッシュされた PowerPivot ブックへの URLhttp://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsxです。  
+ 接続文字列は、SharePoint の PowerPivot ギャラリーまたはその他のライブラリにパブリッシュされた PowerPivot ブックへの URLhttp://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsxします。  
   
 ## <a name="credentials"></a>[資格情報]  
- PowerPivot ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services に接続文字列が](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)または[レポート ビルダーでの資格情報を指定](../specify-credentials-in-report-builder.md)です。  
+ PowerPivot ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)または[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)します。  
   
 ## <a name="queries"></a>クエリ  
  PowerPivot データ ソースに接続した後、MDX グラフィカル クエリを使用して、基となるデータ構造を参照および選択してクエリを作成します。 クエリを作成したら、それを実行して結果ペインにサンプル データを表示します。  
@@ -56,7 +56,7 @@ ms.locfileid: "36085365"
   
  PowerPivot ブック内のデータは大幅に圧縮されていますが、PowerPivot ブックから取得されたレポートのデータは圧縮されません。 クエリ デザイナーを使用してフィルターとパラメーターを指定し、レポートに必要なデータだけに制限します。  
   
- Analysis Services キューブへの接続とは異なり、PowerPivot モデルには階層はありません。 ブック内の関連するスライサーに同様の機能を提供するには、レポートでカスケード型パラメーターを作成する必要があります。 詳細については、次を参照してください。[をレポートにカスケード型パラメーターの追加&#40;レポート ビルダーおよび SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)です。  
+ Analysis Services キューブへの接続とは異なり、PowerPivot モデルには階層はありません。 ブック内の関連するスライサーに同様の機能を提供するには、レポートでカスケード型パラメーターを作成する必要があります。 詳細については、次を参照してください。[レポートにカスケード パラメーターを追加&#40;レポート ビルダーおよび SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)します。  
   
  PowerPivot モデルの基になるデータ値に対応するように、式を調整しなければならない場合があります。 式を変更してデータを適切なデータ型に変換したり、集計関数を追加または削除したりすることが必要になります。 たとえば、データ型を文字列型から整数型に変換するには、 `=CInt`を使用します。 レポートをパブリッシュする前に、PowerPivot モデルのデータから意図した値が表示されることを必ず確認してください。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36085365"
 -   レポートには、PowerPivot データ ソースからの PowerPivot データのみが格納されます。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス&#40;レポート ビルダー&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Analysis Services MDX クエリ デザイナーのユーザー インターフェイス&#40;レポート ビルダー&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

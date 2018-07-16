@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page breaks [Reporting Services], expressions
 - green-bar reports [Reporting Services]
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 caps.latest.revision: 97
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 71b1e580ddb4e56a267fcfaf792858ed3566f2d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 97bfdd80fc183291f21042d11620d0a3e28e0b49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205042"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
   レポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
@@ -58,19 +58,19 @@ ms.locfileid: "36179101"
   
  特定用途ごとの式の例については、次のトピックを参照してください。  
   
--   [式の例をグループ化&#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [グループ式の例&#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
 -   [フィルター式の例&#40;レポート ビルダーおよび SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
 -   [一般的に使用されるフィルター&#40;レポート ビルダーおよび SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
   
--   [レポート ファイルとグループ変数コレクションの参照&#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+-   [レポート変数とグループ変数コレクションの参照&#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
  単純型と複合型の式、式を使用できる場所、式に使用できる参照の種類など、レポート式の詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)」のトピックを参照してください。 式が集計の計算のために評価されるコンテキストの詳細については、「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
   
  多数の関数および演算子がこのトピックでも式の例に使用されていますが、これらを使用して式を作成する方法をレポート作成のコンテキストで学習するには、「[チュートリアル: 式の概要](../tutorial-introducing-expressions.md)」を参照してください。  
   
- 式エディターには、組み込み関数を階層形式で表示できるビューが用意されています。 特定の関数を選択すると、[値] ペインにコード例が表示されます。 詳細については、次を参照してください。、[式 ダイアログ ボックス](../expression-dialog-box.md)または[式 ダイアログ ボックス&#40;レポート ビルダー&#41;](../expression-dialog-box-report-builder.md)です。  
+ 式エディターには、組み込み関数を階層形式で表示できるビューが用意されています。 特定の関数を選択すると、[値] ペインにコード例が表示されます。 詳細については、次を参照してください。、[式 ダイアログ ボックス](../expression-dialog-box.md)または[式 ダイアログ ボックス&#40;レポート ビルダー&#41;](../expression-dialog-box-report-builder.md)します。  
   
  レポート モデル クエリ デザイナーを使用して、データ ソースとしてレポート モデルを使用するデータセット クエリを設計する場合は、式の代わりに数式を使用します。 数式では、レポート モデル データ ソースから返すデータを指定するクエリにカスタム計算を統合することによって、レポート データを指定できます。 詳細については、「[レポート モデル クエリの数式 &#40;レポート ビルダーおよび SSRS&#41;](formulas-in-report-model-queries-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "36179101"
   
 #### <a name="math-functions"></a>算術関数  
   
--   `Round`関数を最も近い整数に数値を丸めるに役立ちます。 次の式は、1.3 を 1 に丸めます。  
+-   `Round`関数は数値を最も近い整数に丸めるに役立ちます。 次の式は、1.3 を 1 に丸めます。  
   
     ```  
     = Round(1.3)  
     ```  
   
-     Round、複数した値を指定するような式を記述することも、 `MRound` Excel の関数。 整数値を作成する係数で値を乗算し、その数値を丸め、同じ係数で除算します。 たとえば、1.3 を最も近い 0.2 の倍数 (1.4) に丸めるには、次の式を使用します。  
+     指定を丸めるの値に値を複数のような式を記述することも、 `MRound` Excel の関数。 整数値を作成する係数で値を乗算し、その数値を丸め、同じ係数で除算します。 たとえば、1.3 を最も近い 0.2 の倍数 (1.4) に丸めるには、次の式を使用します。  
   
     ```  
     = Round(1.3*5)/5  
@@ -113,7 +113,7 @@ ms.locfileid: "36179101"
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   `Year`関数は、特定の日付の年を表示します。 この関数を使用して、日付をグループ化したり、一連の日付のラベルとして年を表示したりできます。 次の式では、指定した販売注文日グループの年が返されます。 `Month`日付を操作する関数やその他の関数を使用することもできます。 詳細については、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のドキュメントを参照してください。  
+-   `Year`関数は、特定の日付の年を表示します。 この関数を使用して、日付をグループ化したり、一連の日付のラベルとして年を表示したりできます。 次の式では、指定した販売注文日グループの年が返されます。 `Month`日付を操作する関数およびその他の関数を使用することができますも。 詳細については、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のドキュメントを参照してください。  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -141,7 +141,7 @@ ms.locfileid: "36179101"
     =FORMAT(Fields!SellStartDate.Value, "dd/MM/yyyy")  
     ```  
   
--   `CDate` 関数は、値を日付に変換します。 `Now`関数は、現在の日付と時刻に従って、システムを含む日付値を返します。 `DateDiff` は、2 つの日付値の間にある期間を数値で示す Long 値を返します。  
+-   `CDate` 関数は、値を日付に変換します。 `Now`関数がシステムに従った現在日時を含む日付値を返します。 `DateDiff` は、2 つの日付値の間にある期間を数値で示す Long 値を返します。  
   
      次の例では、今年の最初の日が表示されます。  
   
@@ -168,7 +168,7 @@ ms.locfileid: "36179101"
   
     ```  
   
--   `DateSerial`関数は、午前 0 時に設定された時刻情報と共に指定した年、月、および日を表す日付値を返します。 次の例では、現在の月に基づいて、前の月の最終日が表示されます。  
+-   `DateSerial`関数は、午前 0 時に設定された時刻情報を指定した年、月、および日を表す日付値を返します。 次の例では、現在の月に基づいて、前の月の最終日が表示されます。  
   
     ```  
     =DateSerial(Year(Now()), Month(Now()), "1").AddDays(-1)  
@@ -199,9 +199,9 @@ ms.locfileid: "36179101"
     =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
     ```  
   
-     代わりに書式を適用するテキスト ボックスの書式プロパティを使用する必要があります、テキスト ボックスには、日付または数値のみが含まれている場合、`Format`テキスト ボックス内の関数。  
+     テキスト ボックスに日付または数値のみが含まれる場合の代わりに書式設定を適用するテキスト ボックスの Format プロパティを使用する必要があります、`Format`テキスト ボックス内の関数。  
   
--   `Right`、 `Len`、および`InStr`関数は、サブストなどを返すために役立ちます*ドメイン*\\*username*ユーザー名だけをします。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (*) より右側の部分のみが返されます。  
+-   `Right`、 `Len`、および`InStr`関数は、サブストなどを返すに便利*ドメイン*\\*username*ユーザー名だけです。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (*) より右側の部分のみが返されます。  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -213,7 +213,7 @@ ms.locfileid: "36179101"
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
     ```  
   
--   複数の値を持つパラメーターから選択した値を表示します。 次の例では、`Join`関数を選択したパラメーターの値を連結*MySelection*レポート アイテム内のテキスト ボックスの値を表す式として設定できます。 1 つの文字列にします。  
+-   複数の値を持つパラメーターから選択した値を表示します。 次の例では、`Join`関数パラメーターの選択した値を連結する*MySelection*レポート アイテム内のテキスト ボックスの値を表す式として設定できる 1 つの文字列に。  
   
     ```  
     = Join(Parameters!MySelection.Value)  
@@ -226,7 +226,7 @@ ms.locfileid: "36179101"
   
     ```  
   
--   `Regex`から機能、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions>既存の文字列の形式、たとえば、電話番号の書式設定を変更するのに便利です。 次の式を使用して、`Replace`からフィールドで 10 桁の電話番号の形式を変更する関数"*nnn*-*nnn*-*nnnn*"に"(*nnn*) *nnn*-*nnnn*"。  
+-   `Regex`から関数、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions>は、既存の文字列の形式、たとえば、電話番号の書式設定を変更するために役立ちます。 次の式を使用して、`Replace`からフィールドの 10 桁の電話番号の形式を変更する関数"*nnn*-*nnn*-*nnnn*"を"(*nnn*) *nnn*-*nnnn*"。  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -245,7 +245,7 @@ ms.locfileid: "36179101"
   
 #### <a name="lookupset"></a>LookupSet  
   
--   キー フィールドの値を指定すると、使用することができます、`LookupSet`一対多リレーションシップのデータセットから一連の値を取得します。 たとえば、1 人の個人が複数の電話番号を持っていることがあります。 次の例では、PhoneList データセットに個人識別子が含まれ、各行に電話番号が格納されているものとしています。 `LookupSet` 値の配列を返します。 次の例では、返された値を 1 つの文字列として結合し、ContactID で指定される個人の電話番号の一覧を表示します。  
+-   キー フィールドを指定すると、使用することができます、`LookupSet`一対多リレーションシップをデータセットから一連の値を取得します。 たとえば、1 人の個人が複数の電話番号を持っていることがあります。 次の例では、PhoneList データセットに個人識別子が含まれ、各行に電話番号が格納されているものとしています。 `LookupSet` 値の配列を返します。 次の例では、返された値を 1 つの文字列として結合し、ContactID で指定される個人の電話番号の一覧を表示します。  
   
     ```  
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
@@ -274,7 +274,7 @@ ms.locfileid: "36179101"
     =IIF(Fields!LineTotal.Value > 100, True, False)  
     ```  
   
--   複数回使用`IIF`関数 ("入れ子になった Iif"とも呼ばれます) の値に応じて 3 つの値のいずれかを返す`PctComplete`です。 次の式をテキスト ボックスの塗りつぶしの色に使用すると、テキスト ボックスの値に応じて背景色を変更できます。  
+-   複数回使用`IIF`関数 ("入れ子になった Iif"とも呼ばれます) の値に応じて 3 つの値のいずれかを返す`PctComplete`します。 次の式をテキスト ボックスの塗りつぶしの色に使用すると、テキスト ボックスの値に応じて背景色を変更できます。  
   
     ```  
     =IIF(Fields!PctComplete.Value >= 10, "Green", IIF(Fields!PctComplete.Value >= 1, "Blue", "Red"))  
@@ -296,7 +296,7 @@ ms.locfileid: "36179101"
     =IIF(DateDiff("d",Fields!ImportantDate.Value, Now())>7,"Red","Blue")  
     ```  
   
--   値をテスト、`PhoneNumber`フィールドし、"No Value"を返す場合は`null`(`Nothing`で[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) です。 それ以外の場合、電話番号の値を返します。 この式を使用して、レポート アイテムに含まれるテキスト ボックスの値を制御できます。  
+-   値をテスト、`PhoneNumber`フィールドし、"No Value"を返す場合は`null`(`Nothing`で[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])。 それ以外の場合、電話番号の値を返します。 この式を使用して、レポート アイテムに含まれるテキスト ボックスの値を制御できます。  
   
     ```  
     =IIF(Fields!PhoneNumber.Value Is Nothing,"No Value",Fields!PhoneNumber.Value)  
@@ -332,7 +332,7 @@ ms.locfileid: "36179101"
     =Sum(Fields!LineTotal.Value, "Order")  
     ```  
   
--   使用することも、`Sum`条件付き集計計算の関数。 たとえば、データセットに State という名前のフィールドが存在し、Not Started、Started、Finished という値を設定できる場合、次の式をグループ ヘッダーで使用すると、値 Finished の合計のみが計算されます。  
+-   使用することも、`Sum`関数は条件付き集計計算します。 たとえば、データセットに State という名前のフィールドが存在し、Not Started、Started、Finished という値を設定できる場合、次の式をグループ ヘッダーで使用すると、値 Finished の合計のみが計算されます。  
   
     ```  
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
@@ -342,7 +342,7 @@ ms.locfileid: "36179101"
   
 -   `RowNumber` 関数をデータ領域内のテキスト ボックスで使用すると、式が表示されるテキスト ボックスの各インスタンスの行数が表示されます。 この関数は、テーブル内の行数を数える場合に役立ちます。 また、行数に基づいた改ページの指定など、より複雑なタスクにも役立ちます。 詳細については、このトピックの「 [改ページ](#PageBreaks) 」を参照してください。  
   
-     `RowNumber` に指定したスコープによって、どの時点で番号の再設定を開始するかが制御されます。 `Nothing`キーワードは、関数が、最も外側にあるデータ領域の最初の行の位置を開始することを示します。 入れ子になったデータ領域内でカウントを開始するには、データ領域の名前を使用します。 グループ内でカウントを開始するには、グループの名前を使用します。  
+     `RowNumber` に指定したスコープによって、どの時点で番号の再設定を開始するかが制御されます。 `Nothing`キーワードは、関数の最も外側のデータ領域の最初の行のカウントが開始されることを示します。 入れ子になったデータ領域内でカウントを開始するには、データ領域の名前を使用します。 グループ内でカウントを開始するには、グループの名前を使用します。  
   
     ```  
     =RowNumber(Nothing)  
@@ -456,7 +456,7 @@ ms.locfileid: "36179101"
     =IIF(CountRows()>12,false,true)  
     ```  
   
--   次の式を設定すると、`Hidden`列のプロパティは、データ ソースからデータが取得された後、レポート データセットにフィールドが存在するかどうかのみ列を示します。  
+-   次の式を設定すると、`Hidden`列のプロパティは、データがデータ ソースから取得された後に、レポート データセットにフィールドが存在するかどうかのみの列を示します。  
   
     ```  
     =IIF(Fields!Column_1.IsMissing, true, false)  
@@ -509,7 +509,7 @@ ms.locfileid: "36179101"
 ### <a name="using-group-variables-for-custom-aggregation"></a>グループ変数を使用したカスタム集計  
  特定のグループ スコープ内のローカルなグループ変数の値を初期化し、その変数を式の中で参照することができます。 カスタム コードでグループ変数を使用するシナリオとしては、カスタム集計の実装が挙げられます。 詳細については、「 [グループ変数を使ったカスタム集計 (Reporting Services 2008)](http://go.microsoft.com/fwlink/?LinkId=128714)」を参照してください。  
   
- 変数の詳細については、次を参照してください。[レポートとグループ変数コレクションの参照&#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)です。  
+ 変数の詳細については、次を参照してください。[レポートとグループ変数コレクションの参照&#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)します。  
   
 ## <a name="suppressing-null-or-zero-values-at-run-time"></a>実行時の NULL 値または 0 の非表示  
  式内の一部の値は、レポート処理時に NULL または未定義と評価されることがあります。 その結果、実行時エラーが発生して、評価した式ではなく **#Error** がテキスト ボックスに表示される場合があります。 `IIF` 関数は特にこの動作の影響を受けます。これは、If-Then-Else ステートメントとは異なり、`IIF` ステートメントの各部分 (関数呼び出しを含む) が、`true` であるか `false` であるかを検証するルーチンに渡される前に評価されるためです。 `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` ステートメントを実行すると、 **が NOTHING の場合は、表示されたレポートに** #Error `Fields!Sales.Value` と表示されます。  

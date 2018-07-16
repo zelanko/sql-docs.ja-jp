@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 413a61401e37db923a3513a96d8d0252d4183560
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 081ca01462cc2c885e7dea902acb585eddb681ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246832"
 ---
 # <a name="change-the-order-of-attributes"></a>属性の順序の変更
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性の順序を変更できます。  
@@ -43,9 +43,9 @@ ms.locfileid: "36178247"
   
 5.  **[選択したエンティティの編集]** をクリックします。  
   
-6.  **エンティティの編集**] ページの [**リーフ メンバー属性**、または**統合メンバー属性**、または**コレクション属性**を選択順序を変更し、上矢印または下矢印をその順序を変更する属性です。  
+6.  **エンティティの編集** ページの **リーフ メンバー属性**、または**統合メンバー属性**、または**コレクション属性**を選択しますこの属性の順序を変更し、上矢印または下矢印をその順序を変更 をクリックします。  
   
-7.  をクリックして**エンティティの保存**です。  
+7.  クリックして**エンティティの保存**します。  
   
 ## <a name="see-also"></a>参照  
  [属性&#40;マスター データ サービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)  

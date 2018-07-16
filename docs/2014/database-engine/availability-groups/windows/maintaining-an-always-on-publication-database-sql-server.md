@@ -1,28 +1,27 @@
 ---
-title: AlwaysOn パブリケーション データベース (SQL Server) のメンテナンス |Microsoft ドキュメント
+title: AlwaysOn パブリケーション データベース (SQL Server) のメンテナンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 caps.latest.revision: 9
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: dd0f464aeefcbd77f2a4f0dee726516a55a60132
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a2e66a3537b62658458357a642a76d6e283abb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200202"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>AlwaysOn パブリケーション データベースのメンテナンス (SQL Server)
   このトピックでは、AlwaysOn 可用性グループを使用するときのパブリケーション データベースのメンテナンスについての特別な考慮事項について説明します。  
@@ -36,17 +35,17 @@ ms.locfileid: "36178535"
   
 -   レプリケーション モニターは、常に元のパブリッシャーの下でパブリケーション情報を表示します。 ただし、元のパブリッシャーをサーバーとして追加することで、この情報を任意のレプリカからレプリケーション モニターで表示することができます。  
   
--   ストアド プロシージャまたはレプリケーション管理オブジェクト (RMO) を使用して現在のプライマリでレプリケーションを管理する場合、パブリッシャー名を指定する際には、データベースのレプリケーションを有効にしたインスタンス (元のパブリッシャー) の名前を指定する必要があります。 適切な名前を決定するには、`PUBLISHINGSERVERNAME` 関数を使用します。 パブリッシング データベースを可用性グループに参加させると、セカンダリ データベース レプリカに格納されているレプリケーション メタデータは、プライマリにあるレプリケーション メタデータと同一になります。 その結果、プライマリでレプリケーションが有効なパブリケーション データベースでは、セカンダリのシステム テーブルに格納されるパブリッシャー インスタンス名は、セカンダリではなくプライマリの名前になります。 これにより、パブリケーション データベースがセカンダリにフェールオーバーした場合に、レプリケーションの構成およびメンテナンスに影響が出ます。 たとえば、レプリケーションは、フェールオーバー後は、セカンダリでストアド プロシージャを構成して、別のレプリカで有効化されたパブリケーション データベースへのプル サブスクリプションを場合は、代わりに元のパブリッシャーの名前を指定する必要があります、現在のパブリッシャーとして、 *@publisher*のパラメーター`sp_addpullsubscription`または`sp_addmergepulllsubscription`です。 ただし、フェールオーバー後にパブリケーション データベースを有効にした場合、システム テーブルに格納されるパブリッシャー インスタンス名は、現在のプライマリ ホストの名前になります。 この場合、 *@publisher* パラメーターに現在のプライマリ レプリカのホスト名を使用します。  
+-   ストアド プロシージャまたはレプリケーション管理オブジェクト (RMO) を使用して現在のプライマリでレプリケーションを管理する場合、パブリッシャー名を指定する際には、データベースのレプリケーションを有効にしたインスタンス (元のパブリッシャー) の名前を指定する必要があります。 適切な名前を決定するには、`PUBLISHINGSERVERNAME` 関数を使用します。 パブリッシング データベースを可用性グループに参加させると、セカンダリ データベース レプリカに格納されているレプリケーション メタデータは、プライマリにあるレプリケーション メタデータと同一になります。 その結果、プライマリでレプリケーションが有効なパブリケーション データベースでは、セカンダリのシステム テーブルに格納されるパブリッシャー インスタンス名は、セカンダリではなくプライマリの名前になります。 これにより、パブリケーション データベースがセカンダリにフェールオーバーした場合に、レプリケーションの構成およびメンテナンスに影響が出ます。 たとえば、フェールオーバー後は、セカンダリでストアド プロシージャでレプリケーションを構成して、別のレプリカで有効化されたパブリケーション データベースへのプル サブスクリプションが必要の場合は、代わりに元のパブリッシャーの名前を指定する必要があります、として現在のパブリッシャー、 *@publisher*パラメーターの`sp_addpullsubscription`または`sp_addmergepulllsubscription`します。 ただし、フェールオーバー後にパブリケーション データベースを有効にした場合、システム テーブルに格納されるパブリッシャー インスタンス名は、現在のプライマリ ホストの名前になります。 この場合、 *@publisher* パラメーターに現在のプライマリ レプリカのホスト名を使用します。  
   
     > [!NOTE]  
-    >  一部の手順など`sp_addpublication`、 *@publisher*パラメーターがのインスタンスではないパブリッシャーに対してのみサポートされている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以外の場合とは無関係の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]AlwaysOn です。  
+    >  一部のプロシージャなど`sp_addpublication`、 *@publisher*パラメーターがのインスタンスではないパブリッシャーに対してのみサポートされている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; このような場合は関係しません[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]AlwaysOn。  
   
 -   フェールオーバー後に [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] でサブスクリプションを同期するには、サブスクライバーからプル サブスクリプションを同期し、アクティブなパブリッシャーからプッシュ サブスクリプションを同期します。  
   
 ##  <a name="RemovePublDb"></a> 可用性グループからのパブリッシュされたデータベースの削除  
  パブリッシュされたデータベースを可用性グループから削除する場合、またはパブリッシュされたメンバー データベースを含む可用性グループを削除する場合、次の点を考慮します。  
   
--   実行する必要があります、元のパブリッシャーのパブリケーション データベースを可用性グループのプライマリ レプリカから削除する場合`sp_redirect_publisher`の値を指定せず、 *@redirected_publisher*パラメーターを削除するために、パブリッシャー/データベース ペアのリダイレクト。  
+-   実行する必要がある元のパブリッシャーでパブリケーション データベースを可用性グループのプライマリ レプリカから削除する場合`sp_redirect_publisher`の値を指定せず、 *@redirected_publisher*パラメーターを削除するには、パブリッシャー/データベース ペアをリダイレクトします。  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -85,7 +84,7 @@ ms.locfileid: "36178535"
         @ignore_distributor = 1;  
     ```  
   
-     実行`sp_droppublication`をすべてのパブリケーションを削除します。 この場合も、アクティブなパブリッシング データベースのメタデータをディストリビューターで保持するために、 *@ignore_distributor* パラメーターを 1 に設定します。  
+     実行`sp_droppublication`のすべてのパブリケーションを削除します。 この場合も、アクティブなパブリッシング データベースのメタデータをディストリビューターで保持するために、 *@ignore_distributor* パラメーターを 1 に設定します。  
   
     ```  
     EXEC sys.sp_droppublication   
@@ -115,7 +114,7 @@ ms.locfileid: "36178535"
 -   [レプリケーション サブスクライバーと AlwaysOn 可用性グループ&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [前提条件、制限事項、および AlwaysOn 可用性グループに関する推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループ: 相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server のレプリケーション](../../../relational-databases/replication/sql-server-replication.md)  

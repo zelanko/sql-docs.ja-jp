@@ -1,5 +1,5 @@
 ---
-title: SQL Server プロファイラー - ソース テーブル データベース エンジン チューニング アドバイザーでワークロード テーブルの選択 |Microsoft ドキュメント
+title: SQL Server Profiler - ソース テーブル データベース エンジン チューニング アドバイザーでワークロード テーブルの選択 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.sourcetable.f1
 helpviewer_keywords:
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Source Table dialog box
 ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8b5ccfddb032fb3833e517632290cfdf7d82e643
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8c371644630c24946b4acc50d77916fb8d0fd4a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285688"
 ---
-# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server プロファイラー - ソース テーブル データベース エンジン チューニング アドバイザー - ワークロード テーブル
+# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler - ソース テーブル データベース エンジン チューニング アドバイザー - ワークロード テーブル
   Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] および[!INCLUDE[ssDE](../includes/ssde-md.md)] チューニング アドバイザーでは、このダイアログ ボックスを使用してテーブルを選択します。  
   
  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] では、**[基になるテーブル]** ダイアログ ボックスを使用して、トレース テーブルの基になるテーブルを指定します。 This is a table from which a trace is loaded, and the contents of which are viewed or used for replaying the trace.  

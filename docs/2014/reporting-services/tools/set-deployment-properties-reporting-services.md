@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
 - publishing reports [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f656681c39367bc82c4b5f2b548df69e6106fffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cf985f4f16f60378dd3d866489fc7c64c940928
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276378"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>配置プロパティを設定する (Reporting Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、レポート サーバー プロジェクトのアイテムをレポート サーバーにパブリッシュするには、レポート サーバーのほかに、必要に応じてレポートのフォルダー、および共有データ ソースを指定する必要があります。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] がレポートをビルド、プレビュー、および配置するために必要なプロパティと値は、レポート サーバー プロジェクトのプロジェクト構成に保存されています。 これらのプロジェクトのプロパティから成る複数の名前付きセットを作成すると、プロパティ セット間で切り替えることができるので便利です。 それぞれのプロパティのセットは、構成です。 たとえば、レポートをテスト サーバーにパブリッシュする構成や、実稼働サーバーにパブリッシュする別の構成などがあります。  
@@ -46,17 +46,17 @@ ms.locfileid: "36178593"
     > [!NOTE]  
     >  複数の構成を使用すると、異なるレポート サーバー間または設定間ですばやく切り替えることができます。  
   
-3.  **OutputPath**  ボックスに、入力するかのビルドの検証、配置、およびレポートのプレビューで使用されるレポート定義を格納するローカル ファイル システム パスを貼り付けます。 このパスは、プロジェクトに使用するパス、およびプロジェクトのパスの下にある子フォルダーの相対パスとは異なる必要があります。  
+3.  **OutputPath**  ボックスに、入力するかビルドの検証、展開、およびレポートのプレビューで使用されるレポート定義を格納するローカル ファイル システム パスを貼り付けます。 このパスは、プロジェクトに使用するパス、およびプロジェクトのパスの下にある子フォルダーの相対パスとは異なる必要があります。  
   
-4.  **ErrorLevel**テキスト ボックスで、ビルドの重要度の問題の種類がエラーとして報告されます。 重要度とレポート、データ ソース、またはその他のプロジェクト リソースを作成するときに発生した問題のレベルの値以下でなければ**ErrorLevel**がエラーとして報告された、それ以外の問題を警告としてレポートされます。 エラーが発生すると、ビルド タスクが失敗する原因になります。 有効な重大度レベルは、0 ～ 4 の範囲です。 既定値は 2 です。  
+4.  **ErrorLevel**テキスト ボックスで、ビルドの重要度の問題の種類がエラーとして報告されます。 重大度を持つレポート、データ ソース、またはその他のプロジェクト リソースを作成するときに発生した問題のレベルの値未満**ErrorLevel**はエラーとして報告される。 それ以外の問題を警告としてレポートされます。 エラーが発生すると、ビルド タスクが失敗する原因になります。 有効な重大度レベルは、0 ～ 4 の範囲です。 既定値は 2 です。  
   
      **ErrorLevel** を使用すると、ビルドの機密性を上げたり下げたりすることができます。 たとえば、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] レポート サーバーへの配置時に、マップを含んだレポートをビルドする場合、既定でエラーが表示され、レポートのビルドは失敗します。 **ErrorLevel** を下げると、マップがレポートから削除され、警告が表示され、レポートのビルド処理は続行されます。  
   
-5.  **StartItem**ボックスの一覧でを表示するプレビュー ウィンドウまたはブラウザーのウィンドウで、レポート プロジェクトの実行時にレポートを選択します。  
+5.  **StartItem**一覧で、レポート プロジェクトを実行すると、プレビュー ウィンドウまたはブラウザー ウィンドウを表示するレポートを選択します。  
   
 6.  **[OverwriteDataSources]** ボックスの一覧で、共有データ ソースがパブリッシュされるたびにサーバー上の共有データ ソースを上書きする場合は、 **[True]** を選択し、サーバー上のデータ ソースを保持する場合は、 **[False]** を選択します。  
   
-7.  **TargetServerVersion**一覧で、いずれかを選択、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]または[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]バージョンの[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]または選択**バージョンの検出**にインストールされているバージョンを自動的に決定するにはによって識別されるサーバー、 **TargetServer URL**プロパティです。 既定値は**SQL Server 2008 R2**です。  
+7.  **TargetServerVersion**一覧で、いずれかを選択、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]または[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]バージョンの[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]または選択**バージョンの検出**自動的にインストールされているバージョンを確認するにはによって識別されるサーバー、 **TargetServer URL**プロパティ。 既定値は**SQL Server 2008 R2**します。  
   
      [OutputPath] で指定されたパスに保存されている、 **[TargetServer URL]** で指定されたレポート サーバーのビルド レポートをカスタマイズするには、 **[TargetServerVersion]** を使用します。  
   

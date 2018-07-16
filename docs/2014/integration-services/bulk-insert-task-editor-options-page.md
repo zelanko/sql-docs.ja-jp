@@ -1,5 +1,5 @@
 ---
-title: 一括挿入タスク エディター (オプション ページ) |Microsoft ドキュメント
+title: 一括挿入タスク エディター ([オプション] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a1a958108c8b6975c3aa362ba6512b995759ff99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: b878f48473e70d61f6de2a02c9268eb4fc91f0ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326212"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>[一括挿入タスク エディター] ([オプション] ページ)
   **[一括挿入タスク エディター]** ダイアログ ボックスの **[オプション]** ページを使用すると、一括挿入操作のプロパティを設定できます。 一括挿入タスクにより、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のテーブルまたはビューに大量のデータがコピーされます。  
@@ -66,7 +66,7 @@ ms.locfileid: "36179585"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [一括挿入タスク エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [一括挿入タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [一括挿入タスク エディター&#40;接続 ページ&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [[式] ページ](expressions/expressions-page.md)   
  [制御フロー](control-flow/control-flow.md)  

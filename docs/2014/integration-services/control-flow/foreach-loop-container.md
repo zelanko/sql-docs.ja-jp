@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9188401b9bbfd3b0c70d446943cfebf22dd93616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47318402206bc0a11ce943d74df8a612acd5f128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280428"
 ---
 # <a name="foreach-loop-container"></a>Foreach ループ コンテナー
   Foreach ループ コンテナーは、パッケージ内で繰り返す制御フローを定義します。 ループの実装は、プログラミング言語の **Foreach** ループ構造と同様です。 パッケージでは、ループは Foreach 列挙子を使用することで有効になります。  Foreach ループ コンテナーは、指定した列挙子のメンバーが処理されるたびに制御フローを繰り返します。  
@@ -35,13 +35,13 @@ ms.locfileid: "36085267"
   
 -   Foreach ADO 列挙子は、テーブル内の行を列挙します。 たとえば、ADO レコードセット内の行を取得できます。  
   
-     レコード セット変換先のパッケージ変数に格納されているレコード セット内のメモリ内のデータの保存`Object`データ型。 通常は、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子に指定する変数は、Object データ型である必要があります。 レコードセット変換先の詳細については、「 [Use a Recordset Destination](../data-flow/recordset-destination.md)」を参照してください。  
+     レコード セット変換先のパッケージ変数に格納されているレコード セット内のメモリ内データを保存します`Object`データ型。 通常は、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子に指定する変数は、Object データ型である必要があります。 レコードセット変換先の詳細については、「 [Use a Recordset Destination](../data-flow/recordset-destination.md)」を参照してください。  
   
 -   Foreach ADO.NET Schema Rowset 列挙子は、データ ソースに関するスキーマ情報を列挙します。 たとえば、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース内のテーブルを列挙して一覧を取得できます。  
   
 -   Foreach File 列挙子は、フォルダー内のファイルを列挙します。 この列挙子は、サブフォルダーをスキャンできます。 たとえば、Windows フォルダーとそのサブフォルダー内から、ファイル名に拡張子 *.log が付いたファイルをすべて読み取ることができます。  
   
--   Foreach From Variable 列挙子は、指定した変数に含まれる列挙可能なオブジェクトを列挙します。 列挙可能なオブジェクトは、配列、ADO.NET `DataTable`、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]列挙子というようにします。 たとえば、サーバーの名前を含む配列の値を列挙できます。  
+-   Foreach From Variable 列挙子は、指定した変数に含まれる列挙可能なオブジェクトを列挙します。 列挙可能なオブジェクトは、配列では、ADO.NET `DataTable`、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]列挙子、という具合です。 たとえば、サーバーの名前を含む配列の値を列挙できます。  
   
 -   Foreach Item 列挙子は、コレクション内のアイテムを列挙します。 たとえば、プロセス実行タスクで使用する実行可能ファイルおよび作業ディレクトリの名前を列挙できます。  
   
@@ -51,13 +51,13 @@ ms.locfileid: "36085267"
   
 -   Foreach Azure Blob の列挙子は、Azure Storage の BLOB コンテナーにある BLOB を列挙します。  
   
--   ADLS ディレクトリ内のファイルを列挙する Foreach ADLS File 列挙子。
+-   ADLS ディレクトリにファイルを列挙する Foreach ADLS File 列挙子。
   
  次の図は、ファイル システム タスクを含む Foreach ループ コンテナーを示しています。 Foreach ループは Foreach File 列挙子を使用し、ファイル システム タスクがファイルをコピーするように構成します。 列挙子が指定するフォルダーに 4 つのファイルが含まれる場合、ループが 4 回繰り返されて 4 つのファイルがコピーされます。  
   
  ![フォルダーを列挙する Foreach ループ コンテナー](../media/ssis-foreachloop.gif "フォルダーを列挙する Foreach ループ コンテナー")  
   
- 変数とプロパティ式を組み合わせて使用すると、パッケージ オブジェクトのプロパティを列挙子のコレクションの値で更新できます。 最初にコレクションの値をユーザー定義変数にマップし、次に、変数を使用するプロパティにプロパティ式を実装します。 たとえば、Foreach File 列挙子のコレクションの値がという名前の変数にマップ`MyFile`され、メール送信タスクの件名のプロパティ、プロパティ式で、変数が使用されます。 パッケージを実行すると、Subject プロパティは、ループが繰り返されるたびにファイルの名前で更新されます。 詳細については、「[パッケージでプロパティ式を使用する](../expressions/use-property-expressions-in-packages.md)」をご覧ください。  
+ 変数とプロパティ式を組み合わせて使用すると、パッケージ オブジェクトのプロパティを列挙子のコレクションの値で更新できます。 最初にコレクションの値をユーザー定義変数にマップし、次に、変数を使用するプロパティにプロパティ式を実装します。 たとえば、Foreach File 列挙子のコレクションの値はという変数にマップ`MyFile`メール送信タスクの Subject プロパティのプロパティ式で、変数を使用しと。 パッケージを実行すると、Subject プロパティは、ループが繰り返されるたびにファイルの名前で更新されます。 詳細については、「[パッケージでプロパティ式を使用する](../expressions/use-property-expressions-in-packages.md)」をご覧ください。  
   
  列挙子のコレクションの値にマップされた変数は、式とスクリプトでも使用できます。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36085267"
 |Foreach Item|列や列のデータ型など、Foreach Item コレクション内のアイテムを定義します。|  
 |Foreach Nodelist|XML ドキュメントの基になる XML ドキュメントを指定し、XPath 操作を構成します。|  
 |Foreach SMO|データベースへの接続と、列挙する SMO オブジェクトを指定します。|  
-|Foreach Azure BLOB|列挙する blob を含む Azure blob コンテナーを指定します。|  
+|Foreach Azure BLOB|Blob の列挙を含む Azure blob コンテナーを指定します。|  
 |Foreach ADLS File|一部のフィルターと共に、列挙するファイルを含む ADLS ディレクトリを指定します。|
   
 ## <a name="property-expressions-in-foreach-loop-containers"></a>Foreach ループ コンテナー内のプロパティ式  

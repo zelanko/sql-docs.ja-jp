@@ -1,5 +1,5 @@
 ---
-title: データ マイニング デザイナーで単一クエリを作成 |Microsoft ドキュメント
+title: データ マイニング デザイナーで単一クエリの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - singleton queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 33c4e815c2bdf5ad0f3c3eaa2bceaed03b09bc77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 917efe321e2e43779e28cb7f707a9dadaeb8a7cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284238"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>データ マイニング デザイナーでの単一クエリの作成
   単一クエリは、1 つのケースに関する予測を作成する場合に便利です。 単一クエリの詳細については、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。  
@@ -61,7 +61,7 @@ AS [t]
   
 4.  **[単一クエリ入力]** テーブルの **[値]** 列で、予測を作成するケースについて説明した値を選択します。  
   
-     たとえば、選択**2**の**Number Children At Home**、し、入力`45`の**Age**です。  
+     たとえば、選択**2**の**Number Children At Home**、し、入力`45`の**年齢**します。  
   
 5.  **[マイニング モデル]** テーブルの予測可能列をタブの下部にある **[変換元]** 列にドラッグします。必要に応じて、列の別名を入力できます。  
   

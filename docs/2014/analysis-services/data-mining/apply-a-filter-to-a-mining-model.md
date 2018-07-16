@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルにフィルターを適用 |Microsoft ドキュメント
+title: マイニング モデルにフィルターを適用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filters [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb6cdfdf92e5cec0da4e27a78474037e2bd7d70e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f550dde21f45d7850db5cc6a27d2247c565dcee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253204"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>マイニング モデルへのフィルターの適用
   入れ子になったテーブルがマイニング構造に含まれている場合は、ケース テーブル、入れ子になったテーブル、またはその両方にフィルターを適用できます。  
@@ -70,7 +70,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  **[値]** ボックスをクリックし、ボックスに値を入力します。  
   
-     たとえば、選択`Income`、列として選択大きい演算子 (>) と、型よりも`30000`します。  
+     たとえば、選択`Income`選択、列と、大きい演算子 (>) と入力しより`30000`します。  
   
 9. グリッドの次の行をクリックします。  
   
@@ -78,11 +78,11 @@ WHERE [Model] <> 'Water Bottle' )
   
 10. グリッドの次の行の **[ルールの適用条件]** ボックスをクリックし、条件を追加します。  
   
-     たとえば、BETWEEN 条件を作成するには、次のように選択します。`AND`論理演算子のドロップダウン リストからです。  
+     たとえば、BETWEEN 条件を作成するには、次のように選択します。`AND`論理演算子のドロップダウン リストから。  
   
 11. 演算子を選択し、手順 7. と手順 8. に示したように値を入力します。  
   
-     たとえば、選択`Income`列に再度、小なり演算子 (<) を選択し、入力`40000`です。  
+     たとえば、 `Income` 、もう一度列として小なり演算子 (<) を選択し、入力`40000`します。  
   
 12. グリッドの次の行をクリックします。  
   
@@ -90,7 +90,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>マイニング モデルの入れ子になったテーブルにフィルターを追加するには  
   
-1.  **\<名 > モデル フィルター**  ダイアログ ボックスで、下のグリッドの空の行をクリックして**マイニング構造列**です。  
+1.  **\<名 > モデル フィルター**  ダイアログ ボックスで、下のグリッドで空の行をクリックします。**マイニング構造列**します。  
   
 2.  ドロップダウン リストから、入れ子になったテーブルの名前を選択します。  
   
@@ -110,7 +110,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  **[値]** をクリックし、値を入力します。  
   
-     たとえば、**マイニング構造列**選択`Model`です。 **演算子** `<>`、値を入力して`Water Bottle`です。 この条件で次のフィルター式が作成されます。  
+     たとえば、**マイニング構造列**選択`Model`します。 **演算子**、 `<>`、値を入力します`Water Bottle`します。 この条件で次のフィルター式が作成されます。  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -119,7 +119,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  入れ子になったテーブルの属性数に制限はないため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では選択できる値の一覧を表示しません。 値を正確に入力する必要があります。 また、入れ子になったテーブルに LIKE 演算子を使用することはできません。  
   
-1.  選択して、条件を結合して、必要に応じて他の条件を追加`AND`または`OR`で、**や**の左側にあるボックス、**条件**グリッドです。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  さらに条件を選択して、条件を結合して、必要に応じて追加`AND`または`OR`で、**や**の左側にあるボックス、**条件**グリッド。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  **[モデル フィルター]** ダイアログ ボックスで、 **[フィルター]** ダイアログ ボックスを使用して作成した条件を確認します。 入れ子になったテーブルの条件は、ケース テーブルの条件に追加され、フィルター条件の完全なセットは **[式]** ボックスに表示されます。  
   
@@ -130,7 +130,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル フィルターの&#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)   
+ [マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)   
  [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
  [マイニング モデルからのフィルターの削除](delete-a-filter-from-a-mining-model.md)  
   

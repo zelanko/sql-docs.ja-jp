@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b4afba941b06e073f2dddffdb96a2dd95ffda5b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb9f39f0eb06bb3a4bd4c2921b23736d1305db3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281508"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>[列マッピング]\(SQL Server インポートおよびエクスポート ウィザード)
-  使用して、**列マッピング**変換パラメーターを編集 ダイアログ ボックス。  
+  使用して、**列マッピング**変換パラメーターを編集するためのダイアログ ボックス。  
   
 > [!NOTE]  
->  テーブルをコピーするオプションを選択する際に、テーブル内のすべての列をコピーする必要はありません。 選択**\<無視 >** で、**先**をスキップする列の場合は、このダイアログ ボックスの列です。  
+>  テーブルをコピーするオプションを選択する際に、テーブル内のすべての列をコピーする必要はありません。 選択**\<無視 >** で、**先**をスキップする列の場合は、このダイアログ ボックスの列。  
   
- このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)です。 ウィザードを正常に実行するために必要なアクセス許可と同様に、ウィザードを開始するためのオプションの詳細については、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)です。  
+ このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と同様に、ウィザードを開始するためのオプションについては、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
   
  SQL Server インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36073525"
  既存のテーブルに存在するデータに、新しいデータを追加するかどうかを指定します。  
   
  **SQL の編集**  
- 既定のステートメントを使用して、**テーブル作成 SQL ステートメント** ダイアログ ボックス、または目的に応じて変更します。 このステートメントを変更する場合、テーブル マップに関連する変更を行う必要があります。  
+ 既定のステートメントを使用して、**テーブル作成 SQL ステートメント** ダイアログ ボックス、または、目的に応じて変更します。 このステートメントを変更する場合、テーブル マップに関連する変更を行う必要があります。  
   
  **変換先テーブルを削除した後、再作成する**  
  変換先テーブルを上書きします。 このオプションは、ウィザードを使用して変換先テーブルを作成する場合にのみ使用できます。 ウィザードによって作成されたパッケージを保存し、その後パッケージを再び実行すると、変換先テーブルは削除されて、再作成されます。  
@@ -67,9 +67,9 @@ ms.locfileid: "36073525"
  変換パラメーターを設定する各変換元列を表示します。  
   
  **変換先**  
- コピー操作中に列を無視するかどうかを指定します。 選択して列のサブセットのみをコピーすることができます**\<無視 >** をスキップする列のこの列にします。 列をマップする前に、マップされないすべての列を無視する必要があります。  
+ コピー操作中に列を無視するかどうかを指定します。 列のサブセットのみをコピーするを選択**\<無視 >** をスキップする列のこの列にします。 列をマップする前に、マップされないすべての列を無視する必要があります。  
   
- **Type**  
+ **型**  
  列のデータ型を選択します。  
   
  **NULL 値の使用**  

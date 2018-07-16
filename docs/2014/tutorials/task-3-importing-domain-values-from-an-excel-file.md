@@ -1,5 +1,5 @@
 ---
-title: 'タスク 3: Excel ファイルからドメイン値のインポート |Microsoft ドキュメント'
+title: 'タスク 3: Excel ファイルからドメイン値のインポート |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fd5f73f95dce1d40689062a368e1cc222023541c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e1f6f8700d0a5730785071f320b9ee88d80235b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299342"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>タスク 3:Excel ファイルからドメイン値をインポートする
   ここでは、Excel ファイルのワークシートから **State** ドメインの値をインポートします。  
@@ -32,7 +32,7 @@ ms.locfileid: "36070851"
   
 3.  右側のペインのツール バーで、 **[値をインポートします]** の横にある **下矢印** をクリックし、 **[Excel から有効な値をインポートします]** をクリックします。  
   
-     ![Excel のメニューから有効な値をインポート](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-01.jpg "Excel メニューからの有効な値のインポート")  
+     ![Excel のメニューから有効な値をインポート](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-01.jpg "Excel のメニューからの有効な値のインポート")  
   
 4.  **[参照]** をクリックし、 **Suppliers.xls**を選択して、 **[開く]** をクリックします。  
   

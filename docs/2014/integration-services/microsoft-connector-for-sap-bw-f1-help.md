@@ -1,5 +1,5 @@
 ---
-title: Microsoft Connector 1.1 for SAP BW の F1 ヘルプ |Microsoft ドキュメント
+title: Microsoft Connector 1.1 for SAP BW の F1 ヘルプ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9664b98f85a551a2ea040b4e595f35f618cf1cca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a3f24dbb9fffb7719ec48e4f792ca8cf813fa87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252318"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Microsoft Connector 1.1 for SAP BW の F1 ヘルプ
   このセクションには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW の 3 種類のコンポーネントについての F1 ヘルプのトピックが含まれています。 このヘルプ トピックは、ウィザードの各画面やダイアログ ボックスで F1 キーを押すか、[ヘルプ] をクリックすることにより、ユーザー インターフェイスから表示することもできます。  
@@ -55,7 +55,7 @@ ms.locfileid: "36177553"
   
 -   [SAP BW 変換先エディター&#40;接続マネージャー ページ&#41;](data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 変換先エディター &#40;[マッピング] ページ&#41;](data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 変換先エディター&#40;マッピング ページ&#41;](data-flow/sap-bw-destination-editor-mappings-page.md)  
   
 -   [SAP BW 変換先エディター&#40;エラー出力 ページ&#41;](data-flow/sap-bw-destination-editor-error-output-page.md)  
   

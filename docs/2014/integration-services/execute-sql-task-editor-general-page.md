@@ -1,5 +1,5 @@
 ---
-title: SQL 実行タスク エディター (全般 ページ) |Microsoft ドキュメント
+title: SQL 実行タスク エディター ([全般] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.general.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 853586d51aff06012734a677794f29a9e7991878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68610e2f72c1fa2f47219a7af9620ec911d7d022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322652"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>[SQL 実行タスク エディター] ([全般] タブ)
   **[SQL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、SQL 実行タスクを構成したり、タスクが実行する SQL ステートメントを指定したりできます。  
@@ -31,10 +31,10 @@ ms.locfileid: "36177805"
  このタスクの詳細については、「[SQL 実行タスク](control-flow/execute-sql-task.md)」、「[SQL 実行タスクのパラメーターとリターン コード](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)」、および「[SQL 実行タスクにおける結果セット](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)」を参照してください。 Transact-SQL クエリ言語の詳細については、「[Transact-SQL リファレンス &#40;データベース エンジン&#41;](/sql/t-sql/language-reference)」を参照してください。  
   
 ## <a name="static-options"></a>静的オプション  
- **Name**  
+ **名前**  
  ワークフロー内の SQL 実行タスクに一意な名前を指定します。 指定された名前は [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **description**  
+ **[説明]**  
  SQL 実行タスクの説明です。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、タスクの目的について記述することをお勧めします。  
   
  **[TimeOut]**  
@@ -50,7 +50,7 @@ ms.locfileid: "36177805"
 >  SQL 実行タスクで ADO 接続マネージャーまたは ODBC 接続マネージャーを使用する場合、 **[CodePage]** プロパティは使用できません。 ソリューションでコード ページを使用する必要がある場合は、SQL 実行タスクで OLE DB 接続マネージャーまたは ADO.NET 接続マネージャーを使用します。  
   
  **[TypeConversionMode]**  
- このプロパティを設定すると`Allowed`、SQL 実行タスクが出力パラメーターの変換を試みるしに割り当てられているクエリの結果は、データ型の変数の結果。 この機能は、結果セットの種類が **単一行** の場合に適用されます。  
+ このプロパティ設定すると`Allowed`、SQL 実行タスクが出力パラメーターの変換を試みるしに割り当てられているクエリの結果、変数の結果データを入力します。 この機能は、結果セットの種類が **単一行** の場合に適用されます。  
   
  **[ResultSet]**  
  SQL ステートメントの実行によって予測される結果の型を指定します。 **[単一行]**、 **[完全な結果セット]**、 **[XML]**、または **[なし]** から選択します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36177805"
   
  **関連項目:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)」、「 [ODBC 接続マネージャー](connection-manager/odbc-connection-manager.md)」、「 [ADO 接続マネージャー](connection-manager/ado-connection-manager.md)」、「 [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)」、「 [SQL Server Compact Edition 接続マネージャー](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **Connection**  
+ **[接続]**  
  定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、[\<**新しい接続...**>] を選択します。  
   
  **[SQLSourceType]**  

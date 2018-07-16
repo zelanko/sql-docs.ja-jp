@@ -1,5 +1,5 @@
 ---
-title: アップグレード アドバイザーを使用したアップグレードの準備 |Microsoft ドキュメント
+title: アップグレード アドバイザーを使用したアップグレードの準備 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server]
 - upgrading SQL Server, Upgrade Advisor
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - analyzing installations for upgrading [SQL Server]
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e2e852fe295ac2e72c4a06f653033f734ac6150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4e669b214e73d462f141022aa84d41224e88ac0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234422"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>アップグレード アドバイザーを使用したアップグレードの準備
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アップグレード アドバイザーは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードの準備に役立ちます。 アップグレード アドバイザーでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でインストールされたコンポーネントが分析され、アップグレードの前または後に修正する必要がある問題を示すレポートが生成されます。  
@@ -68,22 +68,22 @@ ms.locfileid: "36070301"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2、Windows 7 SP1、および [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1。  
   
--   Windows インストーラー 4.5 以降のバージョン。 Windows インストーラーをインストールすることができます、 [Windows インストーラー Web サイト](http://go.microsoft.com/fwlink/?LinkId=49112)です。  
+-   Windows インストーラー 4.5 以降のバージョン。 Windows インストーラーをインストールすることができます、 [Windows インストーラー Web サイト](http://go.microsoft.com/fwlink/?LinkId=49112)します。  
   
--   Microsoft .NET Framework 4。 .NET framework 4 がで使用できる、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]製品メディアとの間、 [.NET Framework 4 ダウンロード ページ](http://go.microsoft.com/fwlink/?LinkId=209895)です。  
+-   Microsoft .NET Framework 4。 .NET framework 4 がで使用できる、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、製品メディアとの間、 [.NET Framework 4 ダウンロード ページ](http://go.microsoft.com/fwlink/?LinkId=209895)します。  
   
-    -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メディアから .NET Framework 4 をインストールするには、ディスク ドライブのルートに移動します。 次に、\redist フォルダーをダブルクリックして、フォルダー、DotNetFrameworks フォルダーをダブルクリックし、dotNetFx40_Full_x86_x64.exe (32 ビットのオペレーティング システム用または 64 ビットのオペレーティング システム用) を実行します。  
+    -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メディアから .NET Framework 4 をインストールするには、ディスク ドライブのルートに移動します。 \Redist フォルダーをダブルクリック、DotNetFrameworks フォルダーをダブルクリックし、dotNetFx40_Full_x86_x64.exe (32 ビット オペレーティング システムまたは 64 ビットのオペレーティング システム用) を実行します。  
   
  アップグレード アドバイザーを Web からインストールするには、ダウンロード ページのダウンロード ボタンをクリックします。 その後すぐにインストールを実行するか、または SQLUA.msi ファイルを保存して後から実行できます。 製品ディスクからインストールする場合は、製品ディスクから直接 SQLUA.msi を実行します。  
   
  アップグレード アドバイザーをインストールした後からを開くことができます、**開始**メニュー。  
   
--   をクリックして**開始**、 をポイント**すべてのプログラム**、 をポイント[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、順にクリック**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー**です。  
+-   クリックして**開始**、 をポイント**すべてのプログラム**、 をポイント[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、順にクリックします**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー**します。  
   
  詳細については、アップグレード アドバイザーのダウンロードおよび [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のリリース ノートに収録されているアップグレード アドバイザーのドキュメントを参照してください。  
   
 ## <a name="see-also"></a>参照  
- [複数のバージョンおよび SQL Server のインスタンスの使用します。](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
+ [複数のバージョンおよび SQL Server のインスタンスを使用します。](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [旧バージョンとの互換性](../../../2014/getting-started/backward-compatibility.md)  
   

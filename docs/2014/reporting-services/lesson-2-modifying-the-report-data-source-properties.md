@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f2d985681028cf919e1f56d1138863497b931c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f7ede1d878eb966ec810098a3a8c1cd6475c4d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175245"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
   このレッスンでは、受信者に配信されるレポートを、レポート マネージャーを使って選択します。 ここで定義するデータ ドリブン サブスクリプションによって、チュートリアル「 **基本的なテーブル レポートの作成 (SSRS チュートリアル)** 」で作成されたレポート [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)が配信されます。 この後の手順では、レポートがデータの取得に使用するデータ ソースの接続情報を変更します。 データ ドリブン サブスクリプションを介して配信できるのは、 **保存されている資格情報** を使用してレポート データ ソースにアクセスするレポートのみです。 保存されている資格情報は、レポートの自動処理に必要となります。  
@@ -32,17 +32,17 @@ ms.locfileid: "36178815"
   
 -   [AdventureWorksDataset を変更するには](#bkmk_modify_dataset)  
   
--   [レポート パラメーターを追加し、レポートを再パブリッシュするには](#bkmk_add_reportparameter)  
+-   [レポート パラメーターを追加し、レポートを再パブリッシュ](#bkmk_add_reportparameter)  
   
--   [レポートを再展開するには](#bkmk_redeploy)  
+-   [レポートを再配置するには](#bkmk_redeploy)  
   
 ##  <a name="bkmk_modify_datasource"></a> データ ソースのプロパティを変更するには  
   
-1.  開始[レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)管理者特権を持つなど、Internet Explorer のアイコンを右クリックし、をクリックして**管理者として実行**です。  
+1.  開始[レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)管理者特権を持つなど、Internet Explorer のアイコンを右クリックし をクリックして**管理者として実行**します。  
   
 2.  **Sales Orders** レポートを含むフォルダーを参照して、ショートカット メニューの **[管理]** をクリックします。  
   
-     ![レポート コンテキスト メニューを開き、管理 の選択](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "レポート コンテキスト メニューを開き、管理 の選択")  
+     ![レポートのコンテキスト メニューを開き、[管理](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "レポートのコンテキスト メニューを開き、管理] の選択")  
   
 3.  **[データ ソース]** タブをクリックします。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36178815"
   
 10. **[適用]** をクリックします。  
   
-11. レポートを表示し、指定した資格情報を使用してレポートが実行されていることを確認します。 レポートを表示するには、 **[表示]** タブをクリックします。レポートが開いたら、する必要があります、従業員名を選択してをクリックして、**レポートの表示**レポートを表示するボタンをクリックします。  
+11. レポートを表示し、指定した資格情報を使用してレポートが実行されていることを確認します。 レポートを表示するには、 **[表示]** タブをクリックします。レポートが開いたら、する必要があります従業員名を選択して順にクリックして、**レポートの表示**レポートを表示するボタンをクリックします。  
   
 ##  <a name="bkmk_modify_dataset"></a> AdventureWorksDataset を変更するには  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36178815"
   
 4.  **[OK]** をクリックします。  
   
-##  <a name="bkmk_add_reportparameter"></a> レポート パラメーターを追加し、レポートを再パブリッシュするには  
+##  <a name="bkmk_add_reportparameter"></a> レポート パラメーターを追加し、レポートを再パブリッシュ  
   
 1.  **レポート データ** ペインで、 **[新規作成]** をクリックし、 **[パラメーター]** をクリックします。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36178815"
   
 6.  **[OK]** をクリックします。 次の図のように、パラメーターが **レポート データ ペイン** に追加されます。  
   
-     ![レポート データ ペインに新しいパラメーターを追加](../../2014/tutorials/media/ssrs-tutorial-datadriven-parameter.gif "レポート データ ペインに新しいパラメーターを追加")  
+     ![レポート データ ペインに新しいパラメーターを追加](../../2014/tutorials/media/ssrs-tutorial-datadriven-parameter.gif "新しいパラメーター、レポート データ ペインに追加されます")  
   
 7.  **[プレビュー]** タブをクリックしてレポートを実行します。レポート最上部のパラメーター入力ボックスに注意してください。 次のいずれかを実行できます。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36178815"
   
 8.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、「[レッスン 6: グループと合計の追加 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」の「レポートをレポート サーバーにパブリッシュするには (オプション)」セクションを参照してください。  
   
-##  <a name="bkmk_redeploy"></a> レポートを再展開するには  
+##  <a name="bkmk_redeploy"></a> レポートを再配置するには  
   
 1.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、「[レッスン 6: グループと合計の追加 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」の「レポートをレポート サーバーにパブリッシュするには (オプション)」セクションを参照してください。  
   

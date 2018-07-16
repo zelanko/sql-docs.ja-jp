@@ -5,24 +5,23 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3da4262dc6bc32155216b3bd41479ad710f71f88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ef7947e68e78916f5e5b78d76797d4f2f879abd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260438"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、SQL フルテキスト フィルター デーモン ランチャー サービス (MSSQLFDLauncher) のサービス アカウントを設定する方法について説明します。 SQL フルテキスト フィルター デーモン ランチャー サービスは、ssNoVersion のフルテキスト検索でフィルター処理や単語区切りを行うフィルター デーモン ホスト プロセスを開始するために使用されます。 フルテキスト検索を使用するには、このサービスが実行されている必要があります。  
@@ -36,14 +35,14 @@ ms.locfileid: "36178178"
   
 1.  **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  **SQL Server 構成マネージャー**をクリックして**SQL Server サービス**を右クリックして**SQL フルテキスト フィルター デーモン ランチャー (*`instance name`*)**、クリックして**プロパティ**です。  
+2.  **SQL Server 構成マネージャー**、 をクリックして**SQL Server サービス**、右クリックして**SQL フルテキスト フィルター デーモン ランチャー (*`instance name`*)**、 をクリックし、**プロパティ**します。  
   
 3.  ダイアログ ボックスの **[ログオン]** タブをクリックし、SQL フルテキスト フィルター デーモン ランチャー サービスによって作成される各プロセスについて、その実行に使用するアカウントを選択または入力します。  
   
 4.  ダイアログ ボックスを閉じた後、 **[再起動]** をクリックすると、SQL フルテキスト フィルター デーモン ランチャー サービスが再起動されます。  
   
   
-##  <a name="error"></a> SQL フルテキスト フィルター デーモン ランチャー サービスが起動しない場合  
+##  <a name="error"></a> 場合、SQL フルテキスト フィルター デーモン ランチャー サービスは起動されません。  
  SQL フルテキスト フィルター デーモン ランチャー サービスが開始されない場合は、次の原因が考えられます。  
   
 -   SQL フルテキスト フィルター デーモン ランチャー サービスのアカウントに関連付けられたパスワードの期限が切れている。  

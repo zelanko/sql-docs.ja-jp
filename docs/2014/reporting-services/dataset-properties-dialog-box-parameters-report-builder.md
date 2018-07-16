@@ -1,5 +1,5 @@
 ---
-title: データセットのプロパティ ダイアログ ボックスのパラメーター (レポート ビルダー) |Microsoft ドキュメント
+title: データセットのプロパティ ダイアログ ボックスのパラメーター (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0b2d38e3cb08d0fd3370557e3c3ad1aa53e97fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50ee6db4cd7e8d16da89f234a67c437390260364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232462"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>[パラメーター] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)
-  選択**パラメーター**上、**データセットのプロパティ** ダイアログ ボックスを追加、変更、およびクエリ パラメーターを削除します。  
+  選択**パラメーター**で、**データセットのプロパティ**ダイアログ ボックスを追加、変更、およびクエリ パラメーターを削除します。  
   
  埋め込みデータセットの場合、オプションはレポート定義のデータセットに適用されます。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36076154"
  **[追加]**  
  一覧に新しいパラメーターを追加します。  
   
- **Delete**  
+ **削除**  
  選択したパラメーターを一覧から削除します。  
   
  **上矢印**  
@@ -74,14 +74,14 @@ ms.locfileid: "36076154"
   
  NULL 値を許容する場合は、このオプションを選択します。  
   
- **クエリから省略**  
+ **クエリから省略します。**  
  共有データセットにのみ適用されます。  
   
  レポート パラメーターの参照が共有データセット フィルターの式に含まれ、クエリに含まれていない場合に、このオプションを選択します。 このオプションを選択した場合、クエリの実行時にこのパラメーターの既定値を指定する必要はありません。  
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [データセットのプロパティ ダイアログ ボックスでは、クエリ&#40;レポート ビルダー&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+ [データセットのプロパティ] ダイアログ ボックスの [クエリ&#40;レポート ビルダー&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-design/report-parameters-report-builder-and-report-designer.md)   

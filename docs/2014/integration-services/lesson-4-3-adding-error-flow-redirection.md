@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 caps.latest.revision: 39
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70f554444431c06d14d67bf7e39d46240581b23a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3e56757b73f01709bca2a989f2610269a5c2556
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178104"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>手順 3 : エラー フロー リダイレクトの追加
   前の実習で学んだように、Lookup Currency Key 変換で壊れているサンプル フラット ファイルを処理しようとするとエラーが発生し、変換を行うことができません。 この変換ではエラー出力に既定の設定を使用するため、エラーが発生すると変換は失敗します。 変換が失敗すると、それ以降のパッケージも失敗します。  
@@ -52,9 +52,9 @@ ms.locfileid: "36179145"
   
 8.  **[入力および出力]** ページで **[出力 0]** を展開し、 **[出力列]** をクリックして、 **[列の追加]** をクリックします。  
   
-9. `Name`プロパティで、「 **ErrorDescription**設定と、`DataType`プロパティを**Unicode 文字列 [DT_WSTR]** です。  
+9. `Name`プロパティに「 **ErrorDescription**設定と、`DataType`プロパティを**Unicode 文字列 [DT_WSTR]** します。  
   
-10. **スクリプト** ページであることを確認、`LocaleID`プロパティに設定されている**英語 (米国。**  
+10. **スクリプト** ページで、いることを確認、`LocaleID`プロパティに設定されて**英語 (米国。**  
   
 11. **[スクリプトの編集]** をクリックして、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) を開きます。 `Input0_ProcessInputRow` メソッドに、次のコードを入力するか貼り付けます。  
   

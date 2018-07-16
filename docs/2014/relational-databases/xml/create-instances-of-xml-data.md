@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - type casting string instances [XML in SQL Server]
 - XML [SQL Server], typed
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 009ba26aa2ab0d12b6577d447f42e722f398e857
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 81971c9b0fb1c6ebcdf4f90650dc5af3da558e90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215062"
 ---
 # <a name="create-instances-of-xml-data"></a>XML データのインスタンスの作成
   このトピックでは、XML インスタンスを生成する方法について説明します。  
@@ -44,7 +44,7 @@ ms.locfileid: "36085167"
 -   一括読み込みを使用する。  
   
 ## <a name="type-casting-string-and-binary-instances"></a>文字列インスタンスとバイナリ インスタンスの型キャスト  
- いずれかを解析することができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などの文字列データ型 **[n]** **[var]****char**、 **[n] テキスト**、 **varbinary**、および**イメージ**に、`xml`データ型のキャスト (CAST) または (変換) 文字列に変換するによって、`xml`データ型。 型指定されていない XML は、正しい形式かどうかが確認されます。 スキーマに関連付けられているがある場合、`xml`も実行される種類を検証します。 詳細については、「 [型指定された XML と型指定されていない XML の比較](compare-typed-xml-to-untyped-xml.md)」を参照してください。  
+ いずれかを解析することができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などの文字列データ型 [**n**] [**var**]**char**、 **[n] text**、 **varbinary**、および**イメージ**に、`xml`のデータ型をキャスト (CAST) または (変換)、文字列に変換する、`xml`データ型。 型指定されていない XML は、正しい形式かどうかが確認されます。 存在する場合は、スキーマが関連付け、`xml`型、検証が実行されることもできます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
  XML ドキュメントは、UTF-8、UTF-16、windows-1252 など、さまざまなエンコードを使用してエンコードできます。 ここでは、文字列およびバイナリの元のデータ型と XML ドキュメントのエンコード間の相互作用における規則、およびパーサーの動作に関する規則を概説します。  
   
@@ -98,7 +98,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
  *style* パラメーターが使用されていないか、この値が 0 に設定されていると、xml DT インスタンスの変換では重要でない空白文字は保持されません。 文字列データを xml DT インスタンスに変換するときの、CONVERT 演算子と *style* パラメーターの使用方法の詳細については、「[CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。  
   
 ### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>例 : 型指定された xml に文字列値をキャストし、列に割り当てる  
- 次の例に、XML フラグメントを格納する文字列変数をキャストする、`xml`データ型に格納し、`xml`型の列。  
+ 次の例は、XML フラグメントを含む文字列変数をキャスト、`xml`データ型に格納し、`xml`型の列。  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -107,7 +107,7 @@ DECLARE  @s varchar(100)
 SET @s = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'   
 ```  
   
- 次の挿入操作は、文字列から暗黙的に変換、`xml`型。  
+ 次の挿入操作が暗黙的に変換する文字列から、`xml`型。  
   
 ```  
 INSERT INTO T VALUES (3, @s)   
@@ -126,7 +126,7 @@ INSERT INTO T VALUES (3, convert (xml, @s))
 ```  
   
 ### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>例 : 型指定された xml に文字列を変換し、変数に割り当てる  
- 次の例では、文字列に変換が`xml`を入力しの変数に割り当てられている、`xml`データ型。  
+ 次の例では、文字列に変換が`xml`の変数に割り当てられているし、入力、`xml`データ型。  
   
 ```  
 declare @x xml  
@@ -148,7 +148,7 @@ SET @xmlDoc = (SELECT Column1, Column2
  ...  
 ```  
   
- SELECT ステートメントへの割り当て中に解析し、テキスト形式の XML フラグメントを返します、`xml`データ型の変数です。  
+ SELECT ステートメントへの代入時に解析し、テキスト形式の XML フラグメントを返します、`xml`データ型の変数。  
   
  使用することも、 [TYPE ディレクティブ](type-directive-in-for-xml-queries.md)を FOR XML クエリの結果を直接返す FOR XML 句で`xml`型。  
   
@@ -167,7 +167,7 @@ SELECT @xmlDoc
 <Production.ProductModel ProductModelID="19" Name="Mountain-100" />...  
 ```  
   
- 次の例で、型指定された`xml`に FOR XML クエリの結果が挿入された、`xml`型の列。  
+ 次の例で、型指定された`xml`FOR XML クエリの結果の挿入、`xml`型の列。  
   
 ```  
 CREATE TABLE T1 (c1 int, c2 xml)  
@@ -184,10 +184,10 @@ go
  FOR XML の詳細については、「[FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TYPE ディレクティブを使用する FOR XML クエリや、`xml` データ型を使用して SQL 列、変数、および出力パラメーターから XML を返す FOR XML クエリなど、異なるサーバー構成の結果として、`xml` データ型インスタンスをクライアントに返します。 ADO.NET プロバイダーでは、クライアント アプリケーション コードで要求をこの`xml`サーバーからバイナリ エンコードで送信されるデータ型情報。 ただし、TYPE ディレクティブを指定しないで FOR XML を使用した場合、XML データは文字列型のデータとして返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TYPE ディレクティブを使用する FOR XML クエリや、`xml` データ型を使用して SQL 列、変数、および出力パラメーターから XML を返す FOR XML クエリなど、異なるサーバー構成の結果として、`xml` データ型インスタンスをクライアントに返します。 ADO.NET プロバイダーでは、クライアント アプリケーション コードで要求をこの`xml`データ型情報は、サーバーからバイナリ エンコード形式で送信します。 ただし、TYPE ディレクティブを指定しないで FOR XML を使用した場合、XML データは文字列型のデータとして返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。  
   
 ## <a name="using-constant-assignments"></a>定数の代入の使用  
- インスタンスが、文字列定数を使用できる、`xml`データ型が必要です。 これは、文字列から XML への暗黙の CAST と同じです。 以下に例を示します。  
+ インスタンスが、文字列定数を使用できます、`xml`データ型が必要です。 これは、文字列から XML への暗黙の CAST と同じです。 以下に例を示します。  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -196,7 +196,7 @@ SET @xmlDoc = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'
 SET @xmlDoc = N'<?xml version="1.0" encoding="ucs-2"?><doc/>'  
 ```  
   
- 前の例は、文字列を暗黙的に変換、`xml`データを入力し、それを`xml`型の変数です。  
+ 前の例では、文字列を暗黙的に変換します、`xml`データ型し、それに割り当てます、`xml`型の変数。  
   
  次の例に定数文字列を挿入する、`xml`型の列。  
   
@@ -209,7 +209,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 >  型指定された XML では、指定したスキーマに対して XML が検証されます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
 ## <a name="using-bulk-load"></a>一括読み込みの使用  
- [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) 機能が強化され、データベースに XML ドキュメントを一括読み込みできるようになりました。 ファイルから XML インスタンスをロードする一括できます、`xml`データベース内の列を入力します。 作業用サンプルについては、「[XML ドキュメントの一括インポートと一括エクスポートの例 &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)」を参照してください。 XML ドキュメントの読み込みの詳細については、「[XML データの読み込み](load-xml-data.md)」を参照してください。  
+ [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) 機能が強化され、データベースに XML ドキュメントを一括読み込みできるようになりました。 ファイルからロード XML インスタンスを一括できます、`xml`型の列、データベースにします。 作業用サンプルについては、「[XML ドキュメントの一括インポートと一括エクスポートの例 &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)」を参照してください。 XML ドキュメントの読み込みの詳細については、「[XML データの読み込み](load-xml-data.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

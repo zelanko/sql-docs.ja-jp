@@ -1,5 +1,5 @@
 ---
-title: 行フィルターを使用して動的なセキュリティを実装 |Microsoft ドキュメント
+title: 行フィルターを使用して動的なセキュリティの実装 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 066e628cc40f4ac4745f4b2edaa93ecdbd8d93d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4364b9c18125b5aa4baa479ae92a2dc688d9fe18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257598"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>行フィルターを使用した動的なセキュリティの実装
   この補足のレッスンでは、動的なセキュリティを実装する追加のロールを作成します。 動的なセキュリティには、現在ログオンしているユーザーのユーザー名またはログイン ID に基づいた行レベルのセキュリティが用意されています。 詳細については、「[ロール (SSAS テーブル)](../analysis-services/tabular-models/roles-ssas-tabular.md)」 を参照してください。  
   
  動的なセキュリティを実装するには、データ ソースとしてのモデルへの接続を作成し、モデル オブジェクトとデータを参照できるユーザーの Windows ユーザー名を含むテーブルを、モデルに追加する必要があります。 このチュートリアルで作成するモデルは Adventure Works Corp. のコンテキスト内にありますが、このレッスンを完了するには、自分のドメインのユーザーが含まれているテーブルを追加する必要があります。 追加するユーザー名のパスワードは必要ありません。 自分のドメインの小人数のサンプル ユーザーを使用して Employee Security テーブルを作成するには、貼り付け機能を使用して、Excel スプレッドシートから従業員データを貼り付けます。 実際のシナリオでは、モデルに追加するユーザー名が含まれたテーブルは通常、実際のデータベースのテーブル (たとえば、実際の dimEmployee テーブルなど) をデータ ソースとして使用します。  
   
- 動的なセキュリティを実装するためには、次の 2 つの新しい DAX 関数を使用して: [USERNAME 関数&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx)と[LOOKUPVALUE 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)です。 行フィルター式に適用されるこれらの関数は、新しいロールで定義されています。 数式では LOOKUPVALUE 関数を使用して Employee Security テーブルの値を指定し、その値を USERNAME 関数に渡します。この関数は、ログオンしているユーザーのユーザー名がこのロールに属することを指定します。 ユーザーは、ロールの行フィルターによって指定されたデータのみを参照できます。 このシナリオでは、販売担当者がインターネット上で自分の販売区域の売上データのみを参照できるように指定します。  
+ 動的なセキュリティを実装するのには、2 つの新しい DAX 関数を使用して: [USERNAME 関数&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx)と[LOOKUPVALUE 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)します。 行フィルター式に適用されるこれらの関数は、新しいロールで定義されています。 数式では LOOKUPVALUE 関数を使用して Employee Security テーブルの値を指定し、その値を USERNAME 関数に渡します。この関数は、ログオンしているユーザーのユーザー名がこのロールに属することを指定します。 ユーザーは、ロールの行フィルターによって指定されたデータのみを参照できます。 このシナリオでは、販売担当者がインターネット上で自分の販売区域の売上データのみを参照できるように指定します。  
   
  この補足のレッスンを完了するには、一連の作業を行います。 この Adventure Works テーブル モデルに固有の作業が実際のシナリオに必ずしも適用されない場合には、そのように記載されています。 各作業には、作業の目的を表す追加情報が含まれています。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36177900"
   
 3.  新しいワークシートで、名、姓、および domain\username を組織の 3 人のユーザーの名前とログイン ID に置き換えます。 先頭の 2 つの行に、Employee Id 1 の同じユーザーを配置します。 これは、このユーザーが 1 つ以上の販売区域に属していることを示します。 Employee Id フィールドと Sales Territory Id フィールドはそのままにします。  
   
-4.  ワークシートとして保存`Sample Employee`です。  
+4.  ワークシートとして保存`Sample Employee`します。  
   
 5.  ワークシートで、従業員データを含むすべてのセルをヘッダーと共に選択し、選択したデータを右クリックし、 **[コピー]** をクリックします。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36177900"
   
      [貼り付け] がグレー表示されている場合は、モデル デザイナー ウィンドウの任意のテーブルの任意の列をクリックし、 **[編集]** メニューの **[貼り付け]** をクリックします。  
   
-7.  **貼り付けプレビュー**ダイアログ ボックスで、**テーブル名**、型`Employee Security`です。  
+7.  **貼り付けプレビュー**  ダイアログ ボックスで**テーブル名**、型`Employee Security`します。  
   
 8.  **[貼り付けるデータ]** で、Sample Employee ワークシートのすべてのユーザー データとヘッダーが含まれていることを確認します。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36177900"
   
      "なし" 権限を設定された新しいロールがリストに追加されます。  
   
-3.  [でをクリックし、新しいロールを**名前**] 列にロールの名前`Sales Employees by Territory`です。  
+3.  [でをクリックし、新しいロールを**名前**] 列にロールの名前を変更`Sales Employees by Territory`。  
   
 4.  **[権限]** 列で、ドロップダウン リストをクリックし、 **[読み取り]** 権限を選択します。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36177900"
   
 7.  **[行フィルター]** タブをクリックします。  
   
-8.  `Employee Security`表で、 **DAX フィルター**列で、次の数式を入力します。  
+8.  `Employee Security`テーブル、 **DAX フィルター**列で、次の数式を入力します。  
   
      `=FALSE()`  
   

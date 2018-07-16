@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d24237c0464b79eb193001baef23e8a7b4362233
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3e2e54a2eb18fc3adb98fca83620d8b88a2cec92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307572"
 ---
 # <a name="view-offline-log-files"></a>オフライン ログ ファイルの表示
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、対象となるインスタンスがオフラインの場合または開始できない場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカルまたはリモート インスタンスから表示できます。  
@@ -56,7 +56,7 @@ ms.locfileid: "36073299"
   
 -   エラー ログ ファイルを含むフォルダーへの読み取り権限。 既定では、エラー ログ ファイルは、次のパスにあります (\<*Drive>* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール先ドライブ、\<*InstanceName*> は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名です)。  
   
-     **\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL12 です。\<InstanceName > \MSSQL\Log**  
+     **\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL12 します。\<InstanceName > \MSSQL\Log**  
   
  WMI 名前空間のセキュリティ設定を確認するには、WMI コントロール スナップインを使用します。  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36073299"
   
 1.  WMI コントロール スナップインを開きます。 これを行うには、次のいずれかの操作を実行します (オペレーティング システムによって異なります)。  
   
-    -   をクリックして**開始**、型`wmimgmt.msc`で、**検索の開始**ボックス、および ENTER キーを押します。  
+    -   クリックして**開始**、型`wmimgmt.msc`で、**検索の開始**ボックス、および ENTER キーを押します。  
   
-    -   をクリックして**開始**、 をクリックして**実行**、型`wmimgmt.msc`、ENTER キーを押します。  
+    -   クリックして**開始**、 をクリックして**実行**、型`wmimgmt.msc`、し、ENTER キーを押します。  
   
 2.  既定では、WMI コントロール スナップインはローカル コンピューターを管理します。  
   
@@ -74,7 +74,8 @@ ms.locfileid: "36073299"
   
     1.  **[WMI コントロール (ローカル)]** を右クリックし、 **[別のコンピューターへ接続]** をクリックします。  
   
-    2.  **[管理するコンピューターの変更]** ダイアログ ボックスで **[別のコンピューター]** をクリックします。  
+    2.  
+  **[管理するコンピューターの変更]** ダイアログ ボックスで **[別のコンピューター]** をクリックします。  
   
     3.  リモート コンピューター名を入力し、 **[OK]** をクリックします。  
   

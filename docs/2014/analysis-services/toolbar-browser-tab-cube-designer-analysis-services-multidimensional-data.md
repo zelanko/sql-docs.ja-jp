@@ -1,5 +1,5 @@
 ---
-title: ツールバー ([ブラウザー] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: ツールバー ([ブラウザー] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c20904d56add8256de37351c1435d06f8f526277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0735af06261d606888fe04d45e968b63f5d6403
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300922"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>ツール バー (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの**ツール バー**にある機能は、キューブやそのオブジェクトをデザインまたは参照しているときと、MDX クエリを作成しているときに使用する共通の操作を実行するときに使用します。 デザイン時とクエリ ビューの両方に共通する操作としては、ユーザー コンテキストの設定、オブジェクトの処理、既定の言語の設定などがあります。  
@@ -65,11 +65,11 @@ ms.locfileid: "36071749"
 |**[更新]**|**[メタデータ]** ペインおよび **[レポート]** ペインの表示を最新の情報に更新します。|  
 |**[昇順で並べ替え]**|**[レポート]** ペイン内の選択行の兄弟を、**[言語]** で指定された言語に対して昇順で並べ替えます。<br /><br /> **注** このオプションは、**[レポート]** ペイン内のセルが選択されている場合にのみ有効です。|  
 |**[降順で並べ替え]**|**[レポート]** ペイン内の選択行の兄弟を、 **[言語]** で指定された言語に対して降順で並べ替えます。<br /><br /> 注: このオプションは、 **[レポート]** ペイン内のセルが選択されている場合にのみ有効です。|  
-|**オート フィルター**|**[結果]** ペイン内の結果を自動的にフィルター処理します。|  
-|**上/下のみを表示します。**|値またはパーセントを選択し、選択されたメジャーに基づいて、**[レポート]** ペイン内の最上位や最下位の数またはパーセントのみを表示します。<br /><br /> このオプションの詳細については、「[TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx)」、「[TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx)」、「[BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx)」、および「[BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx)」を参照してください。|  
+|**自動フィルター**|**[結果]** ペイン内の結果を自動的にフィルター処理します。|  
+|**上/下ののみを表示します。**|値またはパーセントを選択し、選択されたメジャーに基づいて、**[レポート]** ペイン内の最上位や最下位の数またはパーセントのみを表示します。<br /><br /> このオプションの詳細については、「[TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx)」、「[TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx)」、「[BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx)」、および「[BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx)」を参照してください。|  
 |**小計の表示 します。**|小計を表示します。|  
 |**すべてのアイテムの合計**|すべてのメンバーに関する合計を **[レポート]** ペイン内に表示します。|  
-|**空のセルを表示します。**|空のセルを **[レポート]** ペイン内に表示します。|  
+|**空のセルの表示**|空のセルを **[レポート]** ペイン内に表示します。|  
 |**結果をクリア**|**[レポート]** ペイン内の結果をクリアします。|  
 |**コマンドおよびオプション**|**[コマンドおよびオプション]** ダイアログ ボックスを表示し、 **[レポート]** ペインで Microsoft Office 11.0 PivotTable コントロールの詳細プロパティを編集します。 **[コマンドおよびオプション]** ダイアログ ボックスの詳細については、Microsoft Office ドキュメントを参照してください。|  
 |**パースペクティブ**|**[メタデータ]** ペインおよび **[レポート]** ペインで、データおよびメタデータを表示するパースペクティブを選択します。<br /><br /> パースペクティブを使用せずにキューブを表示するには、キューブ名を選択します。|  

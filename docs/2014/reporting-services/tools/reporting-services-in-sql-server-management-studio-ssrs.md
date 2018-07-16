@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], how-to topics
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5564db01308819c3fdb9c777cace2d2308b1c272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba0324f9c74d1888c7ee160735392338bff89795
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301793"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio の Reporting Services (SSRS)
   レポート サーバー管理者は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して次の操作を実行できます。  
@@ -44,9 +44,9 @@ ms.locfileid: "36084921"
   
 -   [作成、削除、またはロールを変更&#40;Management Studio&#41;](../security/role-definitions-create-delete-or-modify.md)  
   
--   [項目を削除する&#40;Management Studio&#41;](delete-an-item-management-studio.md)  
+-   [アイテムの削除&#40;Management Studio&#41;](delete-an-item-management-studio.md)  
   
--   [レポート サーバー ジョブを取り消す&#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
+-   [レポート サーバー ジョブのキャンセル&#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
   
 ## <a name="see-also"></a>参照  
  [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   

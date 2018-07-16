@@ -1,5 +1,5 @@
 ---
-title: キャッシュ変換エディター (接続マネージャー ページ) |Microsoft ドキュメント
+title: キャッシュ変換エディター (接続マネージャー ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetranscon.f1
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
 caps.latest.revision: 10
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2fbbbf560242448abb4704d595f1907e664b6529
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: f20f4054b80f9a76b9748174332d207f55c5d4f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235552"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>[キャッシュ変換エディター] ([接続マネージャー] ページ)
   **[キャッシュ変換エディター]** ダイアログ ボックスの **[接続マネージャー]** タブを使用すると、既存のキャッシュ接続マネージャーを選択したり、新しいキャッシュ接続マネージャーを作成したりできます。  
@@ -41,6 +41,6 @@ ms.locfileid: "36178488"
  既存の接続を編集します。  
   
 ## <a name="see-also"></a>参照  
- [キャッシュ変換エディター] &#40;[マッピング] ページ&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+ [[キャッシュ変換エディター&#40;マッピング] ページ&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: クラスターのプロファイル タブ (マイニング モデル ビューアー) |Microsoft ドキュメント
+title: クラスター プロファイル タブ (マイニング モデル ビューアー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.profiles.f1
 ms.assetid: 1ebafa1f-74e9-4c05-b278-a690fa8543bd
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3cf0d0437b8aea93c692e993d3d2e7167cc4a1c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e1b3e9bc36c75e0786f0e7de4799fd54f13120ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267604"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>[クラスターのプロファイル] タブ (マイニング モデル ビューアー)
   **[クラスターのプロファイル]** タブを使用すると、アルゴリズムによってクラスター モデル内で検出されたクラスターの概要を表示できます。 タブには、各クラスターの属性と、その属性の分布が表示されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36179430"
  **凡例を表示します。**  
  ビューアーの色と **[状態]** 列の値との対応を示すキーを表示するには、このオプションを選択します。  
   
- **ヒストグラム バー**  
+ **[ヒストグラム バー]**  
  各ヒストグラムに含まれる状態の数を制御するには、この値を変更します。 選択した状態の数よりも多くの状態が存在する場合、確率が最も高い状態が保持され、それ以外の状態は **[その他]** にまとめられます。  
   
  **Attributes**  

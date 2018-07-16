@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10013"
 - sql12.rtp.rptdesigner.dataview.hyperionessbasequerydesigner.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Hyperion Essbase [Reporting Services], query designer
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 caps.latest.revision: 21
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7d888349a97cbc05a03c6e32053b805d88ac857f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7c93db9a11c9e3aa33a3e5119aee548f58cc7edb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330992"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Hyperion Essbase クエリ デザイナーのユーザー インターフェイス
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、[!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] データ ソースに対する多次元式 (MDX) クエリを作成するためのグラフィカル クエリ デザイナーが用意されています。 MDX のグラフィカル クエリ デザイナーには、デザイン モードとクエリ モードという 2 つのモードがあります。 いずれのモードにもメタデータ ペインが表示されます。ここから、データ ソースで定義されているキューブのメンバーをドラッグすることによって、MDX クエリを作成できます。レポートの処理時には、このクエリに基づいてデータが取得されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36177038"
  ここでは、グラフィカル クエリ デザイナーの各モードの、ツール バーのボタンとクエリ デザイナーのペインについて説明します。  
   
 ## <a name="graphical-query-designer-in-design-mode"></a>グラフィカル クエリ デザイナー (デザイン モード)  
- 使用するデータセットの MDX クエリを編集するときに、[!INCLUDE[extEssbase](../../../includes/extessbase-md.md)]データ ソース、グラフィカル クエリ デザイナーがデザイン モードで開きます。  
+ 使用するデータセットの MDX クエリを編集するときに、[!INCLUDE[extEssbase](../../../includes/extessbase-md.md)]データ ソースの場合は、グラフィカル クエリ デザイナーがデザイン モードで開きます。  
   
  次の図は、デザイン モードで表示される各ペインの名称を示しています。  
   

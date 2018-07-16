@@ -1,5 +1,5 @@
 ---
-title: ドリルスルー アクションの定義と |Microsoft ドキュメント
+title: ドリルスルー アクションの定義と |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3498bae6136476a92df3c772263f943b54e7d3a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7737ab3d7631440010be2fdb3047d7d021b275b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263728"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>ドリルスルー アクションの定義と使用
   ファクト ディメンションによってファクト データを多次元化する場合、必要なデータのみが返されるようにフィルターを設定しないとクエリのパフォーマンスが低下する可能性があります。 これを回避するために、返される合計行数を制限するドリルスルー アクションを定義できます。 これにより、クエリのパフォーマンスが大幅に向上します。  
@@ -34,15 +34,15 @@ ms.locfileid: "36178562"
   
      次の図はキューブ デザイナーの **[アクション]** タブを示しています。  
   
-     ![キューブ デザイナーの操作 タブ](../../2014/tutorials/media/l8-action1.gif "キューブ デザイナーの操作 タブ")  
+     ![キューブ デザイナーの [アクション] タブ](../../2014/tutorials/media/l8-action1.gif "キューブ デザイナーの [アクション] タブ")  
   
 2.  **[アクション]** タブのツール バーで **[新しいドリルスルー アクション]** ボタンをクリックします。  
   
      表示ペインに、空のアクション テンプレートが表示されます。  
   
-     ![表示ウィンドウで、空白のアクション テンプレート](../../2014/tutorials/media/l8-action2.gif "表示ウィンドウで、空白のアクション テンプレート")  
+     ![表示ウィンドウで、空のアクション テンプレート](../../2014/tutorials/media/l8-action2.gif "表示ウィンドウで、空のアクション テンプレート")  
   
-3.  **名前**ボックスで、このアクションの名前を変更`Internet Sales Details Drillthrough Action`です。  
+3.  **名前**ボックスに、この操作の名前に変更`Internet Sales Details Drillthrough Action`します。  
   
 4.  **[メジャー グループのメンバー]** リストで **[Internet Sales]** をクリックします。  
   
@@ -50,19 +50,19 @@ ms.locfileid: "36178562"
   
 6.  **[返される列]** リストで、 **[Item Description]** と **[Order Number]** チェック ボックスをオンにして、 **[OK]** をクリックします。 次の図は、ここまでの手順を実行した場合に表示されるアクション テンプレートを示しています。  
   
-     ![ドリルスルー列 ボックス](../../2014/tutorials/media/l8-action3.gif "ドリルスルー列 ボックス")  
+     ![[ドリルスルー列] ボックス](../../2014/tutorials/media/l8-action3.gif "ドリルスルー列 ボックス")  
   
 7.  次の図のように、 **[追加のプロパティ]** ボックスを展開します。  
   
-     ![追加のプロパティ ボックス](../../2014/tutorials/media/l8-action4.gif "追加のプロパティ ボックス")  
+     ![追加のプロパティ ボックス](../../2014/tutorials/media/l8-action4.gif "追加のプロパティのボックス")  
   
-8.  **最大行数は**ボックスに、入力`10`です。  
+8.  **最大行数は**ボックスに「`10`します。  
   
-9. **キャプション**ボックスに、入力`Drillthrough to Order Details…`です。  
+9. **キャプション**ボックスに「`Drillthrough to Order Details…`します。  
   
      これらの設定は、返される行数を制限し、クライアント アプリケーションのメニューに表示されるキャプションを指定します。 次の図は、 **[追加のプロパティ]** ボックスでの設定を示しています。  
   
-     ![追加のプロパティ ボックス](../../2014/tutorials/media/l8-action5.gif "追加のプロパティ ボックス")  
+     ![追加のプロパティ ボックス](../../2014/tutorials/media/l8-action5.gif "追加のプロパティのボックス")  
   
 ## <a name="using-the-drillthrough-action"></a>ドリルスルー アクションの使用  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36178562"
   
      次の図のように、Adam Powell に発送された注文の詳細が **[データ サンプル ビューアー]** に表示されます。 しかし、注文日、期限、発送日などの追加の情報があればさらに便利です。 次の手順では、これらの情報を追加します。  
   
-     ![注文が Adam Powell に発送](../../2014/tutorials/media/l8-action6.gif "Adam powell 氏に出荷された注文")  
+     ![注文が Adam Powell に発送](../../2014/tutorials/media/l8-action6.gif "注文が Adam Powell に発送")  
   
 8.  Excel を閉じます。  
   
@@ -108,11 +108,11 @@ ms.locfileid: "36178562"
   
     -   ShipDateKey  
   
-6.  変更、**名前**プロパティを**Order Date Key**属性を`Order Date`の参照ボタンをクリックして、**名前列**プロパティ、および、 **名前列**ダイアログ ボックスで、**日付**ソース テーブルと列のソース列として SimpleDate として。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  変更、**名前**プロパティを**Order Date Key**属性を`Order Date`の参照ボタンをクリックして、**名前列**プロパティ、および、 **名前列**ダイアログ ボックスで、**日付**ソース テーブルと基になる列として SimpleDate として。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  変更、**名前**プロパティを**Due Date Key**属性を`Due Date`と同じ方法を使用してから、 **Order Date Key**属性は、変更、 **列の名前を付けます**プロパティには、この属性を**Date.SimpleDate (WChar)** です。  
+7.  変更、**名前**プロパティを**Due Date Key**属性を`Due Date`と同じ方法を使用して次に、 **Order Date Key**属性は、変更、 **列の名前を**プロパティには、この属性を**Date.SimpleDate (WChar)** します。  
   
-8.  変更、**名前**プロパティを**Ship Date Key**属性を`Ship Date`、し、変更、**名前列**プロパティには、この属性を**Date.SimpleDate (WChar)** です。  
+8.  変更、**名前**プロパティを**Ship Date Key**属性を`Ship Date`、し、変更、**名前列**プロパティには、この属性を**Date.SimpleDate (WChar)** します。  
   
 9. **Tutorial キューブのキューブ デザイナーを開き、** [アクション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブに切り替えます。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36178562"
   
      次の図はこれらの列が選択された状態を示しています。  
   
-     ![ドリルスルー列 ボックス](../../2014/tutorials/media/l8-action7.gif "ドリルスルー列 ボックス")  
+     ![[ドリルスルー列] ボックス](../../2014/tutorials/media/l8-action7.gif "ドリルスルー列 ボックス")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>変更されたドリルスルー アクションの確認  
   
@@ -144,14 +144,14 @@ ms.locfileid: "36178562"
   
      Adam Powell に発送された注文の詳細が一時ワークシートに表示されます。 表示される情報には、次の図に示すように、アイテムの説明、注文番号、受注日、期日、出荷日が含まれます。  
   
-     ![注文が Adam Powell に発送](../../2014/tutorials/media/l8-action8.gif "Adam powell 氏に出荷された注文")  
+     ![注文が Adam Powell に発送](../../2014/tutorials/media/l8-action8.gif "注文が Adam Powell に発送")  
   
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 9 : パースペクティブと翻訳の定義](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>参照  
  [アクション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
- [多次元モデル内のアクション](multidimensional-models/actions-in-multidimensional-models.md)   
+ [多次元モデルのアクション](multidimensional-models/actions-in-multidimensional-models.md)   
  [ディメンションのリレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [ファクト リレーションシップの定義](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
  [ファクト リレーションシップとファクト リレーションシップのプロパティの定義](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  

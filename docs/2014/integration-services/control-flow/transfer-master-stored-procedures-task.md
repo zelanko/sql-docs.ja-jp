@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfermasterspstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fe704e638cb32ff397bf906c61593af6d07ba866
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b89788698662245d69cb8b209286e1e5dd2f93a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235322"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスク
   Master ストアド プロシージャ転送タスクは、 **のインスタンス上の** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース間で、1 つ以上のユーザー定義ストアド プロシージャを転送します。 **master** データベースからストアド プロシージャを転送するには、プロシージャの所有者が dbo である必要があります。  
@@ -49,7 +49,7 @@ ms.locfileid: "36177798"
  Master ストアド プロシージャ転送タスクでは、増分中のログイン転送タスクの進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
   
 ## <a name="execution-value"></a>実行値  
- 実行値で定義されている、`ExecutionValue`タスクのプロパティが転送されたストアド プロシージャの数を返します。 ユーザー定義変数を割り当てることによって、 `ExecValueVariable` Master ストアド プロシージャ転送タスク、ストアド プロシージャの転送に関する情報のプロパティが利用できるその他のオブジェクトをパッケージにします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../use-variables-in-packages.md)」をご覧ください。  
+ 実行値で定義されている、`ExecutionValue`タスクのプロパティは、転送されたストアド プロシージャの数を返します。 ユーザー定義変数を割り当てることで、`ExecValueVariable`ストアド プロシージャの転送については、Master ストアド プロシージャ転送タスクのプロパティが利用できるその他のオブジェクトをパッケージにします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../use-variables-in-packages.md)」をご覧ください。  
   
 ## <a name="log-entries"></a>ログ エントリ  
  Master ストアド プロシージャ転送タスクには、次のようなカスタム ログ エントリがあります。  
@@ -58,7 +58,7 @@ ms.locfileid: "36177798"
   
 -   TransferSStoredProceduresTaskFinishedTransferringObjects  転送が終了したことを報告するログ エントリです。 ログ エントリには、終了時刻が含まれます。  
   
- さらのログ エントリ、`OnInformation`イベントが転送されたストアド プロシージャおよびのログ エントリの数を報告、`OnWarning`が上書きされる変換先でストアド プロシージャのイベントが書き込まれます。  
+ さらに、ログ エントリ、`OnInformation`イベントが転送されたストアド プロシージャとのログ エントリの数を報告、`OnWarning`が上書きされる変換先でストアド プロシージャ イベントが書き込まれます。  
   
 ## <a name="security-and-permissions"></a>セキュリティおよび権限  
  ソースの **master** データベースでストアド プロシージャの一覧を表示する権限が必要です。また、転送先サーバーの sysadmin サーバー ロールのメンバーであるか、転送先サーバーの **master** データベースでストアド プロシージャを作成する権限を持つユーザーである必要があります。  
