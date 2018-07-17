@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,15 +23,16 @@ helpviewer_keywords:
 - ANSI_WARNINGS option
 ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 777d8b08cea0e3bce27a48e98e76476873786ad4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c02a4689055a7379070f675b63f4d538e633d51c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791413"
 ---
 # <a name="set-ansiwarnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ SET ANSI_WARNINGS ON
     > [!NOTE]  
     >  ストアド プロシージャでパラメーターを引き渡す場合や、バッチ ステートメントで変数を宣言または設定する場合、またはユーザー定義関数においては、ANSI_WARNINGS は無視されます。 たとえば、変数を **char(3)** と定義し、これに 4 文字以上の値を設定すると、データが定義されたサイズに合わせて切り捨てられてから、INSERT または UPDATE ステートメントが成功します。  
   
- sp_configure の user options オプションを使用すると、ANSI_WARNINGS の既定の設定をサーバーに対するすべての接続に適用できます。 詳細については、このトピックの「 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。  
+ sp_configure の user options オプションを使用すると、ANSI_WARNINGS の既定の設定をサーバーに対するすべての接続に適用できます。 詳細については、「 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」を参照してください。  
   
  計算列やインデックス付きビューのインデックスを作成または操作するときには、SET ANSI_WARNINGS を ON に設定する必要があります。 SET ANSI_WARNINGS が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューに対して CREATE、UPDATE、INSERT、または DELETE ステートメントを実行すると失敗します。 インデックス付きビューおよび計算列上のインデックスに必要な SET オプション設定の詳細については、「[SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)」の「SET ステートメントの使用に関する留意事項」を参照してください。  
   

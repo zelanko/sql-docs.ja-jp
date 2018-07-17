@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,15 +24,16 @@ helpviewer_keywords:
 - IMPLICIT_TRANSACTIONS option
 ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ca98e975b031aa1bd9a20033e01a8c406c4eb89
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9609e8361e53a6d535c8d1cb0dc753a0542cfbb9
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787313"
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -73,7 +73,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
      IMPLICIT_TRANSACTIONS ON は一般的ではありません。 ほとんどの場合、IMPLICIT_TRANSACTIONS が ON であるのは、SET ANSI_DEFAULTS ON の選択が行われたためです。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、接続時に自動的に IMPLICIT_TRANSACTIONS が OFF に設定されます。 接続でのオプションを off、SET IMPLICIT_TRANSACTIONS の既定値、 SQLClient マネージ プロバイダーで、HTTP エンドポイント経由で受信した SOAP 要求します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、接続時に自動的に IMPLICIT_TRANSACTIONS が OFF に設定されます。 接続でのオプションを off、SET IMPLICIT_TRANSACTIONS の既定値、 SQLClient マネージド プロバイダーで、HTTP エンドポイント経由で受信した SOAP 要求します。  
   
  IMPLICIT_TRANSACTIONS の現在の設定を表示するには、次のクエリを実行します。  
   
@@ -203,7 +203,7 @@ go
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   

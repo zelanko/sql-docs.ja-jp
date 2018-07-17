@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - COLUMNPROPERTY function
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 608c00d948a619d99ef23e62c8c9ba13dbe2fd7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a2c7f7713bf003837b5808d10e52a9a6c251f2e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054449"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782593"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ COLUMNPROPERTY ( id , column , property )
 *property*  
 *id* 引数の場合、*property* 引数は `COLUMNPROPERTY` 関数が返す情報の型を指定します。 *property* 引数は次のいずれかの値になります。
   
-|ReplTest1|Description|返される値|  
+|ReplTest1|[説明]|返される値|  
 |---|---|---|
 |**AllowsNull**|NULL 値を許可します。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
 |**ColumnId**|**sys.columns.column_id** に対応する列の ID 値です。|列 ID<br /><br /> **注:** 複数の列に対してクエリを実行する場合、列の ID 値の順序にギャップが生じることがあります。|  

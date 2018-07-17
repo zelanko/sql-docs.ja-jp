@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,11 +21,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c9980312429ca621da04953f6428e61119f2515
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d4d7be2301d5aa3c95c9c8b157e164d2eee03db
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36244314"
 ---
 # <a name="table-value-constructor-transact-sql"></a>テーブル値コンストラクター (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
  定数、変数、または式を指定します。 式には EXECUTE ステートメントを含めることができません。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- テーブル値コンス トラクターは、2 つの方法のいずれかで使用できます挿入の値の一覧内で直接しています。 値ステートメント、または、派生テーブルとして任意の場所を派生テーブルは許可します。 行数が最大値を超えると、エラー 10738 が返されます。 許可される行数を超えて挿入するには、次のいずれかの方法を使用します。  
+ テーブル値コンス トラクターは、2 つの方法のいずれかで使用できます挿入の値の一覧内で直接しています.。 値ステートメント、または、派生テーブルとして任意の場所を派生テーブルは許可します。 行数が最大値を超えると、エラー 10738 が返されます。 許可される行数を超えて挿入するには、次のいずれかの方法を使用します。  
   
 -   複数の INSERT ステートメントを作成する  
   

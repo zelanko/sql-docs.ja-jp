@@ -23,16 +23,16 @@ helpviewer_keywords:
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ded8fd405adc1b4d1358777faff62f4e94c1e02
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 73f03c6206eda26c8bce1d2aeb2f723bbdc4deb5
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701523"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941998"
 ---
 # <a name="create-a-login"></a>ログインの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,7 +102,8 @@ ms.locfileid: "35701523"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>追加オプション  
- **[ログイン - 新規作成]** ダイアログ ボックスでは、 **[サーバー ロール]**、 **[ユーザー マッピング]**、 **[セキュリティ保護可能なリソース]**、 **[状態]** の 4 つの追加ページにもオプションがあります。  
+ 
+  **[ログイン - 新規作成]** ダイアログ ボックスでは、 **[サーバー ロール]**、 **[ユーザー マッピング]**、 **[セキュリティ保護可能なリソース]**、 **[状態]** の 4 つの追加ページにもオプションがあります。  
   
 ### <a name="server-roles"></a>[サーバー ロール]  
  **[サーバー ロール]** ページには、新しいログインに割り当てることができるすべての可能なロールが一覧表示されます。 使用できるオプションは以下のとおりです。  

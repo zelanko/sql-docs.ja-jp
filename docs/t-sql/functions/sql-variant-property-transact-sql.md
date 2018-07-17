@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -20,15 +19,16 @@ helpviewer_keywords:
 - sql_variant data type
 ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 125a56a896f784ceb08bfd0c0ae2f10b03e802c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e66447775abfb3b2d67bf53ed3f93cfd6b2159b3
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784203"
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
  *property*  
  情報を提供する **sql_variant** プロパティの名前です。 *property* は **varchar(** 128 **)** であり、次のいずれかの値を指定できます。  
   
-|ReplTest1|Description|返される sql_variant の基本データ型|  
+|ReplTest1|[説明]|返される sql_variant の基本データ型|  
 |-----------|-----------------|----------------------------------------|  
 |**BaseType**|以下のような [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型です。<br /><br /> **bigint**<br /><br /> **[バイナリ]**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = 無効な入力|  
 |**[精度]**|数値基本データ型の桁数です。<br /><br /> **datetime** = 23<br /><br /> **smalldatetime** = 16<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** (p,s) および **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> その他のすべてのデータ型 = 0|**int**<br /><br /> NULL = 無効な入力|  

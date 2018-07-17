@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,14 +27,15 @@ helpviewer_keywords:
 - estimated execution information [SQL Server]
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 11bdddd82efcbc4f0e97b8b33d99961caa9dcfd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbeb752920a1d3cab1be4a52e2b9abf213b7b119
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788893"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  SET SHOWPLAN_TEXT では情報が行セットとして返されます。これは階層構造になっており、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プロセッサで各ステートメントが実行されるときのステップを表しています。 出力結果には、ステートメントごとに、ステートメントのテキストを示す 1 行と、実行ステップの詳細を示す複数行が含まれます。 次の表に、出力結果に含まれる列を示します。  
   
-|列名|Description|  
+|列名|[説明]|  
 |-----------------|-----------------|  
 |**StmtText**|PLAN_ROW 型でない行の場合、この列には [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのテキストが含まれます。 PLAN_ROW 型の行の場合、この列には操作の説明が含まれます。 またこの列には物理操作と、必要に応じて論理操作が含まれます。 場合によっては、この列の後に説明が含まれます。説明が後に続くかどうかは、物理操作によって決まります。 物理操作の詳細については、「[SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)」の「**Argument**」列を参照してください。|  
   
