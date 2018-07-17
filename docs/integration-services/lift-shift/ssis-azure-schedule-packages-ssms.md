@@ -8,15 +8,16 @@ ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 89874258c7c8dd12e08ea9a37c6375257ef52c61
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: d52568b59540ed5a3c4a1111ebf1759f5bdd77f8
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335826"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36261977"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を利用し、Azure でデプロイされた SSIS パッケージの実行スケジュールを設定します
 
@@ -24,7 +25,7 @@ SQL Server Management Studio (SSMS) を使用して、Azure SQL Database にデ�
 
 SQL Database を使用して SSIS カタログ (`SSISDB`) をホストする場合、この SSMS 機能を使用し、SSIS パッケージのスケジュール設定に必要な Data Factory のパイプライン、アクティビティ、トリガーを生成できます。 その後、Data Factory でそれらのオブジェクトを任意で編集したり、拡張したりできます。
 
-SSMS を使用してパッケージのスケジュールを設定するとき、SSIS では 3 つの Data Factory オブジェクトが自動的に新しく作成されます。その名前は、選択したパッケージの名前とタイムスタンプに基づきます。 たとえ゛は、SSIS パッケージの名前が **MyPackage** であれば、SSMS によって、次のような Data Factory オブジェクトが新しく作成されます。
+SSMS を使用してパッケージのスケジュールを設定するとき、SSIS では 3 つのデータ ファクトリ オブジェクトが自動的に新しく作成されます。その名前は、選択したパッケージの名前とタイムスタンプに基づきます。 たとえ゛は、SSIS パッケージの名前が **MyPackage** であれば、SSMS によって、次のようなデータ ファクトリ オブジェクトが新しく作成されます。
 
 | Object | [オブジェクト名] |
 |---|---|
@@ -55,7 +56,7 @@ SSMS を使用してパッケージのスケジュールを設定するとき、
 
     ![[新しいスケジュール] ダイアログ ボックスの [スケジュール] ページ](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image4-new-schedule3.png)
 
-5. **[新しいスケジュール]** ダイアログ ボックスでジョブの作成が終わると確認が表示され、SSMS によってこれから作成される新しい Data Factory オブジェクトについて通知されます。 確認ダイアログ ボックスで **[はい]** を選択すると、Azure Portal で新しい Data Factory パイプラインが開きます。ここでレビューやカスタマイズができます。
+5. **[新しいスケジュール]** ダイアログ ボックスでジョブの作成が終わると確認が表示され、SSMS によってこれから作成される新しいデータ ファクトリ オブジェクトについて通知されます。 確認ダイアログ ボックスで **[はい]** を選択すると、Azure Portal で新しいデータ ファクトリ パイプラインが開きます。ここでレビューやカスタマイズができます。
 
     ![新しいスケジュールの確認](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image5-confirmation.png)
 

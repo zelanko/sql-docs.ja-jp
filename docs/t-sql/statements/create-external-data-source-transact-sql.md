@@ -1,10 +1,9 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 07/02/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - External
 - External, data source
 - PolyBase, create data source
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9da6613c69319197da22b9b4cee74e8ef0b289d6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6ea8af698d4664a62dca880222f84bfc902028f8
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34047013"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782663"
 ---
 # <a name="create-external-data-source-transact-sql"></a>外部データ ソース (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -64,7 +63,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 -- (on SQL Server 2016 and Azure SQL Data Warehouse)  
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
-        TYPE = HADOOP,  
+        TYPE = BLOB_STORAGE,  
         LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
         [, CREDENTIAL = credential_name ]
     )  
@@ -93,7 +92,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 -- (on Parallel Data Warehouse)
 CREATE EXTERNAL DATA SOURCE data_source_name
     WITH ( 
-        TYPE = HADOOP,
+        TYPE = BLOB_STORAGE,
         LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
     )
 [;]
@@ -210,7 +209,7 @@ RDBMS のチュートリアルについては、[クロスデータベース ク
 
 |Hadoop Connectivity|Resource Manager の既定のポート|
 |-------------------|-----------------------------|
-|@shouldalert|50300|
+|1|50300|
 |2|50300|
 |3|8021|
 |4|8032|

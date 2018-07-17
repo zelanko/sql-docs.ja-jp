@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,14 +24,15 @@ helpviewer_keywords:
 - overriding query optimizer process
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9fa0047d517d9970b7dcd05c8e3fbcd9db16b40b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b52ce303c0d4fe2cb1fdd9338426400656e5e5d
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781143"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ SET FORCEPLAN { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SET FORCEPLAN は基本的に、クエリ オプティマイザーが [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの処理で使用するロジックを変更します。 SELECT ステートメントから返されるデータは同じであり、この設定とは無関係です。 唯一の違いは、クエリの要求を満たすために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がテーブルをどのように処理するかという点です。  
+ SET FORCEPLAN は基本的に、クエリ オプティマイザーが [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの処理で使用するロジックをオーバーライドします。 SELECT ステートメントから返されるデータは同じであり、この設定とは無関係です。 唯一の違いは、クエリの要求を満たすために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がテーブルをどのように処理するかという点です。  
   
  クエリ内でクエリ オプティマイザー ヒントを使用することによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SELECT ステートメントの処理方法を変更することもできます。  
   
