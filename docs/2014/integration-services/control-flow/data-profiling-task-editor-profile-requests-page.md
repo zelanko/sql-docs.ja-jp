@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.profilerequests.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1a493e342b9637d6e1498e38f9689897d8b65e64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc2c19b0ae0247a8cccbb75f56d943ef277625e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292912"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページを使用すると、計算するプロファイルを選択および構成することができます。 単一のデータ プロファイル タスクで、複数のテーブルまたはビューの複数の列または列の組み合わせに対して複数のプロファイルを計算することができます。  
@@ -74,7 +74,7 @@ ms.locfileid: "36083946"
 |**[列長分布プロファイル要求]**|列長分布プロファイルを計算します。<br /><br /> 列長分布プロファイルは、選択された列に含まれる文字列値の長さごとに、その長さと、テーブル内におけるその長さの行の比率を報告します。 このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、2 文字の米国州コードの列をプロファイルし、3 文字以上の値を検出できます。|  
 |**[列の NULL 比プロファイル要求]**|列の NULL 比プロファイルを計算します。<br /><br /> 列の NULL 比プロファイルは、選択した列の NULL 値の比率を報告します。 このプロファイルを使用すると、列の NULL 値の比率が予想外に高いなどのデータの問題を特定できます。 たとえば、郵便番号列をプロファイルすると、許容範囲を超える欠落した郵便番号の比率を検出できます。|  
 |**[列パターン プロファイル要求]**|列パターン プロファイルを計算します。<br /><br /> 列パターン プロファイルは、文字列型の列に含まれる指定された比率の値に対応する一連の正規表現を報告します。 このプロファイルを使用すると、無効な文字列などのデータの問題を特定できます。 また、このプロファイルには、新しい値を検証するために将来使用できる正規表現も提示されます。 たとえば、郵便番号列のパターン プロファイルでは、\d{5}-\d{4}、\d{5}、および \d{9} という正規表現が生成されます。 その他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれている可能性があります。|  
-|**[列統計プロファイル要求]**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して列統計プロファイルを計算するには、このオプションを選択します。<br /><br /> 列統計プロファイルは、最小、最大、平均値、および標準偏差数値列は、最小、最大などの統計を報告する`datetime`列です。 このプロファイルを使用すると、無効な日付などのデータの問題を特定できます。 たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。|  
+|**[列統計プロファイル要求]**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して列統計プロファイルを計算するには、このオプションを選択します。<br /><br /> 列統計プロファイルは、最小、最大、平均値、および数値の列、および最低限の標準偏差、最大などの統計を報告する`datetime`列。 このプロファイルを使用すると、無効な日付などのデータの問題を特定できます。 たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。|  
 |**[列の値分布プロファイル要求]**|列の値分布プロファイルを計算します。<br /><br /> 列の値分布プロファイルは、選択された列に含まれるすべての異なる値と、それぞれの値が表す行のテーブル内での比率を報告します。 また、テーブル内の指定された比率を超えている値も報告できます。 このプロファイルを使用すると、列に含まれる個別の値の数が正しくないなどのデータの問題を特定できます。 たとえば、米国の州を含む列をプロファイルし、50 個を超える個別の値を検出できます。|  
 |**[機能依存プロファイル要求]**|機能依存プロファイルを計算します。<br /><br /> 機能依存プロファイルは、ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているかを報告します。 このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、米国郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 郵便番号によって州が一意に決定されますが、このプロファイルでは、この依存関係の違反を検出できます。|  
 |**[値包含プロファイル要求]**|値包含プロファイルを計算します。<br /><br /> 値包含プロファイルは、2 つの列間または列のセット間の値の重複を計算します。 また、このプロファイルでは、列または列のセットが、選択したテーブル間の外部キーとして適しているかどうかを判断できます。 このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、Sales テーブルの ProductID 列をプロファイルし、この列に Products テーブルの ProductID 列には存在しない値が含まれていることを検出できます。|  
@@ -134,11 +134,11 @@ ms.locfileid: "36083946"
   
  これらのオプションは、選択したプロファイルによって異なります。 個々のプロファイルの種類にあるオプションの詳細については、次のトピックを参照してください。  
   
--   [候補キー プロファイル要求オプション&#40;データ プロファイル タスク&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [候補キー プロファイル要求 のオプション&#40;データ プロファイル タスク&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
 -   [列の Null 比プロファイル要求オプション&#40;データ プロファイル タスク&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [列統計プロファイル要求オプション&#40;データ プロファイル タスク&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [列統計プロファイル要求 のオプション&#40;データ プロファイル タスク&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
 -   [列の値分布プロファイル要求オプション&#40;データ プロファイル タスク&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
@@ -146,9 +146,9 @@ ms.locfileid: "36083946"
   
 -   [列パターン プロファイル要求オプション&#40;データ プロファイル タスク&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [機能依存プロファイル要求オプション&#40;データ プロファイル タスク&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [機能依存プロファイル要求 のオプション&#40;データ プロファイル タスク&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [値包含プロファイル要求オプション&#40;データ プロファイル タスク&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [値包含プロファイル要求 のオプション&#40;データ プロファイル タスク&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   

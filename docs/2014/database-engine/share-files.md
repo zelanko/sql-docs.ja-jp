@@ -1,5 +1,5 @@
 ---
-title: ファイル共有 |Microsoft ドキュメント
+title: ファイルの共有 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sharing files
 - file sharing [SQL Server]
 - version control services [SQL Server], file sharing
 ms.assetid: 645f5c0a-e949-4e87-8988-85e4d6128464
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 528e0ac6eb185089fc7e5e38f654dd1acf2fb64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b931d9ebcf8ef5889158a4c393833298dc3b097a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308082"
 ---
 # <a name="share-files"></a>ファイル共有
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、ソース管理プロジェクト間で項目を共有できます。 項目を共有すると、1 つの項目に対する変更は、その項目を共有するすべてのプロジェクトに反映されます。  
@@ -38,11 +38,11 @@ ms.locfileid: "36174761"
   
 1.  ソリューション エクスプローラーで、共有ファイルを配置するフォルダーまたはプロジェクトを選択します。  
   
-2.  **ファイル** メニューのをポイント**ソース管理**、クリックして**共有**です。  
+2.  **ファイル**メニューで、**ソース管理**、 をクリックし、**共有**します。  
   
-3.  **と共有**ダイアログ ボックスを共有する項目のディレクトリの一覧を参照し、そのアイテムをクリックします。  
+3.  **と共有** ダイアログ ボックスでは、共有する項目のディレクトリ一覧を参照し、項目をクリックします。  
   
-4.  をクリックして**共有**です。  
+4.  クリックして**共有**します。  
   
 ## <a name="see-also"></a>参照  
  [ソース管理の基礎](../../2014/database-engine/source-control-basics.md)  

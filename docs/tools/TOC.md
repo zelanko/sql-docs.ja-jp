@@ -33,4 +33,5 @@
 
 # sqlpackage
 ## [sqlpackage のインストール](sqlpackage-download.md)
+## [リリース ノート](sqlpackage-release-notes.md)
 ## [sqlpackage ref](sqlpackage.md)

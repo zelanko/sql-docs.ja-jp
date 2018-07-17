@@ -1,5 +1,5 @@
 ---
-title: 名前付きセット フォーム エディター ([計算] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: 名前付きセット フォーム エディター ([計算] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.namedset.f1
 ms.assetid: 0fcdb908-b160-4c66-917f-3185cd272079
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71b2e06ab78f4e9267c9bc85bf55a14b0c71d69c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c548022920690437937bc3a24f39049574d3d911
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291648"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>名前付きセット フォーム エディター (キューブ デザイナーの [計算] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[計算]** タブの **名前付きセット フォーム エディター** ペインを使用すると、名前付きセットを作成したり変更したりできます。  
@@ -30,7 +30,7 @@ ms.locfileid: "36178753"
 >  このペインはフォーム ビューでのみ表示されます。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  名前付きセットの名前を入力します。  
   
  **[式]**  
@@ -48,7 +48,7 @@ ms.locfileid: "36178753"
  [計算&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
  [ツールバー&#40;計算 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [スクリプト オーガナイザー&#40;計算 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [[計算ツール&#40;計算] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [計算ツール&#40;計算 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
  [計算されるメンバー フォーム エディター&#40;計算 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [スクリプト エディター&#40;計算 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   

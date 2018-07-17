@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -25,12 +24,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19e2adba0742454e039f106f1ed5c3cd693384f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd96bf92b8e84185ceb7f85a442648c4726a5eee
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957307"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354044"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>レプリケーション スクリプトのアップグレード (レプリケーション Transact-SQL プログラミング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ ms.locfileid: "32957307"
   
 3.  (省略可) [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の実行を更新して、新しいレプリケーション機能を実装するパラメーターに既定以外の値を設定します。  
   
-4.  パブリッシャー側のパブリケーション データベースに対して、[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の後に、[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 **@publication** を指定し、スナップショット エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @publisher_login **@publisher_login** @job_login **@publisher_password**」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
+4.  パブリッシャー側のパブリケーション データベースに対して、[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の後に、[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 **@publication** を指定し、スナップショット エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** に指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
 5.  (省略可) [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) の実行を更新して、新しいレプリケーション機能を実装するパラメーターに既定以外の値を設定します。  
   
@@ -96,15 +95,15 @@ ms.locfileid: "32957307"
   
 1.  サブスクリプションを作成するストアド プロシージャを実行した後、ディストリビューション エージェント ジョブを作成するストアド プロシージャを実行して、サブスクリプションを同期するようにしてください。 使用するストアド プロシージャは、サブスクリプションの種類に応じて変わります。  
   
-    -   プル サブスクリプションの場合、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) の実行を更新して、サブスクライバーでディストリビューション エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 この操作は、 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)の実行後に行われます。 詳細については、「 [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)」を参照してください。  
+    -   プル サブスクリプションの場合、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) の実行を更新して、サブスクライバーでディストリビューション エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 この操作は、 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)の実行後に行われます。 詳細については、「 [プル サブスクリプションの作成](../../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
-    -   プッシュ サブスクリプションの場合、パブリッシャーで、[sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) を実行します。 **@subscriber**、**@subscriber_db**、**@publication** を指定し、ディストリビューション エージェントをディストリビューターで実行するときの Windows 資格情報を **@job_name** および **@job_password** に指定します。さらに、このエージェント ジョブのスケジュールを指定します。 詳しくは、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」をご覧ください。 この操作は、 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行後に行われます。 詳しくは、「 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
+    -   プッシュ サブスクリプションの場合、パブリッシャーで、[sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) を実行します。 **@subscriber**、**@subscriber_db**、**@publication** を指定し、ディストリビューション エージェントをディストリビューターで実行するときの Windows 資格情報を **@job_name** および **@job_password** に指定します。さらに、このエージェント ジョブのスケジュールを指定します。 詳細については、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。 この操作は、 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行後に行われます。 詳しくは、「 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>マージ パブリケーションを構成するスクリプトをアップグレードするには  
   
 1.  (省略可) 既存のスクリプトで、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の実行を更新して、新しいレプリケーション機能を実装するパラメーターに既定以外の値を設定します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の後に、[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 **@publication** を指定し、スナップショット エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @publisher_login **@publisher_login** @job_login **@publisher_password**」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の後に、[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 **@publication** を指定し、スナップショット エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** に指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
 3.  (省略可) [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) の実行を更新して、新しいレプリケーション機能を実装するパラメーターに既定以外の値を設定します。  
   
@@ -112,9 +111,9 @@ ms.locfileid: "32957307"
   
 1.  サブスクリプションを作成するストアド プロシージャを実行した後、マージ エージェント ジョブを作成するストアド プロシージャを実行して、サブスクリプションを同期するようにしてください。 使用するストアド プロシージャは、サブスクリプションの種類に応じて変わります。  
   
-    -   プル サブスクリプションの場合、[sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) の実行を更新して、サブスクライバーでマージ エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 この操作は、 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)の実行後に行われます。 詳細については、「 [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)」を参照してください。  
+    -   プル サブスクリプションの場合、[sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) の実行を更新して、サブスクライバーでマージ エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 この操作は、 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)の実行後に行われます。 詳細については、「 [プル サブスクリプションの作成](../../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
-    -   プッシュ サブスクリプションの場合、パブリッシャーで、[sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) を実行します。 **@subscriber**、**@subscriber_db**、**@publication** を指定し、マージ エージェントをディストリビューターで実行するときの Windows 資格情報を **@job_name** および **@job_password** に指定します。さらに、このエージェント ジョブのスケジュールを指定します。 詳しくは、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」をご覧ください。 この操作は、 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)の実行後に行われます。 詳しくは、「 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
+    -   プッシュ サブスクリプションの場合、パブリッシャーで、[sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) を実行します。 **@subscriber**、**@subscriber_db**、**@publication** を指定し、マージ エージェントをディストリビューターで実行するときの Windows 資格情報を **@job_name** および **@job_password** に指定します。さらに、このエージェント ジョブのスケジュールを指定します。 詳細については、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。 この操作は、 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)の実行後に行われます。 詳しくは、「 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
  次に、Product テーブルに関するトランザクション パブリケーションを作成する [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] スクリプトの例を示します。 このパブリケーションでは、フェールオーバーとしてキュー更新を使用する即時更新がサポートされます。 読みやすくするために、既定のパラメーターは削除されています。  

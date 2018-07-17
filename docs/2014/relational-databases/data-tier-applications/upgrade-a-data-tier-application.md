@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.upgradedacwizard.reviewpolicy.f1
 - sql12.swb.upgradedacwizard.selectoptions.f1
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2406cf16d4c5d6f2a9189e9f513beee0816a9014
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fbe586573ac3ad40e3bc26514020bb928c0f09e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281698"
 ---
 # <a name="upgrade-a-data-tier-application"></a>データ層アプリケーションのアップグレード
   データ層アプリケーションのアップグレード ウィザードまたは Windows PowerShell スクリプトを使用すると、現在配置されているデータ層アプリケーション (DAC) のスキーマとプロパティを、新しいバージョンの DAC で定義されているスキーマとプロパティに一致するように変更できます。  
@@ -48,13 +48,13 @@ ms.locfileid: "36173747"
 ###  <a name="ChoseDACUpgOptions"></a> DAC アップグレード オプションの選択  
  インプレース アップグレードには 4 つのアップグレード オプションがあります。  
   
--   **データの損失を無視する**– `True`、一部の操作の結果データの損失に場合でも、アップグレードは続行されます。 `False` の場合、これらの操作によってアップグレードは終了します。 たとえば、現在のデータベース内のテーブルが新しい DAC のスキーマに存在しない場合、テーブルは削除される場合`True`を指定します。 既定の設定は`True`します。  
+-   **データ損失を無視**–`True`データの損失が発生するいくつかの操作の場合でも、アップグレードを続行します。 `False` の場合、これらの操作によってアップグレードは終了します。 たとえば、現在のデータベース内のテーブルが新しい DAC のスキーマに存在しない場合、テーブルは削除される場合`True`を指定します。 既定の設定は`True`します。  
   
--   **変更時にブロック**– `True`、データベース スキーマが前の DAC で定義されているものとは異なる場合、アップグレードは終了します。 場合`False`変更が検出された場合でも、アップグレードは続行します。 既定の設定は`False`します。  
+-   **変更時にブロック**– `True`、データベース スキーマが前の DAC で定義されているものとは異なる場合、アップグレードは終了します。 場合`False`変更が検出された場合でも、アップグレードが続行されます。 既定の設定は`False`します。  
   
--   **エラー発生時にロールバック**–`True`トランザクションでは、アップグレードが囲まれているエラーが発生した場合と、ロールバックが試行されます。 `False` の場合、すべての変更が実行時にコミットされます。エラーが発生する場合は、データベースの前のバックアップの復元が必要になる場合があります。 既定の設定は`False`します。  
+-   **失敗時にロールバック**–`True`トランザクションでは、アップグレードが囲まれているエラーが発生した場合と、ロールバックが試行されます。 `False` の場合、すべての変更が実行時にコミットされます。エラーが発生する場合は、データベースの前のバックアップの復元が必要になる場合があります。 既定の設定は`False`します。  
   
--   **ポリシーの検証をスキップ**– `True`、DAC サーバー選択ポリシーは評価されません。 場合`False`ポリシーの評価、およびアップグレードの検証エラーがある場合は終了します。 既定の設定は`False`します。  
+-   **ポリシーの検証をスキップ**– `True`、DAC サーバー選択ポリシーは評価されません。 場合`False`ポリシーが評価され、検証エラーがある場合、アップグレードは終了します。 既定の設定は`False`します。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  DAC アップグレードは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降でのみ実行できます。  
@@ -139,7 +139,7 @@ ms.locfileid: "36173747"
   
  **[DAC パッケージの内容を検証しています]** : 検証プロセスの現在の状態を示す進捗状況バーです。  
   
- **\< 以前**-の初期状態に戻ります、**パッケージの選択**ページ。  
+ **\< 以前**-の初期状態に戻り、**パッケージの選択**ページ。  
   
  **[次へ >]**: **[パッケージの選択]** ページの最終状態に進みます。  
   
@@ -240,13 +240,13 @@ ms.locfileid: "36173747"
   
 2.  開く、`ServerConnection`オブジェクトし、同じインスタンスに接続します。  
   
-3.  使用して`System.IO.File`DAC パッケージ ファイルを読み込めません。  
+3.  使用`System.IO.File`DAC パッケージ ファイルを読み込めません。  
   
-4.  使用して`add_DacActionStarted`と`add_DacActionFinished`DAC アップグレード イベントをサブスクライブします。  
+4.  使用`add_DacActionStarted`と`add_DacActionFinished`DAC アップグレード イベントをサブスクライブします。  
   
-5.  設定、`DacUpgradeOptions`です。  
+5.  設定、`DacUpgradeOptions`します。  
   
-6.  使用して、 `IncrementalUpgrade` DAC をアップグレードする方法です。  
+6.  使用して、 `IncrementalUpgrade` DAC をアップグレードする方法。  
   
 7.  DAC パッケージ ファイルの読み取りに使用するファイル ストリームを閉じます。  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 79de2148e10d4e43ae6560741435b1dcf3f31e90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8975a3c535d627fe41a51b9b4937e204a07326c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298062"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>マージ テーブル アーティクル間に論理レコード リレーションシップを定義する
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、マージ テーブル アーティクル間に論理レコード リレーションシップを定義する方法について説明します。  
@@ -106,7 +106,7 @@ ms.locfileid: "36072758"
   
     -   論理レコードの関連する行で発生する競合を検出し、解決するには、 **@value** には **@logical_record_level_conflict_detection** 」および「 **@logical_record_level_conflict_resolution**」をご覧ください。  
   
-    -   使用するには、標準的な行または列レベルの競合の検出と解決策の値を指定`false`の**@logical_record_level_conflict_detection**と**@logical_record_level_conflict_resolution**、既定値です。  
+    -   標準的な行または列レベルの競合の検出と解決を使用するには、値を指定`false`の**@logical_record_level_conflict_detection**と**@logical_record_level_conflict_resolution**、既定値します。  
   
 3.  論理レコードを構成する各アーティクルに対して、手順 2. を実行します。 論理レコード内の各アーティクルに使用する競合の検出および解決のオプションは、すべて同じである必要があります。 詳しくは、「 [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)」をご覧ください。  
   
@@ -131,9 +131,9 @@ ms.locfileid: "36072758"
   
 2.  標準の行レベルまたは列レベルの競合の検出と解決を使用するには、次の手順を実行します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 値を指定して**logical_record_level_conflict_detection**の**@property**と値の`false`の **@value**です。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 値を指定**logical_record_level_conflict_detection**の**@property**の値と`false`の **@value**します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 値を指定して**logical_record_level_conflict_resolution**の**@property**と値の`false`の **@value**です。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 値を指定**logical_record_level_conflict_resolution**の**@property**の値と`false`の **@value**します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>論理レコード リレーションシップを削除するには  
   
@@ -164,7 +164,7 @@ ms.locfileid: "36072758"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成し、パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティと <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定して、手順 1. で作成した接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーション プロパティの定義が正しくなかったか、パブリケーションが存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが戻る場合`false`、手順 2. でパブリケーションのプロパティが正しく定義されていないか、パブリケーションが存在しません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> プロパティが <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False>に設定されている場合、これを <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>に設定します。  
   

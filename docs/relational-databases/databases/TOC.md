@@ -25,7 +25,6 @@
 ## [データベース コピー ウィザードの使用](use-the-copy-database-wizard.md)  
 ## [バックアップと復元によるデータベースのコピー](copy-databases-with-backup-and-restore.md)  
 ## [データベースのパブリッシュ (SQL Server Management Studio)](publish-a-database-sql-server-management-studio.md)  
-## [Microsoft Azure Virtual Machine への SQL Server データベースの配置](deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  
 # [データベースのデタッチとアタッチ](database-detach-and-attach-sql-server.md)  
 ## [デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL)](move-a-database-using-detach-and-attach-transact-sql.md)  
 ## [デタッチとアタッチを使用したデータベースのアップグレード (Transact-SQL)](upgrade-a-database-using-detach-and-attach-transact-sql.md)  

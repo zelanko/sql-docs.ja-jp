@@ -1,5 +1,5 @@
 ---
-title: FTP タスク エディター (全般 ページ) |Microsoft ドキュメント
+title: FTP タスク エディター ([全般] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.general.f1
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 786f0d4371773f77045f0ef9cd6825057c12a937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f8761af335319cbd205eca3c57d4f6874e5829
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283638"
 ---
 # <a name="ftp-task-editor-general-page"></a>[FTP タスク エディター] ([全般] ページ)
   **[FTP タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクの通信先の FTP サーバーに接続する FTP 接続マネージャーを指定できます。 また、FTP タスクの名前と説明を入力することもできます。  
@@ -42,13 +42,13 @@ ms.locfileid: "36165870"
  **[StopOnFailure]**  
  FTP 操作が失敗した場合に FTP タスクを終了するかどうかを示します。  
   
- **Name**  
+ **名前**  
  FTP タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **description**  
+ **[説明]**  
  FTP タスクの説明を入力します。  
   
 ## <a name="see-also"></a>参照  

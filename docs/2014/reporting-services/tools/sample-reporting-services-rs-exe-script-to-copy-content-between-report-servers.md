@@ -1,5 +1,5 @@
 ---
-title: Sample Reporting Services rs.exe Script to Migrate Content between Report Servers |Microsoft ドキュメント
+title: サンプル Reporting Services rs.exe Script to Migrate Content between Report Servers |Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a1490220bc414ba4ad830bea7dfcfe0134363c56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51008a07a327a9601de1bd52795e19eee44af016
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290298"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>レポート サーバー間でコンテンツを移行するサンプル Reporting Services rs.exe スクリプト
-  このトピックの内容が含まれています、サンプルについて説明[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]コンテンツ アイテムおよび設定を 1 つからコピーする RSS スクリプト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]別のレポート サーバーにレポート サーバーを使用して、 **RS.exe**ユーティリティです。 RS.exe は、ネイティブ モードと SharePoint モードの両方で、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] と共にインストールされます。 このスクリプトは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] アイテム (レポートやサブスクリプションなど) をサーバー間でコピーします。 スクリプトは SharePoint モードとネイティブ モードの両方のレポート サーバーをサポートしています。  
+  このトピックでが含まれていて、サンプルについて説明します[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]から 1 つのコンテンツのアイテムと設定をコピーする RSS スクリプト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]別のレポート サーバーにレポート サーバーを使用して、 **RS.exe**ユーティリティ。 RS.exe は、ネイティブ モードと SharePoint モードの両方で、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] と共にインストールされます。 このスクリプトは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] アイテム (レポートやサブスクリプションなど) をサーバー間でコピーします。 スクリプトは SharePoint モードとネイティブ モードの両方のレポート サーバーをサポートしています。  
   
 ||  
 |-|  
@@ -74,7 +74,7 @@ ms.locfileid: "36165179"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
- スクリプトは同じモードまたは異なるモードのレポート サーバー間でコンテンツをコピーするために使用できます。 コンテンツをコピーするスクリプトを実行するなど、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]ネイティブ モード レポート サーバーを[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]SharePoint モード レポート サーバー。 スクリプトは RS.exe がインストールされているいずれのサーバーからも実行できます。 たとえば、以下の配置では次のことが可能です。  
+ スクリプトは同じモードまたは異なるモードのレポート サーバー間でコンテンツをコピーするために使用できます。 コンテンツをコピーするスクリプトを実行するなど、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]ネイティブ モード レポート サーバー間、 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint モード レポート サーバー。 スクリプトは RS.exe がインストールされているいずれのサーバーからも実行できます。 たとえば、以下の配置では次のことが可能です。  
   
 -   サーバー A **上で** RS.exe とスクリプトを実行する  
   
@@ -96,11 +96,11 @@ ms.locfileid: "36165179"
 |アイテム|移行対象|SharePoint|説明|  
 |----------|--------------|----------------|-----------------|  
 |パスワード|**いいえ**|**いいえ**|パスワードは移行 **されません** 。 コンテンツ アイテムの移行後、移行先サーバーで資格情報を更新します。 たとえば、保存された資格情報を使用するデータ ソースなどです。|  
-|個人用レポート|**いいえ**|**いいえ**|ネイティブ モードの "個人用レポート" 機能は個々のユーザー ログインに基づいているため、スクリプト作成サービスは、rss スクリプトに渡される **–u** パラメーターで指定されていないユーザーの "My Reports" フォルダー内のコンテンツにアクセスすることはできません。 また、"個人用レポート" は [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint モードの機能の 1 つではないため、このフォルダー内のアイテムを SharePoint 環境にコピーすることはできません。 したがって、スクリプトでは、移行元ネイティブ モード レポート サーバー上の「個人用レポート」フォルダー内にあるレポート アイテムはコピーされません。 このスクリプトを使用して "My Reports" フォルダー内のコンテンツを移行するには、次の手順を実行します。<br /><br /> 1) 新しいフォルダーにレポート マネージャーを作成します。 必要に応じて、各ユーザーのフォルダーやサブフォルダーを作成できます。<br /><br /> 2) いずれかの「個人用レポート」コンテンツを持つユーザーとしてログインします。<br /><br /> 3) では、レポート マネージャーをクリックして、**個人用レポート**フォルダーです。<br /><br /> 4) をクリックして、**詳細**フォルダーを表示します。<br /><br /> 5) にコピーする各レポートを選択します。<br /><br /> 6) をクリックして**移動**レポート マネージャーのツールバー。<br /><br /> 7) 先フォルダーを選択します。<br /><br /> 8) ユーザーごとに手順 2. ~ 7. を繰り返します。<br /><br /> 9)、スクリプトを実行します。|  
+|個人用レポート|**いいえ**|**いいえ**|ネイティブ モードの "個人用レポート" 機能は個々のユーザー ログインに基づいているため、スクリプト作成サービスは、rss スクリプトに渡される **–u** パラメーターで指定されていないユーザーの "My Reports" フォルダー内のコンテンツにアクセスすることはできません。 また、"個人用レポート" は [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint モードの機能の 1 つではないため、このフォルダー内のアイテムを SharePoint 環境にコピーすることはできません。 そのため、スクリプトでは、移行元ネイティブ モードのレポート サーバー上の「個人用レポート」フォルダー内にあるレポート アイテムはコピーしません。 このスクリプトを使用して "My Reports" フォルダー内のコンテンツを移行するには、次の手順を実行します。<br /><br /> 1) 新しいフォルダーにレポート マネージャーを作成します。 必要に応じて、各ユーザーのフォルダーやサブフォルダーを作成できます。<br /><br /> 2) いずれかの「個人用レポート」コンテンツを持つユーザーとしてログインします。<br /><br /> 3) では、レポート マネージャーで、をクリックして、**個人用レポート**フォルダー。<br /><br /> 4) をクリックして、**詳細**フォルダーのビュー。<br /><br /> 5) をコピーする各レポートを選択します。<br /><br /> 6) をクリックして**移動**レポート マネージャーのツールバー。<br /><br /> 7)、目的の転送先フォルダーを選択します。<br /><br /> 8) ユーザーごとに手順 2 ~ 7 を繰り返します。<br /><br /> 9)、スクリプトを実行します。|  
 |履歴|**いいえ**|**いいえ**||  
 |履歴の設定|はい|はい|履歴の設定は移行されますが、履歴の詳細は移行されません。|  
 |Schedules|はい|はい|スケジュールを移行するには、SQL Server エージェントが移行先サーバーで実行されている必要があります。 SQL Server エージェントが移行先で実行されていない場合は、次のエラー メッセージが表示されます。<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
-|ロールとシステム ポリシー|はい|はい|既定では、スクリプトはカスタム権限スキーマをサーバー間でコピーしません。 既定の動作では、[次の親アイテムから権限を継承する] フラグが TRUE に設定されている移行先サーバーにアイテムがコピーされます。 スクリプトで個々のアイテムの権限をコピーする場合は、SECURITY スイッチを使用します。<br /><br /> ソースとターゲット サーバーがある場合 **、同じレポート サーバー モードではなく**、たとえばからネイティブ モード SharePoint からモードになり、使用して、SECURITY スイッチ、スクリプトは既定のロールとの比較に基づくグループをマップしようとしています、次のトピック[Compare Roles and Tasks in Reporting Services の SharePoint グループとアクセス許可を](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)です。 カスタムのロールとグループは移行先サーバーにコピーされません。<br /><br /> スクリプトが **同じモードの**サーバー間でコピーする場合は、SECURITY スイッチを使用してください。スクリプトは移行先サーバーで新しいロール (ネイティブ モード) またはグループ (SharePoint モード) を作成します。<br /><br /> ロールが移行先サーバーに既に存在する場合、スクリプトは次のような "FAILURE" メッセージを表示し、他のアイテムの移行を続行します。 スクリプトの完了後、移行先サーバー上のロールがニーズを満たすように構成されていることを確認してください。 移行中のロール: 8 項目が見つかりました。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 詳細については、「[レポート サーバーへのユーザー アクセスを許可する &#40;レポート マネージャー&#41;](../security/grant-user-access-to-a-report-server.md)」を参照してください。<br /><br /> **注:** 移行元サーバー上に存在するユーザーが移行先サーバーに存在しない場合、スクリプトは移行先サーバーでロールの割り当てを適用することはできません。SECURITY スイッチを使用している場合でも同様です。|  
+|ロールとシステム ポリシー|はい|はい|既定では、スクリプトはカスタム権限スキーマをサーバー間でコピーしません。 既定の動作では、[次の親アイテムから権限を継承する] フラグが TRUE に設定されている移行先サーバーにアイテムがコピーされます。 スクリプトで個々のアイテムの権限をコピーする場合は、SECURITY スイッチを使用します。<br /><br /> ソースとターゲット サーバーがある場合**同じレポート サーバー モードでない**、たとえばからネイティブ モード SharePoint からモードになり、スイッチを使用して、セキュリティ、スクリプトは、既定のロールとの比較に基づくグループをマップしようとしています、次のトピックの「[役割の比較と Reporting Services の SharePoint グループとアクセス許可でタスク](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)します。 カスタムのロールとグループは移行先サーバーにコピーされません。<br /><br /> スクリプトが **同じモードの**サーバー間でコピーする場合は、SECURITY スイッチを使用してください。スクリプトは移行先サーバーで新しいロール (ネイティブ モード) またはグループ (SharePoint モード) を作成します。<br /><br /> ロールが移行先サーバーに既に存在する場合、スクリプトは次のような "FAILURE" メッセージを表示し、他のアイテムの移行を続行します。 スクリプトの完了後、移行先サーバー上のロールがニーズを満たすように構成されていることを確認してください。 移行中のロール: 8 項目が見つかりました。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 詳細については、「[レポート サーバーへのユーザー アクセスを許可する &#40;レポート マネージャー&#41;](../security/grant-user-access-to-a-report-server.md)」を参照してください。<br /><br /> **注:** 移行元サーバー上に存在するユーザーが移行先サーバーに存在しない場合、スクリプトは移行先サーバーでロールの割り当てを適用することはできません。SECURITY スイッチを使用している場合でも同様です。|  
 |[共有データ ソース]|はい|はい|スクリプトは移行先サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムが移行先サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 資格情報は、データ ソースの一部としてコピー **されません** 。 コンテンツ アイテムの移行後、移行先サーバーで資格情報を更新します。|  
 |共有データセット|はい|はい||  
 |フォルダー|はい|はい|スクリプトは移行先サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムが移行先サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
@@ -109,7 +109,7 @@ ms.locfileid: "36165179"
 |サブスクリプション|はい|はい||  
 |履歴の設定|はい|はい|履歴の設定は移行されますが、履歴の詳細は移行されません。|  
 |処理オプション|はい|はい||  
-|キャッシュ更新オプション|はい|はい|依存設定はカタログ アイテムの一部として移行されます。 次に示しているのは、スクリプトがレポート (.rdl) と関連設定 (キャッシュ更新オプションなど) を移行するときの出力例です。<br /><br /> Migrating parameters for report TitleOnly.rdl 0 items found.<br /><br /> Migrating subscriptions for report TitleOnly.rdl:1 items found.<br /><br /> 移行のサブスクリプションに保存\\TitleOnly として \server\public\savedreports しています.SUCCESS<br /><br /> Migrating history settings for report TitleOnly.rdl ...SUCCESS<br /><br /> Migrating processing options for report TitleOnly.rdl ...0 items found.<br /><br /> Migrating cache refresh options for report TitleOnly.rdl ...SUCCESS<br /><br /> Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br /><br /> Migrating cache refresh plan titleonly_refresh735amM2F ...SUCCESS|  
+|キャッシュ更新オプション|はい|はい|依存設定はカタログ アイテムの一部として移行されます。 次に示しているのは、スクリプトがレポート (.rdl) と関連設定 (キャッシュ更新オプションなど) を移行するときの出力例です。<br /><br /> Migrating parameters for report TitleOnly.rdl 0 items found.<br /><br /> Migrating subscriptions for report TitleOnly.rdl:1 items found.<br /><br /> 移行の subscription Save \\\server\public\savedreports as TitleOnly.SUCCESS<br /><br /> Migrating history settings for report TitleOnly.rdl ...SUCCESS<br /><br /> Migrating processing options for report TitleOnly.rdl ...0 items found.<br /><br /> Migrating cache refresh options for report TitleOnly.rdl ...SUCCESS<br /><br /> Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br /><br /> Migrating cache refresh plan titleonly_refresh735amM2F ...SUCCESS|  
 |キャッシュ更新計画|はい|はい||  
 |画像|はい|はい||  
 |レポート パーツ|はい|はい||  
@@ -232,7 +232,7 @@ ms.locfileid: "36165179"
   
          `Report: /Reports/TitleOnly`  
   
--   SOURCE_URL と TARGET_URL は、ソースとターゲットの場所を示す有効なレポート サーバー Url をする必要があります[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]レポート サーバー。 ネイティブ モードでは、レポート サーバー URL は次のようになります。  
+-   ソースとターゲットを指す有効なレポート サーバーの Url をする必要があります、SOURCE_URL と TARGET_URL[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]レポート サーバー。 ネイティブ モードでは、レポート サーバー URL は次のようになります。  
   
     -   `http://servername/reportserver`  
   

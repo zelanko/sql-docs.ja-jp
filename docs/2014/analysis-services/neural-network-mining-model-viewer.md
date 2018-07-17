@@ -1,5 +1,5 @@
 ---
-title: ニューラル ネットワーク (マイニング モデル ビューアー) |Microsoft ドキュメント
+title: ニューラル ネットワーク (マイニング モデル ビューアー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.neuralnet.f1
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2db48dccb854d2dc51eaae3b8202324a8feed9aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cb93ac76fb6213817dcef3530387772e099e0e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297412"
 ---
 # <a name="neural-network-mining-model-viewer"></a>ニューラル ネットワーク (マイニング モデル ビューアー)
   **ニューラル ネットワーク** ビューアーを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムまたは [!INCLUDE[msCoName](../includes/msconame-md.md)] ロジスティック回帰アルゴリズムに基づくマイニング モデルを調べることができます。  
@@ -43,8 +43,8 @@ ms.locfileid: "36073862"
   
 |値|説明|  
 |-----------|-----------------|  
-|**属性**|一覧から入力属性を選択します。 場合は、既定値として選択のままにする**\<すべて >** グラフは、すべての入力属性が予測可能な属性に与える影響順の一覧を表示します。|  
-|**Value**|入力属性の値を選択します。|  
+|**属性**|一覧から入力属性を選択します。 既定で選択した場合**\<すべて >** グラフには、すべての入力属性、予測可能な属性に与える影響順の一覧が表示されます。|  
+|**[値]**|入力属性の値を選択します。|  
   
  **出力**  
  分析して棒グラフで比較する予測可能な属性と値を選択するには、次のコントロールを使用します。 選択を変更しなかった場合、棒グラフでは上位 2 つの結果状態を比較します。  
@@ -61,9 +61,9 @@ ms.locfileid: "36073862"
 |値|説明|  
 |-----------|-----------------|  
 |**属性**|**[属性]** で選択した入力属性の名前を表示します。|  
-|**Value**|選択した入力属性の値を表示します。|  
-|**[優先]\<値 1 >**|選択した属性と値の組み合わせが **[値 1]** で選択した対象となる結果にどの程度影響しているかを示す棒を表示します。|  
-|**[優先]\<数値 2 >**|選択した属性と値の組み合わせが **[値 2]** で選択した対象となる結果にどの程度影響しているかを示す棒を表示します。|  
+|**[値]**|選択した入力属性の値を表示します。|  
+|**優先\<値 1 >**|選択した属性と値の組み合わせが **[値 1]** で選択した対象となる結果にどの程度影響しているかを示す棒を表示します。|  
+|**優先\<値 2 >**|選択した属性と値の組み合わせが **[値 2]** で選択した対象となる結果にどの程度影響しているかを示す棒を表示します。|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

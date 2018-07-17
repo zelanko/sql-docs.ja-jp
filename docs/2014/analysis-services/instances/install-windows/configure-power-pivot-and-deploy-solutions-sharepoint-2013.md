@@ -1,5 +1,5 @@
 ---
-title: PowerPivot の構成し、ソリューションの配置 (SharePoint 2013) |Microsoft ドキュメント
+title: PowerPivot の構成し、ソリューションの配置 (SharePoint 2013) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 caps.latest.revision: 10
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f06b47e8f30c60152912c49901341a2d8fdef359
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: bb76491d121921f4e5b826ecf760923ba9e2238e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312672"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>PowerPivot の構成とソリューションの配置 (SharePoint 2013)
-  このトピックでは、配置および PowerPivot の機能への中間層機能強化の構成について説明します。 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] PowerPivot ギャラリーを含むデータ更新、管理ダッシュ ボード、およびデータ プロバイダーをスケジュールします。 **PowerPivot for SharePoint 2013 の構成** ツールを実行して、以下を完了します。  
+  このトピックは、展開と PowerPivot の機能の中間層機能強化の構成について説明します。 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] PowerPivot ギャラリーを含む、データ更新、管理ダッシュ ボード、およびデータ プロバイダーをスケジュールします。 **PowerPivot for SharePoint 2013 の構成** ツールを実行して、以下を完了します。  
   
 -   SharePoint ソリューション ファイルを配置する。  
   
 -   PowerPivot サービス アプリケーションを作成する。  
   
--   Excel Services アプリケーションが SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーを使用するように構成する。 バックエンド サービスとインストールについて、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint モードでサーバーを参照してください[PowerPivot for SharePoint 2013 インストール](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)です。  
+-   Excel Services アプリケーションが SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーを使用するように構成する。 バックエンド サービスとインストールについて、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint モードでサーバーを参照してください[PowerPivot for SharePoint 2013 インストール](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)します。  
   
- PowerPivot for SharePoint 2013 構成ツールをインストールする方法については、次を参照してください[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013。&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
+ PowerPivot for SharePoint 2013 構成ツールをインストールする方法の詳細については、次を参照してください[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013。&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36163783"
   
  SharePoint のインストール時に使用したアカウントでログインするか、SharePoint サーバーの全体管理サイトのプライマリ管理者としてセットアップ アカウントを構成します。  
   
-1.  **開始** メニューのをクリックして**すべてのプログラム**、順にクリック[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、 をクリックして**構成ツール**、クリックして**PowerPivot For SharePoint2013 の構成**です。 ツールは、PowerPivot for SharePoint がローカル サーバーにインストールされている場合にのみ表示されます。  
+1.  **開始** メニューのをクリックして**すべてのプログラム**、順にクリックします[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、 をクリックして**構成ツール**、 をクリックし、 **PowerPivot For SharePoint2013 の構成**します。 ツールは、PowerPivot for SharePoint がローカル サーバーにインストールされている場合にのみ表示されます。  
   
 2.  **[PowerPivot for SharePoint の構成または修復]** をクリックし、 **[OK]** をクリックします。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36163783"
   
     5.  左側のウィンドウで **[サイト コレクションの作成]** をクリックします。 **[サイトの URL]** をメモしておくと、この後の手順で参照できます。 SharePoint サーバーがまだ構成されていない場合、構成ウィザードでは Web アプリケーションとサイト コレクション URL のルートは既定で `http://[ServerName]`になります。 既定値を変更するには、左側のウィンドウの **[既定の Web アプリケーションの作成]** ページおよび **[Web アプリケーション ソリューションの配置]** ページを確認します。  
   
-5.  必要に応じて、各アクションを完了するために使用された残りの入力値を確認します。 左側のウィンドウで各アクションをクリックして、アクションの詳細を確認します。 詳細については、1 つずつを参照してください"サーバーの構成を使用する入力値[構成または修復の PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md) in this トピック。  
+5.  必要に応じて、各アクションを完了するために使用された残りの入力値を確認します。 左側のウィンドウで各アクションをクリックして、アクションの詳細を確認します。 それぞれの詳細については、セクションをご覧ください。"サーバーの構成に使用する入力値[構成または修復の PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md) in this トピック。  
   
 6.  必要に応じて、今回は処理しないすべてのアクションを削除します。 たとえば、Secure Store Service を後で構成する場合は、 **[Secure Store Service の構成]** をクリックし、 **[この操作をタスク一覧に含めます]** チェック ボックスをオフにします。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36163783"
   
 1.  構成ツールによって作成されたサイトの URL を参照します。  
   
-     をクリックして**設定**![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")、順にクリック**サイト設定**です。  
+     をクリックして**設定**![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")、順にクリックします**サイト設定**します。  
   
      **[サイト コレクションの機能]** をクリックします。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36163783"
   
      サービス アプリケーションの名前をクリックして、このサービス アプリケーションの PowerPivot 管理ダッシュボードを開きます。 最初に使用するときは、ダッシュボードの読み込みに数分かかります。  
   
- 詳細については、次を参照してください。 [for SharePoint のインストール Verify a PowerPivot](../../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)です。  
+ 詳細については、次を参照してください。 [for SharePoint のインストール Verify a PowerPivot](../../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)します。  
   
 ##  <a name="bkmk_troubleshoot_issues"></a> 問題のトラブルシューティング  
  問題のトラブルシューティングに役立てるために、診断ログを有効にすることをお勧めします。  
@@ -138,8 +138,8 @@ ms.locfileid: "36163783"
   
 5.  **[OK]** をクリックします。  
   
- 更新のデータのトラブルシューティングに関する詳細については、次を参照してください。 [PowerPivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)です。  
+ データのトラブルシューティングの更新の詳細については、次を参照してください。 [PowerPivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)します。  
   
- 構成ツールの詳細については、次を参照してください。 [PowerPivot 構成ツール](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)です。  
+ 構成ツールの詳細については、次を参照してください。 [PowerPivot 構成ツール](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)します。  
   
   

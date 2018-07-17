@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], publishing to a SharePoint library
 - SharePoint integration [Reporting Services], publishing to a library
@@ -17,13 +17,13 @@ ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 876609eeb6f6a1490f4d2c7ad9196b08e2558646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bff0c3d4ed7f1eb155b170f0ffdbcaac45c20ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317912"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>SharePoint ライブラリへの共有データ ソースのパブリッシュ
   SharePoint 統合モードで実行されているレポート サーバーに共有データ ソースをパブリッシュするには、レポート デザイナーでレポート プロジェクトのプロパティを設定する必要があります。 プロジェクトのプロパティでは、サーバー、レポート、および共有データ ソースへの参照はすべて、完全修飾 URL で指定する必要があります。  
@@ -40,7 +40,7 @@ ms.locfileid: "36176326"
   
 4.  プロジェクトの共有データ ソースをパブリッシュし、以前にパブリッシュされた共有データ ソースを上書きするには、 **[OverwriteDataSources]** を **[True]** に設定します。  
   
-5.  (省略可) **[TargetDataSourceFolder]** には、SharePoint ライブラリまたはライブラリ フォルダーへの URL を入力します。 たとえば、  *http://TestServer/TestSite/Documents/DataSources*です。  
+5.  (省略可) **[TargetDataSourceFolder]** には、SharePoint ライブラリまたはライブラリ フォルダーへの URL を入力します。 たとえば、  *http://TestServer/TestSite/Documents/DataSources*します。  
   
      値を指定しない場合は、 **[TargetReportFolder]** の値が使用されます。  
   
@@ -61,6 +61,6 @@ ms.locfileid: "36176326"
  [[プロパティ ページ] ダイアログ ボックス](../tools/project-property-pages-dialog-box.md)   
  [配置プロパティを設定&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [レポート サーバーへのレポートのパブリッシュ](publishing-reports-to-a-report-server.md)   
- [Office データ接続を使用する&#40;.odc&#41;レポートと共に&#40;Reporting Services の SharePoint 統合モード&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [Office データ接続を使用して、 &#40;.odc&#41;レポート&#40;Reporting Services の SharePoint 統合モード&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

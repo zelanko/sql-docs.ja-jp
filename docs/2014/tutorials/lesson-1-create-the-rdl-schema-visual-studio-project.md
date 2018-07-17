@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 1: RDL スキーマ Visual Studio プロジェクトの作成 |Microsoft ドキュメント'
+title: 'レッスン 1: RDL スキーマ Visual Studio プロジェクトの作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
 caps.latest.revision: 17
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b6c502205f669c48efe1f939ba88e5352205f4de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc69b4bbcc40fa669ca9cf5f889944cb302e4b14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319812"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>レッスン 1 : RDL スキーマ Visual Studio プロジェクトの作成
-  このチュートリアルでは、簡単なコンソール アプリケーションを作成します。 このチュートリアルで開発している前提としています[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]です。  
+  このチュートリアルでは、簡単なコンソール アプリケーションを作成します。 このチュートリアルで開発するいると想定[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services で実行されているレポート サーバー Web サービスにアクセスする場合は、"_SQLExpress" を "ReportServer" パスに追加する必要があります。 以下に例を示します。  
@@ -49,29 +49,29 @@ ms.locfileid: "36176083"
   
 ### <a name="to-create-a-console-application"></a>コンソール アプリケーションを作成するには  
   
-1.  **ファイル** メニューのをポイント**新規**、クリックして**プロジェクト**を開くには、**新しいプロジェクト** ダイアログ ボックス。  
+1.  **ファイル**メニューで、**新規**、 をクリックし、**プロジェクト**を開く、**新しいプロジェクト** ダイアログ ボックス。  
   
-2.  左側のウィンドウで **インストールされたテンプレート**、いずれかをクリックして**Visual Basic**または**Visual c#** ノードを展開し、展開された一覧からプロジェクトのカテゴリの種類を選択します。  
+2.  左側のウィンドウで [**インストールされたテンプレート**、] をクリックするか**Visual Basic**または**Visual c#** ノードを展開し、展開された一覧からプロジェクトのカテゴリの種類を選択します。  
   
 3.  選択、**コンソール アプリケーション**プロジェクトの種類。  
   
-4.  **名前**ボックスで、プロジェクトの名前を入力します。 名前を入力します`SampleRDLSchema`です。  
+4.  **名前**ボックスに、プロジェクトの名前を入力します。 名前を入力します`SampleRDLSchema`します。  
   
-5.  **場所**ボックスで、プロジェクトを保存またはをクリックする場所のパスを入力**参照**フォルダーに移動します。  
+5.  **場所**ボックスに、プロジェクトを保存する先のパスを入力**参照**フォルダーに移動します。  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] ソリューション エクスプ ローラーでプロジェクトの折りたたまれたビューが表示されます。  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] ソリューション エクスプ ローラーで、プロジェクトの折りたたまれたビューが表示されます。  
   
 7.  **[プロジェクト]** メニューの **[既存項目の追加]** をクリックします。  
   
-8.  .Cs または .vb ファイルを生成するための場所に移動し、ファイルを選択し、をクリックして**追加**です。  
+8.  .Cs または .vb ファイルを生成した場所に移動し、ファイルを選択します をクリックし、**追加**します。  
   
      また、Web 参照が動作するように、<xref:System.Web.Services> 名前空間への参照を追加する必要があります。  
   
-9. [プロジェクト] メニューをクリックして**参照の追加**です。  
+9. [プロジェクト] メニューで、次のようにクリックします。**参照の追加**します。  
   
-     **参照の追加** ダイアログ ボックスで、 **.NET**  タブで、 **System.Web.Services**をクリックし、 **ok**です。  
+     **参照の追加** ダイアログ ボックスで、 **.NET**  タブで  **System.Web.Services**、順にクリックします**OK**します。  
   
-     レポート サーバー Web サービスに接続する方法の詳細については、次を参照してください。 [Web サービスと、.NET Framework を使用してアプリケーションの構築](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)です。  
+     レポート サーバー Web サービスに接続する方法の詳細については、次を参照してください。 [Web サービスと .NET Framework を使用してアプリケーションの構築](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)します。  
   
 10. ソリューション エクスプ ローラーでプロジェクト ノードを展開します。 プロジェクトには、Program.cs ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] の場合は Module1.vb) という既定の名前のコード ファイルが追加されていることがわかります。  
   
@@ -201,10 +201,10 @@ ms.locfileid: "36176083"
     ```  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、XML スキーマ定義ツール (Xsd.exe) を使用して RDL スキーマからクラスを生成し、プロジェクトに組み込みます。 参照してください[レッスン 2: xsd ツールを使用して、RDL スキーマからクラスを生成する](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)です。  
+ 次のレッスンでは、XML スキーマ定義ツール (Xsd.exe) を使用して RDL スキーマからクラスを生成し、プロジェクトに組み込みます。 参照してください[レッスン 2: xsd ツールを使用して、RDL スキーマからクラスを生成](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)します。  
   
 ## <a name="see-also"></a>参照  
- [RDL スキーマから生成されたクラスを使用してレポートの更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [レポート定義言語 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

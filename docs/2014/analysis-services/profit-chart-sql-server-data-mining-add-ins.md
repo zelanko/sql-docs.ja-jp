@@ -1,5 +1,5 @@
 ---
-title: 利益チャート (SQL Server データ マイニング アドイン) |Microsoft ドキュメント
+title: 利益チャート (SQL Server データ マイニング アドイン) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
 - profit chart
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - mining models, testing
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c78d1f477b878b2ddf78e3c5446e46c249ffcb62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1639ed1ad54d8eabc861a8ec9023638ad4289d63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297362"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>利益チャート (SQL Server データ マイニング アドイン)
-  ![データ マイニング リボンで利益チャート ボタン](media/dmc-profitchart.gif "データ マイニング リボンで利益チャート ボタン")  
+  ![データ マイニング リボン利益チャート ボタン](media/dmc-profitchart.gif "データ マイニング リボンの利益チャート ボタン")  
   
  利益チャートでは、マイニング モデルの使用に関連して予測される利益増加分を表示することによって、ビジネス シナリオに応じてどの顧客にコンタクトするべきかを判断できます。 このチャートの Y 軸は利益を、X 軸はコンタクトした母集団の割合を示します。 一般的に、利益チャートでは、ある時点まで利益の増加が見られますが、その時点以降では、コンタクトする顧客数が増加するにつれて利益は減少します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36073878"
 ## <a name="using-the-profit-chart-wizard"></a>利益チャート ウィザードの使用  
  利益チャートを作成するには、既存のデータ マイニング モデルを参照する必要があります。 クリックして、データに一致するモデルを検索するモデルを参照する**モデルの管理**または**参照**に使用されたアルゴリズムについての詳細と、マイニング モデル内の列を参照してください。  
   
- 詳細については、次を参照してください。 [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)と[モデルの管理&#40;SQL Server データ マイニング アドイン&#41;](manage-models-sql-server-data-mining-add-ins.md)です。  
+ 詳細については、次を参照してください。 [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)と[モデルの管理&#40;SQL Server データ マイニング アドイン&#41;](manage-models-sql-server-data-mining-add-ins.md)します。  
   
 #### <a name="to-create-a-profit-chart"></a>利益チャートを作成するには  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36073878"
   
 5.  ウィザードに従って、コスト情報 (固定コスト、変動コスト、母集団、および予測される収益) を入力します。  
   
-6.  必要に応じて、段階的コストを入力できます ([参照] をクリックして **([...])** ボタン)。 たとえば、メール送付は送付数が増えるほどコストが安くなるため、送付数に対応する別々のコストを入力でき、ウィザードによってサンプルのサイズに合わせてコストが調整されます。  
+6.  必要に応じて、コストを段階を入力できます ([参照] をクリックして **([...])** ボタン)。 たとえば、メール送付は送付数が増えるほどコストが安くなるため、送付数に対応する別々のコストを入力でき、ウィザードによってサンプルのサイズに合わせてコストが調整されます。  
   
 7.  ウィザードによって、モデルのコストとメリットに関する分析のチャートが作成されます。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "36073878"
  不連続な数値を予測する場合は、予測する正確なターゲット値を選択する必要があります。  
   
 ## <a name="understanding-the-profit-chart"></a>利益チャートについて  
- 利益チャートには、チャート内の任意の場所をクリックすると移動する灰色の垂直線が描かれています。 **マイニング凡例**スコア、適切な母集団、および灰色の線、グラフ上の場所に関連付けられている予測確率が表示されます。 灰色の線を使用してチャート内の利益の最大点を選択すると、予測確率値を使用して顧客へのコンタクト用の確率しきい値を判定できます。  
+ 利益チャートには、チャート内の任意の場所をクリックすると移動する灰色の垂直線が描かれています。 **マイニング凡例**スコア、適切な場合は、母集団と灰色の線グラフ上の場所に関連付けられている予測確率が表示されます。 灰色の線を使用してチャート内の利益の最大点を選択すると、予測確率値を使用して顧客へのコンタクト用の確率しきい値を判定できます。  
   
  たとえば、利益曲線の最大点が母集団の 55% の位置にあり、関連する予測確率が 20% の場合は、最大の利益を得るために、20% 以上の応答が得られると予測される顧客数のみにコンタクトすればよいことがわかります。  
   
 ## <a name="see-also"></a>参照  
- [モデルの検証と予測用モデルの使用&#40;アドイン Excel 用データ マイニング&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [モデルの検証と予測用モデルの使用&#40;データ マイニング Excel 用アドイン&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

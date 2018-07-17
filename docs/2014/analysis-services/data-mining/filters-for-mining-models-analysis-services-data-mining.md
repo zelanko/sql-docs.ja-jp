@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルのフィルター選択 (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: マイニング モデルのフィルター選択 (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - filter syntax [data mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: feefadeab6d4cde4a202b767223939edac63106f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c92fc27326167977f5fcab323e3b885f9ede635
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312712"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)
   データに基づくモデル フィルターは、マイニング構造内のデータのサブセットを使用するマイニング モデルを作成するのに役立ちます。 フィルターを使用すると、包括的なデータ ソース ビューに基づいて 1 つのマイニング構造を作成できるため、マイニング構造とデータ ソースを柔軟に設計できます。 つまり、さまざまなモデルのトレーニングとテストを行う場合に、データの各サブセットに対して個別の構造と関連モデルを作成する代わりに、データの一部だけを使用するためのフィルターを作成することができます。  
@@ -47,14 +47,14 @@ ms.locfileid: "36077025"
   
 -   データ マイニング デザイナーの **[マイニング モデル]** タブで、フィルター エディターのダイアログ ボックスを利用して条件を作成します。  
   
--   直接フィルター式を入力、`Filter`マイニング モデルのプロパティです。  
+-   フィルター式に直接入力、`Filter`マイニング モデルのプロパティ。  
   
 -   AMO を使用して、モデルのフィルター条件をプログラムによって設定します。  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>データ マイニング デザイナーによるモデル フィルターの作成  
  データ マイニング デザイナーでは、マイニング モデルの `Filter` プロパティを変更することによってモデルをフィルター処理します。 **[プロパティ]** ペインにフィルター式を直接入力することも、フィルターのダイアログ ボックスを開いて条件を作成することもできます。  
   
- フィルターのダイアログ ボックスは 2 つあります。 最初のダイアログ ボックスでは、ケース テーブルに適用する条件を作成できます。 データ ソースに複数のテーブルが含まれる場合は、まずテーブルを選択してから列を選択し、その列に適用する演算子と条件を指定します。 使用して複数の条件をリンクする`AND` / `OR`演算子。 値の定義に使用できる演算子は、列に含まれている値が不連続値か連続値かによって異なります。 たとえば、連続値にすることができますを使用して`greater than`と`less than`演算子。 一方、不連続値に対しては、`= (equal to)` 演算子、`!= (not equal to)` 演算子、および `is null` 演算子のみを使用できます。  
+ フィルターのダイアログ ボックスは 2 つあります。 最初のダイアログ ボックスでは、ケース テーブルに適用する条件を作成できます。 データ ソースに複数のテーブルが含まれる場合は、まずテーブルを選択してから列を選択し、その列に適用する演算子と条件を指定します。 使用して複数の条件を結合する`AND` / `OR`演算子。 値の定義に使用できる演算子は、列に含まれている値が不連続値か連続値かによって異なります。 たとえば、継続的な値を持つことができますを使用する`greater than`と`less than`演算子。 一方、不連続値に対しては、`= (equal to)` 演算子、`!= (not equal to)` 演算子、および `is null` 演算子のみを使用できます。  
   
 > [!NOTE]  
 >  `LIKE`キーワードはサポートされていません。 複数の不連続属性を含める場合は、個々の条件を作成し、それらを `OR` 演算子で結合する必要があります。  
@@ -66,7 +66,7 @@ ms.locfileid: "36077025"
   
  たとえば、顧客に関連したケース テーブルがあり、入れ子になったテーブルに顧客が購入した製品が表示されている場合、入れ子になったテーブルのフィルターで `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`という構文を使用すると、特定の品目を購入した顧客を選択するフィルターを作成できます。  
   
- 使用して、入れ子になったテーブルの特定の値の存在にフィルターすることもできます、`EXISTS`または`NOT EXISTS`キーワードとサブクエリ。 これにより、 `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`のような条件を作成できます。 入れ子になったテーブルに値 `EXISTS SELECT(<subquery>)` を持つ行が 1 つ以上含まれている場合、`Water Bottle` から `true` が返されます。  
+ 使用して入れ子になったテーブルで特定の値の存在にフィルターすることもできます、`EXISTS`または`NOT EXISTS`キーワードとサブクエリ。 これにより、 `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`のような条件を作成できます。 入れ子になったテーブルに値 `EXISTS SELECT(<subquery>)` を持つ行が 1 つ以上含まれている場合、`Water Bottle` から `true` が返されます。  
   
  ケース テーブルに対する条件と入れ子になったテーブルに対する条件は、結合することができます。 たとえば、次の構文には、ケース テーブルに対する条件 (`Age > 30` )、入れ子になったテーブルに対するサブクエリ (`EXISTS (SELECT * FROM Products)`)、および入れ子になったテーブルに対する複数の条件 (`WHERE ProductName=’Milk’  AND Quantity>2`) が含まれています。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36077025"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>フィルターが使用されているかどうか確認する方法は?  
  フィルターがモデルに適用されているかどうか判断する方法はいくつかあります。  
   
--   デザイナーで、をクリックして、**マイニング モデル** タブで、開いている**プロパティ**、および表示、`Filter`マイニング モデルのプロパティです。  
+-   デザイナーで、をクリックして、**マイニング モデル** タブで、開いている**プロパティ**、表示し、`Filter`マイニング モデルのプロパティ。  
   
 -   DMV (DMSCHEMA_MINING_MODELS) はフィルターのテキストを含む列を出力します。 DMV に対して次のクエリを使用して、モデルとフィルターの名前を返すことができます。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36077025"
 -   除外された値をマイニング構造定義の一部としてカテゴリに折りたたみます。  
   
 ## <a name="related-resources"></a>関連リソース  
- フィルター構文、およびフィルター式の例の詳細については、次を参照してください。[モデル フィルターの構文と例&#40;Analysis Services - データ マイニング&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)です。  
+ フィルターの構文とフィルター式の例の詳細については、次を参照してください。[モデル フィルターの構文と例については&#40;Analysis Services - データ マイニング&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)します。  
   
  マイニング モデルのテスト時にモデル フィルターを使用する方法については、「 [精度チャートの種類の選択とグラフのオプションの設定](choose-an-accuracy-chart-type-and-set-chart-options.md)」を参照してください。  
   

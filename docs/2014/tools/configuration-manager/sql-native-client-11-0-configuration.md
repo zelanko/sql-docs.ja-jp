@@ -1,5 +1,5 @@
 ---
-title: SQL Native Client 11.0 の構成 |Microsoft ドキュメント
+title: SQL Native Client 11.0 の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - client configuration [SQL Server], SQL Server Native Client
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f83aa59c76750a0e6384a88e9755b0c51333bb58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a7d2397f64e5e987e2346938d5c4a9a4ad805482
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282398"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 の構成
   ここでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの **[SQL Server Native Client の構成]** ダイアログ ボックスの F1 ヘルプ トピックについて紹介します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、クライアント コンピューターが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するために使用するネットワーク ライブラリです。  

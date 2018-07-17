@@ -130,10 +130,11 @@
 ## [Analysis Services のサンプル](analysis-services-samples.md)
 
 # リファレンス
+## [Analysis Services の PowerShell リファレンス](../analysis-services/powershell/analysis-services-powershell-reference.md)  
+## [Power Pivot for SharePoint 用 PowerShell リファレンス](../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
 ## [MSDN の Data Analysis Expressions (DAX) の概要](https://msdn.microsoft.com/library/gg413422.aspx)
 ## [データ マイニング拡張機能 (DMX)](../dmx/data-mining-extensions-dmx-reference.md)
 ## [多次元式 (MDX)](../mdx/analysis-services-language-reference.md)
-## [Power Query M](https://msdn.microsoft.com/library/mt211003.aspx)
-## [PowerShell](../analysis-services/powershell/technical-reference-ssas.md)
+## [Power Query M](https://msdn.microsoft.com/library/mt211003.aspx)  
 ## [サーバー プロパティ](../analysis-services/server-properties/server-properties-in-analysis-services.md)
 ## [XML for Analysis (XMLA)](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)

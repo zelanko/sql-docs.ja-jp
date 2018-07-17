@@ -1,5 +1,5 @@
 ---
-title: マップ ビューポートのプロパティ ダイアログ ボックス、全般 |Microsoft ドキュメント
+title: マップ ビューポートのプロパティ ダイアログ ボックスの 全般 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.general.f1
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 98b0749983e079249c35d98e2d033b04273e2dd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea57f5e98aec1e95264908cc080d229d8be573f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284648"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>[全般] ([マップ ビューポートのプロパティ] ダイアログ ボックス)
   **[マップ ビューポートのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、座標系、投影法、および境界に関するオプションを変更できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "36178613"
   
 -   **[地理]** たとえば、市区町村の場所のようにマップ データが経度/緯度座標で表されている場合は、このオプションを選択します。  
   
- **プロジェクション**  
+ **射影**  
  地理的座標を 2 次元表面に投影する方法を指定します。 視覚化対象のデータと互換性のある投影法を選択してください。 投影法の影響を受ける 4 つの空間プロパティは、領域、形状、距離、および方向です。 地球の表示に関して適切な投影法を選択できるかどうかは、中心ビュー、マップの境界、および拡大 (縮小) 率に依存します。  
   
  以下の各投影法では、1 つ以上のこれらの空間プロパティが維持されます。  
@@ -64,13 +64,13 @@ ms.locfileid: "36178613"
  **境界のオプション**  
  座標の下限および上限を指定して、レポートに表示するマップを制御します。  
   
- **[最小 X]**  
+ **X の最小値**  
  最小の X 値です。 **[平面]** に対してのみ使用できます。  
   
- **最大 X**  
+ **最大の X**  
  最大の X 値です。 **[平面]** に対してのみ使用できます。  
   
- **[最小 Y]**  
+ **Y の最小値**  
  最小の Y 値です。 **[平面]** に対してのみ使用できます。  
   
  **Y の最大値**  

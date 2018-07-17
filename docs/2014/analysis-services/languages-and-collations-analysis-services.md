@@ -1,5 +1,5 @@
 ---
-title: 言語および照合順序 (Analysis Services) |Microsoft ドキュメント
+title: 言語および照合順序 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3279919a5a089991b09a3eea6807bec8589f7a64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e2c52f657ce161edbb82c16eda2f6f0c3084c8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293722"
 ---
 # <a name="languages-and-collations-analysis-services"></a>言語および照合順序 (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows オペレーティング システムが提供する言語と照合順序をサポートします。 インストール時に `Language` プロパティと `Collation` プロパティは最初インスタンス レベルに設定されますが、後ほど、オブジェクト階層の別のレベルに変更できます。  
@@ -71,7 +71,7 @@ ms.locfileid: "36070847"
   
      キューブにどの言語と照合順序を設定しても、キューブに含まれるすべてのメジャーとディメンションが使用されます。 照合順序プロパティを詳細に設定する唯一の方法は、ディメンション属性で翻訳を作成する場合です。 それ以外の場合、属性のレベルでの翻訳がない場合は、キューブあたり 1 つの照合順序になります。  
   
- さらに、設定`Language`、自体は、上、**翻訳**オブジェクト。  
+ さらに、設定`Language`、単独での**翻訳**オブジェクト。  
   
  キューブまたはディメンションに翻訳を追加するときに、翻訳オブジェクトが作成されます。 `Language` は、翻訳定義の一部です。 対照的に、`Collation` はキューブ以上で設定され、すべての翻訳で共有されます。 これは、翻訳を含むキューブの XMLA で、複数の言語プロパティが (各翻訳に 1 つ) 表示されるのに、照合順序は 1 つしか表示されないことから明らかです。 ディメンションの属性の翻訳には、1 つの例外があり、キューブの照合順序をオーバーライドして、ソース列と一致する属性の照合順序を指定できます (データベース エンジンは個々の列の照合順序の設定をサポートし、各翻訳が別のソース列からメンバー データを取得するよう構成することは一般的です)。 しかしそれ以外の場合、すべての他の翻訳では `Language` の推論を使用せず、`Collation` 自体が用いられます。 詳細については、「[翻訳 &#40;Analysis Services&#41;](translations-analysis-services.md)」を参照してください。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "36070847"
 4.  キューブを再処理します。  
   
 ##  <a name="bkmk_enablefast1033"></a> EnableFast1033Locale によって英語版のロケールのパフォーマンスを向上させる  
- 既定の言語として英語 (米国) 言語識別子 (0x0409 または 1033) を使用する場合、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスを設定して追加のパフォーマンスの利点を取得することができます、`EnableFast1033Locale`構成プロパティ、高度な構成プロパティがその言語識別子に対してのみ使用できます。 このプロパティの値を **true** に設定すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は文字列のハッシュおよび比較に高速アルゴリズムを使用できます。 構成プロパティの設定の詳細については、「[Analysis Services のサーバーのプロパティの構成](server-properties/server-properties-in-analysis-services.md)」を参照してください。  
+ 既定の言語として英語 (米国) 言語識別子 (0x0409 または 1033) を使用する場合、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス、設定して、パフォーマンスがさらに取得できます、`EnableFast1033Locale`構成プロパティ、高度な構成プロパティがその言語識別子でのみ使用できます。 このプロパティの値を **true** に設定すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は文字列のハッシュおよび比較に高速アルゴリズムを使用できます。 構成プロパティの設定の詳細については、「[Analysis Services のサーバーのプロパティの構成](server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
 ##  <a name="bkmk_gb18030"></a> Analysis Services での GB18030 のサポート  
  GB18030 は中華人民共和国が単独で中国語の文字のエンコードに使用している標準規格です。 GB18030 文字の長さは 1 バイト、2 バイト、4 バイトのいずれかです。 Analysis Services では、外部ソースからデータを処理する場合、データ変換はありません。 データは Unicode として格納されます。 クエリ時に、クライアント OS の設定に基づいてテキスト データがクエリの結果として返されると、Analysis Services クライアント ライブラリ (具体的には MSOLAP.dll OLE DB プロバイダー) を介して GB18030 変換が実行されます。 データベース エンジンは、GB18030 もサポートしています。 詳細については、「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  

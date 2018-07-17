@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 9: パースペクティブの作成 |Microsoft ドキュメント'
+title: 'レッスン 9: パースペクティブの作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fe2e746ec290aeb3b8690f818875616f2b9dd2f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55c9ef5ca0049c3adda66405f941f4270f562b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175842"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295952"
 ---
 # <a name="lesson-9-create-perspectives"></a>レッスン 9: パースペクティブの作成
   このレッスンでは、Internet Sales パースペクティブを作成します。 パースペクティブとは、モデルの一部を表示可能なサブセットとして定義するものです。これにより、ビジネス固有またはアプリケーション固有のビューポイントを的を絞って作成できます。 パースペクティブを使用してモデルに接続すると、そのパースペクティブ内に定義されたモデル オブジェクト (テーブル、列、メジャー、階層、および KPI) のみがフィールドとして表示されます。  
@@ -39,13 +39,13 @@ ms.locfileid: "36175842"
   
 #### <a name="to-create-an-internet-sales-perspective"></a>Internet Sales パースペクティブを作成するには  
   
-1.  モデル デザイナーで、をクリックして、**モデル** メニューをクリックして**パースペクティブ**です。  
+1.  モデル デザイナーで、クリックして、**モデル** メニューをクリック**パースペクティブ**します。  
   
 2.  **[パースペクティブ]** ダイアログ ボックスで、 **[新しいパースペクティブ]** をクリックします。  
   
-3.  パースペクティブの名前を変更するにはダブルクリック、**新しいパースペクティブ 1**列見出し、および入力`Internet Sales`です。  
+3.  パースペクティブの名前を変更するには、ダブルクリック、**新しいパースペクティブ 1**列見出しをして入力`Internet Sales`します。  
   
-4.  **フィールド**、次のテーブルの選択**日付**、 **Geography**、**製品**、 **Product Category**、 **Product Subcategory**、および`Internet Sales`です。  
+4.  **フィールド**、次のテーブルを選択する**日付**、 **Geography**、**製品**、 **Product Category**、 **Product Subcategory**、および`Internet Sales`します。  
   
      Customer テーブルおよびそのすべての列をこのパースペクティブから除外したことに注意してください。 後ほど、レッスン 12 で、"Excel で分析" 機能を使用してこのパースペクティブをテストします。 Excel ピボットテーブルのフィールドの一覧には、Customer テーブルを除く各テーブルが含まれます。  
   

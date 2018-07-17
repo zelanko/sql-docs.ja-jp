@@ -1,5 +1,5 @@
 ---
-title: ディメンションの使用法 (キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: ディメンションの使用法 (キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusagepane.f1
 ms.assetid: 52e62633-856c-4af2-8c8a-d4a5a57351b6
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c1b748c221bb730a855c51b80cb3bfb8c3c3d21b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1bc3fec6c8f618446590c89fe555f5d4592575fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288488"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>[ディメンションの使用法] (キューブ デザイナー) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[ディメンションの使用法]** タブを使用すると、キューブ ディメンションとキューブのメジャー グループとの間のディメンション リレーションシップを表示したり編集したりできます。  

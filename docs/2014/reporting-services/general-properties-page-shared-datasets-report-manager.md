@@ -1,5 +1,5 @@
 ---
-title: '[全般] プロパティ ページ、共有データセット (レポート マネージャー) |Microsoft ドキュメント'
+title: '[全般] プロパティ ページ、共有データセット (レポート マネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3378300841bb6ad4f37ee7b7da5d7add6e78adb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747121123f3a654ccd475913ffe8b4a8c7e79be0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290308"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>[全般] プロパティ ページ、共有データセット (レポート マネージャー)
   共有データセット アイテムのプロパティを表示および管理するには、[共有データセット] ページを使用します。  
@@ -40,10 +40,10 @@ ms.locfileid: "36176568"
 3.  ドロップダウン リストの **[管理]** をクリックします。 [全般] プロパティ ページが開きます。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  共有データセットの名前を入力します。この名前は、レポート サーバーのフォルダー階層内のアイテムを識別するために使用されます。  
   
- **description**  
+ **[説明]**  
  共有データセットに関する情報を提供します。 この説明は、[コンテンツ] ページに表示されます。  
   
  **リスト ビューで非表示にします。**  
@@ -55,11 +55,11 @@ ms.locfileid: "36176568"
  **[適用]**  
  変更を保存します。  
   
- **Delete**  
+ **削除**  
  レポート サーバー データベースから共有データセットを削除します。 共有データセットを削除すると、レポートまたはキャッシュされたバージョンすべてが非アクティブ化されます。 レポートを再びアクティブ化するには、レポート作成ツールでレポートを 1 つずつ開き、同じ名前および同じフィールド コレクションでデータセットを指定する必要があります。 別の方法として、各データ領域の参照を更新し、同じフィールド コレクションで異なるデータセットを使用することもできます。  
   
  **Move**  
- レポート サーバーのフォルダー階層内の共有データセットを再配置します。 このボタンをクリックすると、アイテムの移動ページが表示され、フォルダーを参照して新しい場所を選択できます。 詳細については、次を参照してください。[項目ページに移動&#40;レポート マネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)です。  
+ レポート サーバーのフォルダー階層内の共有データセットを再配置します。 このボタンをクリックすると、アイテムの移動ページが表示され、フォルダーを参照して新しい場所を選択できます。 詳細については、次を参照してください。[項目ページに移動&#40;レポート マネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)します。  
   
  **ダウンロード**  
  共有データセット定義のコピーを抽出します。 このファイルは、コンピューターに定義されているファイルの関連付けに応じて、Visual Studio または他のアプリケーションで開きます。 ほとんどの場合、共有データセットは XML ファイルとして開きます。  
@@ -70,7 +70,7 @@ ms.locfileid: "36176568"
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [レポート マネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
+ [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [キャッシュ更新オプション&#40;レポート マネージャー&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [共有データセットのキャッシュ ページで、&#40;レポート マネージャー&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
  [共有データセットを管理します。](report-data/manage-shared-datasets.md)   

@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルに対するコンテンツ クエリを作成 |Microsoft ドキュメント
+title: マイニング モデルに対するコンテンツ クエリの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1bbc92d8083c570aa46371d4251b8ea2f8d9b57a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747f066839ee10ab9982c5b6388c946abec66cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308892"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>マイニング モデルのコンテンツ クエリの作成
   AMO や XML/A を使用すると、プログラムでマイニング モデル コンテンツにクエリを実行できますが、DMX を使用してクエリを作成する方が簡単です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を確立し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって提供される DMV を使用してクエリを作成することにより、データ マイニング スキーマ行セットに対するクエリを作成することもできます。  
@@ -44,11 +44,11 @@ ms.locfileid: "36178771"
   
      コード エディターに **[コンテンツ クエリ]** テンプレートが表示されます。 メタデータ ペインに、現在のデータベースで使用可能なモデルが一覧表示されます。 データベースを変更するには、 **[使用できるデータベース]** の一覧から別のデータベースを選択します。  
   
-5.  行で、マイニング モデルの名前を入力`FROM`[*\<マイニング モデル, name, MyModel >*]`.CONTENT`です。 マイニング モデル名にスペースが含まれる場合は、名前を角かっこで囲む必要があります。  
+5.  行で、マイニング モデルの名前を入力します。 `FROM` [*\<マイニング モデル, name, MyModel >*]`.CONTENT`します。 マイニング モデル名にスペースが含まれる場合は、名前を角かっこで囲む必要があります。  
   
      名前を入力せずに、 **オブジェクト エクスプローラー** でマイニング モデルを選択してテンプレートにドラッグすることもできます。  
   
-6.  行で、 `SELECT` *\<選択リスト、expr、 \* >* 、マイニング モデル コンテンツ スキーマ行セットの列の名前を入力します。  
+6.  行で、 `SELECT` *\<expr 一覧で、選択リストの\* >*、マイニング モデル コンテンツ スキーマ行セット内の列の名前を入力します。  
   
      マイニング モデル コンテンツ クエリで返すことができる列の一覧については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   

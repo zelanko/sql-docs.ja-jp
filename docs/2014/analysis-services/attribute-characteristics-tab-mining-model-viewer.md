@@ -1,5 +1,5 @@
 ---
-title: 属性の特性 タブ (マイニング モデル ビューアー) |Microsoft ドキュメント
+title: 属性の特性 タブ (マイニング モデル ビューアー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.characteristics.f1
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a2e67e05ac9129bd667f50bc4b6acbe673d8729
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc627e45bdf57b956dd55795b48dde642eed4bf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234262"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>[属性の特性] タブ (マイニング モデル ビューアー)
   Naïve Bayes モデルの結果と入力属性との関係を調べるには、**[属性の特性]** ペインを使用します。 対象となる属性の値を選択した後、結果に対する影響が最も大きい入力属性の一覧を確認できます。  
@@ -41,10 +41,10 @@ ms.locfileid: "36077442"
  **属性**  
  分析する予測可能な属性を選択します。  
   
- **Value**  
+ **[値]**  
  **[属性]** に設定する予測可能な属性の状態を選択します。 Naive Bayes モデルは連続変数をサポートしないため、すべての対象となる属性は、不連続結果または分離された結果になります。 不明属性は、常に自動的にリストに追加されます。  
   
- **項目の特性\<予測可能な状態 >**  
+ **特性の\<予測可能な状態 >**  
  グラフには、入力属性の状態が、選択した予測可能な属性の状態とどのように関係するかを記述する次の列が含まれます。  
   
 |値|説明|  

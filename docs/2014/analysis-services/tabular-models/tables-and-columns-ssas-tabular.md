@@ -1,5 +1,5 @@
 ---
-title: テーブルと列 (SSAS テーブル) |Microsoft ドキュメント
+title: テーブルと列 (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6f7302274fc745fbc7a63bf6af59e4622c36b9a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef5d63ab45c1bad7d74bbf162fd3da0c2e67a161
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319362"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>テーブルと列 (SSAS テーブル)
   テーブルのインポート ウィザードを使用してモデルにテーブルとデータを追加したら、新しいデータ列の追加、テーブル間のリレーションシップの作成、データを拡張する計算の定義、テーブルを見やすくするためのデータのフィルター処理と並べ替えなどを行ってテーブルを操作できます。  
@@ -65,10 +65,10 @@ ms.locfileid: "36070541"
 |-----------|-----------------|  
 |[テーブルに列を追加&#40;SSAS 表形式&#41;](add-columns-to-a-table-ssas-tabular.md)|テーブル定義にソース列を追加する方法について説明します。|  
 |[列の削除&#40;SSAS 表形式&#41;](delete-a-column-ssas-tabular.md)|モデル デザイナー、または [テーブルのプロパティ] ダイアログ ボックスを使用して、モデル テーブルの列を削除する方法について説明します。|  
-|[テーブル、列、または行フィルターのマッピング変更&#40;SSAS 表形式&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|[テーブルのプロパティの編集] ダイアログ ボックスのテーブルのプレビューまたは SQL クエリ エディターを使用して、テーブル、列、または行のフィルターのマッピングを変更する方法について説明します。|  
-|[タイム インテリジェンスで使用する日付テーブルとしてマーク指定&#40;SSAS 表形式&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|[日付テーブルとしてマーク] ダイアログ ボックスを使用して、日付テーブルと一意識別子列を指定する方法について説明します。 DAX 式でタイム インテリジェンス関数を使用する場合は、日付テーブルと一意識別子の指定が必要です。|  
-|[テーブルを追加する&#40;SSAS 表形式&#41;](add-a-table-ssas-tabular.md)|既存のデータ ソース接続を使用して、データ ソースからテーブルを追加する方法について説明します。|  
-|[テーブルの削除&#40;SSAS 表形式&#41;](delete-a-table-ssas-tabular.md)|モデル ワークスペース データベース内の不要なテーブルを削除する方法について説明します。|  
+|[テーブル、列、または行のフィルターのマッピング変更&#40;SSAS 表形式&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|[テーブルのプロパティの編集] ダイアログ ボックスのテーブルのプレビューまたは SQL クエリ エディターを使用して、テーブル、列、または行のフィルターのマッピングを変更する方法について説明します。|  
+|[日付テーブルとしてマーク タイム インテリジェンスで使用するための指定&#40;SSAS 表形式&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|[日付テーブルとしてマーク] ダイアログ ボックスを使用して、日付テーブルと一意識別子列を指定する方法について説明します。 DAX 式でタイム インテリジェンス関数を使用する場合は、日付テーブルと一意識別子の指定が必要です。|  
+|[テーブルの追加&#40;SSAS 表形式&#41;](add-a-table-ssas-tabular.md)|既存のデータ ソース接続を使用して、データ ソースからテーブルを追加する方法について説明します。|  
+|[テーブルを削除する&#40;SSAS 表形式&#41;](delete-a-table-ssas-tabular.md)|モデル ワークスペース データベース内の不要なテーブルを削除する方法について説明します。|  
 |[テーブルまたは列の名前を変更&#40;SSAS 表形式&#41;](rename-a-table-or-column-ssas-tabular.md)|モデル内で識別できるようにテーブルまたは列の名前を変更する方法について説明します。|  
 |[列のデータ型を設定&#40;SSAS 表形式&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|列のデータ型を変更する方法について説明します。 データ型は、列のデータの格納および表示方法を定義します。|  
 |[非表示にするか、列を固定&#40;SSAS 表形式&#41;](hide-or-freeze-columns-ssas-tabular.md)|表示しない列を非表示にする方法、およびモデルのある領域内の特定の列を固定 (ロック) して、その領域を表示したまま別の領域にスクロールする方法について説明します。|  

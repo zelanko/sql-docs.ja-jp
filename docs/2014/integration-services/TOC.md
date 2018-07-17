@@ -53,6 +53,7 @@
 ### [[ウィザードの完了] (SSIS パッケージ アップグレード ウィザード)](complete-the-wizard-ssis-package-upgrade-wizard.md)
 ### [[パッケージをアップグレードしています] (SSIS パッケージ アップグレード ウィザード)](upgrading-the-packages-ssis-package-upgrade-wizard.md)
 ## [SQL Server インポートおよびエクスポート ウィザード +](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+## [Excel からのインポートまたは Excel へのエクスポート](load-data-to-from-excel-with-ssis.md)
 ## [パッケージ開発のトラブルシューティング ツール +](troubleshooting/troubleshooting-tools-for-package-development.md)
 ## [Integration Services パッケージによってログに記録されるイベント](performance/events-logged-by-an-integration-services-package.md)
 ## [[ログ イベント] ウィンドウでログ エントリを表示する](view-log-entries-in-the-log-events-window.md)

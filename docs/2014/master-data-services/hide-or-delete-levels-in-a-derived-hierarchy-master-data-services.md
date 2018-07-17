@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, hiding levels
 - derived hierarchies, deleting levels
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 898827072bfcebb869703d479628c290f3bf5fc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: da74b0ff57f6bb5488903730351dcacacf92b2f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300422"
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>派生階層のレベルを非表示にするか削除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、レベルを使用してグループ化する必要があるが、レベルを表示する必要はない場合は、派生階層のレベルを非表示にします。 グループ化にレベルを使用しない場合はレベルを削除します。  
@@ -38,13 +38,13 @@ ms.locfileid: "36178688"
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **モデルビュー**  ページで、メニュー バーのをポイント**管理** をクリック**派生階層**です。  
+2.  **モデル ビュー**  ページで、ポイントして、メニュー バーから**管理** をクリック**派生階層**します。  
   
 3.  **[派生階層のメンテナンス]** ページの **[モデル]** の一覧からモデルを選択します。  
   
 4.  編集する派生階層の列を選択します。  
   
-5.  をクリックして**派生階層を選択した編集**です。  
+5.  クリックして**派生階層の選択項目の編集**します。  
   
 6.  **[現在のレベル]** ペインで、次のいずれかを実行します。  
   

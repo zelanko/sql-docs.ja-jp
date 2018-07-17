@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.indexproperties.storage.f1
 - sql12.swb.indexproperties.columns.f1
@@ -19,15 +18,15 @@ f1_keywords:
 - sql12.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8ac38a8ac0fbe4e4761e3f2cd9a0524109727c99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 240c72d9facde541e2eefa25fd8ba6d456cb7133
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290948"
 ---
 # <a name="index-properties-f1-help"></a>[インデックスのプロパティ] の F1 ヘルプ
   このトピックのセクションでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のダイアログを使用して取得できる各種のインデックス プロパティを参照しています。  
@@ -72,7 +71,7 @@ ms.locfileid: "36177988"
   
  空間インデックスを定義できるのは、空間データ型を含む単一の列 ( *空間列*) だけです。  
   
- **Name**  
+ **名前**  
  インデックス キーを構成する列の名前を表示します。  
   
  **並べ替え順序**  
@@ -99,7 +98,7 @@ ms.locfileid: "36177988"
  **[追加]**  
  列をインデックス キーに追加します。 **[追加]** をクリックすると表示される **[** *\<table name> から列を選択]* ダイアログ ボックスからテーブル列を選択します。 空間インデックスの場合は、1 つの列を選択した後、このボタンが淡色表示になります。  
   
- **削除**  
+ **[削除]**  
  選択されている列をインデックス キーから削除します。  
   
  **[上へ移動]**  
@@ -120,7 +119,7 @@ ms.locfileid: "36177988"
  **チェック ボックス**  
  列を選択する場合にオンにします。  
   
- **Name**  
+ **名前**  
  列の名前です。  
   
  **[データ型]**  
@@ -203,7 +202,7 @@ ms.locfileid: "36177988"
  インデックスのテセレーション スキームを示します。 サポートされているテセレーション スキームは次のとおりです。  
   
  **[ジオメトリ グリッド]**  
- 列に適用されるジオメトリ グリッド テセレーション スキームを指定、`geometry`データ型。  
+ 列に適用されるジオメトリ グリッド テセレーション スキームを指定します、`geometry`データ型。  
   
  **[ジオメトリ自動グリッド]**  
  このオプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で、データベース互換性レベルが 110 以上に設定されている場合に利用できます。  

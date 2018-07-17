@@ -1,5 +1,5 @@
 ---
-title: プレース ホルダー プロパティ ダイアログ ボックスの 全般 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント
+title: プレース ホルダー プロパティ ダイアログ ボックスの全般 (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10131"
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ed0c21a7b55e0cf2387595e1c24dc430151f1e05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 03c093382d1027c984e3ee1c953bd803dcbdbe25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309732"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([プレースホルダーのプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   テキスト ボックス内のプレースホルダーの値、ツールヒント、およびマークアップ オプションを変更するには、 **[プレースホルダー プロパティ]** ダイアログ ボックスを使用します。  
@@ -31,8 +31,8 @@ ms.locfileid: "36074125"
  **ラベル**  
  プレースホルダーのラベルを入力します。 ラベルは、デザイン画面にのみ表示されます。  
   
- **Value**  
- テキスト ボックスの値を入力します。 この値には、フィールド式、その他の式、またはラベルを指定してください。 式を編集するには、 **「式」** (*fx*) ボタンをクリックします。  
+ **[値]**  
+ テキスト ボックスの値を入力します。 この値には、フィールド式、その他の式、またはラベルを指定してください。 式を編集するには、 **[式]** (*[fx]*) ボタンをクリックします。  
   
  **ツール ヒント**  
  テキスト、または結果がツールヒントになる式を入力します。 式を編集するには、 **[式]** (*[fx]*) ボタンをクリックします。 ツールヒントは、ユーザーが表示レポートのアイテムの上にポインターを置いたときに表示されます。  
@@ -51,6 +51,6 @@ ms.locfileid: "36074125"
  [テキスト ボックス&#40;レポート ビルダーおよび SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
  [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [テキストとプレース ホルダーの書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [レポートに HTML をインポートする&#40;レポート ビルダーおよび SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [レポートへの HTML のインポート&#40;レポート ビルダーおよび SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
   
   

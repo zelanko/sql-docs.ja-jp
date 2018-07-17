@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
 - scheduling synchronization [SQL Server replication]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - replication [SQL Server], synchronization
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 444277abadee330f410e0b1e7db4042acc5fcccf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5b0c837ec8abafa79f6ed27303a69fad62e1c36e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215362"
 ---
 # <a name="specify-synchronization-schedules"></a>同期スケジュールの指定
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、同期スケジュールを指定する方法について説明します。 サブスクリプションを作成するときに、サブスクリプションのレプリケーション エージェントをいつ実行するかを制御する同期スケジュールを定義できます。 スケジュール設定のパラメーターを指定しなかった場合、サブスクリプションは既定のスケジュールを使用します。  
@@ -82,7 +82,7 @@ ms.locfileid: "36076609"
   
 3.  サブスクリプションを右クリックし、 **[詳細表示]** をクリックします。  
   
-4.  **サブスクリプション\<SubscriptionName >** ウィンドウで、をクリックして**アクション**、順にクリック **\<AgentName > ジョブのプロパティ**です。  
+4.  **サブスクリプション\<SubscriptionName >** ウィンドウで、をクリックして**アクション**、 をクリックし、  **\<AgentName > ジョブのプロパティ**。  
   
 5.  **[ジョブのプロパティ - \<JobName>]** ダイアログ ボックスの **[スケジュール]** ページで、**[編集]** をクリックします。  
   

@@ -1,5 +1,5 @@
 ---
-title: ネイティブ モードのレポート サーバー スケール アウト配置 (SSRS 構成マネージャー) を構成する |Microsoft ドキュメント
+title: ネイティブ モード レポート サーバー スケール アウト配置 (SSRS 構成マネージャー) の構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
@@ -17,13 +17,13 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 04d66fcb5151a325402ff541fb4fd4f97d442d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 153d97c15dcde21e70f29aeb77d80aee1e55adc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296072"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)
   Reporting Services ネイティブ モードでは、1 つのレポート サーバー データベースを共有する複数のレポート サーバー インスタンスを実行できる、スケールアウト配置モデルがサポートされています。 スケールアウト配置は、レポート サーバーのスケーラビリティを高めて、処理できる同時ユーザー数を増やしたり、より負荷の高いレポート実行に対応できるようにするために使用されます。 また、特定のサーバーを、対話型レポートまたはスケジュールされたレポートの処理専用にする場合にも使用できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36077488"
   
  **スケールアウト配置を計画、インストール、および構成するには、次の手順を実行します。**  
   
--   レビュー[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のオンライン ブックをレポート サーバー インスタンスをインストールする方法についてはします。  
+-   レビュー[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レポート サーバー インスタンスをインストールする方法については、オンライン ブック。  
   
 -   ネットワーク負荷分散 (NLB) クラスター上でスケールアウト配置をホストする場合は、NLB クラスターを構成してからスケールアウト配置を構成する必要があります。 詳細については、「 [ネットワーク負荷分散クラスターにおけるレポート サーバーの構成](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)」を参照してください。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36077488"
   
 3.  最初のレポート サーバー インスタンスのときに使用したデータベースにレポート サーバーを接続します。  
   
-    1.  をクリックして**データベース**データベース ページを開きます。  
+    1.  クリックして**データベース**データベース ページを開きます。  
   
     2.  **[データベースの変更]** をクリックします。  
   
@@ -90,13 +90,13 @@ ms.locfileid: "36077488"
   
     4.  使用するレポート サーバー データベースをホストする SQL Server データベース エンジン インスタンスのサーバー名を入力します。 前の作業で接続したサーバーの名前を入力する必要があります。  
   
-    5.  をクリックして**接続のテスト**、クリックして **[次へ]** です。  
+    5.  クリックして**接続のテスト**、順にクリックします**次**します。  
   
-    6.  **レポート サーバー データベース**最初のレポート サーバー用に作成したデータベースを選択し、クリックして**次**です。 既定の名前は ReportServer です。 ReportServerTempDB は選択しないでください。ReportServerTempDB は、レポート処理時に一時データを格納するためにのみ使用されます。 データベースの一覧が空の場合は、前の 4 つの手順を繰り返してサーバーへの接続を確立します。  
+    6.  **レポート サーバー データベース**最初のレポート サーバー用に作成したデータベースを選択し、クリックして**次**します。 既定の名前は ReportServer です。 ReportServerTempDB は選択しないでください。ReportServerTempDB は、レポート処理時に一時データを格納するためにのみ使用されます。 データベースの一覧が空の場合は、前の 4 つの手順を繰り返してサーバーへの接続を確立します。  
   
     7.  [資格情報] ページで、レポート サーバーがレポート サーバー データベースに接続する際に使用するアカウントと資格情報の種類を選択します。 最初のレポート サーバー インスタンスと同一の資格情報、または別の資格情報を使用できます。 **[次へ]** をクリックします。  
   
-    8.  をクリックして**概要** をクリックし、**完了**です。  
+    8.  クリックして**概要**順にクリックします**完了**します。  
   
 4.  レポート サーバー Web サービスの URL を構成します。 URL のテストはまだ行わないでください。 URL は、レポート サーバーがスケールアウト配置に参加するまで解決されません。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36077488"
   
      ![[スケール アウト配置] ページの部分的なスクリーン ショット](../../../2014/sql-server/install/media/scaloutscreen.gif "[スケール アウト配置] ページの部分的なスクリーン ショット")  
   
-3.  スケール アウト配置 ページで、選択、配置に参加し、をクリックを待機しているレポート サーバー インスタンス**サーバーの追加**です。  
+3.  [スケール アウト配置] ページで、配置に参加し、をクリックを待機しているレポート サーバー インスタンスを選択します。**サーバーの追加**します。  
   
     > [!NOTE]  
     >  **問題:** Reporting Services レポート サーバー インスタンスをスケールアウト配置に追加しようとすると、アクセス拒否のようなエラー メッセージが表示される場合があります。  
@@ -122,11 +122,11 @@ ms.locfileid: "36077488"
  負荷分散されたサーバー クラスター内でレポート サーバーを実行する場合、追加の構成が必要です。 詳細については、「 [ネットワーク負荷分散クラスターにおけるレポート サーバーの構成](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [サービス アカウントの構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [サービス アカウントを構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [レポート サーバー データベース接続を構成する&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Reporting Services ネイティブ モードのレポート サーバーの管理](../report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

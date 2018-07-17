@@ -1,5 +1,5 @@
 ---
-title: レジストリ値を設定して署名ポリシーを実装 |Microsoft ドキュメント
+title: レジストリ値を設定して署名ポリシーを実装する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c101b66398d7259d97bdf4a828830764138df09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7c1259e38a50ad11d3a0f074dd3c911f89f776d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320642"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>レジストリ値を設定して署名ポリシーを実装する
   オプションのレジストリ値を使用して、署名付きパッケージまたは署名がないパッケージを読み込む際の組織のポリシーを管理できます。 このレジストリ キーを使用する場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が実行されるコンピューターおよびポリシーを適用するコンピューターごとにこのレジストリ値を作成する必要があります。 レジストリ値が設定されると、パッケージを読み込む前に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によって署名が確認されます。  
@@ -52,15 +52,15 @@ ms.locfileid: "36071924"
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
-2.  実行 ダイアログ ボックスで、次のように入力します。 `Regedit`、クリックして**OK**です。  
+2.  実行 ダイアログ ボックスで、次のように入力します。 `Regedit`、 をクリックし、 **OK**します。  
   
 3.  レジストリ キー HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS を探します。  
   
 4.  **[MSDTS]** を右クリックし、 **[新規]** をポイントして、 **[DWORD 値]** をクリックします。  
   
-5.  新しい値の名前を更新`BlockedSignatureStates`です。  
+5.  新しい値の名前を更新`BlockedSignatureStates`します。  
   
-6.  右クリック`BlockedSignatureStates` をクリック**変更**です。  
+6.  右クリック`BlockedSignatureStates`クリック**変更**します。  
   
 7.  **[DWORD 値の編集]** ダイアログ ボックスで、「0」、「1」、「2」、または「3」のいずれかの値を入力します。  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 643f46f0e8339cbe5e5cc46c13e90796b1479bf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 7538c80ac8425e02f5ccc37ecffacfa07b8576c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318752"
 ---
 # <a name="create-a-model-master-data-services"></a>モデルを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルを作成してモデル オブジェクトを含めます。  
@@ -38,15 +38,15 @@ ms.locfileid: "36178920"
   
 2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして **[モデル]** をクリックします。  
   
-3.  **モデルのメンテナンス**] ページで [ **Add model**です。  
+3.  **モデルのメンテナンス**] ページで [**モデルの追加**します。  
   
-4.  **モデル名**ボックスに、モデルの名前を入力します。  
+4.  **モデル名**ボックス モデルの名前を入力します。  
   
 5.  (オプション) **[モデルと同じ名前のエンティティを作成する]** をクリックして、モデルと同じ名前のエンティティを作成します。  
   
-6.  必要に応じて、選択**モデルと同じ名前の明示的階層を作成する**モデルと同じ名前の明示的階層を作成します。 このオプションを使用すると、コレクションのエンティティも有効になります。  
+6.  必要に応じて、**モデルと同じ名前の明示的階層を作成する**モデルと同じ名前の明示的階層を作成します。 このオプションを使用すると、コレクションのエンティティも有効になります。  
   
-7.  必要に応じて、選択**必須階層 (すべてのリーフ メンバーが含まれる**を必須階層として明示的階層を作成します。  
+7.  必要に応じて、**必須階層 (すべてのリーフ メンバーが含まれる**必須階層として明示的階層を作成します。  
   
 8.  **[モデルの保存]** をクリックします。  
   

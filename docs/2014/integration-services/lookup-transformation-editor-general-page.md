@@ -1,5 +1,5 @@
 ---
-title: 参照変換エディター (全般 ページ) |Microsoft ドキュメント
+title: 参照変換エディター ([全般] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.general.f1
 ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f0ec34c82b91ee254bb314a945b53ea1f68340b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: ced1e5551753ba61f81789eb8dee7d4e77dd6883
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314072"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>[参照変換エディター] ([全般] ページ)
   [参照変換エディター] ダイアログ ボックスの **[全般]** ページを使用して、キャッシュ モードや接続の種類を選択し、一致するエントリがない行の処理方法を指定します。  
@@ -58,7 +58,7 @@ ms.locfileid: "36084134"
  [キャッシュ接続マネージャー](connection-manager/cache-connection-manager.md)   
  [参照変換エディター&#40;接続 ページ&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [[参照変換エディター] &#40;[列] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [参照変換エディター] &#40;[詳細] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [参照変換エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
  [参照変換エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
   
   

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c9a9c20e8967f7c7cb23b66aa7ed5e9040525b36
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45976c2d0e99303c9aba9aa3251a1ea65f610901
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957537"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349994"
 ---
 # <a name="replication-snapshot-agent"></a>レプリケーション スナップショット エージェント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +104,7 @@ snapshot [ -?]
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  デッドロックが発生した場合のディストリビューターへのスナップショット エージェント接続の優先度です。 このパラメーターは、スナップショットの生成中にスナップショット エージェントとユーザー アプリケーション間で発生する可能性のあるデッドロックを解決するために指定します。  
   
-|DistributorDeadlockPriority の値|Description|  
+|DistributorDeadlockPriority の値|[説明]|  
 |---------------------------------------|-----------------|  
 |**-1**|ディストリビューター側でデッドロックが発生した場合、スナップショット エージェント以外のアプリケーションが優先されます。|  
 |**0** (既定値)|優先度は割り当てられません。|  
@@ -132,7 +131,7 @@ snapshot [ -?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  スナップショット エージェントが接続時に使用する SSL (Secure Sockets Layer) 暗号化レベルです。  
   
-|EncryptionLevel の値|Description|  
+|EncryptionLevel の値|[説明]|  
 |---------------------------|-----------------|  
 |**0**|SSL は使用されません。|  
 |**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
@@ -146,7 +145,7 @@ snapshot [ -?]
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  スナップショット操作中にログに記録する履歴の量を指定します。 **1**を選択すれば、ログへの履歴の記録がパフォーマンスに与える影響を最小限に抑えることができます。  
   
-|HistoryVerboseLevel の値|Description|  
+|HistoryVerboseLevel の値|[説明]|  
 |-------------------------------|-----------------|  
 |**0**|進行状況メッセージがコンソールまたは出力ファイルに書き込まれます。 履歴レコードは、ディストリビューション データベースのログに記録されません。|  
 |**1**|同じ状態 (startup、progress、success など) を示している以前の履歴メッセージを常に更新します。 前回の記録に同じ状態がない場合は、新しい記録を挿入します。|  
@@ -192,7 +191,7 @@ snapshot [ -?]
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  出力を詳細表示にするかどうかを指定します。  
   
-|OutputVerboseLevel の値|Description|  
+|OutputVerboseLevel の値|[説明]|  
 |------------------------------|-----------------|  
 |**0**|エラー メッセージのみが記録されます。|  
 |**1** (既定値)|すべての進行状況レポート メッセージが出力されます (既定)。|  
@@ -213,7 +212,7 @@ snapshot [ -?]
  **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
  デッドロックが発生した場合のパブリッシャーへのスナップショット エージェント接続の優先度です。 このパラメーターは、スナップショットの生成中にスナップショット エージェントとユーザー アプリケーション間で発生する可能性のあるデッドロックを解決するために指定します。  
   
-|PublisherDeadlockPriority の値|Description|  
+|PublisherDeadlockPriority の値|[説明]|  
 |-------------------------------------|-----------------|  
 |**-1**|パブリッシャー側でデッドロックが発生した場合、スナップショット エージェント以外のアプリケーションが優先されます。|  
 |**0** (既定値)|優先度は割り当てられません。|  

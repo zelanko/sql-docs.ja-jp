@@ -1,5 +1,5 @@
 ---
-title: 処理 ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: '[プロセス] ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processdialog.f1
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5788bce44bc3ad63956183ac4e8950a0ace11d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 187de4a1978b20065080f50a1d9924e8d1138e7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315002"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>[処理] ダイアログ ボックス (Analysis Services - 多次元データ)
   **と** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [処理] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトを処理できます。 **で** [処理] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを表示するには、次の手順に従います。  
@@ -43,16 +43,16 @@ ms.locfileid: "36174358"
  **[オブジェクト名]**  
  処理するオブジェクトの名前を表示します。 名前の左にあるアイコンはオブジェクトの種類を示しています。  
   
- **Type**  
+ **型**  
  処理するオブジェクトの種類を表示します。  
   
  **[処理オプション]**  
- 選択されたオブジェクトに対して実行する処理の種類を選択します。 使用可能な処理オプションの詳細については、次を参照してください。[多次元モデル オブジェクトの処理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)です。  
+ 選択されたオブジェクトに対して実行する処理の種類を選択します。 使用可能な処理オプションの詳細については、次を参照してください。[多次元モデル オブジェクトの処理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)します。  
   
  **[設定]**  
  キューブ、メジャー グループ、またはパーティションの **[処理オプション]** で **[増分処理]** を選択するときに、 **[構成]** ハイパーリンクを表示します。 **[構成]** をクリックし、 **[増分更新]** ダイアログ ボックスを表示します。 **[増分更新]** ダイアログ ボックスの詳細については、[「[増分更新] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
   
- **削除**  
+ **[削除]**  
  **[オブジェクト一覧]** から選択された項目を削除します。  
   
  **[影響分析]**  
@@ -69,6 +69,6 @@ ms.locfileid: "36174358"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [処理の進行状況 ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
+ [プロセスの進行状況 ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
   
   

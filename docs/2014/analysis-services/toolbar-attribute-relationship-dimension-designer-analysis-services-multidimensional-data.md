@@ -1,5 +1,5 @@
 ---
-title: ツールバー ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: ツールバー ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.toolbar.f1
 ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5bfd406eb54451cd6e3b68b5463172f796cd82e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2426c4c39c68e553782d1b9e1a28e3993f180eb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216022"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>ツール バー ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[属性リレーションシップ]** タブのツール バーを使用すると、次の手順を実行できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36165316"
   
 -   属性リレーションシップ ダイアグラムの表示方法を変更する。  
   
- **[属性リレーションシップ] タブ、ツールバーを表示するには**  
+ **[属性リレーションシップ] タブのツールバーを表示するには**  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のソリューション エクスプローラーで、ディメンションをダブルクリックしてディメンション デザイナーを開き、 **[属性リレーションシップ]** タブをクリックします。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36165316"
  **図形を整列します。**  
  ディメンション デザイナーで使用される配置アルゴリズムに従って図形を整列します。  
   
- **自動図形を整列します。**  
+ **図形の自動整列 します。**  
  ディメンション デザイナーで使用される配置アルゴリズムに従って、ダイアグラム内の図形を自動的に整列します。 既定では、 **[図形の自動整列]** は有効になっています。  
   
  **リスト ビューを表示します。**  

@@ -1,5 +1,5 @@
 ---
-title: ADO NET 変換元エディター ([列] ページ) |Microsoft ドキュメント
+title: ADO net 変換元エディター ([列] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 791d2e660c3672e63b3fea12ad28afcf46e9ffa6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fc9021085fd238ac2c86fbe73d7db372540cabd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287688"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>[ADO NET 変換元エディター] ([列] ページ)
   **[ADO NET 変換元エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
@@ -47,8 +47,8 @@ ms.locfileid: "36174208"
  各出力列の一意な名前を表示します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 指定された名前は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
 ## <a name="see-also"></a>参照  
- [ADO NET 変換元エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [ADO NET 変換元エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [ADO net 変換元エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [ADO net 変換元エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)  
   
   

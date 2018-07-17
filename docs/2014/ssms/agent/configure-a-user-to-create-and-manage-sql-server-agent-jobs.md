@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, user configuration
 - jobs [SQL Server Agent], user configuration
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - proxy accounts [SQL Server Agent]
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e39427bf18fafd44bf48eb869d11d901a4dcea8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2804168db65322d9c51219dad044ac0fe211163b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234352"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを作成または実行するユーザーを構成する方法について説明します。  
@@ -52,7 +52,7 @@ ms.locfileid: "36177226"
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールに追加するログインを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **ユーザー マッピング**のページ、**ログイン プロパティ** ダイアログ ボックスで、選択を含む行`msdb`です。  
+4.  **ユーザー マッピング**のページ、**ログインのプロパティ** ダイアログ ボックスを含む行を選択します。`msdb`します。  
   
 5.  **[データベース ロールのメンバーシップ: msdb]** で、該当する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールのチェック ボックスをオンにします。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36177226"
   
 3.  **[プロキシ]** を右クリックして **[新しいプロキシ]** をクリックします。  
   
-4.  **[新しいプロキシ アカウント]** ダイアログの **[全般]** ページで、新しいプロキシのプロキシ名、資格情報名、および説明を指定します。 SQL Server エージェントのプロキシを作成する前に、まず資格情報を作成する必要があることに注意してください。 資格情報の作成の詳細については、次を参照してください。[資格情報の作成](../../relational-databases/security/authentication-access/create-a-credential.md)と[CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)です。  
+4.  **[新しいプロキシ アカウント]** ダイアログの **[全般]** ページで、新しいプロキシのプロキシ名、資格情報名、および説明を指定します。 SQL Server エージェントのプロキシを作成する前に、まず資格情報を作成する必要があることに注意してください。 資格情報の作成の詳細については、次を参照してください。[資格情報を作成](../../relational-databases/security/authentication-access/create-a-credential.md)と[CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)します。  
   
 5.  このプロキシに適したサブシステムを確認します。  
   

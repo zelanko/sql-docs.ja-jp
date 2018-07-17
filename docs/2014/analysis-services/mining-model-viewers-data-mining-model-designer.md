@@ -1,5 +1,5 @@
 ---
-title: マイニング モデル ビューアー (データ マイニング モデル デザイナー) |Microsoft ドキュメント
+title: マイニング モデル ビューアー (データ マイニング モデル デザイナー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.viewers.f1
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e04799cbd5d78f82612732506e460008a4138117
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9fd7d89abbbbce1c55b20227d44c191cf315d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293632"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>マイニング モデル ビューアー (データ マイニング モデル デザイナー)
   **[マイニング モデル ビューアー]** タブでは、マイニング構造に含まれているマイニング モデルを調べることができます。  
@@ -69,7 +69,7 @@ ms.locfileid: "36176046"
   
     -   [クラスター ダイアグラム タブ&#40;マイニング モデル ビューアー&#41;](cluster-diagram-tab-mining-model-viewer.md)  
   
-    -   [クラスターのプロファイル タブ&#40;マイニング モデル ビューアー&#41;](cluster-profiles-tab-mining-model-viewer.md)  
+    -   [クラスター プロファイル タブ&#40;マイニング モデル ビューアー&#41;](cluster-profiles-tab-mining-model-viewer.md)  
   
     -   [クラスターの特性 タブ&#40;マイニング モデル ビューアー&#41;](cluster-characteristics-tab-mining-model-viewer.md)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36176046"
   
 -   [Microsoft シーケンス クラスター ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-    -   [シーケンス クラスター ダイアグラム タブをクラスター&#40;マイニング モデル ビューアー](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
+    -   [シーケンス クラスターのクラスター ダイアグラム タブ&#40;マイニング モデル ビューアー](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
   
     -   [シーケンス クラスターのクラスターのプロファイル タブ&#40;マイニング モデル ビューアー](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
   
@@ -149,7 +149,7 @@ ms.locfileid: "36176046"
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-models-view-data-mining-model-designer.md)   
- [[マイニング構造] ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [マイニング構造 ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-structure-view-data-mining-model-designer.md)   
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [予測クエリ ビルダー&#40;データ マイニング&#41;](prediction-query-builder-data-mining.md)  
   

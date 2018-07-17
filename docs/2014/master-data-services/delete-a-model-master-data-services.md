@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting models [Master Data Services]
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9643b3d6094c2f0b3815668fc466d73e76f259f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5f0b813b20c91159b74a82d403ce21a473c85802
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215252"
 ---
 # <a name="delete-a-model-master-data-services"></a>モデルを削除する (マスター データ サービス)
   モデルを削除して、モデルおよびそのすべてのデータを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]から削除します。  
@@ -45,7 +45,7 @@ ms.locfileid: "36177782"
   
 3.  **モデルのメンテナンス** ページで、削除するモデルの行を選択します。  
   
-4.  をクリックして**削除選択したモデル**です。  
+4.  クリックして**削除選択したモデル**します。  
   
 5.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "36177782"
   
 ## <a name="see-also"></a>参照  
  [モデル&#40;マスター データ サービス&#41;](../../2014/master-data-services/models-master-data-services.md)   
- [モデルを作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
+ [モデルを作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
   
   

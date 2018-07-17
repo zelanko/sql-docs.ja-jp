@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルのプロパティの変更 |Microsoft ドキュメント
+title: マイニング モデルのプロパティの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28e417708981a7184caa62ae74fe681397411d78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed77c0d87fc6fb62497cc68c52dd3fabeb50d2ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279815"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>マイニング モデルのプロパティの変更
-  マイニング モデルのプロパティには、モデル全体に適用されるものと個別の列に適用されるものがあります。 モデル全体に適用されるプロパティの例として挙げられます、`Drillthrough`プロパティをケース データをクエリに使用するかどうかを指定します、および`Description`プロパティです。 列に適用されるプロパティには、モデル内で列のデータが使用される方法を制御する `Usage` および `ModelingFlags` があります。  
+  マイニング モデルのプロパティには、モデル全体に適用されるものと個別の列に適用されるものがあります。 モデル全体に適用されるプロパティの例があります、`Drillthrough`プロパティは、ケース データをクエリで使用可能にするかどうかを指定して、`Description`プロパティ。 列に適用されるプロパティには、モデル内で列のデータが使用される方法を制御する `Usage` および `ModelingFlags` があります。  
   
  次のモデル プロパティには、式の作成または複雑なモデル プロパティの構成に使用できる高度なエディターがあります。 プロパティには次の機能があります。  
   
--   `Filter` プロパティ: 開きます、[データ セットのフィルターまたはモデル フィルター ダイアログ ボックス](../data-set-filter-or-model-filter-dialog-box.md)です。  
+-   `Filter` プロパティ: 開きます、[データ セットのフィルターまたはモデル フィルター ダイアログ ボックス](../data-set-filter-or-model-filter-dialog-box.md)します。  
   
--   `AlgorithmParameters` プロパティ: 開きます、[アルゴリズム パラメーター ダイアログ ボックス&#40;マイニング モデル ビュー&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)です。  
+-   `AlgorithmParameters` プロパティ: 開きます、[アルゴリズム パラメーター ダイアログ ボックス&#40;マイニング モデル ビュー&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)します。  
   
  マイニング モデルのプロパティを設定する方法については、「[マイニング モデル列](mining-model-columns.md)」を参照してください。  
   

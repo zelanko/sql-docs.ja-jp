@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponentdetails.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 56b26f0c43df3257fc563ea246045ad3baf1e3ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 73a67a807ee928315b264ea52bd0d993e0ee81f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295082"
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
   スクリプト コンポーネントはスクリプトをホストします。これにより、パッケージにカスタム スクリプト コードを含めて実行できます。 スクリプト コンポーネントは、パッケージ内で次の目的に使用できます。  
@@ -94,13 +94,13 @@ ms.locfileid: "36074453"
 ### <a name="configuring-the-script-component-in-the-designer"></a>デザイナーでのスクリプト コンポーネントの構成  
  **[スクリプト変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[スクリプト変換エディター&#40;入力列] ページ&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [スクリプト変換エディター&#40;入力列 ページ&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [スクリプト変換エディター&#40;が入力され、ページの出力&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [スクリプト変換エディター&#40;入力し、出力のページ&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [[スクリプト変換エディター &#40;[スクリプト] ページ&#41;](../../script-transformation-editor-script-page.md)  
+-   [スクリプト変換エディター &#40;[スクリプト] ページ&#41;](../../script-transformation-editor-script-page.md)  
   
--   [[スクリプト変換エディター&#40;接続マネージャー] ページ&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [スクリプト変換エディター&#40;接続マネージャー ページ&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   

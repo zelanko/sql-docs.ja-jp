@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating a login
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33e3b3bcccfc88a3071a053de7154bf16d50265d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 3ec962379f992bcb89b6227cf3af13705d1193ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312772"
 ---
 # <a name="creating-a-login"></a>ログインの作成
   [!INCLUDE[ssDE](../includes/ssde-md.md)]にアクセスするには、ユーザーのログインが必要です。 ログインは、ユーザーの ID を Windows のアカウントまたは Windows グループのメンバーとして表すか、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のみに存在する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログインを使用することができます。 できるだけ Windows 認証を使用してください。  
@@ -30,7 +30,7 @@ ms.locfileid: "36075869"
   
 ### <a name="to-create-a-new-windows-account"></a>新しい Windows アカウントを作成するには  
   
-1.  をクリックして**開始**、 をクリックして**実行**で、**開く**ボックスに、入力`%SystemRoot%\system32\compmgmt.msc /s`、順にクリック**ok**を開くには、コンピューターの管理プログラムです。  
+1.  をクリックして**開始**、 をクリックして**実行**で、**を開く**ボックスに「 `%SystemRoot%\system32\compmgmt.msc /s`、順にクリックします**ok**コンピュータの管理プログラムを開きます。  
   
 2.  **[システム ツール]** の **[ローカル ユーザーとグループ]** を展開し、**[ユーザー]** を右クリックして、**[新しいユーザー]** をクリックします。  
   

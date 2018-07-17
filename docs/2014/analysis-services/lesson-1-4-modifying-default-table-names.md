@@ -1,5 +1,5 @@
 ---
-title: 既定のテーブル名を変更する |Microsoft ドキュメント
+title: 既定のテーブル名の変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 87328bab0552074462ec039cbcb9c8184639f350
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0051a4bdd4a274ee91997117f491c435a556c04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308592"
 ---
 # <a name="modifying-default-table-names"></a>既定のテーブル名の変更
   データ ソース ビューのオブジェクトの **FriendlyName** プロパティ値を変更することで、オブジェクトをわかりやすく、また使いやすくすることができます。  
@@ -37,11 +37,11 @@ ms.locfileid: "36083744"
   
      データ ソース ビューの各テーブルのプロパティを変更するときは、[プロパティ] ウィンドウを開いたままにしておくと便利です。 **[自動的に隠す]** ボタンをクリックしてウィンドウを開いたまま固定しておかないと、 **ダイアグラム** ペイン内の別のオブジェクトをクリックしたときに [プロパティ] ウィンドウが閉じてしまいます。  
   
-3.  変更、 **FriendlyName**プロパティを**FactInternetSales**オブジェクトを *`InternetSales`* です。  
+3.  変更、 **FriendlyName**プロパティを**FactInternetSales**オブジェクトを *`InternetSales`* します。  
   
      **FriendlyName** 以外のセルをクリックすると、変更が適用されます。 次のレッスンでは、このファクト テーブルを基にしてメジャー グループを定義します。 このレッスンで表示名を変更したので、次に作成するファクト テーブルの名前も FactInternetSales ではなく InternetSales になります。  
   
-4.  **[テーブル]** ペインで **[DimProduct]** をクリックします。 [プロパティ] ウィンドウで変更、 **FriendlyName**プロパティを *`Product`* です。  
+4.  **[テーブル]** ペインで **[DimProduct]** をクリックします。 [プロパティ] ウィンドウで変更、 **FriendlyName**プロパティを *`Product`* します。  
   
 5.  データ ソース ビューの他のテーブルについても、同じ方法で **FriendlyName** プロパティを変更します。つまり、**Dim**プレフィックスを削除します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36083744"
  [レッスン 2: キューブの定義と配置](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル内のデータ ソース ビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [多次元モデルのデータ ソース ビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [データ ソース ビューでプロパティを変更&#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

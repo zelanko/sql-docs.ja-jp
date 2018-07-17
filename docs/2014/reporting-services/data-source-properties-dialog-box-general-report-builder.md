@@ -1,5 +1,5 @@
 ---
-title: データ ソースのプロパティ ダイアログ ボックス、全般 (レポート ビルダー) |Microsoft ドキュメント
+title: データ ソースのプロパティ ダイアログ ボックスで、全般 (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: edd997ab55e63abe4b5085bbe0b11c197020c2ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30114b93158424512e9a9be6441dc5c3ab8dd460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288458"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>[全般] ([データ ソースのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   レポート サーバーから共有データ ソースを選択する場合や、レポートに埋め込まれたデータ ソースの接続情報を作成または変更する場合は、 **[データ ソースのプロパティ]** ダイアログ ボックスの **[全般]** を選択します。  
@@ -44,7 +44,7 @@ ms.locfileid: "36177040"
  パスワードが必要など、指定された資格情報が不完全な場合、レポート ビルダーでは、データ ソースへの接続が必要なときに、実行時の資格情報の入力を再度要求します。 デザイン時の資格情報は保存されるため、入力を再度要求されることはありません。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  データ ソースの名前を入力します。 データ ソース名はレポート内で一意である必要があります。 既定では、DataSource1 または DataSource2 などの一般的な名前がデータ ソースに割り当てられます。  
   
  **共有接続を使用します。**  
@@ -52,16 +52,16 @@ ms.locfileid: "36177040"
   
  レポート サーバーからデータ ソースを選択した後は、レポート ビルダーによってこのレポート サーバーへの接続が維持されます。  
   
- **レポートに埋め込まれた接続を使用します。**  
+ **レポートに埋め込まれた接続を使用して、**  
  このレポートでのみ使用されるデータ ソースを作成する場合は、このオプションを選択します。  
   
- **Type**  
+ **型**  
  データ処理拡張機能を選択します。 一覧には、登録されているすべての拡張機能が表示されます。  
   
  **[接続文字列]**  
  データ ソースの接続文字列を入力します。 **[構築]** をクリックして、 **[接続のプロパティ]** ダイアログ ボックスで接続文字列を生成します。 式を編集するには、 **式** (*[fx]*) ボタンをクリックします。  
   
- **クエリを処理するときに、単一のトランザクションを使用します。**  
+ **クエリの処理時に、1 つのトランザクションを使用します。**  
  このデータ ソースを使用するデータセットが、データベースに対する単一のトランザクションで処理されるように指定する場合は、このオプションを選択します。 同じデータ ソースを使用するサブレポートのトランザクションを含めるには、そのサブレポートを選択し、[プロパティ] ペインで **[MergeTransactions]** を **[True]** に設定します。  
   
  **[接続テスト]**  
@@ -71,7 +71,7 @@ ms.locfileid: "36177040"
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [データ ソースのプロパティ ダイアログ ボックス、資格情報&#40;レポート ビルダー&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
+ [データ ソースのプロパティ ダイアログ ボックスで、資格情報&#40;レポート ビルダー&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
  [レポート ビルダー ダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

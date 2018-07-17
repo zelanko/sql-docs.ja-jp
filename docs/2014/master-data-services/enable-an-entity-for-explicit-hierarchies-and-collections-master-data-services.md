@@ -1,5 +1,5 @@
 ---
-title: 明示的階層およびコレクション (Master Data Services) のエンティティを有効にする |Microsoft ドキュメント
+title: 明示的階層およびコレクション (マスター データ サービス) のエンティティを有効にする |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], enabling for collections
 - entities [Master Data Services], enabling for explicit hierarchies
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c15f62eaebbfe77303004bb2417989ed5320ea11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a300dd4ab0a162c335dc0c0efac548dcb757f11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311922"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>明示的階層とコレクションに対してエンティティを有効にする (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で明示的階層とコレクションに対してエンティティを有効にすると、エンティティに明示的階層とコレクションを作成できます。  
@@ -48,13 +48,13 @@ ms.locfileid: "36073505"
   
 5.  **[選択したエンティティの編集]** をクリックします。  
   
-6.  **明示的階層およびコレクションを有効にする**一覧で、**はい**です。  
+6.  **明示的階層およびコレクションを有効にする**一覧で、**はい**します。  
   
-7.  **明示的階層名**ボックスには、明示的階層の名前を入力します。  
+7.  **明示的階層名**ボックスに、明示的階層の名前を入力します。  
   
 8.  必要に応じて、 **[必須階層]** チェック ボックスをオフにして、任意の階層として明示的階層を作成します。  
   
-9. をクリックして**エンティティの保存**です。  
+9. クリックして**エンティティの保存**します。  
   
 ## <a name="next-steps"></a>次の手順  
   

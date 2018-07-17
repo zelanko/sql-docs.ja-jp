@@ -1,5 +1,5 @@
 ---
-title: ソース管理の変更 |Microsoft ドキュメント
+title: ソース管理の変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDD_SCC_CONNECTION_DIALOG
 helpviewer_keywords:
 - Change Source Control dialog box
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e2584a7981662bc96fff975d93dfd24ec79d5d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 825cdbb6f25afb31d49e8150c19790385bc1cf14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312302"
 ---
 # <a name="change-source-control"></a>ソース管理の変更
   ローカルに保存されたソリューションまたはプロジェクトを、ソース管理データベース フォルダーに関連付ける、接続とバインドの作成と管理を行います。  
   
 ## <a name="dialog-box-access"></a>ダイアログ ボックスの表示  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のソリューション エクスプローラーで、項目を選択します。 **ファイル** メニューのをクリックして**ソース管理**、し**ソース管理の変更**です。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のソリューション エクスプローラーで、項目を選択します。 **ファイル** メニューのをクリックして**ソース管理**、し**ソース管理の変更**します。  
   
 > [!NOTE]  
 >  ソリューション エクスプローラーで項目を右クリックしても、このダイアログ ボックスを表示できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "36178530"
  **[列]**  
  表示する列と表示される順序を識別します。  
   
- **のインスタンスに接続するときには、**  
+ **Connect**  
  選択した項目とソース管理サーバーの間に接続を作成します。  
   
  **接続済み**  
@@ -72,20 +72,20 @@ ms.locfileid: "36178530"
  現在の選択における各ソリューションおよびプロジェクトの名前が表示されます。  
   
  **Sort**  
- 表示された列の順序を並べ替えます。  
+ 表示されている列の順序を並べ替えます。  
   
- **Status**  
+ **ステータス**  
  項目のバインドと接続の状態を示します。 使用可能なオプションは次のとおりです。  
   
-|**オプション**|**description**|  
+|**オプション**|**[説明]**|  
 |----------------|---------------------|  
 |有効です|項目は、その項目が属するサーバー フォルダーに正しくバインドされ、接続されています。|  
-|[無効]|項目は、その項目が属するフォルダーに正しくバインドされていないか、接続が切断されています。 使用して、**ソース管理に追加**の代わりにコマンド**バインド**この項目の。|  
+|[無効]|項目は、その項目が属するフォルダーに正しくバインドされていないか、接続が切断されています。 使用して、**ソース管理に追加**コマンドの代わりに**バインド**この項目。|  
 |Unknown|ソース管理下にある項目の状態がまだ決定されていません。|  
 |[制御しない]|項目がソース管理下にありません。|  
   
- **バインドを解除します。**  
- 表示、**ソース管理** ダイアログ ボックスを選択した項目をソース管理から削除し、現在のフォルダーからの項目を完全に解除できるようにします。  
+ **バインド解除します。**  
+ 表示、**ソース管理** ダイアログ ボックスを選択した項目をソース管理から削除し、永続的に、現在のフォルダーから項目の関連付けを解除できるようにします。  
   
 ## <a name="see-also"></a>参照  
  [ソリューション エクスプローラーのソース管理](../../2014/database-engine/solution-explorer-source-control.md)  

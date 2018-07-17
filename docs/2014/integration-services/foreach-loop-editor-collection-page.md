@@ -1,5 +1,5 @@
 ---
-title: Foreach ループ エディター (コレクション ページ) |Microsoft ドキュメント
+title: Foreach ループ エディター (コレクション ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50ab22c5b36390645aa8f6fb961531479e592188
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: d10057943aa872c919171227f072f6b2836eba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318882"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>[Foreach ループ エディター] ([コレクション] ページ)
   **[Foreach ループ エディター]** ダイアログ ボックスの **[コレクション]** ページを使用すると、列挙子の型を指定して列挙子を構成できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36174549"
 |**[Foreach Nodelist 列挙子]**|XML ドキュメント内のノードを列挙します。 この値を選択すると、セクション **[Foreach NodeList 列挙子]** に動的オプションが表示されます。|  
 |**[ForEach SMO 列挙子]**|SMO オブジェクトを列挙します。 この値を選択すると、セクション **[Foreach SMO 列挙子]** に動的オプションが表示されます。|  
 |**[Foreach Azure Blob 列挙子]**|指定された BLOB の場所に BLOB ファイルを列挙します。 この値を選択すると、セクション **[Foreach Azure Blob 列挙子]** に動的オプションが表示されます。|  
-|**[Foreach ADLS File 列挙子]**|フィルターを使用して ADLS 上のファイルを列挙します。 この値を選択すると、セクション **[Foreach ADLS File 列挙子]** に動的オプションが表示されます。|
+|**[Foreach ADLS File 列挙子]**|フィルターを使用して ADLS にファイルを列挙します。 この値を選択すると、セクション **[Foreach ADLS File 列挙子]** に動的オプションが表示されます。|
   
  **式**  
  **[式]** をクリックして展開すると、既存のプロパティ式のリストが表示されます。 参照ボタン (**[...]**) ボタンをクリックして、列挙子プロパティのプロパティ式を追加するか、既存のプロパティ式を編集して評価します。  
@@ -107,7 +107,7 @@ ms.locfileid: "36174549"
  **[列データ型]**  
  アクティブな列のデータ型を一覧表示します。  
   
- **削除**  
+ **[削除]**  
  アイテムを一覧から削除するには、そのアイテムを選択してから **[削除]** をクリックします。  
   
  **[列]**  
@@ -138,7 +138,7 @@ ms.locfileid: "36174549"
 ### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>[Enumerator] = [Foreach ADO.NET Schema Rowset 列挙子]  
  Foreach ADO.NET Schema Rowset 列挙子は、指定したデータ ソースのスキーマを列挙するために使用します。 たとえば、Foreach ループに SQL 実行タスクが含まれている場合、Foreach ADO.NET Schema Rowset 列挙子を使用して、 **AdventureWorks** データベース内の列や、スキーマ権限を取得するための SQL 実行タスクなど、スキーマを列挙できます。  
   
- **Connection**  
+ **[接続]**  
  ADO.NET 接続マネージャーを一覧から選択するか、[\<**新しい接続...**>] をクリックして ADO.NET 接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
@@ -220,7 +220,7 @@ ms.locfileid: "36174549"
  **関連項目**: [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
  **[InnerElementType]**  
- 場合**EnumerationType**に設定されている`ElementCollection`一覧に内部要素の種類を選択します。  
+ 場合**EnumerationType**に設定されている`ElementCollection`一覧で、内部要素の型を選択します。  
   
  **[InnerXPathStringSourceType]**  
  内部 XPath 文字列のソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -245,7 +245,7 @@ ms.locfileid: "36174549"
 ### <a name="enumerator--foreach-smo-enumerator"></a>[Enumerator] = [Foreach SMO 列挙子]  
  Foreach SMO 列挙子は、SQL Server 管理オブジェクト (SMO) のオブジェクトを列挙するために使用します。 たとえば、Foreach ループに SQL 実行タスクが含まれている場合、Foreach SMO 列挙子を使用して、 **AdventureWorks** データベース内のテーブルを列挙し、各テーブル内の行数をカウントするクエリを実行できます。  
   
- **Connection**  
+ **[接続]**  
  既存の ADO.NET 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  関連項目 : 「 [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)」  
@@ -278,7 +278,7 @@ ms.locfileid: "36174549"
  **[BLOB 時間範囲フィルター]**  
  時間範囲フィルターを指定します。 **TimeRangeFrom** の後から **TimeRangeTo** の前までに変更されたファイルが列挙されます。  
 ### <a name="enumerator--foreach-adls-file-enumerator"></a>列挙子 = Foreach ADLS File 列挙子  
-**ADLS File 列挙子**ADLS にフィルターを使用してファイルを列挙する SSIS パッケージを有効にします。 スラッシュ (`/`)-列挙するファイルのプレフィックスが指定された完全なパスを変数に格納されているし、Foreach ループ コンテナー内のタスクで使用されることができます。
+**ADLS File 列挙子**フィルターを使用して ADLS にファイルを列挙するために、SSIS パッケージできます。 スラッシュ (`/`) に列挙されたファイルのプレフィックス付きの完全なパスを変数に格納されているし、Foreach ループ コンテナー内のタスクで使用されることができます。
   
 **[AzureDataLakeConnection]**  
 Azure Data Lake 接続マネージャーを指定するか、ADLS アカウントを参照する新しい接続マネージャーを作成します。   
@@ -287,7 +287,7 @@ Azure Data Lake 接続マネージャーを指定するか、ADLS アカウン�
 検索する ADLS ディレクトリを指定します。
   
 **[FileNamePattern]**  
-ファイル名フィルターを指定します。 指定したパターンに一致するファイルのみが列挙されます。 ワイルドカードの `*` と `?` がサポートされています。 
+ファイル名フィルターを指定します。 名前、指定したパターンに一致するファイルのみが列挙されます。 ワイルドカードの `*` と `?` がサポートされています。 
   
 **[SearchRecursively]**  
 指定されたディレクトリ内で再帰的に検索するかどうかを指定します。  
@@ -300,8 +300,8 @@ Azure Data Lake 接続マネージャーを指定するか、ADLS アカウン�
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [[Foreach ループ エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [[Foreach ループ エディター&#40;変数マッピング] ページ&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
+ [Foreach ループ エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [Foreach ループ エディター&#40;変数マッピング ページ&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [[式] ページ](expressions/expressions-page.md)   
  [For ループ コンテナー](control-flow/for-loop-container.md)  
   

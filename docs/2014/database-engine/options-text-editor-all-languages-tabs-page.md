@@ -1,5 +1,5 @@
 ---
-title: オプション (すべての言語のテキスト エディターのタブ ページ) |Microsoft ドキュメント
+title: オプション (テキスト エディター-すべての言語のタブ ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.Tabs
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f3e0df6dced5c69f60cbb95abcb5ba8eee78879b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cc5922ed04933dcb7a6b09995353e7fd64a3163
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287858"
 ---
-# <a name="options-text-editor---all-languages--tabs-page"></a>オプション (すべての言語のテキスト エディターのタブ ページ)
+# <a name="options-text-editor---all-languages--tabs-page"></a>オプション (テキスト エディター-すべての言語のタブ ページ)
   このダイアログ ボックスを使用すると、全部で 5 つある [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のすべてのエディターのタブの動作を設定できます。 これらのオプションを表示するには、**[ツール]** メニューの **[オプション]** をクリックします。 **[テキスト エディター]** フォルダーを選択し、**[すべての言語]** フォルダーを展開して、**[タブ]** をクリックします。  
   
 ## <a name="tabbing-options-by-editor"></a>エディターごとのタブ関連オプション  
@@ -48,13 +48,13 @@ ms.locfileid: "36165885"
  **[タブ サイズ]**  
  タブ ストップ間の間隔をスペース数で設定します。 既定値は、スペースが 4 つです。  
   
- **[インデント サイズ]**  
+ **インデントのサイズ**  
  自動インデントのサイズをスペース数で設定します。 既定値は、スペースが 4 つです。 指定されたサイズになるように、タブ文字、スペース文字、またはその両方が挿入されます。  
   
  **スペースを挿入します。**  
  このオプションを選択すると、タブ文字を使用せずにスペース文字だけを挿入してインデントします。 たとえば **[インデント サイズ]** が 5 に設定されている場合、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のメイン ウィンドウで Tab キーを押すか、ツール バーの **[インデント]** ボタンを押すごとに、5 つのスペース文字が挿入されます。  
   
- **タブの保持**  
+ **タブを保持します。**  
  このオプションを選択すると、インデントするときにできる限り多くのタブ文字を挿入します。 それぞれのタブ文字が、**[タブ サイズ]** で指定された数のスペースを満たします。 **[インデント サイズ]** が **[タブ サイズ]** の倍数でない場合は、その差を埋めるためにスペース文字が追加されます。  
   
   

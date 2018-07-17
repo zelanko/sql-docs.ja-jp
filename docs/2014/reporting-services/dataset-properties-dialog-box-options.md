@@ -1,5 +1,5 @@
 ---
-title: データセットのプロパティ ダイアログ ボックス、オプション |Microsoft ドキュメント
+title: データセットのプロパティ ダイアログ ボックス、オプション |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10130"
 - sql12.rtp.rptdesigner.datasetproperties.options.f1
 ms.assetid: 95299049-71ba-427f-b723-775cb696243f
 caps.latest.revision: 39
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d0f83c86076cc968d1b8896f3c857b9925fcbb81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7018038707462c2cf32a733b31cf66d25a275bfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319742"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>[オプション] ([データセットのプロパティ] ダイアログ ボックス)
-  選択**オプション**上、 **DatasetProperties**照合順序オプションや小計クエリなどのデータ オプションを変更するダイアログ ボックス。 詳細については、「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
+  選択**オプション**上、**データセット**照合順序オプションや小計クエリなどのデータ オプションを変更するダイアログ ボックス。 詳細については、「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
 ## <a name="options"></a>および  
  **[照合順序]**  
@@ -44,7 +44,7 @@ ms.locfileid: "36072071"
  文字幅の区別を決める値を選択します。 データで文字幅を区別するかどうかを示します。 **[True]**、 **[False]**、または **[自動]** に設定できます。既定値の **[自動]** は、レポート サーバーが、レポートの実行時にデータ プロバイダーから値の取得を試みる必要があることを示します。 データ プロバイダーが文字幅の区別をサポートしない場合、レポートは値が **[False]** の場合と同じように実行されます。 値を正確に把握しており、その値が確実にサポートされる場合は、 **[True]** を選択します。  
   
  **[小計を詳細行として解釈]**  
- 集計行ではなく詳細行として小計行を解釈するかどうかを示す値を選択します。 既定値は**自動**、レポートを使用しない場合、詳細行として小計行を処理する必要があることを示します、`Aggregate`データ セット内のフィールドにアクセスする関数。 小計行を集計行として解釈する必要がある場合は、 **[False]** を選択します。 使用しないことがわかってや詳細行として解釈する小計行をする場合、 `Aggregate`() 関数を選択して**True**です。  
+ 集計行ではなく詳細行として小計行を解釈するかどうかを示す値を選択します。 既定値は**自動**、レポートを使用しない場合に、小計行の詳細行として処理することを示します、`Aggregate`データ セット内のフィールドにアクセスする関数。 小計行を集計行として解釈する必要がある場合は、 **[False]** を選択します。 小計行の詳細行として解釈して、使用しないことがわかっている場合、 `Aggregate`() 関数を選択**True**します。  
   
 ## <a name="see-also"></a>参照  
  [レポートまたはテキスト ボックスのロケールを設定&#40;Reporting Services&#41;](report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)   

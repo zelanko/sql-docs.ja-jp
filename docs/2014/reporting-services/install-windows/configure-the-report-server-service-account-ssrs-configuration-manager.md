@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bd5da35233834eb0f57482e7f7faef11f977debe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f13a9693615fd55d1cd9fed60398ab78374963e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282768"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、レポート サーバー Web サービス、レポート マネージャー、およびスケジュールされたレポート処理とサブスクリプションの配信に使用されるバックグラウンド処理アプリケーションを含んだ単一のサービスとして実装されます。 このトピックでは、サービス アカウントを最初に構成する方法と、Reporting Services 構成ツールを使用してアカウントやパスワードを変更する方法について説明します。  
   
 ## <a name="initial-configuration"></a>初期構成  
- レポート サーバー サービスのアカウントは、セットアップ時に定義されます。 など、ドメイン ユーザー アカウントまたはビルトインでサービスを実行することができます`NetworkService`アカウント。 既定のアカウントはありません。指定した任意のアカウント、[サーバー構成 - サービス アカウント](../../sql-server/install/server-configuration-service-accounts.md)インストール ウィザードのページが、レポート サーバー サービスの初期アカウントになります。  
+ レポート サーバー サービスのアカウントは、セットアップ時に定義されます。 など、ドメイン ユーザー アカウントまたは組み込みのサービスを実行することができます`NetworkService`アカウント。 既定のアカウントはありません。指定した任意のアカウント、[サーバーの構成 - サービス アカウント](../../sql-server/install/server-configuration-service-accounts.md)インストール ウィザードのページがレポート サーバー サービスの初期アカウントになります。  
   
 > [!IMPORTANT]  
 >  レポート サーバー Web サービスとレポート マネージャーは[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]アプリケーション、それらで実行されない、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]アカウント。 単一のサービス アーキテクチャによって、両方の ASP.NET アプリケーションが同じレポート サーバー プロセス ID で実行されます。 これは以前のリリースからの重要な変更です。以前のリリースでは、レポート サーバー Web サービスとレポート マネージャーの両方が、IIS で指定された [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] ワーカー プロセス ID で実行されていました。  
@@ -46,7 +46,7 @@ ms.locfileid: "36076576"
     > [!NOTE]  
     >  レポート サーバーがスケールアウト配置の一部である場合、更新するレポート サーバーのみが影響を受けます。 配置内の他のレポート サーバーの暗号化キーは、サービス アカウントを変更しても影響を受けません。  
   
- アカウントを設定する方法については、次を参照してください。[サービス アカウントの構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)です。  
+ アカウントを設定する方法の詳細については、次を参照してください。[サービス アカウントを構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)します。  
   
 ## <a name="choosing-an-account"></a>アカウントの選択  
  レポート サーバー サービスは、次に示すアカウントの種類のいずれかで実行するように構成できます。  
@@ -59,11 +59,11 @@ ms.locfileid: "36076576"
   
 -   LocalService  
   
- アカウントの種類の選択については最適な方法が 1 つだけ存在するわけではなく、 アカウントごとに考慮する必要がある利点と欠点があります。 展開する場合は[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]悪意のあるユーザーによって共有アカウントが侵害された場合は、広範囲の損害を回避できますできるように、ドメイン ユーザー アカウントで実行するサービスを構成することがベスト プラクティス、実稼働サーバーに提示します。 これによって、このアカウントのログオンの利用状況も容易に監査できるようになります。 展開する場合は Windows ユーザー アカウントを使用するトレードオフは[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Kerberos 認証を使用するネットワークでは、ユーザー アカウントでサービスを登録する必要があります。 詳細については、「[レポート サーバーのサービス プリンシパル名 &#40;SPN&#41; の登録](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)」を参照してください。  
+ アカウントの種類の選択については最適な方法が 1 つだけ存在するわけではなく、 アカウントごとに考慮する必要がある利点と欠点があります。 展開する場合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ドメイン ユーザー アカウントで実行できるため、悪意のあるユーザーによって共有アカウントが侵害された場合は、広範囲の損害を回避できますサービスを構成することがベスト プラクティスを運用サーバーで提案します。 これによって、このアカウントのログオンの利用状況も容易に監査できるようになります。 Windows ユーザー アカウントを使用するは、展開する場合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、Kerberos 認証を使用するネットワークでは、ユーザー アカウントをサービスを登録する必要があります。 詳細については、「[レポート サーバーのサービス プリンシパル名 &#40;SPN&#41; の登録](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)」を参照してください。  
   
  次に示すガイドラインとリンクは、配置に最適な方法を決定するのに役立ちます。  
   
--   [サービス アカウント&#40;SSRS ネイティブ モード&#41;](../../sql-server/install/service-account-ssrs-native-mode.md)です。  
+-   [サービス アカウント&#40;SSRS ネイティブ モード&#41;](../../sql-server/install/service-account-ssrs-native-mode.md)します。  
   
 -   SQL Server のオンライン ブックの「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 」。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "36076576"
   
  パスワードをリセットするには、次の操作を行います。  
   
-1.  **開始** メニューのをポイント**コントロール パネル**、 をポイント**管理者ツール**、 をクリック**Services**です。  
+1.  **開始**メニューで、**コントロール パネルの **、 をポイント**管理者ツール**、 をクリック**サービス**します。  
   
-2.  右クリック**SQL Server Reporting Services****プロパティ**です。  
+2.  右クリックして**SQL Server Reporting Services**、**プロパティ**します。  
   
-3.  をクリックして**ログオン**、新しいパスワードを入力します。  
+3.  クリックして**ログオン**、新しいパスワードを入力します。  
   
 4.  パスワードを変更したら、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、[サービス アカウント] ページでパスワードを更新します。 この追加の手順は、レポート サーバーによって内部的に保存されているアカウント情報を更新するために必要です。  
   
@@ -87,37 +87,37 @@ ms.locfileid: "36076576"
 ## <a name="configuring-the-report-server-service-for-a-sharepoint-integrated-report-server"></a>SharePoint 統合レポート サーバーのレポート サーバー サービスの構成  
  SharePoint 統合モードでレポート サーバーを実行している場合は、次のいずれかの状況のときに、SharePoint 構成データベースに保存されているサービス アカウント情報を更新する必要があります。  
   
--   変更、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービス アカウント (たとえば、NetworkService からドメイン ユーザー アカウントに切り替える場合など)。  
+-   変更、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービス アカウント (たとえば、NetworkService からドメイン ユーザー アカウントへの切り替えなど)。  
   
 -   SharePoint ファームを拡張して追加の SharePoint Web アプリケーションを組み込む場合。 サーバー ファームがレポート サーバー統合用に構成されている場合に、新たに追加されたアプリケーションがファーム内の他のアプリケーションとは異なるユーザー アカウントで実行されるように構成されているときは、データベース アクセス情報を更新する必要があります。  
   
  データベース アクセス情報を再設定した後は、古い接続が引き続き使用されないように [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] サービスを再起動する必要があります。  
   
-1.  **管理ツール**をクリックして**SharePoint 2010 サーバーの全体管理**です。  
+1.  **管理ツール**、 をクリックして**SharePoint 2010 サーバーの全体管理**します。  
   
-2.  をクリックして**アプリケーション管理**です。  
+2.  クリックして**アプリケーション管理**します。  
   
-3.  Reporting Services] セクションで [**データベース アクセスの許可**です。  
+3.  Reporting Services] セクションで [**データベース アクセスの許可**します。  
   
 4.  **[OK]** をクリックします。 [資格情報の入力] ダイアログ ボックスが表示されます。  
   
 5.  レポート サーバーをホストするコンピューター上のローカルの管理者グループに属しているユーザーの資格情報を入力します。 この資格情報は、サービス アカウント情報を取得する目的のために、レポート サーバー コンピューターへの一度だけの接続に使用されます。 各サービス アカウントに対して作成されたデータベース ログインは、SharePoint データベース内で更新されます。  
   
-6.  サービスを再起動する をクリックして**Operations**です。  
+6.  サービスを再起動するには、次のようにクリックします。**操作**します。  
   
-7.  トポロジおよびサービス をクリックして**サーバーのサービスの**します。  
+7.  トポロジおよびサービスでは、次のようにクリックします。**サーバーのサービスの**します。  
   
-8.  Windows SharePoint Services Web アプリケーションをクリックして**停止**です。  
+8.  Windows SharePoint Services の Web アプリケーションをクリックして**停止**します。  
   
 9. サービスが停止するまで待ちます。  
   
-10. をクリックして**開始**です。  
+10. クリックして**開始**します。  
   
 > [!NOTE]  
->  SharePoint 製品とテクノロジは、ドメイン アカウントの reporting services SharePoint モードのようにサービス構成が必要です。  
+>  SharePoint 製品とテクノロジは、reporting services SharePoint モードのようなサービスの構成にドメイン アカウントが必要です。  
   
 ## <a name="see-also"></a>参照  
- [サービス アカウントの構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [サービス アカウントを構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [サービス アカウント&#40;SSRS ネイティブ モード&#41;](../../sql-server/install/service-account-ssrs-native-mode.md)   
  [レポート サーバー Url の構成&#40;SSRS 構成マネージャー&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

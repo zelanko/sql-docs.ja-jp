@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server (starting with 2008)
 f1_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fcfb3933a1ce88855ec32a9b4ac86a5c2075819d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 47292d5659b5244a6c318b330b45825ad5408486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294789"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>リンク サーバーの作成 (SQL Server データベース エンジン)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してリンク サーバーを作成し、別の [!INCLUDE[tsql](../../includes/tsql-md.md)]からデータにアクセスする方法について説明します。 リンク サーバーを作成すると、複数のソースのデータを操作できます。 リンク サーバーは別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスである必要はありませんが、そのようにするのが一般的です。  
@@ -108,7 +108,7 @@ ms.locfileid: "36179320"
      **[追加]**  
      新しいローカル ログインを追加します。  
   
-     **削除**  
+     **[削除]**  
      既存のローカル ログインを削除します。  
   
      **[接続を許可しない]**  
@@ -184,7 +184,7 @@ ms.locfileid: "36179320"
      プロバイダーに対して起動できるのはレベル 0 の OLE DB インターフェイスだけです。  
   
      **[InProcess 許可]**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、インプロセス サーバーとしてプロバイダーのインスタンスを作成できます。 このオプションを設定しない場合、既定の動作として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス外でプロバイダーのインスタンスが作成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセス外でプロバイダーのインスタンスが作成されると、プロバイダーでエラーが発生しても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスは影響を受けません。 外部プロバイダーがインスタンス化されるとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]処理、更新や挿入の長い列を参照している (`text`、 `ntext`、または`image`) は許可されていません。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、インプロセス サーバーとしてプロバイダーのインスタンスを作成できます。 このオプションを設定しない場合、既定の動作として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス外でプロバイダーのインスタンスが作成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセス外でプロバイダーのインスタンスが作成されると、プロバイダーでエラーが発生しても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスは影響を受けません。 外部プロバイダーをインスタンスするときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]処理、更新や長い列を参照する挿入 (`text`、 `ntext`、または`image`) は許可されていません。  
   
      **[トランザクション更新以外]**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、 **ITransactionLocal** を利用できない場合でも更新を実行できます。 このオプションがオンの場合、プロバイダーはトランザクションをサポートしないので、プロバイダーに対する更新を回復することはできません。  

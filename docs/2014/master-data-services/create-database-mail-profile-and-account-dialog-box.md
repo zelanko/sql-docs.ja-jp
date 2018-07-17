@@ -1,5 +1,5 @@
 ---
-title: データベース メール プロファイルとアカウント ダイアログ ボックス (Master Data Services 構成マネージャー) を作成 |Microsoft ドキュメント
+title: 作成するデータベース メール プロファイルとアカウント ダイアログ ボックス (Master Data Services 構成マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82901acbfe20a0ec475fc859935c8abdf472b300
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: ef6d589c42c6abfd72975d1fbc1c98de76d908fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289128"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス (Master Data Services 構成マネージャー)
   **[データベース メール プロファイルとアカウントの作成]** ダイアログ ボックスを使用すると、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのデータベース メール プロファイルおよびデータベース メール アカウントを作成できます。 このプロファイルは、ビジネス ルールの検証が失敗したときに電子メールでユーザーやグループに通知する際に使用されます。  
@@ -44,7 +44,7 @@ ms.locfileid: "36176918"
 |**電子メール アドレス**|アカウントの電子メール アドレスの名前を入力します。 これは、電子メールの送信元の電子メール アドレスで、 *email_name*@*domain_name*の形式にする必要があります。 例の電子メール アドレスは sales@contoso.com です。|  
 |**表示名**|この設定は省略可能です。 このアカウントから送信する電子メール メッセージに表示する名前を入力します。 たとえば、表示名は Contoso Sales Group のようになります。|  
 |**[返信用電子メール アドレス]**|この設定は省略可能です。 このアカウントから送信した電子メール メッセージに対する返信に使用する電子メール アドレスを入力します。 例の返信用電子メール アドレスは admin@contoso.com です。|  
-|**[SMTP サーバー]**|アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 たとえば、SMTP サーバー フォーマットは`smtp.` *< company_name >*`.com`です。 詳細については、電子メールの管理者に問い合わせてください。|  
+|**[SMTP サーバー]**|アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 たとえば、SMTP サーバーの形式は`smtp.` *< company_name >*`.com`します。 詳細については、電子メールの管理者に問い合わせてください。|  
 |**[ポート番号]**|このアカウントで使用する SMTP サーバーのポート番号を入力します。 既定の SMTP ポートは 25 です。|  
 |**[このサーバーはセキュリティで保護された接続 (SSL) を必要とする]**|SSL (Secure Sockets Layer) を使用して通信を暗号化します。|  
   

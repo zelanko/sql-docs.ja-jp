@@ -19,13 +19,13 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cbc0be5255b3345ba27297123981f2b0138e4437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c34669ffc14ee623b17549f588385886488ed02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287598"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>スクリプト コンポーネントを使用した標準以外のテキスト ファイル形式の解析
   ソース データが標準以外の形式の場合、複数の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変換を連結するより、すべての解析ロジックを単一のスクリプトに統合する方がより便利で、同じ結果が得られる場合があります。  
@@ -40,7 +40,7 @@ ms.locfileid: "36177136"
 ##  <a name="example1"></a> 例 1: 行区切りのレコードの解析  
  この例では、データの各列が個別の行に表示されるテキスト ファイルを取得し、スクリプト コンポーネントを使用して解析し、変換先テーブルに入れる方法を示します。  
   
- データ フローの変換として使用するため、スクリプト コンポーネントを構成する方法の詳細については、次を参照してください[スクリプト コンポーネントによる同期変換を作成する](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)と[非同期の作成。スクリプト コンポーネントによる変換](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)です。  
+ データ フローで変換として使用するためのスクリプト コンポーネントを構成する方法の詳細については、次を参照してください[スクリプト コンポーネントによる同期変換の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)と[、非同期の作成。スクリプト コンポーネントによる変換](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)します。  
   
 #### <a name="to-configure-this-script-component-example"></a>このスクリプト コンポーネントの例を構成するには  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36177136"
   
 11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
-12. **入力と出力**のページ、**スクリプト変換エディター**出力 0 を選択し、設定、その`SynchronousInputID`[なし] にします。 次の 5 つの出力列を、すべて文字列型 [DT_STR]、長さ 32 で作成します。  
+12. **入力と出力**のページ、**スクリプト変換エディター**出力 0 を選択し、設定、その`SynchronousInputID`を None にします。 次の 5 つの出力列を、すべて文字列型 [DT_STR]、長さ 32 で作成します。  
   
     -   FirstName  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36177136"
   
     -   StateProvince  
   
-13. **スクリプト**のページ、**スクリプト変換エディター**をクリックして**スクリプトの編集**に示すようにコードを入力して、`ScriptMain`の例では、クラスです。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
+13. **スクリプト**のページ、**スクリプト変換エディター**、 をクリックして**スクリプトの編集**に示すようにコードを入力し、`ScriptMain`の例では、クラス。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
 14. SQL Server 変換先をデータ フローに追加します。 OLE DB 接続マネージャーと RowDelimitedData テーブルを使用するように構成します。 スクリプト コンポーネントの出力をこの変換先に接続します。  
   
@@ -198,7 +198,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 > [!CAUTION]  
 >  このサンプルは、デモンストレーションのみを目的としています。 サンプルを複数回実行すると、重複したキーの値が変換先テーブルに挿入されます。  
   
- データ フローの変換として使用するため、スクリプト コンポーネントを構成する方法の詳細については、次を参照してください[スクリプト コンポーネントによる同期変換を作成する](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)と[非同期の作成。スクリプト コンポーネントによる変換](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)です。  
+ データ フローで変換として使用するためのスクリプト コンポーネントを構成する方法の詳細については、次を参照してください[スクリプト コンポーネントによる同期変換の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)と[、非同期の作成。スクリプト コンポーネントによる変換](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)します。  
   
 #### <a name="to-configure-this-script-component-example"></a>このスクリプト コンポーネントの例を構成するには  
   
@@ -258,7 +258,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
-12. **入力と出力**のページ、**スクリプト変換エディター**、出力 0 を選択、ParentRecords に名前を変更および設定の`SynchronousInputID`[なし] にします。 次の 2 つの出力列を作成します。  
+12. **入力と出力**のページ、**スクリプト変換エディター**、出力 0 を選択して、ParentRecords に名前を変更および設定の`SynchronousInputID`を None にします。 次の 2 つの出力列を作成します。  
   
     -   ParentID (主キー)、4 バイト符号付き整数型 [DT_I4]  
   
@@ -351,7 +351,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [スクリプト コンポーネントによる同期変換の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

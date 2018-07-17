@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,12 +24,12 @@ caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c930ccd4c4fded101f7248f8dadaeff570efd9db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0e389b424937ad0e7cbaa4b4e1b2b94c914f258
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956237"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358274"
 ---
 # <a name="enhance-merge-replication-performance"></a>マージ レプリケーション パフォーマンスの向上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ ms.locfileid: "32956237"
   
 -   サブスクリプションの同期スケジュールをずらす。  
   
-     多数のサブスクライバーが 1 つのパブリッシャーと同期される場合、マージ エージェントが異なるタイミングで実行されるように、スケジュールをずらすことを検討してください。 詳しくは、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」をご覧ください。  
+     多数のサブスクライバーが 1 つのパブリッシャーと同期される場合、マージ エージェントが異なるタイミングで実行されるように、スケジュールをずらすことを検討してください。 詳細については、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。  
   
 ## <a name="merge-agent-parameters"></a>マージ エージェントのパラメーター  
  マージ エージェントおよびそのパラメーターの詳細については、「 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)」を参照してください。  

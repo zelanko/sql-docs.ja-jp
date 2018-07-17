@@ -1,5 +1,5 @@
 ---
-title: モデル アイテム セキュリティ ページ (レポート マネージャー) |Microsoft ドキュメント
+title: モデル アイテム セキュリティ ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d7f05024178334c11fccfd819aed1a4f4e023d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56cb59be6fd256ee182e7b57a5ecd7b4a103bfec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299802"
 ---
 # <a name="model-item-security-page-report-manager"></a>[モデル アイテムのセキュリティ] ページ (レポート マネージャー)
   このページでは、特定のアイテムに対する読み取り専用権限の許可や取り消しを行うことにより、モデルの各部をセキュリティで保護できます。 モデル アイテムのセキュリティは、実行時のアドホック データ探索や、レポート ビルダーでのレポート作成時に、パブリッシュされたモデルの各部分を使用できるかどうかに影響します。 この機能を使用するには、コンテンツ マネージャーの権限が必要です。  
@@ -65,17 +65,17 @@ ms.locfileid: "36075453"
 4.  **[モデル アイテムのセキュリティ]** タブをクリックします。  
   
 ## <a name="options"></a>および  
- **このモデルに個別の個々 のモデル アイテムのセキュリティ保護します。**  
+ **このモデルの個々 のモデル アイテムをセキュリティで保護します。**  
  モデル アイテムのセキュリティを有効にする場合は、このチェック ボックスをオンにします。  
   
- **モードでモデル アイテムは個別のセキュリティを指定します。**  
+ **モードで個々 のモデル アイテムのセキュリティを指定します**  
  モデル内のすべてのアイテムを表示します。 モデルの名前空間内を移動して、セキュリティを設定するアイテムを選択します。 一度に 1 つのアイテムのみ選択できます。 最初にルート ノードに対してロールの割り当てを作成してから、他のエンティティやフォルダーに対する作成に進んでください。  
   
  **親アイテムから権限を継承します。**  
  親アイテムのセキュリティ設定を継承する場合は、このオプションをクリックします。  
   
- **次のユーザーとグループをセミコロン区切り) に対する読み取り権限を割り当てる**  
- アクセス権を定義するユーザーまたはグループ アカウントを指定する場合は、このオプションをクリックします。 既定のセキュリティを使用している場合、ユーザーおよびグループ アカウントは Windows ドメイン アカウントです。 この形式でアカウントを指定します: *\<ドメイン >\\< アカウント\>* です。  
+ **次のユーザーとグループ (セミコロン区切り) に読み取りアクセス許可を割り当てる**  
+ アクセス権を定義するユーザーまたはグループ アカウントを指定する場合は、このオプションをクリックします。 既定のセキュリティを使用している場合、ユーザーおよびグループ アカウントは Windows ドメイン アカウントです。 この形式でアカウントを指定します: *\<ドメイン >\\< アカウント\>* します。  
   
 ## <a name="see-also"></a>参照  
  [Management Studio のレポート サーバーの F1 ヘルプ](tools/report-server-in-management-studio-f1-help.md)  

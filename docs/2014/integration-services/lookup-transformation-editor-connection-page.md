@@ -1,5 +1,5 @@
 ---
-title: 参照変換エディター (接続 ページ) |Microsoft ドキュメント
+title: 参照変換エディター ([接続] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.referencetable.f1
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 91794c83736042672026f5a0fe35ead15dd112eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 3c3236fe156e103269995a0707be17602af0a5ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318912"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>[参照変換エディター] ([接続] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[接続]** ページを使用して、接続マネージャーを選択します。 OLE DB 接続マネージャーを選択する場合は、参照データセットを生成するためのクエリ、テーブル、またはビューも選択します。  
@@ -52,7 +52,7 @@ ms.locfileid: "36177330"
   
 > [!NOTE]  
 >  
-  **[参照変換エディター]** の **[詳細設定]** ページで SQL ステートメントを指定する場合、ここで選択したテーブル名はその SQL ステートメントでオーバーライドおよび置換されます。 詳細については、次を参照してください。[参照変換エディター&#40;詳細設定 ページ&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)です。  
+  **[参照変換エディター]** の **[詳細設定]** ページで SQL ステートメントを指定する場合、ここで選択したテーブル名はその SQL ステートメントでオーバーライドおよび置換されます。 詳細については、次を参照してください。[参照変換エディター&#40;高度なページ&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)します。  
   
  **[新規作成]**  
  **[テーブルの作成]** ダイアログ ボックスを使用して新しいテーブルを作成します。  
@@ -76,9 +76,9 @@ ms.locfileid: "36177330"
  blogs.msdn.com のブログ「 [キャッシュ モードの参照](http://go.microsoft.com/fwlink/?LinkId=219518) 」  
   
 ## <a name="see-also"></a>参照  
- [参照変換エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [参照変換エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[参照変換エディター] &#40;[列] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [参照変換エディター] &#40;[詳細] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [参照変換エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
  [参照変換エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [あいまい参照変換](data-flow/transformations/fuzzy-lookup-transformation.md)  
   

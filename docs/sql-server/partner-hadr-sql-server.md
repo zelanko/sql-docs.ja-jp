@@ -3,11 +3,6 @@ title: SQL Server の高可用性とディザスター リカバリーのパー�
 description: サーバー監視のソリューションを提供しているサードパーティ パートナーの一覧を表示します。
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -17,12 +12,14 @@ ms.date: 09/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 7ef710966d10a37274e065093e7eb5ded24fa23e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: 033e25bcb5b338e1e74c12696d666663c17f87c1
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335296"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36927073"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server の高可用性とディザスター リカバリーのパートナー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

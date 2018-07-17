@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay のセキュリティ |Microsoft ドキュメント
+title: Distributed Replay のセキュリティ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 408d899379150e88684df38713f94765a0c0c7cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7c2c2a92ebbde62b20ba99539b31b4a3e40d267
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301282"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay のセキュリティ
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能をインストールして使用する前に、このトピックの重要なセキュリティ情報を確認する必要があります。 このトピックでは、Distributed Replay を使用する前に必要なインストール後のセキュリティ構成手順について説明します。 また、データ保護に関する重要な考慮事項や、重要な削除手順についても説明します。  
@@ -51,9 +51,9 @@ ms.locfileid: "36084497"
   
 1.  オペレーティング システムに応じて、次のいずれかを実行します。  
   
-    -   をクリックして**開始**、型`services.msc`で、**検索**ボックス、および ENTER キーを押します。  
+    -   クリックして**開始**、型`services.msc`で、**検索**ボックス、および ENTER キーを押します。  
   
-    -   をクリックして**開始**、 をクリックして**実行**、型`services.msc`、ENTER キーを押します。  
+    -   クリックして**開始**、 をクリックして**実行**、型`services.msc`、し、ENTER キーを押します。  
   
 2.  **[サービス]** ダイアログ ボックスで、構成するサービスを右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36084497"
 -   テストに使用したトレース ファイル、中間ファイル、ディスパッチ ファイル、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ファイルをすべて削除します。 中間ファイルとディスパッチ ファイルは、コントローラーとクライアントの作業ディレクトリにそれぞれ格納されます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [SQL Server 分散再生](sql-server-distributed-replay.md)   
  [分散再生のインストール](install-distributed-replay-overview.md)  
   
   

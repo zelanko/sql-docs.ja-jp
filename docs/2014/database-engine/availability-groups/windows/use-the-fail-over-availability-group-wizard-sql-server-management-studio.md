@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.failoverwizard.progress.f1
 - sql12.swb.failoverwizard.f1
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 caps.latest.revision: 25
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 351c09770b0e0e35c0ab4d039d8f4c9b5c76abe0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4e760ac9e1c806ef742c84f0725b94c204dc8345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36075811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314538"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>可用性グループのフェールオーバー ウィザードの使用 (SQL Server Management Studio)
   このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 SYNCHRONIZED 状態のセカンダリ レプリカにフェールオーバーする場合は、ウィザードで計画的な手動フェールオーバー (データ損失なし) を実行します。 UNSYNCHRONIZED 状態または NOT SYNCHRONIZING 状態のセカンダリ レプリカにフェールオーバーする場合は、ウィザードで *強制フェールオーバー* とも呼ばれる強制手動フェールオーバー (データ損失の可能性あり) を実行します。 どちらの形式の手動フェールオーバーでも、接続先のセカンダリ レプリカはプライマリ ロールに移行します。 計画的な手動フェールオーバーでは、同時に、元のプライマリ レプリカはセカンダリ ロールに移行します。 強制フェールオーバー後は、元のプライマリ レプリカはオンラインになると、セカンダリ ロールに移行します。  
@@ -148,7 +147,7 @@ ms.locfileid: "36075811"
 |**[同期コミット]**|同期コミット モードの場合、同期コミット プライマリ レプリカは、同期コミット セカンダリ レプリカによるログ書き込みが確認されるまで待機した後で、トランザクションをコミットします。 同期コミット モードでは、特定のセカンダリ データベースがプライマリ データベースに 1 回同期されれば、コミットされたトランザクションが完全に保護されることが保証されます。|  
 |**[非同期コミット]**|非同期コミット モードでは、非同期コミット セカンダリ レプリカによりログが書き込まれことが確認されるまで待機せずに、プライマリ レプリカがトランザクションをコミットします。 非同期コミット モードでは、セカンダリ データベースでのトランザクションの遅延が最小になりますが、セカンダリ データベースがプライマリ データベースよりも遅延する場合があるため、一部のデータが失われる可能性があります。|  
   
- 詳細については、次を参照してください。[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)です。  
+ 詳細については、次を参照してください。[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)します。  
   
  **フェールオーバー モード**  
  サーバー インスタンスのフェールオーバー モードを表示します。次のいずれかになります。  
@@ -197,7 +196,7 @@ ms.locfileid: "36075811"
  **接続ユーザー**  
  接続が確立されると、サーバー インスタンスに接続されるアカウントを表示します。 この列で、特定のサーバー インスタンスについて **"未接続"** と表示される場合、 **[接続]** ボタンをクリックする必要があります。  
   
- **のインスタンスに接続するときには、**  
+ **Connect**  
  このサーバー インスタンスが、接続する他のサーバー インスタンスとは異なるアカウントで実行されている場合にクリックします。  
   
  **Cancel**  

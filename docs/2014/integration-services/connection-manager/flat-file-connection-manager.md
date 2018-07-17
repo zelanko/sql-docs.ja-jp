@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
 - connections [Integration Services], flat files
@@ -20,13 +20,13 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c8af018faa1ed8de9d47cb640e485ce17d5cbe56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56b90bb24e67b5cdb511a5729c4c7396aed5e93d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285608"
 ---
 # <a name="flat-file-connection-manager"></a>フラット ファイル接続マネージャー
   フラット ファイル接続マネージャーを使用すると、パッケージはフラット ファイルのデータにアクセスできます。 たとえば、フラット ファイルの変換元と変換先は、フラット ファイル接続マネージャーを使用して、データの抽出および読み込みを行うことができます。  
@@ -34,18 +34,18 @@ ms.locfileid: "36165674"
  フラット ファイル接続マネージャーがアクセスできるファイルは、1 つだけです。 複数のファイルを参照するには、フラット ファイル接続マネージャーではなく、複数フラット ファイル接続マネージャーを使用します。 詳細については、「 [複数フラット ファイル接続マネージャー](multiple-flat-files-connection-manager.md)」を参照してください。  
   
 ## <a name="column-length"></a>列の長さ  
- フラット ファイル接続マネージャーでは、文字列型の列の長さが既定で 50 文字に設定されています。 **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスでは、サンプル データを評価し、これらの列の長さを自動的に変更して、データが切り捨てられたり、列の幅が広すぎたりしないようにできます。 また、その後にフラット ファイル ソースまたは変換で列の長さを変更しない限り、データ フロー全体をとおして文字列型の列の長さは一定です。 これらの文字列型の列が、変換先として幅の狭い列にマップされた場合、ユーザー インターフェイスに警告が表示されます。 さらに、実行時にデータの切り捨てによるエラーが発生する場合があります。 エラーや切り捨てが発生しないように、フラット ファイル接続マネージャー、フラット ファイル ソース、または変換で、変換先列に合うように列のサイズを変更することができます。 出力列の長さを変更するに設定する、`Length`上の出力列のプロパティ、**入力と出力プロパティ** タブで、**詳細エディター**  ダイアログ ボックス。  
+ フラット ファイル接続マネージャーでは、文字列型の列の長さが既定で 50 文字に設定されています。 **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスでは、サンプル データを評価し、これらの列の長さを自動的に変更して、データが切り捨てられたり、列の幅が広すぎたりしないようにできます。 また、その後にフラット ファイル ソースまたは変換で列の長さを変更しない限り、データ フロー全体をとおして文字列型の列の長さは一定です。 これらの文字列型の列が、変換先として幅の狭い列にマップされた場合、ユーザー インターフェイスに警告が表示されます。 さらに、実行時にデータの切り捨てによるエラーが発生する場合があります。 エラーや切り捨てが発生しないように、フラット ファイル接続マネージャー、フラット ファイル ソース、または変換で、変換先列に合うように列のサイズを変更することができます。 出力列の長さを変更するには設定、`Length`上の出力列のプロパティ、**入力と出力プロパティ** タブで、**高度なエディター**  ダイアログ ボックス。  
   
  接続マネージャーを使用するフラット ファイル ソースを追加および構成した後に、フラット ファイル接続マネージャーで列の長さを変更した場合は、フラット ファイル ソースの出力列のサイズを手動で変更する必要はありません。 **[フラット ファイル ソース]** ダイアログ ボックスを開くと、列のメタデータを同期するためのオプションがフラット ファイル ソースによって提供されます。  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>フラット ファイル接続マネージャーの構成  
- フラット ファイル接続マネージャーをパッケージに追加するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続マネージャーを作成実行時にフラット ファイル接続を解決する、フラット ファイル接続プロパティを設定し、フラット ファイル接続マネージャーを追加します`Connections`パッケージのコレクション。  
+ フラット ファイル接続マネージャーをパッケージに追加すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]接続マネージャーを作成実行時にフラット ファイル接続を解決する、フラット ファイル接続プロパティを設定し、フラット ファイル接続マネージャーを追加します、`Connections`パッケージのコレクション。  
   
- `ConnectionManagerType`接続マネージャーのプロパティに設定されて`FLATFILE`です。  
+ `ConnectionManagerType`接続マネージャーのプロパティに設定されて`FLATFILE`します。  
   
  既定では、フラット ファイル接続マネージャーは、引用符で囲まれていないデータの行区切り記号を常に確認し、行区切り記号が見つかると新しい行を開始します。 これにより、接続マネージャーは列フィールドがない行を含むファイルを正しく解析できます。  
   
- 場合によっては、この機能を無効にすると、パッケージのパフォーマンスが向上します。 フラット ファイル接続マネージャーのプロパティを設定してこの機能を無効にすることができます**AlwaysCheckForRowDelimiters**を`False`です。  
+ 場合によっては、この機能を無効にすると、パッケージのパフォーマンスが向上します。 フラット ファイル接続マネージャーのプロパティを設定してこの機能を無効にできます**AlwaysCheckForRowDelimiters**を`False`します。  
   
  フラット ファイル接続マネージャーは、次の方法で構成できます。  
   
@@ -83,6 +83,6 @@ ms.locfileid: "36165674"
   
 -   [[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
- プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムで接続を追加する](../building-packages-programmatically/adding-connections-programmatically.md)です。  
+ プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)します。  
   
   

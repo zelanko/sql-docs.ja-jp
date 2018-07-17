@@ -5,22 +5,19 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- docset-sql-devref
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
-caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6714b6317f625f3a931778b1466ebe619ed02816
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fb1caec20ab7af7cd6e263e6718820658940d00f
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070965"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355044"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>マスター データ マネージャー Web サービス プロキシ クラスの作成
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web サービスを使用すると、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サイトにアクセスできる任意のコンピューターから、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の機能をプログラム経由で使用できます。 Web サービスにアクセスするコードの記述を開始する前に、プロキシ クラスを生成する必要があります。 Web サービス操作の実行に使用する主要なプロキシ クラスは、<xref:Microsoft.MasterDataServices.ServiceClient> クラスです。このクラスは、<xref:Microsoft.MasterDataServices.IService> インターフェイスを実装します。  
@@ -30,7 +27,7 @@ ms.locfileid: "36070965"
   
 1.  テキスト エディターで [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.config ファイルを開きます。 このファイルは、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] インストール パスの WebApplication フォルダーにあります。  
   
-2.  検索、`mdsWsHttpBehavior`セクション **\<serviceBehaviors >** です。 **\<ServiceMetadata >** 要素設定`httpGetEnabled`に`true`です。  
+2.  検索、`mdsWsHttpBehavior`セクション **\<serviceBehaviors >** します。 **\<ServiceMetadata >** 要素設定`httpGetEnabled`に`true`します。  
   
     > [!NOTE]  
     >  Web サービスを SSL (Secure Sockets Layer) を介して有効にするには、web.config ファイルの `httpsGetEnabled` セクションで、`true` を `mdsWsHttpBehavior` に設定します。 さらに、SSL 用に構成されるように `mdsWsHTTPBinding` を変更し、非 SSL セクションをコメント アウトする必要もあります。  

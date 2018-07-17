@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18e56dea2976e5a058a1161c1ea87eaec64d7dae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d39f837d1380fc5198b0d42bdf0399717807ac81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302272"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>[SAP BW 変換先エディター] ([接続マネージャー] ページ)
   **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページを使用すると、SAP BW 変換先が使用する SAP BW 接続マネージャーを選択できます。 このページでは、SAP Netweaver BW システムにデータを読み込むためのパラメーターも選択します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36085719"
  **インフォソース**  
  インフォソースの名前を入力します。  
   
- **Type**  
+ **型**  
  インフォソースの種類を識別する 1 文字を入力します。 指定できる 1 文字の値の一覧を次の表に示します。  
   
 |値|説明|  
@@ -83,7 +83,7 @@ ms.locfileid: "36085719"
  ゲートウェイ ホストのサーバー名または IP アドレスを入力します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- 形式でゲートウェイ サービスの名前を入力`sapgwNN`ここで、`NN`システム番号です。  
+ 形式で、ゲートウェイ サービスの名前を入力`sapgwNN`ここで、`NN`システム番号です。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を入力します。  
@@ -114,7 +114,7 @@ ms.locfileid: "36085719"
 |**インフォパッケージ**|**[インフォパッケージの作成]** ダイアログ ボックスを使用して、新しいインフォパッケージを作成します。 このダイアログ ボックスの詳細については、「 [インフォパッケージの作成](create-infopackage.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [SAP BW 変換先エディター &#40;[マッピング] ページ&#41;](sap-bw-destination-editor-mappings-page.md)   
+ [SAP BW 変換先エディター&#40;マッピング ページ&#41;](sap-bw-destination-editor-mappings-page.md)   
  [SAP BW 変換先エディター &#40;[エラー出力] ページ&#41;](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 変換先エディター &#40;[詳細設定] ページ&#41;](sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  

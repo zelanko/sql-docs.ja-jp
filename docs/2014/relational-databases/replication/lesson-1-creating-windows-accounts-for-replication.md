@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
@@ -16,13 +16,13 @@ ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a7cf067ff7ebfb4f9990b424acf73d5084470d12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3bd3b0369c990b6db3dc1cbb44f7fd387289ce9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303652"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>レッスン 1 : レプリケーション用の Windows アカウントの作成
   このレッスンでは、レプリケーション エージェントを実行するための Windows アカウントを作成します。 また、次のエージェントを実行するための別の Windows アカウントをローカル サーバー上に作成します。  
@@ -45,7 +45,7 @@ ms.locfileid: "36173698"
   
 3.  **[ユーザー]** を右クリックし、 **[新しいユーザー]** をクリックします。  
   
-4.  入力`repl_snapshot`で、**ユーザー名**ボックスで、パスワード、およびその他の関連する情報を提供し、をクリックして**作成**repl_snapshot アカウントを作成します。  
+4.  入力`repl_snapshot`で、**ユーザー名**ボックスで、パスワード、およびその他の関連する情報を提供し をクリックし、**作成**して repl_snapshot アカウントを作成します。  
   
 5.  同様に、repl_logreader、repl_distribution、repl_merge の各アカウントを作成します。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36173698"
   
 3.  **[ユーザー]** を右クリックし、 **[新しいユーザー]** をクリックします。  
   
-4.  入力`repl_distribution`で、**ユーザー名**ボックスで、パスワード、およびその他の関連する情報を提供し、をクリックして**作成**repl_distribution アカウントを作成します。  
+4.  入力`repl_distribution`で、**ユーザー名**ボックスで、パスワード、およびその他の関連する情報を提供し をクリックし、**作成**repl_distribution アカウントを作成します。  
   
 5.  同様にして、repl_merge アカウントも作成します。  
   

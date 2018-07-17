@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.advancedsaveoptions
 helpviewer_keywords:
 - Advanced Save Options dialog box
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4af8221510389d65149ba36411f57f986af56202
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 08670b9b7ec22b7bc1e1c5c21064f65e0f867d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282388"
 ---
 # <a name="advanced-save-options"></a>[保存オプションの詳細設定]
-  このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 アクセスする、 **保存オプションの** ダイアログ ボックスで、**ファイル** メニューのをクリックして**保存**\<クエリ名 >**として .sql**に開く、**ファイルに名前を付けて** ダイアログ ボックスの下向きの矢印をクリックして、**保存**ボタンをクリックし、をクリックして**エンコード付きで保存**です。  
+  このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 アクセスする、 **保存オプションの** ダイアログ ボックスで、**ファイル** メニューのをクリックして**保存**\<クエリ名 >**として .sql**に開く、**ファイルに名前を付けて**ダイアログ ボックスで下向きの矢印をクリックして、**保存**ボタンをクリックし、をクリックし、**エンコード付きで保存**。  
   
 ## <a name="options"></a>および  
  **[エンコード]**  

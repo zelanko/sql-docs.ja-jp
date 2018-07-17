@@ -1,13 +1,11 @@
 ---
-title: CLR データベース オブジェクトのデバッグ |Microsoft ドキュメント
+title: CLR データベース オブジェクトのデバッグ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,23 +16,23 @@ helpviewer_keywords:
 - common language runtime [SQL Server], debugging
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b25672deb988b6bf1940c242c5ae91e31264bea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 3876977fec397d9f053b750c4cfdae39ef5a50ec
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173508"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354364"
 ---
 # <a name="debugging-clr-database-objects"></a>CLR データベース オブジェクトのデバッグ
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、データベース内の [!INCLUDE[tsql](../../../includes/tsql-md.md)] オブジェクトと CLR (共通言語ランタイム) オブジェクトのデバッグがサポートされます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でのデバッグの重要な特徴は、セットアップと使用が容易になったことと、SQL Server デバッガーと Microsoft Visual Studio デバッガーが統合されたことです。 さらに、複数の言語にまたがったデバッグを実行できます。 ユーザーは [!INCLUDE[tsql](../../../includes/tsql-md.md)] から CLR オブジェクト (またはその逆) にシームレスにステップインできます。 SQL Server Management Studio の Transact-SQL デバッガーを使用してマネージ データベース オブジェクトをデバッグすることはできませんが、Visual Studio のデバッガーを使用すると、このオブジェクトをデバッグすることができます。 Visual Studio でのマネージ データベース オブジェクトのデバッグでは、サーバーで実行するルーチン内の "step into" ステートメントや "step over" ステートメントなど、一般的なデバッグ機能すべてがサポートされます。 デバッグ中は、ブレークポイントの設定、呼び出し履歴の調査、変数の調査、変数値の変更を行うことができます。 Visual Studio .NET 2003 は、CLR 統合プログラミングまたはデバッグには使用できない点に注意してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には .NET Framework がプレインストールされていますが、Visual Studio .NET 2003 では .NET Framework 2.0 アセンブリを使用できません。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、データベース内の [!INCLUDE[tsql](../../../includes/tsql-md.md)] オブジェクトと CLR (共通言語ランタイム) オブジェクトのデバッグがサポートされます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でのデバッグの重要な特徴は、セットアップと使用が容易になったことと、SQL Server デバッガーと Microsoft Visual Studio デバッガーが統合されたことです。 さらに、複数の言語にまたがったデバッグを実行できます。 ユーザーは [!INCLUDE[tsql](../../../includes/tsql-md.md)] から CLR オブジェクト (またはその逆) にシームレスにステップインできます。 SQL Server Management Studio の Transact-SQL デバッガーを使用してマネージド データベース オブジェクトをデバッグすることはできませんが、Visual Studio のデバッガーを使用すると、このオブジェクトをデバッグすることができます。 Visual Studio でのマネージド データベース オブジェクトのデバッグでは、サーバーで実行するルーチン内の "step into" ステートメントや "step over" ステートメントなど、一般的なデバッグ機能すべてがサポートされます。 デバッグ中は、ブレークポイントの設定、呼び出し履歴の調査、変数の調査、変数値の変更を行うことができます。 Visual Studio .NET 2003 は、CLR 統合プログラミングまたはデバッグには使用できない点に注意してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には .NET Framework がプレインストールされていますが、Visual Studio .NET 2003 では .NET Framework 2.0 アセンブリを使用できません。  
   
- Visual Studio を使用してマネージ コードのデバッグの詳細については、次を参照してください。、"[マネージ コードのデバッグ](http://go.microsoft.com/fwlink/?LinkId=120377)"、Visual Studio のマニュアルの「します。  
+ Visual Studio を使用してマネージ コードのデバッグの詳細については、次を参照してください。、"[Debugging Managed Code](http://go.microsoft.com/fwlink/?LinkId=120377)"Visual Studio ドキュメントのトピックです。  
   
 ## <a name="debugging-permissions-and-restrictions"></a>デバッグに関する権限と制限事項  
- 高い特権を持つ操作、およびのメンバーは、デバッグ、 **sysadmin**を行うように固定サーバー ロールが許可されている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+ デバッグは、高い特権を持つ操作のメンバーのみ、 **sysadmin**固定サーバー ロールに許可するよう[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
  デバッグ中には、次の制限事項が適用されます。  
   
@@ -44,28 +42,28 @@ ms.locfileid: "36173508"
   
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] コードと CLR コードのデバッグは、上記の制限事項により、実稼働サーバーではなくテスト サーバーで行うことをお勧めします。  
   
-## <a name="overview-of-debugging-managed-database-objects"></a>マネージ データベース オブジェクトのデバッグの概要  
+## <a name="overview-of-debugging-managed-database-objects"></a>マネージド データベース オブジェクトのデバッグの概要  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデバッグは、接続ごとのモデルに準拠します。 デバッガーは、デバッガーがアタッチされているクライアント接続のみに関係したアクティビティを検出してデバッグを実行することができます。 デバッガーの機能は、接続の種類による制限を受けないので、表形式のデータ ストリーム (TDS) 接続と HTTP 接続の両方をデバッグできます。 ただし、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、既存の接続をデバッグできません。 デバッグでは、サーバーで実行するルーチン内のすべての一般的なデバッグ機能をサポートします。 デバッガーと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との間のやり取りは、分散 COM (コンポーネント オブジェクト モデル) 経由で行われます。  
   
- 詳細とマネージ ストアド プロシージャ、関数、トリガー、ユーザー定義型、および集計のデバッグに関するシナリオについてを参照してください、"[SQL Server CLR 統合データベース デバッグ](http://go.microsoft.com/fwlink/?LinkId=120378)"Visual Studio でのトピックドキュメントです。  
+ 詳細およびシナリオ マネージ ストアド プロシージャ、関数、トリガー、ユーザー定義型、および集計のデバッグの詳細については、次を参照してください、"[SQL Server CLR 統合データベース デバッグ](http://go.microsoft.com/fwlink/?LinkId=120378)"Visual Studio でのトピック。ドキュメントです。  
   
- Visual Studio を使用してリモートで開発およびデバッグを行うには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスで TCP/IP ネットワーク プロトコルを有効にする必要があります。 サーバーで TCP/IP プロトコルを有効にする方法の詳細については、次を参照してください。 [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)です。  
+ Visual Studio を使用してリモートで開発およびデバッグを行うには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスで TCP/IP ネットワーク プロトコルを有効にする必要があります。 サーバーの TCP/IP プロトコルを有効にする方法の詳細については、次を参照してください。 [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)します。  
   
-#### <a name="to-debug-a-managed-database-object"></a>マネージ データベース オブジェクトをデバッグするには  
+#### <a name="to-debug-a-managed-database-object"></a>マネージド データベース オブジェクトをデバッグするには  
   
 1.  Microsoft Visual Studio を開き、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロジェクトを作成して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスでデータベースへの接続を確立します。  
   
-2.  新しい型を作成します。 **ソリューション エクスプ ローラー**、プロジェクトを右クリックし、選択**追加**と**新しい項目の追加.** **新しい項目の追加**ウィンドウで、**ストアド プロシージャの**、**ユーザー定義関数**、**ユーザー定義型**、 **トリガー**、**集計**、または**クラス**です。 新しい型のソース ファイルの名前を指定し、をクリックして**追加**です。  
+2.  新しい型を作成します。 **ソリューション エクスプ ローラー**、プロジェクトを右クリックし、選択**追加**と**新しい項目.** **新しい項目の追加**ウィンドウで、**ストアド プロシージャの**、**ユーザー定義関数**、**ユーザー定義型**、 **トリガー**、**集計**、または**クラス**します。 新しい型のソース ファイルの名前を指定し、クリックして**追加**します。  
   
 3.  テキスト エディターに新しい型のコードを追加します。 ストアド プロシージャの例のサンプル コードについては、後のセクションを参照してください。  
   
-4.  型をテストするスクリプトを追加します。 **ソリューション エクスプ ローラー**、展開、 **テスト スクリプト**ディレクトリをダブルクリックして**Test.sql**を既定のテスト スクリプト ソース ファイルを開きます。 デバッグするコードを呼び出すテスト スクリプトをテキスト エディターに追加します。 サンプル スクリプトについては、下記を参照してください。  
+4.  型をテストするスクリプトを追加します。 **ソリューション エクスプ ローラー**、展開、 **TestScripts**ディレクトリ をダブルクリック**Test.sql**を既定のテスト スクリプト ソース ファイルを開きます。 デバッグするコードを呼び出すテスト スクリプトをテキスト エディターに追加します。 サンプル スクリプトについては、下記を参照してください。  
   
-5.  ソース コードに 1 つ以上のブレークポイントを配置します。 関数またはデバッグするルーチン内のテキスト エディター内のコード行を右クリックし、選択**ブレークポイント**と**ブレークポイントの挿入**です。 ブレークポイントが追加され、コード行が赤で強調表示されます。  
+5.  ソース コードに 1 つ以上のブレークポイントを配置します。 関数またはデバッグするルーチン内のテキスト エディターでのコード行を右クリックし、選択**ブレークポイント**と**ブレークポイントの挿入**します。 ブレークポイントが追加され、コード行が赤で強調表示されます。  
   
-6.  **デバッグ**メニューの [**デバッグの開始]** コンパイル、配置、およびプロジェクトをテストします。 Test.sql のテスト スクリプトが実行され、マネージ データベース オブジェクトが呼び出されます。  
+6.  **デバッグ**メニューの [**デバッグの開始]** コンパイル、展開、およびプロジェクトをテストします。 Test.sql のテスト スクリプトが実行され、マネージド データベース オブジェクトが呼び出されます。  
   
-7.  命令ポインターを表す黄色い矢印がブレークポイントに表示されると、コードの実行が一時停止され、マネージ データベース オブジェクトのデバッグを開始できます。 実行できます**ステップ オーバー**から、**デバッグ**命令ポインターを次のコード行に進めるメニュー。 **ローカル**ウィンドウは、命令ポインターにより現在強調表示されているオブジェクトの状態の監視に使用します。 変数に追加できる、**ウォッチ**ウィンドウです。 監視される変数の状態は、変数が命令ポインターにより現在強調表示されているコード行にあるときだけでなく、デバッグ セッション全体で見ることができます。 [デバッグ] メニューの [続行] をクリックし、命令ポインターを次のブレークポイントに進めるか、ブレークポイントがこれ以上ない場合にはルーチンの実行を完了します。  
+7.  命令ポインターを表す黄色い矢印がブレークポイントに表示されると、コードの実行が一時停止され、マネージド データベース オブジェクトのデバッグを開始できます。 できます**ステップ オーバー**から、**デバッグ** メニューの命令ポインターを次のコード行に進みます。 **ローカル**ウィンドウは、命令ポインターにより現在強調表示するオブジェクトの状態の監視に使用します。 変数に追加できる、**ウォッチ**ウィンドウ。 監視される変数の状態は、変数が命令ポインターにより現在強調表示されているコード行にあるときだけでなく、デバッグ セッション全体で見ることができます。 [デバッグ] メニューの [続行] をクリックし、命令ポインターを次のブレークポイントに進めるか、ブレークポイントがこれ以上ない場合にはルーチンの実行を完了します。  
   
 ### <a name="example"></a>例  
  次の例では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のバージョンを呼び出し元に返します。  

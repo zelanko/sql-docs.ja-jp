@@ -1,5 +1,5 @@
 ---
-title: Analysis Services (SSAS - 多次元) 内のパーティションをマージ |Microsoft ドキュメント
+title: Analysis Services (SSAS - 多次元) 内のパーティションをマージ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], merging
 - merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b926c685b87f863c0b04e4ce570bec2573aebdf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78fcd5ce33ba73b4eb11e6449b84f3afe3f2028a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306572"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Analysis Services でのパーティションのマージ (SSAS - 多次元)
   既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のパーティションをマージして、同じメジャー グループの複数のパーティションからファクト データを統合することができます。  
@@ -73,7 +73,7 @@ ms.locfileid: "36084687"
 ##  <a name="bkmk_Where"></a> パーティションのマージ後にパーティション ソースを更新  
  パーティションは、データの処理に使用する SQL クエリの WHERE 句などのクエリ、またはパーティションにデータを提供するテーブルや名前付きクエリによって分割されます。 パーティションの `Source` プロパティは、パーティションがクエリまたはテーブルにバインドされているかどうかを示します。  
   
- パーティションをマージするときに、パーティションの内容を統合するが、`Source`プロパティは、パーティションの追加のスコープを反映するように更新されません。 つまり、元を保持するパーティションを後で再処理するかどうかは`Source`、そのパーティションから不適切なデータが表示されます。 パーティションは、誤って親レベルのデータを集計します。 次の例では、この動作を示します。  
+ パーティションをマージすると、パーティションの内容は統合されますが、`Source`プロパティは、パーティションの追加のスコープを反映するように更新されません。 これは、元を保持するパーティションを後で再処理するかどうかは意味`Source`、そのパーティションから不適切なデータが表示されます。 パーティションは、誤って親レベルのデータを集計します。 次の例では、この動作を示します。  
   
  **問題**  
   
@@ -81,16 +81,16 @@ ms.locfileid: "36084687"
   
  **解決策**  
   
- 解決策は、更新、`Source`プロパティ、WHERE 句または名前付きクエリを調整するか、後続の処理が正確であるパーティションのスコープを拡張したことを確認する、基になるファクト テーブルからデータを手動でマージします。  
+ 解決策は、更新、`Source`プロパティ、調整、WHERE 句または名前付きクエリ、または後続の処理の正確さ、パーティションのスコープを拡張したことを確認する、基になるファクト テーブルからデータを手動でマージします。  
   
  この例では、パーティション 3 をパーティション 2 にマージした後で、マージ後のパーティション 2 で ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet') のようなフィルターを作成できます。これにより、ColaDecaf と ColaDiet のデータのみをファクト テーブルから取得し、ColaFull のデータは除外するように指定できます。 または、パーティション 2 とパーティション 3 の作成時にフィルターを指定することもできます。これらのフィルターはマージ処理で結合されます。 いずれの場合も、パーティションを処理した後にキューブに重複データが含まれることはなくなります。  
   
  **結論**  
   
- パーティションをマージした後は常に確認して、`Source`結合されたデータに対して、フィルターが正しいことを確認します。 Q1、Q2、および Q3 の履歴データが含まれたパーティションから始めて、これから Q4 をマージする場合、Q4 が含まれるようにフィルターを調整する必要があります。 そうしないと、その後のパーティションの処理で誤った結果が生成されます。 Q4 にとって正しくなくなります。  
+ パーティションをマージした後は常に確認、`Source`フィルターがマージされたデータに対して正しいことを確認します。 Q1、Q2、および Q3 の履歴データが含まれたパーティションから始めて、これから Q4 をマージする場合、Q4 が含まれるようにフィルターを調整する必要があります。 そうしないと、その後のパーティションの処理で誤った結果が生成されます。 Q4 にとって正しくなくなります。  
   
 ##  <a name="bkmk_fact"></a> ファクト テーブルまたは名前付きクエリによって分割されたパーティションに関する注意事項  
- パーティションは、クエリのほか、テーブルまたは名前付きクエリでも分割できます。 マージ元のパーティションとマージ先のパーティションがデータ ソースまたはデータ ソース ビューで同じファクト テーブルを使用している場合、`Source` プロパティは、パーティションのマージ後に有効になります。 このプロパティでは、結果パーティションに適したファクト テーブル データが指定されます。 結果として得られるパーティションに必要なファクトはファクトに存在するための表を変更していない、`Source`プロパティが必要です。  
+ パーティションは、クエリのほか、テーブルまたは名前付きクエリでも分割できます。 マージ元のパーティションとマージ先のパーティションがデータ ソースまたはデータ ソース ビューで同じファクト テーブルを使用している場合、`Source` プロパティは、パーティションのマージ後に有効になります。 このプロパティでは、結果パーティションに適したファクト テーブル データが指定されます。 結果として得られるパーティションに必要なファクトはファクトに存在するためのテーブルを変更していない、`Source`プロパティが必要です。  
   
  複数のファクト テーブルまたは名前付きクエリのデータを使用するパーティションでは、追加の作業が必要です。 マージ元パーティションのファクト テーブルのファクトは、マージ先パーティションのファクト テーブルに手動でマージする必要があります。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36084687"
   
 1.  オブジェクト エクスプローラーで、マージするパーティションが含まれているキューブの **[メジャー グループ]** ノードを展開し、 **[パーティション]** を展開して、マージ操作の対象となるパーティションを右クリックします。 たとえば、年間のファクト データを格納するパーティションに四半期のファクト データを移動する場合は、年間のファクト データが含まれているパーティションを選択します。  
   
-2.  をクリックして**パーティションのマージ**を開くには、**パーティションのマージ\<パーティション名 >**  ダイアログ ボックス。  
+2.  クリックして**パーティションのマージ**を開く、**パーティションのマージ\<パーティション名 >**  ダイアログ ボックス。  
   
 3.  **[基になるパーティション]** で、対象パーティションとマージする、基になる各パーティションの横のチェック ボックスをオンにし、 **[OK]** をクリックします。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36084687"
   
 4.  蓄積したデータが含まれるパーティションを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  開く、`Source`プロパティおよびマージするパーティションのデータが含まれるように、WHERE 句を変更します。 注意してください、`Source`プロパティは自動的に更新されません。 更新することを再処理する場合、 `Source`、すべての必要なデータを取得する可能性がありますできません。  
+5.  開く、`Source`プロパティをマージしたパーティション データを含むように WHERE 句を変更します。 いることを思い出してください、`Source`プロパティは自動的に更新されません。 更新することを再処理する場合、 `Source`、すべての必要なデータを取得する可能性がありますできません。  
   
 ##  <a name="bkmk_partitionsXMLA"></a> XMLA を使用してパーティションをマージする方法  
  詳細については、「[パーティションのマージ &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)」を参照してください。  
@@ -138,8 +138,8 @@ ms.locfileid: "36084687"
 ## <a name="see-also"></a>参照  
  [処理の Analysis Services オブジェクト](processing-analysis-services-objects.md)   
  [パーティション&#40;Analysis Services - 多次元データ&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [作成し、ローカル パーティションを管理&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [作成し、リモート パーティションを管理&#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
+ [作成およびローカル パーティションの管理&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [作成し、管理、リモート パーティション&#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
  [パーティションの書き戻しを設定します。](set-partition-writeback.md)   
  [書き込み許可パーティション](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [ディメンションおよびパーティションの文字列ストレージの構成](configure-string-storage-for-dimensions-and-partitions.md)  

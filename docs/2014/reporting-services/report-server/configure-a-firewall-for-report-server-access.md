@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1f3c852712890d8a1cd67f9d2cabc6d5053c39ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60c593878f3c40094995a4d7b905d0bb59ff1a24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292172"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>レポート サーバー アクセスに対するファイアウォールの構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー アプリケーションとパブリッシュされたレポートには、IP アドレス、ポート、および仮想ディレクトリを指定した URL を通じてアクセスします。 Windows ファイアウォールが有効になっている場合、レポート サーバーで使用するように構成されているポートは閉じられる可能性が高くなります。 ポートが閉じていると、レポートの要求後に空白の Web ページが表示されたり、リモートのクライアント コンピューターからレポート マネージャーを開こうとしたときに空白のページが表示されたりします。  
@@ -34,7 +34,7 @@ ms.locfileid: "36177673"
  外部コンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースにアクセスする場合、またはレポート サーバー データベースが外部の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに置かれている場合は、外部コンピューターのポート 1433 および 1434 を開く必要があります。 Windows ファイアウォールの詳細については、 [オンライン ブックの「](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。 Windows ファイアウォールの既定の設定に関する詳細と、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に影響する TCP ポートの説明については、 [オンライン ブックの「](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) SQL Server のアクセスを許可するための Windows ファイアウォールの構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」をご覧ください。  
   
 ## <a name="prerequisites"></a>前提条件  
- 次の手順では、既にサービス アカウントを構成し、レポート サーバー データベースを作成し、レポート サーバー Web サービスとレポート マネージャーの URL を構成していることを前提としています。 詳細については、次を参照してください。 [Reporting Services ネイティブ モード レポート サーバーの管理](manage-a-reporting-services-native-mode-report-server.md)です。  
+ 次の手順では、既にサービス アカウントを構成し、レポート サーバー データベースを作成し、レポート サーバー Web サービスとレポート マネージャーの URL を構成していることを前提としています。 詳細については、次を参照してください。 [、Reporting Services ネイティブ モード レポート サーバーを管理](manage-a-reporting-services-native-mode-report-server.md)します。  
   
  また、ローカル レポート サーバー インスタンスへのローカル Web ブラウザー接続を通じてレポート サーバーにアクセスできることを確認しておく必要があります。 この手順によって、作業環境が整っているかどうかを検証できます。 ポートを開く前に、環境が正しく構成されているかどうかを確認する必要があります。 Windows Server でこの手順を完了するには、レポート サーバー サイトを [信頼済みサイト] に追加しておくことも必要です。 詳細については、「[ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](configure-a-native-mode-report-server-for-local-administration-ssrs.md)」をご覧ください。  
   
@@ -77,23 +77,23 @@ ms.locfileid: "36177673"
   
 #### <a name="to-open-port-80-on-windows-vista-or-windows-server-2008"></a>Windows Vista または Windows Server 2008 でポート 80 を開くには  
   
-1.  **開始** メニューのをクリックして**コントロール パネルの **、 をクリックして**セキュリティ**、クリックして**Windows ファイアウォール**です。  
+1.  **開始** メニューのをクリックして**コントロール パネル**、 をクリックして**セキュリティ**、 をクリックし、 **Windows ファイアウォール**します。  
   
-2.  をクリックして**Windows ファイアウォールによるプログラムの許可**です。  
+2.  クリックして**Windows ファイアウォールによるプログラムの許可**します。  
   
 3.  **[続行]** をクリックします。  
   
-4.  [例外] タブをクリックして**ポートの追加**です。  
+4.  [例外] タブで、次のようにクリックします。**ポートの追加**します。  
   
-5.  名を入力**ReportServer (ポート 80 で TCP)** です。  
+5.  名を入力**ReportServer (ポート 80 で TCP)** します。  
   
-6.  ポート番号を入力**80**です。  
+6.  ポート番号を入力**80**します。  
   
 7.  いることを確認**TCP**が選択されています。  
   
-8.  をクリックして**スコープを変更する**です。  
+8.  クリックして**スコープを変更する**します。  
   
-9. をクリックして**自分のネットワーク (サブネット) のみ**、クリックして **[ok]** です。  
+9. クリックして**ユーザーのネットワーク (サブネット) のみ**、順にクリックします**OK**します。  
   
 10. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
@@ -105,10 +105,10 @@ ms.locfileid: "36177673"
  別のコンピューターでレポート マネージャーを起動することによって、ポートが正しく開かれているかどうかを確認することもできます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー サービス アカウントを構成する&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [レポート サーバー サービス アカウントの構成&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [レポート サーバー Url の構成&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [レポート サーバー データベースの作成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [レポート サーバー サービス アカウントを構成する&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [レポート サーバー サービス アカウントの構成&#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Reporting Services ネイティブ モードのレポート サーバーの管理](manage-a-reporting-services-native-mode-report-server.md)  
   
   

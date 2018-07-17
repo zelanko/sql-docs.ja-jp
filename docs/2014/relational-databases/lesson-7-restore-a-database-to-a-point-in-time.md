@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 8: Windows Azure ストレージにデータベースを復元 |Microsoft ドキュメント'
+title: 'レッスン 8: Windows Azure ストレージにデータベースを復元 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea9ec20e60fb879b17434e8fe4581d28b3d7a551
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 98d44755a26519dd63701ba8e5eebb1cf4ef7e7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311788"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>レッスン 8: Windows Azure ストレージにデータベースを復元する
   このレッスンでは、バックアップ ファイルをローカルで作成して、それを Windows Azure ストレージに復元する方法を学習します。 データベースの場所は、内部設置でも、Windows Azure の仮想マシンでもかまいません。 このレッスンを続行するには、レッスン 4、5、6 および 7 を実行する必要はありません。  
   
- このレッスンでは、次の手順を完了することを前提としています。  
+ このレッスンでは、次の手順が既に完了したことを前提としています。  
   
 -   Windows Azure ストレージ アカウントを入手しました。  
   
@@ -73,23 +73,23 @@ ms.locfileid: "36072315"
   
  SQL Server Management Studio を使用して、Windows Azure ストレージを指すデータ ファイルとログ ファイルを持つデータベースを復元するには、次の手順を実行します。  
   
-1.  **オブジェクト エクスプ ローラー**、サーバー ツリーを展開するサーバーの名前をクリックします。  
+1.  **オブジェクト エクスプ ローラー**、サーバー ツリーを展開するサーバー名をクリックします。  
   
 2.  展開**データベース**、し、データベースを選択します。  
   
 3.  データベースを右クリックして **[タスク]** をポイントし、 **[復元]** をクリックします。  
   
-4.  **全般** ページの 、**復元**ソース セクションで、**ソース**デバイス。  
+4.  **全般**ページで、**復元**ソース セクションをクリックします**ソース**デバイス。  
   
 5.  参照 ボタンをクリックして、**ソース**デバイス ボックスが開き、 **バックアップ デバイスの** ダイアログ ボックス。  
   
-6.  バックアップ メディア ボックスで、次のように選択します。**ファイル**、 をクリックし、**追加**バックアップ (.bak) ファイルを検索するボタンをクリックします。 **[OK]** をクリックします。  
+6.  バックアップ メディアのテキスト ボックスで、次のように選択します。**ファイル**、 をクリックし、**追加**バックアップ (.bak) ファイルを検索するボタンをクリックします。 **[OK]** をクリックします。  
   
-7.  をクリックして**ファイル**最初のページにします。  
+7.  クリックして**ファイル**最初のページでします。  
   
-8.  **データベース ファイルの復元**としてセクションの **として復元**フィールドを次を入力します。  
+8.  **データベース ファイルに復元**セクション**復元**フィールドを次の手順を入力します。  
   
-     データ ファイルの場合は、「:`https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`です。 ログ ファイルの場合は、「:`https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`です。  
+     データ ファイル、入力:`https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`します。 ログ ファイルの入力:`https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`します。  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   

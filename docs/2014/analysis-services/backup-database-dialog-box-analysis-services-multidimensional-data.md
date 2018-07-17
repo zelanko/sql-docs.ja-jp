@@ -1,5 +1,5 @@
 ---
-title: バックアップのデータベース ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: データベース ダイアログ ボックス (Analysis Services - 多次元データ) のバックアップ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Backup.f1
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 64e8b814cab69ca66127f28b55062232e45a60fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d325d1cb634f1fb7548ff0a1030c97e866681b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234442"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>[データベースのバックアップ] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[データベースのバックアップ]** ダイアログ ボックスを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] バックアップ ファイル (.abf) 形式でバックアップ ファイルにバックアップできます。  
@@ -95,7 +95,7 @@ ms.locfileid: "36083985"
 |------------|-----------------|  
 |**[サーバー]**|リモート パーティションを管理する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスを表示します。|  
 |**[データベース]**|リモート パーティションが格納されている [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを表示します。|  
-|**[パーティション一覧]**|**[データベース]** に表示されるデータベースに含まれているリモート パーティションの一覧を表示します。|  
+|**パーティションの一覧**|**[データベース]** に表示されるデータベースに含まれているリモート パーティションの一覧を表示します。|  
 |**リモート バックアップ ファイル**|使用するリモート バックアップ ファイルの完全なパスとファイル名を入力するか、**[...]** ボタンをクリックして **[ファイル名を付けて保存]** ダイアログ ボックスを表示し、使用するリモート バックアップ ファイルのパスとファイル名を選択します。 **[ファイル名を付けて保存]** ダイアログ ボックスの詳細については、「[[ファイル名を付けて保存] ダイアログ ボックス (Analysis Services - 多次元データ)](save-file-as-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  

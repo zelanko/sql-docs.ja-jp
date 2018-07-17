@@ -1,5 +1,5 @@
 ---
-title: デザイン ウィンドウ (マイニング モデル予測 ビュー) |Microsoft ドキュメント
+title: デザイン ペイン (マイニング モデル予測 ビュー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f170ff6d780871a6ddbb9b1048fb0a521b4fb015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ea979da7db4f0288a01a7bfe9655d1fb34518d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316032"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>[デザイン] ペイン ([マイニング モデル予測] ビュー)
   **デザイン** ペインには、データ マイニング予測クエリ ビルダーがあり、これを利用してデータ マイニング予測クエリを作成できます。 データ ソース ビューから入力データのテーブルを使用する予測クエリを設計して一括予測を生成することも、個々の値を取得する単一予測クエリを作成することもできます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36074499"
  **単一クエリ**  
  単一クエリの作成を有効にします。既知のデータのソースとしてテーブルを指定する代わりに、クエリに直接値を指定できるようになります。 **[入力テーブルの選択]** テーブルは **[単一クエリ入力]** テーブルに置き換わります。  
   
- **クエリの結果を更新します。**  
+ **クエリ結果を更新します。**  
  予測クエリを再処理します。 この操作は **[結果]** ペインでのみ行えます。  
   
  **[マイニング モデル]**  
@@ -75,7 +75,7 @@ ms.locfileid: "36074499"
 |値|説明|  
 |-----------|-----------------|  
 |**マイニング モデル列**|**[マイニング モデル]** テーブルで選択されているマイニング モデル内のマイニング モデル列が一覧表示されます。|  
-|**Value**|選択したマイニング モデル列で可能な各状態を示した一覧から、値を選択します。<br /><br /> 列が入れ子になったテーブルの列である場合、値のセルをクリックすると **[入れ子になったテーブルの入力]** ダイアログ ボックスが開きます。|  
+|**[値]**|選択したマイニング モデル列で可能な各状態を示した一覧から、値を選択します。<br /><br /> 列が入れ子になったテーブルの列である場合、値のセルをクリックすると **[入れ子になったテーブルの入力]** ダイアログ ボックスが開きます。|  
   
  **Source**  
  列に使用するフィールドが含まれているソースを選択します。 **[マイニング モデル]** で選択したマイニング モデル、 **[入力テーブルの選択]** で選択した入力テーブル、予測関数、カスタム式のいずれかを使用できます。  

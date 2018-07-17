@@ -5,6 +5,7 @@
 # [Analysis Services 接続マネージャー](analysis-services-connection-manager.md)  
 ## [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
 # [Azure Data Lake Store 接続マネージャー](azure-data-lake-store-connection-manager.md)  
+# [Azure Data Lake Analytics 接続マネージャー](azure-data-lake-analytics-connection-manager.md) 
 # [Azure HDInsight 接続マネージャー](azure-hdinsight-connection-manager.md)  
 # [Azure Resource Manager の接続マネージャー](azure-resource-manager-connection-manager.md)  
 # [Azure Storage 接続マネージャー](azure-storage-connection-manager.md)  

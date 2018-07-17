@@ -1,5 +1,5 @@
 ---
-title: 結果ペイン (マイニング モデル予測 ビュー) |Microsoft ドキュメント
+title: 結果ペイン (マイニング モデル予測 ビュー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.result.f1
 ms.assetid: d154477d-3e4b-4e9b-a306-8166a0d83d21
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c31d7b99a94e12f448fa624a28e9b07e65c29673
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63fc7eff1a4ae3544fb82f0e7abb88e2fb25d656
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291628"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>[結果] ペイン ([マイニング モデル予測] ビュー)
   **[結果]** ペインには、予測クエリ ビルダーの **[デザイン]** ビューで作成したデータ マイニング予測クエリの結果が表示されます。 グリッド内で選択した範囲または結果のグリッド全体をクリップボードにコピーできます。  
@@ -36,7 +36,7 @@ ms.locfileid: "36176710"
  **単一クエリ**  
  単一クエリを作成できます。 **[入力テーブルの選択]** テーブルは **[単一クエリ入力]** テーブルに置き換わります。 単一クエリに切り替えると、現在の予測クエリの結果は失われます。  
   
- **クエリの結果を更新します。**  
+ **クエリ結果を更新します。**  
  予測クエリを再処理します。  
   
 ## <a name="see-also"></a>参照  

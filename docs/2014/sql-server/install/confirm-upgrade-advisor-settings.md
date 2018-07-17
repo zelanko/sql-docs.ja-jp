@@ -1,5 +1,5 @@
 ---
-title: アップグレード アドバイザーの設定を確認する |Microsoft ドキュメント
+title: アップグレード アドバイザーの設定を確認します |。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - analyzing system [Upgrade Advisor], review settings
 - Upgrade Advisor [SQL Server], reviewing settings
@@ -17,25 +17,25 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, reviewing settings
 ms.assetid: 07a4d94b-df0e-4662-9604-221664762ee8
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba066e99c28893ef74609a28e34dcfa09fd7f11c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 81df6e012d16e922724236d15005f3552db50456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293998"
 ---
 # <a name="confirm-upgrade-advisor-settings"></a>アップグレード アドバイザーの設定を確認
-  このページでは、選択したアップグレード アドバイザー分析ウィザードのオプションおよび入力したパラメーターを確認できます。 オプションとパラメーターを確認した後にをクリックして**実行**分析を開始します。  
+  このページでは、選択したアップグレード アドバイザー分析ウィザードのオプションおよび入力したパラメーターを確認できます。 オプションとパラメーターを確認してから、クリックして**実行**分析を開始します。  
   
 ## <a name="options"></a>および  
  **アップグレード アドバイザーの設定**  
  各コンポーネントに入力したすべての情報およびパラメーター、およびすべてのアップグレード アドバイザーで適用されるパラメーターを確認できます。 出力ディレクトリを含むレポート オプションの一覧が表示されます。  
   
- **レポートを [!INCLUDE[msCoName](../../includes/msconame-md.md)] に送信する。これらのレポートには、個人情報を含めることがあります。**  
- このオプションを選択すると送信ために、分析、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]チームです。 この情報は将来のリリースの機能を向上するために使用されます。  
+ **レポートを [!INCLUDE[msCoName](../../includes/msconame-md.md)] に送信する。これらのレポートには、個人情報を含めることができます。**  
+ このオプションを選択すると、分析を送信、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]チーム。 この情報は将来のリリースの機能を向上するために使用されます。  
   
  **プライバシーに関する声明を表示します。**  
  インターネット上で [!INCLUDE[msCoName](../../includes/msconame-md.md)] プライバシー ポリシーをお読みになるには、このリンクをクリックします。  

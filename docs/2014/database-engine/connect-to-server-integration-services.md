@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connection.login.dtsserver.f1
 ms.assetid: 5be897bd-f36c-4c6a-a91a-13d0d016f8b6
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 38102ce976d5b85a89a68c042f926b062cd6338b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99c9204d48a48252eacabe1d704eeea202901f26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289422"
 ---
 # <a name="connect-to-server-integration-services"></a>[サーバーへの接続] \(Integration Services)
   このダイアログを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に接続するときのオプションを表示または指定できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36070537"
  接続するサーバーを選択します。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
   
 > [!NOTE]  
->  使用しないでください *\<servername >*\\*\<instancename >* ので、[!INCLUDE[ssIS](../includes/ssis-md.md)]コンピューターで複数のインスタンスをサポートしていません。  
+>  使用しない *\<servername >*\\*\<instancename >* ため、[!INCLUDE[ssIS](../includes/ssis-md.md)]コンピューターに複数のインスタンスをサポートしていません。  
   
  **[認証]**  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] では [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows 認証だけを使用できます。 Windows 認証モードを使用すると、ユーザーは Windows ユーザー アカウントを使用して接続できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "36070537"
  **Password**  
  [!INCLUDE[ssIS](../includes/ssis-md.md)]では Windows 認証しか使用できないため、このオプションは使用できません。  
   
- **のインスタンスに接続するときには、**  
+ **Connect**  
  クリックすると、上記で選択したサーバーに接続します。  
   
  **[オプション]**  

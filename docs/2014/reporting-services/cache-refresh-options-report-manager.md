@@ -1,5 +1,5 @@
 ---
-title: キャッシュ更新オプション (レポート マネージャー) |Microsoft ドキュメント
+title: キャッシュ更新オプション (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5d5a2bd4683e70523275c8da191bc74cd4de28d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734bad595344741ee47503352b440a8db320912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282698"
 ---
 # <a name="cache-refresh-options-report-manager"></a>キャッシュ更新オプション (レポート マネージャー)
   [キャッシュ更新オプション] ページでは、レポートまたは共有データセットのデータの一時コピーを事前にキャッシュに読み込むスケジュールを作成できます。 更新計画には、スケジュールと、パラメーターの値を指定またはオーバーライドするためのオプションが含まれます。 共有データセットの場合、読み取り専用にマークされているパラメーターの値をオーバーライドすることはできません。 更新オプション ページの一部として複数の更新計画を作成して使用できます。  
@@ -27,7 +27,7 @@ ms.locfileid: "36164510"
  キャッシュ更新計画の関連レポートや共有データセットの追加、削除、変更、および表示が可能な既定のロールの割り当ては、コンテンツ マネージャー、個人用レポート、およびパブリッシャーです。  
   
 > [!NOTE]  
->  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 ## <a name="to-open-the-cache-refresh-plan-properties-page-for-a-report-or-shared-dataset"></a>レポートまたは共有データセットの [キャッシュ更新計画] プロパティ ページを開くには  
   
@@ -47,10 +47,10 @@ ms.locfileid: "36164510"
 6.  キャッシュ計画のコピーを作成してカスタマイズするには、 **[既存のものから新規作成]** をクリックします。  
   
 ## <a name="cache-refresh-options"></a>キャッシュ更新オプション  
- **Delete**  
+ **削除**  
  現在選択しているすべての更新計画を削除します。  
   
- **既存のものから新規作成**  
+ **既存のものから新しい**  
  このオプションは、キャッシュ更新計画が 1 つだけ選択されている場合に有効になります。 このオプションでは、新しい更新計画が元の計画からコピーされて作成されます。 キャッシュ更新計画ページは、選択された計画の詳細があらかじめ設定された状態で開きます。 その後、更新計画オプションを変更して、新しい説明で計画を保存できます。  
   
  **新しいキャッシュ更新計画**  
@@ -60,7 +60,7 @@ ms.locfileid: "36164510"
  現在の更新計画を編集するには、このオプションを選択します。  
   
 ## <a name="cache-refresh-plan-options"></a>キャッシュ更新計画オプション  
- **description**  
+ **[説明]**  
  キャッシュ更新計画の説明を指定します。  
   
  **アイテム固有のスケジュール**  
@@ -69,12 +69,12 @@ ms.locfileid: "36164510"
  **構成**  
  クリックすると、[スケジュール] ページが開きます。このページは、頻度に関する情報の指定に使用します。  
   
- 詳細については、次を参照してください。[新しいスケジュール: スケジュールの編集 ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)です。  
+ 詳細については、次を参照してください。[新しいスケジュール: スケジュールの編集 ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)します。  
   
  **共有スケジュール**  
  既存のスケジュールを選択するには、このオプションを選択します。  
   
- 詳細については、次を参照してください。 [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)です。  
+ 詳細については、次を参照してください。 [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)します。  
   
  **@\<** *パラメーター* **>**  
  パラメーター値の 1 つの組み合わせを指定します。 このセクションは、現在のデータセットまたはレポートでパラメーターが使用されている場合にのみ表示されます。  
@@ -84,7 +84,7 @@ ms.locfileid: "36164510"
  **既定値の使用**  
  このパラメーターに事前定義済みの既定値を使用する場合は、このオプションを選択します。  
   
-##  <a name="Parameters"></a> パラメーターの指定  
+##  <a name="Parameters"></a> パラメーターを指定します。  
  キャッシュ更新計画を作成するには、各レポートまたは共有データセットのパラメーターに値が指定されている必要があります。 レポートまたは共有データセット アイテムの定義に既定値が指定されていない場合は、ユーザーが値を指定する必要があります。 既定値が指定されている場合は、この手順で値を指定する必要はありません。 値を指定すると、既定値はオーバーライドされます。  
   
  パラメーター値の複数の組み合わせを指定する場合は、各組み合わせに対して個別のキャッシュ更新計画を作成します。  
@@ -106,14 +106,14 @@ ms.locfileid: "36164510"
   
  共有データセット定義で、パラメーターに **[クエリから省略]** オプションが指定されている場合、既定値を指定する必要はありません。 このフラグは、データセット パラメーターがクエリで使用されないことを示します。 たとえば、このパラメーターが共有データセット定義に表示されるのは、それがデータセット フィルターでのみ使用されるレポート パラメーターである場合です。  
   
- データセット パラメーター オプションを表示または変更するには、共有データセット定義を編集する必要があります。 詳細については、次を参照してください。[共有データセットの管理](report-data/manage-shared-datasets.md)です。  
+ データセット パラメーター オプションを表示または変更するには、共有データセット定義を編集する必要があります。 詳細については、次を参照してください。[共有データセットの管理](report-data/manage-shared-datasets.md)します。  
   
 ### <a name="report-parameters"></a>レポート パラメーター  
  レポートの場合、キャッシュ更新計画を正常に作成するには、各パラメーター値が有効でなければなりません。 各レポート パラメーターに、既定値を入力または選択する必要があります。 ユーザーが値を設定すると、レポート サーバー上のレポート パラメーターに定義されている既定値がオーバーライドされます。  
   
- パラメーターは、レポート サーバー上のパラメーター プロパティで指定されている要件を満たしている必要があります。 たとえば、AllowBlank プロパティがレポート パラメーターの場合は false である場合、空の文字列は有効な値です。  
+ パラメーターは、レポート サーバー上のパラメーター プロパティで指定されている要件を満たしている必要があります。 たとえば、AllowBlank プロパティがレポート パラメーターの false の場合に、空の文字列いない有効な値です。  
   
- レポート パラメーター オプションを表示または変更するには、レポート パラメーターをレポート内で編集するか、レポート サーバー上で個別に編集します。 詳細については、次を参照してください。[レポート パラメーターの概念&#40;レポート ビルダーおよび SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md)です。  
+ レポート パラメーター オプションを表示または変更するには、レポート パラメーターをレポート内で編集するか、レポート サーバー上で個別に編集します。 詳細については、次を参照してください。[レポート パラメーターの概念&#40;レポート ビルダーおよび SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md)します。  
   
 ## <a name="conditions-that-cause-a-cache-refresh-plan-to-be-inactive"></a>キャッシュ更新計画が非アクティブになる条件  
  次の状況においては、共有データセットまたはレポートのキャッシュ更新計画が非アクティブになる可能性があります。  
@@ -134,7 +134,7 @@ ms.locfileid: "36164510"
 ## <a name="see-also"></a>参照  
  [アイテムレベルのタスク](security/tasks-and-permissions-item-level-tasks.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [レポート マネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
+ [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [レポートのキャッシュ &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [共有データセットを管理する](report-data/manage-shared-datasets.md)  
   

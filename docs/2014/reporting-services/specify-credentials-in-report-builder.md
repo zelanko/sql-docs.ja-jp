@@ -1,5 +1,5 @@
 ---
-title: レポート ビルダーでの資格情報を指定 |Microsoft ドキュメント
+title: レポート ビルダーでの資格情報の指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c5a9c27436bf80887a3f8917b1d4df71896ba2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bfa96110c521386cf6e7697f6f395f845ae6a83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280328"
 ---
 # <a name="specify-credentials-in-report-builder"></a>レポート ビルダーでの資格情報の指定
   資格情報は、データ ソースからデータの取得を試みるユーザーの認証に使用されます。 データ ソースの所有者が、使用する資格情報の種類を決定します。 たとえば、データベース管理者は、Windows のユーザー名とパスワードの入力をユーザーに求めることができます。  
@@ -27,7 +27,7 @@ ms.locfileid: "36164942"
  レポート定義の各データ ソース定義では、名前および接続文字列のほか、統合セキュリティを使用するかどうかと、必要な資格情報が指定されなかった場合にどんなプロンプトを表示するかを指定します。 資格情報は、レポート定義に保存されません。 レポートがレポート サーバー上でパブリッシュされると、その後はデータ ソースをレポート定義とは別に管理できます。 データ ソースの所有者は、レポート サーバー上の埋め込みデータ ソースと共有データ ソースの両方に対して資格情報を指定できます。  
   
 > [!NOTE]  
->  レポート サーバーの管理者は、レポート サーバーを参照して共有データ ソースまたはモデルを選択する操作や、レポートを開く操作または保存する操作を実行するための適切な権限をユーザーに許可する必要があります。 詳細については、次を参照してください。[インストール、アンインストール、およびレポート ビルダーのサポート](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)です。  
+>  レポート サーバーの管理者は、レポート サーバーを参照して共有データ ソースまたはモデルを選択する操作や、レポートを開く操作または保存する操作を実行するための適切な権限をユーザーに許可する必要があります。 詳細については、次を参照してください。[インストール、アンインストール、およびレポート ビルダーのサポート](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
@@ -75,11 +75,11 @@ ms.locfileid: "36164942"
  資格情報の要求を指定した場合、レポートにアクセスするユーザーがデータを取得するには、それぞれがユーザー名とパスワードを入力する必要があります。 機密データを含むレポートには、このオプションを使用することをお勧めします。 要求される資格情報は、Windows アカウントまたはデータベース ログインのいずれかです。 指定した資格情報がデータベース サーバーによって認識されない場合や、指定したユーザーにデータを取得するための権限が与えられていない場合、接続は失敗します。  
   
 ### <a name="no-credentials"></a>資格情報を使用しない  
- このデータ ソースでは資格情報が必要とされません。 レポート サーバー上でこのレポートを実行するには、自動実行用のアカウントを構成する必要があります。 詳細については、次を参照してください。[無人実行アカウントの構成&#40;SSRS 構成マネージャー&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)で、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ドキュメント[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)です。  
+ このデータ ソースでは資格情報が必要とされません。 レポート サーバー上でこのレポートを実行するには、自動実行用のアカウントを構成する必要があります。 詳細については、次を参照してください。[自動実行アカウントを構成する&#40;SSRS 構成マネージャー&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)で、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ドキュメント[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?linkid=121312)します。  
   
 ## <a name="see-also"></a>参照  
  [インストール、アンインストール、およびレポート ビルダーのサポート](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [埋め込みデータ ソースとデータ接続またはデータ ソースを共有&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [埋め込みし、共有データ接続またはデータ ソース&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [レポート ビルダーのオプション ダイアログ ボックスで、設定&#40;レポート ビルダー&#41;](report-builder/set-default-options-for-report-builder.md)   
  [データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)   

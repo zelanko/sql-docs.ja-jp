@@ -1,27 +1,26 @@
 ---
-title: フルテキスト カタログのプロパティ (テーブルとビュー ページ) |Microsoft ドキュメント
+title: フルテキスト カタログのプロパティ (テーブルとビュー ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.tablesviews.f1
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
 caps.latest.revision: 25
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0954fcb44358599314c9993fa53fcfad8dec73ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0e73607bf54d066c0328ae45785151ceaa2cca1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298918"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>[フルテキスト カタログのプロパティ] ([テーブルとビュー] ページ)
   このダイアログ ページを使用すると、フルテキスト カタログに割り当てられたテーブルおよびビューを表示したり、変更したりできます。  
@@ -49,7 +48,7 @@ ms.locfileid: "36177587"
 |-|-|  
 |**使用可能な列**|フルテキスト インデックス付きの列をすべて表示します。 フルテキスト インデックスに列を追加する場合は、このチェック ボックスをオンにします。|  
 |**ワード ブレーカーの言語**|ワード ブレーカーの言語を表示します。|  
-|**データ型の列**|表示されている列のドキュメントの種類を保持するテーブルの列の名前を一覧表示**使用可能な列**列がある場合、`varbinary(max)`または`image`列です。|  
+|**データ型の列**|列のドキュメントの種類を保持するテーブル内の列の名前を一覧表示**使用可能な列**、列がある場合、`varbinary(max)`または`image`列。|  
 |**[統計的セマンティクス]**|選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md)」を参照してください。<br /><br /> **[統計的セマンティクス]** を選択する前に **[言語]** を選択した場合、選択した言語にセマンティック言語モデルが関連付けられていなければ、**[統計的セマンティクス]** チェック ボックスは無効になります。 **[言語]** を選択する前に **[統計的セマンティクス]** を選択した場合、ドロップダウン コンボ ボックスで使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。|  
   
 ## <a name="track-changes"></a>[変更の追跡]  
@@ -57,7 +56,7 @@ ms.locfileid: "36177587"
 |||  
 |-|-|  
 |**自動**|基になるテーブル内のデータが変更、追加、または削除されると、フルテキスト インデックスは自動的に更新されます。|  
-|**手動**|データの変更、追加、またはインデックス付きのデータで削除されたときに[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]変更を追跡します。 **[手動]** による変更の追跡が選択されている場合、インデックスはこれらの変更によって自動的に更新されません。 代わりに、管理者が変更を手動で適用を使用して、 [ALTER FULLTEXT INDEX.START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql)ステートメントです。|  
+|**手動**|データの変更、追加、またはインデックス付きのデータの削除時に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]変更を追跡します。 **[手動]** による変更の追跡が選択されている場合、インデックスはこれらの変更によって自動的に更新されません。 代わりに、管理者は変更を手動で適用を使用して、 [ALTER FULLTEXT INDEX.START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql)ステートメント。|  
 |**変更を追跡しません。**|このオプションが有効になっていると、カタログ内のインデックス付きデータへの変更は記録されません。 管理者は、FULL POPULATION または INCREMENTAL POPULATION のいずれかで ALTER FULLTEXT INDEX を使用してインデックスを構築する必要があります。|  
   
 ## <a name="see-also"></a>参照  

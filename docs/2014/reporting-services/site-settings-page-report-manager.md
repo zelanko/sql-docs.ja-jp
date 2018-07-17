@@ -1,5 +1,5 @@
 ---
-title: サイト設定 ページ (レポート マネージャー) |Microsoft ドキュメント
+title: サイト設定 ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dd5360f4f001d85c883291bf87a85ae0e48e3362
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ab466c2e6029a0da5e3ce5498fd85f8a1c8724f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232612"
 ---
 # <a name="site-settings-page-report-manager"></a>[サイトの設定] ページ (レポート マネージャー)
   [サイトの設定] ページでは、アプリケーションのタイトルの変更、レポート履歴の制限やレポート処理タイムアウトに関するサーバー全体の既定値の設定、システム レベルのロールの割り当ての管理、および共有スケジュールの管理を実行できます。 このページを表示するには、コンテンツ マネージャーとシステム管理者の権限が必要です。  
   
 > [!NOTE]  
->  レポート履歴、レポート実行、および共有スケジュール機能は、すべてのエディションの SQL Server で使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  レポート履歴、レポート実行、および共有スケジュール機能は、すべてのエディションの SQL Server で使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 ## <a name="navigation"></a>ナビゲーション  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
@@ -36,11 +36,11 @@ ms.locfileid: "36176542"
   
 2.  ページの上部にある **[サイトの設定]** をクリックします。 この操作により、サイトの [全般] プロパティ ページが開きます。  
   
-     **注:** が表示されない場合、**サイト設定**オプション、メニューにすることはありません必要なアクセス許可、詳細については、の [サイト設定] を参照してください[用のネイティブ モード レポート サーバーを構成します。ローカル管理&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)です。  
+     **注:** 表示されない場合、**サイト設定**オプション メニューで、必要はありません必要なアクセス許可、詳細については、の [サイト設定] セクションを参照してください[用のネイティブ モード レポート サーバーを構成します。ローカル管理&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)します。  
   
 ## <a name="options"></a>および  
- **Name**  
- このインスタンスに使用するタイトルを指定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]レポート マネージャー。 既定では、タイトルは"[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]"です。  
+ **名前**  
+ このインスタンスを使用するタイトルを指定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]レポート マネージャー。 既定では、タイトルは"[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]"。  
   
  **レポート履歴の既定の設定を選択します。**  
  レポート履歴で保持されるコピー数の既定値を選択します。 既定値には、レポート履歴の制限を規定する初期設定が用意されています。 これらの設定は、レポート レベルで異なります。 詳細については、「[[スナップショット オプション] プロパティ ページ &#40;レポート マネージャー&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)」を参照してください。  
@@ -57,9 +57,9 @@ ms.locfileid: "36176542"
  **カスタムのレポート ビルダーの起動 URL**  
  レポート サーバーで既定のレポート ビルダー URL を使用しない場合に、カスタムの URL を指定します。 この設定は省略可能です。 この値が指定されなかった場合は、レポート ビルダーを ClickOnce アプリケーションとして起動する既定の URL が使用されます。 既定の URL は、次のいずれかになります。  
   
- **ネイティブ モード レポート サーバー:** http:// の形で行われますネイティブ モード インストールでは、既定の URL\<*computername*>/reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application です。  
+ **ネイティブ モード レポート サーバー:** ネイティブ モードのインストールで既定の URL は http:// の形式になります\<*computername*>/reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application します。  
   
- SharePoint 統合モード: 既定の URL は http:// の形で行われます\<*SharePoint_site*>/_vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application"。  
+ SharePoint 統合モード: 既定の URL は http:// の形式になります\<*SharePoint_site*>/_vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application"。  
   
  **[適用]**  
  レポート サーバーに変更を保存する場合にクリックします。  
@@ -73,7 +73,7 @@ ms.locfileid: "36176542"
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](security/granting-permissions-on-a-native-mode-report-server.md)   
- [定義済みのロール](security/role-definitions-predefined-roles.md)   
+ [定義済みロール](security/role-definitions-predefined-roles.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

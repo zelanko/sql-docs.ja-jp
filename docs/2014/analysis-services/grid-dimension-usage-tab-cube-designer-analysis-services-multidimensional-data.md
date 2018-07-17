@@ -1,5 +1,5 @@
 ---
-title: '[グリッド] ([ディメンションの使用法] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント'
+title: グリッド (キューブ デザイナーのディメンションの使用法 タブ) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5a470ffb94a457d68b8f47b30b06520984aba87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e112b3cd1a732b403c7e2da2dde185e5e4c7df5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295832"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>[グリッド] (キューブ デザイナーの [ディメンションの使用法] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[ディメンションの使用法]** タブの **[グリッド]** ペインを使用すると、キューブのディメンションとメジャー グループ間のディメンション リレーションシップを表示したり編集したりできます。 各ディメンションのリレーションシップは、グリッドにセルとして表されます。グリッドでは、メジャー グループは列として表示され、ディメンションは行として表示されます。  
@@ -42,7 +42,7 @@ ms.locfileid: "36076926"
 |**切り取り**|注: このオプションは無効です。|  
 |**[コピー]**|注: このオプションは無効です。|  
 |**[貼り付け]**|注: このオプションは無効です。|  
-|**Delete**|選択したキューブ ディメンション、メジャー グループ、またはディメンションのリレーションシップをキューブから削除します。|  
+|**削除**|選択したキューブ ディメンション、メジャー グループ、またはディメンションのリレーションシップをキューブから削除します。|  
 |**Rename**|選択したキューブ ディメンション、メジャー グループ、またはディメンションのリレーションシップの名前を変更します。|  
 |**Properties**|選択したキューブ ディメンション、メジャー グループ、またはディメンションのリレーションシップのプロパティを、 **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ウィンドウに表示します。|  
   

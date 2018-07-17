@@ -1,5 +1,5 @@
 ---
-title: データとキューブ内のメタデータを参照 |Microsoft ドキュメント
+title: データおよびキューブのメタデータの参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 61d455c9de96eed430125a9f543ec7bfc72ab7c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 319b15dec052cdae73c6b1f1a6c0fed1290d447e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288148"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>キューブ内のデータおよびメタデータの参照
   キューブ デザイナーの **[ブラウザー]** タブを使用すると、キューブ データを参照できます。 このビューでは、キューブ構造を検証し、データベース オブジェクトのデータ、計算、書式設定、およびセキュリティを確認できます。 レポート ツールや他のクライアント アプリケーションで、キューブがユーザーにどのように表示されるかを迅速に検証できます。 キューブのデータを参照すると、異なるディメンションを表示し、メンバーをドリル ダウンし、ディメンションをスライスできます。  
@@ -61,7 +61,7 @@ ms.locfileid: "36084883"
   
      \- または -  
   
--   **ディメンション**の列、**フィルター**  ウィンドウで、をクリックして**\<次元の選択 >** リストから、ディメンションを選択し、をクリックして**\<階層を選択 >** で、**階層**列と、一覧から階層を選択します。  
+-   **ディメンション**の列、**フィルター**ウィンドウで、をクリックして**\<ディメンションの選択 >** 、一覧からディメンションを選択し をクリックして**\<階層を選択 >** で、**階層**列と、一覧から階層を選択します。  
   
  階層を指定した後、演算子とフィルター式を指定します。 次の表では、演算子とフィルター式について説明しています。  
   

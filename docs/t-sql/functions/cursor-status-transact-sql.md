@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - cursors [SQL Server], status information
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bc5eff629bc16e655094c08c71b3cef195420bc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7a9fa9ea228f5fdf872e1ec10a4ccdc9ee5b7b53
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34046683"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788183"
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ CURSOR_STATUS
   
 |戻り値|カーソル名|カーソル変数|  
 |---|---|---|
-|@shouldalert|カーソルの結果セットは 1 つ以上の行で構成されます。<br /><br /> 状態非依存のキーセット カーソルの場合、結果セットは 1 つ以上の行で構成されます。<br /><br /> 動的カーソルの場合、結果セットは 0、1、または複数の行で構成されます。|この変数に割り当てられているカーソルはオープンしています。<br /><br /> 状態非依存のキーセット カーソルの場合、結果セットは 1 つ以上の行で構成されます。<br /><br /> 動的カーソルの場合、結果セットは 0、1、または複数の行で構成されます。|  
+|1|カーソルの結果セットは 1 つ以上の行で構成されます。<br /><br /> 状態非依存のキーセット カーソルの場合、結果セットは 1 つ以上の行で構成されます。<br /><br /> 動的カーソルの場合、結果セットは 0、1、または複数の行で構成されます。|この変数に割り当てられているカーソルはオープンしています。<br /><br /> 状態非依存のキーセット カーソルの場合、結果セットは 1 つ以上の行で構成されます。<br /><br /> 動的カーソルの場合、結果セットは 0、1、または複数の行で構成されます。|  
 |0|カーソル結果セットは空です。*|この変数に割り当てられているカーソルはオープンしていますが、結果セットは完全に空です。*|  
 |-1|カーソルはクローズしています。|この変数に割り当てられているカーソルはクローズしています。|  
 |-2|該当なし。|次のいずれかの可能性があります。<br /><br /> 以前に呼び出されたプロシージャでは、この OUTPUT 変数にカーソルが割り当てられませんでした。<br /><br /> 以前に割り当てられたプロシージャによって、この OUTPUT 変数にカーソルが割り当てられましたが、プロシージャの終了時点ではカーソルはクローズした状態でした。 このため、カーソルの割り当てが解除され、呼び出し元のプロシージャに返されません。<br /><br /> 宣言されたカーソル変数にはカーソルが割り当てられていません。|  

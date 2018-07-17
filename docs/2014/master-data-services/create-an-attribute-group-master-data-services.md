@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], creating
 - creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0a063af91090ff2e8d5eb1145bb5968573d04523
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: bd50daa9250f46f17feecb7dfdd16e4998ea47d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290858"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>属性グループを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **[エクスプローラー]** グリッドの個々のタブに属性を表示する場合、属性グループを作成します。  
   
 > [!NOTE]  
->  属性グループを作成すると、作成者以外のすべてのユーザーに対して自動的に非表示に設定されます。 詳細については、グループを表示する、次を参照してください。 [、ユーザーが、属性グループ表示&#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)です。  
+>  属性グループを作成すると、作成者以外のすべてのユーザーに対して自動的に非表示に設定されます。 グループを表示する詳細については、次を参照してください。[ことをユーザーに、属性グループ表示&#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)します。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
@@ -43,7 +43,7 @@ ms.locfileid: "36165897"
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **モデルビュー**  ページで、メニュー バーのをポイント**管理** をクリック**属性グループ**です。  
+2.  **モデル ビュー**  ページで、ポイントして、メニュー バーから**管理** をクリック**属性グループ**します。  
   
 3.  **[モデル]** ボックスの一覧からモデルを選択します。  
   
@@ -51,12 +51,12 @@ ms.locfileid: "36165897"
   
 5.  **[リーフ グループ]**、 **[統合グループ]**、または **[コレクション グループ]** をクリックして、リーフ メンバー、統合メンバー、またはコレクションの属性グループを作成します。  
   
-6.  をクリックして**属性グループの追加**です。  
+6.  クリックして**属性グループの追加**します。  
   
-7.  **リーフ グループ名**ボックスに、グループの名前を入力します。 これは、タブで表示される名前**エクスプ ローラー**です。  
+7.  **リーフ グループ名**ボックスに、グループの名前を入力します。 これで、タブに表示される名前は、**エクスプ ローラー**します。  
   
     > [!NOTE]  
-    >  選択した場合は**統合グループ**または**コレクション グループ**このボックスは、手順 5. で**統合グループ名**または**コレクション グループ名**、それぞれします。  
+    >  選択した場合**統合グループ**または**コレクション グループ**このボックスは、手順 5 で、**統合グループ名**または**コレクション グループ名**、それぞれします。  
   
 8.  **[グループの保存]** をクリックします。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36165897"
   
 10. **[属性]** をクリックします。  
   
-11. をクリックして**選択した項目を編集**です。  
+11. クリックして**選択した項目の編集**します。  
   
-12. 属性をクリックして、**利用可能**ボックス、をクリックし、**追加**矢印です。 すべてを追加するには、 **[すべて追加]** 矢印をクリックします。  
+12. 属性をクリックして、**利用可能な**ボックス、をクリックし、**追加**矢印。 すべてを追加するには、 **[すべて追加]** 矢印をクリックします。  
   
-13. 必要に応じて、をクリックして、**を**と**ダウン**矢印属性の左から右の順序を変更します。  
+13. 必要に応じて、をクリックして、**を**と**ダウン**属性の左から右の順序を変更します。  
   
 14. **[保存]** をクリックします。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36165897"
  [属性&#40;マスター データ サービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
  [属性グループ名を変更する &#40;マスター データ サービス&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [属性グループを削除する &#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
- [アクセス許可は、リーフ&#40;マスター データ サービス&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
+ [リーフ アクセス許可&#40;マスター データ サービス&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
  [アクセス許可を統合&#40;マスター データ サービス&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
   

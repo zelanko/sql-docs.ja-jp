@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12c255b06cd56ff27f1ada7f3ca0f0fa36113407
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fa58456bf72ab50dec1ff67a40c10be19b0ad45
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956847"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354264"
 ---
 # <a name="article-properties---ltarticlegt"></a>アーティクルのプロパティ - &lt;Article&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,8 @@ ms.locfileid: "32956847"
   
 ## <a name="options-for-all-publications"></a>すべてのパブリケーションのオプション  
  **[テーブル分割構成のコピー]** と **[インデックス分割構成のコピー]**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、テーブル分割とインデックス分割の機能が導入されました。これは、レプリケーションによって行フィルターと列フィルターを使用して実現される分割とは関係ありません。 **[テーブル分割構成のコピー]** オプションと **[インデックス分割構成のコピー]** オプションでは、パーティション分割構成をサブスクライバーにコピーするかどうかを指定します。 パーティション分割の詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、テーブル分割とインデックス分割の機能が導入されました。これは、レプリケーションによって行フィルターと列フィルターを使用して実現される分割とは関係ありません。 **[テーブル分割構成のコピー]** オプションと **[インデックス分割構成のコピー]** オプションでは、パーティション分割構成をサブスクライバーにコピーするかどうかを指定します。 パーティション分割の詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
  **[データ型の変換]**  
  サブスクライバーにオブジェクトを作成する際に、ユーザー定義のデータ型を基本データ型に変換するかどうかを指定します。 ユーザー定義のデータ型には、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]で導入されたユーザー定義 CLR 型が含まれます。 このようなデータ型を古いバージョンの **にレプリケートする場合には、** [True] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を指定します。これにより、このデータ型をサブスクライバーで適切に処理できるようになります。  

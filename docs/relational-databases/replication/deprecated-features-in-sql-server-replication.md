@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 67
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56ef96334a4bf317bf54241d6b5ff0d129a77e58
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23c3395ce12f5a2d60c9c2472f6c4db39394e7d6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32954787"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353444"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server レプリケーションの非推奨の機能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "32954787"
   
 ## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>Items Deprecated in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
-|機能|Description|  
+|機能|[説明]|  
 |-------------|-----------------|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|レプリケーションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エンドポイントが現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンの 2 つのメジャー バージョンに存在する場合にサポートされます。 そのため、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]との相互間でレプリケーションがサポートされません。|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|レプリケーションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エンドポイントが現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンの 2 つのメジャー バージョンに存在する場合にサポートされます。 そのため、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、 [!INCLUDE[ssEW](../../includes/ssew-md.md)]との相互間でレプリケーションがサポートされません。|  

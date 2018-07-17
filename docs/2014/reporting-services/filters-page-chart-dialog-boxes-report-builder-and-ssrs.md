@@ -1,5 +1,5 @@
 ---
-title: フィルター ページで、グラフのダイアログ ボックス (レポート ビルダーおよび SSRS) |Microsoft ドキュメント
+title: フィルター ページで、グラフのダイアログ ボックス (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.filters.f1
 - "10409"
@@ -18,18 +18,18 @@ f1_keywords:
 - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5b695b45a43f388a7dabf64bad327404ef4f6510
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3123a7c1ba3a520ad743ffe7dbd65dfd57443672
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317902"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>[フィルター] ページ (グラフのダイアログ ボックス) (レポート ビルダーおよび SSRS)
-  をクリックして**フィルター**でします。  
+  クリックして**フィルター**でします。  
   
 -   **[カテゴリ グループのプロパティ]** ダイアログ ボックス。カテゴリ別にグループ化された系列内のデータ ポイントをフィルターできます。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36164731"
  **[追加]**  
  クリックして、一覧に新しいフィルター句を追加します。  
   
- **Delete**  
+ **削除**  
  選択したフィルター句を一覧から削除します。  
   
  **上矢印**  
@@ -63,13 +63,13 @@ ms.locfileid: "36164731"
  **[演算子]**  
  式と値の比較に使用する演算子を選択します。  
   
- **Value**  
+ **[値]**  
  **[式]** で指定した式の評価対象となる式または値を入力します。  
   
 ## <a name="see-also"></a>参照  
  [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [式の例 (レポート ビルダーおよび SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [フィルター、グループ、およびデータを並べ替える&#40;レポート ビルダーおよび SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [フィルター、グループ、およびデータの並べ替え&#40;レポート ビルダーおよび SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

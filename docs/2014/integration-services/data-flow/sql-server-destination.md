@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdest.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 39aaf8c972070b717f4b50bf42d4fe587a509d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a518189d9ee14da620689cd3ebaff8b4982d590f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312042"
 ---
 # <a name="sql-server-destination"></a>SQL Server 変換先
   SQL Server 変換先はローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続し、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルまたはビューに一括で読み込みます。 SQL Server 変換先は、リモート サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにアクセスするパッケージでは使用できません。 代わりに、このパッケージでは OLE DB 変換先を使用する必要があります。 詳細については、「 [OLE DB 変換先](ole-db-destination.md)」を参照してください。  
@@ -38,7 +38,7 @@ ms.locfileid: "36176012"
 ## <a name="bulk-inserts"></a>一括挿入  
  SQL Server 変換先を使用してリモートの SQL Server データベースにデータを一括読み込みしようとすると、次のようなエラー メッセージが表示されることがあります。"OLE DB レコードを使用できます。 ソース : "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 説明 : "SSIS ファイル マッピング オブジェクト 'Global\DTSQLIMPORT' を開けなかったので、一括読み込みできませんでした。 オペレーティング システム エラー コード 2 (指定されたファイルが見つかりません)。 Windows セキュリティ経由でローカル サーバーにアクセスしていることを確認してください。""  
   
- SQL Server 変換先で行われるのは、一括挿入タスクで行われるものと同じ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への高速なデータ挿入です。ただし、パッケージで SQL Server 変換先を使用することによって、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に読み込まれる前に変換を列データに適用できます。  
+ SQL Server 変換先で行われるのは、一括挿入タスクで行われるものと同じ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への高速なデータ挿入です。ただし、パッケージで SQL Server 変換先を使用することによって、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれる前に変換を列データに適用できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータを読み込む場合は、OLE DB 変換先ではなく SQL Server 変換先を使用することをお勧めします。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36176012"
   
 -   [SQL 変換先エディター&#40;接続マネージャー ページ&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [SQL 変換先エディター &#40;[マッピング] ページ&#41;](../sql-destination-editor-mappings-page.md)  
+-   [SQL 変換先エディター&#40;マッピング ページ&#41;](../sql-destination-editor-mappings-page.md)  
   
 -   [SQL 変換先エディター &#40;[詳細] ページ&#41;](../sql-destination-editor-advanced-page.md)  
   

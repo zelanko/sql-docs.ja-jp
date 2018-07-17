@@ -20,13 +20,13 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3bfa2cd1c622041936d36edccc8e832359f74c56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6e2b34352e3fbb84a3f801919537b5936322ae7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300592"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>スクリプト コンポーネントによる同期変換の作成
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フロー内で変換コンポーネントを使用することにより、変換元から変換先にデータが受け渡される過程で、データを修正または分析できます。 同期出力型の変換では、各入力列はコンポーネントを通過するたびに処理されます。 非同期出力型の変換では、処理を完了するための入力列をすべて受け取ってから、処理が行われます。 このトピックでは、同期変換について説明します。 非同期変換については、「[スクリプト コンポーネントによる非同期変換の作成](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)」を参照してください。 同期コンポーネントと非同期コンポーネントの相違点の詳細については、「[同期変換と非同期変換について](../understanding-synchronous-and-asynchronous-transformations.md)」を参照してください。  
@@ -74,9 +74,9 @@ ms.locfileid: "36178726"
  **[スクリプト変換エディター]** の **[入力および出力]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力および出力] ページ&#41;](../script-transformation-editor-inputs-and-outputs-page.md)」を参照してください。  
   
 ### <a name="adding-variables"></a>変数の追加  
- スクリプトで既存の変数を使用する場合でそれらを追加、`ReadOnlyVariables`と`ReadWriteVariables`プロパティのフィールド、**スクリプト**のページ、**スクリプト変換エディター**です。  
+ スクリプトで既存の変数を使用する場合を追加、`ReadOnlyVariables`と`ReadWriteVariables`プロパティ フィールドに、**スクリプト**のページ、**スクリプト変換エディター**します。  
   
- プロパティ フィールドに複数の変数を追加する場合は、各変数名をコンマで区切ります。 省略記号ボタンをクリックして、複数の変数を選択することもできます (**.**) ボタンを`ReadOnlyVariables`と`ReadWriteVariables`プロパティ フィールド内の変数をクリックして、**変数を選択** ダイアログ ボックス。  
+ プロパティ フィールドに複数の変数を追加する場合は、各変数名をコンマで区切ります。 省略記号をクリックして、複数の変数を選択することもできます (**.**) ボタンの横に、`ReadOnlyVariables`と`ReadWriteVariables`プロパティ フィールドでは、および内の変数を選択し、**変数の選択** ダイアログ ボックス。  
   
  スクリプト コンポーネントで変数を使用する方法に関する一般情報については、「[スクリプト コンポーネントでの変数の使用](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36178726"
 ### <a name="understanding-the-auto-generated-code"></a>自動生成されたコードについて  
  変換コンポーネントを作成して構成した後で VSTA IDE を開くと、コード エディターには `ScriptMain` クラスが編集可能な状態で表示されます。また、`ProcessInputRow` メソッドがスタブとして表示されます。 カスタム コードは `ScriptMain` クラスに記述します。また、`ProcessInputRow` は変換コンポーネントの最重要メソッドです。  
   
- 開く場合、**プロジェクト エクスプ ローラー** VSTA のウィンドウで、スクリプト コンポーネントが、読み取り専用生成も確認できます`BufferWrapper`と`ComponentWrapper`プロジェクト項目です。 `ScriptMain`クラスから継承、`UserComponent`クラス内で、`ComponentWrapper`プロジェクト項目です。  
+ 開く場合、**プロジェクト エクスプ ローラー** VSTA のウィンドウに、スクリプト コンポーネントが読み取り専用に生成も表示できる`BufferWrapper`と`ComponentWrapper`プロジェクト項目。 `ScriptMain`クラスから継承、`UserComponent`クラス、`ComponentWrapper`プロジェクト アイテム。  
   
  実行時には、データ フロー エンジンが `ProcessInput` クラスの `UserComponent` メソッドを呼び出します。これは親クラスである <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドします。 `ProcessInput` メソッドは、入力バッファーに格納された行を順にループし、各行で 1 回ずつ `ProcessInputRow` メソッドを呼び出します。  
   
@@ -141,7 +141,7 @@ else
  この例では、同期変換コンポーネントを作成するために、`ScriptMain` クラスで必要なカスタム コードを示します。  
   
 > [!NOTE]  
->  これらの例を使用して、 **Person.Address**テーブルに、`AdventureWorks`サンプル データベースと、最初と 4 番目の列を渡す、 **intAddressID**と**nvarchar (30) 市区町村**をデータ フローの列です。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。  
+>  これらの例を使用して、 **Person.Address**テーブルに、`AdventureWorks`サンプル データベースとの最初と 4 番目の列を渡す、 **intAddressID**と**nvarchar (30) City**列をデータ フローです。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。  
   
 ### <a name="single-output-synchronous-transformation-example"></a>単一出力の同期変換の例  
  この例では、単一の出力が含まれる同期変換コンポーネントを示します。 この変換では **AddressID** 列をパススルーして、**City** 列を大文字に変換します。  
@@ -150,7 +150,7 @@ else
   
 1.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換として構成します。  
   
-2.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、変換元または他の変換の出力を、新しい変換コンポーネントに接続します。 この出力はからデータを提供する必要があります、 **Person.Address**のテーブル、`AdventureWorks`サンプル データベースを含む、 **AddressID**と**市区町村**列です。  
+2.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、変換元または他の変換の出力を、新しい変換コンポーネントに接続します。 この出力からデータを提供する必要があります、 **Person.Address**のテーブル、`AdventureWorks`サンプル データベースを含む、 **AddressID**と**市区町村**列。  
   
 3.  **[スクリプト変換エディター]** を開きます。 **[入力列]** ページで、**AddressID** 列と **City** 列を選択します。 **City** 列を、読み取り/書き込み可能としてマークします。  
   
@@ -202,7 +202,7 @@ public class ScriptMain:
   
 1.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換として構成します。  
   
-2.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、変換元または他の変換の出力を、新しい変換コンポーネントに接続します。 この出力はからデータを提供する必要があります、 **Person.Address**のテーブル、`AdventureWorks`を含むサンプル データベースには、少なくとも、 **AddressID**と**市区町村**列です。  
+2.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、変換元または他の変換の出力を、新しい変換コンポーネントに接続します。 この出力からデータを提供する必要があります、 **Person.Address**のテーブル、`AdventureWorks`サンプル データベースを含む、少なくとも**AddressID**と**市区町村**列。  
   
 3.  **[スクリプト変換エディター]** を開きます。 **[入力列]** ページで、**AddressID** 列と **City** 列を選択します。 **City** 列を、読み取り/書き込み可能としてマークします。  
   
@@ -266,6 +266,6 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 |![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **常に最新の Integration Services**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
- [同期および非同期変換を理解する](../understanding-synchronous-and-asynchronous-transformations.md)[スクリプト コンポーネントによる非同期変換の作成](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)[同期でカスタム変換コンポーネントの開発出力](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  
+ [同期および非同期変換の変換について](../understanding-synchronous-and-asynchronous-transformations.md)[スクリプト コンポーネントによる非同期変換の作成](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)[同期型のカスタム変換コンポーネントの開発出力](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  
   
   

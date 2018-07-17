@@ -1,5 +1,5 @@
 ---
-title: 暗号化キー (SSRS ネイティブ モード) の復元 |Microsoft ドキュメント
+title: 暗号化キー (SSRS ネイティブ モード) の復元 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2fd845eb3bbc64f43b499e6761b4acc5aa84ae0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9a048a70beb3fa22ab250316b6e630b845e7ca7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303632"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>暗号化キーを復元する (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー データベースに格納されている機密データをセキュリティで保護するのに暗号化キーを使用します。 暗号化されたデータに継続してアクセスできるようにするには、サービス アカウントの変更のために後で暗号化キーを復元する必要がある場合に備えて、または計画的な移行の一環として、暗号化キーのバックアップを作成することが重要です。 このトピックは、使用する方法の概要、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager のキーを復元します。  
@@ -35,9 +35,9 @@ ms.locfileid: "36164228"
  データの暗号化に使用されたキーとは異なる無効なキーを復元すると、レポート サーバー データベースに現在格納されているデータの暗号化は解除できません。 無効なキーを復元した場合は、正しいキーのバックアップ コピーが使用可能であれば、このコピーをすぐに復元してください。 データの暗号化に使用されたキーのバックアップ コピーがない場合は、すべての暗号化されたデータを削除する必要があります。 をクリックして、**削除**のボタンでは、[暗号化キー](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)この手順を実行するページ。 暗号化されたコンテンツを削除したら、すべてのサブスクリプションを手動で更新し、レポートに定義されているすべての保存された資格情報とレポート サーバー上のデータ ドリブン サブスクリプションを再指定する必要があります。  
   
 ## <a name="restore-encryption-key-dialog"></a>[暗号化キーの復元] ダイアログ ボックス  
- 検索する場所について、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]構成マネージャーを参照してください[Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)です。  
+ 検索する場所について、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager を参照してください[Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)します。  
   
- 暗号化キーの復元 ダイアログ ボックスを開くにはクリックして**暗号化キー**のナビゲーション ウィンドウで、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]クリックして Configuration Manager**復元**です。 このダイアログ ボックスで [サービス アカウント] ページを使用して、サービス アカウントを更新するときにも表示されます、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager です。 詳細については、次のトピックを参照してください。  
+ 暗号化キーの復元 ダイアログ ボックスを開くには、次のようにクリックします。**暗号化キー**のナビゲーション ウィンドウで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager、およびクリック**復元**します。 このダイアログ ボックスは、サービス アカウント ページを使用してサービス アカウントを更新するときにも表示されます、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager。 詳細については、次のトピックを参照してください。  
   
 ## <a name="options"></a>および  
  **ファイルの場所**  

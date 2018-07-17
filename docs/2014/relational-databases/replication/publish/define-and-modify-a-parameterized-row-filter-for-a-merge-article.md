@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
 - parameterized filters [SQL Server replication], modifying
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: eea2edc2e87d6a7f63f01a28ef06a1d3b3d179da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3b3d8b397617674f4b297488e9cc8e2b541698df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296502"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>マージ アーティクルのパラメーター化された行フィルターの定義および変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、パラメーター化された行フィルターを定義および変更する方法について説明します。  
@@ -115,9 +115,9 @@ ms.locfileid: "36084094"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>マージ パブリケーション内のアーティクルに適用するパラメーター化された行フィルターを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 指定**@publication**、 **@article**、値の`subset_filterclause`の **@property**式のパラメーター化されたフィルターを定義します。**@value** (を含まない`WHERE`)、および値の**1**両方の**@force_invalidate_snapshot**と **@force_reinit_subscription**.  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 指定**@publication**、 **@article**、@property`subset_filterclause`の **@property**式のパラメーター化されたフィルターを定義します。**@value** (は含まれません`WHERE`)、および値の**1**両方の**@force_invalidate_snapshot**と **@force_reinit_subscription**.  
   
-2.  この変更によって別のパーティション分割が発生した場合、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を再び実行します。 指定**@publication**、 **@article**、値の`partition_options`の**@property**、および最も適切なパーティション分割オプション**@value**次のいずれかを指定することができます。  
+2.  この変更によって別のパーティション分割が発生した場合、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を再び実行します。 指定**@publication**、 **@article**、@property`partition_options`の**@property**、およびの最も適切なパーティション分割オプション**@value**次のいずれかを指定することができます。  
   
     -   **0** - アーティクルのフィルター選択が静的であるか、各パーティションに対して一意なデータのサブセットは生成されません ("重複する" パーティション)。  
   

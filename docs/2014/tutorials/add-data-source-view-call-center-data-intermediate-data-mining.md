@@ -1,5 +1,5 @@
 ---
-title: コール センター データ (中級者向けデータ マイニング チュートリアル) 用のビューをソース データを追加する |Microsoft ドキュメント
+title: ソース コール センター データ (中級者向けデータ マイニング チュートリアル) ビューのデータの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a448e7e4-dbd1-4d31-90bc-4d4a1c23b352
 caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 128ff8a4cbd1bafcf9c15c32f5cd7c5e127710d9
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: f1e8c03f9b19ee0338915077c6177799072b2356
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291738"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>コール センター データ用のデータ ソース ビューの追加 (中級者向けデータ マイニング チュートリアル)
   ここでは、コール センター データへのアクセスに使用するデータ ソース ビューを追加します。 最初に調査用のニューラル ネットワーク モデルを構築し、その後、提案作成用のロジスティック回帰モデルを構築します。どちらのモデルにも、同じデータを使用します。  
@@ -36,9 +36,9 @@ ms.locfileid: "36312330"
   
 2.  **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
-3.  **データ ソースの選択**] ページの [**リレーショナル データ ソース**、select、[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]データ ソース。 このデータ ソースがあるない場合は、次を参照してください。 [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md)です。 **[次へ]** をクリックします。  
+3.  **データ ソースの選択**] ページ [**リレーショナル データ ソース**を選択、[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]データ ソース。 このデータ ソースがないを参照してください。 [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md)します。 **[次へ]** をクリックします。  
   
-4.  **テーブルおよびビュー**ページで、次の表を選択して、データ ソース ビューに追加する右矢印をクリックします。  
+4.  **テーブルおよびビュー**ページで、次の表を選択し、データ ソース ビューに追加する、右矢印をクリックします。  
   
     -   **FactCallCenter (dbo)**  
   
@@ -46,25 +46,25 @@ ms.locfileid: "36312330"
   
 5.  **[次へ]** をクリックします。  
   
-6.  **ウィザードの完了** ページで、既定では、データ ソース ビューの名前は[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]します。 名前を変更**CallCenter**、順にクリック**完了**です。  
+6.  **ウィザードの完了** ページで、既定では、データ ソース ビューの名前は[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]します。 名を変更して**CallCenter**、 をクリックし、**完了**します。  
   
-     表示するデータ ソース ビュー デザイナーが開き、 **CallCenter**データ ソース ビューです。  
+     表示するデータ ソース ビュー デザイナーが開き、 **CallCenter**データ ソース ビュー。  
   
-7.  データ ソース ビュー ウィンドウ内を右クリックし、選択**テーブルの追加/削除**です。 テーブルを選択**DimDate**  をクリック**OK**です。  
+7.  データ ソース ビュー ウィンドウ内で右クリックして**テーブルの追加/削除**します。 テーブルを選択**DimDate**クリック**OK**。  
   
-     間で、リレーションシップを自動的に追加する必要があります、`DateKey`各テーブル内の列です。 このリレーションシップを使用して、列を取得するは**EnglishDayNameOfWeek**から、 **DimDate**テーブルが表示され、モデルで使用します。  
+     間で、リレーションシップを自動的に追加する必要があります、`DateKey`各テーブル内の列。 このリレーションシップを使用して、列を取得するが**EnglishDayNameOfWeek**から、 **DimDate**テーブルが表示され、モデルで使用します。  
   
-8.  データ ソース ビュー デザイナーで、テーブルを右クリックして**FactCallCenter**を選択して**新しい名前付き計算**です。  
+8.  データ ソース ビュー デザイナーで、テーブルを右クリックして**FactCallCenter**、選択および**新しい名前付き計算**します。  
   
-     **名前付き計算の作成** ダイアログ ボックスで、次の値を入力します。  
+     **名前付き計算の作成** ダイアログ ボックスに、次の値を入力します。  
   
     |||  
     |-|-|  
     |**列名**|DayOfWeek|  
-    |**description**|DimDate テーブルから曜日を取得。|  
+    |**[説明]**|DimDate テーブルから曜日を取得。|  
     |**[式]**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
   
-     式は、データを作成することを確認する必要があります、テーブルを右クリックして**FactCallCenter**、し、**データの探索**です。  
+     式に、データが作成されることを確認する必要があります、テーブルを右クリックして**FactCallCenter**、し、**データの探索**します。  
   
 9. データ マイニングでの使用方法を理解するために、使用可能なデータを少し時間をかけて確認します。  
   
@@ -72,24 +72,24 @@ ms.locfileid: "36312330"
 |-----------------|--------------|  
 |FactCallCenterID|データ ウェアハウスにデータがインポートされたときに作成される任意のキー。<br /><br /> この列は一意のレコードを識別する列で、データ マイニング モデルのケース キーとして使用されます。|  
 |DateKey|コール センター業務の日付 (整数値)。 データ ウェアハウスでは日付のキーに整数がよく使用されますが、日付の値でグループ化する場合は、日付/時刻の形式で日付を取得することもできます。<br /><br /> ベンダーからは日々、シフトごとに別個のレポートが提供されるため、日付は一意ではありません。|  
-|WageType|1 日が平日、週末、または祝日かどうかを示します。<br /><br /> ある可能性、カスタマー サービスの質の異なる平日と週末にこの列の入力として使用するようなります。|  
+|WageType|日付が平日、週末や祝日がかどうかを示します。<br /><br /> ある顧客サービスの品質の違い平日と週末にため、この列の入力として使用することができます。|  
 |Shift キー|問い合わせが記録されるシフトを示します。 このコール センターでは、1 日の労働時間が、AM、PM1、PM2、Midnight の 4 つのシフトに分かれています。<br /><br /> カスタマー サービスの質がシフトによって異なる可能性があるため、この列を入力として使用します。|  
-|LevelOneOperators|勤務時間外の第 1 レベルの演算子の数を示します。<br /><br /> コール センターの従業員のレベルはレベル 1 から始まるため、このレベルの従業員は経験が浅い従業員です。|  
-|LevelTwoOperators|勤務しているレベル 2 オペレーターの人数を示します。<br /><br /> 従業員は、レベル 2 のオペレーターとして修飾するためにサービスの時間数を記録する必要があります。|  
+|LevelOneOperators|勤務時間外のレベル 1 の演算子の数を示します。<br /><br /> コール センターの従業員のレベルはレベル 1 から始まるため、このレベルの従業員は経験が浅い従業員です。|  
+|LevelTwoOperators|勤務しているレベル 2 オペレーターの人数を示します。<br /><br /> 従業員は、レベル 2 オペレーターとして限定するためのサービス時間数を記録する必要があります。|  
 |TotalOperators|シフト中に勤務しているオペレーターの人数の合計。|  
 |Calls|シフト中に受けた問い合わせの件数。|  
 |AutomaticResponses|完全に自動呼処理 (対話型音声応答、IVR) によって処理された問い合わせの件数。|  
 |Orders|問い合わせの結果として発生した注文の件数。|  
 |IssuesRaised|問い合わせによって発生した、フォローアップが必要な案件の件数。|  
 |AverageTimePerIssue|問い合わせの電話への応対に要した平均時間。|  
-|ServiceGrade|として、サービスの全体的な質を示すメトリックを測定、*破棄率*全体のシフトします。 電話放棄呼率が高いほど、顧客の満足度が低下し、注文の機会を失う可能性が高くなります。|  
+|ServiceGrade|サービスの全体的な質を示すメトリックの単位として、*破棄率*全体をシフトします。 電話放棄呼率が高いほど、顧客の満足度が低下し、注文の機会を失う可能性が高くなります。|  
   
- データが 1 つの日付列に基づく 4 つの異なる列が含まれることに注意してください: `WageType`、 **DayOfWeek**、 `Shift`、および`DateKey`です。 通常、データ マイニングでは、同じデータから派生する列を複数使用することはお勧めしません。それらの値の間の関連が強すぎて、他のパターンがわかりにくくなることがあるからです。  
+ データが 1 つの日付列に基づく 4 つの異なる列が含まれることに注意してください: `WageType`、 **DayOfWeek**、 `Shift`、および`DateKey`します。 通常、データ マイニングでは、同じデータから派生する列を複数使用することはお勧めしません。それらの値の間の関連が強すぎて、他のパターンがわかりにくくなることがあるからです。  
   
- ただしは使用しません`DateKey`モデルの一意の値が多すぎますが含まれています。 直接的な関係はありません`Shift`と**DayOfWeek**、および`WageType`と**DayOfWeek**は部分的にしか関連します。 共線性について気にかかる場合は、使用可能なすべての列を使用して構造を作成し、モデルごとに無視する列を変えて影響をテストしてみてください。  
+ ただし、私たちは使用しません`DateKey`モデルの一意の値が多すぎますが含まれています。 直接的な関係はありません`Shift`と**DayOfWeek**、および`WageType`と**DayOfWeek**は部分的にのみ関連します。 共線性について気にかかる場合は、使用可能なすべての列を使用して構造を作成し、モデルごとに無視する列を変えて影響をテストしてみてください。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [ニューラル ネットワーク構造およびモデルの作成&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [ニューラル ネットワーク構造およびモデルの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
  [「多次元モデルのデータ ソース ビュー」](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  

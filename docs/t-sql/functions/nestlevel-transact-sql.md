@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,14 +20,15 @@ helpviewer_keywords:
 - stored procedure nesting levels [SQL Server]
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23dc9c9b67dc7fa07e1ac8688be264f6e00b935c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06b515defbcfca57bac7f005957ab18c2a9b12dc
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787769"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/03/2018
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- ストアド プロシージャが別のストアド プロシージャを呼び出したり、共通言語ランタイム (CLR) のルーチン、型、または集計を参照してマネージ コードを実行するたびに、入れ子レベルが増加します。 この値が最大値の 32 を超えると、そのトランザクションは終了します。  
+ ストアド プロシージャが別のストアド プロシージャを呼び出したり、共通言語ランタイム (CLR) のルーチン、型、または集計を参照してマネージド コードを実行するたびに、入れ子レベルが増加します。 この値が最大値の 32 を超えると、そのトランザクションは終了します。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 文字列内で @@NESTLEVEL が実行されると、返される値は、現在の入れ子レベルに 1 を加えた値になります。 sp_executesql を使用して @@NESTLEVEL が動的に実行されると、返される値は、現在の入れ子レベルに 2 を加えた値になります。  
   

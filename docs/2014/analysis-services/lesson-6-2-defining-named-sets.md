@@ -1,5 +1,5 @@
 ---
-title: 名前付きセットの定義 |Microsoft ドキュメント
+title: 名前付きセットの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 5d2988a40cdbf9294a89982396535c7389fb2bea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2f1e53e6dd8aacf6bcf347f2d604ae1e5c1aa6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312692"
 ---
 # <a name="defining-named-sets"></a>名前付きセットの定義
   名前付きセットとは、ディメンション メンバーのセットを返す多次元式 (MDX) です。 名前付きセットを定義し、キューブ定義の一部として保存できます。さらに、名前付きセットをクライアント アプリケーションで作成することもできます。 名前付きセットは、キューブ データ、算術演算子、数値、関数を組み合わせることによって作成します。 名前付きセットは、クライアント アプリケーションの MDX クエリの中で使用できます。また、サブキューブのセットを定義するときも使用できます。 サブキューブは、クロス結合によるセットのコレクションであり、後続のステートメントに対して、キューブ空間を定義されたサブスペースに制限します。 制限されたキューブ領域の定義は MDX スクリプティングの基本概念です。  
@@ -36,11 +36,11 @@ ms.locfileid: "36178332"
   
      **[計算]** タブで新しい計算を定義する場合、計算は **[スクリプト オーガナイザー]** ペインに表示されている順序で解決されることに注意してください。 新しい計算を作成するときにペイン内でフォーカスが置かれている位置によって、計算の実行順序が決まります。新しい計算は、フォーカスが置かれている計算の直後に定義されます。  
   
-3.  **名前**ボックスで、新しい名前を変更するには、名前付きセット`[Core Products]`です。  
+3.  **名前**ボックスに、新しい名前を変更するには、名前付きセット`[Core Products]`します。  
   
      **[スクリプト オーガナイザー]** ペインには、スクリプト コマンドまたは計算されるメンバーとは異なる、名前付きセットの固有のアイコンが表示されます。  
   
-4.  **メタデータ** タブで、**計算ツール** ウィンドウで、展開**製品**、展開**カテゴリ**、展開`Members`、し、展開**All Products**です。  
+4.  **メタデータ** タブで、**計算ツール**ウィンドウで、展開**製品**、展開**カテゴリ**、展開`Members`、し、展開**All Products**します。  
   
     > [!NOTE]  
     >  **[計算ツール]** ペインにメタデータが表示されない場合、ツール バーの **[再接続]** をクリックします。 それでも表示されない場合は、キューブを処理するか、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスを開始する必要があります。  
@@ -51,11 +51,11 @@ ms.locfileid: "36178332"
   
 ## <a name="defining-a-large-resellers-named-set"></a>Large Resellers 名前付きセットの定義  
   
-1.  右クリック`[Core Products]`で、**スクリプト オーガナイザー**  ウィンドウで、クリックして**新しい名前付きセット**です。  
+1.  右クリック`[Core Products]`で、**スクリプト オーガナイザー**ペイン、およびクリック**新しい名前付きセット**します。  
   
-2.  **名前**ボックスで、この名前付きセットの名前を変更`[Large Resellers]`です。  
+2.  **名前**ボックスに、この名前付きセットの名前を変更`[Large Resellers]`します。  
   
-3.  **式**ボックスに、入力`Exists()`です。  
+3.  **式**ボックスに「`Exists()`します。  
   
      Exists 関数を使用して、Number of Employees 属性階層内の従業員数が多数であるメンバーのセットと交差する、Reseller Name 属性階層のメンバーのセットを返すようにします。  
   
@@ -73,29 +73,29 @@ ms.locfileid: "36178332"
   
      これで、Exists セット式の最初のセットを定義できました。続いて 2 番目のセット、つまり多数の従業員を含む Reseller ディメンションのメンバーのセットを追加できます。  
   
-7.  **メタデータ** タブで、**計算ツール** ウィンドウで、展開**Number of Employees** Reseller ディメンションで、展開`Members`の順に展開および**すべての再販業者**です。  
+7.  **メタデータ** タブで、**計算ツール**ウィンドウで、展開**Number of Employees** 、Reseller ディメンションで、展開`Members`を展開し**All Resellers**します。  
   
      この属性階層のメンバーはグループ化されていません。  
   
 8.  **Reseller** ディメンションのディメンション デザイナーを開いて、 **[属性]** ペインの **[Number of Employees]** をクリックします。  
   
-9. [プロパティ] ウィンドウで変更、`DiscretizationMethod`プロパティを**自動**、し、変更、`DiscretizationBucketCount`プロパティを`5`です。 詳細については、[「属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
+9. [プロパティ] ウィンドウで変更、`DiscretizationMethod`プロパティを**自動**、し、変更、`DiscretizationBucketCount`プロパティを`5`します。 詳細については、[「属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
   
 10. **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 11. 配置が正常に完了したら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに切り替え、 **[計算]** タブのツール バーで **[再接続]** をクリックします。  
   
-12. **メタデータ** タブで、**計算ツール** ウィンドウで、展開**Number of Employees**で、 **Reseller**ディメンション、を展開`Members`の順に展開および**すべての再販業者**です。  
+12. **メタデータ** タブで、**計算ツール**ウィンドウで、展開**Number of Employees**で、 **Reseller** でディメンション、`Members`、順に展開**All Resellers**します。  
   
      この属性階層のメンバーには、0 から 4 までの番号が付いた 5 つのグループが含まれるようになりました。 グループの番号は、グループ上にポインターを合わせると表示されるヒントで確認できます。 `2 -17`の範囲では、ヒントに `[Reseller].[Number of Employees].&[0]`が含まれている必要があります。  
   
-     DiscretizationBucketCount プロパティ設定されているために、この属性階層のメンバーがグループ化`5`DiscretizationMethod プロパティに設定および**自動**です。  
+     DiscretizationBucketCount プロパティが設定されているため、この属性階層のメンバーがグループ化`5`DiscretizationMethod プロパティに設定し、**自動**します。  
   
 13. **[式]** ボックスで、Exists セット式内の Members 関数の後ろ、右かっこの直前にコンマを追加します。次に、 **[メタデータ]** ペインから **[83 - 100]** をドラッグしてコンマの後に置きます。  
   
      これで、Exists セット式は完成です。この式は、Large Resellers 名前付きセットが軸に設定された場合に、これらの指定された 2 つのセット、つまり全再販業者のセットと 83 から 100 人の従業員を持つ再販業者のセットで交差するメンバーのセットを返します。  
   
-     次の図は、**計算式**のウィンドウ、`[Large Resellers]`名前付きセットです。  
+     次の図は、**計算式**のウィンドウ、`[Large Resellers]`名前付きセット。  
   
      ![[Large Resellers] の計算式ペイン](../../2014/tutorials/media/l6-named-set-02.gif "[Large Resellers] の計算式ペイン")  
   
@@ -127,13 +127,13 @@ ms.locfileid: "36178332"
   
      キューブで表示されるのは **Category** 属性の **Bike** メンバーと、 **Bike** サブカテゴリのメンバーだけになります。 これは、サブキューブを定義するために **Core Products** 名前付きセットが使用されているためです。 次の図のように、このサブキューブは、サブキューブ内の **Product** ディメンション内の **Category** 属性のメンバーを、 **Core Product** 名前付きセットのメンバーに限定します。  
   
-     ![コア製品のメンバーの名前付きセット](../../2014/tutorials/media/l6-named-set-04.gif "コア製品のメンバーの名前付きセット")  
+     ![名前付きセットのメンバーはコア製品](../../2014/tutorials/media/l6-named-set-04.gif "コア製品のメンバーの名前付きセット")  
   
 7.  **[メタデータ]** ペインで **Reseller**を展開し、フィルター領域に **Large Resellers** を追加します。  
   
      データ ペインの Reseller Sales Amount メジャーには、自転車の大規模な再販業者の売上高だけが表示されるようになります。 また、次の図のように、フィルター ペインには、この特定のサブキューブを定義するために使用される 2 つの名前付きセットが表示されています。  
   
-     ![フィルター ペインの 2 つの名前を含む設定](../../2014/tutorials/media/l6-named-set-05.gif "という 2 つを含むフィルター ウィンドウの設定")  
+     ![フィルター ペインの 2 つの名前を格納している設定](../../2014/tutorials/media/l6-named-set-05.gif "という名前の 2 つを含むフィルター ウィンドウの設定")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [レッスン 7: 主要業績評価指標 (KPI) の定義](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  

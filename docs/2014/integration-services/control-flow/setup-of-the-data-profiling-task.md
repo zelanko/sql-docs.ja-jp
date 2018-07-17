@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bdb87033691054ea3d6b8f14204df00e8d7f93c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79a86a9b589fc5118f3418d0898117c7482dda6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285638"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>データ プロファイル タスクのセットアップ
   ソース データのプロファイルを確認する前に、まずデータ プロファイル タスクを設定して実行します。 このタスクは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内に作成します。 データ プロファイル タスクを構成するには、[データ プロファイル タスク エディター] を使用します。 このエディターを使用すると、プロファイルの出力先と計算するプロファイルを選択できます。 タスクを設定したら、パッケージを実行してデータ プロファイルを計算します。  
@@ -43,7 +43,8 @@ ms.locfileid: "36084143"
  詳細については、「 [パッケージ ワークフローでデータ プロファイル タスクを使用する](incorporate-a-data-profiling-task-in-package-workflow.md)」をご覧ください。  
   
 ## <a name="setup-of-the-task-output"></a>タスク出力の設定  
- データ プロファイル タスクがパッケージに追加されたら、タスクで計算するプロファイルの出力を設定します。 プロファイルの出力を設定するには、[データ プロファイル タスク エディター] の **[全般]** ページを使用します。 **[全般]** ページでは、出力先の指定以外に、データのクイック プロファイルも実行できます。 **[クイック プロファイル]** を選択すると、データ プロファイル タスクにより、一部またはすべての既定のプロファイルを既定の設定のまま使用してテーブルまたはビューがプロファイルされます。  
+ データ プロファイル タスクがパッケージに追加されたら、タスクで計算するプロファイルの出力を設定します。 プロファイルの出力を設定するには、[データ プロファイル タスク エディター] の **[全般]** ページを使用します。 
+  **[全般]** ページでは、出力先の指定以外に、データのクイック プロファイルも実行できます。 **[クイック プロファイル]** を選択すると、データ プロファイル タスクにより、一部またはすべての既定のプロファイルを既定の設定のまま使用してテーブルまたはビューがプロファイルされます。  
   
  詳細については、「[データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)」および「[単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](data-profiling-task.md)」をご覧ください。  
   
@@ -57,14 +58,14 @@ ms.locfileid: "36084143"
   
 |計算内容|特定できる問題|使用するプロファイル|  
 |----------------|-------------------------|----------------------|  
-|選択された列に含まれる文字列値の長さごとの、その長さと、テーブル内におけるその長さの行の比率。|**無効な文字列値**- たとえば、米国州コードとして 2 文字を使用する列をプロファイルし、3 文字以上の値を検出できます。|**列長分布 —** これらのデータ型のいずれかの列に対して有効です。<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`|  
+|選択された列に含まれる文字列値の長さごとの、その長さと、テーブル内におけるその長さの行の比率。|**無効な文字列値**- たとえば、米国州コードとして 2 文字を使用する列をプロファイルし、3 文字以上の値を検出できます。|**列長分布:** これらのデータ型のいずれかの列に対して有効です。<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`|  
 |文字列型の列に含まれる指定された比率の値に対応する一連の正規表現。<br /><br /> また、新しい値を検証するために将来使用できる正規表現も見つけます。|**無効な文字列値または形式が正しくない文字列値 -** たとえば、米国郵便番号列のパターン プロファイルでは、\d{5}-\d{4}、\d{5}、\d{9} という正規表現が生成されます。 出力にその他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれています。|**列パターン プロファイル-** これらのデータ型のいずれかの列に対して有効です。<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`|  
-|選択した列の NULL 値の比率。|**予想外に高い、列の NULL 値の比率 -** たとえば、米国郵便番号を想定している列をプロファイルし、許容範囲を超える欠落した郵便番号の比率を検出できます。|**列の Null 比プロファイル-** これらのデータ型を持つ列に対して有効です。<br /><br /> 任意のデータ型。 これには、`image`、`text`、`xml`、ユーザー定義型、およびバリアント型が含まれます。|  
+|選択した列の NULL 値の比率。|**予想外に高い、列の NULL 値の比率 -** たとえば、米国郵便番号を想定している列をプロファイルし、許容範囲を超える欠落した郵便番号の比率を検出できます。|**列の Null 比プロファイル-** これらのデータ型の列に対して有効です。<br /><br /> 任意のデータ型。 これには、`image`、`text`、`xml`、ユーザー定義型、およびバリアント型が含まれます。|  
 |数値型列の最小値、最大値、平均値、標準偏差や、`datetime` 列の最小値、最大値などの統計。|**無効な数値および日付**- たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。|**列統計プロファイル-** これらのデータ型のいずれかの列に対して有効です。<br /><br /> 数値データ型 : 整数型 (`bit` は除く)、`money`、`smallmoney`、`decimal`、`float`、`real`、および `numeric`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`<br />注: 日付および時刻データ型を使用する列の場合、プロファイルでは最小値と最大値だけが計算されます。|  
-|選択された列に含まれる値ごとの、その値と、テーブル内におけるその値の行の比率。 または、テーブル内の指定された比率を超えている値。|**列に含まれる個別の値の数が正しくない**- たとえば、米国の州を含む列をプロファイルし、50 個を超える個別の値を検出できます。|**列の値分布 —** これらのデータ型のいずれかの列に対して有効です。<br /><br /> 数値データ型 : 整数型 (`bit` は除く)、`money`、`smallmoney`、`decimal`、`float`、`real`、および `numeric`<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`|  
+|選択された列に含まれる値ごとの、その値と、テーブル内におけるその値の行の比率。 または、テーブル内の指定された比率を超えている値。|**列に含まれる個別の値の数が正しくない**- たとえば、米国の州を含む列をプロファイルし、50 個を超える個別の値を検出できます。|**列の値分布:** これらのデータ型のいずれかの列に対して有効です。<br /><br /> 数値データ型 : 整数型 (`bit` は除く)、`money`、`smallmoney`、`decimal`、`float`、`real`、および `numeric`<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`|  
 |列または列のセットが、選択したテーブルのキーまたは近似キーであるかどうか。|**キーとなる可能性がある列の重複値 -** たとえば、Customers テーブルの名前列と住所列をプロファイルし、名前と住所の組み合わせは一意である必要があるにもかかわらず重複している値を検出できます。|**候補キー プロファイル -** 列または列のセットが、選択したテーブルのキーとして適しているかどうかを報告する複数列のプロファイルです。 次のいずれかのデータ型の列に対して有効です。<br /><br /> 整数データ型 : `bit`、`tinyint`、`smallint`、`int`、および `bigint`<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`|  
-|ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているか。|**依存列に含まれる無効な値 -** たとえば、米国郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 郵便番号によって州が一意に決定されますが、 このプロファイルでは、この依存関係の違反を検出できます。|**機能依存 —** これらのデータ型のいずれかの列に対して有効です。<br /><br /> 整数データ型 : `bit`、`tinyint`、`smallint`、`int`、および `bigint`<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`|  
-|列または列のセットが、選択したテーブル間の外部キーとして適しているかどうか。<br /><br /> つまり、このプロファイルは、2 つの列間または列のセット間の値の重複を報告します。|**無効な値 -** たとえば、Sales テーブルの ProductID 列をプロファイルするとします。 プロファイルでは、この列に Products テーブルの ProductID 列には存在しない値が含まれていることを検出できます。|**値包含プロファイル -** 次のいずれかのデータ型の列に対して有効です。<br /><br /> 整数データ型 : `bit`、`tinyint`、`smallint`、`int`、および `bigint`<br /><br /> 文字データ型: `char`、 `nchar`、 `varchar`、および `nvarchar`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`|  
+|ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているか。|**依存列に含まれる無効な値 -** たとえば、米国郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 郵便番号によって州が一意に決定されますが、 このプロファイルでは、この依存関係の違反を検出できます。|**機能の依存関係-** これらのデータ型のいずれかの列に対して有効です。<br /><br /> 整数データ型 : `bit`、`tinyint`、`smallint`、`int`、および `bigint`<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`|  
+|列または列のセットが、選択したテーブル間の外部キーとして適しているかどうか。<br /><br /> つまり、このプロファイルは、2 つの列間または列のセット間の値の重複を報告します。|**無効な値 -** たとえば、Sales テーブルの ProductID 列をプロファイルするとします。 プロファイルでは、この列に Products テーブルの ProductID 列には存在しない値が含まれていることを検出できます。|**値包含プロファイル -** 次のいずれかのデータ型の列に対して有効です。<br /><br /> 整数データ型 : `bit`、`tinyint`、`smallint`、`int`、および `bigint`<br /><br /> 文字データ型: `char`、 `nchar`、`varchar`と `nvarchar`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`|  
   
  計算するプロファイルを選択するには、[データ プロファイル タスク エディター] の **[プロファイル要求]** ページを使用します。 詳細については、「[[データ プロファイル タスク エディター] &#40;[プロファイル要求] ページ&#41;](data-profiling-task-editor-profile-requests-page.md)」をご覧ください。  
   
@@ -78,7 +79,7 @@ ms.locfileid: "36084143"
   
  利用可能な各データ プロファイルには、独自の構成オプションがあります。 オプションの詳細については、次のトピックを参照してください。  
   
--   [候補キー プロファイル要求オプション&#40;データ プロファイル タスク&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [候補キー プロファイル要求 のオプション&#40;データ プロファイル タスク&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
 -   [列長分布プロファイル要求オプション&#40;データ プロファイル タスク&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
@@ -86,13 +87,13 @@ ms.locfileid: "36084143"
   
 -   [列パターン プロファイル要求オプション&#40;データ プロファイル タスク&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [列統計プロファイル要求オプション&#40;データ プロファイル タスク&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [列統計プロファイル要求 のオプション&#40;データ プロファイル タスク&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
 -   [列の値分布プロファイル要求オプション&#40;データ プロファイル タスク&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [機能依存プロファイル要求オプション&#40;データ プロファイル タスク&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [機能依存プロファイル要求 のオプション&#40;データ プロファイル タスク&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [値包含プロファイル要求オプション&#40;データ プロファイル タスク&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [値包含プロファイル要求 のオプション&#40;データ プロファイル タスク&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>データ プロファイル タスクを含むパッケージの実行  
  データ プロファイル タスクを設定したら、このタスクを実行できるようになります。 実行すると、データ プロファイルが計算され、XML 形式のこの情報がファイルまたはパッケージ変数に出力されます。 この XML の構造は、DataProfile.xsd スキーマに基づきます。 このスキーマは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他のスキーマ エディター、XML エディター、またはメモ帳などのテキスト エディターで開くことができます。 データ品質情報に関するこのスキーマは、次の目的に役立ちます。  

@@ -1,5 +1,5 @@
 ---
-title: マイニング モデル ダイアログ ボックス (マイニング モデル予測 ビュー) の選択 |Microsoft ドキュメント
+title: マイニング モデル ダイアログ ボックス (マイニング モデル予測 ビュー) の選択 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.selectminingmodel.f1
 helpviewer_keywords:
 - Select Mining Model dialog box
 ms.assetid: a9d5c5b0-1beb-49bf-8df5-c659c8e7b390
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1f83a7b6b3599bb7665e5ce9970a0b6f73dd7b03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15c4a05bb3347e9457aac81ade72fb95eb0434ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297192"
 ---
 # <a name="select-mining-model-dialog-box-mining-model-prediction-view"></a>[マイニング モデルの選択] ダイアログ ボックス ([マイニング モデル予測] ビュー)
   **[マイニング モデルの選択]** ダイアログ ボックスを使用すると、予測の土台として使用するマイニング モデルを選択できます。  

@@ -1,5 +1,5 @@
 ---
-title: クライアント アプリケーション (Analysis Services) からの接続 |Microsoft ドキュメント
+title: クライアント アプリケーション (Analysis Services) からの接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d343794027e87b575b9cdaa9ee3a9dd2908438aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ee609b8a208b55509058e635b96fa70c52c4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314912"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>クライアント アプリケーションからの接続 (Analysis Services)
   Analysis Services を初めて使用する場合は、このトピックの情報を参照し、一般的なツールとアプリケーションを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既存のインスタンスに接続します。 このトピックでは、テスト目的で異なるユーザー ID を使用して接続する方法についても説明します。  
@@ -59,7 +59,7 @@ ms.locfileid: "36085327"
   
 3.  認証方式は常に Windows 認証です。また、ユーザー ID として使用するユーザーは常に、Management Studio を介して接続する Windows ユーザーです。  
   
-     接続に成功するためには、サーバー (またはサーバー上のデータベース) にアクセスするための権限が必要です。 Management Studio で実行するほとんどのタスクには管理権限が必要です。 接続に使用するアカウントがサーバー管理者ロールのメンバーであることを確認します。 詳細については、次を参照してください。[サーバー管理者のアクセス許可を付与&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)です。  
+     接続に成功するためには、サーバー (またはサーバー上のデータベース) にアクセスするための権限が必要です。 Management Studio で実行するほとんどのタスクには管理権限が必要です。 接続に使用するアカウントがサーバー管理者ロールのメンバーであることを確認します。 詳細については、次を参照してください。[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)します。  
   
 4.  **[接続プロパティ]** をクリックして、特定のデータベースを指定、タイムアウト値を設定、または暗号化のオプションを設定します。 省略可能な接続情報としては、現在の接続にしか使用されない接続プロパティがあります。  
   
@@ -132,9 +132,9 @@ ms.locfileid: "36085327"
  「[SQL Server 2005 Analysis Services の接続シナリオにおける一般的な接続の問題の解決](http://technet.microsoft.com/library/cc917670.aspx)」 このドキュメントは数年前のものですが、記載されている情報と手法はそのまま適用されます。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services に接続します。](connect-to-analysis-services.md)   
+ [Analysis Services への接続します。](connect-to-analysis-services.md)   
  [Analysis Services でサポートされる認証方法](authentication-methodologies-supported-by-analysis-services.md)   
  [権限借用&#40;SSAS 表形式&#41;](../tabular-models/impersonation-ssas-tabular.md)   
- [データ ソースを作成&#40;SSAS 多次元&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [データ ソースを作成する&#40;SSAS 多次元&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

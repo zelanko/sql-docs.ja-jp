@@ -1,5 +1,5 @@
 ---
-title: プロキシ アカウントのプロパティおよび新しいプロキシ アカウント ([全般] ページ) |Microsoft ドキュメント
+title: プロキシ アカウントのプロパティと新しいプロキシ アカウント (全般 ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.proxy.general.f1
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ec665f80304740049b0eec0a706ba09eaa62261e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 275ef2bbb5caa00bb954e3d0d225c615fbf2ad53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288268"
 ---
-# <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>プロキシ アカウントのプロパティおよび新しいプロキシ アカウント ([全般] ページ)
+# <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>プロキシ アカウントのプロパティと新しいプロキシ アカウント (全般 ページ)
   このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントのプロパティを表示したり変更したりできます。  
   
 ## <a name="options"></a>および  
@@ -34,7 +34,7 @@ ms.locfileid: "36073664"
  プロキシの資格情報の名前を入力します。  
   
 > [!NOTE]  
->  指定する資格情報名は、既存の資格情報の名前である必要があります。 資格情報を作成する方法については、次を参照してください[資格情報の作成。](../../relational-databases/security/authentication-access/create-a-credential.md)  
+>  指定する資格情報名は、既存の資格情報の名前である必要があります。 資格情報の作成方法の詳細については、次を参照してください[資格情報の作成。](../../relational-databases/security/authentication-access/create-a-credential.md)  
   
  **[...]**  
  **[資格情報の選択]** ダイアログを起動します。  

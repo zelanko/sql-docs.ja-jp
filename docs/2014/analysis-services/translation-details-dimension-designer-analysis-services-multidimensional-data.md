@@ -1,5 +1,5 @@
 ---
-title: 翻訳の詳細 ([翻訳] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: 翻訳の詳細 ([翻訳] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationpane.tranlationdetails.f1
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c3fea9b837915fff37bad632780544bcf7ebb1a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4051de358b2567d6473a016e7f965d15b1dd215
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306332"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>[翻訳の詳細] ([翻訳] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[翻訳]** タブの **[翻訳の詳細]** ペインを使用すると、現在選択しているディメンションの翻訳を定義および管理できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36178539"
   
 -   [ディメンション]  
   
-     `Caption` および`AttributeAllMember`プロパティ  
+     `Caption` `AttributeAllMember`プロパティ  
   
 -   属性  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36178539"
   
 -   Hieararchy  
   
-     `Caption` および`AllMemberName`プロパティ  
+     `Caption` `AllMemberName`プロパティ  
   
 -   Level  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36178539"
   
      [&#91;レベル名前付けテンプレート&#93; ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md) を表示します。  
   
--   `Caption` プロパティ (属性)  
+-   `Caption` (属性) のプロパティ  
   
      [&#91;属性データの翻訳&#93; ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md) を表示します。  
   

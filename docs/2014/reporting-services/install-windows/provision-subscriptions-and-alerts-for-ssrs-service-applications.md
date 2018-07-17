@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Shared Service
 - SharePoint Mode [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 0db289199d555a722686de07688199c0b4a9119c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 910bd13ffca5ceec7e31d7c27079c48ffe249b04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297922"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプションとデータ警告を利用するには、SQL Server エージェントが必要です。また、SQL Server エージェントに対する権限を構成する必要もあります。 SQL Server エージェントが実行中であるにもかかわらず、SQL Server エージェントが必要であることを示すエラー メッセージが表示された場合は、権限を更新または確認してください。 このトピックでは、SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を対象とし、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを使用して SQL Server エージェントの権限を更新する 3 つの方法について説明します。 このトピックの手順で使用する資格情報には、サービス アプリケーション データベース、msdb データベース、および master データベースのオブジェクトに対する実行権限を RSExecRole に許可するための十分な権限が必要です。  
@@ -81,7 +81,7 @@ ms.locfileid: "36166052"
   
 2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をクリックします。  
   
-3.  展開**Microsoft SharePoint 2010 製品** をクリック**SharePoint 2010 管理シェル**です。  
+3.  展開**Microsoft SharePoint 2010 製品**クリック**SharePoint 2010 管理シェル**します。  
   
 4.  次の PowerShell コマンドレットの、レポート サーバー データベース名、アプリケーション プール アカウント、およびステートメント パスを置き換えます。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36166052"
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>SQL Server Management Studio に Transact-SQL スクリプトを読み込むには  
   
-1.  SQL Server Management Studio を開くには、**開始** メニューのをクリックして**Microsoft SQL Server 2012**  をクリック**SQL Server Management Studio**です。  
+1.  SQL Server Management Studio を開くには、**開始** メニューのをクリックして**Microsoft SQL Server 2012**クリック**SQL Server Management Studio**。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次のオプションを設定します。  
   

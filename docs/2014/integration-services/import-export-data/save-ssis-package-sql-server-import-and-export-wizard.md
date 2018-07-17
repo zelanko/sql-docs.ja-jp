@@ -8,40 +8,40 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 71f0b516b53a7682665c54be4403c5d10a4e5417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3d8c7a80e7303c6120eabd029791a5401e4d253
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304312"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存]\(SQL Server インポートおよびエクスポート ウィザード)
-  使用して、 **SSIS パッケージの保存**名前、説明、および保存するページ、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) にパッケージ化、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb`データベースまたはファイルを含む、.dtsx拡張機能です。  
+  使用して、 **SSIS パッケージの保存**名前、説明、および保存するページ、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) にパッケージ化、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb`データベースまたはファイルを持つ、.dtsx拡張機能。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]、ウィザードによって作成されたパッケージを保存するオプションは使用できません。  
   
- このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)です。 について、ウィザードを起動するオプションおよびウィザードが正常に実行するための権限については、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)です。  
+ このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と、ウィザードを起動するオプションについて説明しますを参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
   
  SQL Server インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
 ## <a name="static-options"></a>静的オプション  
- **Name**  
+ **名前**  
  パッケージの一意な名前を指定します。  
   
- **description**  
+ **[説明]**  
  パッケージの説明を指定します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、パッケージの目的について記述することをお勧めします。  
   
  **移行先**  
- ターゲットを表示 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]またはファイル)、変換先ファイルをあらかじめ指定されています。  
+ ターゲットを表示 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]またはファイル)、変換先ファイルの指定されていた。  
   
 ## <a name="target-dynamic-options"></a>保存先の動的オプション  
   
@@ -59,14 +59,14 @@ ms.locfileid: "36175794"
  選択した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換先、および SQL Server 認証の種類を指定した、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー名。  
   
  **Password**  
- 選択した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換先、および SQL Server 認証の種類を指定した、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パスワードです。  
+ 選択した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換先、および SQL Server 認証の種類を指定した、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パスワード。  
   
 ### <a name="target--file-system"></a>[変換先] = [ファイル システム]  
  **[ファイル名]**  
- ファイル変換先を選択すると、変換先ファイルのパスを入力するかを使用して、**参照**ボタンをクリックします。  
+ ファイル変換先を選択すると、目的のファイルのパスを入力またはを使用して、**参照**ボタンをクリックします。  
   
  **[参照]**  
- ファイル変換先を選択すると、リンク先のファイルを使用して参照、**パッケージの保存** ダイアログ ボックス。  
+ 使用して、変換先ファイルをファイル変換先を選択すると、参照、**パッケージの保存** ダイアログ ボックス。  
   
 ## <a name="see-also"></a>参照  
  [パッケージを保存する](../save-packages.md)  

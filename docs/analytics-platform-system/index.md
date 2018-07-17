@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 26c59dc36d0ba3714dca4dbca10e8ec7b09b9235
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 3fc2230d22131da80ee1250c08b19fc16e4aa651
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31544974"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909743"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 データ ウェアハウジングとビッグ データの分析用に設計されたデータ プラットフォームである Microsoft Analytics Platform System (APS) では、データの密な統合、クエリの高速処理、非常に拡張性の高い記憶域が提供され、エンド ツー エンドのビジネス インテリジェンス ソリューションを簡単にメンテナンスできます。  
@@ -23,9 +23,9 @@ ms.locfileid: "31544974"
   
 Analytics Platform System は、超並列処理 (MPP) データ ウェアハウスを実行するソフトウェアである SQL Server 並列データ ウェアハウス (PDW) をホストしています。  
   
-PolyBase テクノロジは、Windows Server の Hortonworks、Linux の Hortonworks、Linux の Cloudera、HDInsight の Microsoft Azure BLOB Storage、Analytics Platform System の HDInsight など複数のソースから得られるリレーショナル PDW データと Hadoop データを結合します。 データを高度に統合できるこれらの機能に加え、ビジネス インテリジェンス ツールとの密な統合により、ビジネスの意思決定者が、よりよい洞察を備えたビジネス上の意思決定を下せるようにする分析を Analytics Platform System が返すことができます。  
+PolyBase テクノロジは、Windows Server の Hortonworks、Linux の Hortonworks、Linux の Cloudera、HDInsight の Microsoft Azure BLOB Storage など、複数のソースから得られるリレーショナル PDW データと Hadoop データを結合します。 データを高度に統合できるこれらの機能に加え、ビジネス インテリジェンス ツールとの密な統合により、ビジネスの意思決定者が、よりよい洞察を備えたビジネス上の意思決定を下せるようにする分析を Analytics Platform System が返すことができます。  
   
-Analytics Platform System は、ハードウェアとソフトウェアが事前にインストールされ、複数のワークロードを実行できるように構成されたアプライアンスとしてデータ センターに出荷されます。 Analytics Platform System を購入する場合、PDW 用のコンピューティング ノードを購入し、ビジネス要件に応じて必要に応じて HDInsight 用の追加のノードを購入します。  
+Analytics Platform System は、ハードウェアとソフトウェアが事前にインストールされ、複数のワークロードを実行できるように構成されたアプライアンスとしてデータ センターに出荷されます。 Analytics Platform System を購入する場合、ビジネス要件に応じて PDW 用のコンピューティング ノードを購入します。  
   
 Analytics Platform System は高速で拡張性があるだけではなく、高い冗長性と可用性を備えて設計されているため、ビジネス上の重要なほとんどのデータに対して信頼できる、安定したプラットフォームです。 Analytics Platform System は覚えやすく管理しやすいようにわかりやすく設計されています。 PDW は、Hadoop データを分析するための PolyBase テクノロジと、ビジネス インテリジェンス ツールとの密な統合により、エンド ツー エンドのソリューションを構築するための包括的なプラットフォームになっています。  
   

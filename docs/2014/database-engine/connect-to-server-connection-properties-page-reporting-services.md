@@ -1,5 +1,5 @@
 ---
-title: サーバー (接続プロパティ ページ) Reporting Services に接続 |Microsoft ドキュメント
+title: サーバー (接続プロパティ ページ) Reporting Services への接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttors.connectionproperties.f1
 ms.assetid: 66761a14-d646-44bb-9dff-be5ab2c40e88
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a66de16f4454742983bde4f45d3da496122ed9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1f079e76c4f3d7b659d3b48cf94a9e7fe54d27a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308032"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>[サーバーへの接続] ([接続プロパティ] ページ) Reporting Services
   このタブを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に接続するとき、または [!INCLUDE[ssRS](../includes/ssrs-md.md)] を**登録済みサーバー**に登録するときに、オプションを表示または指定できます。 接続時には、**[接続]** および **[オプション]** のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssRS](../includes/ssrs-md.md)]のみがこのダイアログ ボックスに表示されます。  
@@ -46,7 +46,7 @@ ms.locfileid: "36076289"
  **登録済みサーバー**に設定を保存します。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー データベース接続を構成する&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Management Studio でレポート サーバーに接続する](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [レポート サーバーでの認証](../reporting-services/security/authentication-with-the-report-server.md)  
   

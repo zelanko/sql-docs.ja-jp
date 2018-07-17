@@ -1,5 +1,5 @@
 ---
-title: 処理オプション プロパティ ページ (レポート マネージャー) |Microsoft ドキュメント
+title: 処理オプション プロパティ ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17db40e24318fad194ec21ca30e6394f3fe607e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288388"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>[処理オプション] プロパティ ページ (レポート マネージャー)
   現在選択されているレポートのレポート実行プロパティを設定するには、[処理オプション] プロパティ ページを使用します。 これらのオプションでは、レポートのデータ処理を行うタイミングを決定します。 これらのオプションを設定して、オフピーク時間中にレポート データを取得できます。 また、頻繁にアクセスされるレポートがある場合に、複数のユーザーが同時に同じレポートにアクセスしたときの待ち時間をなくすために、そのコピーを一時的にキャッシュすることができます。  
   
 > [!NOTE]  
->  レポート履歴、実行スナップショット、およびキャッシュ機能は、すべてのエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  レポート履歴、実行スナップショット、およびキャッシュ機能は、すべてのエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 ## <a name="navigation"></a>ナビゲーション  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  

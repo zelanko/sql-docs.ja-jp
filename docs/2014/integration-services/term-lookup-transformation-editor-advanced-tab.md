@@ -1,5 +1,5 @@
 ---
-title: 用語参照変換エディター (詳細 タブ) |Microsoft ドキュメント
+title: 用語参照変換エディター (詳細 タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.advanced.f1
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: be3575dc-e79c-49f6-8243-ad270bce77d5
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 511583983fac4372b04cb1ac7f11353bb99fa517
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 193652a7e813f929191a3e677e164190f0ea3edf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314132"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>[用語参照変換エディター] ([詳細設定] タブ)
   **[用語参照変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、参照で大文字と小文字を区別するかどうかを指定できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "36179554"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [用語参照変換エディター&#40;テーブル タブを参照&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
+ [用語参照変換エディター&#40;参照テーブル タブ&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
  [用語参照変換エディター&#40;用語参照 タブ&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
  [用語抽出変換](data-flow/transformations/term-extraction-transformation.md)  
   

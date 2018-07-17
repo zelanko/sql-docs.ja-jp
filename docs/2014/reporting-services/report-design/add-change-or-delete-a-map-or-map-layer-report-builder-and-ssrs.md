@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10526"
 - sql12.rtp.rptdesigner.maptilelayerproperties.general.f1
@@ -28,15 +28,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.maplayerproperties.analyticaldata.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f9f187f50864bfccdcf093ca8270c096f5032d57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 951fe65c8cf9876d5ea5afe2e8eda25b2f8e8a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286688"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS)
   マップは、レイヤーのコレクションです。 マップをレポートに追加する場合は、先にレイヤーを定義します。 追加のレイヤーを作成するには、マップ レイヤー ウィザードを実行します。  
@@ -60,7 +60,7 @@ ms.locfileid: "36174883"
   
  マップ ペインの一番下にはマップ ビュー領域があります。 マップの中心またはズーム オプションを変更するには、方向キーを使用してビューの中心を調整し、スライダーを使用してズーム レベルを調整します。  
   
- レイヤーの詳細については、次を参照してください。[マップ&#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)です。  
+ レイヤーの詳細については、次を参照してください。[マップ&#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -128,7 +128,7 @@ ms.locfileid: "36174883"
   
 1.  **[マップ ポイントのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、次のマップ要素のラベル、ツールヒント、およびマーカーの種類に関するオプションを変更できます。  
   
-    -   ポイント レイヤー上のすべての動的ポイントまたは埋め込みポイント。 ポイントの色ルール、サイズ ルール、およびマーカーの種類ルールは、これらのオプションをオーバーライドします。 特定の埋め込みポイントのオプションをオーバーライドするには、[マップの埋め込みポイントのプロパティ] ダイアログ ボックスの [マーカー](../map-embedded-point-properties-dialog-box-marker.md)ページ。  
+    -   ポイント レイヤー上のすべての動的ポイントまたは埋め込みポイント。 ポイントの色ルール、サイズ ルール、およびマーカーの種類ルールは、これらのオプションをオーバーライドします。 特定の埋め込みポイントのオプションを無効にするを使用して、[マップの埋め込みポイントのプロパティ] ダイアログ ボックスの [マーカー](../map-embedded-point-properties-dialog-box-marker.md)ページ。  
   
     -   多角形レイヤー上のすべての動的多角形または埋め込み多角形の中心点。 中心点の色ルール、サイズ ルール、およびマーカーの種類ルールは、これらのオプションをオーバーライドします。 特定の中心点のオプションをオーバーライドするには、「[[マーカー] ([マップの埋め込みポイントのプロパティ] ダイアログ ボックス)](../map-embedded-point-properties-dialog-box-marker.md)」ページを使用します。  
   
@@ -268,7 +268,7 @@ ms.locfileid: "36174883"
   
 ##  <a name="ConditionalHide"></a> ビューポートのズーム レベルに基づいてレイヤーを条件付きで非表示にするには  
   
-1.  設定`Visibility`マップ レイヤーの表示を制御するオプションです。  
+1.  設定`Visibility`マップ レイヤーの表示を制御するオプション。  
   
     -   マップ レイヤー ペインで、レイヤーを右クリックして選択し、[マップ レイヤー] ツール バーの [プロパティ] をクリックして **[マップ レイヤーのプロパティ]** を開きます。  
   
@@ -286,6 +286,6 @@ ms.locfileid: "36174883"
   
 ## <a name="see-also"></a>参照  
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [レポートのトラブルシューティング: レポートにマップ&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

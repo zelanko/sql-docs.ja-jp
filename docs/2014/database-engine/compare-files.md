@@ -1,5 +1,5 @@
 ---
-title: ファイルの比較 |Microsoft ドキュメント
+title: ファイルの比較 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - versions [SQL Server], file comparisons
 - comparing files
 - file comparisons [SQL Server]
 ms.assetid: 728811c4-5d7a-4420-abce-f56c5a0994d2
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6005aae06c5d6272238b97329318918134c4aa7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d65cce1e96cbf3bb8ec8e6d428074c89424c8636
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314472"
 ---
 # <a name="compare-files"></a>ファイルの比較
   ファイルを比較して、ファイルがどのような過程で現在の状態になったのかを確認できます。 たとえば、ソース ファイルのバージョンをチェックインした後に、コード プロジェクトのビルドで不具合を発見した場合、現在のファイル バージョンと以前のファイル バージョンを比較できます。 そうすれば、不具合を引き起こしたコードの位置を正確に検出できます。  
@@ -34,9 +34,9 @@ ms.locfileid: "36174781"
   
 1.  ソリューション エクスプローラーで、プロジェクトまたはプロジェクト ファイルの 1 つを選択します。  
   
-2.  **ファイル** メニューのをポイント**ソース管理**、 をクリック**比較**です。  
+2.  **ファイル**メニューで、**ソース管理**、 をクリック**比較**します。  
   
-3.  **相違点表示オプション**ダイアログ ボックスで、適切なオプションを選択し、をクリックして**レポート**です。  
+3.  **相違点表示オプション**ダイアログ ボックスで、適切なオプションを選択し、順にクリックします**レポート**します。  
   
 ## <a name="see-also"></a>参照  
  [設定し、バージョン情報の取得](../../2014/database-engine/set-and-retrieve-version-information.md)   
