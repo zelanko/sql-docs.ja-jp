@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 464fe19b441009e8a619cea6e478866890b19e8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f66fd7e355b453fc2d00a775c0a244b04763d19e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957117"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349984"
 ---
 # <a name="create-a-push-subscription"></a>プッシュ サブスクリプションの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "32957117"
   
     -   マージ パブリケーションに対するサブスクリプションでは、 **[マージ エージェント セキュリティ]** ページで資格情報を指定します。  
   
-     各エージェントで必要な権限の詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
+     各エージェントで必要な権限の詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
 -   同期スケジュール、およびサブスクライバーをいつ初期化するかを指定します。  
   
@@ -130,11 +129,11 @@ ms.locfileid: "32957117"
   
     -   **@subscription_priority**」を参照してください。 サーバー サブスクリプションの場合、サブスクリプションの優先度 (**0.00** ～ **99.99**) を指定します。  
   
-         詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
+         詳細については、「 [マージ レプリケーションの競合検出および解決の詳細](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)を実行します。 次の指定を行います。  
   
-    -   ディストリビューターで実行されるディストリビューション エージェントが使用する **@subscriber**、 **@subscriber_db**パラメーター、および **@publication** パラメーター。  
+    -   手順 1. で作成した、サブスクライバーに対する **@subscriber**、 **@subscriber_db**、 **@publication** の各パラメーター。  
   
     -   ディストリビューターで実行されるマージ エージェントが使用する Windows 資格情報。 **@job_login** に **@job_password**」を参照してください。  
   
@@ -190,7 +189,7 @@ ms.locfileid: "32957117"
   
     -   ディストリビューターで実行されるディストリビューション エージェントが使用する <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> に <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> (または <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> ) フィールド。これにより、ディストリビューターでディストリビューション エージェントを実行するときに使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントの資格情報が得られます。 このアカウントは、ディストリビューターとのローカル接続を確立したり、Windows 認証を使用したリモート接続を確立するときに使用されます。  
   
-        > **注:** サブスクリプションが **sysadmin** 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> の設定は必須ではありませんが、推奨されます。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
+        > **注:** サブスクリプションが **sysadmin** 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> の設定は必須ではありませんが、推奨されます。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
     -   (省略可) **true** に <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (既定値) を指定します。 **false**を指定した場合、サブスクリプションはプログラムでのみ同期が可能になります。  
   
@@ -228,7 +227,7 @@ ms.locfileid: "32957117"
   
     -   ディストリビューターで実行されるディストリビューション エージェントが使用する <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> に <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> (または <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> ) フィールド。これにより、ディストリビューターでディストリビューション エージェントを実行するときに使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントの資格情報が得られます。 このアカウントは、ディストリビューターとのローカル接続を確立したり、Windows 認証を使用したリモート接続を確立するときに使用されます。  
   
-        > **注:** サブスクリプションが **sysadmin** 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> の設定は必須ではありませんが、推奨されます。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
+        > **注:** サブスクリプションが **sysadmin** 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> の設定は必須ではありませんが、推奨されます。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
     -   (省略可) **true** に <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (既定値) を指定します。 **false**を指定した場合、サブスクリプションはプログラムでのみ同期が可能になります。  
   

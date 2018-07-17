@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -47,15 +46,16 @@ helpviewer_keywords:
 - creating stored procedures
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 caps.latest.revision: 180
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10e39cdc32b2b70785cdeeec40b11fbdd0b03902
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d193ca55d720bb8c843280b553a2ef01e5c742a7
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790423"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -194,7 +194,7 @@ OR ALTER
   
 **CLR プロシージャに関するガイドライン**:  
   
--   マネージ コード内に同等の型を持つネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型であれば、どの型でもパラメーターとして使用できます。 CLR 型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型の対応関係の詳細については、「[CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」をご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型とその構文の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」をご覧ください。  
+-   マネージド コード内に同等の型を持つネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型であれば、どの型でもパラメーターとして使用できます。 CLR 型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型の対応関係の詳細については、「[CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」をご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型とその構文の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」をご覧ください。  
   
 -   テーブル値または **cursor** データ型をパラメーターとして使用することはできません。  
   
@@ -393,7 +393,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に、1 つ以上のプロシージャを自動的に実行できます。 このプロシージャは、システム管理者によって **master** データベースに作成される必要があり、**sysadmin** 固定サーバー ロールの下でバックグラウンド プロセスとして実行される必要があります。 プロシージャに入力または出力パラメーターを指定することはできません。 詳しくは、「[ストアド プロシージャの実行](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)」をご覧ください。  
   
- プロシージャは、別のプロシージャを呼び出す場合、または CLR ルーチン、型、集計を参照してマネージ コードを実行する場合に入れ子になります。 プロシージャとマネージ コード参照は、32 レベルまで入れ子にすることができます。 入れ子のレベルは、呼び出されたプロシージャまたはマネージ コード参照の実行が開始されると 1 つ増加し、呼び出されたプロシージャまたはマネージ コード参照の実行が終了されると 1 つ減少します。 マネージ コード内から呼び出されたメソッドは、この入れ子レベルの制限としてはカウントされません。 ただし、CLR ストアド プロシージャで、SQL Server マネージ プロバイダーを利用してデータ アクセス操作が実行される場合、マネージ コードから SQL への移行時に入れ子のレベルが 1 つ追加されます。  
+ プロシージャは、別のプロシージャを呼び出す場合、または CLR ルーチン、型、集計を参照してマネージド コードを実行する場合に入れ子になります。 プロシージャとマネージド コード参照は、32 レベルまで入れ子にすることができます。 入れ子のレベルは、呼び出されたプロシージャまたはマネージド コード参照の実行が開始されると 1 つ増加し、呼び出されたプロシージャまたはマネージド コード参照の実行が終了されると 1 つ減少します。 マネージド コード内から呼び出されたメソッドは、この入れ子レベルの制限としてはカウントされません。 ただし、CLR ストアド プロシージャで、SQL Server マネージド プロバイダーを利用してデータ アクセス操作が実行される場合、マネージド コードから SQL への移行時に入れ子のレベルが 1 つ追加されます。  
   
  入れ子の最高レベルを越える呼び出しを行うと、一連の呼び出しが失敗します。 @@NESTLEVEL 関数を使用すると、現在実行中のストアド プロシージャの入れ子レベルを返すことができます。  
   
@@ -444,7 +444,7 @@ GO
 ## <a name="metadata"></a>メタデータ  
  次の表に、ストアド プロシージャに関する情報を返すために使用できるカタログ ビューおよび動的管理ビューを示します。  
   
-|表示|Description|  
+|表示|[説明]|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャの定義を返します。 ENCRYPTION オプションで作成されるプロシージャのテキストは、**sys.sql_modules** カタログ ビューを使って表示できません。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|CLR プロシージャに関する情報を返します。|  
