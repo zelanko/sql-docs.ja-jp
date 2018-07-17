@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8173b90d4c23ca612e80175d59969e259c2cb24c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: debc7e5750d6d96e11a61a07be7ee4c7bbd97330
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964687"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355454"
 ---
 # <a name="manage-identity-columns"></a>ID 列の管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ ms.locfileid: "32964687"
   
 5.  手順 4. で **[自動]** または **[True]** を選択した場合は、次の表のオプションの値を入力します。 これらの設定の使用方法の詳細については、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。  
   
-    |オプション|ReplTest1|Description|  
+    |オプション|ReplTest1|[説明]|  
     |------------|-----------|-----------------|  
     |**[パブリッシャーの範囲サイズ]**|範囲サイズの整数値 (たとえば 20000)。|「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。|  
     |**[サブスクライバーの範囲サイズ]**|範囲サイズの整数値 (たとえば 10000)。|「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。|  

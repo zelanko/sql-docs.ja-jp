@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5c8fdd22ae4a058be09ef59a7ffaf97911647fc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c27f26971f71e971108f21d13499016913150ff
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956647"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355214"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 以外のサブスクライバーのサブスクリプションの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "32956647"
   
 6.  パブリケーションのスナップショットを生成します。 この手順の詳細については、このトピック内で説明します。  
   
-7.  サブスクリプションを同期します。 詳細については、「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
+7.  サブスクリプションを同期します。 詳細については、「 [プッシュ サブスクリプションの同期](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
   
 #### <a name="to-enable-a-publication-for-non-sql-server-subscribers"></a>SQL Server 以外のサブスクライバーのパブリケーションを有効にするには  
   
@@ -194,6 +193,6 @@ ms.locfileid: "32956647"
  [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)   
  [その他の SQL Server 以外のサブスクライバー](../../relational-databases/replication/non-sql/other-non-sql-server-subscribers.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [レプリケーション セキュリティの推奨事項](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

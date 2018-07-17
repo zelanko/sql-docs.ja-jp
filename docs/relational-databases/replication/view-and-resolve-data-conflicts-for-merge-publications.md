@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: edcff8925793a5e6751884ed9f36202284b2be77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 886c6ea04fe3424eb9e7b338e01a9c107ea4b161
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32963147"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350964"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications"></a>マージ パブリケーションのデータ競合の表示と解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,8 @@ ms.locfileid: "32963147"
   
     -   **[優先されたデータの送信]** をクリックし、競合で優先するデータとして指定された行を受け入れる。  
   
-    -   **[優先されなかったデータの送信]** をクリックして解決を無効にし、競合で優先されないデータとして指定された値をトポロジのすべてのノードに反映する。  
+    -   
+  **[優先されなかったデータの送信]** をクリックして解決をオーバーライドし、競合で優先されないデータとして指定された値をトポロジのすべてのノードに反映する。  
   
     -   **[この競合の詳細をログに記録する]** を選択して、競合のデータをログ ファイルに記録する。 ファイルの場所を指定するには、 **[表示]** メニューをポイントし、 **[オプション]** をクリックします。 値を入力するか、または参照ボタン (**[...]**) をクリックして適切なファイルに移動します。 **[OK]** をクリックして、 **[オプション]** ダイアログ ボックスを終了します。  
   

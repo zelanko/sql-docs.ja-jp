@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -22,12 +21,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d18ca8e63ca80671cd31a524b0c9878121a15e61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3a2632fee35166a4e272ba801cc6357914b9932
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957527"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353474"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>マージ アーティクルのカスタム競合回避モジュールの実装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "32957527"
   
 1.  パブリッシャーのパブリケーションまたは **msdb** データベースで、次の必須パラメーターを実装する新しいシステム ストアド プロシージャを作成します。  
   
-    |パラメーター|データ型|Description|  
+    |パラメーター|データ型|[説明]|  
     |---------------|---------------|-----------------|  
     |**@tableowner**|**sysname**|競合を解決する対象のテーブルの所有者名。 これは、パブリケーション データベース内のテーブルの所有者です。|  
     |**@tablename**|**sysname**|競合を解決する対象のテーブル名。|  
@@ -115,7 +114,7 @@ ms.locfileid: "32957527"
   
 1.  パブリッシャーで [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) を実行し、目的の競合回避モジュールの表示名をメモします。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行してアーティクルを定義します。 手順 1. で調べたアーティクル競合回避モジュールの表示名を **@article_resolver**を使用して、マージ アーティクルのカスタム競合回避モジュールを実装する方法について説明します。 詳しくは、「 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行してアーティクルを定義します。 手順 1. で調べたアーティクル競合回避モジュールの表示名を **@article_resolver**を使用して、マージ アーティクルのカスタム競合回避モジュールを実装する方法について説明します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>既存のテーブル アーティクルにカスタム競合回避モジュールを使用するには  
   
@@ -127,6 +126,6 @@ ms.locfileid: "32957527"
 ## <a name="see-also"></a>参照  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM-Based Custom Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [レプリケーション セキュリティの推奨事項](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

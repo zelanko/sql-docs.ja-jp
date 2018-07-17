@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ee3d96adb59b9cdc3976a80e42a7089cb314a1f8
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 248fe1397de470076aa0060019d156ec0718ab2a
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702453"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786963"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  ユーザー定義集計関数にバインドするアセンブリ、および必要に応じて、アセンブリが所属するスキーマの名前とユーザー定義集計を実装するアセンブリ内のクラス名を指定します。 アセンブリは、CREATE ASSEMBLY ステートメントを使用してデータベース内に作成されている必要があります。 *class_name* は有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子でなければならず、アセンブリに存在するクラスの名前と一致する必要があります。 C# など、クラスを記述するのに使用するプログラミング言語で名前空間を使用する場合、*class_name* には名前空間で修飾された名前を指定できます。 *class_name* を指定しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*aggregate_name* と同じであると見なされます。  
   
 ## <a name="remarks"></a>Remarks  
- 既定では、CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能はオフになっています。 マネージ コード モジュールを参照するデータベース オブジェクトを作成、変更、削除できますが、これらのモジュールのコードは、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) を有効にしない限り [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは動作しません。  
+ 既定では、CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能はオフになっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、削除できますが、これらのモジュールのコードは、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) を有効にしない限り [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは動作しません。  
   
  *assembly_name* とそのメソッドで参照されているアセンブリのクラスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでユーザー定義集計関数を実装するためのすべての要件を満たしている必要があります。 詳細については、「[CLR ユーザー定義集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)」を参照してください。  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,15 +21,15 @@ helpviewer_keywords:
 - column_constraint
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 caps.latest.revision: 54
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8684085fd99d2f3f9189c90577934314d55e4047
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5734e5cf161e7f78e57d2532769224a3ce5ce5db
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072779"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785363"
 ---
 # <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ ms.locfileid: "33072779"
   
  列の追加を行うときにテーブルのデータ行に物理的な変更が必要な場合 (各行への DEFAULT 値の追加など)、ALTER TABLE の実行中、ロックはテーブルで保持されます。 これは、ロックが適用されている間にテーブルの内容を変更する機能に影響します。 一方、NULL 値を許可し、既定値を指定しない列の追加は、メタデータ操作に限られ、ロックは関係しません。  
   
- CREATE TABLE または ALTER TABLE を使用すると、データベースとセッションの設定は、列定義で使われているデータ型に NULL 値を許すかどうかの設定に影響を及ぼし、場合によっては、NULL 値を許すかどうかの設定を無効にします。 計算列ではない場合は、常に列を明示的に NULL または NOT NULL として定義することをお勧めします。ユーザー定義データ型を使用する場合は、データ型に NULL 値を許すかどうかの既定の設定を列が使用できるようにすることをお勧めします。 詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。  
+ CREATE TABLE または ALTER TABLE を使用すると、データベースとセッションの設定は、列定義で使われているデータ型に NULL 値を許すかどうかの設定に影響を及ぼし、場合によっては、NULL 値を許すかどうかの設定をオーバーライドします。 計算列ではない場合は、常に列を明示的に NULL または NOT NULL として定義することをお勧めします。ユーザー定義データ型を使用する場合は、データ型に NULL 値を許すかどうかの既定の設定を列が使用できるようにすることをお勧めします。 詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。  
   
  PRIMARY KEY  
  一意のインデックスを使用して、指定した 1 つ以上の列にエンティティの整合性を強制する制約です。 PRIMARY KEY 制約は 1 つのテーブルに対して 1 つだけ作成できます。  

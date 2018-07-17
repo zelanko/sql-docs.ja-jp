@@ -3,28 +3,24 @@ title: DDL トリガー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: triggers
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DDL triggers, about DDL triggers
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
-caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 19db6970253548827239adeb46a6ddc797dce59f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da86c799085983f5d2bc73ba970893e9fbcc7385
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012232"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432391"
 ---
 # <a name="ddl-triggers"></a>DDL トリガー
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +42,7 @@ ms.locfileid: "33012232"
  サーバー スコープまたはデータベース スコープのイベントに応答して [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント (複数可) を実行する特殊な [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャです。 たとえば、ALTER SERVER CONFIGURATION などのステートメントが実行されたときや、DROP TABLE を使用してテーブルが削除されたときに、DDL トリガーを起動させることができます。  
   
  CLR DDL トリガー  
- CLR トリガーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを実行するのではなく、.NET Framework で作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でアップロードされたアセンブリのメンバーであるマネージ コードに記述されている、1 つ以上のメソッドを実行します。  
+ CLR トリガーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを実行するのではなく、.NET Framework で作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でアップロードされたアセンブリのメンバーであるマネージド コードに記述されている、1 つ以上のメソッドを実行します。  
   
  DDL トリガーは、起動元の DDL ステートメントが実行されるまで、起動されません。 DDL トリガーを INSTEAD OF トリガーの代わりに使用することはできません。 DDL トリガーは、ローカルまたはグローバルの一時テーブルおよびストアド プロシージャに影響するイベントに応答して起動されることはありません。  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/08/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - DML triggers, modifying
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 caps.latest.revision: 74
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: deda2bde733c96de409ebed35ea33ffdc443fa23
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a05b189faff53fc836a6b6e9fcae8e0602cb588
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33073679"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786313"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -189,7 +188,7 @@ AS { sql_statement
  DML AFTER トリガーは、テーブルでのみ定義できます。  
   
  INSTEAD OF  
- その DML トリガーを、トリガーをアクティブにする SQL ステートメントの代わりに実行するように指定します。したがって、トリガーをアクティブにするステートメントの操作は無効になります。 DDL トリガーまたはログオン トリガーでは INSTEAD OF を指定できません。  
+ SQL ステートメントを起動する代わりに DML トリガーの実行を指定します。したがって、ステートメントのトリガーの操作はオーバーライドされます。 DDL トリガーまたはログオン トリガーでは INSTEAD OF を指定できません。  
   
  テーブルまたはビューでは、INSERT、UPDATE、または DELETE の各ステートメントに定義できる INSTEAD OF トリガーは 1 つだけですが、 ビューに別のビューを作成して、各ビューに独自の INSTEAD OF トリガーを定義することは可能です。  
   

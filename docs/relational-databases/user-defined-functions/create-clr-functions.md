@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: udf
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +18,12 @@ caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9ff7bfe946e08e33925fdf26c45085c1e26dc750
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c2c74068c438cb5284cc8ae5bd92f91100662e4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419491"
 ---
 # <a name="create-clr-functions"></a>CLR 関数の作成
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,11 @@ ms.lasthandoff: 05/03/2018
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] で SQL Server プロジェクトを配置すると、そのプロジェクトで指定されたデータベースにアセンブリが登録されます。 また、プロジェクトを配置することで、 **SqlFunction** 属性で注釈が付けられたすべてのメソッドの CLR 関数がデータベースに作成されます。 詳細については、「 [CLR データベース オブジェクトの配置](../../relational-databases/clr-integration/deploying-clr-database-objects.md)」を参照してください。  
   
 > [!NOTE]  
->  CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能は、既定では無効になっています。 マネージ コード モジュールを参照するデータベース オブジェクトを作成、変更、削除することはできますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure (Transact-SQL) [を使用して](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) clr enabled オプション [を有効にしないと、これらの参照は](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)で実行されません。  
+>  CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能は、既定では無効になっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、削除することはできますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure (Transact-SQL) [を使用して](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) clr enabled オプション [を有効にしないと、これらの参照は](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)で実行されません。  
   
 ## <a name="accessing-external-resources"></a>外部リソースへのアクセス  
- CLR 関数は、ファイル、ネットワーク リソース、Web サービス、他のデータベース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスを含む) などの外部リソースへのアクセスに使用できます。 これは、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、 `System.IO`、 `System.WebServices`など、 `System.Sql`のさまざまなクラスを使用して実現できます。 このためには、このような関数を含むアセンブリに、少なくとも EXTERNAL_ACCESS 権限セットを構成します。 詳細については、「 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)がサポートする言語のクラスの静的メソッドとして、関数を定義します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスへのアクセスには、SQL クライアント マネージ プロバイダーを使用できます。 ただし、接続を開始したサーバーへのループバック接続は、CLR 関数ではサポートされていません。  
+ CLR 関数は、ファイル、ネットワーク リソース、Web サービス、他のデータベース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスを含む) などの外部リソースへのアクセスに使用できます。 これは、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、 `System.IO`、 `System.WebServices`など、 `System.Sql`のさまざまなクラスを使用して実現できます。 このためには、このような関数を含むアセンブリに、少なくとも EXTERNAL_ACCESS 権限セットを構成します。 詳細については、「 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)がサポートする言語のクラスの静的メソッドとして、関数を定義します。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスへのアクセスには、SQL クライアント マネージド プロバイダーを使用できます。 ただし、接続を開始したサーバーへのループバック接続は、CLR 関数ではサポートされていません。  
   
  **SQL Server のアセンブリを作成、変更、削除するには**  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/03/2018
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## <a name="accessing-native-code"></a>ネイティブ コードへのアクセス  
- CLR 関数では、マネージ コードから PInvoke を使用することにより、C や C++ で記述されたコードなどのネイティブ (アンマネージ) コードにアクセスできます (詳細については、「 [マネージ コードからのネイティブ関数の呼び出し](http://go.microsoft.com/fwlink/?LinkID=181929) 」を参照してください)。 これにより、レガシ コードを CLR UDF として再利用したり、パフォーマンスが重要な UDF をネイティブ コードで記述したりできます。 そのためには、UNSAFE アセンブリを使用する必要があります。 UNSAFE アセンブリの使用に関する注意事項は、「 [CLR 統合のコード アクセス セキュリティ](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 」を参照してください。  
+ CLR 関数では、マネージド コードから PInvoke を使用することにより、C や C++ で記述されたコードなどのネイティブ (アンマネージド) コードにアクセスできます (詳細については、「[マネージド コードからのネイティブ関数の呼び出し](http://go.microsoft.com/fwlink/?LinkID=181929)」を参照してください)。 これにより、レガシ コードを CLR UDF として再利用したり、パフォーマンスが重要な UDF をネイティブ コードで記述したりできます。 そのためには、UNSAFE アセンブリを使用する必要があります。 UNSAFE アセンブリの使用に関する注意事項は、「 [CLR 統合のコード アクセス セキュリティ](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ユーザー定義関数の作成 &#40;データベース エンジン&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
