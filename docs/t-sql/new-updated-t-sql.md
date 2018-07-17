@@ -10,14 +10,13 @@ ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.component: t-sql
 ms.date: 04/28/2018
-ms.openlocfilehash: b1bc891bf7edc4cd82c38c8d647c279828190298
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 294ecf21f39eda34d2fe10d6dc07b7280c6b6954
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32725624"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409111"
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>新規および最近の更新: Transact-SQL ドキュメント
 
@@ -136,7 +135,8 @@ XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 
 
 
-**全般的な解説 - SQL Database マネージ インスタンス**
+
+  **全般的な解説 - SQL Database Managed Instance**
 
 
 非同期復元では、クライアント接続が切断された場合でも復元は続行されます。 接続が切断された場合は、[sys.dm_operation_status] ビューで復元操作の状態 (と CREATE および DROP DATABASE) を確認できます。
@@ -150,7 +150,8 @@ XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 - メモリ最適化ファイルグループがソース .bak ファイルにない場合は、追加され、XTP と呼ばれます。 既存のメモリ最適化ファイルグループはすべて XTP に名前変更されます
 - SINGLE_USER および RESTRICTED_USER オプションは、MULTI_USER に変換されます
 
-**制限事項 - SQL Database マネージ インスタンス**
+
+  **制限事項 - SQL Database Managed Instance**
 
 これらの制限が適用されます。
 
@@ -161,7 +162,7 @@ XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 - 任意の時点でインメモリ オブジェクトが存在していたデータベースが含まれているバックアップは、現在復元することができません。
 - 読み取り専用モードのデータベースが含まれているバックアップは、現在復元することができません。 この制限は間もなく解除される予定です。
 
-詳細については、[マネージ インスタンス]に関するトピックを参照してください。
+詳細については、[マネージド インスタンス]に関するトピックを参照してください。
 
 
 

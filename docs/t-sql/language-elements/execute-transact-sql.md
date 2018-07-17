@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -36,11 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9a68416a450c521bfcdf78887e2f6b4f469ea2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 49a9a6bdbd2b952614dff3c1095847a434803c78
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36251034"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -332,7 +332,7 @@ Execute a character string
 ## <a name="remarks"></a>Remarks  
  *value* を使用するか、@*parameter_name*=*value* を使用し、パラメーターを指定できます。 パラメーターは、トランザクションの一部ではないです。そのため、トランザクションが後でロールバックの値にパラメーターが変更された場合、パラメーター戻すことはできません前の値にします。 呼び出し元に返される値は常に、モジュールから戻る時点での値になります。  
   
- 1 つのモジュールで、別のモジュールが呼び出されるか、共通言語ランタイム (CLR) モジュール、ユーザー定義型、または集計の参照によりマネージ コードが実行されるとき、入れ子が発生します。 入れ子のレベルは、呼び出されたモジュールまたはマネージ コード参照の実行開始時に増加し、呼び出されたモジュールやマネージ コード参照の終了時に減少します。 入れ子のレベルが最大値 32 を超えると、呼び出しチェーン全体が失敗します。 現在の入れ子レベルは、@@NESTLEVEL システム関数に格納されます。  
+ 1 つのモジュールで、別のモジュールが呼び出されるか、共通言語ランタイム (CLR) モジュール、ユーザー定義型、または集計の参照によりマネージド コードが実行されるとき、入れ子が発生します。 入れ子のレベルは、呼び出されたモジュールまたはマネージド コード参照の実行開始時に増加し、呼び出されたモジュールやマネージド コード参照の終了時に減少します。 入れ子のレベルが最大値 32 を超えると、呼び出しチェーン全体が失敗します。 現在の入れ子レベルは、@@NESTLEVEL システム関数に格納されます。  
   
  リモート プロシージャと拡張ストアド プロシージャは、BEGIN DISTRIBUTED TRANSACTION ステートメントの中で実行されない限り、または各種の構成オプションと共に使用されない限り、トランザクションのスコープ外となります。したがって、これらのプロシージャを呼び出して実行したコマンドはロールバックできません。 詳細については「[システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)」と「[BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)」を参照してください。  
   

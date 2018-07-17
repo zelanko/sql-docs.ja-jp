@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], reorganizing
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db4dfc09c47ad9527afcd1d1978b502bdd9c2347
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79f647c1f75a9463a3e710cdf2e27fce878e6378
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33063809"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784325"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ ALTER FULLTEXT CATALOG catalog_name
  インデックスが設定されるデータの量によっては、マスター マージの完了までに時間がかかる場合があります。 マスター マージで大量のデータを処理すると、実行時間が長いトランザクションが発生し、チェックポイント時のログの切り捨てが遅れる場合があります。 この場合、完全復旧モデルでは、トランザクション ログが非常に大きくなることがあります。 完全復旧モデルを使用するデータベースで大きなフルテキスト インデックスを再編成する前に、実行時間が長いトランザクションのための十分な領域をトランザクション ログに割り当てることをお勧めします。 詳細については、「 [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)」を参照してください。  
   
  AS DEFAULT   
- このカタログが既定のカタログであることを指定します。 カタログを指定せずにフルテキスト インデックスを作成すると、既定のカタログが使用されます。 既定のフルテキスト カタログが既に存在する場合、このカタログを AS DEFAULT に設定すると、既定の設定が上書きされます。  
+ このカタログが既定のカタログであることを指定します。 カタログを指定せずにフルテキスト インデックスを作成すると、既定のカタログが使用されます。 既定のフルテキスト カタログが既に存在する場合、このカタログを AS DEFAULT に設定すると、既定の設定がオーバーライドされます。  
   
 ## <a name="permissions"></a>アクセス許可  
  フルテキスト カタログに対する ALTER 権限が与えられているか、**db_owner** 固定データベース ロール、**db_ddladmin** 固定データベース ロール、または sysadmin 固定サーバー ロールのメンバーであることが必要です。  
