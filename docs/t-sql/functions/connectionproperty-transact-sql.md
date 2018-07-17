@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - CONNECTIONPROPERTY statement
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51685541435f4ab0192792341d2a29210dc9f504
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0638fcbc1559507bffb478c559f53180dface974
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054789"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789383"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,9 +45,9 @@ CONNECTIONPROPERTY ( property )
 *property*  
 接続のプロパティです。 *property* には、これらの値のいずれかを指定することができます。
   
-|ReplTest1|データ型|Description|  
+|ReplTest1|データ型|[説明]|  
 |---|---|---|
-|net_transport|**nvarchar(40)**|この接続で使用される物理的な転送プロトコルを返します。 この値は NULL 許容ではありません。 有効な戻り値:<br /><br /> **HTTP**<br /> **名前付きパイプ**<br /> **Session**<br /> **共有メモリ**<br /> **SSL**<br /> **TCP**<br /><br /> および<br /><br /> **VIA**<br /><br /> 注: 接続で複数のアクティブな結果セット (MARS) の両方が有効になっているときに、接続プールが有効になっている場合は、常に**セッション**を返します。|  
+|net_transport|**nvarchar(40)**|この接続で使用される物理的な転送プロトコルを返します。 この値は NULL 許容ではありません。 有効な戻り値:<br /><br /> **HTTP**<br /> **名前付きパイプ**<br /> **Session**<br /> **共有メモリ**<br /> **SSL**<br /> **TCP**<br /><br /> クエリと<br /><br /> **VIA**<br /><br /> 注: 接続で複数のアクティブな結果セット (MARS) の両方が有効になっているときに、接続プールが有効になっている場合は、常に**セッション**を返します。|  
 |protocol_type|**nvarchar(40)**|ペイロードのプロトコルの種類を返します。 現在、TDS (TSQL) と SOAP が区別されます。 NULL 値が許可されます。|  
 |auth_scheme|**nvarchar(40)**|接続の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証スキームを返します。 認証方法は、Windows 認証 (NTLM、KERBEROS、DIGEST、BASIC、NEGOTIATE) または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のいずれかです。 NULL 値は許可されません。|  
 |local_net_address|**varchar(48)**|この特定の接続の対象となったサーバーの IP アドレスを返します。 TCP トランスポート プロバイダーを使用する接続の場合にのみ該当します。 NULL 値が許可されます。|  

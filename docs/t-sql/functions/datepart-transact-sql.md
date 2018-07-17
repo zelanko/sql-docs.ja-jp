@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,16 +27,16 @@ helpviewer_keywords:
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 caps.latest.revision: 57
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 511c961ee1a4d6c8099e171de8c161592d986f96
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: a1209d7cc2bf7270922fa271d7f63984d50fb775
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249805"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785393"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -111,7 +110,7 @@ DATEPART ( datepart , date )
 |**dayofyear、dy、y**|303|  
 |**day、dd、d**|30|  
 |**week、wk、ww**|45|  
-|**weekday、dw**|@shouldalert|  
+|**weekday、dw**|1|  
 |**hour、hh**|12|  
 |**minute、n**|15|  
 |**second、ss、s**|32|  
@@ -143,12 +142,12 @@ SET DATEFIRST 7 -- ( Sunday )
   
 |SET DATEFIRST<br /><br /> 引数 (argument)|week<br /><br /> 返される値|weekday<br /><br /> 返される値|  
 |---|---|---|
-|@shouldalert|16|6|  
+|1|16|6|  
 |2|17|5|  
 |3|17|4|  
 |4|17|3|  
 |5|17|2|  
-|6|17|@shouldalert|  
+|6|17|1|  
 |7|16|7|  
   
 ## <a name="year-month-and-day-datepart-arguments"></a>year、month、day (datepart 引数)  
@@ -164,7 +163,7 @@ ISO 8601 には、ISO 週日付方式 (週番号方式) が規定されていま
 |週の最初の曜日|年の最初の週の構成|2 回割り当てられる週の有無|利用されている地域|  
 |---|---|---|---|
 |日曜日|1 月 1 日<br /><br /> 最初の土曜日<br /><br /> 年の 1 ～ 7 日|はい|United States|  
-|月曜日|1 月 1 日<br /><br /> 最初の日曜日<br /><br /> 年の 1 ～ 7 日|はい|欧州および英国|  
+|月曜日|1 月 1 日<br /><br /> 最初の日曜日<br /><br /> 年の 1 ～ 7 日|はい|欧州およびイギリス|  
 |月曜日|4 月は 1 月<br /><br /> 最初の木曜日<br /><br /> 年の 4 ～ 7 日間|いいえ|ISO 8601、ノルウェー、およびスウェーデン|  
 |月曜日|7 月は 1 月<br /><br /> 最初の月曜日<br /><br /> 年の 7 日間|いいえ||  
 |水曜日|1 月 1 日<br /><br /> 最初の火曜日<br /><br /> 年の 1 ～ 7 日|はい||  

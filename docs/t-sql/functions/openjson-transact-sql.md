@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - JSON, importing
 - JSON, converting from
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
-caps.latest.revision: 32
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 100f05de2924ab00388e27b96a464625146b815b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 55d9b3fcf3ab8e6b55c6704e363e486627f7985c
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585794"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36248234"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -95,7 +92,7 @@ FROM OPENJSON(@json)
   
 |キー (key)|value|型|  
 |---------|-----------|----------|  
-|StringValue|John|@shouldalert|  
+|StringValue|John|1|  
 |IntValue|45|2|  
 |TrueValue|true|3|  
 |FalseValue|オプション|3|  
@@ -128,7 +125,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 |Key|ReplTest1|  
 |---------|-----------|  
 |0|en-GB|  
-|@shouldalert|en 英国|  
+|1|en 英国|  
 |2|de AT|  
 |3|es AR|  
 |4|sr という|  
@@ -212,7 +209,7 @@ WITH (
   
 |数値|date|Customer|Quantity|書|  
 |------------|----------|--------------|--------------|-----------|  
-|SO43659|2011-05-により、|AW29825|@shouldalert|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
+|SO43659|2011-05-により、|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |として SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
   
 
@@ -227,7 +224,7 @@ OPENJSON 関数によって返される列は、WITH オプションによって
         |型の列の値|JSON データ型|  
         |------------------------------|--------------------|  
         |0|null|  
-        |@shouldalert|string|  
+        |1|string|  
         |2|ssNoversion|  
         |3|true/false|  
         |4|array|  
