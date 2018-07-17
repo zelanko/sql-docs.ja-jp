@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,14 +25,15 @@ helpviewer_keywords:
 - locking [SQL Server], SET statements
 ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: edd068ae8675f5af4130c0a802d65b2550d967e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ea04e5d986bfa7d17872d4514d8fe6fd04d352cf
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787593"
 ---
 # <a name="set-statements-transact-sql"></a>SET ステートメント (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **sp_configure** の **user options** 設定を使用すると、サーバー単位で設定が行えます。この設定は複数のデータベースに対して有効です。 この設定は明示的な SET ステートメントと同じように動作しますが、ログイン時に使用される点が異なります。  
   
--   ALTER DATABASE を使用して設定したデータベース設定は、データベース レベルで有効です。これは明示的に設定された場合のみ有効になります。 データベース設定は、**sp_configure** を使用して設定したインスタンス オプションの設定よりも優先されます。  
+-   ALTER DATABASE を使用して設定したデータベース設定は、データベース レベルで有効です。これは明示的に設定された場合のみ有効になります。 データベース設定は、**sp_configure** を使用して設定したインスタンス オプションの設定をオーバーライドします。  
   
 -   ON と OFF を設定できる SET ステートメントでは、複数の SET オプションに対して一度に ON または OFF を設定できます。  
   
@@ -71,11 +71,11 @@ ms.lasthandoff: 05/03/2018
   
      たとえば `SET QUOTED_IDENTIFIER, ANSI_NULLS ON` を使用すると、QUOTED_IDENTIFIER と ANSI_NULLS の両方を ON に設定できます。  
   
--   SET ステートメントの設定は、ALTER DATABASE を使用して設定した同等のデータベース オプションの設定よりも優先されます。 たとえば、SET ANSI_NULLS ステートメントで指定した値は、ANSI_NULLS のデータベース設定よりも優先されます。 さらに、前回 **sp_configure user options** 設定を使用したときに有効になった値や、すべての ODBC および OLE/DB 接続に適用される値を使用してデータベースに接続すると、自動的に ON になる接続設定がいくつかあります。  
+-   SET ステートメントの設定は、ALTER DATABASE を使用して設定した同等のデータベース オプションの設定をオーバーライドします。 たとえば、SET ANISI_NULLS ステートメントで指定された値は、ANSI_NULLS のデータベース設定をオーバーライドします。 さらに、前回 **sp_configure user options** 設定を使用したときに有効になった値や、すべての ODBC および OLE/DB 接続に適用される値を使用してデータベースに接続すると、自動的に ON になる接続設定がいくつかあります。  
   
 -   ALTER、CREATE、および DROP DATABASE ステートメントでは、SET LOCK_TIMEOUT の設定は無視されます。  
   
--   SET ANSI_DEFAULTS などのグローバルまたはショートカット SET ステートメントでいくつかの設定を行っている場合、ショートカット SET ステートメントを実行すると、そのショートカット SET ステートメントの影響を受けるすべてのオプションに関する既存の設定がリセットされます。 ショートカット SET ステートメントを実行した後、ショートカット SET ステートメントの影響を受ける SET オプションを個別に明示的に設定した場合は、個別の SET ステートメントの値の方が、対応するショートカットの設定よりも優先されます。  
+-   SET ANSI_DEFAULTS などのグローバルまたはショートカット SET ステートメントでいくつかの設定を行っている場合、ショートカット SET ステートメントを実行すると、そのショートカット SET ステートメントの影響を受けるすべてのオプションに関する既存の設定がリセットされます。 ショートカット SET ステートメントを実行した後、ショートカット SET ステートメントの影響を受ける SET オプションを個別に明示的に設定した場合は、個別の SET ステートメントは、対応するショートカットの設定をオーバーライドします。  
   
 -   バッチを使用する場合、データベースのコンテキストは、USE ステートメントを使って確立したバッチによって決まります。 ストアド プロシージャの外部で実行される、バッチ内のアドホック クエリとその他すべてのステートメントは、USE ステートメントによって確立されるデータベースと接続のオプション設定を継承します。  
   

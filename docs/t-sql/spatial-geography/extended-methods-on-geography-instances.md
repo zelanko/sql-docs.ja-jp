@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,11 +16,12 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef382ccfbdd50489ee97061d5650de893aa4156b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d68092463b1cad019a3f2bd7b4d3c0a57205212
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36239632"
 ---
 # <a name="extended-methods-on-geography-instances"></a>geography インスタンスの拡張メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [EnvelopeCenter](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
--   [[フィルター]](../../t-sql/spatial-geography/filter-geography-data-type.md)  
+-   [Assert](../../t-sql/spatial-geography/filter-geography-data-type.md)  
   
 -   [HasM &#40;geography データ型&#41;](../../t-sql/spatial-geography/hasm-geography-data-type.md)  
   

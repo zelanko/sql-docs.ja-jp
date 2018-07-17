@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -41,16 +40,16 @@ helpviewer_keywords:
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 caps.latest.revision: 248
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1edf0ff22f56446faf5fa316723c4b2a525534cb
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 8e5980fea20deb2dc1e1c684cb8d354136182007
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702955"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943138"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -339,7 +338,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
  可用性データベースを復元するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにデータベースを復元した後、そのデータベースを可用性グループに追加します。  
 
-## <a name="general-remarks---sql-database-managed-instance"></a>全般的な解説 - SQL Database マネージ インスタンス
+## <a name="general-remarks---sql-database-managed-instance"></a>全般的な解説 - SQL Database Managed Instance
 
 非同期復元では、クライアント接続が切断された場合でも復元は続行されます。 接続が切断された場合は、[sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) ビューで復元操作の状態 (と CREATE および DROP DATABASE) を確認できます。 
 
@@ -352,7 +351,7 @@ Note: URL is the format used to specify the location and the file name for the W
 - メモリ最適化ファイルグループがソース .bak ファイルにない場合は、追加され、XTP と呼ばれます。 既存のメモリ最適化ファイルグループはすべて XTP に名前変更されます
 - SINGLE_USER および RESTRICTED_USER オプションは、MULTI_USER に変換されます
 
-## <a name="limitations---sql-database-managed-instance"></a>制限事項 - SQL Database マネージ インスタンス
+## <a name="limitations---sql-database-managed-instance"></a>制限事項 - SQL Database Managed Instance
 これらの制限が適用されます。
 
 - 複数のバックアップ セットを含む .BAK ファイルは復元できません。
@@ -362,14 +361,14 @@ Note: URL is the format used to specify the location and the file name for the W
 - 任意の時点でインメモリ オブジェクトが存在していたデータベースが含まれているバックアップは、現在復元することができません。
 - 読み取り専用モードのデータベースが含まれているバックアップは、現在復元することができません。 この制限は間もなく解除される予定です。
 
-詳細については、[マネージ インスタンス](/azure/sql-database/sql-database-managed-instance)に関するトピックを参照してください。
+詳細については、[マネージド インスタンス](/azure/sql-database/sql-database-managed-instance)に関するトピックを参照してください。
 
 ## <a name="interoperability"></a>相互運用性  
   
 ### <a name="database-settings-and-restoring"></a>データベースの設定と復元  
  復元を実行すると、ALTER DATABASE を使用して設定できるデータベース オプションの大半は、バックアップの終了時に有効となっていた値にリセットされます。  
   
- WITH RESTRICTED_USER オプションを使用すると、ユーザー アクセス オプションの設定の動作よりもこのオプションが優先されます。 ユーザー アクセス オプションの設定は、WITH RESTRICTED_USER オプションを含む RESTORE ステートメントの後で、常に設定されます。  
+ WITH RESTRICTED_USER オプションを使用すると、ユーザー アクセス オプションの設定の動作がオーバーライドされます。 ユーザー アクセス オプションの設定は、WITH RESTRICTED_USER オプションを含む RESTORE ステートメントの後で、常に設定されます。  
   
 ### <a name="restoring-an-encrypted-database"></a>暗号化されたデータベースの復元  
  暗号化されたデータベースを復元するには、データベースの暗号化に使用された証明書または非対称キーにアクセスできることが必要です。 証明書または非対称キーがないと、データベースは復元できません。 このため、バックアップが必要である間は、データベース暗号化キーの暗号化に使用する証明書を保持しておく必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
@@ -390,7 +389,7 @@ Note: URL is the format used to specify the location and the file name for the W
 ##  <a name="REPLACEoption"></a> REPLACE オプションによる影響  
  REPLACE は頻繁に使用すべきではありません。使用するのは十分に検討した後のみに限定してください。 通常、復元により、誤ってデータベースを別のデータベースで上書きしてしまうのを防ぐことができます。 RESTORE ステートメントで指定したデータベースが現在のサーバーに既に存在し、指定したデータベースのファミリ GUID がバックアップ セットに記録されているデータベースのファミリ GUID と異なる場合、そのデータベースは復元されません。 これは重要な保護機能です。  
   
- REPLACE オプションにより、通常は復元によって実行されるいくつかの重要な安全性チェックが無効になります。 無効になるチェックは次のとおりです。  
+ REPLACE オプションは、通常は復元によって実行されるいくつかの重要な安全性チェックをオーバーライドします。 オーバーライドされるチェックは次のとおりです。  
   
 -   別のデータベースから取得したバックアップで既存のデータベースに復元することに対するチェック。  
   

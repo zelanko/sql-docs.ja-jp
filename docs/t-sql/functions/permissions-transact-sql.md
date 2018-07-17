@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - PERMISSIONS function
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96db4124500a2b174ee493ff99e650d7bc3049a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 121b7e229220793e7e1b9bc9307f3398281d6c2d
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33059935"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783679"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 |ビット (10 進)|ビット (16 進)|ステートメント権限|  
 |-----------------|-----------------|--------------------------|  
-|@shouldalert|0x1|CREATE DATABASE (master データベースのみ)|  
+|1|0x1|CREATE DATABASE (master データベースのみ)|  
 |2|0x2|CREATE TABLE|  
 |4|0x4|CREATE PROCEDURE|  
 |8|0x8|CREATE VIEW|  
@@ -91,7 +90,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 |ビット (10 進)|ビット (16 進)|ステートメント権限|  
 |-----------------|-----------------|--------------------------|  
-|@shouldalert|0x1|SELECT ALL|  
+|1|0x1|SELECT ALL|  
 |2|0x2|UPDATE ALL|  
 |4|0x4|REFERENCES ALL|  
 |8|0x8|INSERT|  
@@ -105,7 +104,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 |ビット (10 進)|ビット (16 進)|ステートメント権限|  
 |-----------------|-----------------|--------------------------|  
-|@shouldalert|0x1|SELECT|  
+|1|0x1|SELECT|  
 |2|0x2|UPDATE|  
 |4|0x4|REFERENCES|  
   

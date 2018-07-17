@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - deleting data
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 caps.latest.revision: 78
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79fcdecafcbb2d0318a5a04d3aebbe78fb991bfb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 627e9a2bf7b7a70012d7e5d993535784bbb722fb
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586004"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788193"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -196,7 +195,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  パーティション ビューに対して DELETE ステートメントで TOP を使用することはできません。  
   
 ## <a name="locking-behavior"></a>ロック動作  
- 既定では、DELETE ステートメントは、常に、そのステートメントで変更するテーブルについて排他 (X) ロックを獲得し、トランザクションが完了するまでそのロックを保持します。 排他 (X) ロックをかけたトランザクション以外はデータを変更できませんが、NOLOCK ヒントまたは READ UNCOMMITTED 分離レベルが指定されている場合に限り、読み取り操作は行うことができます。 別のロック手法を指定することで DELETE ステートメントの期間のこの既定の動作を上書きするテーブル ヒントを指定できます。ただし、このヒントは、経験豊富な開発者およびデータベース管理者が最後の手段としてのみ使用することを推奨します。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
+ 既定では、DELETE ステートメントは、常に、そのステートメントで変更するテーブルについて排他 (X) ロックを獲得し、トランザクションが完了するまでそのロックを保持します。 排他 (X) ロックをかけたトランザクション以外はデータを変更できませんが、NOLOCK ヒントまたは READ UNCOMMITTED 分離レベルが指定されている場合に限り、読み取り操作は行うことができます。 別のロック手法を指定することで DELETE ステートメントの期間のこの既定の動作をオーバーライドするテーブル ヒントを指定できます。ただし、このヒントは、経験豊富な開発者およびデータベース管理者が最後の手段としてのみ使用することを推奨します。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
  ヒープから行を削除するときには、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって、操作に行またはページ ロックが使用されることがあります。 その結果、削除操作で空になったページがヒープに割り当てられたままになります。 空のページの割り当てが解除されないと、データベース内の他のオブジェクトで該当の領域を再利用できなくなります。  
   

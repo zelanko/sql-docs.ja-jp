@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 caps.latest.revision: 64
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c2550514f373a91457a75bdf2c04b60ea13fe137
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d36f230788699207b122cc849c32577e96ecb2fe
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055179"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420461"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,23 +64,23 @@ ms.locfileid: "33055179"
 ## <a name="supported-string-literal-formats-for-datetime"></a>datetime でサポートされる文字列リテラル形式  
 次の表は、**datetime** でサポートされている文字列リテラル形式を一覧にしたものです。 ODBC を除き、**datetime** の文字列リテラルは単一引用符 (') で囲んで指定します (例: 'string_literaL')。 **us_english** 以外の環境では、文字列リテラルを N'string_literaL' 形式で指定する必要があります。
   
-|数値|Description|  
+|数値|[説明]|  
 |---|---|
 |日付形式 :<br /><br /> [0]4/15/[19]96 -- (mdy)<br /><br /> [0]4-15-[19]96 -- (mdy)<br /><br /> [0]4.15.[19]96 -- (mdy)<br /><br /> [0]4/[19]96/15 -- (myd)<br /><br /> 15/[0]4/[19]96 -- (dmy)<br /><br /> 15/[19]96/[0]4 -- (dym)<br /><br /> [19]96/15/[0]4 -- (ydm)<br /><br /> [19]96/[0]4/15 -- (ymd)<br /><br /> 時刻形式 :<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|月名を数値で表して日付データを指定できます。 たとえば、5/20/97 は 1997 年 5 月 20 日を表します。 数値データの形式を使用する場合、文字列の年、月、日は、スラッシュ (/)、ハイフン (-)、またはピリオド (.) で区切って指定します。 この文字列は、次の形式に従う必要があります。<br /><br /> *number separator number separator number [time] [time]*<br /><br /> <br /><br /> 言語設定が **us_english** の場合、既定の日付順序は月、日、年 (mdy) です。 日付順序は、[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) ステートメントを使用して変更できます。<br /><br /> SET DATEFORMAT の設定は、日付の値がどのように解釈されるかを決定します。 指定した順序が設定と一致しない場合、範囲外となって日付として解釈されないか、または間違って解釈されます。 たとえば、12/10/08 は、DATEFORMAT の設定によっては、6 種類の日付形式のうちのいずれにも解釈できます。 4 桁の部分は年と解釈されます。|  
   
-|アルファベット|Description|  
+|アルファベット|[説明]|  
 |---|---|
 |Apr[il] [15][,] 1996<br /><br /> Apr[il] 15[,] [19]96<br /><br /> Apr[il] 1996 [15]<br /><br /> [15] Apr[il][,] 1996<br /><br /> 15 Apr[il][,][19]96<br /><br /> 15 [19]96 apr[il]<br /><br /> [15] 1996 apr[il]<br /><br /> 1996 APR[IL] [15]<br /><br /> 1996 [15] APR[IL]|月の正式名を使って日付データを指定できます。 たとえば、現在の言語で指定されている April やその省略形である Apr を使用できます。コンマは省略でき、大文字と小文字の違いは無視されます。<br /><br /> アルファベット日付形式の使用に関するガイドラインを次に示します。<br /><br /> 1) 日時データを単一引用符 (') で囲みます。 English 以外の言語では、N' を使用します。<br /><br /> 2) 角かっこで囲まれた文字は省略可能です。<br /><br /> 3) 西暦の最後の 2 桁のみを指定した場合、その値が [two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)構成オプションの上限値の最後の 2 桁より小さければ、指定した西暦は終了年と同じ世紀になります。 この構成オプションより値が大きいか、または同じである場合、指定した西暦は終了年の世紀より前の世紀になります。 たとえば、**two digit year cutoff** が 2050 (既定値) である場合、25 は 2025 年と解釈され、50 は 1950 年と解釈されます。 こうしたあいまいさを排除するため、4 桁の西暦を使用してください。<br /><br /> 4) 日を省略したときは、その月の 1 日が指定されます。<br /><br /> <br /><br /> 月をアルファベット形式で指定したときは、SET DATEFORMAT のセッション設定は適用されません。|  
   
-|ISO 8601|Description|  
+|ISO 8601|[説明]|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.mmm]<br /><br /> YYYYMMDD[ hh:mm:ss[.mmm]]|例 :<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> ISO 8601 形式を使用するには、その形式で各要素を指定する必要があります。 これには、**T**、コロン (:)、およびピリオド (.) も含まれます。<br /><br /> 秒の構成要素を示す角かっこは省略できます。 時の構成要素は 24 時間形式で指定します。<br /><br /> T は、**datetime** 値の時刻の部分の先頭を示します。<br /><br /> ISO 8601 形式を使用する利点は、これが明確な仕様を持つ国際標準であるという点です。 また、この形式は、SET DATEFORMAT や [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) の設定の影響を受けません。|  
   
-|区切りなし|Description|  
+|区切りなし|[説明]|  
 |---|---|
 |YYYYMMDD hh:mm:ss[.mmm]||  
   
-|ODBC|Description|  
+|ODBC|[説明]|  
 |---|---|
 |{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|ODBC API では、日付時刻値を表すエスケープ シーケンスが定義されます。ODBC ではこれをタイムスタンプ データと呼びます。 この ODBC タイムスタンプ形式は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされる OLE DB 言語定義 (DBGUID-SQL) でもサポートされます。 ADO、OLE DB、および ODBC ベースの API を使用しているアプリケーションでは、この ODBC タイムスタンプ形式を使用して日付/時刻を表すことができます。<br /><br /> ODBC タイムスタンプ エスケープ シーケンスは、{ *literal_type* '*constant_value*' }: という形式です。<br /><br /> <br /><br /> - *literal_type* はエスケープ シーケンスの種類を指定します。 タイムスタンプには次の 3 つの *literal_type* 指定子があります。<br />1) d = 日付のみ<br />2) t = 時刻のみ<br />3) ts = タイムスタンプ (時刻と日付)<br /><br /> <br /><br /> - '*constant_value*' はエスケープ シーケンスの値です。 *constant_value* は *literal_type* ごとに次の形式に従う必要があります。<br />d : yyyy-mm-dd<br />t : hh:mm:ss[.fff]<br />ts : yyyy-mm-dd hh:mm:ss[.fff]|  
   

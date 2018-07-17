@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -48,14 +47,15 @@ helpviewer_keywords:
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 caps.latest.revision: 256
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3768086c0c4e959586eb1ab8620dbdfda4cabe9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1db17ce1dcf7cbc0c14c3ef1cf0edeaf3441e539
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786013"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -259,6 +259,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   | FILLFACTOR = fillfactor   
   | IGNORE_DUP_KEY = { ON | OFF }   
   | STATISTICS_NORECOMPUTE = { ON | OFF }   
+  | STATISTICS_INCREMENTAL = { ON | OFF }  
   | ALLOW_ROW_LOCKS = { ON | OFF}   
   | ALLOW_PAGE_LOCKS ={ ON | OFF}   
   | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -429,7 +430,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
   
 -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) ステートメントでクラスター化インデックスをヒープに変換する。 この場合は、異なる FILESTREAM ファイル グループ、パーティション構成、または **"** default **"** を指定できます。  
   
- `FILESTREAM_ON <filegroup>` 句のファイル グループ、またはパーティション構成で指定されている各 FILESTREAM ファイル グループには、ファイルが 1 つ定義されている必要があります。 このファイルは、[CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントまたは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用して定義する必要があります。それ以外の場合は、エラーが発生します。  
+ `FILESTREAM_ON <filegroup>` 句のファイル グループ、またはパーティション構成で指定されている各 FILESTREAM ファイル グループには、ファイルが 1 つ定義されている必要があります。 このファイルは、[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) ステートメントまたは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用して定義する必要があります。それ以外の場合は、エラーが発生します。  
   
  FILESTREAM の関連トピックについては、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」をご覧ください。  
   
@@ -438,7 +439,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
   
 -   システム データ型。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データ型に基づく別名型。 別名データ型は、CREATE TYPE ステートメントで作成した後、テーブル定義で使用できます。 別名データ型用の NULL/NOT NULL 割り当ては、CREATE TABLE ステートメントの中で上書きできます。 ただし、長さ指定は変更できません。CREATE TABLE ステートメント中の別名データ型の長さは指定できません。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データ型に基づく別名型。 別名データ型は、CREATE TYPE ステートメントで作成した後、テーブル定義で使用できます。 別名データ型用の NULL/NOT NULL 割り当ては、CREATE TABLE ステートメントの中でオーバーライドできます。 ただし、長さ指定は変更できません。CREATE TABLE ステートメント中の別名データ型の長さは指定できません。  
   
 -   CLR ユーザー定義型。 CLR ユーザー定義型をテーブル定義の中で使用するには、まず、CREATE TYPE ステートメントで CLR ユーザー定義型を作成する必要があります。 CLR ユーザー定義型の列を作成するには、その型に対する REFERENCES 権限が必要です。  
   
@@ -549,7 +550,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
 
  クラスター化インデックスの作成時に、テーブルの FILESTREAM データの配置を指定します。 FILESTREAM_ON 句を使用すると、異なる FILESTREAM ファイル グループやパーティション構成に FILESTREAM データを移動できます。  
   
- *filestream_filegroup_name* FILESTREAM ファイル グループの名前を指定します。 ファイル グループには、[CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントまたは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用してファイルが 1 つ定義されている必要があります。それ以外の場合は、エラーが発生します。  
+ *filestream_filegroup_name* FILESTREAM ファイル グループの名前を指定します。 ファイル グループには、[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) ステートメントまたは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用してファイルが 1 つ定義されている必要があります。それ以外の場合は、エラーが発生します。  
   
  テーブルがパーティション分割されている場合、FILESTREAM_ON 句を使用して、テーブルのパーティション構成と同じパーティション関数とパーティション列を使用するように、FILESTREAM ファイル グループのパーティション構成を指定する必要があります。 それ以外の場合は、エラーが発生します。  
   
@@ -1234,7 +1235,7 @@ SELECT * FROM tempdb.sys.database_files
 ## <a name="nullability-rules-within-a-table-definition"></a>テーブル定義内での NULL 値許容の規則  
  列に NULL 値を許容するかどうかは、その列にデータとして NULL 値を入力できるかどうかを決めるものです。 NULL は 0 でも空白でもありません。NULL は、何も入力されなかった、または明示的な NULL が供給されたことを意味し、通常、値が未知である、または使用できないことを示します。  
   
- CREATE TABLE または ALTER TABLE でテーブルを作成または変更すると、データベースとセッションの設定は、列定義で使われているデータ型に NULL 値を許容するかどうかの設定に影響を及ぼし、場合によっては、NULL 値の許容を無効にします。 計算列でない場合は、常に列を明示的に NULL または NOT NULL として定義することをお勧めします。ユーザー定義データ型を使用する場合は、データ型に NULL 値を許容するかどうかの既定の設定を列が使用できるようにすることをお勧めします。 スパース列では常に NULL を許容する必要があります。  
+ CREATE TABLE または ALTER TABLE でテーブルを作成または変更すると、データベースとセッションの設定は、列定義で使われているデータ型に NULL 値を許容するかどうかの設定に影響を及ぼし、場合によっては、NULL 値の許容をオーバーライドします。 計算列でない場合は、常に列を明示的に NULL または NOT NULL として定義することをお勧めします。ユーザー定義データ型を使用する場合は、データ型に NULL 値を許容するかどうかの既定の設定を列が使用できるようにすることをお勧めします。 スパース列では常に NULL を許容する必要があります。  
   
  明示的に指定しない場合、列に対して NULL 値を許容するかどうかは以下の表に示す規則に従います。  
   
@@ -1408,7 +1409,7 @@ GO
   
 |[ファイル グループ]|test1fg|test2fg|test3fg|test4fg|  
 |---------------|-------------|-------------|-------------|-------------|  
-|**パーティション**|@shouldalert|2|3|4|  
+|**パーティション**|1|2|3|4|  
 |**値**|col 1 \<= 1|col1 > 1 AND col1 \<= 100|col1 > 100 AND col1 \<= 1,000|col1 > 1000|  
   
 ### <a name="i-using-the-uniqueidentifier-data-type-in-a-column"></a>I. 列で uniqueidentifier データ型を使用する  

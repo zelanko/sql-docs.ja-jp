@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,14 +22,15 @@ helpviewer_keywords:
 - retrieving messages
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d3a405bf525cc5203b82860097e8904fca2de4f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 450de8b521cbbec33375a429bcfc7fb1035194a5
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788463"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="queue-columns"></a>キューの列  
  次の表は、キューの列の一覧です。  
   
-|列名|データ型|Description|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**ステータス**|**tinyint**|メッセージの状態。 RECEIVE コマンドで返されるメッセージの状態は常に **0** です。 キューのメッセージには、次のいずれかの値が含まれます。<br /><br /> **0** = 準備完了。**1** = 受信メッセージ。**2** = 未完了。**3** = 保持されている送信済みメッセージ。|  
 |**priority**|**tinyint**|メッセージに適用されているメッセージ交換の優先度レベル。|  

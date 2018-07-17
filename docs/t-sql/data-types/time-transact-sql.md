@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 6/7/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 767f6650a46e67463dd51ad67ad1d506cc96c303
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055929"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421571"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +75,7 @@ ms.locfileid: "33055929"
 ## <a name="supported-string-literal-formats-for-time"></a>time でサポートされる文字列リテラル形式  
  次の表は、**time** データ型に使用できる有効な文字列リテラル形式を示しています。  
   
-|SQL Server|Description|  
+|SQL Server|[説明]|  
 |----------------|-----------------|  
 |hh:mm[:ss][:fractional seconds][AM][PM]<br /><br /> hh:mm[:ss][.fractional seconds][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|AM を指定したかどうかに関係なく、時刻値 0 は午前 0 時を表します。 時刻値が 0 のときに PM を指定することはできません。<br /><br /> AM と PM のどちらも指定していない場合、01 から 11 までの時刻値は午前の時刻を表します。 これらの値は、AM を指定した場合も午前の時刻を表します。 PM を指定すると、午後の時刻を表します。<br /><br /> AM と PM のどちらも指定していない場合、時刻値 12 は正午を表します。 AM を指定すると、午前 0 時を表します。 PM を指定すると、正午を表します。 たとえば、12:01 という値は、12:01 PM では正午を 1 分過ぎた時刻、12:01 AM では午前 0 時を 1 分過ぎた時刻を表します。 12:01 AM と指定しても、00:01 または 00:01 AM と指定した場合と同じ時刻を表します。<br /><br /> 13 から 23 までの時刻値は、AM または PM を指定していなくても、午後の時刻を表します。 また、PM を指定した場合も午後の時刻を表します。 時刻値が 13 から 23 までの場合、AM を指定することはできません。<br /><br /> 24 という時刻値は無効です。 午前 0 時を表すには、12:00 AM または 00:00 とします。<br /><br /> ミリ秒の前には、コロン (:) またはピリオド (.) を付けます。 コロンを付けると、後続の値は、1000 分の 1 秒単位になります。 ピリオドを付けると、数字が 1 桁なら 10 分の 1 秒単位に、2 桁なら 100 分の 1 秒単位に、3 桁なら 1000 分の 1 秒単位になります。 たとえば、"12:30:20:1" は 12 時 30 分 20 秒を 1000 分の 1 秒過ぎた時刻を表し、"12:30:20.1" は 12 時 30 分 20 秒を 10 分の 1 秒過ぎた時刻を表します。|  
   
@@ -250,7 +249,7 @@ SELECT
 ###  <a name="ExampleB"></a> B. 有効な時刻文字列リテラルを time(7) 列に挿入する  
  次の表では、**time(7)** データ型の列に挿入可能な各種の文字列リテラルと、その列に格納される値を示します。  
   
-|各種の文字列リテラル形式|挿入する文字列リテラル|格納される time(7) 値|Description|  
+|各種の文字列リテラル形式|挿入する文字列リテラル|格納される time(7) 値|[説明]|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01:123AM'|01:01:01.1230000|1 秒未満の秒の有効桁数の前にコロン (:) を付けた場合、小数点以下桁数が 3 桁を超えると、エラーが生成されます。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|01:01:01.1234567|AM または PM を指定した場合、時刻は 24 時間形式で格納され、リテラルの AM または PM は格納されません。|  
@@ -265,7 +264,7 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. date 型と time 型のそれぞれの列に対して時間の文字列リテラルを挿入する  
  次の表の 1 列目は、2 列目に示した date データ型または time データ型のデータベース テーブル列に挿入する時間の文字列リテラルを示しています。 3 列目は、データベース テーブル列に格納される値を示しています。  
   
-|挿入する文字列リテラル|[列データ型]|列に格納される値|Description|  
+|挿入する文字列リテラル|[列データ型]|列に格納される値|[説明]|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|1 秒未満の秒の有効桁数が、列に指定された値を超えた場合、エラーは生成せずに文字列が切り詰められます。|  
 |'2007-05-07'|**date**|NULL|time 値により、INSERT ステートメントが失敗します。|  
