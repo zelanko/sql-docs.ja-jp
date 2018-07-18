@@ -18,18 +18,18 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 6216ca6584c2bf6d78bb66096145cd49428398dc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257563"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051197"
 ---
 # <a name="sysspcleanuptemporalhistory-transact-sql"></a>sys.sp_cleanup_temporal_history (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-1 つのトランザクション内で構成された HISTORY_RETENTION 期間に一致する一時的な履歴テーブルからすべての行を削除します。
+1 つのトランザクション内で構成された HISTORY_RETENTION 期間に一致するテンポラル履歴テーブルからすべての行を削除します。
   
 ## <a name="syntax"></a>構文  
 ```  
@@ -48,15 +48,15 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 *row_count_var* [OUTPUT]
 
-削除された行の数を返す出力パラメーター。 このパラメーターを返すはかどうか、履歴テーブルには、列ストア インデックスがクラスター化されたが、常に 0 です。
+削除された行の数を返す出力パラメーター。 このパラメーターを返すはかどうかは、履歴テーブルに列ストア インデックスがクラスター化されたが、常に 0 です。
   
-## <a name="remarks"></a>解説
-このストアド プロシージャは、有限の保有期間を指定いるテンポラル テーブルでのみ使用できます。
-履歴テーブルからすべての期限切れの行をすぐにクリーンアップする必要がある場合にのみ、このストアド プロシージャを使用します。 同じトランザクション内のすべての対象となる行を削除するようにデータベースのログ、I/O サブシステムに大きく影響を持つことができますを知る必要があります。 
+## <a name="remarks"></a>コメント
+このストアド プロシージャは、有限のリテンション期間を指定することテンポラル テーブルでのみ使用できます。
+すぐに、履歴テーブルからすべての期限切れの行をクリーンアップする必要がある場合にのみ、このストアド プロシージャを使用します。 おく必要があります、同じトランザクション内のすべての対象となる行を削除するようにデータベース ログや I/O サブシステムに大きく影響ことができます。 
 
-常に、期限切れの通常の作業負荷と一般的なデータベースで最小限の影響を含む行を削除ことクリーンアップでは、内部のバック グラウンド タスクに依存することをお勧めします。
+常に、期限切れの一般的なデータベースと通常のワークロードに対する影響を最小限に行を削除するクリーンアップでは、内部のバック グラウンド タスクに依存することをお勧めします。
 
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  Db_owner アクセス許可が必要です。  
 
 ## <a name="example"></a>例

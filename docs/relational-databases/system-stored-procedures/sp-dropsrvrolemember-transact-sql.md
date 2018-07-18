@@ -1,5 +1,5 @@
 ---
-title: sp_dropsrvrolemember (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dropsrvrolemember (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ff304ce765010d2097c76574b0186df43d8b9104
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242414"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049370"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33242414"
   固定サーバー ロールから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインや、Windows ユーザーまたはグループを削除します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -72,18 +72,18 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  固定サーバー ロールからログインを削除するのには、sp_dropsrvrolemember のみを使用できます。 Sp_droprolemember の各を使用して、データベース ロールからメンバーを削除します。  
   
  Sa ログインは、どの固定サーバー ロールから削除できません。  
   
  sp_dropsrvrolemember は、ユーザー定義のトランザクション内で実行できません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  Sysadmin 固定サーバー ロール、または ALTER ANY LOGIN アクセス許可の両方のサーバーと、メンバーの削除元となるロールのメンバーシップでのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ログイン`JackO`から、`sysadmin`固定サーバー ロール。  
+ 次の例では、ログインを削除する`JackO`から、`sysadmin`固定サーバー ロール。  
   
 ```  
 EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';  
@@ -94,7 +94,7 @@ EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember の各&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

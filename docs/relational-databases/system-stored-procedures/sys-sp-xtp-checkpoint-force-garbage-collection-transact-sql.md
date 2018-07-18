@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4f5968d9a68bef9b9bb6b107d0710d88c7fe5e5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254488"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037706"
 ---
 # <a name="sysspxtpcheckpointforcegarbagecollection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 ## <a name="result-set"></a>結果セット  
  返される行には次の情報が含まれます。  
   
-|列|Description|  
+|[列]|説明|  
 |------------|-----------------|  
 |num_collected_items|ファイルストリーム ガベージ コレクションに移動されたファイルの数を示します。 これらのファイルのログ シーケンス番号 (LSN) は、ログの切り捨てポイントの LSN よりも小さい値になっています。|  
 |num_marked_for_collection_items|ログの最後の LSN のログ ブロック ID によって更新された LSN を持つデータ ファイルやデルタ ファイルの数を示します。|  
 |last_collected_xact_seqno|ファイルストリーム ガベージ コレクションにファイルがすべて移動された場合、その最後のファイルに対応する LSN を返します。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  データベース所有者の権限が必要です。  
   
 ## <a name="sample"></a>サンプル  

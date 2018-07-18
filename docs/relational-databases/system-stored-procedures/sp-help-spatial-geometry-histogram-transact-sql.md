@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geometry_histogram (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_help_spatial_geometry_histogram (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: d12665106633cbbdf46284089ef5f7eb79d7ccbf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251343"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049310"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,27 +73,27 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  "Y の最大値" 境界ボックス プロパティです。 *ymax*は、 **float**、既定値はありません。  
   
  [  **@sample =** ] **'***サンプル***'**  
- 使用するテーブルの割合を指定します。 有効な値は、0 ～ 100 です。 *サンプル*は、 **float**です。 既定値は 100 です。  
+ 使用するテーブルの割合を指定します。 有効な値は、0 ～ 100 です。 *サンプル*は、 **float**します。 既定値は 100 です。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  テーブルの値が返されます。 テーブルの列の内容を次の表に示します。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|各セルの一意な ID を表します。値は 1 から開始されます。|  
 |**セル**|**geometry**|それぞれのセルを表す四角形です。 セルの形は、空間インデックス作成用に使用されたセルの形と同じです。|  
 |**row_count**|**bigint**|セルに接しているかまたはセルを含む空間オブジェクトの数を示します。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  ユーザーのメンバーである必要があります、**パブリック**ロール。 サーバーとオブジェクトに対する READ ACCESS 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  SSMS 空間タブでは、結果がグラフィカルに表示されます。 空間ウィンドウに対して結果をクエリすることにより、結果アイテムの概算数を取得できます。 テーブル内のオブジェクトは 1 つ以上のセルをカバーしている場合があるため、セルの合計が実際のオブジェクトの数より大きくなることがあります。  
   
- 境界ボックスの外部にあるオブジェクトまたは境界ボックスの境界に接しているオブジェクトの数を格納する追加の行が結果セットに追加される場合があります。 **Cellid**この行の 0 は、および**セル**この行が含まれている、 **LineString**を表す、境界ボックス。 この行は、境界ボックスの外部の領域全体を表します。  
+ 境界ボックスの外部にあるオブジェクトまたは境界ボックスの境界に接しているオブジェクトの数を格納する追加の行が結果セットに追加される場合があります。 **Cellid** 0 は、この行の**セル**この行が含まれている、 **LineString**境界ボックスを表します。 この行は、境界ボックスの外部の領域全体を表します。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、サンプル テーブルを作成し、呼び出して**sp_help_spatial_geometry_histogram**テーブルにします。  
+ 次の例は、サンプル テーブルを作成しを呼び出して**sp_help_spatial_geometry_histogram**テーブルにします。  
   
  `USE AdventureWorksDW2012`  
   

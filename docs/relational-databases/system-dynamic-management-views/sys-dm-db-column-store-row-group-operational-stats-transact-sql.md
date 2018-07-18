@@ -18,20 +18,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 655f5838456fd72566405c453cecfd8858d7d6dd
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048830"
 ---
 # <a name="sysdmdbcolumnstorerowgroupoperationalstats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  返します。 現在行レベルの I/O、ロック、および列ストア インデックスに圧縮された行グループのアクティビティをメソッドにアクセスします。 使用して**sys.dm_db_column_store_row_group_operational_stats**時間の長さを追跡するためにユーザー クエリする必要があります、圧縮された行グループまたは列ストア インデックスのパーティションに対する読み取りまたは書き込みを待機し、発生している行グループを識別重大な I/O 動作やホット スポットが存在します。  
+  返します。 現在行レベルの I/O、ロック、および列ストア インデックスに圧縮された行グループのアクティビティをメソッドにアクセスします。 使用**sys.dm_db_column_store_row_group_operational_stats**時間の長さを追跡するためにユーザー クエリする必要があります、圧縮された行グループまたは列ストア インデックスのパーティションに対する読み取りまたは書き込みを待機し、発生している行グループを識別重大な I/O 動作やホット スポット。  
   
  メモリ内列ストア インデックスは、この DMV には表示されません。  
  
  
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|列ストア インデックスを持つテーブルの ID です。|  
 |**index_id**|**int**|列ストア インデックスの ID。|  
@@ -44,18 +45,18 @@ ms.lasthandoff: 05/23/2018
 |**rowgroup_lock_wait_count**|**bigint**|SQL の最後の再起動以降、この行グループのロックで、データベース エンジン待機を累積回数。|  
 |**rowgroup_lock_wait_in_ms**|**bigint**|SQL の最後の再起動以降のこの行グループのロックで待機したデータベース エンジンに累積ミリ秒数をします。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  次の権限が必要です。  
   
 -   Object_id で指定されたテーブルに対する CONTROL 権限。  
   
--   オブジェクトのワイルドカード @ を使用して、データベース内のすべてのオブジェクトに関する情報を返す VIEW DATABASE STATE 権限*object_id* = NULL  
+-   @ のオブジェクトのワイルドカードを使用して、データベース内のすべてのオブジェクトに関する情報を返す VIEW DATABASE STATE 権限*object_id* = NULL  
   
  VIEW DATABASE STATE 権限を許可すると、特定のオブジェクトに対して CONTROL 権限が拒否されていたとしても、データベース内のすべてのオブジェクトを取得することができます。  
   
- VIEW DATABASE STATE 権限を拒否すると、特定のオブジェクトに対する CONTROL 権限が許可されていたとしても、そのデータベース内のどのオブジェクトも取得できません。 データベースのワイルドカード @*database_id*= NULL を指定すると、データベースは省略します。  
+ VIEW DATABASE STATE 権限を拒否すると、特定のオブジェクトに対する CONTROL 権限が許可されていたとしても、そのデータベース内のどのオブジェクトも取得できません。 ときに、データベースのワイルドカード @*database_id*= NULL を指定すると、データベースを省略するとします。  
   
- 詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)です。  
+ 詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)します。  
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

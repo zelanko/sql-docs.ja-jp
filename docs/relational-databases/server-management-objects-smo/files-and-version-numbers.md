@@ -1,5 +1,5 @@
 ---
-title: ファイルとバージョン番号 |Microsoft ドキュメント
+title: ファイルとバージョン番号 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -23,23 +23,23 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 10e11076ce023a3d969b4ba95a30c15de43eafa6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966517"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046230"
 ---
 # <a name="files-and-version-numbers"></a>ファイルとバージョン番号
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  必要なすべての SQL Server 管理オブジェクト (SMO) コンポーネントが Microsoft.SqlServer.SqlManagementObjects NuGet パッケージに含まれています。 SMO は複数のマネージ アセンブリに実装されます。 クライアント上またはサーバー上のいずれかで SMO アプリケーションを開発することができます。  
+  必要なすべての SQL Server 管理オブジェクト (SMO) コンポーネントは、Microsoft.SqlServer.SqlManagementObjects NuGet パッケージに含まれています。 SMO は複数のマネージド アセンブリに実装されます。 クライアント上またはサーバー上のいずれかで SMO アプリケーションを開発することができます。  
 
 >>[!Important]
-SMO アセンブリのファイル バージョンは、メジャーとして表示されます。**0**します。Build.Revision です。 埋め込まれたアセンブリのバージョンはメジャーです。**100**です。Build.Revision です。 これは、1 つの更新には影響しません、それ以外の各アプリケーションで使用される SMO のバージョンを別々 に保管します。
+SMO アセンブリのファイル バージョンは、メジャーとして表示されます。**0**します。Build.Revision します。 埋め込まれたアセンブリのバージョンがメジャー。**100**します。Build.Revision します。 これは、1 つの更新で、その他の要素に影響しませんは、各アプリケーションで使用される SMO のバージョンを分離します。
 >>
->>このためする必要があります**いない**これらのバージョンのアセンブリをグローバル アセンブリ キャッシュ (GAC) にインストールします。 そうになる場合、他のアプリケーションなど[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio を中断します。 
+>>このためする必要があります**いない**これらのバージョンのアセンブリをグローバル アセンブリ キャッシュ (GAC) にインストールします。 そう考えられる原因、他のアプリケーションなど[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio を中断します。 
   
-|ファイル|Description|  
+|ファイル|説明|  
 |-----------|-----------------|  
 |Microsoft.SqlServer.ConnectionInfo.dll|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続のサポートが含まれています。|  
 |Microsoft.SqlServer.ServiceBrokerEnum.dll|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker のプログラミングのサポートが含まれています。 Service Broker にアクセスするプログラムにのみ必要です。|  

@@ -1,5 +1,5 @@
 ---
-title: 入力システム (XQuery) |Microsoft ドキュメント
+title: 入力システム (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -32,10 +32,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dcdaf7607d425dec01a9f2cf8c87ff55e5441aae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061470"
 ---
 # <a name="type-system-xquery"></a>型システム (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +51,14 @@ ms.lasthandoff: 05/03/2018
   
 -   型指定された値とノードの文字列値。  
   
--   [Data 関数&#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md)と[string 関数&#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)です。  
+-   [データ関数&#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md)と[string 関数&#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)します。  
   
 -   式から返されるシーケンス型の照合。  
   
 ## <a name="built-in-types-of-xml-schema"></a>XML スキーマの組み込み型  
- XML スキーマの組み込み型には、xs という定義済みの名前空間プレフィックスが付いています。 これらの種類のものが**xs:integer**と**xs:string**です。 これらの組み込み型はすべてサポートされます。 XML スキーマ コレクションを作成するときに、これらの型を使用できます。  
+ XML スキーマの組み込み型には、xs という定義済みの名前空間プレフィックスが付いています。 これらの種類のものが**xs:integer**と**xs:string**します。 これらの組み込み型はすべてサポートされます。 XML スキーマ コレクションを作成するときに、これらの型を使用できます。  
   
- 型指定された XML のクエリを実行するとき、ノードの静的および動的な型は、クエリの対象の列または変数に関連付けられた XML スキーマ コレクションによって決まります。 静的および動的な型の詳細については、次を参照してください。[式のコンテキストとクエリの評価&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)です。 次のクエリを指定するなど、型指定されたに対して**xml**列 (`Instructions`)。 式を使用して`instance of`ことを確認するの型指定された値、`LotSize`属性が返されるは、`xs:decimal`型です。  
+ 型指定された XML のクエリを実行するとき、ノードの静的および動的な型は、クエリの対象の列または変数に関連付けられた XML スキーマ コレクションによって決まります。 静的および動的な型の詳細については、次を参照してください。[式コンテキストとクエリの評価&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)します。 次のクエリを指定するなど、型指定されたに対して**xml**列 (`Instructions`)。 式を使用して`instance of`ことを確認する型指定された値の`LotSize`返される属性は`xs:decimal`型。  
   
 ```  
 SELECT Instructions.query('  
@@ -71,15 +72,15 @@ WHERE ProductModelID=7
  この型指定情報は、列に関連付けられた XML スキーマ コレクションによって提供されます。  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>XPath データ型の名前空間で定義されている型  
- 定義された型、 **http://www.w3.org/2004/07/xpath-datatypes**名前空間の定義済みのプレフィックスがある**xdt**です。 これらの型には、次のことが当てはまります。  
+ 定義された型、 **http://www.w3.org/2004/07/xpath-datatypes**名前空間の定義済みのプレフィックスがある**xdt**します。 これらの型には、次のことが当てはまります。  
   
--   XML スキーマ コレクションを作成しているときは、これらの型を使用できません。 これらの型は、XQuery 型システムで使用されの使用[XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)です。 たとえば、アトミック型にキャストできます**xdt:untypedAtomic**で、 **xdt**名前空間。  
+-   XML スキーマ コレクションを作成しているときは、これらの型を使用できません。 これらの型が、XQuery 型システムで使用され、使わ[XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)します。 たとえば、アトミック型にキャストできます**xdt:untypedAtomic**の**xdt**名前空間。  
   
--   型指定されていない XML のクエリを実行するには、要素ノードの静的および動的な型は**xdt: 型指定されていない**、および属性値の型は**xdt:untypedAtomic**です。 結果、 **query()** メソッドが指定されていない XML を生成します。 つまり、XML ノードとして返される**xdt: 型指定されていない**と**xdt:untypedAtomic**、それぞれします。  
+-   型指定されていない XML のクエリを実行する場合、要素ノードの静的および動的な型は**xdt: 型指定されていない**、および属性値の型は**xdt:untypedAtomic**します。 結果、 **query()** メソッドに型指定されていない XML が生成されます。 これは、XML ノードとして返されることを意味**xdt: 型指定されていない**と**xdt:untypedAtomic**、それぞれします。  
   
--   **Xdt:dayTimeDuration**と**xdt:yearMonthDuration**型はサポートされません。  
+-   **Xdt:dayTimeDuration**と**xdt:yearMonthDuration**型がサポートされていません。  
   
- 次の例では、型指定されていない XML 変数に対してクエリを指定しています。 式、 `data(/a[1]`)、1 つのアトミック値のシーケンスを返します。 `data()`関数要素の型指定された値を返します`<a>`です。 クエリ対象の XML は型指定されていないので、返される値は `xdt:untypedAtomic` 型です。 したがって、 `instance of` true を返します。  
+ 次の例では、型指定されていない XML 変数に対してクエリを指定しています。 式では、 `data(/a[1]`)、1 つのアトミック値のシーケンスを返します。 `data()`関数要素の型指定された値を返します`<a>`します。 クエリ対象の XML は型指定されていないので、返される値は `xdt:untypedAtomic` 型です。 そのため、 `instance of` true を返します。  
   
 ```  
 DECLARE @x xml  
@@ -87,7 +88,7 @@ SET @x='<a>20</a>'
 SELECT @x.query( 'data(/a[1]) instance of xdt:untypedAtomic' )  
 ```  
   
- 次の例の式 (`/a[1]`) は、型指定された値を取得するのではなく、要素 `<a>` という 1 つの要素のシーケンスを返します。 `instance of`式では、要素のテストを使用して、式によって返される値がの要素ノードであることを確認します`xdt:untyped type`です。  
+ 次の例の式 (`/a[1]`) は、型指定された値を取得するのではなく、要素 `<a>` という 1 つの要素のシーケンスを返します。 `instance of`式では、要素のテストを使用して、式によって返される値が要素ノードであることを確認`xdt:untyped type`します。  
   
 ```  
 DECLARE @x xml  
@@ -104,15 +105,15 @@ SELECT @x.query( '/a[1] instance of element()')
 >  型指定された XML インスタンスにクエリを実行して、クエリ式に parent 軸が含まれるときは、結果のノードの静的な型情報は使用できなくなります。 ただし、動的な型はノードに関連付けられたままです。  
   
 ## <a name="typed-value-vs-string-value"></a>型指定された値と文字列値  
- どのノードにも型指定された値と文字列値があります。 型指定された XML データの場合、型指定された値の型は、クエリ対象の列または変数に関連付けられた XML スキーマ コレクションによって提供されます。 型指定された値の型には、型指定されていない XML データの**xdt:untypedAtomic**です。  
+ どのノードにも型指定された値と文字列値があります。 型指定された XML データの場合、型指定された値の型は、クエリ対象の列または変数に関連付けられた XML スキーマ コレクションによって提供されます。 XML データの型指定されていない、型指定された値の型は**xdt:untypedAtomic**します。  
   
  使用することができます、 **data()** または**string()** ノードの値を取得します。  
   
--   [Data 関数&#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md)ノードの型指定された値を返します。  
+-   [データ関数&#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md)ノードの型指定された値を返します。  
   
 -   [String 関数&#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md)ノードの文字列値を返します。  
   
- 次の XML スキーマ コレクションで、<`root`>、整数型の要素が定義されています。  
+ 次の XML スキーマ コレクションで、<`root`> 整数型の要素が定義されています。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -139,7 +140,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- 次の例では、`LaborHours` 属性の合計を計算しています。 `data()`関数の型指定された値を取得する`LaborHours`からすべての属性、<`Location`> 製品モデルの要素。 関連付けられている XML スキーマに従って、`Instruction`列、`LaborHours`の**xs:decimal**型です。  
+ 次の例では、`LaborHours` 属性の合計を計算しています。 `data()`関数の型指定された値を取得する`LaborHours`からすべての属性、<`Location`> 製品モデルの要素。 関連付けられている XML スキーマに従って、`Instruction`列、`LaborHours`の**xs:decimal**型。  
   
 ```  
 SELECT Instructions.query('   
@@ -153,7 +154,7 @@ WHERE ProductModelID=7
  このクエリにより、結果として 12.75 が返されます。  
   
 > [!NOTE]  
->  明示的な使用、 **data()** この例では関数は、例示のみです。 指定されていない場合**sum()** 暗黙的に適用されます、 **data()** ノードの型指定された値を抽出する関数。  
+>  明示的な使用、 **data()** 関数がこの例では、例示のみを目的。 指定されていない場合**sum()** 暗黙的に適用されます、 **data()** ノードの型指定された値を抽出する関数。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

@@ -1,5 +1,5 @@
 ---
-title: プロパティ (XMLA) |Microsoft ドキュメント
+title: プロパティ (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bca744567d0feabafbcd489f619d76be9f2ade06
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577964"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037414"
 ---
-# <a name="xml-elements---properties"></a>プロパティの XML 要素
+# <a name="xml-elements---properties"></a>XML 要素 - プロパティ
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   XML for Analysis (XMLA) プロトコルでは、XMLA ヘッダー、メソッド、オブジェクト、コマンド、およびデータ型のプロパティ情報やプロパティ値を表すために、XML 要素を使用します。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34577964"
 |[ApplyCompression 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md)||  
 |[要素の属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)||  
 |[AttributeName 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)||  
-|[要素の属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md)||  
+|[Attributes 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md)||  
 |[要素を軸&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)||  
 |[AxesInfo 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md)||  
 |[Axis 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)||  
@@ -40,8 +40,8 @@ ms.locfileid: "34577964"
 |[CancelAssociated 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)||  
 |[Capability 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)||  
 |[要素のキャプション&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/caption-element-xmla.md)||  
-|[要素のセルの&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)||  
-|[要素のセルの&#40;MDDataSet&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)||  
+|[セル要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)||  
+|[セル要素&#40;MDDataSet&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)||  
 |[CellData 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md)||  
 |[CellInfo 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cellinfo-element-xmla.md)||  
 |[CellOrdinal 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cellordinal-element-xmla.md)||  
@@ -67,7 +67,7 @@ ms.locfileid: "34577964"
 |[DbTableName 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/dbtablename-element-xmla.md)||  
 |[DeleteWithDescendants 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/deletewithdescendants-element-xmla.md)||  
 |[Description 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md)||  
-|[要素の寸法&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)||  
+|[ディメンション要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)||  
 |[DisplayInfo 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/displayinfo-element-xmla.md)||  
 |[Error 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)||  
 |[ErrorCode 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md)||  
@@ -92,15 +92,15 @@ ms.locfileid: "34577964"
 |[MeasureGroupID 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/measuregroupid-element-xmla.md)||  
 |[Member 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)||  
 |[Members 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)||  
-|[メッセージ要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)||  
+|[要素をメッセージ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)||  
 |[要素をメッセージ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)||  
 |[Mode 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)||  
 |[MoveWithDescendants 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/movewithdescendants-element-xmla.md)||  
 |[要素名を指定&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)||  
 |[要素名を指定&#40;パラメーター&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-parameter-xmla.md)||  
 |[新しい要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/new-element-xmla.md)||  
-|[オブジェクトの要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)||  
-|[オブジェクトの要素&#40;ディメンション&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-dimension-xmla.md)||  
+|[要素をオブジェクト&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)||  
+|[要素をオブジェクト&#40;ディメンション&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-dimension-xmla.md)||  
 |[ObjectDefinition 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/objectdefinition-element-xmla.md)||  
 |[OlapInfo 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)||  
 |[Optimization 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/optimization-element-xmla.md)||  
@@ -114,38 +114,38 @@ ms.locfileid: "34577964"
 |[Properties 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)||  
 |[PropertyList 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)||  
 |[要素をクエリ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)||  
-|[Query 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)||  
+|[要素を照会&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)||  
 |[RequestType 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)||  
 |[RestrictionList 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md)||  
 |[Restrictions 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/restrictions-element-xmla.md)||  
 |[要素を結果&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md)||  
 |[要素を返す&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)||  
-|[ルート要素の&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)||  
-|[要素を行&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)||  
+|[ルート要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)||  
+|[要素の行&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)||  
 |[セキュリティ要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md)||  
 |[SessionID 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/sessionid-element-xmla.md)||  
 |[SkippedLevels 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/skippedlevels-element-xmla.md)||  
 |[Source 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)||  
 |[Source 要素&#40;エラー&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)||  
 |[Source 要素&#40;同期&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-synchronize-xmla.md)||  
-|[要素のソース&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md)||  
+|[要素をソース&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md)||  
 |[SPID 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/spid-element-xmla.md)||  
 |[要素を手順&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/steps-element-xmla.md)||  
 |[Storage 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/storage-element-xmla.md)||  
 |[SynchronizeSecurity 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)||  
 |[TableNotification 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md)||  
 |[TableNotifications 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tablenotifications-element-xmla.md)||  
-|[要素をターゲット&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)||  
+|[Target 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)||  
 |[要素の時刻&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/time-element-xmla.md)||  
 |[Translation 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)||  
 |[Translations 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/translations-element-xmla.md)||  
-|[Tuple 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)||  
+|[タプル要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)||  
 |[Tuples 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)||  
 |[Type 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/type-element-xmla.md)||  
 |[UName 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/uname-element-xmla.md)||  
 |[UnaryOperator 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/unaryoperator-element-xmla.md)||  
-|[要素を値&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/value-element-xmla.md)||  
-|[要素を値&#40;パラメーター&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/value-element-parameter-xmla.md)||  
+|[要素の値&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/value-element-xmla.md)||  
+|[要素の値&#40;パラメーター&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/value-element-parameter-xmla.md)||  
 |[Warning 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md)||  
 |[場所要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)||  
 |[WritebackTableCreation 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/writebacktablecreation-element-xmla.md)||  

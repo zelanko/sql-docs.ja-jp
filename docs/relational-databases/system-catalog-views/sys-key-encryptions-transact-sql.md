@@ -1,5 +1,5 @@
 ---
-title: sys.key_encryptions (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.key_encryptions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 160c4852299ff710c4c281dc93231a6385194376
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179698"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061530"
 ---
 # <a name="syskeyencryptions-transact-sql"></a>sys.key_encryptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,16 +38,16 @@ ms.locfileid: "33179698"
   CREATE SYMMETRIC KEY ステートメントの ENCRYPTION BY 句で指定された対称キーの暗号化ごとに 1 行のデータを返します。  
 
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |------------------|----------------|-----------------|  
 |**key_id**|**int**|暗号化されたキーの ID。|  
 |**拇印**|**varbinary(32)**|キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された対称キーの GUID。|  
 |**crypt_type**|**char(4)**|暗号化の種類。<br /><br /> ESKS = 対称キーによる暗号化<br /><br /> ESKP、ESP2、または ESP3 = パスワードによる暗号化<br /><br /> EPUC = 証明書による暗号化<br /><br /> EPUA = 非対称キーによる暗号化<br /><br /> ESKM = マスター キーによる暗号化|  
-|**crypt_type_desc**|**nvarchar(60)**|暗号化の種類の説明:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(以降で[!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)]CSS で使用するためのバージョン番号が含まれています)。<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> 注: Windows DPAPI は、サービス マスター _ キーの保護に使用されます。|  
+|**crypt_type_desc**|**nvarchar(60)**|暗号化の種類の説明です。<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(以降で[!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)]CSS で使用するためのバージョン番号が含まれています)。<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> 注: Windows DPAPI は、サービス マスター _ キーを保護するために使用されます。|  
 |**crypt_property**|**varbinary(max)**|署名された、または暗号化されたビット。|  
   
-## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+## <a name="permissions"></a>アクセス許可  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

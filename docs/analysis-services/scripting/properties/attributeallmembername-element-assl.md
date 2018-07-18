@@ -1,5 +1,5 @@
 ---
-title: AttributeAllMemberName 要素 (ASSL) |Microsoft ドキュメント
+title: AttributeAllMemberName 要素 (ASSL) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f93d76fcccfa10425b49d15fd7fe695e1c243f90
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34033523"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052699"
 ---
 # <a name="attributeallmembername-element-assl"></a>AttributeAllMemberName 要素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34033523"
   
 |特性|説明|  
 |--------------------|-----------------|  
-|データ型と長さ|文字列|  
+|データ型と長さ|String|  
 |既定値|なし|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
@@ -43,14 +43,14 @@ ms.locfileid: "34033523"
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[ディメンション](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
+|親要素|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  親に対応する要素**AttributeAllMemberName**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Dimension>します。  
   
 ## <a name="see-also"></a>参照  
  [構成、&#40;すべて&#41;属性階層のレベル](../../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)   
- [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_dropuser (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_dropuser (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,19 +23,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 9af8a740ae349f748acc6c8385d95b97a0e2490d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243199"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036990"
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のデータベースからデータベース ユーザーを削除します。 **sp_dropuser**の旧バージョンとの互換性を提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  現在のデータベースからデータベース ユーザーを削除します。 **sp_dropuser**の旧バージョンとの互換性を備えている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,22 +53,22 @@ sp_dropuser [ @name_in_db = ] 'user'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_dropuser**実行**sp_revokedbaccess**を現在のデータベースからユーザーを削除します。  
+## <a name="remarks"></a>コメント  
+ **sp_dropuser**実行**sp_revokedbaccess**現在のデータベースからユーザーを削除します。  
   
- 使用して**sp_helpuser**現在のデータベースから削除できるユーザー名の一覧を表示します。  
+ 使用**sp_helpuser**現在のデータベースから削除できるユーザー名の一覧を表示します。  
   
  データベース ユーザーを削除すると、そのユーザーの別名も削除されます。 ユーザーが、ユーザー名と同じ空のスキーマを所有している場合、そのスキーマは削除されます。 ユーザーがデータベース内にその他のセキュリティ保護可能なリソースを所有している場合、ユーザーは削除されません。 まず、オブジェクトの所有権を別のプリンシパルに譲渡する必要があります。 詳細については、次を参照してください。 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md). データベース ユーザーを削除すると、そのユーザーに関連付けられている権限が自動的に削除されます。ユーザーは、メンバーとなっているデータベース ロールから削除されます。  
   
- **sp_dropuser**データベースの所有者を削除するのには使用できません (**dbo**) **INFORMATION_SCHEMA**ユーザー、または**ゲスト**からユーザーを**マスター**または**tempdb**データベース。 システム以外のデータベース、`EXEC sp_dropuser 'guest'`ユーザーの CONNECT 権限を取り消す**ゲスト**です。 ユーザー自身は残ります。  
+ **sp_dropuser**データベース所有者を削除するのには使用できません (**dbo**) **INFORMATION_SCHEMA**ユーザー、または**ゲスト**からユーザー、**マスター**または**tempdb**データベース。 システム以外のデータベース、`EXEC sp_dropuser 'guest'`ユーザーの CONNECT 権限を取り消す**ゲスト**します。 ユーザー自身は残ります。  
   
  **sp_dropuser**ユーザー定義のトランザクション内で実行することはできません。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY USER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ユーザーを削除する`Albert`現在のデータベースからです。  
+ 次の例では、ユーザーを削除する`Albert`現在のデータベースから。  
   
 ```  
 EXEC sp_dropuser 'Albert';  
@@ -78,7 +78,7 @@ GO
 ## <a name="see-also"></a>参照  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [DROP USER & #40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [sp_revokedbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

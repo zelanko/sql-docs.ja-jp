@@ -1,5 +1,5 @@
 ---
-title: sys.fn_trace_geteventinfo (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_trace_geteventinfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3c67450da61537edbf8164e343be2f279aa6ac44
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33234508"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051310"
 ---
 # <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ fn_trace_geteventinfo ( trace_id )
  *trace_id*  
  トレースの ID を指定します。 *trace_id*は**int**、既定値はありません。  
   
-## <a name="tables-returned"></a>返されたテーブル  
+## <a name="tables-returned"></a>返されるテーブル  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

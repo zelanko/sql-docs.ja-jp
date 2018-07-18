@@ -1,5 +1,5 @@
 ---
-title: .NET 環境での SQLXML 機能へのアクセス |Microsoft ドキュメント
+title: .NET 環境での SQLXML 機能へのアクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 023ffb86d8be4e2a6ba3dd897bdd64460824926b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968077"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051480"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>.NET 環境での SQLXML 機能へのアクセス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   この例では、次のことについて説明します。  
   
--   使用する[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML マネージ クラス (Microsoft.Data.SqlXml) が Microsoft にアクセスする[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境。  
+-   使用する[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML マネージ クラス (Microsoft.Data.SqlXml) Microsoft へのアクセスに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境。  
   
 -   .NET Framework 環境で生成された DiffGram を使って [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルにデータ更新を適用する方法  
   
@@ -77,7 +77,7 @@ class Test
 }  
 ```  
   
- **例をテストします。**  
+ **この例をテストします。**  
   
  この例をテストするには、コンピューターに [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework がインストールされている必要があります。  
   

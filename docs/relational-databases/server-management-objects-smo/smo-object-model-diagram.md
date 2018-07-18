@@ -1,5 +1,5 @@
 ---
-title: SMO オブジェクト モデル ダイアグラム |Microsoft ドキュメント
+title: SMO オブジェクト モデル ダイアグラム |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7e23c88851afef3d990c3dcac8d83bd7091a72f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966157"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046220"
 ---
 # <a name="smo-object-model-diagram"></a>SMO オブジェクト モデル ダイアグラム
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "32966157"
   
  ![階層リレーションシップを示す図](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "階層リレーションシップを示す図")  
   
- ![オブジェクト モデルでは、階層を表示するツリー ビュー](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "オブジェクト モデルでは、階層を表示するツリー ビュー")  
+ ![オブジェクト モデル、階層を示すツリー ビュー](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "オブジェクト モデル、階層を示すツリー ビュー")  
   
- ![オブジェクト モデルでは、階層を表示するツリー ビュー](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "オブジェクト モデルでは、階層を表示するツリー ビュー")  
+ ![オブジェクト モデル、階層を示すツリー ビュー](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "オブジェクト モデル、階層を示すツリー ビュー")  
   
- ![オブジェクト モデルでは、階層を表示するツリー ビュー](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "オブジェクト モデルでは、階層を表示するツリー ビュー")  
+ ![オブジェクト モデル、階層を示すツリー ビュー](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "オブジェクト モデル、階層を示すツリー ビュー")  
   
   

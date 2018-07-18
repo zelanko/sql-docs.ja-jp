@@ -1,5 +1,5 @@
 ---
-title: ADO (SQLXML 4.0) を使用してアップデート グラムを実行 |Microsoft ドキュメント
+title: ADO (SQLXML 4.0) を使用してアップデート グラムの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 95272db4677cafad6f1e3c84f14b5705dd5f4718
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971977"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051460"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO を使用した、アップデートグラムの実行 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "32971977"
   
  サンプル アプリケーションの処理は次のとおりです。  
   
--   **Conn**オブジェクト (**ADODB です。接続**) の実行中のインスタンスへの接続を確立[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定のサーバー コンピューターにします。  
+-   **Conn**オブジェクト (**ADODB します。接続**) の実行中のインスタンスへの接続を確立[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定のサーバー コンピューターにします。  
   
--   **Cmd**オブジェクト (**ADODB.Command**) 確立された接続で実行します。  
+-   **Cmd**オブジェクト (**ADODB.Command**) で確立された接続を実行します。  
   
 -   コマンド言語が DBGUID_MSSQLXML に設定されます。  
   
 -   アップデート グラムがコマンド ストリームにコピーされます (**strmIn**)。  
   
--   コマンドの出力ストリームに設定されている、 **StrmOut**オブジェクト (**ADODB です。ストリーム**) が表示されるデータが返されました。  
+-   設定されているコマンドの出力ストリーム、 **StrmOut**オブジェクト (**ADODB します。Stream**) が表示されるデータが返されます。  
   
 -   最後にコマンド (アップデートグラム) が実行されます。  
   

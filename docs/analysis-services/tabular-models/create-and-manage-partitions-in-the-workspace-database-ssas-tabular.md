@@ -1,5 +1,5 @@
 ---
-title: 作成し、ワークスペース データベースでパーティションを管理する |Microsoft ドキュメント
+title: ワークスペース データベースでのパーティション作成し、管理 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3912002c016508b36f200f2786e2d5f00e05c48b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045360"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database"></a>ワークスペース データベースでのパーティション作成し、管理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  パーティションは、テーブルを論理的な部分に分割します。 その後、各パーティションは、個別に、または他のパーティションと並列に処理 (更新) することができます。 パーティションによって、大規模なデータベースのスケーラビリティと管理性を向上させることができます。 既定では、各テーブルに 1 つのパーティションがあり、すべての列がこのパーティションに含まれます。 このトピックのタスクを作成しを使用して、モデル ワークスペース データベースでパーティションを管理する方法について説明、 **Partition Manager**  ダイアログ ボックス[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+  パーティションは、テーブルを論理的な部分に分割します。 その後、各パーティションは、個別に、または他のパーティションと並列に処理 (更新) することができます。 パーティションによって、大規模なデータベースのスケーラビリティと管理性を向上させることができます。 既定では、各テーブルに 1 つのパーティションがあり、すべての列がこのパーティションに含まれます。 このトピックのタスクでは、 **[パーティション マネージャー]** ダイアログ ボックスを使用して、モデル ワークスペース データベースでパーティションを作成し管理する方法について説明します。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
- 別の Analysis Services インスタンスにモデルが配置された後、データベース管理者は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して (配置済みの) モデルでパーティションを作成し管理できます。 詳細については、次を参照してください。[作成および表形式モデル パーティションの管理](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)です。  
+ 別の Analysis Services インスタンスにモデルが配置された後、データベース管理者は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して (配置済みの) モデルでパーティションを作成し管理できます。 詳細については、次を参照してください。[の作成とテーブル モデル パーティションの管理](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)します。  
   
 > [!NOTE]  
 >  [パーティション マネージャー] ダイアログ ボックスを使用して、モデル ワークスペース データベースのパーティションを結合することはできません。 パーティションが結合できるのは、配置されたモデルで [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用した場合のみです。  

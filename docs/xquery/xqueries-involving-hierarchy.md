@@ -1,5 +1,5 @@
 ---
-title: 階層に関連する XQueries |Microsoft ドキュメント
+title: 階層に関連する XQueries |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,21 +24,21 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dd9e93969bd8677311edc22ae61f314c8b89c5d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077229"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048292"
 ---
 # <a name="xqueries-involving-hierarchy"></a>階層に関係する XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ほとんど**xml**内の列を入力、 **AdventureWorks**データベースは、半構造化ドキュメント。 したがって、各行に格納されたドキュメントは異なって見える場合があります。 このトピックのクエリ サンプルでは、このようなさまざまなドキュメントから情報を抽出する方法について示します。  
+  ほとんど**xml**内の列を入力、 **AdventureWorks**データベースは半構造化ドキュメント。 したがって、各行に格納されたドキュメントは異なって見える場合があります。 このトピックのクエリ サンプルでは、このようなさまざまなドキュメントから情報を抽出する方法について示します。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 製造命令ドキュメントから、ワーク センターの場所とその場所の最初の製造手順を取得  
- 製品モデル 7 の場合、クエリを含む XML を構築、<`ManuInstr`> 要素と**ProductModelID**と**ProductModelName**属性、および 1 つまたは複数 <`Location`>子要素です。  
+ クエリに XML を構築、製品モデル 7 の <`ManuInstr`> 要素で**ProductModelID**と**ProductModelName**属性、および 1 つまたは複数 <`Location`>子要素。  
   
  各 <`Location`> 要素には、一連の独自の属性と 1 つの <`step`> 子要素があります。 これは、<`step`> 子要素は、ワーク センター拠点で最初の製造手順です。  
   
@@ -92,7 +92,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. AdditionalContactInfo 列のすべての電話番号の検索  
- 次のクエリは、階層全体を検索することにより、特定の顧客の連絡先の追加の電話番号を取得、<`telephoneNumber`> 要素。 <`telephoneNumber`> 要素どこでも表示できます、階層内のクエリでは子孫や自己演算子 (//) で検索します。  
+ 次のクエリは、階層全体を検索して特定の顧客の連絡先の追加の電話番号を取得します <`telephoneNumber`> 要素。 <`telephoneNumber`> 要素はどこにでも表示、階層では、クエリで子孫や自己演算子を使用 (//) で検索します。  
   
 ```  
 SELECT AdditionalContactInfo.query('  
@@ -119,9 +119,9 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- 具体的には、上位レベルの電話番号のみを取得する、<`telephoneNumber`> の子要素 <`AdditionalContactInfo`>、クエリの FOR 式を変更するには  
+ 具体的には、最上位レベルの電話番号のみを取得する、<`telephoneNumber`> の子要素 <`AdditionalContactInfo`>、クエリの FOR 式を変更するには  
   
- `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`」を参照してください。  
+ `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`。  
   
 ## <a name="see-also"></a>参照  
  [XQuery の基礎](../xquery/xquery-basics.md)   

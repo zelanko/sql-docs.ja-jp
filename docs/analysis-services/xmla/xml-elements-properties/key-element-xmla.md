@@ -1,5 +1,5 @@
 ---
-title: キーの要素 (XMLA) |Microsoft ドキュメント
+title: キーの要素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bea00c5b5fdff010d667db19ef3af28284ce3ed9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575784"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036920"
 ---
 # <a name="key-element-xmla"></a>Key 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34575784"
 |既定値|なし|  
 |Cardinality|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34575784"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- この要素で使用するデータ型は、指定される属性の適切なキー列のデータ型と一致する必要があります。 場合**キー**親の要素が指定されていない**属性**要素、 **AttributeName**と**名前**で指定した要素、親**属性**要素を使用して変更する属性メンバーを識別します。  
+ この要素で使用するデータ型は、指定される属性の適切なキー列のデータ型と一致する必要があります。 場合**キー**親要素が指定されていない**属性**要素、 **AttributeName**と**名前**で指定した要素、親**属性**要素が変更される属性メンバーを識別するために使用されます。  
   
 ## <a name="see-also"></a>参照
  [要素の属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)   

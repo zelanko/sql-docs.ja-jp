@@ -1,5 +1,5 @@
 ---
-title: sys.sysfulltextcatalogs (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.sysfulltextcatalogs (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,10 +27,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8f04e7dec965ead3d649c90a269de2f8c704ef8a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061710"
 ---
 # <a name="syssysfulltextcatalogs-transact-sql"></a>sys.sysfulltextcatalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -40,11 +41,11 @@ ms.lasthandoff: 05/04/2018
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**ftcatid**|**smallint**|フルテキスト カタログの識別子です。|  
 |**name**|**sysname**|ユーザーによって指定されたフルテキスト カタログの名前です。|  
-|**ステータス**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**path**|**nvarchar(260)**|ユーザーによって指定されたルート パスです。<br /><br /> NULL = パスが指定されていません。 既定 (インストール) パスが使用されています。|  
   
 ## <a name="see-also"></a>参照  

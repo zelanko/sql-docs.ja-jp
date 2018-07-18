@@ -1,5 +1,5 @@
 ---
-title: クライアント側とサーバー側の XML 書式設定 (SQLXML 4.0) |Microsoft ドキュメント
+title: クライアント側とサーバー側の XML 書式設定 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4d36a49c44ea4dfb7ca89c9598ccaf74b1a32ba8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971817"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049843"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>クライアント側とサーバー側の XML 書式設定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ ms.locfileid: "32971817"
 </ROOT>  
 ```  
   
- このテンプレートはアプリケーション コードで実行できます。実行すると、クライアント側の XML 書式設定では複数の行セットの書式設定がサポートされていないため、エラーが返されます。 2 つのクエリを指定する場合を区切る **\<sql:query >** ブロック、目的の結果が得られます。  
+ このテンプレートはアプリケーション コードで実行できます。実行すると、クライアント側の XML 書式設定では複数の行セットの書式設定がサポートされていないため、エラーが返されます。 2 つのクエリを指定する場合は、分離 **\<sql:query >** ブロック、目的の結果が得られます。  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>クライアント側とサーバー側の XML 書式設定では timestamp 型のマッピングが異なる  
- サーバー側の xml が書式設定でのデータベース列**タイムスタンプ**(XMLDATA オプションは、クエリで指定された) ときの i8 XDR 型にマッピングを入力します。  
+ サーバー側の xml 書式設定、データベースの列の**タイムスタンプ**(XMLDATA オプションは、クエリで指定された) 場合は、i8 XDR 型にマップを入力します。  
   
- クライアント側の xml 書式設定、データベース列の**タイムスタンプ**入力するか、マップ、 **uri**または**bin.base64** XDR 型 (かどうかに応じて、バイナリの base64オプションは、クエリで指定)。 **Bin.base64** XDR 型役に立ちます、アップデート グラムや一括読み込み機能を使用する場合にこの型が変換されるので、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **タイムスタンプ**型です。 この方法で、挿入、更新、または削除操作が成功します。  
+ クライアント側の xml 書式設定、データベースの列の**タイムスタンプ**入力するか、マップ、 **uri**または**bin.base64** XDR 型 (かどうかに応じて、binary base64オプションは、クエリで指定)。 **Bin.base64** XDR 型は、この型に変換されますので、アップデート グラムや一括読み込み機能を使用する場合に便利です、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **タイムスタンプ**型。 この方法で、挿入、更新、または削除操作が成功します。  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>サーバー側の書式設定ではサブタイプの VARIANT 型も使用される  
  サーバー側の XML 書式設定では、サブタイプの VARIANT 型も使用されます。 クライアント側の XML 書式設定を使用する場合、variant は Unicode 文字列に変換され、サブタイプの VARIANT は使用されません。  
@@ -92,7 +92,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- クライアント側の書式設定を、対応する NESTED モードで指定すると、ベース テーブル名が結果の XML 内の要素名として返されます。 たとえば、次の更新後のテンプレートに、同じ SELECT ステートメントが実行されますが、XML 書式設定はクライアント側で実行 (つまり、**クライアント側の xml**に設定されているテンプレートの場合は true)。  
+ クライアント側の書式設定を、対応する NESTED モードで指定すると、ベース テーブル名が結果の XML 内の要素名として返されます。 たとえば、次の更新後のテンプレートは、同じ SELECT ステートメントを実行しますが、XML の書式設定がクライアント側で実行 (つまり、**クライアント側の xml**に設定されているテンプレートの場合は true)。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -186,7 +186,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- XML 書式設定が、サーバーで実行される場合 (**クライアント側の xml =「0」**)、dbobject クエリが実際のテーブルおよび列名が返されます (指定したエイリアスがある) 場合も同様を返す列の別名を使用することができます。 たとえば、次のテンプレートが、クエリを実行し、XML 書式設定は、サーバーで行われます (、**クライアント側の xml**オプションが指定されていないと、 **Run On Client**のオプションが選択されていない、仮想ルート)。 このクエリでは、クライアント側の NESTED モードではなく AUTO モードも指定されています。  
+ XML の書式設定は、サーバーで実行している場合 (**クライアント側の xml =「0」**)、dbobject クエリ (別名を指定した) 場合の実際のテーブルと列名が返されますが返す列の別名を使用することができます。 たとえば、次のテンプレートが、クエリを実行し、XML の書式設定は、サーバーで実行 (、**クライアント側の xml**オプションが指定されていないと、 **Run On Client**のオプションが選択されていない、仮想ルート)。 このクエリでは、クライアント側の NESTED モードではなく AUTO モードも指定されています。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -217,7 +217,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
   
 -   指定すると**クライアント側の xml =「0」** (false)、テンプレートで、要求しているサーバー側の XML 書式設定します。 したがって、サーバーでは NESTED オプションが認識されないので、FOR XML NESTED は指定できません。 これにより、エラーが発生します。 この場合、サーバーで認識される AUTO、RAW、または EXPLICIT モードを使用する必要があります。  
   
--   指定すると**クライアント側の xml =「1」** (true)、テンプレートで、要求しているクライアント側の XML 書式設定します。 この場合、FOR XML NESTED を指定できます。 FOR XML AUTO を指定すると、XML 書式設定場合は、サーバー側では**クライアント側の xml =「1」** テンプレートで指定します。  
+-   指定すると**クライアント側の xml =「1」** (true)、テンプレートで、要求しているクライアント側の XML 書式設定します。 この場合、FOR XML NESTED を指定できます。 ですが、サーバー側で発生 XML 書式設定を FOR XML AUTO を指定する場合**クライアント側の xml =「1」** はテンプレートで指定します。  
   
 ## <a name="see-also"></a>参照  
  [XML のセキュリティに関する考慮事項の&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   

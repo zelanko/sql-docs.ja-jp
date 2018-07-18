@@ -1,5 +1,5 @@
 ---
-title: シーケンス式 (XQuery) |Microsoft ドキュメント
+title: シーケンス式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 34c26b529aeaee5e9f80ecc0a1a07d3cb8cedbf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076999"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048740"
 ---
 # <a name="sequence-expressions-xquery"></a>シーケンス式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ go
 ```  
   
 ### <a name="example-c"></a>例 C  
- AdditionalContactInfo 列に対して、次のクエリを指定、 **xml** Contact テーブルの型。 この列には、1 つ以上の追加の電話番号、ポケットベル番号、住所などの追加の連絡先情報が格納されます。 \<TelephoneNumber >、\<ポケットベル >、ドキュメント内の他のノードが任意の場所に表示されます。 クエリがすべて含まれているシーケンスを構築、 \<telephoneNumber > 続けて、コンテキスト ノードの子、\<ポケットベル > の子です。 戻り値の式のコンマ シーケンス演算子の使用に注意してください`($a//act:telephoneNumber, $a//act:pager)`です。  
+ AdditionalContactInfo 列に対して次のクエリを指定、 **xml** Contact テーブル内の型。 この列には、1 つ以上の追加の電話番号、ポケットベル番号、住所などの追加の連絡先情報が格納されます。 \<TelephoneNumber >、\<ポケットベル >、他のノードは、ドキュメントの任意の場所に記述できます。 クエリは、すべてを含むシーケンスを構築、 \<telephoneNumber > 続けて、コンテキスト ノードの子、\<ポケットベル > の子。 戻り値の式のコンマ シーケンス演算子の使用に注意してください`($a//act:telephoneNumber, $a//act:pager)`します。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -137,7 +137,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>シーケンスのフィルター処理  
- 式に述語を追加することにより、式で返されるシーケンスをフィルター処理できます。 詳細については、次を参照してください。[パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)です。 たとえば次のクエリは、3 つの <`a`> 要素ノードのシーケンスを返します。  
+ 式に述語を追加することにより、式で返されるシーケンスをフィルター処理できます。 詳細については、次を参照してください。[パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)します。 たとえば次のクエリは、3 つの <`a`> 要素ノードのシーケンスを返します。  
   
 ```  
 declare @x xml  
@@ -175,7 +175,7 @@ SELECT @x.query('/root/a[@attrA]')
 <a attrA="1">111</a>  
 ```  
   
- パス式で述語を指定する方法の詳細については、次を参照してください。[パス式のステップで述語を指定する](../xquery/path-expressions-specifying-predicates.md)です。  
+ パス式で述語を指定する方法の詳細については、次を参照してください。[パス式のステップで述語を指定する](../xquery/path-expressions-specifying-predicates.md)します。  
   
  次の例では、サブツリーのシーケンス式を構築し、次にフィルターをシーケンスに適用します。  
   
@@ -193,7 +193,7 @@ set @x = '
 '  
 ```  
   
- 内の式`(/a, /b)`サブツリーを持つシーケンスを構築`/a`と`/b`要素をフィルター処理する式の結果として得られるシーケンスと`<c>`です。  
+ 内の式`(/a, /b)`サブツリーを持つシーケンスが構築`/a`と`/b`式を結果として得られるシーケンスから要素をフィルター処理と`<c>`します。  
   
 ```  
 SELECT @x.query('  
@@ -208,7 +208,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- 次の例では、述語フィルターが適用されます。 式の要素を検索する <`a`> と <`b`> 要素が含まれている <`c`>。  
+ 次の例では、述語フィルターが適用されます。 式は、要素を検索します。 <`a`> と <`b`> 要素が含まれている <`c`>。  
   
 ```  
 declare @x xml  

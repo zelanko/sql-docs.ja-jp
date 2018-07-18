@@ -1,5 +1,5 @@
 ---
-title: 注文に関連する XQueries |Microsoft ドキュメント
+title: 注文に関連する XQueries |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 978e800ba5539878eb805c16f2460de3761dda59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051680"
 ---
 # <a name="xqueries-involving-order"></a>順序に関係する XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +67,11 @@ WHERE ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   かっこ内の式は、評価結果に置き換えられます。 詳細については、次を参照してください。 [XML の構築と #40 です。XQuery と #41 です。](../xquery/xml-construction-xquery.md)  
+-   かっこ内の式は、評価結果に置き換えられます。 詳細については、次を参照してください。 [XML の構築&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)します。  
   
--   **@\*** 2 番目のワーク センターの場所のすべての属性を取得します。  
+-   **@\*** 2 番目のワーク センター拠点のすべての属性を取得します。  
   
--   FLWOR の繰り返し (FOR ...戻り値) には、すべてを取得、<`step`> 子要素の 2 番目のワーク センターの場所。  
+-   FLWOR の繰り返し (FOR ...戻り値) には、すべてを取得します <`step`> 子要素、2 番目のワーク センターの場所。  
   
 -   [Sql:column() 関数 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)構築される XML にリレーショナル値が含まれています。  
   
@@ -88,7 +89,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- 上記のクエリでは、テキスト ノードだけを取得します。 全体をする場合は、<`step`> 代わりに、返された要素を削除、 **string()** クエリから関数。  
+ 上記のクエリでは、テキスト ノードだけを取得します。 全体の場合 <`step`> 代わりに、返された要素を削除、 **string()** クエリから関数。  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 製品を製造する際の 2 番目のワーク センターの場所で使用されるすべての材料とツールの検索  
  次のクエリでは、特定の製品モデルに対して、製造プロセス内にあるワーク センターの場所の順序で 2 番目のワーク センターの場所で使用されるツールと材料が取得されます。  
@@ -164,9 +165,9 @@ where ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
- クエリ本文が含まれる XML の構築、<`ProductModel`> を ProductModelID 属性と ProductModelName 属性を持つ要素。  
+ クエリの本文に XML を構築、<`ProductModel`> を ProductModelID 属性と ProductModelName 属性を持つ要素。  
   
--   クエリでは、FOR ...RETURN ループを使用して、製品モデルの機能説明を取得します。 **Position()** 関数を使用して、最初の 2 つの特徴を取得します。  
+-   クエリでは、FOR ...RETURN ループを使用して、製品モデルの機能説明を取得します。 **Position()** 関数を使用して、最初の 2 つの機能を取得します。  
   
  結果を次に示します。  
   
@@ -188,7 +189,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. 製品の製造プロセス内にある最初のワーク センターの場所で使用される最初の 2 つのツールの検索  
- 次のクエリでは、製品モデルに対して、製造プロセス内にあるワーク センターの場所の順序で、最初のワーク センターの場所で使用される最初の 2 つのツールが返されます。 格納されている製造手順に対してクエリを指定して、**指示**の列、 **Production.ProductModel**テーブル。  
+ 次のクエリでは、製品モデルに対して、製造プロセス内にあるワーク センターの場所の順序で、最初のワーク センターの場所で使用される最初の 2 つのツールが返されます。 格納された製造手順に対してクエリを指定、**指示**の列、 **Production.ProductModel**テーブル。  
   
 ```  
 SELECT Instructions.query('  
@@ -224,7 +225,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. 特定の製品を製造する際の最初のワーク センターの場所で最後の 2 つの製造手順の検索  
- クエリを使用して、 **last()** 最後の 2 つの製造ステップを取得します。  
+ クエリを使用して、 **last()** 最後の 2 つの製造ステップを取得する関数。  
   
 ```  
 SELECT Instructions.query('   

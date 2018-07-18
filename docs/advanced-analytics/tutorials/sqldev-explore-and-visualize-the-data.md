@@ -1,6 +1,6 @@
 ---
-title: レッスン 3 の探索し、R と T-SQL (SQL Server の Machine Learning) を使用してデータを視覚化する. |Microsoft ドキュメント
-description: SQL Server で R を埋め込む方法を示すチュートリアル ストアド プロシージャと T-SQL 関数
+title: レッスン 3 の探索と R と T-SQL (SQL Server Machine Learning) を使用してデータの視覚化 |Microsoft Docs
+description: SQL Server に R を埋め込む方法を示すチュートリアルはストアド プロシージャと T-SQL 関数
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/07/2018
@@ -9,38 +9,38 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 057d7d988fd6f7f5d490cbf30f06e83270438983
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35250085"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042887"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>レッスン 3: 探索し、データの視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事は、SQL Server で R を使用する方法で SQL 開発者のためのチュートリアルの一部です。
+この記事では、SQL Server で R を使用する方法に関する SQL 開発者向けのチュートリアルの一部です。
 
-このレッスンでをサンプル データを確認しを使用していくつかのプロットを生成[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)から[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)および一般的な[Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)基本 R. 関数これらの R 関数が既に含まれている[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]です。
+このレッスンでが、サンプル データを確認しを使用していくつかのプロットを生成し、 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)から[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)および一般的な[Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)基本 R での関数これらの R 関数が既に含まれている[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]します。
 
-主な目的での R 関数を呼び出す方法が表示されている[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャおよびアプリケーション ファイル形式で結果を保存します。
+主な目的がから R 関数を呼び出す方法を示す[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャおよびアプリケーション ファイル形式で結果を保存します。
 
-+ ストアド プロシージャを使用して作成**RxHistogram** varbinary データとして、R プロットを生成します。 使用して**bcp**バイナリ ストリームをイメージ ファイルにエクスポートします。
-+ ストアド プロシージャを使用して作成**Hist** JPG および PDF 出力として結果の保存、プロットを生成します。
++ ストアド プロシージャを使用して作成**RxHistogram** varbinary データとして R プロットを生成します。 使用**bcp**バイナリ ストリームをイメージ ファイルにエクスポートします。
++ ストアド プロシージャを使用して作成**Hist** JPG、PDF の出力としての結果を保存し、プロットを生成します。
 
 > [!NOTE]
-> 視覚エフェクトはデータの整形と配布を理解するため、このような強力なツールであるため、R はヒストグラム、散布、ボックス プロット、およびその他のデータ探索のグラフを生成するための関数とパッケージの範囲を提供します。 R は、通常のグラフィカルな出力をキャプチャし、として保存することができる R デバイスを使用してイメージを作成、 **varbinary**アプリケーションで表示するためのデータ型。 サポート ファイルの形式のいずれかにイメージを保存することもできます (です。JPG、します。PDF など)。
+> 視覚化は、データのシェイプと配布を理解するため、このような強力なツールであるために、R は、ヒストグラム、散布、ボックス プロット、およびその他のデータ探索グラフを生成するため関数およびパッケージの範囲を提供します。 R は通常をキャプチャしてとして格納できますが、グラフィック出力の R デバイスを使用してイメージを作成、 **varbinary**アプリケーションで表示するためのデータ型。 サポート ファイルの形式のいずれかに、イメージを保存することもできます (します。JPG、します。PDF など)。
 
 ## <a name="review-the-data"></a>データを確認します。
 
-データ科学ソリューションの開発には、通常、集中的なデータの探索とデータの視覚化が伴います。 まず、時間がかかるサンプル データの確認をまだ行っていない場合。
+データ科学ソリューションの開発には、通常、集中的なデータの探索とデータの視覚化が伴います。 まだ行っていない場合は、まずサンプル データの確認に少し時間がかかります。
 
-元のデータセットでは、タクシーの識別子と乗車記録が別々のファイルに入力されていましたが、 ただし、サンプル データを使用しやすくするには、2 つの元のデータセットが結合されて、列に_medallion_、 _hack\_ライセンス_、および_ピックアップ\_datetime_です。  レコードもサンプリングされており、元のレコード数の 1% だけが取得されています。 結果的にダウンサンプリングされたデータセットは 1,703,957 行と 23 列です。
+元のデータセットでは、タクシーの識別子と乗車記録が別々のファイルに入力されていましたが、 ただし、サンプル データを使用しやすくするには、2 つの元のデータセットが結合されている列_medallion_、 _hack\_ライセンス_、および_pickup\_datetime_します。  レコードもサンプリングされており、元のレコード数の 1% だけが取得されています。 結果的にダウンサンプリングされたデータセットは 1,703,957 行と 23 列です。
 
 **タクシーの識別子**
   
 -   _medallion_ 列はタクシーの一意の識別子を表します。
   
--   _Hack\_ライセンス_列には (匿名化された) タクシー運転免許証番号が含まれています。
+-   _Hack\_ライセンス_列には、タクシー運転手のライセンスの数 (匿名化された) が含まれています。
   
 **乗車と料金の記録**
   
@@ -48,26 +48,26 @@ ms.locfileid: "35250085"
   
 -   各料金記録には、支払の種類、支払の合計額、チップ額など、支払情報が含まれています。
   
--   最後の 3 つの列はさまざまな機械学習タスクに利用できます。 _ヒント\_量_列は、連続する数値が含まれており、として使用できる、**ラベル**回帰分析のための列です。 _tipped_ 列には yes/no 値のみが含まれ、二項分類に利用されます。 _ヒント\_クラス_列が複数**クラス ラベル**のため多クラス分類タスクのラベルとして使用することができます。
+-   最後の 3 つの列はさまざまな機械学習タスクに利用できます。 _ヒント\_量_列が連続する数値が含まれていますととして使用できる、**ラベル**回帰分析用の列。 _tipped_ 列には yes/no 値のみが含まれ、二項分類に利用されます。 _ヒント\_クラス_列が複数**クラス ラベル**のため、多クラス分類タスク ラベルとして使用することができます。
   
     このチュートリアルでは、二項分類タスクのみを紹介します。他の 2 つの機械学習タスク (回帰と複数クラスの分類) でもモデルの構築をお試しください。
   
--   ラベル列として使用される値はすべてに基づいて、_ヒント\_量_これらのビジネス ルールを使用し、列。
+-   ラベル列に使用される値はすべてに基づいて、_ヒント\_量_これらのビジネス ルールを使用し、列。
   
     |派生列名|Rule|
     |-|-|
      |tipped|tip_amount > 0 の場合、tipped = 1、それ以外では tipped = 0|
     |tip_class|クラス 0: tip_amount = $0<br /><br />クラス 1: tip_amount > $0 および tip_amount <= $5<br /><br />クラス 2: tip_amount > $5 および tip_amount <= $10<br /><br />クラス 3: tip_amount > $10 および tip_amount <= $20<br /><br />クラス 4: tip_amount > $20|
 
-## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>RxHistogram を使用して、データをプロットするストアド プロシージャを作成します。
+## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>RxHistogram を使用してデータをプロットするストアド プロシージャを作成します。
 
-使用して、プロットを作成する[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)で提供される強化された R 機能のいずれかの[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)です。 この手順からのデータに基づいてヒストグラムをプロットする[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。 この関数をラップするには、ストアド プロシージャで**PlotHistogram**です。
+使用して、プロットを作成する[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)で提供される拡張 R 関数のいずれかの[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)します。 この手順からのデータに基づいてヒストグラムをプロットする[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。 この関数をラップするには、ストアド プロシージャで**PlotHistogram**します。
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプ ローラーを右クリックし、 **TaxiNYC_Sample**データベースを展開して**プログラミング**、順に展開**Stored Procedures**を表示する、レッスン 2 で作成されたプロシージャです。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプ ローラーで右クリックし、 **TaxiNYC_Sample**データベースを展開**プログラミング**、順に展開**Stored Procedures**を表示する、レッスン 2 で作成されたプロシージャ。
 
-2. 右クリック**PlotHistogram**選択**変更**ソースを表示します。 呼び出すには、この手順を実行できる**rxHistogram** nyctaxi_sample テーブルの先端が列に含まれるデータにします。
+2. 右クリック**PlotHistogram**選択**変更**ソースを表示します。 呼び出すには、この手順を実行できる**rxHistogram** tipped nyctaxi_sample テーブルの列に含まれるデータにします。
 
-3. 必要に応じて、学習の演習では、次の例を使用してこのストアド プロシージャのコピーを作成します。 新しいクエリ ウィンドウを開き、ヒストグラムをプロットするストアド プロシージャを作成する次のスクリプトに貼り付けます。 この例の名前は**PlotHistogram2**付けの既存のプロシージャでは、衝突を回避します。
+3. 必要に応じて、学習の演習では、次の例を使用してこのストアド プロシージャのコピーを作成します。 新しいクエリ ウィンドウを開き、ヒストグラムをプロットするストアド プロシージャを作成する次のスクリプトに貼り付けます。 この例の名前は**PlotHistogram2**名前の既存のプロシージャでの競合を回避するためにします。
 
     ```SQL
     CREATE PROCEDURE [dbo].[PlotHistogram2]
@@ -92,17 +92,17 @@ ms.locfileid: "35250085"
     GO
     ```
 
-ストアド プロシージャ**PlotHistogram2**は既存のストアド プロシージャと同じ**PlotHistogram**によって作成された、`RunSQL_SQL_Walkthrough.ps1`スクリプト。 
+ストアド プロシージャ**PlotHistogram2**の既存のストアド プロシージャと同じ**PlotHistogram**によって作成された、`RunSQL_SQL_Walkthrough.ps1`スクリプト。 
   
 + 変数 `@query` によりクエリ テキスト (`'SELECT tipped FROM nyctaxi_sample'`) が定義され、スクリプト入力変数 `@input_data_1`の引数として R スクリプトに渡されます。
   
-+ R スクリプトは非常に単純な: R 変数 (`image_file`) は、イメージを格納する定義し、 **rxHistogram**プロットを生成する関数が呼び出されます。
++ R スクリプトは非常に単純な: R 変数 (`image_file`)、イメージを格納するように定義し、 **rxHistogram**関数が呼び出され、プロットを生成します。
   
-+ 設定されている R デバイス**オフ**SQL Server の外部スクリプトとしてこのコマンドを実行しているためです。 通常、R で高レベルのプロット コマンドを発行するときに R、ウィンドウを開きますグラフィックスと呼ばれる、*デバイス*です。 ウィンドウのサイズ、色、その他の特徴を変更できます。あるいは、ファイルに書き込み、別の方法で出力を処理する場合、デバイスをオフにできます。
++ 設定されている R デバイス**オフ**SQL Server の外部のスクリプトとしてこのコマンドを実行しているためです。 通常、R で高レベルのプロット コマンドを発行するときに R グラフィックス、ウィンドウを開きますと呼ばれる、*デバイス*します。 ウィンドウのサイズ、色、その他の特徴を変更できます。あるいは、ファイルに書き込み、別の方法で出力を処理する場合、デバイスをオフにできます。
   
 + R グラフィックス オブジェクトは、出力のために R data.frame にシリアル化されます。
 
-### <a name="execute-the-stored-procedure-and-use-bcp-to-export-binary-data-to-an-image-file"></a>ストアド プロシージャを実行し、bcp を使用して、バイナリ データをイメージ ファイルにエクスポートするには
+### <a name="execute-the-stored-procedure-and-use-bcp-to-export-binary-data-to-an-image-file"></a>ストアド プロシージャを実行し、bcp を使用してバイナリ データをイメージ ファイルにエクスポートするには
 
 ストアド プロシージャは varbinary データのストリームとして画像を返し、直接見ることはできません。 ただし、 **bcp** ユーティリティを利用すれば、varbinary データを取得し、クライアント コンピューターに画像ファイルとして保存できます。
   
@@ -117,14 +117,14 @@ ms.locfileid: "35250085"
     *plot*
     *0xFFD8FFE000104A4649...*
   
-2.  PowerShell コマンド プロンプトを開き、適切なインスタンス名、データベース名、ユーザー名、および引数として資格情報を提供する、次のコマンドを実行します。 Windows id を使用するユーザーに置き換えることができます **-u**と **-p**で **-t**です。
+2.  PowerShell コマンド プロンプトを開き、適切なインスタンス名、データベース名、ユーザー名、および引数としての資格情報を提供する、次のコマンドを実行します。 Windows id を使用してそれらを置き換えることができます **-u**と **-p**で **-t**します。
   
      ```text
      bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  TaxiNYC_Sample  -U <user name> -P <password>
      ```
 
     > [!NOTE]
-    > Bcp コマンド スイッチは、大文字小文字を区別します。
+    > Bcp コマンド スイッチは大文字小文字を区別します。
   
 3.  接続に成功した場合は、グラフィック ファイル形式に関する詳細情報を入力するように求められます。 プロンプトのたびに ENTER キーを押し、初期設定を適用します。ただし、次については変更します。
     
@@ -160,13 +160,13 @@ ms.locfileid: "35250085"
   
 ## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>Hist と複数の出力形式を使用してストアド プロシージャを作成します。
 
-通常、データ サイエンティストは、さまざまな観点から、データに対する洞察を取得する複数のデータの視覚エフェクトを生成します。 この例では、ストアド プロシージャは、人気のある形式など、バイナリ データをエクスポート、ヒストグラムを作成するのに Hist 関数を使用します。JPG、します。PDF とします。PNG です。 
+通常、データ サイエンティストは、さまざまな観点から、データに関する洞察を取得する複数のデータ視覚エフェクトを生成します。 この例では、ストアド プロシージャなど、一般的な形式にバイナリ データをエクスポート、ヒストグラムを作成するのに Hist 関数を使用します。JPG、します。PDF と。PNG。 
 
-1. 既存のストアド プロシージャを使用して**PlotInOutputFiles**ヒストグラム、scatterplots、およびその他の R グラフィックスに書き込めません。JPG とします。PDF 形式です。 `RunSQL_SQL_Walkthrough.ps1`作成**PlotInOutputFiles**し、データベースを追加します。 右クリックを使用して**変更**ソースを表示します。
+1. 既存のストアド プロシージャを使用して、 **PlotInOutputFiles**ヒストグラム、や散布図など、およびその他の R グラフィックスを記述します。JPG とします。PDF 形式です。 `RunSQL_SQL_Walkthrough.ps1`作成**PlotInOutputFiles**し、データベースを追加します。 右クリックを使用して、**変更**ソースを表示します。
 
-2. 必要に応じて、学習の演習では、独自のコピーは作成、プロシージャとして**PlotInOutputFiles2**、一意の名前を名前付けの競合を回避します。
+2. 必要に応じて、学習の演習では、プロシージャとしての独自のコピーを作成**PlotInOutputFiles2**、名前付けの競合を回避するために一意の名前。
 
-    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を新しく開きます**クエリ**ウィンドウ、および貼り付けでは、次に[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。
+    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、新しく開きます**クエリ**ウィンドウ、および貼り付けでは、次に[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。
   
     ```SQL
     CREATE PROCEDURE [dbo].[PlotInOutputFiles2]  
@@ -240,7 +240,7 @@ ms.locfileid: "35250085"
 
 ### <a name="execute-the-stored-procedure"></a>ストアド プロシージャを実行する
 
-バイナリ プロット データを JPEG および PDF ファイル形式にエクスポートするのには、次のステートメントを実行します。
+プロットをバイナリ データを JPEG、PDF ファイル形式にエクスポートするのには、次のステートメントを実行します。
 
 ```SQL
 EXEC PlotInOutputFiles
@@ -257,23 +257,23 @@ C:\temp\plots\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]
 C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 ```
 
-既存のファイルに書き込もうとしているときにエラーが表示されないことを確認してください。 ファイル名に番号がランダムに生成されます。
+ファイル名に番号が既存のファイルに書き込むときにエラーが発生しないことを確認します。 ランダムに生成されます。
 
 ### <a name="view-output"></a>出力の表示 
 
-表示するには、プロットをコピー先のフォルダーを開き、ストアド プロシージャで R コードで作成されたファイルを確認します。
+プロットを表示するには、コピー先のフォルダーを開き、ストアド プロシージャで R コードで作成されたファイルを確認します。
 
-1. STDOUT メッセージに示されているフォルダーを参照してください (例では、これは C:\temp\plots\)
+1. STDOUT メッセージで示されているフォルダーを参照してください (例では、これは C:\temp\plots\)
 
-2. 開いている`rHistogram_Tipped.jpg`ヒントがないなトリップとヒントを取得しましたトリップの数が表示されます。 (このヒストグラムは、前の手順で生成されるように、)。
+2. 開いている`rHistogram_Tipped.jpg`チップをもらわなかった乗車とヒントを取得した乗車の数を表示します。 (このヒストグラムは、前の手順で生成したものと同様です)。
 
-3. 開いている`rHistograms_Tip_and_Fare_Amount.pdf`運賃金額に対してプロット、ヒントの金額の分布を表示します。
+3. 開いている`rHistograms_Tip_and_Fare_Amount.pdf`料金の金額のプロット、チップの金額の分布を表示します。
     
   ![tip_amount と fare_amount を示すヒストグラム](media/rsql-devtut-tipamtfareamt.PNG "tip_amount と fare_amount を示すヒストグラム")
 
-4. 開いている`rXYPlots_Tip_vs_Fare_Amount.pdf`x 軸と y 軸上のヒント量の運賃の容量を持つ scatterplot を表示します。
+4. 開いている`rXYPlots_Tip_vs_Fare_Amount.pdf`x 軸と y 軸をチップ額の料金での散布図を表示します。
 
-   ![ヒントの量をプロット運賃を超過](media/rsql-devtut-tipamtbyfareamt.PNG "運賃超過ヒント金額がプロットされます")
+   ![チップの金額のプロット fare 量](media/rsql-devtut-tipamtbyfareamt.PNG "料金経由でチップの金額のプロット")
 
 ## <a name="next-lesson"></a>次のレッスン
 
@@ -281,4 +281,4 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="previous-lesson"></a>前のレッスン
 
-[レッスン 2: PowerShell を使用したチュートリアルの環境を準備します。](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[レッスン 2: PowerShell を使用して、チュートリアルの環境を準備します。](../r/sqldev-import-data-to-sql-server-using-powershell.md)

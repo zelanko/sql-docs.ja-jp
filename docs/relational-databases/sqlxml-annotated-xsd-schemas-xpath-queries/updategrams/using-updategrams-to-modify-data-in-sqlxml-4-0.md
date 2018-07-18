@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 でのデータを変更するアップデート グラムの使用 |Microsoft ドキュメント
+title: SQLXML 4.0 でのデータを変更するアップデート グラムの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -31,15 +31,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 09ddba31de38f515cf6810d455d4d2264fb6ab97
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708680"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047310"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>SQLXML 4.0 での、アップデートグラムを使用したデータ変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  変更することができます (挿入、更新、または削除) のデータベースに[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]アップデート グラムまたは OPENXML を使用してドキュメントの既存の XML から[!INCLUDE[tsql](../../../includes/tsql-md.md)]関数。  
+  変更することができます (挿入、更新、または削除) でデータベース[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]アップデート グラムまたは OPENXML を使用して文書化、既存の XML から[!INCLUDE[tsql](../../../includes/tsql-md.md)]関数。  
   
  ここでは、アップデートグラムについての情報と、その使用例を示します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34708680"
  [アップデート グラムの概要&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/introduction-to-updategrams-sqlxml-4-0.md)  
  アップデートグラムについての基本情報と使用例を示します。  
   
- [注釈付きマッピング スキーマを指定するアップデート グラムで&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)  
+ [アップデート グラムで注釈付きマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)  
  アップデートグラムの注釈付きマッピング スキーマについて説明し、使用例を示します。  
   
  [NULL 処理&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/null-handling-sqlxml-4-0.md)  
@@ -59,7 +59,7 @@ ms.locfileid: "34708680"
  [XML アップデート グラムを使用してデータを削除する&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/deleting-data-using-xml-updategrams-sqlxml-4-0.md)  
  アップデートグラムを使用したデータの削除について説明し、例を示します。  
   
- [XML アップデート グラムを使用してデータを更新&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [XML アップデート グラムを使用してデータを更新する&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)  
  アップデートグラムを使用した既存データの変更について説明し、例を示します。  
   
  [アップデート グラムにパラメーターを渡す&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md)  

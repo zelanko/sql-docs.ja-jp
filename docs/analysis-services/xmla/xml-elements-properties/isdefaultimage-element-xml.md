@@ -1,5 +1,5 @@
 ---
-title: IsDefaultImage 要素 (XML) |Microsoft ドキュメント
+title: IsDefaultImage 要素 (XML) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cf053ce660091fa9b47048e9dccb9b7f470acaad
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575354"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036840"
 ---
 # <a name="isdefaultimage-element-xml"></a>IsDefaultImage 要素 (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34575354"
 |既定値|false|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけ出現します|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
@@ -47,6 +47,6 @@ ms.locfileid: "34575354"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- **RelationshipEndVisualizationProperties** 、要素、 **IsDefaultImage**要素は、このエンティティの既定のイメージをこのもう一方の端に移動することによって取得できることを示しますリレーションシップです。 既定値の**false**取得される既定のイメージがないことを示します。  
+ **RelationshipEndVisualizationProperties** 、要素、 **IsDefaultImage**要素は、このエンティティの既定のイメージは、これのもう一方の端に移動して入手できますを示しますリレーションシップです。 既定値**false**を取得する既定のイメージがないことを示します。  
   
   

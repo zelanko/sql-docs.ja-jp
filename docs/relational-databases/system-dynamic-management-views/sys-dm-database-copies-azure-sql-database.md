@@ -1,5 +1,5 @@
 ---
-title: sys.dm_database_copies (Azure SQL データベース) |Microsoft ドキュメント
+title: sys.dm_database_copies (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -27,44 +27,45 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9b2e5b7b257ea0a22cf847f4e28f58c3c89a2d68
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061480"
 ---
 # <a name="sysdmdatabasecopies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   データベース コピーに関する情報を返します。  
   
-Geo レプリケーション リンクに関する情報を返すを使用して、 [sys.geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)または[sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)ビュー (SQL Database V12 で使用可能)。
+使用して、geo レプリケーション リンクに関する情報を返す、 [sys.geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)または[sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)ビュー (SQL Database V12 で使用可能)。
   
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|`sys.databases` ビューの現在のデータベースの ID。|  
 |**start_date**|**datetimeoffset**|地域の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データセンターにおいてデータベース コピーが開始された時刻 (UTC)。|  
-|**modify_date**|**datetimeoffset**|地域の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データセンターにおいてデータベース コピーが完了した時刻 (UTC)。 新しいデータベースには、この時点でのプライマリ データベースのトランザクションが反映されます。 完了情報は、1 分間隔では更新されます。<br /><br />Percent_complete フィールドの最後の更新を反映した UTC 時刻です。|  
+|**modify_date**|**datetimeoffset**|地域の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データセンターにおいてデータベース コピーが完了した時刻 (UTC)。 新しいデータベースには、この時点でのプライマリ データベースのトランザクションが反映されます。 完了情報は、1 分ごとに更新されます。<br /><br />Percent_complete フィールドの最後の更新を反映した UTC 時刻。|  
 |**percent_complete**|**real**|コピーされたバイトの割合 (%)。 値の範囲は 0 ～ 100 です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] は、フェールオーバーなどのエラーから自動的に復旧した後に、データベース コピーを再開することがあります。 この場合、percent_complete は 0 から再開されます。|  
 |**error_code**|**int**|値が 0 より大きい場合は、コピー中に発生したエラーを示すコード。 エラーが発生しなかった場合は 0 です。|  
 |**error_desc**|**nvarchar(4096)**|コピー中に発生したエラーの説明。|  
 |**error_severity**|**int**|データベース コピーが失敗した場合は 16 を返します。|  
 |**error_state**|**int**|コピーが失敗した場合は 1 を返します。|  
 |**copy_guid**|**uniqueidentifier**|コピー操作の一意の ID。|  
-|**partner_server**|**sysname**|コピーが作成された SQL データベース サーバーの名前です。|  
+|**partner_server**|**sysname**|コピーが作成されている SQL Database サーバーの名前。|  
 |**partner_database**|**sysname**|パートナー サーバー上のデータベース コピーの名前です。|  
-|**replication_state**|**tinyint**|このデータベースの連続コピー レプリケーションの状態。 値は次のとおりです。<br /><br /> 0 = 保留中です。 データベースのコピーの作成がスケジュールされているが、必要な準備手順がまだ完了していないまたはシード クォータによって一時的にブロックします。<br /><br /> 1 = シード処理中です。 シード処理されているデータベースのコピーはまだ完全に同期されませんとソース データベース。 この状態では、コピーに接続することはできません。 進行中のシード処理操作をキャンセルするには、データベースのコピーを削除する必要があります。|  
+|**replication_state**|**tinyint**|このデータベースの連続コピー レプリケーションの状態。 値は次のとおりです。<br /><br /> 0 = 保留中です。 データベースのコピーの作成がスケジュールされているが、必要な準備手順がまだ完了していないまたはシード クォータによって一時的にブロックされます。<br /><br /> 1 = シード処理します。 データベースのコピーがシード中同期されていない場合完全ソース データベースとします。 この状態では、コピーに接続することはできません。 実行中のシード処理操作をキャンセルするには、データベースのコピーを削除する必要があります。|  
 |**replication_state_desc**|**nvarchar (256)**|replication_state の説明。次のいずれかになります。<br /><br /> PENDING<br /><br /> SEEDING<br />|  
 |**maximum_lag**|**int**|予約フィールドです。|  
-|**is_continuous_copy**|**bit**|0 = 0 を返します|  
+|**is_continuous_copy**|**bit**|0 = 0 を返します。|  
 |**is_target_role**|**bit**|0 = ソース データベース<br /><br /> 1 = データベースのコピー|  
 |**is_interlink_connected**|bit|予約フィールドです。|  
 |**is_offline_secondary**|bit|予約フィールドです。|  
   
-## <a name="permissions"></a>権限  
- このビューはのみで使用できます、**マスター**データベース、サーバー レベル プリンシパル ログインをします。  
+## <a name="permissions"></a>アクセス許可  
+ このビューはのみ利用可能、**マスター**データベース、サーバー レベル プリンシパル ログインをします。  
   
-## <a name="remarks"></a>解説  
- 使用することができます、 **sys.dm_database_copies**で表示、**マスター**ソースまたはターゲットのデータベース[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバー。 データベースのコピーが正常に完了して、新しいデータベースが内の行ではオンラインで、 **sys.dm_database_copies**ビューが自動的に削除されます。  
+## <a name="remarks"></a>コメント  
+ 使用することができます、 **sys.dm_database_copies**で表示、**マスター**ソースまたはターゲットのデータベース[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバー。 データベースのコピーが正常に完了して、新しいデータベースが内の行では、オンライン、 **sys.dm_database_copies**ビューが自動的に削除されます。  
   
   
