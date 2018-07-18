@@ -1,4 +1,4 @@
----
+﻿---
 title: クエリ ストアの使用シナリオ | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2018

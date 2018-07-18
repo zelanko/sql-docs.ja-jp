@@ -1,4 +1,4 @@
----
+﻿---
 title: '[バックアップ デバイス] ([全般] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017

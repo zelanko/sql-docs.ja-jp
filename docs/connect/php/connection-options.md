@@ -1,4 +1,4 @@
----
+﻿---
 title: 接続オプション |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/26/2018
@@ -24,7 +24,7 @@ ms.locfileid: "35307241"
 # <a name="connection-options"></a>接続オプション
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-このトピックでは、連想配列で許可されているオプション (SQLSRV ドライバーで [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) を使用する場合) または データ ソース名 (dsn) で許可されているキーワード (PDO_SQLSRV ドライバーで [PDO::__construct](../../connect/php/pdo-construct.md) を使用する場合) を一覧表示しています。  
+このトピックでは、連想配列で許可されているオプション (SQLSRV ドライバーで [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) を使用する場合) または データ ソース名 (dsn) で許可されているキーワード (PDO_SQLSRV ドライバーで [PDO::__construct](../../connect/php/pdo-construct.md) を使用する場合) を一覧表示しています。
 
 ## <a name="table-of-connection-options"></a>接続オプションの表
 |Key|値|説明|既定|  

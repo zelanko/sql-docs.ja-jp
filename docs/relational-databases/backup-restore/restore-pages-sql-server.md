@@ -1,4 +1,4 @@
----
+﻿---
 title: ページ復元 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017

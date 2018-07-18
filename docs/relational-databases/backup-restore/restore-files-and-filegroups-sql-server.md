@@ -1,4 +1,4 @@
----
+﻿---
 title: ファイルとファイル グループの復元 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017

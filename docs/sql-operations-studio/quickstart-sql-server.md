@@ -1,4 +1,4 @@
----
+﻿---
 title: 'クイック スタート: 接続し、クエリの SQL Operations Studio (プレビュー) を使用して SQL Server |Microsoft ドキュメント'
 description: このクイック スタートは、SQL Operations Studio (preview) を使用して SQL Server に接続してクエリを実行する方法を示しています。
 ms.custom: tools|sos

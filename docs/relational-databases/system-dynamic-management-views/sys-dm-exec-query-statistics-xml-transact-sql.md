@@ -1,4 +1,4 @@
----
+﻿---
 title: sys.dm_exec_query_statistics_xml (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016

@@ -1,4 +1,4 @@
----
+﻿---
 title: OLAP の WideWorldImporters サンプル データベースのインストールし、構成 - SQL |Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql

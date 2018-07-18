@@ -1,4 +1,4 @@
----
+﻿---
 title: ファイルおよびファイル グループのバックアップ (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016

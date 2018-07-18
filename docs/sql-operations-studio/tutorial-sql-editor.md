@@ -1,4 +1,4 @@
----
+﻿---
 title: 'チュートリアル: TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成するには - SQL Operations Studio (プレビュー) |Microsoft ドキュメント'
 description: このチュートリアルでは、SQL Operations Studio (プレビュー) で T-SQL を使用して簡略化する主要な機能について説明します。
 ms.custom: tools|sos

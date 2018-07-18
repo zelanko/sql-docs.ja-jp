@@ -1,4 +1,4 @@
----
+﻿---
 title: ソース SQL Operations Studio (プレビュー) の管理 |Microsoft ドキュメント
 description: SQL Operations Studio (プレビュー) でソース管理を構成する方法を説明します。
 ms.custom: tools|sos

@@ -1,4 +1,4 @@
----
+﻿---
 title: テープ ドライブの論理バックアップ デバイスの定義 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017

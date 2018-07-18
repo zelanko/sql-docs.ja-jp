@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft OLE DB Provider for Microsoft Active Directory Service |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
@@ -54,7 +54,7 @@ ADSDSOObject
 |**Password**|ユーザーのパスワードを指定します。 このキーワードを省略するとします。 現在のログオンが使用されます。|  
   
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = yes**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
+>  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = yes** または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
   
 ## <a name="command-text"></a>コマンド テキスト  
  4 部構成のコマンド テキストの文字列は、次の構文で、プロバイダーで認識されます。  
@@ -68,7 +68,7 @@ ADSDSOObject
 |*Root*|示します、 **ADsPath** (つまり、検索のルート) の検索を開始する対象のオブジェクト。|  
 |*Assert*|RFC 1960 形式の検索フィルターを示します。|  
 |*Attributes*|返される属性のコンマ区切りの一覧を示します。|  
-|*Scope*|任意。 **文字列**検索のスコープを指定します 次のいずれかになります。<br /><br /> - Base -は、基本オブジェクト (検索のルート) のみを検索します。<br />- OneLevel-は、1 レベルのみを検索します<br />- Subtree -は、サブツリー全体を検索します。|  
+|*Scope*|任意。 **文字列**検索のスコープを指定します。 次のいずれかになります。<br /><br />- Base -は、基本オブジェクト (検索のルート) のみを検索します。<br />- OneLevel-は、1 レベルのみを検索します。<br />- Subtree -は、サブツリー全体を検索します。|  
   
  以下に例を示します。  
   
@@ -89,7 +89,7 @@ objectClass='user' AND objectCategory='Person'"
 ## <a name="recordset-behavior"></a>レコード セットの動作  
  次の表で使用できる機能の一覧、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)このプロバイダーを使用して開かれたオブジェクト。 静的カーソルの種類のみ (**adOpenStatic**) は使用できます。  
   
- 詳細については**Recordset**実行、プロバイダーの構成の動作、[Supports](../../../ado/reference/ado-api/supports-method.md)メソッドを列挙し、[Properties](../../../ado/reference/ado-api/properties-collection-ado.md) のコレクション**RecordSet** をプロバイダーに固有の動的なプロパティが存在するかどうかを判断します。  
+ 詳細については**Recordset**実行、プロバイダーの構成の動作、[Supports](../../../ado/reference/ado-api/supports-method.md) メソッドを列挙し、[Properties](../../../ado/reference/ado-api/properties-collection-ado.md) のコレクション **RecordSet** をプロバイダーに固有の動的なプロパティが存在するかどうかを判断します。  
   
  **標準の ADO レコード セットのプロパティの可用性:**  
   

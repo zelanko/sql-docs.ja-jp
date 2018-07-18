@@ -1,4 +1,4 @@
----
+﻿---
 title: データベースの復旧モデルの表示または変更 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016

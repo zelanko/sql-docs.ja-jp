@@ -1,4 +1,4 @@
----
+﻿---
 title: '手順 3: pymssql を使用して SQL に接続する概念実証 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,7 +25,7 @@ ms.locfileid: "35309931"
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
 この例は、概念実証としてのみ考慮してください。  サンプル コードは、わかり易いよう簡略化されており、必ずしも Microsoft が推奨するベスト プラクティスを表しているとは限りません。  
-  
+
 ## <a name="step-1--connect"></a>手順 1: 接続  
   
 [Pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html)関数は SQL データベースへの接続に使用します。  
@@ -55,7 +55,7 @@ ms.locfileid: "35309931"
 ## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入します。  
   
 この例では、安全に [INSERT](../../../t-sql/statements/insert-transact-sql.md) ステートメントを実行し、[SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) の値からアプリケーションを守るパラメーターを渡す方法を示しています。    
-  
+
   
 ```python
     import pymssql  

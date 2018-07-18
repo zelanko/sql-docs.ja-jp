@@ -1,4 +1,4 @@
----
+﻿---
 title: Always Encrypted で保護された機微なデータの移行 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2015

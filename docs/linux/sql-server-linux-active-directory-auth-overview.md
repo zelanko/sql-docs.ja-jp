@@ -1,4 +1,4 @@
----
+﻿---
 title: Linux 上の SQL Server の active Directory の認証 |Microsoft Docs
 description: この記事では、Linux 上の SQL Server の Active Directory 認証の概要を示します。
 author: rothja
@@ -44,10 +44,10 @@ Active Directory 認証を使用するには、ネットワーク上に AD ド�
 AD の認証を構成する方法の詳細については、チュートリアルの中の [チュートリアル: SQL Server on Linux で使用する Active Directory 認証](sql-server-linux-active-directory-authentication.md) で説明されています。 このチュートリアルでの各セクションへのリンクの概要を次に示します。
 
 1. [SQL Server ホストを Active Directory ドメインに結合する](sql-server-linux-active-directory-authentication.md#join)
-1. [SQL Server の AD ユーザーを作成し、ServicePrincipalName を設定する](sql-server-linux-active-directory-authentication.md#createuser)
-1. [SQL Server サービス keytab を構成する](sql-server-linux-active-directory-authentication.md#configurekeytab)
-1. [TRANSACT-SQL での SQL Server の AD に基づくログインの作成](sql-server-linux-active-directory-authentication.md#createsqllogins)
-1. [AD 認証を使用して SQL Server に接続する](sql-server-linux-active-directory-authentication.md#connect)
+2. [SQL Server の AD ユーザーを作成し、ServicePrincipalName を設定する](sql-server-linux-active-directory-authentication.md#createuser)
+3. [SQL Server サービス keytab を構成する](sql-server-linux-active-directory-authentication.md#configurekeytab)
+4. [TRANSACT-SQL での SQL Server の AD に基づくログインの作成](sql-server-linux-active-directory-authentication.md#createsqllogins)
+5. [AD 認証を使用して SQL Server に接続する](sql-server-linux-active-directory-authentication.md#connect)
 
 ## <a name="known-issues"></a>既知の問題
 

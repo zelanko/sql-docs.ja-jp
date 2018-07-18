@@ -1,4 +1,4 @@
----
+﻿---
 title: sys.dm_exec_session_wait_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018

@@ -1,4 +1,4 @@
----
+﻿---
 title: '[データベースのバックアップ] ([メディア オプション] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017

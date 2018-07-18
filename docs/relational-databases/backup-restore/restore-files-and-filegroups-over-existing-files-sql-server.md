@@ -1,4 +1,4 @@
----
+﻿---
 title: 既存のファイルにファイルとファイル グループを復元する (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017

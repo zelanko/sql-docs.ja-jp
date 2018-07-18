@@ -1,4 +1,4 @@
----
+﻿---
 title: 集計関数、CALC 関数と NEW キーワード |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity

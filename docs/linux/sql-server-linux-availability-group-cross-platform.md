@@ -1,4 +1,4 @@
----
+﻿---
 title: Windows と Linux に SQL Server Always On 可用性グループを構成する (クロス プラットフォーム) |Microsoft ドキュメント
 description: Windows および Linux 上のレプリカでは、SQL Server の可用性グループ構成。
 author: MikeRayMSFT

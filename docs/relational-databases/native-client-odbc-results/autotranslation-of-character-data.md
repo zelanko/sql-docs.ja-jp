@@ -1,4 +1,4 @@
----
+﻿---
 title: 文字データの自動変換 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017

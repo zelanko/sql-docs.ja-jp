@@ -1,4 +1,4 @@
----
+﻿---
 title: 'クイック スタート: SQL Operations Studio (プレビュー) を使用して Azure SQL Database に接続して照会する |Microsoft ドキュメント'
 description: このクイック スタートは、SQL Operations Studio (プレビュー) を使用して SQL データベースに接続し、クエリを実行する方法を示しています。
 ms.custom: tools|sos

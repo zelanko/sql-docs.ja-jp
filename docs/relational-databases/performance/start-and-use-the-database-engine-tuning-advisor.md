@@ -1,4 +1,4 @@
----
+﻿---
 title: データベース エンジン チューニング アドバイザーの起動および使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2017
@@ -43,7 +43,7 @@ ms.locfileid: "34332593"
 -   **dta** ユーティリティを使用して最初のワークロードをチューニングします。 詳細については、このトピックの「 [dta ユーティリティを使用する](#dta) 」を参照してください。  
   
 ##  <a name="Start"></a> データベース エンジン チューニング アドバイザーを起動する  
- データベース エンジン チューニング アドバイザーのグラフィカル インターフェイス (GUI) は、さまざまなシナリオでのデータベース チューニングに対応するために、いくつかの異なる方法で起動することができます。 データベース エンジン チューニング アドバイザーを起動する方法としては、**[スタート]** メニューからの操作、**の**[ツール][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]メニューからの操作、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディターからの操作、 **の**[ツール][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] メニューからの操作があります。 データベース エンジン チューニング アドバイザーを初めて起動すると、 **[サーバーへの接続]** ダイアログ ボックスが表示されます。このダイアログ ボックスで接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定できます。  
+ データベース エンジン チューニング アドバイザーのグラフィカル インターフェイス (GUI) は、さまざまなシナリオでのデータベース チューニングに対応するために、いくつかの異なる方法で起動することができます。 データベース エンジン チューニング アドバイザーを起動する方法としては、**[スタート]** メニューからの操作、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ツール]** メニューからの操作、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターからの操作、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の **[ツール]** メニューからの操作があります。 データベース エンジン チューニング アドバイザーを初めて起動すると、**[サーバーへの接続]** ダイアログ ボックスが表示されます。このダイアログ ボックスで接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定できます。
   
 > [!WARNING]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで実行している場合は、データベース エンジン チューニング アドバイザーを起動しないでください。 サーバーをシングル ユーザー モードで実行しているときにデータベース エンジン チューニング アドバイザーを起動しようとしても、エラーが返されて、データベース エンジン チューニング アドバイザーは起動しません。 シングル ユーザー モードの詳細については、「 [シングル ユーザー モードでの SQL Server の起動](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)」を参照してください。  

@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft OLE DB Provider for Microsoft インデックス サービス |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: connectivity
@@ -50,7 +50,7 @@ MSIDXS
 
 |Keyword|説明|
 |-------------|-----------------|
-|**Provider**|Microsoft インテックス サービス用の OLE DB プロバイダーを指定します。 通常これは、接続文字列で指定された唯一のキーワードです。|
+|**Provider**|Microsoft インデックス サービス用の OLE DB プロバイダーを指定します。 通常これは、接続文字列で指定された唯一のキーワードです。|
 |**Data Source**|インデックス サービス カタログ名を指定します。 このキーワードが指定されていない場合は、既定のシステム カタログが使用されます。|
 |**Locale Identifier**|32 ビットの一意の番号 (1033 など)、ユーザーの言語に関連する設定を指定するを指定します。 このキーワードが指定されていない、既定のシステムのロケール識別子が使用されます。|
 
@@ -76,7 +76,7 @@ MSIDXS
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|読み取り/書き込み|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|読み取り専用|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)*|読み取り/書き込み|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)\*|読み取り/書き込み|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|読み取り/書き込み|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|

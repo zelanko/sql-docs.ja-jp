@@ -1,4 +1,4 @@
----
+﻿---
 title: PolyBase のインストール | Microsoft Docs
 ms.custom: ''
 ms.date: 02/23/2018
@@ -24,8 +24,8 @@ ms.locfileid: "37328502"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   SQL Server の試用版は [SQL Server 評価版ソフトウェア](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) からインストールすることができます。 
-  
-## <a name="prerequisites"></a>Prerequisites  
+
+## <a name="prerequisites"></a>前提条件
   
 - 64 ビット SQL Server 評価版。  
   

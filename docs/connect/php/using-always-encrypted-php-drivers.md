@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Server 用 PHP ドライバーで Always Encrypted を使用して |Microsoft ドキュメント
 ms.date: 01/08/2018
 ms.prod: sql

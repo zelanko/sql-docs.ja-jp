@@ -1,4 +1,4 @@
----
+﻿---
 title: データの取得 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/26/2018

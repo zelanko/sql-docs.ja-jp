@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Operations Studio プレビューの FAQ |Microsoft ドキュメント
 description: よく寄せられる質問 (FAQ) for SQL Operations Studio (プレビュー) です。
 ms.custom: tools|sos
@@ -30,18 +30,18 @@ ms.locfileid: "34235686"
 
 Windows、macOS、および Linux 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] は [http://aka.ms/sqlopsstudio](download.md) からダウンロードできます。
 
-## <a name="how-much-does-includename-sosincludesname-sos-shortmd-cost"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]の料金はどれくらいですか?
+## <a name="how-much-does-includename-sosincludesname-sos-shortmd-cost"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] の料金はどれくらいですか?
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] の個人利用、または商用目的の利用は無料です。
 
-## <a name="who-should-use-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]は誰が使用すべきですか?
+## <a name="who-should-use-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] は誰が使用すべきですか?
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] は誰でも使用できます。 ただし、データベース開発者、データベース管理者、システム管理者、および独立系ソフトウェア ベンダーによって実行されるタスクを簡略化するために設計されています。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] は誰でも使用できます。ただし、データベース開発者、データベース管理者、システム管理者、および独立系ソフトウェア ベンダーによって実行されるタスクを簡略化するために設計されています。
 
 
-## <a name="what-can-i-do-with-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] で何ができますか? 
+## <a name="what-can-i-do-with-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] で何ができますか?
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] は、Visual Studio Code の上に構築されており、SQL を操作する際、キーボードベースの近代的なコード ワークフロー体験を提供します。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] は、Visual Studio Code の上に構築されており、SQL を操作する際、キーボードベースの近代的なコード ワークフロー体験を提供します。
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] シンプルで複数のタブ ウィンドウ、豊富な SQL エディター、IntelliSense、キーワードの入力候補、コード スニペット & コード ナビゲーションおよびソース管理の統合 (Git および TFS) などの組み込みの機能を持つ簡単な 1 日に依存するコア エクスペリエンスを使用します。 オンデマンド クエリを実行、表示 (&) text、JSON、または Excel として結果を保存、データを編集、整理 (&)、お気に入りのデータベース接続を管理して閲覧できる使い慣れたオブジェクト内のデータベース オブジェクトを参照します。
 
@@ -55,15 +55,14 @@ Windows、macOS、および Linux 用の [!INCLUDE[name-sos](../includes/name-so
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] のソース コードと、データ プロバイダーは GitHub で利用可能です。 (Visual Studio Code に基づいた) [!INCLUDE[name-sos](../includes/name-sos-short.md)] のフロントエンドのソース コードは、ソフトウェアを変更して使用するための権利を提供するソース コード EULA の下で使用できますが、再配布したりクラウド サービスでホストしたりすることはできません。 データ プロバイダーのソース コードについては、[https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice) から MIT ライセンスの下でご利用いただけます。
 
-## <a name="do-you-plan-to-open-source-ssms"></a>SSMS のソースを開くための計画
+## <a name="do-you-plan-to-open-source-ssms"></a>SSMSをオープンソースにする計画はありますか？
 
-不可。 ただし、次世代書か CLI と GUI ツールは、オープン ソース。 たとえば、VS コード、mssql scripter、および msql CLI mssql 拡張機能は、GitHub 上のすべてのオープン ソースです。 ソース コード[!INCLUDE[name-sos](../includes/name-sos-short.md)]は GitHub で利用可能です。
+いいえ。 ただし、次世代のマルチOS CLIおよびGUIツールはオープンソースです。 たとえば、VS Code、mssql scripter、およびmsql CLIのmssql拡張は、すべてGitHub上のオープンソースです。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]のソースコードはGitHubで利用可能です。
 
 
-## <a name="now-that-there-is-includename-sosincludesname-sos-shortmd-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>あるので[!INCLUDE[name-sos](../includes/name-sos-short.md)]で Microsoft を SSMS と SSDT を廃止する予定ですか?
+## <a name="now-that-there-is-includename-sosincludesname-sos-shortmd-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]が提供されることによって、Microsoft は SSMS と SSDT を廃止する予定ですか?
 
-不可。 投資主力 Windows ツール (SSMS、SSDT、PowerShell) には、次世代の書かおよび複数のデータベースの CLI と GUI ツールだけでなく続行されます。
-目標は、ユーザーに提供の任意のプラットフォームで必要なツールを使用して、シナリオの選択です。
+いいえ。 次世代のマルチOSおよびマルチDB CLIおよびGUIツールに加えて、主要なWindowsツール（SSMS、SSDT、PowerShell）への投資も継続されます。 目標は、お客様が選択したプラットフォーム上でお客様が望むツールをシナリオに使用するかどうかを選択できるようにすることです。
 
 
 ## <a name="includename-sosincludesname-sos-shortmd-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] に SSMS/SSDT の機能がありません。 追加されますか?

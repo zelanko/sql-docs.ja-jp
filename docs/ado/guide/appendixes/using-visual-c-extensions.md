@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual C の拡張機能の使用 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -56,7 +56,7 @@ ms.locfileid: "38982804"
 
      C と C++ の変数にマップするフィールドごとに 1 つのバインド エントリを指定します。 該当するメンバーを使用して、 **ADO_FIXED_LENGTH_ENTRY**、 **ADO_NUMERIC_ENTRY**、または**ADO_VARIABLE_LENGTH_ENTRY**マクロのファミリです。
 
-3.  派生したクラスのインスタンスを作成、アプリケーションで**CADORecordBinding**です。 取得、 **IADORecordBinding**からインターフェイス、 **Recordset**です。 まず、 **BindToRecordset**にバインドするメソッド、**Recordset**C と C++ の変数へのフィールドです。
+3.  派生したクラスのインスタンスを作成、アプリケーションで**CADORecordBinding**です。 取得、 **IADORecordBinding**からインターフェイス、 **Recordset**です。 まず、 **BindToRecordset**にバインドするメソッド、**Recordset** C と C++ の変数へのフィールドです。
 
  詳細については、次を参照してください。、 [C++ 拡張機能の例を Visual](../../../ado/guide/appendixes/visual-c-extensions-example.md)します。
 
@@ -90,7 +90,7 @@ Update(CADORecordBinding *binding)
  詳細については、次を参照してください。[付録 a: データ型](http://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)、OLE DB プログラマーズ リファレンスの。
 
 ### <a name="begin-binding-entries"></a>バインディング エントリを開始します。
- **BEGIN_ADO_BINDING**(*クラス*)
+ **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>固定長のデータ
  **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)

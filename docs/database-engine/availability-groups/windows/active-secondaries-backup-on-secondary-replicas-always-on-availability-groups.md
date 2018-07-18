@@ -1,4 +1,4 @@
----
+﻿---
 title: アクティブなセカンダリ - セカンダリ レプリカでのバックアップ - AlwaysOn 可用性 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2017
