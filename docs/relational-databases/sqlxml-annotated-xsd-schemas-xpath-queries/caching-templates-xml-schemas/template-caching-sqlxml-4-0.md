@@ -1,5 +1,5 @@
 ---
-title: テンプレート キャッシュ (SQLXML 4.0) |Microsoft ドキュメント
+title: テンプレートのキャッシュ (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f4ba78383ac3b0b8b1065ae27aa064a99b3566d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967967"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050052"
 ---
 # <a name="template-caching-sqlxml-40"></a>テンプレートのキャッシュ (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
   
  テンプレートのサイズは、使用できるメモリと使用しているテンプレートの数に基づいて設定します。 既定値は**TemplateCacheSize**サイズは 31 です。 テンプレートのアクセスが遅い場合はキャッシュ サイズを増やし、メモリが少ない場合はキャッシュ サイズを減らします。  
   
- パフォーマンスを向上させることをお勧めを設定すること**TemplateCacheSize**通常使用するテンプレート数よりも大きくします。 場合**TemlateCacheSize**が小さいテンプレートが増えた数として数よりも、テンプレートがある場合、パフォーマンスは低下します。 **TemplateCacheSize** 128 までの値に設定することができます。  
+ パフォーマンスの向上のためお勧め設定した**TemplateCacheSize**通常使用するテンプレートの数より大きい。 場合**TemlateCacheSize**が小さいするテンプレートの数よりパフォーマンスが低下としてテンプレートの増加の数。 **TemplateCacheSize** 128 までの値に設定することができます。  
   
  キャッシュされたテンプレートが使用されるときには、毎回テンプレート ファイルの変更回数がチェックされ、更新が必要がどうかが決定されます。 これは、ディスク コピーがキャッシュ コピーより新しいためです。  
   
@@ -50,7 +50,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 >  テンプレートのパラメーターとコマンド プロパティはキャッシュされません。  
   
 ## <a name="see-also"></a>参照  
- [スキーマのキャッシュ (&) #40 です。SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)   
- [XSL のキャッシュ (&) #40 です。SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
+ [スキーマのキャッシュ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)   
+ [XSL のキャッシュ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
   
   

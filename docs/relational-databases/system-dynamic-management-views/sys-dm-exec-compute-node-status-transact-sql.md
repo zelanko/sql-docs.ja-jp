@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_compute_node_status (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_exec_compute_node_status (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,17 +26,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 79f0c7a7596f04f768a0ec4398ec90800bbbd08e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051500"
 ---
 # <a name="sysdmexeccomputenodestatus-transact-sql"></a>sys.dm_exec_compute_node_status (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   パフォーマンスと PolyBase のすべてのノードの状態に関する追加情報を保持します。 ノードごとに 1 行の一覧を表示します。  
   
-|列名|データ型|Description|範囲|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|ノードに関連付けられている一意の数値 id です。|種類に関係なく、スケール アウト クラスター全体にわたって一意です。|  
 |process_id|**int**|||  

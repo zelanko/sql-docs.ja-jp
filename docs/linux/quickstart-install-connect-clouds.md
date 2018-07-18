@@ -1,6 +1,6 @@
 ---
-title: クラウド内の SQL Server 2017 の概要 |Microsoft ドキュメント
-description: このクイック スタートでは、任意のクラウド内の Linux で SQL Server 2017 を実行する方法を示します。
+title: クラウドでの SQL Server 2017 の概要 |Microsoft Docs
+description: このクイック スタートでは、任意のクラウドでの Linux 上の SQL Server 2017 を実行する方法を示します。
 author: annashres
 ms.author: annashres
 manager: craigg
@@ -12,28 +12,28 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: f5d67ff25cb5d2816672fafe0602d56921c034bb
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322283"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995891"
 ---
-# <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>クイック スタート: SQL Server 2017 をクラウドで実行します。
+# <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>クイック スタート: クラウドでの SQL Server 2017 を実行します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このクイック スタートでは、Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、または任意のクラウドで Ubuntu で SQL Server 2017 をインストールします。 Azure で Linux の SQL Server を実行する場合は、「[Azure Portal での Linux SQL Server 仮想マシンのプロビジョニング](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)」に移動してください。
+このクイック スタートでは、Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、または任意のクラウドでの Ubuntu に SQL Server 2017 をインストールします。 Azure で Linux の SQL Server を実行する場合は、「[Azure Portal での Linux SQL Server 仮想マシンのプロビジョニング](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)」に移動してください。
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
 
-## <a name="amazon-web-services"></a>Amazon Web Services
+## <a name="amazon-web-services"></a>アマゾン ウェブ サービス
 1.  マーケットプレースから Linux AMI を、少なくとも 2 gb のメモリで作成します。 
     * [RHEL 7.3 以降](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  AMI に ssh で接続します
-1.  選択した Linux ディストリビューションのクイック スタートに従います。 
+1.  選択した Linux ディストリビューションのクイック スタートに従ってください。 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -59,10 +59,10 @@ ms.locfileid: "34322283"
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  イメージに ssh で接続します
-1.  選択した Linux ディストリビューションのクイック スタートに従います。 
+1.  選択した Linux ディストリビューションのクイック スタートに従ってください。 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  リモート接続を構成します。 
     * [ファイアウォール規則](https://console.cloud.google.com/networking/firewalls) に移動します。
-    * SQL Server がリッスンするポートのトラフィックを許可する受信の規則の追加 (既定の tcp: 1433)
+    * SQL Server がリッスンするポートでトラフィックを許可する受信規則の追加 (既定の tcp: 1433)

@@ -1,5 +1,5 @@
 ---
-title: 'フェールオーバー クラスター インスタンス: Linux 上の SQL Server の動作 |Microsoft ドキュメント'
+title: Linux 上の SQL Server のフェールオーバー クラスター インスタンスの動作 |Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,59 +13,60 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: e48f0e7150fa24361c8b854ced6f90b22448a68b
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001685"
 ---
-# <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス: Linux 上の SQL Server の動作します。
+# <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Linux 上の SQL Server のフェールオーバー クラスター インスタンスを動作します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、Linux 上の SQL Server のフェールオーバー クラスター インスタンス (FCI) を運用する方法について説明します。 Linux に SQL Server の FCI を作成していない、表示[構成のフェールオーバー クラスター インスタンス: SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)です。 
+この記事では、Linux 上の SQL Server のフェールオーバー クラスター インスタンス (FCI) を運用する方法について説明します。 Linux 上の SQL Server FCI を作成していない、表示[構成フェールオーバー クラスター インスタンス - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)します。 
 
 ## <a name="failover"></a>[フェールオーバー]
 
-Fci のフェールオーバーは、Windows Server フェールオーバー クラスター (WSFC) に似ています。 FCI をホストしているクラスター ノードに何らかの障害が発生した場合、FCI は必要がありますを別のノードで自動的にフェールオーバーします。 WSFC とは異なりペース、FCI の新しいホストとなるノードを選択するようにするために、優先所有者を設定する方法はありません。
+Fci のフェールオーバーは、Windows Server フェールオーバー クラスター (WSFC) に似ています。 FCI をホストしているクラスター ノードに何らかのエラーが発生した場合、FCI はする必要がありますを別のノードで自動的にフェールオーバーします。 WSFC の場合とは異なりは、Pacemaker は、FCI の新しいホストとなるノードを取得するように、優先所有者を設定する方法はありません。
 
-別のノードに FCI を手動でフェールオーバーすることがあります。 プロセスは、WSFC で Fci の場合と同じです。 WSFC では、ロール レベルでリソースをフェールオーバーします。 ペース、内を移動するリソースを選択して、すべての制約が正しいと仮定すると、他のすべて移動されますも。 
+別のノードに FCI を手動で失敗することがあります。 プロセスは、WSFC 上の Fci の場合と同じではありません。 Wsfc では、ロール レベルでリソースをフェールオーバーします。 Pacemaker を移動するリソースを選択して、すべての制約が正しいと仮定すると、他のすべてが移動も。 
 
-フェールオーバーするための方法は、Linux ディストリビューションに依存します。 Linux ディストリビューションの手順に従います。
+フェールオーバーする方法は、Linux ディストリビューションによって異なります。 Linux ディストリビューションの手順を実行します。
 
 - [RHEL または Ubuntu](#rhelFailover)
 - [SLES](#slesFailover)
 
 ## <a name = "#rhelFailover"></a> 手動フェールオーバー (RHEL または Ubuntu)
 
-Red Hat Enterprise Linux (RHEL) バイ サイドまたは Ubuntu サーバーは、手動フェールオーバーを実行するには、次の手順を実行します。
+バイ サイドの Red Hat Enterprise Linux (RHEL) または Ubuntu サーバーは、手動フェールオーバーを実行するには、次の手順を実行します。
 1.  次のコマンドを発行します。 
 
    ```bash
    sudo pcs resource move <FCIResourceName> <NewHostNode> 
    ```
 
-   \<FCIResourceName > SQL Server の FCI のペース リソースの名前です。
+   \<FCIResourceName > は、SQL Server FCI の Pacemaker リソース名です。
 
    \<NewHostNode >、FCI をホストするクラスター ノードの名前を指定します。 
 
-   受信確認は取得しません。
+   すべての受信確認は利用できません。
 
-2.  手動フェールオーバーでペースを手動で移動するように選択されたリソースの場所の制約を作成します。 この制約で参照する実行`sudo pcs constraint`です。
+2.  手動のフェールオーバー中には、Pacemaker は、手動で移動する選択されたリソースの場所の制約を作成します。 この制約で参照する実行`sudo pcs constraint`します。
 
-3.  フェールオーバーが完了したら、発行して制約を削除`sudo pcs resource clear <FCIResourceName>`です。 
+3.  フェールオーバーが完了したら、発行することによって、制約の削除`sudo pcs resource clear <FCIResourceName>`します。 
 
-\<FCIResourceName >、FCI のペース リソース名を指定します。 
+\<FCIResourceName > は、FCI の Pacemaker リソース名です。 
 
 ## <a name = "#slesFailover"></a> 手動フェールオーバー (SLES)
 
 
-Suse Linux Enterprise Server (SLES) で使用して、 `migrate` SQL Server の FCI を手動でフェールオーバーするコマンドします。 以下に例を示します。
+Suse Linux Enterprise Server (SLES) で使用して、 `migrate` SQL Server FCI を手動でフェールオーバー コマンドします。 以下に例を示します。
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>
 ```
 
-\<FCIResourceName > フェールオーバー クラスター インスタンスに名前を指定します。 
+\<FCIResourceName > は、フェールオーバー クラスター インスタンスのリソースの名前です。 
 
 \<NewHostNode > 新しい移行先ホストの名前を指定します。 
 
@@ -79,6 +80,6 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 ## <a name="next-steps"></a>次の手順
 
-- [フェールオーバー クラスター インスタンス: Linux 上の SQL Server を構成します。](sql-server-linux-shared-disk-cluster-configure.md)
+- [Linux 上の SQL Server のフェールオーバー クラスター インスタンスを構成します。](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->

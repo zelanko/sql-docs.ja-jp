@@ -1,5 +1,5 @@
 ---
-title: sys.bandwidth_usage (Azure SQL データベース) |Microsoft ドキュメント
+title: sys.bandwidth_usage (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: ''
@@ -28,39 +28,39 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: e34541614f20c4fedd8a691fc3c1c13d1929fb3c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181868"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054430"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   **注: これにのみ適用されます[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11 します。**  
   
- 内の各データベースによって使用されるネットワーク帯域幅に関する情報を返します、  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 の論理サーバー**、します。 指定のデータベースに対して返される各行は、1 時間にわたる 1 つの方向とクラスの使用状況をまとめたものです。  
+ 内の各データベースで使用されるネットワーク帯域幅に関する情報を返します、  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 の論理サーバー**、します。 指定のデータベースに対して返される各行は、1 時間にわたる 1 つの方向とクラスの使用状況をまとめたものです。  
   
- **これはで廃止されて、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 論理サーバーです。**  
+ **これは非推奨で、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 論理サーバーです。**  
   
  **Sys.bandwidth_usage**ビューには、次の列が含まれています。  
   
-|Column Name|Description|  
+|Column Name|説明|  
 |-----------------|-----------------|  
 |**time**|帯域幅が使用されていた時間。 このビューの行は、1 時間単位です。 たとえば、2009-09-19 02:00: 00.000 は、帯域幅が 2009 年 9 月 19 日午前 2:00 から午前 3:00 までの間に使用された ことを示します。|  
 |**database_name**|帯域幅を使用したデータベースの名前。|  
-|**方向**|使用された帯域幅の種類。次のどちらかです。<br /><br /> 入力: データに移行する、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。<br /><br /> Egress: データの移動が、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。|  
-|**class**|使用された帯域幅のクラス。次のどちらかです。<br />内部エラー: データは、Azure プラットフォーム内を移動します。<br />Azure platform から移行する外部: データ。<br /><br /> データベースは地域間の連続コピー リレーションシップに関与している場合にのみ、このクラスが返されます ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)])。 特定のデータベースは連続コピー リレーションシップに参加していない、「インター リンク」行は返されません。 詳細については、後述する「解説」をご覧ください。|  
+|**方向**|使用された帯域幅の種類。次のどちらかです。<br /><br /> イングレス: 移行するデータ[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]します。<br /><br /> エグレス: データの移動が、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]します。|  
+|**class**|使用された帯域幅のクラス。次のどちらかです。<br />Azure プラットフォーム内を移動する内部エラー: データ。<br />Azure platform から移行する外部: データ。<br /><br /> このクラスは、データベースはリージョン間で連続コピー リレーションシップに関与している場合にのみ返されます ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)])。 連続コピー リレーションシップで、特定のデータベースが参加していない場合は、「インター リンク」行は返されません。 詳細については、後述する「解説」をご覧ください。|  
 |**time_period**|使用状況が発生したときの時間帯とは、ピーク時または OffPeak のいずれかです。 Peak 時間帯は、サーバーが作成された領域に基づいています。 たとえば、 サーバーが "US_Northwest" リージョンで作成された場合、Peak 時間帯は太平洋標準時の午前 10:00 から 午後 6 時まで  定義されます。|  
 |**数量**|使用された帯域幅の量 (キロバイト (KB) 単位)。|  
   
-## <a name="permissions"></a>権限  
- このビューはのみで使用できます、**マスター**データベース、サーバー レベル プリンシパル ログインをします。  
+## <a name="permissions"></a>アクセス許可  
+ このビューはのみ利用可能、**マスター**データベース、サーバー レベル プリンシパル ログインをします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ### <a name="external-and-internal-classes"></a>外部クラスと内部クラス  
- 特定の時点で使用される各データベースに対して、 **sys.bandwidth_usage**ビューには、クラスと帯域幅の使用の方向を示す行が返されます。 次の例は、指定されたデータベースに対して公開される可能性があるデータを示しています。 この例では、時刻は 2012-04-21 17:00:00 になっています。これは、ピーク タイムの時間帯における発生時刻です。 データベース名は Db1 です。 この例では**sys.bandwidth_usage**次のように、受信と送信方向と外部および内部のクラスの 4 つの組み合わせをすべての行を返しています。  
+ 特定の時点で使用される各データベースに対して、 **sys.bandwidth_usage**ビューには、クラスと帯域幅の使用の方向を示す行が返されます。 次の例は、指定されたデータベースに対して公開される可能性があるデータを示しています。 この例では、時刻は 2012-04-21 17:00:00 になっています。これは、ピーク タイムの時間帯における発生時刻です。 データベース名は Db1 です。 この例で**sys.bandwidth_usage**受信と送信方向の外部および内部クラスでは、4 つの組み合わせをすべての行が次のように戻りました。  
   
 |time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  

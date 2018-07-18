@@ -1,5 +1,5 @@
 ---
-title: UnknownMemberName 要素 (ASSL) |Microsoft ドキュメント
+title: UnknownMemberName 要素 (ASSL) |Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d744357078e4cfaa73fe3170dba8f1321313efad
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34038186"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050580"
 ---
 # <a name="unknownmembername-element-assl"></a>UnknownMemberName 要素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34038186"
   
 |特性|説明|  
 |--------------------|-----------------|  
-|データ型と長さ|文字列|  
+|データ型と長さ|String|  
 |既定値|*Unknown*|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
@@ -43,15 +43,15 @@ ms.locfileid: "34038186"
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[ディメンション](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
+|親要素|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
- 値、 **UnknownMemberName**要素が不明なメンバーに使用されるキャプションを提供します。 不明なメンバーのメンバーの ID が*ディメンション*です。UnknownMember、場所*ディメンション*ディメンションの一意の名前は、変更できません。  
+## <a name="remarks"></a>コメント  
+ 値、 **UnknownMemberName**要素が不明なメンバーに使用されるキャプションを提供します。 不明なメンバーのメンバー ID が*ディメンション*します。UnknownMember、場所*ディメンション*ディメンションの一意の名前を指定し、変更することはできません。  
   
  親に対応する要素**UnknownMemberName**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Dimension>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

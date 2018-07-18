@@ -1,6 +1,6 @@
 ---
-title: SQL Server 用の Red Hat Enterprise Linux 共有クラスターの構成 |Microsoft ドキュメント
-description: SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成することによって高可用性を実装します。
+title: SQL Server 用の Red Hat Enterprise Linux 共有クラスターの構成 |Microsoft Docs
+description: SQL Server 用の Red Hat Enterprise Linux の共有ディスク クラスターを構成することによって、高可用性を実装します。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -13,22 +13,22 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.openlocfilehash: 7ddd34e56d8f8499715c535de21ae6f23bd282b1
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323713"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001634"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成します。
+# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux の共有ディスク クラスターを構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このガイドでは、Red Hat Enterprise Linux 上の SQL Server の 2 つのノードの共有ディスク クラスターを作成する手順を紹介します。 クラスタ リングの層は [Pacemaker](http://clusterlabs.org/)の上に構築されたRed Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています SQL Server のインスタンスは 1 つのノードもしくは別のもう一つのノードのどちらかでアクティブです。
 
 > [!NOTE] 
-> Red Hat HA アドオンおよびドキュメントへのアクセスには、サブスクリプションが必要です。 
+> Red Hat HA アドオンとドキュメントへのアクセスには、サブスクリプションが必要です。 
 
-次の図に示す 2 つのサーバーに記憶域が提供されます。 -Corosync とペース - クラスタ リングのコンポーネントは、通信およびリソース管理を調整します。 サーバーのいずれかが、記憶域リソース、および SQL Server へのアクティブな接続です。 ペースが障害を検出したときに、クラスタ リングのコンポーネントは、他のノードに、リソースの移動を管理します。  
+次の図に示すよう、2 つのサーバーに記憶域が表示されます。 -Corosync と Pacemaker - クラスタ リングのコンポーネントは、通信、およびリソース管理を調整します。 サーバーのいずれかが、ストレージ リソースと SQL Server への接続。 Pacemaker は、障害を検出したときにクラスタ リングのコンポーネントは、他のノードに、リソースの移動を管理します。  
 
 ![Red Hat Enterprise Linux 7 ディスク SQL クラスターの共有](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
@@ -36,10 +36,10 @@ ms.locfileid: "34323713"
 
 
 > [!NOTE] 
-> この時点では、ペースで SQL Server の統合は Windows での WSFC でとして結合します。 SQL 内ではありません、クラスターの存在についてのナレッジ、すべてのオーケストレーションが外であり、サービスは、スタンドアロン インスタンスとしてペースによって制御されます。 など、クラスター dmv sys.dm_os_cluster_nodes と sys.dm_os_cluster_properties ないレコードがされます。
-文字列のサーバー名を指す接続文字列を使用して、ip アドレスを使用しない、これらには、選択したサーバーの名前 (次のセクションで説明されている) と仮想 IP リソースの作成に使用される IP、DNS サーバーに登録する必要があります。
+> この時点では、Pacemaker の SQL Server の統合は、Windows の WSFC でとして結合ではありません。 SQL 内ではありません、クラスターの存在に関する知識と、すべてのオーケストレーションが外部では、サービスは、スタンドアロン インスタンスとして Pacemaker によって制御されます。 クラスター dmv sys.dm_os_cluster_nodes と sys.dm_os_cluster_properties はレコード。
+文字列のサーバー名を指す接続文字列を使用し、ip アドレスを使用しない、選択したサーバー名に置き換えます (次のセクションで説明) と仮想 IP リソースの作成に使用される IP が DNS サーバーに登録する必要があります。
 
-次のセクションでは、フェールオーバー クラスター ソリューションをセットアップする手順について説明します。 
+次のセクションでは、フェールオーバー クラスター ソリューションを設定する手順について説明します。 
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -51,7 +51,7 @@ ms.locfileid: "34323713"
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>各クラスター ノードで、SQL Server のインストールと構成をする
 
-1. 両方のノード上に SQL Server をインストールし、セットアップします。  詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)です。
+1. 両方のノード上に SQL Server をインストールし、セットアップします。  詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)します。
 
 1. 構成のために、1つのノードをプライマリとして指定し、もう片方をセカンダリとして指定します。 このガイドでは、これ以降これらの用語を使用します。  
 
@@ -66,7 +66,7 @@ ms.locfileid: "34323713"
 > [!NOTE] 
 > セットアップ時に、SQL Server インスタンスのためにサーバー マスター キーが生成され、`/var/opt/mssql/secrets/machine-key` に配置されます。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるため、その id はノード間で共有されません。 したがって、各ローカル mssql アカウント がサーバー マスター  キーの暗号化を解除するためにアクセスできるようにするために、各セカンダリ ノードにプライマリ ノードから暗号化キーをコピーする必要があります。 
 
-1. プライマリ ノードで、ペースの SQL server ログインの作成および実行する権限をログイン`sp_server_diagnostics`です。 ペースでは、このアカウントを使用して、どのノードが SQL Server を実行していることを確認します。 
+1. プライマリ ノードで、Pacemaker 用 SQL server ログインを作成および実行する権限をログイン`sp_server_diagnostics`します。 Pacemaker は、このアカウントを使用して、ノードは、SQL Server を実行していることを確認します。 
 
    ```bash
    sudo systemctl start mssql-server
@@ -87,7 +87,7 @@ ms.locfileid: "34323713"
 
 1. 各クラスター ノードのホスト ファイルを構成します。 ホスト ファイルには、すべてのクラスター ノードの名前と IP アドレスを含める必要があります。 
 
-    各ノードの IP アドレスを確認してください。 次のスクリプトは、現在のノードの IP アドレスを示します。 
+    各ノードの IP アドレスを確認します。 次のスクリプトでは、現在のノードの IP アドレスを示します。 
 
    ```bash
    sudo ip addr show
@@ -111,7 +111,7 @@ ms.locfileid: "34323713"
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>共有記憶域を構成して、データベース ファイルを移動する 
 
-共有記憶域を提供するためのさまざまなソリューションがあります。 このチュートリアルでは、NFS を使った共有記憶域の構成について説明します。 ベスト プラクティスに従うし、Kerberos を使用して NFS を保護することをお勧め (次に例を見つけることができます:https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)です。 
+共有記憶域を提供するためのさまざまなソリューションがあります。 このチュートリアルでは、NFS を使った共有記憶域の構成について説明します。 ベスト プラクティスに従うし、Kerberos を使用して、NFS をセキュリティで保護するをお勧めします (ここで例を見つけることができます:https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)します。 
 
 >[!Warning]
 >NFS を保護していない場合、ネットワークにアクセスして SQL ノードの IP アドレスを偽装できるすべてのユーザーがデータ ファイルにアクセスできます。 通常どおり、実稼働環境で使用する前にお使いのシステムの脅威モデルを確認してください。 別の記憶域オプションとして、SMB ファイル共有を使用できます。
@@ -141,7 +141,7 @@ NFS サーバー上で、次の操作を行います。
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  編集`/etc/exports`を共有するディレクトリをエクスポートします。 必要な共有フォルダーごとに 1 行を必要とします。 以下に例を示します。 
+1.  編集`/etc/exports`を共有するディレクトリをエクスポートします。 各共有に 1 行が必要です。 以下に例を示します。 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -193,7 +193,7 @@ NFS サーバー上で、次の操作を行います。
    sudo firewall-cmd --reload
    ```
 
-1. クライアント コンピューターで、NFS 共有を表示できることを確認します。
+1. クライアント コンピューターに NFS の共有を表示できることを確認します。
 
    ```bash
    sudo showmount -e <IP OF NFS SERVER>
@@ -204,10 +204,10 @@ NFS サーバー上で、次の操作を行います。
 NFS の使用に関する詳細については、次のリソースを参照してください。
 
 * [NFS サーバーと firewalld |Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
-* [NFS ボリュームのマウント |Linux のネットワーク管理者ガイド](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
+* [NFS ボリュームをマウント |Linux のネットワーク管理者ガイド](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
 * [NFS サーバーの構成](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
 
-### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>共有記憶域 をポイントにデータベース ファイル ディレクトリをマウントします。
+### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>共有記憶域を指すデータベース ファイル ディレクトリをマウントします。
 
 1.  **プライマリ ノード上でのみ**、一時的な場所にデータベース ファイルを保存します。次のスクリプトでは、新しい一時ディレクトリを作成し、データベース ファイルを新しいディレクトリにコピーして、古いデータベース ファイルを削除します。 SQL Server はローカル ユーザー mssql として実行されるため、マウントされた共有へのデータ転送後に、ローカル ユーザーが共有への読み取り/書き込みアクセスを持っているかどうかを確認する必要があります。 
 
@@ -225,15 +225,15 @@ NFS の使用に関する詳細については、次のリソースを参照し�
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr 
    ```
    
-   次のスクリプトは、編集の例を示します。  
+   次のスクリプトでは、編集の例を示します。  
 
    ``` 
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->以下を使用してファイル システム (FS) のリソースの指定どおり場合、/etc/fstab にコマンドのマウントを保持する必要はありません。 FS クラスター化されたリソースを開始するときに、フォルダーをマウント ペースくれます。 フェンス操作のヘルプでは、FS が 2 回マウントされていることを確認します。 
+>リソースを使用してファイル システム (FS) の推奨どおりここで場合、/etc/fstab にマウント コマンドを保持する必要はありません。 Pacemaker は、FS クラスター化リソースを開始した場合に、フォルダーをマウントするが取得されます。 フェンスを利用は、FS が 2 回マウントされていることを確認します。 
 
-1.  実行`mount -a`マウントされているパスを更新するシステムのコマンド。  
+1.  実行`mount -a`システムがマウントされているパスを更新するコマンド。  
 
 1.  `/var/opt/mssql/tmp`に保存したデータベースとログ ファイルを新しくマウントされた共有`/var/opt/mssql/data`にコピーします。 これは、**プライマリ ノード上**でのみ行います。 'mssql' ローカル ユーザーに読み取り/書き込み権限を付与してください。
 
@@ -254,7 +254,7 @@ NFS の使用に関する詳細については、次のリソースを参照し�
    sudo systemctl stop mssql-server
    ```
  
-この時点で、共有記憶域上のデータベース ファイルを使用して実行する SQL Server の両方のインスタンスが構成されます。 次の手順では、ペースの SQL Server を構成します。 
+この時点でデータベースのファイル共有の記憶域を使用して実行する SQL Server の両方のインスタンスが構成されます。 次の手順では、Pacemaker 用 SQL Server を構成します。 
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>各クラスター ノードでPacemakerインストールして構成する
 
@@ -321,7 +321,7 @@ NFS の使用に関する詳細については、次のリソースを参照し�
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA アドオンは、VMWare と KVM エージェントをフェンスがします。 フェンス操作は、他のすべてのハイパーバイザーで無効にする必要があります。 実稼働環境では、フェンス操作エージェントを無効にしないでください。 時間帯、時点では、HyperV またはクラウド環境のフェンス操作エージェントがありません。 これらの構成を実行している場合は、フェンス操作を無効にする必要があります。 \**これは、説明は、実稼働システムでは推奨されません。**
+   > RHEL HA アドオンでは、VMWare と KVM エージェントをフェンスがあります。 フェンスは、他のすべてのハイパーバイザー上で無効にする必要があります。 運用環境では、フェンス エージェントを無効にしないでください。 期間の時点では、HyperV やクラウド環境にフェンス エージェントはありません。 これらの構成を実行している場合は、フェンスを無効にする必要があります。 \**これは実稼働システムでは推奨されません。**
 
    次のコマンドで、フェンス操作エージェントを無効にします。
 
@@ -332,15 +332,15 @@ NFS の使用に関する詳細については、次のリソースを参照し�
 
 2. SQL Server、ファイル システム、仮想 IP リソースに対してクラスター リソースを構成し、クラスターに構成をプッシュします。 次の情報が必要です。
 
-   - **SQL Server リソース名**: SQL Server のクラスター化リソースの名前。 
-   - **IP リソース名を浮動**: 仮想 IP アドレス リソースの名前。
+   - **SQL Server リソース名**: クラスター化された SQL Server リソースの名前。 
+   - **Floating IP リソース名**: 仮想 IP アドレス リソースの名前。
    - **IP アドレス**: SQL Server のクラスター化されたインスタンスに接続するクライアントが使用する IP アドレス。 
-   - **ファイル システム リソース名**: ファイル システム リソースの名前。
+   - **ファイル システムのリソース名**: ファイル システム リソースの名前。
    - **デバイス**:、NFS 共有のパス
    - **デバイス**: 共有にマウントしているローカル パス
    - **fstype**: ファイル共有の種類 (つまり nfs)
 
-   次のスクリプトを環境から値を更新します。 クラスター化されたサービスを構成および開始するために 1 つのノード上で実行します。  
+   次のスクリプト環境から値を更新します。 クラスター化されたサービスを構成および開始するために 1 つのノード上で実行します。  
 
    ```bash
    sudo pcs cluster cib cfg 
@@ -364,7 +364,7 @@ NFS の使用に関する詳細については、次のリソースを参照し�
    sudo pcs cluster cib-push cfg
    ```
 
-   構成がプッシュされた後、SQL Server は、1 つのノードで開始されます。 
+   構成をプッシュすると後、は、SQL Server が 1 つのノードで開始されます。 
 
 3. SQL Server が開始されたことを確認します。 
 
@@ -393,6 +393,6 @@ NFS の使用に関する詳細については、次のリソースを参照し�
 
 * Pacemaker の [クラスター入門](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-[Red Hat Enterprise Linux 共有ディスク クラスターで SQL Server の運用します。](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+[Red Hat Enterprise Linux の共有ディスク クラスターで SQL Server の運用します。](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)

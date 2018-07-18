@@ -1,5 +1,5 @@
 ---
-title: sys.database_principals (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.database_principals (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
@@ -26,18 +26,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: a879dfcc6dd0feb57126574947b51f84261af915
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181938"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995877"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  プリンシパルのそれぞれのセキュリティの行を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
+  それぞれのセキュリティの行でプリンシパルを返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|プリンシパルの名前。データベース内で一意です。|  
 |**principal_id**|**int**|プリンシパルの ID。データベース内で一意です。|  
@@ -46,19 +46,19 @@ ms.locfileid: "33181938"
 |**default_schema_name**|**sysname**|SQL 名でスキーマが指定されなかったときに使用される名前。 種類が S、U、A 以外のプリンシパルの場合は Null になります。|  
 |**create_date**|**datetime**|プリンシパルが作成された日時。|  
 |**modify_date**|**datetime**|プリンシパルが変更された時刻。|  
-|**owning_principal_id**|**int**|このプリンシパルを所有するプリンシパルの ID。 データベース ロール以外のすべてのプリンシパルが所有する必要があります**dbo**です。|  
+|**owning_principal_id**|**int**|このプリンシパルを所有するプリンシパルの ID。 データベース ロール以外のすべてのプリンシパルが所有する必要があります**dbo**します。|  
 |**sid**|**varbinary(85)**|プリンシパルの SID (セキュリティ識別子)。  SYS および INFORMATION SCHEMAS の場合は NULL になります。|  
 |**is_fixed_role**|**bit**|1 の場合は、固定データベース ロール db_owner、db_accessadmin、db_datareader、db_datawriter、db_ddladmin、db_securityadmin、db_backupoperator、db_denydatareader、db_denydatawriter のいずれかのエントリを表します。|  
 |**authentication_type**|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 認証の種類を示します。 使用可能な値とその説明を次に示します。<br /><br /> 0: 認証なし<br />1: インスタンスの認証<br />2: データベースの認証<br />3: Windows 認証|  
 |**authentication_type_desc**|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 認証の種類の説明。 使用可能な値とその説明を次に示します。<br /><br /> NONE: 認証なし<br />インスタンス: インスタンスの認証<br />データベース: データベースの認証<br />WINDOWS: Windows 認証|  
 |**default_language_name**|**sysname**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> このプリンシパルの既定の言語を示します。|  
 |**default_language_lcid**|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> このプリンシパルの既定の LCID を示します。|  
-|**allow_encrypted_value_modifications**|**bit**|**適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 一括コピー操作でのサーバーの暗号化メタデータ チェックを抑制します。 これにより、ユーザーを使用して Always encrypted により、テーブルまたはデータベース間でデータの暗号化を解除せずに暗号化データの一括コピーにします。 既定値は OFF です。 |      
+|**allow_encrypted_value_modifications**|**bit**|**適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 一括コピー操作でのサーバーの暗号化メタデータ チェックを抑制します。 これにより、ユーザーがデータを復号化せず、テーブルまたはデータベース間で、Always Encrypted を使って暗号化データの一括コピーできます。 既定値は OFF です。 |      
   
-## <a name="remarks"></a>解説  
- *PasswordLastSetTime*プロパティは、SQL Server のサポートされているすべての構成で使用できますが、その他のプロパティは SQL Server が Windows Server 2003 以降、CHECK_POLICY と CHECK_ の両方で実行されている場合にのみ使用できます有効期限が有効にします。 参照してください[パスワード ポリシー](../../relational-databases/security/password-policy.md)詳細についてはします。  
+## <a name="remarks"></a>コメント  
+ *PasswordLastSetTime*プロパティは、SQL Server のサポートされているすべての構成で使用できますが、その他のプロパティは SQL Server が Windows Server 2003 またはそれ以降、CHECK_POLICY と CHECK_ の両方で実行されている場合にのみ使用できます有効期限が有効にします。 参照してください[パスワード ポリシー](../../relational-databases/security/password-policy.md)詳細についてはします。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  すべてのユーザーは自分のユーザー名、システム ユーザー、および固定データベース ロールを参照できます。 他のユーザーを参照するには、ALTER ANY USER、またはユーザーに対する権限が必要です。 ユーザー定義ロールを参照するには、ALTER ANY ROLE、またはロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -95,11 +95,11 @@ JOIN sys.schemas AS s
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: は、データベース プリンシパルのすべての権限を一覧表示します。  
+### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: すべてのデータベース プリンシパルの権限を一覧表示します。  
  次のクエリは、データベース プリンシパルに対して明示的に付与または拒否されている権限を一覧表示します。  
   
 > [!IMPORTANT]  
->  固定データベース ロールのアクセス許可は表示されません`sys.database_permissions`です。 したがって、データベース プリンシパルには、ここに一覧表示されていない追加の権限がある可能性があります。  
+>  固定データベース ロールのアクセス許可に表示されない`sys.database_permissions`します。 したがって、データベース プリンシパルには、ここに一覧表示されていない追加の権限がある可能性があります。  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -109,7 +109,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D:、データベース内のスキーマ オブジェクトのアクセス許可が一覧表示します。  
+### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: がデータベース内のスキーマ オブジェクトの権限を一覧表示  
  次のクエリの結合`sys.database_principals`と`sys.database_permissions`に`sys.objects`と`sys.schemas`特定のスキーマ オブジェクトに付与または拒否アクセス許可を一覧します。  
   
 ```  

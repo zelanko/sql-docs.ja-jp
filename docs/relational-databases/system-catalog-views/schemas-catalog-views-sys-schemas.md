@@ -1,5 +1,5 @@
 ---
-title: sys.schemas (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.schemas (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fb74ca331e580ffa71111f987bf3a93450f2b56
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178338"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049949"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>スキーマ カタログ ビュー - sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "33178338"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|スキーマの名前です。 データベース内で一意です。|  
+|**name**|**sysname**|スキーマの名前。 データベース内で一意です。|  
 |**schema_id**|**int**|スキーマの ID です。 データベース内で一意です。|  
 |**principal_id**|**int**|このスキーマを所有するプリンシパルの ID です。|  
   
 ## <a name="remarks"></a>コメント  
- データベース スキーマの名前空間または含まれているテーブル、ビュー、プロシージャ、関数などのオブジェクトのコンテナーとして機能しません、 **sys.objects**カタログ ビューです。  
+ 名前空間または内にあるテーブル、ビュー、プロシージャ、関数、およびなどのオブジェクトのコンテナーとして使用するデータベース スキーマ、 **sys.objects**カタログ ビューです。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

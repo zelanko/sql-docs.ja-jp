@@ -1,5 +1,5 @@
 ---
-title: ReadWriteMode 要素 |Microsoft ドキュメント
+title: ReadWriteMode 要素 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0d528567e22c3ba19b49eefff10d886703a0d29a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576494"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994854"
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 要素
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  **ReadWriteMode**データベース プロパティを指定するかどうか、データベースで**ReadWrite**モードまたは**ReadOnly**モード。 このプロパティの使用可能な値は 2 つだけです。  
+  **ReadWriteMode**データベース プロパティは、データベースがあるかどうかを指定します**ReadWrite**モードまたは**ReadOnly**モード。 このプロパティの使用可能な値は 2 つだけです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34576494"
 |既定値|ReadWrite|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
@@ -47,14 +47,14 @@ ms.locfileid: "34576494"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- データベースを作成**ReadWrite**モードのみです。 データベースを作成することはできません**ReadOnly**モード。  
+ データベースに作成されます**ReadWrite**モードのみです。 データベースを作成することはできません**ReadOnly**モード。  
   
- 値、 **ReadWriteMode**要素は次の表に示す文字列の 1 つに制限されます。  
+ 値、 **ReadWriteMode**要素は、次の表に示す文字列の 1 つに制限されています。  
   
 |値|説明|  
 |-----------|-----------------|  
 |*ReadOnly*|変更または更新をデータベースに適用できません。|  
-|*読み取り/書き込み*|変更または更新をデータベースに適用できます。|  
+|*ReadWrite*|変更または更新をデータベースに適用できます。|  
   
 ## <a name="see-also"></a>参照
  [Attach 要素](../../../analysis-services/xmla/xml-elements-commands/attach-element.md)   

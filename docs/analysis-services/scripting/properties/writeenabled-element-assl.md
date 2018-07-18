@@ -1,5 +1,5 @@
 ---
-title: WriteEnabled 要素 (ASSL) |Microsoft ドキュメント
+title: WriteEnabled 要素 (ASSL) |Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: cd95189a8da82c22d13d53357bf17943d0a38fdc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039438"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050640"
 ---
 # <a name="writeenabled-element-assl"></a>WriteEnabled 要素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -43,13 +43,13 @@ ms.locfileid: "34039438"
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[ディメンション](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
+|親要素|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  親に対応する要素**WriteEnabled**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Dimension>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

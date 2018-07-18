@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_incremental_stats_properties (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_incremental_stats_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6dd64a9c7b4171ad8024f2b86c07cb318fa81ad8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997874"
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|統計オブジェクトのプロパティを返す対象であるオブジェクト (テーブル) の ID。|  
 |stats_id|**int**|統計オブジェクトの ID。 テーブル内で一意です。 詳細については、「 [sysには含まれていません。stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)には含まれていません。|
@@ -74,10 +75,10 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  この動作によって、 `sys.dm_db_incremental_stats_properties` や `sys.objects` などのビュー内の行へのクロス適用時に、 `sys.stats`を安全に使用できます。 このメソッドで、各パーティションに対応する統計情報のプロパティを返すことができます。 すべてのパーティションをまとめてマージした統計情報のプロパティを表示するには、代わりに sys.dm_db_stats_properties を使用します。 
 
-統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram)および[密度ベクトル](../../relational-databases/statistics/statistics.md#density)と共に格納されます。 統計情報データを生成するデータが読み取られず、統計情報の blob は作成されません、日付が使用できないと、 *last_updated*列は NULL です。 これは、述語が行を返さないフィルター選択された統計情報や、新しい空のテーブルの場合です。
+統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram)および[密度ベクトル](../../relational-databases/statistics/statistics.md#density)と共に格納されます。 統計情報データを生成するデータが読み取られず、統計 blob は作成されず、日付が使用できないと、 *last_updated*列は NULL です。 これは、述語が行を返さないフィルター選択された統計情報や、新しい空のテーブルの場合です。
 
-## <a name="permissions"></a>権限  
- ユーザーは、統計情報列に対する select 権限を持つテーブルを所有するユーザーまたはユーザーのメンバーである必要があります、`sysadmin`固定サーバー ロール、`db_owner`固定データベース ロール、または`db_ddladmin`固定データベース ロール。  
+## <a name="permissions"></a>アクセス許可  
+ ユーザーは、統計情報列に対する select 権限を持ってまたはテーブルを所有するユーザーまたはユーザーのメンバーであることが必要です、`sysadmin`固定サーバー ロール、`db_owner`固定データベース ロール、または`db_ddladmin`固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
 

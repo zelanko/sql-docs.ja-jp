@@ -1,5 +1,5 @@
 ---
-title: サンプル ASP アプリケーション (SQLXML 4.0) でアップデート グラムの使用 |Microsoft ドキュメント
+title: サンプル ASP アプリケーション (SQLXML 4.0) でアップデート グラムの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 3e6ab461bc1916394b53e5b8c0017bbef71eabe7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970607"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049917"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>サンプル ASP アプリケーションでのアップデートグラムの使用 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "32970607"
   
  この後、ユーザーは連絡先に関する情報を更新できますが、連絡先 ID の更新は、ContactID が主キーであるため行えません。 ユーザーが情報を送信すると、アップデートグラムが実行され、すべての form パラメーターがアップデートグラムに渡されます。  
   
- 次のテンプレートは、最初のテンプレート (GetContact.xml) です。 仮想名に関連付けられているディレクトリにこのテンプレートを保存**テンプレート**型です。  
+ 次のテンプレートは、最初のテンプレート (GetContact.xml) です。 このテンプレートの仮想名に関連付けられているディレクトリに保存**テンプレート**型。  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -55,7 +55,7 @@ ms.locfileid: "32970607"
 </root>  
 ```  
   
- 次のテンプレートは、2 番目のテンプレート (UpdateContact.xml) です。 仮想名に関連付けられているディレクトリにこのテンプレートを保存**テンプレート**型です。  
+ 次のテンプレートは、2 番目のテンプレート (UpdateContact.xml) です。 このテンプレートの仮想名に関連付けられているディレクトリに保存**テンプレート**型。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
