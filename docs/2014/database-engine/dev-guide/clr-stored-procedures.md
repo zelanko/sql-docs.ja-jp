@@ -1,5 +1,5 @@
 ---
-title: CLR ストアド プロシージャ |Microsoft ドキュメント
+title: CLR ストアド プロシージャ |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -23,21 +23,21 @@ helpviewer_keywords:
 - tabular results
 ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 caps.latest.revision: 74
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7f90cbc5e45a095225f5937864d87d336a9c95da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: db6d1dd298cba3960189c3983ab9d4781113d569
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36164365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225882"
 ---
 # <a name="clr-stored-procedures"></a>CLR ストアド プロシージャ
-  ストアド プロシージャはスカラー式では使用できないルーチンです。 ストアド プロシージャはスカラー関数とは異なり、表形式の結果やメッセージをクライアントに返す操作、DDL (データ定義言語) ステートメントや DML (データ操作言語) ステートメントを呼び出す操作、出力パラメーターを返す操作が行えます。 CLR 統合とマネージ コードの使い分けの利点についておよび[!INCLUDE[tsql](../../includes/tsql-md.md)]を参照してください[CLR 統合の概要](../../relational-databases/clr-integration/clr-integration-overview.md)です。  
+  ストアド プロシージャはスカラー式では使用できないルーチンです。 ストアド プロシージャはスカラー関数とは異なり、表形式の結果やメッセージをクライアントに返す操作、DDL (データ定義言語) ステートメントや DML (データ操作言語) ステートメントを呼び出す操作、出力パラメーターを返す操作が行えます。 CLR 統合とマネージ コードの使い分けの利点については、[!INCLUDE[tsql](../../includes/tsql-md.md)]を参照してください[CLR 統合の概要](../../relational-databases/clr-integration/clr-integration-overview.md)します。  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>CLR ストアド プロシージャの要件  
- 共通言語ランタイム (CLR) でストアド プロシージャ内のクラスのパブリック静的メソッドとして、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]アセンブリ。 この静的メソッドは、void として宣言することも、整数値を返すようにすることもできます。 整数値を返す場合は、その整数値はストアド プロシージャからのリターン コードとして扱われます。 以下に例を示します。  
+ 共通言語ランタイム (CLR) ストアド プロシージャが内のクラスのパブリック静的メソッドとして実装されます、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]アセンブリ。 この静的メソッドは、void として宣言することも、整数値を返すようにすることもできます。 整数値を返す場合は、その整数値はストアド プロシージャからのリターン コードとして扱われます。 以下に例を示します。  
   
  `EXECUTE @return_status = procedure_name`  
   
@@ -45,16 +45,16 @@ ms.locfileid: "36164365"
   
  パラメーターを受け取るメソッドの場合、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 実装のパラメーター数は、このストアド プロシージャの [!INCLUDE[tsql](../../includes/tsql-md.md)] 宣言で使用したパラメーター数と同じにする必要があります。  
   
- CLR ストアド プロシージャに渡すパラメーターには、マネージ コード内に同等のパラメーターを持つネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型であればどの型でも使用できます。 プロシージャを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文では、これらの型には最も適切なネイティブ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同等の型を指定する必要があります。 型変換の詳細については、次を参照してください。 [CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)です。  
+ CLR ストアド プロシージャに渡すパラメーターには、マネージド コード内に同等のパラメーターを持つネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型であればどの型でも使用できます。 プロシージャを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文では、これらの型には最も適切なネイティブ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同等の型を指定する必要があります。 型変換の詳細については、次を参照してください。 [CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)します。  
   
 ### <a name="table-valued-parameters"></a>テーブル値パラメーター  
- テーブル値パラメーター (TVP) とは、プロシージャや関数に渡されるユーザー定義のテーブル型です。TVP を使用すると、複数行のデータを効率的にサーバーに渡すことができます。 TVP の機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 また、サーバーへのラウンド トリップを減らすのにも役立ちます。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データを TVP としてサーバーに送信できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスで実行されているマネージ ストアド プロシージャやマネージ関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 Tvp の詳細については、次を参照してください。[テーブル値パラメーターの&#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)です。  
+ テーブル値パラメーター (TVP) とは、プロシージャや関数に渡されるユーザー定義のテーブル型です。TVP を使用すると、複数行のデータを効率的にサーバーに渡すことができます。 TVP の機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 また、サーバーへのラウンド トリップを減らすのにも役立ちます。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データを TVP としてサーバーに送信できます。 ph x="1" /&gt; のプロセスで実行されているマネージド ストアド プロシージャやマネージド関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 Tvp の詳細については、次を参照してください。[テーブル値パラメーターの&#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)します。  
   
 ## <a name="returning-results-from-clr-stored-procedures"></a>CLR ストアド プロシージャから結果を返す  
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ストアド プロシージャからの情報はいくつかの形式で返すことができます。 出力パラメーター、表形式の結果、およびメッセージの形式を使用できます。  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>OUTPUT パラメーターと CLR ストアド プロシージャ  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャと同様に、OUTPUT パラメーターを使用して [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ストアド プロシージャから情報を返すことができます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャの作成に使用する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 構文は、[!INCLUDE[tsql](../../includes/tsql-md.md)] で記述されたストアド プロシージャの作成に使用する構文と同じです。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスの実装コードの対応するパラメーターは、引数として参照渡しのパラメーターを使用する必要があります。 Visual Basic は出力パラメーターを Visual C# と同様にはサポートしていません。 参照渡しでパラメーターを指定し、適用する必要があります、 \<Out() > 属性を次のように、出力パラメーターを表します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャと同様に、OUTPUT パラメーターを使用して [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ストアド プロシージャから情報を返すことができます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャの作成に使用する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 構文は、[!INCLUDE[tsql](../../includes/tsql-md.md)] で記述されたストアド プロシージャの作成に使用する構文と同じです。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスの実装コードの対応するパラメーターは、引数として参照渡しのパラメーターを使用する必要があります。 Visual Basic は出力パラメーターを Visual C# と同様にはサポートしていません。 参照によって、パラメーターを指定して、適用する必要があります、 \<Out() > 属性を次のように、出力パラメーターを表します。  
   
 ```  
 Imports System.Runtime.InteropServices  
@@ -142,7 +142,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 -- AS EXTERNAL NAME TestStoredProc.[MyNS.StoredProcedures].PriceSum  
 ```  
   
- 注意してください*合計*として宣言されている、 `int` SQL Server データ型、および、*値*として CLR ストアド プロシージャで定義されたパラメーターが指定されて、 `SqlInt32` CLR データ型。 呼び出し元のプログラムは、CLR ストアド プロシージャを実行するとき[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に自動的に変換、 `SqlInt32` CLR データ型、 `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  どの CLR に関するデータ型でき、変換することはできませんの詳細については、次を参照してください。 [CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)です。  
+ なお*合計*として宣言されている、 `int` SQL Server データ型、および、*値*CLR ストアド プロシージャで定義されているパラメーターの指定が、 `SqlInt32` CLR データ型。 呼び出し元のプログラムが CLR ストアド プロシージャ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に自動的に変換、 `SqlInt32` CLR データ型、 `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  どの CLR に関するデータ型でき、変換することはできませんの詳細については、次を参照してください。 [CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)します。  
   
 ### <a name="returning-tabular-results-and-messages"></a>表形式の結果とメッセージを返す  
  表形式の結果とメッセージは、`SqlPipe` クラスの `Pipe` プロパティを使用して取得した `SqlContext` オブジェクトを使用してクライアントに返されます。 `SqlPipe` オブジェクトには `Send` メソッドがあります。 `Send` メソッドを呼び出すことにより、パイプ経由で呼び出し側のアプリケーションにデータを送信できます。  
@@ -153,7 +153,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
  `SqlPipe.Send(string)` はクライアント アプリケーションへのメッセージの送信に使用します。 メッセージのテキストの上限は 8,000 文字です。 メッセージが 8,000 文字を超えると、そのメッセージは切り詰められます。  
   
 ###### <a name="returning-tabular-results"></a>表形式の結果を返す  
- クエリの結果を直接クライアントに送信するには、`Execute` オブジェクトの `SqlPipe` メソッドのいずれかのオーバーロードを使用します。 マネージ メモリにコピーされることなくデータがネットワーク バッファーに転送されるので、これはクライアントに結果を返す最も効率的な方法です。 以下に例を示します。  
+ クエリの結果を直接クライアントに送信するには、`Execute` オブジェクトの `SqlPipe` メソッドのいずれかのオーバーロードを使用します。 マネージド メモリにコピーされることなくデータがネットワーク バッファーに転送されるので、これはクライアントに結果を返す最も効率的な方法です。 以下に例を示します。  
   
  [C#]  
   
@@ -208,7 +208,7 @@ Partial Public Class StoredProcedures
 End Class  
 ```  
   
- インプロセス プロバイダーによりそれ以前に実行されたクエリの結果を送信するには (または `SqlDataReader` のカスタム実装を使用して事前処理するには)、`Send` メソッドの `SqlDataReader` を受け取るオーバーロードを使用します。 このメソッドは前半で説明した直接的なメソッドよりもわずかに時間がかかりますが、このメソッドを使用すると、クライアントにデータを送信する前にそのデータを非常に柔軟に操作できます。  
+ インプロセス プロバイダーによりそれ以前に実行されたクエリの結果を送信するには (または `SqlDataReader` のカスタム実装を使用して事前処理するには)、`Send` メソッドの `SqlDataReader` を受け取るオーバーロードを使用します。 このメソッドは、前述の直接的なメソッドより少し動作が遅くなりますが、クライアントにデータを送信する前に、きわめて柔軟にデータを操作できます。  
   
 ```csharp  
 using System;  
@@ -386,7 +386,7 @@ END;
 ```  
   
 > [!NOTE]  
->  メッセージと結果セットはクライアント アプリケーションで個別に取得されます。 たとえば、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]結果セットに表示されます、**結果**ビュー、およびメッセージに表示されます、**メッセージ**ウィンドウです。  
+>  メッセージと結果セットはクライアント アプリケーションで個別に取得されます。 たとえば、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]結果セットに表示されます、**結果**ビュー、およびメッセージに表示されます、**メッセージ**ウィンドウ。  
   
  上の Visual C# コードをファイル MyFirstUdp.cs に保存した場合、次のようにコンパイルします。  
   

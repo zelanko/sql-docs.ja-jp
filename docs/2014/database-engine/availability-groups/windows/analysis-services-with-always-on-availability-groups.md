@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 13
-author: HeidiSteen
-ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 12a3b3cb6bc31060857a86481a7a952cc19679b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fa5c34ec3c794cf87b96feefbf15c323fbc43e27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261378"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services と Always On 可用性グループ
   AlwaysOn 可用性グループは SQL Server リレーショナル データベースの事前に定義されたコレクションで、その中の 1 つのデータベースが条件に従ってフェールオーバーするときに一緒にフェールオーバーし、同じ可用性グループの別のインスタンスのミラー化されたデータベースに要求をリダイレクトします。 高可用性ソリューションとして可用性グループを使用している場合、そのグループ内のデータベースを Analysis Services テーブルまたは多次元ソリューションのデータ ソースとして使用できます。 可用性データベースを使用すると、次の Analysis Services の操作はすべて予期したとおりに動作します。その操作とは、データの処理またはインポート、リレーショナル データへの直接クエリ (ROLAP ストレージまたは DirectQuery モードを使用)、および書き戻しです。  
@@ -134,7 +133,7 @@ ms.locfileid: "36084862"
   
      可用性グループ リスナーの名前を判断するには、データベース管理者に問い合わせるか、可用性グループ内のインスタンスに接続して AlwaysOn 可用性設定を表示します。 下のスクリーン ショットでは、可用性グループ リスナーは **AdventureWorks2**です。  
   
-     ![Management Studio の AlwaysOn 可用性フォルダー](../../media/ssas-alwaysoninfoinssms.png "Management Studio の AlwaysOn 可用性フォルダー")  
+     ![Management Studio での AlwaysOn 可用性フォルダー](../../media/ssas-alwaysoninfoinssms.png "Management Studio での AlwaysOn 可用性フォルダー")  
   
 4.  また、接続マネージャーで、左側のナビゲーション ウィンドウで **[すべて]** をクリックしてデータ プロバイダーのプロパティ グリッドを表示します。  
   
@@ -159,7 +158,7 @@ ms.locfileid: "36084862"
   
 1.  SQL Server Profiler を開始して、セカンダリ レプリカをホストしている SQL Server インスタンスに接続します。  
   
-     トレースを実行すると、`SQL:BatchStarting`と`SQL:BatchCompleting`イベント、データベース エンジン インスタンス上で実行される Analysis Services から発行されたクエリが表示されます。 これらのイベントは既定で選択されるため、トレースを開始すればよいだけです。  
+     トレースを実行すると、`SQL:BatchStarting`と`SQL:BatchCompleting`イベントは、データベース エンジン インスタンス上で実行される Analysis Services から発行されたクエリを表示します。 これらのイベントは既定で選択されるため、トレースを開始すればよいだけです。  
   
 2.  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]で、テストするデータ ソース接続を含む Analysis Services プロジェクトまたはソリューションを開きます。 データ ソースが可用性グループのリスナー (グループのインスタンスではなく) を指定していることを確認します。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "36084862"
   
 4.  ソリューションを配置し、完了したらトレースを停止します。  
   
-     トレース ウィンドウには、アプリケーション **Microsoft SQL Server Analysis Services**からのイベントが表示されます。 表示されるはず`SELECT`セカンダリ レプリカにリスナーを介して接続が行われたことを証明する、セカンダリ レプリカをホストするサーバー インスタンス上のデータベースからデータを取得するステートメント。  
+     トレース ウィンドウには、アプリケーション **Microsoft SQL Server Analysis Services**からのイベントが表示されます。 表示する必要があります`SELECT`セカンダリ レプリカにリスナーを使用して、接続が行われたことを証明する、セカンダリ レプリカをホストするサーバー インスタンス上のデータベースからデータを取得するステートメント。  
   
 #### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>手順 2. 計画されたフェールオーバーを実行して構成をテストする  
   
@@ -211,7 +210,7 @@ ms.locfileid: "36084862"
   
  エラーが解決しない場合、多くは構成の問題が原因です。 T-SQL スクリプトを再実行すると、セカンダリ レプリカのルーティング リスト、読み取り専用ルーティング URL、および読み取り専用の問題を解決できます。 また、プライマリ レプリカがすべての接続を許可することを確認する必要があります。  
   
-##  <a name="bkmk_writeback"></a> AlwaysOn 可用性データベースを使用するときに書き戻す  
+##  <a name="bkmk_writeback"></a> AlwaysOn 可用性データベースを使用する場合、書き戻し  
  書き戻しは、Excel で What If 分析をサポートする Analysis Services 機能です。 また、一般にはカスタム アプリケーションの予算タスクおよび予測タスクに使用されます。  
   
  書き戻しのサポートには、READWRITE クライアント接続が必要です。 Excel で、読み取り専用接続で書き戻しを試みた場合は、次のエラーが表示されます。"外部データ ソースのデータを取得できませんでした。" "外部データ ソースのデータを取得できませんでした。"  

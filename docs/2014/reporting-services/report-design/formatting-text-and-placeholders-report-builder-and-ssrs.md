@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql11.rtp.rptdesigner.placeholderproperties.font.f1
 - "10118"
@@ -18,15 +18,15 @@ f1_keywords:
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6c3add2546128bedffdcbeb14c6cc819f6318871
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b395410bfe5a5a8a1dad97260c766500c0e814e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294152"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)
   テキスト ボックスは、データ領域内のレポート アイテムまたは個々のセルであり、テキスト、計算フィールド、データベース内のフィールドへのポインター、またはこの 3 つのアイテムの組み合わせが格納されます。 フォントと色の組み合わせ、太字や斜体のスタイルの追加、整列配置やぶら下げインデントなどの段落スタイルの使用が可能です。 また、テキスト ボックス全体の書式を設定することも、テキスト ボックス内の特定のテキスト、数値、式、またはフィールドの書式を設定することも可能です。  
@@ -49,7 +49,7 @@ ms.locfileid: "36179253"
   
 -   **レポート データ** ペインからテキスト ボックスにフィールドをドラッグしてドロップします。 レポート本文のその他の場所に式をドラッグした場合は、プレースホルダーを含んだ新しいテキスト ボックスが作成されます。 このプレースホルダーの値は、ドロップされたフィールドに対応するフィールド式になります。  
   
--   テキスト ボックス内で右クリックし、 **[プレースホルダーの挿入]** を選択します。 **[プレースホルダーのプロパティ]** ダイアログ ボックスで、プレースホルダーの値として式を指定できます。 詳細については、次を参照してください。[プレース ホルダー プロパティ] ダイアログ ボックスの [全般]&#40;レポート ビルダーおよび SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)です。  
+-   テキスト ボックス内で右クリックし、 **[プレースホルダーの挿入]** を選択します。 **[プレースホルダーのプロパティ]** ダイアログ ボックスで、プレースホルダーの値として式を指定できます。 詳細については、次を参照してください。[プレース ホルダー プロパティ] ダイアログ ボックスの [全般]&#40;レポート ビルダーおよび SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)します。  
   
 -   任意の単純型または複合型の式をテキスト ボックスに入力します。 たとえば、テキスト ボックスに「 **Name: [Name]** 」と入力すると、式 **を表すプレースホルダーとして** [Name] `=Fields!Name.Value`というテキストが表示されます。  
   

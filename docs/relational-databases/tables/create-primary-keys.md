@@ -17,11 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 820dbb8998665eacef12417ada67222b967acd17
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd476ff279b30d79f4f096f3978ec96c9333dce3
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789293"
 ---
 # <a name="create-primary-keys"></a>主キーの作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -110,8 +111,10 @@ ms.lasthandoff: 05/03/2018
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、テーブルを作成して `CustomerID` 列に主キーを、`TransactionID` にクラスター化インデックスを定義します。  
   
     ```sql  
+    -- Select appropriate database
     USE AdventureWorks2012;  
     GO  
+    -- Create table to add the clustered index
     CREATE TABLE Production.TransactionHistoryArchive1  
     (  
        CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
@@ -127,5 +130,5 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="see-also"></a>参照    
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
-[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)     
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
 [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)    

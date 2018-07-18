@@ -1,5 +1,5 @@
 ---
-title: DimensionPermissions 要素 (ASSL) |Microsoft ドキュメント
+title: DimensionPermissions 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DimensionPermissions element
 ms.assetid: cb9fdfbf-2118-423b-ba02-fa36813dbea0
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0ce5b6f55d8ed8d14b192de800c62237629195e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 605f5055d4fc3939cb8b30f123281e3d920db6fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246334"
 ---
 # <a name="dimensionpermissions-element-assl"></a>DimensionPermissions 要素 (ASSL)
-  適用できる権限のコレクションを格納、[ディメンション](../objects/dimension-element-assl.md)要素または[CubePermission](../objects/cubepermission-element-assl.md)要素。  
+  適用される権限のコレクションを格納する[ディメンション](../objects/dimension-element-assl.md)要素または[CubePermission](../objects/cubepermission-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

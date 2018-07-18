@@ -16,15 +16,15 @@ helpviewer_keywords:
 - custom report items
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 caps.latest.revision: 22
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2bae379c1eb8d6c68c21e2ac1c556fb72178fafd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 64ed79e2a0ebaa44d9b74e75879bb5746b359264
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227106"
 ---
 # <a name="custom-report-items"></a>カスタム レポート アイテム
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、包括的な API により、エンタープライズ レポートの作成とパブリッシュ、セキュリティとサブスクリプションの管理、およびレポート機能の拡張を行う一連の豊富なツールを備えています。 レポートは、レポート定義言語 (RDL) と呼ばれる XML ベースの言語を使用して定義されます。 RDL は、レイアウト、クエリ情報、およびレポートのアイテムの種類を説明する一連の命令を提供します。 RDL は、カスタム レポート アイテムを作成することによって拡張できます。 カスタム レポート アイテムは、実行時にレポート プロセッサによって呼び出される実行時コンポーネント、およびカスタム レポート アイテムをレポート デザイナーで使用できるようにするデザイン時コンポーネントで構成されています。  
@@ -53,7 +53,7 @@ ms.locfileid: "36165744"
  カスタム レポート アイテムの配置方法について説明します。  
   
  [カスタム レポート アイテムのクラス ライブラリ](custom-report-item-class-libraries.md)  
- `Microsoft.ReportDesigner` 名前空間のカスタム レポート アイテム インフラストラクチャのクラスと、マネージ ラッパー クラスについて説明します。  
+ ph x="1" /&gt; 名前空間のカスタム レポート アイテム インフラストラクチャのクラスと、マネージド ラッパー クラスについて説明します。  
   
 ## <a name="see-also"></a>参照  
  [テクニカル リファレンス (SSRS)](../technical-reference-ssrs.md)  

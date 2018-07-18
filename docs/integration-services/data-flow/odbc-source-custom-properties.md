@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87ed7a12ae763b0ad40fb0750506ca1ee2be30fe
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b15b88320c48a711539c952ea749c21d85ab6e15
+ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408354"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042592"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC 入力元のカスタム プロパティ
   次の表は、ODBC 入力元のカスタム プロパティを示しています。 すべてのプロパティは、SSIS プロパティ式から設定できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "35408354"
 |ExposeCharColumnsAsUnicode|ブール値|このプロパティは、コンポーネントが CHAR 型の列を公開する方法を決定します。 既定値は False で、CHAR 型の列がマルチバイト文字列 (DT_STR) として公開されることを示します。 True の場合、CHAR 型の列はワイド文字列 (DT_WSTR) として公開されます。<br /><br /> **注**: このプロパティは、 **ODBC 入力元エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
 |FetchMethod|Integer (列挙)|データの取得に使用されるメソッド。 有効なオプションは、行ごと (0) およびバッチ (1) です。 既定値はバッチ (1) です。<br /><br /> これらのオプションの詳細については、「 [ODBC ソース](../../integration-services/data-flow/odbc-source.md)」を参照してください。<br /><br /> **注**: このプロパティは、 **ODBC 入力元エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
 |SqlCommand|String|AccessMode が SQL コマンドに設定されている場合に実行される SQL コマンド。|  
-|StatementTimeout|Integer|エラーを返してアプリケーションに戻らず、SQL ステートメントが実行されるまで待機する秒数。 既定値は 120 です。 値 0 は、システムがタイムアウトしないことを示します。|  
+|StatementTimeout|Integer|エラーを返してアプリケーションに戻らず、SQL ステートメントが実行されるまで待機する秒数。 既定値は 0 です。 値 0 は、システムがタイムアウトしないことを示します。|  
 |TableName|String|AccessMode がテーブル名に設定されている場合に使用される、データが保存されているテーブルの名前。|  
 |LobChunckSize|Integer|LOB 列のチャンク サイズ割り当て。|  
 ||||  

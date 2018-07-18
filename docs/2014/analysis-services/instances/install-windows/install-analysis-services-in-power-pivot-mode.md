@@ -1,5 +1,5 @@
 ---
-title: PowerPivot for SharePoint 2013 のインストール |Microsoft ドキュメント
+title: PowerPivot for SharePoint 2013 のインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 caps.latest.revision: 28
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: ef3e20cee4efd786e111a3c5a3e0f4864875e861
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d5eafcfacf8aa39cd100ed767232becd474bacd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210252"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 のインストール
-  このトピックの手順でインストールの手順を 1 台のサーバーの[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint 配置モードでサーバー。 手順には、SQL Server インストール ウィザードの実行と、SharePoint 2013 サーバーの全体管理を使用する構成タスクが含まれます。  
+  このトピックの手順に従って、シングル サーバー インストールの[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint 配置モードでのサーバー。 手順には、SQL Server インストール ウィザードの実行と、SharePoint 2013 サーバーの全体管理を使用する構成タスクが含まれます。  
   
  **[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 |SharePoint 201  
   
@@ -67,16 +67,16 @@ ms.locfileid: "36176723"
   
 4.  PowerPivot インスタンスの名前を使用できる必要があります。 PowerPivot 名前付きインスタンスが既に存在するコンピューターに、SharePoint モードの Analysis Services をインストールすることはできません。  
   
-5.  レビュー [SharePoint モードで Analysis Services サーバーのハードウェアおよびソフトウェア&#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)です。  
+5.  レビュー [Hardware and Software Requirements の SharePoint モードで Analysis Services サーバー &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)します。  
   
-6.  リリース ノートを確認[SQL Server 2012 Service Pack 1 リリース ノート](http://go.microsoft.com/fwlink/?LinkID=248389)(http://go.microsoft.com/fwlink/?LinkID=248389)です。  
+6.  リリース ノートを確認して[SQL Server 2012 Service Pack 1 リリース ノート](http://go.microsoft.com/fwlink/?LinkID=248389)(http://go.microsoft.com/fwlink/?LinkID=248389)します。  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server エディションの要件  
- ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、「 [SQL Server 2012 の各エディションでサポートされる機能 (http://go.microsoft.com/fwlink/?linkid=232473) ](http://go.microsoft.com/fwlink/?linkid=232473)と[エディションと SQL Server 2014 のコンポーネント](../../../sql-server/editions-and-components-of-sql-server-2016.md)です。  
+ ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、次を参照してください。 [SQL Server 2012 の各エディションでサポートされる機能 (http://go.microsoft.com/fwlink/?linkid=232473) ](http://go.microsoft.com/fwlink/?linkid=232473)と[エディションと SQL Server 2014 のコンポーネントの](../../../sql-server/editions-and-components-of-sql-server-2016.md)します。  
   
- 現在のリリース ノートはあります[SQL Server 2012 SP1 リリース ノート](ttp://go.microsoft.com/fwlink/?LinkID=248389)(http://go.microsoft.com/fwlink/?LinkID=248389)です。  
+ 現在のリリース ノートをご覧[SQL Server 2012 SP1 リリース ノート](ttp://go.microsoft.com/fwlink/?LinkID=248389)(http://go.microsoft.com/fwlink/?LinkID=248389)します。  
   
- [Microsoft SQL Server 2012 リリース ノート (http://go.microsoft.com/fwlink/?LinkId=236893)](http://go.microsoft.com/fwlink/?LinkId=236893)です。  
+ [Microsoft SQL Server 2012 リリース ノート (http://go.microsoft.com/fwlink/?LinkId=236893)](http://go.microsoft.com/fwlink/?LinkId=236893)します。  
   
 ##  <a name="InstallSQL"></a> 手順 1: SharePoint の PowerPivot をインストールします。  
  この手順では、SQL Server セットアップを実行して、SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーをインストールします。 後の手順で、このサーバーをブックのデータ モデルで使用するように Excel Services を構成します。  
@@ -87,7 +87,7 @@ ms.locfileid: "36176723"
   
 3.  **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** をクリックします。  
   
-4.  **[プロダクト キー]** ページが表示されたら、Evaluation Edition を指定するか、Enterprise Edition のライセンス コピーのプロダクト キーを入力します。 **[次へ]** をクリックします。 エディションの詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネント](../../../sql-server/editions-and-components-of-sql-server-2016.md)です。  
+4.  **[プロダクト キー]** ページが表示されたら、Evaluation Edition を指定するか、Enterprise Edition のライセンス コピーのプロダクト キーを入力します。 **[次へ]** をクリックします。 エディションの詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネントの](../../../sql-server/editions-and-components-of-sql-server-2016.md)します。  
   
 5.  マイクロソフト ソフトウェア ライセンス条項を確認して同意し、 **[次へ]** をクリックします。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36176723"
   
      オプションで、データベース エンジンのインスタンスをインストールに追加することができます。 新しいファームを設定し、ファームの構成データベースとコンテンツ データベースを実行するためにデータベース サーバーが必要な場合に、データベース エンジンを追加できます。 このオプションでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] もインストールされます。  
   
-     データベース エンジンを追加した場合は、 **PowerPivot** 名前付きインスタンスとしてインストールされます。 このインスタンスへの接続を指定するには、この形式でデータベース名を入力します。 [`servername`] \PowerPivot です。  
+     データベース エンジンを追加した場合は、 **PowerPivot** 名前付きインスタンスとしてインストールされます。 このインスタンスへの接続を指定するには、次の形式でデータベース名を入力します。 [`servername`] \PowerPivot します。  
   
      **[次へ]** をクリックします。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36176723"
   
      ![SSAS サーバーの構成](../../../sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS サーバーの構成")  
   
-14. [!INCLUDE[ssDE](../../../includes/ssde-md.md)]をインストールする場合は、 **[データベース エンジンの構成]** ページが表示されます。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]構成では、をクリックして**現在のユーザーの追加**をユーザー、データベース エンジン インスタンスに対するアカウント管理者のアクセス許可を付与します。  
+14. [!INCLUDE[ssDE](../../../includes/ssde-md.md)]をインストールする場合は、 **[データベース エンジンの構成]** ページが表示されます。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]構成では、をクリックして **[現在のユーザー**ユーザー、データベース エンジン インスタンスに対するアカウント管理者のアクセス許可を付与します。  
   
      **[次へ]** をクリックします。  
   
@@ -247,13 +247,13 @@ ms.locfileid: "36176723"
 18. ブックの名前をクリックして SharePoint で表示し、スライサーをクリックするか、以前に追加したフィルターを変更します。 データ更新が行われたら、Analysis Services がインストールされ、Excel Services で利用できることがわかります。 ブックを Excel で開いた場合は、Analysis Services サーバーではなく、キャッシュ コピーが使用されます。  
   
 ##  <a name="bkmk_firewall"></a> Analysis Services のアクセスを許可するための Windows ファイアウォールの構成  
- トピックの情報を使用して[Analysis Services のアクセスを許可するための Windows ファイアウォールを構成する](../configure-the-windows-firewall-to-allow-analysis-services-access.md)for SharePoint を Analysis Services または PowerPivot へのアクセスを許可するファイアウォールのポートのブロックを解除する必要があるかどうかを決定します。 このトピックに示された手順に従って、ポートとファイアウォールを構成できます。 実際に Analysis Services サーバーへのアクセスを許可するためには、これらの手順を組み合わせて実行する必要があります。  
+ トピックの情報を使用して[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../configure-the-windows-firewall-to-allow-analysis-services-access.md)for SharePoint を Analysis Services または PowerPivot へのアクセスを許可するファイアウォールのポートのブロックを解除する必要があるかどうか判断します。 このトピックに示された手順に従って、ポートとファイアウォールを構成できます。 実際に Analysis Services サーバーへのアクセスを許可するためには、これらの手順を組み合わせて実行する必要があります。  
   
 ##  <a name="bkmk_upgrade_workbook"></a> ブックのアップグレードと定期データ更新  
  PowerPivot の以前のバージョンで作成したブックのアップグレードに必要な手順は、そのブックを作成した PowerPivot のバージョンによって異なります。 詳細については、「 [ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)」を参照してください。  
   
 ##  <a name="bkmk_multiple_servers"></a> シングル サーバー インストール: PowerPivot for Microsoft SharePoint を超える  
- **Web フロント エンド (WFE)** または**中間層:**: を使用する、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インストーラーパッケージを実行して、ファームにPowerPivotの追加機能をインストールして大規模なSharePointファームでのSharePointモードでサーバー**spPowerPivot.msi**の各 SharePoint サーバー。 spPowerPivot.msi では、必要なデータ プロバイダーと PowerPivot for SharePoint 2013 の構成ツールをインストールします。  
+ **Web フロント エンド (WFE)** または**中間層:**: を使用する、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インストーラーパッケージを実行して、ファームにPowerPivotの追加機能をインストールして大規模なSharePointファームでSharePointモードサーバー**spPowerPivot.msi**各 SharePoint サーバー上でします。 spPowerPivot.msi では、必要なデータ プロバイダーと PowerPivot for SharePoint 2013 の構成ツールをインストールします。  
   
  中間層のインストールと構成の詳細については、以下を参照してください。  
   
@@ -265,15 +265,15 @@ ms.locfileid: "36176723"
   
  **冗長性とサーバー負荷:** 秒以上をインストールする[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint モードのサーバーでの冗長性が実現、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]サーバーの機能です。 サーバーを追加すると、サーバー間の負荷分散も行われます。 詳細については、以下を参照してください。  
   
--   [Excel Services でデータ モデルを処理するための Analysis Services を構成する](http://technet.microsoft.com/library/jj614437\(v=office.15\))(http://technet.microsoft.com/library/jj614437(v=office.15))です。  
+-   [Excel Services でのデータ モデルを処理するための Analysis Services を構成する](http://technet.microsoft.com/library/jj614437\(v=office.15\))(http://technet.microsoft.com/library/jj614437(v=office.15))します。  
   
--   [Excel Services データ モデルの設定 (SharePoint Server 2013) を管理](http://technet.microsoft.com/library/jj219780\(v=office.15\))(http://technet.microsoft.com/library/jj219780(v=office.15))です。  
+-   [Excel Services データ モデルの設定 (SharePoint Server 2013) を管理](http://technet.microsoft.com/library/jj219780\(v=office.15\))(http://technet.microsoft.com/library/jj219780(v=office.15))します。  
   
- ![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を Microsoft SQL Server の接続を介して送信](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)です。  
+ ![SharePoint の設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を Microsoft SQL Server の接続を介して送信](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)します。  
   
 ## <a name="see-also"></a>参照  
  [SharePoint 2013 への PowerPivot を移行します。](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [For SharePoint アドインの PowerPivot のアンインストールをインストールまたは&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [ブックと定期データ更新をアップグレード&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [ブックと定期データ更新のアップグレード&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

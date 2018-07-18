@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multiple Flat Files connection manager
 - connections [Integration Services], flat files
@@ -20,20 +20,20 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68b9fcf9965a3245b869006d1177104702f8079d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 88409baa25d3e54319dc5b824494ff6a51d159aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322742"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>複数フラット ファイル接続マネージャー
   複数フラット ファイル接続マネージャーを使用すると、パッケージで複数のフラット ファイルのデータにアクセスできます。 たとえば、データ フロー タスクが For ループ コンテナーなどのループ コンテナーの内部にある場合は、フラット ファイル ソースで複数フラット ファイル接続マネージャーを使用できます。 コンテナーの各ループで、フラット ファイル ソースは、複数フラット ファイル接続マネージャーが提供する次のファイル名からデータを読み込みます。  
   
  複数フラット ファイル接続マネージャーをパッケージに追加すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に複数のフラット ファイルの接続を解決する接続マネージャーを作成し、複数フラット ファイル接続マネージャーのプロパティを設定して、複数フラット ファイル接続マネージャーをパッケージの `Connections` コレクションに追加します。  
   
- `ConnectionManagerType`接続マネージャーのプロパティに設定されて`MULTIFLATFILE`です。  
+ `ConnectionManagerType`接続マネージャーのプロパティに設定されて`MULTIFLATFILE`します。  
   
  複数フラット ファイル接続マネージャーは、次の方法で構成できます。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "36076277"
   
  \<*パス*>|\<*パス*>  
   
- 複数のファイルを指定する場合、ワイルドカード文字を使用することもできます。 ドライブ C 上のすべてのテキスト ファイルの値を参照するなど、 `ConnectionString` c: にプロパティを設定することができます\\*.txt します。  
+ 複数のファイルを指定する場合、ワイルドカード文字を使用することもできます。 たとえば、ドライブ C 上のすべてのテキスト ファイルの値の参照を`ConnectionString`プロパティは、c: に設定することができます\\*.txt します。  
   
  複数フラット ファイル接続マネージャーが複数のファイルを参照する場合、ファイルの形式はすべて同じである必要があります。  
   
- 複数フラット ファイル接続マネージャーでは、文字列型の列の長さが既定で 50 文字に設定されています。 **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスでは、データが切り捨てられたり、列の幅が広くなりすぎないように、サンプル データを評価して、これらの列の長さを自動的に変更できます。 フラット ファイル ソースまたは変換で列の長さを変更しない限り、データ フローでの列の長さは一定です。 これらの列が幅の狭い変換先列にマップされると、ユーザー インターフェイスに警告が表示されます。また、実行時にデータの切り捨てによるエラーが発生する場合があります。 フラット ファイル接続マネージャー、フラット ファイル ソース、または変換では、変換先列に合うように列のサイズを変更できます。 出力列の長さを変更するに設定する、`Length`上の出力列のプロパティ、**入力と出力プロパティ** タブで、**詳細エディター**  ダイアログ ボックス。  
+ 複数フラット ファイル接続マネージャーでは、文字列型の列の長さが既定で 50 文字に設定されています。 **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスでは、データが切り捨てられたり、列の幅が広くなりすぎないように、サンプル データを評価して、これらの列の長さを自動的に変更できます。 フラット ファイル ソースまたは変換で列の長さを変更しない限り、データ フローでの列の長さは一定です。 これらの列が幅の狭い変換先列にマップされると、ユーザー インターフェイスに警告が表示されます。また、実行時にデータの切り捨てによるエラーが発生する場合があります。 フラット ファイル接続マネージャー、フラット ファイル ソース、または変換では、変換先列に合うように列のサイズを変更できます。 出力列の長さを変更するには設定、`Length`上の出力列のプロパティ、**入力と出力プロパティ** タブで、**高度なエディター**  ダイアログ ボックス。  
   
  接続マネージャーを使用するフラット ファイル ソースを追加および構成した後に、複数フラット ファイル接続マネージャーで列の長さを変更しても、フラット ファイル ソースの出力列のサイズを手動で変更する必要はありません。 **[フラット ファイル ソース]** ダイアログ ボックスを開くと、列のメタデータを同期するためのオプションがフラット ファイル ソースによって提供されます。  
   
@@ -72,9 +72,9 @@ ms.locfileid: "36076277"
   
 -   [[複数フラット ファイル接続マネージャー エディター &#40;[詳細] ページ&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [複数フラット ファイル接続マネージャー エディター&#40;ページをプレビューします。&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [複数フラット ファイル接続マネージャー エディター&#40;ページをプレビュー&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムで接続を追加する](../building-packages-programmatically/adding-connections-programmatically.md)です。  
+ プログラムによる接続マネージャーの構成方法の詳細については、次を参照してください。<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>と[プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)します。  
   
 ## <a name="see-also"></a>参照  
  [フラット ファイル ソース](../data-flow/flat-file-source.md)   

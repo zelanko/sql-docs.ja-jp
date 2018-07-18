@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: 時系列マイニング構造にマイニング モデルの追加 |Microsoft ドキュメント'
+title: 'レッスン 2: 時系列マイニング構造にマイニング モデルの追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: cee3d839ae7a7bcce62c8a3a1d2f7cb62b1155e2
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 368ab5b56fb55e083d5d8c38e34a0bdae98afe7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211992"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>レッスン 2: 時系列マイニング構造へのマイニング モデルの追加
-  このレッスンで作成したマイニング構造に新しいマイニング モデルを追加します[レッスン 1: 時系列マイニング モデルとマイニング構造を作成する](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)です。  
+  このレッスンで作成したマイニング構造に新しいマイニング モデルを追加[レッスン 1: 時系列マイニング モデルおよびマイニング構造を作成する](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)します。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE ステートメント  
- 使用する既存のマイニング構造に新しいマイニング モデルを追加するために、[ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md) ステートメントです。 ステートメント内のコードは、次の部分に分類されます。  
+ 使用する既存のマイニング構造に新しいマイニング モデルを追加するには、[ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md) ステートメントです。 ステートメント内のコードは、次の部分に分けることができます。  
   
 -   マイニング構造の指定  
   
@@ -49,7 +49,7 @@ USING <algorithm name>([<algorithm parameters>])
 [WITH DRILLTHROUGH]  
 ```  
   
- コードの最初の行には、マイニング モデルの追加先となる既存のマイニング構造を識別します。  
+ コードの最初の行では、マイニング モデルの追加先となる既存のマイニング構造を示します。  
   
 ```  
 ALTER MINING STRUCTURE [<mining structure name>]  
@@ -61,7 +61,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- DMX でオブジェクトの名前を付ける方法については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)です。  
+ DMX でオブジェクトの名前付け方法の詳細については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)します。  
   
  コードの次の数行では、マイニング モデルで使用するマイニング構造の列を定義します。  
   
@@ -79,7 +79,7 @@ USING <algorithm name>([<algorithm parameters>])
 WITH DRILLTHROUGH  
 ```  
   
- 調整できるアルゴリズム パラメーターの詳細については、次を参照してください。 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)です。  
+ 調整できるアルゴリズム パラメーターの詳細については、次を参照してください。 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)します。  
   
  次の構文で、マイニング モデルの列を予測に使用するよう指定できます。  
   
@@ -88,7 +88,7 @@ WITH DRILLTHROUGH
 ```  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
- このレッスンでは、次のタスクは実行します。  
+ このレッスンでは、次のタスクを実行するされます。  
   
 -   新しい時系列マイニング モデルを構造に追加します。  
   
@@ -99,7 +99,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>ARIMA 時系列マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、クリックして**DMX**クエリ エディターと新しい空のクエリを開きます。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**クエリ エディターと新しい空のクエリを開きます。  
   
 2.  上の ALTER MINING STRUCTURE ステートメントの汎用例を空のクエリにコピーします。  
   
@@ -185,11 +185,11 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-8.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**です。  
+8.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
   
-9. **名前を付けて保存**ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Forecasting_ARIMA.dmx`です。  
+9. **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Forecasting_ARIMA.dmx`します。  
   
-10. ツールバーで、をクリックして、 **Execute**ボタンをクリックします。  
+10. ツールバーの**Execute**ボタンをクリックします。  
   
 ## <a name="adding-an-artxp-time-series-model-to-the-structure"></a>構造への ARTXP 時系列モデルの追加  
  ARTXP アルゴリズムは、SQL Server 2005 の既定のタイム シリーズ アルゴリズムで、短期の予測に適しています。 3 つのアルゴリズムをすべて使用して予測を比較するために、ARTXP アルゴリズムに基づくモデルをもう 1 つ追加します。  
@@ -213,11 +213,11 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-2.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**です。  
+2.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
   
-3.  **名前を付けて保存**ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Forecasting_ARTXP.dmx`です。  
+3.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Forecasting_ARTXP.dmx`します。  
   
-4.  ツールバーで、をクリックして、 **Execute**ボタンをクリックします。  
+4.  ツールバーの**Execute**ボタンをクリックします。  
   
  次のレッスンでは、すべてのモデルとマイニング構造を処理します。  
   

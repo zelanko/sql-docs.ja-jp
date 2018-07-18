@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
@@ -16,16 +16,16 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4c1dba16a2a0d923bba1d99bad19112634c31ebb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccc292cda8b3263c7e1457a52e4426dc9d24460d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263238"
 ---
 # <a name="change-data-capture-ssis"></a>変更データ キャプチャ (SSIS)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、変更データ キャプチャによって、ソース テーブルからデータ マートおよびデータ ウェアハウスへの増分読み込みを効率的に実行するための効果的なソリューションが実現します。  
+  ph x="1" /&gt; では、変更データ キャプチャによって、ソース テーブルからデータ マートおよびデータ ウェアハウスへの増分読み込みを効率的に実行するための効果的なソリューションが実現します。  
   
 ## <a name="what-is-change-data-capture"></a>変更データ キャプチャとは  
  ソース テーブルは、時間の経過と共に変化します。 このようなテーブルに基づくデータ マートまたはデータ ウェアハウスは、その変化を反映する必要があります。 ただし、ソース全体のスナップショットを定期的にコピーする処理には、膨大な時間とリソースが必要です。 timestamp 列、トリガー、複雑なクエリなどの別の方法を使用すると、多くの場合、パフォーマンスが低下して処理が複雑になります。 ここで必要となるのは、対象となるデータ表現に対して簡単に適用できるように構成された変更データの確実なストリームです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の変更データ キャプチャはこのソリューションを提供します。  
@@ -33,7 +33,7 @@ ms.locfileid: "36176443"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] の変更データ キャプチャ機能は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のテーブルに対して適用された挿入、更新、削除の各アクティビティをキャプチャし、変更の詳細を、利用しやすいリレーショナル形式で格納します。 変更データ キャプチャで使用される変更テーブルには、追跡されたソース テーブルの列構造をミラー化する列が、行われた変更を行ごとに理解するために必要なメタデータと共に含まれています。  
   
 > [!NOTE]  
->  変更データ キャプチャでは使用できませんのすべてのエディション[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  変更データ キャプチャでは使用できませんのすべてのエディション[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 ## <a name="how-change-data-capture-works-in-integration-services"></a>Integration Services における変更データ キャプチャのしくみ  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース内の変更データを簡単に取得でき、データ ウェアハウスへの増分読み込みを効率的に実行できます。 ただし、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] を使用して変更データを読み込む前に、管理者は、変更をキャプチャするデータベースおよびテーブルで変更データ キャプチャを有効にする必要があります。 データベースで変更データ キャプチャを構成する方法の詳細については、「[変更データ キャプチャの有効化と無効化 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)」を参照してください。  
@@ -47,7 +47,7 @@ ms.locfileid: "36176443"
  **手順 1 : 制御フローのデザイン**  
  パッケージの制御フローでは、次のタスクを定義する必要があります。  
   
--   計算の開始と終了`datetime`を取得するソース データに対する変更の間隔の値。  
+-   計算の開始と終了`datetime`を取得するソース データへの変更の間隔の値。  
   
      これらの値を計算するには、SQL 実行タスクを使用または[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]を含む式`datetime`関数。 その後、これらのエンドポイントをパッケージで後から使用するためにパッケージ変数に格納します。  
   
@@ -57,20 +57,20 @@ ms.locfileid: "36176443"
   
      データが準備できているかどうかを判断するには、必要に応じて、選択した間隔の変更データが準備できるまで実行を遅延させる For ループ コンテナーをまず用意します。 ループ コンテナー内で SQL 実行タスクを使用して、変更データ キャプチャによって管理される時間マッピング テーブルに対するクエリを実行します。 その後、`Thread.Sleep` メソッドを呼び出すスクリプト タスク、または `WAITFOR` ステートメントを実行する別の SQL 実行タスクを使用して、必要に応じてパッケージの実行を一時的に遅延させます。 必要に応じて、エラー状態またはタイムアウトをログに記録する別のスクリプト タスクを使用します。  
   
-     **詳細については:**[を決定するかどうか、変更データが準備完了  ](determine-whether-the-change-data-is-ready.md)  
+     **詳細については:**[を決定するかどうか、変更データの準備ができて  ](determine-whether-the-change-data-is-ready.md)  
   
 -   変更データのクエリに使用するクエリ文字列を準備します。  
   
      スクリプト タスクまたは SQL 実行タスクを使用して、変更をクエリで確認するために使用する SQL ステートメントを作成します。  
   
-     **詳細については:**[変更データのクエリを準備します。  ](prepare-to-query-for-the-change-data.md)  
+     **詳細については:**[クエリ、変更データを準備する  ](prepare-to-query-for-the-change-data.md)  
   
  **手順 2 : 変更データのクエリの設定**  
  データのクエリを実行するテーブル値関数を作成します。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してクエリを作成および保存します。  
   
- **詳細については:**[を取得し、変更データを理解します。  ](retrieve-and-understand-the-change-data.md)  
+ **詳細については:**[を取得および変更データの理解  ](retrieve-and-understand-the-change-data.md)  
   
  **手順 3 : データ フローのデザイン**  
  パッケージのデータ フローでは、次のタスクを定義する必要があります。  
@@ -79,7 +79,7 @@ ms.locfileid: "36176443"
   
      データを取得するには、変換元コンポーネントを使用して、選択した間隔内の変更のクエリを変更テーブルに対して実行します。 事前に作成しておく必要がある Transact-SQL テーブル値関数が変換元によって呼び出されます。  
   
-     **詳細については:**[を取得し、変更データを理解します。  ](retrieve-and-understand-the-change-data.md)  
+     **詳細については:**[を取得および変更データの理解  ](retrieve-and-understand-the-change-data.md)  
   
 -   変更を処理用に挿入、更新、および削除に分割します。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36176443"
  上の図と手順で説明したプロセスでは、1 つのテーブルから増分読み込みを実行しています。 複数のテーブルから増分読み込みを実行する必要がある場合も、全体的に同じプロセスになります。 ただし、複数のテーブルの処理に対応できるようにパッケージのデザインを変更する必要があります。 複数のテーブルから増分読み込みを実行するパッケージの作成方法の詳細については、「 [複数のテーブルの増分読み込みを実行する](perform-an-incremental-load-of-multiple-tables.md)」を参照してください。  
   
 ## <a name="samples-of-change-data-capture-packages"></a>変更データ キャプチャ パッケージのサンプル  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 使用する方法を示す 2 つのサンプルで変更データ キャプチャ パッケージを提供します。 詳細については、次の各トピックを参照してください。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 使用する方法を示す 2 つのサンプルの変更データ キャプチャ パッケージで提供します。 詳細については、次の各トピックを参照してください。  
   
 -   [Change Data Capture for Specified Interval パッケージ サンプルの Readme](http://go.microsoft.com/fwlink/?LinkId=133507)  
   

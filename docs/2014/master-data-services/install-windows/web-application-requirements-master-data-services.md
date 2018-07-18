@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 caps.latest.revision: 28
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 762be955372568ad7930611b0216bbb3f1437158
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 25f45f72ddbfc389deb77e6c20588660e599cb19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205682"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web アプリケーションの要件 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、インターネット インフォメーション サービス (IIS) によってホストされる Web アプリケーションです。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] のみで Internet Explorer (IE) 7 またはそれ以降は動作します。 IE 7 以前のバージョン、Microsoft Edge、Chrome はサポートされていません。  
@@ -38,7 +38,7 @@ ms.locfileid: "36174510"
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professional、Enterprise、Ultimate<br /><br /> Windows 8.0 Professional、Enterprise、および Ultimate|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
   
- エディションがサポートされている Windows オペレーティング システムの完全な一覧の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)です。  
+ エディションがサポートされている Windows オペレーティング システムの完全な一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)します。  
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションで作業するには、Silverlight 5 をクライアント コンピューターにインストールする必要があります。 Silverlight の必要なバージョンがない場合、Web アプリケーションで Silverlight を使用する部分に移動したときに、Silverlight をインストールするよう要求されます。 Silverlight 5 は [ここ](http://go.microsoft.com/fwlink/?LinkId=243096)からインストールできます。  
@@ -47,7 +47,7 @@ ms.locfileid: "36174510"
  Windows Server 2008 R2 では、Microsoft 管理コンソール (MMC) にある **サーバー マネージャー**を使用して、 **Web サーバー (IIS)** ロールと、次に示す必要なロール サービスをインストールできます。  
   
 > [!NOTE]  
->  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] Windows 7 オペレーティング システムを使用して**プログラムと機能**でこれらのオプションを有効にするのにはコントロール パネルで、 **Windows の機能の**] ダイアログ ボックス。  
+>  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 、Windows 7 オペレーティング システムを使用して、**プログラムと機能**でこれらのオプションを有効にするには、コントロール パネルで、 **Windows 機能**] ダイアログ ボックス。  
   
 ||  
 |-|  
@@ -64,10 +64,10 @@ ms.locfileid: "36174510"
 |[インターネット インフォメーション サービス]<br /><br /> Web 管理ツール<br /><br /> IIS 管理コンソール<br /><br /> World Wide Web サービス<br /><br /> アプリケーション開発<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> HTTP 基本機能<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> 静的なコンテンツ<br /><br /> [注: WebDAV 発行はインストールしないでください]<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> [パフォーマンス]<br /><br /> 静的なコンテンツの圧縮<br /><br /> Security<br /><br /> 要求フィルター<br /><br /> [Windows 認証]|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>機能 (Windows Server 2008 または Windows Server 2008 R2、Windows 7 オペレーティング システム)  
- [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]または Windows Server 2008 R2 を使用できます**サーバー マネージャー**を次をインストールする機能に必要です。  
+ [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]使用する Windows Server 2008 R2、または**サーバー マネージャー**次をインストールする機能に必要です。  
   
 > [!NOTE]  
->  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] Windows 7 オペレーティング システムを使用して**プログラムと機能**でこれらのオプションを有効にするのにはコントロール パネルで、 **Windows の機能の**] ダイアログ ボックス。  
+>  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 、Windows 7 オペレーティング システムを使用して、**プログラムと機能**でこれらのオプションを有効にするには、コントロール パネルで、 **Windows 機能**] ダイアログ ボックス。  
   
 ||  
 |-|  
@@ -92,7 +92,7 @@ ms.locfileid: "36174510"
   
 ## <a name="see-also"></a>参照  
  [マスター データ サービスをインストールします。](install-master-data-services.md)   
- [マスター データ マネージャー Web アプリケーションを作成&#40;マスター データ サービス&#41;](create-a-master-data-manager-web-application-master-data-services.md)   
+ [マスター データ マネージャー Web アプリケーションを作成する&#40;マスター データ サービス&#41;](create-a-master-data-manager-web-application-master-data-services.md)   
  [[Web の構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../web-configuration-page-master-data-services-configuration-manager.md)  
   
   

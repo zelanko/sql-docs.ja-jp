@@ -1,5 +1,5 @@
 ---
-title: ファイル システム タスク エディター (全般 ページ) |Microsoft ドキュメント
+title: ファイル システム タスク エディター ([全般] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.filesystemtask.general.f1
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a7bc28798bbdfe79d05923252e1add422217d763
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 120e86946f920a616b9df7c443441fb4ce6d5efc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156653"
 ---
 # <a name="file-system-task-editor-general-page"></a>[ファイル システム タスク エディター] \([全般] ページ)
   **[ファイル システム タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクで実行するファイル システム操作を構成できます。  
@@ -33,7 +33,7 @@ ms.locfileid: "36176440"
  SourceConnection プロパティと DestinationConnection プロパティを設定して、ソースとターゲットの接続マネージャーを指定する必要があります。 タスクでソースまたはターゲットとして使用されるファイルを指すファイル接続マネージャーの名前を指定することも、ファイルのパスが変数に格納されていれば変数の名前を指定することもできます。 変数を使用してファイル パスを保存するには、最初に、IsSourcePathVariable オプション (ソース接続) および IsDestinationPatheVariable オプション (ターゲット接続) を **True**に設定しておく必要があります。 その後で、既存のシステム変数またはユーザー定義変数を選択するか、新しい変数を作成できます。 変数のスコープは、 **[変数の追加]** ダイアログ ボックスで構成および指定できます。 スコープは、ファイル システム タスクまたは親コンテナーにする必要があります。 詳細については、「[Integration Services (SSIS) Variables](integration-services-ssis-variables.md)」(Integration Services (SSIS) の変数) と「[Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md)」(パッケージで変数を使用する) を参照してください。  
   
 > [!NOTE]  
->  用に選択した変数を上書きする、`SourceConnection`と`DestinationConnection`プロパティに式を入力する、**ソース**と**先**プロパティです。 式は、 **ファイル システム タスク エディター** の **[式]** ページで入力します。 たとえば、タスクで変換先として使用するファイルのパスを設定するには、特定の状況下では変数 A、別の状況下では変数 B を使用することがあります。  
+>  用に選択した変数をオーバーライドする、`SourceConnection`と`DestinationConnection`プロパティ式を入力する、**ソース**と**先**プロパティ。 式は、 **ファイル システム タスク エディター** の **[式]** ページで入力します。 たとえば、タスクで変換先として使用するファイルのパスを設定するには、特定の状況下では変数 A、別の状況下では変数 B を使用することがあります。  
   
 > [!NOTE]  
 >  ファイル システム タスクは、1 つのファイルまたはディレクトリのみを処理できます。 したがって、このタスクでは、ワイルドカード文字を使用して複数のファイルまたはディレクトリに同じ処理を行うことはできません。 ファイル システム タスクが複数のファイルやディレクトリに対して同じ処理を繰り返し行うようにするには、ファイル システム タスクを Foreach ループ コンテナー内に配置します。 詳細については、「 [File System Task](control-flow/file-system-task.md)」(ファイル システム タスク) を参照してください。  
@@ -47,7 +47,7 @@ ms.locfileid: "36176440"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプション **[DestinationVariable]** が表示されます。|  
-|**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプションが表示され`DestinationConnection`です。|  
+|**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプションが表示され`DestinationConnection`します。|  
   
  **[OverwriteDestination]**  
  操作によって対象になるディレクトリ内のファイルを上書きできるかどうかを指定します。  
@@ -73,8 +73,8 @@ ms.locfileid: "36176440"
 |**ディレクトリ コンテンツの削除**|ディレクトリのコンテンツを削除します。 この値を選択すると、ソースを指定するための動的オプションが表示されます。|  
 |**ファイルの削除**|ファイルを削除します。 この値を選択すると、ソースを指定するための動的オプションが表示されます。|  
 |**ディレクトリの移動**|ディレクトリを移動します。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。|  
-|**ファイルの移動**|ファイルを移動します。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。<br /><br /> 注: ファイルを移動するときに含めないでくださいファイル名のエクスポート先として指定するディレクトリ パスにします。|  
-|**ファイル名の変更**|ファイルの名前を変更します。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。<br /><br /> 注: ファイルの名前を変更するには、ときに、先として指定するディレクトリ パスに新しいファイル名を含めます。|  
+|**ファイルの移動**|ファイルを移動します。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。<br /><br /> 注: ファイルを移動するときにファイル名に含めない先として指定するディレクトリ パス。|  
+|**ファイル名の変更**|ファイルの名前を変更します。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。<br /><br /> 注: ファイルの名前を変更するには、ときに、宛先の指定したディレクトリ パスに新しいファイル名を含めます。|  
 |**属性の設定**|ファイルまたはディレクトリの属性を設定します。 この値を選択すると、ソースと操作を指定するための動的オプションが表示されます。|  
   
  `IsSourcePathVariable`  

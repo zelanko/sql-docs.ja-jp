@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9421d20f-0c8b-48e2-8e97-31f3047b8177
-caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d161a6de1fd0bc1fd39e3962c154aba07f0e7a0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f67f969c1daedc6f301fcb7458a6dd17648fd355
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294002"
 ---
 # <a name="summary-solutions-and-script-projects"></a>まとめ : ソリューションとスクリプト プロジェクト
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio の広範な開発機能を活用することにより、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、企業レベルのコード管理用に開発者が必要とする機能を提供します。 ユーザーの繰り返し作業を支援するカスタム テンプレートを作成できるほか、集中化、統合化された環境で複雑なスクリプト プロジェクトを保存および管理できます。  
+  ph x="1" /&gt; Visual Studio の広範な開発機能を活用することにより、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、企業レベルのコード管理用に開発者が必要とする機能を提供します。 ユーザーの繰り返し作業を支援するカスタム テンプレートを作成できるほか、集中化、統合化された環境で複雑なスクリプト プロジェクトを保存および管理できます。  
   
 ## <a name="return-to-sql-server-tools-tutorials-portal"></a>SQL Server ツールのチュートリアル ポータルに戻る  
  [チュートリアル: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  

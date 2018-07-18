@@ -1,5 +1,5 @@
 ---
-title: 処理およびストレージの場所 (パーティション ウィザード) |Microsoft ドキュメント
+title: 処理およびストレージの場所 (パーティション ウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifyprocessingandstorage.f1
 ms.assetid: dda2dc57-923d-4db9-93a7-38e95770f3df
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e86bb343a13cd17cca7fa561445c2105725c4369
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: eae2e7c380b7b0de69047079edac87d273f07d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286058"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>[処理およびストレージの場所] (パーティション ウィザード)
   **[処理およびストレージの場所]** ページを使用すると、パーティションを所有するキューブの [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスや、パーティションのデータを格納する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスを指定できます。 リモートの [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンス、または既定のストレージの場所とは異なるストレージの場所の、どちらかを指定することにより、リモート パーティションとしてパーティションを定義することができます。 リモート パーティションの詳細については、「 [リモート パーティション](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)」をご覧ください。  
@@ -52,8 +52,8 @@ ms.locfileid: "36177188"
  **[指定のフォルダー]** のフォルダーを選択する、 **[リモート フォルダーの参照]** ダイアログ ボックスを表示します。  
   
 ## <a name="see-also"></a>参照  
- [ウィザードの F1 ヘルプをパーティション分割&#40;Analysis Services - 多次元データ&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [パーティション ウィザードの F1 ヘルプ&#40;Analysis Services - 多次元データ&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
  [パーティション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [リモートのフォルダ] ダイアログ ボックスの [参照] &#40;Analysis Services - 多次元データ&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
+ [リモート フォルダ] ダイアログ ボックスの [参照] &#40;Analysis Services - 多次元データ&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
   

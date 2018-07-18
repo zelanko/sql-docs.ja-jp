@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
 ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/11/2018
 ms.locfileid: "35309191"
@@ -52,7 +52,7 @@ ms.locfileid: "35309191"
   
 クエリで、複数の結果セットを取得する場合、 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)によって次の結果セットに移動できます。  
   
-以降のバージョン 1.1 では、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]、使用することができます[sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md)結果セットに行が含まれているかどうか。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のバージョン 1.1 以降では、[sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) を使用して結果セットに行が含まれているかどうかを見ることができます。  
   
 ## <a name="pdosqlsrv-driver"></a>PDO_SQLSRV ドライバー  
 PDO_SQLSRV ドライバー、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]結果セットからデータを取得するため、次のオプションを提供します。  

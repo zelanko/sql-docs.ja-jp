@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -47,16 +46,16 @@ helpviewer_keywords:
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 caps.latest.revision: 275
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3c7d97d9c8ee56af89807f07cd335b16c50fbcc1
-ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
+ms.openlocfilehash: 7775dbaa4a8c28d9e7124b94c73f3b87c9e68838
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225344"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943178"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -234,7 +233,7 @@ TO \<backup_device> [ **,**...*n* ] 関連する[バックアップ デバイス
   
  { *logical_device_name* | **@***logical_device_name_var* } **適用対象:** SQL Server データベースがバックアップされるバックアップ デバイスの論理名です。論理名は、識別子のルールに従う必要があります。変数 (@* logical_device_name_var *) として指定する場合、バックアップ デバイス名は、文字列定数 (@* logical_device_name_var***=** logical backup device name) として、または **ntext** や **text** データ型を除く、文字列データ型の変数として指定できます。  
   
- { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **適用対象:** SQL Server に適用する DISK、TAPE、URL。 URL のみ SQL Database マネージ インスタンスに適用。ディスク ファイルまたはテープ デバイス、あるいは Windows Azure BLOB ストレージ サービスを指定します。 URL の形式は、Windows Azure ストレージ サービスへのバックアップを作成するために使用されます。 詳細と例については、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 チュートリアルについては、「[チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)」を参照してください。 
+ { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **適用対象:** SQL Server に適用する DISK、TAPE、URL。 URL のみ SQL Database Managed Instance に適用。ディスク ファイルまたはテープ デバイス、あるいは Windows Azure BLOB ストレージ サービスを指定します。 URL の形式は、Windows Azure ストレージ サービスへのバックアップを作成するために使用されます。 詳細と例については、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 チュートリアルについては、「[チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)」を参照してください。 
 
 > [!NOTE] 
 > NUL ディスク デバイスは送信される情報をすべて破棄し、テストでのみ使用する必要があります。 これは運用環境向けではありません。
@@ -242,14 +241,15 @@ TO \<backup_device> [ **,**...*n* ] 関連する[バックアップ デバイス
 > [!IMPORTANT]  
 > [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、URL にバックアップする場合、単一デバイスにのみバックアップできます。 URL へのバックアップ時に複数のデバイスにバックアップするには、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用する必要があります。また、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
   
-**URL 適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および SQL Database マネージ インスタンス。  
+
+  **URL 適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および SQL Database Managed Instance。  
   
  ディスク デバイスは、BACKUP ステートメントで指定するときにまだ存在していなくてもかまいません。 物理デバイスが既に存在し、BACKUP ステートメントに INIT オプションが指定されていない場合、バックアップはデバイスに追加されます。  
  
 > [!NOTE] 
 > NUL デバイスはこのファイルに送信されるすべての入力を破棄しますが、バックアップでは引き続きすべてのページがバックアップ済みとしてマークされます。
   
- 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。  
+ 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
 > TAPE オプションは将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
@@ -278,7 +278,8 @@ MIRROR TO \<backup_device> [ **,**...*n* ] TO 句で指定したバックアッ�
  バックアップ操作で使用するオプションを指定します。  
   
  CREDENTIAL  
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および SQL Database マネージ インスタンス。  
+
+  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および SQL Database Managed Instance。  
  Windows Azure BLOB ストレージ サービスにバックアップを作成する場合にのみ使用します。  
   
  FILE_SNAPSHOT **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。
@@ -317,7 +318,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] TO 句で指定したバックアッ�
 > [!NOTE]  
 > 復元操作用のバックアップ セットを指定するには、`FILE = <backup_set_file_number>` オプションを使用します。 バックアップ セットを指定する方法の詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」の「バックアップ セットの指定」を参照してください。
   
- COPY_ONLY **適用対象:** SQL Server および SQL Database マネージ インスタンス バックアップが、通常のバックアップの順序には影響しない、*コピーのみのバックアップ*であることを指定します。 コピーのみのバックアップは定期的に行われる従来のバックアップとは別に作成するもので、 コピーのみのバックアップは、データベースの全体的なバックアップと復元の手順に影響しません。  
+ COPY_ONLY **適用対象:** SQL Server および SQL Database Managed Instance バックアップが、通常のバックアップの順序には影響しない、*コピーのみのバックアップ*であることを指定します。 コピーのみのバックアップは定期的に行われる従来のバックアップとは別に作成するもので、 コピーのみのバックアップは、データベースの全体的なバックアップと復元の手順に影響しません。  
   
  コピーのみのバックアップは、オンラインでファイルを復元する前にログをバックアップするなど、特殊な目的でバックアップを作成する場合にのみ使用してください。 通常、コピーのみのログ バックアップは 1 回だけ使用して、その後削除します。  
   
@@ -331,7 +332,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] TO 句で指定したバックアッ�
 詳細については、「[コピーのみのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)」を参照してください。  
   
 { COMPRESSION | NO_COMPRESSION }  
-[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降のバージョンでのみ、このバックアップで[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)を実行するかどうかを指定し、サーバー レベルの既定値を上書きできます。  
+[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]以降のバージョンでのみ、このバックアップで[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)を実行するかどうかを指定し、サーバー レベルの既定値をオーバーライドできます。  
   
 インストール時の既定の動作では、バックアップの圧縮は行われません。 ただし、この既定の動作は、[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) サーバー構成オプションを設定することで変更できます。 このオプションの現在の値の表示については、「[サーバー プロパティの表示または変更 &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)」を参照してください。  
 
@@ -397,7 +398,7 @@ INIT
 -   バックアップ セットがまだ期限切れではない。 詳細については、`EXPIREDATE` と `RETAINDAYS` のオプションを参照してください。  
 -   BACKUP ステートメントにバックアップ セットの名前が指定されていて、その名前がバックアップ メディア上の名前と一致していない。 詳細については、前の NAME オプションを参照してください。  
   
-これらのチェックを無効にするには、`SKIP` オプションを使用します。  
+これらのチェックをオーバーライドするには、`SKIP` オプションを使用します。  
   
 詳細については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
   
@@ -435,7 +436,7 @@ MEDIANAME **=** { *media_name* | **@***media_name_variable* }
 バックアップ メディア セット全体に対するメディア名を指定します。 メディア名は最長 128 文字まで入力できます。`MEDIANAME` を指定する場合、バックアップ ボリュームに既に存在する、前回指定したメディア名と一致する必要があります。 MEDIANAME を指定しない場合、または SKIP オプションを指定した場合、メディア名の照合チェックは行われません。  
   
 BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
-物理ブロック サイズをバイト単位で指定します。 サポートされるサイズは、512、1024、2048、4096、8192、16384、32768、および 65536 (64 KB) バイトです。 テープ デバイスの場合の既定値は 65536 バイトで、他のデバイスの場合の既定値は 512 バイトです。 通常は、BACKUP でデバイスに適したブロック サイズが自動的に選択されるので、このオプションは不要です。 ブロック サイズは、自動的に選択された値よりも明示的に指定された値が優先されます。  
+物理ブロック サイズをバイト単位で指定します。 サポートされるサイズは、512、1024、2048、4096、8192、16384、32768、および 65536 (64 KB) バイトです。 テープ デバイスの場合の既定値は 65536 バイトで、他のデバイスの場合の既定値は 512 バイトです。 通常は、BACKUP でデバイスに適したブロック サイズが自動的に選択されるので、このオプションは不要です。 ブロック サイズは、自動的に選択された値よりも明示的に指定された値がオーバーライドされます。  
   
 バックアップを作成して CD-ROM に格納したり、CD-ROM からバックアップを復元する場合は、BLOCKSIZE=2048 と指定します。  
   
@@ -657,11 +658,11 @@ GO
 |ミラー|メディア ファミリ 1|メディア ファミリ 2|メディア ファミリ 3|  
 |---------|---------|---------|---------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
-|@shouldalert|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
+|1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
  1 つのメディア ファミリは常に、特定のミラー内の同じデバイス上にバックアップされる必要があります。 したがって、既存のメディア セットを使用するときは毎回、メディア セットを作成したときと同じ順序で各ミラーのデバイスを列挙してください。  
   
- ミラー化メディア セットの詳細については、 [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。 メディア セットとメディア ファミリの概要については、「[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
+ ミラー化メディア セットの詳細については、[ミラー化バックアップ メディア セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)」を参照してください。 メディア セットとメディア ファミリの概要については、「[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
   
 ###  <a name="Restoring_Backups"></a> SQL Server バックアップの復元  
  データベースを復元し、必要に応じて、そのデータベースを復旧してオンラインにする、またはファイルやファイル グループを復元するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] の [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントを使用するか、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の**復元**タスクを使用します。 詳細については、「[復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)」を参照してください。  
@@ -720,8 +721,8 @@ BACKUP ステートメントは、明示的または暗黙的なトランザク�
   
 バックアップ操作がファイル管理または圧縮操作と重複すると、競合が発生します。 どの競合操作が最初に始まったかに関係なく、最初の操作によって設定されたロックがタイムアウトになるまで、2 番目の操作は待機します (タイムアウト時間はセッション タイムアウト設定で制御されます)。 ロックがタイムアウト期間内に解放されると、2 番目の操作が開始されます。 ロックがタイムアウトになると、2 番目の操作は実行されません。  
 
-## <a name="limitations-for-sql-database-managed-instance"></a>SQL Database マネージ インスタンスの制限事項
-SQL Database マネージ インスタンスは、最大 32 個のストライプを持つバックアップにデータベースをバックアップできます。これは、バックアップの圧縮を使用した場合には、最大 4 TB のデータベースをバックアップできます。
+## <a name="limitations-for-sql-database-managed-instance"></a>SQL Database Managed Instance の制限事項
+SQL Database Managed Instance は、最大 32 個のストライプを持つバックアップにデータベースをバックアップできます。これは、バックアップの圧縮を使用した場合には、最大 4 TB のデータベースをバックアップできます。
 
 バックアップの最大ストライプ サイズは 195 GB (最大 BLOB サイズ) です。 バックアップ コマンドでストライプ サイズを増やして、個々のストライプ サイズを減らし、この制限内に収まるようにします。
 

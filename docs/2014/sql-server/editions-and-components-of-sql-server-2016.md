@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 のエディションとコンポーネント |Microsoft ドキュメント
+title: SQL Server 2014 のエディションとコンポーネント |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
 - Developer Edition [SQL Server]
@@ -34,26 +34,26 @@ helpviewer_keywords:
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 caps.latest.revision: 111
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 450c54feb6d8e360ca812524778762751318aab7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0c27bcd84ddb567eaab1645fcee75f68d513855b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150113"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>SQL Server 2014 のエディションとコンポーネント
   インストールの前提条件は、アプリケーションのニーズによって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にはさまざまなエディションがあり、組織や個人の独自のパフォーマンス、ランタイム、および価格に関する要件に対応できます。 インストールする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントは、ユーザーの特定の要件によっても異なります。 この後のセクションでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の最適なエディションおよびコンポーネントを選択する方法について説明します。  
   
 ## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>プリンシパル エディション [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- 次の表で、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のプリンシパル エディションについて説明します。 詳細については、次を参照してください[SQL Server 2014 のエディションでサポートされる機能。](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ 次の表で、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のプリンシパル エディションについて説明します。 詳細については、次を参照してください[SQL Server 2014 の各エディションでサポートされる機能。](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|定義|  
 |---------------------------------------|----------------|  
 |Enterprise (64 ビットおよび 32 ビット)|プレミアム製品である [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise Edition は、非常に優れたパフォーマンス、無制限の仮想化、およびエンド ツー エンドのビジネス インテリジェンスを備えた包括的なハイエンド データセンター機能を提供することで、ミッション クリティカルなワークロードのための高水準のサービス レベルを実現し、エンド ユーザーがデータの意味を理解できるようにします。|  
-|Business Intelligence (64 ビットおよび 32 ビット)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence Edition は、安全かつスケーラブルで管理しやすい BI ソリューションのビルドおよび配置を可能にする包括的なプラットフォームを提供します。 ブラウザー ベースのデータ探索およびビジュアル化; など、魅力的な機能を提供します。強力なデータ マッシュ アップ機能と強化された統合管理します。|  
+|Business Intelligence (64 ビットおよび 32 ビット)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence Edition は、安全かつスケーラブルで管理しやすい BI ソリューションのビルドおよび配置を可能にする包括的なプラットフォームを提供します。 ブラウザー ベースのデータ探索と視覚化; など、魅力的な機能を提供します。強力なデータのマッシュ アップ機能と強化された統合管理します。|  
 |Standard (64 ビットおよび 32 ビット)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard Edition は、企業部門や小規模組織がアプリケーションを実行するための基本的なデータ管理/ビジネス インテリジェンス データベースを提供し、内部設置型およびクラウド用の一般的な開発ツールをサポートすることで、最小限の IT リソースでデータベースを効果的に管理することを可能にします。|  
   
 ## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>特別エディション [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
@@ -64,7 +64,7 @@ ms.locfileid: "36076771"
 |Web (64 ビットおよび 32 ビット)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Web Edition は、大小さまざまな規模の Web 資産に対応できるスケーラビリティ、経済性、および管理性を備えた、Web ホスティング企業および Web VAP 向けの総保有コストの低いオプションです。|  
   
 ## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>拡張エディション [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の拡張エディションは、特定の顧客シナリオに合わせて設計されており、無料または非常に低い価格で提供されます。 次の表で、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の拡張エディションについて説明します。  
+ ph x="1" /&gt; の拡張エディションは、特定の顧客シナリオに合わせて設計されており、無料または非常に低い価格で提供されます。 次の表で、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の拡張エディションについて説明します。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|説明|  
 |---------------------------------------|-----------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "36076771"
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とクライアント/サーバー アプリケーションの使用  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクライアント コンポーネントだけを、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに直接接続するクライアント/サーバー アプリケーションを実行するコンピューターにインストールできます。 クライアント コンポーネントをインストールすることは、データベース サーバー上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを管理する場合、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アプリケーションを開発しようとしている場合にも適切なオプションです。  
   
- クライアント ツールをインストールするオプションを選択すると、下位互換コンポーネント、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、接続コンポーネント、管理ツール、ソフトウェア開発キット、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]オンライン ブック コンポーネントなどの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 機能がインストールされます。 詳細については、次を参照してください。[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)です。  
+ クライアント ツールをインストールするオプションを選択すると、下位互換コンポーネント、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、接続コンポーネント、管理ツール、ソフトウェア開発キット、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]オンライン ブック コンポーネントなどの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 機能がインストールされます。 詳細については、次を参照してください。[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)します。  
   
 ## <a name="deciding-among-includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントの決定  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールに含めるコンポーネントを選択するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インストール ウィザードの [機能の選択] ページを使用します。 既定では、ツリーの中に、選択されている機能はありません。  
@@ -89,7 +89,7 @@ ms.locfileid: "36076771"
   
 |サーバー コンポーネント|説明|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 含まれています、 [!INCLUDE[ssDE](../includes/ssde-md.md)]、格納、処理、データ、レプリケーション、フルテキスト検索、リレーショナルの管理ツールおよび XML データをセキュリティで保護するためのコア サービス、および[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)](DQS) サーバー。|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 含まれています、 [!INCLUDE[ssDE](../includes/ssde-md.md)]、格納、処理、およびデータ、レプリケーション、フルテキスト検索、管理するためのリレーショナル ツールおよび XML データをセキュリティで保護するためのコア サービスと[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)](DQS) サーバー。|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、オンライン分析処理 (OLAP) アプリケーションおよびデータ マイニング アプリケーションを作成および管理するためのツールが含まれます。|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、表形式、マトリックス形式、グラフィカル形式、および自由形式のレポートを作成、管理、配置するためのサーバー コンポーネントとクライアント コンポーネントが含まれます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、レポート アプリケーション開発用の拡張可能プラットフォームとしても使用できます。|  
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、データを移動、コピー、変換するためのグラフィカル ツールおよびプログラミング可能なオブジェクトのセットです。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 用の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)](DQS) コンポーネントも含まれています。|  
@@ -111,6 +111,6 @@ ms.locfileid: "36076771"
   
 ## <a name="see-also"></a>参照  
  [SQL Server のインストール計画](install/planning-a-sql-server-installation.md)   
- [インストール ウィザードによる SQL Server 2014 のインストール&#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+ [SQL Server 2014 インストール ウィザードからインストール&#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
   

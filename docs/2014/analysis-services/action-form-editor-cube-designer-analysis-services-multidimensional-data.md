@@ -1,5 +1,5 @@
 ---
-title: アクション フォーム エディター ([操作] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: アクション フォーム エディター ([アクション] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.action.f1
 ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7ce8acc1630b9944b2ac858ba27a1f515bb19adc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: f51a23b7dddddc0365809fd6bc92c922fdd402fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239962"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>アクション フォーム エディター (キューブ デザイナーの [アクション] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[アクション**] タブのアクション フォーム エディター ペインを使用すると、標準のアクションを作成したり変更したりできます。  
   
 ## <a name="options"></a>および  
- **Name**  
+ **名前**  
  アクションの名前を入力します。  
   
  **[アクションの対象]**  
@@ -58,7 +58,7 @@ ms.locfileid: "36165942"
  **[アクションの内容]**  
  展開すると、 **[種類]** と **[アクションの式]** オプションが表示されます。  
   
- **Type**  
+ **型**  
  アクションが実行されるときのアクションの種類を選択します。 次のアクションの種類が使用できます。  
   
 |値|説明|  
@@ -99,7 +99,7 @@ ms.locfileid: "36165942"
 > [!NOTE]  
 >  このオプションは、どのクライアント アプリケーションがアクションを実行するかについて推奨するだけで、アクションへのアクセスを直接制御することはありません。 クライアント アプリケーションでは、他のクライアント アプリケーションに関連付けられているすべてのアクションを非表示にする必要があります。  
   
- **description**  
+ **[説明]**  
  アクションの説明をオプションで入力します。  
   
  **Caption**  
@@ -116,7 +116,7 @@ ms.locfileid: "36165942"
  [アクション&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [ツールバー&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [[アクション オーガナイザー]&#40;アクション] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [[計算ツール&#40;アクション] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [計算ツール&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
  [ドリルスルー アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [レポート アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   

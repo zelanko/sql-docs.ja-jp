@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec77f66bc627d851295a6afa90fb515c85b2ab84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9082ded2ceacd4a29364e3ee9b513887b2fcb1a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320772"
 ---
 # <a name="ado-net-source"></a>ADO NET ソース
   ADO NET ソースは .NET プロバイダーのデータを呼び出し、そのデータをデータ フローで使用できるようにします。  
@@ -35,7 +35,7 @@ ms.locfileid: "36175216"
  ADO NET 変換元を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]に接続できます。 OLE DB を使用した [!INCLUDE[ssSDS](../../includes/sssds-md.md)] への接続はサポートされていません。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の詳細については、「 [Azure SQL Database の一般的な制限事項とガイドライン](http://go.microsoft.com/fwlink/?LinkId=248228)」を参照してください。  
   
 ## <a name="data-type-support"></a>データ型のサポート  
- ソースは、特定の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型にマップされないデータ型を DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型に変換します。 データ型が場合でも、この変換が行われます`System.Object`です。  
+ ソースは、特定の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型にマップされないデータ型を DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型に変換します。 データ型が場合でも、この変換が行われます`System.Object`します。  
   
  DT_NTEXT データ型から DT_WSTR データ型に、または DT_WSTR データ型から DT_NTEXT データ型に変更できます。 データ型を変更するには、ADO NET ソースの **[詳細エディター]** ダイアログ ボックスで **DataType** プロパティを設定します。 詳細については、「 [Common Properties](../common-properties.md)」(共通プロパティ) を参照してください。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36175216"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型、サポートされるデータ型変換、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を含む特定のデータベース間でのデータ型マッピングの詳細については、「 [Integration Services のデータ型](integration-services-data-types.md)」を参照してください。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型をマネージ データ型にマッピングする方法については、「 [データ フロー内のデータ型の処理](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
+ ph x="1" /&gt; データ型をマネージド データ型にマッピングする方法については、「[データ フロー内のデータ型の処理](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
   
 ## <a name="ado-net-source-troubleshooting"></a>ADO NET ソースのトラブルシューティング  
  ADO NET ソースによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、ADO NET ソースによる外部データ ソースからのデータ読み込みに関するトラブルシューティングを行うことができます。 ADO NET ソースによる外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
@@ -71,7 +71,7 @@ ms.locfileid: "36175216"
 >  SQL ステートメントを使用して、一時テーブルから結果を返すストアド プロシージャが呼び出す場合は、WITH RESULT SETS オプションを使用して結果セットのメタデータを定義します。  
   
 > [!NOTE]  
->  ストアド プロシージャを実行する SQL ステートメントを使用する場合、パッケージが次のエラーで失敗することができますを追加して、エラーを解決するのには、 `SET FMTONLY OFF` exec ステートメントの前にステートメントです。  
+>  ストアド プロシージャを実行する SQL ステートメントを使用するパッケージが次のエラーで失敗する場合は、追加することで、エラーを解決するのにはできる、 `SET FMTONLY OFF` exec ステートメントの前にステートメント。  
 >   
 >  **列 <column_name> がデータ ソースに見つかりません。**  
   

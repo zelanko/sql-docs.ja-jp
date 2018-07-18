@@ -1,5 +1,5 @@
 ---
-title: ユーティリティ ダッシュ ボード (SQL Server ユーティリティ) |Microsoft ドキュメント
+title: ユーティリティ ダッシュ ボード (SQL Server ユーティリティ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a19036826aff3afdb31904318d52929b628441eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c37387c3a5a47a624cdcac57d73552c8eeda9b3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192142"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>ユーティリティ ダッシュボード (SQL Server ユーティリティ)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ ダッシュボードにデータを表示するには、ユーティリティ エクスプローラーのツリーで最上位ノード "Utility<UCP 名>\\(ComputerName\UCP)" を選択します。 ダッシュボードには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのマネージド インスタンス、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのすべてのデータ層アプリケーションに関する概要データと詳細データが表示されます。 ダッシュボードのデータを更新するには、ユーティリティ エクスプローラーのツリーで最上位ノードを右クリックし、 **[更新]** をクリックします。  
@@ -44,9 +44,9 @@ ms.locfileid: "36076651"
   
 -   適正使用 - リソース使用率のポリシーに違反していない、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの数  
   
--   過小使用 - リソースの過小使用ポリシーに違反しているマネージ リソースの数  
+-   過小使用 - リソースの過小使用ポリシーに違反しているマネージド リソースの数  
   
--   過大使用 - リソースの過大使用ポリシーに違反しているマネージ リソースの数  
+-   過大使用 - リソースの過大使用ポリシーに違反しているマネージド リソースの数  
   
 -   利用可能データなし - SQL Server のマネージド インスタンスによって利用できるデータがありません。SQL Server のインスタンスが登録された直後であるため最初のデータ収集操作が完了していないか、またはデータの収集と UCP へのアップロードの際に SQL Server のマネージド インスタンスで問題が発生したことが原因です。  
   

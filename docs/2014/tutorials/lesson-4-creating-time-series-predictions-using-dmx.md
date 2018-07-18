@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 4: DMX を使用して時系列予測の作成 |Microsoft ドキュメント'
+title: 'レッスン 4: DMX を使用して時系列予測の作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b883e43-209d-489a-8dc3-9349f88acae8
 caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a345b37d13ade71baad6635cee0508e97d7755eb
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: afcc3fad2a1d8e9acd4859e51b3b8df78b338bd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161633"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>レッスン 4: DMX を使用した時系列予測の作成
-  このレッスンと次のレッスンでは、さまざまな種類ので作成したタイム シリーズ モデルに基づく予測を作成するデータ マイニング拡張機能 (DMX) を使用して.[レッスン 1: 時系列マイニング モデルとマイニング構造の作成](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)と[レッスン 2: 時系列マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)です。  
+  このレッスンと次のレッスンでは、さまざまな種類ので作成したタイム シリーズ モデルに基づく予測を作成するデータ マイニング拡張機能 (DMX) を使用するが[レッスン 1: 時系列マイニング モデルとマイニング構造の作成](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)と[レッスン 2: 時系列マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)します。  
   
  時系列モデルでは、さまざまな方法で予測を作成できます。  
   
@@ -35,22 +35,22 @@ ms.locfileid: "36312410"
  このような予測を作成するための構文を以下にまとめます。  
   
  既定の時系列予測  
- 使用して[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)をトレーニング済みのマイニング モデルから予測の指定した数を返します。  
+ 使用[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)をトレーニング済みのマイニング モデルから、指定した予測の数を返します。  
   
- たとえばを参照してください[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)または[タイム シリーズ モデルのクエリ例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)です。  
+ たとえばを参照してください[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)または[タイム シリーズ モデルのクエリ例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)します。  
   
  EXTEND_MODEL_CASES  
- 使用して[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) EXTEND_MODEL_CASES 引数を新しいデータを追加すると、系列を拡張し、更新されたマイニング モデルに基づく予測を作成します。  
+ 使用[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) EXTEND_MODEL_CASES 引数を新しいデータを追加すると、系列の拡張し、更新されたマイニング モデルに基づいて予測を作成します。  
   
  このチュートリアルには、EXTEND_MODEL_CASES の使用例が示されています。  
   
  REPLACE_MODEL_CASES  
- 使用して[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) 、元のデータを新しいデータ系列に置き換えるし、新しいデータをマイニング モデル内のパターンを適用することに基づく予測を作成するには、REPLACE_MODEL_CASES 引数を持つ系列です。  
+ 使用[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)を新しいデータ系列では、元のデータを交換しを新しいデータ マイニング モデル内のパターンを適用することに基づく予測を作成するには、REPLACE_MODEL_CASES 引数を持つ系列。  
   
- REPLACE_MODEL_CASES を使用する方法の例は、次を参照してください。[レッスン 2: Building a Forecasting Scenario&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)です。  
+ REPLACE_MODEL_CASES を使用する方法の例は、次を参照してください。[レッスン 2: Building a Forecasting Scenario&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)します。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
- このレッスンでは、次のタスクは実行します。  
+ このレッスンでは、次のタスクを実行するされます。  
   
 -   既存のデータに基づいて既定の予測を取得するクエリの作成  
   
@@ -69,11 +69,11 @@ FROM [<mining model name>]
 WHERE [<criteria>]  
 ```  
   
- 選択リストは、モデルから列を含めることができます、行の製品の名前などを作成、予測または予測関数など[Lag &#40;DMX&#41; ](/sql/dmx/lag-dmx)または[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)、タイム シリーズ マイニング モデルを具体的には。  
+ 選択リストは、モデルから列を含めることができます、行の製品の名前などを作成、予測または予測関数など[Lag &#40;DMX&#41; ](/sql/dmx/lag-dmx)または[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)、これは、タイム シリーズ マイニング モデルを目的とします。  
   
 #### <a name="to-create-a-simple-time-series-prediction-query"></a>簡単な時系列予測クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、クリックして**DMX**です。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -137,11 +137,11 @@ WHERE [<criteria>]
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-6.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**です。  
+6.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
   
-7.  **名前を付けて保存**ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`SimpleTimeSeriesPrediction.dmx`です。  
+7.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`SimpleTimeSeriesPrediction.dmx`します。  
   
-8.  ツールバーで、をクリックして、 **Execute**ボタンをクリックします。  
+8.  ツールバーの**Execute**ボタンをクリックします。  
   
      クエリから、`WHERE` 句で指定した製品と地域の 2 とおりの組み合わせごとに 6 つの予測が返されます。  
   
@@ -154,6 +154,6 @@ WHERE [<criteria>]
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)   
  [Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)   
  [タイム シリーズ モデルのクエリ例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [レッスン 2: 予測シナリオの作成&#40;中級レベルのデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [レッスン 2: 予測シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
   

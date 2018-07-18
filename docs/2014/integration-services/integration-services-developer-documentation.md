@@ -1,5 +1,5 @@
 ---
-title: 開発者&#39;ガイド (Integration Services) |Microsoft ドキュメント
+title: 開発者&#39;ガイド (Integration Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,13 +22,13 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 caps.latest.revision: 76
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7649030fb22c9e0786d481f34a29974dcddbe863
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7989f708adf6025fddb223e6052dca8810035230
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206052"
 ---
 # <a name="developer39s-guide-integration-services"></a>開発者&#39;ガイド (Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、完全に再記述されたオブジェクト モデルが含まれています。それは、多数の機能で強化されています。この結果、パッケージのプログラミングや拡張作業は、より簡単に、柔軟に、また強力に行えるようになりました。 開発者は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのほとんどすべての側面を拡張およびプログラミングできます。  
@@ -43,7 +43,7 @@ ms.locfileid: "36071713"
   
 -   単一のパッケージで臨時に使用する場合は、スクリプト タスクでコードを記述してカスタム タスクを作成するか、またはスクリプト コンポーネントでコードを記述してカスタム データ フロー コンポーネントを作成し、変換元、変換、あるいは変換先として設定することができます。 これらの強力なラッパーによってインフラストラクチャ コードが自動的に記述されるため、開発者はカスタム機能の開発に集中できます。ただし、他の場所で簡単に再利用することはできません。  
   
--   複数のパッケージで使用する場合は、接続マネージャー、タスク、列挙子、ログ プロバイダー、およびデータ フロー コンポーネントなどの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のカスタム拡張機能を作成できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のマネージ オブジェクト モデルには、基になる基本クラスが含まれており、従来よりもカスタム拡張機能の開発が簡単になっています。  
+-   複数のパッケージで使用する場合は、接続マネージャー、タスク、列挙子、ログ プロバイダー、およびデータ フロー コンポーネントなどの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のカスタム拡張機能を作成できます。 ph x="1" /&gt; のマネージド オブジェクト モデルには、基になる基本クラスが含まれており、従来よりもカスタム拡張機能の開発が簡単になっています。  
   
  パッケージを動的に作成する場合、または開発環境以外で [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理および実行する場合は、プログラムでパッケージを操作できます。 既存のパッケージを読み込み、変更し、実行できます。または、まったく新しいパッケージをプログラムで作成および実行することもできます。 この場合、次に示すような一連の方法があります。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36071713"
  同期出力と非同期出力の重要な相違点、およびデータ フローでこれらの出力を使用するコンポーネントについて説明します。  
   
  [プログラムによる接続マネージャーの操作](working-with-connection-managers-programmatically.md)  
- マネージ コードで使用できる接続マネージャーと、コードが `AcquireConnection` メソッドを呼び出した場合に接続マネージャーが返す値の一覧を表示します。  
+ マネージド コードで使用できる接続マネージャーと、コードが `AcquireConnection` メソッドを呼び出した場合に接続マネージャーが返す値の一覧を表示します。  
   
  [スクリプトによるパッケージの拡張](extending-packages-scripting/extending-packages-with-scripting.md)  
  スクリプト タスクを使用した制御フローの拡張方法、またはスクリプト コンポーネントを使用したデータ フローの拡張方法について説明します。  

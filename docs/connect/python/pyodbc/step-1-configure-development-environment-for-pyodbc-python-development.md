@@ -1,7 +1,7 @@
 ---
-title: '手順 1: pyodbc Python 開発環境の構成 |Microsoft ドキュメント'
+title: '手順 1: pyodbc Python 開発環境の構成 |Microsoft Docs'
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,53 +14,41 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1491e68ea318f8a37f0f959f9432d410e0179a18
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: d591227354a950b36e085b350e207c4a8e89ff25
+ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309851"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37890983"
 ---
-# <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>手順 1: pyodbc Python 開発用の開発環境を構成します。
+# <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>手順 1: pyodbc Python 開発用に開発環境を構成する
 
 ## <a name="windows"></a>Windows  
-Python - pyodbc on Windows を使用して SQL データベースに接続します。
+Python の Windows で pyodbc を使用して SQL Database に接続します。
   
-1. **Python のインストーラーをダウンロードします。**  
-  場合は、コンピューターには、Python をインストールしてくださいはありません。 移動、 [Python ダウンロード ページ](https://www.python.org/downloads/windows/)し、適切なインストーラーをダウンロードします。 例に 64 ビット コンピューター上にいる場合は、Python 2.7 または 3.5 (x64) のインストーラーをダウンロードします。  
+1. **Python インストーラーをダウンロード**します。  
+  コンピューターに Python があるない場合はインストールします。 移動して、 [Python をダウンロードできるページ](https://www.python.org/downloads/windows/)し、適切なインストーラーをダウンロードします。 たとえば、64 ビット コンピューターの場合は、Python 2.7 または 3.7 (x 64) インストーラーをダウンロードします。  
   
-2. **Python をインストール**インストーラーをダウンロードすると、次の操作: します。 ファイルをダブルクリックして、インストーラーを起動します。 B. 使用言語を選択し、条項に同意します。 c. 画面の指示に従って、Python は、コンピューターにインストールする必要があります。 d. 確認できますが Python が C:\Python27 または C:\Python35 に移動してインストールされているし、python-v または py-v (3.x) の実行 
+2. **Python をインストール**します。  インストーラーがダウンロードされると、次の手順を実行します。 をします。 インストーラーを起動するファイルをダブルクリックします。 B. 言語を選択し、条項に同意します。 c. 画面の指示に従って、Python は、コンピューターにインストールする必要があります。 d. 移動して、Python がインストールされていることを確認する`C:\Python27`または`C:\Python37`実行`python -v`または`py -v`(3.x) の 
       
-3. [**Microsoft ODBC Driver をインストールします。**](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+3. [**Microsoft ODBC Driver for SQL Server on Windows をインストール**](../../odbc/windows/system-requirements-installation-and-driver-files.md#installing-microsoft-odbc-driver-for-sql-server)します。
   
-4. **管理者として cmd.exe を開きます**     
+4. **管理者として cmd.exe を開きます。**     
 
-5. **Pip に使用して pyodbc Python パッケージ マネージャーをインストールします。**
+5. **Pip、Python パッケージ マネージャーを使用して pyodbc をインストール**(置換`C:\Python27\Scripts`をインストールされている Python パス)
 ```  
-> cd C:\Python27\Scripts>  
+> cd C:\Python27\Scripts  
 > pip install pyodbc  
 ```  
 
   
 ## <a name="linux"></a>Linux 
-Python - Ubuntu と RedHat pyodbc を使用して SQL データベースに接続します。
+Python で pyodbc を使用して SQL Database に接続します。
   
-1. **開いているターミナル**  
+1. **ターミナルを開く**  
 
-2. **Linux 用 Microsoft ODBC Driver 13 をインストール**Ubuntu 15.04 用 + 
-``` 
-> sudo su  
-> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-Ubuntu-b87369f0/file/154097/2/installodbc.sh  
-> sh installodbc.sh  
-```   
+2. [**Microsoft ODBC Driver for SQL Server on Linux をインストール**](../../odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)します。
 
-  Red Hat 6、7 用 
-``` 
-> sudo su 
-> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL-8d067754/file/153653/4/install.sh 
-> sh install.sh 
-```  
-  
 3.  **Pyodbc をインストールします。**  
 ```  
 > sudo -H pip install pyodbc

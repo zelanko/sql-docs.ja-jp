@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - high availability [SQL Server], failover clustering
@@ -21,18 +20,18 @@ helpviewer_keywords:
 - AlwaysOn [SQL Server], see failover clustering [SQL Server]
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 caps.latest.revision: 76
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 14a25d065b617657c56ebcffa089959bf71376ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7a93c08669f0cf3ac962fa72df89423e3cbc8d0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251464"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Always On フェールオーバー クラスター インスタンス (SQL Server)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 製品の一部として、Always On フェールオーバー クラスター インスタンスでは、Windows Server フェールオーバー クラスタリング (WSFC) の機能を活用して、サーバー インスタンス レベル ( *フェールオーバー クラスター インスタンス* (FCI)) での冗長性によるローカル高可用性を実現します。 FCI は、Windows Server フェールオーバー クラスタリング (WSFC) ノード全体、場合によっては複数のサブネットにインストールされる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の単一インスタンスです。 FCI は、ネットワーク上では 1 台のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのように見えますが、現在のノードが使用できなくなった場合には、1 つの WSFC ノードから別の WSFC ノードにフェールオーバーする機能を備えています。  
+  ph x="1" /&gt; Always On 製品の一部として、Always On フェールオーバー クラスター インスタンスでは、Windows Server フェールオーバー クラスタリング (WSFC) の機能を活用して、サーバー インスタンス レベル ( *フェールオーバー クラスター インスタンス* (FCI)) での冗長性によるローカル高可用性を実現します。 FCI は、Windows Server フェールオーバー クラスタリング (WSFC) ノード全体、場合によっては複数のサブネットにインストールされる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の単一インスタンスです。 FCI は、ネットワーク上では 1 台のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのように見えますが、現在のノードが使用できなくなった場合には、1 つの WSFC ノードから別の WSFC ノードにフェールオーバーする機能を備えています。  
   
  FCI は、[AlwaysOn 可用性グループ](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)を活用して、データベース レベルでのリモートのディザスター リカバリーを実現します。 詳細については、「[フェールオーバー クラスタリングと AlwaysOn 可用性グループ (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」を参照してください。  
   
@@ -149,13 +148,13 @@ ms.locfileid: "36173647"
 |------------------------|-----------|  
 |障害検出メカニズムと柔軟なフェールオーバー ポリシーについて説明します。|[Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)|  
 |FCI の管理とメンテナンスの概念について説明します。|[フェールオーバー クラスター インスタンスの管理とメンテナンス](failover-cluster-instance-administration-and-maintenance.md)|  
-|マルチサブネットの構成と概念について説明します。|[SQL Server マルチ サブネット クラスタ リング (です。SQL Server)](sql-server-multi-subnet-clustering-sql-server.md)|  
+|マルチサブネットの構成と概念について説明します。|[SQL Server マルチ サブネット クラスタ リング (SQL Server の場合)。](sql-server-multi-subnet-clustering-sql-server.md)|  
   
 ##  <a name="RelatedTopics"></a> 関連項目  
   
 |**トピックの説明**|**トピック**|  
 |----------------------------|---------------|  
-|新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI のインストール方法について説明します。|[新しい SQL Server フェールオーバー クラスターの作成 (です。セットアップ) です。](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
+|新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI のインストール方法について説明します。|[新しい SQL Server フェールオーバー クラスターの作成 (セットアップの場合)。](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] フェールオーバー クラスターにアップグレードする方法について説明します。|[SQL Server フェールオーバー クラスターのアップグレード](upgrade-a-sql-server-failover-cluster-instance.md)|  
 |Windows フェールオーバー クラスタリングの概念について説明し、Windows フェールオーバー クラスタリングに関連するタスクへのリンクを示します。|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [フェールオーバー クラスターの概要](http://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [フェールオーバー クラスターの概要](http://go.microsoft.com/fwlink/?LinkId=177879)|  
 |FCI 内のノードと可用性グループ内のレプリカの概念の違いと、FCI を使用して可用性グループのレプリカをホストする場合の考慮事項について説明します。|[フェールオーバー クラスタ リングと Always On 可用性グループ (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  

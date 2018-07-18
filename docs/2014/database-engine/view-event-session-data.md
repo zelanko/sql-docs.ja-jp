@@ -1,5 +1,5 @@
 ---
-title: イベント セッション データを表示 |Microsoft ドキュメント
+title: イベント セッション データを表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 503c9d39631ff2ec0e1ebafa437180dd7dc39739
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a6602ceccaf574827dfc49e4a90cd84c9422522b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239462"
 ---
 # <a name="view-event-session-data"></a>イベント セッション データの表示
   このトピックでは、表示のユーザー インターフェイスを使用して、拡張イベント データを表示および分析する方法について説明します。  
@@ -48,7 +48,7 @@ ms.locfileid: "36085491"
   
 -   event_file ターゲットの場合、ファイル ターゲット データ (.XEL ファイル) を表示するには、次のいずれかの方法を使用します。  
   
-    -   ファイルを使用するには [開く]-> [[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]です。  
+    -   ファイルを使用するには [開く]-> [[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]します。  
   
     -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] にファイルをドラッグ アンド ドロップする。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36085491"
   
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
   
-    -   1 つ以上を表示することができます。XEL ファイルを選択して**拡張イベント ファイルの結合**ファイルからメニューを開く ->。  
+    -   1 つ以上を表示することができます。XEL ファイルを選択して**拡張イベント ファイルの結合**ファイルから、開く メニュー。  
   
 ### <a name="watching-live-data"></a>ライブ データの監視  
  キャプチャされているライブ データを監視することができます。  
@@ -89,7 +89,7 @@ ms.locfileid: "36085491"
  **[詳細]** ペインには、フィールドとアクションを含め、選択したイベントのすべての列が表示されます。 ターゲット データ テーブルに列を追加するには、 **[詳細]** ペインで行を右クリックし、 **[テーブルの列を表示する]** をクリックします。  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>結合列の作成、変更、および削除  
- 結合列を使用すると、一連のフィールドを結合して、1 つの列に表示することができます。 結合列には、NULL 以外の最初のフィールドのデータが、フィールド リストに追加されたときの順序で表示されます。 これは、「と同様[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]プロファイラー特定の列、イベントに応じて、異なるデータを示す可能性があります (これの最も一般的な例は、TextData フィールドに[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]プロファイラー)。 たとえば、sql_statement_completed イベントのステートメントと sql_batch_completed イベントの batch_text フィールドを myStatement という名前のフィールドに結合できます。 テーブルに myStatement 列を表示すると、関連付けられているイベントの適切なデータが表示されます。  
+ 結合列を使用すると、一連のフィールドを結合して、1 つの列に表示することができます。 結合列には、NULL 以外の最初のフィールドのデータが、フィールド リストに追加されたときの順序で表示されます。 表示される内容に似ています[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Profiler、特定の列が、イベントに応じて、異なるデータを表示可能性があります (これの最も一般的な例は、TextData フィールド[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Profiler)。 たとえば、sql_statement_completed イベントのステートメントと sql_batch_completed イベントの batch_text フィールドを myStatement という名前のフィールドに結合できます。 テーブルに myStatement 列を表示すると、関連付けられているイベントの適切なデータが表示されます。  
   
  結合列を作成、変更、または削除するには、次の手順を実行します。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36085491"
  列がグループ化されている場合、データはグループ内のみで並べ替えられます。  
   
 ### <a name="group-results"></a>結果のグループ化  
- グループ化した結果の機能に相当する、`GROUP BY`句[!INCLUDE[tsql](../includes/tsql-md.md)]です。 ターゲット データ テーブルにはグループ化されたデータが表示され、データの展開と折りたたみを行うことができます。  
+ グループ化した結果が同等の機能に、`GROUP BY`句[!INCLUDE[tsql](../includes/tsql-md.md)]します。 ターゲット データ テーブルにはグループ化されたデータが表示され、データの展開と折りたたみを行うことができます。  
   
  データは、集計する前にグループ化する必要があります。 たとえば、query_hash 値でグループ化し、実行時間を基準に降順に並べ替え、各グループの平均実行時間を取得した後、集計を基準に降順に並べ替えることができます。  これにより生成された一覧には、平均実行時間が長い方から順に並べ替えられた一意のステートメントの一覧が表示されます。 一番上のグループを展開すると、そのクエリの個々の実行時間が長い方から順に表示されます。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "36085491"
   
  トレース結果をコピーするには、セルまたは行 (行は複数可) を選択し、右クリックして、 **[コピー]** をクリックし、 **[セル]**、 **[行]**、または **[詳細]** をクリックします。 拡張イベントは、最大 1000 行のコピーをサポートしています。  
   
- トレース結果をエクスポートすることができます、します。XEL ファイル、テーブル、または。CSV ファイルを選択して**エクスポート**から、**拡張イベント**メニュー オプション[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]です。  
+ トレース結果をエクスポートすることができます、します。XEL ファイル、テーブル、または。CSV ファイルを選択して**エクスポート**から、**拡張イベント**メニュー オプション[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]します。  
   
 ### <a name="view-a-deadlock-graph-and-query-plans"></a>Deadlock Graph とクエリ プランの表示  
  [詳細] ペインで **xml_deadlock_report** のデッドロック グラフを表示して、デッドロックのトラブルシューティングを行うことができます。 次のイベントのクエリ プラン グラフを表示することもできます。  

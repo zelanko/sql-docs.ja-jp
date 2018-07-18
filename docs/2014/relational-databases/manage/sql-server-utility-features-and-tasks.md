@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server utility [SQL Server]
 - utility control point
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Multi-server management [SQL Server]
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a7f2bed5f610a1b7b211babed35ce495b7b2be2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 40aa8462beaa64f1e30f23973165eac983176916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276498"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server ユーティリティの機能とタスク
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境全体をまとめて管理する必要があります。このリリースでは、この管理作業に対して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのアプリケーションとマルチサーバーの管理という発想で対応しています。  
@@ -37,7 +37,7 @@ ms.locfileid: "36178210"
 ##  <a name="typical_scenarios"></a> SQL Server ユーティリティの概要  
  一般的なユーザー シナリオでは、まず、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの中心的な裏付けとなるポイントを確立する、ユーティリティ コントロール ポイント (UCP) を作成します。 UCP は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスから収集されたリソースの正常性を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでまとめて表示します。 UCP の作成後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録して UCP で管理できるようにします。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティで管理される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスおよびデータ層アプリケーションは、グローバルのポリシー定義または個々のポリシー定義に基づいて監視できます。  
+ ph x="1" /&gt; ユーティリティで管理される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスおよびデータ層アプリケーションは、グローバルのポリシー定義または個々のポリシー定義に基づいて監視できます。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの基礎知識については、次の各トピックを参照してください。  

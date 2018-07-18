@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f9bc20a70899e84dacb4f7bfbadf0a0f26f88ffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8806b23d422969637a536e7a86c12bb5f323e2e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326912"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Controller および Client のサービス アカウントの変更
   このトピックでは、分散再生コントローラーと分散再生クライアントのサービス アカウントを変更し、アクセス制御リスト (ACL) を再度適用する方法について説明します。  
   
 ### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>[コンピューターの管理] を使用して 分散再生サービスを開始または停止するには  
   
-1.  コンピューターの分散再生サービスがインストールされている、コマンド プロンプトから「`dcomcnfg`です。  
+1.  コンピューターの分散再生サービスがインストールされている、コマンド プロンプトから「`dcomcnfg`します。  
   
 2.  **[サービス]** をダブルクリックし、下へスクロールして、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生 \<サービス名>]** を右クリックします。次に、**[開始]** または **[停止]** をクリックします。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36074709"
   
     1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー サービスを停止します。  
   
-    2.  コント ローラー コンピューターのコント ローラー サービスがインストールされている、コマンド プロンプトから「`dcomcnfg`です。  
+    2.  コント ローラー コンピューターのコント ローラー サービスがインストールされている、コマンド プロンプトから「`dcomcnfg`します。  
   
     3.  **[コンポーネント サービス]** ウィンドウで、**[コンソール ルート]、[コンポーネント サービス]、[コンピューター]、[マイ コンピューター]、[DCOM 構成]、[DReplayController]** に移動します。  
   

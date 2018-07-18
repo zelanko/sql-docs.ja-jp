@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
 - network connections [SQL Server], SPNs
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 caps.latest.revision: 56
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 356a475186915a222a8480f4b7f1cbdbc7fa8fed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a4d8948697fb2cc08c57f2e4621c7401e6d44bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211892"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 接続用のサービス プリンシパル名の登録
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と Kerberos 認証を併用するには、次の両方の条件が満たされる必要があります。  
@@ -61,10 +61,10 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Windows 認証は、SQL Server を認証する場合にお勧めする方法です。 Windows 認証を使用するクライアントは、NTLM または Kerberos のどちらかを使用して認証されます。 Active Directory 環境では、常に Kerberos 認証が最初に試みられます。 Kerberos 認証は、名前付きパイプを使用する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] クライアントには使用できません。  
   
 ##  <a name="Permissions"></a> Permissions  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスが起動すると、サービス プリンシパル名 (SPN) の登録が試みられます。 SQL Server を開始しているアカウントに、Active Directory ドメイン サービスに SPN を登録する権限がない場合は、この呼び出しは失敗し、アプリケーション イベント ログと SQL Server エラー ログに警告メッセージが記録されます。 SPN を登録するには、ビルトイン アカウント (ローカル システム (非推奨) や NETWORK SERVICE など) または SPN を登録する権限を持つアカウント (ドメイン管理者アカウントなど) で [!INCLUDE[ssDE](../../includes/ssde-md.md)] が実行されている必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が  [!INCLUDE[win7](../../includes/win7-md.md)] または  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] オペレーティング システムで実行されている場合は、仮想アカウントまたは管理されたサービス アカウント (MSA) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行できます。 仮想アカウントと MSA の両方で SPN を登録できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がこのいずれかのアカウントで実行されていない場合、SPN は起動時には登録されず、ドメイン管理者が SPN を手動で登録する必要があります。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスが起動すると、サービス プリンシパル名 (SPN) の登録が試みられます。 SQL Server を開始しているアカウントに、Active Directory ドメイン サービスに SPN を登録する権限がない場合は、この呼び出しは失敗し、アプリケーション イベント ログと SQL Server エラー ログに警告メッセージが記録されます。 SPN を登録するには、ビルトイン アカウント (ローカル システム (非推奨) や NETWORK SERVICE など) または SPN を登録する権限を持つアカウント (ドメイン管理者アカウントなど) で [!INCLUDE[ssDE](../../includes/ssde-md.md)] が実行されている必要があります。 ph x="1" /&gt; が  [!INCLUDE[win7](../../includes/win7-md.md)] または  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] オペレーティング システムで実行されている場合は、仮想アカウントまたは管理されたサービス アカウント (MSA) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行できます。 仮想アカウントと MSA の両方で SPN を登録できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がこのいずれかのアカウントで実行されていない場合、SPN は起動時には登録されず、ドメイン管理者が SPN を手動で登録する必要があります。  
   
 > [!NOTE]  
->  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 機能レベルよりも低い機能レベルで Windows ドメインが実行されるように構成される場合は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの SPN を登録するために必要な権限が、管理されたサービス アカウントに与えられません。 Kerberos 認証が必要な場合は、ドメイン管理者が、管理されたサービス アカウントに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SPN を手動で登録する必要があります。  
+>  ph x="1" /&gt; 機能レベルよりも低い機能レベルで Windows ドメインが実行されるように構成される場合は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの SPN を登録するために必要な権限が、管理されたサービス アカウントに与えられません。 Kerberos 認証が必要な場合は、ドメイン管理者が、管理されたサービス アカウントに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SPN を手動で登録する必要があります。  
   
  ドメイン管理者ではないアカウントに SPN に対する読み取り権限または書き込み権限を許可する方法については、サポート技術情報の資料「 [SQL Server で Kerberos 認証を使用する方法](http://support.microsoft.com/kb/319723)」を参照してください。  
   
@@ -162,8 +162,8 @@ WHERE session_id = @@SPID;
   
 |シナリオ|認証方法|  
 |--------------|---------------------------|  
-|SPN が正しいドメイン アカウント、仮想アカウント、MSA、またはビルトイン アカウントにマップされている場合 (ローカル システムや NETWORK SERVICE など)<br /><br /> 注: を修正は、登録される SPN によってマップされているアカウントは、アカウント、SQL Server サービスが実行されていることを意味します。|ローカル接続では NTLM が使用され、リモート接続では Kerberos が使用されます。|  
-|SPN が正しいドメイン アカウント、仮想アカウント、MSA、またはビルトイン アカウントである場合<br /><br /> 注: を修正は、登録される SPN によってマップされているアカウントは、アカウント、SQL Server サービスが実行されていることを意味します。|ローカル接続では NTLM が使用され、リモート接続では Kerberos が使用されます。|  
+|SPN が正しいドメイン アカウント、仮想アカウント、MSA、またはビルトイン アカウントにマップされている場合 (ローカル システムや NETWORK SERVICE など)<br /><br /> 注: 登録済み SPN によってマップされているアカウントで実行されている SQL Server サービス アカウントであることを意味を修正します。|ローカル接続では NTLM が使用され、リモート接続では Kerberos が使用されます。|  
+|SPN が正しいドメイン アカウント、仮想アカウント、MSA、またはビルトイン アカウントである場合<br /><br /> 注: 登録済み SPN によってマップされているアカウントで実行されている SQL Server サービス アカウントであることを意味を修正します。|ローカル接続では NTLM が使用され、リモート接続では Kerberos が使用されます。|  
 |SPN が正しくないドメイン アカウント、仮想アカウント、MSA、またはビルトイン アカウントにマップされている場合|認証は失敗します。|  
 |SPN 参照が失敗したか、正しいドメイン アカウント、仮想アカウント、MSA、またはビルトイン アカウントにマップされていないか、正しいドメイン アカウント、仮想アカウント、MSA、またはビルトイン アカウントではない場合|ローカル接続とリモート接続で NTLM が使用されます。|  
   

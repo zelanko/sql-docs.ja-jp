@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports, creating
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03ec9b9f8f953f0c4947e3f39cd125e54d6d7272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216812"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル: オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)
   このチュートリアルでは、ウィザードを使用して円グラフを作成し、少し変更して実行可能な操作を確認します。 このチュートリアルは 2 つの異なる方法で実行できます。 どちらの方法でも、次の図に示すような円グラフが作成されます。  
   
- !["My First 円 Chart"の実行で表示](../media/rs-my1stpierunview.gif「"my First Pie Chart"の実行での表示」)  
+ ![「最初円グラフ」実行の表示](../media/rs-my1stpierunview.gif"my First Pie Chart"の実行での表示)  
   
 ## <a name="prerequisites"></a>前提条件  
- XML データを使用するか [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用するかにかかわらず、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] レポート ビルダーにアクセスできることが必要です。 スタンドアロン バージョン、またはレポート マネージャーや SharePoint サイトから利用できる ClickOnce バージョンを実行できます。 最初の手順のみをレポート ビルダーを開く方法は ClickOnce バージョン。 詳細については、次を参照してください。[インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)です。  
+ XML データを使用するか [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用するかにかかわらず、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] レポート ビルダーにアクセスできることが必要です。 スタンドアロン バージョン、またはレポート マネージャーや SharePoint サイトから利用できる ClickOnce バージョンを実行できます。 最初の手順のみをレポート ビルダーを開く方法は ClickOnce バージョンの異なる。 詳細については、次を参照してください。[インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)します。  
   
 ##  <a name="TwoWays"></a> このチュートリアルを実行する 2 つの方法  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36084528"
      **[作業の開始]** ダイアログ ボックスが表示されます。  
   
     > [!NOTE]  
-    >  場合、**作業の開始** ダイアログ ボックスが表示されないから、**レポート ビルダー**ボタンをクリックし**新規**です。  
+    >  場合、 **Getting Started** ] ダイアログ ボックスが表示されないから、**レポート ビルダー**ボタン、[**新規**します。  
   
 2.  左側のウィンドウであることを確認**レポート**が選択されています。  
   
@@ -81,13 +81,13 @@ ms.locfileid: "36084528"
   
 6.  データ ソースに任意の名前を付けることができます。 **[名前]** ボックスに、「 **MyPieChart**」と入力します。  
   
-7.  **接続の種類を選択して**ボックスで、クリックして**XML です。**  
+7.  **接続の種類を選択します。** ボックスで、 **XML。**  
   
-8.  **資格情報** タブで、**現在の Windows ユーザーを使用する。Kerberos 委任が必要な可能性があります**、クリックして**OK**です。  
+8.  **[資格情報]** タブで、**[現在の Windows ユーザーを使用する。Kerberos 委任が必要に**、] をクリックし、 **OK**します。  
   
 9. **[データ ソースへの接続の選択]** ページで **[MyPieChart]** をクリックし、 **[次へ]** をクリックします。  
   
-10. 次のテキストをコピーし、中央の大きいボックスに貼り付け、**クエリをデザイン**ページ。  
+10. 次のテキストをコピーし、中央の大きいボックスに貼り付けます、**クエリのデザイン**ページ。  
   
     ```  
     <Query>  
@@ -126,7 +126,7 @@ ms.locfileid: "36084528"
   
 15. **[FullName]** フィールドを **[使用できるフィールド]** ボックスから **[カテゴリ]** ボックスにドラッグし (または、ダブルクリックすると **[カテゴリ]** ボックスに移動します)、**[次へ]** をクリックします。  
   
-16. **スタイルを選択する** ページで、**オーシャン**が既定で選択します。 他のスタイルをクリックして、その違いを確認します。  
+16. **スタイルの選択** ページで、**海**既定で選択されます。 他のスタイルをクリックして、その違いを確認します。  
   
 17. **[完了]** をクリックします。  
   
@@ -136,13 +136,13 @@ ms.locfileid: "36084528"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> 使用して円グラフを作成する、[!INCLUDE[tsql](../../../includes/tsql-md.md)]クエリ  
+##  <a name="CreatePieQueryData"></a> 円グラフを作成、[!INCLUDE[tsql](../../../includes/tsql-md.md)]クエリ  
   
 #### <a name="to-create-the-pie-chart-with-a-includetsqlincludestsql-mdmd-query-that-contains-data"></a>データを含む [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用して円グラフを作成するには  
   
 1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
   
-2.  **新しいレポートまたはデータセット** ダイアログ ボックスであることを確認**レポート**が左側のペインで選択されています。  
+2.  **新しいレポートまたはデータセット** ダイアログ ボックスで、いることを確認**レポート**左側のペインで選択します。  
   
 3.  右ペインで、 **[グラフ ウィザード]** をクリックし、 **[作成]** をクリックします。  
   
@@ -200,26 +200,26 @@ ms.locfileid: "36084528"
   
 ##### <a name="to-display-percentage-values-as-labels-on-a-pie-chart"></a>円グラフにパーセンテージをラベルとして表示するには  
   
-1.  円グラフを右クリックし、選択**データ ラベルを表示**です。 円グラフの各スライス内にデータ ラベルが表示されます。  
+1.  円グラフを右クリックし、選択**データ ラベルの**します。 円グラフの各スライス内にデータ ラベルが表示されます。  
   
-2.  右クリックし、ラベル**系列ラベルのプロパティ**です。 **[系列ラベルのプロパティ]** ダイアログ ボックスが表示されます。  
+2.  クリックし、ラベルを右クリックして**系列ラベルのプロパティ**します。 **[系列ラベルのプロパティ]** ダイアログ ボックスが表示されます。  
   
 3.  型`#PERCENT{P0}`の**データ ラベル**オプション。  
   
-     `{P0}`小数点せず割合を示します。 だけ入力すると`#PERCENT`、含む小数点以下 2 桁の数値になります。 `#PERCENT` キーワードでは、計算または関数を実行できません。その他の多くがあります。  
+     `{P0}`小数点以下を含まないパーセンテージが表示されます。 だけ入力する場合`#PERCENT`数値は小数点以下 2 桁になります。 `#PERCENT` キーワードでは、計算または関数を実行します。その他の多くがあります。  
   
  グラフのラベルと凡例をカスタマイズする方法の詳細については、「[円グラフへのパーセンテージの表示 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)」および「[凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md)」を参照してください。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#TwoWays)  
   
 ##  <a name="WhatsNext"></a> 次の課題  
- レポート ビルダーでレポートを初めて自分で作成したので、他のチュートリアルに取り組んで独自のデータからレポートを作成する準備ができました。 レポート ビルダーを実行すると、データベースなど、データ ソースにアクセスする許可が必要、*接続文字列*、実際にデータ ソースにする接続します。 システム管理者がこの情報を保持し、ユーザーを設定できます。  
+ レポート ビルダーでレポートを初めて自分で作成したので、他のチュートリアルに取り組んで独自のデータからレポートを作成する準備ができました。 レポート ビルダーを実行するには、データベースなど、データ ソースを表示するアクセス許可が必要です。 を*接続文字列*、実際にデータ ソースにする接続。 システム管理者がこの情報を保持し、ユーザーを設定できます。  
   
- その他のチュートリアルは、操作をするには、インスタンスの名前が必要です。[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]と任意のデータベースに読み取り専用アクセスのための十分な資格情報。 これもシステム管理者が設定できます。  
+ その他のチュートリアルは、操作するには、インスタンスの名前が必要です。[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]と任意のデータベースに読み取り専用アクセスのための十分な資格情報。 これもシステム管理者が設定できます。  
   
  最後に、レポートをレポート サーバーまたはレポート サーバーと統合されている SharePoint サイトに保存するには、URL と権限が必要です。 作成したレポートは自分のコンピューターから直接実行できますが、レポート サーバーまたは SharePoint サイトから実行するとレポートの機能が増えます。 自分のレポートまたはその他のレポートをパブリッシュ元のレポート サーバーまたは SharePoint サイトから実行する権限が必要です。 アクセス権を取得するには、システム管理者に問い合わせてください。  
   
- 開始する前に、いくつかの概念や用語について確認しておくと役立つ場合があります。 詳細については、次を参照してください。[レポート オーサリングの概念&#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)です。 また、レポートを初めて自分で作成する前に、計画の時間を取ってください。 時間を費やす価値があります。 詳細については、次を参照してください。[レポートの計画&#40;レポート ビルダー&#41;](../report-design/planning-a-report-report-builder.md)です。  
+ 開始する前に、いくつかの概念や用語について確認しておくと役立つ場合があります。 詳細については、次を参照してください。[レポート作成の概念&#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)します。 また、レポートを初めて自分で作成する前に、計画の時間を取ってください。 時間を費やす価値があります。 詳細については、次を参照してください。[レポートの計画&#40;レポート ビルダー&#41;](../report-design/planning-a-report-report-builder.md)します。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#TwoWays)  
   

@@ -21,13 +21,13 @@ ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7f4ef85a48833a844876d5f4e81b8da11440378b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 082655f520c64c453844e0f3911c61e9eca66bd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36165675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231512"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの追加
   データ フローを作成するには、最初にコンポーネントを追加します。 次に、追加したコンポーネントを構成して相互に接続し、実行時のデータ フローを確立します。 このセクションでは、データ フロー タスクへのコンポーネントの追加、コンポーネントのデザイン時インスタンスの作成、およびコンポーネントの構成について説明します。 コンポーネントの接続方法については、「[プログラムによるデータ フロー コンポーネントの接続](../building-packages-programmatically/connecting-data-flow-components-programmatically.md)」を参照してください。  
@@ -37,12 +37,12 @@ ms.locfileid: "36165675"
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> プロパティの値には、CLSID、PROGID、またはコンポーネントの <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> プロパティを指定できます。 CLSID は通常、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> プロパティの値として [プロパティ] ウィンドウに表示されます。 このプロパティ、および使用できるコンポーネントの他のプロパティの取得については、「[プログラムによるデータ フロー コンポーネントの検出](../building-packages-programmatically/discovering-data-flow-components-programmatically.md)」を参照してください。  
   
-## <a name="adding-a-managed-component"></a>マネージ コンポーネントの追加  
- CLSID または PROGID を使用して、いずれかのマネージ データ フロー コンポーネントをデータ フローに追加することはできません。これらの値はコンポーネント自体ではなく、ラッパーを指しているためです。 その代わり、次のサンプルに示すように、`CreationName` プロパティまたは `AssemblyQualifiedName` プロパティを使用できます。  
+## <a name="adding-a-managed-component"></a>マネージド コンポーネントの追加  
+ CLSID または PROGID を使用して、いずれかのマネージド データ フロー コンポーネントをデータ フローに追加することはできません。これらの値はコンポーネント自体ではなく、ラッパーを指しているためです。 その代わり、次のサンプルに示すように、`CreationName` プロパティまたは `AssemblyQualifiedName` プロパティを使用できます。  
   
- `AssemblyQualifiedName` プロパティを使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトで、マネージ コンポーネントを含んでいるアセンブリに参照を追加する必要があります。 これらのアセンブリは、**[参照の追加]** ダイアログ ボックスの [.NET] タブに一覧表示されません。 通常は、**C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** フォルダーを参照してアセンブリを見つける必要があります。  
+ ph x="1" /&gt; プロパティを使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトで、マネージド コンポーネントを含んでいるアセンブリに参照を追加する必要があります。 これらのアセンブリは、**[参照の追加]** ダイアログ ボックスの [.NET] タブに一覧表示されません。 通常は、**C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** フォルダーを参照してアセンブリを見つける必要があります。  
   
- 組み込みマネージ データ フロー コンポーネントの要素は次のとおりです。  
+ 組み込みマネージド データ フロー コンポーネントの要素は次のとおりです。  
   
 -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ソース  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36165675"
   
 -   スクリプト コンポーネント  
   
- 次のコード サンプルは、マネージ コンポーネントをデータ フローに追加するための 2 つの方法を示しています。  
+ 次のコード サンプルは、マネージド コンポーネントをデータ フローに追加するための 2 つの方法を示しています。  
   
 ```csharp  
 using System;  
@@ -135,7 +135,7 @@ End Module
 ```  
   
 ## <a name="creating-the-design-time-instance-of-the-component"></a>コンポーネントのデザイン時インスタンスの作成  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A> メソッドを呼び出し、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> プロパティによって識別される、コンポーネントのデザイン時インスタンスを作成します。 このメソッドは、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> インターフェイスのマネージ ラッパーである <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> オブジェクトを返します。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A> メソッドを呼び出し、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> プロパティによって識別される、コンポーネントのデザイン時インスタンスを作成します。 このメソッドは、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> インターフェイスのマネージド ラッパーである <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> オブジェクトを返します。  
   
  可能な限り、コンポーネントのメタデータを直接変更するのではなく、必ずデザイン時インスタンスのメソッドを使用して、コンポーネントを変更する必要があります。 メタデータには、接続など、直接設定する必要のあるアイテムがありますが、メタデータを直接変更すると、コンポーネントが変更を監視および検証する機能がバイパスされるため、一般的にはお勧めしません。  
   
@@ -287,7 +287,7 @@ End Module
 ## <a name="external-resources"></a>外部リソース  
  blogs.msdn.com のブログ「[EzAPI – SQL Server 2012 用の更新](http://go.microsoft.com/fwlink/?LinkId=243223)」  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [プログラムによるデータ フロー コンポーネントの接続](../building-packages-programmatically/connecting-data-flow-components-programmatically.md)  

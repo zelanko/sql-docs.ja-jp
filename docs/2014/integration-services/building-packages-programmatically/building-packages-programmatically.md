@@ -14,13 +14,13 @@ ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2aebd9a639109f9869c918f99ae2e26731438f99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44247ba695aaa9556bc75aa733f56270eddfcab0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229352"
 ---
 # <a name="building-packages-programmatically"></a>プログラムによるパッケージの作成
   パッケージを動的に作成する必要がある場合、または開発環境以外で [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理および実行する必要がある場合は、プログラムでパッケージを操作できます。 この場合、次に示すような一連の方法があります。  
@@ -31,7 +31,7 @@ ms.locfileid: "36173295"
   
 -   新しいパッケージを作成し、オブジェクト単位やプロパティ単位でコンポーネントを追加および構成し、保存してから実行します。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルを使用すると、任意のマネージ プログラミング言語でパッケージを作成、構成、および実行するコードを記述できます。 たとえば、選択したデータ ソースとそのテーブルおよび列に基づいて、パッケージの接続またはデータ ソース、変換、および変換先を構成するメタデータ ドリブン パッケージの作成が必要になる場合があります。  
+ ph x="1" /&gt; オブジェクト モデルを使用すると、任意のマネージド プログラミング言語でパッケージを作成、構成、および実行するコードを記述できます。 たとえば、選択したデータ ソースとそのテーブルおよび列に基づいて、パッケージの接続またはデータ ソース、変換、および変換先を構成するメタデータ ドリブン パッケージの作成が必要になる場合があります。  
   
  ここでは、プログラムを使用してパッケージを行単位で作成および構成する方法を説明し、その例を示します。 パッケージ プログラミングの最も簡単な方法では、「[プログラムによるパッケージの実行と管理](../run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)」に示すように、既存のパッケージを読み込んで、変更せずに実行できます。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36173295"
   
 -   blogs.msdn.com のブログ「[カスタム拡張機能のパフォーマンスのプロファイル](http://go.microsoft.com/fwlink/?LinkId=238831)」  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

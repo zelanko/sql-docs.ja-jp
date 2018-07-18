@@ -1,13 +1,11 @@
 ---
-title: 現在のトランザクションにアクセスする |Microsoft ドキュメント
+title: 現在のトランザクションへのアクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 618b272195dc61179db7ac36a19cc30f5eaa2aef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: dad95c2d2fc02e46b139f29889315873f21887e7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36175988"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351814"
 ---
 # <a name="accessing-the-current-transaction"></a>現在のトランザクションへのアクセス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行されている CLR (共通言語ランタイム) コードに実行が移った時点でトランザクションがアクティブな場合、`System.Transactions.Transaction` クラスによりそのトランザクションが公開されます。 現在のトランザクションにアクセスするには、`Transaction.Current` プロパティを使用します。 ほとんどの場合、トランザクションに明示的にアクセスする必要はありません。 データベース接続の場合、`Transaction.Current` メソッドが呼び出されると、ADO.NET が `Connection.Open` を自動的にチェックし、ユーザーに意識させることなく接続をそのトランザクションに参加させます (接続文字列の `Enlist` キーワードを false に設定した場合は除く)。  
@@ -44,22 +42,22 @@ ms.locfileid: "36175988"
  以下に、外部トランザクションを取り消す別の方法を説明します。  
   
 ## <a name="canceling-an-external-transaction"></a>外部トランザクションのキャンセル  
- 外部トランザクションは、次の方法でマネージ プロシージャまたは関数からキャンセルできます。  
+ 外部トランザクションは、次の方法でマネージド プロシージャまたは関数からキャンセルできます。  
   
--   マネージ プロシージャまたは関数は、出力パラメーターを使用して値を返すことができます。 呼び出し元の [!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャは、戻り値を確認して、必要に応じて `ROLLBACK TRANSACTION` を実行できます。  
+-   マネージド プロシージャまたは関数は、出力パラメーターを使用して値を返すことができます。 呼び出し元の [!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャは、戻り値を確認して、必要に応じて `ROLLBACK TRANSACTION` を実行できます。  
   
--   マネージ プロシージャまたは関数は、カスタムの例外をスローできます。 呼び出し元[!INCLUDE[tsql](../../includes/tsql-md.md)]プロシージャが、マネージ プロシージャまたは関数 try ブロックと catch ブロックでスローされる例外をキャッチして実行できる`ROLLBACK TRANSACTION`です。  
+-   マネージド プロシージャまたは関数は、カスタムの例外をスローできます。 呼び出し元[!INCLUDE[tsql](../../includes/tsql-md.md)]プロシージャは、マネージ プロシージャまたは関数の try/catch ブロックでスローされる例外をキャッチして実行できる`ROLLBACK TRANSACTION`します。  
   
--   マネージ プロシージャまたは関数は、特定の条件が満たされた場合に `Transaction.Rollback` メソッドを呼び出して、現在のトランザクションをキャンセルできます。  
+-   マネージド プロシージャまたは関数は、特定の条件が満たされた場合に `Transaction.Rollback` メソッドを呼び出して、現在のトランザクションをキャンセルできます。  
   
- マネージ プロシージャまたは関数の内部から呼び出された場合、`Transaction.Rollback` メソッドは不明確なエラー メッセージを表示して例外をスローします。これは try/catch ブロックでラップできます。 表示されるエラー メッセージは、たとえば次のようになります。  
+ マネージド プロシージャまたは関数の内部から呼び出された場合、`Transaction.Rollback` メソッドは不明確なエラー メッセージを表示して例外をスローします。これは try/catch ブロックでラップできます。 表示されるエラー メッセージは、たとえば次のようになります。  
   
 ```  
 Msg 3994, Level 16, State 1, Procedure uspRollbackFromProc, Line 0  
 Transaction is not allowed to roll back inside a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting.  
 ```  
   
- この例外は想定されるものであり、コードの実行を継続するには try/catch ブロックが必要です。 try/catch ブロックがない場合、例外はすぐに呼び出し元の [!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャにスローされ、マネージ コードの実行は終了します。 マネージ コードが実行を終了すると、別の例外が発生します。  
+ この例外は想定されるものであり、コードの実行を継続するには try/catch ブロックが必要です。 try/catch ブロックがない場合、例外はすぐに呼び出し元の [!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャにスローされ、マネージド コードの実行は終了します。 マネージド コードが実行を終了すると、別の例外が発生します。  
   
 ```  
 Msg 3991, Level 16, State 1, Procedure uspRollbackFromProc, Line 1   
@@ -69,7 +67,7 @@ The context transaction which was active before entering user defined routine, t
  この例外も想定されるもので、実行を継続するには、トリガーを起動するアクションを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでの try/catch ブロックが必要です。 この 2 つの例外がスローされますが、トランザクションはロールバックされ、変更はコミットされません。  
   
 ### <a name="example"></a>例  
- 次の例では、`Transaction.Rollback` メソッドを使用してマネージ プロシージャからトランザクションをロールバックします。 マネージ コード内にある `Transaction.Rollback` メソッドの前後の try/catch ブロックに注意してください。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトは、アセンブリおよびマネージ ストアド プロシージャを作成します。 注意している、`EXEC uspRollbackFromProc`をマネージ プロシージャ実行の完了時にスローされる例外をキャッチするため、ステートメントが try ブロックと catch ブロックでラップされます。  
+ 次の例では、`Transaction.Rollback` メソッドを使用してマネージド プロシージャからトランザクションをロールバックします。 マネージド コード内にある `Transaction.Rollback` メソッドの前後の try/catch ブロックに注意してください。 ph x="1" /&gt; スクリプトは、アセンブリおよびマネージド ストアド プロシージャを作成します。 注意を`EXEC uspRollbackFromProc`をマネージ プロシージャが実行を完了するとスローされる例外をキャッチするため、ステートメントが、try/catch ブロックにラップされています。  
   
 ```csharp  
 using System;  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.create.ucp.progress.F1
 - SQL12.SWB.create.ucp.welcome.F1
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c53827c1734926c2a316762de629680f1632d420
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ef278557bd1c06802e1889bdd068dcac98b4bea7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152443"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ)
   企業では、複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティを所有することができ、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでは、多くの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスおよびデータ層アプリケーションを管理できます。 各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティには、ユーティリティ コントロール ポイント (UCP) を 1 つだけ含めることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティごとに新しい UCP を作成する必要があります。 ph x="1" /&gt; の各マネージド インスタンス、および各データ層アプリケーション コンポーネントは、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのみのメンバーであり、1 つの UCP で管理されます。  
@@ -51,7 +51,7 @@ ms.locfileid: "36178450"
   
  このリリースでは、UCP が次の要件を満たしている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはサポートされているエディションである必要があります。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはサポートされているエディションである必要があります。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 -   UCP は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の大文字と小文字が区別されるインスタンスでホストすることをお勧めします。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36178450"
   
 -   FILESTREAM データは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの監視機能ではサポートされていません。  
   
- 詳細については、次を参照してください。 [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md)と[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ 詳細については、次を参照してください。 [SQL Server の最大容量仕様](../../sql-server/maximum-capacity-specifications-for-sql-server.md)と[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 ### <a name="remove-previous-utility-control-points-before-installing-a-new-one"></a>新しいユーティリティ コントロール ポイントをインストールする前に、以前のものを削除する  
  ユーティリティ コントロール ポイント (UCP) として構成されたことのある SQL Server インスタンスに UCP をインストールする場合、事前に SQL Server のすべてのマネージド インスタンスと UCP を削除しておく必要があります。 これには、 **sp_sysutility_ucp_remove** ストアド プロシージャを実行します。  
@@ -165,7 +165,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |---------------------|-----------------------|  
 |ユーティリティ コントロール ポイントが作成される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対する管理者特権が必要です。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに対する管理者特権を持つアカウントでログオンします。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンは 10.50 以上である必要があります。|UCP をホストする別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはサポートされているエディションである必要があります。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。|UCP をホストする別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはサポートされているエディションである必要があります。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。|UCP をホストする別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP に登録されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスは指定できません。|異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定して UCP をホストするか、現在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスである UCP から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの登録を解除します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスは既にユーティリティ コントロール ポイントをホストしていてはいけません。|UCP をホストする別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。|  
 |指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで TCP/IP を有効にする必要があります。|指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの TCP/IP を有効にします。|  

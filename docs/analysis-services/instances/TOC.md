@@ -1,5 +1,6 @@
 # [インスタンス管理](analysis-services-instance-management.md)  
 # [インストール](../../analysis-services/instances/install-windows/install-analysis-services.md)
+# [Analysis Services 累積更新プログラムのビルド バージョンの確認](analysis-services-component-version.md)
 # [インストール後の構成](post-install-configuration-analysis-services.md)  
 ## [Windows ファイアウォールの構成](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 ## [サービス アカウントの構成](configure-service-accounts-analysis-services.md)  

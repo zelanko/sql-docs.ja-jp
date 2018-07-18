@@ -1,5 +1,5 @@
 ---
-title: マイニング精度チャート デザイナー (データ マイニング) |Microsoft ドキュメント
+title: マイニング精度チャート デザイナー (データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.overview.f1
 ms.assetid: cbf379d1-0859-414a-a63f-ddc7f789b422
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6fbe39da10dfd1793110148388c1ae0cf0f1ad69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: b9df4f4a29a0a6d61422a9b82e2d5f62c16ec29c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301232"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>マイニング精度チャート デザイナー (データ マイニング)
   **[マイニング精度チャート]** ビューを使用すると、選択したマイニング構造に基づいて構築されるマイニング モデルのパフォーマンスを比較できます。  
   
  **[マイニング精度チャート]** ビューには、次のタブがあります。  
   
--   [[入力の選択] タブ&#40;マイニング精度チャート] ビュー&#41;](input-selection-tab-mining-accuracy-chart-view.md)  
+-   [入力の選択タブ&#40;マイニング精度チャート ビュー&#41;](input-selection-tab-mining-accuracy-chart-view.md)  
   
      リフト チャート、利益チャート、散布図、または分類マトリックスに表示するモデルを選択します。 テスト データを指定して、外部データの列をモデルにマップします。  
   
@@ -36,11 +36,11 @@ ms.locfileid: "36173585"
   
      `Input Selection` タブで選択したモデルのリフト チャート、利益チャート、または散布図を生成します。  
   
--   [分類マトリックス タブ&#40;マイニング精度チャート ビュー&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
+-   [[分類マトリックス] タブ&#40;マイニング精度チャート] ビュー&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
   
-     分類マトリックスで選択したモデルを表示、`Input Selection`タブです。  
+     選択したモデルの分類マトリックスを表示します、`Input Selection`タブ。  
   
--   [相互検証タブ&#40;マイニング精度チャート ビュー&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [クロス検証 タブ&#40;マイニング精度チャート ビュー&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      選択したマイニング構造のオプションを設定して、クロス検証の結果を生成します。  
   
@@ -48,20 +48,20 @@ ms.locfileid: "36173585"
   
 -   [[マイニング構造] ダイアログ ボックスの選択&#40;マイニング精度チャート] ビュー&#41;](select-mining-structure-dialog-box-mining-accuracy-chart-view.md)  
   
--   [テーブル ダイアログ ボックスをオンに&#40;マイニング精度チャート ビュー&#41;](select-table-dialog-box-mining-accuracy-chart-view.md)  
+-   [テーブルのダイアログ ボックスをオンに&#40;マイニング精度チャート ビュー&#41;](select-table-dialog-box-mining-accuracy-chart-view.md)  
   
 -   [指定 ダイアログ ボックスの入れ子になった結合&#40;マイニング精度チャート ビュー&#41;](specify-nested-join-dialog-box-mining-accuracy-chart-view.md)  
   
 -   [利益チャートの設定 ダイアログ ボックス&#40;マイニング精度チャート ビュー&#41;](profit-chart-settings-dialog-box-mining-accuracy-chart-view.md)  
   
--   [マッピングの変更 ダイアログ ボックス&#40;マイニング精度チャート&#41;](modify-mapping-dialog-box-mining-accuracy-chart.md)  
+-   [ダイアログ ボックスのマッピングの変更&#40;マイニング精度チャート&#41;](modify-mapping-dialog-box-mining-accuracy-chart.md)  
   
 -   [[フィルター] ダイアログ ボックス&#40;マイニング精度チャート&#41;](filter-dialog-box-mining-accuracy-chart.md)  
   
--   [データセット フィルターまたはモデル フィルター ダイアログ ボックス](data-set-filter-or-model-filter-dialog-box.md)  
+-   [データ セットのフィルターまたはモデル フィルター ダイアログ ボックス](data-set-filter-or-model-filter-dialog-box.md)  
   
 ## <a name="see-also"></a>参照  
- [[マイニング構造] ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [マイニング構造 ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-structure-view-data-mining-model-designer.md)   
  [マイニング モデル ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-models-view-data-mining-model-designer.md)   
  [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [予測クエリ ビルダー&#40;データ マイニング&#41;](prediction-query-builder-data-mining.md)  

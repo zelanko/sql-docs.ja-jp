@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10183"
 - sql12.rtp.rptdesigner.legendtitleproperties.shadow.f1
@@ -28,15 +28,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.legendtitleproperties.general.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7f53e64e54b3bb56f0f2070b1fe894d26523c200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8e67ff32578131fc5689ac819fd3ac1fc155d0f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244322"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>グラフの凡例の書式設定 (レポート ビルダーおよび SSRS)
   グラフの凡例には、グラフ内の各カテゴリの説明が含まれています。 凡例には常に 1 つ以上の凡例アイテムが含まれています。次の図に示すように、それぞれの凡例アイテムは、系列を表現する色つきのボックス、および系列を説明するテキスト文字列で構成されています。  
@@ -53,14 +53,14 @@ ms.locfileid: "36163806"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="ordering-legend-items-in-the-legend"></a>凡例の凡例アイテムの並べ替え  
- 系列は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 処理エンジンによって処理された順序に従って凡例に表示されます。 この順序は、データ フィールド ドロップ ゾーンのフィールドの順序を変えることによって、変更することができます。 系列グループを使用している場合、系列データは処理が行われるまで不明なので、これらのアイテムを並べ替える方法はありません。 変更は [プレビュー] で確認できます。 系列グループの詳細については、次を参照してください。[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)です。  
+ 系列は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 処理エンジンによって処理された順序に従って凡例に表示されます。 この順序は、データ フィールド ドロップ ゾーンのフィールドの順序を変えることによって、変更することができます。 系列グループを使用している場合、系列データは処理が行われるまで不明なので、これらのアイテムを並べ替える方法はありません。 変更は [プレビュー] で確認できます。 系列グループの詳細については、次を参照してください。[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)します。  
   
- 凡例に表示されている任意の系列を非表示にすることができます。 系列グループを使用している場合、データ フィールドに関連付けられているすべての系列は非表示になります。 詳細については、次を参照してください。[グラフの凡例項目を非表示に&#40;レポート ビルダーおよび SSRS&#41;](chart-legend-hide-items-report-builder.md)です。  
+ 凡例に表示されている任意の系列を非表示にすることができます。 系列グループを使用している場合、データ フィールドに関連付けられているすべての系列は非表示になります。 詳細については、次を参照してください。[グラフの凡例項目を非表示に&#40;レポート ビルダーおよび SSRS&#41;](chart-legend-hide-items-report-builder.md)します。  
   
 ## <a name="changing-the-text-or-color-of-a-legend-item-in-the-legend"></a>凡例内の凡例アイテムのテキストまたは色の変更  
- グラフのデータ フィールドのドロップ ゾーンにフィールドを配置すると、このフィールドの名前を含む凡例アイテムが自動的に生成されます。 既定では、各凡例アイテムのテキストはデータ フィールドの名前から取得されます。 すべての凡例アイテムは、グラフ上の個々の系列に接続されています。ただし図形グラフの場合は例外で、凡例は個々の系列ではなく個々のデータ ポイントに接続されています。 図形グラフ上でカテゴリ グループを定義すると、各凡例アイテムのテキストは、カテゴリ グループの文字列表現から取得されます。 円グラフ、ドーナツ グラフ、およびじょうごグラフにカスタム ラベル テキストを指定して、凡例の個々のデータ ポイントに関連するカテゴリ グループ ラベル以外の情報を表示することができます。 そのためには、凡例を選択し、 **[系列のプロパティ]** ダイアログ ボックスまたは [プロパティ] ペインの **LegendText** プロパティに凡例テキストを指定します。 詳細については、次を参照してください。[凡例項目のテキストを変更する&#40;レポート ビルダーおよび SSRS&#41;](chart-legend-change-item-text-report-builder.md)です。  
+ グラフのデータ フィールドのドロップ ゾーンにフィールドを配置すると、このフィールドの名前を含む凡例アイテムが自動的に生成されます。 既定では、各凡例アイテムのテキストはデータ フィールドの名前から取得されます。 すべての凡例アイテムは、グラフ上の個々の系列に接続されています。ただし図形グラフの場合は例外で、凡例は個々の系列ではなく個々のデータ ポイントに接続されています。 図形グラフ上でカテゴリ グループを定義すると、各凡例アイテムのテキストは、カテゴリ グループの文字列表現から取得されます。 円グラフ、ドーナツ グラフ、およびじょうごグラフにカスタム ラベル テキストを指定して、凡例の個々のデータ ポイントに関連するカテゴリ グループ ラベル以外の情報を表示することができます。 そのためには、凡例を選択し、 **[系列のプロパティ]** ダイアログ ボックスまたは [プロパティ] ペインの **LegendText** プロパティに凡例テキストを指定します。 詳細については、次を参照してください。[凡例項目のテキストを変更する&#40;レポート ビルダーおよび SSRS&#41;](chart-legend-change-item-text-report-builder.md)します。  
   
- **LegendText** プロパティまたは **[系列のプロパティ]** ダイアログ ボックスで頻繁に参照される属性に対して、大文字と小文字が区別される、グラフに固有のキーワードを指定できます。 これらのキーワードは、グラフ コントロールによって実行時にデータ表現に置き換えられます。 特定のデータ ポイントに関連する情報を表示することができるので、この方法は図形グラフで便利です。 詳細については、次を参照してください。 [、グラフの書式設定データ ポイント&#40;レポート ビルダーおよび SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)です。  
+ **LegendText** プロパティまたは **[系列のプロパティ]** ダイアログ ボックスで頻繁に参照される属性に対して、大文字と小文字が区別される、グラフに固有のキーワードを指定できます。 これらのキーワードは、グラフ コントロールによって実行時にデータ表現に置き換えられます。 特定のデータ ポイントに関連する情報を表示することができるので、この方法は図形グラフで便利です。 詳細については、次を参照してください。[グラフのデータ ポイントの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)します。  
   
  各凡例アイテムに表示される色付きボックスは、対応する系列の塗りつぶしの色を継承します。 凡例アイテムに表示される色を変更するには、対応する系列の色を変更する必要があります。 詳細については、「 [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)をクリックします。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36163806"
 ## <a name="formatting-the-legend-text"></a>凡例テキストの書式設定  
  凡例テキストのフォント、サイズ、スタイル、および色は、 **[凡例のプロパティ]** ダイアログ ボックスの **[フォント]** ページで変更できます。  
   
- 既定では、凡例テキストは、凡例領域に合わせて最適化されません。 自動的に割り当てられた領域を調整する凡例のテキストに AutoFitTextDisabled プロパティを設定`False`し MinFontSize プロパティと思われる最小のフォント サイズを表現できる、可能で凡例のフォントの最小サイズを設定最適化します。  
+ 既定では、凡例テキストは、凡例領域に合わせて最適化されません。 自動的に割り当てられた領域に合わせて凡例テキストは、AutoFitTextDisabled プロパティを設定`False`し、MinFontSize プロパティと思われる最小のフォント サイズを表現できる、可能で凡例のフォントの最小サイズを設定最適化します。  
   
 ## <a name="see-also"></a>参照  
  [凡例のプロパティ] ダイアログ ボックスの [全般]&#40;レポート ビルダーおよび SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
@@ -89,6 +89,6 @@ ms.locfileid: "36163806"
  [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [グラフの凡例項目を非表示にする &#40;レポート ビルダーおよび SSRS&#41;](chart-legend-hide-items-report-builder.md)   
- [パレットを使用してグラフの色を定義&#40;レポート ビルダーおよび SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [パレットを使用してグラフの色の定義&#40;レポート ビルダーおよび SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

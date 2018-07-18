@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -53,15 +53,15 @@ helpviewer_keywords:
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 caps.latest.revision: 182
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b2b624caf289f0f6962d5dbdd9e72b1bf95cc7c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4029c7a9b0296b3320342b90f064d0e8f3b3feb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36177000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239888"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各サービスは、Windows で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作の認証を管理するための、1 つのプロセスまたはプロセス セットを表しています。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのリリースにおける既定のサービス構成、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時およびインストール後に設定できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの構成オプションについて説明します。  
@@ -77,7 +77,7 @@ ms.locfileid: "36177000"
   
         -   [アカウント プロパティの変更](#Changing_Accounts)  
   
-    -   [Windows 7 と Windows Server 2008 R2 で利用可能な新しいアカウントの種類](#New_Accounts)  
+    -   [Windows 7 および Windows Server 2008 R2 で使用可能な新しいアカウントの種類](#New_Accounts)  
   
     -   [自動起動](#Auto_Start)  
   
@@ -91,9 +91,9 @@ ms.locfileid: "36177000"
   
     -   [Windows の特権および権限](#Windows)  
   
-    -   [SQL Server のサービスごとの Sid またはローカル Windows グループに付与されるファイル システム権限](#Reviewing_ACLs)  
+    -   [SQL Server のサービスごとの Sid またはローカル Windows グループにシステムのアクセス許可を付与されるファイルします。](#Reviewing_ACLs)  
   
-    -   [その他の Windows ユーザー アカウントまたはグループに付与されるファイル システム権限](#File_System_Other)  
+    -   [ファイル システム アクセス許可を付与すると、その他の Windows ユーザー アカウントまたはグループ](#File_System_Other)  
   
     -   [通常と異なるディスクの場所に関連するファイル システム権限](#Unusual_Locations)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36177000"
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** - [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに対して同時実行ワークロードをシミュレーションするために Distributed Replay コントローラーと共に動作する、1 つ以上の Distributed Replay クライアント コンピューターです。  
   
 ##  <a name="Serv_Prop"></a> サービスのプロパティおよび構成  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を開始して実行するために使用する開始アカウントは、 [ドメイン ユーザー アカウント](#Domain_User)、 [ローカル ユーザー アカウント](#Local_User)、 [マネージ サービス アカウント](#MSA)、 [仮想アカウント](#VA_Desc)、または [ビルトイン システム アカウント](#Local_Service)のいずれでも可能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各サービスを開始して実行するには、インストール時に構成された開始アカウントが必要です。  
+ ph x="1" /&gt; を開始して実行するために使用する開始アカウントは、 [ドメイン ユーザー アカウント](#Domain_User)、 [ローカル ユーザー アカウント](#Local_User)、 [マネージド サービス アカウント](#MSA)、 [仮想アカウント](#VA_Desc)、または [ビルトイン システム アカウント](#Local_Service)のいずれでも可能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各サービスを開始して実行するには、インストール時に構成された開始アカウントが必要です。  
   
  ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを開始するために構成できるアカウント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで使用される既定値、サービスごとの SID の概念、スタートアップ オプション、およびファイアウォールの構成について説明します。  
   
@@ -191,7 +191,7 @@ ms.locfileid: "36177000"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ブラウザー|[ローカル サービス](#Local_Service)|[ローカル サービス](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[ローカル システム](#Local_System)|[ローカル システム](#Local_System)|  
   
- <sup>*</sup> ときに外部のリソース、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンピューターが必要な[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理されたサービス アカウント (MSA)、必要な最低限の特権を使用して構成を使用することをお勧めします。  
+ <sup>*</sup> ときに外部のリソース、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンピューターが必要に応じて、[!INCLUDE[msCoName](../../includes/msconame-md.md)]使用、管理サービス アカウント (MSA)、必要な最低限の特権で構成されていることをお勧めします。  
   
  **SQL Server フェールオーバー クラスター インスタンス**  
   
@@ -213,17 +213,23 @@ ms.locfileid: "36177000"
 > -   SharePoint ファームに配置した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの場合、 [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] アプリケーションと [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]のサーバー アカウントを変更するときは、必ず SharePoint サーバーの全体管理を使用するようにしてください。 サーバーの全体管理を使用すると、関連の設定と権限が更新され、新しいアカウント情報が使用されます。  
 > -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オプションを変更するには、Reporting Services 構成ツールを使用します。  
   
-###  <a name="New_Accounts"></a> Windows 7 と Windows Server 2008 R2 で利用可能な新しいアカウントの種類  
+###  <a name="New_Accounts"></a> Windows 7 および Windows Server 2008 R2 で使用可能な新しいアカウントの種類  
  Windows 7 と Windows Server 2008 R2 には、管理されたサービス アカウント (MSA) と仮想アカウントという 2 つの新しい種類のサービス アカウントがあります。 管理されたサービス アカウントと仮想アカウントは、アカウントとは別に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などの重要なアプリケーションを提供するために設計され、管理者がこれらのアカウントのサービス プリンシパル名 (SPN) や資格情報を手動で管理する必要はありません。 これらにより、サービス アカウントのユーザー、パスワード、SPN の長期的な管理は非常に簡単になります。  
   
--   <a name="MSA"></a> **Managed Service Accounts**  
+-   
+  <a name="MSA">
+  </a>
+  **Managed Service Accounts**  
   
      管理されたサービス アカウント (MSA) は、ドメイン コント ローラーによって作成および管理されるドメイン アカウントの一種です。 管理されたサービス アカウントは、サービスの実行に使用する 1 つのメンバー コンピューターに割り当てられます。 パスワードは、ドメイン コント ローラーによって自動的に管理されます。 MSA を使用して、コンピューターにログインすることはできませんが、コンピューターは、MSA を使用して Windows サービスを開始することができます。 MSA には、サービス プリンシパル名 (SPN) を Active Directory に登録する機能があります。 MSA には、 **$** DOMAIN\ACCOUNTNAME$ **など、** サフィックスを伴う名前が付けられます。 MSA を指定する場合は、パスワードを空白のままにします。 MSA は、1 つのコンピューターに割り当てられているため、Windows クラスターの異なるノード上では使用できません。  
   
     > [!NOTE]  
     >  MSA は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが MSA を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスで使用する前に、ドメイン管理者が Active Directory に作成する必要があります。  
     
--  <a name="GMSA"></a> **グループ管理サービス アカウント**  
+-  
+  <a name="GMSA">
+  </a>
+  **グループ管理サービス アカウント**  
   
      グループ管理サービス アカウントは、複数サーバーのための MSA です。 Windows は、サーバーのグループで実行されているサービスのサービス アカウントを管理します。 Active Directory は、サービスを再起動することなくグループ管理サービス アカウントのパスワードを自動的に更新します。 グループ管理サービス アカウントのプリンシパルを使用するように SQL Server のサービスを構成できます。 SQL Server 2014 より、SQL Server はスタンドアロン インスタンス、フェールオーバー クラスター インスタンス、および可用性グループの Windows Server 2012 R2 以降で管理グループ サービス アカウントをサポートします。  
   
@@ -232,11 +238,11 @@ ms.locfileid: "36177000"
     詳細については、「 [グループ管理サービス アカウント](http://technet.microsoft.com/library/hh831782.aspx)」を参照してください。  
       
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスにグループ管理サービス アカウントを使用できるためには、その前にドメイン管理者が Active Directory でグループ管理サービス アカウントを作成しておく必要があります。 
+    >  ph x="1" /&gt; のセットアップで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスにグループ管理サービス アカウントを使用できるためには、その前にドメイン管理者が Active Directory でグループ管理サービス アカウントを作成しておく必要があります。 
   
 -   <a name="VA_Desc"></a> **仮想アカウント**  
   
-     Windows Server 2008 R2 および Windows 7 で追加された仮想アカウントは *管理されたローカル アカウント* であり、サービスの管理を簡単にする次の機能を使用できます。 仮想アカウントは自動的に管理され、ドメイン環境でネットワークにアクセスすることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップでサービス アカウントに既定値を使用した場合、**NT SERVICE\\***\<SERVICENAME>* の形式でインスタンス名をサービス名として用いる仮想アカウントが使用されます。 仮想アカウントとして実行されるサービスは、*<domain_name>***\\***<computer_name>***$** の形式で、コンピューター アカウントの資格情報を使用してネットワーク リソースにアクセスします。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動するために仮想アカウントを指定する場合は、パスワードを空白のままにします。 仮想アカウントのサービス プリンシパル名 (SPN) を登録していない場合は、SPN を手動で登録します。 SPN の手動登録の詳細については、 [SPN の手動登録](register-a-service-principal-name-for-kerberos-connections.md#Manual)に関するページを参照してください。  
+     Windows Server 2008 R2 および Windows 7 で追加された仮想アカウントは*管理されたローカル アカウント*であり、サービスの管理を簡単にする次の機能を使用できます。 仮想アカウントは自動的に管理され、ドメイン環境でネットワークにアクセスすることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップでサービス アカウントに既定値を使用した場合、**NT SERVICE\\***\<SERVICENAME>* の形式でインスタンス名をサービス名として用いる仮想アカウントが使用されます。 仮想アカウントとして実行されるサービスは、*<domain_name>***\\***<computer_name>***$** の形式で、コンピューター アカウントの資格情報を使用してネットワーク リソースにアクセスします。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動するために仮想アカウントを指定する場合は、パスワードを空白のままにします。 仮想アカウントのサービス プリンシパル名 (SPN) を登録していない場合は、SPN を手動で登録します。 SPN の手動登録の詳細については、 [SPN の手動登録](register-a-service-principal-name-for-kerberos-connections.md#Manual)に関するページを参照してください。  
   
     > [!NOTE]  
     >  仮想アカウントは、クラスターの各ノードで同じ SID を使用することができないので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスでは使用できません。  
@@ -278,9 +284,9 @@ ms.locfileid: "36177000"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー|DRU_CTLR、CTLRSVCACCOUNT、CTLRSVCPASSWORD、CTLRSTARTUPTYPE、CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアント|DRU_CLT、CLTSVCACCOUNT、CLTSVCPASSWORD、CLTSTARTUPTYPE、CLTCTLRNAME、CLTWORKINGDIR、CLTRESULTDIR|  
   
- <sup>1</sup>詳細と無人インストール用のサンプル構文は、次を参照してください。[コマンド プロンプトから SQL Server 2014 のインストール](../install-windows/install-sql-server-from-the-command-prompt.md)です。  
+ <sup>1</sup>詳細および無人インストール用のサンプル構文については、次を参照してください。[コマンド プロンプトから SQL Server 2014 のインストール](../install-windows/install-sql-server-from-the-command-prompt.md)します。  
   
- <sup>2</sup>、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスでエージェント サービスが無効になっている[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]と[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]with Advanced Services です。  
+ <sup>2</sup>、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスでエージェント サービスが無効になっている[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]と[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]with Advanced Services。  
   
 ###  <a name="Firewall"></a> ファイアウォール ポート  
  ほとんどの場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、最初にインストールされると、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] と同じコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのツールによって接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、Windows ファイアウォールでポートが開かれません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が TCP ポートでリッスンするように構成され、Windows ファイアウォールで接続用に適切なポートが開かれるまでは、他のコンピューターから接続できない場合があります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
@@ -330,7 +336,7 @@ ms.locfileid: "36177000"
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (すべての権限が、サービスごとの SID に付与されます。 既定のインスタンス: **NT SERVICE\MSSQLSERVER**。 名前付きインスタンス: **NT SERVICE\MSSQL$** InstanceName)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> **プロセス レベル トークンを置き換える** (SeAssignPrimaryTokenPrivilege)<br /><br /> **スキャン チェックを行わない** (SeChangeNotifyPrivilege)<br /><br /> **プロセスに対してメモリ クォータを調整する** (SeIncreaseQuotaPrivilege)<br /><br /> SQL ライターを起動する権限<br /><br /> イベント ログ サービスを読み取る権限<br /><br /> リモート プロシージャ コール サービスを読み取る権限|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント:** <sup>1</sup><br /><br /> (すべての権限が、サービスごとの SID に付与されます。 既定のインスタンス: **NT Service\SQLSERVERAGENT**。 名前付きインスタンス: **NT Service\SQLAGENT$***InstanceName*。)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> **プロセス レベル トークンを置き換える** (SeAssignPrimaryTokenPrivilege)<br /><br /> **スキャン チェックを行わない** (SeChangeNotifyPrivilege)<br /><br /> **プロセスに対してメモリ クォータを調整する** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (すべての権限が、ローカル Windows グループに付与されます。 既定のインスタンス: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**。 名前付きインスタンス: **SQLServerMSASUser$***ComputerName***$***InstanceName*。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インスタンス: **SQLServerMSASUser$***ComputerName***$***PowerPivot*。)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> テーブルのみ:<br /><br /> **[プロセス ワーキング セットの増加]** (SeIncreaseWorkingSetPrivilege)<br /><br /> **[プロセスに対してメモリ クォータを調整する]** (SeIncreaseQuotaSizePrivilege)<br /><br /> **メモリ内のページをロックする** (SeLockMemoryPrivilege) – ページングが完全に無効になっている場合にのみ必要です。<br /><br /> フェールオーバー クラスター インストールのみ:<br /><br /> **スケジューリングでの優先度を上げる** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (すべての権限が、サービスごとの SID に付与されます。 既定のインスタンス: **NT SERVICE\ReportServer**。 名前付きインスタンス: **NT サービス\\$ * * * InstanceName*)。|**サービスとしてログオン** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (すべての権限が、サービスごとの SID に付与されます。 既定のインスタンス: **NT SERVICE\ReportServer**。 名前付きインスタンス: **NT SERVICE\\$ * * * InstanceName*)。|**サービスとしてログオン** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (すべての権限が、サービスごとの SID に付与されます。 既定のインスタンスまたは名前付きインスタンス: **NT SERVICE\MsDtsServer120**。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には名前付きインスタンスに対する個別のプロセスはありません)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> アプリケーション イベント ログに書き込む権限<br /><br /> **スキャン チェックを行わない** (SeChangeNotifyPrivilege)<br /><br /> **認証後にクライアントを借用する** (SeImpersonatePrivilege)|  
 |**フルテキスト検索:**<br /><br /> (すべての権限が、サービスごとの SID に付与されます。 既定のインスタンス: **NT Service\MSSQLFDLauncher**。 名前付きインスタンス: **NT Service\ MSSQLFDLauncher$***InstanceName*。)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> **プロセスに対してメモリ クォータを調整する** (SeIncreaseQuotaPrivilege)<br /><br /> **スキャン チェックを行わない** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ブラウザー:**<br /><br /> (すべての権限が、ローカル Windows グループに付与されます。 既定のインスタンスまたは名前付きインスタンス: **SQLServer2005SQLBrowserUser***$ComputerName*。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser には名前付きインスタンスに対する個別のプロセスはありません。)|**サービスとしてログオン** (SeServiceLogonRight)|  
@@ -338,7 +344,7 @@ ms.locfileid: "36177000"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー:**|**サービスとしてログオン** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアント:**|**サービスとしてログオン** (SeServiceLogonRight)|  
   
- <sup>1</sup>、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスでエージェント サービスが無効になっている[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]です。  
+ <sup>1</sup>、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスでエージェント サービスが無効になっている[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]します。  
   
 ###  <a name="Reviewing_ACLs"></a> SQL Server のサービスごとの SID またはローカル Windows グループに付与されるファイル システム権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントは、リソースへのアクセス権を持っている必要があります。 アクセス制御リストは、サービスごとの SID またはローカル Windows グループに対して設定されます。  
@@ -423,7 +429,7 @@ ms.locfileid: "36177000"
 ||\<ToolsDir>\DReplayClient\IRTemplate.tdf|読み取り、実行、フォルダー内容の一覧表示|  
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|読み取り、実行、フォルダー内容の一覧表示|  
   
- <sup>1</sup>、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスでエージェント サービスが無効になっている[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]と[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]with Advanced Services です。  
+ <sup>1</sup>、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスでエージェント サービスが無効になっている[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]と[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]with Advanced Services。  
   
  データベース ファイルをユーザー定義の場所に格納する場合は、サービスごとの SID にその場所へのアクセス権を付与する必要があります。 サービスごとの SID にファイル システム権限を付与する方法の詳細については、「 [データベース エンジン アクセスのファイル システム権限の構成](configure-file-system-permissions-for-database-engine-access.md)」をご覧ください。  
   
@@ -435,7 +441,7 @@ ms.locfileid: "36177000"
 |MSSQLServer|パフォーマンス ログ ユーザー|Instid\MSSQL\binn|フォルダー内容の一覧表示|  
 ||パフォーマンス監視ユーザー|Instid\MSSQL\binn|フォルダー内容の一覧表示|  
 ||パフォーマンス ログ ユーザー、パフォーマンス監視ユーザー|\WINNT\system32\sqlctr120.dll|読み取り、実行|  
-||管理者のみ|\\\\.\root\Microsoft\SqlServer\ServerEvents\\< sql_instance_name ><sup>1</sup>|フル コントロール|  
+||管理者のみ|\\\\.\root\Microsoft\SqlServer\ServerEvents\\sql_instance_name < と ><sup>1</sup>|フル コントロール|  
 ||管理者、システム|\tools\binn\schemas\sqlserver\2004\07\showplan|フル コントロール|  
 ||ユーザー|\tools\binn\schemas\sqlserver\2004\07\showplan|読み取り、実行|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<レポート サーバー Web サービス アカウント>|*\<install>* \Reporting Services\LogFiles|Del<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
@@ -451,7 +457,7 @@ ms.locfileid: "36177000"
 ||ターミナル サービス ユーザー|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> 値の設定<br /><br /> サブキーの作成<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> DELETE<br /><br /> 読み取り制御|  
 ||パワー ユーザー|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> 値の設定<br /><br /> サブキーの作成<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> DELETE<br /><br /> 読み取り制御|  
   
- <sup>1</sup>WMI プロバイダーの名前空間です。  
+ <sup>1</sup>WMI プロバイダーの名前空間になります。  
   
 ###  <a name="Unusual_Locations"></a> 通常と異なるディスクの場所に関連するファイル システム権限  
  tempdb またはユーザー データベースをインストールするとき、インストールの既定のドライブの場所は **systemdrive**(通常はドライブ C) です。  
@@ -483,9 +489,9 @@ ms.locfileid: "36177000"
 ###  <a name="Registry"></a> レジストリの権限  
  インスタンス対応のコンポーネントの場合は、**HKLM\Software\Microsoft\Microsoft SQL Server\\***<Instance_ID>* の下にレジストリ ハイブが作成されます。 次に例を示します。  
   
--   **Hklm \software\microsoft\microsoft SQL Server\MSSQL12 です。MyInstance**  
+-   **Hklm \software\microsoft\microsoft SQL Server\MSSQL12 します。MyInstance**  
   
--   **Hklm \software\microsoft\microsoft SQL Server\MSASSQL12 です。MyInstance**  
+-   **Hklm \software\microsoft\microsoft SQL Server\MSASSQL12 します。MyInstance**  
   
 -   **Hklm \software\microsoft\microsoft SQL Server\MSSQL.120**  
   
@@ -566,11 +572,11 @@ ms.locfileid: "36177000"
  セットアップ中に指定されたアカウントは、 **RSExecRole** データベース ロールのメンバーとして準備されます。 詳細については、 [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
   
 ###  <a name="SSAS"></a> SSAS の準備  
- [!INCLUDE[ssAS](../../includes/ssas-md.md)] サービス アカウント要件は、サーバーの配置方法によって異なります。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]をインストールする場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスをドメイン アカウントで実行するよう構成する必要があります。 ドメイン アカウントは、SharePoint に組み込まれているマネージ アカウント機能をサポートするために必要です。 このため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のインストールに仮想アカウントなどの既定のサービス アカウントは提供されません。 PowerPivot for SharePoint のプロビジョニングの詳細については、「[Power Pivot サービス アカウントの構成](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)」を参照してください。  
+ [!INCLUDE[ssAS](../../includes/ssas-md.md)] サービス アカウント要件は、サーバーの配置方法によって異なります。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]をインストールする場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスをドメイン アカウントで実行するよう構成する必要があります。 ドメイン アカウントは、SharePoint に組み込まれている管理アカウント機能をサポートするために必要です。 このため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のインストールに仮想アカウントなどの既定のサービス アカウントは提供されません。 PowerPivot for SharePoint のプロビジョニングの詳細については、「[Power Pivot サービス アカウントの構成](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)」を参照してください。  
   
- 他のすべてのスタンドアロン [!INCLUDE[ssAS](../../includes/ssas-md.md)] インストールでは、サービスを準備してドメイン アカウント、ビルトイン システム アカウント、マネージ アカウント、または仮想アカウントで実行することができます。 アカウント プロビジョニングの詳細については、「[サービス アカウントの構成 &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)」を参照してください。  
+ 他のすべてのスタンドアロン [!INCLUDE[ssAS](../../includes/ssas-md.md)] インストールでは、サービスを準備してドメイン アカウント、ビルトイン システム アカウント、管理アカウント、または仮想アカウントで実行することができます。 アカウント プロビジョニングの詳細については、「[サービス アカウントの構成 &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)」を参照してください。  
   
- クラスター化インストールでは、ドメイン アカウントまたはビルトイン システム アカウントを指定する必要があります。 [!INCLUDE[ssAS](../../includes/ssas-md.md)] フェールオーバー クラスターでは、マネージ アカウントと仮想アカウントはサポートされていません。  
+ クラスター化インストールでは、ドメイン アカウントまたはビルトイン システム アカウントを指定する必要があります。 ph x="1" /&gt; フェールオーバー クラスターでは、管理アカウントと仮想アカウントはサポートされていません。  
   
  どの [!INCLUDE[ssAS](../../includes/ssas-md.md)] インストールでも、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのシステム管理者を指定する必要があります。 管理者特権は、Analysis Services の **サーバー** ロールで準備されます。  
   
@@ -661,7 +667,7 @@ ms.locfileid: "36177000"
   
 -   SQL ライター  
   
- <sup>1</sup>SharePoint 統合モードで analysis Services が単一の名前付きインスタンスとして 'PowerPivot' として実行されます。 インスタンス名は固定です。 別の名前を指定することはできません。 PowerPivot として実行される Analysis Services のインスタンスは、物理サーバーごとに 1 つだけインストールできます。  
+ <sup>1</sup>単一の名前付きインスタンスとして 'PowerPivot' としての SharePoint 統合モードの analysis Services が実行されます。 インスタンス名は固定です。 別の名前を指定することはできません。 PowerPivot として実行される Analysis Services のインスタンスは、物理サーバーごとに 1 つだけインストールできます。  
   
 ###  <a name="Localized_service_names"></a> ローカライズされたサービス名  
  次の表は、Windows のローカライズ版で表示されるサービス名を示しています。  

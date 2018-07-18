@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.makemanaged.agentaccount.F1
 - SQL12.SWB.makemanaged.Summary.F1
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9ae119f84af86a44e994e0a4684f99783a7edf2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 499516a41c06d31a32bb6846d16cb4be6f43de9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279158"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server のインスタンスの登録 (SQL Server ユーティリティ)
   ph x="1" /&gt; のインスタンスを既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンスとしてそのパフォーマンスおよび構成を監視します。 ユーティリティ コントロール ポイント (UCP) では、15 分ごとに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスから構成情報およびパフォーマンス情報を収集します。 情報は UCP のユーティリティ管理データ ウェアハウス (UMDW) に格納されます。UMDW ファイル名は sysutility_mdw です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス データはポリシーと比較され、リソース使用時のボトルネックおよび統合の可能性を特定するのに役立ちます。  
@@ -48,7 +48,7 @@ ms.locfileid: "36179125"
   
  このリリースでは、UCP が次の要件を満たしている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはサポートされているエディションである必要があります。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはサポートされているエディションである必要があります。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 -   UCP は SQL Server の大文字と小文字が区別されるインスタンスでホストすることをお勧めします。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36179125"
   
 -   FILESTREAM データは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの監視機能ではサポートされていません。  
   
- 詳細については、次を参照してください。 [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md)と[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ 詳細については、次を参照してください。 [SQL Server の最大容量仕様](../../sql-server/maximum-capacity-specifications-for-sql-server.md)と[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの概念の詳細については、「 [SQL Server ユーティリティの機能とタスク](sql-server-utility-features-and-tasks.md)」を参照してください。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36179125"
 |条件|修正措置|  
 |---------------|-----------------------|  
 |指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスと UCP に対する管理者特権が必要です。|指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス、および UCP の管理者特権を持つアカウントでログオンします。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションでインスタンスの登録がサポートされている必要があります。|各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションでインスタンスの登録がサポートされている必要があります。|エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP で TCP/IP が有効になっている必要があります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP で TCP/IP を有効にします。|  
 |別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP で登録されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは使用できません。|指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの一部として既に管理されている場合、そのインスタンスを別の UCP に登録することはできません。|  
 |既に UCP である [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは使用できません。|指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが、接続先の UCP とは別の UCP の場合、インスタンスをこの UCP に登録することはできません。|  

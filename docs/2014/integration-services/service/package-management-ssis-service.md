@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, managing
 - packages [Integration Services], managing
@@ -27,13 +27,13 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e792b995e73ba4a964bd5076134af8c9817642ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e41b4df0064343cadf6a7da042c243191c0561d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172963"
 ---
 # <a name="package-management-ssis-service"></a>パッケージの管理 (SSIS サービス)
   パッケージの管理には、次のタスクを含むいくつかのタスクを伴います。  
@@ -48,7 +48,7 @@ ms.locfileid: "36085259"
 >  このトピックでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、以前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]との互換性を維持するために、このサービスをサポートしています。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、Integration Services サーバー上のパッケージなどのオブジェクトを管理できます。  
   
 ## <a name="package-store"></a>パッケージ ストア  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アクセスするための 2 つの最上位フォルダーの提供[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージ:**実行中のパッケージ**と**格納されたパッケージ**です。 **[実行中のパッケージ]** フォルダーには、サーバーで現在実行中のパッケージが一覧表示されます。 **[格納されたパッケージ]** フォルダーには、パッケージ ストアに保存されたパッケージが一覧表示されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理するパッケージは、これらのパッケージのみです。 パッケージ ストアは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルで一覧されている msdb データベースとファイル システム フォルダーのいずれかまたは両方で構成することができます。 この構成ファイルは、管理する msdb とファイル システム フォルダーを指定します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理していないパッケージは、ファイル システム内の他の場所に保存することもできます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 2 つの最上位フォルダーにアクセスするには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージ:**実行中のパッケージ**と**格納されたパッケージ**します。 **[実行中のパッケージ]** フォルダーには、サーバーで現在実行中のパッケージが一覧表示されます。 **[格納されたパッケージ]** フォルダーには、パッケージ ストアに保存されたパッケージが一覧表示されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理するパッケージは、これらのパッケージのみです。 パッケージ ストアは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルで一覧されている msdb データベースとファイル システム フォルダーのいずれかまたは両方で構成することができます。 この構成ファイルは、管理する msdb とファイル システム フォルダーを指定します。 ph x="1" /&gt; サービスが管理していないパッケージは、ファイル システム内の他の場所に保存することもできます。  
   
  msdb に保存するパッケージは、sysssispackages というテーブルに格納されます。 パッケージを msdb に保存するとき、論理フォルダーに格納してグループ化できます。 論理フォルダーを使用することで、パッケージを目的別に整理したり、sysssispackages テーブルでパッケージをフィルター処理したりできます。 新しい論理フォルダーを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。 既定では、msdb に追加する論理フォルダーは自動的にパッケージ ストアに含まれます。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36085259"
   
  既定では、 **[格納されたパッケージ]** フォルダーには、 **[ファイル システム]** と **[MSDB]** の 2 つのフォルダーがあります。 **[ファイル システム]** フォルダーには、ファイル システムに保存されるパッケージが一覧表示されます。 これらのファイルの場所は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルで指定されます。 既定のフォルダーは、%Program Files%\Microsoft SQL Server\100\DTS の Packages フォルダーです。 **[MSDB]** フォルダーには、サーバーの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb データベースに保存されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージが一覧表示されます。 sysssispackages テーブルには、msdb に保存されるパッケージが格納されています。  
   
- パッケージ ストア内のパッケージの一覧を表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続する必要があります。 詳細については、次を参照してください。 [SQL Server Management Studio で Integration Services パッケージのビュー &#40;SSIS サービス&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)です。  
+ パッケージ ストア内のパッケージの一覧を表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続する必要があります。 詳細については、次を参照してください。 [SQL Server Management Studio で Integration Services パッケージをビュー &#40;SSIS サービス&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)します。  
   
 ## <a name="monitoring-running-packages"></a>実行中のパッケージの監視  
  **[実行中のパッケージ]** フォルダーには、現在実行中のパッケージが一覧表示されます。 **の** [概要] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ページに現在のパッケージ情報を表示するには、 **[実行中のパッケージ]** フォルダーをクリックします。 実行中のパッケージの実行時間などの情報が **[概要]** ページに一覧表示されます。 必要に応じて、フォルダーを更新して、最新の情報を表示します。  

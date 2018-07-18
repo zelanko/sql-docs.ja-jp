@@ -1,5 +1,5 @@
 ---
-title: レポート ビルダーで SQL Server 2014 |Microsoft ドキュメント
+title: SQL Server 2014 のレポート ビルダー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10428"
 helpviewer_keywords:
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ab3d87e730ee8788f010f776899d3d494887ed96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 911b88bc7b707e837bbd042814a2f8e84a61daa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261928"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014 のレポート ビルダー
-  レポート ビルダーはレポート作成環境の作業を好むビジネス ユーザーに、[!INCLUDE[msCoName](../../../includes/msconame-md.md)]オフィス環境。 レポートをデザインする際には、データの取得場所、取得するデータ、およびデータの表示方法を指定します。 レポートを実行すると、指定した情報がすべてレポート プロセッサに渡されます。レポート プロセッサは、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 レポート ビルダーでレポートをプレビューすることも、レポート サーバーまたは SharePoint 統合モードのレポート サーバーにレポートをパブリッシュして、他のユーザーがそこからレポートを実行できるようにすることもできます。  
+  レポート ビルダーは、レポート作成環境で作業を好むビジネス ユーザー向け、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 環境。 レポートをデザインする際には、データの取得場所、取得するデータ、およびデータの表示方法を指定します。 レポートを実行すると、指定した情報がすべてレポート プロセッサに渡されます。レポート プロセッサは、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 レポート ビルダーでレポートをプレビューすることも、レポート サーバーまたは SharePoint 統合モードのレポート サーバーにレポートをパブリッシュして、他のユーザーがそこからレポートを実行できるようにすることもできます。  
   
  この図に示すレポートでは、行グループ、列グループ、スパークライン、インジケーター、およびコーナー セルの概要円グラフが含まれたマトリックスが使用されています。色と円サイズで表される 2 組の地理データが含まれた地図も使用されています。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36084037"
   
 ##  <a name="JumpStartReptCreation"></a> レポート作成の開始  
   
--   **Withreport パーツをレポートの開始**チームの他のユーザーによって作成します。 レポート パーツとは、レポート サーバー、またはレポート サーバーに統合されている SharePoint サイトに、個別にパブリッシュされたレポート アイテムです。 これらは、他のレポートに再利用できます。 テーブル、マトリックス、グラフ、画像などのレポート アイテムを、レポート パーツとしてパブリッシュできます。  
+-   **レポート withreport パーツを開始**チームの他のユーザーによって作成します。 レポート パーツとは、レポート サーバー、またはレポート サーバーに統合されている SharePoint サイトに、個別にパブリッシュされたレポート アイテムです。 これらは、他のレポートに再利用できます。 テーブル、マトリックス、グラフ、画像などのレポート アイテムを、レポート パーツとしてパブリッシュできます。  
   
 -   **共有データセットから開始**チームの他のユーザーによって作成します。 共有データセットは、共有データ ソースに基づくクエリで、レポート サーバーまたはレポート サーバーに統合されている SharePoint サイトに保存されます。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "36084037"
   
 -   **テーブル、マトリックス、グラフ、および自由形式レポート レイアウトでレポートを作成します。** 列単位のデータにはテーブル形式のレポート、集約されたデータにはマトリックス形式のレポート (クロス集計レポートや PivotTable レポートなど)、グラフィック データにはグラフ形式のレポート、これ以外のすべてのデータには自由形式のレポートを作成します。 レポートでは、Web ベースの動的アプリケーションのリスト、グラフィック、およびコントロールと共に、他のレポートやグラフを埋め込むことができます。  
   
--   **さまざまなデータ ソースからレポートを作成します。** [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] マネージ データ プロバイダー、OLE DB プロバイダー、ODBC データ ソースのいずれかを含む任意のデータ ソースの種類のデータを使用してレポートを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion、およびその他のデータベースのリレーショナル データおよび多次元データを使用するレポートを作成できます。 XML データ処理拡張機能を使用すると、任意の XML データ ソースからデータを取得できます。 テーブル値関数を使用すると、カスタム データ ソースをデザインできます。  
+-   **さまざまなデータ ソースからレポートを作成します。** ph x="1" /&gt;[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] マネージド データ プロバイダー、OLE DB プロバイダー、ODBC データ ソースのいずれかを含む任意のデータ ソースの種類のデータを使用してレポートを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion、およびその他のデータベースのリレーショナル データおよび多次元データを使用するレポートを作成できます。 XML データ処理拡張機能を使用すると、任意の XML データ ソースからデータを取得できます。 テーブル値関数を使用すると、カスタム データ ソースをデザインできます。  
   
--   **既存のレポートを変更します。** レポート ビルダーを使用すると、カスタマイズおよび更新できますで作成されたレポートを[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]レポート デザイナーです。  
+-   **既存のレポートを変更します。** レポート ビルダーを使用すると、カスタマイズおよび更新で作成されたレポート[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]レポート デザイナーです。  
   
--   **データを変更**フィルター、グループ化データと並べ替え、または数式や式を追加しています。  
+-   **データを変更**フィルター、グループ化、およびデータの並べ替え、または数式や式を追加します。  
   
 -   データをビジュアルな形式でまとめ、大量の集計情報がひとめでわかるようにするため、**グラフ、ゲージ、スパークライン、およびインジケーターを追加します。**   
   
@@ -80,7 +80,7 @@ ms.locfileid: "36084037"
   
 ##  <a name="InThisSection"></a> トピックの内容  
  [SQL Server 2014 レポート ビルダーの新機能](../what-s-new-in-report-builder-for-sql-server-2014.md)  
- このバージョンのレポート ビルダー、マップなどの新機能をについて説明します。  
+ このバージョンのマップなど、レポート ビルダーの新機能をについて説明します。  
   
  [チュートリアル: オフラインでのクイック グラフ レポートを作成します。](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  レポート ビルダーとレポートの作成に使用できるウィザードを紹介します。 このチュートリアルには、作業用の一連のデータが用意されているため、データ ソースに接続せずに実習を開始できます。  

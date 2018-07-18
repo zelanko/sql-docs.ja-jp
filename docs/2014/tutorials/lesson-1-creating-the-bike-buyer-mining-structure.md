@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 1: Bike Buyer マイニング構造の作成 |Microsoft ドキュメント'
+title: 'レッスン 1: Bike Buyer マイニング構造の作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
 caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 53bacee483c3c36075cefcc789a8262b683e5370
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: e8a4c42548e00ec27831639c7d7a147be3fcca1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325322"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>レッスン 1: Bike Buyer マイニング構造の作成
-  このレッスンでは、[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の潜在顧客が自転車を購入するかどうかを予測するためのマイニング構造を作成します。 マイニング構造およびデータ マイニングでは、そのロールに慣れていない場合は、次を参照してください。[マイニング構造&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)です。  
+  このレッスンでは、[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の潜在顧客が自転車を購入するかどうかを予測するためのマイニング構造を作成します。 マイニング構造およびデータ マイニングでのロールに慣れていない場合は、次を参照してください。[マイニング構造&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)します。  
   
- このレッスンで作成する Bike Buyer マイニング構造に基づく追加のマイニング モデルをサポートしている、 [Microsoft クラスタ リング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Microsoft デシジョン ツリー アルゴリズム](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)です。 後のレッスンでは、クラスター マイニング モデルを使用して顧客をグループ化するさまざまな方法を確認し、デシジョン ツリー マイニング モデルを使用して潜在顧客が自転車を購入するかどうかを予測します。  
+ このレッスンで作成する Bike Buyer マイニング構造に基づく追加のマイニング モデルをサポートしている、 [Microsoft クラスタ リング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Microsoft デシジョン ツリー アルゴリズム](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)します。 後のレッスンでは、クラスター マイニング モデルを使用して顧客をグループ化するさまざまな方法を確認し、デシジョン ツリー マイニング モデルを使用して潜在顧客が自転車を購入するかどうかを予測します。  
   
 ## <a name="create-mining-structure-statement"></a>マイニング構造のステートメントを作成します。  
- 使用するマイニング構造を作成する、 [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx)ステートメントです。 ステートメント内のコードは、次の部分に分類されます。  
+ 使用するマイニング構造を作成する、 [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx)ステートメント。 ステートメント内のコードは、次の部分に分けることができます。  
   
 -   構造の名前を指定します。  
   
--   キー列を定義します。  
+-   キー列の定義。  
   
 -   マイニング列の定義  
   
@@ -54,7 +54,7 @@ WITH HOLDOUT (<holdout specifier>)
 CREATE MINING STRUCTURE [<mining structure name>]  
 ```  
   
- オブジェクトのデータ マイニング拡張機能 (DMX) の名前付け規則については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)です。  
+ データ マイニング拡張機能 (DMX) でオブジェクトの名前付け方法の詳細については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)します。  
   
  コードの次の行では、マイニング構造のキー列を定義します。キー列は、ソース データ内のエンティティを一意に識別します。  
   
@@ -70,11 +70,11 @@ CREATE MINING STRUCTURE [<mining structure name>]
 <mining structure columns>  
 ```  
   
- 内で DISCRETIZE 関数を使用する\<マイニング構造列 > を次の構文を使用して、連続列を分離します。  
+ 内で DISCRETIZE 関数を使用する\<マイニング構造列 > 次の構文を使用して、連続列を分離します。  
   
  `DISCRETIZE(<method>,<number of buckets>)`  
   
- 列の分離の詳細については、次を参照してください。[分離メソッド&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md)です。 マイニング構造列を定義することの種類の詳細については、次を参照してください。[マイニング構造列](../../2014/analysis-services/data-mining/mining-structure-columns.md)です。  
+ 列の分離の詳細については、次を参照してください。[分離メソッド&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md)します。 マイニング構造列が定義の種類の詳細については、次を参照してください。[マイニング構造列](../../2014/analysis-services/data-mining/mining-structure-columns.md)します。  
   
  コードの最後の行では、マイニング構造の省略可能なパーティションを定義します。  
   
@@ -85,7 +85,7 @@ WITH HOLDOUT (<holdout specifier>)
  構造に関連するマイニング モデルのテストに使用するためにデータの一部を指定し、残りのデータはモデルのトレーニングに使用します。 既定では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によって、全ケース データの 30% から成るテスト データセットが作成されます。 テスト データセットがケースの 30% になるように指定を追加します (最大 1000 ケース)。 ケースの 30% が 1000 より小さい場合、テスト データセットの量はもっと少なくなります。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
- このレッスンでは、次のタスクは実行します。  
+ このレッスンでは、次のタスクを実行するされます。  
   
 -   新しい空のクエリを作成します。  
   
@@ -100,9 +100,9 @@ WITH HOLDOUT (<holdout specifier>)
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を開きます。  
   
-2.  **サーバーへの接続**] ダイアログ ボックスの**サーバーの種類**[ **Analysis Services**です。 **サーバー名**、型`LocalHost`のインスタンスの名前を入力または[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]このレッスン用に接続します。 **[接続]** をクリックします。  
+2.  **サーバーへの接続** ダイアログ ボックスの**サーバーの種類**を選択します**Analysis Services**します。 **サーバー名**、型`LocalHost`のインスタンスの名前を入力または[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]このレッスンに接続します。 **[接続]** をクリックします。  
   
-3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、指す**新しいクエリ**、順にクリック**DMX**を開くには、**クエリ エディター**と新しい空のクエリ。  
+3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**を開く、**クエリ エディター**と新しい空のクエリ。  
   
 ## <a name="altering-the-query"></a>クエリの変更  
  次の手順では、上の CREATE MINING STRUCTURE ステートメントを変更し、Bike Buyer マイニング構造を作成します。  
@@ -195,25 +195,25 @@ WITH HOLDOUT (<holdout specifier>)
   
     ```  
   
-6.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**です。  
+6.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
   
-7.  **名前を付けて保存**ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Bike Buyer Structure.dmx`です。  
+7.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Bike Buyer Structure.dmx`します。  
   
 ## <a name="executing-the-query"></a>クエリの実行  
- 最後の手順では、クエリを実行します。 クエリを作成して保存したら、そのクエリを実行する必要があります。 つまり、サーバーでマイニング構造を作成するには、ステートメントを実行する必要があります。 クエリ エディターでクエリの実行の詳細については、次を参照してください。[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)です。  
+ 最後の手順では、クエリを実行します。 クエリを作成して保存したら、そのクエリを実行する必要があります。 つまり、サーバーでマイニング構造を作成するには、ステートメントを実行する必要があります。 クエリ エディターでクエリを実行する方法の詳細については、次を参照してください。[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)します。  
   
 #### <a name="to-execute-the-query"></a>クエリを実行するには  
   
-1.  クエリ エディターで、ツールバーで、クリックして**Execute**です。  
+1.  クエリ エディターで、ツールバーで、クリックして**Execute**します。  
   
-     クエリの状態が表示されて、**メッセージ**ステートメントの実行完了後のクエリ エディター下部にあるタブ。 この場合次のメッセージが表示されます。  
+     クエリの状態が表示されます、**メッセージ**ステートメントの実行完了後のクエリ エディターの下部にあるタブ。 この場合次のメッセージが表示されます。  
   
     ```  
     Executing the query   
     Execution complete  
     ```  
   
-     という名前の新しい構造**Bike Buyer**サーバーに存在するようになりました。  
+     という名前の新しい構造**Bike Buyer**サーバー上に存在するようになりました。  
   
  次のレッスンでは、作成した構造にマイニング モデルを追加します。  
   

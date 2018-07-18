@@ -1,5 +1,5 @@
 ---
-title: パブリケーション情報、[エージェント] (スナップショット パブリケーション) | Microsoft Docs
+title: パブリケーション情報、[エージェント](スナップショット パブリケーション) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,14 +17,14 @@ caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4adefcb8a8548beb0551f5dad2a5753c1764c121
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: afa3e22e4d5cfd4f0dc29ce1f143064663657152
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32962027"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350264"
 ---
-# <a name="publication-information-agents-snapshot-publication"></a>パブリケーション情報、[エージェント] \(スナップショット パブリケーション)
+# <a name="publication-information-agents-snapshot-publication"></a>パブリケーション情報、[エージェント] (スナップショット パブリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[エージェント]** タブには、選択したパブリケーションのスナップショット エージェントに関する概要情報が表示されます。  
   

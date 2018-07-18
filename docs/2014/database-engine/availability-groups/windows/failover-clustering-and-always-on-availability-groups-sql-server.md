@@ -1,14 +1,13 @@
 ---
-title: フェールオーバー クラスタ リングと AlwaysOn 可用性グループ (SQL Server) |Microsoft ドキュメント
+title: フェールオーバー クラスタ リングと AlwaysOn 可用性グループ (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - Availability Groups [SQL Server], WSFC clusters
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: 43
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 842003d531b655e4e302941dba67591a94006a84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e0fc322f09ab45756de441e3edf806ab99a02e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267148"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>フェールオーバー クラスタリングと AlwaysOn 可用性グループ (SQL Server)
   ph x="1" /> で導入された[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]高可用性ディザスター リカバリー ソリューションには、Windows Server フェールオーバー クラスタリング (WSFC) が必要です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] フェールオーバー クラスタリングには依存しませんが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、フェールオーバー クラスタリング インスタンス (FCI) を使用して、可用性グループの可用性レプリカをホストすることもできます。 実際に [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境を設計する際は、それぞれのクラスタリング テクノロジの役割を知り、注意点を把握しておくことが大切です。  
@@ -80,7 +79,7 @@ ms.locfileid: "36071030"
  **可用性グループのフェールオーバー ポリシー設定は、スタンドアロン インスタンスと FCI インスタンスのどちらでホストされているかに関係なく、すべてのレプリカに適用されます。  
   
 > [!NOTE]  
->  詳細については**ノード数**フェールオーバー クラスタ リング内および**AlwaysOn 可用性グループ**の各エディションの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[でサポートされる機能、SQL Server 2012 の各エディション](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)です。  
+>  詳細については**ノード数**フェールオーバー クラスタ リング内と**AlwaysOn 可用性グループ**の各エディションの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[でサポートされる機能、SQL Server 2012 の各エディション](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)します。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI で可用性レプリカをホストする場合の考慮事項  
   
@@ -124,9 +123,9 @@ ms.locfileid: "36071030"
   
 -   **ホワイト ペーパー:**  
   
-     [AlwaysOn アーキテクチャ ガイド: フェールオーバー クラスター インスタンスと可用性グループを使用して高可用性と災害復旧ソリューションの構築](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [AlwaysOn アーキテクチャ ガイド: フェールオーバー クラスター インスタンスと可用性グループを使用して高可用性とディザスター リカバリー ソリューションを構築します。](http://msdn.microsoft.com/library/jj215886.aspx)  
   
-     [高可用性と災害復旧の Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [SQL Server 2012 に関する Microsoft ホワイト ペーパー](http://msdn.microsoft.com/library/hh403491.aspx)  
   

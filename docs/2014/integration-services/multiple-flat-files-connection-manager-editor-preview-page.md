@@ -1,5 +1,5 @@
 ---
-title: '[複数フラット ファイル接続マネージャー エディター] ([プレビュー] ページ) |Microsoft ドキュメント'
+title: 複数フラット ファイル接続マネージャー エディター (プレビュー ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.preview.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ae19c8cff5700f4c665522f4235d79b1cae45cf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 8038724a68f190f50b8a0c0621fc6d850c12e784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195582"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>[複数フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[プレビュー]** ページを使用すると、最初に選択したソース ファイルの内容をユーザーの定義に従って列に分割して表示できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36085689"
  **接続マネージャー名**  
  ワークフローにおける複数フラット ファイル接続の一意な名前を指定します。 指定された名前は、 **デザイナーの** [接続マネージャー] [!INCLUDE[ssIS](../includes/ssis-md.md)] 領域内に表示されます。  
   
- **description**  
+ **[説明]**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的について記述することをお勧めします。  
   
  **[スキップするデータ行数]**  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2306c5d35aa6b36196348c6733430dadbbf0b5be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7016c90e98e7719c4566e53b7aa071edf469b080
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269788"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core インストールでの SQL Server の構成
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 の Server Core インストールで [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] を構成する方法について詳しく説明します。 次のセクションを参照してください。  
@@ -39,7 +39,7 @@ ms.locfileid: "36178277"
   
 -   [SQL Server Profiler](configure-sql-server-on-a-server-core-installation.md#bkmk_profiler)  
   
--   [SQL Server 監査](configure-sql-server-on-a-server-core-installation.md#bkmk_auditing)  
+-   [SQL Server の監査](configure-sql-server-on-a-server-core-installation.md#bkmk_auditing)  
   
 -   [コマンド プロンプト ユーティリティ](configure-sql-server-on-a-server-core-installation.md#bkmk_cmd)  
   
@@ -56,9 +56,9 @@ ms.locfileid: "36178277"
   
 -   [Server Core インストールの構成: 概要](http://go.microsoft.com/fwlink/?LinkId=245958)(http://go.microsoft.com/fwlink/?LinkId=245958)  
   
--   [Sconfig.cmd による Windows Server 2008 R2 の Server Core インストールを構成する](http://go.microsoft.com/fwlink/?LinkId=245959)(http://go.microsoft.com/fwlink/?LinkId=245959)  
+-   [Windows Server 2008 R2 の Server Core インストールを構成する sconfig.cmd](http://go.microsoft.com/fwlink/?LinkId=245959) (http://go.microsoft.com/fwlink/?LinkId=245959)  
   
--   [Windows Server 2008 R2 の Server Core インストールを実行するサーバーでサーバーの役割のインストール: 概要](http://go.microsoft.com/fwlink/?LinkId=245960)(http://go.microsoft.com/fwlink/?LinkId=245960)  
+-   [Windows Server 2008 R2 の Server Core インストールを実行するサーバーでサーバー ロールのインストール: 概要](http://go.microsoft.com/fwlink/?LinkId=245960)(http://go.microsoft.com/fwlink/?LinkId=245960)  
   
 -   [Windows Server 2008 R2 の Server Core インストールを実行するサーバーで Windows の機能のインストール: 概要](http://go.microsoft.com/fwlink/?LinkId=245961)(http://go.microsoft.com/fwlink/?LinkId=245961)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36178277"
 -   [Server Core インストールの管理](http://go.microsoft.com/fwlink/?LinkId=245963)(http://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="BKMK_InstallSQLUpdates"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのインストール  
- ここでは、Windows Server Core コンピューターに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の更新プログラムをインストールする方法について説明します。 常に最新のセキュリティ更新プログラムがインストールされた状態になるように、適切なタイミングで最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを評価してインストールすることをお勧めします。 インストールの詳細については[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、Windows Server Core コンピューターで、次を参照してください。 [Server Core での SQL Server 2014 のインストール](install-sql-server-on-server-core.md)です。  
+ ここでは、Windows Server Core コンピューターに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の更新プログラムをインストールする方法について説明します。 常に最新のセキュリティ更新プログラムがインストールされた状態になるように、適切なタイミングで最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを評価してインストールすることをお勧めします。 インストールの詳細については[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Windows Server Core コンピューターで、次を参照してください。 [Server Core での SQL Server 2014 のインストール](install-sql-server-on-server-core.md)します。  
   
  製品の更新プログラムをインストールするための 2 つのシナリオを次に示します。  
   
@@ -120,7 +120,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  AlwaysOn 可用性グループが有効になっていることは、サーバー インスタンスが高可用性ディザスター リカバリー ソリューションとして可用性グループを使用するための前提条件です。 AlwaysOn 可用性グループの管理に関する詳細については、「[AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)」参照してください。  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーをリモートで使用する  
- クライアント エディションを実行している PC 上で実行されるものは次の手順[!INCLUDE[win7](../../includes/win7-md.md)]またはそれ以降、またはサーバー グラフィック シェルがインストールされている別のサーバー (つまりのフル インストール[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]またはサーバーと Windows Server 8 インストールグラフィック シェル機能を有効になっている)。  
+ クライアント エディションを実行している PC で実行するものは次の手順[!INCLUDE[win7](../../includes/win7-md.md)]またはそれ以降、またはサーバー グラフィック シェルがインストールされている別のサーバー (つまりフル インストール[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]またはサーバーと Windows Server 8 のインストールグラフィック シェル機能を有効になっている)。  
   
 1.  [コンピューターの管理] を開きます。 [コンピューターの管理] を開くには、次のいずれかの操作を行います。  
   
@@ -144,7 +144,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 5.  [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー] をダブルクリックします。  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager] をクリックして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Services を右クリックして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](\<インスタンス名 >) ここで、\<インスタンス名 > AlwaysOn を有効にするローカル サーバー インスタンスの名前を指定します可用性グループのプロパティ] をクリックします。  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration manager、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービスを右クリックして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](\<インスタンス名 >) ここで、\<インスタンス名 > AlwaysOn を有効にするローカル サーバー インスタンスの名前を指定します可用性グループのプロパティ] をクリックします。  
   
 7.  [AlwaysOn 高可用性] タブを選択します。  
   
@@ -244,7 +244,7 @@ $Tcp
 ##  <a name="BKMK_CMD"></a> コマンド プロンプト ユーティリティ  
  次のコマンド プロンプト ユーティリティを使用すると、Server Core コンピューターでの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作のスクリプトを作成できます。 次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に付属する、Server Core 用のコマンド プロンプト ユーティリティの一覧です。  
   
-|**Utility**|**description**|**インストール先**|  
+|**Utility**|**[説明]**|**インストール先**|  
 |-----------------|---------------------|----------------------|  
 |[bcp ユーティリティ](../../tools/bcp-utility.md)|ユーザー指定の形式で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとデータ ファイルとの間でデータをコピーします。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを構成および実行します。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
@@ -253,9 +253,9 @@ $Tcp
 |[sqlagent90 アプリケーション](../../tools/sqlagent90-application.md)|コマンド プロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを開始します。|\<drive>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*instance_name*>\MSSQL\Binn|  
 |[sqlcmd Utility](../../tools/sqlcmd-utility.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルをコマンド プロンプトで入力できるようになります。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[SQLdiag ユーティリティ](../../tools/sqldiag-utility.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス用の診断情報を収集します。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlmaint ユーティリティ](../../tools/sqlmaint-utility.md)|以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で作成されたデータベース メンテナンス プランを実行します。|\<ドライブ >: \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12 です。MSSQLSERVER\MSSQL\Binn|  
+|[sqlmaint ユーティリティ](../../tools/sqlmaint-utility.md)|以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で作成されたデータベース メンテナンス プランを実行します。|\<ドライブ >: \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12. します。MSSQLSERVER\MSSQL\Binn|  
 |[sqlps ユーティリティ](../../tools/sqlps-utility.md)|PowerShell コマンドおよびスクリプトを実行します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーおよびコマンドレットの読み込みと登録を行います。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlservr アプリケーション](../../tools/sqlservr-application.md)|トラブルシューティングを行うために、コマンド プロンプトから [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスを開始および停止します。|\<ドライブ >: \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12 です。MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr アプリケーション](../../tools/sqlservr-application.md)|トラブルシューティングを行うために、コマンド プロンプトから [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスを開始および停止します。|\<ドライブ >: \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12. します。MSSQLSERVER\MSSQL\Binn|  
   
 ##  <a name="BKMK_troubleshoot"></a> トラブルシューティング ツールの使用  
  [SQLdiag ユーティリティ](../../tools/sqldiag-utility.md) を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] やその他の種類のサーバーからログ ファイルやデータ ファイルを収集したり、サーバーを一定期間にわたって監視したり、サーバーに関する特定の問題をトラブルシューティングしたりすることができます。 SQLdiag は、マイクロソフト カスタマー サポート サービスによる診断情報収集の高速化と簡素化を目的としたユーティリティです。  

@@ -1,5 +1,5 @@
 ---
-title: DefaultScript 要素 (ASSL) |Microsoft ドキュメント
+title: DefaultScript 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DefaultScript element
 ms.assetid: 60716e63-2d64-4774-9ac9-253efe612fa5
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0a26b8b703636aebb6d3701c5c7c99d24a25ade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5de4eca3e226e6eddbe811af5dc089b1965cbd08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200062"
 ---
 # <a name="defaultscript-element-assl"></a>DefaultScript 要素 (ASSL)
-  既定値を識別[MdxScript](../objects/mdxscript-element-assl.md)内の要素、 [MdxScripts](../collections/mdxscripts-element-assl.md)コレクション。  
+  Type 要素&#40;バインド&#41; &#40;ASSL&#41;  
   
 ## <a name="syntax"></a>構文  
   

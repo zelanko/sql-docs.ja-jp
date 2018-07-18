@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bf3e24dd3fe06a06b26adcbfcbf9da57d5b6916a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 73246b1aa2413315718680437ba1da8f46b705fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36073680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254094"
 ---
 # <a name="add-business-logic-to-xml-data"></a>XML データへのビジネス ロジックの追加
   XML データにはいくつかの方法でビジネス ロジックを追加できます。  
@@ -30,12 +30,12 @@ ms.locfileid: "36073680"
   
 -   列の値を挿入または更新したときに起動するトリガーを XML 列に記述できます。 トリガーには領域固有の検証規則を含めたり、トリガーを使用してプロパティ テーブルにデータを格納することができます。  
   
--   データベース エンジンには、マネージ コードを実行する機能が含まれています。 この共通言語ランタイム (CLR) 統合を使用すると、XML 値を渡す関数をマネージ コードに記述し、System.Xml 名前空間の提供する XML 処理機能を使用できます。 たとえば、XML データに XSL 変換を適用する場合に使用します。 または、XML のシリアル化を解除して 1 つ以上のマネージ クラスにし、マネージ コードで操作することができます。  
+-   データベース エンジンには、マネージド コードを実行する機能が含まれています。 この共通言語ランタイム (CLR) 統合を使用すると、XML 値を渡す関数をマネージド コードに記述し、System.Xml 名前空間の提供する XML 処理機能を使用できます。 たとえば、XML データに XSL 変換を適用する場合に使用します。 または、XML のシリアル化を解除して 1 つ以上のマネージド クラスにし、マネージド コードで操作することができます。  
   
 -   ビジネス ニーズに合わせて XML 列の処理を開始する Transact-SQL ストアド プロシージャや関数を記述できます。  
   
 ## <a name="example-applying-xsl-transformation"></a>例 : XSL 変換の適用  
- CLR 関数が、 **TransformXml()** を受け入れる、`xml`データ型のインスタンスおよびファイルに格納されている XSL 変換、変換を XML データに適用および結果の変換後の XML を返します。 次に示すのは、C# で記述した関数の骨組みです。  
+ CLR 関数を考えてみます**TransformXml()** を受け入れる、`xml`データ型のインスタンスおよびファイルに格納されている XSL 変換、変換が、XML データに適用および結果の変換後の XML を返します。 次に示すのは、C# で記述した関数の骨組みです。  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  
@@ -65,6 +65,6 @@ WHERE  xCol.exist('/book/title/text()[contains(.,"custom")]') =1;
   
  クエリの結果には、変換後の XML の行セットが含まれます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に CLR を統合することによって、XML データをテーブルに分解するかプロパティを昇格させてから、System.Xml 名前空間のマネージ クラスを使用して XML データにクエリを実行できるようになります。 詳細については、「[XML データ &#40;SQL Server&#41;](xml-data-sql-server.md)」を参照してください。  
+ ph x="1" /&gt; に CLR を統合することによって、XML データをテーブルに分解するかプロパティを昇格させてから、System.Xml 名前空間のマネージド クラスを使用して XML データにクエリを実行できるようになります。 詳細については、「[XML データ &#40;SQL Server&#41;](xml-data-sql-server.md)」を参照してください。  
   
   

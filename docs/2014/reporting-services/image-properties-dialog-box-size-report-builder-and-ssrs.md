@@ -1,5 +1,5 @@
 ---
-title: 画像のプロパティ ダイアログ ボックスのサイズ (レポート ビルダーおよび SSRS) |Microsoft ドキュメント
+title: 画像のプロパティ ダイアログ ボックス、サイズ (レポート ビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10054"
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ff908363c05e9e2ccdcc5da6595f5b962540417e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 20e2ee2d9669202a946fb0711b17c5f5f27cf492
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179589"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>[サイズ] ([画像のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[画像のプロパティ]** ダイアログ ボックスの **[サイズ]** を選択すると、フィールドまたはデザイン領域に表示される画像のサイズを設定できます。また、セルまたはテキスト ボックスの外枠と、そのセルまたはテキスト ボックス内の画像や値との間の余白を変更できます。  

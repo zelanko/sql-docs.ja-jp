@@ -1,7 +1,7 @@
 ---
 title: 前提条件、制限事項、推奨事項 - Always On 可用性グループ | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 151
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d5b1b75df79f8422320089fe1a1a75fc890cfc8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 42f970d275a4dc6a03ddfb2292ce587540d4fe6b
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769738"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934904"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>前提条件、制限事項、推奨事項 - Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,8 @@ ms.locfileid: "34769738"
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|システムがドメイン コントローラーではないことを確認します。|可用性グループは、ドメイン コントローラーではサポートされていません。|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|すべてのコンピューターで Windows Server 2012 以降のバージョンが実行されていることを確認します。|[SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|各コンピューターが WSFC のノードであることを確認します。|[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
-|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|必要な可用性グループの構成に耐える十分なノードが WSFC に存在することを確認します。|クラスター ノードは、1 つの可用性グループにつき 1 つだけ可用性レプリカをホストすることができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスは、特定のクラスター ノード上で複数の可用性グループの可用性レプリカをホストできます。<br /><br /> 予定している可用性グループの可用性レプリカをサポートするために必要なクラスター ノードの数については、データベース管理者にお問い合わせください。<br /><br /> [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
+|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|必要な可用性グループの構成に耐える十分なノードが WSFC に存在することを確認します。|クラスター ノードでは、可用性グループのレプリカを 1 つホストできます。 同じノードで、同じ可用性グループのレプリカを 2 つホストすることはできません。 クラスター ノードは複数の可用性グループに参加できます。その際、各グループからのレプリカは 1 つです。 <br /><br /> 予定している可用性グループの可用性レプリカをサポートするために必要なクラスター ノードの数については、データベース管理者にお問い合わせください。<br /><br /> [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
+
   
 > [!IMPORTANT]  
 >  可用性グループへの接続に必要な構成が環境に対して正しく実施されていることも確認します。 詳細については、「 [Always On クライアント接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
@@ -170,8 +171,10 @@ ms.locfileid: "34769738"
   
     -   特定のスレッドが一定期間アイドル状態になると、そのスレッドは解放され、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の汎用スレッド プールに戻されます。 通常、非アクティブ スレッドは、非アクティブな状態のまま最大 15 秒経過すると解放されます。 ただし、最後の利用状況によっては、アイドル状態のスレッドが保持される時間が延長される場合があります。  
 
-    - SQL Server インスタンスは、セカンダリ レプリカの並列再実行に最大で 100 個のスレッドを使用します。 各データベースは、最大で、CPU コアの合計数の半分を使用しますが、データベースあたりのスレッド数は 16 個以下となります。 単一のインスタンスで必要なスレッド数の合計が 100 を超えている場合、SQL Server は、残りの各データベースには単一の再実行スレッドを使用します。 再実行スレッドは、非アクティブな状態のまま最大 15 秒経過すると解放されます。 
-
+    -   SQL Server インスタンスは、セカンダリ レプリカの並列再実行に最大で 100 個のスレッドを使用します。 各データベースは、最大で、CPU コアの合計数の半分を使用しますが、データベースあたりのスレッド数は 16 個以下となります。 単一のインスタンスで必要なスレッド数の合計が 100 を超えている場合、SQL Server は、残りの各データベースには単一の再実行スレッドを使用します。 シリアル再実行スレッドは、非アクティブな状態のまま最大 15 秒経過すると解放されます。 
+    
+    > [!NOTE]
+    > 単一のスレッドを使用するデータベースは、各データベース ID の昇順に基づいて選択されます。 そのため、使用可能なワーカー スレッドよりも多くの可用性グループ データベースをホストする SQL Server インスタンスの場合は、データベースの作成順序を検討する必要があります。 たとえば、32 個以上の CPU コアを持つシステムでは、可用性グループに参加している 7 番目以降のデータベースはすべて、各データベースの実際の再実行ワークロードに関係なく、シリアル再実行モードになります。 並列再実行を必要とするデータベースは、最初に可用性グループに追加する必要があります。    
   
 -   さらに、可用性グループでは非共有スレッドを次のように使用します。  
   

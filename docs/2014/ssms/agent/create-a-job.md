@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - SQL Server Agent jobs, creating
 ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb9d6f15c9819a9c5653130664b340931a9a5d93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d161129b14da33645c1a9238307c0eefe9539097
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36085138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181539"
 ---
 # <a name="create-a-job"></a>ジョブの作成
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または SQL Server 管理オブジェクト (SMO) を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] で SQL Server エージェント ジョブを作成する方法について説明します。  
@@ -75,17 +75,17 @@ ms.locfileid: "36085138"
   
 3.  **[ジョブ]** フォルダーを右クリックし、 **[新しいジョブ]** を選択します。  
   
-4.  **[新しいジョブ]** ダイアログ ボックスの **[全般]** ページで、ジョブの全般的なプロパティを変更します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティおよび新しいジョブ&#40;[全般] ページ。&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+4.  **[新しいジョブ]** ダイアログ ボックスの **[全般]** ページで、ジョブの全般的なプロパティを変更します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティと新しいジョブ&#40;[全般] ページ。&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  **[ステップ]** ページで、ジョブ ステップを編成します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティ: [新しいジョブ&#40;作業] ページ。&#41;](job-properties-new-job-steps-page.md)  
+5.  **[ステップ]** ページで、ジョブ ステップを編成します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティ: [新しいジョブ&#40;[ステップ] ページ。&#41;](job-properties-new-job-steps-page.md)  
   
 6.  **[スケジュール** ] ページで、ジョブのスケジュールを編成します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティ: [新しいジョブ&#40;スケジュール] ページ。&#41;](job-properties-new-job-schedules-page.md)  
   
 7.  **[警告]** ページで、ジョブの警告を編成します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティ: [新しいジョブ&#40;アラート] ページ。&#41;](job-properties-new-job-alerts-page.md)  
   
-8.  **[通知]** ページで、ジョブの完了時に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行するアクションを設定します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ: 新しいジョブ&#40;通知ページ&#41;](job-properties-new-job-notifications-page.md)です。  
+8.  **[通知]** ページで、ジョブの完了時に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行するアクションを設定します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ: 新しいジョブ&#40;通知ページ&#41;](job-properties-new-job-notifications-page.md)します。  
   
-9. **[ターゲット]** ページで、ジョブの対象サーバーを管理します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ: 新しいジョブ&#40;ターゲット ページ&#41;](job-properties-new-job-targets-page.md)です。  
+9. **[ターゲット]** ページで、ジョブの対象サーバーを管理します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ: 新しいジョブ&#40;ターゲット ページ&#41;](job-properties-new-job-targets-page.md)します。  
   
 10. 完了したら、 **[OK]** をクリックします。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36085138"
   
 -   [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
-##  <a name="SMOProcedure"></a> SQL Server 管理オブジェクトを使用します。  
+##  <a name="SMOProcedure"></a> SQL Server 管理オブジェクトの使用  
  **SQL Server エージェントのジョブを作成するには**  
   
  Visual Basic、Visual C#、PowerShell などのプログラミング言語で `Create` クラスの `Job` メソッドを呼び出します。 コード例については、「 [SQL Server エージェントでの自動管理タスクのスケジュール設定](sql-server-agent.md)」を参照してください。  

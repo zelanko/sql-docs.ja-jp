@@ -1,5 +1,5 @@
 ---
-title: ssbdiagnose ユーティリティ (Service Broker) |Microsoft ドキュメント
+title: ssbdiagnose ユーティリティ (Service Broker) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
 - Service Broker, command prompt utilities
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37b52dd752b04c9aacb6ee49e1dbc2d4c590332a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172333"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
   **ssbdiagnose** ユーティリティは、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換または [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスの構成に関する問題を報告します。 構成チェックは 2 つまたは 1 つのサービスに対して実行できます。 問題点は、コマンド プロンプト ウィンドウにユーザーが解釈できる形式で報告されるか、ファイルまたは別のプログラムにリダイレクトできる XML 形式で報告されます。  
@@ -187,21 +187,21 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  アプリケーション内のメッセージ交換エンドポイントを識別する一意識別子です。 メッセージ交換ハンドルは、メッセージ交換の一方のエンドポイントに対して一意であり、発信側と発信先のエンドポイントのメッセージ交換ハンドルは異なります。  
   
- によって、アプリケーションにメッセージ交換ハンドルが返されます、 *@dialog_handle*のパラメーター、 **BEGIN DIALOG**ステートメント、および`conversation_handle`群は、結果内の列、**受信**ステートメントです。  
+ によって、アプリケーションにメッセージ交換ハンドルが返されます、 *@dialog_handle*のパラメーター、 **BEGIN DIALOG**ステートメントでは、および`conversation_handle`の結果の列のセットを**受信**ステートメント。  
   
  メッセージ交換ハンドルで報告される、`conversation_handle`の列、 **sys.transmission_queue**と**sys.conversation_endpoints**カタログ ビューです。  
   
  *conversation_group_id*  
  メッセージ交換グループを識別する一意識別子です。  
   
- によって、アプリケーションにメッセージ交換グループ Id が返されます、 *@conversation_group_id*のパラメーター、 **GET CONVERSATION GROUP**ステートメントおよび`conversation_group_id`の結果セット内の列**受信**ステートメントです。  
+ によって、アプリケーションにメッセージ交換グループ Id が返されます、 *@conversation_group_id*のパラメーター、 **GET CONVERSATION GROUP**ステートメントおよび`conversation_group_id`の結果セット内の列**受信**ステートメント。  
   
- メッセージ交換グループ Id で報告される、`conversation_group_id`の列、 **sys.conversation_groups**と**sys.conversation_endpoints**カタログ ビューです。  
+ メッセージ交換グループ Id が報告、`conversation_group_id`の列、 **sys.conversation_groups**と**sys.conversation_endpoints**カタログ ビューです。  
   
  *conversation_id*  
  メッセージ交換を識別する一意識別子です。 メッセージ交換 ID は、メッセージ交換の発信側と発信先の両方のエンドポイントで同じです。  
   
- メッセージ交換 Id で報告される、`conversation_id`の列、 **sys.conversation_endpoints**カタログ ビューです。  
+ メッセージ交換 Id が報告、`conversation_id`の列、 **sys.conversation_endpoints**カタログ ビューです。  
   
  **-TIMEOUT** *timeout_interval*  
  **RUNTIME** レポートを実行する秒数を指定します。 **-TIMEOUT** が指定されていない場合、ランタイム レポートは無制限に実行されます。 **-TIMEOUT** は、**CONFIGURATION** レポートではなく、**RUNTIME** レポートのみで使用されます。 **-TIMEOUT** が指定されていない場合に **ssbdiagnose** を終了したり、タイムアウト間隔を経過する前にランタイム レポートを終了したりするには、Ctrl キーを押しながら C キーを押します。 *timeout_interval* は 1 から 2,147,483,647 までの数値にする必要があります。  

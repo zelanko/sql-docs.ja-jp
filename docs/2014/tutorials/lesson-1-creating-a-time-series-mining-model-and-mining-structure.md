@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 1: 時系列マイニング モデルとマイニング構造の作成 |Microsoft ドキュメント'
+title: 'レッスン 1: 時系列マイニング モデルとマイニング構造の作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
 caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: e6092c624d6fbbac57411d3e6d2e1c65c437a7d6
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: e0dc6f1be5fd1d0a6c983005d7db10c4c94a690b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251184"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>レッスン 1: 時系列マイニング モデルおよびマイニング構造の作成
   このレッスンでは、履歴データを基に時間の経過に応じて値を予測するためのマイニング モデルを作成します。 モデルを作成すると、基になる構造が自動的に生成され、追加のマイニング モデルのベースとして使用できるようになります。  
@@ -27,7 +27,7 @@ ms.locfileid: "36312310"
  このレッスンは、予測モデルおよび Microsoft タイム シリーズ アルゴリズムの要件について理解していることを前提としています。 詳細については、「 [Microsoft タイム シリーズ アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)」を参照してください。  
   
 ## <a name="create-mining-model-statement"></a>マイニング モデルのステートメントを作成します。  
- 使用するマイニング モデルを直接作成し、基になるマイニング構造を自動的に生成するために、 [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx)ステートメントです。 ステートメント内のコードは、次の部分に分類されます。  
+ 使用するマイニング モデルを直接作成し、基になるマイニング構造を自動的に生成するために、 [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx)ステートメント。 ステートメント内のコードは、次の部分に分けることができます。  
   
 -   モデルの名前指定  
   
@@ -55,9 +55,9 @@ WITH DRILLTHROUGH
 CREATE MINING MODEL [Mining Model Name]  
 ```  
   
- Analysis Services では、基になる構造に対し、モデル名の後に「_structure」を追加した名前が自動的に生成されます。これにより、構造名がモデル名と重複しないことが保証されます。 DMX でオブジェクトの名前を付ける方法については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)です。  
+ Analysis Services では、基になる構造に対し、モデル名の後に「_structure」を追加した名前が自動的に生成されます。これにより、構造名がモデル名と重複しないことが保証されます。 DMX でオブジェクトの名前付け方法の詳細については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)します。  
   
- コードの次の行では、マイニング モデルのキー列を定義します。キー列は、時系列モデルでソース データの時間ステップを一意に識別します。 時間ステップが付いた、`KEY TIME`列名とデータ型の後にキーワード。 時系列モデルに別の系列キーが含まれている場合は、`KEY` キーワードでそのキーが識別されます。  
+ コードの次の行では、マイニング モデルのキー列を定義します。キー列は、時系列モデルでソース データの時間ステップを一意に識別します。 時間ステップがで識別される、`KEY TIME`キーワードの後、列名とデータ型。 時系列モデルに別の系列キーが含まれている場合は、`KEY` キーワードでそのキーが識別されます。  
   
 ```  
 <key columns>  
@@ -70,13 +70,13 @@ CREATE MINING MODEL [Mining Model Name]
 ```  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
- このレッスンでは、次のタスクは実行します。  
+ このレッスンでは、次のタスクを実行するされます。  
   
 -   新しい空のクエリの作成  
   
 -   マイニング モデルを作成するためのクエリの変更  
   
--   クエリを実行します。  
+-   クエリを実行します  
   
 ## <a name="creating-the-query"></a>クエリを作成します。  
  最初の手順では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインスタンスに接続して新しい DMX クエリを作成します。  
@@ -85,9 +85,9 @@ CREATE MINING MODEL [Mining Model Name]
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を開きます。  
   
-2.  **サーバーへの接続**] ダイアログ ボックスの**サーバーの種類**[ **Analysis Services**です。 **サーバー名**、型`LocalHost`のインスタンスの名前または[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]このレッスン用に接続します。 **[接続]** をクリックします。  
+2.  **サーバーへの接続** ダイアログ ボックスの**サーバーの種類**を選択します**Analysis Services**します。 **サーバー名**、型`LocalHost`のインスタンスの名前または[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]このレッスンに接続します。 **[接続]** をクリックします。  
   
-3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、クリックして**DMX**です。  
+3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -176,27 +176,27 @@ CREATE MINING MODEL [Mining Model Name]
   
     ```  
   
-6.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**です。  
+6.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
   
-7.  **名前を付けて保存**ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Forecasting_MIXED.dmx`です。  
+7.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Forecasting_MIXED.dmx`します。  
   
 ## <a name="executing-the-query"></a>クエリの実行  
- 最後の手順では、クエリを実行します。 クエリを作成して保存したら、そのクエリを実行してサーバーにマイニング モデルとそのマイニング構造を作成します。 クエリ エディターでクエリの実行の詳細については、次を参照してください。[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)です。  
+ 最後の手順では、クエリを実行します。 クエリを作成して保存したら、そのクエリを実行してサーバーにマイニング モデルとそのマイニング構造を作成します。 クエリ エディターでクエリを実行する方法の詳細については、次を参照してください。[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)します。  
   
 #### <a name="to-execute-the-query"></a>クエリを実行するには  
   
--   クエリ エディターで、ツールバーで、クリックして**Execute**です。  
+-   クエリ エディターで、ツールバーで、クリックして**Execute**します。  
   
-     クエリの状態が表示されて、**メッセージ**ステートメントの実行完了後のクエリ エディター下部にあるタブ。 この場合次のメッセージが表示されます。  
+     クエリの状態が表示されます、**メッセージ**ステートメントの実行完了後のクエリ エディターの下部にあるタブ。 この場合次のメッセージが表示されます。  
   
     ```  
     Executing the query   
     Execution complete  
     ```  
   
-     という名前の新しい構造**Forecasting_MIXED_Structure**関連マイニング モデルと共にサーバーに存在する**Forecasting_MIXED**です。  
+     という名前の新しい構造**Forecasting_MIXED_Structure** 、関連するマイニング モデルと共に、サーバー上に存在するようになりました**Forecasting_MIXED**します。  
   
- 次のレッスンでは、マイニング モデルを追加します、 **Forecasting_MIXED**先ほど作成したマイニング構造です。  
+ 次のレッスンでは、マイニング モデルを追加します、 **Forecasting_MIXED**作成したマイニング構造です。  
   
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 2: 時系列マイニング構造へのマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  

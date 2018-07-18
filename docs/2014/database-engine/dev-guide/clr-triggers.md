@@ -1,5 +1,5 @@
 ---
-title: CLR トリガー |Microsoft ドキュメント
+title: CLR トリガー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -27,18 +27,18 @@ helpviewer_keywords:
 - transactions [CLR integration]
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 caps.latest.revision: 67
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f2f0d4d3c7dbe6ed46e169645de057492d55c42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c6702a9a3851e7ce41862f8f314d9aebdb7a5745
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160993"
 ---
 # <a name="clr-triggers"></a>CLR トリガー
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (共通言語ランタイム) との統合により、任意の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 言語を使用して CLR トリガーを作成できるようになりました。 ここでは、CLR 統合によって実装されたトリガー固有の情報について説明します。 トリガーの詳細については、次を参照してください。 [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (共通言語ランタイム) との統合により、任意の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 言語を使用して CLR トリガーを作成できるようになりました。 ここでは、CLR 統合によって実装されたトリガー固有の情報について説明します。 トリガーの詳細については、次を参照してください。 [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)します。  
   
 ## <a name="what-are-triggers"></a>トリガーとは  
  トリガーとは、言語イベントの実行時に自動的に実行される、特殊なストアド プロシージャです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、DML (データ操作言語) トリガーと DDL (データ定義言語) トリガーという 2 種類の一般的なトリガーがあります。 DML トリガーは、`INSERT` ステートメント、`UPDATE` ステートメント、または `DELETE` ステートメントにより、指定されたテーブルやビューのデータが変更されるときに使用できます。 DDL トリガーは、主に `CREATE`、`ALTER`、および `DROP` で始まるさまざまな DDL ステートメントに応じてストアド プロシージャを起動します。 DDL トリガーは、データベース操作の監査や管理などの管理作業に使用できます。  
@@ -54,14 +54,14 @@ ms.locfileid: "36084421"
   
 -   DDL ステートメントの実行によって影響を受けたデータベース オブジェクトに関する情報へのアクセス  
   
- このような機能は、クエリ言語の本質として提供されます。`SqlTriggerContext` クラスによって提供することもできます。 CLR 統合とマネージ コードの使い分けの利点についておよび[!INCLUDE[tsql](../../includes/tsql-md.md)]を参照してください[CLR 統合の概要](../../relational-databases/clr-integration/clr-integration-overview.md)です。  
+ このような機能は、クエリ言語の本質として提供されます。`SqlTriggerContext` クラスによって提供することもできます。 CLR 統合とマネージ コードの使い分けの利点については、[!INCLUDE[tsql](../../includes/tsql-md.md)]を参照してください[CLR 統合の概要](../../relational-databases/clr-integration/clr-integration-overview.md)します。  
   
 ## <a name="using-the-sqltriggercontext-class"></a>SqlTriggerContext クラスの使用  
  `SqlTriggerContext` クラスをパブリックに生成することはできません。このクラスは、CLR トリガー本体に含まれる `SqlContext.TriggerContext` プロパティにアクセスすることによってのみ取得できます。 `SqlTriggerContext` クラスは、`SqlContext` プロパティを呼び出すことにより、アクティブな `SqlContext.TriggerContext` から取得できます。  
   
  `SqlTriggerContext myTriggerContext = SqlContext.TriggerContext;`  
   
- `SqlTriggerContext` クラスでは、トリガーに関するコンテキスト情報が提供されます。 このコンテキスト情報には、トリガーを起動した動作の種類、UPDATE 操作で変更された列、および DDL トリガーの場合はトリガー操作が記述されている XML `EventData` 構造体が含まれます。 詳細については、次を参照してください。 [EVENTDATA &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)です。  
+ `SqlTriggerContext` クラスでは、トリガーに関するコンテキスト情報が提供されます。 このコンテキスト情報には、トリガーを起動した動作の種類、UPDATE 操作で変更された列、および DDL トリガーの場合はトリガー操作が記述されている XML `EventData` 構造体が含まれます。 詳細については、次を参照してください。 [EVENTDATA &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)します。  
   
 ### <a name="determining-the-trigger-action"></a>トリガー動作の判断  
  `SqlTriggerContext` を取得すると、これを使用してトリガーを起動した動作の種類を判断できます。 この情報は、`TriggerAction` クラスの `SqlTriggerContext` プロパティから入手できます。  
@@ -77,7 +77,7 @@ ms.locfileid: "36084421"
 -   DDL トリガーの場合、TriggerAction の有効な値は非常に多くなります。 詳細については、.NET Framework SDK の「TriggerAction Enumeration」を参照してください。  
   
 ### <a name="using-the-inserted-and-deleted-tables"></a>Inserted テーブルと Deleted テーブルの使用  
- 2 つの特殊なテーブルが DML トリガー ステートメントで使用されます。**挿入**テーブルおよび**削除**テーブル。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これらのテーブルを自動的に作成および管理します。 これらの一時テーブルを使用して、あるデータ変更の影響を調べたり、DML トリガー動作の条件を設定することができます。ただし、このテーブル内のデータを直接変更することはできません。  
+ DML トリガー ステートメントで 2 つの特殊なテーブルが使用されます。**挿入**テーブルおよび**削除**テーブル。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これらのテーブルを自動的に作成および管理します。 これらの一時テーブルを使用して、あるデータ変更の影響を調べたり、DML トリガー動作の条件を設定することができます。ただし、このテーブル内のデータを直接変更することはできません。  
   
  CLR トリガーにアクセスできる、**挿入**と**削除**CLR インプロセス プロバイダーを使用してテーブル。 この操作は、SqlContext オブジェクトから `SqlCommand` オブジェクトを取得することによって行います。 以下に例を示します。  
   
@@ -235,7 +235,7 @@ End Class
  この例では、ユーザーに必要な任意の ID を選択させ、具体的に ID として電子メール アドレスを入力したユーザーを知りたい場合のシナリオについて考えてみます。 次のトリガーは、その情報を検出し、監査テーブルにログを記録します。  
   
 > [!NOTE]  
->  `SqlPipe` オブジェクトを使用して結果とメッセージを送信する例は、説明をわかりやすくするために記載しているものです。通常、この処理を実稼働コードに実装することはお勧めしません。 返されるその他のデータに予期しない原因となるアプリケーション エラー可能性があります。  
+>  `SqlPipe` オブジェクトを使用して結果とメッセージを送信する例は、説明をわかりやすくするために記載しているものです。通常、この処理を実稼働コードに実装することはお勧めしません。 返される追加のデータに予期しない原因となるアプリケーション エラー可能性があります。  
   
 ```csharp  
 using System;  
@@ -485,7 +485,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]でトリガーを作成するステートメント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、次のように、アセンブリを前提と**SQLCLRTest**現在では既に登録されて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]でトリガーを作成するステートメント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は次のように、アセンブリを前提と**SQLCLRTest**現在では既に登録されて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
   
 ```  
 CREATE TRIGGER EmailAudit  
@@ -498,7 +498,7 @@ EXTERNAL NAME SQLCLRTest.CLRTriggers.EmailAudit
 ## <a name="validating-and-canceling-invalid-transactions"></a>無効なトランザクションの検証およびキャンセル  
  無効な INSERT、UPDATE、または DELETE トランザクションの検証および取り消しを行う場合や、データベース スキーマへの変更を回避する場合には、トリガーを使用するのが一般的です。 これは、検証ロジックをトリガーに組み込み、アクションが検証条件に合わない場合は現在のトランザクションをロールバックすることにより、行うことができます。  
   
- トリガー内で呼び出されると、`Transaction.Rollback` メソッドまたはコマンド テキスト "TRANSACTION ROLLBACK" の SqlCommand は、不明確なエラー メッセージを発生して例外をスローし、これを try/catch ブロックにラップする必要が生じます。 エラー メッセージが表示は、次のようには。  
+ トリガー内で呼び出されると、`Transaction.Rollback` メソッドまたはコマンド テキスト "TRANSACTION ROLLBACK" の SqlCommand は、不明確なエラー メッセージを発生して例外をスローし、これを try/catch ブロックにラップする必要が生じます。 表示されるエラー メッセージは、次のような。  
   
 ```  
 Msg 6549, Level 16, State 1, Procedure trig_InsertValidator, Line 0  
@@ -514,10 +514,10 @@ The context transaction which was active before entering user defined routine, t
 The statement has been terminated.  
 ```  
   
- この例外も必要ですが、前後の try/catch ブロック、[!INCLUDE[tsql](../../includes/tsql-md.md)]トリガーを起動するアクションを実行するステートメントは、実行を継続できるようにする必要があります。 この 2 つの例外がスローされても、トランザクションはロールバックされ、変更はテーブルにコミットされません。 CLR トリガーと [!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーの主な違いは、トランザクションがロールバックされた後、[!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーは、動作を継続してさらに実行を行えるということです。  
+ この例外が予期されても、および前後の try/catch ブロック、[!INCLUDE[tsql](../../includes/tsql-md.md)]実行を続行するために、トリガーを起動するアクションを実行するステートメントは必要です。 この 2 つの例外がスローされても、トランザクションはロールバックされ、変更はテーブルにコミットされません。 CLR トリガーと [!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーの主な違いは、トランザクションがロールバックされた後、[!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーは、動作を継続してさらに実行を行えるということです。  
   
 ### <a name="example"></a>例  
- 次のトリガーでは、テーブルで INSERT ステートメントの簡単な検証を実行します。 挿入された整数値が 1 に等しい場合、トランザクションはロールバックされ、値はテーブルに挿入されません。 その他のすべての整数値はテーブルに挿入されます。 `Transaction.Rollback` メソッドの前後の try/catch ブロックに注意してください。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトは、テスト テーブル、アセンブリ、およびマネージ ストアド プロシージャを作成します。 トリガーにより実行が終了されたときにスローされる例外をキャッチするため、2 つの INSERT ステートメントが try/catch ブロックにラップされることに注意してください。  
+ 次のトリガーでは、テーブルで INSERT ステートメントの簡単な検証を実行します。 挿入された整数値が 1 に等しい場合、トランザクションはロールバックされ、値はテーブルに挿入されません。 その他のすべての整数値はテーブルに挿入されます。 `Transaction.Rollback` メソッドの前後の try/catch ブロックに注意してください。 ph x="1" /&gt; スクリプトは、テスト テーブル、アセンブリ、およびマネージド ストアド プロシージャを作成します。 トリガーにより実行が終了されたときにスローされる例外をキャッチするため、2 つの INSERT ステートメントが try/catch ブロックにラップされることに注意してください。  
   
  C#  
   
@@ -665,7 +665,7 @@ DROP TABLE Table1;
  [DML トリガー](../../relational-databases/triggers/dml-triggers.md)   
  [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
- [共通言語ランタイムとデータベース オブジェクトの構築&#40;CLR&#41;統合](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
+ [共通言語ランタイムによるデータベース オブジェクトを構築&#40;CLR&#41;統合](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextindexingwizard.selecttablecolumns.f1
 - sql12.swb.fulltextindexingwizard.welcome.f1
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69b7caacb7d6731731aaae11c18e9f960278136c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5395a6ee63d3fbf4456a3da4e4e19390e042e2b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309522"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>フルテキスト インデックス作成ウィザードの使用
   フルテキスト インデックス作成ウィザードを使用すると、フルテキスト インデックスを作成するために作られた一連の手順を実行できます。  
@@ -53,7 +52,7 @@ ms.locfileid: "36179286"
      **型の列**  
      フルテキスト インデックスの付いた列の文書型を保持する列の名前を選択します。  
   
-     **型の列**、列の名前の場合のみ有効です、**使用可能な列**型の列は、`varbinary(max)`または`image`です。  
+     **型の列**で名前の付いた列の場合のみ有効です、**使用可能な列**型の列は、`varbinary(max)`または`image`します。  
   
      **[統計的セマンティクス]**  
      選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](semantic-search-sql-server.md)」を参照してください。  
@@ -71,7 +70,7 @@ ms.locfileid: "36179286"
      **[変更を追跡しない]**  
      基底のデータの変更に合わせてフルテキスト インデックスが更新されないようにするには、このオプション ボタンをクリックします。  
   
-     **インデックスが作成されたときに、完全作成を開始します。**  
+     **インデックスが作成されるときに、完全作成を開始します。**  
      このウィザードが正常終了したときにすべてのカタログの作成を開始するには、このオプション ボタンをクリックします。 この処理は、フルテキスト インデックス構造体をカタログに作成する処理と、フルテキスト インデックス データを格納する処理から構成されます。  
   
 3.  カタログ、インデックス ファイル グループ、およびストップリストを選択します。  
@@ -83,7 +82,7 @@ ms.locfileid: "36179286"
     |-|-|  
     |**[カタログの新規作成]**|新しいフルテキスト カタログを作成する場合は、オンにします。|  
   
-     **Name**  
+     **名前**  
      新しいフルテキスト カタログの名前を入力します。  
   
      **[既定のカタログとして設定する]**  
@@ -106,7 +105,7 @@ ms.locfileid: "36179286"
      **[フルテキスト ストップリストの選択]**  
      フルテキスト インデックスに使用するストップリストを指定します。または、ストップリストの使用を無効にします。  
   
-     [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、ストップワードが、ストップリストと呼ばれるオブジェクトを使用してデータベースで管理されます。 *ストップリスト*は、フルテキスト インデックスに関連付けられている場合、そのインデックスのフルテキスト クエリに適用されるストップワードの一覧です。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
+     ph x="1" /&gt; 以降のバージョンでは、ストップワードが、ストップリストと呼ばれるオブジェクトを使用してデータベースで管理されます。 *ストップリスト*は、フルテキスト インデックスに関連付けられている場合、そのインデックスのフルテキスト クエリに適用されるストップワードの一覧です。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
   
      次のいずれかの値を選択します。  
   
@@ -127,7 +126,7 @@ ms.locfileid: "36179286"
      **[編集]**  
      スケジュールを編集します。  
   
-     **Delete**  
+     **削除**  
      スケジュールを削除します。  
   
 5.  フルテキスト インデックス作成ウィザードの進行状況を表示または制御します。  

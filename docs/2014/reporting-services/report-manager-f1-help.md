@@ -1,5 +1,5 @@
 ---
-title: レポート マネージャーの F1 ヘルプ |Microsoft ドキュメント
+title: レポート マネージャー F1 ヘルプ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: da311acc4787c077fd4ad33637b46507a2979f86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9bb45f51107d9397494e803533c68f90647fb18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208442"
 ---
 # <a name="report-manager-f1-help"></a>レポート マネージャー F1 ヘルプ
   以下のトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート マネージャーのページごとのヘルプについて説明しています。 アプリケーションのページごとに、1 つのトピックがあります。 記載されているページの一部は、利用できない場合があります。 セキュリティの設定により、アクセスできるページが決まります。 レポート マネージャーからこれらのトピックにアクセスするには、メイン ツール バーの **[ヘルプ]** をクリックします。  
@@ -70,13 +70,13 @@ ms.locfileid: "36084930"
   
 -   [[新しいモデル] ページ](../../2014/reporting-services/new-model-page-report-manager.md)  
   
--   [新しいロールの割り当て/[ロールの割り当て] ページの編集](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)  
+-   [新しいロールの割り当て]、[ロールの割り当て] ページの編集](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)  
   
--   [新しいスケジュール] ページ [スケジュールの編集/](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)  
+-   [新しいスケジュール]/[スケジュール] ページの編集](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)  
   
 -   [新しいサブスクリプション/[サブスクリプション] ページの編集](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
   
--   [新しいシステム ロールの割り当て/[システム ロールの割り当て] ページの編集](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+-   [新しいシステム ロールの割り当て]、[システム ロールの割り当て] ページの編集](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
 -   [[パラメーター] プロパティ ページ](../../2014/reporting-services/parameters-properties-page-report-manager.md)  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36084930"
   
 -   [[レポート履歴] ページ](../../2014/reporting-services/report-history-page-report-manager.md)  
   
--   [検索結果 ページ](../../2014/reporting-services/search-page-report-manager.md)  
+-   [検索結果ページ](../../2014/reporting-services/search-page-report-manager.md)  
   
 -   [[セキュリティ] ページ ([サイトの設定])](../../2014/reporting-services/security-page-site-settings-report-manager.md)  
   
@@ -107,9 +107,9 @@ ms.locfileid: "36084930"
  レポート マネージャーと [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の詳細については、MSDN で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーのコンテンツ管理&#40;SSRS ネイティブ モード&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [機能リファレンス (Reporting Services)](feature-reference-reporting-services.md)   
- [レポート サーバーのコンテンツ管理&#40;SSRS ネイティブ モード&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [レポート マネージャー](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services コンポーネントの概要](tools/reporting-services-tools.md)  
   

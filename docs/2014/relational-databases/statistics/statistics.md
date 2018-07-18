@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-statistics
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
 - query performance [SQL Server], statistics
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 67
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: da931b48b7571cd7d109980ef6deb0a7e4bb5246
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 257abd70ea2b0f6345d40c7b6f009d50da5045c5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36072079"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428341"
 ---
 # <a name="statistics"></a>統計
   クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために統計を使用します。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成したりクエリのデザインを変更したりする必要がある場合もあります。 このトピックでは、クエリ最適化に関する統計の概念と、それを効果的に使用するためのガイドラインについて説明します。  
@@ -191,7 +189,7 @@ GO
   
 -   存在しない統計を CREATE STATISTICS ステートメントを使用して作成します。  
   
- 読み取り専用データベースまたは読み取り専用スナップショットに関する統計が不足しているか古くなっている場合、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]を作成および管理に一時的な統計`tempdb`です。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] で一時的な統計を作成する場合は、一時的な統計と永続的な統計とを区別するためのサフィックス _readonly_database_statistic が統計名に付加されます。 サフィックス _readonly_database_statistic は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって生成される統計用に予約されています。 読み書き可能なデータベースでは、一時的な統計用のスクリプトを作成して再現できます。 スクリプトを作成する場合、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、統計名のサフィックスを _readonly_database_statistic から _readonly_database_statistic_scripted に変更します。  
+ 読み取り専用データベースまたは読み取り専用スナップショットに関する統計が不足しているか古くなっている場合、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]作成し、一時的な統計を保守`tempdb`します。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] で一時的な統計を作成する場合は、一時的な統計と永続的な統計とを区別するためのサフィックス _readonly_database_statistic が統計名に付加されます。 サフィックス _readonly_database_statistic は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって生成される統計用に予約されています。 読み書き可能なデータベースでは、一時的な統計用のスクリプトを作成して再現できます。 スクリプトを作成する場合、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、統計名のサフィックスを _readonly_database_statistic から _readonly_database_statistic_scripted に変更します。  
   
  一時的な統計を作成して更新できるのは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のみです。 ただし、永続的な統計の場合と同じツールを使用すると、一時的な統計を削除して、統計のプロパティを監視できます。  
   

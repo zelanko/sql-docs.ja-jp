@@ -1,5 +1,5 @@
 ---
-title: WMI Provider for Configuration Management Concepts |Microsoft ドキュメント
+title: WMI Provider for Configuration Management Concepts |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,26 +17,26 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, about WMI Provider for Configuration Management
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5185d55296d1b5cd2adcbb6c61139e06195588be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5e19f7bda872dbf29c018599430f40bfd353ae42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290288"
 ---
 # <a name="wmi-provider-for-configuration-management-concepts"></a>構成管理用の WMI プロバイダーの概念
-  WMI プロバイダーは、パブリッシュされたレイヤーで使用される、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager のスナップインで[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理コンソール (MMC) および[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager です。 これにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーから要求されたレジストリ操作を処理する API 呼び出しは、統一されたインターフェイスで操作できます。また、選択された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに対して高度な制御および操作を行えます。  
+  WMI プロバイダーは、パブリッシュされたレイヤーで使用される、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構成マネージャー スナップインの[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理コンソール (MMC) および[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager。 これにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーから要求されたレジストリ操作を処理する API 呼び出しは、統一されたインターフェイスで操作できます。また、選択された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに対して高度な制御および操作を行えます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI プロバイダーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって自動的にコンパイルされる DLL ファイルおよび MOF ファイルです。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI プロバイダーには、コントロールに使用するオブジェクトのクラスのセットが含まれています、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービスの次のメソッドを使用します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI プロバイダーには、一連コントロールに使用されるオブジェクトのクラスにはが含まれています、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービスの次のメソッドを使用します。  
   
 -   WQL (Windows Query Language) を埋め込むことができる VBScript、[!INCLUDE[jsprjscript](../../includes/jsprjscript-md.md)]、Perl などのスクリプト言語。  
   
--   SMO マネージ コード プログラム内の <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクト。  
+-   SMO マネージド コード プログラム内の <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクト。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI プロバイダー スナップインを持つ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは MMC。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36076571"
  このセクションでは、スクリプトから構成管理用の WMI プロバイダーにアクセスする方法についてより詳細に説明します。  
   
 ## <a name="using-the-smo-managedcomputer-object"></a>SMO ManagedComputer オブジェクトの使用  
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトは、構成管理用 WMI プロバイダーへのアクセスを提供する SMO マネージ オブジェクトです。 SMO プログラムを使用すると、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス、ネットワーク設定、別名設定の表示と修正を行うことができます。 詳細については、次を参照してください。 [Services の管理とネットワークの設定を使用して WMI プロバイダーによって](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)です。  
+ ph x="1" /&gt; オブジェクトは、構成管理用 WMI プロバイダーへのアクセスを提供する SMO マネージド オブジェクトです。 SMO プログラムを使用すると、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス、ネットワーク設定、別名設定の表示と修正を行うことができます。 詳細については、次を参照してください。[管理サービスとネットワーク設定を使用して WMI プロバイダーによって](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)します。  
   
 ## <a name="using-the-microsoft-management-console-or-sql-server-configuration-manager"></a>Microsoft 管理コンソールまたは SQL Server 構成マネージャーの使用  
  Microsoft 管理コンソール (MMC) は、スクリプティング言語またはマネージド コード プログラムではなく、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを管理するインターフェイスを提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理 MMC スナップインを使用して、サービスの停止や開始、およびサービス アカウントの変更を行うことができます。  

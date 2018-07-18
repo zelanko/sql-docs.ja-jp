@@ -1,5 +1,5 @@
 ---
-title: '[複数フラット ファイル接続マネージャー エディター] ([全般] ページ) |Microsoft ドキュメント'
+title: 複数フラット ファイル接続マネージャー エディター (全般 ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.general.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 200a1ea8334c1347597f2364e624881c74a0e499
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: bbe0e78fab005c25ae1164fda1563818f29a5f3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172843"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>[複数フラット ファイル接続マネージャー エディター] ([全般] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、同じデータ形式を持つファイルのグループを選択したり、そのデータ形式を指定したりできます。 複数フラット ファイル接続は、パッケージが同じ形式のテキスト ファイルのグループに接続できるようにします。  
@@ -34,7 +34,7 @@ ms.locfileid: "36077118"
  **接続マネージャー名**  
  ワークフローにおける複数フラット ファイル接続の一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **description**  
+ **[説明]**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的について記述することをお勧めします。  
   
  **ファイル名**  
@@ -88,6 +88,6 @@ ms.locfileid: "36077118"
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[複数フラット ファイル接続マネージャー エディター&#40;列] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
  [[複数フラット ファイル接続マネージャー エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [複数フラット ファイル接続マネージャー エディター&#40;ページをプレビューします。&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [複数フラット ファイル接続マネージャー エディター&#40;ページをプレビュー&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

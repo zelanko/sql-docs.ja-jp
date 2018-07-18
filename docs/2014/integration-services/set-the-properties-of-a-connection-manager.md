@@ -1,5 +1,5 @@
 ---
-title: 接続マネージャーのプロパティを設定 |Microsoft ドキュメント
+title: 接続マネージャーのプロパティを設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], modifying
 - modifying connection managers
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
 caps.latest.revision: 35
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 558616f859f89c5bc6220f8e84124001bc4c8796
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 42e6f4473e9589ce861c22d6e85d83502e6329b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190612"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>接続マネージャーのプロパティを設定する
   すべての接続マネージャーは **[プロパティ]** ウィンドウを使用して構成できます。  
@@ -64,9 +64,9 @@ ms.locfileid: "36178921"
     |[ファイル接続マネージャー](connection-manager/file-connection-manager.md)|[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[複数ファイル接続マネージャー](connection-manager/multiple-files-connection-manager.md)|[[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[フラット ファイル接続マネージャー](connection-manager/flat-file-connection-manager.md)|[[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
-    |[複数フラット ファイル接続マネージャー](connection-manager/multiple-flat-files-connection-manager.md)|[[複数フラット ファイル接続マネージャー エディター &#40;[全般] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター&#40;列] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [複数フラット ファイル接続マネージャー エディター&#40;ページをプレビューします。&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
+    |[複数フラット ファイル接続マネージャー](connection-manager/multiple-flat-files-connection-manager.md)|[[複数フラット ファイル接続マネージャー エディター &#40;[全般] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター&#40;列] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [複数フラット ファイル接続マネージャー エディター&#40;ページをプレビュー&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
     |[FTP 接続マネージャー](connection-manager/ftp-connection-manager.md)|[FTP 接続マネージャー エディター](../../2014/integration-services/ftp-connection-manager-editor.md)|  
-    |[HTTP 接続マネージャー](connection-manager/http-connection-manager.md)|[HTTP 接続マネージャー エディター&#40;サーバー ページ&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 接続マネージャー エディター &#40;[プロキシ] ページ&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
+    |[HTTP 接続マネージャー](connection-manager/http-connection-manager.md)|[HTTP 接続マネージャー エディター&#40;サーバー ページ&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 接続マネージャー エディター&#40;プロキシ ページ&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ 接続マネージャー](connection-manager/msmq-connection-manager.md)|[MSMQ 接続マネージャー エディター](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[ODBC 接続マネージャー](connection-manager/odbc-connection-manager.md)|[ODBC 接続マネージャーの UI リファレンス](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
     |[OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](configure-ole-db-connection-manager.md)|  

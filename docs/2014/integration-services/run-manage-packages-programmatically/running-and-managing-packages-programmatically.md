@@ -14,13 +14,13 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e3e7721296c0d436ad484a1d4bad96caeef83e39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 659952d44fa2c530a313a4f6bd29cfbfddf9d236
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239152"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>プログラムによるパッケージの実行と管理
   開発環境以外で [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理および実行する必要がある場合は、プログラムでパッケージを操作できます。 その場合、次に示すいくつかの方法があります。  
@@ -40,7 +40,7 @@ ms.locfileid: "36084414"
 ## <a name="running-packages-on-the-integration-services-server"></a>Integration Services サーバー上のパッケージの実行  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにパッケージを配置するときに、<xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間を使用してパッケージをプログラムで実行できます。 Microsoft.SqlServer.Management.IntegrationServices アセンブリは、.NET Framework 3.5 でコンパイルされます。 .NET Framework 4.0 アプリケーションを構築する場合は、プロジェクト ファイルに直接アセンブリ参照を追加する必要がある場合があります。  
   
- 名前空間を使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置および管理することもできます。 名前空間とコード スニペットの概要については、blogs.msdn.com のブログ エントリ「[SSIS カタログ マネージ オブジェクト モデルの概要](http://go.microsoft.com/fwlink/?LinkId=253122)」を参照してください。  
+ 名前空間を使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置および管理することもできます。 名前空間とコード スニペットの概要については、blogs.msdn.com のブログ エントリ「[SSIS カタログ マネージド オブジェクト モデルの概要](http://go.microsoft.com/fwlink/?LinkId=253122)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ローカル実行とリモート実行の相違点について](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
@@ -56,7 +56,7 @@ ms.locfileid: "36084414"
  ローカル コンピューターでパッケージを実行し、DataReader 変換先および DtsClient 名前空間を使用して、データ フローの出力をクライアント アプリケーションに読み込む方法について説明します。  
   
  [プログラムによる使用可能なパッケージの列挙](../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスによって管理されている使用可能なパッケージを検出する方法について説明します。  
+ ph x="1" /&gt; サービスによって管理されている使用可能なパッケージを検出する方法について説明します。  
   
  [プログラムによるパッケージとフォルダーの管理](../run-manage-packages-programmatically/managing-packages-and-folders-programmatically.md)  
  パッケージとフォルダーを作成、名前変更、および削除する方法について説明します。  
@@ -81,7 +81,7 @@ ms.locfileid: "36084414"
  [プログラムによるパッケージの作成](../building-packages-programmatically/building-packages-programmatically.md)  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージをプログラムで作成、構成、および保存する方法について説明します。  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services と終了日を維持** <br /> 最新のダウンロード、アーティクル、サンプル、およびビデオの[!INCLUDE[msCoName](../../includes/msconame-md.md)]は、コミュニティで選択したソリューションを参照してください、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] MSDN のページ。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> 最新のダウンロード、アーティクル、サンプル、およびビデオの[!INCLUDE[msCoName](../../includes/msconame-md.md)]、およびコミュニティで選択されたソリューションを参照してください、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdn ページ。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

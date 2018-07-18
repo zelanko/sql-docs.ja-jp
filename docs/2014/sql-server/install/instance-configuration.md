@@ -1,5 +1,5 @@
 ---
-title: インスタンスの構成 |Microsoft ドキュメント
+title: インスタンスの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 757b29a54828816de27559715e88b337bd5a06a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bdcfdc34d61b38992c44a220b7b58041cd496200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36174402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274328"
 ---
 # <a name="instance-configuration"></a>インスタンスの構成
   **インストール ウィザードの** [インスタンスの構成] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスまたは名前付きインスタンスのどちらを作成するのかを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがまだインストールされていない場合は、名前付きインスタンスを指定しない限り、既定のインスタンスが作成されます。  
@@ -65,7 +65,7 @@ ms.locfileid: "36174402"
   
 -   インスタンス名として MSSQLServer を指定すると、既定のインスタンスが作成されます。  
   
--   インストール[!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]は常に 'powerpivot' 名前付きインスタンスとしてインストールします。 この機能ロール用に別のインスタンス名を指定できます。  
+-   インストール[!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]は常に 'powerpivot' 名前付きインスタンスとしてインストールされます。 この機能ロール用に別のインスタンス名を指定できます。  
   
 -   インスタンス名は最大 16 文字まで指定できます。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36174402"
   
 -   埋め込み型スペースなどの特殊文字は、インスタンス名に使用できません。 円記号 (\\)、コンマ (,)、コロン (:)、セミコロン (;)、単一引用符 (')、アンパサンド (&)、ハイフン (-)、およびアット マーク (@) も使用できません。  
   
--   **現在の Windows コード ページで有効な文字だけを使えます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの名前。サポートされていない Unicode 文字を使用する場合、セットアップ エラーが発生します。**  
+-   **現在の Windows コード ページで有効な文字のみで使用できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス名。サポートされていない Unicode 文字を使用すると、セットアップ エラーが発生します。**  
   
  **検出されたインスタンスと機能**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行中のコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとコンポーネントが一覧表示されます。  
@@ -90,7 +90,7 @@ ms.locfileid: "36174402"
   
  ディレクトリ、ファイルの場所、およびインスタンス ID の名前付けの詳細については、「[SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスを構成するすべてのコンポーネントは 1 つの単位として管理されます。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。  
+ ph x="1" /&gt; の特定のインスタンスを構成するすべてのコンポーネントは 1 つの単位として管理されます。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。  
   
  同じインスタンス名を持つすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントは、次の条件を満たす必要があります。  
   

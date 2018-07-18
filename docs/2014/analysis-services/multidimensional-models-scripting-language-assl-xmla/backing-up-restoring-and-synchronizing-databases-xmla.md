@@ -1,5 +1,5 @@
 ---
-title: バックアップの復元、データベース、および同期 (XMLA) |Microsoft ドキュメント
+title: バックアップ、復元、およびデータベース (XMLA) の同期 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ecc1bfca1840b64566243c1ec675289db1a7686f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07f4fd6beae68fc0d8a81f610beb56ff779ec25d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159603"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>データベースのバックアップ、復元、および同期 (XMLA)
   XML for Analysis には、データベースのバックアップ、復元、および同期を行う 3 つのコマンドがあります。  
   
--   [バックアップ](../xmla/xml-elements-commands/backup-element-xmla.md)コマンド バックアップ、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベースを使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]バックアップ ファイル (.abf) のセクションで説明した[データベースのバックアップ](#backing_up_databases)です。  
+-   [バックアップ](../xmla/xml-elements-commands/backup-element-xmla.md)コマンドでバックアップを[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベースを使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]バックアップ ファイル (.abf) をセクションで説明した[データベースのバックアップ](#backing_up_databases)します。  
   
--   [復元](../xmla/xml-elements-commands/restore-element-xmla.md)復元のコマンド、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、セクションの説明に従って、.abf ファイルからデータベース[Restoring Databases](#restoring_databases)です。  
+-   [復元](../xmla/xml-elements-commands/restore-element-xmla.md)コマンドは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  セクションで説明されているデータベースを .abf ファイルから[データベースの復元](#restoring_databases)します。  
   
--   [同期](../xmla/xml-elements-commands/synchronize-element-xmla.md)いずれかのコマンドでは同期[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のセクションで説明したデータと、別のデータベースのメタデータを使ってデータベース[データベースの同期](#synchronizing_databases)です。  
+-   [同期](../xmla/xml-elements-commands/synchronize-element-xmla.md)コマンドでは、1 つは同期[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、セクションで説明した別のデータベースのメタデータとデータでデータベース[データベースの同期](#synchronizing_databases)します。  
   
 ##  <a name="backing_up_databases"></a> データベースのバックアップ  
  上で述べたように、`Backup` コマンドは指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをバックアップ ファイルにバックアップします。 `Backup` コマンドには、バックアップするデータベースや使用するバックアップ ファイル、セキュリティ定義のバックアップ方法、およびバックアップするリモート パーティションを指定するためのさまざまなプロパティがあります。  
@@ -44,23 +44,23 @@ ms.locfileid: "36071772"
 >  Analysis Services サービス アカウントには、各ファイルに指定されたバックアップ場所に対する書き込み権限が必要です。 また、ユーザーが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの管理者ロールを持っているか、バックアップするデータベースに対してフル コントロール (管理者) 権限を持つデータベース ロールのメンバーである必要があります。  
   
 ### <a name="specifying-the-database-and-backup-file"></a>データベースとバックアップ ファイルの指定  
- 設定をバックアップするデータベースを指定する、[オブジェクト](../xmla/xml-elements-properties/object-element-xmla.md)のプロパティ、`Backup`コマンド。 `Object` プロパティには、データベースを表すオブジェクト識別子を含める必要があります。含まれていない場合、エラーが発生します。  
+ バックアップするデータベースを指定する設定、[オブジェクト](../xmla/xml-elements-properties/object-element-xmla.md)のプロパティ、`Backup`コマンド。 `Object` プロパティには、データベースを表すオブジェクト識別子を含める必要があります。含まれていない場合、エラーが発生します。  
   
- 設定を作成して、バックアップ プロセスで使用するには、ファイルを指定する、[ファイル](../xmla/xml-elements-properties/file-element-xmla.md)のプロパティ、`Backup`コマンド。 `File` プロパティは、作成するバックアップ ファイルの UNC パスとファイル名に設定する必要があります。  
+ 作成して、バックアップ プロセスによって使用されるファイルを指定する設定、[ファイル](../xmla/xml-elements-properties/file-element-xmla.md)のプロパティ、`Backup`コマンド。 `File` プロパティは、作成するバックアップ ファイルの UNC パスとファイル名に設定する必要があります。  
   
  バックアップに使用するファイルの指定に加えて、指定したバックアップ ファイルに対する以下のオプションを設定できます。  
   
 -   設定した場合、 [AllowOverwrite](../xmla/xml-elements-properties/allowoverwrite-element-xmla.md)プロパティを true に、`Backup`コマンドでは、指定したファイルが既に存在する場合、バックアップ ファイルが上書きされます。 `AllowOverwrite` プロパティを false に設定した場合、指定されたバックアップ ファイルが既に存在すると、エラーが発生します。  
   
--   設定した場合、 [ApplyCompression](../xmla/xml-elements-properties/applycompression-element-xmla.md)ファイルが作成された後に、プロパティを true、バックアップ ファイルには圧縮されます。  
+-   設定した場合、 [ApplyCompression](../xmla/xml-elements-properties/applycompression-element-xmla.md)ファイルを作成した後、プロパティを true に、バックアップ ファイルが圧縮されています。  
   
--   設定した場合、[パスワード](../xmla/xml-elements-properties/password-element-xmla.md)空白値、バックアップ ファイルにプロパティが指定したパスワードを使用して暗号化します。  
+-   設定した場合、[パスワード](../xmla/xml-elements-properties/password-element-xmla.md)任意の空白以外の値、バックアップ ファイルにプロパティが指定したパスワードを使用して暗号化します。  
   
     > [!IMPORTANT]  
     >  `ApplyCompression` および `Password` プロパティが指定されない場合、バックアップ ファイルには接続文字列に含まれるユーザー名とパスワードがクリア テキストで格納されます。 クリア テキストで格納されたデータは、取得される可能性があります。 セキュリティを強化するためには、`ApplyCompression` および `Password` 設定を使用して、バックアップの圧縮と暗号化の両方を行ってください。  
   
 ### <a name="backing-up-security-settings"></a>セキュリティ設定のバックアップ  
- [セキュリティ](../xmla/xml-elements-properties/security-element-xmla.md)プロパティを決定するかどうか、`Backup`コマンドで定義されたロールや権限など、セキュリティ定義をバックアップ、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。 `Security` プロパティは、バックアップ ファイルに、セキュリティ定義のメンバーとして Windows ユーザー アカウントとグループを含めるかどうかも決定します。  
+ [セキュリティ](../xmla/xml-elements-properties/security-element-xmla.md)プロパティを決定するかどうか、`Backup`コマンドで定義された、ロールや権限など、セキュリティ定義をバックアップ、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。 `Security` プロパティは、バックアップ ファイルに、セキュリティ定義のメンバーとして Windows ユーザー アカウントとグループを含めるかどうかも決定します。  
   
  `Security` プロパティの値は、次の表の一覧に示す文字列のいずれかに限定されています。  
   
@@ -71,15 +71,15 @@ ms.locfileid: "36071772"
 |*IgnoreSecurity*|バックアップ ファイルからセキュリティ定義を除外します。|  
   
 ### <a name="backing-up-remote-partitions"></a>リモート パーティションのバックアップ  
- リモート パーティションをバックアップするには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、データベースを設定する、 [BackupRemotePartitions](../xmla/xml-elements-properties/backupremotepartitions-element-xmla.md)のプロパティ、`Backup`コマンドを true に設定します。 この設定を行うと、`Backup` コマンドは、データベースのリモート パーティションを格納するために使用するリモート バックアップ ファイルを、各リモート データ ソースに対して作成します。  
+ リモート パーティションをバックアップする、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、データベースを設定する、 [BackupRemotePartitions](../xmla/xml-elements-properties/backupremotepartitions-element-xmla.md)のプロパティ、`Backup`コマンドを true に設定します。 この設定を行うと、`Backup` コマンドは、データベースのリモート パーティションを格納するために使用するリモート バックアップ ファイルを、各リモート データ ソースに対して作成します。  
   
- バックアップする各リモート データ ソースを指定できます、対応するバックアップ ファイルを含めることによって、[場所](../xmla/xml-elements-properties/location-element-xmla.md)内の要素、[場所](../xmla/xml-elements-properties/locations-element-xmla.md)のプロパティ、`Backup`コマンド。 `Location`持つ要素があります、`File`プロパティが、リモート バックアップ ファイルの UNC パスとファイル名に設定とその[DataSourceID](../xmla/xml-elements-properties/id-element-xmla.md)データベースで定義されているプロパティをリモート データ ソースの識別子に設定します。  
+ バックアップする各リモート データ ソースを含めることによって、対応するバックアップ ファイルを指定することができます、[場所](../xmla/xml-elements-properties/location-element-xmla.md)内の要素、[場所](../xmla/xml-elements-properties/locations-element-xmla.md)のプロパティ、`Backup`コマンド。 `Location`要素があります、`File`プロパティが、リモート バックアップ ファイルの UNC パスとファイル名に設定し、その[DataSourceID](../xmla/xml-elements-properties/id-element-xmla.md)データベースで定義されているプロパティが、リモート データ ソースの識別子に設定します。  
   
 ##  <a name="restoring_databases"></a> データベースの復元  
  `Restore` コマンドは、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをバックアップ ファイルから復元します。 `Restore` コマンドには、復元するデータベースや使用するバックアップ ファイル、セキュリティ定義の復元方法、復元するリモート パーティション、およびリレーショナル OLAP (ROLAP) オブジェクトの再配置を指定するためのさまざまなプロパティがあります。  
   
 > [!IMPORTANT]  
->  バックアップ ファイルごとに、復元コマンドを実行するユーザーは、各ファイルに指定されたバックアップ場所から読み取る権限を持っている必要があります。 サーバーにインストールされていない [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する場合、ユーザーは、その [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーであることも必要です。 上書きする、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース、ユーザーには、次のロールのいずれかが必要: サーバー ロールのメンバー、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスまたは復元するデータベースに対してフル コントロール (管理者) 権限を持つデータベース ロールのメンバーです。  
+>  バックアップ ファイルごとに、復元コマンドを実行するユーザーは、各ファイルに指定されたバックアップ場所から読み取る権限を持っている必要があります。 サーバーにインストールされていない [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する場合、ユーザーは、その [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーであることも必要です。 上書きする、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース、ユーザーには、次のロールのいずれかが必要: サーバー ロールのメンバー、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスまたは復元するデータベースに対してフル コントロール (管理者) 権限を持つデータベース ロールのメンバー。  
   
 > [!NOTE]  
 >  既存のデータベースを復元すると、データベースを復元したユーザーは、復元されたデータベースにアクセスできなくなる可能性があります。 バックアップの実行時に、ユーザーがサーバー ロールのメンバー、またはフル コントロール (管理者) 権限を持つデータベース ロールのメンバーではなかった場合、このようにアクセスできなくなることがあります。  
@@ -101,18 +101,18 @@ ms.locfileid: "36071772"
 |*IgnoreSecurity*|データベースからセキュリティ定義を除外します。|  
   
 ### <a name="restoring-remote-partitions"></a>リモート パーティションの復元  
- 以前の `Backup` コマンドの実行時に作成された各リモート バックアップ ファイルについては、`Location` コマンドの `Locations` プロパティに `Restore` 要素を含めることによって、それに関連付けられているリモート パーティションを復元することができます。 [%Datasourcetype](../xmla/xml-elements-properties/type-element-xmla.md)それぞれのプロパティ`Location`要素を除外または明示的に設定する必要があります*リモート*です。  
+ 以前の `Backup` コマンドの実行時に作成された各リモート バックアップ ファイルについては、`Location` コマンドの `Locations` プロパティに `Restore` 要素を含めることによって、それに関連付けられているリモート パーティションを復元することができます。 [%Datasourcetype](../xmla/xml-elements-properties/type-element-xmla.md)プロパティごとに`Location`要素を除外または明示的に設定する必要があります*リモート*します。  
   
  指定された各 `Location` 要素に関して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスは、`DataSourceID` プロパティで指定されたリモート データ ソースにアクセスし、`File` プロパティで指定されたリモート バックアップ ファイルで定義されているパーティションを復元します。 `DataSourceID` および `File` プロパティに加えて、リモート パーティションを復元するために使用される各 `Location` 要素では、以下のプロパティを使用できます。  
   
 -   ph x="1" /&gt; 要素の `ConnectionString` プロパティを別の接続文字列に設定すると、`Location` で指定されたリモート データ ソースへの接続文字列をオーバーライドできます。 その場合、`Restore` コマンドは、`ConnectionString` プロパティに含まれる接続文字列を使用します。 `ConnectionString` が指定されていない場合、`Restore` コマンドは、指定されたリモート データ ソースのバックアップ ファイルに格納されている接続文字列を使用します。 `ConnectionString` 設定を使用すると、リモート パーティションを別のリモート インスタンスに移動することができます。 ただし、`ConnectionString` 設定を使用して、復元されるデータベースを含む同じインスタンスにリモート パーティションを復元することはできません。 つまり、`ConnectionString` プロパティを使用してリモート パーティションをローカル パーティションにすることはできません。  
   
--   リモート データ ソース上のリモート パーティションの格納に使用される各元フォルダーを指定できます、[フォルダー](../xmla/xml-elements-properties/folder-element-xmla.md)元のフォルダーに格納されているすべてのリモート パーティションを復元するための新しいフォルダーを示す要素。 `Folder` 要素が指定されていない場合、`Restore` コマンドは、リモート バックアップ ファイルに含まれるリモート パーティションに対して指定されている元のフォルダーを使用します。  
+-   リモート データ ソースにリモート パーティションを格納するために使用元フォルダーごとに指定することができます、[フォルダー](../xmla/xml-elements-properties/folder-element-xmla.md)元のフォルダーに格納されているすべてのリモート パーティションを復元するための新しいフォルダーを示す要素。 `Folder` 要素が指定されていない場合、`Restore` コマンドは、リモート バックアップ ファイルに含まれるリモート パーティションに対して指定されている元のフォルダーを使用します。  
   
 ### <a name="relocating-rolap-objects"></a>ROLAP オブジェクトの再配置  
  `Restore` コマンドでは、ROLAP ストレージを使用するオブジェクトの集計やデータを復元できません。そのような情報は、基になるリレーショナル データ ソースのテーブルに格納されているためです。 ただし、ROLAP オブジェクトのメタデータは復元できます。 ROLAP オブジェクトのメタデータを復元するために、`Restore` コマンドはリレーショナル データ ソースのテーブル構造を再作成します。  
   
- `Location` コマンドで `Restore` 要素を使用すると、ROLAP オブジェクトの再配置を行えます。 各`Location`、データ ソースを再配置に使用する要素、`DataSourceType`明示的にプロパティを設定する必要があります*ローカル*です。 また、`ConnectionString` 要素の `Location` プロパティを、新しい場所の接続文字列に設定する必要があります。 復元の実行時に、`Restore` コマンドは、`DataSourceID` 要素の `Location` プロパティによって識別されるデータ ソースへの接続文字列を、`ConnectionString` 要素の `Location` プロパティの値に置き換えます。  
+ `Location` コマンドで `Restore` 要素を使用すると、ROLAP オブジェクトの再配置を行えます。 各`Location`、データ ソースを配置する場合に使用される要素、`DataSourceType`プロパティ明示的に設定する必要があります*ローカル*します。 また、`ConnectionString` 要素の `Location` プロパティを、新しい場所の接続文字列に設定する必要があります。 復元の実行時に、`Restore` コマンドは、`DataSourceID` 要素の `Location` プロパティによって識別されるデータ ソースへの接続文字列を、`ConnectionString` 要素の `Location` プロパティの値に置き換えます。  
   
 ##  <a name="synchronizing_databases"></a> データベースの同期  
  `Synchronize` コマンドは、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのデータとメタデータを別のデータベースと同期させます。 `Synchronize` コマンドには、同期元データベースやセキュリティ定義の同期方法、同期するリモート パーティション、および ROLAP オブジェクトの同期を指定するためのさまざまなプロパティがあります。  
@@ -121,14 +121,14 @@ ms.locfileid: "36071772"
 >  `Synchronize` コマンドを実行できるのは、サーバー管理者とデータベース管理者だけです。 同期元データベースと同期先のデータベースの両方の互換性レベルが同じであることが必要です。  
   
 ### <a name="specifying-the-source-database"></a>同期元データベースの指定  
- [ソース](../xmla/xml-elements-properties/source-element-xmla.md)のプロパティ、`Synchronize`コマンドには、2 つのプロパティが含まれています。`ConnectionString`と`Object`です。 `ConnectionString` プロパティには同期元データベースを含むインスタンスの接続文字列が含まれ、`Object` プロパティには同期元データベースのオブジェクト識別子が含まれます。  
+ [ソース](../xmla/xml-elements-properties/source-element-xmla.md)のプロパティ、`Synchronize`コマンドには、2 つのプロパティが含まれています。`ConnectionString`と`Object`します。 `ConnectionString` プロパティには同期元データベースを含むインスタンスの接続文字列が含まれ、`Object` プロパティには同期元データベースのオブジェクト識別子が含まれます。  
   
  同期先データベースは、`Synchronize` コマンドが実行されるセッションでの現在のデータベースです。  
   
  `ApplyCompression` コマンドの `Synchronize` プロパティが true に設定されている場合、同期元データベースから同期先データベースへ送信される情報は、送信前に圧縮されます。  
   
 ### <a name="synchronizing-security-settings"></a>セキュリティ設定の同期  
- [SynchronizeSecurity](../xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)プロパティを決定するかどうか、`Synchronize`コマンドは、ロールや権限、ソース データベースで定義されているなど、セキュリティ定義を同期します。 `SynchronizeSecurity` プロパティは、`Sychronize` コマンドが Windows ユーザー アカウントとグループをセキュリティ定義のメンバーに含めるかどうかも決定します。  
+ [SynchronizeSecurity](../xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)プロパティかどうか、`Synchronize`コマンドは、ソース データベースで定義されたアクセス許可、ロールなど、セキュリティ定義を同期します。 `SynchronizeSecurity` プロパティは、`Sychronize` コマンドが Windows ユーザー アカウントとグループをセキュリティ定義のメンバーに含めるかどうかも決定します。  
   
  この要素の値は、次の表の一覧に示す文字列のいずれかに限定されています。  
   
@@ -139,19 +139,19 @@ ms.locfileid: "36071772"
 |*IgnoreSecurity*|同期先データベースからセキュリティ定義を除外します。|  
   
 ### <a name="synchronizing-remote-partitions"></a>リモート パーティションの同期  
- 同期元データベース上に存在する各リモート データ ソースについては、`Location` コマンドの `Locations` プロパティに `Synchronize` 要素を含めることによって、それぞれに関連付けられているリモート パーティションを同期させることができます。 各`Location`要素、`DataSourceType`プロパティを除外または明示的に設定する必要があります*リモート*です。  
+ 同期元データベース上に存在する各リモート データ ソースについては、`Location` コマンドの `Locations` プロパティに `Synchronize` 要素を含めることによって、それぞれに関連付けられているリモート パーティションを同期させることができます。 各`Location`要素、`DataSourceType`プロパティを除外または明示的に設定する必要があります*リモート*します。  
   
- 同期先データベースのリモート データ ソースを定義してそれに接続するために、`Synchronize` コマンドでは、`ConnectionString` 要素の `Location` プロパティで定義されている接続文字列を使用します。 `Synchronize` コマンドはその後、`DataSourceID` 要素の `Location` プロパティを使用して、同期させるリモート パーティションを識別します。 `Synchronize`コマンドで指定されたリモート データ ソース上のリモート パーティションを同期する、`DataSourceID`プロパティで指定されたリモート データ ソースと元のデータベースに対して、`DataSourceID`転送先データベースのプロパティです。  
+ 同期先データベースのリモート データ ソースを定義してそれに接続するために、`Synchronize` コマンドでは、`ConnectionString` 要素の `Location` プロパティで定義されている接続文字列を使用します。 `Synchronize` コマンドはその後、`DataSourceID` 要素の `Location` プロパティを使用して、同期させるリモート パーティションを識別します。 `Synchronize`コマンドで指定されたリモート データ ソース上のリモート パーティションを同期する、`DataSourceID`プロパティで指定されたリモート データ ソースとソース データベースで、`DataSourceID`先データベースのプロパティ。  
   
  同期先データベースのリモート データ ソース上のリモート パーティションを格納するために使用されている元の各フォルダーについて、`Folder` 要素に `Location` 要素を指定することもできます。 `Folder` 要素は、リモート データ ソース上の元のフォルダーに格納されているすべてのリモート パーティションを同期させるための、同期先データベースに対する新しいフォルダーを示します。 `Folder` 要素が指定されていない場合、Synchronize コマンドは、同期元データベースに含まれるリモート パーティションに対して指定されている元のフォルダーを使用します。  
   
 ### <a name="synchronizing-rolap-objects"></a>ROLAP オブジェクトの同期  
  `Synchronize` コマンドでは、ROLAP ストレージを使用するオブジェクトの集計やデータを同期できません。そのような情報は、基になるリレーショナル データ ソースのテーブルに格納されているためです。 ただし、ROLAP オブジェクトのメタデータは同期できます。 メタデータを同期させるために、`Synchronize` コマンドはリレーショナル データ ソースのテーブル構造を再作成します。  
   
- Synchronize コマンドで `Location` 要素を使用すると、ROLAP オブジェクトの同期を行えます。 各`Location`、データ ソースを再配置に使用する要素、`DataSourceType`明示的にプロパティを設定する必要があります*ローカル*です。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 また、`ConnectionString` 要素の `Location` プロパティを、新しい場所の接続文字列に設定する必要があります。 同期の実行時に、`Synchronize` コマンドは、`DataSourceID` 要素の `Location` プロパティによって識別されるデータ ソースへの接続文字列を、`ConnectionString` 要素の `Location` プロパティの値に置き換えます。  
+ Synchronize コマンドで `Location` 要素を使用すると、ROLAP オブジェクトの同期を行えます。 各`Location`、データ ソースを配置する場合に使用される要素、`DataSourceType`プロパティ明示的に設定する必要があります*ローカル*します。 . また、`ConnectionString` 要素の `Location` プロパティを、新しい場所の接続文字列に設定する必要があります。 同期の実行時に、`Synchronize` コマンドは、`DataSourceID` 要素の `Location` プロパティによって識別されるデータ ソースへの接続文字列を、`ConnectionString` 要素の `Location` プロパティの値に置き換えます。  
   
 ## <a name="see-also"></a>参照  
- [要素をバックアップ&#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
+ [バックアップ要素&#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
  [Restore 要素&#40;XMLA&#41;](../xmla/xml-elements-commands/restore-element-xmla.md)   
  [Synchronize 要素&#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Analysis Services データベースのバックアップと復元](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

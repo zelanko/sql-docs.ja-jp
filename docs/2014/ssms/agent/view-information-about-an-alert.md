@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
 - viewing alerts
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - status information [SQL Server], alerts
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9324249df2f96bf7ddf2a94b199cdfcfe003cb55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 862613ec00fb0274c5c227ab9903568b31969dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187749"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に関する情報を表示する方法について説明します。  
@@ -63,9 +63,9 @@ ms.locfileid: "36173844"
   
      *[<アラート名> 警告のプロパティ]* ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
   
-    -   [アラートのプロパティ-新規アラート&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [アラートのプロパティ-[新しい警告&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [アラートのプロパティ-新規アラート&#40;応答ページ&#41;](alert-properties-new-alert-response-page.md)  
+    -   [アラートのプロパティ-[新しい警告&#40;応答] ページ&#41;](alert-properties-new-alert-response-page.md)  
   
     -   [アラートのプロパティ: [新しい警告]&#40;オプション] ページ&#41;](alert-properties-new-alert-options-page.md)  
   
@@ -93,6 +93,6 @@ ms.locfileid: "36173844"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_help_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql)です。  
+ 詳細については、次を参照してください。 [sp_help_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql)します。  
   
   

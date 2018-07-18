@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
@@ -16,13 +16,13 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b3b4ede3a29c43cf2c77b61e2fe8fb6fb3b9e6ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 9ac8b351e0d3cd76650df17e2aa5aa00ed427be3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309322"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>アイテムの移動または削除 (レポート マネージャー)
   レポート サーバーにパブリッシュしたレポートやレポート関連アイテムは、フォルダーに格納されます。 アイテムは異なるフォルダーに移動でき、それらのアイテムへの参照はレポート サーバーによって自動的に保持されます。 アイテムを削除する前に、そのアイテムに依存しているアイテムが他に存在しないか確認してください。  
@@ -45,7 +45,7 @@ ms.locfileid: "36176103"
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>[コンテンツ] ページでアイテムを移動するには  
   
-1.  開始 [レポート マネージャー &#40;SSRS ネイティブ モード&#41;]./[レポートのマネージャー-ssrs-ネイティブ-mode.md) で変更します。  
+1.  開始 [レポート マネージャー &#40;SSRS ネイティブ モード&#41;]./[レポートのマネージャーの ssrs-ネイティブ-mode.md) で変更します。  
   
 2.  レポート マネージャーで、 **[コンテンツ]** ページに移動し、移動するアイテムを探します。  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36176103"
  または、移動するオブジェクトに移動して **[プロパティ]** をクリックし、ページの上部にある **[移動]** をクリックします。  
   
 ## <a name="delete-an-item"></a>アイテムの削除  
- アイテムを削除する前に、そのアイテムが他のアイテムによって使用されていないかどうかを確認してください。 たとえば、共有データ ソースを削除した場合、そのデータ ソースを使用するレポートおよびモデルは実行できなくなります。 レポートを削除すると、そのレポートに関連付けられているサブスクリプションおよびレポート履歴も削除されます。 項目を検索する依存アイテムを次を参照してください [依存アイテム] ページ&#40;レポート マネージャー&#41;].。/[依存の項目のページのレポート-manager.md) で変更します。  
+ アイテムを削除する前に、そのアイテムが他のアイテムによって使用されていないかどうかを確認してください。 たとえば、共有データ ソースを削除した場合、そのデータ ソースを使用するレポートおよびモデルは実行できなくなります。 レポートを削除すると、そのレポートに関連付けられているサブスクリプションおよびレポート履歴も削除されます。 項目の依存アイテムを検索する、次を参照してください [依存アイテム] ページ&#40;レポート マネージャー&#41;].。/[依存-項目のページのレポート-manager.md) で変更します。  
   
 #### <a name="to-delete-a-report-or-item"></a>レポートまたはアイテムを削除するには  
   
-1.  開始 [レポート マネージャー &#40;SSRS ネイティブ モード&#41;]./[レポートのマネージャー-ssrs-ネイティブ-mode.md) で変更します。  
+1.  開始 [レポート マネージャー &#40;SSRS ネイティブ モード&#41;]./[レポートのマネージャーの ssrs-ネイティブ-mode.md) で変更します。  
   
 2.  レポート マネージャーで、 **[コンテンツ]** ページに移動し、削除するアイテムを探します。  
   

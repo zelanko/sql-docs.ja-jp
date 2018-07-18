@@ -1,5 +1,5 @@
 ---
-title: 概要 (SMO) |Microsoft ドキュメント
+title: 概要 (SMO) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,24 +12,24 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 caps.latest.revision: 68
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85d8e44514e4d26be4c720e562c4db7ac7b7af12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 28ccb6ff5219277d25d56670cf46f84e8e7726fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36083168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315662"
 ---
 # <a name="overview-smo"></a>概要 (SMO)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) は、プログラムによる管理のために設計されたオブジェクト[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 SMO を使用すると、カスタマイズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理アプリケーションを作成することができます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を管理するための強力で高度なアプリケーションですが、SMO アプリケーションの方が適している場合もあります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) はオブジェクトのプログラムによる管理用に設計された[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 SMO を使用すると、カスタマイズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理アプリケーションを作成することができます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を管理するための強力で高度なアプリケーションですが、SMO アプリケーションの方が適している場合もあります。  
   
  たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理タスクを制御するユーザー アプリケーションでは、新規ユーザーのニーズを満たし、トレーニング コストを削減するために、単純化を必要とする場合があります。 カスタマイズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの作成や、インデックスの効率を高めて、効率性を監視するためのアプリケーション作成が必要になることもあります。 また、サード パーティ製のハードウェアやソフトウェアをデータベース管理アプリケーションにシームレスに含めるために、SMO アプリケーションを使用する場合もあります。  
   
  SMO オブジェクト モデルは、分散管理オブジェクト (SQL-DMO) のオブジェクト モデルを拡張し、その代わりとなるものです。 SQL-DMO と比較して、SMO はパフォーマンス、制御性、および使いやすさの点で向上しています。 ほとんどの SQL-DMO 機能は SMO にも含まれており、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新機能をサポートするさまざまな新しいクラスがあります。 SMO オブジェクト モデルは直感的であり、これまでの技術や知識を引き続き使用するために、可能な限り SQL-DMO 用語が使用されています。  
   
- SMO と互換性が[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンでは、複数のバージョンの環境を簡単に管理することができます。  
+ SMO と互換性が[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンでは、複数のバージョンの環境を簡単に管理できます。  
   
  SMO には次の新機能が含まれています。  
   
@@ -49,29 +49,29 @@ ms.locfileid: "36083168"
   
 -   パーティション構成にデータを格納するためのテーブルおよびインデックスのパーティション分割。 詳細については、「 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
--   SOAP 要求を管理するための HTTP エンドポイント。 詳細については、次を参照してください。[を実装するエンドポイント](tasks/implementing-endpoints.md)です。  
+-   SOAP 要求を管理するための HTTP エンドポイント。 詳細については、次を参照してください。[を実装するエンドポイント](tasks/implementing-endpoints.md)します。  
   
--   同時実行性を高めるためのスナップショット分離と行レベルのバージョニング。 詳細については、次を参照してください。[スナップショット分離を使用した作業](../native-client/features/working-with-snapshot-isolation.md)です。  
+-   同時実行性を高めるためのスナップショット分離と行レベルのバージョニング。 詳細については、次を参照してください。[スナップショット分離を使用した作業](../native-client/features/working-with-snapshot-isolation.md)します。  
   
--   XML データの検証と格納を可能にする、XML スキーマ コレクション、XML インデックス、および XML データ型。 詳細については、次を参照してください。 [XML スキーマ コレクション&#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md)と[を使用して XML スキーマ](tasks/using-xml-schemas.md)です。  
+-   XML データの検証と格納を可能にする、XML スキーマ コレクション、XML インデックス、および XML データ型。 詳細については、次を参照してください。 [XML スキーマ コレクション&#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md)と[を使用して XML スキーマ](tasks/using-xml-schemas.md)します。  
   
 -   データベースの読み取り専用コピーを作成するためのスナップショット データベース。  
   
--   メッセージ ベースの通信に対する [!INCLUDE[ssSB](../../includes/sssb-md.md)] サポート。 詳細については、次を参照してください。 [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)です。  
+-   メッセージ ベースの通信に対する [!INCLUDE[ssSB](../../includes/sssb-md.md)] サポート。 詳細については、次を参照してください。 [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの複数の名前に対するシノニム サポート。 詳細については、次を参照してください。[シノニム&#40;データベース エンジン&#41;](../synonyms/synonyms-database-engine.md)です。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの複数の名前に対するシノニム サポート。 詳細については、次を参照してください。[シノニム&#40;データベース エンジン&#41;](../synonyms/synonyms-database-engine.md)します。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での電子メール サービス、電子メール プロファイル、および電子メール アカウントの作成を可能にするデータベース メールの管理。 詳細については、「 [Database Mail](../database-mail/database-mail.md)」を参照してください。  
   
--   接続情報登録のための登録サーバーのサポート。 詳細については、次を参照してください。[サーバーの登録](../../ssms/register-servers/register-servers.md)です。  
+-   接続情報登録のための登録サーバーのサポート。 詳細については、次を参照してください。[サーバーの登録](../../ssms/register-servers/register-servers.md)します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントのトレースおよび再生。 詳細については、次を参照してください。 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)、 [SQL トレース](../sql-trace/sql-trace.md)、 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)、および[拡張イベント](../extended-events/extended-events.md)です。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントのトレースおよび再生。 詳細については、次を参照してください。 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)、 [SQL トレース](../sql-trace/sql-trace.md)、 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)、および[拡張イベント](../extended-events/extended-events.md)します。  
   
--   セキュリティ コントロールのための証明書およびキーのサポート。 詳細については、次を参照してください。[暗号化階層](../security/encryption/encryption-hierarchy.md)です。  
+-   セキュリティ コントロールのための証明書およびキーのサポート。 詳細については、次を参照してください。[暗号化階層](../security/encryption/encryption-hierarchy.md)します。  
   
 -   DDL イベント発生時に機能を追加するための DDL トリガー。 詳細については、「 [DDL トリガー](../triggers/ddl-triggers.md)」を参照してください。  
   
- SMO の名前空間は、<xref:Microsoft.SqlServer.Management.Smo> です。 SMO として実装、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]アセンブリ。 つまり、共通言語ランタイムが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SMO オブジェクトを使用する前に version 2.0 をインストールする必要があります。 SMO アセンブリは、既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK オプションを使用してグローバル アセンブリ キャッシュ (GAC) にインストールされています。 アセンブリは [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] にあります。 詳細については、次を参照してください。、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]ドキュメント。  
+ SMO の名前空間は、<xref:Microsoft.SqlServer.Management.Smo> です。 SMO は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]アセンブリ。 つまり、共通言語ランタイムが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SMO オブジェクトを使用する前に version 2.0 をインストールする必要があります。 SMO アセンブリは、既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK オプションを使用してグローバル アセンブリ キャッシュ (GAC) にインストールされています。 アセンブリは [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] にあります。 詳細については、次を参照してください。、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]ドキュメント。  
   
 ## <a name="smo-classes"></a>SMO クラス  
  SMO クラスには、インスタンス クラスおよびユーティリティ クラスの 2 つのカテゴリがあります。  
@@ -115,7 +115,7 @@ ms.locfileid: "36083168"
   
  **スクリプトの作成**  
   
- SMO では、スクリプティングが拡張されて `Scripter` クラスに移動されました。 `Scripter`クラスの依存関係を検出、オブジェクト、および依存関係の階層の操作を可能間の関係を理解することができます。 主なスクリプティング オブジェクトは、`Scripter` オブジェクトです。 また、依存関係を処理したり、進行中のイベントやエラー イベントに応答するサポート オブジェクトもいくつかあります。  
+ SMO では、スクリプティングが拡張されて `Scripter` クラスに移動されました。 `Scripter`クラスの依存関係を検出、オブジェクト、および依存関係階層の操作を可能間のリレーションシップを理解することができます。 主なスクリプティング オブジェクトは、`Scripter` オブジェクトです。 また、依存関係を処理したり、進行中のイベントやエラー イベントに応答するサポート オブジェクトもいくつかあります。  
   
  `Scripter` オブジェクトは、次の高度なスクリプティング オプションをサポートします。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36083168"
   
 -   エラー イベントへの応答  
   
- **Unique Resource Name**  
+ **一意のリソース名**  
   
  SMO オブジェクト ライブラリを使用するうえでの鍵となる概念の 1 つが URN (Unique Resource Name) です。 URN は、XPath と同様の構文を使用します。 XPath は、各レベルで修飾子と関数を持つオブジェクトを指定するために使用される階層パスです。 SMO では、URN には、パス、および制限された機能を持つ属性名の 2 つの要素があります。 パスはオブジェクトの場所を指定するために使用され、属性名によってある程度のフィルター操作が可能になります。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36083168"
   
  スナップショット分離 (行レベル バージョン) は、新しい <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクト プロパティで表現されます。  
   
- **XML スキーマ Namespace、XML インデックスと XML データ型**  
+ **XML スキーマの Namespace、XML インデックスおよび XML データ型**  
   
  XML スキーマ名前空間は、SMO ではオブジェクトのコレクションで表現されます。 XML インデックスは、SMO では `Index` オブジェクト プロパティで表現されます。  
   
@@ -181,9 +181,9 @@ ms.locfileid: "36083168"
 ## <a name="smo-and-sql-dmo"></a>SMO および SQL-DMO  
  SMO オブジェクト モデルは、SQL-DMO の代わりとなるものです。 SMO では、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンがサポートされます。 SMO では、より多くの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理タスクがサポートされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の多くの新機能が含まれています。 SMO は、より効率的であり、より高度な制御を提供するようにデザインされています。  
   
- SMO が [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリとして実装されるのに対し、DMO ライブラリは COM オブジェクト モデルです。 COM コンポーネントは、アプリケーションおよびアンマネージ アプリケーション プログラミングに対して、再利用可能な機能を提供するライブラリです。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリは、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] に対して再利用可能な機能を提供して、マネージ コード アプリケーションを作成します。  
+ SMO が [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリとして実装されるのに対し、DMO ライブラリは COM オブジェクト モデルです。 COM コンポーネントは、アプリケーションおよびアンマネージ アプリケーション プログラミングに対して、再利用可能な機能を提供するライブラリです。 ph x="1" /&gt; アセンブリは、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] に対して再利用可能な機能を提供して、マネージド コード アプリケーションを作成します。  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] テクノロジへの移行の際に、アプリケーションを部分的にマネージ コードで作成し、その他の部分をアンマネージ コードで作成することが可能です。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] では、COM コンポーネントとのやり取りが可能です。これには、プライマリ相互運用機能アセンブリが必要になります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ベースのアプリケーションから SQL-DMO を呼び出すには、ランタイム ラッパーが必要です。  
+ ph x="1" /&gt; テクノロジへの移行の際に、アプリケーションを部分的にマネージド コードで作成し、その他の部分をアンマネージド コードで作成することが可能です。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] では、COM コンポーネントとのやり取りが可能です。これには、プライマリ相互運用機能アセンブリが必要になります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ベースのアプリケーションから SQL-DMO を呼び出すには、ランタイム ラッパーが必要です。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション管理オブジェクトの概念](../replication/concepts/replication-management-objects-concepts.md)  

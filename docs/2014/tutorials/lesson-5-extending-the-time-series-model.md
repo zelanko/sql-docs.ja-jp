@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 5: 時系列の拡張モデル |Microsoft ドキュメント'
+title: 'レッスン 5: 時系列の拡張モデル |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
 caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fe6a783cef802e9b68a063cf80016e7f31011cfa
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: aab77b225eeef6844dc74deb272430b0434de71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194392"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>レッスン 5 : 時系列モデルの拡張
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise Edition では、時系列モデルに新しいデータを追加し、モデルに新しいデータを自動的に組み込むことができます。 次の 2 つの方法のいずれかで、時系列マイニング モデルに新しいデータを追加します。  
@@ -53,7 +53,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>時系列モデルに対する単一予測クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、クリックして**DMX**です。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -142,11 +142,11 @@ PREDICTION JOIN <source query>
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-7.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**です。  
+7.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
   
-8.  **名前を付けて保存**ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Singleton_TimeSeries_Query.dmx`です。  
+8.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Singleton_TimeSeries_Query.dmx`します。  
   
-9. ツールバーで、をクリックして、 **Execute**ボタンをクリックします。  
+9. ツールバーの**Execute**ボタンをクリックします。  
   
      クエリから、ヨーロッパ地域および太平洋地域での M200 自転車の販売数量の予測が返されます。  
   
@@ -196,7 +196,7 @@ PREDICTION JOIN <source query>
   
 -   4 つのタイム スライスについて予測を要求します。この場合、開始位置がタイム スライス 3、終了位置がタイム スライス 6 です。  
   
- つまり、新しいデータに n 個のタイム スライスが含まれています時間ステップ 1 n からの予測を要求する場合は、予測は、新しいデータと同じ期間と一致します。 データに含まれていない期間の新しい予測を取得するには、新しいデータ系列後のタイム スライス n+1 から予測を開始するか、他のタイム スライスの要求を行うようにする必要があります。  
+ つまり、新しいデータには、n 個のタイム スライスが含まれています。 1 ~ n 時間ステップの予測を要求する場合は、予測は新しいデータと同じ期間と一致します。 データに含まれていない期間の新しい予測を取得するには、新しいデータ系列後のタイム スライス n+1 から予測を開始するか、他のタイム スライスの要求を行うようにする必要があります。  
   
 > [!NOTE]  
 >  新しいデータを追加するときは履歴予測を作成することはできません。  
@@ -234,7 +234,7 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europe|12/25/2008 12:00:00 AM|89|  
   
 ## <a name="making-predictions-with-replacemodelcases"></a>REPLACE_MODEL_CASES を使用した予測の作成  
- 1 セットのケースでモデルをトレーニングし、そのモデルを別のデータ系列に適用するときは、モデル ケースの置換が便利です。 このシナリオの詳細なチュートリアルが表示される[レッスン 2: Building a Forecasting Scenario&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)です。  
+ 1 セットのケースでモデルをトレーニングし、そのモデルを別のデータ系列に適用するときは、モデル ケースの置換が便利です。 このシナリオの詳細なチュートリアルを示した[レッスン 2: Building a Forecasting Scenario&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)します。  
   
 ## <a name="see-also"></a>参照  
  [タイム シリーズ モデルのクエリ例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   

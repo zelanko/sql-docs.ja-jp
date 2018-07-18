@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: Bike Buyer マイニング構造にマイニング モデルの追加 |Microsoft ドキュメント'
+title: 'レッスン 2: Bike Buyer マイニング構造にマイニング モデルの追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: f6d66faaa2a62d753ad865dd249078045960dc97
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 055450b7461accaa62b1c9bafe4273f6fc3f9dd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149553"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>レッスン 2: Bike Buyer マイニング構造へのマイニング モデルの追加
-  このレッスンでは、作成した Bike Buyer マイニング構造に 2 つのマイニング モデルを追加します[レッスン 1: Bike Buyer マイニング構造を作成する](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)です。 これら 2 つのマイニング モデルを追加すると、一方のモデルでデータを調査でき、もう一方のモデルで予測を作成できます。  
+  このレッスンでは、作成した Bike Buyer マイニング構造に 2 つのマイニング モデルを追加[レッスン 1: Bike Buyer マイニング構造を作成する](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)します。 これら 2 つのマイニング モデルを追加すると、一方のモデルでデータを調査でき、もう一方のモデルで予測を作成できます。  
   
- 探索に基づくマイニング モデルを作成するはその特性によっては、潜在顧客を分類できます、方法、 [Microsoft クラスタ リング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)です。 後のレッスンでは、類似した特性を持つ顧客グループがこのアルゴリズムでどのように特定されるかについて学習します。 たとえば、ある特定の顧客グループは、住居が近く、自転車で通勤し、学歴が類似しているといった情報を得られる可能性があります。 このような分類を基にさまざまな顧客の関連性を把握し、この情報を使用して特定顧客をターゲットとしたマーケティング戦略を立てることができます。  
+ 調査に基づくマイニング モデルを作成する方法の特性にして、潜在顧客を分類することができますは、 [Microsoft クラスタ リング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)します。 後のレッスンでは、類似した特性を持つ顧客グループがこのアルゴリズムでどのように特定されるかについて学習します。 たとえば、ある特定の顧客グループは、住居が近く、自転車で通勤し、学歴が類似しているといった情報を得られる可能性があります。 このような分類を基にさまざまな顧客の関連性を把握し、この情報を使用して特定顧客をターゲットとしたマーケティング戦略を立てることができます。  
   
- 基づくマイニング モデルを作成する、潜在顧客が自転車を購入する可能性があるかどうかを予測する、 [Microsoft デシジョン ツリー アルゴリズム](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)です。 このアルゴリズムではそれぞれの潜在顧客に関連付けられている情報を基に、自転車を購入するかどうかの予測に役立つ特性を見つけることができます。 特性が見つかったら、以前自転車を購入した顧客と新しい潜在顧客の特性値を比較して、新しい潜在顧客が自転車を購入する可能性を判定することができます。  
+ 基づくマイニング モデルを作成する、潜在顧客が自転車を購入する可能性があるかどうかを予測する、 [Microsoft デシジョン ツリー アルゴリズム](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)します。 このアルゴリズムではそれぞれの潜在顧客に関連付けられている情報を基に、自転車を購入するかどうかの予測に役立つ特性を見つけることができます。 特性が見つかったら、以前自転車を購入した顧客と新しい潜在顧客の特性値を比較して、新しい潜在顧客が自転車を購入する可能性を判定することができます。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE ステートメント  
- 使用するマイニング構造にマイニング モデルを追加するために、[ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md) ステートメントです。 ステートメント内のコードは、次の部分に分類されます。  
+ 使用するマイニング構造にマイニング モデルを追加するには、[ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md) ステートメントです。 ステートメント内のコードは、次の部分に分けることができます。  
   
 -   マイニング構造の指定  
   
@@ -53,7 +53,7 @@ ADD MINING MODEL [<mining model name>]
 WITH FILTER (<expression>)  
 ```  
   
- コードの最初の行には、マイニング モデルの追加先となる既存のマイニング構造を識別します。  
+ コードの最初の行では、マイニング モデルの追加先となる既存のマイニング構造を示します。  
   
 ```  
 ALTER MINING STRUCTURE [<mining structure name>]  
@@ -65,7 +65,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- DMX でオブジェクトの名前を付ける方法については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)です。  
+ DMX でオブジェクトの名前付け方法の詳細については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)します。  
   
  コードの次の数行では、マイニング モデルで使用するマイニング構造の列を定義します。  
   
@@ -82,7 +82,7 @@ ADD MINING MODEL [<mining model name>]
 ) USING <algorithm name>( <algorithm parameters> )  
 ```  
   
- 調整できるアルゴリズム パラメーターの詳細については、次を参照してください。 [Microsoft デシジョン ツリー アルゴリズム](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)と[Microsoft クラスタ リング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)です。  
+ 調整できるアルゴリズム パラメーターの詳細については、次を参照してください。 [Microsoft デシジョン ツリー アルゴリズム](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)と[Microsoft クラスタ リング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)します。  
   
  次の構文で、マイニング モデルの列を予測に使用するよう指定できます。  
   
@@ -90,10 +90,10 @@ ADD MINING MODEL [<mining model name>]
 <mining model column> PREDICT  
 ```  
   
- コードの最後の行 (省略可能) では、モデルの学習およびテストを行う際に適用するフィルターを定義します。 マイニング モデルにフィルターを適用する方法の詳細については、次を参照してください。[マイニング モデル フィルターの&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)です。  
+ コードの最後の行 (省略可能) では、モデルの学習およびテストを行う際に適用するフィルターを定義します。 マイニング モデルにフィルターを適用する方法の詳細については、次を参照してください。[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
- このレッスンでは、次のタスクは実行します。  
+ このレッスンでは、次のタスクを実行するされます。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用して、デシジョン ツリー マイニング モデルを Bike Buyer 構造に追加。  
   
@@ -106,7 +106,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-a-decision-tree-mining-model"></a>デシジョン ツリー マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、クリックして**DMX**クエリ エディターと新しい空のクエリを開きます。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**クエリ エディターと新しい空のクエリを開きます。  
   
 2.  上の ALTER MINING STRUCTURE ステートメントの汎用例を空のクエリにコピーします。  
   
@@ -201,18 +201,18 @@ ADD MINING MODEL [<mining model name>]
     WITH DRILLTHROUGH  
     ```  
   
-7.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**です。  
+7.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
   
-8.  **名前を付けて保存**ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`DT_Model.dmx`です。  
+8.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`DT_Model.dmx`します。  
   
-9. ツールバーで、をクリックして、 **Execute**ボタンをクリックします。  
+9. ツールバーの**Execute**ボタンをクリックします。  
   
 ## <a name="adding-a-clustering-mining-model-to-the-structure"></a>構造へのクラスター マイニング モデルの追加  
  次に、[!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムに基づくマイニング モデルを、Bike Buyer マイニング構造に追加します。 クラスター マイニング モデルでは、マイニング構造に定義されている列をすべて使用します。したがって、マイニング列の定義を省略して、この構造にモデルを追加できます。  
   
 #### <a name="to-add-a-clustering-mining-model"></a>クラスター マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、順にクリック**DMX**をクエリ エディターが開き、新しい空のクエリを開きます。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、順にクリックします**DMX**をクエリ エディターが開き、新しい空のクエリを開きます。  
   
 2.  上の ALTER MINING STRUCTURE ステートメントの汎用例を空のクエリにコピーします。  
   
@@ -269,11 +269,11 @@ ADD MINING MODEL [<mining model name>]
     USING Microsoft_Clustering   
     ```  
   
-7.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**です。  
+7.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
   
-8.  **名前を付けて保存**ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Clustering_Model.dmx`です。  
+8.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Clustering_Model.dmx`します。  
   
-9. ツールバーで、をクリックして、 **Execute**ボタンをクリックします。  
+9. ツールバーの**Execute**ボタンをクリックします。  
   
  次のレッスンでは、モデルとマイニング構造を処理します。  
   

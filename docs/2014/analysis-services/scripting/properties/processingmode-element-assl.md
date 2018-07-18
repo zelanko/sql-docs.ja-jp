@@ -1,5 +1,5 @@
 ---
-title: ProcessingMode 要素 (ASSL) |Microsoft ドキュメント
+title: ProcessingMode 要素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ProcessingMode element
 ms.assetid: dff6eeba-f09c-4d8c-ad81-caef76254af0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4f302608db355a639d9fb82e024a7a72cf560b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a966a1d800107b18316e875bd8c9552df613cfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36076299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273788"
 ---
 # <a name="processingmode-element-assl"></a>ProcessingMode 要素 (ASSL)
   処理時または処理後にインスタンスによってインデックス付けまたは集計が行われるかどうかを指定します。  
@@ -51,7 +51,7 @@ ms.locfileid: "36076299"
 |特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*通常*|  
+|既定値|*正規表現*|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
@@ -68,10 +68,10 @@ ms.locfileid: "36076299"
   
 |値|説明|  
 |-----------|-----------------|  
-|*通常*|処理時にインスタンスによってインデックス付けと集計が行われます。|  
+|*正規表現*|処理時にインスタンスによってインデックス付けと集計が行われます。|  
 |*LazyOptimizations*|処理後にインスタンスによってインデックス付けと集計が行われます。|  
   
- 許可される値に対応する列挙`ProcessingMode`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ProcessingMode>します。  
+ 許容された値に対応する列挙体`ProcessingMode`分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ProcessingMode>します。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ&#40;ASSL&#41;](properties-assl.md)  

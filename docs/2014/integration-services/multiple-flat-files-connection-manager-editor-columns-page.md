@@ -1,5 +1,5 @@
 ---
-title: '[複数フラット ファイル接続マネージャー エディター] ([列] ページ) |Microsoft ドキュメント'
+title: 複数フラット ファイル接続マネージャー エディター (列 ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.columns.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47927f2a39679c715553ff8c53390ef631661e90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 23d3e2a6bbee792686267930d329f85753320031
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258978"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>[複数フラット ファイル接続マネージャー エディター] ([列] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、行と列の情報を指定し、最初に選択したファイルをプレビューできます。  
@@ -34,7 +34,7 @@ ms.locfileid: "36173751"
  **接続マネージャー名**  
  ワークフローにおける複数フラット ファイル接続の一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **description**  
+ **[説明]**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的について記述することをお勧めします。  
   
 ## <a name="flat-file-format-dynamic-options"></a>フラット ファイル形式の動的オプション  
@@ -116,6 +116,6 @@ ms.locfileid: "36173751"
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[複数フラット ファイル接続マネージャー エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[複数フラット ファイル接続マネージャー エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [複数フラット ファイル接続マネージャー エディター&#40;ページをプレビューします。&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [複数フラット ファイル接続マネージャー エディター&#40;ページをプレビュー&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

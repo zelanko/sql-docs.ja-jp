@@ -1,91 +1,95 @@
 ---
-title: ダウンロードしてインストール sqlpackage |Microsoft ドキュメント
-description: ダウンロードして、Windows、macOS、または Linux 用 sqlpackage をインストール
+title: ダウンロードしてインストール sqlpackage |Microsoft Docs
+description: ダウンロードし、Windows、macOS、または Linux の sqlpackage のインストール
 ms.custom: tools|sos
 ms.date: 06/18/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
-ms.component: sos
+ms.component: sqlpackage
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 4e5528ca046de83385171890fbda389928e41cf3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fa682766fe4330a34cff39600b6296403031a3e4
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703841"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080040"
 ---
 # <a name="download-and-install-sqlpackage"></a>ダウンロードしてインストール sqlpackage
 
-sqlpackage は、Windows、macOS、および Linux で実行されます。
+sqlpackage は、Windows、macOS、Linux で実行されます。
 
 ダウンロードして、最新の .NET Framework リリースおよび macOS と Linux のプレビューをインストールします。
 
 |プラットフォーム|ダウンロード|リリース日|[バージョンのオプション]|ビルド|
 |:---|:---|:---|:---|:---|
-|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=875508)|2018 年 1 月 25日|17.4.1|14.0.3917.1|
+|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=875508)|2018 年 6 月 22 日|17.8|14.0.4079.2|
 |macOS (プレビュー)|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|2018 年 5 月 9 日 |0.0.1|15.0.4057.1|
 |Linux (プレビュー)|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|2018 年 5 月 9 日 |0.0.1|15.0.4057.1|
 
+最新リリースに関する詳細については、次を参照してください。、[リリース ノート](sqlpackage-release-notes.md)します。
+
 ## <a name="get-sqlpackage-for-windows"></a>Windows の sqlpackage を取得します。
 
-Sqlpackage の今回のリリースには、標準的な Windows インストーラーのエクスペリエンスと .zip が含まれます。 
+Sqlpackage のこのリリースには、標準の Windows インストーラー エクスペリエンスと、.zip が含まれています。 
 
-**インストーラー**
-
-1. ダウンロードし、実行、 [DacFramework.msi Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=875508)です。
-2. 新しいコマンド プロンプト ウィンドウを開き、sqlpackage.exe を実行します。
+1. ダウンロードし、実行、 [DacFramework.msi インストーラーは、Windows を](https://go.microsoft.com/fwlink/?linkid=875508)します。
+2. 新しいコマンド プロンプト ウィンドウを開き、sqlpackage.exe の実行
     - sqlpackage にインストールされている、```C:\Program Files\Microsoft SQL Server\140\DAC\bin```フォルダー
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>MacOS の sqlpackage (プレビュー) を取得します。
 
-1. ダウンロード[macOS の sqlpackage](https://go.microsoft.com/fwlink/?linkid=873927)です。
-2. ファイルを抽出して sqlpackage を起動して、新しいターミナル ウィンドウを開き、次のコマンドを入力します。
+1. ダウンロード[macOS 用の sqlpackage](https://go.microsoft.com/fwlink/?linkid=873927)します。
+2. ファイルを抽出して、sqlpackage の起動、新しいターミナル ウィンドウを開き、次のコマンドを入力します。
 
    **.zip のインストール:**
-   ```bash 
+
+   ```bash
    mv ~/Downloads/sqlpackage-linux-<version string> ~/sqlpackage 
    echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
    source ~/.bash_profile
-   sqlpackage 
-   ``` 
+   sqlpackage
+   ```
 
-## <a name="get-sqlpackage-preview-for-linux"></a>Linux 用 sqlpackage (プレビュー) を取得します。
+## <a name="get-sqlpackage-preview-for-linux"></a>Linux の sqlpackage (プレビュー) を取得します。
 
-1. ダウンロード[for Linux sqlpackage](https://go.microsoft.com/fwlink/?linkid=873926)インストーラーまたは tar.gz アーカイブのいずれかを使用します。
-2. ファイルを抽出して sqlpackage を起動して、新しいターミナル ウィンドウを開き、次のコマンドを入力します。
+1. ダウンロード[for Linux sqlpackage](https://go.microsoft.com/fwlink/?linkid=873926)インストーラーまたは tar.gz アーカイブのいずれかを使用しています。
+2. ファイルを抽出して、sqlpackage の起動、新しいターミナル ウィンドウを開き、次のコマンドを入力します。
 
    **.zip のインストール:**
-   ```bash 
-   cd ~ 
+
+   ```bash
+   cd ~
    mkdir sqlpackage
    unzip ~/Downloads/sqlpackage-linux-<version string>.zip ~/sqlpackage 
    echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bashrc
-   source ~/.bashrc 
-   sqlpackage 
-   ``` 
+   source ~/.bashrc
+   sqlpackage
+   ```
 
    > [!NOTE]
-   > Debian、red Hat、および Ubuntu で見つからない依存関係があります。 Linux のバージョンに応じてこれらの依存関係をインストールするのにには、次のコマンドを使用します。
-   
+   > Debian、red Hat、Ubuntu では、依存関係が不足しているがあります。 Linux のバージョンによってこれらの依存関係をインストールするのにには、次のコマンドを使用します。
 
-   **Debian:** 
+   **Debian:**
+
    ```bash
    sudo apt-get install libuwind8
    ```
 
-   **Redhat:** 
+   **Redhat:**
+
    ```bash
-   yum install libunwind 
-   yum install libicu 
+   yum install libunwind
+   yum install libicu
    ```
 
-   **Ubuntu:** 
+   **Ubuntu:**
+
    ```bash
    sudo apt-get install libunwind8
 
@@ -96,32 +100,34 @@ Sqlpackage の今回のリリースには、標準的な Windows インストー
    sudo apt-get install libicu60      # for 18.x
    ```
 
+## <a name="uninstall-sqlpackage-preview"></a>Sqlpackage (プレビュー) のアンインストールします。
 
-## <a name="uninstall-sqlpackage-preview"></a>Sqlpackage (プレビュー) アンインストールします。
+Sqlpackage の Windows インストーラーを使用してをインストールした場合は、任意の Windows アプリケーションを削除するのと同じ方法をアンインストールします。
 
-Windows インストーラーを使用して sqlpackage をインストールした場合は、すべての Windows アプリケーションを削除すると同じ方法をアンインストールしてください。
-
-.Zip やその他のアーカイブと共に sqlpackage をインストールする場合は、ファイルを削除し、単にします。
+.Zip、またはその他のアーカイブを sqlpackage をインストールした場合は、ファイルを削除し、だけです。
 
 ## <a name="supported-operating-systems"></a>サポートされるオペレーティング システム
 
-sqlpackage は、Windows、macOS など、Linux で実行されは、次のプラットフォームでサポートされています。
+sqlpackage は、Windows、macOS、および Linux で実行し、次のプラットフォームでサポートされています。
 
 ### <a name="windows"></a>Windows
+
 - Windows 10
-- Windows 8.1 
-- Windows 8 
-- Windows 7 SP1 
+- Windows 8.1
+- Windows 8
+- Windows 7 SP1
 - Windows Server 2016
 - Windows Server 2012 R2
-- Windows Server 2012 
+- Windows Server 2012
 - Windows Server 2008 R2
 
 ### <a name="macos"></a>macOS
-- macOS 10.13 高 Sierra
+
+- macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### <a name="linux-x64"></a>Linux (x64)
+
 - Red Hat Enterprise Linux 7.4
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server v12 SP2

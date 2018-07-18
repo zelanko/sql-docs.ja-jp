@@ -2,7 +2,8 @@
 
 # [Data Migration Assistant の新機能](dma-whatsnew.md)
 # [SQL Server の移行の評価](dma-assesssqlonprem.md)
-# [SQL Server の移行](dma-migrateonpremsql.md)
+# [SQL Server の新しいバージョンへのアップグレード](dma-migrateonpremsql.md)
+# [SQL Server の Azure SQL Database への移行](dma-migrateonpremsqltosqldb.md)
 # [SQL Server ログインの移行](dma-migrateserverlogins.md)
 # [Data Migration Assistant のベスト プラクティス](dma-bestpractices.md)
 # [評価レポートの統合](dma-consolidatereports.md)

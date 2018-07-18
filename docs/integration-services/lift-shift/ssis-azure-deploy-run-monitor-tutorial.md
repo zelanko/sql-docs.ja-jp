@@ -8,15 +8,16 @@ ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: ac3ee68b47e3ae70c3b6d149d75b68d50b093309
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3bd32f6f60342a0224ebf353de6cda15696d8900
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335836"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262496"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>チュートリアル: Azure で SQL Server Integration Services (SSIS) パッケージをデプロイし、実行する
 このチュートリアルでは、Azure SQL Database の SSIS カタログに SQL Server Integration Services (SSIS) プロジェクトをデプロイする方法、Azure-SSIS Integration Runtime でのパッケージの実行方法、および実行中のパッケージの監視方法を示します。
@@ -199,7 +200,7 @@ SSIS パッケージの実行アクティビティを使用して Azure Data Fac
 
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime の監視
 
-パッケージが実行されている Azure SSIS 統合ランタイムに関する状態情報を取得するには、次の PowerShell コマンドを使用します。 コマンドごとに、Data Factory、Azure SSIS IR、およびリソース グループの名前を入力します。
+パッケージが実行されている Azure SSIS 統合ランタイムに関する状態情報を取得するには、次の PowerShell コマンドを使用します。 コマンドごとに、データ ファクトリ、Azure SSIS IR、およびリソース グループの名前を入力します。
 
 詳細については、[Azure SSIS 統合ランタイムの監視](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)に関するページを参照してください。
 

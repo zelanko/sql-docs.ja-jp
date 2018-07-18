@@ -1,13 +1,11 @@
 ---
-title: CLR テーブル値関数 |Microsoft ドキュメント
+title: CLR テーブル値関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,20 +18,20 @@ helpviewer_keywords:
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 caps.latest.revision: 86
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 83d955467034448e5c9a7337b674b85a12acb0c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 67bb174803f7368257217e5244ef023e2c274929
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084783"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354004"
 ---
 # <a name="clr-table-valued-functions"></a>CLR テーブル値関数
   テーブル値関数とは、テーブルを返すユーザー定義関数です。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル値関数の機能が拡張され、テーブル値関数をどのマネージ言語でも定義できるようになりました。 テーブル値関数からは `IEnumerable` オブジェクトまたは `IEnumerator` オブジェクトを経由してデータが返されます。  
+ ph x="1" /&gt; 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル値関数の機能が拡張され、テーブル値関数をどのマネージド言語でも定義できるようになりました。 テーブル値関数からは `IEnumerable` オブジェクトまたは `IEnumerator` オブジェクトを経由してデータが返されます。  
   
 > [!NOTE]  
 >  テーブル値関数で返されるテーブル型の列には、timestamp 型の列および Unicode 以外の文字列データ型の列 (`char`、`varchar`、`text` など) を含めることはできません。 NOT NULL 制約はサポートされません。  
@@ -41,16 +39,16 @@ ms.locfileid: "36084783"
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Transact-SQL と CLR のテーブル値関数の違い  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] のテーブル値関数は、関数の呼び出し結果を具体化して中間テーブルを作成します。 TVF では中間テーブルを使用するため、結果に対する制約や一意インデックスがサポートされます。 これらの機能は、大量の結果が返される場合に非常に有用です。  
   
- 一方、CLR のテーブル値関数は同じことをストリーミングで実現します。 結果セット全体を 1 つのテーブルに具体化する必要はありません。 テーブル値関数を呼び出すクエリの実行プランから、マネージ関数が返す `IEnumerable` オブジェクトを直接呼び出し、結果を増分方式で使用します。 このストリーミング モデルでは、テーブル全体に値が格納されるまで待たなくても、最初の行が生成された直後から結果を使用できます。 返される行をメモリ内で一括して具体化する必要がないので、返される行数が多い場合にもストリーミングが適しています。 たとえば、マネージ テーブル値関数を使用して、テキスト ファイルを解析し、テキストの各行を 1 つのテーブル行にして返すことができます。  
+ 一方、CLR のテーブル値関数は同じことをストリーミングで実現します。 結果セット全体を 1 つのテーブルに具体化する必要はありません。 テーブル値関数を呼び出すクエリの実行プランから、マネージド関数が返す `IEnumerable` オブジェクトを直接呼び出し、結果を増分方式で使用します。 このストリーミング モデルでは、テーブル全体に値が格納されるまで待たなくても、最初の行が生成された直後から結果を使用できます。 返される行をメモリ内で一括して具体化する必要がないので、返される行数が多い場合にもストリーミングが適しています。 たとえば、マネージド テーブル値関数を使用して、テキスト ファイルを解析し、テキストの各行を 1 つのテーブル行にして返すことができます。  
   
 ## <a name="implementing-table-valued-functions"></a>テーブル値関数の実装  
  テーブル値関数は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework アセンブリのクラスのメソッドとして実装します。 テーブル値関数のコードでは、`IEnumerable` インターフェイスを実装する必要があります。 `IEnumerable` インターフェイスは .NET Framework で定義されています。 .NET Framework で配列およびコレクションを表す型は、既に `IEnumerable` インターフェイスを実装しています。 このため、コレクションまたは配列を結果セットに変換するテーブル値関数を簡単に記述できます。  
   
 ## <a name="table-valued-parameters"></a>テーブル値パラメーター  
- テーブル値パラメーターとは、プロシージャや関数に渡されるユーザー定義のテーブル型です。テーブル値パラメーターを使用すると、複数行のデータを効率的にサーバーに渡すことができます。 テーブル値パラメーターの機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 さらに、サーバーへのラウンド トリップの回数を減らすのにも有用です。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データをテーブル値パラメーターとしてサーバーに送信できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスで実行されているマネージ ストアド プロシージャやマネージ関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 テーブル値パラメーターの詳細については、「[テーブル値パラメーターの使用 &#40;データベース エンジン&#41;](../tables/use-table-valued-parameters-database-engine.md)」を参照してください。  
+ テーブル値パラメーターとは、プロシージャや関数に渡されるユーザー定義のテーブル型です。テーブル値パラメーターを使用すると、複数行のデータを効率的にサーバーに渡すことができます。 テーブル値パラメーターの機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 さらに、サーバーへのラウンド トリップの回数を減らすのにも有用です。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データをテーブル値パラメーターとしてサーバーに送信できます。 ph x="1" /&gt; のプロセスで実行されているマネージド ストアド プロシージャやマネージド関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 テーブル値パラメーターの詳細については、「[テーブル値パラメーターの使用 &#40;データベース エンジン&#41;](../tables/use-table-valued-parameters-database-engine.md)」を参照してください。  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>出力パラメーターとテーブル値関数  
- 出力パラメーターを使用すると、テーブル値関数から情報を返すことができます。 実装コードのテーブル値関数の対応するパラメーターは、引数として参照渡しのパラメーターを使用する必要があります。 Visual Basic は出力パラメーターを Visual C# と同様にはサポートしていません。 参照渡しでパラメーターを指定する必要がありますを適用する、 \<Out() > 属性を次のように、出力パラメーターを表します。  
+ 出力パラメーターを使用すると、テーブル値関数から情報を返すことができます。 実装コードのテーブル値関数の対応するパラメーターは、引数として参照渡しのパラメーターを使用する必要があります。 Visual Basic は出力パラメーターを Visual C# と同様にはサポートしていません。 参照渡しでパラメーターを指定する必要があり、適用する、 \<Out() > 属性を次のように、出力パラメーターを表します。  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -81,7 +79,7 @@ select * from table t cross apply function(t.column);
   
 -   外部データから生成した場合。 たとえば、イベント ログを読み取り、テーブルとして公開するテーブル値関数などです。  
   
- **注**テーブル値関数が実行できるを使用したデータ アクセスのみ、[!INCLUDE[tsql](../../includes/tsql-md.md)]内のクエリを`InitMethod`メソッドではなく、`FillRow`メソッドです。 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを実行する場合は、`InitMethod` を `SqlFunction.DataAccess.Read` 属性プロパティに指定してください。  
+ **注**テーブル値関数が実行できるは、によってデータ アクセスのみを[!INCLUDE[tsql](../../includes/tsql-md.md)]でクエリを実行、`InitMethod`メソッドではなく、`FillRow`メソッド。 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを実行する場合は、`InitMethod` を `SqlFunction.DataAccess.Read` 属性プロパティに指定してください。  
   
 ## <a name="a-sample-table-valued-function"></a>テーブル値関数のサンプル  
  次のテーブル値関数は、システム イベント ログから情報を返します。 読み取るイベント ログの名前を含んだ文字列引数を 1 つ受け取ります。  
@@ -180,7 +178,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>サンプル: SQL Server クエリの結果を返す  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに対してクエリを実行するテーブル値関数を示します。 この例では、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の AdventureWorks Light データベースを使用します。 参照してください[ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) AdventureWorks のダウンロードの詳細についてです。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに対してクエリを実行するテーブル値関数を示します。 この例では、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の AdventureWorks Light データベースを使用します。 参照してください[ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) AdventureWorks のダウンロードの詳細についてはします。  
   
  ソース コード ファイルに FindInvalidEmails.cs または FindInvalidEmails.vb という名前を付けます。  
   

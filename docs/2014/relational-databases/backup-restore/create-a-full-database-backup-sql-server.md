@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
 - backing up databases [SQL Server], SQL Server Management Studio
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89af2b55ab06a6d034ca75d009802f126519ef06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7d5d52c835ea69914d538138cf189c7171e07a78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320442"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>データベースの完全バックアップの作成 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用して、データベースの完全バックアップを作成する方法について説明します。  
@@ -42,7 +41,7 @@ ms.locfileid: "36179148"
   
      [Security](#Security)  
   
--   **完全なデータベースを作成するバックアップを使用します。**  
+-   **完全なデータベースを作成するを使用して、バックアップします。**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -73,7 +72,7 @@ ms.locfileid: "36179148"
 ###  <a name="Security"></a> セキュリティ  
  データベースをバックアップすると、TRUSTWORTHY は OFF に設定されます。 TRUSTWORTHY を ON に設定する方法については「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)」を参照してください。  
   
- 以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、`PASSWORD`と`MEDIAPASSWORD`バックアップを作成するオプションが廃止されました。 パスワード付きで作成されたバックアップを復元することは、引き続き可能です。  
+ 以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、`PASSWORD`と`MEDIAPASSWORD`バックアップを作成するためのオプションは廃止されました。 パスワード付きで作成されたバックアップを復元することは、引き続き可能です。  
   
 ####  <a name="Permissions"></a> Permissions  
  BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。  
@@ -93,7 +92,7 @@ ms.locfileid: "36179148"
   
 3.  データベースを右クリックして **[タスク]** をポイントし、 **[バックアップ]** をクリックします。 **[データベースのバックアップ]** ダイアログ ボックスが表示されます。  
   
-4.  `Database`ボックスの一覧で、データベース名を確認します。 必要に応じて、このボックスの一覧から別のデータベースを選択することもできます。  
+4.  `Database`リスト ボックスで、データベース名を確認します。 必要に応じて、このボックスの一覧から別のデータベースを選択することもできます。  
   
 5.  どの復旧モデル (**[FULL]**、**[BULK_LOGGED]**、**[SIMPLE]**) でも、データベースのバックアップを実行できます。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "36179148"
     > [!NOTE]  
     >  **[差分]** オプションが選択されている場合、コピーのみのバックアップは作成できません。  
   
-8.  **バックアップ コンポーネント**をクリックして`Database`です。  
+8.  **Backup コンポーネント**、 をクリック`Database`します。  
   
 9. **[名前]** ボックスに表示された既定のバックアップ セット名をそのまま使用するか、または別のバックアップ セット名を入力します。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "36179148"
   
 18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] 以降では、 [バックアップの圧縮](backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、 **[バックアップ圧縮の既定]** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、 **[バックアップを圧縮する]** をオンにしてバックアップを圧縮することも、 **[バックアップを圧縮しない]** をオンにして圧縮しないようにすることもできます。  
   
-     **表示または現在の backup compression default 値を変更するには**  
+     **表示または現在の backup compression default を変更するには**  
   
     -   [backup compression default サーバー構成オプションの表示または構成](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
@@ -195,7 +194,7 @@ ms.locfileid: "36179148"
     |オプション|説明|  
     |------------|-----------------|  
     |*database*|バックアップするデータベースです。|  
-    |*backup_device* [ **,**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。|  
+    |*backup_device* [ **,**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)」を参照してください。|  
     |WITH *with_options* [ **,**...*o* ]|必要に応じて、1 つ以上の追加オプション ( *o*) を指定します。 基本的な with オプションについては、手順 2. を参照してください。|  
   
 2.  必要に応じて、1 つ以上の WITH オプションを指定します。 ここでは、一部の基本的な WITH オプションについて説明します。 すべての WITH オプションについては、「 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)」を参照してください。  
@@ -276,7 +275,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
   
-1.  使用して、`Backup-SqlDatabase`コマンドレット。 これはデータベースの完全バックアップであることを明示的に示す、指定、 **-backupaction**パラメーターにその既定値`Database`です。 このパラメーターは、データベースの完全バックアップでは省略可能です。  
+1.  使用して、`Backup-SqlDatabase`コマンドレット。 これはデータベースの完全バックアップであることを明示的に示す、指定、 **-backupaction**パラメーターにその既定値`Database`します。 このパラメーターは、データベースの完全バックアップでは省略可能です。  
   
      次の例では、 `MyDB` データベースの完全なバックアップを、サーバー インスタンス `Computer\Instance`の既定のバックアップ場所に作成します。 オプションで、`-BackupAction Database` を指定します。  
   
@@ -295,7 +294,7 @@ GO
   
 -   [データベースの差分バックアップの作成 &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
--   [データベース バックアップを復元&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [データベースのバックアップを復元&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [単純復旧モデルでのデータベース バックアップの復元 &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   

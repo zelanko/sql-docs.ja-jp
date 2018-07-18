@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
 - data types [Integration Services], listed
@@ -21,18 +21,18 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c25bb056540c718c67d5de8ab78f80c3290bc5de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36084620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265349"
 ---
 # <a name="integration-services-data-types"></a>Integration Services のデータ型
   データがパッケージ内のデータ フローに入ると、データを抽出する変換元は、そのデータを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。 数値データは数値データ型、文字列データは文字列データ型、および日付データは日付データ型に割り当てられます。 GUID やバイナリ ラージ オブジェクト (BLOB) などの他のデータも、同様に適切な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に割り当てられます。 データのデータ型が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換できない場合は、エラーが発生します。  
   
- 一部のデータ フロー コンポーネントでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]のマネージ データ型の間でデータ型を変換します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型とマネージ データ型とのマッピングの詳細については、「 [データ フロー内のデータ型の処理](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
+ 一部のデータ フロー コンポーネントでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型と [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]のマネージド データ型の間でデータ型を変換します。 ph x="1" /&gt; データ型とマネージド データ型とのマッピングの詳細については、「[データ フロー内のデータ型の処理](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
   
  次の表に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型を一覧で示します。 表内の一部のデータ型には、これらのデータ型に適用される有効桁数と小数点以下桁数の情報が含まれています。 有効桁数と小数点以下桁数の詳細については、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](/sql/t-sql/data-types/precision-scale-and-length-transact-sql)」を参照してください。  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36084620"
 |DT_UI4|4 バイトの符号なし整数です。|  
 |DT_UI8|8 バイトの符号なし整数です。|  
 |DT_WSTR|NULL で終わる Unicode 文字の文字列で、最大長は 4,000 文字です。 列の値に追加の NULL ターミネータが含まれている場合、その文字列は最初に NULL が出現した箇所で切り捨てられます。|  
-|DT_IMAGE|最大サイズが 2 のバイナリ値<sup>31</sup>-1 (2,147, 483,647) バイトです。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|  
-|DT_NTEXT|Unicode 文字の文字列を 2 の最大長を持つ<sup>30</sup> - 1 (1,073, 741,823) 文字です。|  
-|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 文字の最大長が 2 の文字列<sup>31</sup>-1 (2,147, 483,647) 文字です。|  
+|DT_IMAGE|最大サイズが 2 のバイナリ値<sup>31</sup>-1 (2,147, 483,647) バイトです。 .|  
+|DT_NTEXT|2 の最大長の Unicode 文字の文字列<sup>30</sup> - 1 (1,073, 741,823) 文字。|  
+|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 文字の最大長が 2 の文字列<sup>31</sup>-1 (2,147, 483,647) 文字。|  
   
 ## <a name="conversion-of-data-types"></a>データ型の変換  
  列のデータが、変換元のデータ型で割り当てられている長さや桁数をいっぱいまで使用する必要がない場合は、その列のデータ型を変更できます。 各データ行をできるだけ小さくすることにより、データ転送時のパフォーマンスを最適化できます。行が小さくなるほど、変換元から変換先へのデータ移動が高速になるためです。  

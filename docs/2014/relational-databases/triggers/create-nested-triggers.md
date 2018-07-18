@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - recursive DML triggers [SQL Server]
 - DML triggers, nested
@@ -20,22 +19,21 @@ helpviewer_keywords:
 - indirect recursion [SQL Server]
 - nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
-caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a4eee22f6afd19ecec7f782936db07e70a226f4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5c063df615f5023c71cbff8700cfddb67aa60b57
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36074779"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420761"
 ---
 # <a name="create-nested-triggers"></a>入れ子になったトリガーの作成
   あるトリガーが別のトリガーを起動する操作を実行するときは、DML トリガーと DDL トリガーの両方が入れ子になります。 このような操作では、他のトリガーを順次開始できます。 DML トリガーと DDL トリガーは、32 レベルまで入れ子にできます。 **nested triggers** サーバー構成オプションにより、AFTER トリガーを入れ子にできるかどうかを制御できます。 INSTEAD OF トリガーは、このサーバー オプションの設定とは無関係に入れ子にできます。INSTEAD OF トリガーにできるのは DML トリガーだけです。  
   
 > [!NOTE]  
->  [!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーからマネージ コードへの参照は、32 レベルの入れ子制限の 1 レベルとしてカウントされます。 マネージ コード内から呼び出されたメソッドは、この制限としてはカウントされません。  
+>  ph x="1" /&gt; トリガーからマネージド コードへの参照は、32 レベルの入れ子制限の 1 レベルとしてカウントされます。 マネージド コード内から呼び出されたメソッドは、この制限としてはカウントされません。  
   
  トリガーを入れ子にできる場合に、トリガーのチェーンのどれかが無限ループを開始すると、入れ子階層の上限を超えることになり、トリガーは終了します。  
   

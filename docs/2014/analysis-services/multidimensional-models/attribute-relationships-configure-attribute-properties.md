@@ -1,5 +1,5 @@
 ---
-title: 属性リレーションシップのプロパティを構成する |Microsoft ドキュメント
+title: 属性リレーションシップのプロパティの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - flexible relationships (Analysis Services)
 - attributes [Analysis Services], relationships
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - rigid relationships (Analysis Services)
 ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69c3799eb831c63a919a76663f9ba689b68ec009
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: d6ab5ee2e704b7783c88ea032ea71d110da6561e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36071769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187269"
 ---
 # <a name="configure-attribute-relationship-properties"></a>属性リレーションシップのプロパティの構成
   次の表で、属性リレーションシップのプロパティの一覧およびその説明を示します。  

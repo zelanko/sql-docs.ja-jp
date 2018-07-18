@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 構成ツール |Microsoft ドキュメント
+title: PowerPivot 構成ツール |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6063a6677678fb4fcf0c5f4f15a904d194271f73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: e2803d0bb8d4ed506208a3dff577e25ec891d6e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36176993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317012"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  構成、修復、または削除、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] PowerPivot 構成ツールを使用しています。  
+  構成、修復、または削除、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] PowerPivot 構成ツールを使用します。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードでは、SharePoint 2010 用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールと SharePoint 2013 用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールがインストールされます。 このトピックでは、2 つのツールの一般的な用途と相違点について説明します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36176993"
   
 -   [PowerPivot 構成ツールの使用の概要](#bkmk_overview)  
   
--   [PowerPivot 構成ツールを起動します。](#bmkm_start_tool)  
+-   [PowerPivot 構成ツールのいずれかを開始します。](#bmkm_start_tool)  
   
 ##  <a name="bkmk_requirements"></a> 構成ツールを使用するための要件  
   
@@ -65,10 +65,10 @@ ms.locfileid: "36176993"
   
 |PowerPivot for SharePoint 2013 の構成|PowerPivot 構成ツール|  
 |--------------------------------------------------|-----------------------------------|  
-|メイン ページには、 **[Excel Services 用 PowerPivot サーバー]** という新しいオプションがあります。 このオプションでは、SharePoint ファームの外部で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を実行できる新しいアーキテクチャがサポートされます。 SharePoint モードで実行されている 1 つ以上の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを使用するように Excel Services を構成します。<br /><br /> ![新しい構成ツールで PowerPivot サーバー](../media/as-powerpivot-configtool-differences-new-mainpage.gif "新しい構成ツールで PowerPivot サーバー")||  
-||2010 ツールには、ページが含まれている**登録 SQL Server Analysis Services (PowerPivot) ローカル サーバーで**のローカル インスタンスを構成する[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 このページは 2013 ツールにはありません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のローカル インスタンスが存在しないためです。<br /><br /> ![古い構成ツールでサービス アカウントとして](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "古い構成ツールでサービス アカウントとして")|  
+|メイン ページには、 **[Excel Services 用 PowerPivot サーバー]** という新しいオプションがあります。 このオプションでは、SharePoint ファームの外部で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を実行できる新しいアーキテクチャがサポートされます。 SharePoint モードで実行されている 1 つ以上の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを使用するように Excel Services を構成します。<br /><br /> ![PowerPivot サーバー構成ツールで新しい](../media/as-powerpivot-configtool-differences-new-mainpage.gif "構成ツールで新しい PowerPivot サーバー")||  
+||2010 ツールには、ページが含まれている**登録 SQL Server Analysis Services (PowerPivot) ローカル サーバーで**のローカル インスタンスを構成する[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 このページは 2013 ツールにはありません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のローカル インスタンスが存在しないためです。<br /><br /> ![古い構成ツールでサービス アカウントとして](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "古い構成ツールでサービス アカウントとして")|  
 ||**[PowerPivot サービス アプリケーションの作成]** ページには、 **[ブックをアップグレードして、データ更新を有効にします]** という追加のオプションがあります。 このオプションは、2013 ツールでは使用できません。<br /><br /> ![古い構成ツールでブックをアップグレードして](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "古い構成ツールでブックのアップグレード")|  
-|2013 ツールには、 **[PowerPivot サーバーの構成]** という新しいページがあります。 このページでは、SharePoint ファームの外部で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を実行できる新しいアーキテクチャがサポートされます。 既定では、メイン ページの **[Excel Services 用 PowerPivot サーバー]** ボックスに入力したサーバー名も **[PowerPivot サーバーの構成]** に表示されます。<br /><br /> ![PowerPivot サーバーの新しい構成ツールを登録](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "登録 PowerPivot サーバーの新しい構成ツール")||  
+|2013 ツールには、 **[PowerPivot サーバーの構成]** という新しいページがあります。 このページでは、SharePoint ファームの外部で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を実行できる新しいアーキテクチャがサポートされます。 既定では、メイン ページの **[Excel Services 用 PowerPivot サーバー]** ボックスに入力したサーバー名も **[PowerPivot サーバーの構成]** に表示されます。<br /><br /> ![PowerPivot サーバーの新しい構成ツールを登録](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "登録の PowerPivot サーバーの新しい構成ツール")||  
 |2013 ツールには、 **[Excel Services Usage Tracker として PowerPivot アドインを登録します]** という新しいページがあります。 SharePoint 2010 の Excel Services では、PowerPivot の使用状況データを追跡しません。||  
 ||2010 ツールには、SharePoint 2010 の Excel Services で PowerPivot モデルを読み込むことができるように MSOLAP を登録する **[MSOLAP.5 を信頼できるプロバイダーとして追加]** ページがあります。 このページは、2013 ツールにはありません。 SharePoint 2013 の Excel Services では、モデルの読み込みに MSOLAP プロバイダーを使用しません。|  
   
@@ -88,14 +88,14 @@ ms.locfileid: "36176993"
 > [!NOTE]  
 >  このツールでは、Reporting Services は構成できません。 Reporting Services を SharePoint 環境に追加する場合は、Reporting Services を個別にインストールし、構成する必要があります。 詳細については、以下を参照してください。  
 >   
->  -   [Install Reporting Services SharePoint Mode for SharePoint 2013](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)です。  
+>  -   [インストールの Reporting Services の SharePoint Mode for SharePoint 2013](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)します。  
 > -   [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
   
-##  <a name="bmkm_start_tool"></a> PowerPivot 構成ツールを起動します。  
+##  <a name="bmkm_start_tool"></a> PowerPivot 構成ツールのいずれかを開始します。  
   
 1.  **開始**画面で「 `powerpivot`  
   
-     **開始**画面で「`powerpivot`または、**開始**] メニューの [] をクリックして**すべてのプログラム** をクリック[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 をクリックして**構成ツール**次のいずれかをクリックします。  
+     **開始**画面で「`powerpivot`かまたは、**開始**] メニューの [] をクリックして**すべてのプログラム** をクリック[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 をクリックして**構成ツール**次のいずれかをクリックします。  
   
     -   **PowerPivot 構成ツール**  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36176993"
   
 3.  インストールの現在の状態に応じて、次の 1 つ以上のタスクを実行できます。  
   
-    1.  をクリックして**構成または修復の PowerPivot for SharePoint**インストール後のタスクを完了するか、インストールを修復します。  
+    1.  クリックして**構成または修復の PowerPivot for SharePoint**インストール後のタスクを完了するか、インストールを修復します。  
   
     2.  **[機能、サービス、アプリケーション、およびソリューションの削除]** をクリックして、ファームから機能とソリューションを削除します。  
   
@@ -126,9 +126,9 @@ ms.locfileid: "36176993"
  [実行] をクリックすると、すべてのアクションがバッチ モードで処理されます。 各アクションはタスクの一覧で別個のアイテムとして表示されますが、タスクに含まれるすべてのアクションが一度に処理されます。 検証チェックに合格したアクションのみが処理されます。 検証チェックに合格するために、いくつかの入力値を追加または変更することが必要になる場合があります。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [PowerPivot for SharePoint のアップグレード](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)既にファーム内にある既存のインストールをアップグレードするためのワークフローについて説明します。  
+ [PowerPivot for SharePoint のアップグレード](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)ファームにある既存のインストールをアップグレードするワークフローについて説明します。  
   
- [PowerPivot for SharePoint をアンインストール](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md)PowerPivot for SharePoint サービス、ソリューション、およびアプリケーション ページをファームから削除するワークフローについて説明します。  
+ [PowerPivot for SharePoint をアンインストール](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md)の SharePoint サービス、ソリューション、およびアプリケーション ページをファームから PowerPivot を削除するワークフローについて説明します。  
   
  [Windows PowerShell を使用した PowerPivot の構成](power-pivot-configuration-using-windows-powershell.md)  
   

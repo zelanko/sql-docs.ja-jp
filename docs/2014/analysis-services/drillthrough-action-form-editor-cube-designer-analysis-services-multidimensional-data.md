@@ -1,5 +1,5 @@
 ---
-title: ドリルスルー アクション フォーム エディター ([操作] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: ドリルスルー アクション フォーム エディター ([アクション] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.drillthroughaction.f1
 ms.assetid: 225fd818-b5ea-494f-b67b-66e09798274a
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81b7cde92983bf16f37b586389c059dfbff639d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: a6c310afd3535c1e5a7da5bd9f7784bec2a235ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36178105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220482"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>ドリルスルー アクション フォーム エディター (キューブ デザイナーの [アクション] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[アクション]** タブの **[ドリルスルー アクション フォーム エディター]** ペインを使用すると、**[アクション オーガナイザー]** ペインで選択したドリルスルー アクションを変更できます。 アクションの種類の詳細については、「[アクション (Analysis Services - 多次元データ)](multidimensional-models/actions-analysis-services-multidimensional-data.md)」を参照してください。  
@@ -63,7 +63,7 @@ ms.locfileid: "36178105"
  **[Default]**  
  このドリルスルー アクションを既定のドリルスルー アクションとして含める場合は **[True]** を選択します。それ以外の場合は、 **[False]** を選択します。  
   
- 場合、 `RETURN` mdx 句を省略した`DRILLTHROUGH`、クライアント アプリケーションによって実行されたステートメント、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスは、すべての既定のドリルスルー アクションを評価し、最初の既定のドリルスルーの実行空セットを返すアクションです。 MDX の詳細については`DRILLTHROUGH`ステートメントを参照してください[DRILLTHROUGH ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)です。  
+ 場合、 `RETURN` MDX 句が省略されて`DRILLTHROUGH`、クライアント アプリケーションによって実行されたステートメント、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスは、すべての既定のドリルスルー アクションを評価し、最初の既定のドリルスルーの実行空セットを返すアクションです。 MDX の詳細については`DRILLTHROUGH`ステートメントを参照してください[DRILLTHROUGH ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)します。  
   
 > [!NOTE]  
 >  このオプションは、下位互換性を保つために使用します。  
@@ -93,7 +93,7 @@ ms.locfileid: "36178105"
 > [!NOTE]  
 >  このオプションは、どのクライアント アプリケーションがアクションを実行するかについて推奨するだけで、アクションへのアクセスを直接制御することはありません。 クライアント アプリケーションでは、他のクライアント アプリケーションに関連付けられているすべてのアクションを非表示にする必要があります。  
   
- **description**  
+ **[説明]**  
  アクションの説明をオプションで入力します。  
   
  **Caption**  
@@ -107,11 +107,11 @@ ms.locfileid: "36178105"
  クライアント アプリケーションのアクションに表示されるキャプションを表す文字列を返す MDX 式が **[キャプション]** に入力されている場合は、 **[True]** を選択します。 MDX 式は、アクションがクライアント アプリケーションに返される前に解析される必要があります。  
   
 ## <a name="see-also"></a>参照  
- [多次元式&#40;MDX&#41;参照](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [多次元式&#40;MDX&#41;リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [アクション&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [ツールバー&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [[アクション オーガナイザー]&#40;アクション] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [[計算ツール&#40;アクション] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [計算ツール&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
  [アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [レポート アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
