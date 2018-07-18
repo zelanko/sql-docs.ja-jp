@@ -1,5 +1,5 @@
 ---
-title: 照会する (TRANSACT-SQL) |Microsoft ドキュメント
+title: 照会する (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 6179297a3634479ebd090395d4cbb5cb48f0e441
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250172"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063660"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,26 +52,26 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
  フルテキスト インデックス情報を要求するテーブル名を指定します。この名前は 1 つまたは 2 つの要素で構成されます。 *table_name*は**nvarchar (517)** 既定値は NULL です。 場合*table_name*を省略すると、すべてのフルテキスト インデックス付きテーブルのフルテキスト インデックス列情報を取得します。  
   
  [ **@column_name=**] **'***column_name***'**  
- フルテキスト インデックスのメタデータを要求する対象の列の名前です。 *column_name*は**sysname**既定値は NULL です。 場合*column_name*を省略するか、NULL の場合は、すべてのフルテキスト インデックス付き列のフルテキスト列情報が返されます*table_name*です。 場合*table_name*はも省略するか、NULL の場合、データベース内のすべてのテーブルのすべてのフルテキスト インデックス付き列のフルテキスト インデックス列情報が返されます。  
+ フルテキスト インデックスのメタデータを要求する対象の列の名前です。 *column_name*は**sysname**既定値は NULL です。 場合*column_name*を省略するかが null の場合のすべてのフルテキスト インデックス付き列のフルテキスト列情報が返されます*table_name*します。 場合*table_name*はも省略するかが null の場合、データベース内のすべてのテーブルのすべてのフルテキスト インデックス付き列のフルテキスト インデックス列情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または (1) の失敗  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|テーブル所有者 テーブルを作成したデータベース ユーザーの名前です。|  
 |**TABLE_ID**|**int**|テーブルの ID を指定します。|  
 |**TABLE_NAME**|**sysname**|テーブルの名前。|  
 |**FULLTEXT_COLUMN_NAME**|**sysname**|フルテキスト インデックスが作成されたテーブル内にある、インデックス作成用に指定された列。|  
 |**FULLTEXT_COLID**|**int**|フルテキスト インデックスが作成された列の列 ID。|  
-|**FULLTEXT_BLOBTP_COLNAME**|**sysname**|フルテキスト インデックスが作成されたテーブル内の列で、フルテキスト インデックス列のドキュメントの種類を指定する列。 この値は、フルテキスト インデックス列がときにのみ適用、 **varbinary (max)** または**イメージ**列です。|  
-|**FULLTEXT_BLOBTP_COLID**|**int**|ドキュメント型列の列 ID。 この値は、フルテキスト インデックス列がときにのみ適用、 **varbinary (max)** または**イメージ**列です。|  
+|**FULLTEXT_BLOBTP_COLNAME**|**sysname**|フルテキスト インデックスが作成されたテーブル内の列で、フルテキスト インデックス列のドキュメントの種類を指定する列。 この値は、フルテキスト インデックス列がときにのみ適用されます、 **varbinary (max)** または**イメージ**列。|  
+|**FULLTEXT_BLOBTP_COLID**|**int**|ドキュメント型列の列 ID。 この値は、フルテキスト インデックス列がときにのみ適用されます、 **varbinary (max)** または**イメージ**列。|  
 |**FULLTEXT_LANGUAGE**|**sysname**|列のフルテキスト検索に使用される言語。|  
   
-## <a name="permissions"></a>権限  
- メンバーに権限は、既定の実行、**パブリック**ロール。  
+## <a name="permissions"></a>アクセス許可  
+ 実行権限は、既定のメンバーに、**パブリック**ロール。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`Document` テーブルでフルテキスト インデックス作成用に指定された列に関する情報を返します。  

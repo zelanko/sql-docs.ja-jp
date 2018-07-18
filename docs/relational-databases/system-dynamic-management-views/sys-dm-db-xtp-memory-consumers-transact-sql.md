@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_memory_consumers (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_db_xtp_memory_consumers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 05632eebe6bd329815016da40db4705be0b935ed
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015177"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -37,12 +38,12 @@ ms.lasthandoff: 05/23/2018
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|メモリ コンシューマーの ID (内部)。|  
 |memory_consumer_type|**int**|メモリ コンシューマーの種類。<br /><br /> 0=集計  (複数のコンシューマーのメモリ使用量を集計します。 表示することはできません)<br /><br /> 2=VARHEAP (可変長ヒープのメモリ使用量を追跡します)<br /><br /> 3=HASH (インデックスのメモリ使用量を追跡します)<br /><br /> 5=DB ページ プール (実行時の操作に使用するデータベース ページ プールのメモリ使用量を追跡します。 たとえば、テーブル変数および一部のシリアル化可能なスキャンが対象になります。 この種類のメモリ コンシューマーは 1 つのデータベースに 1 つだけ存在します)|  
 |memory_consumer_type_desc|**nvarchar(64)**|メモリ コンシューマーの種類: VARHEAP、HASH、PGPOOL。<br /><br /> 0 - (表示することはできません)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|メモリ コンシューマー インスタンスの説明。<br /><br /> VARHEAP: <br />データベース ヒープ。 データベース (行) のユーザー データを割り当てるために使用します。<br />データベース システム ヒープ。 メモリ ダンプに含められ、ユーザー データを含まないデータベース データを割り当てるために使用します。<br />範囲インデックス ヒープ。 BW ページを割り当てるために範囲インデックスによって使用されるプライベート ヒープ。<br /><br /> ハッシュ: object_id のため、説明ないことを示します、テーブルと index_id はハッシュ インデックスそのものです。<br /><br /> PGPOOL。 データベースは Database 64 K ページ プールの 1 つだけのページ プールです。|  
+|memory_consumer_desc|**nvarchar(64)**|メモリ コンシューマー インスタンスの説明。<br /><br /> VARHEAP: <br />データベース ヒープ。 データベース (行) のユーザー データを割り当てるために使用します。<br />データベース システム ヒープ。 メモリ ダンプに含められ、ユーザー データを含まないデータベース データを割り当てるために使用します。<br />範囲インデックス ヒープ。 BW ページを割り当てるために範囲インデックスによって使用されるプライベート ヒープ。<br /><br /> ハッシュ: object_id のため、説明ないことを示します、テーブル、index_id はハッシュ インデックスそのものです。<br /><br /> PGPOOL。 データベースが 1 つだけのページ プールは Database 64 K ページ プールです。|  
 |object_id|**bigint**|割り当てられたメモリに関連するオブジェクト ID。 システム オブジェクトに対しては負の値になります。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルのオブジェクトの ID。|  
 |index_id|**int**|コンシューマーのインデックス ID (存在する場合)。 ベース テーブルに対しては NULL になります。|  
@@ -56,10 +57,10 @@ ms.lasthandoff: 05/23/2018
 |memory_consumer_address|**varbinary**|コンシューマーの内部アドレス。 内部使用のみです。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルに対応する、インメモリ OLTP オブジェクトの ID。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  出力では、データベース レベルのアロケーターは、ユーザー テーブル、インデックス、およびシステム テーブルを参照します。 object_id = NULL の VARHEAP は、可変長列を含むテーブルに割り当てられたメモリを参照します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  現在のデータベースに対して VIEW DATABASE STATE 権限を持っている場合は、すべての行が返されます。 この権限を持っていない場合は、空の行セットが返されます。  
   
  VIEW DATABASE 権限がない場合は、SELECT 権限を持っているテーブル内の行に対するすべての列が返されます。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/23/2018
  システム テーブルは、VIEW DATABASE STATE 権限を持つユーザーにのみ返されます。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- メモリ最適化テーブルに列ストア インデックスが設定されているとき、列ストア インデックスのデータを追跡するために一部のメモリを消費する一部の内部テーブルが使用されます。 これらの内部テーブルとそのメモリ消費量を示すサンプル クエリの詳細を参照してください[sys.memory_optimized_tables_internal_attributes (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)です。
+ メモリ最適化テーブルに列ストア インデックスが設定されているとき、システムは、列ストア インデックスのデータを追跡するためにいくつかのメモリを消費するには、いくつかの内部テーブルを使用します。 これらの内部テーブルとそのメモリ消費量を示すサンプル クエリについての詳細を参照してください[sys.memory_optimized_tables_internal_attributes (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)します。
  
   
 ## <a name="examples"></a>使用例  
@@ -114,7 +115,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- 割り当てられ、この DMV から使用されるメモリの合計がオブジェクト レベルと同じ[sys.dm_db_xtp_table_memory_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)です。  
+ 割り当てられているし、この DMV から使用されるメモリの合計がオブジェクト レベルと同じ[sys.dm_db_xtp_table_memory_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)します。  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   

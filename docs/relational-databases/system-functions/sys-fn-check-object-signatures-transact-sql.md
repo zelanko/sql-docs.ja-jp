@@ -1,5 +1,5 @@
 ---
-title: sys.fn_check_object_signatures (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_check_object_signatures (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d516472fb5ccec63498d7ab13401e2df1f4bf10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234678"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015154"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -57,29 +57,29 @@ fn_ check_object_signatures (
   
 -   'asymmetric key'  
   
- @*クラス*は**sysname**です。  
+ @*クラス*は**sysname**します。  
   
  { @*thumbprint* }  
- キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された非対称キーの GUID。 @*拇印*は**varbinary (20)** です。  
+ キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された非対称キーの GUID。 @*拇印*は**varbinary (20)** します。  
   
-## <a name="tables-returned"></a>返されたテーブル  
+## <a name="tables-returned"></a>返されるテーブル  
  次の表に、列を**fn_check_object_signatures**を返します。  
   
-|列|型|Description|  
+|[列]|型|説明|  
 |------------|----------|-----------------|  
-|型|**nvarchar(120)**|種類の説明またはアセンブリを返します。|  
+|type|**nvarchar(120)**|種類の説明またはアセンブリを返します。|  
 |entity_id|**int**|評価対象のオブジェクトのオブジェクト ID を返します。|  
 |is_signed|**int**|提供された拇印でオブジェクトが署名されていない場合は 0 を返します。 提供された拇印でオブジェクトが署名されている場合は 1 を返します。|  
 |is_signature_valid|**int**|is_signed の値が 1 の場合、署名が有効ではないときは 0 を返します。 署名が有効であるときは 1 を返します。<br /><br /> is_signed の値が 0 の場合は、常に 0 を返します。|  
   
-## <a name="remarks"></a>解説  
- 使用して**fn_check_object_signatures**を悪意のあるユーザーがオブジェクトを改ざんしていないことを確認します。  
+## <a name="remarks"></a>コメント  
+ 使用**fn_check_object_signatures**を悪意のあるユーザーがオブジェクトに改ざんされていないことを確認します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、署名証明書のスキーマを検索、`master`データベース、および返します、 `is_signed` 1 の値と`is_signature_valid`それらのオブジェクト、スキーマ署名証明書によって署名され、有効である 1 の値署名します。  
+ 次の例は、署名証明書のスキーマを検索、`master`データベース、および返します、 `is_signed` 1 の値と`is_signature_valid`スキーマ署名証明書によって署名されていると、有効になったこれらのオブジェクトの 1 の値署名します。  
   
 ```  
 USE master;  

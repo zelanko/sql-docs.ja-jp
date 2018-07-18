@@ -1,5 +1,5 @@
 ---
-title: SQL Server と Azure SQL Database を使用した処理グラフ |Microsoft ドキュメント
+title: SQL Server と Azure SQL Database でのグラフ処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
@@ -21,49 +21,49 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 8c2ad7f5b31a97de5d0bfb22074b55bd61bb825b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707050"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015678"
 ---
-# <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database を使用した処理グラフ
+# <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 多対多リレーションシップをモデル化するグラフのデータベース機能を提供します。 グラフのリレーションシップに統合されて[!INCLUDE[tsql-md](../../includes/tsql-md.md)]を使用する利点を享受し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基本的なデータベース管理システムとして。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 多対多リレーションシップをモデル化するグラフ データベース機能を提供します。 グラフのリレーションシップが統合[!INCLUDE[tsql-md](../../includes/tsql-md.md)]受信を使用する利点と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基礎となるデータベース管理システムとして。
 
 
-## <a name="what-is-a-graph-database"></a>グラフのデータベースとは何ですか。  
-グラフのデータベースは、ノード (または頂点) の集まりとエッジ (リレーションシップ)。 (たとえば、個人または組織) のエンティティを表すノードとエッジが接続する (なや友人など) の 2 つのノード間のリレーションシップを表します。 両方のノードとエッジには、それらに関連付けられたプロパティがある場合があります。 グラフのデータベースを一意にいくつかの機能を次に示します。  
--   エッジまたはリレーションシップはグラフ データベース内の最初のクラスのエンティティでありできます属性またはプロパティに関連付けられています。 
--   単一のエッジは、グラフのデータベース内の複数のノードを柔軟に接続できます。
--   パターン マッチとマルチホップ ナビゲーション クエリを簡単に表現することができます。
--   推移的閉包およびポリモーフィック クエリを簡単に表現することができます。
+## <a name="what-is-a-graph-database"></a>グラフ データベースとは何ですか。  
+グラフ データベースはノード (または頂点) のコレクションと端 (または関係)。 (たとえば、個人または組織) エンティティを表すノードとエッジ (いいねや友人など) に接続されている 2 つのノード間のリレーションシップを表します。 ノードとエッジの両方には、それらに関連付けられたプロパティがある場合があります。 グラフ データベースを一意にいくつかの機能を次に示します。  
+-   エッジまたはリレーションシップは、グラフ データベースでのファースト クラスのエンティティでありできます属性またはプロパティに関連付けられています。 
+-   1 つのエッジは、グラフ データベース内の複数のノードを柔軟に接続できます。
+-   パターン マッチングとマルチホップ ナビゲーション クエリを簡単に表現できます。
+-   推移的閉包およびポリモーフィックなクエリを簡単に表現できます。
 
-## <a name="when-to-use-a-graph-database"></a>グラフのデータベースを使用する場合
+## <a name="when-to-use-a-graph-database"></a>グラフ データベースを使用する場合
 
-ありませんグラフ データベースを達成できる、することは、リレーショナル データベースを使用します。 ただし、graph データベース易くなりますを特定の種類のクエリを表現します。 また、特定の最適化を有効に特定のクエリ パフォーマンスが向上します。 次の要因に基づいての決定、他の中の 1 つを選択することができます。  
--   アプリケーションでは、階層データを持ちます。 HierarchyID データ型は、階層を実装に使用できますが、いくつかの制限があります。 たとえば、ノードの複数の親を格納することもできません。
--   アプリケーションが複雑な多対多のリレーションシップです。アプリケーションの進化に伴って新しいリレーションシップが追加されます。
+何もないグラフ データベースを実現できる、リレーショナル データベースを使用して実現することはできません。 ただし、グラフ データベースやすく特定の種類のクエリを表現します。 また、特定の最適化を有効に特定のクエリ パフォーマンスが向上します。 次の要因に基づいて、他のいずれかを選択する決定できます。  
+-   アプリケーションでは、階層データを持ちます。 HierarchyID データ型は、階層を実装するために使用できますが、いくつかの制限があります。 たとえば、複数の親ノードを格納することもできません。
+-   アプリケーションが複雑な多対多リレーションシップです。アプリケーションの進化に伴って、新しいリレーションシップが追加されます。
 -   相互接続されたデータとのリレーションシップを分析する必要があります。
 
 ## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>導入されたグラフ機能 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
-SQL server、グラフ データの格納とクエリの実行が容易にグラフの拡張機能を追加する開始します。 最初のリリースでは、次の機能が導入されました。 
+SQL Server の格納とクエリのグラフ データを簡単にグラフの拡張機能を追加が開始します。 最初のリリースでは、次の機能が導入されました。 
 
 
 ### <a name="create-graph-objects"></a>グラフのオブジェクトを作成します。
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 拡張機能はノードまたはエッジ テーブルを作成するようにします。 両方のノードとエッジは、それに関連付けられたプロパティを持つことができます。 以降、ノードとエッジがテーブルとして格納されている、リレーショナル テーブルでサポートされているすべての操作ノードまたはエッジ テーブルでサポートされます。 次に例を示します。  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 拡張機能により、ノードまたはエッジ テーブルを作成するユーザー。 ノードとエッジの両方が、それらに関連付けられているプロパティを持つことができます。 以降、ノードとエッジ テーブルとして格納されます、リレーショナル テーブルでサポートされているすべての操作ノードまたはエッジ テーブルでサポートされます。 次に例を示します。  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![ユーザーの友人-テーブル](../../relational-databases/graphs/media/person-friends-tables.png "//people/person ノードや友人のエッジ テーブル")  
-ノードとエッジがテーブルとして格納されています。  
+![テーブル-人の友人](../../relational-databases/graphs/media/person-friends-tables.png "/people/person ノードや友人のエッジ テーブル")  
+ノードとエッジ テーブルとして格納されます。  
 
 ### <a name="query-language-extensions"></a>クエリ言語の拡張機能  
-新しい`MATCH`パターン マッチと graph を通じてマルチホップ ナビゲーションをサポートするために句が導入されました。 `MATCH`関数はパターン一致の ASCII アート形式の構文を使用します。 以下に例を示します。  
+新しい`MATCH`パターン マッチングと graph を通じて、マルチホップ ナビゲーションをサポートするために句が導入されました。 `MATCH`関数はパターン マッチングの ASCII アート形式の構文を使用します。 以下に例を示します。  
 
 ```   
 -- Find friends of John
@@ -74,10 +74,10 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>完全に統合された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エンジン 
-グラフの拡張機能は完全に統合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エンジンです。 同じストレージ エンジン、メタデータ、クエリ プロセッサなどを保存し、グラフ データを照会する使用します。 これにより、ユーザーは、グラフと 1 つのクエリでリレーショナル データをまたいでクエリを実行できます。 ユーザーは他のグラフ機能を組み合わせることからも利用できるよう[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テクノロジなどの列ストア、HA、R services, などです。データベース ファイルのグラフは、すべてのセキュリティとコンプライアンス機能で使用可能なもサポートしています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。
+グラフの拡張機能は統合されます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エンジン。 同じストレージ エンジン、メタデータ、クエリ プロセッサなどを使用して格納し、グラフ データを照会します。 これにより、グラフおよびリレーショナル データを 1 つのクエリにわたりクエリを実行できます。 ユーザーは他のグラフ機能を組み合わせることからも利用できるよう[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列ストア、HA、R services でのようなテクノロジなど。SQL グラフ データベースは、すべてのセキュリティとコンプライアンスで使用できる機能もサポートしています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。
  
 ### <a name="tooling-and-ecosystem"></a>ツールとエコシステム  
-ユーザーが既存のツールとエコシステムを利用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を提供します。 バックアップと復元などのツールのインポートし、エクスポート、すぐ BCP だけ作業します。 その他のツールまたは SSIS、SSRS PowerBI などのサービスでは動作グラフ テーブル リレーショナル テーブルで処理する方法だけです。
+ユーザーは、既存のツールおよびエコシステムによってメリットを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を提供します。 バックアップと復元などのツールのインポートし、エクスポート、すぐ BCP だけ作業します。 その他のツールまたは SSIS、SSRS、PowerBI などのサービスは、グラフ テーブルでは、リレーショナル テーブルで動作する方法です。
  
  ## <a name="next-steps"></a>次のステップ  
 読み取り、 [SQL グラフ データベース - アーキテクチャ](./sql-graph-architecture.md)

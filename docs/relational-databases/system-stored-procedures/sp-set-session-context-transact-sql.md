@@ -1,5 +1,5 @@
 ---
-title: sp_set_session_context (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_set_session_context (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2d1396ef79eb69b96a40f075c50cd38b6ad77d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248354"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015008"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,23 +51,23 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
   
 ## <a name="arguments"></a>引数  
  [ @key=] 'key'  
- 型の設定キー **sysname**です。 キーの最大サイズは、128 バイトです。  
+ 型の設定されているキー **sysname**します。 キーの最大サイズは、128 バイトです。  
   
  [ @value=] 'value'  
- 型の指定したキーの値**sql_variant**です。 メモリを解放する、値は NULL を設定します。 最大サイズは 8,000 バイトです。  
+ 型の指定したキーの値は、 **sql_variant**します。 NULL 値の設定、メモリを解放します。 最大サイズは 8,000 バイトです。  
   
  [ @read_only= ] { 0 | 1 }  
- 型のフラグ**ビット**です。 1 の場合、し、指定されたキーの値変更できませんもう一度この論理接続で。 場合は 0 (既定値) の場合、その値を変更できます。  
+ 型のフラグ**ビット**します。 1 の場合、し、指定されたキーの値変更できませんもう一度この論理接続で。 場合は 0 (既定値) の場合、その値を変更できます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  すべてのユーザーは、そのセッションのセッションのコンテキストを設定できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  その他のストアド プロシージャでは、ように唯一のリテラルと変数 (not 式または関数の呼び出し)、パラメーターとして渡すことができます。  
   
- セッション コンテキストの合計サイズは、256 kb に制限されます。 この制限を超えた原因となった値を設定、ステートメントが失敗したかどうか。 全体のメモリ使用量を監視する[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)です。  
+ セッション コンテキストの合計サイズは、256 kb に制限されます。 この制限を超える原因となる値の設定、ステートメントが失敗したかどうか。 全体のメモリ使用量を監視する[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)します。  
   
- 全体のメモリ使用量を監視するにはクエリを実行して[sys.dm_os_memory_cache_counters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)次のようにします。 `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ 全体的なメモリの使用状況を監視するにはクエリを実行して[sys.dm_os_memory_cache_counters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)次のようにします。 `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>使用例  
  次の例では、設定および英語の値を持つ言語の名前付きセッションのコンテキスト キーを取得する方法を示します。  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_system_memory_consumers (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.dm_xtp_system_memory_consumers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,15 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3363fa2208f735c38ebd696b782fced80e5c49ce
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015192"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  に関するシステム レベルのメモリ コンシューマーを報告[!INCLUDE[hek_2](../../includes/hek-2-md.md)]です。 これらのコンシューマーのメモリは、既定のプール (割り当てがユーザー スレッドのコンテキスト内にある場合)、または内部プール (割り当てがシステム スレッドのコンテキスト内にある場合) から取得されます。  
+  に関するシステム レベルのメモリ コンシューマーを報告[!INCLUDE[hek_2](../../includes/hek-2-md.md)]します。 これらのコンシューマーのメモリは、既定のプール (割り当てがユーザー スレッドのコンテキスト内にある場合)、または内部プール (割り当てがシステム スレッドのコンテキスト内にある場合) から取得されます。  
   
 ```  
 -- system memory consumers @ instance  
@@ -40,12 +41,12 @@ select * from sys.dm_xtp_system_memory_consumers
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-|列名|型|Description|  
+|列名|型|説明|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|メモリ コンシューマーの内部 ID。|  
-|memory_consumer_type|**int**|次の値のいずれかのメモリ コンシューマーの種類を表す整数。<br /><br /> 0 - 表示することはできません。 複数のコンシューマーのメモリ使用量を集計します。<br /><br /> 1 – ルック アサイド: は、システムのルック アサイドのメモリ消費量を追跡します。<br /><br /> 2-VARHEAP: は、可変長ヒープのメモリ消費量を追跡します。<br /><br /> 4-IO ページ プール: IO 操作に使用するシステム ページ プールのメモリ使用量を追跡します。|  
+|memory_consumer_type|**int**|次の値のいずれかのメモリ コンシューマーの種類を表す整数。<br /><br /> 0 - 表示することはできません。 複数のコンシューマーのメモリ使用量を集計します。<br /><br /> 1 – ルック アサイド: は、システムのルック アサイドのメモリ使用量を追跡します。<br /><br /> 2-VARHEAP: は、可変長ヒープのメモリ使用量を追跡します。<br /><br /> 4-IO ページ プール: の IO 操作に使用するシステム ページ プールのメモリ消費量を追跡します。|  
 |memory_consumer_type_desc|**nvarchar(16)**|メモリ コンシューマーの種類の説明。<br /><br /> 0 - 表示することはできません。<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4-PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|メモリ コンシューマー インスタンスの説明。<br /><br /> VARHEAP: <br />システム ヒープ。 汎用的です。 現在、ガベージ コレクションの作業項目の割り当てにのみ使用されています。<br />- または -<br />ルック アサイド ヒープ。 ルック アサイド リストに含まれる項目の数が事前に定義された上限 (通常は約 5,000 個の項目) に達した場合にルック アサイドで使用されます。<br /><br /> PGPOOL: IO システム プールがあるは、次の 3 つの異なるサイズ System 4 K ページ プール、System 64 K ページ プール、および System 256 K ページ プール。|  
+|memory_consumer_desc|**nvarchar(64)**|メモリ コンシューマー インスタンスの説明。<br /><br /> VARHEAP: <br />システム ヒープ。 汎用的です。 現在、ガベージ コレクションの作業項目の割り当てにのみ使用されています。<br />-または-<br />ルック アサイド ヒープ。 ルック アサイド リストに含まれる項目の数が事前に定義された上限 (通常は約 5,000 個の項目) に達した場合にルック アサイドで使用されます。<br /><br /> PGPOOL。 IO システム プールは次の 3 つのサイズの異なる System 4 K ページ プール、System 64 K ページ プール、および System 256 K ページ プール。|  
 |lookaside_id|**bigint**|スレッド ローカルなルック アサイド メモリ プロバイダーの ID。|  
 |pagepool_id|**bigint**|スレッド ローカルなページ プール メモリ プロバイダーの ID。|  
 |allocated_bytes|**bigint**|このコンシューマーのために予約されたバイト数。|  
@@ -57,7 +58,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |max_sizeclass|**int**|内部使用のみです。|  
 |memory_consumer_address|**varbinary**|コンシューマーの内部アドレス。|  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="user-scenario"></a>ユーザー シナリオ  

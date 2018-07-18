@@ -1,5 +1,5 @@
 ---
-title: sys.fn_trace_gettable (TRANSACT-SQL) |Microsoft ドキュメント
+title: sys.fn_trace_gettable (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e8c573a9995ee8ca0d23cd89ab2e032a88c6f9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234773"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014930"
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,25 +49,25 @@ fn_trace_gettable ( 'filename' , number_files )
   
 ## <a name="arguments"></a>引数  
  '*filename*'  
- 読み取る最初のトレース ファイルを指定します。 *filename*は**nvarchar (256)**、既定値はありません。  
+ 読み取る最初のトレース ファイルを指定します。 *ファイル名*は**nvarchar (256)**、既定値はありません。  
   
  *number_files*  
- 読み取るロールオーバー ファイルの数を指定します。 この数で指定された初期ファイルが含まれています。 *filename*です。 *number_files*は、 **int**です。  
+ 読み取るロールオーバー ファイルの数を指定します。 この数にはで指定された最初のファイルが含まれています*filename*します。 *number_files*は、 **int**します。  
   
-## <a name="remarks"></a>解説  
- 場合*number_files*として指定された**既定**、 **fn_trace_gettable**トレースの最後に達するまで、すべてのロール オーバー ファイルを読み取ります。 **fn_trace_gettable**指定したトレースの有効なすべての列を含むテーブルを返します。 詳細については、次を参照してください。 [sp_trace_setevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)です。  
+## <a name="remarks"></a>コメント  
+ 場合*number_files*として指定されて**既定**、 **fn_trace_gettable**トレースの最後に達するまで、すべてのロール オーバー ファイルを読み取ります。 **fn_trace_gettable**指定したトレースの有効なすべての列を含むテーブルを返します。 詳細については、次を参照してください。 [sp_trace_setevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)します。  
   
- Fn_trace_gettable 関数はロール オーバー ファイルを読み取らないことに注意してください (を使用してこのオプションが指定されている場合、 *number_files*引数) 元のトレース ファイル名がアンダー スコアと数値が終了します。 ただし、この状況は、ファイルがロールオーバーされるときに自動的に追加されたアンダースコアおよび数値については該当しません。この問題に対処するには、元のファイル名のアンダースコアを削除してトレース ファイルの名前を変更します。 たとえば、元のファイルの名前は**Trace_Oct_5.trc**でロール オーバー ファイルの名前が**Trace_Oct_5_1.trc**、ファイルの名前を変更することができます**TraceOct5.trc**と**TraceOct5_1.trc**です。  
+ Fn_trace_gettable 関数はロール オーバー ファイルを読み取らないことに注意してください (を使用して、このオプションが指定されている場合、 *number_files*引数) 元のトレース ファイル名がアンダー スコアと数値が終了します。 ただし、この状況は、ファイルがロールオーバーされるときに自動的に追加されたアンダースコアおよび数値については該当しません。この問題に対処するには、元のファイル名のアンダースコアを削除してトレース ファイルの名前を変更します。 たとえば、元のファイルの名前は**Trace_Oct_5.trc**ロール オーバー ファイルの名前は**Trace_Oct_5_1.trc**、ファイルの名前を変更することができます**TraceOct5.trc**と**TraceOct5_1.trc**します。  
   
  この関数は、関数が実行されるインスタンス上でアクティブになっているトレースを読み取ることができます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  サーバーの ALTER TRACE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-fntracegettable-to-import-rows-from-a-trace-file"></a>A. fn_trace_gettable を使用してトレース ファイルから行をインポートする  
- 次の例では`fn_trace_gettable`内、`FROM`の句、`SELECT...INTO`ステートメントです。  
+ 次の例では`fn_trace_gettable`内で、`FROM`の句、`SELECT...INTO`ステートメント。  
   
 ```  
 USE AdventureWorks2012;  
@@ -78,7 +78,7 @@ GO
 ```  
   
 ### <a name="b-using-fntracegettable-to-return-a-table-with-an-identity-column-that-can-be-loaded-into-a-sql-server-table"></a>B. fn_trace_gettable を使用して、SQL Server テーブルに読み込むことができる IDENTITY 列を含むテーブルを返す  
- 次の例では、一部として関数を呼び出し、`SELECT...INTO`ステートメントのテーブルを返しますと、`IDENTITY`列、テーブルに読み込むことができます`temp_trc`です。  
+ 次の例では、一部として関数を呼び出し、`SELECT...INTO`ステートメントでテーブルを返します、`IDENTITY`列をテーブルに読み込むことができます`temp_trc`。  
   
 ```  
 USE AdventureWorks2012;  

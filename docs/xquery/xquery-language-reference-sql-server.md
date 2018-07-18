@@ -1,5 +1,5 @@
 ---
-title: XQuery 言語リファレンス (SQL Server) |Microsoft ドキュメント
+title: XQuery 言語リファレンス (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,24 +25,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 759904d735b754d9f51314b92c3d7763a0aa4ef2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078169"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066822"
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery 言語リファレンス (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[tsql](../includes/tsql-md.md)] クエリを実行するために使用する XQuery 言語のサブセットをサポート、 **xml**データ型。 この実装は、2004 年 7 月に公開された XQuery のワーキング ドラフトに従っています。 この言語は W3C (World Wide Web Consortium) によって開発が進められており、マイクロソフトをはじめとする主要なすべてのデータベース ベンダーが参加しています。 W3C 仕様は W3C 勧告になる前に改訂されることがあるので、この実装は最終的な勧告とは異なる可能性があります。 このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でサポートされる XQuery サブセットのセマンティクスと構文について概説します。  
+  [!INCLUDE[tsql](../includes/tsql-md.md)] クエリに使用される XQuery 言語のサブセットをサポート、 **xml**データ型。 この実装は、2004 年 7 月に公開された XQuery のワーキング ドラフトに従っています。 この言語は W3C (World Wide Web Consortium) によって開発が進められており、マイクロソフトをはじめとする主要なすべてのデータベース ベンダーが参加しています。 W3C 仕様は W3C 勧告になる前に改訂されることがあるので、この実装は最終的な勧告とは異なる可能性があります。 このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でサポートされる XQuery サブセットのセマンティクスと構文について概説します。  
   
- 詳細については、次を参照してください。、 [W3C XQuery 1.0 Language Specification](http://go.microsoft.com/fwlink/?LinkId=48846)です。  
+ 詳細については、次を参照してください。、 [W3C XQuery 1.0 Language Specification](http://go.microsoft.com/fwlink/?LinkId=48846)します。  
   
  XQuery は構造化または半構造化された XML データに対するクエリ実行できる言語です。 **Xml**データ型のサポートされている、[!INCLUDE[ssDE](../includes/ssde-md.md)]ドキュメントをデータベースに格納されているし、XQuery を使用してクエリを実行します。  
   
  XQuery は既存の XPath クエリ言語に基づいており、優れた反復処理や結果の並べ替え、必要な XML を構築する機能を実現するためのサポートが追加されています。 XQuery は XQuery データ モデルで動作します。 これは XML ドキュメントおよび XQuery の結果を抽象化したモデルで、XQuery の結果は型指定することも、型指定しないこともできます。 型情報は W3C XML Schema 言語によって提供される型に基づきます。 型指定情報を使用できない場合は、XQuery によりデータが型指定されていないものとして処理されます。 この処理方法は、XPath Version 1.0 で XML が処理される方法と同様です。  
   
- 変数またはの列に格納されている XML インスタンスを照会する**xml**種類を使用する、 [xml データ型メソッド](../t-sql/xml/xml-data-type-methods.md)です。 変数を宣言するなど、 **xml**入力を使用してクエリを実行したり、 **query()** のメソッド、 **xml**データ型。  
+ 変数またはの列に格納されている XML インスタンスを照会する**xml**種類を使用する、 [xml データ型メソッド](../t-sql/xml/xml-data-type-methods.md)します。 変数を宣言する例: **xml**を入力しを使用してクエリを実行、 **query()** のメソッド、 **xml**データ型。  
   
 ```  
 DECLARE @x xml  
@@ -50,7 +50,7 @@ SET @x = '<ROOT><a>111</a></ROOT>'
 SELECT @x.query('/ROOT/a')  
 ```  
   
- 次の例では、クエリがの Instructions 列に対して指定されて**xml** AdventureWorks データベースの ProductModel テーブルの型。  
+ 次の例では、クエリがの Instructions 列に対して指定された**xml** AdventureWorks データベースの ProductModel テーブルの型。  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -60,24 +60,24 @@ FROM  Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- XQuery には、名前空間の宣言が含まれています。 `declare namespace``AWMI=...`、およびクエリ式では、`/AWMI:root/AWMI:Location[@LocationID=10]`です。  
+ XQuery には、名前空間の宣言が含まれています。 `declare namespace``AWMI=...`、およびクエリ式、`/AWMI:root/AWMI:Location[@LocationID=10]`します。  
   
- Instructions 列に対して、XQuery を指定することに注意してください**xml**型です。 [Query() メソッド](../t-sql/xml/query-method-xml-data-type.md)xml データの型は、XQuery を指定して使用します。  
+ Instructions 列に対して XQuery を指定することに注意してください。 **xml**型。 [Query() メソッド](../t-sql/xml/query-method-xml-data-type.md)xml データの型は、XQuery を指定して使用します。  
   
  次の表は、[!INCLUDE[ssDE](../includes/ssde-md.md)]での XQuery の実装を理解する際に役立つ関連トピックを示しています。  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|サポートについて説明します、 **xml**のデータ型の[!INCLUDE[ssDE](../includes/ssde-md.md)]とメソッドのこのデータ型に対して使用できます。 **Xml**データ型の入力の XQuery データ モデルの XQuery 式が実行されます。|  
-|[XML スキーマ コレクション &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)|データベースに格納されている XML インスタンスを型指定する方法について説明します。 つまりを使用した XML スキーマ コレクションを関連付けることができます、 **xml**型の列です。 この列に格納されているすべてのインスタンスは、コレクションのスキーマに対して検証と型指定が行われます。また、これらのインスタンスにより、XQuery の型情報が提供されます。|  
+|[XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|サポートについて説明します、 **xml**のデータ型の[!INCLUDE[ssDE](../includes/ssde-md.md)]とメソッドのこのデータ型に対して使用できます。 **Xml**データ入力フォームの入力の XQuery データ モデルの XQuery 式が実行されます。|  
+|[XML スキーマ コレクション &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)|データベースに格納されている XML インスタンスを型指定する方法について説明します。 つまり、XML スキーマ コレクションを関連付けることができます、 **xml**型の列。 この列に格納されているすべてのインスタンスは、コレクションのスキーマに対して検証と型指定が行われます。また、これらのインスタンスにより、XQuery の型情報が提供されます。|  
 |||  
   
 > [!NOTE]  
->  このセクションの構成は、W3C (World Wide Web Consortium) XQuery ワーキング ドラフト仕様に基づいています。 このセクションで提供する図の一部は、その仕様から引用したものです。 ここでは、Microsoft XQuery の実装と W3C 仕様を比較し、Microsoft XQuery と W3C がどのように異なるかを説明し、サポートしていない W3C 機能を示します。 W3C の仕様は[ http://www.w3.org/TR/2004/WD-xquery-20040723](http://go.microsoft.com/fwlink/?LinkId=48846)です。  
+>  このセクションの構成は、W3C (World Wide Web Consortium) XQuery ワーキング ドラフト仕様に基づいています。 このセクションで提供する図の一部は、その仕様から引用したものです。 ここでは、Microsoft XQuery の実装と W3C 仕様を比較し、Microsoft XQuery と W3C がどのように異なるかを説明し、サポートしていない W3C 機能を示します。 W3C の仕様は[ http://www.w3.org/TR/2004/WD-xquery-20040723](http://go.microsoft.com/fwlink/?LinkId=48846)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[XQuery の基礎](../xquery/xquery-basics.md)|XQuery の概念の基本的な概要について説明し、式の評価 (静的コンテキストと動的コンテキスト)、アトミック化、有効なブール値、XQuery 型システム、シーケンス型の照合、およびエラー処理についても説明します。|  
 |[XQuery 式](../xquery/xquery-expressions.md)|XQuery 原始式、パス式、シーケンス式、算術式、比較式、論理式、XQuery の構築、FLWOR 式、条件式、量化式、およびシーケンス型のさまざまな式について説明します。|  

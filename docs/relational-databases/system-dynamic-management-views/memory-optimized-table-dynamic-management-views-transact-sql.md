@@ -1,5 +1,5 @@
 ---
-title: メモリ最適化テーブルの動的管理ビュー (TRANSACT-SQL) |Microsoft ドキュメント
+title: メモリ最適化テーブルの動的管理ビュー (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql
@@ -19,15 +19,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: da3bf7189d2fb4455b8186a41a24c7d5f546a348
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061570"
 ---
 # <a name="memory-optimized-table-dynamic-management-views-transact-sql"></a>メモリ最適化テーブルの動的管理ビュー (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インメモリ OLTP での動的管理ビュー (Dmv) を使用します。  
+  次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]動的管理ビュー (Dmv) にメモリ内 OLTP を使用します。  
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
@@ -44,15 +45,15 @@ ms.lasthandoff: 05/23/2018
 
 ### <a name="object-catalog-views"></a>オブジェクト カタログ ビュー
 
-インメモリ OLTP で具体的には、次のようなオブジェクト カタログ ビューが使用されます。
+次のオブジェクト カタログ ビューは、具体的には、インメモリ OLTP で使用されます。
 
 |||  
 |-|-|   
-|[sys.hash_indexes & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
+|[sys.hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
 
 ### <a name="internal-dmvs"></a>内部の Dmv
 
-内部使用のみとなるおない直接ドキュメントを提供に使用するその他の Dmv があります。 メモリ最適化テーブルの領域をドキュメントに未記載の Dmv 以下に示します。
+内部使用のみとを提供しない直接ドキュメントに使用する追加の Dmv があります。 メモリ最適化テーブルの領域で、次に示しますドキュメントに未記載の Dmv。
 
 - sys.dm_xtp_threads
 - sys.dm_xtp_transaction_recent_rows

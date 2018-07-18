@@ -1,5 +1,5 @@
 ---
-title: SMO 構文表記規則 |Microsoft ドキュメント
+title: SMO 構文表記規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 623117b4906e00096788fc1f7746a7fe715c7379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062103"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 構文表記規則
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) の表記規則に基づいてで使用される[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Studio .NET のリファレンス資料。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の表記規則はで使用されるものに基づいて[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Studio .NET の参考資料です。  
   
 |表記|使用目的|  
 |----------------|--------------|  

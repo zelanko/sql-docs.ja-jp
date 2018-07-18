@@ -1,5 +1,5 @@
 ---
-title: sp_sequence_get_range (TRANSACT-SQL) |Microsoft ドキュメント
+title: sp_sequence_get_range (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2015
 ms.prod: sql
@@ -25,18 +25,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6b34171cf9300454dfe35e6f0961eaacff182b4a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259702"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015079"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   シーケンス オブジェクトからシーケンス値の範囲を返します。 シーケンス オブジェクトでは、要求された値の数を生成して発行し、その範囲に関連するメタデータをアプリケーションに提供します。  
   
- シーケンス番号の詳細については、次を参照してください。[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)です。  
+ シーケンス番号の詳細については、次を参照してください。[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,34 +57,34 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
   
 ## <a name="arguments"></a>引数  
  [ **@sequence_name** =] **N**'*シーケンス*'  
- シーケンス オブジェクトの名前。 スキーマは省略可能です。 *sequence_name*は**nvarchar (776)** です。  
+ シーケンス オブジェクトの名前。 スキーマは省略可能です。 *sequence_name*は**nvarchar (776)** します。  
   
  [ **@range_size** = ] *range_size*  
- シーケンスからフェッチする値の数。 **@range_size** **bigint**です。  
+ シーケンスからフェッチする値の数。 **@range_size** **bigint**します。  
   
  [ **@range_first_value** = ] *range_first_value*  
- 出力パラメーター。要求された範囲の計算に使用するシーケンス オブジェクトの最初 (最小または最大) の値を返します。 **@range_first_value** **sql_variant**ととしての要求で使用されているシーケンス オブジェクトの同じ基本型です。  
+ 出力パラメーター。要求された範囲の計算に使用するシーケンス オブジェクトの最初 (最小または最大) の値を返します。 **@range_first_value** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
   
  [ **@range_last_value** =] *range_last_value*  
- 省略可能な出力パラメーター。要求された範囲の最後の値を返します。 **@range_last_value** **sql_variant**ととしての要求で使用されているシーケンス オブジェクトの同じ基本型です。  
+ 省略可能な出力パラメーター。要求された範囲の最後の値を返します。 **@range_last_value** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
   
  [ **@range_cycle_count** =] range_cycle_count  
- 省略可能な出力パラメーター。要求された範囲を返すためにシーケンス オブジェクトを循環した回数を返します。 **@range_cycle_count** **int**です。  
+ 省略可能な出力パラメーター。要求された範囲を返すためにシーケンス オブジェクトを循環した回数を返します。 **@range_cycle_count** **int**します。  
   
  [ **@sequence_increment** =] *sequence_increment*  
- 省略可能な出力パラメーター。要求された範囲の計算に使用するシーケンス オブジェクトの増分を返します。 **@sequence_increment** **sql_variant**ととしての要求で使用されているシーケンス オブジェクトの同じ基本型です。  
+ 省略可能な出力パラメーター。要求された範囲の計算に使用するシーケンス オブジェクトの増分を返します。 **@sequence_increment** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
   
  [ **@sequence_min_value** = ] *sequence_min_value*  
- 省略可能な出力パラメーター。シーケンス オブジェクトの最小値を返します。 **@sequence_min_value** **sql_variant**ととしての要求で使用されているシーケンス オブジェクトの同じ基本型です。  
+ 省略可能な出力パラメーター。シーケンス オブジェクトの最小値を返します。 **@sequence_min_value** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
   
  [ **@sequence_max_value** = ] *sequence_max_value*  
- 省略可能な出力パラメーター。シーケンス オブジェクトの最大値を返します。 **@sequence_max_value** **sql_variant**ととしての要求で使用されているシーケンス オブジェクトの同じ基本型です。  
+ 省略可能な出力パラメーター。シーケンス オブジェクトの最大値を返します。 **@sequence_max_value** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- sys sp_sequence_get_rangeis です。 スキーマ、sys.sp_sequence_get_range として参照されていることができます。  
+## <a name="remarks"></a>コメント  
+ sys sp_sequence_get_rangeis します。 スキーマ sys.sp_sequence_get_range として参照することができます。  
   
 ### <a name="cycling-sequences"></a>循環するシーケンス  
  必要な場合は、要求された範囲を返すために、シーケンス オブジェクトを適切な回数循環します。 循環した回数は、`@range_cycle_count` パラメーターを通じて、呼び出し元に返されます。  
@@ -97,7 +97,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
   
  `The requested range for sequence object '%.*ls' exceeds the maximum or minimum limit. Retry with a smaller range.`  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  シーケンス オブジェクトまたはシーケンス オブジェクトのスキーマに対する UPDATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

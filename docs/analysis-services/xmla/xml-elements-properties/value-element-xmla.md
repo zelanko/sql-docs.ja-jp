@@ -1,5 +1,5 @@
 ---
-title: 値の要素 (XMLA) |Microsoft ドキュメント
+title: 要素 (XMLA) の値 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2ecaaf902ee1f29700b2d6333bbccd549d9c2193
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576794"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062853"
 ---
 # <a name="value-element-xmla"></a>Value 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  目的の値が含まれています、[属性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)で追加する要素、[挿入](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)コマンド、または[セル](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)要素で更新する、 [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)コマンド。  
+  目的の値が含まれています、[属性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)によって追加される要素、[挿入](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)コマンド、または[セル](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)によって更新される要素、 [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)コマンド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34576794"
 |既定値|なし|  
 |Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "34576794"
 |子要素|なし|  
   
 ## <a name="remarks"></a>コメント  
- **属性**、要素、**値**要素には、後に、メンバーが含む目的の値が含まれています、**挿入**コマンドがコミットされました。 メンバーの挿入の詳細については、次を参照してください。[挿入、更新、および削除するメンバー &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)です。  
+ **属性**、要素、**値**要素は、後に、メンバーを含める必要がありますを目的の値を含む、**挿入**コマンドがコミットされました。 メンバーの挿入の詳細については、次を参照してください。[挿入、更新、および削除するメンバー &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)します。  
   
- **セル**、要素、**値**要素には、後に、セルが含む目的の値が含まれています、 **UpdateCells**コマンドがコミットされました。 そのセルの書き戻しテーブルに格納される実際の値は、セルの元の値と目的の値との差異です。  
+ **セル**、要素、**値**要素は、後に、セルを含める必要がありますを目的の値を含む、 **UpdateCells**コマンドがコミットされました。 そのセルの書き戻しテーブルに格納される実際の値は、セルの元の値と目的の値との差異です。  
   
  この要素が使用するデータ型は、更新対象のセルのデータ型と一致している必要があります。  
   

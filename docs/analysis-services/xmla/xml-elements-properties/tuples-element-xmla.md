@@ -1,5 +1,5 @@
 ---
-title: Tuples 要素 (XMLA) |Microsoft ドキュメント
+title: Tuples 要素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c0578c541c39bdaceede6bff8afdea3d642abcef
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576864"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062546"
 ---
 # <a name="tuples-element-xmla"></a>Tuples 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  セットを含む[組](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)オブジェクトに対する、[軸](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)を使用する要素、 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)によって返されるデータ型、 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。  
+  セットを含む[タプル](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)オブジェクトに対する、[軸](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)を使用する要素、 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)によって返されるデータ型、 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,18 +41,18 @@ ms.locfileid: "34576864"
 |既定値|なし|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
-## <a name="element-relationships"></a>要素の関係  
+## <a name="element-relationships"></a>要素間のリレーションシップ  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
-|子要素|[組](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)|  
+|子要素|[タプル](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)|  
   
 ## <a name="remarks"></a>コメント  
  クライアント アプリケーションが **AxisFormat** プロパティを *TupleFormat* に設定した場合、軸は複数の組のセットとして表されます。 各 **Axis** 要素には、その軸上の組のセットを表す 1 つの **Tuples** 要素が含まれます。 それぞれの組は **Tuple** 要素を使って表され、そこには軸上の各階層に属する [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) 要素が含まれます。  
   
 ## <a name="example"></a>例  
- 次の例の構造を示しています、**組**クライアントを指定すると要素*TupleFormat*または*CustomFormat*の**AxisFormat** XML for Analysis (XMLA) プロパティ、軸の次のメンバーを指定します。  
+ 次の例の構造を示しています、**組**要素をクライアントが指定したときに*TupleFormat*または*CustomFormat*の**AxisFormat** XML for Analysis (XMLA) プロパティ、軸の次のメンバーを指定します。  
   
 |||||  
 |-|-|-|-|  
